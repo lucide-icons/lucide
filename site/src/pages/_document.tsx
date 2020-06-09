@@ -10,11 +10,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <style jsx global>{`
-          html {
-            font-family: "Jost";
-          }
-        `}</style>
         <body>
           <Main />
           <NextScript />
