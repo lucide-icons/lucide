@@ -1,3 +1,4 @@
+import Layout from "../components/Layout";
 import { getAllData } from "../lib/icons";
 import { Grid, Button, Flex, Text } from "@chakra-ui/core";
 import copy from "copy-to-clipboard";
@@ -5,7 +6,7 @@ import download from "downloadjs";
 
 const IndexPage = ({ data }) => {
   return (
-    <div>
+    <Layout>
       <Grid templateColumns="repeat(5, 1fr)" gap={5}>
         {data.map((icon) => (
           <Button
@@ -28,7 +29,7 @@ const IndexPage = ({ data }) => {
           </Button>
         ))}
       </Grid>
-    </div>
+    </Layout>
   );
 };
 
