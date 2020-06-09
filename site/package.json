@@ -9,6 +9,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "downloadjs": "^1.4.7",
+    "emotion-theming": "^10.0.27",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
