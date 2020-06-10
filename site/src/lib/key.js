@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const isCtrl = (e) => e.metaKey || e.ctrlKey;
 

@@ -1,8 +1,8 @@
-import Layout from "../components/Layout";
-import { getAllData } from "../lib/icons";
-import { Grid, Button, Flex, Text } from "@chakra-ui/core";
+import { Button, Flex, Grid, Text } from "@chakra-ui/core";
 import copy from "copy-to-clipboard";
 import download from "downloadjs";
+import Layout from "../components/Layout";
+import { getAllData } from "../lib/icons";
 
 const IndexPage = ({ data }) => {
   return (

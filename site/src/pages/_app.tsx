@@ -1,4 +1,4 @@
-import { ThemeProvider, ColorModeProvider, CSSReset } from "@chakra-ui/core";
+import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
 import customTheme from "../lib/theme";
 
 const App = ({ Component, pageProps }) => {

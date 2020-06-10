@@ -1,7 +1,6 @@
-import { useColorMode, Heading, Tag } from "@chakra-ui/core";
-import { useKeyBindings } from "../lib/key";
-import { Box, Flex, Icon, Button, Avatar, Text } from "@chakra-ui/core";
+import { Box, Button, Flex, Icon, Text, useColorMode } from "@chakra-ui/core";
 import { version } from "../../../package.json";
+import { useKeyBindings } from "../lib/key";
 
 const Layout = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
