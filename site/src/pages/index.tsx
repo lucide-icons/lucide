@@ -6,7 +6,8 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  Text
+  Text,
+  useToast,
 } from "@chakra-ui/core";
 import copy from "copy-to-clipboard";
 import download from "downloadjs";
@@ -18,6 +19,7 @@ import useSearch from "../lib/search";
 const IndexPage = ({ data }) => {
   const [query, setQuery] = useQueryParam("query", StringParam);
   const results = useSearch(data, query || "");
+  const toast = useToast();
 
   return (
     <Layout>
@@ -42,6 +44,12 @@ const IndexPage = ({ data }) => {
               onClick={(event) => {
                 if (event.shiftKey) {
                   copy(actualIcon.src);
+                  toast({
+                    title: "Copied!",
+                    description: `Icon "${actualIcon.name}" copied to clipboard.`,
+                    status: "success",
+                    duration: 1500,
+                  });
                 } else {
                   download(
                     actualIcon.src,
