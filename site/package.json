@@ -15,6 +15,7 @@
     "downloadjs": "^1.4.7",
     "emotion-theming": "^10.0.27",
     "fuse.js": "^6.0.4",
+    "jszip": "^3.4.0",
     "next": "^9.4.4",
     "query-string": "^6.13.0",
     "react": "^16.13.1",

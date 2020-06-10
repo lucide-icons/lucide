@@ -7,10 +7,12 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/core";
+import { StringParam, useQueryParam } from "use-query-params";
 import { version } from "../../../package.json";
 import { useKeyBindings } from "../lib/key";
 
 const Layout = ({ children }) => {
+  const [query, setQuery] = useQueryParam("query", StringParam);
   const { colorMode, toggleColorMode } = useColorMode();
 
   useKeyBindings({
@@ -33,7 +35,13 @@ const Layout = ({ children }) => {
           px={8}
         >
           <Flex justifyContent="center" alignItems="center">
-            <Text fontSize="4xl">Feather</Text>
+            <Text
+              fontSize="4xl"
+              onClick={() => setQuery("")}
+              style={{ cursor: "pointer" }}
+            >
+              Feather
+            </Text>
             <Button marginLeft={2} variant="outline" size="sm">
               v{version}
             </Button>

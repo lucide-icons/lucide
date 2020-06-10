@@ -6,16 +6,27 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Stack,
   Text,
   useToast,
 } from "@chakra-ui/core";
 import copy from "copy-to-clipboard";
 import download from "downloadjs";
+import JSZip from "jszip";
 import { useEffect, useRef, useState } from "react";
 import { StringParam, useQueryParam } from "use-query-params";
 import Layout from "../components/Layout";
 import { getAllData } from "../lib/icons";
 import useSearch from "../lib/search";
+
+function generateZip(icons) {
+  const zip = new JSZip();
+  Object.values(icons).forEach((icon) =>
+    // @ts-ignore
+    zip.file(`${icon.name}.svg`, icon.src)
+  );
+  return zip.generateAsync({ type: "blob" });
+}
 
 const IndexPage = ({ data }) => {
   const [query, setQuery] = useQueryParam("query", StringParam);
@@ -41,6 +52,21 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Flex direction="column" align="center" justify="center">
+        <Text fontSize="3xl" as="b">
+          Simply beautiful open source icons
+        </Text>
+        <Stack isInline marginTop={3} marginBottom={10}>
+          <Button
+            onClick={async () => {
+              const zip = await generateZip(data);
+              download(zip, "feather.zip");
+            }}
+          >
+            Download all
+          </Button>
+        </Stack>
+      </Flex>
       <InputGroup position="sticky" top={2} zIndex={1}>
         <InputLeftElement children={<Icon name="search" />} />
         <Input
