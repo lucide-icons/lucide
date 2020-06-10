@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Icon, Text, useColorMode } from "@chakra-ui/core";
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Icon,
+  Text,
+  useColorMode,
+} from "@chakra-ui/core";
 import { version } from "../../../package.json";
 import { useKeyBindings } from "../lib/key";
 
@@ -31,14 +39,15 @@ const Layout = ({ children }) => {
             </Button>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-            <Button variant="ghost" onClick={toggleColorMode}>
+            <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
               <Icon name={colorMode == "light" ? "moon" : "sun"} size="24px" />
-            </Button>
+            </div>
           </Flex>
         </Flex>
       </Flex>
       <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
         {children}
+        <Divider marginTop={10} marginBottom={10} />
       </Flex>
     </Box>
   );
