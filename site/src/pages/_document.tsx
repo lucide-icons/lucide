@@ -10,6 +10,15 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
+        <style jsx global>{`
+          * {
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -o-transition: none !important;
+            -ms-transition: none !important;
+            transition: none !important;
+          }
+        `}</style>
         <body>
           <Main />
           <NextScript />
