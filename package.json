@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "react:compile": "yarn workspace react compile"
+  },
+  "workspaces": [
+    "packages/react"
+  ]
+}
