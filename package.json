@@ -1,9 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "react:compile": "yarn workspace react compile"
+    "react:compile": "yarn workspace react compile",
+    "site:dev": "yarn workspace site dev",
+    "site:build": "yarn workspace site build"
   },
   "workspaces": [
-    "packages/react"
+    "packages/react",
+    "packages/site"
   ]
 }

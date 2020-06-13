@@ -8,7 +8,6 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 import { StringParam, useQueryParam } from "use-query-params";
-import { version } from "../../../package.json";
 import { useKeyBindings } from "../lib/key";
 
 const Layout = ({ children }) => {
@@ -42,9 +41,6 @@ const Layout = ({ children }) => {
             >
               Feather
             </Text>
-            <Button marginLeft={2} variant="outline" size="sm">
-              v{version}
-            </Button>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
             <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const directory = path.join(process.cwd(), "../icons");
+const directory = path.join(process.cwd(), "../../icons");
 
 export function getAllNames() {
   const fileNames = fs.readdirSync(directory);

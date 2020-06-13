@@ -1,6 +1,6 @@
 {
-  "name": "site",
   "private": true,
+  "name": "site",
   "version": "1.0.0",
   "author": "John Letey",
   "scripts": {
