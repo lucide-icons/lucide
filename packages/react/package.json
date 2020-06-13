@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "react",
+  "version": "1.0.0",
+  "author": "John Letey",
+  "scripts": {
+    "compile": "rm -rf src/icons && node bin/build.js"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "prettier": "^2.0.5",
+    "uppercamelcase": "^3.0.0"
+  }
+}
