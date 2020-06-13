@@ -114,7 +114,7 @@ icons.forEach((i) => {
 
   console.log("Successfully built", ComponentName);
 
-  const exportString = `export { default as ${ComponentName} } from "./icons/${i.name}";\r\n`;
+  const exportString = `export { default as ${ComponentName} } from "./icons/${i.name}";\n`;
   fs.appendFileSync(
     path.join(process.cwd(), "src", "index.js"),
     exportString,
