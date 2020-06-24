@@ -1,4 +1,4 @@
-# Feather
+# Featherity
 
 [![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/U7uRMq)
 
