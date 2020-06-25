@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "deploy": "yarn build && yarn export"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",

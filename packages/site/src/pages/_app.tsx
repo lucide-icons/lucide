@@ -1,4 +1,4 @@
-import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
+import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import { useRouter } from "next/router";
 import { QueryParamProvider } from "use-query-params";
 import customTheme from "../lib/theme";
@@ -29,10 +29,8 @@ const App = ({ Component, pageProps }) => {
   return (
     <QueryProvider>
       <ThemeProvider theme={customTheme}>
-        <ColorModeProvider>
-          <CSSReset />
-          <Component {...pageProps} />
-        </ColorModeProvider>
+        <CSSReset />
+        <Component {...pageProps} />
       </ThemeProvider>
     </QueryProvider>
   );
