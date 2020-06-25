@@ -3,7 +3,7 @@
   "scripts": {
     "react:compile": "yarn workspace react compile",
     "site:dev": "yarn workspace site dev",
-    "site:build": "yarn workspace site build"
+    "site:deploy": "yarn workspace site deploy"
   },
   "workspaces": [
     "packages/react",
