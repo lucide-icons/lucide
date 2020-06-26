@@ -1,6 +1,6 @@
 # Featherity
 
-[![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/U7uRMq)
+[![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
 
 ## What is Featherity?
 
@@ -28,6 +28,11 @@ You can use the components from [this Figma file](https://www.figma.com/file/g0U
 For more info on how to contribute please see the [contribution guidelines](https://github.com/featherity/featherity/blob/master/CONTRIBUTING.md).
 
 Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/featherity/featherity/blob/master/README.md)
+
+## Community
+
+Do you want to join our community?
+Join us in [discord](https://discord.gg/EH6nSts)!
 
 ## License
 
