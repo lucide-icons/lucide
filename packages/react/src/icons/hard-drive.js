@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 const HardDrive = forwardRef(
-  ({ color = "currentColor", size = 24, ...rest }, ref) => {
+  ({ color = "currentColor", size = 24, width = 2, ...rest }, ref) => {
     return (
       <svg
         ref={ref}
@@ -12,7 +12,7 @@ const HardDrive = forwardRef(
         viewBox="0 0 24 24"
         fill="none"
         stroke={color}
-        strokeWidth="2"
+        strokeWidth={width}
         strokeLinecap="round"
         strokeLinejoin="round"
         {...rest}
@@ -29,6 +29,7 @@ const HardDrive = forwardRef(
 HardDrive.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 HardDrive.displayName = "HardDrive";

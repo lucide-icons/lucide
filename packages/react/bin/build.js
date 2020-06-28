@@ -39,6 +39,7 @@ import { FC, SVGAttributes } from "react";
 interface Props extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
+  width?: string | number;
 }
 
 type Icon = FC<Props>;
@@ -54,7 +55,12 @@ fs.writeFileSync(
 const attrsToString = (attrs) => {
   return Object.keys(attrs)
     .map((key) => {
-      if (key === "width" || key === "height" || key === "stroke") {
+      if (
+        key === "width" ||
+        key === "height" ||
+        key === "stroke" ||
+        key === "strokeWidth"
+      ) {
         return key + "={" + attrs[key] + "}";
       }
       if (key === "rest") {
@@ -75,7 +81,7 @@ icons.forEach((i) => {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "color",
-    strokeWidth: 2,
+    strokeWidth: "width",
     strokeLinecap: "round",
     strokeLinejoin: "round",
     rest: "...rest",
@@ -85,7 +91,7 @@ icons.forEach((i) => {
     import React, { forwardRef } from "react";
     import PropTypes from "prop-types";
 
-    const ${ComponentName} = forwardRef(({ color = "currentColor", size = 24, ...rest }, ref) => {
+    const ${ComponentName} = forwardRef(({ color = "currentColor", size = 24, width = 2, ...rest }, ref) => {
       return (
         <svg ref={ref} ${attrsToString(defaultAttrs)}>
           ${i.content}
@@ -96,6 +102,10 @@ icons.forEach((i) => {
     ${ComponentName}.propTypes = {
       color: PropTypes.string,
       size: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+      ]),
+      width: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
       ]),
