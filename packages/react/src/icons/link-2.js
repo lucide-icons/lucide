@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 const Link2 = forwardRef(
-  ({ color = "currentColor", size = 24, ...rest }, ref) => {
+  ({ color = "currentColor", size = 24, width = 2, ...rest }, ref) => {
     return (
       <svg
         ref={ref}
@@ -12,12 +12,12 @@ const Link2 = forwardRef(
         viewBox="0 0 24 24"
         fill="none"
         stroke={color}
-        strokeWidth="2"
+        strokeWidth={width}
         strokeLinecap="round"
         strokeLinejoin="round"
         {...rest}
       >
-        <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path>
+        <path d="M15 7h2a5 5 0 0 1 0 10H15M9 17H7A5 5 0 0 1 7 7H9"></path>
         <line x1="8" y1="12" x2="16" y2="12"></line>
       </svg>
     );
@@ -27,6 +27,7 @@ const Link2 = forwardRef(
 Link2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Link2.displayName = "Link2";

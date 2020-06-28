@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 const MessageSquare = forwardRef(
-  ({ color = "currentColor", size = 24, ...rest }, ref) => {
+  ({ color = "currentColor", size = 24, width = 2, ...rest }, ref) => {
     return (
       <svg
         ref={ref}
@@ -12,7 +12,7 @@ const MessageSquare = forwardRef(
         viewBox="0 0 24 24"
         fill="none"
         stroke={color}
-        strokeWidth="2"
+        strokeWidth={width}
         strokeLinecap="round"
         strokeLinejoin="round"
         {...rest}
@@ -26,6 +26,7 @@ const MessageSquare = forwardRef(
 MessageSquare.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 MessageSquare.displayName = "MessageSquare";
