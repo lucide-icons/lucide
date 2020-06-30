@@ -9,10 +9,10 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-    <line x1="9" y1="5" x2="21" y2="5" />
-    <line x1="9" y1="12" x2="21" y2="12" />
-    <line x1="9" y1="19" x2="21" y2="19" />
-    <circle cx="4" cy="12" r="1" />
-    <circle cx="4" cy="5" r="1" />
-    <circle cx="4" cy="19" r="1" />
+  <line x1="9" y1="5" x2="21" y2="5" />
+  <line x1="9" y1="12" x2="21" y2="12" />
+  <line x1="9" y1="19" x2="21" y2="19" />
+  <circle cx="4" cy="12" r="1" />
+  <circle cx="4" cy="5" r="1" />
+  <circle cx="4" cy="19" r="1" />
 </svg>
