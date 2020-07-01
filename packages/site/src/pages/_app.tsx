@@ -2,6 +2,7 @@ import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import { useRouter } from "next/router";
 import { QueryParamProvider } from "use-query-params";
 import customTheme from "../lib/theme";
+import Head from "next/head";
 
 const QueryProvider = ({ children }) => {
   const router = useRouter();
@@ -27,12 +28,17 @@ const QueryProvider = ({ children }) => {
 
 const App = ({ Component, pageProps }) => {
   return (
-    <QueryProvider>
-      <ThemeProvider theme={customTheme}>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </QueryProvider>
+    <>
+      <Head>
+        <title>Featherity</title>
+      </Head>
+      <QueryProvider>
+        <ThemeProvider theme={customTheme}>
+          <CSSReset />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </QueryProvider>
+    </>
   );
 };
 

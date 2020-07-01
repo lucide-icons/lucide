@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Featherity</title>
           <link
             href="https://indestructibletype.com/fonts/Jost.css"
             rel="stylesheet"

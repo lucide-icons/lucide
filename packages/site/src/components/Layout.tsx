@@ -1,9 +1,4 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  Text
-} from "@chakra-ui/core";
+import { Box, Divider, Flex, Text } from "@chakra-ui/core";
 import { StringParam, useQueryParam } from "use-query-params";
 
 const Layout = ({ children }) => {
