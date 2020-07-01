@@ -1,8 +1,16 @@
-import { Box, Divider, Flex, Text } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Icon, useColorMode } from "@chakra-ui/core";
 import { StringParam, useQueryParam } from "use-query-params";
+import { useKeyBindings } from "../lib/key";
 
 const Layout = ({ children }) => {
   const [, setQuery] = useQueryParam("query", StringParam);
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  useKeyBindings({
+    KeyT: {
+      fn: () => toggleColorMode(),
+    },
+  });
 
   return (
     <Box h="100vh">
@@ -25,6 +33,11 @@ const Layout = ({ children }) => {
             >
               Featherity
             </Text>
+          </Flex>
+          <Flex justifyContent="center" alignItems="center">
+            <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
+              <Icon name={colorMode == "light" ? "moon" : "sun"} size="24px" />
+            </div>
           </Flex>
         </Flex>
       </Flex>
