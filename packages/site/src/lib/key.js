@@ -18,7 +18,7 @@ export const useKeyBindings = (
         if (keyBinding === undefined) return;
         const condition = keyBinding.ctrl ? isCtrl(event) : true;
         if (!condition) return;
-        if (event.target.type != "text") {
+        if (event.target.type != "text" || code == "Escape") {
           event.preventDefault();
           keyBinding.fn(event);
         }

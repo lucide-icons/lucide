@@ -7,6 +7,9 @@ const Layout = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   useKeyBindings({
+    Escape: {
+      fn: () => setQuery(""),
+    },
     KeyT: {
       fn: () => toggleColorMode(),
     },
