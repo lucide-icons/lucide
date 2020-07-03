@@ -1,0 +1,14 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <polyline transform="translate(1.2578 5.4846)" points="1 4 1 10 7 10"/>
+  <path d="m21.748 14.485c-2.2082-6.2402-10.171-8.0418-14.85-3.36l-4.64 4.36"/>
+</svg>
