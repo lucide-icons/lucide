@@ -9,6 +9,6 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <polyline transform="matrix(-1 0 0 1 23 6)" points="1 4 1 10 7 10"/>
+  <polyline points="22 10 22 16 16 16" />
   <path d="m1.9935 16c1.8136-6.5424 9.5593-9.4823 15.36-4.36l4.64 4.36" />
 </svg>
