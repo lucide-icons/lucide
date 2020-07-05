@@ -1,7 +1,7 @@
 ---
 name: Icon request
 about: Suggest an new icon for this project
-label: "icon request"
+labels: "icon request"
 ---
 
 <!--
