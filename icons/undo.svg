@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <polyline transform="translate(1 6)" points="1 4 1 10 7 10"/>
-  <path d="m22 16c-1.8136-6.5424-9.5593-9.4823-15.36-4.36l-4.64 4.36" stroke-width="1.9994"/>
+  <path d="m22 16c-1.8136-6.5424-9.5593-9.4823-15.36-4.36l-4.64 4.36"/>
 </svg>
