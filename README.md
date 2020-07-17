@@ -13,11 +13,63 @@ Featherity is a fork of [Feather Icons](https://github.com/feathericons/feather)
 * [Contributing](#contributing)
 * [License](#license)
 
+## Installation
+``` bash
+npm install featherity
+#or
+yarn add featherity
+```
+
 ## Usage
 
 At its core, Featherity is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Feather icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
 
 The following are additional ways you can use Featherity.
+
+### ESModule
+
+``` js
+import { Camera } from 'featherity';
+// Returns HTMLElement
+
+// Usage
+document.appendChild(Camera);
+```
+
+### React
+
+``` js
+import { Camera } from 'featherity/react';
+// Returns ReactComponent
+
+// Usage
+const App = () => {
+  return <Camera color="red" size={48}/>
+};
+
+export default App;
+```
+
+### Vue
+
+``` vue
+<template>
+  <div id="app">
+    <Camera color="red" :size="48"/>
+  </div>
+</template>
+
+<script>
+import { Camera } from 'featherity/vue';
+
+export default {
+  name: "App",
+  components: {
+    Camera
+  }
+};
+</script>
+```
 
 ### Figma
 
