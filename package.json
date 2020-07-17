@@ -1,41 +1,43 @@
 {
+  "name": "featherity",
+  "amdName": "featherity",
+  "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "react:compile": "yarn workspace react compile",
-    "build": "npx babel-node ./scripts/buildIcons.js",
-    "start": "babel-watch ./src/buildIcons.js"
+  "main": "dist/main.js",
+  "module": "dist/main.module.js",
+  "umd:main": "dist/main.umd.js",
+  "unpkg": "dist/main.min.js",
+  "source": "src/index.js",
+  "exports": {
+    ".": {
+      "browser": "./dist/main.module.js",
+      "umd": "./dist/main.umd.js",
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.js"
+    }
   },
-  "workspaces": [
-    "packages/react"
-  ],
+  "scripts": {
+    "build": "npx babel-node ./scripts/buildIcons.js",
+    "optimize": "npx babel-node ./scripts/optimizeSvgs.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
-    "@commitlint/cli": "^5.2.5",
-    "@commitlint/config-conventional": "^6.1.3",
-    "algoliasearch": "^3.27.1",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-watch": "^7.0.0",
     "cheerio": "^1.0.0-rc.2",
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-prettier": "^2.5.0",
     "html-minifier": "^3.5.8",
-    "husky": "^0.14.3",
-    "jest": "^22.4.4",
     "lint-staged": "^6.0.0",
-    "npm-run-all": "^4.1.2",
     "prettier": "^1.8.2",
     "semantic-release": "^12.2.2",
-    "svgo": "^0.7.2",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3"
+    "svgo": "^0.7.2"
   },
   "dependencies": {
     "htmlparser2": "^4.1.0"
