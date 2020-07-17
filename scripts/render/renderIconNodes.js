@@ -2,7 +2,7 @@ import DEFAULT_ATTRS from './default-attrs.json';
 import { parseDOM } from 'htmlparser2';
 
 export default (iconsObject) => {
-  const iconVnodes = {}
+  const iconNodes = {}
 
   for(const icon in iconsObject) {
 
@@ -18,7 +18,7 @@ export default (iconsObject) => {
       ])),
     ];
 
-    iconVnodes[icon] = [
+    iconNodes[icon] = [
       'svg',
       {
         ...DEFAULT_ATTRS,
@@ -27,6 +27,6 @@ export default (iconsObject) => {
     ]
   }
 
-  return iconVnodes;
+  return iconNodes;
 }
 

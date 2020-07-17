@@ -14,4 +14,4 @@ const createElement = (tag, attrs, children = []) => {
   }
 }
 
-export default (iconVnode) => createElement(iconVnode);
+export default (iconNode) => createElement(iconNode);

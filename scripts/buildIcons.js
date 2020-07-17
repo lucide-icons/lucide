@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import renderIconsObject from './render/renderIconsObject';
-import renderIconVNodes from './render/renderIconVNodes';
+import renderIconNodes from './render/renderIconNodes';
 import generateIconFiles from './build/generateIconFiles';
 import generateExportsFile from './build/generateExportsFile';
 
@@ -17,7 +17,7 @@ const svgFiles = fs.readdirSync(IN_DIR).filter(file => path.extname(file) === '.
 const getSvg = svgFile => fs.readFileSync(path.join(IN_DIR, svgFile));
 
 const icons = renderIconsObject(svgFiles, getSvg);
-const iconVNodes = renderIconVNodes(icons);
+const iconVNodes = renderIconNodes(icons);
 
 generateIconFiles(iconVNodes, OUTPUT_DIR);
 

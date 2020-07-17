@@ -3,9 +3,9 @@ import path from 'path';
 import prettier from 'prettier';
 import { generateComponentName } from './helpers';
 
-export default function(iconVNodesObject, outputDirectory) {
+export default function(iconNode, outputDirectory) {
 
-  const icons = Object.keys(iconVNodesObject);
+  const icons = Object.keys(iconNode);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
   if (!fs.existsSync(iconsDistDirectory)){
@@ -16,7 +16,7 @@ export default function(iconVNodesObject, outputDirectory) {
     const location = path.join(iconsDistDirectory, `${icon}.js`);
     const ComponentName = generateComponentName(icon);
 
-    const VNode = JSON.stringify(iconVNodesObject[icon]);
+    const VNode = JSON.stringify(iconNode[icon]);
 
     const element = `
       export default [${VNode}]
