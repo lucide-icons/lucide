@@ -1,13 +1,13 @@
 import { generateComponentName, resetFile, writeFile} from './helpers';
 
-export default function(fileName, outputDirectory, componentGetter, iconVNodesObject) {
+export default function(fileName, outputDirectory, componentGetter, iconNodes) {
   // Reset file
   resetFile(fileName, outputDirectory);
 
   // Import the component getter
   writeFile(`import ${componentGetter} from './src/getters/${componentGetter}';\n\n`, fileName, outputDirectory);
 
-  const icons = Object.keys(iconVNodesObject);
+  const icons = Object.keys(iconNodes);
 
   // Generate Import for Icon VNodes
   icons.forEach(iconName => {
