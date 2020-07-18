@@ -2,7 +2,7 @@ import Svgo from 'svgo';
 import cheerio from 'cheerio';
 import { format } from 'prettier';
 
-import DEFAULT_ATTRS from '../src/default-attrs.json';
+import DEFAULT_ATTRS from './default-attrs.json';
 
 /**
  * Process SVG string.

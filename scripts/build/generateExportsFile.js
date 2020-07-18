@@ -20,7 +20,7 @@ export default function(fileName, outputDirectory, componentGetter, iconNodes) {
 
   // Generate export for all the icons
   //
-  // output: export const myIcon = getComponent(myIconVNode);
+  // (output): export const myIcon = getComponent(myIconVNode);
   icons.forEach(iconName => {
     const componentName = generateComponentName(iconName);
     const constantString = `export const ${componentName} = ${componentGetter}(${componentName}VNode);\n`;

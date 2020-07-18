@@ -1,16 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 
-const OUT_DIR = path.resolve(__dirname, '../dist/icons');
+const ICONS_DIR = path.resolve(__dirname, '../icons');
 
-console.log(`Optimizing SVGs in ${OUT_DIR}...`);
+console.log(`Optimizing SVGs in ${ICONS_DIR}...`);
 
-const svgFiles = fs.readdirSync(IN_DIR).filter(file => path.extname(file) === '.svg');
+const svgFiles = fs.readdirSync(ICONS_DIR).filter(file => path.extname(file) === '.svg');
 console.log(svgFiles);
 
-
-// Object.keys(icons).forEach(name => {
-//   const svg = icons[name].toSvg();
-
-//   fs.writeFileSync(path.join(OUT_DIR, `${name}.svg`), svg);
-// });
+svgFiles
+  .filter(file => path.extname(file) === '.svg')
+  .forEach(svgFile => {
+    const svg = fs.readFileSync(path.join(ICONS_DIR, svgFile));
+    processSvg(svg).then(svg =>
+      fs.writeFileSync(path.join(ICONS_DIR, svgFile), svg),
+    );
+  });
