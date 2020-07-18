@@ -1,7 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
 import cheerio from 'cheerio';
 import { minify } from 'html-minifier';
-
 
 /**
  * Get contents between opening and closing `<svg>` tags.
@@ -20,8 +20,8 @@ function getSvgContents(svg) {
  * @param {Function} getSvg - A function that returns the contents of an SVG file given a filename.
  * @returns {Object}
  */
-export default (svgFiles, getSvg) => {
-  return svgFiles
+export default (svgFiles, getSvg) =>
+  svgFiles
     .map(svgFile => {
       const name = path.basename(svgFile, '.svg');
       const svg = getSvg(svgFile);
@@ -32,4 +32,3 @@ export default (svgFiles, getSvg) => {
       icons[icon.name] = icon.contents;
       return icons;
     }, {});
-}

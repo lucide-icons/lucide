@@ -4,4 +4,4 @@ dist
 sandbox
 stash
 coverage
-.log
+*.log

@@ -49,9 +49,12 @@
     "lint-staged": "^6.0.0",
     "prettier": "^1.8.2",
     "semantic-release": "^12.2.2",
-    "svgo": "^0.7.2"
+    "svgo": "^1.3.2"
   },
   "dependencies": {
-    "htmlparser2": "^4.1.0"
+    "htmlparser2": "^4.1.0",
+    "lodash": "^4.17.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1"
   }
 }

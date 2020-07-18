@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import processSvg from './';
+import processSvg from './render/processSvg';
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 

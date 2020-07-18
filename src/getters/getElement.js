@@ -3,7 +3,7 @@ const createElement = (tag, attrs, children = []) => {
 
   Object.keys(attrs).forEach(name => {
     element.setAttribute(name, attrs[name]);
-  })
+  });
 
   if (children.length) {
     children = children.forEach(child => {
@@ -14,6 +14,6 @@ const createElement = (tag, attrs, children = []) => {
   }
 
   return element;
-}
+};
 
-export default (iconNode) => createElement(iconNode);
+export default iconNode => createElement(iconNode);

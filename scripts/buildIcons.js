@@ -9,7 +9,7 @@ import generateExportsFile from './build/generateExportsFile';
 const IN_DIR = path.resolve(__dirname, '../icons');
 const OUTPUT_DIR = path.resolve(__dirname, '../src');
 
-if (!fs.existsSync(OUTPUT_DIR)){
+if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
 }
 
