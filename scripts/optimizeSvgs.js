@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import processSvg from './';
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 
@@ -12,7 +13,5 @@ svgFiles
   .filter(file => path.extname(file) === '.svg')
   .forEach(svgFile => {
     const svg = fs.readFileSync(path.join(ICONS_DIR, svgFile));
-    processSvg(svg).then(svg =>
-      fs.writeFileSync(path.join(ICONS_DIR, svgFile), svg),
-    );
+    processSvg(svg).then(svg => fs.writeFileSync(path.join(ICONS_DIR, svgFile), svg));
   });
