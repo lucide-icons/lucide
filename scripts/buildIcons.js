@@ -19,8 +19,10 @@ const getSvg = svgFile => fs.readFileSync(path.join(IN_DIR, svgFile));
 const icons = renderIconsObject(svgFiles, getSvg);
 const iconVNodes = renderIconNodes(icons);
 
+// Generates iconsNodes files for each icon
 generateIconFiles(iconVNodes, OUTPUT_DIR);
 
+// Generates entry files for the compiler filled with icons exports
 generateExportsFile('index.js', OUTPUT_DIR, 'getElement', iconVNodes);
 generateExportsFile('react.js', OUTPUT_DIR, 'getReactComponent', iconVNodes);
 generateExportsFile('vue.js', OUTPUT_DIR, 'getVueComponent', iconVNodes);

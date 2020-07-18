@@ -12,6 +12,8 @@ const createElement = (tag, attrs, children = []) => {
       element.appendChild(childElement);
     });
   }
+
+  return element;
 }
 
 export default (iconNode) => createElement(iconNode);

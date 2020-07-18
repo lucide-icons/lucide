@@ -16,11 +16,11 @@ export default function(iconNode, outputDirectory) {
     const location = path.join(iconsDistDirectory, `${icon}.js`);
     const ComponentName = generateComponentName(icon);
 
-    const VNode = JSON.stringify(iconNode[icon]);
+    const Node = JSON.stringify(iconNode[icon]);
 
     const element = `
-      export default [${VNode}]
-    `
+      export default [${Node}]
+    `;
 
     fs.writeFileSync(
       location,
