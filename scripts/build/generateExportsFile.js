@@ -6,7 +6,7 @@ export default function(fileName, outputDirectory, componentGetter, iconNodes) {
 
   // Import the component getter
   writeFile(
-    `import ${componentGetter} from './src/getters/${componentGetter}';\n\n`,
+    `import ${componentGetter} from '../src/${componentGetter}';\n\n`,
     fileName,
     outputDirectory,
   );
@@ -16,7 +16,7 @@ export default function(fileName, outputDirectory, componentGetter, iconNodes) {
   // Generate Import for Icon VNodes
   icons.forEach(iconName => {
     const componentName = generateComponentName(iconName);
-    const importString = `import ${componentName}Node from './icons';\n`;
+    const importString = `import ${componentName}Node from './icons/${iconName}';\n`;
     writeFile(importString, fileName, outputDirectory);
   });
 
@@ -27,7 +27,7 @@ export default function(fileName, outputDirectory, componentGetter, iconNodes) {
   // (output): export const myIcon = getComponent(myIconVNode);
   icons.forEach(iconName => {
     const componentName = generateComponentName(iconName);
-    const constantString = `export const ${componentName} = ${componentGetter}(${componentName}Node);\n`;
+    const constantString = `export const ${componentName} = ${componentGetter}('${componentName}', ${componentName}Node);\n`;
     writeFile(constantString, fileName, outputDirectory);
   });
 

@@ -1,13 +1,11 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions"]
-        }
-      }
-    ],
-    "stage-2"
+    ["@babel/preset-env",{
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      },
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }],
   ]
 }

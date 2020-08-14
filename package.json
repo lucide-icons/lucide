@@ -3,42 +3,22 @@
   "amdName": "featherity",
   "version": "1.0.0",
   "private": true,
+  "source": "build/main.js",
   "main": "dist/main.js",
   "module": "dist/main.module.js",
   "umd:main": "dist/main.umd.js",
   "unpkg": "dist/main.min.js",
-  "source": "src/index.js",
-  "exports": {
-    ".": {
-      "browser": "./dist/main.module.js",
-      "umd": "./dist/main.umd.js",
-      "import": "./dist/main.mjs",
-      "require": "./dist/main.js"
-    },
-    "react": {
-      "browser": "./dist/react.module.js",
-      "umd": "./dist/react.umd.js",
-      "import": "./dist/react.mjs",
-      "require": "./dist/react.js"
-    },
-    "vue": {
-      "browser": "./dist/vue.module.js",
-      "umd": "./dist/vue.umd.js",
-      "import": "./dist/vue.mjs",
-      "require": "./dist/vue.js"
-    }
-  },
+  "sideEffects": false,
   "scripts": {
-    "build": "npx babel-node ./scripts/buildIcons.js",
-    "optimize": "npx babel-node ./scripts/optimizeSvgs.js"
+    "build": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
+    "bundle": "microbundle",
+    "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "babel-cli": "^6.24.1",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-watch": "^7.0.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
     "cheerio": "^1.0.0-rc.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -47,11 +27,13 @@
     "eslint-plugin-prettier": "^2.5.0",
     "html-minifier": "^3.5.8",
     "lint-staged": "^6.0.0",
+    "microbundle": "^0.12.3",
     "prettier": "^1.8.2",
     "semantic-release": "^12.2.2",
     "svgo": "^1.3.2"
   },
   "dependencies": {
+    "core-js": "3",
     "htmlparser2": "^4.1.0",
     "lodash": "^4.17.19",
     "prop-types": "^15.7.2",

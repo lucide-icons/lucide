@@ -9,14 +9,12 @@ export default iconsObject => {
     const svgString = iconsObject[icon];
     const dom = parseDOM(svgString);
 
-    const children = [
-      ...dom.map(element => [
-        element.name,
-        {
-          ...element.attribs,
-        },
-      ]),
-    ];
+    const children = dom.map(element => [
+      element.name,
+      {
+        ...element.attribs,
+      },
+    ]);
 
     iconNodes[icon] = [
       'svg',
