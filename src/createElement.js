@@ -16,4 +16,4 @@ const createElement = (tag, attrs, children = []) => {
   return element;
 };
 
-export default (iconName, [tag, attrs, children]) => createElement(tag, attrs, children);
+export default ([tag, attrs, children]) => createElement(tag, attrs, children);

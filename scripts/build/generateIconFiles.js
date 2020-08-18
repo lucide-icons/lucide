@@ -19,7 +19,7 @@ export default function(iconNode, outputDirectory) {
     const Node = JSON.stringify(iconNode[icon]);
 
     const element = `
-      export default ${Node}
+      export default ${Node};
     `;
 
     fs.writeFileSync(location, prettier.format(element, { parser: 'babel' }), 'utf-8');

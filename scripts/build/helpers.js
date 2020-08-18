@@ -20,6 +20,13 @@ export const resetFile = (fileName, outputDirectory) =>
   fs.writeFileSync(path.join(outputDirectory, fileName), '', 'utf-8');
 
 /**
+ * Reads the file contents.
+ *
+ * @param {string} path
+ */
+export const readFile = entry => fs.readFileSync(path.resolve(__dirname, '../../', entry), 'utf-8');
+
+/**
  * writes content to a file
  *
  * @param {string} content
