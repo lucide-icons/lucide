@@ -1,4 +1,5 @@
 import replaceElement from './replaceElement';
+import icons from './icons';
 
 /* eslint-disable */
 /*
@@ -23,5 +24,5 @@ export default ({ icons = {}, nameAttr = 'data-feather', attrs = {} }) => {
 /*
  Icons exports.
 */
-export * as icons from './icons/index';
-export * from './icons/index';
+export * from './icons';
+export { icons };
