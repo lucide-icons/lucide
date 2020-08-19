@@ -21,7 +21,18 @@ const icons = renderIconsObject(svgFiles, getSvg);
 const iconVNodes = renderIconNodes(icons);
 
 // Generates iconsNodes files for each icon
-generateIconFiles(iconVNodes, OUTPUT_DIR);
+generateIconFiles(
+  iconVNodes,
+  OUTPUT_DIR,
+  ({ componentName, node }) => `
+  import createElement from '../../src/createElement';
+
+  const ${componentName} = ${node};
+
+  export const element = createElement('${componentName}', ${componentName});
+  export default ${componentName};
+`,
+);
 
 // Generates entry files for the compiler filled with icons exports
 generateExportsFile(
@@ -30,5 +41,3 @@ generateExportsFile(
   'getElement',
   iconVNodes,
 );
-// generateExportsFile('react.js', OUTPUT_DIR, 'getReactComponent', iconVNodes);
-// generateExportsFile('vue.js', OUTPUT_DIR, 'getVueComponent', iconVNodes);

@@ -4,7 +4,7 @@ import path from 'path';
 import prettier from 'prettier';
 import { generateComponentName } from './helpers';
 
-export default function(iconNode, outputDirectory) {
+export default function(iconNode, outputDirectory, template) {
   const icons = Object.keys(iconNode);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -14,16 +14,14 @@ export default function(iconNode, outputDirectory) {
 
   icons.forEach(icon => {
     const location = path.join(iconsDistDirectory, `${icon}.js`);
-    const ComponentName = generateComponentName(icon);
+    const componentName = generateComponentName(icon);
 
-    const Node = JSON.stringify(iconNode[icon]);
+    const node = JSON.stringify(iconNode[icon]);
 
-    const element = `
-      export default ${Node};
-    `;
+    const elementTemplate = template({ componentName, node });
 
-    fs.writeFileSync(location, prettier.format(element, { parser: 'babel' }), 'utf-8');
+    fs.writeFileSync(location, prettier.format(elementTemplate, { parser: 'babel' }), 'utf-8');
 
-    console.log('Successfully built', ComponentName);
+    console.log('Successfully built', componentName);
   });
 }
