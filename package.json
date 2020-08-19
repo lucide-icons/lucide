@@ -2,7 +2,7 @@
   "name": "featherity",
   "amdName": "featherity",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha.0",
   "private": true,
   "source": "build/featherity.js",
   "main": "dist/cjs/featherity.js",
