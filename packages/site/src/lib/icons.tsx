@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import tags from '../../../../tags.json';
 
 const directory = path.join(process.cwd(), "../../icons");
 
@@ -17,6 +18,7 @@ export function getData(name) {
 
   return {
     name,
+    tags: tags[name] || [],
     src: fileContents,
   };
 }

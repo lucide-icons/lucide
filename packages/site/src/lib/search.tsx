@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function useSearch(icons, query) {
   const fuse = new Fuse(Object.values(icons), {
     threshold: 0.2,
-    keys: ["name"],
+    keys: ["name", "tags"],
   });
 
   const [results, setResults] = useState(Object.values(icons));
