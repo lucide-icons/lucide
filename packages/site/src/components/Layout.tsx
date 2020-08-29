@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Text, Icon, useColorMode } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/core";
 import { StringParam, useQueryParam } from "use-query-params";
 import { useKeyBindings } from "../lib/key";
 
@@ -38,6 +38,9 @@ const Layout = ({ children }) => {
             </Text>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
+          <Link href="https://github.com/featherity/featherity" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
+            Github
+          </Link>
             <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
               <Icon name={colorMode == "light" ? "moon" : "sun"} size="24px" />
             </div>
