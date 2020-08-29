@@ -40,21 +40,17 @@ const IndexPage = ({ data }) => {
       inputElement.current.focus();
     }
   }
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
-  const [numColumns, setNumColumns] = useState(1);
-  useEffect(() => {
-    setNumColumns(Math.floor(window.outerWidth / 160));
   }, []);
 
   return (
     <Layout>
       <Flex direction="column" align="center" justify="center">
         <Text fontSize="3xl" as="b">
-          Simply beautiful open source icons
+          Simply beautiful open source icons, community-sourced
         </Text>
         <Stack isInline marginTop={3} marginBottom={10}>
           <Button
@@ -81,7 +77,7 @@ const IndexPage = ({ data }) => {
       </InputGroup>
       {results.length > 0 ? (
         <Grid
-          templateColumns={`repeat(${numColumns > 5 ? 5 : numColumns}, 1fr)`}
+          templateColumns={`repeat(auto-fill, minmax(160px, 1fr))`}
           gap={5}
         >
           {results.map((icon) => {
