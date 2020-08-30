@@ -1,4 +1,6 @@
 .DS_Store
+.next
+.now
 node_modules
 dist
 build
