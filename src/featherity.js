@@ -23,6 +23,11 @@ export const createIcons = ({ icons = {}, nameAttr = 'data-feather', attrs = {} 
 };
 
 /*
+  Create Element function export.
+*/
+export { default as createElement } from './createElement';
+
+/*
  Icons exports.
 */
 export { allIcons as icons };
