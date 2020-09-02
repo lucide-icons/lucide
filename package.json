@@ -2,7 +2,7 @@
   "name": "featherity",
   "amdName": "featherity",
   "license": "ISC",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "source": "build/featherity.js",
   "main": "dist/cjs/featherity.js",
   "main:umd": "dist/umd/featherity.js",
@@ -12,12 +12,12 @@
   "scripts": {
     "start": "babel-watch --watch src",
     "clean": "rimraf lib && rimraf dist && rimraf build",
-    "build": "yarn clean && yarn build:transpile && yarn build:icons && yarn build:es && yarn build:esbrowser && yarn build:bundles",
-    "build:transpile": "babel src -d build",
+    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:esbrowser && yarn build:bundles",
+    "build:move": "cp -av src build",
     "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
     "build:es": "babel build -d lib --source-maps --ignore '**/*.test.js','**/__mocks__'",
     "build:esbrowser": "BROWSER_COMPAT=true yarn build:es -d dist/esm",
-    "build:bundles": "rollup -c rollup.config.js",
+    "build:bundles": "BROWSER_COMPAT=true rollup -c rollup.config.js",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env"
   },
   "devDependencies": {
@@ -28,7 +28,6 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "@rollup/plugin-babel": "^5.0.0",
-    "@rollup/plugin-replace": "^2.3.2",
     "babel-plugin-add-import-extension": "^1.4.3",
     "cheerio": "^1.0.0-rc.2",
     "eslint": "^4.19.1",
@@ -37,24 +36,21 @@
     "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-prettier": "^2.5.0",
     "html-minifier": "^3.5.8",
-    "lint-staged": "^6.0.0",
-    "microbundle": "^0.12.3",
+    "lodash": "^4.17.19",
     "prettier": "^1.8.2",
     "rollup": "^2.7.3",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-flow-entry": "^0.3.3",
     "rollup-plugin-license": "^2.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-visualizer": "^4.1.0",
-    "semantic-release": "^12.2.2",
     "svgo": "^1.3.2"
   },
   "dependencies": {
     "core-js": "3",
     "htmlparser2": "^4.1.0",
-    "lodash": "^4.17.19",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1"
+    "lodash-es": "^4.17.15",
+    "prop-types": "^15.7.2"
   }
 }

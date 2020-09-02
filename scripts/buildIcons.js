@@ -25,11 +25,8 @@ generateIconFiles(
   iconVNodes,
   OUTPUT_DIR,
   ({ componentName, node }) => `
-    import createElement from '../../src/createElement';
-
     const ${componentName} = ${node};
 
-    export const element = createElement('${componentName}', ${componentName});
     export default ${componentName};
   `,
 );

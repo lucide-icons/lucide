@@ -1,5 +1,4 @@
-import camelCase from 'lodash/camelCase';
-import upperFirst from 'lodash/upperFirst';
+import { camelCase, upperFirst } from 'lodash-es';
 import createElement from './createElement';
 
 /**
@@ -15,6 +14,7 @@ function getAttrs(element) {
 }
 
 export default (element, { nameAttr, icons, attrs }) => {
+  console.log(element);
   const iconName = element.getAttribute(nameAttr);
   const ComponentName = upperFirst(camelCase(iconName));
 
