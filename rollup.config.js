@@ -38,7 +38,7 @@ const configs = bundles
       external: ['lodash/camelCase', 'lodash/upperFirst'],
       plugins: [
         replace({
-          'icons = {}': 'icons = allIcons',
+          'icons = {}': 'icons = allIcons || {}',
           delimiters: ['', ''],
         }),
         babel({
