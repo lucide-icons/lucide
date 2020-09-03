@@ -9,10 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <circle cx="9" cy="12" r="1" />
-  <circle cx="9" cy="5" r="1" />
-  <circle cx="9" cy="19" r="1" />
-  <circle cx="15" cy="12" r="1" />
-  <circle cx="15" cy="5" r="1" />
-  <circle cx="15" cy="19" r="1" />
+  <path d="M16 16v4a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V10C8 8 6 8 6 6" />
+  <path d="M7 2H18V6c0 2-2 2-2 4v1" />
+  <line x1="11" y1="6" x2="18" y2="6" />
+  <line x1="2" y1="2" x2="22" y2="22" />
 </svg>

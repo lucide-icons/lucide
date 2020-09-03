@@ -1,6 +1,4 @@
 .DS_Store
+.next
+.now
 node_modules
-dist
-sandbox
-stash
-coverage
