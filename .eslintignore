@@ -2,3 +2,4 @@ dist
 build
 coverage
 lib
+tests

@@ -2,7 +2,7 @@
   "name": "featherity",
   "amdName": "featherity",
   "license": "ISC",
-  "version": "0.1.0-alpha.5",
+  "version": "0.1.0-alpha.7",
   "source": "build/featherity.js",
   "main": "dist/cjs/featherity.js",
   "main:umd": "dist/umd/featherity.js",
@@ -18,7 +18,8 @@
     "build:es": "babel build -d lib --source-maps --ignore '**/*.test.js','**/__mocks__'",
     "build:esbrowser": "BROWSER_COMPAT=true yarn build:es -d dist/esm",
     "build:bundles": "BROWSER_COMPAT=true rollup -c rollup.config.js",
-    "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env"
+    "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
+    "test": "jest"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.25.2",
@@ -28,6 +29,7 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "@rollup/plugin-babel": "^5.0.0",
+    "babel-jest": "^26.3.0",
     "babel-plugin-add-import-extension": "^1.4.3",
     "cheerio": "^1.0.0-rc.2",
     "eslint": "^4.19.1",
@@ -36,6 +38,7 @@
     "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-prettier": "^2.5.0",
     "html-minifier": "^3.5.8",
+    "jest": "^26.4.2",
     "lodash": "^4.17.19",
     "prettier": "^1.8.2",
     "rollup": "^2.7.3",
@@ -48,6 +51,7 @@
     "svgo": "^1.3.2"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "core-js": "3",
     "htmlparser2": "^4.1.0",
     "lodash-es": "^4.17.15",
