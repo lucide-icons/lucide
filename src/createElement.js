@@ -1,8 +1,8 @@
 const createElement = (tag, attrs, children = []) => {
-  const element = document.createElement(tag);
+  const element = document.createElementNS(tag);
 
   Object.keys(attrs).forEach(name => {
-    element.setAttribute(name, attrs[name]);
+    element.setAttributeNS(name, attrs[name]);
   });
 
   if (children.length) {
