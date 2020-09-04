@@ -36,9 +36,18 @@ export const getClassNames = attrs => {
 export const combineClassNames = arrayOfClassnames => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
-  return classNameArray.map(classItem => classItem.trim()).join(' ');
+  return classNameArray
+    .map(classItem => classItem.trim())
+    .filter(Boolean)
+    .join(' ');
 };
 
+/**
+ * ReplaceElement, replaces the given element with the created icon.
+ * @param {HTMLElement} element
+ * @param {Object: {String, Array, Object}} options: { nameAttr, icons, attrs }
+ * @returns {Function}
+ */
 export default (element, { nameAttr, icons, attrs }) => {
   const iconName = element.getAttribute(nameAttr);
   const ComponentName = upperFirst(camelCase(iconName));
@@ -60,10 +69,13 @@ export default (element, { nameAttr, icons, attrs }) => {
     ...attrs,
   };
 
-  iconNode[1] = {
-    ...allAttrs,
-    class: combineClassNames([iconAttrs, elementAttrs, attrs]),
-  };
+  iconNode[1] = { ...allAttrs };
+
+  const classNames = combineClassNames([iconAttrs, elementAttrs, attrs]);
+
+  if (classNames) {
+    iconNode[1].class = classNames;
+  }
 
   const svgElement = createElement(iconNode);
 
