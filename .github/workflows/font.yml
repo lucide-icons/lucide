@@ -1,0 +1,43 @@
+name: Build Featherity
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install 'FontCustom'
+        run: |
+          echo "Dependencies will be installed, no logs will be displayed... Wait a moment"
+          sudo apt-get install zlib1g-dev fontforge woff2 > /dev/null 2>&1
+          git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli > /dev/null 2>&1
+          cd sfnt2woff-zopfli
+          make > /dev/null 2>&1
+          sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+          git clone --recursive https://github.com/google/woff2.git > /dev/null 2>&1
+          cd woff2
+          sudo make clean all > /dev/null 2>&1
+          sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+          sudo gem install fontcustom > /dev/null 2>&1
+          cd /home/runner/work/featherity/featherity
+          
+      - name: Build 'Featherity'
+        run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
+        
+        
+      - name: Zipping 'Featherity'
+        run: zip -r Featherity.zip build
+        
+        
+      - name: 'Upload to Artifacts'
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          name: Featherity
+          path: build
+     
