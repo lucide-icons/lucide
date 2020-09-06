@@ -14,17 +14,17 @@ jobs:
 
       - name: Install 'FontCustom'
         run: |
-          echo "Dependencies will be installed, no logs will be displayed... Wait a moment"
-          sudo apt-get install zlib1g-dev fontforge woff2 > /dev/null 2>&1
-          git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli > /dev/null 2>&1
+          echo "Dependencies will be installed... Wait a moment"
+          sudo apt-get install zlib1g-dev fontforge woff2
+          git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
           cd sfnt2woff-zopfli
-          make > /dev/null 2>&1
+          make
           sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
-          git clone --recursive https://github.com/google/woff2.git > /dev/null 2>&1
+          git clone --recursive https://github.com/google/woff2.git
           cd woff2
-          sudo make clean all > /dev/null 2>&1
+          sudo make clean all
           sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
-          sudo gem install fontcustom > /dev/null 2>&1
+          sudo gem install fontcustom
           cd /home/runner/work/featherity/featherity
           
       - name: Build 'Featherity'
