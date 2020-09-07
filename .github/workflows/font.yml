@@ -22,35 +22,36 @@ jobs:
         with:
             path: sfnt2woff-zopfli
       - name: Move and install dependency
-          run: sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
-          with:
+        run: sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+        with:
                 path: sfnt2woff-zopfli
           
 
-           - name: Compile woff2
-              run: sudo make clean all && git clone --recursive https://github.com/google/woff2.git
-              with:
+       - name: Compile woff2
+         run: sudo make clean all && git clone --recursive https://github.com/google/woff2.git
+         with:
                  path: woff2
-           - name: Move and install dependency 
-              run: sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
-              with:
+           
+       - name: Move and install dependency 
+         run: sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+         with:
                  path: woff2
           
-     - name: Install Font Custom dependency
-        run: sudo gem install fontcustom
+       - name: Install Font Custom dependency
+         run: sudo gem install fontcustom
           
           
-      - name: Build 'Featherity'
-        run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
+        - name: Build 'Featherity'
+          run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
         
         
-      - name: Zipping 'Featherity'
-        run: zip -r Featherity.zip build
+        - name: Zipping 'Featherity'
+          run: zip -r Featherity.zip build
         
         
-      - name: 'Upload to Artifacts'
-        uses: actions/upload-artifact@v1.0.0
-        with:
+        - name: 'Upload to Artifacts'
+          uses: actions/upload-artifact@v1.0.0
+          with:
           name: Featherity
           path: build
      
