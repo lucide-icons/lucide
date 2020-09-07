@@ -14,7 +14,9 @@ jobs:
 
       - name: Install Dependencies
         run: sudo apt-get install zlib1g-dev fontforge woff2
-          git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
+      - name: Clone sfnt2woff-zopfli repo
+        run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
+          
           cd sfnt2woff-zopfli
           make
           sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
