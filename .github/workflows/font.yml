@@ -21,7 +21,11 @@ jobs:
           git clone --recursive https://github.com/google/woff2.git
           cd woff2
           sudo make clean all
-          sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+           - name: Move and install dependency 
+              run: sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+              with:
+                 path: woff2
+          
           sudo gem install fontcustom
           
       - name: Build 'Featherity'
