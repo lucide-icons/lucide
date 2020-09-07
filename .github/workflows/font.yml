@@ -17,7 +17,6 @@ jobs:
       - name: Clone sfnt2woff-zopfli repo
         run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
           
-```suggestion
      - name: Compile program
         run: https://github.com/bramstein/sfnt2woff-zopfli.git
         with:
