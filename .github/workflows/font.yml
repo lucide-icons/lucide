@@ -26,9 +26,9 @@ jobs:
             with:
                 path: sfnt2woff-zopfli
           
-          git clone --recursive https://github.com/google/woff2.git
+
            - name: Compile woff2
-              run: sudo make clean all
+              run: sudo make clean all && git clone --recursive https://github.com/google/woff2.git
               with:
                  path: woff2
            - name: Move and install dependency 
