@@ -23,7 +23,6 @@ jobs:
           sudo make clean all
           sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
           sudo gem install fontcustom
-          cd /home/runner/work/featherity/featherity
           
       - name: Build 'Featherity'
         run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
