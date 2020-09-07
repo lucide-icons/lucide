@@ -12,8 +12,11 @@ jobs:
     steps:
 
 
+    - name: Clone 'Featherity'
+      uses: actions/checkout@v2
+    
 
-    - name: Install Dependencies
+    - name: Install FontForge
       run: sudo apt-get install zlib1g-dev fontforge woff2
     
 
@@ -43,15 +46,12 @@ jobs:
           
     - name: Install Font Custom dependency
       run: sudo gem install fontcustom
-          
-    - name: Clone 'Featherity'
-      uses: actions/checkout@v2
-          
+                
     - name: Build 'Featherity'
       run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
         
         
-    - name: Zipping 'Featherity'
+    - name: Zip 'Featherity'
       run: zip -r Featherity.zip build
         
         
