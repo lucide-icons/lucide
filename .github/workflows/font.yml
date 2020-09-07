@@ -22,7 +22,11 @@ jobs:
         run: https://github.com/bramstein/sfnt2woff-zopfli.git
         with:
             path: sfnt2woff-zopfli
-          sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+      - name: Move and install dependency
+            run: sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+            with:
+                path: sfnt2woff-zopfli
+          
           git clone --recursive https://github.com/google/woff2.git
           cd woff2
           sudo make clean all
