@@ -28,8 +28,10 @@ jobs:
                 path: sfnt2woff-zopfli
           
           git clone --recursive https://github.com/google/woff2.git
-          cd woff2
-          sudo make clean all
+           - name: Compile woff2
+              run: sudo make clean all
+              with:
+                 path: woff2
            - name: Move and install dependency 
               run: sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
               with:
