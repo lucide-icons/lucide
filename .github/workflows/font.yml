@@ -37,7 +37,9 @@ jobs:
               with:
                  path: woff2
           
-          sudo gem install fontcustom
+     - name: Install Font Custom dependency
+        run: sudo gem install fontcustom
+          
           
       - name: Build 'Featherity'
         run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
