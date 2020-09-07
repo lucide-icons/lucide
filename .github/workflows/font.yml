@@ -24,7 +24,7 @@ jobs:
     - name: Compile program
       run: https://github.com/bramstein/sfnt2woff-zopfli.git
       with:
-           path: sfnt2woff-zopfli
+                path: sfnt2woff-zopfli
      
 
     - name: Move and install dependency
