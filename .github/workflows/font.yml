@@ -22,8 +22,8 @@ jobs:
         with:
             path: sfnt2woff-zopfli
       - name: Move and install dependency
-            run: sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
-            with:
+          run: sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+          with:
                 path: sfnt2woff-zopfli
           
 
