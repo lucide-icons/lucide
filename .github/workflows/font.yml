@@ -12,10 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install 'FontCustom'
-        run: |
-          echo "Dependencies will be installed... Wait a moment"
-          sudo apt-get install zlib1g-dev fontforge woff2
+      - name: Install Dependencies
+        run: sudo apt-get install zlib1g-dev fontforge woff2
           git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
           cd sfnt2woff-zopfli
           make
