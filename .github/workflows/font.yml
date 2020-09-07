@@ -57,6 +57,6 @@ jobs:
     - name: 'Upload to Artifacts'
       uses: actions/upload-artifact@v1.0.0
       with:
-      name: Featherity
-      path: build
+       name: Featherity
+       path: build
      
