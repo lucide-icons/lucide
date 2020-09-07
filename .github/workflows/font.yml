@@ -44,7 +44,8 @@ jobs:
     - name: Install Font Custom dependency
       run: sudo gem install fontcustom
           
-    - uses: actions/checkout@v2
+    - name: Clone 'Featherity'
+      uses: actions/checkout@v2
           
     - name: Build 'Featherity'
       run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
