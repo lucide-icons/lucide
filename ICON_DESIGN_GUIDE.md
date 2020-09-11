@@ -4,14 +4,14 @@ To design icons for this icon library we need to follow some guidelines to match
 
 ## Summary of the rules we have
 
-1. Each Icon is desined on a canvas of 24 by 24 pixels.
-2. Each Icon have 1 pixel spacing/bleeding to the canvas.
-3. Each icon has a stroke width of 2 pixels.
-4. Each icon has round joins.
-5. Each icon has round caps.
-6. Each icon has centered strokes.
-7. Each icon containing squares has a border radius of 2 pixels.
-8. Each icon 2 pixels of spaciong between elements.
+1. Each Icon is desined on a canvas of **24 by 24 pixels**.
+2. Each Icon have **1 pixel padding** between icon and the canvas.
+3. Each icon has a **stroke width of 2 pixels**.
+4. Each icon has **round joins**.
+5. Each icon has **round caps**.
+6. Each icon has **centered strokes**.
+7. Each icon containing squares has a **border radius of 2 pixels**.
+8. Each icon **2 pixels of spacing between elements**.
 
 ## The Rules Visualized
 
@@ -19,7 +19,7 @@ To design icons for this icon library we need to follow some guidelines to match
 
 ![24px-24px](https://user-images.githubusercontent.com/11825403/92972184-17c60280-f482-11ea-94a5-af5984dabf05.png)
 
-### 2. **Each Icon have 1 pixel spacing/bleeding to the canvas**
+### 2. **Each Icon have 1 pixel between icon and the canvas**
 
 ![1px-padding](https://user-images.githubusercontent.com/11825403/92972337-5e1b6180-f482-11ea-93a7-3f62d9c4fce6.png)
 
