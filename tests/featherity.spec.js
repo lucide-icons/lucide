@@ -14,18 +14,11 @@ const getOriginalSvg = (iconName) => {
 
 describe('createIcons', () => {
   it('should read elements from DOM and replace it with icons', () => {
-    document.body.innerHTML = `
-      <i name="volume-2"</i>
-    `;
+    document.body.innerHTML = `<i icon-name="volume-2"></i>`;
 
     createIcons({icons});
 
     const svg = getOriginalSvg('volume-2');
-    const result = minify(document.body.innerHTML, {
-      collapseWhitespace: true,
-      keepClosingSlash: true,
-    });
-
-    expect(result).toBe(svg);
+    expect(document.body.innerHTML).toMatchSnapshot()
   });
 });
