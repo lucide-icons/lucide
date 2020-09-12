@@ -14,10 +14,23 @@ Featherity is a fork of [Feather Icons](https://github.com/feathericons/feather)
 * [License](#license)
 
 ## Installation
+
+### Package Managers
+
 ``` bash
 npm install featherity
 #or
 yarn add featherity
+```
+
+### CDN
+
+``` html
+<!-- Development version -->
+<script src="https://unpkg.com/featherity@latest/dist/umd/featherity.js"></script>
+
+<!-- Production version -->
+<script src="https://unpkg.com/featherity@latest"></script>
 ```
 
 ## Usage
@@ -26,50 +39,87 @@ At its core, Featherity is a collection of [SVG](https://svgontheweb.com/#svg) f
 
 The following are additional ways you can use Featherity.
 
-### ESModule
+### With unpkg
 
-``` js
-import { Camera } from 'featherity';
-// Returns HTMLElement
+Here is a complete example
 
-// Usage
-document.appendChild(Camera);
+```html
+<!DOCTYPE html>
+<body>
+  <i icon-name="volume-2" class="my-class"></i>
+  <i icon-name="x"></i>
+  <i icon-name="menu"></i>
+
+  <script src="https://unpkg.com/featherity@latest"></script>
+  <script>
+    featherity.createIcons();
+  </script>
+</body>
 ```
 
-### React
+### With ESModules
 
-``` js
-import { Camera } from 'featherity/react';
-// Returns ReactComponent
+To reduce bundle size, featherity is build to be fully threeshakeble.
+The `createIcons` function will search for HTMLElements with the attribute `icon-name` and replace it with the given icon name.
 
-// Usage
-const App = () => {
-  return <Camera color="red" size={48}/>
-};
-
-export default App;
+```html
+<!-- Your HTML file -->
+<i icon-name="menu"></i>
 ```
 
-### Vue
+```js
+import { createIcons, icons } from 'featherity';
 
-``` vue
-<template>
-  <div id="app">
-    <Camera color="red" :size="48"/>
-  </div>
-</template>
+// Caustion, this will import all the icons and bundle them.
+createIcons({icons});
 
-<script>
-import { Camera } from 'featherity/vue';
+// Recommended way, to include only the icons you need.
+import { createIcons, Menu, ArrowRight, Globe } from 'featherity';
 
-export default {
-  name: "App",
-  components: {
-    Camera
-  }
-};
-</script>
+createIcons({
+  icons: {
+    Menu,
+    ArrowRight,
+    Globe,
+  },
+});
 ```
+
+#### Additional Options
+
+In the `createIcons` function you can pass some extra parameters to adjust the `nameAttr` or add custom attributes like for example classes.
+
+Here is a full example:
+
+```js
+import { createIcons, Menu, ArrowRight, Globe } from 'featherity';
+
+createIcons({
+  attrs: {
+    class: ['my-custom-class', 'icon'],
+    'stroke-width': 1,
+    stroke: '#333',
+  },
+  nameAttr: 'icon-name', // atrribute for the icon name.
+  icons: {
+    Menu,
+    ArrowRight,
+    Globe,
+  },
+});
+```
+
+#### Custom Element binding
+
+```js
+import { createElement, Menu } from 'featherity';
+
+const menuIcon = createElement(Menu);
+
+document.appendChild(menuIcon);
+```
+
+
 
 ### Figma
 
