@@ -21,4 +21,39 @@ describe('createIcons', () => {
     const svg = getOriginalSvg('volume-2');
     expect(document.body.innerHTML).toMatchSnapshot()
   });
+
+  it('should customize the name attribute', () => {
+    document.body.innerHTML = `<i custom-name="volume-2"></i>`;
+
+    createIcons({
+      icons,
+      nameAttr: 'custom-name'
+    });
+
+    const hasSvg = !!document.querySelector('svg');
+
+    expect(hasSvg).toBeTruthy()
+  });
+
+  it('should add custom attributes', () => {
+    document.body.innerHTML = `<i icon-name="volume-2"></i>`;
+
+    const attrs = {
+      class: 'icon custom-class',
+      fill: 'black',
+    };
+
+    createIcons({ icons, attrs });
+
+    const element = document.querySelector('svg');
+    const attributes = element.getAttributeNames();
+
+    const attributesAndValues = attributes.reduce((acc, item) => {
+      acc[item] = element.getAttribute(item);
+
+      return acc;
+    },{})
+
+    expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+  });
 });
