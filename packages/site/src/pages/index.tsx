@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Flex,
   Grid,
@@ -10,14 +11,17 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/core";
-import copy from "copy-to-clipboard";
-import download from "downloadjs";
+
 import JSZip from "jszip";
+import download from "downloadjs";
 import { useEffect, useRef, useState } from "react";
 import { StringParam, useQueryParam } from "use-query-params";
 import Layout from "../components/Layout";
 import { getAllData } from "../lib/icons";
 import useSearch from "../lib/search";
+import IconOverview from "../components/IconOverview";
+import IconDetailOverlay from "../components/IconDetailOverlay";
+import { useRouter } from "next/router";
 
 function generateZip(icons) {
   const zip = new JSZip();
@@ -29,17 +33,26 @@ function generateZip(icons) {
 }
 
 const IndexPage = ({ data }) => {
-  const [query, setQuery] = useQueryParam("query", StringParam);
-  const results = useSearch(data, query || "");
-  const toast = useToast();
+  const router = useRouter();
 
+  const [query, setQuery] = useQueryParam("query", StringParam);
+  const [searchString, setSearchString] = useState(query || '')
+  const results = useSearch(data, query || '');
   const inputElement = useRef(null);
+
   function handleKeyDown(event) {
     if (event.key === "/" && inputElement.current !== document.activeElement) {
       event.preventDefault();
       inputElement.current.focus();
     }
   }
+
+  const search = ({target}) => {
+    setSearchString(target.value);
+    setQuery(target.value);
+  }
+
+  const getIcon = (iconName) => data.find(({name}) => name === iconName) || {};
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
@@ -48,6 +61,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <IconDetailOverlay
+        isOpen={!!router.query.iconName} 
+        icon={getIcon(router.query.iconName)}
+        onClose={() => router.push('/')}
+      />
       <Flex direction="column" align="center" justify="center">
         <Text fontSize="3xl" as="b">
           Simply beautiful open source icons, community-sourced
@@ -70,53 +88,13 @@ const IndexPage = ({ data }) => {
           placeholder={`Search ${
             Object.keys(data).length
           } icons (Press "/" to focus)`}
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          defaultValue={searchString}
+          onChange={search}
           marginBottom={5}
         />
       </InputGroup>
       {results.length > 0 ? (
-        <Grid
-          templateColumns={`repeat(auto-fill, minmax(160px, 1fr))`}
-          gap={5}
-        >
-          {results.map((icon) => {
-            // @ts-ignore
-            const actualIcon = icon.item ? icon.item : icon;
-            return (
-              <Button
-                variant="ghost"
-                borderWidth="1px"
-                rounded="lg"
-                padding={16}
-                onClick={(event) => {
-                  if (event.shiftKey) {
-                    copy(actualIcon.src);
-                    toast({
-                      title: "Copied!",
-                      description: `Icon "${actualIcon.name}" copied to clipboard.`,
-                      status: "success",
-                      duration: 1500,
-                    });
-                  } else {
-                    download(
-                      actualIcon.src,
-                      `${actualIcon.name}.svg`,
-                      "image/svg+xml"
-                    );
-                  }
-                }}
-                key={actualIcon.name}
-                alignItems="center"
-              >
-                <Flex direction="column" align="center" justify="center">
-                  <div dangerouslySetInnerHTML={{ __html: actualIcon.src }} />
-                  <Text marginTop={5}>{actualIcon.name}</Text>
-                </Flex>
-              </Button>
-            );
-          })}
-        </Grid>
+        <IconOverview icons={results} />
       ) : (
         <Text
           fontSize="2xl"
@@ -133,6 +111,7 @@ const IndexPage = ({ data }) => {
 
 export async function getStaticProps() {
   let data = getAllData();
+
   return {
     props: {
       data,

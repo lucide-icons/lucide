@@ -17,10 +17,12 @@
     "emotion-theming": "^10.0.27",
     "fuse.js": "^6.0.4",
     "jszip": "^3.4.0",
+    "lodash": "^4.17.20",
     "next": "^9.4.4",
     "query-string": "^6.13.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-spring": "^8.0.27",
     "use-query-params": "^1.1.3"
   },
   "devDependencies": {
