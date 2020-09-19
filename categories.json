@@ -1,14 +1,14 @@
 {
   "arrows": [],
-  "devices": [],
+  "brands": [],
+  "code": [],
   "connectivity": [],
-  "text-edit": [],
-  "nature": [],
+  "devices": [],
+  "file-system": [],
+  "maths": [],
   "multimedia": [],
+  "nature": [],
   "shopping": [],
   "shapes": [],
-  "maths": [],
-  "file-system": [],
-  "code": [],
-  "brands:" []
+  "text-edit": []
 }
