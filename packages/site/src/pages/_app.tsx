@@ -2,6 +2,7 @@ import { CSSReset, ThemeProvider, ColorModeProvider } from "@chakra-ui/core";
 import { useRouter } from "next/router";
 import { QueryParamProvider } from "use-query-params";
 import customTheme from "../lib/theme";
+import '../assets/styling.css';
 import Head from "next/head";
 
 const QueryProvider = ({ children }) => {
