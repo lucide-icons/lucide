@@ -134,9 +134,11 @@ const menuIcon = createElement(Menu); // Returns HTMLElement (svg)
 
 // set custom attributes with browser native functions
 menuIcon.setAttribute('stroke', '#333');
-menuIcon.classList.add('my-icon-class');\
+menuIcon.classList.add('my-icon-class');
 
-document.getElementById('app').appendChild(menuIcon);
+// Append HTMLElement in webpage
+const myApp = document.getElementById('app');
+myApp.appendChild(menuIcon);
 ```
 
 ### Figma
