@@ -44,11 +44,11 @@ With the Javascript library you can easily incorporate icon in you webpage.
 <i icon-name="menu"></i>
 ```
 
-It will replace the html with an svg.
+It will replace the html with a svg.
 
 ### With unpkg
 
-Here is a complete example with script tag.
+Here is a complete example with unpkg
 
 ```html
 <!DOCTYPE html>
@@ -99,7 +99,7 @@ In the `createIcons` function you can pass some extra parameters to adjust the `
 Here is a full example:
 
 ```js
-import { createIcons, Menu, ArrowRight, Globe } from 'featherity';
+import { createIcons } from 'featherity';
 
 createIcons({
   attrs: {
@@ -108,6 +108,15 @@ createIcons({
     stroke: '#333',
   },
   nameAttr: 'icon-name', // atrribute for the icon name.
+});
+```
+
+#### Threeshake the library, only use the icons you use
+
+```js
+import { createIcons, Menu, ArrowRight, Globe } from 'featherity';
+
+createIcons({
   icons: {
     Menu,
     ArrowRight,
