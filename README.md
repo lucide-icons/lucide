@@ -37,14 +37,8 @@ yarn add featherity
 
 At its core, Featherity is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Feather icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
 
-The following are additional ways you can use Featherity.<br>
-With the Javascript library you can easily incorporate icon in you webpage.
-
-```html
-<i icon-name="menu"></i>
-```
-
-It will replace the html with a svg.
+The following are additional ways you can use Featherity.  
+With the Javascript library you can easily incorporate the icon you want in your webpage.  
 
 ### With unpkg
 
