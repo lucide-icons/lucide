@@ -9,20 +9,16 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <line x1="2" y1="2" x2="2" y2="4"/>
-  <line x1="2" y1="2" x2="4" y2="2"/>
+  <polyline points="2 4 2 2 4 2" />
   <line x1="8" y1="2" x2="10" y2="2"/>
   <line x1="14" y1="2" x2="16" y2="2"/>
-  <line x1="20" y1="2" x2="22" y2="2"/>
-  <line x1="22" y1="2" x2="22" y2="4"/>
+  <polyline points="20 2 22 2 22 4" />
   <line x1="22" y1="8" x2="22" y2="10"/>
   <line x1="22" y1="14" x2="22" y2="16"/>
-  <line x1="22" y1="20" x2="22" y2="22"/>
-  <line x1="20" y1="22" x2="22" y2="22"/>
+  <polyline points="22 20 22 22 20 22" />
   <line x1="14" y1="22" x2="16" y2="22"/>
   <line x1="8" y1="22" x2="10" y2="22"/>
-  <line x1="2" y1="22" x2="4" y2="22"/>
-  <line x1="2" y1="20" x2="2" y2="22"/>
+  <polyline points="2 20 2 22 4 22" />
   <line x1="2" y1="14" x2="2" y2="16"/>
   <line x1="2" y1="8" x2="2" y2="10"/>
 </svg>
