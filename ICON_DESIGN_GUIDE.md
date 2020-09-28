@@ -44,5 +44,35 @@ To design icons for this icon library we need to follow some guidelines to match
 ![2px-border-radius](https://user-images.githubusercontent.com/11825403/92972705-fc0f2c00-f482-11ea-8d5e-7605462832f3.png)
 
 ### 8. **Each icon 2 pixels of spaciong between elements**
+
 ![2px-spacing](https://user-images.githubusercontent.com/11825403/92972733-06c9c100-f483-11ea-8fbc-73e5270c79ee.png)
 
+## Code Conventions
+
+Before an icon is added to the library, we like to have readable and optimized svg code.
+
+### Global Attributes
+
+For each icon these attributes are applied.
+
+```xml
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- SVGElements -->
+</svg>
+```
+
+### Minify paths
+
+Code of paths can get really big.
+To reduce file size we like to minify the code.
+We recommend to use the [SVGOMG](https://jakearchibald.github.io/svgomg/) to minify paths.
