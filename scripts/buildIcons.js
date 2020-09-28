@@ -6,7 +6,9 @@ import renderIconNodes from './render/renderIconNodes';
 import generateIconFiles from './build/generateIconFiles';
 import generateExportsFile from './build/generateExportsFile';
 
-const IN_DIR = path.resolve(__dirname, '../icons');
+import { readSvgDirectory } from './helpers';
+
+const ICONS_DIR = path.resolve(__dirname, '../icons');
 const OUTPUT_DIR = path.resolve(__dirname, '../build');
 const SRC_DIR = path.resolve(__dirname, '../src');
 
@@ -14,10 +16,10 @@ if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
 }
 
-const svgFiles = fs.readdirSync(IN_DIR).filter(file => path.extname(file) === '.svg');
-const getSvg = svgFile => fs.readFileSync(path.join(IN_DIR, svgFile));
+const svgFiles = readSvgDirectory(ICONS_DIR);
 
-const icons = renderIconsObject(svgFiles, getSvg);
+const icons = renderIconsObject(svgFiles, ICONS_DIR);
+
 const iconVNodes = renderIconNodes(icons);
 
 // Generates iconsNodes files for each icon

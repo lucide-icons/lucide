@@ -1,17 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import processSvg from './render/processSvg';
+import { readSvgDirectory, writeSvgFile } from './helpers';
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 
-console.log(`Optimizing SVGs in ${ICONS_DIR}...`);
+console.log(`Optimizing SVGs...`);
 
-const svgFiles = fs.readdirSync(ICONS_DIR).filter(file => path.extname(file) === '.svg');
-console.log(svgFiles);
+const svgFiles = readSvgDirectory(ICONS_DIR);
 
-svgFiles
-  .filter(file => path.extname(file) === '.svg')
-  .forEach(svgFile => {
-    const svg = fs.readFileSync(path.join(ICONS_DIR, svgFile));
-    processSvg(svg).then(svg => fs.writeFileSync(path.join(ICONS_DIR, svgFile), svg));
-  });
+svgFiles.forEach(svgFile => {
+  const content = fs.readFileSync(path.join(ICONS_DIR, svgFile));
+  processSvg(content).then(svg => writeSvgFile(svg, ICONS_DIR, content));
+});

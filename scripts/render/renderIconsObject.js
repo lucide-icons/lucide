@@ -2,6 +2,7 @@
 import path from 'path';
 import cheerio from 'cheerio';
 import { minify } from 'html-minifier';
+import { readSvg } from '../helpers';
 
 /**
  * Get contents between opening and closing `<svg>` tags.
@@ -20,11 +21,11 @@ function getSvgContents(svg) {
  * @param {Function} getSvg - A function that returns the contents of an SVG file given a filename.
  * @returns {Object}
  */
-export default (svgFiles, getSvg) =>
+export default (svgFiles, iconsDirectory) =>
   svgFiles
     .map(svgFile => {
       const name = path.basename(svgFile, '.svg');
-      const svg = getSvg(svgFile);
+      const svg = readSvg(svgFile, iconsDirectory);
       const contents = getSvgContents(svg);
       return { name, contents };
     })

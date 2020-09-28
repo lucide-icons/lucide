@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { generateComponentName, resetFile, writeFile, readFile } from './helpers';
+import { generateComponentName, resetFile, appendFile } from '../helpers';
 
 export default function(inputEntry, outputDirectory, componentGetter, iconNodes) {
   const fileName = path.basename(inputEntry);
@@ -14,10 +14,10 @@ export default function(inputEntry, outputDirectory, componentGetter, iconNodes)
   icons.forEach(iconName => {
     const componentName = generateComponentName(iconName);
     const importString = `export { default as ${componentName} } from './${iconName}';\n`;
-    writeFile(importString, fileName, outputDirectory);
+    appendFile(importString, fileName, outputDirectory);
   });
 
-  writeFile('\n', fileName, outputDirectory);
+  appendFile('\n', fileName, outputDirectory);
 
   console.log(`Successfully generated ${fileName} file`);
 }

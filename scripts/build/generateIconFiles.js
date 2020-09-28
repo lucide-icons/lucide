@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { generateComponentName } from './helpers';
+import { generateComponentName } from '../helpers';
 
 export default function(iconNode, outputDirectory, template) {
   const icons = Object.keys(iconNode);
