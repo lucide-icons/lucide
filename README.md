@@ -4,7 +4,9 @@
 
 ## What is Featherity?
 
-Featherity is a fork of [Feather Icons](https://github.com/feathericons/feather), with icons sourced by the community.
+Featherity is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
+
+Note that we are completely independent from Feather, so **icons submitted here won't get added to Feather Icons or its associated librairies**.
 
 ## Table of Contents
 
@@ -31,9 +33,8 @@ Caught a mistake or want to contribute to the documentation? [Edit this page on 
 
 ## Community
 
-Do you want to join our community?
-Join us in [discord](https://discord.gg/EH6nSts)!
+Join the community on our [Discord](https://discord.gg/EH6nSts) server!
 
 ## License
 
-Feather is licensed under the [ISC License](https://github.com/featherity/featherity/blob/master/LICENSE).
+Featherity is licensed under the [ISC License](https://github.com/featherity/featherity/blob/master/LICENSE).
