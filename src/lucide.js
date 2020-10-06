@@ -7,7 +7,7 @@ import * as allIcons from './icons/index';
 export const createIcons = ({ icons = {}, nameAttr = 'icon-name', attrs = {} } = {}) => {
   if (!Object.values(icons).length) {
     throw new Error(
-      "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import featherity, { icons } from 'featherity';\nfeather({icons});`",
+      "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`",
     );
   }
 

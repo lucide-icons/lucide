@@ -1,5 +1,5 @@
 import * as icons from './icons';
-import { createIcons } from '../src/featherity';
+import { createIcons } from '../src/lucide';
 import fs from 'fs';
 import path from 'path';
 import { minify } from 'html-minifier';

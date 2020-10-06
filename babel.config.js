@@ -8,7 +8,6 @@ module.exports = {
       },
     ],
   ],
-  // plugins: ['babel-plugin-add-import-extension'],
   env: {
     test: {
       presets: ['@babel/env'],

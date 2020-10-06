@@ -11,7 +11,7 @@ import pkg from './package.json';
 
 const outputFileName = pkg.name;
 
-const inputs = ['build/featherity.js'];
+const inputs = ['build/lucide.js'];
 const bundles = [
   {
     inputs,
@@ -61,7 +61,7 @@ const configs = bundles
         }),
       ].filter(Boolean),
       output: {
-        name: 'featherity',
+        name: 'lucide',
         file: `${dir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,
