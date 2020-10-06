@@ -3,7 +3,7 @@
   "amdName": "lucide",
   "homepage": "https://featherity.netlify.app",
   "repository": "github:lucide-icons/lucide",
-  "url" : "https://github.com/owner/project/issues",
+  "url": "https://github.com/owner/project/issues",
   "license": "ISC",
   "version": "0.1.0",
   "source": "build/lucide.js",
