@@ -44,5 +44,5 @@ jobs:
     - name: 'Upload to Artifacts'
       uses: actions/upload-artifact@v1.0.0
       with:
-       name: Lucide
-       path: build
+        name: Lucide
+        path: build
