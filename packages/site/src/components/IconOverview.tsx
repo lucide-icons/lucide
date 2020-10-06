@@ -5,7 +5,7 @@ import IconList from "./IconList";
 import { useEffect, useRef, useState } from "react";
 import { StringParam, useQueryParam } from "use-query-params";
 import useSearch from "../lib/search";
-// import download from "downloadjs";
+import theme from "../lib/theme";
 
 const IconOverview = ({data}) => {
   const [query, setQuery] = useQueryParam("query", StringParam);

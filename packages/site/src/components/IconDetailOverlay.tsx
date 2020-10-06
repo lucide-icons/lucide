@@ -93,7 +93,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                     className="icon-large"
                   />
 
-                  <svg className="icon-grid" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2E8F0" strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="icon-grid" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
                     { Array.from({ length:23 }, (_, i) => (
                       <>
                         <line x1={0} y1={i + 1} x2={24} y2={i + 1} />
@@ -104,9 +104,22 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                 </Box>
               </Flex>
               <Flex marginLeft={8}>
-                <Text fontSize="2xl" style={{ cursor: "pointer" }}>
-                  {icon.name}
-                </Text>
+                <Box>
+                  <Text fontSize="2xl" style={{ cursor: "pointer" }}>
+                    {icon.name}
+                  </Text>
+                  <Text 
+                    fontSize="xl"
+                    fontWeight="bold"
+                    color={
+                      colorMode === "light"
+                      ? 'gray.500'
+                      : 'gray.800'
+                    }
+                  >
+                    {icon.tags.join(' • ')}
+                  </Text>
+                </Box>
               </Flex>
             </Flex>
           </Box>
