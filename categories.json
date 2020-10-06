@@ -2,13 +2,18 @@
   "arrows": [],
   "brands": [],
   "code": [],
-  "connectivity": [],
-  "devices": [],
+  "connectivity": ["airplay"],
+  "cursors": [],
+  "development": [],
+  "devices": ["alarm-clock"],
   "file-system": [],
-  "maths": [],
+  "layout": [],
+  "maths": ["activity"],
   "multimedia": [],
+  "notifications": ["alert-circle", "alert-octagon", "alert-triangle"],
   "nature": [],
   "shopping": [],
   "shapes": [],
-  "text-edit": []
+  "sports": [],
+  "text-edit": ["align-center","align-right","align-left","align-justify" ]
 }
