@@ -1,5 +1,7 @@
 # Lucide
 
+![NPM](https://img.shields.io/npm/l/lucide)
+[![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide)
 [![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
 
 ## What is Lucide?

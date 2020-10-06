@@ -1,8 +1,6 @@
-name: Build Featherity
+name: Build Lucide
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -10,54 +8,41 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-
-
-    - name: Clone 'Featherity'
+    - name: Clone 'Lucide'
       uses: actions/checkout@v2
-    
 
     - name: Install FontForge
       run: sudo apt-get install zlib1g-dev fontforge woff2
-    
 
     - name: Clone sfnt2woff-zopfli repo
       run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
-          
-     
 
     - name: Install and move sfnt2woff-zopfli
       run: |
           cd sfnt2woff-zopfli
           make
           sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
-          
 
     - name: Clone woff2
       run: git clone --recursive https://github.com/google/woff2.git
-      
+
     - name: Install woff2
       run: |
           cd woff2
           sudo make clean all
           sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
-          
 
-
-          
     - name: Install Font Custom dependency
       run: sudo gem install fontcustom
-                
-    - name: Build 'Featherity'
+
+    - name: Build 'Lucide'
       run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
-        
-        
-    - name: Zip 'Featherity'
+
+    - name: Zip 'Lucide'
       run: zip -r Featherity.zip build
-        
-        
+
     - name: 'Upload to Artifacts'
       uses: actions/upload-artifact@v1.0.0
       with:
-       name: Featherity
-       path: build
-     
+        name: Lucide
+        path: build
