@@ -1,4 +1,6 @@
 .github
 packages
 stats
-build
+node_modules
+tests
+scripts
