@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
             </Text>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-          <Link href="https://github.com/featherity/featherity" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
+          <Link href="https://github.com/lucide-icons/lucide" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
             Github
           </Link>
             <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
