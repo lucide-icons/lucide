@@ -8,8 +8,6 @@
 
 Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
-Note that we are completely independent from Feather, so **icons submitted here won't get added to Feather Icons or its associated librairies**.
-
 ## Table of Contents
 
 * [Usage](#usage)
