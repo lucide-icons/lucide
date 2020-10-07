@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
+    "export": "next export -o build",
     "deploy": "yarn build && yarn export",
     "test": "jest"
   },
