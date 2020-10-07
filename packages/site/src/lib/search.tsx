@@ -1,21 +1,31 @@
-import Fuse from "fuse.js";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from 'react';
+import { useDebounce } from './useDebounce';
 
-function useSearch(icons, query) {
-  const fuse = new Fuse(Object.values(icons), {
-    threshold: 0.2,
-    keys: ["name", "tags"],
-  });
+function useSearch(icons: Object, query: string | string[]) {
+  let iconList = useMemo(() => Object.values(icons), [icons]);
+  const [results, setResults] = useState(iconList);
+  // query can be an array because this is a valid query string ?query=xyz&query=abc
+  const debouncedQuery = useDebounce(
+    typeof query === 'string' ? query.trim() : typeof query === 'undefined' ? '' : query[0].trim(),
+    300
+  );
 
-  const [results, setResults] = useState(Object.values(icons));
+  async function doSearch() {
+    if (debouncedQuery) {
+      const Fuse = (await import('fuse.js')).default;
+      const fuse = new Fuse(iconList, {
+        threshold: 0.2,
+        keys: ['name', 'tags'],
+      });
+      return fuse.search(debouncedQuery);
+    } else {
+      return iconList;
+    }
+  }
 
   useEffect(() => {
-    if (query.trim()) {
-      setResults(fuse.search(query.trim()));
-    } else {
-      setResults(Object.values(icons));
-    }
-  }, [query]);
+    doSearch().then(setResults);
+  }, [debouncedQuery]);
 
   return results;
 }
