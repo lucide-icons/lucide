@@ -1,0 +1,4 @@
+[build]
+  base = "lucide/packages/site"
+  publish = "out/"
+  command = "yarn deploy"
