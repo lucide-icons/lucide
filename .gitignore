@@ -4,7 +4,7 @@
 node_modules
 dist
 build
-lib
+/lib
 sandbox
 stash
 coverage
