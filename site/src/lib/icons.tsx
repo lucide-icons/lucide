@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
-import tags from '../../../../tags.json';
+import tags from '../../../tags.json';
 
-const directory = path.join(process.cwd(), "../../icons");
+const directory = path.join(process.cwd(), "../icons");
 
 export function getAllNames() {
   const fileNames = fs.readdirSync(directory);
