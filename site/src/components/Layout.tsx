@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
               onClick={() => setQuery("")}
               style={{ cursor: "pointer" }}
             >
-              Featherity
+              Lucide
             </Text>
           </Flex>
           <Flex justifyContent="center" alignItems="center">

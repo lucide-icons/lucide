@@ -6,7 +6,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Featherity</title>
+        <title>Lucide</title>
       </Head>
       <ThemeProvider theme={customTheme}>
         <ColorModeProvider>
