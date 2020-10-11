@@ -137,6 +137,35 @@ const myApp = document.getElementById('app');
 myApp.appendChild(menuIcon);
 ```
 
+### How to use in Nuxt.js
+
+Create a `lucide.js` in `plugins` directory
+
+```js
+import { createIcons, icons } from "lucide";
+
+createIcons({ icons });
+```
+
+Add lucide plugin to nuxt configuration, make sure to set the `mode: "client"`.
+
+```js
+plugins: [
+  {
+    src: "@/plugins/lucide.js",
+    mode: "client"
+  }
+]
+```
+
+Inside your vue file `index.vue`
+
+```vue
+<template>
+  <i icon-name="home"></i>
+</template>
+```
+
 ### Figma
 
 You can use the components from [this Figma file](https://www.figma.com/file/g0UipfQlRfGrntKPxZknM7/Featherity).
