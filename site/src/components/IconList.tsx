@@ -1,10 +1,11 @@
-import { Box, Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
+import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
+import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
 
 const IconList = ({icons}) => {
   const toast = useToast();
-  
+
   return (
     <Grid
       templateColumns={`repeat(auto-fill, minmax(160px, 1fr))`}
@@ -14,7 +15,7 @@ const IconList = ({icons}) => {
         // @ts-ignore
         const actualIcon = icon.item ? icon.item : icon;
         const { name, src } = actualIcon;
-        
+
         return (
           <Link key={name} href={`/?iconName=${name}`} as={`/icon/${name}`} scroll={false}>
             <Button
@@ -31,14 +32,14 @@ const IconList = ({icons}) => {
                     status: "success",
                     duration: 1500,
                   });
-                } 
-                // else {
-                //   download(
-                //     actualIcon.src,
-                //     `${name}.svg`,
-                //     "image/svg+xml"
-                //   );
-                // }
+                }
+                if (event.metaKey) {
+                  download(
+                    actualIcon.src,
+                    `${name}.svg`,
+                    "image/svg+xml"
+                  );
+                }
               }}
               key={name}
               alignItems="center"

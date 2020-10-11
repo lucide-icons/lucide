@@ -19,7 +19,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
   const panelStyling = {
     transform: transform.interpolate(t => t),
     opacity: opacity.interpolate(o => o),
-    width: "100%", 
+    width: "100%",
     willChange: "transform"
   }
 
@@ -108,7 +108,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   <Text fontSize="2xl" style={{ cursor: "pointer" }}>
                     {icon.name}
                   </Text>
-                  <Text 
+                  {/* <Text
                     fontSize="xl"
                     fontWeight="bold"
                     color={
@@ -117,8 +117,11 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                       : 'gray.800'
                     }
                   >
-                    {icon.tags.join(' • ')}
-                  </Text>
+                    {icon
+                    // .tags.join(' • ')
+
+                    }
+                  </Text> */}
                 </Box>
               </Flex>
             </Flex>

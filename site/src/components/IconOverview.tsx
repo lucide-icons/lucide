@@ -1,11 +1,7 @@
-import { Box, Button, Flex, Grid, Icon, Input, InputGroup, InputLeftElement, Text, useToast } from "@chakra-ui/core";
-import Link from 'next/link'
-import copy from "copy-to-clipboard";
+import { Icon, Input, InputGroup, InputLeftElement, Text } from "@chakra-ui/core";
 import IconList from "./IconList";
 import { useEffect, useRef, useState } from "react";
-import { StringParam, useQueryParam } from "use-query-params";
 import useSearch from "../lib/search";
-import theme from "../lib/theme";
 import { useRouter } from 'next/router';
 import { useDebounce } from '../lib/useDebounce';
 
@@ -26,13 +22,19 @@ const IconOverview = ({data}) => {
   }
 
   useEffect(() => {
-    setQueryText(query);
+    setQueryText(query || '');
   }, [query]);
 
   useEffect(() => {
+    const { query } = router;
+    console.log(router);
+
+
     router.push({
-      pathname: '/',
-      query: { query: debouncedQuery },
+      query: {
+        ...query,
+        query: debouncedQuery
+      },
     });
   }, [debouncedQuery]);
 
@@ -40,12 +42,6 @@ const IconOverview = ({data}) => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
-
-  const search = ({target}) => {
-    setSearchString(target.value);
-    setQuery(target.value);
-  }
 
   return (
     <>
