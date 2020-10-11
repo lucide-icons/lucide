@@ -8,14 +8,12 @@ import Header from "../components/Header";
 
 const IndexPage = ({ data }) => {
   const router = useRouter();
-
   const getIcon = (iconName) => data.find(({name}) => name === iconName) || {};
-  
-  
+
   return (
     <Layout>
       <IconDetailOverlay
-        isOpen={!!router.query.iconName} 
+        isOpen={!!router.query.iconName}
         icon={getIcon(router.query.iconName)}
         onClose={() => router.push('/')}
       />

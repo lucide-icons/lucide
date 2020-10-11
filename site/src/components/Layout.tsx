@@ -1,11 +1,17 @@
 import { Box, Divider, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/core";
-import { StringParam, useQueryParam } from "use-query-params";
 import { useKeyBindings } from "../lib/key";
+import {useRouter} from "next/router";
 
 const Layout = ({ children }) => {
-  const [, setQuery] = useQueryParam("query", StringParam);
+  const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
 
+  function setQuery(query){
+    router.push({
+      pathname: '/',
+      query: { query: query }
+    }).then();
+  }
   useKeyBindings({
     Escape: {
       fn: () => setQuery(""),
@@ -34,11 +40,11 @@ const Layout = ({ children }) => {
               onClick={() => setQuery("")}
               style={{ cursor: "pointer" }}
             >
-              Featherity
+              Lucide
             </Text>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-          <Link href="https://github.com/featherity/featherity" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
+          <Link href="https://github.com/lucide-icons/lucide" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
             Github
           </Link>
             <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
