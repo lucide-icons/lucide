@@ -1,0 +1,23 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+<path d="M4 4C4 2.89543 4.79594 2 5.77778 2H18.2222C19.2041 2 20 2.89543 20 4V20C20 20.5304 19.8127 21.0391 19.4793 21.4142C19.1459 21.7893 18.6937 22 18.2222 22H5.77778C5.30628 22 4.8541 21.7893 4.5207 21.4142C4.1873 21.0391 4 20.5304 4 20V4Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 22V18H15V22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 6H8.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 6H16.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M12 6H12.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M12 10H12.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M12 14H12.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 10H16.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 14H16.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M8 10H8.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path d="M8 14H8.01" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</svg>
