@@ -1,6 +1,12 @@
 .DS_Store
+.next
+.now
 node_modules
 dist
+build
+/lib
 sandbox
 stash
 coverage
+stats
+*.log
