@@ -1,6 +1,6 @@
 import { Box, Divider, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/core";
 import { useKeyBindings } from "../lib/key";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   const router = useRouter();

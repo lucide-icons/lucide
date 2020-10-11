@@ -1,10 +1,10 @@
 import { useSpring, animated } from "react-spring";
 import { Box, Text, CloseButton, useColorMode, Flex } from "@chakra-ui/core";
-import { useEffect } from "react";
 import theme from "../lib/theme";
 
 const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
   const { colorMode } = useColorMode();
+  const { tags = [] } = icon;
 
   const { transform, opacity } = useSpring({
     opacity: isOpen ? 1 : 0,
@@ -108,7 +108,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   <Text fontSize="2xl" style={{ cursor: "pointer" }}>
                     {icon.name}
                   </Text>
-                  {/* <Text
+                  <Text
                     fontSize="xl"
                     fontWeight="bold"
                     color={
@@ -117,11 +117,8 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                       : 'gray.800'
                     }
                   >
-                    {icon
-                    // .tags.join(' • ')
-
-                    }
-                  </Text> */}
+                    { tags?.length ? tags.join(' • ') : ''}
+                  </Text>
                 </Box>
               </Flex>
             </Flex>
