@@ -13,14 +13,14 @@ function generateZip(icons) {
     // @ts-ignore
     zip.file(`${icon.name}.svg`, icon.src)
   );
-  return zip.generateAsync({ type: "blob" });
+  return zip.generateAsync({ type: 'blob' });
 }
 
 const Header = ({ data }) => {
   const downloadAllIcons = async () => {
-    
+
     const zip = await generateZip(data);
-    download(zip, "feather.zip");
+    download(zip, 'feather.zip');
   };
 
   return (

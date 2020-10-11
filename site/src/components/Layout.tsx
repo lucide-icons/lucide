@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
       query: { query: query }
     }).then();
   }
+
   useKeyBindings({
     Escape: {
       fn: () => setQuery(""),

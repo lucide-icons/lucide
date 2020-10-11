@@ -6,11 +6,16 @@ import { useEffect, useRef, useState } from "react";
 import { StringParam, useQueryParam } from "use-query-params";
 import useSearch from "../lib/search";
 import theme from "../lib/theme";
+import { useRouter } from 'next/router';
+import { useDebounce } from '../lib/useDebounce';
 
 const IconOverview = ({data}) => {
-  const [query, setQuery] = useQueryParam("query", StringParam);
-  const [searchString, setSearchString] = useState(query || '')
-  const results = useSearch(data, query || '');
+  const router = useRouter();
+  const { query } = router.query;
+  const [queryText, setQueryText] = useState(query || '');
+  const debouncedQuery = useDebounce(queryText, 1000);
+  const results = useSearch(data, queryText);
+
   const inputElement = useRef(null);
 
   function handleKeyDown(event) {
@@ -21,8 +26,19 @@ const IconOverview = ({data}) => {
   }
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    setQueryText(query);
+  }, [query]);
+
+  useEffect(() => {
+    router.push({
+      pathname: '/',
+      query: { query: debouncedQuery },
+    });
+  }, [debouncedQuery]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
 
@@ -30,18 +46,16 @@ const IconOverview = ({data}) => {
     setSearchString(target.value);
     setQuery(target.value);
   }
-  
+
   return (
     <>
-    <InputGroup position="sticky" top={2} zIndex={1}>
+      <InputGroup position="sticky" top={2} zIndex={1}>
         <InputLeftElement children={<Icon name="search" />} />
         <Input
           ref={inputElement}
-          placeholder={`Search ${
-            Object.keys(data).length
-          } icons (Press "/" to focus)`}
-          defaultValue={searchString}
-          onChange={search}
+          placeholder={`Search ${Object.keys(data).length} icons (Press "/" to focus)`}
+          value={queryText}
+          onChange={(event) => setQueryText(event.target.value)}
           marginBottom={5}
         />
       </InputGroup>

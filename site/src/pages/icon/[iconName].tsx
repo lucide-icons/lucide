@@ -9,17 +9,6 @@ import Header from '../../components/Header';
 const IconPage = ({ icon, data }) => {
   const router = useRouter()
 
-  // useEffect(() => {
-  //   // router.prefetch('/')
-  //   // router.replace('/').then(() => router.query.iconName = icon.name)
-  //   router.replace({
-  //     pathname: '/',
-  //     as: `/icon/${icon.name}`,
-  //     query: { iconName: icon.name },
-  //   })
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
-
   return (
     <Layout>
       <IconDetailOverlay
