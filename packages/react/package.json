@@ -1,7 +1,7 @@
 {
-  "name": "react-featherity",
+  "name": "lucide-react",
   "version": "1.0.0",
-  "description": "React component for Featherity icons",
+  "description": "React component for lucide icons",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
   "author": "John Letey",

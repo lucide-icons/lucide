@@ -1,0 +1,6 @@
+.github
+packages
+stats
+node_modules
+tests
+scripts

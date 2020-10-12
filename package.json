@@ -1,12 +1,64 @@
 {
-  "private": true,
+  "name": "lucide",
+  "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "version": "0.1.1",
+  "license": "ISC",
+  "amdName": "lucide",
+  "homepage": "https://lucide.netlify.app",
+  "url": "https://github.com/owner/project/issues",
+  "repository": "github:lucide-icons/lucide",
+  "source": "build/lucide.js",
+  "main": "dist/cjs/lucide.js",
+  "main:umd": "dist/umd/lucide.js",
+  "module": "lib/lucide.js",
+  "unpkg": "dist/umd/lucide.min.js",
+  "sideEffects": false,
   "scripts": {
-    "react:compile": "yarn workspace react compile",
-    "site:dev": "yarn workspace site dev",
-    "site:deploy": "yarn workspace site deploy"
+    "start": "babel-watch --watch src",
+    "clean": "rimraf lib && rimraf dist && rimraf build",
+    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:esbrowser && yarn build:bundles",
+    "build:move": "cp -av src build",
+    "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
+    "build:es": "babel build -d lib --source-maps --ignore '**/*.test.js','**/__mocks__'",
+    "build:esbrowser": "BROWSER_COMPAT=true yarn build:es -d dist/esm",
+    "build:bundles": "BROWSER_COMPAT=true rollup -c rollup.config.js",
+    "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
+    "test": "jest"
   },
-  "workspaces": [
-    "packages/react",
-    "packages/site"
-  ]
+  "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "^0.25.2",
+    "@atomico/rollup-plugin-sizes": "^1.1.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-babel": "^5.0.0",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-add-import-extension": "^1.4.3",
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.5.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "html-minifier": "^3.5.8",
+    "jest": "^26.4.2",
+    "lodash": "^4.17.19",
+    "prettier": "^1.8.2",
+    "rollup": "^2.7.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-license": "^2.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-visualizer": "^4.1.0",
+    "svgo": "^1.3.2"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "core-js": "3",
+    "htmlparser2": "^4.1.0",
+    "lodash-es": "^4.17.15",
+    "prop-types": "^15.7.2"
+  }
 }
