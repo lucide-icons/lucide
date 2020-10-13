@@ -1,8 +1,11 @@
 import { useSpring, animated } from "react-spring";
-import { Box, Text, CloseButton, useColorMode, Flex } from "@chakra-ui/core";
+import { Box, Text, CloseButton, useColorMode, Flex, ButtonGroup, Button, useToast } from "@chakra-ui/core";
 import theme from "../lib/theme";
+import download from 'downloadjs';
+import copy from "copy-to-clipboard";
 
 const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
+  const toast = useToast();
   const { colorMode } = useColorMode();
   const { tags = [] } = icon;
 
@@ -23,14 +26,27 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
     willChange: "transform"
   }
 
-  const iconStyling = {
+  const iconStyling = (isLight) => ({
     height: "25vw",
     width: "25vw",
     minHeight: "220px",
     minWidth: "220px",
     maxHeight: "360px",
     maxWidth: "360px",
-  };
+    color: (isLight ? theme.colors.darkGray : theme.colors.white),
+  });
+
+  const downloadIcon = ({src, name}) => download(src, `${name}.svg`, 'image/svg+xml');
+
+  const copyIcon = ({src, name}) => {
+    copy(src);
+    toast({
+      title: "Copied!",
+      description: `Icon "${name}" copied to clipboard.`,
+      status: "success",
+      duration: 1500,
+    });
+  }
 
   return (
     <Box
@@ -89,7 +105,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                 >
                   <div
                     dangerouslySetInnerHTML={{ __html: icon.src }}
-                    style={iconStyling}
+                    style={iconStyling(colorMode == "light")}
                     className="icon-large"
                   />
 
@@ -105,20 +121,36 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
               </Flex>
               <Flex marginLeft={8}>
                 <Box>
-                  <Text fontSize="2xl" style={{ cursor: "pointer" }}>
+                  <Text fontSize="2xl" style={{ cursor: "pointer" }} mb={2}>
                     {icon.name}
                   </Text>
-                  <Text
-                    fontSize="xl"
-                    fontWeight="bold"
-                    color={
-                      colorMode === "light"
-                      ? 'gray.500'
-                      : 'gray.800'
-                    }
-                  >
-                    { tags?.length ? tags.join(' • ') : ''}
-                  </Text>
+                  <Box mb={4}>
+                    { tags?.length ? (
+                      <Text
+                        fontSize="xl"
+                        fontWeight="bold"
+                        color={
+                          colorMode === "light"
+                          ? 'gray.600'
+                          : 'gray.500'
+                        }
+                      >
+                        { tags.join(' • ') }
+                      </Text>
+                    ) : ''}
+
+                  {/* <Button size="sm" fontSize="md" variant="ghost" onClick={() => downloadIcon(icon)}>
+                    Edit Tags
+                  </Button> */}
+                  </Box>
+                  <ButtonGroup spacing={4}>
+                    <Button variant="solid" onClick={() => downloadIcon(icon)}>
+                      Download SVG
+                    </Button>
+                    <Button variant="solid" onClick={() => copyIcon(icon)}>
+                      Copy SVG
+                    </Button>
+                  </ButtonGroup>
                 </Box>
               </Flex>
             </Flex>

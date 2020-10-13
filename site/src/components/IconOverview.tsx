@@ -27,8 +27,6 @@ const IconOverview = ({data}) => {
 
   useEffect(() => {
     const { query } = router;
-    console.log(router);
-
 
     router.push({
       query: {
