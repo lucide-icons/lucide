@@ -1,14 +1,14 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
+
+<svg 
+     xmlns="http://www.w3.org/2000/svg" 
+     width="24" 
+     height="24" 
+     viewBox="0 0 24 24" 
+     fill="none" 
+     stroke="currentColor" 
+     stroke-width="2" 
+     stroke-linecap="round" 
+     stroke-linejoin="round"
 >
-  <rect x="3.81824" y="5" width="16.3636" height="10.5" />
-  <path d="M4 15L2 19H22L20 15" />
+<path d="M20 16V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V16M20 16H4M20 16L21.2764 18.5528C21.6088 19.2177 21.1253 20 20.382 20H3.61803C2.87465 20 2.39116 19.2177 2.72361 18.5528L4 16" stroke="black" stroke-width="2" stroke-linejoin="round"/>
 </svg>
