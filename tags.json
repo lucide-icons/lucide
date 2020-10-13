@@ -25,6 +25,7 @@
   "bookmark": ["read", "clip", "marker", "tag"],
   "box": ["cube"],
   "briefcase": ["work", "bag", "baggage", "folder"],
+  "building": ["organisation"],
   "calendar": ["date"],
   "camera": ["photo"],
   "cast": ["chromecast", "airplay"],
