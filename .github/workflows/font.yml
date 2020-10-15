@@ -8,14 +8,19 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+
     - name: Clone 'Lucide'
       uses: actions/checkout@v2
+    
+    - name: Update repos
+      run: sudo apt-get update
 
     - name: Install FontForge
       run: sudo apt-get install zlib1g-dev fontforge woff2
 
     - name: Clone sfnt2woff-zopfli repo
       run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
+
 
     - name: Install and move sfnt2woff-zopfli
       run: |
@@ -25,6 +30,7 @@ jobs:
 
     - name: Clone woff2
       run: git clone --recursive https://github.com/google/woff2.git
+
 
     - name: Install woff2
       run: |
@@ -36,10 +42,10 @@ jobs:
       run: sudo gem install fontcustom
 
     - name: Build 'Lucide'
-      run: echo "Building Featherity font" && fontcustom compile ./icons -h -n Featherity -o build -F
+      run: echo "Building Lucide font" && fontcustom compile ./icons -h -n Lucide -o build -F
 
     - name: Zip 'Lucide'
-      run: zip -r Featherity.zip build
+      run: zip -r Lucide.zip build
 
     - name: 'Upload to Artifacts'
       uses: actions/upload-artifact@v1.0.0
