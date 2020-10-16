@@ -1,7 +1,7 @@
 name: Build Lucide
 on:
   push:
-    branches: [ svg-fixes ]
+    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -46,10 +46,10 @@ jobs:
 
     
     - name: Build 'Lucide'
-      run: echo "Building Featherity font" && fontcustom compile ./converted_icons -h -n Featherity -o build -F
+      run: echo "Building Lucide font" && fontcustom compile ./converted_icons -h -n Lucide -o build -F
 
     - name: Zip 'Lucide'
-      run: zip -r Featherity.zip build
+      run: zip -r Lucide.zip build
 
     - name: 'Upload to Artifacts'
       uses: actions/upload-artifact@v1.0.0
