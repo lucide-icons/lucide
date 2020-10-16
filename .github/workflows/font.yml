@@ -1,7 +1,7 @@
 name: Build Lucide
 on:
   push:
-    branches: [ * ]
+    branches: [ svg-fixes ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -14,8 +14,8 @@ jobs:
     - name: Install FontForge
       run: sudo apt-get install zlib1g-dev fontforge
     
-    - name: Install NPM
-      run: sudo apt-get install npm
+    - name: Install NodeJS and Yarn
+      run: sudo apt-get install nodejs yarn
 
     - name: Clone sfnt2woff-zopfli repo
       run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
@@ -38,12 +38,13 @@ jobs:
     - name: Install Font Custom dependency
       run: sudo gem install fontcustom
     
-    - name: Install "outline-stroke-cli"
-      run: sudo npm i -g outline-stroke-cli --unsafe-perm
+    - name: Install "outline-stroke"
+      run: sudo yarn add svg-outline-stroke
     
-    - name: Convert SVG to Outlined with CLI
-      run: outline-stroke ./icons -o converted_icons
+    - name: "Outline SVG"
+      run: node scripts/outline_svg.js
 
+    
     - name: Build 'Lucide'
       run: echo "Building Featherity font" && fontcustom compile ./converted_icons -h -n Featherity -o build -F
 
