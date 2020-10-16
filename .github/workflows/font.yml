@@ -39,7 +39,7 @@ jobs:
       run: sudo gem install fontcustom
     
     - name: Install "outline-stroke-cli"
-      run: sudo npm i -g outline-stroke-cli
+      run: sudo npm i -g outline-stroke-cli --unsafe-perm
     
     - name: Convert SVG to Outlined with CLI
       run: outline-stroke ./icons -o converted_icons
