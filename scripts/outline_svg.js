@@ -3,7 +3,7 @@ const outlineStroke = require("svg-outline-stroke");
 const { parse, stringify } = require("svgson");
 
 const inputDir = `./icons/`;
-const outputDir = `../converted_icons/`;
+const outputDir = `./converted_icons/`;
 
 async function init() {
   try {
