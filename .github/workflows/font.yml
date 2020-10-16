@@ -39,7 +39,7 @@ jobs:
       run: sudo gem install fontcustom
     
     - name: Install "outline-stroke"
-      run: sudo yarn add svg-outline-stroke
+      run: sudo yarn add svg-outline-stroke svgson
     
     - name: "Outline SVG"
       run: node scripts/outline_svg.js
