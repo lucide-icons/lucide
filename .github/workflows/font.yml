@@ -42,7 +42,7 @@ jobs:
       run: sudo yarn add svg-outline-stroke svgson
     
     - name: "Outline SVG"
-      run: node scripts/outline_svg.js
+      run: mkdir converted_icons && node scripts/outline_svg.js
 
     
     - name: Build 'Lucide'
