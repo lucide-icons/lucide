@@ -43,7 +43,7 @@ const IconOverview = ({data}) => {
 
   return (
     <>
-      <InputGroup position="sticky" top={2} zIndex={1}>
+      <InputGroup position="sticky" top={4} zIndex={1}>
         <InputLeftElement children={<Icon name="search" />} />
         <Input
           ref={inputElement}

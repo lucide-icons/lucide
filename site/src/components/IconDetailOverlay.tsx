@@ -11,7 +11,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
 
   const { transform, opacity } = useSpring({
     opacity: isOpen ? 1 : 0,
-    transform: `translateY(${isOpen ? -110 : 0}%)`,
+    transform: `translateY(${isOpen ? -120 : 0}%)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
 
@@ -29,11 +29,11 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
   const iconStyling = (isLight) => ({
     height: "25vw",
     width: "25vw",
-    minHeight: "220px",
-    minWidth: "220px",
-    maxHeight: "360px",
-    maxWidth: "360px",
-    color: (isLight ? theme.colors.darkGray : theme.colors.white),
+    minHeight: "160px",
+    minWidth: "160px",
+    maxHeight: "240px",
+    maxWidth: "240px",
+    color: (isLight ? theme.colors.gray[800] : theme.colors.white),
   });
 
   const downloadIcon = ({src, name}) => download(src, `${name}.svg`, 'image/svg+xml');
@@ -46,6 +46,24 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
       status: "success",
       duration: 1500,
     });
+  }
+
+  const donwloadPNG = ({src, name}) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 24;
+    canvas.height = 24;
+    const ctx = canvas.getContext("2d");
+
+    const image = new Image();
+    image.src = `data:image/svg+xml;base64,${btoa(src)}`;
+    image.onload = function() {
+      ctx.drawImage(image, 0, 0);
+
+      const link = document.createElement('a');
+      link.download = `${name}.png`;
+      link.href = canvas.toDataURL('image/png')
+      link.click();
+    }
   }
 
   return (
@@ -62,7 +80,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
         justifyContent="space-between"
         pt={4}
         pb={4}
-        maxW="1250px"
+        maxW="850px"
         margin="0 auto"
         w="full"
         px={8}
@@ -89,12 +107,11 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
               top={4}
               right={4}
             />
-            <Flex>
+            <Flex direction={['column', 'row']} alignItems={['center', 'flex-start']}>
               <Flex>
                 <Box
                   borderWidth="1px"
                   rounded="md"
-                  width="full"
                   position="relative"
                   bg={
                     colorMode == "light"
@@ -112,16 +129,16 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   <svg className="icon-grid" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
                     { Array.from({ length:23 }, (_, i) => (
                       <>
-                        <line x1={0} y1={i + 1} x2={24} y2={i + 1} />
-                        <line x1={i + 1} y1={0} x2={i + 1} y2={24} />
+                        <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={24} y2={i + 1} />
+                        <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={24} />
                       </>
                     )) }
                   </svg>
                 </Box>
               </Flex>
-              <Flex marginLeft={8}>
+              <Flex marginLeft={[0, 8]}>
                 <Box>
-                  <Text fontSize="2xl" style={{ cursor: "pointer" }} mb={2}>
+                  <Text fontSize="3xl" style={{ cursor: "pointer" }} mb={1}>
                     {icon.name}
                   </Text>
                   <Box mb={4}>
@@ -144,11 +161,14 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   </Button> */}
                   </Box>
                   <ButtonGroup spacing={4}>
-                    <Button variant="solid" onClick={() => downloadIcon(icon)}>
+                    <Button variant="solid" onClick={() => downloadIcon(icon)} mb={1}>
                       Download SVG
                     </Button>
-                    <Button variant="solid" onClick={() => copyIcon(icon)}>
+                    <Button variant="solid" onClick={() => copyIcon(icon)} mb={1}>
                       Copy SVG
+                    </Button>
+                    <Button variant="solid" onClick={() => donwloadPNG(icon)} mb={1}>
+                      Download PNG
                     </Button>
                   </ButtonGroup>
                 </Box>

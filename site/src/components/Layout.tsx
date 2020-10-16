@@ -56,7 +56,7 @@ const Layout = ({ children }) => {
       </Flex>
       <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
         {children}
-        <Divider marginTop={10} marginBottom={10} />
+        <Divider marginTop={4} marginBottom={8} />
       </Flex>
     </Box>
   );
