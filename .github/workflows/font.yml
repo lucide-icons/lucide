@@ -12,7 +12,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install FontForge
-      run: sudo apt-get install zlib1g-dev fontforge woff2 npm
+      run: sudo apt-get install zlib1g-dev fontforge
+    
+    - name: Install NPM
+      run: sudo apt-get install npm
 
     - name: Clone sfnt2woff-zopfli repo
       run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
