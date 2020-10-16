@@ -8,8 +8,12 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+
     - name: Clone 'Lucide'
       uses: actions/checkout@v2
+    
+    - name: Update repos
+      run: sudo apt-get update
 
     - name: Install FontForge
       run: sudo apt-get install zlib1g-dev fontforge
@@ -20,6 +24,7 @@ jobs:
     - name: Clone sfnt2woff-zopfli repo
       run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
 
+
     - name: Install and move sfnt2woff-zopfli
       run: |
           cd sfnt2woff-zopfli
@@ -28,6 +33,7 @@ jobs:
 
     - name: Clone woff2
       run: git clone --recursive https://github.com/google/woff2.git
+
 
     - name: Install woff2
       run: |
@@ -47,6 +53,7 @@ jobs:
     
     - name: Build 'Lucide'
       run: echo "Building Lucide font" && fontcustom compile ./converted_icons -h -n Lucide -o build -F
+
 
     - name: Zip 'Lucide'
       run: zip -r Lucide.zip build
