@@ -1,4 +1,4 @@
-# Icon Degin Guide
+# Icon Design Guide
 
 To design icons for this icon library we need to follow some guidelines to match all the icons in the same style.
 
