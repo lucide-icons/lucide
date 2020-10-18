@@ -25,27 +25,27 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ### 3. **Each icon has a stroke width of 2 pixels**
 
-![2px-stroke](images/2px-stroke.png?raw=true)
+![2px-stroke](images/2px-stroke.png?raw=true "2px-stroke")
 
 ### 4. **Each icon has round joins**
 
-![round-joints](images/round-joints.png?raw=true)
+![round-joints](images/round-joints.png?raw=true "round-joints")
 
 ### 5. **Each icon has round caps**
 
-![round-caps](images/round-caps.png?raw=true)
+![round-caps](images/round-caps.png?raw=true "round-caps")
 
 ### 6. **Each icon has centered strokes**
 
-![centered-strokes](images/centered-strokes.png?raw=true)
+![centered-strokes](images/centered-strokes.png?raw=true "centered-strokes")
 
 ### 7. **Each icon containing squares has a border radius of 2 pixels**
 
-![2px-border-radius](images/2px-border-radius.png?raw=true)
+![2px-border-radius](images/2px-border-radius.png?raw=true "2px-border-radius")
 
 ### 8. **Each icon 2 pixels of spaciong between elements**
 
-![2px-element-spacing](images/2px-element-spacing.png?raw=true)
+![2px-element-spacing](images/2px-element-spacing.png?raw=true "2px-element-spacing")
 
 ## Code Conventions
 
