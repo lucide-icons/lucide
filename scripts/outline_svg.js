@@ -35,8 +35,8 @@ function transformForward(node) {
       ...node,
       attributes: {
         ...node.attributes,
-        width: 800,
-        height: 800
+        width: 960,
+        height: 960
       }
     };
   }
