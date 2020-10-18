@@ -17,35 +17,35 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ### 1. **Each Icon is desined on a canvas of 24 by 24 pixels**
 
-![24px-24px](images/24px-24px.png)
+![24px-24px](images/24px-24px.png?raw=true)
 
 ### 2. **Each Icon have 1 pixel between icon and the canvas**
 
-![1px-padding](images/1px-padding.png)
+![1px-padding](images/1px-padding.png?raw=true)
 
 ### 3. **Each icon has a stroke width of 2 pixels**
 
-![2px-stroke](images/2px-stroke.png)
+![2px-stroke](images/2px-stroke.png?raw=true)
 
 ### 4. **Each icon has round joins**
 
-![round-joints](images/round-joints.png)
+![round-joints](images/round-joints.png?raw=true)
 
 ### 5. **Each icon has round caps**
 
-![round-caps](images/round-caps.png)
+![round-caps](images/round-caps.png?raw=true)
 
 ### 6. **Each icon has centered strokes**
 
-![centered-strokes](images/centered-strokes.png)
+![centered-strokes](images/centered-strokes.png?raw=true)
 
 ### 7. **Each icon containing squares has a border radius of 2 pixels**
 
-![2px-border-radius](images/2px-border-radius.png)
+![2px-border-radius](images/2px-border-radius.png?raw=true)
 
 ### 8. **Each icon 2 pixels of spaciong between elements**
 
-![2px-element-spacing](images/2px-element-spacing.png)
+![2px-element-spacing](images/2px-element-spacing.png?raw=true)
 
 ## Code Conventions
 
