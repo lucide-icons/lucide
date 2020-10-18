@@ -3,6 +3,7 @@ import {
   Flex,
   Stack,
   Text,
+  Link,
 } from "@chakra-ui/core";
 import download from "downloadjs";
 import JSZip from "jszip";
@@ -25,8 +26,11 @@ const Header = ({ data }) => {
 
   return (
     <Flex direction="column" align="center" justify="center">
-      <Text fontSize="3xl" as="b" textAlign="center">
-        Simply beautiful open source icons, community-sourced.
+      <Text fontSize="3xl" as="b" mb="4" textAlign="center">
+        Simply beautiful open source icons, community-sourced
+      </Text>
+      <Text fontSize="lg" as="p" textAlign="center" mb="8">
+        An open-source icon library, a fork of Feather Icons. <br/>We're expanding the icon set as much as possible while keeping it nice-looking - <Link href="https://github.com/lucide-icons/lucide" isExternal>join us</Link>!
       </Text>
       <Stack isInline marginTop={3} marginBottom={10}>
         <Button
