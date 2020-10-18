@@ -10,59 +10,62 @@ import commonJS from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
 const outputFileName = pkg.name;
-
+const outputDir = 'dist';
 const inputs = ['build/lucide.js'];
 const bundles = [
   {
-    inputs,
     format: 'umd',
-    dir: 'dist',
+    inputs,
+    outputDir,
     minify: true,
   },
   {
-    inputs,
     format: 'umd',
-    dir: 'dist',
+    inputs,
+    outputDir,
   },
   {
-    inputs,
     format: 'cjs',
-    dir: 'dist',
+    inputs,
+    outputDir,
   },
 ];
 
+export const plugins = minify =>
+  [
+    replace({
+      'icons = {}': 'icons = allIcons',
+      delimiters: ['', ''],
+    }),
+    babel({
+      babelHelpers: 'bundled',
+    }),
+    // The two minifiers together seem to procude a smaller bundle 🤷‍♂️
+    minify && compiler(),
+    minify && terser(),
+    license({
+      banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
+    }),
+    bundleSize(),
+    resolve(),
+    commonJS({
+      include: 'node_modules/**',
+    }),
+    visualizer({
+      sourcemap: true,
+      filename: `stats/${outputFileName}${minify ? '-min' : ''}.html`,
+    }),
+  ].filter(Boolean);
+
 const configs = bundles
-  .map(({ inputs, dir, format, minify }) =>
+  .map(({ inputs, outputDir, format, minify }) =>
     inputs.map(input => ({
       input,
       external: ['lodash/camelCase', 'lodash/upperFirst'],
-      plugins: [
-        replace({
-          'icons = {}': 'icons = allIcons',
-          delimiters: ['', ''],
-        }),
-        babel({
-          babelHelpers: 'bundled',
-        }),
-        // The two minifiers together seem to procude a smaller bundle 🤷‍♂️
-        minify && compiler(),
-        minify && terser(),
-        license({
-          banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
-        }),
-        bundleSize(),
-        resolve(),
-        commonJS({
-          include: 'node_modules/**',
-        }),
-        visualizer({
-          sourcemap: true,
-          filename: `stats/${outputFileName}${minify ? '-min' : ''}.html`,
-        }),
-      ].filter(Boolean),
+      plugins: plugins(minify),
       output: {
-        name: 'lucide',
-        file: `${dir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+        name: outputFileName,
+        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,
         globals: {
