@@ -1,6 +1,6 @@
 # Icon Design Guide
 
-To design icons for this icon library we need to follow some guidelines to match all the icons in the same style.
+Here are rules that should be followed to keep quality and consistency when making icons for Lucide.
 
 ## Summary of the rules we have
 
