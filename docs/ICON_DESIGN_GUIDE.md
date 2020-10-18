@@ -17,11 +17,11 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ### 1. **Each Icon is desined on a canvas of 24 by 24 pixels**
 
-![24px-24px](images/24px-24px.png?raw=true)
+![24px-24px](images/24px-24px.png?raw=true "24px-24px")
 
 ### 2. **Each Icon have 1 pixel between icon and the canvas**
 
-![1px-padding](images/1px-padding.png?raw=true)
+![1px-padding](images/1px-padding.png?raw=true "1px-padding")
 
 ### 3. **Each icon has a stroke width of 2 pixels**
 
