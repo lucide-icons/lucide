@@ -7,7 +7,7 @@ import copy from "copy-to-clipboard";
 const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
-  const { tags = [] } = icon;
+  const { tags = [], name } = icon;
 
   const { transform, opacity } = useSpring({
     opacity: isOpen ? 1 : 0,
@@ -70,10 +70,11 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
     <Box
       position="fixed"
       bottom={0}
-      zIndex={1}
+      zIndex={2}
       width="100%"
       left={0}
       height={0}
+      key={name}
     >
       <Flex
         alignItems="center"
@@ -96,7 +97,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
             position="relative"
             bg={
               colorMode == "light"
-                ? theme.colors.whiteAlpha[900]
+                ? theme.colors.white
                 : theme.colors.gray[700]
             }
             padding={8}
@@ -128,10 +129,10 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
 
                   <svg className="icon-grid" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
                     { Array.from({ length:23 }, (_, i) => (
-                      <>
+                      <g key={`grid-${i}`}>
                         <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={24} y2={i + 1} />
                         <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={24} />
-                      </>
+                      </g>
                     )) }
                   </svg>
                 </Box>

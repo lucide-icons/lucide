@@ -11,11 +11,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
+    "@chakra-ui/core": "^1.0.0-rc.5",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "downloadjs": "^1.4.7",
-    "emotion-theming": "^10.0.27",
     "fuse.js": "^6.0.4",
     "jszip": "^3.4.0",
     "lodash": "^4.17.20",

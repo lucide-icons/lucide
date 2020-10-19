@@ -30,7 +30,7 @@ const Header = ({ data }) => {
         Simply beautiful open source icons, community-sourced
       </Text>
       <Text fontSize="lg" as="p" textAlign="center" mb="8">
-        An open-source icon library, a fork of Feather Icons. <br/>We're expanding the icon set as much as possible while keeping it nice-looking - <Link href="https://github.com/lucide-icons/lucide" isExternal>join us</Link>!
+        An open-source icon library, a fork of <Link href="https://github.com/feathericons/feather" isExternal>Feather Icons</Link>. <br/>We're expanding the icon set as much as possible while keeping it nice-looking - <Link href="https://github.com/lucide-icons/lucide" isExternal>join us</Link>!
       </Text>
       <Stack isInline marginTop={3} marginBottom={10}>
         <Button
