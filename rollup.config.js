@@ -1,13 +1,13 @@
-import babel from '@rollup/plugin-babel';
-import bundleSize from '@atomico/rollup-plugin-sizes';
-import compiler from '@ampproject/rollup-plugin-closure-compiler';
-import { terser } from 'rollup-plugin-terser';
-import visualizer from 'rollup-plugin-visualizer';
-import license from 'rollup-plugin-license';
-import replace from 'rollup-plugin-replace';
-import resolve from 'rollup-plugin-node-resolve';
-import commonJS from 'rollup-plugin-commonjs';
-import pkg from './package.json';
+const babel = require('@rollup/plugin-babel').default;
+const bundleSize = require('@atomico/rollup-plugin-sizes');
+const compiler = require('@ampproject/rollup-plugin-closure-compiler');
+const { terser } = require('rollup-plugin-terser');
+const visualizer = require('rollup-plugin-visualizer');
+const license = require('rollup-plugin-license');
+const replace = require('rollup-plugin-replace');
+const resolve = require('rollup-plugin-node-resolve');
+const commonJS = require('rollup-plugin-commonjs');
+const pkg = require('./package.json');
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
@@ -31,7 +31,7 @@ const bundles = [
   },
 ];
 
-export const plugins = minify =>
+const plugins = minify =>
   [
     replace({
       'icons = {}': 'icons = allIcons',
@@ -77,4 +77,5 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+exports.plugins = plugins;
+exports.default = configs;

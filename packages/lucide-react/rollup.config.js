@@ -1,8 +1,8 @@
-import { plugins } from 'lucide/rollup.config.js';
-import pkg from './package.json';
+const { plugins } = require('lucide/rollup.config');
+const pkg = require('./package.json');
 
 const outputFileName = pkg.name;
-const outputDir = 'dist';
+const outputDir = 'packages/lucide-react/dist'; // It runs from the root
 const inputs = ['build/lucide.js'];
 const bundles = [
   {
