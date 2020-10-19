@@ -10,9 +10,18 @@ Lucide is a community-run fork of [Feather Icons](https://github.com/feathericon
 
 ## Table of Contents
 
+* [Installation](#installation)
+  * [Package managers](#package-managers)
+  * [CDN](#cdn)
 * [Usage](#usage)
+  * [Unpkg](#with%20unpkg)
+  * [ESModules](#with%20esmodules)
+    * [Options](#additional%20options)
+    * [Threeshake library](#threeshake%20the%20library%2C%20only%20use%20the%20icons%20you%20use)
+    * [Custom binding](#custom%20element%20binding)
   * [Figma](#figma)
-* [Contributing](#contributing)
+* [Contrbuting](#contributing)
+* [Community](#community)
 * [License](#license)
 
 ## Installation
