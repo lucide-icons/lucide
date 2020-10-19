@@ -1,6 +1,6 @@
 {
   "name": "lucide-react",
-  "version": "0.1.1",
+  "version": "0.1.2-beta.0",
   "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
   "main": "index.js",
   "repository": "github:lucide-icons/lucide",
