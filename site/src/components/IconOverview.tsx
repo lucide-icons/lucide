@@ -5,7 +5,6 @@ import useSearch from "../lib/search";
 import { useRouter } from 'next/router';
 import { useDebounce } from '../lib/useDebounce';
 import theme from "../lib/theme";
-import { Search } from '../../../packages/react';
 
 const IconOverview = ({data}) => {
   const router = useRouter();
@@ -51,7 +50,7 @@ const IconOverview = ({data}) => {
           ? theme.colors.white
           : theme.colors.gray[700]
       }>
-        <InputLeftElement children={<Search />} />
+        <InputLeftElement children={<Icon name="search" />} />
         <Input
           ref={inputElement}
           placeholder={`Search ${Object.keys(data).length} icons (Press "/" to focus)`}
