@@ -7,8 +7,8 @@
   "author": "Eric Fennis",
   "license": "ISC",
   "scripts": {
-    "clean": "rimraf dist && rimraf build",
     "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rimraf dist && rimraf build",
     "build:move": "cp -av src build",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate",
     "build:es": "yarn --cwd ../../ babel packages/lucide-react/build -d packages/lucide-react/dist/esm",

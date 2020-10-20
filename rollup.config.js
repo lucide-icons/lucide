@@ -78,4 +78,4 @@ const configs = bundles
   .flat();
 
 exports.plugins = plugins;
-exports.default = configs;
+module.exports = configs;
