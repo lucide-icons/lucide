@@ -20,7 +20,7 @@ Lucide is a community-run fork of [Feather Icons](https://github.com/feathericon
     * [Threeshake library](#threeshake-the-library-only-use-the-icons-you-use)
     * [Custom binding](#custom-element-binding)
   * [Figma](#figma)
-* [Contrbuting](#contributing)
+* [Contributing](#contributing)
 * [Community](#community)
 * [License](#license)
 
