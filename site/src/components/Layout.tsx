@@ -1,6 +1,7 @@
 import { Box, Divider, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/core";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
+import lucideReact from 'lucide-react';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -49,6 +50,7 @@ const Layout = ({ children }) => {
             Github
           </Link>
             <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
+              <Airplay />
               <Icon name={colorMode == "light" ? "moon" : "sun"} size="24px" />
             </div>
           </Flex>

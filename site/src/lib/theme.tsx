@@ -7,7 +7,6 @@ const theme = {
     body: `'Mukta', sans-serif`,
   },
   icons: {
-    ...chakraTheme.icons,
     sun: {
       path: (
         <svg

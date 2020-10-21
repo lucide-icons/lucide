@@ -4973,6 +4973,14 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lucide-react@^0.1.2-beta.0:
+  version "0.1.2-beta.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.1.2-beta.0.tgz#a33156baa21302f4f3e92791b63fd0863bf33de3"
+  integrity sha512-8a1tdu2YgtzGquI7P775BPq4TXzXMX+//+e7vNriAJ0jv+4j6q343g9IHUEb4FDB6tNn+SMyWdTtvpGnRChU5A==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.14.0"
+
 make-dir@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
@@ -5950,6 +5958,15 @@ react-transition-group@4.4.1:
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+
+react@^16.14.0:
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
