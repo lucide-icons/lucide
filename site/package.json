@@ -18,7 +18,7 @@
     "fuse.js": "^6.0.4",
     "jszip": "^3.4.0",
     "lodash": "^4.17.20",
-    "lucide-react": "^0.1.2-beta.0",
+    "lucide-react": "^0.1.2-beta.1",
     "next": "^9.5.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

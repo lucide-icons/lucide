@@ -1,11 +1,13 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/core";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
-import lucideReact from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
+  const text = useColorModeValue('dark', 'light')
+  const ColorModeToggle = useColorModeValue(Moon, Sun);
 
   function setQuery(query){
     router.push({
@@ -49,10 +51,16 @@ const Layout = ({ children }) => {
           <Link href="https://github.com/lucide-icons/lucide" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
             Github
           </Link>
-            <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
-              <Airplay />
-              <Icon name={colorMode == "light" ? "moon" : "sun"} size="24px" />
-            </div>
+          <IconButton
+            size="md"
+            fontSize="lg"
+            aria-label={`Switch to ${text} mode`}
+            variant="ghost"
+            color="current"
+            ml="3"
+            onClick={toggleColorMode}
+            icon={<ColorModeToggle />}
+          />
           </Flex>
         </Flex>
       </Flex>

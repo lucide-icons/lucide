@@ -1,8 +1,9 @@
 import { useSpring, animated } from "react-spring";
-import { Box, Text, CloseButton, useColorMode, Flex, ButtonGroup, Button, useToast } from "@chakra-ui/core";
+import { Box, Text, IconButton, useColorMode, Flex, ButtonGroup, Button, useToast } from "@chakra-ui/core";
 import theme from "../lib/theme";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
+import { X as Close } from 'lucide-react';
 
 const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
   const toast = useToast();
@@ -102,12 +103,18 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
             }
             padding={8}
           >
-            <CloseButton
-              onClick={handleClose}
+            <IconButton
+              size="sm"
+              aria-label="Close overlay"
+              variant="ghost"
+              color="current"
+              ml="3"
               position="absolute"
               top={4}
               right={4}
-            />
+              onClick={handleClose}
+              icon={<Close />}
+          />
             <Flex direction={['column', 'row']} alignItems={['center', 'flex-start']}>
               <Flex>
                 <Box
