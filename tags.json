@@ -25,6 +25,7 @@
   "bookmark": ["read", "clip", "marker", "tag"],
   "box": ["cube"],
   "briefcase": ["work", "bag", "baggage", "folder"],
+  "brush": ["draw", "paint"],
   "building": ["organisation"],
   "calendar": ["date"],
   "camera": ["photo"],
