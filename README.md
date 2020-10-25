@@ -1,3 +1,5 @@
+<p align=center><img width="410" src="https://lucide.netlify.app/logo-text.svg" alt="Lucide Logo"></p>
+
 # Lucide
 
 ![NPM](https://img.shields.io/npm/l/lucide)
