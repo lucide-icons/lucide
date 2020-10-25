@@ -10,7 +10,6 @@ const App = ({ Component, pageProps }) => {
         <title>Lucide</title>
       </Head>
       <ChakraProvider theme={customTheme}>
-        <CSSReset />
         <Component {...pageProps} />
       </ChakraProvider>
     </>
