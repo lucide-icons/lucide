@@ -12,15 +12,12 @@ import {
   FormControl,
   FormLabel,
   Grid,
-  Icon,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
 } from '@chakra-ui/core';
+import ColorPicker from './ColorPicker';
 
 export function IconCustomizerDrawer() {
   const [showCustomize, setShowCustomize] = useState(false);
@@ -40,21 +37,11 @@ export function IconCustomizerDrawer() {
           <DrawerBody>
             <Grid gridGap={'1em'}>
               <FormControl>
-                <FormLabel htmlFor="color">Color</FormLabel>
-                <InputGroup>
-                  <InputLeftElement
-                    children={
-                      <Icon>
-                        <rect x={0} width={24} y={0} height={24} fill={color} rx={2} />
-                      </Icon>
-                    }
-                  />
-                  <Input
-                    value={color}
-                    name="color"
-                    onChange={(evt) => setColor(evt.target.value)}
-                  />
-                </InputGroup>
+                <ColorPicker
+                  color={color}
+                  value={color}
+                  onChangeComplete={(col) => setColor(col.hex)}
+                />
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="stroke">Stroke: {strokeWidth}px</FormLabel>
