@@ -1,10 +1,13 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/core";
 import { useKeyBindings } from "../lib/key";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import { Moon, Sun } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
+  const text = useColorModeValue('dark', 'light')
+  const ColorModeToggle = useColorModeValue(Moon, Sun);
 
   function setQuery(query){
     router.push({
@@ -12,6 +15,7 @@ const Layout = ({ children }) => {
       query: { query: query }
     }).then();
   }
+
   useKeyBindings({
     Escape: {
       fn: () => setQuery(""),
@@ -47,15 +51,22 @@ const Layout = ({ children }) => {
           <Link href="https://github.com/lucide-icons/lucide" isExternal style={{ fontSize: "18px", marginRight: '24px' }}>
             Github
           </Link>
-            <div onClick={toggleColorMode} style={{ cursor: "pointer" }}>
-              <Icon name={colorMode == "light" ? "moon" : "sun"} size="24px" />
-            </div>
+          <IconButton
+            size="md"
+            fontSize="lg"
+            aria-label={`Switch to ${text} mode`}
+            variant="ghost"
+            color="current"
+            ml="3"
+            onClick={toggleColorMode}
+            icon={<ColorModeToggle />}
+          />
           </Flex>
         </Flex>
       </Flex>
       <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
         {children}
-        <Divider marginTop={10} marginBottom={10} />
+        <Divider marginTop={4} marginBottom={8} />
       </Flex>
     </Box>
   );

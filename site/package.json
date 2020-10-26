@@ -11,16 +11,17 @@
     "test": "jest"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@chakra-ui/core": "next",
     "downloadjs": "^1.4.7",
-    "emotion-theming": "^10.0.27",
+    "framer-motion": "^2.9.4",
     "fuse.js": "^6.0.4",
     "jszip": "^3.4.0",
+    "lodash": "^4.17.20",
+    "lucide-react": "^0.1.2-beta.1",
     "next": "^9.5.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-spring": "^8.0.27"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.24.4",
