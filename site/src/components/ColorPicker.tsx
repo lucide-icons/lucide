@@ -30,7 +30,9 @@ function ColorPicker({ hsv, hsl, onChange, hex, value: color }: ColorPickerProps
 
   return (
     <div>
-      <FormLabel htmlFor="color">Color</FormLabel>
+      <FormLabel htmlFor="color" fontWeight={'bold'}>
+        Color
+      </FormLabel>
       <InputGroup>
         <InputLeftElement
           children={

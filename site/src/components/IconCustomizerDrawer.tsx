@@ -16,6 +16,8 @@ import {
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
+  Flex,
+  Text,
 } from '@chakra-ui/core';
 import ColorPicker from './ColorPicker';
 
@@ -44,7 +46,14 @@ export function IconCustomizerDrawer() {
                 />
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="stroke">Stroke: {strokeWidth}px</FormLabel>
+                <FormLabel htmlFor="stroke">
+                  <Flex>
+                    <Text flexGrow={1} fontWeight={'bold'}>
+                      Stroke
+                    </Text>
+                    <Text>{strokeWidth}px</Text>
+                  </Flex>
+                </FormLabel>
                 <Slider
                   value={strokeWidth}
                   onChange={setStroke}
@@ -54,15 +63,22 @@ export function IconCustomizerDrawer() {
                   name={'stroke'}
                 >
                   <SliderTrack />
-                  <SliderFilledTrack bg={color} />
+                  <SliderFilledTrack bg={color} h={'4px'} borderRadius={'0.125rem'} />
                   <SliderThumb />
                 </Slider>
               </FormControl>
               <FormControl>
-                <FormLabel htmlFor="size">Size: {size}px</FormLabel>
+                <FormLabel htmlFor="size">
+                  <Flex>
+                    <Text flexGrow={1} fontWeight={'bold'}>
+                      Size
+                    </Text>
+                    <Text>{size}px</Text>
+                  </Flex>
+                </FormLabel>
                 <Slider value={size} onChange={setSize} min={12} max={64} step={1} name={'size'}>
                   <SliderTrack />
-                  <SliderFilledTrack bg={color} />
+                  <SliderFilledTrack bg={color} h={'4px'} borderRadius={'0.125rem'} />
                   <SliderThumb />
                 </Slider>
               </FormControl>
