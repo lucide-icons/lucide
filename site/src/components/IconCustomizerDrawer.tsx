@@ -62,8 +62,9 @@ export function IconCustomizerDrawer() {
                   step={0.5}
                   name={'stroke'}
                 >
-                  <SliderTrack />
-                  <SliderFilledTrack bg={color} h={'4px'} borderRadius={'0.125rem'} />
+                  <SliderTrack>
+                    <SliderFilledTrack bg={color} />
+                  </SliderTrack>
                   <SliderThumb />
                 </Slider>
               </FormControl>
@@ -77,8 +78,9 @@ export function IconCustomizerDrawer() {
                   </Flex>
                 </FormLabel>
                 <Slider value={size} onChange={setSize} min={12} max={64} step={1} name={'size'}>
-                  <SliderTrack />
-                  <SliderFilledTrack bg={color} h={'4px'} borderRadius={'0.125rem'} />
+                  <SliderTrack>
+                    <SliderFilledTrack bg={color} />
+                  </SliderTrack>
                   <SliderThumb />
                 </Slider>
               </FormControl>
