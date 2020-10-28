@@ -18,7 +18,7 @@ function ColorPicker({ hsv, hsl, onChange, hex, value: color }: ColorPickerProps
 
   useEffect(() => {
     if (color !== value && input.current !== document.activeElement) {
-      setValue(String(color).toUpperCase());
+      setValue(color === "currentColor" ? color : String(color).toUpperCase());
     }
   }, [color]);
 
@@ -37,7 +37,7 @@ function ColorPicker({ hsv, hsl, onChange, hex, value: color }: ColorPickerProps
         <InputLeftElement
           children={
             <Icon>
-              <rect x={0} width={24} y={0} height={24} fill={hex} rx={2} />
+              <rect x={0} width={24} y={0} height={24} fill={value} rx={2} />
             </Icon>
           }
         />

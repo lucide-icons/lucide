@@ -23,7 +23,7 @@ import ColorPicker from './ColorPicker';
 
 export function IconCustomizerDrawer() {
   const [showCustomize, setShowCustomize] = useState(false);
-  const { color, setColor, size, setSize, strokeWidth, setStroke } = useContext(IconStyleContext);
+  const { color, setColor, size, setSize, strokeWidth, setStroke, resetStyle } = useContext(IconStyleContext);
 
   return (
     <>
@@ -83,6 +83,9 @@ export function IconCustomizerDrawer() {
                   </SliderTrack>
                   <SliderThumb />
                 </Slider>
+              </FormControl>
+              <FormControl>
+                <Button onClick={resetStyle}>Reset</Button>
               </FormControl>
             </Grid>
           </DrawerBody>

@@ -1,6 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
-import { useColorMode } from '@chakra-ui/core';
-import theme from '../lib/theme';
+import { createContext, useState } from 'react';
 
 interface ICustomIconStyle {
   color: string;
@@ -9,30 +7,39 @@ interface ICustomIconStyle {
   setStroke: (n: number) => void;
   size: number;
   setSize: (n: number) => void;
+  resetStyle: () => void;
+}
+
+const DEFAULT_STYLE = {
+  color: 'currentColor',
+  strokeWidth: 2,
+  size: 24,
 }
 
 export const IconStyleContext = createContext<ICustomIconStyle>({
-  color: '',
+  color: 'currentColor',
   setColor: (s: string) => null,
   strokeWidth: 2,
   setStroke: (n: number) => null,
   size: 24,
   setSize: (n: number) => null,
+  resetStyle: ()=>null
 });
 
 export function CustomizeIconContext({ children }) {
-  const { colorMode } = useColorMode();
-  const [color, setColor] = useState('');
-  const [stroke, setStroke] = useState(2);
-  const [size, setSize] = useState(24);
+  const [color, setColor] = useState(DEFAULT_STYLE.color);
+  const [stroke, setStroke] = useState(DEFAULT_STYLE.strokeWidth);
+  const [size, setSize] = useState(DEFAULT_STYLE.size);
 
-  useEffect(() => {
-    setColor(colorMode === 'light' ? theme.colors.gray[800] : theme.colors.white);
-  }, [colorMode]);
+  function resetStyle(){
+    setColor(DEFAULT_STYLE.color);
+    setStroke(DEFAULT_STYLE.strokeWidth);
+    setSize(DEFAULT_STYLE.size);
+  }
 
   return (
     <IconStyleContext.Provider
-      value={{ color, setColor, strokeWidth: stroke, setStroke, size, setSize }}
+      value={{ color, setColor, strokeWidth: stroke, setStroke, size, setSize, resetStyle }}
     >
       {children}
     </IconStyleContext.Provider>
