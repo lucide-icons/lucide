@@ -24,4 +24,4 @@ Before creating an icon request, please search to see if someone has requested t
 If the icon has not already been requested, [create an issue](https://github.com/lucide-icons/lucide/issues/new?title=Icon%20Request:) with a title of `Icon request: <icon name>` and add as much information as possible.
 
 ## Icon Requests from Feather
-If you are a designer who wants to contribute to Lucide but you don't know what icons to work on, then have a look at the Requests from Feather. All open, unfinished and valid requests can be found in [Fether Icon Requests](https://github.com/lucide-icons/lucide/blob/master/docs/FEATHER_ICON_REQUESTS.md).
+If you are a designer who wants to contribute to Lucide but you don't know what icons to work on, then have a look at the Requests from Feather. All open, unfinished and valid requests can be found in [Fether Icon Requests](https://github.com/lucide-icons/lucide/issues/119).
