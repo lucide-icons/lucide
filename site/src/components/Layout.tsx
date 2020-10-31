@@ -5,9 +5,6 @@ import NextLink from "next/link"
 import { Moon, Sun } from 'lucide-react';
 import Logo from 'babel-loader!react-svg-loader?jsx=true!../../public/logo.svg';
 
-// console.log(Logo);
-
-
 const Layout = ({ children }) => {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
