@@ -5,6 +5,7 @@ import IconOverview from "../components/IconOverview";
 import IconDetailOverlay from "../components/IconDetailOverlay";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
+import {CustomizeIconContext} from "../components/CustomizeIconContext";
 
 const IndexPage = ({ data }) => {
   const router = useRouter();
@@ -12,13 +13,15 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IconDetailOverlay
-        isOpen={!!router.query.iconName}
-        icon={getIcon(router.query.iconName)}
-        onClose={() => router.push('/')}
-      />
-      <Header {...{data}}/>
-      <IconOverview {...{data}}/>
+      <CustomizeIconContext>
+        <IconDetailOverlay
+          isOpen={!!router.query.iconName}
+          icon={getIcon(router.query.iconName)}
+          onClose={() => router.push('/')}
+        />
+        <Header {...{data}}/>
+        <IconOverview {...{data}}/>
+      </CustomizeIconContext>
     </Layout>
   );
 };
