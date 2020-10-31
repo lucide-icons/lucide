@@ -1,3 +1,4 @@
+
 ## Icon Requests from [Fether](https://github.com/feathericons/feather)
 ### To do
 Id | Title | Engagement | Linked PRs
@@ -95,6 +96,39 @@ Id | Title | Engagement | Linked PRs
 [#601](https://github.com/feathericons/feather/issues/601) | Hand Waving | 0 |
 [#605](https://github.com/feathericons/feather/issues/605) | Pinboard | 3 |
 [#609](https://github.com/feathericons/feather/issues/609) | Save As | 13 | [#700](https://github.com/feathericons/feather/pull/700)
+[#631](https://github.com/feathericons/feather/issues/631) | "for ""boat""" | 1 |
+[#633](https://github.com/feathericons/feather/issues/633) | disability | 10 |
+[#683](https://github.com/feathericons/feather/issues/683) | add medal | 8 |
+[#685](https://github.com/feathericons/feather/issues/685) | double check | 4 |
+[#686](https://github.com/feathericons/feather/issues/686) | usb | 9 | [#703](https://github.com/feathericons/feather/pull/703)
+[#695](https://github.com/feathericons/feather/issues/695) | spinnable loading | 13 |
+[#697](https://github.com/feathericons/feather/issues/697) | fence | 6 |
+[#705](https://github.com/feathericons/feather/issues/705) | digital watch | 4 |
+[#717](https://github.com/feathericons/feather/issues/717) | hammer | 0 |
 [#753](https://github.com/feathericons/feather/issues/753) | timer | 1 | [#735](https://github.com/feathericons/feather/pull/735)
+[#754](https://github.com/feathericons/feather/issues/754) | move-horizontal/-vertical | 1 | [#770](https://github.com/feathericons/feather/pull/770)
+[#776](https://github.com/feathericons/feather/issues/776) | git | 2 |
+[#782](https://github.com/feathericons/feather/issues/782) | debug | 2 |
+[#793](https://github.com/feathericons/feather/issues/793) | glasses / spectacles | 5 |
+[#794](https://github.com/feathericons/feather/issues/794) | contact lenses | 1 |
+[#811](https://github.com/feathericons/feather/issues/811) | car | 11 |
+[#812](https://github.com/feathericons/feather/issues/812) | dice | 5 | [#918](https://github.com/feathericons/feather/pull/918)
+[#831](https://github.com/feathericons/feather/issues/831) | / proposal helping hand | 0 |
+[#841](https://github.com/feathericons/feather/issues/841) | location disabled / error | 2 |
+[#853](https://github.com/feathericons/feather/issues/853) | menu open | 7 |
+[#855](https://github.com/feathericons/feather/issues/855) | all text editor s | 1 |
+[#865](https://github.com/feathericons/feather/issues/865) | dollar-sign-circle | 1 |
+[#879](https://github.com/feathericons/feather/issues/879) | two s | 3 |
+[#885](https://github.com/feathericons/feather/issues/885) | categorical/text data (abc) | 2 |
+[#916](https://github.com/feathericons/feather/issues/916) | queue | 0 |
+[#949](https://github.com/feathericons/feather/issues/949) | square academic cap / university / school | 8 |
+[#954](https://github.com/feathericons/feather/issues/954) | audience/group | 4 |
+[#961](https://github.com/feathericons/feather/issues/961) | current location | 4 |
+[#965](https://github.com/feathericons/feather/issues/965) | soft drink \ cold drink | 0 |
+[#966](https://github.com/feathericons/feather/issues/966) | mountain | 0 |
+[#968](https://github.com/feathericons/feather/issues/968) | sprout | 0 |
+[#978](https://github.com/feathericons/feather/issues/978) | bed + bath s | 0 |
+[#990](https://github.com/feathericons/feather/issues/990) | plane | 0 |
+[#991](https://github.com/feathericons/feather/issues/991) | holiday/vacation/palm tree | 0 |
 
-*Updated 2020-10-30*
+*Updated 2020-10-31*
