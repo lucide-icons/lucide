@@ -56,8 +56,12 @@ const Layout = ({ children }) => {
             </NextLink>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-          <Link href="https://github.com/lucide-icons/lucide" isExternal marginRight={6} fontSize="xl">
-
+          <Link
+            href="https://github.com/lucide-icons/lucide"
+            isExternal
+            marginRight={6}
+            fontSize="xl"
+          >
             Github
           </Link>
           <IconButton
