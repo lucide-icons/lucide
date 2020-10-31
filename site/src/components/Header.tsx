@@ -1,7 +1,7 @@
 import {Button, Flex, Link, Stack, Text,} from "@chakra-ui/core";
 import download from "downloadjs";
 import JSZip from "jszip";
-import { Download, GitHub } from 'lucide-react';
+import { Download, Github } from 'lucide-react';
 import {IconCustomizerDrawer} from "./IconCustomizerDrawer";
 
 function generateZip(icons) {
@@ -41,7 +41,7 @@ const Header = ({ data }) => {
         <IconCustomizerDrawer/>
         <Button
           as="a"
-          leftIcon={<GitHub/>}
+          leftIcon={<Github/>}
           size="lg"
           href={repositoryUrl}
           target="__blank"
