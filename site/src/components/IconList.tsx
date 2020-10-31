@@ -2,9 +2,13 @@ import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
 import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
+import {useContext} from "react";
+import {IconStyleContext} from "./CustomizeIconContext";
+import {IconWrapper} from "./IconWrapper";
 
 const IconList = ({icons}) => {
   const toast = useToast();
+  const {color, size, strokeWidth} = useContext(IconStyleContext);
 
   return (
     <Grid
@@ -15,7 +19,7 @@ const IconList = ({icons}) => {
       { icons.map((icon) => {
         // @ts-ignore
         const actualIcon = icon.item ? icon.item : icon;
-        const { name, src } = actualIcon;
+        const { name, content } = actualIcon;
 
         return (
           <Link key={name} href={`/?iconName=${name}`} as={`/icon/${name}`} scroll={false}>
@@ -46,7 +50,13 @@ const IconList = ({icons}) => {
               alignItems="center"
             >
               <Flex direction="column" align="center" justify="center">
-                <div dangerouslySetInnerHTML={{ __html: src }} />
+                <IconWrapper
+                  content={content}
+                  stroke={color}
+                  strokeWidth={strokeWidth}
+                  height={size}
+                  width={size}
+                />
                 <Text marginTop={5}>{name}</Text>
               </Flex>
             </Button>

@@ -4,11 +4,21 @@ import theme from "../lib/theme";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
+import {useContext, useRef} from "react";
+import {IconStyleContext} from "./CustomizeIconContext";
+import {IconWrapper} from "./IconWrapper";
+
+type IconDownload = {
+  src: string;
+  name: string;
+};
 
 const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
   const { tags = [], name } = icon;
+  const {color, strokeWidth, size} = useContext(IconStyleContext);
+  const iconRef = useRef<SVGSVGElement>(null);
 
   const { transform, opacity } = useSpring({
     opacity: isOpen ? 1 : 0,
@@ -34,12 +44,12 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
     minWidth: "160px",
     maxHeight: "240px",
     maxWidth: "240px",
-    color: (isLight ? theme.colors.gray[800] : theme.colors.white),
+    color: color,
   });
 
-  const downloadIcon = ({src, name}) => download(src, `${name}.svg`, 'image/svg+xml');
+  const downloadIcon = ({src, name} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
 
-  const copyIcon = ({src, name}) => {
+  const copyIcon = ({src, name} : IconDownload) => {
     copy(src);
     toast({
       title: "Copied!",
@@ -49,10 +59,10 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
     });
   }
 
-  const donwloadPNG = ({src, name}) => {
+  const downloadPNG = ({src, name}: IconDownload) => {
     const canvas = document.createElement('canvas');
-    canvas.width = 24;
-    canvas.height = 24;
+    canvas.width = size;
+    canvas.height = size;
     const ctx = canvas.getContext("2d");
 
     const image = new Image();
@@ -129,10 +139,18 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   padding={0}
                 >
                   <div
-                    dangerouslySetInnerHTML={{ __html: icon.src }}
                     style={iconStyling(colorMode == "light")}
                     className="icon-large"
-                  />
+                  >
+                    <IconWrapper
+                      content={icon.content}
+                      stroke={color}
+                      strokeWidth={strokeWidth}
+                      height={size}
+                      width={size}
+                      ref={iconRef}
+                    />
+                  </div>
 
                   <svg className="icon-grid" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
                     { Array.from({ length:23 }, (_, i) => (
@@ -169,13 +187,13 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   </Button> */}
                   </Box>
                   <ButtonGroup spacing={4}>
-                    <Button variant="solid" onClick={() => downloadIcon(icon)} mb={1}>
+                    <Button variant="solid" onClick={() => downloadIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
                       Download SVG
                     </Button>
-                    <Button variant="solid" onClick={() => copyIcon(icon)} mb={1}>
+                    <Button variant="solid" onClick={() => copyIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
                       Copy SVG
                     </Button>
-                    <Button variant="solid" onClick={() => donwloadPNG(icon)} mb={1}>
+                    <Button variant="solid" onClick={() => downloadPNG({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
                       Download PNG
                     </Button>
                   </ButtonGroup>
