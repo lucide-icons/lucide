@@ -6,16 +6,21 @@ import path from 'path';
  *
  * @param {string} string
  */
-export const toPascalCase = string =>
-  string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
+export const toCamelCase = string =>
+  string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
+    p2 ? p2.toUpperCase() : p1.toLowerCase(),
+  );
 
 /**
  * Converts string to PascalCase
  *
  * @param {string} string
  */
-export const toCamelCase = string =>
-  string.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, g1) => g1.toUpperCase());
+export const toPascalCase = string => {
+  const camelCase = toCamelCase(string);
+
+  return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+};
 
 /**
  * Resets the file contents.
