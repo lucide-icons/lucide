@@ -1,4 +1,4 @@
-const { plugins } = require('lucide/rollup.config');
+const plugins = require('lucide/rollup.plugins');
 const pkg = require('./package.json');
 
 const outputFileName = pkg.name;
@@ -28,7 +28,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify }) =>
     inputs.map(input => ({
       input,
-      plugins: plugins(minify),
+      plugins: plugins(pkg, minify),
       external: ['react', 'prop-types'],
       output: {
         name: outputFileName,

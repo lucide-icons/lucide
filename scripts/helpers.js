@@ -1,15 +1,21 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { upperFirst, camelCase } from 'lodash/string';
 import fs from 'fs';
 import path from 'path';
 
 /**
- * Generates a componentName of a String.
+ * Converts string to PascalCase
  *
- * @param {string} iconName
+ * @param {string} string
  */
-export const generateComponentName = iconName =>
-  iconName === 'github' ? 'GitHub' : upperFirst(camelCase(iconName));
+export const toPascalCase = string =>
+  string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
+
+/**
+ * Converts string to PascalCase
+ *
+ * @param {string} string
+ */
+export const toCamelCase = string =>
+  string.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, g1) => g1.toUpperCase());
 
 /**
  * Resets the file contents.

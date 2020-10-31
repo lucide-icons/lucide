@@ -1,4 +1,3 @@
-import { camelCase, upperFirst } from 'lodash-es';
 import createElement from './createElement';
 
 /**
@@ -30,8 +29,8 @@ export const getClassNames = attrs => {
 
 /**
  * Combines the classNames of array of classNames to a String
- * @param {Array} arrayOfClassnames
- * @returns {String}
+ * @param {array} arrayOfClassnames
+ * @returns {string}
  */
 export const combineClassNames = arrayOfClassnames => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
@@ -42,15 +41,18 @@ export const combineClassNames = arrayOfClassnames => {
     .join(' ');
 };
 
+const toPascalCase = string =>
+  string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
+
 /**
  * ReplaceElement, replaces the given element with the created icon.
  * @param {HTMLElement} element
- * @param {Object: {String, Array, Object}} options: { nameAttr, icons, attrs }
+ * @param {{ nameAttr: string, icons: object, attrs: object }} options: { nameAttr, icons, attrs }
  * @returns {Function}
  */
 export default (element, { nameAttr, icons, attrs }) => {
   const iconName = element.getAttribute(nameAttr);
-  const ComponentName = upperFirst(camelCase(iconName));
+  const ComponentName = toPascalCase(iconName);
 
   const iconNode = icons[ComponentName];
 

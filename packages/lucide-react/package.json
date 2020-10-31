@@ -13,9 +13,9 @@
   "author": "Eric Fennis",
   "scripts": {
     "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
-    "clean": "rimraf dist && rimraf build",
+    "clean": "rm -rf dist && rm -rf build",
     "build:move": "cp -av src build",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate --camelizeAttrs",
     "build:es": "yarn --cwd ../../ babel packages/lucide-react/build -d packages/lucide-react/dist/esm",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js"
   },

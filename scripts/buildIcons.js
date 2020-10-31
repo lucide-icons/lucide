@@ -8,6 +8,8 @@ import generateIconFiles from './build/generateIconFiles';
 import generateExportsFile from './build/generateExportsFile';
 import { readSvgDirectory } from './helpers';
 
+/* eslint-disable import/no-dynamic-require */
+
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
@@ -22,7 +24,9 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const icons = renderIconsObject(svgFiles, ICONS_DIR);
 
-const iconVNodes = renderIconNodes(icons);
+const { camelizeAttrs = false } = cliArguments;
+console.log('camelizeAttrs', camelizeAttrs);
+const iconVNodes = renderIconNodes(icons, camelizeAttrs);
 
 const defaultIconFileTemplate = ({ componentName, node }) => `
   const ${componentName} = ${node};
@@ -31,7 +35,7 @@ const defaultIconFileTemplate = ({ componentName, node }) => `
 `;
 
 const iconFileTemplate = cliArguments.templateSrc
-  ? require(cliArguments.templateSrc).default // eslint-disable-line import/no-dynamic-require
+  ? require(cliArguments.templateSrc).default
   : defaultIconFileTemplate;
 
 // Generates iconsNodes files for each icon
@@ -41,6 +45,5 @@ generateIconFiles(iconVNodes, OUTPUT_DIR, iconFileTemplate);
 generateExportsFile(
   path.join(SRC_DIR, 'icons/index.js'),
   path.join(OUTPUT_DIR, 'icons'),
-  'getElement',
   iconVNodes,
 );

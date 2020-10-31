@@ -1,8 +1,17 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { parseDOM } from 'htmlparser2';
 import DEFAULT_ATTRS from './default-attrs.json';
+import { toCamelCase } from '../helpers';
 
-export default iconsObject => {
+const normalizeAttrs = attrs =>
+  Object.keys(attrs).reduce((newAttrs, attr) => {
+    const attrKey = toCamelCase(attr);
+
+    newAttrs[attrKey] = attrs[attr];
+    return newAttrs;
+  }, {});
+
+export default (iconsObject, camelizeAttrs = false) => {
   const iconNodes = {};
 
   Object.keys(iconsObject).forEach(icon => {
@@ -12,14 +21,14 @@ export default iconsObject => {
     const children = dom.map(element => [
       element.name,
       {
-        ...element.attribs,
+        ...(camelizeAttrs ? normalizeAttrs(element.attribs) : element.attribs),
       },
     ]);
 
     iconNodes[icon] = [
       'svg',
       {
-        ...DEFAULT_ATTRS,
+        ...(camelizeAttrs ? normalizeAttrs(DEFAULT_ATTRS) : DEFAULT_ATTRS),
       },
       children,
     ];

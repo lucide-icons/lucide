@@ -1,8 +1,8 @@
 import path from 'path';
 
-import { generateComponentName, resetFile, appendFile } from '../helpers';
+import { toPascalCase, resetFile, appendFile } from '../helpers';
 
-export default function(inputEntry, outputDirectory, componentGetter, iconNodes) {
+export default function(inputEntry, outputDirectory, iconNodes) {
   const fileName = path.basename(inputEntry);
 
   // Reset file
@@ -12,7 +12,7 @@ export default function(inputEntry, outputDirectory, componentGetter, iconNodes)
 
   // Generate Import for Icon VNodes
   icons.forEach(iconName => {
-    const componentName = generateComponentName(iconName);
+    const componentName = toPascalCase(iconName);
     const importString = `export { default as ${componentName} } from './${iconName}';\n`;
     appendFile(importString, fileName, outputDirectory);
   });
