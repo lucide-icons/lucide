@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         >
           <Flex justifyContent="center" alignItems="center">
             <NextLink href="/" passHref>
-              <Link display="flex" breakout _hover={{textDecoration: 'none'}}>
+              <Link display="flex" _hover={{textDecoration: 'none'}}>
                 <Icon boxSize={12} marginRight="8px">
                   <Logo/>
                 </Icon>

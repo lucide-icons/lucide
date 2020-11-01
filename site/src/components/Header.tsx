@@ -24,7 +24,7 @@ const Header = ({ data }) => {
 
   return (
     <Flex direction="column" align="center" justify="center">
-      <Text fontSize="3xl" as="b" mb="4" textAlign="center">
+      <Text fontSize="4xl" as="b" mb="4" textAlign="center">
         Simply beautiful open source icons, community-sourced
       </Text>
       <Text fontSize="lg" as="p" textAlign="center" mb="8">
