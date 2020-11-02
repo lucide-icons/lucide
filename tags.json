@@ -204,7 +204,7 @@
   "thumbs-up": ["like", "good", "emotion"],
   "toggle-left": ["on", "off", "switch"],
   "toggle-right": ["on", "off", "switch"],
-  "tool": ["settings", "spanner"],
+  "wrench": ["tool", "settings", "spanner"],
   "trash": ["garbage", "delete", "remove", "bin"],
   "trash-2": ["garbage", "delete", "remove", "bin"],
   "triangle": ["delta"],
