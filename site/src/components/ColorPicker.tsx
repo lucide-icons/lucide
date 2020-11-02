@@ -12,13 +12,13 @@ type ColorPickerProps = {
   onChange: (s: string, e: SyntheticEvent) => void;
 };
 
-function ColorPicker({ hsv, hsl, onChange, hex, value: color }: ColorPickerProps) {
+function ColorPicker({ hsv, hsl, onChange, value: color }: ColorPickerProps) {
   const [value, setValue] = useState(color);
   const input = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (color !== value && input.current !== document.activeElement) {
-      setValue(color === "currentColor" ? color : String(color).toUpperCase());
+      setValue(color === 'currentColor' ? color : String(color).toUpperCase());
     }
   }, [color]);
 
@@ -49,11 +49,25 @@ function ColorPicker({ hsv, hsl, onChange, hex, value: color }: ColorPickerProps
           paddingBottom: '75%',
           position: 'relative',
           overflow: 'hidden',
+          marginTop: '0.5rem',
+          borderRadius: '0.375rem',
+          border: '1px solid',
+          borderColor: 'inherit',
         }}
       >
         <Saturation hsl={hsl} hsv={hsv} onChange={onChange} />
       </div>
-      <div style={{ minHeight: '1em', position: 'relative', margin: 2 }}>
+      <div
+        style={{
+          minHeight: '2em',
+          position: 'relative',
+          margin: '0.5rem 0 0 0',
+          borderRadius: '0.375rem',
+          border: '1px solid',
+          borderColor: 'inherit',
+          overflow: 'hidden',
+        }}
+      >
         <Hue hsl={hsl} onChange={onChange} direction={'horizontal'} />
       </div>
     </div>
