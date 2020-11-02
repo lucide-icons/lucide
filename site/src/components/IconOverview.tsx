@@ -1,13 +1,21 @@
-import { Box, Input, InputGroup, InputLeftElement, Text, useColorMode, Icon } from "@chakra-ui/core";
-import IconList from "./IconList";
-import { useEffect, useRef, useState } from "react";
-import useSearch from "../lib/search";
+import {
+  Box,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Text,
+  useColorMode,
+  Icon,
+} from '@chakra-ui/core';
+import IconList from './IconList';
+import { useEffect, useRef, useState } from 'react';
+import useSearch from '../lib/search';
 import { useRouter } from 'next/router';
 import { useDebounce } from '../lib/useDebounce';
-import theme from "../lib/theme";
+import theme from '../lib/theme';
 import { Search as SearchIcon } from 'lucide-react';
 
-const IconOverview = ({data}) => {
+const IconOverview = ({ data }) => {
   const router = useRouter();
   const { query } = router.query;
   const [queryText, setQueryText] = useState(query || '');
@@ -18,7 +26,7 @@ const IconOverview = ({data}) => {
   const inputElement = useRef(null);
 
   function handleKeyDown(event) {
-    if (event.key === "/" && inputElement.current !== document.activeElement) {
+    if (event.key === '/' && inputElement.current !== document.activeElement) {
       event.preventDefault();
       inputElement.current.focus();
     }
@@ -34,7 +42,7 @@ const IconOverview = ({data}) => {
     router.push({
       query: {
         ...query,
-        query: debouncedQuery
+        query: debouncedQuery,
       },
     });
   }, [debouncedQuery]);
@@ -46,30 +54,31 @@ const IconOverview = ({data}) => {
 
   return (
     <>
-      <InputGroup position="sticky" top={4} zIndex={1} bg={
-        colorMode == "light"
-          ? theme.colors.white
-          : theme.colors.gray[700]
-      }>
-        <InputLeftElement children={(<Icon><SearchIcon /></Icon>)} />
+      <InputGroup position="sticky" top={4} zIndex={1}>
+        <InputLeftElement
+          children={
+            <Icon>
+              <SearchIcon />
+            </Icon>
+          }
+        />
         <Input
           ref={inputElement}
           placeholder={`Search ${Object.keys(data).length} icons (Press "/" to focus)`}
           value={queryText}
           onChange={(event) => setQueryText(event.target.value)}
+          bg={colorMode == 'light' ? theme.colors.white : theme.colors.gray[700]}
         />
       </InputGroup>
       <Box marginTop={5}>
         {results.length > 0 ? (
-
-            <IconList icons={results} />
-
+          <IconList icons={results} />
         ) : (
           <Text
             fontSize="2xl"
             fontWeight="bold"
             textAlign="center"
-            style={{ wordBreak: "break-word" }}
+            style={{ wordBreak: 'break-word' }}
           >
             No results found for "{query}"
           </Text>
@@ -77,6 +86,6 @@ const IconOverview = ({data}) => {
       </Box>
     </>
   );
-}
+};
 
 export default IconOverview;
