@@ -1,11 +1,12 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton, Button, WrapItem, Wrap } from "@chakra-ui/core";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
 import NextLink from "next/link"
 import { Moon, Sun } from 'lucide-react';
 import Logo from 'babel-loader!react-svg-loader?jsx=true!../../public/logo.svg';
+import { useCallback } from "react";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, maxWidth = "1250px" }) => {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const text = useColorModeValue('dark', 'light')
@@ -17,6 +18,10 @@ const Layout = ({ children }) => {
       query: { query: query }
     }).then();
   }
+
+  const editCategories = useCallback(() => {
+
+  }, []);
 
   useKeyBindings({
     Escape: {
@@ -35,7 +40,7 @@ const Layout = ({ children }) => {
           justifyContent="space-between"
           pt={4}
           pb={4}
-          maxW="1250px"
+          maxW={maxWidth}
           margin="0 auto"
           w="full"
           px={8}
@@ -77,9 +82,14 @@ const Layout = ({ children }) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
+      <Flex margin="0 auto" direction="column" maxW={maxWidth} px={8} marginBo  ttom={8}>
         {children}
-        <Divider marginTop={4} marginBottom={8} />
+        <Divider marginTop={4} marginBottom={4}/>
+        <Wrap>
+          <WrapItem>
+            <Button variant="ghost" onClick={() => router.push('/edit/categories')}>Edit Categories</Button>
+          </WrapItem>
+        </Wrap>
       </Flex>
     </Box>
   );

@@ -14,7 +14,6 @@ const IconList = ({icons}) => {
     <Grid
       templateColumns={`repeat(auto-fill, minmax(160px, 1fr))`}
       gap={5}
-      marginBottom="320px"
     >
       { icons.map((icon) => {
         // @ts-ignore

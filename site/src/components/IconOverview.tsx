@@ -1,19 +1,24 @@
-import { Box, Input, InputGroup, InputLeftElement, Text, useColorMode, Icon } from "@chakra-ui/core";
+import { Box, Input, InputGroup, InputLeftElement, Text, Icon, IconButton, useColorModeValue } from "@chakra-ui/core";
 import IconList from "./IconList";
-import { useEffect, useRef, useState } from "react";
+import IconCategory from './IconCategory'
+import { useCallback, useEffect, useRef, useState } from "react";
 import useSearch from "../lib/search";
 import { useRouter } from 'next/router';
 import { useDebounce } from '../lib/useDebounce';
 import theme from "../lib/theme";
 import { Search as SearchIcon } from 'lucide-react';
+import { Library, LayoutGrid } from 'lucide-react';
 
-const IconOverview = ({data}) => {
+const IconOverview = ({data }) => {
   const router = useRouter();
   const { query } = router.query;
   const [queryText, setQueryText] = useState(query || '');
   const debouncedQuery = useDebounce(queryText, 1000);
   const results = useSearch(data, queryText);
-  const { colorMode } = useColorMode();
+  const [ categoryView, setCategoryView ] = useState(false);
+  const inputBackground = useColorModeValue(theme.colors.white, theme.colors.gray[700]);
+
+  const CategoryViewIcon = categoryView ?  LayoutGrid : Library;
 
   const inputElement = useRef(null);
 
@@ -23,6 +28,10 @@ const IconOverview = ({data}) => {
       inputElement.current.focus();
     }
   }
+
+  const toggleCategoryView = useCallback(() => {
+    setCategoryView(!categoryView);
+  }, [categoryView]);
 
   useEffect(() => {
     setQueryText(query || '');
@@ -46,24 +55,31 @@ const IconOverview = ({data}) => {
 
   return (
     <>
-      <InputGroup position="sticky" top={4} zIndex={1} bg={
-        colorMode == "light"
-          ? theme.colors.white
-          : theme.colors.gray[700]
-      }>
+      <InputGroup position="sticky" top={4} zIndex={1}>
         <InputLeftElement children={(<Icon><SearchIcon /></Icon>)} />
         <Input
           ref={inputElement}
           placeholder={`Search ${Object.keys(data).length} icons (Press "/" to focus)`}
           value={queryText}
           onChange={(event) => setQueryText(event.target.value)}
+          bg={inputBackground}
         />
+         <IconButton
+            size="md"
+            fontSize="lg"
+            aria-label={`Switch to category view`}
+            color="current"
+            ml="3"
+            onClick={toggleCategoryView}
+            icon={<CategoryViewIcon />}
+          />
       </InputGroup>
-      <Box marginTop={5}>
+      <Box marginTop={5} marginBottom={320}>
         {results.length > 0 ? (
-
+            categoryView ?
+            <IconCategory icons={results} data={data} />
+            :
             <IconList icons={results} />
-
         ) : (
           <Text
             fontSize="2xl"
