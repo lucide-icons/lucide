@@ -17,12 +17,13 @@
     "fuse.js": "^6.0.4",
     "jszip": "^3.4.0",
     "lodash": "^4.17.20",
-    "lucide-react": "^0.1.2-beta.1",
+    "lucide-react": "^0.1.2-beta.3",
     "next": "^9.5.4",
     "react": "^16.13.1",
     "react-color": "2.17.3",
     "react-dom": "^16.13.1",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "react-svg-loader": "^3.0.3"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.24.4",
@@ -33,6 +34,7 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "babel-jest": "^26.5.2",
+    "babel-loader": "^8.1.0",
     "cheerio": "^1.0.0-rc.3",
     "jest": "^26.5.2",
     "react-test-renderer": "^16.13.1",
