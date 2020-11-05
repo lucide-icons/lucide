@@ -1,12 +1,13 @@
 import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
 import download from 'downloadjs';
-import Link from 'next/link'
 import copy from "copy-to-clipboard";
 import {useContext} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
+import { useRouter } from "next/router";
 
-const IconList = ({icons}) => {
+const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
+  const router = useRouter();
   const toast = useToast();
   const {color, size, strokeWidth} = useContext(IconStyleContext);
 
@@ -21,13 +22,14 @@ const IconList = ({icons}) => {
         const { name, content } = actualIcon;
 
         return (
-          <Link key={name} href={`/?iconName=${name}`} as={`/icon/${name}`} scroll={false}>
             <Button
               variant="ghost"
               borderWidth="1px"
               rounded="lg"
               padding={16}
+              key={name}
               onClick={(event) => {
+                if(!enableClick) return;
                 if (event.shiftKey) {
                   copy(actualIcon.src);
                   toast({
@@ -37,16 +39,13 @@ const IconList = ({icons}) => {
                     duration: 1500,
                   });
                 }
-                if (event.metaKey) {
-                  download(
-                    actualIcon.src,
-                    `${name}.svg`,
-                    "image/svg+xml"
-                  );
+                else if (event.metaKey) download(actualIcon.src, `${name}.svg`, "image/svg+xml");
+                else {
+                  router.push(`/?iconName=${name}`, `/icon/${name}`)
                 }
               }}
-              key={name}
               alignItems="center"
+              {...iconListItemProps}
             >
               <Flex direction="column" align="center" justify="center">
                 <IconWrapper
@@ -59,7 +58,6 @@ const IconList = ({icons}) => {
                 <Text marginTop={5}>{name}</Text>
               </Flex>
             </Button>
-          </Link>
         );
       })}
     </Grid>

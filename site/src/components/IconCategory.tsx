@@ -3,7 +3,7 @@ import { useMemo } from "react"
 import categories from '../../../categories.json'
 import IconList from "./IconList";
 
-const IconCategory = ({icons, data}) => {
+const IconCategory = ({icons, data, onCategorieDrop}) => {
 
   const iconLibrary = data.reduce((library, icon) => {
     library[icon.name] = icon;
@@ -31,7 +31,7 @@ const IconCategory = ({icons, data}) => {
     <Stack spacing={8}>
       {
         iconCategories.filter(({icons}) => icons.length).map(({name, icons}) => (
-          <Box key={name}>
+          <Box key={name} onDrop={(event) => onCategorieDrop(event, { name }) }>
             <Text fontSize="xl" marginBottom={3}>{toTitleCase(name)}</Text>
             <IconList icons={icons}/>
           </Box>
