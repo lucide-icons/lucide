@@ -8,6 +8,7 @@ import { useDebounce } from '../lib/useDebounce';
 import theme from "../lib/theme";
 import { Search as SearchIcon } from 'lucide-react';
 import { Library, LayoutGrid } from 'lucide-react';
+import categories from '../../../categories.json'
 
 const IconOverview = ({data }) => {
   const router = useRouter();
@@ -77,7 +78,7 @@ const IconOverview = ({data }) => {
       <Box marginTop={5} marginBottom={320}>
         {results.length > 0 ? (
             categoryView ?
-            <IconCategory icons={results} data={data} />
+            <IconCategory icons={results} data={data} categories={categories}/>
             :
             <IconList icons={results} />
         ) : (

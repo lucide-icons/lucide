@@ -28,6 +28,10 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
               rounded="lg"
               padding={16}
               key={name}
+              icon={name}
+              opacity={0.999}
+              position="relative"
+              _focus={{ outline: 'none'}}
               onClick={(event) => {
                 if(!enableClick) return;
                 if (event.shiftKey) {
@@ -58,7 +62,7 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
                 <Text marginTop={5}>{name}</Text>
               </Flex>
             </Button>
-        );
+          );
       })}
     </Grid>
   );

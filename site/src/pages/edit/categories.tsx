@@ -5,27 +5,94 @@ import IconCategory from '../../components/IconCategory';
 import IconList from '../../components/IconList';
 import theme from '../../lib/theme';
 import { useRouter } from 'next/router';
+import categoriesFile from '../../../../categories.json'
+import { useEffect, useState, useMemo } from 'react';
 
 const EditCategoriesPage = ({ data }) => {
-  const router = useRouter()
   const boxBackground = useColorModeValue(theme.colors.white, theme.colors.gray[700]);
+  const [dragging, setDragging] = useState(false);
+  const [categories, setCategories] = useState(categoriesFile);
 
-  const onCategorieDrop = (event, categorie) => {
-    console.log(event);
+  const onDrop = (event) => {
+    // event.preventDefault();
+    // console.log('onDrop', event.target);
+    const category = event.target.getAttribute('category');
+    if (category) {
+      const icon = event.dataTransfer.getData("text/plain");
+
+      setTimeout(() => {
+        const newCategories = { ...categories };
+
+        if(!newCategories[category].includes(icon)) {
+          newCategories[category].push(icon)
+        }
+
+        setCategories(newCategories);
+
+        console.log(categories);
+
+      }, 0);
+    }
+
+
   }
 
-  const ondragstart = (event) => {
-    console.log(event);
+  const onDragEnter = (event) => {
+    const category = event.target.getAttribute('category');
+    // console.log('onDrop',event);
+    if (category) {
+      // console.log(event.target);
+    }
 
-    event.dataTransfer.setData("text/plain", 'anme');
+  }
+
+  const onDragStart = (event) => {
+    const iconName = event.target.getAttribute('icon')
+
+    if(iconName) {
+      event.dataTransfer.setData("text/plain", iconName);
+
+      setTimeout(() => {
+        setDragging(true)
+      }, 0);
+    }
+  }
+
+  const onDragEnd = (event) => {
+    setTimeout(() => {
+      setDragging(false)
+    }, 0);
   }
 
   const iconListItemProps = {
     draggable: true,
     href: '',
     as: '',
-    ondragstart,
+    onDragStart,
+    onDragEnd,
   }
+
+  useEffect(() => {
+    document.addEventListener('dragenter', onDragEnter , false);
+    document.addEventListener("dragover", event => { event.preventDefault() }, false);
+
+
+    return () => {
+      document.removeEventListener('dragenter', onDragEnter)
+    }
+  }, [onDrop, onDragEnter])
+
+  const categoryProps = useMemo(() => ({
+    innerProps: {
+      pointerEvents: dragging ? 'none' : 'auto'
+    },
+    onDrop
+//     onMouseOver: (event) => {
+// console.log('hoppa', event);
+
+//     },
+
+  }), [dragging])
 
   return (
     <Layout maxWidth="1600px">
@@ -38,8 +105,8 @@ const EditCategoriesPage = ({ data }) => {
             <Box
               marginTop={5}
               marginBottom={320}
-              maxWidth="100%"
-              width="calc((1600px / 2) - 64px)"
+              maxWidth="calc((1600px / 2) - 64px)"
+              width="calc(100% - 32px)"
               height="calc(100vh - 164px)"
               borderWidth="1px"
               boxSizing="border-box"
@@ -58,7 +125,12 @@ const EditCategoriesPage = ({ data }) => {
             Categories
           </Heading>
           <Box marginTop={5} marginBottom={320} marginLeft="auto">
-            <IconCategory icons={data} data={data} onCategorieDrop={onCategorieDrop} />
+            <IconCategory
+              icons={data}
+              data={data}
+              categories={categories}
+              categoryProps={categoryProps}
+            />
           </Box>
         </Box>
       </Grid>

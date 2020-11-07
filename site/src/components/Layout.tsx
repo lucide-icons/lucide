@@ -82,7 +82,7 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW={maxWidth} px={8} marginBo  ttom={8}>
+      <Flex margin="0 auto" direction="column" maxW={maxWidth} px={8} marginBottom={8}>
         {children}
         <Divider marginTop={4} marginBottom={4}/>
         <Wrap>

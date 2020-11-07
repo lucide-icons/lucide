@@ -1,9 +1,8 @@
 import { Box, Stack, Text } from "@chakra-ui/core";
 import { useMemo } from "react"
-import categories from '../../../categories.json'
 import IconList from "./IconList";
 
-const IconCategory = ({icons, data, onCategorieDrop}) => {
+const IconCategory = ({icons, data, categories, categoryProps = { innerProps: {} }}) => {
 
   const iconLibrary = data.reduce((library, icon) => {
     library[icon.name] = icon;
@@ -23,17 +22,20 @@ const IconCategory = ({icons, data, onCategorieDrop}) => {
     })
 
     return categoryMap;
-  },[]), [icons]);
+  },[]), [icons, categories]);
 
   const toTitleCase = string => string.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
 
+  const { innerProps, ...outerProps } = categoryProps;
   return (
     <Stack spacing={8}>
       {
         iconCategories.filter(({icons}) => icons.length).map(({name, icons}) => (
-          <Box key={name} onDrop={(event) => onCategorieDrop(event, { name }) }>
-            <Text fontSize="xl" marginBottom={3}>{toTitleCase(name)}</Text>
-            <IconList icons={icons}/>
+          <Box key={name} category={name} {...outerProps}>
+            <Box {...(innerProps || {})}>
+              <Text fontSize="xl" marginBottom={3}>{toTitleCase(name)}</Text>
+              <IconList icons={icons} />
+            </Box>
           </Box>
         ))
       }
