@@ -23,7 +23,7 @@ const Header = ({ data }) => {
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
 
   return (
-    <Flex direction="column" align="center" justify="center">
+    <Flex direction="column" align="center" justify="center" paddingTop={16}>
       <Text fontSize="4xl" as="b" mb="4" textAlign="center">
         Simply beautiful open source icons, community-sourced
       </Text>

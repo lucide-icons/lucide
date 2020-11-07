@@ -34,7 +34,7 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
 
   return (
     <Box h="100vh">
-      <Flex mb={16} w="full">
+      <Flex w="full">
         <Flex
           alignItems="center"
           justifyContent="space-between"
