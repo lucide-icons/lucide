@@ -10,7 +10,6 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
-    "import/no-extraneous-dependencies": 'off',
     'prettier/prettier': [
       'error',
       {
