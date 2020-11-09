@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { parseDOM } from 'htmlparser2';
 import DEFAULT_ATTRS from './default-attrs.json';
-import { toCamelCase } from '../helpers';
+import { toCamelCase, hash } from '../helpers';
 
-const normalizeAttrs = attrs =>
+const camelizeAttrs = attrs =>
   Object.keys(attrs).reduce((newAttrs, attr) => {
     const attrKey = toCamelCase(attr);
 
@@ -11,24 +11,37 @@ const normalizeAttrs = attrs =>
     return newAttrs;
   }, {});
 
-export default (iconsObject, camelizeAttrs = false) => {
+export default (iconsObject, options) => {
   const iconNodes = {};
 
   Object.keys(iconsObject).forEach(icon => {
     const svgString = iconsObject[icon];
     const dom = parseDOM(svgString);
 
-    const children = dom.map(element => [
-      element.name,
-      {
-        ...(camelizeAttrs ? normalizeAttrs(element.attribs) : element.attribs),
-      },
-    ]);
+    const children = dom.map(element => {
+      if (options.renderUniqueKey) {
+        const hashSource = {
+          name: element.name,
+          ...element.attribs,
+        };
+
+        const uniqueKey = hash(JSON.stringify(hashSource));
+
+        element.attribs.key = uniqueKey;
+      }
+
+      return [
+        element.name,
+        {
+          ...(options.camelizeAttrs ? camelizeAttrs(element.attribs) : element.attribs),
+        },
+      ];
+    });
 
     iconNodes[icon] = [
       'svg',
       {
-        ...(camelizeAttrs ? normalizeAttrs(DEFAULT_ATTRS) : DEFAULT_ATTRS),
+        ...(options.camelizeAttrs ? camelizeAttrs(DEFAULT_ATTRS) : DEFAULT_ATTRS),
       },
       children,
     ];

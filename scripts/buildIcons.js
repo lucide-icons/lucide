@@ -24,9 +24,7 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const icons = renderIconsObject(svgFiles, ICONS_DIR);
 
-const { camelizeAttrs = false } = cliArguments;
-console.log('camelizeAttrs', camelizeAttrs);
-const iconVNodes = renderIconNodes(icons, camelizeAttrs);
+const iconVNodes = renderIconNodes(icons, cliArguments);
 
 const defaultIconFileTemplate = ({ componentName, node }) => `
   const ${componentName} = ${node};

@@ -15,15 +15,19 @@
     "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf build",
     "build:move": "cp -av src build",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate --camelizeAttrs",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate --camelizeAttrs --renderUniqueKey",
     "build:es": "yarn --cwd ../../ babel packages/lucide-react/build -d packages/lucide-react/dist/esm",
-    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js"
+    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js",
+    "test": "jest"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.14.0"
   },
   "devDependencies": {
-    "lucide": "file:../.."
+    "babel-preset-react-app": "^10.0.0",
+    "jest": "^26.6.3",
+    "lucide": "file:../..",
+    "react-test-renderer": "^17.0.1"
   }
 }
