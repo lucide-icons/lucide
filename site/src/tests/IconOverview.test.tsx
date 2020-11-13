@@ -1,6 +1,6 @@
 import { getAllData } from '../lib/icons';
 import { renderHook } from '@testing-library/react-hooks';
-import useSearch from '../lib/search';
+import useSearch from '../lib/useSearch';
 
 describe('Icon Overview', () => {
   it('can search filter icons', async () => {

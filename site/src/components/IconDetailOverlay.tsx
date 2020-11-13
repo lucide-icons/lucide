@@ -152,11 +152,11 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                     />
                   </div>
 
-                  <svg className="icon-grid" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
-                    { Array.from({ length:23 }, (_, i) => (
+                  <svg className="icon-grid" width="24" height="24" viewBox={`0 0 ${size} ${size}`} fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
+                    { Array.from({ length:(size - 1) }, (_, i) => (
                       <g key={`grid-${i}`}>
-                        <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={24} y2={i + 1} />
-                        <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={24} />
+                        <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={size} y2={i + 1} />
+                        <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={size} />
                       </g>
                     )) }
                   </svg>
