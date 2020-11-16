@@ -9,11 +9,27 @@ import Header from '../../components/Header';
 const IconPage = ({ icon, data }) => {
   const router = useRouter()
 
+  const onClose = () => {
+    let query = {};
+
+    if(router.query.search) {
+      query = {
+        search: router.query.search
+      };
+    }
+
+    router.push({
+      pathname: '/',
+      query,
+    })
+  }
+
   return (
     <Layout>
       <IconDetailOverlay
+        key={icon.name}
         icon={icon}
-        onClose={() => router.push('/')}
+        onClose={onClose}
       />
       <Header {...{data}}/>
       <IconOverview {...{data}}/>
