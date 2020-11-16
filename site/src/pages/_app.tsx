@@ -1,4 +1,4 @@
-import { CSSReset, ChakraProvider, ColorModeProvider } from '@chakra-ui/core';
+import { ChakraProvider } from '@chakra-ui/core';
 import customTheme from '../lib/theme';
 import '../assets/styling.css';
 import Head from 'next/head';

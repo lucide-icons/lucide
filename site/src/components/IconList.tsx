@@ -2,13 +2,18 @@ import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
 import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
-import {useContext} from "react";
+import {useContext, useMemo} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
+import { useRouter } from "next/router";
 
 const IconList = ({icons}) => {
+  const router = useRouter()
   const toast = useToast();
   const {color, size, strokeWidth} = useContext(IconStyleContext);
+  const { search } = router.query;
+
+  const query = useMemo(()=> search !== undefined ? { search } : {},[search])
 
   return (
     <Grid
@@ -17,12 +22,21 @@ const IconList = ({icons}) => {
       marginBottom="320px"
     >
       { icons.map((icon) => {
-        // @ts-ignore
         const actualIcon = icon.item ? icon.item : icon;
         const { name, content } = actualIcon;
 
         return (
-          <Link key={name} href={`/?iconName=${name}`} as={`/icon/${name}`} scroll={false}>
+          <Link
+            key={name}
+            scroll={false}
+            href={{
+              pathname: '/icon/[iconName]',
+              query: {
+                ...query,
+                iconName: name,
+              },
+            }}
+          >
             <Button
               variant="ghost"
               borderWidth="1px"
