@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@chakra-ui/core": "next",
+    "@chakra-ui/core": "^1.0.0-rc.8",
     "downloadjs": "^1.4.7",
     "framer-motion": "^2.9.4",
     "fuse.js": "^6.0.4",

@@ -56,6 +56,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
       description: `Icon "${name}" copied to clipboard.`,
       status: "success",
       duration: 1500,
+      isClosable: true
     });
   }
 
