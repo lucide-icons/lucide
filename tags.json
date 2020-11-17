@@ -76,6 +76,7 @@
   "file-minus": ["delete", "remove", "erase"],
   "file-plus": ["add", "create", "new"],
   "file-text": ["data", "txt", "pdf"],
+  "files": ["multiple", "copy"],
   "film": ["movie", "video"],
   "filter": ["funnel", "hopper"],
   "flag": ["report"],
