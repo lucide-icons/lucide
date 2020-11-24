@@ -1,10 +1,10 @@
 import { getAllData } from '../../lib/icons';
 import Layout from '../../components/Layout';
-import { Box, Flex, Grid, Heading, useColorModeValue, Text, Button } from '@chakra-ui/core';
+import { Box, Grid, Heading, useColorModeValue } from '@chakra-ui/core';
 import IconCategory from '../../components/IconCategory';
 import IconList from '../../components/IconList';
+import CategoryChangesBar from '../../components/CategoryChangesBar';
 import theme from '../../lib/theme';
-import { useRouter } from 'next/router';
 import categoriesFile from '../../../../categories.json'
 import { useEffect, useState, useMemo, useCallback } from 'react';
 
@@ -38,20 +38,16 @@ const EditCategoriesPage = ({ data }) => {
     }
   }, [categories, setCategories, changes, setChanges])
 
-  const onDragEnter = useCallback((event) => {
-    event.preventDefault()
+  const onDragEnter = (event) => {
+    // event.preventDefault()
     // console.log(event.target);
 
     const category = event.target.getAttribute('category');
-    // console.log(category);
-
 
     if (category) {
-      // setTimeout(() => {
       setHoveringCategory(category)
-      // }, 0)
     }
-  }, [setHoveringCategory])
+  };
 
   const onDragStart = (event) => {
     const iconName = event.target.getAttribute('icon')
@@ -64,7 +60,8 @@ const EditCategoriesPage = ({ data }) => {
   }
 
   const onDragEnd = (event) => {
-      setDragging(false)
+    setDragging(false)
+    setHoveringCategory('')
   }
 
   const iconListItemProps = {
@@ -76,12 +73,7 @@ const EditCategoriesPage = ({ data }) => {
   }
 
   useEffect(() => {
-    document.addEventListener('dragenter', onDragEnter , false);
     document.addEventListener("dragover", event => { event.preventDefault() }, false);
-
-    return () => {
-      document.removeEventListener('dragenter', onDragEnter)
-    }
   }, [])
 
   const categoryProps = useMemo(() => ({
@@ -92,35 +84,14 @@ const EditCategoriesPage = ({ data }) => {
     innerProps: {
       pointerEvents: dragging ? 'none' : 'auto'
     },
+    activeCategory: hoveringCategory,
     onDrop,
-    conditionalProps(name) {
-      return {
-        backgroundColor: name === hoveringCategory ? activeBackground : 'transparent',
-      }
-    }
-  }), [dragging])
-
-  const handleSubmit = () => {
-    console.log('handleSubmit');
-  }
+    onDragEnter,
+  }), [dragging, hoveringCategory])
 
   return (
     <Layout maxWidth="1600px">
-      <Box
-        borderWidth="1px"
-        rounded="lg"
-        width="full"
-        boxShadow={theme.shadows.xl}
-        position="relative"
-        padding={4}
-      >
-        <Flex>
-          <Text fontSize="lg">You're editing the overview categories</Text>
-          <Text fontSize="lg" fontWeight="bold" marginLeft={4}>{changes}</Text>
-          <Text fontSize="lg" marginLeft={2}>changes made to 'categories.json'</Text>
-          <Button onClick={handleSubmit}>Submit Pull-request</Button>
-        </Flex>
-      </Box>
+      <CategoryChangesBar {...{categories, changes}}/>
       <Grid templateColumns="1fr 1fr" gridColumnGap={3}>
         <Box>
           <Box position="sticky" top={6} paddingTop={4}>

@@ -65,15 +65,15 @@ const IconOverview = ({data }) => {
           onChange={(event) => setQueryText(event.target.value)}
           bg={inputBackground}
         />
-         <IconButton
-            size="md"
-            fontSize="lg"
-            aria-label={`Switch to category view`}
-            color="current"
-            ml="3"
-            onClick={toggleCategoryView}
-            icon={<CategoryViewIcon />}
-          />
+        <IconButton
+          size="md"
+          fontSize="lg"
+          aria-label={`Switch to category view`}
+          color="current"
+          ml="3"
+          onClick={toggleCategoryView}
+          icon={<CategoryViewIcon />}
+        />
       </InputGroup>
       <Box marginTop={5} marginBottom={320}>
         {results.length > 0 ? (
