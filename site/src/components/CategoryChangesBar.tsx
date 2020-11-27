@@ -26,7 +26,7 @@ const CategoryChangesBar = ({categories, changes}) => {
         margin="0 auto"
       >
         <Flex alignItems="center" justifyContent="space-between">
-          <Text fontSize="lg">You're editing the overview categories</Text>
+          <Text fontSize="lg">You're editing the overview categories.</Text>
           <Flex>
             <Text fontSize="lg" fontWeight="bold" marginLeft={4}>{changes}</Text>
             <Text fontSize="lg" marginLeft={2}>changes made to 'categories.json'</Text>
@@ -37,10 +37,10 @@ const CategoryChangesBar = ({categories, changes}) => {
       <Modal isOpen={modalOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Modal Title</ModalHeader>
+        <ModalHeader>Submit those changes</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Text>asdfasdfasdnaksdfkdsbfkbkdasa</Text>
+          <Text>Here's the json output of the changes you made. Please copy the output and paste it in github to submit the changes to the repository.</Text>
         </ModalBody>
 
         <ModalFooter>

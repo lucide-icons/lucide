@@ -84,6 +84,7 @@ const EditCategoriesPage = ({ data }) => {
     innerProps: {
       pointerEvents: dragging ? 'none' : 'auto'
     },
+    padding: 4,
     activeCategory: hoveringCategory,
     onDrop,
     onDragEnter,
@@ -92,7 +93,7 @@ const EditCategoriesPage = ({ data }) => {
   return (
     <Layout maxWidth="1600px">
       <CategoryChangesBar {...{categories, changes}}/>
-      <Grid templateColumns="1fr 1fr" gridColumnGap={3}>
+      <Grid templateColumns="1fr 1fr" gridColumnGap={6}>
         <Box>
           <Box position="sticky" top={6} paddingTop={4}>
             <Heading as="h4" size="md">
@@ -101,8 +102,8 @@ const EditCategoriesPage = ({ data }) => {
             <Box
               marginTop={5}
               marginBottom={320}
-              maxWidth="calc((1600px / 2) - 64px)"
-              width="calc(100% - 32px)"
+              maxWidth="calc(1600px / 2)"
+              width="100%"
               height="calc(100vh - 164px)"
               borderWidth="1px"
               boxSizing="border-box"
@@ -117,7 +118,7 @@ const EditCategoriesPage = ({ data }) => {
           </Box>
         </Box>
         <Box>
-          <Heading as="h4" size="md" paddingTop={4}>
+          <Heading as="h4" size="md" paddingTop={4} paddingLeft={4}>
             Categories
           </Heading>
           <Box marginTop={5} marginBottom={320} marginLeft="auto">

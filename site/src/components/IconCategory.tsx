@@ -45,7 +45,6 @@ const IconCategory = ({
             key={name}
             category={name}
             backgroundColor={isActive ? activeBackground : 'transparent'}
-            padding={4}
             borderRadius={8}
             {...outerProps}
           >
