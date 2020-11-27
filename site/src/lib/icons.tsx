@@ -13,12 +13,30 @@ export function getAllNames() {
   });
 }
 
-export function getData(name) {
+const getContributers = (name) => new Promise(async (resolve, reject) => {
+
+
+  try {
+    const res = await fetch(`https://api.github.com/repos/lucide-icons/lucide/commits?path=icons/${name}.svg`);
+    const data = await res.json();
+
+    resolve(data);
+  } catch (error) {
+    reject(error);
+  }
+});
+
+export async function getData(name) {
   const fullPath = path.join(directory, `${name}.svg`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   const $ = cheerio.load(fileContents);
   const content = $("svg").html();
+
+  const contributers = await getContributers(name);
+
+  console.log(contributers);
+
 
   return {
     name,

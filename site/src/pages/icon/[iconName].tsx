@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import IconDetailOverlay from '../../components/IconDetailOverlay'
 import { getAllData, getData } from '../../lib/icons';
@@ -47,7 +46,7 @@ export function getStaticProps({ params: { iconName } }) {
 
 export function getStaticPaths() {
   return {
-    paths: getAllData().map(({name: iconName }) => ({
+    paths: getAllData().map(({ name: iconName }) => ({
       params: { iconName },
     })),
     fallback: false,
