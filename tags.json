@@ -209,7 +209,7 @@
   "thermometer": ["temperature", "celsius", "fahrenheit", "weather"],
   "thumbs-down": ["dislike", "bad", "emotion"],
   "thumbs-up": ["like", "good", "emotion"],
-  "timer": ["time", "timer"],
+  "timer": ["time", "timer", "stopwatch"],
   "toggle-left": ["on", "off", "switch"],
   "toggle-right": ["on", "off", "switch"],
   "wrench": ["tool", "settings", "spanner"],
