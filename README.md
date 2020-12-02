@@ -148,6 +148,12 @@ const myApp = document.getElementById('app');
 myApp.appendChild(menuIcon);
 ```
 
+### With React
+
+You can also use the lucide library as react icons.
+
+See [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
+
 ### Figma
 
 You can use the components from [this Figma file](https://www.figma.com/file/g0UipfQlRfGrntKPxZknM7/Featherity).
