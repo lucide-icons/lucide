@@ -95,6 +95,7 @@
   "git-pull-request": ["code", "version control"],
   "github": ["logo", "version control"],
   "gitlab": ["logo", "version control"],
+  "glasses": ["glasses", "spectacles"],
   "globe": ["world", "browser", "language", "translate"],
   "hammer": ["mallet"],
   "hard-drive": ["computer", "server", "memory", "data"],
