@@ -1,7 +1,7 @@
 import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
-import {useContext} from "react";
+import {useContext, useMemo} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import { useRouter } from "next/router";
@@ -10,6 +10,9 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
   const router = useRouter();
   const toast = useToast();
   const {color, size, strokeWidth} = useContext(IconStyleContext);
+  const { search } = router.query;
+
+  const query = useMemo(()=> search !== undefined ? { search } : {},[search])
 
   return (
     <Grid
@@ -17,7 +20,6 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
       gap={5}
     >
       { icons.map((icon) => {
-
         const actualIcon = icon.item ? icon.item : icon;
         const { name, content } = actualIcon;
 

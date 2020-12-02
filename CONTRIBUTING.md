@@ -2,7 +2,7 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Featherity. Feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to Lucide. Feel free to propose changes to this document in a pull request.
 
 ## Pull Requests
 
@@ -17,8 +17,25 @@ Guidelines for pull requests:
 - __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `master` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
+###  Pull Requests Including Icons
+
+#### Guidelines
+
+Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide
+Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md)
+
+#### Submitting Mulitple Icons
+
+If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
+So don't submit multiple icons in one PR that have noting to do with each other. 
+So for example don't create one PR with icons: `arrow-up`, `bicycle`, `arrow-down`.
+Seperate them by two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
+
 ## Icon Requests
 
 Before creating an icon request, please search to see if someone has requested the icon already. If there is an open request, please add a :+1:.
 
 If the icon has not already been requested, [create an issue](https://github.com/lucide-icons/lucide/issues/new?title=Icon%20Request:) with a title of `Icon request: <icon name>` and add as much information as possible.
+
+## Icon Requests from Feather
+If you are a designer who wants to contribute to Lucide but you don't know what icons to work on, then have a look at the Requests from Feather. All open, unfinished and valid requests can be found in [Feather Icon Requests](https://github.com/lucide-icons/lucide/issues/119).

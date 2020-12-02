@@ -19,8 +19,9 @@ Lucide is a community-run fork of [Feather Icons](https://github.com/feathericon
   * [Unpkg](#with-unpkg)
   * [ESModules](#with-esmodules)
     * [Options](#additional-options)
-    * [Threeshake library](#threeshake-the-library-only-use-the-icons-you-use)
+    * [Treeshake library](#treeshake-the-library-only-use-the-icons-you-use)
     * [Custom binding](#custom-element-binding)
+  * [React](#with-react)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
@@ -73,7 +74,7 @@ Here is a complete example with unpkg
 
 ### With ESModules
 
-To reduce bundle size, lucide is build to be fully threeshakeble.
+To reduce bundle size, lucide is built to be fully treeshakable.
 The `createIcons` function will search for HTMLElements with the attribute `icon-name` and replace it with the svg from the given icon name.
 
 ```html
@@ -84,7 +85,7 @@ The `createIcons` function will search for HTMLElements with the attribute `icon
 ```js
 import { createIcons, icons } from 'lucide';
 
-// Caustion, this will import all the icons and bundle them.
+// Caution, this will import all the icons and bundle them.
 createIcons({icons});
 
 // Recommended way, to include only the icons you need.
@@ -118,7 +119,7 @@ createIcons({
 });
 ```
 
-#### Threeshake the library, only use the icons you use
+#### Treeshake the library, only use the icons you use
 
 ```js
 import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
@@ -147,6 +148,20 @@ menuIcon.classList.add('my-icon-class');
 const myApp = document.getElementById('app');
 myApp.appendChild(menuIcon);
 ```
+
+### With React
+
+You can also use the Lucide library using the react package.
+
+```sh
+yarn add lucide-react
+
+# or
+
+npm install lucide-react
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
 
 ### Figma
 
