@@ -17,6 +17,20 @@ Guidelines for pull requests:
 - __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `master` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
+###  Pull Requests Including Icons
+
+#### Guidelines
+
+Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide
+Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md)
+
+#### Submitting Mulitple Icons
+
+If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
+So don't submit multiple icons in one PR that have noting to do with each other. 
+So for example don't create one PR with icons: `arrow-up`, `bicycle`, `arrow-down`.
+Seperate them by two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
+
 ## Icon Requests
 
 Before creating an icon request, please search to see if someone has requested the icon already. If there is an open request, please add a :+1:.
