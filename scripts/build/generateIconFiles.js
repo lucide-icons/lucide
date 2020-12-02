@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { generateComponentName } from '../helpers';
+import { toPascalCase } from '../helpers';
 
 export default function(iconNode, outputDirectory, template) {
   const icons = Object.keys(iconNode);
@@ -14,7 +14,7 @@ export default function(iconNode, outputDirectory, template) {
 
   icons.forEach(icon => {
     const location = path.join(iconsDistDirectory, `${icon}.js`);
-    const componentName = generateComponentName(icon);
+    const componentName = toPascalCase(icon);
 
     const node = JSON.stringify(iconNode[icon]);
 

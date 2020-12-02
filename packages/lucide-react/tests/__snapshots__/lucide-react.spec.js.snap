@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Using lucide icon components should adjust the size, stroke color and stroke width 1`] = `
+<svg
+  color="currentColor"
+  fill="none"
+  height={48}
+  stroke="red"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  strokeWidth={4}
+  viewBox="0 0 24 24"
+  width={48}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    height="18"
+    rx="2"
+    ry="2"
+    width="18"
+    x="3"
+    y="3"
+  />
+  <line
+    x1="3"
+    x2="21"
+    y1="9"
+    y2="9"
+  />
+  <line
+    x1="3"
+    x2="21"
+    y1="15"
+    y2="15"
+  />
+  <line
+    x1="9"
+    x2="9"
+    y1="3"
+    y2="21"
+  />
+  <line
+    x1="15"
+    x2="15"
+    y1="3"
+    y2="21"
+  />
+</svg>
+`;
+
+exports[`Using lucide icon components should render an component 1`] = `
+<svg
+  color="currentColor"
+  fill="none"
+  height={24}
+  stroke="currentColor"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  strokeWidth={2}
+  viewBox="0 0 24 24"
+  width={24}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    height="18"
+    rx="2"
+    ry="2"
+    width="18"
+    x="3"
+    y="3"
+  />
+  <line
+    x1="3"
+    x2="21"
+    y1="9"
+    y2="9"
+  />
+  <line
+    x1="3"
+    x2="21"
+    y1="15"
+    y2="15"
+  />
+  <line
+    x1="9"
+    x2="9"
+    y1="3"
+    y2="21"
+  />
+  <line
+    x1="15"
+    x2="15"
+    y1="3"
+    y2="21"
+  />
+</svg>
+`;
