@@ -21,6 +21,7 @@ Lucide is a community-run fork of [Feather Icons](https://github.com/feathericon
     * [Options](#additional-options)
     * [Treeshake library](#treeshake-the-library-only-use-the-icons-you-use)
     * [Custom binding](#custom-element-binding)
+  * [React](#with-react)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
@@ -150,9 +151,17 @@ myApp.appendChild(menuIcon);
 
 ### With React
 
-You can also use the lucide library as react icons.
+You can also use the Lucide library using the react package.
 
-See [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
+```sh
+yarn add lucide-react
+
+# or
+
+npm install lucide-react
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
 
 ### Figma
 
