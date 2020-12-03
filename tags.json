@@ -29,7 +29,7 @@
   "box": ["cube"],
   "briefcase": ["work", "bag", "baggage", "folder"],
   "building": ["organisation"],
-  "bus": ["bus", "transport", "trip"],
+  "bus": ["bus", "vehicle", "transport", "trip"],
   "calendar": ["date"],
   "camera": ["photo"],
   "car": ["car", "transport", "trip"],
