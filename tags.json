@@ -21,7 +21,7 @@
   "battery-charging": ["power", "electricity"],
   "bell": ["alarm", "notification", "sound"],
   "bell-off": ["alarm", "notification", "silent"],
-  "bike": ["bike", "transport", "trip"],
+  "bike": ["bicycle", "transport", "trip"],
   "bluetooth": ["wireless"],
   "book-open": ["read", "library"],
   "book": ["read", "dictionary", "booklet", "magazine", "library"],
