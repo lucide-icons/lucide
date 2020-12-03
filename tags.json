@@ -32,7 +32,7 @@
   "bus": ["bus", "vehicle", "transport", "trip"],
   "calendar": ["date"],
   "camera": ["photo"],
-  "car": ["car", "transport", "trip"],
+  "car": ["vehicle", "transport", "trip"],
   "cast": ["chromecast", "airplay"],
   "circle": ["off", "zero", "record"],
   "clipboard": ["copy"],
