@@ -45,8 +45,8 @@ const IconOverview = ({ data }) => {
   }, [categoryView]);
 
   useEffect(() => {
-    setQueryText(query || '');
-  }, [query]);
+    setQueryText(search || '');
+  }, [search]);
 
   const setQueryParam = (searchString) => {
     const { query, asPath } = router;
