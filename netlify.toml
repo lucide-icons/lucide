@@ -2,3 +2,4 @@
   base = "site/"
   publish = "build/"
   command = "yarn deploy"
+  ignore = "git diff origin/master HEAD ../icons"
