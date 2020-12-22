@@ -59,7 +59,7 @@
   "credit-card": ["purchase", "payment", "cc"],
   "crop": ["photo", "image"],
   "crosshair": ["aim", "target"],
-  "crown": ["crown"],
+  "crown": ["king", "winner", "favourite"],
   "database": ["storage", "memory"],
   "delete": ["remove"],
   "disc": ["album", "cd", "dvd", "music"],
