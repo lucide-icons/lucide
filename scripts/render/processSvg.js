@@ -14,7 +14,7 @@ function processSvg(svg) {
   return (
     optimize(svg)
       .then(setAttrs)
-      .then(format)
+      .then(optimizedSvg => format(optimizedSvg, { parser: 'babel' }))
       // remove semicolon inserted by prettier
       // because prettier thinks it's formatting JSX not HTML
       .then(svg => svg.replace(/;/g, ''))
@@ -36,9 +36,7 @@ function optimize(svg) {
     ],
   });
 
-  return new Promise(resolve => {
-    svgo.optimize(svg, ({ data }) => resolve(data));
-  });
+  return svgo.optimize(svg).then(({ data }) => data);
 }
 
 /**

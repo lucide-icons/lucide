@@ -82,7 +82,7 @@ export const readSvg = (fileName, directory) => fs.readFileSync(path.join(direct
  * @param {string} content
  */
 export const writeSvgFile = (fileName, outputDirectory, content) =>
-  fs.appendFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+  fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
 
 // This is a djb2 hashing function
 export const hash = (string, seed = 5381) => {
