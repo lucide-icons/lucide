@@ -118,6 +118,8 @@
   "link-2": ["chain", "url"],
   "linkedin": ["logo", "social media"],
   "list": ["options"],
+  "locate-fixed": ["map", "gps", "location"],
+  "locate": ["map", "gps", "location"],
   "lock": ["security", "password", "secure"],
   "log-in": ["sign in", "arrow", "enter"],
   "log-out": ["sign out", "arrow", "exit"],
