@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text } from "@chakra-ui/core"
 import theme from "../lib/theme";
 import { useState } from "react"
+import CodeBlock from './CodeBlock'
 
 const CategoryChangesBar = ({categories, changes}) => {
   const [modalOpen, setModalOpen ] = useState(false);
@@ -12,6 +13,29 @@ const CategoryChangesBar = ({categories, changes}) => {
   const onClose = () => {
     setModalOpen(false);
   }
+
+  const exampleCode = `
+{
+  "arrows": ["arrow-right", "arrow-down-right"],
+  "brands": ["facebook"],
+  "code": ["code", "terminal"],
+  "connectivity": ["airplay"],
+  "communication": ["phone"],
+  "cursors": ["mouse-pointer"],
+  "devices": ["alarm-clock"],
+  "graphics edit": ["box-select", "lasso-select"],
+  "file system": ["file"],
+  "layout": ["layout"],
+  "maths": ["activity"],
+  "multimedia": ["play"],
+  "notifications": ["alert-circle", "alert-octagon", "alert-triangle"],
+  "nature": ["wind"],
+  "shopping": ["shirt"],
+  "shapes": ["square"],
+  "sports": ["award"],
+  "text edit": ["align-center","align-right","align-left","align-justify" ]
+}
+  `.trim();
 
   return (
     <>
@@ -34,22 +58,27 @@ const CategoryChangesBar = ({categories, changes}) => {
           <Button onClick={handleSubmit}>Submit Pull-request</Button>
         </Flex>
       </Box>
-      <Modal isOpen={modalOpen} onClose={onClose}>
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Submit those changes</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          <Text>Here's the json output of the changes you made. Please copy the output and paste it in github to submit the changes to the repository.</Text>
-        </ModalBody>
+      <Modal isOpen={modalOpen} onClose={onClose} size="xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Submit those changes</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>Here's the json output of the changes you made. Please copy the output and paste it in github to submit the changes to the repository.</Text>
+            <CodeBlock
+              code={exampleCode}
+              language="json"
+              showLines
+            />
+          </ModalBody>
 
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
-            Close
-          </Button>
-          <Button variant="ghost">Secondary Action</Button>
-        </ModalFooter>
-      </ModalContent>
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant="ghost">Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
     </Modal>
   </>
   )
