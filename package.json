@@ -48,7 +48,7 @@
     "htmlparser2": "^4.1.0",
     "jest": "^26.4.2",
     "minimist": "^1.2.5",
-    "prettier": "^1.8.2",
+    "prettier": "1.17.1",
     "rollup": "^2.7.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-license": "^2.0.0",
