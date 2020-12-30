@@ -1,20 +1,227 @@
 {
-  "arrows": ["arrow-right", "arrow-down-right"],
-  "brands": ["facebook"],
-  "code": ["code", "terminal"],
-  "connectivity": ["airplay"],
-  "communication": ["phone"],
-  "cursors": ["mouse-pointer"],
-  "devices": ["alarm-clock"],
-  "graphics edit": ["box-select", "lasso-select"],
-  "file system": ["file"],
-  "layout": ["layout"],
-  "maths": ["activity"],
-  "multimedia": ["play"],
-  "notifications": ["alert-circle", "alert-octagon", "alert-triangle"],
-  "nature": ["wind"],
-  "shopping": ["shirt"],
-  "shapes": ["square"],
-  "sports": ["award"],
-  "text edit": ["align-center","align-right","align-left","align-justify" ]
+  "arrows": [
+    "arrow-up",
+    "arrow-up-right",
+    "arrow-right",
+    "arrow-down-right",
+    "arrow-down-left",
+    "arrow-down",
+    "arrow-left",
+    "arrow-up-left",
+    "arrow-up-circle",
+    "arrow-right-circle",
+    "arrow-down-circle",
+    "arrow-left-circle",
+    "chevron-up",
+    "chevron-right",
+    "chevron-down",
+    "chevron-left",
+    "chevrons-up",
+    "chevrons-right",
+    "chevrons-down",
+    "chevrons-left",
+    "corner-right-up",
+    "corner-right-down",
+    "corner-down-right",
+    "corner-down-left",
+    "corner-left-down",
+    "corner-left-up",
+    "corner-up-left",
+    "corner-up-right"
+  ],
+  "brands": [
+    "facebook",
+    "chrome",
+    "codepen",
+    "codesandbox",
+    "dribbble",
+    "figma",
+    "framer",
+    "github",
+    "gitlab"
+  ],
+  "code": [
+    "code",
+    "terminal",
+    "command",
+    "cpu",
+    "git-branch",
+    "git-commit",
+    "git-merge",
+    "git-pull-request"
+  ],
+  "connectivity": [
+    "airplay",
+    "at-sign",
+    "bluetooth-connected",
+    "bluetooth-off",
+    "bluetooth-searching",
+    "bluetooth",
+    "frown",
+    "globe"
+  ],
+  "communication": [
+    "phone"
+  ],
+  "cursors": [
+    "mouse-pointer",
+    "edit-2"
+  ],
+  "date time": [
+    "alarm-clock",
+    "calendar",
+    "clock"
+  ],
+  "devices": [
+    "alarm-clock",
+    "camera",
+    "gamepad-2",
+    "gamepad"
+  ],
+  "economics": [
+    "coins",
+    "dollar-sign"
+  ],
+  "graphics edit": [
+    "box-select",
+    "lasso-select",
+    "crop"
+  ],
+  "file system": [
+    "file",
+    "archive",
+    "download-cloud",
+    "download",
+    "file-check-2",
+    "file-check",
+    "file-code",
+    "file-digit",
+    "file-minus-2",
+    "file-minus",
+    "file-plus-2",
+    "file-plus",
+    "file-search",
+    "file-text",
+    "file-x-2",
+    "file-x",
+    "files",
+    "folder-minus",
+    "folder-plus",
+    "folder"
+  ],
+  "layout": [
+    "layout",
+    "columns",
+    "grid"
+  ],
+  "maths": [
+    "activity",
+    "bar-chart-2",
+    "bar-chart",
+    "calculator",
+    "divide-circle",
+    "divide-square",
+    "divide",
+    "equal-not",
+    "equal"
+  ],
+  "multimedia": [
+    "play",
+    "activity",
+    "airplay",
+    "disc",
+    "fast-forward",
+    "film"
+  ],
+  "nature": [
+    "wind",
+    "cloud",
+    "cloud-off",
+    "cloud-drizzle",
+    "cloud-lightning",
+    "cloud-rain",
+    "cloud-snow",
+    "droplet",
+    "feather"
+  ],
+  "other": [
+    "anchor",
+    "book",
+    "book-open",
+    "bot",
+    "box",
+    "briefcase",
+    "building",
+    "clover",
+    "coffee",
+    "compass",
+    "contact",
+    "contrast",
+    "copyleft",
+    "copyright",
+    "credit-card",
+    "crosshair",
+    "database",
+    "eye",
+    "eye-off",
+    "filter",
+    "flashlight",
+    "flashlight-off"
+  ],
+  "photo": [
+    "aperture",
+    "camera",
+    "album"
+  ],
+  "shopping": [
+    "shirt",
+    "gift"
+  ],
+  "shapes": [
+    "square",
+    "circle"
+  ],
+  "sports": [
+    "award",
+    "activity"
+  ],
+  "status": [
+    "alert-circle",
+    "alert-octagon",
+    "alert-triangle",
+    "battery-charging",
+    "battery-full",
+    "battery-low",
+    "battery-medium",
+    "battery",
+    "bell-off",
+    "bell",
+    "gauge"
+  ],
+  "text edit": [
+    "align-center",
+    "align-right",
+    "align-left",
+    "align-justify",
+    "bold",
+    "bookmark",
+    "check-square",
+    "clipboard",
+    "copy",
+    "delete",
+    "edit",
+    "edit-3",
+    "check-circle",
+    "check",
+    "external-link"
+  ],
+  "tools": [
+    "wrench",
+    "axe",
+    "beaker",
+    "edit-2",
+    "flask-conical",
+    "flask-round",
+    "gavel"
+  ]
 }

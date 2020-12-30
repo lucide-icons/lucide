@@ -49,8 +49,16 @@ const IconCategory = ({
             {...outerProps}
           >
             <Box {...(innerProps || {})}>
-              <Text fontSize="xl" marginBottom={3}>{toTitleCase(name)}</Text>
-              <IconList icons={icons} />
+              <Text
+                fontSize="xl"
+                marginBottom={3}
+              >
+                { toTitleCase(name) }
+              </Text>
+              <IconList
+                icons={icons}
+                enableClick={false}
+              />
             </Box>
           </Box>
         ))

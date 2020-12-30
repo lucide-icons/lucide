@@ -1,4 +1,5 @@
 import {Button, Flex, Link, Stack, Text,} from "@chakra-ui/core";
+
 import download from "downloadjs";
 import JSZip from "jszip";
 import { Download, Github } from 'lucide-react';
@@ -35,6 +36,7 @@ const Header = ({ data }) => {
           leftIcon={<Download/>}
           size="lg"
           onClick={downloadAllIcons}
+          variant="primary"
         >
           Download all
         </Button>
@@ -45,7 +47,6 @@ const Header = ({ data }) => {
           size="lg"
           href={repositoryUrl}
           target="__blank"
-          onClick={downloadAllIcons}
         >
           Github
         </Button>
