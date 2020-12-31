@@ -1,0 +1,37 @@
+{
+  "name": "lucide-react",
+  "description": "Lucide React package, Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "version": "0.11.0",
+  "license": "ISC",
+  "amdName": "lucide-react",
+  "source": "build/lucide-react.js",
+  "main": "dist/cjs/lucide-react.js",
+  "main:umd": "dist/umd/lucide-react.js",
+  "module": "dist/esm/lucide-react.js",
+  "unpkg": "dist/umd/lucide-react.min.js",
+  "repository": "github:lucide-icons/lucide",
+  "author": "Eric Fennis",
+  "scripts": {
+    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rm -rf dist && rm -rf build",
+    "build:move": "cp -av src build",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate --camelizeAttrs --renderUniqueKey",
+    "build:es": "yarn --cwd ../../ babel packages/lucide-react/build -d packages/lucide-react/dist/esm",
+    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-react-app": "^10.0.0",
+    "jest": "^26.6.3",
+    "lucide": "file:../..",
+    "react-test-renderer": "^17.0.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1"
+  }
+}

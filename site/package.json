@@ -11,13 +11,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "@chakra-ui/core": "next",
+    "@chakra-ui/core": "^1.0.0-rc.8",
     "downloadjs": "^1.4.7",
     "framer-motion": "^2.9.4",
     "fuse.js": "^6.0.4",
     "jszip": "^3.4.0",
     "lodash": "^4.17.20",
-    "lucide-react": "^0.1.2-beta.3",
+    "lucide-react": "^0.1.2-beta.4",
     "next": "^9.5.4",
     "react": "^16.13.1",
     "react-color": "2.17.3",
