@@ -3,7 +3,7 @@ name: Release to NPM
 on:
   push:
     tags:
-    - '*'
+    - 'v*'
 
 jobs:
   build-and-deploy:
@@ -24,16 +24,16 @@ jobs:
           clean: true
 
       - name: Install Dependencies
-        run: yarn --no-lockfile
+        run: yarn --pure-lockfile
+
+      - name: Set Auth Token
+        run: yarn config set 'npmRegistries["//registry.npmjs.org"].npmAuthToken' ${{ secrets.NPM_TOKEN }}
 
       - name: Build package
         run: yarn build
 
       - name: Set package.json version
         run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
-
-      - name: Set Auth Token
-        run: yarn config set 'npmRegistries["//registry.npmjs.org"].npmAuthToken' ${{ secrets.NPM_TOKEN }}
 
       - name: publish
         run: yarn publish
