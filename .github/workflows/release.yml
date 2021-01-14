@@ -1,0 +1,69 @@
+name: Release to NPM
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  build-and-deploy:
+    if: github.repository == 'lucide-icons/lucide'
+
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
+
+      - uses: actions/checkout@v2
+        with:
+          clean: true
+
+      - name: Set Auth Token
+        run: yarn config set 'npmRegistries["//registry.npmjs.org"].npmAuthToken' ${{ secrets.NPM_TOKEN }}
+
+      # Build lucide
+      - name: Install Dependencies Lucide
+        run: yarn --pure-lockfile
+
+      - name: Build lucide package
+        run: yarn build
+
+      # Build lucide-react
+      - name: Install Dependencies lucide-react
+        run: yarn --pure-lockfile
+        working-directory: packages/lucide-react
+
+      - name: Build lucide-react
+        run: yarn build
+        working-directory: packages/lucide-react
+
+      # Publish lucide
+      - name: Set package.json version lucide
+        run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
+
+      - name: publish lucide
+        run: yarn publish
+
+      # Publish lucide-react
+      - name: Set package.json version lucide-react
+        run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/lucide-react
+
+      - name: publish lucide-react
+        run: yarn publish
+        working-directory: packages/lucide-react
+
+      - name: Commit package.json
+        run: |
+          git add package.json
+          git add packages/lucide-react/package.json
+          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":package: Bump version to ${{ steps.get_version.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+          git push origin HEAD:master
+
