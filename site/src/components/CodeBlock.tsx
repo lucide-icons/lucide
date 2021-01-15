@@ -94,7 +94,6 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
         colorScheme="teal"
         fontSize="xs"
         height="24px"
-        top={0}
         zIndex="1"
         top="4"
         right="1.25em"

@@ -7,7 +7,6 @@ import CopyButton from "./CopyButton";
 const CategoryChangesBar = ({categories, changes}) => {
   const [modalOpen, setModalOpen ] = useState(false);
   const handleSubmit = () => {
-    console.log('handleSubmit');
     setModalOpen(true);
   }
 
@@ -18,10 +17,6 @@ const CategoryChangesBar = ({categories, changes}) => {
   }
 
   const categoryCode = useMemo(() => JSON.stringify(categories, null, '  '), [categories])
-
-  useEffect(() => {
-    console.log(categoryCode);
-  }, [categoryCode])
 
   return (
     <>

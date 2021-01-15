@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
+import { Box, Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
 import {useContext, useMemo} from "react";
@@ -22,6 +22,7 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
       { icons.map((icon) => {
         const actualIcon = icon.item ? icon.item : icon;
         const { name, content } = actualIcon;
+        const Item = enableClick ? Button : Box;
 
         return (
           <Button
@@ -34,8 +35,7 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
             opacity={0.999}
             position="relative"
             _focus={{ outline: 'none'}}
-            onClick={(event) => {
-              if(!enableClick) return;
+            onClick={enableClick ? (event) => {
               if (event.shiftKey) {
                 copy(actualIcon.src);
                 toast({
@@ -49,7 +49,7 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
               else {
                 router.push(`/?iconName=${name}`, `/icon/${name}`)
               }
-            }}
+            } : null}
             alignItems="center"
             {...iconListItemProps}
           >

@@ -27,7 +27,14 @@
     "corner-left-down",
     "corner-left-up",
     "corner-up-left",
-    "corner-up-right"
+    "corner-up-right",
+    "redo",
+    "undo",
+    "rotate-cw",
+    "rotate-ccw",
+    "refresh-cw",
+    "refresh-ccw",
+    "repeat"
   ],
   "brands": [
     "facebook",
@@ -38,7 +45,13 @@
     "figma",
     "framer",
     "github",
-    "gitlab"
+    "gitlab",
+    "youtube",
+    "twitter",
+    "twitch",
+    "trello",
+    "slack",
+    "pocket"
   ],
   "code": [
     "code",
@@ -50,42 +63,95 @@
     "git-merge",
     "git-pull-request"
   ],
-  "connectivity": [
+  "controls & connectivity": [
     "airplay",
-    "at-sign",
     "bluetooth-connected",
     "bluetooth-off",
     "bluetooth-searching",
     "bluetooth",
-    "frown",
-    "globe"
+    "globe",
+    "wifi",
+    "wifi-off",
+    "toggle-right",
+    "toggle-left",
+    "settings",
+    "radio"
   ],
   "communication": [
-    "phone"
+    "phone",
+    "volume",
+    "volume-x",
+    "volume-2",
+    "volume-1",
+    "voicemail",
+    "video",
+    "frown",
+    "at-sign",
+    "thumbs-up",
+    "thumbs-down",
+    "smile",
+    "share",
+    "share-2",
+    "send",
+    "screen-share",
+    "screen-share-off",
+    "rss",
+    "phone-outgoing",
+    "phone-off",
+    "phone-missed",
+    "phone-incoming",
+    "phone-forwarded",
+    "phone-call"
   ],
   "cursors": [
     "mouse-pointer",
-    "edit-2"
+    "edit-2",
+    "zoom-in",
+    "zoom-out",
+    "separator-vertical",
+    "separator-horizontal",
+    "search",
+    "pen-tool",
+    "mouse-pointer-2",
+    "move-diagonal-2",
+    "move-diagonal",
+    "move-horizontal",
+    "move-vertical",
+    "move"
   ],
-  "date time": [
+  "date & time": [
     "alarm-clock",
     "calendar",
-    "clock"
+    "clock",
+    "watch",
+    "timer"
   ],
   "devices": [
     "alarm-clock",
     "camera",
     "gamepad-2",
-    "gamepad"
+    "gamepad",
+    "tv",
+    "tablet",
+    "speaker",
+    "smartphone"
   ],
   "economics": [
+    "credit-card",
     "coins",
-    "dollar-sign"
+    "dollar-sign",
+    "trending-down",
+    "trending-up"
   ],
   "graphics edit": [
     "box-select",
     "lasso-select",
-    "crop"
+    "crop",
+    "search",
+    "scissors",
+    "ruler",
+    "pen-tool",
+    "palette"
   ],
   "file system": [
     "file",
@@ -107,12 +173,26 @@
     "files",
     "folder-minus",
     "folder-plus",
-    "folder"
+    "folder",
+    "user",
+    "upload",
+    "upload-cloud",
+    "save"
   ],
-  "layout": [
+  "layout & listing": [
     "layout",
     "columns",
-    "grid"
+    "grid",
+    "view",
+    "table",
+    "sliders",
+    "sort-desc",
+    "sort-asc",
+    "sidebar",
+    "sheet",
+    "settings",
+    "search",
+    "more-vertical"
   ],
   "maths": [
     "activity",
@@ -123,7 +203,13 @@
     "divide-square",
     "divide",
     "equal-not",
-    "equal"
+    "equal",
+    "trending-down",
+    "trending-up",
+    "plus",
+    "plus-square",
+    "plus-circle",
+    "pie-chart"
   ],
   "multimedia": [
     "play",
@@ -131,9 +217,25 @@
     "airplay",
     "disc",
     "fast-forward",
-    "film"
+    "film",
+    "volume",
+    "volume-x",
+    "volume-1",
+    "volume-2",
+    "video",
+    "video-off",
+    "skip-forward",
+    "skip-back",
+    "shuffle",
+    "rewind",
+    "repeat",
+    "pause",
+    "pause-circle",
+    "stop-circle",
+    "play-circle",
+    "music"
   ],
-  "nature": [
+  "nature & weather": [
     "wind",
     "cloud",
     "cloud-off",
@@ -142,7 +244,20 @@
     "cloud-rain",
     "cloud-snow",
     "droplet",
-    "feather"
+    "feather",
+    "zap",
+    "zap-off",
+    "clover",
+    "thermometer",
+    "sunset",
+    "sunrise",
+    "sun",
+    "snowflake"
+  ],
+  "navigation": [
+    "compass",
+    "navigation",
+    "navigation-2"
   ],
   "other": [
     "anchor",
@@ -151,39 +266,46 @@
     "bot",
     "box",
     "briefcase",
-    "building",
-    "clover",
     "coffee",
-    "compass",
     "contact",
     "contrast",
     "copyleft",
     "copyright",
-    "credit-card",
     "crosshair",
-    "database",
     "eye",
     "eye-off",
     "filter",
     "flashlight",
-    "flashlight-off"
+    "flashlight-off",
+    "unlock",
+    "target"
   ],
   "photo": [
     "aperture",
     "camera",
-    "album"
+    "album",
+    "tag",
+    "switch-camera"
   ],
   "shopping": [
     "shirt",
-    "gift"
+    "gift",
+    "shopping-cart",
+    "shopping-bag",
+    "truck",
+    "package"
   ],
   "shapes": [
     "square",
-    "circle"
+    "circle",
+    "triangle",
+    "star",
+    "octagon"
   ],
   "sports": [
     "award",
-    "activity"
+    "activity",
+    "timer"
   ],
   "status": [
     "alert-circle",
@@ -196,7 +318,28 @@
     "battery",
     "bell-off",
     "bell",
-    "gauge"
+    "gauge",
+    "x-square",
+    "x-octagon",
+    "x-circle",
+    "stop-circle",
+    "slash"
+  ],
+  "system": [
+    "database",
+    "users",
+    "user",
+    "user-x",
+    "user-plus",
+    "user-minus",
+    "user-check",
+    "upload-cloud",
+    "shield",
+    "shield-off",
+    "server",
+    "server-off",
+    "power",
+    "network"
   ],
   "text edit": [
     "align-center",
@@ -213,7 +356,20 @@
     "edit-3",
     "check-circle",
     "check",
-    "external-link"
+    "external-link",
+    "x",
+    "unlink",
+    "unlink-2",
+    "undo",
+    "underline",
+    "type",
+    "trash-2",
+    "trash",
+    "tag",
+    "strikethrough",
+    "printer",
+    "paperclip",
+    "outdent"
   ],
   "tools": [
     "wrench",
@@ -222,6 +378,19 @@
     "edit-2",
     "flask-conical",
     "flask-round",
-    "gavel"
+    "gavel",
+    "umbrella",
+    "shovel",
+    "scissors",
+    "ruler",
+    "pipette"
+  ],
+  "vehicles & buildings": [
+    "home",
+    "building",
+    "car",
+    "bus",
+    "truck",
+    "plane"
   ]
 }

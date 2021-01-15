@@ -15,6 +15,7 @@ const EditCategoriesPage = ({ data }) => {
   const [categories, setCategories] = useState(categoriesFile);
   const [changes, setChanges] = useState(0);
   const [hoveringCategory, setHoveringCategory] = useState('');
+  const [draggingItem, setDraggingItem] = useState('');
 
   const onDrop = useCallback((event) => {
     event.preventDefault();
@@ -34,7 +35,7 @@ const EditCategoriesPage = ({ data }) => {
         }
 
         setCategories(newCategories);
-      }, 0);
+      }, 400);
     }
   }, [categories, setCategories, changes, setChanges])
 
@@ -49,20 +50,19 @@ const EditCategoriesPage = ({ data }) => {
     }
   };
 
-  const onDragStart = (event) => {
+  const onDragStart = useCallback((event) => {
     const iconName = event.target.getAttribute('icon')
 
     if(iconName) {
       event.dataTransfer.setData("text/plain", iconName);
-
       setDragging(true)
     }
-  }
+  }, [setDragging])
 
-  const onDragEnd = (event) => {
+  const onDragEnd = useCallback((event) => {
     setDragging(false)
     setHoveringCategory('')
-  }
+  }, [setDragging, setHoveringCategory])
 
   const iconListItemProps = {
     draggable: true,
@@ -76,7 +76,7 @@ const EditCategoriesPage = ({ data }) => {
     document.addEventListener("dragover", event => { event.preventDefault() }, false);
   }, [])
 
-  const categoryProps = useMemo(() => ({
+  const categoryProps = {
     cursor: dragging ? 'copy' : 'auto',
     _hover: {
       backgroundColor: dragging ? activeBackground : 'transparent',
@@ -88,7 +88,7 @@ const EditCategoriesPage = ({ data }) => {
     activeCategory: hoveringCategory,
     onDrop,
     onDragEnter,
-  }), [dragging, hoveringCategory])
+  };
 
   return (
     <Layout maxWidth="1600px">

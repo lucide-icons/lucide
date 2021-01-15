@@ -19,10 +19,6 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
     }).then();
   }
 
-  const editCategories = useCallback(() => {
-
-  }, []);
-
   useKeyBindings({
     Escape: {
       fn: () => setQuery(""),
@@ -85,11 +81,11 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
       <Flex margin="0 auto" direction="column" maxW={maxWidth} px={8} marginBottom={8}>
         {children}
         <Divider marginTop={4} marginBottom={4}/>
-        <Wrap>
+        <Wrap marginBottom={4}>
           <WrapItem>
             <Button variant="ghost" onClick={() => router.push('/edit/categories')}>Edit Categories</Button>
           </WrapItem>
-        </Wrap>
+        </Wrap >
       </Flex>
     </Box>
   );

@@ -20,6 +20,7 @@
     "lucide-react": "^0.11.0",
     "next": "^10.0.4",
     "object-path": "0.11.5",
+    "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
     "react-color": "2.17.3",
     "react-dom": "^16.13.1",
