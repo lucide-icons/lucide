@@ -2,10 +2,15 @@
   "name": "lucide-vue",
   "version": "0.12.0",
   "description": "Lucide Vue Package",
-  "main": "index.js",
   "repository": "https://github.com/github:lucide-icons/lucide",
   "author": "Eric Fennis",
   "license": "ISC",
+  "amdName": "lucide-vue",
+  "source": "build/lucide-vue.js",
+  "main": "dist/cjs/lucide-vue.js",
+  "main:umd": "dist/umd/lucide-vue.js",
+  "module": "dist/esm/lucide-vue.js",
+  "unpkg": "dist/umd/lucide-vue.min.js",
   "dependencies": {
     "vue": "^2.6.12"
   },
@@ -13,13 +18,21 @@
     "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf build",
     "build:move": "cp -av src build",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/build --templateSrc=../packages/lucide-vue/scripts/exportTemplate --camelizeAttrs --renderUniqueKey",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/build --templateSrc=../packages/lucide-vue/scripts/exportTemplate --noDefaultAttrs --renderUniqueKey",
     "build:es": "yarn --cwd ../../ babel packages/lucide-vue/build -d packages/lucide-vue/dist/esm",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue/rollup.config.js",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.1.2",
+    "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
-    "lucide": "file:../.."
+    "jest-serializer-vue": "^2.0.2",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.12"
   }
 }

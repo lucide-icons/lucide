@@ -1,4 +1,4 @@
-const plugins = require('lucide/rollup.plugins');
+const plugins = require('../../rollup.plugins');
 const pkg = require('./package.json');
 
 const outputFileName = pkg.name;
