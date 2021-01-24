@@ -1,7 +1,8 @@
 const plugins = require('../../rollup.plugins');
 const pkg = require('./package.json');
 
-const outputFileName = pkg.name;
+const packageName = 'LucideVue';
+const outputFileName = 'lucide-vue';
 const rootDir = 'packages/lucide-vue'; // It runs from the root
 const outputDir = `${rootDir}/dist`;
 const inputs = [`${rootDir}/build/lucide-vue.js`];
@@ -31,7 +32,7 @@ const configs = bundles
       plugins: plugins(pkg, minify),
       external: ['vue'],
       output: {
-        name: outputFileName,
+        name: packageName,
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,

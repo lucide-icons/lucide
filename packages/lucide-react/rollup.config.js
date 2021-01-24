@@ -1,7 +1,7 @@
 const plugins = require('lucide/rollup.plugins');
 const pkg = require('./package.json');
 
-const outputFileName = pkg.name;
+const outputFileName = 'LucideReact';
 const rootDir = 'packages/lucide-react'; // It runs from the root
 const outputDir = `${rootDir}/dist`;
 const inputs = [`${rootDir}/build/lucide-react.js`];
