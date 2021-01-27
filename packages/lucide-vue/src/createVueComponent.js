@@ -3,7 +3,9 @@ export default (iconName, [tag, attrs, children]) => ({
   functional: true,
   render(
     createElement,
-    { props: { color = 'currentColor', size = 24, strokeWidth = 2, ...rest } },
+    {
+      props: { color = 'currentColor', size = 24, strokeWidth = 2, ...rest },
+    },
   ) {
     return createElement(
       tag,

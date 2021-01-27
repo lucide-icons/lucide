@@ -18,4 +18,16 @@ describe('Using lucide icon components', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+
+  it('should add a class to the element', () => {
+    const wrapper = mount(Smile, {
+      attrs: {
+        class: "my-icon"
+      }
+    })
+
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.classes()).toContain('my-icon')
+  });
 });
