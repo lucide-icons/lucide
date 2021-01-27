@@ -24,7 +24,7 @@ jobs:
           clean: true
 
       - name: Set Auth Token
-        run: yarn config set 'npmRegistries["//registry.npmjs.org"].npmAuthToken' ${{ secrets.NPM_TOKEN }}
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       # Build lucide
       - name: Install Dependencies Lucide
