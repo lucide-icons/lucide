@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue",
-  "version": "0.12.0-alpha.3",
+  "version": "0.12.0-alpha.5",
   "description": "Lucide Vue Package",
   "repository": "https://github.com/github:lucide-icons/lucide",
   "author": "Eric Fennis",
@@ -18,7 +18,7 @@
     "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf build",
     "build:move": "cp -av src build",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/build --templateSrc=../packages/lucide-vue/scripts/exportTemplate --noDefaultAttrs --renderUniqueKey",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/build --templateSrc=../packages/lucide-vue/scripts/exportTemplate --noDefaultAttrs",
     "build:es": "yarn --cwd ../../ babel packages/lucide-vue/build -d packages/lucide-vue/dist/esm",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue/rollup.config.js",
     "test": "jest",

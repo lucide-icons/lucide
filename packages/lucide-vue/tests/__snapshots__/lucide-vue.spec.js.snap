@@ -1,28 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Using lucide icon components should add a class to the element 1`] = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="my-icon">
-  <circle cx="12" cy="12" r="10" key="14id60"></circle>
-  <path d="M8 14s1.5 2 4 2 4-2 4-2" key="1qsru9"></path>
-  <line x1="9" y1="9" x2="9.01" y2="9" key="sl5tun"></line>
-  <line x1="15" y1="9" x2="15.01" y2="9" key="136pav"></line>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon my-icon">
+  <circle cx="12" cy="12" r="10"></circle>
+  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+</svg>
+`;
+
+exports[`Using lucide icon components should add a style attribute to the element 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute" class="lucide-icon">
+  <circle cx="12" cy="12" r="10"></circle>
+  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+  <line x1="15" y1="9" x2="15.01" y2="9"></line>
 </svg>
 `;
 
 exports[`Using lucide icon components should adjust the size, stroke color and stroke width 1`] = `
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="10" key="14id60"></circle>
-  <path d="M8 14s1.5 2 4 2 4-2 4-2" key="1qsru9"></path>
-  <line x1="9" y1="9" x2="9.01" y2="9" key="sl5tun"></line>
-  <line x1="15" y1="9" x2="15.01" y2="9" key="136pav"></line>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon">
+  <circle cx="12" cy="12" r="10"></circle>
+  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+  <line x1="15" y1="9" x2="15.01" y2="9"></line>
 </svg>
 `;
 
 exports[`Using lucide icon components should render an component 1`] = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="10" key="14id60"></circle>
-  <path d="M8 14s1.5 2 4 2 4-2 4-2" key="1qsru9"></path>
-  <line x1="9" y1="9" x2="9.01" y2="9" key="sl5tun"></line>
-  <line x1="15" y1="9" x2="15.01" y2="9" key="136pav"></line>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon">
+  <circle cx="12" cy="12" r="10"></circle>
+  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+  <line x1="15" y1="9" x2="15.01" y2="9"></line>
 </svg>
 `;

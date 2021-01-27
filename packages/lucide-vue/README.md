@@ -48,6 +48,7 @@ export default {
 | `size`       | *Number* | 24
 | `color`      | *String* | currentColor
 | `strokeWidth`| *Number* | 2
+| `defaultClass`| *String* | lucide-icon
 
 ### Custom props
 

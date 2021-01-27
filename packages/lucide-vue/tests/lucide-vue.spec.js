@@ -28,6 +28,18 @@ describe('Using lucide icon components', () => {
     })
 
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.classes()).toContain('my-icon')
+    expect(String(wrapper.classes())).toBe(String(['lucide-icon', 'my-icon']))
+  });
+
+  it('should add a style attribute to the element', () => {
+    const wrapper = mount(Smile, {
+      attrs: {
+        style: 'position: absolute',
+      }
+
+    })
+
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.attributes('style')).toContain('position: absolute')
   });
 });
