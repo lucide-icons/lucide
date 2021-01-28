@@ -1,7 +1,7 @@
 {
   "name": "lucide",
   "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "license": "ISC",
   "homepage": "https://lucide.netlify.app",
   "repository": "github:lucide-icons/lucide",
@@ -46,7 +46,9 @@
     "eslint-plugin-prettier": "^2.5.0",
     "html-minifier": "^3.5.8",
     "htmlparser2": "^4.1.0",
+    "husky": "^4.3.6",
     "jest": "^26.4.2",
+    "lint-staged": "^10.5.3",
     "minimist": "^1.2.5",
     "prettier": "1.17.1",
     "rollup": "^2.7.3",
@@ -57,5 +59,13 @@
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-visualizer": "^4.1.0",
     "svgo": "^1.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "icons/*.svg": "npx babel-node ./scripts/optimizeStagedSvgs.js --presets @babel/env"
   }
 }
