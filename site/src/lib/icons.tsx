@@ -14,8 +14,6 @@ export function getAllNames() {
 }
 
 const getContributers = (name) => new Promise(async (resolve, reject) => {
-
-
   try {
     const res = await fetch(`https://api.github.com/repos/lucide-icons/lucide/commits?path=icons/${name}.svg`);
     const data = await res.json();
