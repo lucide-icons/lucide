@@ -1,15 +1,26 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { upperFirst, camelCase } from 'lodash/string';
 import fs from 'fs';
 import path from 'path';
 
 /**
- * Generates a componentName of a String.
+ * Converts string to PascalCase
  *
- * @param {string} iconName
+ * @param {string} string
  */
-export const generateComponentName = iconName =>
-  iconName === 'github' ? 'GitHub' : upperFirst(camelCase(iconName));
+export const toCamelCase = string =>
+  string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
+    p2 ? p2.toUpperCase() : p1.toLowerCase(),
+  );
+
+/**
+ * Converts string to PascalCase
+ *
+ * @param {string} string
+ */
+export const toPascalCase = string => {
+  const camelCase = toCamelCase(string);
+
+  return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+};
 
 /**
  * Resets the file contents.
@@ -71,4 +82,17 @@ export const readSvg = (fileName, directory) => fs.readFileSync(path.join(direct
  * @param {string} content
  */
 export const writeSvgFile = (fileName, outputDirectory, content) =>
-  fs.appendFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+  fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+
+// This is a djb2 hashing function
+export const hash = (string, seed = 5381) => {
+  let i = string.length;
+
+  while (i) {
+    // eslint-disable-next-line no-bitwise, no-plusplus
+    seed = (seed * 33) ^ string.charCodeAt(--i);
+  }
+
+  // eslint-disable-next-line no-bitwise
+  return (seed >>> 0).toString(36).substr(0, 6);
+};
