@@ -9,6 +9,6 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <polyline points="1 4 1 10 7 10" />
-  <path d="M3.51 15a9 9 0 102.13-9.36L1 10" />
+  <path d="M3 2v6h6" />
+  <path d="M3 13a9 9 0 103-7.7L3 8" />
 </svg>
