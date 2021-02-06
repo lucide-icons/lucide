@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import fs from 'fs';
 import path from 'path';
-import fetch from 'node-fetch';
+import contributers from '../contributers.json';
+// import fetch from 'node-fetch';
 
 const directory = path.join(process.cwd(), 'icons');
 
@@ -26,13 +28,16 @@ const getContributersOfIcon = name =>
 
 // eslint-disable-next-line func-names
 (async function() {
-  let icons = await getAllIcons();
-  icons = icons.slice(48, 58);
-  const commits = await Promise.all(icons.map(getContributersOfIcon));
+  // let icons = await getAllIcons();
+  // icons = icons.slice(10, 12);
+  // const commits = await Promise.all(icons.map(getContributersOfIcon));
 
   // const skipCommitMessages = ['fork', 'optimize'];
   // const filteredCommits = commits.filter(({ commit }) =>
   //   !skipCommitMessages.includes(commit.message),
+  console.log(contributers);
   // );
-  console.log(commits);
+  // console.log(commits);
+  // const json = JSON.stringify(commits);
+  // fs.writeFileSync('contributers.json', json, 'utf-8');
 })();

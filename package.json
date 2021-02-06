@@ -24,7 +24,7 @@
     "build:es": "babel build -d dist/esm",
     "build:bundles": "rollup -c rollup.config.js",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
-    "fetch:contributers": "npx babel-node ./scripts/fetchAllContributers.js --presets @babel/env",
+    "fetch:contributers": "babel-watch ./scripts/fetchAllContributers.js --presets @babel/env",
     "test": "jest"
   },
   "devDependencies": {
