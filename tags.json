@@ -175,6 +175,7 @@
   "plus-circle": ["add", "new"],
   "plus-square": ["add", "new"],
   "pocket": ["logo", "save"],
+  "podcast": ["mic", "music"],
   "power": ["on", "off"],
   "printer": ["fax", "office", "device"],
   "radio": ["signal"],
