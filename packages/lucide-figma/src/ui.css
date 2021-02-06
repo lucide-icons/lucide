@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.9')
+      format('woff2'),
+    url('https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.9')
+      format('woff');
+}
