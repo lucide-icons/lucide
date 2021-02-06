@@ -1,1 +1,940 @@
-[[{"sha":"0dd10483c90b6a72ad5147c96a6d248faf2e1f98","node_id":"MDY6Q29tbWl0MjcwNzIyOTQ5OjBkZDEwNDgzYzkwYjZhNzJhZDUxNDdjOTZhNmQyNDhmYWYyZTFmOTg=","commit":{"author":{"name":"Eric Fennis","email":"eric.fennis@gmail.com","date":"2020-11-16T11:05:01Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2020-11-16T11:05:01Z"},"message":"Refactor text-align icons (#109)\n\n* Add new text-align icons\r\n\r\n* Stretch icon\r\n\r\nCo-authored-by: appmachine <appmachine@appmachines-iMac.local>","tree":{"sha":"b54926eca86cbd83e6e0c5c7f4cbacc069b59a59","url":"https://api.github.com/repos/lucide-icons/lucide/git/trees/b54926eca86cbd83e6e0c5c7f4cbacc069b59a59"},"url":"https://api.github.com/repos/lucide-icons/lucide/git/commits/0dd10483c90b6a72ad5147c96a6d248faf2e1f98","comment_count":0,"verification":{"verified":true,"reason":"valid","signature":"-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJfslzeCRBK7hj4Ov3rIwAAdHIIAETPZ0nJyNEy0LDP1Vu2vVHn\nhL0jBHIaHt1IT3QvS3Q9x4XqkhgqZi/PwFhai41X/JLQBrqf18ep/AAChIz4Ig2E\n/SFsHMH3bL/qaWWN0Cws57g5xVc+Hcoc1MZIHjiXtLVN+o3tXM6OrCxNMT2vaqyP\n2KlBgvxKksaCQTMjUNI3Se0ThNhCf9dZt9cwUbpT5FvREmkaI6d8MORMVyVqVbPD\n+yPa61uoncst8mAfhypgA154IZfpo/2KGoaJk4JlT3XmJ8wLWA/HpC6uVrKFLi5r\nUm+9Oh6Mr3IWUheayv78XwLWVe28GhC8v/zq4w0GgsQXZUgRPdUFmDNr/ZIj6Tg=\n=tGQh\n-----END PGP SIGNATURE-----\n","payload":"tree b54926eca86cbd83e6e0c5c7f4cbacc069b59a59\nparent a0c447ceced20fb64c020cb12291abcf37d65b50\nauthor Eric Fennis <eric.fennis@gmail.com> 1605524701 +0100\ncommitter GitHub <noreply@github.com> 1605524701 +0100\n\nRefactor text-align icons (#109)\n\n* Add new text-align icons\r\n\r\n* Stretch icon\r\n\r\nCo-authored-by: appmachine <appmachine@appmachines-iMac.local>"}},"url":"https://api.github.com/repos/lucide-icons/lucide/commits/0dd10483c90b6a72ad5147c96a6d248faf2e1f98","html_url":"https://github.com/lucide-icons/lucide/commit/0dd10483c90b6a72ad5147c96a6d248faf2e1f98","comments_url":"https://api.github.com/repos/lucide-icons/lucide/commits/0dd10483c90b6a72ad5147c96a6d248faf2e1f98/comments","author":{"login":"ericfennis","id":11825403,"node_id":"MDQ6VXNlcjExODI1NDAz","avatar_url":"https://avatars.githubusercontent.com/u/11825403?v=4","gravatar_id":"","url":"https://api.github.com/users/ericfennis","html_url":"https://github.com/ericfennis","followers_url":"https://api.github.com/users/ericfennis/followers","following_url":"https://api.github.com/users/ericfennis/following{/other_user}","gists_url":"https://api.github.com/users/ericfennis/gists{/gist_id}","starred_url":"https://api.github.com/users/ericfennis/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ericfennis/subscriptions","organizations_url":"https://api.github.com/users/ericfennis/orgs","repos_url":"https://api.github.com/users/ericfennis/repos","events_url":"https://api.github.com/users/ericfennis/events{/privacy}","received_events_url":"https://api.github.com/users/ericfennis/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"node_id":"MDQ6VXNlcjE5ODY0NDQ3","avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=4","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"a0c447ceced20fb64c020cb12291abcf37d65b50","url":"https://api.github.com/repos/lucide-icons/lucide/commits/a0c447ceced20fb64c020cb12291abcf37d65b50","html_url":"https://github.com/lucide-icons/lucide/commit/a0c447ceced20fb64c020cb12291abcf37d65b50"}]},{"sha":"433bbae4f1d4abb50a26306d6679a38ace5c8b78","node_id":"MDY6Q29tbWl0MjcwNzIyOTQ5OjQzM2JiYWU0ZjFkNGFiYjUwYTI2MzA2ZDY2NzlhMzhhY2U1YzhiNzg=","commit":{"author":{"name":"John Letey","email":"johnletey@gmail.com","date":"2020-06-08T15:39:52Z"},"committer":{"name":"John Letey","email":"johnletey@gmail.com","date":"2020-06-08T15:39:52Z"},"message":"fork","tree":{"sha":"d5c5bae1cdf4ff793e2804ecf10104b04f11af01","url":"https://api.github.com/repos/lucide-icons/lucide/git/trees/d5c5bae1cdf4ff793e2804ecf10104b04f11af01"},"url":"https://api.github.com/repos/lucide-icons/lucide/git/commits/433bbae4f1d4abb50a26306d6679a38ace5c8b78","comment_count":0,"verification":{"verified":false,"reason":"unknown_key","signature":"-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCAAdFiEEr/xImr26cOb33rjZBQdjfpVMe0UFAl7eW8gACgkQBQdjfpVM\ne0VQDBAArxh1lAmDPHgVdkGCQN/5iI+5xfTET1O5cUJ5O5c8N9pSD8/m3irDQAqU\n+Gkw2SuReTlRNmR5GazP6SW6yY+VJH5QLlpZKLlf9aIptMxWuYRmm9gdId3JR/rT\nNHq2h1uaZjV5x6hlch3UqkU5c5G7ougw/Hhclu0x7msuz/L4v9jEySVt2Kkl9jhO\n3SsWJ07HxE2umXdK8eRq4rxBRZTd3QHYSZDfPaU/49KJV4G97uAoKZm2/r5CDPwe\nrjMGc4/AtzMaWzTPbOd+oDRyGLm/GGcPPdhk3lFk8J5PwdgSMjOy6QxVGVtvDpr1\n8a7G2PG1j8/r/JOYOPVA+wv1FcAWMcKQcbu+jhhHdIkOSWxGHINgIhGxYYLDdoBd\nWE2vU924uaURg1iPZsz/WTJcy8vMKqf4NDY70PVIu6220VtWbYrpxdACVneLJUML\nxf0NqZmTXkPQ1TH9lGEfklorMfkWuX5Qn58AeZkttZF/PvuXbK+T7uSmTp7pvpJ1\ntRERPncBAaELmUJkAc1w3aFHdUlGMbCoeGWqZ56fvf++8JD7tYV+rnp5Zk5TcIzm\n/G5uY4Yxfs7XBKruCnmGrcfv3KlpU8lF0YjsI/7GrWrlLQ3CBau+zMubDEPfT8O/\nltjnunsmIVJV3HQTUvWi63GITNHcSJPYgyfW30q81kAG3aNPtyY=\n=Xamw\n-----END PGP SIGNATURE-----","payload":"tree d5c5bae1cdf4ff793e2804ecf10104b04f11af01\nauthor John Letey <johnletey@gmail.com> 1591630792 +0100\ncommitter John Letey <johnletey@gmail.com> 1591630792 +0100\n\nfork\n"}},"url":"https://api.github.com/repos/lucide-icons/lucide/commits/433bbae4f1d4abb50a26306d6679a38ace5c8b78","html_url":"https://github.com/lucide-icons/lucide/commit/433bbae4f1d4abb50a26306d6679a38ace5c8b78","comments_url":"https://api.github.com/repos/lucide-icons/lucide/commits/433bbae4f1d4abb50a26306d6679a38ace5c8b78/comments","author":{"login":"johnletey","id":62398724,"node_id":"MDQ6VXNlcjYyMzk4NzI0","avatar_url":"https://avatars.githubusercontent.com/u/62398724?v=4","gravatar_id":"","url":"https://api.github.com/users/johnletey","html_url":"https://github.com/johnletey","followers_url":"https://api.github.com/users/johnletey/followers","following_url":"https://api.github.com/users/johnletey/following{/other_user}","gists_url":"https://api.github.com/users/johnletey/gists{/gist_id}","starred_url":"https://api.github.com/users/johnletey/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/johnletey/subscriptions","organizations_url":"https://api.github.com/users/johnletey/orgs","repos_url":"https://api.github.com/users/johnletey/repos","events_url":"https://api.github.com/users/johnletey/events{/privacy}","received_events_url":"https://api.github.com/users/johnletey/received_events","type":"User","site_admin":false},"committer":{"login":"johnletey","id":62398724,"node_id":"MDQ6VXNlcjYyMzk4NzI0","avatar_url":"https://avatars.githubusercontent.com/u/62398724?v=4","gravatar_id":"","url":"https://api.github.com/users/johnletey","html_url":"https://github.com/johnletey","followers_url":"https://api.github.com/users/johnletey/followers","following_url":"https://api.github.com/users/johnletey/following{/other_user}","gists_url":"https://api.github.com/users/johnletey/gists{/gist_id}","starred_url":"https://api.github.com/users/johnletey/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/johnletey/subscriptions","organizations_url":"https://api.github.com/users/johnletey/orgs","repos_url":"https://api.github.com/users/johnletey/repos","events_url":"https://api.github.com/users/johnletey/events{/privacy}","received_events_url":"https://api.github.com/users/johnletey/received_events","type":"User","site_admin":false},"parents":[]}],[{"sha":"0dd10483c90b6a72ad5147c96a6d248faf2e1f98","node_id":"MDY6Q29tbWl0MjcwNzIyOTQ5OjBkZDEwNDgzYzkwYjZhNzJhZDUxNDdjOTZhNmQyNDhmYWYyZTFmOTg=","commit":{"author":{"name":"Eric Fennis","email":"eric.fennis@gmail.com","date":"2020-11-16T11:05:01Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2020-11-16T11:05:01Z"},"message":"Refactor text-align icons (#109)\n\n* Add new text-align icons\r\n\r\n* Stretch icon\r\n\r\nCo-authored-by: appmachine <appmachine@appmachines-iMac.local>","tree":{"sha":"b54926eca86cbd83e6e0c5c7f4cbacc069b59a59","url":"https://api.github.com/repos/lucide-icons/lucide/git/trees/b54926eca86cbd83e6e0c5c7f4cbacc069b59a59"},"url":"https://api.github.com/repos/lucide-icons/lucide/git/commits/0dd10483c90b6a72ad5147c96a6d248faf2e1f98","comment_count":0,"verification":{"verified":true,"reason":"valid","signature":"-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJfslzeCRBK7hj4Ov3rIwAAdHIIAETPZ0nJyNEy0LDP1Vu2vVHn\nhL0jBHIaHt1IT3QvS3Q9x4XqkhgqZi/PwFhai41X/JLQBrqf18ep/AAChIz4Ig2E\n/SFsHMH3bL/qaWWN0Cws57g5xVc+Hcoc1MZIHjiXtLVN+o3tXM6OrCxNMT2vaqyP\n2KlBgvxKksaCQTMjUNI3Se0ThNhCf9dZt9cwUbpT5FvREmkaI6d8MORMVyVqVbPD\n+yPa61uoncst8mAfhypgA154IZfpo/2KGoaJk4JlT3XmJ8wLWA/HpC6uVrKFLi5r\nUm+9Oh6Mr3IWUheayv78XwLWVe28GhC8v/zq4w0GgsQXZUgRPdUFmDNr/ZIj6Tg=\n=tGQh\n-----END PGP SIGNATURE-----\n","payload":"tree b54926eca86cbd83e6e0c5c7f4cbacc069b59a59\nparent a0c447ceced20fb64c020cb12291abcf37d65b50\nauthor Eric Fennis <eric.fennis@gmail.com> 1605524701 +0100\ncommitter GitHub <noreply@github.com> 1605524701 +0100\n\nRefactor text-align icons (#109)\n\n* Add new text-align icons\r\n\r\n* Stretch icon\r\n\r\nCo-authored-by: appmachine <appmachine@appmachines-iMac.local>"}},"url":"https://api.github.com/repos/lucide-icons/lucide/commits/0dd10483c90b6a72ad5147c96a6d248faf2e1f98","html_url":"https://github.com/lucide-icons/lucide/commit/0dd10483c90b6a72ad5147c96a6d248faf2e1f98","comments_url":"https://api.github.com/repos/lucide-icons/lucide/commits/0dd10483c90b6a72ad5147c96a6d248faf2e1f98/comments","author":{"login":"ericfennis","id":11825403,"node_id":"MDQ6VXNlcjExODI1NDAz","avatar_url":"https://avatars.githubusercontent.com/u/11825403?v=4","gravatar_id":"","url":"https://api.github.com/users/ericfennis","html_url":"https://github.com/ericfennis","followers_url":"https://api.github.com/users/ericfennis/followers","following_url":"https://api.github.com/users/ericfennis/following{/other_user}","gists_url":"https://api.github.com/users/ericfennis/gists{/gist_id}","starred_url":"https://api.github.com/users/ericfennis/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ericfennis/subscriptions","organizations_url":"https://api.github.com/users/ericfennis/orgs","repos_url":"https://api.github.com/users/ericfennis/repos","events_url":"https://api.github.com/users/ericfennis/events{/privacy}","received_events_url":"https://api.github.com/users/ericfennis/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"node_id":"MDQ6VXNlcjE5ODY0NDQ3","avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=4","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"a0c447ceced20fb64c020cb12291abcf37d65b50","url":"https://api.github.com/repos/lucide-icons/lucide/commits/a0c447ceced20fb64c020cb12291abcf37d65b50","html_url":"https://github.com/lucide-icons/lucide/commit/a0c447ceced20fb64c020cb12291abcf37d65b50"}]},{"sha":"433bbae4f1d4abb50a26306d6679a38ace5c8b78","node_id":"MDY6Q29tbWl0MjcwNzIyOTQ5OjQzM2JiYWU0ZjFkNGFiYjUwYTI2MzA2ZDY2NzlhMzhhY2U1YzhiNzg=","commit":{"author":{"name":"John Letey","email":"johnletey@gmail.com","date":"2020-06-08T15:39:52Z"},"committer":{"name":"John Letey","email":"johnletey@gmail.com","date":"2020-06-08T15:39:52Z"},"message":"fork","tree":{"sha":"d5c5bae1cdf4ff793e2804ecf10104b04f11af01","url":"https://api.github.com/repos/lucide-icons/lucide/git/trees/d5c5bae1cdf4ff793e2804ecf10104b04f11af01"},"url":"https://api.github.com/repos/lucide-icons/lucide/git/commits/433bbae4f1d4abb50a26306d6679a38ace5c8b78","comment_count":0,"verification":{"verified":false,"reason":"unknown_key","signature":"-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCAAdFiEEr/xImr26cOb33rjZBQdjfpVMe0UFAl7eW8gACgkQBQdjfpVM\ne0VQDBAArxh1lAmDPHgVdkGCQN/5iI+5xfTET1O5cUJ5O5c8N9pSD8/m3irDQAqU\n+Gkw2SuReTlRNmR5GazP6SW6yY+VJH5QLlpZKLlf9aIptMxWuYRmm9gdId3JR/rT\nNHq2h1uaZjV5x6hlch3UqkU5c5G7ougw/Hhclu0x7msuz/L4v9jEySVt2Kkl9jhO\n3SsWJ07HxE2umXdK8eRq4rxBRZTd3QHYSZDfPaU/49KJV4G97uAoKZm2/r5CDPwe\nrjMGc4/AtzMaWzTPbOd+oDRyGLm/GGcPPdhk3lFk8J5PwdgSMjOy6QxVGVtvDpr1\n8a7G2PG1j8/r/JOYOPVA+wv1FcAWMcKQcbu+jhhHdIkOSWxGHINgIhGxYYLDdoBd\nWE2vU924uaURg1iPZsz/WTJcy8vMKqf4NDY70PVIu6220VtWbYrpxdACVneLJUML\nxf0NqZmTXkPQ1TH9lGEfklorMfkWuX5Qn58AeZkttZF/PvuXbK+T7uSmTp7pvpJ1\ntRERPncBAaELmUJkAc1w3aFHdUlGMbCoeGWqZ56fvf++8JD7tYV+rnp5Zk5TcIzm\n/G5uY4Yxfs7XBKruCnmGrcfv3KlpU8lF0YjsI/7GrWrlLQ3CBau+zMubDEPfT8O/\nltjnunsmIVJV3HQTUvWi63GITNHcSJPYgyfW30q81kAG3aNPtyY=\n=Xamw\n-----END PGP SIGNATURE-----","payload":"tree d5c5bae1cdf4ff793e2804ecf10104b04f11af01\nauthor John Letey <johnletey@gmail.com> 1591630792 +0100\ncommitter John Letey <johnletey@gmail.com> 1591630792 +0100\n\nfork\n"}},"url":"https://api.github.com/repos/lucide-icons/lucide/commits/433bbae4f1d4abb50a26306d6679a38ace5c8b78","html_url":"https://github.com/lucide-icons/lucide/commit/433bbae4f1d4abb50a26306d6679a38ace5c8b78","comments_url":"https://api.github.com/repos/lucide-icons/lucide/commits/433bbae4f1d4abb50a26306d6679a38ace5c8b78/comments","author":{"login":"johnletey","id":62398724,"node_id":"MDQ6VXNlcjYyMzk4NzI0","avatar_url":"https://avatars.githubusercontent.com/u/62398724?v=4","gravatar_id":"","url":"https://api.github.com/users/johnletey","html_url":"https://github.com/johnletey","followers_url":"https://api.github.com/users/johnletey/followers","following_url":"https://api.github.com/users/johnletey/following{/other_user}","gists_url":"https://api.github.com/users/johnletey/gists{/gist_id}","starred_url":"https://api.github.com/users/johnletey/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/johnletey/subscriptions","organizations_url":"https://api.github.com/users/johnletey/orgs","repos_url":"https://api.github.com/users/johnletey/repos","events_url":"https://api.github.com/users/johnletey/events{/privacy}","received_events_url":"https://api.github.com/users/johnletey/received_events","type":"User","site_admin":false},"committer":{"login":"johnletey","id":62398724,"node_id":"MDQ6VXNlcjYyMzk4NzI0","avatar_url":"https://avatars.githubusercontent.com/u/62398724?v=4","gravatar_id":"","url":"https://api.github.com/users/johnletey","html_url":"https://github.com/johnletey","followers_url":"https://api.github.com/users/johnletey/followers","following_url":"https://api.github.com/users/johnletey/following{/other_user}","gists_url":"https://api.github.com/users/johnletey/gists{/gist_id}","starred_url":"https://api.github.com/users/johnletey/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/johnletey/subscriptions","organizations_url":"https://api.github.com/users/johnletey/orgs","repos_url":"https://api.github.com/users/johnletey/repos","events_url":"https://api.github.com/users/johnletey/events{/privacy}","received_events_url":"https://api.github.com/users/johnletey/received_events","type":"User","site_admin":false},"parents":[]}]]
+{
+  "activity": [],
+  "airplay": [],
+  "alarm-check": [{
+    "author": "mittalyashu",
+    "commit": "8c8505300276d107f0b878f801adf6a28ed678e9"
+  }],
+  "alarm-clock": [{
+    "author": "lscheibel",
+    "commit": "bae239bd20f41f63b9d8a6c65d5deec21cc535f3"
+  }],
+  "alarm-minus": [{
+    "author": "mittalyashu",
+    "commit": "8c8505300276d107f0b878f801adf6a28ed678e9"
+  }],
+  "alarm-plus": [{
+    "author": "mittalyashu",
+    "commit": "8c8505300276d107f0b878f801adf6a28ed678e9"
+  }],
+  "album": [{
+    "author": "ericfennis",
+    "commit": "4e3af5c601d4f5c380fcca09896fd01150f7fe04"
+  }],
+  "alert-circle": [],
+  "alert-octagon": [],
+  "alert-triangle": [],
+  "align-center": [{
+    "author": "ericfennis",
+    "commit": "0dd10483c90b6a72ad5147c96a6d248faf2e1f98"
+  }],
+  "align-justify": [{
+    "author": "ericfennis",
+    "commit": "0dd10483c90b6a72ad5147c96a6d248faf2e1f98"
+  }],
+  "align-left": [{
+    "author": "ericfennis",
+    "commit": "0dd10483c90b6a72ad5147c96a6d248faf2e1f98"
+  }],
+  "align-right": [{
+    "author": "ericfennis",
+    "commit": "0dd10483c90b6a72ad5147c96a6d248faf2e1f98"
+  }],
+  "anchor": [],
+  "aperture": [],
+  "archive": [],
+  "arrow-big-down": [{
+    "author": "Andreto",
+    "commit": "998199085e44a44780873c6cacf57bc2517e8314"
+  }],
+  "arrow-big-left": [{
+    "author": "Andreto",
+    "commit": "998199085e44a44780873c6cacf57bc2517e8314"
+  }],
+  "arrow-big-right": [{
+    "author": "Andreto",
+    "commit": "998199085e44a44780873c6cacf57bc2517e8314"
+  }],
+  "arrow-big-up": [{
+    "author": "Andreto",
+    "commit": "998199085e44a44780873c6cacf57bc2517e8314"
+  }],
+  "arrow-down-circle": [],
+  "arrow-down-left": [],
+  "arrow-down-right": [],
+  "arrow-down": [],
+  "arrow-left-circle": [],
+  "arrow-left": [],
+  "arrow-right-circle": [],
+  "arrow-right": [],
+  "arrow-up-circle": [],
+  "arrow-up-left": [],
+  "arrow-up-right": [],
+  "arrow-up": [],
+  "asterisk": [{
+    "author": "mittalyashu",
+    "commit": "0ce207bc2fe1ce31bac295e9860bd0a34c310b92"
+  }],
+  "at-sign": [],
+  "award": [],
+  "axe": [{
+    "author": "Andreto",
+    "commit": "85efb8e1b69f299a02746058b1a1eaeb47682e03"
+  }, {
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "bar-chart-2": [],
+  "bar-chart": [],
+  "battery-charging": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "johnletey",
+    "commit": "cb5d712584f99960659f3654201920f42ec6c85f"
+  }],
+  "battery-full": [{
+    "author": "johnletey",
+    "commit": "cb5d712584f99960659f3654201920f42ec6c85f"
+  }],
+  "battery-low": [{
+    "author": "johnletey",
+    "commit": "cb5d712584f99960659f3654201920f42ec6c85f"
+  }],
+  "battery-medium": [{
+    "author": "johnletey",
+    "commit": "cb5d712584f99960659f3654201920f42ec6c85f"
+  }],
+  "battery": [{
+    "author": "johnletey",
+    "commit": "cb5d712584f99960659f3654201920f42ec6c85f"
+  }],
+  "beaker": [{
+    "author": "Andreto",
+    "commit": "00c3487dffcc5d27eba3c06c7d31e2b67db7cf47"
+  }],
+  "bell-off": [{
+    "author": "mittalyashu",
+    "commit": "a453c61aa564399dc632fcf2221adb7f4d45e208"
+  }],
+  "bell": [],
+  "bike": [{
+    "author": "ahtohbi4",
+    "commit": "8f63d828af0b4ad3783458b26281d54927bd0b28"
+  }],
+  "bluetooth-connected": [{
+    "author": "ericfennis",
+    "commit": "845d6add1f8d559aad9f5c92f4f6e20af3928cf8"
+  }],
+  "bluetooth-off": [{
+    "author": "ericfennis",
+    "commit": "845d6add1f8d559aad9f5c92f4f6e20af3928cf8"
+  }],
+  "bluetooth-searching": [{
+    "author": "ericfennis",
+    "commit": "845d6add1f8d559aad9f5c92f4f6e20af3928cf8"
+  }],
+  "bluetooth": [{
+    "author": "ericfennis",
+    "commit": "845d6add1f8d559aad9f5c92f4f6e20af3928cf8"
+  }],
+  "bold": [],
+  "book-open": [],
+  "book": [],
+  "bookmark": [],
+  "bot": [{
+    "author": "mittalyashu",
+    "commit": "06972942cd16091a20aa49751b22899130c7ca4a"
+  }],
+  "box-select": [{
+    "author": "llaenowyd",
+    "commit": "c84fcfe3cb52e141dbc8c3779be46b77340ad40b"
+  }],
+  "box": [],
+  "briefcase": [],
+  "brush": [{
+    "author": "ericfennis",
+    "commit": "de815a73058b4df26e553425cbede3ea4c337a33"
+  }, {
+    "author": "delnyn",
+    "commit": "cf13cef47599e57e8515355c775ccc5f5b2feb5f"
+  }],
+  "building": [{
+    "author": "delnyn",
+    "commit": "07fa90863159104fc3dfab7cfa482b86b3a96f59"
+  }],
+  "bus": [{
+    "author": "ahtohbi4",
+    "commit": "8f63d828af0b4ad3783458b26281d54927bd0b28"
+  }],
+  "calculator": [{
+    "author": "ericfennis",
+    "commit": "a26745a3beca45416d05e8be9837d67888d1bb06"
+  }],
+  "calendar": [],
+  "camera-off": [{
+    "author": "Andreto",
+    "commit": "85efb8e1b69f299a02746058b1a1eaeb47682e03"
+  }, {
+    "author": "lscheibel",
+    "commit": "bf7a6b4503dd44ae75e966c7b11e2557893fec5b"
+  }],
+  "camera": [{
+    "author": "lscheibel",
+    "commit": "bf7a6b4503dd44ae75e966c7b11e2557893fec5b"
+  }],
+  "car": [{
+    "author": "ahtohbi4",
+    "commit": "8f63d828af0b4ad3783458b26281d54927bd0b28"
+  }],
+  "cast": [],
+  "check-circle": [],
+  "check-square": [],
+  "check": [],
+  "chevron-down": [],
+  "chevron-left": [],
+  "chevron-right": [],
+  "chevron-up": [],
+  "chevrons-down": [],
+  "chevrons-left": [],
+  "chevrons-right": [],
+  "chevrons-up": [],
+  "chrome": [],
+  "circle": [],
+  "clipboard": [],
+  "clock": [],
+  "cloud-drizzle": [],
+  "cloud-lightning": [],
+  "cloud-off": [],
+  "cloud-rain": [],
+  "cloud-snow": [],
+  "cloud": [],
+  "clover": [{
+    "author": "ericfennis",
+    "commit": "632dda526a44ddf9d4fd0023f93a536b0493c4b2"
+  }],
+  "code": [],
+  "codepen": [],
+  "codesandbox": [],
+  "coffee": [],
+  "coins": [{
+    "author": "lscheibel",
+    "commit": "ce8da13110d2646fdca23aeb87b3c614404c47e7"
+  }],
+  "columns": [{
+    "author": "zenoamaro",
+    "commit": "bd52c058ebfa5f95c2b5a466f2255c4fe70e144a"
+  }],
+  "command": [],
+  "compass": [],
+  "contact": [{
+    "author": "lscheibel",
+    "commit": "efc7c9c1f6dc158d95968e56839ccdf727230310"
+  }],
+  "contrast": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "lscheibel",
+    "commit": "fc76ff2687748a5f973d1cbfeb18beaa28b92d35"
+  }],
+  "copy": [],
+  "copyleft": [{
+    "author": "johnletey",
+    "commit": "da5b084a6b6008760f7ad5124f4289af59099c9d"
+  }],
+  "copyright": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "johnletey",
+    "commit": "a905faa00ed77528803557ab9e3b275bde31a042"
+  }],
+  "corner-down-left": [],
+  "corner-down-right": [],
+  "corner-left-down": [],
+  "corner-left-up": [],
+  "corner-right-down": [],
+  "corner-right-up": [],
+  "corner-up-left": [],
+  "corner-up-right": [],
+  "cpu": [],
+  "credit-card": [],
+  "crop": [],
+  "cross": [{
+    "author": "lscheibel",
+    "commit": "1f7d367afc8fb28704f28969735079fba3a4f1a6"
+  }],
+  "crosshair": [],
+  "crown": [{
+    "author": "ahtohbi4",
+    "commit": "12f2b29ac704e471603cd169aecdd13566809a83"
+  }],
+  "database": [],
+  "delete": [],
+  "disc": [],
+  "divide-circle": [],
+  "divide-square": [],
+  "divide": [{
+    "author": "ericfennis",
+    "commit": "6dad37a1b5d3eb0fab4f6cdc4ead42372cca5c49"
+  }],
+  "dollar-sign": [],
+  "download-cloud": [],
+  "download": [],
+  "dribbble": [],
+  "droplet": [{
+    "author": "ericfennis",
+    "commit": "a99637fc25254d4be15870f882309e8836c4c49d"
+  }],
+  "edit-2": [],
+  "edit-3": [],
+  "edit": [],
+  "equal-not": [{
+    "author": "ericfennis",
+    "commit": "6dad37a1b5d3eb0fab4f6cdc4ead42372cca5c49"
+  }],
+  "equal": [{
+    "author": "ericfennis",
+    "commit": "6dad37a1b5d3eb0fab4f6cdc4ead42372cca5c49"
+  }],
+  "external-link": [],
+  "eye-off": [],
+  "eye": [],
+  "facebook": [],
+  "fast-forward": [],
+  "feather": [],
+  "figma": [],
+  "file-check-2": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-check": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-code": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-digit": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-minus-2": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-minus": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-plus-2": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-plus": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-search": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-text": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-x-2": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file-x": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "file": [{
+    "author": "ericfennis",
+    "commit": "c858240c0138c2eeba2c9f6be77de4384b8f47c9"
+  }],
+  "files": [{
+    "author": "ericfennis",
+    "commit": "68c5ed6097ef3652d68eae1266df5915193c9693"
+  }],
+  "film": [],
+  "filter": [],
+  "flag": [],
+  "flame": [{
+    "author": "ericfennis",
+    "commit": "a99637fc25254d4be15870f882309e8836c4c49d"
+  }],
+  "flashlight-off": [{
+    "author": null,
+    "commit": "1b726f592ac803f928ce13995fe03e442fd3a310"
+  }],
+  "flashlight": [{
+    "author": null,
+    "commit": "1b726f592ac803f928ce13995fe03e442fd3a310"
+  }],
+  "flask-conical": [{
+    "author": "Andreto",
+    "commit": "00c3487dffcc5d27eba3c06c7d31e2b67db7cf47"
+  }],
+  "flask-round": [{
+    "author": "Andreto",
+    "commit": "00c3487dffcc5d27eba3c06c7d31e2b67db7cf47"
+  }],
+  "folder-minus": [],
+  "folder-plus": [],
+  "folder": [],
+  "framer": [],
+  "frown": [],
+  "gamepad-2": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "ericfennis",
+    "commit": "030e3144133f2e727366fcf6a2837f0d10a7f403"
+  }],
+  "gamepad": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "ericfennis",
+    "commit": "030e3144133f2e727366fcf6a2837f0d10a7f403"
+  }],
+  "gauge": [{
+    "author": "Andreto",
+    "commit": "85efb8e1b69f299a02746058b1a1eaeb47682e03"
+  }, {
+    "author": "ericfennis",
+    "commit": "d33b6674f31864941e414c4bb673fde37d214c6f"
+  }],
+  "gavel": [{
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "gift": [],
+  "git-branch-plus": [{
+    "author": "mittalyashu",
+    "commit": "e4a86687e248413027150245c565f39ccac81f66"
+  }],
+  "git-branch": [],
+  "git-commit": [{
+    "author": "johnletey",
+    "commit": "9a2eb1c16e476f0a3462d0b1dff9154b68d594f2"
+  }],
+  "git-merge": [],
+  "git-pull-request": [],
+  "github": [],
+  "gitlab": [],
+  "globe-2": [{
+    "author": "mittalyashu",
+    "commit": "d29667ed9947e0ae20adc7613baff9d1b602d89b"
+  }],
+  "globe": [],
+  "grab": [{
+    "author": "ericfennis",
+    "commit": "330d7beb60a9b2589bf9aaabe49244b03ab7f4a6"
+  }],
+  "grid": [{
+    "author": "zenoamaro",
+    "commit": "bd52c058ebfa5f95c2b5a466f2255c4fe70e144a"
+  }],
+  "grip-horizontal": [{
+    "author": "ericfennis",
+    "commit": "cde1f1125847931f7fa4b729f9ef6ff6d9c2ac7a"
+  }],
+  "grip-vertical": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "ericfennis",
+    "commit": "cde1f1125847931f7fa4b729f9ef6ff6d9c2ac7a"
+  }],
+  "hammer": [{
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "hand": [{
+    "author": "ericfennis",
+    "commit": "b79aebe284e6af38a92da48724774e79ee20522a"
+  }],
+  "hard-drive": [],
+  "hard-hat": [{
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "hash": [],
+  "headphones": [],
+  "heart": [{
+    "author": "ericfennis",
+    "commit": "70be911f69361ce50626f21add79ac44cbf75f30"
+  }],
+  "help-circle": [],
+  "hexagon": [],
+  "highlighter": [{
+    "author": "Andreto",
+    "commit": "85efb8e1b69f299a02746058b1a1eaeb47682e03"
+  }, {
+    "author": "lscheibel",
+    "commit": "c8ff5a12ffb441f3840f61f2fe2ee52261ba7f58"
+  }],
+  "home": [],
+  "image-off": [{
+    "author": "ericfennis",
+    "commit": "dee5d33bcd60cffc6254447f1bd37e608c43ec1d"
+  }],
+  "image-plus": [{
+    "author": "mittalyashu",
+    "commit": "c50b8181a05807bac3d12a01fbfe1d3562d9668c"
+  }],
+  "image": [],
+  "inbox": [],
+  "indent": [{
+    "author": "Themistoklis",
+    "commit": "29574a6385a1754cc414b802641472ddcc3867ab"
+  }],
+  "infinity": [{
+    "author": "mittalyashu",
+    "commit": "2c7fa085032ccc00472c1cb804a1f80297f7cf27"
+  }],
+  "info": [],
+  "instagram": [],
+  "italic": [],
+  "key": [],
+  "languages": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "ericfennis",
+    "commit": "a106a4c3fcc36e068851173536cd18e625c9f6ce"
+  }],
+  "laptop-2": [{
+    "author": "ericfennis",
+    "commit": "a21600984d9b2781cb6c9a05892a664b9dd8bec6"
+  }],
+  "laptop": [{
+    "author": "delnyn",
+    "commit": "b80c2805b2ba15185bd204b69ffa8c936e257798"
+  }],
+  "lasso-select": [{
+    "author": "mishkaio",
+    "commit": "d80a267c81417b6e6600ddd519346b498967cb79"
+  }],
+  "lasso": [{
+    "author": "mishkaio",
+    "commit": "d80a267c81417b6e6600ddd519346b498967cb79"
+  }],
+  "layers": [],
+  "layout-dashboard": [{
+    "author": "ericfennis",
+    "commit": "058c40a1ec4424c176c4d7fe750424f113953ad2"
+  }],
+  "layout-grid": [{
+    "author": "zenoamaro",
+    "commit": "bd52c058ebfa5f95c2b5a466f2255c4fe70e144a"
+  }],
+  "layout-list": [{
+    "author": "ericfennis",
+    "commit": "8f6062317fd7384ccee00e1f36d92b1624529975"
+  }],
+  "layout": [],
+  "library": [{
+    "author": "johnletey",
+    "commit": "02b57108c3b4af3dc59eedd9be46071566147aef"
+  }],
+  "life-buoy": [],
+  "lightbulb": [{
+    "author": "ericfennis",
+    "commit": "6f06e05a4714eb6615f0fca8c3c47c234eb92d9e"
+  }],
+  "link-2-off": [{
+    "author": "ericfennis",
+    "commit": "90966d2723ed1973d6e338f6ceeb902c22ab07cd"
+  }],
+  "link-2": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "ericfennis",
+    "commit": "90966d2723ed1973d6e338f6ceeb902c22ab07cd"
+  }],
+  "link": [],
+  "linkedin": [],
+  "list-checks": [{
+    "author": "ericfennis",
+    "commit": "78e1057515813e47619e04e0e935f996db3bfa5a"
+  }],
+  "list-ordered": [{
+    "author": "ericfennis",
+    "commit": "78e1057515813e47619e04e0e935f996db3bfa5a"
+  }],
+  "list": [],
+  "loader": [],
+  "locate-fixed": [{
+    "author": "csandman",
+    "commit": "7b7ee1fe63ef91c7afb96ba1ffe8b185d79b30f7"
+  }],
+  "locate": [{
+    "author": "csandman",
+    "commit": "7b7ee1fe63ef91c7afb96ba1ffe8b185d79b30f7"
+  }],
+  "lock": [],
+  "log-in": [],
+  "log-out": [],
+  "mail": [],
+  "map-pin": [],
+  "map": [],
+  "maximize-2": [],
+  "maximize": [],
+  "meh": [],
+  "menu": [{
+    "author": "ericfennis",
+    "commit": "a0c447ceced20fb64c020cb12291abcf37d65b50"
+  }],
+  "message-circle": [],
+  "message-square": [],
+  "mic-off": [],
+  "mic": [],
+  "minimize-2": [],
+  "minimize": [],
+  "minus-circle": [],
+  "minus-square": [],
+  "minus": [],
+  "monitor-off": [{
+    "author": "yukosgiti",
+    "commit": "deae140a6e17f856576d12c97f595ac02270f5f9"
+  }],
+  "monitor": [],
+  "moon": [],
+  "more-horizontal": [],
+  "more-vertical": [],
+  "mouse-pointer-2": [{
+    "author": "ericfennis",
+    "commit": "85d3bb9b82940efeb0e8807843f1cceda19b7722"
+  }],
+  "mouse-pointer": [],
+  "move-diagonal-2": [{
+    "author": "ericfennis",
+    "commit": "85d3bb9b82940efeb0e8807843f1cceda19b7722"
+  }],
+  "move-diagonal": [{
+    "author": "ericfennis",
+    "commit": "85d3bb9b82940efeb0e8807843f1cceda19b7722"
+  }],
+  "move-horizontal": [{
+    "author": "ericfennis",
+    "commit": "85d3bb9b82940efeb0e8807843f1cceda19b7722"
+  }],
+  "move-vertical": [{
+    "author": "ericfennis",
+    "commit": "85d3bb9b82940efeb0e8807843f1cceda19b7722"
+  }],
+  "move": [],
+  "music": [],
+  "navigation-2": [],
+  "navigation": [],
+  "network": [{
+    "author": "johnletey",
+    "commit": "d051a092329d27056f621f8e836c659a086b638e"
+  }],
+  "octagon": [],
+  "outdent": [{
+    "author": "Themistoklis",
+    "commit": "29574a6385a1754cc414b802641472ddcc3867ab"
+  }],
+  "package": [],
+  "palette": [{
+    "author": "ericfennis",
+    "commit": "baee6032c679794039c56bdb8ef2acb06b5dc485"
+  }],
+  "paperclip": [],
+  "pause-circle": [],
+  "pause": [],
+  "pen-tool": [],
+  "percent": [],
+  "phone-call": [{
+    "author": "ericfennis",
+    "commit": "dd5d84d5c0350465afa71db75f43308582a78694"
+  }],
+  "phone-forwarded": [{
+    "author": "ericfennis",
+    "commit": "dd5d84d5c0350465afa71db75f43308582a78694"
+  }],
+  "phone-incoming": [{
+    "author": "ericfennis",
+    "commit": "dd5d84d5c0350465afa71db75f43308582a78694"
+  }],
+  "phone-missed": [{
+    "author": "ericfennis",
+    "commit": "dd5d84d5c0350465afa71db75f43308582a78694"
+  }],
+  "phone-off": [{
+    "author": "ericfennis",
+    "commit": "dd5d84d5c0350465afa71db75f43308582a78694"
+  }],
+  "phone-outgoing": [{
+    "author": "ericfennis",
+    "commit": "dd5d84d5c0350465afa71db75f43308582a78694"
+  }],
+  "phone": [],
+  "pie-chart": [],
+  "pipette": [{
+    "author": "Andreto",
+    "commit": "00c3487dffcc5d27eba3c06c7d31e2b67db7cf47"
+  }],
+  "plane": [{
+    "author": "ahtohbi4",
+    "commit": "8b09a5c1ef2545251a88b64b041ac4b28955dd02"
+  }],
+  "play-circle": [],
+  "play": [],
+  "plus-circle": [],
+  "plus-square": [],
+  "plus": [],
+  "pocket": [],
+  "pointer": [{
+    "author": "ericfennis",
+    "commit": "330d7beb60a9b2589bf9aaabe49244b03ab7f4a6"
+  }],
+  "power": [],
+  "printer": [],
+  "qr-code": [{
+    "author": "ericfennis",
+    "commit": "03e287f2c1cc470a9ed2b33e0f4055cd0c3eca9b"
+  }],
+  "radio": [],
+  "redo": [{
+    "author": "aelfric",
+    "commit": "53ba672ca66a769b0a6abcf0a5f3e67c529be19f"
+  }],
+  "refresh-ccw": [{
+    "author": "ericfennis",
+    "commit": "f9cf015e20bc7ac65b5b45a4bfe289ee289884e5"
+  }],
+  "refresh-cw": [{
+    "author": "ericfennis",
+    "commit": "f9cf015e20bc7ac65b5b45a4bfe289ee289884e5"
+  }],
+  "repeat-1": [{
+    "author": "ericfennis",
+    "commit": "68b91149f223d8a93f1c4c62793e012ee6d7c75f"
+  }],
+  "repeat": [{
+    "author": "ericfennis",
+    "commit": "f9cf015e20bc7ac65b5b45a4bfe289ee289884e5"
+  }],
+  "rewind": [],
+  "rotate-ccw": [{
+    "author": "ericfennis",
+    "commit": "f9cf015e20bc7ac65b5b45a4bfe289ee289884e5"
+  }],
+  "rotate-cw": [{
+    "author": "ericfennis",
+    "commit": "f9cf015e20bc7ac65b5b45a4bfe289ee289884e5"
+  }],
+  "rss": [],
+  "ruler": [{
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "save": [],
+  "scissors": [],
+  "screen-share-off": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "johnletey",
+    "commit": "456b54c8b46685e04e9797fe06369dc3fe8672c5"
+  }],
+  "screen-share": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "johnletey",
+    "commit": "456b54c8b46685e04e9797fe06369dc3fe8672c5"
+  }],
+  "search": [],
+  "send": [],
+  "separator-horizontal": [{
+    "author": "ericfennis",
+    "commit": "e1cead9531b35c3bca6fe6ca53df060421226d4f"
+  }],
+  "separator-vertical": [{
+    "author": "ericfennis",
+    "commit": "4406cbaea0d88fea1bdd1ab1bb9af788407a515f"
+  }],
+  "server-crash": [{
+    "author": "mittalyashu",
+    "commit": "97677113e37c3ec6633f815ca4563c95bcc20c69"
+  }],
+  "server-off": [{
+    "author": "yukosgiti",
+    "commit": "e1936fb93891261f80747c762cd966b6d10bb5a7"
+  }],
+  "server": [],
+  "settings": [],
+  "share-2": [],
+  "share": [],
+  "sheet": [{
+    "author": "zenoamaro",
+    "commit": "bd52c058ebfa5f95c2b5a466f2255c4fe70e144a"
+  }],
+  "shield-off": [],
+  "shield": [],
+  "shirt": [{
+    "author": "lscheibel",
+    "commit": "9550ec28b8fd3c332caa64f865964711a216e890"
+  }],
+  "shopping-bag": [],
+  "shopping-cart": [],
+  "shovel": [{
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "shuffle": [],
+  "sidebar": [],
+  "skip-back": [],
+  "skip-forward": [],
+  "slack": [],
+  "slash": [],
+  "sliders": [],
+  "smartphone": [],
+  "smile": [],
+  "snowflake": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "lscheibel",
+    "commit": "1fe87aa89d62a59d128747bbb6b8e7ea25c55912"
+  }],
+  "sort-asc": [{
+    "author": "johnletey",
+    "commit": "6a3378ce5a0fbb03d62edd51d0fe278e5ddbaaf9"
+  }],
+  "sort-desc": [{
+    "author": "johnletey",
+    "commit": "6a3378ce5a0fbb03d62edd51d0fe278e5ddbaaf9"
+  }],
+  "speaker": [],
+  "sprout": [{
+    "author": "ericfennis",
+    "commit": "77f02434464c0b8dd9355e4c50c398df3c12758c"
+  }],
+  "square": [],
+  "star": [],
+  "stop-circle": [],
+  "strikethrough": [{
+    "author": "ericfennis",
+    "commit": "342b2b962a63d5c506b0ba0085e5be8e24726ad1"
+  }],
+  "sun": [],
+  "sunrise": [],
+  "sunset": [],
+  "switch-camera": [{
+    "author": "lscheibel",
+    "commit": "41836318eaee821ae70123556ba71aa2b57c59ca"
+  }],
+  "table": [{
+    "author": "zenoamaro",
+    "commit": "bd52c058ebfa5f95c2b5a466f2255c4fe70e144a"
+  }],
+  "tablet": [],
+  "tag": [],
+  "target": [],
+  "terminal": [],
+  "thermometer": [],
+  "thumbs-down": [],
+  "thumbs-up": [],
+  "timer": [{
+    "author": "ahtohbi4",
+    "commit": "ce80469ecc11b751efa9cb62da9499ad68a77109"
+  }],
+  "toggle-left": [],
+  "toggle-right": [],
+  "trash-2": [],
+  "trash": [],
+  "trello": [],
+  "trending-down": [],
+  "trending-up": [],
+  "triangle": [],
+  "truck": [{
+    "author": "ahtohbi4",
+    "commit": "8f63d828af0b4ad3783458b26281d54927bd0b28"
+  }],
+  "tv": [],
+  "twitch": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }],
+  "twitter": [],
+  "type": [],
+  "umbrella": [],
+  "underline": [{
+    "author": "ericfennis",
+    "commit": "342b2b962a63d5c506b0ba0085e5be8e24726ad1"
+  }],
+  "undo": [{
+    "author": "aelfric",
+    "commit": "53ba672ca66a769b0a6abcf0a5f3e67c529be19f"
+  }],
+  "unlink-2": [{
+    "author": "johnletey",
+    "commit": "031833a29605e6d26884f355749da94d1c543570"
+  }, {
+    "author": "ericfennis",
+    "commit": "90966d2723ed1973d6e338f6ceeb902c22ab07cd"
+  }],
+  "unlink": [{
+    "author": "ericfennis",
+    "commit": "90966d2723ed1973d6e338f6ceeb902c22ab07cd"
+  }],
+  "unlock": [],
+  "upload-cloud": [],
+  "upload": [],
+  "user-check": [],
+  "user-minus": [],
+  "user-plus": [],
+  "user-x": [],
+  "user": [],
+  "users": [],
+  "video-off": [],
+  "video": [],
+  "view": [{
+    "author": "zenoamaro",
+    "commit": "bd52c058ebfa5f95c2b5a466f2255c4fe70e144a"
+  }],
+  "voicemail": [],
+  "volume-1": [],
+  "volume-2": [],
+  "volume-x": [],
+  "volume": [],
+  "watch": [],
+  "webcam": [{
+    "author": "mittalyashu",
+    "commit": "5ad6f5bba308b05d3620715c740e878c58bd6f62"
+  }],
+  "wifi-off": [{
+    "author": "ericfennis",
+    "commit": "8a15bca8cd3506717a2c4d2c5dff9329834d31b7"
+  }],
+  "wifi": [{
+    "author": "ericfennis",
+    "commit": "8a15bca8cd3506717a2c4d2c5dff9329834d31b7"
+  }],
+  "wind": [],
+  "wrench": [{
+    "author": "Andreto",
+    "commit": "7cf928e94c0b9258f06a19b17da28734cf4cc891"
+  }],
+  "x-circle": [],
+  "x-octagon": [],
+  "x-square": [],
+  "x": [],
+  "youtube": [],
+  "zap-off": [],
+  "zap": [],
+  "zoom-in": [],
+  "zoom-out": []
+}

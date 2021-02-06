@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import fs from 'fs';
 import path from 'path';
-import contributers from '../contributers.json';
-// import fetch from 'node-fetch';
+// import commits from '../contributers.json';
+import fetch, { Headers } from 'node-fetch';
 
 const directory = path.join(process.cwd(), 'icons');
 
@@ -15,12 +15,29 @@ async function getAllIcons() {
 const getContributersOfIcon = name =>
   new Promise(async (resolve, reject) => {
     try {
+      const headers = new Headers();
+      const username = 'ericfennis';
+      const password = '';
+      headers.set(
+        'Authorization',
+        `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
+      );
       const res = await fetch(
         `https://api.github.com/repos/lucide-icons/lucide/commits?path=icons/${name}.svg`,
+        {
+          method: 'GET',
+          headers,
+          // credentials: 'user:passwd'
+        },
       );
       const data = await res.json();
 
-      resolve(data);
+      setTimeout(() => {
+        resolve({
+          name,
+          commits: data,
+        });
+      }, 50);
     } catch (error) {
       reject(error);
     }
@@ -28,16 +45,30 @@ const getContributersOfIcon = name =>
 
 // eslint-disable-next-line func-names
 (async function() {
-  // let icons = await getAllIcons();
-  // icons = icons.slice(10, 12);
-  // const commits = await Promise.all(icons.map(getContributersOfIcon));
-
-  // const skipCommitMessages = ['fork', 'optimize'];
-  // const filteredCommits = commits.filter(({ commit }) =>
-  //   !skipCommitMessages.includes(commit.message),
-  console.log(contributers);
-  // );
-  // console.log(commits);
-  // const json = JSON.stringify(commits);
-  // fs.writeFileSync('contributers.json', json, 'utf-8');
+  try {
+    const icons = await getAllIcons();
+    // icons = icons.slice(300, 320);
+    const AllIconCommits = await Promise.all(icons.map(getContributersOfIcon));
+    console.log(AllIconCommits);
+    const ignoreCommitMessages = ['fork', 'optimize'];
+    const filteredCommits = AllIconCommits.reduce((acc, { name, commits }) => {
+      if (commits && commits.length)
+        acc[name] = commits
+          .filter(
+            ({ commit }) =>
+              !ignoreCommitMessages.some(ignoreItem =>
+                commit.message.toLowerCase().includes(ignoreItem),
+              ),
+          )
+          .map(({ sha, author, commit }) => ({
+            author: author && author.login ? author.login : null,
+            commit: sha,
+          }));
+      return acc;
+    }, {});
+    const json = JSON.stringify(filteredCommits);
+    fs.writeFileSync('contributers.json', json, 'utf-8');
+  } catch (error) {
+    console.error(error);
+  }
 })();
