@@ -27,7 +27,6 @@ const getContributersOfIcon = name =>
         {
           method: 'GET',
           headers,
-          // credentials: 'user:passwd'
         },
       );
       const data = await res.json();
@@ -49,7 +48,7 @@ const getContributersOfIcon = name =>
     const icons = await getAllIcons();
     // icons = icons.slice(300, 320);
     const AllIconCommits = await Promise.all(icons.map(getContributersOfIcon));
-    console.log(AllIconCommits);
+
     const ignoreCommitMessages = ['fork', 'optimize'];
     const filteredCommits = AllIconCommits.reduce((acc, { name, commits }) => {
       if (commits && commits.length)
