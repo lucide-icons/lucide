@@ -894,20 +894,25 @@
   "menu": [
     "bars",
     "navigation",
-    "hamburger"
+    "hamburger",
+    "options"
   ],
   "message-circle": [
     "comment",
-    "chat"
+    "chat",
+    "conversation"
   ],
   "message-square": [
     "comment",
-    "chat"
+    "chat",
+    "conversation"
   ],
   "mic": [
     "record",
     "sound",
-    "listen"
+    "listen",
+    "radio",
+    "podcast"
   ],
   "mic-off": [
     "record",
@@ -916,18 +921,27 @@
   ],
   "minimize": [
     "exit fullscreen",
-    "close"
+    "close",
+    "shrink"
   ],
   "minimize-2": [
     "exit fullscreen",
     "arrows",
-    "close"
+    "close",
+    "shrink"
   ],
   "minus": [
-    "subtract"
+    "subtract",
+    "calculate"
   ],
-  "minus-circle": [],
-  "minus-square": [],
+  "minus-circle": [
+    "subtract",
+    "calculate"
+  ],
+  "minus-square": [
+    "subtract",
+    "calculate"
+  ],
   "monitor": [
     "tv",
     "screen",
@@ -941,23 +955,44 @@
     "night"
   ],
   "more-horizontal": [
-    "ellipsis"
+    "ellipsis",
+    "menu",
+    "options"
   ],
   "more-vertical": [
-    "ellipsis"
+    "ellipsis",
+    "menu",
+    "options"
   ],
   "mouse-pointer": [
     "arrow",
-    "cursor"
+    "cursor",
+    "click"
   ],
-  "mouse-pointer-2": [],
+  "mouse-pointer-2": [
+    "arrow",
+    "cursor",
+    "click"
+  ],
   "move": [
     "arrows"
   ],
-  "move-diagonal": [],
-  "move-diagonal-2": [],
-  "move-horizontal": [],
-  "move-vertical": [],
+  "move-diagonal": [
+    "double",
+    "arrow"
+  ],
+  "move-diagonal-2": [
+    "double",
+    "arrow"
+  ],
+  "move-horizontal": [
+    "double",
+    "arrow"
+  ],
+  "move-vertical": [
+    "double",
+    "arrow"
+  ],
   "music": [
     "note"
   ],
@@ -969,18 +1004,27 @@
     "location",
     "travel"
   ],
-  "network": [],
+  "network": [
+    "tree"
+  ],
   "octagon": [
     "stop"
   ],
-  "outdent": [],
+  "outdent": [
+    "text",
+    "tab"
+  ],
   "package": [
     "box",
     "container"
   ],
-  "palette": [],
+  "palette": [
+    "color",
+    "theme"
+  ],
   "paperclip": [
-    "attachment"
+    "attachment",
+    "file"
   ],
   "pause": [
     "music",
@@ -993,7 +1037,8 @@
   ],
   "pen-tool": [
     "vector",
-    "drawing"
+    "drawing",
+    "path"
   ],
   "percent": [
     "discount"
@@ -1078,11 +1123,16 @@
   "radio": [
     "signal"
   ],
-  "redo": [],
+  "redo": [
+    "undo",
+    "history"
+  ],
   "refresh-ccw": [
-    "arrows"
+    "arrows",
+    "reload"
   ],
   "refresh-cw": [
+    "reload",
     "synchronise",
     "arrows"
   ],
@@ -1097,17 +1147,22 @@
     "music"
   ],
   "rotate-ccw": [
-    "arrow"
+    "arrow",
+    "left"
   ],
   "rotate-cw": [
-    "arrow"
+    "arrow",
+    "right"
   ],
   "rss": [
     "feed",
     "subscribe"
   ],
   "ruler": [
-    "measure"
+    "measure",
+    "meter",
+    "foot",
+    "inch"
   ],
   "save": [
     "floppy disk"
@@ -1115,8 +1170,14 @@
   "scissors": [
     "cut"
   ],
-  "screen-share": [],
-  "screen-share-off": [],
+  "screen-share": [
+    "host",
+    "desktop"
+  ],
+  "screen-share-off": [
+    "desktop",
+    "disconnect"
+  ],
   "search": [
     "find",
     "magnifier",
@@ -1129,8 +1190,14 @@
     "paper airplane",
     "paper aeroplane"
   ],
-  "separator-horizontal": [],
-  "separator-vertical": [],
+  "separator-horizontal": [
+    "move",
+    "split"
+  ],
+  "separator-vertical": [
+    "move",
+    "split"
+  ],
   "server": [],
   "server-crash": [],
   "server-off": [],
@@ -1145,19 +1212,48 @@
     "network",
     "connections"
   ],
-  "sheet": [],
+  "sheet": [
+    "spreadsheets",
+    "table",
+    "excel"
+  ],
   "shield": [
     "security",
     "secure"
   ],
-  "shield-alert": [],
-  "shield-check": [],
-  "shield-close": [],
+  "shield-alert": [
+    "security",
+    "secure",
+    "virus",
+    "admin",
+    "savety"
+  ],
+  "shield-check": [
+    "security",
+    "secure",
+    "done",
+    "save"
+  ],
+  "shield-close": [
+    "security",
+    "secure",
+    "wrong",
+    "unsave",
+    "virus"
+  ],
   "shield-off": [
+    "security",
+    "secure",
     "security",
     "insecure"
   ],
-  "shirt": [],
+  "shirt": [
+    "t-shirt",
+    "shopping",
+    "store",
+    "clothing",
+    "clothes"
+  ],
   "shopping-bag": [
     "ecommerce",
     "cart",
@@ -1177,8 +1273,13 @@
   "shuffle": [
     "music"
   ],
-  "sidebar": [],
-  "sigma": [],
+  "sidebar": [
+    "menu"
+  ],
+  "sigma": [
+    "sum",
+    "calculate"
+  ],
   "skip-back": [
     "music"
   ],
@@ -1189,14 +1290,20 @@
     "logo"
   ],
   "slash": [
+    "cancel",
     "ban",
-    "no"
+    "no",
+    "stop",
+    "forbidden",
+    "prohibited",
+    "error"
   ],
   "sliders": [
     "settings",
     "controls"
   ],
   "smartphone": [
+    "phone",
     "cellphone",
     "device"
   ],
@@ -1207,15 +1314,29 @@
     "good",
     "emotion"
   ],
-  "snowflake": [],
-  "sort-asc": [],
-  "sort-desc": [],
+  "snowflake": [
+    "cold",
+    "weather",
+    "freeze",
+    "snow"
+  ],
+  "sort-asc": [
+    "filter"
+  ],
+  "sort-desc": [
+    "filter"
+  ],
   "speaker": [
     "audio",
     "music"
   ],
-  "sprout": [],
-  "square": [],
+  "sprout": [
+    "leaf",
+    "nature"
+  ],
+  "square": [
+    "rectangle"
+  ],
   "star": [
     "bookmark",
     "favorite",
@@ -1225,7 +1346,11 @@
     "media",
     "music"
   ],
-  "strikethrough": [],
+  "strikethrough": [
+    "cross out",
+    "delete",
+    "remove"
+  ],
   "sun": [
     "brightness",
     "weather",
@@ -1243,8 +1368,16 @@
     "evening",
     "night"
   ],
-  "switch-camera": [],
-  "table": [],
+  "switch-camera": [
+    "photo",
+    "selfy",
+    "front",
+    "back"
+  ],
+  "table": [
+    "sheet",
+    "grid"
+  ],
   "tablet": [
     "device"
   ],
@@ -1304,8 +1437,12 @@
     "bin"
   ],
   "trello": [],
-  "trending-down": [],
-  "trending-up": [],
+  "trending-down": [
+    "statistics"
+  ],
+  "trending-up": [
+    "statistics"
+  ],
   "triangle": [
     "delta"
   ],
@@ -1328,28 +1465,49 @@
     "social"
   ],
   "type": [
-    "text"
+    "text",
+    "font",
+    "typography"
   ],
   "umbrella": [
     "rain",
     "weather"
   ],
-  "underline": [],
-  "undo": [],
-  "unlink": [],
-  "unlink-2": [],
+  "underline": [
+    "text"
+  ],
+  "undo": [
+    "redo",
+    "history"
+  ],
+  "unlink": [
+    "url",
+    "unchain",
+    "unchain"
+  ],
+  "unlink-2": [
+    "url",
+    "unchain",
+    "unchain"
+  ],
   "unlock": [
     "security"
   ],
-  "upload": [],
-  "upload-cloud": [],
+  "upload": [
+    "file"
+  ],
+  "upload-cloud": [
+    "file"
+  ],
   "user": [
     "person",
-    "account"
+    "account",
+    "contact"
   ],
   "user-check": [
     "followed",
-    "subscribed"
+    "subscribed",
+    "done"
   ],
   "user-minus": [
     "delete",
@@ -1372,7 +1530,8 @@
     "unavailable"
   ],
   "users": [
-    "group"
+    "group",
+    "people"
   ],
   "video": [
     "camera",
@@ -1384,9 +1543,13 @@
     "movie",
     "film"
   ],
-  "view": [],
+  "view": [
+    "eye",
+    "look"
+  ],
   "voicemail": [
-    "phone"
+    "phone",
+    "cassette"
   ],
   "volume": [
     "music",
@@ -1406,12 +1569,19 @@
     "sound",
     "mute"
   ],
-  "wallet": [],
+  "wallet": [
+    "money",
+    "finance",
+    "pocket"
+  ],
   "watch": [
     "clock",
     "time"
   ],
-  "webcam": [],
+  "webcam": [
+    "camera",
+    "security"
+  ],
   "wifi": [
     "connection",
     "signal",
@@ -1422,7 +1592,8 @@
   ],
   "wind": [
     "weather",
-    "air"
+    "air",
+    "blow"
   ],
   "wrench": [
     "tool",
@@ -1477,9 +1648,11 @@
     "lightning"
   ],
   "zoom-in": [
-    "magnifying glass"
+    "magnifying glass",
+    "plus"
   ],
   "zoom-out": [
-    "magnifying glass"
+    "magnifying glass",
+    "plus"
   ]
 }
