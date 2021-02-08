@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  let data = getAllData();
+  let data = await getAllData();
 
   return {
     props: {

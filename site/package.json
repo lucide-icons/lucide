@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.8",
+    "crypto": "^1.0.1",
     "downloadjs": "^1.4.7",
     "framer-motion": "^2.9.4",
     "fuse.js": "^6.0.4",

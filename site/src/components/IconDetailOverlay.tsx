@@ -1,7 +1,8 @@
 import { useSpring, animated } from "react-spring";
-import { Box, Text, IconButton, useColorMode, Flex, ButtonGroup, Button, useToast } from "@chakra-ui/core";
+import { Box, Text, IconButton, useColorMode, Flex, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip } from "@chakra-ui/core";
 import theme from "../lib/theme";
 import download from 'downloadjs';
+import NextLink from "next/link"
 import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
 import {useContext, useRef} from "react";
@@ -198,6 +199,22 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                       Download PNG
                     </Button>
                   </ButtonGroup>
+                  { icon?.contributers?.length ? (
+                    <>
+                      <Heading as="h5" size="sm" marginTop={4} marginBottom={2}>
+                        Contributers:
+                      </Heading>
+                      <AvatarGroup size="md">
+                        { icon.contributers.map(commit => (
+                          <Link href={`https://github.com/${commit.author}`} isExternal>
+                            <Tooltip label={commit.author}>
+                              <Avatar name={commit.author} key={commit.sha} src={`https://github.com/${commit.author}.png?size=88`} />
+                            </Tooltip>
+                          </Link>
+                        )) }
+                      </AvatarGroup>
+                    </>
+                  ) : null }
                 </Box>
               </Flex>
             </Flex>

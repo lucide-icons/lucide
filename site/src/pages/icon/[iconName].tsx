@@ -38,15 +38,17 @@ const IconPage = ({ icon, data }) => {
 
 export default IconPage
 
-export function getStaticProps({ params: { iconName } }) {
-  const data = getAllData();
-  const icon = getData(iconName);
+export async function getStaticProps({ params: { iconName } }) {
+  const data = await getAllData();
+  const icon = await getData(iconName);
   return { props: { icon, data } }
 }
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+  const data = await getAllData();
+
   return {
-    paths: getAllData().map(({ name: iconName }) => ({
+    paths: data.map(({ name: iconName }) => ({
       params: { iconName },
     })),
     fallback: false,
