@@ -1,262 +1,1261 @@
 {
-  "activity": ["pulse", "health", "action", "motion"],
-  "airplay": ["stream", "cast", "mirroring"],
-  "alert-circle": ["warning", "alert", "danger"],
-  "alert-octagon": ["warning", "alert", "danger"],
-  "alert-triangle": ["warning", "alert", "danger"],
-  "align-center": ["text alignment", "center"],
-  "align-justify": ["text alignment", "justified"],
-  "align-left": ["text alignment", "left"],
-  "align-right": ["text alignment", "right"],
+  "activity": [
+    "pulse",
+    "health",
+    "action",
+    "motion"
+  ],
+  "airplay": [
+    "stream",
+    "cast",
+    "mirroring"
+  ],
+  "alarm-check": [],
+  "alarm-clock": [],
+  "alarm-minus": [],
+  "alarm-plus": [],
+  "album": [],
+  "alert-circle": [
+    "warning",
+    "alert",
+    "danger"
+  ],
+  "alert-octagon": [
+    "warning",
+    "alert",
+    "danger"
+  ],
+  "alert-triangle": [
+    "warning",
+    "alert",
+    "danger"
+  ],
+  "align-center": [
+    "text alignment",
+    "center"
+  ],
+  "align-justify": [
+    "text alignment",
+    "justified"
+  ],
+  "align-left": [
+    "text alignment",
+    "left"
+  ],
+  "align-right": [
+    "text alignment",
+    "right"
+  ],
   "anchor": [],
-  "archive": ["index", "box"],
-  "arrow-big-right": ["forward"],
-  "at-sign": ["mention", "at", "email", "message"],
-  "award": ["achievement", "badge"],
-  "axe": ["hatchet"],
-  "aperture": ["camera", "photo"],
-  "bar-chart": ["statistics", "diagram", "graph"],
-  "bar-chart-2": ["statistics", "diagram", "graph"],
-  "battery": ["power", "electricity"],
-  "beaker": ["cup"],
-  "battery-charging": ["power", "electricity"],
-  "bell": ["alarm", "notification", "sound"],
-  "bell-off": ["alarm", "notification", "silent"],
-  "bike": ["bicycle", "transport", "trip"],
-  "bluetooth": ["wireless"],
-  "book-open": ["read", "library"],
-  "book": ["read", "dictionary", "booklet", "magazine", "library"],
-  "bookmark": ["read", "clip", "marker", "tag"],
-  "box": ["cube"],
-  "briefcase": ["work", "bag", "baggage", "folder"],
-  "brush": ["draw", "paint"],
-  "building": ["organisation"],
-  "bus": ["bus", "vehicle", "transport", "trip"],
-  "calendar": ["date"],
-  "camera": ["photo"],
-  "car": ["vehicle", "transport", "trip"],
-  "cast": ["chromecast", "airplay"],
-  "circle": ["off", "zero", "record"],
-  "clipboard": ["copy"],
-  "clock": ["time", "watch", "alarm"],
-  "cloud-drizzle": ["weather", "shower"],
-  "cloud-lightning": ["weather", "bolt"],
-  "cloud-rain": ["weather"],
-  "cloud-snow": ["weather", "blizzard"],
-  "cloud": ["weather"],
-  "codepen": ["logo"],
-  "codesandbox": ["logo"],
-  "code": ["source", "programming"],
-  "coffee": ["drink", "cup", "mug", "tea", "cafe", "hot", "beverage"],
-  "columns": ["layout"],
-  "command": ["keyboard", "cmd", "terminal", "prompt"],
-  "compass": ["navigation", "safari", "travel", "direction"],
-  "copy": ["clone", "duplicate"],
-  "corner-down-left": ["arrow", "return"],
-  "corner-down-right": ["arrow"],
-  "corner-left-down": ["arrow"],
-  "corner-left-up": ["arrow"],
-  "corner-right-down": ["arrow"],
-  "corner-right-up": ["arrow"],
-  "corner-up-left": ["arrow"],
-  "corner-up-right": ["arrow"],
-  "cpu": ["processor", "technology"],
-  "credit-card": ["purchase", "payment", "cc"],
-  "crop": ["photo", "image"],
-  "crosshair": ["aim", "target"],
-  "crown": ["king", "winner", "favourite"],
-  "database": ["storage", "memory"],
-  "delete": ["remove"],
-  "disc": ["album", "cd", "dvd", "music"],
-  "dollar-sign": ["currency", "money", "payment"],
-  "droplet": ["water"],
-  "edit": ["pencil", "change"],
-  "edit-2": ["pencil", "change"],
-  "edit-3": ["pencil", "change"],
-  "eye": ["view", "watch"],
-  "eye-off": ["view", "watch", "hide", "hidden"],
-  "external-link": ["outbound"],
-  "facebook": ["logo", "social"],
-  "fast-forward": ["music"],
-  "figma": ["logo", "design", "tool"],
-  "file-minus": ["delete", "remove", "erase"],
-  "file-plus": ["add", "create", "new"],
-  "file-text": ["data", "txt", "pdf"],
-  "files": ["multiple", "copy"],
-  "film": ["movie", "video"],
-  "filter": ["funnel", "hopper"],
-  "flag": ["report"],
-  "flask-conical": ["beaker", "erlenmeyer"],
-  "flask-round": ["beaker"],
-  "folder-minus": ["directory"],
-  "folder-plus": ["directory"],
-  "folder": ["directory"],
-  "framer": ["logo", "design", "tool"],
-  "frown": ["emoji", "face", "bad", "sad", "emotion"],
-  "gavel": ["hammer", "mallet"],
-  "gift": ["present", "box", "birthday", "party"],
-  "git-branch": ["code", "version control"],
-  "git-commit": ["code", "version control"],
-  "git-merge": ["code", "version control"],
-  "git-pull-request": ["code", "version control"],
-  "github": ["logo", "version control"],
-  "gitlab": ["logo", "version control"],
-  "globe": ["world", "browser", "language", "translate"],
-  "hammer": ["mallet"],
-  "hard-drive": ["computer", "server", "memory", "data"],
-  "hard-hat": ["helmet", "construction"],
-  "hash": ["hashtag", "number", "pound"],
-  "headphones": ["music", "audio", "sound"],
-  "heart": ["like", "love", "emotion"],
-  "help-circle": ["question mark"],
-  "hexagon": ["shape", "node.js", "logo"],
-  "home": ["house", "living"],
-  "image": ["picture", "photo"],
-  "image-off": ["picture", "photo"],
-  "inbox": ["email"],
-  "instagram": ["logo", "camera"],
-  "key": ["password", "login", "authentication", "secure"],
-  "laptop": ["computer"],
-  "layers": ["stack"],
-  "layout": ["window", "webpage"],
-  "life-bouy": ["help", "life ring", "support"],
-  "link": ["chain", "url"],
-  "link-2": ["chain", "url"],
-  "linkedin": ["logo", "social media"],
-  "list": ["options"],
-  "locate-fixed": ["map", "gps", "location"],
-  "locate": ["map", "gps", "location"],
-  "lock": ["security", "password", "secure"],
-  "log-in": ["sign in", "arrow", "enter"],
-  "log-out": ["sign out", "arrow", "exit"],
-  "mail": ["email", "message"],
-  "map-pin": ["location", "navigation", "travel", "marker"],
-  "map": ["location", "navigation", "travel"],
-  "maximize": ["fullscreen"],
-  "maximize-2": ["fullscreen", "arrows", "expand"],
-  "meh": ["emoji", "face", "neutral", "emotion"],
-  "menu": ["bars", "navigation", "hamburger"],
-  "message-circle": ["comment", "chat"],
-  "message-square": ["comment", "chat"],
-  "mic-off": ["record", "sound", "mute"],
-  "mic": ["record", "sound", "listen"],
-  "minimize": ["exit fullscreen", "close"],
-  "minimize-2": ["exit fullscreen", "arrows", "close"],
-  "minus": ["subtract"],
-  "monitor": ["tv", "screen", "display"],
-  "moon": ["dark", "night"],
-  "more-horizontal": ["ellipsis"],
-  "more-vertical": ["ellipsis"],
-  "mouse-pointer": ["arrow", "cursor"],
-  "move": ["arrows"],
-  "music": ["note"],
-  "navigation": ["location", "travel"],
-  "navigation-2": ["location", "travel"],
-  "octagon": ["stop"],
-  "package": ["box", "container"],
-  "paperclip": ["attachment"],
-  "pause": ["music", "stop"],
-  "pause-circle": ["music", "audio", "stop"],
-  "pen-tool": ["vector", "drawing"],
-  "percent": ["discount"],
-  "phone-call": ["ring"],
-  "phone-forwarded": ["call"],
-  "phone-incoming": ["call"],
-  "phone-missed": ["call"],
-  "phone-off": ["call", "mute"],
-  "phone-outgoing": ["call"],
-  "phone": ["call"],
-  "play": ["music", "start"],
-  "pie-chart": ["statistics", "diagram"],
-  "pipette": ["eye dropper", "color picker"],
-  "plane": ["plane", "trip"],
-  "play-circle": ["music", "start"],
-  "plus": ["add", "new"],
-  "plus-circle": ["add", "new"],
-  "plus-square": ["add", "new"],
-  "pocket": ["logo", "save"],
-  "podcast": ["mic", "music"],
-  "power": ["on", "off"],
-  "printer": ["fax", "office", "device"],
-  "radio": ["signal"],
-  "refresh-cw": ["synchronise", "arrows"],
-  "refresh-ccw": ["arrows"],
-  "repeat": ["loop", "arrows"],
-  "rewind": ["music"],
-  "rotate-ccw": ["arrow"],
-  "rotate-cw": ["arrow"],
-  "rss": ["feed", "subscribe"],
-  "ruler": ["measure"],
-  "save": ["floppy disk"],
-  "scissors": ["cut"],
-  "search": ["find", "magnifier", "magnifying glass"],
-  "send": ["message", "mail", "email", "paper airplane", "paper aeroplane"],
-  "settings": ["cog", "edit", "gear", "preferences"],
-  "share-2": ["network", "connections"],
-  "shield": ["security", "secure"],
-  "shield-off": ["security", "insecure"],
-  "shopping-bag": ["ecommerce", "cart", "purchase", "store"],
-  "shopping-cart": ["ecommerce", "cart", "purchase", "store"],
-  "shovel": ["dig", "spade"],
-  "shuffle": ["music"],
-  "skip-back": ["music"],
-  "skip-forward": ["music"],
-  "slack": ["logo"],
-  "slash": ["ban", "no"],
-  "sliders": ["settings", "controls"],
-  "smartphone": ["cellphone", "device"],
-  "smile": ["emoji", "face", "happy", "good", "emotion"],
-  "speaker": ["audio", "music"],
-  "star": ["bookmark", "favorite", "like"],
-  "stop-circle": ["media", "music"],
-  "sun": ["brightness", "weather", "light"],
-  "sunrise": ["weather", "time", "morning", "day"],
-  "sunset": ["weather", "time", "evening", "night"],
-  "tablet": ["device"],
-  "tag": ["label"],
-  "target": ["logo", "bullseye"],
-  "terminal": ["code", "command line", "prompt"],
-  "thermometer": ["temperature", "celsius", "fahrenheit", "weather"],
-  "thumbs-down": ["dislike", "bad", "emotion"],
-  "thumbs-up": ["like", "good", "emotion"],
-  "timer": ["time", "timer", "stopwatch"],
-  "toggle-left": ["on", "off", "switch"],
-  "toggle-right": ["on", "off", "switch"],
-  "wrench": ["tool", "settings", "spanner"],
-  "trash": ["garbage", "delete", "remove", "bin"],
-  "trash-2": ["garbage", "delete", "remove", "bin"],
-  "triangle": ["delta"],
-  "truck": ["delivery", "van", "shipping", "transport", "lorry"],
-  "tv": ["television", "stream"],
-  "twitch": ["logo"],
-  "twitter": ["logo", "social"],
-  "type": ["text"],
-  "umbrella": ["rain", "weather"],
-  "unlock": ["security"],
-  "user-check": ["followed", "subscribed"],
-  "user-minus": ["delete", "remove", "unfollow", "unsubscribe"],
-  "user-plus": ["new", "add", "create", "follow", "subscribe"],
-  "user-x": ["delete", "remove", "unfollow", "unsubscribe", "unavailable"],
-  "user": ["person", "account"],
-  "users": ["group"],
-  "video-off": ["camera", "movie", "film"],
-  "video": ["camera", "movie", "film"],
-  "voicemail": ["phone"],
-  "volume": ["music", "sound", "mute"],
-  "volume-1": ["music", "sound"],
-  "volume-2": ["music", "sound"],
-  "volume-x": ["music", "sound", "mute"],
-  "watch": ["clock", "time"],
-  "wifi-off": ["disabled"],
-  "wifi": ["connection", "signal", "wireless"],
-  "wind": ["weather", "air"],
-  "x-circle": ["cancel", "close", "delete", "remove", "times", "clear"],
-  "x-octagon": ["delete", "stop", "alert", "warning", "times", "clear"],
-  "x-square": ["cancel", "close", "delete", "remove", "times", "clear"],
-  "x": ["cancel", "close", "delete", "remove", "times", "clear"],
-  "youtube": ["logo", "video", "play"],
-  "zap-off": ["flash", "camera", "lightning"],
-  "zap": ["flash", "camera", "lightning"],
-  "zoom-in": ["magnifying glass"],
-  "zoom-out": ["magnifying glass"]
+  "aperture": [
+    "camera",
+    "photo"
+  ],
+  "archive": [
+    "index",
+    "box"
+  ],
+  "arrow-big-down": [],
+  "arrow-big-left": [],
+  "arrow-big-right": [
+    "forward"
+  ],
+  "arrow-big-up": [],
+  "arrow-down": [],
+  "arrow-down-circle": [],
+  "arrow-down-left": [],
+  "arrow-down-right": [],
+  "arrow-left": [],
+  "arrow-left-circle": [],
+  "arrow-right": [],
+  "arrow-right-circle": [],
+  "arrow-up": [],
+  "arrow-up-circle": [],
+  "arrow-up-left": [],
+  "arrow-up-right": [],
+  "asterisk": [],
+  "at-sign": [
+    "mention",
+    "at",
+    "email",
+    "message"
+  ],
+  "award": [
+    "achievement",
+    "badge"
+  ],
+  "axe": [
+    "hatchet"
+  ],
+  "bar-chart": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "bar-chart-2": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "battery": [
+    "power",
+    "electricity"
+  ],
+  "battery-charging": [
+    "power",
+    "electricity"
+  ],
+  "battery-full": [],
+  "battery-low": [],
+  "battery-medium": [],
+  "beaker": [
+    "cup"
+  ],
+  "bell": [
+    "alarm",
+    "notification",
+    "sound"
+  ],
+  "bell-off": [
+    "alarm",
+    "notification",
+    "silent"
+  ],
+  "bike": [
+    "bicycle",
+    "transport",
+    "trip"
+  ],
+  "bluetooth": [
+    "wireless"
+  ],
+  "bluetooth-connected": [],
+  "bluetooth-off": [],
+  "bluetooth-searching": [],
+  "bold": [],
+  "book": [
+    "read",
+    "dictionary",
+    "booklet",
+    "magazine",
+    "library"
+  ],
+  "book-open": [
+    "read",
+    "library"
+  ],
+  "bookmark": [
+    "read",
+    "clip",
+    "marker",
+    "tag"
+  ],
+  "bot": [],
+  "box": [
+    "cube"
+  ],
+  "box-select": [],
+  "briefcase": [
+    "work",
+    "bag",
+    "baggage",
+    "folder"
+  ],
+  "brush": [
+    "draw",
+    "paint"
+  ],
+  "building": [
+    "organisation"
+  ],
+  "bus": [
+    "bus",
+    "vehicle",
+    "transport",
+    "trip"
+  ],
+  "calculator": [],
+  "calendar": [
+    "date"
+  ],
+  "camera": [
+    "photo"
+  ],
+  "camera-off": [],
+  "car": [
+    "vehicle",
+    "transport",
+    "trip"
+  ],
+  "cast": [
+    "chromecast",
+    "airplay"
+  ],
+  "check": [],
+  "check-circle": [],
+  "check-square": [],
+  "chevron-down": [],
+  "chevron-left": [],
+  "chevron-right": [],
+  "chevron-up": [],
+  "chevrons-down": [],
+  "chevrons-left": [],
+  "chevrons-right": [],
+  "chevrons-up": [],
+  "chrome": [],
+  "circle": [
+    "off",
+    "zero",
+    "record"
+  ],
+  "clipboard": [
+    "copy"
+  ],
+  "clock": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "cloud": [
+    "weather"
+  ],
+  "cloud-drizzle": [
+    "weather",
+    "shower"
+  ],
+  "cloud-lightning": [
+    "weather",
+    "bolt"
+  ],
+  "cloud-off": [],
+  "cloud-rain": [
+    "weather"
+  ],
+  "cloud-snow": [
+    "weather",
+    "blizzard"
+  ],
+  "clover": [],
+  "code": [
+    "source",
+    "programming"
+  ],
+  "codepen": [
+    "logo"
+  ],
+  "codesandbox": [
+    "logo"
+  ],
+  "coffee": [
+    "drink",
+    "cup",
+    "mug",
+    "tea",
+    "cafe",
+    "hot",
+    "beverage"
+  ],
+  "coins": [],
+  "columns": [
+    "layout"
+  ],
+  "command": [
+    "keyboard",
+    "cmd",
+    "terminal",
+    "prompt"
+  ],
+  "compass": [
+    "navigation",
+    "safari",
+    "travel",
+    "direction"
+  ],
+  "contact": [],
+  "contrast": [],
+  "copy": [
+    "clone",
+    "duplicate"
+  ],
+  "copyleft": [],
+  "copyright": [],
+  "corner-down-left": [
+    "arrow",
+    "return"
+  ],
+  "corner-down-right": [
+    "arrow"
+  ],
+  "corner-left-down": [
+    "arrow"
+  ],
+  "corner-left-up": [
+    "arrow"
+  ],
+  "corner-right-down": [
+    "arrow"
+  ],
+  "corner-right-up": [
+    "arrow"
+  ],
+  "corner-up-left": [
+    "arrow"
+  ],
+  "corner-up-right": [
+    "arrow"
+  ],
+  "cpu": [
+    "processor",
+    "technology"
+  ],
+  "credit-card": [
+    "purchase",
+    "payment",
+    "cc"
+  ],
+  "crop": [
+    "photo",
+    "image"
+  ],
+  "cross": [],
+  "crosshair": [
+    "aim",
+    "target"
+  ],
+  "crown": [
+    "king",
+    "winner",
+    "favourite"
+  ],
+  "database": [
+    "storage",
+    "memory"
+  ],
+  "delete": [
+    "remove"
+  ],
+  "disc": [
+    "album",
+    "cd",
+    "dvd",
+    "music"
+  ],
+  "divide": [],
+  "divide-circle": [],
+  "divide-square": [],
+  "dollar-sign": [
+    "currency",
+    "money",
+    "payment"
+  ],
+  "download": [],
+  "download-cloud": [],
+  "dribbble": [],
+  "droplet": [
+    "water"
+  ],
+  "edit": [
+    "pencil",
+    "change"
+  ],
+  "edit-2": [
+    "pencil",
+    "change"
+  ],
+  "edit-3": [
+    "pencil",
+    "change"
+  ],
+  "equal": [],
+  "equal-not": [],
+  "external-link": [
+    "outbound"
+  ],
+  "eye": [
+    "view",
+    "watch"
+  ],
+  "eye-off": [
+    "view",
+    "watch",
+    "hide",
+    "hidden"
+  ],
+  "facebook": [
+    "logo",
+    "social"
+  ],
+  "fast-forward": [
+    "music"
+  ],
+  "feather": [],
+  "figma": [
+    "logo",
+    "design",
+    "tool"
+  ],
+  "file": [],
+  "file-check": [],
+  "file-check-2": [],
+  "file-code": [],
+  "file-digit": [],
+  "file-minus": [
+    "delete",
+    "remove",
+    "erase"
+  ],
+  "file-minus-2": [],
+  "file-plus": [
+    "add",
+    "create",
+    "new"
+  ],
+  "file-plus-2": [],
+  "file-search": [],
+  "file-text": [
+    "data",
+    "txt",
+    "pdf"
+  ],
+  "file-x": [],
+  "file-x-2": [],
+  "files": [
+    "multiple",
+    "copy"
+  ],
+  "film": [
+    "movie",
+    "video"
+  ],
+  "filter": [
+    "funnel",
+    "hopper"
+  ],
+  "flag": [
+    "report"
+  ],
+  "flame": [],
+  "flashlight": [],
+  "flashlight-off": [],
+  "flask-conical": [
+    "beaker",
+    "erlenmeyer"
+  ],
+  "flask-round": [
+    "beaker"
+  ],
+  "folder": [
+    "directory"
+  ],
+  "folder-minus": [
+    "directory"
+  ],
+  "folder-plus": [
+    "directory"
+  ],
+  "framer": [
+    "logo",
+    "design",
+    "tool"
+  ],
+  "frown": [
+    "emoji",
+    "face",
+    "bad",
+    "sad",
+    "emotion"
+  ],
+  "gamepad": [],
+  "gamepad-2": [],
+  "gauge": [],
+  "gavel": [
+    "hammer",
+    "mallet"
+  ],
+  "gift": [
+    "present",
+    "box",
+    "birthday",
+    "party"
+  ],
+  "git-branch": [
+    "code",
+    "version control"
+  ],
+  "git-branch-plus": [],
+  "git-commit": [
+    "code",
+    "version control"
+  ],
+  "git-merge": [
+    "code",
+    "version control"
+  ],
+  "git-pull-request": [
+    "code",
+    "version control"
+  ],
+  "github": [
+    "logo",
+    "version control"
+  ],
+  "gitlab": [
+    "logo",
+    "version control"
+  ],
+  "globe": [
+    "world",
+    "browser",
+    "language",
+    "translate"
+  ],
+  "globe-2": [],
+  "grab": [],
+  "grid": [],
+  "grip-horizontal": [],
+  "grip-vertical": [],
+  "hammer": [
+    "mallet"
+  ],
+  "hand": [],
+  "hard-drive": [
+    "computer",
+    "server",
+    "memory",
+    "data"
+  ],
+  "hard-hat": [
+    "helmet",
+    "construction"
+  ],
+  "hash": [
+    "hashtag",
+    "number",
+    "pound"
+  ],
+  "headphones": [
+    "music",
+    "audio",
+    "sound"
+  ],
+  "heart": [
+    "like",
+    "love",
+    "emotion"
+  ],
+  "help-circle": [
+    "question mark"
+  ],
+  "hexagon": [
+    "shape",
+    "node.js",
+    "logo"
+  ],
+  "highlighter": [],
+  "home": [
+    "house",
+    "living"
+  ],
+  "image": [
+    "picture",
+    "photo"
+  ],
+  "image-off": [
+    "picture",
+    "photo"
+  ],
+  "image-plus": [],
+  "inbox": [
+    "email"
+  ],
+  "indent": [],
+  "infinity": [],
+  "info": [],
+  "instagram": [
+    "logo",
+    "camera"
+  ],
+  "italic": [],
+  "key": [
+    "password",
+    "login",
+    "authentication",
+    "secure"
+  ],
+  "languages": [],
+  "laptop": [
+    "computer"
+  ],
+  "laptop-2": [],
+  "lasso": [],
+  "lasso-select": [],
+  "layers": [
+    "stack"
+  ],
+  "layout": [
+    "window",
+    "webpage"
+  ],
+  "layout-dashboard": [],
+  "layout-grid": [],
+  "layout-list": [],
+  "library": [],
+  "life-buoy": [],
+  "lightbulb": [],
+  "link": [
+    "chain",
+    "url"
+  ],
+  "link-2": [
+    "chain",
+    "url"
+  ],
+  "link-2-off": [],
+  "linkedin": [
+    "logo",
+    "social media"
+  ],
+  "list": [
+    "options"
+  ],
+  "list-checks": [],
+  "list-ordered": [],
+  "loader": [],
+  "locate": [
+    "map",
+    "gps",
+    "location"
+  ],
+  "locate-fixed": [
+    "map",
+    "gps",
+    "location"
+  ],
+  "lock": [
+    "security",
+    "password",
+    "secure"
+  ],
+  "log-in": [
+    "sign in",
+    "arrow",
+    "enter"
+  ],
+  "log-out": [
+    "sign out",
+    "arrow",
+    "exit"
+  ],
+  "mail": [
+    "email",
+    "message"
+  ],
+  "map": [
+    "location",
+    "navigation",
+    "travel"
+  ],
+  "map-pin": [
+    "location",
+    "navigation",
+    "travel",
+    "marker"
+  ],
+  "maximize": [
+    "fullscreen"
+  ],
+  "maximize-2": [
+    "fullscreen",
+    "arrows",
+    "expand"
+  ],
+  "meh": [
+    "emoji",
+    "face",
+    "neutral",
+    "emotion"
+  ],
+  "menu": [
+    "bars",
+    "navigation",
+    "hamburger"
+  ],
+  "message-circle": [
+    "comment",
+    "chat"
+  ],
+  "message-square": [
+    "comment",
+    "chat"
+  ],
+  "mic": [
+    "record",
+    "sound",
+    "listen"
+  ],
+  "mic-off": [
+    "record",
+    "sound",
+    "mute"
+  ],
+  "minimize": [
+    "exit fullscreen",
+    "close"
+  ],
+  "minimize-2": [
+    "exit fullscreen",
+    "arrows",
+    "close"
+  ],
+  "minus": [
+    "subtract"
+  ],
+  "minus-circle": [],
+  "minus-square": [],
+  "monitor": [
+    "tv",
+    "screen",
+    "display"
+  ],
+  "monitor-off": [],
+  "moon": [
+    "dark",
+    "night"
+  ],
+  "more-horizontal": [
+    "ellipsis"
+  ],
+  "more-vertical": [
+    "ellipsis"
+  ],
+  "mouse-pointer": [
+    "arrow",
+    "cursor"
+  ],
+  "mouse-pointer-2": [],
+  "move": [
+    "arrows"
+  ],
+  "move-diagonal": [],
+  "move-diagonal-2": [],
+  "move-horizontal": [],
+  "move-vertical": [],
+  "music": [
+    "note"
+  ],
+  "navigation": [
+    "location",
+    "travel"
+  ],
+  "navigation-2": [
+    "location",
+    "travel"
+  ],
+  "network": [],
+  "octagon": [
+    "stop"
+  ],
+  "outdent": [],
+  "package": [
+    "box",
+    "container"
+  ],
+  "palette": [],
+  "paperclip": [
+    "attachment"
+  ],
+  "pause": [
+    "music",
+    "stop"
+  ],
+  "pause-circle": [
+    "music",
+    "audio",
+    "stop"
+  ],
+  "pen-tool": [
+    "vector",
+    "drawing"
+  ],
+  "percent": [
+    "discount"
+  ],
+  "phone": [
+    "call"
+  ],
+  "phone-call": [
+    "ring"
+  ],
+  "phone-forwarded": [
+    "call"
+  ],
+  "phone-incoming": [
+    "call"
+  ],
+  "phone-missed": [
+    "call"
+  ],
+  "phone-off": [
+    "call",
+    "mute"
+  ],
+  "phone-outgoing": [
+    "call"
+  ],
+  "pie-chart": [
+    "statistics",
+    "diagram"
+  ],
+  "pipette": [
+    "eye dropper",
+    "color picker"
+  ],
+  "plane": [
+    "plane",
+    "trip"
+  ],
+  "play": [
+    "music",
+    "start"
+  ],
+  "play-circle": [
+    "music",
+    "start"
+  ],
+  "plus": [
+    "add",
+    "new"
+  ],
+  "plus-circle": [
+    "add",
+    "new"
+  ],
+  "plus-square": [
+    "add",
+    "new"
+  ],
+  "pocket": [
+    "logo",
+    "save"
+  ],
+  "podcast": [
+    "mic",
+    "music"
+  ],
+  "pointer": [],
+  "power": [
+    "on",
+    "off"
+  ],
+  "printer": [
+    "fax",
+    "office",
+    "device"
+  ],
+  "qr-code": [],
+  "radio": [
+    "signal"
+  ],
+  "redo": [],
+  "refresh-ccw": [
+    "arrows"
+  ],
+  "refresh-cw": [
+    "synchronise",
+    "arrows"
+  ],
+  "repeat": [
+    "loop",
+    "arrows"
+  ],
+  "repeat-1": [],
+  "rewind": [
+    "music"
+  ],
+  "rotate-ccw": [
+    "arrow"
+  ],
+  "rotate-cw": [
+    "arrow"
+  ],
+  "rss": [
+    "feed",
+    "subscribe"
+  ],
+  "ruler": [
+    "measure"
+  ],
+  "save": [
+    "floppy disk"
+  ],
+  "scissors": [
+    "cut"
+  ],
+  "screen-share": [],
+  "screen-share-off": [],
+  "search": [
+    "find",
+    "magnifier",
+    "magnifying glass"
+  ],
+  "send": [
+    "message",
+    "mail",
+    "email",
+    "paper airplane",
+    "paper aeroplane"
+  ],
+  "separator-horizontal": [],
+  "separator-vertical": [],
+  "server": [],
+  "server-crash": [],
+  "server-off": [],
+  "settings": [
+    "cog",
+    "edit",
+    "gear",
+    "preferences"
+  ],
+  "share": [],
+  "share-2": [
+    "network",
+    "connections"
+  ],
+  "sheet": [],
+  "shield": [
+    "security",
+    "secure"
+  ],
+  "shield-alert": [],
+  "shield-check": [],
+  "shield-close": [],
+  "shield-off": [
+    "security",
+    "insecure"
+  ],
+  "shirt": [],
+  "shopping-bag": [
+    "ecommerce",
+    "cart",
+    "purchase",
+    "store"
+  ],
+  "shopping-cart": [
+    "ecommerce",
+    "cart",
+    "purchase",
+    "store"
+  ],
+  "shovel": [
+    "dig",
+    "spade"
+  ],
+  "shuffle": [
+    "music"
+  ],
+  "sidebar": [],
+  "sigma": [],
+  "skip-back": [
+    "music"
+  ],
+  "skip-forward": [
+    "music"
+  ],
+  "slack": [
+    "logo"
+  ],
+  "slash": [
+    "ban",
+    "no"
+  ],
+  "sliders": [
+    "settings",
+    "controls"
+  ],
+  "smartphone": [
+    "cellphone",
+    "device"
+  ],
+  "smile": [
+    "emoji",
+    "face",
+    "happy",
+    "good",
+    "emotion"
+  ],
+  "snowflake": [],
+  "sort-asc": [],
+  "sort-desc": [],
+  "speaker": [
+    "audio",
+    "music"
+  ],
+  "sprout": [],
+  "square": [],
+  "star": [
+    "bookmark",
+    "favorite",
+    "like"
+  ],
+  "stop-circle": [
+    "media",
+    "music"
+  ],
+  "strikethrough": [],
+  "sun": [
+    "brightness",
+    "weather",
+    "light"
+  ],
+  "sunrise": [
+    "weather",
+    "time",
+    "morning",
+    "day"
+  ],
+  "sunset": [
+    "weather",
+    "time",
+    "evening",
+    "night"
+  ],
+  "switch-camera": [],
+  "table": [],
+  "tablet": [
+    "device"
+  ],
+  "tag": [
+    "label"
+  ],
+  "target": [
+    "logo",
+    "bullseye"
+  ],
+  "terminal": [
+    "code",
+    "command line",
+    "prompt"
+  ],
+  "thermometer": [
+    "temperature",
+    "celsius",
+    "fahrenheit",
+    "weather"
+  ],
+  "thumbs-down": [
+    "dislike",
+    "bad",
+    "emotion"
+  ],
+  "thumbs-up": [
+    "like",
+    "good",
+    "emotion"
+  ],
+  "timer": [
+    "time",
+    "timer",
+    "stopwatch"
+  ],
+  "toggle-left": [
+    "on",
+    "off",
+    "switch"
+  ],
+  "toggle-right": [
+    "on",
+    "off",
+    "switch"
+  ],
+  "trash": [
+    "garbage",
+    "delete",
+    "remove",
+    "bin"
+  ],
+  "trash-2": [
+    "garbage",
+    "delete",
+    "remove",
+    "bin"
+  ],
+  "trello": [],
+  "trending-down": [],
+  "trending-up": [],
+  "triangle": [
+    "delta"
+  ],
+  "truck": [
+    "delivery",
+    "van",
+    "shipping",
+    "transport",
+    "lorry"
+  ],
+  "tv": [
+    "television",
+    "stream"
+  ],
+  "twitch": [
+    "logo"
+  ],
+  "twitter": [
+    "logo",
+    "social"
+  ],
+  "type": [
+    "text"
+  ],
+  "umbrella": [
+    "rain",
+    "weather"
+  ],
+  "underline": [],
+  "undo": [],
+  "unlink": [],
+  "unlink-2": [],
+  "unlock": [
+    "security"
+  ],
+  "upload": [],
+  "upload-cloud": [],
+  "user": [
+    "person",
+    "account"
+  ],
+  "user-check": [
+    "followed",
+    "subscribed"
+  ],
+  "user-minus": [
+    "delete",
+    "remove",
+    "unfollow",
+    "unsubscribe"
+  ],
+  "user-plus": [
+    "new",
+    "add",
+    "create",
+    "follow",
+    "subscribe"
+  ],
+  "user-x": [
+    "delete",
+    "remove",
+    "unfollow",
+    "unsubscribe",
+    "unavailable"
+  ],
+  "users": [
+    "group"
+  ],
+  "video": [
+    "camera",
+    "movie",
+    "film"
+  ],
+  "video-off": [
+    "camera",
+    "movie",
+    "film"
+  ],
+  "view": [],
+  "voicemail": [
+    "phone"
+  ],
+  "volume": [
+    "music",
+    "sound",
+    "mute"
+  ],
+  "volume-1": [
+    "music",
+    "sound"
+  ],
+  "volume-2": [
+    "music",
+    "sound"
+  ],
+  "volume-x": [
+    "music",
+    "sound",
+    "mute"
+  ],
+  "wallet": [],
+  "watch": [
+    "clock",
+    "time"
+  ],
+  "webcam": [],
+  "wifi": [
+    "connection",
+    "signal",
+    "wireless"
+  ],
+  "wifi-off": [
+    "disabled"
+  ],
+  "wind": [
+    "weather",
+    "air"
+  ],
+  "wrench": [
+    "tool",
+    "settings",
+    "spanner"
+  ],
+  "x": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear"
+  ],
+  "x-circle": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear"
+  ],
+  "x-octagon": [
+    "delete",
+    "stop",
+    "alert",
+    "warning",
+    "times",
+    "clear"
+  ],
+  "x-square": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear"
+  ],
+  "youtube": [
+    "logo",
+    "video",
+    "play"
+  ],
+  "zap": [
+    "flash",
+    "camera",
+    "lightning"
+  ],
+  "zap-off": [
+    "flash",
+    "camera",
+    "lightning"
+  ],
+  "zoom-in": [
+    "magnifying glass"
+  ],
+  "zoom-out": [
+    "magnifying glass"
+  ]
 }
