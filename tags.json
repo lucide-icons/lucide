@@ -10,11 +10,20 @@
     "cast",
     "mirroring"
   ],
-  "alarm-check": [],
+  "alarm-check": [
+    "done"
+  ],
   "alarm-clock": [],
-  "alarm-minus": [],
-  "alarm-plus": [],
-  "album": [],
+  "alarm-minus": [
+    "remove"
+  ],
+  "alarm-plus": [
+    "add"
+  ],
+  "album": [
+    "photo",
+    "book"
+  ],
   "alert-circle": [
     "warning",
     "alert",
@@ -46,7 +55,9 @@
     "text alignment",
     "right"
   ],
-  "anchor": [],
+  "anchor": [
+    "ship"
+  ],
   "aperture": [
     "camera",
     "photo"
@@ -55,12 +66,20 @@
     "index",
     "box"
   ],
-  "arrow-big-down": [],
-  "arrow-big-left": [],
+  "arrow-big-down": [
+    "key"
+  ],
+  "arrow-big-left": [
+    "key"
+  ],
   "arrow-big-right": [
+    "key",
     "forward"
   ],
-  "arrow-big-up": [],
+  "arrow-big-up": [
+    "key",
+    "forward"
+  ],
   "arrow-down": [],
   "arrow-down-circle": [],
   "arrow-down-left": [],
@@ -73,7 +92,9 @@
   "arrow-up-circle": [],
   "arrow-up-left": [],
   "arrow-up-right": [],
-  "asterisk": [],
+  "asterisk": [
+    "reference"
+  ],
   "at-sign": [
     "mention",
     "at",
@@ -129,10 +150,18 @@
   "bluetooth": [
     "wireless"
   ],
-  "bluetooth-connected": [],
-  "bluetooth-off": [],
-  "bluetooth-searching": [],
-  "bold": [],
+  "bluetooth-connected": [
+    "paired"
+  ],
+  "bluetooth-off": [
+    "lost"
+  ],
+  "bluetooth-searching": [
+    "pairing"
+  ],
+  "bold": [
+    "strong"
+  ],
   "book": [
     "read",
     "dictionary",
@@ -150,11 +179,20 @@
     "marker",
     "tag"
   ],
-  "bot": [],
-  "box": [
-    "cube"
+  "bot": [
+    "robot"
   ],
-  "box-select": [],
+  "box": [
+    "cube",
+    "package"
+  ],
+  "box-select": [
+    "selection",
+    "square",
+    "rectangular",
+    "marquee",
+    "tool"
+  ],
   "briefcase": [
     "work",
     "bag",
@@ -163,10 +201,12 @@
   ],
   "brush": [
     "draw",
-    "paint"
+    "paint",
+    "color"
   ],
   "building": [
-    "organisation"
+    "organisation",
+    "organization"
   ],
   "bus": [
     "bus",
@@ -174,14 +214,24 @@
     "transport",
     "trip"
   ],
-  "calculator": [],
+  "calculator": [
+    "count",
+    "calculating machine"
+  ],
   "calendar": [
-    "date"
+    "date",
+    "birthdate"
   ],
   "camera": [
-    "photo"
+    "photo",
+    "webcam",
+    "video"
   ],
-  "camera-off": [],
+  "camera-off": [
+    "photo",
+    "webcam",
+    "video"
+  ],
   "car": [
     "vehicle",
     "transport",
@@ -191,9 +241,15 @@
     "chromecast",
     "airplay"
   ],
-  "check": [],
-  "check-circle": [],
-  "check-square": [],
+  "check": [
+    "done"
+  ],
+  "check-circle": [
+    "done"
+  ],
+  "check-square": [
+    "done"
+  ],
   "chevron-down": [],
   "chevron-left": [],
   "chevron-right": [],
@@ -202,14 +258,17 @@
   "chevrons-left": [],
   "chevrons-right": [],
   "chevrons-up": [],
-  "chrome": [],
+  "chrome": [
+    "browser"
+  ],
   "circle": [
     "off",
     "zero",
     "record"
   ],
   "clipboard": [
-    "copy"
+    "copy",
+    "paste"
   ],
   "clock": [
     "time",
@@ -235,7 +294,10 @@
     "weather",
     "blizzard"
   ],
-  "clover": [],
+  "clover": [
+    "leaf",
+    "luck"
+  ],
   "code": [
     "source",
     "programming"
@@ -255,7 +317,12 @@
     "hot",
     "beverage"
   ],
-  "coins": [],
+  "coins": [
+    "money",
+    "cash",
+    "finance",
+    "gamble",
+  ],
   "columns": [
     "layout"
   ],
@@ -271,14 +338,21 @@
     "travel",
     "direction"
   ],
-  "contact": [],
+  "contact": [
+    "person",
+    "user"
+  ],
   "contrast": [],
   "copy": [
     "clone",
     "duplicate"
   ],
-  "copyleft": [],
-  "copyright": [],
+  "copyleft": [
+    "licence"
+  ],
+  "copyright": [
+    "licence"
+  ],
   "corner-down-left": [
     "arrow",
     "return"
@@ -306,9 +380,12 @@
   ],
   "cpu": [
     "processor",
-    "technology"
+    "technology",
+    "computer",
+    "chip"
   ],
   "credit-card": [
+    "bank",
     "purchase",
     "payment",
     "cc"
@@ -317,7 +394,10 @@
     "photo",
     "image"
   ],
-  "cross": [],
+  "cross": [
+    "healthcare",
+    "firstaid"
+  ],
   "crosshair": [
     "aim",
     "target"
@@ -340,9 +420,15 @@
     "dvd",
     "music"
   ],
-  "divide": [],
-  "divide-circle": [],
-  "divide-square": [],
+  "divide": [
+    "calculate"
+  ],
+  "divide-circle": [
+    "calculate"
+  ],
+  "divide-square": [
+    "calculate"
+  ],
   "dollar-sign": [
     "currency",
     "money",
@@ -366,8 +452,13 @@
     "pencil",
     "change"
   ],
-  "equal": [],
-  "equal-not": [],
+  "equal": [
+    "calculate"
+  ],
+  "equal-not": [
+    "calculate",
+    "off"
+  ],
   "external-link": [
     "outbound"
   ],
@@ -395,10 +486,18 @@
     "tool"
   ],
   "file": [],
-  "file-check": [],
-  "file-check-2": [],
-  "file-code": [],
-  "file-digit": [],
+  "file-check": [
+    "done"
+  ],
+  "file-check-2": [
+    "done"
+  ],
+  "file-code": [
+    "script"
+  ],
+  "file-digit": [
+    "number"
+  ],
   "file-minus": [
     "delete",
     "remove",
@@ -410,15 +509,29 @@
     "create",
     "new"
   ],
-  "file-plus-2": [],
-  "file-search": [],
+  "file-plus-2": [
+    "add",
+    "create",
+    "new"
+  ],
+  "file-search": [
+    "lost"
+  ],
   "file-text": [
     "data",
     "txt",
     "pdf"
   ],
-  "file-x": [],
-  "file-x-2": [],
+  "file-x": [
+    "lost",
+    "delete",
+    "remove"
+  ],
+  "file-x-2": [
+    "lost",
+    "delete",
+    "remove"
+  ],
   "files": [
     "multiple",
     "copy"
@@ -434,9 +547,16 @@
   "flag": [
     "report"
   ],
-  "flame": [],
-  "flashlight": [],
-  "flashlight-off": [],
+  "flame": [
+    "fire",
+    "lit"
+  ],
+  "flashlight": [
+    "torch"
+  ],
+  "flashlight-off": [
+    "torch"
+  ],
   "flask-conical": [
     "beaker",
     "erlenmeyer"
@@ -465,9 +585,15 @@
     "sad",
     "emotion"
   ],
-  "gamepad": [],
-  "gamepad-2": [],
-  "gauge": [],
+  "gamepad": [
+    "console"
+  ],
+  "gamepad-2": [
+    "console"
+  ],
+  "gauge": [
+    "dashboard",
+  ],
   "gavel": [
     "hammer",
     "mallet"
@@ -482,7 +608,10 @@
     "code",
     "version control"
   ],
-  "git-branch-plus": [],
+  "git-branch-plus": [
+    "add",
+    "create"
+  ],
   "git-commit": [
     "code",
     "version control"
@@ -509,24 +638,48 @@
     "language",
     "translate"
   ],
-  "globe-2": [],
-  "grab": [],
-  "grid": [],
-  "grip-horizontal": [],
-  "grip-vertical": [],
+  "globe-2": [
+    "world",
+    "browser",
+    "language",
+    "translate"
+  ],
+  "grab": [
+    "hand"
+  ],
+  "grid": [
+    "table"
+  ],
+  "grip-horizontal": [
+    "grab",
+    "handle"
+  ],
+  "grip-vertical": [
+    "grab",
+    "handle"
+  ],
   "hammer": [
     "mallet"
   ],
-  "hand": [],
+  "hand": [
+    "wave",
+    "move",
+    "mouse",
+    "grab"
+  ],
   "hard-drive": [
     "computer",
     "server",
     "memory",
-    "data"
+    "data",
+    "ssd",
+    "disk",
+    "harddisk"
   ],
   "hard-hat": [
     "helmet",
-    "construction"
+    "construction",
+    "savety"
   ],
   "hash": [
     "hashtag",
@@ -551,7 +704,10 @@
     "node.js",
     "logo"
   ],
-  "highlighter": [],
+  "highlighter": [
+    "mark",
+    "text"
+  ],
   "home": [
     "house",
     "living"
@@ -564,44 +720,88 @@
     "picture",
     "photo"
   ],
-  "image-plus": [],
+  "image-plus": [
+    "add",
+    "create"
+  ],
   "inbox": [
     "email"
   ],
-  "indent": [],
-  "infinity": [],
-  "info": [],
+  "indent": [
+    "text",
+    "tab"
+  ],
+  "infinity": [
+    "unlimited",
+    "forever",
+    "loop"
+  ],
+  "info": [
+    "help"
+  ],
   "instagram": [
     "logo",
     "camera"
   ],
-  "italic": [],
+  "italic": [
+    "oblique",
+    "text"
+  ],
   "key": [
     "password",
     "login",
     "authentication",
     "secure"
   ],
-  "languages": [],
+  "languages": [
+    "translate"
+  ],
   "laptop": [
     "computer"
   ],
-  "laptop-2": [],
-  "lasso": [],
+  "laptop-2": [
+    "computer"
+  ],
+  "lasso": [
+    "select"
+  ],
   "lasso-select": [],
   "layers": [
-    "stack"
+    "stack",
+    "pages"
   ],
   "layout": [
     "window",
     "webpage"
   ],
-  "layout-dashboard": [],
-  "layout-grid": [],
-  "layout-list": [],
-  "library": [],
-  "life-buoy": [],
-  "lightbulb": [],
+  "layout-dashboard": [
+    "masonry",
+    "brick"
+  ],
+  "layout-grid": [
+    "app",
+    "home",
+    "start"
+  ],
+  "layout-list": [
+    "image",
+    "photo",
+    "item"
+  ],
+  "library": [
+    "book",
+    "music",
+    "album"
+  ],
+  "life-buoy": [
+    "help",
+    "rescue",
+    "ship"
+  ],
+  "lightbulb": [
+    "idea",
+    "bright"
+  ],
   "link": [
     "chain",
     "url"
@@ -610,7 +810,10 @@
     "chain",
     "url"
   ],
-  "link-2-off": [],
+  "link-2-off": [
+    "unchain",
+    "chain"
+  ],
   "linkedin": [
     "logo",
     "social media"
@@ -618,37 +821,49 @@
   "list": [
     "options"
   ],
-  "list-checks": [],
-  "list-ordered": [],
+  "list-checks": [
+    "todo",
+    "done"
+  ],
+  "list-ordered": [
+    "number",
+    "order"
+  ],
   "loader": [],
   "locate": [
     "map",
     "gps",
-    "location"
+    "location",
+    "cross"
   ],
   "locate-fixed": [
     "map",
     "gps",
-    "location"
+    "location",
+    "cross"
   ],
   "lock": [
     "security",
     "password",
-    "secure"
+    "secure",
+    "admin"
   ],
   "log-in": [
     "sign in",
     "arrow",
-    "enter"
+    "enter",
+    "auth"
   ],
   "log-out": [
     "sign out",
     "arrow",
-    "exit"
+    "exit",
+    "auth"
   ],
   "mail": [
     "email",
-    "message"
+    "message",
+    "letter"
   ],
   "map": [
     "location",
@@ -662,7 +877,8 @@
     "marker"
   ],
   "maximize": [
-    "fullscreen"
+    "fullscreen",
+    "expand"
   ],
   "maximize-2": [
     "fullscreen",
@@ -717,7 +933,9 @@
     "screen",
     "display"
   ],
-  "monitor-off": [],
+  "monitor-off": [
+    "share"
+  ],
   "moon": [
     "dark",
     "night"
@@ -842,7 +1060,9 @@
     "mic",
     "music"
   ],
-  "pointer": [],
+  "pointer": [
+    "mouse"
+  ],
   "power": [
     "on",
     "off"
@@ -852,7 +1072,9 @@
     "office",
     "device"
   ],
-  "qr-code": [],
+  "qr-code": [
+    "barcode"
+  ],
   "radio": [
     "signal"
   ],
@@ -868,7 +1090,9 @@
     "loop",
     "arrows"
   ],
-  "repeat-1": [],
+  "repeat-1": [
+    "replay"
+  ],
   "rewind": [
     "music"
   ],
