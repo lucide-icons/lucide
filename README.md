@@ -180,3 +180,9 @@ Join the community on our [Discord](https://discord.gg/EH6nSts) server!
 ## License
 
 Lucide is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
+
+<p align="center">
+  <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+    <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
+  </a>
+</p>
