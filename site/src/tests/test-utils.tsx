@@ -36,7 +36,6 @@ const mockRouter: NextRouter = {
   route: '/',
   asPath: '/',
   query: {},
-  isReady: false,
   push: jest.fn(),
   replace: jest.fn(),
   reload: jest.fn(),
