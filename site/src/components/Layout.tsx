@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
           maxW="1250px"
           margin="0 auto"
           w="full"
-          px={8}
+          px={5}
         >
           <Flex justifyContent="center" alignItems="center">
             <NextLink href="/" passHref>
@@ -77,7 +77,7 @@ const Layout = ({ children }) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
+      <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
         {children}
         <Divider marginBottom={8} />
         <p style={{ alignSelf: "center" }}>

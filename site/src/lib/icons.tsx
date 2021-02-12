@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import cheerio from 'cheerio';
 import tags from '../../../tags.json';
+import { getContributors } from "./fetchAllContributors";
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -13,25 +14,26 @@ export function getAllNames() {
   });
 }
 
-export function getData(name) {
+export async function getData(name:string) {
   const fullPath = path.join(directory, `${name}.svg`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   const $ = cheerio.load(fileContents);
   const content = $("svg").html();
 
+  const contributors = await getContributors(name);
+
   return {
     name,
     tags: tags[name] || [],
+    contributors,
     src: fileContents,
     content: content
   };
 }
 
-export function getAllData() {
+export async function getAllData() {
   const names = getAllNames();
 
-  return names.map((name) => {
-    return getData(name);
-  });
+  return Promise.all(names.map((name) => getData(name)));
 }
