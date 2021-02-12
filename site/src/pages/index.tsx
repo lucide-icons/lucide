@@ -13,9 +13,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IconDetailOverlay
-        isOpen={!!router.query.iconName}
+        open={!!router.query.iconName}
         icon={getIcon(router.query.iconName)}
-        onClose={() => router.push('/')}
+        close={() => router.push('/')}
       />
       <Header {...{data}}/>
       <IconOverview {...{data}}/>

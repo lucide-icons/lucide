@@ -1,11 +1,9 @@
-import { useSpring, animated } from "react-spring";
-import { Box, Text, IconButton, useColorMode, Flex, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery } from "@chakra-ui/core";
+import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/core";
 import theme from "../lib/theme";
 import download from 'downloadjs';
-import NextLink from "next/link"
 import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
-import {useContext, useRef} from "react";
+import {useContext, useEffect, useRef} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
@@ -15,30 +13,25 @@ type IconDownload = {
   name: string;
 };
 
-const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
+const IconDetailOverlay = ({ open = true, close, icon }) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
   const { tags = [], name } = icon;
   const {color, strokeWidth, size} = useContext(IconStyleContext);
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
-
-  const { transform, opacity } = useSpring({
-    opacity: isOpen ? 1 : 0,
-    transform: `translateY(${isOpen ? -120 : 0}%)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const handleClose = () => {
     onClose();
+    close();
   };
 
-  const panelStyling = {
-    transform: transform.interpolate(t => t),
-    opacity: opacity.interpolate(o => o),
-    width: "100%",
-    willChange: "transform"
-  }
+  useEffect(() => {
+    if(open) {
+      onOpen()
+    }
+  }, [open])
 
   const iconStyling = (isLight) => ({
     height: "25vw",
@@ -91,6 +84,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
       height={0}
       key={name}
     >
+      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -101,9 +95,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
         w="full"
         px={8}
       >
-        <animated.div
-          style={panelStyling}
-        >
+
           <Box
             borderWidth="1px"
             rounded="lg"
@@ -237,8 +229,9 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
               </Flex>
             </Flex>
           </Box>
-        </animated.div>
+
       </Flex>
+      </Slide>
     </Box>
   );
 };

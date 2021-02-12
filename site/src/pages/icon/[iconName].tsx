@@ -28,7 +28,7 @@ const IconPage = ({ icon, data }) => {
       <IconDetailOverlay
         key={icon.name}
         icon={icon}
-        onClose={onClose}
+        close={onClose}
       />
       <Header {...{data}}/>
       <IconOverview {...{data}}/>
