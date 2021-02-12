@@ -205,10 +205,10 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                         Contributers:
                       </Heading>
                       <AvatarGroup size="md">
-                        { icon.contributers.map(commit => (
-                          <Link href={`https://github.com/${commit.author}`} isExternal key={commit.sha}>
-                            <Tooltip label={commit.author}>
-                              <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
+                        { icon.contributers.map((commit, index) => (
+                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.sha}`}>
+                            <Tooltip label={commit.author} key={commit.sha}>
+                              <Avatar name={commit.author} showBorder={false} src={`https://github.com/${commit.author}.png?size=88`} />
                             </Tooltip>
                           </Link>
                         )) }
