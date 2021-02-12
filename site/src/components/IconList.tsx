@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Text, useToast, Box, Tooltip, useColorMode } from "@chakra-ui/core";
+import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
 import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
@@ -6,12 +6,11 @@ import {useContext, useMemo} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import { useRouter } from "next/router";
-import theme from '../lib/theme';
+import ModifiedTooltip from './ModifiedTooltip';
 
 const IconList = ({icons}) => {
   const router = useRouter()
   const toast = useToast();
-  const { colorMode } = useColorMode();
   const {color, size, strokeWidth} = useContext(IconStyleContext);
   const { search } = router.query;
 
@@ -19,13 +18,13 @@ const IconList = ({icons}) => {
 
   return (
     <Grid
-      templateColumns={`repeat(auto-fill, minmax(160px, 1fr))`}
+      templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`}
       gap={5}
       marginBottom="320px"
     >
       { icons.map((icon) => {
         const actualIcon = icon.item ? icon.item : icon;
-        const { name, content, contributers } = actualIcon;
+        const { name, content, contributors } = actualIcon;
 
         return (
           <Link
@@ -66,28 +65,7 @@ const IconList = ({icons}) => {
               key={name}
               alignItems="center"
             >
-              { contributers?.length ? (
-                <Tooltip
-                  hasArrow
-                  label="This is new or modified icon"
-                  bg={colorMode === 'light' ? theme.colors.white : theme.colors.gray[700]}
-                  color={colorMode === 'dark' ? theme.colors.white : null}
-                >
-                  <Box
-                    {
-                      ...{
-                        position: 'absolute',
-                        height: '8px',
-                        width: '8px',
-                        background: '#F56565',
-                        top: '8px',
-                        right: '8px',
-                        borderRadius: '4px'
-                      }
-                    }
-                  />
-                </Tooltip>
-              ) : null}
+              { contributors?.length ? ( <ModifiedTooltip/> ) : null}
               <Flex direction="column" align="center" justify="center">
                 <IconWrapper
                   content={content}

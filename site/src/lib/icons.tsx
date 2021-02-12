@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import cheerio from 'cheerio';
 import tags from '../../../tags.json';
-import { getContributers } from "./fetchAllContributers";
+import { getContributors } from "./fetchAllContributors";
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -21,12 +21,12 @@ export async function getData(name:string) {
   const $ = cheerio.load(fileContents);
   const content = $("svg").html();
 
-  const contributers = await getContributers(name);
+  const contributors = await getContributors(name);
 
   return {
     name,
     tags: tags[name] || [],
-    contributers,
+    contributors,
     src: fileContents,
     content: content
   };

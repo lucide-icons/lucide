@@ -85,7 +85,7 @@ async function writeIconCache(icon, content) {
   fs.writeFileSync(iconCachePath, JSON.stringify(content), 'utf-8');
 }
 
-export async function getContributers(icon) {
+export async function getContributors(icon) {
   try {
     let iconCommits
     const iconCache = await checkIconCache(icon);
@@ -110,7 +110,7 @@ export async function getContributers(icon) {
   }
 }
 
-export async function getAllContributers(icons) {
+export async function getAllContributors(icons) {
   try {
     const AllIconCommits = await Promise.all(icons.map(fetchCommitsOfIcon));
 
