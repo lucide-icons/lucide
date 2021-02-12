@@ -2,6 +2,7 @@ import { ChakraProvider } from '@chakra-ui/core';
 import customTheme from '../lib/theme';
 import '../assets/styling.css';
 import Head from 'next/head';
+import { CustomizeIconContext } from "../components/CustomizeIconContext";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -10,7 +11,9 @@ const App = ({ Component, pageProps }) => {
         <title>Lucide</title>
       </Head>
       <ChakraProvider theme={customTheme}>
-        <Component {...pageProps} />
+        <CustomizeIconContext>
+          <Component {...pageProps} />
+        </CustomizeIconContext>
       </ChakraProvider>
     </>
   );
