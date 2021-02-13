@@ -1,6 +1,8 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const fs = require('fs');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const webpack = require('webpack');
 
 module.exports = (env, argv) => ({
   // This is necessary because Figma's 'eval' works differently than normal eval
@@ -30,6 +32,11 @@ module.exports = (env, argv) => ({
     extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      ICONS: JSON.stringify(
+        fs.readdirSync(path.join(process.cwd(), '../../icons')).map(name => name.split('.')[0]),
+      ),
+    }),
     new HtmlWebpackPlugin({
       template: './src/ui.html',
       filename: 'ui.html',
@@ -38,4 +45,4 @@ module.exports = (env, argv) => ({
     }),
     new HtmlWebpackInlineSourcePlugin(),
   ],
-})
+});

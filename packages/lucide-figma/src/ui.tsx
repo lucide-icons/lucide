@@ -1,16 +1,36 @@
 import { Global, jsx } from '@emotion/core'
 import { version } from 'lucide/package.json'
-import React from 'react'
+import React, { useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import IconButton from './components/icon-button'
 import SearchInput from './components/search-input'
 import theme from './theme'
 import './ui.css'
-import useSearch from './use-search'
+import tags from '../../../tags.json'
+import * as iconComponents from 'lucide-react'
+import { toPascalCase } from './helpers/naming';
+import useSearch from '../../../site/src/lib/useSearch';
+
+// import useSearch from './use-search'
+
+declare var ICONS: [];
+
+// const getAllIcons = () => {
+
+// }
 
 function App() {
   const [query, setQuery] = React.useState('')
-  const results = useSearch(query)
+  const icons = ICONS.map(name => {
+    const componentName = toPascalCase(name);
+    return {
+      name,
+      tags: tags[name] || [],
+      component: iconComponents[componentName] || null
+    }
+  }).filter(({component}) => !!component)
+  const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
+
   return (
     <div>
       <Global
@@ -33,7 +53,7 @@ function App() {
             gridGap: theme.space[1],
           }}
         >
-          {results.map((Icon:any) => (
+          {searchResults.map((Icon:any) => (
             <IconButton name={Icon.name}>
               <Icon />
             </IconButton>
