@@ -11,13 +11,7 @@ import * as iconComponents from 'lucide-react'
 import { toPascalCase } from './helpers/naming';
 import useSearch from '../../../site/src/lib/useSearch';
 
-// import useSearch from './use-search'
-
 declare var ICONS: [];
-
-// const getAllIcons = () => {
-
-// }
 
 function App() {
   const [query, setQuery] = React.useState('')
@@ -46,7 +40,8 @@ function App() {
         css={{
           position: 'sticky',
           top: 0,
-          borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+          borderBottom: '1px solid #e5e5e5',
+          backfaceVisibility: 'hidden'
         }}
       />
       <div css={{ padding: theme.space[2] }}>
@@ -71,7 +66,13 @@ function App() {
             color: 'rgba(0, 0, 0, 0.5)',
           }}
         >
-          <a href="https://lucide.dev" target="_blank">Lucide v{version}</a>
+          <a
+            href="https://lucide.dev"
+            target="_blank"
+            css={{ color: 'inherit' }}
+          >
+            Lucide v{version}
+          </a>
         </div>
       </div>
     </div>

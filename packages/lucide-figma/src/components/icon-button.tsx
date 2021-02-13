@@ -1,11 +1,11 @@
 import { jsx } from '@emotion/core'
 import theme from '../theme'
 import { renderToString } from 'react-dom/server'
-import { ReactElement } from 'react';
+import { FC } from 'react';
 
 interface IconButtonProps {
   name: string,
-  component: ReactElement,
+  component: FC,
   children: any,
 }
 

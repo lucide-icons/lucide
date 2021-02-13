@@ -1,6 +1,3 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useDebounce } from './useDebounce';
-
 interface Icon {
   name: string;
   tags: string[],
