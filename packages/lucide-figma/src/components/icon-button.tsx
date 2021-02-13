@@ -6,10 +6,9 @@ import { FC } from 'react';
 interface IconButtonProps {
   name: string,
   component: FC,
-  children: any,
 }
 
-function IconButton({ name, component: IconComponent, children }: IconButtonProps) {
+function IconButton({ name, component: IconComponent }: IconButtonProps) {
   const onIconclick = () => {
     const svg = renderToString(<IconComponent/>);
 
@@ -37,7 +36,7 @@ function IconButton({ name, component: IconComponent, children }: IconButtonProp
         },
       }}
     >
-      {children}
+      <IconComponent />
     </button>
   )
 }

@@ -2090,11 +2090,6 @@ lucide-react@^0.13.0:
     prop-types "^15.7.2"
     react "^17.0.1"
 
-lucide@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.13.0.tgz#28393dac301ecc64f1751bb764db1a283d9b796b"
-  integrity sha512-zefJEbn4n2wztZ/OpqiDtmDidC4tHXSTu5rL5R3+8KnZENTzqcZe6fP/BpTol4dUwjIpHK+FFy4IpqMVq9TRrw==
-
 make-dir@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"

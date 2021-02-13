@@ -1,4 +1,3 @@
-import { jsx } from '@emotion/core'
 import { createElement, forwardRef } from 'react'
 
 const SearchIcon = forwardRef((props: any, ref) => createElement(

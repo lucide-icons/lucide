@@ -1,6 +1,6 @@
 import { Global, jsx } from '@emotion/core'
-import { version } from 'lucide/package.json'
-import React, { createElement, useMemo } from 'react'
+import { version } from '../package.json'
+import React, { useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import IconButton from './components/icon-button'
 import SearchInput from './components/search-input'
@@ -26,9 +26,6 @@ function App() {
 
   const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
 
-  console.log(searchResults);
-
-
   return (
     <div>
       <Global
@@ -36,6 +33,7 @@ function App() {
       />
       <SearchInput
         value={query}
+        iconCount={icons.length}
         onChange={event => setQuery(event.target.value)}
         css={{
           position: 'sticky',
@@ -53,9 +51,11 @@ function App() {
           }}
         >
           {searchResults.map(({name, component: Icon} :any) => (
-            <IconButton name={name} key={name} component={Icon}>
-              <Icon/>
-            </IconButton>
+            <IconButton
+              name={name}
+              key={name}
+              component={Icon}
+            />
           ))}
         </div>
         <div

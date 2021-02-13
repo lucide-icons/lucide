@@ -1,5 +1,3 @@
-import * as icons from 'lucide-react'
-
 figma.showUI(__html__, { width: 300, height: 400 })
 
 figma.ui.onmessage = ({name, svg}) => {
