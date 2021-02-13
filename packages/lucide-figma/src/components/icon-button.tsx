@@ -1,17 +1,26 @@
 import { jsx } from '@emotion/core'
 import theme from '../theme'
+import { renderToString } from 'react-dom/server'
+import { ReactElement } from 'react';
 
 interface IconButtonProps {
-  name: string
+  name: string,
+  component: ReactElement,
   children: any,
 }
 
-function IconButton({ name, children }: IconButtonProps) {
+function IconButton({ name, component: IconComponent, children }: IconButtonProps) {
+  const onIconclick = () => {
+    const svg = renderToString(<IconComponent/>);
+
+    parent.postMessage({ pluginMessage: { name, svg }}, '*')
+  }
+
   return (
     <button
       key={name}
       aria-label={name}
-      onClick={() => parent.postMessage({ pluginMessage: { type: name } }, '*')}
+      onClick={onIconclick}
       css={{
         padding: theme.space[2],
         color: '#333',

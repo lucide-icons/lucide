@@ -1,6 +1,6 @@
 import { Global, jsx } from '@emotion/core'
 import { version } from 'lucide/package.json'
-import React, { useMemo } from 'react'
+import React, { createElement, useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import IconButton from './components/icon-button'
 import SearchInput from './components/search-input'
@@ -29,7 +29,11 @@ function App() {
       component: iconComponents[componentName] || null
     }
   }).filter(({component}) => !!component)
+
   const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
+
+  console.log(searchResults);
+
 
   return (
     <div>
@@ -53,9 +57,9 @@ function App() {
             gridGap: theme.space[1],
           }}
         >
-          {searchResults.map((Icon:any) => (
-            <IconButton name={Icon.name}>
-              <Icon />
+          {searchResults.map(({name, component: Icon} :any) => (
+            <IconButton name={name} key={name} component={Icon}>
+              <Icon/>
             </IconButton>
           ))}
         </div>
@@ -67,7 +71,7 @@ function App() {
             color: 'rgba(0, 0, 0, 0.5)',
           }}
         >
-          Lucide v{version}
+          <a href="https://lucide.dev" target="_blank">Lucide v{version}</a>
         </div>
       </div>
     </div>
