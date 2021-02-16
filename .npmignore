@@ -6,6 +6,7 @@ tests
 scripts
 site
 src
+build
 babel.config.js
 categories.json
 jest.config.js
