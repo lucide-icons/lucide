@@ -2,6 +2,7 @@
   "name": "lucide-figma",
   "version": "0.13.0",
   "license": "ISC",
+  "main": "build/ui.js",
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --mode=development --watch"
@@ -11,7 +12,6 @@
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "css-loader": "^3.0.0",
-    "fuse.js": "^3.4.5",
     "html-webpack-inline-source-plugin": "^0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "lucide-react": "^0.13.0",
