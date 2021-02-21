@@ -64,7 +64,7 @@ You can also pass custom props that will be added in the svg as attributes.
 
 It is possible to create one generic icon component to load icons.
 
-> :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
+> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 
