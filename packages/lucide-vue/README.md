@@ -67,16 +67,37 @@ It is possible to create one generic icon component to load icons.
 > :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
-...
+
 ``` vue
-// <script>
-// // Returns all Lucide icon Vue components
-// import * as icons from 'lucide-vue';
+<template>
+  <component :is="icon" />
+</template>
 
-// export default {
-//   name: "Icon",
-//   components: { Camera }
-// }
+<script>
+import * as icons from "lucide-vue";
 
-// </script>
+export default {
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    icon() {
+      return icons[this.name];
+    },
+  },
+};
+</script>
+```
+
+##### Then you can use it like this
+
+``` vue
+<template>
+  <div id="app">
+    <Icon name="Airplay" />
+  </div>
+</template>
 ```
