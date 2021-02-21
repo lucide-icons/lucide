@@ -1,4 +1,4 @@
-<p align=center><img width="410" src="https://lucide.netlify.app/logo-text.svg" alt="Lucide Logo"></p>
+<p align=center><img width="410" src="https://lucide.dev/logo-text.svg" alt="Lucide Logo"></p>
 
 # Lucide
 
