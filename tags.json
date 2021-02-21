@@ -321,7 +321,7 @@
     "money",
     "cash",
     "finance",
-    "gamble",
+    "gamble"
   ],
   "columns": [
     "layout"
@@ -592,7 +592,7 @@
     "console"
   ],
   "gauge": [
-    "dashboard",
+    "dashboard"
   ],
   "gavel": [
     "hammer",
