@@ -1,7 +1,8 @@
-const plugins = require('lucide/rollup.plugins');
+const plugins = require('../../rollup.plugins');
 const pkg = require('./package.json');
 
-const outputFileName = 'LucideReact';
+const packageName = 'LucideReact';
+const outputFileName = 'lucide-react';
 const rootDir = 'packages/lucide-react'; // It runs from the root
 const outputDir = `${rootDir}/dist`;
 const inputs = [`${rootDir}/build/lucide-react.js`];
@@ -31,7 +32,7 @@ const configs = bundles
       plugins: plugins(pkg, minify),
       external: ['react', 'prop-types'],
       output: {
-        name: outputFileName,
+        name: packageName,
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,

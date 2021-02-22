@@ -3,10 +3,11 @@
   "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
   "version": "0.13.0",
   "license": "ISC",
-  "homepage": "https://lucide.netlify.app",
-  "repository": "github:lucide-icons/lucide",
-  "bugs": {
-    "url": "https://github.com/lucide-icons/lucide/issues"
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git"
   },
   "amdName": "lucide",
   "source": "build/lucide.js",
