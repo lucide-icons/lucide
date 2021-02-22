@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { parseDOM } from 'htmlparser2';
-import DEFAULT_ATTRS from './default-attrs.json';
+import defaultAttributes, { camelizedDefaultAttributes } from '../../src/defaultAttributes';
 import { toCamelCase, hash } from '../helpers';
 
 const camelizeAttrs = attrs =>
@@ -42,7 +42,7 @@ export default (iconsObject, options) => {
       ? [
           'svg',
           {
-            ...(options.camelizeAttrs ? camelizeAttrs(DEFAULT_ATTRS) : DEFAULT_ATTRS),
+            ...(options.camelizeAttrs ? camelizedDefaultAttributes : defaultAttributes),
           },
           children,
         ]
