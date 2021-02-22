@@ -4,9 +4,10 @@
   "version": "0.13.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
-  "repository": "github:lucide-icons/lucide",
-  "bugs": {
-    "url": "https://github.com/lucide-icons/lucide/issues"
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git"
   },
   "amdName": "lucide",
   "source": "build/lucide.js",
