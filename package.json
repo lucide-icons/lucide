@@ -25,6 +25,7 @@
     "build:es": "babel build -d dist/esm",
     "build:bundles": "rollup -c rollup.config.js",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
+    "addtags": "npx babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
     "test": "jest"
   },
   "devDependencies": {

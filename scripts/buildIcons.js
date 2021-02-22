@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import getArgumentOptions from 'minimist';
 
 import renderIconsObject from './render/renderIconsObject';
