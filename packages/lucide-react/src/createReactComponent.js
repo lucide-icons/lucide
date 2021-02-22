@@ -11,7 +11,7 @@ export default (iconName, [tag, attrs, children]) => {
           ...attrs,
           width: size,
           height: size,
-          color,
+          stroke: color,
           strokeWidth,
           ...rest,
         },

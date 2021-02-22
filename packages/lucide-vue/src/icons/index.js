@@ -1,0 +1,5 @@
+/*
+ Icons exports.
+
+ Will be generated
+*/
