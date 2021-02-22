@@ -2,7 +2,6 @@
 
 exports[`Using lucide icon components should adjust the size, stroke color and stroke width 1`] = `
 <svg
-  color="currentColor"
   fill="none"
   height={48}
   stroke="red"
@@ -50,7 +49,6 @@ exports[`Using lucide icon components should adjust the size, stroke color and s
 
 exports[`Using lucide icon components should render an component 1`] = `
 <svg
-  color="currentColor"
   fill="none"
   height={24}
   stroke="currentColor"

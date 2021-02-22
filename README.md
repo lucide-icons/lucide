@@ -22,6 +22,7 @@ Lucide is a community-run fork of [Feather Icons](https://github.com/feathericon
     * [Treeshake library](#treeshake-the-library-only-use-the-icons-you-use)
     * [Custom binding](#custom-element-binding)
   * [React](#with-react)
+  * [Vue](#with-vue)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
@@ -162,6 +163,20 @@ npm install lucide-react
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
+
+### With Vue
+
+You can also use the Lucide library using the Vue package.
+
+```sh
+yarn add lucide-vue
+
+# or
+
+npm install lucide-vue
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-vue/README.md).
 
 ### Figma
 

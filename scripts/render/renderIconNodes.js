@@ -38,13 +38,15 @@ export default (iconsObject, options) => {
       ];
     });
 
-    iconNodes[icon] = [
-      'svg',
-      {
-        ...(options.camelizeAttrs ? camelizeAttrs(DEFAULT_ATTRS) : DEFAULT_ATTRS),
-      },
-      children,
-    ];
+    iconNodes[icon] = !options.noDefaultAttrs
+      ? [
+          'svg',
+          {
+            ...(options.camelizeAttrs ? camelizeAttrs(DEFAULT_ATTRS) : DEFAULT_ATTRS),
+          },
+          children,
+        ]
+      : children;
   });
 
   return iconNodes;
