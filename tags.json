@@ -108,6 +108,11 @@
   "axe": [
     "hatchet"
   ],
+  "banknote": [
+    "currency",
+    "money",
+    "payment"
+  ],
   "bar-chart": [
     "statistics",
     "diagram",
@@ -146,6 +151,11 @@
     "bicycle",
     "transport",
     "trip"
+  ],
+  "bitcoin": [
+    "currency",
+    "money",
+    "payment"
   ],
   "bluetooth": [
     "wireless"
@@ -459,6 +469,11 @@
     "calculate",
     "off"
   ],
+  "euro": [
+    "currency",
+    "money",
+    "payment"
+  ],
   "external-link": [
     "outbound"
   ],
@@ -731,6 +746,11 @@
     "text",
     "tab"
   ],
+  "indian-rupee": [
+    "currency",
+    "money",
+    "payment"
+  ],
   "infinity": [
     "unlimited",
     "forever",
@@ -746,6 +766,11 @@
   "italic": [
     "oblique",
     "text"
+  ],
+  "jersey-pound": [
+    "currency",
+    "money",
+    "payment"
   ],
   "key": [
     "password",
@@ -1108,6 +1133,11 @@
   "pointer": [
     "mouse"
   ],
+  "pound-sterling": [
+    "currency",
+    "money",
+    "payment"
+  ],
   "power": [
     "on",
     "off"
@@ -1163,6 +1193,11 @@
     "meter",
     "foot",
     "inch"
+  ],
+  "russian-ruble": [
+    "currency",
+    "money",
+    "payment"
   ],
   "save": [
     "floppy disk"
@@ -1367,6 +1402,11 @@
     "time",
     "evening",
     "night"
+  ],
+  "swiss-franc": [
+    "currency",
+    "money",
+    "payment"
   ],
   "switch-camera": [
     "photo",
