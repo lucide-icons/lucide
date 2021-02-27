@@ -16,11 +16,13 @@
   "main:umd": "dist/umd/lucide-react.js",
   "module": "dist/esm/lucide-react.js",
   "unpkg": "dist/umd/lucide-react.min.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
+    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf build",
     "build:move": "cp -av src build",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate --camelizeAttrs --noDefaultAttrs --renderUniqueKey",
+    "build:types": "node build-types.js",
     "build:es": "yarn --cwd ../../ babel packages/lucide-react/build -d packages/lucide-react/dist/esm",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js",
     "test": "jest"
