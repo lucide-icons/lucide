@@ -1,10 +1,16 @@
 {
   "name": "lucide-vue",
-  "version": "0.13.0-beta.1",
-  "description": "Lucide Vue Package",
-  "repository": "https://github.com/github:lucide-icons/lucide",
+  "version": "0.14.0",
   "author": "Eric Fennis",
+  "description": "Lucide Vue Package",
   "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-vue"
+  },
   "amdName": "lucide-vue",
   "source": "build/lucide-vue.js",
   "main": "dist/cjs/lucide-vue.js",

@@ -33,6 +33,9 @@ jobs:
       - name: Build lucide package
         run: yarn build
 
+      - name: Test lucide package
+        run: yarn test
+
       # Build lucide-react
       - name: Install Dependencies lucide-react
         run: yarn --pure-lockfile
@@ -41,6 +44,23 @@ jobs:
       - name: Build lucide-react
         run: yarn build
         working-directory: packages/lucide-react
+
+      - name: Test lucide-react
+        run: yarn test
+        working-directory: packages/lucide-react
+
+      # Build lucide-vue
+      - name: Install Dependencies lucide-vue
+        run: yarn --pure-lockfile
+        working-directory: packages/lucide-vue
+
+      - name: Build lucide-vue
+        run: yarn build
+        working-directory: packages/lucide-vue
+
+      - name: Test lucide-vue
+        run: yarn test
+        working-directory: packages/lucide-vue
 
       # Publish lucide
       - name: Set package.json version lucide
@@ -58,10 +78,20 @@ jobs:
         run: yarn publish
         working-directory: packages/lucide-react
 
+      # Publish lucide-vue
+      - name: Set package.json version lucide-vue
+        run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/lucide-vue
+
+      - name: publish lucide-vue
+        run: yarn publish
+        working-directory: packages/lucide-vue
+
       - name: Commit package.json
         run: |
           git add package.json
           git add packages/lucide-react/package.json
+          git add packages/lucide-vue/package.json
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
             commit -m ":package: Bump version to ${{ steps.get_version.outputs.VERSION }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
