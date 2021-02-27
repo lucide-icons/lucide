@@ -18,11 +18,10 @@ export default (iconsObject, options) => {
     const svgString = iconsObject[icon];
     const dom = parseDOM(svgString);
 
-    const children = dom.map((element, index) => {
+    const children = dom.map(element => {
       if (options.renderUniqueKey) {
         const hashSource = {
           name: element.name,
-          index,
           ...element.attribs,
         };
 
