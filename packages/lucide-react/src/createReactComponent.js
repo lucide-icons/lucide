@@ -22,7 +22,7 @@ export default (iconName, [tag, attrs, children]) => {
   Component.propTypes = {
     color: PropTypes.string,
     size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   };
 
   Component.displayName = `${iconName}`;
