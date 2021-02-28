@@ -70,6 +70,7 @@
   "disc": ["album", "cd", "dvd", "music"],
   "dollar-sign": ["currency", "money", "payment"],
   "droplet": ["water"],
+  "droplets": ["water", "humidity"],
   "edit": ["pencil", "change"],
   "edit-2": ["pencil", "change"],
   "edit-3": ["pencil", "change"],
