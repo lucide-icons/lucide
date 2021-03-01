@@ -15,7 +15,7 @@ npm install lucide-react
 ## How to use
 
 It's build with ESmodules so it's completely threeshakable.
-Each icon can be imported as an react component.
+Each icon can be imported as a react component.
 
 ### Example
 
@@ -56,7 +56,7 @@ const App = () => {
 
 It is possible to create one generic icon component to load icons.
 
-> :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers.
+> :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 
