@@ -440,6 +440,10 @@
   "droplet": [
     "water"
   ],
+  "droplets": [
+    "water",
+    "humidity"
+  ],
   "edit": [
     "pencil",
     "change"
