@@ -19,34 +19,16 @@ export default (iconsObject, options) => {
     const dom = parseDOM(svgString);
 
     const children = dom.map(element => {
+      const child = [element.name, { ...element.attribs }];
+
       if (options.renderUniqueKey) {
-        const hashSource = {
-          name: element.name,
-          ...element.attribs,
-        };
-
-        const uniqueKey = hash(JSON.stringify(hashSource));
-
-        element.attribs.key = uniqueKey;
+        element.attribs.key = hash(JSON.stringify(child));
       }
 
-      return [
-        element.name,
-        {
-          ...(options.camelizeAttrs ? camelizeAttrs(element.attribs) : element.attribs),
-        },
-      ];
+      return child;
     });
 
-    iconNodes[icon] = !options.noDefaultAttrs
-      ? [
-          'svg',
-          {
-            ...(options.camelizeAttrs ? camelizedDefaultAttributes : defaultAttributes),
-          },
-          children,
-        ]
-      : children;
+    iconNodes[icon] = children;
   });
 
   return iconNodes;

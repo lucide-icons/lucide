@@ -16,9 +16,9 @@ export default function(iconNode, outputDirectory, template) {
     const location = path.join(iconsDistDirectory, `${icon}.js`);
     const componentName = toPascalCase(icon);
 
-    const node = JSON.stringify(iconNode[icon]);
+    const children = iconNode[icon];
 
-    const elementTemplate = template({ componentName, node });
+    const elementTemplate = template({ componentName, iconName: icon, children });
 
     fs.writeFileSync(location, prettier.format(elementTemplate, { parser: 'babel' }), 'utf-8');
 
