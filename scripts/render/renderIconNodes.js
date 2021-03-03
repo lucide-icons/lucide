@@ -21,16 +21,11 @@ export default (iconsObject, options) => {
     const children = dom.map(element => {
       const child = [element.name, { ...element.attribs }];
 
-      const uniqueKey = hash(JSON.stringify(child));
-
       if (options.renderUniqueKey) {
-        element.attribs.key = uniqueKey;
+        element.attribs.key = hash(JSON.stringify(child));
       }
 
-      return {
-        uniqueKey,
-        child,
-      };
+      return child;
     });
 
     iconNodes[icon] = children;
