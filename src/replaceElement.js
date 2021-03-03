@@ -1,5 +1,5 @@
 import createElement from './createElement';
-
+import defaultAttributes from './defaultAttributes';
 /**
  * Get the attributes of an HTML element.
  * @param {HTMLElement} element
@@ -55,6 +55,7 @@ export default (element, { nameAttr, icons, attrs }) => {
   const ComponentName = toPascalCase(iconName);
 
   const iconNode = icons[ComponentName];
+  // const iconNode = Object.values(icons).find(({ name }) => name === iconName);
 
   if (!iconNode) {
     return console.warn(
@@ -64,22 +65,19 @@ export default (element, { nameAttr, icons, attrs }) => {
 
   const elementAttrs = getAttrs(element);
 
-  const [, iconAttrs] = iconNode;
-
-  const allAttrs = {
-    ...iconAttrs,
+  const iconAttrs = {
+    ...defaultAttributes,
     ...attrs,
   };
+  const { children } = iconNode;
 
-  iconNode[1] = { ...allAttrs };
-
-  const classNames = combineClassNames([iconAttrs, elementAttrs, attrs]);
+  const classNames = combineClassNames([elementAttrs, attrs]);
 
   if (classNames) {
-    iconNode[1].class = classNames;
+    iconAttrs.class = classNames;
   }
 
-  const svgElement = createElement(iconNode);
+  const svgElement = createElement(['svg', iconAttrs, children]);
 
   return element.parentNode.replaceChild(svgElement, element);
 };
