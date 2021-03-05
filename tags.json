@@ -1036,6 +1036,10 @@
   "network": [
     "tree"
   ],
+  "newspaper": [
+    "paper",
+    "news"
+  ],
   "octagon": [
     "stop"
   ],
