@@ -4,7 +4,7 @@ import path from 'path';
 import prettier from 'prettier';
 import { toPascalCase } from '../helpers';
 
-export default function(iconNode, outputDirectory, template) {
+export default function(iconNode, outputDirectory, template, { showLog = true }) {
   const icons = Object.keys(iconNode);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -12,16 +12,18 @@ export default function(iconNode, outputDirectory, template) {
     fs.mkdirSync(iconsDistDirectory);
   }
 
-  icons.forEach(icon => {
-    const location = path.join(iconsDistDirectory, `${icon}.js`);
-    const componentName = toPascalCase(icon);
+  icons.forEach(iconName => {
+    const location = path.join(iconsDistDirectory, `${iconName}.js`);
+    const componentName = toPascalCase(iconName);
 
-    const children = iconNode[icon];
+    const children = iconNode[iconName];
 
-    const elementTemplate = template({ componentName, iconName: icon, children });
+    const elementTemplate = template({ componentName, iconName, children });
 
-    fs.writeFileSync(location, prettier.format(elementTemplate, { parser: 'babel' }), 'utf-8');
+    fs.writeFileSync(location, prettier.format(elementTemplate, { singleQuote: true, trailingComma: 'all', parser: 'babel' }), 'utf-8');
 
-    console.log('Successfully built', componentName);
+    if(showLog) {
+      console.log('Successfully built', componentName);
+    }
   });
 }

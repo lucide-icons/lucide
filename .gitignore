@@ -10,3 +10,4 @@ stash
 coverage
 stats
 *.log
+src/icons/*.js

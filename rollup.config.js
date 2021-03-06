@@ -3,7 +3,7 @@ const pkg = require('./package.json');
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
-const inputs = ['build/lucide.js'];
+const inputs = ['src/lucide.js'];
 const bundles = [
   {
     format: 'umd',

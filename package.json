@@ -18,15 +18,16 @@
   "sideEffects": false,
   "scripts": {
     "start": "babel-watch --watch src",
-    "clean": "rimraf dist && rimraf build",
-    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rimraf dist && rimraf src/icons/*.js",
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
     "build:move": "cp -av src build",
-    "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
-    "build:es": "babel build -d dist/esm",
+    "build:icons": "npx babel-node ./scripts/buildIcons.js --output=../src --presets @babel/env",
+    "build:es": "babel src -d dist/esm",
     "build:bundles": "rollup -c rollup.config.js",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
     "addtags": "npx babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
-    "test": "jest"
+    "test": "yarn build:icons --silent && jest",
+    "test:watch": "yarn build:icons --silent && jest --watch"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.25.2",

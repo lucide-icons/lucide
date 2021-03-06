@@ -41,7 +41,7 @@ const iconFileTemplate = cliArguments.templateSrc
   : defaultIconFileTemplate;
 
 // Generates iconsNodes files for each icon
-generateIconFiles(iconVNodes, OUTPUT_DIR, iconFileTemplate);
+generateIconFiles(iconVNodes, OUTPUT_DIR, iconFileTemplate, { showLog: !cliArguments.silent });
 
 // Generates entry files for the compiler filled with icons exports
 generateExportsFile(
