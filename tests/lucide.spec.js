@@ -36,10 +36,10 @@ describe('createIcons', () => {
   });
 
   it('should add custom attributes', () => {
-    document.body.innerHTML = `<i icon-name="volume-2"></i>`;
+    document.body.innerHTML = `<i icon-name="volume-2" class="lucide"></i>`;
 
     const attrs = {
-      class: 'icon custom-class',
+      class: 'lucide icon custom-class',
       fill: 'black',
     };
 
@@ -53,6 +53,8 @@ describe('createIcons', () => {
 
       return acc;
     },{})
+
+    expect(document.body.innerHTML).toMatchSnapshot();
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });

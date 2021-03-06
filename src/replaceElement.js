@@ -17,6 +17,7 @@ export const getAttrs = element =>
  * @returns {Array}
  */
 export const getClassNames = attrs => {
+  if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
   if (attrs.class && typeof attrs.class === 'string') {
     return attrs.class.split(' ');
@@ -38,6 +39,7 @@ export const combineClassNames = arrayOfClassnames => {
   return classNameArray
     .map(classItem => classItem.trim())
     .filter(Boolean)
+    .filter((value, index, self) => self.indexOf(value) === index)
     .join(' ');
 };
 
@@ -64,14 +66,15 @@ export default (element, { nameAttr, icons, attrs }) => {
   }
 
   const elementAttrs = getAttrs(element);
+  const [name, children] = iconNode;
 
   const iconAttrs = {
     ...defaultAttributes,
     ...attrs,
+    'icon-name': name,
   };
-  const { children } = iconNode;
 
-  const classNames = combineClassNames([elementAttrs, attrs]);
+  const classNames = combineClassNames(['lucide', elementAttrs, attrs]);
 
   if (classNames) {
     iconAttrs.class = classNames;

@@ -1,15 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { parseDOM } from 'htmlparser2';
-import defaultAttributes, { camelizedDefaultAttributes } from '../../src/defaultAttributes';
-import { toCamelCase, hash } from '../helpers';
-
-const camelizeAttrs = attrs =>
-  Object.keys(attrs).reduce((newAttrs, attr) => {
-    const attrKey = toCamelCase(attr);
-
-    newAttrs[attrKey] = attrs[attr];
-    return newAttrs;
-  }, {});
+import { hash } from '../helpers';
 
 export default (iconsObject, options) => {
   const iconNodes = {};

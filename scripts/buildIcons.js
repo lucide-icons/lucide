@@ -28,10 +28,10 @@ const icons = renderIconsObject(svgFiles, ICONS_DIR);
 const iconVNodes = renderIconNodes(icons, cliArguments);
 
 const defaultIconFileTemplate = ({ componentName, iconName, children }) => `
-    const ${componentName} = {
-      name: '${iconName}',
-      children: ${JSON.stringify(children)}
-    };
+    const ${componentName} = [
+      '${iconName}',
+      ${JSON.stringify(children)}
+    ];
 
     export default ${componentName};
   `;
