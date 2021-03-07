@@ -1,12 +1,13 @@
 {
   "name": "lucide",
   "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "license": "ISC",
-  "homepage": "https://lucide.netlify.app",
-  "repository": "github:lucide-icons/lucide",
-  "bugs": {
-    "url": "https://github.com/lucide-icons/lucide/issues"
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git"
   },
   "amdName": "lucide",
   "source": "build/lucide.js",
@@ -24,6 +25,7 @@
     "build:es": "babel build -d dist/esm",
     "build:bundles": "rollup -c rollup.config.js",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
+    "addtags": "npx babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
     "test": "jest"
   },
   "devDependencies": {
