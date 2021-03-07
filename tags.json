@@ -1168,6 +1168,7 @@
   "refresh-cw": [
     "reload",
     "synchronise",
+    "synchronize",
     "arrows"
   ],
   "repeat": [
