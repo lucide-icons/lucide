@@ -53,7 +53,8 @@ export const filterCommits = (commits) =>
   .map(({ sha, author, commit }) => ({
     author: author && author.login ? author.login : null,
     commit: sha,
-  }));
+  }))
+  .filter(({ author }, index, self) => self.findIndex((commit) => commit.author === author) === index);
 
 const getIconHash = async (icon) => await getContentHashOfFile(path.join(process.cwd(), "../icons", `${icon}.svg`))
 const iconCacheDir = path.join(process.cwd(),'.next/cache/github-api');
