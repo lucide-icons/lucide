@@ -1,5 +1,5 @@
-const plugins = require('./rollup.plugins');
-const pkg = require('./package.json');
+import plugins from '../../rollup.plugins';
+import pkg from './package.json';
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
@@ -38,4 +38,4 @@ const configs = bundles
   )
   .flat();
 
-module.exports = configs;
+export default configs;

@@ -1,0 +1,40 @@
+{
+  "name": "lucide",
+  "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "version": "0.14.0",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git"
+  },
+  "amdName": "lucide",
+  "source": "build/lucide.js",
+  "main": "dist/cjs/lucide.js",
+  "main:umd": "dist/umd/lucide.js",
+  "module": "dist/esm/lucide.js",
+  "unpkg": "dist/umd/lucide.min.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rm -rf dist && rm -rf build",
+    "build:icons": "npx babel-node ../../scripts/buildIcons.js --output=../src --presets @babel/preset-env",
+    "build:es": "babel src -d dist/esm",
+    "build:bundles": "rollup -c rollup.config.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.5.1"
+  },
+  "devDependencies": {
+    "babel-preset-react-app": "^10.0.0",
+    "jest": "^26.6.3",
+    "react-test-renderer": "^16.5.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.5.1"
+  }
+}
