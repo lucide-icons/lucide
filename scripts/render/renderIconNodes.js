@@ -13,7 +13,7 @@ export default (iconsObject, options) => {
       const child = [element.name, { ...element.attribs }];
 
       if (options.renderUniqueKey) {
-        element.attribs.key = hash(JSON.stringify(child));
+        child[1].key = hash(JSON.stringify(child));
       }
 
       return child;

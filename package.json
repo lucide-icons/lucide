@@ -6,7 +6,9 @@
   "scripts": {
     "start": "babel-watch --watch src",
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
     "build:lucide": "yarn workspace lucide run build",
+    "build:lucide-react": "yarn workspace lucide-react run build",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
     "addtags": "npx babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env"
   },

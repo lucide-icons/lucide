@@ -1,8 +1,8 @@
-export default ({ componentName, node }) => `
+export default ({ componentName, iconName }) => `
+import _${componentName} from 'lucide/icons/${iconName}';
 import createReactComponent from '../createReactComponent';
-import defaultAttributes from '../defaultAttributes';
 
-const ${componentName} = createReactComponent('${componentName}', ['svg', defaultAttributes, ${node}]);
+const ${componentName} = createReactComponent('${componentName}', _${componentName});
 
 export default ${componentName};
 `;

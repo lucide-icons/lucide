@@ -9,6 +9,22 @@
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git"
   },
+  "exports": {
+    ".": {
+			"browser": "./dist/umd/lucide.min.js",
+			"umd": "./dist/umd",
+			"import": "./dist/esm",
+			"require": "./dist/cjs"
+		},
+    "./icons": {
+			"import": "./dist/esm/icons/index.js",
+			"require": "./dist/cjs/icons/index.js"
+		},
+    "./icons/*": {
+			"import": "./dist/esm/icons/*.js",
+			"require": "./dist/cjs/icons/*.js"
+		}
+  },
   "amdName": "lucide",
   "source": "build/lucide.js",
   "main": "dist/cjs/lucide.js",
@@ -18,23 +34,10 @@
   "sideEffects": false,
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
-    "clean": "rm -rf dist && rm -rf build",
-    "build:icons": "npx babel-node ../../scripts/buildIcons.js --output=../src --presets @babel/preset-env",
+    "clean": "rm -rf dist && rm -rf build && rm -rf ./src/icons/*.js",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide/src",
     "build:es": "babel src -d dist/esm",
     "build:bundles": "rollup -c rollup.config.js",
     "test": "jest"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.5.1"
-  },
-  "devDependencies": {
-    "babel-preset-react-app": "^10.0.0",
-    "jest": "^26.6.3",
-    "react-test-renderer": "^16.5.1"
-  },
-  "peerDependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.5.1"
   }
 }

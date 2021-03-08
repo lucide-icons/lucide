@@ -17,17 +17,17 @@
   "module": "dist/esm/lucide-react.js",
   "unpkg": "dist/umd/lucide-react.min.js",
   "scripts": {
-    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
-    "clean": "rm -rf dist && rm -rf build",
-    "build:move": "cp -av src build",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/build --templateSrc=../packages/lucide-react/scripts/exportTemplate --camelizeAttrs --noDefaultAttrs --renderUniqueKey",
-    "build:es": "yarn --cwd ../../ babel packages/lucide-react/build -d packages/lucide-react/dist/esm",
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rm -rf dist && rm -rf build && rm -rf ./src/icons/*.js",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/src --templateSrc=../packages/lucide-react/scripts/exportTemplate --renderUniqueKey",
+    "build:es": "yarn --cwd ../../ babel packages/lucide-react/src -d packages/lucide-react/dist/esm",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js",
     "test": "jest"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.5.1"
+    "react": "^16.5.1",
+    "lucide": "0.14.0"
   },
   "devDependencies": {
     "babel-preset-react-app": "^10.0.0",
