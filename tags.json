@@ -140,18 +140,38 @@
   "bell": [
     "alarm",
     "notification",
-    "sound"
+    "sound",
+    "reminder"
+  ],
+  "bell-minus": [
+    "alarm",
+    "notification",
+    "silent",
+    "reminder",
+    "delete",
+    "remove",
+    "erase"
   ],
   "bell-off": [
     "alarm",
     "notification",
-    "silent"
+    "silent",
+    "reminder"
+  ],
+  "bell-plus": [
+    "notification",
+    "silent",
+    "reminder",
+    "add",
+    "create",
+    "new"
   ],
   "bike": [
     "bicycle",
     "transport",
     "trip"
   ],
+  "binary": [],
   "bitcoin": [
     "currency",
     "money",
@@ -280,6 +300,11 @@
     "copy",
     "paste"
   ],
+  "clipboard-list": [
+    "copy",
+    "paste",
+    "tasks"
+  ],
   "clock": [
     "time",
     "watch",
@@ -292,13 +317,24 @@
     "weather",
     "shower"
   ],
+  "cloud-hail": [
+    "weather",
+    "rainfall"
+  ],
   "cloud-lightning": [
     "weather",
     "bolt"
   ],
-  "cloud-off": [],
+  "cloud-off": [
+    "disconnect"
+  ],
   "cloud-rain": [
-    "weather"
+    "weather",
+    "rainfall"
+  ],
+  "cloud-rain-wind": [
+    "weather",
+    "rainfall"
   ],
   "cloud-snow": [
     "weather",
@@ -727,6 +763,14 @@
     "mark",
     "text"
   ],
+  "history": [
+    "time",
+    "redo",
+    "undo",
+    "rewind",
+    "timeline",
+    "version"
+  ],
   "home": [
     "house",
     "living"
@@ -734,6 +778,10 @@
   "image": [
     "picture",
     "photo"
+  ],
+  "image-minus": [
+    "remove",
+    "delete"
   ],
   "image-off": [
     "picture",
@@ -762,6 +810,12 @@
   ],
   "info": [
     "help"
+  ],
+  "inspect": [
+    "element",
+    "mouse",
+    "click",
+    "box"
   ],
   "instagram": [
     "logo",
@@ -1039,6 +1093,11 @@
   "octagon": [
     "stop"
   ],
+  "option": [
+    "key",
+    "mac",
+    "button"
+  ],
   "outdent": [
     "text",
     "tab"
@@ -1068,6 +1127,11 @@
     "vector",
     "drawing",
     "path"
+  ],
+  "pencil": [
+    "edit",
+    "pen",
+    "create"
   ],
   "percent": [
     "discount"
@@ -1157,6 +1221,11 @@
   "radio": [
     "signal"
   ],
+  "radio-receiver": [
+    "device",
+    "music",
+    "connect"
+  ],
   "redo": [
     "undo",
     "history"
@@ -1170,6 +1239,10 @@
     "synchronise",
     "synchronize",
     "arrows"
+  ],
+  "regex": [
+    "search",
+    "text"
   ],
   "repeat": [
     "loop",
@@ -1501,6 +1574,12 @@
   "tv": [
     "television",
     "stream"
+  ],
+  "tv-2": [
+    "flatscreen",
+    "television",
+    "stream",
+    "display"
   ],
   "twitch": [
     "logo"
