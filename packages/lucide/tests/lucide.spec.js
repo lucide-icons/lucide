@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { minify } from 'html-minifier';
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
+const ICONS_DIR = path.resolve(__dirname, '../../../icons');
 
 const getOriginalSvg = (iconName) => {
   const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');

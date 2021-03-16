@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "start": "babel-watch --watch src",
+    "build": "yarn build:lucide && yarn build:lucide-react && yarn build:lucide-vue",
     "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
     "build:lucide": "yarn workspace lucide run build",
     "build:lucide-react": "yarn workspace lucide-react run build",
