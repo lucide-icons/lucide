@@ -116,7 +116,7 @@ createIcons({
     'stroke-width': 1,
     stroke: '#333',
   },
-  nameAttr: 'icon-name', // atrribute for the icon name.
+  nameAttr: 'icon-name', // attribute for the icon name.
 });
 ```
 
