@@ -14,6 +14,6 @@
   <path d="M22 6l-3-3" />
   <path d="M6 19l-2 2" />
   <path d="M18 19l2 2" />
-  <path d="M12 9v8" />
-  <path d="M8 13h8" />
+  <path d="M12 10v6" />
+  <path d="M9 13h6" />
 </svg>
