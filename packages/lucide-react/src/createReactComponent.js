@@ -2,7 +2,7 @@ import { forwardRef, createElement } from 'react';
 import PropTypes from 'prop-types';
 import defaultAttributes from './defaultAttributes';
 
-export default (iconName, [, iconNode]) => {
+export default (iconName, iconNode) => {
   const Component = forwardRef(
     ({ color = 'currentColor', size = 24, strokeWidth = 2, ...rest }, ref) =>
       createElement(

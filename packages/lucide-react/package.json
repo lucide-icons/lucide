@@ -26,8 +26,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.5.1",
-    "lucide": "0.14.0"
+    "react": "^16.5.1"
   },
   "devDependencies": {
     "babel-preset-react-app": "^10.0.0",

@@ -1,14 +1,15 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "site"
   ],
   "scripts": {
     "start": "babel-watch --watch src",
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
     "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
     "build:lucide": "yarn workspace lucide run build",
     "build:lucide-react": "yarn workspace lucide-react run build",
+    "build:lucide-vue": "yarn workspace lucide-vue run build",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
     "addtags": "npx babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env"
   },
@@ -24,7 +25,7 @@
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@rollup/plugin-replace": "^2.4.1",
-    "babel-jest": "^26.3.0",
+    "babel-jest": "^26.6.3",
     "babel-plugin-add-import-extension": "^1.4.3",
     "cheerio": "^1.0.0-rc.2",
     "core-js": "3",
