@@ -38,7 +38,7 @@ fs.readdir(iconsFolder, (err, files) => {
                                   .join("")
 
     // Declare component type
-    const exportTypeString = `export const ${componentName}: LucideIcon;\n`
+    const exportTypeString = `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`
 
     // Add component to the types file
     fs.appendFileSync(
