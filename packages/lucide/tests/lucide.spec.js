@@ -2,14 +2,18 @@ import * as icons from './icons';
 import { createIcons } from '../src/lucide';
 import fs from 'fs';
 import path from 'path';
-import { minify } from 'html-minifier';
+import { parseSync, stringify } from 'svgson';
 
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
 
 const getOriginalSvg = (iconName) => {
   const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
+  const svgParsed = parseSync(svgContent);
 
-  return minify(svgContent, { collapseWhitespace: true, keepClosingSlash: true, });
+  svgParsed.attributes['icon-name'] = iconName;
+  svgParsed.attributes['class'] = 'lucide';
+
+  return stringify(svgParsed, { selfClose: false });
 };
 
 describe('createIcons', () => {
@@ -19,6 +23,8 @@ describe('createIcons', () => {
     createIcons({icons});
 
     const svg = getOriginalSvg('volume-2');
+
+    expect(document.body.innerHTML).toBe(svg)
     expect(document.body.innerHTML).toMatchSnapshot()
   });
 

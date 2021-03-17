@@ -1,8 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import Svgo from 'svgo';
-import cheerio from 'cheerio';
 import { format } from 'prettier';
-
+import { parseSync, stringify } from 'svgson';
 import DEFAULT_ATTRS from './default-attrs.json';
 
 /**
@@ -45,11 +44,11 @@ function optimize(svg) {
  * @returns {string}
  */
 function setAttrs(svg) {
-  const $ = cheerio.load(svg);
+  const contents = parseSync(svg);
 
-  Object.keys(DEFAULT_ATTRS).forEach(key => $('svg').attr(key, DEFAULT_ATTRS[key]));
+  contents.attributes = DEFAULT_ATTRS;
 
-  return $('body').html();
+  return stringify(contents);
 }
 
 export default processSvg;

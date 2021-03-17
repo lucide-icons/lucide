@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-vars */
 import fs from 'fs';
 import path from 'path';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import getArgumentOptions from 'minimist';
 
 import renderIconsObject from './render/renderIconsObject';
-import renderIconNodes from './render/renderIconNodes';
 import generateIconFiles from './build/generateIconFiles';
 import generateExportsFile from './build/generateExportsFile';
 import { readSvgDirectory } from './helpers';
@@ -23,9 +23,7 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-const icons = renderIconsObject(svgFiles, ICONS_DIR);
-
-const iconVNodes = renderIconNodes(icons, cliArguments);
+const icons = renderIconsObject(svgFiles, ICONS_DIR, cliArguments.renderUniqueKey);
 
 const defaultIconFileTemplate = ({ componentName, iconName, children }) => `
     const ${componentName} = [
@@ -41,11 +39,7 @@ const iconFileTemplate = cliArguments.templateSrc
   : defaultIconFileTemplate;
 
 // Generates iconsNodes files for each icon
-generateIconFiles(iconVNodes, OUTPUT_DIR, iconFileTemplate, { showLog: !cliArguments.silent });
+generateIconFiles(icons, OUTPUT_DIR, iconFileTemplate, { showLog: !cliArguments.silent });
 
 // Generates entry files for the compiler filled with icons exports
-generateExportsFile(
-  path.join(SRC_DIR, 'icons/index.js'),
-  path.join(OUTPUT_DIR, 'icons'),
-  iconVNodes,
-);
+generateExportsFile(path.join(SRC_DIR, 'icons/index.js'), path.join(OUTPUT_DIR, 'icons'), icons);

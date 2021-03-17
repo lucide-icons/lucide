@@ -79,7 +79,8 @@ export const readSvgDirectory = directory =>
  * @param {string} fileName
  * @param {string} directory
  */
-export const readSvg = (fileName, directory) => fs.readFileSync(path.join(directory, fileName));
+export const readSvg = (fileName, directory) =>
+  fs.readFileSync(path.join(directory, fileName), 'utf-8');
 
 /**
  * writes content to a file

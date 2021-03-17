@@ -1,18 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import path from 'path';
-import cheerio from 'cheerio';
-import { minify } from 'html-minifier';
-import { readSvg } from '../helpers';
+import { basename } from 'path';
+import { parseSync } from 'svgson';
+import { hash, readSvg } from '../helpers';
 
-/**
- * Get contents between opening and closing `<svg>` tags.
- * @param {string} svg
- * @returns {string}
- */
-function getSvgContents(svg) {
-  const $ = cheerio.load(svg);
-
-  return minify($('svg').html(), { collapseWhitespace: true });
+function generateHashedKey({ name, attributes }) {
+  return hash(JSON.stringify([name, attributes]));
 }
 
 /**
@@ -21,12 +13,21 @@ function getSvgContents(svg) {
  * @param {Function} getSvg - A function that returns the contents of an SVG file given a filename.
  * @returns {Object}
  */
-export default (svgFiles, iconsDirectory) =>
+export default (svgFiles, iconsDirectory, renderUniqueKey = false) =>
   svgFiles
     .map(svgFile => {
-      const name = path.basename(svgFile, '.svg');
+      const name = basename(svgFile, '.svg');
       const svg = readSvg(svgFile, iconsDirectory);
-      const contents = getSvgContents(svg);
+      const contents = parseSync(svg);
+
+      if (renderUniqueKey) {
+        contents.children = contents.children.map(child => {
+          child.attributes.key = generateHashedKey(child);
+
+          return child;
+        });
+      }
+
       return { name, contents };
     })
     .reduce((icons, icon) => {
