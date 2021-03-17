@@ -3,19 +3,17 @@ const path = require("path")
 const srcDirectory = path.join(__dirname, "dist")
 
 // Declare type definitions
-const typeDefinitions = `/// <reference types="react" />
-import {FC, SVGAttributes} from 'react'
+const typeDefinitions = `
+/// <reference types="react" />
+import { SVGAttributes } from 'react'
 
 // Create interface extending SVGAttributes
-interface LucideProps extends SVGAttributes<SVGElement> {
+export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
     color?: string
     size?: string | number
     stroke?: string | number
     strokeWidth?: string | number
 }
-
-// Create type
-type LucideIcon = FC<LucideProps>
 
 // Generated icons
 `
@@ -54,4 +52,3 @@ fs.readdir(iconsFolder, (err, files) => {
   console.log("Generated index.d.ts file with", files.length, "icons")
 
 })
-
