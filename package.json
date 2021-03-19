@@ -18,10 +18,11 @@
   "sideEffects": false,
   "scripts": {
     "start": "babel-watch --watch src",
-    "clean": "rimraf dist && rimraf build",
-    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rimraf dist && rimraf build && rimraf index.d.ts",
+    "build": "yarn clean && yarn build:move && yarn build:icons && yarn build:dts && yarn build:es && yarn build:bundles",
     "build:move": "cp -av src build",
     "build:icons": "npx babel-node ./scripts/buildIcons.js --presets @babel/env",
+    "build:dts": "npx babel-node ./scripts/buildDts.js --presets @babel/env",
     "build:es": "babel build -d dist/esm",
     "build:bundles": "rollup -c rollup.config.js",
     "optimize": "npx babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
