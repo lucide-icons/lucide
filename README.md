@@ -9,6 +9,13 @@
 ## What is Lucide?
 
 Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
+Started after growing disaffection of the moderation of the [Feather Icons](https://github.com/feathericons/feather) project, with over 300+ open issues and over 100+ open PRs, this project no longer maintained. The owner of the project stopped merging icons and want to keep the project like it now is. Hundreds of developers/designer wasted their time trying to contribute, what a shame. We're expanding the icon set as much as possible while keeping it nice-looking, we do it as a community of devs and designers, join us!
+
+### Why choose Lucide over Feather Icons
+
+- Lucide already expended the icon set by 130+ in less then a year, so more icons to work with.
+- Well maintained code base.
+- Active community.
 
 ## Table of Contents
 
