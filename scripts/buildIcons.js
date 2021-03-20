@@ -1,15 +1,12 @@
-/* eslint-disable no-unused-vars */
 import fs from 'fs';
 import path from 'path';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import getArgumentOptions from 'minimist';
+import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
 
 import renderIconsObject from './render/renderIconsObject';
 import generateIconFiles from './build/generateIconFiles';
 import generateExportsFile from './build/generateExportsFile';
-import { readSvgDirectory } from './helpers';
 
-/* eslint-disable import/no-dynamic-require */
+import { readSvgDirectory } from './helpers';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -25,18 +22,9 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const icons = renderIconsObject(svgFiles, ICONS_DIR, cliArguments.renderUniqueKey);
 
-const defaultIconFileTemplate = ({ componentName, iconName, children }) => `
-    const ${componentName} = [
-      '${iconName}',
-      ${JSON.stringify(children)}
-    ];
-
-    export default ${componentName};
-  `;
-
-const iconFileTemplate = cliArguments.templateSrc
-  ? require(cliArguments.templateSrc).default
-  : defaultIconFileTemplate;
+const defaultIconFileTemplate = './templates/defaultIconFileTemplate';
+// eslint-disable-next-line import/no-dynamic-require
+const iconFileTemplate = require(cliArguments.templateSrc || defaultIconFileTemplate).default;
 
 // Generates iconsNodes files for each icon
 generateIconFiles(icons, OUTPUT_DIR, iconFileTemplate, { showLog: !cliArguments.silent });
