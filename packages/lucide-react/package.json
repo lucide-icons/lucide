@@ -22,7 +22,7 @@
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/src --templateSrc=../packages/lucide-react/scripts/exportTemplate --renderUniqueKey",
     "build:es": "yarn --cwd ../../ babel packages/lucide-react/src -d packages/lucide-react/dist/esm",
-    "build:types": "node build-types.js",
+    "build:types": "npx babel-node ./scripts/buildTypes.js --env-name node",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js",
     "test": "jest"
   },
