@@ -57,7 +57,6 @@ export default (element, { nameAttr, icons, attrs }) => {
   const ComponentName = toPascalCase(iconName);
 
   const iconNode = icons[ComponentName];
-  // const iconNode = Object.values(icons).find(({ name }) => name === iconName);
 
   if (!iconNode) {
     return console.warn(

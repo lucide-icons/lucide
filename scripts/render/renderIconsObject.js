@@ -1,11 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
 import { parseSync } from 'svgson';
-import { hash, readSvg } from '../helpers';
-
-function generateHashedKey({ name, attributes }) {
-  return hash(JSON.stringify([name, attributes]));
-}
+import { generateHashedKey, readSvg } from '../helpers';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.
