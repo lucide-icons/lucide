@@ -22,6 +22,8 @@ yarn add lucide
 <script src="https://unpkg.com/lucide@latest"></script>
 ```
 
+## Usage
+
 ### With unpkg
 
 Here is a complete example with unpkg
