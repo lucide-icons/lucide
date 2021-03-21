@@ -25,37 +25,13 @@ We're trying to expanding the icon set as much as possible while keeping it nice
   * [Package managers](#package-managers)
   * [CDN](#cdn)
 * [Usage](#usage)
-  * [Unpkg](#with-unpkg)
-  * [ESModules](#with-esmodules)
-    * [Options](#additional-options)
-    * [Treeshake library](#treeshake-the-library-only-use-the-icons-you-use)
-    * [Custom binding](#custom-element-binding)
-  * [React](#with-react)
-  * [Vue](#with-vue)
+  * [Web](#web)
+  * [React](#react)
+  * [Vue](#vue)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
 * [License](#license)
-
-## Installation
-
-### Package Managers
-
-``` bash
-npm install lucide
-#or
-yarn add lucide
-```
-
-### CDN
-
-``` html
-<!-- Development version -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-<!-- Production version -->
-<script src="https://unpkg.com/lucide@latest"></script>
-```
 
 ## Usage
 
@@ -64,104 +40,23 @@ At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files
 The following are additional ways you can use Lucide.
 With the Javascript library you can easily incorporate the icon you want in your webpage.
 
-### With unpkg
+### Web
 
-Here is a complete example with unpkg
+Implementation of the lucide icon library for web applications.
 
-```html
-<!DOCTYPE html>
-<body>
-  <i icon-name="volume-2" class="my-class"></i>
-  <i icon-name="x"></i>
-  <i icon-name="menu"></i>
+```sh
+npm install lucide
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
+#or
+
+yarn add lucide
 ```
 
-### With ESModules
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
 
-To reduce bundle size, lucide is built to be fully treeshakable.
-The `createIcons` function will search for HTMLElements with the attribute `icon-name` and replace it with the svg from the given icon name.
+### React
 
-```html
-<!-- Your HTML file -->
-<i icon-name="menu"></i>
-```
-
-```js
-import { createIcons, icons } from 'lucide';
-
-// Caution, this will import all the icons and bundle them.
-createIcons({icons});
-
-// Recommended way, to include only the icons you need.
-import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
-
-createIcons({
-  icons: {
-    Menu,
-    ArrowRight,
-    Globe,
-  },
-});
-```
-
-#### Additional Options
-
-In the `createIcons` function you can pass some extra parameters to adjust the `nameAttr` or add custom attributes like for example classes.
-
-Here is a full example:
-
-```js
-import { createIcons } from 'lucide';
-
-createIcons({
-  attrs: {
-    class: ['my-custom-class', 'icon'],
-    'stroke-width': 1,
-    stroke: '#333',
-  },
-  nameAttr: 'icon-name', // attribute for the icon name.
-});
-```
-
-#### Treeshake the library, only use the icons you use
-
-```js
-import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
-
-createIcons({
-  icons: {
-    Menu,
-    ArrowRight,
-    Globe,
-  },
-});
-```
-
-#### Custom Element binding
-
-```js
-import { createElement, Menu } from 'lucide';
-
-const menuIcon = createElement(Menu); // Returns HTMLElement (svg)
-
-// set custom attributes with browser native functions
-menuIcon.setAttribute('stroke', '#333');
-menuIcon.classList.add('my-icon-class');
-
-// Append HTMLElement in webpage
-const myApp = document.getElementById('app');
-myApp.appendChild(menuIcon);
-```
-
-### With React
-
-You can also use the Lucide library using the react package.
+Implementation of the lucide icon library for react applications.
 
 ```sh
 yarn add lucide-react
@@ -171,11 +66,11 @@ yarn add lucide-react
 npm install lucide-react
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react#lucide-react).
 
-### With Vue
+### Vue
 
-You can also use the Lucide library using the Vue package.
+Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue
@@ -185,11 +80,15 @@ yarn add lucide-vue
 npm install lucide-vue
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-vue/README.md).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue).
 
 ### Figma
 
-You can use the components from [this Figma file](https://www.figma.com/file/g0UipfQlRfGrntKPxZknM7/Featherity).
+The lucide figma plugin.
+
+Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
+
+<img width="420" src="https://www.figma.com/community/plugin/939567362549682242/thumbnail" alt="Figma Lucide Cover">
 
 ## Contributing
 
