@@ -9,22 +9,6 @@
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git"
   },
-  "exports": {
-    ".": {
-			"browser": "./dist/umd/lucide.min.js",
-			"umd": "./dist/umd",
-			"import": "./dist/esm",
-			"require": "./dist/cjs"
-		},
-    "./icons": {
-			"import": "./dist/esm/icons/index.js",
-			"require": "./dist/cjs/icons/index.js"
-		},
-    "./icons/*": {
-			"import": "./dist/esm/icons/*.js",
-			"require": "./dist/cjs/icons/*.js"
-		}
-  },
   "amdName": "lucide",
   "source": "build/lucide.js",
   "main": "dist/cjs/lucide.js",

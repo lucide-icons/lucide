@@ -1,4 +1,4 @@
-name: Release to NPM
+name: Release Packages
 
 on:
   push:
@@ -6,94 +6,127 @@ on:
     - 'v*'
 
 jobs:
-  build-and-deploy:
+  pre-build:
     if: github.repository == 'lucide-icons/lucide'
 
     runs-on: ubuntu-latest
 
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      VERSION: ${{ steps.get_version.outputs.VERSION }}
 
     steps:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
 
+  lucide:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          clean: true
+          node-version: '12.x'
 
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      # Build lucide
-      - name: Install Dependencies Lucide
+      - name: Install dependencies
         run: yarn --pure-lockfile
 
-      - name: Build lucide package
-        run: yarn build
-
-      - name: Test lucide package
-        run: yarn test
-
-      # Build lucide-react
-      - name: Install Dependencies lucide-react
-        run: yarn --pure-lockfile
-        working-directory: packages/lucide-react
-
-      - name: Build lucide-react
-        run: yarn build
-        working-directory: packages/lucide-react
-
-      - name: Test lucide-react
-        run: yarn test
-        working-directory: packages/lucide-react
-
-      # Build lucide-vue
-      - name: Install Dependencies lucide-vue
-        run: yarn --pure-lockfile
-        working-directory: packages/lucide-vue
-
-      - name: Build lucide-vue
-        run: yarn build
-        working-directory: packages/lucide-vue
-
-      - name: Test lucide-vue
-        run: yarn test
-        working-directory: packages/lucide-vue
-
-      # Publish lucide
       - name: Set package.json version lucide
-        run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
+        run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
-      - name: publish lucide
-        run: yarn publish
+      - name: Build package
+        run: yarn build
 
-      # Publish lucide-react
-      - name: Set package.json version lucide-react
-        run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
-        working-directory: packages/lucide-react
+      - name: Test package
+        run: yarn test
 
-      - name: publish lucide-react
-        run: yarn publish
-        working-directory: packages/lucide-react
-
-      # Publish lucide-vue
-      - name: Set package.json version lucide-vue
-        run: yarn version --new-version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
-        working-directory: packages/lucide-vue
-
-      - name: publish lucide-vue
-        run: yarn publish
-        working-directory: packages/lucide-vue
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Commit package.json
         run: |
           git add package.json
-          git add packages/lucide-react/package.json
-          git add packages/lucide-vue/package.json
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-            commit -m ":package: Bump version to ${{ steps.get_version.outputs.VERSION }}" --no-verify --quiet
-          git remote set-url --push origin https://lucide-bot:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+            commit -m ":package: Bump version lucide to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
           git push origin HEAD:master
 
+  lucide-react:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+
+      - name: Install dependencies
+        run: yarn --pure-lockfile
+        working-directory: packages/lucide-react
+
+      - name: Set package.json version lucide
+        run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/lucide-react
+
+      - name: Build package
+        run: yarn build
+        working-directory: packages/lucide-react
+
+      - name: Test package
+        run: yarn test
+        working-directory: packages/lucide-react
+
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: packages/lucide-react
+
+      - name: Commit package.json
+        run: |
+          git add packages/lucide-react/package.json
+          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":package: Bump version lucide-react to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+          git push origin HEAD:master
+
+  lucide-vue:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+
+      - name: Install dependencies lucide-vue
+        run: yarn --pure-lockfile
+        working-directory: packages/lucide-vue
+
+      - name: Set package.json version lucide
+        run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/lucide-vue
+
+      - name: Build lucide package
+        run: yarn build
+        working-directory: packages/lucide-vue
+
+      - name: Test lucide package
+        run: yarn test
+        working-directory: packages/lucide-vue
+
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: packages/lucide-vue
+
+      - name: Commit package.json
+        run: |
+          git add packages/lucide-vue/package.json
+          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":package: Bump version lucide-vue to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+          git push origin HEAD:master

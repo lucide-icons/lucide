@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import {
   writeFile,
@@ -8,7 +7,7 @@ import {
   appendFile,
 } from '../../../scripts/helpers';
 
-const srcDirectory = path.join(__dirname, 'dist');
+const srcDirectory = path.join(__dirname, '../dist');
 
 // Declare type definitions
 const typeDefinitions = `
@@ -27,9 +26,10 @@ export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
 `;
 
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const TYPES_FILE = 'lucide-react.d.ts';
 
-resetFile('index.d.ts', srcDirectory);
-writeFile(typeDefinitions, 'index.d.ts', srcDirectory);
+resetFile(TYPES_FILE, srcDirectory);
+writeFile(typeDefinitions, TYPES_FILE, srcDirectory);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
@@ -38,7 +38,7 @@ svgFiles.forEach(svgFile => {
   const componentName = toPascalCase(iconName);
 
   const exportTypeString = `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
-  appendFile(typeDefinitions, 'index.d.ts', exportTypeString);
+  appendFile(exportTypeString, TYPES_FILE, srcDirectory);
 });
 
 console.log('Generated index.d.ts file with', svgFiles.length, 'icons');
