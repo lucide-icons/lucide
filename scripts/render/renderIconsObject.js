@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
 import { parseSync } from 'svgson';
-import { generateHashedKey, readSvg } from '../helpers';
+import { generateHashedKey, readSvg, hasDuplicatedChildren } from '../helpers';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.
@@ -15,6 +15,10 @@ export default (svgFiles, iconsDirectory, renderUniqueKey = false) =>
       const name = basename(svgFile, '.svg');
       const svg = readSvg(svgFile, iconsDirectory);
       const contents = parseSync(svg);
+
+      if (hasDuplicatedChildren(contents.children)) {
+        throw new Error(`Duplicated children in ${name}.svg`);
+      }
 
       if (renderUniqueKey) {
         contents.children = contents.children.map(child => {
