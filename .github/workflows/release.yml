@@ -8,16 +8,19 @@ on:
 jobs:
   pre-build:
     if: github.repository == 'lucide-icons/lucide'
-
     runs-on: ubuntu-latest
-
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
+      YARN_CACHE_DIR: ${{ steps.get_version.outputs.YARN_CACHE_DIR }}
 
     steps:
       - name: Get the version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
 
   lucide:
     if: github.repository == 'lucide-icons/lucide'
@@ -29,29 +32,35 @@ jobs:
         with:
           node-version: '12.x'
 
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
 
-      - name: Set package.json version lucide
-        run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-        working-directory: packages/lucide
+      - name: Set new version
+        run: yarn workspace lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
-      - name: Build package
-        run: yarn build
-        working-directory: packages/lucide
+      - name: Build
+        run: yarn workspace lucide build
 
-      - name: Test package
-        run: yarn test
-        working-directory: packages/lucide
+      - name: Test
+        run: yarn workspace lucide test
 
-      - run: yarn publish
-        working-directory: packages/lucide
+      - name: Publish
+        run: yarn workspace lucide publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Commit package.json
         run: |
-          git add package.json
+          git add packages/lucide/package.json
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
             commit -m ":package: Bump version lucide to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
@@ -67,26 +76,31 @@ jobs:
         with:
           node-version: '12.x'
 
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
-        working-directory: packages/lucide-react
 
       - name: Set package.json version lucide
-        run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-        working-directory: packages/lucide-react
+        run: yarn workspace lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
-      - name: Build package
-        run: yarn build
-        working-directory: packages/lucide-react
+      - name: Build
+        run: yarn workspace lucide-react build
 
-      - name: Test package
-        run: yarn test
-        working-directory: packages/lucide-react
+      - name: Test
+        run: yarn workspace lucide-react test
 
-      - run: yarn publish
+      - name: Publish
+        run: yarn workspace lucide-react publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        working-directory: packages/lucide-react
 
       - name: Commit package.json
         run: |
@@ -106,26 +120,31 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Install dependencies lucide-vue
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
-        working-directory: packages/lucide-vue
 
-      - name: Set package.json version lucide
-        run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-        working-directory: packages/lucide-vue
+      - name: Set new version
+        run: yarn workspace lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
-      - name: Build lucide package
-        run: yarn build
-        working-directory: packages/lucide-vue
+      - name: Build
+        run: yarn workspace lucide-vue build
 
-      - name: Test lucide package
-        run: yarn test
-        working-directory: packages/lucide-vue
+      - name: Test
+        run: yarn workspace lucide-vue test
 
-      - run: yarn publish
+      - name: Publish
+        run: yarn workspace lucide-vue publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        working-directory: packages/lucide-vue
 
       - name: Commit package.json
         run: |
