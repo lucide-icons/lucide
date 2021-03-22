@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { readSvgDirectory, resetFile, appendFile, toPascalCase } from './helpers';
+import { readSvgDirectory, resetFile, appendFile, toPascalCase } from '../../../scripts/helpers';
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 const DTS_FILE_NAME = 'index.d.ts';
