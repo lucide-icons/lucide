@@ -16,6 +16,7 @@
   "main:umd": "dist/umd/lucide.js",
   "module": "dist/esm/lucide.js",
   "unpkg": "dist/umd/lucide.min.js",
+  "typings": "dist/lucide.d.ts",
   "sideEffects": false,
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
