@@ -34,14 +34,18 @@ jobs:
 
       - name: Set package.json version lucide
         run: yarn version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/lucide
 
       - name: Build package
         run: yarn build
+        working-directory: packages/lucide
 
       - name: Test package
         run: yarn test
+        working-directory: packages/lucide
 
       - run: yarn publish
+        working-directory: packages/lucide
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

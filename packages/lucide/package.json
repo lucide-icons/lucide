@@ -7,7 +7,8 @@
   "bugs": "https://github.com/lucide-icons/lucide/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucide-icons/lucide.git"
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide"
   },
   "amdName": "lucide",
   "source": "build/lucide.js",
