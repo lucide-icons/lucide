@@ -1,7 +1,7 @@
 import { Button, Flex, Link, WrapItem, Text, Wrap } from "@chakra-ui/core";
 import download from "downloadjs";
 import JSZip from "jszip";
-import { Download, Github, MousePointerClick } from 'lucide-react';
+import { Download, Github } from 'lucide-react';
 import { IconCustomizerDrawer } from "./IconCustomizerDrawer";
 
 function generateZip(icons) {
@@ -37,7 +37,6 @@ const Header = ({ data }) => {
         justify="center"
       >
         <WrapItem>
-          <MousePointerClick />
           <Button
             leftIcon={<Download/>}
             size="lg"
