@@ -2,34 +2,36 @@ import path from 'path';
 
 import { readSvgDirectory, resetFile, appendFile, toPascalCase } from '../../../scripts/helpers';
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
-const DTS_FILE_NAME = 'index.d.ts';
-const DTS_FILE_ROOT = path.resolve(__dirname, '../');
-
-resetFile(DTS_FILE_NAME, DTS_FILE_ROOT);
+const TARGET_DIR = path.join(__dirname, '../dist');
+const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const TYPES_FILE_NAME = 'lucide.d.ts';
 
 // Generates header of d.ts file include some types and functions
-appendFile(
-  `
-export type IconData = readonly [string, object, IconData?];
-export type IconString = string;
+const typeDefinitions = `\
+export type IconName = string;
+export type IconNode = readonly [tag: string, object:SVGProps<SVGSVGElement>, children:IconNode?];
+export type IconsObj = { [IconName]: IconNode }
 
-export function createElement(ico: IconData): SVGSVGElement;
+export interface Attributes extends Partial<Props<Element>> {}
 
-export declare const icons: { [key: string]: IconData };
+export function createElement(icon: IconNode): SVGSVGElement;
+export function createIcons({ icons: IconsObj, nameAttr: string = 'icon-name', attrs: Attributes = {} }): VoidFunction;
+
+export declare const icons: IconsObj;
 
 // Generated icons
-`,
-  DTS_FILE_NAME,
-  DTS_FILE_ROOT,
-);
+`;
+
+resetFile(TYPES_FILE_NAME, TARGET_DIR);
+appendFile(typeDefinitions, TYPES_FILE_NAME, TARGET_DIR);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
 svgFiles.forEach(svgFile => {
   const nameSvg = path.basename(svgFile, '.svg');
   const namePascal = toPascalCase(nameSvg);
-  appendFile(`export declare const ${namePascal}: IconData;\n`, DTS_FILE_NAME, DTS_FILE_ROOT);
+
+  appendFile(`export declare const ${namePascal}: IconNode;\n`, TYPES_FILE_NAME, TARGET_DIR);
 });
 
-console.log(`Successfully generated '${DTS_FILE_NAME}'.`);
+console.log(`Generated ${TYPES_FILE_NAME} file with`, svgFiles.length, 'icons');

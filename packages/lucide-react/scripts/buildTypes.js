@@ -10,7 +10,7 @@ import {
 const srcDirectory = path.join(__dirname, '../dist');
 
 // Declare type definitions
-const typeDefinitions = `
+const typeDefinitions = `\
 /// <reference types="react" />
 import { SVGAttributes } from 'react'
 
@@ -41,4 +41,4 @@ svgFiles.forEach(svgFile => {
   appendFile(exportTypeString, TYPES_FILE, srcDirectory);
 });
 
-console.log('Generated index.d.ts file with', svgFiles.length, 'icons');
+console.log(`Generated ${TYPES_FILE} file with`, svgFiles.length, 'icons');

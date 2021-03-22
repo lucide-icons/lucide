@@ -1,4 +1,4 @@
-import * as icons from './icons';
+import * as icons from '../src/icons';
 import { createIcons } from '../src/lucide';
 import fs from 'fs';
 import path from 'path';

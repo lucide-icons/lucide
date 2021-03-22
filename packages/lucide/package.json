@@ -22,6 +22,7 @@
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide/src",
     "build:es": "babel src -d dist/esm",
+    "build:types": "yarn --cwd ../../ babel-node packages/lucide/scripts/buildTypes.js",
     "build:bundles": "rollup -c rollup.config.js",
     "test": "jest"
   }
