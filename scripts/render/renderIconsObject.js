@@ -16,6 +16,10 @@ export default (svgFiles, iconsDirectory, renderUniqueKey = false) =>
       const svg = readSvg(svgFile, iconsDirectory);
       const contents = parseSync(svg);
 
+      if (!(contents.children && contents.children.length)) {
+        throw new Error(`${name}.svg has no children!`);
+      }
+
       if (hasDuplicatedChildren(contents.children)) {
         throw new Error(`Duplicated children in ${name}.svg`);
       }
