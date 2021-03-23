@@ -19,7 +19,7 @@
   "typings": "dist/lucide.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "build": "yarn clean && yarn build:icons && yarn build:es && build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide/src",
     "build:es": "babel src -d dist/esm",
