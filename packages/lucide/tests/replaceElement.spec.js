@@ -44,6 +44,7 @@ describe('getClassNames', () => {
 describe('combineClassNames', () => {
   it('should retuns a string of classNames', () => {
     const arrayOfClassnames = [
+      'item',
       {
         class: ['item1','item2','item3']
       },

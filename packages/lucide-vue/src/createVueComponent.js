@@ -1,4 +1,6 @@
-export default (iconName, [tag, defaultAttrs, children]) => ({
+import defaultAttributes from './defaultAttributes';
+
+export default (iconName, iconNode) => ({
   name: iconName,
   functional: true,
   props: {
@@ -27,13 +29,13 @@ export default (iconName, [tag, defaultAttrs, children]) => ({
     },
   ) {
     return createElement(
-      tag,
+      'svg',
       {
         // eslint-disable-next-line prettier/prettier
         class: [defaultClass, data.class, data.staticClass, data.attrs && data.attrs.class].filter(Boolean),
         style: [data.style, data.staticStyle, data.attrs && data.attrs.style].filter(Boolean),
         attrs: {
-          ...defaultAttrs,
+          ...defaultAttributes,
           width: size,
           height: size,
           stroke: color,
@@ -41,7 +43,7 @@ export default (iconName, [tag, defaultAttrs, children]) => ({
           ...data.attrs,
         },
       },
-      children.map(([childTag, childAttrs]) => createElement(childTag, { attrs: childAttrs })),
+      iconNode.map(([tag, attrs]) => createElement(tag, { attrs })),
     );
   },
 });

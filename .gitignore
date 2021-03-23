@@ -4,10 +4,9 @@
 node_modules
 dist
 build
-/lib
 sandbox
 stash
 coverage
 stats
 *.log
-index.d.ts
+packages/**/src/icons/*.js

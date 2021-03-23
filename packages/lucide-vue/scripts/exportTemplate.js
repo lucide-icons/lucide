@@ -1,8 +1,7 @@
-export default ({ componentName, node }) => `
+export default ({ componentName, children }) => `
 import createVueComponent from '../createVueComponent';
-import defaultAttributes from '../defaultAttributes';
 
-const ${componentName} = createVueComponent('${componentName}Icon', ['svg', defaultAttributes, ${node}]);
+const ${componentName} = createVueComponent('${componentName}Icon', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;

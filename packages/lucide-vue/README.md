@@ -1,6 +1,8 @@
 # Lucide Vue
 
-Use the lucide icon library in you Vue app.
+Implementation of the lucide icon library for Vue applications.
+
+> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
 ## Installation
 

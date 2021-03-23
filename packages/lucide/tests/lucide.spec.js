@@ -1,15 +1,19 @@
-import * as icons from './icons';
+import * as icons from '../src/icons';
 import { createIcons } from '../src/lucide';
 import fs from 'fs';
 import path from 'path';
-import { minify } from 'html-minifier';
+import { parseSync, stringify } from 'svgson';
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
+const ICONS_DIR = path.resolve(__dirname, '../../../icons');
 
 const getOriginalSvg = (iconName) => {
   const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
+  const svgParsed = parseSync(svgContent);
 
-  return minify(svgContent, { collapseWhitespace: true, keepClosingSlash: true, });
+  svgParsed.attributes['icon-name'] = iconName;
+  svgParsed.attributes['class'] = 'lucide';
+
+  return stringify(svgParsed, { selfClose: false });
 };
 
 describe('createIcons', () => {
@@ -19,6 +23,8 @@ describe('createIcons', () => {
     createIcons({icons});
 
     const svg = getOriginalSvg('volume-2');
+
+    expect(document.body.innerHTML).toBe(svg)
     expect(document.body.innerHTML).toMatchSnapshot()
   });
 
@@ -36,10 +42,10 @@ describe('createIcons', () => {
   });
 
   it('should add custom attributes', () => {
-    document.body.innerHTML = `<i icon-name="volume-2"></i>`;
+    document.body.innerHTML = `<i icon-name="volume-2" class="lucide"></i>`;
 
     const attrs = {
-      class: 'icon custom-class',
+      class: 'lucide icon custom-class',
       fill: 'black',
     };
 
@@ -53,6 +59,8 @@ describe('createIcons', () => {
 
       return acc;
     },{})
+
+    expect(document.body.innerHTML).toMatchSnapshot();
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });
