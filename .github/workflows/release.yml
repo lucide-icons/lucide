@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
-      YARN_CACHE_DIR: ${{ steps.get_version.outputs.YARN_CACHE_DIR }}
+      YARN_CACHE_DIR: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
 
     steps:
       - name: Get the version
@@ -19,7 +19,7 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
 
       - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
+        id: yarn_cache
         run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
 
   lucide:
