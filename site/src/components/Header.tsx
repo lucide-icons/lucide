@@ -1,8 +1,8 @@
-import {Button, Flex, Link, WrapItem, Text, Wrap,} from "@chakra-ui/core";
+import { Button, Flex, Link, WrapItem, Text, Wrap } from "@chakra-ui/core";
 import download from "downloadjs";
 import JSZip from "jszip";
 import { Download, Github } from 'lucide-react';
-import {IconCustomizerDrawer} from "./IconCustomizerDrawer";
+import { IconCustomizerDrawer } from "./IconCustomizerDrawer";
 
 function generateZip(icons) {
   const zip = new JSZip();
@@ -31,7 +31,6 @@ const Header = ({ data }) => {
         An open-source icon library, a fork of <Link href="https://github.com/feathericons/feather" isExternal>Feather Icons</Link>. <br/>We're expanding the icon set as much as possible while keeping it nice-looking - <Link href={repositoryUrl} isExternal>join us</Link>!
       </Text>
       <Wrap
-        isInline
         marginTop={3}
         marginBottom={10}
         spacing="15px"

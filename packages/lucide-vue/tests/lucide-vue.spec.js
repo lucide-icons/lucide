@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import { Smile } from '..'
+import { Smile } from '../src/icons'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {

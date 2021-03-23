@@ -1,8 +1,7 @@
-export default ({ componentName, node }) => `
+export default ({ componentName, children }) => `
 import createReactComponent from '../createReactComponent';
-import defaultAttributes from '../defaultAttributes';
 
-const ${componentName} = createReactComponent('${componentName}', ['svg', defaultAttributes, ${node}]);
+const ${componentName} = createReactComponent('${componentName}', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;

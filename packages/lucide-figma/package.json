@@ -2,6 +2,7 @@
   "name": "lucide-figma",
   "version": "0.13.0",
   "license": "ISC",
+  "private": true,
   "main": "build/ui.js",
   "scripts": {
     "build": "webpack --mode=production",
