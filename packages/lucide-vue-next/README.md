@@ -7,11 +7,11 @@ Implementation of the lucide icon library for Vue 3 applications.
 ## Installation
 
 ```sh
-yarn add lucide-vue
+yarn add lucide-vue-next
 
 # or
 
-npm install lucide-vue
+npm install lucide-vue-next
 ```
 
 ## How to use
@@ -33,7 +33,7 @@ You can pass additional props to adjust the icon.
 
 <script>
 // Returns Vue component
-import { Camera } from 'lucide-vue';
+import { Camera } from 'lucide-vue-next';
 
 export default {
   name: "My Component",
@@ -76,7 +76,7 @@ It is possible to create one generic icon component to load icons.
 </template>
 
 <script>
-import * as icons from "lucide-vue";
+import * as icons from "lucide-vue-next";
 
 export default {
   props: {
