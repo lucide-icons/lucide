@@ -1,7 +1,7 @@
 import { h } from 'vue';
 import defaultAttributes from './defaultAttributes';
 
-const createLucideIcon = (iconName, iconNode) => (props, context) =>
+const createVueComponent = (iconName, iconNode) => (props, context) =>
   h(
     'svg',
     {
@@ -12,4 +12,4 @@ const createLucideIcon = (iconName, iconNode) => (props, context) =>
     iconNode.map(child => h(...child)),
   );
 
-export default createLucideIcon;
+export default createVueComponent;

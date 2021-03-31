@@ -1,6 +1,6 @@
-# Lucide Vue
+# Lucide Vue Next
 
-Implementation of the lucide icon library for Vue applications.
+Implementation of the lucide icon library for Vue 3 applications.
 
 > What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 

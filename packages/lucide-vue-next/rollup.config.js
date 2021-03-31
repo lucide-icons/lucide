@@ -1,11 +1,11 @@
 import plugins from '../../rollup.plugins';
 import pkg from './package.json';
 
-const packageName = 'LucideVue';
-const outputFileName = 'lucide-vue';
-const rootDir = 'packages/lucide-vue'; // It runs from the root
+const packageName = 'LucideVueNext';
+const outputFileName = 'lucide-vue-next';
+const rootDir = 'packages/lucide-vue-next'; // It runs from the root
 const outputDir = `${rootDir}/dist`;
-const inputs = [`${rootDir}/src/lucide-vue.js`];
+const inputs = [`${rootDir}/src/lucide-vue-next.js`];
 const bundles = [
   {
     format: 'umd',
