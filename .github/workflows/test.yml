@@ -1,0 +1,11 @@
+name: yarn version
+
+on: ['push']
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Yarn
+        run: yarn -v
