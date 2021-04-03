@@ -8,16 +8,7 @@ const TYPES_FILE_NAME = 'lucide.d.ts';
 import defaultAttributes from '../src/defaultAttributes';
 // Generates header of d.ts file include some types and functions
 const typeDefinitions = `\
-export interface Attributes {
-  width?: number;
-  height?: number;
-  viewBox?: string;
-  fill?: string;
-  stroke?: string;
-  'stroke-width'?: number;
-  'stroke-linecap'?: string;
-  'stroke-linejoin'?: string;
-}
+export interface SVGProps extends Partial<SVGElement> ${JSON.stringify(defaultAttributes, null, 2)}
 
 export declare type IconNode = readonly [string, object];
 export declare type IconData = readonly [tag: string, object: object, children: IconNode[]];
