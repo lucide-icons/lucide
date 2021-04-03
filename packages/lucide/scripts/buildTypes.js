@@ -12,7 +12,7 @@ export interface SVGProps extends Partial<SVGElement> ${JSON.stringify(defaultAt
 
 export declare type IconNode = readonly [tag: string, attrs:SVGProps, children?:IconNode];
 export declare type CustomAttrs = { [attr:string]: any }
-export type Icons = { [key: string]: IconData }
+export type Icons = { [key: string]: IconNode }
 
 export interface CreateIconsOptions {
   /**
