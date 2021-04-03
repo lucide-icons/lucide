@@ -41,7 +41,7 @@ export interface CreateIconsOptions {
   attrs?: CustomAttrs;
 }
 
-export function createElement(icon: IconData): SVGSVGElement;
+export function createElement(icon: IconNode): SVGSVGElement;
 export function createIcons(options: CreateIconsOptions): VoidFunction;
 
 export declare const icons: Icons;
