@@ -38,7 +38,7 @@ export interface CreateIconsOptions {
    *
    * @default undefined
    */
-  attrs?: Attributes;
+  attrs?: CustomAttrs;
 }
 
 export function createElement(icon: IconData): SVGSVGElement;
