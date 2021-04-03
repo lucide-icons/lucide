@@ -42,7 +42,7 @@ export interface CreateIconsOptions {
 }
 
 export function createElement(icon: IconNode): SVGSVGElement;
-export function createIcons(options: CreateIconsOptions): VoidFunction;
+export function createIcons(options: CreateIconsOptions): void;
 
 export declare const icons: Icons;
 
