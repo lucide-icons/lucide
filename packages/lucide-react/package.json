@@ -19,7 +19,7 @@
   "typings": "dist/lucide-react.d.ts",
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
-    "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/src --templateSrc=../packages/lucide-react/scripts/exportTemplate --renderUniqueKey",
     "build:es": "yarn --cwd ../../ babel packages/lucide-react/src -d packages/lucide-react/dist/esm",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-react/scripts/buildTypes.js",
