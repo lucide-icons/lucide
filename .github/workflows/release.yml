@@ -166,9 +166,9 @@ jobs:
     - uses: actions/download-artifact@v2
 
     - name: Commit package.jsons
-        run: |
-          git add packages/*/package.json
-          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-            commit -m ":package: Bump version lucide to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
-          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push origin HEAD:master
+      run: |
+        git add packages/*/package.json
+        git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+          commit -m ":package: Bump version lucide to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+        git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+        git push origin HEAD:master
