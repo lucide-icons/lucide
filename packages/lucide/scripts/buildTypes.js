@@ -5,7 +5,9 @@ import { readSvgDirectory, resetFile, appendFile, toPascalCase } from '../../../
 const TARGET_DIR = path.join(__dirname, '../dist');
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
 const TYPES_FILE_NAME = 'lucide.d.ts';
+
 import defaultAttributes from '../src/defaultAttributes';
+
 // Generates header of d.ts file include some types and functions
 const typeDefinitions = `\
 export interface SVGProps extends Partial<SVGElement> ${JSON.stringify(defaultAttributes, null, 2)}
