@@ -1,0 +1,37 @@
+name: Continuous integration icons
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - icons/**
+
+jobs:
+  create-release:
+    if: github.repository == 'lucide-icons/lucide'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create change log
+        id: change-log
+        run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
+
+      - name: Create new version
+        id: new-version
+        run: echo ""::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: ${{ github.ref }}
+

@@ -59,13 +59,10 @@ jobs:
       - name: Publish
         run: yarn workspace lucide publish
 
-      - name: Commit package.json
-        run: |
-          git add packages/lucide/package.json
-          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-            commit -m ":package: Bump version lucide to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
-          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push origin HEAD:master
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          path: packages/lucide/package.json
 
   lucide-react:
     if: github.repository == 'lucide-icons/lucide'
@@ -103,6 +100,11 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-react publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          path: packages/lucide-react/package.json
 
       - name: Commit package.json
         run: |
@@ -149,10 +151,24 @@ jobs:
       - name: Publish
         run: yarn workspace lucide-vue publish
 
-      - name: Commit package.json
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          path: packages/lucide-vue/package.json
+
+  upload-package-jsons:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: [lucide, lucide-react, lucide-vue]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+
+    - name: Commit package.jsons
         run: |
-          git add packages/lucide-vue/package.json
+          git add packages/*/package.json
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-            commit -m ":package: Bump version lucide-vue to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+            commit -m ":package: Bump version lucide to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
           git push origin HEAD:master
