@@ -1,10 +1,9 @@
 {
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "site"
-    ],
+  "workspaces": [
+    "packages/*",
+    "site"
+  ],
     "nohoist": [
       "**/jest", "**/jest/**",
       "**/jasmine", "**/jasmine/**",
@@ -19,7 +18,6 @@
     "build": "yarn lucide build && yarn lucide-react build && yarn lucide-vue build",
     "test": "yarn lucide build:icons && yarn lucide-react build:icons && yarn lucide-vue build:icons && jest",
     "lucide": "yarn workspace lucide",
-    "lucide-angular": "yarn workspace lucide-angular",
     "lucide-react": "yarn workspace lucide-react",
     "lucide-vue": "yarn workspace lucide-vue",
     "build:icons": "babel-node ./scripts/buildIcons.js --presets @babel/env",
