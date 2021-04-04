@@ -17,13 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create new version
+        id: new-version
+        run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
+
       - name: Create change log
         id: change-log
         run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
-
-      - name: Create new version
-        id: new-version
-        run: echo ""::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
 
       - name: Create Release
         id: create_release
@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           release_name: Release ${{ github.ref }}
-          body: ${{ github.ref }}
+          body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
