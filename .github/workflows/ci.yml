@@ -20,6 +20,9 @@ jobs:
       - name: Fetch tags
         run: git fetch --tags
 
+      - name: Current tag
+        run: git describe --tags --abbrev=0 2>/dev/null
+
       - name: Get yarn cache directory path
         id: yarn_cache
         run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
