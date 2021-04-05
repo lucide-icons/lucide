@@ -15,14 +15,14 @@ jobs:
 
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Get yarn cache directory path
         id: yarn_cache
         run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
 
       - name: Get cached packaged
-      - uses: actions/cache@v2
+        uses: actions/cache@v2
         id: yarn-cache
         with:
           path: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
