@@ -42,6 +42,9 @@ jobs:
       #   id: change-log
       #   run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
 
+      - name: Fetch tags
+        run: git fetch --tags
+
       - name: Tag test
         run: git tag --list 2>/dev/null | tail -n1 2>/dev/null
 
