@@ -14,8 +14,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn --pure-lockfile
 
       - name: Create new version
         id: new-version
@@ -25,13 +36,16 @@ jobs:
         id: change-log
         run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
-          release_name: Release ${{ github.ref }}
-          body: ${{ steps.change-log.outputs.CHANGE_LOG }}
+      - name: Tag test
+        run: git tag --list
+
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      #   with:
+      #     tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
+      #     release_name: Release ${{ github.ref }}
+      #     body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
