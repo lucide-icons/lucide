@@ -17,33 +17,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Get yarn cache directory path
-        id: yarn_cache
-        run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
+      # - name: Get yarn cache directory path
+      #   id: yarn_cache
+      #   run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
 
-      - name: Get cached packaged
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+      # - name: Get cached packaged
+      #   uses: actions/cache@v2
+      #   id: yarn-cache
+      #   with:
+      #     path: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
+      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-yarn-
 
-      - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --pure-lockfile
+      # - name: Install dependencies
+      #   if: steps.yarn-cache.outputs.cache-hit != 'true'
+      #   run: yarn --pure-lockfile
 
-      - name: Create new version
-        id: new-version
-        run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
+      # - name: Create new version
+      #   id: new-version
+      #   run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
 
-      - name: Create change log
-        id: change-log
-        run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
+      # - name: Create change log
+      #   id: change-log
+      #   run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
 
       - name: Tag test
-        run: git tag --list
+        run: git tag --list 2>/dev/null | tail -n1 2>/dev/null
 
       # - name: Create Release
       #   id: create_release
