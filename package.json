@@ -13,7 +13,7 @@
     "build:icons": "babel-node ./scripts/buildIcons.js --presets @babel/env",
     "optimize": "babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
     "addtags": "babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
-    "generate:changelog": "npx babel-node ./scripts/generateChangelog.js --presets @babel/env"
+    "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.25.2",

@@ -29,7 +29,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
-        id: yarn-cache
         with:
           path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -37,7 +36,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
 
       - name: Set Auth Token
@@ -67,7 +65,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
-        id: yarn-cache
         with:
           path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -75,7 +72,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
 
       - name: Set Auth Token
@@ -109,7 +105,6 @@ jobs:
           node-version: '12.x'
 
       - uses: actions/cache@v2
-        id: yarn-cache
         with:
           path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -117,7 +112,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
 
       - name: Set Auth Token
