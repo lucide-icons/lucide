@@ -28,13 +28,6 @@ function tag_hash(){
   echo "$TAG_HASH"
 }
 
-## get latest tag in specified branch
-function latest_tag(){
-  #local TAG=$(git describe --tags $(git rev-list --tags --max-count=1 2>/dev/null) 2>/dev/null)
-  local TAG=$(git describe --tags --abbrev=0 2>/dev/null)
-  echo "$TAG"
-}
-
 ## get latest revision number
 function latest_revision(){
   local REV=$(git rev-list --count HEAD 2>/dev/null)
@@ -152,10 +145,9 @@ function compose(){
 INIT_VERSION=0.0.0.0-alpha
 
 # do GIT data extracting
-TAG=$(latest_tag)
+TAG=$(highest_tag)
 REVISION=$(latest_revision)
 BRANCH=$(current_branch)
-TOP_TAG=$(highest_tag)
 TAG_HASH=$(tag_hash $TAG)
 HEAD_HASH=$(head_hash)
 
