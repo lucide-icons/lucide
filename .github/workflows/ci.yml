@@ -26,7 +26,6 @@ jobs:
 
       - name: Get cached packaged
         uses: actions/cache@v2
-        id: yarn-cache
         with:
           path: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -34,7 +33,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --pure-lockfile
 
       - name: Create new version
