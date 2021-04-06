@@ -28,6 +28,7 @@ We're trying to expanding the icon set as much as possible while keeping it nice
   * [Web](#web)
   * [React](#react)
   * [Vue](#vue)
+  * [Angular](#angular)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
@@ -81,6 +82,18 @@ npm install lucide-vue
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue).
+
+### Angular
+
+```sh
+yarn add lucide-angular
+
+# or
+
+npm install lucide-angular
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/packages/lucide-angular/projects/lucide-angular#lucide-angular).
 
 ### Figma
 

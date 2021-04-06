@@ -1,6 +1,8 @@
 # Lucide Angular
 
-Use the lucide icon library in you angular app.
+Implementation of the lucide icon library for angular applications.
+
+> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
 ## Installation
 
