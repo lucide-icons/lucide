@@ -20,6 +20,10 @@ jobs:
       - name: Fetch tags
         run: git fetch --tags
 
+      - name: Get latest tag
+        id: latest-tag
+        run: echo "::set-output name=LATEST_TAG::$(git tag --list 2>/dev/null | tail -n1 2>/dev/null)"
+
       - name: Get yarn cache directory path
         id: yarn_cache
         run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
@@ -41,7 +45,14 @@ jobs:
 
       - name: Create change log
         id: change-log
-        run: echo "::set-output name=CHANGE_LOG::$(yarn generate:changelog)"
+        run: |
+          CHANGE_LOG=$(yarn generate:changelog --old-tag=${{ steps.latest-tag.outputs.NEW_VERSION }})
+          CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
+          CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
+          CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
+          echo "::set-output name=CHANGE_LOG::$CHANGE_LOG"
+        env:
+          GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check output
         run: |

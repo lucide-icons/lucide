@@ -1,4 +1,5 @@
 import githubApi from './githubApi';
+import getArgumentOptions from 'minimist';
 
 const fetchCompareTags = oldTag =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...master`);
@@ -34,9 +35,11 @@ const fetchCommits = async file => {
   return { ...file, commits };
 };
 
+const cliArguments = getArgumentOptions(process.argv.slice(2));
+
 // eslint-disable-next-line func-names
 (async function() {
-  const output = await fetchCompareTags('v0.13.0');
+  const output = await fetchCompareTags(cliArguments['old-tag']);
   const changedFiles = output.files.filter(
     ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
   );
