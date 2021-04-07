@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
+    #if: github.repository == 'lucide-icons/lucide'
 
     runs-on: ubuntu-latest
 
