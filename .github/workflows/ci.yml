@@ -39,9 +39,6 @@ jobs:
       - name: Install dependencies
         run: yarn --pure-lockfile
 
-      - name: Test workflow
-        run: .github/workflows/version-up.sh --patch
-
       - name: Create new version
         id: new-version
         run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
@@ -49,7 +46,7 @@ jobs:
       - name: Create change log
         id: change-log
         run: |
-          CHANGE_LOG=$(yarn generate:changelog --old-tag=${{ steps.latest-tag.outputs.NEW_VERSION }})
+          CHANGE_LOG=$(yarn generate:changelog --old-tag=${{ steps.new-version.outputs.NEW_VERSION }})
           CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
           CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
           CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
