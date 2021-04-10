@@ -46,7 +46,7 @@ jobs:
       - name: Create change log
         id: change-log
         run: |
-          CHANGE_LOG=$(yarn generate:changelog --old-tag=${{ steps.new-version.outputs.NEW_VERSION }})
+          CHANGE_LOG=$(yarn generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
           CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
           CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
           CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
