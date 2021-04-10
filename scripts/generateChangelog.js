@@ -1,5 +1,5 @@
+import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
 import githubApi from './githubApi';
-import getArgumentOptions from 'minimist';
 
 const fetchCompareTags = oldTag =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...master`);
@@ -39,41 +39,45 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 
 // eslint-disable-next-line func-names
 (async function() {
-  const output = await fetchCompareTags(cliArguments['old-tag']);
-  const changedFiles = output.files.filter(
-    ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
-  );
+  try {
+    const output = await fetchCompareTags(cliArguments['old-tag']);
+    const changedFiles = output.files.filter(
+      ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
+    );
 
-  const commits = await Promise.all(changedFiles.map(fetchCommits));
+    const commits = await Promise.all(changedFiles.map(fetchCommits));
 
-  const mappedCommits = commits
-    .map(({ commits: [pr], filename, sha, status }) => {
-      const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr.commit.message);
-      const nameRegex = /^\/?(.+\/)*(.+)\.(.+)$/g.exec(filename);
+    const mappedCommits = commits
+      .map(({ commits: [pr], filename, sha, status }) => {
+        const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr.commit.message);
+        const nameRegex = /^\/?(.+\/)*(.+)\.(.+)$/g.exec(filename);
 
-      return {
-        filename,
-        name: nameRegex && nameRegex[2] ? nameRegex[2] : null,
-        title: pullNumber && pullNumber[1] ? pullNumber[1].trim() : null,
-        pullNumber: pullNumber && pullNumber[2] ? pullNumber[2].trim() : null,
-        author: pr.author.login,
-        sha,
-        status,
-      };
-    })
-    .filter(({ pullNumber }) => !!pullNumber);
+        return {
+          filename,
+          name: nameRegex && nameRegex[2] ? nameRegex[2] : null,
+          title: pullNumber && pullNumber[1] ? pullNumber[1].trim() : null,
+          pullNumber: pullNumber && pullNumber[2] ? pullNumber[2].trim() : null,
+          author: pr.author.login,
+          sha,
+          status,
+        };
+      })
+      .filter(({ pullNumber }) => !!pullNumber);
 
-  const changelog = topics.map(({ title, filter, template }) => {
-    const lines = mappedCommits.filter(filter).map(template);
+    const changelog = topics.map(({ title, filter, template }) => {
+      const lines = mappedCommits.filter(filter).map(template);
 
-    if (lines.length) {
-      return [`## ${title}`, ' ', ...lines, ' '];
-    }
+      if (lines.length) {
+        return [`## ${title}`, ' ', ...lines, ' '];
+      }
 
-    return [''];
-  });
+      return [''];
+    });
 
-  const changelogMarkown = changelog.flat().join('\n');
+    const changelogMarkown = changelog.flat().join('\n');
 
-  console.log(changelogMarkown);
+    console.log(changelogMarkown);
+  } catch (error) {
+    console.error(error);
+  }
 })();
