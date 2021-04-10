@@ -57,15 +57,16 @@ jobs:
 
       - name: Check output
         run: |
-          echo ${{ steps.new-version.outputs.NEW_VERSION }}
-          echo ${{ steps.change-log.outputs.CHANGE_LOG }}
-      # - name: Create Release
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      #   with:
-      #     tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
-      #     release_name: Release ${{ steps.new-version.outputs.NEW_VERSION }}
-      #     body: ${{ steps.change-log.outputs.CHANGE_LOG }}
+          echo "${{ steps.new-version.outputs.NEW_VERSION }}"
+          echo "${{ steps.change-log.outputs.CHANGE_LOG }}"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
+          release_name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
+          body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
