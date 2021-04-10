@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - icons/**
+    paths:
+      - icons/**
 
 jobs:
   create-release:
-    #if: github.repository == 'lucide-icons/lucide'
+    # if: github.repository == 'lucide-icons/lucide'
 
     runs-on: ubuntu-latest
 
