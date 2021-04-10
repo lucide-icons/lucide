@@ -12,12 +12,13 @@ Feel free to open a pull-request to contribute to this project.
 [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 Guidelines for pull requests:
+
 - __Make your commit messages as descriptive as possible.__ Include as much information as you can. Explain anything that the file diffs themselves won’t make apparent.
 - __Document your pull request__. Explain your fix, link to the relevant issue, add screenshots when adding new icons.
 - __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `master` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
-###  Pull Requests Including Icons
+### Pull Requests Including Icons
 
 #### Guidelines
 
@@ -27,7 +28,7 @@ Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md)
 #### Submitting Mulitple Icons
 
 If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
-So don't submit multiple icons in one PR that have noting to do with each other. 
+So don't submit multiple icons in one PR that have noting to do with each other.
 So for example don't create one PR with icons: `arrow-up`, `bicycle`, `arrow-down`.
 Seperate them by two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
 
@@ -38,4 +39,5 @@ Before creating an icon request, please search to see if someone has requested t
 If the icon has not already been requested, [create an issue](https://github.com/lucide-icons/lucide/issues/new?title=Icon%20Request:) with a title of `Icon request: <icon name>` and add as much information as possible.
 
 ## Icon Requests from Feather
+
 If you are a designer who wants to contribute to Lucide but you don't know what icons to work on, then have a look at the Requests from Feather. All open, unfinished and valid requests can be found in [Feather Icon Requests](https://github.com/lucide-icons/lucide/issues/119).
