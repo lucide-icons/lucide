@@ -47,6 +47,10 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 
     const commits = await Promise.all(changedFiles.map(fetchCommits));
 
+    if (!commits.length) {
+      throw new Error('No commits found');
+    }
+
     const mappedCommits = commits
       .map(({ commits: [pr], filename, sha, status }) => {
         const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr.commit.message);
@@ -78,6 +82,6 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 
     console.log(changelogMarkown);
   } catch (error) {
-    console.error(error);
+    throw new Error(error);
   }
 })();
