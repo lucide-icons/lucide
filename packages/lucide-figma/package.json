@@ -1,0 +1,27 @@
+{
+  "name": "lucide-figma",
+  "version": "0.15.0",
+  "license": "ISC",
+  "private": true,
+  "main": "build/ui.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --mode=development --watch"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "css-loader": "^3.0.0",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "lucide-react": "^0.15.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}

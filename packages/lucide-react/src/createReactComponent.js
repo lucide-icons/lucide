@@ -1,28 +1,29 @@
 import { forwardRef, createElement } from 'react';
 import PropTypes from 'prop-types';
+import defaultAttributes from './defaultAttributes';
 
-export default (iconName, [tag, attrs, children]) => {
+export default (iconName, iconNode) => {
   const Component = forwardRef(
     ({ color = 'currentColor', size = 24, strokeWidth = 2, ...rest }, ref) =>
       createElement(
-        tag,
+        'svg',
         {
           ref,
-          ...attrs,
+          ...defaultAttributes,
           width: size,
           height: size,
-          color,
+          stroke: color,
           strokeWidth,
           ...rest,
         },
-        children.map(([childTag, childAttrs]) => createElement(childTag, childAttrs)),
+        iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
       ),
   );
 
   Component.propTypes = {
     color: PropTypes.string,
     size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   };
 
   Component.displayName = `${iconName}`;

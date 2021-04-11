@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Grid } from '..'
+import { Grid } from '../src/icons'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {

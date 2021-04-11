@@ -2,6 +2,7 @@ name: Build Lucide
 on:
   push:
     branches: [ master ]
+
   pull_request:
     branches: [ master ]
 
@@ -13,19 +14,15 @@ jobs:
 
     - name: Clone 'Lucide'
       uses: actions/checkout@v2
-    
+
     - name: Update repos
       run: sudo apt-get update
 
     - name: Install FontForge
       run: sudo apt-get install zlib1g-dev fontforge
-    
-    - name: Install NodeJS and Yarn
-      run: sudo apt-get install nodejs yarn
 
     - name: Clone sfnt2woff-zopfli repo
       run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
-
 
     - name: Install and move sfnt2woff-zopfli
       run: |
@@ -36,7 +33,6 @@ jobs:
     - name: Clone woff2
       run: git clone --recursive https://github.com/google/woff2.git
 
-
     - name: Install woff2
       run: |
           cd woff2
@@ -45,17 +41,15 @@ jobs:
 
     - name: Install Font Custom dependency
       run: sudo gem install fontcustom
-    
+
     - name: Install "outline-stroke"
-      run: sudo yarn add svg-outline-stroke svgson
-    
+      run: sudo yarn add svg-outline-stroke -W
+
     - name: "Outline SVG"
       run: mkdir converted_icons && node scripts/outline_svg.js
 
-    
     - name: Build 'Lucide'
       run: echo "Building Lucide font" && fontcustom compile ./converted_icons -h -n Lucide -o build -F
-
 
     - name: Zip 'Lucide'
       run: zip -r Lucide.zip build
