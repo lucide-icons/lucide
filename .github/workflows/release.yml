@@ -56,6 +56,7 @@ jobs:
       - name: Upload package.json
         uses: actions/upload-artifact@v2
         with:
+          name: lucide-package-json
           path: packages/lucide/package.json
 
   lucide-react:
@@ -92,6 +93,7 @@ jobs:
       - name: Upload package.json
         uses: actions/upload-artifact@v2
         with:
+          name: lucide-react-package-json
           path: packages/lucide-react/package.json
 
   lucide-vue:
@@ -132,6 +134,7 @@ jobs:
       - name: Upload package.json
         uses: actions/upload-artifact@v2
         with:
+          name: lucide-vue-package-json
           path: packages/lucide-vue/package.json
 
   upload-package-jsons:
