@@ -1,8 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies, global-require, func-names */
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 process.env.CHROME_BIN = require('puppeteer').executablePath();
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -11,7 +12,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
     ],
     client: {
       jasmine: {
@@ -20,18 +21,15 @@ module.exports = function (config) {
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
       },
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     jasmineHtmlReporter: {
-      suppressAll: true // removes the duplicated traces
+      suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
       dir: require('path').join(__dirname, '../../coverage/lucide-angular'),
       subdir: '.',
-      reporters: [
-        { type: 'html' },
-        { type: 'text-summary' }
-      ]
+      reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
@@ -42,10 +40,10 @@ module.exports = function (config) {
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
+        flags: ['--no-sandbox'],
+      },
     },
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
   });
 };

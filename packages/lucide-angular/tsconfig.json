@@ -11,10 +11,10 @@
     "experimentalDecorators": true,
     "allowJs": true,
     "paths": {
-      "lucide-angular": [
-        "dist/lucide-angular/lucide-angular",
-        "dist/lucide-angular"
-      ]
+      // "lucide-angular": [
+      //   "dist"
+      // ],
+      "@/*": ["./src/*"],
     },
     "moduleResolution": "node",
     "importHelpers": true,

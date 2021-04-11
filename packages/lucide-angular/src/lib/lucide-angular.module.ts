@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders, Optional } from '@angular/core';
 import { LucideAngularComponent } from './lucide-angular.component';
 import { Icons } from './icons.provider';
-import { IconData  } from '../../lucide';
+import { IconData } from '../icons/types';
 
 @NgModule({
   declarations: [LucideAngularComponent],
