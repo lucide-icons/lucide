@@ -1,7 +1,0 @@
-{
-  "ngPackage": {
-    "lib": {
-      "entryFile": "../icons-index.ts"
-    }
-  }
-}

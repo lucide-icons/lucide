@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, Inject, ChangeDetectorRef, OnChanges, SimpleChanges } from '@angular/core';
 import { Icons } from './icons.provider';
-import { createElement, IconData } from '../../lucide';
+import { IconData } from '../icons/types';
+import { createElement } from '../create-element';
 
 @Component({
   selector: 'lucide-angular, lucide-icon, i-lucide, span-lucide',
@@ -16,6 +17,7 @@ import { createElement, IconData } from '../../lucide';
     }
   `]
 })
+
 export class LucideAngularComponent implements OnChanges {
   @Input() name!: string;
   @Input() img!: IconData;

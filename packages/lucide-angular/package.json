@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
-    "directory": "packages/lucide-vue"
+    "directory": "packages/lucide-angular"
   },
   "keywords": [
     "Lucide",
@@ -22,11 +22,9 @@
     "Font Awesome"
   ],
   "scripts": {
-    "build": "yarn clean && yarn build:js && yarn build:icons && yarn build:iconsindex && yarn build:ng",
-    "clean": "rm -rf dist && rm -rf projects/lucide-angular/build",
-    "build:js": "mkdir -p projects/lucide-angular/build && cp -av ../lucide/src/createElement.js projects/lucide-angular/build/",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-angular/projects/lucide-angular/build --templateSrc=../packages/lucide-angular/scripts/exportTemplate && for f in projects/lucide-angular/build/icons/*.js; do mv -- \"$f\" \"${f%.js}.ts\"; done",
-    "build:iconsindex": "yarn --cwd ../../ babel-node packages/lucide-angular/scripts/buildIconsIndex.js",
+    "build": "yarn clean && yarn build:icons && yarn build:ng",
+    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-angular/src --templateSrc=../packages/lucide-angular/scripts/exportTemplate --iconFileExtention=.ts --exportFileName=index.ts",
     "build:ng": "ng build --prod",
     "test:headless": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test": "ng test",
@@ -34,14 +32,18 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.2.6",
+    "@angular/core": "^11.2.6"
+  },
+  "devDependencies": {
     "@angular/common": "~11.2.6",
     "@angular/compiler": "~11.2.6",
     "@angular/core": "~11.2.6",
     "@angular/platform-browser": "~11.2.6",
     "@angular/platform-browser-dynamic": "~11.2.6",
-    "tslib": "^2.0.0"
-  },
-  "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.5",
     "@angular/cli": "~11.2.5",
     "@angular/compiler-cli": "~11.2.6",

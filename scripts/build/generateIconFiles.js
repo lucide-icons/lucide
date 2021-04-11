@@ -4,7 +4,7 @@ import path from 'path';
 import prettier from 'prettier';
 import { toPascalCase } from '../helpers';
 
-export default function(iconNodes, outputDirectory, template, { showLog = true }) {
+export default function({ iconNodes, outputDirectory, template, showLog = true, iconFileExtention = '.js' }) {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -13,7 +13,7 @@ export default function(iconNodes, outputDirectory, template, { showLog = true }
   }
 
   icons.forEach(iconName => {
-    const location = path.join(iconsDistDirectory, `${iconName}.js`);
+    const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
     const componentName = toPascalCase(iconName);
 
     let { children } = iconNodes[iconName];
