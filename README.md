@@ -53,7 +53,7 @@ npm install lucide
 yarn add lucide
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide#lucide).
 
 ### React
 
@@ -93,7 +93,7 @@ yarn add lucide-angular
 npm install lucide-angular
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/packages/lucide-angular/projects/lucide-angular#lucide-angular).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular/projects/lucide-angular#lucide-angular).
 
 ### Figma
 
