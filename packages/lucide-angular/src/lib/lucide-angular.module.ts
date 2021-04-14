@@ -7,6 +7,7 @@ import { IconData } from '../icons/types';
   declarations: [LucideAngularComponent],
   exports: [LucideAngularComponent]
 })
+
 export class LucideAngularModule {
     constructor(@Optional() private icons: Icons) {
         if (!this.icons) {

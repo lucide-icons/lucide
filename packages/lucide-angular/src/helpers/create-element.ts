@@ -1,4 +1,4 @@
-import { IconData } from './icons/types'
+import { IconData } from '../icons/types'
 
 /**
  * Creates a new SVGElement from icon node

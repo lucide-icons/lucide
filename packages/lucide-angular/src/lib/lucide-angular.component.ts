@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, Inject, ChangeDetectorRef, OnChanges, SimpleChanges } from '@angular/core';
 import { Icons } from './icons.provider';
 import { IconData } from '../icons/types';
-import { createElement } from '../create-element';
+import { createElement } from '../helpers/create-element';
 
 @Component({
   selector: 'lucide-angular, lucide-icon, i-lucide, span-lucide',
