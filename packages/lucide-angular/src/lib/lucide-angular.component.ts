@@ -15,6 +15,8 @@ import { createElement } from '../helpers/create-element';
       stroke-linecap: round;
       stroke-linejoin: round;
     }
+    width: 24px;
+    height: 24px;
   `]
 })
 
