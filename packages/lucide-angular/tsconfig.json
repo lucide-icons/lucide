@@ -9,12 +9,11 @@
     "downlevelIteration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowJs": true,
     "paths": {
-      // "lucide-angular": [
-      //   "dist"
-      // ],
-      "@/*": ["./src/*"],
+      "lucide-angular": [
+        "dist"
+      ],
+      "lucide-angular/icons": ["dist/icons"],
     },
     "moduleResolution": "node",
     "importHelpers": true,
