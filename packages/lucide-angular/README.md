@@ -24,7 +24,7 @@ After install `lucide-angular` change content of file `app.component.html` and `
 
 ``` xml
 <!-- app.component.html -->
-<div id="ico"></div>
+<div id="lucide-icon"></div>
 ```
 
 ``` js
@@ -42,10 +42,12 @@ import { Activity } from 'lucide-angular/icons';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    const div = document.getElementById('ico');
+    const div = document.getElementById('lucide-icon');
     const elm = createElement(Activity);
     elm.setAttribute('color', 'red'); // or set `width`, `height`, `fill`, `stroke-width`, ...
-    div.appendChild(elm);
+    if (div) {
+      div.appendChild(elm);
+    }
   }
 }
 ```
@@ -106,7 +108,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
 }
 ```
 
@@ -184,8 +186,8 @@ LucideAngularModule.pick(icons)
 ```
 ### Tags
 You can use the following tags instead of `lucide-icon`:
- * lucide-angular  
- * i-lucide  
- * span-lucide  
+ * lucide-angular
+ * i-lucide
+ * span-lucide
 
 All of the above are the same

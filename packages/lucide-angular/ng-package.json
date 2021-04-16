@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "dist",
+  "dest": "dist/lucide-angular",
   "lib": {
-    "entryFile": "src/lucide.ts"
+    "flatModuleFile": "lucide-angular",
+    "entryFile": "src/index.ts"
   }
 }
