@@ -5,6 +5,8 @@ import { IconData } from '../icons/types';
 
 @NgModule({
   declarations: [LucideAngularComponent],
+  imports: [
+  ],
   exports: [LucideAngularComponent]
 })
 
