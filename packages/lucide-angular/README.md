@@ -22,7 +22,7 @@ There are three ways for use this library.
 
 After install `lucide-angular` change content of file `app.component.html` and `app.component.ts`.
 
-``` xml
+``` html
 <!-- app.component.html -->
 <div id="lucide-icon"></div>
 ```
@@ -39,12 +39,13 @@ import { Activity } from 'lucide-angular/icons';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
 
+export class AppComponent implements OnInit {
   ngOnInit(): void {
     const div = document.getElementById('lucide-icon');
     const elm = createElement(Activity);
     elm.setAttribute('color', 'red'); // or set `width`, `height`, `fill`, `stroke-width`, ...
+
     if (div) {
       div.appendChild(elm);
     }
@@ -63,8 +64,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LucideAngularModule } from 'lucide-angular';
-import { AlarmCheck, Edit } from 'lucide-angular/icons';  // or import other icons
+import { LucideAngularModule, AlarmCheck, Edit } from 'lucide-angular';
 
 @NgModule({
   declarations: [
@@ -81,35 +81,10 @@ import { AlarmCheck, Edit } from 'lucide-angular/icons';  // or import other ico
 export class AppModule { }
 ```
 
-``` css
-/* app.component.css */
-.myicon {
-  /* Be sure to set these values */
-  width: 48px;
-  height: 48px;
-  /* or other properties like `color`, `fill`, `stroke-width` */
-}
-```
-
-``` xml
+``` html
 <!-- app.component.html -->
 <lucide-icon name="alarm-check" class="myicon"></lucide-icon>
 <lucide-icon name="edit" class="myicon"></lucide-icon>
-```
-
-``` js
-// app.component.ts
-
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-
-}
 ```
 
 ### Method 3: User __Tag__ with __img__ property
@@ -140,16 +115,6 @@ import { LucideAngularModule } from 'lucide-angular';
 export class AppModule { }
 ```
 
-``` css
-/* app.component.css */
-.myicon {
-  /* Be sure to set these values */
-  width: 48px;
-  height: 48px;
-  /* or other properties like `color`, `fill`, `stroke-width` */
-}
-```
-
 ``` xml
 <!-- app.component.html -->
 <lucide-icon [img]="ico1" class="myicon"></lucide-icon>
@@ -159,13 +124,14 @@ export class AppModule { }
 ``` js
 // app.component.ts
 import { Component } from '@angular/core';
-import { Airplay, Circle } from 'lucide-angular/icons';
+import { Airplay, Circle } from 'lucide-angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   ico1 = Airplay;
   ico2 = Circle;
@@ -177,6 +143,7 @@ export class AppComponent {
 ### Import all icons
 
 In `Method 2`: import all icons in `app.module.ts` by:
+
 ``` js
 ...
 import { icons } from 'lucide-angular/icons';
@@ -184,10 +151,13 @@ import { icons } from 'lucide-angular/icons';
 LucideAngularModule.pick(icons)
 ....
 ```
+
 ### Tags
+
 You can use the following tags instead of `lucide-icon`:
- * lucide-angular
- * i-lucide
- * span-lucide
+
+- lucide-angular
+- i-lucide
+- span-lucide
 
 All of the above are the same
