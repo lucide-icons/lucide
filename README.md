@@ -29,6 +29,7 @@ We're trying to expanding the icon set as much as possible while keeping it nice
   * [React](#react)
   * [Vue](#vue)
   * [Angular](#angular)
+  * [Preact](#preact)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
@@ -94,6 +95,20 @@ npm install lucide-angular
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular/projects/lucide-angular#lucide-angular).
+
+### Preact
+
+Implementation of the lucide icon library for preact applications.
+
+```sh
+yarn add lucide-preact
+
+# or
+
+npm install lucide-preact
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact#lucide-preact).
 
 ### Figma
 
