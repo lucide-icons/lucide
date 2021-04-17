@@ -13,7 +13,9 @@
       "lucide-angular": [
         "dist"
       ],
-      "lucide-angular/icons": ["dist/icons"],
+      "lucide-angular/*": [
+        "dist/*"
+      ],
     },
     "moduleResolution": "node",
     "importHelpers": true,
