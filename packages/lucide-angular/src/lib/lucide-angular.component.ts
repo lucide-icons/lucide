@@ -10,13 +10,13 @@ import { createElement } from '../helpers/create-element';
     :host {
       display: inline-block;
       fill: none;
-      stroke: inherit;
-      stroke-width: inherit;
+      stroke: currentColor;
+      stroke-width: 2;
       stroke-linecap: round;
       stroke-linejoin: round;
+      width: 24px;
+      height: 24px;
     }
-    width: 24px;
-    height: 24px;
   `]
 })
 
