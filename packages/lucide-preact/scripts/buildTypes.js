@@ -12,10 +12,19 @@ const srcDirectory = path.join(__dirname, '../dist');
 // Declare type definitions
 const typeDefinitions = `\
 /// <reference types="preact" />
-import { SVGAttributes } from 'preact'
+import { JSX } from 'preact'
+
+interface Props<T> {
+  children?: preact.VNode;
+  key?: string | number;
+  ref?: string | ((component: T) => any);
+}
+
+interface SVGProps extends JSX.SVGAttributes, Props<SVGElement> {
+}
 
 // Create interface extending SVGAttributes
-export interface LucideProps extends Partial<Preact.SVGProps<SVGSVGElement>> {
+export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
     color?: string
     size?: string | number
     stroke?: string | number
