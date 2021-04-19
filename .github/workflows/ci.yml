@@ -60,13 +60,12 @@ jobs:
           echo "${{ steps.new-version.outputs.NEW_VERSION }}"
           echo "${{ steps.change-log.outputs.CHANGE_LOG }}"
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
-          release_name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
+          name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
