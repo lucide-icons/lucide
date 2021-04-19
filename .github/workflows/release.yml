@@ -145,6 +145,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v2
+
+    - name: Commit package.jsons
+      run: |
+        mv lucide-package-json/package.json packages/lucide/package.json
+        mv lucide-react-package-json/package.json packages/lucide-react/package.json
+        mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
+
     - name: Commit package.jsons
       run: |
         git add packages/*/package.json
