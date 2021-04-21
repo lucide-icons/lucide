@@ -27,11 +27,12 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.6",
     "babel-preset-react-app": "^10.0.0",
     "jest": "^26.6.3",
-    "react-test-renderer": "^16.5.1",
     "prop-types": "^15.7.2",
-    "react": "^16.5.1"
+    "react": "^16.5.1",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
