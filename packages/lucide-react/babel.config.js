@@ -1,6 +1,12 @@
 const mainConfig = require('../../babel.config');
 
 module.exports = {
-  presets: ['react-app'],
-  env: mainConfig.env,
+  presets: ['@babel/env'],
+  env: {
+    test: {
+      ...mainConfig.env.test,
+      presets: ['@babel/env, react-app'],
+    },
+    ...mainConfig.env,
+  },
 };

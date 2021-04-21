@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import { h as createElement } from 'preact';
 import { forwardRef } from 'preact/compat';
 import PropTypes from 'prop-types';
 import defaultAttributes from './defaultAttributes';
@@ -6,7 +6,7 @@ import defaultAttributes from './defaultAttributes';
 export default (iconName, iconNode) => {
   const Component = forwardRef(
     ({ color = 'currentColor', size = 24, strokeWidth = 2, ...rest }, ref) =>
-      h(
+      createElement(
         'svg',
         {
           ref,
@@ -17,7 +17,7 @@ export default (iconName, iconNode) => {
           strokeWidth,
           ...rest,
         },
-        iconNode.map(([tag, attrs]) => h(tag, attrs)),
+        iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
       ),
   );
 

@@ -21,7 +21,7 @@
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-preact/src --templateSrc=../packages/lucide-preact/scripts/exportTemplate --renderUniqueKey",
-    "build:es": "yarn --cwd ../../ babel packages/lucide-preact/src -d packages/lucide-preact/dist/esm",
+    "build:es": "babel src -d dist/esm",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-preact/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-preact/rollup.config.js",
     "test": "jest"

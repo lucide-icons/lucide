@@ -14,17 +14,14 @@ const typeDefinitions = `\
 /// <reference types="preact" />
 import { JSX } from 'preact'
 
-interface Props<T> {
+interface SVGProps extends JSX.HTMLAttributes, JSX.SVGAttributes {
   children?: preact.VNode;
   key?: string | number;
   ref?: string | ((component: T) => any);
 }
 
-interface SVGProps extends JSX.SVGAttributes, Props<SVGElement> {
-}
-
-// Create interface extending SVGAttributes
-export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
+// Create interface extending SVGAttributes and HTMLAttributes
+export interface LucideProps extends Partial<SVGProps> {
     color?: string
     size?: string | number
     stroke?: string | number
