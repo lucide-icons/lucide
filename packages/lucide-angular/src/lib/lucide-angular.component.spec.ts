@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LucideAngularModule } from './lucide-angular.module';
-
 import { LucideAngularComponent } from './lucide-angular.component';
 
 describe('LucideAngularComponent', () => {
