@@ -11,7 +11,7 @@
 >
   <path d="M5.5 20H8" />
   <path d="M17 9h.01" />
-  <path d="M17 16a1 1 0 100-2 1 1 0 000 2z" />
-  <path d="M22 6a2 2 0 00-2-2h-6a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V6z" />
+  <rect x="12" y="4" width="10" height="16" rx="2" />
   <path d="M8 6H4a2 2 0 00-2 2v6a2 2 0 002 2h4" />
+  <circle cx="17" cy="15" r="1" />
 </svg>
