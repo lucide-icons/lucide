@@ -16,6 +16,18 @@
     "deprecation": {
       "severity": "warning"
     },
+    "directive-selector": [
+      true,
+      "attribute",
+      "lib",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "",
+      "kebab-case"
+    ],
     "eofline": true,
     "import-blacklist": [
       true,

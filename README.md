@@ -94,7 +94,7 @@ yarn add lucide-angular
 npm install lucide-angular
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular/projects/lucide-angular#lucide-angular).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/packages/lucide-angular#lucide-angular).
 
 ### Preact
 

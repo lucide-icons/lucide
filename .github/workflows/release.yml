@@ -166,7 +166,7 @@ jobs:
         run: yarn workspace lucide-angular test:headless
 
       - name: Publish
-        run: yarn workspace lucide-angular publish
+        run: yarn workspace lucide-angular publish dist
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
