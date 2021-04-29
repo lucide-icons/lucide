@@ -1,4 +1,4 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap } from "@chakra-ui/core";
+import { Button, Flex, Link, WrapItem, Text, Wrap } from "@chakra-ui/react";
 import download from "downloadjs";
 import JSZip from "jszip";
 import { Download, Github } from 'lucide-react';

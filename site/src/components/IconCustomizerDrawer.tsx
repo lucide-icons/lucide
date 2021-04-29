@@ -18,7 +18,7 @@ import {
   SliderTrack,
   Flex,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
 
 export function IconCustomizerDrawer() {
