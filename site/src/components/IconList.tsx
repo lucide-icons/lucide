@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
+import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/react";
 import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
