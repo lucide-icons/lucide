@@ -1,8 +1,6 @@
 import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { FormLabel, Icon, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
-import { CustomPicker } from 'react-color';
-
-const { Saturation, Hue } = require('react-color/lib/components/common');
+import { Saturation, Hue, ColorWrap as CustomPicker } from 'react-color/lib/components/common';
 
 type ColorPickerProps = {
   value: string;
