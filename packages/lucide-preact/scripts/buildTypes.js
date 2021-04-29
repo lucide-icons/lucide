@@ -12,20 +12,17 @@ const srcDirectory = path.join(__dirname, '../dist');
 // Declare type definitions
 const typeDefinitions = `\
 /// <reference types="preact" />
-import { JSX } from 'preact'
+import { JSX, VNode } from 'preact'
 
-interface SVGProps extends JSX.HTMLAttributes, JSX.SVGAttributes {
-  children?: preact.VNode;
+interface SVGProps extends Omit<Omit<JSX.SVGAttributes, 'ref'>, 'size'> {
   key?: string | number;
-  ref?: string | ((component: T) => any);
+  ref?: string | ((component: any) => any);
 }
 
-// Create interface extending SVGAttributes and HTMLAttributes
+// Create interface extending SVGAttributes
 export interface LucideProps extends Partial<SVGProps> {
     color?: string
     size?: string | number
-    stroke?: string | number
-    strokeWidth?: string | number
 }
 
 // Generated icons
