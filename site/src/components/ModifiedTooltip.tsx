@@ -1,4 +1,4 @@
-import { Box, Tooltip, useColorMode } from "@chakra-ui/core";
+import { Box, Tooltip, useColorMode } from "@chakra-ui/react";
 import theme from '../lib/theme';
 
 const ModifiedTooltip = ({}) => {

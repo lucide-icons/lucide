@@ -1,6 +1,6 @@
 {
   "name": "lucide-figma",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "license": "ISC",
   "private": true,
   "main": "build/ui.js",
@@ -15,7 +15,7 @@
     "css-loader": "^3.0.0",
     "html-webpack-inline-source-plugin": "^0.0.10",
     "html-webpack-plugin": "^3.2.0",
-    "lucide-react": "^0.15.0",
+    "lucide-react": "^0.15.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",

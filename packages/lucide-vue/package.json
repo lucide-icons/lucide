@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue",
-  "version": "0.15.0",
+  "version": "0.15.10",
   "author": "Eric Fennis",
   "description": "Lucide Vue Package",
   "license": "ISC",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
-    "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/src --templateSrc=../packages/lucide-vue/scripts/exportTemplate",
     "build:es": "yarn --cwd ../../ babel packages/lucide-vue/src -d packages/lucide-vue/dist/esm",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue/rollup.config.js",
