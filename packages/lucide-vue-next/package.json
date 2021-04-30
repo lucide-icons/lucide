@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue-next",
-  "version": "0.15.0",
+  "version": "0.15.10-alpha.0",
   "author": "Eric Fennis",
   "description": "Lucide Vue 3 Package",
   "license": "ISC",
@@ -17,23 +17,23 @@
   "main:umd": "dist/umd/lucide-vue-next.js",
   "module": "dist/esm/lucide-vue-next.js",
   "unpkg": "dist/umd/lucide-vue-next.min.js",
-  "dependencies": {
-    "vue": "^3.0.0"
-  },
+  "typings": "dist/lucide-vue-next.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types yarn build:bundles",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue-next/src --templateSrc=../packages/lucide-vue-next/scripts/exportTemplate",
     "build:es": "yarn --cwd ../../ babel packages/lucide-vue-next/src -d packages/lucide-vue-next/dist/esm",
+    "build:types": "yarn --cwd ../../ babel-node packages/lucide-vue-next/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue-next/rollup.config.js",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
   "devDependencies": {
-    "@vue/test-utils": "^1.1.2",
     "@vue/compiler-sfc": "^3.0.0",
+    "@vue/test-utils": "^2.0.0-rc.6",
     "jest-serializer-vue": "^2.0.2",
-    "vue-jest": "^3.0.7"
+    "vue-jest": "^5.0.0-alpha.7",
+    "vue": "^3.0.0"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
