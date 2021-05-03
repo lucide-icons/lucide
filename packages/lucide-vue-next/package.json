@@ -19,10 +19,10 @@
   "unpkg": "dist/umd/lucide-vue-next.min.js",
   "typings": "dist/lucide-vue-next.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types yarn build:bundles",
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue-next/src --templateSrc=../packages/lucide-vue-next/scripts/exportTemplate",
-    "build:es": "yarn --cwd ../../ babel packages/lucide-vue-next/src -d packages/lucide-vue-next/dist/esm",
+    "build:es": "babel src -d dist/esm",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-vue-next/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue-next/rollup.config.js",
     "test": "jest",
