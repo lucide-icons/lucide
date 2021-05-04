@@ -30,11 +30,9 @@
     "@testing-library/preact": "^2.0.1",
     "babel-preset-preact": "^2.0.0",
     "jest": "^26.6.3",
-    "prop-types": "^15.7.2",
     "preact": "^10.5.13"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.2",
     "preact": "^10.5.13"
   }
 }
