@@ -9,8 +9,8 @@ const createVueComponent = (iconName, iconNode) => (props, context) =>
       ...context.attrs,
       ...props,
       ...{
-        width: props.size || context.attrs.size || defaultAttributes.size,
-        height: props.size || context.attrs.size || defaultAttributes.size
+        width: props.size || defaultAttributes.width,
+        height: props.size || defaultAttributes.height
       }
     },
     iconNode.map(child => h(...child)),
