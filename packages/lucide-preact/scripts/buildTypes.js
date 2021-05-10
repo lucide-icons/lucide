@@ -14,13 +14,9 @@ const typeDefinitions = `\
 /// <reference types="preact" />
 import { JSX, VNode, FunctionComponent, RefObject } from 'preact'
 
-interface SVGProps extends Omit<Omit<JSX.SVGAttributes, 'ref'>, 'size'> {
+interface LucideProps extends Partial<Omit<JSX.SVGAttributes, 'ref'>, 'size'> {
   key?: string | number;
-  ref?: string | ((component: any) => any) | RefObject;
-}
-
-// Create interface extending SVGAttributes
-export interface LucideProps extends Partial<SVGProps> {
+  ref?: string | ((component: any) => any) | RefObject<T>;
   color?: string
   size?: string | number
 }
