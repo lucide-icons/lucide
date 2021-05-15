@@ -2054,9 +2054,9 @@ locate-path@^3.0.0:
     path-exists "^3.0.0"
 
 lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.3:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -2077,10 +2077,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lucide-react@^0.15.1:
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.15.5.tgz#694cfe1f6bbc6e736199785c58cc7f8dcfc14309"
-  integrity sha512-iCplw/CRck/E5gA5YGGASBm6qvMZfvqtPE+ew75dSz50+LDKEbNhu9wy1s6HC1A6isgvVCeED9mqtdzd0x2RmA==
+lucide-react@0.15.11:
+  version "0.15.11"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.15.11.tgz#34f2d76d1e7fda978f4a8b2d0538b84ecbecf106"
+  integrity sha512-2NOpAVt2ScBkwlRvub7adfmWZX1o+so+3elAtyp5g9jaAKthszAgKZwNEFhB2Gl1tT5CuvVLPsjaRjhnpNjq9w==
   dependencies:
     prop-types "^15.7.2"
     react "^16.5.1"

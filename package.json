@@ -2,8 +2,7 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/*",
-      "site"
+      "packages/*"
     ],
     "nohoist": [
       "**/jest", "**/jest/**",

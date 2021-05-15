@@ -39,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: yarn --pure-lockfile
 
+      - name: Check if we can patch
+        run: .github/workflows/version-up.sh --patch
+
       - name: Create new version
         id: new-version
         run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"

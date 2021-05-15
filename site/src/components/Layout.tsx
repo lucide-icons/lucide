@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
 import NextLink from "next/link"
