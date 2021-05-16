@@ -1,4 +1,4 @@
-import { Box, Stack, Text, useColorModeValue } from "@chakra-ui/core";
+import { Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { useMemo } from "react"
 import theme from "../lib/theme";
 import IconList from "./IconList";

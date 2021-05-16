@@ -1,4 +1,4 @@
-import { Box, BoxProps, chakra } from '@chakra-ui/core';
+import { Box, BoxProps, chakra } from '@chakra-ui/react';
 import theme from 'prism-react-renderer/themes/nightOwl';
 import BaseHighlight, { defaultProps, Language } from 'prism-react-renderer';
 import { CSSProperties } from 'react';

@@ -1,6 +1,6 @@
 import { getAllData } from '../../lib/icons';
 import Layout from '../../components/Layout';
-import { Box, Grid, Heading, useColorModeValue } from '@chakra-ui/core';
+import { Box, Grid, Heading, useColorModeValue } from '@chakra-ui/react';
 import IconCategory from '../../components/IconCategory';
 import IconList from '../../components/IconList';
 import CategoryChangesBar from '../../components/CategoryChangesBar';
@@ -137,7 +137,7 @@ const EditCategoriesPage = ({ data }) => {
 
 export default EditCategoriesPage;
 
-export function getStaticProps() {
-  const data = getAllData();
+export async function getStaticProps() {
+  const data = await getAllData();
   return { props: { data } };
 }

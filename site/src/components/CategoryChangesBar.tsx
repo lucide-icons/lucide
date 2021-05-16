@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Divider } from "@chakra-ui/core"
+import { Box, Button, Flex, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Divider } from "@chakra-ui/react"
 import theme from "../lib/theme";
 import { useEffect, useMemo, useState } from "react"
 import CodeBlock from './CodeBlock'
