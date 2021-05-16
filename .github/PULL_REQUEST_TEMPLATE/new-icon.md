@@ -9,6 +9,7 @@ at https://github.com/lucide-icons/lucide/blob/master/docs/ICON_DESIGN_GUIDE.md 
 and please fill everything below. -->
 
 - **Name of the icon** : <!-- `icon` -->
+- **Tags (alternative names for this icon)** (add them in tags.json) :  
 - **What is the purpose of this icon?** : <!-- Shows that one can click it to... / Is used to denote or label... -->
 - **100% scale preview** : <!-- upload an image -->
 - **Have you considered alternative possibilities** for its naming or design? : 
