@@ -12,11 +12,11 @@ const srcDirectory = path.join(__dirname, '../dist');
 // Declare type definitions
 const typeDefinitions = `\
 /// <reference types="preact" />
-import { JSX, VNode, FunctionComponent, RefObject } from 'preact'
+import { JSX, RefObject } from 'preact'
 
-interface LucideProps extends Partial<Omit<JSX.SVGAttributes, 'ref'>, 'size'> {
+interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
   key?: string | number;
-  ref?: string | ((component: any) => any) | RefObject<T>;
+  ref?: string | ((component: any) => any) | RefObject<any>;
   color?: string
   size?: string | number
 }
