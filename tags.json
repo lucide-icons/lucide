@@ -437,11 +437,15 @@
   ],
   "code": [
     "source",
-    "programming"
+    "programming",
+    "html",
+    "xml"
   ],
   "code-2": [
     "source",
-    "programming"
+    "programming",
+    "html",
+    "xml"
   ],
   "codepen": [
     "logo"
@@ -576,7 +580,8 @@
     "payment"
   ],
   "download": [
-    "import"
+    "import",
+    "export"
   ],
   "download-cloud": [
     "import"
@@ -691,7 +696,8 @@
   ],
   "file-search": [
     "lost",
-    "document"
+    "document",
+    "find"
   ],
   "file-text": [
     "data",
