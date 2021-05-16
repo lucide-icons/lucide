@@ -1,10 +1,13 @@
-import { extendTheme, theme as chakraTheme } from "@chakra-ui/core";
+import { theme as chakraTheme } from "@chakra-ui/react";
 
-const theme = extendTheme({
+const theme = {
+  ...chakraTheme,
   fonts: {
+    ...chakraTheme.fonts,
     body: `'Mukta', sans-serif`,
   },
   colors: {
+    ...chakraTheme.colors,
     red: {
       50: "#FBC5C5",
       100: "#FAB2B2",
@@ -19,8 +22,11 @@ const theme = extendTheme({
     }
   },
   components: {
+    ...chakraTheme.components,
     Button: {
+      ...chakraTheme.components.Button,
       variants: {
+        ...chakraTheme.components.Button.variants,
         primary: (props) => ({
           ...chakraTheme.components.Button.variants.solid,
           bg: "red.500",
@@ -35,6 +41,6 @@ const theme = extendTheme({
       }
     },
   },
-});
+};
 
 export default theme;

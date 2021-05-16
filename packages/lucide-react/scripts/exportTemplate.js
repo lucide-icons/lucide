@@ -1,7 +1,7 @@
-export default ({ componentName, node }) => `
+export default ({ componentName, children }) => `
 import createReactComponent from '../createReactComponent';
 
-const ${componentName} = createReactComponent('${componentName}', ${node});
+const ${componentName} = createReactComponent('${componentName}', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;

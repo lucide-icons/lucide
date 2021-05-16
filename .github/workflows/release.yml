@@ -1,0 +1,197 @@
+name: Release Packages
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  pre-build:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.get_version.outputs.VERSION }}
+      YARN_CACHE_DIR: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
+
+    steps:
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
+
+      - name: Get yarn cache directory path
+        id: yarn_cache
+        run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
+
+  lucide:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn --pure-lockfile
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set new version
+        run: yarn workspace lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide build
+
+      - name: Test
+        run: yarn workspace lucide test
+
+      - name: Publish
+        run: yarn workspace lucide publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-package-json
+          path: packages/lucide/package.json
+
+  lucide-react:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn --pure-lockfile
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set package.json version lucide
+        run: yarn workspace lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide-react build
+
+      - name: Test
+        run: yarn workspace lucide-react test
+
+      - name: Publish
+        run: yarn workspace lucide-react publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-react-package-json
+          path: packages/lucide-react/package.json
+
+  lucide-vue:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn --pure-lockfile
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set new version
+        run: yarn workspace lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide-vue build
+
+      - name: Test
+        run: yarn workspace lucide-vue test
+
+      - name: Publish
+        run: yarn workspace lucide-vue publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-vue-package-json
+          path: packages/lucide-vue/package.json
+
+  lucide-angular:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn --pure-lockfile
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set package.json version lucide
+        run: yarn workspace lucide-angular version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide-angular build
+
+      - name: Test
+        run: yarn workspace lucide-angular test:headless
+
+      - name: Publish
+        run: yarn workspace lucide-angular publish dist
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          path: packages/lucide-angular/package.json
+
+  upload-package-jsons:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: [lucide, lucide-react, lucide-vue, lucide-angular]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+
+    - name: Commit package.jsons
+      run: |
+        mv lucide-package-json/package.json packages/lucide/package.json
+        mv lucide-react-package-json/package.json packages/lucide-react/package.json
+        mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
+
+    - name: Commit package.jsons
+      run: |
+        git add packages/*/package.json
+        git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+          commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+        git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+        git push origin HEAD:master

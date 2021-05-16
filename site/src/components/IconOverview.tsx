@@ -7,7 +7,7 @@ import {
   useColorMode,
   Icon,
   useColorModeValue,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import IconList from './IconList';
 import IconCategory from './IconCategory'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';

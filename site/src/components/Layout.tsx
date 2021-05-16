@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton, Button, WrapItem, Wrap } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton, Button, WrapItem, Wrap } from "@chakra-ui/react";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
 import NextLink from "next/link"
@@ -43,7 +43,7 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
           maxW={maxWidth}
           margin="0 auto"
           w="full"
-          px={8}
+          px={5}
         >
           <Flex justifyContent="center" alignItems="center">
             <NextLink href="/" passHref>
@@ -82,7 +82,7 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW={maxWidth} px={8} marginBottom={8}>
+      <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
         {children}
         <Divider marginTop={4} marginBottom={4}/>
         <Wrap>
@@ -90,6 +90,13 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
             <Button variant="ghost" onClick={() => router.push('/edit/categories')}>Edit Categories</Button>
           </WrapItem>
         </Wrap>
+        <Divider marginTop={4} marginBottom={4}/>
+        <p style={{ alignSelf: "center" }}>
+          <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+            <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+          </a>
+        </p>
+        <br />
       </Flex>
     </Box>
   );
