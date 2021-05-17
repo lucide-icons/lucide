@@ -42,12 +42,26 @@ const CategoryChangesBar = ({categories, changes}) => {
       <Modal isOpen={modalOpen} onClose={onClose} size="xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Submit those changes</ModalHeader>
+          <ModalHeader>Nice changes!</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>Here's the json output of the changes you made. Please copy the output and paste it in github to submit the changes to the repository.</Text>
-            <Divider mt={4} mb={4} />
+            <Text>
+              To submit those changes, follow these steps:
+            </Text>
+            <Text fontWeight="bold" mt={4}>
+              Step 1:
+            </Text>
+            <Text mt={2} mb={2}>
+              Copy all the code,
+            </Text>
+
             <CopyButton copyText={categoryCode} buttonText="Copy code" mr={4} />
+            <Text fontWeight="bold" mt={6}>
+              Step 2:
+            </Text>
+            <Text mt={2} mb={4}>
+              Open Pull-request, select-all and paste the code with the changes.
+            </Text>
             <Button
               as="a"
               variant="primary"
@@ -56,11 +70,17 @@ const CategoryChangesBar = ({categories, changes}) => {
             >
               Open pull-request
             </Button>
+            <Divider mt={8} mb={4} />
+            <Text fontWeight="bold" mt={6} mb={4}>
+              Your code:
+            </Text>
+            <Text mt={2} mb={4}>
+              Here's the json output of the changes you made.
+            </Text>
             <CodeBlock
               code={categoryCode}
               language="json"
               showLines
-              mt={4}
             />
           </ModalBody>
 
