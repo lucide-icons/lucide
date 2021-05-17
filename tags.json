@@ -262,6 +262,9 @@
     "webcam",
     "video"
   ],
+  "campsite": [
+    "tent"
+  ],
   "car": [
     "vehicle",
     "transport",
