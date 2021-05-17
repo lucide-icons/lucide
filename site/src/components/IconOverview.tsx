@@ -9,7 +9,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import IconList from './IconList';
-import IconCategory from './IconCategory'
+import IconCategoryList from './IconCategoryList'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import { useRouter } from 'next/router';
@@ -116,7 +116,7 @@ const IconOverview = ({ data }) => {
       <Box marginTop={5} marginBottom={320}>
         {searchResults.length > 0 ? (
             categoryView ?
-            <IconCategory icons={searchResults} data={data} categories={categories}/>
+            <IconCategoryList icons={searchResults} data={data} categories={categories}/>
             :
             <IconList icons={searchResults} />
         ) : (

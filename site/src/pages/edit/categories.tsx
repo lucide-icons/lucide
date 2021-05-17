@@ -1,3 +1,4 @@
+import { Flipper } from 'react-flip-toolkit';
 import { getAllData } from '../../lib/icons';
 import Layout from '../../components/Layout';
 import { Box, Grid, Heading, useColorModeValue } from '@chakra-ui/react';
@@ -6,88 +7,66 @@ import IconList from '../../components/IconList';
 import CategoryChangesBar from '../../components/CategoryChangesBar';
 import theme from '../../lib/theme';
 import categoriesFile from '../../../../categories.json'
+import update from 'immutability-helper';
 import { useEffect, useState, useMemo, useCallback } from 'react';
+import SortableIconList from '../../components/SortableIconList';
 
-const EditCategoriesPage = ({ data }) => {
+const EditCategoriesPage = ({ data: icons }) => {
   const boxBackground = useColorModeValue(theme.colors.white, theme.colors.gray[700]);
   const activeBackground = useColorModeValue(theme.colors.gray, theme.colors.gray[400]);
-  const [dragging, setDragging] = useState(false);
   const [categories, setCategories] = useState(categoriesFile);
   const [changes, setChanges] = useState(0);
   const [hoveringCategory, setHoveringCategory] = useState('');
-  const [draggingItem, setDraggingItem] = useState('');
-
-  const onDrop = useCallback((event) => {
-    event.preventDefault();
-
-    const category = event.target.getAttribute('category');
-
-    if (category) {
-      const icon = event.dataTransfer.getData("text/plain");
-
-      setTimeout(() => {
-        const newCategories = { ...categories };
-
-        if(!newCategories[category].includes(icon)) {
-          newCategories[category].push(icon)
-
-          setChanges(changes + 1)
-        }
-
-        setCategories(newCategories);
-      }, 400);
-    }
-  }, [categories, setCategories, changes, setChanges])
-
-  const onDragEnter = (event) => {
-    // event.preventDefault()
-    // console.log(event.target);
-
-    const category = event.target.getAttribute('category');
-
-    if (category) {
-      setHoveringCategory(category)
-    }
-  };
-
-  const onDragStart = useCallback((event) => {
-    const iconName = event.target.getAttribute('icon')
-
-    if(iconName) {
-      event.dataTransfer.setData("text/plain", iconName);
-      setDragging(true)
-    }
-  }, [setDragging])
-
-  const onDragEnd = useCallback((event) => {
-    setDragging(false)
-    setHoveringCategory('')
-  }, [setDragging, setHoveringCategory])
 
   const iconListItemProps = {
     draggable: true,
     href: '',
     as: '',
-    onDragStart,
-    onDragEnd,
   }
 
-  useEffect(() => {
-    document.addEventListener("dragover", event => { event.preventDefault() }, false);
-  }, [])
+  const handleChange = (index: number) => (newItems: ItemData<Item>[]) => {
+    setCategories(update(categories, {
+      [index]: { items: { $set: newItems } },
+    }));
+  };
+  const handleEnter = (targetCategoryIndex: number) => (dragItem: DragObject) => {
+    const sourceCategoryIndex = categories.findIndex((category) => (
+      category.items.some((item) => item.id === dragItem.id)
+    ));
+    const sourceCategory = categories[sourceCategoryIndex];
+    const targetCategory = categories[targetCategoryIndex];
+
+    if (targetCategory.items.some((item) => item.id === dragItem.id)) {
+      return;
+    }
+
+    const sourceItemIndex = sourceCategory.items.findIndex((item) => item.id === dragItem.id);
+    const sourceItem = sourceCategory.items[sourceItemIndex];
+    const sourceDescendants = findDescendants(sourceCategory.items, sourceItemIndex);
+    const items = [sourceItem, ...sourceDescendants].map((item) => ({ ...item, categoryId: targetCategory.id }));
+
+    setCategories(update(categories, {
+      [sourceCategoryIndex]: {
+        items: { $set: remove(sourceCategory.items, sourceItemIndex) },
+      },
+      [targetCategoryIndex]: {
+        items: { $set: add(targetCategory.items, items) }
+      },
+    }));
+  };
 
   const categoryProps = {
-    cursor: dragging ? 'copy' : 'auto',
-    _hover: {
-      backgroundColor: dragging ? activeBackground : 'transparent',
-    },
-    innerProps: {
-      pointerEvents: dragging ? 'none' : 'auto'
-    },
+    // cursor: dragging ? 'copy' : 'auto',
+    // _hover: {
+    //   backgroundColor: dragging ? activeBackground : 'transparent',
+    // },
+    // innerProps: {
+    //   pointerEvents: dragging ? 'none' : 'auto'
+    // },
     padding: 4,
     activeCategory: hoveringCategory,
-    onDrop,
-    onDragEnter,
+    // onDrop,
+    // onDragEnter,
   };
 
   return (
@@ -113,7 +92,7 @@ const EditCategoriesPage = ({ data }) => {
               padding={8}
               overflowY="scroll"
             >
-              <IconList icons={data} iconListItemProps={iconListItemProps} enableClick={false} />
+              <IconList icons={icons} iconListItemProps={iconListItemProps} enableClick={false} />
             </Box>
           </Box>
         </Box>
@@ -122,12 +101,20 @@ const EditCategoriesPage = ({ data }) => {
             Categories
           </Heading>
           <Box marginTop={5} marginBottom={320} marginLeft="auto">
-            <IconCategory
-              icons={data}
-              data={data}
-              categories={categories}
-              categoryProps={categoryProps}
-            />
+            <Flipper flipKey={Object.values(categories).map(( items ) => items.map((name) => name).join('.')).join('.')}>
+              {
+                Object.entries(categories).map(({ key: categoryName, values: iconNames }, index) => (
+                  <IconCategory name={categoryName}>
+                    <SortableIconList
+                      id={index}
+                      items={items}
+                      onChange={handleChange(index)}
+                      onEnter={handleEnter(index)}
+                    />
+                  </IconCategory>
+                ))
+              }
+            </Flipper>
           </Box>
         </Box>
       </Grid>
