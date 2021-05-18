@@ -16,12 +16,6 @@ export default (iconName, iconNode) => {
       iconNode.map(([tag, attrs]) => h(tag, attrs)),
     );
 
-  Component.propTypes = {
-    color: String,
-    size: Number,
-    strokeWidth: Number,
-  };
-
   Component.displayName = `${iconName}`;
 
   return Component;
