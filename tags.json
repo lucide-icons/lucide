@@ -262,9 +262,6 @@
     "webcam",
     "video"
   ],
-  "campsite": [
-    "tent"
-  ],
   "car": [
     "vehicle",
     "transport",
@@ -1512,6 +1509,10 @@
   "target": [
     "logo",
     "bullseye"
+  ],
+  "tent": [
+    "campsite",
+    "wigwam"
   ],
   "terminal": [
     "code",
