@@ -1748,6 +1748,10 @@
     "logo",
     "bullseye"
   ],
+  "tent": [
+    "campsite",
+    "wigwam"
+  ],
   "terminal": [
     "code",
     "command line",
