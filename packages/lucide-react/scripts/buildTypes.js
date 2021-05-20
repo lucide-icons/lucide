@@ -11,8 +11,10 @@ const srcDirectory = path.join(__dirname, '../dist');
 
 // Declare type definitions
 const typeDefinitions = `\
-/// <reference types="react" />
-import { SVGAttributes } from 'react'
+/// <reference types="vue" />
+import { SVGAttributes } from 'vue'
+
+declare module 'lucide-vue-next'
 
 // Create interface extending SVGAttributes
 export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
