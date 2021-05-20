@@ -23,7 +23,7 @@ describe('Using lucide icon components', () => {
   it('should add a class to the element', () => {
     const wrapper = mount(Smile, {
       attrs: {
-        class: "my-icon"
+        class: "lucide-icon my-icon"
       }
     })
 
@@ -36,7 +36,6 @@ describe('Using lucide icon components', () => {
       attrs: {
         style: 'position: absolute',
       }
-
     })
 
     expect(wrapper).toMatchSnapshot();

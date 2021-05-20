@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue-next",
-  "version": "0.15.10-alpha.1",
+  "version": "0.15.17-beta.0",
   "author": "Eric Fennis",
   "description": "Lucide Vue 3 Package",
   "license": "ISC",
@@ -33,9 +33,9 @@
     "@vue/test-utils": "^2.0.0-rc.6",
     "jest-serializer-vue": "^2.0.2",
     "vue-jest": "^5.0.0-alpha.7",
-    "vue": "^3.0.0"
+    "vue": "3.0.6"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "3.0.6"
   }
 }

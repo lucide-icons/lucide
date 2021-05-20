@@ -6,12 +6,12 @@ const createVueComponent = (iconName, iconNode) => (props, context) =>
     'svg',
     {
       ...defaultAttributes,
+      ...{
+        width: props.size || defaultAttributes.width,
+        height: props.size || defaultAttributes.height,
+      },
       ...context.attrs,
       ...props,
-      ...{
-        width: props.size || defaultAttributes.width,
-        height: props.size || defaultAttributes.height
-      }
     },
     iconNode.map(child => h(...child)),
   );

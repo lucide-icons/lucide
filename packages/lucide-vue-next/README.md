@@ -3,6 +3,7 @@
 Implementation of the lucide icon library for Vue 3 applications.
 
 > What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+> :warning: This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue)
 
 ## Installation
 

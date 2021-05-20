@@ -1,3 +1,5 @@
+const mainConfig = require('../../babel.config');
+
 module.exports = {
   presets: [
     [
@@ -8,4 +10,5 @@ module.exports = {
       },
     ],
   ],
+  env: mainConfig.env,
 };
