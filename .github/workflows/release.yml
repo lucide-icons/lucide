@@ -5,6 +5,12 @@ on:
     tags:
     - 'v*'
 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+
 jobs:
   pre-build:
     if: github.repository == 'lucide-icons/lucide'
@@ -15,8 +21,14 @@ jobs:
 
     steps:
       - name: Get the version
+        if: ${{ github.ref == 'refs/tags/*' }}
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
+
+      - name: Get the version
+        if: ${{ github.event.inputs.version }}
+        id: get_version
+        run: echo ::set-output name=VERSION::${{ github.event.inputs.version }}
 
       - name: Get yarn cache directory path
         id: yarn_cache
