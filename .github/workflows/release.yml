@@ -29,7 +29,6 @@ jobs:
         run: VERSION_REF=${{ github.event.inputs.version }}
 
       - name: Get the version
-        if: ${{ github.ref == 'refs/tags/*' }}
         id: get_version
         run: echo ::set-output name=VERSION::${VERSION_REF/refs\/tags\/\v}
 
