@@ -278,7 +278,7 @@ jobs:
         mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
         mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
         mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
-        mv lucide-angular-json/package.json packages/lucide-angular/package.json
+        mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
 
     - name: Commit package.jsons
       run: |
