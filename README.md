@@ -27,7 +27,8 @@ We're trying to expanding the icon set as much as possible while keeping it nice
 * [Usage](#usage)
   * [Web](#web)
   * [React](#react)
-  * [Vue](#vue)
+  * [Vue 2](#vue-2)
+  * [Vue 3](#vue-3)
   * [Angular](#angular)
   * [Preact](#preact)
   * [Figma](#figma)
@@ -70,7 +71,7 @@ npm install lucide-react
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react#lucide-react).
 
-### Vue
+### Vue 2
 
 Implementation of the lucide icon library for vue applications.
 
@@ -83,6 +84,20 @@ npm install lucide-vue
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue).
+
+### Vue 3
+
+Implementation of the lucide icon library for vue applications.
+
+```sh
+yarn add lucide-vue-next
+
+# or
+
+npm install lucide-vue-next
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next).
 
 ### Angular
 

@@ -18,11 +18,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Fetch tags
-        run: git fetch --tags
+        run: git fetch --all --tags
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "::set-output name=LATEST_TAG::$(git tag --list 2>/dev/null | tail -n1 2>/dev/null)"
+        run: echo "::set-output name=LATEST_TAG::$(git describe --tags `git rev-list --tags --max-count=1`)"
 
       - name: Get yarn cache directory path
         id: yarn_cache

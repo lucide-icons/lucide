@@ -137,6 +137,47 @@ jobs:
           name: lucide-vue-package-json
           path: packages/lucide-vue/package.json
 
+  lucide-vue-next:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn --pure-lockfile
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set new version
+        run: yarn workspace lucide-vue-next version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide-vue-next build
+
+      - name: Test
+        run: yarn workspace lucide-vue-next test
+
+      - name: Publish
+        run: yarn workspace lucide-vue-next publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-vue-next-package-json
+          path: packages/lucide-vue-next/package.json
+
   lucide-angular:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
@@ -171,6 +212,7 @@ jobs:
       - name: Upload package.json
         uses: actions/upload-artifact@v2
         with:
+        name: lucide-angular-package-json
           path: packages/lucide-angular/package.json
 
   lucide-preact:
@@ -213,7 +255,7 @@ jobs:
   upload-package-jsons:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [lucide, lucide-react, lucide-vue, lucide-angular, lucide-preact]
+    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact]
 
     steps:
     - uses: actions/checkout@v2
@@ -225,6 +267,8 @@ jobs:
         mv lucide-react-package-json/package.json packages/lucide-react/package.json
         mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
         mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
+        mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
+        mv lucide-angular-json/package.json packages/lucide-angular/package.json
 
     - name: Commit package.jsons
       run: |

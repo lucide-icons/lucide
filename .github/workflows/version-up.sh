@@ -4,7 +4,7 @@
 
 ## get highest version tag for all branches
 function highest_tag(){
-  local TAG=$(git tag --list 2>/dev/null | tail -n1 2>/dev/null)
+  local TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
   echo "$TAG"
 }
 
