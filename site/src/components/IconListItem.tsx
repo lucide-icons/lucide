@@ -12,7 +12,6 @@ const IconListItem = ({icon, onClick = (event, icon) => null, ...rest}) => {
       rounded="lg"
       padding={16}
       key={icon.name}
-      icon={icon.name}
       opacity={0.999}
       position="relative"
       alignItems="center"

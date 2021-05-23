@@ -3,12 +3,21 @@ import { getAllData } from "../lib/icons";
 
 import IconOverview from "../components/IconOverview";
 import IconDetailOverlay from "../components/IconDetailOverlay";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import Header from "../components/Header";
+import { useEffect } from "react";
 
 const IndexPage = ({ data }) => {
   const router = useRouter();
   const getIcon = (iconName) => data.find(({name}) => name === iconName) || {};
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete',((url, options) => {
+      console.log(router);
+      console.log(getIcon(router.query.iconName));
+
+    }))
+  }, [])
 
   return (
     <Layout>

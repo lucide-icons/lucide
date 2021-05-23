@@ -32,7 +32,9 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
       );
     }
     else {
-      router.push(`/?iconName=${name}`, `/icon/${name}`)
+      router.push(`/?iconName=${icon.name}`, `/icon/${icon.name}`, {
+        scroll: false
+      })
     }
   }
 
@@ -44,6 +46,7 @@ const IconList = ({icons, enableClick = true, iconListItemProps = {}}) => {
       {
         icons.map((icon) => (
           <IconListItem
+            key={icon.name}
             icon={{...icon, color, size, strokeWidth }}
             onClick={onClick}
             {...iconListItemProps}

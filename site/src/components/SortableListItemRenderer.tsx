@@ -15,13 +15,13 @@ const SortableListItemRenderer = (props: ItemRendererProps) => {
 
   return (
     <Flipped flipId={id}>
-    <Box ref={(ref) => drop(ref)}>
-      <Box ref={drag}>
-        <IconListItem
-          icon={icon}
-        />
+      <Box ref={(ref) => drop(ref)}>
+        <Box ref={drag}>
+          <IconListItem
+            icon={icon}
+          />
+        </Box>
       </Box>
-    </Box>
     </Flipped>
   );
 };
