@@ -43,16 +43,18 @@ export default App;
 | `color`      | *String* | currentColor
 | `strokeWidth`| *Number* | 2
 
-### Custom props
+### Custom props / svg attributes
 
-You can also pass custom props that will be added in the svg as attributes.
+You can also pass custom props that will be added in the as attributes. With that you can modify the icons look by passing svg attributes.
 
 ``` js
 // Usage
 const App = () => {
-  return <Camera fill="red"/>
+  return <Camera fill="red" stroke-linejoin="bevel"/>
 };
 ```
+
+> svg attributes in preact aren't transformed, so if want to change e.g. the `stroke-linejoin` you need to pass it in kebabcase, the way svg spec is written so. See this topic in the [preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
 
 ### One generic icon component
 
