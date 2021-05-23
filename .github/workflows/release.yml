@@ -212,7 +212,7 @@ jobs:
       - name: Upload package.json
         uses: actions/upload-artifact@v2
         with:
-        name: lucide-angular-package-json
+          name: lucide-angular-package-json
           path: packages/lucide-angular/package.json
 
   lucide-preact:
