@@ -20,15 +20,18 @@ jobs:
       YARN_CACHE_DIR: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
 
     steps:
+      - name: Set version ref
+        if: ${{ github.ref == 'refs/tags/*' }}
+        run: VERSION_REF=$GITHUB_REF
+
+      - name: Set version ref
+        if: ${{ github.event.inputs.version }}
+        run: VERSION_REF=${{ github.event.inputs.version }}
+
       - name: Get the version
         if: ${{ github.ref == 'refs/tags/*' }}
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\/\v}
-
-      - name: Get the version
-        if: ${{ github.event.inputs.version }}
-        id: get_version
-        run: echo ::set-output name=VERSION::${{ github.event.inputs.version }}
+        run: echo ::set-output name=VERSION::${VERSION_REF/refs\/tags\/\v}
 
       - name: Get yarn cache directory path
         id: yarn_cache
