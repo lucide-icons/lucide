@@ -21,19 +21,18 @@
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react/src --templateSrc=../packages/lucide-react/scripts/exportTemplate --renderUniqueKey",
-    "build:es": "yarn --cwd ../../ babel packages/lucide-react/src -d packages/lucide-react/dist/esm",
+    "build:es": "babel src -d dist/esm",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-react/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react/rollup.config.js",
     "test": "jest"
   },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.5.1"
-  },
   "devDependencies": {
+    "@testing-library/react": "^11.2.6",
     "babel-preset-react-app": "^10.0.0",
     "jest": "^26.6.3",
-    "react-test-renderer": "^16.5.1"
+    "prop-types": "^15.7.2",
+    "react": "^16.5.1",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
