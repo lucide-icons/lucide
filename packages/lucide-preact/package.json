@@ -1,7 +1,7 @@
 {
   "name": "lucide-preact",
   "description": "Lucide Preact package, Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
-  "version": "0.15.10-beta.7",
+  "version": "0.15.19",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -18,7 +18,6 @@
   "unpkg": "dist/umd/lucide-preact.min.js",
   "typings": "dist/lucide-preact.d.ts",
   "sideEffects": false,
-
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
