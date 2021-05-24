@@ -17,6 +17,7 @@
   "module": "dist/esm/lucide-react.js",
   "unpkg": "dist/umd/lucide-react.min.js",
   "typings": "dist/lucide-react.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
