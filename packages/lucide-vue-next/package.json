@@ -18,6 +18,7 @@
   "module": "dist/esm/lucide-vue-next.js",
   "unpkg": "dist/umd/lucide-vue-next.min.js",
   "typings": "dist/lucide-vue-next.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
