@@ -9,9 +9,10 @@
 ## What is Lucide?
 
 Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
-Started after growing disaffection of the moderation of the [Feather Icons](https://github.com/feathericons/feather) project, with over 300+ open issues and over 100+ open PRs, this project is no longer maintained. The owner of the project stopped merging icons and want to keep the project like it now is. Hundreds of developers/designer wasted their time trying to contribute, what a shame.
 
-We're trying to expanding the icon set as much as possible while keeping it nice-looking, we do it as a community of devs and designers, join us!
+It began after growing disaffection of the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
+
+Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
 
 ### Why choose Lucide over Feather Icons
 
@@ -38,7 +39,7 @@ We're trying to expanding the icon set as much as possible while keeping it nice
 
 ## Usage
 
-At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Feather icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
+At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Lucide icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
 
 The following are additional ways you can use Lucide.
 With the Javascript library you can easily incorporate the icon you want in your webpage.
