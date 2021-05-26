@@ -17,7 +17,7 @@ const Header = ({ data }) => {
   const downloadAllIcons = async () => {
 
     const zip = await generateZip(data);
-    download(zip, 'feather.zip');
+    download(zip, 'lucide-icons.zip');
   };
 
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
