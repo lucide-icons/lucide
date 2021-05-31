@@ -766,6 +766,11 @@
     "field",
     "text"
   ],
+  "forward": [
+    "email",
+    "arrow",
+    "share"
+  ],
   "framer": [
     "logo",
     "design",
@@ -1446,6 +1451,14 @@
   ],
   "repeat-1": [
     "replay"
+  ],
+  "reply-all": [
+    "email",
+    "arrow"
+  ],
+  "reply": [
+    "email",
+    "arrow"
   ],
   "rewind": [
     "music"
