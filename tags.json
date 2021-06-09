@@ -341,6 +341,10 @@
   "chevrons-down": [
     "arrow"
   ],
+  "chevrons-down-up": [
+    "arrow",
+    "fold"
+  ],
   "chevrons-left": [
     "arrow"
   ],
@@ -351,7 +355,8 @@
     "arrow"
   ],
   "chevrons-up-down": [
-    "arrow"
+    "arrow",
+    "unfold"
   ],
   "chrome": [
     "browser"
