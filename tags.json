@@ -1078,7 +1078,8 @@
     "order"
   ],
   "loader": [
-    "load"
+    "load",
+    "wait"
   ],
   "loader-2": [
     "load"
@@ -1506,11 +1507,12 @@
     "magnifying glass"
   ],
   "send": [
+    "email",
     "message",
     "mail",
-    "email",
     "paper airplane",
-    "paper aeroplane"
+    "paper aeroplane",
+    "submit"
   ],
   "separator-horizontal": [
     "move",
