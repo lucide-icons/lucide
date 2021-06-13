@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/core";
+import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/react";
 import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
@@ -6,6 +6,7 @@ import {useContext, useMemo} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import { useRouter } from "next/router";
+import ModifiedTooltip from './ModifiedTooltip';
 
 const IconList = ({icons}) => {
   const router = useRouter()
@@ -17,13 +18,13 @@ const IconList = ({icons}) => {
 
   return (
     <Grid
-      templateColumns={`repeat(auto-fill, minmax(160px, 1fr))`}
+      templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`}
       gap={5}
       marginBottom="320px"
     >
       { icons.map((icon) => {
         const actualIcon = icon.item ? icon.item : icon;
-        const { name, content } = actualIcon;
+        const { name, content, contributors } = actualIcon;
 
         return (
           <Link
@@ -42,6 +43,7 @@ const IconList = ({icons}) => {
               borderWidth="1px"
               rounded="lg"
               padding={16}
+              position="relative"
               onClick={(event) => {
                 if (event.shiftKey) {
                   copy(actualIcon.src);
@@ -63,6 +65,7 @@ const IconList = ({icons}) => {
               key={name}
               alignItems="center"
             >
+              { contributors?.length ? ( <ModifiedTooltip/> ) : null}
               <Flex direction="column" align="center" justify="center">
                 <IconWrapper
                   content={content}

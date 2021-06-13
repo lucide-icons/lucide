@@ -1,41 +1,37 @@
-import { useSpring, animated } from "react-spring";
-import { Box, Text, IconButton, useColorMode, Flex, ButtonGroup, Button, useToast } from "@chakra-ui/core";
+import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
-import {useContext, useRef} from "react";
+import {useContext, useEffect, useRef} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
+import ModifiedTooltip from "./ModifiedTooltip";
 
 type IconDownload = {
   src: string;
   name: string;
 };
 
-const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
+const IconDetailOverlay = ({ open = true, close, icon }) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
   const { tags = [], name } = icon;
   const {color, strokeWidth, size} = useContext(IconStyleContext);
   const iconRef = useRef<SVGSVGElement>(null);
-
-  const { transform, opacity } = useSpring({
-    opacity: isOpen ? 1 : 0,
-    transform: `translateY(${isOpen ? -120 : 0}%)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
+  const [isMobile] = useMediaQuery("(max-width: 560px)")
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const handleClose = () => {
     onClose();
+    close();
   };
 
-  const panelStyling = {
-    transform: transform.interpolate(t => t),
-    opacity: opacity.interpolate(o => o),
-    width: "100%",
-    willChange: "transform"
-  }
+  useEffect(() => {
+    if(open) {
+      onOpen()
+    }
+  }, [open])
 
   const iconStyling = (isLight) => ({
     height: "25vw",
@@ -88,6 +84,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
       height={0}
       key={name}
     >
+      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -98,9 +95,7 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
         w="full"
         px={8}
       >
-        <animated.div
-          style={panelStyling}
-        >
+
           <Box
             borderWidth="1px"
             rounded="lg"
@@ -163,11 +158,25 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                   </svg>
                 </Box>
               </Flex>
-              <Flex marginLeft={[0, 8]}>
-                <Box>
-                  <Text fontSize="3xl" style={{ cursor: "pointer" }} mb={1}>
-                    {icon.name}
-                  </Text>
+              <Flex marginLeft={[0, 8]} w="100%">
+                <Box w="100%">
+                  <Flex
+                    justify={isMobile ? 'center' : 'flex-start'}
+                    marginTop={isMobile ? 10 : 0}
+                  >
+                    <Box
+                      position="relative"
+                      mb={1}
+                      display="inline-block"
+                      style={{ cursor: "pointer" }}
+                      pr={6}
+                    >
+                      <Text fontSize="3xl">
+                        {icon.name}
+                      </Text>
+                      { icon?.contributors?.length ? ( <ModifiedTooltip/> ) : null}
+                    </Box>
+                  </Flex>
                   <Box mb={4}>
                     { tags?.length ? (
                       <Text
@@ -187,23 +196,42 @@ const IconDetailOverlay = ({ isOpen = true, onClose, icon }) => {
                     Edit Tags
                   </Button> */}
                   </Box>
-                  <ButtonGroup spacing={4}>
-                    <Button variant="solid" onClick={() => downloadIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
-                      Download SVG
-                    </Button>
-                    <Button variant="solid" onClick={() => copyIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
-                      Copy SVG
-                    </Button>
-                    <Button variant="solid" onClick={() => downloadPNG({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
-                      Download PNG
-                    </Button>
-                  </ButtonGroup>
+                  <Box overflowY="auto" w="100%" pt={1} pb={1}>
+                    <ButtonGroup spacing={4}>
+                      <Button variant="solid" onClick={() => downloadIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
+                        Download SVG
+                      </Button>
+                      <Button variant="solid" onClick={() => copyIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
+                        Copy SVG
+                      </Button>
+                      <Button variant="solid" onClick={() => downloadPNG({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
+                        Download PNG
+                      </Button>
+                    </ButtonGroup>
+                  </Box>
+                  { icon?.contributors?.length ? (
+                    <>
+                      <Heading as="h5" size="sm" marginTop={4} marginBottom={2}>
+                        Contributors:
+                      </Heading>
+                      <AvatarGroup size="md">
+                        { icon.contributors.map((commit, index) => (
+                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.sha}`}>
+                            <Tooltip label={commit.author} key={commit.sha}>
+                              <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
+                            </Tooltip>
+                          </Link>
+                        )) }
+                      </AvatarGroup>
+                    </>
+                  ) : null }
                 </Box>
               </Flex>
             </Flex>
           </Box>
-        </animated.div>
+
       </Flex>
+      </Slide>
     </Box>
   );
 };

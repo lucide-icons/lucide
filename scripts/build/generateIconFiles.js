@@ -4,24 +4,28 @@ import path from 'path';
 import prettier from 'prettier';
 import { toPascalCase } from '../helpers';
 
-export default function(iconNode, outputDirectory, template) {
-  const icons = Object.keys(iconNode);
+export default function({ iconNodes, outputDirectory, template, showLog = true, iconFileExtention = '.js' }) {
+  const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
   if (!fs.existsSync(iconsDistDirectory)) {
     fs.mkdirSync(iconsDistDirectory);
   }
 
-  icons.forEach(icon => {
-    const location = path.join(iconsDistDirectory, `${icon}.js`);
-    const componentName = toPascalCase(icon);
+  icons.forEach(iconName => {
+    const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
+    const componentName = toPascalCase(iconName);
 
-    const node = JSON.stringify(iconNode[icon]);
+    let { children } = iconNodes[iconName];
+    children = children.map(({name, attributes}) => ([name, attributes]))
 
-    const elementTemplate = template({ componentName, node });
+    const elementTemplate = template({ componentName, iconName, children });
 
-    fs.writeFileSync(location, prettier.format(elementTemplate, { parser: 'babel' }), 'utf-8');
 
-    console.log('Successfully built', componentName);
+    fs.writeFileSync(location, prettier.format(elementTemplate, { singleQuote: true, trailingComma: 'all', parser: 'babel' }), 'utf-8');
+
+    if(showLog) {
+      console.log('Successfully built', componentName);
+    }
   });
 }

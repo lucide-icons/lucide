@@ -1,4 +1,4 @@
-<p align=center><img width="410" src="https://lucide.netlify.app/logo-text.svg" alt="Lucide Logo"></p>
+<p align=center><img width="410" src="https://lucide.dev/logo-text.svg" alt="Lucide Logo"></p>
 
 # Lucide
 
@@ -10,148 +10,57 @@
 
 Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
+It began after growing disaffection of the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
+
+Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
+
+### Why choose Lucide over Feather Icons
+
+- Lucide already expended the icon set by 130+ in less then a year, so more icons to work with.
+- Well maintained code base.
+- Active community.
+
 ## Table of Contents
 
 * [Installation](#installation)
   * [Package managers](#package-managers)
   * [CDN](#cdn)
 * [Usage](#usage)
-  * [Unpkg](#with-unpkg)
-  * [ESModules](#with-esmodules)
-    * [Options](#additional-options)
-    * [Treeshake library](#treeshake-the-library-only-use-the-icons-you-use)
-    * [Custom binding](#custom-element-binding)
-  * [React](#with-react)
+  * [Web](#web)
+  * [React](#react)
+  * [Vue 2](#vue-2)
+  * [Vue 3](#vue-3)
+  * [Angular](#angular)
+  * [Preact](#preact)
   * [Figma](#figma)
 * [Contributing](#contributing)
 * [Community](#community)
 * [License](#license)
 
-## Installation
-
-### Package Managers
-
-``` bash
-npm install lucide
-#or
-yarn add lucide
-```
-
-### CDN
-
-``` html
-<!-- Development version -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-<!-- Production version -->
-<script src="https://unpkg.com/lucide@latest"></script>
-```
-
 ## Usage
 
-At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Feather icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
+At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Lucide icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
 
 The following are additional ways you can use Lucide.
 With the Javascript library you can easily incorporate the icon you want in your webpage.
 
-### With unpkg
+### Web
 
-Here is a complete example with unpkg
+Implementation of the lucide icon library for web applications.
 
-```html
-<!DOCTYPE html>
-<body>
-  <i icon-name="volume-2" class="my-class"></i>
-  <i icon-name="x"></i>
-  <i icon-name="menu"></i>
+```sh
+npm install lucide
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
+#or
+
+yarn add lucide
 ```
 
-### With ESModules
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide#lucide).
 
-To reduce bundle size, lucide is built to be fully treeshakable.
-The `createIcons` function will search for HTMLElements with the attribute `icon-name` and replace it with the svg from the given icon name.
+### React
 
-```html
-<!-- Your HTML file -->
-<i icon-name="menu"></i>
-```
-
-```js
-import { createIcons, icons } from 'lucide';
-
-// Caution, this will import all the icons and bundle them.
-createIcons({icons});
-
-// Recommended way, to include only the icons you need.
-import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
-
-createIcons({
-  icons: {
-    Menu,
-    ArrowRight,
-    Globe,
-  },
-});
-```
-
-#### Additional Options
-
-In the `createIcons` function you can pass some extra parameters to adjust the `nameAttr` or add custom attributes like for example classes.
-
-Here is a full example:
-
-```js
-import { createIcons } from 'lucide';
-
-createIcons({
-  attrs: {
-    class: ['my-custom-class', 'icon'],
-    'stroke-width': 1,
-    stroke: '#333',
-  },
-  nameAttr: 'icon-name', // atrribute for the icon name.
-});
-```
-
-#### Treeshake the library, only use the icons you use
-
-```js
-import { createIcons, Menu, ArrowRight, Globe } from 'lucide';
-
-createIcons({
-  icons: {
-    Menu,
-    ArrowRight,
-    Globe,
-  },
-});
-```
-
-#### Custom Element binding
-
-```js
-import { createElement, Menu } from 'lucide';
-
-const menuIcon = createElement(Menu); // Returns HTMLElement (svg)
-
-// set custom attributes with browser native functions
-menuIcon.setAttribute('stroke', '#333');
-menuIcon.classList.add('my-icon-class');
-
-// Append HTMLElement in webpage
-const myApp = document.getElementById('app');
-myApp.appendChild(menuIcon);
-```
-
-### With React
-
-You can also use the Lucide library using the react package.
+Implementation of the lucide icon library for react applications.
 
 ```sh
 yarn add lucide-react
@@ -161,11 +70,69 @@ yarn add lucide-react
 npm install lucide-react
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/blob/master/packages/lucide-react/README.md).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react#lucide-react).
+
+### Vue 2
+
+Implementation of the lucide icon library for vue applications.
+
+```sh
+yarn add lucide-vue
+
+# or
+
+npm install lucide-vue
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue).
+
+### Vue 3
+
+Implementation of the lucide icon library for vue applications.
+
+```sh
+yarn add lucide-vue-next
+
+# or
+
+npm install lucide-vue-next
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next).
+
+### Angular
+
+```sh
+yarn add lucide-angular
+
+# or
+
+npm install lucide-angular
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/packages/lucide-angular#lucide-angular).
+
+### Preact
+
+Implementation of the lucide icon library for preact applications.
+
+```sh
+yarn add lucide-preact
+
+# or
+
+npm install lucide-preact
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact#lucide-preact).
 
 ### Figma
 
-You can use the components from [this Figma file](https://www.figma.com/file/g0UipfQlRfGrntKPxZknM7/Featherity).
+The lucide figma plugin.
+
+Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
+
+<img width="420" src="https://www.figma.com/community/plugin/939567362549682242/thumbnail" alt="Figma Lucide Cover">
 
 ## Contributing
 
@@ -179,4 +146,10 @@ Join the community on our [Discord](https://discord.gg/EH6nSts) server!
 
 ## License
 
-Lucide is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
+Lucide is totally free for commercial use and personally use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
+
+## Sponsors
+
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>

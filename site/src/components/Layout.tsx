@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/core";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
 import NextLink from "next/link"
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
           maxW="1250px"
           margin="0 auto"
           w="full"
-          px={8}
+          px={5}
         >
           <Flex justifyContent="center" alignItems="center">
             <NextLink href="/" passHref>
@@ -77,9 +77,15 @@ const Layout = ({ children }) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW="1250px" px={8}>
+      <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
         {children}
-        <Divider marginTop={4} marginBottom={8} />
+        <Divider marginBottom={8} />
+        <p style={{ alignSelf: "center" }}>
+          <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+            <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+          </a>
+        </p>
+        <br />
       </Flex>
     </Box>
   );
