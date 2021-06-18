@@ -24,6 +24,7 @@ export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
     strokeWidth?: string | number
 }
 
+export type Icon = React.FC<LucideProps>;
 // Generated icons
 `;
 
