@@ -20,7 +20,7 @@ type Item = {
 
 const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
   const [{ hovered, dragItem }, drop] = useDrop({
-    accept: 'TREE',
+    accept: 'ICONS',
     collect: (monitor) => ({
       hovered: monitor.isOver(),
       dragItem: monitor.getItem(),
@@ -44,13 +44,15 @@ const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
   }, [dragItem, hovered, handleMove]);
 
   return (
-    <div ref={drop} style={{ paddingBottom: 50 }}>
+    <div style={{ paddingBottom: 50 }} ref={drop}>
       <Sortly<Item>
-        type="TREE"
+        maxDepth={0}
+        horizontal
         items={items}
         onChange={onChange}
+        type="ICONS"
       >
-        {SortableListItemRenderer}
+        {(props) => <SortableListItemRenderer {...props} />}
       </Sortly>
     </div>
   );

@@ -13,12 +13,13 @@ import categoriesFile from '../../../../categories.json'
 import update from 'immutability-helper';
 import { useEffect, useState, useMemo, useCallback } from 'react';
 import SortableIconList from '../../components/SortableIconList';
+import throttle from 'lodash/throttle';
 
 const EditCategoriesPage = ({ icons = {}}) => {
   const boxBackground = useColorModeValue(theme.colors.white, theme.colors.gray[700]);
   const activeBackground = useColorModeValue(theme.colors.gray, theme.colors.gray[400]);
   const [categories, setCategories] = useState(
-    [Object.entries(categoriesFile)[0]].map(([category, iconNames], index) => {
+    Object.entries(categoriesFile).map(([category, iconNames], index) => {
       return {
         id: index,
         name: category,
@@ -26,6 +27,7 @@ const EditCategoriesPage = ({ icons = {}}) => {
           return {
             ...icons[iconName],
             id: `${category}.${iconName}`,
+            depth: 0,
           };
         })
       }
@@ -34,28 +36,39 @@ const EditCategoriesPage = ({ icons = {}}) => {
   const [changes, setChanges] = useState(0);
   const [hoveringCategory, setHoveringCategory] = useState('');
 
+  const setCategoriesDebounced = throttle(setCategories, 500);
+
   const iconListItemProps = {
     draggable: true,
     href: '',
     as: '',
   }
 
-  const handleChange = (index: number) => (newItems: ItemData<Item>[]) => {
-    console.log('change');
-
+  const handleChange = (index: number | string) => (newItems: ItemData<Item>[]) => {
     setCategories(update(categories, {
       [index]: { items: { $set: newItems } },
     }));
   };
 
-  const handleEnter = (targetCategoryIndex: number) => (dragItem: DragObject) => {
-    console.log('ENTERRRR');
-
+  const handleEnter = (targetCategoryIndex: number | string) => (dragItem: DragObject) => {
     const sourceCategoryIndex = categories.findIndex((category) => (
       category.items.some((item) => item.id === dragItem.id)
     ));
-    const sourceCategory = categories[sourceCategoryIndex];
-    const targetCategory = categories[targetCategoryIndex];
+
+    let sourceCategory = categories[sourceCategoryIndex];
+      const targetCategory = categories[targetCategoryIndex];
+
+      console.log(sourceCategoryIndex);
+
+
+    if(sourceCategoryIndex === -1 && icons[dragItem.id]) {
+      const items = [icons[dragItem.id]].map((item) => ({ ...item, categoryId: targetCategory.id }));
+      return setCategories(update(categories, {
+        [targetCategoryIndex]: {
+          items: { $set: add(targetCategory.items, items) }
+        },
+      }));
+    }
 
     if (targetCategory.items.some((item) => item.id === dragItem.id)) {
       return;
@@ -75,12 +88,6 @@ const EditCategoriesPage = ({ icons = {}}) => {
       },
     }));
   };
-
-  useEffect(() => {
-    console.log('categories changed!');
-
-
-  }, [categories])
 
   // useEffect(() => {
   //   const mappedCategories = Object.entries(categoriesFile).reduce((acc, [category, iconNames]) => {
@@ -138,10 +145,9 @@ const EditCategoriesPage = ({ icons = {}}) => {
                   <SortableIconList
                     id={999}
                     items={Object.values(icons)}
-                    onChange={() => {}}
-                    onEnter={() => {}}
+                    onChange={handleEnter('iconList')}
+                    onEnter={handleEnter('iconList')}
                   />
-                  <IconList icons={Object.values(icons)} iconListItemProps={iconListItemProps} enableClick={false} />
                 </Box>
               </Box>
             </Box>

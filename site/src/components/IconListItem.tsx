@@ -1,12 +1,12 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Button, Flex, forwardRef, Text } from "@chakra-ui/react";
 
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from './ModifiedTooltip';
 
-const IconListItem = ({icon, onClick = (event, icon) => null, ...rest}) => {
-
+const IconListItem = forwardRef(({icon, onClick = (event, icon) => null, ...rest}, ref) => {
   return (
     <Button
+      ref={ref}
       variant="ghost"
       borderWidth="1px"
       rounded="lg"
@@ -33,6 +33,6 @@ const IconListItem = ({icon, onClick = (event, icon) => null, ...rest}) => {
       </Flex>
     </Button>
   )
-}
+})
 
 export default IconListItem;
