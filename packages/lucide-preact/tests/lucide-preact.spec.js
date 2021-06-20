@@ -1,5 +1,5 @@
-import React from 'react';
-import { render } from '@testing-library/react'
+import { h } from 'preact'
+import { render } from '@testing-library/preact'
 import { Grid } from '../src/icons'
 
 describe('Using lucide icon components', () => {
@@ -25,7 +25,6 @@ describe('Using lucide icon components', () => {
     expect(attributes.width.value).toBe('48');
     expect(attributes.height.value).toBe('48');
     expect(attributes['stroke-width'].value).toBe('4');
-
     expect( container.innerHTML ).toMatchSnapshot();
   });
 })

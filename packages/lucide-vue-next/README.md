@@ -1,19 +1,19 @@
-# Lucide Vue
+# Lucide Vue Next
 
-Implementation of the lucide icon library for Vue applications.
+Implementation of the lucide icon library for Vue 3 applications.
 
 > What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
-> :warning: This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next)
+> :warning: This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue)
 
 ## Installation
 
 ```sh
-yarn add lucide-vue
+yarn add lucide-vue-next
 
 # or
 
-npm install lucide-vue
+npm install lucide-vue-next
 ```
 
 ## How to use
@@ -35,7 +35,7 @@ You can pass additional props to adjust the icon.
 
 <script>
 // Returns Vue component
-import { Camera } from 'lucide-vue';
+import { Camera } from 'lucide-vue-next';
 
 export default {
   name: "My Component",
@@ -78,7 +78,7 @@ It is possible to create one generic icon component to load icons.
 </template>
 
 <script>
-import * as icons from "lucide-vue";
+import * as icons from "lucide-vue-next";
 
 export default {
   props: {

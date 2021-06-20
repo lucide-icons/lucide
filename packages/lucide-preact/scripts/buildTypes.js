@@ -11,25 +11,21 @@ const srcDirectory = path.join(__dirname, '../dist');
 
 // Declare type definitions
 const typeDefinitions = `\
-/// <reference types="vue" />
-import { SVGAttributes } from 'vue'
+/// <reference types="preact" />
+import { JSX, RefObject } from 'preact'
 
-declare module 'lucide-vue-next'
-
-// Create interface extending SVGAttributes
-export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
-    color?: string
-    size?: string | number
-    stroke?: string | number
-    strokeWidth?: string | number
+interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
+  key?: string | number;
+  ref?: string | ((component: any) => any) | RefObject<any>;
+  color?: string
+  size?: string | number
 }
 
-export type Icon = React.FC<LucideProps>;
 // Generated icons
 `;
 
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
-const TYPES_FILE = 'lucide-react.d.ts';
+const TYPES_FILE = 'lucide-preact.d.ts';
 
 resetFile(TYPES_FILE, srcDirectory);
 writeFile(typeDefinitions, TYPES_FILE, srcDirectory);

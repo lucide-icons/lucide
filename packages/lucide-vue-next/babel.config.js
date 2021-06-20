@@ -10,10 +10,5 @@ module.exports = {
       },
     ],
   ],
-  env: {
-    ...mainConfig.env,
-    test: {
-      presets: ['react-app'],
-    },
-  },
+  env: mainConfig.env,
 };
