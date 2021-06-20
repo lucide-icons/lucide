@@ -17,16 +17,17 @@ const IconListItem = ({icon, onClick = (event, icon) => null, ...rest}) => {
       alignItems="center"
       _focus={{ outline: 'none'}}
       onClick={(event) => onClick(event, icon)}
+      color="white"
       {...rest}
     >
-      { icon.contributors?.length ? ( <ModifiedTooltip/> ) : null}
+      { icon?.contributors?.length ? ( <ModifiedTooltip/> ) : null}
       <Flex direction="column" align="center" justify="center">
         <IconWrapper
           content={icon.content}
-          stroke={icon.color}
+          stroke={icon.color || 'currentColor'}
           strokeWidth={icon.strokeWidth}
-          height={icon.size}
-          width={icon.size}
+          height={icon.size || 24}
+          width={icon.size || 24}
         />
         <Text marginTop={5}>{icon.name}</Text>
       </Flex>

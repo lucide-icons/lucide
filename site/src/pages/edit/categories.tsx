@@ -17,7 +17,20 @@ import SortableIconList from '../../components/SortableIconList';
 const EditCategoriesPage = ({ icons = {}}) => {
   const boxBackground = useColorModeValue(theme.colors.white, theme.colors.gray[700]);
   const activeBackground = useColorModeValue(theme.colors.gray, theme.colors.gray[400]);
-  const [categories, setCategories] = useState({});
+  const [categories, setCategories] = useState(
+    [Object.entries(categoriesFile)[0]].map(([category, iconNames], index) => {
+      return {
+        id: index,
+        name: category,
+        items: iconNames.map(iconName => {
+          return {
+            ...icons[iconName],
+            id: `${category}.${iconName}`,
+          };
+        })
+      }
+    }, {})
+  );
   const [changes, setChanges] = useState(0);
   const [hoveringCategory, setHoveringCategory] = useState('');
 
@@ -27,12 +40,17 @@ const EditCategoriesPage = ({ icons = {}}) => {
     as: '',
   }
 
-  const handleChange = (index: number) => (newItems: []) => {
+  const handleChange = (index: number) => (newItems: ItemData<Item>[]) => {
+    console.log('change');
+
     setCategories(update(categories, {
       [index]: { items: { $set: newItems } },
     }));
   };
+
   const handleEnter = (targetCategoryIndex: number) => (dragItem: DragObject) => {
+    console.log('ENTERRRR');
+
     const sourceCategoryIndex = categories.findIndex((category) => (
       category.items.some((item) => item.id === dragItem.id)
     ));
@@ -59,18 +77,24 @@ const EditCategoriesPage = ({ icons = {}}) => {
   };
 
   useEffect(() => {
-    const mappedCategories = Object.entries(categoriesFile).reduce((acc, [category, iconNames]) => {
-      acc[category] = iconNames.map(iconName => {
-        const icon = icons[iconName];
-        icon.id = `${category}.${iconName}`
-        return icon;
-      })
-      return acc;
-    }, {})
+    console.log('categories changed!');
 
-    setCategories(mappedCategories);
 
-  },[categoriesFile, icons])
+  }, [categories])
+
+  // useEffect(() => {
+  //   const mappedCategories = Object.entries(categoriesFile).reduce((acc, [category, iconNames]) => {
+  //     acc[category] = iconNames.map(iconName => {
+  //       const icon = icons[iconName];
+  //       icon.id = `${category}.${iconName}`
+  //       return icon;
+  //     })
+  //     return acc;
+  //   }, {})
+
+  //   setCategories(mappedCategories);
+
+  // },[categoriesFile, icons])
 
   const categoryProps = {
     // cursor: dragging ? 'copy' : 'auto',
@@ -111,6 +135,12 @@ const EditCategoriesPage = ({ icons = {}}) => {
                   padding={8}
                   overflowY="scroll"
                 >
+                  <SortableIconList
+                    id={999}
+                    items={Object.values(icons)}
+                    onChange={() => {}}
+                    onEnter={() => {}}
+                  />
                   <IconList icons={Object.values(icons)} iconListItemProps={iconListItemProps} enableClick={false} />
                 </Box>
               </Box>
@@ -120,19 +150,20 @@ const EditCategoriesPage = ({ icons = {}}) => {
                 Categories
               </Heading>
               <Box marginTop={5} marginBottom={320} marginLeft="auto">
-                <Flipper flipKey={Object.values(categories).map(( items ) => items.map((name) => name).join('.')).join('.')}>
-                  {
-                    Object.entries(categories).map(([categoryName, icons], index) => (
-                      <IconCategory name={categoryName}>
+                <Flipper flipKey={categories.map(({ items }) => items.map(({ id }) => id).join('.')).join('.')}>
+                    {categories.map(({ id, name, items }, index) => (
+                      <IconCategory
+                        name={name}
+                        key={name}
+                      >
                         <SortableIconList
                           id={index}
-                          items={icons}
+                          items={items}
                           onChange={handleChange(index)}
                           onEnter={handleEnter(index)}
                         />
                       </IconCategory>
-                    ))
-                  }
+                    ))}
                 </Flipper>
               </Box>
             </Box>
@@ -149,6 +180,7 @@ export async function getStaticProps() {
   const fetchedIcons = await getAllData();
   const icons = fetchedIcons.reduce((acc, item) => {
     acc[item.name] = item;
+    acc[item.name].id = item.name;
     return acc;
   }, {})
   return { props: { icons } };

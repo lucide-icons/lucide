@@ -4,6 +4,7 @@ import { useDrop } from 'react-dnd';
 
 import Sortly, { ItemData, DragObject } from 'react-sortly';
 import SortableListItemRenderer from './SortableListItemRenderer';
+import { Grid } from "@chakra-ui/react";
 
 type TreeProps = {
   id: number;
@@ -26,7 +27,7 @@ const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
     }),
   });
 
-  const handleMove = React.useCallback(() => {
+  const handleMove = () => {
     if (!dragItem) {
       return;
     }
@@ -34,7 +35,7 @@ const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
     if (hovered) {
       onEnter(dragItem);
     }
-  }, [dragItem, hovered, onEnter]);
+  }
 
   React.useEffect(() => {
     if (dragItem) {
@@ -55,4 +56,8 @@ const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
   );
 };
 
-export default SortableIconList;
+export default React.memo(SortableIconList, (oldProps, newProps) => {
+  const createName = (items) => items.map(({name}) => name).join('.');
+
+  return createName(oldProps.items) === createName(newProps.items);
+});
