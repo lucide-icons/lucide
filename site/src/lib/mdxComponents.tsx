@@ -1,4 +1,5 @@
 import { Text, Heading, UnorderedList, ListItem, Image, Divider, OrderedList } from '@chakra-ui/react';
+import CodeBlock from '../components/CodeBlock';
 
 const components = {
   h1: (props) => (
@@ -36,13 +37,15 @@ const components = {
   ol: (props) => <OrderedList my={2}>{props.children}</OrderedList>,
   li: (props) => <ListItem my={1}>{props.children}</ListItem>,
   p: (props) => <Text my={2}>{props.children}</Text>,
-  img: ({children, ...rest}) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>,
-  code: (props) => {
-    console.log(props);
+  img: ({ children, ...rest }) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>,
+  code: ({ className, children: code }) => {
+    const language = className.replace('language-', '');
+
     return (
-      <pre>
-        {props.children}
-      </pre>
+      <CodeBlock
+        code={code}
+        language={language}
+      />
     )
   }
 };

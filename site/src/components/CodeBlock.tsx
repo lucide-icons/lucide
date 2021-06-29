@@ -1,7 +1,10 @@
-import { Box, BoxProps, chakra } from '@chakra-ui/react';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import { Box, BoxProps, chakra, useColorMode } from '@chakra-ui/react';
+import nightOwlLightTheme from 'prism-react-renderer/themes/nightOwlLight';
+import nightOwlDarkTheme from 'prism-react-renderer/themes/nightOwl';
+import uiTheme from '../lib/theme'
+// import theme from 'prism-react-renderer/themes/nightOwl';
 import BaseHighlight, { defaultProps, Language } from 'prism-react-renderer';
-import { CSSProperties } from 'react';
+import { CSSProperties, useMemo } from 'react';
 import CopyButton from './CopyButton';
 
 const editorStyle: CSSProperties = {
@@ -17,7 +20,6 @@ const CodeContainer = (props: BoxProps) => (
     paddingBottom="3"
     rounded="8px"
     height="100%"
-    bg="#011627"
     {...props}
   />
 );
@@ -50,18 +52,31 @@ interface HighlightProps {
 
 function CodeBlock({ code, language, metastring, showLines, ...props }: HighlightProps) {
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
+  const { colorMode } = useColorMode();
+
+  const backgroundColor = colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[700]
+  const codeTheme = colorMode === 'light' ? nightOwlLightTheme : nightOwlDarkTheme;
+
+  const customizedCodeTheme = {
+    ...codeTheme,
+    plain: {
+      ...codeTheme.plain,
+      backgroundColor
+    }
+  }
 
   return (
     <Box position="relative" zIndex="0" {...props}>
-      <CodeContainer>
+      <CodeContainer bg={backgroundColor}>
         <BaseHighlight
           {...defaultProps}
           code={code}
           language={language}
-          theme={theme}
+          theme={customizedCodeTheme}
+          key={colorMode}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <div style={editorStyle} data-language={language}>
+            <div style={editorStyle} data-language={language} key={colorMode}>
               <pre className={className} style={style}>
                 {tokens.map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
@@ -76,7 +91,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                           {i + 1}
                         </chakra.span>
                       )}
-                      {line.map((token, key) => (
+                      {line.filter(({empty = false}) => !empty).map((token, key) => (
                         <span {...getTokenProps({ token, key })} />
                       ))}
                     </chakra.div>
@@ -98,6 +113,8 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
         top="4"
         right="1.25em"
         copyText={code}
+        fontFamily={uiTheme.fonts.body}
+        fontWeight="bold"
       />
     </Box>
   );

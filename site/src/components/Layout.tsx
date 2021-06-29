@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
       </Flex>
       <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
         {children}
-        <Divider marginBottom={8} />
+        <Divider mb={6} mt={12} />
         <p style={{ alignSelf: "center" }}>
           <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
             <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
