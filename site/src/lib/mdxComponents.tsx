@@ -36,7 +36,15 @@ const components = {
   ol: (props) => <OrderedList my={2}>{props.children}</OrderedList>,
   li: (props) => <ListItem my={1}>{props.children}</ListItem>,
   p: (props) => <Text my={2}>{props.children}</Text>,
-  img: ({children, ...rest}) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>
+  img: ({children, ...rest}) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>,
+  code: (props) => {
+    console.log(props);
+    return (
+      <pre>
+        {props.children}
+      </pre>
+    )
+  }
 };
 
 export default components;
