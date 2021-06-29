@@ -1,4 +1,4 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap } from "@chakra-ui/react";
+import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from "@chakra-ui/react";
 import download from "downloadjs";
 import JSZip from "jszip";
 import { Download, Github } from 'lucide-react';
@@ -24,15 +24,20 @@ const Header = ({ data }) => {
 
   return (
     <Flex direction="column" align="center" justify="center">
-      <Text fontSize="4xl" as="b" mb="4" textAlign="center">
+      <Heading
+        as="h1"
+        fontSize="4xl"
+        mb="4"
+        textAlign="center"
+      >
         Simply beautiful open source icons, community-sourced
-      </Text>
+      </Heading>
       <Text fontSize="lg" as="p" textAlign="center" mb="8">
         An open-source icon library, a fork of <Link href="https://github.com/feathericons/feather" isExternal>Feather Icons</Link>. <br/>We're expanding the icon set as much as possible while keeping it nice-looking - <Link href={repositoryUrl} isExternal>join us</Link>!
       </Text>
       <Wrap
         marginTop={3}
-        marginBottom={10}
+        marginBottom={12}
         spacing="15px"
         justify="center"
       >

@@ -57,6 +57,13 @@ const Layout = ({ children }) => {
           </Flex>
           <Flex justifyContent="center" alignItems="center">
           <Link
+            marginRight={6}
+            fontSize="xl"
+            href='/docs'
+          >
+            Documentation
+          </Link>
+          <Link
             href="https://github.com/lucide-icons/lucide"
             isExternal
             marginRight={6}

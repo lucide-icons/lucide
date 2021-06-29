@@ -1,3 +1,7 @@
+---
+title: Introduction
+---
+
 # Introduction
 
 ## What is Lucide?
@@ -13,3 +17,10 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 - Lucide already expended the icon set by 130+ in less then a year, so more icons to work with.
 - Well maintained code base.
 - Active community.
+
+## Getting Started
+
+At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Lucide icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
+
+### Frameworks
+

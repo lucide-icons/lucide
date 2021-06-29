@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
+import Head from 'next/head';
 import fetchAllDocuments from '../../lib/fetchAllDocuments'
 
 const DocPage = ({ document }) => {
@@ -13,7 +14,7 @@ const DocPage = ({ document }) => {
 export default DocPage
 
 export async function getStaticProps({ params: { docName } }) {
-  const doc = fetchAllDocuments()
+  const doc = await fetchAllDocuments()
   return { props: { doc } }
 }
 
