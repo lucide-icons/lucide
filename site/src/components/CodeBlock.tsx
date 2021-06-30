@@ -82,7 +82,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                   const lineProps = getLineProps({ line, key: i });
                   return (
                     <chakra.div
-                      px="5"
+                      px="4"
                       bg={shouldHighlightLine(i) ? 'whiteAlpha.200' : undefined}
                       {...lineProps}
                     >

@@ -1,5 +1,23 @@
-import { Text, Heading, UnorderedList, ListItem, Image, Divider, OrderedList } from '@chakra-ui/react';
+import {
+  Text,
+  Heading,
+  UnorderedList,
+  ListItem,
+  Image,
+  Divider,
+  OrderedList,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Alert,
+  Code as InlineCode,
+  Link
+} from '@chakra-ui/react';
 import CodeBlock from '../components/CodeBlock';
+import NextLink from "next/link"
 
 const components = {
   h1: (props) => (
@@ -43,11 +61,37 @@ const components = {
 
     return (
       <CodeBlock
+        my={2}
         code={code}
         language={language}
       />
     )
-  }
+  },
+  table: (props) => <Table {...props} rounded={4}/>,
+  thead: Thead,
+  tbody: Tbody,
+  tr: Tr,
+  th: Th,
+  td: Td,
+  blockquote: (props) => (
+    <Alert
+      mt="4"
+      role="none"
+      status="warning"
+      variant="left-accent"
+      as="blockquote"
+      rounded={4}
+      my="1.5rem"
+      {...props}
+    />
+  ),
+  inlineCode: InlineCode,
+  hr: (props) => <Divider my={4}/>,
+  a: ({children, href, ...rest}) => (
+    <NextLink href={`/docs/${href}`} {...rest} passHref>
+      <Link display="flex">{children}</Link>
+    </NextLink>
+  )
 };
 
 export default components;

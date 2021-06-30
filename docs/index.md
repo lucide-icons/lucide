@@ -24,3 +24,38 @@ At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files
 
 ### Frameworks
 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi molestiae officiis! Libero ullam placeat esse temporibus, nostrum velit, laboriosam beatae aperiam quasi quia quisquam quis quibusdam nemo expedita nam est animi quam minus. Magnam pariatur repellendus dolor dolorum illum, exercitationem, nobis expedita quibusdam ex ab laborum quidem quasi rem?
+
+#### This is a heading 4
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi molestiae officiis! Libero ullam placeat esse temporibus, nostrum velit, laboriosam beatae aperiam quasi quia quisquam quis quibusdam nemo expedita nam est animi quam minus.
+
+##### This is a heading 5
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi molestiae officiis! Libero ullam placeat esse temporibus, nostrum velit, laboriosam beatae aperiam quasi quia quisquam quis quibusdam nemo expedita nam est animi quam minus.
+
+###### This is a heading 6
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+```js
+function myFunction(harryPotter) {
+  console.log('my wand')
+}
+```
+
+------
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi molestiae officiis! Libero ullam placeat esse temporibus, nostrum velit, laboriosam beatae aperiam quasi quia quisquam quis quibusdam nemo expedita nam est animi quam minus.
+
+|  name        |   type   |  default
+| ------------ | -------- | --------
+| `size`       | *Number* | 24
+| `color`      | *String* | currentColor
+| `strokeWidth`| *Number* | 2
+
+> Holyshit this is important!
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi molestiae officiis! Libero ullam placeat esse temporibus, nostrum velit, laboriosam beatae aperiam quasi quia quisquam quis quibusdam nemo expedita nam est animi quam minus.
+
+Check out [installation](installation)
