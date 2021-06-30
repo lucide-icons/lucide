@@ -88,7 +88,7 @@ const components = {
   inlineCode: InlineCode,
   hr: (props) => <Divider my={4}/>,
   a: ({children, href, ...rest}) => (
-    <NextLink href={`/docs/${href}`} {...rest} passHref>
+    <NextLink href={`/docs/${href.replace('.md', '')}`} {...rest} passHref>
       <Link display="flex">{children}</Link>
     </NextLink>
   )

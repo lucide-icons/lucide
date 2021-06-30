@@ -58,4 +58,4 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi mole
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi molestiae officiis! Libero ullam placeat esse temporibus, nostrum velit, laboriosam beatae aperiam quasi quia quisquam quis quibusdam nemo expedita nam est animi quam minus.
 
-Check out [installation](installation)
+Check out [installation](installation.md)
