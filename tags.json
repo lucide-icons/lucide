@@ -557,6 +557,10 @@
     "winner",
     "favourite"
   ],
+  "currency": [
+    "finance",
+    "money"
+  ],
   "database": [
     "storage",
     "memory"
