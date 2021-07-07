@@ -4,6 +4,7 @@
 
 ![NPM](https://img.shields.io/npm/l/lucide)
 [![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide)
+[![installs](https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json)](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons)
 [![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
 
 ## What is Lucide?
