@@ -7,11 +7,12 @@ export default async function fetchAllDocuments() {
   const docsDir = path.resolve(process.cwd(), '../docs');
   const fileNames = await fs.readdir(docsDir)
 
-  return Promise.all(
+  return (await Promise.all(
     fileNames
     .map(async (filename) => {
       const filePath = path.join(docsDir, filename);
       const isFile = (await fs.lstat(filePath)).isFile();
+
       if (!isFile) return null;
 
       const source = await fs.readFile(filePath, 'utf-8');
@@ -26,5 +27,5 @@ export default async function fetchAllDocuments() {
         content
       }
     })
-  )
+  )).filter(Boolean)
 }

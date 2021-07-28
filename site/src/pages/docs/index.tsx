@@ -9,11 +9,15 @@ import mdxComponents from '../../lib/mdxComponents';
 const DocPage = ({ doc, data, content }) => {
   console.log(doc, data, content);
 
+  if (!data || !doc) return null
+
   return (
     <Layout>
-      <Head>
-        <title>{ data.title }</title>
-      </Head>
+      { data?.title ? (
+        <Head>
+          <title>{ data.title }</title>
+        </Head>
+      ) : null }
       <MDXRemote {...doc} components={mdxComponents} />
     </Layout>
   )
@@ -22,7 +26,7 @@ const DocPage = ({ doc, data, content }) => {
 export default DocPage
 
 export async function getStaticProps({ params }) {
-  const allDocs = await (await fetchAllDocuments()).filter(Boolean);
+  const allDocs = await fetchAllDocuments();
   const doc = allDocs.find(({filename = ''}) => filename === 'index.md');
 
   return { props: doc }

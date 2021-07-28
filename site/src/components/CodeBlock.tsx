@@ -110,7 +110,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
         fontSize="xs"
         height="24px"
         zIndex="1"
-        top="4"
+        top="2.5"
         right="1.25em"
         copyText={code}
         fontFamily={uiTheme.fonts.body}

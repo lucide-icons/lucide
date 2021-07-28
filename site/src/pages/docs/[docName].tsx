@@ -3,30 +3,28 @@ import Header from '../../components/Header';
 import Head from 'next/head';
 import fetchAllDocuments from '../../lib/fetchAllDocuments'
 
-const DocPage = ({ document }) => {
-  return (
-    <div>
-      hlaas
-    </div>
-  )
-}
-
-export default DocPage
+export { default } from '.'
 
 export async function getStaticProps({ params: { docName } }) {
-  const doc = await fetchAllDocuments()
-  return { props: { doc } }
+  const allDocs = await fetchAllDocuments()
+  const doc = allDocs.find(({filename = ''}) => filename.includes(docName));
+  return { props: doc }
 }
 
 export async function getStaticPaths() {
-  return {
-    paths: [
-      {
+  const docs = await fetchAllDocuments()
+
+  const paths =
+    docs
+      .filter(({filename = ''}) => filename !== 'index.md')
+      .map(doc => ({
         params: {
-          docName: 'introduction'
+          docName: doc.filename.replace('.md', '')
         }
-      }
-    ],
+      }))
+
+  return {
+    paths,
     fallback: false,
   }
 }

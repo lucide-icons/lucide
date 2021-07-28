@@ -87,11 +87,19 @@ const components = {
   ),
   inlineCode: InlineCode,
   hr: (props) => <Divider my={4}/>,
-  a: ({children, href, ...rest}) => (
-    <NextLink href={`/docs/${href.replace('.md', '')}`} {...rest} passHref>
-      <Link display="flex">{children}</Link>
-    </NextLink>
-  )
+  a: ({children, href, ...rest}) => {
+    const isExternal = href.startsWith('http')
+
+    return (
+      <NextLink
+        href={isExternal ? href : `/docs/${href.replace('.md', '')}`}
+        {...rest}
+        passHref
+      >
+        <Link isExternal={isExternal}>{children}</Link>
+      </NextLink>
+    )
+  }
 };
 
 export default components;
