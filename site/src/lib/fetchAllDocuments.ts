@@ -2,30 +2,54 @@ import { promises as fs } from 'fs';
 import { serialize } from 'next-mdx-remote/serialize'
 import path from 'path';
 import grayMatter from 'gray-matter'
+import { map } from 'lodash';
 
 export default async function fetchAllDocuments() {
   const docsDir = path.resolve(process.cwd(), '../docs');
-  const fileNames = await fs.readdir(docsDir)
+  const fileNames = await (await fs.readdir(docsDir)).map(filename => ({filename, directory: docsDir}))
 
-  return (await Promise.all(
-    fileNames
-    .map(async (filename) => {
-      const filePath = path.join(docsDir, filename);
-      const isFile = (await fs.lstat(filePath)).isFile();
+  const mapDirectoryTree = async ({filename, directory}) => {
+    const filePath = path.join(directory, filename);
+    const fileStat = await fs.lstat(filePath);
 
-      if (!isFile) return null;
+    if(fileStat.isDirectory()) {
+      const filenamesInDirectory =
+        (await fs.readdir(filePath))
+        .map(childFileName => ({
+          directory: filePath,
+          filename: childFileName
+        }))
 
-      const source = await fs.readFile(filePath, 'utf-8');
+      return await Promise.all(filenamesInDirectory.map(mapDirectoryTree))
+    }
 
-      const { content, data } = grayMatter(source)
-      const doc = await serialize(content)
+    if (!fileStat.isFile()) return null;
 
-      return {
-        filename,
-        doc,
-        data,
-        content
-      }
-    })
-  )).filter(Boolean)
+    return {
+      filePath,
+      filename,
+    }
+  }
+
+  const mapFileContents = async ({filename, filePath}) => {
+    const source = await fs.readFile(filePath, 'utf-8');
+
+    const { content, data } = grayMatter(source)
+    const doc = await serialize(content)
+
+    return {
+      filename,
+      doc,
+      data,
+      content
+    }
+  }
+
+  const mappedDirectoryTree = (await Promise.all(fileNames.map(mapDirectoryTree))).flat().filter(({filename}) => filename.endsWith('.md'))
+  const mappedFileContents = await Promise.all(
+    mappedDirectoryTree
+    .map(mapFileContents)
+  )
+
+  return mappedFileContents
 }

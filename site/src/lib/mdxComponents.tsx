@@ -96,7 +96,7 @@ const components = {
         {...rest}
         passHref
       >
-        <Link isExternal={isExternal}>{children}</Link>
+        <Link isExternal={isExternal} color='#F56565'>{children}</Link>
       </NextLink>
     )
   }
