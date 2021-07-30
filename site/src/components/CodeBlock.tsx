@@ -78,7 +78,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <div style={editorStyle} data-language={language} key={colorMode}>
               <pre className={className} style={style}>
-                {tokens.map((line, i) => {
+                {tokens.slice(0, -1).map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
                   return (
                     <chakra.div
@@ -86,12 +86,12 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                       bg={shouldHighlightLine(i) ? 'whiteAlpha.200' : undefined}
                       {...lineProps}
                     >
-                      {showLines && (
+                      {true && (
                         <chakra.span opacity={0.3} mr="4" width="16px" display="inline-block" fontSize="xs" style={{ userSelect: 'none' }}>
                           {i + 1}
                         </chakra.span>
                       )}
-                      {line.filter(({empty = false}) => !empty).map((token, key) => (
+                      {line.map((token, key) => (
                         <span {...getTokenProps({ token, key })} />
                       ))}
                     </chakra.div>

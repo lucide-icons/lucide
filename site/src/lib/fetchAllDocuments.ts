@@ -17,6 +17,7 @@ export default async function fetchAllDocuments() {
         (await fs.readdir(filePath))
         .map(childFileName => ({
           directory: filePath,
+          directoryName: filename,
           filename: childFileName
         }))
 
@@ -31,7 +32,7 @@ export default async function fetchAllDocuments() {
     }
   }
 
-  const mapFileContents = async ({filename, filePath}) => {
+  const mapFileContents = async ({filename, filePath, directoryName = null}) => {
     const source = await fs.readFile(filePath, 'utf-8');
 
     const { content, data } = grayMatter(source)
@@ -39,6 +40,7 @@ export default async function fetchAllDocuments() {
 
     return {
       filename,
+      directoryName,
       doc,
       data,
       content
