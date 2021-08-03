@@ -86,7 +86,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                       bg={shouldHighlightLine(i) ? 'whiteAlpha.200' : undefined}
                       {...lineProps}
                     >
-                      {true && (
+                      {showLines && (
                         <chakra.span opacity={0.3} mr="4" width="16px" display="inline-block" fontSize="xs" style={{ userSelect: 'none' }}>
                           {i + 1}
                         </chakra.span>

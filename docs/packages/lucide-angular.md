@@ -2,7 +2,7 @@
 
 Implementation of the lucide icon library for angular applications.
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+> What is lucide? Read it [here](lucide#what-is-lucide).
 
 ## Installation
 
@@ -78,6 +78,7 @@ import { LucideAngularModule, AlarmCheck, Edit } from 'lucide-angular';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 ```
 
@@ -112,6 +113,7 @@ import { LucideAngularModule } from 'lucide-angular';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 ```
 
@@ -145,11 +147,12 @@ export class AppComponent {
 In `Method 2`: import all icons in `app.module.ts` by:
 
 ``` js
-...
+
 import { icons } from 'lucide-angular/icons';
-....
+
 LucideAngularModule.pick(icons)
-....
+
+...
 ```
 
 ### Tags
