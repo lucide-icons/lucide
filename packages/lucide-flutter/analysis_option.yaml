@@ -1,0 +1,18 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    omit_local_variable_types: true
+    avoid_classes_with_only_static_members: false
+    prefer_single_quotes: true
+
+    file_names: false
+
+    avoid_setters_without_getters: false
+
+    sort_pub_dependencies: false
+
+    prefer_relative_imports: true
+
+    # only for debug
+    avoid_print: false
