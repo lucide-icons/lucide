@@ -1,0 +1,17 @@
+{
+  "name": "lucide-static",
+  "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "version": "0.14.0",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git"
+  },
+  "scripts": {
+    "move": "",
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "clean": "rm -rf dist && rm -rf build && rm -rf ./src/icons/*.js"
+  }
+}
