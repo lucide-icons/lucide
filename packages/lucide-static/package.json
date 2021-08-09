@@ -10,8 +10,9 @@
     "url": "https://github.com/lucide-icons/lucide.git"
   },
   "scripts": {
-    "move": "",
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
-    "clean": "rm -rf dist && rm -rf build && rm -rf ./src/icons/*.js"
+    "move": "cp -r ../../icons icons",
+    "build": "yarn clean && yarn move && yarn build:lib",
+    "build:lib": "yarn --cwd ../../ babel-node packages/lucide-static/scripts/buildLib.js",
+    "clean": "rm -rf dist && rm -rf build && rm -rf icons"
   }
 }
