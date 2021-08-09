@@ -24,7 +24,7 @@ Guidelines for pull requests:
 
 Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide
 
-Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md). You can find a template and instructions on how implement those guidelines with Adobe Illustrator and Inkscape in the */docs* folder of the project.
+Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md). You can find a template and instructions on how to implement those guidelines with Adobe Illustrator and Inkscape in the */docs* folder of the project.
 
 #### Submitting Mulitple Icons
 
