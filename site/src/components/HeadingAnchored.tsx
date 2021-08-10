@@ -24,7 +24,7 @@ const HeadingAnchored = ({children, as: headingLevel, ...restProps}) => {
       position: 'absolute',
       left: 0,
       transform: 'translateX(-100%)',
-      paddingX: 4
+      paddingX: 2
     }
   }
   const focusStyling = {

@@ -13,13 +13,13 @@ const DocPage = ({ doc, data, content }) => {
 
   return (
     <HeadingNavigationProvider>
-      <HeadingMenu/>
+      <HeadingMenu />
       <Layout>
-        { data?.title ?? (
+        { data?.title ? (
           <Head>
             <title>{ data.title }</title>
           </Head>
-        )}
+        ) : null}
         <MDXRemote {...doc} data={data} components={mdxComponents} />
       </Layout>
     </HeadingNavigationProvider>

@@ -1,22 +1,42 @@
-import { Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, useDisclosure } from "@chakra-ui/react";
-
+import {
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Link
+} from '@chakra-ui/react';
+import Logo from './Logo';
+import { useMobileNavigationContext } from './MobileNavigationProvider';
 
 const HeadingMenu = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useMobileNavigationContext();
 
   return (
-    <Drawer placement='left' onClose={onClose} isOpen={isOpen}>
+    <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+        <DrawerCloseButton marginTop={3.5} marginRight={3} />
+        <DrawerHeader borderBottomWidth="1px">
+          <Logo />
+        </DrawerHeader>
         <DrawerBody>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Link marginRight={6} fontSize="xl" href="/docs">
+            Documentation
+          </Link>
+          <Link
+            href="https://github.com/lucide-icons/lucide"
+            isExternal
+            marginRight={6}
+            fontSize="xl"
+          >
+            Github
+          </Link>
         </DrawerBody>
       </DrawerContent>
     </Drawer>
-  )
-}
+  );
+};
 
 export default HeadingMenu;

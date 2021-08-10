@@ -1,16 +1,20 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react";
+import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton, useBreakpointValue } from "@chakra-ui/react";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
-import NextLink from "next/link"
 import { Moon, Sun, Menu, X } from 'lucide-react';
-import Logo from 'babel-loader!react-svg-loader?jsx=true!../../public/logo.svg';
+
+import { useEffect } from "react";
+import { useMobileNavigationContext, useMobileNavigationValue } from "./MobileNavigationProvider";
+import Logo from "./Logo";
 
 const Layout = ({ children }) => {
   const router = useRouter();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { toggleMobileMenu } = useMobileNavigationContext()
+  const { toggleColorMode } = useColorMode();
   const currentColorMode = useColorModeValue('dark', 'light')
   const ColorModeToggle = useColorModeValue(Moon, Sun);
-  const MobileMenuToggle = useColorModeValue(Menu, X);
+  const MobileMenuToggle = useMobileNavigationValue(Menu, X);
+  const showBaseNavigation = useBreakpointValue({ base: false, md: true })
   const IconbuttonProps = {
     size:"md",
     fontSize:"lg",
@@ -35,6 +39,11 @@ const Layout = ({ children }) => {
     },
   });
 
+  useEffect(() => {
+    console.log(router.route.includes('docs'));
+
+  }, [ router.route])
+
   return (
     <Box h="100vh">
       <Flex mb={16} w="full">
@@ -49,50 +58,42 @@ const Layout = ({ children }) => {
           px={5}
         >
           <Flex justifyContent="center" alignItems="center">
-            <NextLink href="/" passHref>
-              <Link display="flex" _hover={{textDecoration: 'none'}}>
-                <Icon boxSize={12} marginRight="8px">
-                  <Logo/>
-                </Icon>
-                <Text
-                  fontSize="40px"
-                  lineHeight="48px"
-                >
-                  Lucide
-                </Text>
-              </Link>
-            </NextLink>
+            <Logo />
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-          <Link
-            marginRight={6}
-            fontSize="xl"
-            href='/docs'
-          >
-            Documentation
-          </Link>
-          <Link
-            href="https://github.com/lucide-icons/lucide"
-            isExternal
-            marginRight={6}
-            fontSize="xl"
-          >
-            Github
-          </Link>
+          {showBaseNavigation ? (
+            <>
+              <Link
+                marginRight={6}
+                fontSize="xl"
+                href='/docs'
+              >
+                Documentation
+              </Link>
+              <Link
+                href="https://github.com/lucide-icons/lucide"
+                isExternal
+                marginRight={6}
+                fontSize="xl"
+              >
+                Github
+              </Link>
+            </>
+          ) : null }
           <IconButton
             aria-label={`Switch to ${currentColorMode} mode`}
             onClick={toggleColorMode}
             { ...IconbuttonProps }
             icon={<ColorModeToggle />}
           />
-          { router.route.includes('docs') ?? (
+          { router.route.includes('docs') && !showBaseNavigation ? (
             <IconButton
               aria-label={`Open Mobile menu`}
-              onClick={toggleColorMode}
+              onClick={toggleMobileMenu}
               { ...IconbuttonProps }
-              icon={<ColorModeToggle />}
+              icon={<MobileMenuToggle />}
             />
-          )}
+          ) : null}
           </Flex>
         </Flex>
       </Flex>
