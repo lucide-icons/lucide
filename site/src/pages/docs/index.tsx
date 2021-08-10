@@ -3,23 +3,26 @@ import Head from 'next/head';
 import fetchAllDocuments from '../../lib/fetchAllDocuments'
 import { MDXRemote } from 'next-mdx-remote'
 import mdxComponents from '../../lib/mdxComponents';
+import { HeadingNavigationProvider } from '../../components/HeadingNavigationProvider';
+import HeadingMenu from '../../components/HeadingMenu';
 
 
 
 const DocPage = ({ doc, data, content }) => {
-  console.log(doc, data, content);
-
   if (!data || !doc) return null
 
   return (
-    <Layout>
-      { data?.title ? (
-        <Head>
-          <title>{ data.title }</title>
-        </Head>
-      ) : null }
-      <MDXRemote {...doc} components={mdxComponents} />
-    </Layout>
+    <HeadingNavigationProvider>
+      <HeadingMenu/>
+      <Layout>
+        { data?.title ?? (
+          <Head>
+            <title>{ data.title }</title>
+          </Head>
+        )}
+        <MDXRemote {...doc} data={data} components={mdxComponents} />
+      </Layout>
+    </HeadingNavigationProvider>
   )
 }
 

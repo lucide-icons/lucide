@@ -2,7 +2,6 @@ import { promises as fs } from 'fs';
 import { serialize } from 'next-mdx-remote/serialize'
 import path from 'path';
 import grayMatter from 'gray-matter'
-import { map } from 'lodash';
 
 export default async function fetchAllDocuments() {
   const docsDir = path.resolve(process.cwd(), '../docs');

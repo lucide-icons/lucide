@@ -2,14 +2,22 @@ import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, 
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
 import NextLink from "next/link"
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import Logo from 'babel-loader!react-svg-loader?jsx=true!../../public/logo.svg';
 
 const Layout = ({ children }) => {
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
-  const text = useColorModeValue('dark', 'light')
+  const currentColorMode = useColorModeValue('dark', 'light')
   const ColorModeToggle = useColorModeValue(Moon, Sun);
+  const MobileMenuToggle = useColorModeValue(Menu, X);
+  const IconbuttonProps = {
+    size:"md",
+    fontSize:"lg",
+    variant:"ghost",
+    color:"current",
+    ml:"3",
+  }
 
   function setQuery(query){
     router.push({
@@ -72,15 +80,19 @@ const Layout = ({ children }) => {
             Github
           </Link>
           <IconButton
-            size="md"
-            fontSize="lg"
-            aria-label={`Switch to ${text} mode`}
-            variant="ghost"
-            color="current"
-            ml="3"
+            aria-label={`Switch to ${currentColorMode} mode`}
             onClick={toggleColorMode}
+            { ...IconbuttonProps }
             icon={<ColorModeToggle />}
           />
+          { router.route.includes('docs') ?? (
+            <IconButton
+              aria-label={`Open Mobile menu`}
+              onClick={toggleColorMode}
+              { ...IconbuttonProps }
+              icon={<ColorModeToggle />}
+            />
+          )}
           </Flex>
         </Flex>
       </Flex>
