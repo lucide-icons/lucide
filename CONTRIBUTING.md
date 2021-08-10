@@ -1,3 +1,4 @@
+
 # Contribution Guidelines
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
@@ -20,11 +21,25 @@ Guidelines for pull requests:
 
 ### Pull Requests Including Icons
 
-#### Guidelines & Templates
+#### Guidelines
 
-Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide
+Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
 
-Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md). You can find a template and instructions on how to implement those guidelines with Adobe Illustrator and Inkscape in the */docs* folder of the project.
+Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md).
+
+### Templates
+
+Here you can find templates and instructions on how to implement the guidelines with different programs.
+
+#### Adobe Illustrator
+
+`Template`: You can find a template for Adobe Illustrator under `/docs/templates/illustrator-template.ai`.
+`Instructions`: You can find the [Illustrator Guide](/docs/ILLUSTRATOR_GUIDE.md) and how to work with the template in `/docs/ILLUSTRATOR_GUIDE.md`.
+
+#### Inkscape
+
+`Template`: None
+`Instructions`: You can find the [Inkscape Guide](/docs/INKSCAPE_GUIDE.md) and how to set up Inkscape under `/docs/INKSCAPE_GUIDE.md`.
 
 #### Submitting Mulitple Icons
 
