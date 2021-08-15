@@ -274,8 +274,7 @@ jobs:
           channel: 'stable'
       - name: Flutter publish
         run: flutter pub publish --dry-run
-        with:
-          path: packages/lucide-flutter
+        working-directory: packages/lucide-flutter
 
 
   upload-package-jsons:
