@@ -5,7 +5,10 @@ const srcDirectory=path.join(__dirname, "../dist");
 
 // Declare type definitions
 const typeDefinitions=`\
-declare module 'react'
+/// <reference types="react" />
+import { SVGAttributes } from 'react'
+
+declare module 'lucide-react'
 
 // Create interface extending SVGProps
 export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
