@@ -272,6 +272,12 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
+      - name: Update yaml
+        run: yq e -i 'version = 0.15.60' pubspec.yaml
+        working-directory: packages/lucide-flutter
+      - name: cat pubspec.yaml
+        run: cat pubspec.yaml
+        working-directory: packages/lucide-flutter
       - name: Flutter publish
         run: flutter pub publish --dry-run
         working-directory: packages/lucide-flutter
