@@ -19,7 +19,7 @@ The Illustrator template is created following guidelines from the [Icon Design G
 
 4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unecessary layers (especially "Padding" and "Grid").
 
-5. Export the file with the export menu under: `Export > Export As..` than safe the file as SVG. Select the following options in the SVG Options dialog: ![SVG Options](docs/images/illustrator-save-options)
+5. Export the file with the export menu under: `Export > Export As..` than safe the file as SVG. Select the following options in the SVG Options dialog: ![SVG Options](images/illustrator-save-options)
 After that, double check that the [code conventions and SVG global attributes](https://github.com/lucide-icons/lucide/blob/master/docs/ICON_DESIGN_GUIDE.md#code-conventions) are correct.
 
 7. Minify paths with [SVGOMG](https://jakearchibald.github.io/svgomg/).
