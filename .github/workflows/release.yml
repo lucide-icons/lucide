@@ -272,8 +272,10 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
-      - name: Run flutter
-        run: flutter sdk-path
+      - name: Flutter publish
+        run: flutter pub publish --dry-run
+        with:
+          path: packages/lucide-flutter
 
 
   upload-package-jsons:
