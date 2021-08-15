@@ -2,8 +2,10 @@ name: Release Packages
 
 on:
   push:
-    tags:
-    - 'v*'
+    # tags:
+    # - 'v*'
+    branches:
+    - '**'
 
   workflow_dispatch:
     inputs:
@@ -261,6 +263,16 @@ jobs:
         with:
           name: lucide-preact-package-json
           path: packages/lucide-preact/package.json
+
+  lucide-flutter:
+    runs-on: ubuntu-latest
+      # needs: pre-build
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/cache@v2
+        - name: Run flutter
+          run: flutter sdk-path
+
 
   upload-package-jsons:
     if: github.repository == 'lucide-icons/lucide'
