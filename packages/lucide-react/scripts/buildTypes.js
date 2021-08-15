@@ -1,30 +1,19 @@
-import path from 'path';
-import {
-  writeFile,
-  readSvgDirectory,
-  resetFile,
-  toPascalCase,
-  appendFile,
-} from '../../../scripts/helpers';
+import path from "path";
+import {appendFile, readSvgDirectory, resetFile, toPascalCase, writeFile} from "../../../scripts/helpers";
 
-const srcDirectory = path.join(__dirname, '../dist');
+const srcDirectory=path.join(__dirname, "../dist");
 
 // Declare type definitions
-const typeDefinitions = `\
-/// <reference types="vue" />
-import { SVGAttributes } from 'vue'
+const typeDefinitions=`\
+declare module 'react'
 
-declare module 'lucide-vue-next'
-
-// Create interface extending SVGAttributes
+// Create interface extending SVGProps
 export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
-    color?: string
     size?: string | number
-    stroke?: string | number
-    strokeWidth?: string | number
 }
 
 export type Icon = React.FC<LucideProps>;
+
 // Generated icons
 `;
 
