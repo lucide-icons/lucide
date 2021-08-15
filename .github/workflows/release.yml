@@ -269,7 +269,6 @@ jobs:
       # needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
       - name: Run flutter
         run: flutter sdk-path
 
