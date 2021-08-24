@@ -398,11 +398,11 @@ jobs:
         zip -r lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip icons
 
     - name: Release zip and fonts
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
-        with:
-          tag_name: v${{ steps.new-version.outputs.VERSION }}
-          files: |
-            lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
-            lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
+      with:
+        tag_name: v${{ steps.new-version.outputs.VERSION }}
+        files: |
+          lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
+          lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
