@@ -368,7 +368,7 @@ jobs:
   post-release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact, lucide-font]
+    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact, lucide-flutter, lucide-font]
 
     steps:
     - uses: actions/checkout@v2
