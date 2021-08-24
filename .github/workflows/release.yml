@@ -256,7 +256,7 @@ jobs:
           name: lucide-preact-package-json
           path: packages/lucide-preact/package.json
 
-  font:
+  lucide-font:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: pre-build
@@ -295,7 +295,7 @@ jobs:
       run: sudo yarn add svg-outline-stroke -W
 
     - name: "Outline SVG"
-      run: node scripts/outline_svg.js
+      run: node scripts/outlineSvg.js
 
     - name: Build 'Lucide'
       run: |
@@ -333,11 +333,12 @@ jobs:
           mkdir -p ~/.pub-cache
           cat <<EOF > ~/.pub-cache/credentials.json
           {
-            "accessToken":"${{ secrets.GOOGLE_OAUTH_ACCESS_TOKEN }}",
-            "refreshToken":"${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}",
+            "accessToken": "${{ secrets.GOOGLE_OAUTH_ACCESS_TOKEN }}",
+            "refreshToken": "${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}",
+            "idToken": "${{ secrets.GOOGLE_OAUTH_ID_TOKEN }}",
             "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
             "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
-            "expiration": 1570721159347
+            "expiration": 1629835569218
           }
           EOF
 
@@ -364,10 +365,10 @@ jobs:
           path: packages/lucide-flutter/pubspec.yaml
 
 
-  upload-package-jsons:
+  post-release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact]
+    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact, lucide-font]
 
     steps:
     - uses: actions/checkout@v2
@@ -390,3 +391,18 @@ jobs:
           commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
         git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
         git push origin HEAD:master
+
+    - name: Zip font and icons
+      run: |
+        zip -r lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip lucide-font
+        zip -r lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip icons
+
+    - name: Release zip and fonts
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
+        with:
+          tag_name: v${{ steps.new-version.outputs.VERSION }}
+          files: |
+            lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
+            lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
