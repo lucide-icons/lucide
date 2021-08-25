@@ -344,7 +344,6 @@ jobs:
 
       - name: Move the ttf file
         run: mv lucide-font/Lucide.ttf assets/Lucide.ttf
-        working-directory: packages/lucide-flutter
 
       - name: Generate exports file
         run: dart tool/generate_fonts.dart lucide-font/Lucide-preview.html
