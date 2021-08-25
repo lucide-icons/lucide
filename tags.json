@@ -1438,6 +1438,9 @@
     "office",
     "device"
   ],
+  "quote": [
+    "quotation"
+  ],
   "qr-code": [
     "barcode"
   ],
