@@ -11,14 +11,14 @@ import Logo from './Logo';
 import { useMobileNavigationContext } from './MobileNavigationProvider';
 
 const HeadingMenu = () => {
-  const { isOpen, onOpen, onClose } = useMobileNavigationContext();
+  const { isOpen, onClose } = useMobileNavigationContext();
 
   return (
     <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton marginTop={3.5} marginRight={3} />
-        <DrawerHeader borderBottomWidth="1px">
+        <DrawerHeader>
           <Logo />
         </DrawerHeader>
         <DrawerBody>
