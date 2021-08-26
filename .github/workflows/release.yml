@@ -31,7 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-build
     steps:
-      steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -248,60 +247,60 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-build
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        cache: 'yarn'
-        cache-dependency-path: yarn.lock
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
 
-    - name: Update repos
-      run: sudo apt-get update
+      - name: Update repos
+        run: sudo apt-get update
 
-    - name: Install FontForge
-      run: sudo apt-get install zlib1g-dev fontforge
+      - name: Install FontForge
+        run: sudo apt-get install zlib1g-dev fontforge
 
-    - name: Clone sfnt2woff-zopfli repo
-      run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
+      - name: Clone sfnt2woff-zopfli repo
+        run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
 
-    - name: Install and move sfnt2woff-zopfli
-      run: |
-          cd sfnt2woff-zopfli
-          make
-          sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+      - name: Install and move sfnt2woff-zopfli
+        run: |
+            cd sfnt2woff-zopfli
+            make
+            sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
 
-    - name: Clone woff2
-      run: git clone --recursive https://github.com/google/woff2.git
+      - name: Clone woff2
+        run: git clone --recursive https://github.com/google/woff2.git
 
-    - name: Install woff2
-      run: |
-          cd woff2
-          sudo make clean all
-          sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+      - name: Install woff2
+        run: |
+            cd woff2
+            sudo make clean all
+            sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
 
-    - name: Install Font Custom dependency
-      run: sudo gem install fontcustom
+      - name: Install Font Custom dependency
+        run: sudo gem install fontcustom
 
-    - name: Install "outline-stroke"
-      run: sudo yarn add svg-outline-stroke -W
+      - name: Install "outline-stroke"
+        run: sudo yarn add svg-outline-stroke -W
 
-    - name: "Outline SVG"
-      run: yarn build:outline-icons
+      - name: "Outline SVG"
+        run: yarn build:outline-icons
 
-    - name: Build 'Lucide'
-      run: |
-          mkdir build
-          list=(_200 _300 "" _500 _600)
-          for name in "${list[@]}"
-          do
-            fontcustom compile "./converted_icons${name}" -h -n "Lucide${name}" -o ./tmp -F && mv ./tmp/* build
-          done
+      - name: Build 'Lucide'
+        run: |
+            mkdir build
+            list=(_200 _300 "" _500 _600)
+            for name in "${list[@]}"
+            do
+              fontcustom compile "./converted_icons${name}" -h -n "Lucide${name}" -o ./tmp -F && mv ./tmp/* build
+            done
 
-    - name: 'Upload to Artifacts'
-      uses: actions/upload-artifact@v1
-      with:
-        name: lucide-font
-        path: build
+      - name: 'Upload to Artifacts'
+        uses: actions/upload-artifact@v1
+        with:
+          name: lucide-font
+          path: build
 
   lucide-flutter:
     if: github.repository == 'lucide-icons/lucide'
@@ -361,38 +360,38 @@ jobs:
     needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact, lucide-flutter, lucide-font]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
 
-    - name: Commit package files
-      run: |
-        mv lucide-package-json/package.json packages/lucide/package.json
-        mv lucide-react-package-json/package.json packages/lucide-react/package.json
-        mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
-        mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
-        mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
-        mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
-        mv lucide-flutter-pubspec-yaml/pubspec.yaml packages/lucide-flutter/pubspec.yaml
+      - name: Commit package files
+        run: |
+          mv lucide-package-json/package.json packages/lucide/package.json
+          mv lucide-react-package-json/package.json packages/lucide-react/package.json
+          mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
+          mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
+          mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
+          mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
+          mv lucide-flutter-pubspec-yaml/pubspec.yaml packages/lucide-flutter/pubspec.yaml
 
-    - name: Commit package.jsons
-      run: |
-        git add packages/*/package.json packages/lucide-flutter/pubspec.yaml
-        git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-          commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
-        git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-        git push origin HEAD:master
+      - name: Commit package.jsons
+        run: |
+          git add packages/*/package.json packages/lucide-flutter/pubspec.yaml
+          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+          git push origin HEAD:master
 
-    - name: Zip font and icons
-      run: |
-        zip -r lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip lucide-font
-        zip -r lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip icons
+      - name: Zip font and icons
+        run: |
+          zip -r lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip lucide-font
+          zip -r lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip icons
 
-    - name: Release zip and fonts
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
-      with:
-        tag_name: v${{ steps.new-version.outputs.VERSION }}
-        files: |
-          lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
-          lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
+      - name: Release zip and fonts
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
+        with:
+          tag_name: v${{ steps.new-version.outputs.VERSION }}
+          files: |
+            lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
+            lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
