@@ -9,14 +9,9 @@ import { readSvg } from '../../../scripts/helpers';
  * @returns {Object}
  */
 export default (svgFiles, iconsDirectory) =>
-  svgFiles
-    .map(svgFile => {
-      const name = basename(svgFile, '.svg');
-      const contents = readSvg(svgFile, iconsDirectory);
+  svgFiles.map(svgFile => {
+    const name = basename(svgFile, '.svg');
+    const contents = readSvg(svgFile, iconsDirectory);
 
-      return { name, contents };
-    })
-    .reduce((icons, icon) => {
-      icons[icon.name] = icon.contents;
-      return icons;
-    }, {});
+    return { name, contents };
+  });
