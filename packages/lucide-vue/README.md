@@ -1,6 +1,10 @@
 # Lucide Vue
 
-Use the lucide icon library in you Vue app.
+Implementation of the lucide icon library for Vue applications.
+
+> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+
+> :warning: This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next)
 
 ## Installation
 
@@ -100,4 +104,22 @@ export default {
     <Icon name="Airplay" />
   </div>
 </template>
+```
+
+## Use with [@nuxt/components](https://github.com/nuxt/components#readme)
+
+### Setup
+In your `nuxt.config.js`, add `lucide-vue/nuxt` to your `buildModules`
+```js
+export default {
+  buildModules: ['lucide-vue/nuxt']
+}
+```
+
+### How to use
+Icon components are prefixed with `Icon`. Use icon components without importing them.
+
+### Example
+```html
+<IconCamera color="red" :size="32" />
 ```

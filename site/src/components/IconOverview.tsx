@@ -6,7 +6,7 @@ import {
   Text,
   useColorMode,
   Icon,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import IconList from './IconList';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import useSearch from '../lib/useSearch';

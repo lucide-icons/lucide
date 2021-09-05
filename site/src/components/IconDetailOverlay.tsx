@@ -1,4 +1,4 @@
-import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/core";
+import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
@@ -218,7 +218,7 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
                         { icon.contributors.map((commit, index) => (
                           <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.sha}`}>
                             <Tooltip label={commit.author} key={commit.sha}>
-                              <Avatar name={commit.author} showBorder={false} src={`https://github.com/${commit.author}.png?size=88`} />
+                              <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
                             </Tooltip>
                           </Link>
                         )) }

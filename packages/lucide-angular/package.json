@@ -1,0 +1,68 @@
+{
+  "name": "lucide-angular",
+  "description": "Lucide Angular package, Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "version": "0.15.30",
+  "author": "SMAH1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-angular"
+  },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "scripts": {
+    "build": "yarn clean && yarn build:icons && yarn build:ng",
+    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-angular/src --templateSrc=../packages/lucide-angular/scripts/exportTemplate --iconFileExtention=.ts --exportFileName=index.ts",
+    "build:ng": "ng build --prod",
+    "test:headless": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ngcc"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.2.6",
+    "@angular/core": "^11.2.6"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1102.5",
+    "@angular/cli": "~11.2.5",
+    "@angular/common": "~11.2.6",
+    "@angular/compiler": "~11.2.6",
+    "@angular/compiler-cli": "~11.2.6",
+    "@angular/core": "~11.2.6",
+    "@angular/platform-browser": "~11.2.6",
+    "@angular/platform-browser-dynamic": "~11.2.6",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~6.1.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
+    "protractor": "~7.0.0",
+    "puppeteer": "^8.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.1.5"
+  }
+}

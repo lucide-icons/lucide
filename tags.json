@@ -13,7 +13,9 @@
   "alarm-check": [
     "done"
   ],
-  "alarm-clock": [],
+  "alarm-clock": [
+    "morning"
+  ],
   "alarm-minus": [
     "remove"
   ],
@@ -80,18 +82,42 @@
     "key",
     "forward"
   ],
-  "arrow-down": [],
-  "arrow-down-circle": [],
-  "arrow-down-left": [],
-  "arrow-down-right": [],
-  "arrow-left": [],
-  "arrow-left-circle": [],
-  "arrow-right": [],
-  "arrow-right-circle": [],
-  "arrow-up": [],
-  "arrow-up-circle": [],
-  "arrow-up-left": [],
-  "arrow-up-right": [],
+  "arrow-down": [
+    "direction"
+  ],
+  "arrow-down-circle": [
+    "direction"
+  ],
+  "arrow-down-left": [
+    "direction"
+  ],
+  "arrow-down-right": [
+    "direction"
+  ],
+  "arrow-left": [
+    "direction"
+  ],
+  "arrow-left-circle": [
+    "direction"
+  ],
+  "arrow-right": [
+    "direction"
+  ],
+  "arrow-right-circle": [
+    "direction"
+  ],
+  "arrow-up": [
+    "direction"
+  ],
+  "arrow-up-circle": [
+    "direction"
+  ],
+  "arrow-up-left": [
+    "direction"
+  ],
+  "arrow-up-right": [
+    "direction"
+  ],
   "asterisk": [
     "reference"
   ],
@@ -131,9 +157,18 @@
     "power",
     "electricity"
   ],
-  "battery-full": [],
-  "battery-low": [],
-  "battery-medium": [],
+  "battery-full": [
+    "power",
+    "electricity"
+  ],
+  "battery-low": [
+    "power",
+    "electricity"
+  ],
+  "battery-medium": [
+    "power",
+    "electricity"
+  ],
   "beaker": [
     "cup"
   ],
@@ -171,7 +206,13 @@
     "transport",
     "trip"
   ],
-  "binary": [],
+  "binary": [
+    "code",
+    "digits",
+    "computer",
+    "zero",
+    "one"
+  ],
   "bitcoin": [
     "currency",
     "money",
@@ -190,6 +231,7 @@
     "pairing"
   ],
   "bold": [
+    "text",
     "strong"
   ],
   "book": [
@@ -233,6 +275,11 @@
     "draw",
     "paint",
     "color"
+  ],
+  "bug": [
+    "issue",
+    "report",
+    "insect"
   ],
   "building": [
     "organisation",
@@ -280,14 +327,38 @@
   "check-square": [
     "done"
   ],
-  "chevron-down": [],
-  "chevron-left": [],
-  "chevron-right": [],
-  "chevron-up": [],
-  "chevrons-down": [],
-  "chevrons-left": [],
-  "chevrons-right": [],
-  "chevrons-up": [],
+  "chevron-down": [
+    "arrow"
+  ],
+  "chevron-left": [
+    "arrow"
+  ],
+  "chevron-right": [
+    "arrow"
+  ],
+  "chevron-up": [
+    "arrow"
+  ],
+  "chevrons-down": [
+    "arrow"
+  ],
+  "chevrons-down-up": [
+    "arrow",
+    "fold"
+  ],
+  "chevrons-left": [
+    "arrow"
+  ],
+  "chevrons-right": [
+    "arrow"
+  ],
+  "chevrons-up": [
+    "arrow"
+  ],
+  "chevrons-up-down": [
+    "arrow",
+    "unfold"
+  ],
   "chrome": [
     "browser"
   ],
@@ -296,9 +367,20 @@
     "zero",
     "record"
   ],
+  "circle-slashed": [
+    "diameter",
+    "zero",
+    "Ø",
+    "null",
+    "nothing"
+  ],
   "clipboard": [
     "copy",
     "paste"
+  ],
+  "clipboard-check": [
+    "copied",
+    "pasted"
   ],
   "clipboard-list": [
     "copy",
@@ -317,6 +399,10 @@
     "weather",
     "shower"
   ],
+  "cloud-fog": [
+    "weather",
+    "mist"
+  ],
   "cloud-hail": [
     "weather",
     "rainfall"
@@ -324,6 +410,10 @@
   "cloud-lightning": [
     "weather",
     "bolt"
+  ],
+  "cloud-moon": [
+    "weather",
+    "night"
   ],
   "cloud-off": [
     "disconnect"
@@ -340,13 +430,28 @@
     "weather",
     "blizzard"
   ],
+  "cloud-sun": [
+    "weather",
+    "partly"
+  ],
+  "cloudy": [
+    "clouds"
+  ],
   "clover": [
     "leaf",
     "luck"
   ],
   "code": [
     "source",
-    "programming"
+    "programming",
+    "html",
+    "xml"
+  ],
+  "code-2": [
+    "source",
+    "programming",
+    "html",
+    "xml"
   ],
   "codepen": [
     "logo"
@@ -453,6 +558,10 @@
     "winner",
     "favourite"
   ],
+  "currency": [
+    "finance",
+    "money"
+  ],
   "database": [
     "storage",
     "memory"
@@ -480,8 +589,13 @@
     "money",
     "payment"
   ],
-  "download": [],
-  "download-cloud": [],
+  "download": [
+    "import",
+    "export"
+  ],
+  "download-cloud": [
+    "import"
+  ],
   "dribbble": [],
   "droplet": [
     "water"
@@ -514,6 +628,10 @@
     "money",
     "payment"
   ],
+  "expand": [
+    "scale",
+    "fullscreen"
+  ],
   "external-link": [
     "outbound"
   ],
@@ -540,56 +658,79 @@
     "design",
     "tool"
   ],
-  "file": [],
+  "file": [
+    "document"
+  ],
   "file-check": [
-    "done"
+    "done",
+    "document"
   ],
   "file-check-2": [
-    "done"
+    "done",
+    "document"
   ],
   "file-code": [
-    "script"
+    "script",
+    "document"
   ],
   "file-digit": [
-    "number"
+    "number",
+    "document"
+  ],
+  "file-input": [
+    "document"
   ],
   "file-minus": [
     "delete",
     "remove",
-    "erase"
+    "erase",
+    "document"
   ],
-  "file-minus-2": [],
+  "file-minus-2": [
+    "document"
+  ],
+  "file-output": [
+    "document"
+  ],
   "file-plus": [
     "add",
     "create",
-    "new"
+    "new",
+    "document"
   ],
   "file-plus-2": [
     "add",
     "create",
-    "new"
+    "new",
+    "document"
   ],
   "file-search": [
-    "lost"
+    "lost",
+    "document",
+    "find"
   ],
   "file-text": [
     "data",
     "txt",
-    "pdf"
+    "pdf",
+    "document"
   ],
   "file-x": [
     "lost",
     "delete",
-    "remove"
+    "remove",
+    "document"
   ],
   "file-x-2": [
     "lost",
     "delete",
-    "remove"
+    "remove",
+    "document"
   ],
   "files": [
     "multiple",
-    "copy"
+    "copy",
+    "documents"
   ],
   "film": [
     "movie",
@@ -628,6 +769,13 @@
   "folder-plus": [
     "directory"
   ],
+  "form-input": [
+    "2fa",
+    "authenticate",
+    "login",
+    "field",
+    "text"
+  ],
   "framer": [
     "logo",
     "design",
@@ -652,6 +800,10 @@
   "gavel": [
     "hammer",
     "mallet"
+  ],
+  "ghost": [
+    "pacman",
+    "spooky"
   ],
   "gift": [
     "present",
@@ -687,6 +839,10 @@
     "logo",
     "version control"
   ],
+  "glasses": [
+    "glasses",
+    "spectacles"
+  ],
   "globe": [
     "world",
     "browser",
@@ -701,6 +857,12 @@
   ],
   "grab": [
     "hand"
+  ],
+  "graduation-cap": [
+    "school",
+    "university",
+    "learn",
+    "study"
   ],
   "grid": [
     "table"
@@ -740,6 +902,10 @@
     "hashtag",
     "number",
     "pound"
+  ],
+  "haze": [
+    "mist",
+    "fog"
   ],
   "headphones": [
     "music",
@@ -871,6 +1037,12 @@
     "photo",
     "item"
   ],
+  "layout-template": [
+    "window",
+    "webpage",
+    "block",
+    "section"
+  ],
   "library": [
     "book",
     "music",
@@ -883,7 +1055,11 @@
   ],
   "lightbulb": [
     "idea",
-    "bright"
+    "bright",
+    "lights"
+  ],
+  "lightbulb-off": [
+    "lights"
   ],
   "link": [
     "chain",
@@ -912,7 +1088,13 @@
     "number",
     "order"
   ],
-  "loader": [],
+  "loader": [
+    "load",
+    "wait"
+  ],
+  "loader-2": [
+    "load"
+  ],
   "locate": [
     "map",
     "gps",
@@ -1033,6 +1215,11 @@
   "monitor-off": [
     "share"
   ],
+  "monitor-speaker": [
+    "devices",
+    "connect",
+    "cast"
+  ],
   "moon": [
     "dark",
     "night"
@@ -1047,12 +1234,27 @@
     "menu",
     "options"
   ],
+  "mountain": [
+    "climb",
+    "hike",
+    "rock"
+  ],
+  "mountain-snow": [
+    "alpine",
+    "climb",
+    "snow"
+  ],
   "mouse-pointer": [
     "arrow",
     "cursor",
     "click"
   ],
   "mouse-pointer-2": [
+    "arrow",
+    "cursor",
+    "click"
+  ],
+  "mouse-pointer-click": [
     "arrow",
     "cursor",
     "click"
@@ -1123,6 +1325,11 @@
     "audio",
     "stop"
   ],
+  "pause-octagon": [
+    "music",
+    "audio",
+    "stop"
+  ],
   "pen-tool": [
     "vector",
     "drawing",
@@ -1135,6 +1342,12 @@
   ],
   "percent": [
     "discount"
+  ],
+  "person-standing": [
+    "people",
+    "human",
+    "accessibility",
+    "stick figure"
   ],
   "phone": [
     "call"
@@ -1178,6 +1391,12 @@
     "music",
     "start"
   ],
+  "plug-zap": [
+    "charge",
+    "charging",
+    "battery",
+    "connect"
+  ],
   "plus": [
     "add",
     "new"
@@ -1208,7 +1427,11 @@
   ],
   "power": [
     "on",
-    "off"
+    "off",
+    "device"
+  ],
+  "power-off": [
+    "device"
   ],
   "printer": [
     "fax",
@@ -1254,6 +1477,11 @@
   "rewind": [
     "music"
   ],
+  "rocking-chair": [
+    "chair",
+    "furniture",
+    "seat"
+  ],
   "rotate-ccw": [
     "arrow",
     "left"
@@ -1280,6 +1508,14 @@
   "save": [
     "floppy disk"
   ],
+  "scale": [
+    "balance",
+    "legal",
+    "license",
+    "right",
+    "rule",
+    "law"
+  ],
   "scissors": [
     "cut"
   ],
@@ -1297,11 +1533,12 @@
     "magnifying glass"
   ],
   "send": [
+    "email",
     "message",
     "mail",
-    "email",
     "paper airplane",
-    "paper aeroplane"
+    "paper aeroplane",
+    "submit"
   ],
   "separator-horizontal": [
     "move",
@@ -1311,16 +1548,30 @@
     "move",
     "split"
   ],
-  "server": [],
-  "server-crash": [],
-  "server-off": [],
+  "server": [
+    "cloud",
+    "storage"
+  ],
+  "server-crash": [
+    "cloud",
+    "storage",
+    "problem",
+    "error"
+  ],
+  "server-off": [
+    "cloud",
+    "storage"
+  ],
   "settings": [
     "cog",
     "edit",
     "gear",
     "preferences"
   ],
-  "share": [],
+  "share": [
+    "network",
+    "connections"
+  ],
   "share-2": [
     "network",
     "connections"
@@ -1383,10 +1634,20 @@
     "dig",
     "spade"
   ],
+  "shrink": [
+    "scale",
+    "fullscreen"
+  ],
   "shuffle": [
     "music"
   ],
   "sidebar": [
+    "menu"
+  ],
+  "sidebar-close": [
+    "menu"
+  ],
+  "sidebar-open": [
     "menu"
   ],
   "sigma": [
@@ -1398,6 +1659,11 @@
   ],
   "skip-forward": [
     "music"
+  ],
+  "skull": [
+    "death",
+    "danger",
+    "bone"
   ],
   "slack": [
     "logo"
@@ -1453,7 +1719,16 @@
   "star": [
     "bookmark",
     "favorite",
-    "like"
+    "like",
+    "review",
+    "rating"
+  ],
+  "star-half": [
+    "bookmark",
+    "favorite",
+    "like",
+    "review",
+    "rating"
   ],
   "stop-circle": [
     "media",
@@ -1506,16 +1781,44 @@
     "logo",
     "bullseye"
   ],
+  "tent": [
+    "campsite",
+    "wigwam"
+  ],
   "terminal": [
     "code",
     "command line",
-    "prompt"
+    "prompt",
+    "shell"
+  ],
+  "terminal-square": [
+    "code",
+    "command line",
+    "prompt",
+    "shell"
   ],
   "thermometer": [
     "temperature",
     "celsius",
     "fahrenheit",
     "weather"
+  ],
+  "thermometer-snowflake": [
+    "temperature",
+    "celsius",
+    "fahrenheit",
+    "weather",
+    "cold",
+    "freeze",
+    "freezing"
+  ],
+  "thermometer-sun": [
+    "temperature",
+    "celsius",
+    "fahrenheit",
+    "weather",
+    "warm",
+    "hot"
   ],
   "thumbs-down": [
     "dislike",
@@ -1526,6 +1829,11 @@
     "like",
     "good",
     "emotion"
+  ],
+  "ticket": [
+    "entry",
+    "pass",
+    "voucher"
   ],
   "timer": [
     "time",
@@ -1541,6 +1849,12 @@
     "on",
     "off",
     "switch"
+  ],
+  "tornado": [
+    "weather",
+    "wind",
+    "storm",
+    "hurricane"
   ],
   "trash": [
     "garbage",

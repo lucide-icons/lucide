@@ -1,48 +1,49 @@
 import fs from 'fs';
 import path from 'path';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import getArgumentOptions from 'minimist';
+import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
 
 import renderIconsObject from './render/renderIconsObject';
-import renderIconNodes from './render/renderIconNodes';
 import generateIconFiles from './build/generateIconFiles';
 import generateExportsFile from './build/generateExportsFile';
-import { readSvgDirectory } from './helpers';
 
-/* eslint-disable import/no-dynamic-require */
+import { readSvgDirectory } from './helpers';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 const OUTPUT_DIR = path.resolve(__dirname, cliArguments.output || '../build');
-const SRC_DIR = path.resolve(__dirname, '../src');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
 }
 
+const {
+  renderUniqueKey = false,
+  templateSrc = './templates/defaultIconFileTemplate',
+  silent = false,
+  iconFileExtention = '.js',
+  exportFileName = 'index.js',
+} = cliArguments;
+
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-const icons = renderIconsObject(svgFiles, ICONS_DIR);
+const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
-const iconVNodes = renderIconNodes(icons, cliArguments);
-
-const defaultIconFileTemplate = ({ componentName, node }) => `
-  const ${componentName} = ${node};
-
-  export default ${componentName};
-`;
-
-const iconFileTemplate = cliArguments.templateSrc
-  ? require(cliArguments.templateSrc).default
-  : defaultIconFileTemplate;
+// eslint-disable-next-line import/no-dynamic-require
+const iconFileTemplate = require(templateSrc).default;
 
 // Generates iconsNodes files for each icon
-generateIconFiles(iconVNodes, OUTPUT_DIR, iconFileTemplate);
+generateIconFiles({
+  iconNodes: icons,
+  outputDirectory: OUTPUT_DIR,
+  template: iconFileTemplate,
+  showLog: !silent,
+  iconFileExtention,
+});
 
 // Generates entry files for the compiler filled with icons exports
 generateExportsFile(
-  path.join(SRC_DIR, 'icons/index.js'),
+  path.join(OUTPUT_DIR, 'icons', exportFileName),
   path.join(OUTPUT_DIR, 'icons'),
-  iconVNodes,
+  icons,
 );

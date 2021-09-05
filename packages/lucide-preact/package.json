@@ -1,0 +1,39 @@
+{
+  "name": "lucide-preact",
+  "description": "Lucide Preact package, Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "version": "0.15.30",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-preact"
+  },
+  "author": "Eric Fennis",
+  "amdName": "lucide-preact",
+  "main": "dist/cjs/lucide-preact.js",
+  "main:umd": "dist/umd/lucide-preact.js",
+  "module": "dist/esm/lucide-preact.js",
+  "unpkg": "dist/umd/lucide-preact.min.js",
+  "typings": "dist/lucide-preact.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-preact/src --templateSrc=../packages/lucide-preact/scripts/exportTemplate --renderUniqueKey",
+    "build:es": "babel src -d dist/esm",
+    "build:types": "yarn --cwd ../../ babel-node packages/lucide-preact/scripts/buildTypes.js",
+    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-preact/rollup.config.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@testing-library/preact": "^2.0.1",
+    "babel-preset-preact": "^2.0.0",
+    "jest": "^26.6.3",
+    "preact": "^10.5.13"
+  },
+  "peerDependencies": {
+    "preact": "^10.5.13"
+  }
+}
