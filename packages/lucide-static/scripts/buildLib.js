@@ -1,12 +1,13 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import fs from 'fs';
 import path from 'path';
-import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
+import getArgumentOptions from 'minimist';
+import { parseSync, stringify } from 'svgson';
 import { format } from 'prettier';
 
 // import renderIconsObject from '../../../scripts/render/renderIconsObject';
 import { appendFile, readSvgDirectory, toCamelCase } from '../../../scripts/helpers';
 import readSvgs from './readSvgs';
-import { parseSync, stringify } from 'svgson';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 const createDirectory = dir => {

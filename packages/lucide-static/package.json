@@ -15,5 +15,9 @@
     "build": "yarn clean && yarn move && yarn build:lib",
     "build:lib": "yarn --cwd ../../ babel-node packages/lucide-static/scripts/buildLib.js",
     "clean": "rm -rf lib && rm -rf build && rm -rf icons"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2",
+    "svgson": "^5.2.1"
   }
 }
