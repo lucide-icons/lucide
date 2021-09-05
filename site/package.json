@@ -20,7 +20,7 @@
     "jszip": "^3.7.0",
     "lodash": "^4.17.20",
     "lucide-react": "0.14.0",
-    "next": "^11.1.0",
+    "next": "^11.1.1",
     "react": "^17.0.1",
     "react-color": "^2.19.3",
     "react-dom": "^17.0.1",
