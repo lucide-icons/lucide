@@ -333,7 +333,7 @@ jobs:
           EOF
 
       - name: Move the ttf file
-        run: mv lucide-font/Lucide.ttf assets/Lucide.ttf
+        run: mv lucide-font/Lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
 
       - name: Generate exports file
         run: dart tool/generate_fonts.dart lucide-font/Lucide-preview.html
