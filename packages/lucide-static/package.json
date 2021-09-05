@@ -9,10 +9,11 @@
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git"
   },
+  "main": "lib/index.js",
   "scripts": {
     "move": "cp -r ../../icons icons",
     "build": "yarn clean && yarn move && yarn build:lib",
     "build:lib": "yarn --cwd ../../ babel-node packages/lucide-static/scripts/buildLib.js",
-    "clean": "rm -rf dist && rm -rf build && rm -rf icons"
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons"
   }
 }
