@@ -231,6 +231,7 @@
     "pairing"
   ],
   "bold": [
+    "text",
     "strong"
   ],
   "book": [
@@ -557,6 +558,10 @@
     "winner",
     "favourite"
   ],
+  "currency": [
+    "finance",
+    "money"
+  ],
   "database": [
     "storage",
     "memory"
@@ -852,6 +857,12 @@
   ],
   "grab": [
     "hand"
+  ],
+  "graduation-cap": [
+    "school",
+    "university",
+    "learn",
+    "study"
   ],
   "grid": [
     "table"
@@ -1223,6 +1234,16 @@
     "menu",
     "options"
   ],
+  "mountain": [
+    "climb",
+    "hike",
+    "rock"
+  ],
+  "mountain-snow": [
+    "alpine",
+    "climb",
+    "snow"
+  ],
   "mouse-pointer": [
     "arrow",
     "cursor",
@@ -1417,6 +1438,9 @@
     "office",
     "device"
   ],
+  "quote": [
+    "quotation"
+  ],
   "qr-code": [
     "barcode"
   ],
@@ -1455,6 +1479,11 @@
   ],
   "rewind": [
     "music"
+  ],
+  "rocking-chair": [
+    "chair",
+    "furniture",
+    "seat"
   ],
   "rotate-ccw": [
     "arrow",

@@ -24,16 +24,18 @@ const Layout = ({ children }) => {
     ml:"3",
   }
 
-  function setQuery(query){
-    router.push({
-      pathname: '/',
-      query: { query: query }
-    }).then();
+  function setQuery(query) {
+    router
+      .push({
+        pathname: '/',
+        query: { query: query },
+      })
+      .then();
   }
 
   useKeyBindings({
     Escape: {
-      fn: () => setQuery(""),
+      fn: () => setQuery(''),
     },
     KeyT: {
       fn: () => toggleColorMode(),

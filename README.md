@@ -4,6 +4,7 @@
 
 ![NPM](https://img.shields.io/npm/l/lucide)
 [![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide)
+[![installs](https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json)](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons)
 [![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
 
 ## What is Lucide?
@@ -33,6 +34,8 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   * [Angular](#angular)
   * [Preact](#preact)
   * [Figma](#figma)
+  * [Laravel](#laravel)
+  * [Flutter](#flutter)
 * [Contributing](#contributing)
 * [Community](#community)
 * [License](#license)
@@ -133,6 +136,26 @@ The lucide figma plugin.
 Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
 
 <img width="420" src="https://www.figma.com/community/plugin/939567362549682242/thumbnail" alt="Figma Lucide Cover">
+
+### Laravel
+
+Implementation of Lucide icon's using `blade-icons` for Laravel based projects.
+
+```sh
+composer require mallardduck/blade-lucide-icons
+```
+
+For more details, see the [documentation](https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md).
+
+### Flutter
+
+Implementation of Lucide icon library for Flutter applications.
+
+```sh
+flutter pub add lucide_icons
+```
+
+For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
 
 ## Contributing
 
