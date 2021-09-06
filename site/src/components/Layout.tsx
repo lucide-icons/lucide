@@ -1,6 +1,7 @@
 import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton, useBreakpointValue } from "@chakra-ui/react";
 import { useKeyBindings } from "../lib/key";
 import { useRouter } from "next/router";
+import NextLink from "next/link"
 import { Moon, Sun, Menu, X } from 'lucide-react';
 
 import { useEffect } from "react";
@@ -63,13 +64,14 @@ const Layout = ({ children }) => {
           <Flex justifyContent="center" alignItems="center">
           {showBaseNavigation ? (
             <>
-              <Link
-                marginRight={6}
-                fontSize="xl"
-                href='/docs'
-              >
-                Documentation
-              </Link>
+              <NextLink href="/docs" passHref>
+                <Link
+                  marginRight={6}
+                  fontSize="xl"
+                >
+                  Documentation
+                </Link>
+              </NextLink>
               <Link
                 href="https://github.com/lucide-icons/lucide"
                 isExternal
@@ -86,7 +88,7 @@ const Layout = ({ children }) => {
             { ...IconbuttonProps }
             icon={<ColorModeToggle />}
           />
-          { router.route.includes('docs') && !showBaseNavigation ? (
+          { !showBaseNavigation ? (
             <IconButton
               aria-label={`Open Mobile menu`}
               onClick={toggleMobileMenu}

@@ -4,7 +4,7 @@ import fetchAllDocuments from '../../lib/fetchAllDocuments'
 import { MDXRemote } from 'next-mdx-remote'
 import mdxComponents from '../../lib/mdxComponents';
 import { HeadingNavigationProvider } from '../../components/HeadingNavigationProvider';
-import HeadingMenu from '../../components/HeadingMenu';
+import MobileMenu from '../../components/MobileMenu';
 
 
 
@@ -13,7 +13,7 @@ const DocPage = ({ doc, data, content }) => {
 
   return (
     <HeadingNavigationProvider>
-      <HeadingMenu />
+      <MobileMenu />
       <Layout>
         { data?.title ? (
           <Head>
