@@ -332,6 +332,10 @@ jobs:
           }
           EOF
 
+      - name: Get packages
+        run: pub get
+        working-directory: packages/lucide-flutter
+
       - name: Move the ttf file
         run: mv lucide-font/Lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
 
