@@ -1,6 +1,6 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from "@chakra-ui/react";
-import download from "downloadjs";
-import JSZip from "jszip";
+import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from '@chakra-ui/react';
+import download from 'downloadjs';
+import JSZip from 'jszip';
 import { Download, Github } from 'lucide-react';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
 
@@ -23,12 +23,7 @@ const Header = ({ data }) => {
 
   return (
     <Flex direction="column" align="center" justify="center">
-      <Heading
-        as="h1"
-        fontSize="4xl"
-        mb="4"
-        textAlign="center"
-      >
+      <Heading as="h1" fontSize="4xl" mb="4" textAlign="center">
         Simply beautiful open source icons, community-sourced
       </Heading>
       <Text fontSize="lg" as="p" textAlign="center" mb="8">
@@ -43,12 +38,7 @@ const Header = ({ data }) => {
         </Link>
         !
       </Text>
-      <Wrap
-        marginTop={3}
-        marginBottom={12}
-        spacing="15px"
-        justify="center"
-      >
+      <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
         <WrapItem>
           <Button leftIcon={<Download />} size="lg" onClick={downloadAllIcons}>
             Download all
