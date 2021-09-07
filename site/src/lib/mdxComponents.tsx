@@ -25,22 +25,22 @@ const components = {
     <HeadingAnchored as="h1"  size="xl" mb={4} {...props}/>
   ),
   h2: ({children, ...rest}) => (
-    <HeadingAnchored as="h2" size="lg" my={4} { ...rest}>
+    <HeadingAnchored as="h2" size="lg" py={4} { ...rest}>
       {children}
       <Divider mt={4}/>
     </HeadingAnchored>
   ),
   h3: (props) => (
-    <HeadingAnchored as="h3" size="md" mt={4} mb={2} {...props}/>
+    <HeadingAnchored as="h3" size="md" pt={4} mb={2} {...props}/>
   ),
   h4: (props) => (
-    <HeadingAnchored as="h4" size="sm" mt={4} mb={2} {...props}/>
+    <HeadingAnchored as="h4" size="sm" pt={4} mb={2} {...props}/>
   ),
   h5: (props) => (
-    <HeadingAnchored as="h5" size="xs" mt={2} mb={1} {...props}/>
+    <HeadingAnchored as="h5" size="xs" pt={2} mb={1} {...props}/>
   ),
   h6: (props) => (
-    <HeadingAnchored as="h6" size="xs" mt={2} mb={1} opacity={.75} {...props}/>
+    <HeadingAnchored as="h6" size="xs" pt={2} mb={1} opacity={.75} {...props}/>
   ),
   ul: (props) => <UnorderedList my={2}>{props.children}</UnorderedList>,
   ol: (props) => <OrderedList my={2}>{props.children}</OrderedList>,

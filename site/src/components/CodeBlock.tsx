@@ -1,10 +1,10 @@
 import { Box, BoxProps, chakra, useColorMode } from '@chakra-ui/react';
 import nightOwlLightTheme from 'prism-react-renderer/themes/nightOwlLight';
 import nightOwlDarkTheme from 'prism-react-renderer/themes/nightOwl';
-import uiTheme from '../lib/theme'
+import uiTheme from '../lib/theme';
 // import theme from 'prism-react-renderer/themes/nightOwl';
 import BaseHighlight, { defaultProps, Language } from 'prism-react-renderer';
-import { CSSProperties, useMemo } from 'react';
+import { CSSProperties } from 'react';
 import CopyButton from './CopyButton';
 
 const editorStyle: CSSProperties = {
@@ -15,13 +15,7 @@ const editorStyle: CSSProperties = {
 };
 
 const CodeContainer = (props: BoxProps) => (
-  <Box
-    paddingTop="3"
-    paddingBottom="3"
-    rounded="8px"
-    height="100%"
-    {...props}
-  />
+  <Box paddingTop="3" paddingBottom="3" rounded="8px" height="100%" {...props} />
 );
 
 const RE = /{([\d,-]+)}/;
@@ -37,7 +31,7 @@ const calculateLinesToHighlight = (meta: string) => {
   return (index: number) => {
     const lineNumber = index + 1;
     const inRange = lineNumbers.some(([start, end]) =>
-      end ? lineNumber >= start && lineNumber <= end : lineNumber === start
+      end ? lineNumber >= start && lineNumber <= end : lineNumber === start,
     );
     return inRange;
   };
@@ -54,16 +48,17 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
   const { colorMode } = useColorMode();
 
-  const backgroundColor = colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[700]
+  const backgroundColor =
+    colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[700];
   const codeTheme = colorMode === 'light' ? nightOwlLightTheme : nightOwlDarkTheme;
 
   const customizedCodeTheme = {
     ...codeTheme,
     plain: {
       ...codeTheme.plain,
-      backgroundColor
-    }
-  }
+      backgroundColor,
+    },
+  };
 
   return (
     <Box position="relative" zIndex="0" {...props}>
@@ -87,7 +82,14 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                       {...lineProps}
                     >
                       {showLines && (
-                        <chakra.span opacity={0.3} mr="4" width="16px" display="inline-block" fontSize="xs" style={{ userSelect: 'none' }}>
+                        <chakra.span
+                          opacity={0.3}
+                          mr="4"
+                          width="16px"
+                          display="inline-block"
+                          fontSize="xs"
+                          style={{ userSelect: 'none' }}
+                        >
                           {i + 1}
                         </chakra.span>
                       )}

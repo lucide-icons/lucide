@@ -1,22 +1,18 @@
-import { Icon, Link, Text } from "@chakra-ui/react";
-import LogoImage from 'babel-loader!react-svg-loader?jsx=true!../../public/logo.svg';
-import NextLink from "next/link"
+import { Icon, Link, Text } from '@chakra-ui/react';
+import LogoImage from '../../public/logo.svg';
+import NextLink from 'next/link';
 
 const Logo = () => (
   <NextLink href="/" passHref>
-    <Link display="flex" _hover={{textDecoration: 'none'}}>
+    <Link display="flex" _hover={{ textDecoration: 'none' }}>
       <Icon boxSize={12} marginRight="8px">
-        <LogoImage/>
+        <LogoImage />
       </Icon>
-      <Text
-        fontSize="40px"
-        fontWeight='normal'
-        lineHeight="48px"
-      >
+      <Text fontSize="40px" fontWeight="normal" lineHeight="48px">
         Lucide
       </Text>
     </Link>
   </NextLink>
-)
+);
 
-export default Logo
+export default Logo;

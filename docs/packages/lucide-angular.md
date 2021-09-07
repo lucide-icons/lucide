@@ -2,7 +2,7 @@
 
 Implementation of the lucide icon library for angular applications.
 
-> What is lucide? Read it [here](lucide#what-is-lucide).
+> What is lucide? Read it [here](../index.md#what-is-lucide).
 
 ## Installation
 

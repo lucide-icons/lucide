@@ -1,6 +1,6 @@
-import { Link, Heading } from "@chakra-ui/react";
-import { useEffect } from "react";
-import { useheadingNavigationContext } from "./HeadingNavigationProvider";
+import { Link, Heading } from '@chakra-ui/react';
+import { useEffect } from 'react';
+import { useheadingNavigationContext } from './HeadingNavigationProvider';
 
 function getAnchor(text: string) {
   return text
@@ -9,9 +9,9 @@ function getAnchor(text: string) {
     .replace(/[ ]/g, '-');
 }
 
-const HeadingAnchored = ({children, as: headingLevel, ...restProps}) => {
-  const { addHeading } = useheadingNavigationContext()
-  const headingText = typeof children === 'string' ? children : children[0]
+const HeadingAnchored = ({ children, as: headingLevel, ...restProps }) => {
+  const { addHeading } = useheadingNavigationContext();
+  const headingText = typeof children === 'string' ? children : children[0];
 
   const anchor = getAnchor(headingText);
   const link = `#${anchor}`;
@@ -24,39 +24,28 @@ const HeadingAnchored = ({children, as: headingLevel, ...restProps}) => {
       position: 'absolute',
       left: 0,
       transform: 'translateX(-100%)',
-      paddingX: 2
-    }
-  }
+      paddingX: 2,
+    },
+  };
   const focusStyling = {
-    outline: 'none'
-  }
+    outline: 'none',
+  };
 
   useEffect(() => {
     addHeading({
       anchor,
       label: headingText,
       headingLevel,
-    })
-  }, [anchor, headingText])
+    });
+  }, [anchor, headingText]);
 
   return (
-    <Heading
-      id={anchor}
-      as={headingLevel}
-      position='relative'
-      {...restProps}
-    >
-      <Link
-        href={link}
-        className="anchor-link"
-        _hover={hoverStyling}
-        _focus={focusStyling}
-      >
+    <Heading id={anchor} as={headingLevel} position="relative" {...restProps}>
+      <Link href={link} className="anchor-link" _hover={hoverStyling} _focus={focusStyling}>
         {children}
       </Link>
     </Heading>
   );
-
-}
+};
 
 export default HeadingAnchored;

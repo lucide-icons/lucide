@@ -7,9 +7,10 @@ import {
   DrawerOverlay,
   Link,
   Box,
-  Divider
+  Divider,
 } from '@chakra-ui/react';
-import NextLink from "next/link"
+import NextLink from 'next/link';
+import HeadingTreeMenu from './HeadingTreeMenu';
 import Logo from './Logo';
 import { useMobileNavigationContext } from './MobileNavigationProvider';
 
@@ -27,10 +28,7 @@ const MobileMenu = () => {
         <DrawerBody>
           <Box mb={4}>
             <NextLink href="/docs" passHref>
-              <Link
-                fontSize="xl"
-                fontWeight='bold'
-              >
+              <Link fontSize="xl" fontWeight="bold">
                 Documentation
               </Link>
             </NextLink>
@@ -40,12 +38,13 @@ const MobileMenu = () => {
               href="https://github.com/lucide-icons/lucide"
               isExternal
               fontSize="xl"
-              fontWeight='bold'
+              fontWeight="bold"
             >
               Github
             </Link>
           </Box>
-          <Divider/>
+          <Divider />
+          <HeadingTreeMenu />
         </DrawerBody>
       </DrawerContent>
     </Drawer>
