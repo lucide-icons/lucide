@@ -18,7 +18,7 @@ export default (iconName, iconNode) => ({
     },
     defaultClass: {
       type: String,
-      default: 'lucide-icon',
+      default: `lucide-icon lucide lucide-${iconName}`,
     },
   },
   render(
