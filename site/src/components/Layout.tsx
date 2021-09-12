@@ -12,8 +12,6 @@ import { useKeyBindings } from '../lib/key';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import { Moon, Sun, Menu, X } from 'lucide-react';
-
-import { useEffect } from 'react';
 import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
 import Logo from './Logo';
 
@@ -51,10 +49,6 @@ const Layout = ({ children }) => {
     },
   });
 
-  useEffect(() => {
-    console.log(router.route.includes('docs'));
-  }, [router.route]);
-
   return (
     <Box h="100vh">
       <Flex mb={16} w="full">
@@ -77,6 +71,11 @@ const Layout = ({ children }) => {
                 <NextLink href="/docs" passHref>
                   <Link marginRight={6} fontSize="xl">
                     Documentation
+                  </Link>
+                </NextLink>
+                <NextLink href="/packages" passHref>
+                  <Link marginRight={6} fontSize="xl">
+                    Packages
                   </Link>
                 </NextLink>
                 <Link

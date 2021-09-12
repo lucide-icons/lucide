@@ -10,12 +10,21 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import HeadingTreeMenu from './HeadingTreeMenu';
 import Logo from './Logo';
 import { useMobileNavigationContext } from './MobileNavigationProvider';
 
 const MobileMenu = () => {
   const { isOpen, onClose } = useMobileNavigationContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.route && isOpen) {
+      onClose();
+    }
+  }, [router.route]);
 
   return (
     <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
