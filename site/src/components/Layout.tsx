@@ -69,12 +69,12 @@ const Layout = ({ children }) => {
             {showBaseNavigation ? (
               <>
                 <NextLink href="/docs" passHref>
-                  <Link marginRight={6} fontSize="xl">
+                  <Link marginRight={12} fontSize="xl">
                     Documentation
                   </Link>
                 </NextLink>
                 <NextLink href="/packages" passHref>
-                  <Link marginRight={6} fontSize="xl">
+                  <Link marginRight={12} fontSize="xl">
                     Packages
                   </Link>
                 </NextLink>

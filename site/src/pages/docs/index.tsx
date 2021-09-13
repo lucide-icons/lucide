@@ -6,8 +6,6 @@ import mdxComponents from '../../lib/mdxComponents';
 import { HeadingNavigationProvider } from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
 
-
-
 const DocPage = ({ doc, data, content }) => {
   if (!data || !doc) return null
 

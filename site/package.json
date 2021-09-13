@@ -21,6 +21,7 @@
     "downloadjs": "^1.4.7",
     "framer-motion": "^4",
     "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
     "lodash": "^4.17.20",
     "lucide-react": "0.14.0",
