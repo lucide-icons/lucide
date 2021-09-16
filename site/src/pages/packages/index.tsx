@@ -28,7 +28,19 @@ const PackagesPage = ({ packages }) => {
 export default PackagesPage;
 
 export async function getStaticProps({ params }) {
-  const packages = await fetchPackages();
+  const packages = (await fetchPackages())
+    .filter(Boolean)
+    .filter(packageObj => !packageObj.private)
+    .map(({ name, description, flutter = false }) => {
+      const packageDirectory = flutter ? 'lucide-flutter' : name;
+
+      return {
+        name,
+        description,
+        image: `/package-logos/${packageDirectory}-small.svg`,
+        source: `https://github.com/lucide-icons/lucide/tree/master/packages/${packageDirectory}`,
+      };
+    });
 
   return { props: { packages } };
 }
