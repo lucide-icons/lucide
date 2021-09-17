@@ -17,7 +17,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 
 ### Why choose Lucide over Feather Icons
 
-- Lucide already expended the icon set by 130+ in less then a year, so more icons to work with.
+- Lucide already expanded the icon set by 130+ in less then a year, so more icons to work with.
 - Well maintained code base.
 - Active community.
 
