@@ -5,19 +5,12 @@ on:
     tags:
     - 'v*'
 
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version'
-        required: true
-
 jobs:
   pre-build:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
-      YARN_CACHE_DIR: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
 
     steps:
       - name: Get the version
@@ -28,25 +21,19 @@ jobs:
         env:
           VERSION_REF: ${{ github.event.inputs.version || github.ref }}
 
-      - name: Get yarn cache directory path
-        id: yarn_cache
-        run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
-
   lucide:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/setup-node@v2.4
         with:
-          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -75,15 +62,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/setup-node@v2.4
         with:
-          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -112,19 +97,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2.4
         with:
-          node-version: '12.x'
-
-      - uses: actions/cache@v2
-        with:
-          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -153,19 +132,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2.4
         with:
-          node-version: '12.x'
-
-      - uses: actions/cache@v2
-        with:
-          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -194,12 +167,10 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/setup-node@v2.4
         with:
-          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn --pure-lockfile
@@ -231,15 +202,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/setup-node@v2.4
         with:
-          path: ${{ needs.pre-build.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -262,28 +231,159 @@ jobs:
           name: lucide-preact-package-json
           path: packages/lucide-preact/package.json
 
-  upload-package-jsons:
+  lucide-font:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact]
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.4
+        with:
+          node-version: '14'
+          cache: 'yarn'
+
+      - name: Update repos
+        run: sudo apt-get update
+
+      - name: Install FontForge
+        run: sudo apt-get install zlib1g-dev fontforge
+
+      - name: Clone sfnt2woff-zopfli repo
+        run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
+
+      - name: Install and move sfnt2woff-zopfli
+        run: |
+            cd sfnt2woff-zopfli
+            make
+            sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+
+      - name: Clone woff2
+        run: git clone --recursive https://github.com/google/woff2.git
+
+      - name: Install woff2
+        run: |
+            cd woff2
+            sudo make clean all
+            sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+
+      - name: Install Font Custom dependency
+        run: sudo gem install fontcustom
+
+      - name: Install "outline-stroke"
+        run: sudo yarn add svg-outline-stroke -W
+
+      - name: "Outline SVG"
+        run: yarn build:outline-icons
+
+      - name: Build 'Lucide'
+        run: |
+            mkdir build
+            list=(_200 _300 "" _500 _600)
+            for name in "${list[@]}"
+            do
+              fontcustom compile "./converted_icons${name}" -h -n "Lucide${name}" -o ./tmp -F && mv ./tmp/* build
+            done
+
+      - name: 'Upload to Artifacts'
+        uses: actions/upload-artifact@v1
+        with:
+          name: lucide-font
+          path: build
+
+  lucide-flutter:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: [pre-build, lucide-font]
+    container:
+      image:  google/dart:latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+      - uses: actions/cache@v2
+        with:
+          path: '~/.pub-cache'
+          key: ${{ runner.os }}-pub-${{ hashFiles('~/.pub-cache') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
+      - name: Setup credentials
+        run: |
+          mkdir -p ~/.pub-cache
+          cat <<EOF > ~/.pub-cache/credentials.json
+          {
+            "accessToken": "${{ secrets.GOOGLE_OAUTH_ACCESS_TOKEN }}",
+            "refreshToken": "${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}",
+            "idToken": "${{ secrets.GOOGLE_OAUTH_ID_TOKEN }}",
+            "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
+            "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
+            "expiration": 1629835569218
+          }
+          EOF
+
+      - name: Get packages
+        run: pub get
+        working-directory: packages/lucide-flutter
+
+      - name: Move the ttf file
+        run: mv lucide-font/Lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
+
+      - name: Generate exports file
+        run: dart tool/generate_fonts.dart lucide-font/Lucide-preview.html
+        working-directory: packages/lucide-flutter
+
+      - name: Update yaml
+        run: yq e -i -f '.version = "${{ needs.pre-build.outputs.VERSION }}"' pubspec.yaml
+        working-directory: packages/lucide-flutter
+
+      - name: Flutter publish
+        run: pub publish -f
+        working-directory: packages/lucide-flutter
+
+      - name: Upload pubspec.yaml
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-flutter-pubspec-yaml
+          path: packages/lucide-flutter/pubspec.yaml
+
+
+  post-release:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: [pre-build, lucide, lucide-react, lucide-vue, lucide-vue-next, lucide-angular, lucide-preact, lucide-flutter, lucide-font]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
 
-    - name: Commit package.jsons
-      run: |
-        mv lucide-package-json/package.json packages/lucide/package.json
-        mv lucide-react-package-json/package.json packages/lucide-react/package.json
-        mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
-        mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
-        mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
-        mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
+      - name: Commit package files
+        run: |
+          mv lucide-package-json/package.json packages/lucide/package.json
+          mv lucide-react-package-json/package.json packages/lucide-react/package.json
+          mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
+          mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
+          mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
+          mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
+          mv lucide-flutter-pubspec-yaml/pubspec.yaml packages/lucide-flutter/pubspec.yaml
 
-    - name: Commit package.jsons
-      run: |
-        git add packages/*/package.json
-        git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-          commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
-        git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-        git push origin HEAD:master
+      - name: Commit package.jsons
+        run: |
+          git add packages/*/package.json packages/lucide-flutter/pubspec.yaml
+          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+          git push origin HEAD:master
+
+      - name: Zip font and icons
+        run: |
+          zip -r lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip lucide-font
+          zip -r lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip icons
+
+      - name: Release zip and fonts
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
+        with:
+          tag_name: v${{ steps.new-version.outputs.VERSION }}
+          files: |
+            lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
+            lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
