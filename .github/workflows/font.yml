@@ -51,10 +51,10 @@ jobs:
     - name: Build 'Lucide'
       run: |
           mkdir build
-          list=(_200 _300 "" _500 _600)
+          list=(-200 -300 "" -500 -600)
           for name in "${list[@]}"
           do
-            fontcustom compile "./converted_icons${name}" -h -n "Lucide${name}" -o ./tmp -F && mv ./tmp/* build
+            fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./tmp -F && mv ./tmp/* build
           done
 
     - name: Zip 'Lucide'
