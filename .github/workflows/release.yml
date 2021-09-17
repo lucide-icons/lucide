@@ -5,9 +5,15 @@ on:
     tags:
     - 'v*'
 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+
 jobs:
   pre-build:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lucide-icons/lucide' && contains('["locness3","ericfennis", "johnletey"]', github.actor)
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
