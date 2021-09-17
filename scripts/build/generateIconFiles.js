@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
+import { promises } from 'stream';
 import { toPascalCase } from '../helpers';
 
 export default function({ iconNodes, outputDirectory, template, showLog = true, iconFileExtention = '.js' }) {
@@ -12,7 +13,7 @@ export default function({ iconNodes, outputDirectory, template, showLog = true, 
     fs.mkdirSync(iconsDistDirectory);
   }
 
-  icons.forEach(iconName => {
+  const writeIconFiles = icons.map(async iconName => {
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
     const componentName = toPascalCase(iconName);
 
@@ -21,11 +22,16 @@ export default function({ iconNodes, outputDirectory, template, showLog = true, 
 
     const elementTemplate = template({ componentName, iconName, children });
 
-
-    fs.writeFileSync(location, prettier.format(elementTemplate, { singleQuote: true, trailingComma: 'all', parser: 'babel' }), 'utf-8');
-
-    if(showLog) {
-      console.log('Successfully built', componentName);
-    }
+    await fs.promises.writeFile(location, prettier.format(elementTemplate, { singleQuote: true, trailingComma: 'all', parser: 'babel' }), 'utf-8');
   });
+
+  Promise.all(writeIconFiles)
+  .then(() => {
+    if(showLog) {
+      console.log('Successfully built', icons.length, 'icons.');
+    }
+  })
+  .catch((error) => {
+    throw new Error(`Something went wrong generating icon files,\n ${error}`)
+  })
 }

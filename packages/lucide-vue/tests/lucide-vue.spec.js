@@ -28,7 +28,7 @@ describe('Using lucide icon components', () => {
     })
 
     expect(wrapper).toMatchSnapshot();
-    expect(String(wrapper.classes())).toBe(String(['lucide-icon', 'my-icon']))
+    expect(String(wrapper.classes())).toBe(String(['lucide-icon','lucide','lucide-smile', 'my-icon']))
   });
 
   it('should add a style attribute to the element', () => {
@@ -36,7 +36,6 @@ describe('Using lucide icon components', () => {
       attrs: {
         style: 'position: absolute',
       }
-
     })
 
     expect(wrapper).toMatchSnapshot();

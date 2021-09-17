@@ -275,14 +275,23 @@ jobs:
       - name: "Outline SVG"
         run: yarn build:outline-icons
 
-      - name: Build 'Lucide'
+      - name: Build Icon Font
         run: |
             mkdir build
-            list=(_200 _300 "" _500 _600)
+            list=(-200 -300 "" -500 -600)
+            command=''
             for name in "${list[@]}"
             do
-              fontcustom compile "./converted_icons${name}" -h -n "Lucide${name}" -o ./tmp -F && mv ./tmp/* build
+              if [ -z "$command" ]
+                subcommand="(fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./tmp -F && mv ./tmp/* build)"
+                then
+                  command="$subcommand";
+                else
+                  command="$command & $subcommand";
+              fi
             done
+
+            eval $command
 
       - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v1
@@ -325,10 +334,10 @@ jobs:
         working-directory: packages/lucide-flutter
 
       - name: Move the ttf file
-        run: mv lucide-font/Lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
+        run: mv lucide-font/lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
 
       - name: Generate exports file
-        run: dart tool/generate_fonts.dart lucide-font/Lucide-preview.html
+        run: dart tool/generate_fonts.dart lucide-font/lucide-preview.html
         working-directory: packages/lucide-flutter
 
       - name: Update yaml
