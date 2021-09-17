@@ -160,6 +160,7 @@ VueWrapper {
       data-v-app=""
     >
       <svg
+        class="lucide lucide-smile-icon"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -253,6 +254,7 @@ VueWrapper {
   },
   "rootVM": Object {},
   "wrapperElement": <svg
+    class="lucide lucide-smile-icon"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -304,6 +306,7 @@ VueWrapper {
       data-v-app=""
     >
       <svg
+        class="lucide lucide-smile-icon"
         fill="none"
         height="48"
         size="48"
@@ -398,6 +401,7 @@ VueWrapper {
   },
   "rootVM": Object {},
   "wrapperElement": <svg
+    class="lucide lucide-smile-icon"
     fill="none"
     height="48"
     size="48"
@@ -450,6 +454,7 @@ VueWrapper {
       data-v-app=""
     >
       <svg
+        class="lucide lucide-smile-icon"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -542,6 +547,7 @@ VueWrapper {
   },
   "rootVM": Object {},
   "wrapperElement": <svg
+    class="lucide lucide-smile-icon"
     fill="none"
     height="24"
     stroke="currentColor"
