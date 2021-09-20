@@ -41,4 +41,16 @@ describe('Using lucide icon components', () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.attributes('style')).toContain('position: absolute')
   });
+
+  it('should call the onClick event', () => {
+    const onClick = jest.fn()
+    const wrapper = mount(Smile, {
+      listeners: {
+        click: onClick
+      }
+    })
+
+    wrapper.trigger('click')
+    expect(onClick).toHaveBeenCalled()
+  });
 });
