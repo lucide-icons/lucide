@@ -52,6 +52,7 @@ const components = {
 
     return (
       <CodeBlock
+        //@ts-ignore
         my={2}
         code={code}
         language={language}
