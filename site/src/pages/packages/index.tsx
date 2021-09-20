@@ -41,7 +41,8 @@ export async function getStaticProps({ params }) {
         description,
         image: `/package-logos/${packageDirectory}-small.svg`,
         source: `https://github.com/lucide-icons/lucide/tree/master/packages/${packageDirectory}`,
-        ...packageData[packageDirectory]
+        documentation: `/docs/${packageDirectory}`,
+        ...packageData[packageDirectory],
       };
     })
     .sort((a,b ) => a.order - b.order);

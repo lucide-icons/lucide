@@ -36,11 +36,16 @@ const MobileMenu = () => {
         </DrawerHeader>
         <DrawerBody>
           <Box mb={4}>
-            <NextLink href="/docs" passHref>
+            {/* <NextLink href="/docs" passHref>
               <Link fontSize="xl" fontWeight="bold">
                 Documentation
               </Link>
-            </NextLink>
+            </NextLink> */}
+          <NextLink href="/packages" passHref>
+            <Link marginRight={12} fontSize="xl">
+              Packages
+            </Link>
+          </NextLink>
           </Box>
           <Box mb={4}>
             <Link

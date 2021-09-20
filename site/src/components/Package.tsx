@@ -2,18 +2,20 @@ import {
   Button,
   Flex,
   Box,
-  Image,
   Heading,
   Text,
   useColorMode,
   Divider,
   ButtonGroup,
+  Stack
 } from '@chakra-ui/react';
+import Image from 'next/Image'
 import { Code, FileText } from 'lucide-react';
+import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote';
 import mdxComponents from '../lib/mdxComponents';
 
-const Package = ({ name, description, image, shields }) => {
+const Package = ({ name, description, image, shields, source, documentation }) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -27,11 +29,40 @@ const Package = ({ name, description, image, shields }) => {
       bg={colorMode == 'light' ? 'gray-200' : 'gray.700'}
       padding={8}
     >
-      <Flex justifyContent="flex-start">
-        <Box marginRight={8} flex={3}>
-          <Image height={120} src={image} />
-        </Box>
-        <Box flex={5}>
+      <Flex
+        justifyContent={{
+          base: "center",
+          md: "flex-start"
+        }}
+        flexDirection={{
+          base: "column",
+          md: "row"
+        }}
+      >
+        <Flex
+          marginRight={{
+            base: 0,
+            md: 8
+          }}
+          marginBottom={{
+            base: 4,
+            md: 0
+          }}
+          flex={3}
+          align="center"
+        >
+          <Box marginX='auto'>
+            <Image width={278} height={120} src={image} />
+          </Box>
+        </Flex>
+        <Box
+          flex={5}
+          marginRight={4}
+          textAlign={{
+            base: "center",
+            md: "left"
+          }}
+        >
           <Heading as="h2" fontSize='3xl' mb={2}>
             {name}
           </Heading>
@@ -42,26 +73,50 @@ const Package = ({ name, description, image, shields }) => {
             ))}
           </ButtonGroup>
         </Box>
-        <Flex placeItems="center">
-          <ButtonGroup spacing={8}>
+        <Flex
+          placeItems="center"
+          align='center'
+          marginTop={{
+            base: 4,
+            md: 0
+          }}
+        >
+          <ButtonGroup
+            // as={Stack}
+            // spacing={8}
+            // align='center'
+            flexDirection={{
+              base: "column",
+              lg: "initial"
+            }}
+            margin='auto'
+            justifyContent={{
+              base: "center",
+              sm: "flex-start"
+            }}
+          >
+            <Link passHref href={documentation} >
+              <Button
+                as='a'
+                variant="solid"
+                textDecoration="none"
+                leftIcon={<FileText />}
+                my={2}
+              >
+                Documentation
+              </Button>
+            </Link>
+            <Link passHref href={source} >
             <Button
               as="a"
-              href="https://github.com/lucide-icons/lucide/tree/master/packages/lucide#readme"
-              variant="solid"
-              textDecoration="none"
-              leftIcon={<FileText />}
-            >
-              Documentation
-            </Button>
-            <Button
-              as="a"
-              href="https://github.com/lucide-icons/lucide/tree/master/packages/lucide"
               variant="solid"
               textDecoration="none"
               leftIcon={<Code />}
+              my={2}
             >
               Source
             </Button>
+            </Link>
           </ButtonGroup>
         </Flex>
       </Flex>

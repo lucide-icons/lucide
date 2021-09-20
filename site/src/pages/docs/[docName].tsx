@@ -7,7 +7,10 @@ export { default } from '.'
 
 export async function getStaticProps({ params: { docName } }) {
   const allDocs = await fetchAllDocuments()
-  const doc = allDocs.find(({filename = ''}) => filename.includes(docName));
+  console.log();
+
+  const doc = allDocs.find(({filename = ''}) => filename === `${docName}.md`);
+
   return { props: doc }
 }
 
