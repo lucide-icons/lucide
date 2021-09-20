@@ -11,7 +11,7 @@ const getOriginalSvg = (iconName) => {
   const svgParsed = parseSync(svgContent);
 
   svgParsed.attributes['icon-name'] = iconName;
-  svgParsed.attributes['class'] = 'lucide';
+  svgParsed.attributes['class'] = `lucide lucide-${iconName}`;
 
   return stringify(svgParsed, { selfClose: false });
 };
@@ -45,7 +45,7 @@ describe('createIcons', () => {
     document.body.innerHTML = `<i icon-name="volume-2" class="lucide"></i>`;
 
     const attrs = {
-      class: 'lucide icon custom-class',
+      class: 'lucide lucide-volume-2 icon custom-class',
       fill: 'black',
     };
 

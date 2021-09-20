@@ -1,12 +1,11 @@
-import { join } from 'path'
+import { join } from 'path';
 
-export default function () {
-
+export default function() {
   this.nuxt.hook('components:dirs', dirs => {
     dirs.push({
       path: join(__dirname, 'dist', 'esm', 'icons'),
       prefix: 'Icon',
-      ignore: ['**/index.js']
-    })
-  })
+      ignore: ['**/index.js'],
+    });
+  });
 }
