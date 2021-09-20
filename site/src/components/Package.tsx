@@ -9,7 +9,7 @@ import {
   ButtonGroup,
   Stack
 } from '@chakra-ui/react';
-import Image from 'next/Image'
+import Image from 'next/image'
 import { Code, FileText } from 'lucide-react';
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote';
