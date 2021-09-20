@@ -1,4 +1,5 @@
 import { Icon, Link, Text } from '@chakra-ui/react';
+//@ts-ignore
 import LogoImage from '../../public/logo.svg';
 import NextLink from 'next/link';
 
