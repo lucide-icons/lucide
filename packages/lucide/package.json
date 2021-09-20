@@ -1,6 +1,6 @@
 {
   "name": "lucide",
-  "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "description": "A Lucide icon library package for web and javascript applications.",
   "version": "0.15.30",
   "license": "ISC",
   "homepage": "https://lucide.dev",

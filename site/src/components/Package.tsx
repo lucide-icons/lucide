@@ -13,15 +13,9 @@ import { Code, FileText } from 'lucide-react';
 import { MDXRemote } from 'next-mdx-remote';
 import mdxComponents from '../lib/mdxComponents';
 
-const Package = ({ shields }) => {
+const Package = ({ name, description, image, shields }) => {
   const { colorMode } = useColorMode();
-  const props = {
-    title: 'lucide',
-    description: 'This is a small description',
-    image: '/package-logos/lucide-react-small.svg',
-  };
 
-  const { title, description, image } = props;
   return (
     <Box
       borderWidth="1px"
@@ -30,7 +24,6 @@ const Package = ({ shields }) => {
       width="100%"
       maxWidth="1152px"
       boxShadow="lg"
-      marginX="auto"
       bg={colorMode == 'light' ? 'gray-200' : 'gray.700'}
       padding={8}
     >
@@ -39,13 +32,13 @@ const Package = ({ shields }) => {
           <Image height={120} src={image} />
         </Box>
         <Box flex={5}>
-          <Heading as="h3" mb={2}>
-            {title}
+          <Heading as="h2" fontSize='3xl' mb={2}>
+            {name}
           </Heading>
-          <Text mb={2}>{description}</Text>
+          <Text mb={3}>{ description }</Text>
           <ButtonGroup spacing={2}>
-            {shields.map((Shield, index) => (
-              <Shield key={index} />
+            {shields.map((attrs, index) => (
+              <img {...attrs} key={ index } />
             ))}
           </ButtonGroup>
         </Box>

@@ -8,8 +8,6 @@ import { Heading } from '@chakra-ui/react';
 import fetchPackages from '../../lib/fetchPackages';
 
 const PackagesPage = ({ packages }) => {
-  console.log(packages);
-
   return (
     <HeadingNavigationProvider>
       <MobileMenu />
@@ -17,8 +15,12 @@ const PackagesPage = ({ packages }) => {
         <Heading as="h1" marginBottom={6} textAlign="center">
           Packages
         </Heading>
-        <Stack spacing={8}>
-          <Package shields={packageData['lucide-react'].shields} />
+        <Stack spacing={8} align="center">
+          { packages.length ? (
+            packages.map(packageItem => (
+              <Package {...packageItem} />
+            ))
+          ) : null }
         </Stack>
       </Layout>
     </HeadingNavigationProvider>
@@ -39,8 +41,10 @@ export async function getStaticProps({ params }) {
         description,
         image: `/package-logos/${packageDirectory}-small.svg`,
         source: `https://github.com/lucide-icons/lucide/tree/master/packages/${packageDirectory}`,
+        ...packageData[packageDirectory]
       };
-    });
+    })
+    .sort((a,b ) => a.order - b.order);
 
   return { props: { packages } };
 }

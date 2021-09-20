@@ -1,6 +1,6 @@
 {
   "name": "lucide-preact",
-  "description": "Lucide Preact package, Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "description": "A Lucide icon library package for Preact applications",
   "version": "0.15.30",
   "license": "ISC",
   "homepage": "https://lucide.dev",

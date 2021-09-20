@@ -1,5 +1,5 @@
 name: lucide_icons
-description: Lucide icon pack for Flutter
+description: A Lucide icon library package for Flutter applications.
 version: 0.15.30
 homepage: https://lucide.dev
 repository: https://github.com/lucide-icons/lucide
