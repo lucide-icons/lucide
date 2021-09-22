@@ -52,6 +52,7 @@ export default (iconName, iconNode) => ({
           'stroke-width': strokeWidth,
           ...data.attrs,
         },
+        on: data?.on || {}
       },
       iconNode.map(([tag, attrs]) => createElement(tag, { attrs })),
     );
