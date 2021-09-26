@@ -1005,6 +1005,13 @@
   "languages": [
     "translate"
   ],
+  "landmark": [
+    "bank",
+    "building",
+    "capitol",
+    "finance",
+    "money"
+  ],
   "laptop": [
     "computer"
   ],
