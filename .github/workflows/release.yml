@@ -336,7 +336,10 @@ jobs:
       #     EOF
 
       - name: Install yd
-        run: sudo apt install yq -y
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64
+          sudo add-apt-repository ppa:rmescandon/yq
+          sudo apt install yq -y
 
       - name: Get packages
         run: flutter pub get
