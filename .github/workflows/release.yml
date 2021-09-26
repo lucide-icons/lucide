@@ -288,12 +288,12 @@ jobs:
             command=''
             for name in "${list[@]}"
             do
+              subcommand="(fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./tmp -F && mv ./tmp/* build)"
               if [ -z "$command" ]
-                subcommand="(fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./tmp -F && mv ./tmp/* build)"
-                then
-                  command="$subcommand";
-                else
-                  command="$command & $subcommand";
+              then
+                command="$subcommand";
+              else
+                command="$command & $subcommand";
               fi
             done
 
