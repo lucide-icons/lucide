@@ -375,12 +375,12 @@ jobs:
 
       - name: Commit package files
         run: |
-          # mv lucide-package-json/package.json packages/lucide/package.json
-          # mv lucide-react-package-json/package.json packages/lucide-react/package.json
-          # mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
-          # mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
-          # mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
-          # mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
+          mv lucide-package-json/package.json packages/lucide/package.json
+          mv lucide-react-package-json/package.json packages/lucide-react/package.json
+          mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
+          mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
+          mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
+          mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
           mv lucide-flutter-pubspec-yaml/pubspec.yaml packages/lucide-flutter/pubspec.yaml
 
       - name: Commit package.jsons
