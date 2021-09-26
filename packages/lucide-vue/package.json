@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue",
-  "version": "0.15.30",
+  "version": "0.16.1",
   "author": "Eric Fennis",
   "description": "A Lucide icon library package for Vue 2 applications",
   "license": "ISC",
@@ -19,7 +19,7 @@
   "unpkg": "dist/umd/lucide-vue.min.js",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:bundles",
+    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:bundles)",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/src --templateSrc=../packages/lucide-vue/scripts/exportTemplate",
     "build:es": "babel src -d dist/esm",

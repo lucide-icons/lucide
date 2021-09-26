@@ -1,7 +1,7 @@
 {
   "name": "lucide-preact",
   "description": "A Lucide icon library package for Preact applications",
-  "version": "0.15.30",
+  "version": "0.16.2",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -19,7 +19,7 @@
   "typings": "dist/lucide-preact.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
+    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-preact/src --templateSrc=../packages/lucide-preact/scripts/exportTemplate --renderUniqueKey",
     "build:es": "babel src -d dist/esm",
