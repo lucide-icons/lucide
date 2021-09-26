@@ -1,1 +1,15 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><path class="cls-1" d="M3.86,12.22h0a2,2,0,0,1-1.8-2V9.47M4.7,12.73c0-.11-.07-1.05-.07-1.16,0-2.8,3.12-5.18,8.22-5.18A14.36,14.36,0,0,1,16,6.71,3,3,0,0,1,18.91,4.8a.42.42,0,0,1,.44.4V8.49a4.48,4.48,0,0,1,.72,1.09h1.44a.41.41,0,0,1,.43.39v3.19a.41.41,0,0,1-.43.39H20.17a3.8,3.8,0,0,1-1.69,2.19v3.72a.42.42,0,0,1-.44.4H15a.41.41,0,0,1-.43-.4V17.53H11.17v1.93a.41.41,0,0,1-.43.4H7.67a.42.42,0,0,1-.44-.4V16.58A4.79,4.79,0,0,1,4.7,12.73Zm11.18-2.36Z"/></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2h0V5Z" />
+  <path d="M2 9v1c0 1.1.9 2 2 2h1"/>
+  <path d="M16 11h0" />
+</svg>
