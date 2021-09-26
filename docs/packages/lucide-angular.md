@@ -2,8 +2,6 @@
 
 Implementation of the lucide icon library for angular applications.
 
-> What is lucide? Read it [here](../index.md#what-is-lucide).
-
 ## Installation
 
 ``` sh

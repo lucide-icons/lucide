@@ -1,8 +1,6 @@
 # Lucide React
 
-Implementation of the lucide icon library for react applications.
-
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+Implementation of the lucide icon library for react applications
 
 ## Installation
 
