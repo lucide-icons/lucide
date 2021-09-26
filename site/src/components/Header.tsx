@@ -72,7 +72,7 @@ const Header = ({ data }) => {
       <Heading as="h1" fontSize="4xl" mb="4" textAlign="center">
         Simply beautiful open source icons, community-sourced
       </Heading>
-      <Text fontSize="lg" as="p" textAlign="center" mb="4">
+      <Text fontSize="lg" as="p" textAlign="center" mb="1">
         An open-source icon library, a fork of{' '}
         <Link href="https://github.com/feathericons/feather" isExternal>
           Feather Icons
@@ -84,11 +84,21 @@ const Header = ({ data }) => {
         </Link>
         !
       </Text>
-      <Wrap marginTop={4} marginBottom={6} spacing={6} justify="center" align="center">
-        <WrapItem>
-          <Text fontSize="md" opacity={0.5} as="p" textAlign="center">
-            Available for:
-          </Text>
+      <Wrap
+        marginTop={4}
+        marginBottom={6}
+        spacing={{ base: 4, lg: 6 }}
+        justify="center"
+        align="center"
+      >
+        <WrapItem flexBasis="100%" style={{ marginBottom: 0 }}>
+          <NextLink href="/packages" passHref>
+            <Link _hover={{ opacity: 0.8 }} marginX="auto">
+              <Text fontSize="md" opacity={0.5} as="p" textAlign="center" width="100%">
+                Available for:
+              </Text>
+            </Link>
+          </NextLink>
         </WrapItem>
         {packages.map(({ name, href, Logo }) => (
           <WrapItem>
