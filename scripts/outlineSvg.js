@@ -8,11 +8,11 @@ import { parse, stringify } from 'svgson'; // eslint-disable-line import/no-extr
 
 const inputDir = `./icons/`;
 const outputDirs = {
-  'converted_icons-200': '1',
-  'converted_icons-300': '1.5',
+  // 'converted_icons-200': '1',
+  // 'converted_icons-300': '1.5',
   converted_icons: '2',
-  'converted_icons-500': '2.5',
-  'converted_icons-600': '3',
+  // 'converted_icons-500': '2.5',
+  // 'converted_icons-600': '3',
 };
 
 function transformForward(node) {
@@ -47,6 +47,7 @@ async function init() {
     await Promise.all(createDirectories);
 
     const icons = await fs.readdir(inputDir);
+    icons.length = 20;
     const parsedIconNodes = await Promise.all(
       icons.map(async file => {
         const iconContent = await fs.readFile(`${inputDir}${file}`);
