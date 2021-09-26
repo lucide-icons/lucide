@@ -335,12 +335,6 @@ jobs:
       #     }
       #     EOF
 
-      - name: Install yd
-        run: |
-          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64
-          sudo add-apt-repository ppa:rmescandon/yq
-          sudo apt install yq -y
-
       - name: Get packages
         run: flutter pub get
         working-directory: packages/lucide-flutter
@@ -356,7 +350,7 @@ jobs:
         working-directory: packages/lucide-flutter
 
       - name: Update yaml
-        run: yq e -i -f '.version = "${{ needs.pre-build.outputs.VERSION }}"' pubspec.yaml
+        run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
         working-directory: packages/lucide-flutter
 
       # - name: Flutter publish
