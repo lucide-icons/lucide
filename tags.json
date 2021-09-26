@@ -1095,6 +1095,13 @@
     "number",
     "order"
   ],
+  "list-plus": [
+    "playlist",
+    "add",
+    "song",
+    "track",
+    "new"
+  ],
   "loader": [
     "load",
     "wait"
