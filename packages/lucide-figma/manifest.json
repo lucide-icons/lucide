@@ -4,5 +4,10 @@
   "api": "1.0.0",
   "ui": "build/ui.html",
   "main": "build/main.js",
-  "editorType": ["figma"]
+  "editorType": ["figma"],
+  "parameterOnly": false,
+  "parameters": [{
+    "name": "Icon",
+    "key": "icon-name"
+  }]
 }

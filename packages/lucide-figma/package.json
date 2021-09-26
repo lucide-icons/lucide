@@ -23,5 +23,8 @@
     "typescript": "^3.5.2",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.34.1"
   }
 }

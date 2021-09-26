@@ -22,7 +22,7 @@ function App() {
       tags: tags[name] || [],
       component: iconComponents[componentName] || null
     }
-  }).filter(({component}) => !!component)
+  }).filter(Boolean)
 
   const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
 
