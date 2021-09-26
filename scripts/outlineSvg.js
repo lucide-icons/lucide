@@ -2,17 +2,13 @@ import { promises as fs } from 'fs';
 import outlineStroke from 'svg-outline-stroke';
 import { parse, stringify } from 'svgson'; // eslint-disable-line import/no-extraneous-dependencies
 
-// const { promises: fs } = require('fs');
-// const outlineStroke = require('svg-outline-stroke');
-// const { parse, stringify } = require('svgson');
-
 const inputDir = `./icons/`;
 const outputDirs = {
-  // 'converted_icons-200': '1',
-  // 'converted_icons-300': '1.5',
+  'converted_icons-200': '1',
+  'converted_icons-300': '1.5',
   converted_icons: '2',
-  // 'converted_icons-500': '2.5',
-  // 'converted_icons-600': '3',
+  'converted_icons-500': '2.5',
+  'converted_icons-600': '3',
 };
 
 function transformForward(node) {
