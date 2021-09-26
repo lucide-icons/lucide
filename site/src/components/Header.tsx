@@ -1,8 +1,16 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from '@chakra-ui/react';
+import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Icon } from '@chakra-ui/react';
 import download from 'downloadjs';
 import JSZip from 'jszip';
 import { Download, Github } from 'lucide-react';
+import NextLink from 'next/link';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
+import JSLogo from '../../public/framework-logos/js.svg';
+import ReactLogo from '../../public/framework-logos/react.svg';
+import VueLogo from '../../public/framework-logos/vue.svg';
+import Vue3Logo from '../../public/framework-logos/vue-next.svg';
+import PreactLogo from '../../public/framework-logos/preact.svg';
+import AngularLogo from '../../public/framework-logos/angular.svg';
+import FlutterLogo from '../../public/framework-logos/flutter.svg';
 
 function generateZip(icons) {
   const zip = new JSZip();
@@ -21,12 +29,50 @@ const Header = ({ data }) => {
 
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
 
+  const packages = [
+    {
+      name: 'lucide',
+      Logo: JSLogo,
+      href: '/docs/lucide',
+    },
+    {
+      name: 'lucide-react',
+      Logo: ReactLogo,
+      href: '/docs/lucide-react',
+    },
+    {
+      name: 'lucide-vue',
+      Logo: VueLogo,
+      href: '/docs/lucide-vue',
+    },
+    {
+      name: 'lucide-vue-next',
+      Logo: Vue3Logo,
+      href: '/docs/lucide-vue-next',
+    },
+    {
+      name: 'lucide-preact',
+      Logo: PreactLogo,
+      href: '/docs/lucide-preact',
+    },
+    {
+      name: 'lucide-angular',
+      Logo: AngularLogo,
+      href: '/docs/lucide-angular',
+    },
+    {
+      name: 'lucide-flutter',
+      Logo: FlutterLogo,
+      href: '/docs/lucide-flutter',
+    },
+  ];
+
   return (
     <Flex direction="column" align="center" justify="center">
       <Heading as="h1" fontSize="4xl" mb="4" textAlign="center">
         Simply beautiful open source icons, community-sourced
       </Heading>
-      <Text fontSize="lg" as="p" textAlign="center" mb="8">
+      <Text fontSize="lg" as="p" textAlign="center" mb="4">
         An open-source icon library, a fork of{' '}
         <Link href="https://github.com/feathericons/feather" isExternal>
           Feather Icons
@@ -38,6 +84,22 @@ const Header = ({ data }) => {
         </Link>
         !
       </Text>
+      <Wrap marginTop={4} marginBottom={6} spacing={6} justify="center" align="center">
+        <WrapItem>
+          <Text fontSize="md" opacity={0.5} as="p" textAlign="center">
+            Available for:
+          </Text>
+        </WrapItem>
+        {packages.map(({ name, href, Logo }) => (
+          <WrapItem>
+            <NextLink href={href} key={name} passHref>
+              <Link _hover={{ opacity: 0.8 }}>
+                <Logo />
+              </Link>
+            </NextLink>
+          </WrapItem>
+        ))}
+      </Wrap>
       <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
         <WrapItem>
           <Button leftIcon={<Download />} size="lg" onClick={downloadAllIcons}>
