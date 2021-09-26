@@ -43,7 +43,6 @@ async function init() {
     await Promise.all(createDirectories);
 
     const icons = await fs.readdir(inputDir);
-    icons.length = 20;
     const parsedIconNodes = await Promise.all(
       icons.map(async file => {
         const iconContent = await fs.readFile(`${inputDir}${file}`);
