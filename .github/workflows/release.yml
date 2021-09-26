@@ -335,12 +335,15 @@ jobs:
       #     }
       #     EOF
 
+      - name: Install yd
+        run: sudo apt install yq -y
+
       - name: Get packages
         run: flutter pub get
         working-directory: packages/lucide-flutter
 
-      - name: Move the ttf file
-        run: ls -al
+      - name: List lucide-font folder
+        run: ls lucide-font
 
       - name: Move the ttf file
         run: mv lucide-font/lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
