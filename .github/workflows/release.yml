@@ -275,9 +275,6 @@ jobs:
       - name: Install
         run: yarn --prefer-offline
 
-      - name: "Outline SVG"
-        run: yarn build:outline-icons
-
       - name: Build Icon Font
         run: |
             mkdir build
@@ -285,7 +282,7 @@ jobs:
             command=''
             for name in "${list[@]}"
             do
-              subcommand="(fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./tmp -F && mv ./tmp/* build)"
+              subcommand="(yarn build:outline-icons --outputDir=converted_icons${name} && fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./build -F)"
               if [ -z "$command" ]
               then
                 command="$subcommand";
