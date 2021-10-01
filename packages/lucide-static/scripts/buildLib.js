@@ -45,6 +45,11 @@ const symbols = svgs.map(({ name, contents }) => {
     attributes: {
       id: name,
       viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: 'currentColor',
+      'stroke-width': '2',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
     },
     children: parsedSvg.children,
   };
@@ -55,6 +60,7 @@ const spriteSvgObject = {
   type: 'element',
   attributes: {
     xmlns: 'http://www.w3.org/2000/svg',
+    version: '1.1',
   },
   children: [
     {
@@ -68,4 +74,7 @@ const spriteSvgObject = {
 const spriteSvg = stringify(spriteSvgObject);
 const prettifiedSprite = format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
 
+const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
+
+appendFile(xmlMeta, `sprite.svg`, PACKAGE_DIR);
 appendFile(prettifiedSprite, `sprite.svg`, PACKAGE_DIR);

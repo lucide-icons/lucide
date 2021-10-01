@@ -9,11 +9,11 @@ This package include the following lucide implementations:
 
 > What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
-## Why this package?
+## Why lucide-static?
 
-This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings.
+This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings in your javascript project.
 
-> It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommended to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: '[lucide](../lucide), [lucide-react](../lucide-react), [lucide-vue](../lucide-vue), [lucide-vue-next](../lucide-vue-next), [lucide-angular](../lucide-angular), [lucide-preact](../lucide-preact)'
+> ⚠️ It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](https://github.com/lucide-icons/lucide/tree/master/packages/lucide), [lucide-react](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react), [lucide-vue](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue), [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next), [lucide-angular](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular), [lucide-preact](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact)
 
 ## Installation
 
@@ -31,13 +31,13 @@ npm install lucide-static
 
 ``` html
 <!-- Svg File -->
-<img src="https://unpkg.com/lucide@latest/icons/home.svg">
+<img src="https://unpkg.com/lucide-static@latest/icons/home.svg">
 
 <!-- Icon Font, not recommended for production! -->
-<script src="https://unpkg.com/lucide@latest/font/Lucide.ttf"></script>
+<script src="https://unpkg.com/lucide-static@latest/font/Lucide.ttf"></script>
 
 <!-- Icon Sprite, not recommended for production! -->
-<img src="https://unpkg.com/lucide@latest/sprite.svg#home">
+<img src="https://unpkg.com/lucide-static@latest/sprite.svg#home">
 ```
 
 ## Usage
@@ -57,7 +57,7 @@ To use it in for example html:
   background-image: url(~lucide/icons/home.svg)
 }
 ```
-Make sure you have the correct loaders to make this work. [url-loader](https://v4.webpack.js.org/loaders/url-loader/)
+Make sure you have the correct webpack loaders to make this work. [url-loader](https://v4.webpack.js.org/loaders/url-loader/)
 
 #### Svg file Inline
 
@@ -74,12 +74,26 @@ import arrowRightIcon from 'lucide-static/icons/arrow-right'
 
 ```html
 <!-- Icon Sprite, not recommended for production! -->
-<img src="https://unpkg.com/lucide@latest/sprite.svg#home">
+<img src="https://unpkg.com/lucide-static@latest/sprite.svg#home">
+
+<!-- or -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+>
+  <use
+    href="https://unpkg.com/lucide-static@latest/sprite.svg#alert-triangle"
+  />
+</svg>
 ```
+
+#### As background image
 
 ``` css
 .home-icon {
-  background-image: url(https://unpkg.com/lucide@latest/sprite.svg#home)
+  background-image: url(https://unpkg.com/lucide-static@latest/sprite.svg#home)
 }
 ```
 
@@ -92,3 +106,57 @@ import arrowRightIcon from 'lucide-static/icons/arrow-right'
 ```html
 <div class="icon-home"></div>
 ```
+]
+
+### Node.js
+
+To use lucide icons in your Nodejs project you can import each icon as:
+
+```js
+const { messageSquare } = require('lucide-static/lib')
+```
+
+> Note: Each icon name is in camelCase.
+
+#### Example in node.js project
+
+```js
+const express = require('express')
+const { messageSquare } = require('lucide-static/lib')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Page Title</title>
+      </head>
+      <body>
+        <h1>Lucide Icons</h1>
+        <p>This is a lucide icon ${messageSquare}</p>
+
+      </body>
+    </html>
+  `)
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+```
+
+## Contributing
+
+For more info on how to contribute please see the [contribution guidelines](https://github.com/lucide-icons/lucide/blob/master/CONTRIBUTING.md).
+
+Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/master/README.md)
+
+## Community
+
+Join the community on our [Discord](https://discord.gg/EH6nSts) server!
+
+## License
+
+Lucide is totally free for commercial use and personally use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
