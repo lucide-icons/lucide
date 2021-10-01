@@ -68,8 +68,13 @@ const Package = ({ name, description, image, shields, source, documentation }) =
           </Heading>
           <Text mb={3}>{ description }</Text>
           <ButtonGroup spacing={2}>
-            {shields.map((attrs, index) => (
-              <img {...attrs} key={ index } />
+            {shields.map(({ alt, src, href }, index) => (
+              <Link href={href} passHref>
+                <a target="_blank">
+                  <img {...{alt, src}} key={ index } />
+                </a>
+              </Link>
+
             ))}
           </ButtonGroup>
         </Box>

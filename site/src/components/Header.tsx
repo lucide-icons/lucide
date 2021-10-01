@@ -101,7 +101,7 @@ const Header = ({ data }) => {
           </NextLink>
         </WrapItem>
         {packages.map(({ name, href, Logo }) => (
-          <WrapItem>
+          <WrapItem key={name}>
             <NextLink href={href} key={name} passHref>
               <Link _hover={{ opacity: 0.8 }}>
                 <Logo />
