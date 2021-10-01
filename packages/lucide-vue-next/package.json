@@ -2,7 +2,7 @@
   "name": "lucide-vue-next",
   "version": "0.16.5",
   "author": "Eric Fennis",
-  "description": "Lucide Vue 3 Package",
+  "description": "A Lucide icon library package for Vue 3 applications",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
