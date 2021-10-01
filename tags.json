@@ -1102,6 +1102,20 @@
     "track",
     "new"
   ],
+  "list-minus": [
+    "playlist",
+    "remove",
+    "song",
+    "subtract",
+    "remove",
+    "delete"
+  ],
+  "list-x": [
+    "playlist",
+    "subtract",
+    "remove",
+    "delete"
+  ],
   "loader": [
     "load",
     "wait"
