@@ -2,24 +2,34 @@ import {
   Box,
   Divider,
   Flex,
-  Text,
   Link,
-  Icon,
   useColorMode,
   useColorModeValue,
   IconButton,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { useKeyBindings } from '../lib/key';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
-import { Moon, Sun } from 'lucide-react';
-import Logo from '../../public/logo.svg';
+import { Moon, Sun, Menu, X } from 'lucide-react';
+import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
+import Logo from './Logo';
 
 const Layout = ({ children }) => {
   const router = useRouter();
+  const { toggleMobileMenu } = useMobileNavigationContext();
   const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue('dark', 'light');
+  const currentColorMode = useColorModeValue('dark', 'light');
   const ColorModeToggle = useColorModeValue(Moon, Sun);
+  const MobileMenuToggle = useMobileNavigationValue(Menu, X);
+  const showBaseNavigation = useBreakpointValue({ base: false, md: true });
+  const IconbuttonProps = {
+    size: 'md',
+    fontSize: 'lg',
+    variant: 'ghost',
+    color: 'current',
+    ml: '3',
+  };
 
   function setQuery(query) {
     router
@@ -53,42 +63,51 @@ const Layout = ({ children }) => {
           px={5}
         >
           <Flex justifyContent="center" alignItems="center">
-            <NextLink href="/" passHref>
-              <Link display="flex" _hover={{ textDecoration: 'none' }}>
-                <Icon boxSize={12} marginRight="8px">
-                  <Logo />
-                </Icon>
-                <Text fontSize="40px" lineHeight="48px">
-                  Lucide
-                </Text>
-              </Link>
-            </NextLink>
+            <Logo />
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-            <Link
-              href="https://github.com/lucide-icons/lucide"
-              isExternal
-              marginRight={6}
-              fontSize="xl"
-            >
-              Github
-            </Link>
+            {showBaseNavigation ? (
+              <>
+                {/* <NextLink href="/docs" passHref>
+                  <Link marginRight={12} fontSize="xl">
+                    Documentation
+                  </Link>
+                </NextLink> */}
+                <NextLink href="/packages" passHref>
+                  <Link marginRight={12} fontSize="xl">
+                    Packages
+                  </Link>
+                </NextLink>
+                <Link
+                  href="https://github.com/lucide-icons/lucide"
+                  isExternal
+                  marginRight={6}
+                  fontSize="xl"
+                >
+                  Github
+                </Link>
+              </>
+            ) : null}
             <IconButton
-              size="md"
-              fontSize="lg"
-              aria-label={`Switch to ${text} mode`}
-              variant="ghost"
-              color="current"
-              ml="3"
+              aria-label={`Switch to ${currentColorMode} mode`}
               onClick={toggleColorMode}
+              {...IconbuttonProps}
               icon={<ColorModeToggle />}
             />
+            {!showBaseNavigation ? (
+              <IconButton
+                aria-label={`Open Mobile menu`}
+                onClick={toggleMobileMenu}
+                {...IconbuttonProps}
+                icon={<MobileMenuToggle />}
+              />
+            ) : null}
           </Flex>
         </Flex>
       </Flex>
       <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
         {children}
-        <Divider marginBottom={8} />
+        <Divider mb={6} mt={12} />
         <p style={{ alignSelf: 'center' }}>
           <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
             <img src="/vercel.svg" alt="Powered by Vercel" width="200" />

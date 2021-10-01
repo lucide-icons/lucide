@@ -1,6 +1,6 @@
 {
   "name": "lucide-react",
-  "description": "Lucide React package, Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
+  "description": "A Lucide icon library package for React applications",
   "version": "0.16.5",
   "license": "ISC",
   "homepage": "https://lucide.dev",

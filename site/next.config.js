@@ -2,7 +2,7 @@
 module.exports = {
   webpack: (config, options) => {
     config.module.rules.push({
-      test: /\.svg/,
+      test: /\.svg$/,
       use: [
         {
           loader: 'babel-loader',
