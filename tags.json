@@ -251,6 +251,13 @@
     "marker",
     "tag"
   ],
+  "bookmark-minus": [
+    "delete",
+    "remove"
+  ],
+  "bookmark-plus": [
+    "add"
+  ],
   "bot": [
     "robot"
   ],
