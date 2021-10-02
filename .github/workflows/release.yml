@@ -340,8 +340,7 @@ jobs:
         run: mv lucide-font/lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
 
       - name: Generate exports file
-        run: dart tool/generate_fonts.dart lucide-font/lucide-preview.html
-        working-directory: packages/lucide-flutter
+        run: dart packages/lucide-flutter/tool/generate_fonts.dart lucide-font/lucide-preview.html
 
       - name: Update yaml
         run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
