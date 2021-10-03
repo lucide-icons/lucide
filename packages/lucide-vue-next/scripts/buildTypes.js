@@ -1,7 +1,6 @@
 import path from 'path';
 
 import { readSvgDirectory, resetFile, appendFile, toPascalCase } from '../../../scripts/helpers';
-import defaultAttributes from '../src/defaultAttributes';
 
 const TARGET_DIR = path.join(__dirname, '../dist');
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
@@ -9,11 +8,13 @@ const TYPES_FILE_NAME = 'lucide-vue-next.d.ts';
 
 // Generates header of d.ts file include some types and functions
 const typeDefinitions = `\
-import { Component } from 'vue';
+import { SVGAttributes, VNode } from 'vue';
 declare module 'lucide-vue-next'
 
 // Create interface extending SVGAttributes
-export interface SVGProps extends Partial<SVGElement> ${JSON.stringify(defaultAttributes, null, 2)}
+export interface SVGProps extends Partial<SVGAttributes> {
+  size?: 24 | number
+}
 
 // Generated icons
 `;
@@ -28,7 +29,7 @@ svgFiles.forEach(svgFile => {
   const componentName = toPascalCase(nameSvg);
 
   appendFile(
-    `export declare const ${componentName}: (props: SVGProps) => Component;\n`,
+    `export declare const ${componentName}: (props: SVGProps) => FunctionalComponent<SVGProps>;\n`,
     TYPES_FILE_NAME,
     TARGET_DIR,
   );
