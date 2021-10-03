@@ -336,11 +336,12 @@ jobs:
       - name: List lucide-font folder
         run: ls lucide-font
 
-      - name: Move the ttf file
-        run: mv lucide-font/lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
+      - name: Move the assets files
+        run: mv lucide-font packages/lucide-flutter/assets
 
       - name: Generate exports file
-        run: dart packages/lucide-flutter/tool/generate_fonts.dart lucide-font/lucide-preview.html
+        run: dart tool/generate_fonts.dart assets/lucide-preview.html
+        working-directory: packages/lucide-flutter
 
       - name: Update yaml
         run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
