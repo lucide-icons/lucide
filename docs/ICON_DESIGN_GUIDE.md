@@ -19,7 +19,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![24px-24px](images/24px-24px.png?raw=true "24px-24px")
 
-### 2. Icons must have a 1 pixel padding within the canvas.
+### 2. Icons must have at least 1 pixel padding within the canvas.
 
 ![1px-padding](images/1px-padding.png?raw=true "1px-padding")
 
