@@ -2009,6 +2009,9 @@
     "group",
     "people"
   ],
+  "verified": [
+    "check"
+  ],
   "video": [
     "camera",
     "movie",
