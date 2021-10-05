@@ -2,11 +2,11 @@
   "name": "Lucide Icons",
   "id": "939567362549682242",
   "api": "1.0.0",
-  "main": "./build/main.js",
   "editorType": ["figma"],
+  "main": "build/main.js",
   "ui": {
-    "interface": "./src/interface/interface.html",
-    "worker": "./src/worker/worker.html"
+    "interface": "build/interface.html",
+    "worker": "build/worker.html"
   },
   "parameterOnly": false,
   "parameters": [{

@@ -22,9 +22,19 @@ function App() {
       tags: tags[name] || [],
       component: iconComponents[componentName] || null
     }
-  }).filter(Boolean)
+  }).filter(({component}) => !!component)
 
   const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
+
+  const fetchIcons = (event) => {
+    console.log('on click fetch');
+
+    parent.postMessage({
+      pluginMessage: {
+        type: "fetchIcons",
+      }
+    }, "*")
+  }
 
   return (
     <div>
@@ -42,6 +52,9 @@ function App() {
           backfaceVisibility: 'hidden'
         }}
       />
+      <button style={{ marginTop: 80}} onClick={fetchIcons}>
+        test
+      </button>
       <div css={{ padding: theme.space[2] }}>
         <div
           css={{

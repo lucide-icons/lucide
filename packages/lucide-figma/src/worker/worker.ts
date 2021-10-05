@@ -2,7 +2,7 @@ const iconUrl = "https://api.github.com/repos/lucide-icons/lucide/git/trees/1ce3
 const siteUrl = "https://lucide.dev/_next/data/MpPb-i2hAAeVorNzooe5_/index.json"
 let iconData: any = []
 
-const sendList = async () => {
+const fetchIconList = async () => {
   // Vercel site
   // await fetch(siteUrl)
   //   .then(r => r.json())
@@ -18,20 +18,29 @@ const sendList = async () => {
   //     })
   //   })
   // Github api
-  await fetch(iconUrl)
-    .then(response => response.json())
-    .then(data => {
-      iconData = data.tree
-      parent.postMessage({
-        pluginMessage: {
-          type: "iconListReponse",
-          iconList: iconData.map(i => {
-              return i.path.replace('.svg','')
-            })
-        }
-      }, "*")
+  // await fetch(iconUrl)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     iconData = data.tree
+      // parent.postMessage({
+      //   pluginMessage: {
+      //     type: "iconListReponse",
+      //     iconList: iconData.map(i => {
+      //         return i.path.replace('.svg','')
+      //       })
+      //   }
+      // }, "*")
+  //   }
+  // )
+  const list = [];
+  console.log(list);
+
+  parent.postMessage({
+    pluginMessage: {
+      type: "iconList",
+      iconList: ['hello']
     }
-  )
+  }, "*")
 }
 
 const sendIcon = async (name :string) => {
@@ -50,12 +59,14 @@ const sendIcon = async (name :string) => {
   )
 }
 
-window.onmessage = (event) => {
-  if (event.data.pluginMessage.type === "iconListPls") {
-    sendList()
+window.onmessage = async (event) => {
+  console.log(event);
+
+  if (event.data.pluginMessage.type === "fetchIcons") {
+    fetchIconList()
   }
 
-  if (event.data.pluginMessage.type === "iconPls") {
-    sendIcon(event.data.pluginMessage.icon)
-  }
+  // if (event.data.pluginMessage.type === "getIcon") {
+  //   sendIcon(event.data.pluginMessage.icon)
+  // }
 }
