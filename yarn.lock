@@ -1855,10 +1855,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@figma/plugin-typings@^1.34.1":
-  version "1.34.1"
-  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.34.1.tgz#47d52f689418d0dad97c2b0424ad069680603fce"
-  integrity sha512-em9v0liZaNCfndggqMjmLDxHj5b+lfMqpimmT05XMJLTH4Vgdf5JiziJx5xRvd3OwUH+kdimustdvzHsD9WE8Q==
+"@figma/plugin-typings@^1.36.0":
+  version "1.36.0"
+  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.36.0.tgz#c001ccf96d2cf6606deddd22e51336ae440404ae"
+  integrity sha512-ovtx6azyArlAN+y+a62yp+SWrQITcYNMLXcNzzygINGO5vAO8h1mM+8brDgXnKds8QyPgDgC9jgydZrM5dzGBw==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"

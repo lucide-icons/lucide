@@ -1,15 +1,15 @@
 import { Global, jsx } from '@emotion/core'
-import { version } from '../package.json'
+import { version } from '../../package.json'
 import React, { useMemo } from 'react'
 import ReactDOM from 'react-dom'
-import IconButton from './components/icon-button'
-import SearchInput from './components/search-input'
-import theme from './theme'
-import './ui.css'
-import tags from '../../../tags.json'
+import IconButton from '../components/icon-button'
+import SearchInput from '../components/search-input'
+import theme from '../theme'
+import './interface.css'
+import tags from '../../../../tags.json'
 import * as iconComponents from 'lucide-react'
-import { toPascalCase } from './helpers/naming';
-import useSearch from '../../../site/src/lib/useSearch';
+import { toPascalCase } from '../helpers/naming';
+import useSearch from '../../../../site/src/lib/useSearch';
 
 declare var ICONS: [];
 

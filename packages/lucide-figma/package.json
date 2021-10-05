@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
+    "@figma/plugin-typings": "^1.36.0",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "css-loader": "^3.0.0",
@@ -25,6 +26,6 @@
     "webpack-cli": "^3.3.5"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "^1.34.1"
+    "@figma/plugin-typings": "^1.36.0"
   }
 }
