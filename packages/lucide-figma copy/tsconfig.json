@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "jsxFactory": "jsx",
+    "resolveJsonModule": true,
+    "strict": true,
+    "allowJs": true,
+  },
+  "exclude": ["../stats/node_modules"],
+}
