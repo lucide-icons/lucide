@@ -1,8 +1,8 @@
 {
   "name": "lucide-vue",
-  "version": "0.16.1",
+  "version": "0.16.7",
   "author": "Eric Fennis",
-  "description": "Lucide Vue Package",
+  "description": "A Lucide icon library package for Vue 2 applications",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",

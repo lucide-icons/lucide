@@ -39,7 +39,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --prefer-offline
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -74,7 +74,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --prefer-offline
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -109,7 +109,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --prefer-offline
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -144,7 +144,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --prefer-offline
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -179,7 +179,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn --prefer-offline
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -214,7 +214,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --prefer-offline
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -248,9 +248,6 @@ jobs:
           node-version: '14'
           cache: 'yarn'
 
-      - name: Update repos
-        run: sudo apt-get update
-
       - name: Install FontForge
         run: sudo apt-get install zlib1g-dev fontforge
 
@@ -275,11 +272,8 @@ jobs:
       - name: Install Font Custom dependency
         run: sudo gem install fontcustom
 
-      - name: Install "outline-stroke"
-        run: sudo yarn add svg-outline-stroke -W
-
-      - name: "Outline SVG"
-        run: yarn build:outline-icons
+      - name: Install
+        run: yarn --prefer-offline
 
       - name: Build Icon Font
         run: |
@@ -288,12 +282,12 @@ jobs:
             command=''
             for name in "${list[@]}"
             do
+              subcommand="(yarn build:outline-icons --outputDir=converted_icons${name} && fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./build -F)"
               if [ -z "$command" ]
-                subcommand="(fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./tmp -F && mv ./tmp/* build)"
-                then
-                  command="$subcommand";
-                else
-                  command="$command & $subcommand";
+              then
+                command="$subcommand";
+              else
+                command="$command & $subcommand";
               fi
             done
 
@@ -339,18 +333,18 @@ jobs:
         run: flutter pub get
         working-directory: packages/lucide-flutter
 
-      - name: Move the ttf file
-        run: ls -al
+      - name: List lucide-font folder
+        run: ls lucide-font
 
-      - name: Move the ttf file
-        run: mv lucide-font/lucide.ttf packages/lucide-flutter/assets/Lucide.ttf
+      - name: Move the assets files
+        run: mv lucide-font packages/lucide-flutter/assets
 
       - name: Generate exports file
-        run: dart tool/generate_fonts.dart lucide-font/lucide-preview.html
+        run: dart tool/generate_fonts.dart assets/lucide-preview.html
         working-directory: packages/lucide-flutter
 
       - name: Update yaml
-        run: yq e -i -f '.version = "${{ needs.pre-build.outputs.VERSION }}"' pubspec.yaml
+        run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
         working-directory: packages/lucide-flutter
 
       - name: Flutter publish
@@ -401,7 +395,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
         with:
-          tag_name: v${{ steps.new-version.outputs.VERSION }}
+          tag_name: v${{ needs.pre-build.outputs.VERSION }}
           files: |
             lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
             lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
