@@ -336,8 +336,11 @@ jobs:
       - name: List lucide-font folder
         run: ls lucide-font
 
-      - name: Move the assets files
-        run: mv lucide-font packages/lucide-flutter/assets
+      - name: Move assets from lucide-font directory
+        run: |
+          mkdir packages/lucide-flutter/assets
+          cp lucide-font/lucide.ttf packages/lucide-flutter/assets/lucide.ttf
+          cp lucide-font/lucide-preview.html packages/lucide-flutter/assets/lucide-preview.html
 
       - name: Generate exports file
         run: dart tool/generate_fonts.dart assets/lucide-preview.html
