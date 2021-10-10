@@ -1,4 +1,4 @@
-figma.showUI(__uiFiles__.worker, { width: 300, height: 400 })
+figma.showUI(__uiFiles__.worker, { visible: false })
 figma.showUI(__uiFiles__.interface, { width: 300, height: 400 })
 
 figma.parameters.on('input', async ({ parameters, key, query, result }) => {
