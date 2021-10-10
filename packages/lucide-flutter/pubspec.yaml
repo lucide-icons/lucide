@@ -23,4 +23,4 @@ flutter:
   fonts:
     - family: Lucide
       fonts:
-        - asset: assets/Lucide.ttf
+        - asset: assets/lucide.ttf
