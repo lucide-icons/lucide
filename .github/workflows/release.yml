@@ -336,7 +336,7 @@ jobs:
       - name: List lucide-font folder
         run: ls lucide-font
 
-      - name: Move assets from lucide-font directory
+      - name: Copy assets from lucide-font directory
         run: |
           mkdir packages/lucide-flutter/assets
           cp lucide-font/lucide.ttf packages/lucide-flutter/assets/lucide.ttf
@@ -349,6 +349,9 @@ jobs:
       - name: Update yaml
         run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
         working-directory: packages/lucide-flutter
+
+      - name: Test
+        run: flutter test
 
       - name: Flutter publish
         run: flutter pub publish -f
