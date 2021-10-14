@@ -1,12 +1,11 @@
+import React, { useEffect, useMemo } from 'react'
 import { Global, jsx } from '@emotion/core'
-import { version } from '../../package.json'
-import React, { useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import IconButton from '../components/icon-button'
 import SearchInput from '../components/search-input'
 import theme from '../theme'
-import './interface.css'
-import tags from '../../../../tags.json'
+// import './interface.css'
+// import tags from '../../../../tags.json'
 import * as iconComponents from 'lucide-react'
 import { toPascalCase } from '../helpers/naming';
 import useSearch from '../../../../site/src/lib/useSearch';
@@ -19,7 +18,7 @@ function App() {
     const componentName = toPascalCase(name);
     return {
       name,
-      tags: tags[name] || [],
+      tags: [],
       component: iconComponents[componentName] || null
     }
   }).filter(({component}) => !!component)
@@ -35,6 +34,13 @@ function App() {
       }
     }, "*")
   }
+
+  useEffect(() => {
+    window.onmessage = async (event) => {
+      console.log(event, 'interface');
+
+    }
+  }, [])
 
   return (
     <div>
@@ -84,7 +90,7 @@ function App() {
             target="_blank"
             css={{ color: 'inherit' }}
           >
-            Lucide v{version}
+            Lucide v12312312
           </a>
         </div>
       </div>

@@ -2,26 +2,28 @@
   "name": "lucide-figma",
   "version": "0.15.11",
   "license": "ISC",
-  "private": true,
   "main": "build/ui.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "watch": "webpack --mode=development --watch"
+    "watch": "webpack --mode=development --watch",
+    "build2": "yarn --cwd ../../ rollup -c packages/lucide-figma/rollup.config.js"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
-    "@figma/plugin-typings": "^1.36.0",
+    "@figma/plugin-typings": "^1.37.0",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.2.5",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "css-loader": "^3.0.0",
     "html-webpack-inline-source-plugin": "^0.0.10",
     "html-webpack-plugin": "^3.2.0",
-    "lucide-react": "0.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.2",
+    "typescript": "^4.4.3",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
   },

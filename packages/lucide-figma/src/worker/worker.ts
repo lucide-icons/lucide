@@ -1,8 +1,14 @@
 const iconUrl = "https://api.github.com/repos/lucide-icons/lucide/git/trees/1ce345619b77d5dee7e37317cfe1a821ddc15ead"
 const siteUrl = "https://lucide.dev/_next/data/MpPb-i2hAAeVorNzooe5_/index.json"
+
 let iconData: any = []
 
 const fetchIconList = async () => {
+  //@ts-ignore
+  const icons = await import(/* webpackIgnore: true */ 'https://unpkg.com/lucide@0.16.10/dist/esm/lucide.js')
+
+  console.log(icons);
+
   // Vercel site
   // await fetch(siteUrl)
   //   .then(r => r.json())
@@ -60,13 +66,22 @@ const sendIcon = async (name :string) => {
 }
 
 window.onmessage = async (event) => {
-  console.log(event);
-
-  if (event.data.pluginMessage.type === "fetchIcons") {
-    fetchIconList()
+  console.log(event?.data?.pluginMessage, 'worker');
+  if (!event?.data?.pluginMessage) {
+    return
   }
 
-  // if (event.data.pluginMessage.type === "getIcon") {
-  //   sendIcon(event.data.pluginMessage.icon)
-  // }
+  const { pluginMessage } = event.data
+
+  switch (pluginMessage.type) {
+    case "fetchIcons":
+      fetchIconList()
+      break;
+    case "getIconList":
+      fetchIconList()
+      break;
+
+    default:
+      break;
+  }
 }

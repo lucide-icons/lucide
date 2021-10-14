@@ -11,6 +11,21 @@
   "parameterOnly": false,
   "parameters": [{
     "name": "Icon",
-    "key": "icon-name"
+    "key": "icon-name",
+    "description": "Enter the name of the icon you want to insert."
+  },
+  {
+    "name": "Size",
+    "key": "size",
+    "description": "Enter the size of the icon you want to insert.",
+    "allowFreeform": true,
+    "optional": true
+  },
+  {
+    "name": "Color",
+    "key": "color",
+    "description": "Enter the color of the icon you want to insert.",
+    "allowFreeform": true,
+    "optional": true
   }]
 }

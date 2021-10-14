@@ -1,5 +1,4 @@
 figma.showUI(__uiFiles__.worker, { visible: false })
-figma.showUI(__uiFiles__.interface, { width: 300, height: 400 })
 
 figma.parameters.on('input', async ({ parameters, key, query, result }) => {
   if (key === 'icon-name') {
@@ -29,8 +28,10 @@ figma.ui.onmessage = (event) => {
 }
 
 figma.on('run', event => {
-  if(event?.parameters) {
-    figma.ui.postMessage({ type: 'getIconList' })
+  figma.ui.postMessage({ type: 'fetchIcons' })
+
+  if(!event?.parameters) {
+    figma.showUI(__uiFiles__.interface, { width: 300, height: 400 })
   }
 })
 
