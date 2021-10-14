@@ -1,4 +1,5 @@
 library lucide_icons;
+
 import "package:flutter/widgets.dart";
 import "src/icon_data.dart";
 
