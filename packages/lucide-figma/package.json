@@ -2,32 +2,28 @@
   "name": "lucide-figma",
   "version": "0.15.11",
   "license": "ISC",
-  "main": "build/ui.js",
+  "main": "src/main.js",
   "scripts": {
-    "build": "webpack --mode=production",
-    "watch": "webpack --mode=development --watch",
-    "build2": "yarn --cwd ../../ rollup -c packages/lucide-figma/rollup.config.js"
+    "dev": "vite",
+    "build": "tsc && yarn build:main && yarn build:worker && yarn build:interface",
+    "build:main": "INPUT=main vite build",
+    "build:worker": "INPUT=worker vite build",
+    "build:interface": "INPUT=interface vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
-    "@figma/plugin-typings": "^1.37.0",
-    "@rollup/plugin-html": "^0.2.4",
-    "@rollup/plugin-node-resolve": "^13.0.5",
-    "@rollup/plugin-typescript": "^8.2.5",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "css-loader": "^3.0.0",
-    "html-webpack-inline-source-plugin": "^0.0.10",
-    "html-webpack-plugin": "^3.2.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "style-loader": "^0.23.1",
-    "ts-loader": "^6.0.4",
-    "typescript": "^4.4.3",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "minimist": "^1.2.5",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "^1.36.0"
+    "@figma/plugin-typings": "^1.36.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "vite-plugin-singlefile": "^0.5.1"
   }
 }

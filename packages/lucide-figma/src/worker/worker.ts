@@ -5,7 +5,7 @@ let iconData: any = []
 
 const fetchIconList = async () => {
   //@ts-ignore
-  const icons = await import(/* webpackIgnore: true */ 'https://unpkg.com/lucide@0.16.10/dist/esm/lucide.js')
+  const icons = await import('https://unpkg.com/lucide@0.16.10/dist/esm/lucide.js')
 
   console.log(icons);
 
@@ -38,7 +38,7 @@ const fetchIconList = async () => {
       // }, "*")
   //   }
   // )
-  const list = [];
+  const list: any = [];
   console.log(list);
 
   parent.postMessage({
@@ -51,7 +51,7 @@ const fetchIconList = async () => {
 
 const sendIcon = async (name :string) => {
 
-  let url = iconData.filter(icon => icon.path === `${name}.svg`)[0].url
+  let url = iconData.filter((icon: any) => icon.path === `${name}.svg`)[0].url
 
   await fetch(url)
     .then(r => r.json())

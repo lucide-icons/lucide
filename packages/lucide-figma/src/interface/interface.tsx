@@ -6,8 +6,9 @@ import SearchInput from '../components/search-input'
 import theme from '../theme'
 // import './interface.css'
 // import tags from '../../../../tags.json'
-import * as iconComponents from 'lucide-react'
+// import * as iconComponents from 'lucide-react'
 import { toPascalCase } from '../helpers/naming';
+// import useSearch from '../hooks/useSearch';
 import useSearch from '../../../../site/src/lib/useSearch';
 
 declare var ICONS: [];
@@ -19,14 +20,14 @@ function App() {
     return {
       name,
       tags: [],
-      component: iconComponents[componentName] || null
+      component:  null
     }
   }).filter(({component}) => !!component)
 
   const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
 
-  const fetchIcons = (event) => {
-    console.log('on click fetch');
+  const fetchIcons = (event:any) => {
+    console.log('on click fetch', event);
 
     parent.postMessage({
       pluginMessage: {
