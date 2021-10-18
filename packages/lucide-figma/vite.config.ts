@@ -31,9 +31,9 @@ export default defineConfig({
 			inlineDynamicImports: true,
 			output: {
 				manualChunks: (chunk) => "all.js",
-        assetFileNames: 'dist/assets/[ext]/[name][extname]',
-        chunkFileNames: 'dist/[name].js',
-        // entryFileNames: '<project>.footer/resources/js/[name].js',
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`
 			},
 		},
 	},

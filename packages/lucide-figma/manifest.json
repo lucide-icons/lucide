@@ -3,10 +3,10 @@
   "id": "939567362549682242",
   "api": "1.0.0",
   "editorType": ["figma"],
-  "main": "dist/main.js",
+  "main": "dist/assets/main.js",
   "ui": {
-    "interface": "build/interface.html",
-    "worker": "build/worker.html"
+    "interface": "dist/src/interface/interface.html",
+    "worker": "dist/src/worker/worker.html"
   },
   "parameterOnly": false,
   "parameters": [{
