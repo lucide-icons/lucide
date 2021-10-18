@@ -3,7 +3,7 @@
   "id": "939567362549682242",
   "api": "1.0.0",
   "editorType": ["figma"],
-  "main": "build/main.js",
+  "main": "dist/main.js",
   "ui": {
     "interface": "build/interface.html",
     "worker": "build/worker.html"
