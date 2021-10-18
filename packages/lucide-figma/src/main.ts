@@ -1,3 +1,4 @@
+// figma.showUI(__uiFiles__.worker, { visible: false })
 figma.showUI(__uiFiles__.worker, { visible: false })
 
 figma.parameters.on('input', async ({ parameters, key, query, result }) => {
@@ -11,18 +12,18 @@ figma.parameters.on('input', async ({ parameters, key, query, result }) => {
   }
 })
 
-const drawIcon = ({name, svg}:any) => {
+const drawIcon = ({name, svg}: any) => {
   const icon = figma.createNodeFromSvg(svg)
-  icon.name = name
-  icon.x = figma.viewport.center.x
-  icon.y = figma.viewport.center.y
-  figma.currentPage.selection = [icon]
+  // icon.name = name
+  // icon.x = figma.viewport.center.x
+  // icon.y = figma.viewport.center.y
+  // figma.currentPage.selection = [icon]
 }
 
 figma.ui.onmessage = (event) => {
   console.log(event, 'main');
 
-  if (event?.data?.pluginMessage?.type === "drawIcon") {
+  if (event.type === "drawIcon") {
     drawIcon(event)
   }
 }
@@ -30,8 +31,7 @@ figma.ui.onmessage = (event) => {
 figma.on('run', event => {
   figma.ui.postMessage({ type: 'fetchIcons' })
 
-  if(!event?.parameters) {
+  if(!event.parameters) {
     figma.showUI(__uiFiles__.interface, { width: 300, height: 400 })
   }
 })
-

@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && yarn build:main && yarn build:worker && yarn build:interface",
+    "build": "tsc && rm -rf dist && yarn build:main && yarn build:worker && yarn build:interface",
     "build:main": "INPUT=main vite build",
     "build:worker": "INPUT=worker vite build",
     "build:interface": "INPUT=interface vite build",

@@ -10,30 +10,34 @@ import theme from '../theme'
 import { toPascalCase } from '../helpers/naming';
 // import useSearch from '../hooks/useSearch';
 import useSearch from '../../../../site/src/lib/useSearch';
+import fetchIcons from '../api/fetchIcons'
 
-declare var ICONS: [];
+const ICONS = [];
 
 function App() {
   const [query, setQuery] = React.useState('')
-  const icons = ICONS.map(name => {
-    const componentName = toPascalCase(name);
-    return {
-      name,
-      tags: [],
-      component:  null
-    }
-  }).filter(({component}) => !!component)
+  // const icons = ICONS.map(name => {
+  //   const componentName = toPascalCase(name);
+  //   return {
+  //     name,
+  //     tags: [],
+  //     component:  null
+  //   }
+  // }).filter(({component}) => !!component)
+  const icons: any = []
 
   const searchResults = useMemo(() => useSearch(icons, query), [icons, query])
 
-  const fetchIcons = (event:any) => {
+  const getIcons = async (event:any) => {
     console.log('on click fetch', event);
+    const icons = await fetchIcons()
+    // parent.postMessage({
+    //   pluginMessage: {
+    //     type: "fetchIcons",
+    //   }
+    // }, "*")
+    console.log(icons);
 
-    parent.postMessage({
-      pluginMessage: {
-        type: "fetchIcons",
-      }
-    }, "*")
   }
 
   useEffect(() => {
@@ -59,7 +63,7 @@ function App() {
           backfaceVisibility: 'hidden'
         }}
       />
-      <button style={{ marginTop: 80}} onClick={fetchIcons}>
+      <button style={{ marginTop: 80}} onClick={getIcons}>
         test
       </button>
       <div css={{ padding: theme.space[2] }}>
