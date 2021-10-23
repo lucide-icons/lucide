@@ -350,6 +350,7 @@ jobs:
 
       - name: Test
         run: flutter test
+        working-directory: packages/lucide-flutter
 
       - name: Update yaml
         run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
