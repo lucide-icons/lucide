@@ -1,7 +1,7 @@
 {
   "name": "lucide-static",
   "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
-  "version": "0.16.6-alpha.1",
+  "version": "0.16.6-alpha.2",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -11,10 +11,11 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "move": "cp -r ../../icons icons",
-    "build": "yarn clean && yarn move && yarn build:lib",
+    "move:icons": "cp -r ../../icons icons",
+    "move:tags": "cp ../../tags.json tags.json",
+    "build": "yarn clean && yarn move:icons && yarn move:tags && yarn build:lib",
     "build:lib": "yarn --cwd ../../ babel-node packages/lucide-static/scripts/buildLib.js",
-    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg && rm -f tags.json"
   },
   "devDependencies": {
     "prettier": "^2.3.2",

@@ -2,12 +2,13 @@
 import fs from 'fs';
 import path from 'path';
 import getArgumentOptions from 'minimist';
-import { parseSync, stringify } from 'svgson';
-import { format } from 'prettier';
+import { parseSync } from 'svgson';
 
 // import renderIconsObject from '../../../scripts/render/renderIconsObject';
 import { appendFile, readSvgDirectory, toCamelCase } from '../../../scripts/helpers';
 import readSvgs from './readSvgs';
+import generateSprite from './generateSprite';
+import generateIconNodes from './generateIconNodes';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 const createDirectory = dir => {
@@ -36,45 +37,11 @@ svgs.forEach(({ name, contents }) => {
   appendFile(exportString, `${name}.js`, ICON_MODULE_DIR);
 });
 
-const symbols = svgs.map(({ name, contents }) => {
-  const parsedSvg = parseSync(contents);
+const parsedSvgs = svgs.map(({ name, contents }) => ({
+  name,
+  contents,
+  parsedSvg: parseSync(contents),
+}));
 
-  return {
-    name: 'symbol',
-    type: 'element',
-    attributes: {
-      id: name,
-      viewBox: '0 0 24 24',
-      fill: 'none',
-      stroke: 'currentColor',
-      'stroke-width': '2',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
-    },
-    children: parsedSvg.children,
-  };
-});
-
-const spriteSvgObject = {
-  name: 'svg',
-  type: 'element',
-  attributes: {
-    xmlns: 'http://www.w3.org/2000/svg',
-    version: '1.1',
-  },
-  children: [
-    {
-      name: 'defs',
-      type: 'element',
-      children: symbols,
-    },
-  ],
-};
-
-const spriteSvg = stringify(spriteSvgObject);
-const prettifiedSprite = format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
-
-const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
-
-appendFile(xmlMeta, `sprite.svg`, PACKAGE_DIR);
-appendFile(prettifiedSprite, `sprite.svg`, PACKAGE_DIR);
+generateSprite(parsedSvgs, PACKAGE_DIR);
+generateIconNodes(parsedSvgs, PACKAGE_DIR);

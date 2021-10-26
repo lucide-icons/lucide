@@ -9318,6 +9318,11 @@ lucide-react@0.15.11:
     prop-types "^15.7.2"
     react "^16.5.1"
 
+lucide-react@0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.16.0.tgz#38573a3e287712cb1d56aa6dd46e47e3323ba8f4"
+  integrity sha512-R5chQb550S+znoZPAJTHRqAOq6NiMCr4Pm8C0irPBNPEjx3Oarvqt+dbiFu4DWaSR2bMh2iOj0IgtOepoPDdaQ==
+
 lz-string@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.4.4.tgz#c0d8eaf36059f705796e1e344811cf4c498d3a26"
