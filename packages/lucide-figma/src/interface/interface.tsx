@@ -30,13 +30,16 @@ function App() {
 
   const getIcons = async (event:any) => {
     console.log('on click fetch', event);
-    const icons = await fetchIcons()
+    const icons = await fetch('https://unpkg.com/lucide-static@latest/icon-nodes.json')
+    const tags = await fetch('https://unpkg.com/lucide-static@latest/tags.json')
     // parent.postMessage({
     //   pluginMessage: {
     //     type: "fetchIcons",
     //   }
     // }, "*")
-    console.log(icons);
+    console.log(await icons.json());
+
+    console.log(await tags.json());
 
   }
 
