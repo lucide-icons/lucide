@@ -20,12 +20,27 @@ const drawIcon = ({name, svg}: any) => {
   // figma.currentPage.selection = [icon]
 }
 
+const getCachedIcons = async (pluginMessage: any) => {
+  // if(pluginMessage?.version) {
+  //   const { version } = pluginMessage
+  //   const icons = await figma.clientStorage.getAsync(`lucide-icons@${version}`)
+  //   figma.ui.postMessage({ type: 'cachedIcons', icons })
+  // }
+}
+
 figma.ui.onmessage = (event) => {
   console.log(event, 'main');
+  // switch (event.type) {
+  //   case "drawIcon":
+  //     drawIcon(event)
+  //     break;
+  //   case "getCachedIcons":
+  //     getCachedIcons(event)
+  //     break;
 
-  if (event.type === "drawIcon") {
-    drawIcon(event)
-  }
+  //   default:
+  //     break;
+  // }
 }
 
 figma.on('run', event => {
