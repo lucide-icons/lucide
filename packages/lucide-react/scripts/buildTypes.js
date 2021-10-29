@@ -1,10 +1,16 @@
-import path from "path";
-import {appendFile, readSvgDirectory, resetFile, toPascalCase, writeFile} from "../../../scripts/helpers";
+import path from 'path';
+import {
+  appendFile,
+  readSvgDirectory,
+  resetFile,
+  toPascalCase,
+  writeFile,
+} from '../../../scripts/helpers';
 
-const srcDirectory=path.join(__dirname, "../dist");
+const srcDirectory = path.join(__dirname, '../dist');
 
 // Declare type definitions
-const typeDefinitions=`\
+const typeDefinitions = `\
 /// <reference types="react" />
 import { SVGAttributes } from 'react'
 
@@ -14,6 +20,8 @@ declare module 'lucide-react'
 export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
     size?: string | number
 }
+
+export declare const createReactComponent: (iconName: string, iconNode: any[]) => (props: LucideProps) => JSX.Element;
 
 export type Icon = React.FC<LucideProps>;
 

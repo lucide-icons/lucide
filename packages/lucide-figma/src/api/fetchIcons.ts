@@ -1,34 +1,61 @@
-const fetchIcons = () => new Promise(async (resolve, reject )=> {
+export type IconNode = any[]
+export type IconName = string
 
+export type Tag = string[]
+export interface Tags {
+  [key:string]: Tag
+}
 
+export interface LucideIcons {
+  version: string
+  iconNodes: { [key: IconName]: IconNode }
+  tags: Tags,
+}
+
+export const fetchIcons = async (cachedIcons? : LucideIcons): Promise<LucideIcons> => {
   const response = await fetch('https://unpkg.com/lucide-static@latest/package.json')
   const packageJson = await response.json();
 
-  console.log(packageJson);
-  // @ts-ignore
-  // const savedIcons = await parent.clientStorage.getAsync.(`lucide-icons@${packageJson.version}`)
+  if(cachedIcons && cachedIcons?.version === packageJson.version) {
+    return cachedIcons
+  }
+
+  const iconNodesResponse = await fetch(`https://unpkg.com/lucide-static@${packageJson.version}/icon-nodes.json`)
+  const tagsResponse = await fetch('https://unpkg.com/lucide-static@latest/tags.json')
+
+  const iconNodes = await iconNodesResponse.json();
+  const tags = await tagsResponse.json();
+
+  const lucideIcons: LucideIcons = {
+    version: packageJson.version,
+    tags,
+    iconNodes
+  }
+
+  parent.postMessage({
+    pluginMessage: {
+      type: "setCachedIcons",
+      lucideIcons
+    }
+  }, "*")
+
+  return lucideIcons
+}
+
+export const getIcons = () => new Promise<LucideIcons>(async (resolve, reject)=> {
 
   parent.postMessage({
     pluginMessage: {
       type: "getCachedIcons",
-      version: packageJson.version,
     }
   }, "*")
 
-  parent.onmessage = async (event) => {
-    console.log(event);
+  window.onmessage = async (event) => {
+    if (event.type === 'message' && event?.data?.pluginMessage.type === 'cachedIcons') {
 
-    // if (event.type === 'message' && event?.data?.pluginMessage.type === 'cachedIcons') {
-    //   const { icons } = event?.data?.pluginMessage
-
-    //   if(icons) {
-    //     resolve(icons)
-    //   }
-
-    //   const iconNodes = await fetch(`https://unpkg.com/lucide-static@${packageJson.version}/icon-nodes.json`)
-    //   console.log(iconNodes);
-    //   resolve(iconNodes)
-    // }
+      const lucideIcons = await fetchIcons(event?.data?.pluginMessage?.cachedIcons)
+      resolve(lucideIcons)
+    }
   }
 
     // const icons = await fetch('https://unpkg.com/lucide-static@latest/icon-nodes.json')
@@ -41,7 +68,4 @@ const fetchIcons = () => new Promise(async (resolve, reject )=> {
     // console.log(savedIcons);
 
     // console.log(await tags.json());
-
 });
-
-export default fetchIcons

@@ -1,19 +1,18 @@
-interface Icon {
-  name: string;
-  tags: string[],
-}
+import { useMemo } from "react";
+import { IconName, IconNode, Tags } from "../api/fetchIcons";
+import filterIcons from "../helpers/filterIcons";
 
-function useSearch(icons: Icon[], query:string) {
+export type Icon = [
+  name: IconName,
+  iconNode: IconNode
+]
+
+function useSearch(icons: Icon[], tags: Tags ,query:string) {
   if(!query) return icons;
 
   const searchString = query.toLowerCase()
 
-  return icons.filter(({ name, tags }: Icon) => [name, ...tags].some(
-      (item:string) => item
-        .toLowerCase()
-        .includes(searchString)
-    )
-  );
+  return useMemo(() => filterIcons(icons, tags, searchString), [icons, tags, query]);
 }
 
 export default useSearch;
