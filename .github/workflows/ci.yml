@@ -71,4 +71,3 @@ jobs:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
-
