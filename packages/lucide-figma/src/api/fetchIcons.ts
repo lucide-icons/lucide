@@ -1,3 +1,5 @@
+import iconNodeToSvg from "../helpers/iconNodeToSvg"
+
 export type IconNode = any[]
 export type IconName = string
 
@@ -10,6 +12,7 @@ export interface LucideIcons {
   version: string
   iconNodes: { [key: IconName]: IconNode }
   tags: Tags,
+  svgs: { [key: IconName]: string }
 }
 
 export const fetchIcons = async (cachedIcons? : LucideIcons): Promise<LucideIcons> => {
@@ -25,11 +28,16 @@ export const fetchIcons = async (cachedIcons? : LucideIcons): Promise<LucideIcon
 
   const iconNodes = await iconNodesResponse.json();
   const tags = await tagsResponse.json();
+  const svgs = Object.keys(iconNodes).reduce((acc : { [key:string]: string}, iconName) => {
+    acc[iconName] = iconNodeToSvg(iconName, iconNodes[iconName])
+    return acc
+  }, {})
 
   const lucideIcons: LucideIcons = {
     version: packageJson.version,
     tags,
-    iconNodes
+    iconNodes,
+    svgs
   }
 
   parent.postMessage({

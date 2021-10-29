@@ -1,19 +1,13 @@
-import React, { ChangeEvent, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { createReactComponent } from 'lucide-react'
 import ReactDOM from 'react-dom'
+
 import IconButton from '../components/IconButton'
 import SearchInput from '../components/SearchInput'
-import theme from '../theme'
-// import './interface.css'
-// import tags from '../../../../tags.json'
-// import * as iconComponents from 'lucide-react'
-import { toPascalCase } from '../helpers/naming';
-// import useSearch from '../hooks/useSearch';
+import useSearch, { Icon } from '../hooks/useSearch'
+
 import { getIcons } from '../api/fetchIcons'
 import './interface.scss'
-import useSearch, { Icon } from '../hooks/useSearch'
-import { createReactComponent } from 'lucide-react'
-
-const ICONS = [];
 
 function App() {
   const [query, setQuery] = useState('')
@@ -34,6 +28,10 @@ function App() {
   useEffect(() => {
     getLatestIcons()
   }, [])
+
+  if(!icons.length) {
+    return null
+  }
 
   return (
     <div>

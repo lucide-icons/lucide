@@ -29,6 +29,10 @@ const getSvg = async ({ cachedIcons, iconName }: { cachedIcons: LucideIcons, ico
       type: 'drawIcon',
       icon: { name, svg }
     }}, '*')
+
+    parent.postMessage({ pluginMessage: {
+      type: 'close',
+    }}, '*')
   }
 }
 

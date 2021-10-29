@@ -1,7 +1,6 @@
 import type { LucideIcons } from "./api/fetchIcons";
 import filterIcons from "./helpers/filterIcons";
 
-// figma.showUI(__uiFiles__.worker, { visible: false })
 figma.showUI(__uiFiles__.worker, { visible: false })
 
 let cachedIcons: LucideIcons
@@ -10,7 +9,8 @@ const setResults = ({result, query, lucideIcons} : { result: SuggestionResults, 
   const icons = Object.entries(lucideIcons.iconNodes);
 
   const suggestions = filterIcons(icons, lucideIcons.tags, query.toLowerCase()).map(([name]) => ({
-    name
+    name,
+    icon: lucideIcons.svgs[name]
   }))
 
   result.setSuggestions(suggestions)
@@ -21,23 +21,8 @@ figma.parameters.on('input', async ({ parameters, key, query, result }) => {
     console.log('typ tpy', query);
     cachedIcons = await figma.clientStorage.getAsync(`lucide-icons`)
     console.log('cachedIcons', cachedIcons);
-    // const postMessage = { type: 'getLatestIcons' }
 
-    // if(cachedIcons) {
-    //   Object.assign(postMessage, { cachedIcons })
-    // }
-
-    // figma.ui.postMessage(postMessage)
-
-    // figma.ui.onmessage = message => {
-    //   if (message.type === 'latestIcons') {
-    //     console.log(message);
-    //     // setResults({result, query, lucideIcons: message.lucideIcons})
-    //   }
-    // }
     if(cachedIcons && cachedIcons.iconNodes && cachedIcons.tags) {
-
-      // console.log('cachedIcons', cachedIcons);
       setResults({result, query, lucideIcons: cachedIcons})
     }
   }
@@ -92,6 +77,10 @@ figma.ui.onmessage = (event) => {
 
     case "setCachedIcons":
       setCachedIcons(event)
+      break;
+
+    case "close":
+      figma.closePlugin()
       break;
 
     default:
