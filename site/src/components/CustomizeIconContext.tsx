@@ -23,7 +23,7 @@ export const IconStyleContext = createContext<ICustomIconStyle>({
   setStroke: (n: number) => null,
   size: 24,
   setSize: (n: number) => null,
-  resetStyle: ()=>null
+  resetStyle: () => null
 });
 
 export function CustomizeIconContext({ children }) {

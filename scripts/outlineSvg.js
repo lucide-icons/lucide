@@ -1,13 +1,13 @@
 import { promises as fs } from 'fs';
 import outlineStroke from 'svg-outline-stroke';
 import { parse, stringify } from 'svgson'; // eslint-disable-line import/no-extraneous-dependencies
-
-// const { promises: fs } = require('fs');
-// const outlineStroke = require('svg-outline-stroke');
-// const { parse, stringify } = require('svgson');
+import getArgumentOptions from 'minimist';
 
 const inputDir = `./icons/`;
-const outputDirs = {
+const cliArguments = getArgumentOptions(process.argv.slice(2));
+const { outputDir } = cliArguments;
+
+const widthMap = {
   'converted_icons-200': '1',
   'converted_icons-300': '1.5',
   converted_icons: '2',
@@ -43,8 +43,7 @@ function transformBackwards(node) {
 async function init() {
   console.time('icon outliner');
   try {
-    const createDirectories = Object.keys(outputDirs).map(directory => fs.mkdir(`./${directory}`));
-    await Promise.all(createDirectories);
+    await fs.mkdir(`./${outputDir}`);
 
     const icons = await fs.readdir(inputDir);
     const parsedIconNodes = await Promise.all(
@@ -57,19 +56,19 @@ async function init() {
       }),
     );
 
-    await Promise.all(
-      Object.entries(outputDirs).map(async ([directory, width]) => {
-        await Promise.all(
-          parsedIconNodes.map(async ([file, iconNode]) => {
-            iconNode.attributes['stroke-width'] = width;
-            const outlined = await outlineStroke(stringify(iconNode));
-            const outlinedWithoutAttrs = await parse(outlined, {
-              transformNode: transformBackwards,
-            });
+    if (widthMap?.[outputDir] === undefined) {
+      throw new Error(`Could not find the directory: ${outputDir}.`)
+    }
 
-            await fs.writeFile(`./${directory}/${file}`, stringify(outlinedWithoutAttrs));
-          }),
-        );
+    await Promise.all(
+      parsedIconNodes.map(async ([file, iconNode]) => {
+        iconNode.attributes['stroke-width'] = widthMap[outputDir];
+        const outlined = await outlineStroke(stringify(iconNode));
+        const outlinedWithoutAttrs = await parse(outlined, {
+          transformNode: transformBackwards,
+        });
+
+        await fs.writeFile(`./${outputDir}/${file}`, stringify(outlinedWithoutAttrs));
       }),
     );
 

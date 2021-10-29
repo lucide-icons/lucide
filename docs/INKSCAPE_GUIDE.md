@@ -16,14 +16,14 @@ When opening a new document, Inkscape will create a canvas of a default size.  T
 ![Setting Grid Properties](images/grid-2.png?raw=true "Setting Grid Properties")
 5. Close the Document Properties dialog.
 6. To center the canvas in the viewport, select View -> Zoom -> Drawing.
-   
+
 ## Setting up The Paths
 
 1. Create a path or shape.
 2. With the path selected, open the Stroke and Fill panel by pressing `Ctrl+Shift+F` on your keyboard.
 ![Stroke Style Properties](images/strokes.png?raw=true "Setting Grid Properties")
 3. On the “Stroke Style” tab:
-   * Set Stroke Width to `2px`. 
+   * Set Stroke Width to `2px`.
    * Select the rounded join type.
    * Select the rounded cap type.
 4. If the shape is a rectangle, select the rectangle and in the top of the screen below the menu bar, set `Rx` and `Ry` to `2px`.

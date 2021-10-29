@@ -251,6 +251,13 @@
     "marker",
     "tag"
   ],
+  "bookmark-minus": [
+    "delete",
+    "remove"
+  ],
+  "bookmark-plus": [
+    "add"
+  ],
   "bot": [
     "robot"
   ],
@@ -1005,6 +1012,13 @@
   "languages": [
     "translate"
   ],
+  "landmark": [
+    "bank",
+    "building",
+    "capitol",
+    "finance",
+    "money"
+  ],
   "laptop": [
     "computer"
   ],
@@ -1087,6 +1101,27 @@
   "list-ordered": [
     "number",
     "order"
+  ],
+  "list-plus": [
+    "playlist",
+    "add",
+    "song",
+    "track",
+    "new"
+  ],
+  "list-minus": [
+    "playlist",
+    "remove",
+    "song",
+    "subtract",
+    "remove",
+    "delete"
+  ],
+  "list-x": [
+    "playlist",
+    "subtract",
+    "remove",
+    "delete"
   ],
   "loader": [
     "load",
@@ -1973,6 +2008,9 @@
   "users": [
     "group",
     "people"
+  ],
+  "verified": [
+    "check"
   ],
   "video": [
     "camera",
