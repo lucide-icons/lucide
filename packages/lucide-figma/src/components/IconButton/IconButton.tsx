@@ -8,7 +8,7 @@ interface IconButtonProps {
 }
 
 function IconButton({ name, component: IconComponent }: IconButtonProps) {
-  const onIconclick = () => {
+  const onIconClick = () => {
     const svg = renderToString(<IconComponent/>);
 
     parent.postMessage({ pluginMessage: {
@@ -21,7 +21,7 @@ function IconButton({ name, component: IconComponent }: IconButtonProps) {
     <button
       key={name}
       aria-label={name}
-      onClick={onIconclick}
+      onClick={onIconClick}
       className='icon-button'
     >
       <IconComponent />

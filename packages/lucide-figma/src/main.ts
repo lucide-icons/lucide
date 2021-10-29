@@ -8,14 +8,12 @@ let cachedIcons: LucideIcons
 
 const setResults = ({result, query, lucideIcons} : { result: SuggestionResults, query: string, lucideIcons: LucideIcons }) => {
   const icons = Object.entries(lucideIcons.iconNodes);
-    // @ts-ignore
-  const suggestions = filterIcons(icons, icons.tags, query.toLowerCase()).map(([name]) => ({
+
+  const suggestions = filterIcons(icons, lucideIcons.tags, query.toLowerCase()).map(([name]) => ({
     name
   }))
-  // TODO: Fix this
-  console.log(suggestions);
 
-  // result.setSuggestions(suggestions)
+  result.setSuggestions(suggestions)
 }
 
 figma.parameters.on('input', async ({ parameters, key, query, result }) => {
@@ -103,7 +101,7 @@ figma.ui.onmessage = (event) => {
 
 figma.on('run', event => {
   if(event.parameters) {
-    figma.ui.postMessage({ type: 'fetchIcons' })
+    figma.ui.postMessage({ type: 'getSvg', iconName: event.parameters['icon-name'], cachedIcons })
   } else {
     figma.showUI(__uiFiles__.interface, { width: 300, height: 400 })
   }

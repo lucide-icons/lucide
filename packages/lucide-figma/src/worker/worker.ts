@@ -1,10 +1,10 @@
-import { fetchIcons } from "../api/fetchIcons"
+import { fetchIcons, LucideIcons } from "../api/fetchIcons"
+import { createReactComponent } from 'lucide-react'
+import { renderToString } from 'react-dom/server'
+import { createElement } from "react"
 
-const getLatestIcons = async ({ type, cachedIcons }: any) => {
-  console.log('hatsa!', cachedIcons)
-
+const getLatestIcons = async ({ cachedIcons }: any) => {
   const lucideIcons = await fetchIcons(cachedIcons)
-  // console.log(lucideIcons);
 
   parent.postMessage({
     pluginMessage: {
@@ -14,6 +14,24 @@ const getLatestIcons = async ({ type, cachedIcons }: any) => {
   }, "*")
 }
 
+const getSvg = async ({ cachedIcons, iconName }: { cachedIcons: LucideIcons, iconName: string }) => {
+  if (!cachedIcons) {
+    return;
+  }
+
+  const iconNode = cachedIcons.iconNodes[iconName];
+
+  if (iconNode) {
+    const IconComponent = createReactComponent(iconName, iconNode)
+    const svg = renderToString(createElement(IconComponent));
+
+    parent.postMessage({ pluginMessage: {
+      type: 'drawIcon',
+      icon: { name, svg }
+    }}, '*')
+  }
+}
+
 window.onmessage = async (event) => {
   if (!event?.data?.pluginMessage) {
     return
@@ -21,17 +39,13 @@ window.onmessage = async (event) => {
 
   const { pluginMessage } = event.data
 
-  console.log(event?.data?.pluginMessage, 'worker');
-
-
   switch (pluginMessage.type) {
-    // case "fetchIcons":
-    //   fetchIcon()
-    //   break;
     case "getLatestIcons":
-      console.log('getLatestIcons');
-
       getLatestIcons(pluginMessage)
+      break;
+
+    case "getSvg":
+      getSvg(pluginMessage)
       break;
 
     default:

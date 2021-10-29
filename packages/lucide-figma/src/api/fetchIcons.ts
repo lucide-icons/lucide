@@ -57,15 +57,4 @@ export const getIcons = () => new Promise<LucideIcons>(async (resolve, reject)=>
       resolve(lucideIcons)
     }
   }
-
-    // const icons = await fetch('https://unpkg.com/lucide-static@latest/icon-nodes.json')
-    // const tags = await fetch('https://unpkg.com/lucide-static@latest/tags.json')
-    // parent.postMessage({
-    //   pluginMessage: {
-    //     type: "fetchIcons",
-    //   }
-    // }, "*")
-    // console.log(savedIcons);
-
-    // console.log(await tags.json());
 });
