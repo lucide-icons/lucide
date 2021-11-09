@@ -89,6 +89,29 @@ import arrowRightIcon from 'lucide-static/icons/arrow-right'
 </svg>
 ```
 
+If you'd prefer, you can use CSS to hold your base SVG properties
+```css
+.lucide-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+    ```
+and update the svg as follows
+```svg
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="lucide-icon"
+>
+<use
+    href="https://unpkg.com/lucide-static@latest/sprite.svg#alert-triangle"
+  />
+</svg>
+    ```
 #### As background image
 
 ``` css
