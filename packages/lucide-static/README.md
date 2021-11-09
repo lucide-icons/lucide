@@ -34,10 +34,12 @@ npm install lucide-static
 <img src="https://unpkg.com/lucide-static@latest/icons/home.svg">
 
 <!-- Icon Font, not recommended for production! -->
-<script src="https://unpkg.com/lucide-static@latest/font/Lucide.ttf"></script>
-
-<!-- Icon Sprite, not recommended for production! -->
-<img src="https://unpkg.com/lucide-static@latest/sprite.svg#home">
+<style>
+  @font-face {
+    font-family: "LucideIcons";
+    src: url(https://unpkg.com/lucide-static@latest/font/Lucide.ttf) format("truetype");
+  }
+</style>
 ```
 
 ## Usage
@@ -49,12 +51,12 @@ To use it in for example html:
 
 ``` html
 <!-- Svg File -->
-<img src="~lucide/icons/home.svg">
+<img src="~lucide-static/icons/home.svg">
 ```
 
 ``` css
 .home-icon {
-  background-image: url(~lucide/icons/home.svg)
+  background-image: url(~lucide-static/icons/home.svg)
 }
 ```
 Make sure you have the correct webpack loaders to make this work. [url-loader](https://v4.webpack.js.org/loaders/url-loader/)
@@ -72,20 +74,23 @@ import arrowRightIcon from 'lucide-static/icons/arrow-right'
 
 ### SVG Sprite
 
+You may need additional loader for this.
+
 ```html
 <!-- Icon Sprite, not recommended for production! -->
-<img src="https://unpkg.com/lucide-static@latest/sprite.svg#home">
+<img src="./node_modules/lucide-static/sprite.svg#home">
 
 <!-- or -->
 <svg
-  xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
-  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
 >
-  <use
-    href="https://unpkg.com/lucide-static@latest/sprite.svg#alert-triangle"
-  />
+  <use href="./node_modules/lucide-static/sprite.svg#alert-triangle" />
 </svg>
 ```
 
@@ -93,7 +98,7 @@ import arrowRightIcon from 'lucide-static/icons/arrow-right'
 
 ``` css
 .home-icon {
-  background-image: url(https://unpkg.com/lucide-static@latest/sprite.svg#home)
+  background-image: url(~/lucide-static/sprite.svg#home)
 }
 ```
 
