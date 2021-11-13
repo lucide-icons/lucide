@@ -10,9 +10,11 @@ const TYPES_FILE_NAME = 'lucide.d.ts';
 // Generates header of d.ts file include some types and functions
 const typeDefinitions = `\
 declare module 'lucide'
+
 export interface SVGProps extends Partial<SVGElement> ${JSON.stringify(defaultAttributes, null, 2)}
 
-export declare type IconNode = readonly [tag: string, attrs:SVGProps, children?:IconNode];
+export declare type IconNodeChild = readonly [string, object];
+export declare type IconNode = readonly [tag: string, attrs: SVGProps, children?: IconNodeChild[]];
 export declare type CustomAttrs = { [attr:string]: any }
 export type Icons = { [key: string]: IconNode }
 
