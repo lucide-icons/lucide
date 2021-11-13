@@ -1410,6 +1410,9 @@
     "statistics",
     "diagram"
   ],
+  "pin": [
+    "pin"
+  ],
   "pipette": [
     "eye dropper",
     "color picker"
