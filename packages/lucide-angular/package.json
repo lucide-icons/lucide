@@ -33,35 +33,31 @@
     "postinstall": "ngcc"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
-  },
-  "peerDependencies": {
-    "@angular/common": "^11.2.6",
-    "@angular/core": "^11.2.6"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.5",
-    "@angular/cli": "~11.2.5",
-    "@angular/common": "~11.2.6",
-    "@angular/compiler": "~11.2.6",
-    "@angular/compiler-cli": "~11.2.6",
-    "@angular/core": "~11.2.6",
-    "@angular/platform-browser": "~11.2.6",
-    "@angular/platform-browser-dynamic": "~11.2.6",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~6.1.0",
+    "@angular/cli": "~11.2.15",
+    "@angular/common": "~11.2.14",
+    "@angular/compiler": "~11.2.14",
+    "@angular/compiler-cli": "~11.2.14",
+    "@angular/core": "~11.2.14",
+    "@angular/platform-browser": "~11.2.14",
+    "@angular/platform-browser-dynamic": "~11.2.14",
+    "ng-packagr": "^11.2.4",
+    "@types/jasmine": "~3.10.2",
+    "@types/node": "^16.11.7",
+    "codelyzer": "^6.0.2",
+    "jasmine-core": "~3.10.1",
+    "jasmine-spec-reporter": "~7.0.0",
+    "karma": "~6.3.8",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "ng-packagr": "^11.0.0",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0",
     "protractor": "~7.0.0",
     "puppeteer": "^8.0.0",
-    "ts-node": "~8.3.0",
+    "ts-node": "~10.4.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"
   }

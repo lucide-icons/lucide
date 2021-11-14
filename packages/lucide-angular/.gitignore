@@ -46,6 +46,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#npm-yarn
+# npm-yarn
 package-lock.json
 src/createElement.js
+
+# angular cache
+.angular/cache
