@@ -2074,6 +2074,12 @@
     "air",
     "blow"
   ],
+  "wrap-text": [
+    "words",
+    "lines",
+    "break",
+    "paragraph"
+  ],
   "wrench": [
     "tool",
     "settings",
