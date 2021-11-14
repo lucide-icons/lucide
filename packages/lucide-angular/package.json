@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "yarn clean && yarn build:icons && yarn build:ng",
-    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
+    "clean": "npx shx rm -rf dist && npx shx rm -rf ./src/icons/*.ts",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-angular/src --templateSrc=../packages/lucide-angular/scripts/exportTemplate --iconFileExtention=.ts --exportFileName=index.ts",
     "build:ng": "ng build --prod",
     "test:headless": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
