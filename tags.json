@@ -1411,7 +1411,10 @@
     "diagram"
   ],
   "pin": [
-    "pin"
+    "save",
+    "map",
+    "lock",
+    "fix"
   ],
   "pipette": [
     "eye dropper",
