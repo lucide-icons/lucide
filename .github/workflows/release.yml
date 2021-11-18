@@ -237,6 +237,38 @@ jobs:
           name: lucide-preact-package-json
           path: packages/lucide-preact/package.json
 
+  lucide-static:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.4.0
+        with:
+          node-version: "14"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --prefer-offline
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set new version
+        run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide-static build
+
+      - name: Publish
+        run: yarn workspace lucide-static publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-static-package-json
+          path: packages/lucide-static/package.json
+
   lucide-font:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
