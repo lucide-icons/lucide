@@ -244,6 +244,7 @@ jobs:
     needs: [pre-build, lucide-font]
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
       - uses: actions/setup-node@v2.4.0
         with:
           node-version: "14"
