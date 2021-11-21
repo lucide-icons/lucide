@@ -255,8 +255,8 @@ jobs:
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
-      - name: Set new version
-        run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+      # - name: Set new version
+      #   run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Move Font
         run: cp -r lucide-font packages/lucide-static/font
