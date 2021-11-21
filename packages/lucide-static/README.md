@@ -33,7 +33,7 @@ npm install lucide-static
 <!-- Svg File -->
 <img src="https://unpkg.com/lucide-static@latest/icons/home.svg">
 
-<!-- Icon Font, not recommended for production! -->
+<!-- Icon Font -->
 <style>
   @font-face {
     font-family: "LucideIcons";
@@ -43,6 +43,9 @@ npm install lucide-static
 ```
 
 ## Usage
+
+Checkout the [codesandbox examples](https://codesandbox.io/s/using-the-svg-sprite-lz1kk).
+
 ### SVG Files
 
 #### Svg file as image
@@ -78,7 +81,7 @@ You may need additional loader for this.
 
 ```html
 <!-- Icon Sprite, not recommended for production! -->
-<img src="./node_modules/lucide-static/sprite.svg#home">
+<img src="lucide-static/sprite.svg#home">
 
 <!-- or -->
 <svg
@@ -90,7 +93,11 @@ You may need additional loader for this.
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <use href="./node_modules/lucide-static/sprite.svg#alert-triangle" />
+  <use href="#alert-triangle" />
+</svg>
+
+<svg>
+  ...sprite svg
 </svg>
 ```
 
@@ -116,17 +123,12 @@ and update the svg as follows
   class="lucide-icon"
 >
 <use
-    href="~/lucide-static/sprite.svg#alert-triangle"
+    href="#alert-triangle"
   />
 </svg>
-```
-
-#### As background image
-
-``` css
-.home-icon {
-  background-image: url(~/lucide-static/sprite.svg#home)
-}
+<svg>
+  ...sprite svg
+</svg>
 ```
 
 ### Icon Font
