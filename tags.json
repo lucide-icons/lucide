@@ -104,6 +104,13 @@
   "arrow-left-circle": [
     "direction"
   ],
+  "arrow-left-right": [
+    "bidirection",
+    "direction",
+    "swap",
+    "switch",
+    "transaction"
+  ],
   "arrow-right": [
     "direction"
   ],
