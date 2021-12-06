@@ -56,6 +56,11 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
         const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr.commit.message);
         const nameRegex = /^\/?(.+\/)*(.+)\.(.+)$/g.exec(filename);
 
+        if (!pr.author) {
+          // Most likely bot commit
+          return null;
+        }
+
         return {
           filename,
           name: nameRegex && nameRegex[2] ? nameRegex[2] : null,
@@ -66,6 +71,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
           status,
         };
       })
+      .filter(Boolean)
       .filter(({ pullNumber }) => !!pullNumber);
 
     const changelog = topics.map(({ title, filter, template }) => {
