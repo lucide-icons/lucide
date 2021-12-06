@@ -61,7 +61,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
           name: nameRegex && nameRegex[2] ? nameRegex[2] : null,
           title: pullNumber && pullNumber[1] ? pullNumber[1].trim() : null,
           pullNumber: pullNumber && pullNumber[2] ? pullNumber[2].trim() : null,
-          author: pr.author.login,
+          author: pr.author?.login || 'unknown',
           sha,
           status,
         };
@@ -84,4 +84,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
   } catch (error) {
     throw new Error(error);
   }
-})();
+})().catch(error => {
+  console.error(error);
+  process.exit(1);
+});
