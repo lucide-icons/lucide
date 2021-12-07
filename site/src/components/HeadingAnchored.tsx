@@ -1,6 +1,6 @@
 import { Link, Heading } from '@chakra-ui/react';
 import { useEffect } from 'react';
-import { useheadingNavigationContext } from './HeadingNavigationProvider';
+import { useHeadingNavigationContext } from './HeadingNavigationProvider';
 
 function getAnchor(text: string) {
   return text
@@ -10,7 +10,7 @@ function getAnchor(text: string) {
 }
 
 const HeadingAnchored = ({ children, as: headingLevel, ...restProps }) => {
-  const { addHeading } = useheadingNavigationContext();
+  const { addHeading } = useHeadingNavigationContext();
   const headingText = typeof children === 'string' ? children : children[0];
 
   const anchor = getAnchor(headingText);

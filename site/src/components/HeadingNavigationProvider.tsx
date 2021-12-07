@@ -31,5 +31,5 @@ export default function HeadingNavigationProvider({ children }) {
   );
 }
 
-export const useheadingNavigationContext = () => useContext(HeadingNavigationContext);
+export const useHeadingNavigationContext = () => useContext(HeadingNavigationContext);
 

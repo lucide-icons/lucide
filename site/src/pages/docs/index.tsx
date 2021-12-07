@@ -5,16 +5,14 @@ import { MDXRemote } from 'next-mdx-remote'
 import mdxComponents from '../../lib/mdxComponents';
 import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
-import HeadingTreeMenu from '../../components/HeadingTreeMenu';
+import DocsMenu from '../../components/DocsMenu';
 
 const DocPage = ({ doc, data, content }) => {
   if (!data || !doc) return null
 
   return (
     <HeadingNavigationProvider>
-      <MobileMenu />
-      <HeadingTreeMenu />
-      <Layout>
+      <Layout aside={ <DocsMenu/> }>
         { data?.title ? (
           <Head>
             <title>{ data.title }</title>

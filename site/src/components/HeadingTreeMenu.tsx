@@ -1,8 +1,8 @@
 import { useEffect, useMemo } from 'react';
-import { useheadingNavigationContext } from './HeadingNavigationProvider';
+import { useHeadingNavigationContext } from './HeadingNavigationProvider';
 
 const HeadingTreeMenu = () => {
-  const { headings } = useheadingNavigationContext();
+  const { headings } = useHeadingNavigationContext();
   const headingElements = useMemo(
     () =>
       headings.map(heading => {

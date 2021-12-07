@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   IconButton,
   useBreakpointValue,
+  BoxProps
 } from '@chakra-ui/react';
 import { useKeyBindings } from '../lib/key';
 import { useRouter } from 'next/router';
@@ -15,7 +16,11 @@ import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
 import Logo from './Logo';
 
-const Layout = ({ children }) => {
+interface LayoutProps extends BoxProps {
+  aside?: BoxProps['children']
+}
+
+const Layout = ({ aside, children }: LayoutProps) => {
   const router = useRouter();
   const { toggleMobileMenu } = useMobileNavigationContext();
   const { toggleColorMode } = useColorMode();
@@ -57,7 +62,6 @@ const Layout = ({ children }) => {
           justifyContent="space-between"
           pt={4}
           pb={4}
-          maxW="1250px"
           margin="0 auto"
           w="full"
           px={5}
@@ -105,15 +109,22 @@ const Layout = ({ children }) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
-        {children}
-        <Divider mb={6} mt={12} />
-        <p style={{ alignSelf: 'center' }}>
-          <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-            <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
-          </a>
-        </p>
-        <br />
+      <Flex>
+        { aside ? (
+          <Box as="aside">
+            {aside}
+          </Box>
+        ) : null }
+        <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
+          {children}
+          <Divider mb={6} mt={12} />
+          <p style={{ alignSelf: 'center' }}>
+            <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+              <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+            </a>
+          </p>
+          <br />
+        </Flex>
       </Flex>
     </Box>
   );
