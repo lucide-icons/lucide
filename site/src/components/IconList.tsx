@@ -7,6 +7,7 @@ import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import { useRouter } from "next/router";
 import ModifiedTooltip from './ModifiedTooltip';
+import IconListItem from "./IconListItem";
 
 const IconList = ({icons}) => {
   const router = useRouter()
@@ -23,6 +24,7 @@ const IconList = ({icons}) => {
       marginBottom="320px"
     >
       { icons.map((icon) => {
+
         const actualIcon = icon.item ? icon.item : icon;
         const { name, content, contributors } = actualIcon;
 
@@ -38,45 +40,9 @@ const IconList = ({icons}) => {
               },
             }}
           >
-            <Button
-              variant="ghost"
-              borderWidth="1px"
-              rounded="lg"
-              padding={16}
-              position="relative"
-              onClick={(event) => {
-                if (event.shiftKey) {
-                  copy(actualIcon.src);
-                  toast({
-                    title: "Copied!",
-                    description: `Icon "${name}" copied to clipboard.`,
-                    status: "success",
-                    duration: 1500,
-                  });
-                }
-                if (event.metaKey) {
-                  download(
-                    actualIcon.src,
-                    `${name}.svg`,
-                    "image/svg+xml"
-                  );
-                }
-              }}
-              key={name}
-              alignItems="center"
-            >
-              { contributors?.length ? ( <ModifiedTooltip/> ) : null}
-              <Flex direction="column" align="center" justify="center">
-                <IconWrapper
-                  content={content}
-                  stroke={color}
-                  strokeWidth={strokeWidth}
-                  height={size}
-                  width={size}
-                />
-                <Text marginTop={5}>{name}</Text>
-              </Flex>
-            </Button>
+            <IconListItem
+              {...icon}
+            />
           </Link>
         );
       })}

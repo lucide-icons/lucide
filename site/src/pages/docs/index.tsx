@@ -3,8 +3,9 @@ import Head from 'next/head';
 import fetchAllDocuments from '../../lib/fetchAllDocuments'
 import { MDXRemote } from 'next-mdx-remote'
 import mdxComponents from '../../lib/mdxComponents';
-import { HeadingNavigationProvider } from '../../components/HeadingNavigationProvider';
+import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
+import HeadingTreeMenu from '../../components/HeadingTreeMenu';
 
 const DocPage = ({ doc, data, content }) => {
   if (!data || !doc) return null
@@ -12,6 +13,7 @@ const DocPage = ({ doc, data, content }) => {
   return (
     <HeadingNavigationProvider>
       <MobileMenu />
+      <HeadingTreeMenu />
       <Layout>
         { data?.title ? (
           <Head>

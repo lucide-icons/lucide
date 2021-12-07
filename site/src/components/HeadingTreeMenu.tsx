@@ -7,6 +7,8 @@ const HeadingTreeMenu = () => {
     () =>
       headings.map(heading => {
         const headingElement = document.getElementById(heading.anchor);
+        console.log(headingElement);
+
         return {
           element: headingElement,
           offsetTop: headingElement.getBoundingClientRect().top,
@@ -14,9 +16,10 @@ const HeadingTreeMenu = () => {
       }),
     [headings],
   );
+
   useEffect(() => {
     console.log(headingElements);
-  }, [headingElements]);
+  }, [headingElements, headings]);
 
   return <div />;
 };

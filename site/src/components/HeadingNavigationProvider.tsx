@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, useMemo, useCallback, useEffect } from 'react';
 
 interface HeadingTypes {
   anchor: string;
@@ -12,24 +12,24 @@ const HeadingNavigationContext = createContext({
   addHeading: (heading: HeadingTypes) => {},
 });
 
-function HeadingNavigationProvider({ children }) {
+export default function HeadingNavigationProvider({ children }) {
   const [headings, setHeadings] = useState([]);
 
-  const addHeading = (heading: HeadingTypes) => {
+  const addHeading = useCallback((heading: HeadingTypes) => {
     if (!['h1', 'h2', 'h3'].includes(heading.headingLevel)) return;
 
-    const currentHeadings = headings;
-    currentHeadings.push(heading);
-    setHeadings(currentHeadings);
-  };
+    setHeadings((currentHeadings) => [
+      ...currentHeadings,
+      heading
+    ]);
+  }, [headings]);
 
-  const value = { headings, addHeading };
+  const value = useMemo(() => ({ headings, addHeading }), [headings, addHeading]);
 
   return (
     <HeadingNavigationContext.Provider value={value}>{children}</HeadingNavigationContext.Provider>
   );
 }
 
-const useheadingNavigationContext = () => useContext(HeadingNavigationContext);
+export const useheadingNavigationContext = () => useContext(HeadingNavigationContext);
 
-export { HeadingNavigationProvider, useheadingNavigationContext };

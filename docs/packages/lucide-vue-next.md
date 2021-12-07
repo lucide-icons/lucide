@@ -6,11 +6,15 @@ Implementation of the lucide icon library for Vue 3 applications.
 
 ## Installation
 
-```sh
+**With yarn**
+
+```bash
 yarn add lucide-vue-next
+```
 
-# or
+**With npm**
 
+```bash
 npm install lucide-vue-next
 ```
 
@@ -23,7 +27,7 @@ Each icon can be imported as a vue component.
 
 You can pass additional props to adjust the icon.
 
-``` vue
+``` html
 <template>
   <Camera
     color="red"

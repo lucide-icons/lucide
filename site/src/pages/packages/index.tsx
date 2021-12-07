@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import { HeadingNavigationProvider } from '../../components/HeadingNavigationProvider';
+import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
 import { Stack } from '@chakra-ui/react';
 import Package from '../../components/Package';
