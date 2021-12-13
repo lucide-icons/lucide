@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   IconButton,
   useBreakpointValue,
-  BoxProps
+  BoxProps,
 } from '@chakra-ui/react';
 import { useKeyBindings } from '../lib/key';
 import { useRouter } from 'next/router';
@@ -17,7 +17,7 @@ import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNa
 import Logo from './Logo';
 
 interface LayoutProps extends BoxProps {
-  aside?: BoxProps['children']
+  aside?: BoxProps['children'];
 }
 
 const Layout = ({ aside, children }: LayoutProps) => {
@@ -110,12 +110,8 @@ const Layout = ({ aside, children }: LayoutProps) => {
         </Flex>
       </Flex>
       <Flex>
-        { aside ? (
-          <Box as="aside">
-            {aside}
-          </Box>
-        ) : null }
-        <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
+        {aside ? <Box as="aside">{aside}</Box> : null}
+        <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
           {children}
           <Divider mb={6} mt={12} />
           <p style={{ alignSelf: 'center' }}>

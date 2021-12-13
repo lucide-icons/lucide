@@ -6,19 +6,22 @@ import mdxComponents from '../../lib/mdxComponents';
 import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
 import DocsMenu from '../../components/DocsMenu';
+import { Box } from '@chakra-ui/react';
 
 const DocPage = ({ doc, data, content }) => {
   if (!data || !doc) return null
 
   return (
     <HeadingNavigationProvider>
-      <Layout aside={ <DocsMenu/> }>
+      <Layout aside={ <DocsMenu display={{ base:'none', lg: 'block' }}/> }>
         { data?.title ? (
           <Head>
             <title>{ data.title }</title>
           </Head>
         ) : null}
-        <MDXRemote {...doc} data={data} components={mdxComponents} />
+        <Box maxWidth="lg" width='100%' marginX='auto'>
+          <MDXRemote {...doc} data={data} components={mdxComponents} />
+        </Box>
       </Layout>
     </HeadingNavigationProvider>
   )
