@@ -72,11 +72,11 @@ const Layout = ({ aside, children }: LayoutProps) => {
           <Flex justifyContent="center" alignItems="center">
             {showBaseNavigation ? (
               <>
-                {/* <NextLink href="/docs" passHref>
+                <NextLink href="/docs" passHref>
                   <Link marginRight={12} fontSize="xl">
                     Documentation
                   </Link>
-                </NextLink> */}
+                </NextLink>
                 <NextLink href="/packages" passHref>
                   <Link marginRight={12} fontSize="xl">
                     Packages

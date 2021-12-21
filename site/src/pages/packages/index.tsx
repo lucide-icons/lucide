@@ -16,11 +16,7 @@ const PackagesPage = ({ packages }) => {
           Packages
         </Heading>
         <Stack spacing={8} align="center">
-          { packages.length ? (
-            packages.map(packageItem => (
-              <Package {...packageItem} />
-            ))
-          ) : null }
+          {packages.length ? packages.map(packageItem => <Package {...packageItem} />) : null}
         </Stack>
       </Layout>
     </HeadingNavigationProvider>
@@ -45,7 +41,7 @@ export async function getStaticProps({ params }) {
         ...packageData[packageDirectory],
       };
     })
-    .sort((a,b ) => a.order - b.order);
+    .sort((a, b) => a.order - b.order);
 
   return { props: { packages } };
 }

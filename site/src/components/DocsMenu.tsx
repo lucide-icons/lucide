@@ -11,16 +11,7 @@ const DocsMenu = (props: BoxProps) => {
   }, [router]);
   const linkIsActive = (currentPath, href) => currentPath === `/docs/${href}`;
   return (
-    <Box
-      paddingX={8}
-      position="sticky"
-      overflowY="auto"
-      width={240}
-      height="100vh"
-      marginTop={-4}
-      top={0}
-      {...props}
-    >
+    <Box {...props}>
       <Box paddingY={4}>
         {docsMenuTree.map(({ section, items }) => (
           <Box key={section}>

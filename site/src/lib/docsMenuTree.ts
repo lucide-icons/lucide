@@ -4,7 +4,7 @@ const docsMenuTree = [
     items: [
       {
         title: 'Introduction',
-        href: 'introduction'
+        href: ''
       },
       {
         title: 'Installation',
@@ -20,51 +20,51 @@ const docsMenuTree = [
       // }
     ]
   },
-  {
-    section: 'Using Icons',
-    items: [
-      {
-        title: 'What should I use',
-        href: 'what-should-i-use'
-      },
-      {
-        title: 'For Web (Vanilla)',
-        href: 'lucide-with-web'
-      },
-      {
-        title: 'React',
-        href: 'lucide-with-react'
-      },
-      {
-        title: 'Vue',
-        href: 'lucide-with-vue'
-      },
-      {
-        title: 'Angular',
-        href: 'lucide-with-angular'
-      },
-      {
-        title: 'Preact',
-        href: 'lucide-with-preact'
-      },
-      {
-        title: 'nodejs',
-        href: 'lucide-with-nodejs'
-      },
-      {
-        title: 'Flutter',
-        href: 'lucide-with-flutter'
-      },
-      {
-        title: 'Figma',
-        href: 'lucide-with-figma'
-      },
-      {
-        title: 'Other Design programs',
-        href: 'lucide-with-design-programs'
-      },
-    ]
-  },
+  // {
+  //   section: 'Using Icons',
+  //   items: [
+  //     {
+  //       title: 'What should I use',
+  //       href: 'what-should-i-use'
+  //     },
+  //     {
+  //       title: 'For Web (Vanilla)',
+  //       href: 'lucide-with-web'
+  //     },
+  //     {
+  //       title: 'React',
+  //       href: 'lucide-with-react'
+  //     },
+  //     {
+  //       title: 'Vue',
+  //       href: 'lucide-with-vue'
+  //     },
+  //     {
+  //       title: 'Angular',
+  //       href: 'lucide-with-angular'
+  //     },
+  //     {
+  //       title: 'Preact',
+  //       href: 'lucide-with-preact'
+  //     },
+  //     {
+  //       title: 'nodejs',
+  //       href: 'lucide-with-nodejs'
+  //     },
+  //     {
+  //       title: 'Flutter',
+  //       href: 'lucide-with-flutter'
+  //     },
+  //     {
+  //       title: 'Figma',
+  //       href: 'lucide-with-figma'
+  //     },
+  //     {
+  //       title: 'Other Design programs',
+  //       href: 'lucide-with-design-programs'
+  //     },
+  //   ]
+  // },
   {
     section: 'Packages',
     items: [

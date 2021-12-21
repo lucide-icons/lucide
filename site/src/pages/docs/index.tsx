@@ -13,12 +13,28 @@ const DocPage = ({ doc, data, content }) => {
 
   return (
     <HeadingNavigationProvider>
-      <Layout aside={ <DocsMenu display={{ base:'none', lg: 'block' }}/> }>
+      <MobileMenu>
+        <DocsMenu/>
+      </MobileMenu>
+      <Layout aside={
+          <DocsMenu
+            display={{ base:'none', lg: 'block' }}
+            paddingX={8}
+            position="sticky"
+            overflowY="auto"
+            width={240}
+            height="100vh"
+            marginTop={-4}
+            top={0}
+          />
+        }
+      >
         { data?.title ? (
           <Head>
             <title>{ data.title }</title>
           </Head>
         ) : null}
+
         <Box maxWidth="lg" width='100%' marginX='auto'>
           <MDXRemote {...doc} data={data} components={mdxComponents} />
         </Box>
