@@ -338,6 +338,11 @@
     "transport",
     "trip"
   ],
+  "carrot": [
+    "vegetable",
+    "food",
+    "eat"
+  ],
   "cast": [
     "chromecast",
     "airplay"
@@ -651,6 +656,11 @@
   "droplets": [
     "water",
     "humidity"
+  ],
+  "drumstick": [
+    "food",
+    "chicken",
+    "meat"
   ],
   "edit": [
     "pencil",
