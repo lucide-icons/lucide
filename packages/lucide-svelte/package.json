@@ -1,0 +1,40 @@
+{
+  "name": "lucide-svelte",
+  "description": "A Lucide icon library package for Preact applications",
+  "version": "0.16.19",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-svelte"
+  },
+  "author": "Eric Fennis",
+  "amdName": "lucide-svelte",
+  "main": "dist/cjs/lucide-svelte.js",
+  "main:umd": "dist/umd/lucide-svelte.js",
+  "module": "dist/esm/lucide-svelte.js",
+  "unpkg": "dist/umd/lucide-svelte.min.js",
+  "typings": "dist/lucide-svelte.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn clean && yarn build:icons",
+    "build:old": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-svelte/src --templateSrc=../packages/lucide-svelte/scripts/exportTemplate --renderUniqueKey --iconFileExtention=.svelte",
+    "build:es": "babel src -d dist/esm",
+    "build:types": "yarn --cwd ../../ babel-node packages/lucide-svelte/scripts/buildTypes.js",
+    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-svelte/rollup.config.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@testing-library/preact": "^2.0.1",
+    "babel-preset-preact": "^2.0.0",
+    "jest": "^26.6.3",
+    "preact": "^10.5.13"
+  },
+  "peerDependencies": {
+    "preact": "^10.5.13"
+  }
+}
