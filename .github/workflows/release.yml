@@ -37,6 +37,7 @@ jobs:
         with:
           node-version: "14"
           cache: yarn
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
         run: yarn --prefer-offline
@@ -237,6 +238,42 @@ jobs:
           name: lucide-preact-package-json
           path: packages/lucide-preact/package.json
 
+  lucide-static:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: [pre-build, lucide-font]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+      - uses: actions/setup-node@v2.4.0
+        with:
+          node-version: "14"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --prefer-offline
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      # - name: Set new version
+      #   run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Move Font
+        run: cp -r lucide-font packages/lucide-static/font
+
+      - name: Build
+        run: yarn workspace lucide-static build
+
+      - name: Publish
+        run: yarn workspace lucide-static publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-static-package-json
+          path: packages/lucide-static/package.json
+
   lucide-font:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
@@ -277,27 +314,14 @@ jobs:
 
       - name: Build Icon Font
         run: |
-          mkdir build
-          list=(-200 -300 "" -500 -600)
-          command=''
-          for name in "${list[@]}"
-          do
-            subcommand="(yarn build:outline-icons --outputDir=converted_icons${name} && fontcustom compile "./converted_icons${name}" -h -n "lucide${name}" -o ./build -F)"
-            if [ -z "$command" ]
-            then
-              command="$subcommand";
-            else
-              command="$command & $subcommand";
-            fi
-          done
-
-          eval $command
+          mkdir lucide-font
+          yarn build:outline-icons --outputDir=converted_icons && fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
         with:
           name: lucide-font
-          path: build
+          path: lucide-font
 
   lucide-flutter:
     if: github.repository == 'lucide-icons/lucide'

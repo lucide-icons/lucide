@@ -41,8 +41,15 @@ export default {
       { alt: 'npm', src: 'https://img.shields.io/npm/dw/lucide-angular', href: "https://www.npmjs.com/package/lucide-angular" }
     ]
   },
-  'lucide-flutter': {
+  'lucide-static': {
     order: 6,
+    shields: [
+      { alt: 'npm', src: 'https://img.shields.io/npm/v/lucide-static', href: "https://www.npmjs.com/package/lucide-static" },
+      { alt: 'npm', src: 'https://img.shields.io/npm/dw/lucide-static', href: "https://www.npmjs.com/package/lucide-static" }
+    ]
+  },
+  'lucide-flutter': {
+    order: 7,
     shields: [
       { alt: 'flutter', src: 'https://img.shields.io/pub/v/lucide_icons', href: "https://pub.dev/packages/lucide_icons" },
     ]

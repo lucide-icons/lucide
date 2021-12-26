@@ -30,6 +30,7 @@
     "lucide-preact": "yarn workspace lucide-preact",
     "lucide-vue": "yarn workspace lucide-vue",
     "lucide-vue-next": "yarn workspace lucide-vue-next",
+    "lucide-static": "yarn workspace lucide-static",
     "build:icons": "babel-node ./scripts/buildIcons.js --presets @babel/env",
     "build:outline-icons": "babel-node ./scripts/outlineSvg.js --presets @babel/env",
     "optimize": "babel-node ./scripts/optimizeSvgs.js --presets @babel/env",

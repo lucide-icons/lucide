@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue-next",
-  "version": "0.16.12",
+  "version": "0.16.22",
   "author": "Eric Fennis",
   "description": "A Lucide icon library package for Vue 3 applications",
   "license": "ISC",
@@ -31,10 +31,10 @@
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0",
-    "@vue/test-utils": "^2.0.0-rc.6",
+    "@vue/test-utils": "^2.0.0-rc.14",
     "jest-serializer-vue": "^2.0.2",
     "vue": "3.0.6",
-    "vue-jest": "^5.0.0-alpha.7"
+    "vue-jest": "^5.0.0-alpha.10"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

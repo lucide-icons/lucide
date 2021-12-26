@@ -54,13 +54,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -107,6 +103,7 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
     class="lucide-icon my-icon"
@@ -199,13 +196,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -252,6 +245,7 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
     class="lucide lucide-smile-icon"
@@ -346,13 +340,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -399,6 +389,7 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
     class="lucide lucide-smile-icon"
@@ -492,13 +483,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -545,6 +532,7 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
     class="lucide lucide-smile-icon"
