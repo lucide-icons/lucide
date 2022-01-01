@@ -1890,6 +1890,9 @@
     "delete",
     "remove"
   ],
+  "subscript": [
+    "text"
+  ],
   "sun": [
     "brightness",
     "weather",
