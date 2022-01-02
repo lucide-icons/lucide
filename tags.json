@@ -46,20 +46,58 @@
     "danger"
   ],
   "align-center": [
-    "text alignment",
+    "text",
+    "alignment",
     "center"
   ],
+  "align-center-horizontal": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-center-vertical": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-end-horizontal": [
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
+  "align-end-vertical": [
+    "items",
+    "right",
+    "flex",
+    "justify"
+  ],
   "align-justify": [
-    "text alignment",
+    "text",
+    "alignment",
     "justified"
   ],
   "align-left": [
-    "text alignment",
+    "text",
+    "alignment",
     "left"
   ],
   "align-right": [
-    "text alignment",
+    "text",
+    "alignment",
     "right"
+  ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
   ],
   "anchor": [
     "ship"
@@ -445,6 +483,18 @@
     "watch",
     "alarm"
   ],
+  "clock-1": [],
+  "clock-10": [],
+  "clock-11": [],
+  "clock-12": [],
+  "clock-2": [],
+  "clock-3": [],
+  "clock-4": [],
+  "clock-5": [],
+  "clock-6": [],
+  "clock-7": [],
+  "clock-8": [],
+  "clock-9": [],
   "cloud": [
     "weather"
   ],
@@ -1500,15 +1550,15 @@
     "statistics",
     "diagram"
   ],
+  "piggy-bank": [
+    "money",
+    "savings"
+  ],
   "pin": [
     "save",
     "map",
     "lock",
     "fix"
-  ],
-  "piggy-bank": [
-    "money",
-    "savings"
   ],
   "pipette": [
     "eye dropper",
@@ -1660,6 +1710,8 @@
     "rule",
     "law"
   ],
+  "scan": [],
+  "scan-line": [],
   "scissors": [
     "cut"
   ],
