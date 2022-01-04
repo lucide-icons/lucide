@@ -21,8 +21,8 @@
   "scripts": {
     "build": "yarn clean && yarn build:icons",
     "build:old": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-svelte/src --templateSrc=../packages/lucide-svelte/scripts/exportTemplate --renderUniqueKey --iconFileExtention=.svelte",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-svelte/src --templateSrc=../packages/lucide-svelte/scripts/exportTemplate --iconFileExtention=.svelte --pretty=false",
     "build:es": "babel src -d dist/esm",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-svelte/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-svelte/rollup.config.js",
@@ -36,5 +36,6 @@
   },
   "peerDependencies": {
     "preact": "^10.5.13"
-  }
+  },
+  "dependencies": {}
 }

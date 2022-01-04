@@ -1,7 +1,15 @@
-export default ({ componentName, children }) => `
-import createPreactComponent from '../createPreactComponent';
+import { stringify } from 'svgson';
 
-const ${componentName} = createPreactComponent('${componentName}', ${JSON.stringify(children)});
+export default ({ children }) => {
+  const iconChildNodes = children.map(([name, attributes]) => ({ name, attributes, children: [] }));
+  const iconChildrenHTML = iconChildNodes.map(stringify).join('\n  ');
+  return `\
+<script>
+import Icon from '../Icon';
+</script>
 
-export default ${componentName};
+<Icon {...$$props}>
+  ${iconChildrenHTML}
+</Icon>
 `;
+};
