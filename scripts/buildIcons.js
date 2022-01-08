@@ -48,4 +48,5 @@ generateExportsFile(
   path.join(OUTPUT_DIR, 'icons', exportFileName),
   path.join(OUTPUT_DIR, 'icons'),
   icons,
+  iconFileExtention,
 );

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { stringify } from 'svgson';
 
 export default ({ children }) => {
@@ -5,7 +6,7 @@ export default ({ children }) => {
   const iconChildrenHTML = iconChildNodes.map(stringify).join('\n  ');
   return `\
 <script>
-import Icon from '../Icon';
+import Icon from '../Icon.svelte';
 </script>
 
 <Icon {...$$props}>

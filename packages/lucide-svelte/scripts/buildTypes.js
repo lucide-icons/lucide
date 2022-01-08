@@ -11,21 +11,28 @@ const srcDirectory = path.join(__dirname, '../dist');
 
 // Declare type definitions
 const typeDefinitions = `\
-/// <reference types="preact" />
-import { JSX, RefObject } from 'preact'
+/// <reference types="svelte" />
+/// <reference types="svelte2tsx/svelte-jsx" />
+import { SvelteComponentTyped } from "svelte";
 
-interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
-  key?: string | number;
-  ref?: string | ((component: any) => any) | RefObject<any>;
+interface IconProps extends Partial<svelte.JSX.SVGProps<SVGSVGElement>> {
   color?: string
-  size?: string | number
+  size?: number,
+  strokeWidth?: number,
+  class?: string
 }
+
+interface IconEvents {
+  [evt: string]: CustomEvent<any>;
+}
+
+export type Icon = SvelteComponentTyped<IconProps, IconEvents, {}>
 
 // Generated icons
 `;
 
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
-const TYPES_FILE = 'lucide-preact.d.ts';
+const TYPES_FILE = 'lucide-svelte.d.ts';
 
 resetFile(TYPES_FILE, srcDirectory);
 writeFile(typeDefinitions, TYPES_FILE, srcDirectory);
@@ -36,7 +43,7 @@ svgFiles.forEach(svgFile => {
   const iconName = path.basename(svgFile, '.svg');
   const componentName = toPascalCase(iconName);
 
-  const exportTypeString = `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
+  const exportTypeString = `export declare class ${componentName} extends SvelteComponentTyped<IconProps, IconEvents, {}> {}\n`;
   appendFile(exportTypeString, TYPES_FILE, srcDirectory);
 });
 

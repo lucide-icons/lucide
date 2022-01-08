@@ -80,6 +80,7 @@
     "icons/*.svg": "npx babel-node ./scripts/optimizeStagedSvgs.js --presets @babel/env"
   },
   "dependencies": {
+    "rollup-plugin-svelte": "^7.1.0",
     "svg-outline-stroke": "^1.3.1"
   }
 }
