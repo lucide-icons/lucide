@@ -38,5 +38,9 @@
   },
   "dependencies": {
     "@microsoft/api-extractor": "^7.19.4"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.46",
+    "react-native-svg": ">=5.3"
   }
 }
