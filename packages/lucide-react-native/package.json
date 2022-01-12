@@ -1,0 +1,42 @@
+{
+  "name": "lucide-react-native",
+  "description": "A Lucide icon library package for React Native applications",
+  "version": "0.16.25",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-react-native"
+  },
+  "keywords": [
+    "Lucide",
+    "React",
+    "Native",
+    "Feather",
+    "Icons",
+    "Icon",
+    "Feather Icons"
+  ],
+  "typings": "dist/lucide-react-native.d.ts",
+  "scripts": {
+    "build": "svgr --native --icon --typescript -d src/icons ../../icons",
+    "prepublish": "npm run build && tsc -p tsconfig.json && api-extractor run --local && rimraf typings src"
+  },
+  "author": "Henrikas Kuzmickas",
+  "license": "ISC",
+  "devDependencies": {
+    "@svgr/babel-plugin-remove-jsx-attribute": "^6.0.0",
+    "@svgr/babel-plugin-replace-jsx-attribute-value": "^6.0.0",
+    "@svgr/cli": "^6.2.0",
+    "@types/react": "^17.0.38",
+    "react": "^17.0.2",
+    "react-native": "^0.66.4",
+    "react-native-svg": "^12.1.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@microsoft/api-extractor": "^7.19.4"
+  }
+}
