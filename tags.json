@@ -338,6 +338,11 @@
     "transport",
     "trip"
   ],
+  "carrot": [
+    "vegetable",
+    "food",
+    "eat"
+  ],
   "cast": [
     "chromecast",
     "airplay"
@@ -652,6 +657,11 @@
     "water",
     "humidity"
   ],
+  "drumstick": [
+    "food",
+    "chicken",
+    "meat"
+  ],
   "edit": [
     "pencil",
     "change"
@@ -663,6 +673,9 @@
   "edit-3": [
     "pencil",
     "change"
+  ],
+  "egg": [
+    "food"
   ],
   "equal": [
     "calculate"
@@ -1490,6 +1503,12 @@
     "statistics",
     "diagram"
   ],
+  "pin": [
+    "save",
+    "map",
+    "lock",
+    "fix"
+  ],
   "piggy-bank": [
     "money",
     "savings"
@@ -1884,6 +1903,9 @@
     "delete",
     "remove"
   ],
+  "subscript": [
+    "text"
+  ],
   "sun": [
     "brightness",
     "weather",
@@ -1900,6 +1922,10 @@
     "time",
     "evening",
     "night"
+  ],
+  "superscript": [
+    "text",
+    "exponent"
   ],
   "swiss-franc": [
     "currency",
