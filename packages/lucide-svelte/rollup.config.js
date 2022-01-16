@@ -1,7 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import svelte from 'rollup-plugin-svelte';
 import preprocess from 'svelte-preprocess';
-import plugins from '../../rollup.plugins';
+import bundleSize from '@atomico/rollup-plugin-sizes';
+import { terser } from 'rollup-plugin-terser';
+import license from 'rollup-plugin-license';
+import resolve from '@rollup/plugin-node-resolve';
+import commonJS from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 const packageName = 'LucideSvelte';
@@ -43,7 +47,16 @@ const configs = bundles
           },
           emitCss: false,
         }),
-        ...plugins(pkg, minify),
+        resolve(),
+        commonJS({
+          include: 'node_modules/**',
+        }),
+        // The two minifiers together seem to procude a smaller bundle 🤷‍♂️
+        minify && terser(),
+        license({
+          banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
+        }),
+        bundleSize(),
       ],
       external: ['svelte'],
       output: {
@@ -51,6 +64,9 @@ const configs = bundles
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,
+        globals: {
+          svelte: 'svelte',
+        },
       },
     })),
   )
