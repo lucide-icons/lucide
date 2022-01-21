@@ -6,10 +6,14 @@ import mdxComponents from '../../lib/mdxComponents';
 import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
 import DocsMenu from '../../components/DocsMenu';
-import { Box } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
+import { ArrowRight } from 'lucide-react'
+import Link from 'next/link';
 
 const DocPage = ({ doc, data, content }) => {
   if (!data || !doc) return null
+
+  const nextPage = data.nextPage || []
 
   return (
     <HeadingNavigationProvider>
@@ -18,7 +22,7 @@ const DocPage = ({ doc, data, content }) => {
       </MobileMenu>
       <Layout aside={
           <DocsMenu
-            display={{ base:'none', lg: 'block' }}
+            display={{ base:'none', md: 'block' }}
             paddingX={8}
             position="sticky"
             overflowY="auto"
@@ -37,6 +41,26 @@ const DocPage = ({ doc, data, content }) => {
 
         <Box maxWidth="xl" width='100%' marginX='auto'>
           <MDXRemote {...doc} data={data} components={mdxComponents} />
+
+          { nextPage.map((page) => (
+            <Link href={`docs/${page}`}>
+              <Button
+                variant="ghost"
+                borderWidth="1px"
+                rounded="lg"
+                padding={8}
+                position="relative"
+                width='60%'
+                minWidth={240}
+                marginTop={6}
+                rightIcon={<ArrowRight />}
+                >
+                  <Text fontSize={19} fontWeight="bold" textTransform="capitalize">
+                    {page}
+                  </Text>
+              </Button>
+            </Link>
+          )) }
         </Box>
       </Layout>
     </HeadingNavigationProvider>

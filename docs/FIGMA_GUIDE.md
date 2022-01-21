@@ -4,4 +4,4 @@ title: Figma Template Guide
 
 # Figma Template Guide
 
-Please help use create this one.
+Please help us write this guide.

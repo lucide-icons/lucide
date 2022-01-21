@@ -53,13 +53,13 @@ const components = {
     return (
       <CodeBlock
         //@ts-ignore
-        my={2}
+        my={6}
         code={code}
         language={language}
       />
     )
   },
-  table: (props) => <Table {...props} rounded={4}/>,
+  table: (props) => <Table {...props} rounded={4} mb={4}/>,
   thead: Thead,
   tbody: Tbody,
   tr: Tr,
@@ -80,11 +80,18 @@ const components = {
   inlineCode: InlineCode,
   hr: (props) => <Divider my={4}/>,
   a: ({children, href, ...rest}) => {
-    const isExternal = href.startsWith('http')
+    let link = href
+    const isExternal = link.startsWith('http')
+
+    if(link.startsWith('packages/')) {
+      link = href.replace('packages/', '')
+    }
+
+    link = link.replace('.md', '')
 
     return (
       <NextLink
-        href={isExternal ? href : `/docs/${href.replace('.md', '')}`}
+        href={isExternal ? href : `/docs/${link}`}
         {...rest}
         passHref
       >

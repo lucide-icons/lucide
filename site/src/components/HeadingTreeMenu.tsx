@@ -17,10 +17,6 @@ const HeadingTreeMenu = () => {
     [headings],
   );
 
-  useEffect(() => {
-    console.log(headingElements);
-  }, [headingElements, headings]);
-
   return <div />;
 };
 

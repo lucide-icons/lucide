@@ -1,9 +1,8 @@
 ---
 title: Introduction
-nextPage: [
-  comparison
-  installation
-]
+nextPage:
+  - comparison
+  - installation
 ---
 
 # Introduction
