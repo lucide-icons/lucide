@@ -1438,7 +1438,7 @@
   ],
   "package-check": [
     "confirm",
-    "verified",
+    "verified"
   ],
   "package-minus": [
     "delete",
@@ -1447,15 +1447,15 @@
   "package-plus": [
     "new",
     "add",
-    "create",
+    "create"
   ],
   "package-x": [
     "delete",
-    "remove",
+    "remove"
   ],
   "package-search": [
     "find",
-    "product process",
+    "product process"
   ],
   "palette": [
     "color",
