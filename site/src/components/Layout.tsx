@@ -82,6 +82,11 @@ const Layout = ({ aside, children }: LayoutProps) => {
                     Packages
                   </Link>
                 </NextLink>
+                <NextLink href="/license" passHref>
+                  <Link marginRight={12} fontSize="xl">
+                    License
+                  </Link>
+                </NextLink>
                 <Link
                   href="https://github.com/lucide-icons/lucide"
                   isExternal
