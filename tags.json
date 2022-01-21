@@ -1434,7 +1434,29 @@
   ],
   "package": [
     "box",
-    "container"
+    "container",
+	"product"
+  ],
+  "package-check": [
+    "confirm",
+    "verified",
+  ],
+  "package-minus": [
+    "delete",
+    "remove"
+  ],
+  "package-plus": [
+    "new",
+    "add",
+    "create",
+  ],
+  "package-x": [
+    "delete",
+    "remove",
+  ],
+  "package-search": [
+    "find",
+    "product process",
   ],
   "palette": [
     "color",
