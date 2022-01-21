@@ -1923,6 +1923,10 @@
     "evening",
     "night"
   ],
+  "superscript": [
+    "text",
+    "exponent"
+  ],
   "swiss-franc": [
     "currency",
     "money",
