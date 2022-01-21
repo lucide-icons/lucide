@@ -1,116 +1,24 @@
 ---
 title: Introduction
+nextPage: [
+  comparison
+  installation
+]
 ---
 
 # Introduction
 
-## What is Lucide?
+An open source icon library for displaying icons and symbols in digital and non digital projects. It is containing over 500+ Vector (svg) files. To use these icons, lucide provides several official packages to make it easier to use these icons in projects.
 
-Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
+Lucide contains icons with different variants and states. With that designers and developers can choose the right icon for them selves. If icons don't exist you're free to open design request. The Lucide community will help.
 
-It began after growing disaffection of the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
+With help of the community, contributors are providing the library of new icons. With more icons, we simply have more icons to work with in your project. Also with rising of new applications with specific features lucide has the goal the provide the complete set for you project.
 
-Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
+When designing new icons, the community is working with a set of design rules. This is to keep icons: recognizable, consistency in style, and readable on all sizes. The community likes to have creativity in new icons but conventional design is important to have recognizable icons.
 
-### Why choose Lucide over Feather Icons
+Beside design, code is also important. Assets like icons in for example web projects can increase the transferred bytes significantly. With the growing internet, lucide has the responsibility to keep their assets small as possible. To achieve this, lucide uses SVG compression and specific code architecture for three-shaking abilities. With three-shaking used you will only ship the icons you used, helps you to keep the software small as possible when distributed.
 
-- Lucide already expended the icon set by 130+ in less then a year, so more icons to work with.
-- Well maintained code base.
-- Active community.
+Lucide provides several official packages for: [Web (Vanilla)](https://lucide.dev/docs/lucide), [React](https://lucide.dev/docs/lucide-react), [Vue](https://lucide.dev/docs/lucide-vue), [Vue 3](https://lucide.dev/docs/lucide-vue-next), [Preact](https://lucide.dev/docs/lucide-preact), [Angular](https://lucide.dev/docs/lucide-angular), [NodeJS](https://lucide.dev/docs/lucide-static#nodejs) and [Flutter](https://lucide.dev/docs/lucide-flutter).
 
-## Getting Started
-
-At its core, Lucide is a collection of [SVG](https://svgontheweb.com/#svg) files. This means that you can use Lucide icons in all the same ways you can use SVGs (e.g. `img`, `background-image`, `inline`, `object`, `embed`, `iframe`). Here's a helpful article detailing the many ways SVGs can be used on the web: [SVG on the Web – Implementation Options](https://svgontheweb.com/#implementation)
-
-### Using Lucide packages
-
-### Web
-
-Implementation of the lucide icon library for web applications.
-
-```sh
-npm install lucide
-
-#or
-
-yarn add lucide
-```
-
-For more details, see the [documentation](lucide).
-
-### React
-
-Implementation of the lucide icon library for react applications.
-
-```sh
-yarn add lucide-react
-
-# or
-
-npm install lucide-react
-```
-
-For more details, see the [documentation](lucide-react).
-
-### Vue 2
-
-Implementation of the lucide icon library for vue applications.
-
-```sh
-yarn add lucide-vue
-
-# or
-
-npm install lucide-vue
-```
-
-For more details, see the [documentation](lucide-vue).
-
-### Vue 3
-
-Implementation of the lucide icon library for vue applications.
-
-```sh
-yarn add lucide-vue-next
-
-# or
-
-npm install lucide-vue-next
-```
-
-For more details, see the [documentation](lucide-vue-next).
-
-### Angular
-
-```sh
-yarn add lucide-angular
-
-# or
-
-npm install lucide-angular
-```
-
-For more details, see the [documentation](lucide-angular).
-
-### Preact
-
-Implementation of the lucide icon library for preact applications.
-
-```sh
-yarn add lucide-preact
-
-# or
-
-npm install lucide-preact
-```
-
-For more details, see the [documentation](lucide-preact).
-
-### Figma
-
-The lucide figma plugin.
-
-Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
-
-![Figma Lucide Cover](https://www.figma.com/community/plugin/939567362549682242/thumbnail "Figma Lucide Cover")
+Any questions about lucide? Ask the community. Active on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
 

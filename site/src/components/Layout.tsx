@@ -37,12 +37,12 @@ const Layout = ({ aside, children }: LayoutProps) => {
   };
 
   function setQuery(query) {
-    router
-      .push({
+    router.push({
         pathname: '/',
         query: { query: query },
-      })
-      .then();
+    },
+    undefined,
+    { shallow: true })
   }
 
   useKeyBindings({
@@ -110,7 +110,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
         </Flex>
       </Flex>
       <Flex>
-        {aside ? <Box as="aside">{aside}</Box> : null}
+        {aside ? <Box as="aside" marginRight={{ base: 0, lg: -240, }}>{aside}</Box> : null}
         <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
           {children}
           <Divider mb={6} mt={12} />

@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Text, useToast } from "@chakra-ui/react";
+import { Button, ButtonProps, Flex, Grid, Text, useToast } from "@chakra-ui/react";
 import download from 'downloadjs';
 import Link from 'next/link'
 import copy from "copy-to-clipboard";
@@ -8,8 +8,15 @@ import {IconWrapper} from "./IconWrapper";
 import { useRouter } from "next/router";
 import ModifiedTooltip from './ModifiedTooltip';
 
+interface IconListItemProps {
+  name: string,
+  content: string,
+  contributors: any[]
+  src: string
+  onClick?: ButtonProps['onClick']
+}
 
-const IconListItem = ({ name, content, contributors }) => {
+const IconListItem = ({ name, content, contributors, src, onClick }: IconListItemProps) => {
   const toast = useToast();
   const {color, size, strokeWidth} = useContext(IconStyleContext);
 
@@ -22,7 +29,7 @@ const IconListItem = ({ name, content, contributors }) => {
       position="relative"
       onClick={(event) => {
         if (event.shiftKey) {
-          copy(icon.src);
+          copy(src);
           toast({
             title: "Copied!",
             description: `Icon "${name}" copied to clipboard.`,
@@ -30,12 +37,15 @@ const IconListItem = ({ name, content, contributors }) => {
             duration: 1500,
           });
         }
-        if (event.metaKey) {
+        if (event.altKey) {
           download(
-            icon.src,
-            `${name}.svg`,
+            src,
+            `${name}.\svg`,
             "image/svg+xml"
           );
+        }
+        if (onClick) {
+          onClick(event)
         }
       }}
       key={name}

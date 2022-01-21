@@ -5,11 +5,12 @@ import fetchAllDocuments from '../../lib/fetchAllDocuments';
 
 export { default } from '.';
 
+const transformToReadableSlug = (fileName: string) => fileName.toLowerCase().replaceAll('_', '-').replace('.md', '');
+
 export async function getStaticProps({ params: { docName } }) {
   const allDocs = await fetchAllDocuments();
-  console.log();
 
-  const doc = allDocs.find(({ filename = '' }) => filename === `${docName}.md`);
+  const doc = allDocs.find(({ filename = '' }) => transformToReadableSlug(filename) === docName);
 
   return { props: doc };
 }
@@ -21,7 +22,7 @@ export async function getStaticPaths() {
     .filter(({ filename = '' }) => filename !== 'index.md')
     .map(doc => ({
       params: {
-        docName: doc.filename.replace('.md', ''),
+        docName: transformToReadableSlug(doc.filename),
       },
     }));
 

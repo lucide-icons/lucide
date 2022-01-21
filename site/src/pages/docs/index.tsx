@@ -35,7 +35,7 @@ const DocPage = ({ doc, data, content }) => {
           </Head>
         ) : null}
 
-        <Box maxWidth="lg" width='100%' marginX='auto'>
+        <Box maxWidth="xl" width='100%' marginX='auto'>
           <MDXRemote {...doc} data={data} components={mdxComponents} />
         </Box>
       </Layout>

@@ -2,7 +2,7 @@ import { Button, Flex, Grid, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import Link from 'next/link';
 import copy from 'copy-to-clipboard';
-import { useContext, useMemo } from 'react';
+import { useCallback, useContext, useMemo } from 'react';
 import { IconStyleContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 import { useRouter } from 'next/router';
@@ -27,6 +27,7 @@ const IconList = ({ icons }) => {
           <Link
             key={name}
             scroll={false}
+            shallow={true}
             href={{
               pathname: '/icon/[iconName]',
               query: {

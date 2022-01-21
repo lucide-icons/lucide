@@ -10,10 +10,10 @@ const docsMenuTree = [
         title: 'Installation',
         href: 'installation'
       },
-      // {
-      //   title: 'Comparison',
-      //   href: 'comparison'
-      // },
+      {
+        title: 'Comparison',
+        href: 'comparison'
+      },
       // {
       //   title: 'Examples',
       //   href: 'examples'
@@ -99,6 +99,27 @@ const docsMenuTree = [
       {
         title: 'Lucide Flutter',
         href: 'lucide-flutter'
+      },
+    ]
+  },
+  {
+    section: 'Contributing',
+    items: [
+      {
+        title: 'Icon Design Principles',
+        href: 'icon-design-guide'
+      },
+      {
+        title: 'Designing in Illustrator',
+        href: 'illustrator-guide'
+      },
+      {
+        title: 'Designing in InkScape',
+        href:  'inkscape-guide'
+      },
+      {
+        title: 'Designing in Figma',
+        href: 'figma-guide'
       },
     ]
   },

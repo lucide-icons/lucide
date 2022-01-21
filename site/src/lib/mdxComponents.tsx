@@ -31,10 +31,10 @@ const components = {
     </HeadingAnchored>
   ),
   h3: (props) => (
-    <HeadingAnchored as="h3" size="md" pt={4} mb={2} {...props}/>
+    <HeadingAnchored as="h3" size="md" pt={4} mb={4} {...props}/>
   ),
   h4: (props) => (
-    <HeadingAnchored as="h4" size="sm" pt={4} mb={2} {...props}/>
+    <HeadingAnchored as="h4" size="sm" pt={4} mb={4} {...props}/>
   ),
   h5: (props) => (
     <HeadingAnchored as="h5" size="xs" pt={2} mb={1} {...props}/>
@@ -45,7 +45,7 @@ const components = {
   ul: (props) => <UnorderedList my={2}>{props.children}</UnorderedList>,
   ol: (props) => <OrderedList my={2}>{props.children}</OrderedList>,
   li: (props) => <ListItem my={1}>{props.children}</ListItem>,
-  p: (props) => <Text my={2}>{props.children}</Text>,
+  p: (props) => <Text my={4}>{props.children}</Text>,
   img: ({ children, ...rest }) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>,
   code: ({ className, children: code }) => {
     const language = className.replace('language-', '');
