@@ -5,7 +5,11 @@ import fetchAllDocuments from '../../lib/fetchAllDocuments';
 
 export { default } from '.';
 
-const transformToReadableSlug = (fileName: string) => fileName.toLowerCase().replaceAll('_', '-').replace('.md', '');
+const transformToReadableSlug = (fileName: string) =>
+  fileName
+    .toLowerCase()
+    .replace(/_/g, '-')
+    .replace('.md', '');
 
 export async function getStaticProps({ params: { docName } }) {
   const allDocs = await fetchAllDocuments();
