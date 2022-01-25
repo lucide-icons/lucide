@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "copy-assets": "mkdir -p ./public/docs/images && cp -rf ../docs/images ./public/docs",
-    "build": "copy-assets && next build",
+    "build": "yarn copy-assets && next build",
     "export": "next export -o build",
     "deploy": "yarn build && yarn export",
     "lint": "eslint .",
