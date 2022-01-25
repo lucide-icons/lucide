@@ -1828,6 +1828,57 @@
     "sum",
     "calculate"
   ],
+  "signal": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-high": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-low": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-medium": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-zero": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g",
+    "lost"
+  ],
   "skip-back": [
     "arrow",
     "previous",
