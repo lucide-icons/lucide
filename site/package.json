@@ -5,26 +5,32 @@
   "author": "John Letey",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "copy-assets": "mkdir -p ./public/docs/images && cp -rf ../docs/images ./public/docs",
+    "build": "yarn copy-assets && next build",
     "export": "next export -o build",
     "deploy": "yarn build && yarn export",
+    "lint": "eslint .",
     "test": "jest"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@next/mdx": "^11.0.0",
     "downloadjs": "^1.4.7",
     "framer-motion": "^4",
-    "fuse.js": "^6.0.4",
+    "gray-matter": "^4.0.3",
+    "object-path": "0.11.5",
     "immutability-helper": "^3.1.1",
-    "jszip": "^3.4.0",
+    "js-yaml": "^4.1.0",
+    "jszip": "^3.7.0",
     "lodash": "^4.17.20",
     "lucide-react": "0.14.0",
-    "memoize-one": "^5.2.1",
-    "next": "^10.0.4",
-    "object-path": "0.11.5",
-    "prism-react-renderer": "^1.2.0",
+    "next": "^11.1.1",
+    "next-mdx-remote": "^3.0.2",
+    "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-color": "^2.19.3",
     "react-dnd": "13.1.1",
@@ -36,6 +42,7 @@
     "react-svg-loader": "^3.0.3"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^11.1.0",
     "@testing-library/dom": "^7.24.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
@@ -43,10 +50,14 @@
     "@types/node": "^14.0.11",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
     "cheerio": "^1.0.0-rc.3",
+    "eslint": "^7.32.0",
     "jest": "^26.5.2",
-    "typescript": "^4.2.4"
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
   }
 }

@@ -5,13 +5,20 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/jest", "**/jest/**",
-      "**/jasmine", "**/jasmine/**",
-      "**/react", "**/react/**",
-      "**/testing-library__jest-dom", "**/testing-library__jest-dom/**",
-      "**/testing-library__react-hooks", "**/testing-library__react-hooks/**",
-      "**/react-dom", "**/react-dom/**",
-      "**/react-test-renderer", "**/react-test-renderer/**"
+      "**/jest",
+      "**/jest/**",
+      "**/jasmine",
+      "**/jasmine/**",
+      "**/react",
+      "**/react/**",
+      "**/testing-library__jest-dom",
+      "**/testing-library__jest-dom/**",
+      "**/testing-library__react-hooks",
+      "**/testing-library__react-hooks/**",
+      "**/react-dom",
+      "**/react-dom/**",
+      "**/react-test-renderer",
+      "**/react-test-renderer/**"
     ]
   },
   "scripts": {
@@ -23,7 +30,9 @@
     "lucide-preact": "yarn workspace lucide-preact",
     "lucide-vue": "yarn workspace lucide-vue",
     "lucide-vue-next": "yarn workspace lucide-vue-next",
+    "lucide-static": "yarn workspace lucide-static",
     "build:icons": "babel-node ./scripts/buildIcons.js --presets @babel/env",
+    "build:outline-icons": "babel-node ./scripts/outlineSvg.js --presets @babel/env",
     "optimize": "babel-node ./scripts/optimizeSvgs.js --presets @babel/env",
     "addtags": "babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
     "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env"
@@ -68,5 +77,8 @@
   },
   "lint-staged": {
     "icons/*.svg": "npx babel-node ./scripts/optimizeStagedSvgs.js --presets @babel/env"
+  },
+  "dependencies": {
+    "svg-outline-stroke": "^1.3.1"
   }
 }

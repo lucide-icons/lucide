@@ -1,27 +1,53 @@
-import { Box, Divider, Flex, Text, Link, Icon, useColorMode, useColorModeValue, IconButton, Button, WrapItem, Wrap } from "@chakra-ui/react";
-import { useKeyBindings } from "../lib/key";
-import { useRouter } from "next/router";
-import NextLink from "next/link"
-import { Moon, Sun } from 'lucide-react';
-import Logo from 'babel-loader!react-svg-loader?jsx=true!../../public/logo.svg';
-import { useCallback } from "react";
+import {
+  Box,
+  Divider,
+  Flex,
+  Link,
+  useColorMode,
+  useColorModeValue,
+  IconButton,
+  useBreakpointValue,
+  BoxProps,
+} from '@chakra-ui/react';
+import { useKeyBindings } from '../lib/key';
+import { useRouter } from 'next/router';
+import NextLink from 'next/link';
+import { Moon, Sun, Menu, X } from 'lucide-react';
+import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
+import Logo from './Logo';
 
-const Layout = ({ children, maxWidth = "1250px" }) => {
+interface LayoutProps extends BoxProps {
+  aside?: BoxProps['children'];
+}
+
+const Layout = ({ aside, children, maxWidth = "1250px" }: LayoutProps) => {
   const router = useRouter();
-  const { colorMode, toggleColorMode } = useColorMode();
-  const text = useColorModeValue('dark', 'light')
+  const { toggleMobileMenu } = useMobileNavigationContext();
+  const { toggleColorMode } = useColorMode();
+  const currentColorMode = useColorModeValue('dark', 'light');
   const ColorModeToggle = useColorModeValue(Moon, Sun);
+  const MobileMenuToggle = useMobileNavigationValue(Menu, X);
+  const showBaseNavigation = useBreakpointValue({ base: false, md: true });
+  const IconbuttonProps = {
+    size: 'md',
+    fontSize: 'lg',
+    variant: 'ghost',
+    color: 'current',
+    ml: '3',
+  };
 
-  function setQuery(query){
+  function setQuery(query) {
     router.push({
-      pathname: '/',
-      query: { query: query }
-    }).then();
+        pathname: '/',
+        query: { query: query },
+    },
+    undefined,
+    { shallow: true })
   }
 
   useKeyBindings({
     Escape: {
-      fn: () => setQuery(""),
+      fn: () => setQuery(''),
     },
     KeyT: {
       fn: () => toggleColorMode(),
@@ -42,57 +68,65 @@ const Layout = ({ children, maxWidth = "1250px" }) => {
           px={5}
         >
           <Flex justifyContent="center" alignItems="center">
-            <NextLink href="/" passHref>
-              <Link display="flex" _hover={{textDecoration: 'none'}}>
-                <Icon boxSize={12} marginRight="8px">
-                  <Logo/>
-                </Icon>
-                <Text
-                  fontSize="40px"
-                  lineHeight="48px"
-                >
-                  Lucide
-                </Text>
-              </Link>
-            </NextLink>
+            <Logo />
           </Flex>
           <Flex justifyContent="center" alignItems="center">
-          <Link
-            href="https://github.com/lucide-icons/lucide"
-            isExternal
-            marginRight={6}
-            fontSize="xl"
-          >
-            Github
-          </Link>
-          <IconButton
-            size="md"
-            fontSize="lg"
-            aria-label={`Switch to ${text} mode`}
-            variant="ghost"
-            color="current"
-            ml="3"
-            onClick={toggleColorMode}
-            icon={<ColorModeToggle />}
-          />
+            {showBaseNavigation ? (
+              <>
+                <NextLink href="/docs" passHref>
+                  <Link marginRight={12} fontSize="xl">
+                    Documentation
+                  </Link>
+                </NextLink>
+                <NextLink href="/packages" passHref>
+                  <Link marginRight={12} fontSize="xl">
+                    Packages
+                  </Link>
+                </NextLink>
+                <NextLink href="/license" passHref>
+                  <Link marginRight={12} fontSize="xl">
+                    License
+                  </Link>
+                </NextLink>
+                <Link
+                  href="https://github.com/lucide-icons/lucide"
+                  isExternal
+                  marginRight={6}
+                  fontSize="xl"
+                >
+                  Github
+                </Link>
+              </>
+            ) : null}
+            <IconButton
+              aria-label={`Switch to ${currentColorMode} mode`}
+              onClick={toggleColorMode}
+              {...IconbuttonProps}
+              icon={<ColorModeToggle />}
+            />
+            {!showBaseNavigation ? (
+              <IconButton
+                aria-label={`Open Mobile menu`}
+                onClick={toggleMobileMenu}
+                {...IconbuttonProps}
+                icon={<MobileMenuToggle />}
+              />
+            ) : null}
           </Flex>
         </Flex>
       </Flex>
-      <Flex margin="0 auto" direction="column" maxW="1250px" px={5}>
-        {children}
-        <Divider marginTop={4} marginBottom={4}/>
-        <Wrap marginBottom={4}>
-          <WrapItem>
-            <Button variant="ghost" onClick={() => router.push('/edit/categories')}>Edit Categories</Button>
-          </WrapItem>
-        </Wrap>
-        <Divider marginTop={4} marginBottom={4}/>
-        <p style={{ alignSelf: "center" }}>
-          <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-            <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
-          </a>
-        </p>
-        <br />
+      <Flex>
+        {aside ? <Box as="aside" marginRight={{ base: 0, lg: -240, }}>{aside}</Box> : null}
+        <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
+          {children}
+          <Divider mb={6} mt={12} />
+          <p style={{ alignSelf: 'center' }}>
+            <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+              <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+            </a>
+          </p>
+          <br />
+        </Flex>
       </Flex>
     </Box>
   );

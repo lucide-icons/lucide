@@ -2,6 +2,16 @@
   "name": "Lucide Icons",
   "id": "939567362549682242",
   "api": "1.0.0",
-  "ui": "build/ui.html",
-  "main": "build/main.js"
+  "editorType": ["figma"],
+  "main": "dist/assets/main.js",
+  "ui": {
+    "interface": "dist/src/interface/interface.html",
+    "worker": "dist/src/worker/worker.html"
+  },
+  "parameterOnly": false,
+  "parameters": [{
+    "name": "Icon",
+    "key": "icon-name",
+    "description": "Enter the name of the icon you want to insert."
+  }]
 }

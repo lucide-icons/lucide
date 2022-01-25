@@ -8,18 +8,19 @@ const theme = {
   },
   colors: {
     ...chakraTheme.colors,
-    red: {
-      50: "#FBC5C5",
-      100: "#FAB2B2",
-      200: "#F99F9F",
-      300: "#F88C8C",
-      400: "#F67979",
-      500: "#F56565",
-      600: "#F45252",
-      700: "#F33F3F",
-      800: "#F22C2C",
-      900: "#F01919",
-    }
+    brand: {
+      DEFAULT: '#F56565',
+      '50': '#FFFFFF',
+      '100': '#FFFEFE',
+      '200': '#FCD8D8',
+      '300': '#FAB2B2',
+      '400': '#F78B8B',
+      '500': '#F56565',
+      '600': '#F23030',
+      '700': '#DC0E0E',
+      '800': '#A70B0B',
+      '900': '#720707'
+    },
   },
   components: {
     ...chakraTheme.components,
@@ -29,13 +30,13 @@ const theme = {
         ...chakraTheme.components.Button.variants,
         primary: (props) => ({
           ...chakraTheme.components.Button.variants.solid,
-          bg: "red.500",
+          bg: "brand.500",
           color: "white",
           _hover: {
-            bg: "red.600",
+            bg: "brand.600",
           },
           _active: {
-            bg: "red.700",
+            bg: "brand.700",
           },
         }),
       }

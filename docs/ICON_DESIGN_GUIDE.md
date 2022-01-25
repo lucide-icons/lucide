@@ -1,11 +1,15 @@
-# Icon Design Guide
+---
+title: Icon Design Guide
+---
+
+# Icon Design Principles
 
 Here are rules that should be followed to keep quality and consistency when making icons for Lucide.
 
 ## Summary of the rules we have
 
 1. Icons must be designed on a **24 by 24 pixels** canvas.
-2. Icons must have a **1 pixel padding** within the canvas.
+2. Icons must have at least **1 pixel padding** within the canvas.
 3. Icons must have a **stroke width of 2 pixels**.
 4. Icons must use **round joins**.
 5. Icons must use **round caps**.
@@ -19,7 +23,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![24px-24px](images/24px-24px.png?raw=true "24px-24px")
 
-### 2. Icons must have a 1 pixel padding within the canvas.
+### 2. Icons must have at least 1 pixel padding within the canvas.
 
 ![1px-padding](images/1px-padding.png?raw=true "1px-padding")
 

@@ -54,13 +54,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -107,6 +103,7 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
     class="lucide-icon my-icon"
@@ -160,6 +157,7 @@ VueWrapper {
       data-v-app=""
     >
       <svg
+        class="lucide lucide-smile-icon"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -198,13 +196,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -251,8 +245,10 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
+    class="lucide lucide-smile-icon"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -304,6 +300,7 @@ VueWrapper {
       data-v-app=""
     >
       <svg
+        class="lucide lucide-smile-icon"
         fill="none"
         height="48"
         size="48"
@@ -343,13 +340,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -396,8 +389,10 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
+    class="lucide lucide-smile-icon"
     fill="none"
     height="48"
     size="48"
@@ -450,6 +445,7 @@ VueWrapper {
       data-v-app=""
     >
       <svg
+        class="lucide lucide-smile-icon"
         fill="none"
         height="24"
         stroke="currentColor"
@@ -487,13 +483,9 @@ VueWrapper {
       "components": Object {
         "transition": Object {
           "name": "transition",
-          "props": undefined,
-          "render": [Function],
         },
         "transition-group": Object {
           "name": "transition-group",
-          "props": undefined,
-          "render": [Function],
         },
       },
       "config": Object {
@@ -540,8 +532,10 @@ VueWrapper {
   "componentVM": Object {
     "hasOwnProperty": [Function],
   },
+  "isDisabled": [Function],
   "rootVM": Object {},
   "wrapperElement": <svg
+    class="lucide lucide-smile-icon"
     fill="none"
     height="24"
     stroke="currentColor"

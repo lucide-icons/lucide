@@ -16,6 +16,10 @@
   "alarm-clock": [
     "morning"
   ],
+  "alarm-clock-off": [
+    "morning",
+    "turn-off"
+  ],
   "alarm-minus": [
     "remove"
   ],
@@ -201,6 +205,12 @@
     "create",
     "new"
   ],
+  "bell-ring": [
+    "alarm",
+    "notification",
+    "sound",
+    "reminder"
+  ],
   "bike": [
     "bicycle",
     "transport",
@@ -231,6 +241,7 @@
     "pairing"
   ],
   "bold": [
+    "text",
     "strong"
   ],
   "book": [
@@ -249,6 +260,13 @@
     "clip",
     "marker",
     "tag"
+  ],
+  "bookmark-minus": [
+    "delete",
+    "remove"
+  ],
+  "bookmark-plus": [
+    "add"
   ],
   "bot": [
     "robot"
@@ -323,11 +341,25 @@
   "check-circle": [
     "done"
   ],
+  "check-circle-2": [
+    "done"
+  ],
   "check-square": [
     "done"
   ],
   "chevron-down": [
     "arrow"
+  ],
+  "chevron-first": [
+    "arrow",
+    "previous",
+    "music"
+  ],
+  "chevron-last": [
+    "arrow",
+    "skip",
+    "next",
+    "music"
   ],
   "chevron-left": [
     "arrow"
@@ -381,10 +413,20 @@
     "copied",
     "pasted"
   ],
+  "clipboard-copy": [
+    "copy",
+    "paste"
+  ],
   "clipboard-list": [
     "copy",
     "paste",
     "tasks"
+  ],
+  "clipboard-x": [
+    "copy",
+    "paste",
+    "discard",
+    "remove"
   ],
   "clock": [
     "time",
@@ -556,6 +598,10 @@
     "king",
     "winner",
     "favourite"
+  ],
+  "currency": [
+    "finance",
+    "money"
   ],
   "database": [
     "storage",
@@ -738,6 +784,14 @@
   "flag": [
     "report"
   ],
+  "flag-triangle-left": [
+    "report",
+    "timeline"
+  ],
+  "flag-triangle-right": [
+    "report",
+    "timeline"
+  ],
   "flame": [
     "fire",
     "lit"
@@ -761,6 +815,9 @@
   "folder-minus": [
     "directory"
   ],
+  "folder-open": [
+    "directory"
+  ],
   "folder-plus": [
     "directory"
   ],
@@ -770,6 +827,11 @@
     "login",
     "field",
     "text"
+  ],
+  "forward": [
+    "send",
+    "share",
+    "email"
   ],
   "framer": [
     "logo",
@@ -783,6 +845,11 @@
     "sad",
     "emotion"
   ],
+  "function-square": [
+    "programming",
+    "code",
+    "automation"
+  ],
   "gamepad": [
     "console"
   ],
@@ -795,6 +862,12 @@
   "gavel": [
     "hammer",
     "mallet"
+  ],
+  "gem": [
+    "diamond",
+    "price",
+    "special",
+    "present"
   ],
   "ghost": [
     "pacman",
@@ -853,6 +926,12 @@
   "grab": [
     "hand"
   ],
+  "graduation-cap": [
+    "school",
+    "university",
+    "learn",
+    "study"
+  ],
   "grid": [
     "table"
   ],
@@ -872,6 +951,9 @@
     "move",
     "mouse",
     "grab"
+  ],
+  "hand-metal": [
+    "rock"
   ],
   "hard-drive": [
     "computer",
@@ -946,6 +1028,9 @@
     "add",
     "create"
   ],
+  "import": [
+    "save"
+  ],
   "inbox": [
     "email"
   ],
@@ -980,7 +1065,7 @@
     "oblique",
     "text"
   ],
-  "jersey-pound": [
+  "japanese-yen": [
     "currency",
     "money",
     "payment"
@@ -990,6 +1075,13 @@
     "login",
     "authentication",
     "secure"
+  ],
+  "landmark": [
+    "bank",
+    "building",
+    "capitol",
+    "finance",
+    "money"
   ],
   "languages": [
     "translate"
@@ -1073,9 +1165,30 @@
     "todo",
     "done"
   ],
+  "list-minus": [
+    "playlist",
+    "remove",
+    "song",
+    "subtract",
+    "remove",
+    "delete"
+  ],
   "list-ordered": [
     "number",
     "order"
+  ],
+  "list-plus": [
+    "playlist",
+    "add",
+    "song",
+    "track",
+    "new"
+  ],
+  "list-x": [
+    "playlist",
+    "subtract",
+    "remove",
+    "delete"
   ],
   "loader": [
     "load",
@@ -1138,6 +1251,12 @@
     "fullscreen",
     "arrows",
     "expand"
+  ],
+  "megaphone": [
+    "advertisement",
+    "attention",
+    "alert",
+    "notification"
   ],
   "meh": [
     "emoji",
@@ -1222,6 +1341,16 @@
     "ellipsis",
     "menu",
     "options"
+  ],
+  "mountain": [
+    "climb",
+    "hike",
+    "rock"
+  ],
+  "mountain-snow": [
+    "alpine",
+    "climb",
+    "snow"
   ],
   "mouse-pointer": [
     "arrow",
@@ -1354,6 +1483,10 @@
     "statistics",
     "diagram"
   ],
+  "piggy-bank": [
+    "money",
+    "savings"
+  ],
   "pipette": [
     "eye dropper",
     "color picker"
@@ -1420,6 +1553,9 @@
   "qr-code": [
     "barcode"
   ],
+  "quote": [
+    "quotation"
+  ],
   "radio": [
     "signal"
   ],
@@ -1453,8 +1589,19 @@
   "repeat-1": [
     "replay"
   ],
+  "reply": [
+    "email"
+  ],
+  "reply-all": [
+    "email"
+  ],
   "rewind": [
     "music"
+  ],
+  "rocking-chair": [
+    "chair",
+    "furniture",
+    "seat"
   ],
   "rotate-ccw": [
     "arrow",
@@ -1537,6 +1684,12 @@
     "storage"
   ],
   "settings": [
+    "cog",
+    "edit",
+    "gear",
+    "preferences"
+  ],
+  "settings-2": [
     "cog",
     "edit",
     "gear",
@@ -1629,9 +1782,14 @@
     "calculate"
   ],
   "skip-back": [
+    "arrow",
+    "previous",
     "music"
   ],
   "skip-forward": [
+    "arrow",
+    "skip",
+    "next",
     "music"
   ],
   "skull": [
@@ -1659,6 +1817,12 @@
     "phone",
     "cellphone",
     "device"
+  ],
+  "smartphone-charging": [
+    "phone",
+    "cellphone",
+    "device",
+    "power"
   ],
   "smile": [
     "emoji",
@@ -1814,6 +1978,16 @@
     "timer",
     "stopwatch"
   ],
+  "timer-off": [
+    "time",
+    "timer",
+    "stopwatch"
+  ],
+  "timer-reset": [
+    "time",
+    "timer",
+    "stopwatch"
+  ],
   "toggle-left": [
     "on",
     "off",
@@ -1945,6 +2119,13 @@
     "group",
     "people"
   ],
+  "verified": [
+    "check"
+  ],
+  "vibrate": [
+    "smartphone",
+    "notification"
+  ],
   "video": [
     "camera",
     "movie",
@@ -1986,6 +2167,10 @@
     "finance",
     "pocket"
   ],
+  "wand": [
+    "magic",
+    "selection"
+  ],
   "watch": [
     "clock",
     "time"
@@ -2006,6 +2191,12 @@
     "weather",
     "air",
     "blow"
+  ],
+  "wrap-text": [
+    "words",
+    "lines",
+    "break",
+    "paragraph"
   ],
   "wrench": [
     "tool",

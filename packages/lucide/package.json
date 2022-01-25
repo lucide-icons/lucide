@@ -1,7 +1,7 @@
 {
   "name": "lucide",
-  "description": "Lucide is a community-run fork of Feather Icons, open for anyone to contribute icons.",
-  "version": "0.15.22",
+  "description": "A Lucide icon library package for web and javascript applications.",
+  "version": "0.16.19",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -19,7 +19,7 @@
   "typings": "dist/lucide.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:es && yarn build:types && yarn build:bundles",
+    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide/src",
     "build:es": "babel src -d dist/esm",

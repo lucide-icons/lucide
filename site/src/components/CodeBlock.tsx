@@ -1,5 +1,8 @@
-import { Box, BoxProps, chakra } from '@chakra-ui/react';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import { Box, BoxProps, chakra, useColorMode } from '@chakra-ui/react';
+import nightOwlLightTheme from 'prism-react-renderer/themes/nightOwlLight';
+import nightOwlDarkTheme from 'prism-react-renderer/themes/nightOwl';
+import uiTheme from '../lib/theme';
+// import theme from 'prism-react-renderer/themes/nightOwl';
 import BaseHighlight, { defaultProps, Language } from 'prism-react-renderer';
 import { CSSProperties } from 'react';
 import CopyButton from './CopyButton';
@@ -12,14 +15,7 @@ const editorStyle: CSSProperties = {
 };
 
 const CodeContainer = (props: BoxProps) => (
-  <Box
-    paddingTop="3"
-    paddingBottom="3"
-    rounded="8px"
-    height="100%"
-    bg="#011627"
-    {...props}
-  />
+  <Box paddingTop="3" paddingBottom="3" rounded="8px" height="100%" {...props} />
 );
 
 const RE = /{([\d,-]+)}/;
@@ -35,7 +31,7 @@ const calculateLinesToHighlight = (meta: string) => {
   return (index: number) => {
     const lineNumber = index + 1;
     const inRange = lineNumbers.some(([start, end]) =>
-      end ? lineNumber >= start && lineNumber <= end : lineNumber === start
+      end ? lineNumber >= start && lineNumber <= end : lineNumber === start,
     );
     return inRange;
   };
@@ -50,29 +46,50 @@ interface HighlightProps {
 
 function CodeBlock({ code, language, metastring, showLines, ...props }: HighlightProps) {
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
+  const { colorMode } = useColorMode();
+
+  const backgroundColor =
+    colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[700];
+  const codeTheme = colorMode === 'light' ? nightOwlLightTheme : nightOwlDarkTheme;
+
+  const customizedCodeTheme = {
+    ...codeTheme,
+    plain: {
+      ...codeTheme.plain,
+      backgroundColor,
+    },
+  };
 
   return (
     <Box position="relative" zIndex="0" {...props}>
-      <CodeContainer>
+      <CodeContainer bg={backgroundColor}>
         <BaseHighlight
           {...defaultProps}
           code={code}
           language={language}
-          theme={theme}
+          theme={customizedCodeTheme}
+          key={colorMode}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <div style={editorStyle} data-language={language}>
+            <div style={editorStyle} data-language={language} key={colorMode}>
               <pre className={className} style={style}>
-                {tokens.map((line, i) => {
+                {tokens.slice(0, -1).map((line, i) => {
                   const lineProps = getLineProps({ line, key: i });
                   return (
                     <chakra.div
-                      px="5"
+                      px="4"
                       bg={shouldHighlightLine(i) ? 'whiteAlpha.200' : undefined}
                       {...lineProps}
                     >
                       {showLines && (
-                        <chakra.span opacity={0.3} mr="4" width="16px" display="inline-block" fontSize="xs" style={{ userSelect: 'none' }}>
+                        <chakra.span
+                          opacity={0.3}
+                          mr="4"
+                          width="16px"
+                          display="inline-block"
+                          fontSize="xs"
+                          style={{ userSelect: 'none' }}
+                        >
                           {i + 1}
                         </chakra.span>
                       )}
@@ -95,9 +112,11 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
         fontSize="xs"
         height="24px"
         zIndex="1"
-        top="4"
+        top="2.5"
         right="1.25em"
         copyText={code}
+        fontFamily={uiTheme.fonts.body}
+        fontWeight="bold"
       />
     </Box>
   );

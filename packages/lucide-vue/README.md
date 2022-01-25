@@ -105,3 +105,21 @@ export default {
   </div>
 </template>
 ```
+
+## Use with [@nuxt/components](https://github.com/nuxt/components#readme)
+
+### Setup
+In your `nuxt.config.js`, add `lucide-vue/nuxt` to your `buildModules`
+```js
+export default {
+  buildModules: ['lucide-vue/nuxt']
+}
+```
+
+### How to use
+Icon components are prefixed with `Icon`. Use icon components without importing them.
+
+### Example
+```html
+<IconCamera color="red" :size="32" />
+```

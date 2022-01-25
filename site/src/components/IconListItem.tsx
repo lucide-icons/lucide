@@ -1,38 +1,61 @@
-import { Button, Flex, forwardRef, Text } from "@chakra-ui/react";
+import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
+import download from 'downloadjs';
+import copy from 'copy-to-clipboard';
+import { memo, useContext } from 'react';
+import { IconStyleContext } from './CustomizeIconContext';
+import { IconWrapper } from './IconWrapper';
 
-import {IconWrapper} from "./IconWrapper";
-import ModifiedTooltip from './ModifiedTooltip';
+interface IconListItemProps {
+  name: string;
+  content: string;
+  contributors: any[];
+  src: string;
+  onClick?: ButtonProps['onClick'];
+}
 
-const IconListItem = forwardRef(({icon, onClick = (event, icon) => null, ...rest}, ref) => {
+const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
+  const toast = useToast();
+  const { color, size, strokeWidth } = useContext(IconStyleContext);
+
   return (
     <Button
-      ref={ref}
       variant="ghost"
       borderWidth="1px"
       rounded="lg"
       padding={16}
-      key={icon.name}
-      opacity={0.999}
       position="relative"
+      onClick={event => {
+        if (event.shiftKey) {
+          copy(src);
+          toast({
+            title: 'Copied!',
+            description: `Icon "${name}" copied to clipboard.`,
+            status: 'success',
+            duration: 1500,
+          });
+        }
+        if (event.altKey) {
+          download(src, `${name}.\svg`, 'image/svg+xml');
+        }
+        if (onClick) {
+          onClick(event);
+        }
+      }}
+      key={name}
       alignItems="center"
-      _focus={{ outline: 'none'}}
-      onClick={(event) => onClick(event, icon)}
-      color="white"
-      {...rest}
     >
-      { icon?.contributors?.length ? ( <ModifiedTooltip/> ) : null}
       <Flex direction="column" align="center" justify="center">
         <IconWrapper
-          content={icon.content}
-          stroke={icon.color || 'currentColor'}
-          strokeWidth={icon.strokeWidth}
-          height={icon.size || 24}
-          width={icon.size || 24}
+          content={content}
+          stroke={color}
+          strokeWidth={strokeWidth}
+          height={size}
+          width={size}
         />
-        <Text marginTop={5}>{icon.name}</Text>
+        <Text marginTop={5}>{name}</Text>
       </Flex>
     </Button>
-  )
-})
+  );
+};
 
-export default IconListItem;
+export default memo(IconListItem);
