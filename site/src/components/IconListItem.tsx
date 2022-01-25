@@ -1,24 +1,21 @@
-import { Button, ButtonProps, Flex, Grid, Text, useToast } from "@chakra-ui/react";
+import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
-import Link from 'next/link'
-import copy from "copy-to-clipboard";
-import { memo, useContext } from "react";
-import { IconStyleContext } from "./CustomizeIconContext";
-import {IconWrapper} from "./IconWrapper";
-import { useRouter } from "next/router";
-import ModifiedTooltip from './ModifiedTooltip';
+import copy from 'copy-to-clipboard';
+import { memo, useContext } from 'react';
+import { IconStyleContext } from './CustomizeIconContext';
+import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps {
-  name: string,
-  content: string,
-  contributors: any[]
-  src: string
-  onClick?: ButtonProps['onClick']
+  name: string;
+  content: string;
+  contributors: any[];
+  src: string;
+  onClick?: ButtonProps['onClick'];
 }
 
-const IconListItem = ({ name, content, contributors, src, onClick }: IconListItemProps) => {
+const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
   const toast = useToast();
-  const {color, size, strokeWidth} = useContext(IconStyleContext);
+  const { color, size, strokeWidth } = useContext(IconStyleContext);
 
   return (
     <Button
@@ -27,31 +24,26 @@ const IconListItem = ({ name, content, contributors, src, onClick }: IconListIte
       rounded="lg"
       padding={16}
       position="relative"
-      onClick={(event) => {
+      onClick={event => {
         if (event.shiftKey) {
           copy(src);
           toast({
-            title: "Copied!",
+            title: 'Copied!',
             description: `Icon "${name}" copied to clipboard.`,
-            status: "success",
+            status: 'success',
             duration: 1500,
           });
         }
         if (event.altKey) {
-          download(
-            src,
-            `${name}.\svg`,
-            "image/svg+xml"
-          );
+          download(src, `${name}.\svg`, 'image/svg+xml');
         }
         if (onClick) {
-          onClick(event)
+          onClick(event);
         }
       }}
       key={name}
       alignItems="center"
     >
-      { contributors?.length ? ( <ModifiedTooltip/> ) : null}
       <Flex direction="column" align="center" justify="center">
         <IconWrapper
           content={content}
@@ -63,7 +55,7 @@ const IconListItem = ({ name, content, contributors, src, onClick }: IconListIte
         <Text marginTop={5}>{name}</Text>
       </Flex>
     </Button>
-  )
-}
+  );
+};
 
-export default memo(IconListItem)
+export default memo(IconListItem);
