@@ -104,6 +104,13 @@
   "arrow-left-circle": [
     "direction"
   ],
+  "arrow-left-right": [
+    "bidirection",
+    "direction",
+    "swap",
+    "switch",
+    "transaction"
+  ],
   "arrow-right": [
     "direction"
   ],
@@ -330,6 +337,11 @@
     "vehicle",
     "transport",
     "trip"
+  ],
+  "carrot": [
+    "vegetable",
+    "food",
+    "eat"
   ],
   "cast": [
     "chromecast",
@@ -645,6 +657,11 @@
     "water",
     "humidity"
   ],
+  "drumstick": [
+    "food",
+    "chicken",
+    "meat"
+  ],
   "edit": [
     "pencil",
     "change"
@@ -656,6 +673,9 @@
   "edit-3": [
     "pencil",
     "change"
+  ],
+  "egg": [
+    "food"
   ],
   "equal": [
     "calculate"
@@ -1483,6 +1503,12 @@
     "statistics",
     "diagram"
   ],
+  "pin": [
+    "save",
+    "map",
+    "lock",
+    "fix"
+  ],
   "piggy-bank": [
     "money",
     "savings"
@@ -1781,6 +1807,57 @@
     "sum",
     "calculate"
   ],
+  "signal": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-high": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-low": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-medium": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-zero": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g",
+    "lost"
+  ],
   "skip-back": [
     "arrow",
     "previous",
@@ -1877,6 +1954,9 @@
     "delete",
     "remove"
   ],
+  "subscript": [
+    "text"
+  ],
   "sun": [
     "brightness",
     "weather",
@@ -1893,6 +1973,10 @@
     "time",
     "evening",
     "night"
+  ],
+  "superscript": [
+    "text",
+    "exponent"
   ],
   "swiss-franc": [
     "currency",
