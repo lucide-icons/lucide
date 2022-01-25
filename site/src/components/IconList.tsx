@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 import ModifiedTooltip from './ModifiedTooltip';
 import IconListItem from './IconListItem';
 
-const IconList = ({ icons }) => {
+const IconList = ({ icons, renderLink = true }) => {
   const router = useRouter();
   const toast = useToast();
   const { color, size, strokeWidth } = useContext(IconStyleContext);
@@ -23,22 +23,26 @@ const IconList = ({ icons }) => {
         const actualIcon = icon.item ? icon.item : icon;
         const { name, content, contributors } = actualIcon;
 
-        return (
-          <Link
-            key={name}
-            scroll={false}
-            shallow={true}
-            href={{
-              pathname: '/icon/[iconName]',
-              query: {
-                ...query,
-                iconName: name,
-              },
-            }}
-          >
-            <IconListItem {...icon} />
-          </Link>
-        );
+        if (renderLink) {
+          return (
+            <Link
+              key={name}
+              scroll={false}
+              shallow={true}
+              href={{
+                pathname: '/icon/[iconName]',
+                query: {
+                  ...query,
+                  iconName: name,
+                },
+              }}
+            >
+              <IconListItem {...icon} />
+            </Link>
+          );
+        }
+
+        return <IconListItem {...icon} />;
       })}
     </Grid>
   );
