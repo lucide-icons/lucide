@@ -24,7 +24,7 @@ export default (iconName, iconNode) => {
         class: `lucide lucide-${toKebabCase(iconName)}`,
         ...rest,
       },
-      [...toChildArray(children), ...iconNode.map(([tag, attrs]) => h(tag, attrs))],
+      [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
     );
 
   Component.displayName = `${iconName}`;
