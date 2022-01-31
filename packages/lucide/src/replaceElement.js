@@ -71,6 +71,7 @@ export default (element, { nameAttr, icons, attrs }) => {
     ...iconAttributes,
     'icon-name': iconName,
     ...attrs,
+    ...elementAttrs,
   };
 
   const classNames = combineClassNames(['lucide', `lucide-${iconName}`, elementAttrs, attrs]);
