@@ -129,6 +129,23 @@ npm install lucide-preact
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact#lucide-preact).
 
+### Static (svg sprite, font, icons ..)
+
+Assets:
+[Font Files](https://github.com/lucide-icons/lucide/releases/tag/latest)
+[SVG Files](https://github.com/lucide-icons/lucide/releases/tag/latest)
+[SVG Sprite](https://cdn.jsdelivr.net/npm/lucide-static@latest/sprite.svg)
+
+NPM package
+
+```sh
+yarn add lucide-static
+
+# or
+
+npm install lucide-static
+```
+
 ### Figma
 
 The lucide figma plugin.
