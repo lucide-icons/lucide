@@ -2,15 +2,19 @@
 
 Implementation of the lucide icon library for Vue 3 applications.
 
-> ⚠️ This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue)
+> ⚠️ This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue-next](lucide-vue)
 
 ## Installation
 
-```sh
+**With yarn**
+
+```bash
 yarn add lucide-vue-next
+```
 
-# or
+**With npm**
 
+```bash
 npm install lucide-vue-next
 ```
 
@@ -23,7 +27,7 @@ Each icon can be imported as a vue component.
 
 You can pass additional props to adjust the icon.
 
-``` vue
+``` html
 <template>
   <Camera
     color="red"
@@ -56,7 +60,7 @@ export default {
 
 You can also pass custom props that will be added in the svg as attributes.
 
-``` vue
+``` html
 <template>
   <Camera fill="red" />
 </template>
@@ -66,11 +70,11 @@ You can also pass custom props that will be added in the svg as attributes.
 
 It is possible to create one generic icon component to load icons.
 
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
+> ⚠️ Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 
-``` vue
+``` html
 <template>
   <component :is="icon" />
 </template>
@@ -85,18 +89,18 @@ export default {
       required: true,
     },
   },
-  computed: {
-    icon() {
-      return icons[this.name];
-    },
-  },
+  setup(props) {
+    const icon = computed(() => icons[props.name])
+
+    return { icon }
+  }
 };
 </script>
 ```
 
 ##### Then you can use it like this
 
-``` vue
+``` html
 <template>
   <div id="app">
     <Icon name="Airplay" />

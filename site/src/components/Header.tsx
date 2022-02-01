@@ -70,10 +70,10 @@ const Header = ({ data }) => {
   return (
     <Flex direction="column" align="center" justify="center">
       <Heading as="h1" fontSize="4xl" mb="4" textAlign="center">
-        Simply beautiful open source icons, community-sourced
+        Beautiful &amp; consistent icon toolkit made by the community.
       </Heading>
       <Text fontSize="lg" as="p" textAlign="center" mb="1">
-        An open-source icon library, a fork of{' '}
+        Open-source project and a fork of{' '}
         <Link href="https://github.com/feathericons/feather" isExternal>
           Feather Icons
         </Link>

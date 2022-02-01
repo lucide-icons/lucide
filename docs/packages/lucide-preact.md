@@ -62,7 +62,7 @@ const App = () => {
 
 It is possible to create one generic icon component to load icons.
 
-> :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
+> ⚠️ Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 

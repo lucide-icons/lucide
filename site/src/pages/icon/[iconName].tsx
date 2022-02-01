@@ -4,9 +4,11 @@ import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
+import { useEffect, useMemo } from 'react';
 
 const IconPage = ({ icon, data }) => {
   const router = useRouter();
+  const getIcon = iconName => data.find(({ name }) => name === iconName) || {};
 
   const onClose = () => {
     let query = {};
@@ -28,9 +30,20 @@ const IconPage = ({ icon, data }) => {
     );
   };
 
+  const currentIcon = useMemo(() => {
+    if(icon.name === router.query.iconName) {
+      return icon
+    }
+    return getIcon(router.query.iconName)
+  }, [router.query])
+
   return (
     <Layout>
-      <IconDetailOverlay key={icon.name} icon={icon} close={onClose} />
+      <IconDetailOverlay
+        key={currentIcon.name}
+        icon={currentIcon}
+        close={onClose}
+      />
       <Header {...{ data }} />
       <IconOverview {...{ data }} />
     </Layout>

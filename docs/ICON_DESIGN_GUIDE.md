@@ -1,4 +1,8 @@
-# Icon Design Guide
+---
+title: Icon Design Guide
+---
+
+# Icon Design Principles
 
 Here are rules that should be followed to keep quality and consistency when making icons for Lucide.
 
