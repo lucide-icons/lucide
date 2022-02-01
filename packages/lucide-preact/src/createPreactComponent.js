@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import { h, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 
 /**
@@ -12,7 +12,7 @@ import defaultAttributes from './defaultAttributes';
 export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 export default (iconName, iconNode) => {
-  const Component = ({ color = 'currentColor', size = 24, strokeWidth = 2, ...rest }) =>
+  const Component = ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }) =>
     h(
       'svg',
       {
@@ -24,7 +24,7 @@ export default (iconName, iconNode) => {
         class: `lucide lucide-${toKebabCase(iconName)}`,
         ...rest,
       },
-      iconNode.map(([tag, attrs]) => h(tag, attrs)),
+      [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
     );
 
   Component.displayName = `${iconName}`;
