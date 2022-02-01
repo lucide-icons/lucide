@@ -49,6 +49,23 @@
     "text alignment",
     "center"
   ],
+  "align-horizonal-distribute-center": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizonal-distribute-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizonal-distribute-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
   "align-justify": [
     "text alignment",
     "justified"
@@ -60,6 +77,23 @@
   "align-right": [
     "text alignment",
     "right"
+  ],
+  "align-vertical-distribute-center": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-start": [
+    "top",
+    "items",
+    "flex",
+    "justify"
   ],
   "anchor": [
     "ship"
