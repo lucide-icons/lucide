@@ -33,6 +33,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   * [Vue 3](#vue-3)
   * [Angular](#angular)
   * [Preact](#preact)
+  * [Static](#static-svg-sprite-font-icons-)
   * [Figma](#figma)
   * [Laravel](#laravel)
   * [Flutter](#flutter)
