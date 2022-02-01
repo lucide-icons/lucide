@@ -1,4 +1,3 @@
-import { Flipper } from 'react-flip-toolkit';
 import { ContextProvider, ItemData, DragObject, add, remove, findDescendants } from 'react-sortly';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -164,22 +163,16 @@ const EditCategoriesPage = ({ icons = {} }) => {
                 Categories
               </Heading>
               <Box marginTop={5} marginBottom={320} marginLeft="auto">
-                <Flipper
-                  flipKey={categories
-                    .map(({ items }) => items.map(({ id }) => id).join('.'))
-                    .join('.')}
-                >
-                  {categories.map(({ id, name, items }, index) => (
-                    <IconCategory name={name} key={name}>
-                      <SortableIconList
-                        id={index}
-                        items={items}
-                        onChange={handleChange(index)}
-                        onEnter={handleEnter(index)}
-                      />
-                    </IconCategory>
-                  ))}
-                </Flipper>
+                {categories.map(({ id, name, items }, index) => (
+                  <IconCategory name={name} key={name}>
+                    <SortableIconList
+                      id={index}
+                      items={items}
+                      onChange={handleChange(index)}
+                      onEnter={handleEnter(index)}
+                    />
+                  </IconCategory>
+                ))}
               </Box>
             </Box>
           </Grid>

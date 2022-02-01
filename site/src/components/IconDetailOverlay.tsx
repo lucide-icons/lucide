@@ -3,8 +3,8 @@ import theme from "../lib/theme";
 import download from 'downloadjs';
 import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
-import {useContext, useEffect, useRef} from "react";
-import {IconStyleContext} from "./CustomizeIconContext";
+import { useEffect, useRef } from "react";
+import {useCustomizeIconContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
 
@@ -17,7 +17,7 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
   const { tags = [], name } = icon;
-  const {color, strokeWidth, size} = useContext(IconStyleContext);
+  const {color, strokeWidth, size} = useCustomizeIconContext();
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
   const { isOpen, onOpen, onClose } = useDisclosure()

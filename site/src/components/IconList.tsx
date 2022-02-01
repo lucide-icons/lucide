@@ -3,7 +3,7 @@ import download from 'downloadjs';
 import Link from 'next/link';
 import copy from 'copy-to-clipboard';
 import { useCallback, useContext, useMemo } from 'react';
-import { IconStyleContext } from './CustomizeIconContext';
+import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 import { useRouter } from 'next/router';
 import ModifiedTooltip from './ModifiedTooltip';
@@ -12,7 +12,7 @@ import IconListItem from './IconListItem';
 const IconList = ({ icons, renderLink = true }) => {
   const router = useRouter();
   const toast = useToast();
-  const { color, size, strokeWidth } = useContext(IconStyleContext);
+  const { color, size, strokeWidth } = useCustomizeIconContext();
   const { search } = router.query;
 
   const query = useMemo(() => (search !== undefined ? { search } : {}), [search]);
@@ -36,6 +36,7 @@ const IconList = ({ icons, renderLink = true }) => {
                   iconName: name,
                 },
               }}
+              passHref
             >
               <IconListItem {...icon} />
             </Link>

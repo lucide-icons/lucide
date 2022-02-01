@@ -1,9 +1,13 @@
-import { Box, Text, useColorModeValue } from "@chakra-ui/react";
-import theme from "../lib/theme";
+import { Box, Text, useColorModeValue } from '@chakra-ui/react';
+import theme from '../lib/theme';
 
 const IconCategory = ({ name, isActive = false, children, ...rest }) => {
   const activeBackground = useColorModeValue(theme.colors.gray, theme.colors.gray[700]);
-  const toTitleCase = string => string.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
+  const toTitleCase = string =>
+    string
+      .split(' ')
+      .map(word => word[0].toUpperCase() + word.slice(1))
+      .join(' ');
 
   return (
     <Box
@@ -14,16 +18,13 @@ const IconCategory = ({ name, isActive = false, children, ...rest }) => {
       {...rest}
     >
       <Box>
-        <Text
-          fontSize="xl"
-          marginBottom={3}
-        >
-          { toTitleCase(name) }
+        <Text fontSize="xl" marginBottom={3}>
+          {toTitleCase(name)}
         </Text>
         {children}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 export default IconCategory;

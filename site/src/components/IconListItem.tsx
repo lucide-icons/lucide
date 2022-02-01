@@ -1,8 +1,8 @@
 import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import copy from 'copy-to-clipboard';
-import { memo, useContext } from 'react';
-import { IconStyleContext } from './CustomizeIconContext';
+import { forwardRef, memo } from 'react';
+import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps {
@@ -13,16 +13,17 @@ interface IconListItemProps {
   onClick?: ButtonProps['onClick'];
 }
 
-const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
+const IconListItem = forwardRef(({ name, content, src, onClick }: IconListItemProps, ref) => {
   const toast = useToast();
-  const { color, size, strokeWidth } = useContext(IconStyleContext);
+  const { color, size, strokeWidth } = useCustomizeIconContext();
 
   return (
     <Button
+      ref={ref}
       variant="ghost"
       borderWidth="1px"
       rounded="lg"
-      padding={16}
+      paddingY={16}
       position="relative"
       onClick={event => {
         if (event.shiftKey) {
@@ -56,6 +57,6 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
       </Flex>
     </Button>
   );
-};
+});
 
 export default memo(IconListItem);

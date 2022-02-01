@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 interface ICustomIconStyle {
   color: string;
@@ -14,7 +14,7 @@ const DEFAULT_STYLE = {
   color: 'currentColor',
   strokeWidth: 2,
   size: 24,
-}
+};
 
 export const IconStyleContext = createContext<ICustomIconStyle>({
   color: 'currentColor',
@@ -23,7 +23,7 @@ export const IconStyleContext = createContext<ICustomIconStyle>({
   setStroke: (n: number) => null,
   size: 24,
   setSize: (n: number) => null,
-  resetStyle: () => null
+  resetStyle: () => null,
 });
 
 export function CustomizeIconContext({ children }) {
@@ -31,7 +31,7 @@ export function CustomizeIconContext({ children }) {
   const [stroke, setStroke] = useState(DEFAULT_STYLE.strokeWidth);
   const [size, setSize] = useState(DEFAULT_STYLE.size);
 
-  function resetStyle(){
+  function resetStyle() {
     setColor(DEFAULT_STYLE.color);
     setStroke(DEFAULT_STYLE.strokeWidth);
     setSize(DEFAULT_STYLE.size);
@@ -44,4 +44,12 @@ export function CustomizeIconContext({ children }) {
       {children}
     </IconStyleContext.Provider>
   );
+}
+
+export function useCustomizeIconContext() {
+  const context = useContext(IconStyleContext);
+  if (context === undefined) {
+    return { color: 'currentColor', size: 24, strokeWidth: 2 };
+  }
+  return context;
 }

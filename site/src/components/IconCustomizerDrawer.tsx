@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react';
-import { IconStyleContext } from './CustomizeIconContext';
+import { useState } from 'react';
+import { useCustomizeIconContext } from './CustomizeIconContext';
 import { Edit } from 'lucide-react';
 import {
   Button,
@@ -23,7 +23,15 @@ import ColorPicker from './ColorPicker';
 
 export function IconCustomizerDrawer() {
   const [showCustomize, setShowCustomize] = useState(false);
-  const { color, setColor, size, setSize, strokeWidth, setStroke, resetStyle } = useContext(IconStyleContext);
+  const {
+    color,
+    setColor,
+    size,
+    setSize,
+    strokeWidth,
+    setStroke,
+    resetStyle,
+  } = useCustomizeIconContext();
 
   return (
     <>
@@ -42,7 +50,7 @@ export function IconCustomizerDrawer() {
                 <ColorPicker
                   color={color}
                   value={color}
-                  onChangeComplete={(col) => setColor(col.hex)}
+                  onChangeComplete={col => setColor(col.hex)}
                 />
               </FormControl>
               <FormControl>

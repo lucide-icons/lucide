@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { useDrop } from 'react-dnd';
 
 import Sortly, { ItemData, DragObject } from 'react-sortly';
 import SortableListItemRenderer from './SortableListItemRenderer';
-import { Grid } from "@chakra-ui/react";
+import { Grid } from '@chakra-ui/react';
 
 type TreeProps = {
   id: number;
@@ -21,7 +20,7 @@ type Item = {
 const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
   const [{ hovered, dragItem }, drop] = useDrop({
     accept: 'ICONS',
-    collect: (monitor) => ({
+    collect: monitor => ({
       hovered: monitor.isOver(),
       dragItem: monitor.getItem(),
     }),
@@ -35,7 +34,7 @@ const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
     if (hovered) {
       onEnter(dragItem);
     }
-  }
+  };
 
   React.useEffect(() => {
     if (dragItem) {
@@ -44,22 +43,12 @@ const SortableIconList = ({ items, onChange, onEnter }: TreeProps) => {
   }, [dragItem, hovered, handleMove]);
 
   return (
-    <div style={{ paddingBottom: 50 }} ref={drop}>
-      <Sortly<Item>
-        maxDepth={0}
-        horizontal
-        items={items}
-        onChange={onChange}
-        type="ICONS"
-      >
-        {(props) => <SortableListItemRenderer {...props} />}
+    <Grid templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`} gap={5} ref={drop}>
+      <Sortly<Item> maxDepth={0} horizontal items={items} onChange={onChange} type="ICONS">
+        {props => <SortableListItemRenderer {...props} />}
       </Sortly>
-    </div>
+    </Grid>
   );
 };
 
-export default React.memo(SortableIconList, (oldProps, newProps) => {
-  const createName = (items) => items.map(({name}) => name).join('.');
-
-  return createName(oldProps.items) === createName(newProps.items);
-});
+export default SortableIconList;
