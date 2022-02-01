@@ -52,7 +52,10 @@
   "align-horizonal-distribute-center": [
     "items",
     "flex",
-    "justify"
+    "justify",
+    "space",
+    "evenly",
+    "around"
   ],
   "align-horizonal-distribute-end": [
     "right",
@@ -81,7 +84,10 @@
   "align-vertical-distribute-center": [
     "items",
     "flex",
-    "justify"
+    "justify",
+    "space",
+    "evenly",
+    "around"
   ],
   "align-vertical-distribute-end": [
     "bottom",
