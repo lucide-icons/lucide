@@ -445,6 +445,18 @@
     "watch",
     "alarm"
   ],
+  "clock-1": [],
+  "clock-10": [],
+  "clock-11": [],
+  "clock-12": [],
+  "clock-2": [],
+  "clock-3": [],
+  "clock-4": [],
+  "clock-5": [],
+  "clock-6": [],
+  "clock-7": [],
+  "clock-8": [],
+  "clock-9": [],
   "cloud": [
     "weather"
   ],
@@ -1503,15 +1515,15 @@
     "statistics",
     "diagram"
   ],
+  "piggy-bank": [
+    "money",
+    "savings"
+  ],
   "pin": [
     "save",
     "map",
     "lock",
     "fix"
-  ],
-  "piggy-bank": [
-    "money",
-    "savings"
   ],
   "pipette": [
     "eye dropper",
@@ -1663,6 +1675,8 @@
     "rule",
     "law"
   ],
+  "scan": [],
+  "scan-line": [],
   "scissors": [
     "cut"
   ],
@@ -1949,6 +1963,18 @@
     "media",
     "music"
   ],
+  "stretch-horizontal": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
+  "stretch-vertical": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
   "strikethrough": [
     "cross out",
     "delete",
@@ -2019,6 +2045,8 @@
     "prompt",
     "shell"
   ],
+  "text-cursor": [],
+  "text-cursor-input": [],
   "thermometer": [
     "temperature",
     "celsius",
