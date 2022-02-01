@@ -5,7 +5,8 @@
   "author": "John Letey",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "copy-assets": "mkdir -p ./public/docs/images && cp -rf ../docs/images ./public/docs",
+    "build": "yarn copy-assets && next build",
     "export": "next export -o build",
     "deploy": "yarn build && yarn export",
     "lint": "eslint .",

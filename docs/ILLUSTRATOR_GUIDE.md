@@ -1,3 +1,6 @@
+---
+title: Illustrator Template Guide
+---
 
 # Illustrator Template Guide
 
