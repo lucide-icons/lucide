@@ -160,6 +160,11 @@
     "diagram",
     "graph"
   ],
+  "baseline": [
+    "text",
+    "format",
+    "color"
+  ],
   "battery": [
     "power",
     "electricity"
@@ -249,7 +254,8 @@
   ],
   "bold": [
     "text",
-    "strong"
+    "strong",
+    "format"
   ],
   "book": [
     "read",
@@ -1143,7 +1149,8 @@
   ],
   "italic": [
     "oblique",
-    "text"
+    "text",
+    "format"
   ],
   "japanese-yen": [
     "currency",
@@ -2018,7 +2025,8 @@
   "strikethrough": [
     "cross out",
     "delete",
-    "remove"
+    "remove",
+    "format"
   ],
   "subscript": [
     "text"
@@ -2216,7 +2224,8 @@
     "weather"
   ],
   "underline": [
-    "text"
+    "text",
+    "format"
   ],
   "undo": [
     "redo",
