@@ -34,12 +34,12 @@ export default function({ iconNodes, outputDirectory, template, showLog = true, 
   });
 
   Promise.all(writeIconFiles)
-  .then(() => {
-    if(showLog) {
-      console.log('Successfully built', icons.length, 'icons.');
-    }
-  })
-  .catch((error) => {
-    throw new Error(`Something went wrong generating icon files,\n ${error}`)
-  })
+    .then(() => {
+      if(showLog) {
+        console.log('Successfully built', icons.length, 'icons.');
+      }
+    })
+    .catch((error) => {
+      throw new Error(`Something went wrong generating icon files,\n ${error}`)
+    })
 }

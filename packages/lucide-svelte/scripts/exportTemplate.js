@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { stringify } from 'svgson';
 
-export default ({ children }) => {
+export default ({ iconName, children }) => {
   const iconChildNodes = children.map(([name, attributes]) => ({ name, attributes, children: [] }));
   const iconChildrenHTML = iconChildNodes.map(stringify).join('\n  ');
   return `\
@@ -9,7 +9,7 @@ export default ({ children }) => {
 import Icon from '../Icon.svelte';
 </script>
 
-<Icon {...$$props}>
+<Icon name="${iconName}" {...$$props} >
   ${iconChildrenHTML}
 </Icon>
 `;

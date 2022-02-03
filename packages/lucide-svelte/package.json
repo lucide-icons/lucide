@@ -25,14 +25,18 @@
     "build:es": "babel src -d dist/esm --copy-files",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-svelte/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-svelte/rollup.config.js",
-    "test": "jest"
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/preact": "^2.0.1",
+    "@testing-library/svelte": "^3.0.3",
     "babel-preset-preact": "^2.0.0",
     "jest": "^26.6.3",
     "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.45.0",
+    "svelte-jester": "^2.3.1",
     "svelte-preprocess": "^4.10.1",
     "svelte2tsx": "^0.4.12"
   },
