@@ -315,6 +315,9 @@
     "transport",
     "trip"
   ],
+  "business": [
+    "company"
+  ],
   "calculator": [
     "count",
     "calculating machine"
