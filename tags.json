@@ -445,6 +445,66 @@
     "watch",
     "alarm"
   ],
+  "clock-1": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-10": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-11": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-12": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-2": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-3": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-4": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-5": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-6": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-7": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-8": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-9": [
+    "time",
+    "watch",
+    "alarm"
+  ],
   "cloud": [
     "weather"
   ],
@@ -1524,15 +1584,15 @@
     "statistics",
     "diagram"
   ],
+  "piggy-bank": [
+    "money",
+    "savings"
+  ],
   "pin": [
     "save",
     "map",
     "lock",
     "fix"
-  ],
-  "piggy-bank": [
-    "money",
-    "savings"
   ],
   "pipette": [
     "eye dropper",
@@ -1683,6 +1743,12 @@
     "right",
     "rule",
     "law"
+  ],
+  "scan": [
+    "qr-code"
+  ],
+  "scan-line": [
+    "qr-code"
   ],
   "scissors": [
     "cut"
@@ -2039,6 +2105,12 @@
     "command line",
     "prompt",
     "shell"
+  ],
+  "text-cursor": [
+    "select"
+  ],
+  "text-cursor-input": [
+    "select"
   ],
   "thermometer": [
     "temperature",

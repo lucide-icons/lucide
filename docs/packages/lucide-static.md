@@ -11,7 +11,7 @@ This package include the following lucide implementations:
 
 This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings in your javascript project.
 
-> ⚠️ It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](https://github.com/lucide-icons/lucide/tree/master/packages/lucide), [lucide-react](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react), [lucide-vue](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue), [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next), [lucide-angular](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular), [lucide-preact](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact)
+> ⚠️ It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](lucide), [lucide-react](lucide-react), [lucide-vue](lucide-vue), [lucide-vue-next](lucide-vue-next), [lucide-angular](lucide-angular), [lucide-preact](lucide-preact)
 
 ## Installation
 

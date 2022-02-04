@@ -2,7 +2,7 @@
 
 Implementation of the lucide icon library for Vue applications.
 
-> ⚠️ This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next)
+> ⚠️ This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](lucide-vue-next)
 
 ## Installation
 
@@ -23,7 +23,7 @@ Each icon can be imported as a vue component.
 
 You can pass additional props to adjust the icon.
 
-``` vue
+``` html
 <template>
   <Camera
     color="red"
@@ -56,7 +56,7 @@ export default {
 
 You can also pass custom props that will be added in the svg as attributes.
 
-``` vue
+``` html
 <template>
   <Camera fill="red" />
 </template>
@@ -66,11 +66,11 @@ You can also pass custom props that will be added in the svg as attributes.
 
 It is possible to create one generic icon component to load icons.
 
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
+> ⚠️ Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 
-``` vue
+``` html
 <template>
   <component :is="icon" />
 </template>
@@ -96,7 +96,7 @@ export default {
 
 ##### Then you can use it like this
 
-``` vue
+``` html
 <template>
   <div id="app">
     <Icon name="Airplay" />
