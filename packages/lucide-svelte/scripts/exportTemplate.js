@@ -11,6 +11,7 @@ import Icon from '../Icon.svelte';
 
 <Icon name="${iconName}" {...$$props} >
   ${iconChildrenHTML}
+  <slot/>
 </Icon>
 `;
 };

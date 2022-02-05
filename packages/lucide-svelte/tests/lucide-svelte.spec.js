@@ -1,5 +1,6 @@
 import { render, fireEvent } from '@testing-library/svelte';
 import { Smile } from '../src/icons'
+import TestSlots from './TestSlots.svelte'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -14,7 +15,7 @@ describe('Using lucide icon components', () => {
         color: 'red',
         strokeWidth: 4
       }
-    })
+    });
 
     expect(container).toMatchSnapshot();
   });
@@ -24,13 +25,13 @@ describe('Using lucide icon components', () => {
       props: {
         class: "my-icon"
       }
-    })
+    });
 
-    const [icon] = document.getElementsByClassName('my-icon')
+    const [icon] = document.getElementsByClassName('my-icon');
 
-    expect(icon).toBeInTheDocument()
+    expect(icon).toBeInTheDocument();
     expect(icon).toMatchSnapshot();
-    expect(icon.getAttribute("class")).toBe(['lucide-icon','lucide','lucide-smile', 'my-icon'].join(' '))
+    expect(icon.getAttribute("class")).toBe(['lucide-icon','lucide','lucide-smile', 'my-icon'].join(' '));
   });
 
   it('should add a style attribute to the element', () => {
@@ -38,9 +39,17 @@ describe('Using lucide icon components', () => {
       props: {
         style: "position: absolute;"
       }
-    })
-    const [icon] = document.getElementsByClassName('lucide')
+    });
+    const [icon] = document.getElementsByClassName('lucide');
 
-    expect(icon.getAttribute('style')).toContain('position: absolute')
+    expect(icon.getAttribute('style')).toContain('position: absolute');
+  });
+
+  it('should render an icon slot', () => {
+    const { container, getByText } = render(TestSlots);
+
+    const textElement = getByText('Test');
+    expect(textElement).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 });

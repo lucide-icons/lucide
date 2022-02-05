@@ -13,7 +13,7 @@
   height={size}
   stroke={color}
   stroke-width={strokeWidth}
-  class={`lucide-icon lucide lucide-${name} ${$$props?.class ?? ''}`}
+  class={`lucide-icon lucide lucide-${name} ${$$props.class ?? ''}`}
 >
   <slot />
 </svg>
