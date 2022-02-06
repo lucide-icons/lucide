@@ -38,7 +38,7 @@ describe('Using lucide icon components', () => {
 
     const [icon] = document.getElementsByClassName('lucide');
 
-    expect(icon.className).toBe(['lucide-icon','lucide','lucide-smile', 'my-icon'].join(' '))
+    expect(icon).toHaveClass('my-icon')
   });
 
   it('should add a style attribute to the element', () => {
@@ -52,7 +52,7 @@ describe('Using lucide icon components', () => {
 
     const [icon] = document.getElementsByClassName('lucide');
 
-    expect(icon.style).toContain('position: absolute')
+    expect(icon).toHaveStyle({ position: 'absolute' })
   });
 
   it('should call the onClick event', async () => {
@@ -65,14 +65,15 @@ describe('Using lucide icon components', () => {
 
     const [icon] = document.getElementsByClassName('lucide');
 
-    await fireEvent(icon).click()
+    await fireEvent.click(icon)
+
     expect(onClick).toHaveBeenCalled()
   });
 
   it('should pass children to the icon slot', () => {
     const testText = 'Hello World'
     const template = `<text>${testText}</text>`
-    const { getByText } = render(Smile, {
+    const { getByText, container } = render(Smile, {
       slots: {
         default: { template }
       }
@@ -81,5 +82,6 @@ describe('Using lucide icon components', () => {
     const textElement = getByText(testText)
 
     expect(textElement).toBeInTheDocument()
+    expect(container).toMatchSnapshot();
   });
 });
