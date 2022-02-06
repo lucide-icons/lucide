@@ -1,56 +1,85 @@
 import { mount } from '@vue/test-utils'
+import {render, fireEvent} from '@testing-library/vue'
 import { Smile } from '../src/icons'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
-    const wrapper = mount(Smile)
-    expect(wrapper).toMatchSnapshot();
+    const {container} = render(Smile)
+    expect(container).toMatchSnapshot();
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
-    const wrapper = mount(Smile, {
-      propsData: {
+    const {container} = render(Smile, {
+      props: {
         size: 48,
-        stroke: 'red',
+        color: 'red',
         strokeWidth: 4
       }
     })
 
-    expect(wrapper).toMatchSnapshot();
+    const [icon] = document.getElementsByClassName('lucide');
+
+    expect(icon.getAttribute('width')).toBe('48')
+    expect(icon.getAttribute('stroke')).toBe('red')
+    expect(icon.getAttribute('stroke-width')).toBe('4')
+
+    expect(container).toMatchSnapshot();
   });
 
 
   it('should add a class to the element', () => {
-    const wrapper = mount(Smile, {
+    const {container} = render(Smile, {
       attrs: {
         class: "my-icon"
       }
     })
 
-    expect(wrapper).toMatchSnapshot();
-    expect(String(wrapper.classes())).toBe(String(['lucide-icon','lucide','lucide-smile', 'my-icon']))
+    expect(container).toMatchSnapshot();
+
+    const [icon] = document.getElementsByClassName('lucide');
+
+    expect(icon.className).toBe(['lucide-icon','lucide','lucide-smile', 'my-icon'].join(' '))
   });
 
   it('should add a style attribute to the element', () => {
-    const wrapper = mount(Smile, {
+    const {container} = render(Smile, {
       attrs: {
         style: 'position: absolute',
       }
     })
 
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.attributes('style')).toContain('position: absolute')
+    expect(container).toMatchSnapshot();
+
+    const [icon] = document.getElementsByClassName('lucide');
+
+    expect(icon.style).toContain('position: absolute')
   });
 
-  it('should call the onClick event', () => {
+  it('should call the onClick event', async () => {
     const onClick = jest.fn()
-    const wrapper = mount(Smile, {
+    render(Smile, {
       listeners: {
         click: onClick
       }
     })
 
-    wrapper.trigger('click')
+    const [icon] = document.getElementsByClassName('lucide');
+
+    await fireEvent(icon).click()
     expect(onClick).toHaveBeenCalled()
+  });
+
+  it('should pass children to the icon slot', () => {
+    const testText = 'Hello World'
+    const template = `<text>${testText}</text>`
+    const { getByText } = render(Smile, {
+      slots: {
+        default: { template }
+      }
+    })
+
+    const textElement = getByText(testText)
+
+    expect(textElement).toBeInTheDocument()
   });
 });
