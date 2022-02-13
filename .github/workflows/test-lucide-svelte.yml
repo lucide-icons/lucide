@@ -2,6 +2,8 @@ name: Test Lucide Svelte
 
 on:
   push:
+    branches:
+      - '*'
     paths:
       - packages/lucide-svelte/**
 
