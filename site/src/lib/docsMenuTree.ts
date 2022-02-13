@@ -85,6 +85,10 @@ const docsMenuTree = [
         href: 'lucide-vue-next'
       },
       {
+        title: 'Lucide Svelte',
+        href: 'lucide-svelte'
+      },
+      {
         title: 'Lucide Preact',
         href: 'lucide-preact'
       },
