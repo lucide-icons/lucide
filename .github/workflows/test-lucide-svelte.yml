@@ -1,9 +1,10 @@
 name: Test Lucide Svelte
 
 on:
+  pull_request:
+    paths:
+      - packages/lucide-svelte/**
   push:
-    branches:
-      - '*'
     paths:
       - packages/lucide-svelte/**
 
