@@ -62,7 +62,7 @@
     "jest": "^26.4.2",
     "lint-staged": "^10.5.3",
     "minimist": "^1.2.5",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "prettier": "1.17.1",
     "rollup": "^2.7.3",
     "rollup-plugin-license": "^2.0.0",

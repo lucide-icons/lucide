@@ -31,10 +31,10 @@ const components = {
     </HeadingAnchored>
   ),
   h3: (props) => (
-    <HeadingAnchored as="h3" size="md" pt={4} mb={2} {...props}/>
+    <HeadingAnchored as="h3" size="md" pt={4} mb={4} {...props}/>
   ),
   h4: (props) => (
-    <HeadingAnchored as="h4" size="sm" pt={4} mb={2} {...props}/>
+    <HeadingAnchored as="h4" size="sm" pt={4} mb={4} {...props}/>
   ),
   h5: (props) => (
     <HeadingAnchored as="h5" size="xs" pt={2} mb={1} {...props}/>
@@ -45,7 +45,7 @@ const components = {
   ul: (props) => <UnorderedList my={2}>{props.children}</UnorderedList>,
   ol: (props) => <OrderedList my={2}>{props.children}</OrderedList>,
   li: (props) => <ListItem my={1}>{props.children}</ListItem>,
-  p: (props) => <Text my={2}>{props.children}</Text>,
+  p: (props) => <Text my={4}>{props.children}</Text>,
   img: ({ children, ...rest }) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>,
   code: ({ className, children: code }) => {
     const language = className.replace('language-', '');
@@ -53,13 +53,13 @@ const components = {
     return (
       <CodeBlock
         //@ts-ignore
-        my={2}
+        my={6}
         code={code}
         language={language}
       />
     )
   },
-  table: (props) => <Table {...props} rounded={4}/>,
+  table: (props) => <Table {...props} rounded={4} mb={4}/>,
   thead: Thead,
   tbody: Tbody,
   tr: Tr,
@@ -80,11 +80,18 @@ const components = {
   inlineCode: InlineCode,
   hr: (props) => <Divider my={4}/>,
   a: ({children, href, ...rest}) => {
-    const isExternal = href.startsWith('http')
+    let link = href
+    const isExternal = link.startsWith('http')
+
+    if(link.startsWith('packages/')) {
+      link = href.replace('packages/', '')
+    }
+
+    link = link.replace('.md', '')
 
     return (
       <NextLink
-        href={isExternal ? href : `/docs/${href.replace('.md', '')}`}
+        href={isExternal ? href : `/docs/${link}`}
         {...rest}
         passHref
       >

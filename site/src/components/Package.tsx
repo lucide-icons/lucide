@@ -7,11 +7,11 @@ import {
   useColorMode,
   Divider,
   ButtonGroup,
-  Stack
+  Stack,
 } from '@chakra-ui/react';
-import Image from 'next/image'
+import Image from 'next/image';
 import { Code, FileText } from 'lucide-react';
-import Link from 'next/link'
+import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote';
 import mdxComponents from '../lib/mdxComponents';
 
@@ -31,27 +31,27 @@ const Package = ({ name, description, image, shields, source, documentation }) =
     >
       <Flex
         justifyContent={{
-          base: "center",
-          md: "flex-start"
+          base: 'center',
+          md: 'flex-start',
         }}
         flexDirection={{
-          base: "column",
-          md: "row"
+          base: 'column',
+          md: 'row',
         }}
       >
         <Flex
           marginRight={{
             base: 0,
-            md: 8
+            md: 8,
           }}
           marginBottom={{
             base: 4,
-            md: 0
+            md: 0,
           }}
           flex={3}
           align="center"
         >
-          <Box marginX='auto'>
+          <Box marginX="auto">
             <Image width={278} height={120} src={image} />
           </Box>
         </Flex>
@@ -59,31 +59,30 @@ const Package = ({ name, description, image, shields, source, documentation }) =
           flex={5}
           marginRight={4}
           textAlign={{
-            base: "center",
-            md: "left"
+            base: 'center',
+            md: 'left',
           }}
         >
-          <Heading as="h2" fontSize='3xl' mb={2}>
+          <Heading as="h2" fontSize="3xl" mb={2}>
             {name}
           </Heading>
-          <Text mb={3}>{ description }</Text>
+          <Text mb={3}>{description}</Text>
           <ButtonGroup spacing={2}>
             {shields.map(({ alt, src, href }, index) => (
               <Link href={href} passHref>
                 <a target="_blank">
-                  <img {...{alt, src}} key={ index } />
+                  <img {...{ alt, src }} key={index} />
                 </a>
               </Link>
-
             ))}
           </ButtonGroup>
         </Box>
         <Flex
           placeItems="center"
-          align='center'
+          align="center"
           marginTop={{
             base: 4,
-            md: 0
+            md: 0,
           }}
         >
           <ButtonGroup
@@ -91,36 +90,24 @@ const Package = ({ name, description, image, shields, source, documentation }) =
             // spacing={8}
             // align='center'
             flexDirection={{
-              base: "column",
-              lg: "initial"
+              base: 'column',
+              lg: 'initial',
             }}
-            margin='auto'
+            margin="auto"
             justifyContent={{
-              base: "center",
-              sm: "flex-start"
+              base: 'center',
+              sm: 'flex-start',
             }}
           >
-            <Link passHref href={documentation} >
-              <Button
-                as='a'
-                variant="solid"
-                textDecoration="none"
-                leftIcon={<FileText />}
-                my={2}
-              >
+            <Link passHref href={documentation}>
+              <Button as="a" variant="solid" textDecoration="none" leftIcon={<FileText />} my={2}>
                 Documentation
               </Button>
             </Link>
-            <Link passHref href={source} >
-            <Button
-              as="a"
-              variant="solid"
-              textDecoration="none"
-              leftIcon={<Code />}
-              my={2}
-            >
-              Source
-            </Button>
+            <Link passHref href={source}>
+              <Button as="a" variant="solid" textDecoration="none" leftIcon={<Code />} my={2}>
+                Source
+              </Button>
             </Link>
           </ButtonGroup>
         </Flex>
