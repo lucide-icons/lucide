@@ -36,6 +36,7 @@ exports[`Using lucide icon components should add a class to the element 1`] = `
     y1="9"
     y2="9"
   />
+   
 </svg>
 `;
 
@@ -77,6 +78,7 @@ exports[`Using lucide icon components should adjust the size, stroke color and s
         y1="9"
         y2="9"
       />
+       
     </svg>
   </div>
 </body>
@@ -120,6 +122,7 @@ exports[`Using lucide icon components should render an component 1`] = `
         y1="9"
         y2="9"
       />
+       
     </svg>
   </div>
 </body>
