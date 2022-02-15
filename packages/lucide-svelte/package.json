@@ -15,6 +15,7 @@
   "main": "dist/cjs/lucide-svelte.js",
   "main:umd": "dist/umd/lucide-svelte.js",
   "module": "dist/esm/lucide-svelte.js",
+  "svelte": "dist/esm/lucide-svelte.js",
   "unpkg": "dist/umd/lucide-svelte.min.js",
   "typings": "dist/lucide-svelte.d.ts",
   "sideEffects": false,
