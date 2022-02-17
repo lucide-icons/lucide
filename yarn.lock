@@ -2723,7 +2723,7 @@
   resolved "https://registry.yarnpkg.com/@socket.io/base64-arraybuffer/-/base64-arraybuffer-1.0.2.tgz#568d9beae00b0d835f4f8c53fd55714986492e61"
   integrity sha512-dOlCBKnDw4iShaIsH/bxujKTM18+2TOAsYz+KSc11Am38H4q5Xw8Bbz97ZYdrVNM+um3p7w86Bvvmcn9q+5+eQ==
 
-"@testing-library/dom@^7.0.3", "@testing-library/dom@^7.16.2", "@testing-library/dom@^7.28.1":
+"@testing-library/dom@^7.0.3", "@testing-library/dom@^7.16.2", "@testing-library/dom@^7.26.6", "@testing-library/dom@^7.28.1":
   version "7.31.2"
   resolved "https://registry.npmjs.org/@testing-library/dom/-/dom-7.31.2.tgz"
   integrity sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ==
@@ -2767,6 +2767,13 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
+"@testing-library/svelte@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/svelte/-/svelte-3.0.3.tgz#fd0653c02c95c8715ff5a51aa232e3306536755e"
+  integrity sha512-GxafAllShGM2nkntFGURZ7fYVlUYwv7K62lqv1aFqtTYzzeZ2Cu8zTVhtE/Qt3bk2zMl6+FPKP03wjLip/G8mA==
+  dependencies:
+    "@testing-library/dom" "^7.0.3"
+
 "@testing-library/vue@^5.8.2":
   version "5.8.2"
   resolved "https://registry.yarnpkg.com/@testing-library/vue/-/vue-5.8.2.tgz#976b2179dc28ceba8dd63b5437edc2749f860252"
@@ -2775,13 +2782,6 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.26.6"
     "@vue/test-utils" "^1.1.0"
-
-"@testing-library/svelte@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@testing-library/svelte/-/svelte-3.0.3.tgz#fd0653c02c95c8715ff5a51aa232e3306536755e"
-  integrity sha512-GxafAllShGM2nkntFGURZ7fYVlUYwv7K62lqv1aFqtTYzzeZ2Cu8zTVhtE/Qt3bk2zMl6+FPKP03wjLip/G8mA==
-  dependencies:
-    "@testing-library/dom" "^7.0.3"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -2914,14 +2914,6 @@
   version "3.10.3"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.10.3.tgz#a89798b3d5a8bd23ca56e855a9aee3e5a93bdaaa"
   integrity sha512-SWyMrjgdAUHNQmutvDcKablrJhkDLy4wunTme8oYLjKp41GnHGxMRXr2MQMvy/qy8H3LdzwQk9gH4hZ6T++H8g==
-
-"@types/jest@*":
-  version "27.4.0"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.4.0.tgz#037ab8b872067cae842a320841693080f9cb84ed"
-  integrity sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ==
-  dependencies:
-    jest-diff "^27.0.0"
-    pretty-format "^27.0.0"
 
 "@types/jest@*":
   version "27.4.0"
