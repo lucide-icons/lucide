@@ -32,7 +32,9 @@
     "jest-serializer-vue": "^2.0.2",
     "vue": "^2.6.12",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.12",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/vue": "^5.8.2"
   },
   "peerDependencies": {
     "vue": "^2.6.12"
