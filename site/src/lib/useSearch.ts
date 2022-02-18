@@ -1,11 +1,7 @@
 import Fuse from 'fuse.js';
-import { useMemo, useState } from 'react';
-import { useDebounce } from './useDebounce';
+import { useMemo } from 'react';
 
-const useSearch = <T>(collection: T[], initialQuery = '', keys: Fuse.FuseOptionKey[]) => {
-  const [query, setQuery] = useState(initialQuery);
-  const debouncedQuery = useDebounce(query.trim(), 200);
-
+const useSearch = <T>(query = '', collection: T[], keys: Fuse.FuseOptionKey[]) => {
   const index = useMemo(() => {
     return new Fuse(collection, {
       threshold: 0.2,
@@ -14,14 +10,14 @@ const useSearch = <T>(collection: T[], initialQuery = '', keys: Fuse.FuseOptionK
   }, [collection]);
 
   const results = useMemo(() => {
-    if (debouncedQuery) {
-      return index.search(debouncedQuery).map((result) => result.item);
+    if (query) {
+      return index.search(query).map((result) => result.item);
     }
 
     return collection;
-  }, [debouncedQuery, index]);
+  }, [query, index]);
 
-  return [results, { query, setQuery }] as const;
+  return results;
 };
 
 export default useSearch;
