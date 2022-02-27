@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useState } from 'react'
-import { createReactComponent } from 'lucide-react'
 import ReactDOM from 'react-dom'
+import * as views from '../views'
 
-import IconButton from '../components/IconButton'
-import SearchInput from '../components/SearchInput'
+type Views = typeof views
+
 import useSearch, { Icon } from '../hooks/useSearch'
 
 import { getIcons } from '../api/fetchIcons'
 import './interface.scss'
+import Menu from '../components/Menu'
 
 function App() {
+  const [page, setPage] = useState('icons')
   const [query, setQuery] = useState('')
   const [icons, setIcons] = useState<Icon[]>([])
   const [tags, setTags] = useState({})
@@ -33,33 +35,20 @@ function App() {
     return null
   }
 
+  const View = views?.[page as keyof Views] ?? views.icons
+
   return (
     <div>
-      <SearchInput
-        value={query}
-        iconCount={icons.length}
-        onChange={(event)  => setQuery(event.target.value)}
+      <Menu page={page} setPage={setPage}/>
+      <View
+        {...{
+          query,
+          setQuery,
+          searchResults,
+          icons,
+          version
+        }}
       />
-      <main>
-        <div className='icon-grid'>
-          {searchResults.map(([name, iconNode] :any) => (
-            <IconButton
-              name={name}
-              key={name}
-              component={createReactComponent(name, iconNode)}
-            />
-          ))}
-        </div>
-        <footer>
-          <a
-            href="https://lucide.dev"
-            target="_blank"
-            className='footer-link'
-          >
-            Lucide v{version}
-          </a>
-        </footer>
-      </main>
     </div>
   )
 }
