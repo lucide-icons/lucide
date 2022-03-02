@@ -2153,6 +2153,18 @@
     "media",
     "music"
   ],
+  "stretch-horizontal": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
+  "stretch-vertical": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
   "strikethrough": [
     "cross out",
     "delete",
