@@ -1,7 +1,7 @@
 {
   "name": "lucide-react",
   "description": "A Lucide icon library package for React applications",
-  "version": "0.16.24",
+  "version": "0.17.2",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",

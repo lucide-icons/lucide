@@ -36,6 +36,7 @@ export default (iconName, iconNode) => ({
     {
       props: { color, size, strokeWidth, defaultClass },
       data,
+      children = [],
     },
   ) {
     return createElement(
@@ -54,7 +55,10 @@ export default (iconName, iconNode) => ({
         },
         on: data?.on || {}
       },
-      iconNode.map(([tag, attrs]) => createElement(tag, { attrs })),
+      [
+        ...iconNode.map(([tag, attrs]) => createElement(tag, { attrs })),
+        ...children
+      ],
     );
   },
 });

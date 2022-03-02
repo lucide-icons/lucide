@@ -11,18 +11,26 @@ import defaultAttributes from './defaultAttributes';
  */
 export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createVueComponent = (iconName, iconNode) => (props, context) =>
-  h(
+const createVueComponent = (iconName, iconNode) => (
+  { size, color, ...props }, // props
+  { attrs, emit, slots } // context
+  ) => {
+  return h(
     'svg',
     {
       ...defaultAttributes,
-      width: props.size || defaultAttributes.width,
-      height: props.size || defaultAttributes.height,
-      class: ['lucide', `lucide-${toKebabCase(iconName)}`],
-      ...context.attrs,
+      width: size || defaultAttributes.width,
+      height: size || defaultAttributes.height,
+      stroke: color || defaultAttributes.stroke,
+      ...attrs,
+      class: ['lucide', `lucide-${toKebabCase(iconName)}`, attrs?.class || ''],
       ...props,
     },
-    iconNode.map(child => h(...child)),
+    [
+      ...iconNode.map(child => h(...child)),
+      ...(slots.default ? [slots.default()] : [])
+    ],
   );
+};
 
 export default createVueComponent;
