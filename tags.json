@@ -50,24 +50,36 @@
     "alignment",
     "center"
   ],
+  "align-center-horizontal": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-center-vertical": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-end-horizontal": [
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
+  "align-end-vertical": [
+    "items",
+    "right",
+    "flex",
+    "justify"
+  ],
   "align-horizontal-justify-center": [
     "center",
     "items",
     "flex",
     "justify"
   ],
-  "align-center-horizontal": [
-    "items",
-    "flex",
-    "justify"
-  ],
   "align-horizontal-justify-end": [
     "right",
-    "items",
-    "flex",
-    "justify"
-  ],
-  "align-center-vertical": [
     "items",
     "flex",
     "justify"
@@ -93,18 +105,6 @@
     "flex",
     "justify"
   ],
-  "align-end-horizontal": [
-    "items",
-    "bottom",
-    "flex",
-    "justify"
-  ],
-  "align-end-vertical": [
-    "items",
-    "right",
-    "flex",
-    "justify"
-  ],
   "align-justify": [
     "text",
     "alignment",
@@ -119,6 +119,18 @@
     "text",
     "alignment",
     "right"
+  ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
   ],
   "align-vertical-justify-center": [
     "center",
@@ -159,18 +171,6 @@
     "justify",
     "distribute",
     "between"
-  ],
-  "align-start-horizontal": [
-    "top",
-    "items",
-    "flex",
-    "justify"
-  ],
-  "align-start-vertical": [
-    "left",
-    "items",
-    "flex",
-    "justify"
   ],
   "anchor": [
     "ship"
@@ -1626,13 +1626,13 @@
     "add",
     "create"
   ],
-  "package-x": [
-    "delete",
-    "remove"
-  ],
   "package-search": [
     "find",
     "product process"
+  ],
+  "package-x": [
+    "delete",
+    "remove"
   ],
   "palette": [
     "color",
