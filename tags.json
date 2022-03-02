@@ -46,20 +46,58 @@
     "danger"
   ],
   "align-center": [
-    "text alignment",
+    "text",
+    "alignment",
     "center"
   ],
+  "align-center-horizontal": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-center-vertical": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-end-horizontal": [
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
+  "align-end-vertical": [
+    "items",
+    "right",
+    "flex",
+    "justify"
+  ],
   "align-justify": [
-    "text alignment",
+    "text",
+    "alignment",
     "justified"
   ],
   "align-left": [
-    "text alignment",
+    "text",
+    "alignment",
     "left"
   ],
   "align-right": [
-    "text alignment",
+    "text",
+    "alignment",
     "right"
+  ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
   ],
   "anchor": [
     "ship"
