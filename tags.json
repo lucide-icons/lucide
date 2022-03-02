@@ -50,20 +50,6 @@
     "alignment",
     "center"
   ],
-  "align-horizonal-distribute-center": [
-    "items",
-    "flex",
-    "justify",
-    "space",
-    "evenly",
-    "around"
-  ],
-  "align-horizonal-distribute-end": [
-    "right",
-    "items",
-    "flex",
-    "justify"
-  ],
   "align-center-horizontal": [
     "items",
     "flex",
@@ -86,14 +72,28 @@
     "flex",
     "justify"
   ],
-  "align-horizontal-justify-center": [
-    "center",
+  "align-horizonal-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-horizonal-distribute-end": [
+    "right",
     "items",
     "flex",
     "justify"
   ],
   "align-horizonal-distribute-start": [
     "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-center": [
+    "center",
     "items",
     "flex",
     "justify"
@@ -140,6 +140,18 @@
     "alignment",
     "right"
   ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
   "align-vertical-distribute-center": [
     "items",
     "flex",
@@ -156,18 +168,6 @@
   ],
   "align-vertical-distribute-start": [
     "top",
-    "items",
-    "flex",
-    "justify"
-  ],
-  "align-start-horizontal": [
-    "top",
-    "items",
-    "flex",
-    "justify"
-  ],
-  "align-start-vertical": [
-    "left",
     "items",
     "flex",
     "justify"
