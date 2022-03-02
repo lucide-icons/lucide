@@ -4,7 +4,7 @@ Implementation of the lucide icon library for react applications
 
 ## Installation
 
-```sh
+``` bash
 yarn add lucide-react
 
 # or

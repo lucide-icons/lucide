@@ -16,6 +16,10 @@ const plugins = (pkg, minify) =>
       delimiters: ['', ''],
       preventAssignment: false,
     }),
+    resolve(),
+    commonJS({
+      include: 'node_modules/**',
+    }),
     babel({
       babelHelpers: 'bundled',
     }),
@@ -26,10 +30,6 @@ const plugins = (pkg, minify) =>
       banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
     }),
     bundleSize(),
-    resolve(),
-    commonJS({
-      include: 'node_modules/**',
-    }),
     visualizer({
       sourcemap: true,
       filename: `stats/${pkg.name}${minify ? '-min' : ''}.html`,
