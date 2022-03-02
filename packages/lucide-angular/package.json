@@ -1,7 +1,7 @@
 {
   "name": "lucide-angular",
   "description": "A Lucide icon library package for Angular applications",
-  "version": "0.16.29",
+  "version": "0.17.3",
   "author": "SMAH1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -49,7 +49,7 @@
     "codelyzer": "^6.0.2",
     "jasmine-core": "~3.10.1",
     "jasmine-spec-reporter": "~7.0.0",
-    "karma": "~6.3.8",
+    "karma": "~6.3.14",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.1",
