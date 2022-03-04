@@ -14,7 +14,7 @@ const IconList = memo(({ icons }: IconListProps) => {
 
   return (
     <Grid templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`} gap={5} marginBottom="320px">
-      {icons.map((icon) => {
+      {icons.map(icon => {
         return (
           <Link
             key={icon.name}
