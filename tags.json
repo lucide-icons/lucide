@@ -1446,6 +1446,12 @@
     "location",
     "cross"
   ],
+  "locate-off": [
+    "map",
+    "gps",
+    "location",
+    "cross"
+  ],
   "lock": [
     "security",
     "password",
