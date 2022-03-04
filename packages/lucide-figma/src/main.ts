@@ -34,9 +34,16 @@ figma.parameters.on('input', async ({ parameters, key, query, result }) => {
       setResults({result, query, lucideIcons: cachedIcons})
     }
   }
+  if(key === 'size') {
+    const iconSizes = [24,36,48,72]
+    result.setSuggestions(iconSizes.map((size)=>({
+      name: size.toString(),
+      data: size
+    })))
+  }
 })
 
-const drawIcon = ({icon: {name, svg}}: any) => {
+const drawIcon = ({icon: {name, svg, size }}: any) => {
   const min = 0
   const max = 100
   const randomPosition = () => Math.floor(Math.random() * (max - min + 1) + min)
@@ -46,7 +53,6 @@ const drawIcon = ({icon: {name, svg}}: any) => {
   icon.setPluginData('iconName', name)
 
   const pluginData = icon.getPluginData('isLucideIcon')
-  console.log(pluginData, 'pluginData');
 
   icon.name = name
   icon.x = Math.round(figma.viewport.center.x + randomPosition())
@@ -121,7 +127,12 @@ figma.ui.onmessage = (event) => {
 
 figma.on('run', event => {
   if(event.parameters) {
-    figma.ui.postMessage({ type: 'getSvg', iconName: event.parameters['icon-name'], cachedIcons })
+    figma.ui.postMessage({
+      type: 'getSvg',
+      iconName: event.parameters['icon-name'],
+      size: event.parameters['size'],
+      cachedIcons
+    })
   } else {
     figma.showUI(__uiFiles__.interface, { width: 300, height: 400 })
   }
