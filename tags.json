@@ -46,20 +46,171 @@
     "danger"
   ],
   "align-center": [
-    "text alignment",
+    "text",
+    "alignment",
     "center"
   ],
+  "align-center-horizontal": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-center-vertical": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-end-horizontal": [
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
+  "align-end-vertical": [
+    "items",
+    "right",
+    "flex",
+    "justify"
+  ],
+  "align-horizonal-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-horizonal-distribute-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizonal-distribute-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-center": [
+    "center",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-space-around": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-horizontal-space-between": [
+    "around",
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
   "align-justify": [
-    "text alignment",
+    "text",
+    "alignment",
     "justified"
   ],
   "align-left": [
-    "text alignment",
+    "text",
+    "alignment",
     "left"
   ],
   "align-right": [
-    "text alignment",
+    "text",
+    "alignment",
     "right"
+  ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-vertical-distribute-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-start": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-justify-center": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-justify-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-justify-start": [
+    "top",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-space-around": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-space-between": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
   ],
   "anchor": [
     "ship"
@@ -607,6 +758,12 @@
     "user"
   ],
   "contrast": [],
+  "cookie": [
+    "biscuit",
+    "privacy",
+    "legal",
+    "food"
+  ],
   "copy": [
     "clone",
     "duplicate"
@@ -1496,9 +1653,35 @@
     "box",
     "container"
   ],
+  "package-check": [
+    "confirm",
+    "verified"
+  ],
+  "package-minus": [
+    "delete",
+    "remove"
+  ],
+  "package-plus": [
+    "new",
+    "add",
+    "create"
+  ],
+  "package-search": [
+    "find",
+    "product process"
+  ],
+  "package-x": [
+    "delete",
+    "remove"
+  ],
   "palette": [
     "color",
     "theme"
+  ],
+  "palmtree": [
+    "vacation",
+    "leisure",
+    "island"
   ],
   "paperclip": [
     "attachment",
@@ -2014,6 +2197,18 @@
   "stop-circle": [
     "media",
     "music"
+  ],
+  "stretch-horizontal": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
+  "stretch-vertical": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
   ],
   "strikethrough": [
     "cross out",

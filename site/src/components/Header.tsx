@@ -11,6 +11,7 @@ import Vue3Logo from '../../public/framework-logos/vue-next.svg';
 import PreactLogo from '../../public/framework-logos/preact.svg';
 import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
+import SvelteLogo from '../../public/framework-logos/svelte.svg';
 
 function generateZip(icons) {
   const zip = new JSZip();
@@ -49,6 +50,11 @@ const Header = ({ data }) => {
       name: 'lucide-vue-next',
       Logo: Vue3Logo,
       href: '/docs/lucide-vue-next',
+    },
+    {
+      name: 'lucide-svelte',
+      Logo: SvelteLogo,
+      href: '/docs/lucide-svelte',
     },
     {
       name: 'lucide-preact',
