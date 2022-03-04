@@ -46,20 +46,171 @@
     "danger"
   ],
   "align-center": [
-    "text alignment",
+    "text",
+    "alignment",
     "center"
   ],
+  "align-center-horizontal": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-center-vertical": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-end-horizontal": [
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
+  "align-end-vertical": [
+    "items",
+    "right",
+    "flex",
+    "justify"
+  ],
+  "align-horizonal-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-horizonal-distribute-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizonal-distribute-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-center": [
+    "center",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-space-around": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-horizontal-space-between": [
+    "around",
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
   "align-justify": [
-    "text alignment",
+    "text",
+    "alignment",
     "justified"
   ],
   "align-left": [
-    "text alignment",
+    "text",
+    "alignment",
     "left"
   ],
   "align-right": [
-    "text alignment",
+    "text",
+    "alignment",
     "right"
+  ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-vertical-distribute-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-start": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-justify-center": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-justify-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-justify-start": [
+    "top",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-space-around": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-space-between": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
   ],
   "anchor": [
     "ship"
@@ -445,18 +596,66 @@
     "watch",
     "alarm"
   ],
-  "clock-1": [],
-  "clock-10": [],
-  "clock-11": [],
-  "clock-12": [],
-  "clock-2": [],
-  "clock-3": [],
-  "clock-4": [],
-  "clock-5": [],
-  "clock-6": [],
-  "clock-7": [],
-  "clock-8": [],
-  "clock-9": [],
+  "clock-1": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-10": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-11": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-12": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-2": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-3": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-4": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-5": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-6": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-7": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-8": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-9": [
+    "time",
+    "watch",
+    "alarm"
+  ],
   "cloud": [
     "weather"
   ],
@@ -559,6 +758,12 @@
     "user"
   ],
   "contrast": [],
+  "cookie": [
+    "biscuit",
+    "privacy",
+    "legal",
+    "food"
+  ],
   "copy": [
     "clone",
     "duplicate"
@@ -1448,6 +1653,27 @@
     "box",
     "container"
   ],
+  "package-check": [
+    "confirm",
+    "verified"
+  ],
+  "package-minus": [
+    "delete",
+    "remove"
+  ],
+  "package-plus": [
+    "new",
+    "add",
+    "create"
+  ],
+  "package-search": [
+    "find",
+    "product process"
+  ],
+  "package-x": [
+    "delete",
+    "remove"
+  ],
   "palette": [
     "color",
     "theme"
@@ -1680,8 +1906,12 @@
     "rule",
     "law"
   ],
-  "scan": [],
-  "scan-line": [],
+  "scan": [
+    "qr-code"
+  ],
+  "scan-line": [
+    "qr-code"
+  ],
   "scissors": [
     "cut"
   ],
@@ -1968,6 +2198,18 @@
     "media",
     "music"
   ],
+  "stretch-horizontal": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
+  "stretch-vertical": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
   "strikethrough": [
     "cross out",
     "delete",
@@ -2038,8 +2280,12 @@
     "prompt",
     "shell"
   ],
-  "text-cursor": [],
-  "text-cursor-input": [],
+  "text-cursor": [
+    "select"
+  ],
+  "text-cursor-input": [
+    "select"
+  ],
   "thermometer": [
     "temperature",
     "celsius",

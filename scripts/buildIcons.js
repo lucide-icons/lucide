@@ -23,6 +23,7 @@ const {
   silent = false,
   iconFileExtention = '.js',
   exportFileName = 'index.js',
+  pretty = true,
 } = cliArguments;
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
@@ -39,6 +40,7 @@ generateIconFiles({
   template: iconFileTemplate,
   showLog: !silent,
   iconFileExtention,
+  pretty: JSON.parse(pretty),
 });
 
 // Generates entry files for the compiler filled with icons exports
@@ -46,4 +48,5 @@ generateExportsFile(
   path.join(OUTPUT_DIR, 'icons', exportFileName),
   path.join(OUTPUT_DIR, 'icons'),
   icons,
+  iconFileExtention,
 );
