@@ -30,7 +30,7 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['preact', 'prop-types', 'lucide'],
+      external: ['preact', 'prop-types'],
       output: {
         name: packageName,
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
