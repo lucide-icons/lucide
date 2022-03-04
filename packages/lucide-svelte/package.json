@@ -1,7 +1,7 @@
 {
   "name": "lucide-svelte",
   "description": "A Lucide icon library package for Svelte applications",
-  "version": "0.17.6",
+  "version": "0.17.7",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
