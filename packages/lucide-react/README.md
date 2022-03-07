@@ -16,7 +16,7 @@ npm install lucide-react
 
 ## How to use
 
-It's build with ES modules so it's completely threeshakable.
+It's built with ES modules so it's completely threeshakable.
 Each icon can be imported as a react component.
 
 ### Example
