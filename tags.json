@@ -1313,7 +1313,12 @@
     "authentication",
     "secure"
   ],
-  "keyboard": [],
+  "keyboard": [
+    "layout"
+    "spell",
+    "settings",
+    "mouse"
+  ],
   "landmark": [
     "bank",
     "building",
