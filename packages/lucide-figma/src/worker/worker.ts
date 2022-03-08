@@ -14,20 +14,26 @@ const getLatestIcons = async ({ cachedIcons }: any) => {
   }, "*")
 }
 
-const getSvg = async ({ cachedIcons, iconName }: { cachedIcons: LucideIcons, iconName: string }) => {
+const getSvg = async ({ cachedIcons, iconName, size = 24 }: { cachedIcons: LucideIcons, iconName: string, size: number }) => {
   if (!cachedIcons) {
     return;
   }
+
+  console.log( iconName, size)
 
   const iconNode = cachedIcons.iconNodes[iconName];
 
   if (iconNode) {
     const IconComponent = createReactComponent(iconName, iconNode)
-    const svg = renderToString(createElement(IconComponent));
+    const svg = renderToString(createElement(IconComponent, { size }));
 
     parent.postMessage({ pluginMessage: {
       type: 'drawIcon',
-      icon: { name, svg }
+      icon: {
+        name: iconName,
+        svg,
+        size
+      }
     }}, '*')
 
     parent.postMessage({ pluginMessage: {
@@ -56,5 +62,3 @@ window.onmessage = async (event) => {
       break;
   }
 }
-
-console.log('Hello world!')
