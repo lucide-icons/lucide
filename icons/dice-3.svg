@@ -9,7 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M22 4a2 2 0 00-2-2H4a2 2 0 00-2 2v16a2 2 0 002 2h16a2 2 0 002-2V4z" />
+  <path d="M21 4.8A1.8 1.8 0 0019.2 3H4.8A1.8 1.8 0 003 4.8v14.4A1.8 1.8 0 004.8 21h14.4a1.8 1.8 0 001.8-1.8V4.8z" />
   <path d="M16 8h.01" />
   <path d="M12 12h.01" />
   <path d="M8 16h.01" />
