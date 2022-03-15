@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import copy from 'copy-to-clipboard';
 import { memo, useContext } from 'react';
@@ -22,8 +22,10 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
       variant="ghost"
       borderWidth="1px"
       rounded="lg"
-      padding={16}
+      padding={2}
+      height={32}
       position="relative"
+      whiteSpace="normal"
       onClick={event => {
         if (event.shiftKey) {
           copy(src);
@@ -44,15 +46,21 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
       key={name}
       alignItems="center"
     >
-      <Flex direction="column" align="center" justify="center">
-        <IconWrapper
-          content={content}
-          stroke={color}
-          strokeWidth={strokeWidth}
-          height={size}
-          width={size}
-        />
-        <Text marginTop={5}>{name}</Text>
+      <Flex direction="column" align="center" justify="stretch" width="100%" gap={4}>
+        <Flex flex={2} flexBasis="100%" minHeight={10} align="flex-end">
+          <IconWrapper
+            content={content}
+            stroke={color}
+            strokeWidth={strokeWidth}
+            height={size}
+            width={size}
+          />
+        </Flex>
+        <Flex flex={1} minHeight={10} align="center">
+          <Text wordBreak="break-word" maxWidth="100%">
+            {name}
+          </Text>
+        </Flex>
       </Flex>
     </Button>
   );

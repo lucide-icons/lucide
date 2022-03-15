@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -12,8 +16,17 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
-  "exclude": ["node_modules", "use-popper.d.ts", "*.md"],
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"]
+  "exclude": [
+    "node_modules",
+    "use-popper.d.ts",
+    "*.md"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
 }
