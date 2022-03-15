@@ -1886,6 +1886,13 @@
   "rewind": [
     "music"
   ],
+  "rocket": [
+    "release",
+    "boost",
+    "launch",
+    "space",
+    "version"
+  ],
   "rocking-chair": [
     "chair",
     "furniture",
