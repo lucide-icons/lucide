@@ -9,7 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M21 4.8A1.8 1.8 0 0019.2 3H4.8A1.8 1.8 0 003 4.8v14.4A1.8 1.8 0 004.8 21h14.4a1.8 1.8 0 001.8-1.8V4.8z" />
+  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
   <path d="M16 8h.01" />
   <path d="M8 8h.01" />
   <path d="M8 16h.01" />
