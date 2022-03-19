@@ -42,4 +42,3 @@ That's it. You just made your first icon. Congratulations!
 
 ## Figma Tips
 1. The [Icon Design Guidelines](ICON_DESIGN_GUIDE.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).
-2. Center your icon easily by selecting all objects in the frame and dragging them to the center. Help lines will then appear. You can also use the modifier key (`⌥` or `Alt`) and then press `H` and `V` respectively.
