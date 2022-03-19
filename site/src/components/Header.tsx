@@ -12,6 +12,7 @@ import PreactLogo from '../../public/framework-logos/preact.svg';
 import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
+import LaravelLogo from '../../public/framework-logos/laravel.svg';
 
 function generateZip(icons) {
   const zip = new JSZip();
@@ -71,6 +72,11 @@ const Header = ({ data }) => {
       Logo: FlutterLogo,
       href: '/docs/lucide-flutter',
     },
+    {
+      name: 'lucide-laravel',
+      Logo: LaravelLogo,
+      href: 'https://github.com/mallardduck/blade-lucide-icons',
+    }
   ];
 
   return (
