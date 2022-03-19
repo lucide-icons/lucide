@@ -907,6 +907,13 @@
     "calculate",
     "off"
   ],
+  "eraser": [
+    "pencil",
+    "drawing",
+    "undo",
+    "delete",
+    "clear"
+  ],
   "euro": [
     "currency",
     "money",
