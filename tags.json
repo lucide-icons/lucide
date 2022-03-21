@@ -72,7 +72,7 @@
     "flex",
     "justify"
   ],
-  "align-horizonal-distribute-center": [
+  "align-horizontal-distribute-center": [
     "items",
     "flex",
     "justify",
@@ -80,13 +80,13 @@
     "evenly",
     "around"
   ],
-  "align-horizonal-distribute-end": [
+  "align-horizontal-distribute-end": [
     "right",
     "items",
     "flex",
     "justify"
   ],
-  "align-horizonal-distribute-start": [
+  "align-horizontal-distribute-start": [
     "left",
     "items",
     "flex",
