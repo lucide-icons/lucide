@@ -622,6 +622,42 @@
   "delete": [
     "remove"
   ],
+  "dice-1": [
+    "dice",
+    "random",
+    "tabletop",
+    "1"
+  ],
+  "dice-2": [
+    "dice",
+    "random",
+    "tabletop",
+    "2"
+  ],
+  "dice-3": [
+    "dice",
+    "random",
+    "tabletop",
+    "3"
+  ],
+  "dice-4": [
+    "dice",
+    "random",
+    "tabletop",
+    "4"
+  ],
+  "dice-5": [
+    "dice",
+    "random",
+    "tabletop",
+    "5"
+  ],
+  "dice-6": [
+    "dice",
+    "random",
+    "tabletop",
+    "6"
+  ],
   "disc": [
     "album",
     "cd",
