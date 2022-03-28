@@ -2286,6 +2286,10 @@
     "weather",
     "light"
   ],
+  "sun-dim": [
+    "dim sun",
+    "dim"
+  ],
   "sunrise": [
     "weather",
     "time",
