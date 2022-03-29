@@ -1,9 +1,11 @@
 .search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+
   .icon {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 4px;
+    left: 16px;
   }
   input {
     width: 100%;

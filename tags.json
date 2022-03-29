@@ -46,20 +46,171 @@
     "danger"
   ],
   "align-center": [
-    "text alignment",
+    "text",
+    "alignment",
     "center"
   ],
+  "align-center-horizontal": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-center-vertical": [
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-end-horizontal": [
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
+  "align-end-vertical": [
+    "items",
+    "right",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-horizontal-distribute-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-distribute-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-center": [
+    "center",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-end": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-justify-start": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-horizontal-space-around": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-horizontal-space-between": [
+    "around",
+    "items",
+    "bottom",
+    "flex",
+    "justify"
+  ],
   "align-justify": [
-    "text alignment",
+    "text",
+    "alignment",
     "justified"
   ],
   "align-left": [
-    "text alignment",
+    "text",
+    "alignment",
     "left"
   ],
   "align-right": [
-    "text alignment",
+    "text",
+    "alignment",
     "right"
+  ],
+  "align-start-horizontal": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-start-vertical": [
+    "left",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-center": [
+    "items",
+    "flex",
+    "justify",
+    "space",
+    "evenly",
+    "around"
+  ],
+  "align-vertical-distribute-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-distribute-start": [
+    "top",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "align-vertical-justify-center": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-justify-end": [
+    "bottom",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-justify-start": [
+    "top",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-space-around": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
+  ],
+  "align-vertical-space-between": [
+    "center",
+    "items",
+    "flex",
+    "justify",
+    "distribute",
+    "between"
   ],
   "anchor": [
     "ship"
@@ -160,6 +311,11 @@
     "diagram",
     "graph"
   ],
+  "baseline": [
+    "text",
+    "format",
+    "color"
+  ],
   "battery": [
     "power",
     "electricity"
@@ -249,7 +405,8 @@
   ],
   "bold": [
     "text",
-    "strong"
+    "strong",
+    "format"
   ],
   "book": [
     "read",
@@ -337,6 +494,11 @@
     "vehicle",
     "transport",
     "trip"
+  ],
+  "carrot": [
+    "vegetable",
+    "food",
+    "eat"
   ],
   "cast": [
     "chromecast",
@@ -436,6 +598,66 @@
     "remove"
   ],
   "clock": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-1": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-10": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-11": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-12": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-2": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-3": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-4": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-5": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-6": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-7": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-8": [
+    "time",
+    "watch",
+    "alarm"
+  ],
+  "clock-9": [
     "time",
     "watch",
     "alarm"
@@ -542,6 +764,12 @@
     "user"
   ],
   "contrast": [],
+  "cookie": [
+    "biscuit",
+    "privacy",
+    "legal",
+    "food"
+  ],
   "copy": [
     "clone",
     "duplicate"
@@ -617,6 +845,42 @@
   "delete": [
     "remove"
   ],
+  "dice-1": [
+    "dice",
+    "random",
+    "tabletop",
+    "1"
+  ],
+  "dice-2": [
+    "dice",
+    "random",
+    "tabletop",
+    "2"
+  ],
+  "dice-3": [
+    "dice",
+    "random",
+    "tabletop",
+    "3"
+  ],
+  "dice-4": [
+    "dice",
+    "random",
+    "tabletop",
+    "4"
+  ],
+  "dice-5": [
+    "dice",
+    "random",
+    "tabletop",
+    "5"
+  ],
+  "dice-6": [
+    "dice",
+    "random",
+    "tabletop",
+    "6"
+  ],
   "disc": [
     "album",
     "cd",
@@ -652,6 +916,11 @@
     "water",
     "humidity"
   ],
+  "drumstick": [
+    "food",
+    "chicken",
+    "meat"
+  ],
   "edit": [
     "pencil",
     "change"
@@ -663,6 +932,9 @@
   "edit-3": [
     "pencil",
     "change"
+  ],
+  "egg": [
+    "food"
   ],
   "equal": [
     "calculate"
@@ -1070,7 +1342,8 @@
   ],
   "italic": [
     "oblique",
-    "text"
+    "text",
+    "format"
   ],
   "japanese-yen": [
     "currency",
@@ -1082,6 +1355,12 @@
     "login",
     "authentication",
     "secure"
+  ],
+  "keyboard": [
+    "layout",
+    "spell",
+    "settings",
+    "mouse"
   ],
   "landmark": [
     "bank",
@@ -1211,6 +1490,12 @@
     "cross"
   ],
   "locate-fixed": [
+    "map",
+    "gps",
+    "location",
+    "cross"
+  ],
+  "locate-off": [
     "map",
     "gps",
     "location",
@@ -1423,9 +1708,35 @@
     "box",
     "container"
   ],
+  "package-check": [
+    "confirm",
+    "verified"
+  ],
+  "package-minus": [
+    "delete",
+    "remove"
+  ],
+  "package-plus": [
+    "new",
+    "add",
+    "create"
+  ],
+  "package-search": [
+    "find",
+    "product process"
+  ],
+  "package-x": [
+    "delete",
+    "remove"
+  ],
   "palette": [
     "color",
     "theme"
+  ],
+  "palmtree": [
+    "vacation",
+    "leisure",
+    "island"
   ],
   "paperclip": [
     "attachment",
@@ -1493,6 +1804,12 @@
   "piggy-bank": [
     "money",
     "savings"
+  ],
+  "pin": [
+    "save",
+    "map",
+    "lock",
+    "fix"
   ],
   "pipette": [
     "eye dropper",
@@ -1605,6 +1922,13 @@
   "rewind": [
     "music"
   ],
+  "rocket": [
+    "release",
+    "boost",
+    "launch",
+    "space",
+    "version"
+  ],
   "rocking-chair": [
     "chair",
     "furniture",
@@ -1643,6 +1967,12 @@
     "right",
     "rule",
     "law"
+  ],
+  "scan": [
+    "qr-code"
+  ],
+  "scan-line": [
+    "qr-code"
   ],
   "scissors": [
     "cut"
@@ -1788,6 +2118,57 @@
     "sum",
     "calculate"
   ],
+  "signal": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-high": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-low": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-medium": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g"
+  ],
+  "signal-zero": [
+    "connection",
+    "wireless",
+    "gsm",
+    "phone",
+    "2g",
+    "3g",
+    "4g",
+    "5g",
+    "lost"
+  ],
   "skip-back": [
     "arrow",
     "previous",
@@ -1879,10 +2260,26 @@
     "media",
     "music"
   ],
+  "stretch-horizontal": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
+  "stretch-vertical": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
   "strikethrough": [
     "cross out",
     "delete",
-    "remove"
+    "remove",
+    "format"
+  ],
+  "subscript": [
+    "text"
   ],
   "sun": [
     "brightness",
@@ -1900,6 +2297,10 @@
     "time",
     "evening",
     "night"
+  ],
+  "superscript": [
+    "text",
+    "exponent"
   ],
   "swiss-franc": [
     "currency",
@@ -1941,6 +2342,12 @@
     "command line",
     "prompt",
     "shell"
+  ],
+  "text-cursor": [
+    "select"
+  ],
+  "text-cursor-input": [
+    "select"
   ],
   "thermometer": [
     "temperature",
@@ -2067,7 +2474,8 @@
     "weather"
   ],
   "underline": [
-    "text"
+    "text",
+    "format"
   ],
   "undo": [
     "redo",
@@ -2181,6 +2589,14 @@
   "watch": [
     "clock",
     "time"
+  ],
+  "waves": [
+    "water",
+    "sea",
+    "sound",
+    "hertz",
+    "wavelength",
+    "vibrate"
   ],
   "webcam": [
     "camera",

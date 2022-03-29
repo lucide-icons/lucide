@@ -1,12 +1,14 @@
 import { useEffect, useMemo } from 'react';
-import { useheadingNavigationContext } from './HeadingNavigationProvider';
+import { useHeadingNavigationContext } from './HeadingNavigationProvider';
 
 const HeadingTreeMenu = () => {
-  const { headings } = useheadingNavigationContext();
+  const { headings } = useHeadingNavigationContext();
   const headingElements = useMemo(
     () =>
       headings.map(heading => {
         const headingElement = document.getElementById(heading.anchor);
+        console.log(headingElement);
+
         return {
           element: headingElement,
           offsetTop: headingElement.getBoundingClientRect().top,
@@ -14,9 +16,6 @@ const HeadingTreeMenu = () => {
       }),
     [headings],
   );
-  useEffect(() => {
-    console.log(headingElements);
-  }, [headingElements]);
 
   return <div />;
 };

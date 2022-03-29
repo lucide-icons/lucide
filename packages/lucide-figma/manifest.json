@@ -9,9 +9,18 @@
     "worker": "dist/src/worker/worker.html"
   },
   "parameterOnly": false,
-  "parameters": [{
-    "name": "Icon",
-    "key": "icon-name",
-    "description": "Enter the name of the icon you want to insert."
-  }]
+  "parameters": [
+    {
+      "name": "Icon",
+      "key": "icon-name",
+      "description": "Enter the name of the icon you want to insert."
+    },
+    {
+      "name": "Size",
+      "key": "size",
+      "description": "Enter the size of the icon.",
+      "allowFreeform": true,
+      "optional": true
+    }
+  ]
 }
