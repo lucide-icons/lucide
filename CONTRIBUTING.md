@@ -41,6 +41,10 @@ Here you can find templates and instructions on how to implement the guidelines 
 `Template`: None
 `Instructions`: You can find the [Inkscape Guide](/docs/INKSCAPE_GUIDE.md) and how to set up Inkscape under `/docs/INKSCAPE_GUIDE.md`.
 
+#### Figma
+`Template`: None
+`Instructions`: You can find the [Figma Guide](/docs/FIGMA_GUIDE.md) and how to set up Figma under `/docs/FIGMA_GUIDE.md`.
+
 #### Submitting Mulitple Icons
 
 If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
