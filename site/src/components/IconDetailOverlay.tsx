@@ -28,11 +28,6 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
   };
 
   useEffect(() => {
-    console.log(icon);
-
-  }, [icon])
-
-  useEffect(() => {
     if(open) {
       onOpen()
     }
