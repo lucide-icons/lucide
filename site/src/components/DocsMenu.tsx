@@ -2,13 +2,9 @@ import { Box, Text, Link, BoxProps } from '@chakra-ui/react';
 import docsMenuTree from '../lib/docsMenuTree';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const DocsMenu = (props: BoxProps) => {
   const router = useRouter();
-  useEffect(() => {
-    console.log(router.asPath);
-  }, [router]);
   const linkIsActive = (currentPath, href) => currentPath === `/docs/${href}`;
   return (
     <Box {...props}>
