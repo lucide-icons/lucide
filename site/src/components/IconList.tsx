@@ -13,7 +13,7 @@ const IconList = memo(({ icons }: IconListProps) => {
   const router = useRouter();
 
   return (
-    <Grid templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`} gap={5} marginBottom="320px">
+    <Grid templateColumns={`repeat(auto-fill, minmax(80px, 1fr))`} gap={5} marginBottom={6}>
       {icons.map(icon => {
         return (
           <Link

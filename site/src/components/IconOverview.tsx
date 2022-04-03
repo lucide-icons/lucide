@@ -9,7 +9,7 @@ interface IconOverviewProps {
   data: IconEntity[];
 }
 
-const IconOverview = ({ data }: IconOverviewProps) => {
+const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
   const [query, setQuery] = useState('');
 
   const searchResults = useSearch(query, data, [
@@ -21,13 +21,9 @@ const IconOverview = ({ data }: IconOverviewProps) => {
     <>
       <SearchInput onChange={setQuery} count={data.length} />
 
-      <Box marginTop={5}>
+      <Box marginTop={5} marginBottom="320px">
         {searchResults.length > 0 ? (
-          categoryView ? (
-            <IconCategoryList icons={searchResults} data={data} categories={categories} />
-          ) : (
-            <IconList icons={searchResults} />
-          )
+          <IconList icons={searchResults} />
         ) : (
           <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word">
             No results found for "{query}"

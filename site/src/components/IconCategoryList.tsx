@@ -63,7 +63,7 @@ const IconCategory = ({
               <Text fontSize="xl" marginBottom={3}>
                 {toTitleCase(name)}
               </Text>
-              <IconList icons={icons} renderLink={false} />
+              <IconList icons={icons} />
             </Box>
           </Box>
         ))}

@@ -23,7 +23,8 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
       borderWidth="1px"
       rounded="lg"
       padding={2}
-      height={32}
+      height={20}
+      width={20}
       position="relative"
       whiteSpace="normal"
       onClick={event => {
@@ -46,8 +47,8 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
       key={name}
       alignItems="center"
     >
-      <Flex direction="column" align="center" justify="stretch" width="100%" gap={4}>
-        <Flex flex={2} flexBasis="100%" minHeight={10} align="flex-end">
+      <Flex direction="column" align="center" justify="stretch" width="100%">
+        <Flex flex={2} flexBasis="100%" align="flex-end">
           <IconWrapper
             content={content}
             stroke={color}
@@ -56,11 +57,11 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
             width={size}
           />
         </Flex>
-        <Flex flex={1} minHeight={10} align="center">
+        {/* <Flex flex={1} minHeight={10} align="center">
           <Text wordBreak="break-word" maxWidth="100%">
             {name}
           </Text>
-        </Flex>
+        </Flex> */}
       </Flex>
     </Button>
   );
