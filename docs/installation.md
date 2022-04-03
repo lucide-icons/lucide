@@ -8,7 +8,7 @@ title: Installation
 
 Implementation of the lucide icon library for web applications.
 
-```sh
+```bash
 npm install lucide
 
 #or
@@ -22,7 +22,7 @@ For more details, see the [documentation](packages/lucide).
 
 Implementation of the lucide icon library for react applications.
 
-```sh
+```bash
 yarn add lucide-react
 
 # or
@@ -30,13 +30,13 @@ yarn add lucide-react
 npm install lucide-react
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react#lucide-react).
+For more details, see the [documentation](packages/lucide-react).
 
 ## Vue 2
 
 Implementation of the lucide icon library for vue applications.
 
-```sh
+```bash
 yarn add lucide-vue
 
 # or
@@ -44,13 +44,13 @@ yarn add lucide-vue
 npm install lucide-vue
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue#lucide-vue).
+For more details, see the [documentation](packages/lucide-vue).
 
 ## Vue 3
 
 Implementation of the lucide icon library for vue applications.
 
-```sh
+```bash
 yarn add lucide-vue-next
 
 # or
@@ -58,11 +58,25 @@ yarn add lucide-vue-next
 npm install lucide-vue-next
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next).
+For more details, see the [documentation](packages/lucide-vue-next).
+
+## Svelte
+
+Implementation of the lucide icon library for vue applications.
+
+```bash
+yarn add lucide-svelte
+
+# or
+
+npm install lucide-svelte
+```
+
+For more details, see the [documentation](packages/lucide-svelte).
 
 ## Angular
 
-```sh
+```bash
 yarn add lucide-angular
 
 # or
@@ -70,13 +84,13 @@ yarn add lucide-angular
 npm install lucide-angular
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular#lucide-angular).
+For more details, see the [documentation](packages/lucide-angular).
 
 ## Preact
 
 Implementation of the lucide icon library for preact applications.
 
-```sh
+```bash
 yarn add lucide-preact
 
 # or
@@ -84,7 +98,7 @@ yarn add lucide-preact
 npm install lucide-preact
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact#lucide-preact).
+For more details, see the [documentation](packages/lucide-preact).
 
 ## Figma
 
@@ -98,7 +112,7 @@ Visit [Figma community page](https://www.figma.com/community/plugin/939567362549
 
 Implementation of Lucide icon's using `blade-icons` for Laravel based projects.
 
-```sh
+```bash
 composer require mallardduck/blade-lucide-icons
 ```
 
@@ -108,7 +122,7 @@ For more details, see the [documentation](https://github.com/mallardduck/blade-l
 
 Implementation of Lucide icon library for Flutter applications.
 
-```sh
+```bash
 flutter pub add lucide_icons
 ```
 

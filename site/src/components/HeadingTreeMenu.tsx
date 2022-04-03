@@ -7,7 +7,6 @@ const HeadingTreeMenu = () => {
     () =>
       headings.map(heading => {
         const headingElement = document.getElementById(heading.anchor);
-        console.log(headingElement);
 
         return {
           element: headingElement,

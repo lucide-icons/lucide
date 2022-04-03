@@ -16,14 +16,6 @@ const IndexPage = ({ data }) => {
     return getIcon(router.query.iconName)
   }, [router.query])
 
-  useEffect(() => {
-    router.events.on('routeChangeComplete',((url, options) => {
-      console.log(router);
-      console.log(getIcon(router.query.iconName));
-
-    }))
-  }, [])
-
   return (
     <Layout>
       <MobileMenu />

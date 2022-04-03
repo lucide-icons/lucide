@@ -21,27 +21,7 @@ const theme = {
       '800': '#A70B0B',
       '900': '#720707'
     },
-  },
-  components: {
-    ...chakraTheme.components,
-    Button: {
-      ...chakraTheme.components.Button,
-      variants: {
-        ...chakraTheme.components.Button.variants,
-        primary: (props) => ({
-          ...chakraTheme.components.Button.variants.solid,
-          bg: "brand.500",
-          color: "white",
-          _hover: {
-            bg: "brand.600",
-          },
-          _active: {
-            bg: "brand.700",
-          },
-        }),
-      }
-    },
-  },
+  }
 };
 
 export default theme;

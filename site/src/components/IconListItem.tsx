@@ -1,8 +1,8 @@
-import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import copy from 'copy-to-clipboard';
-import { forwardRef, memo } from 'react';
-import { useCustomizeIconContext } from './CustomizeIconContext';
+import { memo, useContext } from 'react';
+import { IconStyleContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps {
@@ -13,18 +13,19 @@ interface IconListItemProps {
   onClick?: ButtonProps['onClick'];
 }
 
-const IconListItem = forwardRef(({ name, content, src, onClick }: IconListItemProps, ref) => {
+const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
   const toast = useToast();
-  const { color, size, strokeWidth } = useCustomizeIconContext();
+  const { color, size, strokeWidth } = useContext(IconStyleContext);
 
   return (
     <Button
-      ref={ref}
       variant="ghost"
       borderWidth="1px"
       rounded="lg"
-      paddingY={16}
+      padding={2}
+      height={32}
       position="relative"
+      whiteSpace="normal"
       onClick={event => {
         if (event.shiftKey) {
           copy(src);
@@ -45,18 +46,24 @@ const IconListItem = forwardRef(({ name, content, src, onClick }: IconListItemPr
       key={name}
       alignItems="center"
     >
-      <Flex direction="column" align="center" justify="center">
-        <IconWrapper
-          content={content}
-          stroke={color}
-          strokeWidth={strokeWidth}
-          height={size}
-          width={size}
-        />
-        <Text marginTop={5}>{name}</Text>
+      <Flex direction="column" align="center" justify="stretch" width="100%" gap={4}>
+        <Flex flex={2} flexBasis="100%" minHeight={10} align="flex-end">
+          <IconWrapper
+            content={content}
+            stroke={color}
+            strokeWidth={strokeWidth}
+            height={size}
+            width={size}
+          />
+        </Flex>
+        <Flex flex={1} minHeight={10} align="center">
+          <Text wordBreak="break-word" maxWidth="100%">
+            {name}
+          </Text>
+        </Flex>
       </Flex>
     </Button>
   );
-});
+};
 
 export default memo(IconListItem);

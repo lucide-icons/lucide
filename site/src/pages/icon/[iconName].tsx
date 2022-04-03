@@ -18,7 +18,6 @@ const IconPage = ({ icon, data }) => {
         search: router.query.search,
       };
     }
-    console.log('CLOSE');
 
     router.push(
       {

@@ -44,13 +44,16 @@ const LicensePage = ({ licenseText }) => {
 export default LicensePage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const doc = await fs.readFile(resolve('../LICENSE'), 'utf-8');
+  const doc: string = await fs.readFile(resolve('../LICENSE'), 'utf-8');
 
   const licenseText = doc
-    .split('\n')
-    .map(line => (line === '' ? '|' : line))
-    .join('')
-    .split('|')
+    .split(/\n{2,}/)
+    .map(paragraph =>
+      paragraph
+        .split('\n')
+        .join(' ')
+        .trim(),
+    )
     .filter(Boolean);
 
   return { props: { licenseText } };

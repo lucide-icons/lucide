@@ -20,7 +20,7 @@ interface LayoutProps extends BoxProps {
   aside?: BoxProps['children'];
 }
 
-const Layout = ({ aside, children, maxWidth = "1250px" }: LayoutProps) => {
+const Layout = ({ aside, children }: LayoutProps) => {
   const router = useRouter();
   const { toggleMobileMenu } = useMobileNavigationContext();
   const { toggleColorMode } = useColorMode();
@@ -37,12 +37,14 @@ const Layout = ({ aside, children, maxWidth = "1250px" }: LayoutProps) => {
   };
 
   function setQuery(query) {
-    router.push({
+    router.push(
+      {
         pathname: '/',
         query: { query: query },
-    },
-    undefined,
-    { shallow: true })
+      },
+      undefined,
+      { shallow: true },
+    );
   }
 
   useKeyBindings({
@@ -62,7 +64,6 @@ const Layout = ({ aside, children, maxWidth = "1250px" }: LayoutProps) => {
           justifyContent="space-between"
           pt={4}
           pb={4}
-          maxW={maxWidth}
           margin="0 auto"
           w="full"
           px={5}
@@ -116,7 +117,11 @@ const Layout = ({ aside, children, maxWidth = "1250px" }: LayoutProps) => {
         </Flex>
       </Flex>
       <Flex>
-        {aside ? <Box as="aside" marginRight={{ base: 0, lg: -240, }}>{aside}</Box> : null}
+        {aside ? (
+          <Box as="aside" marginRight={{ base: 0, lg: -240 }}>
+            {aside}
+          </Box>
+        ) : null}
         <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
           {children}
           <Divider mb={6} mt={12} />

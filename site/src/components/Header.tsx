@@ -11,6 +11,8 @@ import Vue3Logo from '../../public/framework-logos/vue-next.svg';
 import PreactLogo from '../../public/framework-logos/preact.svg';
 import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
+import SvelteLogo from '../../public/framework-logos/svelte.svg';
+import LaravelLogo from '../../public/framework-logos/laravel.svg';
 
 function generateZip(icons) {
   const zip = new JSZip();
@@ -51,6 +53,11 @@ const Header = ({ data }) => {
       href: '/docs/lucide-vue-next',
     },
     {
+      name: 'lucide-svelte',
+      Logo: SvelteLogo,
+      href: '/docs/lucide-svelte',
+    },
+    {
       name: 'lucide-preact',
       Logo: PreactLogo,
       href: '/docs/lucide-preact',
@@ -65,6 +72,11 @@ const Header = ({ data }) => {
       Logo: FlutterLogo,
       href: '/docs/lucide-flutter',
     },
+    {
+      name: 'lucide-laravel',
+      Logo: LaravelLogo,
+      href: 'https://github.com/mallardduck/blade-lucide-icons',
+    }
   ];
 
   return (

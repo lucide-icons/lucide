@@ -30,6 +30,7 @@
     "lucide-preact": "yarn workspace lucide-preact",
     "lucide-vue": "yarn workspace lucide-vue",
     "lucide-vue-next": "yarn workspace lucide-vue-next",
+    "lucide-svelte": "yarn workspace lucide-svelte",
     "lucide-static": "yarn workspace lucide-static",
     "build:icons": "babel-node ./scripts/buildIcons.js --presets @babel/env",
     "build:outline-icons": "babel-node ./scripts/outlineSvg.js --presets @babel/env",
@@ -60,7 +61,7 @@
     "husky": "^4.3.6",
     "jest": "^26.4.2",
     "lint-staged": "^10.5.3",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node-fetch": "^2.6.7",
     "prettier": "1.17.1",
     "rollup": "^2.7.3",
@@ -79,6 +80,7 @@
     "icons/*.svg": "npx babel-node ./scripts/optimizeStagedSvgs.js --presets @babel/env"
   },
   "dependencies": {
+    "rollup-plugin-svelte": "^7.1.0",
     "svg-outline-stroke": "^1.3.1"
   }
 }

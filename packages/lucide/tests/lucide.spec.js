@@ -64,4 +64,25 @@ describe('createIcons', () => {
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });
+
+  it('should inherit elements attributes', () => {
+    document.body.innerHTML = `<i icon-name="sun" data-theme-switcher="light"></i>`;
+
+    const attrs = {
+      'data-theme-switcher':'light',
+    };
+
+    createIcons({ icons });
+
+    const element = document.querySelector('svg');
+    const attributes = element.getAttributeNames();
+
+    const attributesAndValues = attributes.reduce((acc, item) => {
+      acc[item] = element.getAttribute(item);
+
+      return acc;
+    },{})
+
+    expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+  });
 });
