@@ -8,7 +8,7 @@ const TYPES_FILE_NAME = 'lucide-vue-next.d.ts';
 
 // Generates header of d.ts file include some types and functions
 const typeDefinitions = `\
-import { SVGAttributes, VNode } from 'vue';
+import { SVGAttributes, FunctionalComponent } from 'vue';
 declare module 'lucide-vue-next'
 
 // Create interface extending SVGAttributes
