@@ -1648,6 +1648,11 @@
     "climb",
     "snow"
   ],
+  "mouse": [
+    "device",
+    "scroll",
+    "click"
+  ],
   "mouse-pointer": [
     "arrow",
     "cursor",
