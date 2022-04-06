@@ -40,11 +40,11 @@ jobs:
         run: yarn --pure-lockfile
 
       - name: Check if we can patch
-        run: .github/workflows/version-up.sh --patch
+        run: .github/workflows/version-up.sh --minor
 
       - name: Create new version
         id: new-version
-        run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --patch)"
+        run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --minor)"
 
       - name: Create change log
         id: change-log
