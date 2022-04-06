@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import Svgo from 'svgo';
+import { optimize } from 'svgo';
 import { format } from 'prettier';
 import { parseSync, stringify } from 'svgson';
 import DEFAULT_ATTRS from './default-attrs.json';
@@ -9,17 +9,25 @@ import DEFAULT_ATTRS from './default-attrs.json';
  * @param {string} svg - An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-function optimize(svg) {
-  const svgo = new Svgo({
+async function optimizeSvg(svg) {
+  const result = optimize(svg, {
     plugins: [
-      { convertShapeToPath: false },
-      { mergePaths: false },
-      { removeAttrs: { attrs: '(fill|stroke.*)' } },
-      { removeTitle: true },
+      {
+        name: 'preset-default',
+        params: {
+          overrides: {
+            convertShapeToPath: false,
+            mergePaths: false,
+            removeAttrs: {
+              attrs: '(fill|stroke.*)',
+            },
+          },
+        },
+      },
     ],
   });
 
-  return svgo.optimize(svg).then(({ data }) => data);
+  return result.data;
 }
 
 /**
@@ -42,7 +50,7 @@ function setAttrs(svg) {
  */
 function processSvg(svg) {
   return (
-    optimize(svg)
+    optimizeSvg(svg)
       .then(setAttrs)
       .then(optimizedSvg => format(optimizedSvg, { parser: 'babel' }))
       // remove semicolon inserted by prettier
