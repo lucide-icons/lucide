@@ -3,7 +3,7 @@ import path from 'path';
 import processSvg from './render/processSvg';
 import { readSvgDirectory, writeSvgFile } from './helpers';
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
+const ICONS_DIR = path.resolve(process.cwd(), 'icons');
 
 console.log(`Optimizing SVGs...`);
 
