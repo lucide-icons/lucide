@@ -4,6 +4,7 @@ import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
+
 import { useMemo } from 'react';
 
 const IconPage = ({ icon, data }) => {
