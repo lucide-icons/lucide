@@ -13,71 +13,69 @@ import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
 import LaravelLogo from '../../public/framework-logos/laravel.svg';
+import { IconEntity } from '../types';
 
-function generateZip(icons) {
+function generateZip(icons: IconEntity) {
   const zip = new JSZip();
-  Object.values(icons).forEach(icon =>
-    // @ts-ignore
-    zip.file(`${icon.name}.svg`, icon.src),
-  );
+  Object.values(icons).forEach(icon => zip.file(`${icon.name}.svg`, icon.src));
   return zip.generateAsync({ type: 'blob' });
 }
+
+const repositoryUrl = 'https://github.com/lucide-icons/lucide';
+
+const packages = [
+  {
+    name: 'lucide',
+    Logo: JSLogo,
+    href: '/docs/lucide',
+  },
+  {
+    name: 'lucide-react',
+    Logo: ReactLogo,
+    href: '/docs/lucide-react',
+  },
+  {
+    name: 'lucide-vue',
+    Logo: VueLogo,
+    href: '/docs/lucide-vue',
+  },
+  {
+    name: 'lucide-vue-next',
+    Logo: Vue3Logo,
+    href: '/docs/lucide-vue-next',
+  },
+  {
+    name: 'lucide-svelte',
+    Logo: SvelteLogo,
+    href: '/docs/lucide-svelte',
+  },
+  {
+    name: 'lucide-preact',
+    Logo: PreactLogo,
+    href: '/docs/lucide-preact',
+  },
+  {
+    name: 'lucide-angular',
+    Logo: AngularLogo,
+    href: '/docs/lucide-angular',
+  },
+  {
+    name: 'lucide-flutter',
+    Logo: FlutterLogo,
+    href: '/docs/lucide-flutter',
+  },
+  {
+    name: 'lucide-laravel',
+    Logo: LaravelLogo,
+    href: 'https://github.com/mallardduck/blade-lucide-icons',
+  },
+];
 
 const Header = ({ data }) => {
   const downloadAllIcons = async () => {
     const zip = await generateZip(data);
     download(zip, 'lucide.zip');
   };
-
-  const repositoryUrl = 'https://github.com/lucide-icons/lucide';
-
-  const packages = [
-    {
-      name: 'lucide',
-      Logo: JSLogo,
-      href: '/docs/lucide',
-    },
-    {
-      name: 'lucide-react',
-      Logo: ReactLogo,
-      href: '/docs/lucide-react',
-    },
-    {
-      name: 'lucide-vue',
-      Logo: VueLogo,
-      href: '/docs/lucide-vue',
-    },
-    {
-      name: 'lucide-vue-next',
-      Logo: Vue3Logo,
-      href: '/docs/lucide-vue-next',
-    },
-    {
-      name: 'lucide-svelte',
-      Logo: SvelteLogo,
-      href: '/docs/lucide-svelte',
-    },
-    {
-      name: 'lucide-preact',
-      Logo: PreactLogo,
-      href: '/docs/lucide-preact',
-    },
-    {
-      name: 'lucide-angular',
-      Logo: AngularLogo,
-      href: '/docs/lucide-angular',
-    },
-    {
-      name: 'lucide-flutter',
-      Logo: FlutterLogo,
-      href: '/docs/lucide-flutter',
-    },
-    {
-      name: 'lucide-laravel',
-      Logo: LaravelLogo,
-      href: 'https://github.com/mallardduck/blade-lucide-icons',
-    }
-  ];
 
   return (
     <Flex direction="column" align="center" justify="center">
@@ -132,15 +130,9 @@ const Header = ({ data }) => {
           <IconCustomizerDrawer />
         </WrapItem>
         <WrapItem>
-        <Button
-          as="a"
-          leftIcon={<Github/>}
-          size="lg"
-          href={repositoryUrl}
-          target="__blank"
-        >
-          Github
-        </Button>
+          <Button as="a" leftIcon={<Github />} size="lg" href={repositoryUrl} target="__blank">
+            Github
+          </Button>
         </WrapItem>
       </Wrap>
     </Flex>

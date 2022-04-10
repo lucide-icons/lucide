@@ -49,7 +49,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
   const { colorMode } = useColorMode();
 
   const backgroundColor =
-    colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[800];
+    colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[900];
   const codeTheme = colorMode === 'light' ? nightOwlLightTheme : nightOwlDarkTheme;
 
   const customizedCodeTheme = {

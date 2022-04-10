@@ -53,7 +53,7 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
   }, []);
 
   return (
-    <InputGroup position="sticky" top={4} zIndex={1}>
+    <InputGroup>
       <InputLeftElement
         children={
           <Icon>

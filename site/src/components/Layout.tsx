@@ -15,6 +15,7 @@ import NextLink from 'next/link';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
 import Logo from './Logo';
+import menuItems from '../static/menuItems';
 
 interface LayoutProps extends BoxProps {
   aside?: BoxProps['children'];
@@ -74,29 +75,28 @@ const Layout = ({ aside, children }: LayoutProps) => {
           <Flex justifyContent="center" alignItems="center">
             {showBaseNavigation ? (
               <>
-                <NextLink href="/docs" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    Documentation
-                  </Link>
-                </NextLink>
-                <NextLink href="/packages" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    Packages
-                  </Link>
-                </NextLink>
-                <NextLink href="/license" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    License
-                  </Link>
-                </NextLink>
-                <Link
-                  href="https://github.com/lucide-icons/lucide"
-                  isExternal
-                  marginRight={6}
-                  fontSize="xl"
-                >
-                  Github
-                </Link>
+                {menuItems.map(menuItem => {
+                  if (menuItem.isExternal) {
+                    return (
+                      <Link
+                        href={menuItem.href}
+                        isExternal
+                        marginRight={6}
+                        fontSize="lg"
+                        key={menuItem.name}
+                      >
+                        {menuItem.name}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <NextLink href={menuItem.href} passHref key={menuItem.name}>
+                      <Link marginRight={8} fontSize="lg">
+                        {menuItem.name}
+                      </Link>
+                    </NextLink>
+                  );
+                })}
               </>
             ) : null}
             <IconButton

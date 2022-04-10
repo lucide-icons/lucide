@@ -19,7 +19,9 @@ const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
 
   return (
     <>
-      <SearchInput onChange={setQuery} count={data.length} />
+      <Box position="sticky" top={4} zIndex={1}>
+        <SearchInput onChange={setQuery} count={data.length} />
+      </Box>
 
       <Box marginTop={5} marginBottom="320px">
         {searchResults.length > 0 ? (
