@@ -34,7 +34,19 @@
     "rotate-ccw",
     "refresh-cw",
     "refresh-ccw",
-    "repeat"
+    "repeat",
+    "arrow-big-right",
+    "arrow-big-left",
+    "arrow-big-up",
+    "arrow-big-down",
+    "reply",
+    "chevrons-down-up",
+    "chevrons-up-down",
+    "expand",
+    "forward",
+    "arrow-left-right",
+    "chevron-last",
+    "maximize-2"
   ],
   "brands": [
     "facebook",
@@ -61,7 +73,8 @@
     "git-branch",
     "git-commit",
     "git-merge",
-    "git-pull-request"
+    "git-pull-request",
+    "rocket"
   ],
   "controls & connectivity": [
     "airplay",
@@ -75,7 +88,13 @@
     "toggle-right",
     "toggle-left",
     "settings",
-    "radio"
+    "radio",
+    "signal-low",
+    "signal-medium",
+    "signal",
+    "signal-zero",
+    "smartphone-charging",
+    "signal-high"
   ],
   "communication": [
     "phone",
@@ -101,7 +120,12 @@
     "phone-missed",
     "phone-incoming",
     "phone-forwarded",
-    "phone-call"
+    "phone-call",
+    "mail",
+    "message-circle",
+    "message-square",
+    "mic",
+    "mic-off"
   ],
   "cursors": [
     "mouse-pointer",
@@ -117,14 +141,35 @@
     "move-diagonal",
     "move-horizontal",
     "move-vertical",
-    "move"
+    "move",
+    "grab",
+    "hand",
+    "text-cursor",
+    "hand-metal",
+    "text-cursor-input"
   ],
   "date & time": [
     "alarm-clock",
     "calendar",
     "clock",
     "watch",
-    "timer"
+    "timer",
+    "alarm-check",
+    "alarm-clock-off",
+    "alarm-minus",
+    "alarm-plus",
+    "clock-1",
+    "clock-2",
+    "clock-3",
+    "clock-4",
+    "clock-5",
+    "clock-6",
+    "clock-7",
+    "clock-8",
+    "clock-9",
+    "clock-10",
+    "clock-11",
+    "clock-12"
   ],
   "devices": [
     "alarm-clock",
@@ -134,14 +179,26 @@
     "tv",
     "tablet",
     "speaker",
-    "smartphone"
+    "smartphone",
+    "monitor-speaker",
+    "monitor",
+    "webcam",
+    "tv-2"
   ],
   "economics": [
     "credit-card",
     "coins",
     "dollar-sign",
     "trending-down",
-    "trending-up"
+    "trending-up",
+    "bitcoin",
+    "euro",
+    "russian-ruble",
+    "swiss-franc",
+    "wallet",
+    "ticket",
+    "banknote",
+    "pound-sterling"
   ],
   "graphics edit": [
     "box-select",
@@ -151,7 +208,30 @@
     "scissors",
     "ruler",
     "pen-tool",
-    "palette"
+    "palette",
+    "wand",
+    "align-center-horizontal",
+    "align-center-vertical",
+    "align-end-horizontal",
+    "align-end-vertical",
+    "align-horizontal-distribute-center",
+    "align-horizontal-distribute-end",
+    "align-horizontal-distribute-start",
+    "align-horizontal-justify-center",
+    "align-horizontal-justify-end",
+    "align-horizontal-justify-start",
+    "align-horizontal-space-around",
+    "align-horizontal-space-between",
+    "align-start-horizontal",
+    "align-start-vertical",
+    "align-vertical-distribute-center",
+    "align-vertical-distribute-end",
+    "align-vertical-distribute-start",
+    "align-vertical-justify-center",
+    "align-vertical-justify-end",
+    "align-vertical-justify-start",
+    "align-vertical-space-around",
+    "align-vertical-space-between"
   ],
   "file system": [
     "file",
@@ -177,7 +257,10 @@
     "user",
     "upload",
     "upload-cloud",
-    "save"
+    "save",
+    "file-input",
+    "file-output",
+    "folder-open"
   ],
   "layout & listing": [
     "layout",
@@ -192,7 +275,9 @@
     "sheet",
     "settings",
     "search",
-    "more-vertical"
+    "more-vertical",
+    "grip-vertical",
+    "grip-horizontal"
   ],
   "maths": [
     "activity",
@@ -209,7 +294,8 @@
     "plus",
     "plus-square",
     "plus-circle",
-    "pie-chart"
+    "pie-chart",
+    "asterisk"
   ],
   "multimedia": [
     "play",
@@ -252,12 +338,30 @@
     "sunset",
     "sunrise",
     "sun",
-    "snowflake"
+    "snowflake",
+    "tornado",
+    "cloud-fog",
+    "cloud-hail",
+    "cloud-moon",
+    "cloud-rain-wind",
+    "cloud-sun",
+    "cloudy",
+    "flame",
+    "droplets",
+    "thermometer-sun",
+    "waves",
+    "thermometer-snowflake"
   ],
   "navigation": [
     "compass",
     "navigation",
-    "navigation-2"
+    "navigation-2",
+    "locate-fixed",
+    "locate-off",
+    "locate",
+    "map",
+    "map-pin",
+    "flag"
   ],
   "other": [
     "anchor",
@@ -278,7 +382,8 @@
     "flashlight",
     "flashlight-off",
     "unlock",
-    "target"
+    "target",
+    "tent"
   ],
   "photo": [
     "aperture",
@@ -305,7 +410,9 @@
   "sports": [
     "award",
     "activity",
-    "timer"
+    "timer",
+    "timer-off",
+    "timer-reset"
   ],
   "status": [
     "alert-circle",
@@ -323,7 +430,14 @@
     "x-octagon",
     "x-circle",
     "stop-circle",
-    "slash"
+    "slash",
+    "bell-minus",
+    "bell-plus",
+    "bell-ring",
+    "shield-alert",
+    "shield-check",
+    "shield-close",
+    "verified"
   ],
   "system": [
     "database",
@@ -339,7 +453,11 @@
     "server",
     "server-off",
     "power",
-    "network"
+    "network",
+    "binary",
+    "bug",
+    "function-square",
+    "server-crash"
   ],
   "text edit": [
     "align-center",
@@ -369,7 +487,13 @@
     "strikethrough",
     "printer",
     "paperclip",
-    "outdent"
+    "outdent",
+    "baseline",
+    "clipboard-check",
+    "clipboard-copy",
+    "clipboard-list",
+    "clipboard-x",
+    "code-2"
   ],
   "tools": [
     "wrench",
@@ -383,7 +507,9 @@
     "shovel",
     "scissors",
     "ruler",
-    "pipette"
+    "pipette",
+    "hammer",
+    "hard-hat"
   ],
   "vehicles & buildings": [
     "home",
@@ -391,6 +517,7 @@
     "car",
     "bus",
     "truck",
-    "plane"
+    "plane",
+    "bike"
   ]
 }

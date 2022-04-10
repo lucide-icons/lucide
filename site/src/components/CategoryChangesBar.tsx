@@ -30,7 +30,18 @@ const CategoryChangesBar = ({ categories, changes }) => {
     setModalOpen(false);
   };
 
-  const categoryCode = useMemo(() => JSON.stringify(categories, null, '  '), [categories]);
+  const newMappedCategories = useMemo(() => {
+    return Object.fromEntries(
+      Object.entries(categories).map(([category, icons]) => [
+        category,
+        icons.map(({ name }) => name),
+      ]),
+    );
+  }, [categories]);
+
+  const categoryCode = useMemo(() => JSON.stringify(newMappedCategories, null, '  '), [
+    newMappedCategories,
+  ]);
 
   return (
     <>

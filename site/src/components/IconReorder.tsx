@@ -24,23 +24,23 @@ const IconReorder = ({
   sx,
 }: IconListProps) => {
   return (
-    <AnimatePresence>
-      <Box
-        as={Reorder.Group}
-        display="flex"
-        flexWrap="wrap"
-        gap={5}
-        marginBottom={6}
-        onReorder={setIcons}
-        layoutScroll
-        values={icons.map(({ name }) => name)}
-        sx={{
-          '.dragging': {
-            position: 'absolute',
-          },
-          ...sx,
-        }}
-      >
+    <Box
+      as={Reorder.Group}
+      display="flex"
+      flexWrap="wrap"
+      gap={5}
+      marginBottom={6}
+      onReorder={setIcons}
+      layoutScroll
+      values={icons.map(({ name }) => name)}
+      sx={{
+        '.dragging': {
+          position: 'absolute',
+        },
+        ...sx,
+      }}
+    >
+      <AnimatePresence>
         {icons.map(icon => {
           return (
             <IconReorderItem
@@ -53,8 +53,8 @@ const IconReorder = ({
             />
           );
         })}
-      </Box>
-    </AnimatePresence>
+      </AnimatePresence>
+    </Box>
   );
 };
 

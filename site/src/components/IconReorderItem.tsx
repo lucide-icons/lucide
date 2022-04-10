@@ -19,8 +19,6 @@ const IconReorderItem = ({ icon, dropZones, onDrop, dragging, setDragging }: Pro
   const [dragItem, setDragItem] = useState(false);
 
   const onDragEnd = (event) => {
-    console.log(event.path);
-
     setDragItem(false)
     setDragging(false);
 
@@ -37,14 +35,6 @@ const IconReorderItem = ({ icon, dropZones, onDrop, dragging, setDragging }: Pro
   const onDrag = (event) => {
     setDragItem(true)
     setDragging(true);
-
-    const dropZone = dropZones.current?.find(([, el]) => {
-      return Array.from(event.path).includes(el)
-    })
-
-    if (dropZone) {
-      console.log(dropZone);
-    }
   };
 
   return (
