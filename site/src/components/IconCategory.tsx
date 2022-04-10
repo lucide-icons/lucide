@@ -5,10 +5,11 @@ import theme from '../lib/theme';
 interface IconCategoryProps extends BoxProps {
   active?: boolean;
   name: string;
+  dragging: boolean;
 }
 
 const IconCategory = forwardRef<HTMLDivElement, IconCategoryProps>(
-  ({ name, active = false, children, ...props }: IconCategoryProps, ref) => {
+  ({ name, active = false, dragging, children, ...props }: IconCategoryProps, ref) => {
     const activeBackground = useColorModeValue(theme.colors.gray, theme.colors.gray[700]);
     const toTitleCase = string =>
       string
@@ -21,6 +22,13 @@ const IconCategory = forwardRef<HTMLDivElement, IconCategoryProps>(
         backgroundColor={active ? activeBackground : 'transparent'}
         borderRadius={8}
         ref={ref}
+        pointerEvents="all"
+        padding={4}
+        marginBottom={3}
+        transition="background 120ms ease-in"
+        _hover={{
+          background: dragging && activeBackground,
+        }}
         {...props}
       >
         <Box>

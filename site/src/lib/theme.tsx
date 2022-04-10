@@ -21,6 +21,19 @@ const theme = {
       '800': '#A70B0B',
       '900': '#720707'
     },
+  },
+  component: {
+    Button: {
+      variants: {
+        solid: (props) => {
+          // if(props?.colorScheme === 'red') {
+            return {
+              bg: props.colorMode === 'dark' ? 'red.700' : 'red.100',
+            }
+          // }
+        },
+      }
+    }
   }
 };
 

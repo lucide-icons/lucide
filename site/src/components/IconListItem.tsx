@@ -1,4 +1,4 @@
-import { Box, Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
+import { Button, ButtonProps, Flex, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import copy from 'copy-to-clipboard';
 import { memo, useContext } from 'react';
@@ -62,11 +62,6 @@ const IconListItem = ({ name, content, src, onClick, ...props }: IconListItemPro
             width={size}
           />
         </Flex>
-        {/* <Flex flex={1} minHeight={10} align="center">
-          <Text wordBreak="break-word" maxWidth="100%">
-            {name}
-          </Text>
-        </Flex> */}
       </Flex>
     </Button>
   );

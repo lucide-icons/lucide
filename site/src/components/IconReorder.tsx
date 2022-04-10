@@ -1,24 +1,34 @@
-import { Grid } from '@chakra-ui/react';
+import { Box, BoxProps } from '@chakra-ui/react';
 import { AnimatePresence, Reorder } from 'framer-motion';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { memo, RefObject } from 'react';
 import { IconEntity } from '../types';
-import IconListItem from './IconListItem';
 import IconReorderItem from './IconReorderItem';
 
 interface IconListProps {
   icons: IconEntity[];
   setIcons: (icons) => void;
   dropZones?: RefObject<[string, HTMLDivElement][]>;
+  onDrop?: (name: string, category: string) => void;
+  dragging: boolean;
+  setDragging: (dragging) => void;
+  sx?: BoxProps['sx'];
 }
 
-const IconList = ({ icons, setIcons, dropZones }: IconListProps) => {
+const IconReorder = ({
+  icons,
+  setIcons,
+  dropZones,
+  onDrop,
+  dragging,
+  setDragging,
+  sx,
+}: IconListProps) => {
   return (
     <AnimatePresence>
-      <Grid
+      <Box
         as={Reorder.Group}
-        templateColumns={`repeat(auto-fill, minmax(80px, 1fr))`}
+        display="flex"
+        flexWrap="wrap"
         gap={5}
         marginBottom={6}
         onReorder={setIcons}
@@ -28,19 +38,29 @@ const IconList = ({ icons, setIcons, dropZones }: IconListProps) => {
           '.dragging': {
             position: 'absolute',
           },
+          ...sx,
         }}
       >
         {icons.map(icon => {
-          return <IconReorderItem icon={icon} key={icon.name} dropZones={dropZones} />;
+          return (
+            <IconReorderItem
+              icon={icon}
+              key={icon.name}
+              dropZones={dropZones}
+              onDrop={onDrop}
+              dragging={dragging}
+              setDragging={setDragging}
+            />
+          );
         })}
-      </Grid>
+      </Box>
     </AnimatePresence>
   );
 };
 
-export default memo(IconList, ({ icons: prevIcons }, { icons: nextIcons }) => {
-  const prevIconsNames = prevIcons.map(({ name }) => name);
-  const nextIconsNames = nextIcons.map(({ name }) => name);
+export default memo(IconReorder, (prevProps, nextProps) => {
+  const prevIconsNames = prevProps.icons.map(({ name }) => name);
+  const nextIconsNames = nextProps.icons.map(({ name }) => name);
 
   return JSON.stringify(prevIconsNames) === JSON.stringify(nextIconsNames);
 });

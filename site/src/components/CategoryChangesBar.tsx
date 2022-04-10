@@ -1,22 +1,36 @@
-import { Box, Button, Flex, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Divider } from "@chakra-ui/react"
-import theme from "../lib/theme";
-import { useEffect, useMemo, useState } from "react"
-import CodeBlock from './CodeBlock'
-import CopyButton from "./CopyButton";
+import {
+  Box,
+  Button,
+  Flex,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Text,
+  Divider,
+} from '@chakra-ui/react';
+import theme from '../lib/theme';
+import { useEffect, useMemo, useState } from 'react';
+import CodeBlock from './CodeBlock';
+import CopyButton from './CopyButton';
 
-const CategoryChangesBar = ({categories, changes}) => {
-  const [modalOpen, setModalOpen ] = useState(false);
+const CategoryChangesBar = ({ categories, changes }) => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [showCode, setShowCode] = useState(false);
   const handleSubmit = () => {
     setModalOpen(true);
-  }
+  };
 
   const openPullRequestUrl = 'https://github.com/lucide-icons/lucide/edit/master/categories.json';
 
   const onClose = () => {
     setModalOpen(false);
-  }
+  };
 
-  const categoryCode = useMemo(() => JSON.stringify(categories, null, '  '), [categories])
+  const categoryCode = useMemo(() => JSON.stringify(categories, null, '  '), [categories]);
 
   return (
     <>
@@ -33,10 +47,16 @@ const CategoryChangesBar = ({categories, changes}) => {
         <Flex alignItems="center" justifyContent="space-between">
           <Text fontSize="lg">You're editing the overview categories.</Text>
           <Flex>
-            <Text fontSize="lg" fontWeight="bold" marginLeft={4}>{changes}</Text>
-            <Text fontSize="lg" marginLeft={2}>changes made to 'categories.json'</Text>
+            <Text fontSize="lg" fontWeight="bold" marginLeft={4}>
+              {changes}
+            </Text>
+            <Text fontSize="lg" marginLeft={2}>
+              changes made to 'categories.json'
+            </Text>
           </Flex>
-          <Button onClick={handleSubmit} variant="primary">Submit Pull-request</Button>
+          <Button onClick={handleSubmit} colorScheme="red" variant="solid">
+            Submit Pull-request
+          </Button>
         </Flex>
       </Box>
       <Modal isOpen={modalOpen} onClose={onClose} size="xl">
@@ -45,9 +65,7 @@ const CategoryChangesBar = ({categories, changes}) => {
           <ModalHeader>Nice changes!</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>
-              To submit those changes, follow these steps:
-            </Text>
+            <Text>To submit those changes, follow these steps:</Text>
             <Text fontWeight="bold" mt={4}>
               Step 1:
             </Text>
@@ -62,26 +80,21 @@ const CategoryChangesBar = ({categories, changes}) => {
             <Text mt={2} mb={4}>
               Open Pull-request, select-all and paste the code with the changes.
             </Text>
-            <Button
-              as="a"
-              variant="primary"
-              href={openPullRequestUrl}
-              target="__blank"
-            >
+            <Button as="a" variant="solid" href={openPullRequestUrl} target="__blank">
               Open pull-request
             </Button>
             <Divider mt={8} mb={4} />
             <Text fontWeight="bold" mt={6} mb={4}>
-              Your code:
+              Code:
             </Text>
-            <Text mt={2} mb={4}>
-              Here's the json output of the changes you made.
-            </Text>
-            <CodeBlock
-              code={categoryCode}
-              language="json"
-              showLines
-            />
+            <Button as="a" variant="solid" onClick={() => setShowCode(show => !show)}>
+              Show code
+            </Button>
+            {showCode && (
+              <Box maxHeight={320} overflow="auto" background="gray.800">
+                <CodeBlock code={categoryCode} language="json" showLines />
+              </Box>
+            )}
           </ModalBody>
 
           <ModalFooter>
@@ -90,9 +103,9 @@ const CategoryChangesBar = ({categories, changes}) => {
             </Button>
           </ModalFooter>
         </ModalContent>
-    </Modal>
-  </>
-  )
-}
+      </Modal>
+    </>
+  );
+};
 
 export default CategoryChangesBar;
