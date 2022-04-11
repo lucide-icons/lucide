@@ -1063,6 +1063,9 @@
   "flag": [
     "report"
   ],
+  "flag-off": [
+    "unflag"
+  ],
   "flag-triangle-left": [
     "report",
     "timeline"
