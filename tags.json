@@ -1588,6 +1588,11 @@
     "sound",
     "mute"
   ],
+  "milestone": [
+    "sign",
+    "signpost",
+    "version control"
+  ],
   "minimize": [
     "exit fullscreen",
     "close",
