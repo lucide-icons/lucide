@@ -1,4 +1,10 @@
 {
+  "accessibility": [
+    "disability",
+    "disabled",
+    "dda",
+    "wheelchair"
+  ],
   "activity": [
     "pulse",
     "health",
