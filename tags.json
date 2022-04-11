@@ -1295,6 +1295,11 @@
     "house",
     "living"
   ],
+  "hourglass": [
+    "timer",
+    "time",
+    "sandglass"
+  ],
   "image": [
     "picture",
     "photo"
