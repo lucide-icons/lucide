@@ -2287,7 +2287,7 @@
     "light"
   ],
   "sun-dim": [
-    "dim sun",
+    "brightness",
     "dim"
   ],
   "sunrise": [
