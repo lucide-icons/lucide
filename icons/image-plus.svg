@@ -13,5 +13,5 @@
   <line x1="16" y1="5" x2="22" y2="5" />
   <line x1="19" y1="2" x2="19" y2="8" />
   <circle cx="9" cy="9" r="2" />
-  <polyline points="21 16 16 11 6 21" />
+  <polyline points="21 15 16 10 5 21" />
 </svg>
