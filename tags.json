@@ -552,20 +552,36 @@
   ],
   "chevrons-down-up": [
     "arrow",
-    "fold"
+    "collapse",
+    "fold",
+    "vertical"
   ],
   "chevrons-left": [
     "arrow"
   ],
+  "chevrons-left-right": [
+    "arrow",
+    "expand",
+    "horizonal",
+    "unfold"
+  ],
   "chevrons-right": [
     "arrow"
+  ],
+  "chevrons-right-left": [
+    "arrow",
+    "collapse",
+    "fold",
+    "horizonal"
   ],
   "chevrons-up": [
     "arrow"
   ],
   "chevrons-up-down": [
     "arrow",
-    "unfold"
+    "expand",
+    "unfold",
+    "vertical"
   ],
   "chrome": [
     "browser"
