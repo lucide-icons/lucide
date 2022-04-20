@@ -1259,11 +1259,15 @@
   ],
   "grip-horizontal": [
     "grab",
+    "dots",
     "handle"
   ],
   "grip-vertical": [
     "grab",
-    "handle"
+    "dots",
+    "handle",
+    "move",
+    "drag"
   ],
   "hammer": [
     "mallet"
