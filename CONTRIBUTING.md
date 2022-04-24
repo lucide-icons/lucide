@@ -76,7 +76,7 @@ yarn # Install depedencies, including the workspace packages
 ### Packages -> Yarn Workspaces
 To distibute different packages we use yarn workspaces. Before you start make sure you are familiar with this setup. Read guide here: [link]
 
-The configured directory for workspaces is the [packages] directory, located in the root directory. There you will find all the current packages from lucide. 
+The configured directory for workspaces is the [packages] directory, located in the root directory. There you will find all the current packages from lucide.
 
 > Note: One package is not managed by yarn:  **lucide-flutter**
 
@@ -98,7 +98,7 @@ yarn lucide-react build
 ```
 
 #### Testing
-Run unit tests with jest for each package to make sure all the package apis still works as expected. 
+Run unit tests with jest for each package to make sure all the package apis still works as expected.
 ```sh
 yarn [package-name] test
 
@@ -116,10 +116,17 @@ yarn [package-name] test:watch
 
 yarn lucide-preact test:watch
 ```
-
-
 ### Unit Testing
+
+### Local Testing
+
+
 
 ## Project Structure
 
 ## Credits
+
+Thank you to all the people who already contributed to Lucide!
+
+<a href="https://github.com/lucide-icons/lucide/graphs/contributors">
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
