@@ -58,6 +58,68 @@ Before creating an icon request, please search to see if someone has requested t
 
 If the icon has not already been requested, [create an issue](https://github.com/lucide-icons/lucide/issues/new?title=Icon%20Request:) with a title of `Icon request: <icon name>` and add as much information as possible.
 
-## Icon Requests from Feather
+### Icon Requests from Feather
 
 If you are a designer who wants to contribute to Lucide but you don't know what icons to work on, then have a look at the Requests from Feather. All open, unfinished and valid requests can be found in [Feather Icon Requests](https://github.com/lucide-icons/lucide/issues/119).
+
+## Development
+You will need minimum version of Nodejs 14+. [link]
+For packagemanagement you will need yarn v1. [link]
+For flutter package development, you need flutter env setup. [link]
+
+After cloning the project you need to run:
+
+```sh
+yarn # Install depedencies, including the workspace packages
+```
+
+### Packages -> Yarn Workspaces
+To distibute different packages we use yarn workspaces. Before you start make sure you are familiar with this setup. Read guide here: [link]
+
+The configured directory for workspaces is the [packages] directory, located in the root directory. There you will find all the current packages from lucide. 
+
+> Note: One package is not managed by yarn:  **lucide-flutter**
+
+### Generated Code
+For icons we use one single source of thruth the icons svgs located in the icons directory. To distribute icons to the packages we generate code including: icon files with svg paths, index files with imports, and types files. Depending on the use case other neccesarry code will be generated.
+
+The commands for generating this code you will read in the next chapter.
+
+### Commonly used scripts
+
+#### Building
+The build script includes mutiple subcommands to: clean the dist directory, generate icon files, generate types files, and build/transpile code for each build format.
+```sh
+yarn [package-name] build
+
+#example:
+
+yarn lucide-react build
+```
+
+#### Testing
+Run unit tests with jest for each package to make sure all the package apis still works as expected. 
+```sh
+yarn [package-name] test
+
+#example:
+
+yarn lucide-vue test
+```
+
+Recommended to run the test watcher when making changes.
+
+```sh
+yarn [package-name] test:watch
+
+#example:
+
+yarn lucide-preact test:watch
+```
+
+
+### Unit Testing
+
+## Project Structure
+
+## Credits
