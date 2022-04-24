@@ -1696,6 +1696,11 @@
   "network": [
     "tree"
   ],
+  "night-light": [
+    "night",
+    "light",
+    "brightness"
+  ],
   "octagon": [
     "stop"
   ],
@@ -2301,6 +2306,10 @@
     "time",
     "evening",
     "night"
+  ],
+  "sun-medium": [
+    "brightness",
+    "medium"
   ],
   "superscript": [
     "text",
