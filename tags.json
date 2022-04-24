@@ -2288,7 +2288,9 @@
   ],
   "sun-dim": [
     "brightness",
-    "dim"
+    "dim",
+    "low",
+    "brightness low"
   ],
   "sunrise": [
     "weather",
