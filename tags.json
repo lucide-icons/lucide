@@ -1759,6 +1759,22 @@
     "tv",
     "television"
   ],
+  "movie-pause": [
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television",
+	"play"
+  ],
+  "movie-play": [
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television",
+	"pause"
+  ],
   "music": [
     "note"
   ],
