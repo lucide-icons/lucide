@@ -1,0 +1,17 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="3" />
+  <polyline points="4 8 4 4 8 4" />
+  <polyline points="16 4 20 4 20 8" />
+  <polyline points="4 16 4 20 8 20" />
+  <polyline points="16 20 20 20 20 16" />
+</svg>
