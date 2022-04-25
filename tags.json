@@ -322,6 +322,8 @@
     "format",
     "color"
   ],
+  "bath": [
+  ],
   "battery": [
     "power",
     "electricity"
