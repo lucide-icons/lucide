@@ -60,8 +60,8 @@ jobs:
 
       - name: Check output
         run: |
-          echo "${{ steps.new-version.outputs.NEW_VERSION }}"
-          echo "${{ steps.change-log.outputs.CHANGE_LOG }}"
+          echo '${{ steps.new-version.outputs.NEW_VERSION }}'
+          echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Release
         uses: softprops/action-gh-release@v1
