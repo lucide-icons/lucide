@@ -604,6 +604,14 @@
     "null",
     "nothing"
   ],
+  "clapperboard": [
+    "movie",
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television"
+  ],
   "clipboard": [
     "copy",
     "paste"
@@ -1751,29 +1759,6 @@
   "move-vertical": [
     "double",
     "arrow"
-  ],
-  "movie": [
-    "film",
-    "video",
-    "camera",
-    "tv",
-    "television"
-  ],
-  "movie-pause": [
-    "film",
-    "video",
-    "camera",
-    "tv",
-    "television",
-	"play"
-  ],
-  "movie-play": [
-    "film",
-    "video",
-    "camera",
-    "tv",
-    "television",
-	"pause"
   ],
   "music": [
     "note"
