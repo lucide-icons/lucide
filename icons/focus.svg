@@ -10,8 +10,8 @@
   stroke-linejoin="round"
 >
   <circle cx="12" cy="12" r="3" />
-  <polyline points="4 8 4 4 8 4" />
-  <polyline points="16 4 20 4 20 8" />
-  <polyline points="4 16 4 20 8 20" />
-  <polyline points="16 20 20 20 20 16" />
+  <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+  <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
 </svg>
