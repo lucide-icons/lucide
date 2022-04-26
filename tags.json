@@ -2360,6 +2360,12 @@
     "weather",
     "light"
   ],
+  "sun-dim": [
+    "brightness",
+    "dim",
+    "low",
+    "brightness low"
+  ],
   "sunrise": [
     "weather",
     "time",
