@@ -323,6 +323,10 @@
     "color"
   ],
   "bath": [
+    "amenities",
+    "services",
+    "bathroom",
+    "shower"
   ],
   "battery": [
     "power",
