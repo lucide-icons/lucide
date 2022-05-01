@@ -2034,6 +2034,13 @@
   "save": [
     "floppy disk"
   ],
+  "save-2": [
+    "write"
+  ],
+  "save-as": [
+    "write",
+    "rename"
+  ],
   "scale": [
     "balance",
     "legal",
