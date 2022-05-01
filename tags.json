@@ -2510,6 +2510,12 @@
     "remove",
     "bin"
   ],
+  "tree": [
+    "nature",
+    "wood",
+    "leaf",
+    "sapling"
+  ],
   "trello": [],
   "trending-down": [
     "statistics"
