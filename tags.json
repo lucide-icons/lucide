@@ -2670,6 +2670,10 @@
     "clock",
     "time"
   ],
+  "waterfall": [
+    "cascade",
+    "weir"
+  ],
   "waves": [
     "water",
     "sea",
