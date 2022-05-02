@@ -2387,6 +2387,20 @@
     "front",
     "back"
   ],
+  "sword": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
+  ],
+  "swords": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
+  ],
   "table": [
     "sheet",
     "grid"
