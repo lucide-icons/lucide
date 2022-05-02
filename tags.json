@@ -1599,6 +1599,12 @@
     "travel",
     "marker"
   ],
+  "map-pin-off": [
+    "location",
+    "navigation",
+    "travel",
+    "marker"
+  ],
   "maximize": [
     "fullscreen",
     "expand"
@@ -1760,6 +1766,14 @@
     "travel"
   ],
   "navigation-2": [
+    "location",
+    "travel"
+  ],
+  "navigation-off": [
+    "location",
+    "travel"
+  ],
+  "navigation-off-2": [
     "location",
     "travel"
   ],
