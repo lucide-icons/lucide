@@ -2275,6 +2275,11 @@
     "settings",
     "controls"
   ],
+  "sliders-horizontal": [
+    "settings",
+    "filters",
+    "controls"
+  ],
   "smartphone": [
     "phone",
     "cellphone",
