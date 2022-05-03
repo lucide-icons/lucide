@@ -604,6 +604,14 @@
     "null",
     "nothing"
   ],
+  "clapperboard": [
+    "movie",
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television"
+  ],
   "clipboard": [
     "copy",
     "paste"
