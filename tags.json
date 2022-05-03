@@ -604,6 +604,14 @@
     "null",
     "nothing"
   ],
+  "clapperboard": [
+    "movie",
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television"
+  ],
   "clipboard": [
     "copy",
     "paste"
@@ -2275,6 +2283,11 @@
     "settings",
     "controls"
   ],
+  "sliders-horizontal": [
+    "settings",
+    "filters",
+    "controls"
+  ],
   "smartphone": [
     "phone",
     "cellphone",
@@ -2359,6 +2372,12 @@
     "brightness",
     "weather",
     "light"
+  ],
+  "sun-dim": [
+    "brightness",
+    "dim",
+    "low",
+    "brightness low"
   ],
   "sunrise": [
     "weather",
