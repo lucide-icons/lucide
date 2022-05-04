@@ -1591,6 +1591,12 @@
     "exit",
     "auth"
   ],
+  "magnet": [
+    "horseshoe",
+    "lock",
+    "science",
+    "snap"
+  ],
   "mail": [
     "email",
     "message",
