@@ -2638,7 +2638,15 @@
   ],
   "vibrate": [
     "smartphone",
-    "notification"
+    "notification",
+    "rumble",
+    "haptic feedback"
+  ],
+  "vibrate-off": [
+    "smartphone",
+    "notification",
+    "rumble",
+    "haptic feedback"
   ],
   "video": [
     "camera",
