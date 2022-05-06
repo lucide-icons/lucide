@@ -1956,6 +1956,12 @@
     "office",
     "device"
   ],
+  "puzzle": [
+    "component",
+    "module",
+    "part",
+    "piece"
+  ],
   "qr-code": [
     "barcode"
   ],
