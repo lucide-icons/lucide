@@ -1136,6 +1136,11 @@
   "flask-round": [
     "beaker"
   ],
+  "focus": [
+    "camera",
+    "lens",
+    "photo"
+  ],
   "folder": [
     "directory"
   ],
