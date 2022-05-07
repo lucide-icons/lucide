@@ -76,7 +76,7 @@ yarn # Install depedencies, including the workspace packages
 ### Packages -> Yarn Workspaces
 To distibute different packages we use yarn workspaces. Before you start make sure you are familiar with this setup. Read guide here: [link]
 
-The configured directory for workspaces is the [packages] directory, located in the root directory. There you will find all the current packages from lucide.
+The configured directory for workspaces is the [packages](./packages) directory, located in the root directory. There you will find all the current packages from lucide.
 
 > Note: One package is not managed by yarn:  **lucide-flutter**
 
@@ -116,13 +116,58 @@ yarn [package-name] test:watch
 
 yarn lucide-preact test:watch
 ```
+
 ### Unit Testing
+When adding new features to for example the icon component for a framework. It is required to have this covered with some unit tests.
 
 ### Local Testing
+To test changes in a local project, you can use `yarn link` or `npm link` to link the package. Before you do this make sure you builded the package first.
 
+```sh
+# in packages/lucide-react
+yarn link
 
+# in your local project
+
+yarn link lucide-react
+```
 
 ## Project Structure
+Root directories
+```sh
+lucide
+|
+├── docs
+├── icons
+├── packages
+├── scripts
+└── site
+```
+
+### Docs
+Detialed documentation about: installation, guides, packages, design guides etc.
+
+### Icons
+All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
+
+### packages
+Includes all the (npm) packages of lucide.
+
+> Note: One package is not managed by yarn:  **lucide-flutter**
+
+### scripts
+Includes usefull scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usally executed from the "scripts" section in the package.json. 
+
+### site
+The lucide.dev website using nextjs.
+
+## Documentation
+The documentation files are located in the [docs](./docs) directory. All these markdown files will be loaded in the build of the lucide.dev website. 
+
+Feel free to write, adjust or add new markdown files to improve our documentation.
+
+## Support
+If you need any help or have problems with you contribution. Please don't hesitate to contact the Lucide Community, you can find us on [Github](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts). 
 
 ## Credits
 
