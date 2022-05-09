@@ -1,4 +1,10 @@
 {
+  "accessibility": [
+    "disability",
+    "disabled",
+    "dda",
+    "wheelchair"
+  ],
   "activity": [
     "pulse",
     "health",
@@ -466,6 +472,14 @@
     "organisation",
     "organization"
   ],
+  "building-2": [
+    "business",
+    "company",
+    "enterprise",
+    "skyscraper",
+    "organisation",
+    "organization"
+  ],
   "bus": [
     "bus",
     "vehicle",
@@ -544,20 +558,36 @@
   ],
   "chevrons-down-up": [
     "arrow",
-    "fold"
+    "collapse",
+    "fold",
+    "vertical"
   ],
   "chevrons-left": [
     "arrow"
   ],
+  "chevrons-left-right": [
+    "arrow",
+    "expand",
+    "horizonal",
+    "unfold"
+  ],
   "chevrons-right": [
     "arrow"
+  ],
+  "chevrons-right-left": [
+    "arrow",
+    "collapse",
+    "fold",
+    "horizonal"
   ],
   "chevrons-up": [
     "arrow"
   ],
   "chevrons-up-down": [
     "arrow",
-    "unfold"
+    "expand",
+    "unfold",
+    "vertical"
   ],
   "chrome": [
     "browser"
@@ -573,6 +603,14 @@
     "Ø",
     "null",
     "nothing"
+  ],
+  "clapperboard": [
+    "movie",
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television"
   ],
   "clipboard": [
     "copy",
@@ -943,6 +981,13 @@
     "calculate",
     "off"
   ],
+  "eraser": [
+    "pencil",
+    "drawing",
+    "undo",
+    "delete",
+    "clear"
+  ],
   "euro": [
     "currency",
     "money",
@@ -1063,6 +1108,9 @@
   "flag": [
     "report"
   ],
+  "flag-off": [
+    "unflag"
+  ],
   "flag-triangle-left": [
     "report",
     "timeline"
@@ -1111,6 +1159,11 @@
     "send",
     "share",
     "email"
+  ],
+  "frame": [
+    "logo",
+    "design",
+    "tool"
   ],
   "framer": [
     "logo",
@@ -1220,11 +1273,15 @@
   ],
   "grip-horizontal": [
     "grab",
+    "dots",
     "handle"
   ],
   "grip-vertical": [
     "grab",
-    "handle"
+    "dots",
+    "handle",
+    "move",
+    "drag"
   ],
   "hammer": [
     "mallet"
@@ -1271,6 +1328,12 @@
     "love",
     "emotion"
   ],
+  "heart-off": [
+    "unlike",
+    "dislike",
+    "hate",
+    "emotion"
+  ],
   "help-circle": [
     "question mark"
   ],
@@ -1294,6 +1357,11 @@
   "home": [
     "house",
     "living"
+  ],
+  "hourglass": [
+    "timer",
+    "time",
+    "sandglass"
   ],
   "image": [
     "picture",
@@ -1587,6 +1655,11 @@
     "record",
     "sound",
     "mute"
+  ],
+  "milestone": [
+    "sign",
+    "signpost",
+    "version control"
   ],
   "minimize": [
     "exit fullscreen",
@@ -2210,6 +2283,11 @@
     "settings",
     "controls"
   ],
+  "sliders-horizontal": [
+    "settings",
+    "filters",
+    "controls"
+  ],
   "smartphone": [
     "phone",
     "cellphone",
@@ -2294,6 +2372,12 @@
     "brightness",
     "weather",
     "light"
+  ],
+  "sun-dim": [
+    "brightness",
+    "dim",
+    "low",
+    "brightness low"
   ],
   "sunrise": [
     "weather",
