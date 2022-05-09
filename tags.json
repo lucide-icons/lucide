@@ -919,6 +919,11 @@
     "tabletop",
     "6"
   ],
+  "dices": [
+    "dice",
+    "random",
+    "tabletop"
+  ],
   "disc": [
     "album",
     "cd",
