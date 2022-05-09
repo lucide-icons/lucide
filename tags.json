@@ -1993,6 +1993,10 @@
     "undo",
     "history"
   ],
+  "redo-2": [
+    "undo",
+    "history"
+  ],
   "refresh-ccw": [
     "arrows",
     "reload"
@@ -2590,6 +2594,10 @@
     "format"
   ],
   "undo": [
+    "redo",
+    "history"
+  ],
+  "undo-2": [
     "redo",
     "history"
   ],
