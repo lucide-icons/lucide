@@ -1014,6 +1014,14 @@
     "logo",
     "social"
   ],
+  "factory": [
+    "building",
+    "business",
+    "energy",
+    "industry",
+    "manufacture",
+    "sector"
+  ],
   "fast-forward": [
     "music"
   ],
