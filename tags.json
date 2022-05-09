@@ -1177,6 +1177,12 @@
     "sad",
     "emotion"
   ],
+  "fuel": [
+    "filling-station",
+    "gas",
+    "petrol",
+    "tank"
+  ],
   "function-square": [
     "programming",
     "code",
