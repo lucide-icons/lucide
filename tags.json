@@ -1105,6 +1105,13 @@
     "funnel",
     "hopper"
   ],
+  "fingerprint": [
+    "2fa",
+    "authentication",
+    "biometric",
+    "identity",
+    "security"
+  ],
   "flag": [
     "report"
   ],
