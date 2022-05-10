@@ -1893,6 +1893,12 @@
     "lock",
     "fix"
   ],
+  "unpin": [
+    "unsave",
+    "unlock",
+    "remove",
+    "unfix"
+  ],
   "pipette": [
     "eye dropper",
     "color picker"
