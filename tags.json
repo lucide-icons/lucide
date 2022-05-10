@@ -861,6 +861,12 @@
     "payment",
     "cc"
   ],
+  "croissant": [
+    "bakery",
+    "cooking",
+    "food",
+    "pastry"
+  ],
   "crop": [
     "photo",
     "image"
