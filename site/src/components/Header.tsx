@@ -13,20 +13,49 @@ import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
 import LaravelLogo from '../../public/framework-logos/laravel.svg';
+import { useState } from 'react';
+import { useCustomizeIconContext } from './CustomizeIconContext';
+import { IconEntity } from '../types';
 
-function generateZip(icons) {
+type IconContent = [icon: string, src:string]
+
+async function generateZip(icons: IconContent[]) {
   const zip = new JSZip();
-  Object.values(icons).forEach(icon =>
-    // @ts-ignore
-    zip.file(`${icon.name}.svg`, icon.src),
+
+  const addingZipPromises = icons.map(([name, src]) =>
+    zip.file(`${name}.svg`, src),
   );
+
+  await Promise.all(addingZipPromises)
+
   return zip.generateAsync({ type: 'blob' });
 }
 
-const Header = ({ data }) => {
+interface HeaderProps {
+  data: IconEntity[];
+}
+
+const Header = ({ data }: HeaderProps) => {
+  const [zippingIcons, setZippingIcons] = useState(false);
+  const { iconsRef } = useCustomizeIconContext();
+
   const downloadAllIcons = async () => {
-    const zip = await generateZip(data);
+    console.log(iconsRef);
+    setZippingIcons(true);
+
+    let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [
+      name,
+      svgEl.outerHTML,
+    ]);
+
+    // Fallback
+    if (iconEntries.length === 0) {
+      iconEntries = data.map(icon => [icon.name, icon.src]);
+    }
+
+    const zip = await generateZip(iconEntries);
     download(zip, 'lucide.zip');
+    setZippingIcons(false);
   };
 
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
@@ -76,7 +105,7 @@ const Header = ({ data }) => {
       name: 'lucide-laravel',
       Logo: LaravelLogo,
       href: 'https://github.com/mallardduck/blade-lucide-icons',
-    }
+    },
   ];
 
   return (
@@ -124,7 +153,13 @@ const Header = ({ data }) => {
       </Wrap>
       <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
         <WrapItem>
-          <Button leftIcon={<Download />} size="lg" onClick={downloadAllIcons}>
+          <Button
+            leftIcon={<Download />}
+            size="lg"
+            onClick={downloadAllIcons}
+            isLoading={zippingIcons}
+            loadingText="Creating zip.."
+          >
             Download all
           </Button>
         </WrapItem>
