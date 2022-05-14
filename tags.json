@@ -317,6 +317,21 @@
     "diagram",
     "graph"
   ],
+  "bar-chart-3": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "bar-chart-4": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "bar-chart-horizontal": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
   "baseline": [
     "text",
     "format",
@@ -1512,6 +1527,11 @@
   ],
   "lightbulb-off": [
     "lights"
+  ],
+  "line-chart": [
+    "statistics",
+    "diagram",
+    "graph"
   ],
   "link": [
     "chain",
