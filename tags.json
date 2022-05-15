@@ -1699,6 +1699,8 @@
   "sun-moon": [
     "night",
     "light",
+    "moon",
+    "sun",
     "brightness"
   ],
   "octagon": [
