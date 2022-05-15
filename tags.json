@@ -757,6 +757,11 @@
     "weather",
     "partly"
   ],
+  "cloud-sun-rain": [
+    "weather",
+    "partly",
+	"rainfall"
+  ],
   "cloudy": [
     "clouds"
   ],
