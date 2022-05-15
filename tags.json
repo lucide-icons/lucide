@@ -760,7 +760,7 @@
   "cloud-sun-rain": [
     "weather",
     "partly",
-	"rainfall"
+    "rainfall"
   ],
   "cloudy": [
     "clouds"
