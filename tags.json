@@ -1210,6 +1210,9 @@
     "code",
     "automation"
   ],
+  "joystick": [
+    "game"
+  ],
   "gamepad": [
     "console"
   ],
