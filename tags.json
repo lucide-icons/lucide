@@ -1696,7 +1696,7 @@
   "network": [
     "tree"
   ],
-  "night-light": [
+  "sun-moon": [
     "night",
     "light",
     "brightness"
