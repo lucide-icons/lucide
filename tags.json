@@ -317,6 +317,21 @@
     "diagram",
     "graph"
   ],
+  "bar-chart-3": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "bar-chart-4": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "bar-chart-horizontal": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
   "baseline": [
     "text",
     "format",
@@ -1014,6 +1029,14 @@
     "logo",
     "social"
   ],
+  "factory": [
+    "building",
+    "business",
+    "energy",
+    "industry",
+    "manufacture",
+    "sector"
+  ],
   "fast-forward": [
     "music"
   ],
@@ -1135,6 +1158,11 @@
   ],
   "flask-round": [
     "beaker"
+  ],
+  "focus": [
+    "camera",
+    "lens",
+    "photo"
   ],
   "folder": [
     "directory"
@@ -1500,6 +1528,11 @@
   "lightbulb-off": [
     "lights"
   ],
+  "line-chart": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
   "link": [
     "chain",
     "url"
@@ -1602,6 +1635,12 @@
     "travel"
   ],
   "map-pin": [
+    "location",
+    "navigation",
+    "travel",
+    "marker"
+  ],
+  "map-pin-off": [
     "location",
     "navigation",
     "travel",
@@ -1768,6 +1807,14 @@
     "travel"
   ],
   "navigation-2": [
+    "location",
+    "travel"
+  ],
+  "navigation-2-off": [
+    "location",
+    "travel"
+  ],
+  "navigation-off": [
     "location",
     "travel"
   ],
@@ -1956,6 +2003,12 @@
     "office",
     "device"
   ],
+  "puzzle": [
+    "component",
+    "module",
+    "part",
+    "piece"
+  ],
   "qr-code": [
     "barcode"
   ],
@@ -1971,6 +2024,10 @@
     "connect"
   ],
   "redo": [
+    "undo",
+    "history"
+  ],
+  "redo-2": [
     "undo",
     "history"
   ],
@@ -2574,6 +2631,10 @@
     "redo",
     "history"
   ],
+  "undo-2": [
+    "redo",
+    "history"
+  ],
   "unlink": [
     "url",
     "unchain",
@@ -2632,7 +2693,15 @@
   ],
   "vibrate": [
     "smartphone",
-    "notification"
+    "notification",
+    "rumble",
+    "haptic feedback"
+  ],
+  "vibrate-off": [
+    "smartphone",
+    "notification",
+    "rumble",
+    "haptic feedback"
   ],
   "video": [
     "camera",
