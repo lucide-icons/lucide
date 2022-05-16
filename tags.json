@@ -896,6 +896,7 @@
     "memory"
   ],
   "delete": [
+    "backspace",
     "remove"
   ],
   "dice-1": [
