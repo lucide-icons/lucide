@@ -2571,6 +2571,12 @@
     "storm",
     "hurricane"
   ],
+  "train": [
+    "transport",
+    "metro",
+    "subway",
+    "underground"
+  ],
   "trash": [
     "garbage",
     "delete",
