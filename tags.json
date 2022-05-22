@@ -1830,6 +1830,13 @@
   "network": [
     "tree"
   ],
+  "sun-moon": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
+  ],
   "octagon": [
     "stop"
   ],
@@ -2459,6 +2466,10 @@
     "time",
     "evening",
     "night"
+  ],
+  "sun-medium": [
+    "brightness",
+    "medium"
   ],
   "superscript": [
     "text",
