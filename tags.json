@@ -2439,6 +2439,12 @@
     "review",
     "rating"
   ],
+  "star-off": [
+    "dislike",
+    "unlike",
+    "remove",
+    "unrate"
+  ],
   "stop-circle": [
     "media",
     "music"
