@@ -551,6 +551,12 @@
   "check-square": [
     "done"
   ],
+  "chef-hat": [
+    "cooking",
+    "food",
+    "kitchen",
+    "restaurant"
+  ],
   "chevron-down": [
     "arrow"
   ],
@@ -875,6 +881,12 @@
     "purchase",
     "payment",
     "cc"
+  ],
+  "croissant": [
+    "bakery",
+    "cooking",
+    "food",
+    "pastry"
   ],
   "crop": [
     "photo",
