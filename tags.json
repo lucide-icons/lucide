@@ -2019,7 +2019,10 @@
     "quotation"
   ],
   "radio": [
-    "signal"
+    "signal",
+    "broadcast",
+    "connectivity",
+    "live"
   ],
   "radio-receiver": [
     "device",
