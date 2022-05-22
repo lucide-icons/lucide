@@ -824,6 +824,14 @@
     "travel",
     "direction"
   ],
+  "component": [
+    "design",
+    "element",
+    "group",
+    "module",
+    "part",
+    "symbol"
+  ],
   "contact": [
     "person",
     "user"
