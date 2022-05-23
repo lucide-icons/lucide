@@ -337,6 +337,12 @@
     "format",
     "color"
   ],
+  "bath": [
+    "amenities",
+    "services",
+    "bathroom",
+    "shower"
+  ],
   "battery": [
     "power",
     "electricity"
@@ -544,6 +550,12 @@
   ],
   "check-square": [
     "done"
+  ],
+  "chef-hat": [
+    "cooking",
+    "food",
+    "kitchen",
+    "restaurant"
   ],
   "chevron-down": [
     "arrow"
@@ -812,6 +824,14 @@
     "travel",
     "direction"
   ],
+  "component": [
+    "design",
+    "element",
+    "group",
+    "module",
+    "part",
+    "symbol"
+  ],
   "contact": [
     "person",
     "user"
@@ -870,6 +890,12 @@
     "payment",
     "cc"
   ],
+  "croissant": [
+    "bakery",
+    "cooking",
+    "food",
+    "pastry"
+  ],
   "crop": [
     "photo",
     "image"
@@ -896,6 +922,7 @@
     "memory"
   ],
   "delete": [
+    "backspace",
     "remove"
   ],
   "dice-1": [
@@ -1205,6 +1232,12 @@
     "sad",
     "emotion"
   ],
+  "fuel": [
+    "filling-station",
+    "gas",
+    "petrol",
+    "tank"
+  ],
   "function-square": [
     "programming",
     "code",
@@ -1434,6 +1467,8 @@
     "element",
     "mouse",
     "click",
+    "cursor",
+    "pointer",
     "box"
   ],
   "instagram": [
@@ -1623,6 +1658,12 @@
     "arrow",
     "exit",
     "auth"
+  ],
+  "magnet": [
+    "horseshoe",
+    "lock",
+    "science",
+    "snap"
   ],
   "mail": [
     "email",
@@ -1821,6 +1862,13 @@
   "network": [
     "tree"
   ],
+  "sun-moon": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
+  ],
   "octagon": [
     "stop"
   ],
@@ -2016,7 +2064,10 @@
     "quotation"
   ],
   "radio": [
-    "signal"
+    "signal",
+    "broadcast",
+    "connectivity",
+    "live"
   ],
   "radio-receiver": [
     "device",
@@ -2400,6 +2451,12 @@
     "review",
     "rating"
   ],
+  "star-off": [
+    "dislike",
+    "unlike",
+    "remove",
+    "unrate"
+  ],
   "stop-circle": [
     "media",
     "music"
@@ -2448,6 +2505,10 @@
     "evening",
     "night"
   ],
+  "sun-medium": [
+    "brightness",
+    "medium"
+  ],
   "superscript": [
     "text",
     "exponent"
@@ -2462,6 +2523,20 @@
     "selfy",
     "front",
     "back"
+  ],
+  "sword": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
+  ],
+  "swords": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
   ],
   "table": [
     "sheet",
@@ -2567,6 +2642,12 @@
     "wind",
     "storm",
     "hurricane"
+  ],
+  "train": [
+    "transport",
+    "metro",
+    "subway",
+    "underground"
   ],
   "trash": [
     "garbage",
@@ -2687,6 +2768,13 @@
   "users": [
     "group",
     "people"
+  ],
+  "venetian-mask": [
+    "mask",
+    "masquerade",
+    "impersonate",
+    "secret",
+    "incognito"
   ],
   "verified": [
     "check"
