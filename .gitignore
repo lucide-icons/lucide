@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 .next
 .now
 node_modules

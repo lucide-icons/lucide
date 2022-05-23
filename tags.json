@@ -225,6 +225,10 @@
     "camera",
     "photo"
   ],
+  "apple": [
+    "fruit",
+    "food"
+  ],
   "archive": [
     "index",
     "box"
@@ -301,6 +305,10 @@
   ],
   "axe": [
     "hatchet"
+  ],
+  "banana": [
+    "fruit",
+    "food"
   ],
   "banknote": [
     "currency",
@@ -556,6 +564,10 @@
     "food",
     "kitchen",
     "restaurant"
+  ],
+  "cherry": [
+    "fruit",
+    "food"
   ],
   "chevron-down": [
     "arrow"
@@ -1329,6 +1341,11 @@
     "learn",
     "study"
   ],
+  "grape": [
+    "fruit",
+    "wine",
+    "food"
+  ],
   "grid": [
     "table"
   ],
@@ -1423,6 +1440,10 @@
     "timer",
     "time",
     "sandglass"
+  ],
+  "ice-cream": [
+    "gelato",
+    "food"
   ],
   "image": [
     "picture",
@@ -1544,6 +1565,11 @@
     "webpage",
     "block",
     "section"
+  ],
+  "lemon": [
+    "fruit",
+    "citrus",
+    "food"
   ],
   "library": [
     "book",
@@ -1862,13 +1888,6 @@
   "network": [
     "tree"
   ],
-  "sun-moon": [
-    "night",
-    "light",
-    "moon",
-    "sun",
-    "brightness"
-  ],
   "octagon": [
     "stop"
   ],
@@ -1876,6 +1895,11 @@
     "key",
     "mac",
     "button"
+  ],
+  "orange": [
+    "fruit",
+    "citrus",
+    "food"
   ],
   "outdent": [
     "text",
@@ -1992,6 +2016,11 @@
     "eye dropper",
     "color picker"
   ],
+  "pizza": [
+    "pie",
+    "quiche",
+    "food"
+  ],
   "plane": [
     "plane",
     "trip"
@@ -2032,6 +2061,10 @@
   ],
   "pointer": [
     "mouse"
+  ],
+  "popsicle": [
+    "ice-cream",
+    "food"
   ],
   "pound-sterling": [
     "currency",
@@ -2493,6 +2526,17 @@
     "low",
     "brightness low"
   ],
+  "sun-medium": [
+    "brightness",
+    "medium"
+  ],
+  "sun-moon": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
+  ],
   "sunrise": [
     "weather",
     "time",
@@ -2504,10 +2548,6 @@
     "time",
     "evening",
     "night"
-  ],
-  "sun-medium": [
-    "brightness",
-    "medium"
   ],
   "superscript": [
     "text",
@@ -2839,6 +2879,10 @@
   "watch": [
     "clock",
     "time"
+  ],
+  "watermelon": [
+    "fruit",
+    "food"
   ],
   "waves": [
     "water",
