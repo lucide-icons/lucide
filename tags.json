@@ -738,6 +738,12 @@
     "weather",
     "night"
   ],
+  "cloud-moon-rain": [
+    "weather",
+    "partly",
+	"night",
+    "rainfall"
+  ],
   "cloud-off": [
     "disconnect"
   ],
