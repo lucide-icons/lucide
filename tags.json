@@ -1028,6 +1028,10 @@
   "egg": [
     "food"
   ],
+  "egg-fried": [
+    "food",
+    "breakfast"
+  ],
   "equal": [
     "calculate"
   ],
