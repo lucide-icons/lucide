@@ -65,9 +65,9 @@ If you are a designer who wants to contribute to Lucide but you don't know what 
 
 ## Development
 
-You will need minimum version of Nodejs 14+. [link]
-For packagemanagement you will need yarn v1. [link]
-For flutter package development, you need flutter env setup. [link]
+You will need minimum version of [Nodejs 16+](https://nodejs.org)
+For packagemanagement you will need [yarn v1](https://yarnpkg.com/getting-started/install).
+For flutter package development, you need [Flutter 1.17+](https://docs.flutter.dev/get-started/install).
 
 After cloning the project you need to run:
 
