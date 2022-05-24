@@ -887,42 +887,56 @@
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "1"
   ],
   "dice-2": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "2"
   ],
   "dice-3": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "3"
   ],
   "dice-4": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "4"
   ],
   "dice-5": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "5"
   ],
   "dice-6": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "6"
   ],
   "dices": [
     "dice",
     "random",
-    "tabletop"
+    "tabletop",
+    "board",
+    "game"
   ],
   "disc": [
     "album",
