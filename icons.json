@@ -1,0 +1,4887 @@
+{
+  "$id": "https://lucide.dev/icons.json",
+  "$schema": "./icons.schema.json",
+  "title": "Lucide Icons",
+  "type": "object",
+  "icons": {
+    "accessibility": {
+      "tags": [
+        "disability",
+        "disabled",
+        "dda",
+        "wheelchair"
+      ],
+      "categories": [
+        "accessibility"
+      ]
+    },
+    "activity": {
+      "tags": [
+        "pulse",
+        "health",
+        "action",
+        "motion"
+      ],
+      "categories": []
+    },
+    "airplay": {
+      "tags": [
+        "stream",
+        "cast",
+        "mirroring"
+      ],
+      "categories": []
+    },
+    "alarm-check": {
+      "tags": [
+        "done"
+      ],
+      "categories": []
+    },
+    "alarm-clock": {
+      "tags": [
+        "morning"
+      ],
+      "categories": []
+    },
+    "alarm-clock-off": {
+      "tags": [
+        "morning",
+        "turn-off"
+      ],
+      "categories": []
+    },
+    "alarm-minus": {
+      "tags": [
+        "remove"
+      ],
+      "categories": []
+    },
+    "alarm-plus": {
+      "tags": [
+        "add"
+      ],
+      "categories": []
+    },
+    "album": {
+      "tags": [
+        "photo",
+        "book"
+      ],
+      "categories": []
+    },
+    "alert-circle": {
+      "tags": [
+        "warning",
+        "alert",
+        "danger"
+      ],
+      "categories": []
+    },
+    "alert-octagon": {
+      "tags": [
+        "warning",
+        "alert",
+        "danger"
+      ],
+      "categories": []
+    },
+    "alert-triangle": {
+      "tags": [
+        "warning",
+        "alert",
+        "danger"
+      ],
+      "categories": []
+    },
+    "align-center": {
+      "tags": [
+        "text",
+        "alignment",
+        "center"
+      ],
+      "categories": []
+    },
+    "align-center-horizontal": {
+      "tags": [
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-center-vertical": {
+      "tags": [
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-end-horizontal": {
+      "tags": [
+        "items",
+        "bottom",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-end-vertical": {
+      "tags": [
+        "items",
+        "right",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-horizontal-distribute-center": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "space",
+        "evenly",
+        "around"
+      ],
+      "categories": []
+    },
+    "align-horizontal-distribute-end": {
+      "tags": [
+        "right",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-horizontal-distribute-start": {
+      "tags": [
+        "left",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-horizontal-justify-center": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-horizontal-justify-end": {
+      "tags": [
+        "right",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-horizontal-justify-start": {
+      "tags": [
+        "left",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-horizontal-space-around": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": []
+    },
+    "align-horizontal-space-between": {
+      "tags": [
+        "around",
+        "items",
+        "bottom",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-justify": {
+      "tags": [
+        "text",
+        "alignment",
+        "justified"
+      ],
+      "categories": []
+    },
+    "align-left": {
+      "tags": [
+        "text",
+        "alignment",
+        "left"
+      ],
+      "categories": []
+    },
+    "align-right": {
+      "tags": [
+        "text",
+        "alignment",
+        "right"
+      ],
+      "categories": []
+    },
+    "align-start-horizontal": {
+      "tags": [
+        "top",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-start-vertical": {
+      "tags": [
+        "left",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-vertical-distribute-center": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "space",
+        "evenly",
+        "around"
+      ],
+      "categories": []
+    },
+    "align-vertical-distribute-end": {
+      "tags": [
+        "bottom",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-vertical-distribute-start": {
+      "tags": [
+        "top",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": []
+    },
+    "align-vertical-justify-center": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": []
+    },
+    "align-vertical-justify-end": {
+      "tags": [
+        "bottom",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": []
+    },
+    "align-vertical-justify-start": {
+      "tags": [
+        "top",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": []
+    },
+    "align-vertical-space-around": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": []
+    },
+    "align-vertical-space-between": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": []
+    },
+    "anchor": {
+      "tags": [
+        "ship"
+      ],
+      "categories": []
+    },
+    "aperture": {
+      "tags": [
+        "camera",
+        "photo"
+      ],
+      "categories": []
+    },
+    "archive": {
+      "tags": [
+        "index",
+        "box"
+      ],
+      "categories": []
+    },
+    "arrow-big-down": {
+      "tags": [
+        "key"
+      ],
+      "categories": []
+    },
+    "arrow-big-left": {
+      "tags": [
+        "key"
+      ],
+      "categories": []
+    },
+    "arrow-big-right": {
+      "tags": [
+        "key",
+        "forward"
+      ],
+      "categories": []
+    },
+    "arrow-big-up": {
+      "tags": [
+        "key",
+        "forward"
+      ],
+      "categories": []
+    },
+    "arrow-down": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-down-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-down-left": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-down-right": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-left": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-left-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-left-right": {
+      "tags": [
+        "bidirection",
+        "direction",
+        "swap",
+        "switch",
+        "transaction"
+      ],
+      "categories": []
+    },
+    "arrow-right": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-right-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-up": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-up-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-up-left": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "arrow-up-right": {
+      "tags": [
+        "direction"
+      ],
+      "categories": []
+    },
+    "asterisk": {
+      "tags": [
+        "reference"
+      ],
+      "categories": []
+    },
+    "at-sign": {
+      "tags": [
+        "mention",
+        "at",
+        "email",
+        "message"
+      ],
+      "categories": []
+    },
+    "award": {
+      "tags": [
+        "achievement",
+        "badge"
+      ],
+      "categories": []
+    },
+    "axe": {
+      "tags": [
+        "hatchet"
+      ],
+      "categories": []
+    },
+    "banknote": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "bar-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": []
+    },
+    "bar-chart-2": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": []
+    },
+    "bar-chart-3": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": []
+    },
+    "bar-chart-4": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": []
+    },
+    "bar-chart-horizontal": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": []
+    },
+    "baseline": {
+      "tags": [
+        "text",
+        "format",
+        "color"
+      ],
+      "categories": []
+    },
+    "bath": {
+      "tags": [
+        "amenities",
+        "services",
+        "bathroom",
+        "shower"
+      ],
+      "categories": []
+    },
+    "battery": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": []
+    },
+    "battery-charging": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": []
+    },
+    "battery-full": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": []
+    },
+    "battery-low": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": []
+    },
+    "battery-medium": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": []
+    },
+    "beaker": {
+      "tags": [
+        "cup"
+      ],
+      "categories": []
+    },
+    "bell": {
+      "tags": [
+        "alarm",
+        "notification",
+        "sound",
+        "reminder"
+      ],
+      "categories": []
+    },
+    "bell-minus": {
+      "tags": [
+        "alarm",
+        "notification",
+        "silent",
+        "reminder",
+        "delete",
+        "remove",
+        "erase"
+      ],
+      "categories": []
+    },
+    "bell-off": {
+      "tags": [
+        "alarm",
+        "notification",
+        "silent",
+        "reminder"
+      ],
+      "categories": []
+    },
+    "bell-plus": {
+      "tags": [
+        "notification",
+        "silent",
+        "reminder",
+        "add",
+        "create",
+        "new"
+      ],
+      "categories": []
+    },
+    "bell-ring": {
+      "tags": [
+        "alarm",
+        "notification",
+        "sound",
+        "reminder"
+      ],
+      "categories": []
+    },
+    "bike": {
+      "tags": [
+        "bicycle",
+        "transport",
+        "trip"
+      ],
+      "categories": []
+    },
+    "binary": {
+      "tags": [
+        "code",
+        "digits",
+        "computer",
+        "zero",
+        "one"
+      ],
+      "categories": []
+    },
+    "bitcoin": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "bluetooth": {
+      "tags": [
+        "wireless"
+      ],
+      "categories": []
+    },
+    "bluetooth-connected": {
+      "tags": [
+        "paired"
+      ],
+      "categories": []
+    },
+    "bluetooth-off": {
+      "tags": [
+        "lost"
+      ],
+      "categories": []
+    },
+    "bluetooth-searching": {
+      "tags": [
+        "pairing"
+      ],
+      "categories": []
+    },
+    "bold": {
+      "tags": [
+        "text",
+        "strong",
+        "format"
+      ],
+      "categories": []
+    },
+    "book": {
+      "tags": [
+        "read",
+        "dictionary",
+        "booklet",
+        "magazine",
+        "library"
+      ],
+      "categories": []
+    },
+    "book-open": {
+      "tags": [
+        "read",
+        "library"
+      ],
+      "categories": []
+    },
+    "bookmark": {
+      "tags": [
+        "read",
+        "clip",
+        "marker",
+        "tag"
+      ],
+      "categories": []
+    },
+    "bookmark-minus": {
+      "tags": [
+        "delete",
+        "remove"
+      ],
+      "categories": []
+    },
+    "bookmark-plus": {
+      "tags": [
+        "add"
+      ],
+      "categories": []
+    },
+    "bot": {
+      "tags": [
+        "robot"
+      ],
+      "categories": []
+    },
+    "box": {
+      "tags": [
+        "cube",
+        "package"
+      ],
+      "categories": []
+    },
+    "box-select": {
+      "tags": [
+        "selection",
+        "square",
+        "rectangular",
+        "marquee",
+        "tool"
+      ],
+      "categories": []
+    },
+    "briefcase": {
+      "tags": [
+        "work",
+        "bag",
+        "baggage",
+        "folder"
+      ],
+      "categories": []
+    },
+    "brush": {
+      "tags": [
+        "draw",
+        "paint",
+        "color"
+      ],
+      "categories": []
+    },
+    "bug": {
+      "tags": [
+        "issue",
+        "report",
+        "insect"
+      ],
+      "categories": []
+    },
+    "building": {
+      "tags": [
+        "organisation",
+        "organization"
+      ],
+      "categories": []
+    },
+    "building-2": {
+      "tags": [
+        "business",
+        "company",
+        "enterprise",
+        "skyscraper",
+        "organisation",
+        "organization"
+      ],
+      "categories": []
+    },
+    "bus": {
+      "tags": [
+        "bus",
+        "vehicle",
+        "transport",
+        "trip"
+      ],
+      "categories": []
+    },
+    "calculator": {
+      "tags": [
+        "count",
+        "calculating machine"
+      ],
+      "categories": []
+    },
+    "calendar": {
+      "tags": [
+        "date",
+        "birthdate"
+      ],
+      "categories": []
+    },
+    "camera": {
+      "tags": [
+        "photo",
+        "webcam",
+        "video"
+      ],
+      "categories": []
+    },
+    "camera-off": {
+      "tags": [
+        "photo",
+        "webcam",
+        "video"
+      ],
+      "categories": []
+    },
+    "car": {
+      "tags": [
+        "vehicle",
+        "transport",
+        "trip"
+      ],
+      "categories": []
+    },
+    "carrot": {
+      "tags": [
+        "vegetable",
+        "food",
+        "eat"
+      ],
+      "categories": []
+    },
+    "cast": {
+      "tags": [
+        "chromecast",
+        "airplay"
+      ],
+      "categories": []
+    },
+    "check": {
+      "tags": [
+        "done"
+      ],
+      "categories": []
+    },
+    "check-circle": {
+      "tags": [
+        "done"
+      ],
+      "categories": []
+    },
+    "check-circle-2": {
+      "tags": [
+        "done"
+      ],
+      "categories": []
+    },
+    "check-square": {
+      "tags": [
+        "done"
+      ],
+      "categories": []
+    },
+    "chef-hat": {
+      "tags": [
+        "cooking",
+        "food",
+        "kitchen",
+        "restaurant"
+      ],
+      "categories": []
+    },
+    "chevron-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevron-first": {
+      "tags": [
+        "arrow",
+        "previous",
+        "music"
+      ],
+      "categories": []
+    },
+    "chevron-last": {
+      "tags": [
+        "arrow",
+        "skip",
+        "next",
+        "music"
+      ],
+      "categories": []
+    },
+    "chevron-left": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevron-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevron-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevrons-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevrons-down-up": {
+      "tags": [
+        "arrow",
+        "collapse",
+        "fold",
+        "vertical"
+      ],
+      "categories": []
+    },
+    "chevrons-left": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevrons-left-right": {
+      "tags": [
+        "arrow",
+        "expand",
+        "horizonal",
+        "unfold"
+      ],
+      "categories": []
+    },
+    "chevrons-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevrons-right-left": {
+      "tags": [
+        "arrow",
+        "collapse",
+        "fold",
+        "horizonal"
+      ],
+      "categories": []
+    },
+    "chevrons-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "chevrons-up-down": {
+      "tags": [
+        "arrow",
+        "expand",
+        "unfold",
+        "vertical"
+      ],
+      "categories": []
+    },
+    "chrome": {
+      "tags": [
+        "browser"
+      ],
+      "categories": []
+    },
+    "circle": {
+      "tags": [
+        "off",
+        "zero",
+        "record"
+      ],
+      "categories": []
+    },
+    "circle-slashed": {
+      "tags": [
+        "diameter",
+        "zero",
+        "Ø",
+        "null",
+        "nothing"
+      ],
+      "categories": []
+    },
+    "clapperboard": {
+      "tags": [
+        "movie",
+        "film",
+        "video",
+        "camera",
+        "tv",
+        "television"
+      ],
+      "categories": []
+    },
+    "clipboard": {
+      "tags": [
+        "copy",
+        "paste"
+      ],
+      "categories": []
+    },
+    "clipboard-check": {
+      "tags": [
+        "copied",
+        "pasted"
+      ],
+      "categories": []
+    },
+    "clipboard-copy": {
+      "tags": [
+        "copy",
+        "paste"
+      ],
+      "categories": []
+    },
+    "clipboard-list": {
+      "tags": [
+        "copy",
+        "paste",
+        "tasks"
+      ],
+      "categories": []
+    },
+    "clipboard-x": {
+      "tags": [
+        "copy",
+        "paste",
+        "discard",
+        "remove"
+      ],
+      "categories": []
+    },
+    "clock": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-1": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-10": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-11": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-12": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-2": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-3": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-4": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-5": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-6": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-7": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-8": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "clock-9": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": []
+    },
+    "cloud": {
+      "tags": [
+        "weather"
+      ],
+      "categories": []
+    },
+    "cloud-drizzle": {
+      "tags": [
+        "weather",
+        "shower"
+      ],
+      "categories": []
+    },
+    "cloud-fog": {
+      "tags": [
+        "weather",
+        "mist"
+      ],
+      "categories": []
+    },
+    "cloud-hail": {
+      "tags": [
+        "weather",
+        "rainfall"
+      ],
+      "categories": []
+    },
+    "cloud-lightning": {
+      "tags": [
+        "weather",
+        "bolt"
+      ],
+      "categories": []
+    },
+    "cloud-moon": {
+      "tags": [
+        "weather",
+        "night"
+      ],
+      "categories": []
+    },
+    "cloud-off": {
+      "tags": [
+        "disconnect"
+      ],
+      "categories": []
+    },
+    "cloud-rain": {
+      "tags": [
+        "weather",
+        "rainfall"
+      ],
+      "categories": []
+    },
+    "cloud-rain-wind": {
+      "tags": [
+        "weather",
+        "rainfall"
+      ],
+      "categories": []
+    },
+    "cloud-snow": {
+      "tags": [
+        "weather",
+        "blizzard"
+      ],
+      "categories": []
+    },
+    "cloud-sun": {
+      "tags": [
+        "weather",
+        "partly"
+      ],
+      "categories": []
+    },
+    "cloudy": {
+      "tags": [
+        "clouds"
+      ],
+      "categories": []
+    },
+    "clover": {
+      "tags": [
+        "leaf",
+        "luck"
+      ],
+      "categories": []
+    },
+    "code": {
+      "tags": [
+        "source",
+        "programming",
+        "html",
+        "xml"
+      ],
+      "categories": []
+    },
+    "code-2": {
+      "tags": [
+        "source",
+        "programming",
+        "html",
+        "xml"
+      ],
+      "categories": []
+    },
+    "codepen": {
+      "tags": [
+        "logo"
+      ],
+      "categories": []
+    },
+    "codesandbox": {
+      "tags": [
+        "logo"
+      ],
+      "categories": []
+    },
+    "coffee": {
+      "tags": [
+        "drink",
+        "cup",
+        "mug",
+        "tea",
+        "cafe",
+        "hot",
+        "beverage"
+      ],
+      "categories": []
+    },
+    "coins": {
+      "tags": [
+        "money",
+        "cash",
+        "finance",
+        "gamble"
+      ],
+      "categories": []
+    },
+    "columns": {
+      "tags": [
+        "layout"
+      ],
+      "categories": []
+    },
+    "command": {
+      "tags": [
+        "keyboard",
+        "cmd",
+        "terminal",
+        "prompt"
+      ],
+      "categories": []
+    },
+    "compass": {
+      "tags": [
+        "navigation",
+        "safari",
+        "travel",
+        "direction"
+      ],
+      "categories": []
+    },
+    "component": {
+      "tags": [
+        "design",
+        "element",
+        "group",
+        "module",
+        "part",
+        "symbol"
+      ],
+      "categories": []
+    },
+    "contact": {
+      "tags": [
+        "person",
+        "user"
+      ],
+      "categories": []
+    },
+    "contrast": {
+      "tags": [],
+      "categories": []
+    },
+    "cookie": {
+      "tags": [
+        "biscuit",
+        "privacy",
+        "legal",
+        "food"
+      ],
+      "categories": []
+    },
+    "copy": {
+      "tags": [
+        "clone",
+        "duplicate"
+      ],
+      "categories": []
+    },
+    "copyleft": {
+      "tags": [
+        "licence"
+      ],
+      "categories": []
+    },
+    "copyright": {
+      "tags": [
+        "licence"
+      ],
+      "categories": []
+    },
+    "corner-down-left": {
+      "tags": [
+        "arrow",
+        "return"
+      ],
+      "categories": []
+    },
+    "corner-down-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "corner-left-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "corner-left-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "corner-right-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "corner-right-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "corner-up-left": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "corner-up-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": []
+    },
+    "cpu": {
+      "tags": [
+        "processor",
+        "technology",
+        "computer",
+        "chip"
+      ],
+      "categories": []
+    },
+    "credit-card": {
+      "tags": [
+        "bank",
+        "purchase",
+        "payment",
+        "cc"
+      ],
+      "categories": []
+    },
+    "croissant": {
+      "tags": [
+        "bakery",
+        "cooking",
+        "food",
+        "pastry"
+      ],
+      "categories": []
+    },
+    "crop": {
+      "tags": [
+        "photo",
+        "image"
+      ],
+      "categories": []
+    },
+    "cross": {
+      "tags": [
+        "healthcare",
+        "firstaid"
+      ],
+      "categories": []
+    },
+    "crosshair": {
+      "tags": [
+        "aim",
+        "target"
+      ],
+      "categories": []
+    },
+    "crown": {
+      "tags": [
+        "king",
+        "winner",
+        "favourite"
+      ],
+      "categories": []
+    },
+    "currency": {
+      "tags": [
+        "finance",
+        "money"
+      ],
+      "categories": []
+    },
+    "database": {
+      "tags": [
+        "storage",
+        "memory"
+      ],
+      "categories": []
+    },
+    "delete": {
+      "tags": [
+        "backspace",
+        "remove"
+      ],
+      "categories": []
+    },
+    "dice-1": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "1"
+      ],
+      "categories": []
+    },
+    "dice-2": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "2"
+      ],
+      "categories": []
+    },
+    "dice-3": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "3"
+      ],
+      "categories": []
+    },
+    "dice-4": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "4"
+      ],
+      "categories": []
+    },
+    "dice-5": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "5"
+      ],
+      "categories": []
+    },
+    "dice-6": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "6"
+      ],
+      "categories": []
+    },
+    "disc": {
+      "tags": [
+        "album",
+        "cd",
+        "dvd",
+        "music"
+      ],
+      "categories": []
+    },
+    "divide": {
+      "tags": [
+        "calculate"
+      ],
+      "categories": []
+    },
+    "divide-circle": {
+      "tags": [
+        "calculate"
+      ],
+      "categories": []
+    },
+    "divide-square": {
+      "tags": [
+        "calculate"
+      ],
+      "categories": []
+    },
+    "dollar-sign": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "download": {
+      "tags": [
+        "import",
+        "export"
+      ],
+      "categories": []
+    },
+    "download-cloud": {
+      "tags": [
+        "import"
+      ],
+      "categories": []
+    },
+    "dribbble": {
+      "tags": [],
+      "categories": []
+    },
+    "droplet": {
+      "tags": [
+        "water"
+      ],
+      "categories": []
+    },
+    "droplets": {
+      "tags": [
+        "water",
+        "humidity"
+      ],
+      "categories": []
+    },
+    "drumstick": {
+      "tags": [
+        "food",
+        "chicken",
+        "meat"
+      ],
+      "categories": []
+    },
+    "edit": {
+      "tags": [
+        "pencil",
+        "change"
+      ],
+      "categories": []
+    },
+    "edit-2": {
+      "tags": [
+        "pencil",
+        "change"
+      ],
+      "categories": []
+    },
+    "edit-3": {
+      "tags": [
+        "pencil",
+        "change"
+      ],
+      "categories": []
+    },
+    "egg": {
+      "tags": [
+        "food"
+      ],
+      "categories": []
+    },
+    "equal": {
+      "tags": [
+        "calculate"
+      ],
+      "categories": []
+    },
+    "equal-not": {
+      "tags": [
+        "calculate",
+        "off"
+      ],
+      "categories": []
+    },
+    "eraser": {
+      "tags": [
+        "pencil",
+        "drawing",
+        "undo",
+        "delete",
+        "clear"
+      ],
+      "categories": []
+    },
+    "euro": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "expand": {
+      "tags": [
+        "scale",
+        "fullscreen"
+      ],
+      "categories": []
+    },
+    "external-link": {
+      "tags": [
+        "outbound"
+      ],
+      "categories": []
+    },
+    "eye": {
+      "tags": [
+        "view",
+        "watch"
+      ],
+      "categories": []
+    },
+    "eye-off": {
+      "tags": [
+        "view",
+        "watch",
+        "hide",
+        "hidden"
+      ],
+      "categories": []
+    },
+    "facebook": {
+      "tags": [
+        "logo",
+        "social"
+      ],
+      "categories": []
+    },
+    "factory": {
+      "tags": [
+        "building",
+        "business",
+        "energy",
+        "industry",
+        "manufacture",
+        "sector"
+      ],
+      "categories": []
+    },
+    "fast-forward": {
+      "tags": [
+        "music"
+      ],
+      "categories": []
+    },
+    "feather": {
+      "tags": [],
+      "categories": []
+    },
+    "figma": {
+      "tags": [
+        "logo",
+        "design",
+        "tool"
+      ],
+      "categories": []
+    },
+    "file": {
+      "tags": [
+        "document"
+      ],
+      "categories": []
+    },
+    "file-check": {
+      "tags": [
+        "done",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-check-2": {
+      "tags": [
+        "done",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-code": {
+      "tags": [
+        "script",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-digit": {
+      "tags": [
+        "number",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-input": {
+      "tags": [
+        "document"
+      ],
+      "categories": []
+    },
+    "file-minus": {
+      "tags": [
+        "delete",
+        "remove",
+        "erase",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-minus-2": {
+      "tags": [
+        "document"
+      ],
+      "categories": []
+    },
+    "file-output": {
+      "tags": [
+        "document"
+      ],
+      "categories": []
+    },
+    "file-plus": {
+      "tags": [
+        "add",
+        "create",
+        "new",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-plus-2": {
+      "tags": [
+        "add",
+        "create",
+        "new",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-search": {
+      "tags": [
+        "lost",
+        "document",
+        "find"
+      ],
+      "categories": []
+    },
+    "file-text": {
+      "tags": [
+        "data",
+        "txt",
+        "pdf",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-x": {
+      "tags": [
+        "lost",
+        "delete",
+        "remove",
+        "document"
+      ],
+      "categories": []
+    },
+    "file-x-2": {
+      "tags": [
+        "lost",
+        "delete",
+        "remove",
+        "document"
+      ],
+      "categories": []
+    },
+    "files": {
+      "tags": [
+        "multiple",
+        "copy",
+        "documents"
+      ],
+      "categories": []
+    },
+    "film": {
+      "tags": [
+        "movie",
+        "video"
+      ],
+      "categories": []
+    },
+    "filter": {
+      "tags": [
+        "funnel",
+        "hopper"
+      ],
+      "categories": []
+    },
+    "flag": {
+      "tags": [
+        "report"
+      ],
+      "categories": []
+    },
+    "flag-off": {
+      "tags": [
+        "unflag"
+      ],
+      "categories": []
+    },
+    "flag-triangle-left": {
+      "tags": [
+        "report",
+        "timeline"
+      ],
+      "categories": []
+    },
+    "flag-triangle-right": {
+      "tags": [
+        "report",
+        "timeline"
+      ],
+      "categories": []
+    },
+    "flame": {
+      "tags": [
+        "fire",
+        "lit"
+      ],
+      "categories": []
+    },
+    "flashlight": {
+      "tags": [
+        "torch"
+      ],
+      "categories": []
+    },
+    "flashlight-off": {
+      "tags": [
+        "torch"
+      ],
+      "categories": []
+    },
+    "flask-conical": {
+      "tags": [
+        "beaker",
+        "erlenmeyer"
+      ],
+      "categories": []
+    },
+    "flask-round": {
+      "tags": [
+        "beaker"
+      ],
+      "categories": []
+    },
+    "focus": {
+      "tags": [
+        "camera",
+        "lens",
+        "photo"
+      ],
+      "categories": []
+    },
+    "folder": {
+      "tags": [
+        "directory"
+      ],
+      "categories": []
+    },
+    "folder-minus": {
+      "tags": [
+        "directory"
+      ],
+      "categories": []
+    },
+    "folder-open": {
+      "tags": [
+        "directory"
+      ],
+      "categories": []
+    },
+    "folder-plus": {
+      "tags": [
+        "directory"
+      ],
+      "categories": []
+    },
+    "form-input": {
+      "tags": [
+        "2fa",
+        "authenticate",
+        "login",
+        "field",
+        "text"
+      ],
+      "categories": []
+    },
+    "forward": {
+      "tags": [
+        "send",
+        "share",
+        "email"
+      ],
+      "categories": []
+    },
+    "frame": {
+      "tags": [
+        "logo",
+        "design",
+        "tool"
+      ],
+      "categories": []
+    },
+    "framer": {
+      "tags": [
+        "logo",
+        "design",
+        "tool"
+      ],
+      "categories": []
+    },
+    "frown": {
+      "tags": [
+        "emoji",
+        "face",
+        "bad",
+        "sad",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "fuel": {
+      "tags": [
+        "filling-station",
+        "gas",
+        "petrol",
+        "tank"
+      ],
+      "categories": []
+    },
+    "function-square": {
+      "tags": [
+        "programming",
+        "code",
+        "automation"
+      ],
+      "categories": []
+    },
+    "gamepad": {
+      "tags": [
+        "console"
+      ],
+      "categories": []
+    },
+    "gamepad-2": {
+      "tags": [
+        "console"
+      ],
+      "categories": []
+    },
+    "gauge": {
+      "tags": [
+        "dashboard"
+      ],
+      "categories": []
+    },
+    "gavel": {
+      "tags": [
+        "hammer",
+        "mallet"
+      ],
+      "categories": []
+    },
+    "gem": {
+      "tags": [
+        "diamond",
+        "price",
+        "special",
+        "present"
+      ],
+      "categories": []
+    },
+    "ghost": {
+      "tags": [
+        "pacman",
+        "spooky"
+      ],
+      "categories": []
+    },
+    "gift": {
+      "tags": [
+        "present",
+        "box",
+        "birthday",
+        "party"
+      ],
+      "categories": []
+    },
+    "git-branch": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": []
+    },
+    "git-branch-plus": {
+      "tags": [
+        "add",
+        "create"
+      ],
+      "categories": []
+    },
+    "git-commit": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": []
+    },
+    "git-fork": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": []
+    },
+    "git-merge": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": []
+    },
+    "git-pull-request": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": []
+    },
+    "github": {
+      "tags": [
+        "logo",
+        "version control"
+      ],
+      "categories": []
+    },
+    "gitlab": {
+      "tags": [
+        "logo",
+        "version control"
+      ],
+      "categories": []
+    },
+    "glasses": {
+      "tags": [
+        "glasses",
+        "spectacles"
+      ],
+      "categories": []
+    },
+    "globe": {
+      "tags": [
+        "world",
+        "browser",
+        "language",
+        "translate"
+      ],
+      "categories": []
+    },
+    "globe-2": {
+      "tags": [
+        "world",
+        "browser",
+        "language",
+        "translate"
+      ],
+      "categories": []
+    },
+    "grab": {
+      "tags": [
+        "hand"
+      ],
+      "categories": []
+    },
+    "graduation-cap": {
+      "tags": [
+        "school",
+        "university",
+        "learn",
+        "study"
+      ],
+      "categories": []
+    },
+    "grid": {
+      "tags": [
+        "table"
+      ],
+      "categories": []
+    },
+    "grip-horizontal": {
+      "tags": [
+        "grab",
+        "dots",
+        "handle"
+      ],
+      "categories": []
+    },
+    "grip-vertical": {
+      "tags": [
+        "grab",
+        "dots",
+        "handle",
+        "move",
+        "drag"
+      ],
+      "categories": []
+    },
+    "hammer": {
+      "tags": [
+        "mallet"
+      ],
+      "categories": []
+    },
+    "hand": {
+      "tags": [
+        "wave",
+        "move",
+        "mouse",
+        "grab"
+      ],
+      "categories": []
+    },
+    "hand-metal": {
+      "tags": [
+        "rock"
+      ],
+      "categories": []
+    },
+    "hard-drive": {
+      "tags": [
+        "computer",
+        "server",
+        "memory",
+        "data",
+        "ssd",
+        "disk",
+        "harddisk"
+      ],
+      "categories": []
+    },
+    "hard-hat": {
+      "tags": [
+        "helmet",
+        "construction",
+        "savety"
+      ],
+      "categories": []
+    },
+    "hash": {
+      "tags": [
+        "hashtag",
+        "number",
+        "pound"
+      ],
+      "categories": []
+    },
+    "haze": {
+      "tags": [
+        "mist",
+        "fog"
+      ],
+      "categories": []
+    },
+    "headphones": {
+      "tags": [
+        "music",
+        "audio",
+        "sound"
+      ],
+      "categories": []
+    },
+    "heart": {
+      "tags": [
+        "like",
+        "love",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "heart-off": {
+      "tags": [
+        "unlike",
+        "dislike",
+        "hate",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "help-circle": {
+      "tags": [
+        "question mark"
+      ],
+      "categories": []
+    },
+    "hexagon": {
+      "tags": [
+        "shape",
+        "node.js",
+        "logo"
+      ],
+      "categories": []
+    },
+    "highlighter": {
+      "tags": [
+        "mark",
+        "text"
+      ],
+      "categories": []
+    },
+    "history": {
+      "tags": [
+        "time",
+        "redo",
+        "undo",
+        "rewind",
+        "timeline",
+        "version"
+      ],
+      "categories": []
+    },
+    "home": {
+      "tags": [
+        "house",
+        "living"
+      ],
+      "categories": []
+    },
+    "hourglass": {
+      "tags": [
+        "timer",
+        "time",
+        "sandglass"
+      ],
+      "categories": []
+    },
+    "image": {
+      "tags": [
+        "picture",
+        "photo"
+      ],
+      "categories": []
+    },
+    "image-minus": {
+      "tags": [
+        "remove",
+        "delete"
+      ],
+      "categories": []
+    },
+    "image-off": {
+      "tags": [
+        "picture",
+        "photo"
+      ],
+      "categories": []
+    },
+    "image-plus": {
+      "tags": [
+        "add",
+        "create"
+      ],
+      "categories": []
+    },
+    "import": {
+      "tags": [
+        "save"
+      ],
+      "categories": []
+    },
+    "inbox": {
+      "tags": [
+        "email"
+      ],
+      "categories": []
+    },
+    "indent": {
+      "tags": [
+        "text",
+        "tab"
+      ],
+      "categories": []
+    },
+    "indian-rupee": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "infinity": {
+      "tags": [
+        "unlimited",
+        "forever",
+        "loop"
+      ],
+      "categories": []
+    },
+    "info": {
+      "tags": [
+        "help"
+      ],
+      "categories": []
+    },
+    "inspect": {
+      "tags": [
+        "element",
+        "mouse",
+        "click",
+        "cursor",
+        "pointer",
+        "box"
+      ],
+      "categories": []
+    },
+    "instagram": {
+      "tags": [
+        "logo",
+        "camera"
+      ],
+      "categories": []
+    },
+    "italic": {
+      "tags": [
+        "oblique",
+        "text",
+        "format"
+      ],
+      "categories": []
+    },
+    "japanese-yen": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "key": {
+      "tags": [
+        "password",
+        "login",
+        "authentication",
+        "secure"
+      ],
+      "categories": []
+    },
+    "keyboard": {
+      "tags": [
+        "layout",
+        "spell",
+        "settings",
+        "mouse"
+      ],
+      "categories": []
+    },
+    "landmark": {
+      "tags": [
+        "bank",
+        "building",
+        "capitol",
+        "finance",
+        "money"
+      ],
+      "categories": []
+    },
+    "languages": {
+      "tags": [
+        "translate"
+      ],
+      "categories": []
+    },
+    "laptop": {
+      "tags": [
+        "computer"
+      ],
+      "categories": []
+    },
+    "laptop-2": {
+      "tags": [
+        "computer"
+      ],
+      "categories": []
+    },
+    "lasso": {
+      "tags": [
+        "select"
+      ],
+      "categories": []
+    },
+    "lasso-select": {
+      "tags": [],
+      "categories": []
+    },
+    "layers": {
+      "tags": [
+        "stack",
+        "pages"
+      ],
+      "categories": []
+    },
+    "layout": {
+      "tags": [
+        "window",
+        "webpage"
+      ],
+      "categories": []
+    },
+    "layout-dashboard": {
+      "tags": [
+        "masonry",
+        "brick"
+      ],
+      "categories": []
+    },
+    "layout-grid": {
+      "tags": [
+        "app",
+        "home",
+        "start"
+      ],
+      "categories": []
+    },
+    "layout-list": {
+      "tags": [
+        "image",
+        "photo",
+        "item"
+      ],
+      "categories": []
+    },
+    "layout-template": {
+      "tags": [
+        "window",
+        "webpage",
+        "block",
+        "section"
+      ],
+      "categories": []
+    },
+    "library": {
+      "tags": [
+        "book",
+        "music",
+        "album"
+      ],
+      "categories": []
+    },
+    "life-buoy": {
+      "tags": [
+        "help",
+        "rescue",
+        "ship"
+      ],
+      "categories": []
+    },
+    "lightbulb": {
+      "tags": [
+        "idea",
+        "bright",
+        "lights"
+      ],
+      "categories": []
+    },
+    "lightbulb-off": {
+      "tags": [
+        "lights"
+      ],
+      "categories": []
+    },
+    "line-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": []
+    },
+    "link": {
+      "tags": [
+        "chain",
+        "url"
+      ],
+      "categories": []
+    },
+    "link-2": {
+      "tags": [
+        "chain",
+        "url"
+      ],
+      "categories": []
+    },
+    "link-2-off": {
+      "tags": [
+        "unchain",
+        "chain"
+      ],
+      "categories": []
+    },
+    "linkedin": {
+      "tags": [
+        "logo",
+        "social media"
+      ],
+      "categories": []
+    },
+    "list": {
+      "tags": [
+        "options"
+      ],
+      "categories": []
+    },
+    "list-checks": {
+      "tags": [
+        "todo",
+        "done"
+      ],
+      "categories": []
+    },
+    "list-minus": {
+      "tags": [
+        "playlist",
+        "remove",
+        "song",
+        "subtract",
+        "remove",
+        "delete"
+      ],
+      "categories": []
+    },
+    "list-ordered": {
+      "tags": [
+        "number",
+        "order"
+      ],
+      "categories": []
+    },
+    "list-plus": {
+      "tags": [
+        "playlist",
+        "add",
+        "song",
+        "track",
+        "new"
+      ],
+      "categories": []
+    },
+    "list-x": {
+      "tags": [
+        "playlist",
+        "subtract",
+        "remove",
+        "delete"
+      ],
+      "categories": []
+    },
+    "loader": {
+      "tags": [
+        "load",
+        "wait"
+      ],
+      "categories": []
+    },
+    "loader-2": {
+      "tags": [
+        "load"
+      ],
+      "categories": []
+    },
+    "locate": {
+      "tags": [
+        "map",
+        "gps",
+        "location",
+        "cross"
+      ],
+      "categories": []
+    },
+    "locate-fixed": {
+      "tags": [
+        "map",
+        "gps",
+        "location",
+        "cross"
+      ],
+      "categories": []
+    },
+    "locate-off": {
+      "tags": [
+        "map",
+        "gps",
+        "location",
+        "cross"
+      ],
+      "categories": []
+    },
+    "lock": {
+      "tags": [
+        "security",
+        "password",
+        "secure",
+        "admin"
+      ],
+      "categories": []
+    },
+    "log-in": {
+      "tags": [
+        "sign in",
+        "arrow",
+        "enter",
+        "auth"
+      ],
+      "categories": []
+    },
+    "log-out": {
+      "tags": [
+        "sign out",
+        "arrow",
+        "exit",
+        "auth"
+      ],
+      "categories": []
+    },
+    "magnet": {
+      "tags": [
+        "horseshoe",
+        "lock",
+        "science",
+        "snap"
+      ],
+      "categories": []
+    },
+    "mail": {
+      "tags": [
+        "email",
+        "message",
+        "letter"
+      ],
+      "categories": []
+    },
+    "map": {
+      "tags": [
+        "location",
+        "navigation",
+        "travel"
+      ],
+      "categories": []
+    },
+    "map-pin": {
+      "tags": [
+        "location",
+        "navigation",
+        "travel",
+        "marker"
+      ],
+      "categories": []
+    },
+    "map-pin-off": {
+      "tags": [
+        "location",
+        "navigation",
+        "travel",
+        "marker"
+      ],
+      "categories": []
+    },
+    "maximize": {
+      "tags": [
+        "fullscreen",
+        "expand"
+      ],
+      "categories": []
+    },
+    "maximize-2": {
+      "tags": [
+        "fullscreen",
+        "arrows",
+        "expand"
+      ],
+      "categories": []
+    },
+    "megaphone": {
+      "tags": [
+        "advertisement",
+        "attention",
+        "alert",
+        "notification"
+      ],
+      "categories": []
+    },
+    "meh": {
+      "tags": [
+        "emoji",
+        "face",
+        "neutral",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "menu": {
+      "tags": [
+        "bars",
+        "navigation",
+        "hamburger",
+        "options"
+      ],
+      "categories": []
+    },
+    "message-circle": {
+      "tags": [
+        "comment",
+        "chat",
+        "conversation"
+      ],
+      "categories": []
+    },
+    "message-square": {
+      "tags": [
+        "comment",
+        "chat",
+        "conversation"
+      ],
+      "categories": []
+    },
+    "mic": {
+      "tags": [
+        "record",
+        "sound",
+        "listen",
+        "radio",
+        "podcast"
+      ],
+      "categories": []
+    },
+    "mic-off": {
+      "tags": [
+        "record",
+        "sound",
+        "mute"
+      ],
+      "categories": []
+    },
+    "milestone": {
+      "tags": [
+        "sign",
+        "signpost",
+        "version control"
+      ],
+      "categories": []
+    },
+    "minimize": {
+      "tags": [
+        "exit fullscreen",
+        "close",
+        "shrink"
+      ],
+      "categories": []
+    },
+    "minimize-2": {
+      "tags": [
+        "exit fullscreen",
+        "arrows",
+        "close",
+        "shrink"
+      ],
+      "categories": []
+    },
+    "minus": {
+      "tags": [
+        "subtract",
+        "calculate"
+      ],
+      "categories": []
+    },
+    "minus-circle": {
+      "tags": [
+        "subtract",
+        "calculate"
+      ],
+      "categories": []
+    },
+    "minus-square": {
+      "tags": [
+        "subtract",
+        "calculate"
+      ],
+      "categories": []
+    },
+    "monitor": {
+      "tags": [
+        "tv",
+        "screen",
+        "display"
+      ],
+      "categories": []
+    },
+    "monitor-off": {
+      "tags": [
+        "share"
+      ],
+      "categories": []
+    },
+    "monitor-speaker": {
+      "tags": [
+        "devices",
+        "connect",
+        "cast"
+      ],
+      "categories": []
+    },
+    "moon": {
+      "tags": [
+        "dark",
+        "night"
+      ],
+      "categories": []
+    },
+    "more-horizontal": {
+      "tags": [
+        "ellipsis",
+        "menu",
+        "options"
+      ],
+      "categories": []
+    },
+    "more-vertical": {
+      "tags": [
+        "ellipsis",
+        "menu",
+        "options"
+      ],
+      "categories": []
+    },
+    "mountain": {
+      "tags": [
+        "climb",
+        "hike",
+        "rock"
+      ],
+      "categories": []
+    },
+    "mountain-snow": {
+      "tags": [
+        "alpine",
+        "climb",
+        "snow"
+      ],
+      "categories": []
+    },
+    "mouse": {
+      "tags": [
+        "device",
+        "scroll",
+        "click"
+      ],
+      "categories": []
+    },
+    "mouse-pointer": {
+      "tags": [
+        "arrow",
+        "cursor",
+        "click"
+      ],
+      "categories": []
+    },
+    "mouse-pointer-2": {
+      "tags": [
+        "arrow",
+        "cursor",
+        "click"
+      ],
+      "categories": []
+    },
+    "mouse-pointer-click": {
+      "tags": [
+        "arrow",
+        "cursor",
+        "click"
+      ],
+      "categories": []
+    },
+    "move": {
+      "tags": [
+        "arrows"
+      ],
+      "categories": []
+    },
+    "move-diagonal": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": []
+    },
+    "move-diagonal-2": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": []
+    },
+    "move-horizontal": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": []
+    },
+    "move-vertical": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": []
+    },
+    "music": {
+      "tags": [
+        "note"
+      ],
+      "categories": []
+    },
+    "navigation": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": []
+    },
+    "navigation-2": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": []
+    },
+    "navigation-2-off": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": []
+    },
+    "navigation-off": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": []
+    },
+    "network": {
+      "tags": [
+        "tree"
+      ],
+      "categories": []
+    },
+    "octagon": {
+      "tags": [
+        "stop"
+      ],
+      "categories": []
+    },
+    "option": {
+      "tags": [
+        "key",
+        "mac",
+        "button"
+      ],
+      "categories": []
+    },
+    "outdent": {
+      "tags": [
+        "text",
+        "tab"
+      ],
+      "categories": []
+    },
+    "package": {
+      "tags": [
+        "box",
+        "container"
+      ],
+      "categories": []
+    },
+    "package-check": {
+      "tags": [
+        "confirm",
+        "verified"
+      ],
+      "categories": []
+    },
+    "package-minus": {
+      "tags": [
+        "delete",
+        "remove"
+      ],
+      "categories": []
+    },
+    "package-plus": {
+      "tags": [
+        "new",
+        "add",
+        "create"
+      ],
+      "categories": []
+    },
+    "package-search": {
+      "tags": [
+        "find",
+        "product process"
+      ],
+      "categories": []
+    },
+    "package-x": {
+      "tags": [
+        "delete",
+        "remove"
+      ],
+      "categories": []
+    },
+    "palette": {
+      "tags": [
+        "color",
+        "theme"
+      ],
+      "categories": []
+    },
+    "palmtree": {
+      "tags": [
+        "vacation",
+        "leisure",
+        "island"
+      ],
+      "categories": []
+    },
+    "paperclip": {
+      "tags": [
+        "attachment",
+        "file"
+      ],
+      "categories": []
+    },
+    "pause": {
+      "tags": [
+        "music",
+        "stop"
+      ],
+      "categories": []
+    },
+    "pause-circle": {
+      "tags": [
+        "music",
+        "audio",
+        "stop"
+      ],
+      "categories": []
+    },
+    "pause-octagon": {
+      "tags": [
+        "music",
+        "audio",
+        "stop"
+      ],
+      "categories": []
+    },
+    "pen-tool": {
+      "tags": [
+        "vector",
+        "drawing",
+        "path"
+      ],
+      "categories": []
+    },
+    "pencil": {
+      "tags": [
+        "edit",
+        "pen",
+        "create"
+      ],
+      "categories": []
+    },
+    "percent": {
+      "tags": [
+        "discount"
+      ],
+      "categories": []
+    },
+    "person-standing": {
+      "tags": [
+        "people",
+        "human",
+        "accessibility",
+        "stick figure"
+      ],
+      "categories": []
+    },
+    "phone": {
+      "tags": [
+        "call"
+      ],
+      "categories": []
+    },
+    "phone-call": {
+      "tags": [
+        "ring"
+      ],
+      "categories": []
+    },
+    "phone-forwarded": {
+      "tags": [
+        "call"
+      ],
+      "categories": []
+    },
+    "phone-incoming": {
+      "tags": [
+        "call"
+      ],
+      "categories": []
+    },
+    "phone-missed": {
+      "tags": [
+        "call"
+      ],
+      "categories": []
+    },
+    "phone-off": {
+      "tags": [
+        "call",
+        "mute"
+      ],
+      "categories": []
+    },
+    "phone-outgoing": {
+      "tags": [
+        "call"
+      ],
+      "categories": []
+    },
+    "pie-chart": {
+      "tags": [
+        "statistics",
+        "diagram"
+      ],
+      "categories": []
+    },
+    "piggy-bank": {
+      "tags": [
+        "money",
+        "savings"
+      ],
+      "categories": []
+    },
+    "pin": {
+      "tags": [
+        "save",
+        "map",
+        "lock",
+        "fix"
+      ],
+      "categories": []
+    },
+    "pipette": {
+      "tags": [
+        "eye dropper",
+        "color picker"
+      ],
+      "categories": []
+    },
+    "plane": {
+      "tags": [
+        "plane",
+        "trip"
+      ],
+      "categories": []
+    },
+    "play": {
+      "tags": [
+        "music",
+        "start"
+      ],
+      "categories": []
+    },
+    "play-circle": {
+      "tags": [
+        "music",
+        "start"
+      ],
+      "categories": []
+    },
+    "plug-zap": {
+      "tags": [
+        "charge",
+        "charging",
+        "battery",
+        "connect"
+      ],
+      "categories": []
+    },
+    "plus": {
+      "tags": [
+        "add",
+        "new"
+      ],
+      "categories": []
+    },
+    "plus-circle": {
+      "tags": [
+        "add",
+        "new"
+      ],
+      "categories": []
+    },
+    "plus-square": {
+      "tags": [
+        "add",
+        "new"
+      ],
+      "categories": []
+    },
+    "pocket": {
+      "tags": [
+        "logo",
+        "save"
+      ],
+      "categories": []
+    },
+    "podcast": {
+      "tags": [
+        "mic",
+        "music"
+      ],
+      "categories": []
+    },
+    "pointer": {
+      "tags": [
+        "mouse"
+      ],
+      "categories": []
+    },
+    "pound-sterling": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "power": {
+      "tags": [
+        "on",
+        "off",
+        "device"
+      ],
+      "categories": []
+    },
+    "power-off": {
+      "tags": [
+        "device"
+      ],
+      "categories": []
+    },
+    "printer": {
+      "tags": [
+        "fax",
+        "office",
+        "device"
+      ],
+      "categories": []
+    },
+    "puzzle": {
+      "tags": [
+        "component",
+        "module",
+        "part",
+        "piece"
+      ],
+      "categories": []
+    },
+    "qr-code": {
+      "tags": [
+        "barcode"
+      ],
+      "categories": []
+    },
+    "quote": {
+      "tags": [
+        "quotation"
+      ],
+      "categories": []
+    },
+    "radio": {
+      "tags": [
+        "signal",
+        "broadcast",
+        "connectivity",
+        "live"
+      ],
+      "categories": []
+    },
+    "radio-receiver": {
+      "tags": [
+        "device",
+        "music",
+        "connect"
+      ],
+      "categories": []
+    },
+    "redo": {
+      "tags": [
+        "undo",
+        "history"
+      ],
+      "categories": []
+    },
+    "redo-2": {
+      "tags": [
+        "undo",
+        "history"
+      ],
+      "categories": []
+    },
+    "refresh-ccw": {
+      "tags": [
+        "arrows",
+        "reload"
+      ],
+      "categories": []
+    },
+    "refresh-cw": {
+      "tags": [
+        "reload",
+        "synchronise",
+        "synchronize",
+        "arrows"
+      ],
+      "categories": []
+    },
+    "regex": {
+      "tags": [
+        "search",
+        "text"
+      ],
+      "categories": []
+    },
+    "repeat": {
+      "tags": [
+        "loop",
+        "arrows"
+      ],
+      "categories": []
+    },
+    "repeat-1": {
+      "tags": [
+        "replay"
+      ],
+      "categories": []
+    },
+    "reply": {
+      "tags": [
+        "email"
+      ],
+      "categories": []
+    },
+    "reply-all": {
+      "tags": [
+        "email"
+      ],
+      "categories": []
+    },
+    "rewind": {
+      "tags": [
+        "music"
+      ],
+      "categories": []
+    },
+    "rocket": {
+      "tags": [
+        "release",
+        "boost",
+        "launch",
+        "space",
+        "version"
+      ],
+      "categories": []
+    },
+    "rocking-chair": {
+      "tags": [
+        "chair",
+        "furniture",
+        "seat"
+      ],
+      "categories": []
+    },
+    "rotate-ccw": {
+      "tags": [
+        "arrow",
+        "left"
+      ],
+      "categories": []
+    },
+    "rotate-cw": {
+      "tags": [
+        "arrow",
+        "right"
+      ],
+      "categories": []
+    },
+    "rss": {
+      "tags": [
+        "feed",
+        "subscribe"
+      ],
+      "categories": []
+    },
+    "ruler": {
+      "tags": [
+        "measure",
+        "meter",
+        "foot",
+        "inch"
+      ],
+      "categories": []
+    },
+    "russian-ruble": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "save": {
+      "tags": [
+        "floppy disk"
+      ],
+      "categories": []
+    },
+    "scale": {
+      "tags": [
+        "balance",
+        "legal",
+        "license",
+        "right",
+        "rule",
+        "law"
+      ],
+      "categories": []
+    },
+    "scan": {
+      "tags": [
+        "qr-code"
+      ],
+      "categories": []
+    },
+    "scan-line": {
+      "tags": [
+        "qr-code"
+      ],
+      "categories": []
+    },
+    "scissors": {
+      "tags": [
+        "cut"
+      ],
+      "categories": []
+    },
+    "screen-share": {
+      "tags": [
+        "host",
+        "desktop"
+      ],
+      "categories": []
+    },
+    "screen-share-off": {
+      "tags": [
+        "desktop",
+        "disconnect"
+      ],
+      "categories": []
+    },
+    "search": {
+      "tags": [
+        "find",
+        "magnifier",
+        "magnifying glass"
+      ],
+      "categories": []
+    },
+    "send": {
+      "tags": [
+        "email",
+        "message",
+        "mail",
+        "paper airplane",
+        "paper aeroplane",
+        "submit"
+      ],
+      "categories": []
+    },
+    "separator-horizontal": {
+      "tags": [
+        "move",
+        "split"
+      ],
+      "categories": []
+    },
+    "separator-vertical": {
+      "tags": [
+        "move",
+        "split"
+      ],
+      "categories": []
+    },
+    "server": {
+      "tags": [
+        "cloud",
+        "storage"
+      ],
+      "categories": []
+    },
+    "server-crash": {
+      "tags": [
+        "cloud",
+        "storage",
+        "problem",
+        "error"
+      ],
+      "categories": []
+    },
+    "server-off": {
+      "tags": [
+        "cloud",
+        "storage"
+      ],
+      "categories": []
+    },
+    "settings": {
+      "tags": [
+        "cog",
+        "edit",
+        "gear",
+        "preferences"
+      ],
+      "categories": []
+    },
+    "settings-2": {
+      "tags": [
+        "cog",
+        "edit",
+        "gear",
+        "preferences"
+      ],
+      "categories": []
+    },
+    "share": {
+      "tags": [
+        "network",
+        "connections"
+      ],
+      "categories": []
+    },
+    "share-2": {
+      "tags": [
+        "network",
+        "connections"
+      ],
+      "categories": []
+    },
+    "sheet": {
+      "tags": [
+        "spreadsheets",
+        "table",
+        "excel"
+      ],
+      "categories": []
+    },
+    "shield": {
+      "tags": [
+        "security",
+        "secure"
+      ],
+      "categories": []
+    },
+    "shield-alert": {
+      "tags": [
+        "security",
+        "secure",
+        "virus",
+        "admin",
+        "savety"
+      ],
+      "categories": []
+    },
+    "shield-check": {
+      "tags": [
+        "security",
+        "secure",
+        "done",
+        "save"
+      ],
+      "categories": []
+    },
+    "shield-close": {
+      "tags": [
+        "security",
+        "secure",
+        "wrong",
+        "unsave",
+        "virus"
+      ],
+      "categories": []
+    },
+    "shield-off": {
+      "tags": [
+        "security",
+        "secure",
+        "security",
+        "insecure"
+      ],
+      "categories": []
+    },
+    "shirt": {
+      "tags": [
+        "t-shirt",
+        "shopping",
+        "store",
+        "clothing",
+        "clothes"
+      ],
+      "categories": []
+    },
+    "shopping-bag": {
+      "tags": [
+        "ecommerce",
+        "cart",
+        "purchase",
+        "store"
+      ],
+      "categories": []
+    },
+    "shopping-cart": {
+      "tags": [
+        "ecommerce",
+        "cart",
+        "purchase",
+        "store"
+      ],
+      "categories": []
+    },
+    "shovel": {
+      "tags": [
+        "dig",
+        "spade"
+      ],
+      "categories": []
+    },
+    "shrink": {
+      "tags": [
+        "scale",
+        "fullscreen"
+      ],
+      "categories": []
+    },
+    "shuffle": {
+      "tags": [
+        "music"
+      ],
+      "categories": []
+    },
+    "sidebar": {
+      "tags": [
+        "menu"
+      ],
+      "categories": []
+    },
+    "sidebar-close": {
+      "tags": [
+        "menu"
+      ],
+      "categories": []
+    },
+    "sidebar-open": {
+      "tags": [
+        "menu"
+      ],
+      "categories": []
+    },
+    "sigma": {
+      "tags": [
+        "sum",
+        "calculate"
+      ],
+      "categories": []
+    },
+    "signal": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": []
+    },
+    "signal-high": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": []
+    },
+    "signal-low": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": []
+    },
+    "signal-medium": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": []
+    },
+    "signal-zero": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g",
+        "lost"
+      ],
+      "categories": []
+    },
+    "skip-back": {
+      "tags": [
+        "arrow",
+        "previous",
+        "music"
+      ],
+      "categories": []
+    },
+    "skip-forward": {
+      "tags": [
+        "arrow",
+        "skip",
+        "next",
+        "music"
+      ],
+      "categories": []
+    },
+    "skull": {
+      "tags": [
+        "death",
+        "danger",
+        "bone"
+      ],
+      "categories": []
+    },
+    "slack": {
+      "tags": [
+        "logo"
+      ],
+      "categories": []
+    },
+    "slash": {
+      "tags": [
+        "cancel",
+        "ban",
+        "no",
+        "stop",
+        "forbidden",
+        "prohibited",
+        "error"
+      ],
+      "categories": []
+    },
+    "sliders": {
+      "tags": [
+        "settings",
+        "controls"
+      ],
+      "categories": []
+    },
+    "sliders-horizontal": {
+      "tags": [
+        "settings",
+        "filters",
+        "controls"
+      ],
+      "categories": []
+    },
+    "smartphone": {
+      "tags": [
+        "phone",
+        "cellphone",
+        "device"
+      ],
+      "categories": []
+    },
+    "smartphone-charging": {
+      "tags": [
+        "phone",
+        "cellphone",
+        "device",
+        "power"
+      ],
+      "categories": []
+    },
+    "smile": {
+      "tags": [
+        "emoji",
+        "face",
+        "happy",
+        "good",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "snowflake": {
+      "tags": [
+        "cold",
+        "weather",
+        "freeze",
+        "snow"
+      ],
+      "categories": []
+    },
+    "sort-asc": {
+      "tags": [
+        "filter"
+      ],
+      "categories": []
+    },
+    "sort-desc": {
+      "tags": [
+        "filter"
+      ],
+      "categories": []
+    },
+    "speaker": {
+      "tags": [
+        "audio",
+        "music"
+      ],
+      "categories": []
+    },
+    "sprout": {
+      "tags": [
+        "leaf",
+        "nature"
+      ],
+      "categories": []
+    },
+    "square": {
+      "tags": [
+        "rectangle"
+      ],
+      "categories": []
+    },
+    "star": {
+      "tags": [
+        "bookmark",
+        "favorite",
+        "like",
+        "review",
+        "rating"
+      ],
+      "categories": []
+    },
+    "star-half": {
+      "tags": [
+        "bookmark",
+        "favorite",
+        "like",
+        "review",
+        "rating"
+      ],
+      "categories": []
+    },
+    "star-off": {
+      "tags": [
+        "dislike",
+        "unlike",
+        "remove",
+        "unrate"
+      ],
+      "categories": []
+    },
+    "stop-circle": {
+      "tags": [
+        "media",
+        "music"
+      ],
+      "categories": []
+    },
+    "stretch-horizontal": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "distribute"
+      ],
+      "categories": []
+    },
+    "stretch-vertical": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "distribute"
+      ],
+      "categories": []
+    },
+    "strikethrough": {
+      "tags": [
+        "cross out",
+        "delete",
+        "remove",
+        "format"
+      ],
+      "categories": []
+    },
+    "subscript": {
+      "tags": [
+        "text"
+      ],
+      "categories": []
+    },
+    "sun": {
+      "tags": [
+        "brightness",
+        "weather",
+        "light"
+      ],
+      "categories": []
+    },
+    "sun-dim": {
+      "tags": [
+        "brightness",
+        "dim",
+        "low",
+        "brightness low"
+      ],
+      "categories": []
+    },
+    "sun-medium": {
+      "tags": [
+        "brightness",
+        "medium"
+      ],
+      "categories": []
+    },
+    "sun-moon": {
+      "tags": [
+        "night",
+        "light",
+        "moon",
+        "sun",
+        "brightness"
+      ],
+      "categories": []
+    },
+    "sunrise": {
+      "tags": [
+        "weather",
+        "time",
+        "morning",
+        "day"
+      ],
+      "categories": []
+    },
+    "sunset": {
+      "tags": [
+        "weather",
+        "time",
+        "evening",
+        "night"
+      ],
+      "categories": []
+    },
+    "superscript": {
+      "tags": [
+        "text",
+        "exponent"
+      ],
+      "categories": []
+    },
+    "swiss-franc": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": []
+    },
+    "switch-camera": {
+      "tags": [
+        "photo",
+        "selfy",
+        "front",
+        "back"
+      ],
+      "categories": []
+    },
+    "sword": {
+      "tags": [
+        "battle",
+        "challenge",
+        "game",
+        "war",
+        "weapon"
+      ],
+      "categories": []
+    },
+    "swords": {
+      "tags": [
+        "battle",
+        "challenge",
+        "game",
+        "war",
+        "weapon"
+      ],
+      "categories": []
+    },
+    "table": {
+      "tags": [
+        "sheet",
+        "grid"
+      ],
+      "categories": []
+    },
+    "tablet": {
+      "tags": [
+        "device"
+      ],
+      "categories": []
+    },
+    "tag": {
+      "tags": [
+        "label"
+      ],
+      "categories": []
+    },
+    "target": {
+      "tags": [
+        "logo",
+        "bullseye"
+      ],
+      "categories": []
+    },
+    "tent": {
+      "tags": [
+        "campsite",
+        "wigwam"
+      ],
+      "categories": []
+    },
+    "terminal": {
+      "tags": [
+        "code",
+        "command line",
+        "prompt",
+        "shell"
+      ],
+      "categories": []
+    },
+    "terminal-square": {
+      "tags": [
+        "code",
+        "command line",
+        "prompt",
+        "shell"
+      ],
+      "categories": []
+    },
+    "text-cursor": {
+      "tags": [
+        "select"
+      ],
+      "categories": []
+    },
+    "text-cursor-input": {
+      "tags": [
+        "select"
+      ],
+      "categories": []
+    },
+    "thermometer": {
+      "tags": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "weather"
+      ],
+      "categories": []
+    },
+    "thermometer-snowflake": {
+      "tags": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "weather",
+        "cold",
+        "freeze",
+        "freezing"
+      ],
+      "categories": []
+    },
+    "thermometer-sun": {
+      "tags": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "weather",
+        "warm",
+        "hot"
+      ],
+      "categories": []
+    },
+    "thumbs-down": {
+      "tags": [
+        "dislike",
+        "bad",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "thumbs-up": {
+      "tags": [
+        "like",
+        "good",
+        "emotion"
+      ],
+      "categories": []
+    },
+    "ticket": {
+      "tags": [
+        "entry",
+        "pass",
+        "voucher"
+      ],
+      "categories": []
+    },
+    "timer": {
+      "tags": [
+        "time",
+        "timer",
+        "stopwatch"
+      ],
+      "categories": []
+    },
+    "timer-off": {
+      "tags": [
+        "time",
+        "timer",
+        "stopwatch"
+      ],
+      "categories": []
+    },
+    "timer-reset": {
+      "tags": [
+        "time",
+        "timer",
+        "stopwatch"
+      ],
+      "categories": []
+    },
+    "toggle-left": {
+      "tags": [
+        "on",
+        "off",
+        "switch"
+      ],
+      "categories": []
+    },
+    "toggle-right": {
+      "tags": [
+        "on",
+        "off",
+        "switch"
+      ],
+      "categories": []
+    },
+    "tornado": {
+      "tags": [
+        "weather",
+        "wind",
+        "storm",
+        "hurricane"
+      ],
+      "categories": []
+    },
+    "train": {
+      "tags": [
+        "transport",
+        "metro",
+        "subway",
+        "underground"
+      ],
+      "categories": []
+    },
+    "trash": {
+      "tags": [
+        "garbage",
+        "delete",
+        "remove",
+        "bin"
+      ],
+      "categories": []
+    },
+    "trash-2": {
+      "tags": [
+        "garbage",
+        "delete",
+        "remove",
+        "bin"
+      ],
+      "categories": []
+    },
+    "trello": {
+      "tags": [],
+      "categories": []
+    },
+    "trending-down": {
+      "tags": [
+        "statistics"
+      ],
+      "categories": []
+    },
+    "trending-up": {
+      "tags": [
+        "statistics"
+      ],
+      "categories": []
+    },
+    "triangle": {
+      "tags": [
+        "delta"
+      ],
+      "categories": []
+    },
+    "truck": {
+      "tags": [
+        "delivery",
+        "van",
+        "shipping",
+        "transport",
+        "lorry"
+      ],
+      "categories": []
+    },
+    "tv": {
+      "tags": [
+        "television",
+        "stream"
+      ],
+      "categories": []
+    },
+    "tv-2": {
+      "tags": [
+        "flatscreen",
+        "television",
+        "stream",
+        "display"
+      ],
+      "categories": []
+    },
+    "twitch": {
+      "tags": [
+        "logo"
+      ],
+      "categories": []
+    },
+    "twitter": {
+      "tags": [
+        "logo",
+        "social"
+      ],
+      "categories": []
+    },
+    "type": {
+      "tags": [
+        "text",
+        "font",
+        "typography"
+      ],
+      "categories": []
+    },
+    "umbrella": {
+      "tags": [
+        "rain",
+        "weather"
+      ],
+      "categories": []
+    },
+    "underline": {
+      "tags": [
+        "text",
+        "format"
+      ],
+      "categories": []
+    },
+    "undo": {
+      "tags": [
+        "redo",
+        "history"
+      ],
+      "categories": []
+    },
+    "undo-2": {
+      "tags": [
+        "redo",
+        "history"
+      ],
+      "categories": []
+    },
+    "unlink": {
+      "tags": [
+        "url",
+        "unchain"
+      ],
+      "categories": []
+    },
+    "unlink-2": {
+      "tags": [
+        "url",
+        "unchain"
+      ],
+      "categories": []
+    },
+    "unlock": {
+      "tags": [
+        "security"
+      ],
+      "categories": []
+    },
+    "upload": {
+      "tags": [
+        "file"
+      ],
+      "categories": []
+    },
+    "upload-cloud": {
+      "tags": [
+        "file"
+      ],
+      "categories": []
+    },
+    "user": {
+      "tags": [
+        "person",
+        "account",
+        "contact"
+      ],
+      "categories": []
+    },
+    "user-check": {
+      "tags": [
+        "followed",
+        "subscribed",
+        "done"
+      ],
+      "categories": []
+    },
+    "user-minus": {
+      "tags": [
+        "delete",
+        "remove",
+        "unfollow",
+        "unsubscribe"
+      ],
+      "categories": []
+    },
+    "user-plus": {
+      "tags": [
+        "new",
+        "add",
+        "create",
+        "follow",
+        "subscribe"
+      ],
+      "categories": []
+    },
+    "user-x": {
+      "tags": [
+        "delete",
+        "remove",
+        "unfollow",
+        "unsubscribe",
+        "unavailable"
+      ],
+      "categories": []
+    },
+    "users": {
+      "tags": [
+        "group",
+        "people"
+      ],
+      "categories": []
+    },
+    "venetian-mask": {
+      "tags": [
+        "mask",
+        "masquerade",
+        "impersonate",
+        "secret",
+        "incognito"
+      ],
+      "categories": []
+    },
+    "verified": {
+      "tags": [
+        "check"
+      ],
+      "categories": []
+    },
+    "vibrate": {
+      "tags": [
+        "smartphone",
+        "notification",
+        "rumble",
+        "haptic feedback"
+      ],
+      "categories": []
+    },
+    "vibrate-off": {
+      "tags": [
+        "smartphone",
+        "notification",
+        "rumble",
+        "haptic feedback"
+      ],
+      "categories": []
+    },
+    "video": {
+      "tags": [
+        "camera",
+        "movie",
+        "film"
+      ],
+      "categories": []
+    },
+    "video-off": {
+      "tags": [
+        "camera",
+        "movie",
+        "film"
+      ],
+      "categories": []
+    },
+    "view": {
+      "tags": [
+        "eye",
+        "look"
+      ],
+      "categories": []
+    },
+    "voicemail": {
+      "tags": [
+        "phone",
+        "cassette"
+      ],
+      "categories": []
+    },
+    "volume": {
+      "tags": [
+        "music",
+        "sound",
+        "mute"
+      ],
+      "categories": []
+    },
+    "volume-1": {
+      "tags": [
+        "music",
+        "sound"
+      ],
+      "categories": []
+    },
+    "volume-2": {
+      "tags": [
+        "music",
+        "sound"
+      ],
+      "categories": []
+    },
+    "volume-x": {
+      "tags": [
+        "music",
+        "sound",
+        "mute"
+      ],
+      "categories": []
+    },
+    "wallet": {
+      "tags": [
+        "money",
+        "finance",
+        "pocket"
+      ],
+      "categories": []
+    },
+    "wand": {
+      "tags": [
+        "magic",
+        "selection"
+      ],
+      "categories": []
+    },
+    "watch": {
+      "tags": [
+        "clock",
+        "time"
+      ],
+      "categories": []
+    },
+    "waves": {
+      "tags": [
+        "water",
+        "sea",
+        "sound",
+        "hertz",
+        "wavelength",
+        "vibrate"
+      ],
+      "categories": []
+    },
+    "webcam": {
+      "tags": [
+        "camera",
+        "security"
+      ],
+      "categories": []
+    },
+    "wifi": {
+      "tags": [
+        "connection",
+        "signal",
+        "wireless"
+      ],
+      "categories": []
+    },
+    "wifi-off": {
+      "tags": [
+        "disabled"
+      ],
+      "categories": []
+    },
+    "wind": {
+      "tags": [
+        "weather",
+        "air",
+        "blow"
+      ],
+      "categories": []
+    },
+    "wrap-text": {
+      "tags": [
+        "words",
+        "lines",
+        "break",
+        "paragraph"
+      ],
+      "categories": []
+    },
+    "wrench": {
+      "tags": [
+        "tool",
+        "settings",
+        "spanner"
+      ],
+      "categories": []
+    },
+    "x": {
+      "tags": [
+        "cancel",
+        "close",
+        "delete",
+        "remove",
+        "times",
+        "clear"
+      ],
+      "categories": []
+    },
+    "x-circle": {
+      "tags": [
+        "cancel",
+        "close",
+        "delete",
+        "remove",
+        "times",
+        "clear"
+      ],
+      "categories": []
+    },
+    "x-octagon": {
+      "tags": [
+        "delete",
+        "stop",
+        "alert",
+        "warning",
+        "times",
+        "clear"
+      ],
+      "categories": []
+    },
+    "x-square": {
+      "tags": [
+        "cancel",
+        "close",
+        "delete",
+        "remove",
+        "times",
+        "clear"
+      ],
+      "categories": []
+    },
+    "youtube": {
+      "tags": [
+        "logo",
+        "video",
+        "play"
+      ],
+      "categories": []
+    },
+    "zap": {
+      "tags": [
+        "flash",
+        "camera",
+        "lightning"
+      ],
+      "categories": []
+    },
+    "zap-off": {
+      "tags": [
+        "flash",
+        "camera",
+        "lightning"
+      ],
+      "categories": []
+    },
+    "zoom-in": {
+      "tags": [
+        "magnifying glass",
+        "plus"
+      ],
+      "categories": []
+    },
+    "zoom-out": {
+      "tags": [
+        "magnifying glass",
+        "plus"
+      ],
+      "categories": []
+    }
+  },
+  "categories": {
+    "accessibility": {
+      "title": "Accessibility",
+      "icon": "accessibility"
+    },
+    "account": {
+      "title": "Accounts & access",
+      "icon": "message-circle"
+    },
+    "arrows": {
+      "title": "Arrows",
+      "icon": "arrow-left-right"
+    },
+    "brands": {
+      "title": "Brands",
+      "icon": "lucide"
+    },
+    "communication": {
+      "title": "Communication",
+      "icon": "message-circle"
+    },
+    "connectivity": {
+      "title": "Connectivity",
+      "icon": "wifi"
+    },
+    "emoji": {
+      "title": "Emoji",
+      "icon": "smile"
+    },
+    "files": {
+      "title": "File icons",
+      "icon": "layout"
+    },
+    "food-beverage": {
+      "name": "food-beverage",
+      "title": "Food & beverage",
+      "icon": "coffee"
+    },
+    "layout": {
+      "title": "Layout",
+      "icon": "layout"
+    },
+    "nature": {
+      "title": "Nature",
+      "icon": "sprout"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "icon": "compass"
+    },
+    "science": {
+      "title": "Science",
+      "icon": "flask-conical"
+    },
+    "social": {
+      "title": "Social",
+      "icon": "thumbs-up"
+    },
+    "text": {
+      "title": "Text formatting",
+      "icon": "type"
+    },
+    "time": {
+      "title": "Time & calendar",
+      "icon": "calendar"
+    },
+    "transportation": {
+      "title": "Transportation",
+      "icon": "train"
+    },
+    "weather": {
+      "title": "Weather",
+      "icon": "cloud-sun"
+    }
+  }
+}
