@@ -570,6 +570,13 @@
     "date",
     "time",
     "event",
+    "remove",
+    "busy"
+  ],
+  "calendar-x-2": [
+    "date",
+    "time",
+    "event",
     "remove"
   ],
   "camera": [
