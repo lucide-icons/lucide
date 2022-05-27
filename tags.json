@@ -1570,11 +1570,6 @@
     "block",
     "section"
   ],
-  "lemon": [
-    "fruit",
-    "citrus",
-    "food"
-  ],
   "library": [
     "book",
     "music",
@@ -1900,11 +1895,6 @@
     "mac",
     "button"
   ],
-  "orange": [
-    "fruit",
-    "citrus",
-    "food"
-  ],
   "outdent": [
     "text",
     "tab"
@@ -2065,10 +2055,6 @@
   ],
   "pointer": [
     "mouse"
-  ],
-  "popsicle": [
-    "ice-cream",
-    "food"
   ],
   "pound-sterling": [
     "currency",
@@ -2883,10 +2869,6 @@
   "watch": [
     "clock",
     "time"
-  ],
-  "watermelon": [
-    "fruit",
-    "food"
   ],
   "waves": [
     "water",
