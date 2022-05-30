@@ -229,6 +229,14 @@
     "index",
     "box"
   ],
+  "armchair": [
+    "sofa",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
+  ],
   "arrow-big-down": [
     "key"
   ],
@@ -365,6 +373,21 @@
   ],
   "beaker": [
     "cup"
+  ],
+  "bed": [
+    "sleep",
+    "hotel",
+    "furniture"
+  ],
+  "bed-single": [
+    "sleep",
+    "hotel",
+    "furniture"
+  ],
+  "bed-double": [
+    "sleep",
+    "hotel",
+    "furniture"
   ],
   "bell": [
     "alarm",
@@ -2419,6 +2442,14 @@
     "weather",
     "freeze",
     "snow"
+  ],
+  "sofa": [
+    "armchair",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
   ],
   "sort-asc": [
     "filter"
