@@ -37,6 +37,8 @@
     "generate:supersprite": "babel-node ./scripts/generateSuperSVG.js",
     "optimize": "esbuild  ./scripts/optimizeSvgs.js --bundle --platform=node | node",
     "addtags": "babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
+    "tags2icons": "babel-node ./scripts/migrateTagsToIcons.js --presets @babel/env",
+    "icons2tags": "babel-node ./scripts/migrateIconsToTags.js --presets @babel/env",
     "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env"
   },
   "devDependencies": {

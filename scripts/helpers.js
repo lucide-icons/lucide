@@ -139,3 +139,14 @@ export const hasDuplicatedChildren = children => {
     (key, index) => index === hashedKeys.findIndex(childKey => childKey === key),
   );
 };
+
+/**
+ * @param {array} a
+ * @param {array} b
+ * @returns {array}
+ */
+export const mergeArrays = (a, b) => {
+  a = a.concat(b);
+  a = a.filter((i, p) => a.indexOf(i) === p);
+  return a;
+};
