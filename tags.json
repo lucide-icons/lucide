@@ -466,12 +466,6 @@
     "cube",
     "package"
   ],
-  "box-open": [
-    "cube",
-    "package",
-    "unpack",
-    "open"
-  ],
   "box-select": [
     "selection",
     "square",
@@ -1898,6 +1892,12 @@
   "package-minus": [
     "delete",
     "remove"
+  ],
+  "package-open": [
+    "box",
+    "container",
+    "unpack",
+    "open"
   ],
   "package-plus": [
     "new",
