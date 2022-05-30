@@ -466,6 +466,12 @@
     "cube",
     "package"
   ],
+  "box-open": [
+    "cube",
+    "package",
+    "unpack",
+    "open"
+  ],
   "box-select": [
     "selection",
     "square",
