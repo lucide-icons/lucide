@@ -1,4 +1,8 @@
 #!/bin/sh
 
 yarn checkIcons
+<<<<<<< HEAD
 exit $?
+=======
+echo $?
+>>>>>>> 0d6e89332e9822b62bcbb8693e203d8691e635cf
