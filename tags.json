@@ -302,6 +302,21 @@
   "axe": [
     "hatchet"
   ],
+  "backpack": [
+    "bag",
+    "hiking",
+    "travel",
+    "camping",
+    "school",
+    "childhood"
+  ],
+  "baggage-claim": [
+    "baggage",
+    "luggage",
+    "travel",
+    "cart",
+    "trolley"
+  ],
   "banknote": [
     "currency",
     "money",
@@ -1658,6 +1673,11 @@
     "arrow",
     "exit",
     "auth"
+  ],
+  "luggage": [
+    "baggage",
+    "luggage",
+    "travel"
   ],
   "magnet": [
     "horseshoe",
