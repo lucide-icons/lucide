@@ -11,6 +11,11 @@
     "action",
     "motion"
   ],
+  "air-conditioner": [
+    "ac",
+    "cooling",
+    "climate-control"
+  ],
   "airplay": [
     "stream",
     "cast",
