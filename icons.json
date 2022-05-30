@@ -2651,7 +2651,6 @@
         "remove",
         "song",
         "subtract",
-        "remove",
         "delete"
       ],
       "categories": []
@@ -3742,7 +3741,6 @@
       "tags": [
         "security",
         "secure",
-        "security",
         "insecure"
       ],
       "categories": []
