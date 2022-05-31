@@ -1,7 +1,7 @@
 {
   "name": "lucide-react-native",
   "description": "A Lucide icon library package for React Native applications",
-  "version": "0.48.0",
+  "version": "0.48.0-alpha.2",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -17,12 +17,12 @@
   "module": "dist/esm/lucide-react-native.js",
   "unpkg": "dist/umd/lucide-react-native.min.js",
   "typings": "dist/lucide-react-native.d.ts",
+  "react-native": "dist/esm/lucide-react-native.js",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
+    "build": "yarn clean && yarn build:icons && yarn build:bundles && yarn build:types",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react-native/src --templateSrc=../packages/lucide-react-native/scripts/exportTemplate --renderUniqueKey",
-    "build:es": "babel src -d dist/esm",
     "build:types": "yarn --cwd ../../ babel-node packages/lucide-react-native/scripts/buildTypes.js",
     "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react-native/rollup.config.js",
     "test": "jest"

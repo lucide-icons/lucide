@@ -30,8 +30,8 @@ export default (iconName, iconNode) => {
         },
         [...iconNode.map(([tag, attrs]) => {
           const uppercasedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
-          return createElement(NativeSvg[uppercasedTag], attrs))
-        }, ...(children || [])],
+          return createElement(NativeSvg[uppercasedTag], attrs)
+        }), ...(children || [])],
       ),
   );
 

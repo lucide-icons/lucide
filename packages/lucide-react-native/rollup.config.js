@@ -22,19 +22,31 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
+    preserveModules: true
+  },
+  {
+    format: 'esm',
+    inputs,
+    outputDir,
+    preserveModules: true
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
       external: ['react', 'prop-types', 'lucide'],
       output: {
         name: packageName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+        ...(preserveModules ? {
+          dir: `${outputDir}/${format}`,
+        } : {
+          file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`
+        }),
         format,
+        preserveModules,
         sourcemap: true,
         globals: {
           react: 'react',
