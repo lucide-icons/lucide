@@ -229,6 +229,13 @@
     "index",
     "box"
   ],
+  "archive-restore": [
+    "archive",
+    "unarchive",
+    "restore",
+    "index",
+    "box"
+  ],
   "arrow-big-down": [
     "key"
   ],
