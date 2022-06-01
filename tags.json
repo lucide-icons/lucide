@@ -1591,6 +1591,12 @@
     "todo",
     "done"
   ],
+  "list-end": [
+    "queue",
+    "bottom",
+    "end",
+    "playlist"
+  ],
   "list-minus": [
     "playlist",
     "remove",
@@ -1598,6 +1604,13 @@
     "subtract",
     "remove",
     "delete"
+  ],
+  "list-music": [
+    "playlist",
+    "queue",
+    "music",
+    "audio",
+    "playback"
   ],
   "list-ordered": [
     "number",
@@ -1609,6 +1622,18 @@
     "song",
     "track",
     "new"
+  ],
+  "list-start": [
+    "queue",
+    "top",
+    "start",
+    "next",
+    "playlist"
+  ],
+  "list-video": [
+    "playlist",
+    "video",
+    "playback"
   ],
   "list-x": [
     "playlist",
