@@ -33,17 +33,15 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
           cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set new version
         run: yarn workspace lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -56,6 +54,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -69,16 +69,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set package.json version lucide
         run: yarn workspace lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -91,6 +91,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-react publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -104,16 +106,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set new version
         run: yarn workspace lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -126,6 +128,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-vue publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -139,16 +143,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set new version
         run: yarn workspace lucide-vue-next version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -161,6 +165,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-vue-next publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -174,16 +180,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set package.json version lucide
         run: yarn workspace lucide-angular version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -196,6 +202,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-angular publish dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -209,16 +217,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set package.json version lucide
         run: yarn workspace lucide-preact version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -231,6 +239,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-preact publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -244,16 +254,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set package.json version lucide
         run: yarn workspace lucide-svelte version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -266,6 +276,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-svelte publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -280,16 +292,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Set new version
         run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
@@ -302,6 +314,8 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-static publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -315,10 +329,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install FontForge
         run: sudo apt-get install zlib1g-dev fontforge
@@ -345,7 +362,7 @@ jobs:
         run: sudo gem install fontcustom
 
       - name: Install
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Build Icon Font
         run: |
