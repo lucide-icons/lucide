@@ -43,6 +43,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set new version
         run: yarn workspace lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -54,8 +57,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -80,6 +81,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set package.json version lucide
         run: yarn workspace lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -91,8 +95,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-react publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -117,6 +119,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set new version
         run: yarn workspace lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -128,8 +133,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-vue publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -154,6 +157,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set new version
         run: yarn workspace lucide-vue-next version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -165,8 +171,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-vue-next publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -191,6 +195,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set package.json version lucide
         run: yarn workspace lucide-angular version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -202,8 +209,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-angular publish dist
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -228,6 +233,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set package.json version lucide
         run: yarn workspace lucide-preact version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -239,8 +247,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-preact publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -265,6 +271,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set package.json version lucide
         run: yarn workspace lucide-svelte version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -276,8 +285,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-svelte publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -303,6 +310,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
       - name: Set new version
         run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
@@ -314,8 +324,6 @@ jobs:
 
       - name: Publish
         run: yarn workspace lucide-static publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
