@@ -513,7 +513,71 @@
   ],
   "calendar": [
     "date",
+    "time",
+    "event",
     "birthdate"
+  ],
+  "calendar-check": [
+    "date",
+    "time",
+    "event",
+    "confirm",
+    "subscribe"
+  ],
+  "calendar-check-2": [
+    "date",
+    "time",
+    "event",
+    "confirm",
+    "subscribe"
+  ],
+  "calendar-days": [
+    "date",
+    "time",
+    "event"
+  ],
+  "calendar-minus": [
+    "date",
+    "time",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "calendar-off": [
+    "date",
+    "time",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "calendar-plus": [
+    "date",
+    "time",
+    "event",
+    "add",
+    "subscribe",
+    "create",
+    "new"
+  ],
+  "calendar-range": [
+    "date",
+    "time",
+    "event",
+    "range",
+    "period"
+  ],
+  "calendar-x": [
+    "date",
+    "time",
+    "event",
+    "remove",
+    "busy"
+  ],
+  "calendar-x-2": [
+    "date",
+    "time",
+    "event",
+    "remove"
   ],
   "camera": [
     "photo",
