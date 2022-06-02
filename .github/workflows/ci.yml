@@ -17,6 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+
       - name: Fetch tags
         run: git fetch --all --tags
 
@@ -24,20 +31,8 @@ jobs:
         id: latest-tag
         run: echo "::set-output name=LATEST_TAG::$(git describe --tags `git rev-list --tags --max-count=1`)"
 
-      - name: Get yarn cache directory path
-        id: yarn_cache
-        run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
-
-      - name: Get cached packaged
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Check if we can patch
         run: .github/workflows/version-up.sh --minor
