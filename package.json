@@ -39,6 +39,8 @@
     "addtags": "babel-node ./scripts/addMissingKeysToTags.js --presets @babel/env",
     "tags2icons": "babel-node ./scripts/migrateTagsToIcons.js --presets @babel/env",
     "icons2tags": "babel-node ./scripts/migrateIconsToTags.js --presets @babel/env",
+    "icons2categories": "babel-node ./scripts/migrateIconsToCategories.js --presets @babel/env",
+    "categories2icons": "babel-node ./scripts/migrateCategoriesToIcons.js --presets @babel/env",
     "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env",
     "checkIcons": "babel-node ./scripts/checkIconsAndCategories.js --presets @babel/env"
   },
