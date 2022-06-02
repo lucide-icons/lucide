@@ -40,39 +40,51 @@
       "tags": [
         "done"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "alarm-clock": {
       "tags": [
         "morning"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "alarm-clock-off": {
       "tags": [
         "morning",
         "turn-off"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "alarm-minus": {
       "tags": [
         "remove"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "alarm-plus": {
       "tags": [
         "add"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "album": {
       "tags": [
         "photo",
         "book"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "alert-circle": {
       "tags": [
@@ -364,7 +376,9 @@
         "camera",
         "photo"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "archive": {
       "tags": [
@@ -633,41 +647,58 @@
         "power",
         "electricity"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "battery-charging": {
       "tags": [
         "power",
         "electricity"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "battery-full": {
       "tags": [
         "power",
         "electricity"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "battery-low": {
       "tags": [
         "power",
         "electricity"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "battery-medium": {
       "tags": [
         "power",
         "electricity"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "beaker": {
       "tags": [
         "cup"
       ],
-      "categories": []
+      "categories": [
+        "science"
+      ]
     },
     "bell": {
       "tags": [
@@ -727,7 +758,9 @@
         "transport",
         "trip"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "binary": {
       "tags": [
@@ -760,7 +793,8 @@
         "wireless"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "bluetooth-connected": {
@@ -768,7 +802,8 @@
         "paired"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "bluetooth-off": {
@@ -776,7 +811,8 @@
         "lost"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "bluetooth-searching": {
@@ -784,7 +820,8 @@
         "pairing"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "bold": {
@@ -844,9 +881,12 @@
     },
     "bot": {
       "tags": [
-        "robot"
+        "robot",
+        "ai"
       ],
-      "categories": []
+      "categories": [
+        "code"
+      ]
     },
     "box": {
       "tags": [
@@ -864,7 +904,8 @@
         "tool"
       ],
       "categories": [
-        "text"
+        "text",
+        "design"
       ]
     },
     "briefcase": {
@@ -874,7 +915,9 @@
         "baggage",
         "folder"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "brush": {
       "tags": [
@@ -883,7 +926,8 @@
         "color"
       ],
       "categories": [
-        "text"
+        "text",
+        "design"
       ]
     },
     "bug": {
@@ -892,7 +936,10 @@
         "report",
         "insect"
       ],
-      "categories": []
+      "categories": [
+        "code",
+        "development"
+      ]
     },
     "building": {
       "tags": [
@@ -923,7 +970,9 @@
         "transport",
         "trip"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "calculator": {
       "tags": [
@@ -945,7 +994,11 @@
         "webcam",
         "video"
       ],
-      "categories": []
+      "categories": [
+        "photography",
+        "devices",
+        "communication"
+      ]
     },
     "camera-off": {
       "tags": [
@@ -953,7 +1006,11 @@
         "webcam",
         "video"
       ],
-      "categories": []
+      "categories": [
+        "photography",
+        "devices",
+        "communication"
+      ]
     },
     "car": {
       "tags": [
@@ -961,7 +1018,9 @@
         "transport",
         "trip"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "carrot": {
       "tags": [
@@ -976,7 +1035,10 @@
         "chromecast",
         "airplay"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "connectivity"
+      ]
     },
     "check": {
       "tags": [
@@ -1009,7 +1071,9 @@
         "kitchen",
         "restaurant"
       ],
-      "categories": []
+      "categories": [
+        "food-beverage"
+      ]
     },
     "chevron-down": {
       "tags": [
@@ -1144,7 +1208,9 @@
       "tags": [
         "browser"
       ],
-      "categories": []
+      "categories": [
+        "brands"
+      ]
     },
     "circle": {
       "tags": [
@@ -1152,7 +1218,9 @@
         "zero",
         "record"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "circle-slashed": {
       "tags": [
@@ -1162,7 +1230,9 @@
         "null",
         "nothing"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "clapperboard": {
       "tags": [
@@ -1508,7 +1578,8 @@
       "categories": [
         "transportation",
         "navigation",
-        "maps"
+        "maps",
+        "photography"
       ]
     },
     "component": {
@@ -1537,7 +1608,9 @@
         "accessibility"
       ],
       "categories": [
-        "accessibility"
+        "photography",
+        "accessibility",
+        "design"
       ]
     },
     "cookie": {
@@ -1671,7 +1744,10 @@
         "photo",
         "image"
       ],
-      "categories": []
+      "categories": [
+        "photography",
+        "design"
+      ]
     },
     "cross": {
       "tags": [
@@ -1685,7 +1761,9 @@
         "aim",
         "target"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "crown": {
       "tags": [
@@ -1820,7 +1898,8 @@
         "export"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "file"
       ]
     },
     "download-cloud": {
@@ -1828,7 +1907,8 @@
         "import"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "file"
       ]
     },
     "dribbble": {
@@ -1956,7 +2036,8 @@
         "watch"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "photography"
       ]
     },
     "eye-off": {
@@ -1967,7 +2048,8 @@
         "hidden"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "photography"
       ]
     },
     "facebook": {
@@ -2146,7 +2228,9 @@
         "movie",
         "video"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "filter": {
       "tags": [
@@ -2192,26 +2276,36 @@
       "tags": [
         "torch"
       ],
-      "categories": []
+      "categories": [
+        "photography",
+        "devices"
+      ]
     },
     "flashlight-off": {
       "tags": [
         "torch"
       ],
-      "categories": []
+      "categories": [
+        "photography",
+        "devices"
+      ]
     },
     "flask-conical": {
       "tags": [
         "beaker",
         "erlenmeyer"
       ],
-      "categories": []
+      "categories": [
+        "science"
+      ]
     },
     "flask-round": {
       "tags": [
         "beaker"
       ],
-      "categories": []
+      "categories": [
+        "science"
+      ]
     },
     "focus": {
       "tags": [
@@ -2219,7 +2313,9 @@
         "lens",
         "photo"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "folder": {
       "tags": [
@@ -2272,7 +2368,8 @@
         "tool"
       ],
       "categories": [
-        "design"
+        "design",
+        "photography"
       ]
     },
     "framer": {
@@ -2314,19 +2411,26 @@
         "code",
         "automation"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "gamepad": {
       "tags": [
         "console"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "gamepad-2": {
       "tags": [
         "console"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "gauge": {
       "tags": [
@@ -2339,7 +2443,9 @@
         "hammer",
         "mallet"
       ],
-      "categories": []
+      "categories": [
+        "maps"
+      ]
     },
     "gem": {
       "tags": [
@@ -2355,7 +2461,9 @@
         "pacman",
         "spooky"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "gift": {
       "tags": [
@@ -2371,42 +2479,60 @@
         "code",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "git-branch-plus": {
       "tags": [
         "add",
         "create"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "git-commit": {
       "tags": [
         "code",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "git-fork": {
       "tags": [
         "code",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "git-merge": {
       "tags": [
         "code",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "git-pull-request": {
       "tags": [
         "code",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "github": {
       "tags": [
@@ -2415,7 +2541,8 @@
       ],
       "categories": [
         "brands",
-        "development"
+        "development",
+        "code"
       ]
     },
     "gitlab": {
@@ -2425,7 +2552,8 @@
       ],
       "categories": [
         "brands",
-        "development"
+        "development",
+        "code"
       ]
     },
     "glasses": {
@@ -2442,7 +2570,9 @@
         "language",
         "translate"
       ],
-      "categories": []
+      "categories": [
+        "maps"
+      ]
     },
     "globe-2": {
       "tags": [
@@ -2451,13 +2581,17 @@
         "language",
         "translate"
       ],
-      "categories": []
+      "categories": [
+        "maps"
+      ]
     },
     "grab": {
       "tags": [
         "hand"
       ],
-      "categories": []
+      "categories": [
+        "cursors"
+      ]
     },
     "graduation-cap": {
       "tags": [
@@ -2473,7 +2607,9 @@
         "table"
       ],
       "categories": [
-        "text"
+        "text",
+        "layout",
+        "design"
       ]
     },
     "grip-horizontal": {
@@ -2482,7 +2618,9 @@
         "dots",
         "handle"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "grip-vertical": {
       "tags": [
@@ -2492,7 +2630,9 @@
         "move",
         "drag"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "hammer": {
       "tags": [
@@ -2507,13 +2647,19 @@
         "mouse",
         "grab"
       ],
-      "categories": []
+      "categories": [
+        "cursors",
+        "accessibility"
+      ]
     },
     "hand-metal": {
       "tags": [
         "rock"
       ],
-      "categories": []
+      "categories": [
+        "emoji",
+        "music"
+      ]
     },
     "hard-drive": {
       "tags": [
@@ -2525,13 +2671,15 @@
         "disk",
         "harddisk"
       ],
-      "categories": []
+      "categories": [
+        "development"
+      ]
     },
     "hard-hat": {
       "tags": [
         "helmet",
         "construction",
-        "savety"
+        "safety"
       ],
       "categories": []
     },
@@ -2559,7 +2707,8 @@
         "sound"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "music"
       ]
     },
     "heart": {
@@ -2568,7 +2717,10 @@
         "love",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "social",
+        "music"
+      ]
     },
     "heart-off": {
       "tags": [
@@ -2577,7 +2729,10 @@
         "hate",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "social",
+        "music"
+      ]
     },
     "help-circle": {
       "tags": [
@@ -2606,7 +2761,8 @@
         "text"
       ],
       "categories": [
-        "text"
+        "text",
+        "design"
       ]
     },
     "history": {
@@ -2643,6 +2799,7 @@
         "photo"
       ],
       "categories": [
+        "photography",
         "text"
       ]
     },
@@ -2651,21 +2808,27 @@
         "remove",
         "delete"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "image-off": {
       "tags": [
         "picture",
         "photo"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "image-plus": {
       "tags": [
         "add",
         "create"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "import": {
       "tags": [
@@ -2680,7 +2843,8 @@
         "email"
       ],
       "categories": [
-        "account"
+        "account",
+        "mail"
       ]
     },
     "indent": {
@@ -2781,7 +2945,8 @@
         "mouse"
       ],
       "categories": [
-        "text"
+        "text",
+        "devices"
       ]
     },
     "landmark": {
@@ -2793,7 +2958,8 @@
         "money"
       ],
       "categories": [
-        "money"
+        "money",
+        "maps"
       ]
     },
     "languages": {
@@ -2808,20 +2974,27 @@
       "tags": [
         "computer"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "laptop-2": {
       "tags": [
         "computer"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "lasso": {
       "tags": [
         "select",
         "cursor"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "cursors"
+      ]
     },
     "lasso-select": {
       "tags": [
@@ -2829,7 +3002,9 @@
         "cursor"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "design",
+        "cursors"
       ]
     },
     "layers": {
@@ -2837,21 +3012,30 @@
         "stack",
         "pages"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "layout"
+      ]
     },
     "layout": {
       "tags": [
         "window",
         "webpage"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "layout"
+      ]
     },
     "layout-dashboard": {
       "tags": [
         "masonry",
         "brick"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "layout"
+      ]
     },
     "layout-grid": {
       "tags": [
@@ -2859,7 +3043,10 @@
         "home",
         "start"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "layout"
+      ]
     },
     "layout-list": {
       "tags": [
@@ -2867,7 +3054,11 @@
         "photo",
         "item"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "layout",
+        "photography"
+      ]
     },
     "layout-template": {
       "tags": [
@@ -2884,7 +3075,9 @@
         "music",
         "album"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "life-buoy": {
       "tags": [
@@ -2902,13 +3095,17 @@
         "bright",
         "lights"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "lightbulb-off": {
       "tags": [
         "lights"
       ],
-      "categories": []
+      "categories": [
+        "photography"
+      ]
     },
     "line-chart": {
       "tags": [
@@ -3035,7 +3232,10 @@
         "location",
         "cross"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "locate-fixed": {
       "tags": [
@@ -3044,7 +3244,10 @@
         "location",
         "cross"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "locate-off": {
       "tags": [
@@ -3053,7 +3256,10 @@
         "location",
         "cross"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "lock": {
       "tags": [
@@ -3062,7 +3268,9 @@
         "secure",
         "admin"
       ],
-      "categories": []
+      "categories": [
+        "security"
+      ]
     },
     "log-in": {
       "tags": [
@@ -3072,7 +3280,8 @@
         "auth"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "account"
       ]
     },
     "log-out": {
@@ -3083,7 +3292,8 @@
         "auth"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "account"
       ]
     },
     "magnet": {
@@ -3093,7 +3303,9 @@
         "science",
         "snap"
       ],
-      "categories": []
+      "categories": [
+        "design"
+      ]
     },
     "mail": {
       "tags": [
@@ -3103,7 +3315,8 @@
       ],
       "categories": [
         "text",
-        "account"
+        "account",
+        "mail"
       ]
     },
     "map": {
@@ -3113,7 +3326,8 @@
         "travel"
       ],
       "categories": [
-        "text"
+        "text",
+        "maps"
       ]
     },
     "map-pin": {
@@ -3124,7 +3338,8 @@
         "marker"
       ],
       "categories": [
-        "account"
+        "account",
+        "maps"
       ]
     },
     "map-pin-off": {
@@ -3134,7 +3349,9 @@
         "travel",
         "marker"
       ],
-      "categories": []
+      "categories": [
+        "maps"
+      ]
     },
     "maximize": {
       "tags": [
@@ -3142,7 +3359,8 @@
         "expand"
       ],
       "categories": [
-        "layout"
+        "layout",
+        "design"
       ]
     },
     "maximize-2": {
@@ -3153,7 +3371,8 @@
       ],
       "categories": [
         "arrows",
-        "layout"
+        "layout",
+        "design"
       ]
     },
     "megaphone": {
@@ -3181,7 +3400,10 @@
         "hamburger",
         "options"
       ],
-      "categories": []
+      "categories": [
+        "layout",
+        "account"
+      ]
     },
     "message-circle": {
       "tags": [
@@ -3211,7 +3433,12 @@
         "radio",
         "podcast"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "multimedia"
+      ]
     },
     "mic-off": {
       "tags": [
@@ -3219,7 +3446,12 @@
         "sound",
         "mute"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "multimedia"
+      ]
     },
     "milestone": {
       "tags": [
@@ -3239,7 +3471,8 @@
         "shrink"
       ],
       "categories": [
-        "layout"
+        "layout",
+        "design"
       ]
     },
     "minimize-2": {
@@ -3251,7 +3484,8 @@
       ],
       "categories": [
         "arrows",
-        "layout"
+        "layout",
+        "design"
       ]
     },
     "minus": {
@@ -3282,7 +3516,8 @@
         "display"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "monitor-off": {
@@ -3290,7 +3525,8 @@
         "share"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "monitor-speaker": {
@@ -3300,7 +3536,8 @@
         "cast"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices"
       ]
     },
     "moon": {
@@ -3308,7 +3545,9 @@
         "dark",
         "night"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "more-horizontal": {
       "tags": [
@@ -3332,7 +3571,9 @@
         "hike",
         "rock"
       ],
-      "categories": []
+      "categories": [
+        "nature"
+      ]
     },
     "mountain-snow": {
       "tags": [
@@ -3340,7 +3581,9 @@
         "climb",
         "snow"
       ],
-      "categories": []
+      "categories": [
+        "nature"
+      ]
     },
     "mouse": {
       "tags": [
@@ -3348,7 +3591,9 @@
         "scroll",
         "click"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "mouse-pointer": {
       "tags": [
@@ -3357,7 +3602,8 @@
         "click"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "mouse-pointer-2": {
@@ -3367,7 +3613,8 @@
         "click"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "mouse-pointer-click": {
@@ -3377,7 +3624,8 @@
         "click"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "move": {
@@ -3385,7 +3633,8 @@
         "arrows"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "move-diagonal": {
@@ -3394,7 +3643,8 @@
         "arrow"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "move-diagonal-2": {
@@ -3403,7 +3653,8 @@
         "arrow"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "move-horizontal": {
@@ -3412,7 +3663,8 @@
         "arrow"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "move-vertical": {
@@ -3421,42 +3673,57 @@
         "arrow"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "cursors"
       ]
     },
     "music": {
       "tags": [
         "note"
       ],
-      "categories": []
+      "categories": [
+        "music"
+      ]
     },
     "navigation": {
       "tags": [
         "location",
         "travel"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "navigation-2": {
       "tags": [
         "location",
         "travel"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "navigation-2-off": {
       "tags": [
         "location",
         "travel"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "navigation-off": {
       "tags": [
         "location",
         "travel"
       ],
-      "categories": []
+      "categories": [
+        "navigation",
+        "maps"
+      ]
     },
     "network": {
       "tags": [
@@ -3468,7 +3735,9 @@
       "tags": [
         "stop"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "option": {
       "tags": [
@@ -3492,7 +3761,9 @@
         "box",
         "container"
       ],
-      "categories": []
+      "categories": [
+        "file"
+      ]
     },
     "package-check": {
       "tags": [
@@ -3521,7 +3792,9 @@
         "find",
         "product process"
       ],
-      "categories": []
+      "categories": [
+        "file"
+      ]
     },
     "package-x": {
       "tags": [
@@ -3536,7 +3809,9 @@
         "theme"
       ],
       "categories": [
-        "text"
+        "text",
+        "design",
+        "photography"
       ]
     },
     "palmtree": {
@@ -3553,7 +3828,8 @@
         "file"
       ],
       "categories": [
-        "text"
+        "text",
+        "design"
       ]
     },
     "pause": {
@@ -3561,7 +3837,9 @@
         "music",
         "stop"
       ],
-      "categories": []
+      "categories": [
+        "multimedia"
+      ]
     },
     "pause-circle": {
       "tags": [
@@ -3569,7 +3847,9 @@
         "audio",
         "stop"
       ],
-      "categories": []
+      "categories": [
+        "multimedia"
+      ]
     },
     "pause-octagon": {
       "tags": [
@@ -3577,7 +3857,9 @@
         "audio",
         "stop"
       ],
-      "categories": []
+      "categories": [
+        "multimedia"
+      ]
     },
     "pen-tool": {
       "tags": [
@@ -3586,7 +3868,9 @@
         "path"
       ],
       "categories": [
-        "text"
+        "text",
+        "design",
+        "cursors"
       ]
     },
     "pencil": {
@@ -3595,13 +3879,18 @@
         "pen",
         "create"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "cursors"
+      ]
     },
     "percent": {
       "tags": [
         "discount"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "person-standing": {
       "tags": [
@@ -3619,21 +3908,31 @@
         "call"
       ],
       "categories": [
-        "text"
+        "text",
+        "connectivity",
+        "devices",
+        "communication"
       ]
     },
     "phone-call": {
       "tags": [
         "ring"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
     },
     "phone-forwarded": {
       "tags": [
         "call"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "connectivity",
+        "devices",
+        "communication"
       ]
     },
     "phone-incoming": {
@@ -3641,28 +3940,42 @@
         "call"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "connectivity",
+        "devices",
+        "communication"
       ]
     },
     "phone-missed": {
       "tags": [
         "call"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
     },
     "phone-off": {
       "tags": [
         "call",
         "mute"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
     },
     "phone-outgoing": {
       "tags": [
         "call"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "connectivity",
+        "devices",
+        "communication"
       ]
     },
     "pie-chart": {
@@ -3671,7 +3984,8 @@
         "diagram"
       ],
       "categories": [
-        "charts"
+        "charts",
+        "file"
       ]
     },
     "piggy-bank": {
@@ -3690,7 +4004,10 @@
         "lock",
         "fix"
       ],
-      "categories": []
+      "categories": [
+        "maps",
+        "account"
+      ]
     },
     "pipette": {
       "tags": [
@@ -3698,7 +4015,8 @@
         "color picker"
       ],
       "categories": [
-        "text"
+        "text",
+        "design"
       ]
     },
     "plane": {
@@ -3706,7 +4024,9 @@
         "plane",
         "trip"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "play": {
       "tags": [
@@ -3714,7 +4034,9 @@
         "start"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "multimedia",
+        "music"
       ]
     },
     "play-circle": {
@@ -3722,7 +4044,11 @@
         "music",
         "start"
       ],
-      "categories": []
+      "categories": [
+        "shapes",
+        "multimedia",
+        "music"
+      ]
     },
     "plug-zap": {
       "tags": [
@@ -3731,28 +4057,37 @@
         "battery",
         "connect"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "plus": {
       "tags": [
         "add",
         "new"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "plus-circle": {
       "tags": [
         "add",
         "new"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "plus-square": {
       "tags": [
         "add",
         "new"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "pocket": {
       "tags": [
@@ -3769,13 +4104,18 @@
         "mic",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "social"
+      ]
     },
     "pointer": {
       "tags": [
         "mouse"
       ],
-      "categories": []
+      "categories": [
+        "cursors"
+      ]
     },
     "pound-sterling": {
       "tags": [
@@ -3794,13 +4134,17 @@
         "off",
         "device"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "power-off": {
       "tags": [
         "device"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "printer": {
       "tags": [
@@ -3808,7 +4152,10 @@
         "office",
         "device"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "account"
+      ]
     },
     "puzzle": {
       "tags": [
@@ -3817,13 +4164,19 @@
         "part",
         "piece"
       ],
-      "categories": []
+      "categories": [
+        "development"
+      ]
     },
     "qr-code": {
       "tags": [
         "barcode"
       ],
-      "categories": []
+      "categories": [
+        "code",
+        "development",
+        "social"
+      ]
     },
     "quote": {
       "tags": [
@@ -3840,7 +4193,11 @@
         "connectivity",
         "live"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "multimedia",
+        "social"
+      ]
     },
     "radio-receiver": {
       "tags": [
@@ -3848,7 +4205,9 @@
         "music",
         "connect"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "redo": {
       "tags": [
@@ -3896,7 +4255,9 @@
         "text"
       ],
       "categories": [
-        "text"
+        "text",
+        "development",
+        "code"
       ]
     },
     "repeat": {
@@ -3905,33 +4266,44 @@
         "arrows"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "music",
+        "multimedia"
       ]
     },
     "repeat-1": {
       "tags": [
         "replay"
       ],
-      "categories": []
+      "categories": [
+        "music",
+        "multimedia"
+      ]
     },
     "reply": {
       "tags": [
         "email"
       ],
-      "categories": []
+      "categories": [
+        "mail"
+      ]
     },
     "reply-all": {
       "tags": [
         "email"
       ],
-      "categories": []
+      "categories": [
+        "mail"
+      ]
     },
     "rewind": {
       "tags": [
         "music"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "music",
+        "multimedia"
       ]
     },
     "rocket": {
@@ -3942,7 +4314,10 @@
         "space",
         "version"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "code"
+      ]
     },
     "rocking-chair": {
       "tags": [
@@ -3950,7 +4325,9 @@
         "furniture",
         "seat"
       ],
-      "categories": []
+      "categories": [
+        "furniture"
+      ]
     },
     "rotate-ccw": {
       "tags": [
@@ -3958,7 +4335,9 @@
         "left"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "design",
+        "photography"
       ]
     },
     "rotate-cw": {
@@ -3967,7 +4346,9 @@
         "right"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "design",
+        "photography"
       ]
     },
     "rss": {
@@ -3975,7 +4356,10 @@
         "feed",
         "subscribe"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "social"
+      ]
     },
     "ruler": {
       "tags": [
@@ -3984,7 +4368,10 @@
         "foot",
         "inch"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "layout"
+      ]
     },
     "russian-ruble": {
       "tags": [
@@ -4020,20 +4407,27 @@
       "tags": [
         "qr-code"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "social"
+      ]
     },
     "scan-line": {
       "tags": [
         "qr-code"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "social"
+      ]
     },
     "scissors": {
       "tags": [
         "cut"
       ],
       "categories": [
-        "text"
+        "text",
+        "design"
       ]
     },
     "screen-share": {
@@ -4042,7 +4436,9 @@
         "desktop"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices",
+        "communication"
       ]
     },
     "screen-share-off": {
@@ -4051,7 +4447,9 @@
         "disconnect"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "devices",
+        "communication"
       ]
     },
     "search": {
@@ -4108,7 +4506,10 @@
         "cloud",
         "storage"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "devices"
+      ]
     },
     "server-crash": {
       "tags": [
@@ -4117,14 +4518,20 @@
         "problem",
         "error"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "devices"
+      ]
     },
     "server-off": {
       "tags": [
         "cloud",
         "storage"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "devices"
+      ]
     },
     "settings": {
       "tags": [
@@ -4154,7 +4561,8 @@
         "connections"
       ],
       "categories": [
-        "account"
+        "account",
+        "social"
       ]
     },
     "share-2": {
@@ -4163,7 +4571,8 @@
         "connections"
       ],
       "categories": [
-        "account"
+        "account",
+        "social"
       ]
     },
     "sheet": {
@@ -4173,7 +4582,8 @@
         "excel"
       ],
       "categories": [
-        "text"
+        "text",
+        "file"
       ]
     },
     "shield": {
@@ -4183,7 +4593,8 @@
       ],
       "categories": [
         "account",
-        "security"
+        "security",
+        "gaming"
       ]
     },
     "shield-alert": {
@@ -4292,7 +4703,8 @@
       ],
       "categories": [
         "multimedia",
-        "arrows"
+        "arrows",
+        "music"
       ]
     },
     "sidebar": {
@@ -4328,7 +4740,8 @@
         "formula"
       ],
       "categories": [
-        "text"
+        "text",
+        "maths"
       ]
     },
     "signal": {
@@ -4420,6 +4833,7 @@
       ],
       "categories": [
         "multimedia",
+        "music",
         "arrows"
       ]
     },
@@ -4432,6 +4846,7 @@
       ],
       "categories": [
         "multimedia",
+        "music",
         "arrows"
       ]
     },
@@ -4441,7 +4856,9 @@
         "danger",
         "bone"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "slack": {
       "tags": [
@@ -4465,14 +4882,18 @@
         "prohibited",
         "error"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "sliders": {
       "tags": [
         "settings",
         "controls"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "sliders-horizontal": {
       "tags": [
@@ -4480,7 +4901,9 @@
         "filters",
         "controls"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "smartphone": {
       "tags": [
@@ -4534,7 +4957,8 @@
         "filter"
       ],
       "categories": [
-        "text"
+        "text",
+        "layout"
       ]
     },
     "sort-desc": {
@@ -4542,7 +4966,8 @@
         "filter"
       ],
       "categories": [
-        "text"
+        "text",
+        "layout"
       ]
     },
     "speaker": {
@@ -4551,7 +4976,9 @@
         "music"
       ],
       "categories": [
-        "multimedia"
+        "multimedia",
+        "devices",
+        "music"
       ]
     },
     "sprout": {
@@ -4582,7 +5009,9 @@
       "categories": [
         "account",
         "social",
-        "shapes"
+        "shapes",
+        "multimedia",
+        "music"
       ]
     },
     "star-half": {
@@ -4594,7 +5023,9 @@
         "rating"
       ],
       "categories": [
-        "social"
+        "social",
+        "multimedia",
+        "music"
       ]
     },
     "star-off": {
@@ -4605,7 +5036,9 @@
         "unrate"
       ],
       "categories": [
-        "social"
+        "social",
+        "multimedia",
+        "music"
       ]
     },
     "stop-circle": {
@@ -4613,7 +5046,11 @@
         "media",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "music",
+        "shapes"
+      ]
     },
     "stretch-horizontal": {
       "tags": [
@@ -4663,7 +5100,8 @@
         "light"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "weather"
       ]
     },
     "sun-dim": {
@@ -4674,7 +5112,8 @@
         "brightness low"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "weather"
       ]
     },
     "sun-medium": {
@@ -4683,7 +5122,8 @@
         "medium"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "weather"
       ]
     },
     "sun-moon": {
@@ -4706,7 +5146,8 @@
         "day"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "weather"
       ]
     },
     "sunset": {
@@ -4717,7 +5158,8 @@
         "night"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "weather"
       ]
     },
     "superscript": {
@@ -4748,7 +5190,8 @@
         "back"
       ],
       "categories": [
-        "communication"
+        "communication",
+        "devices"
       ]
     },
     "sword": {
@@ -4759,7 +5202,9 @@
         "war",
         "weapon"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "swords": {
       "tags": [
@@ -4769,7 +5214,9 @@
         "war",
         "weapon"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "table": {
       "tags": [
@@ -4777,14 +5224,17 @@
         "grid"
       ],
       "categories": [
-        "text"
+        "text",
+        "file"
       ]
     },
     "tablet": {
       "tags": [
         "device"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "tag": {
       "tags": [
@@ -4800,7 +5250,8 @@
         "bullseye"
       ],
       "categories": [
-        "brands"
+        "brands",
+        "gaming"
       ]
     },
     "tent": {
@@ -4819,7 +5270,10 @@
         "prompt",
         "shell"
       ],
-      "categories": []
+      "categories": [
+        "code",
+        "development"
+      ]
     },
     "terminal-square": {
       "tags": [
@@ -4828,14 +5282,18 @@
         "prompt",
         "shell"
       ],
-      "categories": []
+      "categories": [
+        "code",
+        "development"
+      ]
     },
     "text-cursor": {
       "tags": [
         "select"
       ],
       "categories": [
-        "text"
+        "text",
+        "cursors"
       ]
     },
     "text-cursor-input": {
@@ -4843,7 +5301,8 @@
         "select"
       ],
       "categories": [
-        "text"
+        "text",
+        "layout"
       ]
     },
     "thermometer": {
@@ -4923,7 +5382,9 @@
         "timer",
         "stopwatch"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "timer-off": {
       "tags": [
@@ -4931,7 +5392,9 @@
         "timer",
         "stopwatch"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "timer-reset": {
       "tags": [
@@ -4939,7 +5402,9 @@
         "timer",
         "stopwatch"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "toggle-left": {
       "tags": [
@@ -4975,7 +5440,9 @@
         "subway",
         "underground"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "trash": {
       "tags": [
@@ -5028,7 +5495,9 @@
       "tags": [
         "delta"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "truck": {
       "tags": [
@@ -5038,14 +5507,18 @@
         "transport",
         "lorry"
       ],
-      "categories": []
+      "categories": [
+        "transportation"
+      ]
     },
     "tv": {
       "tags": [
         "television",
         "stream"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "tv-2": {
       "tags": [
@@ -5054,7 +5527,9 @@
         "stream",
         "display"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "twitch": {
       "tags": [
@@ -5148,14 +5623,17 @@
       "tags": [
         "security"
       ],
-      "categories": []
+      "categories": [
+        "security"
+      ]
     },
     "upload": {
       "tags": [
         "file"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "file"
       ]
     },
     "upload-cloud": {
@@ -5163,7 +5641,8 @@
         "file"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "file"
       ]
     },
     "user": {
@@ -5247,7 +5726,8 @@
         "check"
       ],
       "categories": [
-        "account"
+        "account",
+        "social"
       ]
     },
     "vibrate": {
@@ -5258,7 +5738,9 @@
         "haptic feedback"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "connectivity",
+        "account"
       ]
     },
     "vibrate-off": {
@@ -5269,7 +5751,9 @@
         "haptic feedback"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "connectivity",
+        "account"
       ]
     },
     "video": {
@@ -5278,7 +5762,12 @@
         "movie",
         "film"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "photography"
+      ]
     },
     "video-off": {
       "tags": [
@@ -5286,14 +5775,22 @@
         "movie",
         "film"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "photography"
+      ]
     },
     "view": {
       "tags": [
         "eye",
         "look"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "photography"
+      ]
     },
     "voicemail": {
       "tags": [
@@ -5312,7 +5809,10 @@
         "mute"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "communication",
+        "multimedia",
+        "music"
       ]
     },
     "volume-1": {
@@ -5321,7 +5821,10 @@
         "sound"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "communication",
+        "multimedia",
+        "music"
       ]
     },
     "volume-2": {
@@ -5330,7 +5833,10 @@
         "sound"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "communication",
+        "multimedia",
+        "music"
       ]
     },
     "volume-x": {
@@ -5340,7 +5846,10 @@
         "mute"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "communication",
+        "multimedia",
+        "music"
       ]
     },
     "wallet": {
@@ -5359,14 +5868,20 @@
         "magic",
         "selection"
       ],
-      "categories": []
+      "categories": [
+        "design",
+        "gaming",
+        "photography"
+      ]
     },
     "watch": {
       "tags": [
         "clock",
         "time"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "waves": {
       "tags": [
@@ -5377,7 +5892,11 @@
         "wavelength",
         "vibrate"
       ],
-      "categories": []
+      "categories": [
+        "weather",
+        "maps",
+        "music"
+      ]
     },
     "webcam": {
       "tags": [
@@ -5386,7 +5905,8 @@
       ],
       "categories": [
         "connectivity",
-        "devices"
+        "devices",
+        "communication"
       ]
     },
     "wifi": {
@@ -5415,7 +5935,9 @@
         "air",
         "blow"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "wrap-text": {
       "tags": [
@@ -5436,7 +5958,9 @@
         "settings",
         "spanner"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "x": {
       "tags": [
@@ -5447,7 +5971,9 @@
         "times",
         "clear"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "x-circle": {
       "tags": [
@@ -5458,7 +5984,10 @@
         "times",
         "clear"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "x-octagon": {
       "tags": [
@@ -5469,7 +5998,10 @@
         "times",
         "clear"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "x-square": {
       "tags": [
@@ -5480,7 +6012,10 @@
         "times",
         "clear"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "youtube": {
       "tags": [
@@ -5505,7 +6040,8 @@
       ],
       "categories": [
         "connectivity",
-        "devices"
+        "devices",
+        "photography"
       ]
     },
     "zap-off": {
@@ -5516,7 +6052,8 @@
       ],
       "categories": [
         "connectivity",
-        "devices"
+        "devices",
+        "photography"
       ]
     },
     "zoom-in": {
@@ -5527,7 +6064,8 @@
       "categories": [
         "layout",
         "design",
-        "text"
+        "text",
+        "photography"
       ]
     },
     "zoom-out": {
@@ -5538,7 +6076,8 @@
       "categories": [
         "layout",
         "design",
-        "text"
+        "text",
+        "photography"
       ]
     }
   },
@@ -5607,6 +6146,10 @@
       "title": "Food & beverage",
       "icon": "coffee"
     },
+    "furniture": {
+      "title": "Furniture",
+      "icon": "rocking-chair"
+    },
     "gaming": {
       "title": "Gaming",
       "icon": "gamepad-2"
@@ -5635,6 +6178,10 @@
       "title": "Multimedia",
       "icon": "play-circle"
     },
+    "music": {
+      "title": "Music",
+      "icon": "music"
+    },
     "nature": {
       "title": "Nature",
       "icon": "sprout"
@@ -5646,6 +6193,10 @@
     "notifications": {
       "title": "Notifications",
       "icon": "alert-triangle"
+    },
+    "photography": {
+      "title": "Photography",
+      "icon": "camera"
     },
     "science": {
       "title": "Science",
