@@ -28,10 +28,13 @@ export default (iconName, iconNode) => {
           className: `lucide lucide-${toKebabCase(iconName)}`,
           ...rest,
         },
-        [...iconNode.map(([tag, attrs]) => {
-          const uppercasedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
-          return createElement(NativeSvg[uppercasedTag], attrs)
-        }), ...(children || [])],
+        [
+          ...iconNode.map(([tag, attrs]) => {
+            const uppercasedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+            return createElement(NativeSvg[uppercasedTag], attrs);
+          }),
+          ...(children || []),
+        ],
       ),
   );
 
