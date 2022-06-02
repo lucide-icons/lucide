@@ -706,6 +706,13 @@
   "chrome": [
     "browser"
   ],
+  "cigarette": [
+    "smoking"
+  ],
+  "cigarette-off": [
+    "smoking",
+    "no-smoking"
+  ],
   "circle": [
     "off",
     "zero",
