@@ -12,7 +12,8 @@
         "wheelchair"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "health"
       ]
     },
     "activity": {
@@ -22,7 +23,11 @@
         "action",
         "motion"
       ],
-      "categories": []
+      "categories": [
+        "health",
+        "account",
+        "social"
+      ]
     },
     "airplay": {
       "tags": [
@@ -31,6 +36,7 @@
         "mirroring"
       ],
       "categories": [
+        "multimedia",
         "connectivity",
         "devices",
         "brands"
@@ -41,7 +47,9 @@
         "done"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "notifications",
+        "time"
       ]
     },
     "alarm-clock": {
@@ -49,7 +57,9 @@
         "morning"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "notifications",
+        "time"
       ]
     },
     "alarm-clock-off": {
@@ -58,7 +68,9 @@
         "turn-off"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "notifications",
+        "time"
       ]
     },
     "alarm-minus": {
@@ -66,7 +78,9 @@
         "remove"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "notifications",
+        "time"
       ]
     },
     "alarm-plus": {
@@ -74,7 +88,9 @@
         "add"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "notifications",
+        "time"
       ]
     },
     "album": {
@@ -83,7 +99,8 @@
         "book"
       ],
       "categories": [
-        "photography"
+        "photography",
+        "multimedia"
       ]
     },
     "alert-circle": {
@@ -92,7 +109,10 @@
         "alert",
         "danger"
       ],
-      "categories": []
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
     },
     "alert-octagon": {
       "tags": [
@@ -100,7 +120,10 @@
         "alert",
         "danger"
       ],
-      "categories": []
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
     },
     "alert-triangle": {
       "tags": [
@@ -108,7 +131,10 @@
         "alert",
         "danger"
       ],
-      "categories": []
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
     },
     "align-center": {
       "tags": [
@@ -126,7 +152,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-center-vertical": {
       "tags": [
@@ -134,7 +160,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-end-horizontal": {
       "tags": [
@@ -143,7 +169,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-end-vertical": {
       "tags": [
@@ -152,7 +178,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-distribute-center": {
       "tags": [
@@ -163,7 +189,7 @@
         "evenly",
         "around"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-distribute-end": {
       "tags": [
@@ -172,7 +198,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-distribute-start": {
       "tags": [
@@ -181,7 +207,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-justify-center": {
       "tags": [
@@ -190,7 +216,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-justify-end": {
       "tags": [
@@ -199,7 +225,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-justify-start": {
       "tags": [
@@ -208,7 +234,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-space-around": {
       "tags": [
@@ -219,7 +245,7 @@
         "distribute",
         "between"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-horizontal-space-between": {
       "tags": [
@@ -229,7 +255,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-justify": {
       "tags": [
@@ -268,7 +294,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-start-vertical": {
       "tags": [
@@ -277,7 +303,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-distribute-center": {
       "tags": [
@@ -288,7 +314,7 @@
         "evenly",
         "around"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-distribute-end": {
       "tags": [
@@ -297,7 +323,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-distribute-start": {
       "tags": [
@@ -306,7 +332,7 @@
         "flex",
         "justify"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-justify-center": {
       "tags": [
@@ -317,7 +343,7 @@
         "distribute",
         "between"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-justify-end": {
       "tags": [
@@ -328,7 +354,7 @@
         "distribute",
         "between"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-justify-start": {
       "tags": [
@@ -339,7 +365,7 @@
         "distribute",
         "between"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-space-around": {
       "tags": [
@@ -350,7 +376,7 @@
         "distribute",
         "between"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "align-vertical-space-between": {
       "tags": [
@@ -361,14 +387,16 @@
         "distribute",
         "between"
       ],
-      "categories": []
+      "categories": ["layout"]
     },
     "anchor": {
       "tags": [
         "ship"
       ],
       "categories": [
-        "text"
+        "transportation",
+        "text",
+        "maps"
       ]
     },
     "aperture": {
@@ -385,7 +413,23 @@
         "index",
         "box"
       ],
-      "categories": []
+      "categories": [
+        "files",
+        "mail"
+      ]
+    },
+    "armchair": {
+      "tags": [
+        "sofa",
+        "furniture",
+        "leisure",
+        "lounge",
+        "loveseat",
+        "couch"
+      ],
+      "categories": [
+        "furniture"
+      ]
     },
     "arrow-big-down": {
       "tags": [
@@ -434,7 +478,8 @@
         "direction"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "shapes"
       ]
     },
     "arrow-down-left": {
@@ -466,7 +511,8 @@
         "direction"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "shapes"
       ]
     },
     "arrow-left-right": {
@@ -494,7 +540,8 @@
         "direction"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "shapes"
       ]
     },
     "arrow-up": {
@@ -510,7 +557,8 @@
         "direction"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "shapes"
       ]
     },
     "arrow-up-left": {
@@ -554,13 +602,18 @@
         "achievement",
         "badge"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "axe": {
       "tags": [
         "hatchet"
       ],
-      "categories": []
+      "categories": [
+        "tools",
+        "gaming"
+      ]
     },
     "banknote": {
       "tags": [
@@ -697,7 +750,38 @@
         "cup"
       ],
       "categories": [
-        "science"
+        "science",
+        "gaming"
+      ]
+    },
+    "bed": {
+      "tags": [
+        "sleep",
+        "hotel",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "bed-double": {
+      "tags": [
+        "sleep",
+        "hotel",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "bed-single": {
+      "tags": [
+        "sleep",
+        "hotel",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
       ]
     },
     "bell": {
@@ -708,7 +792,8 @@
         "reminder"
       ],
       "categories": [
-        "account"
+        "account",
+        "notifications"
       ]
     },
     "bell-minus": {
@@ -721,7 +806,9 @@
         "remove",
         "erase"
       ],
-      "categories": []
+      "categories": [
+        "notifications"
+      ]
     },
     "bell-off": {
       "tags": [
@@ -730,7 +817,9 @@
         "silent",
         "reminder"
       ],
-      "categories": []
+      "categories": [
+        "notifications"
+      ]
     },
     "bell-plus": {
       "tags": [
@@ -741,7 +830,9 @@
         "create",
         "new"
       ],
-      "categories": []
+      "categories": [
+        "notifications"
+      ]
     },
     "bell-ring": {
       "tags": [
@@ -750,7 +841,9 @@
         "sound",
         "reminder"
       ],
-      "categories": []
+      "categories": [
+        "notifications"
+      ]
     },
     "bike": {
       "tags": [
@@ -772,7 +865,7 @@
       ],
       "categories": [
         "text",
-        "code"
+        "coding"
       ]
     },
     "bitcoin": {
@@ -784,7 +877,7 @@
       "categories": [
         "brands",
         "currency",
-        "code",
+        "coding",
         "money"
       ]
     },
@@ -842,14 +935,20 @@
         "magazine",
         "library"
       ],
-      "categories": []
+      "categories": [
+        "gaming",
+        "development"
+      ]
     },
     "book-open": {
       "tags": [
         "read",
         "library"
       ],
-      "categories": []
+      "categories": [
+        "gaming",
+        "development"
+      ]
     },
     "bookmark": {
       "tags": [
@@ -885,7 +984,8 @@
         "ai"
       ],
       "categories": [
-        "code"
+        "coding",
+        "development"
       ]
     },
     "box": {
@@ -893,7 +993,11 @@
         "cube",
         "package"
       ],
-      "categories": []
+      "categories": [
+        "shapes",
+        "gaming",
+        "coding"
+      ]
     },
     "box-select": {
       "tags": [
@@ -927,7 +1031,8 @@
       ],
       "categories": [
         "text",
-        "design"
+        "design",
+        "tools"
       ]
     },
     "bug": {
@@ -937,7 +1042,7 @@
         "insect"
       ],
       "categories": [
-        "code",
+        "coding",
         "development"
       ]
     },
@@ -947,7 +1052,8 @@
         "organization"
       ],
       "categories": [
-        "account"
+        "account",
+        "buildings"
       ]
     },
     "building-2": {
@@ -960,7 +1066,8 @@
         "organization"
       ],
       "categories": [
-        "account"
+        "account",
+        "buildings"
       ]
     },
     "bus": {
@@ -979,14 +1086,125 @@
         "count",
         "calculating machine"
       ],
-      "categories": []
+      "categories": ["maths"]
     },
     "calendar": {
       "tags": [
         "date",
-        "birthdate"
+        "birthdate",
+        "time",
+        "event"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-check": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "confirm",
+        "subscribe"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-check-2": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "confirm",
+        "subscribe"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-days": {
+      "tags": [
+        "date",
+        "time",
+        "event"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-minus": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-off": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-plus": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "add",
+        "subscribe",
+        "create",
+        "new"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-range": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "range",
+        "period"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-x": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "remove",
+        "busy"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-x-2": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "remove"
+      ],
+      "categories": [
+        "time"
+      ]
     },
     "camera": {
       "tags": [
@@ -1028,7 +1246,9 @@
         "food",
         "eat"
       ],
-      "categories": []
+      "categories": [
+        "food-beverage"
+      ]
     },
     "cast": {
       "tags": [
@@ -1044,25 +1264,34 @@
       "tags": [
         "done"
       ],
-      "categories": []
+      "categories": ["notifications"]
     },
     "check-circle": {
       "tags": [
         "done"
       ],
-      "categories": []
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
     },
     "check-circle-2": {
       "tags": [
         "done"
       ],
-      "categories": []
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
     },
     "check-square": {
       "tags": [
         "done"
       ],
-      "categories": []
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
     },
     "chef-hat": {
       "tags": [
@@ -1212,6 +1441,19 @@
         "brands"
       ]
     },
+    "cigarette": {
+      "tags": [
+        "smoking"
+      ],
+      "categories": []
+    },
+    "cigarette-off": {
+      "tags": [
+        "smoking",
+        "no-smoking"
+      ],
+      "categories": []
+    },
     "circle": {
       "tags": [
         "off",
@@ -1243,7 +1485,9 @@
         "tv",
         "television"
       ],
-      "categories": []
+      "categories": [
+        "multimedia"
+      ]
     },
     "clipboard": {
       "tags": [
@@ -1300,7 +1544,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-1": {
       "tags": [
@@ -1308,7 +1554,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-10": {
       "tags": [
@@ -1316,7 +1564,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-11": {
       "tags": [
@@ -1324,15 +1574,21 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-12": {
       "tags": [
         "time",
         "watch",
-        "alarm"
+        "alarm",
+        "noon",
+        "midnight"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-2": {
       "tags": [
@@ -1340,7 +1596,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-3": {
       "tags": [
@@ -1348,7 +1606,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-4": {
       "tags": [
@@ -1356,7 +1616,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-5": {
       "tags": [
@@ -1364,7 +1626,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-6": {
       "tags": [
@@ -1372,7 +1636,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-7": {
       "tags": [
@@ -1380,7 +1646,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-8": {
       "tags": [
@@ -1388,7 +1656,9 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "clock-9": {
       "tags": [
@@ -1396,55 +1666,70 @@
         "watch",
         "alarm"
       ],
-      "categories": []
+      "categories": [
+        "time"
+      ]
     },
     "cloud": {
       "tags": [
         "weather"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-drizzle": {
       "tags": [
         "weather",
         "shower"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-fog": {
       "tags": [
         "weather",
         "mist"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-hail": {
       "tags": [
         "weather",
         "rainfall"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-lightning": {
       "tags": [
         "weather",
         "bolt"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-moon": {
       "tags": [
         "weather",
         "night"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-off": {
       "tags": [
         "disconnect"
       ],
       "categories": [
-        "connectivity"
+        "connectivity",
+        "weather"
       ]
     },
     "cloud-rain": {
@@ -1452,41 +1737,54 @@
         "weather",
         "rainfall"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-rain-wind": {
       "tags": [
         "weather",
         "rainfall"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-snow": {
       "tags": [
         "weather",
         "blizzard"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloud-sun": {
       "tags": [
         "weather",
         "partly"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "cloudy": {
       "tags": [
+        "weather",
         "clouds"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "clover": {
       "tags": [
         "leaf",
         "luck"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "code": {
       "tags": [
@@ -1496,7 +1794,8 @@
         "xml"
       ],
       "categories": [
-        "text"
+        "text",
+        "coding"
       ]
     },
     "code-2": {
@@ -1507,7 +1806,8 @@
         "xml"
       ],
       "categories": [
-        "text"
+        "text",
+        "coding"
       ]
     },
     "codepen": {
@@ -1516,7 +1816,8 @@
       ],
       "categories": [
         "brands",
-        "development"
+        "development",
+        "coding"
       ]
     },
     "codesandbox": {
@@ -1525,7 +1826,8 @@
       ],
       "categories": [
         "brands",
-        "development"
+        "development",
+        "coding"
       ]
     },
     "coffee": {
@@ -1538,7 +1840,9 @@
         "hot",
         "beverage"
       ],
-      "categories": []
+      "categories": [
+        "food-beverage"
+      ]
     },
     "coins": {
       "tags": [
@@ -1548,7 +1852,8 @@
         "gamble"
       ],
       "categories": [
-        "money"
+        "money",
+        "gaming"
       ]
     },
     "columns": {
@@ -1566,7 +1871,7 @@
         "terminal",
         "prompt"
       ],
-      "categories": []
+      "categories": ["coding"]
     },
     "compass": {
       "tags": [
@@ -1579,7 +1884,8 @@
         "transportation",
         "navigation",
         "maps",
-        "photography"
+        "photography",
+        "gaming"
       ]
     },
     "component": {
@@ -1591,7 +1897,7 @@
         "part",
         "symbol"
       ],
-      "categories": []
+      "categories": ["design","coding","development"]
     },
     "contact": {
       "tags": [
@@ -1621,7 +1927,8 @@
         "food"
       ],
       "categories": [
-        "account"
+        "account",
+        "food-beverage"
       ]
     },
     "copy": {
@@ -1717,7 +2024,9 @@
         "computer",
         "chip"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "credit-card": {
       "tags": [
@@ -1727,7 +2036,8 @@
         "cc"
       ],
       "categories": [
-        "account"
+        "account",
+        "money"
       ]
     },
     "croissant": {
@@ -1737,7 +2047,9 @@
         "food",
         "pastry"
       ],
-      "categories": []
+      "categories": [
+        "food-beverage"
+      ]
     },
     "crop": {
       "tags": [
@@ -1754,7 +2066,9 @@
         "healthcare",
         "firstaid"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "crosshair": {
       "tags": [
@@ -1771,7 +2085,9 @@
         "winner",
         "favourite"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "currency": {
       "tags": [
@@ -1788,7 +2104,9 @@
         "storage",
         "memory"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "delete": {
       "tags": [
@@ -1805,54 +2123,90 @@
         "dice",
         "random",
         "tabletop",
-        "1"
+        "1",
+        "board",
+        "game"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "dice-2": {
       "tags": [
         "dice",
         "random",
         "tabletop",
-        "2"
+        "2",
+        "board",
+        "game"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "dice-3": {
       "tags": [
         "dice",
         "random",
         "tabletop",
-        "3"
+        "3",
+        "board",
+        "game"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "dice-4": {
       "tags": [
         "dice",
         "random",
         "tabletop",
-        "4"
+        "4",
+        "board",
+        "game"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "dice-5": {
       "tags": [
         "dice",
         "random",
         "tabletop",
-        "5"
+        "5",
+        "board",
+        "game"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "dice-6": {
       "tags": [
         "dice",
         "random",
         "tabletop",
-        "6"
+        "6",
+        "board",
+        "game"
       ],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dices": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
     },
     "disc": {
       "tags": [
@@ -1861,25 +2215,36 @@
         "dvd",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "devices",
+        "multimedia"
+      ]
     },
     "divide": {
       "tags": [
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "divide-circle": {
       "tags": [
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "divide-square": {
       "tags": [
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "dollar-sign": {
       "tags": [
@@ -1899,7 +2264,7 @@
       ],
       "categories": [
         "arrows",
-        "file"
+        "files"
       ]
     },
     "download-cloud": {
@@ -1908,7 +2273,7 @@
       ],
       "categories": [
         "arrows",
-        "file"
+        "files"
       ]
     },
     "dribbble": {
@@ -1924,16 +2289,23 @@
     },
     "droplet": {
       "tags": [
-        "water"
+        "water",
+        "weather"
       ],
-      "categories": []
+      "categories": [
+        "weather",
+        "gaming"
+      ]
     },
     "droplets": {
       "tags": [
         "water",
-        "humidity"
+        "humidity",
+        "weather"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "drumstick": {
       "tags": [
@@ -1941,7 +2313,9 @@
         "chicken",
         "meat"
       ],
-      "categories": []
+      "categories": [
+        "food-beverage"
+      ]
     },
     "edit": {
       "tags": [
@@ -1974,20 +2348,26 @@
       "tags": [
         "food"
       ],
-      "categories": []
+      "categories": [
+        "food-beverage"
+      ]
     },
     "equal": {
       "tags": [
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "equal-not": {
       "tags": [
         "calculate",
         "off"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "eraser": {
       "tags": [
@@ -2072,19 +2452,24 @@
         "manufacture",
         "sector"
       ],
-      "categories": []
+      "categories": [
+        "buildings"
+      ]
     },
     "fast-forward": {
       "tags": [
         "music"
       ],
       "categories": [
+        "multimedia",
         "arrows"
       ]
     },
     "feather": {
       "tags": [],
-      "categories": []
+      "categories": [
+        "gaming"
+      ]
     },
     "figma": {
       "tags": [
@@ -2101,41 +2486,54 @@
       "tags": [
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-check": {
       "tags": [
         "done",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-check-2": {
       "tags": [
         "done",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-code": {
       "tags": [
         "script",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files",
+        "coding"
+      ]
     },
     "file-digit": {
       "tags": [
         "number",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files",
+        "coding"
+      ]
     },
     "file-input": {
       "tags": [
         "document"
       ],
       "categories": [
+        "files",
         "arrows"
       ]
     },
@@ -2146,19 +2544,24 @@
         "erase",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-minus-2": {
       "tags": [
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-output": {
       "tags": [
         "document"
       ],
       "categories": [
+        "files",
         "arrows"
       ]
     },
@@ -2169,7 +2572,9 @@
         "new",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-plus-2": {
       "tags": [
@@ -2178,7 +2583,9 @@
         "new",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-search": {
       "tags": [
@@ -2186,7 +2593,9 @@
         "document",
         "find"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-text": {
       "tags": [
@@ -2195,7 +2604,10 @@
         "pdf",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files",
+        "text"
+      ]
     },
     "file-x": {
       "tags": [
@@ -2204,7 +2616,9 @@
         "remove",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "file-x-2": {
       "tags": [
@@ -2213,7 +2627,9 @@
         "remove",
         "document"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "files": {
       "tags": [
@@ -2221,7 +2637,9 @@
         "copy",
         "documents"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "film": {
       "tags": [
@@ -2229,7 +2647,8 @@
         "video"
       ],
       "categories": [
-        "photography"
+        "photography",
+        "multimedia"
       ]
     },
     "filter": {
@@ -2237,40 +2656,52 @@
         "funnel",
         "hopper"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "flag": {
       "tags": [
         "report"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social"
+      ]
     },
     "flag-off": {
       "tags": [
         "unflag"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social"
+      ]
     },
     "flag-triangle-left": {
       "tags": [
         "report",
         "timeline"
       ],
-      "categories": []
+      "categories": ["development"]
     },
     "flag-triangle-right": {
       "tags": [
         "report",
         "timeline"
       ],
-      "categories": []
+      "categories": ["development"]
     },
     "flame": {
       "tags": [
         "fire",
         "lit"
       ],
-      "categories": []
+      "categories": [
+        "weather",
+        "social",
+        "gaming"
+      ]
     },
     "flashlight": {
       "tags": [
@@ -2296,7 +2727,8 @@
         "erlenmeyer"
       ],
       "categories": [
-        "science"
+        "science",
+        "gaming"
       ]
     },
     "flask-round": {
@@ -2304,7 +2736,8 @@
         "beaker"
       ],
       "categories": [
-        "science"
+        "science",
+        "gaming"
       ]
     },
     "focus": {
@@ -2321,25 +2754,33 @@
       "tags": [
         "directory"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "folder-minus": {
       "tags": [
         "directory"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "folder-open": {
       "tags": [
         "directory"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "folder-plus": {
       "tags": [
         "directory"
       ],
-      "categories": []
+      "categories": [
+        "files"
+      ]
     },
     "form-input": {
       "tags": [
@@ -2359,7 +2800,9 @@
         "share",
         "email"
       ],
-      "categories": []
+      "categories": [
+        "mail"
+      ]
     },
     "frame": {
       "tags": [
@@ -2403,7 +2846,10 @@
         "petrol",
         "tank"
       ],
-      "categories": []
+      "categories": [
+        "transportation",
+        "maps"
+      ]
     },
     "function-square": {
       "tags": [
@@ -2413,7 +2859,9 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding",
+        "shapes",
+        "maths"
       ]
     },
     "gamepad": {
@@ -2421,7 +2869,8 @@
         "console"
       ],
       "categories": [
-        "gaming"
+        "gaming",
+        "devices"
       ]
     },
     "gamepad-2": {
@@ -2429,14 +2878,17 @@
         "console"
       ],
       "categories": [
-        "gaming"
+        "gaming",
+        "devices"
       ]
     },
     "gauge": {
       "tags": [
         "dashboard"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "gavel": {
       "tags": [
@@ -2444,7 +2896,8 @@
         "mallet"
       ],
       "categories": [
-        "maps"
+        "maps",
+        "tools"
       ]
     },
     "gem": {
@@ -2454,7 +2907,10 @@
         "special",
         "present"
       ],
-      "categories": []
+      "categories": [
+        "gaming",
+        "money"
+      ]
     },
     "ghost": {
       "tags": [
@@ -2472,7 +2928,10 @@
         "birthday",
         "party"
       ],
-      "categories": []
+      "categories": [
+        "gaming",
+        "account"
+      ]
     },
     "git-branch": {
       "tags": [
@@ -2481,7 +2940,7 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding"
       ]
     },
     "git-branch-plus": {
@@ -2491,7 +2950,7 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding"
       ]
     },
     "git-commit": {
@@ -2501,7 +2960,7 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding"
       ]
     },
     "git-fork": {
@@ -2511,7 +2970,7 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding"
       ]
     },
     "git-merge": {
@@ -2521,7 +2980,7 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding"
       ]
     },
     "git-pull-request": {
@@ -2531,7 +2990,7 @@
       ],
       "categories": [
         "development",
-        "code"
+        "coding"
       ]
     },
     "github": {
@@ -2542,7 +3001,7 @@
       "categories": [
         "brands",
         "development",
-        "code"
+        "coding"
       ]
     },
     "gitlab": {
@@ -2553,7 +3012,7 @@
       "categories": [
         "brands",
         "development",
-        "code"
+        "coding"
       ]
     },
     "glasses": {
@@ -2561,7 +3020,9 @@
         "glasses",
         "spectacles"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "globe": {
       "tags": [
@@ -2571,7 +3032,8 @@
         "translate"
       ],
       "categories": [
-        "maps"
+        "maps",
+        "navigation"
       ]
     },
     "globe-2": {
@@ -2582,7 +3044,8 @@
         "translate"
       ],
       "categories": [
-        "maps"
+        "maps",
+        "navigation"
       ]
     },
     "grab": {
@@ -2590,7 +3053,9 @@
         "hand"
       ],
       "categories": [
-        "cursors"
+        "cursors",
+        "design",
+        "layout"
       ]
     },
     "graduation-cap": {
@@ -2600,7 +3065,10 @@
         "learn",
         "study"
       ],
-      "categories": []
+      "categories": [
+        "buildings",
+        "maps"
+      ]
     },
     "grid": {
       "tags": [
@@ -2638,7 +3106,9 @@
       "tags": [
         "mallet"
       ],
-      "categories": []
+      "categories": [
+        "tools"
+      ]
     },
     "hand": {
       "tags": [
@@ -2658,7 +3128,7 @@
       ],
       "categories": [
         "emoji",
-        "music"
+        "multimedia"
       ]
     },
     "hard-drive": {
@@ -2672,16 +3142,20 @@
         "harddisk"
       ],
       "categories": [
-        "development"
+        "development",
+        "devices"
       ]
     },
     "hard-hat": {
       "tags": [
         "helmet",
         "construction",
-        "safety"
+        "safety",
+        "savety"
       ],
-      "categories": []
+      "categories": [
+        "tools"
+      ]
     },
     "hash": {
       "tags": [
@@ -2698,7 +3172,9 @@
         "mist",
         "fog"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "headphones": {
       "tags": [
@@ -2707,8 +3183,11 @@
         "sound"
       ],
       "categories": [
+        "multimedia",
         "connectivity",
-        "music"
+        "devices",
+        "files",
+        "gaming"
       ]
     },
     "heart": {
@@ -2718,8 +3197,11 @@
         "emotion"
       ],
       "categories": [
+        "health",
         "social",
-        "music"
+        "multimedia",
+        "emoji",
+        "gaming"
       ]
     },
     "heart-off": {
@@ -2731,7 +3213,7 @@
       ],
       "categories": [
         "social",
-        "music"
+        "multimedia"
       ]
     },
     "help-circle": {
@@ -2740,7 +3222,9 @@
       ],
       "categories": [
         "accessibility",
-        "text"
+        "text",
+        "shapes",
+        "notifications"
       ]
     },
     "hexagon": {
@@ -2775,7 +3259,8 @@
         "version"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "time"
       ]
     },
     "home": {
@@ -2783,7 +3268,9 @@
         "house",
         "living"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "hourglass": {
       "tags": [
@@ -2791,7 +3278,10 @@
         "time",
         "sandglass"
       ],
-      "categories": []
+      "categories": [
+        "time",
+        "gaming"
+      ]
     },
     "image": {
       "tags": [
@@ -2800,7 +3290,9 @@
       ],
       "categories": [
         "photography",
-        "text"
+        "text",
+        "multimedia",
+        "files"
       ]
     },
     "image-minus": {
@@ -2809,7 +3301,9 @@
         "delete"
       ],
       "categories": [
-        "photography"
+        "photography",
+        "multimedia",
+        "files"
       ]
     },
     "image-off": {
@@ -2818,7 +3312,9 @@
         "photo"
       ],
       "categories": [
-        "photography"
+        "photography",
+        "multimedia",
+        "files"
       ]
     },
     "image-plus": {
@@ -2827,7 +3323,9 @@
         "create"
       ],
       "categories": [
-        "photography"
+        "photography",
+        "multimedia",
+        "files"
       ]
     },
     "import": {
@@ -2835,7 +3333,8 @@
         "save"
       ],
       "categories": [
-        "arrows"
+        "arrows",
+        "files"
       ]
     },
     "inbox": {
@@ -2853,7 +3352,8 @@
         "tab"
       ],
       "categories": [
-        "text"
+        "text",
+        "coding"
       ]
     },
     "indian-rupee": {
@@ -2873,14 +3373,17 @@
         "forever",
         "loop"
       ],
-      "categories": []
+      "categories": [
+        "multimedia"
+      ]
     },
     "info": {
       "tags": [
         "help"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "notifications"
       ]
     },
     "inspect": {
@@ -2894,7 +3397,8 @@
       ],
       "categories": [
         "arrows",
-        "cursors"
+        "cursors",
+        "coding"
       ]
     },
     "instagram": {
@@ -2904,7 +3408,8 @@
       ],
       "categories": [
         "brands",
-        "social"
+        "social",
+        "photography"
       ]
     },
     "italic": {
@@ -2935,7 +3440,10 @@
         "authentication",
         "secure"
       ],
-      "categories": []
+      "categories": [
+        "security",
+        "account"
+      ]
     },
     "keyboard": {
       "tags": [
@@ -2946,7 +3454,8 @@
       ],
       "categories": [
         "text",
-        "devices"
+        "devices",
+        "coding"
       ]
     },
     "landmark": {
@@ -2959,7 +3468,8 @@
       ],
       "categories": [
         "money",
-        "maps"
+        "maps",
+        "buildings"
       ]
     },
     "languages": {
@@ -3067,7 +3577,9 @@
         "block",
         "section"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "library": {
       "tags": [
@@ -3076,7 +3588,8 @@
         "album"
       ],
       "categories": [
-        "photography"
+        "photography",
+        "multimedia"
       ]
     },
     "life-buoy": {
@@ -3086,7 +3599,8 @@
         "ship"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "health"
       ]
     },
     "lightbulb": {
@@ -3180,14 +3694,19 @@
         "remove",
         "song",
         "subtract",
-        "delete"
+        "delete",
+        "unqueue"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "text"
+      ]
     },
     "list-ordered": {
       "tags": [
         "number",
-        "order"
+        "order",
+        "queue"
       ],
       "categories": [
         "text"
@@ -3201,29 +3720,42 @@
         "track",
         "new"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "text"
+      ]
     },
     "list-x": {
       "tags": [
         "playlist",
         "subtract",
         "remove",
-        "delete"
+        "delete",
+        "unqueue"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "text"
+      ]
     },
     "loader": {
       "tags": [
         "load",
         "wait"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "layout"
+      ]
     },
     "loader-2": {
       "tags": [
         "load"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "layout"
+      ]
     },
     "locate": {
       "tags": [
@@ -3382,7 +3914,10 @@
         "alert",
         "notification"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "notifications"
+      ]
     },
     "meh": {
       "tags": [
@@ -3391,7 +3926,9 @@
         "neutral",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "emoji"
+      ]
     },
     "menu": {
       "tags": [
@@ -3461,7 +3998,9 @@
       ],
       "categories": [
         "arrows",
-        "development"
+        "development",
+        "coding",
+        "gaming"
       ]
     },
     "minimize": {
@@ -3493,21 +4032,29 @@
         "subtract",
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths"
+      ]
     },
     "minus-circle": {
       "tags": [
         "subtract",
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "minus-square": {
       "tags": [
         "subtract",
         "calculate"
       ],
-      "categories": []
+      "categories": [
+        "maths",
+        "shapes"
+      ]
     },
     "monitor": {
       "tags": [
@@ -3555,7 +4102,9 @@
         "menu",
         "options"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "more-vertical": {
       "tags": [
@@ -3563,7 +4112,9 @@
         "menu",
         "options"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "mountain": {
       "tags": [
@@ -3572,7 +4123,8 @@
         "rock"
       ],
       "categories": [
-        "nature"
+        "nature",
+        "gaming"
       ]
     },
     "mountain-snow": {
@@ -3682,7 +4234,8 @@
         "note"
       ],
       "categories": [
-        "music"
+        "multimedia",
+        "files"
       ]
     },
     "navigation": {
@@ -3729,7 +4282,10 @@
       "tags": [
         "tree"
       ],
-      "categories": []
+      "categories": [
+        "development",
+        "coding"
+      ]
     },
     "octagon": {
       "tags": [
@@ -3745,7 +4301,7 @@
         "mac",
         "button"
       ],
-      "categories": []
+      "categories": ["coding"]
     },
     "outdent": {
       "tags": [
@@ -3753,7 +4309,8 @@
         "tab"
       ],
       "categories": [
-        "text"
+        "text",
+        "coding"
       ]
     },
     "package": {
@@ -3762,7 +4319,8 @@
         "container"
       ],
       "categories": [
-        "file"
+        "files",
+        "development"
       ]
     },
     "package-check": {
@@ -3770,14 +4328,18 @@
         "confirm",
         "verified"
       ],
-      "categories": []
+      "categories": [
+        "development"
+      ]
     },
     "package-minus": {
       "tags": [
         "delete",
         "remove"
       ],
-      "categories": []
+      "categories": [
+        "development"
+      ]
     },
     "package-plus": {
       "tags": [
@@ -3785,7 +4347,9 @@
         "add",
         "create"
       ],
-      "categories": []
+      "categories": [
+        "development"
+      ]
     },
     "package-search": {
       "tags": [
@@ -3793,7 +4357,8 @@
         "product process"
       ],
       "categories": [
-        "file"
+        "files",
+        "development"
       ]
     },
     "package-x": {
@@ -3801,7 +4366,9 @@
         "delete",
         "remove"
       ],
-      "categories": []
+      "categories": [
+        "development"
+      ]
     },
     "palette": {
       "tags": [
@@ -3820,7 +4387,9 @@
         "leisure",
         "island"
       ],
-      "categories": []
+      "categories": [
+        "nature"
+      ]
     },
     "paperclip": {
       "tags": [
@@ -3829,7 +4398,9 @@
       ],
       "categories": [
         "text",
-        "design"
+        "design",
+        "files",
+        "mail"
       ]
     },
     "pause": {
@@ -3848,7 +4419,8 @@
         "stop"
       ],
       "categories": [
-        "multimedia"
+        "multimedia",
+        "shapes"
       ]
     },
     "pause-octagon": {
@@ -3858,7 +4430,8 @@
         "stop"
       ],
       "categories": [
-        "multimedia"
+        "multimedia",
+        "shapes"
       ]
     },
     "pen-tool": {
@@ -3981,11 +4554,12 @@
     "pie-chart": {
       "tags": [
         "statistics",
-        "diagram"
+        "diagram",
+        "presentation"
       ],
       "categories": [
         "charts",
-        "file"
+        "files"
       ]
     },
     "piggy-bank": {
@@ -4007,6 +4581,17 @@
       "categories": [
         "maps",
         "account"
+      ]
+    },
+    "pin-off": {
+      "tags": [
+        "unpin",
+        "map",
+        "unlock",
+        "unfix"
+      ],
+      "categories": [
+        "maps"
       ]
     },
     "pipette": {
@@ -4035,8 +4620,7 @@
       ],
       "categories": [
         "arrows",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "play-circle": {
@@ -4046,8 +4630,7 @@
       ],
       "categories": [
         "shapes",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "plug-zap": {
@@ -4086,6 +4669,7 @@
         "new"
       ],
       "categories": [
+        "maths",
         "shapes"
       ]
     },
@@ -4135,7 +4719,7 @@
         "device"
       ],
       "categories": [
-        "devices"
+        "connectivity"
       ]
     },
     "power-off": {
@@ -4143,7 +4727,7 @@
         "device"
       ],
       "categories": [
-        "devices"
+        "connectivity"
       ]
     },
     "printer": {
@@ -4165,7 +4749,8 @@
         "piece"
       ],
       "categories": [
-        "development"
+        "development",
+        "gaming"
       ]
     },
     "qr-code": {
@@ -4173,7 +4758,7 @@
         "barcode"
       ],
       "categories": [
-        "code",
+        "coding",
         "development",
         "social"
       ]
@@ -4257,7 +4842,7 @@
       "categories": [
         "text",
         "development",
-        "code"
+        "coding"
       ]
     },
     "repeat": {
@@ -4267,7 +4852,6 @@
       ],
       "categories": [
         "arrows",
-        "music",
         "multimedia"
       ]
     },
@@ -4276,7 +4860,6 @@
         "replay"
       ],
       "categories": [
-        "music",
         "multimedia"
       ]
     },
@@ -4302,7 +4885,6 @@
       ],
       "categories": [
         "arrows",
-        "music",
         "multimedia"
       ]
     },
@@ -4315,8 +4897,9 @@
         "version"
       ],
       "categories": [
+        "gaming",
         "development",
-        "code"
+        "coding"
       ]
     },
     "rocking-chair": {
@@ -4401,7 +4984,9 @@
         "rule",
         "law"
       ],
-      "categories": []
+      "categories": [
+        "maps"
+      ]
     },
     "scan": {
       "tags": [
@@ -4583,7 +5168,7 @@
       ],
       "categories": [
         "text",
-        "file"
+        "files"
       ]
     },
     "shield": {
@@ -4594,7 +5179,8 @@
       "categories": [
         "account",
         "security",
-        "gaming"
+        "gaming",
+        "coding"
       ]
     },
     "shield-alert": {
@@ -4607,7 +5193,8 @@
       ],
       "categories": [
         "account",
-        "security"
+        "security",
+        "notifications"
       ]
     },
     "shield-check": {
@@ -4681,10 +5268,13 @@
     "shovel": {
       "tags": [
         "dig",
-        "spade"
+        "spade",
+        "treasure"
       ],
       "categories": [
-        "nature"
+        "nature",
+        "tools",
+        "gaming"
       ]
     },
     "shrink": {
@@ -4703,8 +5293,7 @@
       ],
       "categories": [
         "multimedia",
-        "arrows",
-        "music"
+        "arrows"
       ]
     },
     "sidebar": {
@@ -4756,8 +5345,7 @@
         "5g"
       ],
       "categories": [
-        "connectivity",
-        "devices"
+        "connectivity"
       ]
     },
     "signal-high": {
@@ -4772,8 +5360,7 @@
         "5g"
       ],
       "categories": [
-        "connectivity",
-        "devices"
+        "connectivity"
       ]
     },
     "signal-low": {
@@ -4788,8 +5375,7 @@
         "5g"
       ],
       "categories": [
-        "connectivity",
-        "devices"
+        "connectivity"
       ]
     },
     "signal-medium": {
@@ -4804,8 +5390,7 @@
         "5g"
       ],
       "categories": [
-        "connectivity",
-        "devices"
+        "connectivity"
       ]
     },
     "signal-zero": {
@@ -4821,8 +5406,7 @@
         "lost"
       ],
       "categories": [
-        "connectivity",
-        "devices"
+        "connectivity"
       ]
     },
     "skip-back": {
@@ -4833,7 +5417,6 @@
       ],
       "categories": [
         "multimedia",
-        "music",
         "arrows"
       ]
     },
@@ -4846,7 +5429,6 @@
       ],
       "categories": [
         "multimedia",
-        "music",
         "arrows"
       ]
     },
@@ -4952,6 +5534,19 @@
         "weather"
       ]
     },
+    "sofa": {
+      "tags": [
+        "armchair",
+        "furniture",
+        "leisure",
+        "lounge",
+        "loveseat",
+        "couch"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
     "sort-asc": {
       "tags": [
         "filter"
@@ -4977,8 +5572,7 @@
       ],
       "categories": [
         "multimedia",
-        "devices",
-        "music"
+        "devices"
       ]
     },
     "sprout": {
@@ -4987,7 +5581,8 @@
         "nature"
       ],
       "categories": [
-        "nature"
+        "nature",
+        "gaming"
       ]
     },
     "square": {
@@ -5011,7 +5606,9 @@
         "social",
         "shapes",
         "multimedia",
-        "music"
+        "weather",
+        "emoji",
+        "gaming"
       ]
     },
     "star-half": {
@@ -5024,8 +5621,7 @@
       ],
       "categories": [
         "social",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "star-off": {
@@ -5036,9 +5632,8 @@
         "unrate"
       ],
       "categories": [
-        "social",
         "multimedia",
-        "music"
+        "social"
       ]
     },
     "stop-circle": {
@@ -5048,7 +5643,6 @@
       ],
       "categories": [
         "multimedia",
-        "music",
         "shapes"
       ]
     },
@@ -5147,7 +5741,8 @@
       ],
       "categories": [
         "arrows",
-        "weather"
+        "weather",
+        "time"
       ]
     },
     "sunset": {
@@ -5203,7 +5798,8 @@
         "weapon"
       ],
       "categories": [
-        "gaming"
+        "gaming",
+        "tools"
       ]
     },
     "swords": {
@@ -5215,7 +5811,8 @@
         "weapon"
       ],
       "categories": [
-        "gaming"
+        "gaming",
+        "tools"
       ]
     },
     "table": {
@@ -5225,7 +5822,7 @@
       ],
       "categories": [
         "text",
-        "file"
+        "files"
       ]
     },
     "tablet": {
@@ -5271,7 +5868,7 @@
         "shell"
       ],
       "categories": [
-        "code",
+        "coding",
         "development"
       ]
     },
@@ -5283,8 +5880,9 @@
         "shell"
       ],
       "categories": [
-        "code",
-        "development"
+        "coding",
+        "development",
+        "shapes"
       ]
     },
     "text-cursor": {
@@ -5412,7 +6010,7 @@
         "off",
         "switch"
       ],
-      "categories": []
+      "categories": ["layout", "account"]
     },
     "toggle-right": {
       "tags": [
@@ -5420,7 +6018,7 @@
         "off",
         "switch"
       ],
-      "categories": []
+      "categories": ["layout", "account"]
     },
     "tornado": {
       "tags": [
@@ -5451,7 +6049,10 @@
         "remove",
         "bin"
       ],
-      "categories": []
+      "categories": [
+        "files",
+        "mail"
+      ]
     },
     "trash-2": {
       "tags": [
@@ -5460,7 +6061,10 @@
         "remove",
         "bin"
       ],
-      "categories": []
+      "categories": [
+        "files",
+        "mail"
+      ]
     },
     "trello": {
       "tags": [
@@ -5517,7 +6121,8 @@
         "stream"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "multimedia"
       ]
     },
     "tv-2": {
@@ -5528,7 +6133,8 @@
         "display"
       ],
       "categories": [
-        "devices"
+        "devices",
+        "multimedia"
       ]
     },
     "twitch": {
@@ -5633,7 +6239,7 @@
       ],
       "categories": [
         "arrows",
-        "file"
+        "files"
       ]
     },
     "upload-cloud": {
@@ -5642,7 +6248,7 @@
       ],
       "categories": [
         "arrows",
-        "file"
+        "files"
       ]
     },
     "user": {
@@ -5718,7 +6324,8 @@
         "incognito"
       ],
       "categories": [
-        "account"
+        "account",
+        "gaming"
       ]
     },
     "verified": {
@@ -5740,7 +6347,8 @@
       "categories": [
         "devices",
         "connectivity",
-        "account"
+        "account",
+        "notifications"
       ]
     },
     "vibrate-off": {
@@ -5748,7 +6356,8 @@
         "smartphone",
         "notification",
         "rumble",
-        "haptic feedback"
+        "haptic feedback",
+        "notifications"
       ],
       "categories": [
         "devices",
@@ -5806,50 +6415,50 @@
       "tags": [
         "music",
         "sound",
-        "mute"
+        "mute",
+        "speaker"
       ],
       "categories": [
         "connectivity",
         "communication",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "volume-1": {
       "tags": [
         "music",
-        "sound"
+        "sound",
+        "speaker"
       ],
       "categories": [
         "connectivity",
         "communication",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "volume-2": {
       "tags": [
         "music",
-        "sound"
+        "sound",
+        "speaker"
       ],
       "categories": [
         "connectivity",
         "communication",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "volume-x": {
       "tags": [
         "music",
         "sound",
-        "mute"
+        "mute",
+        "speaker"
       ],
       "categories": [
         "connectivity",
         "communication",
-        "multimedia",
-        "music"
+        "multimedia"
       ]
     },
     "wallet": {
@@ -5871,6 +6480,7 @@
       "categories": [
         "design",
         "gaming",
+        "cursors",
         "photography"
       ]
     },
@@ -5895,7 +6505,7 @@
       "categories": [
         "weather",
         "maps",
-        "music"
+        "multimedia"
       ]
     },
     "webcam": {
@@ -5959,7 +6569,9 @@
         "spanner"
       ],
       "categories": [
-        "account"
+        "account",
+        "coding",
+        "tools"
       ]
     },
     "x": {
@@ -5972,6 +6584,7 @@
         "clear"
       ],
       "categories": [
+        "notifications",
         "maths"
       ]
     },
@@ -6000,7 +6613,8 @@
       ],
       "categories": [
         "maths",
-        "shapes"
+        "shapes",
+        "notifications"
       ]
     },
     "x-square": {
@@ -6014,7 +6628,8 @@
       ],
       "categories": [
         "maths",
-        "shapes"
+        "shapes",
+        "notifications"
       ]
     },
     "youtube": {
@@ -6041,7 +6656,8 @@
       "categories": [
         "connectivity",
         "devices",
-        "photography"
+        "photography",
+        "weather"
       ]
     },
     "zap-off": {
@@ -6053,7 +6669,8 @@
       "categories": [
         "connectivity",
         "devices",
-        "photography"
+        "photography",
+        "weather"
       ]
     },
     "zoom-in": {
@@ -6062,6 +6679,7 @@
         "plus"
       ],
       "categories": [
+        "accessibility",
         "layout",
         "design",
         "text",
@@ -6074,6 +6692,7 @@
         "plus"
       ],
       "categories": [
+        "accessibility",
         "layout",
         "design",
         "text",
@@ -6098,12 +6717,16 @@
       "title": "Brands",
       "icon": "lucide"
     },
+    "buildings": {
+      "title": "Buildings",
+      "icon": "building"
+    },
     "charts": {
       "title": "Charts",
       "icon": "pie-chart"
     },
-    "code": {
-      "title": "Code",
+    "coding": {
+      "title": "Coding",
       "icon": "code-2"
     },
     "communication": {
@@ -6154,6 +6777,10 @@
       "title": "Gaming",
       "icon": "gamepad-2"
     },
+    "health": {
+      "title": "Health",
+      "icon": "heart"
+    },
     "layout": {
       "title": "Layout",
       "icon": "layout"
@@ -6177,10 +6804,6 @@
     "multimedia": {
       "title": "Multimedia",
       "icon": "play-circle"
-    },
-    "music": {
-      "title": "Music",
-      "icon": "music"
     },
     "nature": {
       "title": "Nature",
@@ -6229,6 +6852,10 @@
     "time": {
       "title": "Time & calendar",
       "icon": "calendar"
+    },
+    "tools": {
+      "title": "Tools",
+      "icon": "hammer"
     },
     "transportation": {
       "title": "Transportation",
