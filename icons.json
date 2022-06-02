@@ -30,7 +30,11 @@
         "cast",
         "mirroring"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices",
+        "brands"
+      ]
     },
     "alarm-check": {
       "tags": [
@@ -100,7 +104,9 @@
         "alignment",
         "center"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "align-center-horizontal": {
       "tags": [
@@ -219,7 +225,9 @@
         "alignment",
         "justified"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "align-left": {
       "tags": [
@@ -227,7 +235,9 @@
         "alignment",
         "left"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "align-right": {
       "tags": [
@@ -235,7 +245,9 @@
         "alignment",
         "right"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "align-start-horizontal": {
       "tags": [
@@ -343,7 +355,9 @@
       "tags": [
         "ship"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "aperture": {
       "tags": [
@@ -363,63 +377,83 @@
       "tags": [
         "key"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-big-left": {
       "tags": [
         "key"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-big-right": {
       "tags": [
         "key",
         "forward"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-big-up": {
       "tags": [
         "key",
         "forward"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-down": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-down-circle": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-down-left": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-down-right": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-left": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-left-circle": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-left-right": {
       "tags": [
@@ -429,49 +463,65 @@
         "switch",
         "transaction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-right": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-right-circle": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-up": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-up-circle": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-up-left": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "arrow-up-right": {
       "tags": [
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "asterisk": {
       "tags": [
         "reference"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "at-sign": {
       "tags": [
@@ -480,7 +530,10 @@
         "email",
         "message"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "account"
+      ]
     },
     "award": {
       "tags": [
@@ -501,7 +554,10 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "bar-chart": {
       "tags": [
@@ -509,7 +565,9 @@
         "diagram",
         "graph"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "bar-chart-2": {
       "tags": [
@@ -517,7 +575,9 @@
         "diagram",
         "graph"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "bar-chart-3": {
       "tags": [
@@ -525,7 +585,9 @@
         "diagram",
         "graph"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "bar-chart-4": {
       "tags": [
@@ -533,7 +595,9 @@
         "diagram",
         "graph"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "bar-chart-horizontal": {
       "tags": [
@@ -541,7 +605,9 @@
         "diagram",
         "graph"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "baseline": {
       "tags": [
@@ -549,7 +615,9 @@
         "format",
         "color"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "bath": {
       "tags": [
@@ -608,7 +676,9 @@
         "sound",
         "reminder"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "bell-minus": {
       "tags": [
@@ -667,7 +737,10 @@
         "zero",
         "one"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "code"
+      ]
     },
     "bitcoin": {
       "tags": [
@@ -675,31 +748,44 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "currency",
+        "code",
+        "money"
+      ]
     },
     "bluetooth": {
       "tags": [
         "wireless"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "bluetooth-connected": {
       "tags": [
         "paired"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "bluetooth-off": {
       "tags": [
         "lost"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "bluetooth-searching": {
       "tags": [
         "pairing"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "bold": {
       "tags": [
@@ -707,7 +793,9 @@
         "strong",
         "format"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "book": {
       "tags": [
@@ -733,20 +821,26 @@
         "marker",
         "tag"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "bookmark-minus": {
       "tags": [
         "delete",
         "remove"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "bookmark-plus": {
       "tags": [
         "add"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "bot": {
       "tags": [
@@ -769,7 +863,9 @@
         "marquee",
         "tool"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "briefcase": {
       "tags": [
@@ -786,7 +882,9 @@
         "paint",
         "color"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "bug": {
       "tags": [
@@ -801,7 +899,9 @@
         "organisation",
         "organization"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "building-2": {
       "tags": [
@@ -812,7 +912,9 @@
         "organisation",
         "organization"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "bus": {
       "tags": [
@@ -913,7 +1015,9 @@
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevron-first": {
       "tags": [
@@ -921,7 +1025,9 @@
         "previous",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevron-last": {
       "tags": [
@@ -930,31 +1036,41 @@
         "next",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevron-left": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevron-right": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevron-up": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-down": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-down-up": {
       "tags": [
@@ -963,43 +1079,55 @@
         "fold",
         "vertical"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-left": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-left-right": {
       "tags": [
         "arrow",
         "expand",
-        "horizonal",
+        "horizontal",
         "unfold"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-right": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-right-left": {
       "tags": [
         "arrow",
         "collapse",
         "fold",
-        "horizonal"
+        "horizontal"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-up": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chevrons-up-down": {
       "tags": [
@@ -1008,7 +1136,9 @@
         "unfold",
         "vertical"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "chrome": {
       "tags": [
@@ -1050,21 +1180,28 @@
         "copy",
         "paste"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "clipboard-check": {
       "tags": [
         "copied",
         "pasted"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "clipboard-copy": {
       "tags": [
         "copy",
         "paste"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "clipboard-list": {
       "tags": [
@@ -1072,7 +1209,9 @@
         "paste",
         "tasks"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "clipboard-x": {
       "tags": [
@@ -1081,7 +1220,9 @@
         "discard",
         "remove"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "clock": {
       "tags": [
@@ -1232,7 +1373,9 @@
       "tags": [
         "disconnect"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "cloud-rain": {
       "tags": [
@@ -1282,7 +1425,9 @@
         "html",
         "xml"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "code-2": {
       "tags": [
@@ -1291,19 +1436,27 @@
         "html",
         "xml"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "codepen": {
       "tags": [
         "logo"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "development"
+      ]
     },
     "codesandbox": {
       "tags": [
         "logo"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "development"
+      ]
     },
     "coffee": {
       "tags": [
@@ -1324,13 +1477,17 @@
         "finance",
         "gamble"
       ],
-      "categories": []
+      "categories": [
+        "money"
+      ]
     },
     "columns": {
       "tags": [
         "layout"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "command": {
       "tags": [
@@ -1348,7 +1505,11 @@
         "travel",
         "direction"
       ],
-      "categories": []
+      "categories": [
+        "transportation",
+        "navigation",
+        "maps"
+      ]
     },
     "component": {
       "tags": [
@@ -1366,11 +1527,18 @@
         "person",
         "user"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "contrast": {
-      "tags": [],
-      "categories": []
+      "tags": [
+        "display",
+        "accessibility"
+      ],
+      "categories": [
+        "accessibility"
+      ]
     },
     "cookie": {
       "tags": [
@@ -1379,14 +1547,18 @@
         "legal",
         "food"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "copy": {
       "tags": [
         "clone",
         "duplicate"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "copyleft": {
       "tags": [
@@ -1405,49 +1577,65 @@
         "arrow",
         "return"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-down-right": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-left-down": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-left-up": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-right-down": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-right-up": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-up-left": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "corner-up-right": {
       "tags": [
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "cpu": {
       "tags": [
@@ -1465,7 +1653,9 @@
         "payment",
         "cc"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "croissant": {
       "tags": [
@@ -1510,7 +1700,10 @@
         "finance",
         "money"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "database": {
       "tags": [
@@ -1524,7 +1717,10 @@
         "backspace",
         "remove"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "dice-1": {
       "tags": [
@@ -1613,24 +1809,38 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "download": {
       "tags": [
         "import",
         "export"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "download-cloud": {
       "tags": [
         "import"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "dribbble": {
-      "tags": [],
-      "categories": []
+      "tags": [
+        "design",
+        "social"
+      ],
+      "categories": [
+        "brands",
+        "social",
+        "design"
+      ]
     },
     "droplet": {
       "tags": [
@@ -1658,21 +1868,27 @@
         "pencil",
         "change"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "edit-2": {
       "tags": [
         "pencil",
         "change"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "edit-3": {
       "tags": [
         "pencil",
         "change"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "egg": {
       "tags": [
@@ -1701,7 +1917,9 @@
         "delete",
         "clear"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "euro": {
       "tags": [
@@ -1709,27 +1927,37 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "expand": {
       "tags": [
         "scale",
         "fullscreen"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "external-link": {
       "tags": [
         "outbound"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "eye": {
       "tags": [
         "view",
         "watch"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "eye-off": {
       "tags": [
@@ -1738,14 +1966,20 @@
         "hide",
         "hidden"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "facebook": {
       "tags": [
         "logo",
         "social"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social",
+        "brands"
+      ]
     },
     "factory": {
       "tags": [
@@ -1762,7 +1996,9 @@
       "tags": [
         "music"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "feather": {
       "tags": [],
@@ -1774,7 +2010,10 @@
         "design",
         "tool"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "design"
+      ]
     },
     "file": {
       "tags": [
@@ -1814,7 +2053,9 @@
       "tags": [
         "document"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "file-minus": {
       "tags": [
@@ -1835,7 +2076,9 @@
       "tags": [
         "document"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "file-plus": {
       "tags": [
@@ -2010,7 +2253,9 @@
         "field",
         "text"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "forward": {
       "tags": [
@@ -2026,7 +2271,9 @@
         "design",
         "tool"
       ],
-      "categories": []
+      "categories": [
+        "design"
+      ]
     },
     "framer": {
       "tags": [
@@ -2034,7 +2281,10 @@
         "design",
         "tool"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "design"
+      ]
     },
     "frown": {
       "tags": [
@@ -2044,7 +2294,10 @@
         "sad",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "emoji",
+        "account"
+      ]
     },
     "fuel": {
       "tags": [
@@ -2160,14 +2413,20 @@
         "logo",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "development"
+      ]
     },
     "gitlab": {
       "tags": [
         "logo",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "development"
+      ]
     },
     "glasses": {
       "tags": [
@@ -2213,7 +2472,9 @@
       "tags": [
         "table"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "grip-horizontal": {
       "tags": [
@@ -2280,7 +2541,9 @@
         "number",
         "pound"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "haze": {
       "tags": [
@@ -2295,7 +2558,9 @@
         "audio",
         "sound"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "heart": {
       "tags": [
@@ -2318,7 +2583,10 @@
       "tags": [
         "question mark"
       ],
-      "categories": []
+      "categories": [
+        "accessibility",
+        "text"
+      ]
     },
     "hexagon": {
       "tags": [
@@ -2326,14 +2594,20 @@
         "node.js",
         "logo"
       ],
-      "categories": []
+      "categories": [
+        "shapes",
+        "brands",
+        "development"
+      ]
     },
     "highlighter": {
       "tags": [
         "mark",
         "text"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "history": {
       "tags": [
@@ -2344,7 +2618,9 @@
         "timeline",
         "version"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "home": {
       "tags": [
@@ -2366,7 +2642,9 @@
         "picture",
         "photo"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "image-minus": {
       "tags": [
@@ -2393,20 +2671,26 @@
       "tags": [
         "save"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "inbox": {
       "tags": [
         "email"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "indent": {
       "tags": [
         "text",
         "tab"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "indian-rupee": {
       "tags": [
@@ -2414,7 +2698,10 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "infinity": {
       "tags": [
@@ -2428,7 +2715,9 @@
       "tags": [
         "help"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "inspect": {
       "tags": [
@@ -2439,14 +2728,20 @@
         "pointer",
         "box"
       ],
-      "categories": []
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
     },
     "instagram": {
       "tags": [
         "logo",
         "camera"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "social"
+      ]
     },
     "italic": {
       "tags": [
@@ -2454,7 +2749,9 @@
         "text",
         "format"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "japanese-yen": {
       "tags": [
@@ -2462,7 +2759,10 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "key": {
       "tags": [
@@ -2480,7 +2780,9 @@
         "settings",
         "mouse"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "landmark": {
       "tags": [
@@ -2490,13 +2792,17 @@
         "finance",
         "money"
       ],
-      "categories": []
+      "categories": [
+        "money"
+      ]
     },
     "languages": {
       "tags": [
         "translate"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "laptop": {
       "tags": [
@@ -2512,13 +2818,19 @@
     },
     "lasso": {
       "tags": [
-        "select"
+        "select",
+        "cursor"
       ],
       "categories": []
     },
     "lasso-select": {
-      "tags": [],
-      "categories": []
+      "tags": [
+        "select",
+        "cursor"
+      ],
+      "categories": [
+        "arrows"
+      ]
     },
     "layers": {
       "tags": [
@@ -2580,7 +2892,9 @@
         "rescue",
         "ship"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "lightbulb": {
       "tags": [
@@ -2602,48 +2916,66 @@
         "diagram",
         "graph"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "link": {
       "tags": [
         "chain",
         "url"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "account"
+      ]
     },
     "link-2": {
       "tags": [
         "chain",
         "url"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "account"
+      ]
     },
     "link-2-off": {
       "tags": [
         "unchain",
         "chain"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "linkedin": {
       "tags": [
         "logo",
         "social media"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social",
+        "brands"
+      ]
     },
     "list": {
       "tags": [
         "options"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "list-checks": {
       "tags": [
         "todo",
         "done"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "list-minus": {
       "tags": [
@@ -2660,7 +2992,9 @@
         "number",
         "order"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "list-plus": {
       "tags": [
@@ -2737,7 +3071,9 @@
         "enter",
         "auth"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "log-out": {
       "tags": [
@@ -2746,7 +3082,9 @@
         "exit",
         "auth"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "magnet": {
       "tags": [
@@ -2763,7 +3101,10 @@
         "message",
         "letter"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "account"
+      ]
     },
     "map": {
       "tags": [
@@ -2771,7 +3112,9 @@
         "navigation",
         "travel"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "map-pin": {
       "tags": [
@@ -2780,7 +3123,9 @@
         "travel",
         "marker"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "map-pin-off": {
       "tags": [
@@ -2796,7 +3141,9 @@
         "fullscreen",
         "expand"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "maximize-2": {
       "tags": [
@@ -2804,7 +3151,10 @@
         "arrows",
         "expand"
       ],
-      "categories": []
+      "categories": [
+        "arrows",
+        "layout"
+      ]
     },
     "megaphone": {
       "tags": [
@@ -2839,7 +3189,9 @@
         "chat",
         "conversation"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "message-square": {
       "tags": [
@@ -2847,7 +3199,9 @@
         "chat",
         "conversation"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "mic": {
       "tags": [
@@ -2873,7 +3227,10 @@
         "signpost",
         "version control"
       ],
-      "categories": []
+      "categories": [
+        "arrows",
+        "development"
+      ]
     },
     "minimize": {
       "tags": [
@@ -2881,7 +3238,9 @@
         "close",
         "shrink"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "minimize-2": {
       "tags": [
@@ -2890,7 +3249,10 @@
         "close",
         "shrink"
       ],
-      "categories": []
+      "categories": [
+        "arrows",
+        "layout"
+      ]
     },
     "minus": {
       "tags": [
@@ -2919,13 +3281,17 @@
         "screen",
         "display"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "monitor-off": {
       "tags": [
         "share"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "monitor-speaker": {
       "tags": [
@@ -2933,7 +3299,9 @@
         "connect",
         "cast"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "moon": {
       "tags": [
@@ -2988,7 +3356,9 @@
         "cursor",
         "click"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "mouse-pointer-2": {
       "tags": [
@@ -2996,7 +3366,9 @@
         "cursor",
         "click"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "mouse-pointer-click": {
       "tags": [
@@ -3004,41 +3376,53 @@
         "cursor",
         "click"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "move": {
       "tags": [
         "arrows"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "move-diagonal": {
       "tags": [
         "double",
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "move-diagonal-2": {
       "tags": [
         "double",
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "move-horizontal": {
       "tags": [
         "double",
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "move-vertical": {
       "tags": [
         "double",
         "arrow"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "music": {
       "tags": [
@@ -3099,7 +3483,9 @@
         "text",
         "tab"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "package": {
       "tags": [
@@ -3149,7 +3535,9 @@
         "color",
         "theme"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "palmtree": {
       "tags": [
@@ -3164,7 +3552,9 @@
         "attachment",
         "file"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "pause": {
       "tags": [
@@ -3195,7 +3585,9 @@
         "drawing",
         "path"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "pencil": {
       "tags": [
@@ -3218,13 +3610,17 @@
         "accessibility",
         "stick figure"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "phone": {
       "tags": [
         "call"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "phone-call": {
       "tags": [
@@ -3236,13 +3632,17 @@
       "tags": [
         "call"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "phone-incoming": {
       "tags": [
         "call"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "phone-missed": {
       "tags": [
@@ -3261,21 +3661,27 @@
       "tags": [
         "call"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "pie-chart": {
       "tags": [
         "statistics",
         "diagram"
       ],
-      "categories": []
+      "categories": [
+        "charts"
+      ]
     },
     "piggy-bank": {
       "tags": [
         "money",
         "savings"
       ],
-      "categories": []
+      "categories": [
+        "money"
+      ]
     },
     "pin": {
       "tags": [
@@ -3291,7 +3697,9 @@
         "eye dropper",
         "color picker"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "plane": {
       "tags": [
@@ -3305,7 +3713,9 @@
         "music",
         "start"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "play-circle": {
       "tags": [
@@ -3349,7 +3759,10 @@
         "logo",
         "save"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "development"
+      ]
     },
     "podcast": {
       "tags": [
@@ -3370,7 +3783,10 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "power": {
       "tags": [
@@ -3413,7 +3829,9 @@
       "tags": [
         "quotation"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "radio": {
       "tags": [
@@ -3437,21 +3855,29 @@
         "undo",
         "history"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "redo-2": {
       "tags": [
         "undo",
         "history"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "refresh-ccw": {
       "tags": [
         "arrows",
         "reload"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "refresh-cw": {
       "tags": [
@@ -3460,21 +3886,27 @@
         "synchronize",
         "arrows"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "regex": {
       "tags": [
         "search",
         "text"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "repeat": {
       "tags": [
         "loop",
         "arrows"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "repeat-1": {
       "tags": [
@@ -3498,7 +3930,9 @@
       "tags": [
         "music"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "rocket": {
       "tags": [
@@ -3523,14 +3957,18 @@
         "arrow",
         "left"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "rotate-cw": {
       "tags": [
         "arrow",
         "right"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "rss": {
       "tags": [
@@ -3554,13 +3992,18 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "save": {
       "tags": [
         "floppy disk"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "scale": {
       "tags": [
@@ -3589,21 +4032,27 @@
       "tags": [
         "cut"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "screen-share": {
       "tags": [
         "host",
         "desktop"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "screen-share-off": {
       "tags": [
         "desktop",
         "disconnect"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "search": {
       "tags": [
@@ -3611,7 +4060,11 @@
         "magnifier",
         "magnifying glass"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "account",
+        "social"
+      ]
     },
     "send": {
       "tags": [
@@ -3622,21 +4075,33 @@
         "paper aeroplane",
         "submit"
       ],
-      "categories": []
+      "categories": [
+        "mail",
+        "communication",
+        "connectivity"
+      ]
     },
     "separator-horizontal": {
       "tags": [
         "move",
         "split"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows",
+        "layout"
+      ]
     },
     "separator-vertical": {
       "tags": [
         "move",
         "split"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows",
+        "layout"
+      ]
     },
     "server": {
       "tags": [
@@ -3668,7 +4133,9 @@
         "gear",
         "preferences"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "settings-2": {
       "tags": [
@@ -3677,21 +4144,27 @@
         "gear",
         "preferences"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "share": {
       "tags": [
         "network",
         "connections"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "share-2": {
       "tags": [
         "network",
         "connections"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "sheet": {
       "tags": [
@@ -3699,14 +4172,19 @@
         "table",
         "excel"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "shield": {
       "tags": [
         "security",
         "secure"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "security"
+      ]
     },
     "shield-alert": {
       "tags": [
@@ -3714,9 +4192,12 @@
         "secure",
         "virus",
         "admin",
-        "savety"
+        "safety"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "security"
+      ]
     },
     "shield-check": {
       "tags": [
@@ -3725,7 +4206,10 @@
         "done",
         "save"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "security"
+      ]
     },
     "shield-close": {
       "tags": [
@@ -3735,7 +4219,9 @@
         "unsave",
         "virus"
       ],
-      "categories": []
+      "categories": [
+        "security"
+      ]
     },
     "shield-off": {
       "tags": [
@@ -3743,7 +4229,9 @@
         "secure",
         "insecure"
       ],
-      "categories": []
+      "categories": [
+        "security"
+      ]
     },
     "shirt": {
       "tags": [
@@ -3753,7 +4241,9 @@
         "clothing",
         "clothes"
       ],
-      "categories": []
+      "categories": [
+        "shopping"
+      ]
     },
     "shopping-bag": {
       "tags": [
@@ -3762,7 +4252,9 @@
         "purchase",
         "store"
       ],
-      "categories": []
+      "categories": [
+        "shopping"
+      ]
     },
     "shopping-cart": {
       "tags": [
@@ -3771,52 +4263,73 @@
         "purchase",
         "store"
       ],
-      "categories": []
+      "categories": [
+        "shopping"
+      ]
     },
     "shovel": {
       "tags": [
         "dig",
         "spade"
       ],
-      "categories": []
+      "categories": [
+        "nature"
+      ]
     },
     "shrink": {
       "tags": [
         "scale",
         "fullscreen"
       ],
-      "categories": []
+      "categories": [
+        "layout",
+        "arrows"
+      ]
     },
     "shuffle": {
       "tags": [
         "music"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
     },
     "sidebar": {
       "tags": [
         "menu"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "sidebar-close": {
       "tags": [
         "menu"
       ],
-      "categories": []
+      "categories": [
+        "layout",
+        "arrows"
+      ]
     },
     "sidebar-open": {
       "tags": [
         "menu"
       ],
-      "categories": []
+      "categories": [
+        "layout",
+        "arrows"
+      ]
     },
     "sigma": {
       "tags": [
         "sum",
-        "calculate"
+        "calculate",
+        "formula"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "signal": {
       "tags": [
@@ -3829,7 +4342,10 @@
         "4g",
         "5g"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "signal-high": {
       "tags": [
@@ -3842,7 +4358,10 @@
         "4g",
         "5g"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "signal-low": {
       "tags": [
@@ -3855,7 +4374,10 @@
         "4g",
         "5g"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "signal-medium": {
       "tags": [
@@ -3868,7 +4390,10 @@
         "4g",
         "5g"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "signal-zero": {
       "tags": [
@@ -3882,7 +4407,10 @@
         "5g",
         "lost"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "skip-back": {
       "tags": [
@@ -3890,7 +4418,10 @@
         "previous",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
     },
     "skip-forward": {
       "tags": [
@@ -3899,7 +4430,10 @@
         "next",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
     },
     "skull": {
       "tags": [
@@ -3913,7 +4447,13 @@
       "tags": [
         "logo"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social",
+        "communication",
+        "brands",
+        "development"
+      ]
     },
     "slash": {
       "tags": [
@@ -3948,7 +4488,10 @@
         "cellphone",
         "device"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "smartphone-charging": {
       "tags": [
@@ -3957,7 +4500,10 @@
         "device",
         "power"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "smile": {
       "tags": [
@@ -3967,7 +4513,10 @@
         "good",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "emoji",
+        "account"
+      ]
     },
     "snowflake": {
       "tags": [
@@ -3976,39 +4525,51 @@
         "freeze",
         "snow"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "sort-asc": {
       "tags": [
         "filter"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "sort-desc": {
       "tags": [
         "filter"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "speaker": {
       "tags": [
         "audio",
         "music"
       ],
-      "categories": []
+      "categories": [
+        "multimedia"
+      ]
     },
     "sprout": {
       "tags": [
         "leaf",
         "nature"
       ],
-      "categories": []
+      "categories": [
+        "nature"
+      ]
     },
     "square": {
       "tags": [
         "rectangle"
       ],
-      "categories": []
+      "categories": [
+        "shapes"
+      ]
     },
     "star": {
       "tags": [
@@ -4018,7 +4579,11 @@
         "review",
         "rating"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social",
+        "shapes"
+      ]
     },
     "star-half": {
       "tags": [
@@ -4028,7 +4593,9 @@
         "review",
         "rating"
       ],
-      "categories": []
+      "categories": [
+        "social"
+      ]
     },
     "star-off": {
       "tags": [
@@ -4037,7 +4604,9 @@
         "remove",
         "unrate"
       ],
-      "categories": []
+      "categories": [
+        "social"
+      ]
     },
     "stop-circle": {
       "tags": [
@@ -4053,7 +4622,9 @@
         "justify",
         "distribute"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "stretch-vertical": {
       "tags": [
@@ -4062,7 +4633,9 @@
         "justify",
         "distribute"
       ],
-      "categories": []
+      "categories": [
+        "layout"
+      ]
     },
     "strikethrough": {
       "tags": [
@@ -4071,13 +4644,17 @@
         "remove",
         "format"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "subscript": {
       "tags": [
         "text"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "sun": {
       "tags": [
@@ -4085,7 +4662,9 @@
         "weather",
         "light"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "sun-dim": {
       "tags": [
@@ -4094,14 +4673,18 @@
         "low",
         "brightness low"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "sun-medium": {
       "tags": [
         "brightness",
         "medium"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "sun-moon": {
       "tags": [
@@ -4111,7 +4694,9 @@
         "sun",
         "brightness"
       ],
-      "categories": []
+      "categories": [
+        "accessibility"
+      ]
     },
     "sunrise": {
       "tags": [
@@ -4120,7 +4705,9 @@
         "morning",
         "day"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "sunset": {
       "tags": [
@@ -4129,14 +4716,18 @@
         "evening",
         "night"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "superscript": {
       "tags": [
         "text",
         "exponent"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "swiss-franc": {
       "tags": [
@@ -4144,7 +4735,10 @@
         "money",
         "payment"
       ],
-      "categories": []
+      "categories": [
+        "currency",
+        "money"
+      ]
     },
     "switch-camera": {
       "tags": [
@@ -4153,7 +4747,9 @@
         "front",
         "back"
       ],
-      "categories": []
+      "categories": [
+        "communication"
+      ]
     },
     "sword": {
       "tags": [
@@ -4180,7 +4776,9 @@
         "sheet",
         "grid"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "tablet": {
       "tags": [
@@ -4192,21 +4790,27 @@
       "tags": [
         "label"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "target": {
       "tags": [
         "logo",
         "bullseye"
       ],
-      "categories": []
+      "categories": [
+        "brands"
+      ]
     },
     "tent": {
       "tags": [
         "campsite",
         "wigwam"
       ],
-      "categories": []
+      "categories": [
+        "nature"
+      ]
     },
     "terminal": {
       "tags": [
@@ -4230,13 +4834,17 @@
       "tags": [
         "select"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "text-cursor-input": {
       "tags": [
         "select"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "thermometer": {
       "tags": [
@@ -4245,7 +4853,9 @@
         "fahrenheit",
         "weather"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "thermometer-snowflake": {
       "tags": [
@@ -4257,7 +4867,9 @@
         "freeze",
         "freezing"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "thermometer-sun": {
       "tags": [
@@ -4268,7 +4880,9 @@
         "warm",
         "hot"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "thumbs-down": {
       "tags": [
@@ -4276,7 +4890,10 @@
         "bad",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social"
+      ]
     },
     "thumbs-up": {
       "tags": [
@@ -4284,7 +4901,10 @@
         "good",
         "emotion"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "social"
+      ]
     },
     "ticket": {
       "tags": [
@@ -4292,7 +4912,10 @@
         "pass",
         "voucher"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "transportation"
+      ]
     },
     "timer": {
       "tags": [
@@ -4341,7 +4964,9 @@
         "storm",
         "hurricane"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "train": {
       "tags": [
@@ -4371,20 +4996,33 @@
       "categories": []
     },
     "trello": {
-      "tags": [],
-      "categories": []
+      "tags": [
+        "logo",
+        "brand"
+      ],
+      "categories": [
+        "account",
+        "brands",
+        "development"
+      ]
     },
     "trending-down": {
       "tags": [
         "statistics"
       ],
-      "categories": []
+      "categories": [
+        "charts",
+        "arrows"
+      ]
     },
     "trending-up": {
       "tags": [
         "statistics"
       ],
-      "categories": []
+      "categories": [
+        "charts",
+        "arrows"
+      ]
     },
     "triangle": {
       "tags": [
@@ -4422,14 +5060,23 @@
       "tags": [
         "logo"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "social",
+        "account",
+        "gaming"
+      ]
     },
     "twitter": {
       "tags": [
         "logo",
         "social"
       ],
-      "categories": []
+      "categories": [
+        "brands",
+        "social",
+        "account"
+      ]
     },
     "type": {
       "tags": [
@@ -4437,49 +5084,65 @@
         "font",
         "typography"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "umbrella": {
       "tags": [
         "rain",
         "weather"
       ],
-      "categories": []
+      "categories": [
+        "weather"
+      ]
     },
     "underline": {
       "tags": [
         "text",
         "format"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "undo": {
       "tags": [
         "redo",
         "history"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "undo-2": {
       "tags": [
         "redo",
         "history"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "unlink": {
       "tags": [
         "url",
         "unchain"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "unlink-2": {
       "tags": [
         "url",
         "unchain"
       ],
-      "categories": []
+      "categories": [
+        "text"
+      ]
     },
     "unlock": {
       "tags": [
@@ -4491,13 +5154,17 @@
       "tags": [
         "file"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "upload-cloud": {
       "tags": [
         "file"
       ],
-      "categories": []
+      "categories": [
+        "arrows"
+      ]
     },
     "user": {
       "tags": [
@@ -4505,7 +5172,9 @@
         "account",
         "contact"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "user-check": {
       "tags": [
@@ -4513,7 +5182,9 @@
         "subscribed",
         "done"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "user-minus": {
       "tags": [
@@ -4522,7 +5193,9 @@
         "unfollow",
         "unsubscribe"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "user-plus": {
       "tags": [
@@ -4532,7 +5205,9 @@
         "follow",
         "subscribe"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "user-x": {
       "tags": [
@@ -4542,14 +5217,18 @@
         "unsubscribe",
         "unavailable"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "users": {
       "tags": [
         "group",
         "people"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "venetian-mask": {
       "tags": [
@@ -4559,13 +5238,17 @@
         "secret",
         "incognito"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "verified": {
       "tags": [
         "check"
       ],
-      "categories": []
+      "categories": [
+        "account"
+      ]
     },
     "vibrate": {
       "tags": [
@@ -4574,7 +5257,9 @@
         "rumble",
         "haptic feedback"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "vibrate-off": {
       "tags": [
@@ -4583,7 +5268,9 @@
         "rumble",
         "haptic feedback"
       ],
-      "categories": []
+      "categories": [
+        "devices"
+      ]
     },
     "video": {
       "tags": [
@@ -4613,7 +5300,10 @@
         "phone",
         "cassette"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "volume": {
       "tags": [
@@ -4621,21 +5311,27 @@
         "sound",
         "mute"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "volume-1": {
       "tags": [
         "music",
         "sound"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "volume-2": {
       "tags": [
         "music",
         "sound"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "volume-x": {
       "tags": [
@@ -4643,7 +5339,9 @@
         "sound",
         "mute"
       ],
-      "categories": []
+      "categories": [
+        "connectivity"
+      ]
     },
     "wallet": {
       "tags": [
@@ -4651,7 +5349,10 @@
         "finance",
         "pocket"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "money"
+      ]
     },
     "wand": {
       "tags": [
@@ -4683,7 +5384,10 @@
         "camera",
         "security"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "wifi": {
       "tags": [
@@ -4691,13 +5395,19 @@
         "signal",
         "wireless"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "wifi-off": {
       "tags": [
         "disabled"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "wind": {
       "tags": [
@@ -4714,10 +5424,14 @@
         "break",
         "paragraph"
       ],
-      "categories": []
+      "categories": [
+        "text",
+        "arrows"
+      ]
     },
     "wrench": {
       "tags": [
+        "account",
         "tool",
         "settings",
         "spanner"
@@ -4771,10 +5485,17 @@
     "youtube": {
       "tags": [
         "logo",
+        "social",
         "video",
         "play"
       ],
-      "categories": []
+      "categories": [
+        "account",
+        "multimedia",
+        "social",
+        "text",
+        "brands"
+      ]
     },
     "zap": {
       "tags": [
@@ -4782,7 +5503,10 @@
         "camera",
         "lightning"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "zap-off": {
       "tags": [
@@ -4790,21 +5514,32 @@
         "camera",
         "lightning"
       ],
-      "categories": []
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
     },
     "zoom-in": {
       "tags": [
         "magnifying glass",
         "plus"
       ],
-      "categories": []
+      "categories": [
+        "layout",
+        "design",
+        "text"
+      ]
     },
     "zoom-out": {
       "tags": [
         "magnifying glass",
         "plus"
       ],
-      "categories": []
+      "categories": [
+        "layout",
+        "design",
+        "text"
+      ]
     }
   },
   "categories": {
@@ -4814,7 +5549,7 @@
     },
     "account": {
       "title": "Accounts & access",
-      "icon": "message-circle"
+      "icon": "user"
     },
     "arrows": {
       "title": "Arrows",
@@ -4824,6 +5559,14 @@
       "title": "Brands",
       "icon": "lucide"
     },
+    "charts": {
+      "title": "Charts",
+      "icon": "pie-chart"
+    },
+    "code": {
+      "title": "Code",
+      "icon": "code-2"
+    },
     "communication": {
       "title": "Communication",
       "icon": "message-circle"
@@ -4831,6 +5574,26 @@
     "connectivity": {
       "title": "Connectivity",
       "icon": "wifi"
+    },
+    "currency": {
+      "title": "Currency",
+      "icon": "dollar-sign"
+    },
+    "cursors": {
+      "title": "Cursors",
+      "icon": "mouse-pointer-2"
+    },
+    "design": {
+      "title": "Design",
+      "icon": "palette"
+    },
+    "development": {
+      "title": "Development",
+      "icon": "git-pull-request"
+    },
+    "devices": {
+      "title": "Devices",
+      "icon": "smartphone"
     },
     "emoji": {
       "title": "Emoji",
@@ -4841,13 +5604,36 @@
       "icon": "layout"
     },
     "food-beverage": {
-      "name": "food-beverage",
       "title": "Food & beverage",
       "icon": "coffee"
+    },
+    "gaming": {
+      "title": "Gaming",
+      "icon": "gamepad-2"
     },
     "layout": {
       "title": "Layout",
       "icon": "layout"
+    },
+    "mail": {
+      "title": "Mail",
+      "icon": "mail"
+    },
+    "maps": {
+      "title": "Maps",
+      "icon": "map"
+    },
+    "maths": {
+      "title": "Maths",
+      "icon": "divide"
+    },
+    "money": {
+      "title": "Money",
+      "icon": "piggy-bank"
+    },
+    "multimedia": {
+      "title": "Multimedia",
+      "icon": "play-circle"
     },
     "nature": {
       "title": "Nature",
@@ -4857,13 +5643,33 @@
       "title": "Navigation",
       "icon": "compass"
     },
+    "notifications": {
+      "title": "Notifications",
+      "icon": "alert-triangle"
+    },
     "science": {
       "title": "Science",
       "icon": "flask-conical"
     },
+    "security": {
+      "title": "Security",
+      "icon": "shield"
+    },
+    "shapes": {
+      "title": "Shapes",
+      "icon": "triangle"
+    },
+    "shopping": {
+      "title": "Shopping",
+      "icon": "shopping-bag"
+    },
     "social": {
       "title": "Social",
       "icon": "thumbs-up"
+    },
+    "sports": {
+      "title": "Sports",
+      "icon": "type"
     },
     "text": {
       "title": "Text formatting",
