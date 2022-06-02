@@ -1,5 +1,6 @@
 .DS_Store
 .next
+.obsidian
 .now
 node_modules
 dist

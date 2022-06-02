@@ -229,6 +229,14 @@
     "index",
     "box"
   ],
+  "armchair": [
+    "sofa",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
+  ],
   "arrow-big-down": [
     "key"
   ],
@@ -365,6 +373,21 @@
   ],
   "beaker": [
     "cup"
+  ],
+  "bed": [
+    "sleep",
+    "hotel",
+    "furniture"
+  ],
+  "bed-single": [
+    "sleep",
+    "hotel",
+    "furniture"
+  ],
+  "bed-double": [
+    "sleep",
+    "hotel",
+    "furniture"
   ],
   "bell": [
     "alarm",
@@ -513,7 +536,71 @@
   ],
   "calendar": [
     "date",
+    "time",
+    "event",
     "birthdate"
+  ],
+  "calendar-check": [
+    "date",
+    "time",
+    "event",
+    "confirm",
+    "subscribe"
+  ],
+  "calendar-check-2": [
+    "date",
+    "time",
+    "event",
+    "confirm",
+    "subscribe"
+  ],
+  "calendar-days": [
+    "date",
+    "time",
+    "event"
+  ],
+  "calendar-minus": [
+    "date",
+    "time",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "calendar-off": [
+    "date",
+    "time",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "calendar-plus": [
+    "date",
+    "time",
+    "event",
+    "add",
+    "subscribe",
+    "create",
+    "new"
+  ],
+  "calendar-range": [
+    "date",
+    "time",
+    "event",
+    "range",
+    "period"
+  ],
+  "calendar-x": [
+    "date",
+    "time",
+    "event",
+    "remove",
+    "busy"
+  ],
+  "calendar-x-2": [
+    "date",
+    "time",
+    "event",
+    "remove"
   ],
   "camera": [
     "photo",
@@ -618,6 +705,13 @@
   ],
   "chrome": [
     "browser"
+  ],
+  "cigarette": [
+    "smoking"
+  ],
+  "cigarette-off": [
+    "smoking",
+    "no-smoking"
   ],
   "circle": [
     "off",
@@ -929,37 +1023,56 @@
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "1"
   ],
   "dice-2": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "2"
   ],
   "dice-3": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "3"
   ],
   "dice-4": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "4"
   ],
   "dice-5": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "5"
   ],
   "dice-6": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "6"
+  ],
+  "dices": [
+    "dice",
+    "random",
+    "tabletop",
+    "board",
+    "game"
   ],
   "disc": [
     "album",
@@ -1988,6 +2101,12 @@
     "lock",
     "fix"
   ],
+  "unpin": [
+    "unsave",
+    "unlock",
+    "remove",
+    "unfix"
+  ],
   "pipette": [
     "eye dropper",
     "color picker"
@@ -2419,6 +2538,14 @@
     "weather",
     "freeze",
     "snow"
+  ],
+  "sofa": [
+    "armchair",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
   ],
   "sort-asc": [
     "filter"
