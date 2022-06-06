@@ -2033,6 +2033,12 @@
     "delete",
     "remove"
   ],
+  "package-open": [
+    "box",
+    "container",
+    "unpack",
+    "open"
+  ],
   "package-plus": [
     "new",
     "add",
