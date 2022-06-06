@@ -22,13 +22,13 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-    preserveModules: true
+    preserveModules: true,
   },
   {
     format: 'esm',
     inputs,
     outputDir,
-    preserveModules: true
+    preserveModules: true,
   },
 ];
 
@@ -37,19 +37,22 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['react', 'prop-types', 'lucide'],
+      external: ['react', 'prop-types', 'lucide', 'react-native-svg'],
       output: {
         name: packageName,
-        ...(preserveModules ? {
-          dir: `${outputDir}/${format}`,
-        } : {
-          file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`
-        }),
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
         format,
         preserveModules,
         sourcemap: true,
         globals: {
           react: 'react',
+          'react-native-svg': 'react-native-svg',
           'prop-types': 'PropTypes',
           lucide: 'lucide',
         },
