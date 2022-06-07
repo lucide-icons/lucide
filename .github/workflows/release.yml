@@ -33,14 +33,15 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
           cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -69,13 +70,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -104,13 +108,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -139,13 +146,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -174,13 +184,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -209,13 +222,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -244,13 +260,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -280,13 +299,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -315,10 +337,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install FontForge
         run: sudo apt-get install zlib1g-dev fontforge
@@ -345,7 +370,7 @@ jobs:
         run: sudo gem install fontcustom
 
       - name: Install
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Build Icon Font
         run: |
