@@ -2327,6 +2327,13 @@
     "desktop",
     "disconnect"
   ],
+  "scroll": [
+    "paper",
+    "log",
+    "scripture",
+    "document",
+    "parchment"
+  ],
   "search": [
     "find",
     "magnifier",
