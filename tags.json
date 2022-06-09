@@ -1,4 +1,10 @@
 {
+  "accessibility": [
+    "disability",
+    "disabled",
+    "dda",
+    "wheelchair"
+  ],
   "activity": [
     "pulse",
     "health",
@@ -223,6 +229,14 @@
     "index",
     "box"
   ],
+  "armchair": [
+    "sofa",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
+  ],
   "arrow-big-down": [
     "key"
   ],
@@ -296,6 +310,21 @@
   "axe": [
     "hatchet"
   ],
+  "backpack": [
+    "bag",
+    "hiking",
+    "travel",
+    "camping",
+    "school",
+    "childhood"
+  ],
+  "baggage-claim": [
+    "baggage",
+    "luggage",
+    "travel",
+    "cart",
+    "trolley"
+  ],
   "banknote": [
     "currency",
     "money",
@@ -331,6 +360,12 @@
     "format",
     "color"
   ],
+  "bath": [
+    "amenities",
+    "services",
+    "bathroom",
+    "shower"
+  ],
   "battery": [
     "power",
     "electricity"
@@ -353,6 +388,21 @@
   ],
   "beaker": [
     "cup"
+  ],
+  "bed": [
+    "sleep",
+    "hotel",
+    "furniture"
+  ],
+  "bed-single": [
+    "sleep",
+    "hotel",
+    "furniture"
+  ],
+  "bed-double": [
+    "sleep",
+    "hotel",
+    "furniture"
   ],
   "bell": [
     "alarm",
@@ -481,6 +531,14 @@
     "organisation",
     "organization"
   ],
+  "building-2": [
+    "business",
+    "company",
+    "enterprise",
+    "skyscraper",
+    "organisation",
+    "organization"
+  ],
   "bus": [
     "bus",
     "vehicle",
@@ -493,7 +551,71 @@
   ],
   "calendar": [
     "date",
+    "time",
+    "event",
     "birthdate"
+  ],
+  "calendar-check": [
+    "date",
+    "time",
+    "event",
+    "confirm",
+    "subscribe"
+  ],
+  "calendar-check-2": [
+    "date",
+    "time",
+    "event",
+    "confirm",
+    "subscribe"
+  ],
+  "calendar-days": [
+    "date",
+    "time",
+    "event"
+  ],
+  "calendar-minus": [
+    "date",
+    "time",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "calendar-off": [
+    "date",
+    "time",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "calendar-plus": [
+    "date",
+    "time",
+    "event",
+    "add",
+    "subscribe",
+    "create",
+    "new"
+  ],
+  "calendar-range": [
+    "date",
+    "time",
+    "event",
+    "range",
+    "period"
+  ],
+  "calendar-x": [
+    "date",
+    "time",
+    "event",
+    "remove",
+    "busy"
+  ],
+  "calendar-x-2": [
+    "date",
+    "time",
+    "event",
+    "remove"
   ],
   "camera": [
     "photo",
@@ -531,6 +653,12 @@
   "check-square": [
     "done"
   ],
+  "chef-hat": [
+    "cooking",
+    "food",
+    "kitchen",
+    "restaurant"
+  ],
   "chevron-down": [
     "arrow"
   ],
@@ -559,23 +687,46 @@
   ],
   "chevrons-down-up": [
     "arrow",
-    "fold"
+    "collapse",
+    "fold",
+    "vertical"
   ],
   "chevrons-left": [
     "arrow"
   ],
+  "chevrons-left-right": [
+    "arrow",
+    "expand",
+    "horizonal",
+    "unfold"
+  ],
   "chevrons-right": [
     "arrow"
+  ],
+  "chevrons-right-left": [
+    "arrow",
+    "collapse",
+    "fold",
+    "horizonal"
   ],
   "chevrons-up": [
     "arrow"
   ],
   "chevrons-up-down": [
     "arrow",
-    "unfold"
+    "expand",
+    "unfold",
+    "vertical"
   ],
   "chrome": [
     "browser"
+  ],
+  "cigarette": [
+    "smoking"
+  ],
+  "cigarette-off": [
+    "smoking",
+    "no-smoking"
   ],
   "circle": [
     "off",
@@ -588,6 +739,14 @@
     "Ø",
     "null",
     "nothing"
+  ],
+  "clapperboard": [
+    "movie",
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television"
   ],
   "clipboard": [
     "copy",
@@ -774,6 +933,14 @@
     "travel",
     "direction"
   ],
+  "component": [
+    "design",
+    "element",
+    "group",
+    "module",
+    "part",
+    "symbol"
+  ],
   "contact": [
     "person",
     "user"
@@ -832,6 +999,12 @@
     "payment",
     "cc"
   ],
+  "croissant": [
+    "bakery",
+    "cooking",
+    "food",
+    "pastry"
+  ],
   "crop": [
     "photo",
     "image"
@@ -858,43 +1031,63 @@
     "memory"
   ],
   "delete": [
+    "backspace",
     "remove"
   ],
   "dice-1": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "1"
   ],
   "dice-2": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "2"
   ],
   "dice-3": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "3"
   ],
   "dice-4": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "4"
   ],
   "dice-5": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "5"
   ],
   "dice-6": [
     "dice",
     "random",
     "tabletop",
+    "board",
+    "game",
     "6"
+  ],
+  "dices": [
+    "dice",
+    "random",
+    "tabletop",
+    "board",
+    "game"
   ],
   "disc": [
     "album",
@@ -958,6 +1151,13 @@
     "calculate",
     "off"
   ],
+  "eraser": [
+    "pencil",
+    "drawing",
+    "undo",
+    "delete",
+    "clear"
+  ],
   "euro": [
     "currency",
     "money",
@@ -983,6 +1183,14 @@
   "facebook": [
     "logo",
     "social"
+  ],
+  "factory": [
+    "building",
+    "business",
+    "energy",
+    "industry",
+    "manufacture",
+    "sector"
   ],
   "fast-forward": [
     "music"
@@ -1075,8 +1283,18 @@
     "funnel",
     "hopper"
   ],
+  "fingerprint": [
+    "2fa",
+    "authentication",
+    "biometric",
+    "identity",
+    "security"
+  ],
   "flag": [
     "report"
+  ],
+  "flag-off": [
+    "unflag"
   ],
   "flag-triangle-left": [
     "report",
@@ -1103,6 +1321,11 @@
   "flask-round": [
     "beaker"
   ],
+  "focus": [
+    "camera",
+    "lens",
+    "photo"
+  ],
   "folder": [
     "directory"
   ],
@@ -1127,6 +1350,11 @@
     "share",
     "email"
   ],
+  "frame": [
+    "logo",
+    "design",
+    "tool"
+  ],
   "framer": [
     "logo",
     "design",
@@ -1138,6 +1366,12 @@
     "bad",
     "sad",
     "emotion"
+  ],
+  "fuel": [
+    "filling-station",
+    "gas",
+    "petrol",
+    "tank"
   ],
   "function-square": [
     "programming",
@@ -1235,11 +1469,15 @@
   ],
   "grip-horizontal": [
     "grab",
+    "dots",
     "handle"
   ],
   "grip-vertical": [
     "grab",
-    "handle"
+    "dots",
+    "handle",
+    "move",
+    "drag"
   ],
   "hammer": [
     "mallet"
@@ -1286,6 +1524,12 @@
     "love",
     "emotion"
   ],
+  "heart-off": [
+    "unlike",
+    "dislike",
+    "hate",
+    "emotion"
+  ],
   "help-circle": [
     "question mark"
   ],
@@ -1309,6 +1553,11 @@
   "home": [
     "house",
     "living"
+  ],
+  "hourglass": [
+    "timer",
+    "time",
+    "sandglass"
   ],
   "image": [
     "picture",
@@ -1353,6 +1602,8 @@
     "element",
     "mouse",
     "click",
+    "cursor",
+    "pointer",
     "box"
   ],
   "instagram": [
@@ -1543,6 +1794,17 @@
     "exit",
     "auth"
   ],
+  "luggage": [
+    "baggage",
+    "luggage",
+    "travel"
+  ],
+  "magnet": [
+    "horseshoe",
+    "lock",
+    "science",
+    "snap"
+  ],
   "mail": [
     "email",
     "message",
@@ -1554,6 +1816,12 @@
     "travel"
   ],
   "map-pin": [
+    "location",
+    "navigation",
+    "travel",
+    "marker"
+  ],
+  "map-pin-off": [
     "location",
     "navigation",
     "travel",
@@ -1607,6 +1875,11 @@
     "record",
     "sound",
     "mute"
+  ],
+  "milestone": [
+    "sign",
+    "signpost",
+    "version control"
   ],
   "minimize": [
     "exit fullscreen",
@@ -1718,8 +1991,23 @@
     "location",
     "travel"
   ],
+  "navigation-2-off": [
+    "location",
+    "travel"
+  ],
+  "navigation-off": [
+    "location",
+    "travel"
+  ],
   "network": [
     "tree"
+  ],
+  "sun-moon": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
   ],
   "octagon": [
     "stop"
@@ -1744,6 +2032,12 @@
   "package-minus": [
     "delete",
     "remove"
+  ],
+  "package-open": [
+    "box",
+    "container",
+    "unpack",
+    "open"
   ],
   "package-plus": [
     "new",
@@ -1840,6 +2134,12 @@
     "lock",
     "fix"
   ],
+  "unpin": [
+    "unsave",
+    "unlock",
+    "remove",
+    "unfix"
+  ],
   "pipette": [
     "eye dropper",
     "color picker"
@@ -1903,6 +2203,12 @@
     "office",
     "device"
   ],
+  "puzzle": [
+    "component",
+    "module",
+    "part",
+    "piece"
+  ],
   "qr-code": [
     "barcode"
   ],
@@ -1910,7 +2216,10 @@
     "quotation"
   ],
   "radio": [
-    "signal"
+    "signal",
+    "broadcast",
+    "connectivity",
+    "live"
   ],
   "radio-receiver": [
     "device",
@@ -1918,6 +2227,10 @@
     "connect"
   ],
   "redo": [
+    "undo",
+    "history"
+  ],
+  "redo-2": [
     "undo",
     "history"
   ],
@@ -2230,6 +2543,11 @@
     "settings",
     "controls"
   ],
+  "sliders-horizontal": [
+    "settings",
+    "filters",
+    "controls"
+  ],
   "smartphone": [
     "phone",
     "cellphone",
@@ -2253,6 +2571,14 @@
     "weather",
     "freeze",
     "snow"
+  ],
+  "sofa": [
+    "armchair",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
   ],
   "sort-asc": [
     "filter"
@@ -2285,6 +2611,12 @@
     "review",
     "rating"
   ],
+  "star-off": [
+    "dislike",
+    "unlike",
+    "remove",
+    "unrate"
+  ],
   "stop-circle": [
     "media",
     "music"
@@ -2315,6 +2647,12 @@
     "weather",
     "light"
   ],
+  "sun-dim": [
+    "brightness",
+    "dim",
+    "low",
+    "brightness low"
+  ],
   "sunrise": [
     "weather",
     "time",
@@ -2326,6 +2664,10 @@
     "time",
     "evening",
     "night"
+  ],
+  "sun-medium": [
+    "brightness",
+    "medium"
   ],
   "superscript": [
     "text",
@@ -2341,6 +2683,20 @@
     "selfy",
     "front",
     "back"
+  ],
+  "sword": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
+  ],
+  "swords": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
   ],
   "table": [
     "sheet",
@@ -2447,6 +2803,12 @@
     "storm",
     "hurricane"
   ],
+  "train": [
+    "transport",
+    "metro",
+    "subway",
+    "underground"
+  ],
   "trash": [
     "garbage",
     "delete",
@@ -2510,6 +2872,10 @@
     "redo",
     "history"
   ],
+  "undo-2": [
+    "redo",
+    "history"
+  ],
   "unlink": [
     "url",
     "unchain",
@@ -2563,12 +2929,27 @@
     "group",
     "people"
   ],
+  "venetian-mask": [
+    "mask",
+    "masquerade",
+    "impersonate",
+    "secret",
+    "incognito"
+  ],
   "verified": [
     "check"
   ],
   "vibrate": [
     "smartphone",
-    "notification"
+    "notification",
+    "rumble",
+    "haptic feedback"
+  ],
+  "vibrate-off": [
+    "smartphone",
+    "notification",
+    "rumble",
+    "haptic feedback"
   ],
   "video": [
     "camera",

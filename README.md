@@ -189,8 +189,16 @@ Join the community on our [Discord](https://discord.gg/EH6nSts) server!
 
 Lucide is totally free for commercial use and personally use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
 
+## Credits
+
+Thank you to all the people who contributed to Lucide!
+
+<a href="https://github.com/lucide-icons/lucide/graphs/contributors">
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
+
 ## Sponsors
 
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
   <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
+

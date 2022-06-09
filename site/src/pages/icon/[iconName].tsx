@@ -4,7 +4,7 @@ import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 const IconPage = ({ icon, data }) => {
   const router = useRouter();
@@ -30,19 +30,15 @@ const IconPage = ({ icon, data }) => {
   };
 
   const currentIcon = useMemo(() => {
-    if(icon.name === router.query.iconName) {
-      return icon
+    if (icon.name === router.query.iconName) {
+      return icon;
     }
-    return getIcon(router.query.iconName)
-  }, [router.query])
+    return getIcon(router.query.iconName);
+  }, [router.query]);
 
   return (
     <Layout>
-      <IconDetailOverlay
-        key={currentIcon.name}
-        icon={currentIcon}
-        close={onClose}
-      />
+      <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} />
       <Header {...{ data }} />
       <IconOverview {...{ data }} />
     </Layout>
