@@ -1964,6 +1964,14 @@
   "move": [
     "arrows"
   ],
+  "move-3d": [
+    "arrows",
+    "axis",
+    "gizmo",
+    "coordinates",
+    "transform",
+    "translate"
+  ],
   "move-diagonal": [
     "double",
     "arrow"
