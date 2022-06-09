@@ -2276,6 +2276,12 @@
     "furniture",
     "seat"
   ],
+  "rotate-3d": [
+    "gizmo",
+    "transform",
+    "orientation",
+    "orbit"
+  ],
   "rotate-ccw": [
     "arrow",
     "left"
