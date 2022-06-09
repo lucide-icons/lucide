@@ -883,7 +883,8 @@
   ],
   "clover": [
     "leaf",
-    "luck"
+    "luck",
+    "plant"
   ],
   "code": [
     "source",
@@ -1321,6 +1322,17 @@
   "flask-round": [
     "beaker"
   ],
+  "flower": [
+    "sustainability",
+    "nature",
+    "plant",
+    "spring"
+  ],
+  "flower-2": [
+    "sustainability",
+    "nature",
+    "plant"
+  ],
   "focus": [
     "camera",
     "lens",
@@ -1679,6 +1691,13 @@
     "webpage",
     "block",
     "section"
+  ],
+  "leaf": [
+    "sustainability",
+    "nature",
+    "energy",
+    "plant",
+    "autumn"
   ],
   "library": [
     "book",
@@ -2226,6 +2245,11 @@
     "music",
     "connect"
   ],
+  "recycle": [
+    "sustainability",
+    "salvage",
+    "arrows"
+  ],
   "redo": [
     "undo",
     "history"
@@ -2570,7 +2594,8 @@
     "cold",
     "weather",
     "freeze",
-    "snow"
+    "snow",
+    "winter"
   ],
   "sofa": [
     "armchair",
@@ -2592,7 +2617,8 @@
   ],
   "sprout": [
     "leaf",
-    "nature"
+    "nature",
+    "plant"
   ],
   "square": [
     "rectangle"
@@ -2645,7 +2671,8 @@
   "sun": [
     "brightness",
     "weather",
-    "light"
+    "light",
+    "summer"
   ],
   "sun-dim": [
     "brightness",
