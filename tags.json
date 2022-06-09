@@ -2310,6 +2310,11 @@
     "rule",
     "law"
   ],
+  "scale-3d": [
+    "gizmo",
+    "transform",
+    "size"
+  ],
   "scan": [
     "qr-code"
   ],
