@@ -310,6 +310,10 @@
   "axe": [
     "hatchet"
   ],
+  "axis-3d": [
+    "gizmo",
+    "coordinates"
+  ],
   "backpack": [
     "bag",
     "hiking",
