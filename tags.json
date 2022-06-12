@@ -2533,6 +2533,15 @@
     "5g",
     "lost"
   ],
+  "siren": [
+    "police",
+    "ambulance",
+    "emergency",
+    "security",
+    "alert",
+    "alarm",
+    "light"
+  ],
   "skip-back": [
     "arrow",
     "previous",
