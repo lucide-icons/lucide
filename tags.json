@@ -2985,6 +2985,24 @@
     "group",
     "people"
   ],
+  "utensils": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
+  ],
+  "utensils-crossed": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
+  ],
   "venetian-mask": [
     "mask",
     "masquerade",
