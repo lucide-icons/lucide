@@ -2491,6 +2491,12 @@
     "scale",
     "fullscreen"
   ],
+  "shrub": [
+    "forest",
+    "undergrowth",
+    "park",
+    "nature"
+  ],
   "shuffle": [
     "music"
   ],
@@ -2876,6 +2882,25 @@
     "delete",
     "remove",
     "bin"
+  ],
+  "tree-deciduous": [
+    "tree",
+    "forest",
+    "park",
+    "nature"
+  ],
+  "tree-pine": [
+    "tree",
+    "pine",
+    "forest",
+    "park",
+    "nature"
+  ],
+  "trees": [
+    "tree",
+    "forest",
+    "park",
+    "nature"
   ],
   "trello": [],
   "trending-down": [
