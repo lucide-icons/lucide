@@ -310,6 +310,11 @@
   "axe": [
     "hatchet"
   ],
+  "baby": [
+    "child",
+    "childproof",
+    "children"
+  ],
   "backpack": [
     "bag",
     "hiking",
