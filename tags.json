@@ -1647,6 +1647,35 @@
     "settings",
     "mouse"
   ],
+  "lamp": [
+    "lighting",
+    "household"
+  ],
+  "lamp-ceiling": [
+    "lighting",
+    "household"
+  ],
+  "lamp-desk": [
+    "lighting",
+    "household",
+    "office",
+    "desk"
+  ],
+  "lamp-floor": [
+    "lighting",
+    "household",
+    "floor"
+  ],
+  "lamp-wall-down": [
+    "lighting",
+    "household",
+    "wall"
+  ],
+  "lamp-wall-up": [
+    "lighting",
+    "household",
+    "wall"
+  ],
   "landmark": [
     "bank",
     "building",
