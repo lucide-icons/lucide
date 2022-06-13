@@ -221,6 +221,18 @@
   "anchor": [
     "ship"
   ],
+  "angry": [
+    "emoji",
+    "anger",
+    "face",
+    "emotion"
+  ],
+  "annoyed": [
+    "emoji",
+    "nuisance",
+    "face",
+    "emotion"
+  ],
   "aperture": [
     "camera",
     "photo"
@@ -1667,6 +1679,13 @@
     "select"
   ],
   "lasso-select": [],
+  "laugh": [
+    "emoji",
+    "face",
+    "happy",
+    "good",
+    "emotion"
+  ],
   "layers": [
     "stack",
     "pages"
@@ -2622,6 +2641,16 @@
     "good",
     "emotion"
   ],
+  "smile-plus": [
+    "emoji",
+    "face",
+    "happy",
+    "good",
+    "emotion",
+    "react",
+    "reaction",
+    "add"
+  ],
   "snowflake": [
     "cold",
     "weather",
@@ -2672,6 +2701,18 @@
     "unlike",
     "remove",
     "unrate"
+  ],
+  "sticker": [
+    "reaction",
+    "emotion",
+    "smile",
+    "happy"
+  ],
+  "sticky-note": [
+    "note",
+    "comment",
+    "reaction",
+    "memo"
   ],
   "stop-circle": [
     "media",
