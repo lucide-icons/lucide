@@ -225,9 +225,22 @@
     "camera",
     "photo"
   ],
+  "aquarius": [
+    "water",
+    "water-bearer",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
   "archive": [
     "index",
     "box"
+  ],
+  "aries": [
+    "ram",
+    "astrology",
+    "dating",
+    "star-sign"
   ],
   "armchair": [
     "sofa",
@@ -626,6 +639,18 @@
     "photo",
     "webcam",
     "video"
+  ],
+  "cancer": [
+    "crab",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
+  "capricorn": [
+    "goat",
+    "astrology",
+    "dating",
+    "star-sign"
   ],
   "car": [
     "vehicle",
@@ -1397,6 +1422,12 @@
     "special",
     "present"
   ],
+  "gemini": [
+    "twins",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
   "ghost": [
     "pacman",
     "spooky"
@@ -1694,6 +1725,18 @@
     "webpage",
     "block",
     "section"
+  ],
+  "leo": [
+    "lion",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
+  "libra": [
+    "scales",
+    "astrology",
+    "dating",
+    "star-sign"
   ],
   "library": [
     "book",
@@ -2052,6 +2095,13 @@
   "octagon": [
     "stop"
   ],
+  "ophiuchus": [
+    "serpent",
+    "serpent-bearer",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
   "option": [
     "key",
     "mac",
@@ -2183,6 +2233,12 @@
   "pipette": [
     "eye dropper",
     "color picker"
+  ],
+  "pisces": [
+    "fish",
+    "astrology",
+    "dating",
+    "star-sign"
   ],
   "plane": [
     "plane",
@@ -2339,6 +2395,12 @@
     "money",
     "payment"
   ],
+  "sagittarius": [
+    "archer",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
   "save": [
     "floppy disk"
   ],
@@ -2358,6 +2420,12 @@
   ],
   "scissors": [
     "cut"
+  ],
+  "scorpio": [
+    "scorpion",
+    "astrology",
+    "dating",
+    "star-sign"
   ],
   "screen-share": [
     "host",
@@ -2768,6 +2836,12 @@
     "logo",
     "bullseye"
   ],
+  "taurus": [
+    "bull",
+    "astrology",
+    "dating",
+    "star-sign"
+  ],
   "tent": [
     "campsite",
     "wigwam"
@@ -3020,6 +3094,12 @@
   "view": [
     "eye",
     "look"
+  ],
+  "virgo": [
+    "virgin",
+    "astrology",
+    "dating",
+    "star-sign"
   ],
   "voicemail": [
     "phone",
