@@ -229,6 +229,13 @@
     "index",
     "box"
   ],
+  "archive-restore": [
+    "archive",
+    "unarchive",
+    "restore",
+    "index",
+    "box"
+  ],
   "armchair": [
     "sofa",
     "furniture",
@@ -309,6 +316,21 @@
   ],
   "axe": [
     "hatchet"
+  ],
+  "backpack": [
+    "bag",
+    "hiking",
+    "travel",
+    "camping",
+    "school",
+    "childhood"
+  ],
+  "baggage-claim": [
+    "baggage",
+    "luggage",
+    "travel",
+    "cart",
+    "trolley"
   ],
   "banknote": [
     "currency",
@@ -868,7 +890,8 @@
   ],
   "clover": [
     "leaf",
-    "luck"
+    "luck",
+    "plant"
   ],
   "code": [
     "source",
@@ -1268,6 +1291,13 @@
     "funnel",
     "hopper"
   ],
+  "fingerprint": [
+    "2fa",
+    "authentication",
+    "biometric",
+    "identity",
+    "security"
+  ],
   "flag": [
     "report"
   ],
@@ -1298,6 +1328,17 @@
   ],
   "flask-round": [
     "beaker"
+  ],
+  "flower": [
+    "sustainability",
+    "nature",
+    "plant",
+    "spring"
+  ],
+  "flower-2": [
+    "sustainability",
+    "nature",
+    "plant"
   ],
   "focus": [
     "camera",
@@ -1502,6 +1543,21 @@
     "love",
     "emotion"
   ],
+  "heart-crack": [
+    "heartbreak",
+    "sadness",
+    "emotion"
+  ],
+  "heart-handshake": [
+    "agreement",
+    "charity",
+    "help",
+    "deal",
+    "terms",
+    "emotion",
+    "together",
+    "handshake"
+  ],
   "heart-off": [
     "unlike",
     "dislike",
@@ -1658,6 +1714,13 @@
     "block",
     "section"
   ],
+  "leaf": [
+    "sustainability",
+    "nature",
+    "energy",
+    "plant",
+    "autumn"
+  ],
   "library": [
     "book",
     "music",
@@ -1704,6 +1767,12 @@
     "todo",
     "done"
   ],
+  "list-end": [
+    "queue",
+    "bottom",
+    "end",
+    "playlist"
+  ],
   "list-minus": [
     "playlist",
     "remove",
@@ -1711,6 +1780,13 @@
     "subtract",
     "remove",
     "delete"
+  ],
+  "list-music": [
+    "playlist",
+    "queue",
+    "music",
+    "audio",
+    "playback"
   ],
   "list-ordered": [
     "number",
@@ -1722,6 +1798,18 @@
     "song",
     "track",
     "new"
+  ],
+  "list-start": [
+    "queue",
+    "top",
+    "start",
+    "next",
+    "playlist"
+  ],
+  "list-video": [
+    "playlist",
+    "video",
+    "playback"
   ],
   "list-x": [
     "playlist",
@@ -1771,6 +1859,11 @@
     "arrow",
     "exit",
     "auth"
+  ],
+  "luggage": [
+    "baggage",
+    "luggage",
+    "travel"
   ],
   "magnet": [
     "horseshoe",
@@ -1937,6 +2030,14 @@
   "move": [
     "arrows"
   ],
+  "move-3d": [
+    "arrows",
+    "axis",
+    "gizmo",
+    "coordinates",
+    "transform",
+    "translate"
+  ],
   "move-diagonal": [
     "double",
     "arrow"
@@ -2006,6 +2107,12 @@
     "delete",
     "remove"
   ],
+  "package-open": [
+    "box",
+    "container",
+    "unpack",
+    "open"
+  ],
   "package-plus": [
     "new",
     "add",
@@ -2018,6 +2125,22 @@
   "package-x": [
     "delete",
     "remove"
+  ],
+  "paint-bucket": [
+    "fill",
+    "paint",
+    "bucket",
+    "design"
+  ],
+  "paintbrush": [
+    "brush",
+    "paintbrush",
+    "design"
+  ],
+  "paintbrush-2": [
+    "brush",
+    "paintbrush",
+    "design"
   ],
   "palette": [
     "color",
@@ -2193,6 +2316,11 @@
     "music",
     "connect"
   ],
+  "recycle": [
+    "sustainability",
+    "salvage",
+    "arrows"
+  ],
   "redo": [
     "undo",
     "history"
@@ -2269,6 +2397,11 @@
   "save": [
     "floppy disk"
   ],
+  "scaling": [
+    "scale",
+    "resize",
+    "design"
+  ],
   "scale": [
     "balance",
     "legal",
@@ -2293,6 +2426,13 @@
   "screen-share-off": [
     "desktop",
     "disconnect"
+  ],
+  "scroll": [
+    "paper",
+    "log",
+    "scripture",
+    "document",
+    "parchment"
   ],
   "search": [
     "find",
@@ -2411,6 +2551,12 @@
     "scale",
     "fullscreen"
   ],
+  "shrub": [
+    "forest",
+    "undergrowth",
+    "park",
+    "nature"
+  ],
   "shuffle": [
     "music"
   ],
@@ -2478,6 +2624,15 @@
     "5g",
     "lost"
   ],
+  "siren": [
+    "police",
+    "ambulance",
+    "emergency",
+    "security",
+    "alert",
+    "alarm",
+    "light"
+  ],
   "skip-back": [
     "arrow",
     "previous",
@@ -2505,6 +2660,11 @@
     "forbidden",
     "prohibited",
     "error"
+  ],
+  "slice": [
+    "cutter",
+    "scalpel",
+    "knife"
   ],
   "sliders": [
     "settings",
@@ -2537,7 +2697,8 @@
     "cold",
     "weather",
     "freeze",
-    "snow"
+    "snow",
+    "winter"
   ],
   "sofa": [
     "armchair",
@@ -2559,7 +2720,8 @@
   ],
   "sprout": [
     "leaf",
-    "nature"
+    "nature",
+    "plant"
   ],
   "square": [
     "rectangle"
@@ -2612,7 +2774,8 @@
   "sun": [
     "brightness",
     "weather",
-    "light"
+    "light",
+    "summer"
   ],
   "sun-dim": [
     "brightness",
@@ -2788,6 +2951,25 @@
     "remove",
     "bin"
   ],
+  "tree-deciduous": [
+    "tree",
+    "forest",
+    "park",
+    "nature"
+  ],
+  "tree-pine": [
+    "tree",
+    "pine",
+    "forest",
+    "park",
+    "nature"
+  ],
+  "trees": [
+    "tree",
+    "forest",
+    "park",
+    "nature"
+  ],
   "trello": [],
   "trending-down": [
     "statistics"
@@ -2895,6 +3077,24 @@
   "users": [
     "group",
     "people"
+  ],
+  "utensils": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
+  ],
+  "utensils-crossed": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
   ],
   "venetian-mask": [
     "mask",
