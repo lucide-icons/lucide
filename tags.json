@@ -2653,6 +2653,12 @@
   "square": [
     "rectangle"
   ],
+  "square-oblique": [
+    "rectangle",
+    "diamond",
+    "oblique",
+    "rhombus"
+  ],
   "star": [
     "bookmark",
     "favorite",
