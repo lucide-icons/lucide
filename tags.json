@@ -1668,32 +1668,44 @@
   ],
   "lamp": [
     "lighting",
-    "household"
+    "household",
+    "home",
+    "furniture"
   ],
   "lamp-ceiling": [
     "lighting",
-    "household"
+    "household",
+    "home",
+    "furniture"
   ],
   "lamp-desk": [
     "lighting",
     "household",
     "office",
-    "desk"
+    "desk",
+    "home",
+    "furniture"
   ],
   "lamp-floor": [
     "lighting",
     "household",
-    "floor"
+    "floor",      
+    "home",
+    "furniture"
   ],
   "lamp-wall-down": [
     "lighting",
     "household",
-    "wall"
+    "wall",
+    "home",
+    "furniture"
   ],
   "lamp-wall-up": [
     "lighting",
     "household",
-    "wall"
+    "wall",
+    "home",
+    "furniture"
   ],
   "landmark": [
     "bank",
