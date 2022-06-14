@@ -242,6 +242,13 @@
     "dating",
     "star-sign"
   ],
+  "archive-restore": [
+    "archive",
+    "unarchive",
+    "restore",
+    "index",
+    "box"
+  ],
   "armchair": [
     "sofa",
     "furniture",
@@ -908,7 +915,8 @@
   ],
   "clover": [
     "leaf",
-    "luck"
+    "luck",
+    "plant"
   ],
   "code": [
     "source",
@@ -1346,6 +1354,17 @@
   "flask-round": [
     "beaker"
   ],
+  "flower": [
+    "sustainability",
+    "nature",
+    "plant",
+    "spring"
+  ],
+  "flower-2": [
+    "sustainability",
+    "nature",
+    "plant"
+  ],
   "focus": [
     "camera",
     "lens",
@@ -1737,6 +1756,13 @@
     "astrology",
     "dating",
     "star-sign"
+  ],
+  "leaf": [
+    "sustainability",
+    "nature",
+    "energy",
+    "plant",
+    "autumn"
   ],
   "library": [
     "book",
@@ -2142,6 +2168,22 @@
     "delete",
     "remove"
   ],
+  "paint-bucket": [
+    "fill",
+    "paint",
+    "bucket",
+    "design"
+  ],
+  "paintbrush": [
+    "brush",
+    "paintbrush",
+    "design"
+  ],
+  "paintbrush-2": [
+    "brush",
+    "paintbrush",
+    "design"
+  ],
   "palette": [
     "color",
     "theme"
@@ -2322,6 +2364,11 @@
     "music",
     "connect"
   ],
+  "recycle": [
+    "sustainability",
+    "salvage",
+    "arrows"
+  ],
   "redo": [
     "undo",
     "history"
@@ -2403,6 +2450,11 @@
   ],
   "save": [
     "floppy disk"
+  ],
+  "scaling": [
+    "scale",
+    "resize",
+    "design"
   ],
   "scale": [
     "balance",
@@ -2559,6 +2611,12 @@
     "scale",
     "fullscreen"
   ],
+  "shrub": [
+    "forest",
+    "undergrowth",
+    "park",
+    "nature"
+  ],
   "shuffle": [
     "music"
   ],
@@ -2663,6 +2721,11 @@
     "prohibited",
     "error"
   ],
+  "slice": [
+    "cutter",
+    "scalpel",
+    "knife"
+  ],
   "sliders": [
     "settings",
     "controls"
@@ -2694,7 +2757,8 @@
     "cold",
     "weather",
     "freeze",
-    "snow"
+    "snow",
+    "winter"
   ],
   "sofa": [
     "armchair",
@@ -2716,7 +2780,8 @@
   ],
   "sprout": [
     "leaf",
-    "nature"
+    "nature",
+    "plant"
   ],
   "square": [
     "rectangle"
@@ -2769,7 +2834,8 @@
   "sun": [
     "brightness",
     "weather",
-    "light"
+    "light",
+    "summer"
   ],
   "sun-dim": [
     "brightness",
@@ -2951,6 +3017,25 @@
     "remove",
     "bin"
   ],
+  "tree-deciduous": [
+    "tree",
+    "forest",
+    "park",
+    "nature"
+  ],
+  "tree-pine": [
+    "tree",
+    "pine",
+    "forest",
+    "park",
+    "nature"
+  ],
+  "trees": [
+    "tree",
+    "forest",
+    "park",
+    "nature"
+  ],
   "trello": [],
   "trending-down": [
     "statistics"
@@ -3058,6 +3143,24 @@
   "users": [
     "group",
     "people"
+  ],
+  "utensils": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
+  ],
+  "utensils-crossed": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
   ],
   "venetian-mask": [
     "mask",
