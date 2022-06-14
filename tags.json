@@ -2092,6 +2092,22 @@
     "delete",
     "remove"
   ],
+  "paint-bucket": [
+    "fill",
+    "paint",
+    "bucket",
+    "design"
+  ],
+  "paintbrush": [
+    "brush",
+    "paintbrush",
+    "design"
+  ],
+  "paintbrush-2": [
+    "brush",
+    "paintbrush",
+    "design"
+  ],
   "palette": [
     "color",
     "theme"
@@ -2341,6 +2357,11 @@
   ],
   "save": [
     "floppy disk"
+  ],
+  "scaling": [
+    "scale",
+    "resize",
+    "design"
   ],
   "scale": [
     "balance",
@@ -2594,6 +2615,11 @@
     "forbidden",
     "prohibited",
     "error"
+  ],
+  "slice": [
+    "cutter",
+    "scalpel",
+    "knife"
   ],
   "sliders": [
     "settings",
