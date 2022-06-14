@@ -2832,6 +2832,10 @@
     "sheet",
     "grid"
   ],
+  "table-2": [
+    "sheet",
+    "grid"
+  ],
   "tablet": [
     "device"
   ],
