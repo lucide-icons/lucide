@@ -32,11 +32,13 @@
     "cookie",
     "credit-card",
     "facebook",
+    "fingerprint",
     "flag",
     "flag-off",
     "frown",
     "gauge",
     "gift",
+    "heart-handshake",
     "home",
     "inbox",
     "key",
@@ -225,6 +227,9 @@
     "trending-down",
     "trending-up"
   ],
+  "code": [
+    "scroll"
+  ],
   "coding": [
     "binary",
     "bitcoin",
@@ -398,6 +403,10 @@
     "maximize-2",
     "minimize",
     "minimize-2",
+    "move-3d",
+    "paint-bucket",
+    "paintbrush",
+    "paintbrush-2",
     "palette",
     "paperclip",
     "pen-tool",
@@ -406,7 +415,9 @@
     "rotate-ccw",
     "rotate-cw",
     "ruler",
+    "scaling",
     "scissors",
+    "slice",
     "view",
     "wand",
     "zoom-in",
@@ -438,6 +449,7 @@
     "package",
     "package-check",
     "package-minus",
+    "package-open",
     "package-plus",
     "package-search",
     "package-x",
@@ -447,6 +459,7 @@
     "regex",
     "rocket",
     "rss",
+    "scroll",
     "server",
     "server-crash",
     "server-off",
@@ -477,6 +490,7 @@
     "cpu",
     "database",
     "disc",
+    "fingerprint",
     "flashlight",
     "flashlight-off",
     "gamepad",
@@ -532,12 +546,15 @@
     "frown",
     "hand-metal",
     "heart",
+    "heart-crack",
+    "heart-handshake",
     "meh",
     "smile",
     "star"
   ],
   "files": [
     "archive",
+    "archive-restore",
     "download",
     "download-cloud",
     "file",
@@ -585,7 +602,9 @@
     "cookie",
     "croissant",
     "drumstick",
-    "egg"
+    "egg",
+    "utensils",
+    "utensils-crossed"
   ],
   "furniture": [
     "armchair",
@@ -597,6 +616,7 @@
   ],
   "gaming": [
     "axe",
+    "backpack",
     "beaker",
     "book",
     "book-open",
@@ -617,6 +637,7 @@
     "flame",
     "flask-conical",
     "flask-round",
+    "flower",
     "gamepad",
     "gamepad-2",
     "gem",
@@ -629,6 +650,7 @@
     "mountain",
     "puzzle",
     "rocket",
+    "scroll",
     "shield",
     "shovel",
     "skull",
@@ -644,8 +666,12 @@
   "health": [
     "accessibility",
     "activity",
+    "cigarette",
+    "cigarette-off",
+    "fingerprint",
     "heart",
-    "life-buoy"
+    "life-buoy",
+    "siren"
   ],
   "layout": [
     "align-center-horizontal",
@@ -709,6 +735,7 @@
   ],
   "mail": [
     "archive",
+    "archive-restore",
     "forward",
     "inbox",
     "mail",
@@ -741,6 +768,8 @@
     "pin",
     "pin-off",
     "scale",
+    "utensils",
+    "utensils-crossed",
     "waves"
   ],
   "maths": [
@@ -763,6 +792,9 @@
     "x-circle",
     "x-octagon",
     "x-square"
+  ],
+  "medical": [
+    "siren"
   ],
   "money": [
     "banknote",
@@ -799,8 +831,12 @@
     "image-plus",
     "infinity",
     "library",
+    "list-end",
     "list-minus",
+    "list-music",
     "list-plus",
+    "list-start",
+    "list-video",
     "list-x",
     "loader",
     "loader-2",
@@ -836,12 +872,19 @@
     "youtube"
   ],
   "nature": [
+    "flower",
+    "flower-2",
+    "leaf",
     "mountain",
     "mountain-snow",
     "palmtree",
     "shovel",
+    "shrub",
     "sprout",
-    "tent"
+    "tent",
+    "tree-deciduous",
+    "tree-pine",
+    "trees"
   ],
   "navigation": [
     "compass",
@@ -885,6 +928,7 @@
   "photography": [
     "album",
     "aperture",
+    "backpack",
     "camera",
     "camera-off",
     "compass",
@@ -907,6 +951,8 @@
     "library",
     "lightbulb",
     "lightbulb-off",
+    "paintbrush",
+    "paintbrush-2",
     "palette",
     "rotate-ccw",
     "rotate-cw",
@@ -924,7 +970,15 @@
     "flask-conical",
     "flask-round"
   ],
+  "seasons": [
+    "flower-2",
+    "leaf",
+    "snowflake",
+    "sun"
+  ],
   "security": [
+    "fingerprint",
+    "heart-handshake",
     "key",
     "lock",
     "shield",
@@ -983,6 +1037,7 @@
     "flag",
     "flag-off",
     "flame",
+    "hash",
     "heart",
     "heart-off",
     "instagram",
@@ -1006,6 +1061,12 @@
     "twitter",
     "verified",
     "youtube"
+  ],
+  "sustainability": [
+    "flower",
+    "flower-2",
+    "leaf",
+    "recycle"
   ],
   "text": [
     "align-center",
@@ -1052,13 +1113,17 @@
     "link-2-off",
     "list",
     "list-checks",
+    "list-end",
     "list-minus",
     "list-ordered",
     "list-plus",
+    "list-start",
     "list-x",
     "mail",
     "map",
     "outdent",
+    "paintbrush",
+    "paintbrush-2",
     "palette",
     "paperclip",
     "pen-tool",
@@ -1144,16 +1209,30 @@
   ],
   "transportation": [
     "anchor",
+    "baggage-claim",
     "bike",
     "briefcase",
     "bus",
     "car",
+    "cigarette",
+    "cigarette-off",
     "compass",
     "fuel",
+    "luggage",
     "plane",
     "ticket",
     "train",
     "truck"
+  ],
+  "travel": [
+    "backpack",
+    "baggage-claim",
+    "bath",
+    "cigarette",
+    "cigarette-off",
+    "luggage",
+    "utensils",
+    "utensils-crossed"
   ],
   "weather": [
     "cloud",
