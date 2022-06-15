@@ -560,7 +560,7 @@
     "date",
     "time",
     "event",
-    "birth-date",
+    "birthdate",
     "birthday"
   ],
   "calendar-check": [
@@ -646,7 +646,7 @@
     "eat"
   ],
   "cast": [
-    "chrome-cast",
+    "chromecast",
     "airplay"
   ],
   "check": [
@@ -1020,7 +1020,7 @@
   ],
   "cross": [
     "healthcare",
-    "first-aid"
+    "first aid"
   ],
   "crosshair": [
     "aim",
@@ -1520,7 +1520,7 @@
     "data",
     "ssd",
     "disk",
-    "hard-disk"
+    "hard disk"
   ],
   "hard-hat": [
     "helmet",
