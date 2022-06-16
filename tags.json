@@ -2835,7 +2835,8 @@
   ],
   "table-2": [
     "sheet",
-    "grid"
+    "grid",
+    "spreadsheet"
   ],
   "tablet": [
     "device"
