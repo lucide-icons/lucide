@@ -277,7 +277,7 @@
     "direction"
   ],
   "arrow-left-right": [
-    "bidirection",
+    "bidirectional",
     "direction",
     "swap",
     "switch",
@@ -401,12 +401,12 @@
     "hotel",
     "furniture"
   ],
-  "bed-single": [
+  "bed-double": [
     "sleep",
     "hotel",
     "furniture"
   ],
-  "bed-double": [
+  "bed-single": [
     "sleep",
     "hotel",
     "furniture"
@@ -518,6 +518,15 @@
     "marquee",
     "tool"
   ],
+  "boxes": [
+    "cubes",
+    "packages",
+    "parts",
+    "group",
+    "units",
+    "collection",
+    "cluster"
+  ],
   "briefcase": [
     "work",
     "bag",
@@ -560,7 +569,8 @@
     "date",
     "time",
     "event",
-    "birthdate"
+    "birthdate",
+    "birthday"
   ],
   "calendar-check": [
     "date",
@@ -704,7 +714,7 @@
   "chevrons-left-right": [
     "arrow",
     "expand",
-    "horizonal",
+    "horizontal",
     "unfold"
   ],
   "chevrons-right": [
@@ -714,7 +724,7 @@
     "arrow",
     "collapse",
     "fold",
-    "horizonal"
+    "horizontal"
   ],
   "chevrons-up": [
     "arrow"
@@ -1019,7 +1029,7 @@
   ],
   "cross": [
     "healthcare",
-    "firstaid"
+    "first aid"
   ],
   "crosshair": [
     "aim",
@@ -1041,6 +1051,12 @@
   "delete": [
     "backspace",
     "remove"
+  ],
+  "diamond": [
+    "square",
+    "rectangle",
+    "oblique",
+    "rhombus"
   ],
   "dice-1": [
     "dice",
@@ -1203,7 +1219,9 @@
   "fast-forward": [
     "music"
   ],
-  "feather": [],
+  "feather": [
+    "logo"
+  ],
   "figma": [
     "logo",
     "design",
@@ -1417,7 +1435,7 @@
     "present"
   ],
   "ghost": [
-    "pacman",
+    "pac-man",
     "spooky"
   ],
   "gift": [
@@ -1517,12 +1535,12 @@
     "data",
     "ssd",
     "disk",
-    "harddisk"
+    "hard disk"
   ],
   "hard-hat": [
     "helmet",
     "construction",
-    "savety"
+    "safety"
   ],
   "hash": [
     "hashtag",
@@ -2037,6 +2055,14 @@
   "move": [
     "arrows"
   ],
+  "move-3d": [
+    "arrows",
+    "axis",
+    "gizmo",
+    "coordinates",
+    "transform",
+    "translate"
+  ],
   "move-diagonal": [
     "double",
     "arrow"
@@ -2074,13 +2100,6 @@
   ],
   "network": [
     "tree"
-  ],
-  "sun-moon": [
-    "night",
-    "light",
-    "moon",
-    "sun",
-    "brightness"
   ],
   "octagon": [
     "stop"
@@ -2223,7 +2242,8 @@
     "lock",
     "fix"
   ],
-  "unpin": [
+  "pin-off": [
+    "unpin",
     "unsave",
     "unlock",
     "remove",
@@ -2370,6 +2390,12 @@
     "furniture",
     "seat"
   ],
+  "rotate-3d": [
+    "gizmo",
+    "transform",
+    "orientation",
+    "orbit"
+  ],
   "rotate-ccw": [
     "arrow",
     "left"
@@ -2396,11 +2422,6 @@
   "save": [
     "floppy disk"
   ],
-  "scaling": [
-    "scale",
-    "resize",
-    "design"
-  ],
   "scale": [
     "balance",
     "legal",
@@ -2408,6 +2429,11 @@
     "right",
     "rule",
     "law"
+  ],
+  "scaling": [
+    "scale",
+    "resize",
+    "design"
   ],
   "scan": [
     "qr-code"
@@ -2502,7 +2528,7 @@
     "secure",
     "virus",
     "admin",
-    "savety"
+    "safety"
   ],
   "shield-check": [
     "security",
@@ -2789,6 +2815,17 @@
     "low",
     "brightness low"
   ],
+  "sun-medium": [
+    "brightness",
+    "medium"
+  ],
+  "sun-moon": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
+  ],
   "sunrise": [
     "weather",
     "time",
@@ -2801,10 +2838,6 @@
     "evening",
     "night"
   ],
-  "sun-medium": [
-    "brightness",
-    "medium"
-  ],
   "superscript": [
     "text",
     "exponent"
@@ -2816,7 +2849,7 @@
   ],
   "switch-camera": [
     "photo",
-    "selfy",
+    "selfie",
     "front",
     "back"
   ],
