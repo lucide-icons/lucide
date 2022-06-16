@@ -13,7 +13,7 @@
       ],
       "categories": [
         "accessibility",
-        "health"
+        "medical"
       ]
     },
     "activity": {
@@ -24,7 +24,7 @@
         "motion"
       ],
       "categories": [
-        "health",
+        "medical",
         "account",
         "social"
       ]
@@ -574,7 +574,7 @@
     },
     "arrow-left-right": {
       "tags": [
-        "bidirection",
+        "bidirectional",
         "direction",
         "swap",
         "switch",
@@ -871,6 +871,18 @@
         "furniture"
       ]
     },
+    "beer": {
+      "tags": [
+        "alcohol",
+        "bar",
+        "beverage",
+        "brewery",
+        "drink"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "bell": {
       "tags": [
         "alarm",
@@ -1083,7 +1095,8 @@
       "categories": [
         "shapes",
         "gaming",
-        "coding"
+        "coding",
+        "development"
       ]
     },
     "box-select": {
@@ -1097,6 +1110,23 @@
       "categories": [
         "text",
         "design"
+      ]
+    },
+    "boxes": {
+      "tags": [
+        "cubes",
+        "packages",
+        "parts",
+        "group",
+        "units",
+        "collection",
+        "cluster"
+      ],
+      "categories": [
+        "shapes",
+        "gaming",
+        "coding",
+        "development"
       ]
     },
     "briefcase": {
@@ -1181,6 +1211,7 @@
       "tags": [
         "date",
         "birthdate",
+        "birthday",
         "time",
         "event"
       ],
@@ -1541,7 +1572,7 @@
       "categories": [
         "travel",
         "transportation",
-        "health"
+        "medical"
       ]
     },
     "cigarette-off": {
@@ -1552,7 +1583,7 @@
       "categories": [
         "travel",
         "transportation",
-        "health"
+        "medical"
       ]
     },
     "circle": {
@@ -2172,7 +2203,7 @@
     "cross": {
       "tags": [
         "healthcare",
-        "firstaid"
+        "first aid"
       ],
       "categories": [
         "shapes"
@@ -2195,6 +2226,19 @@
       ],
       "categories": [
         "gaming"
+      ]
+    },
+    "cup-soda": {
+      "tags": [
+        "beverage",
+        "cup",
+        "drink",
+        "soda",
+        "straw",
+        "water"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "currency": {
@@ -2224,6 +2268,17 @@
       "categories": [
         "text",
         "arrows"
+      ]
+    },
+    "diamond": {
+      "tags": [
+        "square",
+        "rectangle",
+        "oblique",
+        "rhombus"
+      ],
+      "categories": [
+        "shapes"
       ]
     },
     "dice-1": {
@@ -2574,7 +2629,9 @@
       ]
     },
     "feather": {
-      "tags": [],
+      "tags": [
+        "logo"
+      ],
       "categories": [
         "gaming"
       ]
@@ -2779,7 +2836,7 @@
       "categories": [
         "account",
         "security",
-        "health",
+        "medical",
         "devices"
       ]
     },
@@ -3066,7 +3123,7 @@
     },
     "ghost": {
       "tags": [
-        "pacman",
+        "pac-man",
         "spooky"
       ],
       "categories": [
@@ -3165,6 +3222,17 @@
         "brands",
         "development",
         "coding"
+      ]
+    },
+    "glass-water": {
+      "tags": [
+        "beverage",
+        "drink",
+        "glass",
+        "water"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "glasses": {
@@ -3291,7 +3359,7 @@
         "data",
         "ssd",
         "disk",
-        "harddisk"
+        "hard disk"
       ],
       "categories": [
         "development",
@@ -3350,7 +3418,7 @@
         "emotion"
       ],
       "categories": [
-        "health",
+        "medical",
         "social",
         "multimedia",
         "emoji",
@@ -3638,6 +3706,77 @@
         "coding"
       ]
     },
+    "lamp": {
+      "tags": [
+        "lighting",
+        "household",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-ceiling": {
+      "tags": [
+        "lighting",
+        "household",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-desk": {
+      "tags": [
+        "lighting",
+        "household",
+        "office",
+        "desk",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-floor": {
+      "tags": [
+        "lighting",
+        "household",
+        "floor",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-wall-down": {
+      "tags": [
+        "lighting",
+        "household",
+        "wall",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-wall-up": {
+      "tags": [
+        "lighting",
+        "household",
+        "wall",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
     "landmark": {
       "tags": [
         "bank",
@@ -3794,7 +3933,7 @@
       ],
       "categories": [
         "accessibility",
-        "health"
+        "medical"
       ]
     },
     "lightbulb": {
@@ -4137,6 +4276,19 @@
         "maps"
       ]
     },
+    "martini": {
+      "tags": [
+        "cocktail",
+        "alcohol",
+        "beverage",
+        "bar",
+        "drink",
+        "glass"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "maximize": {
       "tags": [
         "fullscreen",
@@ -4240,6 +4392,19 @@
         "communication",
         "connectivity",
         "multimedia"
+      ]
+    },
+    "microscope": {
+      "tags": [
+        "medical",
+        "education",
+        "science",
+        "imaging",
+        "research"
+      ],
+      "categories": [
+        "science",
+        "medical"
       ]
     },
     "milestone": {
@@ -4903,7 +5068,9 @@
         "unpin",
         "map",
         "unlock",
-        "unfix"
+        "unfix",
+        "unsave",
+        "remove"
       ],
       "categories": [
         "maps"
@@ -5237,6 +5404,17 @@
         "furniture"
       ]
     },
+    "rotate-3d": {
+      "tags": [
+        "gizmo",
+        "transform",
+        "orientation",
+        "orbit"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
     "rotate-ccw": {
       "tags": [
         "arrow",
@@ -5383,7 +5561,7 @@
       "categories": [
         "gaming",
         "development",
-        "code"
+        "coding"
       ]
     },
     "search": {
@@ -5781,8 +5959,7 @@
         "light"
       ],
       "categories": [
-        "medical",
-        "health"
+        "medical"
       ]
     },
     "skip-back": {
@@ -6025,6 +6202,19 @@
         "social"
       ]
     },
+    "stethoscope": {
+      "tags": [
+        "phonendoscope",
+        "medical",
+        "heart",
+        "lungs",
+        "sound"
+      ],
+      "categories": [
+        "science",
+        "medical"
+      ]
+    },
     "stop-circle": {
       "tags": [
         "media",
@@ -6171,7 +6361,7 @@
     "switch-camera": {
       "tags": [
         "photo",
-        "selfy",
+        "selfie",
         "front",
         "back"
       ],
@@ -6204,6 +6394,21 @@
       "categories": [
         "gaming",
         "tools"
+      ]
+    },
+    "syringe": {
+      "tags": [
+        "medicine",
+        "medical",
+        "needle",
+        "pump",
+        "plunger",
+        "nozzle",
+        "blood"
+      ],
+      "categories": [
+        "science",
+        "medical"
       ]
     },
     "table": {
@@ -7012,6 +7217,21 @@
         "weather"
       ]
     },
+    "wine": {
+      "tags": [
+        "alcohol",
+        "beverage",
+        "bar",
+        "drink",
+        "glass",
+        "sommelier",
+        "vineyard",
+        "winery"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "wrap-text": {
       "tags": [
         "words",
@@ -7240,10 +7460,6 @@
       "title": "Gaming",
       "icon": "gamepad-2"
     },
-    "health": {
-      "title": "Health",
-      "icon": "heart"
-    },
     "layout": {
       "title": "Layout",
       "icon": "layout"
@@ -7259,6 +7475,10 @@
     "maths": {
       "title": "Maths",
       "icon": "divide"
+    },
+    "medical": {
+      "title": "Medical",
+      "icon": "heart"
     },
     "money": {
       "title": "Money",
@@ -7304,10 +7524,6 @@
       "title": "Shopping",
       "icon": "shopping-bag"
     },
-    "sustainability": {
-      "title": "Sustainability",
-      "icon": "recycle"
-    },
     "social": {
       "title": "Social",
       "icon": "thumbs-up"
@@ -7315,6 +7531,10 @@
     "sports": {
       "title": "Sports",
       "icon": "type"
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "icon": "recycle"
     },
     "text": {
       "title": "Text formatting",
