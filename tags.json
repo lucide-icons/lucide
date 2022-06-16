@@ -1989,6 +1989,13 @@
     "sound",
     "mute"
   ],
+  "microscope": [
+    "medical",
+    "education",
+    "science",
+    "imaging",
+    "research"
+  ],
   "milestone": [
     "sign",
     "signpost",
@@ -2793,6 +2800,13 @@
     "remove",
     "unrate"
   ],
+  "stethoscope": [
+    "phonendoscope",
+    "medical",
+    "heart",
+    "lungs",
+    "sound"
+  ],
   "stop-circle": [
     "media",
     "music"
@@ -2881,6 +2895,15 @@
     "game",
     "war",
     "weapon"
+  ],
+  "syringe": [
+    "medicine",
+    "medical",
+    "needle",
+    "pump",
+    "plunger",
+    "nozzle",
+    "blood"
   ],
   "table": [
     "sheet",
