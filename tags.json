@@ -518,6 +518,15 @@
     "marquee",
     "tool"
   ],
+  "boxes": [
+    "cubes",
+    "packages",
+    "parts",
+    "group",
+    "units",
+    "collection",
+    "cluster"
+  ],
   "briefcase": [
     "work",
     "bag",
