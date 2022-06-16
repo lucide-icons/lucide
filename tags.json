@@ -396,6 +396,13 @@
   "beaker": [
     "cup"
   ],
+  "beer": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
+  ],
   "bed": [
     "sleep",
     "hotel",
@@ -1040,6 +1047,14 @@
     "winner",
     "favourite"
   ],
+  "cup-soda": [
+    "beverage",
+    "cup",
+    "drink",
+    "soda",
+    "straw",
+    "water"
+  ],
   "currency": [
     "finance",
     "money"
@@ -1476,6 +1491,12 @@
     "logo",
     "version control"
   ],
+  "glass-water": [
+    "beverage",
+    "drink",
+    "glass",
+    "water"
+  ],
   "glasses": [
     "glasses",
     "spectacles"
@@ -1910,6 +1931,14 @@
     "navigation",
     "travel",
     "marker"
+  ],
+  "martini": [
+    "cocktail",
+    "alcohol",
+    "beverage",
+    "bar",
+    "drink",
+    "glass"
   ],
   "maximize": [
     "fullscreen",
@@ -3216,6 +3245,16 @@
     "weather",
     "air",
     "blow"
+  ],
+  "wine": [
+    "alcohol",
+    "beverage",
+    "bar",
+    "drink",
+    "glass",
+    "sommelier",
+    "vineyard",
+    "winery"
   ],
   "wrap-text": [
     "words",
