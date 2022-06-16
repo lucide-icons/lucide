@@ -2958,7 +2958,13 @@
   ],
   "table": [
     "sheet",
-    "grid"
+    "grid",
+    "spreadsheet"
+  ],
+  "table-2": [
+    "sheet",
+    "grid",
+    "spreadsheet"
   ],
   "tablet": [
     "device"
