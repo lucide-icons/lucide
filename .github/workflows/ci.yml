@@ -3,7 +3,7 @@ name: Continuous integration icons
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - icons/**
 
