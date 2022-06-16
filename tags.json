@@ -1051,6 +1051,12 @@
     "backspace",
     "remove"
   ],
+  "diamond": [
+    "square",
+    "rectangle",
+    "oblique",
+    "rhombus"
+  ],
   "dice-1": [
     "dice",
     "random",
