@@ -488,7 +488,7 @@ jobs:
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
             commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push origin HEAD:master
+          git push origin HEAD:main
 
       - name: Zip font and icons
         run: |
