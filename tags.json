@@ -518,6 +518,15 @@
     "marquee",
     "tool"
   ],
+  "boxes": [
+    "cubes",
+    "packages",
+    "parts",
+    "group",
+    "units",
+    "collection",
+    "cluster"
+  ],
   "briefcase": [
     "work",
     "bag",
@@ -1042,6 +1051,12 @@
   "delete": [
     "backspace",
     "remove"
+  ],
+  "diamond": [
+    "square",
+    "rectangle",
+    "oblique",
+    "rhombus"
   ],
   "dice-1": [
     "dice",
@@ -2367,6 +2382,12 @@
     "chair",
     "furniture",
     "seat"
+  ],
+  "rotate-3d": [
+    "gizmo",
+    "transform",
+    "orientation",
+    "orbit"
   ],
   "rotate-ccw": [
     "arrow",

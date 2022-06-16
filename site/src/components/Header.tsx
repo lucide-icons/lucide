@@ -65,46 +65,55 @@ const Header = ({ data }: HeaderProps) => {
       name: 'lucide',
       Logo: JSLogo,
       href: '/docs/lucide',
+      label: 'Lucide documentation for JavaScript',
     },
     {
       name: 'lucide-react',
       Logo: ReactLogo,
       href: '/docs/lucide-react',
+      label: 'Lucide documentation for React',
     },
     {
       name: 'lucide-vue',
       Logo: VueLogo,
       href: '/docs/lucide-vue',
+      label: 'Lucide documentation for Vue',
     },
     {
       name: 'lucide-vue-next',
       Logo: Vue3Logo,
       href: '/docs/lucide-vue-next',
+      label: 'Lucide documentation for Vue 3',
     },
     {
       name: 'lucide-svelte',
       Logo: SvelteLogo,
       href: '/docs/lucide-svelte',
+      label: 'Lucide documentation for Svelte',
     },
     {
       name: 'lucide-preact',
       Logo: PreactLogo,
       href: '/docs/lucide-preact',
+      label: 'Lucide documentation for Preact',
     },
     {
       name: 'lucide-angular',
       Logo: AngularLogo,
       href: '/docs/lucide-angular',
+      label: 'Lucide documentation for Angluar',
     },
     {
       name: 'lucide-flutter',
       Logo: FlutterLogo,
       href: '/docs/lucide-flutter',
+      label: 'Lucide documentation for Flutter',
     },
     {
       name: 'lucide-laravel',
       Logo: LaravelLogo,
       href: 'https://github.com/mallardduck/blade-lucide-icons',
+      label: 'Lucide documentation for Laravel',
     },
   ];
 
@@ -141,10 +150,10 @@ const Header = ({ data }: HeaderProps) => {
             </Link>
           </NextLink>
         </WrapItem>
-        {packages.map(({ name, href, Logo }) => (
+        {packages.map(({ name, href, Logo, label }) => (
           <WrapItem key={name}>
             <NextLink href={href} key={name} passHref>
-              <Link _hover={{ opacity: 0.8 }}>
+              <Link _hover={{ opacity: 0.8 }} aria-label={label}>
                 <Logo />
               </Link>
             </NextLink>
