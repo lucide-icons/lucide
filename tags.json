@@ -888,6 +888,12 @@
     "weather",
     "night"
   ],
+  "cloud-moon-rain": [
+    "weather",
+    "partly",
+	"night",
+    "rainfall"
+  ],
   "cloud-off": [
     "disconnect"
   ],
@@ -906,6 +912,11 @@
   "cloud-sun": [
     "weather",
     "partly"
+  ],
+  "cloud-sun-rain": [
+    "weather",
+    "partly",
+    "rainfall"
   ],
   "cloudy": [
     "clouds"
