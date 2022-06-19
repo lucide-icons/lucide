@@ -36,7 +36,7 @@ export async function getStaticProps({ params }) {
         name,
         description,
         image: `/package-logos/${packageDirectory}-small.svg`,
-        source: `https://github.com/lucide-icons/lucide/tree/master/packages/${packageDirectory}`,
+        source: `https://github.com/lucide-icons/lucide/tree/main/packages/${packageDirectory}`,
         documentation: `/docs/${packageDirectory}`,
         ...packagesData[packageDirectory],
       };
