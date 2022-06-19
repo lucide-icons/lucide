@@ -1378,6 +1378,16 @@
   "flask-round": [
     "beaker"
   ],
+  "flip-horizontal": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-vertical": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
   "flower": [
     "sustainability",
     "nature",
@@ -1744,7 +1754,7 @@
   "lamp-floor": [
     "lighting",
     "household",
-    "floor",      
+    "floor",
     "home",
     "furniture"
   ],
