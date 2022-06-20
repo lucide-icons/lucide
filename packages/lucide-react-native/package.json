@@ -1,0 +1,44 @@
+{
+  "name": "lucide-react-native",
+  "description": "A Lucide icon library package for React Native applications",
+  "version": "0.48.0-alpha.5",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-react-native"
+  },
+  "author": "Eric Fennis",
+  "amdName": "lucide-react-native",
+  "main": "dist/cjs/lucide-react-native.js",
+  "main:umd": "dist/umd/lucide-react-native.js",
+  "module": "dist/esm/lucide-react-native.js",
+  "unpkg": "dist/umd/lucide-react-native.min.js",
+  "typings": "dist/lucide-react-native.d.ts",
+  "react-native": "dist/esm/lucide-react-native.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "yarn clean && yarn build:icons && yarn build:bundles && yarn build:types",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
+    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react-native/src --templateSrc=../packages/lucide-react-native/scripts/exportTemplate --renderUniqueKey",
+    "build:types": "yarn --cwd ../../ babel-node packages/lucide-react-native/scripts/buildTypes.js",
+    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react-native/rollup.config.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.6",
+    "babel-preset-react-app": "^10.0.0",
+    "jest": "^26.6.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.5.1",
+    "react-dom": "^17.0.2",
+    "react-native-svg": "^12.0.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.5.1 || ^17.0.0 || ^18.0.0",
+    "react-native-svg": "^12.0.0"
+  }
+}

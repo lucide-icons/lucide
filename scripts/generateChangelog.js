@@ -2,7 +2,7 @@ import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extr
 import githubApi from './githubApi';
 
 const fetchCompareTags = oldTag =>
-  githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...master`);
+  githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
 
 const iconRegex = /icons\/(.*)\.svg/g;
 const iconTemplate = ({ name, pullNumber, author }) =>
