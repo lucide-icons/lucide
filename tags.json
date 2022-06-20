@@ -508,6 +508,16 @@
     "strong",
     "format"
   ],
+  "bomb": [
+    "fatal",
+    "error",
+    "crash",
+    "blockbuster",
+    "mine",
+    "explosion",
+    "explode",
+    "explosive"
+  ],
   "book": [
     "read",
     "dictionary",
