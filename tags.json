@@ -624,10 +624,24 @@
     "confirm",
     "subscribe"
   ],
+  "calendar-clock": [
+    "date",
+    "time",
+    "event",
+    "clock"
+  ],
   "calendar-days": [
     "date",
     "time",
     "event"
+  ],
+  "calendar-heart": [
+    "date",
+    "time",
+    "event",
+    "heart",
+    "favourite",
+    "subscribe"
   ],
   "calendar-minus": [
     "date",
@@ -658,6 +672,12 @@
     "event",
     "range",
     "period"
+  ],
+  "calendar-search": [
+    "date",
+    "time",
+    "search",
+    "events"
   ],
   "calendar-x": [
     "date",
@@ -815,10 +835,24 @@
     "copy",
     "paste"
   ],
+  "clipboard-edit": [
+    "edit",
+    "paste",
+    "signature"
+  ],
   "clipboard-list": [
     "copy",
     "paste",
     "tasks"
+  ],
+  "clipboard-signature": [
+    "paste",
+    "signature"
+  ],
+  "clipboard-type": [
+    "paste",
+    "format",
+    "text"
   ],
   "clipboard-x": [
     "copy",
@@ -894,6 +928,12 @@
   "cloud": [
     "weather"
   ],
+  "cloud-cog": [
+    "computing",
+    "ai",
+    "cluster",
+    "network"
+  ],
   "cloud-drizzle": [
     "weather",
     "shower"
@@ -917,7 +957,7 @@
   "cloud-moon-rain": [
     "weather",
     "partly",
-	"night",
+    "night",
     "rainfall"
   ],
   "cloud-off": [
@@ -978,6 +1018,14 @@
     "cafe",
     "hot",
     "beverage"
+  ],
+  "cog": [
+    "computing",
+    "settings",
+    "cog",
+    "edit",
+    "gear",
+    "preferences"
   ],
   "coins": [
     "money",
@@ -1170,6 +1218,13 @@
     "board",
     "game"
   ],
+  "diff": [
+    "patch",
+    "difference",
+    "plus",
+    "minus",
+    "plus-minus"
+  ],
   "disc": [
     "album",
     "cd",
@@ -1287,6 +1342,56 @@
   "file": [
     "document"
   ],
+  "file-archive": [
+    "zip",
+    "package",
+    "archive"
+  ],
+  "file-audio": [
+    "music",
+    "audio",
+    "sound",
+    "headphones"
+  ],
+  "file-audio-2": [
+    "music",
+    "audio",
+    "sound",
+    "headphones"
+  ],
+  "file-axis-3d": [
+    "model",
+    "3d",
+    "axis",
+    "coordinates"
+  ],
+  "file-badge": [
+    "award",
+    "achievement",
+    "badge"
+  ],
+  "file-badge-2": [
+    "award",
+    "achievement",
+    "badge"
+  ],
+  "file-bar-chart": [
+    "statistics",
+    "diagram",
+    "graph",
+    "presentation"
+  ],
+  "file-bar-chart-2": [
+    "statistics",
+    "diagram",
+    "graph",
+    "presentation"
+  ],
+  "file-box": [
+    "box",
+    "package",
+    "model"
+  ],
   "file-check": [
     "done",
     "document"
@@ -1295,16 +1400,88 @@
     "done",
     "document"
   ],
+  "file-clock": [
+    "history",
+    "log",
+    "clock"
+  ],
   "file-code": [
     "script",
     "document"
+  ],
+  "file-cog": [
+    "executable",
+    "settings",
+    "cog",
+    "edit",
+    "gear"
+  ],
+  "file-cog-2": [
+    "executable",
+    "settings",
+    "cog",
+    "edit",
+    "gear"
+  ],
+  "file-diff": [
+    "diff",
+    "patch"
   ],
   "file-digit": [
     "number",
     "document"
   ],
+  "file-down": [
+    "download",
+    "import",
+    "export"
+  ],
+  "file-edit": [
+    "edit",
+    "signature"
+  ],
+  "file-heart": [
+    "heart",
+    "favourite",
+    "bookmark",
+    "quick link"
+  ],
+  "file-image": [
+    "image",
+    "graphics",
+    "photo",
+    "picture"
+  ],
   "file-input": [
     "document"
+  ],
+  "file-key": [
+    "key",
+    "private",
+    "public",
+    "security"
+  ],
+  "file-key-2": [
+    "key",
+    "private",
+    "public",
+    "security"
+  ],
+  "file-line-chart": [
+    "statistics",
+    "diagram",
+    "graph",
+    "presentation"
+  ],
+  "file-lock": [
+    "lock",
+    "password",
+    "security"
+  ],
+  "file-lock-2": [
+    "lock",
+    "password",
+    "security"
   ],
   "file-minus": [
     "delete",
@@ -1318,6 +1495,12 @@
   "file-output": [
     "document"
   ],
+  "file-pie-chart": [
+    "statistics",
+    "diagram",
+    "graph",
+    "presentation"
+  ],
   "file-plus": [
     "add",
     "create",
@@ -1330,16 +1513,92 @@
     "new",
     "document"
   ],
+  "file-question": [
+    "readme",
+    "help",
+    "question"
+  ],
+  "file-scan": [
+    "scan",
+    "code",
+    "qr-code"
+  ],
   "file-search": [
     "lost",
     "document",
-    "find"
+    "find",
+    "browser"
+  ],
+  "file-search-2": [
+    "lost",
+    "document",
+    "find",
+    "browser"
+  ],
+  "file-signature": [
+    "edit",
+    "signature"
+  ],
+  "file-spreadsheet": [
+    "spreadsheet",
+    "sheet",
+    "table"
+  ],
+  "file-symlink": [
+    "symlink",
+    "symbolic",
+    "link"
+  ],
+  "file-terminal": [
+    "terminal",
+    "bash",
+    "script",
+    "executable"
   ],
   "file-text": [
     "data",
     "txt",
     "pdf",
     "document"
+  ],
+  "file-type": [
+    "font",
+    "text",
+    "font",
+    "typography",
+    "type"
+  ],
+  "file-up": [
+    "upload",
+    "import",
+    "export"
+  ],
+  "file-video": [
+    "movie",
+    "video",
+    "film"
+  ],
+  "file-video-2": [
+    "movie",
+    "video",
+    "film"
+  ],
+  "file-volume": [
+    "audio",
+    "music",
+    "volume"
+  ],
+  "file-volume-2": [
+    "audio",
+    "music",
+    "volume"
+  ],
+  "file-warning": [
+    "hidden",
+    "warning",
+    "alert",
+    "danger",
+    "protected"
   ],
   "file-x": [
     "lost",
@@ -1423,14 +1682,139 @@
   "folder": [
     "directory"
   ],
+  "folder-archive": [
+    "archive",
+    "zip",
+    "package"
+  ],
+  "folder-check": [
+    "done",
+    "directory",
+    "check"
+  ],
+  "folder-clock": [
+    "history",
+    "directory",
+    "clock"
+  ],
+  "folder-closed": [
+    "directory",
+    "closed"
+  ],
+  "folder-cog": [
+    "directory",
+    "settings",
+    "control",
+    "preferences",
+    "cog",
+    "edit",
+    "gear"
+  ],
+  "folder-cog-2": [
+    "directory",
+    "settings",
+    "control",
+    "preferences",
+    "cog",
+    "edit",
+    "gear"
+  ],
+  "folder-down": [
+    "directory",
+    "download",
+    "import",
+    "export"
+  ],
+  "folder-edit": [
+    "directory",
+    "edit",
+    "rename"
+  ],
+  "folder-heart": [
+    "directory",
+    "heart",
+    "favourite",
+    "bookmark",
+    "quick link"
+  ],
+  "folder-input": [
+    "directory",
+    "import",
+    "export"
+  ],
+  "folder-key": [
+    "directory",
+    "key",
+    "private",
+    "security",
+    "protected"
+  ],
+  "folder-lock": [
+    "directory",
+    "lock",
+    "private",
+    "security",
+    "protected"
+  ],
   "folder-minus": [
-    "directory"
+    "directory",
+    "remove",
+    "delete"
   ],
   "folder-open": [
     "directory"
   ],
+  "folder-output": [
+    "directory",
+    "import",
+    "export"
+  ],
   "folder-plus": [
-    "directory"
+    "directory",
+    "add",
+    "create",
+    "new"
+  ],
+  "folder-search": [
+    "directory",
+    "search",
+    "find",
+    "lost",
+    "browser"
+  ],
+  "folder-search-2": [
+    "directory",
+    "search",
+    "find",
+    "lost",
+    "browser"
+  ],
+  "folder-symlink": [
+    "directory",
+    "symlink",
+    "symbolic",
+    "link"
+  ],
+  "folder-tree": [
+    "directory",
+    "tree",
+    "browser"
+  ],
+  "folder-up": [
+    "directory",
+    "upload",
+    "import",
+    "export"
+  ],
+  "folder-x": [
+    "directory",
+    "remove",
+    "delete"
+  ],
+  "folders": [
+    "multiple",
+    "copy",
+    "directories"
   ],
   "form-input": [
     "2fa",
@@ -1770,7 +2154,7 @@
   "lamp-floor": [
     "lighting",
     "household",
-    "floor",      
+    "floor",
     "home",
     "furniture"
   ],
@@ -2236,6 +2620,12 @@
     "box",
     "container"
   ],
+  "package-2": [
+    "box",
+    "container",
+    "archive",
+    "zip"
+  ],
   "package-check": [
     "confirm",
     "verified"
@@ -2607,6 +2997,13 @@
   "server": [
     "cloud",
     "storage"
+  ],
+  "server-cog": [
+    "cloud",
+    "storage",
+    "computing",
+    "cog",
+    "gear"
   ],
   "server-crash": [
     "cloud",
@@ -3254,6 +3651,12 @@
     "followed",
     "subscribed",
     "done"
+  ],
+  "user-cog": [
+    "settings",
+    "edit",
+    "cog",
+    "gear"
   ],
   "user-minus": [
     "delete",
