@@ -289,7 +289,7 @@
     "direction"
   ],
   "arrow-left-right": [
-    "bidirection",
+    "bidirectional",
     "direction",
     "swap",
     "switch",
@@ -328,6 +328,11 @@
   ],
   "axe": [
     "hatchet"
+  ],
+  "baby": [
+    "child",
+    "childproof",
+    "children"
   ],
   "backpack": [
     "bag",
@@ -408,17 +413,24 @@
   "beaker": [
     "cup"
   ],
+  "beer": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
+  ],
   "bed": [
     "sleep",
     "hotel",
     "furniture"
   ],
-  "bed-single": [
+  "bed-double": [
     "sleep",
     "hotel",
     "furniture"
   ],
-  "bed-double": [
+  "bed-single": [
     "sleep",
     "hotel",
     "furniture"
@@ -530,6 +542,15 @@
     "marquee",
     "tool"
   ],
+  "boxes": [
+    "cubes",
+    "packages",
+    "parts",
+    "group",
+    "units",
+    "collection",
+    "cluster"
+  ],
   "briefcase": [
     "work",
     "bag",
@@ -572,7 +593,8 @@
     "date",
     "time",
     "event",
-    "birthdate"
+    "birthdate",
+    "birthday"
   ],
   "calendar-check": [
     "date",
@@ -716,7 +738,7 @@
   "chevrons-left-right": [
     "arrow",
     "expand",
-    "horizonal",
+    "horizontal",
     "unfold"
   ],
   "chevrons-right": [
@@ -726,7 +748,7 @@
     "arrow",
     "collapse",
     "fold",
-    "horizonal"
+    "horizontal"
   ],
   "chevrons-up": [
     "arrow"
@@ -878,6 +900,12 @@
     "weather",
     "night"
   ],
+  "cloud-moon-rain": [
+    "weather",
+    "partly",
+	"night",
+    "rainfall"
+  ],
   "cloud-off": [
     "disconnect"
   ],
@@ -896,6 +924,11 @@
   "cloud-sun": [
     "weather",
     "partly"
+  ],
+  "cloud-sun-rain": [
+    "weather",
+    "partly",
+    "rainfall"
   ],
   "cloudy": [
     "clouds"
@@ -1031,7 +1064,7 @@
   ],
   "cross": [
     "healthcare",
-    "firstaid"
+    "first aid"
   ],
   "crosshair": [
     "aim",
@@ -1041,6 +1074,14 @@
     "king",
     "winner",
     "favourite"
+  ],
+  "cup-soda": [
+    "beverage",
+    "cup",
+    "drink",
+    "soda",
+    "straw",
+    "water"
   ],
   "currency": [
     "finance",
@@ -1053,6 +1094,12 @@
   "delete": [
     "backspace",
     "remove"
+  ],
+  "diamond": [
+    "square",
+    "rectangle",
+    "oblique",
+    "rhombus"
   ],
   "dice-1": [
     "dice",
@@ -1215,7 +1262,9 @@
   "fast-forward": [
     "music"
   ],
-  "feather": [],
+  "feather": [
+    "logo"
+  ],
   "figma": [
     "logo",
     "design",
@@ -1429,7 +1478,7 @@
     "present"
   ],
   "ghost": [
-    "pacman",
+    "pac-man",
     "spooky"
   ],
   "gift": [
@@ -1469,6 +1518,12 @@
   "gitlab": [
     "logo",
     "version control"
+  ],
+  "glass-water": [
+    "beverage",
+    "drink",
+    "glass",
+    "water"
   ],
   "glasses": [
     "glasses",
@@ -1529,12 +1584,12 @@
     "data",
     "ssd",
     "disk",
-    "harddisk"
+    "hard disk"
   ],
   "hard-hat": [
     "helmet",
     "construction",
-    "savety"
+    "safety"
   ],
   "hash": [
     "hashtag",
@@ -1677,6 +1732,47 @@
     "spell",
     "settings",
     "mouse"
+  ],
+  "lamp": [
+    "lighting",
+    "household",
+    "home",
+    "furniture"
+  ],
+  "lamp-ceiling": [
+    "lighting",
+    "household",
+    "home",
+    "furniture"
+  ],
+  "lamp-desk": [
+    "lighting",
+    "household",
+    "office",
+    "desk",
+    "home",
+    "furniture"
+  ],
+  "lamp-floor": [
+    "lighting",
+    "household",
+    "floor",      
+    "home",
+    "furniture"
+  ],
+  "lamp-wall-down": [
+    "lighting",
+    "household",
+    "wall",
+    "home",
+    "furniture"
+  ],
+  "lamp-wall-up": [
+    "lighting",
+    "household",
+    "wall",
+    "home",
+    "furniture"
   ],
   "landmark": [
     "bank",
@@ -1912,6 +2008,14 @@
     "travel",
     "marker"
   ],
+  "martini": [
+    "cocktail",
+    "alcohol",
+    "beverage",
+    "bar",
+    "drink",
+    "glass"
+  ],
   "maximize": [
     "fullscreen",
     "expand"
@@ -1960,6 +2064,13 @@
     "record",
     "sound",
     "mute"
+  ],
+  "microscope": [
+    "medical",
+    "education",
+    "science",
+    "imaging",
+    "research"
   ],
   "milestone": [
     "sign",
@@ -2049,6 +2160,14 @@
   "move": [
     "arrows"
   ],
+  "move-3d": [
+    "arrows",
+    "axis",
+    "gizmo",
+    "coordinates",
+    "transform",
+    "translate"
+  ],
   "move-diagonal": [
     "double",
     "arrow"
@@ -2086,13 +2205,6 @@
   ],
   "network": [
     "tree"
-  ],
-  "sun-moon": [
-    "night",
-    "light",
-    "moon",
-    "sun",
-    "brightness"
   ],
   "octagon": [
     "stop"
@@ -2235,7 +2347,8 @@
     "lock",
     "fix"
   ],
-  "unpin": [
+  "pin-off": [
+    "unpin",
     "unsave",
     "unlock",
     "remove",
@@ -2382,6 +2495,12 @@
     "furniture",
     "seat"
   ],
+  "rotate-3d": [
+    "gizmo",
+    "transform",
+    "orientation",
+    "orbit"
+  ],
   "rotate-ccw": [
     "arrow",
     "left"
@@ -2408,11 +2527,6 @@
   "save": [
     "floppy disk"
   ],
-  "scaling": [
-    "scale",
-    "resize",
-    "design"
-  ],
   "scale": [
     "balance",
     "legal",
@@ -2420,6 +2534,16 @@
     "right",
     "rule",
     "law"
+  ],
+  "scale-3d": [
+    "gizmo",
+    "transform",
+    "size"
+  ],
+  "scaling": [
+    "scale",
+    "resize",
+    "design"
   ],
   "scan": [
     "qr-code"
@@ -2514,7 +2638,7 @@
     "secure",
     "virus",
     "admin",
-    "savety"
+    "safety"
   ],
   "shield-check": [
     "security",
@@ -2780,6 +2904,13 @@
     "reaction",
     "memo"
   ],
+  "stethoscope": [
+    "phonendoscope",
+    "medical",
+    "heart",
+    "lungs",
+    "sound"
+  ],
   "stop-circle": [
     "media",
     "music"
@@ -2817,6 +2948,17 @@
     "low",
     "brightness low"
   ],
+  "sun-medium": [
+    "brightness",
+    "medium"
+  ],
+  "sun-moon": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
+  ],
   "sunrise": [
     "weather",
     "time",
@@ -2829,10 +2971,6 @@
     "evening",
     "night"
   ],
-  "sun-medium": [
-    "brightness",
-    "medium"
-  ],
   "superscript": [
     "text",
     "exponent"
@@ -2844,7 +2982,7 @@
   ],
   "switch-camera": [
     "photo",
-    "selfy",
+    "selfie",
     "front",
     "back"
   ],
@@ -2862,9 +3000,24 @@
     "war",
     "weapon"
   ],
+  "syringe": [
+    "medicine",
+    "medical",
+    "needle",
+    "pump",
+    "plunger",
+    "nozzle",
+    "blood"
+  ],
   "table": [
     "sheet",
-    "grid"
+    "grid",
+    "spreadsheet"
+  ],
+  "table-2": [
+    "sheet",
+    "grid",
+    "spreadsheet"
   ],
   "tablet": [
     "device"
@@ -3225,6 +3378,16 @@
     "weather",
     "air",
     "blow"
+  ],
+  "wine": [
+    "alcohol",
+    "beverage",
+    "bar",
+    "drink",
+    "glass",
+    "sommelier",
+    "vineyard",
+    "winery"
   ],
   "wrap-text": [
     "words",
