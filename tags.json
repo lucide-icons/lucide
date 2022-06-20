@@ -329,6 +329,10 @@
   "axe": [
     "hatchet"
   ],
+  "axis-3d": [
+    "gizmo",
+    "coordinates"
+  ],
   "baby": [
     "child",
     "childproof",
