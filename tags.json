@@ -573,6 +573,12 @@
     "transport",
     "trip"
   ],
+  "cake": [
+    "birthday",
+    "birthdate",
+    "celebration",
+    "party"
+  ],
   "calculator": [
     "count",
     "calculating machine"
@@ -1744,7 +1750,7 @@
   "lamp-floor": [
     "lighting",
     "household",
-    "floor",      
+    "floor",
     "home",
     "furniture"
   ],
