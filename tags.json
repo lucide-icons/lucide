@@ -1744,7 +1744,7 @@
   "lamp-floor": [
     "lighting",
     "household",
-    "floor",      
+    "floor",
     "home",
     "furniture"
   ],
@@ -2258,6 +2258,12 @@
   "paperclip": [
     "attachment",
     "file"
+  ],
+  "party-popper": [
+    "emoji",
+    "congratulations",
+    "celebration",
+    "party"
   ],
   "pause": [
     "music",
