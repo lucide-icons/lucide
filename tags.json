@@ -819,11 +819,6 @@
     "ellipsis",
     "progress"
   ],
-  "circle": [
-    "off",
-    "zero",
-    "record"
-  ],
   "circle-slashed": [
     "diameter",
     "zero",
