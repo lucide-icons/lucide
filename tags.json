@@ -808,6 +808,22 @@
     "zero",
     "record"
   ],
+  "circle-dot": [
+    "pending",
+    "dot",
+    "progress",
+    "issue"
+  ],
+  "circle-ellipsis": [
+    "pending",
+    "ellipsis",
+    "progress"
+  ],
+  "circle": [
+    "off",
+    "zero",
+    "record"
+  ],
   "circle-slashed": [
     "diameter",
     "zero",
