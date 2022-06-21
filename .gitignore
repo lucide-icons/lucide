@@ -1,6 +1,8 @@
 .DS_Store
 .next
+.obsidian
 .now
+.idea
 node_modules
 dist
 build
