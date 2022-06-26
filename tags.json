@@ -3531,6 +3531,13 @@
     "storm",
     "hurricane"
   ],
+  "toy-brick": [
+    "lego",
+    "block",
+    "addon",
+    "plugin",
+    "integration"
+  ],
   "train": [
     "transport",
     "metro",
