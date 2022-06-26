@@ -814,6 +814,17 @@
     "zero",
     "record"
   ],
+  "circle-dot": [
+    "pending",
+    "dot",
+    "progress",
+    "issue"
+  ],
+  "circle-ellipsis": [
+    "pending",
+    "ellipsis",
+    "progress"
+  ],
   "circle-slashed": [
     "diameter",
     "zero",
