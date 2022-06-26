@@ -2604,6 +2604,11 @@
   "network": [
     "tree"
   ],
+  "newspaper": [
+    "news",
+    "feed",
+    "home"
+  ],
   "octagon": [
     "stop"
   ],
