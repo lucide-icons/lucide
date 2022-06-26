@@ -599,6 +599,12 @@
     "transport",
     "trip"
   ],
+  "cake": [
+    "birthday",
+    "birthdate",
+    "celebration",
+    "party"
+  ],
   "calculator": [
     "count",
     "calculating machine"
