@@ -29,6 +29,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 * [Usage](#usage)
   * [Web](#web)
   * [React](#react)
+  * [React Native](#react-native)
   * [Vue 2](#vue-2)
   * [Vue 3](#vue-3)
   * [Angular](#angular)
@@ -75,6 +76,20 @@ npm install lucide-react
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react#lucide-react).
+
+### React Native
+
+Implementation of the lucide icon library for React Native applications.
+
+```sh
+yarn add lucide-react-native
+
+# or
+
+npm install lucide-react-native
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react-native#lucide-react-native).
 
 ### Vue 2
 

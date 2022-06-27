@@ -22,11 +22,12 @@
     ]
   },
   "scripts": {
-    "build": "yarn lucide build && yarn lucide-react build && yarn lucide-preact build && yarn lucide-vue build && yarn lucide-vue-next build && yarn lucide-angular build",
+    "build": "yarn lucide build && yarn lucide-react build && yarn lucide-react-native build && yarn lucide-preact build && yarn lucide-vue build && yarn lucide-vue-next build && yarn lucide-angular build",
     "test": "yarn lucide build:icons && yarn lucide-react build:icons && yarn lucide-vue build:icons && jest",
     "lucide": "yarn workspace lucide",
     "lucide-angular": "yarn workspace lucide-angular",
     "lucide-react": "yarn workspace lucide-react",
+    "lucide-react-native": "yarn workspace lucide-react-native",
     "lucide-preact": "yarn workspace lucide-preact",
     "lucide-vue": "yarn workspace lucide-vue",
     "lucide-vue-next": "yarn workspace lucide-vue-next",
