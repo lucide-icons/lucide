@@ -1,6 +1,6 @@
 # Lucide React Native
 
-Implementation of the lucide icon library for react applications.
+Implementation of the lucide icon library for React Native applications.
 
 > What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
