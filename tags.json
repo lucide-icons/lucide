@@ -2607,7 +2607,10 @@
   "newspaper": [
     "news",
     "feed",
-    "home"
+    "home",
+    "magazine",
+    "article",
+    "headline"
   ],
   "octagon": [
     "stop"
