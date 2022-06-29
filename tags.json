@@ -2621,6 +2621,14 @@
   "network": [
     "tree"
   ],
+  "newspaper": [
+    "news",
+    "feed",
+    "home",
+    "magazine",
+    "article",
+    "headline"
+  ],
   "octagon": [
     "stop"
   ],
