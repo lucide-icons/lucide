@@ -67,5 +67,8 @@
   },
   "lint-staged": {
     "icons/*.svg": "npx babel-node ./scripts/optimizeStagedSvgs.js --presets @babel/env"
+  },
+  "resolutions": {
+    "svg-outline-stroke/sharp": "^0.30.0"
   }
 }
