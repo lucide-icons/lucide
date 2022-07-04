@@ -60,5 +60,8 @@
     "ts-node": "~10.4.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"
+  },
+  "installConfig": {
+    "hoistingLimits": "dependencies"
   }
 }

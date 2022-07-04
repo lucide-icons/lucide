@@ -3,22 +3,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "**/jest",
-      "**/jest/**",
-      "**/jasmine",
-      "**/jasmine/**",
-      "**/react",
-      "**/react/**",
-      "**/testing-library__jest-dom",
-      "**/testing-library__jest-dom/**",
-      "**/testing-library__react-hooks",
-      "**/testing-library__react-hooks/**",
-      "**/react-dom",
-      "**/react-dom/**",
-      "**/react-test-renderer",
-      "**/react-test-renderer/**"
     ]
   },
   "scripts": {
