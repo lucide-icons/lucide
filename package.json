@@ -83,6 +83,5 @@
   },
   "lint-staged": {
     "icons/*.svg": "npx babel-node ./scripts/optimizeStagedSvgs.js --presets @babel/env"
-  },
-  "dependencies": {}
+  }
 }

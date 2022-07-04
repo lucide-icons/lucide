@@ -4,6 +4,11 @@
 .obsidian
 .now
 .idea
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
 node_modules
 dist
 build
