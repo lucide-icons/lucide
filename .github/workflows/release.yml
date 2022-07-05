@@ -496,6 +496,7 @@ jobs:
         pre-build,
         lucide,
         lucide-react,
+        lucide-react-native,
         lucide-vue,
         lucide-vue-next,
         lucide-angular,
