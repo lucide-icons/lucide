@@ -1,8 +1,8 @@
-import { Button, ButtonProps, Flex, useToast } from '@chakra-ui/react';
+import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import copy from 'copy-to-clipboard';
-import { memo, useContext } from 'react';
-import { IconStyleContext } from './CustomizeIconContext';
+import { memo } from 'react';
+import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps extends ButtonProps {
@@ -12,9 +12,9 @@ interface IconListItemProps extends ButtonProps {
   src: string;
 }
 
-const IconListItem = ({ name, content, src, onClick, ...props }: IconListItemProps) => {
+const IconListItem = ({ name, content, onClick, src: svg, ...props }: IconListItemProps) => {
   const toast = useToast();
-  const { color, size, strokeWidth } = useContext(IconStyleContext);
+  const { color, size, strokeWidth, iconsRef } = useCustomizeIconContext();
 
   return (
     <Button
@@ -28,9 +28,8 @@ const IconListItem = ({ name, content, src, onClick, ...props }: IconListItemPro
       whiteSpace="normal"
       alignItems="center"
       onClick={event => {
-        if (onClick == null) {
-          return;
-        }
+        const src = iconsRef.current[name].outerHTML ?? svg
+
         if (event.shiftKey) {
           copy(src);
           toast({
@@ -60,6 +59,7 @@ const IconListItem = ({ name, content, src, onClick, ...props }: IconListItemPro
             strokeWidth={strokeWidth}
             height={size}
             width={size}
+            ref={iconEl => (iconsRef.current[name] = iconEl)}
           />
         </Flex>
       </Flex>

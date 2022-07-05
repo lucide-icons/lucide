@@ -1,13 +1,13 @@
+import { useMemo } from 'react';
 import { useRouter } from 'next/router';
 import IconDetailOverlay from '../../components/IconDetailOverlay';
 import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
-import { useMemo } from 'react';
-
-const IconPage = ({ icon, data }) => {
+const IconPage = ({ icon, data }): JSX.Element => {
   const router = useRouter();
   const getIcon = iconName => data.find(({ name }) => name === iconName) || {};
 
@@ -48,13 +48,13 @@ const IconPage = ({ icon, data }) => {
 
 export default IconPage;
 
-export async function getStaticProps({ params: { iconName } }) {
+export const getStaticProps: GetStaticProps = async ({ params: { iconName } }) => {
   const data = await getAllData();
-  const icon = await getData(iconName);
+  const icon = await getData(iconName as string);
   return { props: { icon, data } };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const data = await getAllData();
 
   return {
@@ -63,4 +63,4 @@ export async function getStaticPaths() {
     })),
     fallback: false,
   };
-}
+};

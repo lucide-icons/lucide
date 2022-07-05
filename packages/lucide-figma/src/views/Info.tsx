@@ -12,7 +12,7 @@ const Info = ({ version }: PageProps) => {
     },
     {
       name: 'Contribute an icon',
-      url: 'https://github.com/lucide-icons/lucide/blob/master/CONTRIBUTING.md'
+      url: 'https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md'
     },
     {
       name: 'Website',

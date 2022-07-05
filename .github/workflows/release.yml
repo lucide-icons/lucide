@@ -33,14 +33,15 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
           cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -69,13 +70,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -98,19 +102,60 @@ jobs:
           name: lucide-react-package-json
           path: packages/lucide-react/package.json
 
+  lucide-react-native:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set package.json version lucide
+        run: yarn workspace lucide-react-native version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: yarn workspace lucide-react-native build
+
+      - name: Test
+        run: yarn workspace lucide-react-native test
+
+      - name: Publish
+        run: yarn workspace lucide-react-native publish
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-react-native-package-json
+          path: packages/lucide-react-native/package.json
+
   lucide-vue:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -139,13 +184,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -174,13 +222,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -209,13 +260,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -244,13 +298,16 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -280,13 +337,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install dependencies
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
@@ -315,10 +375,13 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.4.0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "14"
-          cache: yarn
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
       - name: Install FontForge
         run: sudo apt-get install zlib1g-dev fontforge
@@ -345,7 +408,7 @@ jobs:
         run: sudo gem install fontcustom
 
       - name: Install
-        run: yarn --prefer-offline
+        run: yarn --frozen-lockfile
 
       - name: Build Icon Font
         run: |
@@ -433,6 +496,7 @@ jobs:
         pre-build,
         lucide,
         lucide-react,
+        lucide-react-native,
         lucide-vue,
         lucide-vue-next,
         lucide-angular,
@@ -463,7 +527,7 @@ jobs:
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
             commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push origin HEAD:master
+          git push origin HEAD:main
 
       - name: Zip font and icons
         run: |

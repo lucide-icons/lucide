@@ -1,4 +1,6 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useRef, useState, MutableRefObject, useContext, useMemo } from 'react';
+
+type IconsRef = Record<string, SVGSVGElement>;
 
 interface ICustomIconStyle {
   color: string;
@@ -8,6 +10,7 @@ interface ICustomIconStyle {
   size: number;
   setSize: (n: number) => void;
   resetStyle: () => void;
+  iconsRef: MutableRefObject<IconsRef>;
 }
 
 const DEFAULT_STYLE = {
@@ -24,9 +27,11 @@ export const IconStyleContext = createContext<ICustomIconStyle>({
   size: 24,
   setSize: (n: number) => null,
   resetStyle: () => null,
+  iconsRef: { current: {} },
 });
 
-export function CustomizeIconContext({ children }) {
+export function CustomizeIconContext({ children }): JSX.Element {
+  const iconsRef = useRef<IconsRef>({});
   const [color, setColor] = useState(DEFAULT_STYLE.color);
   const [stroke, setStroke] = useState(DEFAULT_STYLE.strokeWidth);
   const [size, setSize] = useState(DEFAULT_STYLE.size);
@@ -37,13 +42,21 @@ export function CustomizeIconContext({ children }) {
     setSize(DEFAULT_STYLE.size);
   }
 
-  return (
-    <IconStyleContext.Provider
-      value={{ color, setColor, strokeWidth: stroke, setStroke, size, setSize, resetStyle }}
-    >
-      {children}
-    </IconStyleContext.Provider>
+  const value = useMemo(
+    () => ({
+      color,
+      setColor,
+      strokeWidth: stroke,
+      setStroke,
+      size,
+      setSize,
+      resetStyle,
+      iconsRef,
+    }),
+    [color, setColor, stroke, setStroke, size, setSize, resetStyle, iconsRef],
   );
+
+  return <IconStyleContext.Provider value={value}>{children}</IconStyleContext.Provider>;
 }
 
 export function useCustomizeIconContext() {
