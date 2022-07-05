@@ -4,7 +4,6 @@ import IconDetailOverlay from '../../components/IconDetailOverlay';
 import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
-import Header from '../../components/Header';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 const IconPage = ({ icon, data }): JSX.Element => {
@@ -22,7 +21,7 @@ const IconPage = ({ icon, data }): JSX.Element => {
 
     router.push(
       {
-        pathname: '/',
+        pathname: '/icons',
         query,
       },
       undefined,
@@ -40,7 +39,6 @@ const IconPage = ({ icon, data }): JSX.Element => {
   return (
     <Layout>
       <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} />
-      <Header {...{ data }} />
       <IconOverview {...{ data }} />
     </Layout>
   );

@@ -1,4 +1,4 @@
-import { Box, Text, IconButton, HStack } from '@chakra-ui/react';
+import { Box, Text, IconButton, HStack, Collapse } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import useSearch from '../lib/useSearch';
 import { IconEntity } from '../types';
@@ -9,6 +9,7 @@ import { LayoutGrid, Library } from 'lucide-react';
 
 import categories from '../../../categories.json';
 import IconCategoryList from './IconCategoryList';
+import { IconCustomizerDrawer } from './IconCustomizerDrawer';
 
 interface IconOverviewProps {
   data: IconEntity[];
@@ -37,21 +38,34 @@ const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
           icon={<CategoryViewIcon />}
         />
         <SearchInput onChange={setQuery} count={data.length} />
+        <IconCustomizerDrawer size="md" paddingX={6} />
       </HStack>
 
-      <Box marginTop={5} marginBottom="320px">
-        {searchResults.length > 0 ? (
-          categoryView ? (
-            <IconCategoryList icons={searchResults} data={data} categories={categories} />
+      <HStack marginTop={5} marginBottom="320px">
+        <Box
+          display={categoryView ? 'none' : 'block'}
+          alignSelf="flex-start"
+          // transition="ease-in width 160ms .1s"
+          willChange="width"
+        >
+          <Box width={240} position="sticky" top={64}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, inventore.
+          </Box>
+        </Box>
+        <Box flex={1}>
+          {searchResults.length > 0 ? (
+            categoryView ? (
+              <IconCategoryList icons={searchResults} data={data} categories={categories} />
+            ) : (
+              <IconList icons={searchResults} />
+            )
           ) : (
-            <IconList icons={searchResults} />
-          )
-        ) : (
-          <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word">
-            No results found for "{query}"
-          </Text>
-        )}
-      </Box>
+            <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word">
+              No results found for "{query}"
+            </Text>
+          )}
+        </Box>
+      </HStack>
     </>
   );
 };

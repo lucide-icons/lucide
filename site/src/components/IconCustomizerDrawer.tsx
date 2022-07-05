@@ -21,7 +21,7 @@ import {
 } from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
 
-export function IconCustomizerDrawer() {
+export const IconCustomizerDrawer = (props: ButtonProps) => {
   const [showCustomize, setShowCustomize] = useState(false);
   const {
     color,
@@ -35,11 +35,16 @@ export function IconCustomizerDrawer() {
 
   return (
     <>
-      <Button as="a" leftIcon={<Edit />} size="lg" onClick={() => setShowCustomize(true)}>
+      <Button
+        as="a"
+        leftIcon={<Edit />}
+        size="lg"
+        onClick={() => setShowCustomize(true)}
+        {...props}
+      >
         Customize
       </Button>
       <Drawer isOpen={showCustomize} placement="right" onClose={() => setShowCustomize(false)}>
-        <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Customize Icons</DrawerHeader>
@@ -101,4 +106,4 @@ export function IconCustomizerDrawer() {
       </Drawer>
     </>
   );
-}
+};

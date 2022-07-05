@@ -22,7 +22,13 @@ const IndexPage = ({ data }) => {
       <IconDetailOverlay
         open={!!currentIcon?.name}
         icon={currentIcon}
-        close={() => router.push('/', undefined, { shallow: true })}
+        close={() => router.push({
+          pathname: '/icon/[iconName]',
+          query: {
+            ...router.query,
+            iconName: '',
+          },
+        }, undefined, { shallow: true })}
       />
       <Header {...{ data }} />
       <IconOverview {...{ data }} />

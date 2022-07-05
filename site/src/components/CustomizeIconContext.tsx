@@ -62,7 +62,7 @@ export function CustomizeIconContext({ children }): JSX.Element {
 export function useCustomizeIconContext() {
   const context = useContext(IconStyleContext);
   if (context === undefined) {
-    return { color: 'currentColor', size: 24, strokeWidth: 2 };
+    return { color: 'currentColor', size: 24, strokeWidth: 2, iconsRef: { current: {} }};
   }
   return context;
 }
