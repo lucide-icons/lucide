@@ -2473,12 +2473,26 @@
     "sound",
     "listen",
     "radio",
-    "podcast"
+    "podcast",
+    "microphone"
   ],
   "mic-off": [
     "record",
     "sound",
-    "mute"
+    "mute",
+    "microphone"
+  ],
+  "mic-2": [
+    "lyrics",
+    "voice",
+    "listen",
+    "sound",
+    "music",
+    "radio",
+    "podcast",
+    "karaoke",
+    "singing",
+    "microphone"
   ],
   "microscope": [
     "medical",
@@ -2600,6 +2614,25 @@
     "arrow"
   ],
   "music": [
+    "quaver",
+    "eighth note",
+    "note"
+  ],
+  "music-2": [
+    "quaver",
+    "eighth note",
+    "note"
+  ],
+  "music-3": [
+    "crotchet",
+    "minim",
+    "quarter note",
+    "half note",
+    "note"
+  ],
+  "music-4": [
+    "semiquaver",
+    "sixteenth note",
     "note"
   ],
   "navigation": [
