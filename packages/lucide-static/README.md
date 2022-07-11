@@ -13,7 +13,7 @@ This package include the following lucide implementations:
 
 This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings in your javascript project.
 
-> ⚠️ It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](https://github.com/lucide-icons/lucide/tree/master/packages/lucide), [lucide-react](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react), [lucide-vue](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue), [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next), [lucide-angular](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-angular), [lucide-preact](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-preact)
+> ⚠️ It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](https://github.com/lucide-icons/lucide/tree/main/packages/lucide), [lucide-react](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react), [lucide-vue](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue), [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue-next), [lucide-angular](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-angular), [lucide-preact](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-preact)
 
 ## Installation
 
@@ -183,9 +183,9 @@ app.listen(port, () => {
 
 ## Contributing
 
-For more info on how to contribute please see the [contribution guidelines](https://github.com/lucide-icons/lucide/blob/master/CONTRIBUTING.md).
+For more info on how to contribute please see the [contribution guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
 
-Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/master/README.md)
+Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/main/README.md)
 
 ## Community
 
@@ -193,4 +193,4 @@ Join the community on our [Discord](https://discord.gg/EH6nSts) server!
 
 ## License
 
-Lucide is totally free for commercial use and personally use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/master/LICENSE).
+Lucide is totally free for commercial use and personally use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE).
