@@ -11,6 +11,13 @@
     "action",
     "motion"
   ],
+  "air-vent": [
+    "air conditioner",
+    "ac",
+    "central air",
+    "cooling",
+    "climate-control"
+  ],
   "airplay": [
     "stream",
     "cast",
