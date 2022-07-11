@@ -11,8 +11,10 @@
     "action",
     "motion"
   ],
-  "air-conditioner": [
+  "air-vent": [
+    "air conditioner",
     "ac",
+    "central air",
     "cooling",
     "climate-control"
   ],
