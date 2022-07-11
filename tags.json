@@ -244,6 +244,10 @@
     "camera",
     "photo"
   ],
+  "apple": [
+    "fruit",
+    "food"
+  ],
   "archive": [
     "index",
     "box"
@@ -359,6 +363,10 @@
     "travel",
     "cart",
     "trolley"
+  ],
+  "banana": [
+    "fruit",
+    "food"
   ],
   "banknote": [
     "currency",
@@ -746,6 +754,10 @@
     "food",
     "kitchen",
     "restaurant"
+  ],
+  "cherry": [
+    "fruit",
+    "food"
   ],
   "chevron-down": [
     "arrow"
@@ -1303,6 +1315,10 @@
   ],
   "egg": [
     "food"
+  ],
+  "egg-fried": [
+    "food",
+    "breakfast"
   ],
   "equal": [
     "calculate"
@@ -1972,6 +1988,11 @@
     "learn",
     "study"
   ],
+  "grape": [
+    "fruit",
+    "wine",
+    "food"
+  ],
   "grid": [
     "table"
   ],
@@ -2081,6 +2102,10 @@
     "timer",
     "time",
     "sandglass"
+  ],
+  "ice-cream": [
+    "gelato",
+    "food"
   ],
   "image": [
     "picture",
@@ -2832,6 +2857,11 @@
   "pipette": [
     "eye dropper",
     "color picker"
+  ],
+  "pizza": [
+    "pie",
+    "quiche",
+    "food"
   ],
   "plane": [
     "plane",
