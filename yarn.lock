@@ -3619,6 +3619,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/react-native@npm:^10.0.0":
+  version: 10.1.1
+  resolution: "@testing-library/react-native@npm:10.1.1"
+  dependencies:
+    pretty-format: ^27.0.0
+  peerDependencies:
+    react: ">=16.0.0"
+    react-native: ">=0.59"
+    react-test-renderer: ">=16.0.0"
+  checksum: 65e8eda39a030d13b23e38a30db90059bfd34517bc407f2705c3bae85489627af7455205b491e7c13245891da59793786be02f38e9a6092a6aeca23c683d2dce
+  languageName: node
+  linkType: hard
+
 "@testing-library/react@npm:^11.2.6":
   version: 11.2.7
   resolution: "@testing-library/react@npm:11.2.7"
@@ -13540,13 +13553,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "lucide-react-native@workspace:packages/lucide-react-native"
   dependencies:
-    "@testing-library/react": ^11.2.6
+    "@testing-library/react-native": ^10.0.0
     babel-preset-react-app: ^10.0.0
     jest: ^26.6.3
     prop-types: ^15.7.2
     react: ^16.5.1
     react-native: ^0.69.0
     react-native-svg: ^12.0.0
+    react-test-renderer: ^16.5.1
   peerDependencies:
     prop-types: ^15.7.2
     react: ^16.5.1 || ^17.0.0 || ^18.0.0
@@ -16944,7 +16958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^27.0.2":
+"pretty-format@npm:^27.0.0, pretty-format@npm:^27.0.2":
   version: 27.5.1
   resolution: "pretty-format@npm:27.5.1"
   dependencies:
@@ -17372,7 +17386,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.13.1":
+"react-is@npm:^16.13.1, react-is@npm:^16.8.6":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -17486,6 +17500,20 @@ __metadata:
   peerDependencies:
     react: ^16.0.0 || ^17.0.0
   checksum: f344c663c48720d19559b4198b1f63ad47a3f11bedc92ede053a6c0706b5209e6110086f3ccc6db04eda9f0d1a415845956ddfb6ce09a922167d4831fcba9314
+  languageName: node
+  linkType: hard
+
+"react-test-renderer@npm:^16.5.1":
+  version: 16.14.0
+  resolution: "react-test-renderer@npm:16.14.0"
+  dependencies:
+    object-assign: ^4.1.1
+    prop-types: ^15.6.2
+    react-is: ^16.8.6
+    scheduler: ^0.19.1
+  peerDependencies:
+    react: ^16.14.0
+  checksum: 96eb8a2566e67ebd246ef6e1b36d8c8498c68ebfdb94ca8399c19b4e3b73368caf0ffbe44767593e3499f2f58b4b5e57ba0565a47628048d2ab01b23a422724e
   languageName: node
   linkType: hard
 
@@ -18484,6 +18512,16 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: 5636b55cf15f7cf0baa73f2797bf992bdcf75d1b39d82c0aa4608555c774368f6ac321cb641fd5f3d3ceb87805122cd47540da6a7b5960fe0dbdb8f8c263f000
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.19.1":
+  version: 0.19.1
+  resolution: "scheduler@npm:0.19.1"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: 73e185a59e2ff5aa3609f5b9cb97ddd376f89e1610579d29939d952411ca6eb7a24907a4ea4556569dacb931467a1a4a56d94fe809ef713aa76748642cd96a6c
   languageName: node
   linkType: hard
 

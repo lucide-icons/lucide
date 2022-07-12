@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react'
-import { Grid } from '../src/icons'
+import { render } from '@testing-library/react-native';
+import { Grid } from '../src/icons';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
