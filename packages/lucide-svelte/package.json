@@ -36,13 +36,13 @@
     "babel-preset-preact": "^2.0.0",
     "jest": "^26.6.3",
     "rollup-plugin-svelte": "^7.1.0",
-    "svelte": "^3.45.0",
+    "svelte": "^3.49.0",
     "svelte-jester": "^2.3.1",
     "svelte-preprocess": "^4.10.1",
     "svelte2tsx": "^0.4.12"
   },
   "peerDependencies": {
-    "svelte": "^3.45.0",
+    "svelte": "^3.49.0",
     "svelte2tsx": "^0.4.12"
   }
 }
