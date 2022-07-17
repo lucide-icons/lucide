@@ -3755,6 +3755,14 @@
   "upload-cloud": [
     "file"
   ],
+  "usb": [
+    "universal",
+    "serial",
+    "bus",
+    "controller",
+    "connector",
+    "interface"
+  ],
   "user": [
     "person",
     "account",
