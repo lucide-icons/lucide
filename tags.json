@@ -1896,6 +1896,11 @@
     "code",
     "automation"
   ],
+  "joystick": [
+    "game",
+    "console",
+    "control stick"
+  ],
   "gamepad": [
     "console"
   ],
