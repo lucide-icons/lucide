@@ -1211,7 +1211,9 @@
     "automation"
   ],
   "joystick": [
-    "game"
+    "game",
+    "console",
+    "control stick"
   ],
   "gamepad": [
     "console"
