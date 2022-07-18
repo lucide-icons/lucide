@@ -533,6 +533,13 @@
     "explode",
     "explosive"
   ],
+  "bone": [
+    "medical",
+    "health",
+    "death",
+    "pet",
+    "gaming"
+  ],
   "book": [
     "read",
     "dictionary",
