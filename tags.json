@@ -324,12 +324,6 @@
   "arrow-up-right": [
     "direction"
   ],
-  "aspect-ratio-16x9": [
-    "aspect ratio",
-    "16:9",
-    "16x9",
-    "rectangle"
-  ],
   "asterisk": [
     "reference"
   ],
@@ -2956,6 +2950,18 @@
     "music",
     "connect"
   ],
+  "rectangle-horizontal": [
+    "rectangle",
+    "aspect ratio",
+    "16:9",
+    "horizontal",
+  ],
+  "rectangle-vertical": [
+    "rectangle",
+    "aspect ratio",
+    "9:16",
+    "vertical",
+  ],
   "recycle": [
     "sustainability",
     "salvage",
@@ -3392,7 +3398,9 @@
     "plant"
   ],
   "square": [
-    "rectangle"
+    "rectangle",
+    "aspect ratio",
+    "1:1"
   ],
   "star": [
     "bookmark",
