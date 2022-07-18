@@ -3476,6 +3476,13 @@
     "sun",
     "brightness"
   ],
+  "sun-snow": [
+    "weather",
+    "air conditioning",
+    "temperature",
+    "hot",
+    "cold"
+  ],
   "sunrise": [
     "weather",
     "time",
