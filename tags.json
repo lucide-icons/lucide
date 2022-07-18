@@ -3481,7 +3481,8 @@
     "air conditioning",
     "temperature",
     "hot",
-    "cold"
+    "cold",
+    "seasons"
   ],
   "sunrise": [
     "weather",
