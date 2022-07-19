@@ -3888,6 +3888,10 @@
     "magic",
     "selection"
   ],
+  "wand-2": [
+    "magic",
+    "wizard"
+  ],
   "watch": [
     "clock",
     "time"
