@@ -3058,6 +3058,12 @@
   "scan": [
     "qr-code"
   ],
+  "scan-face": [
+    "face",
+    "biometric",
+    "authentication",
+    "2fa"
+  ],
   "scan-line": [
     "qr-code"
   ],
