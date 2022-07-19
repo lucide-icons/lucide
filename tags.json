@@ -2041,7 +2041,10 @@
   ],
   "sailboat": [
     "ship",
-    "boat"
+    "boat",
+    "harbor",
+    "harbour",
+    "dock"
   ],
   "save": [
     "floppy disk"
