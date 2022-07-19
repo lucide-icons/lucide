@@ -2079,6 +2079,16 @@
     "hate",
     "emotion"
   ],
+  "heart-pulse": [
+    "heartbeat",
+    "pulse",
+    "health",
+    "medical",
+    "blood pressure",
+    "cardiac",
+    "systole",
+    "diastole"
+  ],
   "help-circle": [
     "question mark"
   ],
