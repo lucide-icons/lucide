@@ -2954,13 +2954,13 @@
     "rectangle",
     "aspect ratio",
     "16:9",
-    "horizontal",
+    "horizontal"
   ],
   "rectangle-vertical": [
     "rectangle",
     "aspect ratio",
     "9:16",
-    "vertical",
+    "vertical"
   ],
   "recycle": [
     "sustainability",
