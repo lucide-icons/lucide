@@ -2483,6 +2483,14 @@
     "alert",
     "notification"
   ],
+  "megaphone-off": [
+    "advertisement",
+    "attention",
+    "alert",
+    "notification",
+    "disable",
+    "silent"
+  ],
   "meh": [
     "emoji",
     "face",
