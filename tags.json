@@ -3547,7 +3547,18 @@
     "device"
   ],
   "tag": [
-    "label"
+    "label",
+    "badge",
+    "ticket",
+    "mark"
+  ],
+  "tags": [
+    "labels",
+    "badges",
+    "tickets",
+    "marks",
+    "copy",
+    "multiple"
   ],
   "target": [
     "logo",
