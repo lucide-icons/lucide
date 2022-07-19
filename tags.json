@@ -1949,6 +1949,10 @@
     "code",
     "version control"
   ],
+  "git-compare": [
+    "code",
+    "version control"
+  ],
   "git-fork": [
     "code",
     "version control"
@@ -1960,6 +1964,16 @@
   "git-pull-request": [
     "code",
     "version control"
+  ],
+  "git-pull-request-draft": [
+    "code",
+    "version control",
+    "draft"
+  ],
+  "git-pull-request-closed": [
+    "code",
+    "version control",
+    "rejected"
   ],
   "github": [
     "logo",
