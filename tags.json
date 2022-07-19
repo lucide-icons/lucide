@@ -1963,7 +1963,7 @@
     "version control",
     "draft"
   ],
-  "git-pull-request-merged": [
+  "git-pull-request-closed": [
     "code",
     "version control",
     "rejected"
