@@ -360,6 +360,7 @@
   "baggage-claim": [
     "baggage",
     "luggage",
+    "suitcase",
     "travel",
     "cart",
     "trolley"
@@ -2471,6 +2472,7 @@
   "luggage": [
     "baggage",
     "luggage",
+    "suitcase",
     "travel"
   ],
   "magnet": [
