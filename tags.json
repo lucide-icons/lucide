@@ -2484,7 +2484,73 @@
   "mail": [
     "email",
     "message",
-    "letter"
+    "letter",
+    "unread"
+  ],
+  "mail-check": [
+    "email",
+    "message",
+    "letter",
+    "subscribe",
+    "delivered",
+    "success"
+  ],
+  "mail-minus": [
+    "email",
+    "message",
+    "letter",
+    "remove",
+    "delete"
+  ],
+  "mail-open": [
+    "email",
+    "message",
+    "letter",
+    "read"
+  ],
+  "mail-plus": [
+    "email",
+    "message",
+    "letter",
+    "add",
+    "create",
+    "new",
+    "compose"
+  ],
+  "mail-question": [
+    "email",
+    "message",
+    "letter",
+    "delivery",
+    "undelivered"
+  ],
+  "mail-search": [
+    "email",
+    "message",
+    "letter",
+    "search"
+  ],
+  "mail-warning": [
+    "email",
+    "message",
+    "letter",
+    "delivery error"
+  ],
+  "mail-x": [
+    "email",
+    "message",
+    "letter",
+    "remove",
+    "delete"
+  ],
+  "mails": [
+    "emails",
+    "messages",
+    "letters",
+    "multiple",
+    "mailing list",
+    "newsletter",
+    "copy"
   ],
   "map": [
     "location",
