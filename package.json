@@ -18,7 +18,15 @@
       "**/react-dom",
       "**/react-dom/**",
       "**/react-test-renderer",
-      "**/react-test-renderer/**"
+      "**/react-test-renderer/**",
+      "**/vue",
+      "**/vue/**",
+      "**/vue-template-compiler",
+      "**/vue-template-compiler/**",
+      "**/vue-template-es2015-compiler",
+      "**/vue-template-es2015-compiler/**",
+      "**/@testing-library/vue",
+      "**/@testing-library/vue/**"
     ]
   },
   "scripts": {

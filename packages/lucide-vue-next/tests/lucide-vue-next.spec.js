@@ -37,8 +37,6 @@ describe('Using lucide icon components', () => {
 
     const [icon] = document.getElementsByClassName('my-icon');
 
-    console.log(icon);
-
     expect(icon).toHaveClass('my-icon')
   });
 
