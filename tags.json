@@ -1710,6 +1710,26 @@
   "flask-round": [
     "beaker"
   ],
+  "flip-horizontal": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-horizontal-2": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-vertical": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-vertical-2": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
   "flower": [
     "sustainability",
     "nature",
