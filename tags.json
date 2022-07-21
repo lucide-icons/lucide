@@ -4074,6 +4074,11 @@
     "camera",
     "security"
   ],
+  "webhook": [
+    "push api",
+    "interface",
+    "callback"
+  ],
   "wifi": [
     "connection",
     "signal",
