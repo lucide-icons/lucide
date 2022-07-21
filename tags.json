@@ -3631,6 +3631,14 @@
     "sun",
     "brightness"
   ],
+  "sun-snow": [
+    "weather",
+    "air conditioning",
+    "temperature",
+    "hot",
+    "cold",
+    "seasons"
+  ],
   "sunrise": [
     "weather",
     "time",
