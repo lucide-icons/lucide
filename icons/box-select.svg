@@ -9,16 +9,16 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M4 2a2 2 0 0 0-2 2" />
-  <line x1="8" y1="2" x2="10" y2="2" />
-  <line x1="14" y1="2" x2="16" y2="2" />
-  <path d="M4 22a2 2 0 0 1-2-2" />
-  <line x1="22" y1="8" x2="22" y2="10" />
-  <line x1="22" y1="14" x2="22" y2="16" />
-  <path d="M22 20a2 2 0 0 1-2 2" />
-  <line x1="14" y1="22" x2="16" y2="22" />
-  <line x1="8" y1="22" x2="10" y2="22" />
-  <path d="M20 2a2 2 0 0 1 2 2" />
-  <line x1="2" y1="14" x2="2" y2="16" />
-  <line x1="2" y1="8" x2="2" y2="10" />
+  <path d="M5 3a2 2 0 0 0-2 2" />
+  <path d="M19 3a2 2 0 0 1 2 2" />
+  <path d="M21 19a2 2 0 0 1-2 2" />
+  <path d="M5 21a2 2 0 0 1-2-2" />
+  <path d="M9 3h1" />
+  <path d="M9 21h1" />
+  <path d="M14 3h1" />
+  <path d="M14 21h1" />
+  <path d="M3 9v1" />
+  <path d="M21 9v1" />
+  <path d="M3 14v1" />
+  <path d="M21 14v1" />
 </svg>
