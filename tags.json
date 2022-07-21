@@ -1189,6 +1189,11 @@
     "straw",
     "water"
   ],
+  "curly-braces": [
+    "json",
+    "code",
+    "token"
+  ],
   "currency": [
     "finance",
     "money"
@@ -1503,6 +1508,16 @@
   "file-input": [
     "document"
   ],
+  "file-json": [
+    "code",
+    "json",
+    "curly braces"
+  ],
+  "file-json-2": [
+    "code",
+    "json",
+    "curly braces"
+  ],
   "file-key": [
     "key",
     "private",
@@ -1610,6 +1625,13 @@
     "document"
   ],
   "file-type": [
+    "font",
+    "text",
+    "font",
+    "typography",
+    "type"
+  ],
+  "file-type-2": [
     "font",
     "text",
     "font",
