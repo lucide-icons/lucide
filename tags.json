@@ -2618,6 +2618,14 @@
     "arrows",
     "expand"
   ],
+  "medal": [
+    "prize",
+    "sports",
+    "winner",
+    "trophy",
+    "award",
+    "achievement"
+  ],
   "megaphone": [
     "advertisement",
     "attention",
@@ -3864,6 +3872,13 @@
   ],
   "triangle": [
     "delta"
+  ],
+  "trophy": [
+    "prize",
+    "sports",
+    "winner",
+    "achievement",
+    "award"
   ],
   "truck": [
     "delivery",
