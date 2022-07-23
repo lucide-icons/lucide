@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue",
-  "version": "0.72.0",
+  "version": "0.83.0",
   "author": "Eric Fennis",
   "description": "A Lucide icon library package for Vue 2 applications",
   "license": "ISC",
@@ -30,11 +30,11 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/vue": "^5.8.2",
-    "@vue/test-utils": "^1.1.2",
+    "@vue/test-utils": "1.3.0",
     "jest-serializer-vue": "^2.0.2",
-    "vue": "^2.6.12",
+    "vue": "2.6.14",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "2.6.14"
   },
   "peerDependencies": {
     "vue": "^2.6.12"

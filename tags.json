@@ -360,6 +360,7 @@
   "baggage-claim": [
     "baggage",
     "luggage",
+    "suitcase",
     "travel",
     "cart",
     "trolley"
@@ -1188,6 +1189,11 @@
     "straw",
     "water"
   ],
+  "curly-braces": [
+    "json",
+    "code",
+    "token"
+  ],
   "currency": [
     "finance",
     "money"
@@ -1502,6 +1508,16 @@
   "file-input": [
     "document"
   ],
+  "file-json": [
+    "code",
+    "json",
+    "curly braces"
+  ],
+  "file-json-2": [
+    "code",
+    "json",
+    "curly braces"
+  ],
   "file-key": [
     "key",
     "private",
@@ -1615,6 +1631,13 @@
     "typography",
     "type"
   ],
+  "file-type-2": [
+    "font",
+    "text",
+    "font",
+    "typography",
+    "type"
+  ],
   "file-up": [
     "upload",
     "import",
@@ -1709,6 +1732,26 @@
   ],
   "flask-round": [
     "beaker"
+  ],
+  "flip-horizontal": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-horizontal-2": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-vertical": [
+    "reflect",
+    "mirror",
+    "alignment"
+  ],
+  "flip-vertical-2": [
+    "reflect",
+    "mirror",
+    "alignment"
   ],
   "flower": [
     "sustainability",
@@ -2100,6 +2143,16 @@
     "hate",
     "emotion"
   ],
+  "heart-pulse": [
+    "heartbeat",
+    "pulse",
+    "health",
+    "medical",
+    "blood pressure",
+    "cardiac",
+    "systole",
+    "diastole"
+  ],
   "help-circle": [
     "question mark"
   ],
@@ -2451,6 +2504,7 @@
   "luggage": [
     "baggage",
     "luggage",
+    "suitcase",
     "travel"
   ],
   "magnet": [
@@ -2462,7 +2516,73 @@
   "mail": [
     "email",
     "message",
-    "letter"
+    "letter",
+    "unread"
+  ],
+  "mail-check": [
+    "email",
+    "message",
+    "letter",
+    "subscribe",
+    "delivered",
+    "success"
+  ],
+  "mail-minus": [
+    "email",
+    "message",
+    "letter",
+    "remove",
+    "delete"
+  ],
+  "mail-open": [
+    "email",
+    "message",
+    "letter",
+    "read"
+  ],
+  "mail-plus": [
+    "email",
+    "message",
+    "letter",
+    "add",
+    "create",
+    "new",
+    "compose"
+  ],
+  "mail-question": [
+    "email",
+    "message",
+    "letter",
+    "delivery",
+    "undelivered"
+  ],
+  "mail-search": [
+    "email",
+    "message",
+    "letter",
+    "search"
+  ],
+  "mail-warning": [
+    "email",
+    "message",
+    "letter",
+    "delivery error"
+  ],
+  "mail-x": [
+    "email",
+    "message",
+    "letter",
+    "remove",
+    "delete"
+  ],
+  "mails": [
+    "emails",
+    "messages",
+    "letters",
+    "multiple",
+    "mailing list",
+    "newsletter",
+    "copy"
   ],
   "map": [
     "location",
@@ -2498,11 +2618,27 @@
     "arrows",
     "expand"
   ],
+  "medal": [
+    "prize",
+    "sports",
+    "winner",
+    "trophy",
+    "award",
+    "achievement"
+  ],
   "megaphone": [
     "advertisement",
     "attention",
     "alert",
     "notification"
+  ],
+  "megaphone-off": [
+    "advertisement",
+    "attention",
+    "alert",
+    "notification",
+    "disable",
+    "silent"
   ],
   "meh": [
     "emoji",
@@ -3091,6 +3227,12 @@
   "scan": [
     "qr-code"
   ],
+  "scan-face": [
+    "face",
+    "biometric",
+    "authentication",
+    "2fa"
+  ],
   "scan-line": [
     "qr-code"
   ],
@@ -3511,6 +3653,14 @@
     "sun",
     "brightness"
   ],
+  "sun-snow": [
+    "weather",
+    "air conditioning",
+    "temperature",
+    "hot",
+    "cold",
+    "seasons"
+  ],
   "sunrise": [
     "weather",
     "time",
@@ -3737,6 +3887,13 @@
   "triangle": [
     "delta"
   ],
+  "trophy": [
+    "prize",
+    "sports",
+    "winner",
+    "achievement",
+    "award"
+  ],
   "truck": [
     "delivery",
     "van",
@@ -3953,6 +4110,11 @@
   "webcam": [
     "camera",
     "security"
+  ],
+  "webhook": [
+    "push api",
+    "interface",
+    "callback"
   ],
   "wifi": [
     "connection",

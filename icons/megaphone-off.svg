@@ -9,6 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <rect x="2" y="4" width="20" height="16" rx="2" />
-  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  <path d="M9.26 9.26 3 11v3l14.14 3.14" />
+  <path d="M21 15.34V6l-7.31 2.03" />
+  <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+  <line x1="2" x2="22" y1="2" y2="22" />
 </svg>
