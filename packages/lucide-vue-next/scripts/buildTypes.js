@@ -1,6 +1,11 @@
 import path from 'path';
 
-import { readSvgDirectory, resetFile, appendFile, toPascalCase } from '../../../scripts/helpers';
+import {
+  readSvgDirectory,
+  resetFile,
+  appendFile,
+  toPascalCase,
+} from '../../../scripts/helpers.mjs';
 
 const TARGET_DIR = path.join(__dirname, '../dist');
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');

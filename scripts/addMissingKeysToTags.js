@@ -1,6 +1,6 @@
 import path from 'path';
 import tags from '../tags.json';
-import { readSvgDirectory, writeFile } from './helpers';
+import { readSvgDirectory, writeFile } from './helpers.mjs';
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 

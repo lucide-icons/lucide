@@ -2,7 +2,7 @@
 import path from 'path';
 import { stringify, parseSync } from 'svgson';
 import { format } from 'prettier';
-import { appendFile, readSvgDirectory } from './helpers';
+import { appendFile, readSvgDirectory } from './helpers.mjs';
 /* eslint-disable import/no-extraneous-dependencies */
 
 import readSvgs from '../packages/lucide-static/scripts/readSvgs';

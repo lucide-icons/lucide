@@ -5,7 +5,7 @@ import {
   resetFile,
   toPascalCase,
   appendFile,
-} from '../../../scripts/helpers';
+} from '../../../scripts/helpers.mjs';
 
 const srcDirectory = path.join(__dirname, '../dist');
 

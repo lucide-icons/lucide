@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { stringify } from 'svgson';
 import { format } from 'prettier';
-import { appendFile } from '../../../scripts/helpers';
+import { appendFile } from '../../../scripts/helpers.mjs';
 
 export default function generateSprite(svgs, packageDir) {
   const symbols = svgs.map(({ name, parsedSvg }) => ({

@@ -5,7 +5,7 @@ import getArgumentOptions from 'minimist';
 import { parseSync } from 'svgson';
 
 // import renderIconsObject from '../../../scripts/render/renderIconsObject';
-import { appendFile, readSvgDirectory, toCamelCase } from '../../../scripts/helpers';
+import { appendFile, readSvgDirectory, toCamelCase } from '../../../scripts/helpers.mjs';
 import readSvgs from './readSvgs';
 import generateSprite from './generateSprite';
 import generateIconNodes from './generateIconNodes';

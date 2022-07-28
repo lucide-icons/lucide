@@ -1,12 +1,15 @@
 import createElement from './createElement';
+import { Icons } from './types';
+
+export type CustomAttrs = { [attr:string]: any }
 
 /**
  * Get the attributes of an HTML element.
  * @param {HTMLElement} element
  * @returns {Object}
  */
-export const getAttrs = element =>
-  Array.from(element.attributes).reduce((attrs, attr) => {
+export const getAttrs = (element: Element): Record<string, string> =>
+  Array.from(element.attributes).reduce<Record<string, string>>((attrs, attr) => {
     attrs[attr.name] = attr.value;
     return attrs;
   }, {});
@@ -16,7 +19,7 @@ export const getAttrs = element =>
  * @param {Object} attrs
  * @returns {Array}
  */
-export const getClassNames = attrs => {
+export const getClassNames = (attrs: Record<string, string> | string): string | string[] => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
   if (attrs.class && typeof attrs.class === 'string') {
@@ -33,7 +36,7 @@ export const getClassNames = attrs => {
  * @param {array} arrayOfClassnames
  * @returns {string}
  */
-export const combineClassNames = arrayOfClassnames => {
+export const combineClassNames = (arrayOfClassnames: (string | Record<string, string>)[]) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
   return classNameArray
@@ -43,8 +46,14 @@ export const combineClassNames = arrayOfClassnames => {
     .join(' ');
 };
 
-const toPascalCase = string =>
+const toPascalCase = (string: string): string =>
   string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
+
+interface ReplaceElementOptions {
+  nameAttr: string
+  icons: Icons,
+  attrs: Record<string, string>
+}
 
 /**
  * ReplaceElement, replaces the given element with the created icon.
@@ -52,8 +61,11 @@ const toPascalCase = string =>
  * @param {{ nameAttr: string, icons: object, attrs: object }} options: { nameAttr, icons, attrs }
  * @returns {Function}
  */
-export default (element, { nameAttr, icons, attrs }) => {
+const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceElementOptions) => {
   const iconName = element.getAttribute(nameAttr);
+
+  if(iconName == null) return
+
   const ComponentName = toPascalCase(iconName);
 
   const iconNode = icons[ComponentName];
@@ -77,10 +89,14 @@ export default (element, { nameAttr, icons, attrs }) => {
   const classNames = combineClassNames(['lucide', `lucide-${iconName}`, elementAttrs, attrs]);
 
   if (classNames) {
-    iconAttrs.class = classNames;
+    Object.assign(iconAttrs, {
+      class: classNames
+    })
   }
 
   const svgElement = createElement([tag, iconAttrs, children]);
 
-  return element.parentNode.replaceChild(svgElement, element);
+  return element.parentNode?.replaceChild(svgElement, element);
 };
+
+export default replaceElement

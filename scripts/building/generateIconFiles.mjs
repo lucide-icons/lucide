@@ -3,9 +3,16 @@ import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { promises } from 'stream';
-import { toPascalCase } from '../helpers';
+import { toPascalCase } from '../helpers.mjs';
 
-export default function({ iconNodes, outputDirectory, template, showLog = true, iconFileExtention = '.js', pretty = true }) {
+export default function({
+  iconNodes,
+  outputDirectory,
+  template,
+  showLog = true,
+  iconFileExtention = '.js',
+  pretty = true,
+}) {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -18,28 +25,27 @@ export default function({ iconNodes, outputDirectory, template, showLog = true, 
     const componentName = toPascalCase(iconName);
 
     let { children } = iconNodes[iconName];
-    children = children.map(({name, attributes}) => ([name, attributes]))
+    children = children.map(({ name, attributes }) => [name, attributes]);
 
     const elementTemplate = template({ componentName, iconName, children });
-    const output =
-      pretty
+    const output = pretty
       ? prettier.format(elementTemplate, {
-        singleQuote: true,
-        trailingComma: 'all',
-        parser: 'babel',
-      })
-      : elementTemplate
+          singleQuote: true,
+          trailingComma: 'all',
+          parser: 'babel',
+        })
+      : elementTemplate;
 
     await fs.promises.writeFile(location, output, 'utf-8');
   });
 
   Promise.all(writeIconFiles)
     .then(() => {
-      if(showLog) {
+      if (showLog) {
         console.log('Successfully built', icons.length, 'icons.');
       }
     })
-    .catch((error) => {
-      throw new Error(`Something went wrong generating icon files,\n ${error}`)
-    })
+    .catch(error => {
+      throw new Error(`Something went wrong generating icon files,\n ${error}`);
+    });
 }

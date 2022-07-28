@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 /**
  * Converts string to CamelCase
@@ -139,3 +140,7 @@ export const hasDuplicatedChildren = children => {
     (key, index) => index === hashedKeys.findIndex(childKey => childKey === key),
   );
 };
+
+
+const __filename = fileURLToPath(import.meta.url);
+export const __dirname = path.dirname(__filename);

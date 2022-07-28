@@ -1,4 +1,4 @@
-import { writeFile } from '../../../scripts/helpers';
+import { writeFile } from '../../../scripts/helpers.mjs';
 
 export default function generateIconNodes(parsedSvgs, packageDir) {
   const iconNodes = parsedSvgs.reduce((acc, { name, parsedSvg }) => {

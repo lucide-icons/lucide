@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
-import { readSvg } from '../../../scripts/helpers';
+import { readSvg } from '../../../scripts/helpers.mjs';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.
