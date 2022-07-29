@@ -26,8 +26,9 @@
     "build:bundle": "rollup -c rollup.config.js",
     "test": "jest"
   },
-  "dependencies": {
-    "@rollup/plugin-typescript": "^8.3.4",
+  "devDependencies": {
+    "esbuild": "^0.14.51",
+    "rollup-plugin-esbuild": "^4.9.1",
     "rollup-plugin-dts": "^4.2.2"
   }
 }

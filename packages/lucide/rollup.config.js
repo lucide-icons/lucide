@@ -1,5 +1,6 @@
 import dts from 'rollup-plugin-dts';
-import typescript from '@rollup/plugin-typescript';
+// import typescript from '@rollup/plugin-typescript';
+import esbuild from 'rollup-plugin-esbuild';
 import plugins from '../../rollup.plugins';
 import pkg from './package.json';
 
@@ -33,36 +34,48 @@ const bundles = [
     inputs,
     outputDir,
     preserveModules: true,
+    preserveModulesRoot: 'src',
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, preserveModulesRoot }) =>
     inputs.map(input => ({
       input,
       plugins: [
-        typescript(
-          preserveModules && {
-            compilerOptions: {
-              outDir: `${outputDir}/${format}`,
-              rootDir: 'src',
-            },
-          },
-        ),
+        // typescript(
+        //   preserveModules && {
+        //     compilerOptions: {
+        //       outDir: `${outputDir}/${format}`,
+        //       rootDir: 'src',
+        //     },
+        //   },
+        // ),
+        esbuild({
+          minify,
+        }),
         ...plugins(pkg, minify),
       ],
       output: {
         name: outputFileName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+              preserveModulesRoot,
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
         format,
         sourcemap: true,
+        preserveModules,
       },
     })),
   )
   .flat();
 
 const typesFileConfig = {
-  input: 'src/sdk.ts',
+  input: inputs[0],
   output: [
     {
       file: `${outputDir}/${outputFileName}.d.ts`,

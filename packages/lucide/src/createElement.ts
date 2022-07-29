@@ -12,7 +12,7 @@ const createElement = (tag: string, attrs: SVGProps, children: IconNodeChild[] =
   const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
 
   Object.keys(attrs).forEach((name) => {
-    element.setAttribute(name, attrs[name as keyof SVGProps]);
+    element.setAttribute(name, String(attrs[name]));
   });
 
   if (children.length) {
