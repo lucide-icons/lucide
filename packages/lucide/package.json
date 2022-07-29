@@ -19,11 +19,11 @@
   "typings": "dist/lucide.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm clean && pnpm build:icons && pnpm build:bundle",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide/src --iconFileExtention=.ts",
+    "build": "pnpm clean && pnpm build:icons && pnpm build:es && pnpm build:bundles && pnpm build:types",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide/src",
     "build:es": "babel src -d dist/esm",
-    "build:types": "yarn --cwd ../../ babel-node packages/lucide/scripts/buildTypes.js",
+    "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c rollup.config.js",
     "test": "jest"
   }

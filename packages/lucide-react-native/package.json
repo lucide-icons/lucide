@@ -22,7 +22,7 @@
   "scripts": {
     "build": "pnpm clean && pnpm build:icons && pnpm build:bundles && pnpm build:types",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "pnpm --cwd ../../ build:icons --output=../packages/lucide-react-native/src --templateSrc=../packages/lucide-react-native/scripts/exportTemplate --renderUniqueKey",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide-react-native/src --templateSrc=../packages/lucide-react-native/scripts/exportTemplate --renderUniqueKey",
     "build:types": "pnpm --cwd ../../ babel-node packages/lucide-react-native/scripts/buildTypes.js",
     "build:bundles": "pnpm --cwd ../../ rollup -c packages/lucide-react-native/rollup.config.js",
     "test": "jest"

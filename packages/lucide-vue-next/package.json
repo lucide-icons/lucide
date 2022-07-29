@@ -22,7 +22,7 @@
   "scripts": {
     "build": "pnpm clean && pnpm build:icons && (pnpm build:es & pnpm build:types & pnpm build:bundles)",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
-    "build:icons": "pnpm --cwd ../../ build:icons --output=../packages/lucide-vue-next/src --templateSrc=../packages/lucide-vue-next/scripts/exportTemplate  --renderUniqueKey",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide-vue-next/src --templateSrc=../packages/lucide-vue-next/scripts/exportTemplate  --renderUniqueKey",
     "build:es": "babel src -d dist/esm",
     "build:types": "pnpm --cwd ../../ babel-node packages/lucide-vue-next/scripts/buildTypes.js",
     "build:bundles": "pnpm --cwd ../../ rollup -c packages/lucide-vue-next/rollup.config.js",

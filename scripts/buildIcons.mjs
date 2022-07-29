@@ -6,12 +6,14 @@ import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import { readSvgDirectory, __dirname } from './helpers.mjs';
+import { readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
-const OUTPUT_DIR = path.resolve(__dirname, cliArguments.output || '../build');
+const currentDir = getCurrentDirPath(import.meta.url)
+
+const ICONS_DIR = path.resolve(currentDir, '../icons');
+const OUTPUT_DIR = path.resolve(currentDir, cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);

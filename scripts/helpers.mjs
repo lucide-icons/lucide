@@ -141,6 +141,4 @@ export const hasDuplicatedChildren = children => {
   );
 };
 
-
-const __filename = fileURLToPath(import.meta.url);
-export const __dirname = path.dirname(__filename);
+export const getCurrentDirPath = currentPath => path.dirname(fileURLToPath(currentPath));

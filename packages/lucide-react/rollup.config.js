@@ -3,9 +3,8 @@ import pkg from './package.json';
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
-const rootDir = 'packages/lucide-react'; // It runs from the root
-const outputDir = `${rootDir}/dist`;
-const inputs = [`${rootDir}/src/lucide-react.js`];
+const outputDir = `dist`;
+const inputs = [`src/lucide-react.js`];
 const bundles = [
   {
     format: 'umd',

@@ -20,7 +20,6 @@
     "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env"
   },
   "devDependencies": {
-    "@ampproject/rollup-plugin-closure-compiler": "^0.25.2",
     "@atomico/rollup-plugin-sizes": "^1.1.4",
     "@babel/cli": "^7.18.9",
     "@babel/core": "^7.18.9",
