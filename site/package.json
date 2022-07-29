@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "copy-assets": "mkdir -p ./public/docs/images && cp -rf ../docs/images ./public/docs",
-    "build": "yarn copy-assets && next build",
+    "build": "pnpm copy-assets && next build",
     "export": "next export -o build",
-    "deploy": "yarn build && yarn export",
+    "deploy": "pnpm build && pnpm export",
     "lint": "eslint .",
     "test": "jest"
   },

@@ -20,11 +20,11 @@
   "react-native": "dist/esm/lucide-react-native.js",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && yarn build:bundles && yarn build:types",
+    "build": "pnpm clean && pnpm build:icons && pnpm build:bundles && pnpm build:types",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-react-native/src --templateSrc=../packages/lucide-react-native/scripts/exportTemplate --renderUniqueKey",
-    "build:types": "yarn --cwd ../../ babel-node packages/lucide-react-native/scripts/buildTypes.js",
-    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-react-native/rollup.config.js",
+    "build:icons": "pnpm --cwd ../../ build:icons --output=../packages/lucide-react-native/src --templateSrc=../packages/lucide-react-native/scripts/exportTemplate --renderUniqueKey",
+    "build:types": "pnpm --cwd ../../ babel-node packages/lucide-react-native/scripts/buildTypes.js",
+    "build:bundles": "pnpm --cwd ../../ rollup -c packages/lucide-react-native/rollup.config.js",
     "test": "jest"
   },
   "devDependencies": {

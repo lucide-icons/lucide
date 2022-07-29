@@ -2,11 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
 
-import renderIconsObject from './render/renderIconsObject';
-import generateIconFiles from './build/generateIconFiles';
-import generateExportsFile from './build/generateExportsFile';
+import renderIconsObject from './render/renderIconsObject.mjs';
+import generateIconFiles from './building/generateIconFiles.mjs';
+import generateExportsFile from './building/generateExportsFile.mjs';
 
-import { readSvgDirectory } from './helpers';
+import { readSvgDirectory, __dirname } from './helpers.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -19,19 +19,21 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 
 const {
   renderUniqueKey = false,
-  templateSrc = './templates/defaultIconFileTemplate',
+  templateSrc = './templates/defaultIconFileTemplate.mjs',
   silent = false,
   iconFileExtention = '.js',
   exportFileName = 'index.js',
   pretty = true,
 } = cliArguments;
 
+async function buildIcons() {
+
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
-// eslint-disable-next-line import/no-dynamic-require
-const iconFileTemplate = require(templateSrc).default;
+
+const {default: iconFileTemplate} = await import(templateSrc);
 
 // Generates iconsNodes files for each icon
 generateIconFiles({
@@ -50,3 +52,6 @@ generateExportsFile(
   icons,
   iconFileExtention,
 );
+}
+
+buildIcons()

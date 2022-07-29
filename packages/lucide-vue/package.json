@@ -19,11 +19,11 @@
   "unpkg": "dist/umd/lucide-vue.min.js",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:bundles)",
+    "build": "pnpm clean && pnpm build:icons && (pnpm build:es & pnpm build:bundles)",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue/src --templateSrc=../packages/lucide-vue/scripts/exportTemplate",
+    "build:icons": "pnpm --cwd ../../ build:icons --output=../packages/lucide-vue/src --templateSrc=../packages/lucide-vue/scripts/exportTemplate",
     "build:es": "babel src -d dist/esm",
-    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue/rollup.config.js",
+    "build:bundles": "pnpm --cwd ../../ rollup -c packages/lucide-vue/rollup.config.js",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
