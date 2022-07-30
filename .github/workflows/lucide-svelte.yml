@@ -16,7 +16,6 @@ jobs:
       - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'pnpm'
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
