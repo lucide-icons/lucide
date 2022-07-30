@@ -1,5 +1,5 @@
 import fs from 'fs';
-import processSvg from './render/processSvg';
+import processSvg from './render/processSvg.mjs';
 
 const svgFiles = process.argv.slice(4);
 

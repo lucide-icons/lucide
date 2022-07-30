@@ -1,14 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
 import { stringify, parseSync } from 'svgson';
-import { format } from 'prettier';
-import { appendFile, readSvgDirectory } from './helpers.mjs';
+import prettier from 'prettier';
+import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 /* eslint-disable import/no-extraneous-dependencies */
 
-import readSvgs from '../packages/lucide-static/scripts/readSvgs';
+import readSvgs from '../packages/lucide-static/scripts/readSvgs.mjs';
+
+const currentDir = getCurrentDirPath(import.meta.url)
 
 const ICONS_DIR = path.resolve('icons');
-const PACKAGE_DIR = path.resolve(__dirname);
+const PACKAGE_DIR = path.resolve(currentDir);
 
 export default function generateSprite(svgs, packageDir) {
   const symbols = svgs.map(({ name, parsedSvg }, index) => {
@@ -37,7 +39,7 @@ export default function generateSprite(svgs, packageDir) {
   };
 
   const spriteSvg = stringify(spriteSvgObject);
-  const prettifiedSprite = format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
+  const prettifiedSprite = prettier.format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
 
   const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
 

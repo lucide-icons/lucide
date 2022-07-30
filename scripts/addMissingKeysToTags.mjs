@@ -1,8 +1,9 @@
 import path from 'path';
-import tags from '../tags.json';
-import { readSvgDirectory, writeFile } from './helpers.mjs';
+import tags from '../tags.json' assert { type: 'json' };
+import { readSvgDirectory, writeFile, getCurrentDirPath } from './helpers.mjs';
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
+const currentDir = getCurrentDirPath(import.meta.url)
+const ICONS_DIR = path.resolve(currentDir, '../icons');
 
 console.log(`Read all tags`);
 
@@ -38,4 +39,4 @@ const newTags = iconTags.reduce((acc, { name, tags }) => {
 
 const tagsContent = JSON.stringify(newTags, null, 2);
 
-writeFile(tagsContent, 'tags.json', path.resolve(__dirname, '..'));
+writeFile(tagsContent, 'tags.json', path.resolve(currentDir, '..'));
