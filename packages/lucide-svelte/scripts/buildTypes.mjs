@@ -33,7 +33,7 @@ export type Icon = SvelteComponentTyped<IconProps, IconEvents, {}>
 // Generated icons
 `;
 
-const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const ICONS_DIR = path.resolve(currentDir, '../../../icons');
 const TYPES_FILE = 'lucide-svelte.d.ts';
 
 resetFile(TYPES_FILE, srcDirectory);
