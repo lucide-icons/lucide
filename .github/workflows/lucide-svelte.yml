@@ -3,12 +3,10 @@ name: Test Lucide Svelte
 on:
   pull_request:
     paths:
-      - '*'
-      # - packages/lucide-svelte/**
+      - packages/lucide-svelte/**
   push:
     paths:
-      - '*'
-      # - packages/lucide-svelte/**
+      - packages/lucide-svelte/**
 
 jobs:
   lucide-svelte:

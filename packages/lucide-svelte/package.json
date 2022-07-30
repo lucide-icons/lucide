@@ -27,7 +27,7 @@
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.js",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
