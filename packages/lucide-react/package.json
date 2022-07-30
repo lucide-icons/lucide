@@ -21,7 +21,7 @@
   "scripts": {
     "build": "pnpm clean && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide-react/src --templateSrc=../packages/lucide-react/scripts/exportTemplate.mjs --renderUniqueKey",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
     "build:es": "babel src -d dist/esm",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.js",

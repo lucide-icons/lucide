@@ -24,7 +24,7 @@
   "scripts": {
     "build": "pnpm clean && pnpm build:icons && pnpm build:ng",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide-angular/src --templateSrc=../packages/lucide-angular/scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
     "build:ng": "ng build --prod",
     "test:headless": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test": "ng test",

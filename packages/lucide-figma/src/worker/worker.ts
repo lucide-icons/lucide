@@ -1,5 +1,5 @@
 import { fetchIcons, LucideIcons } from "../api/fetchIcons"
-import { createReactComponent } from 'lucide-react'
+import { createReactComponent } from '../../../lucide-react'
 import { renderToString } from 'react-dom/server'
 import { createElement } from "react"
 

@@ -20,12 +20,12 @@
   "typings": "dist/lucide-svelte.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm clean && pnpm build:icons && (pnpm build:es & pnpm build:types & pnpm build:bundles)",
+    "build": "pnpm clean && pnpm build:icons && pnpm build:es && pnpm build:bundles && pnpm build:types",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide-svelte/src --templateSrc=../packages/lucide-svelte/scripts/exportTemplate --exportFileName=index.js --iconFileExtention=.svelte --pretty=false",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.js --iconFileExtention=.svelte --pretty=false",
     "build:es": "babel src -d dist/esm --copy-files",
-    "build:types": "pnpm --cwd ../../ babel-node packages/lucide-svelte/scripts/buildTypes.js",
-    "build:bundles": "pnpm --cwd ../../ rollup -c packages/lucide-svelte/rollup.config.js",
+    "build:types": "node ./scripts/buildTypes.mjs",
+    "build:bundles": "rollup -c ./rollup.config.js",
     "test": "jest",
     "test:watch": "npm run test -- --watch"
   },

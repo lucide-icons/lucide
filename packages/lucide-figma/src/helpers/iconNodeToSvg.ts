@@ -1,4 +1,4 @@
-import { createReactComponent } from "lucide-react";
+import { createReactComponent } from '../../../lucide-react'
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 import { IconNode } from "../api/fetchIcons";

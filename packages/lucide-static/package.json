@@ -14,7 +14,7 @@
     "move:icons": "cp -r ../../icons icons",
     "move:tags": "cp ../../tags.json tags.json",
     "build": "pnpm clean && pnpm move:icons && pnpm move:tags && pnpm build:lib",
-    "build:lib": "pnpm --cwd ../../ babel-node packages/lucide-static/scripts/buildLib.js",
+    "build:lib": "node ./scripts/buildLib.mjs",
     "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg && rm -f tags.json"
   },
   "devDependencies": {

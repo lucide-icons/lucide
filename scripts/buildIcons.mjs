@@ -13,7 +13,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 const currentDir = getCurrentDirPath(import.meta.url)
 
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const OUTPUT_DIR = path.resolve(currentDir, cliArguments.output || '../build');
+const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
@@ -21,7 +21,7 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 
 const {
   renderUniqueKey = false,
-  templateSrc = './templates/defaultIconFileTemplate.mjs',
+  templateSrc,
   silent = false,
   iconFileExtention = '.js',
   exportFileName = 'index.js',
@@ -30,30 +30,38 @@ const {
 
 async function buildIcons() {
 
-const svgFiles = readSvgDirectory(ICONS_DIR);
+  if (templateSrc == null) {
+    throw new Error('No `templateSrc` argument given.')
+  }
 
-const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
+  const svgFiles = readSvgDirectory(ICONS_DIR);
+
+  const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
 
-const {default: iconFileTemplate} = await import(templateSrc);
+  const {default: iconFileTemplate} = await import(path.resolve(process.cwd(), templateSrc));
 
-// Generates iconsNodes files for each icon
-generateIconFiles({
-  iconNodes: icons,
-  outputDirectory: OUTPUT_DIR,
-  template: iconFileTemplate,
-  showLog: !silent,
-  iconFileExtention,
-  pretty: JSON.parse(pretty),
-});
+  // Generates iconsNodes files for each icon
+  generateIconFiles({
+    iconNodes: icons,
+    outputDirectory: OUTPUT_DIR,
+    template: iconFileTemplate,
+    showLog: !silent,
+    iconFileExtention,
+    pretty: JSON.parse(pretty),
+  });
 
-// Generates entry files for the compiler filled with icons exports
-generateExportsFile(
-  path.join(OUTPUT_DIR, 'icons', exportFileName),
-  path.join(OUTPUT_DIR, 'icons'),
-  icons,
-  iconFileExtention,
-);
+  // Generates entry files for the compiler filled with icons exports
+  generateExportsFile(
+    path.join(OUTPUT_DIR, 'icons', exportFileName),
+    path.join(OUTPUT_DIR, 'icons'),
+    icons,
+    iconFileExtention,
+  );
 }
 
-buildIcons()
+try {
+  buildIcons()
+} catch (error) {
+  console.error(error)
+}

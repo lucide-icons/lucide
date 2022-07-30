@@ -5,9 +5,11 @@ import {
   resetFile,
   toPascalCase,
   appendFile,
+  getCurrentDirPath
 } from '../../../scripts/helpers.mjs';
 
-const srcDirectory = path.join(__dirname, '../dist');
+const currentDir = getCurrentDirPath(import.meta.url)
+const srcDirectory = path.join(currentDir, '../dist');
 
 // Declare type definitions
 const typeDefinitions = `\
@@ -24,7 +26,7 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
 // Generated icons
 `;
 
-const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const ICONS_DIR = path.resolve(currentDir, '../../../icons');
 const TYPES_FILE = 'lucide-preact.d.ts';
 
 resetFile(TYPES_FILE, srcDirectory);

@@ -5,10 +5,13 @@ import {
   resetFile,
   appendFile,
   toPascalCase,
+  getCurrentDirPath
 } from '../../../scripts/helpers.mjs';
 
-const TARGET_DIR = path.join(__dirname, '../dist');
-const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const currentDir = getCurrentDirPath(import.meta.url)
+
+const TARGET_DIR = path.join(currentDir, '../dist');
+const ICONS_DIR = path.resolve(currentDir, '../../../icons');
 const TYPES_FILE_NAME = 'lucide-vue-next.d.ts';
 
 // Generates header of d.ts file include some types and functions
