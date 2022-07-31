@@ -75,13 +75,13 @@ After cloning the project you need to run:
 yarn # Install dependencies, including the workspace packages
 ```
 
-### Packages -> Yarn Workspaces
+### Packages -> PNPM Workspaces
 
-To distribute different packages we use yarn workspaces. Before you start make sure you are familiar with this setup. Read guide here: [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces).
+To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces).
 
 The configured directory for workspaces is the [packages](./packages) directory, located in the root directory. There you will find all the current packages from lucide.
 
-> Note: One package is not managed by yarn:  **lucide-flutter**
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
 
 ### Generated Code
 
@@ -96,11 +96,11 @@ The commands for generating this code you will read in the next chapter.
 The build script includes multiple subcommands to: clean the dist directory, generate icon files, generate types files, and build/transpile code for each build format.
 
 ```sh
-yarn [package-name] build
+pnpm [package-name] build
 
 #example:
 
-yarn lucide-react build
+pnpm lucide-react build
 ```
 
 #### Testing
@@ -108,21 +108,21 @@ yarn lucide-react build
 Run unit tests with jest for each package to make sure all the package apis still works as expected.
 
 ```sh
-yarn [package-name] test
+pnpm [package-name] test
 
 #example:
 
-yarn lucide-vue test
+pnpm lucide-vue test
 ```
 
 Recommended to run the test watcher when making changes.
 
 ```sh
-yarn [package-name] test:watch
+pnpm [package-name] test:watch
 
 #example:
 
-yarn lucide-preact test:watch
+pnpm lucide-preact test:watch
 ```
 
 ### Unit Testing
@@ -131,15 +131,17 @@ When adding new features to for example the icon component for a framework. It i
 
 ### Local Testing
 
-To test changes in a local project, you can use `yarn link` or `npm link` to link the package. Before you do this make sure you builded the package first.
+To test changes in a local project, you can use `yarn link`, `npm link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
 
 ```sh
 # in packages/lucide-react
-yarn link
+
+npm run build &&
+npm link
 
 # in your local project
 
-yarn link lucide-react
+npm link lucide-react
 ```
 
 ## Project Structure
@@ -168,7 +170,7 @@ All the icons of lucide in SVG format. These will be used as source for all the 
 
 Includes all the (npm) packages of lucide.
 
-> Note: One package is not managed by yarn:  **lucide-flutter**
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
 
 ### scripts
 
