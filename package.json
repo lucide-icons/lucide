@@ -17,7 +17,7 @@
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addtags": "node ./scripts/addMissingKeysToTags.mjs",
-    "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env"
+    "generate:changelog": "node ./scripts/generateChangelog.mjs"
   },
   "devDependencies": {
     "@atomico/rollup-plugin-sizes": "^1.1.4",

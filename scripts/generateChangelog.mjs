@@ -1,5 +1,5 @@
 import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
-import githubApi from './githubApi';
+import githubApi from './githubApi.mjs';
 
 const fetchCompareTags = oldTag =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
@@ -41,6 +41,11 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 (async function() {
   try {
     const output = await fetchCompareTags(cliArguments['old-tag']);
+
+    if (output?.files == null) {
+      throw new Error('Tag not found!')
+    }
+
     const changedFiles = output.files.filter(
       ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
     );
