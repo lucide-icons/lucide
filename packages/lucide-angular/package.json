@@ -22,7 +22,8 @@
     "Font Awesome"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:icons && pnpm build:ng",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:ng",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
     "build:ng": "ng build --prod",
