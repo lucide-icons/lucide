@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "pnpm lucide build && pnpm lucide-react build && pnpm lucide-react-native build && pnpm lucide-preact build && pnpm lucide-vue build && pnpm lucide-vue-next build && pnpm lucide-angular build",
-    "test": "pnpm lucide build:icons && pnpm lucide-react build:icons && pnpm lucide-vue build:icons && jest",
+    "build": "pnpm -r --filter './packages/**' build",
+    "test": "pnpm -r --filter './packages/**' test",
     "lucide": "pnpm --filter lucide",
     "lucide-angular": "pnpm --filter lucide-angular",
     "lucide-react": "pnpm --filter lucide-react",
