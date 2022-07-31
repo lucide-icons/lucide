@@ -105,6 +105,7 @@ importers:
       tslib: ^2.3.1
       tslint: ~6.1.0
       typescript: ~4.1.5
+      zone.js: ^0.11.7
     dependencies:
       tslib: 2.4.0
     devDependencies:
@@ -113,7 +114,7 @@ importers:
       '@angular/common': 11.2.14_37oj36l34j7giga5m3nykcmw5y
       '@angular/compiler': 11.2.14
       '@angular/compiler-cli': 11.2.14_5xxvadz4tf2tlq4hiwi2uyyjke
-      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.10.3
+      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.11.7
       '@angular/platform-browser': 11.2.14_7xlwizk4ogtivdhyq3o5tisdxe
       '@angular/platform-browser-dynamic': 11.2.14_qxlc3vn6xbi7buoam3qib6h2bu
       '@types/jasmine': 3.10.6
@@ -133,6 +134,7 @@ importers:
       ts-node: 10.4.0_giiw4x7qyizvfxgejta2n6t5ri
       tslint: 6.1.3_typescript@4.1.6
       typescript: 4.1.6
+      zone.js: 0.11.7
 
   packages/lucide-figma:
     specifiers:
@@ -500,7 +502,7 @@ packages:
       '@angular/core': 11.2.14
       rxjs: ^6.5.3
     dependencies:
-      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.10.3
+      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.11.7
       rxjs: 7.5.6
       tslib: 2.4.0
     dev: true
@@ -548,7 +550,7 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@angular/core/11.2.14_rxjs@7.5.6+zone.js@0.10.3:
+  /@angular/core/11.2.14_rxjs@7.5.6+zone.js@0.11.7:
     resolution: {integrity: sha512-vpR4XqBGitk1Faph37CSpemwIYTmJ3pdIVNoHKP6jLonpWu+0azkchf0f7oD8/2ivj2F81opcIw0tcsy/D/5Vg==}
     peerDependencies:
       rxjs: ^6.5.3
@@ -556,7 +558,7 @@ packages:
     dependencies:
       rxjs: 7.5.6
       tslib: 2.4.0
-      zone.js: 0.10.3
+      zone.js: 0.11.7
     dev: true
 
   /@angular/core/9.0.0_5vxzpnwefl6dwkmk3nf2qix3m4:
@@ -581,7 +583,7 @@ packages:
     dependencies:
       '@angular/common': 11.2.14_37oj36l34j7giga5m3nykcmw5y
       '@angular/compiler': 11.2.14
-      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.10.3
+      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.11.7
       '@angular/platform-browser': 11.2.14_7xlwizk4ogtivdhyq3o5tisdxe
       tslib: 2.4.0
     dev: true
@@ -597,7 +599,7 @@ packages:
         optional: true
     dependencies:
       '@angular/common': 11.2.14_37oj36l34j7giga5m3nykcmw5y
-      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.10.3
+      '@angular/core': 11.2.14_rxjs@7.5.6+zone.js@0.11.7
       tslib: 2.4.0
     dev: true
 
@@ -14866,6 +14868,7 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -18409,4 +18412,10 @@ packages:
 
   /zone.js/0.10.3:
     resolution: {integrity: sha512-LXVLVEq0NNOqK/fLJo3d0kfzd4sxwn2/h67/02pjCjfKDxgx1i9QqpvtHD8CrBnSSwMw5+dy11O7FRX5mkO7Cg==}
+    dev: true
+
+  /zone.js/0.11.7:
+    resolution: {integrity: sha512-e39K2EdK5JfA3FDuUTVRvPlYV4aBfnOOcGuILhQAT7nzeV12uSrLBzImUM9CDVoncDSX4brR/gwqu0heQ3BQ0g==}
+    dependencies:
+      tslib: 2.4.0
     dev: true

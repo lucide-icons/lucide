@@ -1,4 +1,4 @@
-name: Test Lucide Svelte
+name: Lucide Svelte checks
 
 on:
   pull_request:

@@ -1,22 +1,21 @@
-name: Lucide checks
+name: Lucide Vue checks
 
 on:
   pull_request:
     paths:
-      - packages/lucide/**
+      - packages/lucide-vue/**
   push:
     paths:
-      - packages/lucide/**
+      - packages/lucide-vue/**
 
 jobs:
-  lucide:
+  lucide-vue:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'pnpm'
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -42,8 +41,8 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm --filter lucide build
+        run: pnpm --filter lucide-vue build
 
       - name: Test
-        run: pnpm --filter lucide test
+        run: pnpm --filter lucide-vue test
 
