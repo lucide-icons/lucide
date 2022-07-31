@@ -1,7 +1,6 @@
-import { createReactComponent } from '../../../lucide-react'
-
 import IconButton from '../components/IconButton'
 import SearchInput from '../components/SearchInput'
+import createIconComponent from '../helpers/createIconComponent'
 import { Icon } from '../hooks/useSearch'
 
 interface PageProps {
@@ -32,7 +31,7 @@ const Icons = ({
               <IconButton
                 name={name}
                 key={name}
-                component={createReactComponent(name, iconNode)}
+                component={createIconComponent(name, iconNode)}
               />
             ))}
           </div>
