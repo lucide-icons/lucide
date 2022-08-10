@@ -1,5 +1,5 @@
 import { fetchIcons, LucideIcons } from "../api/fetchIcons"
-import { createReactComponent } from 'lucide-react'
+import createIconComponent from "../helpers/createIconComponent"
 import { renderToString } from 'react-dom/server'
 import { createElement } from "react"
 
@@ -24,7 +24,7 @@ const getSvg = async ({ cachedIcons, iconName, size = 24 }: { cachedIcons: Lucid
   const iconNode = cachedIcons.iconNodes[iconName];
 
   if (iconNode) {
-    const IconComponent = createReactComponent(iconName, iconNode)
+    const IconComponent = createIconComponent(iconName, iconNode)
     const svg = renderToString(createElement(IconComponent, { size }));
 
     parent.postMessage({ pluginMessage: {

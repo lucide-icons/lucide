@@ -3,9 +3,8 @@ import pkg from './package.json';
 
 const packageName = 'LucideVueNext';
 const outputFileName = 'lucide-vue-next';
-const rootDir = 'packages/lucide-vue-next'; // It runs from the root
-const outputDir = `${rootDir}/dist`;
-const inputs = [`${rootDir}/src/lucide-vue-next.js`];
+const outputDir = 'dist';
+const inputs = ['src/lucide-vue-next.js'];
 const bundles = [
   {
     format: 'umd',
