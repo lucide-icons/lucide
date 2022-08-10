@@ -1106,6 +1106,11 @@
     "part",
     "symbol"
   ],
+  "concierge-bell": [
+    "reception",
+    "bell",
+    "porter"
+  ],
   "contact": [
     "person",
     "user"
@@ -1386,6 +1391,13 @@
     "industry",
     "manufacture",
     "sector"
+  ],
+  "fan": [
+    "air",
+    "cooler",
+    "ventilation",
+    "ventilator",
+    "blower"
   ],
   "fast-forward": [
     "music"
@@ -2701,6 +2713,12 @@
     "imaging",
     "research"
   ],
+  "microwave": [
+    "oven",
+    "cooker",
+    "toaster oven",
+    "bake"
+  ],
   "milestone": [
     "sign",
     "signpost",
@@ -3148,6 +3166,15 @@
     "synchronize",
     "arrows"
   ],
+  "refrigerator": [
+    "frigerator",
+    "fridge",
+    "freezer",
+    "cooler",
+    "icebox",
+    "chiller",
+    "cold storage"
+  ],
   "regex": [
     "search",
     "text"
@@ -3379,6 +3406,13 @@
   "shovel": [
     "dig",
     "spade"
+  ],
+  "shower-head": [
+    "shower",
+    "bath",
+    "bathroom",
+    "amenities",
+    "services"
   ],
   "shrink": [
     "scale",
