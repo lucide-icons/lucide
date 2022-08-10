@@ -73,7 +73,7 @@ jobs:
         run: pnpm --filter lucide test
 
       - name: Publish
-        run: pnpm --filter lucide publish
+        run: pnpm --filter lucide publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -128,7 +128,7 @@ jobs:
         run: pnpm --filter lucide-react test
 
       - name: Publish
-        run: pnpm --filter lucide-react publish
+        run: pnpm --filter lucide-react publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -183,7 +183,7 @@ jobs:
         run: pnpm --filter lucide-react-native test
 
       - name: Publish
-        run: pnpm --filter lucide-react-native publish
+        run: pnpm --filter lucide-react-native publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -238,7 +238,7 @@ jobs:
         run: pnpm --filter lucide-vue test
 
       - name: Publish
-        run: pnpm --filter lucide-vue publish
+        run: pnpm --filter lucide-vue publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -293,7 +293,7 @@ jobs:
         run: pnpm --filter lucide-vue-next test
 
       - name: Publish
-        run: pnpm --filter lucide-vue-next publish
+        run: pnpm --filter lucide-vue-next publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -348,7 +348,7 @@ jobs:
         run: pnpm --filter lucide-angular test:headless
 
       - name: Publish
-        run: pnpm --filter lucide-angular publish dist
+        run: pnpm --filter lucide-angular publish dist --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -403,7 +403,7 @@ jobs:
         run: pnpm --filter lucide-preact test
 
       - name: Publish
-        run: pnpm --filter lucide-preact publish
+        run: pnpm --filter lucide-preact publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -458,7 +458,7 @@ jobs:
         run: pnpm --filter lucide-svelte test
 
       - name: Publish
-        run: pnpm --filter lucide-svelte publish
+        run: pnpm --filter lucide-svelte publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -514,7 +514,7 @@ jobs:
         run: pnpm --filter lucide-static build
 
       - name: Publish
-        run: pnpm --filter lucide-static publish
+        run: pnpm --filter lucide-static publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
