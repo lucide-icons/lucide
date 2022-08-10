@@ -29,7 +29,8 @@
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
