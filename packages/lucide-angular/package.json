@@ -31,7 +31,8 @@
     "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "version": "pnpm version --git-tag-version=false"
   },
   "dependencies": {
     "tslib": "^2.3.1"
