@@ -325,7 +325,9 @@
     "switch",
     "network",
 	"mobile data",
-	"internet"
+	"internet",
+	"reorder",
+	"move"
   ],
   "arrow-up-left": [
     "direction"
