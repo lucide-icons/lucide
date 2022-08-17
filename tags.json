@@ -318,6 +318,15 @@
   "arrow-up-circle": [
     "direction"
   ],
+  "arrow-up-down": [
+    "bidirectional",
+    "direction",
+    "swap",
+    "switch",
+    "network",
+	"mobile data",
+	"internet"
+  ],
   "arrow-up-left": [
     "direction"
   ],
