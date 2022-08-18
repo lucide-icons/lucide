@@ -1,7 +1,7 @@
 {
   "name": "lucide-preact",
   "description": "A Lucide icon library package for Preact applications",
-  "version": "0.84.0",
+  "version": "0.87.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -17,7 +17,9 @@
   "module": "dist/esm/lucide-preact.js",
   "unpkg": "dist/umd/lucide-preact.min.js",
   "typings": "dist/lucide-preact.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
