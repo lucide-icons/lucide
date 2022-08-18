@@ -3249,6 +3249,13 @@
     "money",
     "payment"
   ],
+  "sailboat": [
+    "ship",
+    "boat",
+    "harbor",
+    "harbour",
+    "dock"
+  ],
   "save": [
     "floppy disk"
   ],
