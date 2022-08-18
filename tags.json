@@ -304,7 +304,9 @@
     "direction",
     "swap",
     "switch",
-    "transaction"
+    "transaction",
+    "reorder",
+    "move"
   ],
   "arrow-right": [
     "direction"
@@ -317,6 +319,17 @@
   ],
   "arrow-up-circle": [
     "direction"
+  ],
+  "arrow-up-down": [
+    "bidirectional",
+    "direction",
+    "swap",
+    "switch",
+    "network",
+    "mobile data",
+    "internet",
+    "reorder",
+    "move"
   ],
   "arrow-up-left": [
     "direction"
