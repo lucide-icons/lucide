@@ -324,10 +324,10 @@
     "swap",
     "switch",
     "network",
-	"mobile data",
-	"internet",
-	"reorder",
-	"move"
+    "mobile data",
+    "internet",
+    "reorder",
+    "move"
   ],
   "arrow-up-left": [
     "direction"
