@@ -6,8 +6,9 @@ import Package from '../../components/Package';
 import packagesData from '../../lib/packageData';
 import { Heading } from '@chakra-ui/react';
 import fetchPackages from '../../lib/fetchPackages';
+import { GetStaticPropsResult } from 'next';
 
-const PackagesPage = ({ packages }) => {
+const PackagesPage = ({ packages }): JSX.Element => {
   return (
     <HeadingNavigationProvider>
       <MobileMenu />
@@ -25,7 +26,7 @@ const PackagesPage = ({ packages }) => {
 
 export default PackagesPage;
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps(): Promise<GetStaticPropsResult<[]>> {
   const packages = (await fetchPackages())
     .filter(Boolean)
     .filter(packageObj => !packageObj.private && packageObj.name in packagesData)

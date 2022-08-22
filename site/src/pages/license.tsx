@@ -7,7 +7,7 @@ import { promises as fs } from 'fs';
 import { resolve } from 'path';
 import { GetStaticProps, NextPage } from 'next';
 
-const LicensePage = ({ licenseText }) => {
+const LicensePage = ({ licenseText }: { licenseText: string }): JSX.Element => {
   return (
     <Box>
       <MobileMenu />
@@ -43,7 +43,7 @@ const LicensePage = ({ licenseText }) => {
 
 export default LicensePage;
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async () => {
   const doc: string = await fs.readFile(resolve('../LICENSE'), 'utf-8');
 
   const licenseText = doc

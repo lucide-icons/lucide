@@ -1,7 +1,6 @@
 import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import download from 'downloadjs';
-import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
 import {useContext, useEffect, useRef} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
@@ -45,8 +44,11 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
 
   const downloadIcon = ({src, name} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
 
-  const copyIcon = ({src, name} : IconDownload) => {
-    copy(src);
+  const copyIcon = async ({src, name} : IconDownload) => {
+    const trimmedSrc = src.replace(/(\r\n|\n|\r|\s\s)/gm, "")
+
+    await navigator.clipboard.writeText(trimmedSrc)
+
     toast({
       title: "Copied!",
       description: `Icon "${name}" copied to clipboard.`,

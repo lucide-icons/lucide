@@ -6,7 +6,8 @@ import IconDetailOverlay from '../components/IconDetailOverlay';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
+import { GetStaticPropsResult } from 'next';
 
 const IndexPage = ({ data }) => {
   const router = useRouter();
@@ -30,7 +31,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps(): GetStaticPropsResult {
   const data = await getAllData();
 
   return {

@@ -17,5 +17,9 @@ module.exports = {
         trailingComma: 'all'
       }
     ]
-  }
+  },
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./site/tsconfig.json', './packages/*/tsconfig.json'],
+  },
 };
