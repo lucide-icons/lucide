@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable */
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -9,7 +9,6 @@ module.exports = {
     'plugin:@next/next/recommended',
   ],
   parserOptions: {
-    project: ['./tsconfig.json'],
     tsconfigRootDir: __dirname,
   },
 };

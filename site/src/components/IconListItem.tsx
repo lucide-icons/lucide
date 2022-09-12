@@ -1,15 +1,16 @@
 import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import { memo } from 'react';
+import { Contributor } from '../lib/fetchAllContributors';
 import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps {
   name: string;
   content: string;
-  contributors: any[];
+  contributors: Contributor[]
   src: string;
-  onClick?: ButtonProps['onClick'];
+  onClick?: ButtonProps['onClick']
 }
 
 const IconListItem = ({ name, content, onClick, src: svg }: IconListItemProps) => {
@@ -29,7 +30,7 @@ const IconListItem = ({ name, content, onClick, src: svg }: IconListItemProps) =
       });
     }
     if (event.altKey) {
-      download(src, `${name}.\svg`, 'image/svg+xml');
+      download(src, `${name}.svg`, 'image/svg+xml');
     }
     if (onClick) {
       onClick(event);

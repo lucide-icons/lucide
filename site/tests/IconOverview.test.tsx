@@ -9,9 +9,9 @@ const keys = [
 
 describe('Icon Overview', () => {
   it('can search filter icons', async () => {
-    let allData = getAllData();
+    const allData = await getAllData();
 
-    const { result: result1, waitForNextUpdate: wait1 } = renderHook(() => useSearch(allData, '', keys));
+    const { result: result1 } = renderHook(() => useSearch('', allData, keys));
     expect(result1.current).toHaveLength(allData.length);
 
     const { result: result2, waitForNextUpdate: wait2 } = renderHook(() =>

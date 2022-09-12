@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useMemo, useCallback, useEffect } from 'react';
+import { createContext, useState, useContext, useMemo, useCallback } from 'react';
 
 interface HeadingTypes {
   anchor: string;
@@ -8,7 +8,7 @@ interface HeadingTypes {
 
 const HeadingNavigationContext = createContext({
   headings: [],
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
   addHeading: (heading: HeadingTypes) => {},
 });
 

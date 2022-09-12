@@ -6,25 +6,26 @@ import {useContext, useEffect, useRef} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
+import { IconData } from "../lib/icons";
 
 type IconDownload = {
   src: string;
   name: string;
 };
 
-const IconDetailOverlay = ({ open = true, close, icon }) => {
+interface IconDetailOverlayProps {
+  open: boolean
+  close: () => void
+  icon?: IconData
+}
+
+const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
-  const { tags = [], name } = icon;
   const {color, strokeWidth, size} = useContext(IconStyleContext);
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
   const { isOpen, onOpen, onClose } = useDisclosure()
-
-  const handleClose = () => {
-    onClose();
-    close();
-  };
 
   useEffect(() => {
     if(open) {
@@ -32,7 +33,18 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
     }
   }, [open])
 
-  const iconStyling = (isLight) => ({
+  if(icon == null) {
+    return null
+  }
+
+  const { tags = [], name = '' } = icon;
+
+  const handleClose = () => {
+    onClose();
+    close();
+  };
+
+  const iconStyling = {
     height: "25vw",
     width: "25vw",
     minHeight: "160px",
@@ -40,9 +52,9 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
     maxHeight: "240px",
     maxWidth: "240px",
     color: color,
-  });
+  };
 
-  const downloadIcon = ({src, name} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
+  const downloadIcon = ({src, name = ''} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
 
   const copyIcon = async ({src, name} : IconDownload) => {
     const trimmedSrc = src.replace(/(\r\n|\n|\r|\s\s)/gm, "")
@@ -97,7 +109,6 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
         w="full"
         px={8}
       >
-
           <Box
             borderWidth="1px"
             rounded="lg"
@@ -137,7 +148,7 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
                   padding={0}
                 >
                   <div
-                    style={iconStyling(colorMode == "light")}
+                    style={iconStyling}
                     className="icon-large"
                   >
                     <IconWrapper
@@ -218,8 +229,8 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
                       </Heading>
                       <AvatarGroup size="md">
                         { icon.contributors.map((commit, index) => (
-                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.sha}`}>
-                            <Tooltip label={commit.author} key={commit.sha}>
+                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.commit}`}>
+                            <Tooltip label={commit.author} key={commit.commit}>
                               <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
                             </Tooltip>
                           </Link>

@@ -2,13 +2,17 @@ import Layout from '../../components/Layout';
 import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
 import { Stack } from '@chakra-ui/react';
-import Package from '../../components/Package';
+import Package, { PackageItem } from '../../components/Package';
 import packagesData from '../../lib/packageData';
 import { Heading } from '@chakra-ui/react';
 import fetchPackages from '../../lib/fetchPackages';
 import { GetStaticPropsResult } from 'next';
 
-const PackagesPage = ({ packages }): JSX.Element => {
+interface PackagesPageProps {
+  packages: PackageItem[]
+}
+
+const PackagesPage = ({ packages }: PackagesPageProps): JSX.Element => {
   return (
     <HeadingNavigationProvider>
       <MobileMenu />
@@ -26,11 +30,11 @@ const PackagesPage = ({ packages }): JSX.Element => {
 
 export default PackagesPage;
 
-export async function getStaticProps(): Promise<GetStaticPropsResult<[]>> {
-  const packages = (await fetchPackages())
+export async function getStaticProps(): Promise<GetStaticPropsResult<PackagesPageProps>> {
+  const packages: PackageItem[] = (await fetchPackages())
     .filter(Boolean)
     .filter(packageObj => !packageObj.private && packageObj.name in packagesData)
-    .map(({ name, description, flutter = false }) => {
+    .map(({ name, description, flutter }) => {
       const packageDirectory = flutter ? 'lucide-flutter' : name;
 
       return {
@@ -43,6 +47,9 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<[]>> {
       };
     })
     .sort((a, b) => a.order - b.order);
+
+  console.log(packages);
+
 
   return { props: { packages } };
 }

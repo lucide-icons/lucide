@@ -5,9 +5,9 @@ import MobileMenu from '../components/MobileMenu';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps } from 'next';
 
-const LicensePage = ({ licenseText }: { licenseText: string }): JSX.Element => {
+const LicensePage = ({ licenseText }: { licenseText: string[] }): JSX.Element => {
   return (
     <Box>
       <MobileMenu />
