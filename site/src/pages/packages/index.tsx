@@ -3,7 +3,7 @@ import HeadingNavigationProvider from '../../components/HeadingNavigationProvide
 import MobileMenu from '../../components/MobileMenu';
 import { Stack } from '@chakra-ui/react';
 import Package, { PackageItem } from '../../components/Package';
-import packagesData from '../../lib/packageData';
+import packagesData from '../../data/packageData';
 import { Heading } from '@chakra-ui/react';
 import fetchPackages from '../../lib/fetchPackages';
 import { GetStaticPropsResult } from 'next';
