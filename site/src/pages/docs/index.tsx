@@ -10,7 +10,7 @@ import { Box, Button, Text } from '@chakra-ui/react';
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link';
 
-const DocPage = ({ doc, data, content }) => {
+const DocPage = ({ doc, data }) => {
   if (!data || !doc) return null
 
   const nextPage = data.nextPage || []
@@ -69,7 +69,7 @@ const DocPage = ({ doc, data, content }) => {
 
 export default DocPage
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const allDocs = await fetchAllDocuments();
   const doc = allDocs.find(({filename = ''}) => filename === 'index.md');
 

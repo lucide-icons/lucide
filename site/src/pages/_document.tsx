@@ -17,15 +17,6 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#F56565" />
           <meta name="google-site-verification" content="pr2dEIF-6zFdjXlDxutqEokeinrQNLx5qAjeVCqASDY" />
         </Head>
-        <style jsx global>{`
-          * {
-            -webkit-transition: none !important;
-            -moz-transition: none !important;
-            -o-transition: none !important;
-            -ms-transition: none !important;
-            transition: none !important;
-          }
-        `}</style>
         <body>
           <ColorModeScript />
           <Main />

@@ -1,10 +1,11 @@
 import { promises as fs, constants } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml'
+import { PackageItem } from '../components/Package';
 
 const fileExist = (filePath) => fs.access(filePath, constants.F_OK).then(() => true).catch(() => false)
 
-const fetchPackages = async () => {
+const fetchPackages = async (): Promise<PackageItem[]> => {
   const docsDir = path.resolve(process.cwd(), '../packages');
   const fileNames = await (await fs.readdir(docsDir)).map(filename => ({filename, directory: docsDir}))
 
@@ -30,8 +31,6 @@ const fetchPackages = async () => {
 
     return null
   }))
-
-
 
   return packageJsons
 }

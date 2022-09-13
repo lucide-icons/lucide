@@ -10,7 +10,9 @@
     "export": "next export -o build",
     "deploy": "pnpm build && pnpm export",
     "lint": "eslint .",
-    "test": "jest"
+    "lint:fix": "eslint --fix .",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "1.8.8",
@@ -19,7 +21,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^11.0.0",
-    "@svgr/webpack": "^6.2.1",
+    "@svgr/webpack": "^6.3.1",
     "downloadjs": "^1.4.7",
     "framer-motion": "^4",
     "fuse.js": "^6.5.3",
@@ -37,23 +39,24 @@
     "react-svg-loader": "^3.0.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^11.1.0",
-    "@testing-library/dom": "^7.24.4",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.0.4",
-    "@testing-library/react-hooks": "^3.4.2",
-    "react-test-renderer": "17.0.2",
+    "@next/eslint-plugin-next": "^12.2.5",
+    "@testing-library/dom": "^7.31.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "^28.1.7",
     "@types/node": "^14.0.11",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
-    "@typescript-eslint/parser": "^4.29.1",
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
+    "@typescript-eslint/parser": "^5.34.0",
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
-    "cheerio": "^1.0.0-rc.3",
-    "eslint": "^7.32.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
     "jest": "^26.5.2",
     "prettier": "^2.3.2",
+    "react-test-renderer": "17.0.2",
     "typescript": "^4.3.5"
   }
 }

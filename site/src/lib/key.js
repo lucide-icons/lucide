@@ -10,6 +10,7 @@ export const useKeyBindings = (
   const [keyBindings] = useState(initialKeyBindings);
 
   useEffect(() => {
+    // eslint-disable-next-line no-undef
     document.addEventListener(
       eventListener,
       (event) => {
@@ -28,6 +29,7 @@ export const useKeyBindings = (
 
     return () =>
       Object.keys(keyBindings).forEach((keyBinding) =>
+        // eslint-disable-next-line no-undef
         document.removeEventListener(eventListener, keyBindings[keyBinding])
       );
   }, []);
