@@ -2,6 +2,11 @@ import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
 
+export interface Contributor {
+  author: string
+  commit: string
+}
+
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
 function getContentHashOfFile(path) {
@@ -14,8 +19,7 @@ function getContentHashOfFile(path) {
   });
 }
 
-const fetchCommitsOfIcon = (name) =>
-  new Promise(async (resolve, reject) => {
+const fetchCommitsOfIcon = async (name) =>{
     try {
       const headers = new Headers();
       const username = 'ericfennis';
@@ -35,22 +39,22 @@ const fetchCommitsOfIcon = (name) =>
 
       const data = await res.json();
 
-      resolve({
+      return {
         name,
         commits: data,
-      });
+      };
     } catch (error) {
 
-      reject(error);
+      throw new Error(error);
     }
-  });
+  };
 
 export const filterCommits = (commits) =>
   commits.filter(({ commit }) =>
     !IGNORE_COMMIT_MESSAGES.some(ignoreItem =>
       commit.message.toLowerCase().includes(ignoreItem),
     ))
-  .map(({ sha, author, commit }) => ({
+  .map(({ sha, author }) => ({
     author: author && author.login ? author.login : null,
     commit: sha,
   }))
@@ -86,7 +90,7 @@ async function writeIconCache(icon, content) {
   fs.writeFileSync(iconCachePath, JSON.stringify(content), 'utf-8');
 }
 
-export async function getContributors(icon) {
+export async function getContributors(icon): Promise<Contributor[]> {
   try {
     let iconCommits
     const iconCache = await checkIconCache(icon);
@@ -94,7 +98,7 @@ export async function getContributors(icon) {
     if (iconCache) {
       iconCommits = iconCache
     } else {
-      const { commits } : any = await fetchCommitsOfIcon(icon);
+      const { commits } = await fetchCommitsOfIcon(icon);
 
       writeIconCache(icon, commits)
 
