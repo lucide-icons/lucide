@@ -21,7 +21,7 @@ function ColorPicker({ hsv, hsl, onChange, value: color }: ColorPickerProps) {
   }, [color]);
 
   const handleChange = (e) => {
-    let value = e.target.value;
+    const value = e.target.value;
     setValue(value);
     onChange(value, e);
   };
