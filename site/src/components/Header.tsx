@@ -1,4 +1,4 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Icon } from '@chakra-ui/react';
+import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from '@chakra-ui/react';
 import download from 'downloadjs';
 import JSZip from 'jszip';
 import { Download, Github } from 'lucide-react';
@@ -17,7 +17,7 @@ import { useState } from 'react';
 import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconEntity } from '../types';
 
-type IconContent = [icon: string, src:string]
+type IconContent = [icon: string, src:string];
 
 async function generateZip(icons: IconContent[]) {
   const zip = new JSZip();

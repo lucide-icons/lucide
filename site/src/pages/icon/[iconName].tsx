@@ -38,7 +38,7 @@ const IconPage = ({ icon, data }) => {
 
   return (
     <Layout>
-      <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} />
+      <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
       <Header {...{ data }} />
       <IconOverview {...{ data }} />
     </Layout>

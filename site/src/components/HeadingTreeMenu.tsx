@@ -1,8 +1,9 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useHeadingNavigationContext } from './HeadingNavigationProvider';
 
 const HeadingTreeMenu = () => {
   const { headings } = useHeadingNavigationContext();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const headingElements = useMemo(
     () =>
       headings.map(heading => {
