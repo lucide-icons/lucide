@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { promises } from 'stream';
 import { toPascalCase } from '../helpers.mjs';
 
 export default function({

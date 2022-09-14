@@ -10,7 +10,8 @@ export default function(inputEntry, outputDirectory, iconNodes, iconFileExtentio
 
   const icons = Object.keys(iconNodes);
 
-  const fileExtention = iconFileExtention === '.ts' || iconFileExtention === '.js' ? '' : iconFileExtention
+  const fileExtention =
+    iconFileExtention === '.ts' || iconFileExtention === '.js' ? '' : iconFileExtention;
 
   // Generate Import for Icon VNodes
   icons.forEach(iconName => {

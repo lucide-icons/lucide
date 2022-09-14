@@ -1,7 +1,7 @@
 {
   "name": "lucide-angular",
   "description": "A Lucide icon library package for Angular applications",
-  "version": "0.83.0",
+  "version": "0.88.0",
   "author": "SMAH1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -22,15 +22,17 @@
     "Font Awesome"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:icons && pnpm build:ng",
-    "clean": "npx shx rm -rf dist && npx shx rm -rf ./src/icons/*.ts",
-    "build:icons": "pnpm --cwd ../../ build:icons --output=../packages/lucide-angular/src --templateSrc=../packages/lucide-angular/scripts/exportTemplate --iconFileExtention=.ts --exportFileName=index.ts",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:ng",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
     "build:ng": "ng build --prod",
-    "test:headless": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
-    "test": "ng test",
+    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "version": "pnpm version --git-tag-version=false"
   },
   "dependencies": {
     "tslib": "^2.3.1"
@@ -57,8 +59,10 @@
     "ng-packagr": "^11.2.4",
     "protractor": "~7.0.0",
     "puppeteer": "^8.0.0",
+    "rxjs": "6.5.3",
     "ts-node": "~10.4.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "zone.js": "^0.11.7"
   }
 }

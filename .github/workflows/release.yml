@@ -13,7 +13,7 @@ on:
 
 jobs:
   pre-build:
-    if: github.repository == 'lucide-icons/lucide' && contains('["locness3","ericfennis", "johnletey"]', github.actor)
+    if: github.repository == 'lucide-icons/lucide' && contains('["locness3","ericfennis", "johnletey", "karsa-mistmere"]', github.actor)
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
@@ -33,30 +33,47 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: yarn workspace lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide build
+        run: pnpm --filter lucide build
 
       - name: Test
-        run: yarn workspace lucide test
+        run: pnpm --filter lucide test
 
       - name: Publish
-        run: yarn workspace lucide publish
+        run: pnpm --filter lucide publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -71,30 +88,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set package.json version lucide
-        run: yarn workspace lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-react build
+        run: pnpm --filter lucide-react build
 
       - name: Test
-        run: yarn workspace lucide-react test
+        run: pnpm --filter lucide-react test
 
       - name: Publish
-        run: yarn workspace lucide-react publish
+        run: pnpm --filter lucide-react publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -109,30 +143,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set package.json version lucide
-        run: yarn workspace lucide-react-native version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-react-native version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-react-native build
+        run: pnpm --filter lucide-react-native build
 
       - name: Test
-        run: yarn workspace lucide-react-native test
+        run: pnpm --filter lucide-react-native test
 
       - name: Publish
-        run: yarn workspace lucide-react-native publish
+        run: pnpm --filter lucide-react-native publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -147,30 +198,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: yarn workspace lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-vue build
+        run: pnpm --filter lucide-vue build
 
       - name: Test
-        run: yarn workspace lucide-vue test
+        run: pnpm --filter lucide-vue test
 
       - name: Publish
-        run: yarn workspace lucide-vue publish
+        run: pnpm --filter lucide-vue publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -185,30 +253,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: yarn workspace lucide-vue-next version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-vue-next version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-vue-next build
+        run: pnpm --filter lucide-vue-next build
 
       - name: Test
-        run: yarn workspace lucide-vue-next test
+        run: pnpm --filter lucide-vue-next test
 
       - name: Publish
-        run: yarn workspace lucide-vue-next publish
+        run: pnpm --filter lucide-vue-next publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -223,30 +308,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set package.json version lucide
-        run: yarn workspace lucide-angular version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-angular version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-angular build
+        run: pnpm --filter lucide-angular build
 
       - name: Test
-        run: yarn workspace lucide-angular test:headless
+        run: pnpm --filter lucide-angular test:headless
 
       - name: Publish
-        run: yarn workspace lucide-angular publish dist
+        run: pnpm --filter lucide-angular publish dist --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -261,30 +363,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set package.json version lucide
-        run: yarn workspace lucide-preact version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-preact version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-preact build
+        run: pnpm --filter lucide-preact build
 
       - name: Test
-        run: yarn workspace lucide-preact test
+        run: pnpm --filter lucide-preact test
 
       - name: Publish
-        run: yarn workspace lucide-preact publish
+        run: pnpm --filter lucide-preact publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -299,30 +418,47 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set package.json version lucide
-        run: yarn workspace lucide-svelte version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-svelte version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: yarn workspace lucide-svelte build
+        run: pnpm --filter lucide-svelte build
 
       - name: Test
-        run: yarn workspace lucide-svelte test
+        run: pnpm --filter lucide-svelte test
 
       - name: Publish
-        run: yarn workspace lucide-svelte publish
+        run: pnpm --filter lucide-svelte publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -338,30 +474,47 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: yarn workspace lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
 
       - name: Move Font
         run: cp -r lucide-font packages/lucide-static/font
 
       - name: Build
-        run: yarn workspace lucide-static build
+        run: pnpm --filter lucide-static build
 
       - name: Publish
-        run: yarn workspace lucide-static publish
+        run: pnpm --filter lucide-static publish --no-git-checks
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
@@ -375,13 +528,29 @@ jobs:
     needs: pre-build
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install FontForge
         run: sudo apt-get install zlib1g-dev fontforge
@@ -407,13 +576,13 @@ jobs:
       - name: Install Font Custom dependency
         run: sudo gem install fontcustom
 
-      - name: Install
-        run: yarn --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build Icon Font
         run: |
           mkdir lucide-font
-          yarn build:outline-icons --outputDir=converted_icons && fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
+          pnpm build:outline-icons --outputDir=converted_icons && fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
@@ -472,6 +641,10 @@ jobs:
 
       - name: Test
         run: flutter test
+        working-directory: packages/lucide-flutter
+
+      - name: Copy License
+        run: cp ../../LICENSE ./LICENSE
         working-directory: packages/lucide-flutter
 
       - name: Update yaml

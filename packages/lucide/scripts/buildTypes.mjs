@@ -4,9 +4,12 @@ import {
   readSvgDirectory,
   resetFile,
   appendFile,
+  writeFile,
   toPascalCase,
-  __dirname,
+  getCurrentDirPath,
 } from '../../../scripts/helpers.mjs';
+
+const currentDir = getCurrentDirPath(import.meta.url)
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -20,8 +23,8 @@ const defaultAttributes = {
   'stroke-linejoin': 'round',
 };
 
-const TARGET_DIR = path.join(__dirname, '../dist');
-const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const TARGET_DIR = path.join(currentDir, '../dist');
+const ICONS_DIR = path.resolve(currentDir, '../../../icons');
 const TYPES_FILE_NAME = 'lucide.d.ts';
 
 // Generates header of d.ts file include some types and functions
@@ -70,8 +73,7 @@ export declare const icons: Icons;
 // Generated icons
 `;
 
-resetFile(TYPES_FILE_NAME, TARGET_DIR);
-appendFile(typeDefinitions, TYPES_FILE_NAME, TARGET_DIR);
+writeFile(typeDefinitions, TYPES_FILE_NAME, TARGET_DIR);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 

@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import babel from '@rollup/plugin-babel';
 import bundleSize from '@atomico/rollup-plugin-sizes';
-import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import { terser } from 'rollup-plugin-terser';
 import visualizer from 'rollup-plugin-visualizer';
 import license from 'rollup-plugin-license';
@@ -16,16 +15,14 @@ const plugins = (pkg, minify) =>
       delimiters: ['', ''],
       preventAssignment: false,
     }),
-    // resolve(),
-    // commonJS({
-    //   include: 'node_modules/**',
-    // }),
-    // babel({
-    //   babelHelpers: 'bundled',
-    // }),
-    // The two minifiers together seem to procude a smaller bundle 🤷‍♂️
-    // minify && compiler(),
-    // minify && terser(),
+    resolve(),
+    commonJS({
+      include: 'node_modules/**',
+    }),
+    babel({
+      babelHelpers: 'bundled',
+    }),
+    minify && terser(),
     license({
       banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
     }),

@@ -304,7 +304,9 @@
     "direction",
     "swap",
     "switch",
-    "transaction"
+    "transaction",
+    "reorder",
+    "move"
   ],
   "arrow-right": [
     "direction"
@@ -317,6 +319,17 @@
   ],
   "arrow-up-circle": [
     "direction"
+  ],
+  "arrow-up-down": [
+    "bidirectional",
+    "direction",
+    "swap",
+    "switch",
+    "network",
+    "mobile data",
+    "internet",
+    "reorder",
+    "move"
   ],
   "arrow-up-left": [
     "direction"
@@ -859,6 +872,12 @@
     "null",
     "nothing"
   ],
+  "citrus": [
+    "lemon",
+    "orange",
+    "grapefruit",
+    "fruit"
+  ],
   "clapperboard": [
     "movie",
     "film",
@@ -1099,6 +1118,11 @@
     "module",
     "part",
     "symbol"
+  ],
+  "concierge-bell": [
+    "reception",
+    "bell",
+    "porter"
   ],
   "contact": [
     "person",
@@ -1380,6 +1404,13 @@
     "industry",
     "manufacture",
     "sector"
+  ],
+  "fan": [
+    "air",
+    "cooler",
+    "ventilation",
+    "ventilator",
+    "blower"
   ],
   "fast-forward": [
     "music"
@@ -2695,6 +2726,12 @@
     "imaging",
     "research"
   ],
+  "microwave": [
+    "oven",
+    "cooker",
+    "toaster oven",
+    "bake"
+  ],
   "milestone": [
     "sign",
     "signpost",
@@ -3026,7 +3063,7 @@
     "food"
   ],
   "plane": [
-    "plane",
+    "airplane",
     "trip"
   ],
   "play": [
@@ -3107,6 +3144,18 @@
     "music",
     "connect"
   ],
+  "rectangle-horizontal": [
+    "rectangle",
+    "aspect ratio",
+    "16:9",
+    "horizontal"
+  ],
+  "rectangle-vertical": [
+    "rectangle",
+    "aspect ratio",
+    "9:16",
+    "vertical"
+  ],
   "recycle": [
     "sustainability",
     "salvage",
@@ -3129,6 +3178,15 @@
     "synchronise",
     "synchronize",
     "arrows"
+  ],
+  "refrigerator": [
+    "frigerator",
+    "fridge",
+    "freezer",
+    "cooler",
+    "icebox",
+    "chiller",
+    "cold storage"
   ],
   "regex": [
     "search",
@@ -3190,6 +3248,13 @@
     "currency",
     "money",
     "payment"
+  ],
+  "sailboat": [
+    "ship",
+    "boat",
+    "harbor",
+    "harbour",
+    "dock"
   ],
   "save": [
     "floppy disk"
@@ -3361,6 +3426,13 @@
   "shovel": [
     "dig",
     "spade"
+  ],
+  "shower-head": [
+    "shower",
+    "bath",
+    "bathroom",
+    "amenities",
+    "services"
   ],
   "shrink": [
     "scale",
@@ -3549,7 +3621,9 @@
     "plant"
   ],
   "square": [
-    "rectangle"
+    "rectangle",
+    "aspect ratio",
+    "1:1"
   ],
   "star": [
     "bookmark",

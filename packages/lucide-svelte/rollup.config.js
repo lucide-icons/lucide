@@ -10,9 +10,8 @@ import pkg from './package.json';
 
 const packageName = 'LucideSvelte';
 const outputFileName = 'lucide-svelte';
-const rootDir = 'packages/lucide-svelte'; // It runs from the root
-const outputDir = `${rootDir}/dist`;
-const inputs = [`${rootDir}/src/lucide-svelte.js`];
+const outputDir = 'dist';
+const inputs = ['./src/lucide-svelte.js'];
 const bundles = [
   {
     format: 'umd',
@@ -51,7 +50,6 @@ const configs = bundles
         commonJS({
           include: 'node_modules/**',
         }),
-        // The two minifiers together seem to procude a smaller bundle 🤷‍♂️
         minify && terser(),
         license({
           banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,

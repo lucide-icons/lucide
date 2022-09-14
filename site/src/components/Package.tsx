@@ -5,17 +5,31 @@ import {
   Heading,
   Text,
   useColorMode,
-  Divider,
   ButtonGroup,
-  Stack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { Code, FileText } from 'lucide-react';
 import Link from 'next/link';
-import { MDXRemote } from 'next-mdx-remote';
-import mdxComponents from '../lib/mdxComponents';
 
-const Package = ({ name, description, image, shields, source, documentation }) => {
+interface Shield {
+  alt: string
+  src: string
+  href: string
+}
+export interface PackageItem {
+  name: string
+  description: string
+  image: string
+  shields: Shield[]
+  source: string
+  documentation: string
+  order: number
+  private?: boolean
+  flutter?: object
+}
+
+
+const Package = ({ name, description, image, shields, source, documentation }: PackageItem) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -71,6 +85,7 @@ const Package = ({ name, description, image, shields, source, documentation }) =
             {shields.map(({ alt, src, href }, index) => (
               <Link href={href} passHref>
                 <a target="_blank">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img {...{ alt, src }} key={index} />
                 </a>
               </Link>

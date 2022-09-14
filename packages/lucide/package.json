@@ -1,7 +1,7 @@
 {
   "name": "lucide",
   "description": "A Lucide icon library package for web and javascript applications.",
-  "version": "0.83.0",
+  "version": "0.88.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -11,24 +11,25 @@
     "directory": "packages/lucide"
   },
   "amdName": "lucide",
-  "source": "build/lucide.js",
+  "source": "src/lucide.js",
   "main": "dist/cjs/lucide.js",
   "main:umd": "dist/umd/lucide.js",
   "module": "dist/esm/lucide.js",
   "unpkg": "dist/umd/lucide.min.js",
   "typings": "dist/lucide.d.ts",
   "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:icons && pnpm build:bundle",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=../packages/lucide/src --iconFileExtention=.ts",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:bundles && pnpm build:types",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs",
     "build:es": "babel src -d dist/esm",
-    "build:bundle": "rollup -c rollup.config.js",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "esbuild": "^0.14.51",
-    "rollup-plugin-esbuild": "^4.9.1",
-    "rollup-plugin-dts": "^4.2.2"
+    "build:types": "node ./scripts/buildTypes.mjs",
+    "build:bundles": "rollup -c rollup.config.js",
+    "test": "jest",
+    "version": "pnpm version --git-tag-version=false"
   }
 }
