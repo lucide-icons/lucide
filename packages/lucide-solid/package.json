@@ -29,12 +29,15 @@
     "build:es": "babel src -d dist/esm",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.js",
-    "test": "jest",
+    "test:jest": "jest",
+    "test": "vitest",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "babel-preset-solid": "^1.5.4",
     "jest": "^26.6.3",
+    "jsdom": "^20.0.0",
     "solid-js": "^1.4.7",
     "solid-testing-library": "^0.3.0"
   },
@@ -42,6 +45,9 @@
     "solid-js": "^1.4.7"
   },
   "dependencies": {
-    "solid-jest": "^0.2.0"
+    "solid-jest": "^0.2.0",
+    "vite": "^2.6.4",
+    "vite-plugin-solid": "^2.3.0",
+    "vitest": "^0.23.2"
   }
 }

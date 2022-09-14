@@ -1,17 +1,17 @@
-import h from 'solid-js/h'
+import { describe, it, expect } from 'vitest';
 import { render } from 'solid-testing-library'
 import { Grid } from '../src/icons'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
-    const { container } = render( <Grid/> );
+    const { container } = render(() => <Grid/> );
 
     expect( container.innerHTML ).toMatchSnapshot();
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
     const testId = 'grid-icon';
-    const { container, getByTestId } = render(
+    const { container, getByTestId } = render( () =>
       <Grid
         data-testid={testId}
         size={48}
