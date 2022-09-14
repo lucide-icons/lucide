@@ -1,5 +1,5 @@
-import { h } from 'preact'
-import { render } from '@testing-library/preact'
+import h from 'solid-js/h'
+import { render } from 'solid-testing-library'
 import { Grid } from '../src/icons'
 
 describe('Using lucide icon components', () => {
