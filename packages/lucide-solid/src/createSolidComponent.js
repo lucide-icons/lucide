@@ -28,8 +28,11 @@ export default (iconName, iconNode) => {
           width: size,
           height: size,
           stroke: color,
-          'stroke-width': strokeWidth,
-          class: `lucide lucide-${toKebabCase(iconName)}`,
+          strokeWidth,
+          classList: {
+            lucide: true,
+            [`lucide-${toKebabCase(iconName)}`]: true,
+          },
         },
         rest,
       ),
