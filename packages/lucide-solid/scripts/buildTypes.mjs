@@ -16,9 +16,9 @@ const typeDefinitions = `\
 /// <reference types="solid-js" />
 import { JSX, RefObject } from 'solid-js'
 
-interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
+interface LucideProps extends Partial<JSX.PresentationSVGAttributes> {
   key?: string | number;
-  ref?: string | ((component: any) => any) | RefObject<any>;
+  ref?: string | ((component: any) => any);
   color?: string
   size?: string | number
 }
