@@ -13,8 +13,8 @@ const srcDirectory = path.join(currentDir, '../dist');
 
 // Declare type definitions
 const typeDefinitions = `\
-/// <reference types="preact" />
-import { JSX, RefObject } from 'preact'
+/// <reference types="solid-js" />
+import { JSX, RefObject } from 'solid-js'
 
 interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
   key?: string | number;
@@ -27,7 +27,7 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
 `;
 
 const ICONS_DIR = path.resolve(currentDir, '../../../icons');
-const TYPES_FILE = 'lucide-preact.d.ts';
+const TYPES_FILE = 'lucide-solid.d.ts';
 
 resetFile(TYPES_FILE, srcDirectory);
 writeFile(typeDefinitions, TYPES_FILE, srcDirectory);
