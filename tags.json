@@ -565,6 +565,11 @@
     "read",
     "library"
   ],
+  "book-open-check": [
+    "read",
+    "library",
+    "plain language"
+  ],
   "bookmark": [
     "read",
     "clip",
