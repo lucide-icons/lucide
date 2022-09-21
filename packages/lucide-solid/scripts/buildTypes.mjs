@@ -21,6 +21,7 @@ interface LucideProps extends Partial<JSX.PresentationSVGAttributes> {
   ref?: string | ((component: any) => any);
   color?: string
   size?: string | number
+  strokeWidth?: string | number
 }
 
 // Generated icons

@@ -28,7 +28,7 @@ export default (iconName, iconNode) => {
           width: size,
           height: size,
           stroke: color,
-          strokeWidth,
+          'stroke-width': strokeWidth,
           classList: {
             lucide: true,
             [`lucide-${toKebabCase(iconName)}`]: true,

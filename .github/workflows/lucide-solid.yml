@@ -1,4 +1,4 @@
-name: Lucide React Checks
+name: Lucide Solid Checks
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
       - packages/lucide-solid/**
 
 jobs:
-  lucide-react:
+  lucide-solid:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

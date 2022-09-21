@@ -9,7 +9,7 @@ describe('Using lucide icon components', () => {
     expect( container.innerHTML ).toMatchSnapshot();
   });
 
-  it('should adjust the size, stroke color and stroke width', () => {
+  it('should adjust the size, stroke color and stroke width', async () => {
     const testId = 'grid-icon';
     const { container, getByTestId } = render( () =>
       <Grid
@@ -20,7 +20,7 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const { attributes } = getByTestId(testId);
+    const { attributes } = await getByTestId(testId) as unknown as{ attributes: Record<string, { value: string }>};
     expect(attributes.stroke.value).toBe('red');
     expect(attributes.width.value).toBe('48');
     expect(attributes.height.value).toBe('48');
