@@ -16,7 +16,7 @@ npm install lucide-solid
 
 ## How to use
 
-It's build with ESmodules so it's completely threeshakable.
+It's build with ESmodules so it's completely tree-shakable.
 Each icon can be imported as a solid component.
 
 ### Example
@@ -54,8 +54,6 @@ const App = () => {
 };
 ```
 
-> svg attributes in solid aren't transformed, so if want to change e.g. the `stroke-linejoin` you need to pass it in kebabcase, the way svg spec is written so. See this topic in the [solid documentation](https://solidjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
-
 ### One generic icon component
 
 It is possible to create one generic icon component to load icons.
@@ -64,13 +62,16 @@ It is possible to create one generic icon component to load icons.
 
 #### Icon Component Example
 
-``` js
+``` tsx
 import * as icons from 'lucide-solid';
+import type { LucideProps } from 'lucide-solid';
+import { splitProps } from 'solid-js';
+import { Dynamic } from 'solid-js/web';
 
-const Icon = ({name, color, size}) => {
-  const LucideIcon = icons[name];
+const Icon = (props: { name: keyof typeof icons } & LucideProps) => {
+  const [local, others] = splitProps(props, ["name"]);
 
-  return <LucideIcon color={color} size={size} />
+  return <Dynamic component={icons[local.name]} {...others} />
 };
 
 export default Icon;

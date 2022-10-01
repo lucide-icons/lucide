@@ -14,9 +14,9 @@ const srcDirectory = path.join(currentDir, '../dist');
 // Declare type definitions
 const typeDefinitions = `\
 /// <reference types="solid-js" />
-import { JSX, RefObject } from 'solid-js'
+import { JSX } from 'solid-js'
 
-interface LucideProps extends Partial<JSX.PresentationSVGAttributes> {
+interface LucideProps extends Partial<JSX.IntrinsicElements & JSX.SvgSVGAttributes<SVGSVGElement>> {
   key?: string | number;
   ref?: string | ((component: any) => any);
   color?: string
