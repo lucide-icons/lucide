@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config'
 import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig({
@@ -10,10 +10,8 @@ export default defineConfig({
       web: [/\.jsx?$/],
     },
     setupFiles: './tests/setupVitest.js',
-    // if you have few tests, try commenting one
-    // or both out to improve performance:
-    // threads: false,
-    // isolate: false,
+    threads: false,
+    isolate: false,
   },
   resolve: {
     conditions: ['development', 'browser'],
