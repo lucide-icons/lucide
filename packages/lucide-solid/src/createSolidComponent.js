@@ -1,5 +1,5 @@
 import h from 'solid-js/h';
-import { mergeProps } from 'solid-js';
+import { splitProps } from 'solid-js';
 import defaultAttributes from './defaultAttributes';
 
 /**
@@ -13,33 +13,34 @@ import defaultAttributes from './defaultAttributes';
 export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 export default (iconName, iconNode) => {
-  const Component = ({
-    color = 'currentColor',
-    size = 24,
-    strokeWidth = 2,
-    children = [],
-    ...rest
-  }) =>
-    h(
+  const Component = props => {
+    const [localProps, rest] = splitProps(props, [
+      'color',
+      'size',
+      'strokeWidth',
+      'children',
+      'class',
+    ]);
+
+    const svgProps = {
+      ...defaultAttributes,
+      width: () => (localProps.size != null ? localProps.size : defaultAttributes.width),
+      height: () => (localProps.size != null ? localProps.size : defaultAttributes.height),
+      stroke: () => (localProps.color != null ? localProps.color : defaultAttributes.stroke),
+      'stroke-width': () => localProps.strokeWidth,
+      class: () =>
+        `lucide lucide-${toKebabCase(iconName)} ${
+          localProps.class != null ? localProps.class : ''
+        }`,
+    };
+
+    return h(
       'svg',
-      mergeProps(
-        defaultAttributes,
-        {
-          width: size,
-          height: size,
-          stroke: color,
-          'stroke-width': strokeWidth,
-          classList: {
-            lucide: true,
-            [`lucide-${toKebabCase(iconName)}`]: true,
-          },
-        },
-        rest,
-      ),
-      [...iconNode.map(([tag, attrs]) => h(tag, attrs)), children],
+      [svgProps, rest],
+      [...iconNode.map(([tag, attrs]) => h(tag, attrs)), localProps.children],
     );
+  };
 
   Component.displayName = `${iconName}`;
-
   return Component;
 };
