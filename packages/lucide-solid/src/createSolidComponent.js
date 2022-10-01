@@ -27,7 +27,8 @@ export default (iconName, iconNode) => {
       width: () => (localProps.size != null ? localProps.size : defaultAttributes.width),
       height: () => (localProps.size != null ? localProps.size : defaultAttributes.height),
       stroke: () => (localProps.color != null ? localProps.color : defaultAttributes.stroke),
-      'stroke-width': () => localProps.strokeWidth,
+      'stroke-width': () =>
+        localProps.strokeWidth != null ? localProps.strokeWidth : defaultAttributes['stroke-width'],
       class: () =>
         `lucide lucide-${toKebabCase(iconName)} ${
           localProps.class != null ? localProps.class : ''
