@@ -16,7 +16,7 @@ npm install lucide-vue
 
 ## How to use
 
-It's build with ESmodules so it's completely threeshakable.
+It's build with ESmodules so it's completely tree-shakable.
 Each icon can be imported as a vue component.
 
 ### Example

@@ -1,33 +1,31 @@
----
-title: Lucide Preact
----
+# Lucide Solid
 
-# Lucide Preact
+Implementation of the lucide icon library for solid applications.
 
-Implementation of the lucide icon library for preact applications.
+> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
 ## Installation
 
 ```sh
-yarn add lucide-preact
+yarn add lucide-solid
 
 # or
 
-npm install lucide-preact
+npm install lucide-solid
 ```
 
 ## How to use
 
 It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a preact component.
+Each icon can be imported as a solid component.
 
 ### Example
 
 You can pass additional props to adjust the icon.
 
 ``` js
-import { Camera } from 'lucide-preact';
-// Returns PreactComponent
+import { Camera } from 'lucide-solid';
+// Returns SolidComponent
 
 // Usage
 const App = () => {
@@ -56,23 +54,24 @@ const App = () => {
 };
 ```
 
-> svg attributes in preact aren't transformed, so if want to change e.g. the `stroke-linejoin` you need to pass it in kebabcase, the way svg spec is written so. See this topic in the [preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
-
 ### One generic icon component
 
 It is possible to create one generic icon component to load icons.
 
-> ⚠️ Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
+> :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 
-``` js
-import * as icons from 'lucide-preact';
+``` tsx
+import * as icons from 'lucide-solid';
+import type { LucideProps } from 'lucide-solid';
+import { splitProps } from 'solid-js';
+import { Dynamic } from 'solid-js/web';
 
-const Icon = ({name, color, size}) => {
-  const LucideIcon = icons[name];
+const Icon = (props: { name: keyof typeof icons } & LucideProps) => {
+  const [local, others] = splitProps(props, ["name"]);
 
-  return <LucideIcon color={color} size={size} />
+  return <Dynamic component={icons[local.name]} {...others} />
 };
 
 export default Icon;
