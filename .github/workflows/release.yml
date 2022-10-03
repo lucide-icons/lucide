@@ -411,6 +411,61 @@ jobs:
           name: lucide-preact-package-json
           path: packages/lucide-preact/package.json
 
+  lucide-solid:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Set Auth Token
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Set package.json version lucide
+        run: pnpm --filter lucide-solid version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: pnpm --filter lucide-solid build
+
+      - name: Test
+        run: pnpm --filter lucide-solid test
+
+      - name: Publish
+        run: pnpm --filter lucide-solid publish --no-git-checks
+
+      - name: Upload package.json
+        uses: actions/upload-artifact@v2
+        with:
+          name: lucide-solid-package-json
+          path: packages/lucide-solid/package.json
+
   lucide-svelte:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest

@@ -44,7 +44,7 @@ Here is a complete example with unpkg
 
 ### With ESModules
 
-To reduce bundle size, lucide is built to be fully treeshakable.
+To reduce bundle size, lucide is built to be fully tree-shakable.
 The `createIcons` function will search for HTMLElements with the attribute `icon-name` and replace it with the svg from the given icon name.
 
 ```html

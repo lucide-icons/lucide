@@ -18,7 +18,7 @@ npm install lucide-react-native
 
 ## How to use
 
-It's built with ES modules so it's completely threeshakable.
+It's built with ES modules so it's completely tree-shakable.
 Each icon can be imported as a react component.
 
 ### Example
