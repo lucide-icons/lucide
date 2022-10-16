@@ -10,7 +10,7 @@ The following is a set of guidelines for contributing to Lucide. Feel free to pr
 Feel free to open a pull-request to contribute to this project.
 
 **Working on your first Pull Request?** You can learn how from this *free* series
-[How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+[How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github)
 
 Guidelines for pull requests:
 
