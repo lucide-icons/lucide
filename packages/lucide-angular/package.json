@@ -26,7 +26,7 @@
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
-    "build:ng": "ng build --prod",
+    "build:ng": "ng build  --configuration production",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "lint": "ng lint",
