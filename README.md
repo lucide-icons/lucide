@@ -40,6 +40,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
     - [Laravel](#laravel)
     - [Flutter](#flutter)
     - [Svelte](#svelte)
+    - [Solid](#solid)
   - [Contributing](#contributing)
   - [Community](#community)
   - [License](#license)
@@ -207,6 +208,20 @@ npm install lucide-svelte
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-svelte#lucide-svelte).
+
+### Solid
+
+Implementation of the lucide icon library for solid applications.
+
+```sh
+yarn add lucide-solid
+
+#or
+
+npm install lucide-solid
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-solid#lucide-solid).
 
 ## Contributing
 
