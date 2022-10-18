@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="matrix(0.713375,0,0,0.713375,0.53129,0.597664)">
+        <path d="M2.059,7.749C2.059,4.557 4.623,1.966 7.781,1.966C10.939,1.966 13.503,4.557 13.503,7.749L13.503,16.274C13.503,19.466 10.939,22.057 7.781,22.057C4.623,22.057 2.059,19.466 2.059,16.274C2.059,16.274 2.059,7.749 2.059,7.749Z" style="fill:none;stroke:black;stroke-width:2.8px;"/>
+    </g>
+    <g transform="matrix(0.713375,0,0,0.713375,12.3723,6.2652)">
+        <path d="M2.059,7.749C2.059,4.557 4.623,1.966 7.781,1.966C10.939,1.966 13.503,4.557 13.503,7.749L13.503,16.274C13.503,19.466 10.939,22.057 7.781,22.057C4.623,22.057 2.059,19.466 2.059,16.274C2.059,16.274 2.059,7.749 2.059,7.749Z" style="fill:none;stroke:black;stroke-width:2.8px;"/>
+    </g>
+    <g transform="matrix(0.713375,0,0,0.875648,0.53129,-1.34154)">
+        <path d="M2.059,12L13.503,12" style="fill:none;stroke:black;stroke-width:2.5px;stroke-miterlimit:1.5;"/>
+    </g>
+    <g transform="matrix(0.713375,0,0,0.875648,12.3723,4.32599)">
+        <path d="M2.059,12L13.503,12" style="fill:none;stroke:black;stroke-width:2.5px;stroke-miterlimit:1.5;"/>
+    </g>
+</svg>

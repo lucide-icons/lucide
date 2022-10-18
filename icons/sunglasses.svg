@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="15" r="4" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <circle cx="18" cy="15" r="4" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M14,15C14,13.903 13.097,13 12,13C10.903,13 10,13.903 10,15" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+    <path d="M2.5,13L5,7C5.7,5.7 6.4,5 8,5" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+    <path d="M21.5,13L19,7C18.3,5.7 17.5,5 16,5" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+    <g transform="matrix(1.02351,-1.02351,0.707107,0.707107,-15.5697,23.604)">
+        <path d="M18,19L23.205,19" style="fill:none;stroke:black;stroke-width:1.61px;stroke-miterlimit:1.5;"/>
+    </g>
+    <g transform="matrix(1.02609,-1.02609,0.707107,0.707107,-27.642,23.6381)">
+        <path d="M18,19L23.205,19" style="fill:none;stroke:black;stroke-width:1.6px;stroke-miterlimit:1.5;"/>
+    </g>
+    <g transform="matrix(1.02603,-1.02603,0.707107,0.707107,-17.5074,21.7704)">
+        <path d="M18,19L23.205,19" style="fill:none;stroke:black;stroke-width:1.61px;stroke-miterlimit:1.5;"/>
+    </g>
+    <g transform="matrix(1.02345,-1.02345,0.707107,0.707107,-29.4732,21.6981)">
+        <path d="M18,19L23.205,19" style="fill:none;stroke:black;stroke-width:1.61px;stroke-miterlimit:1.5;"/>
+    </g>
+</svg>
