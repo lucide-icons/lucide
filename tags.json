@@ -3958,7 +3958,9 @@
     "park",
     "nature"
   ],
-  "trello": [],
+  "trello": [
+    "logo",
+  ],
   "trending-down": [
     "statistics"
   ],
