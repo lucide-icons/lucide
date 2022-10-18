@@ -858,7 +858,8 @@
   "circle": [
     "off",
     "zero",
-    "record"
+    "record",
+    "shape"
   ],
   "circle-dot": [
     "pending",
@@ -2927,7 +2928,8 @@
     "headline"
   ],
   "octagon": [
-    "stop"
+    "stop",
+    "shape"
   ],
   "option": [
     "key",
@@ -3660,7 +3662,8 @@
   "square": [
     "rectangle",
     "aspect ratio",
-    "1:1"
+    "1:1",
+    "shape"
   ],
   "star": [
     "bookmark",
@@ -3984,7 +3987,8 @@
     "statistics"
   ],
   "triangle": [
-    "delta"
+    "delta",
+    "shape"
   ],
   "trophy": [
     "prize",
