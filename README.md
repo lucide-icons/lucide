@@ -23,24 +23,29 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 
 ## Table of Contents
 
-* [Installation](#installation)
-  * [Package managers](#package-managers)
-  * [CDN](#cdn)
-* [Usage](#usage)
-  * [Web](#web)
-  * [React](#react)
-  * [React Native](#react-native)
-  * [Vue 2](#vue-2)
-  * [Vue 3](#vue-3)
-  * [Angular](#angular)
-  * [Preact](#preact)
-  * [Static](#static-svg-sprite-font-icons-)
-  * [Figma](#figma)
-  * [Laravel](#laravel)
-  * [Flutter](#flutter)
-* [Contributing](#contributing)
-* [Community](#community)
-* [License](#license)
+- [Lucide](#lucide)
+  - [What is Lucide?](#what-is-lucide)
+    - [Why choose Lucide over Feather Icons](#why-choose-lucide-over-feather-icons)
+  - [Table of Contents](#table-of-contents)
+  - [Usage](#usage)
+    - [Web](#web)
+    - [React](#react)
+    - [React Native](#react-native)
+    - [Vue 2](#vue-2)
+    - [Vue 3](#vue-3)
+    - [Angular](#angular)
+    - [Preact](#preact)
+    - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
+    - [Figma](#figma)
+    - [Laravel](#laravel)
+    - [Flutter](#flutter)
+    - [Svelte](#svelte)
+    - [Solid](#solid)
+  - [Contributing](#contributing)
+  - [Community](#community)
+  - [License](#license)
+  - [Credits](#credits)
+  - [Sponsors](#sponsors)
 
 ## Usage
 
@@ -189,6 +194,34 @@ flutter pub add lucide_icons
 ```
 
 For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
+
+### Svelte
+
+Implementation of the lucide icon library for Svelte applications.
+
+```sh
+yarn add lucide-svelte
+
+# or
+
+npm install lucide-svelte
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-svelte#lucide-svelte).
+
+### Solid
+
+Implementation of the lucide icon library for solid applications.
+
+```sh
+yarn add lucide-solid
+
+#or
+
+npm install lucide-solid
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-solid#lucide-solid).
 
 ## Contributing
 
