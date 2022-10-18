@@ -845,7 +845,8 @@
     "vertical"
   ],
   "chrome": [
-    "browser"
+    "browser",
+    "logo"
   ],
   "cigarette": [
     "smoking"
