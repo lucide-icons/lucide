@@ -1,4 +1,4 @@
-<p align=center><img width="480" src="https://lucide-git-fix-icons-lucide.vercel.app/lucide-logo-repo.svg" alt="Lucide Logo"></p>
+<p align=center><img width="480" src="https://lucide.dev/lucide-logo-repo.svg" alt="Lucide Logo"></p>
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide" alt="license"></a>
   <a href="https://www.npmjs.com/package/lucide"><img src="https://img.shields.io/npm/v/lucide" alt="npm package"></a>
