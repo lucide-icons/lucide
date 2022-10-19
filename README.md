@@ -15,9 +15,14 @@ It began after growing disaffection with the [Feather Icons](https://github.com/
 
 Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
 
+### Why choose Lucide over Feather Icons
+
+- Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
+- Well maintained code base.
+- Active community.
+
 ## Table of Contents
 
-- [Why choose Lucide over Feather Icons](#why-choose-lucide-over-feather-icons)
 - [Usage](#usage)
   - [Web](#web)
   - [React](#react)
@@ -37,12 +42,6 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 - [License](#license)
 - [Credits](#credits)
 - [Sponsors](#sponsors)
-
-### Why choose Lucide over Feather Icons
-
-- Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
-- Well maintained code base.
-- Active community.
 
 ## Usage
 
