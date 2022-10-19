@@ -1,0 +1,89 @@
+{
+  "lucide": {
+    "order": 0,
+    "icon": "js",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide", "href": "https://www.npmjs.com/package/lucide" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide", "href": "https://www.npmjs.com/package/lucide" }
+    ]
+  },
+  "lucide-react": {
+    "order": 1,
+    "icon": "react",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-react", "href": "https://www.npmjs.com/package/lucide-react" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-react", "href": "https://www.npmjs.com/package/lucide-react" }
+    ]
+  },
+  "lucide-vue": {
+    "order": 2,
+    "icon": "vue",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-vue", "href": "https://www.npmjs.com/package/lucide-vue" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-vue", "href": "https://www.npmjs.com/package/lucide-vue" }
+    ]
+  },
+  "lucide-vue-next": {
+    "order": 3,
+    "icon": "vue-next",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-vue-next", "href": "https://www.npmjs.com/package/lucide-vue-next" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-vue-next", "href": "https://www.npmjs.com/package/lucide-vue-next" }
+    ]
+  },
+  "lucide-svelte": {
+    "order": 4,
+    "icon": "svelte",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-svelte", "href": "https://www.npmjs.com/package/lucide-svelte" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-svelte", "href": "https://www.npmjs.com/package/lucide-svelte" }
+    ]
+  },
+  "lucide-solid": {
+    "order": 4,
+    "icon": "solid",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-solid", "href": "https://www.npmjs.com/package/lucide-solid" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-solid", "href": "https://www.npmjs.com/package/lucide-solid" }
+    ]
+  },
+  "lucide-preact": {
+    "order": 5,
+    "icon": "preact",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-preact", "href": "https://www.npmjs.com/package/lucide-preact" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-preact", "href": "https://www.npmjs.com/package/lucide-preact" }
+    ]
+  },
+  "lucide-react-native": {
+    "order": 6,
+    "icon": "react-native",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-react-native", "href": "https://www.npmjs.com/package/lucide-react-native" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-react-native", "href": "https://www.npmjs.com/package/lucide-react-native" }
+    ]
+  },
+  "lucide-angular": {
+    "order": 7,
+    "icon": "angular",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-angular", "href": "https://www.npmjs.com/package/lucide-angular" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-angular", "href": "https://www.npmjs.com/package/lucide-angular" }
+    ]
+  },
+  "lucide-static": {
+    "order": 8,
+    "icon": "svg",
+    "shields": [
+      { "alt": "npm", "src": "https://img.shields.io/npm/v/lucide-static", "href": "https://www.npmjs.com/package/lucide-static" },
+      { "alt": "npm", "src": "https://img.shields.io/npm/dw/lucide-static", "href": "https://www.npmjs.com/package/lucide-static" }
+    ]
+  },
+  "lucide-flutter": {
+    "order": 9,
+    "icon": "flutter",
+    "shields": [
+      { "alt": "flutter", "src": "https://img.shields.io/pub/v/lucide_icons", "href": "https://img.shields.io/pub/v/lucide_icons" }
+    ]
+  }
+}

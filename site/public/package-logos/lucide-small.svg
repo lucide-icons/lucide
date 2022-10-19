@@ -1,6 +1,0 @@
-<svg viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="78" height="32" rx="5" fill="#fff"/>
-  <use href="/logo-icon.svg#lucide-logo" height="24" width="24" y="4" x="8"/>
-  <circle cx="39" cy="16" r="2" fill="#DDD"/>
-  <use href="../framework-logos/js.svg#javascript-logo" height="24" width="24" y="4" x="47" xmlns="http://www.w3.org/2000/svg"/>
-</svg>
