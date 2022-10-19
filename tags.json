@@ -1241,7 +1241,8 @@
     "square",
     "rectangle",
     "oblique",
-    "rhombus"
+    "rhombus",
+    "shape"
   ],
   "dice-1": [
     "dice",
