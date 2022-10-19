@@ -16,7 +16,7 @@ Guidelines for pull requests:
 
 - __Make your commit messages as descriptive as possible.__ Include as much information as you can. Explain anything that the file diffs themselves won’t make apparent.
 - __Document your pull request__. Explain your fix, link to the relevant issue, add screenshots when adding new icons.
-- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `master` branch.
+- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `main` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
 ### Pull Requests Including Icons
