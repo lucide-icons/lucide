@@ -1,4 +1,4 @@
-<p align=center><img width="410" src="https://lucide-git-fix-icons-lucide.vercel.app/lucide-logo-repo.svg" alt="Lucide Logo"></p>
+<p align=center><img width="480" src="https://lucide-git-fix-icons-lucide.vercel.app/lucide-logo-repo.svg" alt="Lucide Logo"></p>
 
 # Lucide
 
