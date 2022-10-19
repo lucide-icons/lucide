@@ -1,51 +1,53 @@
 <p align=center><img width="480" src="https://lucide-git-fix-icons-lucide.vercel.app/lucide-logo-repo.svg" alt="Lucide Logo"></p>
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide" alt="license"></a>
+  <a href="https://www.npmjs.com/package/lucide"><img src="https://img.shields.io/npm/v/lucide" alt="npm package"></a>
+  <a href="https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons"><img src="https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json" alt="figma installs"></a>
+  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://github.com/lucide-icons/lucide/actions/workflows/release.yml/badge.svg?branch=main" alt="build status"></a>
+  <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA" alt="discord chat"></a>
+</p>
 
 # Lucide
 
-![NPM](https://img.shields.io/npm/l/lucide)
-[![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide)
+<!-- ![NPM](https://img.shields.io/npm/l/lucide)
+[![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide) -->
 [![installs](https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json)](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons)
 [![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
 
-## What is Lucide?
-
-Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
+Community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
 It began after growing disaffection with the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
 
 Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
+
+## Table of Contents
+
+- [Why choose Lucide over Feather Icons](#why-choose-lucide-over-feather-icons)
+- [Usage](#usage)
+  - [Web](#web)
+  - [React](#react)
+  - [React Native](#react-native)
+  - [Vue 2](#vue-2)
+  - [Vue 3](#vue-3)
+  - [Angular](#angular)
+  - [Preact](#preact)
+  - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
+  - [Figma](#figma)
+  - [Laravel](#laravel)
+  - [Flutter](#flutter)
+  - [Svelte](#svelte)
+  - [Solid](#solid)
+- [Contributing](#contributing)
+- [Community](#community)
+- [License](#license)
+- [Credits](#credits)
+- [Sponsors](#sponsors)
 
 ### Why choose Lucide over Feather Icons
 
 - Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
 - Well maintained code base.
 - Active community.
-
-## Table of Contents
-
-- [Lucide](#lucide)
-  - [What is Lucide?](#what-is-lucide)
-    - [Why choose Lucide over Feather Icons](#why-choose-lucide-over-feather-icons)
-  - [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
-    - [Web](#web)
-    - [React](#react)
-    - [React Native](#react-native)
-    - [Vue 2](#vue-2)
-    - [Vue 3](#vue-3)
-    - [Angular](#angular)
-    - [Preact](#preact)
-    - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
-    - [Figma](#figma)
-    - [Laravel](#laravel)
-    - [Flutter](#flutter)
-    - [Svelte](#svelte)
-    - [Solid](#solid)
-  - [Contributing](#contributing)
-  - [Community](#community)
-  - [License](#license)
-  - [Credits](#credits)
-  - [Sponsors](#sponsors)
 
 ## Usage
 
