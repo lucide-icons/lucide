@@ -2,5 +2,5 @@
   <rect width="78" height="32" rx="5" fill="#fff"/>
   <image href="https://lucide.dev/logo-icon.svg" height="24" width="24" y="4" x="8"/>
   <circle cx="39" cy="16" r="2" fill="#DDD"/>
-  <image href="https://lucide.dev/framework-logos/vue-next.svg" height="24" width="24" y="4" x="47"/>
+  <image href="https://lucide.dev/framework-logos/react-native.svg" height="24" width="24" y="4" x="47"/>
 </svg>

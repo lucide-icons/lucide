@@ -1,0 +1,6 @@
+<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="140" height="32" rx="5" fill="#fff"/>
+  <image href="https://lucide.dev/logo-text.svg" height="24" width="82" y="4" x="8"/>
+  <circle cx="99" cy="16" r="2" fill="#DDD"/>
+  <image href="https://lucide.dev/framework-logos/angular.svg" height="24" width="24" y="4" x="108"/>
+</svg>
