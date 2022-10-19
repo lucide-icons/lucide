@@ -1,3 +1,5 @@
+<p align=center><embed width="410" type="image/svg+xml" src="https://lucide-git-fix-icons-lucide.vercel.app/package-logos/lucide-react.svg" alt="Lucide Logo"></p>
+
 # Lucide Preact
 
 Implementation of the lucide icon library for preact applications.

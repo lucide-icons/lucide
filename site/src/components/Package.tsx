@@ -66,7 +66,7 @@ const Package = ({ name, description, image, shields, source, documentation }: P
           align="center"
         >
           <Box marginX="auto">
-            <Image width={278} height={120} src={image} />
+            <embed type="image/svg+xml" src={image} width={278} height={120}/>
           </Box>
         </Flex>
         <Box
