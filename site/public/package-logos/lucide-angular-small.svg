@@ -1,6 +1,0 @@
-<svg width="78" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="78" height="32" rx="5" fill="#fff"/>
-  <image href="https://lucide.dev/logo-icon.svg" height="24" width="24" y="4" x="8"/>
-  <circle cx="39" cy="16" r="2" fill="#DDD"/>
-  <image href="https://lucide.dev/framework-logos/angular.svg" height="24" width="24" y="4" x="47"/>
-</svg>

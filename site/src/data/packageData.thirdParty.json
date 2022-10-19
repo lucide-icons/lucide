@@ -1,0 +1,13 @@
+[
+  {
+    "name": "blade-lucide-icons",
+    "description": "Implementation of Lucide icon's using blade-icons for Laravel based projects.",
+    "icon": "/framework-logos/laravel.svg",
+    "shields": [
+      { "alt": "Latest Stable Version", "src": "https://img.shields.io/packagist/v/mallardduck/blade-lucide-icons", "href": "https://packagist.org/packages/mallardduck/blade-lucide-icons" },
+      { "alt": "Total Downloads", "src": "https://img.shields.io/packagist/dt/mallardduck/blade-lucide-icons", "href": "https://packagist.org/packages/mallardduck/blade-lucide-icons" }
+    ],
+    "source": "https://github.com/mallardduck/blade-lucide-icons",
+    "documentation": "https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md"
+  }
+]
