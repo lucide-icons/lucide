@@ -182,7 +182,6 @@ const Header = ({ data }: HeaderProps) => {
             size="lg"
             href={repositoryUrl}
             target="__blank"
-            onClick={downloadAllIcons}
           >
             Github
           </Button>
