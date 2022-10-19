@@ -3188,13 +3188,15 @@
     "rectangle",
     "aspect ratio",
     "16:9",
-    "horizontal"
+    "horizontal",
+    "shape"
   ],
   "rectangle-vertical": [
     "rectangle",
     "aspect ratio",
     "9:16",
-    "vertical"
+    "vertical",
+    "shape"
   ],
   "recycle": [
     "sustainability",
@@ -3230,7 +3232,8 @@
   ],
   "regex": [
     "search",
-    "text"
+    "text",
+    "code"
   ],
   "repeat": [
     "loop",
