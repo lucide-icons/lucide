@@ -3,16 +3,11 @@
   <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide" alt="license"></a>
   <a href="https://www.npmjs.com/package/lucide"><img src="https://img.shields.io/npm/v/lucide" alt="npm package"></a>
   <a href="https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons"><img src="https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json" alt="figma installs"></a>
-  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://github.com/lucide-icons/lucide/actions/workflows/release.yml/badge.svg?branch=main" alt="build status"></a>
+  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://github.com/lucide-icons/lucide/actions/workflows/release.yml/badge.svg" alt="build status"></a>
   <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA" alt="discord chat"></a>
 </p>
 
 # Lucide
-
-<!-- ![NPM](https://img.shields.io/npm/l/lucide)
-[![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide) -->
-[![installs](https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json)](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons)
-[![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
 
 Community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
