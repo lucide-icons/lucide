@@ -1,6 +1,9 @@
 .DS_Store
+.idea
 .next
+.obsidian
 .now
+.idea
 node_modules
 dist
 build
@@ -11,3 +14,4 @@ stats
 *.log
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
+packages/**/LICENSE

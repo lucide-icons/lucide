@@ -4,7 +4,7 @@ Implementation of the lucide icon library for Vue applications.
 
 > What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
 
-> :warning: This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-vue-next#lucide-vue-next)
+> :warning: This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue-next#lucide-vue-next)
 
 ## Installation
 
@@ -18,7 +18,7 @@ npm install lucide-vue
 
 ## How to use
 
-It's build with ESmodules so it's completely threeshakable.
+It's build with ESmodules so it's completely tree-shakable.
 Each icon can be imported as a vue component.
 
 ### Example

@@ -1,7 +1,7 @@
 {
   "name": "lucide-preact",
   "description": "A Lucide icon library package for Preact applications",
-  "version": "0.19.0",
+  "version": "0.91.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -17,15 +17,20 @@
   "module": "dist/esm/lucide-preact.js",
   "unpkg": "dist/umd/lucide-preact.min.js",
   "typings": "dist/lucide-preact.d.ts",
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-preact/src --templateSrc=../packages/lucide-preact/scripts/exportTemplate --renderUniqueKey",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
     "build:es": "babel src -d dist/esm",
-    "build:types": "yarn --cwd ../../ babel-node packages/lucide-preact/scripts/buildTypes.js",
-    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-preact/rollup.config.js",
-    "test": "jest"
+    "build:types": "node ./scripts/buildTypes.mjs",
+    "build:bundles": "rollup -c ./rollup.config.js",
+    "test": "jest",
+    "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@testing-library/preact": "^2.0.1",

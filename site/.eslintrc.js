@@ -1,21 +1,14 @@
-/* eslint-disable no-undef */
+/* eslint-disable */
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'import', 'prettier'],
+  plugins: ['@typescript-eslint', 'import'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@next/next/recommended',
-    'prettier',
   ],
-  rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-      },
-    ],
+  parserOptions: {
+    tsconfigRootDir: __dirname,
   },
 };

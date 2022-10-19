@@ -3,7 +3,7 @@ name: Continuous integration icons
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - icons/**
 
@@ -14,8 +14,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Fetch tags
         run: git fetch --all --tags
@@ -24,20 +49,8 @@ jobs:
         id: latest-tag
         run: echo "::set-output name=LATEST_TAG::$(git describe --tags `git rev-list --tags --max-count=1`)"
 
-      - name: Get yarn cache directory path
-        id: yarn_cache
-        run: echo "::set-output name=YARN_CACHE_DIR::$(yarn cache dir)"
-
-      - name: Get cached packaged
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn_cache.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
       - name: Install dependencies
-        run: yarn --pure-lockfile
+        run: pnpm install
 
       - name: Check if we can patch
         run: .github/workflows/version-up.sh --minor
@@ -49,7 +62,7 @@ jobs:
       - name: Create change log
         id: change-log
         run: |
-          CHANGE_LOG=$(yarn --silent run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
+          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
           CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
           CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
           CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
@@ -60,8 +73,8 @@ jobs:
 
       - name: Check output
         run: |
-          echo "${{ steps.new-version.outputs.NEW_VERSION }}"
-          echo "${{ steps.change-log.outputs.CHANGE_LOG }}"
+          echo '${{ steps.new-version.outputs.NEW_VERSION }}'
+          echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Release
         uses: softprops/action-gh-release@v1

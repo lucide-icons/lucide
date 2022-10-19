@@ -1,21 +1,41 @@
-import { Box, Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
+import { Button, ButtonProps, Flex, Text, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
-import copy from 'copy-to-clipboard';
-import { memo, useContext } from 'react';
-import { IconStyleContext } from './CustomizeIconContext';
+import { memo } from 'react';
+import { Contributor } from '../lib/fetchAllContributors';
+import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps {
   name: string;
   content: string;
-  contributors: any[];
+  contributors: Contributor[]
   src: string;
-  onClick?: ButtonProps['onClick'];
+  onClick?: ButtonProps['onClick']
 }
 
-const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
+const IconListItem = ({ name, content, onClick, src: svg }: IconListItemProps) => {
   const toast = useToast();
-  const { color, size, strokeWidth } = useContext(IconStyleContext);
+  const { color, size, strokeWidth, iconsRef } = useCustomizeIconContext();
+
+  const handleClick:ButtonProps['onClick'] = async (event) => {
+    const src = (iconsRef.current[name].outerHTML ?? svg).replace(/(\r\n|\n|\r|(>\s\s<))/gm, "")
+    if (event.shiftKey) {
+      await navigator.clipboard.writeText(src)
+
+      toast({
+        title: 'Copied!',
+        description: `Icon "${name}" copied to clipboard.`,
+        status: 'success',
+        duration: 1500,
+      });
+    }
+    if (event.altKey) {
+      download(src, `${name}.svg`, 'image/svg+xml');
+    }
+    if (onClick) {
+      onClick(event);
+    }
+  }
 
   return (
     <Button
@@ -26,23 +46,7 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
       height={32}
       position="relative"
       whiteSpace="normal"
-      onClick={event => {
-        if (event.shiftKey) {
-          copy(src);
-          toast({
-            title: 'Copied!',
-            description: `Icon "${name}" copied to clipboard.`,
-            status: 'success',
-            duration: 1500,
-          });
-        }
-        if (event.altKey) {
-          download(src, `${name}.\svg`, 'image/svg+xml');
-        }
-        if (onClick) {
-          onClick(event);
-        }
-      }}
+      onClick={handleClick}
       key={name}
       alignItems="center"
     >
@@ -54,6 +58,7 @@ const IconListItem = ({ name, content, src, onClick }: IconListItemProps) => {
             strokeWidth={strokeWidth}
             height={size}
             width={size}
+            ref={iconEl => (iconsRef.current[name] = iconEl)}
           />
         </Flex>
         <Flex flex={1} minHeight={10} align="center">

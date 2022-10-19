@@ -35,7 +35,7 @@ You can pass additional props to adjust the icon.
 import { Camera } from 'lucide-svelte'
 </script>
 
-<Camera />
+<Camera color="#ff3e98" />
 ```
 
 ### Available props

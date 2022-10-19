@@ -1,4 +1,4 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Icon } from '@chakra-ui/react';
+import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from '@chakra-ui/react';
 import download from 'downloadjs';
 import JSZip from 'jszip';
 import { Download, Github } from 'lucide-react';
@@ -13,20 +13,49 @@ import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
 import LaravelLogo from '../../public/framework-logos/laravel.svg';
+import { useState } from 'react';
+import { useCustomizeIconContext } from './CustomizeIconContext';
+import { IconEntity } from '../types';
 
-function generateZip(icons) {
+type IconContent = [icon: string, src:string];
+
+async function generateZip(icons: IconContent[]) {
   const zip = new JSZip();
-  Object.values(icons).forEach(icon =>
-    // @ts-ignore
-    zip.file(`${icon.name}.svg`, icon.src),
+
+  const addingZipPromises = icons.map(([name, src]) =>
+    zip.file(`${name}.svg`, src),
   );
+
+  await Promise.all(addingZipPromises)
+
   return zip.generateAsync({ type: 'blob' });
 }
 
-const Header = ({ data }) => {
+interface HeaderProps {
+  data: IconEntity[];
+}
+
+const Header = ({ data }: HeaderProps) => {
+  const [zippingIcons, setZippingIcons] = useState(false);
+  const { iconsRef } = useCustomizeIconContext();
+
   const downloadAllIcons = async () => {
-    const zip = await generateZip(data);
+    console.log(iconsRef);
+    setZippingIcons(true);
+
+    let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [
+      name,
+      svgEl.outerHTML,
+    ]);
+
+    // Fallback
+    if (iconEntries.length === 0) {
+      iconEntries = data.map(icon => [icon.name, icon.src]);
+    }
+
+    const zip = await generateZip(iconEntries);
     download(zip, 'lucide.zip');
+    setZippingIcons(false);
   };
 
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
@@ -36,47 +65,56 @@ const Header = ({ data }) => {
       name: 'lucide',
       Logo: JSLogo,
       href: '/docs/lucide',
+      label: 'Lucide documentation for JavaScript',
     },
     {
       name: 'lucide-react',
       Logo: ReactLogo,
       href: '/docs/lucide-react',
+      label: 'Lucide documentation for React',
     },
     {
       name: 'lucide-vue',
       Logo: VueLogo,
       href: '/docs/lucide-vue',
+      label: 'Lucide documentation for Vue',
     },
     {
       name: 'lucide-vue-next',
       Logo: Vue3Logo,
       href: '/docs/lucide-vue-next',
+      label: 'Lucide documentation for Vue 3',
     },
     {
       name: 'lucide-svelte',
       Logo: SvelteLogo,
       href: '/docs/lucide-svelte',
+      label: 'Lucide documentation for Svelte',
     },
     {
       name: 'lucide-preact',
       Logo: PreactLogo,
       href: '/docs/lucide-preact',
+      label: 'Lucide documentation for Preact',
     },
     {
       name: 'lucide-angular',
       Logo: AngularLogo,
       href: '/docs/lucide-angular',
+      label: 'Lucide documentation for Angluar',
     },
     {
       name: 'lucide-flutter',
       Logo: FlutterLogo,
       href: '/docs/lucide-flutter',
+      label: 'Lucide documentation for Flutter',
     },
     {
       name: 'lucide-laravel',
       Logo: LaravelLogo,
       href: 'https://github.com/mallardduck/blade-lucide-icons',
-    }
+      label: 'Lucide documentation for Laravel',
+    },
   ];
 
   return (
@@ -112,10 +150,10 @@ const Header = ({ data }) => {
             </Link>
           </NextLink>
         </WrapItem>
-        {packages.map(({ name, href, Logo }) => (
+        {packages.map(({ name, href, Logo, label }) => (
           <WrapItem key={name}>
             <NextLink href={href} key={name} passHref>
-              <Link _hover={{ opacity: 0.8 }}>
+              <Link _hover={{ opacity: 0.8 }} aria-label={label}>
                 <Logo />
               </Link>
             </NextLink>
@@ -124,7 +162,13 @@ const Header = ({ data }) => {
       </Wrap>
       <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
         <WrapItem>
-          <Button leftIcon={<Download />} size="lg" onClick={downloadAllIcons}>
+          <Button
+            leftIcon={<Download />}
+            size="lg"
+            onClick={downloadAllIcons}
+            isLoading={zippingIcons}
+            loadingText="Creating zip.."
+          >
             Download all
           </Button>
         </WrapItem>
@@ -138,7 +182,6 @@ const Header = ({ data }) => {
             size="lg"
             href={repositoryUrl}
             target="__blank"
-            onClick={downloadAllIcons}
           >
             Github
           </Button>
