@@ -90,7 +90,7 @@ yarn add lucide-react-native
 npm install lucide-react-native
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react-native#lucide-react-native).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react-native#lucide-react-native).
 
 ### Vue 2
 
