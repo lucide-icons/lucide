@@ -76,25 +76,25 @@ It is possible to create one generic icon component to load icons.
 
 ``` html
 <template>
-  <component :is="icon" />
+    <component :is="icon" :size="size" :color="color" :strokeWidth="strokeWidth" :defaultClass="defaultClass" />
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
 import * as icons from "lucide-vue-next";
 
-export default {
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
   },
-  setup(props) {
-    const icon = computed(() => icons[props.name])
+  size: Number,
+  color: String,
+  strokeWidth: Number,
+  defaultClass: String
+})
 
-    return { icon }
-  }
-};
+const icon = computed(() => icons[props.name]);
 </script>
 ```
 
@@ -107,3 +107,5 @@ export default {
   </div>
 </template>
 ```
+
+> ℹ️ All other props listed above also work on the `Icon` Component.
