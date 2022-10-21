@@ -46,8 +46,8 @@ import { Camera } from 'lucide-vue-next';
 | ------------ | -------- | --------
 | `size`       | *Number* | 24
 | `color`      | *String* | currentColor
-| `strokeWidth`| *Number* | 2
-| `defaultClass`| *String* | lucide-icon
+| `stroke-width`| *Number* | 2
+| `default-class`| *String* | lucide-icon
 
 ### Custom props
 
@@ -69,7 +69,7 @@ It is possible to create one generic icon component to load icons.
 
 ``` html
 <template>
-    <component :is="icon" :size="size" :color="color" :strokeWidth="strokeWidth" :defaultClass="defaultClass" />
+    <component :is="icon" :size="size" :color="color" :stroke-width="strokeWidth" :default-class="defaultClass" />
 </template>
 
 <script setup>
