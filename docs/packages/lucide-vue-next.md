@@ -35,15 +35,8 @@ You can pass additional props to adjust the icon.
   />
 </template>
 
-<script>
-// Returns Vue component
+<script setup>
 import { Camera } from 'lucide-vue-next';
-
-export default {
-  name: "My Component",
-  components: { Camera }
-}
-
 </script>
 ```
 
@@ -107,5 +100,4 @@ const icon = computed(() => icons[props.name]);
   </div>
 </template>
 ```
-
-> ℹ️ All other props listed above also work on the `Icon` Component.
+All other props listed above also work on the `Icon` Component.
