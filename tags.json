@@ -565,6 +565,11 @@
     "read",
     "library"
   ],
+  "book-open-check": [
+    "read",
+    "library",
+    "plain language"
+  ],
   "bookmark": [
     "read",
     "clip",
@@ -1337,6 +1342,22 @@
     "food",
     "chicken",
     "meat"
+  ],
+  "ear": [
+    "hearing",
+    "noise",
+    "audio",
+    "accessibility"
+  ],
+  "ear-off": [
+    "hearing",
+    "hard of hearing",
+    "hearing loss",
+    "deafness",
+    "noise",
+    "silence",
+    "audio",
+    "accessibility"
   ],
   "edit": [
     "pencil",
