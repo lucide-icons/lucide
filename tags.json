@@ -845,7 +845,8 @@
     "vertical"
   ],
   "chrome": [
-    "browser"
+    "browser",
+    "logo"
   ],
   "cigarette": [
     "smoking"
@@ -857,7 +858,8 @@
   "circle": [
     "off",
     "zero",
-    "record"
+    "record",
+    "shape"
   ],
   "circle-dot": [
     "pending",
@@ -875,7 +877,8 @@
     "zero",
     "Ø",
     "null",
-    "nothing"
+    "nothing",
+    "maths"
   ],
   "citrus": [
     "lemon",
@@ -1239,7 +1242,8 @@
     "square",
     "rectangle",
     "oblique",
-    "rhombus"
+    "rhombus",
+    "shape"
   ],
   "dice-1": [
     "dice",
@@ -1301,7 +1305,8 @@
     "difference",
     "plus",
     "minus",
-    "plus-minus"
+    "plus-minus",
+    "maths"
   ],
   "disc": [
     "album",
@@ -1310,13 +1315,16 @@
     "music"
   ],
   "divide": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "divide-circle": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "divide-square": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "dollar-sign": [
     "currency",
@@ -1379,11 +1387,13 @@
     "breakfast"
   ],
   "equal": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "equal-not": [
     "calculate",
-    "off"
+    "off",
+    "maths"
   ],
   "eraser": [
     "pencil",
@@ -1996,7 +2006,8 @@
   "function-square": [
     "programming",
     "code",
-    "automation"
+    "automation",
+    "maths"
   ],
   "joystick": [
     "game",
@@ -2272,7 +2283,8 @@
   "infinity": [
     "unlimited",
     "forever",
-    "loop"
+    "loop",
+    "maths"
   ],
   "info": [
     "help"
@@ -2287,6 +2299,7 @@
   ],
   "instagram": [
     "logo",
+    "social",
     "camera"
   ],
   "italic": [
@@ -2451,7 +2464,7 @@
   ],
   "linkedin": [
     "logo",
-    "social media"
+    "social"
   ],
   "list": [
     "options"
@@ -2771,15 +2784,18 @@
   ],
   "minus": [
     "subtract",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "minus-circle": [
     "subtract",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "minus-square": [
     "subtract",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "monitor": [
     "tv",
@@ -2915,7 +2931,8 @@
     "headline"
   ],
   "octagon": [
-    "stop"
+    "stop",
+    "shape"
   ],
   "option": [
     "key",
@@ -3103,15 +3120,18 @@
   ],
   "plus": [
     "add",
-    "new"
+    "new",
+    "maths"
   ],
   "plus-circle": [
     "add",
-    "new"
+    "new",
+    "maths"
   ],
   "plus-square": [
     "add",
-    "new"
+    "new",
+    "maths"
   ],
   "pocket": [
     "logo",
@@ -3169,13 +3189,15 @@
     "rectangle",
     "aspect ratio",
     "16:9",
-    "horizontal"
+    "horizontal",
+    "shape"
   ],
   "rectangle-vertical": [
     "rectangle",
     "aspect ratio",
     "9:16",
-    "vertical"
+    "vertical",
+    "shape"
   ],
   "recycle": [
     "sustainability",
@@ -3211,7 +3233,8 @@
   ],
   "regex": [
     "search",
-    "text"
+    "text",
+    "code"
   ],
   "repeat": [
     "loop",
@@ -3479,7 +3502,8 @@
   ],
   "sigma": [
     "sum",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "signal": [
     "connection",
@@ -3644,7 +3668,8 @@
   "square": [
     "rectangle",
     "aspect ratio",
-    "1:1"
+    "1:1",
+    "shape"
   ],
   "star": [
     "bookmark",
@@ -3958,7 +3983,9 @@
     "park",
     "nature"
   ],
-  "trello": [],
+  "trello": [
+    "logo"
+  ],
   "trending-down": [
     "statistics"
   ],
@@ -3966,7 +3993,8 @@
     "statistics"
   ],
   "triangle": [
-    "delta"
+    "delta",
+    "shape"
   ],
   "trophy": [
     "prize",
@@ -3993,7 +4021,8 @@
     "display"
   ],
   "twitch": [
-    "logo"
+    "logo",
+    "social"
   ],
   "twitter": [
     "logo",
@@ -4237,7 +4266,8 @@
     "delete",
     "remove",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "x-circle": [
     "cancel",
@@ -4245,7 +4275,8 @@
     "delete",
     "remove",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "x-octagon": [
     "delete",
@@ -4253,7 +4284,8 @@
     "alert",
     "warning",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "x-square": [
     "cancel",
@@ -4261,10 +4293,12 @@
     "delete",
     "remove",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "youtube": [
     "logo",
+    "social",
     "video",
     "play"
   ],
