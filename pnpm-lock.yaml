@@ -39,8 +39,10 @@ importers:
       svg-outline-stroke: ^1.3.1
       svgo: ^2.8.0
       svgson: ^4.1.0
+      typescript: ^4.8.4
     dependencies:
-      rollup-plugin-dts: 4.2.2_oo3i3f3qmqiztdz5qgxrrjmd5e
+      rollup-plugin-dts: 4.2.2_rpktusa5o437llwxsnrngyem64
+      typescript: 4.8.4
     devDependencies:
       '@atomico/rollup-plugin-sizes': 1.1.4_rollup@2.77.2
       '@babel/cli': 7.18.9_@babel+core@7.18.9
@@ -52,7 +54,7 @@ importers:
       '@rollup/plugin-commonjs': 17.1.0_rollup@2.77.2
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.77.2
       '@rollup/plugin-replace': 2.4.2_rollup@2.77.2
-      '@rollup/plugin-typescript': 8.3.4_oo3i3f3qmqiztdz5qgxrrjmd5e
+      '@rollup/plugin-typescript': 8.3.4_rpktusa5o437llwxsnrngyem64
       babel-jest: 26.6.3_@babel+core@7.18.9
       babel-plugin-add-import-extension: 1.6.0_@babel+core@7.18.9
       core-js: 3.24.0
@@ -181,6 +183,8 @@ importers:
   packages/lucide-react:
     specifiers:
       '@testing-library/react': ^11.2.6
+      '@types/prop-types': ^15.7.5
+      '@types/react': ^18.0.21
       babel-preset-react-app: ^10.0.0
       jest: ^26.6.3
       prop-types: ^15.7.2
@@ -189,6 +193,8 @@ importers:
       typescript: ^4.8.3
     devDependencies:
       '@testing-library/react': 11.2.7_sfoxds7t5ydpegc3knd667wn6m
+      '@types/prop-types': 15.7.5
+      '@types/react': 18.0.21
       babel-preset-react-app: 10.0.1
       jest: 26.6.3
       prop-types: 15.8.1
@@ -6719,7 +6725,7 @@ packages:
       rollup: 2.77.2
     dev: true
 
-  /@rollup/plugin-typescript/8.3.4_oo3i3f3qmqiztdz5qgxrrjmd5e:
+  /@rollup/plugin-typescript/8.3.4_rpktusa5o437llwxsnrngyem64:
     resolution: {integrity: sha512-wt7JnYE9antX6BOXtsxGoeVSu4dZfw0dU3xykfOQ4hC3EddxRbVG/K0xiY1Wup7QOHJcjLYXWAn0Kx9Z1SBHHg==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -6733,7 +6739,7 @@ packages:
       '@rollup/pluginutils': 3.1.0_rollup@2.77.2
       resolve: 1.22.1
       rollup: 2.77.2
-      typescript: 4.7.4
+      typescript: 4.8.4
     dev: true
 
   /@rollup/pluginutils/3.1.0_rollup@2.77.2:
@@ -7393,6 +7399,14 @@ packages:
 
   /@types/react/17.0.48:
     resolution: {integrity: sha512-zJ6IYlJ8cYYxiJfUaZOQee4lh99mFihBoqkOSEGV+dFi9leROW6+PgstzQ+w3gWTnUfskALtQPGHK6dYmPj+2A==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.0
+    dev: true
+
+  /@types/react/18.0.21:
+    resolution: {integrity: sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -20263,7 +20277,7 @@ packages:
       inherits: 2.0.4
     dev: true
 
-  /rollup-plugin-dts/4.2.2_oo3i3f3qmqiztdz5qgxrrjmd5e:
+  /rollup-plugin-dts/4.2.2_rpktusa5o437llwxsnrngyem64:
     resolution: {integrity: sha512-A3g6Rogyko/PXeKoUlkjxkP++8UDVpgA7C+Tdl77Xj4fgEaIjPSnxRmR53EzvoYy97VMVwLAOcWJudaVAuxneQ==}
     engines: {node: '>=v12.22.11'}
     peerDependencies:
@@ -20272,7 +20286,7 @@ packages:
     dependencies:
       magic-string: 0.26.2
       rollup: 2.77.2
-      typescript: 4.7.4
+      typescript: 4.8.4
     optionalDependencies:
       '@babel/code-frame': 7.18.6
     dev: false
@@ -22477,12 +22491,18 @@ packages:
     resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
 
   /typescript/4.8.3:
     resolution: {integrity: sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /typescript/4.8.4:
+    resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
 
   /ua-parser-js/0.7.31:
     resolution: {integrity: sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==}

@@ -22,19 +22,22 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm typecheck && pnpm build:bundles && pnpm build:types",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --iconFileExtention=.ts",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --iconFileExtention=.ts --exportFileName=index.ts",
     "build:es": "babel src -d dist/esm",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.js",
     "test": "jest",
     "version": "pnpm version --git-tag-version=false",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
+    "@types/prop-types": "^15.7.5",
+    "@types/react": "^18.0.21",
     "babel-preset-react-app": "^10.0.0",
     "jest": "^26.6.3",
     "prop-types": "^15.7.2",

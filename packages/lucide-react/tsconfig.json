@@ -9,9 +9,15 @@
     "module": "ESNext",
     "target": "ESNext",
     "esModuleInterop": true,
+    "isolatedModules": true,
     "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
     "sourceMap": true,
     "outDir": "./dist",
-  }
+    "declarationMap": true,
+  },
+  "exclude": ["**/node_modules"]
 }

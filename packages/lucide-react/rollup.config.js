@@ -1,6 +1,5 @@
 import plugins from '../../rollup.plugins';
 import esbuild from 'rollup-plugin-esbuild';
-import dts from 'rollup-plugin-dts';
 import pkg from './package.json';
 
 const packageName = 'LucideReact';
@@ -39,7 +38,7 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -51,9 +50,16 @@ const configs = bundles
       external: ['react', 'prop-types', 'lucide'],
       output: {
         name: packageName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
         format,
         sourcemap: true,
+        preserveModules,
         globals: {
           react: 'react',
           'prop-types': 'PropTypes',
@@ -64,19 +70,4 @@ const configs = bundles
   )
   .flat();
 
-const typesFileConfig = {
-  input: inputs[0],
-  output: [
-    {
-      file: `${outputDir}/${outputFileName}.d.ts`,
-      format: 'es',
-    },
-  ],
-  plugins: [
-    dts({
-      include: ['src'],
-    }),
-  ],
-};
-
-export default [...configs, typesFileConfig];
+export default configs;

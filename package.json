@@ -64,6 +64,7 @@
     "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
   },
   "dependencies": {
-    "rollup-plugin-dts": "^4.2.2"
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.8.4"
   }
 }
