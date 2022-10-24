@@ -42,10 +42,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build Icon Font
-        run: |
-          mkdir lucide-font
-          pnpm build:outline-icons --outputDir=converted_icons && fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
+      - name: Outline svg Icons
+        run: pnpm build:outline-icons --outputDir=converted_icons
+
+      - name: Create directory
+        run: mkdir lucide-font
+
+      - name: Build font
+        run: fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
