@@ -1,5 +1,4 @@
 ## This Dockerfile is for building image for github actions
-
 FROM debian:stable-slim
 
 RUN apt-get update
