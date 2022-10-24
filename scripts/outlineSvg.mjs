@@ -7,14 +7,6 @@ const inputDir = `./icons/`;
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 const { outputDir } = cliArguments;
 
-const widthMap = {
-  'converted_icons-200': '1',
-  'converted_icons-300': '1.5',
-  converted_icons: '2',
-  'converted_icons-500': '2.5',
-  'converted_icons-600': '3',
-};
-
 function transformForward(node) {
   if (node.name === 'svg') {
     return {
@@ -56,13 +48,8 @@ async function init() {
       }),
     );
 
-    if (widthMap?.[outputDir] === undefined) {
-      throw new Error(`Could not find the directory: ${outputDir}.`)
-    }
-
     await Promise.all(
       parsedIconNodes.map(async ([file, iconNode]) => {
-        iconNode.attributes['stroke-width'] = widthMap[outputDir];
         const outlined = await outlineStroke(stringify(iconNode));
         const outlinedWithoutAttrs = await parse(outlined, {
           transformNode: transformBackwards,
