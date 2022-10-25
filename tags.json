@@ -1324,7 +1324,10 @@
   ],
   "dog": [
     "animal",
-    "pet"
+    "pet",
+    "puppy",
+    "hound",
+    "canine"
   ],
   "dollar-sign": [
     "currency",
