@@ -27,7 +27,7 @@
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
     "lodash": "^4.17.20",
-    "lucide-react": "0.14.0",
+    "lucide-react": "^0.94.0",
     "next": "12",
     "next-mdx-remote": "^3.0.2",
     "prism-react-renderer": "^1.2.1",
