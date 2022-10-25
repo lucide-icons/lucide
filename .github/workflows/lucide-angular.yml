@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - packages/lucide-angular/**
+      - '**'
 
 jobs:
   lucide-angular:
@@ -38,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --filter lucide-angular
+        run: pnpm --filter lucide-angular install
 
       - name: Build
         run: pnpm --filter lucide-angular build

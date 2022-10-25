@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - packages/lucide-vue-next/**
+      - '**'
 
 jobs:
   lucide-vue-next:
@@ -38,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --filter lucide-vue-next
+        run: pnpm --filter lucide-vue-next install
 
       - name: Build
         run: pnpm --filter lucide-vue-next build
