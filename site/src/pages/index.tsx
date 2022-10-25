@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import { getAllData, IconData } from '../lib/icons';
+import { getAllData } from '../lib/icons';
 
 import IconOverview from '../components/IconOverview';
 import IconDetailOverlay from '../components/IconDetailOverlay';
@@ -8,9 +8,10 @@ import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
 import { useMemo } from 'react';
 import { GetStaticPropsResult, NextPage } from 'next';
+import { IconEntity } from '../types';
 
 interface HomePageProps {
-  data: IconData[]
+  data: IconEntity[]
 }
 
 const HomePage: NextPage<HomePageProps> = ({ data }) => {

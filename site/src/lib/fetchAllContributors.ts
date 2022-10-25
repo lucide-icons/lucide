@@ -1,11 +1,7 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-
-export interface Contributor {
-  author: string
-  commit: string
-}
+import { Contributor } from '../types';
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
@@ -54,9 +50,8 @@ export const filterCommits = (commits) =>
     !IGNORE_COMMIT_MESSAGES.some(ignoreItem =>
       commit.message.toLowerCase().includes(ignoreItem),
     ))
-  .map(({ sha, author }) => ({
+  .map(({ author }) => ({
     author: author && author.login ? author.login : null,
-    commit: sha,
   }))
   .filter(({ author }, index, self) => self.findIndex((commit) => commit.author === author) === index);
 
