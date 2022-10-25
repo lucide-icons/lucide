@@ -765,7 +765,9 @@
   ],
   "cat": [
     "animal",
-    "pet"
+    "pet",
+    "kitten",
+    "feline"
   ],
   "check": [
     "done"
