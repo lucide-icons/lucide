@@ -1,6 +1,5 @@
 import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from '@chakra-ui/react';
 import download from 'downloadjs';
-import JSZip from 'jszip';
 import { Download, Github } from 'lucide-react';
 import NextLink from 'next/link';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
@@ -20,6 +19,8 @@ import { IconEntity } from '../types';
 type IconContent = [icon: string, src:string];
 
 async function generateZip(icons: IconContent[]) {
+  const JSZip = (await import('jszip')).default
+
   const zip = new JSZip();
 
   const addingZipPromises = icons.map(([name, src]) =>
