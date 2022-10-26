@@ -77,6 +77,10 @@ const docsMenuTree = [
         href: 'lucide-react'
       },
       {
+        title: 'Lucide React Native',
+        href: 'lucide-react-native'
+      },
+      {
         title: 'Lucide Vue',
         href: 'lucide-vue'
       },

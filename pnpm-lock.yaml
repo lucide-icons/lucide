@@ -200,7 +200,7 @@ importers:
       react: ^18.0.0
       react-dom: ^18.0.0
       react-native: ^0.69.0
-      react-native-svg: ^12.0.0
+      react-native-svg: ^13.0.0
     devDependencies:
       '@testing-library/react': 11.2.7_zpnidt7m3osuk7shl3s4oenomq
       babel-preset-react-app: 10.0.1
@@ -209,7 +209,7 @@ importers:
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
       react-native: 0.69.3_zfzkngtuypffuickx4fuv5ptvi
-      react-native-svg: 12.4.3_w3kncuvwqnzhwf3ziybn5l7dja
+      react-native-svg: 13.4.0_w3kncuvwqnzhwf3ziybn5l7dja
 
   packages/lucide-solid:
     specifiers:
@@ -11330,7 +11330,7 @@ packages:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
-      entities: 4.3.1
+      entities: 4.4.0
     dev: true
 
   /dom-walk/0.1.2:
@@ -11536,6 +11536,7 @@ packages:
   /entities/4.3.1:
     resolution: {integrity: sha512-o4q/dYJlmyjP2zfnaWDUC6A3BQFmVTX+tZPezK7k0GLSU9QYCauscf5Y+qcEPzKL+EixVouYDgLQK5H9GrLpkg==}
     engines: {node: '>=0.12'}
+    dev: false
 
   /entities/4.4.0:
     resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
@@ -19366,11 +19367,11 @@ packages:
     resolution: {integrity: sha512-+4JpbIx42zGTONhBTIXSyfyHICHC29VTvhkkoUOJAh/XHPEixpuBduYgf6Y4y9wsN1ARlQhBBoptTvXvAFQf5g==}
     dev: true
 
-  /react-native-svg/12.4.3_w3kncuvwqnzhwf3ziybn5l7dja:
-    resolution: {integrity: sha512-8OF+vvXsI854YlHBOQkanNcyio+7oQO0nQsS/Noji2VmPoMnLiJiMaxmOD9RHxGkbbo7lzbYWdxVdNibjN/8IA==}
+  /react-native-svg/13.4.0_w3kncuvwqnzhwf3ziybn5l7dja:
+    resolution: {integrity: sha512-B3TwK+H0+JuRhYPzF21AgqMt4fjhCwDZ9QUtwNstT5XcslJBXC0FoTkdZo8IEb1Sv4suSqhZwlAY6lwOv3tHag==}
     peerDependencies:
       react: '*'
-      react-native: '>=0.50.0'
+      react-native: '*'
     dependencies:
       css-select: 5.1.0
       css-tree: 1.1.3

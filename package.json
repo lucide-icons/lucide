@@ -63,5 +63,6 @@
   },
   "lint-staged": {
     "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
-  }
+  },
+  "packageManager": "pnpm@7.14.0"
 }
