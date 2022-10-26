@@ -74,6 +74,12 @@ const Header = ({ data }: HeaderProps) => {
       label: 'Lucide documentation for React',
     },
     {
+      name: 'lucide-react-native',
+      Logo: ReactLogo,
+      href: '/docs/lucide-react-native',
+      label: 'Lucide documentation for React Native',
+    },
+    {
       name: 'lucide-vue',
       Logo: VueLogo,
       href: '/docs/lucide-vue',
