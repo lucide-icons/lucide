@@ -3,7 +3,7 @@ name: Release Packages
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
   workflow_dispatch:
     inputs:
@@ -639,7 +639,7 @@ jobs:
           mkdir lucide-font
           pnpm build:outline-icons --outputDir=converted_icons && fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
 
-      - name: "Upload to Artifacts"
+      - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v1
         with:
           name: lucide-font
@@ -742,6 +742,7 @@ jobs:
         run: |
           mv lucide-package-json/package.json packages/lucide/package.json
           mv lucide-react-package-json/package.json packages/lucide-react/package.json
+          mv lucide-react-native-package-json/package.json packages/lucide-react-native/package.json
           mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
           mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
           mv lucide-svelte-package-json/package.json packages/lucide-svelte/package.json
