@@ -222,7 +222,7 @@ For more details, see the [documentation](https://github.com/lucide-icons/lucide
 
 ### Hyva
 
-Implementation of the lucide icon library for Magento 2 with Hyva themes based projects.
+Implementation of Lucide icon's using Hyvä's svg php viewmodal to render icons for Magento 2 Hyva theme based projects.
 
 ```sh
 composer require siteation/magento2-hyva-icons-lucide
