@@ -159,6 +159,13 @@ const Header = ({ data }: HeaderProps) => {
             </NextLink>
           </WrapItem>
         ))}
+        <WrapItem>
+          <NextLink href="/packages" passHref>
+            <Link _hover={{ opacity: 0.8 }} marginX="auto">
+              <Text fontSize="md" opacity={0.5}>More options</Text>
+            </Link>
+          </NextLink>
+        </WrapItem>
       </Wrap>
       <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
         <WrapItem>
