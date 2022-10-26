@@ -7,7 +7,7 @@ const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
 function getContentHashOfFile(path) {
   return new Promise((resolve, reject) => {
-    const hash = crypto.createHash('md4');
+    const hash = crypto.createHash('sha256');
     const stream = fs.createReadStream(path);
     stream.on('error', err => reject(err));
     stream.on('data', chunk => hash.update(chunk));
