@@ -43,6 +43,12 @@
     "photo",
     "book"
   ],
+  "alchemy-gold": [
+    "alchemy",
+    "gold",
+    "circle",
+    "target"
+  ],
   "alert-circle": [
     "warning",
     "alert",
