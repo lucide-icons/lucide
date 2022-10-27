@@ -87,7 +87,7 @@ const Package = ({ name, description, icon, shields, source, documentation }: Pa
           <Text mb={3}>{description}</Text>
           <ButtonGroup spacing={2}>
             {shields.map(({ alt, src, href }, index) => (
-              <Link href={href} passHref>
+              <Link key={index} href={href} passHref>
                 <a target="_blank">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img {...{ alt, src }} key={index} />
