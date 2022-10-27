@@ -6,7 +6,7 @@ import {useContext, useEffect, useRef} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
-import { IconData } from "../lib/icons";
+import { IconEntity } from "../types";
 
 type IconDownload = {
   src: string;
@@ -16,7 +16,7 @@ type IconDownload = {
 interface IconDetailOverlayProps {
   open: boolean
   close: () => void
-  icon?: IconData
+  icon?: IconEntity
 }
 
 const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
@@ -152,7 +152,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                     className="icon-large"
                   >
                     <IconWrapper
-                      content={icon.content}
+                      src={icon.src}
                       stroke={color}
                       strokeWidth={strokeWidth}
                       height={size}
@@ -229,8 +229,8 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                       </Heading>
                       <AvatarGroup size="md">
                         { icon.contributors.map((commit, index) => (
-                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.commit}`}>
-                            <Tooltip label={commit.author} key={commit.commit}>
+                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.author}`}>
+                            <Tooltip label={commit.author} key={commit.author}>
                               <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
                             </Tooltip>
                           </Link>

@@ -1,9 +1,9 @@
 import { Box, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import useSearch from '../lib/useSearch';
-import { IconEntity } from '../types';
 import IconList from './IconList';
 import { SearchInput } from './SearchInput';
+import { IconEntity } from '../types';
 
 interface IconOverviewProps {
   data: IconEntity[];
