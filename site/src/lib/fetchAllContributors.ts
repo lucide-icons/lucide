@@ -18,11 +18,12 @@ function getContentHashOfFile(path) {
 const fetchCommitsOfIcon = async (name) =>{
     try {
       const headers = new Headers();
-      const username = 'ericfennis';
+      const token = process.env.GITHUB_TOKEN;
+      const username = process.env.GITHUB_USERNAME;
       const password = process.env.GITHUB_API_KEY;
       headers.set(
         'Authorization',
-        `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
+        token ? `Bearer ${token}` : `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
       );
 
       const res = await fetch(
