@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm --filter lucide-react install
+        run: pnpm install
 
       - name: Build
         run: pnpm --filter lucide-react build
