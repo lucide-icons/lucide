@@ -6,7 +6,7 @@ import {
   writeFile,
   toPascalCase,
   getCurrentDirPath,
-} from '../../../scripts/helpers';
+} from '../../../scripts/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 
@@ -76,7 +76,7 @@ writeFile(typeDefinitions, TYPES_FILE_NAME, TARGET_DIR);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-svgFiles.forEach(svgFile => {
+svgFiles.forEach((svgFile) => {
   const nameSvg = path.basename(svgFile, '.svg');
   const namePascal = toPascalCase(nameSvg);
 

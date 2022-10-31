@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
 import { parseSync } from 'svgson';
-import { generateHashedKey, readSvg, hasDuplicatedChildren } from '../helpers';
+import { generateHashedKey, readSvg, hasDuplicatedChildren } from '../helpers.mjs';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.
@@ -11,7 +11,7 @@ import { generateHashedKey, readSvg, hasDuplicatedChildren } from '../helpers';
  */
 export default (svgFiles, iconsDirectory, renderUniqueKey = false) =>
   svgFiles
-    .map(svgFile => {
+    .map((svgFile) => {
       const name = basename(svgFile, '.svg');
       const svg = readSvg(svgFile, iconsDirectory);
       const contents = parseSync(svg);
@@ -25,7 +25,7 @@ export default (svgFiles, iconsDirectory, renderUniqueKey = false) =>
       }
 
       if (renderUniqueKey) {
-        contents.children = contents.children.map(child => {
+        contents.children = contents.children.map((child) => {
           child.attributes.key = generateHashedKey(child);
 
           return child;

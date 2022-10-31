@@ -47,7 +47,7 @@ async function init() {
 
     const icons = await fs.readdir(inputDir);
     const parsedIconNodes = await Promise.all(
-      icons.map(async file => {
+      icons.map(async (file) => {
         const iconContent = await fs.readFile(`${inputDir}${file}`);
         const iconNode = await parse(iconContent.toString(), {
           transformNode: transformForward,

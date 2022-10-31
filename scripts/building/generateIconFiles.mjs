@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { toPascalCase } from '../helpers';
+import { toPascalCase } from '../helpers.mjs';
 
 export default ({
   iconNodes,
@@ -19,7 +19,7 @@ export default ({
     fs.mkdirSync(iconsDistDirectory);
   }
 
-  const writeIconFiles = icons.map(async iconName => {
+  const writeIconFiles = icons.map(async (iconName) => {
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
     const componentName = toPascalCase(iconName);
 
@@ -44,7 +44,7 @@ export default ({
         console.log('Successfully built', icons.length, 'icons.');
       }
     })
-    .catch(error => {
+    .catch((error) => {
       throw new Error(`Something went wrong generating icon files,\n ${error}`);
     });
 };

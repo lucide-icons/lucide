@@ -2,11 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
 
-import renderIconsObject from './render/renderIconsObject';
-import generateIconFiles from './building/generateIconFiles';
-import generateExportsFile from './building/generateExportsFile';
+import renderIconsObject from './render/renderIconsObject.mjs';
+import generateIconFiles from './building/generateIconFiles.mjs';
+import generateExportsFile from './building/generateExportsFile.mjs';
 
-import { readSvgDirectory, getCurrentDirPath } from './helpers';
+import { readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 

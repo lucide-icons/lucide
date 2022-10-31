@@ -21,6 +21,15 @@ module.exports = {
       'error',
       { devDependencies: ['**/*.test.js', '**/*.spec.js', './scripts/**'] },
     ],
+    'import/extensions': [
+      'error',
+      {
+        pattern: {
+          mjs: 'always',
+          json: 'always',
+        },
+      },
+    ],
   },
   parserOptions: {
     tsconfigRootDir: __dirname,

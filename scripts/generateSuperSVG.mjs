@@ -2,10 +2,10 @@
 import path from 'path';
 import { stringify, parseSync } from 'svgson';
 import prettier from 'prettier';
-import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers';
+import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 /* eslint-disable import/no-extraneous-dependencies */
 
-import readSvgs from '../packages/lucide-static/scripts/readSvgs';
+import readSvgs from '../packages/lucide-static/scripts/readSvgs.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 

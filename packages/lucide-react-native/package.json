@@ -28,7 +28,7 @@
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
     "build:types": "node ./scripts/buildTypes.mjs",
-    "build:bundles": "rollup -c ./rollup.config.js",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "jest",
     "version": "pnpm version --git-tag-version=false"
   },
