@@ -1,8 +1,8 @@
 import path from 'path';
 
-import { toPascalCase, resetFile, appendFile } from '../helpers.mjs';
+import { toPascalCase, resetFile, appendFile } from '../helpers';
 
-export default function(inputEntry, outputDirectory, iconNodes, iconFileExtention = '') {
+export default (inputEntry, outputDirectory, iconNodes, iconFileExtention = '') => {
   const fileName = path.basename(inputEntry);
 
   // Reset file
@@ -23,4 +23,4 @@ export default function(inputEntry, outputDirectory, iconNodes, iconFileExtentio
   appendFile('\n', fileName, outputDirectory);
 
   console.log(`Successfully generated ${fileName} file`);
-}
+};

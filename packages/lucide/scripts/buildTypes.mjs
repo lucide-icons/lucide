@@ -2,14 +2,13 @@ import path from 'path';
 
 import {
   readSvgDirectory,
-  resetFile,
   appendFile,
   writeFile,
   toPascalCase,
   getCurrentDirPath,
-} from '../../../scripts/helpers.mjs';
+} from '../../../scripts/helpers';
 
-const currentDir = getCurrentDirPath(import.meta.url)
+const currentDir = getCurrentDirPath(import.meta.url);
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',

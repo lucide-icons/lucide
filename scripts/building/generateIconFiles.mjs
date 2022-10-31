@@ -2,16 +2,16 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { toPascalCase } from '../helpers.mjs';
+import { toPascalCase } from '../helpers';
 
-export default function({
+export default ({
   iconNodes,
   outputDirectory,
   template,
   showLog = true,
   iconFileExtention = '.js',
   pretty = true,
-}) {
+}) => {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -47,4 +47,4 @@ export default function({
     .catch(error => {
       throw new Error(`Something went wrong generating icon files,\n ${error}`);
     });
-}
+};

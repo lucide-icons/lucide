@@ -2,18 +2,18 @@
 import path from 'path';
 import { stringify, parseSync } from 'svgson';
 import prettier from 'prettier';
-import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
+import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers';
 /* eslint-disable import/no-extraneous-dependencies */
 
-import readSvgs from '../packages/lucide-static/scripts/readSvgs.mjs';
+import readSvgs from '../packages/lucide-static/scripts/readSvgs';
 
-const currentDir = getCurrentDirPath(import.meta.url)
+const currentDir = getCurrentDirPath(import.meta.url);
 
 const ICONS_DIR = path.resolve('icons');
 const PACKAGE_DIR = path.resolve(currentDir);
 
 export default function generateSprite(svgs, packageDir) {
-  const symbols = svgs.map(({ name, parsedSvg }, index) => {
+  const symbols = svgs.map(({ parsedSvg }, index) => {
     const itemsPerRow = 10;
     const numInRow = index % itemsPerRow;
     const column = numInRow + 1;

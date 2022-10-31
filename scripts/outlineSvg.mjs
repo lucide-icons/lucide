@@ -57,7 +57,7 @@ async function init() {
     );
 
     if (widthMap?.[outputDir] === undefined) {
-      throw new Error(`Could not find the directory: ${outputDir}.`)
+      throw new Error(`Could not find the directory: ${outputDir}.`);
     }
 
     await Promise.all(

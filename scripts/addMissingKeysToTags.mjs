@@ -1,8 +1,8 @@
 import path from 'path';
-import tags from '../tags.json' assert { type: 'json' };
-import { readSvgDirectory, writeFile, getCurrentDirPath } from './helpers.mjs';
+import tags from '../tags.json'; // assert { type: 'json' };
+import { readSvgDirectory, writeFile, getCurrentDirPath } from './helpers';
 
-const currentDir = getCurrentDirPath(import.meta.url)
+const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 
 console.log(`Read all tags`);

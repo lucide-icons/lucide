@@ -18,7 +18,8 @@
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addtags": "node ./scripts/addMissingKeysToTags.mjs",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}"
   },
   "devDependencies": {
     "@atomico/rollup-plugin-sizes": "^1.1.4",
@@ -35,11 +36,11 @@
     "babel-plugin-add-import-extension": "^1.6.0",
     "core-js": "^3.24.0",
     "esbuild": "^0.14.51",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.10.0",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "jest": "^28.1.3",
     "lint-staged": "^10.5.4",
