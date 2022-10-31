@@ -1,5 +1,5 @@
 import path from 'path';
-import tags from '../tags.json'; // assert { type: 'json' };
+import tags from '../tags.json' assert { type: 'json' };
 import { readSvgDirectory, writeFile, getCurrentDirPath } from './helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
@@ -9,10 +9,10 @@ console.log(`Read all tags`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-const iconNames = svgFiles.map(icon => icon.split('.')[0]);
+const iconNames = svgFiles.map((icon) => icon.split('.')[0]);
 
 const iconTags = iconNames
-  .map(iconName => ({
+  .map((iconName) => ({
     name: iconName,
     tags: tags[iconName] || [],
   }))
