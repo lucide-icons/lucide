@@ -36,8 +36,8 @@ importers:
       rollup-plugin-terser: ^5.3.1
       rollup-plugin-visualizer: ^4.2.2
       svg-outline-stroke: ^1.3.1
-      svgo: ^2.8.0
-      svgson: ^4.1.0
+      svgo: ^3.0.0
+      svgson: ^5.2.1
     devDependencies:
       '@atomico/rollup-plugin-sizes': 1.1.4_rollup@2.77.2
       '@babel/cli': 7.18.9_@babel+core@7.18.13
@@ -71,8 +71,8 @@ importers:
       rollup-plugin-terser: 5.3.1_rollup@2.77.2
       rollup-plugin-visualizer: 4.2.2_rollup@2.77.2
       svg-outline-stroke: 1.3.1
-      svgo: 2.8.0
-      svgson: 4.1.0
+      svgo: 3.0.0
+      svgson: 5.2.1
 
   packages/lucide:
     specifiers: {}
@@ -192,7 +192,7 @@ importers:
 
   packages/lucide-react-native:
     specifiers:
-      '@testing-library/react': ^11.2.6
+      '@testing-library/react': ^13.4.0
       babel-preset-react-app: ^10.0.0
       jest: ^26.6.3
       prop-types: ^15.7.2
@@ -201,7 +201,7 @@ importers:
       react-native: ^0.69.0
       react-native-svg: ^13.0.0
     devDependencies:
-      '@testing-library/react': 11.2.7_zpnidt7m3osuk7shl3s4oenomq
+      '@testing-library/react': 13.4.0_zpnidt7m3osuk7shl3s4oenomq
       babel-preset-react-app: 10.0.1
       jest: 26.6.3
       prop-types: 15.8.1
@@ -6079,15 +6079,16 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
-  /@testing-library/react/11.2.7_zpnidt7m3osuk7shl3s4oenomq:
-    resolution: {integrity: sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA==}
-    engines: {node: '>=10'}
+  /@testing-library/react/13.4.0_zpnidt7m3osuk7shl3s4oenomq:
+    resolution: {integrity: sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==}
+    engines: {node: '>=12'}
     peerDependencies:
-      react: '*'
-      react-dom: '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.18.9
-      '@testing-library/dom': 7.31.2
+      '@testing-library/dom': 8.16.0
+      '@types/react-dom': 18.0.8
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
     dev: true
@@ -6415,6 +6416,12 @@ packages:
 
   /@types/react-dom/17.0.17:
     resolution: {integrity: sha512-VjnqEmqGnasQKV0CWLevqMTXBYG9GbwuE6x3VetERLh0cq2LTptFE73MrQi2S7GkKXCf2GgwItB/melLnxfnsg==}
+    dependencies:
+      '@types/react': 17.0.48
+    dev: true
+
+  /@types/react-dom/18.0.8:
+    resolution: {integrity: sha512-C3GYO0HLaOkk9dDAz3Dl4sbe4AKUGTCfFIZsz3n/82dPNN8Du533HzKatDxeUYWu24wJgMP1xICqkWk1YOLOIw==}
     dependencies:
       '@types/react': 17.0.48
     dev: true
@@ -9257,6 +9264,14 @@ packages:
       mdn-data: 2.0.14
       source-map: 0.6.1
 
+  /css-tree/2.2.1:
+    resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+    dependencies:
+      mdn-data: 2.0.28
+      source-map-js: 1.0.2
+    dev: true
+
   /css-what/3.4.2:
     resolution: {integrity: sha512-ACUm3L0/jiZTqfzRM3Hi9Q8eZqd6IK37mMWPLz9PJxkLWllYeRf+EHUSHYEtFop2Eqytaq1FizFVh7XfBnXCDQ==}
     engines: {node: '>= 6'}
@@ -9300,6 +9315,14 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       css-tree: 1.1.3
+    dev: false
+
+  /csso/5.0.5:
+    resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+    dependencies:
+      css-tree: 2.2.1
+    dev: true
 
   /cssom/0.3.8:
     resolution: {integrity: sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==}
@@ -14812,6 +14835,10 @@ packages:
   /mdn-data/2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
 
+  /mdn-data/2.0.28:
+    resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
+    dev: true
+
   /mdn-data/2.0.4:
     resolution: {integrity: sha512-iV3XNKw06j5Q7mi6h+9vbx23Tv7JkjEVgKHW4pimwyDGWm0OIQntJJ+u1C6mg6mK1EaTv42XQ7w76yuzH7M2cA==}
     dev: false
@@ -18918,6 +18945,7 @@ packages:
   /stable/0.1.8:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
     deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
+    dev: false
 
   /stack-utils/2.0.5:
     resolution: {integrity: sha512-xrQcmYhOsn/1kX+Vraq+7j4oE2j/6BFscZ0etmYg81xuM8Gq0022Pxb8+IqgOFUIaxHs0KaSb7T1+OegiNrNFA==}
@@ -19351,13 +19379,19 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: false
 
-  /svgson/4.1.0:
-    resolution: {integrity: sha512-DodISxHtdLKUghDYA+PGK4Qq350+CbBAkdvGLkBFSmWd9WKSg4dijgjB1IiRPTmsUCd+a7KYe+ILHtklYgQyzQ==}
+  /svgo/3.0.0:
+    resolution: {integrity: sha512-mSqPn6RDeNqJvCeqHERlfWJjd4crP/2PgFelil9WpTwC4D3okAUopPsH3lnEyl7ONXfDVyISOihDjO0uK8YVAA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
     dependencies:
-      deep-rename-keys: 0.2.1
-      omit-deep: 0.3.0
-      xml-reader: 2.4.3
+      '@trysound/sax': 0.2.0
+      commander: 7.2.0
+      css-select: 5.1.0
+      css-tree: 2.2.1
+      csso: 5.0.5
+      picocolors: 1.0.0
     dev: true
 
   /svgson/5.2.1:
