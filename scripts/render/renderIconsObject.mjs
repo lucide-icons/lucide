@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
 import { parseSync } from 'svgson';
 import { generateHashedKey, readSvg, hasDuplicatedChildren } from '../helpers.mjs';

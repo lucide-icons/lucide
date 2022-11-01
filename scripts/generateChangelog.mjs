@@ -1,4 +1,4 @@
-import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
+import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
 
 const fetchCompareTags = (oldTag) =>

@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import outlineStroke from 'svg-outline-stroke';
-import { parse, stringify } from 'svgson'; // eslint-disable-line import/no-extraneous-dependencies
+import { parse, stringify } from 'svgson';
 import getArgumentOptions from 'minimist';
 
 const inputDir = `./icons/`;

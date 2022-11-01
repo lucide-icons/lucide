@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { optimize } from 'svgo';
 import prettier from 'prettier';
 import { parseSync, stringify } from 'svgson';

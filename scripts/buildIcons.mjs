@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
+import getArgumentOptions from 'minimist';
 
 import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';

@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import fetch, { Headers } from 'node-fetch';
 
 const githubApi = async (endpoint) => {
