@@ -1,4 +1,4 @@
-name: Lucide checks
+name: Lucide font checks
 
 on:
   pull_request:
