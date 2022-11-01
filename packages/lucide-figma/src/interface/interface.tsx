@@ -31,10 +31,6 @@ function App() {
     getLatestIcons()
   }, [])
 
-  if(!icons.length) {
-    return null
-  }
-
   const View = views?.[page as keyof Views] ?? views.icons
 
   return (
