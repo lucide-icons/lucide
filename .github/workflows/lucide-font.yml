@@ -40,16 +40,16 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --filter outline-svg
 
       - name: Outline svg Icons
-        run: pnpm build:outline-icons --outputDir=converted_icons
+        run: pnpm build:outline-icons
 
       - name: Create directory
         run: mkdir lucide-font
 
       - name: Build font
-        run: fontcustom compile "./converted_icons" -h -n "lucide" -o ./lucide-font -F
+        run: fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
