@@ -772,6 +772,11 @@
   "check": [
     "done"
   ],
+  "check-check": [
+    "done",
+    "received",
+    "double"
+  ],
   "check-circle": [
     "done"
   ],
