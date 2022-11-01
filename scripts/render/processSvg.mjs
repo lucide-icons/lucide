@@ -2,7 +2,7 @@
 import { optimize } from 'svgo';
 import prettier from 'prettier';
 import { parseSync, stringify } from 'svgson';
-import DEFAULT_ATTRS from './default-attrs.json'; // assert { type: 'json' };
+import DEFAULT_ATTRS from './default-attrs.json' assert { type: 'json' };
 
 /**
  * Optimize SVG with `svgo`.
@@ -52,7 +52,9 @@ function processSvg(svg) {
   return (
     optimizeSvg(svg)
       .then(setAttrs)
-      .then((optimizedSvg) => prettier.format(optimizedSvg, { parser: 'babel' }))
+      .then((optimizedSvg) =>
+        prettier.format(optimizedSvg, { parser: 'babel' }),
+      )
       // remove semicolon inserted by prettier
       // because prettier thinks it's formatting JSX not HTML
       .then((svg) => svg.replace(/;/g, ''))
