@@ -763,8 +763,19 @@
     "chromecast",
     "airplay"
   ],
+  "cat": [
+    "animal",
+    "pet",
+    "kitten",
+    "feline"
+  ],
   "check": [
     "done"
+  ],
+  "check-check": [
+    "done",
+    "received",
+    "double"
   ],
   "check-circle": [
     "done"
@@ -1325,6 +1336,13 @@
   "divide-square": [
     "calculate",
     "maths"
+  ],
+  "dog": [
+    "animal",
+    "pet",
+    "puppy",
+    "hound",
+    "canine"
   ],
   "dollar-sign": [
     "currency",

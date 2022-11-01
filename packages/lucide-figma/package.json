@@ -13,7 +13,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.14",
     "minimist": "^1.2.6",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"

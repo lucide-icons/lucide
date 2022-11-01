@@ -23,14 +23,18 @@ const PackagesPage = ({ packages, thirdPartyPackages }: PackagesPageProps): JSX.
           Packages
         </Heading>
         <Stack spacing={8} align="center">
-          {packages.length ? packages.map(packageItem => <Package {...packageItem} />) : null}
+          {packages.length
+            ? packages.map((packageItem) => <Package key={packageItem.name} {...packageItem} />)
+            : null}
         </Stack>
 
         <Heading as="h1" marginBottom={6} marginTop={12} textAlign="center">
           Third party packages
         </Heading>
         <Stack spacing={8} marginBottom={6} align="center">
-          {thirdPartyPackages.length ? thirdPartyPackages.map(packageItem => <Package {...packageItem} />) : null}
+          {thirdPartyPackages.length
+            ? thirdPartyPackages.map((packageItem) => (<Package key={packageItem.name} {...packageItem} />))
+            : null}
         </Stack>
       </Layout>
     </HeadingNavigationProvider>

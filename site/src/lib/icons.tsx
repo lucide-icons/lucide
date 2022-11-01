@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import { parseSync, stringify } from 'svgson';
 import tags from '../../../tags.json';
-import { Contributor, getContributors } from "./fetchAllContributors";
+import { IconEntity } from "../types";
+import { getContributors } from "./fetchAllContributors";
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -28,20 +29,11 @@ export async function getData(name: string) {
     name,
     tags: tags[name] || [],
     contributors,
-    src: fileContent,
-    content: svgContent
+    src: fileContent
   };
 }
 
-export interface IconData {
-  name: string
-  tags: string[]
-  contributors: Contributor[]
-  src: string
-  content: string
-}
-
-export async function getAllData(): Promise<IconData[]> {
+export async function getAllData(): Promise<IconEntity[]> {
   const names = getAllNames();
 
   return Promise.all(names.map((name) => getData(name)));

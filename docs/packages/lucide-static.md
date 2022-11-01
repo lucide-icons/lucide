@@ -19,23 +19,25 @@ This package is suitable for very specific use cases for example if you want to 
 
 ```sh
 yarn add lucide-static
+```
 
-# or
+or
 
+```sh
 npm install lucide-static
 ```
 
 ### CDN
 
-``` html
+```html
 <!-- Svg File -->
-<img src="https://unpkg.com/lucide-static@latest/icons/home.svg">
+<img src="https://unpkg.com/lucide-static@latest/icons/home.svg" />
 
 <!-- Icon Font -->
 <style>
   @font-face {
-    font-family: "LucideIcons";
-    src: url(https://unpkg.com/lucide-static@latest/font/Lucide.ttf) format("truetype");
+    font-family: 'LucideIcons';
+    src: url(https://unpkg.com/lucide-static@latest/font/Lucide.ttf) format('truetype');
   }
 </style>
 ```
@@ -50,14 +52,14 @@ Checkout the [codesandbox examples](https://codesandbox.io/s/using-the-svg-sprit
 
 To use it in for example html:
 
-``` html
+```html
 <!-- Svg File -->
-<img src="~lucide-static/icons/home.svg">
+<img src="~lucide-static/icons/home.svg" />
 ```
 
-``` css
+```css
 .home-icon {
-  background-image: url(~lucide-static/icons/home.svg)
+  background-image: url(~lucide-static/icons/home.svg);
 }
 ```
 
@@ -69,7 +71,7 @@ You can simply import each svg by targeting `lucide-static/icons/{icon-name}.svg
 To use svgs in your project you can for example use a [svg loader](https://v4.webpack.js.org/loaders/svg-inline-loader/).
 
 ```js
-import arrowRightIcon from 'lucide-static/icons/arrow-right'
+import arrowRightIcon from 'lucide-static/icons/arrow-right';
 
 // return string of a svg
 ```
@@ -80,7 +82,7 @@ You may need additional loader for this.
 
 ```html
 <!-- Icon Sprite, not recommended for production! -->
-<img src="lucide-static/sprite.svg#home">
+<img src="lucide-static/sprite.svg#home" />
 
 <!-- or -->
 <svg
@@ -104,13 +106,13 @@ If you'd prefer, you can use CSS to hold your base SVG properties
 
 ```css
 .lucide-icon {
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 ```
 
@@ -133,20 +135,19 @@ and update the svg as follows
 ### Icon Font
 
 ```css
-@import("~lucide-static/font/Lucide.css")
+@import ('~lucide-static/font/Lucide.css');
 ```
 
 ```html
 <div class="icon-home"></div>
 ```
 
-
 ### Node.js
 
 To use lucide icons in your Nodejs project you can import each icon as:
 
 ```js
-const { messageSquare } = require('lucide-static/lib')
+const { messageSquare } = require('lucide-static/lib');
 ```
 
 > Note: Each icon name is in camelCase.
@@ -154,10 +155,10 @@ const { messageSquare } = require('lucide-static/lib')
 #### Example in node.js project
 
 ```js
-const express = require('express')
-const { messageSquare } = require('lucide-static/lib')
-const app = express()
-const port = 3000
+const express = require('express');
+const { messageSquare } = require('lucide-static/lib');
+const app = express();
+const port = 3000;
 
 app.get('/', (req, res) => {
   res.send(`
@@ -172,10 +173,10 @@ app.get('/', (req, res) => {
 
       </body>
     </html>
-  `)
-})
+  `);
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+  console.log(`Example app listening at http://localhost:${port}`);
+});
 ```

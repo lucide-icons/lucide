@@ -8,9 +8,11 @@ Implementation of the lucide icon library for solid applications.
 
 ```sh
 yarn add lucide-solid
+```
 
-# or
+or
 
+```sh
 npm install lucide-solid
 ```
 
@@ -23,13 +25,13 @@ Each icon can be imported as a solid component.
 
 You can pass additional props to adjust the icon.
 
-``` js
+```js
 import { Camera } from 'lucide-solid';
 // Returns SolidComponent
 
 // Usage
 const App = () => {
-  return <Camera color="red" size={48}/>
+  return <Camera color="red" size={48} />;
 };
 
 export default App;
@@ -37,20 +39,20 @@ export default App;
 
 ### Props
 
-|  name        |   type   |  default
-| ------------ | -------- | --------
-| `size`       | *Number* | 24
-| `color`      | *String* | currentColor
-| `strokeWidth`| *Number* | 2
+| name          | type     | default      |
+| ------------- | -------- | ------------ |
+| `size`        | _Number_ | 24           |
+| `color`       | _String_ | currentColor |
+| `strokeWidth` | _Number_ | 2            |
 
 ### Custom props / svg attributes
 
 You can also pass custom props that will be added in the as attributes. With that you can modify the icons look by passing svg attributes.
 
-``` js
+```js
 // Usage
 const App = () => {
-  return <Camera fill="red" stroke-linejoin="bevel"/>
+  return <Camera fill="red" stroke-linejoin="bevel" />;
 };
 ```
 
@@ -58,11 +60,11 @@ const App = () => {
 
 It is possible to create one generic icon component to load icons.
 
-> :warning: Example below importing all EsModules, caution  using this example, not recommended when you using bundlers, your application build size will grow strongly.
+> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
 
 #### Icon Component Example
 
-``` tsx
+```tsx
 import * as icons from 'lucide-solid';
 import type { LucideProps } from 'lucide-solid';
 import { splitProps } from 'solid-js';

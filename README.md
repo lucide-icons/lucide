@@ -57,9 +57,11 @@ Implementation of the lucide icon library for web applications.
 
 ```sh
 npm install lucide
+```
 
-#or
+or
 
+```sh
 yarn add lucide
 ```
 
@@ -71,9 +73,11 @@ Implementation of the lucide icon library for react applications.
 
 ```sh
 yarn add lucide-react
+```
 
-# or
+or
 
+```sh
 npm install lucide-react
 ```
 
@@ -85,9 +89,11 @@ Implementation of the lucide icon library for React Native applications.
 
 ```sh
 yarn add lucide-react-native
+```
 
-# or
+or
 
+```sh
 npm install lucide-react-native
 ```
 
@@ -99,9 +105,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue
 ```
 
@@ -113,9 +121,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue-next
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue-next
 ```
 
@@ -125,9 +135,11 @@ For more details, see the [documentation](https://github.com/lucide-icons/lucide
 
 ```sh
 yarn add lucide-angular
+```
 
-# or
+or
 
+```sh
 npm install lucide-angular
 ```
 
@@ -139,9 +151,11 @@ Implementation of the lucide icon library for preact applications.
 
 ```sh
 yarn add lucide-preact
+```
 
-# or
+or
 
+```sh
 npm install lucide-preact
 ```
 
@@ -158,9 +172,11 @@ NPM package
 
 ```sh
 yarn add lucide-static
+```
 
-# or
+or
 
+```sh
 npm install lucide-static
 ```
 
@@ -198,9 +214,11 @@ Implementation of the lucide icon library for Svelte applications.
 
 ```sh
 yarn add lucide-svelte
+```
 
-# or
+or
 
+```sh
 npm install lucide-svelte
 ```
 
@@ -212,9 +230,11 @@ Implementation of the lucide icon library for solid applications.
 
 ```sh
 yarn add lucide-solid
+```
 
-#or
+or
 
+```sh
 npm install lucide-solid
 ```
 
@@ -256,4 +276,3 @@ Thank you to all the people who contributed to Lucide!
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
   <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
-

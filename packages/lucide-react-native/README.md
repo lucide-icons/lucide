@@ -10,9 +10,11 @@ First, ensure that you have`react-native-svg@^12.0.0` or `react-native-svg@^13.0
 
 ```sh
 yarn add lucide-react-native
+```
 
-# or
+or
 
+```sh
 npm install lucide-react-native
 ```
 
