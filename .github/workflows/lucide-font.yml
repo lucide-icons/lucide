@@ -40,7 +40,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --filter outline-svg
 
       - name: Outline svg Icons
         run: pnpm build:outline-icons
@@ -107,7 +107,7 @@ jobs:
         run: sudo gem install fontcustom
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --filter outline-svg
 
       - name: Build Icon Font
         run: |
