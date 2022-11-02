@@ -446,12 +446,21 @@
   "beaker": [
     "cup"
   ],
-  "beer": [
-    "alcohol",
-    "bar",
-    "beverage",
-    "brewery",
-    "drink"
+  "bean": [
+    "legume",
+    "soy",
+    "food",
+    "seed"
+  ],
+  "bean-off": [
+    "soy free",
+    "legume",
+    "soy",
+    "food",
+    "seed",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "bed": [
     "sleep",
@@ -467,6 +476,13 @@
     "sleep",
     "hotel",
     "furniture"
+  ],
+  "beer": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
   ],
   "bell": [
     "alarm",
@@ -748,6 +764,19 @@
     "photo",
     "webcam",
     "video"
+  ],
+  "candy": [
+    "sugar",
+    "food",
+    "sweet"
+  ],
+  "candy-off": [
+    "sugar free",
+    "food",
+    "sweet",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "car": [
     "vehicle",
@@ -1337,6 +1366,22 @@
     "calculate",
     "maths"
   ],
+  "dna": [
+    "gene",
+    "gmo",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
+  "dna-off": [
+    "gene",
+    "gmo free",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
   "dog": [
     "animal",
     "pet",
@@ -1810,6 +1855,11 @@
     "beaker",
     "erlenmeyer"
   ],
+  "flask-conical-off": [
+    "beaker",
+    "erlenmeyer",
+    "non toxic"
+  ],
   "flask-round": [
     "beaker"
   ],
@@ -2258,6 +2308,20 @@
     "house",
     "living"
   ],
+  "hop": [
+    "beer",
+    "brewery",
+    "drink"
+  ],
+  "hop-off": [
+    "beer",
+    "brewery",
+    "drink",
+    "hop free",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "hourglass": [
     "timer",
     "time",
@@ -2329,6 +2393,11 @@
     "currency",
     "money",
     "payment"
+  ],
+  "joystick": [
+    "game",
+    "console",
+    "control stick"
   ],
   "key": [
     "password",
@@ -2789,6 +2858,24 @@
     "signpost",
     "version control"
   ],
+  "milk": [
+    "lactose",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "diet"
+  ],
+  "milk-off": [
+    "lactose free",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "minimize": [
     "exit fullscreen",
     "close",
@@ -2947,6 +3034,20 @@
     "magazine",
     "article",
     "headline"
+  ],
+  "nut": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "diet"
+  ],
+  "nut-off": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "octagon": [
     "stop",
@@ -4152,6 +4253,13 @@
     "dinner",
     "supper"
   ],
+  "vegan": [
+    "vegetarian",
+    "fruitarian",
+    "herbivorous",
+    "animal rights",
+    "diet"
+  ],
   "venetian-mask": [
     "mask",
     "masquerade",
@@ -4244,6 +4352,21 @@
     "interface",
     "callback"
   ],
+  "wheat": [
+    "corn",
+    "cereal",
+    "grain",
+    "gluten"
+  ],
+  "wheat-off": [
+    "corn",
+    "cereal",
+    "grain",
+    "gluten free",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "wifi": [
     "connection",
     "signal",
@@ -4266,6 +4389,18 @@
     "sommelier",
     "vineyard",
     "winery"
+  ],
+  "wine-off": [
+    "alcohol",
+    "beverage",
+    "drink",
+    "glass",
+    "alcohol free",
+    "abstinence",
+    "abstaining",
+    "teetotalism",
+    "allergy",
+    "intolerance"
   ],
   "wrap-text": [
     "words",
