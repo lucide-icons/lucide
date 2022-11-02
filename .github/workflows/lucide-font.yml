@@ -40,7 +40,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --filter outline-svg
+        run: pnpm install
 
       - name: Outline svg Icons
         run: pnpm build:outline-icons
