@@ -90,7 +90,7 @@ jobs:
         run: pnpm install --filter outline-svg
 
       - name: Outline svg Icons
-        run: pnpm start:old --filter outline-svg
+        run: pnpm build:outline-icons:old
 
       - name: Create directory
         run: mkdir lucide-font
