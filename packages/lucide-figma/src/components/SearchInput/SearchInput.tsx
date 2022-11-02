@@ -6,9 +6,10 @@ interface SearchInputProps extends React.HTMLProps<HTMLDivElement> {
   value: string,
   iconCount: number,
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
+  placeholder: string
 }
 
-function SearchInput({ value, onChange, iconCount, className, ...props }: SearchInputProps) {
+function SearchInput({ value, onChange, placeholder, className, ...props }: SearchInputProps) {
   return (
     <div
       className="search-input"
@@ -20,7 +21,7 @@ function SearchInput({ value, onChange, iconCount, className, ...props }: Search
         type="search"
         value={value}
         onChange={onChange}
-        placeholder={`Search ${iconCount} icons`}
+        placeholder={placeholder}
         className="input__field"
       />
     </div>
