@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./main.mjs",
-    "start:old": "node ./main.mjs"
+    "start:old": "node ./outlineSvg.old.mjs"
   },
   "keywords": [],
   "author": "",
