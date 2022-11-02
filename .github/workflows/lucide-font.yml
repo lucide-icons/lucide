@@ -57,3 +57,68 @@ jobs:
           name: lucide-font
           path: lucide-font
 
+  lucide-font2:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install FontForge
+        run: sudo apt-get install zlib1g-dev fontforge
+
+      - name: Clone sfnt2woff-zopfli repo
+        run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
+
+      - name: Install and move sfnt2woff-zopfli
+        run: |
+          cd sfnt2woff-zopfli
+          make
+          sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
+      - name: Clone woff2
+        run: git clone --recursive https://github.com/google/woff2.git
+
+      - name: Install woff2
+        run: |
+          cd woff2
+          sudo make clean all
+          sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
+      - name: Install Font Custom dependency
+        run: sudo gem install fontcustom
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Icon Font
+        run: |
+          mkdir lucide-font
+          pnpm build:outline-icons && fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
+
+      - name: "Upload to Artifacts"
+        uses: actions/upload-artifact@v1
+        with:
+          name: lucide-font
+          path: lucide-font
+
+
