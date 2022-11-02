@@ -60,7 +60,6 @@ jobs:
   lucide-font2:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: pre-build
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
