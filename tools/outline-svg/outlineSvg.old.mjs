@@ -2,10 +2,12 @@ import { promises as fs } from 'fs';
 import outlineStroke from 'svg-outline-stroke';
 import { parse, stringify } from 'svgson'; // eslint-disable-line import/no-extraneous-dependencies
 import getArgumentOptions from 'minimist';
+import path from 'path';
 
-const inputDir = `./icons/`;
+const inputDir = path.join(process.cwd(), '../../icons');
 const cliArguments = getArgumentOptions(process.argv.slice(2));
-const { outputDir } = cliArguments;
+const { outputDir = 'outlined' } = cliArguments;
+const targetDir = path.join(process.cwd(), '../../', outputDir);
 
 function transformForward(node) {
   if (node.name === 'svg') {
@@ -35,12 +37,15 @@ function transformBackwards(node) {
 async function init() {
   console.time('icon outliner');
   try {
-    await fs.mkdir(`./${outputDir}`);
+    try {
+      await fs.mkdir(targetDir);
+    } catch (error) {} // eslint-disable-line no-empty
 
     const icons = await fs.readdir(inputDir);
     const parsedIconNodes = await Promise.all(
       icons.map(async (file) => {
-        const iconContent = await fs.readFile(`${inputDir}${file}`);
+        const inputFilePath = path.resolve(process.cwd(), inputDir, file);
+        const iconContent = await fs.readFile(inputFilePath);
         const iconNode = await parse(iconContent.toString(), {
           transformNode: transformForward,
         });
@@ -55,7 +60,8 @@ async function init() {
           transformNode: transformBackwards,
         });
 
-        await fs.writeFile(`./${outputDir}/${file}`, stringify(outlinedWithoutAttrs));
+        const filePath = path.join(targetDir, file);
+        await fs.writeFile(filePath, stringify(outlinedWithoutAttrs));
       }),
     );
 

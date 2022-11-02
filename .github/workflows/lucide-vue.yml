@@ -7,7 +7,6 @@ on:
   push:
     paths:
       - packages/lucide-vue/**
-      - '**'
 
 jobs:
   lucide-vue:

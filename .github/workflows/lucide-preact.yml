@@ -7,7 +7,6 @@ on:
   push:
     paths:
       - packages/lucide-preact/**
-      - '**'
 
 jobs:
   lucide-preact:
