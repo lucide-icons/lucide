@@ -58,11 +58,11 @@ jobs:
           path: lucide-font
 
   lucide-font2:
-    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
+    container: ericfennis/lucide-font:latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3.4.1
         with:
           node-version: 16
 
@@ -77,6 +77,7 @@ jobs:
         id: pnpm-cache
         run: |
           echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
@@ -84,35 +85,18 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-      - name: Install FontForge
-        run: sudo apt-get install zlib1g-dev fontforge
-
-      - name: Clone sfnt2woff-zopfli repo
-        run: git clone https://github.com/bramstein/sfnt2woff-zopfli.git sfnt2woff-zopfli
-
-      - name: Install and move sfnt2woff-zopfli
-        run: |
-          cd sfnt2woff-zopfli
-          make
-          sudo mv sfnt2woff-zopfli /usr/local/bin/sfnt2woff
-      - name: Clone woff2
-        run: git clone --recursive https://github.com/google/woff2.git
-
-      - name: Install woff2
-        run: |
-          cd woff2
-          sudo make clean all
-          sudo mv woff2_compress /usr/local/bin/ && sudo mv woff2_decompress /usr/local/bin/
-      - name: Install Font Custom dependency
-        run: sudo gem install fontcustom
 
       - name: Install dependencies
         run: pnpm install --filter outline-svg
 
-      - name: Build Icon Font
-        run: |
-          mkdir lucide-font
-          pnpm build:outline-icons && fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
+      - name: Outline svg Icons
+        run: pnpm start:old --filter outline-svg
+
+      - name: Create directory
+        run: mkdir lucide-font
+
+      - name: Build font
+        run: fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
