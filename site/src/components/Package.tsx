@@ -7,7 +7,6 @@ import {
   useColorMode,
   ButtonGroup,
 } from '@chakra-ui/react';
-import Image from 'next/image';
 import { Code, FileText } from 'lucide-react';
 import Link from 'next/link';
 
@@ -19,17 +18,17 @@ interface Shield {
 export interface PackageItem {
   name: string
   description: string
-  image: string
+  icon: string
   shields: Shield[]
   source: string
   documentation: string
-  order: number
+  order?: number
   private?: boolean
   flutter?: object
 }
 
 
-const Package = ({ name, description, image, shields, source, documentation }: PackageItem) => {
+const Package = ({ name, description, icon, shields, source, documentation }: PackageItem) => {
   const { colorMode } = useColorMode();
 
   return (
@@ -66,7 +65,12 @@ const Package = ({ name, description, image, shields, source, documentation }: P
           align="center"
         >
           <Box marginX="auto">
-            <Image width={278} height={120} src={image} />
+            <svg viewBox="0 0 78 32" width={278} height={120} fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="78" height="32" rx="5" fill="#fff"/>
+              <image href="/logo-icon.svg" height="24" width="24" y="4" x="8"/>
+              <circle cx="39" cy="16" r="2" fill="#DDD"/>
+              <image href={icon} height="24" width="24" y="4" x="47"/>
+            </svg>
           </Box>
         </Flex>
         <Box
@@ -83,7 +87,7 @@ const Package = ({ name, description, image, shields, source, documentation }: P
           <Text mb={3}>{description}</Text>
           <ButtonGroup spacing={2}>
             {shields.map(({ alt, src, href }, index) => (
-              <Link href={href} passHref>
+              <Link key={index} href={href} passHref>
                 <a target="_blank">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img {...{ alt, src }} key={index} />

@@ -1,15 +1,15 @@
-<p align=center><img width="410" src="https://lucide.dev/logo-text.svg" alt="Lucide Logo"></p>
+<p align=center><img width="480" src="https://lucide.dev/lucide-logo-repo.svg" alt="Lucide Logo"></p>
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide" alt="license"></a>
+  <a href="https://www.npmjs.com/package/lucide"><img src="https://img.shields.io/npm/v/lucide" alt="npm package"></a>
+  <a href="https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons"><img src="https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json" alt="figma installs"></a>
+  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://github.com/lucide-icons/lucide/actions/workflows/release.yml/badge.svg" alt="build status"></a>
+  <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA" alt="discord chat"></a>
+</p>
 
 # Lucide
 
-![NPM](https://img.shields.io/npm/l/lucide)
-[![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide)
-[![installs](https://img.shields.io/endpoint?logo=figma&label=installs&url=https://yuanqing.github.io/figma-plugins-stats/plugin/939567362549682242/installs.json)](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons)
-[![Discord](https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA)](https://discord.gg/EH6nSts)
-
-## What is Lucide?
-
-Lucide is a community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
+Community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
 It began after growing disaffection with the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
 
@@ -17,30 +17,32 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 
 ### Why choose Lucide over Feather Icons
 
-- Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
+- More icons to work with: Lucide already has hundreds of icons more than Feather does.
+- Official librairies and integrations with popular frameworks and design tools.
 - Well maintained code base.
-- Active community.
+- Active community, regularly growing and improving the set.
 
 ## Table of Contents
 
-* [Installation](#installation)
-  * [Package managers](#package-managers)
-  * [CDN](#cdn)
-* [Usage](#usage)
-  * [Web](#web)
-  * [React](#react)
-  * [React Native](#react-native)
-  * [Vue 2](#vue-2)
-  * [Vue 3](#vue-3)
-  * [Angular](#angular)
-  * [Preact](#preact)
-  * [Static](#static-svg-sprite-font-icons-)
-  * [Figma](#figma)
-  * [Laravel](#laravel)
-  * [Flutter](#flutter)
-* [Contributing](#contributing)
-* [Community](#community)
-* [License](#license)
+- [Usage](#usage)
+  - [Web](#web)
+  - [React](#react)
+  - [React Native](#react-native)
+  - [Vue 2](#vue-2)
+  - [Vue 3](#vue-3)
+  - [Angular](#angular)
+  - [Preact](#preact)
+  - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
+  - [Figma](#figma)
+  - [Laravel](#laravel)
+  - [Flutter](#flutter)
+  - [Svelte](#svelte)
+  - [Solid](#solid)
+- [Contributing](#contributing)
+- [Community](#community)
+- [License](#license)
+- [Credits](#credits)
+- [Sponsors](#sponsors)
 
 ## Usage
 
@@ -55,9 +57,11 @@ Implementation of the lucide icon library for web applications.
 
 ```sh
 npm install lucide
+```
 
-#or
+or
 
+```sh
 yarn add lucide
 ```
 
@@ -69,9 +73,11 @@ Implementation of the lucide icon library for react applications.
 
 ```sh
 yarn add lucide-react
+```
 
-# or
+or
 
+```sh
 npm install lucide-react
 ```
 
@@ -83,13 +89,15 @@ Implementation of the lucide icon library for React Native applications.
 
 ```sh
 yarn add lucide-react-native
+```
 
-# or
+or
 
+```sh
 npm install lucide-react-native
 ```
 
-For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/master/packages/lucide-react-native#lucide-react-native).
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react-native#lucide-react-native).
 
 ### Vue 2
 
@@ -97,9 +105,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue
 ```
 
@@ -111,9 +121,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue-next
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue-next
 ```
 
@@ -123,9 +135,11 @@ For more details, see the [documentation](https://github.com/lucide-icons/lucide
 
 ```sh
 yarn add lucide-angular
+```
 
-# or
+or
 
+```sh
 npm install lucide-angular
 ```
 
@@ -137,9 +151,11 @@ Implementation of the lucide icon library for preact applications.
 
 ```sh
 yarn add lucide-preact
+```
 
-# or
+or
 
+```sh
 npm install lucide-preact
 ```
 
@@ -156,9 +172,11 @@ NPM package
 
 ```sh
 yarn add lucide-static
+```
 
-# or
+or
 
+```sh
 npm install lucide-static
 ```
 
@@ -190,6 +208,38 @@ flutter pub add lucide_icons
 
 For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
 
+### Svelte
+
+Implementation of the lucide icon library for Svelte applications.
+
+```sh
+yarn add lucide-svelte
+```
+
+or
+
+```sh
+npm install lucide-svelte
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-svelte#lucide-svelte).
+
+### Solid
+
+Implementation of the lucide icon library for solid applications.
+
+```sh
+yarn add lucide-solid
+```
+
+or
+
+```sh
+npm install lucide-solid
+```
+
+For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-solid#lucide-solid).
+
 ## Contributing
 
 For more info on how to contribute please see the [contribution guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
@@ -216,4 +266,3 @@ Thank you to all the people who contributed to Lucide!
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
   <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
-

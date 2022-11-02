@@ -446,12 +446,21 @@
   "beaker": [
     "cup"
   ],
-  "beer": [
-    "alcohol",
-    "bar",
-    "beverage",
-    "brewery",
-    "drink"
+  "bean": [
+    "legume",
+    "soy",
+    "food",
+    "seed"
+  ],
+  "bean-off": [
+    "soy free",
+    "legume",
+    "soy",
+    "food",
+    "seed",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "bed": [
     "sleep",
@@ -467,6 +476,13 @@
     "sleep",
     "hotel",
     "furniture"
+  ],
+  "beer": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
   ],
   "bell": [
     "alarm",
@@ -564,6 +580,11 @@
   "book-open": [
     "read",
     "library"
+  ],
+  "book-open-check": [
+    "read",
+    "library",
+    "plain language"
   ],
   "bookmark": [
     "read",
@@ -744,6 +765,19 @@
     "webcam",
     "video"
   ],
+  "candy": [
+    "sugar",
+    "food",
+    "sweet"
+  ],
+  "candy-off": [
+    "sugar free",
+    "food",
+    "sweet",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "car": [
     "vehicle",
     "transport",
@@ -758,8 +792,19 @@
     "chromecast",
     "airplay"
   ],
+  "cat": [
+    "animal",
+    "pet",
+    "kitten",
+    "feline"
+  ],
   "check": [
     "done"
+  ],
+  "check-check": [
+    "done",
+    "received",
+    "double"
   ],
   "check-circle": [
     "done"
@@ -840,7 +885,8 @@
     "vertical"
   ],
   "chrome": [
-    "browser"
+    "browser",
+    "logo"
   ],
   "cigarette": [
     "smoking"
@@ -852,7 +898,8 @@
   "circle": [
     "off",
     "zero",
-    "record"
+    "record",
+    "shape"
   ],
   "circle-dot": [
     "pending",
@@ -870,7 +917,8 @@
     "zero",
     "Ø",
     "null",
-    "nothing"
+    "nothing",
+    "maths"
   ],
   "citrus": [
     "lemon",
@@ -1234,7 +1282,8 @@
     "square",
     "rectangle",
     "oblique",
-    "rhombus"
+    "rhombus",
+    "shape"
   ],
   "dice-1": [
     "dice",
@@ -1296,7 +1345,8 @@
     "difference",
     "plus",
     "minus",
-    "plus-minus"
+    "plus-minus",
+    "maths"
   ],
   "disc": [
     "album",
@@ -1305,13 +1355,39 @@
     "music"
   ],
   "divide": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "divide-circle": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "divide-square": [
-    "calculate"
+    "calculate",
+    "maths"
+  ],
+  "dna": [
+    "gene",
+    "gmo",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
+  "dna-off": [
+    "gene",
+    "gmo free",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
+  "dog": [
+    "animal",
+    "pet",
+    "puppy",
+    "hound",
+    "canine"
   ],
   "dollar-sign": [
     "currency",
@@ -1338,6 +1414,28 @@
     "chicken",
     "meat"
   ],
+  "dumbbell": [
+    "barbell",
+    "weight",
+    "workout",
+    "gym"
+  ],
+  "ear": [
+    "hearing",
+    "noise",
+    "audio",
+    "accessibility"
+  ],
+  "ear-off": [
+    "hearing",
+    "hard of hearing",
+    "hearing loss",
+    "deafness",
+    "noise",
+    "silence",
+    "audio",
+    "accessibility"
+  ],
   "edit": [
     "pencil",
     "change"
@@ -1358,11 +1456,13 @@
     "breakfast"
   ],
   "equal": [
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "equal-not": [
     "calculate",
-    "off"
+    "off",
+    "maths"
   ],
   "eraser": [
     "pencil",
@@ -1761,6 +1861,11 @@
     "beaker",
     "erlenmeyer"
   ],
+  "flask-conical-off": [
+    "beaker",
+    "erlenmeyer",
+    "non toxic"
+  ],
   "flask-round": [
     "beaker"
   ],
@@ -1975,7 +2080,8 @@
   "function-square": [
     "programming",
     "code",
-    "automation"
+    "automation",
+    "maths"
   ],
   "joystick": [
     "game",
@@ -2208,6 +2314,20 @@
     "house",
     "living"
   ],
+  "hop": [
+    "beer",
+    "brewery",
+    "drink"
+  ],
+  "hop-off": [
+    "beer",
+    "brewery",
+    "drink",
+    "hop free",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "hourglass": [
     "timer",
     "time",
@@ -2251,7 +2371,8 @@
   "infinity": [
     "unlimited",
     "forever",
-    "loop"
+    "loop",
+    "maths"
   ],
   "info": [
     "help"
@@ -2266,6 +2387,7 @@
   ],
   "instagram": [
     "logo",
+    "social",
     "camera"
   ],
   "italic": [
@@ -2277,6 +2399,11 @@
     "currency",
     "money",
     "payment"
+  ],
+  "joystick": [
+    "game",
+    "console",
+    "control stick"
   ],
   "key": [
     "password",
@@ -2430,7 +2557,7 @@
   ],
   "linkedin": [
     "logo",
-    "social media"
+    "social"
   ],
   "list": [
     "options"
@@ -2737,6 +2864,24 @@
     "signpost",
     "version control"
   ],
+  "milk": [
+    "lactose",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "diet"
+  ],
+  "milk-off": [
+    "lactose free",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "minimize": [
     "exit fullscreen",
     "close",
@@ -2750,15 +2895,18 @@
   ],
   "minus": [
     "subtract",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "minus-circle": [
     "subtract",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "minus-square": [
     "subtract",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "monitor": [
     "tv",
@@ -2893,8 +3041,23 @@
     "article",
     "headline"
   ],
+  "nut": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "diet"
+  ],
+  "nut-off": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "octagon": [
-    "stop"
+    "stop",
+    "shape"
   ],
   "option": [
     "key",
@@ -3082,15 +3245,18 @@
   ],
   "plus": [
     "add",
-    "new"
+    "new",
+    "maths"
   ],
   "plus-circle": [
     "add",
-    "new"
+    "new",
+    "maths"
   ],
   "plus-square": [
     "add",
-    "new"
+    "new",
+    "maths"
   ],
   "pocket": [
     "logo",
@@ -3148,13 +3314,15 @@
     "rectangle",
     "aspect ratio",
     "16:9",
-    "horizontal"
+    "horizontal",
+    "shape"
   ],
   "rectangle-vertical": [
     "rectangle",
     "aspect ratio",
     "9:16",
-    "vertical"
+    "vertical",
+    "shape"
   ],
   "recycle": [
     "sustainability",
@@ -3190,7 +3358,8 @@
   ],
   "regex": [
     "search",
-    "text"
+    "text",
+    "code"
   ],
   "repeat": [
     "loop",
@@ -3458,7 +3627,8 @@
   ],
   "sigma": [
     "sum",
-    "calculate"
+    "calculate",
+    "maths"
   ],
   "signal": [
     "connection",
@@ -3623,7 +3793,8 @@
   "square": [
     "rectangle",
     "aspect ratio",
-    "1:1"
+    "1:1",
+    "shape"
   ],
   "star": [
     "bookmark",
@@ -3937,7 +4108,9 @@
     "park",
     "nature"
   ],
-  "trello": [],
+  "trello": [
+    "logo"
+  ],
   "trending-down": [
     "statistics"
   ],
@@ -3945,7 +4118,8 @@
     "statistics"
   ],
   "triangle": [
-    "delta"
+    "delta",
+    "shape"
   ],
   "trophy": [
     "prize",
@@ -3972,7 +4146,8 @@
     "display"
   ],
   "twitch": [
-    "logo"
+    "logo",
+    "social"
   ],
   "twitter": [
     "logo",
@@ -4084,6 +4259,13 @@
     "dinner",
     "supper"
   ],
+  "vegan": [
+    "vegetarian",
+    "fruitarian",
+    "herbivorous",
+    "animal rights",
+    "diet"
+  ],
   "venetian-mask": [
     "mask",
     "masquerade",
@@ -4176,6 +4358,21 @@
     "interface",
     "callback"
   ],
+  "wheat": [
+    "corn",
+    "cereal",
+    "grain",
+    "gluten"
+  ],
+  "wheat-off": [
+    "corn",
+    "cereal",
+    "grain",
+    "gluten free",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "wifi": [
     "connection",
     "signal",
@@ -4199,6 +4396,18 @@
     "vineyard",
     "winery"
   ],
+  "wine-off": [
+    "alcohol",
+    "beverage",
+    "drink",
+    "glass",
+    "alcohol free",
+    "abstinence",
+    "abstaining",
+    "teetotalism",
+    "allergy",
+    "intolerance"
+  ],
   "wrap-text": [
     "words",
     "lines",
@@ -4216,7 +4425,8 @@
     "delete",
     "remove",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "x-circle": [
     "cancel",
@@ -4224,7 +4434,8 @@
     "delete",
     "remove",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "x-octagon": [
     "delete",
@@ -4232,7 +4443,8 @@
     "alert",
     "warning",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "x-square": [
     "cancel",
@@ -4240,10 +4452,12 @@
     "delete",
     "remove",
     "times",
-    "clear"
+    "clear",
+    "maths"
   ],
   "youtube": [
     "logo",
+    "social",
     "video",
     "play"
   ],

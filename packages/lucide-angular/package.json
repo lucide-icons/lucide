@@ -1,7 +1,7 @@
 {
   "name": "lucide-angular",
   "description": "A Lucide icon library package for Angular applications",
-  "version": "0.88.0",
+  "version": "0.98.0",
   "author": "SMAH1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -26,28 +26,27 @@
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
-    "build:ng": "ng build --prod",
+    "build:ng": "ng build  --configuration production",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ngcc",
     "version": "pnpm version --git-tag-version=false"
   },
   "dependencies": {
-    "tslib": "^2.3.1"
+    "tslib": "^2.4.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.5",
-    "@angular/cli": "~11.2.15",
-    "@angular/common": "~11.2.14",
-    "@angular/compiler": "~11.2.14",
-    "@angular/compiler-cli": "~11.2.14",
-    "@angular/core": "~11.2.14",
-    "@angular/platform-browser": "~11.2.14",
-    "@angular/platform-browser-dynamic": "~11.2.14",
-    "@types/jasmine": "~3.10.2",
-    "@types/node": "^16.11.7",
+    "@angular-devkit/build-angular": "~14.2.6",
+    "@angular/cli": "~14.2.6",
+    "@angular/common": "~14.2.7",
+    "@angular/compiler": "~14.2.7",
+    "@angular/compiler-cli": "~14.2.7",
+    "@angular/core": "~14.2.7",
+    "@angular/platform-browser": "~14.2.7",
+    "@angular/platform-browser-dynamic": "~14.2.7",
+    "@types/jasmine": "~4.3.0",
+    "@types/node": "^18.11.4",
     "codelyzer": "^6.0.2",
     "jasmine-core": "~3.10.1",
     "jasmine-spec-reporter": "~7.0.0",
@@ -56,13 +55,13 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.7.0",
-    "ng-packagr": "^11.2.4",
+    "ng-packagr": "^14.2.1",
     "protractor": "~7.0.0",
     "puppeteer": "^8.0.0",
-    "rxjs": "6.5.3",
-    "ts-node": "~10.4.0",
+    "rxjs": "7.5.7",
+    "ts-node": "~10.9.1",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.5",
-    "zone.js": "^0.11.7"
+    "typescript": "~4.8.4",
+    "zone.js": "^0.11.8"
   }
 }

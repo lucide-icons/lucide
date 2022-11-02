@@ -10,13 +10,13 @@ The following is a set of guidelines for contributing to Lucide. Feel free to pr
 Feel free to open a pull-request to contribute to this project.
 
 **Working on your first Pull Request?** You can learn how from this *free* series
-[How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+[How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github)
 
 Guidelines for pull requests:
 
 - __Make your commit messages as descriptive as possible.__ Include as much information as you can. Explain anything that the file diffs themselves won’t make apparent.
 - __Document your pull request__. Explain your fix, link to the relevant issue, add screenshots when adding new icons.
-- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `master` branch.
+- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `main` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
 ### Pull Requests Including Icons
@@ -65,7 +65,7 @@ If you are a designer who wants to contribute to Lucide but you don't know what 
 
 ## Development
 
-You will need minimum version of [Nodejs 16+](https://nodejs.org)
+You will need minimum version of [Nodejs 16.4+](https://nodejs.org)
 For packagemanagement you will need [yarn v1](https://yarnpkg.com/getting-started/install).
 For flutter package development, you need [Flutter 1.17+](https://docs.flutter.dev/get-started/install).
 

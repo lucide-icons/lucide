@@ -3,16 +3,18 @@ import HeadingNavigationProvider from '../../components/HeadingNavigationProvide
 import MobileMenu from '../../components/MobileMenu';
 import { Stack } from '@chakra-ui/react';
 import Package, { PackageItem } from '../../components/Package';
-import packagesData from '../../data/packageData';
+import packagesData from '../../data/packageData.json';
+import thirdPartyPackagesData from '../../data/packageData.thirdParty.json';
 import { Heading } from '@chakra-ui/react';
 import fetchPackages from '../../lib/fetchPackages';
 import { GetStaticPropsResult } from 'next';
 
 interface PackagesPageProps {
   packages: PackageItem[]
+  thirdPartyPackages: PackageItem[]
 }
 
-const PackagesPage = ({ packages }: PackagesPageProps): JSX.Element => {
+const PackagesPage = ({ packages, thirdPartyPackages }: PackagesPageProps): JSX.Element => {
   return (
     <HeadingNavigationProvider>
       <MobileMenu />
@@ -21,7 +23,18 @@ const PackagesPage = ({ packages }: PackagesPageProps): JSX.Element => {
           Packages
         </Heading>
         <Stack spacing={8} align="center">
-          {packages.length ? packages.map(packageItem => <Package {...packageItem} />) : null}
+          {packages.length
+            ? packages.map((packageItem) => <Package key={packageItem.name} {...packageItem} />)
+            : null}
+        </Stack>
+
+        <Heading as="h1" marginBottom={6} marginTop={12} textAlign="center">
+          Third party packages
+        </Heading>
+        <Stack spacing={8} marginBottom={6} align="center">
+          {thirdPartyPackages.length
+            ? thirdPartyPackages.map((packageItem) => (<Package key={packageItem.name} {...packageItem} />))
+            : null}
         </Stack>
       </Layout>
     </HeadingNavigationProvider>
@@ -40,16 +53,13 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<PackagesPag
       return {
         name,
         description,
-        image: `/package-logos/${packageDirectory}-small.svg`,
         source: `https://github.com/lucide-icons/lucide/tree/main/packages/${packageDirectory}`,
         documentation: `/docs/${packageDirectory}`,
         ...packagesData[packageDirectory],
+        icon: `/framework-logos/${packagesData[packageDirectory].icon}.svg`,
       };
     })
     .sort((a, b) => a.order - b.order);
 
-  console.log(packages);
-
-
-  return { props: { packages } };
+  return { props: { packages, thirdPartyPackages: thirdPartyPackagesData } };
 }
