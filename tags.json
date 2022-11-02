@@ -446,6 +446,11 @@
   "beaker": [
     "cup"
   ],
+  "beef": [
+    "food",
+    "meat",
+    "dish"
+  ],
   "beer": [
     "alcohol",
     "bar",
@@ -1249,6 +1254,11 @@
     "backspace",
     "remove"
   ],
+  "dessert": [
+    "food",
+    "ice cream",
+    "dish"
+  ],
   "diamond": [
     "square",
     "rectangle",
@@ -1781,6 +1791,14 @@
     "biometric",
     "identity",
     "security"
+  ],
+  "fish": [
+    "food",
+    "meat",
+    "dish",
+    "animal",
+    "pet",
+    "seafood"
   ],
   "flag": [
     "report"
@@ -3318,6 +3336,18 @@
     "harbour",
     "dock"
   ],
+  "salad": [
+    "food",
+    "vegetable",
+    "dish",
+    "vegetarian"
+  ],
+  "sandwich": [
+    "food",
+    "snack",
+    "dish",
+    "lunch"
+  ],
   "save": [
     "floppy disk"
   ],
@@ -3674,6 +3704,11 @@
   "sort-desc": [
     "filter"
   ],
+  "soup": [
+    "food",
+    "entree",
+    "dish",
+  ],
   "speaker": [
     "audio",
     "music"
@@ -3861,6 +3896,13 @@
     "marks",
     "copy",
     "multiple"
+  ],
+  "takeout": [
+    "food",
+    "restaurant",
+    "delivery",
+    "takeaway",
+    "bag"
   ],
   "target": [
     "logo",
