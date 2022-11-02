@@ -14,7 +14,6 @@
     "lucide-static": "pnpm --filter lucide-static",
     "build:icons": "node ./scripts/buildIcons.mjs --templateSrc ./packages/lucide/scripts/exportTemplate.mjs",
     "build:outline-icons": "pnpm --filter outline-svg start",
-    "build:outline-icons:old": "pnpm --filter outline-svg start:old",
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addtags": "node ./scripts/addMissingKeysToTags.mjs",
