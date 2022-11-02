@@ -90,16 +90,16 @@ importers:
       '@types/jasmine': ~4.3.0
       '@types/node': ^18.11.4
       codelyzer: ^6.0.2
-      jasmine-core: ~4.4.0
+      jasmine-core: ~3.10.1
       jasmine-spec-reporter: ~7.0.0
-      karma: ~6.4.1
-      karma-chrome-launcher: ~3.1.1
-      karma-coverage: ~2.2.0
-      karma-jasmine: ~5.1.0
-      karma-jasmine-html-reporter: ^2.0.0
+      karma: ~6.3.14
+      karma-chrome-launcher: ~3.1.0
+      karma-coverage: ~2.0.3
+      karma-jasmine: ~4.0.1
+      karma-jasmine-html-reporter: ^1.7.0
       ng-packagr: ^14.2.1
       protractor: ~7.0.0
-      puppeteer: ^19.1.0
+      puppeteer: ^8.0.0
       rxjs: 7.5.7
       ts-node: ~10.9.1
       tslib: ^2.4.0
@@ -109,7 +109,7 @@ importers:
     dependencies:
       tslib: 2.4.0
     devDependencies:
-      '@angular-devkit/build-angular': 14.2.6_apow2zkmlaoqzxf5dwzzzasmda
+      '@angular-devkit/build-angular': 14.2.6_ipbhr6x2xm7pml3wly3lktic5q
       '@angular/cli': 14.2.6
       '@angular/common': 14.2.7_mhxwww7bfpzvikl64i6lpyc2ua
       '@angular/compiler': 14.2.7_@angular+core@14.2.7
@@ -120,16 +120,16 @@ importers:
       '@types/jasmine': 4.3.0
       '@types/node': 18.11.4
       codelyzer: 6.0.2_cykvwhouafxz23wqf5dcj7lrei
-      jasmine-core: 4.4.0
+      jasmine-core: 3.10.1
       jasmine-spec-reporter: 7.0.0
-      karma: 6.4.1
+      karma: 6.3.20
       karma-chrome-launcher: 3.1.1
-      karma-coverage: 2.2.0
-      karma-jasmine: 5.1.0_karma@6.4.1
-      karma-jasmine-html-reporter: 2.0.0_vs5hqzgtonauktvvvebdlxyp2y
+      karma-coverage: 2.0.3
+      karma-jasmine: 4.0.2_karma@6.3.20
+      karma-jasmine-html-reporter: 1.7.0_c7wcpooxrfcj3ugs4cn4ze2mhu
       ng-packagr: 14.2.2_wpcbsfrsniyujct5hxcq35xple
       protractor: 7.0.0
-      puppeteer: 19.1.0
+      puppeteer: 8.0.0
       rxjs: 7.5.7
       ts-node: 10.9.1_6hf6ijjdmrvgn4gwd23tocsh2m
       tslint: 6.1.3_typescript@4.8.4
@@ -405,7 +405,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/14.2.6_apow2zkmlaoqzxf5dwzzzasmda:
+  /@angular-devkit/build-angular/14.2.6_ipbhr6x2xm7pml3wly3lktic5q:
     resolution: {integrity: sha512-XtaUwb3aZ8S0vl0y9bmbdFOH0KQCQ778twFH+ZfHW2BcPYtQz2Cy2rcVKXBQ850RyC0GxgMPfco6OGQndPpizg==}
     engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -460,7 +460,7 @@ packages:
       https-proxy-agent: 5.0.1
       inquirer: 8.2.4
       jsonc-parser: 3.1.0
-      karma: 6.4.1
+      karma: 6.3.20
       karma-source-map-support: 1.4.0
       less: 4.1.3
       less-loader: 11.0.0_less@4.1.3+webpack@5.74.0
@@ -9119,14 +9119,6 @@ packages:
       pretty-bytes: 5.6.0
     dev: true
 
-  /cross-fetch/3.1.5:
-    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
-    dependencies:
-      node-fetch: 2.6.7
-    transitivePeerDependencies:
-      - encoding
-    dev: true
-
   /cross-spawn/5.1.0:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
     dependencies:
@@ -9615,8 +9607,8 @@ packages:
     resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
     dev: true
 
-  /devtools-protocol/0.0.1045489:
-    resolution: {integrity: sha512-D+PTmWulkuQW4D1NTiCRCFxF7pQPn0hgp4YyX4wAQ6xYXKOadSWPR3ENGDQ47MW/Ewc9v2rpC/UEEGahgBYpSQ==}
+  /devtools-protocol/0.0.854822:
+    resolution: {integrity: sha512-xd4D8kHQtB0KtWW0c9xBZD5LVtm9chkMOfs/3Yn01RhT/sFIsVtzTtypfKoFfWBaL+7xCYLxjOLkhwPXaX/Kcg==}
     dev: true
 
   /di/0.0.1:
@@ -12991,8 +12983,8 @@ packages:
     resolution: {integrity: sha512-SNkOkS+/jMZvLhuSx1fjhcNWUC/KG6oVyFUGkSBEr9n1axSNduWU8GlI7suaHXr4yxjet6KjrUZxUTE5WzzWwQ==}
     dev: true
 
-  /jasmine-core/4.4.0:
-    resolution: {integrity: sha512-+l482uImx5BVd6brJYlaHe2UwfKoZBqQfNp20ZmdNfsjGFTemGfqHLsXjKEW23w9R/m8WYeFc9JmIgjj6dUtAA==}
+  /jasmine-core/3.10.1:
+    resolution: {integrity: sha512-ooZWSDVAdh79Rrj4/nnfklL3NQVra0BcuhcuWoAwwi+znLDoUeH87AFfeX8s+YeYi6xlv5nveRyaA1v7CintfA==}
     dev: true
 
   /jasmine-spec-reporter/7.0.0:
@@ -14253,12 +14245,12 @@ packages:
       which: 1.3.1
     dev: true
 
-  /karma-coverage/2.2.0:
-    resolution: {integrity: sha512-gPVdoZBNDZ08UCzdMHHhEImKrw1+PAOQOIiffv1YsvxFhBjqvo/SVXNk4tqn1SYqX0BJZT6S/59zgxiBe+9OuA==}
+  /karma-coverage/2.0.3:
+    resolution: {integrity: sha512-atDvLQqvPcLxhED0cmXYdsPMCQuh6Asa9FMZW1bhNqlVEhJoB9qyZ2BY1gu7D/rr5GLGb5QzYO4siQskxaWP/g==}
     engines: {node: '>=10.0.0'}
     dependencies:
       istanbul-lib-coverage: 3.2.0
-      istanbul-lib-instrument: 5.2.0
+      istanbul-lib-instrument: 4.0.3
       istanbul-lib-report: 3.0.0
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
@@ -14267,26 +14259,26 @@ packages:
       - supports-color
     dev: true
 
-  /karma-jasmine-html-reporter/2.0.0_vs5hqzgtonauktvvvebdlxyp2y:
-    resolution: {integrity: sha512-SB8HNNiazAHXM1vGEzf8/tSyEhkfxuDdhYdPBX2Mwgzt0OuF2gicApQ+uvXLID/gXyJQgvrM9+1/2SxZFUUDIA==}
+  /karma-jasmine-html-reporter/1.7.0_c7wcpooxrfcj3ugs4cn4ze2mhu:
+    resolution: {integrity: sha512-pzum1TL7j90DTE86eFt48/s12hqwQuiD+e5aXx2Dc9wDEn2LfGq6RoAxEZZjFiN0RDSCOnosEKRZWxbQ+iMpQQ==}
     peerDependencies:
-      jasmine-core: ^4.0.0
-      karma: ^6.0.0
-      karma-jasmine: ^5.0.0
+      jasmine-core: '>=3.8'
+      karma: '>=0.9'
+      karma-jasmine: '>=1.1'
     dependencies:
-      jasmine-core: 4.4.0
-      karma: 6.4.1
-      karma-jasmine: 5.1.0_karma@6.4.1
+      jasmine-core: 3.10.1
+      karma: 6.3.20
+      karma-jasmine: 4.0.2_karma@6.3.20
     dev: true
 
-  /karma-jasmine/5.1.0_karma@6.4.1:
-    resolution: {integrity: sha512-i/zQLFrfEpRyQoJF9fsCdTMOF5c2dK7C7OmsuKg2D0YSsuZSfQDiLuaiktbuio6F2wiCsZSnSnieIQ0ant/uzQ==}
-    engines: {node: '>=12'}
+  /karma-jasmine/4.0.2_karma@6.3.20:
+    resolution: {integrity: sha512-ggi84RMNQffSDmWSyyt4zxzh2CQGwsxvYYsprgyR1j8ikzIduEdOlcLvXjZGwXG/0j41KUXOWsUCBfbEHPWP9g==}
+    engines: {node: '>= 10'}
     peerDependencies:
-      karma: ^6.0.0
+      karma: '*'
     dependencies:
-      jasmine-core: 4.4.0
-      karma: 6.4.1
+      jasmine-core: 3.10.1
+      karma: 6.3.20
     dev: true
 
   /karma-source-map-support/1.4.0:
@@ -14295,8 +14287,8 @@ packages:
       source-map-support: 0.5.21
     dev: true
 
-  /karma/6.4.1:
-    resolution: {integrity: sha512-Cj57NKOskK7wtFWSlMvZf459iX+kpYIPXmkNUzP2WAFcA7nhr/ALn5R7sw3w+1udFDcpMx/tuB8d5amgm3ijaA==}
+  /karma/6.3.20:
+    resolution: {integrity: sha512-HRNQhMuKOwKpjYlWiJP0DUrJOh+QjaI/DTaD8b9rEm4Il3tJ8MijutVZH4ts10LuUFst/CedwTS6vieCN8yTSw==}
     engines: {node: '>= 10'}
     hasBin: true
     dependencies:
@@ -17191,37 +17183,24 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core/19.1.0:
-    resolution: {integrity: sha512-xIIJJuvqWbUwNzaB7l0TyChJYHdLvLhcHQiBLLKsMfvaQXnVa0Fzooq3Zb5bc01Q/b7XiP9pqDvUcYWSmzZQHA==}
-    engines: {node: '>=14.1.0'}
+  /puppeteer/8.0.0:
+    resolution: {integrity: sha512-D0RzSWlepeWkxPPdK3xhTcefj8rjah1791GE82Pdjsri49sy11ci/JQsAO8K2NRukqvwEtcI+ImP5F4ZiMvtIQ==}
+    engines: {node: '>=10.18.1'}
+    deprecated: Version no longer supported. Upgrade to @latest
+    requiresBuild: true
     dependencies:
-      cross-fetch: 3.1.5
       debug: 4.3.4
-      devtools-protocol: 0.0.1045489
+      devtools-protocol: 0.0.854822
       extract-zip: 2.0.1
       https-proxy-agent: 5.0.1
+      node-fetch: 2.6.7
+      pkg-dir: 4.2.0
+      progress: 2.0.3
       proxy-from-env: 1.1.0
       rimraf: 3.0.2
       tar-fs: 2.1.1
       unbzip2-stream: 1.4.3
-      ws: 8.9.0
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
-    dev: true
-
-  /puppeteer/19.1.0:
-    resolution: {integrity: sha512-UyJ5gz5JNjuFo6VJzIf+qDNjbSWGSoAMLuW990eErcrH6sZP85EbpLi6yG50euTMudxO/lsj4w1VNDNogHv6dA==}
-    engines: {node: '>=14.1.0'}
-    requiresBuild: true
-    dependencies:
-      cosmiconfig: 7.0.1
-      https-proxy-agent: 5.0.1
-      progress: 2.0.3
-      proxy-from-env: 1.1.0
-      puppeteer-core: 19.1.0
+      ws: 7.5.9
     transitivePeerDependencies:
       - bufferutil
       - encoding
