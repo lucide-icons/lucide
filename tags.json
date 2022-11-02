@@ -1278,6 +1278,15 @@
     "backspace",
     "remove"
   ],
+  "devices": [
+    "smartphone",
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "desktop",
+    "monitor"
+  ],
   "diamond": [
     "square",
     "rectangle",
