@@ -17,9 +17,10 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 
 ### Why choose Lucide over Feather Icons
 
-- Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
+- More icons to work with : Lucide has already expanded Feather by over 550 icons.
+- Official librairies and integrations with popular frameworks and design tools.
 - Well maintained code base.
-- Active community.
+- Active community, regularly growing and improving the set.
 
 ## Table of Contents
 
