@@ -1414,6 +1414,12 @@
     "chicken",
     "meat"
   ],
+  "dumbbell": [
+    "barbell",
+    "weight",
+    "workout",
+    "gym"
+  ],
   "ear": [
     "hearing",
     "noise",
