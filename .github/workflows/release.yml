@@ -348,7 +348,7 @@ jobs:
         run: pnpm --filter lucide-angular test
 
       - name: Publish
-        run: pnpm --filter lucide-angular publish dist --no-git-checks --ignore-scripts
+        run: pnpm --filter lucide-angular publish --no-git-checks --ignore-scripts
 
       - name: Upload package.json
         uses: actions/upload-artifact@v2
