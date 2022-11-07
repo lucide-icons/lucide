@@ -3342,7 +3342,8 @@
     "food",
     "vegetable",
     "dish",
-    "vegetarian"
+    "vegetarian",
+    "lettuce"
   ],
   "sandwich": [
     "food",
