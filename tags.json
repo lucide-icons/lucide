@@ -3711,6 +3711,8 @@
     "food",
     "entree",
     "dish",
+    "ramen",
+    "pho"
   ],
   "speaker": [
     "audio",
