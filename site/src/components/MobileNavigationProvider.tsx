@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { useDisclosure } from '@chakra-ui/react';
-import { createContext, useState, useContext, useMemo, useCallback, useEffect } from 'react';
+import { createContext, useContext, useMemo } from 'react';
 
 const MobileNavigationContext = createContext({
   isOpen: false,

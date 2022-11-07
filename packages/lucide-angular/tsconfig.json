@@ -9,6 +9,7 @@
     "downlevelIteration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "paths": {
       "lucide-angular": [
         "dist"

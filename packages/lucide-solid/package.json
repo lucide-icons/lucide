@@ -1,0 +1,51 @@
+{
+  "name": "lucide-solid",
+  "description": "A Lucide icon library package for Solid applications",
+  "version": "0.88.0-beta.3",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-solid"
+  },
+  "author": "Eric Fennis",
+  "amdName": "lucide-solid",
+  "main": "dist/cjs/lucide-solid.js",
+  "main:umd": "dist/umd/lucide-solid.js",
+  "module": "dist/esm/lucide-solid.js",
+  "unpkg": "dist/umd/lucide-solid.min.js",
+  "typings": "dist/lucide-solid.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
+    "build:es": "babel src -d dist/esm",
+    "build:types": "node ./scripts/buildTypes.mjs",
+    "build:bundles": "rollup -c ./rollup.config.js",
+    "test:jest": "jest",
+    "test": "vitest",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "babel-preset-solid": "^1.5.4",
+    "jest": "^26.6.3",
+    "jsdom": "^20.0.0",
+    "solid-js": "^1.4.7",
+    "solid-testing-library": "^0.3.0",
+    "solid-jest": "^0.2.0",
+    "vite": "^2.6.4",
+    "vite-plugin-solid": "^2.3.0",
+    "vitest": "^0.23.2"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.4.7"
+  }
+}

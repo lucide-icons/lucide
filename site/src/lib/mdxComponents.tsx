@@ -52,8 +52,7 @@ const components = {
 
     return (
       <CodeBlock
-        //@ts-ignore
-        my={6}
+        marginY={6}
         code={code}
         language={language}
       />
@@ -78,7 +77,7 @@ const components = {
     />
   ),
   inlineCode: InlineCode,
-  hr: (props) => <Divider my={4}/>,
+  hr: () => <Divider my={4} />,
   a: ({children, href, ...rest}) => {
     let link = href
     const isExternal = link.startsWith('http')

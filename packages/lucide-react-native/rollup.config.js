@@ -3,9 +3,8 @@ import pkg from './package.json';
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
-const rootDir = 'packages/lucide-react-native'; // It runs from the root
-const outputDir = `${rootDir}/dist`;
-const inputs = [`${rootDir}/src/lucide-react-native.js`];
+const outputDir = 'dist';
+const inputs = ['src/lucide-react-native.js'];
 const bundles = [
   {
     format: 'umd',
@@ -43,6 +42,7 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              exports: 'auto',
             }
           : {
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,

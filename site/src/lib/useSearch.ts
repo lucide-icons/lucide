@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js';
 import { useMemo } from 'react';
 
-const useSearch = <T>(query = '', collection: T[], keys: Fuse.FuseOptionKey[]) => {
+const useSearch = <T>(query = '', collection: T[], keys: Fuse.FuseOptionKey<T>[] = []) => {
   const index = useMemo(() => {
     return new Fuse(collection, {
       threshold: 0.2,

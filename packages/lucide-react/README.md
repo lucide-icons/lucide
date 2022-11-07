@@ -8,26 +8,28 @@ Implementation of the lucide icon library for react applications.
 
 ```sh
 yarn add lucide-react
+```
 
-# or
+or
 
+```sh
 npm install lucide-react
 ```
 
 ## How to use
 
-It's built with ES modules so it's completely threeshakable.
+It's built with ES modules so it's completely tree-shakable.
 Each icon can be imported as a react component.
 
 ### Example
 
 You can pass additional props to adjust the icon.
 
-``` js
+```js
 import { Camera } from 'lucide-react';
 
 const App = () => {
-  return <Camera color="red" size={48}/>
+  return <Camera color="red" size={48} />;
 };
 
 export default App;
@@ -35,19 +37,19 @@ export default App;
 
 ### Props
 
-|  name        |   type   |  default
-| ------------ | -------- | --------
-| `size`       | *Number* | 24
-| `color`      | *String* | currentColor
-| `strokeWidth`| *Number* | 2
+| name          | type     | default      |
+| ------------- | -------- | ------------ |
+| `size`        | _Number_ | 24           |
+| `color`       | _String_ | currentColor |
+| `strokeWidth` | _Number_ | 2            |
 
 ### Custom props
 
 You can also pass custom props that will be added in the svg as attributes.
 
-``` js
+```js
 const App = () => {
-  return <Camera fill="red"/>
+  return <Camera fill="red" />;
 };
 ```
 
@@ -57,13 +59,13 @@ It is possible to create a generic icon component to load icons.
 
 > :warning: The example below is importing all ES modules. This is **not** recommended when you using a bundler since your application build size will grow substantially.
 
-``` js
+```js
 import * as icons from 'lucide-react';
 
-const Icon = ({name, color, size}) => {
+const Icon = ({ name, color, size }) => {
   const LucideIcon = icons[name];
 
-  return <LucideIcon color={color} size={size} />
+  return <LucideIcon color={color} size={size} />;
 };
 
 export default Icon;

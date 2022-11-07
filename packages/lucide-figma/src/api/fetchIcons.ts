@@ -66,3 +66,24 @@ export const getIcons = () => new Promise<LucideIcons>(async (resolve, reject)=>
     }
   }
 });
+
+type EventCallback = (lucideIcons: LucideIcons) => void
+
+export const iconFetchListener = (callback: EventCallback) => {
+  fetchIcons()
+
+  const handleEvent = (event: MessageEvent) => {
+    if (event.type === 'message' && event?.data?.pluginMessage.type === 'cachedIcons') {
+
+      const lucideIcons = event?.data?.pluginMessage?.cachedIcons
+      callback(lucideIcons)
+    }
+  }
+
+  window.addEventListener('message', handleEvent)
+
+  const removeListener = () => {
+    window.removeEventListener('message', handleEvent)
+  }
+  return removeListener
+}

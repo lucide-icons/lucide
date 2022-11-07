@@ -1,6 +1,3 @@
-import Layout from '../../components/Layout';
-import Header from '../../components/Header';
-import Head from 'next/head';
 import fetchAllDocuments from '../../lib/fetchAllDocuments';
 
 export { default } from '.';

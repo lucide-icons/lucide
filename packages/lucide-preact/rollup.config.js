@@ -3,9 +3,8 @@ import pkg from './package.json';
 
 const packageName = 'LucidePreact';
 const outputFileName = 'lucide-preact';
-const rootDir = 'packages/lucide-preact'; // It runs from the root
-const outputDir = `${rootDir}/dist`;
-const inputs = [`${rootDir}/src/lucide-preact.js`];
+const outputDir = 'dist';
+const inputs = [`src/lucide-preact.js`];
 const bundles = [
   {
     format: 'umd',
