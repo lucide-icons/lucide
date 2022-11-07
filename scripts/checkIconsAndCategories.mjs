@@ -1,8 +1,9 @@
 import path from 'path';
-import icons from '../icons.json';
-import {readSvgDirectory} from './helpers';
+import icons from '../icons.json' assert { type: 'json' };
+import { readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
-const ICONS_DIR = path.resolve(__dirname, '../icons');
+const currentDir = getCurrentDirPath(import.meta.url)
+const ICONS_DIR = path.resolve(currentDir, '../icons');
 
 console.log(`Read all icons`);
 

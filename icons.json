@@ -29,6 +29,18 @@
         "social"
       ]
     },
+    "air-vent": {
+      "tags": [
+        "air conditioner",
+        "ac",
+        "central air",
+        "cooling",
+        "climate-control"
+      ],
+      "categories": [
+        "home"
+      ]
+    },
     "airplay": {
       "tags": [
         "stream",
@@ -443,6 +455,28 @@
         "maps"
       ]
     },
+    "angry": {
+      "tags": [
+        "emoji",
+        "anger",
+        "face",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "annoyed": {
+      "tags": [
+        "emoji",
+        "nuisance",
+        "face",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
     "aperture": {
       "tags": [
         "camera",
@@ -450,6 +484,15 @@
       ],
       "categories": [
         "photography"
+      ]
+    },
+    "apple": {
+      "tags": [
+        "fruit",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "archive": {
@@ -578,7 +621,9 @@
         "direction",
         "swap",
         "switch",
-        "transaction"
+        "transaction",
+        "reorder",
+        "move"
       ],
       "categories": [
         "arrows"
@@ -616,6 +661,22 @@
       "categories": [
         "arrows",
         "shapes"
+      ]
+    },
+    "arrow-up-down": {
+      "tags": [
+        "bidirectional",
+        "direction",
+        "swap",
+        "switch",
+        "network",
+        "mobile data",
+        "internet",
+        "reorder",
+        "move"
+      ],
+      "categories": [
+        "arrows"
       ]
     },
     "arrow-up-left": {
@@ -672,6 +733,26 @@
         "gaming"
       ]
     },
+    "axis-3d": {
+      "tags": [
+        "gizmo",
+        "coordinates"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "baby": {
+      "tags": [
+        "child",
+        "childproof",
+        "children"
+      ],
+      "categories": [
+        "accessibility",
+        "people"
+      ]
+    },
     "backpack": {
       "tags": [
         "bag",
@@ -693,11 +774,21 @@
         "luggage",
         "travel",
         "cart",
-        "trolley"
+        "trolley",
+        "suitcase"
       ],
       "categories": [
         "transportation",
         "travel"
+      ]
+    },
+    "banana": {
+      "tags": [
+        "fruit",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "banknote": {
@@ -839,6 +930,32 @@
       "categories": [
         "science",
         "gaming"
+      ]
+    },
+    "bean": {
+      "tags": [
+        "legume",
+        "soy",
+        "food",
+        "seed"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "bean-off": {
+      "tags": [
+        "soy free",
+        "legume",
+        "soy",
+        "food",
+        "seed",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "bed": {
@@ -1026,6 +1143,32 @@
         "text"
       ]
     },
+    "bomb": {
+      "tags": [
+        "fatal",
+        "error",
+        "crash",
+        "blockbuster",
+        "mine",
+        "explosion",
+        "explode",
+        "explosive"
+      ],
+      "categories": []
+    },
+    "bone": {
+      "tags": [
+        "medical",
+        "health",
+        "death",
+        "pet",
+        "gaming"
+      ],
+      "categories": [
+        "medical",
+        "animals"
+      ]
+    },
     "book": {
       "tags": [
         "read",
@@ -1043,6 +1186,17 @@
       "tags": [
         "read",
         "library"
+      ],
+      "categories": [
+        "gaming",
+        "development"
+      ]
+    },
+    "book-open-check": {
+      "tags": [
+        "read",
+        "library",
+        "plain language"
       ],
       "categories": [
         "gaming",
@@ -1198,6 +1352,18 @@
         "transportation"
       ]
     },
+    "cake": {
+      "tags": [
+        "birthday",
+        "birthdate",
+        "celebration",
+        "party"
+      ],
+      "categories": [
+        "food-beverage",
+        "account"
+      ]
+    },
     "calculator": {
       "tags": [
         "count",
@@ -1243,11 +1409,35 @@
         "time"
       ]
     },
+    "calendar-clock": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "clock"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
     "calendar-days": {
       "tags": [
         "date",
         "time",
         "event"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-heart": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "heart",
+        "favourite",
+        "subscribe"
       ],
       "categories": [
         "time"
@@ -1303,6 +1493,17 @@
         "time"
       ]
     },
+    "calendar-search": {
+      "tags": [
+        "date",
+        "time",
+        "search",
+        "events"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
     "calendar-x": {
       "tags": [
         "date",
@@ -1350,6 +1551,29 @@
         "communication"
       ]
     },
+    "candy": {
+      "tags": [
+        "sugar",
+        "food",
+        "sweet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "candy-off": {
+      "tags": [
+        "sugar free",
+        "food",
+        "sweet",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "car": {
       "tags": [
         "vehicle",
@@ -1380,9 +1604,30 @@
         "connectivity"
       ]
     },
+    "cat": {
+      "tags": [
+        "animal",
+        "pet",
+        "kitten",
+        "feline"
+      ],
+      "categories": [
+        "animals"
+      ]
+    },
     "check": {
       "tags": [
         "done"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "check-check": {
+      "tags": [
+        "done",
+        "received",
+        "double"
       ],
       "categories": [
         "notifications"
@@ -1421,6 +1666,15 @@
         "food",
         "kitchen",
         "restaurant"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "cherry": {
+      "tags": [
+        "fruit",
+        "food"
       ],
       "categories": [
         "food-beverage"
@@ -1559,7 +1813,8 @@
     },
     "chrome": {
       "tags": [
-        "browser"
+        "browser",
+        "logo"
       ],
       "categories": [
         "brands"
@@ -1590,7 +1845,29 @@
       "tags": [
         "off",
         "zero",
-        "record"
+        "record",
+        "shape"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "circle-dot": {
+      "tags": [
+        "pending",
+        "dot",
+        "progress",
+        "issue"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "circle-ellipsis": {
+      "tags": [
+        "pending",
+        "ellipsis",
+        "progress"
       ],
       "categories": [
         "shapes"
@@ -1602,10 +1879,22 @@
         "zero",
         "Ø",
         "null",
-        "nothing"
+        "nothing",
+        "maths"
       ],
       "categories": [
         "shapes"
+      ]
+    },
+    "citrus": {
+      "tags": [
+        "lemon",
+        "orange",
+        "grapefruit",
+        "fruit"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "clapperboard": {
@@ -1649,11 +1938,41 @@
         "arrows"
       ]
     },
+    "clipboard-edit": {
+      "tags": [
+        "edit",
+        "paste",
+        "signature"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
     "clipboard-list": {
       "tags": [
         "copy",
         "paste",
         "tasks"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clipboard-signature": {
+      "tags": [
+        "paste",
+        "signature"
+      ],
+      "categories": [
+        "text",
+        "account"
+      ]
+    },
+    "clipboard-type": {
+      "tags": [
+        "paste",
+        "format",
+        "text"
       ],
       "categories": [
         "text"
@@ -1810,6 +2129,18 @@
         "weather"
       ]
     },
+    "cloud-cog": {
+      "tags": [
+        "computing",
+        "ai",
+        "cluster",
+        "network"
+      ],
+      "categories": [
+        "coding",
+        "development"
+      ]
+    },
     "cloud-drizzle": {
       "tags": [
         "weather",
@@ -1855,6 +2186,17 @@
         "weather"
       ]
     },
+    "cloud-moon-rain": {
+      "tags": [
+        "weather",
+        "partly",
+        "night",
+        "rainfall"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
     "cloud-off": {
       "tags": [
         "disconnect"
@@ -1895,6 +2237,16 @@
       "tags": [
         "weather",
         "partly"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-sun-rain": {
+      "tags": [
+        "weather",
+        "partly",
+        "rainfall"
       ],
       "categories": [
         "weather"
@@ -1977,6 +2329,19 @@
         "food-beverage"
       ]
     },
+    "cog": {
+      "tags": [
+        "computing",
+        "settings",
+        "cog",
+        "edit",
+        "gear",
+        "preferences"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
     "coins": {
       "tags": [
         "money",
@@ -2036,6 +2401,16 @@
         "design",
         "coding",
         "development"
+      ]
+    },
+    "concierge-bell": {
+      "tags": [
+        "reception",
+        "bell",
+        "porter"
+      ],
+      "categories": [
+        "travel"
       ]
     },
     "contact": {
@@ -2241,6 +2616,18 @@
         "food-beverage"
       ]
     },
+    "curly-braces": {
+      "tags": [
+        "json",
+        "code",
+        "token"
+      ],
+      "categories": [
+        "coding",
+        "development",
+        "files"
+      ]
+    },
     "currency": {
       "tags": [
         "finance",
@@ -2275,7 +2662,8 @@
         "square",
         "rectangle",
         "oblique",
-        "rhombus"
+        "rhombus",
+        "shape"
       ],
       "categories": [
         "shapes"
@@ -2371,6 +2759,21 @@
         "gaming"
       ]
     },
+    "diff": {
+      "tags": [
+        "patch",
+        "difference",
+        "plus",
+        "minus",
+        "plus-minus",
+        "maths"
+      ],
+      "categories": [
+        "coding",
+        "development",
+        "files"
+      ]
+    },
     "disc": {
       "tags": [
         "album",
@@ -2385,7 +2788,8 @@
     },
     "divide": {
       "tags": [
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths"
@@ -2393,7 +2797,8 @@
     },
     "divide-circle": {
       "tags": [
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -2402,11 +2807,51 @@
     },
     "divide-square": {
       "tags": [
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths",
         "shapes"
+      ]
+    },
+    "dna": {
+      "tags": [
+        "gene",
+        "gmo",
+        "helix",
+        "heredity",
+        "chromosome",
+        "nucleic acid"
+      ],
+      "categories": [
+        "medical"
+      ]
+    },
+    "dna-off": {
+      "tags": [
+        "gene",
+        "gmo free",
+        "helix",
+        "heredity",
+        "chromosome",
+        "nucleic acid"
+      ],
+      "categories": [
+        "medical",
+        "food-beverage"
+      ]
+    },
+    "dog": {
+      "tags": [
+        "animal",
+        "pet",
+        "puppy",
+        "hound",
+        "canine"
+      ],
+      "categories": [
+        "animals"
       ]
     },
     "dollar-sign": {
@@ -2480,6 +2925,46 @@
         "food-beverage"
       ]
     },
+    "dumbbell": {
+      "tags": [
+        "barbell",
+        "weight",
+        "workout",
+        "gym"
+      ],
+      "categories": [
+        "maps",
+        "sports"
+      ]
+    },
+    "ear": {
+      "tags": [
+        "hearing",
+        "noise",
+        "audio",
+        "accessibility"
+      ],
+      "categories": [
+        "medical",
+        "accessibility"
+      ]
+    },
+    "ear-off": {
+      "tags": [
+        "hearing",
+        "hard of hearing",
+        "hearing loss",
+        "deafness",
+        "noise",
+        "silence",
+        "audio",
+        "accessibility"
+      ],
+      "categories": [
+        "medical",
+        "accessibility"
+      ]
+    },
     "edit": {
       "tags": [
         "pencil",
@@ -2509,6 +2994,27 @@
     },
     "egg": {
       "tags": [
+        "food",
+        "bird",
+        "chick"
+      ],
+      "categories": [
+        "food-beverage",
+        "animals"
+      ]
+    },
+    "egg-fried": {
+      "tags": [
+        "food",
+        "breakfast"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "egg-off": {
+      "tags": [
+        "egg free",
         "food"
       ],
       "categories": [
@@ -2517,7 +3023,8 @@
     },
     "equal": {
       "tags": [
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths"
@@ -2526,7 +3033,8 @@
     "equal-not": {
       "tags": [
         "calculate",
-        "off"
+        "off",
+        "maths"
       ],
       "categories": [
         "maths"
@@ -2619,6 +3127,18 @@
         "buildings"
       ]
     },
+    "fan": {
+      "tags": [
+        "air",
+        "cooler",
+        "ventilation",
+        "ventilator",
+        "blower"
+      ],
+      "categories": [
+        "home"
+      ]
+    },
     "fast-forward": {
       "tags": [
         "music"
@@ -2655,6 +3175,102 @@
         "files"
       ]
     },
+    "file-archive": {
+      "tags": [
+        "zip",
+        "package",
+        "archive"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-audio": {
+      "tags": [
+        "music",
+        "audio",
+        "sound",
+        "headphones"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-audio-2": {
+      "tags": [
+        "music",
+        "audio",
+        "sound",
+        "headphones"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-axis-3d": {
+      "tags": [
+        "model",
+        "3d",
+        "axis",
+        "coordinates"
+      ],
+      "categories": [
+        "design",
+        "files"
+      ]
+    },
+    "file-badge": {
+      "tags": [
+        "award",
+        "achievement",
+        "badge"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-badge-2": {
+      "tags": [
+        "award",
+        "achievement",
+        "badge"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-bar-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-bar-chart-2": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-box": {
+      "tags": [
+        "box",
+        "package",
+        "model"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
     "file-check": {
       "tags": [
         "done",
@@ -2673,6 +3289,17 @@
         "files"
       ]
     },
+    "file-clock": {
+      "tags": [
+        "history",
+        "log",
+        "clock"
+      ],
+      "categories": [
+        "files",
+        "time"
+      ]
+    },
     "file-code": {
       "tags": [
         "script",
@@ -2681,6 +3308,41 @@
       "categories": [
         "files",
         "coding"
+      ]
+    },
+    "file-cog": {
+      "tags": [
+        "executable",
+        "settings",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-cog-2": {
+      "tags": [
+        "executable",
+        "settings",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-diff": {
+      "tags": [
+        "diff",
+        "patch"
+      ],
+      "categories": [
+        "files",
+        "coding",
+        "development"
       ]
     },
     "file-digit": {
@@ -2693,6 +3355,48 @@
         "coding"
       ]
     },
+    "file-down": {
+      "tags": [
+        "download",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "file-edit": {
+      "tags": [
+        "edit",
+        "signature"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-heart": {
+      "tags": [
+        "heart",
+        "favourite",
+        "bookmark",
+        "quick link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-image": {
+      "tags": [
+        "image",
+        "graphics",
+        "photo",
+        "picture"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
     "file-input": {
       "tags": [
         "document"
@@ -2700,6 +3404,85 @@
       "categories": [
         "files",
         "arrows"
+      ]
+    },
+    "file-json": {
+      "tags": [
+        "code",
+        "json",
+        "curly braces"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-json-2": {
+      "tags": [
+        "code",
+        "json",
+        "curly braces"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-key": {
+      "tags": [
+        "key",
+        "private",
+        "public",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-key-2": {
+      "tags": [
+        "key",
+        "private",
+        "public",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-line-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-lock": {
+      "tags": [
+        "lock",
+        "password",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-lock-2": {
+      "tags": [
+        "lock",
+        "password",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
       ]
     },
     "file-minus": {
@@ -2730,6 +3513,17 @@
         "arrows"
       ]
     },
+    "file-pie-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
     "file-plus": {
       "tags": [
         "add",
@@ -2752,14 +3546,87 @@
         "files"
       ]
     },
+    "file-question": {
+      "tags": [
+        "readme",
+        "help",
+        "question"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-scan": {
+      "tags": [
+        "scan",
+        "code",
+        "qr-code"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
     "file-search": {
       "tags": [
         "lost",
         "document",
-        "find"
+        "find",
+        "browser"
       ],
       "categories": [
         "files"
+      ]
+    },
+    "file-search-2": {
+      "tags": [
+        "lost",
+        "document",
+        "find",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-signature": {
+      "tags": [
+        "edit",
+        "signature"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-spreadsheet": {
+      "tags": [
+        "spreadsheet",
+        "sheet",
+        "table"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-symlink": {
+      "tags": [
+        "symlink",
+        "symbolic",
+        "link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-terminal": {
+      "tags": [
+        "terminal",
+        "bash",
+        "script",
+        "executable"
+      ],
+      "categories": [
+        "files",
+        "coding"
       ]
     },
     "file-text": {
@@ -2772,6 +3639,94 @@
       "categories": [
         "files",
         "text"
+      ]
+    },
+    "file-type": {
+      "tags": [
+        "font",
+        "text",
+        "typography",
+        "type"
+      ],
+      "categories": [
+        "files",
+        "text"
+      ]
+    },
+    "file-type-2": {
+      "tags": [
+        "font",
+        "text",
+        "typography",
+        "type"
+      ],
+      "categories": [
+        "files",
+        "text"
+      ]
+    },
+    "file-up": {
+      "tags": [
+        "upload",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "file-video": {
+      "tags": [
+        "movie",
+        "video",
+        "film"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-video-2": {
+      "tags": [
+        "movie",
+        "video",
+        "film"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-volume": {
+      "tags": [
+        "audio",
+        "music",
+        "volume"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-volume-2": {
+      "tags": [
+        "audio",
+        "music",
+        "volume"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-warning": {
+      "tags": [
+        "hidden",
+        "warning",
+        "alert",
+        "danger",
+        "protected"
+      ],
+      "categories": [
+        "files",
+        "notifications"
       ]
     },
     "file-x": {
@@ -2915,6 +3870,17 @@
         "gaming"
       ]
     },
+    "flask-conical-off": {
+      "tags": [
+        "beaker",
+        "erlenmeyer",
+        "non toxic"
+      ],
+      "categories": [
+        "science",
+        "gaming"
+      ]
+    },
     "flask-round": {
       "tags": [
         "beaker"
@@ -2922,6 +3888,50 @@
       "categories": [
         "science",
         "gaming"
+      ]
+    },
+    "flip-horizontal": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flip-horizontal-2": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flip-vertical": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flip-vertical-2": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
       ]
     },
     "flower": {
@@ -2967,9 +3977,150 @@
         "files"
       ]
     },
+    "folder-archive": {
+      "tags": [
+        "archive",
+        "zip",
+        "package"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-check": {
+      "tags": [
+        "done",
+        "directory",
+        "check"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-clock": {
+      "tags": [
+        "history",
+        "directory",
+        "clock"
+      ],
+      "categories": [
+        "files",
+        "time"
+      ]
+    },
+    "folder-closed": {
+      "tags": [
+        "directory",
+        "closed"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-cog": {
+      "tags": [
+        "directory",
+        "settings",
+        "control",
+        "preferences",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-cog-2": {
+      "tags": [
+        "directory",
+        "settings",
+        "control",
+        "preferences",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-down": {
+      "tags": [
+        "directory",
+        "download",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-edit": {
+      "tags": [
+        "directory",
+        "edit",
+        "rename"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-heart": {
+      "tags": [
+        "directory",
+        "heart",
+        "favourite",
+        "bookmark",
+        "quick link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-input": {
+      "tags": [
+        "directory",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-key": {
+      "tags": [
+        "directory",
+        "key",
+        "private",
+        "security",
+        "protected"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "folder-lock": {
+      "tags": [
+        "directory",
+        "lock",
+        "private",
+        "security",
+        "protected"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
     "folder-minus": {
       "tags": [
-        "directory"
+        "directory",
+        "remove",
+        "delete"
       ],
       "categories": [
         "files"
@@ -2983,9 +4134,100 @@
         "files"
       ]
     },
+    "folder-output": {
+      "tags": [
+        "directory",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
     "folder-plus": {
       "tags": [
-        "directory"
+        "directory",
+        "add",
+        "create",
+        "new"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-search": {
+      "tags": [
+        "directory",
+        "search",
+        "find",
+        "lost",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-search-2": {
+      "tags": [
+        "directory",
+        "search",
+        "find",
+        "lost",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-symlink": {
+      "tags": [
+        "directory",
+        "symlink",
+        "symbolic",
+        "link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-tree": {
+      "tags": [
+        "directory",
+        "tree",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-up": {
+      "tags": [
+        "directory",
+        "upload",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-x": {
+      "tags": [
+        "directory",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folders": {
+      "tags": [
+        "multiple",
+        "copy",
+        "directories"
       ],
       "categories": [
         "files"
@@ -3064,7 +4306,8 @@
       "tags": [
         "programming",
         "code",
-        "automation"
+        "automation",
+        "maths"
       ],
       "categories": [
         "development",
@@ -3172,6 +4415,16 @@
         "coding"
       ]
     },
+    "git-compare": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
     "git-fork": {
       "tags": [
         "code",
@@ -3196,6 +4449,28 @@
       "tags": [
         "code",
         "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-pull-request-closed": {
+      "tags": [
+        "code",
+        "version control",
+        "rejected"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-pull-request-draft": {
+      "tags": [
+        "code",
+        "version control",
+        "draft"
       ],
       "categories": [
         "development",
@@ -3288,6 +4563,16 @@
       "categories": [
         "buildings",
         "maps"
+      ]
+    },
+    "grape": {
+      "tags": [
+        "fruit",
+        "wine",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "grid": {
@@ -3397,6 +4682,48 @@
         "weather"
       ]
     },
+    "heading": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-1": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-2": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-3": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-4": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-5": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-6": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
     "headphones": {
       "tags": [
         "music",
@@ -3464,6 +4791,21 @@
         "multimedia"
       ]
     },
+    "heart-pulse": {
+      "tags": [
+        "heartbeat",
+        "pulse",
+        "health",
+        "medical",
+        "blood pressure",
+        "cardiac",
+        "systole",
+        "diastole"
+      ],
+      "categories": [
+        "medical"
+      ]
+    },
     "help-circle": {
       "tags": [
         "question mark"
@@ -3520,6 +4862,30 @@
         "account"
       ]
     },
+    "hop": {
+      "tags": [
+        "beer",
+        "brewery",
+        "drink"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "hop-off": {
+      "tags": [
+        "beer",
+        "brewery",
+        "drink",
+        "hop free",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "hourglass": {
       "tags": [
         "timer",
@@ -3529,6 +4895,15 @@
       "categories": [
         "time",
         "gaming"
+      ]
+    },
+    "ice-cream": {
+      "tags": [
+        "gelato",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "image": {
@@ -3619,7 +4994,8 @@
       "tags": [
         "unlimited",
         "forever",
-        "loop"
+        "loop",
+        "maths"
       ],
       "categories": [
         "multimedia"
@@ -3652,7 +5028,8 @@
     "instagram": {
       "tags": [
         "logo",
-        "camera"
+        "camera",
+        "social"
       ],
       "categories": [
         "brands",
@@ -3679,6 +5056,17 @@
       "categories": [
         "currency",
         "money"
+      ]
+    },
+    "joystick": {
+      "tags": [
+        "game",
+        "console",
+        "control stick"
+      ],
+      "categories": [
+        "gaming",
+        "devices"
       ]
     },
     "key": {
@@ -3834,6 +5222,18 @@
         "arrows",
         "design",
         "cursors"
+      ]
+    },
+    "laugh": {
+      "tags": [
+        "emoji",
+        "face",
+        "happy",
+        "good",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
       ]
     },
     "layers": {
@@ -3996,7 +5396,8 @@
     "linkedin": {
       "tags": [
         "logo",
-        "social media"
+        "social media",
+        "social"
       ],
       "categories": [
         "account",
@@ -4212,7 +5613,8 @@
       "tags": [
         "baggage",
         "luggage",
-        "travel"
+        "travel",
+        "suitcase"
       ],
       "categories": [
         "travel",
@@ -4234,11 +5636,122 @@
       "tags": [
         "email",
         "message",
-        "letter"
+        "letter",
+        "unread"
       ],
       "categories": [
         "text",
         "account",
+        "mail"
+      ]
+    },
+    "mail-check": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "subscribe",
+        "delivered",
+        "success"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-minus": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-open": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "read"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-plus": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "add",
+        "create",
+        "new",
+        "compose"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-question": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "delivery",
+        "undelivered"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-search": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "search"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-warning": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "delivery error"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-x": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mails": {
+      "tags": [
+        "emails",
+        "messages",
+        "letters",
+        "multiple",
+        "mailing list",
+        "newsletter",
+        "copy"
+      ],
+      "categories": [
         "mail"
       ]
     },
@@ -4311,12 +5824,39 @@
         "design"
       ]
     },
+    "medal": {
+      "tags": [
+        "prize",
+        "sports",
+        "winner",
+        "trophy",
+        "award",
+        "achievement"
+      ],
+      "categories": [
+        "sports"
+      ]
+    },
     "megaphone": {
       "tags": [
         "advertisement",
         "attention",
         "alert",
         "notification"
+      ],
+      "categories": [
+        "multimedia",
+        "notifications"
+      ]
+    },
+    "megaphone-off": {
+      "tags": [
+        "advertisement",
+        "attention",
+        "alert",
+        "notification",
+        "disable",
+        "silent"
       ],
       "categories": [
         "multimedia",
@@ -4372,7 +5912,8 @@
         "sound",
         "listen",
         "radio",
-        "podcast"
+        "podcast",
+        "microphone"
       ],
       "categories": [
         "devices",
@@ -4381,11 +5922,30 @@
         "multimedia"
       ]
     },
+    "mic-2": {
+      "tags": [
+        "lyrics",
+        "voice",
+        "listen",
+        "sound",
+        "music",
+        "radio",
+        "podcast",
+        "karaoke",
+        "singing",
+        "microphone"
+      ],
+      "categories": [
+        "devices",
+        "multimedia"
+      ]
+    },
     "mic-off": {
       "tags": [
         "record",
         "sound",
-        "mute"
+        "mute",
+        "microphone"
       ],
       "categories": [
         "devices",
@@ -4407,6 +5967,17 @@
         "medical"
       ]
     },
+    "microwave": {
+      "tags": [
+        "oven",
+        "cooker",
+        "toaster oven",
+        "bake"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "milestone": {
       "tags": [
         "sign",
@@ -4418,6 +5989,34 @@
         "development",
         "coding",
         "gaming"
+      ]
+    },
+    "milk": {
+      "tags": [
+        "lactose",
+        "bottle",
+        "beverage",
+        "drink",
+        "water",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "milk-off": {
+      "tags": [
+        "lactose free",
+        "bottle",
+        "beverage",
+        "drink",
+        "water",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "minimize": {
@@ -4447,7 +6046,8 @@
     "minus": {
       "tags": [
         "subtract",
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths"
@@ -4456,7 +6056,8 @@
     "minus-circle": {
       "tags": [
         "subtract",
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -4466,7 +6067,8 @@
     "minus-square": {
       "tags": [
         "subtract",
-        "calculate"
+        "calculate",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -4661,6 +6263,43 @@
     },
     "music": {
       "tags": [
+        "note",
+        "quaver",
+        "eighth note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "music-2": {
+      "tags": [
+        "quaver",
+        "eighth note",
+        "note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "music-3": {
+      "tags": [
+        "crotchet",
+        "minim",
+        "quarter note",
+        "half note",
+        "note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "music-4": {
+      "tags": [
+        "semiquaver",
+        "sixteenth note",
         "note"
       ],
       "categories": [
@@ -4717,9 +6356,48 @@
         "coding"
       ]
     },
+    "newspaper": {
+      "tags": [
+        "news",
+        "feed",
+        "home",
+        "magazine",
+        "article",
+        "headline"
+      ],
+      "categories": [
+        "multimedia",
+        "communication"
+      ]
+    },
+    "nut": {
+      "tags": [
+        "hazelnut",
+        "acorn",
+        "food",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "nut-off": {
+      "tags": [
+        "hazelnut",
+        "acorn",
+        "food",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "octagon": {
       "tags": [
-        "stop"
+        "stop",
+        "shape"
       ],
       "categories": [
         "shapes"
@@ -4749,6 +6427,18 @@
       "tags": [
         "box",
         "container"
+      ],
+      "categories": [
+        "files",
+        "development"
+      ]
+    },
+    "package-2": {
+      "tags": [
+        "box",
+        "container",
+        "archive",
+        "zip"
       ],
       "categories": [
         "files",
@@ -4883,6 +6573,17 @@
         "mail"
       ]
     },
+    "party-popper": {
+      "tags": [
+        "emoji",
+        "congratulations",
+        "celebration",
+        "party"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
     "pause": {
       "tags": [
         "music",
@@ -4953,7 +6654,8 @@
         "stick figure"
       ],
       "categories": [
-        "accessibility"
+        "accessibility",
+        "people"
       ]
     },
     "phone": {
@@ -5086,13 +6788,25 @@
         "design"
       ]
     },
+    "pizza": {
+      "tags": [
+        "pie",
+        "quiche",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "plane": {
       "tags": [
         "plane",
-        "trip"
+        "trip",
+        "airplane"
       ],
       "categories": [
-        "transportation"
+        "transportation",
+        "travel"
       ]
     },
     "play": {
@@ -5115,6 +6829,30 @@
         "multimedia"
       ]
     },
+    "plug": {
+      "tags": [
+        "electricity",
+        "socket",
+        "outlet"
+      ],
+      "categories": [
+        "devices",
+        "coding",
+        "development"
+      ]
+    },
+    "plug-2": {
+      "tags": [
+        "electricity",
+        "socket",
+        "outlet"
+      ],
+      "categories": [
+        "devices",
+        "coding",
+        "development"
+      ]
+    },
     "plug-zap": {
       "tags": [
         "charge",
@@ -5129,7 +6867,8 @@
     "plus": {
       "tags": [
         "add",
-        "new"
+        "new",
+        "maths"
       ],
       "categories": [
         "maths"
@@ -5138,7 +6877,8 @@
     "plus-circle": {
       "tags": [
         "add",
-        "new"
+        "new",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -5148,7 +6888,8 @@
     "plus-square": {
       "tags": [
         "add",
-        "new"
+        "new",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -5276,6 +7017,32 @@
         "devices"
       ]
     },
+    "rectangle-horizontal": {
+      "tags": [
+        "rectangle",
+        "aspect ratio",
+        "16:9",
+        "horizontal",
+        "shape"
+      ],
+      "categories": [
+        "shapes",
+        "design"
+      ]
+    },
+    "rectangle-vertical": {
+      "tags": [
+        "rectangle",
+        "aspect ratio",
+        "9:16",
+        "vertical",
+        "shape"
+      ],
+      "categories": [
+        "shapes",
+        "design"
+      ]
+    },
     "recycle": {
       "tags": [
         "sustainability",
@@ -5326,10 +7093,26 @@
         "arrows"
       ]
     },
+    "refrigerator": {
+      "tags": [
+        "frigerator",
+        "fridge",
+        "freezer",
+        "cooler",
+        "icebox",
+        "chiller",
+        "cold storage"
+      ],
+      "categories": [
+        "food-beverage",
+        "home"
+      ]
+    },
     "regex": {
       "tags": [
         "search",
-        "text"
+        "text",
+        "code"
       ],
       "categories": [
         "text",
@@ -5470,6 +7253,19 @@
         "money"
       ]
     },
+    "sailboat": {
+      "tags": [
+        "ship",
+        "boat",
+        "harbor",
+        "harbour",
+        "dock"
+      ],
+      "categories": [
+        "transportation",
+        "travel"
+      ]
+    },
     "save": {
       "tags": [
         "floppy disk"
@@ -5491,6 +7287,16 @@
         "maps"
       ]
     },
+    "scale-3d": {
+      "tags": [
+        "gizmo",
+        "transform",
+        "size"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
     "scaling": {
       "tags": [
         "scale",
@@ -5504,6 +7310,18 @@
     "scan": {
       "tags": [
         "qr-code"
+      ],
+      "categories": [
+        "devices",
+        "social"
+      ]
+    },
+    "scan-face": {
+      "tags": [
+        "face",
+        "biometric",
+        "authentication",
+        "2fa"
       ],
       "categories": [
         "devices",
@@ -5617,6 +7435,19 @@
       "tags": [
         "cloud",
         "storage"
+      ],
+      "categories": [
+        "development",
+        "devices"
+      ]
+    },
+    "server-cog": {
+      "tags": [
+        "cloud",
+        "storage",
+        "computing",
+        "cog",
+        "gear"
       ],
       "categories": [
         "development",
@@ -5805,6 +7636,19 @@
         "gaming"
       ]
     },
+    "shower-head": {
+      "tags": [
+        "shower",
+        "bath",
+        "bathroom",
+        "amenities",
+        "services"
+      ],
+      "categories": [
+        "home",
+        "travel"
+      ]
+    },
     "shrink": {
       "tags": [
         "scale",
@@ -5865,7 +7709,8 @@
       "tags": [
         "sum",
         "calculate",
-        "formula"
+        "formula",
+        "maths"
       ],
       "categories": [
         "text",
@@ -6086,6 +7931,24 @@
         "account"
       ]
     },
+    "smile-plus": {
+      "tags": [
+        "emoji",
+        "face",
+        "happy",
+        "good",
+        "emotion",
+        "react",
+        "reaction",
+        "add"
+      ],
+      "categories": [
+        "emoji",
+        "social",
+        "notifications",
+        "communication"
+      ]
+    },
     "snowflake": {
       "tags": [
         "cold",
@@ -6140,6 +8003,12 @@
         "devices"
       ]
     },
+    "spline": {
+      "tags": [],
+      "categories": [
+        "design"
+      ]
+    },
     "sprout": {
       "tags": [
         "leaf",
@@ -6153,7 +8022,10 @@
     },
     "square": {
       "tags": [
-        "rectangle"
+        "rectangle",
+        "aspect ratio",
+        "1:1",
+        "shape"
       ],
       "categories": [
         "shapes"
@@ -6213,6 +8085,31 @@
       "categories": [
         "science",
         "medical"
+      ]
+    },
+    "sticker": {
+      "tags": [
+        "reaction",
+        "emotion",
+        "smile",
+        "happy",
+        "feedback"
+      ],
+      "categories": [
+        "communication",
+        "social"
+      ]
+    },
+    "sticky-note": {
+      "tags": [
+        "note",
+        "comment",
+        "reaction",
+        "memo"
+      ],
+      "categories": [
+        "communication",
+        "social"
       ]
     },
     "stop-circle": {
@@ -6311,6 +8208,19 @@
       ],
       "categories": [
         "accessibility"
+      ]
+    },
+    "sun-snow": {
+      "tags": [
+        "weather",
+        "air conditioning",
+        "temperature",
+        "hot",
+        "cold",
+        "seasons"
+      ],
+      "categories": [
+        "weather"
       ]
     },
     "sunrise": {
@@ -6414,7 +8324,19 @@
     "table": {
       "tags": [
         "sheet",
-        "grid"
+        "grid",
+        "spreadsheet"
+      ],
+      "categories": [
+        "text",
+        "files"
+      ]
+    },
+    "table-2": {
+      "tags": [
+        "sheet",
+        "grid",
+        "spreadsheet"
       ],
       "categories": [
         "text",
@@ -6431,7 +8353,23 @@
     },
     "tag": {
       "tags": [
-        "label"
+        "label",
+        "badge",
+        "ticket",
+        "mark"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "tags": {
+      "tags": [
+        "labels",
+        "badges",
+        "tickets",
+        "marks",
+        "copy",
+        "multiple"
       ],
       "categories": [
         "account"
@@ -6633,6 +8571,19 @@
         "weather"
       ]
     },
+    "toy-brick": {
+      "tags": [
+        "lego",
+        "block",
+        "addon",
+        "plugin",
+        "integration"
+      ],
+      "categories": [
+        "gaming",
+        "development"
+      ]
+    },
     "train": {
       "tags": [
         "transport",
@@ -6733,10 +8684,24 @@
     },
     "triangle": {
       "tags": [
-        "delta"
+        "delta",
+        "shape"
       ],
       "categories": [
         "shapes"
+      ]
+    },
+    "trophy": {
+      "tags": [
+        "prize",
+        "sports",
+        "winner",
+        "achievement",
+        "award"
+      ],
+      "categories": [
+        "sports",
+        "gaming"
       ]
     },
     "truck": {
@@ -6775,7 +8740,8 @@
     },
     "twitch": {
       "tags": [
-        "logo"
+        "logo",
+        "social"
       ],
       "categories": [
         "brands",
@@ -6887,6 +8853,21 @@
         "files"
       ]
     },
+    "usb": {
+      "tags": [
+        "universal",
+        "serial",
+        "bus",
+        "controller",
+        "connector",
+        "interface"
+      ],
+      "categories": [
+        "devices",
+        "multimedia",
+        "home"
+      ]
+    },
     "user": {
       "tags": [
         "person",
@@ -6902,6 +8883,17 @@
         "followed",
         "subscribed",
         "done"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "user-cog": {
+      "tags": [
+        "settings",
+        "edit",
+        "cog",
+        "gear"
       ],
       "categories": [
         "account"
@@ -6981,6 +8973,19 @@
         "food-beverage",
         "travel",
         "maps"
+      ]
+    },
+    "vegan": {
+      "tags": [
+        "vegetarian",
+        "fruitarian",
+        "herbivorous",
+        "animal rights",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage",
+        "sustainability"
       ]
     },
     "venetian-mask": {
@@ -7152,6 +9157,18 @@
         "photography"
       ]
     },
+    "wand-2": {
+      "tags": [
+        "magic",
+        "wizard"
+      ],
+      "categories": [
+        "design",
+        "gaming",
+        "cursors",
+        "photography"
+      ]
+    },
     "watch": {
       "tags": [
         "clock",
@@ -7185,6 +9202,44 @@
         "connectivity",
         "devices",
         "communication"
+      ]
+    },
+    "webhook": {
+      "tags": [
+        "push api",
+        "interface",
+        "callback"
+      ],
+      "categories": [
+        "development",
+        "coding",
+        "social",
+        "account"
+      ]
+    },
+    "wheat": {
+      "tags": [
+        "corn",
+        "cereal",
+        "grain",
+        "gluten"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "wheat-off": {
+      "tags": [
+        "corn",
+        "cereal",
+        "grain",
+        "gluten free",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
       ]
     },
     "wifi": {
@@ -7232,6 +9287,23 @@
         "food-beverage"
       ]
     },
+    "wine-off": {
+      "tags": [
+        "alcohol",
+        "beverage",
+        "drink",
+        "glass",
+        "alcohol free",
+        "abstinence",
+        "abstaining",
+        "teetotalism",
+        "allergy",
+        "intolerance"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
     "wrap-text": {
       "tags": [
         "words",
@@ -7264,7 +9336,8 @@
         "delete",
         "remove",
         "times",
-        "clear"
+        "clear",
+        "maths"
       ],
       "categories": [
         "notifications",
@@ -7278,7 +9351,8 @@
         "delete",
         "remove",
         "times",
-        "clear"
+        "clear",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -7292,7 +9366,8 @@
         "alert",
         "warning",
         "times",
-        "clear"
+        "clear",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -7307,7 +9382,8 @@
         "delete",
         "remove",
         "times",
-        "clear"
+        "clear",
+        "maths"
       ],
       "categories": [
         "maths",
@@ -7388,6 +9464,10 @@
       "title": "Accessibility",
       "icon": "accessibility"
     },
+    "animals": {
+      "title": "Animals",
+      "icon": "dog"
+    },
     "account": {
       "title": "Accounts & access",
       "icon": "user"
@@ -7398,7 +9478,7 @@
     },
     "brands": {
       "title": "Brands",
-      "icon": "lucide"
+      "icon": "facebook"
     },
     "buildings": {
       "title": "Buildings",
@@ -7460,6 +9540,10 @@
       "title": "Gaming",
       "icon": "gamepad-2"
     },
+    "home": {
+      "title": "Home",
+      "icon": "home"
+    },
     "layout": {
       "title": "Layout",
       "icon": "layout"
@@ -7499,6 +9583,10 @@
     "notifications": {
       "title": "Notifications",
       "icon": "alert-triangle"
+    },
+    "people": {
+      "title": "People",
+      "icon": "person-standing"
     },
     "photography": {
       "title": "Photography",

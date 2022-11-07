@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yarn checkIcons
+pnpm run checkIcons
 <<<<<<< HEAD
 exit $?
 =======
