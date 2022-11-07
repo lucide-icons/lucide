@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import outlineStroke from 'svg-outline-stroke';
-import { parse, stringify } from 'svgson'; // eslint-disable-line import/no-extraneous-dependencies
+import { parse, stringify } from 'svgson';
 import getArgumentOptions from 'minimist';
 
 const inputDir = `./icons/`;
@@ -47,7 +47,7 @@ async function init() {
 
     const icons = await fs.readdir(inputDir);
     const parsedIconNodes = await Promise.all(
-      icons.map(async file => {
+      icons.map(async (file) => {
         const iconContent = await fs.readFile(`${inputDir}${file}`);
         const iconNode = await parse(iconContent.toString(), {
           transformNode: transformForward,
@@ -57,7 +57,7 @@ async function init() {
     );
 
     if (widthMap?.[outputDir] === undefined) {
-      throw new Error(`Could not find the directory: ${outputDir}.`)
+      throw new Error(`Could not find the directory: ${outputDir}.`);
     }
 
     await Promise.all(

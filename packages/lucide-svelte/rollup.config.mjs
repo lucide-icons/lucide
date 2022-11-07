@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import license from 'rollup-plugin-license';
 import resolve from '@rollup/plugin-node-resolve';
 import commonJS from '@rollup/plugin-commonjs';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideSvelte';
 const outputFileName = 'lucide-svelte';

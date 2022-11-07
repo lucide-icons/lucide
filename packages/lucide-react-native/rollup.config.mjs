@@ -1,5 +1,5 @@
-import plugins from '../../rollup.plugins';
-import pkg from './package.json';
+import plugins from '../../rollup.plugins.mjs';
+import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';

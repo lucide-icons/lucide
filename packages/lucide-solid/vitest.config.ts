@@ -12,6 +12,7 @@ export default defineConfig({
     setupFiles: './tests/setupVitest.js',
     threads: false,
     isolate: false,
+    watch: false,
   },
   resolve: {
     conditions: ['development', 'browser'],
