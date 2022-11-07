@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue-next",
-  "version": "0.61.0",
+  "version": "0.98.0",
   "author": "Eric Fennis",
   "description": "A Lucide icon library package for Vue 3 applications",
   "license": "ISC",
@@ -19,19 +19,25 @@
   "unpkg": "dist/umd/lucide-vue-next.min.js",
   "typings": "dist/lucide-vue-next.d.ts",
   "sideEffects": false,
+  "files": [
+    "dist",
+    "nuxt.js"
+  ],
   "scripts": {
-    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.js",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-vue-next/src --templateSrc=../packages/lucide-vue-next/scripts/exportTemplate  --renderUniqueKey",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs  --renderUniqueKey",
     "build:es": "babel src -d dist/esm",
-    "build:types": "yarn --cwd ../../ babel-node packages/lucide-vue-next/scripts/buildTypes.js",
-    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-vue-next/rollup.config.js",
+    "build:types": "node ./scripts/buildTypes.mjs",
+    "build:bundles": "rollup -c ./rollup.config.js",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@testing-library/vue": "^6.4.2",
-    "@vue/compiler-sfc": "3.0.1",
+    "@vue/compiler-sfc": "3.0.6",
     "@vue/test-utils": "2.0.0-rc.18",
     "jest-serializer-vue": "^2.0.2",
     "vue": "3.0.6",

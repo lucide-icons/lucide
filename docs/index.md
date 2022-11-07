@@ -17,7 +17,7 @@ When designing new icons, the community is working with a set of design rules. T
 
 Beside design, code is also important. Assets like icons in for example web projects can increase the transferred bytes significantly. With the growing internet, lucide has the responsibility to keep their assets small as possible. To achieve this, lucide uses SVG compression and specific code architecture for tree-shaking abilities. With tree-shaking used you will only ship the icons you used, helps you to keep the software small as possible when distributed.
 
-Lucide provides several official packages for: [Web (Vanilla)](https://lucide.dev/docs/lucide), [React](https://lucide.dev/docs/lucide-react), [Vue](https://lucide.dev/docs/lucide-vue), [Vue 3](https://lucide.dev/docs/lucide-vue-next), [Svelte](https://lucide.dev/docs/lucide-svelte),[Preact](https://lucide.dev/docs/lucide-preact), [Angular](https://lucide.dev/docs/lucide-angular), [NodeJS](https://lucide.dev/docs/lucide-static#nodejs) and [Flutter](https://lucide.dev/docs/lucide-flutter).
+Lucide provides several official packages for: [Web (Vanilla)](https://lucide.dev/docs/lucide), [React](https://lucide.dev/docs/lucide-react), [React Native](https://lucide.dev/docs/lucide-react-native), [Vue](https://lucide.dev/docs/lucide-vue), [Vue 3](https://lucide.dev/docs/lucide-vue-next), [Svelte](https://lucide.dev/docs/lucide-svelte),[Preact](https://lucide.dev/docs/lucide-preact), [Angular](https://lucide.dev/docs/lucide-angular), [NodeJS](https://lucide.dev/docs/lucide-static#nodejs) and [Flutter](https://lucide.dev/docs/lucide-flutter).
 
 Any questions about lucide? Ask the community. Active on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
 

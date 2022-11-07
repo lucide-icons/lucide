@@ -6,14 +6,13 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && rm -rf dist && yarn build:main && yarn build:worker && yarn build:interface",
+    "build": "tsc && rm -rf dist && pnpm build:main && pnpm build:worker && pnpm build:interface",
     "build:main": "INPUT=main vite build",
     "build:worker": "INPUT=worker vite build",
     "build:interface": "INPUT=interface vite build",
     "serve": "vite preview"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.14",
     "minimist": "^1.2.6",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"

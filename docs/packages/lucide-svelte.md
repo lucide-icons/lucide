@@ -6,9 +6,11 @@ Implementation of the lucide icon library for svelte applications.
 
 ```bash
 yarn add lucide-svelte
+```
 
-# or
+or
 
+```sh
 npm install lucide-svelte
 ```
 
@@ -22,30 +24,30 @@ Default usage:
 
 ```html
 <script>
-import { Skull } from 'lucide-svelte'
+  import { Skull } from 'lucide-svelte';
 </script>
 
-<Skull/>
+<Skull />
 ```
 
 You can pass additional props to adjust the icon.
 
 ```html
 <script>
-import { Camera } from 'lucide-svelte'
+  import { Camera } from 'lucide-svelte';
 </script>
 
-<Camera />
+<Camera color="#ff3e98" />
 ```
 
 ### Available props
 
-|  name          |   type   |  default
-| -------------- | -------- | --------
-| `size`         | *Number* | 24
-| `color`        | *String* | currentColor
-| `strokeWidth`  | *Number* | 2
-| `*<SVGProps>`  | *String* | -
+| name          | type     | default      |
+| ------------- | -------- | ------------ |
+| `size`        | _Number_ | 24           |
+| `color`       | _String_ | currentColor |
+| `strokeWidth` | _Number_ | 2            |
+| `*<SVGProps>` | _String_ | -            |
 
 \* All SVGProps are available to style the svgs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)
 
@@ -53,10 +55,10 @@ import { Camera } from 'lucide-svelte'
 
 ```html
 <script>
-import { Phone } from 'lucide-svelte'
+  import { Phone } from 'lucide-svelte';
 </script>
 
-<Phone fill="#333"/>
+<Phone fill="#333" />
 ```
 
 This results a filled phone icon.
@@ -69,20 +71,20 @@ It is possible to create one generic icon component to load icons.
 
 #### Icon Component Example
 
-``` html
+```html
 <script>
-  import * as icons from "lucide-svelte";
+  import * as icons from 'lucide-svelte';
   export let name;
 </script>
 
-<svelte:component this={icons[name]} {...$$props}/>
+<svelte:component this="{icons[name]}" {...$$props} />
 ```
 
 ##### Then you can use it like this
 
-``` html
+```html
 <script>
-  import LucideIcon from "./LucideIcon";
+  import LucideIcon from './LucideIcon';
 </script>
 
 <LucideIcon name="Menu" />

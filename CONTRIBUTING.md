@@ -10,13 +10,13 @@ The following is a set of guidelines for contributing to Lucide. Feel free to pr
 Feel free to open a pull-request to contribute to this project.
 
 **Working on your first Pull Request?** You can learn how from this *free* series
-[How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+[How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github)
 
 Guidelines for pull requests:
 
 - __Make your commit messages as descriptive as possible.__ Include as much information as you can. Explain anything that the file diffs themselves won’t make apparent.
 - __Document your pull request__. Explain your fix, link to the relevant issue, add screenshots when adding new icons.
-- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `master` branch.
+- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `main` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
 ### Pull Requests Including Icons
@@ -65,7 +65,7 @@ If you are a designer who wants to contribute to Lucide but you don't know what 
 
 ## Development
 
-You will need minimum version of [Nodejs 16+](https://nodejs.org)
+You will need minimum version of [Nodejs 16.4+](https://nodejs.org)
 For packagemanagement you will need [yarn v1](https://yarnpkg.com/getting-started/install).
 For flutter package development, you need [Flutter 1.17+](https://docs.flutter.dev/get-started/install).
 
@@ -75,13 +75,13 @@ After cloning the project you need to run:
 yarn # Install dependencies, including the workspace packages
 ```
 
-### Packages -> Yarn Workspaces
+### Packages -> PNPM Workspaces
 
-To distribute different packages we use yarn workspaces. Before you start make sure you are familiar with this setup. Read guide here: [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces).
+To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces).
 
 The configured directory for workspaces is the [packages](./packages) directory, located in the root directory. There you will find all the current packages from lucide.
 
-> Note: One package is not managed by yarn:  **lucide-flutter**
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
 
 ### Generated Code
 
@@ -96,11 +96,11 @@ The commands for generating this code you will read in the next chapter.
 The build script includes multiple subcommands to: clean the dist directory, generate icon files, generate types files, and build/transpile code for each build format.
 
 ```sh
-yarn [package-name] build
+pnpm [package-name] build
 
 #example:
 
-yarn lucide-react build
+pnpm lucide-react build
 ```
 
 #### Testing
@@ -108,21 +108,21 @@ yarn lucide-react build
 Run unit tests with jest for each package to make sure all the package apis still works as expected.
 
 ```sh
-yarn [package-name] test
+pnpm [package-name] test
 
 #example:
 
-yarn lucide-vue test
+pnpm lucide-vue test
 ```
 
 Recommended to run the test watcher when making changes.
 
 ```sh
-yarn [package-name] test:watch
+pnpm [package-name] test:watch
 
 #example:
 
-yarn lucide-preact test:watch
+pnpm lucide-preact test:watch
 ```
 
 ### Unit Testing
@@ -131,15 +131,17 @@ When adding new features to for example the icon component for a framework. It i
 
 ### Local Testing
 
-To test changes in a local project, you can use `yarn link` or `npm link` to link the package. Before you do this make sure you builded the package first.
+To test changes in a local project, you can use `yarn link`, `npm link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
 
 ```sh
 # in packages/lucide-react
-yarn link
+
+npm run build &&
+npm link
 
 # in your local project
 
-yarn link lucide-react
+npm link lucide-react
 ```
 
 ## Project Structure
@@ -168,7 +170,7 @@ All the icons of lucide in SVG format. These will be used as source for all the 
 
 Includes all the (npm) packages of lucide.
 
-> Note: One package is not managed by yarn:  **lucide-flutter**
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
 
 ### scripts
 
