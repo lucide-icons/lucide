@@ -5,7 +5,7 @@ import createElement from './createElement';
  * @param {HTMLElement} element
  * @returns {Object}
  */
-export const getAttrs = element =>
+export const getAttrs = (element) =>
   Array.from(element.attributes).reduce((attrs, attr) => {
     attrs[attr.name] = attr.value;
     return attrs;
@@ -16,7 +16,7 @@ export const getAttrs = element =>
  * @param {Object} attrs
  * @returns {Array}
  */
-export const getClassNames = attrs => {
+export const getClassNames = (attrs) => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
   if (attrs.class && typeof attrs.class === 'string') {
@@ -33,17 +33,17 @@ export const getClassNames = attrs => {
  * @param {array} arrayOfClassnames
  * @returns {string}
  */
-export const combineClassNames = arrayOfClassnames => {
+export const combineClassNames = (arrayOfClassnames) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
   return classNameArray
-    .map(classItem => classItem.trim())
+    .map((classItem) => classItem.trim())
     .filter(Boolean)
     .filter((value, index, self) => self.indexOf(value) === index)
     .join(' ');
 };
 
-const toPascalCase = string =>
+const toPascalCase = (string) =>
   string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
 
 /**

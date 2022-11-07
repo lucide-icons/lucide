@@ -1,10 +1,10 @@
-import plugins from '../../rollup.plugins';
-import pkg from './package.json';
+import plugins from '../../rollup.plugins.mjs';
+import pkg from './package.json' assert { type: 'json' };
 
-const packageName = 'LucideVueNext';
-const outputFileName = 'lucide-vue-next';
+const packageName = 'LucideVue';
+const outputFileName = 'lucide-vue';
 const outputDir = 'dist';
-const inputs = ['src/lucide-vue-next.js'];
+const inputs = ['src/lucide-vue.js'];
 const bundles = [
   {
     format: 'umd',

@@ -2083,11 +2083,6 @@
     "automation",
     "maths"
   ],
-  "joystick": [
-    "game",
-    "console",
-    "control stick"
-  ],
   "gamepad": [
     "console"
   ],
@@ -2145,15 +2140,15 @@
     "code",
     "version control"
   ],
-  "git-pull-request-draft": [
-    "code",
-    "version control",
-    "draft"
-  ],
   "git-pull-request-closed": [
     "code",
     "version control",
     "rejected"
+  ],
+  "git-pull-request-draft": [
+    "code",
+    "version control",
+    "draft"
   ],
   "github": [
     "logo",
@@ -2249,6 +2244,13 @@
     "mist",
     "fog"
   ],
+  "heading": [],
+  "heading-1": [],
+  "heading-2": [],
+  "heading-3": [],
+  "heading-4": [],
+  "heading-5": [],
+  "heading-6": [],
   "headphones": [
     "music",
     "audio",
@@ -2828,12 +2830,6 @@
     "podcast",
     "microphone"
   ],
-  "mic-off": [
-    "record",
-    "sound",
-    "mute",
-    "microphone"
-  ],
   "mic-2": [
     "lyrics",
     "voice",
@@ -2844,6 +2840,12 @@
     "podcast",
     "karaoke",
     "singing",
+    "microphone"
+  ],
+  "mic-off": [
+    "record",
+    "sound",
+    "mute",
     "microphone"
   ],
   "microscope": [
@@ -3237,6 +3239,8 @@
     "music",
     "start"
   ],
+  "plug": [],
+  "plug-2": [],
   "plug-zap": [
     "charge",
     "charging",
@@ -3785,6 +3789,7 @@
     "audio",
     "music"
   ],
+  "spline": [],
   "sprout": [
     "leaf",
     "nature",
@@ -3816,6 +3821,13 @@
     "remove",
     "unrate"
   ],
+  "stethoscope": [
+    "phonendoscope",
+    "medical",
+    "heart",
+    "lungs",
+    "sound"
+  ],
   "sticker": [
     "reaction",
     "emotion",
@@ -3828,13 +3840,6 @@
     "comment",
     "reaction",
     "memo"
-  ],
-  "stethoscope": [
-    "phonendoscope",
-    "medical",
-    "heart",
-    "lungs",
-    "sound"
   ],
   "stop-circle": [
     "media",
