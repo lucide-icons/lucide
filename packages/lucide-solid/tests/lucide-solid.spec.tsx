@@ -11,7 +11,7 @@ describe('Using lucide icon components', () => {
 
   it('should adjust the size, stroke color and stroke width', async () => {
     const testId = 'grid-icon';
-    const { container, getByTestId } = render( () =>
+    const { container, getByTestId } = render(() =>
       <Grid
         data-testid={testId}
         size={48}
