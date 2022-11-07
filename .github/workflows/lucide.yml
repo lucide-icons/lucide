@@ -4,9 +4,11 @@ on:
   pull_request:
     paths:
       - packages/lucide/**
+      - pnpm-lock.yaml
   push:
     paths:
       - packages/lucide/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide:
