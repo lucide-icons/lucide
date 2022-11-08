@@ -2,18 +2,12 @@ import { promises as fs } from 'fs';
 import outlineStroke from 'svg-outline-stroke';
 import { parse, stringify } from 'svgson';
 import getArgumentOptions from 'minimist';
+import path from 'path';
 
-const inputDir = `./icons/`;
+const inputDir = path.join(process.cwd(), '../../icons');
 const cliArguments = getArgumentOptions(process.argv.slice(2));
-const { outputDir } = cliArguments;
-
-const widthMap = {
-  'converted_icons-200': '1',
-  'converted_icons-300': '1.5',
-  converted_icons: '2',
-  'converted_icons-500': '2.5',
-  'converted_icons-600': '3',
-};
+const { outputDir = 'outlined' } = cliArguments;
+const targetDir = path.join(process.cwd(), '../../', outputDir);
 
 function transformForward(node) {
   if (node.name === 'svg') {
@@ -43,12 +37,15 @@ function transformBackwards(node) {
 async function init() {
   console.time('icon outliner');
   try {
-    await fs.mkdir(`./${outputDir}`);
+    try {
+      await fs.mkdir(targetDir);
+    } catch (error) {} // eslint-disable-line no-empty
 
     const icons = await fs.readdir(inputDir);
     const parsedIconNodes = await Promise.all(
       icons.map(async (file) => {
-        const iconContent = await fs.readFile(`${inputDir}${file}`);
+        const inputFilePath = path.resolve(process.cwd(), inputDir, file);
+        const iconContent = await fs.readFile(inputFilePath);
         const iconNode = await parse(iconContent.toString(), {
           transformNode: transformForward,
         });
@@ -56,19 +53,15 @@ async function init() {
       }),
     );
 
-    if (widthMap?.[outputDir] === undefined) {
-      throw new Error(`Could not find the directory: ${outputDir}.`);
-    }
-
     await Promise.all(
       parsedIconNodes.map(async ([file, iconNode]) => {
-        iconNode.attributes['stroke-width'] = widthMap[outputDir];
         const outlined = await outlineStroke(stringify(iconNode));
         const outlinedWithoutAttrs = await parse(outlined, {
           transformNode: transformBackwards,
         });
 
-        await fs.writeFile(`./${outputDir}/${file}`, stringify(outlinedWithoutAttrs));
+        const filePath = path.join(targetDir, file);
+        await fs.writeFile(filePath, stringify(outlinedWithoutAttrs));
       }),
     );
 
