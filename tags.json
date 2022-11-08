@@ -1256,11 +1256,6 @@
     "backspace",
     "remove"
   ],
-  "dessert": [
-    "food",
-    "ice cream",
-    "dish"
-  ],
   "diamond": [
     "square",
     "rectangle",
@@ -2286,6 +2281,13 @@
   "ice-cream": [
     "gelato",
     "food"
+  ],
+  "ice-cream2": [
+    "food",
+    "ice cream",
+    "dish",
+    "dessert",
+    "sweet"
   ],
   "image": [
     "picture",
