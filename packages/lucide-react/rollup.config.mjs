@@ -47,7 +47,7 @@ const configs = bundles
         }),
         ...plugins(pkg, minify),
       ],
-      external: ['react', 'prop-types', 'lucide'],
+      external: ['react', 'prop-types'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -62,8 +62,7 @@ const configs = bundles
         preserveModules,
         globals: {
           react: 'react',
-          'prop-types': 'PropTypes',
-          lucide: 'lucide',
+          'prop-types': 'PropTypes'
         },
       },
     })),

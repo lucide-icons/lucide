@@ -1,0 +1,10 @@
+{
+  "name": "rollup-plugins",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "plugins.js",
+  "module": "plugins.js",
+  "author": "",
+  "license": "ISC"
+}

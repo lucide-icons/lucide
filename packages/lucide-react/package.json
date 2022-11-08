@@ -18,6 +18,21 @@
   "unpkg": "dist/umd/lucide-react.min.js",
   "typings": "dist/lucide-react.d.ts",
   "sideEffects": false,
+  "exports": {
+    "browser": {
+      "import": "./dist/es/lucide-react.js",
+      "require": "./index-require.cjs",
+      "default": "./dist/umd/lucide-react.js"
+    },
+    "node": {
+      "import": "./dist/esm/lucide-react.js",
+      "require": "./dist/cjs/lucide-react.js",
+      "default": "./dist/cjs/lucide-react.js"
+    },
+    "deno": {
+      "default": "./dist/es/lucide-react.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -39,11 +54,13 @@
     "@types/prop-types": "^15.7.5",
     "@types/react": "^18.0.21",
     "babel-preset-react-app": "^10.0.0",
+    "esbuild": "^0.15.13",
     "jest": "^26.6.3",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "typescript": "^4.8.3"
+    "rollup-plugin-esbuild": "^4.10.2",
+    "typescript": "^4.8.4"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",

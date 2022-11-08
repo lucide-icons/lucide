@@ -31,5 +31,9 @@
     "build:bundles": "rollup -c rollup.config.mjs",
     "test": "jest",
     "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-esbuild": "^4.10.2"
   }
 }
