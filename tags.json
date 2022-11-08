@@ -2918,6 +2918,16 @@
   "monitor-off": [
     "share"
   ],
+  "monitor-smartphone": [
+    "smartphone",
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "desktop",
+    "monitor",
+    "responsive"
+  ],
   "monitor-speaker": [
     "devices",
     "connect",
