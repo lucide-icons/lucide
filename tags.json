@@ -1278,15 +1278,6 @@
     "backspace",
     "remove"
   ],
-  "devices": [
-    "smartphone",
-    "phone",
-    "cellphone",
-    "device",
-    "mobile",
-    "desktop",
-    "monitor"
-  ],
   "diamond": [
     "square",
     "rectangle",
@@ -2924,6 +2915,16 @@
   ],
   "monitor-off": [
     "share"
+  ],
+  "monitor-smartphone": [
+    "smartphone",
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "desktop",
+    "monitor",
+    "responsive"
   ],
   "monitor-speaker": [
     "devices",
