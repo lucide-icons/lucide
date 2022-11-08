@@ -6,7 +6,7 @@ type Views = typeof views
 
 import useSearch, { Icon } from '../hooks/useSearch'
 
-import { getIcons } from '../api/fetchIcons'
+import { getIcons, iconFetchListener, LucideIcons } from '../api/fetchIcons'
 import './interface.scss'
 import Menu from '../components/Menu'
 
@@ -19,21 +19,19 @@ function App() {
 
   const searchResults = useMemo(() => useSearch(icons, tags, query), [icons, query])
 
-  const getLatestIcons = async () => {
-    const lucideIcons = await getIcons()
+  const handleFetchResponse = async (lucideIcons: LucideIcons) => {
+    const icons = Object.entries(lucideIcons.iconNodes)
 
-    setIcons(Object.entries(lucideIcons.iconNodes))
+    setIcons(icons)
     setTags(lucideIcons.tags)
     setVersion(lucideIcons.version)
   }
 
   useEffect(() => {
-    getLatestIcons()
-  }, [])
+    const removeListener = iconFetchListener(handleFetchResponse)
 
-  if(!icons.length) {
-    return null
-  }
+    return removeListener
+  }, [])
 
   const View = views?.[page as keyof Views] ?? views.icons
 

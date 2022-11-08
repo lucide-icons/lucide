@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue-next",
-  "version": "0.93.0",
+  "version": "0.98.0",
   "author": "Eric Fennis",
   "description": "A Lucide icon library package for Vue 3 applications",
   "license": "ISC",
@@ -30,7 +30,7 @@
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs  --renderUniqueKey",
     "build:es": "babel src -d dist/esm",
     "build:types": "node ./scripts/buildTypes.mjs",
-    "build:bundles": "rollup -c ./rollup.config.js",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "version": "pnpm version --git-tag-version=false"

@@ -10,9 +10,11 @@ Implementation of the lucide icon library for web applications.
 
 ```bash
 npm install lucide
+```
 
-#or
+or
 
+```sh
 yarn add lucide
 ```
 
@@ -24,9 +26,11 @@ Implementation of the lucide icon library for react applications.
 
 ```bash
 yarn add lucide-react
+```
 
-# or
+or
 
+```sh
 npm install lucide-react
 ```
 
@@ -38,9 +42,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```bash
 yarn add lucide-vue
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue
 ```
 
@@ -52,9 +58,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```bash
 yarn add lucide-vue-next
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue-next
 ```
 
@@ -66,9 +74,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```bash
 yarn add lucide-svelte
+```
 
-# or
+or
 
+```sh
 npm install lucide-svelte
 ```
 
@@ -78,9 +88,11 @@ For more details, see the [documentation](packages/lucide-svelte).
 
 ```bash
 yarn add lucide-angular
+```
 
-# or
+or
 
+```sh
 npm install lucide-angular
 ```
 
@@ -92,9 +104,11 @@ Implementation of the lucide icon library for preact applications.
 
 ```bash
 yarn add lucide-preact
+```
 
-# or
+or
 
+```sh
 npm install lucide-preact
 ```
 
@@ -106,7 +120,7 @@ The lucide figma plugin.
 
 Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
 
-![Setting Page Size](https://www.figma.com/community/plugin/939567362549682242/thumbnail "Figma Lucide Cover")
+![Setting Page Size](https://www.figma.com/community/plugin/939567362549682242/thumbnail 'Figma Lucide Cover')
 
 ## Laravel
 

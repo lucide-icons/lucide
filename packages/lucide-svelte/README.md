@@ -8,9 +8,11 @@ Implementation of the lucide icon library for svelte applications.
 
 ```sh
 yarn add lucide-svelte
+```
 
-# or
+or
 
+```sh
 npm install lucide-svelte
 ```
 
@@ -42,14 +44,14 @@ import { Camera } from 'lucide-svelte'
 
 ### Available props
 
-|  name          |   type   |  default
-| -------------- | -------- | --------
-| `size`         | *Number* | 24
-| `color`        | *String* | currentColor
-| `strokeWidth`  | *Number* | 2
-| `*<SVGProps>`  | *String* | -
+| name          | type     | default      |
+| ------------- | -------- | ------------ |
+| `size`        | _Number_ | 24           |
+| `color`       | _String_ | currentColor |
+| `strokeWidth` | _Number_ | 2            |
+| `*<SVGProps>` | _String_ | -            |
 
-* All SVGProps are available to style the svgs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)
+- All SVGProps are available to style the svgs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)
 
 ### Example of custom props
 
@@ -71,7 +73,7 @@ It is possible to create one generic icon component to load icons.
 
 #### Icon Component Example
 
-``` svelte
+```svelte
 <script>
   import * as icons from "lucide-svelte";
   export let name;
@@ -82,7 +84,7 @@ It is possible to create one generic icon component to load icons.
 
 ##### Then you can use it like this
 
-``` svelte
+```svelte
 <script>
   import LucideIcon from "./LucideIcon";
 </script>

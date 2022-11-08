@@ -36,11 +36,13 @@ export const getClassNames = (attrs: Record<string, string> | string): string | 
  * @param {array} arrayOfClassnames
  * @returns {string}
  */
-export const combineClassNames = (arrayOfClassnames: (string | Record<string, string>)[]) => {
+export const combineClassNames = (
+  arrayOfClassnames: (string | Record<string, string>)[]
+) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
   return classNameArray
-    .map(classItem => classItem.trim())
+    .map((classItem) => classItem.trim())
     .filter(Boolean)
     .filter((value, index, self) => self.indexOf(value) === index)
     .join(' ');

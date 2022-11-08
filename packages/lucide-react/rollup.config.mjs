@@ -1,12 +1,11 @@
-import dts from 'rollup-plugin-dts';
-// import typescript from '@rollup/plugin-typescript';
+import plugins from '../../rollup.plugins.mjs';
 import esbuild from 'rollup-plugin-esbuild';
-import plugins from '../../rollup.plugins';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
-const outputFileName = pkg.name;
-const outputDir = 'dist';
-const inputs = ['src/lucide.ts'];
+const packageName = 'LucideReact';
+const outputFileName = 'lucide-react';
+const outputDir = `dist`;
+const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
     format: 'umd',
@@ -39,29 +38,21 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, preserveModulesRoot }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
       plugins: [
-        // typescript(
-        //   preserveModules && {
-        //     compilerOptions: {
-        //       outDir: `${outputDir}/${format}`,
-        //       rootDir: 'src',
-        //     },
-        //   },
-        // ),
         esbuild({
           minify,
         }),
         ...plugins(pkg, minify),
       ],
+      external: ['react', 'prop-types', 'lucide'],
       output: {
-        name: outputFileName,
+        name: packageName,
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
-              preserveModulesRoot,
             }
           : {
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
@@ -69,24 +60,14 @@ const configs = bundles
         format,
         sourcemap: true,
         preserveModules,
+        globals: {
+          react: 'react',
+          'prop-types': 'PropTypes',
+          lucide: 'lucide',
+        },
       },
     })),
   )
   .flat();
 
-const typesFileConfig = {
-  input: inputs[0],
-  output: [
-    {
-      file: `${outputDir}/${outputFileName}.d.ts`,
-      format: 'es',
-    },
-  ],
-  plugins: [
-    dts({
-      include: ['src'],
-    }),
-  ],
-};
-
-export default [...configs, typesFileConfig];
+export default configs;

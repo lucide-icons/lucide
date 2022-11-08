@@ -1,11 +1,11 @@
-import plugins from '../../rollup.plugins';
+import dts from 'rollup-plugin-dts';
+import plugins from '../../rollup.plugins.mjs';
 import esbuild from 'rollup-plugin-esbuild';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
-const packageName = 'LucideReact';
-const outputFileName = 'lucide-react';
-const outputDir = `dist`;
-const inputs = [`src/lucide-react.ts`];
+const outputFileName = pkg.name;
+const outputDir = 'dist';
+const inputs = ['src/lucide.ts'];
 const bundles = [
   {
     format: 'umd',
@@ -38,21 +38,29 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, preserveModulesRoot }) =>
     inputs.map(input => ({
       input,
       plugins: [
+        // typescript(
+        //   preserveModules && {
+        //     compilerOptions: {
+        //       outDir: `${outputDir}/${format}`,
+        //       rootDir: 'src',
+        //     },
+        //   },
+        // ),
         esbuild({
           minify,
         }),
         ...plugins(pkg, minify),
       ],
-      external: ['react', 'prop-types', 'lucide'],
       output: {
-        name: packageName,
+        name: outputFileName,
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              preserveModulesRoot,
             }
           : {
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
@@ -60,14 +68,24 @@ const configs = bundles
         format,
         sourcemap: true,
         preserveModules,
-        globals: {
-          react: 'react',
-          'prop-types': 'PropTypes',
-          lucide: 'lucide',
-        },
       },
     })),
   )
   .flat();
 
-export default configs;
+const typesFileConfig = {
+  input: inputs[0],
+  output: [
+    {
+      file: `${outputDir}/${outputFileName}.d.ts`,
+      format: 'es',
+    },
+  ],
+  plugins: [
+    dts({
+      include: ['src'],
+    }),
+  ],
+};
+
+export default [...configs, typesFileConfig];

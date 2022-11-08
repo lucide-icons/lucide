@@ -1,6 +1,5 @@
 import { Button, Flex, Link, WrapItem, Text, Wrap, Heading } from '@chakra-ui/react';
 import download from 'downloadjs';
-import JSZip from 'jszip';
 import { Download, Github } from 'lucide-react';
 import NextLink from 'next/link';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
@@ -12,7 +11,6 @@ import PreactLogo from '../../public/framework-logos/preact.svg';
 import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
-import LaravelLogo from '../../public/framework-logos/laravel.svg';
 import { useState } from 'react';
 import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconEntity } from '../types';
@@ -20,6 +18,8 @@ import { IconEntity } from '../types';
 type IconContent = [icon: string, src:string];
 
 async function generateZip(icons: IconContent[]) {
+  const JSZip = (await import('jszip')).default
+
   const zip = new JSZip();
 
   const addingZipPromises = icons.map(([name, src]) =>
@@ -74,6 +74,12 @@ const Header = ({ data }: HeaderProps) => {
       label: 'Lucide documentation for React',
     },
     {
+      name: 'lucide-react-native',
+      Logo: ReactLogo,
+      href: '/docs/lucide-react-native',
+      label: 'Lucide documentation for React Native',
+    },
+    {
       name: 'lucide-vue',
       Logo: VueLogo,
       href: '/docs/lucide-vue',
@@ -108,12 +114,6 @@ const Header = ({ data }: HeaderProps) => {
       Logo: FlutterLogo,
       href: '/docs/lucide-flutter',
       label: 'Lucide documentation for Flutter',
-    },
-    {
-      name: 'lucide-laravel',
-      Logo: LaravelLogo,
-      href: 'https://github.com/mallardduck/blade-lucide-icons',
-      label: 'Lucide documentation for Laravel',
     },
   ];
 
@@ -159,6 +159,13 @@ const Header = ({ data }: HeaderProps) => {
             </NextLink>
           </WrapItem>
         ))}
+        <WrapItem>
+          <NextLink href="/packages" passHref>
+            <Link _hover={{ opacity: 0.8 }} marginX="auto">
+              <Text fontSize="md" opacity={0.5}>More options</Text>
+            </Link>
+          </NextLink>
+        </WrapItem>
       </Wrap>
       <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
         <WrapItem>

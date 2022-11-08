@@ -2,14 +2,13 @@ import path from 'path';
 
 import {
   readSvgDirectory,
-  resetFile,
   appendFile,
   writeFile,
   toPascalCase,
   getCurrentDirPath,
 } from '../../../scripts/helpers.mjs';
 
-const currentDir = getCurrentDirPath(import.meta.url)
+const currentDir = getCurrentDirPath(import.meta.url);
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -77,7 +76,7 @@ writeFile(typeDefinitions, TYPES_FILE_NAME, TARGET_DIR);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-svgFiles.forEach(svgFile => {
+svgFiles.forEach((svgFile) => {
   const nameSvg = path.basename(svgFile, '.svg');
   const namePascal = toPascalCase(nameSvg);
 

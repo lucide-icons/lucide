@@ -4,16 +4,18 @@ on:
   pull_request:
     paths:
       - packages/lucide-react-native/**
+      - pnpm-lock.yaml
   push:
     paths:
       - packages/lucide-react-native/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-react-native:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3.4.1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
 
@@ -45,4 +47,3 @@ jobs:
 
       - name: Test
         run: pnpm --filter lucide-react-native test
-

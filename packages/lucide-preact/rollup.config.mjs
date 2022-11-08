@@ -1,10 +1,10 @@
-import plugins from '../../rollup.plugins';
-import pkg from './package.json';
+import plugins from '../../rollup.plugins.mjs';
+import pkg from './package.json' assert { type: "json" };
 
-const packageName = 'LucideVueNext';
-const outputFileName = 'lucide-vue-next';
+const packageName = 'LucidePreact';
+const outputFileName = 'lucide-preact';
 const outputDir = 'dist';
-const inputs = ['src/lucide-vue-next.js'];
+const inputs = [`src/lucide-preact.js`];
 const bundles = [
   {
     format: 'umd',
@@ -29,14 +29,15 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['vue'],
+      external: ['preact', 'prop-types'],
       output: {
         name: packageName,
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,
         globals: {
-          vue: 'vue',
+          preact: 'preact',
+          'prop-types': 'PropTypes',
         },
       },
     })),

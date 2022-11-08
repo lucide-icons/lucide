@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
  * @param {string} string
  * @returns {string} A camelized string
  */
-export const toCamelCase = string =>
+export const toCamelCase = (string) =>
   string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
     p2 ? p2.toUpperCase() : p1.toLowerCase(),
   );
@@ -19,7 +19,7 @@ export const toCamelCase = string =>
  * @param {string} string
  * @returns {string} A pascalized string
  */
-export const toPascalCase = string => {
+export const toPascalCase = (string) => {
   const camelCase = toCamelCase(string);
 
   return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
@@ -31,7 +31,7 @@ export const toPascalCase = string => {
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 /**
  * Resets the file contents.
@@ -48,7 +48,7 @@ export const resetFile = (fileName, outputDirectory) =>
  * @param {string} path
  * @returns {string} The contents of a file
  */
-export const readFile = entry => fs.readFileSync(path.resolve(__dirname, '../', entry), 'utf-8');
+export const readFile = (entry) => fs.readFileSync(path.resolve(__dirname, '../', entry), 'utf-8');
 
 /**
  * append content to a file
@@ -76,8 +76,8 @@ export const writeFile = (content, fileName, outputDirectory) =>
  * @param {string} directory
  * @returns {array} An array of file paths containig svgs
  */
-export const readSvgDirectory = directory =>
-  fs.readdirSync(directory).filter(file => path.extname(file) === '.svg');
+export const readSvgDirectory = (directory) =>
+  fs.readdirSync(directory).filter((file) => path.extname(file) === '.svg');
 
 /**
  * Read svg from directory
@@ -133,12 +133,12 @@ export const generateHashedKey = ({ name, attributes }) => hash(JSON.stringify([
  * @param {array} children an array of items
  * @returns {Boolean} if items contains duplicated items.
  */
-export const hasDuplicatedChildren = children => {
+export const hasDuplicatedChildren = (children) => {
   const hashedKeys = children.map(generateHashedKey);
 
   return !hashedKeys.every(
-    (key, index) => index === hashedKeys.findIndex(childKey => childKey === key),
+    (key, index) => index === hashedKeys.findIndex((childKey) => childKey === key),
   );
 };
 
-export const getCurrentDirPath = currentPath => path.dirname(fileURLToPath(currentPath));
+export const getCurrentDirPath = (currentPath) => path.dirname(fileURLToPath(currentPath));
