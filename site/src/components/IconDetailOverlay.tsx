@@ -22,7 +22,6 @@ interface IconDetailOverlayProps {
 const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
-  console.log(icon);
 
   const { tags = [], name } = icon ?? {};
   const {color, strokeWidth, size} = useCustomizeIconContext();

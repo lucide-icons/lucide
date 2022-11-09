@@ -30,7 +30,6 @@ const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
     <>
       <HStack position="sticky" top={4} zIndex={1} gap={2}>
         <IconButton
-          // size="sm"
           aria-label="Close overlay"
           variant="solid"
           color="current"
