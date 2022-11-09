@@ -1,19 +1,25 @@
 import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import download from 'downloadjs';
-import copy from "copy-to-clipboard";
 import { X as Close } from 'lucide-react';
 import { useEffect, useRef } from "react";
 import {useCustomizeIconContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
+import { IconEntity } from "../types";
 
 type IconDownload = {
   src: string;
   name: string;
 };
 
-const IconDetailOverlay = ({ open = true, close, icon }) => {
+interface IconDetailOverlayProps {
+  open: boolean
+  close: () => void
+  icon?: IconEntity
+}
+
+const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
   const { tags = [], name } = icon;
@@ -21,11 +27,6 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
   const { isOpen, onOpen, onClose } = useDisclosure()
-
-  const handleClose = () => {
-    onClose();
-    close();
-  };
 
   useEffect(() => {
     console.log(icon);
@@ -38,7 +39,16 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
     }
   }, [open])
 
-  const iconStyling = (isLight) => ({
+  if(icon == null) {
+    return null
+  }
+
+  const handleClose = () => {
+    onClose();
+    close();
+  };
+
+  const iconStyling = {
     height: "25vw",
     width: "25vw",
     minHeight: "160px",
@@ -46,12 +56,15 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
     maxHeight: "240px",
     maxWidth: "240px",
     color: color,
-  });
+  };
 
-  const downloadIcon = ({src, name} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
+  const downloadIcon = ({src, name = ''} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
 
-  const copyIcon = ({src, name} : IconDownload) => {
-    copy(src);
+  const copyIcon = async ({src, name} : IconDownload) => {
+    const trimmedSrc = src.replace(/(\r\n|\n|\r|\s\s)/gm, "")
+
+    await navigator.clipboard.writeText(trimmedSrc)
+
     toast({
       title: "Copied!",
       description: `Icon "${name}" copied to clipboard.`,
@@ -100,7 +113,6 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
         w="full"
         px={8}
       >
-
           <Box
             borderWidth="1px"
             rounded="lg"
@@ -140,11 +152,11 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
                   padding={0}
                 >
                   <div
-                    style={iconStyling(colorMode == "light")}
+                    style={iconStyling}
                     className="icon-large"
                   >
                     <IconWrapper
-                      content={icon.content}
+                      src={icon.src}
                       stroke={color}
                       strokeWidth={strokeWidth}
                       height={size}
@@ -221,8 +233,8 @@ const IconDetailOverlay = ({ open = true, close, icon }) => {
                       </Heading>
                       <AvatarGroup size="md">
                         { icon.contributors.map((commit, index) => (
-                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.sha}`}>
-                            <Tooltip label={commit.author} key={commit.sha}>
+                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.author}`}>
+                            <Tooltip label={commit.author} key={commit.author}>
                               <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
                             </Tooltip>
                           </Link>

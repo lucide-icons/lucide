@@ -37,7 +37,7 @@ const calculateLinesToHighlight = (meta: string) => {
   };
 };
 
-interface HighlightProps {
+interface HighlightProps extends BoxProps {
   code: string;
   language: Language;
   metastring?: string;

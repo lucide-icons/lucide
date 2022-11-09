@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 .next
 .obsidian
 .now
@@ -11,5 +12,7 @@ stash
 coverage
 stats
 *.log
+outlined
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
+packages/**/LICENSE

@@ -1,5 +1,4 @@
 export interface IconEntity {
-  content: string;
   contributors: Contributor[];
   name: string;
   src: string;
@@ -8,5 +7,4 @@ export interface IconEntity {
 
 export interface Contributor {
   author: string;
-  commit: string;
 }

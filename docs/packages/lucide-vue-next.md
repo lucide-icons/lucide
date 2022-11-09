@@ -2,7 +2,7 @@
 
 Implementation of the lucide icon library for Vue 3 applications.
 
-> ⚠️ This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue-next](lucide-vue)
+> ⚠️ This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue](lucide-vue)
 
 ## Installation
 
@@ -20,7 +20,7 @@ npm install lucide-vue-next
 
 ## How to use
 
-It's build with ESmodules so it's completely threeshakable.
+It's build with ESmodules so it's completely tree-shakable.
 Each icon can be imported as a vue component.
 
 ### Example
@@ -35,15 +35,8 @@ You can pass additional props to adjust the icon.
   />
 </template>
 
-<script>
-// Returns Vue component
+<script setup>
 import { Camera } from 'lucide-vue-next';
-
-export default {
-  name: "My Component",
-  components: { Camera }
-}
-
 </script>
 ```
 
@@ -53,8 +46,8 @@ export default {
 | ------------ | -------- | --------
 | `size`       | *Number* | 24
 | `color`      | *String* | currentColor
-| `strokeWidth`| *Number* | 2
-| `defaultClass`| *String* | lucide-icon
+| `stroke-width`| *Number* | 2
+| `default-class`| *String* | lucide-icon
 
 ### Custom props
 
@@ -76,25 +69,25 @@ It is possible to create one generic icon component to load icons.
 
 ``` html
 <template>
-  <component :is="icon" />
+    <component :is="icon" :size="size" :color="color" :stroke-width="strokeWidth" :default-class="defaultClass" />
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
 import * as icons from "lucide-vue-next";
 
-export default {
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
   },
-  setup(props) {
-    const icon = computed(() => icons[props.name])
+  size: Number,
+  color: String,
+  strokeWidth: Number,
+  defaultClass: String
+})
 
-    return { icon }
-  }
-};
+const icon = computed(() => icons[props.name]);
 </script>
 ```
 
@@ -107,3 +100,4 @@ export default {
   </div>
 </template>
 ```
+All other props listed above also work on the `Icon` Component.

@@ -6,11 +6,17 @@ import IconDetailOverlay from '../components/IconDetailOverlay';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
+import { GetStaticPropsResult, NextPage } from 'next';
+import { IconEntity } from '../types';
 
-const IndexPage = ({ data }) => {
+interface HomePageProps {
+  data: IconEntity[]
+}
+
+const HomePage: NextPage<HomePageProps> = ({ data }) => {
   const router = useRouter();
-  const getIcon = iconName => data.find(({ name }) => name === iconName) || {};
+  const getIcon = iconName => data.find(({ name }) => name === iconName);
 
   const currentIcon = useMemo(() => {
     return getIcon(router.query.iconName)
@@ -36,7 +42,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
   const data = await getAllData();
 
   return {
@@ -46,4 +52,4 @@ export async function getStaticProps() {
   };
 }
 
-export default IndexPage;
+export default HomePage;

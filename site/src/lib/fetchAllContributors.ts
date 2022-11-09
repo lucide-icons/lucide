@@ -1,12 +1,13 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
+import { Contributor } from '../types';
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
 function getContentHashOfFile(path) {
   return new Promise((resolve, reject) => {
-    const hash = crypto.createHash('md4');
+    const hash = crypto.createHash('sha256');
     const stream = fs.createReadStream(path);
     stream.on('error', err => reject(err));
     stream.on('data', chunk => hash.update(chunk));
@@ -14,15 +15,15 @@ function getContentHashOfFile(path) {
   });
 }
 
-const fetchCommitsOfIcon = (name) =>
-  new Promise(async (resolve, reject) => {
+const fetchCommitsOfIcon = async (name) =>{
     try {
       const headers = new Headers();
-      const username = 'ericfennis';
+      const token = process.env.GITHUB_TOKEN;
+      const username = process.env.GITHUB_USERNAME;
       const password = process.env.GITHUB_API_KEY;
       headers.set(
         'Authorization',
-        `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
+        token ? `Bearer ${token}` : `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
       );
 
       const res = await fetch(
@@ -35,24 +36,23 @@ const fetchCommitsOfIcon = (name) =>
 
       const data = await res.json();
 
-      resolve({
+      return {
         name,
         commits: data,
-      });
+      };
     } catch (error) {
 
-      reject(error);
+      throw new Error(error);
     }
-  });
+  };
 
 export const filterCommits = (commits) =>
   commits.filter(({ commit }) =>
     !IGNORE_COMMIT_MESSAGES.some(ignoreItem =>
       commit.message.toLowerCase().includes(ignoreItem),
     ))
-  .map(({ sha, author, commit }) => ({
+  .map(({ author }) => ({
     author: author && author.login ? author.login : null,
-    commit: sha,
   }))
   .filter(({ author }, index, self) => self.findIndex((commit) => commit.author === author) === index);
 
@@ -86,7 +86,7 @@ async function writeIconCache(icon, content) {
   fs.writeFileSync(iconCachePath, JSON.stringify(content), 'utf-8');
 }
 
-export async function getContributors(icon) {
+export async function getContributors(icon): Promise<Contributor[]> {
   try {
     let iconCommits
     const iconCache = await checkIconCache(icon);
@@ -94,7 +94,7 @@ export async function getContributors(icon) {
     if (iconCache) {
       iconCommits = iconCache
     } else {
-      const { commits } : any = await fetchCommitsOfIcon(icon);
+      const { commits } = await fetchCommitsOfIcon(icon);
 
       writeIconCache(icon, commits)
 

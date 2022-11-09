@@ -127,6 +127,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
           <Divider mb={6} mt={12} />
           <p style={{ alignSelf: 'center' }}>
             <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
             </a>
           </p>

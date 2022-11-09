@@ -21,11 +21,11 @@ const DEFAULT_STYLE = {
 
 export const IconStyleContext = createContext<ICustomIconStyle>({
   color: 'currentColor',
-  setColor: (s: string) => null,
+  setColor: () => null,
   strokeWidth: 2,
-  setStroke: (n: number) => null,
+  setStroke: () => null,
   size: 24,
-  setSize: (n: number) => null,
+  setSize: () => null,
   resetStyle: () => null,
   iconsRef: { current: {} },
 });

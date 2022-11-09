@@ -1,4 +1,3 @@
-import { mount } from '@vue/test-utils'
 import {render, fireEvent} from '@testing-library/vue'
 import { Smile } from '../src/icons'
 

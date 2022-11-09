@@ -1,15 +1,11 @@
-/* eslint-disable no-undef */
+/* eslint-disable */
 module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: {
-        and: [/\.(js|ts)x?$/],
-      },
-
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"]
     });
 
     return config;
-  },
+  }
 };

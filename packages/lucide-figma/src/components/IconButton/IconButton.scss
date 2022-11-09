@@ -6,9 +6,11 @@
   border-radius: 2px;
   appearance: none;
   outline: 0;
+
   &:hover {
     background: rgba(0, 0, 0, 0.06);
   }
+
   &:focus,
   &:active {
     box-shadow: inset 0 0 0 2px var(--color-blue);

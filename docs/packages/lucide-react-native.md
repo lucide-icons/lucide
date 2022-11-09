@@ -8,15 +8,17 @@ First, ensure that you have `react-native-svg@^12.0.0` installed. Then, install 
 
 ```bash
 yarn add lucide-react-native
+```
 
-# or
+or
 
+```sh
 npm install lucide-react-native
 ```
 
 ## How to use
 
-It's build with ESmodules so it's completely threeshakable.
+It's build with ESmodules so it's completely tree-shakable.
 Each icon can be imported as a react component.
 
 ### Example
