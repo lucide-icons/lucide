@@ -18,9 +18,9 @@ export interface LucideProps extends SVGAttributes {
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string: string): string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createReactComponent = (iconName: string, iconNode: IconNode) => {
+export function createReactComponent (iconName: string, iconNode: IconNode) {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
     ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }, ref) =>
       createElement(
@@ -54,5 +54,3 @@ const createReactComponent = (iconName: string, iconNode: IconNode) => {
 
   return Component;
 };
-
-export default createReactComponent

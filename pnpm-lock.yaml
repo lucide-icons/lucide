@@ -75,10 +75,10 @@ importers:
   packages/lucide:
     specifiers:
       rollup-plugin-dts: ^5.0.0
-      rollup-plugin-esbuild: ^4.10.2
+      rollup-plugin-esbuild: ^5.0.0
     devDependencies:
       rollup-plugin-dts: 5.0.0_oa2candk7eitu7usnsurwiyuuu
-      rollup-plugin-esbuild: 4.10.2_b76bwh2xfplsy4n4t42ms6ttgm
+      rollup-plugin-esbuild: 5.0.0_b76bwh2xfplsy4n4t42ms6ttgm
 
   packages/lucide-angular:
     specifiers:
@@ -187,6 +187,7 @@ importers:
       babel-preset-react-app: ^10.0.0
       esbuild: ^0.15.13
       jest: ^26.6.3
+      lucide: workspace:lucide
       prop-types: ^15.7.2
       react: 17.0.2
       react-dom: 17.0.2
@@ -20522,12 +20523,30 @@ packages:
       '@rollup/pluginutils': 4.2.1
       esbuild: 0.9.7
       joycon: 3.1.1
-      jsonc-parser: 3.1.0
+      jsonc-parser: 3.2.0
       rollup: 2.77.2
     dev: true
 
   /rollup-plugin-esbuild/4.10.2_b76bwh2xfplsy4n4t42ms6ttgm:
     resolution: {integrity: sha512-OPrBgdN1ZC2zQvq/rm5Zvzpb0Rez7zbbVJ+1b5Az//kLlfhwR1mqOP3wAhkg9sn5nF7p+97p55TORE0RNXzNcw==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    peerDependencies:
+      esbuild: '>=0.10.1'
+      rollup: ^1.20.0 || ^2.0.0 || ^3.0.0
+    dependencies:
+      '@rollup/pluginutils': 5.0.2_rollup@3.2.5
+      debug: 4.3.4
+      es-module-lexer: 1.1.0
+      esbuild: 0.15.13
+      joycon: 3.1.1
+      jsonc-parser: 3.2.0
+      rollup: 3.2.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /rollup-plugin-esbuild/5.0.0_b76bwh2xfplsy4n4t42ms6ttgm:
+    resolution: {integrity: sha512-1cRIOHAPh8WQgdQQyyvFdeOdxuiyk+zB5zJ5+YOwrZP4cJ0MT3Fs48pQxrZeyZHcn+klFherytILVfE4aYrneg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     peerDependencies:
       esbuild: '>=0.10.1'

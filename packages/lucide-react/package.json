@@ -68,6 +68,7 @@
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.5.1 || ^17.0.0 || ^18.0.0"
+    "react": "^16.5.1 || ^17.0.0 || ^18.0.0",
+    "lucide": "workspace:lucide:~0.98.0"
   }
 }

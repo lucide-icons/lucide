@@ -9,9 +9,20 @@
     "target": "ESNext",
     "esModuleInterop": true,
     "allowJs": true,
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "./dist",
-  }
+    "typeRoots": [
+      "./typings"
+    ],
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": [
+    "src/*",
+    "typings/*"
+  ]
 }

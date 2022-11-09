@@ -1,6 +1,3 @@
-import { IconNode, IconNodeChild, SVGProps } from "./types";
-
-
 /**
  * Creates a new HTMLElement from icon node
  * @param {string} tag
