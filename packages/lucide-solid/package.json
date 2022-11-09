@@ -30,7 +30,7 @@
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test:jest": "jest",
-    "test": "vitest",
+    "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {

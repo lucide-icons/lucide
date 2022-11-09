@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import React from 'react';
 import { render } from '@testing-library/react'
 import { Grid } from '../src/icons'
@@ -20,7 +21,7 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const { attributes } = getByTestId(testId);
+    const { attributes } = getByTestId(testId) as unknown as{ attributes: Record<string, { value: string }>};
     expect(attributes.stroke.value).toBe('red');
     expect(attributes.width.value).toBe('48');
     expect(attributes.height.value).toBe('48');
