@@ -49,8 +49,8 @@ const IconListItem = ({ name, onClick, src: svg }: IconListItemProps) => {
         key={name}
         alignItems="center"
       >
-        <Flex direction="column" align="center" justify="stretch" width="100%" gap={4}>
-          <Flex flex={2} flexBasis="100%" minHeight={10} align="flex-end">
+        {/* <Flex direction="column" align="center" justify="stretch" width="100%" gap={4}> */}
+          {/* <Flex flex={2} flexBasis="100%" minHeight={10} align="flex-end"> */}
             <IconWrapper
               src={svg}
               stroke={color}
@@ -59,13 +59,13 @@ const IconListItem = ({ name, onClick, src: svg }: IconListItemProps) => {
               width={size}
               ref={iconEl => (iconsRef.current[name] = iconEl)}
             />
-          </Flex>
-          <Flex flex={1} minHeight={10} align="center">
+          {/* </Flex> */}
+          {/* <Flex flex={1} minHeight={10} align="center">
             <Text wordBreak="break-word" maxWidth="100%">
               {name}
             </Text>
-          </Flex>
-        </Flex>
+          </Flex> */}
+        {/* </Flex> */}
       </Button>
     </Tooltip>
   );

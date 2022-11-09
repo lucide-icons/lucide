@@ -118,7 +118,7 @@ const Header = ({ data }: HeaderProps) => {
   ];
 
   return (
-    <Flex direction="column" align="center" justify="center">
+    <Flex direction="column" align="center" justify="center" py={12}>
       <Heading as="h1" fontSize="4xl" mb="4" textAlign="center">
         Beautiful &amp; consistent icon toolkit made by the community.
       </Heading>

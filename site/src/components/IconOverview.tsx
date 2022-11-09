@@ -42,16 +42,6 @@ const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
       </HStack>
 
       <HStack marginTop={5} marginBottom="320px">
-        <Box
-          display={categoryView ? 'none' : 'block'}
-          alignSelf="flex-start"
-          // transition="ease-in width 160ms .1s"
-          willChange="width"
-        >
-          <Box width={240} position="sticky" top={64}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, inventore.
-          </Box>
-        </Box>
         <Box flex={1}>
           {searchResults.length > 0 ? (
             categoryView ? (

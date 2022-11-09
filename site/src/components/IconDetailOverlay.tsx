@@ -22,16 +22,13 @@ interface IconDetailOverlayProps {
 const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
-  const { tags = [], name } = icon;
+  console.log(icon);
+
+  const { tags = [], name } = icon ?? {};
   const {color, strokeWidth, size} = useCustomizeIconContext();
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
   const { isOpen, onOpen, onClose } = useDisclosure()
-
-  useEffect(() => {
-    console.log(icon);
-
-  }, [icon])
 
   useEffect(() => {
     if(open) {
