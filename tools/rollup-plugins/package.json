@@ -1,10 +1,14 @@
 {
-  "name": "rollup-plugins",
+  "name": "@lucide/rollup-plugins",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "plugins.js",
   "module": "plugins.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "rollup-plugin-esbuild": "^4.10.2"
+  }
 }

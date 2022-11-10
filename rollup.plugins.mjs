@@ -22,6 +22,7 @@ const plugins = (pkg, minify) =>
     //   babelHelpers: 'bundled',
     // }),
     // minify && terser(),
+
     license({
       banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
     }),

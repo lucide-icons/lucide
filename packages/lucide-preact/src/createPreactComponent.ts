@@ -1,5 +1,14 @@
-import { h, toChildArray } from 'preact';
+import { ComponentType, h, JSX, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
+
+type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
+
+interface LucideProps extends Omit<JSX.SVGAttributes<SVGElement>, "ref" | "size"> {
+  size?: string | number
+  color: string
+}
+
+
 
 /**
  * Converts string to KebabCase
@@ -9,18 +18,20 @@ import defaultAttributes from './defaultAttributes';
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-export default (iconName, iconNode) => {
-  const Component = ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }) =>
+const createPreactComponent = (iconName: string, iconNode: IconNode) => {
+  const Component = (
+    { color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }: LucideProps
+  ) =>
     h(
-      'svg',
+      'svg' as unknown as ComponentType<Partial<JSX.SVGAttributes<SVGElement> & { 'stroke-width': number | string }>>,
       {
         ...defaultAttributes,
-        width: size,
+        width:  String(size),
         height: size,
         stroke: color,
-        'stroke-width': strokeWidth,
+        ['stroke-width' as 'strokeWidth']: strokeWidth,
         class: `lucide lucide-${toKebabCase(iconName)}`,
         ...rest,
       },
@@ -31,3 +42,5 @@ export default (iconName, iconNode) => {
 
   return Component;
 };
+
+export default createPreactComponent

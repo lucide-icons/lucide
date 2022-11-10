@@ -1,3 +1,3 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`combineClassNames should retuns a string of classNames 1`] = `"item item1 item2 item3 item4 item5 item6 item7 item8 item9"`;
+exports[`combineClassNames > should retuns a string of classNames 1`] = `"item item1 item2 item3 item4 item5 item6 item7 item8 item9"`;

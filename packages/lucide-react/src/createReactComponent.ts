@@ -2,7 +2,6 @@ import { forwardRef, createElement, ReactSVG, SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import defaultAttributes from './defaultAttributes';
 
-
 type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>
