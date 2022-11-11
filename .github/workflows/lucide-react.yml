@@ -38,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Prepare lucide package
+        run: pnpm --filter lucide build
+
       - name: Build
         run: pnpm --filter lucide-react build
 
