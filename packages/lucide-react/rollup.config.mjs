@@ -1,5 +1,4 @@
-import plugins from '../../rollup.plugins.mjs';
-import esbuild from 'rollup-plugin-esbuild';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideReact';
@@ -33,7 +32,6 @@ const bundles = [
     inputs,
     outputDir,
     preserveModules: true,
-    preserveModulesRoot: 'src',
   },
 ];
 
@@ -41,12 +39,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        esbuild({
-          minify,
-        }),
-        ...plugins(pkg, minify),
-      ],
+      plugins: plugins(pkg, minify),
       external: ['react', 'prop-types'],
       output: {
         name: packageName,

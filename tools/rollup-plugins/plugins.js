@@ -4,6 +4,7 @@ import bundleSize from '@atomico/rollup-plugin-sizes';
 import { visualizer } from 'rollup-plugin-visualizer';
 import license from 'rollup-plugin-license';
 import replace from '@rollup/plugin-replace';
+import esbuild from 'rollup-plugin-esbuild';
 // import resolve from '@rollup/plugin-node-resolve';
 // import commonJS from '@rollup/plugin-commonjs';
 
@@ -22,6 +23,9 @@ const plugins = (pkg, minify) =>
     //   babelHelpers: 'bundled',
     // }),
     // minify && terser(),
+    esbuild({
+      minify,
+    }),
     license({
       banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
     }),
