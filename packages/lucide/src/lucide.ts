@@ -35,3 +35,5 @@ export { default as createElement } from './createElement';
 */
 export { allIcons as icons };
 export * from './icons';
+export * from './types'
+export * from './defaultAttributes'

@@ -16,13 +16,6 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "typeRoots": [
-      "./typings"
-    ],
     "forceConsistentCasingInFileNames": true,
-  },
-  "include": [
-    "src/*",
-    "typings/*"
-  ]
+  }
 }

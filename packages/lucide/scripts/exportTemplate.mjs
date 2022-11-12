@@ -1,9 +1,10 @@
 export default ({ componentName, children }) => `
-import defaultAttributes from '../defaultAttributes';
+import { IconNode } from "../types";
+import { DEFAULT_ATTRIBUTES } from '../defaultAttributes';
 
 const ${componentName}: IconNode = [
   'svg',
-  defaultAttributes,
+  DEFAULT_ATTRIBUTES,
   ${JSON.stringify(children)}
 ];
 

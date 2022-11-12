@@ -1,4 +1,6 @@
-const defaultAttributes: SVGProps = {
+import { SVGProps } from "./types";
+
+export const DEFAULT_ATTRIBUTES: SVGProps = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: 24,
   height: 24,
@@ -9,5 +11,3 @@ const defaultAttributes: SVGProps = {
   'stroke-linecap': 'round',
   'stroke-linejoin': 'round',
 };
-
-export default defaultAttributes
