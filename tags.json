@@ -2488,6 +2488,11 @@
   "subscript": [
     "text"
   ],
+  "subtitles": [
+    "captions",
+    "closed captions",
+    "accessibility"
+  ],
   "sun": [
     "brightness",
     "weather",
