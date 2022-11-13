@@ -7,35 +7,44 @@ import license from 'rollup-plugin-license';
 import resolve from '@rollup/plugin-node-resolve';
 import commonJS from '@rollup/plugin-commonjs';
 import pkg from './package.json' assert { type: 'json' };
+import plugins from '@lucide/rollup-plugins';
 
 const packageName = 'LucideSvelte';
 const outputFileName = 'lucide-svelte';
 const outputDir = 'dist';
-const inputs = ['./src/lucide-svelte.js'];
+const inputs = ['./src/lucide-svelte.ts'];
 const bundles = [
   {
     format: 'umd',
     inputs,
     outputDir,
     minify: true,
-    sourcemap: true,
   },
   {
     format: 'umd',
     inputs,
     outputDir,
-    sourcemap: true,
   },
   {
     format: 'cjs',
     inputs,
     outputDir,
-    sourcemap: true,
+  },
+  {
+    format: 'es',
+    inputs,
+    outputDir,
+  },
+  {
+    format: 'esm',
+    inputs,
+    outputDir,
+    preserveModules: true,
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -46,20 +55,19 @@ const configs = bundles
           },
           emitCss: false,
         }),
-        resolve(),
-        commonJS({
-          include: 'node_modules/**',
-        }),
-        minify && terser(),
-        license({
-          banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
-        }),
-        bundleSize(),
+        ...plugins(pkg, minify),
       ],
       external: ['svelte'],
       output: {
         name: packageName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
+        preserveModules,
         format,
         sourcemap: true,
         globals: {

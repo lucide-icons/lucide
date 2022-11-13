@@ -283,21 +283,21 @@ importers:
 
   packages/lucide-svelte:
     specifiers:
+      '@lucide/rollup-plugins': '*'
       '@testing-library/jest-dom': ^5.16.2
-      '@testing-library/preact': ^2.0.1
       '@testing-library/svelte': ^3.0.3
-      babel-preset-preact: ^2.0.0
+      '@tsconfig/svelte': ^3.0.0
       jest: ^28.1.3
       rollup-plugin-svelte: ^7.1.0
       svelte: ^3.49.0
       svelte-jester: ^2.3.1
-      svelte-preprocess: ^4.10.1
+      svelte-preprocess: ^4.10.7
       svelte2tsx: ^0.4.12
     devDependencies:
+      '@lucide/rollup-plugins': link:../../tools/rollup-plugins
       '@testing-library/jest-dom': 5.16.5
-      '@testing-library/preact': 2.0.1_preact@10.11.2
       '@testing-library/svelte': 3.1.3_svelte@3.49.0
-      babel-preset-preact: 2.0.0_@babel+core@7.20.2
+      '@tsconfig/svelte': 3.0.0
       jest: 28.1.3
       rollup-plugin-svelte: 7.1.0_rollup@3.2.5+svelte@3.49.0
       svelte: 3.49.0
@@ -3593,6 +3593,7 @@ packages:
       '@babel/helper-plugin-utils': 7.18.9
       '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.20.2
       '@babel/types': 7.18.13
+    dev: false
 
   /@babel/plugin-transform-react-jsx/7.19.0_@babel+core@7.18.13:
     resolution: {integrity: sha512-UVEvX3tXie3Szm3emi1+G63jyw1w5IcMY0FSKM+CRnKRI5Mr1YbCNgsSTwoTwKphQEG9P+QqmuRFneJPZuHNhg==}
@@ -7876,6 +7877,10 @@ packages:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
 
+  /@tsconfig/svelte/3.0.0:
+    resolution: {integrity: sha512-pYrtLtOwku/7r1i9AMONsJMVYAtk3hzOfiGNekhtq5tYBGA7unMve8RvUclKLMT3PrihvJqUmzsRGh0RP84hKg==}
+    dev: true
+
   /@types/aria-query/4.2.2:
     resolution: {integrity: sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig==}
     dev: true
@@ -9666,14 +9671,6 @@ packages:
       '@babel/core': 7.20.2
       babel-plugin-jest-hoist: 29.2.0
       babel-preset-current-node-syntax: 1.0.1_@babel+core@7.20.2
-    dev: true
-
-  /babel-preset-preact/2.0.0_@babel+core@7.20.2:
-    resolution: {integrity: sha512-gqJCALE4XXEienLkzgAQ351XyoVHTIiZRAKjEJupK7cTVhFyovEuSrVoNrTNrUu3R78vAarjxkrR6j0vr+Rg8Q==}
-    dependencies:
-      '@babel/plugin-transform-react-jsx': 7.18.6_@babel+core@7.20.2
-    transitivePeerDependencies:
-      - '@babel/core'
     dev: true
 
   /babel-preset-solid/1.5.4_@babel+core@7.18.13:

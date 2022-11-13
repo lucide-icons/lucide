@@ -41,7 +41,6 @@
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --iconFileExtention=.ts --exportFileName=index.ts",
-    "build:es": "babel src -d dist/esm",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "typecheck": "tsc",
