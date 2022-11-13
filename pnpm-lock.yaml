@@ -221,23 +221,49 @@ importers:
 
   packages/lucide-react-native:
     specifiers:
+      '@lucide/rollup-plugins': '*'
+      '@originjs/vite-plugin-commonjs': ^1.0.3
+      '@rollup/plugin-commonjs': ^23.0.2
+      '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
+      '@types/prop-types': ^15.7.5
+      '@types/react': ^18.0.21
+      '@vitejs/plugin-react': ^2.1.0
       babel-preset-react-app: ^10.0.0
+      esbuild: ^0.15.13
+      esbuild-jest: ^0.5.0
       jest: ^26.6.3
       prop-types: ^15.7.2
       react: ^18.0.0
       react-dom: ^18.0.0
       react-native: ^0.69.0
       react-native-svg: ^13.0.0
+      typescript: ^4.8.4
+      vite: ^3.1.0
+      vite-plugin-commonjs: ^0.5.3
+      vitest: ^0.24.3
     devDependencies:
+      '@lucide/rollup-plugins': link:../../tools/rollup-plugins
+      '@originjs/vite-plugin-commonjs': 1.0.3
+      '@rollup/plugin-commonjs': 23.0.2
+      '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_zpnidt7m3osuk7shl3s4oenomq
+      '@types/prop-types': 15.7.5
+      '@types/react': 18.0.25
+      '@vitejs/plugin-react': 2.1.0_vite@3.1.8
       babel-preset-react-app: 10.0.1
+      esbuild: 0.15.13
+      esbuild-jest: 0.5.0_esbuild@0.15.13
       jest: 26.6.3
       prop-types: 15.8.1
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
       react-native: 0.69.3_6ulm5fqpymnhngo6ygsxgnqaou
       react-native-svg: 13.4.0_w3kncuvwqnzhwf3ziybn5l7dja
+      typescript: 4.8.4
+      vite: 3.1.8
+      vite-plugin-commonjs: 0.5.3
+      vitest: 0.24.3
 
   packages/lucide-solid:
     specifiers:
@@ -1049,7 +1075,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.2
       '@babel/helper-annotate-as-pure': 7.18.6
-      regexpu-core: 5.1.0
+      regexpu-core: 5.2.1
     dev: true
 
   /@babel/helper-define-polyfill-provider/0.3.3_@babel+core@7.18.10:
@@ -1282,6 +1308,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.20.2
+
+  /@babel/helper-skip-transparent-expression-wrappers/7.20.0:
+    resolution: {integrity: sha512-5y1JYeNKfvnT8sZcK9DVRtpTbGiomYIHviSP3OQWmDPU3DeH4a1ZlT/N2lyQ5P8egjcRaT/Y9aNqUxK0WsnIIg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.20.2
+    dev: true
 
   /@babel/helper-split-export-declaration/7.18.6:
     resolution: {integrity: sha512-bde1etTx6ZyTmobl9LLMMQsaizFVZrquTEHOqKeQESMKo4PlObf+8+JA25ZsIpZhT/WEd39+vOdLXAFG/nELpA==}
@@ -3790,7 +3823,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.2
       '@babel/helper-plugin-utils': 7.20.2
-      '@babel/helper-skip-transparent-expression-wrappers': 7.18.9
+      '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
     dev: true
 
   /@babel/plugin-transform-sticky-regex/7.18.6_@babel+core@7.18.10:
@@ -7006,6 +7039,12 @@ packages:
       - supports-color
     dev: true
 
+  /@originjs/vite-plugin-commonjs/1.0.3:
+    resolution: {integrity: sha512-KuEXeGPptM2lyxdIEJ4R11+5ztipHoE7hy8ClZt3PYaOVQ/pyngd2alaSrPnwyFeOW1UagRBaQ752aA1dTMdOQ==}
+    dependencies:
+      esbuild: 0.14.51
+    dev: true
+
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
     dev: false
@@ -7330,6 +7369,23 @@ packages:
       rollup: 3.2.5
     dev: true
 
+  /@rollup/plugin-commonjs/23.0.2:
+    resolution: {integrity: sha512-e9ThuiRf93YlVxc4qNIurvv+Hp9dnD+4PjOqQs5vAYfcZ3+AXSrcdzXnVjWxcGQOa6KGJFcRZyUI3ktWLavFjg==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.68.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.2
+      commondir: 1.0.1
+      estree-walker: 2.0.2
+      glob: 8.0.3
+      is-reference: 1.2.1
+      magic-string: 0.26.7
+    dev: true
+
   /@rollup/plugin-commonjs/23.0.2_rollup@3.2.5:
     resolution: {integrity: sha512-e9ThuiRf93YlVxc4qNIurvv+Hp9dnD+4PjOqQs5vAYfcZ3+AXSrcdzXnVjWxcGQOa6KGJFcRZyUI3ktWLavFjg==}
     engines: {node: '>=14.0.0'}
@@ -7454,6 +7510,20 @@ packages:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
     dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    dev: true
+
+  /@rollup/pluginutils/5.0.2:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
@@ -7855,8 +7925,8 @@ packages:
   /@types/babel__core/7.1.19:
     resolution: {integrity: sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==}
     dependencies:
-      '@babel/parser': 7.18.13
-      '@babel/types': 7.18.13
+      '@babel/parser': 7.20.3
+      '@babel/types': 7.20.2
       '@types/babel__generator': 7.6.4
       '@types/babel__template': 7.4.1
       '@types/babel__traverse': 7.18.0
@@ -8108,7 +8178,7 @@ packages:
   /@types/react-dom/18.0.8:
     resolution: {integrity: sha512-C3GYO0HLaOkk9dDAz3Dl4sbe4AKUGTCfFIZsz3n/82dPNN8Du533HzKatDxeUYWu24wJgMP1xICqkWk1YOLOIw==}
     dependencies:
-      '@types/react': 17.0.48
+      '@types/react': 18.0.25
     dev: true
 
   /@types/react/16.14.30:
@@ -9593,7 +9663,7 @@ packages:
       '@babel/plugin-transform-function-name': 7.18.9_@babel+core@7.20.2
       '@babel/plugin-transform-literals': 7.18.9_@babel+core@7.20.2
       '@babel/plugin-transform-member-expression-literals': 7.18.6_@babel+core@7.20.2
-      '@babel/plugin-transform-modules-commonjs': 7.18.6_@babel+core@7.20.2
+      '@babel/plugin-transform-modules-commonjs': 7.19.6_@babel+core@7.20.2
       '@babel/plugin-transform-object-super': 7.18.6_@babel+core@7.20.2
       '@babel/plugin-transform-parameters': 7.18.8_@babel+core@7.20.2
       '@babel/plugin-transform-property-literals': 7.18.6_@babel+core@7.20.2
@@ -11959,6 +12029,19 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-jest/0.5.0_esbuild@0.15.13:
+    resolution: {integrity: sha512-AMZZCdEpXfNVOIDvURlqYyHwC8qC1/BFjgsrOiSL1eyiIArVtHL8YAC83Shhn16cYYoAWEW17yZn0W/RJKJKHQ==}
+    peerDependencies:
+      esbuild: '>=0.8.50'
+    dependencies:
+      '@babel/core': 7.20.2
+      '@babel/plugin-transform-modules-commonjs': 7.19.6_@babel+core@7.20.2
+      babel-jest: 26.6.3_@babel+core@7.20.2
+      esbuild: 0.15.13
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /esbuild-linux-32/0.14.51:
     resolution: {integrity: sha512-RFqpyC5ChyWrjx8Xj2K0EC1aN0A37H6OJfmUXIASEqJoHcntuV3j2Efr9RNmUhMfNE6yEj2VpYuDteZLGDMr0w==}
@@ -16375,7 +16458,7 @@ packages:
       '@babel/plugin-proposal-class-properties': 7.18.6_@babel+core@7.20.2
       '@babel/plugin-proposal-nullish-coalescing-operator': 7.18.6_@babel+core@7.20.2
       '@babel/plugin-proposal-optional-chaining': 7.18.9_@babel+core@7.20.2
-      '@babel/plugin-transform-modules-commonjs': 7.18.6_@babel+core@7.20.2
+      '@babel/plugin-transform-modules-commonjs': 7.19.6_@babel+core@7.20.2
       '@babel/preset-env': 7.20.2_@babel+core@7.20.2
       '@babel/preset-flow': 7.18.6_@babel+core@7.20.2
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.2
@@ -17315,7 +17398,7 @@ packages:
       '@babel/plugin-transform-flow-strip-types': 7.18.9_@babel+core@7.20.2
       '@babel/plugin-transform-function-name': 7.18.9_@babel+core@7.20.2
       '@babel/plugin-transform-literals': 7.18.9_@babel+core@7.20.2
-      '@babel/plugin-transform-modules-commonjs': 7.18.6_@babel+core@7.20.2
+      '@babel/plugin-transform-modules-commonjs': 7.19.6_@babel+core@7.20.2
       '@babel/plugin-transform-named-capturing-groups-regex': 7.18.6_@babel+core@7.20.2
       '@babel/plugin-transform-parameters': 7.18.8_@babel+core@7.20.2
       '@babel/plugin-transform-react-display-name': 7.18.6_@babel+core@7.20.2
@@ -20045,6 +20128,13 @@ packages:
     dependencies:
       regenerate: 1.4.2
 
+  /regenerate-unicode-properties/10.1.0:
+    resolution: {integrity: sha512-d1VudCLoIGitcU/hEg2QqvyGZQmdC0Lf8BqdOMXGFSvJP4bNV1+XqbPQeHHLD51Jh4QJJ225dlIFvY4Ly6MXmQ==}
+    engines: {node: '>=4'}
+    dependencies:
+      regenerate: 1.4.2
+    dev: true
+
   /regenerate/1.4.2:
     resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
 
@@ -20100,14 +20190,37 @@ packages:
       unicode-match-property-ecmascript: 2.0.0
       unicode-match-property-value-ecmascript: 2.0.0
 
+  /regexpu-core/5.2.1:
+    resolution: {integrity: sha512-HrnlNtpvqP1Xkb28tMhBUO2EbyUHdQlsnlAhzWcwHy8WJR53UWr7/MAvqrsQKMbV4qdpv03oTMG8iIhfsPFktQ==}
+    engines: {node: '>=4'}
+    dependencies:
+      regenerate: 1.4.2
+      regenerate-unicode-properties: 10.1.0
+      regjsgen: 0.7.1
+      regjsparser: 0.9.1
+      unicode-match-property-ecmascript: 2.0.0
+      unicode-match-property-value-ecmascript: 2.0.0
+    dev: true
+
   /regjsgen/0.6.0:
     resolution: {integrity: sha512-ozE883Uigtqj3bx7OhL1KNbCzGyW2NQZPl6Hs09WTvCuZD5sTI4JY58bkbQWa/Y9hxIsvJ3M8Nbf7j54IqeZbA==}
+
+  /regjsgen/0.7.1:
+    resolution: {integrity: sha512-RAt+8H2ZEzHeYWxZ3H2z6tF18zyyOnlcdaafLrm21Bguj7uZy6ULibiAFdXEtKQY4Sy7wDTwDiOazasMLc4KPA==}
+    dev: true
 
   /regjsparser/0.8.4:
     resolution: {integrity: sha512-J3LABycON/VNEu3abOviqGHuB/LOtOQj8SKmfP9anY5GfAVw/SPjwzSjxGjbZXIxbGfqTHtJw58C2Li/WkStmA==}
     hasBin: true
     dependencies:
       jsesc: 0.5.0
+
+  /regjsparser/0.9.1:
+    resolution: {integrity: sha512-dQUtn90WanSNl+7mQKcXAgZxvUe7Z0SqXlgzv0za4LwiUhyzBC58yQO3liFoUgu8GiJVInAhJjkj1N0EtQ5nkQ==}
+    hasBin: true
+    dependencies:
+      jsesc: 0.5.0
+    dev: true
 
   /remark-footnotes/2.0.0:
     resolution: {integrity: sha512-3Clt8ZMH75Ayjp9q4CorNeyjwIxHFcTkaektplKGl2A1jNGEUey8cKL0ZC5vJwfcD5GFGsNLImLG/NGzWIzoMQ==}
@@ -22562,6 +22675,12 @@ packages:
       unist-util-stringify-position: 2.0.3
       vfile-message: 2.0.4
     dev: false
+
+  /vite-plugin-commonjs/0.5.3:
+    resolution: {integrity: sha512-E+LkzZ6SSwI8/aarkPI0nk/GE3vmSCm9hqOKOq93YIHVJJgDU651RtP4BBbhrnirxhWZwfj1Jjsy3S0Ae7bBJw==}
+    dependencies:
+      fast-glob: 3.2.11
+    dev: true
 
   /vite-plugin-singlefile/0.5.1_vite@2.9.14:
     resolution: {integrity: sha512-yA9lWd6bSet0Br4/s34YPNnVBlDl2MbxlHDRrLrBCncD7q+HO5GGsw29Ymp+ydZ3eb4UU2GECgX2MJZW+qnoeQ==}

@@ -1,10 +1,10 @@
-// @flow
-
 // https://github.com/FormidableLabs/react-native-svg-mock
 import React from 'react';
+import type { LucideProps } from '../../src/createReactComponent';
+export type { SvgProps } from 'react-native-svg';
 
-const createComponent = function(name) {
-  const component = (props) => {
+const createComponent = function(name: string) {
+  const component = (props: LucideProps) => {
     return React.createElement(name, props, props.children);
   }
 
