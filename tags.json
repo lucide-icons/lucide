@@ -1455,6 +1455,7 @@
     "food",
     "breakfast"
   ],
+  "egg-off": [],
   "equal": [
     "calculate",
     "maths"
@@ -1758,14 +1759,12 @@
   "file-type": [
     "font",
     "text",
-    "font",
     "typography",
     "type"
   ],
   "file-type-2": [
     "font",
     "text",
-    "font",
     "typography",
     "type"
   ],
@@ -3214,6 +3213,15 @@
   "piggy-bank": [
     "money",
     "savings"
+  ],
+  "pilcrow": [
+    "paragraph",
+    "mark",
+    "paraph",
+    "blind",
+    "typography",
+    "type",
+    "text"
   ],
   "pin": [
     "save",
