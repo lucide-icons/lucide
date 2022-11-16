@@ -1,10 +1,10 @@
-import plugins from '../../rollup.plugins';
-import pkg from './package.json';
+import plugins from '../../rollup.plugins.mjs';
+import pkg from './package.json' assert { type: 'json' };
 
-const packageName = 'LucideVue';
-const outputFileName = 'lucide-vue';
-const outputDir = 'dist';
-const inputs = ['src/lucide-vue.js'];
+const packageName = 'LucideReact';
+const outputFileName = 'lucide-react';
+const outputDir = `dist`;
+const inputs = [`src/lucide-react.js`];
 const bundles = [
   {
     format: 'umd',
@@ -29,14 +29,16 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['vue'],
+      external: ['react', 'prop-types', 'lucide'],
       output: {
         name: packageName,
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,
         globals: {
-          vue: 'vue',
+          react: 'react',
+          'prop-types': 'PropTypes',
+          lucide: 'lucide',
         },
       },
     })),

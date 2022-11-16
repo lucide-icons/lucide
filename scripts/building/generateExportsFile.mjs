@@ -2,7 +2,7 @@ import path from 'path';
 
 import { toPascalCase, resetFile, appendFile } from '../helpers.mjs';
 
-export default function(inputEntry, outputDirectory, iconNodes, iconFileExtention = '') {
+export default (inputEntry, outputDirectory, iconNodes, iconFileExtention = '') => {
   const fileName = path.basename(inputEntry);
 
   // Reset file
@@ -14,7 +14,7 @@ export default function(inputEntry, outputDirectory, iconNodes, iconFileExtentio
     iconFileExtention === '.ts' || iconFileExtention === '.js' ? '' : iconFileExtention;
 
   // Generate Import for Icon VNodes
-  icons.forEach(iconName => {
+  icons.forEach((iconName) => {
     const componentName = toPascalCase(iconName);
     const importString = `export { default as ${componentName} } from './${iconName}${fileExtention}';\n`;
     appendFile(importString, fileName, outputDirectory);
@@ -23,4 +23,4 @@ export default function(inputEntry, outputDirectory, iconNodes, iconFileExtentio
   appendFile('\n', fileName, outputDirectory);
 
   console.log(`Successfully generated ${fileName} file`);
-}
+};
