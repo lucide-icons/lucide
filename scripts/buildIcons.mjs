@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
+import getArgumentOptions from 'minimist';
 
 import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
@@ -10,7 +10,7 @@ import { readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
-const currentDir = getCurrentDirPath(import.meta.url)
+const currentDir = getCurrentDirPath(import.meta.url);
 
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
@@ -29,17 +29,15 @@ const {
 } = cliArguments;
 
 async function buildIcons() {
-
   if (templateSrc == null) {
-    throw new Error('No `templateSrc` argument given.')
+    throw new Error('No `templateSrc` argument given.');
   }
 
   const svgFiles = readSvgDirectory(ICONS_DIR);
 
   const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
-
-  const {default: iconFileTemplate} = await import(path.resolve(process.cwd(), templateSrc));
+  const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
 
   // Generates iconsNodes files for each icon
   generateIconFiles({
@@ -61,7 +59,7 @@ async function buildIcons() {
 }
 
 try {
-  buildIcons()
+  buildIcons();
 } catch (error) {
-  console.error(error)
+  console.error(error);
 }

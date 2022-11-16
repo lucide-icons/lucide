@@ -38,6 +38,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
+  - [Hyva](#hyva)
 - [Contributing](#contributing)
 - [Community](#community)
 - [License](#license)
@@ -239,6 +240,16 @@ npm install lucide-solid
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-solid#lucide-solid).
+
+### Hyva
+
+Implementation of Lucide icon's using Hyvä's svg php viewmodal to render icons for Magento 2 Hyva theme based projects.
+
+```sh
+composer require siteation/magento2-hyva-icons-lucide
+```
+
+For more details, see the [documentation](https://github.com/Siteation/magento2-hyva-icons-lucide/blob/main/README.md).
 
 ## Contributing
 

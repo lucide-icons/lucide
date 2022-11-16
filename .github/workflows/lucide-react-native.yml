@@ -4,9 +4,11 @@ on:
   pull_request:
     paths:
       - packages/lucide-react-native/**
+      - pnpm-lock.yaml
   push:
     paths:
       - packages/lucide-react-native/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-react-native:

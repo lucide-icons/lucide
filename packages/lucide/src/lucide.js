@@ -18,7 +18,7 @@ const createIcons = ({ icons = {}, nameAttr = 'icon-name', attrs = {} } = {}) =>
 
   const elementsToReplace = document.querySelectorAll(`[${nameAttr}]`);
 
-  Array.from(elementsToReplace).forEach(element =>
+  Array.from(elementsToReplace).forEach((element) =>
     replaceElement(element, { nameAttr, icons, attrs }),
   );
 };
