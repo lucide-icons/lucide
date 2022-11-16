@@ -6095,6 +6095,22 @@
         "devices"
       ]
     },
+    "monitor-smartphone": {
+      "tags": [
+        "smartphone",
+        "phone",
+        "cellphone",
+        "device",
+        "mobile",
+        "desktop",
+        "monitor",
+        "responsive"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
     "monitor-speaker": {
       "tags": [
         "devices",
@@ -6751,6 +6767,20 @@
       ],
       "categories": [
         "money"
+      ]
+    },
+    "pilcrow": {
+      "tags": [
+        "paragraph",
+        "mark",
+        "paraph",
+        "blind",
+        "typography",
+        "type",
+        "text"
+      ],
+      "categories": [
+        "text"
       ]
     },
     "pin": {

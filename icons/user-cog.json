@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "settings",
+    "edit",
+    "cog",
+    "gear"
+  ],
+  "categories": [
+    "account"
+  ]
+}

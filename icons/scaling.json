@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "scale",
+    "resize",
+    "design"
+  ],
+  "categories": [
+    "design"
+  ]
+}

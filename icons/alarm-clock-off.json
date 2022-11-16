@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "morning",
+    "turn-off"
+  ],
+  "categories": [
+    "devices",
+    "notifications",
+    "time"
+  ]
+}

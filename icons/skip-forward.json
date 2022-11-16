@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "arrow",
+    "skip",
+    "next",
+    "music"
+  ],
+  "categories": [
+    "multimedia",
+    "arrows"
+  ]
+}

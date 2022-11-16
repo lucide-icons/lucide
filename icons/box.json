@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cube",
+    "package"
+  ],
+  "categories": [
+    "shapes",
+    "gaming",
+    "coding",
+    "development"
+  ]
+}
