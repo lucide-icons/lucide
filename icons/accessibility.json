@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "disability",
+    "disabled",
+    "dda",
+    "wheelchair"
+  ],
+  "categories": [
+    "accessibility",
+    "medical"
+  ]
+}

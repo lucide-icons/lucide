@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "television",
+    "stream"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ]
+}

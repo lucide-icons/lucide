@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "multiple",
+    "copy",
+    "directories"
+  ],
+  "categories": [
+    "files"
+  ]
+}

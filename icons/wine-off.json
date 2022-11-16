@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "alcohol",
+    "beverage",
+    "drink",
+    "glass",
+    "alcohol free",
+    "abstinence",
+    "abstaining",
+    "teetotalism",
+    "allergy",
+    "intolerance"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

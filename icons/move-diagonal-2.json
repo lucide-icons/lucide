@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "double",
+    "arrow"
+  ],
+  "categories": [
+    "arrows",
+    "cursors"
+  ]
+}

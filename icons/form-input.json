@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "2fa",
+    "authenticate",
+    "login",
+    "field",
+    "text"
+  ],
+  "categories": [
+    "text"
+  ]
+}

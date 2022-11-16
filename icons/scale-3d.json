@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "gizmo",
+    "transform",
+    "size"
+  ],
+  "categories": [
+    "design"
+  ]
+}

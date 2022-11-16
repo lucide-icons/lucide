@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "component",
+    "module",
+    "part",
+    "piece"
+  ],
+  "categories": [
+    "development",
+    "gaming"
+  ]
+}
