@@ -48,6 +48,7 @@ const Header = ({ data }: HeaderProps) => {
       svgEl.outerHTML,
     ]);
 
+    // Fallback
     if (iconEntries.length === 0) {
       iconEntries = data.map(icon => [icon.name, icon.src]);
     }
