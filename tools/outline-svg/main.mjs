@@ -41,7 +41,7 @@ async function init() {
       await fs.mkdir(targetDir);
     } catch (error) {} // eslint-disable-line no-empty
 
-    const icons = await fs.readdir(inputDir).filter((file) => path.extname(file) === '.svg');
+    const icons = (await fs.readdir(inputDir)).filter((file) => path.extname(file) === '.svg');
     const parsedIconNodes = await Promise.all(
       icons.map(async (file) => {
         const inputFilePath = path.resolve(process.cwd(), inputDir, file);
