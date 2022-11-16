@@ -5,6 +5,7 @@ import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
 import { useMemo } from 'react';
+import MobileMenu from "../../components/MobileMenu";
 
 const IconPage = ({ icon, data }) => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const IconPage = ({ icon, data }) => {
 
     router.push(
       {
-        pathname: '/',
+        pathname: '/icons',
         query,
       },
       undefined,
@@ -38,9 +39,9 @@ const IconPage = ({ icon, data }) => {
 
   return (
     <Layout>
+      <MobileMenu />
       <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
-      <Header {...{ data }} />
-      <IconOverview {...{ data }} />
+      <IconOverview {...{ currentIcon, data }} />
     </Layout>
   );
 };

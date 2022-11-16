@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 const DocsMenu = (props: BoxProps) => {
   const router = useRouter();
-  const linkIsActive = (currentPath, href) => currentPath === `/docs/${href}`;
+  const linkIsActive = (currentPath, href) => currentPath.replace(/#.+$/, '') === (href ? `/docs/${href}` : '/docs');
   return (
     <Box {...props}>
       <Box paddingY={4}>

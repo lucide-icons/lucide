@@ -14,6 +14,14 @@
 }
 
 body {
-  min-height: 100%;
-  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.chakra-kbd {
+  position: relative;
+  top: -2px;
+}
+
+.icon-list-item:hover svg {
+  stroke: white !important;
 }

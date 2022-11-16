@@ -1,9 +1,10 @@
-import { Grid } from '@chakra-ui/react';
+import { Grid, useToken } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { memo } from 'react';
+import { memo, useContext } from 'react';
 import IconListItem from './IconListItem';
 import { IconEntity } from '../types';
+import {IconStyleContext} from "./CustomizeIconContext";
 
 interface IconListProps {
   icons: IconEntity[];
@@ -11,9 +12,18 @@ interface IconListProps {
 
 const IconList = memo(({ icons }: IconListProps) => {
   const router = useRouter();
+  const {color, setColor, size, setSize, strokeWidth, setStroke, resetStyle} = useContext(IconStyleContext);
+  const styles = {
+    '--lucide-stroke-color': color,
+    '--lucide-stroke-width': strokeWidth,
+    '--lucide-icon-size': size,
+  };
 
   return (
-    <Grid templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`} gap={5} marginBottom="320px">
+    <Grid templateColumns={`repeat(auto-fill, minmax(80px, 1fr))`} gap={[2, 3, 4]} p={[2, 3, 4]}
+          maxW={useToken('sizes', 'container-max-width')} margin="auto"
+          style={styles}
+    >
       {icons.map(icon => {
         return (
           <Link
@@ -21,7 +31,7 @@ const IconList = memo(({ icons }: IconListProps) => {
             scroll={false}
             shallow={true}
             href={{
-              pathname: '/icon/[iconName]',
+              pathname: '/icons/[iconName]',
               query: {
                 ...router.query,
                 iconName: icon.name,

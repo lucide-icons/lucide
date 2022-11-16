@@ -8,7 +8,7 @@ const Logo = () => (
       <Icon boxSize={12} marginRight="8px">
         <LogoImage />
       </Icon>
-      <Text fontSize="40px" fontWeight="normal" lineHeight="48px">
+      <Text fontSize="34px" fontWeight={500} lineHeight="44px">
         Lucide
       </Text>
     </Link>

@@ -8,8 +8,6 @@ const ModifiedTooltip = () => {
     <Tooltip
       hasArrow
       label="This is new or modified icon"
-      bg={colorMode === 'light' ? theme.colors.white : theme.colors.gray[700]}
-      color={colorMode === 'dark' ? theme.colors.white : null}
     >
       <Box
         {

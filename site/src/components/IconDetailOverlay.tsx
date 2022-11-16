@@ -1,12 +1,38 @@
-import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, useToast, Heading, Avatar, AvatarGroup, Link, Tooltip, useMediaQuery, useDisclosure } from "@chakra-ui/react";
+import {
+  Avatar,
+  AvatarGroup,
+  Box,
+  ButtonGroup,
+  Flex,
+  Heading,
+  IconButton,
+  Link,
+  Slide,
+  Wrap,
+  Tag,
+  Text,
+  Tooltip,
+  useColorMode,
+  useDisclosure,
+  useToast,
+  useToken
+} from "@chakra-ui/react";
 import theme from "../lib/theme";
 import download from 'downloadjs';
-import { X as Close } from 'lucide-react';
+import {
+  Code as CodeIcon,
+  Copy as CopyIcon,
+  Download as DownloadIcon,
+  Image as ImageIcon,
+  X as Close
+} from 'lucide-react';
 import {useContext, useEffect, useRef} from "react";
 import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
+import {IconEntity} from "../types";
 import ModifiedTooltip from "./ModifiedTooltip";
-import { IconEntity } from "../types";
+import CodeBlock from "./CodeBlock";
+import IconCodeExamples from "./IconCodeExamples";
 
 type IconDownload = {
   src: string;
@@ -19,25 +45,24 @@ interface IconDetailOverlayProps {
   icon?: IconEntity
 }
 
-const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
+const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) => {
   const toast = useToast();
-  const { colorMode } = useColorMode();
+  const {colorMode} = useColorMode();
   const {color, strokeWidth, size} = useContext(IconStyleContext);
   const iconRef = useRef<SVGSVGElement>(null);
-  const [isMobile] = useMediaQuery("(max-width: 560px)")
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {isOpen, onOpen, onClose} = useDisclosure()
 
   useEffect(() => {
-    if(open) {
+    if (open) {
       onOpen()
     }
   }, [open])
 
-  if(icon == null) {
+  if (icon == null) {
     return null
   }
 
-  const { tags = [], name = '' } = icon;
+  const {tags = [], name = ''} = icon;
 
   const handleClose = () => {
     onClose();
@@ -54,9 +79,9 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     color: color,
   };
 
-  const downloadIcon = ({src, name = ''} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
+  const downloadIcon = ({src, name = ''}: IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
 
-  const copyIcon = async ({src, name} : IconDownload) => {
+  const copyIcon = async ({src, name}: IconDownload) => {
     const trimmedSrc = src.replace(/(\r\n|\n|\r|\s\s)/gm, "")
 
     await navigator.clipboard.writeText(trimmedSrc)
@@ -64,6 +89,18 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     toast({
       title: "Copied!",
       description: `Icon "${name}" copied to clipboard.`,
+      status: "success",
+      duration: 1500,
+      isClosable: true
+    });
+  }
+
+  const copyName = async (name) => {
+    await navigator.clipboard.writeText(name)
+
+    toast({
+      title: "Copied!",
+      description: `Icon name "${name}" copied to clipboard.`,
       status: "success",
       duration: 1500,
       isClosable: true
@@ -78,7 +115,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
 
     const image = new Image();
     image.src = `data:image/svg+xml;base64,${btoa(src)}`;
-    image.onload = function() {
+    image.onload = function () {
       ctx.drawImage(image, 0, 0);
 
       const link = document.createElement('a');
@@ -98,43 +135,112 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
       height={0}
       key={name}
     >
-      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
-      <Flex
-        alignItems="center"
-        justifyContent="space-between"
-        pt={4}
-        pb={4}
-        maxW="850px"
-        margin="0 auto"
-        w="full"
-        px={8}
+      <Slide direction="bottom" in={isOpen} style={{zIndex: 10}}
+             mx="auto"
       >
+        <Flex
+          alignItems="center"
+          justifyContent="space-between"
+          maxW={useToken('sizes', 'container-max-width')}
+          w="full"
+          p={theme.sizes.containerSpacing}
+          margin="auto"
+        >
           <Box
-            borderWidth="1px"
             rounded="lg"
+            border="none"
             width="full"
-            boxShadow={theme.shadows.xl}
+            boxShadow={theme.shadows['dark-lg']}
             position="relative"
             bg={
               colorMode == "light"
                 ? theme.colors.white
-                : theme.colors.gray[700]
+                : theme.colors.black
             }
-            padding={8}
+            padding={4}
           >
-            <IconButton
-              size="sm"
-              aria-label="Close overlay"
-              variant="ghost"
-              color="current"
-              ml="3"
-              position="absolute"
-              top={4}
-              right={4}
-              onClick={handleClose}
-              icon={<Close />}
-          />
-            <Flex direction={['column', 'row']} alignItems={['center', 'flex-start']}>
+            <Flex
+              direction={{base: 'column', md: 'row'}}
+              style={{cursor: "pointer"}}
+              w="100%"
+              mb={2}
+            >
+              <Flex
+                position="relative"
+                direction="row"
+                order={{base: 1, md: 0}}
+                justify={{base: 'center', md: 'flex-start'}}
+                mt={{base: 4, md: 0}}
+              >
+                <Tooltip hasArrow label="Copy icon name" aria-label='Copy icon name'>
+                  <Flex
+                    position="relative"
+                    direction="row"
+                    style={{cursor: "pointer"}}
+                    pr={6}
+                    onClick={() => copyName(icon.name)}
+                    align="center"
+                  >
+                    <CopyIcon/>
+                    <Text fontSize="3xl" fontFamily={useToken('fonts', 'mono')} ml={2}>
+                      {icon.name}
+                    </Text>
+                    {icon?.contributors?.length ? (<ModifiedTooltip/>) : null}
+                  </Flex>
+                </Tooltip>
+              </Flex>
+
+              <ButtonGroup ml="auto"
+                           order={{base: 0, md: 1}}
+              >
+                <Tooltip hasArrow label="Download SVG" aria-label='Download SVG'>
+                  <IconButton
+                    variant="ghost"
+                    aria-label="Download SVG"
+                    onClick={() => downloadIcon({
+                      src: iconRef.current.outerHTML,
+                      name: icon.name
+                    })}
+                    icon={<DownloadIcon/>}
+                  />
+                </Tooltip>
+                <Tooltip hasArrow label="Copy SVG" aria-label='Copy SVG'>
+                  <IconButton
+                    variant="ghost"
+                    aria-label="Copy SVG"
+                    onClick={() => copyIcon({
+                      src: iconRef.current.outerHTML,
+                      name: icon.name
+                    })}
+                    icon={<CodeIcon/>}
+                  />
+                </Tooltip>
+                <Tooltip hasArrow label="Download PNG" aria-label='Download PNG'>
+                  <IconButton
+                    variant="ghost"
+                    aria-label="Download PNG"
+                    onClick={() => downloadPNG({
+                      src: iconRef.current.outerHTML,
+                      name: icon.name
+                    })}
+                    icon={<ImageIcon/>}
+                  />
+                </Tooltip>
+                <Tooltip hasArrow label="Close overlay" aria-label='Close overlay'>
+                  <IconButton
+                    aria-label="Close overlay"
+                    variant="ghost"
+                    onClick={handleClose}
+                    icon={<Close/>}
+                  />
+                </Tooltip>
+              </ButtonGroup>
+            </Flex>
+            <Flex direction={{base: 'column', md: 'row'}}
+                  alignItems={{base: 'center', md: 'flex-start'}}
+                  maxW="100%"
+                  gap={{base: 0, md: 8}}
+            >
               <Flex>
                 <Box
                   borderWidth="1px"
@@ -143,7 +249,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                   bg={
                     colorMode == "light"
                       ? theme.colors.whiteAlpha[800]
-                      : theme.colors.blackAlpha[500]
+                      : theme.colors.blackAlpha[900]
                   }
                   padding={0}
                 >
@@ -161,89 +267,65 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                     />
                   </div>
 
-                  <svg className="icon-grid" width="24" height="24" viewBox={`0 0 ${size} ${size}`} fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
-                    { Array.from({ length:(size - 1) }, (_, i) => (
+                  <svg className="icon-grid" width="24" height="24" viewBox={`0 0 ${size} ${size}`}
+                       fill="none"
+                       stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]}
+                       strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
+                    {Array.from({length: (size - 1)}, (_, i) => (
                       <g key={`grid-${i}`}>
-                        <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={size} y2={i + 1} />
-                        <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={size} />
+                        <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={size} y2={i + 1}/>
+                        <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={size}/>
                       </g>
-                    )) }
+                    ))}
                   </svg>
                 </Box>
               </Flex>
-              <Flex marginLeft={[0, 8]} w="100%">
-                <Box w="100%">
-                  <Flex
-                    justify={isMobile ? 'center' : 'flex-start'}
-                    marginTop={isMobile ? 10 : 0}
-                  >
-                    <Box
-                      position="relative"
-                      mb={1}
-                      display="inline-block"
-                      style={{ cursor: "pointer" }}
-                      pr={6}
-                    >
-                      <Text fontSize="3xl">
-                        {icon.name}
-                      </Text>
-                      { icon?.contributors?.length ? ( <ModifiedTooltip/> ) : null}
-                    </Box>
-                  </Flex>
-                  <Box mb={4}>
-                    { tags?.length ? (
-                      <Text
-                        fontSize="xl"
-                        fontWeight="bold"
-                        color={
-                          colorMode === "light"
-                          ? 'gray.600'
-                          : 'gray.500'
-                        }
-                      >
-                        { tags.join(' • ') }
-                      </Text>
-                    ) : ''}
-
-                  {/* <Button size="sm" fontSize="md" variant="ghost" onClick={() => downloadIcon(icon)}>
-                    Edit Tags
-                  </Button> */}
-                  </Box>
-                  <Box overflowY="auto" w="100%" pt={1} pb={1}>
-                    <ButtonGroup spacing={4}>
-                      <Button variant="solid" onClick={() => downloadIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
-                        Download SVG
-                      </Button>
-                      <Button variant="solid" onClick={() => copyIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
-                        Copy SVG
-                      </Button>
-                      <Button variant="solid" onClick={() => downloadPNG({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
-                        Download PNG
-                      </Button>
-                    </ButtonGroup>
-                  </Box>
-                  { icon?.contributors?.length ? (
-                    <>
-                      <Heading as="h5" size="sm" marginTop={4} marginBottom={2}>
-                        Contributors:
-                      </Heading>
-                      <AvatarGroup size="md">
-                        { icon.contributors.map((commit, index) => (
-                          <Link href={`https://github.com/${commit.author}`} isExternal key={`${index}_${commit.author}`}>
-                            <Tooltip label={commit.author} key={commit.author}>
-                              <Avatar name={commit.author} src={`https://github.com/${commit.author}.png?size=88`} />
-                            </Tooltip>
-                          </Link>
-                        )) }
-                      </AvatarGroup>
-                    </>
-                  ) : null }
-                </Box>
+              <Flex maxW="100%" minW={0} grow={1}>
+                <IconCodeExamples icon={icon} maxW="100%" w="100%" />
               </Flex>
             </Flex>
-          </Box>
+            <Flex mt={{base: 4, md: 4}}
+                  direction={{base: 'column', md: 'row'}}
+                  alignItems={{base: 'flex-start', md: 'center'}}
+            >
+              <Wrap direction={'horizontal'} gap={2}>
+                {tags.map((tag) => {
+                  return (
+                    <Tag
+                      variant='subtle'
+                      colorScheme='brand'
+                      fontSize='md'
+                    >{tag}</Tag>
+                  )
+                })}
+              </Wrap>
 
-      </Flex>
+              {icon?.contributors?.length ? (
+                <Flex direction="row"
+                      alignItems="center"
+                      ml={{base: 'none', md: 'auto'}}
+                      mt={{base: 4, md: 0}}
+                >
+                  <Heading as="h5" size="sm" mr="2" textTransform="uppercase">
+                    Contributors:
+                  </Heading>
+                  <AvatarGroup size="md">
+                    {icon.contributors.map((commit, index) => (
+                      <Link href={`https://github.com/${commit.author}`} isExternal
+                            key={`${index}_${commit.author}`}>
+                        <Tooltip hasArrow label={commit.author} key={commit.author}>
+                          <Avatar name={commit.author}
+                                  size='md'
+                                  src={`https://github.com/${commit.author}.png?size=88`}/>
+                        </Tooltip>
+                      </Link>
+                    ))}
+                  </AvatarGroup>
+                </Flex>
+              ) : null}
+            </Flex>
+          </Box>
+        </Flex>
       </Slide>
     </Box>
   );

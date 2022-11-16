@@ -1,48 +1,63 @@
 import {
   Box,
-  Divider,
+  BoxProps,
   Flex,
-  Link,
+  FormControl,
+  FormLabel,
+  IconButton,
+  Spacer,
+  Switch,
+  useBreakpointValue,
   useColorMode,
   useColorModeValue,
-  IconButton,
-  useBreakpointValue,
-  BoxProps,
+  VisuallyHidden,
 } from '@chakra-ui/react';
-import { useKeyBindings } from '../lib/key';
-import { useRouter } from 'next/router';
-import NextLink from 'next/link';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
+import {useKeyBindings} from '../lib/key';
+import {useRouter} from 'next/router';
+import {Menu, Moon, Sun, X} from 'lucide-react';
+import {useMobileNavigationContext, useMobileNavigationValue} from './MobileNavigationProvider';
+import Footer from './Footer';
 import Logo from './Logo';
+import menuItems from "../static/menuItems";
+import MenuItem from "./MenuItem";
 
 interface LayoutProps extends BoxProps {
   aside?: BoxProps['children'];
 }
 
-const Layout = ({ aside, children }: LayoutProps) => {
+const Layout = ({aside, children}: LayoutProps) => {
   const router = useRouter();
-  const { toggleMobileMenu } = useMobileNavigationContext();
-  const { toggleColorMode } = useColorMode();
+  const {toggleMobileMenu} = useMobileNavigationContext();
+  const {toggleColorMode} = useColorMode();
   const currentColorMode = useColorModeValue('dark', 'light');
-  const ColorModeToggle = useColorModeValue(Moon, Sun);
+  const colorModeChecked = useColorModeValue(false, true);
   const MobileMenuToggle = useMobileNavigationValue(Menu, X);
-  const showBaseNavigation = useBreakpointValue({ base: false, md: true });
+  const showBaseNavigation = useBreakpointValue({base: false, md: true});
   const IconbuttonProps = {
     size: 'md',
     fontSize: 'lg',
     variant: 'ghost',
-    color: 'current',
     ml: '3',
+  };
+  const ToggleIconProps = {
+    width: '12px',
+    height: '12px',
+    color: 'white',
+  };
+  const ToggleIconBoxProps = {
+    inset: '3px',
+    top: '4px',
+    position: 'absolute',
+    pointerEvents: 'none',
   };
 
   function setQuery(query) {
     router.push({
         pathname: '/',
-        query: { query: query },
-    },
-    undefined,
-    { shallow: true })
+        query: {query: query},
+      },
+      undefined,
+      {shallow: true})
   }
 
   useKeyBindings({
@@ -55,80 +70,64 @@ const Layout = ({ aside, children }: LayoutProps) => {
   });
 
   return (
-    <Box h="100vh">
+    <Flex minH="100vh" direction="column">
       <Flex mb={16} w="full">
         <Flex
           alignItems="center"
           justifyContent="space-between"
-          pt={4}
-          pb={4}
           margin="0 auto"
           w="full"
-          px={5}
+          py={{base: 4}}
+          px={{base: 5}}
         >
           <Flex justifyContent="center" alignItems="center">
-            <Logo />
+            <Logo/>
           </Flex>
           <Flex justifyContent="center" alignItems="center">
             {showBaseNavigation ? (
               <>
-                <NextLink href="/docs" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    Documentation
-                  </Link>
-                </NextLink>
-                <NextLink href="/packages" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    Packages
-                  </Link>
-                </NextLink>
-                <NextLink href="/license" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    License
-                  </Link>
-                </NextLink>
-                <Link
-                  href="https://github.com/lucide-icons/lucide"
-                  isExternal
-                  marginRight={6}
-                  fontSize="xl"
-                >
-                  Github
-                </Link>
+                {menuItems.map(menuItem => (<MenuItem {...{menuItem, fontSize: 'lg'}} />))}
               </>
             ) : null}
-            <IconButton
-              aria-label={`Switch to ${currentColorMode} mode`}
-              onClick={toggleColorMode}
-              {...IconbuttonProps}
-              icon={<ColorModeToggle />}
-            />
+            <FormControl display='flex' alignItems='center' position="relative">
+              <VisuallyHidden>
+                <FormLabel htmlFor='switch-color-mode' mb='0'>
+                  Switch to {currentColorMode} mode
+                </FormLabel>
+              </VisuallyHidden>
+              <Switch id='switch-color-mode'
+                      defaultChecked={colorModeChecked}
+                      variant="colorMode"
+                      colorScheme="brand"
+                      onChange={toggleColorMode}
+              />
+              <Box {...ToggleIconBoxProps} right="auto">
+                <Sun {...ToggleIconProps} />
+              </Box>
+              <Box {...ToggleIconBoxProps} left="auto">
+                <Moon {...ToggleIconProps} />
+              </Box>
+            </FormControl>
             {!showBaseNavigation ? (
               <IconButton
                 aria-label={`Open Mobile menu`}
                 onClick={toggleMobileMenu}
                 {...IconbuttonProps}
-                icon={<MobileMenuToggle />}
+                icon={<MobileMenuToggle/>}
               />
             ) : null}
           </Flex>
         </Flex>
       </Flex>
-      <Flex>
-        {aside ? <Box as="aside" marginRight={{ base: 0, lg: -240, }}>{aside}</Box> : null}
-        <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
+      <Flex grow={1}>
+        {aside ? <Box as="aside" marginRight={{base: 0, lg: -240,}}>{aside}</Box> : null}
+        <Flex margin="0 auto" direction="column" width="100%">
           {children}
-          <Divider mb={6} mt={12} />
-          <p style={{ alignSelf: 'center' }}>
-            <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
-            </a>
-          </p>
-          <br />
         </Flex>
       </Flex>
-    </Box>
+      <Spacer mt={[6, 12]} />
+      <Footer/>
+    </Flex>
   );
 };
 

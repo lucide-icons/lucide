@@ -4,7 +4,7 @@ import {
   Box,
   Heading,
   Text,
-  useColorMode,
+  useStyleConfig,
   ButtonGroup,
 } from '@chakra-ui/react';
 import { Code, FileText } from 'lucide-react';
@@ -25,23 +25,13 @@ export interface PackageItem {
   order?: number
   private?: boolean
   flutter?: object
+  thirdParty?: boolean
 }
 
-
-const Package = ({ name, description, icon, shields, source, documentation }: PackageItem) => {
-  const { colorMode } = useColorMode();
-
+const Package = ({ name, description, icon, shields, source, documentation, thirdParty }: PackageItem) => {
+  const styles = useStyleConfig('Package')
   return (
-    <Box
-      borderWidth="1px"
-      rounded="lg"
-      position="relative"
-      width="100%"
-      maxWidth="1152px"
-      boxShadow="lg"
-      bg={colorMode == 'light' ? 'gray-200' : 'gray.700'}
-      padding={8}
-    >
+    <Box __css={styles}>
       <Flex
         justifyContent={{
           base: 'center',
@@ -117,13 +107,14 @@ const Package = ({ name, description, icon, shields, source, documentation }: Pa
               base: 'center',
               sm: 'flex-start',
             }}
+            isExternal={thirdParty}
           >
-            <Link passHref href={documentation}>
+            <Link passHref href={documentation} isExternal={!!thirdParty}>
               <Button as="a" variant="solid" textDecoration="none" leftIcon={<FileText />} my={2}>
                 Documentation
               </Button>
             </Link>
-            <Link passHref href={source}>
+            <Link passHref href={source} isExternal>
               <Button as="a" variant="solid" textDecoration="none" leftIcon={<Code />} my={2}>
                 Source
               </Button>

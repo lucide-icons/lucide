@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react';
-import Index from '../src/pages/index';
+import Index from '../src/pages/icons';
 import React from 'react';
 import { getAllData } from '../src/lib/icons';
 

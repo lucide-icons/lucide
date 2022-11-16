@@ -8,3 +8,9 @@ export interface IconEntity {
 export interface Contributor {
   author: string;
 }
+
+export interface MenuItemData {
+  name: string;
+  isExternal?: boolean;
+  href: string;
+}

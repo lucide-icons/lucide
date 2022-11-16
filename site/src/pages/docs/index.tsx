@@ -1,16 +1,16 @@
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import fetchAllDocuments from '../../lib/fetchAllDocuments'
-import { MDXRemote } from 'next-mdx-remote'
+import {MDXRemote} from 'next-mdx-remote'
 import mdxComponents from '../../lib/mdxComponents';
 import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
 import MobileMenu from '../../components/MobileMenu';
 import DocsMenu from '../../components/DocsMenu';
-import { Box, Button, Text } from '@chakra-ui/react';
-import { ArrowRight } from 'lucide-react'
+import {Box, Button, Text} from '@chakra-ui/react';
+import {ArrowRight} from 'lucide-react'
 import Link from 'next/link';
 
-const DocPage = ({ doc, data }) => {
+const DocPage = ({doc, data}) => {
   if (!data || !doc) return null
 
   const nextPage = data.nextPage || []
@@ -21,28 +21,32 @@ const DocPage = ({ doc, data }) => {
         <DocsMenu/>
       </MobileMenu>
       <Layout aside={
-          <DocsMenu
-            display={{ base:'none', md: 'block' }}
-            paddingX={8}
-            position="sticky"
-            overflowY="auto"
-            width={240}
-            height="100vh"
-            marginTop={-4}
-            top={0}
-          />
-        }
+        <DocsMenu
+          display={{base: 'none', md: 'block'}}
+          paddingX={8}
+          position="sticky"
+          overflowY="auto"
+          width={260}
+          height="100vh"
+          marginTop={-4}
+          top={0}
+        />
+      }
       >
-        { data?.title ? (
+        {data?.title ? (
           <Head>
-            <title>{ data.title }</title>
+            <title>{data.title}</title>
           </Head>
         ) : null}
 
-        <Box maxWidth="xl" width='100%' marginX='auto'>
-          <MDXRemote {...doc} data={data} components={mdxComponents} />
+        <Box maxW="xl"
+             w='100%'
+             mx='auto'
+             px={{base: 5}}
+        >
+          <MDXRemote {...doc} data={data} components={mdxComponents}/>
 
-          { nextPage.map((page) => (
+          {nextPage.map((page) => (
             <Link href={`docs/${page}`}>
               <Button
                 variant="ghost"
@@ -53,14 +57,14 @@ const DocPage = ({ doc, data }) => {
                 width='60%'
                 minWidth={240}
                 marginTop={6}
-                rightIcon={<ArrowRight />}
-                >
-                  <Text fontSize={19} fontWeight="bold" textTransform="capitalize">
-                    {page}
-                  </Text>
+                rightIcon={<ArrowRight/>}
+              >
+                <Text fontSize={19} fontWeight="bold" textTransform="capitalize">
+                  {page}
+                </Text>
               </Button>
             </Link>
-          )) }
+          ))}
         </Box>
       </Layout>
     </HeadingNavigationProvider>
@@ -73,5 +77,5 @@ export async function getStaticProps() {
   const allDocs = await fetchAllDocuments();
   const doc = allDocs.find(({filename = ''}) => filename === 'index.md');
 
-  return { props: doc }
+  return {props: doc}
 }
