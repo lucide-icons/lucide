@@ -1,5 +1,5 @@
-import {Box, chakra, Divider, Flex, Heading, Link, Text, Wrap, WrapItem} from '@chakra-ui/react';
-import NextLink from 'next/link';
+import {Box, chakra, Divider, Flex, Heading, Link, Text} from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import JSLogo from '../../public/framework-logos/js.svg';
 import ReactLogo from '../../public/framework-logos/react.svg';
 import VueLogo from '../../public/framework-logos/vue.svg';
@@ -8,9 +8,10 @@ import PreactLogo from '../../public/framework-logos/preact.svg';
 import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
-import {IconContent, IconEntity} from '../types';
+import {IconEntity} from '../types';
 import theme from "../lib/theme";
 import {SearchInput} from "./SearchInput";
+import useSpacing from "../lib/useSpacing";
 
 interface HeaderProps {
   data: IconEntity[];
@@ -18,6 +19,7 @@ interface HeaderProps {
 
 const Header = ({data}: HeaderProps) => {
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
+  const router = useRouter();
 
   const packages = [
     {
@@ -85,10 +87,11 @@ const Header = ({data}: HeaderProps) => {
   const contributorCount = 36;
   const packageCount = packages.length;
   const categoryCount = 47;
-  const version = '0.98.0';
+  const version = '0.101.0';
+  const releaseLink = 'https://github.com/lucide-icons/lucide/releases/tag/v0.101.0'
 
   return (
-    <Flex direction="column" align="center" justify="center">
+    <Flex direction="column" align="center" justify="center" px={useSpacing('container')} pb={useSpacing('sectionY')}>
       <Heading as="h1" fontSize="4xl" mb="4" textAlign="center" maxWidth="650px" fontWeight={500}>
         Beautiful &amp; consistent icon toolkit <chakra.span color={theme.colors.brand.DEFAULT}>made
         by the community.</chakra.span>
@@ -105,39 +108,6 @@ const Header = ({data}: HeaderProps) => {
         </Link>
         !
       </Text>
-      <Wrap
-        marginTop={4}
-        marginBottom={6}
-        spacing={{base: 4, lg: 6}}
-        justify="center"
-        align="center"
-      >
-        <WrapItem flexBasis="100%" style={{marginBottom: 0}}>
-          <NextLink href="/packages" passHref>
-            <Link _hover={{opacity: 0.8}} marginX="auto">
-              <Text fontSize="md" opacity={0.5} as="p" textAlign="center" width="100%">
-                Available for:
-              </Text>
-            </Link>
-          </NextLink>
-        </WrapItem>
-        {packages.map(({name, href, Logo, label}) => (
-          <WrapItem key={name}>
-            <NextLink href={href} key={name} passHref>
-              <Link _hover={{opacity: 0.8}} aria-label={label}>
-                <Logo/>
-              </Link>
-            </NextLink>
-          </WrapItem>
-        ))}
-        <WrapItem>
-          <NextLink href="/packages" passHref>
-            <Link _hover={{opacity: 0.8}} marginX="auto">
-              <Text fontSize="md" opacity={0.5}>More options</Text>
-            </Link>
-          </NextLink>
-        </WrapItem>
-      </Wrap>
 
       <SearchInput count={data.length} onSubmit={redirectToIconList}/>
 
@@ -146,19 +116,35 @@ const Header = ({data}: HeaderProps) => {
         direction={['column', 'row']}
         textTransform="uppercase"
         fontWeight={200}
-        mt={[2, 3, 4]}
+        mt={useSpacing('container')}
         align="center"
         justify="center"
       >
-        <Box><strong>{iconCount}</strong> icons</Box>
+        <Box>
+          <Link href="/icons">
+            <strong>{iconCount}</strong> icons
+          </Link>
+        </Box>
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
-        <Box><strong>{contributorCount}</strong> contributors</Box>
+        <Box>
+          <Link href="https://github.com/lucide-icons/lucide/graphs/contributors" isExternal>
+            <strong>{contributorCount}</strong> contributors
+          </Link>
+        </Box>
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
         <Box><strong>{categoryCount}</strong> categories</Box>
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
-        <Box><strong>{packageCount}</strong> packages</Box>
+        <Box>
+          <Link href="/packages">
+            <strong>{packageCount}</strong> packages
+          </Link>
+        </Box>
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
-        <Box>Version <strong>{version}</strong></Box>
+        <Box>
+          <Link href={releaseLink} isExternal>
+            Version <strong>{version}</strong>
+          </Link>
+        </Box>
       </Flex>
     </Flex>
   );

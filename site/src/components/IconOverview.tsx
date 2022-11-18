@@ -7,6 +7,7 @@ import {SearchInput} from './SearchInput';
 import {IconEntity} from '../types';
 import theme from "../lib/theme";
 import {IconCustomizerDrawer} from "./IconCustomizerDrawer";
+import useSpacing from "../lib/useSpacing";
 
 interface IconOverviewProps {
   data: IconEntity[];
@@ -33,7 +34,7 @@ const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
         w="full"
       >
         <Box
-          p={[2, 3, 4]}
+          p={useSpacing('container')}
           maxW={useToken('sizes', 'container-max-width')}
           w="full"
           m="auto"
@@ -61,7 +62,12 @@ const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
 
       <Box bg={colorMode == 'light' ? theme.colors.gray[50] : theme.colors.gray.DEFAULT}>
         {searchResults.length > 0 ? (
-          <IconList icons={searchResults}/>
+          <Box
+            mx="auto"
+            p={useSpacing('container')}
+          >
+            <IconList icons={searchResults}/>
+          </Box>
         ) : (
           <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word">
             No results found for "{query}"

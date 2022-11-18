@@ -6,12 +6,14 @@ import IconListItem from './IconListItem';
 import {IconEntity} from '../types';
 import {IconStyleContext} from "./CustomizeIconContext";
 import {AutoSizer, Grid, WindowScroller} from 'react-virtualized';
+import useSpacing from "../lib/useSpacing";
 
 interface IconListProps {
   icons: IconEntity[];
+  rows?: number
 }
 
-const IconList = memo(({icons}: IconListProps) => {
+const IconList = memo(({icons, rows}: IconListProps) => {
   const router = useRouter();
   const {color, setColor, size, setSize, strokeWidth, setStroke, resetStyle} = useContext(IconStyleContext);
   const styles = {
@@ -29,7 +31,7 @@ const IconList = memo(({icons}: IconListProps) => {
     if (!isVisible || isScrolling) {
       return (
         <chakra.div style={style}
-                    p={[1, 1.5, 2]}
+                    p={useSpacing('containerHalf')}
         >
           <Button variant="iconListItem"
                   className={'icon-list-item'}
@@ -44,7 +46,7 @@ const IconList = memo(({icons}: IconListProps) => {
     }
     return (
       <chakra.div style={style}
-           p={[1, 1.5, 2]}
+           p={useSpacing('containerHalf')}
       >
         <Link
           key={icon.name}
@@ -65,12 +67,7 @@ const IconList = memo(({icons}: IconListProps) => {
   };
 
   return (
-    <Box
-      maxW={useToken('sizes', 'container-max-width')} margin="auto"
-      mx="auto"
-      p={[1, 1.5, 2]}
-      style={styles}
-    >
+    <Box m={useSpacing('containerHalf').map((m) => -1 * m)}>
       <WindowScroller>
         {({height, isScrolling, onChildScroll, scrollTop}) => (
           <AutoSizer disableHeight>
@@ -85,7 +82,7 @@ const IconList = memo(({icons}: IconListProps) => {
                 columnCount={columnCount}
                 rowHeight={80+16}
                 columnWidth={80+16}
-                rowCount={Math.ceil(icons.length / columnCount)}
+                rowCount={rows ?? Math.ceil(icons.length / columnCount)}
                 overscanRowCount={5}
                 containerStyle={{margin: 'auto'}}
               />

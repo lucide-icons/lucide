@@ -17,20 +17,22 @@ const fetchPackages = async (): Promise<PackageItem[]> => {
 
     const jsonFilePath = path.resolve(filePath, 'package.json')
     if (await fileExist(jsonFilePath)) {
-      return JSON.parse(
+      return {...JSON.parse(
         await fs.readFile(jsonFilePath, 'utf-8')
-      )
+      ), name: filename}
     }
 
     const ymlFilePath = path.resolve(filePath, 'pubspec.yaml')
     if(await fileExist(ymlFilePath)) {
-      return yaml.load(
+      return {...yaml.load(
         await fs.readFile(ymlFilePath, 'utf-8')
-      );
+      ), name: filename};
     }
 
     return null
   }))
+
+  console.log(packageJsons);
 
   return packageJsons
 }

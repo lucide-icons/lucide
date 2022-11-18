@@ -1,4 +1,4 @@
-import {defineStyleConfig, extendTheme, StyleFunctionProps} from '@chakra-ui/react';
+import {defineStyleConfig, createMultiStyleConfigHelpers, extendTheme, StyleFunctionProps} from '@chakra-ui/react';
 
 const Footer = defineStyleConfig({
   baseStyle: {
@@ -52,19 +52,59 @@ const Package = defineStyleConfig({
 
 const Section = defineStyleConfig({
   baseStyle: {
-    p: 5,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right center',
   },
   variants: {
+    first: (props: StyleFunctionProps) => ({
+      backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0) 100%)',
+    }),
     odd: (props: StyleFunctionProps) => ({
-      bg: props.colorMode === 'dark' ? 'darkgray.DEFAULT' : 'white',
+      bgColor: props.colorMode === 'dark' ? 'darkgray.DEFAULT' : 'white',
     }),
     even: (props: StyleFunctionProps) => ({
-      bg: props.colorMode === 'dark' ? 'gray.DEFAULT' : 'gray.50',
+      bgColor: props.colorMode === 'dark' ? 'gray.DEFAULT' : 'gray.50',
     }),
   },
   defaultProps: {
     variant: 'odd',
   },
+});
+
+const IconCustomizerWidgetHelpers = createMultiStyleConfigHelpers(['card' , 'iconSelection', 'iconPreview', 'propertySelection', 'customizerDrawer']);
+const IconCustomizerWidget = IconCustomizerWidgetHelpers.defineMultiStyleConfig({
+  baseStyle: (props: StyleFunctionProps) => ({
+    card: {
+      bg: props.colorMode == 'light' ? 'gray.50' : 'darkgray.900',
+      borderRadius: 'lg',
+      overflow: 'hidden',
+    },
+    iconSelection: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      bg: props.colorMode == 'light' ? 'gray.100' : 'darkgray.800',
+      p: 2,
+    },
+    iconPreview: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      p: [4, 6, 8],
+    },
+    propertySelection: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      bg: props.colorMode == 'light' ? 'gray.100' : 'darkgray.800',
+      p: 2,
+    },
+  }),
 });
 
 const theme = extendTheme({
@@ -131,8 +171,10 @@ const theme = extendTheme({
       },
     }),
   },
-  sizes: {
-    containerSpacing: [2, 3, 4],
+  spacing: {
+    container: [2, 3, 4],
+    containerHalf: [1, 1.5, 2],
+    sectionY: [4, 8, 10],
   },
   semanticTokens: {
     sizes: {
@@ -148,6 +190,26 @@ const theme = extendTheme({
     Footer,
     Section,
     Package,
+    IconCustomizerWidget,
+    Heading: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        fontWeight: 500,
+        mb: '.5em',
+      }),
+      variants: {
+        smallCaps: (props: StyleFunctionProps) => ({
+          textTransform: 'uppercase',
+          fontSize: '1rem',
+          fontWeight: 600,
+        }),
+        brandSmallCaps: (props: StyleFunctionProps) => ({
+          textTransform: 'uppercase',
+          fontSize: '1rem',
+          color: props.colorMode == 'light' ? 'brand.500' : 'brand.500',
+          fontWeight: 600,
+        }),
+      },
+    },
     Button: {
       variants: {
         iconListItem: (props: StyleFunctionProps) => ({
