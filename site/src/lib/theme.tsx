@@ -52,6 +52,7 @@ const Package = defineStyleConfig({
 
 const Section = defineStyleConfig({
   baseStyle: {
+    textAlign: 'center',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -201,12 +202,14 @@ const theme = extendTheme({
           textTransform: 'uppercase',
           fontSize: '1rem',
           fontWeight: 600,
+          mb: 0,
         }),
         brandSmallCaps: (props: StyleFunctionProps) => ({
           textTransform: 'uppercase',
           fontSize: '1rem',
           color: props.colorMode == 'light' ? 'brand.500' : 'brand.500',
           fontWeight: 600,
+          mb: 0,
         }),
       },
     },

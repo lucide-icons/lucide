@@ -68,7 +68,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
         <Flex maxW={useToken('sizes', 'container-max-width')}>
           <Box maxW={{base: '100%', md: '75%', lg: '50%'}}
                w="full"
-               align="left"
+               textAlign={{base: 'center', md: 'left'}}
                px={useSpacing('container')}
                py={useSpacing('sectionY')}
           >
@@ -118,6 +118,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
       <Section variant="even" backgroundImage="assets/images/bg_2.png">
         <Box maxW={useToken('sizes', 'container-max-width')}
              w="full"
+             textAlign={{base: 'center', md: 'left'}}
              px={useSpacing('container')}
              py={useSpacing('sectionY')}
         >
@@ -140,7 +141,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
               gap={useSpacing('container')}
               direction={{base: 'column', md: 'row'}}
         >
-          <Box align="left" w={{base: '100%', md: '33%', lg: '50%'}}>
+          <Box textAlign={{base: 'center', md: 'left'}} w={{base: '100%', md: '33%', lg: '50%'}}>
             <Heading variant="brandSmallCaps">Customization options</Heading>
             <Heading level="3">Style as you please</Heading>
             <Text>Lucide allows you to easily customize icons to your needs, using CSS only. Icons of different sizes, weights & colours are at your fingertip!</Text>
@@ -168,7 +169,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
               direction={{base: 'column', md: 'row'}}
               justify={{base: 'flex-start', md: 'flex-end'}}
         >
-          <Box align="left" w={{base: '100%', md: '50%'}}>
+          <Box textAlign={{base: 'center', md: 'left'}} w={{base: '100%', md: '50%'}}>
             <Heading variant="brandSmallCaps">Icon requests</Heading>
             <Heading level="3">Can’t find what you’re looking for?</Heading>
             <Text mb={3}>Lucide has an active community of designers, eager to realize your design ideas.</Text>
@@ -199,7 +200,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
               gap={useSpacing('container')}
               direction={{base: 'column', md: 'row'}}
         >
-          <Box align="left" w={{base: '100%', md: '50%'}}>
+          <Box textAlign={{base: 'center', md: 'left'}} w={{base: '100%', md: '50%'}}>
             <Heading variant="brandSmallCaps">Bug reports</Heading>
             <Heading level="3">Something’s bugging you?</Heading>
             <Text mb={3}>While we try to do everything we can to make the Lucide experience as seamless as possible, accidents do happen.</Text>
