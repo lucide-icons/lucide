@@ -7,6 +7,7 @@ import {
   Flex,
   FormControl,
   FormLabel,
+  Hide,
   IconButton,
   Slider,
   SliderFilledTrack,
@@ -69,11 +70,12 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
           alignItems={{base: 'flex-start', md: 'center'}}
           w="100%"
     >
-      <Box textTransform="uppercase" whiteSpace="nowrap">
-        <strong>{data.length}</strong> icons
-      </Box>
-      <Divider display={{base: 'none', md: 'block'}} orientation="vertical" mx={3} height={5} />
-      <Divider display={{base: 'block', md: 'none'}} orientation="horizontal" my={3} width="full" />
+      <Hide below="md">
+        <Box textTransform="uppercase" whiteSpace="nowrap">
+          <strong>{data.length}</strong> icons
+        </Box>
+        <Divider orientation="vertical" mx={3} height={5} />
+      </Hide>
       <Flex direction={{base: 'column', sm: 'row'}}
             justifyContent={{base: 'flex-start', sm: 'center'}}
             alignItems={{base: 'flex-start', sm: 'center'}}

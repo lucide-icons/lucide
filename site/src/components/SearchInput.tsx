@@ -1,5 +1,6 @@
 import {
   Box,
+  BoxProps,
   Flex,
   Icon,
   Input,
@@ -19,10 +20,10 @@ import {useRouterParam} from '../lib/useRouterParam';
 interface SearchInputProps extends BoxProps {
   onChange?: (value: string) => void;
   onSubmit?: (value: string) => void;
-  count: number;
+  placeholder: string;
 }
 
-export const SearchInput = (({onChange, onSubmit, count, ...rest}: SearchInputProps) => {
+export const SearchInput = (({onChange, onSubmit, placeholder, ...rest}: SearchInputProps) => {
     const {colorMode} = useColorMode();
 
     const [urlValue, setUrlValue] = useRouterParam('search');
@@ -84,7 +85,7 @@ export const SearchInput = (({onChange, onSubmit, count, ...rest}: SearchInputPr
           />
           <Input
             ref={ref}
-            placeholder={'Search icons'}
+            placeholder={placeholder}
             onChange={(event) => setInputValue(event.target.value)}
             value={inputValue}
             pr={[4, rightElementWidth]}

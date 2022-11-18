@@ -1,4 +1,4 @@
-import {Box, Flex, Hide, IconButton, Text, Tooltip, useColorMode, useToken} from '@chakra-ui/react';
+import {Box, Flex, Hide, IconButton, Text, Tooltip, useColorMode, useToken, useBreakpointValue} from '@chakra-ui/react';
 import React, {useState} from 'react';
 import useSearch from '../lib/useSearch';
 import {Sliders as SlidersIcon} from 'lucide-react';
@@ -17,7 +17,8 @@ interface IconOverviewProps {
 const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
   const [query, setQuery] = useState('');
   const {colorMode} = useColorMode();
-  const [customizerOpen, setCustomizerOpen] = useState(true);
+  const isMobile = useBreakpointValue({base: true, md: false});
+  const [customizerOpen, setCustomizerOpen] = useState(false);
 
   const searchResults = useSearch(query, data, [
     {name: 'name', weight: 2},
@@ -45,7 +46,10 @@ const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
                 alignItems="center"
                 margin="auto"
           >
-            <SearchInput onChange={setQuery} count={data.length} grow={1}/>
+            <SearchInput onChange={setQuery}
+                         grow={1}
+                         placeholder={isMobile ? `Search ${data.length} icons...` : 'Search icons...'}
+            />
             <Hide above="md">
               <Tooltip label="Customize icons" aria-label="Customize icons">
                 <IconButton
@@ -56,7 +60,7 @@ const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
               </Tooltip>
             </Hide>
           </Flex>
-          {customizerOpen ? (<IconCustomizerDrawer data={data}/>) : null}
+          {customizerOpen||!isMobile ? (<IconCustomizerDrawer data={data}/>) : null}
         </Box>
       </Box>
 
