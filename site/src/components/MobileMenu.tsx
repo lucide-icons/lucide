@@ -35,7 +35,7 @@ const MobileMenu = ({children}: { children?: ReactNode }): JSX.Element => {
         </DrawerHeader>
         <DrawerBody>
           <Flex direction="column" mb={4}>
-            {menuItems.map(menuItem => (<MenuItem {...{menuItem, fontSize: 'lg'}} />))}
+            {menuItems.map(menuItem => (<MenuItem {...{menuItem, menuName: 'mobile', fontSize: 'lg'}} />))}
           </Flex>
           <Divider mt={2}/>
           {children}

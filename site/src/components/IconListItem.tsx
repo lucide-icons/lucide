@@ -58,18 +58,16 @@ const IconListItem = ({name, onClick, src: svg}: IconListItemProps) => {
               onClick={handleClick}
               key={name}
       >
-        <Flex direction="column" align="center" justify="stretch" width="100%" gap={4}>
-          <Flex flex={2} flexBasis="100%" align="flex-end">
-            <IconWrapper
-              src={svg}
-              style={{
-                stroke: "var(--lucide-stroke-color, currentColor)",
-                strokeWidth: "var(--lucide-stroke-width, 2px)",
-                height: "var(--lucide-icon-size, 24px)",
-                width: "var(--lucide-icon-size, 24px)",
-              }}
-            />
-          </Flex>
+        <Flex direction="column" align="center" justify="center" width="100%">
+          <IconWrapper
+            src={svg}
+            style={{
+              stroke: "var(--lucide-stroke-color, currentColor)",
+              strokeWidth: "var(--lucide-stroke-width, 2px)",
+              height: "var(--lucide-icon-size, 24px)",
+              width: "var(--lucide-icon-size, 24px)",
+            }}
+          />
         </Flex>
       </Button>
     </Tooltip>

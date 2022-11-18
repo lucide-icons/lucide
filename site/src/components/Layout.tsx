@@ -86,7 +86,7 @@ const Layout = ({aside, children}: LayoutProps) => {
           <Flex justifyContent="center" alignItems="center">
             {showBaseNavigation ? (
               <>
-                {menuItems.map(menuItem => (<MenuItem {...{menuItem, fontSize: 'lg'}} />))}
+                {menuItems.map(menuItem => (<MenuItem {...{menuItem, menuName: 'navbar', fontSize: 'lg'}} />))}
               </>
             ) : null}
             <FormControl display='flex' alignItems='center' position="relative">

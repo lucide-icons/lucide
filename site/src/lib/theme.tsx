@@ -136,7 +136,7 @@ const theme = extendTheme({
   },
   semanticTokens: {
     sizes: {
-      'container-max-width': '890px',
+      'container-max-width': '976px',
     },
     colors: {
       'chakra-border-color': {

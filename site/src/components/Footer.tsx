@@ -12,7 +12,7 @@ const Footer = ({variant, ...rest}: FooterProps) => {
 
   return (
     <Flex __css={styles} {...rest} gap={[2, 3, 4]}>
-      {menuItems.map(menuItem => (<MenuItem {...{menuItem}} />))}
+      {menuItems.map(menuItem => (<MenuItem {...{menuItem, menuName: 'footer'}} />))}
       <NextLink href="https://vercel.com?utm_source=lucide&utm_campaign=oss" passHref>
         <Link>
           {/* eslint-disable-next-line @next/next/no-img-element */}

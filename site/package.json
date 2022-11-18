@@ -34,7 +34,8 @@
     "react": "^18.0.0",
     "react-color": "^2.19.3",
     "react-dom": "^18.0.0",
-    "react-svg-loader": "^3.0.3"
+    "react-svg-loader": "^3.0.3",
+    "react-virtualized": "^9.22.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.2.5",
