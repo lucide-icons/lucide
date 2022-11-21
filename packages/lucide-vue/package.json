@@ -19,7 +19,8 @@
   "unpkg": "dist/umd/lucide-vue.min.js",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "nuxt.js"
   ],
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:bundles",
