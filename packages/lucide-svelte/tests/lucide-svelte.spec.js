@@ -1,8 +1,10 @@
-import { render, fireEvent } from '@testing-library/svelte';
+import { describe, it, expect } from 'vitest';
+import { render, fireEvent, cleanup } from '@testing-library/svelte';
 import { Smile } from '../src/icons'
 import TestSlots from './TestSlots.svelte'
 
 describe('Using lucide icon components', () => {
+  afterEach(() => cleanup())
   it('should render an component', () => {
     const { container } = render(Smile);
     expect(container).toMatchSnapshot();

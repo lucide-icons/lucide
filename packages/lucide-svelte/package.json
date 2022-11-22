@@ -29,11 +29,14 @@
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtention=.svelte --pretty=false",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
-    "test": "jest",
+    "test": "vitest",
+    "test:jest": "jest",
     "test:watch": "jest --watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@lucide/rollup-plugins": "*",
+    "@sveltejs/vite-plugin-svelte": "^1.2.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/svelte": "^3.0.3",
     "@tsconfig/svelte": "^3.0.0",
@@ -43,7 +46,7 @@
     "svelte-jester": "^2.3.1",
     "svelte-preprocess": "^4.10.7",
     "svelte2tsx": "^0.4.12",
-    "@lucide/rollup-plugins": "*"
+    "vitest": "^0.23.2"
   },
   "peerDependencies": {
     "svelte": "^3.49.0",
