@@ -1,0 +1,12 @@
+{
+  "name": "lucide-angular",
+  "version": "0.0.1",
+  "type": "module",
+  "peerDependencies": {
+    "@angular/common": "^14.4.0",
+    "@angular/core": "^14.4.0"
+  },
+  "dependencies": {
+    "tslib": "^2.4.1"
+  }
+}

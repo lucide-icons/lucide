@@ -1,155 +1,27 @@
-# Lucide Angular
+# LucideAngular
 
-Implementation of the lucide icon library for angular applications.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+## Development server
 
-## Installation
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```sh
-yarn add lucide-angular
-```
+## Code scaffolding
 
-or
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```sh
-npm install lucide-angular
-```
+## Build
 
-## How to use
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-There are three ways for use this library.
+## Running unit tests
 
-### Method 1: createElement
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-After install `lucide-angular` change content of file `app.component.html` and `app.component.ts`.
+## Running end-to-end tests
 
-```html
-<!-- app.component.html -->
-<div id="lucide-icon"></div>
-```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-```js
-// app.component.ts
+## Further help
 
-import { Component, OnInit } from '@angular/core';
-import { createElement } from 'lucide-angular';
-import { Activity } from 'lucide-angular/icons';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    const div = document.getElementById('lucide-icon');
-    const elm = createElement(Activity);
-    elm.setAttribute('color', 'red'); // or set `width`, `height`, `fill`, `stroke-width`, ...
-
-    if (div) {
-      div.appendChild(elm);
-    }
-  }
-}
-```
-
-### Method 2: User **Tag** with **name** property
-
-After install `lucide-angular` change content of file `app.component.html`, `app.component.ts`, `app.component.css` and `app.module.ts`.
-
-```js
-// app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LucideAngularModule, AlarmCheck, Edit } from 'lucide-angular';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    LucideAngularModule.pick({ AlarmCheck, Edit }) // add all of icons that is imported.
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-```
-
-```html
-<!-- app.component.html -->
-<lucide-icon name="alarm-check" class="myicon"></lucide-icon>
-<lucide-icon name="edit" class="myicon"></lucide-icon>
-```
-
-### Method 3: User **Tag** with **img** property
-
-After install `lucide-angular` change content of file `app.component.html`, `app.component.ts`, `app.component.css` and `app.module.ts`.
-
-```js
-// app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LucideAngularModule } from 'lucide-angular';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, LucideAngularModule.pick({})],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-```
-
-```xml
-<!-- app.component.html -->
-<lucide-icon [img]="ico1" class="myicon"></lucide-icon>
-<lucide-icon [img]="ico2" class="myicon"></lucide-icon>
-```
-
-```js
-// app.component.ts
-import { Component } from '@angular/core';
-import { Airplay, Circle } from 'lucide-angular';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  ico1 = Airplay;
-  ico2 = Circle;
-}
-```
-
-## Notes
-
-### Import all icons
-
-In `Method 2`: import all icons in `app.module.ts` by:
-
-```js
-...
-import { icons } from 'lucide-angular/icons';
-....
-LucideAngularModule.pick(icons)
-....
-```
-
-### Tags
-
-You can use the following tags instead of `lucide-icon`:
-
-- lucide-angular
-- i-lucide
-- span-lucide
-
-All of the above are the same
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

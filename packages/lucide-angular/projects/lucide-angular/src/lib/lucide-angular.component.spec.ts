@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LucideAngularModule } from './lucide-angular.module';
+
 import { LucideAngularComponent } from './lucide-angular.component';
+import { LucideAngularModule } from './lucide-angular.module';
 
 describe('LucideAngularComponent', () => {
   let component: LucideAngularComponent;
@@ -8,12 +9,9 @@ describe('LucideAngularComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LucideAngularComponent ],
-      imports: [
-        LucideAngularModule.pick({ })
-      ],
-    })
-    .compileComponents();
+      declarations: [LucideAngularComponent],
+      imports: [LucideAngularModule.pick({})],
+    }).compileComponents();
   });
 
   beforeEach(() => {

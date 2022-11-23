@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, Inject, ChangeDetectorRef, OnChanges, Sim
 import { Icons } from './icons.provider';
 import { IconData } from '../icons/types';
 import { createElement } from '../helpers/create-element';
+import {DOCUMENT} from '@angular/common'
 
 @Component({
   selector: 'lucide-angular, lucide-icon, i-lucide, span-lucide',
@@ -19,18 +20,18 @@ import { createElement } from '../helpers/create-element';
     }
   `]
 })
-
 export class LucideAngularComponent implements OnChanges {
   @Input() name!: string;
   @Input() img!: IconData;
 
-  constructor(
+  public constructor(
     @Inject(ElementRef) private elem: ElementRef,
     @Inject(ChangeDetectorRef) private changeDetector: ChangeDetectorRef,
-    @Inject(Icons) private icons: Icons
+    @Inject(Icons) private icons: Icons,
+    @Inject(DOCUMENT) private document: Document
   ) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  public ngOnChanges(changes: SimpleChanges): void {
     if (changes.name) {
       // icons are provided as an array of objects because of "multi: true"
       const icons = Object.assign({}, ...(this.icons as any as object[]));
@@ -42,7 +43,7 @@ export class LucideAngularComponent implements OnChanges {
           `Please check icon name or \'lucide icon list\'`
         );
       } else {
-        const icoElement = createElement(icoOfName);
+        const icoElement = createElement(this.document, icoOfName);
         icoElement.setAttribute('stroke-width', 'inherit');
         icoElement.setAttribute('fill', 'inherit');
         icoElement.removeAttribute('width');
@@ -53,7 +54,7 @@ export class LucideAngularComponent implements OnChanges {
       }
     }
     else if (changes.img) {
-      const icoElement = createElement(changes.img.currentValue);
+      const icoElement = createElement(this.document, changes.img.currentValue);
       icoElement.setAttribute('stroke-width', 'inherit');
       icoElement.setAttribute('fill', 'inherit');
       icoElement.removeAttribute('width');
@@ -66,7 +67,7 @@ export class LucideAngularComponent implements OnChanges {
     this.changeDetector.markForCheck();
   }
 
-  toPascalCase(str: string): string {
+  private toPascalCase(str: string): string {
     return str.replace(/(\w)([a-z0-9]*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
   }
 }
