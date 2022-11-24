@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { render } from 'solid-testing-library'
-import { Grid } from '../src/icons'
+import { render } from 'solid-testing-library';
+import { Grid } from '../src/icons';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -15,7 +15,7 @@ describe('Using lucide icon components', () => {
       <Grid
         data-testid={testId}
         size={48}
-        stroke="red"
+        color="red"
         strokeWidth={4}
       />,
     );

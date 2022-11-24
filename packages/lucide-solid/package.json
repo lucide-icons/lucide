@@ -11,24 +11,23 @@
     "directory": "packages/lucide-solid"
   },
   "author": "Eric Fennis",
-  "amdName": "lucide-solid",
-  "main": "dist/cjs/lucide-solid.js",
-  "main:umd": "dist/umd/lucide-solid.js",
-  "module": "dist/esm/lucide-solid.js",
-  "unpkg": "dist/umd/lucide-solid.min.js",
-  "typings": "dist/lucide-solid.d.ts",
+  "types": "dist/lucide-solid.d.ts",
+  "exports": {
+    ".": {
+      "solid": "./dist/solid/lucide-solid.js"
+    }
+  },
   "files": [
     "dist"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm copy:outputs && pnpm build:types",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
-    "build:es": "babel src -d dist/esm",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js && rm -rf ./src/icons/*.jsx",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --iconFileExtention=.jsx --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
     "build:types": "node ./scripts/buildTypes.mjs",
-    "build:bundles": "rollup -c ./rollup.config.mjs",
+		"copy:outputs": "mkdir -p dist/solid && cp -r src/. dist/solid/. && rm dist/solid/icons/.gitkeep",
     "test:jest": "jest",
     "test": "vitest",
     "version": "pnpm version --git-tag-version=false"
@@ -38,14 +37,14 @@
     "babel-preset-solid": "^1.5.4",
     "jest": "^26.6.3",
     "jsdom": "^20.0.0",
+    "solid-jest": "^0.2.0",
     "solid-js": "^1.4.7",
     "solid-testing-library": "^0.3.0",
-    "solid-jest": "^0.2.0",
     "vite": "^2.6.4",
     "vite-plugin-solid": "^2.3.0",
     "vitest": "^0.23.2"
   },
   "peerDependencies": {
-    "solid-js": "^1.4.7"
+    "solid-js": "^1.6.2"
   }
 }
