@@ -18,12 +18,13 @@ import { JSX } from 'solid-js'
 
 interface LucideProps extends Partial<JSX.IntrinsicElements & JSX.SvgSVGAttributes<SVGSVGElement>> {
   key?: string | number;
-  ref?: string | ((component: any) => any);
   color?: string
   size?: string | number
   strokeWidth?: string | number
   class?: string
 }
+
+export type LucideIcon = (props: LucideProps) => JSX.Element;
 
 // Generated icons
 `;
@@ -40,7 +41,7 @@ svgFiles.forEach((svgFile) => {
   const iconName = path.basename(svgFile, '.svg');
   const componentName = toPascalCase(iconName);
 
-  const exportTypeString = `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
+  const exportTypeString = `export declare const ${componentName}: LucideIcon;\n`;
   appendFile(exportTypeString, TYPES_FILE, srcDirectory);
 });
 

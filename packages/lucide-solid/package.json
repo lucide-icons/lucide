@@ -27,7 +27,7 @@
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js && rm -rf ./src/icons/*.jsx",
     "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --iconFileExtention=.jsx --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
     "build:types": "node ./scripts/buildTypes.mjs",
-		"copy:outputs": "mkdir -p dist/solid && cp -r src/. dist/solid/. && rm dist/solid/icons/.gitkeep",
+    "copy:outputs": "mkdir -p dist/solid && cp -r src/. dist/solid/. && rm dist/solid/icons/.gitkeep",
     "test:jest": "jest",
     "test": "vitest",
     "version": "pnpm version --git-tag-version=false"
