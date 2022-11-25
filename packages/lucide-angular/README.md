@@ -6,11 +6,13 @@ Implementation of the lucide icon library for angular applications.
 
 ## Installation
 
-``` sh
+```sh
 yarn add lucide-angular
+```
 
-# or
+or
 
+```sh
 npm install lucide-angular
 ```
 
@@ -22,12 +24,12 @@ There are three ways for use this library.
 
 After install `lucide-angular` change content of file `app.component.html` and `app.component.ts`.
 
-``` html
+```html
 <!-- app.component.html -->
 <div id="lucide-icon"></div>
 ```
 
-``` js
+```js
 // app.component.ts
 
 import { Component, OnInit } from '@angular/core';
@@ -39,7 +41,6 @@ import { Activity } from 'lucide-angular/icons';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent implements OnInit {
   ngOnInit(): void {
     const div = document.getElementById('lucide-icon');
@@ -53,11 +54,11 @@ export class AppComponent implements OnInit {
 }
 ```
 
-### Method 2: User __Tag__ with __name__ property
+### Method 2: User **Tag** with **name** property
 
 After install `lucide-angular` change content of file `app.component.html`, `app.component.ts`, `app.component.css` and `app.module.ts`.
 
-``` js
+```js
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -67,31 +68,29 @@ import { AppComponent } from './app.component';
 import { LucideAngularModule, AlarmCheck, Edit } from 'lucide-angular';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LucideAngularModule.pick({ AlarmCheck, Edit })  // add all of icons that is imported.
+    LucideAngularModule.pick({ AlarmCheck, Edit }) // add all of icons that is imported.
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
-``` html
+```html
 <!-- app.component.html -->
 <lucide-icon name="alarm-check" class="myicon"></lucide-icon>
 <lucide-icon name="edit" class="myicon"></lucide-icon>
 ```
 
-### Method 3: User __Tag__ with __img__ property
+### Method 3: User **Tag** with **img** property
 
 After install `lucide-angular` change content of file `app.component.html`, `app.component.ts`, `app.component.css` and `app.module.ts`.
 
-``` js
+```js
 // app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -101,27 +100,21 @@ import { AppComponent } from './app.component';
 import { LucideAngularModule } from 'lucide-angular';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    LucideAngularModule.pick({ })
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, LucideAngularModule.pick({})],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
-``` xml
+```xml
 <!-- app.component.html -->
 <lucide-icon [img]="ico1" class="myicon"></lucide-icon>
 <lucide-icon [img]="ico2" class="myicon"></lucide-icon>
 ```
 
-``` js
+```js
 // app.component.ts
 import { Component } from '@angular/core';
 import { Airplay, Circle } from 'lucide-angular';
@@ -131,7 +124,6 @@ import { Airplay, Circle } from 'lucide-angular';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
   ico1 = Airplay;
   ico2 = Circle;
@@ -144,9 +136,9 @@ export class AppComponent {
 
 In `Method 2`: import all icons in `app.module.ts` by:
 
-``` js
+```js
 ...
-import { icons } from 'lucide-angular/icons';
+import { icons } from 'lucide-angular';
 ....
 LucideAngularModule.pick(icons)
 ....

@@ -2,8 +2,8 @@ import { Grid } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
-import { IconEntity } from '../types';
 import IconListItem from './IconListItem';
+import { IconEntity } from '../types';
 
 interface IconListProps {
   icons: IconEntity[];

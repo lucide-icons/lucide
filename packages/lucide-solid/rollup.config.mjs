@@ -1,10 +1,10 @@
-import plugins from '../../rollup.plugins';
-import pkg from './package.json';
+import plugins from '../../rollup.plugins.mjs';
+import pkg from './package.json' assert { type: 'json' };
 
-const packageName = 'LucidePreact';
-const outputFileName = 'lucide-preact';
+const packageName = 'LucideSolid';
+const outputFileName = 'lucide-solid';
 const outputDir = 'dist';
-const inputs = [`src/lucide-preact.js`];
+const inputs = [`src/lucide-solid.js`];
 const bundles = [
   {
     format: 'umd',
@@ -29,15 +29,15 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['preact', 'prop-types'],
+      external: ['solid-js', 'solid-js/h'],
       output: {
         name: packageName,
         file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
         format,
         sourcemap: true,
         globals: {
-          preact: 'preact',
-          'prop-types': 'PropTypes',
+          'solid-js': 'solid-js',
+          'solid-js/h': 'solid-js/h',
         },
       },
     })),

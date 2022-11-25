@@ -8,9 +8,11 @@ Implementation of the lucide icon library for Vue applications.
 
 ```sh
 yarn add lucide-vue
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue
 ```
 
@@ -23,40 +25,36 @@ Each icon can be imported as a vue component.
 
 You can pass additional props to adjust the icon.
 
-``` html
+```html
 <template>
-  <Camera
-    color="red"
-    :size="32"
-  />
+  <Camera color="red" :size="32" />
 </template>
 
 <script>
-// Returns Vue component
-import { Camera } from 'lucide-vue';
+  // Returns Vue component
+  import { Camera } from 'lucide-vue';
 
-export default {
-  name: "My Component",
-  components: { Camera }
-}
-
+  export default {
+    name: 'My Component',
+    components: { Camera }
+  };
 </script>
 ```
 
 ### Props
 
-|  name        |   type   |  default
-| ------------ | -------- | --------
-| `size`       | *Number* | 24
-| `color`      | *String* | currentColor
-| `strokeWidth`| *Number* | 2
-| `defaultClass`| *String* | lucide-icon
+| name           | type     | default      |
+| -------------- | -------- | ------------ |
+| `size`         | _Number_ | 24           |
+| `color`        | _String_ | currentColor |
+| `strokeWidth`  | _Number_ | 2            |
+| `defaultClass` | _String_ | lucide-icon  |
 
 ### Custom props
 
 You can also pass custom props that will be added in the svg as attributes.
 
-``` html
+```html
 <template>
   <Camera fill="red" />
 </template>
@@ -70,33 +68,33 @@ It is possible to create one generic icon component to load icons.
 
 #### Icon Component Example
 
-``` html
+```html
 <template>
   <component :is="icon" />
 </template>
 
 <script>
-import * as icons from "lucide-vue";
+  import * as icons from 'lucide-vue';
 
-export default {
-  props: {
-    name: {
-      type: String,
-      required: true,
+  export default {
+    props: {
+      name: {
+        type: String,
+        required: true
+      }
     },
-  },
-  computed: {
-    icon() {
-      return icons[this.name];
-    },
-  },
-};
+    computed: {
+      icon() {
+        return icons[this.name];
+      }
+    }
+  };
 </script>
 ```
 
 ##### Then you can use it like this
 
-``` html
+```html
 <template>
   <div id="app">
     <Icon name="Airplay" />

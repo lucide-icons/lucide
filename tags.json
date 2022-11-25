@@ -446,12 +446,21 @@
   "beaker": [
     "cup"
   ],
-  "beer": [
-    "alcohol",
-    "bar",
-    "beverage",
-    "brewery",
-    "drink"
+  "bean": [
+    "legume",
+    "soy",
+    "food",
+    "seed"
+  ],
+  "bean-off": [
+    "soy free",
+    "legume",
+    "soy",
+    "food",
+    "seed",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "bed": [
     "sleep",
@@ -467,6 +476,13 @@
     "sleep",
     "hotel",
     "furniture"
+  ],
+  "beer": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
   ],
   "bell": [
     "alarm",
@@ -749,6 +765,19 @@
     "webcam",
     "video"
   ],
+  "candy": [
+    "sugar",
+    "food",
+    "sweet"
+  ],
+  "candy-off": [
+    "sugar free",
+    "food",
+    "sweet",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "car": [
     "vehicle",
     "transport",
@@ -763,8 +792,19 @@
     "chromecast",
     "airplay"
   ],
+  "cat": [
+    "animal",
+    "pet",
+    "kitten",
+    "feline"
+  ],
   "check": [
     "done"
+  ],
+  "check-check": [
+    "done",
+    "received",
+    "double"
   ],
   "check-circle": [
     "done"
@@ -1326,6 +1366,29 @@
     "calculate",
     "maths"
   ],
+  "dna": [
+    "gene",
+    "gmo",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
+  "dna-off": [
+    "gene",
+    "gmo free",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
+  "dog": [
+    "animal",
+    "pet",
+    "puppy",
+    "hound",
+    "canine"
+  ],
   "dollar-sign": [
     "currency",
     "money",
@@ -1350,6 +1413,12 @@
     "food",
     "chicken",
     "meat"
+  ],
+  "dumbbell": [
+    "barbell",
+    "weight",
+    "workout",
+    "gym"
   ],
   "ear": [
     "hearing",
@@ -1386,6 +1455,7 @@
     "food",
     "breakfast"
   ],
+  "egg-off": [],
   "equal": [
     "calculate",
     "maths"
@@ -1689,14 +1759,12 @@
   "file-type": [
     "font",
     "text",
-    "font",
     "typography",
     "type"
   ],
   "file-type-2": [
     "font",
     "text",
-    "font",
     "typography",
     "type"
   ],
@@ -1791,6 +1859,11 @@
   "flask-conical": [
     "beaker",
     "erlenmeyer"
+  ],
+  "flask-conical-off": [
+    "beaker",
+    "erlenmeyer",
+    "non toxic"
   ],
   "flask-round": [
     "beaker"
@@ -2009,11 +2082,6 @@
     "automation",
     "maths"
   ],
-  "joystick": [
-    "game",
-    "console",
-    "control stick"
-  ],
   "gamepad": [
     "console"
   ],
@@ -2071,15 +2139,15 @@
     "code",
     "version control"
   ],
-  "git-pull-request-draft": [
-    "code",
-    "version control",
-    "draft"
-  ],
   "git-pull-request-closed": [
     "code",
     "version control",
     "rejected"
+  ],
+  "git-pull-request-draft": [
+    "code",
+    "version control",
+    "draft"
   ],
   "github": [
     "logo",
@@ -2175,6 +2243,13 @@
     "mist",
     "fog"
   ],
+  "heading": [],
+  "heading-1": [],
+  "heading-2": [],
+  "heading-3": [],
+  "heading-4": [],
+  "heading-5": [],
+  "heading-6": [],
   "headphones": [
     "music",
     "audio",
@@ -2239,6 +2314,20 @@
   "home": [
     "house",
     "living"
+  ],
+  "hop": [
+    "beer",
+    "brewery",
+    "drink"
+  ],
+  "hop-off": [
+    "beer",
+    "brewery",
+    "drink",
+    "hop free",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "hourglass": [
     "timer",
@@ -2311,6 +2400,11 @@
     "currency",
     "money",
     "payment"
+  ],
+  "joystick": [
+    "game",
+    "console",
+    "control stick"
   ],
   "key": [
     "password",
@@ -2735,12 +2829,6 @@
     "podcast",
     "microphone"
   ],
-  "mic-off": [
-    "record",
-    "sound",
-    "mute",
-    "microphone"
-  ],
   "mic-2": [
     "lyrics",
     "voice",
@@ -2751,6 +2839,12 @@
     "podcast",
     "karaoke",
     "singing",
+    "microphone"
+  ],
+  "mic-off": [
+    "record",
+    "sound",
+    "mute",
     "microphone"
   ],
   "microscope": [
@@ -2770,6 +2864,24 @@
     "sign",
     "signpost",
     "version control"
+  ],
+  "milk": [
+    "lactose",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "diet"
+  ],
+  "milk-off": [
+    "lactose free",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "minimize": [
     "exit fullscreen",
@@ -2804,6 +2916,16 @@
   ],
   "monitor-off": [
     "share"
+  ],
+  "monitor-smartphone": [
+    "smartphone",
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "desktop",
+    "monitor",
+    "responsive"
   ],
   "monitor-speaker": [
     "devices",
@@ -2929,6 +3051,20 @@
     "magazine",
     "article",
     "headline"
+  ],
+  "nut": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "diet"
+  ],
+  "nut-off": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "octagon": [
     "stop",
@@ -3078,6 +3214,15 @@
     "money",
     "savings"
   ],
+  "pilcrow": [
+    "paragraph",
+    "mark",
+    "paraph",
+    "blind",
+    "typography",
+    "type",
+    "text"
+  ],
   "pin": [
     "save",
     "map",
@@ -3112,6 +3257,8 @@
     "music",
     "start"
   ],
+  "plug": [],
+  "plug-2": [],
   "plug-zap": [
     "charge",
     "charging",
@@ -3660,6 +3807,7 @@
     "audio",
     "music"
   ],
+  "spline": [],
   "sprout": [
     "leaf",
     "nature",
@@ -3691,6 +3839,13 @@
     "remove",
     "unrate"
   ],
+  "stethoscope": [
+    "phonendoscope",
+    "medical",
+    "heart",
+    "lungs",
+    "sound"
+  ],
   "sticker": [
     "reaction",
     "emotion",
@@ -3703,13 +3858,6 @@
     "comment",
     "reaction",
     "memo"
-  ],
-  "stethoscope": [
-    "phonendoscope",
-    "medical",
-    "heart",
-    "lungs",
-    "sound"
   ],
   "stop-circle": [
     "media",
@@ -3735,6 +3883,11 @@
   ],
   "subscript": [
     "text"
+  ],
+  "subtitles": [
+    "captions",
+    "closed captions",
+    "accessibility"
   ],
   "sun": [
     "brightness",
@@ -4134,6 +4287,13 @@
     "dinner",
     "supper"
   ],
+  "vegan": [
+    "vegetarian",
+    "fruitarian",
+    "herbivorous",
+    "animal rights",
+    "diet"
+  ],
   "venetian-mask": [
     "mask",
     "masquerade",
@@ -4226,6 +4386,21 @@
     "interface",
     "callback"
   ],
+  "wheat": [
+    "corn",
+    "cereal",
+    "grain",
+    "gluten"
+  ],
+  "wheat-off": [
+    "corn",
+    "cereal",
+    "grain",
+    "gluten free",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "wifi": [
     "connection",
     "signal",
@@ -4248,6 +4423,18 @@
     "sommelier",
     "vineyard",
     "winery"
+  ],
+  "wine-off": [
+    "alcohol",
+    "beverage",
+    "drink",
+    "glass",
+    "alcohol free",
+    "abstinence",
+    "abstaining",
+    "teetotalism",
+    "allergy",
+    "intolerance"
   ],
   "wrap-text": [
     "words",

@@ -4,16 +4,18 @@ on:
   pull_request:
     paths:
       - packages/lucide-static/**
+      - pnpm-lock.yaml
   push:
     paths:
       - packages/lucide-static/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-static:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3.4.1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
 
@@ -42,4 +44,3 @@ jobs:
 
       - name: Build
         run: pnpm --filter lucide-static build
-

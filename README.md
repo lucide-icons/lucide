@@ -17,9 +17,10 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 
 ### Why choose Lucide over Feather Icons
 
-- Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
+- More icons to work with: Lucide already has hundreds of icons more than Feather does.
+- Official librairies and integrations with popular frameworks and design tools.
 - Well maintained code base.
-- Active community.
+- Active community, regularly growing and improving the set.
 
 ## Table of Contents
 
@@ -37,6 +38,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
+  - [Hyva](#hyva)
 - [Contributing](#contributing)
 - [Community](#community)
 - [License](#license)
@@ -56,9 +58,11 @@ Implementation of the lucide icon library for web applications.
 
 ```sh
 npm install lucide
+```
 
-#or
+or
 
+```sh
 yarn add lucide
 ```
 
@@ -70,9 +74,11 @@ Implementation of the lucide icon library for react applications.
 
 ```sh
 yarn add lucide-react
+```
 
-# or
+or
 
+```sh
 npm install lucide-react
 ```
 
@@ -84,9 +90,11 @@ Implementation of the lucide icon library for React Native applications.
 
 ```sh
 yarn add lucide-react-native
+```
 
-# or
+or
 
+```sh
 npm install lucide-react-native
 ```
 
@@ -98,9 +106,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue
 ```
 
@@ -112,9 +122,11 @@ Implementation of the lucide icon library for vue applications.
 
 ```sh
 yarn add lucide-vue-next
+```
 
-# or
+or
 
+```sh
 npm install lucide-vue-next
 ```
 
@@ -124,9 +136,11 @@ For more details, see the [documentation](https://github.com/lucide-icons/lucide
 
 ```sh
 yarn add lucide-angular
+```
 
-# or
+or
 
+```sh
 npm install lucide-angular
 ```
 
@@ -138,9 +152,11 @@ Implementation of the lucide icon library for preact applications.
 
 ```sh
 yarn add lucide-preact
+```
 
-# or
+or
 
+```sh
 npm install lucide-preact
 ```
 
@@ -157,9 +173,11 @@ NPM package
 
 ```sh
 yarn add lucide-static
+```
 
-# or
+or
 
+```sh
 npm install lucide-static
 ```
 
@@ -197,9 +215,11 @@ Implementation of the lucide icon library for Svelte applications.
 
 ```sh
 yarn add lucide-svelte
+```
 
-# or
+or
 
+```sh
 npm install lucide-svelte
 ```
 
@@ -211,13 +231,25 @@ Implementation of the lucide icon library for solid applications.
 
 ```sh
 yarn add lucide-solid
+```
 
-#or
+or
 
+```sh
 npm install lucide-solid
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-solid#lucide-solid).
+
+### Hyva
+
+Implementation of Lucide icon's using Hyvä's svg php viewmodal to render icons for Magento 2 Hyva theme based projects.
+
+```sh
+composer require siteation/magento2-hyva-icons-lucide
+```
+
+For more details, see the [documentation](https://github.com/Siteation/magento2-hyva-icons-lucide/blob/main/README.md).
 
 ## Contributing
 
@@ -245,4 +277,3 @@ Thank you to all the people who contributed to Lucide!
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
   <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
-

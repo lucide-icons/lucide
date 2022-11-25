@@ -1,17 +1,13 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-
-export interface Contributor {
-  author: string
-  commit: string
-}
+import { Contributor } from '../types';
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
 function getContentHashOfFile(path) {
   return new Promise((resolve, reject) => {
-    const hash = crypto.createHash('md4');
+    const hash = crypto.createHash('sha256');
     const stream = fs.createReadStream(path);
     stream.on('error', err => reject(err));
     stream.on('data', chunk => hash.update(chunk));
@@ -22,11 +18,12 @@ function getContentHashOfFile(path) {
 const fetchCommitsOfIcon = async (name) =>{
     try {
       const headers = new Headers();
-      const username = 'ericfennis';
+      const token = process.env.GITHUB_TOKEN;
+      const username = process.env.GITHUB_USERNAME;
       const password = process.env.GITHUB_API_KEY;
       headers.set(
         'Authorization',
-        `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
+        token ? `Bearer ${token}` : `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`,
       );
 
       const res = await fetch(
@@ -54,9 +51,8 @@ export const filterCommits = (commits) =>
     !IGNORE_COMMIT_MESSAGES.some(ignoreItem =>
       commit.message.toLowerCase().includes(ignoreItem),
     ))
-  .map(({ sha, author }) => ({
+  .map(({ author }) => ({
     author: author && author.login ? author.login : null,
-    commit: sha,
   }))
   .filter(({ author }, index, self) => self.findIndex((commit) => commit.author === author) === index);
 
