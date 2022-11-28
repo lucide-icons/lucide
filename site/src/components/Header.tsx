@@ -15,9 +15,10 @@ import useSpacing from "../lib/useSpacing";
 
 interface HeaderProps {
   data: IconEntity[];
+  currentVersion: string;
 }
 
-const Header = ({data}: HeaderProps) => {
+const Header = ({data, currentVersion, contributors}: HeaderProps) => {
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
   const router = useRouter();
 
@@ -83,12 +84,9 @@ const Header = ({data}: HeaderProps) => {
   };
 
   const iconCount = data.length;
-  // @TODO dynamically fetch these metrics.
-  const contributorCount = 36;
   const packageCount = packages.length;
-  const categoryCount = 47;
-  const version = '0.101.0';
-  const releaseLink = 'https://github.com/lucide-icons/lucide/releases/tag/v0.101.0'
+
+  const releaseLink = 'https://github.com/lucide-icons/lucide/releases/tag/' + currentVersion;
 
   return (
     <Flex direction="column" align="center" justify="center" px={useSpacing('container')} pb={useSpacing('sectionY')}>
@@ -128,11 +126,9 @@ const Header = ({data}: HeaderProps) => {
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
         <Box>
           <Link href="https://github.com/lucide-icons/lucide/graphs/contributors" isExternal>
-            <strong>{contributorCount}</strong> contributors
+            <strong>{contributors}</strong> contributors
           </Link>
         </Box>
-        <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
-        <Box><strong>{categoryCount}</strong> categories</Box>
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
         <Box>
           <Link href="/packages">
@@ -142,7 +138,7 @@ const Header = ({data}: HeaderProps) => {
         <Divider display={['none', 'block']} orientation="vertical" mx={3} height={5} />
         <Box>
           <Link href={releaseLink} isExternal>
-            Version <strong>{version}</strong>
+            Version <strong>{currentVersion.substr(1)}</strong>
           </Link>
         </Box>
       </Flex>

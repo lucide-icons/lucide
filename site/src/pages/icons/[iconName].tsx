@@ -1,15 +1,15 @@
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import IconDetailOverlay from '../../components/IconDetailOverlay';
-import { getAllData, getData } from '../../lib/icons';
+import {getAllData, getData} from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
-import Header from '../../components/Header';
-import { useMemo } from 'react';
+import {useMemo} from 'react';
 import MobileMenu from "../../components/MobileMenu";
+import {fetchLatestRelease} from "../../lib/fetchAllReleases";
 
-const IconPage = ({ icon, data }) => {
+const IconPage = ({icon, data, currentVersion}) => {
   const router = useRouter();
-  const getIcon = iconName => data.find(({ name }) => name === iconName) || {};
+  const getIcon = iconName => data.find(({name}) => name === iconName) || {};
 
   const onClose = () => {
     let query = {};
@@ -26,7 +26,7 @@ const IconPage = ({ icon, data }) => {
         query,
       },
       undefined,
-      { scroll: false },
+      {scroll: false},
     );
   };
 
@@ -39,27 +39,28 @@ const IconPage = ({ icon, data }) => {
 
   return (
     <Layout>
-      <MobileMenu />
-      <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
-      <IconOverview {...{ currentIcon, data }} />
+      <MobileMenu/>
+      <IconDetailOverlay key={currentIcon?.name} icon={currentIcon} close={onClose} open/>
+      <IconOverview {...{currentIcon, data, currentVersion}} />
     </Layout>
   );
 };
 
 export default IconPage;
 
-export async function getStaticProps({ params: { iconName } }) {
+export async function getStaticProps({params: {iconName}}) {
   const data = await getAllData();
   const icon = await getData(iconName);
-  return { props: { icon, data } };
+  const currentVersion = await fetchLatestRelease();
+  return {props: {icon, data, currentVersion}};
 }
 
 export async function getStaticPaths() {
   const data = await getAllData();
 
   return {
-    paths: data.map(({ name: iconName }) => ({
-      params: { iconName },
+    paths: data.map(({name: iconName}) => ({
+      params: {iconName},
     })),
     fallback: false,
   };

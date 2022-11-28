@@ -32,8 +32,6 @@ const fetchPackages = async (): Promise<PackageItem[]> => {
     return null
   }))
 
-  console.log(packageJsons);
-
   return packageJsons
 }
 

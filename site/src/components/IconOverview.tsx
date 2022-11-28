@@ -12,9 +12,10 @@ import useSpacing from "../lib/useSpacing";
 interface IconOverviewProps {
   data: IconEntity[];
   currentIcon?: IconEntity;
+  currentVersion: string;
 }
 
-const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
+const IconOverview = ({data, currentIcon, currentVersion}: IconOverviewProps) => {
   const [query, setQuery] = useState('');
   const {colorMode} = useColorMode();
   const isMobile = useBreakpointValue({base: true, md: false});
@@ -47,13 +48,13 @@ const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
                 margin="auto"
           >
             <SearchInput onChange={setQuery}
-                         grow={1}
+                         flexGrow={1}
                          placeholder={isMobile ? `Search ${data.length} icons...` : 'Search icons...'}
             />
             <Hide above="md">
               <Tooltip label="Customize icons" aria-label="Customize icons">
                 <IconButton
-                  active={customizerOpen}
+                  active={customizerOpen ? 'active' : undefined}
                   onClick={() => setCustomizerOpen(!customizerOpen)}
                   icon={<SlidersIcon/>}
                 ></IconButton>
@@ -64,13 +65,13 @@ const IconOverview = ({data, currentIcon}: IconOverviewProps) => {
         </Box>
       </Box>
 
-      <Box bg={colorMode == 'light' ? theme.colors.gray[50] : theme.colors.gray.DEFAULT}>
+      <Box bg={colorMode == 'light' ? theme.colors.gray[50] : theme.colors.gray.DEFAULT} flexGrow={1}>
         {searchResults.length > 0 ? (
           <Box
             mx="auto"
             p={useSpacing('container')}
           >
-            <IconList icons={searchResults}/>
+            <IconList icons={searchResults} currentIcon={currentIcon} currentVersion={currentVersion}/>
           </Box>
         ) : (
           <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word">

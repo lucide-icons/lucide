@@ -125,7 +125,7 @@ const Layout = ({aside, children}: LayoutProps) => {
           {children}
         </Flex>
       </Flex>
-      <Spacer mt={[6, 12]} />
+      <Spacer mt={[6, 12]} flexGrow={0} />
       <Footer/>
     </Flex>
   );

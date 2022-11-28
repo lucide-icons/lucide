@@ -1,4 +1,5 @@
 import {defineStyleConfig, createMultiStyleConfigHelpers, extendTheme, StyleFunctionProps} from '@chakra-ui/react';
+import { mode } from "@chakra-ui/theme-tools";
 
 const Footer = defineStyleConfig({
   baseStyle: {
@@ -63,7 +64,7 @@ const Section = defineStyleConfig({
   },
   variants: {
     first: (props: StyleFunctionProps) => ({
-      backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0) 100%)',
+      backgroundImage: mode('linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0) 100%)', 'linear-gradient(to bottom, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, 0) 100%)')(props),
     }),
     odd: (props: StyleFunctionProps) => ({
       bgColor: props.colorMode === 'dark' ? 'darkgray.DEFAULT' : 'white',
@@ -213,6 +214,22 @@ const theme = extendTheme({
         }),
       },
     },
+    Badge: {
+      variants: {
+        version: (props: StyleFunctionProps) => ({
+          position: 'absolute',
+          top: '-0.5rem',
+          right: '-0.5rem',
+          color: props.colorMode == 'light' ? 'brand.500' : 'brand.500',
+          bg: props.colorMode == 'light' ? 'white' : 'darkgray.800',
+          boxShadow: 'md',
+          zIndex: 1,
+          fontSize: '.75rem',
+          fontWeight: 500,
+          textTransform: 'none',
+        }),
+      },
+    },
     Button: {
       variants: {
         iconListItem: (props: StyleFunctionProps) => ({
@@ -229,7 +246,25 @@ const theme = extendTheme({
           _hover: {
             bg: props.colorMode == 'light' ? 'brand.500' : 'brand.500',
             color: 'white',
-          }
+            transformOrigin: 'center center',
+            transform: 'scale(1.1)',
+          },
+          _focus: {
+            bg: props.colorMode == 'light' ? 'brand.500' : 'brand.500',
+            color: 'white',
+            transformOrigin: 'center center',
+            transform: 'scale(1.1)',
+          },
+          _active: {
+            bg: props.colorMode == 'light' ? 'brand.500' : 'brand.500',
+            color: 'white',
+            transformOrigin: 'center center',
+            transform: 'scale(1.1)',
+          },
+        }),
+        solid:  (props: StyleFunctionProps) => ({
+          bg: props.colorScheme === 'brand' ? `brand.500` : mode(`${props.colorScheme}.500`, `${props.colorScheme}.200`)(props),
+          color: props.colorScheme === 'brand' ? mode(`white`, `black`)(props) : mode(`white`, `gray.800`)(props),
         }),
       },
     },
@@ -244,6 +279,21 @@ const theme = extendTheme({
     },
     Tag: {
       variants: {
+        deprecated: (props: StyleFunctionProps) => ({
+          container: {
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            fontSize: '.5rem',
+            px: 1,
+            py: 1,
+            lineHeight: 1,
+            height: 'auto',
+            minHeight: 'auto',
+            bg: props.colorMode == 'light' ? 'brand.100' : 'brand.900',
+            color: props.colorMode == 'light' ? 'brand.DEFAULT' : 'brand.DEFAULT',
+          }
+        }),
         subtle: (props: StyleFunctionProps) => ({
           container: {
             bg: props.colorMode == 'light' ? 'brand.100' : 'brand.900',

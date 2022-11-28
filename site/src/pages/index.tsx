@@ -30,13 +30,17 @@ import packagesData from "../data/packageData.json";
 import IconList from "../components/IconList";
 import useSpacing from "../lib/useSpacing";
 import IconCustomizerWidget from "../components/IconCustomizerWidget";
+import {fetchNumberOfContributors} from "../lib/fetchAllMetadata";
+import {fetchLatestRelease} from "../lib/fetchAllReleases";
 
 interface HomePageProps {
   data: IconEntity[],
   packages: PackageItem[],
+  currentVersion: string,
+  contributors: number,
 }
 
-const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
+const HomePage: NextPage<HomePageProps> = ({data, packages, currentVersion, contributors}) => {
   const router = useRouter();
   const getIcon = iconName => data.find(({name}) => name === iconName);
 
@@ -53,17 +57,18 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
         close={() => router.push('/', undefined, {shallow: true})}
       />
       <Section variant="odd">
-        <Header {...{data}} />
+        <Header {...{data, currentVersion, contributors}} />
       </Section>
       <Section variant="first">
         <Hide below="md">
           <Box position="absolute" inset="0"
                backgroundImage="assets/images/bg_1.png"
                backgroundSize="contain"
-               backgroundPosition={{base: 'calc(66vw - 4rem) center', lg: 'calc(50vw - 8rem) center'}}
+               backgroundPosition={{base: 'calc(66vw - 4rem) center', lg: 'calc(50vw - 16rem) center'}}
                backgroundRepeat="no-repeat"
-               zIndex={-1}
+               zIndex={-2}
           />
+          <Box className="bg-blurrer" />
         </Hide>
         <Flex maxW={useToken('sizes', 'container-max-width')}>
           <Box maxW={{base: '100%', md: '75%', lg: '50%'}}
@@ -115,7 +120,11 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
         </Flex>
 
       </Section>
-      <Section variant="even" backgroundImage="assets/images/bg_2.png">
+      <Section variant="even"
+               backgroundImage="assets/images/bg_2.png"
+               backgroundRepeat="repeat"
+               backgroundSize="64rem"
+               backgroundAttachment="fixed">
         <Box maxW={useToken('sizes', 'container-max-width')}
              w="full"
              textAlign={{base: 'center', md: 'left'}}
@@ -125,8 +134,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
           <Heading variant="brandSmallCaps">What's new?</Heading>
           <Heading level="3">Our latest icons</Heading>
 
-          {/* @TODO: fetch latest icons instead of randomizing */}
-          <IconList icons={data.sort(() => Math.random() - 0.5).slice(0, 30)} rows={3} />
+          <IconList icons={data.sort((a, b) => b.created - a.created).slice(0, 30)} rows={3} hideVersionBadges={true} currentVersion={currentVersion} />
 
           <Flex align="center" justify="center">
             <Button as="a" href="/icons" colorScheme="brand" mt={4} size="sm">Browse all icons</Button>
@@ -221,6 +229,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages}) => {
 };
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
+  const currentVersion = await fetchLatestRelease();
   const data = await getAllData();
   const packages: PackageItem[] = (await fetchPackages())
     .filter(Boolean)
@@ -239,10 +248,14 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
     })
     .sort((a, b) => a.order - b.order);
 
+  const contributors = await fetchNumberOfContributors();
+
   return {
     props: {
       data,
       packages,
+      contributors,
+      currentVersion
     },
   };
 }

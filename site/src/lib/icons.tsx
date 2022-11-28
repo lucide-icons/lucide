@@ -1,9 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { parseSync, stringify } from 'svgson';
+import {parseSync} from 'svgson';
 import tags from '../../../tags.json';
-import { IconEntity } from "../types";
-import { getContributors } from "./fetchAllContributors";
+import {IconEntity} from "../types";
+import {getAllReleases} from "./fetchAllReleases";
+import {getMetadata} from "./fetchAllMetadata"
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -15,26 +16,25 @@ export function getAllNames() {
   });
 }
 
-export async function getData(name: string) {
+export async function getData(name: string, releases) {
   const fullPath = path.join(directory, `${name}.svg`);
   const fileContent = fs.readFileSync(fullPath, "utf8");
 
   const svgNodes = parseSync(fileContent);
 
-  const svgContent = svgNodes.children.map((node) => stringify(node)).join('');
-
-  const contributors = await getContributors(name);
+  const metadata = await getMetadata(name, releases);
+  const tagList = tags[name] || [];
 
   return {
     name,
-    tags: tags[name] || [],
-    contributors,
-    src: fileContent
+    tags: tagList,
+    src: fileContent,
+    ...metadata
   };
 }
 
 export async function getAllData(): Promise<IconEntity[]> {
   const names = getAllNames();
-
-  return Promise.all(names.map((name) => getData(name)));
+  const releases = await getAllReleases();
+  return Promise.all(names.map((name) => getData(name, releases)));
 }

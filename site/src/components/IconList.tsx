@@ -10,10 +10,13 @@ import useSpacing from "../lib/useSpacing";
 
 interface IconListProps {
   icons: IconEntity[];
-  rows?: number
+  rows?: number;
+  currentIcon?: IconEntity;
+  hideVersionBadges?: boolean;
+  currentVersion: string;
 }
 
-const IconList = memo(({icons, rows}: IconListProps) => {
+const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBadges}: IconListProps) => {
   const router = useRouter();
   const {color, setColor, size, setSize, strokeWidth, setStroke, resetStyle} = useContext(IconStyleContext);
   const styles = {
@@ -60,14 +63,14 @@ const IconList = memo(({icons, rows}: IconListProps) => {
             },
           }}
         >
-          <IconListItem {...icon} />
+          <IconListItem {...icon} active={icon.name === currentIcon?.name} hideVersionBadge={hideVersionBadges} currentVersion={currentVersion} />
         </Link>
       </chakra.div>
     );
   };
 
   return (
-    <Box m={useSpacing('containerHalf').map((m) => -1 * m)}>
+    <Box m={useSpacing('containerHalf').map((m) => -1 * m)} style={styles}>
       <WindowScroller>
         {({height, isScrolling, onChildScroll, scrollTop}) => (
           <AutoSizer disableHeight>

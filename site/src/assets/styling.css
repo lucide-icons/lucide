@@ -22,6 +22,28 @@ body {
   top: -2px;
 }
 
-.icon-list-item:hover svg {
+.icon-list-item:hover svg ,
+.icon-list-item:focus svg ,
+.icon-list-item:active svg {
   stroke: white !important;
+}
+
+.bg-blurrer {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  backdrop-filter: blur(.5rem);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.version-badge {
+  transition: opacity .15s ease-in-out;
+}
+
+.icon-list-item-wrapper:hover .version-badge {
+  opacity: 1;
 }

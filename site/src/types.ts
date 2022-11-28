@@ -3,6 +3,11 @@ export interface IconEntity {
   name: string;
   src: string;
   tags: string[];
+  deprecated: false;
+  created?: number;
+  changed?: number;
+  createdVersion?: Release;
+  changedVersion?: Release;
 }
 
 export interface Contributor {
@@ -13,4 +18,10 @@ export interface MenuItemData {
   name: string;
   isExternal?: boolean;
   href: string;
+}
+
+export interface Release {
+  name: string;
+  published: Date;
+  url: string;
 }

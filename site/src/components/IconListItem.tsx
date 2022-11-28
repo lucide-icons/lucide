@@ -1,16 +1,18 @@
-import {Button, ButtonProps, Flex, Tooltip, useToast} from '@chakra-ui/react';
+import {Badge, Button, ButtonProps, chakra, Flex, Tooltip, useToast} from '@chakra-ui/react';
 import download from 'downloadjs';
 import {memo} from 'react';
 import {IconWrapper} from './IconWrapper';
-import {useCustomizeIconContext} from "./CustomizeIconContext";
 
 interface IconListItemProps extends ButtonProps {
+  deprecated: boolean,
   name: string;
   onClick?: ButtonProps['onClick']
   src: string;
+  active: boolean;
+  hideVersionBadge?: boolean;
 }
 
-const IconListItem = ({name, onClick, src: svg}: IconListItemProps) => {
+const IconListItem = ({name, onClick, active, createdRelease, hideVersionBadge, currentVersion, src: svg}: IconListItemProps) => {
   const toast = useToast();
 
   const handleClick: ButtonProps['onClick'] = async (event) => {
@@ -53,23 +55,29 @@ const IconListItem = ({name, onClick, src: svg}: IconListItemProps) => {
 
   return (
     <Tooltip hasArrow label={name} aria-label={name}>
-      <Button variant="iconListItem"
-              className={'icon-list-item'}
-              onClick={handleClick}
-              key={name}
-      >
-        <Flex direction="column" align="center" justify="center" width="100%">
-          <IconWrapper
-            src={svg}
-            style={{
-              stroke: "var(--lucide-stroke-color, currentColor)",
-              strokeWidth: "var(--lucide-stroke-width, 2px)",
-              height: "var(--lucide-icon-size, 24px)",
-              width: "var(--lucide-icon-size, 24px)",
-            }}
-          />
-        </Flex>
-      </Button>
+      <chakra.div position="relative"
+                  className={'icon-list-item-wrapper'}>
+        <Button variant="iconListItem"
+                active={active ? 'active' : undefined}
+                className={'icon-list-item'}
+                onClick={handleClick}
+                key={name}
+        >
+          <Flex direction="column" align="center" justify="center" width="100%">
+            <IconWrapper
+              src={svg}
+              style={{
+                stroke: "var(--lucide-stroke-color, currentColor)",
+                strokeWidth: "var(--lucide-stroke-width, 2px)",
+                height: "var(--lucide-icon-size, 24px)",
+                width: "var(--lucide-icon-size, 24px)",
+              }}
+            />
+          </Flex>
+        </Button>
+        <Badge variant="version" className="version-badge"
+               opacity={hideVersionBadge ? 0 : (currentVersion === createdRelease.name ? 1 : 0)}>{createdRelease.name}</Badge>
+      </chakra.div>
     </Tooltip>
   );
 };
