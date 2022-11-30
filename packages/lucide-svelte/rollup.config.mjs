@@ -1,11 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import svelte from 'rollup-plugin-svelte';
-import preprocess from 'svelte-preprocess';
-import bundleSize from '@atomico/rollup-plugin-sizes';
-import { terser } from 'rollup-plugin-terser';
-import license from 'rollup-plugin-license';
-import resolve from '@rollup/plugin-node-resolve';
-import commonJS from '@rollup/plugin-commonjs';
+import sveltePreprocess from "svelte-preprocess";
 import pkg from './package.json' assert { type: 'json' };
 import plugins from '@lucide/rollup-plugins';
 
@@ -49,7 +44,9 @@ const configs = bundles
       input,
       plugins: [
         svelte({
-          preprocess,
+          preprocess: sveltePreprocess({
+            typescript: true
+          }),
           compilerOptions: {
             dev: false,
           },
