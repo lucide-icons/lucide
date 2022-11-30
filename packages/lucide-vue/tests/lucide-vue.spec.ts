@@ -1,14 +1,20 @@
-import {render, fireEvent} from '@testing-library/vue'
+import { describe, it, expect } from 'vitest';
+import { render, fireEvent, cleanup } from '@testing-library/vue'
 import { Smile } from '../src/icons'
+import { vi } from 'vitest';
+import { afterEach } from 'vitest';
+import { VueClass } from '@vue/test-utils';
 
 describe('Using lucide icon components', () => {
+  afterEach(() => cleanup())
+
   it('should render an component', () => {
-    const {container} = render(Smile)
+    const {container} = render(Smile as VueClass<any>)
     expect(container).toMatchSnapshot();
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
-    const {container} = render(Smile, {
+    const {container} = render(Smile as VueClass<any>, {
       props: {
         size: 48,
         color: 'red',
@@ -27,7 +33,7 @@ describe('Using lucide icon components', () => {
 
 
   it('should add a class to the element', () => {
-    const {container} = render(Smile, {
+    const {container} = render(Smile as VueClass<any>, {
       attrs: {
         class: "my-icon"
       }
@@ -41,7 +47,7 @@ describe('Using lucide icon components', () => {
   });
 
   it('should add a style attribute to the element', () => {
-    const {container} = render(Smile, {
+    const {container} = render(Smile as VueClass<any>, {
       attrs: {
         style: 'position: absolute',
       }
@@ -55,8 +61,8 @@ describe('Using lucide icon components', () => {
   });
 
   it('should call the onClick event', async () => {
-    const onClick = jest.fn()
-    render(Smile, {
+    const onClick = vi.fn()
+    render(Smile  as VueClass<any>, {
       listeners: {
         click: onClick
       }
@@ -72,7 +78,7 @@ describe('Using lucide icon components', () => {
   it('should pass children to the icon slot', () => {
     const testText = 'Hello World'
     const template = `<text>${testText}</text>`
-    const { getByText, container } = render(Smile, {
+    const { getByText, container } = render(Smile as VueClass<any>, {
       slots: {
         default: { template }
       }

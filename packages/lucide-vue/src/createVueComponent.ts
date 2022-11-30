@@ -1,4 +1,8 @@
+import { Component } from 'vue';
+import { Vue, VueConfiguration } from 'vue/types/vue';
 import defaultAttributes from './defaultAttributes';
+
+type IconNode = [elementName: string, attrs: Record<string, string>][]
 
 /**
  * Converts string to KebabCase
@@ -8,9 +12,9 @@ import defaultAttributes from './defaultAttributes';
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-export default (iconName, iconNode) => ({
+export default (iconName: string, iconNode: IconNode): Component => ({
   name: iconName,
   functional: true,
   props: {
@@ -56,7 +60,7 @@ export default (iconName, iconNode) => ({
         on: data?.on || {}
       },
       [
-        ...iconNode.map(([tag, attrs]) => createElement(tag, { attrs })),
+        ...iconNode.map(([tag, attrs]) => createElement(String(tag), { attrs })),
         ...children
       ],
     );

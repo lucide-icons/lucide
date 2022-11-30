@@ -1,4 +1,4 @@
-export default {
+const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: 24,
   height: 24,
@@ -9,3 +9,5 @@ export default {
   'stroke-linecap': 'round',
   'stroke-linejoin': 'round',
 };
+
+export default defaultAttributes

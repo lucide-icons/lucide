@@ -311,21 +311,31 @@ importers:
 
   packages/lucide-vue:
     specifiers:
+      '@lucide/rollup-plugins': '*'
       '@testing-library/jest-dom': ^5.16.2
       '@testing-library/vue': ^5.8.2
+      '@vitejs/plugin-vue2': ^2.0.1
       '@vue/test-utils': 1.3.0
       jest-serializer-vue: ^2.0.2
-      vue: 2.6.14
+      typescript: ^4.8.4
+      vite: ^3.1.0
+      vitest: ^0.24.3
+      vue: 2.7.14
       vue-jest: ^3.0.7
-      vue-template-compiler: 2.6.14
+      vue-template-compiler: 2.7.14
     devDependencies:
+      '@lucide/rollup-plugins': link:../../tools/rollup-plugins
       '@testing-library/jest-dom': 5.16.5
-      '@testing-library/vue': 5.8.3_sbs6or2oam5i4s4vmfp4rzwdnq
-      '@vue/test-utils': 1.3.0_sbs6or2oam5i4s4vmfp4rzwdnq
+      '@testing-library/vue': 5.8.3_rhqkolmkwunxzlyyxxsuwaiuri
+      '@vitejs/plugin-vue2': 2.0.1_vite@3.1.8+vue@2.7.14
+      '@vue/test-utils': 1.3.0_rhqkolmkwunxzlyyxxsuwaiuri
       jest-serializer-vue: 2.0.2
-      vue: 2.6.14
-      vue-jest: 3.0.7_emdz5kfrc5cn55r4a24jgpa35q
-      vue-template-compiler: 2.6.14
+      typescript: 4.8.4
+      vite: 3.1.8
+      vitest: 0.24.3
+      vue: 2.7.14
+      vue-jest: 3.0.7_6lyp5kpyxwdnpoavxuvrwtd2je
+      vue-template-compiler: 2.7.14
 
   packages/lucide-vue-next:
     specifiers:
@@ -982,10 +992,10 @@ packages:
       '@babel/core': 7.18.10
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-environment-visitor': 7.18.9
-      '@babel/helper-function-name': 7.18.9
+      '@babel/helper-function-name': 7.19.0
       '@babel/helper-member-expression-to-functions': 7.18.9
       '@babel/helper-optimise-call-expression': 7.18.6
-      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-replace-supers': 7.19.1
       '@babel/helper-split-export-declaration': 7.18.6
     transitivePeerDependencies:
       - supports-color
@@ -1000,10 +1010,10 @@ packages:
       '@babel/core': 7.18.13
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-environment-visitor': 7.18.9
-      '@babel/helper-function-name': 7.18.9
+      '@babel/helper-function-name': 7.19.0
       '@babel/helper-member-expression-to-functions': 7.18.9
       '@babel/helper-optimise-call-expression': 7.18.6
-      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-replace-supers': 7.19.1
       '@babel/helper-split-export-declaration': 7.18.6
     transitivePeerDependencies:
       - supports-color
@@ -1017,10 +1027,10 @@ packages:
       '@babel/core': 7.20.2
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-environment-visitor': 7.18.9
-      '@babel/helper-function-name': 7.18.9
+      '@babel/helper-function-name': 7.19.0
       '@babel/helper-member-expression-to-functions': 7.18.9
       '@babel/helper-optimise-call-expression': 7.18.6
-      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-replace-supers': 7.19.1
       '@babel/helper-split-export-declaration': 7.18.6
     transitivePeerDependencies:
       - supports-color
@@ -1283,7 +1293,6 @@ packages:
       '@babel/types': 7.20.2
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@babel/helper-simple-access/7.18.6:
     resolution: {integrity: sha512-iNpIgTgyAvDQpDj76POqg+YEt8fPxx3yaNBg3S30dxNKm2SWfYhD0TGrK/Eu9wHpUW63VQU894TsTg+GLbUa1g==}
@@ -1308,7 +1317,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.20.2
-    dev: true
 
   /@babel/helper-split-export-declaration/7.18.6:
     resolution: {integrity: sha512-bde1etTx6ZyTmobl9LLMMQsaizFVZrquTEHOqKeQESMKo4PlObf+8+JA25ZsIpZhT/WEd39+vOdLXAFG/nELpA==}
@@ -1539,7 +1547,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.10
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.10
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1552,7 +1560,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.13
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1565,7 +1573,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.2
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.20.2
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1762,7 +1770,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.18.10
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3_@babel+core@7.18.10
     dev: true
 
@@ -1773,7 +1781,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3_@babel+core@7.18.13
     dev: false
 
@@ -1784,7 +1792,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.20.2
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3_@babel+core@7.20.2
     dev: true
 
@@ -1928,8 +1936,8 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.18.10
-      '@babel/helper-plugin-utils': 7.18.9
-      '@babel/helper-skip-transparent-expression-wrappers': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
       '@babel/plugin-syntax-optional-chaining': 7.8.3_@babel+core@7.18.10
     dev: true
 
@@ -1940,8 +1948,8 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
-      '@babel/helper-skip-transparent-expression-wrappers': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
       '@babel/plugin-syntax-optional-chaining': 7.8.3_@babel+core@7.18.13
     dev: false
 
@@ -1952,8 +1960,8 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.20.2
-      '@babel/helper-plugin-utils': 7.18.9
-      '@babel/helper-skip-transparent-expression-wrappers': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-skip-transparent-expression-wrappers': 7.20.0
       '@babel/plugin-syntax-optional-chaining': 7.8.3_@babel+core@7.20.2
     dev: true
 
@@ -7846,7 +7854,7 @@ packages:
       svelte: 3.49.0
     dev: true
 
-  /@testing-library/vue/5.8.3_sbs6or2oam5i4s4vmfp4rzwdnq:
+  /@testing-library/vue/5.8.3_rhqkolmkwunxzlyyxxsuwaiuri:
     resolution: {integrity: sha512-M6+QqP1xuFHixKOeXF9pCLbtiyJZRKfJRP+unBf6Ljm7aS1V2CSS95oTetFoblaj0W1+AC9XJgwmUDtlLoaakQ==}
     engines: {node: '>10.18'}
     peerDependencies:
@@ -7855,9 +7863,9 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.9
       '@testing-library/dom': 7.31.2
-      '@vue/test-utils': 1.3.0_sbs6or2oam5i4s4vmfp4rzwdnq
-      vue: 2.6.14
-      vue-template-compiler: 2.6.14
+      '@vue/test-utils': 1.3.0_rhqkolmkwunxzlyyxxsuwaiuri
+      vue: 2.7.14
+      vue-template-compiler: 2.7.14
     dev: true
 
   /@testing-library/vue/6.6.1_2ak23djkzqme6prgxnfaukvwue:
@@ -8462,11 +8470,22 @@ packages:
       - supports-color
     dev: true
 
+  /@vitejs/plugin-vue2/2.0.1_vite@3.1.8+vue@2.7.14:
+    resolution: {integrity: sha512-4eFAypstsQoiR9NLZXJ6K3ZWmU2CMFNxGTjGfRdmimImXJe4eHVfMMizaOjfX6Y8HfFJ7u+L8oUg32MInAHZ+g==}
+    engines: {node: ^14.18.0 || >= 16.0.0}
+    peerDependencies:
+      vite: ^3.0.0
+      vue: ^2.7.0-0
+    dependencies:
+      vite: 3.1.8
+      vue: 2.7.14
+    dev: true
+
   /@vue/compiler-core/3.0.6:
     resolution: {integrity: sha512-O7QzQ39DskOoPpEDWRvKwDX7Py9UNT7SvLHvBdIfckGA3OsAEBdiAtuYQNcVmUDeBajm+08v5wyvHWBbWgkilQ==}
     dependencies:
-      '@babel/parser': 7.18.13
-      '@babel/types': 7.18.13
+      '@babel/parser': 7.20.3
+      '@babel/types': 7.20.2
       '@vue/shared': 3.0.6
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -8477,6 +8496,14 @@ packages:
     dependencies:
       '@vue/compiler-core': 3.0.6
       '@vue/shared': 3.0.6
+    dev: true
+
+  /@vue/compiler-sfc/2.7.14:
+    resolution: {integrity: sha512-aNmNHyLPsw+sVvlQFQ2/8sjNuLtK54TC6cuKnVzAY93ks4ZBrvwQSnkkIh7bsbNhum5hJBS00wSDipQ937f5DA==}
+    dependencies:
+      '@babel/parser': 7.20.3
+      postcss: 8.4.16
+      source-map: 0.6.1
     dev: true
 
   /@vue/compiler-sfc/3.0.6_vue@3.0.6:
@@ -8589,7 +8616,7 @@ packages:
     resolution: {integrity: sha512-c37C60HpelUZIx+SNZVEINSxkFzQYhIXFg5AynnIA4QDBmY4iSPoACfGSwSUTCTKImukPeCgY2oqRJVP3R1Mnw==}
     dev: true
 
-  /@vue/test-utils/1.3.0_sbs6or2oam5i4s4vmfp4rzwdnq:
+  /@vue/test-utils/1.3.0_rhqkolmkwunxzlyyxxsuwaiuri:
     resolution: {integrity: sha512-Xk2Xiyj2k5dFb8eYUKkcN9PzqZSppTlx7LaQWBbdA8tqh3jHr/KHX2/YLhNFc/xwDrgeLybqd+4ZCPJSGPIqeA==}
     peerDependencies:
       vue: 2.x
@@ -8598,8 +8625,8 @@ packages:
       dom-event-types: 1.1.0
       lodash: 4.17.21
       pretty: 2.0.0
-      vue: 2.6.14
-      vue-template-compiler: 2.6.14
+      vue: 2.7.14
+      vue-template-compiler: 2.7.14
     dev: true
 
   /@vue/test-utils/2.0.0-rc.18_vue@3.0.6:
@@ -22859,7 +22886,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /vue-jest/3.0.7_emdz5kfrc5cn55r4a24jgpa35q:
+  /vue-jest/3.0.7_6lyp5kpyxwdnpoavxuvrwtd2je:
     resolution: {integrity: sha512-PIOxFM+wsBMry26ZpfBvUQ/DGH2hvp5khDQ1n51g3bN0TwFwTy4J85XVfxTRMukqHji/GnAoGUnlZ5Ao73K62w==}
     peerDependencies:
       babel-core: ^6.25.0 || ^7.0.0-0
@@ -22877,8 +22904,8 @@ packages:
       object-assign: 4.1.1
       source-map: 0.5.7
       tsconfig: 7.0.0
-      vue: 2.6.14
-      vue-template-compiler: 2.6.14
+      vue: 2.7.14
+      vue-template-compiler: 2.7.14
       vue-template-es2015-compiler: 1.9.1
     transitivePeerDependencies:
       - supports-color
@@ -22913,8 +22940,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-template-compiler/2.6.14:
-    resolution: {integrity: sha512-ODQS1SyMbjKoO1JBJZojSw6FE4qnh9rIpUZn2EUT86FKizx9uH5z6uXiIrm4/Nb/gwxTi/o17ZDEGWAXHvtC7g==}
+  /vue-template-compiler/2.7.14:
+    resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==}
     dependencies:
       de-indent: 1.0.2
       he: 1.2.0
@@ -22924,8 +22951,11 @@ packages:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==}
     dev: true
 
-  /vue/2.6.14:
-    resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
+  /vue/2.7.14:
+    resolution: {integrity: sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==}
+    dependencies:
+      '@vue/compiler-sfc': 2.7.14
+      csstype: 3.1.0
     dev: true
 
   /vue/3.0.6:
