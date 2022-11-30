@@ -20,8 +20,6 @@ export async function getData(name: string, releases) {
   const fullPath = path.join(directory, `${name}.svg`);
   const fileContent = fs.readFileSync(fullPath, "utf8");
 
-  const svgNodes = parseSync(fileContent);
-
   const metadata = await getMetadata(name, releases);
   const tagList = tags[name] || [];
 
