@@ -1,9 +1,6 @@
-import { Box, Tooltip, useColorMode } from "@chakra-ui/react";
-import theme from '../lib/theme';
+import { Box, Tooltip } from "@chakra-ui/react";
 
 const ModifiedTooltip = () => {
-  const { colorMode } = useColorMode();
-
   return (
     <Tooltip
       hasArrow

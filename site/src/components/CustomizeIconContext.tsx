@@ -1,4 +1,4 @@
-import { createContext, useRef, useState, MutableRefObject, useContext, useMemo } from 'react';
+import { createContext, useState, useContext, useMemo } from 'react';
 
 interface ICustomIconStyle {
   color: string;

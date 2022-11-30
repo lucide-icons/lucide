@@ -13,7 +13,12 @@ import {
   useMultiStyleConfig,
   VisuallyHidden
 } from '@chakra-ui/react';
-import {Expand as ExpandIcon, Palette as PaletteIcon, Scale as ScaleIcon} from 'lucide-react';
+import {
+  Expand as ExpandIcon,
+  LucideProps,
+  Palette as PaletteIcon,
+  Scale as ScaleIcon
+} from 'lucide-react';
 import {useMemo, useState} from 'react';
 import {IconEntity} from "../types";
 import {IconWrapper} from "./IconWrapper";
@@ -22,9 +27,9 @@ interface IconCustomizerWidgetProps extends BoxProps {
   icons: IconEntity[];
 }
 
-interface IconCustomizerProperty<T> {
+interface IconCustomizerProperty<T extends string|number> {
   name: string,
-  icon: any,
+  icon: (props: LucideProps) => JSX.Element,
   label: string,
   set: (value: T) => void,
   value: T,
@@ -35,7 +40,7 @@ interface IconCustomizerProperty<T> {
 }
 
 const IconCustomizerWidget = ({icons, ...rest}: IconCustomizerWidgetProps) => {
-  const styles = useMultiStyleConfig('IconCustomizerWidget')
+  const styles = useMultiStyleConfig('IconCustomizerWidget', {});
 
   const [selectedIcon, setIcon] = useState(icons[0].name);
   const [selectedColor, setColor] = useState('brand');
@@ -143,7 +148,7 @@ const IconCustomizerWidget = ({icons, ...rest}: IconCustomizerWidgetProps) => {
 
   const currentIcon = icons.find((icon) => icon.name == memoProps.selectedIcon) ?? icons[0];
 
-  const getPropertyValueLabel = (property: IconCustomizerProperty<any>) => {
+  const getPropertyValueLabel = (property: IconCustomizerProperty<string|number>) => {
     return property.options.find((option) => option.value === property.value)?.label ?? null;
   }
 
@@ -153,6 +158,7 @@ const IconCustomizerWidget = ({icons, ...rest}: IconCustomizerWidgetProps) => {
         {icons.map((icon) => (
           <Tooltip hasArrow label={icon.name}>
             <IconButton variant="ghost"
+                        aria-label={icon.name}
                         color={icon.name == selectedIcon ? 'brand.500' : 'inherit'}
                         icon={
                           <IconWrapper
@@ -160,7 +166,9 @@ const IconCustomizerWidget = ({icons, ...rest}: IconCustomizerWidgetProps) => {
                             opacity={icon.name == selectedIcon ? 1 : .7}
                             _hover={{opacity: 1}}
                           />
-                        } onClick={() => setIcon(icon.name)}/>
+                        }
+                        onClick={() => setIcon(icon.name)}
+            />
           </Tooltip>
         ))}
       </Box>

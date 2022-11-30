@@ -194,17 +194,17 @@ const theme = extendTheme({
     Package,
     IconCustomizerWidget,
     Heading: {
-      baseStyle: (props: StyleFunctionProps) => ({
+      baseStyle: {
         fontWeight: 500,
         mb: '.5em',
-      }),
+      },
       variants: {
-        smallCaps: (props: StyleFunctionProps) => ({
+        smallCaps: {
           textTransform: 'uppercase',
           fontSize: '1rem',
           fontWeight: 600,
           mb: 0,
-        }),
+        },
         brandSmallCaps: (props: StyleFunctionProps) => ({
           textTransform: 'uppercase',
           fontSize: '1rem',

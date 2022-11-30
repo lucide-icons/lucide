@@ -42,7 +42,15 @@ async function generateZip(icons: IconContent[]) {
 }
 
 export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
-  const {color, setColor, size, setSize, strokeWidth, setStroke, resetStyle} = useContext(IconStyleContext);
+  const {
+    color,
+    setColor,
+    size,
+    setSize,
+    strokeWidth,
+    setStroke,
+    resetStyle
+  } = useContext(IconStyleContext);
   const [zippingIcons, setZippingIcons] = useState(false);
 
   const customizeIcon = (src) => src
@@ -52,15 +60,17 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
     .replace(/ height="[^"]+"/, ` height="${size}"`)
 
   const downloadAllIcons = async () => {
-    setZippingIcons(true);
-    let iconEntries: IconContent[] = data.map(icon => [icon.name, customizeIcon(icon.src)]);
+    if (!zippingIcons) {
+      setZippingIcons(true);
+      const iconEntries: IconContent[] = data.map(icon => [icon.name, customizeIcon(icon.src)]);
 
-    const specifier = (size !== 24 ? `_${size}x${size}` : '')
-      + (color !== 'currentColor' ? '_' + color.replace('#', '') : '')
-      + (strokeWidth !== '2' ? '_' + strokeWidth + 'px' : '')
-    const zip = await generateZip(iconEntries);
-    download(zip, `lucide${specifier}.zip`);
-    setZippingIcons(false);
+      const specifier = (size !== 24 ? `_${size}x${size}` : '')
+        + (color !== 'currentColor' ? '_' + color.replace('#', '') : '')
+        + (strokeWidth !== 2 ? '_' + strokeWidth + 'px' : '')
+      const zip = await generateZip(iconEntries);
+      download(zip, `lucide${specifier}.zip`);
+      setZippingIcons(false);
+    }
   };
 
   return (
@@ -74,7 +84,7 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
         <Box textTransform="uppercase" whiteSpace="nowrap">
           <strong>{data.length}</strong> icons
         </Box>
-        <Divider orientation="vertical" mx={3} height={5} />
+        <Divider orientation="vertical" mx={3} height={5}/>
       </Hide>
       <Flex direction={{base: 'column', sm: 'row'}}
             justifyContent={{base: 'flex-start', sm: 'center'}}
@@ -88,7 +98,7 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
             onChangeComplete={(col) => setColor(col.hex)}
           />
         </FormControl>
-        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5} />
+        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5}/>
         <FormControl display="flex" direction="row" w="auto">
           <FormLabel htmlFor="stroke" mb={0}>
             <Flex>
@@ -114,7 +124,7 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
           </Slider>
           <Text ml={4}>{strokeWidth}px</Text>
         </FormControl>
-        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5} />
+        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5}/>
         <FormControl display="flex" direction="row" w="auto">
           <FormLabel htmlFor="size" mb={0}>
             <Flex>
@@ -140,21 +150,23 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
           </Slider>
           <Text ml={4}>{size}px</Text>
         </FormControl>
-        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5} />
+        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5}/>
         <ButtonGroup>
-          <Tooltip hasArrow label="Reset" aria-label="Reset">
+          <Tooltip hasArrow label="Reset">
             <IconButton size="sm"
                         variant="ghost"
                         onClick={resetStyle}
                         icon={(<DeleteIcon size={16}/>)}
-            >Reset</IconButton>
+                        aria-label="Reset"
+            />
           </Tooltip>
-          <Tooltip hasArrow label="Download all" aria-label="Download all">
+          <Tooltip hasArrow label="Download all">
             <IconButton size="sm"
                         variant="ghost"
                         onClick={downloadAllIcons}
                         icon={(<DownloadIcon size={16}/>)}
-            ></IconButton>
+                        aria-label="Download all"
+            />
           </Tooltip>
         </ButtonGroup>
       </Flex>

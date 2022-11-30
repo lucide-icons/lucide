@@ -52,12 +52,13 @@ const IconOverview = ({data, currentIcon, currentVersion}: IconOverviewProps) =>
                          placeholder={isMobile ? `Search ${data.length} icons...` : 'Search icons...'}
             />
             <Hide above="md">
-              <Tooltip label="Customize icons" aria-label="Customize icons">
+              <Tooltip label="Customize icons">
                 <IconButton
                   active={customizerOpen ? 'active' : undefined}
                   onClick={() => setCustomizerOpen(!customizerOpen)}
                   icon={<SlidersIcon/>}
-                ></IconButton>
+                  aria-label="Customize icons"
+                />
               </Tooltip>
             </Hide>
           </Flex>

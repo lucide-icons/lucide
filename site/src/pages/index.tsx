@@ -88,7 +88,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages, currentVersion, cont
               justify={{base: 'center', lg: 'flex-start'}}
               align="center"
             >
-              {packages.map(({name, icon, description}: PackageItem) => (
+              {packages.map(({name, icon}: PackageItem) => (
                 <WrapItem key={name}>
                   <Tooltip hasArrow label={name} aria-label={name}>
                     <NextLink href={`/docs/${name}`} key={name} passHref>

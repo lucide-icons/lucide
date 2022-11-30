@@ -4,7 +4,7 @@ import CodeBlock from "./CodeBlock";
 
 interface IconCodeExamplesProps extends BoxProps {
   icon: IconEntity;
-};
+}
 
 type CodeExampleType = {
   title: string,

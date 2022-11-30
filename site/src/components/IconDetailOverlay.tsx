@@ -31,7 +31,6 @@ import {IconStyleContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import {IconEntity} from "../types";
 import ModifiedTooltip from "./ModifiedTooltip";
-import CodeBlock from "./CodeBlock";
 import IconCodeExamples from "./IconCodeExamples";
 
 type IconDownload = {
@@ -193,7 +192,7 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
               <ButtonGroup ml="auto"
                            order={{base: 0, md: 1}}
               >
-                <Tooltip hasArrow label="Download SVG" aria-label='Download SVG'>
+                <Tooltip hasArrow label="Download SVG">
                   <IconButton
                     variant="ghost"
                     aria-label="Download SVG"
@@ -204,7 +203,7 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
                     icon={<DownloadIcon/>}
                   />
                 </Tooltip>
-                <Tooltip hasArrow label="Copy SVG" aria-label='Copy SVG'>
+                <Tooltip hasArrow label="Copy SVG">
                   <IconButton
                     variant="ghost"
                     aria-label="Copy SVG"
@@ -215,7 +214,7 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
                     icon={<CodeIcon/>}
                   />
                 </Tooltip>
-                <Tooltip hasArrow label="Download PNG" aria-label='Download PNG'>
+                <Tooltip hasArrow label="Download PNG">
                   <IconButton
                     variant="ghost"
                     aria-label="Download PNG"
@@ -226,7 +225,7 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
                     icon={<ImageIcon/>}
                   />
                 </Tooltip>
-                <Tooltip hasArrow label="Close overlay" aria-label='Close overlay'>
+                <Tooltip hasArrow label="Close overlay">
                   <IconButton
                     aria-label="Close overlay"
                     variant="ghost"

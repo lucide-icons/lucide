@@ -11,7 +11,7 @@ const githubHeaders = () => {
 };
 
 const get = async (endpoint: string, params = {}) => {
-  let urlParams = new URLSearchParams(params);
+  const urlParams = new URLSearchParams(params);
   const response = await fetch(
     `https://api.github.com/repos/lucide-icons/lucide${endpoint}?${urlParams.toString()}`,
     {
@@ -27,7 +27,7 @@ const get = async (endpoint: string, params = {}) => {
 
 const getAll = async (endpoint: string, params = {}) => {
   try {
-    let resources = [];
+    const resources = [];
     let response = await get(endpoint, {...params, per_page: 100});
     while (response) {
       resources.push(...(await response.json()));

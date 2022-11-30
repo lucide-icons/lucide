@@ -1,4 +1,4 @@
-import {Button, Box, chakra, useBreakpointValue, useToken} from '@chakra-ui/react';
+import {Button, Box, chakra, useBreakpointValue} from '@chakra-ui/react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {memo, useContext} from 'react';
@@ -18,7 +18,7 @@ interface IconListProps {
 
 const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBadges}: IconListProps) => {
   const router = useRouter();
-  const {color, setColor, size, setSize, strokeWidth, setStroke, resetStyle} = useContext(IconStyleContext);
+  const {color, size, strokeWidth} = useContext(IconStyleContext);
   const styles = {
     '--lucide-stroke-color': color,
     '--lucide-stroke-width': strokeWidth,
@@ -27,7 +27,7 @@ const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBad
   const columnCount = useBreakpointValue({base: 2, sm: 4, md: 6, lg: 8, xl: 10}, {ssr: false})
 
   const CellRenderer = ({isScrolling, isVisible, columnIndex, rowIndex, style}) => {
-    let iconIndex = rowIndex * columnCount + columnIndex;
+    const iconIndex = rowIndex * columnCount + columnIndex;
     if (iconIndex > icons.length - 1) {
       return null;
     }
@@ -72,7 +72,7 @@ const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBad
   return (
     <Box m={useSpacing('containerHalf').map((m) => -1 * m)} style={styles}>
       <WindowScroller>
-        {({height, isScrolling, onChildScroll, scrollTop}) => (
+        {({height, scrollTop}) => (
           <AutoSizer disableHeight>
             {({width}) => (
               <Grid

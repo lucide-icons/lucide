@@ -14,7 +14,7 @@ interface IconIndexProps {
   data: IconEntity[]
 }
 
-const IconIndex: NextPage<IconIndexProps> = ({data, currentVersion, packages}) => {
+const IconIndex: NextPage<IconIndexProps> = ({data, currentVersion}) => {
   const router = useRouter();
   const getIcon = iconName => data.find(({name}) => name === iconName);
 
