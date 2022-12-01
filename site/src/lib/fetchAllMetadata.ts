@@ -4,7 +4,7 @@ import path from 'path';
 import {Release} from '../types';
 import GithubApi from "./githubApi";
 import GithubCache from "./githubCache";
-import {fetchLatestRelease} from "./fetchAllReleases";
+import {fetchCurrentRelease} from "./fetchAllReleases";
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
@@ -86,8 +86,8 @@ export async function getMetadata(name, releases: Release[]) {
 
 export const fetchNumberOfContributors = async () => {
   try {
-    const latestRelease = await fetchLatestRelease();
-    return GithubCache.resolve(`contributors-${latestRelease}`, async () => {
+    const currentVersion = await fetchCurrentRelease();
+    return GithubCache.resolve(`contributors-${currentVersion}`, async () => {
       const response = await GithubApi.get('/contributors', {per_page: 1});
       return parseInt(response.headers.get('link').match(/page=([0-9]+)>; rel="last"/)[1], 10);
     });

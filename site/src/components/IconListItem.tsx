@@ -2,6 +2,7 @@ import {Badge, Button, ButtonProps, chakra, Flex, Tooltip, useToast} from '@chak
 import download from 'downloadjs';
 import {memo} from 'react';
 import {IconWrapper} from './IconWrapper';
+import {Release} from "../types";
 
 interface IconListItemProps extends ButtonProps {
   deprecated: boolean,
@@ -10,6 +11,8 @@ interface IconListItemProps extends ButtonProps {
   src: string;
   active: boolean;
   hideVersionBadge?: boolean;
+  currentVersion: string;
+  createdRelease?: Release;
 }
 
 const IconListItem = ({name, onClick, active, createdRelease, hideVersionBadge, currentVersion, src: svg}: IconListItemProps) => {
@@ -75,8 +78,14 @@ const IconListItem = ({name, onClick, active, createdRelease, hideVersionBadge, 
             />
           </Flex>
         </Button>
-        <Badge variant="version" className="version-badge"
-               opacity={hideVersionBadge ? 0 : (currentVersion === createdRelease.name ? 1 : 0)}>{createdRelease.name}</Badge>
+        {createdRelease
+          ? (
+            <Badge variant="version" className="version-badge"
+                   opacity={hideVersionBadge ? 0 : (currentVersion === createdRelease?.name ? 1 : 0)}
+            >{createdRelease.name}</Badge>
+          )
+          : null
+        }
       </chakra.div>
     </Tooltip>
   );

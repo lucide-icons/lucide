@@ -31,7 +31,7 @@ import IconList from "../components/IconList";
 import useSpacing from "../lib/useSpacing";
 import IconCustomizerWidget from "../components/IconCustomizerWidget";
 import {fetchNumberOfContributors} from "../lib/fetchAllMetadata";
-import {fetchLatestRelease} from "../lib/fetchAllReleases";
+import {fetchCurrentRelease} from "../lib/fetchAllReleases";
 
 interface HomePageProps {
   data: IconEntity[],
@@ -229,7 +229,7 @@ const HomePage: NextPage<HomePageProps> = ({data, packages, currentVersion, cont
 };
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
-  const currentVersion = await fetchLatestRelease();
+  const currentVersion = await fetchCurrentRelease();
   const data = await getAllData();
   const packages: PackageItem[] = (await fetchPackages())
     .filter(Boolean)

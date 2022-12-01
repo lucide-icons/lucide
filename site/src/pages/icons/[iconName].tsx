@@ -5,7 +5,7 @@ import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import {useMemo} from 'react';
 import MobileMenu from "../../components/MobileMenu";
-import {fetchLatestRelease} from "../../lib/fetchAllReleases";
+import {fetchCurrentRelease} from "../../lib/fetchAllReleases";
 
 const IconPage = ({icon, data, currentVersion}) => {
   const router = useRouter();
@@ -51,7 +51,7 @@ export default IconPage;
 export async function getStaticProps({params: {iconName}}) {
   const data = await getAllData();
   const icon = await getData(iconName);
-  const currentVersion = await fetchLatestRelease();
+  const currentVersion = await fetchCurrentRelease();
   return {props: {icon, data, currentVersion}};
 }
 

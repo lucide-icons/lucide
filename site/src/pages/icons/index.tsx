@@ -8,7 +8,7 @@ import MobileMenu from '../../components/MobileMenu';
 import {useMemo} from 'react';
 import {GetStaticPropsResult, NextPage} from 'next';
 import {IconEntity} from '../../types';
-import {fetchLatestRelease} from "../../lib/fetchAllReleases";
+import {fetchCurrentRelease} from "../../lib/fetchAllReleases";
 
 interface IconIndexProps {
   data: IconEntity[]
@@ -37,7 +37,7 @@ const IconIndex: NextPage<IconIndexProps> = ({data, currentVersion}) => {
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<IconIndexProps>> {
   const data = await getAllData();
-  const currentVersion = await fetchLatestRelease();
+  const currentVersion = await fetchCurrentRelease();
 
   return {
     props: {

@@ -1,21 +1,15 @@
 import GithubApi from "./githubApi";
 import GithubCache from "./githubCache";
+import {version} from '../../../packages/lucide/package.json' assert {type: 'json'};
 
-export const fetchLatestRelease = async () => {
-  try {
-    const res = await GithubApi.get('/releases/latest');
-    const data = await res.json();
-
-    return data.tag_name;
-  } catch (error) {
-    throw new Error(error);
-  }
+export const fetchCurrentRelease = async () => {
+  return `v${version}`;
 };
 
 export const getAllReleases = async () => {
   try {
-    const latestRelease = await fetchLatestRelease();
-    const releases = await GithubCache.resolve(`releases-${latestRelease}`, async () => await fetchAllReleases(latestRelease));
+    const currentVersion = await fetchCurrentRelease();
+    const releases = await GithubCache.resolve(`releases-${currentVersion}`, async () => await fetchAllReleases(currentVersion));
     return releases.map(
       (data) => {
         return {
