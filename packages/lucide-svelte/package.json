@@ -42,7 +42,8 @@
     "svelte": "^3.53.1",
     "svelte-preprocess": "^4.10.7",
     "svelte2tsx": "^0.4.12",
-    "vitest": "^0.23.2"
+    "vitest": "^0.23.2",
+    "jsdom": "^20.0.3"
   },
   "peerDependencies": {
     "svelte": "^3.49.0",

@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { render, fireEvent, cleanup } from '@testing-library/svelte';
+import { describe, it, expect, afterEach } from 'vitest';
+import { render, cleanup } from '@testing-library/svelte';
 import { Smile } from '../src/icons'
 import TestSlots from './TestSlots.svelte'
 
