@@ -6,8 +6,9 @@ import Layout from '../../components/Layout';
 import {useMemo} from 'react';
 import MobileMenu from "../../components/MobileMenu";
 import {fetchCurrentRelease} from "../../lib/fetchAllReleases";
+import {getAllCategories} from "../../lib/categories";
 
-const IconPage = ({icon, data, currentVersion}) => {
+const IconPage = ({icon, data, categories, currentVersion}) => {
   const router = useRouter();
   const getIcon = iconName => data.find(({name}) => name === iconName) || {};
 
@@ -41,7 +42,7 @@ const IconPage = ({icon, data, currentVersion}) => {
     <Layout>
       <MobileMenu/>
       <IconDetailOverlay key={currentIcon?.name} icon={currentIcon} close={onClose} open/>
-      <IconOverview {...{currentIcon, data, currentVersion}} />
+      <IconOverview {...{currentIcon, data, categories, currentVersion}} />
     </Layout>
   );
 };
@@ -50,9 +51,10 @@ export default IconPage;
 
 export async function getStaticProps({params: {iconName}}) {
   const data = await getAllData();
+  const categories = await getAllCategories();
   const icon = await getData(iconName);
   const currentVersion = await fetchCurrentRelease();
-  return {props: {icon, data, currentVersion}};
+  return {props: {icon, data, categories, currentVersion}};
 }
 
 export async function getStaticPaths() {

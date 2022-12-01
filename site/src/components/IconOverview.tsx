@@ -1,30 +1,33 @@
 import {Box, Flex, Hide, IconButton, Text, Tooltip, useColorMode, useToken, useBreakpointValue} from '@chakra-ui/react';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import useSearch from '../lib/useSearch';
 import {Sliders as SlidersIcon} from 'lucide-react';
 import IconList from './IconList';
 import {SearchInput} from './SearchInput';
-import {IconEntity} from '../types';
+import {CategoryEntity, IconEntity} from '../types';
 import theme from "../lib/theme";
 import {IconCustomizerDrawer} from "./IconCustomizerDrawer";
 import useSpacing from "../lib/useSpacing";
+import {IconStyleContext} from "./CustomizeIconContext";
 
 interface IconOverviewProps {
   data: IconEntity[];
+  categories: CategoryEntity[];
   currentIcon?: IconEntity;
   currentVersion: string;
 }
 
-const IconOverview = ({data, currentIcon, currentVersion}: IconOverviewProps) => {
+const IconOverview = ({data, categories, currentIcon, currentVersion}: IconOverviewProps) => {
   const [query, setQuery] = useState('');
   const {colorMode} = useColorMode();
   const isMobile = useBreakpointValue({base: true, md: false});
   const [customizerOpen, setCustomizerOpen] = useState(false);
+  const {category, setCategory} = useContext(IconStyleContext);
 
   const searchResults = useSearch(query, data, [
     {name: 'name', weight: 2},
     {name: 'tags', weight: 1},
-  ]);
+  ]).filter((icon) => (category === null || icon.categories.includes(category)));
 
   return (
     <>
@@ -62,7 +65,7 @@ const IconOverview = ({data, currentIcon, currentVersion}: IconOverviewProps) =>
               </Tooltip>
             </Hide>
           </Flex>
-          {customizerOpen||!isMobile ? (<IconCustomizerDrawer data={data}/>) : null}
+          {customizerOpen||!isMobile ? (<IconCustomizerDrawer {...{data, categories}}/>) : null}
         </Box>
       </Box>
 
@@ -75,7 +78,7 @@ const IconOverview = ({data, currentIcon, currentVersion}: IconOverviewProps) =>
             <IconList icons={searchResults} currentIcon={currentIcon} currentVersion={currentVersion}/>
           </Box>
         ) : (
-          <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word">
+          <Text fontSize="2xl" fontWeight="bold" textAlign="center" wordBreak="break-word" p={4}>
             No results found for "{query}"
           </Text>
         )}

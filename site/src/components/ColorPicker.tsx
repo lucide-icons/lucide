@@ -1,6 +1,7 @@
 import {SyntheticEvent, useEffect, useRef, useState} from 'react';
 import {
   Box,
+  Button,
   Flex,
   FormLabel,
   Icon,
@@ -44,19 +45,19 @@ function ColorPicker({hsv, hsl, onChange, value: color}: ColorPickerProps) {
     <div>
       <Popover>
         <PopoverTrigger>
-          <Link as="div" cursor="pointer" aria-label="Customize icon color">
+          <Button variant="ghost" cursor="pointer" aria-label="Customize icon color">
             <Flex direction="row" alignItems="center">
-              <FormLabel htmlFor="color" fontWeight={'bold'} mb={0}>
+              <FormLabel htmlFor="color" fontWeight={'bold'} mb={0} cursor="pointer">
                 Color
               </FormLabel>
               <Icon>
                 <rect x={0} width={24} y={0} height={24} fill={value} rx={12}/>
               </Icon>
             </Flex>
-          </Link>
+          </Button>
         </PopoverTrigger>
         <PopoverContent>
-          <PopoverArrow/>
+          <PopoverArrow/>N
           <PopoverCloseButton/>
           <PopoverHeader>Customize icon color</PopoverHeader>
           <PopoverBody>

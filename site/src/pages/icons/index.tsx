@@ -7,14 +7,16 @@ import {useRouter} from 'next/router';
 import MobileMenu from '../../components/MobileMenu';
 import {useMemo} from 'react';
 import {GetStaticPropsResult, NextPage} from 'next';
-import {IconEntity} from '../../types';
+import {CategoryEntity, IconEntity} from '../../types';
 import {fetchCurrentRelease} from "../../lib/fetchAllReleases";
+import {getAllCategories} from "../../lib/categories";
 
 interface IconIndexProps {
-  data: IconEntity[]
+  data: IconEntity[];
+  categories: CategoryEntity[];
 }
 
-const IconIndex: NextPage<IconIndexProps> = ({data, currentVersion}) => {
+const IconIndex: NextPage<IconIndexProps> = ({data, categories, currentVersion}) => {
   const router = useRouter();
   const getIcon = iconName => data.find(({name}) => name === iconName);
 
@@ -30,18 +32,20 @@ const IconIndex: NextPage<IconIndexProps> = ({data, currentVersion}) => {
         icon={currentIcon}
         close={() => router.push('/', undefined, {shallow: true})}
       />
-      <IconOverview {...{currentIcon, data, currentVersion}} />
+      <IconOverview {...{currentIcon, data, categories, currentVersion}} />
     </Layout>
   );
 };
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<IconIndexProps>> {
   const data = await getAllData();
+  const categories = await getAllCategories();
   const currentVersion = await fetchCurrentRelease();
 
   return {
     props: {
       data,
+      categories,
       currentVersion,
     },
   };

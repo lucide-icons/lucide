@@ -10,6 +10,15 @@ export interface IconEntity {
   changedVersion?: Release;
 }
 
+export interface CategoryEntity {
+  name: string;
+  title: string;
+  description: string;
+  icon: string;
+  weight?: number;
+  icons: string[];
+}
+
 export interface Contributor {
   author: string;
 }

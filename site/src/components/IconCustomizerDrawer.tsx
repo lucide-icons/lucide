@@ -2,30 +2,50 @@ import {useContext, useState} from 'react';
 import {IconStyleContext} from './CustomizeIconContext';
 import {
   Box,
+  Button,
   ButtonGroup,
+  chakra,
   Divider,
   Flex,
   FormControl,
   FormLabel,
   Hide,
   IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Portal,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
   Text,
   Tooltip,
+  VisuallyHidden,
 } from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
-import {Delete as DeleteIcon, Download as DownloadIcon} from 'lucide-react';
-import {IconEntity} from "../types";
+import {
+  ChevronDown as ChevronDownIcon,
+  Delete as DeleteIcon,
+  Download as DownloadIcon
+} from 'lucide-react';
+import {CategoryEntity, IconEntity} from "../types";
 import download from 'downloadjs';
+import {IconWrapper} from "./IconWrapper";
 
 interface IconCustomizerDrawerProps {
-  data: IconEntity[]
+  data: IconEntity[];
+  categories: CategoryEntity[];
 }
 
-type IconContent = [icon: string, src: string];
+type IconContent = [icon
+:
+string, src
+:
+string
+]
+;
 
 async function generateZip(icons: IconContent[]) {
   const JSZip = (await import('jszip')).default
@@ -41,7 +61,7 @@ async function generateZip(icons: IconContent[]) {
   return zip.generateAsync({type: 'blob'});
 }
 
-export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
+export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerProps) {
   const {
     color,
     setColor,
@@ -49,9 +69,15 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
     setSize,
     strokeWidth,
     setStroke,
-    resetStyle
+    category,
+    setCategory,
+    resetStyle,
   } = useContext(IconStyleContext);
   const [zippingIcons, setZippingIcons] = useState(false);
+  const breakpoint = 'md';
+
+  const currentCategory = category ? categories.find((item) => category === item.name) : null;
+  const currentCategoryIcon = currentCategory ? data.find((item) => currentCategory.icon === item.name) : null;
 
   const customizeIcon = (src) => src
     .replace(/ stroke="currentColor"/, ` stroke="${color}"`)
@@ -74,23 +100,61 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
   };
 
   return (
-    <Flex direction={{base: 'column', md: 'row'}}
-          mt={{base: 4, md: 6}}
-          justifyContent={{base: 'flex-start', md: 'center'}}
-          alignItems={{base: 'flex-start', md: 'center'}}
+    <Flex direction={{base: 'column', [breakpoint]: 'row'}}
+          mt={{base: 4, [breakpoint]: 6}}
+          justifyContent={{base: 'flex-start', [breakpoint]: 'center'}}
+          alignItems={{base: 'flex-start', [breakpoint]: 'center'}}
           w="100%"
     >
-      <Hide below="md">
+      <Hide below={'lg'}>
         <Box textTransform="uppercase" whiteSpace="nowrap">
           <strong>{data.length}</strong> icons
         </Box>
         <Divider orientation="vertical" mx={3} height={5}/>
       </Hide>
-      <Flex direction={{base: 'column', sm: 'row'}}
-            justifyContent={{base: 'flex-start', sm: 'center'}}
-            alignItems={{base: 'flex-start', sm: 'center'}}
+      <Flex direction={{base: 'column', [breakpoint]: 'row'}}
+            justifyContent={{base: 'flex-start', [breakpoint]: 'center'}}
+            alignItems={{base: 'flex-start', [breakpoint]: 'center'}}
             w="100%"
       >
+        <Menu>
+          <MenuButton
+            transition='all 0.2s'
+            as={Button}
+            variant="ghost"
+            container={{
+              display: 'flex',
+              direction: 'row',
+            }}
+            flexDirection="row"
+            leftIcon={currentCategoryIcon ? (<IconWrapper display="inline-block" src={currentCategoryIcon.src} />) : null}
+            rightIcon={(<ChevronDownIcon/>)}
+          >
+            <VisuallyHidden>Category</VisuallyHidden>
+            {currentCategory ? currentCategory.title : 'All icons'}
+          </MenuButton>
+          <Portal>
+            <MenuList zIndex="dropdown" maxHeight={60} overflowY={"scroll"}>
+              <MenuItem
+                active={category === null ? 'active' : null}
+                onClick={() => setCategory(null)}
+              >All icons</MenuItem>
+              {categories.map((category) => {
+                const categoryIcon = data.find((item) => item.name === category.icon);
+                return (
+                  <MenuItem
+                    active={category === category.name ? 'active' : null}
+                    onClick={() => setCategory(category.name)}
+                    icon={(
+                      <IconWrapper src={categoryIcon.src} />
+                    )}
+                  >{category.title}</MenuItem>
+                )
+              })}
+            </MenuList>
+          </Portal>
+        </Menu>
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
         <FormControl display="flex" direction="row" w="auto">
           <ColorPicker
             color={color}
@@ -98,8 +162,8 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
             onChangeComplete={(col) => setColor(col.hex)}
           />
         </FormControl>
-        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5}/>
-        <FormControl display="flex" direction="row" w="auto">
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
+        <FormControl display="flex" direction="row" w="auto" px={{base: 4, [breakpoint]: 0}} py={{base: 2, [breakpoint]: 0}}>
           <FormLabel htmlFor="stroke" mb={0}>
             <Flex>
               <Text flexGrow={1} fontWeight={'bold'}>
@@ -124,8 +188,8 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
           </Slider>
           <Text ml={4}>{strokeWidth}px</Text>
         </FormControl>
-        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5}/>
-        <FormControl display="flex" direction="row" w="auto">
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
+        <FormControl display="flex" direction="row" w="auto" px={{base: 4, [breakpoint]: 0}} py={{base: 2, [breakpoint]: 0}}>
           <FormLabel htmlFor="size" mb={0}>
             <Flex>
               <Text flexGrow={1} fontWeight={'bold'}>
@@ -150,8 +214,8 @@ export function IconCustomizerDrawer({data}: IconCustomizerDrawerProps) {
           </Slider>
           <Text ml={4}>{size}px</Text>
         </FormControl>
-        <Divider display={{base: 'none', sm: 'block'}} orientation="vertical" mx={3} height={5}/>
-        <ButtonGroup>
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
+        <ButtonGroup px={{base: 3, [breakpoint]: 0}}>
           <Tooltip hasArrow label="Reset">
             <IconButton size="sm"
                         variant="ghost"

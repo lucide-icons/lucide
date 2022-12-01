@@ -23,6 +23,8 @@ export const IconStyleContext = createContext<ICustomIconStyle>({
   setStroke: () => null,
   size: 24,
   setSize: () => null,
+  category: null,
+  setCategory: () => null,
   resetStyle: () => null,
 });
 
@@ -30,11 +32,13 @@ export function CustomizeIconContext({ children }): JSX.Element {
   const [color, setColor] = useState(DEFAULT_STYLE.color);
   const [stroke, setStroke] = useState(DEFAULT_STYLE.strokeWidth);
   const [size, setSize] = useState(DEFAULT_STYLE.size);
+  const [category, setCategory] = useState(null);
 
   function resetStyle() {
     setColor(DEFAULT_STYLE.color);
     setStroke(DEFAULT_STYLE.strokeWidth);
     setSize(DEFAULT_STYLE.size);
+    setCategory(null);
   }
 
   const value = useMemo(
@@ -45,9 +49,11 @@ export function CustomizeIconContext({ children }): JSX.Element {
       setStroke,
       size,
       setSize,
+      category,
+      setCategory,
       resetStyle,
     }),
-    [color, setColor, stroke, setStroke, size, setSize, resetStyle],
+    [color, setColor, stroke, setStroke, size, setSize, category, setCategory, resetStyle],
   );
 
   return <IconStyleContext.Provider value={value}>{children}</IconStyleContext.Provider>;
