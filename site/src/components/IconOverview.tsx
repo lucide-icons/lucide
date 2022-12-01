@@ -22,7 +22,7 @@ const IconOverview = ({data, categories, currentIcon, currentVersion}: IconOverv
   const {colorMode} = useColorMode();
   const isMobile = useBreakpointValue({base: true, md: false});
   const [customizerOpen, setCustomizerOpen] = useState(false);
-  const {category, setCategory} = useContext(IconStyleContext);
+  const {category} = useContext(IconStyleContext);
 
   const searchResults = useSearch(query, data, [
     {name: 'name', weight: 2},

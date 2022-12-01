@@ -23,7 +23,6 @@ import {
   Text,
   Tooltip,
   VisuallyHidden,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
 import {
@@ -40,13 +39,7 @@ interface IconCustomizerDrawerProps {
   categories: CategoryEntity[];
 }
 
-type IconContent = [icon
-:
-string, src
-:
-string
-]
-;
+type IconContent = [icon: string, src: string];
 
 async function generateZip(icons: IconContent[]) {
   const JSZip = (await import('jszip')).default
@@ -63,7 +56,6 @@ async function generateZip(icons: IconContent[]) {
 }
 
 export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerProps) {
-  const scrollbarColor = useColorModeValue(`rgba(0,0,0,0.05)`, `rgba(255,255,255,0.05)`);
   const {
     color,
     setColor,

@@ -1,5 +1,5 @@
 import Document, {Head, Html, Main, NextScript} from "next/document";
-import {ColorModeScript, useColorModeValue} from "@chakra-ui/react"
+import {ColorModeScript} from "@chakra-ui/react"
 import IconStyleElement from "../components/IconStyleElement";
 
 class MyDocument extends Document {

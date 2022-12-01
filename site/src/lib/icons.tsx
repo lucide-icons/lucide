@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import tags from '../../../tags.json';
 import {IconEntity} from "../types";
 import {getAllReleases} from "./fetchAllReleases";
 import {getMetadata} from "./fetchAllMetadata"
