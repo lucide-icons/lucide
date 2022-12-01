@@ -391,7 +391,7 @@ importers:
       js-yaml: ^4.1.0
       jszip: ^3.7.0
       lodash: ^4.17.20
-      lucide-react: 0.14.0
+      lucide-react: ^0.94.0
       next: '12'
       next-mdx-remote: ^3.0.2
       prettier: ^2.3.2
@@ -415,7 +415,7 @@ importers:
       js-yaml: 4.1.0
       jszip: 3.10.1
       lodash: 4.17.21
-      lucide-react: 0.14.0_at7mkepldmzoo6silmqc5bca74
+      lucide-react: 0.94.0_at7mkepldmzoo6silmqc5bca74
       next: 12.2.5_m5j7lwbckoquomtbl6yhnt55ua
       next-mdx-remote: 3.0.8_sfoxds7t5ydpegc3knd667wn6m
       prism-react-renderer: 1.3.5_react@17.0.2
@@ -16882,11 +16882,11 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /lucide-react/0.14.0_at7mkepldmzoo6silmqc5bca74:
-    resolution: {integrity: sha512-4dKiKn9bwLEfK0F7hNtMyxXpPTM68Y4GLbFJ2JpgBZ9B/V3MbKtvN4z8zIkysLJsjcscwvzULizE7Efmp+yx3w==}
+  /lucide-react/0.94.0_at7mkepldmzoo6silmqc5bca74:
+    resolution: {integrity: sha512-wDVFhqyVDM2J0gMlKdA08EKzf9Ily3+diKHLcumOHYtp8l5GDDgKqqJuJ8HOOxHprNeTnqJxnHAz7jBFErKc7Q==}
     peerDependencies:
       prop-types: ^15.7.2
-      react: ^16.5.1
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
       prop-types: 15.8.1
       react: 17.0.2

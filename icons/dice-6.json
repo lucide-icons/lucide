@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "dice",
+    "random",
+    "tabletop",
+    "6",
+    "board",
+    "game"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}

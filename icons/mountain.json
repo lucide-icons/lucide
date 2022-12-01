@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "climb",
+    "hike",
+    "rock"
+  ],
+  "categories": [
+    "nature",
+    "gaming"
+  ]
+}

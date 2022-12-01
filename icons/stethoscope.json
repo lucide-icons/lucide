@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "phonendoscope",
+    "medical",
+    "heart",
+    "lungs",
+    "sound"
+  ],
+  "categories": [
+    "science",
+    "medical"
+  ]
+}

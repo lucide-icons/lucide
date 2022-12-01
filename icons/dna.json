@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "gene",
+    "gmo",
+    "helix",
+    "heredity",
+    "chromosome",
+    "nucleic acid"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

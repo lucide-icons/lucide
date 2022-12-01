@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear",
+    "maths"
+  ],
+  "categories": [
+    "maths",
+    "shapes"
+  ]
+}

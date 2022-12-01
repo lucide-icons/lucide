@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "key",
+    "mac",
+    "button"
+  ],
+  "categories": [
+    "coding"
+  ]
+}
