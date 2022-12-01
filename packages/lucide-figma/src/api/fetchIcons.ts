@@ -23,8 +23,8 @@ export const fetchIcons = async (cachedIcons? : LucideIcons): Promise<LucideIcon
     return cachedIcons
   }
 
-  const iconNodesResponse = await fetch(`https://unpkg.com/lucide-static@${packageJson.version}/icon-nodes.json`)
-  const tagsResponse = await fetch('https://unpkg.com/lucide-static@latest/tags.json')
+  const iconNodesResponse = await fetch(`https://lucide.dev/api/icon-nodes`)
+  const tagsResponse = await fetch('https://lucide.dev/api/tags')
 
   const iconNodes = await iconNodesResponse.json();
   const tags = await tagsResponse.json();
