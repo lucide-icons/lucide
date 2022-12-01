@@ -1,7 +1,10 @@
-import {render, fireEvent} from '@testing-library/vue'
+import { describe, it, expect, vi, afterEach } from 'vitest';
+import {render, fireEvent, cleanup } from '@testing-library/vue'
 import { Smile } from '../src/icons'
 
 describe('Using lucide icon components', () => {
+  afterEach(() => cleanup())
+
   it('should render an component', () => {
     const { container } = render(Smile)
     expect(container).toMatchSnapshot();
@@ -55,7 +58,7 @@ describe('Using lucide icon components', () => {
   });
 
   it('should call the onClick event', async () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     render(Smile, {
       attrs: {
         onClick,

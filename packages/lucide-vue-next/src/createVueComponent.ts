@@ -1,5 +1,14 @@
 import { h } from 'vue';
+import type { SVGAttributes, FunctionalComponent } from 'vue';
 import defaultAttributes from './defaultAttributes';
+
+// Create interface extending SVGAttributes
+export interface SVGProps extends Partial<SVGAttributes> {
+  size?: 24 | number
+}
+
+
+type IconNode = [elementName: string, attrs: Record<string, string>][]
 
 /**
  * Converts string to KebabCase
@@ -9,11 +18,11 @@ import defaultAttributes from './defaultAttributes';
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = string => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createVueComponent = (iconName, iconNode) => (
+const createVueComponent = (iconName: string, iconNode: IconNode): FunctionalComponent<SVGProps> => (
   { size, color, ...props }, // props
-  { attrs, emit, slots } // context
+  { attrs, slots } // context
   ) => {
   return h(
     'svg',

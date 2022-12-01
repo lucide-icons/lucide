@@ -8,7 +8,7 @@ export default ({
   outputDirectory,
   template,
   showLog = true,
-  iconFileExtention = '.js',
+  iconFileExtension = '.js',
   pretty = true,
 }) => {
   const icons = Object.keys(iconNodes);
@@ -19,7 +19,7 @@ export default ({
   }
 
   const writeIconFiles = icons.map(async (iconName) => {
-    const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
+    const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtension}`);
     const componentName = toPascalCase(iconName);
 
     let { children } = iconNodes[iconName];

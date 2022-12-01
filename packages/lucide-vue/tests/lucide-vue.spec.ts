@@ -1,7 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render, fireEvent, cleanup } from '@testing-library/vue'
 import { Smile } from '../src/icons'
-import { vi } from 'vitest';
 import { afterEach } from 'vitest';
 import { VueClass } from '@vue/test-utils';
 

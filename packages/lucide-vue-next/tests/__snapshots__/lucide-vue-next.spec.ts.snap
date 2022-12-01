@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Using lucide icon components should add a class to the element 1`] = `
+exports[`Using lucide icon components > should add a class to the element 1`] = `
 <div>
   <svg
     class="my-icon"
@@ -38,7 +38,7 @@ exports[`Using lucide icon components should add a class to the element 1`] = `
 </div>
 `;
 
-exports[`Using lucide icon components should add a style attribute to the element 1`] = `
+exports[`Using lucide icon components > should add a style attribute to the element 1`] = `
 <div>
   <svg
     class="lucide lucide-smile-icon"
@@ -77,7 +77,7 @@ exports[`Using lucide icon components should add a style attribute to the elemen
 </div>
 `;
 
-exports[`Using lucide icon components should adjust the size, stroke color and stroke width 1`] = `
+exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
 <div>
   <svg
     class="lucide lucide-smile-icon"
@@ -117,7 +117,7 @@ exports[`Using lucide icon components should adjust the size, stroke color and s
 </div>
 `;
 
-exports[`Using lucide icon components should pass children to the icon slot 1`] = `
+exports[`Using lucide icon components > should pass children to the icon slot 1`] = `
 <div>
   <svg
     class="lucide lucide-smile-icon"
@@ -160,7 +160,7 @@ exports[`Using lucide icon components should pass children to the icon slot 1`] 
 </div>
 `;
 
-exports[`Using lucide icon components should render an component 1`] = `
+exports[`Using lucide icon components > should render an component 1`] = `
 <div>
   <svg
     class="lucide lucide-smile-icon"
