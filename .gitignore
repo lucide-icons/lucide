@@ -16,3 +16,5 @@ outlined
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/LICENSE
+categories.json
+tags.json

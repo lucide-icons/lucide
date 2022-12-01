@@ -14,9 +14,10 @@
     "copy:icons": "cp -r ../../icons icons",
     "copy:tags": "cp ../../tags.json tags.json",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "build": "pnpm clean && pnpm copy:license && pnpm copy:icons && pnpm copy:tags && pnpm build:lib",
+    "build:tags": "node ../../scripts/migrateIconsToTags.mjs",
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:icons && pnpm build:tags && pnpm copy:tags && pnpm build:lib",
     "build:lib": "node ./scripts/buildLib.mjs",
-    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg && rm -f tags.json",
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg && rm -f tags.json && rm -f ../../tags.json",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
