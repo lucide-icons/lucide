@@ -11,7 +11,4 @@ export default defineConfig({
     threads: false,
     isolate: false,
   },
-  // resolve: {
-  //   conditions: ['development', 'browser'],
-  // },
 });
