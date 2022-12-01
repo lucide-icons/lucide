@@ -1,5 +1,10 @@
-import {defineStyleConfig, createMultiStyleConfigHelpers, extendTheme, StyleFunctionProps} from '@chakra-ui/react';
-import { mode } from "@chakra-ui/theme-tools";
+import {
+  createMultiStyleConfigHelpers,
+  defineStyleConfig,
+  extendTheme,
+  StyleFunctionProps
+} from '@chakra-ui/react';
+import {mode} from "@chakra-ui/theme-tools";
 
 const Footer = defineStyleConfig({
   baseStyle: {
@@ -78,7 +83,7 @@ const Section = defineStyleConfig({
   },
 });
 
-const IconCustomizerWidgetHelpers = createMultiStyleConfigHelpers(['card' , 'iconSelection', 'iconPreview', 'propertySelection', 'customizerDrawer']);
+const IconCustomizerWidgetHelpers = createMultiStyleConfigHelpers(['card', 'iconSelection', 'iconPreview', 'propertySelection', 'customizerDrawer']);
 const IconCustomizerWidget = IconCustomizerWidgetHelpers.defineMultiStyleConfig({
   baseStyle: (props: StyleFunctionProps) => ({
     card: {
@@ -170,6 +175,7 @@ const theme = extendTheme({
       body: {
         bg: props.colorMode === 'dark' ? 'darkgray.DEFAULT' : 'white',
         fontWeight: 500,
+        '--scrollbar-color': props.colorMode === 'dark' ? `rgba(255,255,255,0.05)` : `rgba(0,0,0,0.05)`,
       },
     }),
   },
@@ -262,7 +268,7 @@ const theme = extendTheme({
             transform: 'scale(1.1)',
           },
         }),
-        solid:  (props: StyleFunctionProps) => ({
+        solid: (props: StyleFunctionProps) => ({
           bg: props.colorScheme === 'brand' ? `brand.500` : mode(`${props.colorScheme}.500`, `${props.colorScheme}.200`)(props),
           color: props.colorScheme === 'brand' ? mode(`white`, `black`)(props) : mode(`white`, `gray.800`)(props),
         }),
@@ -314,6 +320,34 @@ const theme = extendTheme({
           },
         })
       },
+    },
+    Menu: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        list: {
+          bg: props.colorMode == 'light' ? 'white' : 'darkgray.800',
+          boxShadow: 'dark-lg',
+          border: 0,
+          overflow: 'hidden',
+          py: {base: 2, lg: 4},
+        },
+        item: {
+          px: {base: 4, lg: 6},
+          _active: {
+            bg: 'brand.500',
+            color: 'white',
+          }
+        }
+      }),
+    },
+    Popover: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        content: {
+          bg: props.colorMode == 'light' ? 'white' : 'darkgray.800',
+          boxShadow: 'dark-lg',
+          borderColor: 'transparent',
+          overflow: 'hidden',
+        },
+      }),
     },
     Kbd: {
       baseStyle: (props: StyleFunctionProps) => ({

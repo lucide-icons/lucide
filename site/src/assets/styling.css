@@ -22,8 +22,8 @@ body {
   top: -2px;
 }
 
-.icon-list-item:hover svg ,
-.icon-list-item:focus svg ,
+.icon-list-item:hover svg,
+.icon-list-item:focus svg,
 .icon-list-item:active svg {
   stroke: white !important;
 }
@@ -46,4 +46,15 @@ body {
 
 .icon-list-item-wrapper:hover .version-badge {
   opacity: 1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+  background-color: var(--scrollbar-color);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: var(--scrollbar-color);
 }

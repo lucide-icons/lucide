@@ -1,5 +1,5 @@
 import Document, {Head, Html, Main, NextScript} from "next/document";
-import {ColorModeScript} from "@chakra-ui/react"
+import {ColorModeScript, useColorModeValue} from "@chakra-ui/react"
 import IconStyleElement from "../components/IconStyleElement";
 
 class MyDocument extends Document {
@@ -22,7 +22,20 @@ class MyDocument extends Document {
                 content="pr2dEIF-6zFdjXlDxutqEokeinrQNLx5qAjeVCqASDY"/>
           <IconStyleElement />
         </Head>
-        <body>
+        <body
+          sx={{
+            overflow: 'overlay',
+            '&::-webkit-scrollbar': {
+              width: 3,
+              borderRadius: 'md',
+              backgroundColor: 'var(--scrollbar-color)',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              borderRadius: 'md',
+              backgroundColor: 'var(--scrollbar-color)',
+            }
+          }}
+        >
         <ColorModeScript/>
         <Main/>
         <NextScript/>

@@ -57,7 +57,7 @@ function ColorPicker({hsv, hsl, onChange, value: color}: ColorPickerProps) {
           </Button>
         </PopoverTrigger>
         <PopoverContent>
-          <PopoverArrow/>N
+          <PopoverArrow/>
           <PopoverCloseButton/>
           <PopoverHeader>Customize icon color</PopoverHeader>
           <PopoverBody>

@@ -23,6 +23,7 @@ import {
   Text,
   Tooltip,
   VisuallyHidden,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
 import {
@@ -62,6 +63,7 @@ async function generateZip(icons: IconContent[]) {
 }
 
 export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerProps) {
+  const scrollbarColor = useColorModeValue(`rgba(0,0,0,0.05)`, `rgba(255,255,255,0.05)`);
   const {
     color,
     setColor,
@@ -127,34 +129,40 @@ export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerPro
               direction: 'row',
             }}
             flexDirection="row"
-            leftIcon={currentCategoryIcon ? (<IconWrapper display="inline-block" src={currentCategoryIcon.src} />) : null}
+            leftIcon={currentCategoryIcon ? (
+              <IconWrapper display="inline-block" src={currentCategoryIcon.src}/>) : null}
             rightIcon={(<ChevronDownIcon/>)}
           >
             <VisuallyHidden>Category</VisuallyHidden>
             {currentCategory ? currentCategory.title : 'All icons'}
           </MenuButton>
           <Portal>
-            <MenuList zIndex="dropdown" maxHeight={60} overflowY={"scroll"}>
+            <MenuList hasArrow zIndex="dropdown" maxHeight={60} overflowY={"scroll"}
+                      className="custom-scrollbar"
+            >
               <MenuItem
-                active={category === null ? 'active' : null}
+                color={category === null ? 'brand.500' : null}
                 onClick={() => setCategory(null)}
               >All icons</MenuItem>
-              {categories.map((category) => {
-                const categoryIcon = data.find((item) => item.name === category.icon);
+              {categories.map((categoryItem) => {
+                const categoryIcon = data.find((item) => item.name === categoryItem.icon);
                 return (
                   <MenuItem
-                    active={category === category.name ? 'active' : null}
-                    onClick={() => setCategory(category.name)}
+                    command={(
+                      <chakra.span fontSize=".75rem" ml={2}>{categoryItem.icons.length}</chakra.span>)}
+                    color={category === categoryItem.name ? 'brand.500' : null}
+                    onClick={() => setCategory(categoryItem.name)}
                     icon={(
-                      <IconWrapper src={categoryIcon.src} />
+                      <IconWrapper src={categoryIcon.src}/>
                     )}
-                  >{category.title}</MenuItem>
+                  >{categoryItem.title}</MenuItem>
                 )
               })}
             </MenuList>
           </Portal>
         </Menu>
-        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3}
+                 height={5}/>
         <FormControl display="flex" direction="row" w="auto">
           <ColorPicker
             color={color}
@@ -162,8 +170,10 @@ export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerPro
             onChangeComplete={(col) => setColor(col.hex)}
           />
         </FormControl>
-        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
-        <FormControl display="flex" direction="row" w="auto" px={{base: 4, [breakpoint]: 0}} py={{base: 2, [breakpoint]: 0}}>
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3}
+                 height={5}/>
+        <FormControl display="flex" direction="row" w="auto" px={{base: 4, [breakpoint]: 0}}
+                     py={{base: 2, [breakpoint]: 0}}>
           <FormLabel htmlFor="stroke" mb={0}>
             <Flex>
               <Text flexGrow={1} fontWeight={'bold'}>
@@ -188,8 +198,10 @@ export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerPro
           </Slider>
           <Text ml={4}>{strokeWidth}px</Text>
         </FormControl>
-        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
-        <FormControl display="flex" direction="row" w="auto" px={{base: 4, [breakpoint]: 0}} py={{base: 2, [breakpoint]: 0}}>
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3}
+                 height={5}/>
+        <FormControl display="flex" direction="row" w="auto" px={{base: 4, [breakpoint]: 0}}
+                     py={{base: 2, [breakpoint]: 0}}>
           <FormLabel htmlFor="size" mb={0}>
             <Flex>
               <Text flexGrow={1} fontWeight={'bold'}>
@@ -214,7 +226,8 @@ export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerPro
           </Slider>
           <Text ml={4}>{size}px</Text>
         </FormControl>
-        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3} height={5}/>
+        <Divider display={{base: 'none', [breakpoint]: 'block'}} orientation="vertical" mx={3}
+                 height={5}/>
         <ButtonGroup px={{base: 3, [breakpoint]: 0}}>
           <Tooltip hasArrow label="Reset">
             <IconButton size="sm"
