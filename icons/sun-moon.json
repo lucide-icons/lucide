@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "night",
+    "light",
+    "moon",
+    "sun",
+    "brightness"
+  ],
+  "categories": [
+    "accessibility"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "executable",
+    "settings",
+    "cog",
+    "edit",
+    "gear"
+  ],
+  "categories": [
+    "files"
+  ]
+}

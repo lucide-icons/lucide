@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "question mark"
+  ],
+  "categories": [
+    "accessibility",
+    "text",
+    "shapes",
+    "notifications"
+  ]
+}

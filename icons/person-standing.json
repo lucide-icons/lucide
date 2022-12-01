@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "people",
+    "human",
+    "accessibility",
+    "stick figure"
+  ],
+  "categories": [
+    "accessibility",
+    "people"
+  ]
+}

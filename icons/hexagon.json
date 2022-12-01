@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shape",
+    "node.js",
+    "logo"
+  ],
+  "categories": [
+    "shapes",
+    "brands",
+    "development"
+  ]
+}

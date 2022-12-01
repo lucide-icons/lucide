@@ -17,6 +17,12 @@
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addtags": "node ./scripts/addMissingKeysToTags.mjs",
+    "checkIcons": "node scripts/checkIconsAndCategories.mjs --presets @babel/env",
+    "tags2icons": "node scripts/migrateTagsToIcons.mjs --presets @babel/env",
+    "icons2tags": "node scripts/migrateIconsToTags.mjs --presets @babel/env",
+    "icons2categories": "node scripts/migrateIconsToCategories.mjs --presets @babel/env",
+    "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
+    "icons2files": "node scripts/migrateIconsToJsonFiles.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}"

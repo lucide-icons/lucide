@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "element",
+    "mouse",
+    "click",
+    "cursor",
+    "pointer",
+    "box"
+  ],
+  "categories": [
+    "arrows",
+    "cursors",
+    "coding"
+  ]
+}

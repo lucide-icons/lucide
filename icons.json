@@ -1,0 +1,9682 @@
+{
+  "$id": "https://lucide.dev/icons.json",
+  "$schema": "./icons.schema.json",
+  "title": "Lucide Icons",
+  "type": "object",
+  "icons": {
+    "accessibility": {
+      "tags": [
+        "disability",
+        "disabled",
+        "dda",
+        "wheelchair"
+      ],
+      "categories": [
+        "accessibility",
+        "medical"
+      ]
+    },
+    "activity": {
+      "tags": [
+        "pulse",
+        "health",
+        "action",
+        "motion"
+      ],
+      "categories": [
+        "medical",
+        "account",
+        "social"
+      ]
+    },
+    "air-vent": {
+      "tags": [
+        "air conditioner",
+        "ac",
+        "central air",
+        "cooling",
+        "climate-control"
+      ],
+      "categories": [
+        "home"
+      ]
+    },
+    "airplay": {
+      "tags": [
+        "stream",
+        "cast",
+        "mirroring"
+      ],
+      "categories": [
+        "multimedia",
+        "connectivity",
+        "devices",
+        "brands"
+      ]
+    },
+    "alarm-check": {
+      "tags": [
+        "done"
+      ],
+      "categories": [
+        "devices",
+        "notifications",
+        "time"
+      ]
+    },
+    "alarm-clock": {
+      "tags": [
+        "morning"
+      ],
+      "categories": [
+        "devices",
+        "notifications",
+        "time"
+      ]
+    },
+    "alarm-clock-off": {
+      "tags": [
+        "morning",
+        "turn-off"
+      ],
+      "categories": [
+        "devices",
+        "notifications",
+        "time"
+      ]
+    },
+    "alarm-minus": {
+      "tags": [
+        "remove"
+      ],
+      "categories": [
+        "devices",
+        "notifications",
+        "time"
+      ]
+    },
+    "alarm-plus": {
+      "tags": [
+        "add"
+      ],
+      "categories": [
+        "devices",
+        "notifications",
+        "time"
+      ]
+    },
+    "album": {
+      "tags": [
+        "photo",
+        "book"
+      ],
+      "categories": [
+        "photography",
+        "multimedia"
+      ]
+    },
+    "alert-circle": {
+      "tags": [
+        "warning",
+        "alert",
+        "danger"
+      ],
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
+    },
+    "alert-octagon": {
+      "tags": [
+        "warning",
+        "alert",
+        "danger"
+      ],
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
+    },
+    "alert-triangle": {
+      "tags": [
+        "warning",
+        "alert",
+        "danger"
+      ],
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
+    },
+    "align-center": {
+      "tags": [
+        "text",
+        "alignment",
+        "center"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "align-center-horizontal": {
+      "tags": [
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-center-vertical": {
+      "tags": [
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-end-horizontal": {
+      "tags": [
+        "items",
+        "bottom",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-end-vertical": {
+      "tags": [
+        "items",
+        "right",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-distribute-center": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "space",
+        "evenly",
+        "around"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-distribute-end": {
+      "tags": [
+        "right",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-distribute-start": {
+      "tags": [
+        "left",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-justify-center": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-justify-end": {
+      "tags": [
+        "right",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-justify-start": {
+      "tags": [
+        "left",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-space-around": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-horizontal-space-between": {
+      "tags": [
+        "around",
+        "items",
+        "bottom",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-justify": {
+      "tags": [
+        "text",
+        "alignment",
+        "justified"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "align-left": {
+      "tags": [
+        "text",
+        "alignment",
+        "left"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "align-right": {
+      "tags": [
+        "text",
+        "alignment",
+        "right"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "align-start-horizontal": {
+      "tags": [
+        "top",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-start-vertical": {
+      "tags": [
+        "left",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-distribute-center": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "space",
+        "evenly",
+        "around"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-distribute-end": {
+      "tags": [
+        "bottom",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-distribute-start": {
+      "tags": [
+        "top",
+        "items",
+        "flex",
+        "justify"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-justify-center": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-justify-end": {
+      "tags": [
+        "bottom",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-justify-start": {
+      "tags": [
+        "top",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-space-around": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "align-vertical-space-between": {
+      "tags": [
+        "center",
+        "items",
+        "flex",
+        "justify",
+        "distribute",
+        "between"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "anchor": {
+      "tags": [
+        "ship"
+      ],
+      "categories": [
+        "transportation",
+        "text",
+        "maps"
+      ]
+    },
+    "angry": {
+      "tags": [
+        "emoji",
+        "anger",
+        "face",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "annoyed": {
+      "tags": [
+        "emoji",
+        "nuisance",
+        "face",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "aperture": {
+      "tags": [
+        "camera",
+        "photo"
+      ],
+      "categories": [
+        "photography"
+      ]
+    },
+    "apple": {
+      "tags": [
+        "fruit",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "archive": {
+      "tags": [
+        "index",
+        "box"
+      ],
+      "categories": [
+        "files",
+        "mail"
+      ]
+    },
+    "archive-restore": {
+      "tags": [
+        "archive",
+        "unarchive",
+        "restore",
+        "index",
+        "box"
+      ],
+      "categories": [
+        "files",
+        "mail"
+      ]
+    },
+    "armchair": {
+      "tags": [
+        "sofa",
+        "furniture",
+        "leisure",
+        "lounge",
+        "loveseat",
+        "couch"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "arrow-big-down": {
+      "tags": [
+        "key"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-big-left": {
+      "tags": [
+        "key"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-big-right": {
+      "tags": [
+        "key",
+        "forward"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-big-up": {
+      "tags": [
+        "key",
+        "forward"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-down": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-down-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    "arrow-down-left": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-down-right": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-left": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-left-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    "arrow-left-right": {
+      "tags": [
+        "bidirectional",
+        "direction",
+        "swap",
+        "switch",
+        "transaction",
+        "reorder",
+        "move"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-right": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-right-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    "arrow-up": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-up-circle": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows",
+        "shapes"
+      ]
+    },
+    "arrow-up-down": {
+      "tags": [
+        "bidirectional",
+        "direction",
+        "swap",
+        "switch",
+        "network",
+        "mobile data",
+        "internet",
+        "reorder",
+        "move"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-up-left": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "arrow-up-right": {
+      "tags": [
+        "direction"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "asterisk": {
+      "tags": [
+        "reference"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "at-sign": {
+      "tags": [
+        "mention",
+        "at",
+        "email",
+        "message"
+      ],
+      "categories": [
+        "text",
+        "account"
+      ]
+    },
+    "award": {
+      "tags": [
+        "achievement",
+        "badge"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "axe": {
+      "tags": [
+        "hatchet"
+      ],
+      "categories": [
+        "tools",
+        "gaming"
+      ]
+    },
+    "axis-3d": {
+      "tags": [
+        "gizmo",
+        "coordinates"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "baby": {
+      "tags": [
+        "child",
+        "childproof",
+        "children"
+      ],
+      "categories": [
+        "accessibility",
+        "people"
+      ]
+    },
+    "backpack": {
+      "tags": [
+        "bag",
+        "hiking",
+        "travel",
+        "camping",
+        "school",
+        "childhood"
+      ],
+      "categories": [
+        "gaming",
+        "photography",
+        "travel"
+      ]
+    },
+    "baggage-claim": {
+      "tags": [
+        "baggage",
+        "luggage",
+        "travel",
+        "cart",
+        "trolley",
+        "suitcase"
+      ],
+      "categories": [
+        "transportation",
+        "travel"
+      ]
+    },
+    "banana": {
+      "tags": [
+        "fruit",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "banknote": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "bar-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": [
+        "charts"
+      ]
+    },
+    "bar-chart-2": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": [
+        "charts"
+      ]
+    },
+    "bar-chart-3": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": [
+        "charts"
+      ]
+    },
+    "bar-chart-4": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": [
+        "charts"
+      ]
+    },
+    "bar-chart-horizontal": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": [
+        "charts"
+      ]
+    },
+    "baseline": {
+      "tags": [
+        "text",
+        "format",
+        "color"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "bath": {
+      "tags": [
+        "amenities",
+        "services",
+        "bathroom",
+        "shower"
+      ],
+      "categories": [
+        "travel"
+      ]
+    },
+    "battery": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "battery-charging": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "battery-full": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "battery-low": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "battery-medium": {
+      "tags": [
+        "power",
+        "electricity"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "beaker": {
+      "tags": [
+        "cup"
+      ],
+      "categories": [
+        "science",
+        "gaming"
+      ]
+    },
+    "bean": {
+      "tags": [
+        "legume",
+        "soy",
+        "food",
+        "seed"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "bean-off": {
+      "tags": [
+        "soy free",
+        "legume",
+        "soy",
+        "food",
+        "seed",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "bed": {
+      "tags": [
+        "sleep",
+        "hotel",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "bed-double": {
+      "tags": [
+        "sleep",
+        "hotel",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "bed-single": {
+      "tags": [
+        "sleep",
+        "hotel",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "beer": {
+      "tags": [
+        "alcohol",
+        "bar",
+        "beverage",
+        "brewery",
+        "drink"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "bell": {
+      "tags": [
+        "alarm",
+        "notification",
+        "sound",
+        "reminder"
+      ],
+      "categories": [
+        "account",
+        "notifications"
+      ]
+    },
+    "bell-minus": {
+      "tags": [
+        "alarm",
+        "notification",
+        "silent",
+        "reminder",
+        "delete",
+        "remove",
+        "erase"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "bell-off": {
+      "tags": [
+        "alarm",
+        "notification",
+        "silent",
+        "reminder"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "bell-plus": {
+      "tags": [
+        "notification",
+        "silent",
+        "reminder",
+        "add",
+        "create",
+        "new"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "bell-ring": {
+      "tags": [
+        "alarm",
+        "notification",
+        "sound",
+        "reminder"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "bike": {
+      "tags": [
+        "bicycle",
+        "transport",
+        "trip"
+      ],
+      "categories": [
+        "transportation"
+      ]
+    },
+    "binary": {
+      "tags": [
+        "code",
+        "digits",
+        "computer",
+        "zero",
+        "one"
+      ],
+      "categories": [
+        "text",
+        "coding"
+      ]
+    },
+    "bitcoin": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "brands",
+        "currency",
+        "coding",
+        "money"
+      ]
+    },
+    "bluetooth": {
+      "tags": [
+        "wireless"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "bluetooth-connected": {
+      "tags": [
+        "paired"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "bluetooth-off": {
+      "tags": [
+        "lost"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "bluetooth-searching": {
+      "tags": [
+        "pairing"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "bold": {
+      "tags": [
+        "text",
+        "strong",
+        "format"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "bomb": {
+      "tags": [
+        "fatal",
+        "error",
+        "crash",
+        "blockbuster",
+        "mine",
+        "explosion",
+        "explode",
+        "explosive"
+      ],
+      "categories": []
+    },
+    "bone": {
+      "tags": [
+        "medical",
+        "health",
+        "death",
+        "pet",
+        "gaming"
+      ],
+      "categories": [
+        "medical",
+        "animals"
+      ]
+    },
+    "book": {
+      "tags": [
+        "read",
+        "dictionary",
+        "booklet",
+        "magazine",
+        "library"
+      ],
+      "categories": [
+        "gaming",
+        "development"
+      ]
+    },
+    "book-open": {
+      "tags": [
+        "read",
+        "library"
+      ],
+      "categories": [
+        "gaming",
+        "development"
+      ]
+    },
+    "book-open-check": {
+      "tags": [
+        "read",
+        "library",
+        "plain language"
+      ],
+      "categories": [
+        "gaming",
+        "development"
+      ]
+    },
+    "bookmark": {
+      "tags": [
+        "read",
+        "clip",
+        "marker",
+        "tag"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "bookmark-minus": {
+      "tags": [
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "bookmark-plus": {
+      "tags": [
+        "add"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "bot": {
+      "tags": [
+        "robot",
+        "ai"
+      ],
+      "categories": [
+        "coding",
+        "development"
+      ]
+    },
+    "box": {
+      "tags": [
+        "cube",
+        "package"
+      ],
+      "categories": [
+        "shapes",
+        "gaming",
+        "coding",
+        "development"
+      ]
+    },
+    "box-select": {
+      "tags": [
+        "selection",
+        "square",
+        "rectangular",
+        "marquee",
+        "tool"
+      ],
+      "categories": [
+        "text",
+        "design"
+      ]
+    },
+    "boxes": {
+      "tags": [
+        "cubes",
+        "packages",
+        "parts",
+        "group",
+        "units",
+        "collection",
+        "cluster"
+      ],
+      "categories": [
+        "shapes",
+        "gaming",
+        "coding",
+        "development"
+      ]
+    },
+    "briefcase": {
+      "tags": [
+        "work",
+        "bag",
+        "baggage",
+        "folder"
+      ],
+      "categories": [
+        "transportation"
+      ]
+    },
+    "brush": {
+      "tags": [
+        "draw",
+        "paint",
+        "color"
+      ],
+      "categories": [
+        "text",
+        "design",
+        "tools"
+      ]
+    },
+    "bug": {
+      "tags": [
+        "issue",
+        "report",
+        "insect"
+      ],
+      "categories": [
+        "coding",
+        "development"
+      ]
+    },
+    "building": {
+      "tags": [
+        "organisation",
+        "organization"
+      ],
+      "categories": [
+        "account",
+        "buildings"
+      ]
+    },
+    "building-2": {
+      "tags": [
+        "business",
+        "company",
+        "enterprise",
+        "skyscraper",
+        "organisation",
+        "organization"
+      ],
+      "categories": [
+        "account",
+        "buildings"
+      ]
+    },
+    "bus": {
+      "tags": [
+        "bus",
+        "vehicle",
+        "transport",
+        "trip"
+      ],
+      "categories": [
+        "transportation"
+      ]
+    },
+    "cake": {
+      "tags": [
+        "birthday",
+        "birthdate",
+        "celebration",
+        "party"
+      ],
+      "categories": [
+        "food-beverage",
+        "account"
+      ]
+    },
+    "calculator": {
+      "tags": [
+        "count",
+        "calculating machine"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "calendar": {
+      "tags": [
+        "date",
+        "birthdate",
+        "birthday",
+        "time",
+        "event"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-check": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "confirm",
+        "subscribe"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-check-2": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "confirm",
+        "subscribe"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-clock": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "clock"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-days": {
+      "tags": [
+        "date",
+        "time",
+        "event"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-heart": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "heart",
+        "favourite",
+        "subscribe"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-minus": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-off": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-plus": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "add",
+        "subscribe",
+        "create",
+        "new"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-range": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "range",
+        "period"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-search": {
+      "tags": [
+        "date",
+        "time",
+        "search",
+        "events"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-x": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "remove",
+        "busy"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "calendar-x-2": {
+      "tags": [
+        "date",
+        "time",
+        "event",
+        "remove"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "camera": {
+      "tags": [
+        "photo",
+        "webcam",
+        "video"
+      ],
+      "categories": [
+        "photography",
+        "devices",
+        "communication"
+      ]
+    },
+    "camera-off": {
+      "tags": [
+        "photo",
+        "webcam",
+        "video"
+      ],
+      "categories": [
+        "photography",
+        "devices",
+        "communication"
+      ]
+    },
+    "candy": {
+      "tags": [
+        "sugar",
+        "food",
+        "sweet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "candy-off": {
+      "tags": [
+        "sugar free",
+        "food",
+        "sweet",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "car": {
+      "tags": [
+        "vehicle",
+        "transport",
+        "trip"
+      ],
+      "categories": [
+        "transportation"
+      ]
+    },
+    "carrot": {
+      "tags": [
+        "vegetable",
+        "food",
+        "eat"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "cast": {
+      "tags": [
+        "chromecast",
+        "airplay"
+      ],
+      "categories": [
+        "devices",
+        "connectivity"
+      ]
+    },
+    "cat": {
+      "tags": [
+        "animal",
+        "pet",
+        "kitten",
+        "feline"
+      ],
+      "categories": [
+        "animals"
+      ]
+    },
+    "check": {
+      "tags": [
+        "done"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "check-check": {
+      "tags": [
+        "done",
+        "received",
+        "double"
+      ],
+      "categories": [
+        "notifications"
+      ]
+    },
+    "check-circle": {
+      "tags": [
+        "done"
+      ],
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
+    },
+    "check-circle-2": {
+      "tags": [
+        "done"
+      ],
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
+    },
+    "check-square": {
+      "tags": [
+        "done"
+      ],
+      "categories": [
+        "notifications",
+        "shapes"
+      ]
+    },
+    "chef-hat": {
+      "tags": [
+        "cooking",
+        "food",
+        "kitchen",
+        "restaurant"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "cherry": {
+      "tags": [
+        "fruit",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "chevron-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevron-first": {
+      "tags": [
+        "arrow",
+        "previous",
+        "music"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevron-last": {
+      "tags": [
+        "arrow",
+        "skip",
+        "next",
+        "music"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevron-left": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevron-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevron-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-down-up": {
+      "tags": [
+        "arrow",
+        "collapse",
+        "fold",
+        "vertical"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-left": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-left-right": {
+      "tags": [
+        "arrow",
+        "expand",
+        "horizontal",
+        "unfold",
+        "horizonal"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-right-left": {
+      "tags": [
+        "arrow",
+        "collapse",
+        "fold",
+        "horizontal",
+        "horizonal"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chevrons-up-down": {
+      "tags": [
+        "arrow",
+        "expand",
+        "unfold",
+        "vertical"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "chrome": {
+      "tags": [
+        "browser",
+        "logo"
+      ],
+      "categories": [
+        "brands"
+      ]
+    },
+    "cigarette": {
+      "tags": [
+        "smoking"
+      ],
+      "categories": [
+        "travel",
+        "transportation",
+        "medical"
+      ]
+    },
+    "cigarette-off": {
+      "tags": [
+        "smoking",
+        "no-smoking"
+      ],
+      "categories": [
+        "travel",
+        "transportation",
+        "medical"
+      ]
+    },
+    "circle": {
+      "tags": [
+        "off",
+        "zero",
+        "record",
+        "shape"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "circle-dot": {
+      "tags": [
+        "pending",
+        "dot",
+        "progress",
+        "issue"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "circle-ellipsis": {
+      "tags": [
+        "pending",
+        "ellipsis",
+        "progress"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "circle-slashed": {
+      "tags": [
+        "diameter",
+        "zero",
+        "Ø",
+        "null",
+        "nothing",
+        "maths"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "citrus": {
+      "tags": [
+        "lemon",
+        "orange",
+        "grapefruit",
+        "fruit"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "clapperboard": {
+      "tags": [
+        "movie",
+        "film",
+        "video",
+        "camera",
+        "tv",
+        "television"
+      ],
+      "categories": [
+        "multimedia"
+      ]
+    },
+    "clipboard": {
+      "tags": [
+        "copy",
+        "paste"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clipboard-check": {
+      "tags": [
+        "copied",
+        "pasted"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clipboard-copy": {
+      "tags": [
+        "copy",
+        "paste"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "clipboard-edit": {
+      "tags": [
+        "edit",
+        "paste",
+        "signature"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clipboard-list": {
+      "tags": [
+        "copy",
+        "paste",
+        "tasks"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clipboard-signature": {
+      "tags": [
+        "paste",
+        "signature"
+      ],
+      "categories": [
+        "text",
+        "account"
+      ]
+    },
+    "clipboard-type": {
+      "tags": [
+        "paste",
+        "format",
+        "text"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clipboard-x": {
+      "tags": [
+        "copy",
+        "paste",
+        "discard",
+        "remove"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "clock": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-1": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-10": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-11": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-12": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm",
+        "noon",
+        "midnight"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-2": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-3": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-4": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-5": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-6": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-7": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-8": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "clock-9": {
+      "tags": [
+        "time",
+        "watch",
+        "alarm"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "cloud": {
+      "tags": [
+        "weather"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-cog": {
+      "tags": [
+        "computing",
+        "ai",
+        "cluster",
+        "network"
+      ],
+      "categories": [
+        "coding",
+        "development"
+      ]
+    },
+    "cloud-drizzle": {
+      "tags": [
+        "weather",
+        "shower"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-fog": {
+      "tags": [
+        "weather",
+        "mist"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-hail": {
+      "tags": [
+        "weather",
+        "rainfall"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-lightning": {
+      "tags": [
+        "weather",
+        "bolt"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-moon": {
+      "tags": [
+        "weather",
+        "night"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-moon-rain": {
+      "tags": [
+        "weather",
+        "partly",
+        "night",
+        "rainfall"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-off": {
+      "tags": [
+        "disconnect"
+      ],
+      "categories": [
+        "connectivity",
+        "weather"
+      ]
+    },
+    "cloud-rain": {
+      "tags": [
+        "weather",
+        "rainfall"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-rain-wind": {
+      "tags": [
+        "weather",
+        "rainfall"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-snow": {
+      "tags": [
+        "weather",
+        "blizzard"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-sun": {
+      "tags": [
+        "weather",
+        "partly"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloud-sun-rain": {
+      "tags": [
+        "weather",
+        "partly",
+        "rainfall"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "cloudy": {
+      "tags": [
+        "weather",
+        "clouds"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "clover": {
+      "tags": [
+        "leaf",
+        "luck",
+        "plant"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "code": {
+      "tags": [
+        "source",
+        "programming",
+        "html",
+        "xml"
+      ],
+      "categories": [
+        "text",
+        "coding"
+      ]
+    },
+    "code-2": {
+      "tags": [
+        "source",
+        "programming",
+        "html",
+        "xml"
+      ],
+      "categories": [
+        "text",
+        "coding"
+      ]
+    },
+    "codepen": {
+      "tags": [
+        "logo"
+      ],
+      "categories": [
+        "brands",
+        "development",
+        "coding"
+      ]
+    },
+    "codesandbox": {
+      "tags": [
+        "logo"
+      ],
+      "categories": [
+        "brands",
+        "development",
+        "coding"
+      ]
+    },
+    "coffee": {
+      "tags": [
+        "drink",
+        "cup",
+        "mug",
+        "tea",
+        "cafe",
+        "hot",
+        "beverage"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "cog": {
+      "tags": [
+        "computing",
+        "settings",
+        "cog",
+        "edit",
+        "gear",
+        "preferences"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "coins": {
+      "tags": [
+        "money",
+        "cash",
+        "finance",
+        "gamble"
+      ],
+      "categories": [
+        "money",
+        "gaming"
+      ]
+    },
+    "columns": {
+      "tags": [
+        "layout"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "command": {
+      "tags": [
+        "keyboard",
+        "cmd",
+        "terminal",
+        "prompt"
+      ],
+      "categories": [
+        "coding"
+      ]
+    },
+    "compass": {
+      "tags": [
+        "navigation",
+        "safari",
+        "travel",
+        "direction"
+      ],
+      "categories": [
+        "transportation",
+        "navigation",
+        "maps",
+        "photography",
+        "gaming"
+      ]
+    },
+    "component": {
+      "tags": [
+        "design",
+        "element",
+        "group",
+        "module",
+        "part",
+        "symbol"
+      ],
+      "categories": [
+        "design",
+        "coding",
+        "development"
+      ]
+    },
+    "concierge-bell": {
+      "tags": [
+        "reception",
+        "bell",
+        "porter"
+      ],
+      "categories": [
+        "travel"
+      ]
+    },
+    "contact": {
+      "tags": [
+        "person",
+        "user"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "contrast": {
+      "tags": [
+        "display",
+        "accessibility"
+      ],
+      "categories": [
+        "photography",
+        "accessibility",
+        "design"
+      ]
+    },
+    "cookie": {
+      "tags": [
+        "biscuit",
+        "privacy",
+        "legal",
+        "food"
+      ],
+      "categories": [
+        "account",
+        "food-beverage"
+      ]
+    },
+    "copy": {
+      "tags": [
+        "clone",
+        "duplicate"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "copyleft": {
+      "tags": [
+        "licence"
+      ],
+      "categories": []
+    },
+    "copyright": {
+      "tags": [
+        "licence"
+      ],
+      "categories": []
+    },
+    "corner-down-left": {
+      "tags": [
+        "arrow",
+        "return"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-down-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-left-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-left-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-right-down": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-right-up": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-up-left": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "corner-up-right": {
+      "tags": [
+        "arrow"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "cpu": {
+      "tags": [
+        "processor",
+        "technology",
+        "computer",
+        "chip"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "credit-card": {
+      "tags": [
+        "bank",
+        "purchase",
+        "payment",
+        "cc"
+      ],
+      "categories": [
+        "account",
+        "money"
+      ]
+    },
+    "croissant": {
+      "tags": [
+        "bakery",
+        "cooking",
+        "food",
+        "pastry"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "crop": {
+      "tags": [
+        "photo",
+        "image"
+      ],
+      "categories": [
+        "photography",
+        "design"
+      ]
+    },
+    "cross": {
+      "tags": [
+        "healthcare",
+        "first aid"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "crosshair": {
+      "tags": [
+        "aim",
+        "target"
+      ],
+      "categories": [
+        "photography"
+      ]
+    },
+    "crown": {
+      "tags": [
+        "king",
+        "winner",
+        "favourite"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "cup-soda": {
+      "tags": [
+        "beverage",
+        "cup",
+        "drink",
+        "soda",
+        "straw",
+        "water"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "curly-braces": {
+      "tags": [
+        "json",
+        "code",
+        "token"
+      ],
+      "categories": [
+        "coding",
+        "development",
+        "files"
+      ]
+    },
+    "currency": {
+      "tags": [
+        "finance",
+        "money"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "database": {
+      "tags": [
+        "storage",
+        "memory"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "delete": {
+      "tags": [
+        "backspace",
+        "remove"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "diamond": {
+      "tags": [
+        "square",
+        "rectangle",
+        "oblique",
+        "rhombus",
+        "shape"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "dice-1": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "1",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dice-2": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "2",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dice-3": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "3",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dice-4": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "4",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dice-5": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "5",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dice-6": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "6",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "dices": {
+      "tags": [
+        "dice",
+        "random",
+        "tabletop",
+        "board",
+        "game"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "diff": {
+      "tags": [
+        "patch",
+        "difference",
+        "plus",
+        "minus",
+        "plus-minus",
+        "maths"
+      ],
+      "categories": [
+        "coding",
+        "development",
+        "files"
+      ]
+    },
+    "disc": {
+      "tags": [
+        "album",
+        "cd",
+        "dvd",
+        "music"
+      ],
+      "categories": [
+        "devices",
+        "multimedia"
+      ]
+    },
+    "divide": {
+      "tags": [
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "divide-circle": {
+      "tags": [
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "divide-square": {
+      "tags": [
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "dna": {
+      "tags": [
+        "gene",
+        "gmo",
+        "helix",
+        "heredity",
+        "chromosome",
+        "nucleic acid"
+      ],
+      "categories": [
+        "medical"
+      ]
+    },
+    "dna-off": {
+      "tags": [
+        "gene",
+        "gmo free",
+        "helix",
+        "heredity",
+        "chromosome",
+        "nucleic acid"
+      ],
+      "categories": [
+        "medical",
+        "food-beverage"
+      ]
+    },
+    "dog": {
+      "tags": [
+        "animal",
+        "pet",
+        "puppy",
+        "hound",
+        "canine"
+      ],
+      "categories": [
+        "animals"
+      ]
+    },
+    "dollar-sign": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "download": {
+      "tags": [
+        "import",
+        "export"
+      ],
+      "categories": [
+        "arrows",
+        "files"
+      ]
+    },
+    "download-cloud": {
+      "tags": [
+        "import"
+      ],
+      "categories": [
+        "arrows",
+        "files"
+      ]
+    },
+    "dribbble": {
+      "tags": [
+        "design",
+        "social"
+      ],
+      "categories": [
+        "brands",
+        "social",
+        "design"
+      ]
+    },
+    "droplet": {
+      "tags": [
+        "water",
+        "weather"
+      ],
+      "categories": [
+        "weather",
+        "gaming"
+      ]
+    },
+    "droplets": {
+      "tags": [
+        "water",
+        "humidity",
+        "weather"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "drumstick": {
+      "tags": [
+        "food",
+        "chicken",
+        "meat"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "dumbbell": {
+      "tags": [
+        "barbell",
+        "weight",
+        "workout",
+        "gym"
+      ],
+      "categories": [
+        "maps",
+        "sports"
+      ]
+    },
+    "ear": {
+      "tags": [
+        "hearing",
+        "noise",
+        "audio",
+        "accessibility"
+      ],
+      "categories": [
+        "medical",
+        "accessibility"
+      ]
+    },
+    "ear-off": {
+      "tags": [
+        "hearing",
+        "hard of hearing",
+        "hearing loss",
+        "deafness",
+        "noise",
+        "silence",
+        "audio",
+        "accessibility"
+      ],
+      "categories": [
+        "medical",
+        "accessibility"
+      ]
+    },
+    "edit": {
+      "tags": [
+        "pencil",
+        "change"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "edit-2": {
+      "tags": [
+        "pencil",
+        "change"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "edit-3": {
+      "tags": [
+        "pencil",
+        "change"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "egg": {
+      "tags": [
+        "food",
+        "bird",
+        "chick"
+      ],
+      "categories": [
+        "food-beverage",
+        "animals"
+      ]
+    },
+    "egg-fried": {
+      "tags": [
+        "food",
+        "breakfast"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "egg-off": {
+      "tags": [
+        "egg free",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "equal": {
+      "tags": [
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "equal-not": {
+      "tags": [
+        "calculate",
+        "off",
+        "maths"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "eraser": {
+      "tags": [
+        "pencil",
+        "drawing",
+        "undo",
+        "delete",
+        "clear"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "euro": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "expand": {
+      "tags": [
+        "scale",
+        "fullscreen"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "external-link": {
+      "tags": [
+        "outbound"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "eye": {
+      "tags": [
+        "view",
+        "watch"
+      ],
+      "categories": [
+        "accessibility",
+        "photography"
+      ]
+    },
+    "eye-off": {
+      "tags": [
+        "view",
+        "watch",
+        "hide",
+        "hidden"
+      ],
+      "categories": [
+        "accessibility",
+        "photography"
+      ]
+    },
+    "facebook": {
+      "tags": [
+        "logo",
+        "social"
+      ],
+      "categories": [
+        "account",
+        "social",
+        "brands"
+      ]
+    },
+    "factory": {
+      "tags": [
+        "building",
+        "business",
+        "energy",
+        "industry",
+        "manufacture",
+        "sector"
+      ],
+      "categories": [
+        "buildings"
+      ]
+    },
+    "fan": {
+      "tags": [
+        "air",
+        "cooler",
+        "ventilation",
+        "ventilator",
+        "blower"
+      ],
+      "categories": [
+        "home"
+      ]
+    },
+    "fast-forward": {
+      "tags": [
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
+    },
+    "feather": {
+      "tags": [
+        "logo"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "figma": {
+      "tags": [
+        "logo",
+        "design",
+        "tool"
+      ],
+      "categories": [
+        "brands",
+        "design"
+      ]
+    },
+    "file": {
+      "tags": [
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-archive": {
+      "tags": [
+        "zip",
+        "package",
+        "archive"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-audio": {
+      "tags": [
+        "music",
+        "audio",
+        "sound",
+        "headphones"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-audio-2": {
+      "tags": [
+        "music",
+        "audio",
+        "sound",
+        "headphones"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-axis-3d": {
+      "tags": [
+        "model",
+        "3d",
+        "axis",
+        "coordinates"
+      ],
+      "categories": [
+        "design",
+        "files"
+      ]
+    },
+    "file-badge": {
+      "tags": [
+        "award",
+        "achievement",
+        "badge"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-badge-2": {
+      "tags": [
+        "award",
+        "achievement",
+        "badge"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-bar-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-bar-chart-2": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-box": {
+      "tags": [
+        "box",
+        "package",
+        "model"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-check": {
+      "tags": [
+        "done",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-check-2": {
+      "tags": [
+        "done",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-clock": {
+      "tags": [
+        "history",
+        "log",
+        "clock"
+      ],
+      "categories": [
+        "files",
+        "time"
+      ]
+    },
+    "file-code": {
+      "tags": [
+        "script",
+        "document"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-cog": {
+      "tags": [
+        "executable",
+        "settings",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-cog-2": {
+      "tags": [
+        "executable",
+        "settings",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-diff": {
+      "tags": [
+        "diff",
+        "patch"
+      ],
+      "categories": [
+        "files",
+        "coding",
+        "development"
+      ]
+    },
+    "file-digit": {
+      "tags": [
+        "number",
+        "document"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-down": {
+      "tags": [
+        "download",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "file-edit": {
+      "tags": [
+        "edit",
+        "signature"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-heart": {
+      "tags": [
+        "heart",
+        "favourite",
+        "bookmark",
+        "quick link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-image": {
+      "tags": [
+        "image",
+        "graphics",
+        "photo",
+        "picture"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-input": {
+      "tags": [
+        "document"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "file-json": {
+      "tags": [
+        "code",
+        "json",
+        "curly braces"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-json-2": {
+      "tags": [
+        "code",
+        "json",
+        "curly braces"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-key": {
+      "tags": [
+        "key",
+        "private",
+        "public",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-key-2": {
+      "tags": [
+        "key",
+        "private",
+        "public",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-line-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-lock": {
+      "tags": [
+        "lock",
+        "password",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-lock-2": {
+      "tags": [
+        "lock",
+        "password",
+        "security"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "file-minus": {
+      "tags": [
+        "delete",
+        "remove",
+        "erase",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-minus-2": {
+      "tags": [
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-output": {
+      "tags": [
+        "document"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "file-pie-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph",
+        "presentation"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-plus": {
+      "tags": [
+        "add",
+        "create",
+        "new",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-plus-2": {
+      "tags": [
+        "add",
+        "create",
+        "new",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-question": {
+      "tags": [
+        "readme",
+        "help",
+        "question"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-scan": {
+      "tags": [
+        "scan",
+        "code",
+        "qr-code"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-search": {
+      "tags": [
+        "lost",
+        "document",
+        "find",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-search-2": {
+      "tags": [
+        "lost",
+        "document",
+        "find",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-signature": {
+      "tags": [
+        "edit",
+        "signature"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-spreadsheet": {
+      "tags": [
+        "spreadsheet",
+        "sheet",
+        "table"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-symlink": {
+      "tags": [
+        "symlink",
+        "symbolic",
+        "link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-terminal": {
+      "tags": [
+        "terminal",
+        "bash",
+        "script",
+        "executable"
+      ],
+      "categories": [
+        "files",
+        "coding"
+      ]
+    },
+    "file-text": {
+      "tags": [
+        "data",
+        "txt",
+        "pdf",
+        "document"
+      ],
+      "categories": [
+        "files",
+        "text"
+      ]
+    },
+    "file-type": {
+      "tags": [
+        "font",
+        "text",
+        "typography",
+        "type"
+      ],
+      "categories": [
+        "files",
+        "text"
+      ]
+    },
+    "file-type-2": {
+      "tags": [
+        "font",
+        "text",
+        "typography",
+        "type"
+      ],
+      "categories": [
+        "files",
+        "text"
+      ]
+    },
+    "file-up": {
+      "tags": [
+        "upload",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "file-video": {
+      "tags": [
+        "movie",
+        "video",
+        "film"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-video-2": {
+      "tags": [
+        "movie",
+        "video",
+        "film"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-volume": {
+      "tags": [
+        "audio",
+        "music",
+        "volume"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-volume-2": {
+      "tags": [
+        "audio",
+        "music",
+        "volume"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-warning": {
+      "tags": [
+        "hidden",
+        "warning",
+        "alert",
+        "danger",
+        "protected"
+      ],
+      "categories": [
+        "files",
+        "notifications"
+      ]
+    },
+    "file-x": {
+      "tags": [
+        "lost",
+        "delete",
+        "remove",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "file-x-2": {
+      "tags": [
+        "lost",
+        "delete",
+        "remove",
+        "document"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "files": {
+      "tags": [
+        "multiple",
+        "copy",
+        "documents"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "film": {
+      "tags": [
+        "movie",
+        "video"
+      ],
+      "categories": [
+        "photography",
+        "multimedia"
+      ]
+    },
+    "filter": {
+      "tags": [
+        "funnel",
+        "hopper"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "fingerprint": {
+      "tags": [
+        "2fa",
+        "authentication",
+        "biometric",
+        "identity",
+        "security"
+      ],
+      "categories": [
+        "account",
+        "security",
+        "medical",
+        "devices"
+      ]
+    },
+    "flag": {
+      "tags": [
+        "report"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "flag-off": {
+      "tags": [
+        "unflag"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "flag-triangle-left": {
+      "tags": [
+        "report",
+        "timeline"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "flag-triangle-right": {
+      "tags": [
+        "report",
+        "timeline"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "flame": {
+      "tags": [
+        "fire",
+        "lit"
+      ],
+      "categories": [
+        "weather",
+        "social",
+        "gaming"
+      ]
+    },
+    "flashlight": {
+      "tags": [
+        "torch"
+      ],
+      "categories": [
+        "photography",
+        "devices"
+      ]
+    },
+    "flashlight-off": {
+      "tags": [
+        "torch"
+      ],
+      "categories": [
+        "photography",
+        "devices"
+      ]
+    },
+    "flask-conical": {
+      "tags": [
+        "beaker",
+        "erlenmeyer"
+      ],
+      "categories": [
+        "science",
+        "gaming"
+      ]
+    },
+    "flask-conical-off": {
+      "tags": [
+        "beaker",
+        "erlenmeyer",
+        "non toxic"
+      ],
+      "categories": [
+        "science",
+        "gaming"
+      ]
+    },
+    "flask-round": {
+      "tags": [
+        "beaker"
+      ],
+      "categories": [
+        "science",
+        "gaming"
+      ]
+    },
+    "flip-horizontal": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flip-horizontal-2": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flip-vertical": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flip-vertical-2": {
+      "tags": [
+        "reflect",
+        "mirror",
+        "alignment"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "flower": {
+      "tags": [
+        "sustainability",
+        "nature",
+        "plant",
+        "spring"
+      ],
+      "categories": [
+        "nature",
+        "gaming",
+        "sustainability"
+      ]
+    },
+    "flower-2": {
+      "tags": [
+        "sustainability",
+        "nature",
+        "plant"
+      ],
+      "categories": [
+        "nature",
+        "sustainability",
+        "seasons"
+      ]
+    },
+    "focus": {
+      "tags": [
+        "camera",
+        "lens",
+        "photo"
+      ],
+      "categories": [
+        "photography"
+      ]
+    },
+    "folder": {
+      "tags": [
+        "directory"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-archive": {
+      "tags": [
+        "archive",
+        "zip",
+        "package"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-check": {
+      "tags": [
+        "done",
+        "directory",
+        "check"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-clock": {
+      "tags": [
+        "history",
+        "directory",
+        "clock"
+      ],
+      "categories": [
+        "files",
+        "time"
+      ]
+    },
+    "folder-closed": {
+      "tags": [
+        "directory",
+        "closed"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-cog": {
+      "tags": [
+        "directory",
+        "settings",
+        "control",
+        "preferences",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-cog-2": {
+      "tags": [
+        "directory",
+        "settings",
+        "control",
+        "preferences",
+        "cog",
+        "edit",
+        "gear"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-down": {
+      "tags": [
+        "directory",
+        "download",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-edit": {
+      "tags": [
+        "directory",
+        "edit",
+        "rename"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-heart": {
+      "tags": [
+        "directory",
+        "heart",
+        "favourite",
+        "bookmark",
+        "quick link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-input": {
+      "tags": [
+        "directory",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-key": {
+      "tags": [
+        "directory",
+        "key",
+        "private",
+        "security",
+        "protected"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "folder-lock": {
+      "tags": [
+        "directory",
+        "lock",
+        "private",
+        "security",
+        "protected"
+      ],
+      "categories": [
+        "files",
+        "security"
+      ]
+    },
+    "folder-minus": {
+      "tags": [
+        "directory",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-open": {
+      "tags": [
+        "directory"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-output": {
+      "tags": [
+        "directory",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-plus": {
+      "tags": [
+        "directory",
+        "add",
+        "create",
+        "new"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-search": {
+      "tags": [
+        "directory",
+        "search",
+        "find",
+        "lost",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-search-2": {
+      "tags": [
+        "directory",
+        "search",
+        "find",
+        "lost",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-symlink": {
+      "tags": [
+        "directory",
+        "symlink",
+        "symbolic",
+        "link"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-tree": {
+      "tags": [
+        "directory",
+        "tree",
+        "browser"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folder-up": {
+      "tags": [
+        "directory",
+        "upload",
+        "import",
+        "export"
+      ],
+      "categories": [
+        "files",
+        "arrows"
+      ]
+    },
+    "folder-x": {
+      "tags": [
+        "directory",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "folders": {
+      "tags": [
+        "multiple",
+        "copy",
+        "directories"
+      ],
+      "categories": [
+        "files"
+      ]
+    },
+    "form-input": {
+      "tags": [
+        "2fa",
+        "authenticate",
+        "login",
+        "field",
+        "text"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "forward": {
+      "tags": [
+        "send",
+        "share",
+        "email"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "frame": {
+      "tags": [
+        "logo",
+        "design",
+        "tool"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "framer": {
+      "tags": [
+        "logo",
+        "design",
+        "tool"
+      ],
+      "categories": [
+        "brands",
+        "design"
+      ]
+    },
+    "frown": {
+      "tags": [
+        "emoji",
+        "face",
+        "bad",
+        "sad",
+        "emotion"
+      ],
+      "categories": [
+        "emoji",
+        "account"
+      ]
+    },
+    "fuel": {
+      "tags": [
+        "filling-station",
+        "gas",
+        "petrol",
+        "tank"
+      ],
+      "categories": [
+        "transportation",
+        "maps"
+      ]
+    },
+    "function-square": {
+      "tags": [
+        "programming",
+        "code",
+        "automation",
+        "maths"
+      ],
+      "categories": [
+        "development",
+        "coding",
+        "shapes",
+        "maths"
+      ]
+    },
+    "gamepad": {
+      "tags": [
+        "console"
+      ],
+      "categories": [
+        "gaming",
+        "devices"
+      ]
+    },
+    "gamepad-2": {
+      "tags": [
+        "console"
+      ],
+      "categories": [
+        "gaming",
+        "devices"
+      ]
+    },
+    "gauge": {
+      "tags": [
+        "dashboard"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "gavel": {
+      "tags": [
+        "hammer",
+        "mallet"
+      ],
+      "categories": [
+        "maps",
+        "tools"
+      ]
+    },
+    "gem": {
+      "tags": [
+        "diamond",
+        "price",
+        "special",
+        "present"
+      ],
+      "categories": [
+        "gaming",
+        "money"
+      ]
+    },
+    "ghost": {
+      "tags": [
+        "pac-man",
+        "spooky"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "gift": {
+      "tags": [
+        "present",
+        "box",
+        "birthday",
+        "party"
+      ],
+      "categories": [
+        "gaming",
+        "account"
+      ]
+    },
+    "git-branch": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-branch-plus": {
+      "tags": [
+        "add",
+        "create"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-commit": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-compare": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-fork": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-merge": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-pull-request": {
+      "tags": [
+        "code",
+        "version control"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-pull-request-closed": {
+      "tags": [
+        "code",
+        "version control",
+        "rejected"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "git-pull-request-draft": {
+      "tags": [
+        "code",
+        "version control",
+        "draft"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "github": {
+      "tags": [
+        "logo",
+        "version control"
+      ],
+      "categories": [
+        "brands",
+        "development",
+        "coding"
+      ]
+    },
+    "gitlab": {
+      "tags": [
+        "logo",
+        "version control"
+      ],
+      "categories": [
+        "brands",
+        "development",
+        "coding"
+      ]
+    },
+    "glass-water": {
+      "tags": [
+        "beverage",
+        "drink",
+        "glass",
+        "water"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "glasses": {
+      "tags": [
+        "glasses",
+        "spectacles"
+      ],
+      "categories": [
+        "accessibility"
+      ]
+    },
+    "globe": {
+      "tags": [
+        "world",
+        "browser",
+        "language",
+        "translate"
+      ],
+      "categories": [
+        "maps",
+        "navigation"
+      ]
+    },
+    "globe-2": {
+      "tags": [
+        "world",
+        "browser",
+        "language",
+        "translate"
+      ],
+      "categories": [
+        "maps",
+        "navigation"
+      ]
+    },
+    "grab": {
+      "tags": [
+        "hand"
+      ],
+      "categories": [
+        "cursors",
+        "design",
+        "layout"
+      ]
+    },
+    "graduation-cap": {
+      "tags": [
+        "school",
+        "university",
+        "learn",
+        "study"
+      ],
+      "categories": [
+        "buildings",
+        "maps"
+      ]
+    },
+    "grape": {
+      "tags": [
+        "fruit",
+        "wine",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "grid": {
+      "tags": [
+        "table"
+      ],
+      "categories": [
+        "text",
+        "layout",
+        "design"
+      ]
+    },
+    "grip-horizontal": {
+      "tags": [
+        "grab",
+        "dots",
+        "handle"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "grip-vertical": {
+      "tags": [
+        "grab",
+        "dots",
+        "handle",
+        "move",
+        "drag"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "hammer": {
+      "tags": [
+        "mallet"
+      ],
+      "categories": [
+        "tools"
+      ]
+    },
+    "hand": {
+      "tags": [
+        "wave",
+        "move",
+        "mouse",
+        "grab"
+      ],
+      "categories": [
+        "cursors",
+        "accessibility"
+      ]
+    },
+    "hand-metal": {
+      "tags": [
+        "rock"
+      ],
+      "categories": [
+        "emoji",
+        "multimedia"
+      ]
+    },
+    "hard-drive": {
+      "tags": [
+        "computer",
+        "server",
+        "memory",
+        "data",
+        "ssd",
+        "disk",
+        "hard disk"
+      ],
+      "categories": [
+        "development",
+        "devices"
+      ]
+    },
+    "hard-hat": {
+      "tags": [
+        "helmet",
+        "construction",
+        "safety",
+        "savety"
+      ],
+      "categories": [
+        "tools"
+      ]
+    },
+    "hash": {
+      "tags": [
+        "hashtag",
+        "number",
+        "pound"
+      ],
+      "categories": [
+        "text",
+        "social"
+      ]
+    },
+    "haze": {
+      "tags": [
+        "mist",
+        "fog"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "heading": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-1": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-2": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-3": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-4": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-5": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "heading-6": {
+      "tags": [],
+      "categories": [
+        "text"
+      ]
+    },
+    "headphones": {
+      "tags": [
+        "music",
+        "audio",
+        "sound"
+      ],
+      "categories": [
+        "multimedia",
+        "connectivity",
+        "devices",
+        "files",
+        "gaming"
+      ]
+    },
+    "heart": {
+      "tags": [
+        "like",
+        "love",
+        "emotion"
+      ],
+      "categories": [
+        "medical",
+        "social",
+        "multimedia",
+        "emoji",
+        "gaming"
+      ]
+    },
+    "heart-crack": {
+      "tags": [
+        "heartbreak",
+        "sadness",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "heart-handshake": {
+      "tags": [
+        "agreement",
+        "charity",
+        "help",
+        "deal",
+        "terms",
+        "emotion",
+        "together",
+        "handshake"
+      ],
+      "categories": [
+        "emoji",
+        "account",
+        "security"
+      ]
+    },
+    "heart-off": {
+      "tags": [
+        "unlike",
+        "dislike",
+        "hate",
+        "emotion"
+      ],
+      "categories": [
+        "social",
+        "multimedia"
+      ]
+    },
+    "heart-pulse": {
+      "tags": [
+        "heartbeat",
+        "pulse",
+        "health",
+        "medical",
+        "blood pressure",
+        "cardiac",
+        "systole",
+        "diastole"
+      ],
+      "categories": [
+        "medical"
+      ]
+    },
+    "help-circle": {
+      "tags": [
+        "question mark"
+      ],
+      "categories": [
+        "accessibility",
+        "text",
+        "shapes",
+        "notifications"
+      ]
+    },
+    "hexagon": {
+      "tags": [
+        "shape",
+        "node.js",
+        "logo"
+      ],
+      "categories": [
+        "shapes",
+        "brands",
+        "development"
+      ]
+    },
+    "highlighter": {
+      "tags": [
+        "mark",
+        "text"
+      ],
+      "categories": [
+        "text",
+        "design"
+      ]
+    },
+    "history": {
+      "tags": [
+        "time",
+        "redo",
+        "undo",
+        "rewind",
+        "timeline",
+        "version"
+      ],
+      "categories": [
+        "arrows",
+        "time"
+      ]
+    },
+    "home": {
+      "tags": [
+        "house",
+        "living"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "hop": {
+      "tags": [
+        "beer",
+        "brewery",
+        "drink"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "hop-off": {
+      "tags": [
+        "beer",
+        "brewery",
+        "drink",
+        "hop free",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "hourglass": {
+      "tags": [
+        "timer",
+        "time",
+        "sandglass"
+      ],
+      "categories": [
+        "time",
+        "gaming"
+      ]
+    },
+    "ice-cream": {
+      "tags": [
+        "gelato",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "image": {
+      "tags": [
+        "picture",
+        "photo"
+      ],
+      "categories": [
+        "photography",
+        "text",
+        "multimedia",
+        "files"
+      ]
+    },
+    "image-minus": {
+      "tags": [
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "photography",
+        "multimedia",
+        "files"
+      ]
+    },
+    "image-off": {
+      "tags": [
+        "picture",
+        "photo"
+      ],
+      "categories": [
+        "photography",
+        "multimedia",
+        "files"
+      ]
+    },
+    "image-plus": {
+      "tags": [
+        "add",
+        "create"
+      ],
+      "categories": [
+        "photography",
+        "multimedia",
+        "files"
+      ]
+    },
+    "import": {
+      "tags": [
+        "save"
+      ],
+      "categories": [
+        "arrows",
+        "files"
+      ]
+    },
+    "inbox": {
+      "tags": [
+        "email"
+      ],
+      "categories": [
+        "account",
+        "mail"
+      ]
+    },
+    "indent": {
+      "tags": [
+        "text",
+        "tab"
+      ],
+      "categories": [
+        "text",
+        "coding"
+      ]
+    },
+    "indian-rupee": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "infinity": {
+      "tags": [
+        "unlimited",
+        "forever",
+        "loop",
+        "maths"
+      ],
+      "categories": [
+        "multimedia"
+      ]
+    },
+    "info": {
+      "tags": [
+        "help"
+      ],
+      "categories": [
+        "accessibility",
+        "notifications"
+      ]
+    },
+    "inspect": {
+      "tags": [
+        "element",
+        "mouse",
+        "click",
+        "cursor",
+        "pointer",
+        "box"
+      ],
+      "categories": [
+        "arrows",
+        "cursors",
+        "coding"
+      ]
+    },
+    "instagram": {
+      "tags": [
+        "logo",
+        "camera",
+        "social"
+      ],
+      "categories": [
+        "brands",
+        "social",
+        "photography"
+      ]
+    },
+    "italic": {
+      "tags": [
+        "oblique",
+        "text",
+        "format"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "japanese-yen": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "joystick": {
+      "tags": [
+        "game",
+        "console",
+        "control stick"
+      ],
+      "categories": [
+        "gaming",
+        "devices"
+      ]
+    },
+    "key": {
+      "tags": [
+        "password",
+        "login",
+        "authentication",
+        "secure"
+      ],
+      "categories": [
+        "security",
+        "account"
+      ]
+    },
+    "keyboard": {
+      "tags": [
+        "layout",
+        "spell",
+        "settings",
+        "mouse"
+      ],
+      "categories": [
+        "text",
+        "devices",
+        "coding"
+      ]
+    },
+    "lamp": {
+      "tags": [
+        "lighting",
+        "household",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-ceiling": {
+      "tags": [
+        "lighting",
+        "household",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-desk": {
+      "tags": [
+        "lighting",
+        "household",
+        "office",
+        "desk",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-floor": {
+      "tags": [
+        "lighting",
+        "household",
+        "floor",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-wall-down": {
+      "tags": [
+        "lighting",
+        "household",
+        "wall",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "lamp-wall-up": {
+      "tags": [
+        "lighting",
+        "household",
+        "wall",
+        "home",
+        "furniture"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "landmark": {
+      "tags": [
+        "bank",
+        "building",
+        "capitol",
+        "finance",
+        "money"
+      ],
+      "categories": [
+        "money",
+        "maps",
+        "buildings"
+      ]
+    },
+    "languages": {
+      "tags": [
+        "translate"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "laptop": {
+      "tags": [
+        "computer"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "laptop-2": {
+      "tags": [
+        "computer"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "lasso": {
+      "tags": [
+        "select",
+        "cursor"
+      ],
+      "categories": [
+        "design",
+        "cursors"
+      ]
+    },
+    "lasso-select": {
+      "tags": [
+        "select",
+        "cursor"
+      ],
+      "categories": [
+        "arrows",
+        "design",
+        "cursors"
+      ]
+    },
+    "laugh": {
+      "tags": [
+        "emoji",
+        "face",
+        "happy",
+        "good",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "layers": {
+      "tags": [
+        "stack",
+        "pages"
+      ],
+      "categories": [
+        "design",
+        "layout"
+      ]
+    },
+    "layout": {
+      "tags": [
+        "window",
+        "webpage"
+      ],
+      "categories": [
+        "design",
+        "layout"
+      ]
+    },
+    "layout-dashboard": {
+      "tags": [
+        "masonry",
+        "brick"
+      ],
+      "categories": [
+        "design",
+        "layout"
+      ]
+    },
+    "layout-grid": {
+      "tags": [
+        "app",
+        "home",
+        "start"
+      ],
+      "categories": [
+        "design",
+        "layout"
+      ]
+    },
+    "layout-list": {
+      "tags": [
+        "image",
+        "photo",
+        "item"
+      ],
+      "categories": [
+        "design",
+        "layout",
+        "photography"
+      ]
+    },
+    "layout-template": {
+      "tags": [
+        "window",
+        "webpage",
+        "block",
+        "section"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "leaf": {
+      "tags": [
+        "sustainability",
+        "nature",
+        "energy",
+        "plant",
+        "autumn"
+      ],
+      "categories": [
+        "nature",
+        "sustainability",
+        "seasons"
+      ]
+    },
+    "library": {
+      "tags": [
+        "book",
+        "music",
+        "album"
+      ],
+      "categories": [
+        "photography",
+        "multimedia"
+      ]
+    },
+    "life-buoy": {
+      "tags": [
+        "help",
+        "rescue",
+        "ship"
+      ],
+      "categories": [
+        "accessibility",
+        "medical"
+      ]
+    },
+    "lightbulb": {
+      "tags": [
+        "idea",
+        "bright",
+        "lights"
+      ],
+      "categories": [
+        "photography"
+      ]
+    },
+    "lightbulb-off": {
+      "tags": [
+        "lights"
+      ],
+      "categories": [
+        "photography"
+      ]
+    },
+    "line-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "graph"
+      ],
+      "categories": [
+        "charts"
+      ]
+    },
+    "link": {
+      "tags": [
+        "chain",
+        "url"
+      ],
+      "categories": [
+        "text",
+        "account"
+      ]
+    },
+    "link-2": {
+      "tags": [
+        "chain",
+        "url"
+      ],
+      "categories": [
+        "text",
+        "account"
+      ]
+    },
+    "link-2-off": {
+      "tags": [
+        "unchain",
+        "chain"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "linkedin": {
+      "tags": [
+        "logo",
+        "social media",
+        "social"
+      ],
+      "categories": [
+        "account",
+        "social",
+        "brands"
+      ]
+    },
+    "list": {
+      "tags": [
+        "options"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "list-checks": {
+      "tags": [
+        "todo",
+        "done"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "list-end": {
+      "tags": [
+        "queue",
+        "bottom",
+        "end",
+        "playlist"
+      ],
+      "categories": [
+        "multimedia",
+        "text"
+      ]
+    },
+    "list-minus": {
+      "tags": [
+        "playlist",
+        "remove",
+        "song",
+        "subtract",
+        "delete",
+        "unqueue"
+      ],
+      "categories": [
+        "multimedia",
+        "text"
+      ]
+    },
+    "list-music": {
+      "tags": [
+        "playlist",
+        "queue",
+        "music",
+        "audio",
+        "playback"
+      ],
+      "categories": [
+        "multimedia"
+      ]
+    },
+    "list-ordered": {
+      "tags": [
+        "number",
+        "order",
+        "queue"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "list-plus": {
+      "tags": [
+        "playlist",
+        "add",
+        "song",
+        "track",
+        "new"
+      ],
+      "categories": [
+        "multimedia",
+        "text"
+      ]
+    },
+    "list-start": {
+      "tags": [
+        "queue",
+        "top",
+        "start",
+        "next",
+        "playlist"
+      ],
+      "categories": [
+        "multimedia",
+        "text"
+      ]
+    },
+    "list-video": {
+      "tags": [
+        "playlist",
+        "video",
+        "playback"
+      ],
+      "categories": [
+        "multimedia"
+      ]
+    },
+    "list-x": {
+      "tags": [
+        "playlist",
+        "subtract",
+        "remove",
+        "delete",
+        "unqueue"
+      ],
+      "categories": [
+        "multimedia",
+        "text"
+      ]
+    },
+    "loader": {
+      "tags": [
+        "load",
+        "wait"
+      ],
+      "categories": [
+        "multimedia",
+        "layout"
+      ]
+    },
+    "loader-2": {
+      "tags": [
+        "load"
+      ],
+      "categories": [
+        "multimedia",
+        "layout"
+      ]
+    },
+    "locate": {
+      "tags": [
+        "map",
+        "gps",
+        "location",
+        "cross"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "locate-fixed": {
+      "tags": [
+        "map",
+        "gps",
+        "location",
+        "cross"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "locate-off": {
+      "tags": [
+        "map",
+        "gps",
+        "location",
+        "cross"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "lock": {
+      "tags": [
+        "security",
+        "password",
+        "secure",
+        "admin"
+      ],
+      "categories": [
+        "security"
+      ]
+    },
+    "log-in": {
+      "tags": [
+        "sign in",
+        "arrow",
+        "enter",
+        "auth"
+      ],
+      "categories": [
+        "arrows",
+        "account"
+      ]
+    },
+    "log-out": {
+      "tags": [
+        "sign out",
+        "arrow",
+        "exit",
+        "auth"
+      ],
+      "categories": [
+        "arrows",
+        "account"
+      ]
+    },
+    "luggage": {
+      "tags": [
+        "baggage",
+        "luggage",
+        "travel",
+        "suitcase"
+      ],
+      "categories": [
+        "travel",
+        "transportation"
+      ]
+    },
+    "magnet": {
+      "tags": [
+        "horseshoe",
+        "lock",
+        "science",
+        "snap"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "mail": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "unread"
+      ],
+      "categories": [
+        "text",
+        "account",
+        "mail"
+      ]
+    },
+    "mail-check": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "subscribe",
+        "delivered",
+        "success"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-minus": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-open": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "read"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-plus": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "add",
+        "create",
+        "new",
+        "compose"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-question": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "delivery",
+        "undelivered"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-search": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "search"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-warning": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "delivery error"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mail-x": {
+      "tags": [
+        "email",
+        "message",
+        "letter",
+        "remove",
+        "delete"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "mails": {
+      "tags": [
+        "emails",
+        "messages",
+        "letters",
+        "multiple",
+        "mailing list",
+        "newsletter",
+        "copy"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "map": {
+      "tags": [
+        "location",
+        "navigation",
+        "travel"
+      ],
+      "categories": [
+        "text",
+        "maps"
+      ]
+    },
+    "map-pin": {
+      "tags": [
+        "location",
+        "navigation",
+        "travel",
+        "marker"
+      ],
+      "categories": [
+        "account",
+        "maps"
+      ]
+    },
+    "map-pin-off": {
+      "tags": [
+        "location",
+        "navigation",
+        "travel",
+        "marker"
+      ],
+      "categories": [
+        "maps"
+      ]
+    },
+    "martini": {
+      "tags": [
+        "cocktail",
+        "alcohol",
+        "beverage",
+        "bar",
+        "drink",
+        "glass"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "maximize": {
+      "tags": [
+        "fullscreen",
+        "expand"
+      ],
+      "categories": [
+        "layout",
+        "design"
+      ]
+    },
+    "maximize-2": {
+      "tags": [
+        "fullscreen",
+        "arrows",
+        "expand"
+      ],
+      "categories": [
+        "arrows",
+        "layout",
+        "design"
+      ]
+    },
+    "medal": {
+      "tags": [
+        "prize",
+        "sports",
+        "winner",
+        "trophy",
+        "award",
+        "achievement"
+      ],
+      "categories": [
+        "sports"
+      ]
+    },
+    "megaphone": {
+      "tags": [
+        "advertisement",
+        "attention",
+        "alert",
+        "notification"
+      ],
+      "categories": [
+        "multimedia",
+        "notifications"
+      ]
+    },
+    "megaphone-off": {
+      "tags": [
+        "advertisement",
+        "attention",
+        "alert",
+        "notification",
+        "disable",
+        "silent"
+      ],
+      "categories": [
+        "multimedia",
+        "notifications"
+      ]
+    },
+    "meh": {
+      "tags": [
+        "emoji",
+        "face",
+        "neutral",
+        "emotion"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "menu": {
+      "tags": [
+        "bars",
+        "navigation",
+        "hamburger",
+        "options"
+      ],
+      "categories": [
+        "layout",
+        "account"
+      ]
+    },
+    "message-circle": {
+      "tags": [
+        "comment",
+        "chat",
+        "conversation"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "message-square": {
+      "tags": [
+        "comment",
+        "chat",
+        "conversation"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "mic": {
+      "tags": [
+        "record",
+        "sound",
+        "listen",
+        "radio",
+        "podcast",
+        "microphone"
+      ],
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "multimedia"
+      ]
+    },
+    "mic-2": {
+      "tags": [
+        "lyrics",
+        "voice",
+        "listen",
+        "sound",
+        "music",
+        "radio",
+        "podcast",
+        "karaoke",
+        "singing",
+        "microphone"
+      ],
+      "categories": [
+        "devices",
+        "multimedia"
+      ]
+    },
+    "mic-off": {
+      "tags": [
+        "record",
+        "sound",
+        "mute",
+        "microphone"
+      ],
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "multimedia"
+      ]
+    },
+    "microscope": {
+      "tags": [
+        "medical",
+        "education",
+        "science",
+        "imaging",
+        "research"
+      ],
+      "categories": [
+        "science",
+        "medical"
+      ]
+    },
+    "microwave": {
+      "tags": [
+        "oven",
+        "cooker",
+        "toaster oven",
+        "bake"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "milestone": {
+      "tags": [
+        "sign",
+        "signpost",
+        "version control"
+      ],
+      "categories": [
+        "arrows",
+        "development",
+        "coding",
+        "gaming"
+      ]
+    },
+    "milk": {
+      "tags": [
+        "lactose",
+        "bottle",
+        "beverage",
+        "drink",
+        "water",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "milk-off": {
+      "tags": [
+        "lactose free",
+        "bottle",
+        "beverage",
+        "drink",
+        "water",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "minimize": {
+      "tags": [
+        "exit fullscreen",
+        "close",
+        "shrink"
+      ],
+      "categories": [
+        "layout",
+        "design"
+      ]
+    },
+    "minimize-2": {
+      "tags": [
+        "exit fullscreen",
+        "arrows",
+        "close",
+        "shrink"
+      ],
+      "categories": [
+        "arrows",
+        "layout",
+        "design"
+      ]
+    },
+    "minus": {
+      "tags": [
+        "subtract",
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "minus-circle": {
+      "tags": [
+        "subtract",
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "minus-square": {
+      "tags": [
+        "subtract",
+        "calculate",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "monitor": {
+      "tags": [
+        "tv",
+        "screen",
+        "display"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "monitor-off": {
+      "tags": [
+        "share"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "monitor-smartphone": {
+      "tags": [
+        "smartphone",
+        "phone",
+        "cellphone",
+        "device",
+        "mobile",
+        "desktop",
+        "monitor",
+        "responsive"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "monitor-speaker": {
+      "tags": [
+        "devices",
+        "connect",
+        "cast"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "moon": {
+      "tags": [
+        "dark",
+        "night"
+      ],
+      "categories": [
+        "accessibility"
+      ]
+    },
+    "more-horizontal": {
+      "tags": [
+        "ellipsis",
+        "menu",
+        "options"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "more-vertical": {
+      "tags": [
+        "ellipsis",
+        "menu",
+        "options"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "mountain": {
+      "tags": [
+        "climb",
+        "hike",
+        "rock"
+      ],
+      "categories": [
+        "nature",
+        "gaming"
+      ]
+    },
+    "mountain-snow": {
+      "tags": [
+        "alpine",
+        "climb",
+        "snow"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "mouse": {
+      "tags": [
+        "device",
+        "scroll",
+        "click"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "mouse-pointer": {
+      "tags": [
+        "arrow",
+        "cursor",
+        "click"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "mouse-pointer-2": {
+      "tags": [
+        "arrow",
+        "cursor",
+        "click"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "mouse-pointer-click": {
+      "tags": [
+        "arrow",
+        "cursor",
+        "click"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "move": {
+      "tags": [
+        "arrows"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "move-3d": {
+      "tags": [
+        "arrows",
+        "axis",
+        "gizmo",
+        "coordinates",
+        "transform",
+        "translate"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "move-diagonal": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "move-diagonal-2": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "move-horizontal": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "move-vertical": {
+      "tags": [
+        "double",
+        "arrow"
+      ],
+      "categories": [
+        "arrows",
+        "cursors"
+      ]
+    },
+    "music": {
+      "tags": [
+        "note",
+        "quaver",
+        "eighth note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "music-2": {
+      "tags": [
+        "quaver",
+        "eighth note",
+        "note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "music-3": {
+      "tags": [
+        "crotchet",
+        "minim",
+        "quarter note",
+        "half note",
+        "note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "music-4": {
+      "tags": [
+        "semiquaver",
+        "sixteenth note",
+        "note"
+      ],
+      "categories": [
+        "multimedia",
+        "files"
+      ]
+    },
+    "navigation": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "navigation-2": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "navigation-2-off": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "navigation-off": {
+      "tags": [
+        "location",
+        "travel"
+      ],
+      "categories": [
+        "navigation",
+        "maps"
+      ]
+    },
+    "network": {
+      "tags": [
+        "tree"
+      ],
+      "categories": [
+        "development",
+        "coding"
+      ]
+    },
+    "newspaper": {
+      "tags": [
+        "news",
+        "feed",
+        "home",
+        "magazine",
+        "article",
+        "headline"
+      ],
+      "categories": [
+        "multimedia",
+        "communication"
+      ]
+    },
+    "nut": {
+      "tags": [
+        "hazelnut",
+        "acorn",
+        "food",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "nut-off": {
+      "tags": [
+        "hazelnut",
+        "acorn",
+        "food",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "octagon": {
+      "tags": [
+        "stop",
+        "shape"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "option": {
+      "tags": [
+        "key",
+        "mac",
+        "button"
+      ],
+      "categories": [
+        "coding"
+      ]
+    },
+    "outdent": {
+      "tags": [
+        "text",
+        "tab"
+      ],
+      "categories": [
+        "text",
+        "coding"
+      ]
+    },
+    "package": {
+      "tags": [
+        "box",
+        "container"
+      ],
+      "categories": [
+        "files",
+        "development"
+      ]
+    },
+    "package-2": {
+      "tags": [
+        "box",
+        "container",
+        "archive",
+        "zip"
+      ],
+      "categories": [
+        "files",
+        "development"
+      ]
+    },
+    "package-check": {
+      "tags": [
+        "confirm",
+        "verified"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "package-minus": {
+      "tags": [
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "package-open": {
+      "tags": [
+        "box",
+        "container",
+        "unpack",
+        "open"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "package-plus": {
+      "tags": [
+        "new",
+        "add",
+        "create"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "package-search": {
+      "tags": [
+        "find",
+        "product process"
+      ],
+      "categories": [
+        "files",
+        "development"
+      ]
+    },
+    "package-x": {
+      "tags": [
+        "delete",
+        "remove"
+      ],
+      "categories": [
+        "development"
+      ]
+    },
+    "paint-bucket": {
+      "tags": [
+        "fill",
+        "paint",
+        "bucket",
+        "design"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "paintbrush": {
+      "tags": [
+        "brush",
+        "paintbrush",
+        "design",
+        "color"
+      ],
+      "categories": [
+        "text",
+        "design",
+        "photography"
+      ]
+    },
+    "paintbrush-2": {
+      "tags": [
+        "brush",
+        "paintbrush",
+        "design",
+        "color"
+      ],
+      "categories": [
+        "text",
+        "design",
+        "photography"
+      ]
+    },
+    "palette": {
+      "tags": [
+        "color",
+        "theme"
+      ],
+      "categories": [
+        "text",
+        "design",
+        "photography"
+      ]
+    },
+    "palmtree": {
+      "tags": [
+        "vacation",
+        "leisure",
+        "island"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "paperclip": {
+      "tags": [
+        "attachment",
+        "file"
+      ],
+      "categories": [
+        "text",
+        "design",
+        "files",
+        "mail"
+      ]
+    },
+    "party-popper": {
+      "tags": [
+        "emoji",
+        "congratulations",
+        "celebration",
+        "party"
+      ],
+      "categories": [
+        "emoji"
+      ]
+    },
+    "pause": {
+      "tags": [
+        "music",
+        "stop"
+      ],
+      "categories": [
+        "multimedia"
+      ]
+    },
+    "pause-circle": {
+      "tags": [
+        "music",
+        "audio",
+        "stop"
+      ],
+      "categories": [
+        "multimedia",
+        "shapes"
+      ]
+    },
+    "pause-octagon": {
+      "tags": [
+        "music",
+        "audio",
+        "stop"
+      ],
+      "categories": [
+        "multimedia",
+        "shapes"
+      ]
+    },
+    "pen-tool": {
+      "tags": [
+        "vector",
+        "drawing",
+        "path"
+      ],
+      "categories": [
+        "text",
+        "design",
+        "cursors"
+      ]
+    },
+    "pencil": {
+      "tags": [
+        "edit",
+        "pen",
+        "create"
+      ],
+      "categories": [
+        "design",
+        "cursors"
+      ]
+    },
+    "percent": {
+      "tags": [
+        "discount"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "person-standing": {
+      "tags": [
+        "people",
+        "human",
+        "accessibility",
+        "stick figure"
+      ],
+      "categories": [
+        "accessibility",
+        "people"
+      ]
+    },
+    "phone": {
+      "tags": [
+        "call"
+      ],
+      "categories": [
+        "text",
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "phone-call": {
+      "tags": [
+        "ring"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "phone-forwarded": {
+      "tags": [
+        "call"
+      ],
+      "categories": [
+        "arrows",
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "phone-incoming": {
+      "tags": [
+        "call"
+      ],
+      "categories": [
+        "arrows",
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "phone-missed": {
+      "tags": [
+        "call"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "phone-off": {
+      "tags": [
+        "call",
+        "mute"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "phone-outgoing": {
+      "tags": [
+        "call"
+      ],
+      "categories": [
+        "arrows",
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "pie-chart": {
+      "tags": [
+        "statistics",
+        "diagram",
+        "presentation"
+      ],
+      "categories": [
+        "charts",
+        "files"
+      ]
+    },
+    "piggy-bank": {
+      "tags": [
+        "money",
+        "savings"
+      ],
+      "categories": [
+        "money"
+      ]
+    },
+    "pilcrow": {
+      "tags": [
+        "paragraph",
+        "mark",
+        "paraph",
+        "blind",
+        "typography",
+        "type",
+        "text"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "pin": {
+      "tags": [
+        "save",
+        "map",
+        "lock",
+        "fix"
+      ],
+      "categories": [
+        "maps",
+        "account"
+      ]
+    },
+    "pin-off": {
+      "tags": [
+        "unpin",
+        "map",
+        "unlock",
+        "unfix",
+        "unsave",
+        "remove"
+      ],
+      "categories": [
+        "maps"
+      ]
+    },
+    "pipette": {
+      "tags": [
+        "eye dropper",
+        "color picker"
+      ],
+      "categories": [
+        "text",
+        "design"
+      ]
+    },
+    "pizza": {
+      "tags": [
+        "pie",
+        "quiche",
+        "food"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "plane": {
+      "tags": [
+        "plane",
+        "trip",
+        "airplane"
+      ],
+      "categories": [
+        "transportation",
+        "travel"
+      ]
+    },
+    "play": {
+      "tags": [
+        "music",
+        "start"
+      ],
+      "categories": [
+        "arrows",
+        "multimedia"
+      ]
+    },
+    "play-circle": {
+      "tags": [
+        "music",
+        "start"
+      ],
+      "categories": [
+        "shapes",
+        "multimedia"
+      ]
+    },
+    "plug": {
+      "tags": [
+        "electricity",
+        "socket",
+        "outlet"
+      ],
+      "categories": [
+        "devices",
+        "coding",
+        "development"
+      ]
+    },
+    "plug-2": {
+      "tags": [
+        "electricity",
+        "socket",
+        "outlet"
+      ],
+      "categories": [
+        "devices",
+        "coding",
+        "development"
+      ]
+    },
+    "plug-zap": {
+      "tags": [
+        "charge",
+        "charging",
+        "battery",
+        "connect"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "plus": {
+      "tags": [
+        "add",
+        "new",
+        "maths"
+      ],
+      "categories": [
+        "maths"
+      ]
+    },
+    "plus-circle": {
+      "tags": [
+        "add",
+        "new",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "plus-square": {
+      "tags": [
+        "add",
+        "new",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "pocket": {
+      "tags": [
+        "logo",
+        "save"
+      ],
+      "categories": [
+        "brands",
+        "development"
+      ]
+    },
+    "podcast": {
+      "tags": [
+        "mic",
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "social"
+      ]
+    },
+    "pointer": {
+      "tags": [
+        "mouse"
+      ],
+      "categories": [
+        "cursors"
+      ]
+    },
+    "pound-sterling": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "power": {
+      "tags": [
+        "on",
+        "off",
+        "device"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "power-off": {
+      "tags": [
+        "device"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "printer": {
+      "tags": [
+        "fax",
+        "office",
+        "device"
+      ],
+      "categories": [
+        "devices",
+        "account"
+      ]
+    },
+    "puzzle": {
+      "tags": [
+        "component",
+        "module",
+        "part",
+        "piece"
+      ],
+      "categories": [
+        "development",
+        "gaming"
+      ]
+    },
+    "qr-code": {
+      "tags": [
+        "barcode"
+      ],
+      "categories": [
+        "coding",
+        "development",
+        "social"
+      ]
+    },
+    "quote": {
+      "tags": [
+        "quotation"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "radio": {
+      "tags": [
+        "signal",
+        "broadcast",
+        "connectivity",
+        "live"
+      ],
+      "categories": [
+        "devices",
+        "multimedia",
+        "social"
+      ]
+    },
+    "radio-receiver": {
+      "tags": [
+        "device",
+        "music",
+        "connect"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "rectangle-horizontal": {
+      "tags": [
+        "rectangle",
+        "aspect ratio",
+        "16:9",
+        "horizontal",
+        "shape"
+      ],
+      "categories": [
+        "shapes",
+        "design"
+      ]
+    },
+    "rectangle-vertical": {
+      "tags": [
+        "rectangle",
+        "aspect ratio",
+        "9:16",
+        "vertical",
+        "shape"
+      ],
+      "categories": [
+        "shapes",
+        "design"
+      ]
+    },
+    "recycle": {
+      "tags": [
+        "sustainability",
+        "salvage",
+        "arrows"
+      ],
+      "categories": [
+        "sustainability"
+      ]
+    },
+    "redo": {
+      "tags": [
+        "undo",
+        "history"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "redo-2": {
+      "tags": [
+        "undo",
+        "history"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "refresh-ccw": {
+      "tags": [
+        "arrows",
+        "reload"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "refresh-cw": {
+      "tags": [
+        "reload",
+        "synchronise",
+        "synchronize",
+        "arrows"
+      ],
+      "categories": [
+        "arrows"
+      ]
+    },
+    "refrigerator": {
+      "tags": [
+        "frigerator",
+        "fridge",
+        "freezer",
+        "cooler",
+        "icebox",
+        "chiller",
+        "cold storage"
+      ],
+      "categories": [
+        "food-beverage",
+        "home"
+      ]
+    },
+    "regex": {
+      "tags": [
+        "search",
+        "text",
+        "code"
+      ],
+      "categories": [
+        "text",
+        "development",
+        "coding"
+      ]
+    },
+    "repeat": {
+      "tags": [
+        "loop",
+        "arrows"
+      ],
+      "categories": [
+        "arrows",
+        "multimedia"
+      ]
+    },
+    "repeat-1": {
+      "tags": [
+        "replay"
+      ],
+      "categories": [
+        "multimedia"
+      ]
+    },
+    "reply": {
+      "tags": [
+        "email"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "reply-all": {
+      "tags": [
+        "email"
+      ],
+      "categories": [
+        "mail"
+      ]
+    },
+    "rewind": {
+      "tags": [
+        "music"
+      ],
+      "categories": [
+        "arrows",
+        "multimedia"
+      ]
+    },
+    "rocket": {
+      "tags": [
+        "release",
+        "boost",
+        "launch",
+        "space",
+        "version"
+      ],
+      "categories": [
+        "gaming",
+        "development",
+        "coding"
+      ]
+    },
+    "rocking-chair": {
+      "tags": [
+        "chair",
+        "furniture",
+        "seat"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "rotate-3d": {
+      "tags": [
+        "gizmo",
+        "transform",
+        "orientation",
+        "orbit"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "rotate-ccw": {
+      "tags": [
+        "arrow",
+        "left"
+      ],
+      "categories": [
+        "arrows",
+        "design",
+        "photography"
+      ]
+    },
+    "rotate-cw": {
+      "tags": [
+        "arrow",
+        "right"
+      ],
+      "categories": [
+        "arrows",
+        "design",
+        "photography"
+      ]
+    },
+    "rss": {
+      "tags": [
+        "feed",
+        "subscribe"
+      ],
+      "categories": [
+        "development",
+        "social"
+      ]
+    },
+    "ruler": {
+      "tags": [
+        "measure",
+        "meter",
+        "foot",
+        "inch"
+      ],
+      "categories": [
+        "design",
+        "layout"
+      ]
+    },
+    "russian-ruble": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "sailboat": {
+      "tags": [
+        "ship",
+        "boat",
+        "harbor",
+        "harbour",
+        "dock"
+      ],
+      "categories": [
+        "transportation",
+        "travel"
+      ]
+    },
+    "save": {
+      "tags": [
+        "floppy disk"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "scale": {
+      "tags": [
+        "balance",
+        "legal",
+        "license",
+        "right",
+        "rule",
+        "law"
+      ],
+      "categories": [
+        "maps"
+      ]
+    },
+    "scale-3d": {
+      "tags": [
+        "gizmo",
+        "transform",
+        "size"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "scaling": {
+      "tags": [
+        "scale",
+        "resize",
+        "design"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "scan": {
+      "tags": [
+        "qr-code"
+      ],
+      "categories": [
+        "devices",
+        "social"
+      ]
+    },
+    "scan-face": {
+      "tags": [
+        "face",
+        "biometric",
+        "authentication",
+        "2fa"
+      ],
+      "categories": [
+        "devices",
+        "social"
+      ]
+    },
+    "scan-line": {
+      "tags": [
+        "qr-code"
+      ],
+      "categories": [
+        "devices",
+        "social"
+      ]
+    },
+    "scissors": {
+      "tags": [
+        "cut"
+      ],
+      "categories": [
+        "text",
+        "design"
+      ]
+    },
+    "screen-share": {
+      "tags": [
+        "host",
+        "desktop"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "screen-share-off": {
+      "tags": [
+        "desktop",
+        "disconnect"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "scroll": {
+      "tags": [
+        "paper",
+        "log",
+        "scripture",
+        "document",
+        "parchment"
+      ],
+      "categories": [
+        "gaming",
+        "development",
+        "coding"
+      ]
+    },
+    "search": {
+      "tags": [
+        "find",
+        "magnifier",
+        "magnifying glass"
+      ],
+      "categories": [
+        "text",
+        "account",
+        "social"
+      ]
+    },
+    "send": {
+      "tags": [
+        "email",
+        "message",
+        "mail",
+        "paper airplane",
+        "paper aeroplane",
+        "submit"
+      ],
+      "categories": [
+        "mail",
+        "communication",
+        "connectivity"
+      ]
+    },
+    "separator-horizontal": {
+      "tags": [
+        "move",
+        "split"
+      ],
+      "categories": [
+        "text",
+        "arrows",
+        "layout"
+      ]
+    },
+    "separator-vertical": {
+      "tags": [
+        "move",
+        "split"
+      ],
+      "categories": [
+        "text",
+        "arrows",
+        "layout"
+      ]
+    },
+    "server": {
+      "tags": [
+        "cloud",
+        "storage"
+      ],
+      "categories": [
+        "development",
+        "devices"
+      ]
+    },
+    "server-cog": {
+      "tags": [
+        "cloud",
+        "storage",
+        "computing",
+        "cog",
+        "gear"
+      ],
+      "categories": [
+        "development",
+        "devices"
+      ]
+    },
+    "server-crash": {
+      "tags": [
+        "cloud",
+        "storage",
+        "problem",
+        "error"
+      ],
+      "categories": [
+        "development",
+        "devices"
+      ]
+    },
+    "server-off": {
+      "tags": [
+        "cloud",
+        "storage"
+      ],
+      "categories": [
+        "development",
+        "devices"
+      ]
+    },
+    "settings": {
+      "tags": [
+        "cog",
+        "edit",
+        "gear",
+        "preferences"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "settings-2": {
+      "tags": [
+        "cog",
+        "edit",
+        "gear",
+        "preferences"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "share": {
+      "tags": [
+        "network",
+        "connections"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "share-2": {
+      "tags": [
+        "network",
+        "connections"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "sheet": {
+      "tags": [
+        "spreadsheets",
+        "table",
+        "excel"
+      ],
+      "categories": [
+        "text",
+        "files"
+      ]
+    },
+    "shield": {
+      "tags": [
+        "security",
+        "secure"
+      ],
+      "categories": [
+        "account",
+        "security",
+        "gaming",
+        "coding"
+      ]
+    },
+    "shield-alert": {
+      "tags": [
+        "security",
+        "secure",
+        "virus",
+        "admin",
+        "safety",
+        "savety"
+      ],
+      "categories": [
+        "account",
+        "security",
+        "notifications"
+      ]
+    },
+    "shield-check": {
+      "tags": [
+        "security",
+        "secure",
+        "done",
+        "save"
+      ],
+      "categories": [
+        "account",
+        "security"
+      ]
+    },
+    "shield-close": {
+      "tags": [
+        "security",
+        "secure",
+        "wrong",
+        "unsave",
+        "virus"
+      ],
+      "categories": [
+        "security"
+      ]
+    },
+    "shield-off": {
+      "tags": [
+        "security",
+        "secure",
+        "insecure"
+      ],
+      "categories": [
+        "security"
+      ]
+    },
+    "shirt": {
+      "tags": [
+        "t-shirt",
+        "shopping",
+        "store",
+        "clothing",
+        "clothes"
+      ],
+      "categories": [
+        "shopping"
+      ]
+    },
+    "shopping-bag": {
+      "tags": [
+        "ecommerce",
+        "cart",
+        "purchase",
+        "store"
+      ],
+      "categories": [
+        "shopping"
+      ]
+    },
+    "shopping-cart": {
+      "tags": [
+        "ecommerce",
+        "cart",
+        "purchase",
+        "store"
+      ],
+      "categories": [
+        "shopping"
+      ]
+    },
+    "shovel": {
+      "tags": [
+        "dig",
+        "spade",
+        "treasure"
+      ],
+      "categories": [
+        "nature",
+        "tools",
+        "gaming"
+      ]
+    },
+    "shower-head": {
+      "tags": [
+        "shower",
+        "bath",
+        "bathroom",
+        "amenities",
+        "services"
+      ],
+      "categories": [
+        "home",
+        "travel"
+      ]
+    },
+    "shrink": {
+      "tags": [
+        "scale",
+        "fullscreen"
+      ],
+      "categories": [
+        "layout",
+        "arrows"
+      ]
+    },
+    "shrub": {
+      "tags": [
+        "forest",
+        "undergrowth",
+        "park",
+        "nature"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "shuffle": {
+      "tags": [
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
+    },
+    "sidebar": {
+      "tags": [
+        "menu"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "sidebar-close": {
+      "tags": [
+        "menu"
+      ],
+      "categories": [
+        "layout",
+        "arrows"
+      ]
+    },
+    "sidebar-open": {
+      "tags": [
+        "menu"
+      ],
+      "categories": [
+        "layout",
+        "arrows"
+      ]
+    },
+    "sigma": {
+      "tags": [
+        "sum",
+        "calculate",
+        "formula",
+        "maths"
+      ],
+      "categories": [
+        "text",
+        "maths"
+      ]
+    },
+    "signal": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "signal-high": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "signal-low": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "signal-medium": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "signal-zero": {
+      "tags": [
+        "connection",
+        "wireless",
+        "gsm",
+        "phone",
+        "2g",
+        "3g",
+        "4g",
+        "5g",
+        "lost"
+      ],
+      "categories": [
+        "connectivity"
+      ]
+    },
+    "siren": {
+      "tags": [
+        "police",
+        "ambulance",
+        "emergency",
+        "security",
+        "alert",
+        "alarm",
+        "light"
+      ],
+      "categories": [
+        "medical"
+      ]
+    },
+    "skip-back": {
+      "tags": [
+        "arrow",
+        "previous",
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
+    },
+    "skip-forward": {
+      "tags": [
+        "arrow",
+        "skip",
+        "next",
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "arrows"
+      ]
+    },
+    "skull": {
+      "tags": [
+        "death",
+        "danger",
+        "bone"
+      ],
+      "categories": [
+        "gaming"
+      ]
+    },
+    "slack": {
+      "tags": [
+        "logo"
+      ],
+      "categories": [
+        "account",
+        "social",
+        "communication",
+        "brands",
+        "development"
+      ]
+    },
+    "slash": {
+      "tags": [
+        "cancel",
+        "ban",
+        "no",
+        "stop",
+        "forbidden",
+        "prohibited",
+        "error"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "slice": {
+      "tags": [
+        "cutter",
+        "scalpel",
+        "knife"
+      ],
+      "categories": [
+        "design"
+      ]
+    },
+    "sliders": {
+      "tags": [
+        "settings",
+        "controls"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "sliders-horizontal": {
+      "tags": [
+        "settings",
+        "filters",
+        "controls"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "smartphone": {
+      "tags": [
+        "phone",
+        "cellphone",
+        "device"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "smartphone-charging": {
+      "tags": [
+        "phone",
+        "cellphone",
+        "device",
+        "power"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "smile": {
+      "tags": [
+        "emoji",
+        "face",
+        "happy",
+        "good",
+        "emotion"
+      ],
+      "categories": [
+        "emoji",
+        "account"
+      ]
+    },
+    "smile-plus": {
+      "tags": [
+        "emoji",
+        "face",
+        "happy",
+        "good",
+        "emotion",
+        "react",
+        "reaction",
+        "add"
+      ],
+      "categories": [
+        "emoji",
+        "social",
+        "notifications",
+        "communication"
+      ]
+    },
+    "snowflake": {
+      "tags": [
+        "cold",
+        "weather",
+        "freeze",
+        "snow",
+        "winter"
+      ],
+      "categories": [
+        "weather",
+        "seasons"
+      ]
+    },
+    "sofa": {
+      "tags": [
+        "armchair",
+        "furniture",
+        "leisure",
+        "lounge",
+        "loveseat",
+        "couch"
+      ],
+      "categories": [
+        "furniture"
+      ]
+    },
+    "sort-asc": {
+      "tags": [
+        "filter"
+      ],
+      "categories": [
+        "text",
+        "layout"
+      ]
+    },
+    "sort-desc": {
+      "tags": [
+        "filter"
+      ],
+      "categories": [
+        "text",
+        "layout"
+      ]
+    },
+    "speaker": {
+      "tags": [
+        "audio",
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "devices"
+      ]
+    },
+    "spline": {
+      "tags": [],
+      "categories": [
+        "design"
+      ]
+    },
+    "sprout": {
+      "tags": [
+        "leaf",
+        "nature",
+        "plant"
+      ],
+      "categories": [
+        "nature",
+        "gaming"
+      ]
+    },
+    "square": {
+      "tags": [
+        "rectangle",
+        "aspect ratio",
+        "1:1",
+        "shape"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "star": {
+      "tags": [
+        "bookmark",
+        "favorite",
+        "like",
+        "review",
+        "rating"
+      ],
+      "categories": [
+        "account",
+        "social",
+        "shapes",
+        "multimedia",
+        "weather",
+        "emoji",
+        "gaming"
+      ]
+    },
+    "star-half": {
+      "tags": [
+        "bookmark",
+        "favorite",
+        "like",
+        "review",
+        "rating"
+      ],
+      "categories": [
+        "social",
+        "multimedia"
+      ]
+    },
+    "star-off": {
+      "tags": [
+        "dislike",
+        "unlike",
+        "remove",
+        "unrate"
+      ],
+      "categories": [
+        "multimedia",
+        "social"
+      ]
+    },
+    "stethoscope": {
+      "tags": [
+        "phonendoscope",
+        "medical",
+        "heart",
+        "lungs",
+        "sound"
+      ],
+      "categories": [
+        "science",
+        "medical"
+      ]
+    },
+    "sticker": {
+      "tags": [
+        "reaction",
+        "emotion",
+        "smile",
+        "happy",
+        "feedback"
+      ],
+      "categories": [
+        "communication",
+        "social"
+      ]
+    },
+    "sticky-note": {
+      "tags": [
+        "note",
+        "comment",
+        "reaction",
+        "memo"
+      ],
+      "categories": [
+        "communication",
+        "social"
+      ]
+    },
+    "stop-circle": {
+      "tags": [
+        "media",
+        "music"
+      ],
+      "categories": [
+        "multimedia",
+        "shapes"
+      ]
+    },
+    "stretch-horizontal": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "distribute"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "stretch-vertical": {
+      "tags": [
+        "items",
+        "flex",
+        "justify",
+        "distribute"
+      ],
+      "categories": [
+        "layout"
+      ]
+    },
+    "strikethrough": {
+      "tags": [
+        "cross out",
+        "delete",
+        "remove",
+        "format"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "subscript": {
+      "tags": [
+        "text"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "sun": {
+      "tags": [
+        "brightness",
+        "weather",
+        "light",
+        "summer"
+      ],
+      "categories": [
+        "accessibility",
+        "weather",
+        "seasons"
+      ]
+    },
+    "sun-dim": {
+      "tags": [
+        "brightness",
+        "dim",
+        "low",
+        "brightness low"
+      ],
+      "categories": [
+        "accessibility",
+        "weather"
+      ]
+    },
+    "sun-medium": {
+      "tags": [
+        "brightness",
+        "medium"
+      ],
+      "categories": [
+        "accessibility",
+        "weather"
+      ]
+    },
+    "sun-moon": {
+      "tags": [
+        "night",
+        "light",
+        "moon",
+        "sun",
+        "brightness"
+      ],
+      "categories": [
+        "accessibility"
+      ]
+    },
+    "sun-snow": {
+      "tags": [
+        "weather",
+        "air conditioning",
+        "temperature",
+        "hot",
+        "cold",
+        "seasons"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "sunrise": {
+      "tags": [
+        "weather",
+        "time",
+        "morning",
+        "day"
+      ],
+      "categories": [
+        "arrows",
+        "weather",
+        "time"
+      ]
+    },
+    "sunset": {
+      "tags": [
+        "weather",
+        "time",
+        "evening",
+        "night"
+      ],
+      "categories": [
+        "arrows",
+        "weather"
+      ]
+    },
+    "superscript": {
+      "tags": [
+        "text",
+        "exponent"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "swiss-franc": {
+      "tags": [
+        "currency",
+        "money",
+        "payment"
+      ],
+      "categories": [
+        "currency",
+        "money"
+      ]
+    },
+    "switch-camera": {
+      "tags": [
+        "photo",
+        "selfie",
+        "front",
+        "back"
+      ],
+      "categories": [
+        "communication",
+        "devices"
+      ]
+    },
+    "sword": {
+      "tags": [
+        "battle",
+        "challenge",
+        "game",
+        "war",
+        "weapon"
+      ],
+      "categories": [
+        "gaming",
+        "tools"
+      ]
+    },
+    "swords": {
+      "tags": [
+        "battle",
+        "challenge",
+        "game",
+        "war",
+        "weapon"
+      ],
+      "categories": [
+        "gaming",
+        "tools"
+      ]
+    },
+    "syringe": {
+      "tags": [
+        "medicine",
+        "medical",
+        "needle",
+        "pump",
+        "plunger",
+        "nozzle",
+        "blood"
+      ],
+      "categories": [
+        "science",
+        "medical"
+      ]
+    },
+    "table": {
+      "tags": [
+        "sheet",
+        "grid",
+        "spreadsheet"
+      ],
+      "categories": [
+        "text",
+        "files"
+      ]
+    },
+    "table-2": {
+      "tags": [
+        "sheet",
+        "grid",
+        "spreadsheet"
+      ],
+      "categories": [
+        "text",
+        "files"
+      ]
+    },
+    "tablet": {
+      "tags": [
+        "device"
+      ],
+      "categories": [
+        "devices"
+      ]
+    },
+    "tag": {
+      "tags": [
+        "label",
+        "badge",
+        "ticket",
+        "mark"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "tags": {
+      "tags": [
+        "labels",
+        "badges",
+        "tickets",
+        "marks",
+        "copy",
+        "multiple"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "target": {
+      "tags": [
+        "logo",
+        "bullseye"
+      ],
+      "categories": [
+        "brands",
+        "gaming"
+      ]
+    },
+    "tent": {
+      "tags": [
+        "campsite",
+        "wigwam"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "terminal": {
+      "tags": [
+        "code",
+        "command line",
+        "prompt",
+        "shell"
+      ],
+      "categories": [
+        "coding",
+        "development"
+      ]
+    },
+    "terminal-square": {
+      "tags": [
+        "code",
+        "command line",
+        "prompt",
+        "shell"
+      ],
+      "categories": [
+        "coding",
+        "development",
+        "shapes"
+      ]
+    },
+    "text-cursor": {
+      "tags": [
+        "select"
+      ],
+      "categories": [
+        "text",
+        "cursors"
+      ]
+    },
+    "text-cursor-input": {
+      "tags": [
+        "select"
+      ],
+      "categories": [
+        "text",
+        "layout"
+      ]
+    },
+    "thermometer": {
+      "tags": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "weather"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "thermometer-snowflake": {
+      "tags": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "weather",
+        "cold",
+        "freeze",
+        "freezing"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "thermometer-sun": {
+      "tags": [
+        "temperature",
+        "celsius",
+        "fahrenheit",
+        "weather",
+        "warm",
+        "hot"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "thumbs-down": {
+      "tags": [
+        "dislike",
+        "bad",
+        "emotion"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "thumbs-up": {
+      "tags": [
+        "like",
+        "good",
+        "emotion"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "ticket": {
+      "tags": [
+        "entry",
+        "pass",
+        "voucher"
+      ],
+      "categories": [
+        "account",
+        "transportation"
+      ]
+    },
+    "timer": {
+      "tags": [
+        "time",
+        "timer",
+        "stopwatch"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "timer-off": {
+      "tags": [
+        "time",
+        "timer",
+        "stopwatch"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "timer-reset": {
+      "tags": [
+        "time",
+        "timer",
+        "stopwatch"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "toggle-left": {
+      "tags": [
+        "on",
+        "off",
+        "switch"
+      ],
+      "categories": [
+        "layout",
+        "account"
+      ]
+    },
+    "toggle-right": {
+      "tags": [
+        "on",
+        "off",
+        "switch"
+      ],
+      "categories": [
+        "layout",
+        "account"
+      ]
+    },
+    "tornado": {
+      "tags": [
+        "weather",
+        "wind",
+        "storm",
+        "hurricane"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "toy-brick": {
+      "tags": [
+        "lego",
+        "block",
+        "addon",
+        "plugin",
+        "integration"
+      ],
+      "categories": [
+        "gaming",
+        "development"
+      ]
+    },
+    "train": {
+      "tags": [
+        "transport",
+        "metro",
+        "subway",
+        "underground"
+      ],
+      "categories": [
+        "transportation"
+      ]
+    },
+    "trash": {
+      "tags": [
+        "garbage",
+        "delete",
+        "remove",
+        "bin"
+      ],
+      "categories": [
+        "files",
+        "mail"
+      ]
+    },
+    "trash-2": {
+      "tags": [
+        "garbage",
+        "delete",
+        "remove",
+        "bin"
+      ],
+      "categories": [
+        "files",
+        "mail"
+      ]
+    },
+    "tree-deciduous": {
+      "tags": [
+        "tree",
+        "forest",
+        "park",
+        "nature"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "tree-pine": {
+      "tags": [
+        "tree",
+        "pine",
+        "forest",
+        "park",
+        "nature"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "trees": {
+      "tags": [
+        "tree",
+        "forest",
+        "park",
+        "nature"
+      ],
+      "categories": [
+        "nature"
+      ]
+    },
+    "trello": {
+      "tags": [
+        "logo",
+        "brand"
+      ],
+      "categories": [
+        "account",
+        "brands",
+        "development"
+      ]
+    },
+    "trending-down": {
+      "tags": [
+        "statistics"
+      ],
+      "categories": [
+        "charts",
+        "arrows"
+      ]
+    },
+    "trending-up": {
+      "tags": [
+        "statistics"
+      ],
+      "categories": [
+        "charts",
+        "arrows"
+      ]
+    },
+    "triangle": {
+      "tags": [
+        "delta",
+        "shape"
+      ],
+      "categories": [
+        "shapes"
+      ]
+    },
+    "trophy": {
+      "tags": [
+        "prize",
+        "sports",
+        "winner",
+        "achievement",
+        "award"
+      ],
+      "categories": [
+        "sports",
+        "gaming"
+      ]
+    },
+    "truck": {
+      "tags": [
+        "delivery",
+        "van",
+        "shipping",
+        "transport",
+        "lorry"
+      ],
+      "categories": [
+        "transportation"
+      ]
+    },
+    "tv": {
+      "tags": [
+        "television",
+        "stream"
+      ],
+      "categories": [
+        "devices",
+        "multimedia"
+      ]
+    },
+    "tv-2": {
+      "tags": [
+        "flatscreen",
+        "television",
+        "stream",
+        "display"
+      ],
+      "categories": [
+        "devices",
+        "multimedia"
+      ]
+    },
+    "twitch": {
+      "tags": [
+        "logo",
+        "social"
+      ],
+      "categories": [
+        "brands",
+        "social",
+        "account",
+        "gaming"
+      ]
+    },
+    "twitter": {
+      "tags": [
+        "logo",
+        "social"
+      ],
+      "categories": [
+        "brands",
+        "social",
+        "account"
+      ]
+    },
+    "type": {
+      "tags": [
+        "text",
+        "font",
+        "typography"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "umbrella": {
+      "tags": [
+        "rain",
+        "weather"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "underline": {
+      "tags": [
+        "text",
+        "format"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "undo": {
+      "tags": [
+        "redo",
+        "history"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "undo-2": {
+      "tags": [
+        "redo",
+        "history"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "unlink": {
+      "tags": [
+        "url",
+        "unchain"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "unlink-2": {
+      "tags": [
+        "url",
+        "unchain"
+      ],
+      "categories": [
+        "text"
+      ]
+    },
+    "unlock": {
+      "tags": [
+        "security"
+      ],
+      "categories": [
+        "security"
+      ]
+    },
+    "upload": {
+      "tags": [
+        "file"
+      ],
+      "categories": [
+        "arrows",
+        "files"
+      ]
+    },
+    "upload-cloud": {
+      "tags": [
+        "file"
+      ],
+      "categories": [
+        "arrows",
+        "files"
+      ]
+    },
+    "usb": {
+      "tags": [
+        "universal",
+        "serial",
+        "bus",
+        "controller",
+        "connector",
+        "interface"
+      ],
+      "categories": [
+        "devices",
+        "multimedia",
+        "home"
+      ]
+    },
+    "user": {
+      "tags": [
+        "person",
+        "account",
+        "contact"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "user-check": {
+      "tags": [
+        "followed",
+        "subscribed",
+        "done"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "user-cog": {
+      "tags": [
+        "settings",
+        "edit",
+        "cog",
+        "gear"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "user-minus": {
+      "tags": [
+        "delete",
+        "remove",
+        "unfollow",
+        "unsubscribe"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "user-plus": {
+      "tags": [
+        "new",
+        "add",
+        "create",
+        "follow",
+        "subscribe"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "user-x": {
+      "tags": [
+        "delete",
+        "remove",
+        "unfollow",
+        "unsubscribe",
+        "unavailable"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "users": {
+      "tags": [
+        "group",
+        "people"
+      ],
+      "categories": [
+        "account"
+      ]
+    },
+    "utensils": {
+      "tags": [
+        "food",
+        "restaurant",
+        "meal",
+        "cutlery",
+        "breakfast",
+        "dinner",
+        "supper"
+      ],
+      "categories": [
+        "food-beverage",
+        "travel",
+        "maps"
+      ]
+    },
+    "utensils-crossed": {
+      "tags": [
+        "food",
+        "restaurant",
+        "meal",
+        "cutlery",
+        "breakfast",
+        "dinner",
+        "supper"
+      ],
+      "categories": [
+        "food-beverage",
+        "travel",
+        "maps"
+      ]
+    },
+    "vegan": {
+      "tags": [
+        "vegetarian",
+        "fruitarian",
+        "herbivorous",
+        "animal rights",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage",
+        "sustainability"
+      ]
+    },
+    "venetian-mask": {
+      "tags": [
+        "mask",
+        "masquerade",
+        "impersonate",
+        "secret",
+        "incognito"
+      ],
+      "categories": [
+        "account",
+        "gaming"
+      ]
+    },
+    "verified": {
+      "tags": [
+        "check"
+      ],
+      "categories": [
+        "account",
+        "social"
+      ]
+    },
+    "vibrate": {
+      "tags": [
+        "smartphone",
+        "notification",
+        "rumble",
+        "haptic feedback"
+      ],
+      "categories": [
+        "devices",
+        "connectivity",
+        "account",
+        "notifications"
+      ]
+    },
+    "vibrate-off": {
+      "tags": [
+        "smartphone",
+        "notification",
+        "rumble",
+        "haptic feedback",
+        "notifications"
+      ],
+      "categories": [
+        "devices",
+        "connectivity",
+        "account"
+      ]
+    },
+    "video": {
+      "tags": [
+        "camera",
+        "movie",
+        "film"
+      ],
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "photography"
+      ]
+    },
+    "video-off": {
+      "tags": [
+        "camera",
+        "movie",
+        "film"
+      ],
+      "categories": [
+        "devices",
+        "communication",
+        "connectivity",
+        "photography"
+      ]
+    },
+    "view": {
+      "tags": [
+        "eye",
+        "look"
+      ],
+      "categories": [
+        "design",
+        "photography"
+      ]
+    },
+    "voicemail": {
+      "tags": [
+        "phone",
+        "cassette"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "volume": {
+      "tags": [
+        "music",
+        "sound",
+        "mute",
+        "speaker"
+      ],
+      "categories": [
+        "connectivity",
+        "communication",
+        "multimedia"
+      ]
+    },
+    "volume-1": {
+      "tags": [
+        "music",
+        "sound",
+        "speaker"
+      ],
+      "categories": [
+        "connectivity",
+        "communication",
+        "multimedia"
+      ]
+    },
+    "volume-2": {
+      "tags": [
+        "music",
+        "sound",
+        "speaker"
+      ],
+      "categories": [
+        "connectivity",
+        "communication",
+        "multimedia"
+      ]
+    },
+    "volume-x": {
+      "tags": [
+        "music",
+        "sound",
+        "mute",
+        "speaker"
+      ],
+      "categories": [
+        "connectivity",
+        "communication",
+        "multimedia"
+      ]
+    },
+    "wallet": {
+      "tags": [
+        "money",
+        "finance",
+        "pocket"
+      ],
+      "categories": [
+        "account",
+        "money"
+      ]
+    },
+    "wand": {
+      "tags": [
+        "magic",
+        "selection"
+      ],
+      "categories": [
+        "design",
+        "gaming",
+        "cursors",
+        "photography"
+      ]
+    },
+    "wand-2": {
+      "tags": [
+        "magic",
+        "wizard"
+      ],
+      "categories": [
+        "design",
+        "gaming",
+        "cursors",
+        "photography"
+      ]
+    },
+    "watch": {
+      "tags": [
+        "clock",
+        "time"
+      ],
+      "categories": [
+        "time"
+      ]
+    },
+    "waves": {
+      "tags": [
+        "water",
+        "sea",
+        "sound",
+        "hertz",
+        "wavelength",
+        "vibrate"
+      ],
+      "categories": [
+        "weather",
+        "maps",
+        "multimedia"
+      ]
+    },
+    "webcam": {
+      "tags": [
+        "camera",
+        "security"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "communication"
+      ]
+    },
+    "webhook": {
+      "tags": [
+        "push api",
+        "interface",
+        "callback"
+      ],
+      "categories": [
+        "development",
+        "coding",
+        "social",
+        "account"
+      ]
+    },
+    "wheat": {
+      "tags": [
+        "corn",
+        "cereal",
+        "grain",
+        "gluten"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "wheat-off": {
+      "tags": [
+        "corn",
+        "cereal",
+        "grain",
+        "gluten free",
+        "allergy",
+        "intolerance",
+        "diet"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "wifi": {
+      "tags": [
+        "connection",
+        "signal",
+        "wireless"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "wifi-off": {
+      "tags": [
+        "disabled"
+      ],
+      "categories": [
+        "connectivity",
+        "devices"
+      ]
+    },
+    "wind": {
+      "tags": [
+        "weather",
+        "air",
+        "blow"
+      ],
+      "categories": [
+        "weather"
+      ]
+    },
+    "wine": {
+      "tags": [
+        "alcohol",
+        "beverage",
+        "bar",
+        "drink",
+        "glass",
+        "sommelier",
+        "vineyard",
+        "winery"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "wine-off": {
+      "tags": [
+        "alcohol",
+        "beverage",
+        "drink",
+        "glass",
+        "alcohol free",
+        "abstinence",
+        "abstaining",
+        "teetotalism",
+        "allergy",
+        "intolerance"
+      ],
+      "categories": [
+        "food-beverage"
+      ]
+    },
+    "wrap-text": {
+      "tags": [
+        "words",
+        "lines",
+        "break",
+        "paragraph"
+      ],
+      "categories": [
+        "text",
+        "arrows"
+      ]
+    },
+    "wrench": {
+      "tags": [
+        "account",
+        "tool",
+        "settings",
+        "spanner"
+      ],
+      "categories": [
+        "account",
+        "coding",
+        "tools"
+      ]
+    },
+    "x": {
+      "tags": [
+        "cancel",
+        "close",
+        "delete",
+        "remove",
+        "times",
+        "clear",
+        "maths"
+      ],
+      "categories": [
+        "notifications",
+        "maths"
+      ]
+    },
+    "x-circle": {
+      "tags": [
+        "cancel",
+        "close",
+        "delete",
+        "remove",
+        "times",
+        "clear",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes"
+      ]
+    },
+    "x-octagon": {
+      "tags": [
+        "delete",
+        "stop",
+        "alert",
+        "warning",
+        "times",
+        "clear",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes",
+        "notifications"
+      ]
+    },
+    "x-square": {
+      "tags": [
+        "cancel",
+        "close",
+        "delete",
+        "remove",
+        "times",
+        "clear",
+        "maths"
+      ],
+      "categories": [
+        "maths",
+        "shapes",
+        "notifications"
+      ]
+    },
+    "youtube": {
+      "tags": [
+        "logo",
+        "social",
+        "video",
+        "play"
+      ],
+      "categories": [
+        "account",
+        "multimedia",
+        "social",
+        "text",
+        "brands"
+      ]
+    },
+    "zap": {
+      "tags": [
+        "flash",
+        "camera",
+        "lightning"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "photography",
+        "weather"
+      ]
+    },
+    "zap-off": {
+      "tags": [
+        "flash",
+        "camera",
+        "lightning"
+      ],
+      "categories": [
+        "connectivity",
+        "devices",
+        "photography",
+        "weather"
+      ]
+    },
+    "zoom-in": {
+      "tags": [
+        "magnifying glass",
+        "plus"
+      ],
+      "categories": [
+        "accessibility",
+        "layout",
+        "design",
+        "text",
+        "photography"
+      ]
+    },
+    "zoom-out": {
+      "tags": [
+        "magnifying glass",
+        "plus"
+      ],
+      "categories": [
+        "accessibility",
+        "layout",
+        "design",
+        "text",
+        "photography"
+      ]
+    }
+  },
+  "categories": {
+    "accessibility": {
+      "title": "Accessibility",
+      "icon": "accessibility"
+    },
+    "animals": {
+      "title": "Animals",
+      "icon": "dog"
+    },
+    "account": {
+      "title": "Accounts & access",
+      "icon": "user"
+    },
+    "arrows": {
+      "title": "Arrows",
+      "icon": "arrow-left-right"
+    },
+    "brands": {
+      "title": "Brands",
+      "icon": "facebook"
+    },
+    "buildings": {
+      "title": "Buildings",
+      "icon": "building"
+    },
+    "charts": {
+      "title": "Charts",
+      "icon": "pie-chart"
+    },
+    "coding": {
+      "title": "Coding",
+      "icon": "code-2"
+    },
+    "communication": {
+      "title": "Communication",
+      "icon": "message-circle"
+    },
+    "connectivity": {
+      "title": "Connectivity",
+      "icon": "wifi"
+    },
+    "currency": {
+      "title": "Currency",
+      "icon": "dollar-sign"
+    },
+    "cursors": {
+      "title": "Cursors",
+      "icon": "mouse-pointer-2"
+    },
+    "design": {
+      "title": "Design",
+      "icon": "palette"
+    },
+    "development": {
+      "title": "Development",
+      "icon": "git-pull-request"
+    },
+    "devices": {
+      "title": "Devices",
+      "icon": "smartphone"
+    },
+    "emoji": {
+      "title": "Emoji",
+      "icon": "smile"
+    },
+    "files": {
+      "title": "File icons",
+      "icon": "layout"
+    },
+    "food-beverage": {
+      "title": "Food & beverage",
+      "icon": "coffee"
+    },
+    "furniture": {
+      "title": "Furniture",
+      "icon": "rocking-chair"
+    },
+    "gaming": {
+      "title": "Gaming",
+      "icon": "gamepad-2"
+    },
+    "home": {
+      "title": "Home",
+      "icon": "home"
+    },
+    "layout": {
+      "title": "Layout",
+      "icon": "layout"
+    },
+    "mail": {
+      "title": "Mail",
+      "icon": "mail"
+    },
+    "maps": {
+      "title": "Maps",
+      "icon": "map"
+    },
+    "maths": {
+      "title": "Maths",
+      "icon": "divide"
+    },
+    "medical": {
+      "title": "Medical",
+      "icon": "heart"
+    },
+    "money": {
+      "title": "Money",
+      "icon": "piggy-bank"
+    },
+    "multimedia": {
+      "title": "Multimedia",
+      "icon": "play-circle"
+    },
+    "nature": {
+      "title": "Nature",
+      "icon": "sprout"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "icon": "compass"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "icon": "alert-triangle"
+    },
+    "people": {
+      "title": "People",
+      "icon": "person-standing"
+    },
+    "photography": {
+      "title": "Photography",
+      "icon": "camera"
+    },
+    "science": {
+      "title": "Science",
+      "icon": "flask-conical"
+    },
+    "seasons": {
+      "title": "Seasons",
+      "icon": "leaf"
+    },
+    "security": {
+      "title": "Security",
+      "icon": "shield"
+    },
+    "shapes": {
+      "title": "Shapes",
+      "icon": "triangle"
+    },
+    "shopping": {
+      "title": "Shopping",
+      "icon": "shopping-bag"
+    },
+    "social": {
+      "title": "Social",
+      "icon": "thumbs-up"
+    },
+    "sports": {
+      "title": "Sports",
+      "icon": "type"
+    },
+    "sustainability": {
+      "title": "Sustainability",
+      "icon": "recycle"
+    },
+    "text": {
+      "title": "Text formatting",
+      "icon": "type"
+    },
+    "time": {
+      "title": "Time & calendar",
+      "icon": "calendar"
+    },
+    "tools": {
+      "title": "Tools",
+      "icon": "hammer"
+    },
+    "transportation": {
+      "title": "Transportation",
+      "icon": "train"
+    },
+    "travel": {
+      "title": "Travel",
+      "icon": "backpack"
+    },
+    "weather": {
+      "title": "Weather",
+      "icon": "cloud-sun"
+    }
+  }
+}

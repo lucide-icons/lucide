@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sofa",
+    "furniture",
+    "leisure",
+    "lounge",
+    "loveseat",
+    "couch"
+  ],
+  "categories": [
+    "furniture"
+  ]
+}

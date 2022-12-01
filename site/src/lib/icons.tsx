@@ -8,7 +8,7 @@ import {getMetadata} from "./fetchAllMetadata"
 const directory = path.join(process.cwd(), "../icons");
 
 export function getAllNames() {
-  const fileNames = fs.readdirSync(directory);
+  const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.svg');
 
   return fileNames.map((fileName) => {
     return fileName.replace(/\.svg$/, "");

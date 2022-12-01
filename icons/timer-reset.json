@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "time",
+    "timer",
+    "stopwatch"
+  ],
+  "categories": [
+    "time"
+  ]
+}

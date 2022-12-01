@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "followed",
+    "subscribed",
+    "done"
+  ],
+  "categories": [
+    "account"
+  ]
+}

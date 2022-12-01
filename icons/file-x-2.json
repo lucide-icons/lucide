@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "lost",
+    "delete",
+    "remove",
+    "document"
+  ],
+  "categories": [
+    "files"
+  ]
+}

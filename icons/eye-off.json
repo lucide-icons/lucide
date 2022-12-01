@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "view",
+    "watch",
+    "hide",
+    "hidden"
+  ],
+  "categories": [
+    "accessibility",
+    "photography"
+  ]
+}
