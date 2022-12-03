@@ -32,14 +32,15 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@lucide/rollup-plugins": "*",
     "@preact/preset-vite": "^2.4.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/preact": "^2.0.1",
     "preact": "^10.11.2",
+    "rollup": "^3.5.1",
     "typescript": "^4.8.4",
     "vite": "^3.1.0",
-    "vitest": "^0.24.3",
-    "@lucide/rollup-plugins": "*"
+    "vitest": "^0.24.3"
   },
   "peerDependencies": {
     "preact": "^10.5.13"

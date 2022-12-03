@@ -32,15 +32,16 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@lucide/rollup-plugins": "*",
     "@testing-library/jest-dom": "^5.16.5",
     "babel-preset-solid": "^1.5.4",
     "jsdom": "^20.0.0",
+    "rollup": "^3.5.1",
     "solid-js": "^1.4.7",
     "solid-testing-library": "^0.3.0",
-    "vite": "^2.6.4",
+    "vite": "^3.2.4",
     "vite-plugin-solid": "^2.3.0",
-    "vitest": "^0.23.2",
-    "@lucide/rollup-plugins": "*"
+    "vitest": "^0.23.2"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"

@@ -9,6 +9,10 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "rollup-plugin-esbuild": "^4.10.2"
+    "esbuild": "^0.15.16",
+    "rollup": "^3.5.1",
+    "rollup-plugin-esbuild": "^4.10.2",
+    "rollup-plugin-license": "^3.0.1",
+    "rollup-plugin-visualizer": "^5.8.3"
   }
 }

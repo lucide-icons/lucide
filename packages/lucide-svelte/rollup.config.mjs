@@ -44,6 +44,7 @@ const configs = bundles
       input,
       plugins: [
         svelte({
+          include: 'src/**/*.svelte',
           preprocess: sveltePreprocess({
             typescript: true
           }),
@@ -54,7 +55,7 @@ const configs = bundles
         }),
         ...plugins(pkg, minify),
       ],
-      external: ['svelte'],
+      // external: ['svelte'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -67,9 +68,9 @@ const configs = bundles
         preserveModules,
         format,
         sourcemap: true,
-        globals: {
-          svelte: 'svelte',
-        },
+        // globals: {
+        //   svelte: 'svelte',
+        // },
       },
     })),
   )
