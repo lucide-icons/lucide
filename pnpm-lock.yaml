@@ -326,6 +326,7 @@ importers:
       '@vue/compiler-sfc': 3.2.45
       '@vue/test-utils': 2.2.4
       jsdom: ^20.0.3
+      rollup: ^3.5.1
       vite: ^3.1.0
       vitest: ^0.24.3
       vue: 3.2.45
@@ -337,6 +338,7 @@ importers:
       '@vue/compiler-sfc': 3.2.45
       '@vue/test-utils': 2.2.4_vue@3.2.45
       jsdom: 20.0.3
+      rollup: 3.5.1
       vite: 3.1.8
       vitest: 0.24.3_jsdom@20.0.3
       vue: 3.2.45
