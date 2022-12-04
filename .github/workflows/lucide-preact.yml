@@ -39,7 +39,7 @@ jobs:
         run: pnpm install --filter lucide-preact
 
       - name: Build
-        run: pnpm build --filter lucide-preact
+        run: pnpm --filter lucide-preact build
 
       - name: Test
-        run: pnpm test --filter lucide-preact
+        run: pnpm --filter lucide-preact test
