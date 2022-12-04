@@ -1,30 +1,21 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import svelte from 'rollup-plugin-svelte';
-import sveltePreprocess from "svelte-preprocess";
 import pkg from './package.json' assert { type: 'json' };
 import plugins from '@lucide/rollup-plugins';
+import resolve from '@rollup/plugin-node-resolve';
+import svelteConfig from './svelte.config.js';
 
 const packageName = 'LucideSvelte';
 const outputFileName = 'lucide-svelte';
 const outputDir = 'dist';
 const inputs = ['./src/lucide-svelte.ts'];
 const bundles = [
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
-    format: 'cjs',
-    inputs,
-    outputDir,
-  },
+  // Not sure if this one is needed for Svelte
+  // {
+  //   format: 'cjs',
+  //   inputs,
+  //   outputDir,
+  // },
   {
     format: 'es',
     inputs,
@@ -36,6 +27,12 @@ const bundles = [
     outputDir,
     preserveModules: true,
   },
+  {
+    format: 'svelte',
+    inputs,
+    outputDir,
+    preserveModules: true,
+  },
 ];
 
 const configs = bundles
@@ -43,19 +40,26 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: [
-        svelte({
-          include: 'src/**/*.svelte',
-          preprocess: sveltePreprocess({
-            typescript: true
+        ...(format !== 'svelte' ? [
+          svelte({
+            ...svelteConfig,
+            include: 'src/**/*.svelte',
+            compilerOptions: {
+              dev: false,
+              css: false,
+              hydratable: true,
+            },
+            emitCss: false,
           }),
-          compilerOptions: {
-            dev: false,
-          },
-          emitCss: false,
-        }),
+          resolve({
+            browser: true,
+            exportConditions: ['svelte'],
+            extensions: ['.svelte']
+          }),
+        ] : []),
         ...plugins(pkg, minify),
       ],
-      // external: ['svelte'],
+      external: format === 'svelte' ? [/\.svelte/] : ['svelte'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -66,11 +70,11 @@ const configs = bundles
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
             }),
         preserveModules,
-        format,
+        format: format === 'svelte' ? 'esm' : format,
         sourcemap: true,
-        // globals: {
-        //   svelte: 'svelte',
-        // },
+        globals: {
+          svelte: 'svelte',
+        },
       },
     })),
   )
