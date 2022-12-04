@@ -31,15 +31,15 @@ jobs:
         name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-lucide-preact-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-lucide-preact-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --filter lucide-preact
 
       - name: Build
-        run: pnpm --filter lucide-preact build
+        run: pnpm build --filter lucide-preact
 
       - name: Test
-        run: pnpm --filter lucide-preact test
+        run: pnpm test --filter lucide-preact

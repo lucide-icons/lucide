@@ -49,7 +49,7 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "*",
+    "@lucide/rollup-plugins": "workspace:*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.2.6",
     "@types/prop-types": "^15.7.5",

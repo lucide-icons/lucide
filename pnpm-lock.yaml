@@ -34,7 +34,7 @@ importers:
 
   packages/lucide:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@rollup/plugin-replace': ^5.0.1
       '@testing-library/jest-dom': ^5.16.5
       rollup: ^3.5.1
@@ -139,7 +139,7 @@ importers:
 
   packages/lucide-preact:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@preact/preset-vite': ^2.4.0
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/preact': ^2.0.1
@@ -161,7 +161,7 @@ importers:
 
   packages/lucide-react:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^11.2.6
       '@types/prop-types': ^15.7.5
@@ -191,7 +191,7 @@ importers:
 
   packages/lucide-react-native:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
       '@types/prop-types': ^15.7.5
@@ -225,7 +225,7 @@ importers:
 
   packages/lucide-solid:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@testing-library/jest-dom': ^5.16.5
       babel-preset-solid: ^1.5.4
       jsdom: ^20.0.0
@@ -257,7 +257,7 @@ importers:
 
   packages/lucide-svelte:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@rollup/plugin-node-resolve': ^15.0.1
       '@sveltejs/vite-plugin-svelte': ^1.2.0
       '@testing-library/jest-dom': ^5.16.2
@@ -293,7 +293,7 @@ importers:
 
   packages/lucide-vue:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@testing-library/jest-dom': ^5.16.2
       '@testing-library/vue': ^5.8.2
       '@vitejs/plugin-vue2': ^2.0.1
@@ -321,7 +321,7 @@ importers:
 
   packages/lucide-vue-next:
     specifiers:
-      '@lucide/rollup-plugins': '*'
+      '@lucide/rollup-plugins': workspace:*
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/vue': ^6.6.1
       '@vitejs/plugin-vue': ^3.2.0

@@ -32,7 +32,7 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "*",
+    "@lucide/rollup-plugins": "workspace:*",
     "@preact/preset-vite": "^2.4.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/preact": "^2.0.1",

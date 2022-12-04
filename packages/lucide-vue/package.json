@@ -32,7 +32,7 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "*",
+    "@lucide/rollup-plugins": "workspace:*",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/vue": "^5.8.2",
     "@vitejs/plugin-vue2": "^2.0.1",
