@@ -23,7 +23,7 @@ const {
   renderUniqueKey = false,
   templateSrc,
   silent = false,
-  iconFileExtention = '.js',
+  iconFileExtension = '.js',
   exportFileName = 'index.js',
   pretty = true,
 } = cliArguments;
@@ -45,7 +45,7 @@ async function buildIcons() {
     outputDirectory: OUTPUT_DIR,
     template: iconFileTemplate,
     showLog: !silent,
-    iconFileExtention,
+    iconFileExtension,
     pretty: JSON.parse(pretty),
   });
 
@@ -54,7 +54,7 @@ async function buildIcons() {
     path.join(OUTPUT_DIR, 'icons', exportFileName),
     path.join(OUTPUT_DIR, 'icons'),
     icons,
-    iconFileExtention,
+    iconFileExtension,
   );
 }
 

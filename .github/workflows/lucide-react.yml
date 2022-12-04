@@ -5,10 +5,6 @@ on:
     paths:
       - packages/lucide-react/**
       - pnpm-lock.yaml
-  push:
-    paths:
-      - packages/lucide-react/**
-      - pnpm-lock.yaml
 
 jobs:
   lucide-react:
