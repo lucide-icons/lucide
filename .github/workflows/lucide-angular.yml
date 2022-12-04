@@ -5,10 +5,6 @@ on:
     paths:
       - packages/lucide-angular/**
       - pnpm-lock.yaml
-  push:
-    paths:
-      - packages/lucide-angular/**
-      - pnpm-lock.yaml
 
 jobs:
   lucide-angular:
