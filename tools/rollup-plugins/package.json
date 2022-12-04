@@ -9,6 +9,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@atomico/rollup-plugin-sizes": "^1.1.4",
     "esbuild": "^0.15.16",
     "rollup": "^3.5.1",
     "rollup-plugin-esbuild": "^4.10.2",

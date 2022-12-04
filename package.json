@@ -28,7 +28,6 @@
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}"
   },
   "devDependencies": {
-    "@atomico/rollup-plugin-sizes": "^1.1.4",
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",

@@ -4,7 +4,6 @@ importers:
 
   .:
     specifiers:
-      '@atomico/rollup-plugin-sizes': ^1.1.4
       eslint: ^8.26.0
       eslint-config-airbnb-base: ^15.0.0
       eslint-config-prettier: ^8.5.0
@@ -18,7 +17,6 @@ importers:
       svgo: ^3.0.0
       svgson: ^5.2.1
     devDependencies:
-      '@atomico/rollup-plugin-sizes': 1.1.4
       eslint: 8.27.0
       eslint-config-airbnb-base: 15.0.0_dcpv4nbdr5ks2h5677xdltrk6e
       eslint-config-prettier: 8.5.0_eslint@8.27.0
@@ -440,12 +438,14 @@ importers:
 
   tools/rollup-plugins:
     specifiers:
+      '@atomico/rollup-plugin-sizes': ^1.1.4
       esbuild: ^0.15.16
       rollup: ^3.5.1
       rollup-plugin-esbuild: ^4.10.2
       rollup-plugin-license: ^3.0.1
       rollup-plugin-visualizer: ^5.8.3
     dependencies:
+      '@atomico/rollup-plugin-sizes': 1.1.4_rollup@3.5.1
       esbuild: 0.15.16
       rollup: 3.5.1
       rollup-plugin-esbuild: 4.10.2_okdlgivigpskxpa36mtdz7r5se
@@ -758,15 +758,16 @@ packages:
     resolution: {integrity: sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==}
     dev: true
 
-  /@atomico/rollup-plugin-sizes/1.1.4:
+  /@atomico/rollup-plugin-sizes/1.1.4_rollup@3.5.1:
     resolution: {integrity: sha512-ilxLw9hT+kWXIx8mYoAFLA2eIVfLrsnabPCaGo5Mkrj8qxhEkZvFddcnH2HTp/hDKFEIJRpZVpXecsPp3FOdRw==}
     peerDependencies:
       rollup: 1.x || 2.x
     dependencies:
       brotli-size: 4.0.0
       gzip-size: 5.1.1
+      rollup: 3.5.1
       simple-string-table: 1.0.0
-    dev: true
+    dev: false
 
   /@babel/code-frame/7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
@@ -9600,7 +9601,7 @@ packages:
     engines: {node: '>= 10.16.0'}
     dependencies:
       duplexer: 0.1.1
-    dev: true
+    dev: false
 
   /browser-process-hrtime/1.0.0:
     resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
@@ -10989,11 +10990,11 @@ packages:
 
   /duplexer/0.1.1:
     resolution: {integrity: sha512-sxNZ+ljy+RA1maXoUReeqBBpBC6RLKmg5ewzV+x+mSETmWNoKdZN6vcQjpFROemza23hGFskJtFNoUWUaQ+R4Q==}
-    dev: true
+    dev: false
 
   /duplexer/0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
-    dev: true
+    dev: false
 
   /eastasianwidth/0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -13289,7 +13290,7 @@ packages:
     dependencies:
       duplexer: 0.1.2
       pify: 4.0.1
-    dev: true
+    dev: false
 
   /handle-thing/2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
@@ -17298,7 +17299,6 @@ packages:
   /pify/4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
-    dev: true
 
   /pinkie-promise/2.0.1:
     resolution: {integrity: sha512-0Gni6D4UcLTbv9c57DfxDGdr41XfgUjqWZu492f0cIGr16zDU06BWP/RAEvOuo7CQ0CNjHaLlM59YJJFm3NWlw==}
@@ -19445,7 +19445,7 @@ packages:
 
   /simple-string-table/1.0.0:
     resolution: {integrity: sha512-iflPccjsYtTN+Rqj35v/G+i9A04g2HgOPkPp/B5evznUD4VZ4egi/qcFwrUHgGZwJMZz+Aq5elow4Qqsodfflw==}
-    dev: true
+    dev: false
 
   /simple-swizzle/0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}

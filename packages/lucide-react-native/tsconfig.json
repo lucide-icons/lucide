@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "ESNext",
-    "types": ["react-native"],
     "lib": [
       "es2019",
       "DOM"
