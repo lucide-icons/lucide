@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "rectangle",
+    "aspect ratio",
+    "9:16",
+    "vertical",
+    "shape"
+  ],
+  "categories": [
+    "shapes",
+    "design"
+  ]
+}

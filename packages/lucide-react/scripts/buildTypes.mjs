@@ -5,10 +5,10 @@ import {
   resetFile,
   toPascalCase,
   writeFile,
-  getCurrentDirPath
+  getCurrentDirPath,
 } from '../../../scripts/helpers.mjs';
 
-const currentDir = getCurrentDirPath(import.meta.url)
+const currentDir = getCurrentDirPath(import.meta.url);
 const srcDirectory = path.join(currentDir, '../dist');
 
 // Declare type definitions
@@ -38,7 +38,7 @@ writeFile(typeDefinitions, TYPES_FILE, srcDirectory);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-svgFiles.forEach(svgFile => {
+svgFiles.forEach((svgFile) => {
   const iconName = path.basename(svgFile, '.svg');
   const componentName = toPascalCase(iconName);
 

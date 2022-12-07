@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "device",
+    "scroll",
+    "click"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

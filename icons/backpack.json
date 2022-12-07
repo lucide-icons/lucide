@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bag",
+    "hiking",
+    "travel",
+    "camping",
+    "school",
+    "childhood"
+  ],
+  "categories": [
+    "gaming",
+    "photography",
+    "travel"
+  ]
+}

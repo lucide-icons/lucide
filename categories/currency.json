@@ -1,0 +1,5 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Currency",
+  "icon": "dollar-sign"
+}

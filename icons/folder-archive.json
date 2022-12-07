@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "archive",
+    "zip",
+    "package"
+  ],
+  "categories": [
+    "files"
+  ]
+}

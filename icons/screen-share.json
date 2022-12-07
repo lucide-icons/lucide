@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "host",
+    "desktop"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "communication"
+  ]
+}

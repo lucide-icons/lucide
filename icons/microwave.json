@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "oven",
+    "cooker",
+    "toaster oven",
+    "bake"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
