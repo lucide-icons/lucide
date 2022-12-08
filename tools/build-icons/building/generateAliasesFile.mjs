@@ -1,10 +1,14 @@
 import path from 'path';
 import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
 
+const getImportString = (componentName, iconName) =>
+  `export { default as ${componentName}Icon } from './icons/${iconName}';\n`;
+
 export default function generateAliasesFile({
   iconNodes,
   outputDirectory,
   fileExtension,
+  aliases,
   showLog = true,
 }) {
   const fileName = path.basename(`aliases${fileExtension}`);
@@ -16,7 +20,21 @@ export default function generateAliasesFile({
   // Generate Import for Icon VNodes
   icons.forEach((iconName) => {
     const componentName = toPascalCase(iconName);
-    const importString = `export { default as ${componentName}Icon } from './icons/${iconName}';\n\n`;
+    const iconAliases = aliases[iconName]?.aliases;
+
+    let importString = `// ${componentName} aliases\n`;
+
+    importString += getImportString(componentName, iconName);
+
+    if (iconAliases != null && Array.isArray(iconAliases)) {
+      iconAliases.forEach((alias) => {
+        const componentNameAlias = toPascalCase(alias);
+        importString += getImportString(componentNameAlias, iconName);
+      });
+    }
+
+    importString += '\n';
+
     appendFile(importString, fileName, outputDirectory);
   });
 

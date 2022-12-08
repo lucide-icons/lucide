@@ -52,10 +52,19 @@ async function buildIcons() {
     pretty: JSON.parse(pretty),
   });
 
-  console.log(iconFileExtension);
   if (withAliases) {
+    const iconJsons = readSvgDirectory(ICONS_DIR, '.json');
+    const aliasesEntries = await Promise.all(
+      iconJsons.map(async (jsonFile) => {
+        const file = await import( path.join(ICONS_DIR, jsonFile), { assert: { type: 'json' } });
+        return [path.basename(jsonFile, '.json'), file.default]
+      })
+    )
+    const aliases = Object.fromEntries(aliasesEntries)
+
     generateAliasesFile({
       iconNodes: icons,
+      aliases,
       outputDirectory: OUTPUT_DIR,
       fileExtension: iconFileExtension,
       showLog: !silent,

@@ -165,6 +165,7 @@ importers:
     specifiers:
       '@lucide/build-icons': workspace:*
       '@lucide/rollup-plugins': workspace:*
+      '@rollup/plugin-replace': ^5.0.1
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^11.2.6
       '@types/prop-types': ^15.7.5
@@ -180,6 +181,7 @@ importers:
     devDependencies:
       '@lucide/build-icons': link:../../tools/build-icons
       '@lucide/rollup-plugins': link:../../tools/rollup-plugins
+      '@rollup/plugin-replace': 5.0.1_rollup@3.5.1
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 11.2.7_sfoxds7t5ydpegc3knd667wn6m
       '@types/prop-types': 15.7.5

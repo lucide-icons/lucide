@@ -15,4 +15,5 @@ stats
 outlined
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
+packages/**/src/aliases.ts
 packages/**/LICENSE

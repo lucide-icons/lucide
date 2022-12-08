@@ -1,6 +1,5 @@
 import path from 'path';
 import {
-  appendFile,
   readSvgDirectory,
   resetFile,
   toPascalCase,
@@ -11,39 +10,64 @@ import {
 const currentDir = getCurrentDirPath(import.meta.url);
 const srcDirectory = path.join(currentDir, '../dist');
 
-// Declare type definitions
-const typeDefinitions = `\
+const writeDeclarationFiles = (typesFile, directory, content) => {
+  resetFile(typesFile, directory);
+  writeFile(content, typesFile, directory);
+};
+
+const ICONS_DIR = path.resolve(currentDir, '../../../icons');
+const MAIN_TYPES_FILE = 'lucide-react.d.ts';
+const ICONS_TYPES_FILE = 'icons.d.ts';
+const PROPS_TYPES_FILE = 'props.d.ts';
+
+writeDeclarationFiles(
+  MAIN_TYPES_FILE,
+  srcDirectory,
+  `\
 /// <reference types="react" />
-import { SVGAttributes } from 'react'
+import { FC } from 'react'
+import { LucideProps } from './props';
 
 declare module 'lucide-react'
 
-// Create interface extending SVGProps
-export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
-    size?: string | number
-}
-
 export declare const createReactComponent: (iconName: string, iconNode: any[]) => (props: LucideProps) => JSX.Element;
 
-export type Icon = React.FC<LucideProps>;
+export type Icon = FC<LucideProps>;
+`,
+);
 
-// Generated icons
+console.log(`Generated ${MAIN_TYPES_FILE} file`);
+
+writeDeclarationFiles(
+  PROPS_TYPES_FILE,
+  srcDirectory,
+  `\
+/// <reference types="react" />
+import { SVGAttributes, FC, SVGProps } from 'react'
+
+// Create interface extending SVGProps
+export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
+    size?: string | number
+}
+`,
+);
+
+console.log(`Generated ${PROPS_TYPES_FILE} file`);
+
+let iconsFileExports = `\
+import { LucideProps } from './props';
+
+// Generated icon
 `;
-
-const ICONS_DIR = path.resolve(currentDir, '../../../icons');
-const TYPES_FILE = 'lucide-react.d.ts';
-
-resetFile(TYPES_FILE, srcDirectory);
-writeFile(typeDefinitions, TYPES_FILE, srcDirectory);
-
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
 svgFiles.forEach((svgFile) => {
   const iconName = path.basename(svgFile, '.svg');
   const componentName = toPascalCase(iconName);
 
-  const exportTypeString = `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
-  appendFile(exportTypeString, TYPES_FILE, srcDirectory);
+  iconsFileExports += `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
 });
 
-console.log(`Generated ${TYPES_FILE} file with`, svgFiles.length, 'icons');
+writeDeclarationFiles(ICONS_TYPES_FILE, srcDirectory, iconsFileExports);
+
+console.log(`Generated ${ICONS_TYPES_FILE} file with`, svgFiles.length, 'icons');
