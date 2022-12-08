@@ -10,13 +10,13 @@ export default (inputEntry, outputDirectory, iconNodes, iconFileExtension = '') 
 
   const icons = Object.keys(iconNodes);
 
-  const fileExtention =
+  const fileExtension =
     iconFileExtension === '.ts' || iconFileExtension === '.js' ? '' : iconFileExtension;
 
   // Generate Import for Icon VNodes
   icons.forEach((iconName) => {
     const componentName = toPascalCase(iconName);
-    const importString = `export { default as ${componentName} } from './${iconName}${fileExtention}';\n`;
+    const importString = `export { default as ${componentName} } from './${iconName}${fileExtension}';\n`;
     appendFile(importString, fileName, outputDirectory);
   });
 

@@ -8,6 +8,7 @@ import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
 import { readSvgDirectory, getCurrentDirPath } from '../../scripts/helpers.mjs';
+import generateAliasesFile from './building/generateAliasesFile.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -26,6 +27,7 @@ const {
   silent = false,
   iconFileExtension = '.js',
   exportFileName = 'index.js',
+  withAliases = false,
   pretty = true,
 } = cliArguments;
 
@@ -49,6 +51,16 @@ async function buildIcons() {
     iconFileExtension,
     pretty: JSON.parse(pretty),
   });
+
+  console.log(iconFileExtension);
+  if (withAliases) {
+    generateAliasesFile({
+      iconNodes: icons,
+      outputDirectory: OUTPUT_DIR,
+      fileExtension: iconFileExtension,
+      showLog: !silent,
+    });
+  }
 
   // Generates entry files for the compiler filled with icons exports
   generateExportsFile(
