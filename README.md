@@ -17,9 +17,10 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 
 ### Why choose Lucide over Feather Icons
 
-- Lucide already expanded the icon set by 130+ in less than a year, so more icons to work with.
+- More icons to work with: Lucide already has hundreds of icons more than Feather does.
+- Official librairies and integrations with popular frameworks and design tools.
 - Well maintained code base.
-- Active community.
+- Active community, regularly growing and improving the set.
 
 ## Table of Contents
 
@@ -37,6 +38,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
+  - [Hyva](#hyva)
 - [Contributing](#contributing)
 - [Community](#community)
 - [License](#license)
@@ -238,6 +240,16 @@ npm install lucide-solid
 ```
 
 For more details, see the [documentation](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-solid#lucide-solid).
+
+### Hyva
+
+Implementation of Lucide icon's using Hyvä's svg php viewmodal to render icons for Magento 2 Hyva theme based projects.
+
+```sh
+composer require siteation/magento2-hyva-icons-lucide
+```
+
+For more details, see the [documentation](https://github.com/Siteation/magento2-hyva-icons-lucide/blob/main/README.md).
 
 ## Contributing
 

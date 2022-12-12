@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "crotchet",
+    "minim",
+    "quarter note",
+    "half note",
+    "note"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ]
+}

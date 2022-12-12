@@ -4,9 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-static/**
-  push:
-    paths:
-      - packages/lucide-static/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-static:

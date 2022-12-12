@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "arrows",
+    "axis",
+    "gizmo",
+    "coordinates",
+    "transform",
+    "translate"
+  ],
+  "categories": [
+    "design"
+  ]
+}

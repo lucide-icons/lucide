@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "count",
+    "calculating machine"
+  ],
+  "categories": [
+    "maths"
+  ]
+}

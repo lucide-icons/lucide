@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "playlist",
+    "remove",
+    "song",
+    "subtract",
+    "delete",
+    "unqueue"
+  ],
+  "categories": [
+    "multimedia",
+    "text"
+  ]
+}

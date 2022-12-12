@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "garbage",
+    "delete",
+    "remove",
+    "bin"
+  ],
+  "categories": [
+    "files",
+    "mail"
+  ]
+}

@@ -1,17 +1,16 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { toPascalCase } from '../helpers.mjs';
 
-export default function({
+export default ({
   iconNodes,
   outputDirectory,
   template,
   showLog = true,
-  iconFileExtention = '.js',
+  iconFileExtension = '.js',
   pretty = true,
-}) {
+}) => {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -19,8 +18,8 @@ export default function({
     fs.mkdirSync(iconsDistDirectory);
   }
 
-  const writeIconFiles = icons.map(async iconName => {
-    const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtention}`);
+  const writeIconFiles = icons.map(async (iconName) => {
+    const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtension}`);
     const componentName = toPascalCase(iconName);
 
     let { children } = iconNodes[iconName];
@@ -44,7 +43,7 @@ export default function({
         console.log('Successfully built', icons.length, 'icons.');
       }
     })
-    .catch(error => {
+    .catch((error) => {
       throw new Error(`Something went wrong generating icon files,\n ${error}`);
     });
-}
+};

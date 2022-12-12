@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "award",
+    "achievement",
+    "badge"
+  ],
+  "categories": [
+    "files"
+  ]
+}

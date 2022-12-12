@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "logo",
+    "social"
+  ],
+  "categories": [
+    "brands",
+    "social",
+    "account"
+  ]
+}

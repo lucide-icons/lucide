@@ -1,7 +1,7 @@
 {
   "name": "lucide-angular",
   "description": "A Lucide icon library package for Angular applications",
-  "version": "0.93.0",
+  "version": "0.104.0",
   "author": "SMAH1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-angular"
+  },
+  "publishConfig": {
+    "directory": "dist"
   },
   "keywords": [
     "Lucide",
@@ -25,7 +28,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:ng",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtention=.ts --exportFileName=index.ts",
+    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --exportFileName=index.ts",
     "build:ng": "ng build  --configuration production",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
@@ -48,16 +51,16 @@
     "@types/jasmine": "~4.3.0",
     "@types/node": "^18.11.4",
     "codelyzer": "^6.0.2",
-    "jasmine-core": "~4.4.0",
+    "jasmine-core": "~3.10.1",
     "jasmine-spec-reporter": "~7.0.0",
-    "karma": "~6.4.1",
-    "karma-chrome-launcher": "~3.1.1",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "^2.0.0",
+    "karma": "~6.3.14",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0",
     "ng-packagr": "^14.2.1",
     "protractor": "~7.0.0",
-    "puppeteer": "^19.1.0",
+    "puppeteer": "^8.0.0",
     "rxjs": "7.5.7",
     "ts-node": "~10.9.1",
     "tslint": "~6.1.0",
@@ -65,4 +68,3 @@
     "zone.js": "^0.11.8"
   }
 }
-

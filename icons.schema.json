@@ -1,0 +1,84 @@
+{
+  "$id": "https://lucide.dev/icons.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$vocabulary": {
+    "https://json-schema.org/draft/2020-12/vocab/core": true,
+    "https://json-schema.org/draft/2020-12/vocab/applicator": true,
+    "https://json-schema.org/draft/2020-12/vocab/unevaluated": true,
+    "https://json-schema.org/draft/2020-12/vocab/validation": true,
+    "https://json-schema.org/draft/2020-12/vocab/meta-data": true,
+    "https://json-schema.org/draft/2020-12/vocab/format-annotation": true,
+    "https://json-schema.org/draft/2020-12/vocab/content": true
+  },
+
+  "title": "Lucide Icons schema",
+  "type": "object",
+  "properties": {
+    "icons": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/types/icon"
+      }
+    },
+    "categories": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/types/category"
+      }
+    }
+  },
+  "$defs": {
+    "types": {
+      "icon": {
+        "type": "object",
+        "properties": {
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/types/category-reference"
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "category": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "$ref": "#/$defs/types/icon-reference"
+          },
+          "weight": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title",
+          "icon"
+        ]
+      },
+      "icon-reference": {
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "category-reference": {
+        "type": "string",
+        "format": "uri-reference"
+      }
+    }
+  },
+  "description": "A JSON Schema for icons, tags & categories defined by Lucide Icons."
+}

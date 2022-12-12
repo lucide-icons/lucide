@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "navigation",
+    "safari",
+    "travel",
+    "direction"
+  ],
+  "categories": [
+    "transportation",
+    "navigation",
+    "maps",
+    "photography",
+    "gaming"
+  ]
+}

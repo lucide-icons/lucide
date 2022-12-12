@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "hearing",
+    "hard of hearing",
+    "hearing loss",
+    "deafness",
+    "noise",
+    "silence",
+    "audio",
+    "accessibility"
+  ],
+  "categories": [
+    "medical",
+    "accessibility"
+  ]
+}
