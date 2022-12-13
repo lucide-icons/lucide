@@ -1,5 +1,4 @@
 import { forwardRef, createElement, ReactSVG, SVGProps } from 'react';
-import PropTypes from 'prop-types';
 import defaultAttributes from './defaultAttributes';
 
 type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
@@ -42,12 +41,6 @@ const createReactComponent = (iconName: string, iconNode: IconNode) => {
         ],
       ),
   );
-
-  Component.propTypes = {
-    color: PropTypes.string,
-    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  };
 
   Component.displayName = `${iconName}`;
 
