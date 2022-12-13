@@ -837,15 +837,15 @@ export { default as EarIcon } from './icons/ear';
 
 // Edit2 aliases
 export { default as Edit2Icon } from './icons/edit-2';
-export { default as PenIcon } from './icons/edit-2';
+export { default as Pen } from './icons/edit-2';
 
 // Edit3 aliases
 export { default as Edit3Icon } from './icons/edit-3';
-export { default as PenLineIcon } from './icons/edit-3';
+export { default as PenLine } from './icons/edit-3';
 
 // Edit aliases
 export { default as EditIcon } from './icons/edit';
-export { default as PenBoxIcon } from './icons/edit';
+export { default as PenBox } from './icons/edit';
 
 // EggFried aliases
 export { default as EggFriedIcon } from './icons/egg-fried';

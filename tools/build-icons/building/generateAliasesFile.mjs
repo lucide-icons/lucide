@@ -2,7 +2,7 @@ import path from 'path';
 import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
 
 const getImportString = (componentName, iconName) =>
-  `export { default as ${componentName}Icon } from './icons/${iconName}';\n`;
+  `export { default as ${componentName} } from './icons/${iconName}';\n`;
 
 export default function generateAliasesFile({
   iconNodes,
@@ -24,7 +24,7 @@ export default function generateAliasesFile({
 
     let importString = `// ${componentName} aliases\n`;
 
-    importString += getImportString(componentName, iconName);
+    importString += getImportString(`${componentName}Icon`, iconName);
 
     if (iconAliases != null && Array.isArray(iconAliases)) {
       iconAliases.forEach((alias) => {

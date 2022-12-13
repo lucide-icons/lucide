@@ -1,4 +1,6 @@
 import path from 'path';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { getAliases } from '@lucide/build-icons';
 import {
   readSvgDirectory,
   resetFile,
@@ -18,6 +20,7 @@ const writeDeclarationFiles = (typesFile, directory, content) => {
 const ICONS_DIR = path.resolve(currentDir, '../../../icons');
 const MAIN_TYPES_FILE = 'lucide-react.d.ts';
 const ICONS_TYPES_FILE = 'icons.d.ts';
+const ALIASES_TYPES_FILE = 'aliases.d.ts';
 const PROPS_TYPES_FILE = 'props.d.ts';
 
 writeDeclarationFiles(
@@ -33,6 +36,9 @@ declare module 'lucide-react'
 export declare const createReactComponent: (iconName: string, iconNode: any[]) => (props: LucideProps) => JSX.Element;
 
 export type Icon = FC<LucideProps>;
+
+export * from './icons';
+export * from './aliases';
 `,
 );
 
@@ -71,3 +77,33 @@ svgFiles.forEach((svgFile) => {
 writeDeclarationFiles(ICONS_TYPES_FILE, srcDirectory, iconsFileExports);
 
 console.log(`Generated ${ICONS_TYPES_FILE} file with`, svgFiles.length, 'icons');
+
+console.log('aliases');
+const aliases = await getAliases(ICONS_DIR);
+
+let aliasesExports = `\n
+import { LucideProps } from './props';
+
+// Generated icon aliases
+`;
+svgFiles.forEach((svgFile) => {
+  const iconName = path.basename(svgFile, '.svg');
+  const componentName = toPascalCase(iconName);
+  const iconAliases = aliases[iconName]?.aliases;
+
+  aliasesExports += `// ${componentName} aliases\n`;
+  aliasesExports += `export declare const ${componentName}Icon: (props: LucideProps) => JSX.Element;\n`;
+
+  if (iconAliases != null && Array.isArray(iconAliases)) {
+    iconAliases.forEach((alias) => {
+      const componentNameAlias = toPascalCase(alias);
+      aliasesExports += `export declare const ${componentNameAlias}: (props: LucideProps) => JSX.Element;\n`;
+    });
+  }
+
+  aliasesExports += '\n';
+});
+
+writeDeclarationFiles(ALIASES_TYPES_FILE, srcDirectory, aliasesExports);
+
+console.log(`Generated ${ALIASES_TYPES_FILE} file`);

@@ -9,6 +9,7 @@ import generateExportsFile from './building/generateExportsFile.mjs';
 
 import { readSvgDirectory, getCurrentDirPath } from '../../scripts/helpers.mjs';
 import generateAliasesFile from './building/generateAliasesFile.mjs';
+import getAliases from './utils/getAliases.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -53,14 +54,7 @@ async function buildIcons() {
   });
 
   if (withAliases) {
-    const iconJsons = readSvgDirectory(ICONS_DIR, '.json');
-    const aliasesEntries = await Promise.all(
-      iconJsons.map(async (jsonFile) => {
-        const file = await import( path.join(ICONS_DIR, jsonFile), { assert: { type: 'json' } });
-        return [path.basename(jsonFile, '.json'), file.default]
-      })
-    )
-    const aliases = Object.fromEntries(aliasesEntries)
+    const aliases = await getAliases(ICONS_DIR);
 
     generateAliasesFile({
       iconNodes: icons,

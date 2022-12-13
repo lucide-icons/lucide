@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.mjs",
+  "type":"module",
   "scripts": {
     "start": "node ./main.mjs"
   },
