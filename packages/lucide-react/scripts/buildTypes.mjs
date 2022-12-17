@@ -70,6 +70,7 @@ svgFiles.forEach((svgFile) => {
 
   declarationFileContent += `// ${componentName} aliases\n`;
   declarationFileContent += `export declare const ${componentName}Icon: LucideIcon;\n`;
+  declarationFileContent += `export declare const Lucide${componentName}: LucideIcon;\n`;
   aliasesCount += 1;
   if (iconAliases != null && Array.isArray(iconAliases)) {
     iconAliases.forEach((alias) => {

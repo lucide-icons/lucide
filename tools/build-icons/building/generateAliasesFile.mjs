@@ -25,6 +25,7 @@ export default function generateAliasesFile({
     let importString = `// ${componentName} aliases\n`;
 
     importString += getImportString(`${componentName}Icon`, iconName);
+    importString += getImportString(`Lucide${componentName}`, iconName);
 
     if (iconAliases != null && Array.isArray(iconAliases)) {
       iconAliases.forEach((alias) => {
