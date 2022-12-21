@@ -39,7 +39,19 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: [
+        ...(
+          format !== 'esm' ? [
+            replace({
+              "export * from './aliases';": '',
+              "export * as icons from './icons';": '',
+              delimiters: ['', ''],
+              preventAssignment: false,
+            }),
+          ] : []
+        ),
+        ...plugins(pkg, minify)
+      ],
       external: ['preact', 'prop-types'],
       output: {
         name: packageName,

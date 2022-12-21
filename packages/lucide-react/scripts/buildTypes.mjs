@@ -18,7 +18,7 @@ const writeDeclarationFile = (typesFile, directory, content) => {
 };
 
 const ICONS_DIR = path.resolve(currentDir, '../../../icons');
-const MAIN_TYPES_FILE = 'lucide-react.d.ts';
+const TYPES_FILE = 'lucide-react.d.ts';
 
 let declarationFileContent = `\
 /// <reference types="react" />
@@ -36,9 +36,6 @@ export type LucideIcon = (props: LucideProps) => JSX.Element;
 export declare const createReactComponent: (iconName: string, iconNode: any[]) => LucideIcon;
 
 export type Icon = FC<LucideProps>;
-`;
-
-declarationFileContent += `\
 
 // Generated icon
 `;
@@ -52,11 +49,9 @@ svgFiles.forEach((svgFile) => {
   declarationFileContent += `export declare const ${componentName}: LucideIcon;\n`;
 });
 
-console.log('aliases');
 const aliases = await getAliases(ICONS_DIR);
 
 declarationFileContent += `\n
-import { LucideProps } from './props';
 
 // Generated icon aliases
 `;
@@ -84,9 +79,9 @@ svgFiles.forEach((svgFile) => {
   declarationFileContent += '\n';
 });
 
-writeDeclarationFile(MAIN_TYPES_FILE, srcDirectory, declarationFileContent);
+writeDeclarationFile(TYPES_FILE, srcDirectory, declarationFileContent);
 console.log(
-  `Generated ${MAIN_TYPES_FILE} file with`,
+  `Generated ${TYPES_FILE} file with`,
   svgFiles.length,
   'icons and with',
   aliasesCount,

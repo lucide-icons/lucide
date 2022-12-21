@@ -1,14 +1,13 @@
-import { ComponentType, h, JSX, toChildArray } from 'preact';
+import { ComponentType, h, JSX, RefObject, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 
 type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
 
-interface LucideProps extends Omit<JSX.SVGAttributes<SVGElement>, "ref" | "size"> {
+interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
+  color?: string
   size?: string | number
-  color: string
+  strokeWidth?: string | number
 }
-
-
 
 /**
  * Converts string to KebabCase
