@@ -1,4 +1,4 @@
-import { ComponentType, h, JSX, RefObject, toChildArray } from 'preact';
+import { ComponentType, FunctionComponent, h, JSX, RefObject, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 
 type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
@@ -19,7 +19,7 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
  */
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createPreactComponent = (iconName: string, iconNode: IconNode) => {
+const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionComponent<LucideProps> => {
   const Component = (
     { color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }: LucideProps
   ) =>
@@ -42,4 +42,4 @@ const createPreactComponent = (iconName: string, iconNode: IconNode) => {
   return Component;
 };
 
-export default createPreactComponent
+export default createLucideIcon

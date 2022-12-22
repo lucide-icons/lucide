@@ -1,4 +1,5 @@
 import plugins from '@lucide/rollup-plugins';
+import replace from '@rollup/plugin-replace';
 import pkg from './package.json' assert { type: "json" };
 
 const packageName = 'LucidePreact';

@@ -35,6 +35,10 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
 
 export type LucideIcon = (props: LucideProps) => JSX.Element;
 
+export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
+
+export declare const createLucideIcon: (iconName: string, iconNode: IconNode) => LucideIcon;
+
 // Generated icons
 `;
 
