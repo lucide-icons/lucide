@@ -1,10 +1,10 @@
-import plugins from '../../rollup.plugins.mjs';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: "json" };
 
 const packageName = 'LucidePreact';
 const outputFileName = 'lucide-preact';
 const outputDir = 'dist';
-const inputs = [`src/lucide-preact.js`];
+const inputs = [`src/lucide-preact.ts`];
 const bundles = [
   {
     format: 'umd',
@@ -22,17 +22,35 @@ const bundles = [
     inputs,
     outputDir,
   },
+  {
+    format: 'es',
+    inputs,
+    outputDir,
+  },
+  {
+    format: 'esm',
+    inputs,
+    outputDir,
+    preserveModules: true,
+  },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
       external: ['preact', 'prop-types'],
       output: {
         name: packageName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
+        preserveModules,
         format,
         sourcemap: true,
         globals: {
