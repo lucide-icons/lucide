@@ -10,7 +10,7 @@ export interface LucideProps extends SvgProps {
   size?: string | number
 }
 
-const createReactComponent = (iconName: string, iconNode: IconNode) => {
+const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef(
     ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }: LucideProps, ref) =>
       createElement(
@@ -45,4 +45,4 @@ const createReactComponent = (iconName: string, iconNode: IconNode) => {
   return Component;
 };
 
-export default createReactComponent;
+export default createLucideIcon;

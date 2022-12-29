@@ -24,11 +24,6 @@ const bundles = [
     preserveModules: true,
   },
   {
-    format: 'es',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'esm',
     inputs,
     outputDir,

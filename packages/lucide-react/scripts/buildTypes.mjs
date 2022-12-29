@@ -22,13 +22,13 @@ const TYPES_FILE = 'lucide-react.d.ts';
 
 let declarationFileContent = `\
 /// <reference types="react" />
-import { SVGAttributes, FC, SVGProps } from 'react'
+import { SVGAttributes, FC, SVGProps, ReactSVG } from 'react'
 
 declare module 'lucide-react'
 
 // Create interface extending SVGProps
 export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
-    size?: string | number
+  size?: string | number
 }
 
 export type LucideIcon = (props: LucideProps) => JSX.Element;
