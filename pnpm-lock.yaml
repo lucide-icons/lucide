@@ -364,6 +364,8 @@ importers:
   site:
     specifiers:
       '@chakra-ui/react': 1.8.8
+      '@emotion/react': ^11.10.5
+      '@emotion/styled': ^11.10.5
       '@mdx-js/loader': ^1.6.22
       '@mdx-js/react': ^1.6.22
       '@next/eslint-plugin-next': ^12.2.5
@@ -1956,7 +1958,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-numeric-separator': 7.10.4_@babel+core@7.18.13
     dev: false
 
@@ -2182,7 +2184,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.13
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2217,7 +2219,7 @@ packages:
       '@babel/core': 7.18.13
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-private-property-in-object': 7.14.5_@babel+core@7.18.13
     transitivePeerDependencies:
       - supports-color
@@ -3886,7 +3888,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.13
       '@babel/helper-module-transforms': 7.18.9
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/helper-simple-access': 7.18.6
       babel-plugin-dynamic-import-node: 2.3.3
     transitivePeerDependencies:
@@ -4290,7 +4292,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.18.13
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
     dev: false
 
   /@babel/plugin-transform-react-display-name/7.18.6_@babel+core@7.20.2:
@@ -4303,7 +4305,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.20.2
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
 
   /@babel/plugin-transform-react-jsx-development/7.18.6:
     resolution: {integrity: sha512-SA6HEjwYFKF7WDjWcMcMGUimmw/nhNRDWxr+KaLSCrkD/LMDBvWRmHAYgE1HDeF8KUuI8OAu+RT6EOtKxSW2qA==}
@@ -4429,7 +4431,7 @@ packages:
       '@babel/core': 7.18.13
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-module-imports': 7.18.6
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.18.13
       '@babel/types': 7.20.2
 
@@ -4445,7 +4447,7 @@ packages:
       '@babel/core': 7.20.2
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-module-imports': 7.18.6
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-jsx': 7.18.6_@babel+core@7.20.2
       '@babel/types': 7.20.2
     dev: false
@@ -21287,6 +21289,30 @@ packages:
     dependencies:
       ansi-escapes: 4.3.2
       supports-hyperlinks: 2.2.0
+    dev: true
+
+  /terser-webpack-plugin/5.3.5_webpack@5.74.0:
+    resolution: {integrity: sha512-AOEDLDxD2zylUGf/wxHxklEkOe2/r+seuyOWujejFrIxHf11brA1/dWQNIgXa1c6/Wkxgu7zvv0JhOWfc2ELEA==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      '@swc/core': '*'
+      esbuild: '*'
+      uglify-js: '*'
+      webpack: ^5.1.0
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      esbuild:
+        optional: true
+      uglify-js:
+        optional: true
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.15
+      jest-worker: 27.5.1
+      schema-utils: 3.1.1
+      serialize-javascript: 6.0.0
+      terser: 5.14.2
+      webpack: 5.74.0
     dev: true
 
   /terser-webpack-plugin/5.3.5_webpack@5.74.0:
