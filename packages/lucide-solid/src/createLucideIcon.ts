@@ -1,16 +1,7 @@
 import h from 'solid-js/h';
-import { JSX, splitProps } from 'solid-js';
+import { splitProps } from 'solid-js';
 import defaultAttributes from './defaultAttributes';
-
-type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
-
-interface LucideProps extends Partial<JSX.SvgSVGAttributes<SVGSVGElement>> {
-  key?: string | number;
-  color?: string
-  size?: string | number
-  strokeWidth?: string | number
-  class?: string
-}
+import { IconNode, LucideProps } from './types';
 
 /**
  * Converts string to KebabCase
@@ -22,7 +13,7 @@ interface LucideProps extends Partial<JSX.SvgSVGAttributes<SVGSVGElement>> {
  */
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-export default (iconName: string, iconNode: IconNode) => {
+const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = (props: LucideProps) => {
     const [localProps, rest] = splitProps(props, [
       'color',
@@ -55,3 +46,5 @@ export default (iconName: string, iconNode: IconNode) => {
   Component.displayName = `${iconName}`;
   return Component;
 };
+
+export default createLucideIcon

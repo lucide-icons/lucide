@@ -4,10 +4,11 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import license from 'rollup-plugin-license';
 import esbuild from 'rollup-plugin-esbuild';
 
-const plugins = (pkg, minify) =>
+const plugins = (pkg, minify, esbuildOptions = {}) =>
   [
     esbuild({
       minify,
+      ...esbuildOptions,
     }),
     license({
       banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
