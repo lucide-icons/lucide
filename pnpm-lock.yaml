@@ -406,6 +406,8 @@ importers:
       typescript: ^4.3.5
     dependencies:
       '@chakra-ui/react': 1.8.8_vt5jn3lkv6hocyebmjm7gusm6e
+      '@emotion/react': 11.10.5_bdzrcjszn4u4ksnkedit7lnkp4
+      '@emotion/styled': 11.10.5_3a2oyic74zqylcbnhvpbamm3xa
       '@mdx-js/loader': 1.6.22_react@17.0.2
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@next/mdx': 11.1.4_6vwedlnwdegenaf6jioaeirvlu
@@ -1958,7 +1960,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.18.13
-      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-plugin-utils': 7.18.9
       '@babel/plugin-syntax-numeric-separator': 7.10.4_@babel+core@7.18.13
     dev: false
 
@@ -2184,7 +2186,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.13
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
-      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-plugin-utils': 7.18.9
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2219,7 +2221,7 @@ packages:
       '@babel/core': 7.18.13
       '@babel/helper-annotate-as-pure': 7.18.6
       '@babel/helper-create-class-features-plugin': 7.18.13_@babel+core@7.18.13
-      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-plugin-utils': 7.18.9
       '@babel/plugin-syntax-private-property-in-object': 7.14.5_@babel+core@7.18.13
     transitivePeerDependencies:
       - supports-color
@@ -3888,7 +3890,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.13
       '@babel/helper-module-transforms': 7.18.9
-      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-plugin-utils': 7.18.9
       '@babel/helper-simple-access': 7.18.6
       babel-plugin-dynamic-import-node: 2.3.3
     transitivePeerDependencies:
@@ -4279,7 +4281,7 @@ packages:
       '@babel/core':
         optional: true
     dependencies:
-      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-plugin-utils': 7.20.2
     dev: true
 
   /@babel/plugin-transform-react-display-name/7.18.6_@babel+core@7.18.13:
@@ -21289,30 +21291,6 @@ packages:
     dependencies:
       ansi-escapes: 4.3.2
       supports-hyperlinks: 2.2.0
-    dev: true
-
-  /terser-webpack-plugin/5.3.5_webpack@5.74.0:
-    resolution: {integrity: sha512-AOEDLDxD2zylUGf/wxHxklEkOe2/r+seuyOWujejFrIxHf11brA1/dWQNIgXa1c6/Wkxgu7zvv0JhOWfc2ELEA==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      '@swc/core': '*'
-      esbuild: '*'
-      uglify-js: '*'
-      webpack: ^5.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      esbuild:
-        optional: true
-      uglify-js:
-        optional: true
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.15
-      jest-worker: 27.5.1
-      schema-utils: 3.1.1
-      serialize-javascript: 6.0.0
-      terser: 5.14.2
-      webpack: 5.74.0
     dev: true
 
   /terser-webpack-plugin/5.3.5_webpack@5.74.0:
