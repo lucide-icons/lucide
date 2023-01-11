@@ -33,6 +33,8 @@ interface LucideProps extends Partial<JSX.SvgSVGAttributes<SVGSVGElement>> {
   class?: string
 }
 
+export type LucideIcon = (props: LucideProps) => JSX.Element;
+
 // Generated icons
 `;
 
@@ -42,7 +44,7 @@ svgFiles.forEach((svgFile) => {
   const iconName = path.basename(svgFile, '.svg');
   const componentName = toPascalCase(iconName);
 
-  declarationFileContent += `export declare const ${componentName}: (props: LucideProps) => JSX.Element;\n`;
+  declarationFileContent += `export declare const ${componentName}: LucideIcon;\n`;
 });
 
 const aliases = await getAliases(ICONS_DIR);
