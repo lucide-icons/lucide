@@ -29,6 +29,7 @@ const {
   iconFileExtension = '.js',
   exportFileName = 'index.js',
   withAliases = false,
+  aliasesFileExtension = '.js',
   pretty = true,
 } = cliArguments;
 
@@ -60,7 +61,7 @@ async function buildIcons() {
       iconNodes: icons,
       aliases,
       outputDirectory: OUTPUT_DIR,
-      fileExtension: iconFileExtension,
+      fileExtension: aliasesFileExtension,
       showLog: !silent,
     });
   }

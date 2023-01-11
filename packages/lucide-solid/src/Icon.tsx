@@ -1,7 +1,7 @@
 import { For, JSX, splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
-import { LucideProps } from './types';
+import { IconNode, LucideProps } from './types';
 
 /**
  * Converts string to KebabCase
@@ -13,7 +13,12 @@ import { LucideProps } from './types';
  */
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const Icon = (props: LucideProps) => {
+interface IconProps {
+  name: string
+  iconNode: IconNode
+}
+
+const Icon = (props: LucideProps & IconProps) => {
   const [localProps, rest] = splitProps(props, [
     'color',
     'size',

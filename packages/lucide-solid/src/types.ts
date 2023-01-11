@@ -9,6 +9,4 @@ export interface LucideProps extends SVGAttributes {
   size?: string | number
   strokeWidth?: string | number
   class?: string
-  name: string
-  iconNode: IconNode
 }
