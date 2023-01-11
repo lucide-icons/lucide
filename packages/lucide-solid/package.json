@@ -12,10 +12,9 @@
   },
   "author": "Eric Fennis",
   "amdName": "lucide-solid",
-  "main": "dist/esm/lucide-solid.js",
-  "module": "dist/esm/lucide-solid.js",
-  "type": "module",
+  "main": "dist/lucide-solid.js",
   "typings": "dist/lucide-solid.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
