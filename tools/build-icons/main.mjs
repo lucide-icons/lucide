@@ -27,6 +27,7 @@ const {
   templateSrc,
   silent = false,
   iconFileExtension = '.js',
+  importImportFileExtension = '',
   exportFileName = 'index.js',
   withAliases = false,
   aliasesFileExtension = '.js',
@@ -73,7 +74,7 @@ async function buildIcons() {
     path.join(OUTPUT_DIR, 'icons', exportFileName),
     path.join(OUTPUT_DIR, 'icons'),
     icons,
-    iconFileExtension,
+    importImportFileExtension,
   );
 }
 

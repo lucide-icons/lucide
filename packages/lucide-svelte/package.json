@@ -25,7 +25,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:strip && pnpm build:types",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --withAliases --aliasesFileExtension=.ts --aliasImportFileExtension=.svelte --pretty=false",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --withAliases --aliasesFileExtension=.ts --aliasImportFileExtension=.svelte --pretty=false",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "build:strip": "svelte-strip strip src/ dist/svelte",
