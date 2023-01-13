@@ -30,6 +30,7 @@ const {
   exportFileName = 'index.js',
   withAliases = false,
   aliasesFileExtension = '.js',
+  aliasImportFileExtension = '',
   pretty = true,
 } = cliArguments;
 
@@ -62,6 +63,7 @@ async function buildIcons() {
       aliases,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
+      aliasImportFileExtension,
       showLog: !silent,
     });
   }

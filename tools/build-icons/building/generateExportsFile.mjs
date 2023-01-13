@@ -13,7 +13,7 @@ export default (inputEntry, outputDirectory, iconNodes, iconFileExtension = '') 
   // Generate Import for Icon VNodes
   icons.forEach((iconName) => {
     const componentName = toPascalCase(iconName);
-    const importString = `export { default as ${componentName} } from './${iconName}';\n`;
+    const importString = `export { default as ${componentName} } from './${iconName}${iconFileExtension}';\n`;
     appendFile(importString, fileName, outputDirectory);
   });
 
