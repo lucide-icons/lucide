@@ -235,7 +235,6 @@ importers:
     specifiers:
       '@atomico/rollup-plugin-sizes': ^1.1.4
       '@lucide/build-icons': workspace:*
-      '@rollup/plugin-typescript': ^11.0.0
       '@testing-library/jest-dom': ^5.16.5
       babel-preset-solid: ^1.5.4
       jsdom: ^20.0.0
@@ -251,7 +250,6 @@ importers:
     devDependencies:
       '@atomico/rollup-plugin-sizes': 1.1.4_rollup@3.5.1
       '@lucide/build-icons': link:../../tools/build-icons
-      '@rollup/plugin-typescript': 11.0.0_np637jtsja22obfj7py7vvesaq
       '@testing-library/jest-dom': 5.16.5
       babel-preset-solid: 1.5.4
       jsdom: 20.0.0
@@ -8831,25 +8829,6 @@ packages:
     dependencies:
       rollup: 3.5.1
       terser: 5.16.1
-    dev: true
-
-  /@rollup/plugin-typescript/11.0.0_np637jtsja22obfj7py7vvesaq:
-    resolution: {integrity: sha512-goPyCWBiimk1iJgSTgsehFD5OOFHiAknrRJjqFCudcW8JtWiBlK284Xnn4flqMqg6YAjVG/EE+3aVzrL5qNSzQ==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^2.14.0||^3.0.0
-      tslib: '*'
-      typescript: '>=3.7.0'
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-      tslib:
-        optional: true
-    dependencies:
-      '@rollup/pluginutils': 5.0.2_rollup@3.5.1
-      resolve: 1.22.1
-      rollup: 3.5.1
-      typescript: 4.9.4
     dev: true
 
   /@rollup/pluginutils/3.1.0_rollup@2.77.2:
