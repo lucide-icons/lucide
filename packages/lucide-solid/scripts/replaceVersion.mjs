@@ -3,8 +3,16 @@ import path from 'path'
 
 import pkg from '../package.json' assert { type: 'json' };
 
-const fileContents = fs.readFileSync(path.resolve('dist/lucide-solid.js'), 'utf-8');
+const files = [
+  'dist/source/lucide-solid.js',
+  'dist/types/lucide-solid.d.ts'
+]
 
-const newFileContents = fileContents.replace('{{version}}', pkg.version)
+files.forEach((file) => {
+  const fileContents = fs.readFileSync(path.resolve(file), 'utf-8');
+  const newFileContents = fileContents.replace('{{version}}', pkg.version)
 
-fs.writeFileSync(path.resolve('dist/lucide-solid.js'), newFileContents, 'utf-8')
+  fs.writeFileSync(path.resolve(file), newFileContents, 'utf-8')
+})
+
+

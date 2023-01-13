@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import bundleSize from '@atomico/rollup-plugin-sizes';
 import { visualizer } from 'rollup-plugin-visualizer';
+import bundleSize from '@atomico/rollup-plugin-sizes';
 import license from 'rollup-plugin-license';
 import esbuild from 'rollup-plugin-esbuild';
 

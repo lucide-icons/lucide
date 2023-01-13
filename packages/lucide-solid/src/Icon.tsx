@@ -32,10 +32,10 @@ const Icon = (props: LucideProps & IconProps) => {
   return (
     <svg
       {...defaultAttributes}
-      width={localProps.size}
-      height={localProps.size}
-      stroke={localProps.color}
-      stroke-width={localProps.strokeWidth}
+      width={localProps.size ?? defaultAttributes.width}
+			height={localProps.size ?? defaultAttributes.height}
+			stroke={localProps.color ?? defaultAttributes.stroke}
+			stroke-width={localProps.strokeWidth ?? defaultAttributes['stroke-width']}
       class={`lucide lucide-${toKebabCase(localProps?.name ?? 'icon')} ${
           localProps.class != null ? localProps.class : ''
       }`}
