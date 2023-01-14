@@ -11,10 +11,6 @@
     "types": ["vite/client"],
     "noEmit": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
     "outDir": "dist"
-  },
-  "include": [
-    "src/**/*"
-  ],
+  }
 }
