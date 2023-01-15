@@ -1,16 +1,16 @@
 import path from 'path';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { getAliases } from '@lucide/build-icons';
 import {
   writeFile,
   readSvgDirectory,
   resetFile,
   toPascalCase,
-  appendFile,
   getCurrentDirPath,
 } from '../../../scripts/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
-const srcDirectory = path.join(currentDir, '../dist');
+const targetDirectory = path.join(currentDir, '../dist');
 
 const writeDeclarationFile = (typesFile, directory, content) => {
   resetFile(typesFile, directory);
@@ -85,7 +85,7 @@ svgFiles.forEach((svgFile) => {
   declarationFileContent += '\n';
 });
 
-writeDeclarationFile(TYPES_FILE, srcDirectory, declarationFileContent);
+writeDeclarationFile(TYPES_FILE, targetDirectory, declarationFileContent);
 console.log(
   `Generated ${TYPES_FILE} file with`,
   svgFiles.length,

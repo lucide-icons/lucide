@@ -62,6 +62,7 @@ importers:
       '@angular/core': ~14.2.7
       '@angular/platform-browser': ~14.2.7
       '@angular/platform-browser-dynamic': ~14.2.7
+      '@lucide/build-icons': workspace:*
       '@types/jasmine': ~4.3.0
       '@types/node': ^18.11.4
       codelyzer: ^6.0.2
@@ -92,6 +93,7 @@ importers:
       '@angular/core': 14.2.7_rxjs@7.5.7+zone.js@0.11.8
       '@angular/platform-browser': 14.2.7_aaupshc3v455velby5cf2mmuay
       '@angular/platform-browser-dynamic': 14.2.7_q4va4uwl4uyjrhqsdbamttsfvi
+      '@lucide/build-icons': link:../../tools/build-icons
       '@types/jasmine': 4.3.0
       '@types/node': 18.11.4
       codelyzer: 6.0.2_cykvwhouafxz23wqf5dcj7lrei
@@ -142,7 +144,6 @@ importers:
       '@lucide/build-icons': workspace:*
       '@lucide/rollup-plugins': workspace:*
       '@preact/preset-vite': ^2.4.0
-      '@rollup/plugin-replace': ^5.0.1
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/preact': ^2.0.1
       preact: ^10.11.2
@@ -154,7 +155,6 @@ importers:
       '@lucide/build-icons': link:../../tools/build-icons
       '@lucide/rollup-plugins': link:../../tools/rollup-plugins
       '@preact/preset-vite': 2.4.0_preact@10.11.2+vite@3.1.8
-      '@rollup/plugin-replace': 5.0.1_rollup@3.5.1
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/preact': 2.0.1_preact@10.11.2
       preact: 10.11.2
@@ -167,7 +167,6 @@ importers:
     specifiers:
       '@lucide/build-icons': workspace:*
       '@lucide/rollup-plugins': workspace:*
-      '@rollup/plugin-replace': ^5.0.1
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^11.2.6
       '@types/prop-types': ^15.7.5
@@ -182,7 +181,6 @@ importers:
     devDependencies:
       '@lucide/build-icons': link:../../tools/build-icons
       '@lucide/rollup-plugins': link:../../tools/rollup-plugins
-      '@rollup/plugin-replace': 5.0.1_rollup@3.5.1
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 11.2.7_sfoxds7t5ydpegc3knd667wn6m
       '@types/prop-types': 15.7.5
@@ -481,6 +479,7 @@ importers:
   tools/rollup-plugins:
     specifiers:
       '@atomico/rollup-plugin-sizes': ^1.1.4
+      '@rollup/plugin-replace': ^5.0.1
       esbuild: ^0.15.16
       rollup: ^3.5.1
       rollup-plugin-esbuild: ^4.10.2
@@ -488,6 +487,7 @@ importers:
       rollup-plugin-visualizer: ^5.8.3
     dependencies:
       '@atomico/rollup-plugin-sizes': 1.1.4_rollup@3.5.1
+      '@rollup/plugin-replace': 5.0.1_rollup@3.5.1
       esbuild: 0.15.16
       rollup: 3.5.1
       rollup-plugin-esbuild: 4.10.2_okdlgivigpskxpa36mtdz7r5se
@@ -8816,7 +8816,6 @@ packages:
       '@rollup/pluginutils': 5.0.2_rollup@3.5.1
       magic-string: 0.26.7
       rollup: 3.5.1
-    dev: true
 
   /@rollup/plugin-terser/0.1.0_rollup@3.5.1:
     resolution: {integrity: sha512-N2KK+qUfHX2hBzVzM41UWGLrEmcjVC37spC8R3c9mt3oEDFKh3N2e12/lLp9aVSt86veR0TQiCNQXrm8C6aiUQ==}
@@ -21562,6 +21561,7 @@ packages:
 
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+    deprecated: Please use @jridgewell/sourcemap-codec instead
 
   /space-separated-tokens/1.1.5:
     resolution: {integrity: sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==}

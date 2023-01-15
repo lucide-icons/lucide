@@ -7,17 +7,6 @@ const outputDir = 'dist';
 const inputs = ['src/lucide-react-native.ts'];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir,
@@ -35,7 +24,20 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: [
+        // This for aliases, only for esm
+        ...(
+          format !== 'esm' || format !== 'cjs' ? [
+            replace({
+              "export * from './aliases';": '',
+              "export * as icons from './icons';": '',
+              delimiters: ['', ''],
+              preventAssignment: false,
+            }),
+          ] : []
+        ),
+        ...plugins(pkg, minify)
+      ],
       external: ['react', 'prop-types', 'react-native-svg'],
       output: {
         name: packageName,

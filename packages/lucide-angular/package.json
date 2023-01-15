@@ -48,6 +48,7 @@
     "@angular/core": "~14.2.7",
     "@angular/platform-browser": "~14.2.7",
     "@angular/platform-browser-dynamic": "~14.2.7",
+    "@lucide/build-icons": "workspace:*",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^18.11.4",
     "codelyzer": "^6.0.2",
