@@ -1,7 +1,12 @@
 export default ({ componentName, children }) => `
-import createSolidComponent from '../createSolidComponent';
+import Icon from '../Icon';
+import type { IconNode, LucideProps } from '../types';
 
-const ${componentName} = createSolidComponent('${componentName}', ${JSON.stringify(children)});
+const iconNode: IconNode = ${JSON.stringify(children)};
+
+const ${componentName} = (props: LucideProps) => (
+  <Icon {...props} name="${componentName}" iconNode={iconNode} />
+)
 
 export default ${componentName};
 `;
