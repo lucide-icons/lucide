@@ -59,7 +59,7 @@ const configs = bundles
         ] : []),
         ...plugins(pkg, minify),
       ],
-      external: format === 'svelte' ? [/\.svelte/] : ['svelte'],
+      external: format === 'svelte' ? [/\.svelte/] : ['svelte', 'svelte/internal'],
       output: {
         name: packageName,
         ...(preserveModules
