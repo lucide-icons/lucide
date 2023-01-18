@@ -1,7 +1,7 @@
 export default ({ componentName, children }) => `
-import createReactComponent from '../createReactComponent';
+import createLucideIcon from '../createLucideIcon';
 
-const ${componentName} = createReactComponent('${componentName}', ${JSON.stringify(children)});
+const ${componentName} = createLucideIcon('${componentName}', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;
