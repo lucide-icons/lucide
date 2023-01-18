@@ -24,20 +24,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        // This for aliases, only for esm
-        ...(
-          format !== 'esm' || format !== 'cjs' ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
+      plugins: plugins(pkg, minify),
       external: ['react', 'prop-types', 'react-native-svg'],
       output: {
         name: packageName,
