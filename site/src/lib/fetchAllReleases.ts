@@ -1,9 +1,9 @@
 import GithubApi from "./githubApi";
 import GithubCache from "./githubCache";
-import {version} from '../../../packages/lucide/package.json' assert {type: 'json'};
+import * as lucidePackage from '../../../packages/lucide/package.json' assert {type: 'json'};
 
 export const fetchCurrentRelease = async () => {
-  return `v${version}`;
+  return `v${lucidePackage.version}`;
 };
 
 export const getAllReleases = async () => {
