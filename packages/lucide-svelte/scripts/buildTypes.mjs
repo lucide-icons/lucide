@@ -1,20 +1,32 @@
 import path from 'path';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { getAliases } from '@lucide/build-icons';
 import {
   writeFile,
   readSvgDirectory,
   resetFile,
   toPascalCase,
-  appendFile,
-  getCurrentDirPath
+  getCurrentDirPath,
 } from '../../../scripts/helpers.mjs';
 
-const currentDir = getCurrentDirPath(import.meta.url)
-const srcDirectory = path.join(currentDir, '../dist');
+const currentDir = getCurrentDirPath(import.meta.url);
+const targetDirectory = path.join(currentDir, '../dist');
+
+const writeDeclarationFile = (typesFile, directory, content) => {
+  resetFile(typesFile, directory);
+  writeFile(content, typesFile, directory);
+};
+
+const getComponentImport = (componentName) =>
+  `export declare class ${componentName} extends SvelteComponentTyped<IconProps, IconEvents, {}> {}\n`;
+
+const ICONS_DIR = path.resolve(currentDir, '../../../icons');
+const TYPES_FILE = 'lucide-svelte.d.ts';
 
 // Declare type definitions
-const typeDefinitions = `\
+let declarationFileContent = `\
 /// <reference types="svelte" />
-/// <reference types="svelte2tsx/svelte-jsx" />
+/// <reference types="svelte-check/dist/src/svelte-jsx" />
 import { SvelteComponentTyped } from "svelte";
 
 interface IconProps extends Partial<svelte.JSX.SVGProps<SVGSVGElement>> {
@@ -33,20 +45,51 @@ export type Icon = SvelteComponentTyped<IconProps, IconEvents, {}>
 // Generated icons
 `;
 
-const ICONS_DIR = path.resolve(currentDir, '../../../icons');
-const TYPES_FILE = 'lucide-svelte.d.ts';
-
-resetFile(TYPES_FILE, srcDirectory);
-writeFile(typeDefinitions, TYPES_FILE, srcDirectory);
-
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-svgFiles.forEach(svgFile => {
+svgFiles.forEach((svgFile) => {
   const iconName = path.basename(svgFile, '.svg');
   const componentName = toPascalCase(iconName);
 
-  const exportTypeString = `export declare class ${componentName} extends SvelteComponentTyped<IconProps, IconEvents, {}> {}\n`;
-  appendFile(exportTypeString, TYPES_FILE, srcDirectory);
+  declarationFileContent += getComponentImport(componentName);
 });
 
-console.log(`Generated ${TYPES_FILE} file with`, svgFiles.length, 'icons');
+const aliases = await getAliases(ICONS_DIR);
+
+declarationFileContent += `\n
+
+// Generated icon aliases
+`;
+
+let aliasesCount = 0;
+
+svgFiles.forEach((svgFile) => {
+  const iconName = path.basename(svgFile, '.svg');
+  const componentName = toPascalCase(iconName);
+  const iconAliases = aliases[iconName]?.aliases;
+
+  declarationFileContent += `// ${componentName} aliases\n`;
+  declarationFileContent += getComponentImport(`${componentName}Icon`);
+  declarationFileContent += getComponentImport(`Lucide${componentName}`);
+
+  aliasesCount += 1;
+  if (iconAliases != null && Array.isArray(iconAliases)) {
+    iconAliases.forEach((alias) => {
+      const componentNameAlias = toPascalCase(alias);
+      declarationFileContent += getComponentImport(componentNameAlias);
+
+      aliasesCount += 1;
+    });
+  }
+
+  declarationFileContent += '\n';
+});
+
+writeDeclarationFile(TYPES_FILE, targetDirectory, declarationFileContent);
+console.log(
+  `Generated ${TYPES_FILE} file with`,
+  svgFiles.length,
+  'icons and with',
+  aliasesCount,
+  'aliases',
+);

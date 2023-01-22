@@ -100,8 +100,8 @@ export const readMetadata = (fileName, directory) =>
  * @param {string} directory
  * @returns {array} An array of file paths containig svgs
  */
-export const readSvgDirectory = (directory) =>
-  fs.readdirSync(directory).filter((file) => path.extname(file) === '.svg');
+export const readSvgDirectory = (directory, fileExtension = '.svg') =>
+  fs.readdirSync(directory).filter((file) => path.extname(file) === fileExtension);
 
 /**
  * Read svg from directory
