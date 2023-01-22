@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "fax",
+    "office",
+    "device"
+  ],
+  "categories": [
+    "devices",
+    "account"
+  ]
+}

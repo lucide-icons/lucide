@@ -39,6 +39,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Svelte](#svelte)
   - [Solid](#solid)
   - [Hyva](#hyva)
+  - [Eleventy](#eleventy)
 - [Contributing](#contributing)
 - [Community](#community)
 - [License](#license)
@@ -250,6 +251,16 @@ composer require siteation/magento2-hyva-icons-lucide
 ```
 
 For more details, see the [documentation](https://github.com/Siteation/magento2-hyva-icons-lucide/blob/main/README.md).
+
+### Eleventy
+
+Using this plugin, Eleventy projects can incorporate Lucide icons. it makes it simple to use Lucide icons into your themes via shortcodes, improving your website's overall usability and visual appeal.
+
+```sh
+npm install @grimlink/eleventy-plugin-lucide-icons
+```
+
+For more details, see the [documentation](https://github.com/GrimLink/eleventy-plugin-lucide-icons/blob/main/README.md).
 
 ## Contributing
 

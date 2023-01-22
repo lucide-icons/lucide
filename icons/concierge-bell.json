@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "reception",
+    "bell",
+    "porter"
+  ],
+  "categories": [
+    "travel"
+  ]
+}

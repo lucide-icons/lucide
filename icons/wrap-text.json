@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "words",
+    "lines",
+    "break",
+    "paragraph"
+  ],
+  "categories": [
+    "text",
+    "arrows"
+  ]
+}

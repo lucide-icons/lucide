@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "note",
+    "comment",
+    "reaction",
+    "memo"
+  ],
+  "categories": [
+    "communication",
+    "social"
+  ]
+}

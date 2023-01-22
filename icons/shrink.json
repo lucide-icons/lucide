@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "scale",
+    "fullscreen"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ]
+}

@@ -1455,6 +1455,7 @@
     "food",
     "breakfast"
   ],
+  "egg-off": [],
   "equal": [
     "calculate",
     "maths"
@@ -1758,14 +1759,12 @@
   "file-type": [
     "font",
     "text",
-    "font",
     "typography",
     "type"
   ],
   "file-type-2": [
     "font",
     "text",
-    "font",
     "typography",
     "type"
   ],
@@ -3215,6 +3214,15 @@
     "money",
     "savings"
   ],
+  "pilcrow": [
+    "paragraph",
+    "mark",
+    "paraph",
+    "blind",
+    "typography",
+    "type",
+    "text"
+  ],
   "pin": [
     "save",
     "map",
@@ -3875,6 +3883,11 @@
   ],
   "subscript": [
     "text"
+  ],
+  "subtitles": [
+    "captions",
+    "closed captions",
+    "accessibility"
   ],
   "sun": [
     "brightness",

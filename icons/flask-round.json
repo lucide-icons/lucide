@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "beaker"
+  ],
+  "categories": [
+    "science",
+    "gaming"
+  ]
+}

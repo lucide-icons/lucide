@@ -76,8 +76,8 @@ export const writeFile = (content, fileName, outputDirectory) =>
  * @param {string} directory
  * @returns {array} An array of file paths containig svgs
  */
-export const readSvgDirectory = (directory) =>
-  fs.readdirSync(directory).filter((file) => path.extname(file) === '.svg');
+export const readSvgDirectory = (directory, fileExtension = '.svg') =>
+  fs.readdirSync(directory).filter((file) => path.extname(file) === fileExtension);
 
 /**
  * Read svg from directory
@@ -139,6 +139,17 @@ export const hasDuplicatedChildren = (children) => {
   return !hashedKeys.every(
     (key, index) => index === hashedKeys.findIndex((childKey) => childKey === key),
   );
+};
+
+/**
+ * @param {array} a
+ * @param {array} b
+ * @returns {array}
+ */
+export const mergeArrays = (a, b) => {
+  a = a.concat(b);
+  a = a.filter((i, p) => a.indexOf(i) === p);
+  return a;
 };
 
 export const getCurrentDirPath = (currentPath) => path.dirname(fileURLToPath(currentPath));

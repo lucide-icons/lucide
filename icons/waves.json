@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "water",
+    "sea",
+    "sound",
+    "hertz",
+    "wavelength",
+    "vibrate"
+  ],
+  "categories": [
+    "weather",
+    "maps",
+    "multimedia"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bidirectional",
+    "direction",
+    "swap",
+    "switch",
+    "network",
+    "mobile data",
+    "internet",
+    "reorder",
+    "move"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}

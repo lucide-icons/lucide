@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "movie",
+    "film",
+    "video",
+    "camera",
+    "tv",
+    "television"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}

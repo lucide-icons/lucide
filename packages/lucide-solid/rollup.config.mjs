@@ -1,47 +1,20 @@
-import plugins from '../../rollup.plugins.mjs';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import withSolid from 'rollup-preset-solid';
+import bundleSize from '@atomico/rollup-plugin-sizes';
+import license from 'rollup-plugin-license';
+
 import pkg from './package.json' assert { type: 'json' };
 
-const packageName = 'LucideSolid';
-const outputFileName = 'lucide-solid';
-const outputDir = 'dist';
-const inputs = [`src/lucide-solid.js`];
-const bundles = [
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
-    format: 'cjs',
-    inputs,
-    outputDir,
-  },
+const config = withSolid({
+  targets: ['esm', 'cjs'],
+});
+
+config.plugins = [
+  ...config.plugins,
+  license({
+    banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
+  }),
+  bundleSize(),
 ];
 
-const configs = bundles
-  .map(({ inputs, outputDir, format, minify }) =>
-    inputs.map(input => ({
-      input,
-      plugins: plugins(pkg, minify),
-      external: ['solid-js', 'solid-js/h'],
-      output: {
-        name: packageName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-        format,
-        sourcemap: true,
-        globals: {
-          'solid-js': 'solid-js',
-          'solid-js/h': 'solid-js/h',
-        },
-      },
-    })),
-  )
-  .flat();
-
-export default configs;
+export default config;

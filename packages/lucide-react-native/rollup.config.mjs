@@ -1,22 +1,11 @@
-import plugins from '../../rollup.plugins.mjs';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
-const inputs = ['src/lucide-react-native.js'];
+const inputs = ['src/lucide-react-native.ts'];
 const bundles = [
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
   {
     format: 'cjs',
     inputs,
@@ -36,7 +25,7 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['react', 'prop-types', 'lucide', 'react-native-svg'],
+      external: ['react', 'prop-types', 'react-native-svg'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -54,7 +43,6 @@ const configs = bundles
           react: 'react',
           'react-native-svg': 'react-native-svg',
           'prop-types': 'PropTypes',
-          lucide: 'lucide',
         },
       },
     })),

@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "1.8.8",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^11.0.0",

@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "load",
+    "wait"
+  ],
+  "categories": [
+    "multimedia",
+    "layout"
+  ]
+}
