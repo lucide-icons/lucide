@@ -1,2 +1,4 @@
 export * from './icons';
-export { default as createReactComponent } from './createReactComponent';
+export * as icons from './icons';
+export * from './aliases';
+export { default as createLucideIcon } from './createLucideIcon';

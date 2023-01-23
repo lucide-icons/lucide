@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import React from 'react';
-import { render } from '@testing-library/react'
-import { Grid } from '../src/icons'
+import { render, cleanup } from '@testing-library/react'
+import { Pen, Edit2, Grid } from '../src/lucide-react';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -28,5 +27,32 @@ describe('Using lucide icon components', () => {
     expect(attributes['stroke-width'].value).toBe('4');
 
     expect( container.innerHTML ).toMatchSnapshot();
+  });
+
+  it('should render the alias icon', () => {
+    const testId = 'pen-icon';
+    const { container } = render(
+      <Pen
+        data-testid={testId}
+        size={48}
+        stroke="red"
+        strokeWidth={4}
+      />,
+    );
+
+    const PenIconRenderedHTML = container.innerHTML
+
+    cleanup()
+
+    const { container: Edit2Container } = render(
+      <Edit2
+        data-testid={testId}
+        size={48}
+        stroke="red"
+        strokeWidth={4}
+      />,
+    );
+
+    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
   });
 })

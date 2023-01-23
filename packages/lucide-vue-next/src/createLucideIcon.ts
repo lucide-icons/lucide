@@ -20,7 +20,7 @@ type IconNode = [elementName: string, attrs: Record<string, string>][]
  */
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createVueComponent = (iconName: string, iconNode: IconNode): FunctionalComponent<SVGProps> => (
+const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionalComponent<SVGProps> => (
   { size, color, ...props }, // props
   { attrs, slots } // context
   ) => {
@@ -42,4 +42,4 @@ const createVueComponent = (iconName: string, iconNode: IconNode): FunctionalCom
   );
 };
 
-export default createVueComponent;
+export default createLucideIcon;
