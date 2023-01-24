@@ -44,7 +44,7 @@ export const IconCustomizerDrawer = (props: ButtonProps) => {
       >
         Customize
       </Button>
-      <Drawer isOpen={showCustomize} placement="right" onClose={() => setShowCustomize(false)}>
+      <Drawer isOpen={showCustomize} placement="right" onClose={() => setShowCustomize(false)} size="md">
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Customize Icons</DrawerHeader>

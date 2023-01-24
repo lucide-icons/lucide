@@ -122,7 +122,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
             {aside}
           </Box>
         ) : null}
-        <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
+        <Flex margin="0 auto" direction="column" width="100%">
           {children}
           <Divider mb={6} mt={12} />
           <p style={{ alignSelf: 'center' }}>

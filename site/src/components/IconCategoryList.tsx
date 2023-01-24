@@ -25,9 +25,10 @@ const IconCategory = ({
     () =>
       Object.keys(categories).reduce((categoryMap, category) => {
         const categoryIcons = categories[category].map(icon => iconLibrary[icon]);
+
         const isSearching = icons.length !== data.length;
         const searchResults = isSearching
-          ? categoryIcons.filter(icon => icons.find(({ item }) => item.name === icon.name))
+          ? categoryIcons.filter(icon => icons.some((item) => item?.name === icon?.name))
           : categoryIcons;
 
         categoryMap.push({
@@ -54,7 +55,7 @@ const IconCategory = ({
         .map(({ name, icons, isActive }) => (
           <Box
             key={name}
-            category={name}
+            // category={name}
             backgroundColor={isActive ? activeBackground : 'transparent'}
             borderRadius={8}
             {...outerProps}
