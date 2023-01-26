@@ -448,10 +448,13 @@
   ],
   "beef": [
     "food",
-    "meat",
     "dish",
-    "pork chop",
-    "cutlet"
+    "restaurant",
+    "course",
+    "meal",
+    "meat",
+    "bbq",
+    "steak"
   ],
   "beer": [
     "alcohol",
@@ -1848,11 +1851,15 @@
   ],
   "fish": [
     "food",
-    "meat",
     "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "seafood",
     "animal",
     "pet",
-    "seafood"
+    "sea",
+    "marine"
   ],
   "flag": [
     "report"
@@ -2363,10 +2370,11 @@
   "ice-cream-2": [
     "gelato",
     "food",
-    "ice cream",
-    "dish",
     "dessert",
-    "sweet"
+    "dish",
+    "restaurant",
+    "course",
+    "meal"
   ],
   "image": [
     "picture",
@@ -3479,16 +3487,22 @@
   ],
   "salad": [
     "food",
-    "vegetable",
-    "dish",
     "vegetarian",
-    "lettuce"
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "side",
+    "vegetables",
+    "health"
   ],
   "sandwich": [
     "food",
     "snack",
     "dish",
-    "lunch"
+    "restaurant",
+    "lunch",
+    "meal"
   ],
   "save": [
     "floppy disk"
@@ -3848,10 +3862,12 @@
   ],
   "soup": [
     "food",
-    "entree",
     "dish",
-    "ramen",
-    "pho"
+    "restaurant",
+    "course",
+    "meal",
+    "bowl",
+    "starter"
   ],
   "speaker": [
     "audio",
@@ -4046,13 +4062,6 @@
     "marks",
     "copy",
     "multiple"
-  ],
-  "takeout": [
-    "food",
-    "restaurant",
-    "delivery",
-    "takeaway",
-    "bag"
   ],
   "target": [
     "logo",
