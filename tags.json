@@ -1274,6 +1274,15 @@
     "storage",
     "memory"
   ],
+  "database-backup": [
+    "storage",
+    "memory",
+    "backup",
+    "timemachine",
+    "rotate",
+    "arrow",
+    "left"
+  ],
   "delete": [
     "backspace",
     "remove"
