@@ -3253,6 +3253,16 @@
   "phone-outgoing": [
     "call"
   ],
+  "picture-in-picture": [
+    "display",
+    "play",
+    "video"
+  ],
+  "picture-in-picture-alt": [
+    "display",
+    "play",
+    "video"
+  ],
   "pie-chart": [
     "statistics",
     "diagram"
