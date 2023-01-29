@@ -431,6 +431,10 @@
     "power",
     "electricity"
   ],
+  "battery-warning": [
+    "power",
+    "electricity"
+  ],
   "battery-full": [
     "power",
     "electricity"
