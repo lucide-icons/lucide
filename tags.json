@@ -3253,6 +3253,12 @@
   "phone-outgoing": [
     "call"
   ],
+  "picture-in-picture-active": [
+    "active",    
+    "display",
+    "play",
+    "video"
+  ],
   "picture-in-picture": [
     "display",
     "play",
