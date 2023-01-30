@@ -4431,6 +4431,13 @@
     "sound",
     "mute"
   ],
+  "vote": [
+    "vote",
+    "poll",
+    "ballot",
+    "political",
+    "social"
+  ],
   "wallet": [
     "money",
     "finance",
