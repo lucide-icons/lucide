@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "power",
-    "electricity"
+    "electricity",
+    "accumulator",
+    "charge"
   ],
   "categories": [
     "connectivity",
