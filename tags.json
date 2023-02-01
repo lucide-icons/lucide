@@ -431,6 +431,10 @@
     "power",
     "electricity"
   ],
+  "battery-warning": [
+    "power",
+    "electricity"
+  ],
   "battery-full": [
     "power",
     "electricity"
@@ -445,6 +449,23 @@
   ],
   "beaker": [
     "cup"
+  ],
+  "beef": [
+    "food",
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "meat",
+    "bbq",
+    "steak"
+  ],
+  "beer": [
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
   ],
   "bean": [
     "legume",
@@ -1274,6 +1295,15 @@
     "storage",
     "memory"
   ],
+  "database-backup": [
+    "storage",
+    "memory",
+    "backup",
+    "timemachine",
+    "rotate",
+    "arrow",
+    "left"
+  ],
   "delete": [
     "backspace",
     "remove"
@@ -1832,6 +1862,18 @@
     "identity",
     "security"
   ],
+  "fish": [
+    "food",
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "seafood",
+    "animal",
+    "pet",
+    "sea",
+    "marine"
+  ],
   "flag": [
     "report"
   ],
@@ -2337,6 +2379,15 @@
   "ice-cream": [
     "gelato",
     "food"
+  ],
+  "ice-cream-2": [
+    "gelato",
+    "food",
+    "dessert",
+    "dish",
+    "restaurant",
+    "course",
+    "meal"
   ],
   "image": [
     "picture",
@@ -3447,6 +3498,25 @@
     "harbour",
     "dock"
   ],
+  "salad": [
+    "food",
+    "vegetarian",
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "side",
+    "vegetables",
+    "health"
+  ],
+  "sandwich": [
+    "food",
+    "snack",
+    "dish",
+    "restaurant",
+    "lunch",
+    "meal"
+  ],
   "save": [
     "floppy disk"
   ],
@@ -3802,6 +3872,15 @@
   ],
   "sort-desc": [
     "filter"
+  ],
+  "soup": [
+    "food",
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "bowl",
+    "starter"
   ],
   "speaker": [
     "audio",

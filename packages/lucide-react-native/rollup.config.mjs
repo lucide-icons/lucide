@@ -7,26 +7,10 @@ const outputDir = 'dist';
 const inputs = ['src/lucide-react-native.ts'];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir,
     preserveModules: true,
-  },
-  {
-    format: 'es',
-    inputs,
-    outputDir,
   },
   {
     format: 'esm',

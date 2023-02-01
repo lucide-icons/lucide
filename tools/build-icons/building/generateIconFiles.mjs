@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { toPascalCase } from '../helpers.mjs';
+import { toPascalCase } from '../../../scripts/helpers.mjs';
 
 export default ({
   iconNodes,

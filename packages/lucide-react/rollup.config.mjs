@@ -1,4 +1,4 @@
-import plugins from '@lucide/rollup-plugins';
+import plugins, { replace } from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideReact';
@@ -39,7 +39,20 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: [
+        // This for aliases, only for esm
+        ...(
+          format !== 'esm' ? [
+            replace({
+              "export * from './aliases';": '',
+              "export * as icons from './icons';": '',
+              delimiters: ['', ''],
+              preventAssignment: false,
+            }),
+          ] : []
+        ),
+        ...plugins(pkg, minify)
+      ],
       external: ['react', 'prop-types'],
       output: {
         name: packageName,

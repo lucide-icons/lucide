@@ -1,5 +1,4 @@
 import { forwardRef, createElement, ReactSVG, SVGProps } from 'react';
-import PropTypes from 'prop-types';
 import defaultAttributes from './defaultAttributes';
 
 type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
@@ -19,7 +18,7 @@ export interface LucideProps extends SVGAttributes {
  */
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createReactComponent = (iconName: string, iconNode: IconNode) => {
+const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
     ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }, ref) =>
       createElement(
@@ -43,15 +42,9 @@ const createReactComponent = (iconName: string, iconNode: IconNode) => {
       ),
   );
 
-  Component.propTypes = {
-    color: PropTypes.string,
-    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  };
-
   Component.displayName = `${iconName}`;
 
   return Component;
 };
 
-export default createReactComponent
+export default createLucideIcon
