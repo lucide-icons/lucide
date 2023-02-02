@@ -1880,7 +1880,10 @@
     "animal",
     "pet",
     "sea",
-    "marine"
+    "marine",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "flag": [
     "report"
