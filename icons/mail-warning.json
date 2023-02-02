@@ -4,7 +4,8 @@
     "email",
     "message",
     "letter",
-    "delivery error"
+    "delivery error",
+    "exclamation mark"
   ],
   "categories": [
     "mail"
