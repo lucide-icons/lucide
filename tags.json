@@ -3257,13 +3257,13 @@
   "phone-outgoing": [
     "call"
   ],
-  "picture-in-picture-active": [
+  "picture-in-picture": [
     "active",    
     "display",
     "play",
     "video"
   ],
-  "picture-in-picture": [
+  "picture-in-picture-2": [
     "display",
     "play",
     "video"
