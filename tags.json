@@ -3258,15 +3258,24 @@
     "call"
   ],
   "picture-in-picture": [
-    "active",    
     "display",
     "play",
-    "video"
+    "video",
+    "pop out",
+    "always on top",
+    "window",
+    "inset",
+    "multitask"
   ],
   "picture-in-picture-2": [
     "display",
     "play",
-    "video"
+    "video",
+    "pop out",
+    "always on top",
+    "window",
+    "inset",
+    "multitask"
   ],
   "pie-chart": [
     "statistics",
