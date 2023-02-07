@@ -3257,6 +3257,26 @@
   "phone-outgoing": [
     "call"
   ],
+  "picture-in-picture": [
+    "display",
+    "play",
+    "video",
+    "pop out",
+    "always on top",
+    "window",
+    "inset",
+    "multitask"
+  ],
+  "picture-in-picture-2": [
+    "display",
+    "play",
+    "video",
+    "pop out",
+    "always on top",
+    "window",
+    "inset",
+    "multitask"
+  ],
   "pie-chart": [
     "statistics",
     "diagram"
