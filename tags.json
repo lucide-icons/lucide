@@ -1874,6 +1874,21 @@
     "sea",
     "marine"
   ],
+  "fish-off": [
+    "food",
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "seafood",
+    "animal",
+    "pet",
+    "sea",
+    "marine",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
   "flag": [
     "report"
   ],
