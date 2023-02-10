@@ -2253,10 +2253,19 @@
   "grid": [
     "table"
   ],
+  "grip": [
+    "grab",
+    "dots",
+    "handle",
+    "move",
+    "drag"
+  ],
   "grip-horizontal": [
     "grab",
     "dots",
-    "handle"
+    "handle",
+    "move",
+    "drag"
   ],
   "grip-vertical": [
     "grab",
