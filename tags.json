@@ -2098,6 +2098,11 @@
     "copy",
     "directories"
   ],
+  "forklift": [
+    "vehicle",
+    "transport",
+    "logistics"
+  ],
   "form-input": [
     "2fa",
     "authenticate",
