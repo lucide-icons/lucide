@@ -407,6 +407,7 @@ importers:
       react-dom: 17.0.2
       react-svg-loader: ^3.0.3
       react-test-renderer: 17.0.2
+      svgson: ^5.2.1
       typescript: ^4.3.5
     dependencies:
       '@chakra-ui/react': 1.8.8_vt5jn3lkv6hocyebmjm7gusm6e
@@ -431,6 +432,7 @@ importers:
       react-color: 2.19.3_react@17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-svg-loader: 3.0.3
+      svgson: 5.2.1
     devDependencies:
       '@next/eslint-plugin-next': 12.2.5
       '@testing-library/dom': 7.31.2
