@@ -1,13 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "delivery error",
+    "power",
+    "electricity",
+    "accumulator",
+    "charge",
     "exclamation mark"
   ],
   "categories": [
-    "mail"
+    "connectivity",
+    "devices"
   ]
 }
