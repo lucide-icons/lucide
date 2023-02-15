@@ -20,7 +20,7 @@ npm install lucide-angular
 
 In any Angular module you wish to use Lucide icons in, you have to import `LucideAngularModule`, and pick any icons you wish to use:
 
-```typescript
+```js
 import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular';
 
 @NgModule({
@@ -76,7 +76,7 @@ You may provide additional icons using the `LUCIDE_ICONS` injection token,
 which accepts multiple providers of the interface `LucideIconsProviderInterface`
 with the utility class `LucideIconsProvider` available for easier usage:
 
-```typescript
+```js
 import { LUCIDE_ICONS, LucideIconProvider } from 'lucide-angular';
 import { MyIcon } from './icons/my-icon';
 
@@ -95,7 +95,8 @@ To add custom icons, you will first need to convert them to an [svgson format](h
 ## Loading all icons
 
 > :warning: You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
-```typescript
+
+```js
 import { icons } from 'lucide-angular';
 
 ...
