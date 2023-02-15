@@ -1,14 +1,6 @@
-import {
-    ChangeDetectorRef,
-    Component,
-    ElementRef,
-    Inject,
-    Input,
-    OnChanges,
-    SimpleChange,
-} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, Inject, Input, OnChanges, SimpleChange,} from '@angular/core';
 import {LucideIconData} from '../icons/types';
-import { createElement } from '../helpers/create-element';
+import {createElement} from '../helpers/create-element';
 import defaultAttributes from '../icons/constants/default-attributes';
 import {LUCIDE_ICONS, LucideIconProviderInterface} from './lucide-icon.provider';
 
@@ -35,6 +27,7 @@ export function formatFixed(number: number, decimals = 3): string {
     template: '<ng-content></ng-content>',
 })
 export class LucideAngularComponent implements OnChanges {
+    @Input() class?: string;
     @Input() name?: string;
     @Input() img?: LucideIconData;
     @Input() color: string = defaultAttributes.stroke;
@@ -80,7 +73,7 @@ export class LucideAngularComponent implements OnChanges {
             if (!icoOfName) {
                 console.warn(
                     `Icon not found: ${changes.name.currentValue}\n` +
-                        "Please check icon name or 'lucide icon list'"
+                    "Please check icon name or 'lucide icon list'"
                 );
             } else {
                 this.replaceElement(icoOfName);
@@ -115,6 +108,9 @@ export class LucideAngularComponent implements OnChanges {
         if (this.name) {
             icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
         }
+        if (this.class) {
+            icoElement.classList.add(...this.class.split(/ /).map((a) => a.trim()).filter((a) => a.length > 0))
+        }
         this.elem.nativeElement.innerHTML = '';
         this.elem.nativeElement.append(icoElement);
     }
@@ -137,7 +133,7 @@ export class LucideAngularComponent implements OnChanges {
         return value;
     }
 
-    private getIcon(name: string): LucideIconData|null {
+    private getIcon(name: string): LucideIconData | null {
         for (const iconProvider of Array.isArray(this.iconProviders) ? this.iconProviders : [this.iconProviders]) {
             if (iconProvider.hasIcon(name)) {
                 return iconProvider.getIcon(name);
