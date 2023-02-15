@@ -39,6 +39,15 @@ async function resolve<T extends Cacheable>(cacheKey: string, contentResolver: (
   }
 }
 
-const NextCache = {read, write, resolve}
+async function clear(...cacheKeys: string[]) {
+  for (const cacheKey of cacheKeys) {
+    const itemCachePath = cachePath(cacheKey)
+    if (fs.existsSync(itemCachePath)) {
+      fs.unlinkSync(itemCachePath)
+    }
+  }
+}
+
+const NextCache = {read, write, resolve, clear}
 
 export default NextCache
