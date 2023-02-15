@@ -24,6 +24,15 @@ function write<T extends Cacheable>(cacheKey: string, content: T): void {
   fs.writeFileSync(cachePath(cacheKey), JSON.stringify(content), 'utf-8')
 }
 
+function clear(...cacheKeys: string[]) {
+  for (const cacheKey of cacheKeys) {
+    const itemCachePath = cachePath(cacheKey)
+    if (fs.existsSync(itemCachePath)) {
+      fs.unlinkSync(itemCachePath)
+    }
+  }
+}
+
 async function resolve<T extends Cacheable>(cacheKey: string, contentResolver: () => Promise<T>|T, writeCache = true): Promise<T> {
   try {
     let cacheItem = await read<T>(cacheKey)
@@ -36,15 +45,6 @@ async function resolve<T extends Cacheable>(cacheKey: string, contentResolver: (
     return cacheItem;
   } catch (error) {
     throw new Error(error)
-  }
-}
-
-async function clear(...cacheKeys: string[]) {
-  for (const cacheKey of cacheKeys) {
-    const itemCachePath = cachePath(cacheKey)
-    if (fs.existsSync(itemCachePath)) {
-      fs.unlinkSync(itemCachePath)
-    }
   }
 }
 

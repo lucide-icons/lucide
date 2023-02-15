@@ -8,6 +8,6 @@ export function fetchTags(writeCache = true): Promise<Tags> {
     return (await getAllData()).reduce((acc, icon) => {
       acc[icon.name] = icon.tags;
       return acc;
-    }, {'_writeCache': [writeCache?'write':'do not write']});
+    }, {});
   }, writeCache);
 }
