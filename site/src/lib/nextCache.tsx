@@ -7,7 +7,7 @@ const cachePath = (cacheKey: string) => path.join(cacheDir, `${cacheKey}.json`);
 type AtomicCacheable = object|string|number|boolean|null;
 type Cacheable = AtomicCacheable|AtomicCacheable[];
 
-const read: <T extends Cacheable>(cacheKey: string) => T = (cacheKey: string) => {
+function read<T extends Cacheable>(cacheKey: string): T {
   if (fs.existsSync(cachePath(cacheKey))) {
     const iconCache = fs.readFileSync(cachePath(cacheKey), "utf8")
     return JSON.parse(iconCache)
@@ -16,7 +16,7 @@ const read: <T extends Cacheable>(cacheKey: string) => T = (cacheKey: string) =>
   return null
 }
 
-const write = <T extends Cacheable>(cacheKey: string, content: T) => {
+function write<T extends Cacheable>(cacheKey: string, content: T): void {
   if (!fs.existsSync(cacheDir)) {
     fs.mkdirSync(cacheDir)
   }
@@ -24,9 +24,9 @@ const write = <T extends Cacheable>(cacheKey: string, content: T) => {
   fs.writeFileSync(cachePath(cacheKey), JSON.stringify(content), 'utf-8')
 }
 
-const resolve: <T extends Cacheable>(cacheKey: string, contentResolver: () => Promise<T>|T) => Promise<T> = async <T extends Cacheable>(cacheKey: string, contentResolver: () => Promise<T>|T, writeCache: boolean = true) => {
+async function resolve<T extends Cacheable>(cacheKey: string, contentResolver: () => Promise<T>|T, writeCache = true): Promise<T> {
   try {
-    let cacheItem: T = await read(cacheKey)
+    let cacheItem = await read<T>(cacheKey)
     if (cacheItem === null) {
       cacheItem = await contentResolver()
       if (writeCache) {
