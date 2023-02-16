@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sugar free",
+    "food",
+    "sweet",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

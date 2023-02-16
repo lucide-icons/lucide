@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "email",
+    "message",
+    "mail",
+    "paper airplane",
+    "paper aeroplane",
+    "submit"
+  ],
+  "categories": [
+    "mail",
+    "communication",
+    "connectivity"
+  ]
+}

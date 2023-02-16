@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "ecommerce",
+    "cart",
+    "purchase",
+    "store"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}

@@ -1,66 +1,76 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import svelte from 'rollup-plugin-svelte';
-import preprocess from 'svelte-preprocess';
-import bundleSize from '@atomico/rollup-plugin-sizes';
-import { terser } from 'rollup-plugin-terser';
-import license from 'rollup-plugin-license';
-import resolve from '@rollup/plugin-node-resolve';
-import commonJS from '@rollup/plugin-commonjs';
 import pkg from './package.json' assert { type: 'json' };
+import plugins from '@lucide/rollup-plugins';
+import resolve from '@rollup/plugin-node-resolve';
+import svelteConfig from './svelte.config.js';
 
 const packageName = 'LucideSvelte';
 const outputFileName = 'lucide-svelte';
 const outputDir = 'dist';
-const inputs = ['./src/lucide-svelte.js'];
+const inputs = ['./src/lucide-svelte.ts'];
 const bundles = [
+  // Not sure if this one is needed for Svelte
+  // {
+  //   format: 'cjs',
+  //   inputs,
+  //   outputDir,
+  // },
   {
-    format: 'umd',
+    format: 'es',
     inputs,
     outputDir,
-    minify: true,
-    sourcemap: true,
   },
   {
-    format: 'umd',
+    format: 'esm',
     inputs,
     outputDir,
-    sourcemap: true,
+    preserveModules: true,
   },
   {
-    format: 'cjs',
+    format: 'svelte',
     inputs,
     outputDir,
-    sourcemap: true,
+    preserveModules: true,
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
       plugins: [
-        svelte({
-          preprocess,
-          compilerOptions: {
-            dev: false,
-          },
-          emitCss: false,
-        }),
-        resolve(),
-        commonJS({
-          include: 'node_modules/**',
-        }),
-        minify && terser(),
-        license({
-          banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
-        }),
-        bundleSize(),
+        ...(format !== 'svelte' ? [
+          svelte({
+            ...svelteConfig,
+            include: 'src/**/*.svelte',
+            compilerOptions: {
+              dev: false,
+              css: false,
+              hydratable: true,
+            },
+            emitCss: false,
+          }),
+          resolve({
+            browser: true,
+            exportConditions: ['svelte'],
+            extensions: ['.svelte']
+          }),
+        ] : []),
+        ...plugins(pkg, minify),
       ],
-      external: ['svelte'],
+      external: format === 'svelte' ? [/\.svelte/] : ['svelte', 'svelte/internal'],
       output: {
         name: packageName,
-        file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-        format,
+        ...(preserveModules
+          ? {
+              dir: `${outputDir}/${format}`,
+            }
+          : {
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
+        preserveModules,
+        format: format === 'svelte' ? 'esm' : format,
         sourcemap: true,
         globals: {
           svelte: 'svelte',

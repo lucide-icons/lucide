@@ -4,7 +4,7 @@ import { Grid } from '../src/icons'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
-    const { container } = render(() => <Grid/> );
+    const { container } = render(() => <Grid /> );
 
     expect( container.innerHTML ).toMatchSnapshot();
   });
@@ -15,7 +15,7 @@ describe('Using lucide icon components', () => {
       <Grid
         data-testid={testId}
         size={48}
-        stroke="red"
+        color="red"
         strokeWidth={4}
       />,
     );

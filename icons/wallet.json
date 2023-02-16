@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "money",
+    "finance",
+    "pocket"
+  ],
+  "categories": [
+    "account",
+    "money"
+  ]
+}

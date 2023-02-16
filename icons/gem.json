@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "diamond",
+    "price",
+    "special",
+    "present"
+  ],
+  "categories": [
+    "gaming",
+    "money"
+  ]
+}

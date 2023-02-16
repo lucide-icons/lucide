@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "wireless"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

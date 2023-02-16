@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "exit fullscreen",
+    "arrows",
+    "close",
+    "shrink"
+  ],
+  "categories": [
+    "arrows",
+    "layout",
+    "design"
+  ]
+}

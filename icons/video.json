@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "camera",
+    "movie",
+    "film"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "photography"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sheet",
+    "grid",
+    "spreadsheet"
+  ],
+  "categories": [
+    "text",
+    "files"
+  ]
+}
