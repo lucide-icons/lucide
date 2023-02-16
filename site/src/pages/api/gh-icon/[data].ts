@@ -243,30 +243,21 @@ export default async function handler(req, res) {
         const lastElement = element.at(-1)?.next;
         assert(lastElement);
         const isClosed = element[0].prev.x === lastElement.x && element[0].prev.y === lastElement.y;
-        const isEnd = paths[i + 1]?.isStart !== false;
         return c.name === 'path'
           ? [
               `<mask id="path-mask-${i}" maskUnits="userSpaceOnUse" stroke="none">`,
               '<rect x="0" y="0" width="24" height="24" fill="#fff" rx="1" />',
-              `<path d="M${prev.x} ${prev.y}h.01" stroke-width="${
-                isStart && !isClosed ? 1 : 0.5
-              }" stroke="#000"/>`,
-              `<path d="M${next.x} ${next.y}h.01" stroke-width="${
-                isEnd && !isClosed ? 1 : 0.5
-              }" stroke="#000"/>`,
+              `<path d="M${prev.x} ${prev.y}h.01" stroke-width="1" stroke="#000"/>`,
+              `<path d="M${next.x} ${next.y}h.01" stroke-width="1" stroke="#000"/>`,
               '</mask>',
+              `<path d="M${prev.x} ${prev.y}h.01" stroke-width=".25" stroke="#fff" />`,
+              `<path d="M${next.x} ${next.y}h.01" stroke-width=".25" stroke="#fff" />`,
               isStart &&
                 !isClosed &&
-                `<path d="M${prev.x} ${prev.y}h.01" stroke-width=".25" stroke="#fff" />`,
-              isEnd &&
+                `<circle cx="${prev.x}" cy="${prev.y}" r=".5" stroke-width=".125" stroke="#fff" />`,
+              paths[i + 1]?.isStart !== false &&
                 !isClosed &&
-                `<path d="M${next.x} ${next.y}h.01" stroke-width=".25" stroke="#fff" />`,
-              `<circle cx="${prev.x}" cy="${prev.y}" r="${
-                isStart && !isClosed ? 0.5 : 0.25
-              }" stroke-width=".125" stroke="#fff" />`,
-              `<circle cx="${next.x}" cy="${next.y}" r="${
-                isEnd && !isClosed ? 0.5 : 0.25
-              }" stroke-width=".125" stroke="#fff" />`,
+                `<circle cx="${next.x}" cy="${next.y}" r=".5" stroke-width=".125" stroke="#fff" />`,
               `<path d="${d}" stroke="#fff" stroke-width=".125" mask="url(#path-mask-${i})"/>`,
             ].filter(Boolean)
           : [`<path d="${d}" stroke="#fff" stroke-width=".125"/>`];
