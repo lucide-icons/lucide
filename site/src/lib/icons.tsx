@@ -1,31 +1,32 @@
 import fs from "fs";
 import path from "path";
-import { parseSync } from 'svgson';
-import tags from '../../../tags.json';
 import { IconEntity } from "../types";
 import { getContributors } from "./fetchAllContributors";
 
 const directory = path.join(process.cwd(), "../icons");
 
 export function getAllNames() {
-  const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.svg');
+  const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.json');
 
-  return fileNames.map((fileName) => {
-    return fileName.replace(/\.svg$/, "");
-  });
+  return fileNames
+    .filter((fileName) => fs.existsSync(directory + '/' + path.basename(fileName, '.json') + '.svg'))
+    .map((fileName) => path.basename(fileName, '.json'));
 }
 
 export async function getData(name: string) {
-  const fullPath = path.join(directory, `${name}.svg`);
-  const fileContent = fs.readFileSync(fullPath, "utf8");
+  const svgPath = path.join(directory, `${name}.svg`);
+  const svgContent = fs.readFileSync(svgPath, "utf8");
+  const jsonPath = path.join(directory, `${name}.json`);
+  const jsonContent = fs.readFileSync(jsonPath, "utf8");
+  const iconJson = JSON.parse(jsonContent);
 
   const contributors = await getContributors(name);
 
   return {
+    ...iconJson,
     name,
-    tags: tags[name] || [],
     contributors,
-    src: fileContent
+    src: svgContent
   };
 }
 

@@ -1,12 +1,13 @@
 import path from 'path';
-import icons from '../icons.json' assert { type: 'json' };
-import { writeFile, getCurrentDirPath } from './helpers.mjs';
+import { writeFile, getCurrentDirPath, readAllMetadata } from './helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url)
+const ICONS_DIR = path.resolve(currentDir, '../icons');
+const icons = readAllMetadata(ICONS_DIR);
 
 const newCategories = {};
-Object.keys(icons.icons).forEach(iconName => {
-  icons.icons[iconName].categories.forEach(categoryName => {
+Object.keys(icons).forEach(iconName => {
+  icons[iconName].categories.forEach(categoryName => {
     newCategories[categoryName] = newCategories[categoryName] || [];
     newCategories[categoryName].push(iconName);
   });
