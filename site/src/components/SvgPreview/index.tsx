@@ -124,46 +124,49 @@ const ControlPath = ({
   </>
 );
 
-const SvgPreview = ({ src, showGrid = false }: { src: string; showGrid?: boolean }) => {
-  const paths = getPaths(src);
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      {showGrid && <Grid strokeWidth={0.1} stroke="#000" strokeOpacity={0.1} radius={1} />}
-      <Shadow paths={paths} strokeWidth={4} stroke="#000" radius={1} strokeOpacity={0.05} />
-      <ColoredPath
-        paths={paths}
-        colors={[
-          '#8a508f',
-          '#2c4875',
-          '#003f5c',
-          '#00202e',
-          '#003f5c',
-          '#2c4875',
-          '#8a508f',
-          '#bc5090',
-          '#ff6361',
-          '#ff8531',
-          '#ffa600',
-          '#ffd380',
-          '#ffa600',
-          '#ff8531',
-          '#ff6361',
-          '#bc5090',
-        ]}
-      />
-      <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
-    </svg>
-  );
-};
+const SvgPreview = React.forwardRef<SVGSVGElement, { src: string; showGrid?: boolean }>(
+  ({ src, showGrid = false }, ref) => {
+    const paths = getPaths(src);
+    return (
+      <svg
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        width={24}
+        height={24}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        {showGrid && <Grid strokeWidth={0.1} stroke="#000" strokeOpacity={0.1} radius={1} />}
+        <Shadow paths={paths} strokeWidth={4} stroke="#000" radius={1} strokeOpacity={0.05} />
+        <ColoredPath
+          paths={paths}
+          colors={[
+            '#8a508f',
+            '#2c4875',
+            '#003f5c',
+            '#00202e',
+            '#003f5c',
+            '#2c4875',
+            '#8a508f',
+            '#bc5090',
+            '#ff6361',
+            '#ff8531',
+            '#ffa600',
+            '#ffd380',
+            '#ffa600',
+            '#ff8531',
+            '#ff6361',
+            '#bc5090',
+          ]}
+        />
+        <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
+      </svg>
+    );
+  }
+);
 
 export default SvgPreview;

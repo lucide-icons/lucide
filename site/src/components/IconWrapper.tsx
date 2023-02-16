@@ -8,7 +8,7 @@ interface IconWrapperProps extends SVGProps<SVGSVGElement> {
 
 export const IconWrapper = forwardRef<SVGSVGElement, IconWrapperProps>((props, ref) => {
   if (props.showPreview) {
-    return <SvgPreview src={props.src} />;
+    return <SvgPreview src={props.src} ref={ref} />;
   }
   const defaultAttrs: SVGProps<SVGSVGElement> = {
     xmlns: 'http://www.w3.org/2000/svg',
