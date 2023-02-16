@@ -62,9 +62,11 @@ export const SearchInput = (({onChange, onSubmit, placeholder, ...rest}: SearchI
           ref.current.focus();
         }
       };
-
-      window.addEventListener('keydown', handleKeyDown);
-      return () => window.removeEventListener('keydown', handleKeyDown);
+      if (typeof window !== "undefined") {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+      }
+      return;
     }, []);
 
     const rightElementWidth = theme.components.SearchInput.rightElementWidth;

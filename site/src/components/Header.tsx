@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import {Box, chakra, Divider, Flex, Heading, Link, Text} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import JSLogo from '../../public/framework-logos/js.svg';
@@ -11,6 +12,7 @@ import SvelteLogo from '../../public/framework-logos/svelte.svg';
 import {IconEntity} from '../types';
 import theme from "../lib/theme";
 import {SearchInput} from "./SearchInput";
+import {useCustomizeIconContext} from "./CustomizeIconContext";
 import useSpacing from "../lib/useSpacing";
 
 interface HeaderProps {

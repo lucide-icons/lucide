@@ -44,7 +44,7 @@ async function resolve<T extends Cacheable>(cacheKey: string, contentResolver: (
     }
     return cacheItem;
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error);
   }
 }
 

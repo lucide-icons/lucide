@@ -3,13 +3,12 @@ import fs from 'fs';
 import path from 'path';
 import {Release} from '../types';
 import GithubApi from "./githubApi";
-import GithubCache from "./githubCache";
-import {fetchCurrentRelease} from "./fetchAllReleases";
+import NextCache from "./nextCache";
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
 
 function getContentHashOfFile(path) {
-  return new Promise((resolve, reject) => {
+  return new Promise<string>((resolve, reject) => {
     const hash = crypto.createHash('sha256');
     const stream = fs.createReadStream(path);
     stream.on('error', err => reject(err));
@@ -52,8 +51,8 @@ const findRelease = (date, releases: Release[]) => {
 
 export async function getMetadata(name, releases: Release[]) {
   try {
-    const cacheKey = await getIconHash(name);
-    return await GithubCache.resolve(cacheKey, async () => {
+    const cacheKey = `github-api/${await getIconHash(name)}`;
+    return await NextCache.resolve(cacheKey, async () => {
       const commits = await fetchCommitsOfIcon(name);
 
       let created = null;
@@ -86,8 +85,7 @@ export async function getMetadata(name, releases: Release[]) {
 
 export const fetchNumberOfContributors = async () => {
   try {
-    const currentVersion = await fetchCurrentRelease();
-    return GithubCache.resolve(`contributors-${currentVersion}`, async () => {
+    return NextCache.resolve(`contributors`, async () => {
       const response = await GithubApi.get('/contributors', {per_page: 1});
       return parseInt(response.headers.get('link').match(/page=([0-9]+)>; rel="last"/)[1], 10);
     });

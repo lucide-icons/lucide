@@ -1,6 +1,6 @@
 import GithubApi from "./githubApi";
-import GithubCache from "./githubCache";
-import * as lucidePackage from '../../../packages/lucide/package.json' assert {type: 'json'};
+import * as lucidePackage from '../../../packages/lucide/package.json'
+import NextCache from "./nextCache";
 
 export const fetchCurrentRelease = async () => {
   return `v${lucidePackage.version}`;
@@ -8,8 +8,7 @@ export const fetchCurrentRelease = async () => {
 
 export const getAllReleases = async () => {
   try {
-    const currentVersion = await fetchCurrentRelease();
-    const releases = await GithubCache.resolve(`releases-${currentVersion}`, async () => await fetchAllReleases(currentVersion));
+    const releases = await NextCache.resolve(`releases`, async () => await fetchAllReleases());
     return releases.map(
       (data) => {
         return {

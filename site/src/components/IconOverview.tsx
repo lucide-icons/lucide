@@ -20,7 +20,7 @@ interface IconOverviewProps {
 const IconOverview = ({data, categories, currentIcon, currentVersion}: IconOverviewProps) => {
   const [query, setQuery] = useState('');
   const {colorMode} = useColorMode();
-  const isMobile = useBreakpointValue({base: true, md: false});
+  const isMobile = true; // useBreakpointValue({base: true, md: false});
   const [customizerOpen, setCustomizerOpen] = useState(false);
   const {category} = useContext(IconStyleContext);
 

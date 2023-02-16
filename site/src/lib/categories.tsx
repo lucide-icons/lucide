@@ -1,29 +1,28 @@
 import fs from "fs";
 import path from "path";
-import categories from '../../../categories.json';
-import {IconEntity} from "../types";
+import {CategoryEntity} from '../types';
 
-const directory = path.join(process.cwd(), "../categories");
+const directory = path.join(process.cwd(), '../categories');
 
 export function getAllCategoryNames() {
   const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.json');
 
-  return fileNames.map((fileName) => {
-    return path.basename(fileName, '.json');
-  });
+  return fileNames
+    .map((fileName) => path.basename(fileName, '.json'));
 }
 
 export async function getCategoryData(name: string) {
+  const jsonPath = path.join(directory, `${name}.json`);
+  const jsonContent = fs.readFileSync(jsonPath, 'utf8');
+  const categoryJson = JSON.parse(jsonContent);
+
   return {
-    ...JSON.parse(fs.readFileSync(path.join(directory, `${name}.json`))),
+    ...categoryJson,
     name,
-    icons: categories[name] || [],
   };
 }
 
-export async function getAllCategories(): Promise<IconEntity[]> {
+export async function getAllCategories(): Promise<CategoryEntity[]> {
   const names = getAllCategoryNames();
-  return Promise.all(names.map((name) => getCategoryData(name)).sort((a, b) => {
-    return (a.weight ?? 0) - (b.weight ?? 0);
-  }));
+  return Promise.all(names.map((name) => getCategoryData(name)));
 }
