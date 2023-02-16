@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "device"
+    "on",
+    "off",
+    "device",
+    "switch"
   ],
   "categories": [
     "connectivity"

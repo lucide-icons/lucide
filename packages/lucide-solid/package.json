@@ -1,7 +1,7 @@
 {
   "name": "lucide-solid",
   "description": "A Lucide icon library package for Solid applications",
-  "version": "0.88.0-beta.3",
+  "version": "0.105.0-alpha.9",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -11,34 +11,44 @@
     "directory": "packages/lucide-solid"
   },
   "author": "Eric Fennis",
-  "amdName": "lucide-solid",
+  "source": "src/lucide-solid.ts",
   "main": "dist/cjs/lucide-solid.js",
-  "main:umd": "dist/umd/lucide-solid.js",
   "module": "dist/esm/lucide-solid.js",
-  "unpkg": "dist/umd/lucide-solid.min.js",
-  "typings": "dist/lucide-solid.d.ts",
-  "files": [
-    "dist"
-  ],
+  "types": "dist/types/lucide-solid.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "solid": "./dist/source/lucide-solid.js",
+      "import": "./dist/esm/lucide-solid.js",
+      "browser": "./dist/esm/lucide-solid.js",
+      "require": "./dist/cjs/lucide-solid.js",
+      "node": "./dist/cjs/lucide-solid.js"
+    }
+  },
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:types",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle && pnpm build:version",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts",
-    "build:types": "node ./scripts/buildTypes.mjs",
-    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "build:transpile": "tsc --jsx preserve -t es2020 --rootDir src --outDir dist --noEmit false",
+    "build:version": "node ./scripts/replaceVersion.mjs",
+    "build:bundle": "rollup -c rollup.config.mjs",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
     "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/build-icons": "workspace:*",
+    "@atomico/rollup-plugin-sizes": "^1.1.4",
     "@testing-library/jest-dom": "^5.16.5",
+    "rollup-plugin-license": "^3.0.1",
     "babel-preset-solid": "^1.5.4",
     "jsdom": "^20.0.0",
     "rollup": "^3.5.1",
+    "rollup-preset-solid": "^2.0.1",
     "solid-js": "^1.4.7",
     "solid-testing-library": "^0.3.0",
+    "typescript": "^4.9.4",
     "vite": "^3.2.4",
     "vite-plugin-solid": "^2.3.0",
     "vitest": "^0.23.2"

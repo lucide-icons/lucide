@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "declaration": true,
+    "declaration": false,
     "noEmitOnError": true,
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
@@ -17,7 +17,6 @@
     "downlevelIteration": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "declarationMap": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
   },

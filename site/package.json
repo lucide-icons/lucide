@@ -1,12 +1,13 @@
 {
+  "name": "@lucide/site",
   "private": true,
-  "name": "site",
   "version": "1.0.0",
   "author": "John Letey",
   "scripts": {
     "dev": "next dev",
     "copy-assets": "mkdir -p ./public/docs/images && cp -rf ../docs/images ./public/docs",
-    "build": "pnpm copy-assets && next build",
+    "prebuild": "ts-node scripts/preBuild.tsx",
+    "build": "pnpm copy-assets && pnpm prebuild && next build",
     "export": "next export -o build",
     "deploy": "pnpm build && pnpm export",
     "lint": "eslint .",
@@ -37,7 +38,8 @@
     "react-color": "^2.19.3",
     "react-dom": "^18.0.0",
     "react-svg-loader": "^3.0.3",
-    "react-virtualized": "^9.22.3"
+    "react-virtualized": "^9.22.3",
+    "svgson": "^5.2.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.2.5",
@@ -58,6 +60,8 @@
     "jest": "^26.5.2",
     "prettier": "^2.3.2",
     "react-test-renderer": "17.0.2",
+    "ts-node": "~10.9.1",
+    "tslib": "^2.4.0",
     "typescript": "^4.3.5"
   }
 }

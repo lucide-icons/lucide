@@ -1,7 +1,7 @@
 {
   "name": "lucide-svelte",
   "description": "A Lucide icon library package for Svelte applications",
-  "version": "0.104.0",
+  "version": "0.115.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -25,7 +25,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:strip && pnpm build:types",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --pretty=false",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --withAliases --aliasesFileExtension=.ts --aliasImportFileExtension=.svelte --pretty=false",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "build:strip": "svelte-strip strip src/ dist/svelte",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/build-icons": "workspace:*",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@sveltejs/vite-plugin-svelte": "^1.2.0",
     "@testing-library/jest-dom": "^5.16.2",

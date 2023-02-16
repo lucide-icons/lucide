@@ -1,16 +1,19 @@
 import path from 'path';
-import icons from '../icons.json' assert { type: 'json' };
 import categories from '../categories.json' assert { type: 'json' };
-import { mergeArrays, writeFile, getCurrentDirPath } from './helpers.mjs';
+import { mergeArrays, writeFile, readAllMetadata, getCurrentDirPath } from './helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url)
+const ICONS_DIR = path.resolve(currentDir, '../icons');
+const icons = readAllMetadata(ICONS_DIR);
 
 Object.keys(categories).forEach(categoryName => {
   categories[categoryName].forEach(iconName => {
-    mergeArrays(icons.icons[iconName].categories, [categoryName]);
+    icons[iconName].categories = mergeArrays(icons[iconName].categories, [categoryName]);
   });
 });
 
-const iconsContent = JSON.stringify(icons, null, 2);
+Object.keys(icons).forEach(iconName => {
+  const iconContent = JSON.stringify(icons[iconName], null, 2);
+  writeFile(iconContent, `${iconName}.json`, path.resolve(currentDir, '../icons'));
+})
 
-writeFile(iconsContent, 'icons.json', path.resolve(currentDir, '..'));

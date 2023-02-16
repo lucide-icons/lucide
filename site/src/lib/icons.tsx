@@ -14,7 +14,6 @@ export function getAllNames() {
     .map((fileName) => path.basename(fileName, '.json'));
 }
 
-
 export async function getData(name: string, releases) {
   const svgPath = path.join(directory, `${name}.svg`);
   const svgContent = fs.readFileSync(svgPath, "utf8");

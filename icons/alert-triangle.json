@@ -3,7 +3,8 @@
   "tags": [
     "warning",
     "alert",
-    "danger"
+    "danger",
+    "exclamation mark"
   ],
   "categories": [
     "notifications",

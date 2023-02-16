@@ -71,13 +71,37 @@ export const writeFile = (content, fileName, outputDirectory) =>
   fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
 
 /**
+ * Reads metadata from the icons/categories directories
+ *
+ * @param {string} directory
+ * @returns {object} A map of icon or category metadata
+ */
+export const readAllMetadata = (directory) =>
+  fs.readdirSync(directory).filter((file) => path.extname(file) === '.json').reduce(
+    (acc, fileName, i) => {
+      acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
+      return acc;
+    }, {}
+  );
+
+/**
+ * Reads metadata for an icon or category
+ *
+ * @param {string} fileName
+ * @param {string} directory
+ * @returns {object} The metadata for the icon or category
+ */
+export const readMetadata = (fileName, directory) =>
+  JSON.parse(fs.readFileSync(path.join(directory, fileName), 'utf-8'));
+
+/**
  * reads the icon directory
  *
  * @param {string} directory
  * @returns {array} An array of file paths containig svgs
  */
-export const readSvgDirectory = (directory) =>
-  fs.readdirSync(directory).filter((file) => path.extname(file) === '.svg');
+export const readSvgDirectory = (directory, fileExtension = '.svg') =>
+  fs.readdirSync(directory).filter((file) => path.extname(file) === fileExtension);
 
 /**
  * Read svg from directory

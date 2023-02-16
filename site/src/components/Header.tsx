@@ -19,6 +19,27 @@ interface HeaderProps {
 }
 
 const Header = ({data, currentVersion, contributors}: HeaderProps) => {
+  const [zippingIcons, setZippingIcons] = useState(false);
+  const { iconsRef } = useCustomizeIconContext();
+
+  const downloadAllIcons = async () => {
+    setZippingIcons(true);
+
+    let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [
+      name,
+      svgEl.outerHTML,
+    ]);
+
+    // Fallback
+    if (iconEntries.length === 0) {
+      iconEntries = data.map(icon => [icon.name, icon.src]);
+    }
+
+    const zip = await generateZip(iconEntries);
+    download(zip, 'lucide.zip');
+    setZippingIcons(false);
+  };
+
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
   const router = useRouter();
 
