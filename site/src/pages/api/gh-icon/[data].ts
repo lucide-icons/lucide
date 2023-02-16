@@ -1,7 +1,6 @@
 import { INode, parseSync } from 'svgson';
 import { SVGPathData, encodeSVGPath } from 'svg-pathdata';
 import toPath from 'element-to-path';
-import { SVGCommand } from 'svg-pathdata/lib/types';
 
 function assertNever(x: never): never {
   throw new Error('Unknown type: ' + x['type']);
@@ -12,9 +11,9 @@ function assert(value: unknown): asserts value {
   }
 }
 
-const extractPaths = (node: INode): string[] => {
+const extractPaths = (node: INode): { d: string; name: typeof node.name }[] => {
   if (/(rect|circle|ellipse|polygon|polyline|line|path)/.test(node.name)) {
-    return [toPath(node)];
+    return [{ d: toPath(node), name: node.name }];
   } else if (node.children && Array.isArray(node.children)) {
     return node.children.flatMap(extractPaths);
   }
@@ -44,23 +43,31 @@ const colors = [
 export default async function handler(req, res) {
   const src = Buffer.from(req.query.data.slice(0, -4), 'base64').toString('ascii');
 
-  const commands: SVGCommand[] = extractPaths(parseSync(src)).flatMap(
-    (d) => new SVGPathData(d).toAbs().commands
+  const commands = extractPaths(parseSync(src)).flatMap(({ d, name }, idx) =>
+    new SVGPathData(d).toAbs().commands.map((c) => ({ ...c, id: idx, name }))
   );
 
   type Point = { x: number; y: number };
-  const paths: { d: string; prev: Point; next: Point }[] = [];
+  const paths: {
+    d: string;
+    prev: Point;
+    next: Point;
+    isStart: boolean;
+    c: (typeof commands)[number];
+  }[] = [];
   let prev: Point | undefined = undefined;
-  const addPath = (next: Point, d?: string) => {
+  let start: Point | undefined = undefined;
+  const addPath = (c: (typeof commands)[number], next: Point, d?: string) => {
     assert(prev);
     paths.push({
+      c,
       d: d || `M${prev.x} ${prev.y}L${next.x} ${next.y}`,
       prev,
       next,
+      isStart: start === prev,
     });
     prev = next;
   };
-  let start: Point | undefined = undefined;
   let prevCP: Point | undefined = undefined;
   for (let i = 0; i < commands.length; i++) {
     const previousCommand = commands[i - 1];
@@ -73,31 +80,29 @@ export default async function handler(req, res) {
       }
       case SVGPathData.LINE_TO: {
         assert(prev);
-        addPath(c);
+        addPath(c, c);
         break;
       }
       case SVGPathData.HORIZ_LINE_TO: {
         assert(prev);
-        addPath({ x: c.x, y: prev.y });
+        addPath(c, { x: c.x, y: prev.y });
         break;
       }
       case SVGPathData.VERT_LINE_TO: {
         assert(prev);
-        addPath({ x: prev.x, y: c.y });
+        addPath(c, { x: prev.x, y: c.y });
         break;
       }
       case SVGPathData.CLOSE_PATH: {
         assert(prev);
         assert(start);
-        if (prev.x === start.x || prev.y === start.y) {
-          addPath(start);
-        }
+        addPath(c, start);
         start = undefined;
         break;
       }
       case SVGPathData.CURVE_TO: {
         assert(prev);
-        addPath(c, `M ${prev.x},${prev.y} ${encodeSVGPath(c)}`);
+        addPath(c, c, `M ${prev.x},${prev.y} ${encodeSVGPath(c)}`);
         break;
       }
       case SVGPathData.SMOOTH_CURVE_TO: {
@@ -123,6 +128,7 @@ export default async function handler(req, res) {
         };
         addPath(
           c,
+          c,
           `M ${prev.x},${prev.y} ${encodeSVGPath({
             type: SVGPathData.CURVE_TO,
             relative: false,
@@ -138,7 +144,7 @@ export default async function handler(req, res) {
       }
       case SVGPathData.QUAD_TO: {
         assert(prev);
-        addPath(c, `M ${prev.x},${prev.y} ${encodeSVGPath(c)}`);
+        addPath(c, c, `M ${prev.x},${prev.y} ${encodeSVGPath(c)}`);
         break;
       }
       case SVGPathData.SMOOTH_QUAD_TO: {
@@ -175,6 +181,7 @@ export default async function handler(req, res) {
         prevCP = backTrackCP(i, prev);
         addPath(
           c,
+          c,
           `M ${prev.x},${prev.y} ${encodeSVGPath({
             type: SVGPathData.QUAD_TO,
             relative: false,
@@ -189,6 +196,7 @@ export default async function handler(req, res) {
       case SVGPathData.ARC: {
         assert(prev);
         addPath(
+          c,
           c,
           `M ${prev.x},${prev.y} A ${c.rX} ${c.rY} ${c.xRot} ${c.lArcFlag} ${c.sweepFlag} ${c.x} ${c.y}`
         );
@@ -230,18 +238,39 @@ export default async function handler(req, res) {
       ...paths.map(({ d }, i) => `<path d="${d}" stroke="${colors[(i % colors.length) - 4]}"/>`),
 
       // white lines and circles
-      ...paths.flatMap(({ d, prev, next }, i) => [
-        `<mask id="path-mask-${i}" maskUnits="userSpaceOnUse" stroke="none">`,
-        '<rect x="0" y="0" width="24" height="24" fill="#fff" rx="1" />',
-        `<path d="M${prev.x} ${prev.y}h.01" stroke-width="1" stroke="#000"/>`,
-        `<path d="M${next.x} ${next.y}h.01" stroke-width="1" stroke="#000"/>`,
-        '</mask>',
-        `<path d="M${prev.x} ${prev.y}h.01" stroke-width=".25" stroke="#fff" />`,
-        `<path d="M${next.x} ${next.y}h.01" stroke-width=".25" stroke="#fff" />`,
-        `<circle cx="${prev.x}" cy="${prev.y}" r=".5" stroke-width=".125" stroke="#fff" />`,
-        `<circle cx="${next.x}" cy="${next.y}" r=".5" stroke-width=".125" stroke="#fff" />`,
-        `<path d="${d}" stroke="#fff" stroke-width=".125" mask="url(#path-mask-${i})"/>`,
-      ]),
+      ...paths.flatMap(({ d, prev, next, isStart, c }, i) => {
+        const element = paths.filter((p) => p.c.id === c.id);
+        const lastElement = element.at(-1)?.next;
+        assert(lastElement);
+        const isClosed = element[0].prev.x === lastElement.x && element[0].prev.y === lastElement.y;
+        const isEnd = paths[i + 1]?.isStart !== false;
+        return c.name === 'path'
+          ? [
+              `<mask id="path-mask-${i}" maskUnits="userSpaceOnUse" stroke="none">`,
+              '<rect x="0" y="0" width="24" height="24" fill="#fff" rx="1" />',
+              `<path d="M${prev.x} ${prev.y}h.01" stroke-width="${
+                isStart && !isClosed ? 1 : 0.5
+              }" stroke="#000"/>`,
+              `<path d="M${next.x} ${next.y}h.01" stroke-width="${
+                isEnd && !isClosed ? 1 : 0.5
+              }" stroke="#000"/>`,
+              '</mask>',
+              isStart &&
+                !isClosed &&
+                `<path d="M${prev.x} ${prev.y}h.01" stroke-width=".25" stroke="#fff" />`,
+              isEnd &&
+                !isClosed &&
+                `<path d="M${next.x} ${next.y}h.01" stroke-width=".25" stroke="#fff" />`,
+              `<circle cx="${prev.x}" cy="${prev.y}" r="${
+                isStart && !isClosed ? 0.5 : 0.25
+              }" stroke-width=".125" stroke="#fff" />`,
+              `<circle cx="${next.x}" cy="${next.y}" r="${
+                isEnd && !isClosed ? 0.5 : 0.25
+              }" stroke-width=".125" stroke="#fff" />`,
+              `<path d="${d}" stroke="#fff" stroke-width=".125" mask="url(#path-mask-${i})"/>`,
+            ].filter(Boolean)
+          : [`<path d="${d}" stroke="#fff" stroke-width=".125"/>`];
+      }),
 
       '</svg>',
     ].join('\n')
