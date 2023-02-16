@@ -214,8 +214,8 @@ export default async function handler(req, res) {
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
 
       // grid
-      '<rect x=".1" y=".1" width="23.8" height="23.8" rx="1" fill="#fff" stroke="#E2E8F0" stroke-width=".1"/>',
-      '<path stroke="#E2E8F0" stroke-width=".1" d="M0 1h24M1 0v24M0 2h24M2 0v24M0 3h24M3 0v24M0 4h24M4 0v24M0 5h24M5 0v24M0 6h24M6 0v24M0 7h24M7 0v24M0 8h24M8 0v24M0 9h24M9 0v24M0 10h24M10 0v24M0 11h24M11 0v24M0 12h24M12 0v24M0 13h24M13 0v24M0 14h24M14 0v24M0 15h24M15 0v24M0 16h24M16 0v24M0 17h24M17 0v24M0 18h24M18 0v24M0 19h24M19 0v24M0 20h24M20 0v24M0 21h24M21 0v24M0 22h24M22 0v24M0 23h24M23 0v24"/>',
+      '<rect width="23.85" height="23.85" x=".075" y=".075" fill="#fff" stroke="#e2e8f0" stroke-width=".1" rx="1" ry="1"/>',
+      '<path stroke="#e2e8f0" stroke-width=".1" d="M.05 1h23.9M1 .05v23.9M.05 2h23.9M2 .05v23.9M.05 3h23.9M3 .05v23.9M.05 4h23.9M4 .05v23.9M.05 5h23.9M5 .05v23.9M.05 6h23.9M6 .05v23.9M.05 7h23.9M7 .05v23.9M.05 8h23.9M8 .05v23.9M.05 9h23.9M9 .05v23.9M.05 10h23.9M10 .05v23.9M.05 11h23.9M11 .05v23.9M.05 12h23.9M12 .05v23.9M.05 13h23.9M13 .05v23.9M.05 14h23.9M14 .05v23.9M.05 15h23.9M15 .05v23.9M.05 16h23.9M16 .05v23.9M.05 17h23.9M17 .05v23.9M.05 18h23.9M18 .05v23.9M.05 19h23.9M19 .05v23.9M.05 20h23.9M20 .05v23.9M.05 21h23.9M21 .05v23.9M.05 22h23.9M22 .05v23.9M.05 23h23.9M23 .05v23.9"/>',
 
       // 2px path padding
       '<mask id="point-overlap-mask" maskUnits="userSpaceOnUse" stroke="none">',
