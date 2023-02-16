@@ -1,11 +1,12 @@
 import { INode, parseSync } from 'svgson';
-import { SVGPathData, encodeSVGPath } from 'svg-pathdata';
 import toPath from 'element-to-path';
+import { SVGPathData, encodeSVGPath } from 'svg-pathdata';
+import { Path, Point } from './types';
 
 function assertNever(x: never): never {
   throw new Error('Unknown type: ' + x['type']);
 }
-function assert(value: unknown): asserts value {
+export function assert(value: unknown): asserts value {
   if (value === undefined) {
     throw new Error('value must be defined');
   }
@@ -21,40 +22,14 @@ const extractPaths = (node: INode): { d: string; name: typeof node.name }[] => {
   return [];
 };
 
-const colors = [
-  '#00202e',
-  '#003f5c',
-  '#2c4875',
-  '#8a508f',
-  '#bc5090',
-  '#ff6361',
-  '#ff8531',
-  '#ffa600',
-  '#ffd380',
-  '#ffa600',
-  '#ff8531',
-  '#ff6361',
-  '#bc5090',
-  '#8a508f',
-  '#2c4875',
-  '#003f5c',
-];
-
-export default async function handler(req, res) {
-  const src = Buffer.from(req.query.data.slice(0, -4), 'base64').toString('ascii');
-
-  const commands = extractPaths(parseSync(src)).flatMap(({ d, name }, idx) =>
+export const getCommands = (src: string) =>
+  extractPaths(parseSync(src)).flatMap(({ d, name }, idx) =>
     new SVGPathData(d).toAbs().commands.map((c) => ({ ...c, id: idx, name }))
   );
 
-  type Point = { x: number; y: number };
-  const paths: {
-    d: string;
-    prev: Point;
-    next: Point;
-    isStart: boolean;
-    c: (typeof commands)[number];
-  }[] = [];
+export const getPaths = (src: string) => {
+  const commands = getCommands(src);
+  const paths: Path[] = [];
   let prev: Point | undefined = undefined;
   let start: Point | undefined = undefined;
   const addPath = (c: (typeof commands)[number], next: Point, d?: string) => {
@@ -111,16 +86,16 @@ export default async function handler(req, res) {
         const reflectedCp1 = {
           x:
             previousCommand &&
-            (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
-              previousCommand.type === SVGPathData.CURVE_TO)
+              (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
+                previousCommand.type === SVGPathData.CURVE_TO)
               ? previousCommand.relative
                 ? previousCommand.x2 - previousCommand.x
                 : previousCommand.x2 - prev.x
               : 0,
           y:
             previousCommand &&
-            (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
-              previousCommand.type === SVGPathData.CURVE_TO)
+              (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
+                previousCommand.type === SVGPathData.CURVE_TO)
               ? previousCommand.relative
                 ? previousCommand.y2 - previousCommand.y
                 : previousCommand.y2 - prev.y
@@ -207,63 +182,5 @@ export default async function handler(req, res) {
       }
     }
   }
-
-  res.setHeader('Content-Type', 'image/svg+xml');
-  res.status(200).end(
-    [
-      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
-
-      // grid
-      '<rect width="23.85" height="23.85" x=".075" y=".075" fill="#fff" stroke="#e2e8f0" stroke-width=".1" rx="1" ry="1"/>',
-      '<path stroke="#e2e8f0" stroke-width=".1" d="M.05 1h23.9M1 .05v23.9M.05 2h23.9M2 .05v23.9M.05 3h23.9M3 .05v23.9M.05 4h23.9M4 .05v23.9M.05 5h23.9M5 .05v23.9M.05 6h23.9M6 .05v23.9M.05 7h23.9M7 .05v23.9M.05 8h23.9M8 .05v23.9M.05 9h23.9M9 .05v23.9M.05 10h23.9M10 .05v23.9M.05 11h23.9M11 .05v23.9M.05 12h23.9M12 .05v23.9M.05 13h23.9M13 .05v23.9M.05 14h23.9M14 .05v23.9M.05 15h23.9M15 .05v23.9M.05 16h23.9M16 .05v23.9M.05 17h23.9M17 .05v23.9M.05 18h23.9M18 .05v23.9M.05 19h23.9M19 .05v23.9M.05 20h23.9M20 .05v23.9M.05 21h23.9M21 .05v23.9M.05 22h23.9M22 .05v23.9M.05 23h23.9M23 .05v23.9"/>',
-
-      // 2px path padding
-      '<mask id="point-overlap-mask" maskUnits="userSpaceOnUse" stroke="none">',
-      '<rect x="0" y="0" width="24" height="24" fill="#fff" rx="1" />',
-      `<path d="${paths
-        .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
-        .filter((val, idx, arr) => arr.indexOf(val) === idx)
-        .join('')}" stroke-width="4" stroke="#000"/>`,
-      '</mask>',
-      ...paths.map(
-        ({ d }) =>
-          `<path d="${d}" stroke="#000" stroke-width="4" stroke-opacity=".05" mask="url(#point-overlap-mask)"/>`
-      ),
-      `<path d="${paths
-        .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
-        .filter((val, idx, arr) => arr.indexOf(val) === idx)
-        .join('')}" stroke-width="4" stroke="#000" opacity=".05"/>`,
-
-      // colored segmented path
-      ...paths.map(({ d }, i) => `<path d="${d}" stroke="${colors[(i % colors.length) - 4]}"/>`),
-
-      // white lines and circles
-      ...paths.flatMap(({ d, prev, next, isStart, c }, i) => {
-        const element = paths.filter((p) => p.c.id === c.id);
-        const lastElement = element.at(-1)?.next;
-        assert(lastElement);
-        const isClosed = element[0].prev.x === lastElement.x && element[0].prev.y === lastElement.y;
-        return c.name === 'path'
-          ? [
-              `<mask id="path-mask-${i}" maskUnits="userSpaceOnUse" stroke="none">`,
-              '<rect x="0" y="0" width="24" height="24" fill="#fff" rx="1" />',
-              `<path d="M${prev.x} ${prev.y}h.01" stroke-width="1" stroke="#000"/>`,
-              `<path d="M${next.x} ${next.y}h.01" stroke-width="1" stroke="#000"/>`,
-              '</mask>',
-              `<path d="M${prev.x} ${prev.y}h.01" stroke-width=".25" stroke="#fff" />`,
-              `<path d="M${next.x} ${next.y}h.01" stroke-width=".25" stroke="#fff" />`,
-              isStart &&
-                !isClosed &&
-                `<circle cx="${prev.x}" cy="${prev.y}" r=".5" stroke-width=".125" stroke="#fff" />`,
-              paths[i + 1]?.isStart !== false &&
-                !isClosed &&
-                `<circle cx="${next.x}" cy="${next.y}" r=".5" stroke-width=".125" stroke="#fff" />`,
-              `<path d="${d}" stroke="#fff" stroke-width=".125" mask="url(#path-mask-${i})"/>`,
-            ].filter(Boolean)
-          : [`<path d="${d}" stroke="#fff" stroke-width=".125"/>`];
-      }),
-
-      '</svg>',
-    ].join('\n')
-  );
-}
+  return paths;
+};
