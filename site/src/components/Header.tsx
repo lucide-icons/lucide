@@ -40,7 +40,6 @@ const Header = ({ data }: HeaderProps) => {
   const { iconsRef } = useCustomizeIconContext();
 
   const downloadAllIcons = async () => {
-    console.log(iconsRef);
     setZippingIcons(true);
 
     let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [

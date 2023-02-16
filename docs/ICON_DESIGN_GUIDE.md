@@ -80,3 +80,21 @@ For each icon these attributes are applied, corresponding to the above rules.
 Code of paths can get really big.
 To reduce file size we like to minify the code.
 We recommend to use the [SVGOMG](https://jakearchibald.github.io/svgomg/) to minify paths.
+
+### JSON metadata descriptor
+
+Each icon added must also come with a matching JSON file listing tags and categories for the icon.
+Please use the following template:
+
+```json
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "foo",
+    "bar"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
+```
