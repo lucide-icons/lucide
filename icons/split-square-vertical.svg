@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <path d="M5 8V5c0-1 1-2 2-2h10c1 0 2 1 2 2v3m0 8v3c0 1-1 2-2 2H7c-1 0-2-1-2-2v-3" />
-  <path d="M4 12h16" />
+  <line x1="4" y1="12" x2="20" y2="12" />
 </svg>
