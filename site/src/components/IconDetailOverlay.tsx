@@ -7,6 +7,7 @@ import {useCustomizeIconContext} from "./CustomizeIconContext";
 import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
 import { IconEntity } from "../types";
+import { createLucideIcon, IconNode } from 'lucide-react';
 
 type IconDownload = {
   src: string;
@@ -23,7 +24,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
   const toast = useToast();
   const { colorMode } = useColorMode();
 
-  const { tags = [], name } = icon ?? {};
+  const { tags = [], name, iconNode } = icon ?? {};
   const {color, strokeWidth, size} = useCustomizeIconContext();
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
@@ -54,10 +55,12 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     color: color,
   };
 
-  const downloadIcon = ({src, name = ''} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
+  const Icon = createLucideIcon(name, iconNode)
+
+  const downloadIcon = ({src, name = ''} : IconDownload) => download(iconRef.current.outerHTML, `${name}.svg`, 'image/svg+xml');
 
   const copyIcon = async ({src, name} : IconDownload) => {
-    const trimmedSrc = src.replace(/(\r\n|\n|\r|\s\s)/gm, "")
+    const trimmedSrc = iconRef.current.outerHTML.replace(/(\r\n|\n|\r|\s\s)/gm, "")
 
     await navigator.clipboard.writeText(trimmedSrc)
 
@@ -77,7 +80,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     const ctx = canvas.getContext("2d");
 
     const image = new Image();
-    image.src = `data:image/svg+xml;base64,${btoa(src)}`;
+    image.src = `data:image/svg+xml;base64,${btoa(iconRef.current.outerHTML)}`;
     image.onload = function() {
       ctx.drawImage(image, 0, 0);
 
@@ -151,14 +154,13 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                     style={iconStyling}
                     className="icon-large"
                   >
-                    <IconWrapper
-                      src={icon.src}
+                    <Icon
                       stroke={color}
                       strokeWidth={strokeWidth}
-                      height={size}
-                      width={size}
+                      size={size}
                       ref={iconRef}
                     />
+
                   </div>
 
                   <svg className="icon-grid" width="24" height="24" viewBox={`0 0 ${size} ${size}`} fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">

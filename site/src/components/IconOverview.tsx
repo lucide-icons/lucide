@@ -1,27 +1,32 @@
-import { Box, Text, IconButton, HStack, useTheme } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import { Box, Text, IconButton, HStack, useTheme, MenuList, MenuItem, Button } from '@chakra-ui/react';
+import React, { useMemo, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import IconList from './IconList';
 import { SearchInput } from './SearchInput';
-import { IconEntity } from '../types';
+import { Category, IconEntity } from '../types';
 
-import { SidebarClose, SidebarOpen } from 'lucide-react';
+import { createLucideIcon, SidebarClose, SidebarOpen } from 'lucide-react';
 
-import categories from '../../../categories.json';
 import IconCategoryList from './IconCategoryList';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface IconOverviewProps {
   data: IconEntity[];
+  categories: Category[]
 }
 
-const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
+const CATEGORY_TOP_OFFSET = 100
+
+const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
   const [query, setQuery] = useState('');
   const theme = useTheme()
 
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [categoryView, setCategoryView] = useState(true);
-  const SidebarIcon = categoryView ? SidebarOpen : SidebarClose;
+  const SidebarIcon = sidebarOpen ? SidebarOpen : SidebarClose;
 
   const searchResults = useSearch(query, data, [
     { name: 'name', weight: 2 },
@@ -37,6 +42,45 @@ const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
     }
   }
 
+  const categoryList = useMemo(() => {
+
+    return (
+      <>
+        {[{ name: 'all', title: 'All' }, ...categories].map(({ title, name }) => {
+          // Show category icon?
+          // const icon = data.find(({ name: iconName }) => iconName === categoryIcon)
+          // const Icon = createLucideIcon(icon.name, icon.iconNode)
+
+          return (
+            <Button
+              as="a"
+              key={name}
+              colorScheme='gray'
+              variant='ghost'
+              width="100%"
+              justifyContent="flex-start"
+              onClick={() => {
+                setCategoryView(name !== 'all')
+              }}
+              href={`#${name}`}
+              marginBottom={1}
+              // className={hash === name ? 'active' : undefined}
+              sx={{
+                flexShrink: 0,
+                '&.active': {
+                  color: 'brand.500'
+                }
+              }}
+            >
+              {title}
+            </Button>
+          )
+        })}
+        <Box h={20} flexShrink={0}></Box>
+      </>
+    )
+  }, [])
+
   return (
     <Box>
       <HStack position="sticky" top={0} zIndex={1} gap={2} padding={5}>
@@ -44,22 +88,56 @@ const IconOverview = ({ data }: IconOverviewProps): JSX.Element => {
           aria-label="Close overlay"
           variant="solid"
           color="current"
-          onClick={() => setCategoryView(currentView => !currentView)}
+          onClick={() => setSidebarOpen(currentView => !currentView)}
           icon={<SidebarIcon />}
         />
         <SearchInput onChange={setQuery} count={data.length} />
         <IconCustomizerDrawer size="md" paddingX={6} />
       </HStack>
 
-      <HStack marginTop={5} marginBottom="320px" padding={5} alignItems="flex-start">
-        <motion.div variants={sidebarVariants} animate={categoryView ? 'open' : 'closed'}>
-          <Box bgColor="blue.400" w="full" overflow="hidden">
-            <Box whiteSpace="nowrap">
-              hello
+      <HStack marginBottom="320px" padding={5} alignItems="flex-start">
+        <motion.div
+          variants={sidebarVariants}
+          animate={sidebarOpen ? 'open' : 'closed'}
+          initial={false}
+          style={{
+            height: `calc(100vh - ${CATEGORY_TOP_OFFSET}px)`,
+            position: 'sticky',
+            top: '100px'
+          }}
+        >
+          <Box
+            w="full"
+            h="full"
+            overflowY="auto"
+            paddingX={2}
+            paddingY={1}
+            paddingRight={4}
+            sx={{
+              '&::-webkit-scrollbar' : {
+                width: '4px',
+              },
+              '&::-webkit-scrollbar-track' : {
+                background: 'transparent'
+              },
+              '&::-webkit-scrollbar-thumb' : {
+                bgColor: 'grey',
+                borderRadius: 0,
+              },
+            }}
+          >
+            <Box
+              whiteSpace="nowrap"
+              height="100%"
+              display="flex"
+              flexDirection="column"
+              paddingBottom={8}
+            >
+              {categoryList}
             </Box>
           </Box>
         </motion.div>
-        <Box flex={1}>
+        <Box flex={1} paddingTop={1}>
           {searchResults.length > 0 ? (
             categoryView ? (
               <IconCategoryList icons={searchResults} data={data} categories={categories} />

@@ -342,6 +342,10 @@ export { default as LucideBatteryLow } from './icons/battery-low';
 export { default as BatteryMediumIcon } from './icons/battery-medium';
 export { default as LucideBatteryMedium } from './icons/battery-medium';
 
+// BatteryWarning aliases
+export { default as BatteryWarningIcon } from './icons/battery-warning';
+export { default as LucideBatteryWarning } from './icons/battery-warning';
+
 // Battery aliases
 export { default as BatteryIcon } from './icons/battery';
 export { default as LucideBattery } from './icons/battery';
@@ -369,6 +373,10 @@ export { default as LucideBedSingle } from './icons/bed-single';
 // Bed aliases
 export { default as BedIcon } from './icons/bed';
 export { default as LucideBed } from './icons/bed';
+
+// Beef aliases
+export { default as BeefIcon } from './icons/beef';
+export { default as LucideBeef } from './icons/beef';
 
 // Beer aliases
 export { default as BeerIcon } from './icons/beer';
@@ -966,6 +974,10 @@ export { default as LucideCornerUpRight } from './icons/corner-up-right';
 export { default as CpuIcon } from './icons/cpu';
 export { default as LucideCpu } from './icons/cpu';
 
+// CreativeCommons aliases
+export { default as CreativeCommonsIcon } from './icons/creative-commons';
+export { default as LucideCreativeCommons } from './icons/creative-commons';
+
 // CreditCard aliases
 export { default as CreditCardIcon } from './icons/credit-card';
 export { default as LucideCreditCard } from './icons/credit-card';
@@ -1001,6 +1013,10 @@ export { default as LucideCurlyBraces } from './icons/curly-braces';
 // Currency aliases
 export { default as CurrencyIcon } from './icons/currency';
 export { default as LucideCurrency } from './icons/currency';
+
+// DatabaseBackup aliases
+export { default as DatabaseBackupIcon } from './icons/database-backup';
+export { default as LucideDatabaseBackup } from './icons/database-backup';
 
 // Database aliases
 export { default as DatabaseIcon } from './icons/database';
@@ -1433,6 +1449,14 @@ export { default as LucideFilter } from './icons/filter';
 export { default as FingerprintIcon } from './icons/fingerprint';
 export { default as LucideFingerprint } from './icons/fingerprint';
 
+// FishOff aliases
+export { default as FishOffIcon } from './icons/fish-off';
+export { default as LucideFishOff } from './icons/fish-off';
+
+// Fish aliases
+export { default as FishIcon } from './icons/fish';
+export { default as LucideFish } from './icons/fish';
+
 // FlagOff aliases
 export { default as FlagOffIcon } from './icons/flag-off';
 export { default as LucideFlagOff } from './icons/flag-off';
@@ -1737,6 +1761,10 @@ export { default as LucideGripHorizontal } from './icons/grip-horizontal';
 export { default as GripVerticalIcon } from './icons/grip-vertical';
 export { default as LucideGripVertical } from './icons/grip-vertical';
 
+// Grip aliases
+export { default as GripIcon } from './icons/grip';
+export { default as LucideGrip } from './icons/grip';
+
 // Hammer aliases
 export { default as HammerIcon } from './icons/hammer';
 export { default as LucideHammer } from './icons/hammer';
@@ -1848,6 +1876,10 @@ export { default as LucideHop } from './icons/hop';
 // Hourglass aliases
 export { default as HourglassIcon } from './icons/hourglass';
 export { default as LucideHourglass } from './icons/hourglass';
+
+// IceCream2 aliases
+export { default as IceCream2Icon } from './icons/ice-cream-2';
+export { default as LucideIceCream2 } from './icons/ice-cream-2';
 
 // IceCream aliases
 export { default as IceCreamIcon } from './icons/ice-cream';
@@ -2513,6 +2545,14 @@ export { default as LucidePhoneOutgoing } from './icons/phone-outgoing';
 export { default as PhoneIcon } from './icons/phone';
 export { default as LucidePhone } from './icons/phone';
 
+// PictureInPicture2 aliases
+export { default as PictureInPicture2Icon } from './icons/picture-in-picture-2';
+export { default as LucidePictureInPicture2 } from './icons/picture-in-picture-2';
+
+// PictureInPicture aliases
+export { default as PictureInPictureIcon } from './icons/picture-in-picture';
+export { default as LucidePictureInPicture } from './icons/picture-in-picture';
+
 // PieChart aliases
 export { default as PieChartIcon } from './icons/pie-chart';
 export { default as LucidePieChart } from './icons/pie-chart';
@@ -2661,6 +2701,10 @@ export { default as LucideRefrigerator } from './icons/refrigerator';
 export { default as RegexIcon } from './icons/regex';
 export { default as LucideRegex } from './icons/regex';
 
+// RemoveFormatting aliases
+export { default as RemoveFormattingIcon } from './icons/remove-formatting';
+export { default as LucideRemoveFormatting } from './icons/remove-formatting';
+
 // Repeat1 aliases
 export { default as Repeat1Icon } from './icons/repeat-1';
 export { default as LucideRepeat1 } from './icons/repeat-1';
@@ -2716,6 +2760,14 @@ export { default as LucideRussianRuble } from './icons/russian-ruble';
 // Sailboat aliases
 export { default as SailboatIcon } from './icons/sailboat';
 export { default as LucideSailboat } from './icons/sailboat';
+
+// Salad aliases
+export { default as SaladIcon } from './icons/salad';
+export { default as LucideSalad } from './icons/salad';
+
+// Sandwich aliases
+export { default as SandwichIcon } from './icons/sandwich';
+export { default as LucideSandwich } from './icons/sandwich';
 
 // Save aliases
 export { default as SaveIcon } from './icons/save';
@@ -2969,6 +3021,10 @@ export { default as LucideSortAsc } from './icons/sort-asc';
 export { default as SortDescIcon } from './icons/sort-desc';
 export { default as LucideSortDesc } from './icons/sort-desc';
 
+// Soup aliases
+export { default as SoupIcon } from './icons/soup';
+export { default as LucideSoup } from './icons/soup';
+
 // Speaker aliases
 export { default as SpeakerIcon } from './icons/speaker';
 export { default as LucideSpeaker } from './icons/speaker';
@@ -2976,6 +3032,14 @@ export { default as LucideSpeaker } from './icons/speaker';
 // Spline aliases
 export { default as SplineIcon } from './icons/spline';
 export { default as LucideSpline } from './icons/spline';
+
+// SplitSquareHorizontal aliases
+export { default as SplitSquareHorizontalIcon } from './icons/split-square-horizontal';
+export { default as LucideSplitSquareHorizontal } from './icons/split-square-horizontal';
+
+// SplitSquareVertical aliases
+export { default as SplitSquareVerticalIcon } from './icons/split-square-vertical';
+export { default as LucideSplitSquareVertical } from './icons/split-square-vertical';
 
 // Sprout aliases
 export { default as SproutIcon } from './icons/sprout';
@@ -3376,6 +3440,10 @@ export { default as LucideVolumeX } from './icons/volume-x';
 // Volume aliases
 export { default as VolumeIcon } from './icons/volume';
 export { default as LucideVolume } from './icons/volume';
+
+// Vote aliases
+export { default as VoteIcon } from './icons/vote';
+export { default as LucideVote } from './icons/vote';
 
 // Wallet aliases
 export { default as WalletIcon } from './icons/wallet';

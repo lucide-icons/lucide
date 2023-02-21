@@ -8,7 +8,7 @@ export type IconNodes = {[iconName: string]: IconNode};
 export function fetchIconNodes(writeCache = true): Promise<IconNodes> {
   return NextCache.resolve('api-icon-nodes', async () => {
     return (await getAllData()).reduce((acc, icon) => {
-      acc[icon.name] = parseSync(icon.src).children.map(({name, attributes}) => [name, attributes]);
+      acc[icon.name] = icon.iconNode
       return acc;
     }, {});
   }, writeCache);

@@ -1,21 +1,24 @@
-import { Button, ButtonProps, Flex, Text, Tooltip, useToast } from '@chakra-ui/react';
+import { Button, ButtonProps, Tooltip, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
 import { memo } from 'react';
+import { createLucideIcon, IconNode } from 'lucide-react';
 import { useCustomizeIconContext } from './CustomizeIconContext';
-import { IconWrapper } from './IconWrapper';
 
 interface IconListItemProps extends ButtonProps {
   name: string;
   onClick?: ButtonProps['onClick']
-  src: string;
+  iconNode: IconNode;
 }
 
-const IconListItem = ({ name, onClick, src: svg }: IconListItemProps) => {
+const IconListItem = ({ name, onClick, iconNode }: IconListItemProps) => {
   const toast = useToast();
   const { color, size, strokeWidth, iconsRef } = useCustomizeIconContext();
 
+  const Icon = createLucideIcon(name, iconNode)
+
   const handleClick:ButtonProps['onClick'] = async (event) => {
-    const src = (iconsRef.current[name].outerHTML ?? svg).replace(/(\r\n|\n|\r|(>\s\s<))/gm, "")
+    const src = (iconsRef.current[name].outerHTML).replace(/(\r\n|\n|\r|(>\s\s<))/gm, "")
+
     if (event.shiftKey) {
       await navigator.clipboard.writeText(src)
 
@@ -34,6 +37,7 @@ const IconListItem = ({ name, onClick, src: svg }: IconListItemProps) => {
     }
   }
 
+
   return (
     <Tooltip label={name}>
       <Button
@@ -49,13 +53,11 @@ const IconListItem = ({ name, onClick, src: svg }: IconListItemProps) => {
         key={name}
         alignItems="center"
       >
-        <IconWrapper
-          src={svg}
+        <Icon
+          ref={iconEl => (iconsRef.current[name] = iconEl)}
+          size={size}
           stroke={color}
           strokeWidth={strokeWidth}
-          height={size}
-          width={size}
-          ref={iconEl => (iconsRef.current[name] = iconEl)}
         />
       </Button>
     </Tooltip>

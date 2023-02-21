@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "copy-assets": "mkdir -p ./public/docs/images && cp -rf ../docs/images ./public/docs",
-    "prebuild": "ts-node --swc scripts/preBuild.ts",
+    "prebuild": "ts-node --swc scripts/preBuild.ts && pnpm -w lucide-react build",
     "build": "pnpm copy-assets && pnpm prebuild && next build",
     "export": "next export -o build",
     "deploy": "pnpm build && pnpm export",
@@ -30,7 +30,7 @@
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
     "lodash": "^4.17.20",
-    "lucide-react": "^0.94.0",
+    "lucide-react": "workspace:*",
     "next": "12",
     "next-mdx-remote": "^3.0.2",
     "object-path": "0.11.5",

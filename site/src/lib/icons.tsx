@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import { parseSync } from "svgson";
+import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
 import { IconEntity } from "../types";
 import { getContributors } from "./fetchAllContributors";
 
@@ -18,15 +20,16 @@ export async function getData(name: string) {
   const svgContent = fs.readFileSync(svgPath, "utf8");
   const jsonPath = path.join(directory, `${name}.json`);
   const jsonContent = fs.readFileSync(jsonPath, "utf8");
-  const iconJson = JSON.parse(jsonContent);
+  const { tags, categories } = JSON.parse(jsonContent);
 
   const contributors = await getContributors(name);
 
   return {
-    ...iconJson,
     name,
+    tags,
+    categories,
     contributors,
-    src: svgContent
+    iconNode: parseSync(svgContent).children.map(({name, attributes}) => [name, attributes]) as IconNode,
   };
 }
 

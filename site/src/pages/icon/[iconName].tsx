@@ -5,8 +5,9 @@ import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { getAllCategories } from 'src/lib/categories';
 
-const IconPage = ({ icon, data }): JSX.Element => {
+const IconPage = ({ icon, data, categories }): JSX.Element => {
   const router = useRouter();
   const getIcon = iconName => data.find(({ name }) => name === iconName) || {};
 
@@ -39,7 +40,7 @@ const IconPage = ({ icon, data }): JSX.Element => {
   return (
     <Layout>
       <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
-      <IconOverview {...{ data }} />
+      <IconOverview {...{ data, categories }} />
     </Layout>
   );
 };
@@ -49,7 +50,9 @@ export default IconPage;
 export const getStaticProps: GetStaticProps = async ({ params: { iconName } }) => {
   const data = await getAllData();
   const icon = await getData(iconName as string);
-  return { props: { icon, data } };
+  const categories = await getAllCategories()
+
+  return { props: { icon, data, categories } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
