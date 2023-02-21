@@ -3,7 +3,9 @@
   "tags": [
     "grab",
     "dots",
-    "handle"
+    "handle",
+    "move",
+    "drag"
   ],
   "categories": [
     "layout"
