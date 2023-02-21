@@ -2,10 +2,19 @@ import path from 'path';
 import fs from 'fs';
 
 const cacheDir = path.join(process.cwd(), '.next/cache');
+const nextDir = path.join(process.cwd(), '.next');
 const cachePath = (cacheKey: string) => path.join(cacheDir, `${cacheKey}.json`);
 
 type AtomicCacheable = object|string|number|boolean|null;
 type Cacheable = AtomicCacheable|AtomicCacheable[];
+
+if (!fs.existsSync(nextDir)) {
+  fs.mkdirSync(nextDir)
+}
+
+if (!fs.existsSync(cacheDir)) {
+  fs.mkdirSync(cacheDir)
+}
 
 function read<T extends Cacheable>(cacheKey: string): T {
   if (fs.existsSync(cachePath(cacheKey))) {
@@ -17,8 +26,10 @@ function read<T extends Cacheable>(cacheKey: string): T {
 }
 
 function write<T extends Cacheable>(cacheKey: string, content: T): void {
-  if (!fs.existsSync(cacheDir)) {
-    fs.mkdirSync(cacheDir)
+
+
+  if (!fs.existsSync(path.join(cacheDir, cacheKey))) {
+    fs.mkdirSync(path.join(cacheDir, cacheKey))
   }
 
   fs.writeFileSync(cachePath(cacheKey), JSON.stringify(content), 'utf-8')
