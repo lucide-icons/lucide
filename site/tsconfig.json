@@ -1,10 +1,13 @@
 {
   "ts-node": {
+    "esm": true,
     "compilerOptions": {
-      "module": "commonjs"
+      "baseUrl": ".",
+      "module": "nodenext",
     }
   },
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ESNext",
     "lib": [
       "dom",
