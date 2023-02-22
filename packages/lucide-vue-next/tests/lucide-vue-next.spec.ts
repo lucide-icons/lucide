@@ -116,12 +116,12 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
   })
 
-  it('should not scale the strokeWidth when scaleStrokeWidth is set', () => {
+  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
     render(Pen, {
       props: {
         size: 48,
         color: 'red',
-        scaleStrokeWidth: false
+        absoluteStrokeWidth: true
       }
     })
 

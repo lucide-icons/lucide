@@ -9,5 +9,5 @@ export interface LucideProps extends SVGAttributes {
   size?: string | number
   strokeWidth?: string | number
   class?: string
-  scaleStrokeWidth?: boolean
+  absoluteStrokeWidth?: boolean
 }

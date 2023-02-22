@@ -31,7 +31,7 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
   color?: string
   size?: string | number
   strokeWidth?: string | number
-  scaleStrokeWidth?: boolean
+  absoluteStrokeWidth?: boolean
 }
 
 export type LucideIcon = (props: LucideProps) => JSX.Element;

@@ -59,14 +59,14 @@ describe('Using lucide icon components', () => {
   });
 
 
-  it('should not scale the strokeWidth when scaleStrokeWidth is set', () => {
+  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const testId = 'grid-icon';
     const { container, getByTestId } = render(() =>
       <Grid
         data-testid={testId}
         size={48}
         color="red"
-        scaleStrokeWidth={false}
+        absoluteStrokeWidth
       />,
     );
 

@@ -30,7 +30,7 @@ declare module 'lucide-vue-next'
 // Create interface extending SVGAttributes
 export interface SVGProps extends Partial<SVGAttributes> {
   size?: 24 | number
-  scaleStrokeWidth?: boolean
+  absoluteStrokeWidth?: boolean
 }
 
 export type Icon = (props: SVGProps) => FunctionalComponent<SVGProps>

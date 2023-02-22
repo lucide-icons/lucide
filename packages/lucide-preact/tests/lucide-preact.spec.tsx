@@ -57,14 +57,14 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
   });
 
-  it('should not scale the strokeWidth when scaleStrokeWidth is set', () => {
+  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const testId = 'grid-icon';
     const { container, getByTestId } = render(
       <Grid
         data-testid={testId}
         size={48}
         stroke="red"
-        scaleStrokeWidth={false}
+        absoluteStrokeWidth
       />,
     );
 
