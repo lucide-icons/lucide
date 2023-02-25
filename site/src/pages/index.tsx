@@ -45,7 +45,7 @@ const HomePage: NextPage<HomePageProps> = ({ data, categories }) => {
 };
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
-  const data = await getAllData();
+  const data = await getAllData({ withChildKeys: true });
   const categories = await getAllCategories()
 
   return {

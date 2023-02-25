@@ -15,8 +15,8 @@ type IconDownload = {
 };
 
 interface IconDetailOverlayProps {
-  open: boolean
-  close: () => void
+  open?: boolean
+  close?: () => void
   icon?: IconEntity
 }
 
@@ -57,9 +57,9 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
 
   const Icon = createLucideIcon(name, iconNode)
 
-  const downloadIcon = ({src, name = ''} : IconDownload) => download(iconRef.current.outerHTML, `${name}.svg`, 'image/svg+xml');
+  const downloadIcon = ({name = ''} : IconDownload) => download(iconRef.current.outerHTML, `${name}.svg`, 'image/svg+xml');
 
-  const copyIcon = async ({src, name} : IconDownload) => {
+  const copyIcon = async ({name} : IconDownload) => {
     const trimmedSrc = iconRef.current.outerHTML.replace(/(\r\n|\n|\r|\s\s)/gm, "")
 
     await navigator.clipboard.writeText(trimmedSrc)
@@ -73,7 +73,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     });
   }
 
-  const downloadPNG = ({src, name}: IconDownload) => {
+  const downloadPNG = ({name}: IconDownload) => {
     const canvas = document.createElement('canvas');
     canvas.width = size;
     canvas.height = size;

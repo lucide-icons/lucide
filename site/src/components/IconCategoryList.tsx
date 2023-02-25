@@ -27,7 +27,8 @@ const IconCategory = ({
   const activeBackground = useColorModeValue(theme.colors.gray, theme.colors.gray[700]);
 
   const iconCategories = useMemo(
-    () => categories.reduce((categoryMap, { name, title }) => {
+    () =>
+      categories.reduce((categoryMap, { name, title }) => {
         const categoryIcons = data.filter(({categories}) => categories.includes(name))
 
         const isSearching = icons.length !== data.length;
@@ -66,7 +67,7 @@ const IconCategory = ({
               }}>
                 {title}
               </Text>
-              <IconList icons={icons} />
+              <IconList icons={icons} category={name}/>
             </Box>
           </Box>
         ))}

@@ -26,7 +26,7 @@ const IconPage = ({ icon, data, categories }): JSX.Element => {
         query,
       },
       undefined,
-      { scroll: false },
+      { scroll: false, shallow: true },
     );
   };
 
@@ -40,7 +40,7 @@ const IconPage = ({ icon, data, categories }): JSX.Element => {
   return (
     <Layout>
       <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
-      <IconOverview {...{ data, categories }} />
+      <IconOverview {...{ data, categories }} key="icon-overview" />
     </Layout>
   );
 };
@@ -49,7 +49,7 @@ export default IconPage;
 
 export const getStaticProps: GetStaticProps = async ({ params: { iconName } }) => {
   const data = await getAllData();
-  const icon = await getData(iconName as string);
+  const icon = await getData(iconName as string, { withChildKeys: true });
   const categories = await getAllCategories()
 
   return { props: { icon, data, categories } };

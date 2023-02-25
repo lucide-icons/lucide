@@ -3,6 +3,7 @@ import download from 'downloadjs';
 import { memo } from 'react';
 import { createLucideIcon, IconNode } from 'lucide-react';
 import { useCustomizeIconContext } from './CustomizeIconContext';
+import { useRouter } from 'next/router';
 
 interface IconListItemProps extends ButtonProps {
   name: string;
@@ -11,6 +12,7 @@ interface IconListItemProps extends ButtonProps {
 }
 
 const IconListItem = ({ name, onClick, iconNode }: IconListItemProps) => {
+  const router = useRouter()
   const toast = useToast();
   const { color, size, strokeWidth, iconsRef } = useCustomizeIconContext();
 
@@ -28,19 +30,30 @@ const IconListItem = ({ name, onClick, iconNode }: IconListItemProps) => {
         status: 'success',
         duration: 1500,
       });
+      return
     }
     if (event.altKey) {
       download(src, `${name}.svg`, 'image/svg+xml');
+      return
     }
-    if (onClick) {
-      onClick(event);
-    }
+    router.push({
+      pathname: `/icon/${name}`,
+      query: {
+        ...router.query,
+      },
+    },
+    undefined,
+    {
+      shallow: true,
+      scroll: false
+    })
   }
 
 
   return (
     <Tooltip label={name}>
       <Button
+        as="a"
         variant="ghost"
         borderWidth="1px"
         rounded="lg"
@@ -49,9 +62,8 @@ const IconListItem = ({ name, onClick, iconNode }: IconListItemProps) => {
         width={20}
         position="relative"
         whiteSpace="normal"
-        onClick={handleClick}
-        key={name}
         alignItems="center"
+        onClick={handleClick}
       >
         <Icon
           ref={iconEl => (iconsRef.current[name] = iconEl)}

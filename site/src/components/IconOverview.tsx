@@ -1,17 +1,15 @@
-import { Box, Text, IconButton, HStack, useTheme, MenuList, MenuItem, Button } from '@chakra-ui/react';
-import React, { useMemo, useState } from 'react';
+import { Box, Text, IconButton, HStack, useTheme, Button } from '@chakra-ui/react';
+import React, { memo, useMemo, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import IconList from './IconList';
 import { SearchInput } from './SearchInput';
 import { Category, IconEntity } from '../types';
 
-import { createLucideIcon, SidebarClose, SidebarOpen } from 'lucide-react';
+import { SidebarClose, SidebarOpen } from 'lucide-react';
 
 import IconCategoryList from './IconCategoryList';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 interface IconOverviewProps {
   data: IconEntity[];
@@ -43,7 +41,6 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
   }
 
   const categoryList = useMemo(() => {
-
     return (
       <>
         {[{ name: 'all', title: 'All' }, ...categories].map(({ title, name }) => {
@@ -79,7 +76,7 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
         <Box h={20} flexShrink={0}></Box>
       </>
     )
-  }, [])
+  }, [categories])
 
   return (
     <Box>
@@ -110,9 +107,6 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
             w="full"
             h="full"
             overflowY="auto"
-            paddingX={2}
-            paddingY={1}
-            paddingRight={4}
             sx={{
               '&::-webkit-scrollbar' : {
                 width: '4px',
@@ -132,6 +126,9 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
               display="flex"
               flexDirection="column"
               paddingBottom={8}
+              paddingX={2}
+              paddingY={1}
+              paddingRight={4}
             >
               {categoryList}
             </Box>
@@ -155,4 +152,4 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
   );
 };
 
-export default IconOverview;
+export default memo(IconOverview)

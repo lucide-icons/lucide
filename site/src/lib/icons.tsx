@@ -4,6 +4,7 @@ import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
 import { IconEntity } from "../types";
 import { getContributors } from "./fetchAllContributors";
+import { generateHashedKey } from "./helpers";
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -15,12 +16,28 @@ export function getAllNames() {
     .map((fileName) => path.basename(fileName, '.json'));
 }
 
-export async function getData(name: string) {
+interface GetDataOptions {
+  withChildKeys?: boolean
+}
+
+export async function getData(name: string, { withChildKeys = false }: GetDataOptions | undefined = {}) {
   const svgPath = path.join(directory, `${name}.svg`);
   const svgContent = fs.readFileSync(svgPath, "utf8");
   const jsonPath = path.join(directory, `${name}.json`);
   const jsonContent = fs.readFileSync(jsonPath, "utf8");
   const { tags, categories } = JSON.parse(jsonContent);
+
+  let iconNode = parseSync(svgContent).children.map(
+    (child) => {
+      const { name, attributes } = child
+
+      if (withChildKeys) {
+        attributes.key = generateHashedKey(child)
+      }
+
+      return [name, attributes]
+    }
+  ) as IconNode
 
   const contributors = await getContributors(name);
 
@@ -29,12 +46,12 @@ export async function getData(name: string) {
     tags,
     categories,
     contributors,
-    iconNode: parseSync(svgContent).children.map(({name, attributes}) => [name, attributes]) as IconNode,
+    iconNode,
   };
 }
 
-export async function getAllData(): Promise<IconEntity[]> {
+export async function getAllData(options?: GetDataOptions): Promise<IconEntity[]> {
   const names = getAllNames();
 
-  return Promise.all(names.map((name) => getData(name)));
+  return Promise.all(names.map((name) => getData(name, options)));
 }
