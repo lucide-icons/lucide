@@ -1,6 +1,6 @@
-import { Box, BoxProps, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue, useTheme } from "@chakra-ui/react"
+import { Box, BoxProps, Button, Divider, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue, useTheme } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import { useMemo } from "react"
+import { Fragment, useMemo } from "react"
 import { Category } from "src/types"
 
 const ListWrapper = ({ children, ...restProps }: BoxProps) => {
@@ -71,39 +71,43 @@ const IconCategoryDrawer = ({ open, onClose, categories, setCategoryView }: Icon
           // const Icon = createLucideIcon(icon.name, icon.iconNode)
 
           return (
-            <Button
-              as="a"
-              key={name}
-              colorScheme='gray'
-              variant='ghost'
-              width="100%"
-              justifyContent="flex-start"
-              onClick={(event) => {
-                event.stopPropagation()
+            <Fragment key={name}>
+              <Button
+                as="a"
+                colorScheme='gray'
+                variant='ghost'
+                width="100%"
+                justifyContent="flex-start"
+                onClick={(event) => {
+                  event.stopPropagation()
 
-                if (!useCustomDrawer) {
-                  onClose()
+                  if (!useCustomDrawer) {
+                    onClose()
 
-                  const [routePath] = window.location.href.split('#')
+                    const [routePath] = window.location.href.split('#')
 
-                  setTimeout(() =>{
-                    window.location.href = `${routePath}#${name}`
-                  },150)
-                }
+                    setTimeout(() =>{
+                      window.location.href = `${routePath}#${name}`
+                    },150)
+                  }
 
-                setCategoryView(name !== 'all')
-              }}
-              href={useCustomDrawer ? `#${name}` : undefined}
-              marginBottom={1}
-              sx={{
-                flexShrink: 0,
-                '&.active': {
-                  color: 'brand.500'
-                }
-              }}
-            >
-              {title}
-            </Button>
+                  setCategoryView(name !== 'all')
+                }}
+                href={useCustomDrawer ? `#${name}` : undefined}
+                marginBottom={1}
+                sx={{
+                  flexShrink: 0,
+                  '&.active': {
+                    color: 'brand.500'
+                  }
+                }}
+              >
+                {title}
+              </Button>
+              {name === 'all' && (
+                <Divider marginY={2} />
+              )}
+            </Fragment>
           )
         })}
         <Box h={20} flexShrink={0}></Box>

@@ -1,5 +1,5 @@
 import { Box, Text, IconButton, HStack } from '@chakra-ui/react';
-import React, { memo, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import IconList from './IconList';
 import { SearchInput } from './SearchInput';
@@ -19,7 +19,19 @@ interface IconOverviewProps {
 const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
   const [query, setQuery] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState<boolean | undefined>();
-  const [categoryView, setCategoryView] = useState(true);
+  const [categoryView, setCategoryView] = useState(false);
+
+  useEffect(() => {
+    if(
+      typeof window !== 'undefined' &&
+      window.location.href.split('#').length === 2
+    ) {
+      const [,hash] = window.location.href.split('#')
+
+      setCategoryView(categories.some(({ name }) => name === hash))
+    }
+  }, [])
+
   const SidebarIcon = sidebarOpen ? SidebarOpen : SidebarClose;
 
   const searchResults = useSearch(query, data, [
@@ -34,7 +46,13 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
           aria-label="Close overlay"
           variant="solid"
           color="current"
-          onClick={() => setSidebarOpen(currentView => !currentView)}
+          onClick={() => setSidebarOpen(currentView => {
+            if(currentView == null) {
+              return false
+            }
+
+            return !currentView
+          })}
           icon={<SidebarIcon />}
         />
         <SearchInput onChange={setQuery} count={data.length} />
