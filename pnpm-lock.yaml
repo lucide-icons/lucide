@@ -391,6 +391,7 @@ importers:
       downloadjs: ^1.4.7
       eslint: ^8.22.0
       eslint-config-prettier: ^8.5.0
+      eslint-plugin-react-hooks: ^4.6.0
       framer-motion: ^6.2.8
       fuse.js: ^6.5.3
       gray-matter: ^4.0.3
@@ -456,6 +457,7 @@ importers:
       babel-loader: 8.2.5_webpack@5.74.0
       eslint: 8.22.0
       eslint-config-prettier: 8.5.0_eslint@8.22.0
+      eslint-plugin-react-hooks: 4.6.0_eslint@8.22.0
       jest: 26.6.3_ts-node@10.9.1
       node-fetch: 2.6.7
       prettier: 2.7.1
@@ -14123,6 +14125,15 @@ packages:
       eslint-config-prettier: 8.5.0_eslint@8.27.0
       prettier: 2.7.1
       prettier-linter-helpers: 1.0.0
+    dev: true
+
+  /eslint-plugin-react-hooks/4.6.0_eslint@8.22.0:
+    resolution: {integrity: sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+    dependencies:
+      eslint: 8.22.0
     dev: true
 
   /eslint-scope/5.1.1:

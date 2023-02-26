@@ -58,6 +58,7 @@
     "babel-loader": "^8.1.0",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^26.5.2",
     "node-fetch": "2",
     "prettier": "^2.3.2",

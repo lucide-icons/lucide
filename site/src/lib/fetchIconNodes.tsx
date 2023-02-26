@@ -5,7 +5,7 @@ export type IconNode = [string, object, IconNode[]];
 export type IconNodes = {[iconName: string]: IconNode};
 
 export function fetchIconNodes(writeCache = true, options?: GetDataOptions): Promise<IconNodes> {
-  if (options.withChildKeys) {
+  if (options?.withChildKeys) {
     return NextCache.resolve('api-icon-nodes-with-keys', async () => {
       return (await getAllData({ withChildKeys : true})).reduce((acc, icon) => {
         acc[icon.name] = icon.iconNode

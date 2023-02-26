@@ -1,6 +1,6 @@
 import { Button, ButtonProps, Tooltip, useToast } from '@chakra-ui/react';
 import download from 'downloadjs';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { createLucideIcon, IconNode } from 'lucide-react';
 import { useCustomizeIconContext } from './CustomizeIconContext';
 import { useRouter } from 'next/router';
@@ -17,7 +17,7 @@ const IconListItem = ({ name, iconNode }: IconListItemProps) => {
 
   const Icon = createLucideIcon(name, iconNode)
 
-  const handleClick:ButtonProps['onClick'] = async (event) => {
+  const handleClick:ButtonProps['onClick'] = useCallback(async (event) => {
     const src = (iconsRef.current[name].outerHTML).replace(/(\r\n|\n|\r|(>\s\s<))/gm, "")
 
     if (event.shiftKey) {
@@ -35,18 +35,21 @@ const IconListItem = ({ name, iconNode }: IconListItemProps) => {
       download(src, `${name}.svg`, 'image/svg+xml');
       return
     }
+
     router.push({
       pathname: `/icon/${name}`,
-      query: {
-        ...router.query,
-      },
+      query: (
+        router.query?.search != null
+        ? { search: router.query.search }
+        : {}
+      ),
     },
     undefined,
     {
       shallow: true,
       scroll: false
     })
-  }
+  }, [iconsRef, name, router, toast])
 
 
   return (
