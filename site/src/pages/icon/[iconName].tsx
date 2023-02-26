@@ -48,7 +48,7 @@ const IconPage = ({ icon, data, categories }): JSX.Element => {
 export default IconPage;
 
 export const getStaticProps: GetStaticProps = async ({ params: { iconName } }) => {
-  const data = await getAllData();
+  const data = await getAllData({ withChildKeys: true });
   const icon = await getData(iconName as string, { withChildKeys: true });
   const categories = await getAllCategories()
 

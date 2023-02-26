@@ -1,6 +1,7 @@
 import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Category, IconEntity } from 'src/types';
 import theme from '../lib/theme';
 import IconReorder from './IconReorder';
 
@@ -16,8 +17,8 @@ const UnCategorizedIcons = ({
   const boxBackground = useColorModeValue(theme.colors.white, theme.colors.gray[700]);
   const allIconContainerRef = useRef(null);
   const unCategorizedIcons = useMemo(() => {
-    return Object.values(icons).filter(icon => {
-      return !Object.values(categories)
+    return (icons as IconEntity[]).filter(icon => {
+      return !Object.values(categories as Category[])
         .flat()
         .some(categorizedIcon => categorizedIcon.name === icon.name);
     });
@@ -33,7 +34,7 @@ const UnCategorizedIcons = ({
   );
 
   useEffect(() => {
-    allIconContainerRef.current.addEventListener('scroll', event => {
+    allIconContainerRef.current.addEventListener('scroll', () => {
       setScrollPosition(allIconContainerRef.current.scrollTop);
     });
   }, []);

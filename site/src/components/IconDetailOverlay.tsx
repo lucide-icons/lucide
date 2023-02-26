@@ -4,10 +4,9 @@ import download from 'downloadjs';
 import { X as Close } from 'lucide-react';
 import { useEffect, useRef } from "react";
 import {useCustomizeIconContext} from "./CustomizeIconContext";
-import {IconWrapper} from "./IconWrapper";
 import ModifiedTooltip from "./ModifiedTooltip";
 import { IconEntity } from "../types";
-import { createLucideIcon, IconNode } from 'lucide-react';
+import { createLucideIcon } from 'lucide-react';
 
 type IconDownload = {
   src: string;

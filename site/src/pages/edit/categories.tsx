@@ -1,23 +1,30 @@
 import { getAllData } from '../../lib/icons';
 import Layout from '../../components/Layout';
-import { Box, Grid, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Box, Grid, Heading } from '@chakra-ui/react';
 import IconCategory from '../../components/IconCategory';
 import CategoryChangesBar from '../../components/CategoryChangesBar';
-import theme from '../../lib/theme';
-import categoriesFile from '../../../../categories.json';
-import { useState, useRef, RefAttributes, useEffect, useCallback, useMemo } from 'react';
+import { useState, useRef, RefAttributes } from 'react';
 import IconReorder from '../../components/IconReorder';
 import UnCategorizedIcons from '../../components/UnCategorizedIcons';
+import { getAllCategories } from 'src/lib/categories';
+import { Category, IconEntity } from 'src/types';
 
-const EditCategoriesPage = ({ icons = {} }) => {
+interface EditCategoriesPageProps {
+  icons: IconEntity[]
+  categories: Category[]
+}
+
+
+const EditCategoriesPage = ({ icons = [], categories: categoryList }: EditCategoriesPageProps) => {
   const [dragging, setDragging] = useState(false);
-  const [categories, setCategories] = useState(
-    Object.fromEntries(
-      Object.entries(categoriesFile).map(([category, iconNames]) => [
-        category,
-        iconNames.map(iconName => icons[iconName]),
-      ]),
-    ),
+  const [categories, setCategories] = useState<Record<string, IconEntity[]>>(
+    categoryList.reduce((categoryMap, { name }) => {
+      const categoryIcons = icons.filter(({categories}) => categories.includes(name))
+
+      categoryMap[name] = categoryIcons
+
+      return categoryMap;
+    }, {}),
   );
   const [changes, setChanges] = useState(0);
   const dropZones = useRef<[string, HTMLDivElement][]>([]);
@@ -91,11 +98,8 @@ const EditCategoriesPage = ({ icons = {} }) => {
 export default EditCategoriesPage;
 
 export async function getStaticProps() {
-  const fetchedIcons = await getAllData();
-  const icons = fetchedIcons.reduce((acc, item) => {
-    acc[item.name] = item;
-    acc[item.name].id = item.name;
-    return acc;
-  }, {});
-  return { props: { icons } };
+  const icons = await getAllData({ withChildKeys: true });
+  const categories = await getAllCategories()
+
+  return { props: { icons, categories } };
 }

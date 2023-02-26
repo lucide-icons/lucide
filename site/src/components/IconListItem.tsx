@@ -7,11 +7,10 @@ import { useRouter } from 'next/router';
 
 interface IconListItemProps extends ButtonProps {
   name: string;
-  onClick?: ButtonProps['onClick']
   iconNode: IconNode;
 }
 
-const IconListItem = ({ name, onClick, iconNode }: IconListItemProps) => {
+const IconListItem = ({ name, iconNode }: IconListItemProps) => {
   const router = useRouter()
   const toast = useToast();
   const { color, size, strokeWidth, iconsRef } = useCustomizeIconContext();

@@ -1,5 +1,5 @@
-import { Box, Text, IconButton, HStack, useTheme, Button } from '@chakra-ui/react';
-import React, { memo, useMemo, useState } from 'react';
+import { Box, Text, IconButton, HStack } from '@chakra-ui/react';
+import React, { memo, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import IconList from './IconList';
 import { SearchInput } from './SearchInput';
@@ -9,20 +9,16 @@ import { SidebarClose, SidebarOpen } from 'lucide-react';
 
 import IconCategoryList from './IconCategoryList';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
-import { motion } from 'framer-motion';
+import IconCategoryDrawer from './IconCategoryDrawer';
 
 interface IconOverviewProps {
   data: IconEntity[];
   categories: Category[]
 }
 
-const CATEGORY_TOP_OFFSET = 100
-
 const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
   const [query, setQuery] = useState('');
-  const theme = useTheme()
-
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean | undefined>();
   const [categoryView, setCategoryView] = useState(true);
   const SidebarIcon = sidebarOpen ? SidebarOpen : SidebarClose;
 
@@ -30,53 +26,6 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
     { name: 'name', weight: 2 },
     { name: 'tags', weight: 1 },
   ]);
-
-  const sidebarVariants = {
-    closed: {
-      width: 0,
-    },
-    open: {
-      width: theme.sizes['xs']
-    }
-  }
-
-  const categoryList = useMemo(() => {
-    return (
-      <>
-        {[{ name: 'all', title: 'All' }, ...categories].map(({ title, name }) => {
-          // Show category icon?
-          // const icon = data.find(({ name: iconName }) => iconName === categoryIcon)
-          // const Icon = createLucideIcon(icon.name, icon.iconNode)
-
-          return (
-            <Button
-              as="a"
-              key={name}
-              colorScheme='gray'
-              variant='ghost'
-              width="100%"
-              justifyContent="flex-start"
-              onClick={() => {
-                setCategoryView(name !== 'all')
-              }}
-              href={`#${name}`}
-              marginBottom={1}
-              // className={hash === name ? 'active' : undefined}
-              sx={{
-                flexShrink: 0,
-                '&.active': {
-                  color: 'brand.500'
-                }
-              }}
-            >
-              {title}
-            </Button>
-          )
-        })}
-        <Box h={20} flexShrink={0}></Box>
-      </>
-    )
-  }, [categories])
 
   return (
     <Box>
@@ -93,47 +42,12 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
       </HStack>
 
       <HStack marginBottom="320px" padding={5} alignItems="flex-start">
-        <motion.div
-          variants={sidebarVariants}
-          animate={sidebarOpen ? 'open' : 'closed'}
-          initial={false}
-          style={{
-            height: `calc(100vh - ${CATEGORY_TOP_OFFSET}px)`,
-            position: 'sticky',
-            top: '100px'
-          }}
-        >
-          <Box
-            w="full"
-            h="full"
-            overflowY="auto"
-            sx={{
-              '&::-webkit-scrollbar' : {
-                width: '4px',
-              },
-              '&::-webkit-scrollbar-track' : {
-                background: 'transparent'
-              },
-              '&::-webkit-scrollbar-thumb' : {
-                bgColor: 'grey',
-                borderRadius: 0,
-              },
-            }}
-          >
-            <Box
-              whiteSpace="nowrap"
-              height="100%"
-              display="flex"
-              flexDirection="column"
-              paddingBottom={8}
-              paddingX={2}
-              paddingY={1}
-              paddingRight={4}
-            >
-              {categoryList}
-            </Box>
-          </Box>
-        </motion.div>
+        <IconCategoryDrawer
+          open={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+          categories={categories}
+          setCategoryView={setCategoryView}
+        />
         <Box flex={1} paddingTop={1}>
           {searchResults.length > 0 ? (
             categoryView ? (

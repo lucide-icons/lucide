@@ -62,7 +62,18 @@ export function CustomizeIconContext({ children }): JSX.Element {
 export function useCustomizeIconContext() {
   const context = useContext(IconStyleContext);
   if (context === undefined) {
-    return { color: 'currentColor', size: 24, strokeWidth: 2, iconsRef: { current: {} }};
+    return {
+      color: 'currentColor',
+      size: 24,
+      strokeWidth: 2,
+      iconsRef: { current: {} },
+      /* eslint-disable @typescript-eslint/no-empty-function */
+      setStroke: function() {},
+      setColor: function() {},
+      setSize: function() {},
+      resetStyle: function() {},
+      /* eslint-enable @typescript-eslint/no-empty-function */
+    };
   }
   return context;
 }

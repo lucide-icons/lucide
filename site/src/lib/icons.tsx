@@ -16,7 +16,7 @@ export function getAllNames() {
     .map((fileName) => path.basename(fileName, '.json'));
 }
 
-interface GetDataOptions {
+export interface GetDataOptions {
   withChildKeys?: boolean
 }
 
@@ -27,7 +27,7 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
   const jsonContent = fs.readFileSync(jsonPath, "utf8");
   const { tags, categories } = JSON.parse(jsonContent);
 
-  let iconNode = parseSync(svgContent).children.map(
+  const iconNode = parseSync(svgContent).children.map(
     (child) => {
       const { name, attributes } = child
 

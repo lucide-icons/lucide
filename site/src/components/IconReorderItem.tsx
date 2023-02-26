@@ -13,7 +13,7 @@ interface Props {
   setDragging: (dragging) => void;
 }
 
-const IconReorderItem = ({ icon, dropZones, onDrop, dragging, setDragging }: Props): JSX.Element => {
+const IconReorderItem = ({ icon, dropZones, onDrop, setDragging }: Props): JSX.Element => {
   const y = useMotionValue(0);
   const boxShadow = useRaisedShadow(y);
   const [dragItem, setDragItem] = useState(false);
@@ -22,17 +22,23 @@ const IconReorderItem = ({ icon, dropZones, onDrop, dragging, setDragging }: Pro
     setDragItem(false)
     setDragging(false);
 
-    const dropZone = dropZones.current?.find(([zone, el]) => {
+    const dropZone = dropZones.current?.find(([, el]) => {
+      if (!Array.isArray(event?.path)) {
+        return false
+      }
+
       return Array.from(event.path).includes(el)
     })
 
     if (dropZone?.[0] && onDrop) {
       const category = dropZone?.[0]
+      console.log(icon.name, category);
+
       onDrop(icon.name, category)
     }
   };
 
-  const onDrag = (event) => {
+  const onDrag = () => {
     setDragItem(true)
     setDragging(true);
   };

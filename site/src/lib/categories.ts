@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { Category, IconEntity } from "../types";
+import { Category } from "../types";
 
 const directory = path.join(process.cwd(), "../categories");
 

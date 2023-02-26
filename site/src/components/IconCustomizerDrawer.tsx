@@ -8,7 +8,6 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
-  DrawerOverlay,
   FormControl,
   FormLabel,
   Grid,
@@ -18,6 +17,7 @@ import {
   SliderTrack,
   Flex,
   Text,
+  ButtonProps,
 } from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
 

@@ -11,25 +11,10 @@ import PreactLogo from '../../public/framework-logos/preact.svg';
 import AngularLogo from '../../public/framework-logos/angular.svg';
 import FlutterLogo from '../../public/framework-logos/flutter.svg';
 import SvelteLogo from '../../public/framework-logos/svelte.svg';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useCustomizeIconContext } from './CustomizeIconContext';
 import { IconEntity } from '../types';
-
-type IconContent = [icon: string, src:string];
-
-async function generateZip(icons: IconContent[]) {
-  const JSZip = (await import('jszip')).default
-
-  const zip = new JSZip();
-
-  const addingZipPromises = icons.map(([name, src]) =>
-    zip.file(`${name}.svg`, src),
-  );
-
-  await Promise.all(addingZipPromises)
-
-  return zip.generateAsync({ type: 'blob' });
-}
+import generateZip, { IconContent } from 'src/lib/generateZip';
 
 interface HeaderProps {
   data: IconEntity[];
@@ -37,25 +22,27 @@ interface HeaderProps {
 
 const Header = ({ data }: HeaderProps) => {
   const [zippingIcons, setZippingIcons] = useState(false);
-  const { iconsRef } = useCustomizeIconContext();
+  const { iconsRef, strokeWidth, color, size } = useCustomizeIconContext();
 
-  const downloadAllIcons = async () => {
+  const downloadAllIcons = useCallback(async () => {
     setZippingIcons(true);
 
-    let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [
+    let iconEntries: IconContent[] = Object.entries(iconsRef.current)
+      .map(([name, svgEl]) => [
       name,
       svgEl.outerHTML,
     ]);
 
     // Fallback
     if (iconEntries.length === 0) {
-      iconEntries = data.map(icon => [icon.name, icon.src]);
+      const getFallbackZip = (await import('../lib/getFallbackZip')).default
+      iconEntries = getFallbackZip(data, { strokeWidth, color, size })
     }
 
     const zip = await generateZip(iconEntries);
     download(zip, 'lucide.zip');
     setZippingIcons(false);
-  };
+  }, []);
 
   const repositoryUrl = 'https://github.com/lucide-icons/lucide';
 

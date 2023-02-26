@@ -13,9 +13,10 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import theme from '../lib/theme';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import CodeBlock from './CodeBlock';
 import CopyButton from './CopyButton';
+import { IconEntity } from 'src/types';
 
 const CategoryChangesBar = ({ categories, changes }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -34,7 +35,7 @@ const CategoryChangesBar = ({ categories, changes }) => {
     return Object.fromEntries(
       Object.entries(categories).map(([category, icons]) => [
         category,
-        icons.map(({ name }) => name),
+        (icons as IconEntity[]).map(({ name }) => name),
       ]),
     );
   }, [categories]);
