@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "magnifying glass",
+    "plus"
+  ],
+  "categories": [
+    "accessibility",
+    "layout",
+    "design",
+    "text",
+    "photography"
+  ]
+}

@@ -4,9 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-angular/**
-  push:
-    paths:
-      - packages/lucide-angular/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-angular:

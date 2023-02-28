@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "source",
+    "programming",
+    "html",
+    "xml"
+  ],
+  "categories": [
+    "text",
+    "coding"
+  ]
+}

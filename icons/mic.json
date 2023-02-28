@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "record",
+    "sound",
+    "listen",
+    "radio",
+    "podcast",
+    "microphone"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "multimedia"
+  ]
+}

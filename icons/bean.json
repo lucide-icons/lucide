@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "legume",
+    "soy",
+    "food",
+    "seed"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

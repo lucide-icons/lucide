@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "stream",
+    "cast",
+    "mirroring"
+  ],
+  "categories": [
+    "multimedia",
+    "connectivity",
+    "devices",
+    "brands"
+  ]
+}

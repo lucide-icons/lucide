@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "right",
+    "items",
+    "flex",
+    "justify"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

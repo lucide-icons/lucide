@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "news",
+    "feed",
+    "home",
+    "magazine",
+    "article",
+    "headline"
+  ],
+  "categories": [
+    "multimedia",
+    "communication"
+  ]
+}

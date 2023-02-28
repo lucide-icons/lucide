@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cross out",
+    "delete",
+    "remove",
+    "format"
+  ],
+  "categories": [
+    "text"
+  ]
+}

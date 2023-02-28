@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import * as icons from '../src/icons';
 import { createIcons } from '../src/lucide';
 import fs from 'fs';
