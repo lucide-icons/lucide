@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "2fa",
+    "authentication",
+    "biometric",
+    "identity",
+    "security"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "medical",
+    "devices"
+  ]
+}

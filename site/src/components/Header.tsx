@@ -40,7 +40,6 @@ const Header = ({ data }: HeaderProps) => {
   const { iconsRef } = useCustomizeIconContext();
 
   const downloadAllIcons = async () => {
-    console.log(iconsRef);
     setZippingIcons(true);
 
     let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [
@@ -153,7 +152,7 @@ const Header = ({ data }: HeaderProps) => {
         {packages.map(({ name, href, Logo, label }) => (
           <WrapItem key={name}>
             <NextLink href={href} key={name} passHref>
-              <Link _hover={{ opacity: 0.8 }} aria-label={label}>
+              <Link _hover={{ opacity: 0.8 }} aria-label={label} title={label}>
                 <Logo />
               </Link>
             </NextLink>

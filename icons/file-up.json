@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "upload",
+    "import",
+    "export"
+  ],
+  "categories": [
+    "files",
+    "arrows"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "find",
+    "magnifier",
+    "magnifying glass"
+  ],
+  "categories": [
+    "text",
+    "account",
+    "social"
+  ]
+}

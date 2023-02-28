@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bank",
+    "building",
+    "capitol",
+    "finance",
+    "money"
+  ],
+  "categories": [
+    "money",
+    "maps",
+    "buildings"
+  ]
+}

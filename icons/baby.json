@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "child",
+    "childproof",
+    "children"
+  ],
+  "categories": [
+    "accessibility",
+    "people"
+  ]
+}

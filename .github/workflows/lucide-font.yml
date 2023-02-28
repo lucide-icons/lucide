@@ -1,0 +1,55 @@
+name: Lucide font checks
+
+on:
+  pull_request:
+    paths:
+      - icons/**
+      - pnpm-lock.yaml
+
+jobs:
+  lucide-font:
+    runs-on: ubuntu-latest
+    container: ericfennis/lucide-font:latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-lucide-font-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-lucide-font-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --filter outline-svg
+
+      - name: Outline svg Icons
+        run: pnpm build:outline-icons
+
+      - name: Create directory
+        run: mkdir lucide-font
+
+      - name: Build font
+        run: fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
+
+      - name: "Upload to Artifacts"
+        uses: actions/upload-artifact@v1
+        with:
+          name: lucide-font
+          path: lucide-font

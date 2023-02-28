@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "album",
+    "cd",
+    "dvd",
+    "music"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ]
+}

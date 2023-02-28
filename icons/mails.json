@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "emails",
+    "messages",
+    "letters",
+    "multiple",
+    "mailing list",
+    "newsletter",
+    "copy"
+  ],
+  "categories": [
+    "mail"
+  ]
+}

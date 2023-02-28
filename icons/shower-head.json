@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shower",
+    "bath",
+    "bathroom",
+    "amenities",
+    "services"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}
