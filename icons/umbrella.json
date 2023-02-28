@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "rain",
+    "weather"
+  ],
+  "categories": [
+    "weather"
+  ]
+}

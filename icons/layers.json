@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "stack",
+    "pages"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "security",
+    "secure",
+    "virus",
+    "admin",
+    "safety",
+    "savety"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "notifications"
+  ]
+}

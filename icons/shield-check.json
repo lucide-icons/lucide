@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "security",
+    "secure",
+    "done",
+    "save"
+  ],
+  "categories": [
+    "account",
+    "security"
+  ]
+}

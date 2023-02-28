@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "semiquaver",
+    "sixteenth note",
+    "note"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ]
+}

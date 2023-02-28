@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "beer",
+    "brewery",
+    "drink",
+    "hop free",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

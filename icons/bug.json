@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "issue",
+    "report",
+    "insect"
+  ],
+  "categories": [
+    "coding",
+    "development"
+  ]
+}
