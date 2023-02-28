@@ -4,9 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-react/**
-  push:
-    paths:
-      - packages/lucide-react/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-react:

@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bicycle",
+    "transport",
+    "trip"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

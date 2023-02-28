@@ -1,7 +1,7 @@
 {
   "name": "lucide-preact",
   "description": "A Lucide icon library package for Preact applications",
-  "version": "0.98.0",
+  "version": "0.115.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -22,21 +22,26 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:es && pnpm build:types && pnpm build:bundles",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:types",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "node ../../scripts/buildIcons.mjs --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey",
-    "build:es": "babel src -d dist/esm",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:types": "node ./scripts/buildTypes.mjs",
-    "build:bundles": "rollup -c ./rollup.config.js",
-    "test": "jest",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/build-icons": "workspace:*",
+    "@preact/preset-vite": "^2.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/preact": "^2.0.1",
-    "babel-preset-preact": "^2.0.0",
-    "jest": "^26.6.3",
-    "preact": "^10.5.13"
+    "preact": "^10.11.2",
+    "rollup": "^3.5.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.24.3"
   },
   "peerDependencies": {
     "preact": "^10.5.13"

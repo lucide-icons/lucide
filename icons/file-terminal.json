@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "terminal",
+    "bash",
+    "script",
+    "executable"
+  ],
+  "categories": [
+    "files",
+    "coding"
+  ]
+}

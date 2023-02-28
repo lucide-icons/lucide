@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "food",
+    "restaurant",
+    "meal",
+    "cutlery",
+    "breakfast",
+    "dinner",
+    "supper"
+  ],
+  "categories": [
+    "food-beverage",
+    "travel",
+    "maps"
+  ]
+}

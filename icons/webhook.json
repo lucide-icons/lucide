@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "push api",
+    "interface",
+    "callback"
+  ],
+  "categories": [
+    "development",
+    "coding",
+    "social",
+    "account"
+  ]
+}

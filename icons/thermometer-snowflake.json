@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "temperature",
+    "celsius",
+    "fahrenheit",
+    "weather",
+    "cold",
+    "freeze",
+    "freezing"
+  ],
+  "categories": [
+    "weather"
+  ]
+}

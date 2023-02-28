@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "exclamation mark"
+  ],
+  "categories": [
+    "notifications",
+    "shapes"
+  ]
+}

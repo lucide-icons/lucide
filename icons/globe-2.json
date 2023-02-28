@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "world",
+    "browser",
+    "language",
+    "translate"
+  ],
+  "categories": [
+    "maps",
+    "navigation"
+  ]
+}
