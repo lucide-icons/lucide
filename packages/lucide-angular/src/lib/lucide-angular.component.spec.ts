@@ -60,7 +60,7 @@ describe('LucideAngularComponent', () => {
         const size = 12;
         testHostComponent.setStrokeWidth(strokeWidth);
         testHostComponent.setSize(12);
-        testHostComponent.setScaleStrokeWidth(false);
+        testHostComponent.setAbsoluteStrokeWidth(true);
         testHostFixture.detectChanges();
         expect(getSvgAttribute('stroke-width')).toBe(
             formatFixed(strokeWidth / (size / defaultAttributes.height))
@@ -75,14 +75,14 @@ describe('LucideAngularComponent', () => {
                 [color]="color"
                 [size]="size"
                 [strokeWidth]="strokeWidth"
-                [scaleStrokeWidth]="scaleStrokeWidth"
+                [absoluteStrokeWidth]="absoluteStrokeWidth"
             ></i-lucide>`,
     })
     class TestHostComponent {
         color?: string;
         size?: number;
         strokeWidth?: number;
-        scaleStrokeWidth = true;
+        absoluteStrokeWidth = true;
 
         setColor(color: string): void {
             this.color = color;
@@ -96,8 +96,8 @@ describe('LucideAngularComponent', () => {
             this.strokeWidth = strokeWidth;
         }
 
-        setScaleStrokeWidth(scaleStrokeWidth: boolean): void {
-            this.scaleStrokeWidth = scaleStrokeWidth;
+        setAbsoluteStrokeWidth(absoluteStrokeWidth: boolean): void {
+            this.absoluteStrokeWidth = absoluteStrokeWidth;
         }
     }
 });

@@ -15,7 +15,7 @@ type LucideAngularComponentChanges = {
     color?: TypedChange<string>;
     size?: TypedChange<number>;
     strokeWidth?: TypedChange<number>;
-    scaleStrokeWidth?: TypedChange<boolean>;
+    absoluteStrokeWidth?: TypedChange<boolean>;
 };
 
 export function formatFixed(number: number, decimals = 3): string {
@@ -49,7 +49,7 @@ export class LucideAngularComponent implements OnChanges {
         this._strokeWidth = this.parseNumber(value);
     }
 
-    @Input() scaleStrokeWidth = true;
+    @Input() absoluteStrokeWidth = false;
     defaultSize: number;
 
     constructor(
@@ -66,7 +66,7 @@ export class LucideAngularComponent implements OnChanges {
         this.strokeWidth = this.parseNumber(
             this.strokeWidth ?? defaultAttributes['stroke-width']
         );
-        this.scaleStrokeWidth = this.scaleStrokeWidth ?? true;
+        this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? false;
         if (changes.name) {
             const icoOfName = this.getIcon(this.toPascalCase(changes.name.currentValue));
 
@@ -99,9 +99,9 @@ export class LucideAngularComponent implements OnChanges {
                     ? this.size.toString(10)
                     : this.size,
             stroke: this.color,
-            'stroke-width': this.scaleStrokeWidth
-                ? this.strokeWidth.toString(10)
-                : formatFixed(this._strokeWidth / (this._size / this.defaultSize)),
+            'stroke-width': this.absoluteStrokeWidth
+                ? formatFixed(this._strokeWidth / (this._size / this.defaultSize))
+                : this.strokeWidth.toString(10),
         };
         const icoElement = createElement([img[0], attributes, img[2]]);
         icoElement.classList.add('lucide');
