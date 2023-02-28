@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "boat",
+    "trip",
+    "maritime",
+    "navy"
+  ],
+  "categories": [
+    "transportation",
+    "travel",
+    "maps"
+  ]
+}
