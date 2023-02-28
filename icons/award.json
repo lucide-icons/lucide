@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "achievement",
+    "badge"
+  ],
+  "categories": [
+    "account"
+  ]
+}

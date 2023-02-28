@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "window",
+    "webpage",
+    "block",
+    "section"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

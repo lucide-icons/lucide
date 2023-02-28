@@ -4,9 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-vue-next/**
-  push:
-    paths:
-      - packages/lucide-vue-next/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-vue-next:

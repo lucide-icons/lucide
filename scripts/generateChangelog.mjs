@@ -1,7 +1,7 @@
-import getArgumentOptions from 'minimist'; // eslint-disable-line import/no-extraneous-dependencies
+import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
 
-const fetchCompareTags = oldTag =>
+const fetchCompareTags = (oldTag) =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
 
 const iconRegex = /icons\/(.*)\.svg/g;
@@ -27,7 +27,7 @@ const topics = [
   },
 ];
 
-const fetchCommits = async file => {
+const fetchCommits = async (file) => {
   const commits = await githubApi(
     `https://api.github.com/repos/lucide-icons/lucide/commits?path=${file.filename}`,
   );
@@ -38,12 +38,12 @@ const fetchCommits = async file => {
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
 // eslint-disable-next-line func-names
-(async function() {
+(async function () {
   try {
     const output = await fetchCompareTags(cliArguments['old-tag']);
 
     if (output?.files == null) {
-      throw new Error('Tag not found!')
+      throw new Error('Tag not found!');
     }
 
     const changedFiles = output.files.filter(
@@ -95,7 +95,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
   } catch (error) {
     throw new Error(error);
   }
-})().catch(error => {
+})().catch((error) => {
   console.error(error);
   process.exit(1);
 });

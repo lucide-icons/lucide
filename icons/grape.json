@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "fruit",
+    "wine",
+    "food"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

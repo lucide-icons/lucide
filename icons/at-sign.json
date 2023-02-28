@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "mention",
+    "at",
+    "email",
+    "message"
+  ],
+  "categories": [
+    "text",
+    "account"
+  ]
+}

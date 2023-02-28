@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "date",
+    "birthdate",
+    "birthday",
+    "time",
+    "event"
+  ],
+  "categories": [
+    "time"
+  ]
+}

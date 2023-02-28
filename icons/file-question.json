@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "readme",
+    "help",
+    "question"
+  ],
+  "categories": [
+    "files"
+  ]
+}

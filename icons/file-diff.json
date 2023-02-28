@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "diff",
+    "patch"
+  ],
+  "categories": [
+    "files",
+    "coding",
+    "development"
+  ]
+}

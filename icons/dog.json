@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "animal",
+    "pet",
+    "puppy",
+    "hound",
+    "canine"
+  ],
+  "categories": [
+    "animals"
+  ]
+}
