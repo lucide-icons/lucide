@@ -16,7 +16,8 @@ interface IconListProps {
   currentVersion: string;
 }
 
-const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBadges}: IconListProps) => {
+const IconList = ({icons, rows, currentIcon, currentVersion, hideVersionBadges}: IconListProps) => {
+  const columnCount = typeof window !== 'undefined' ? useBreakpointValue({base: 2, sm: 4, md: 6, lg: 8, xl: 10}, {ssr: false}) : 10;
   const router = useRouter();
   const {color, size, strokeWidth} = useContext(IconStyleContext);
   const styles = {
@@ -24,7 +25,6 @@ const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBad
     '--lucide-stroke-width': strokeWidth,
     '--lucide-icon-size': size,
   };
-  const columnCount = 10; // useBreakpointValue({base: 2, sm: 4, md: 6, lg: 8, xl: 10}, {ssr: false})
 
   const CellRenderer = ({isScrolling, isVisible, columnIndex, rowIndex, style}) => {
     const iconIndex = rowIndex * columnCount + columnIndex;
@@ -95,6 +95,6 @@ const IconList = memo(({icons, rows, currentIcon, currentVersion, hideVersionBad
       </WindowScroller>
     </Box>
   );
-});
+};
 
 export default IconList;

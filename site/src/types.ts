@@ -3,11 +3,12 @@ export interface IconEntity {
   name: string;
   src: string;
   tags: string[];
+  categories: string[];
+  changedVersion?: Release;
   deprecated: false;
   created?: number;
   changed?: number;
   createdVersion?: Release;
-  changedVersion?: Release;
 }
 
 export interface CategoryEntity {

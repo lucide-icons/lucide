@@ -141,7 +141,7 @@ export function IconCustomizerDrawer({data, categories}: IconCustomizerDrawerPro
                 return (
                   <MenuItem
                     command={(
-                      <chakra.span fontSize=".75rem" ml={2}>{categoryItem.icons.length}</chakra.span>)}
+                      <chakra.span fontSize=".75rem" ml={2}>{categoryItem.icons?.length}</chakra.span>)}
                     color={category === categoryItem.name ? 'brand.500' : null}
                     onClick={() => setCategory(categoryItem.name)}
                     icon={(
