@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "help",
+    "rescue",
+    "ship"
+  ],
+  "categories": [
+    "accessibility",
+    "medical"
+  ]
+}

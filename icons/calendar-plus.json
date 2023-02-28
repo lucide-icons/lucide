@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "date",
+    "time",
+    "event",
+    "add",
+    "subscribe",
+    "create",
+    "new"
+  ],
+  "categories": [
+    "time"
+  ]
+}

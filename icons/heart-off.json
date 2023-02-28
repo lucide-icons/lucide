@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "unlike",
+    "dislike",
+    "hate",
+    "emotion"
+  ],
+  "categories": [
+    "social",
+    "multimedia"
+  ]
+}

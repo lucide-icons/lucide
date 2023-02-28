@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "medical",
+    "education",
+    "science",
+    "imaging",
+    "research"
+  ],
+  "categories": [
+    "science",
+    "medical"
+  ]
+}

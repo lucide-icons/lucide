@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "layout",
+    "spell",
+    "settings",
+    "mouse"
+  ],
+  "categories": [
+    "text",
+    "devices",
+    "coding"
+  ]
+}

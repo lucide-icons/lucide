@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "food",
+    "snack",
+    "dish",
+    "restaurant",
+    "lunch",
+    "meal"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

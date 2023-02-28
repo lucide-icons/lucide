@@ -9,7 +9,7 @@ console.log(`Optimizing SVGs...`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-svgFiles.forEach(svgFile => {
+svgFiles.forEach((svgFile) => {
   const content = fs.readFileSync(path.join(ICONS_DIR, svgFile));
-  processSvg(content).then(svg => writeSvgFile(svgFile, ICONS_DIR, svg));
+  processSvg(content, svgFile).then((svg) => writeSvgFile(svgFile, ICONS_DIR, svg));
 });

@@ -13,56 +13,44 @@
     "lucide-svelte": "pnpm --filter lucide-svelte",
     "lucide-static": "pnpm --filter lucide-static",
     "build:icons": "node ./scripts/buildIcons.mjs --templateSrc ./packages/lucide/scripts/exportTemplate.mjs",
-    "build:outline-icons": "node ./scripts/outlineSvg.mjs",
+    "build:outline-icons": "pnpm --filter outline-svg start",
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
-    "addtags": "node ./scripts/addMissingKeysToTags.mjs",
+    "addjsons": "node scripts/addMissingIconJsonFiles.mjs",
+    "checkIcons": "node scripts/checkIconsAndCategories.mjs --presets @babel/env",
+    "tags2icons": "node scripts/migrateTagsToIcons.mjs --presets @babel/env",
+    "icons2tags": "node scripts/migrateIconsToTags.mjs --presets @babel/env",
+    "icons2categories": "node scripts/migrateIconsToCategories.mjs --presets @babel/env",
+    "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@atomico/rollup-plugin-sizes": "^1.1.4",
-    "@babel/cli": "^7.18.9",
-    "@babel/core": "^7.18.9",
-    "@babel/node": "^7.18.9",
-    "@babel/plugin-transform-runtime": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^17.1.0",
-    "@rollup/plugin-node-resolve": "^11.2.1",
-    "@rollup/plugin-replace": "^2.4.2",
-    "babel-jest": "^26.6.3",
-    "babel-plugin-add-import-extension": "^1.6.0",
-    "core-js": "^3.24.0",
-    "esbuild": "^0.14.51",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.10.0",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^2.7.0",
-    "husky": "^8.0.0",
-    "jest": "^28.1.3",
-    "lint-staged": "^10.5.4",
-    "minimist": "^1.2.6",
-    "node-fetch": "^2.6.7",
-    "prettier": "1.17.1",
-    "rollup": "^2.77.2",
-    "rollup-plugin-license": "^2.8.1",
-    "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^5.3.1",
-    "rollup-plugin-visualizer": "^4.2.2",
-    "@rollup/plugin-typescript": "^8.3.4",
-    "svg-outline-stroke": "^1.3.1",
-    "svgo": "^2.8.0",
-    "svgson": "^4.1.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "minimist": "^1.2.7",
+    "node-fetch": "^3.2.10",
+    "prettier": "2.7.1",
+    "svgo": "^3.0.0",
+    "svgson": "^5.2.1"
   },
   "lint-staged": {
     "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
   },
-  "packageManager": "pnpm@7.14.0"
+  "packageManager": "pnpm@7.14.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/core",
+        "@babel/preset-env"
+      ]
+    }
+  }
 }

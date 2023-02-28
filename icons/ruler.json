@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "measure",
+    "meter",
+    "foot",
+    "inch"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

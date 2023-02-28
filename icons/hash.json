@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "hashtag",
+    "number",
+    "pound"
+  ],
+  "categories": [
+    "text",
+    "social"
+  ]
+}

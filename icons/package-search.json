@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "find",
+    "product process"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}

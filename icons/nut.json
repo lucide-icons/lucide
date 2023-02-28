@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "hazelnut",
+    "acorn",
+    "food",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

@@ -1,5 +1,13 @@
 {
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "baseUrl": ".",
+      "module": "nodenext",
+    }
+  },
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ESNext",
     "lib": [
       "dom",

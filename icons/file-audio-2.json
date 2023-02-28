@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "music",
+    "audio",
+    "sound",
+    "headphones"
+  ],
+  "categories": [
+    "files"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "signal",
+    "broadcast",
+    "connectivity",
+    "live"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "social"
+  ]
+}

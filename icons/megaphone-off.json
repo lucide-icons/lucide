@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "advertisement",
+    "attention",
+    "alert",
+    "notification",
+    "disable",
+    "silent"
+  ],
+  "categories": [
+    "multimedia",
+    "notifications"
+  ]
+}

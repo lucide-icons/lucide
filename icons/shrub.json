@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "forest",
+    "undergrowth",
+    "park",
+    "nature"
+  ],
+  "categories": [
+    "nature"
+  ]
+}

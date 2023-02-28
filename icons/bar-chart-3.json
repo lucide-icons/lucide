@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
