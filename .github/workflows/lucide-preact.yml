@@ -4,9 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-preact/**
-  push:
-    paths:
-      - packages/lucide-preact/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-preact:

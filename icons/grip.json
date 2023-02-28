@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "grab",
+    "dots",
+    "handle",
+    "move",
+    "drag"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

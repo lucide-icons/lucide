@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "flatscreen",
+    "television",
+    "stream",
+    "display"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ]
+}

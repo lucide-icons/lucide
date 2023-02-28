@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "directory",
+    "heart",
+    "favourite",
+    "bookmark",
+    "quick link"
+  ],
+  "categories": [
+    "files"
+  ]
+}

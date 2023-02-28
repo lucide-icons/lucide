@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   extends: ['airbnb-base', 'prettier'],
   plugins: ['import', 'prettier'],
@@ -14,12 +14,27 @@ module.exports = {
       'error',
       {
         singleQuote: true,
-        trailingComma: 'all'
-      }
-    ]
+        trailingComma: 'all',
+      },
+    ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.js', '**/*.spec.js', './scripts/**'] },
+    ],
+    'import/extensions': [
+      'error',
+      {
+        pattern: {
+          mjs: 'always',
+          json: 'always',
+        },
+      },
+    ],
   },
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./site/tsconfig.json', './packages/*/tsconfig.json'],
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
 };

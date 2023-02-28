@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "medicine",
+    "medical",
+    "needle",
+    "pump",
+    "plunger",
+    "nozzle",
+    "blood"
+  ],
+  "categories": [
+    "science",
+    "medical"
+  ]
+}

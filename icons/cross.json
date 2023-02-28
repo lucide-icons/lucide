@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "healthcare",
+    "first aid"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
