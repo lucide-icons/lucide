@@ -26,7 +26,7 @@ Set the following:
    1. Corner radius: 2px
 2. Stroke
    1. Stroke width: 2px
-   2. Stroke alignment: center 
+   2. Stroke alignment: center
 
 ![Figma Stroke Options](images/figma-stroke-options.png)
 
@@ -37,8 +37,8 @@ Once you have completed your icon, you can export it.
 2. Open the *Export* tab on the right
 3. Set the file type as SVG
 4. Press export
-   
+
 That's it. You just made your first icon. Congratulations!
 
 ## Figma Tips
-1. The [Icon Design Guidelines](ICON_DESIGN_GUIDE.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).
+1. The [Icon Design Guidelines](/docs/ICON_DESIGN_GUIDE.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).

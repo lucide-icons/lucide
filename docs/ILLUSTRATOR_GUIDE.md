@@ -10,7 +10,7 @@ This Guide explains how to properly use the Adobe Illustrator Template for Lucid
 
 ## General Workflow
 
-The Illustrator template is created following guidelines from the [Icon Design Guide](ICON_DESIGN_GUIDE.md).
+The Illustrator template is created following guidelines from the [Icon Design Guide](/docs/ICON_DESIGN_GUIDE.md).
 
 **Workflow:**
 
@@ -18,7 +18,7 @@ The Illustrator template is created following guidelines from the [Icon Design G
 
 2. You can now remove the content from the example logo layer ("Draw") and start creating.
 
-3. Verify that you follow the [Icon Design Guidelines](ICON_DESIGN_GUIDE.md).
+3. Verify that you follow the [Icon Design Guidelines](/docs/ICON_DESIGN_GUIDE.md).
 
 4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unecessary layers (especially "Padding" and "Grid").
 
