@@ -25,7 +25,8 @@
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gi": "node ./scripts/generate/generateIcons.mjs"
   },
   "devDependencies": {
     "eslint": "^8.26.0",
