@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "playlist",
+    "video",
+    "playback"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}

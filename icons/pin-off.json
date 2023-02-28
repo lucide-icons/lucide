@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "unpin",
+    "map",
+    "unlock",
+    "unfix",
+    "unsave",
+    "remove"
+  ],
+  "categories": [
+    "maps"
+  ]
+}

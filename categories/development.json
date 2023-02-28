@@ -1,0 +1,5 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Development",
+  "icon": "git-pull-request"
+}

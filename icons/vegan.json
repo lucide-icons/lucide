@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "vegetarian",
+    "fruitarian",
+    "herbivorous",
+    "animal rights",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage",
+    "sustainability"
+  ]
+}

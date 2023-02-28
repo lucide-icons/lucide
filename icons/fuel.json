@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "filling-station",
+    "gas",
+    "petrol",
+    "tank"
+  ],
+  "categories": [
+    "transportation",
+    "maps"
+  ]
+}

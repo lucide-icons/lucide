@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "copy",
+    "paste",
+    "discard",
+    "remove"
+  ],
+  "categories": [
+    "text"
+  ]
+}

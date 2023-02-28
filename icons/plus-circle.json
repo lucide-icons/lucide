@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "add",
+    "new",
+    "maths"
+  ],
+  "categories": [
+    "maths",
+    "shapes"
+  ]
+}

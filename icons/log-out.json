@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sign out",
+    "arrow",
+    "exit",
+    "auth"
+  ],
+  "categories": [
+    "arrows",
+    "account"
+  ]
+}

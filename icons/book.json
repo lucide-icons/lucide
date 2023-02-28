@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "read",
+    "dictionary",
+    "booklet",
+    "magazine",
+    "library"
+  ],
+  "categories": [
+    "gaming",
+    "development"
+  ]
+}

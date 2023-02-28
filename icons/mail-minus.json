@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "remove",
+    "delete"
+  ],
+  "categories": [
+    "mail"
+  ]
+}

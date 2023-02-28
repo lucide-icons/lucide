@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "security",
+    "password",
+    "secure",
+    "admin"
+  ],
+  "categories": [
+    "security"
+  ]
+}
