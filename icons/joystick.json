@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "game",
+    "console",
+    "control stick"
+  ],
+  "categories": [
+    "gaming",
+    "devices"
+  ]
+}

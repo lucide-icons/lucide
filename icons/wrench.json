@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "account",
+    "tool",
+    "settings",
+    "spanner"
+  ],
+  "categories": [
+    "account",
+    "coding",
+    "tools"
+  ]
+}

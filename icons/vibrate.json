@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "smartphone",
+    "notification",
+    "rumble",
+    "haptic feedback"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "account",
+    "notifications"
+  ]
+}

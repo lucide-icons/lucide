@@ -4,9 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-svelte/**
-  push:
-    paths:
-      - packages/lucide-svelte/**
+      - pnpm-lock.yaml
 
 jobs:
   lucide-svelte:

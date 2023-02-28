@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "pencil",
+    "change"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    "pen-box"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "labels",
+    "badges",
+    "tickets",
+    "marks",
+    "copy",
+    "multiple"
+  ],
+  "categories": [
+    "account"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "lost",
+    "document",
+    "find",
+    "browser"
+  ],
+  "categories": [
+    "files"
+  ]
+}

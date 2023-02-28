@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "settings",
+    "filters",
+    "controls"
+  ],
+  "categories": [
+    "account"
+  ]
+}

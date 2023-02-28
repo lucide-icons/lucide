@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "lactose free",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

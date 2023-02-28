@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "face",
+    "biometric",
+    "authentication",
+    "2fa"
+  ],
+  "categories": [
+    "devices",
+    "social"
+  ]
+}

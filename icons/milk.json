@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "lactose",
+    "bottle",
+    "beverage",
+    "drink",
+    "water",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

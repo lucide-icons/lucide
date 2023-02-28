@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "paste",
+    "signature"
+  ],
+  "categories": [
+    "text",
+    "account"
+  ]
+}
