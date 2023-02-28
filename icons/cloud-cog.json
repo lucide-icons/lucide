@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "computing",
+    "ai",
+    "cluster",
+    "network"
+  ],
+  "categories": [
+    "coding",
+    "development"
+  ]
+}

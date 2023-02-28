@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "paper",
+    "log",
+    "scripture",
+    "document",
+    "parchment"
+  ],
+  "categories": [
+    "gaming",
+    "development",
+    "coding"
+  ]
+}

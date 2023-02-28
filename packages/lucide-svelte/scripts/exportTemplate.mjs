@@ -1,17 +1,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { stringify } from 'svgson';
-
-export default ({ iconName, children }) => {
-  const iconChildNodes = children.map(([name, attributes]) => ({ name, attributes, children: [] }));
-  const iconChildrenHTML = iconChildNodes.map(stringify).join('\n  ');
-  return `\
-<script>
+export default ({ iconName, children }) =>
+  `\
+<script lang="ts">
 import Icon from '../Icon.svelte';
+import type { IconNode } from '../types';
+
+const iconNode: IconNode = ${JSON.stringify(children)};
 </script>
 
-<Icon name="${iconName}" {...$$props} >
-  ${iconChildrenHTML}
+<Icon name="${iconName}" {...$$props} iconNode={iconNode}>
   <slot/>
 </Icon>
 `;
-};

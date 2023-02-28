@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "model",
+    "3d",
+    "axis",
+    "coordinates"
+  ],
+  "categories": [
+    "design",
+    "files"
+  ]
+}

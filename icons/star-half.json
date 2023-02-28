@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bookmark",
+    "favorite",
+    "like",
+    "review",
+    "rating"
+  ],
+  "categories": [
+    "social",
+    "multimedia"
+  ]
+}

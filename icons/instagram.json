@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "logo",
+    "camera",
+    "social"
+  ],
+  "categories": [
+    "brands",
+    "social",
+    "photography"
+  ]
+}

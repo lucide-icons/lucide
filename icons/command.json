@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "keyboard",
+    "cmd",
+    "terminal",
+    "prompt"
+  ],
+  "categories": [
+    "coding"
+  ]
+}

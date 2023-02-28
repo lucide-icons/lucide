@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "police",
+    "ambulance",
+    "emergency",
+    "security",
+    "alert",
+    "alarm",
+    "light"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

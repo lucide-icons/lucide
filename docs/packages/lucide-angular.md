@@ -136,7 +136,7 @@ In `Method 2`: import all icons in `app.module.ts` by:
 
 ```js
 
-import { icons } from 'lucide-angular/icons';
+import { icons } from 'lucide-angular';
 
 LucideAngularModule.pick(icons)
 

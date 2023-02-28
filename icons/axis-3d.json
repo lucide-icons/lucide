@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "gizmo",
+    "coordinates"
+  ],
+  "categories": [
+    "design"
+  ]
+}
