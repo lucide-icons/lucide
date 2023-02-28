@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "unchain",
+    "chain"
+  ],
+  "categories": [
+    "text"
+  ]
+}

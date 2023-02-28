@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cooking",
+    "food",
+    "kitchen",
+    "restaurant"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

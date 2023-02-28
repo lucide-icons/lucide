@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "egg free",
+    "food"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

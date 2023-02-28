@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "ellipsis",
+    "menu",
+    "options"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

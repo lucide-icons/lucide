@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "archive",
+    "unarchive",
+    "restore",
+    "index",
+    "box"
+  ],
+  "categories": [
+    "files",
+    "mail"
+  ]
+}

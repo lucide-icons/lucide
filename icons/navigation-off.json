@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "location",
+    "travel"
+  ],
+  "categories": [
+    "navigation",
+    "maps"
+  ]
+}

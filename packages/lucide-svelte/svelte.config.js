@@ -1,6 +1,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-const sveltePreprocess = require('svelte-preprocess');
+import sveltePreprocess from 'svelte-preprocess';
 
-module.exports = {
-  preprocess: sveltePreprocess(),
+export default {
+  preprocess: sveltePreprocess({
+    typescript: true,
+  }),
 };
