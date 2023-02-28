@@ -1,4 +1,5 @@
 #!/bin/sh
 
+echo "TESTING IF THIS RUNS"
 pnpm run checkIcons
 exit $?
