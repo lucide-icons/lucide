@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "roadwork",
+    "maintenance",
+    "blockade",
+    "barricade"
+  ],
+  "categories": [
+    "development"
+  ]
+}
