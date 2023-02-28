@@ -7,7 +7,7 @@ const icons = readAllMetadata(ICONS_DIR);
 const CATEGORIES_DIR = path.resolve(currentDir, '../categories');
 const categories = readAllMetadata(CATEGORIES_DIR);
 
-console.log(`Read all icons`);
+console.log('Reading all icons')
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 const iconNames = svgFiles.map(icon => icon.split('.')[0]);
@@ -47,5 +47,6 @@ Object.keys(categories).forEach(categoryName => {
 });
 
 if (error) {
-  throw new Error('At least one error in icon JSONs prevents from committing changes.');
+  console.error('At least one error in icon JSONs prevents from committing changes.');
+  process.exit(1);
 }
