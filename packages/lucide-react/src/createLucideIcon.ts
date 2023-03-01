@@ -7,6 +7,7 @@ export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>
 
 export interface LucideProps extends SVGAttributes {
   size?: string | number
+  scaleStrokeWidth?: boolean
 }
 /**
  * Converts string to KebabCase
@@ -20,7 +21,7 @@ export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])
 
 const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
-    ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }, ref) =>
+    ({ color = 'currentColor', size = 24, strokeWidth = 2, scaleStrokeWidth = true, children, ...rest }, ref) =>
       createElement(
         'svg',
         {
@@ -29,7 +30,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
           width: size,
           height: size,
           stroke: color,
-          strokeWidth,
+          strokeWidth: scaleStrokeWidth ? strokeWidth : Number(strokeWidth) / (Number(size) / 24),
           className: `lucide lucide-${toKebabCase(iconName)}`,
           ...rest,
         },

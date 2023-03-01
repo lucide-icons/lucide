@@ -1,26 +1,35 @@
-import { IconData } from '../icons/types'
+import { LucideIconData } from '../icons/types';
 
 /**
  * Creates a new SVGElement from icon node
- * @param {string} tag
- * @param {object} attrs
- * @param {array} children
- * @returns {SVGElement}
+ *
+ * @param tag
+ * @param attrs
+ * @param children
+ * @returns
  */
-export const createElement = ([tag, attrs, children = []]: IconData): SVGElement => {
-  const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+export const createElement = ([
+    tag,
+    attrs,
+    children = [],
+]: LucideIconData): SVGElement => {
+    const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
 
-  Object.keys(attrs).forEach(name => {
-    element.setAttribute(name, attrs[name]);
-  });
-
-  if (children.length) {
-    children.forEach((child: IconData) => {
-      const childElement = createElement(child);
-
-      element.appendChild(childElement);
+    Object.keys(attrs).forEach((name) => {
+        const attrValue: string =
+            typeof attrs[name] === 'string'
+                ? (attrs[name] as string)
+                : attrs[name].toString(10);
+        element.setAttribute(name, attrValue);
     });
-  }
 
-  return element;
+    if (children.length) {
+        children.forEach((child: LucideIconData) => {
+            const childElement = createElement(child);
+
+            element.appendChild(childElement);
+        });
+    }
+
+    return element;
 };
