@@ -152,7 +152,6 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                     className="icon-large"
                   >
                     <IconWrapper
-                      showPreview
                       src={icon.src}
                       stroke={color}
                       strokeWidth={strokeWidth}
