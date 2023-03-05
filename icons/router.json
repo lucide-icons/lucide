@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "computer",
+    "server",
+    "cloud"
+  ],
+  "categories": [
+    "development",
+    "devices",
+    "connectivity",
+    "home"
+  ]
+}

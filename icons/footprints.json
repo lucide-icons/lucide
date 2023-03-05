@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "steps",
+    "walking",
+    "foot",
+    "feet",
+    "trail",
+    "shoe"
+  ],
+  "categories": [
+    "maps"
+  ]
+}
