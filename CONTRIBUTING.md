@@ -25,28 +25,21 @@ Guidelines for pull requests:
 
 Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
 
-Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md).
+Read it here: [ICON_GUIDELINES](/docs/icon-design-guide.md).
 
-### Templates
+### Editor guides
 
-Here you can find templates and instructions on how to implement the guidelines with different programs.
+Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-#### Adobe Illustrator
+#### [Adobe Illustrator Guide](/docs/illustrator-guide.md)
 
-`Template`: You can find a template for Adobe Illustrator under `/docs/templates/illustrator-template.ai`.
-`Instructions`: You can find the [Illustrator Guide](/docs/ILLUSTRATOR_GUIDE.md) and how to work with the template in `/docs/ILLUSTRATOR_GUIDE.md`.
+You can also [download an Adobe Illustrator template](/docs/templates/illustrator-template.ai).
 
-#### Inkscape
+#### [Inkscape Guide](/docs/inkscape-guide.md)
 
-`Template`: None
-`Instructions`: You can find the [Inkscape Guide](/docs/INKSCAPE_GUIDE.md) and how to set up Inkscape under `/docs/INKSCAPE_GUIDE.md`.
+#### [Figma Guide](/docs/figma-guide.md)
 
-#### Figma
-
-`Template`: None
-`Instructions`: You can find the [Figma Guide](/docs/FIGMA_GUIDE.md) and how to set up Figma under `/docs/FIGMA_GUIDE.md`.
-
-#### Submitting Multiple Icons
+### Submitting Multiple Icons
 
 If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
 So don't submit multiple icons in one PR that have noting to do with each other.
