@@ -80,7 +80,7 @@ const ColoredPath = ({
       <path
         key={i}
         d={d}
-        stroke={colors[(['rect', 'circle', 'ellipse'].includes(c.name) ? c.id : i) % colors.length]}
+        stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]}
         {...props}
       />
     ))}
