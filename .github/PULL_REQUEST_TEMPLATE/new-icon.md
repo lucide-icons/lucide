@@ -5,7 +5,7 @@ labels: "🎨 <icon"
 ---
 
 <!-- Thanks for submitting an icon! Please make sure you read the icon design guide
-at https://github.com/lucide-icons/lucide/blob/main/docs/ICON_DESIGN_GUIDE.md beforehand,
+at https://github.com/lucide-icons/lucide/blob/main/docs/icon-design-guide.md beforehand,
 and please fill everything below. -->
 
 - **Name of the icon** : <!-- `icon` -->
