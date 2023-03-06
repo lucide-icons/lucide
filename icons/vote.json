@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "vote",
+    "poll",
+    "ballot",
+    "political",
+    "social"
+  ],
+  "categories": [
+    "social"
+  ]
+}

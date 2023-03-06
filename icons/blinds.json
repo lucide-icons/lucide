@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shades",
+    "screen",
+    "curtain",
+    "shutter",
+    "roller blind",
+    "window",
+    "lighting",
+    "household",
+    "home"
+  ],
+  "categories": [
+    "home"
+  ]
+}

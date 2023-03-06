@@ -18,3 +18,5 @@ packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx
 packages/**/src/aliases.ts
 packages/**/LICENSE
+categories.json
+tags.json
