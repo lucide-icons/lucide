@@ -389,6 +389,7 @@ importers:
       babel-jest: ^26.5.2
       babel-loader: ^8.1.0
       downloadjs: ^1.4.7
+      element-to-path: ^1.2.1
       eslint: ^8.22.0
       eslint-config-prettier: ^8.5.0
       framer-motion: ^4
@@ -409,6 +410,7 @@ importers:
       react-dom: 17.0.2
       react-svg-loader: ^3.0.3
       react-test-renderer: 17.0.2
+      svg-pathdata: ^6.0.3
       svgson: ^5.2.1
       ts-node: ~10.9.1
       tslib: ^2.4.0
@@ -422,6 +424,7 @@ importers:
       '@next/mdx': 11.1.4_6vwedlnwdegenaf6jioaeirvlu
       '@svgr/webpack': 6.3.1
       downloadjs: 1.4.7
+      element-to-path: 1.2.1
       framer-motion: 4.1.17_sfoxds7t5ydpegc3knd667wn6m
       fuse.js: 6.6.2
       gray-matter: 4.0.3
@@ -436,6 +439,7 @@ importers:
       react-color: 2.19.3_react@17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-svg-loader: 3.0.3
+      svg-pathdata: 6.0.3
       svgson: 5.2.1
     devDependencies:
       '@next/eslint-plugin-next': 12.2.5
@@ -12869,6 +12873,10 @@ packages:
   /electron-to-chromium/1.4.284:
     resolution: {integrity: sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==}
 
+  /element-to-path/1.2.1:
+    resolution: {integrity: sha512-JNFZS0yI3Myywn/ltFj/yTihHNzMTYk0ycHcgcjlvA/dYMUjMIGqvbezPZeXN3U1Klp/aiigr2mpmhVRfudtbg==}
+    dev: false
+
   /emittery/0.7.2:
     resolution: {integrity: sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ==}
     engines: {node: '>=10'}
@@ -22210,6 +22218,11 @@ packages:
 
   /svg-parser/2.0.4:
     resolution: {integrity: sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==}
+    dev: false
+
+  /svg-pathdata/6.0.3:
+    resolution: {integrity: sha512-qsjeeq5YjBZ5eMdFuUa4ZosMLxgr5RZ+F+Y1OrDhuOCEInRMA3x74XdBtggJcj9kOeInz0WE+LgCPDkZFlBYJw==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /svgo/1.3.2:
