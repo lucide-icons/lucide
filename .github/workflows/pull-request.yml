@@ -1,6 +1,9 @@
 name: Pull request comment
 
-on: pull_request_target
+on:
+  pull_request_target:
+    paths:
+      - 'icons/*.svg'
 
 permissions:
   pull-requests: write
