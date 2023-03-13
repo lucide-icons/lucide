@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "arrow",
+    "expand",
+    "unfold",
+    "vertical"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}
