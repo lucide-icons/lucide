@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "medicine",
+    "medication",
+    "drug",
+    "prescription",
+    "pills",
+    "pharmacy"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

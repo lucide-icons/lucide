@@ -18,7 +18,7 @@ or
 yarn add lucide
 ```
 
-For more details, see the [documentation](packages/lucide).
+For more details, see the [documentation](packages/lucide.md).
 
 ## React
 
@@ -34,7 +34,7 @@ or
 npm install lucide-react
 ```
 
-For more details, see the [documentation](packages/lucide-react).
+For more details, see the [documentation](packages/lucide-react.md).
 
 ## Vue 2
 
@@ -50,7 +50,7 @@ or
 npm install lucide-vue
 ```
 
-For more details, see the [documentation](packages/lucide-vue).
+For more details, see the [documentation](packages/lucide-vue.md).
 
 ## Vue 3
 
@@ -66,7 +66,7 @@ or
 npm install lucide-vue-next
 ```
 
-For more details, see the [documentation](packages/lucide-vue-next).
+For more details, see the [documentation](packages/lucide-vue-next.md).
 
 ## Svelte
 
@@ -82,7 +82,7 @@ or
 npm install lucide-svelte
 ```
 
-For more details, see the [documentation](packages/lucide-svelte).
+For more details, see the [documentation](packages/lucide-svelte.md).
 
 ## Angular
 
@@ -96,7 +96,7 @@ or
 npm install lucide-angular
 ```
 
-For more details, see the [documentation](packages/lucide-angular).
+For more details, see the [documentation](packages/lucide-angular.md).
 
 ## Preact
 
@@ -112,7 +112,7 @@ or
 npm install lucide-preact
 ```
 
-For more details, see the [documentation](packages/lucide-preact).
+For more details, see the [documentation](packages/lucide-preact.md).
 
 ## Figma
 
