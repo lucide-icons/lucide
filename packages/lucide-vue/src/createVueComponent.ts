@@ -30,9 +30,9 @@ export default (iconName: string, iconNode: IconNode): Component => ({
       type: Number,
       default: 2,
     },
-    scaleStrokeWidth: {
+    absoluteStrokeWidth: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     defaultClass: {
       type: String,
@@ -42,7 +42,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
   render(
     createElement,
     {
-      props: { color, size, strokeWidth, scaleStrokeWidth, defaultClass },
+      props: { color, size, strokeWidth, absoluteStrokeWidth, defaultClass },
       data,
       children = [],
     },
@@ -59,9 +59,9 @@ export default (iconName: string, iconNode: IconNode): Component => ({
           height: size,
           stroke: color,
           'stroke-width':
-            scaleStrokeWidth
-              ? strokeWidth
-              : Number(strokeWidth) / (Number(size) / 24),
+            absoluteStrokeWidth
+              ? Number(strokeWidth) * 24 / Number(size)
+              : strokeWidth,
           ...data.attrs,
         },
         on: data?.on || {}

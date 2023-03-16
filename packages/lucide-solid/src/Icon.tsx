@@ -27,7 +27,7 @@ const Icon = (props: LucideProps & IconProps) => {
     'class',
     'name',
     'iconNode',
-    'scaleStrokeWidth'
+    'absoluteStrokeWidth'
   ]);
 
   return (
@@ -37,8 +37,8 @@ const Icon = (props: LucideProps & IconProps) => {
 			height={localProps.size ?? defaultAttributes.height}
 			stroke={localProps.color ?? defaultAttributes.stroke}
 			stroke-width={
-        localProps.scaleStrokeWidth === false
-        ? Number(localProps.strokeWidth ?? defaultAttributes['stroke-width']) / (Number(localProps.size) / 24)
+        localProps.absoluteStrokeWidth
+        ? Number(localProps.strokeWidth ?? defaultAttributes['stroke-width']) * 24 / (Number(localProps.size))
         : Number(localProps.strokeWidth ?? defaultAttributes['stroke-width'])
       }
       class={`lucide lucide-${toKebabCase(localProps?.name ?? 'icon')} ${

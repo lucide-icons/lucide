@@ -33,7 +33,7 @@ interface IconProps extends Partial<svelte.JSX.SVGProps<SVGSVGElement>> {
   color?: string
   size?: number|string
   strokeWidth?: number|string
-  scaleStrokeWidth?: boolean
+  absoluteStrokeWidth?: boolean
   class?: string
 }
 
