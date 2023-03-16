@@ -1,6 +1,5 @@
-import {ChangeDetectorRef, Component, ElementRef, Inject, Input, OnChanges, SimpleChange,} from '@angular/core';
+import {ChangeDetectorRef, Component, Renderer2, ElementRef, Inject, Input, OnChanges, SimpleChange} from '@angular/core';
 import {LucideIconData} from '../icons/types';
-import {createElement} from '../helpers/create-element';
 import defaultAttributes from '../icons/constants/default-attributes';
 import {LUCIDE_ICONS, LucideIconProviderInterface} from './lucide-icon.provider';
 
@@ -54,6 +53,7 @@ export class LucideAngularComponent implements OnChanges {
 
     constructor(
         @Inject(ElementRef) private elem: ElementRef,
+        @Inject(Renderer2) private renderer: Renderer2,
         @Inject(ChangeDetectorRef) private changeDetector: ChangeDetectorRef,
         @Inject(LUCIDE_ICONS) private iconProviders: LucideIconProviderInterface[]
     ) {
@@ -86,7 +86,6 @@ export class LucideAngularComponent implements OnChanges {
     }
 
     replaceElement(img: LucideIconData): void {
-
         const attributes = {
             ...defaultAttributes,
             ...img[1],
@@ -103,7 +102,7 @@ export class LucideAngularComponent implements OnChanges {
                 ? formatFixed(this._strokeWidth / (this._size / this.defaultSize))
                 : this.strokeWidth.toString(10),
         };
-        const icoElement = createElement([img[0], attributes, img[2]]);
+        const icoElement = this.createElement([img[0], attributes, img[2]]);
         icoElement.classList.add('lucide');
         if (this.name) {
             icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
@@ -111,8 +110,11 @@ export class LucideAngularComponent implements OnChanges {
         if (this.class) {
             icoElement.classList.add(...this.class.split(/ /).map((a) => a.trim()).filter((a) => a.length > 0))
         }
-        this.elem.nativeElement.innerHTML = '';
-        this.elem.nativeElement.append(icoElement);
+        const childElements = this.elem.nativeElement.childNodes;
+        for (let child of childElements) {
+            this.renderer.removeChild(this.elem.nativeElement, child);
+        }
+        this.renderer.appendChild(this.elem.nativeElement, icoElement);
     }
 
     toPascalCase(str: string): string {
@@ -143,4 +145,24 @@ export class LucideAngularComponent implements OnChanges {
     }
 
 
+    private createElement([tag, attrs, children = []]: LucideIconData) {
+        const element = this.renderer.createElement(tag, 'http://www.w3.org/2000/svg');
+
+        Object.keys(attrs).forEach((name) => {
+            const attrValue: string =
+                typeof attrs[name] === 'string'
+                    ? (attrs[name] as string)
+                    : attrs[name].toString(10);
+            this.renderer.setAttribute(element, name, attrValue);
+        });
+
+        if (children.length) {
+            children.forEach((child: LucideIconData) => {
+                const childElement = this.createElement(child);
+                this.renderer.appendChild(element, childElement);
+            });
+        }
+
+        return element;
+    }
 }
