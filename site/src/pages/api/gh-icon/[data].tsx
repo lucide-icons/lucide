@@ -5,9 +5,14 @@ export default async function handler(req, res) {
   // https://github.com/vercel/next.js/issues/43810
   const ReactDOMServer = (await import('react-dom/server')).default;
 
-  const src = Buffer.from(req.url.split('/').at(-1).slice(0, -4), 'base64').toString('utf8');
+  const url = req.url.split('/').at(-1);
+  const darkMode = url.endsWith('-dark.svg');
+  const data = darkMode ? url.slice(0, -9) : url.slice(0, -4);
+  const src = Buffer.from(data, 'base64').toString('utf8');
 
-  const svg = Buffer.from(ReactDOMServer.renderToString(<SvgPreview src={src} showGrid />));
+  const svg = Buffer.from(
+    ReactDOMServer.renderToString(<SvgPreview src={src} showGrid darkMode={darkMode} />)
+  );
 
   res.setHeader('Cache-Control', 'public,max-age=31536000');
   res.setHeader('Content-Type', 'image/svg+xml');
