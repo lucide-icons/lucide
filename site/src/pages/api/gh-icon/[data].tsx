@@ -9,6 +9,7 @@ export default async function handler(req, res) {
 
   const svg = Buffer.from(ReactDOMServer.renderToString(<SvgPreview src={src} showGrid />));
 
+  res.setHeader('Cache-Control', 'public,max-age=31536000');
   res.setHeader('Content-Type', 'image/svg+xml');
   res.status(200).end(svg);
 }
