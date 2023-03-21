@@ -9,10 +9,9 @@ const Grid = ({
 }: {
   strokeWidth: number;
   radius: number;
-} & PathProps<'stroke', 'strokeWidth' | 'strokeLinecap'>) => (
-  <>
+} & PathProps<'stroke', 'strokeWidth'>) => (
+  <g className="svg-preview-grid-group" strokeLinecap="butt" {...props}>
     <rect
-      {...props}
       width={24 - props.strokeWidth}
       height={24 - props.strokeWidth}
       x={props.strokeWidth / 2}
@@ -21,8 +20,6 @@ const Grid = ({
       fill={fill}
     />
     <path
-      {...props}
-      strokeLinecap="butt"
       d={
         props.d ||
         new Array(Math.floor(24 - 1))
@@ -34,7 +31,7 @@ const Grid = ({
           .join('')
       }
     />
-  </>
+  </g>
 );
 
 const Shadow = ({
@@ -46,27 +43,32 @@ const Shadow = ({
   paths: Path[];
 } & PathProps<'stroke' | 'strokeWidth' | 'strokeOpacity', 'd'>) => (
   <>
-    <mask id="point-overlap-mask" maskUnits="userSpaceOnUse" stroke="none">
-      <rect x={0} y={0} width={24} height={24} fill="#fff" rx={radius} />
+    <mask
+      id="svg-preview-shadow-mask"
+      maskUnits="userSpaceOnUse"
+      strokeOpacity="1"
+      strokeWidth={props.strokeWidth}
+      stroke="#000"
+    >
+      <rect x={0} y={0} width={24} height={24} fill="#fff" stroke="none" rx={radius} />
       <path
         d={paths
           .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
           .filter((val, idx, arr) => arr.indexOf(val) === idx)
           .join('')}
-        strokeWidth={props.strokeWidth}
-        stroke="#000"
       />
     </mask>
-    {paths.map(({ d }, i) => (
-      <path key={i} d={d} {...props} mask="url(#point-overlap-mask)" />
-    ))}
-    <path
-      d={paths
-        .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
-        .filter((val, idx, arr) => arr.indexOf(val) === idx)
-        .join('')}
-      {...props}
-    />
+    <g className="svg-preview-shadow-group" {...props}>
+      {paths.map(({ d }, i) => (
+        <path key={i} mask="url(#svg-preview-shadow-mask)" d={d} />
+      ))}
+      <path
+        d={paths
+          .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
+          .filter((val, idx, arr) => arr.indexOf(val) === idx)
+          .join('')}
+      />
+    </g>
   </>
 );
 
@@ -75,16 +77,11 @@ const ColoredPath = ({
   paths,
   ...props
 }: { paths: Path[]; colors: string[] } & PathProps<never, 'd' | 'stroke'>) => (
-  <>
+  <g className="svg-preview-colored-path-group" {...props}>
     {paths.map(({ d, c }, i) => (
-      <path
-        key={i}
-        d={d}
-        stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]}
-        {...props}
-      />
+      <path key={i} d={d} stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]} />
     ))}
-  </>
+  </g>
 );
 
 const ControlPath = ({
@@ -95,34 +92,70 @@ const ControlPath = ({
 }: { pointSize: number; paths: Path[]; radius: number } & PathProps<
   'stroke' | 'strokeWidth',
   'd'
->) => (
-  <>
-    {paths.map(({ d, prev, next, isStart, c }, i) => {
-      const element = paths.filter((p) => p.c.id === c.id);
-      const lastElement = element.at(-1)?.next;
-      assert(lastElement);
-      const isClosed = element[0].prev.x === lastElement.x && element[0].prev.y === lastElement.y;
-      return ['rect', 'circle', 'ellipse'].includes(c.name) ? (
-        <path key={i} d={d} {...props} />
-      ) : (
-        <React.Fragment key={i}>
-          <mask id={`path-mask-${i}`} maskUnits="userSpaceOnUse" stroke="none">
-            <rect x="0" y="0" width="24" height="24" fill="#fff" rx={radius} />
-            <path d={`M${prev.x} ${prev.y}h.01`} strokeWidth={pointSize} stroke="#000" />
-            <path d={`M${next.x} ${next.y}h.01`} strokeWidth={pointSize} stroke="#000" />
-          </mask>
-          <path d={`M${prev.x} ${prev.y}h.01`} {...props} />
-          <path d={`M${next.x} ${next.y}h.01`} {...props} />
-          {isStart && !isClosed && <circle cx={prev.x} cy={prev.y} r={pointSize / 2} {...props} />}
-          {paths[i + 1]?.isStart !== false && !isClosed && (
-            <circle cx={next.x} cy={next.y} r={pointSize / 2} {...props} />
-          )}
-          <path d={d} {...props} mask={`url(#path-mask-${i})`} />
-        </React.Fragment>
-      );
-    })}
-  </>
-);
+>) => {
+  const controlPaths = paths.map((path, i) => {
+    const element = paths.filter((p) => p.c.id === path.c.id);
+    const lastElement = element.at(-1)?.next;
+    assert(lastElement);
+    const isClosed = element[0].prev.x === lastElement.x && element[0].prev.y === lastElement.y;
+    const showMarker = !['rect', 'circle', 'ellipse'].includes(path.c.name);
+    return {
+      ...path,
+      showMarker,
+      startMarker: showMarker && path.isStart && !isClosed,
+      endMarker: showMarker && paths[i + 1]?.isStart !== false && !isClosed,
+    };
+  });
+  return (
+    <>
+      <g
+        className="svg-preview-control-path-marker-mask-group"
+        strokeWidth={pointSize}
+        stroke="#000"
+      >
+        {controlPaths.map(({ prev, next, showMarker }, i) => {
+          return (
+            showMarker && (
+              <mask
+                id={`svg-preview-control-path-marker-mask-${i}`}
+                key={i}
+                maskUnits="userSpaceOnUse"
+              >
+                <rect x="0" y="0" width="24" height="24" fill="#fff" stroke="none" rx={radius} />
+                <path d={`M${prev.x} ${prev.y}h.01`} />
+                <path d={`M${next.x} ${next.y}h.01`} />
+              </mask>
+            )
+          );
+        })}
+      </g>
+      <g className="svg-preview-control-path-group" {...props}>
+        {controlPaths.map(({ d, showMarker }, i) => (
+          <path
+            key={i}
+            mask={showMarker ? `url(#svg-preview-control-path-marker-mask-${i})` : undefined}
+            d={d}
+          />
+        ))}
+      </g>
+      <g className="svg-preview-control-path-marker-group" {...props}>
+        <path
+          d={controlPaths
+            .flatMap(({ prev, next, showMarker }) =>
+              showMarker ? [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`] : []
+            )
+            .join('')}
+        />
+        {controlPaths.map(({ d, prev, next, startMarker, endMarker }, i) => (
+          <React.Fragment key={i}>
+            {startMarker && <circle cx={prev.x} cy={prev.y} r={pointSize / 2} />}
+            {endMarker && <circle cx={next.x} cy={next.y} r={pointSize / 2} />}
+          </React.Fragment>
+        ))}
+      </g>
+    </>
+  );
+};
 
 const SvgPreview = React.forwardRef<
   SVGSVGElement,
