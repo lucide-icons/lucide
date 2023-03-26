@@ -41,36 +41,52 @@ const Shadow = ({
 }: {
   radius: number;
   paths: Path[];
-} & PathProps<'stroke' | 'strokeWidth' | 'strokeOpacity', 'd'>) => (
-  <>
-    <mask
-      id="svg-preview-shadow-mask"
-      maskUnits="userSpaceOnUse"
-      strokeOpacity="1"
-      strokeWidth={props.strokeWidth}
-      stroke="#000"
-    >
-      <rect x={0} y={0} width={24} height={24} fill="#fff" stroke="none" rx={radius} />
-      <path
-        d={paths
-          .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
-          .filter((val, idx, arr) => arr.indexOf(val) === idx)
-          .join('')}
-      />
-    </mask>
-    <g className="svg-preview-shadow-group" {...props}>
-      {paths.map(({ d }, i) => (
-        <path key={i} mask="url(#svg-preview-shadow-mask)" d={d} />
-      ))}
-      <path
-        d={paths
-          .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
-          .filter((val, idx, arr) => arr.indexOf(val) === idx)
-          .join('')}
-      />
-    </g>
-  </>
-);
+} & PathProps<'stroke' | 'strokeWidth' | 'strokeOpacity', 'd'>) => {
+  const groupedPaths = Object.entries(
+    paths.reduce((groups, val) => {
+      const key = val.c.id;
+      groups[key] = [...(groups[key] || []), val];
+      return groups;
+    }, {} as Record<number, Path[]>)
+  );
+  return (
+    <>
+      <g className="svg-preview-shadow-mask-group" {...props}>
+        {groupedPaths.map(([id, paths]) => (
+          <mask
+            id={`svg-preview-shadow-mask-${id}`}
+            maskUnits="userSpaceOnUse"
+            strokeOpacity="1"
+            strokeWidth={props.strokeWidth}
+            stroke="#000"
+          >
+            <rect x={0} y={0} width={24} height={24} fill="#fff" stroke="none" rx={radius} />
+            <path
+              d={paths
+                .flatMap(({ prev, next }) => [
+                  `M${prev.x} ${prev.y}h.01`,
+                  `M${next.x} ${next.y}h.01`,
+                ])
+                .filter((val, idx, arr) => arr.indexOf(val) === idx)
+                .join('')}
+            />
+          </mask>
+        ))}
+      </g>
+      <g className="svg-preview-shadow-group" {...props}>
+        {paths.map(({ d, c: { id } }, i) => (
+          <path key={i} mask={`url(#svg-preview-shadow-mask-${id})`} d={d} />
+        ))}
+        <path
+          d={paths
+            .flatMap(({ prev, next }) => [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`])
+            .filter((val, idx, arr) => arr.indexOf(val) === idx)
+            .join('')}
+        />
+      </g>
+    </>
+  );
+};
 
 const ColoredPath = ({
   colors,
