@@ -175,10 +175,10 @@ const ControlPath = ({
 
 const SvgPreview = React.forwardRef<
   SVGSVGElement,
-  { src: string; showGrid?: boolean; darkMode?: boolean }
->(({ src, showGrid = false, darkMode = false }, ref) => {
+  { src: string, showGrid?: boolean }
+>(({ src, showGrid = false, darkMode = true }, ref) => {
   const paths = getPaths(src);
-  const shadowColor = darkMode ? '#fff' : '#777';
+  const shadowColor = '#777';
   return (
     <svg
       ref={ref}
@@ -191,7 +191,27 @@ const SvgPreview = React.forwardRef<
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
+      className={darkMode ? 'dark-mode' : null}
     >
+      <style>
+      {`
+      @media screen and (prefers-color-scheme: dark) {
+        svg {
+          background-color: #000;
+        }
+        .svg-preview-grid-group,
+        .svg-preview-shadow-mask-group,
+        .svg-preview-shadow-group {
+          stroke: #fff;
+        }
+      }
+      svg.dark-mode .svg-preview-grid-group,
+      svg.dark-mode .svg-preview-shadow-mask-group,
+      svg.dark-mode .svg-preview-shadow-group {
+        stroke: #fff;
+      }
+      `}
+      </style>
       {showGrid && <Grid strokeWidth={0.1} stroke={shadowColor} strokeOpacity={0.3} radius={1} />}
       <Shadow paths={paths} strokeWidth={4} stroke={shadowColor} radius={1} strokeOpacity={0.15} />
       <ColoredPath
