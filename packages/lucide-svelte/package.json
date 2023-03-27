@@ -29,7 +29,7 @@
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "build:strip": "svelte-strip strip src/ dist/svelte",
-    "test": "vitest",
+    "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
