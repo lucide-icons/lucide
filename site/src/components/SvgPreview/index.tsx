@@ -173,67 +173,53 @@ const ControlPath = ({
   );
 };
 
-const SvgPreview = React.forwardRef<
-  SVGSVGElement,
-  { src: string, showGrid?: boolean }
->(({ src, showGrid = false, darkMode = true }, ref) => {
-  const paths = getPaths(src);
-  const shadowColor = '#777';
-  return (
-    <svg
-      ref={ref}
-      xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={darkMode ? 'dark-mode' : null}
-    >
-      <style>
-      {`
-      @media screen and (prefers-color-scheme: dark) {
-        svg {
-          background-color: #000;
-        }
-        .svg-preview-grid-group,
-        .svg-preview-shadow-mask-group,
-        .svg-preview-shadow-group {
-          stroke: #fff;
-        }
-      }
-      svg.dark-mode .svg-preview-grid-group,
-      svg.dark-mode .svg-preview-shadow-mask-group,
-      svg.dark-mode .svg-preview-shadow-group {
-        stroke: #fff;
-      }
-      `}
-      </style>
-      {showGrid && <Grid strokeWidth={0.1} stroke={shadowColor} strokeOpacity={0.3} radius={1} />}
-      <Shadow paths={paths} strokeWidth={4} stroke={shadowColor} radius={1} strokeOpacity={0.15} />
-      <ColoredPath
-        paths={paths}
-        colors={[
-          '#1982c4',
-          '#4267AC',
-          '#6a4c93',
-          '#B55379',
-          '#FF595E',
-          '#FF7655',
-          '#ff924c',
-          '#FFAE43',
-          '#ffca3a',
-          '#C5CA30',
-          '#8ac926',
-          '#52A675',
-        ]}
-      />
-      <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
-    </svg>
-  );
-});
+const SvgPreview = React.forwardRef<SVGSVGElement, { src: string; showGrid?: boolean }>(
+  ({ src, showGrid = false }, ref) => {
+    const paths = getPaths(src);
+    const darkModeCss = `@media screen and (prefers-color-scheme: dark) {
+  .svg-preview-grid-group,
+  .svg-preview-shadow-mask-group,
+  .svg-preview-shadow-group {
+    stroke: #fff;
+  }
+}`;
+    return (
+      <svg
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        width={24}
+        height={24}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <style>{darkModeCss}</style>
+        {showGrid && <Grid strokeWidth={0.1} stroke="#777" strokeOpacity={0.3} radius={1} />}
+        <Shadow paths={paths} strokeWidth={4} stroke="#777" radius={1} strokeOpacity={0.15} />
+        <ColoredPath
+          paths={paths}
+          colors={[
+            '#1982c4',
+            '#4267AC',
+            '#6a4c93',
+            '#B55379',
+            '#FF595E',
+            '#FF7655',
+            '#ff924c',
+            '#FFAE43',
+            '#ffca3a',
+            '#C5CA30',
+            '#8ac926',
+            '#52A675',
+          ]}
+        />
+        <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
+      </svg>
+    );
+  }
+);
 
 export default SvgPreview;
