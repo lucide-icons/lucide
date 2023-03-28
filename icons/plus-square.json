@@ -1,6 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "git",
+    "diff",
+    "plus",
     "add",
     "new",
     "maths"
