@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "beaker",
-    "erlenmeyer"
+    "erlenmeyer",
+    "lab"
   ],
   "categories": [
     "science",
