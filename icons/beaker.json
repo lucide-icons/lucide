@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "cup",
-    "lab"
+    "lab",
+    "chemistry"
   ],
   "categories": [
     "science",
