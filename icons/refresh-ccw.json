@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "arrows",
-    "reload"
+    "rotate",
+    "reload",
+    "synchronise",
+    "synchronize",
+    "circular",
+    "cycle"
   ],
   "categories": [
     "arrows"
