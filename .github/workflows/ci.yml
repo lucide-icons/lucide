@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - icons/**
+      - icons/**/*.svg
 
 jobs:
   create-release:
