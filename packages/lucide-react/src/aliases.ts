@@ -2645,6 +2645,14 @@ export { default as LucidePipette } from './icons/pipette';
 export { default as PizzaIcon } from './icons/pizza';
 export { default as LucidePizza } from './icons/pizza';
 
+// PlaneLanding aliases
+export { default as PlaneLandingIcon } from './icons/plane-landing';
+export { default as LucidePlaneLanding } from './icons/plane-landing';
+
+// PlaneTakeoff aliases
+export { default as PlaneTakeoffIcon } from './icons/plane-takeoff';
+export { default as LucidePlaneTakeoff } from './icons/plane-takeoff';
+
 // Plane aliases
 export { default as PlaneIcon } from './icons/plane';
 export { default as LucidePlane } from './icons/plane';

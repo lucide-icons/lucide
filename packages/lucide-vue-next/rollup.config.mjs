@@ -21,17 +21,14 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-  },
-  {
-    format: 'es',
-    inputs,
-    outputDir,
+    aliasesSupport: true
   },
   {
     format: 'esm',
     inputs,
     outputDir,
     preserveModules: true,
+    aliasesSupport: true
   },
 ];
 
@@ -42,7 +39,7 @@ const configs = bundles
       plugins: [
         // This for aliases, only for esm
         ...(
-          format !== 'esm' ? [
+          !aliasesSupport ? [
             replace({
               "export * from './aliases';": '',
               "export * as icons from './icons';": '',
