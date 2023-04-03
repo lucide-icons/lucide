@@ -24,11 +24,6 @@ const bundles = [
     outputDir,
   },
   {
-    format: 'es',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'esm',
     inputs,
     outputDir,
@@ -75,7 +70,7 @@ const typesFileConfig = {
   output: [
     {
       file: `${outputDir}/${outputFileName}.d.ts`,
-      format: 'es',
+      format: 'esm',
     },
   ],
   plugins: [
