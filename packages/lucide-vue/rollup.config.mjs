@@ -33,7 +33,7 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
     inputs.map(input => ({
       input,
       plugins: [
