@@ -74,7 +74,11 @@ export class LucideAngularComponent implements OnChanges {
             const name = changes.name.currentValue;
             if (typeof name === 'string') {
                 const icoOfName = this.getIcon(this.toPascalCase(name));
-                this.replaceElement(icoOfName);
+                if (icoOfName) {
+                    this.replaceElement(icoOfName);
+                } else {
+                    throw new Error(`The "${name}" icon has not been provided by any available icon providers.`);
+                }
             } else {
                 this.replaceElement(name);
             }
@@ -133,13 +137,13 @@ export class LucideAngularComponent implements OnChanges {
         return value;
     }
 
-    private getIcon(name: string): LucideIconData {
+    private getIcon(name: string): LucideIconData|null {
         for (const iconProvider of Array.isArray(this.iconProviders) ? this.iconProviders : [this.iconProviders]) {
             if (iconProvider.hasIcon(name)) {
                 return iconProvider.getIcon(name);
             }
         }
-        throw new Error(`The "${name} icon has not been provided by any available icon providers."`);
+        return null;
     }
 
 
