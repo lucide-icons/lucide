@@ -1,7 +1,7 @@
 {
   "name": "lucide-react-native",
   "description": "A Lucide icon library package for React Native applications",
-  "version": "0.115.0",
+  "version": "0.130.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -29,7 +29,7 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts",
     "build:types": "node ./scripts/buildTypes.mjs",
     "build:bundles": "rollup -c ./rollup.config.mjs",
-    "test": "vitest",
+    "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {

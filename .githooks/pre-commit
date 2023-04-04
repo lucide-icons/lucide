@@ -1,4 +1,0 @@
-#!/bin/sh
-
-pnpm run checkIcons
-exit $?

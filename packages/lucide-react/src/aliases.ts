@@ -410,9 +410,17 @@ export { default as LucideBike } from './icons/bike';
 export { default as BinaryIcon } from './icons/binary';
 export { default as LucideBinary } from './icons/binary';
 
+// Bird aliases
+export { default as BirdIcon } from './icons/bird';
+export { default as LucideBird } from './icons/bird';
+
 // Bitcoin aliases
 export { default as BitcoinIcon } from './icons/bitcoin';
 export { default as LucideBitcoin } from './icons/bitcoin';
+
+// Blinds aliases
+export { default as BlindsIcon } from './icons/blinds';
+export { default as LucideBlinds } from './icons/blinds';
 
 // BluetoothConnected aliases
 export { default as BluetoothConnectedIcon } from './icons/bluetooth-connected';
@@ -481,6 +489,18 @@ export { default as LucideBox } from './icons/box';
 // Boxes aliases
 export { default as BoxesIcon } from './icons/boxes';
 export { default as LucideBoxes } from './icons/boxes';
+
+// BrainCircuit aliases
+export { default as BrainCircuitIcon } from './icons/brain-circuit';
+export { default as LucideBrainCircuit } from './icons/brain-circuit';
+
+// BrainCog aliases
+export { default as BrainCogIcon } from './icons/brain-cog';
+export { default as LucideBrainCog } from './icons/brain-cog';
+
+// Brain aliases
+export { default as BrainIcon } from './icons/brain';
+export { default as LucideBrain } from './icons/brain';
 
 // Briefcase aliases
 export { default as BriefcaseIcon } from './icons/briefcase';
@@ -913,6 +933,10 @@ export { default as LucideComponent } from './icons/component';
 // ConciergeBell aliases
 export { default as ConciergeBellIcon } from './icons/concierge-bell';
 export { default as LucideConciergeBell } from './icons/concierge-bell';
+
+// Construction aliases
+export { default as ConstructionIcon } from './icons/construction';
+export { default as LucideConstruction } from './icons/construction';
 
 // Contact aliases
 export { default as ContactIcon } from './icons/contact';
@@ -1441,6 +1465,10 @@ export { default as LucideFiles } from './icons/files';
 export { default as FilmIcon } from './icons/film';
 export { default as LucideFilm } from './icons/film';
 
+// FilterX aliases
+export { default as FilterXIcon } from './icons/filter-x';
+export { default as LucideFilterX } from './icons/filter-x';
+
 // Filter aliases
 export { default as FilterIcon } from './icons/filter';
 export { default as LucideFilter } from './icons/filter';
@@ -1620,6 +1648,14 @@ export { default as LucideFolder } from './icons/folder';
 // Folders aliases
 export { default as FoldersIcon } from './icons/folders';
 export { default as LucideFolders } from './icons/folders';
+
+// Footprints aliases
+export { default as FootprintsIcon } from './icons/footprints';
+export { default as LucideFootprints } from './icons/footprints';
+
+// Forklift aliases
+export { default as ForkliftIcon } from './icons/forklift';
+export { default as LucideForklift } from './icons/forklift';
 
 // FormInput aliases
 export { default as FormInputIcon } from './icons/form-input';
@@ -1848,6 +1884,10 @@ export { default as LucideHeart } from './icons/heart';
 // HelpCircle aliases
 export { default as HelpCircleIcon } from './icons/help-circle';
 export { default as LucideHelpCircle } from './icons/help-circle';
+
+// HelpingHand aliases
+export { default as HelpingHandIcon } from './icons/helping-hand';
+export { default as LucideHelpingHand } from './icons/helping-hand';
 
 // Hexagon aliases
 export { default as HexagonIcon } from './icons/hexagon';
@@ -2409,6 +2449,10 @@ export { default as LucideNetwork } from './icons/network';
 export { default as NewspaperIcon } from './icons/newspaper';
 export { default as LucideNewspaper } from './icons/newspaper';
 
+// Nfc aliases
+export { default as NfcIcon } from './icons/nfc';
+export { default as LucideNfc } from './icons/nfc';
+
 // NutOff aliases
 export { default as NutOffIcon } from './icons/nut-off';
 export { default as LucideNutOff } from './icons/nut-off';
@@ -2484,6 +2528,22 @@ export { default as LucidePalmtree } from './icons/palmtree';
 // Paperclip aliases
 export { default as PaperclipIcon } from './icons/paperclip';
 export { default as LucidePaperclip } from './icons/paperclip';
+
+// ParkingCircleOff aliases
+export { default as ParkingCircleOffIcon } from './icons/parking-circle-off';
+export { default as LucideParkingCircleOff } from './icons/parking-circle-off';
+
+// ParkingCircle aliases
+export { default as ParkingCircleIcon } from './icons/parking-circle';
+export { default as LucideParkingCircle } from './icons/parking-circle';
+
+// ParkingSquareOff aliases
+export { default as ParkingSquareOffIcon } from './icons/parking-square-off';
+export { default as LucideParkingSquareOff } from './icons/parking-square-off';
+
+// ParkingSquare aliases
+export { default as ParkingSquareIcon } from './icons/parking-square';
+export { default as LucideParkingSquare } from './icons/parking-square';
 
 // PartyPopper aliases
 export { default as PartyPopperIcon } from './icons/party-popper';
@@ -2565,6 +2625,10 @@ export { default as LucidePiggyBank } from './icons/piggy-bank';
 export { default as PilcrowIcon } from './icons/pilcrow';
 export { default as LucidePilcrow } from './icons/pilcrow';
 
+// Pill aliases
+export { default as PillIcon } from './icons/pill';
+export { default as LucidePill } from './icons/pill';
+
 // PinOff aliases
 export { default as PinOffIcon } from './icons/pin-off';
 export { default as LucidePinOff } from './icons/pin-off';
@@ -2580,6 +2644,14 @@ export { default as LucidePipette } from './icons/pipette';
 // Pizza aliases
 export { default as PizzaIcon } from './icons/pizza';
 export { default as LucidePizza } from './icons/pizza';
+
+// PlaneLanding aliases
+export { default as PlaneLandingIcon } from './icons/plane-landing';
+export { default as LucidePlaneLanding } from './icons/plane-landing';
+
+// PlaneTakeoff aliases
+export { default as PlaneTakeoffIcon } from './icons/plane-takeoff';
+export { default as LucidePlaneTakeoff } from './icons/plane-takeoff';
 
 // Plane aliases
 export { default as PlaneIcon } from './icons/plane';
@@ -2745,6 +2817,10 @@ export { default as LucideRotateCcw } from './icons/rotate-ccw';
 export { default as RotateCwIcon } from './icons/rotate-cw';
 export { default as LucideRotateCw } from './icons/rotate-cw';
 
+// Router aliases
+export { default as RouterIcon } from './icons/router';
+export { default as LucideRouter } from './icons/router';
+
 // Rss aliases
 export { default as RssIcon } from './icons/rss';
 export { default as LucideRss } from './icons/rss';
@@ -2885,6 +2961,10 @@ export { default as LucideShieldOff } from './icons/shield-off';
 export { default as ShieldIcon } from './icons/shield';
 export { default as LucideShield } from './icons/shield';
 
+// Ship aliases
+export { default as ShipIcon } from './icons/ship';
+export { default as LucideShip } from './icons/ship';
+
 // Shirt aliases
 export { default as ShirtIcon } from './icons/shirt';
 export { default as LucideShirt } from './icons/shirt';
@@ -2993,6 +3073,10 @@ export { default as LucideSliders } from './icons/sliders';
 export { default as SmartphoneChargingIcon } from './icons/smartphone-charging';
 export { default as LucideSmartphoneCharging } from './icons/smartphone-charging';
 
+// SmartphoneNfc aliases
+export { default as SmartphoneNfcIcon } from './icons/smartphone-nfc';
+export { default as LucideSmartphoneNfc } from './icons/smartphone-nfc';
+
 // Smartphone aliases
 export { default as SmartphoneIcon } from './icons/smartphone';
 export { default as LucideSmartphone } from './icons/smartphone';
@@ -3048,6 +3132,10 @@ export { default as LucideSprout } from './icons/sprout';
 // Square aliases
 export { default as SquareIcon } from './icons/square';
 export { default as LucideSquare } from './icons/square';
+
+// Stamp aliases
+export { default as StampIcon } from './icons/stamp';
+export { default as LucideStamp } from './icons/stamp';
 
 // StarHalf aliases
 export { default as StarHalfIcon } from './icons/star-half';
@@ -3161,6 +3249,10 @@ export { default as LucideTable } from './icons/table';
 export { default as TabletIcon } from './icons/tablet';
 export { default as LucideTablet } from './icons/tablet';
 
+// Tablets aliases
+export { default as TabletsIcon } from './icons/tablets';
+export { default as LucideTablets } from './icons/tablets';
+
 // Tag aliases
 export { default as TagIcon } from './icons/tag';
 export { default as LucideTag } from './icons/tag';
@@ -3240,6 +3332,10 @@ export { default as LucideToggleRight } from './icons/toggle-right';
 // Tornado aliases
 export { default as TornadoIcon } from './icons/tornado';
 export { default as LucideTornado } from './icons/tornado';
+
+// TowerControl aliases
+export { default as TowerControlIcon } from './icons/tower-control';
+export { default as LucideTowerControl } from './icons/tower-control';
 
 // ToyBrick aliases
 export { default as ToyBrickIcon } from './icons/toy-brick';
@@ -3388,6 +3484,10 @@ export { default as LucideUtensilsCrossed } from './icons/utensils-crossed';
 // Utensils aliases
 export { default as UtensilsIcon } from './icons/utensils';
 export { default as LucideUtensils } from './icons/utensils';
+
+// UtilityPole aliases
+export { default as UtilityPoleIcon } from './icons/utility-pole';
+export { default as LucideUtilityPole } from './icons/utility-pole';
 
 // Vegan aliases
 export { default as VeganIcon } from './icons/vegan';

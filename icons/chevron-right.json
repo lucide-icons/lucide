@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "arrow"
+    "arrow",
+    "code",
+    "command line",
+    "terminal",
+    "prompt",
+    "shell"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "coding",
+    "development",
+    "shapes"
   ]
 }

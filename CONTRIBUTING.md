@@ -25,28 +25,21 @@ Guidelines for pull requests:
 
 Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
 
-Read it here: [ICON_GUIDELINES](docs/ICON_DESIGN_GUIDE.md).
+Read it here: [ICON_GUIDELINES](/docs/icon-design-guide.md).
 
-### Templates
+### Editor guides
 
-Here you can find templates and instructions on how to implement the guidelines with different programs.
+Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-#### Adobe Illustrator
+#### [Adobe Illustrator Guide](/docs/illustrator-guide.md)
 
-`Template`: You can find a template for Adobe Illustrator under `/docs/templates/illustrator-template.ai`.
-`Instructions`: You can find the [Illustrator Guide](/docs/ILLUSTRATOR_GUIDE.md) and how to work with the template in `/docs/ILLUSTRATOR_GUIDE.md`.
+You can also [download an Adobe Illustrator template](/docs/templates/illustrator-template.ai).
 
-#### Inkscape
+#### [Inkscape Guide](/docs/inkscape-guide.md)
 
-`Template`: None
-`Instructions`: You can find the [Inkscape Guide](/docs/INKSCAPE_GUIDE.md) and how to set up Inkscape under `/docs/INKSCAPE_GUIDE.md`.
+#### [Figma Guide](/docs/figma-guide.md)
 
-#### Figma
-
-`Template`: None
-`Instructions`: You can find the [Figma Guide](/docs/FIGMA_GUIDE.md) and how to set up Figma under `/docs/FIGMA_GUIDE.md`.
-
-#### Submitting Multiple Icons
+### Submitting Multiple Icons
 
 If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
 So don't submit multiple icons in one PR that have noting to do with each other.
@@ -66,13 +59,13 @@ If you are a designer who wants to contribute to Lucide but you don't know what 
 ## Development
 
 You will need minimum version of [Nodejs 16.4+](https://nodejs.org)
-For packagemanagement you will need [yarn v1](https://yarnpkg.com/getting-started/install).
+For package management you will need [PNPM](https://pnpm.io/installation).
 For flutter package development, you need [Flutter 1.17+](https://docs.flutter.dev/get-started/install).
 
 After cloning the project you need to run:
 
 ```sh
-yarn # Install dependencies, including the workspace packages
+pnpm install # Install dependencies, including the workspace packages
 ```
 
 ### Packages -> PNPM Workspaces
@@ -80,6 +73,7 @@ yarn # Install dependencies, including the workspace packages
 To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces).
 
 The configured directory for workspaces is the [packages](./packages) directory, located in the root directory. There you will find all the current packages from lucide.
+There are more workspaces defined, see [`pnpm-workspace.yaml`](./pnpm-workspace.yaml).
 
 > Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
 
