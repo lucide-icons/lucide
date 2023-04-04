@@ -106,4 +106,4 @@ import { icons } from 'lucide-angular';
 ...
 
 LucideAngularModule.pick(icons)
-``` 
+```

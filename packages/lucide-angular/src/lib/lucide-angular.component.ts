@@ -74,15 +74,7 @@ export class LucideAngularComponent implements OnChanges {
             const name = changes.name.currentValue;
             if (typeof name === 'string') {
                 const icoOfName = this.getIcon(this.toPascalCase(name));
-
-                if (!icoOfName) {
-                    console.warn(
-                        `Icon not found: ${name}\n` +
-                        "Please check icon name or 'lucide icon list'"
-                    );
-                } else {
-                    this.replaceElement(icoOfName);
-                }
+                this.replaceElement(icoOfName);
             } else {
                 this.replaceElement(name);
             }
@@ -141,7 +133,7 @@ export class LucideAngularComponent implements OnChanges {
         return value;
     }
 
-    private getIcon(name: string): LucideIconData | null {
+    private getIcon(name: string): LucideIconData {
         for (const iconProvider of Array.isArray(this.iconProviders) ? this.iconProviders : [this.iconProviders]) {
             if (iconProvider.hasIcon(name)) {
                 return iconProvider.getIcon(name);
