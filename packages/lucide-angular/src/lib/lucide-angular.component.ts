@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, Renderer2, ElementRef, Inject, Input, OnCh
 import {LucideIconData} from '../icons/types';
 import defaultAttributes from '../icons/constants/default-attributes';
 import {LUCIDE_ICONS, LucideIconProviderInterface} from './lucide-icon.provider';
+import {LucideIconConfig} from "./lucide-icon.config";
 
 interface TypedChange<T> extends SimpleChange {
     previousValue: T;
@@ -9,8 +10,7 @@ interface TypedChange<T> extends SimpleChange {
 }
 
 type LucideAngularComponentChanges = {
-    name?: TypedChange<string>;
-    img?: TypedChange<LucideIconData>;
+    name?: TypedChange<string|LucideIconData>;
     color?: TypedChange<string>;
     size?: TypedChange<number>;
     strokeWidth?: TypedChange<number>;
@@ -27,21 +27,23 @@ export function formatFixed(number: number, decimals = 3): string {
 })
 export class LucideAngularComponent implements OnChanges {
     @Input() class?: string;
-    @Input() name?: string;
-    @Input() img?: LucideIconData;
-    @Input() color: string = defaultAttributes.stroke;
-    _size: number = defaultAttributes.height;
-    get size(): number | string {
-        return this._size;
+    @Input() name?: string|LucideIconData;
+    @Input() set img(img: LucideIconData) {
+        this.name = img;
+    }
+    @Input() color?: string;
+    _size?: number;
+    get size(): number {
+        return this._size ?? this.iconConfig.size;
     }
 
     @Input() set size(value: string | number) {
         this._size = this.parseNumber(value);
     }
 
-    _strokeWidth: number = defaultAttributes['stroke-width'];
-    get strokeWidth(): number | string {
-        return this._strokeWidth;
+    _strokeWidth?: number;
+    get strokeWidth(): number {
+        return this._strokeWidth ?? this.iconConfig.strokeWidth;
     }
 
     @Input() set strokeWidth(value: string | number) {
@@ -55,31 +57,35 @@ export class LucideAngularComponent implements OnChanges {
         @Inject(ElementRef) private elem: ElementRef,
         @Inject(Renderer2) private renderer: Renderer2,
         @Inject(ChangeDetectorRef) private changeDetector: ChangeDetectorRef,
-        @Inject(LUCIDE_ICONS) private iconProviders: LucideIconProviderInterface[]
+        @Inject(LUCIDE_ICONS) private iconProviders: LucideIconProviderInterface[],
+        @Inject(LucideIconConfig) private iconConfig: LucideIconConfig,
     ) {
         this.defaultSize = defaultAttributes.height;
     }
 
     ngOnChanges(changes: LucideAngularComponentChanges): void {
-        this.color = this.color ?? defaultAttributes.stroke;
+        this.color = this.color ?? this.iconConfig.color;
         this.size = this.parseNumber(this.size ?? this.defaultSize);
         this.strokeWidth = this.parseNumber(
-            this.strokeWidth ?? defaultAttributes['stroke-width']
+            this.strokeWidth ?? this.iconConfig.strokeWidth
         );
         this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? false;
         if (changes.name) {
-            const icoOfName = this.getIcon(this.toPascalCase(changes.name.currentValue));
+            const name = changes.name.currentValue;
+            if (typeof name === 'string') {
+                const icoOfName = this.getIcon(this.toPascalCase(name));
 
-            if (!icoOfName) {
-                console.warn(
-                    `Icon not found: ${changes.name.currentValue}\n` +
-                    "Please check icon name or 'lucide icon list'"
-                );
+                if (!icoOfName) {
+                    console.warn(
+                        `Icon not found: ${name}\n` +
+                        "Please check icon name or 'lucide icon list'"
+                    );
+                } else {
+                    this.replaceElement(icoOfName);
+                }
             } else {
-                this.replaceElement(icoOfName);
+                this.replaceElement(name);
             }
-        } else if (changes.img) {
-            this.replaceElement(changes.img.currentValue);
         }
 
         this.changeDetector.markForCheck();
@@ -97,14 +103,14 @@ export class LucideAngularComponent implements OnChanges {
                 typeof this.size === 'number'
                     ? this.size.toString(10)
                     : this.size,
-            stroke: this.color,
+            stroke: this.color ?? this.iconConfig.color,
             'stroke-width': this.absoluteStrokeWidth
-                ? formatFixed(this._strokeWidth / (this._size / this.defaultSize))
+                ? formatFixed(this.strokeWidth / (this.size / this.defaultSize))
                 : this.strokeWidth.toString(10),
         };
         const icoElement = this.createElement([img[0], attributes, img[2]]);
         icoElement.classList.add('lucide');
-        if (this.name) {
+        if (typeof this.name === 'string') {
             icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
         }
         if (this.class) {
@@ -141,7 +147,7 @@ export class LucideAngularComponent implements OnChanges {
                 return iconProvider.getIcon(name);
             }
         }
-        return null;
+        throw new Error(`The "${name} icon has not been provided by any available icon providers."`);
     }
 
 
