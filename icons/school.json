@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "building",
+    "education",
+    "childhood",
+    "university"
+  ],
+  "categories": [
+    "buildings",
+    "maps"
+  ]
+}
