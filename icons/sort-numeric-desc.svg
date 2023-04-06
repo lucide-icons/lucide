@@ -1,0 +1,17 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4,17l3,3l3-3" />
+  <path d="M7,20V4" />
+  <polyline points="17,10 17,4 15,4" />
+  <line x1="15" y1="10" x2="19" y2="10" />
+  <path d="M17,20L17,20c-1.1,0-2-0.9-2-2v-2c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v2C19,19.1,18.1,20,17,20z" />
+</svg>
