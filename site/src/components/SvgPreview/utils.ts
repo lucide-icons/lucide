@@ -24,15 +24,15 @@ const extractPaths = (node: INode): { d: string; name: typeof node.name }[] => {
 
 export const getCommands = (src: string) =>
   extractPaths(parseSync(src)).flatMap(({ d, name }, idx) =>
-    new SVGPathData(d).toAbs().commands.map((c) => ({ ...c, id: idx, name }))
+    new SVGPathData(d).toAbs().commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name }))
   );
 
 export const getPaths = (src: string) => {
-  const commands = getCommands(src);
+  const commands = getCommands(src.includes('<svg') ? src : `<svg>${src}</svg>`);
   const paths: Path[] = [];
   let prev: Point | undefined = undefined;
   let start: Point | undefined = undefined;
-  const addPath = (c: (typeof commands)[number], next: Point, d?: string) => {
+  const addPath = (c: typeof commands[number], next: Point, d?: string) => {
     assert(prev);
     paths.push({
       c,
@@ -86,16 +86,16 @@ export const getPaths = (src: string) => {
         const reflectedCp1 = {
           x:
             previousCommand &&
-              (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
-                previousCommand.type === SVGPathData.CURVE_TO)
+            (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
+              previousCommand.type === SVGPathData.CURVE_TO)
               ? previousCommand.relative
                 ? previousCommand.x2 - previousCommand.x
                 : previousCommand.x2 - prev.x
               : 0,
           y:
             previousCommand &&
-              (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
-                previousCommand.type === SVGPathData.CURVE_TO)
+            (previousCommand.type === SVGPathData.SMOOTH_CURVE_TO ||
+              previousCommand.type === SVGPathData.CURVE_TO)
               ? previousCommand.relative
                 ? previousCommand.y2 - previousCommand.y
                 : previousCommand.y2 - prev.y

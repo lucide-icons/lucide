@@ -95,7 +95,12 @@ const ColoredPath = ({
 }: { paths: Path[]; colors: string[] } & PathProps<never, 'd' | 'stroke'>) => (
   <g className="svg-preview-colored-path-group" {...props}>
     {paths.map(({ d, c }, i) => (
-      <path key={i} d={d} stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]} />
+      <path
+        className={`svg-preview-colored-${c.name}-${c.id} svg-preview-colored-segment-${c.id}-${c.idx}`}
+        key={i}
+        d={d}
+        stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]}
+      />
     ))}
   </g>
 );
@@ -175,7 +180,13 @@ const ControlPath = ({
 
 const SvgPreview = React.forwardRef<SVGSVGElement, { src: string; showGrid?: boolean }>(
   ({ src, showGrid = false }, ref) => {
-    const paths = getPaths(src);
+    let paths: Path[];
+    try {
+      paths = getPaths(src);
+    } catch (e) {
+      console.error(e);
+      paths = [];
+    }
     const darkModeCss = `@media screen and (prefers-color-scheme: dark) {
   .svg-preview-grid-group,
   .svg-preview-shadow-mask-group,
