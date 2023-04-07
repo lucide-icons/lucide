@@ -52,7 +52,8 @@ const EditPage = () => {
   }, [urlData?.[1]]);
 
   const onSave = () => {
-    const data = Buffer.from(src).toString('base64');
+    const data = Buffer.from(formatted.data || src).toString('base64');
+    if (formatted.data) setSrc(formatted.data);
     const domain = window.location.origin;
     navigator.clipboard.writeText(`${domain}${urlData[0]}?${data}`);
     toast({
