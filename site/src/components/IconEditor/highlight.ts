@@ -82,9 +82,11 @@ const extractPaths = (
   return [];
 };
 const getCommands = (src: string) => {
-  const svgNode = parse(src.includes('<svg') ? src : `<svg>${src}</src>`, {
-    sourceCodeLocationInfo: true,
-  }).childNodes[0].parentNode.childNodes[0].parentNode.childNodes[0].childNodes[1].childNodes[0];
+  const svgNode = (
+    parse(src.includes('<svg') ? src : `<svg>${src}</src>`, {
+      sourceCodeLocationInfo: true,
+    }).childNodes[0].parentNode.childNodes[0].parentNode.childNodes[0] as any
+  ).childNodes[1].childNodes[0];
   const globalOffset = src.includes('<svg') ? 0 : -1;
   return extractPaths(svgNode).flatMap((node, idx) => {
     if (node.name !== 'path') {
