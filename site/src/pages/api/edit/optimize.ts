@@ -130,6 +130,19 @@ const elementsToPath = (svg: string) => {
   return stringify(data);
 };
 
+const snapToGrid = (svg: string) => {
+  const data = parseSync(svg);
+  for (let i = 0; i < data.children.length; i++) {
+    if (data.children[i].name === 'path') {
+      data.children[i].attributes.d = data.children[i].attributes.d.replace(
+        /\d*\.(99|98|97|96|01|02|03|04|49|48|47|46|51|52|53|54|11|21|31|41|51|61|71|81|91|09|19|29|39|49|59|69|79|89)\d*/g,
+        (val) => Math.round(parseFloat(val) * 10) / 10 + ''
+      );
+    }
+  }
+  return stringify(data);
+};
+
 const pathsToElement = (svg: string) => {
   return svg;
   const data = parseSync(svg);
@@ -146,7 +159,7 @@ export const svgo = (svg: string) => {
       c.attributes.d = new commander(d).toCurve().toString();
     }
   });
-  return optimize(svg.replace(/stroke-linecap="round"/, 'stroke-linecap="butt"'), {
+  return optimize(svg, {
     floatPrecision: 2,
     plugins: [
       {
@@ -170,6 +183,13 @@ export const svgo = (svg: string) => {
 
 export default async function handler(req, res) {
   const before = format(req.body);
-  const after = format(svgo(mergePaths(pathsToElement(fixDots(elementsToPath(before))))));
+  const after = format(
+    svgo(
+      fixDots(snapToGrid(svgo(mergePaths(pathsToElement(elementsToPath(before)))))).replace(
+        /stroke-linecap="round"/,
+        'stroke-linecap="butt"'
+      )
+    )
+  );
   res.status(200).end(before === after ? req.body : after);
 }

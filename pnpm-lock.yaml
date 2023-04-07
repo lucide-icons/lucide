@@ -414,7 +414,7 @@ importers:
       react-test-renderer: 17.0.2
       svg-path-commander: ^2.0.5
       svg-pathdata: ^6.0.3
-      svgo: ^3.0.0
+      svgo: github:jguddas/svgo#feat/remove-useless-closing-path-segments
       svgson: ^5.2.1
       swr: ^2.1.2
       ts-node: ~10.9.1
@@ -448,7 +448,7 @@ importers:
       react-svg-loader: 3.0.3
       svg-path-commander: 2.0.5
       svg-pathdata: 6.0.3
-      svgo: 3.0.2
+      svgo: github.com/jguddas/svgo/52ec60f5f586c0201a63112928cabb27abbc0584
       svgson: 5.2.1
       swr: 2.1.2_react@17.0.2
     devDependencies:
@@ -21871,6 +21871,7 @@ packages:
       css-tree: 2.3.1
       csso: 5.0.5
       picocolors: 1.0.0
+    dev: true
 
   /svgson/5.2.1:
     resolution: {integrity: sha512-nbM6QuyZiKzQ0Uo51VDta93YJAr96ikyT40PsgJRrzynOGsOlnmJ6zAK5hUFyE5gnxcg7yuOPUWbUlmV9K0+Dg==}
@@ -23940,4 +23941,19 @@ packages:
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
+    dev: false
+
+  github.com/jguddas/svgo/52ec60f5f586c0201a63112928cabb27abbc0584:
+    resolution: {tarball: https://codeload.github.com/jguddas/svgo/tar.gz/52ec60f5f586c0201a63112928cabb27abbc0584}
+    name: svgo
+    version: 3.0.2
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      '@trysound/sax': 0.2.0
+      commander: 7.2.0
+      css-select: 5.1.0
+      css-tree: 2.3.1
+      csso: 5.0.5
+      picocolors: 1.0.0
     dev: false

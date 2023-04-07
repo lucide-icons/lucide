@@ -43,7 +43,7 @@
     "react-svg-loader": "^3.0.3",
     "svg-path-commander": "^2.0.5",
     "svg-pathdata": "^6.0.3",
-    "svgo": "^3.0.0",
+    "svgo": "github:jguddas/svgo#feat/remove-useless-closing-path-segments",
     "svgson": "^5.2.1",
     "swr": "^2.1.2"
   },
