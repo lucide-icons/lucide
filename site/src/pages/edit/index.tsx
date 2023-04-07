@@ -1,8 +1,9 @@
 import Layout from '../../components/Layout';
-import { Button, Flex, Text } from '@chakra-ui/react';
+import { Button, Flex, Text, useToast } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import IconEditor from '../../components/IconEditor';
 import useSWR from 'swr';
+import { useRouter } from 'next/router';
 
 const placeholderSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M10.42 12.61a2.1 2.1 0 1 1 2.97 2.97L7.95 21 4 22l.99-3.95 5.43-5.44"></path><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5.5"></path><path d="M4 13.5V6a2 2 0 0 1 2-2h2"></path></svg>`;
 
@@ -34,12 +35,35 @@ const swrOptions = {
 };
 
 const EditPage = () => {
+  const router = useRouter();
+  const toast = useToast();
   const [src, setSrc] = useState(placeholderSvg);
   const [preview, setPreview] = useState<string | undefined>();
   const [debouncedSrc, debouncing] = useDebounce(src, 500);
   const formatted = useSWR(['/api/edit/format', debouncedSrc], fetcher, swrOptions);
   const optimized = useSWR(['/api/edit/optimize', debouncedSrc], fetcher, swrOptions);
   const disconnected = useSWR(['/api/edit/disconnect', debouncedSrc], fetcher, swrOptions);
+
+  const urlData = router.asPath.split('?');
+  useEffect(() => {
+    if (urlData?.[1]) {
+      setSrc(Buffer.from(urlData[1], 'base64').toString('utf8'));
+    }
+  }, [router.query]);
+
+  const onSave = () => {
+    const data = Buffer.from(src).toString('base64');
+    const domain = window.location.origin;
+    navigator.clipboard.writeText(`${domain}${urlData[0]}?${data}`);
+    toast({
+      title: 'Saved.',
+      description: 'Link copied to clipboard.',
+      status: 'success',
+      isClosable: true,
+      duration: 2000,
+    });
+    router.push(`/edit?${data}`);
+  };
 
   return (
     <Layout>
@@ -78,6 +102,9 @@ const EditPage = () => {
               onMouseOut={() => setPreview(undefined)}
             >
               Disconnect
+            </Button>
+            <Button colorScheme="green" onClick={onSave}>
+              Save
             </Button>
           </Flex>
         </Flex>
