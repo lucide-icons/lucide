@@ -106,13 +106,11 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
         pb={4}
         maxW="850px"
         margin="0 auto"
-        w="full"
         px={8}
       >
           <Box
             borderWidth="1px"
             rounded="lg"
-            width="full"
             boxShadow={theme.shadows.xl}
             position="relative"
             bg={
@@ -216,6 +214,14 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                       </Button>
                       <Button variant="solid" onClick={() => copyIcon({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
                         Copy SVG
+                      </Button>
+                      <Button
+                        variant="solid"
+                        as={Link}
+                        href={`/edit/lucide-icons/lucide/${icon.name}?${btoa(icon.src)}`}
+                        mb={1}
+                      >
+                        Edit SVG
                       </Button>
                       <Button variant="solid" onClick={() => downloadPNG({src: iconRef.current.outerHTML, name: icon.name})} mb={1}>
                         Download PNG

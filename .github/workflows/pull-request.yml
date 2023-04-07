@@ -28,11 +28,7 @@ jobs:
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img width=\"400\" title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/&.svg\"/> |"
+            cat "$file" | base64 -w 0 | sed "s|.*|<a title=\"Edit $file\" href=\"https://lucide.dev/edit/${{ github.event.pull_request.head.repo.full_name }}/$(basename ${file//\.svg/})/${{ github.event.pull_request.head.ref }}?&\"><img width=\"400\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/&.svg\"/> |"
           done | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
