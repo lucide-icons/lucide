@@ -42,8 +42,9 @@ const EditPage = () => {
   const optimized = useSWR(['/api/edit/optimize', debouncedSrc], fetcher, swrOptions);
   const disconnected = useSWR(['/api/edit/disconnect', debouncedSrc], fetcher, swrOptions);
 
-  const [user, repository, name] = router.query.path || [];
-  const branch = router?.query?.path?.slice?.(3)?.join?.('/') || undefined;
+  const [user, repository, name, ...branchSegments] =
+    typeof router.query.path === 'string' ? [] : router.query.path || [];
+  const branch = branchSegments.join?.('/') || undefined;
 
   const urlData = router.asPath.split('?');
   useEffect(() => {
