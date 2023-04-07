@@ -167,7 +167,7 @@ const ControlPath = ({
             )
             .join('')}
         />
-        {controlPaths.map(({ d, prev, next, startMarker, endMarker }, i) => (
+        {controlPaths.map(({ prev, next, startMarker, endMarker }, i) => (
           <React.Fragment key={i}>
             {startMarker && <circle cx={prev.x} cy={prev.y} r={pointSize / 2} />}
             {endMarker && <circle cx={next.x} cy={next.y} r={pointSize / 2} />}
