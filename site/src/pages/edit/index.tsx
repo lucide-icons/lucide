@@ -65,19 +65,8 @@ const EditPage = () => {
     router.push(`/edit?${data}`);
   };
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-        e.preventDefault();
-        onSave();
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [src]);
-
   return (
-    <Layout>
+    <Layout keyBindings={{ s: { ctrl: true, fn: onSave } }}>
       <Flex gap={6} direction="column">
         <Flex justifyContent="space-between" gap={8}>
           <Text fontSize="2xl" fontWeight="semi-bold" as="h1">
