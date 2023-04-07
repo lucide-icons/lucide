@@ -49,7 +49,7 @@ const EditPage = () => {
     if (urlData?.[1]) {
       setSrc(Buffer.from(urlData[1], 'base64').toString('utf8'));
     }
-  }, [router.query]);
+  }, [urlData?.[1]]);
 
   const onSave = () => {
     const data = Buffer.from(src).toString('base64');
