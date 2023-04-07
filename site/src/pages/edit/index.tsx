@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import { Button, Flex, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import IconEditor from '../../components/IconEditor';
 import useSWR from 'swr';
 
@@ -11,12 +11,35 @@ const fetcher = ([url, body]) =>
     res.status === 200 ? res.text() : Promise.reject()
   );
 
+const useDebounce = <T,>(value: T, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  const [debouncing, setDebouncing] = useState(false);
+
+  useEffect(() => {
+    setDebouncing(true);
+    const handler = setTimeout(() => {
+      setDebouncing(false);
+      setDebouncedValue(value);
+    }, delay);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value]);
+
+  return [debouncedValue, debouncing] as const;
+};
+
+const swrOptions = {
+  revalidateOnFocus: false,
+};
+
 const EditPage = () => {
   const [src, setSrc] = useState(placeholderSvg);
   const [preview, setPreview] = useState<string | undefined>();
-  const formatted = useSWR(['/api/edit/format', src], fetcher);
-  const optimized = useSWR(['/api/edit/optimize', src], fetcher);
-  const disconnected = useSWR(['/api/edit/disconnect', src], fetcher);
+  const [debouncedSrc, debouncing] = useDebounce(src, 500);
+  const formatted = useSWR(['/api/edit/format', debouncedSrc], fetcher, swrOptions);
+  const optimized = useSWR(['/api/edit/optimize', debouncedSrc], fetcher, swrOptions);
+  const disconnected = useSWR(['/api/edit/disconnect', debouncedSrc], fetcher, swrOptions);
 
   return (
     <Layout>
@@ -28,7 +51,7 @@ const EditPage = () => {
           <Flex gap={2}>
             <Button
               variant="outline"
-              isLoading={formatted.isLoading}
+              isLoading={debouncing || formatted.isLoading}
               disabled={formatted.data === src}
               onClick={() => setSrc(formatted.data)}
               onMouseOver={() => setPreview(formatted.data)}
@@ -38,7 +61,7 @@ const EditPage = () => {
             </Button>
             <Button
               variant="outline"
-              isLoading={optimized.isLoading}
+              isLoading={debouncing || optimized.isLoading}
               disabled={optimized.data === src}
               onClick={() => setSrc(optimized.data)}
               onMouseOver={() => setPreview(optimized.data)}
@@ -48,7 +71,7 @@ const EditPage = () => {
             </Button>
             <Button
               variant="outline"
-              isLoading={disconnected.isLoading}
+              isLoading={debouncing || disconnected.isLoading}
               disabled={disconnected.data === src}
               onClick={() => setSrc(disconnected.data)}
               onMouseOver={() => setPreview(disconnected.data)}
