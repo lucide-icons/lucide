@@ -1,7 +1,7 @@
 import { format } from './format';
 import { optimize } from 'svgo';
 import commander from 'svg-path-commander';
-import { parseSync, stringify, INode } from 'svgson';
+import { parseSync, stringify } from 'svgson';
 import toPath from 'element-to-path';
 
 const isDistanceSmaller = ({ x: x1, y: y1 }, { x: x2, y: y2 }, threshold: number) => {
@@ -134,10 +134,13 @@ const snapToGrid = (svg: string) => {
   const data = parseSync(svg);
   for (let i = 0; i < data.children.length; i++) {
     if (data.children[i].name === 'path') {
-      data.children[i].attributes.d = data.children[i].attributes.d.replace(
-        /\d*\.(99|98|97|96|01|02|03|04|49|48|47|46|51|52|53|54|11|21|31|41|51|61|71|81|91|09|19|29|39|49|59|69|79|89)\d*/g,
-        (val) => Math.round(parseFloat(val) * 10) / 10 + ''
-      );
+      data.children[i].attributes.d = new commander(data.children[i].attributes.d)
+        .toAbsolute()
+        .toString()
+        .replace(
+          /\d*\.(99|98|97|96|01|02|03|04|49|48|47|46|51|52|53|54|11|21|31|41|51|61|71|81|91|09|19|29|39|49|59|69|79|89)\d*/g,
+          (val) => Math.round(parseFloat(val) * 10) / 10 + ''
+        );
     }
   }
   return stringify(data);
