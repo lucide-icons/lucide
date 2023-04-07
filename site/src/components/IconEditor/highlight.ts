@@ -29,6 +29,7 @@ function parsePathData(path: string) {
       command = command == 'm' ? 'l' : 'L';
     }
 
+    // eslint-disable-next-line no-constant-condition
     while (true) {
       const endIndex =
         type == 'z'
