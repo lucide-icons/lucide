@@ -17,3 +17,7 @@ body {
   min-height: 100%;
   padding-bottom: 80px;
 }
+
+html:has(*:target) {
+  scroll-behavior: smooth;
+}

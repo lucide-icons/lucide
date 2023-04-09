@@ -12,6 +12,7 @@ import {
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { ReactNode, useEffect } from 'react';
+import menuItems from '../static/menuItems';
 import Logo from './Logo';
 import { useMobileNavigationContext } from './MobileNavigationProvider';
 
@@ -35,31 +36,30 @@ const MobileMenu = ({ children }: { children?: ReactNode }): JSX.Element => {
         </DrawerHeader>
         <DrawerBody>
           <Box mb={4}>
-            <NextLink href="/docs" passHref>
-              <Link fontSize="lg" fontWeight="bold" display="block" mb={2}>
-                Documentation
-              </Link>
-            </NextLink>
-            <NextLink href="/packages" passHref>
-              <Link marginRight={12} fontSize="lg" fontWeight="bold" display="block" mb={2}>
-                Packages
-              </Link>
-            </NextLink>
-            <NextLink href="/license" passHref>
-              <Link marginRight={12} fontSize="xl">
-                License
-              </Link>
-            </NextLink>
-            <Link
-              href="https://github.com/lucide-icons/lucide"
-              isExternal
-              fontSize="lg"
-              fontWeight="bold"
-              display="block"
-              mb={2}
-            >
-              Github
-            </Link>
+            {menuItems.map(menuItem => {
+              if (menuItem.isExternal) {
+                return (
+                  <Link
+                    href="https://github.com/lucide-icons/lucide"
+                    isExternal
+                    fontSize="lg"
+                    fontWeight="bold"
+                    display="block"
+                    mb={2}
+                    key={menuItem.name}
+                  >
+                    {menuItem.name}
+                  </Link>
+                );
+              }
+              return (
+                <NextLink href={menuItem.href} passHref>
+                  <Link fontSize="lg" fontWeight="bold" display="block" mb={2}>
+                    {menuItem.name}
+                  </Link>
+                </NextLink>
+              );
+            })}
           </Box>
           <Divider mt={2} />
           {children}

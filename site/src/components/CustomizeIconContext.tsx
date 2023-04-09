@@ -59,10 +59,21 @@ export function CustomizeIconContext({ children }): JSX.Element {
   return <IconStyleContext.Provider value={value}>{children}</IconStyleContext.Provider>;
 }
 
-export function useCustomizeIconContext(): ICustomIconStyle {
+export function useCustomizeIconContext() {
   const context = useContext(IconStyleContext);
   if (context === undefined) {
-    throw new Error('useCustomizeIconContext must be used within a IconStyleContextProvider');
+    return {
+      color: 'currentColor',
+      size: 24,
+      strokeWidth: 2,
+      iconsRef: { current: {} },
+      /* eslint-disable @typescript-eslint/no-empty-function */
+      setStroke: function() {},
+      setColor: function() {},
+      setSize: function() {},
+      resetStyle: function() {},
+      /* eslint-enable @typescript-eslint/no-empty-function */
+    };
   }
   return context;
 }
