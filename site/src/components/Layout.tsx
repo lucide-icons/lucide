@@ -15,6 +15,7 @@ import NextLink from 'next/link';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
 import Logo from './Logo';
+import menuItems from '../static/menuItems';
 
 interface LayoutProps extends BoxProps {
   aside?: BoxProps['children'];
@@ -37,12 +38,14 @@ const Layout = ({ aside, children }: LayoutProps) => {
   };
 
   function setQuery(query) {
-    router.push({
+    router.push(
+      {
         pathname: '/',
         query: { query: query },
-    },
-    undefined,
-    { shallow: true })
+      },
+      undefined,
+      { shallow: true },
+    );
   }
 
   useKeyBindings({
@@ -56,7 +59,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
 
   return (
     <Box h="100vh">
-      <Flex mb={16} w="full">
+      <Flex w="full">
         <Flex
           alignItems="center"
           justifyContent="space-between"
@@ -72,29 +75,28 @@ const Layout = ({ aside, children }: LayoutProps) => {
           <Flex justifyContent="center" alignItems="center">
             {showBaseNavigation ? (
               <>
-                <NextLink href="/docs" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    Documentation
-                  </Link>
-                </NextLink>
-                <NextLink href="/packages" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    Packages
-                  </Link>
-                </NextLink>
-                <NextLink href="/license" passHref>
-                  <Link marginRight={12} fontSize="xl">
-                    License
-                  </Link>
-                </NextLink>
-                <Link
-                  href="https://github.com/lucide-icons/lucide"
-                  isExternal
-                  marginRight={6}
-                  fontSize="xl"
-                >
-                  Github
-                </Link>
+                {menuItems.map(menuItem => {
+                  if (menuItem.isExternal) {
+                    return (
+                      <Link
+                        href={menuItem.href}
+                        isExternal
+                        marginRight={6}
+                        fontSize="lg"
+                        key={menuItem.name}
+                      >
+                        {menuItem.name}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <NextLink href={menuItem.href} passHref key={menuItem.name}>
+                      <Link marginRight={8} fontSize="lg">
+                        {menuItem.name}
+                      </Link>
+                    </NextLink>
+                  );
+                })}
               </>
             ) : null}
             <IconButton
@@ -115,8 +117,12 @@ const Layout = ({ aside, children }: LayoutProps) => {
         </Flex>
       </Flex>
       <Flex>
-        {aside ? <Box as="aside" marginRight={{ base: 0, lg: -240, }}>{aside}</Box> : null}
-        <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
+        {aside ? (
+          <Box as="aside" marginRight={{ base: 0, lg: -240 }}>
+            {aside}
+          </Box>
+        ) : null}
+        <Flex margin="0 auto" direction="column" width="100%">
           {children}
           <Divider mb={6} mt={12} />
           <p style={{ alignSelf: 'center' }}>

@@ -1,35 +1,19 @@
 import { Grid } from '@chakra-ui/react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { memo } from 'react';
 import IconListItem from './IconListItem';
 import { IconEntity } from '../types';
 
 interface IconListProps {
   icons: IconEntity[];
+  category?: string
 }
 
-const IconList = memo(({ icons }: IconListProps) => {
-  const router = useRouter();
-
+const IconList = memo(({ icons, category = '' }: IconListProps) => {
   return (
-    <Grid templateColumns={`repeat(auto-fill, minmax(150px, 1fr))`} gap={5} marginBottom="320px">
+    <Grid templateColumns={`repeat(auto-fill, minmax(80px, 1fr))`} gap={5} marginBottom={6} justifyItems={'center'}>
       {icons.map(icon => {
         return (
-          <Link
-            key={icon.name}
-            scroll={false}
-            shallow={true}
-            href={{
-              pathname: '/icon/[iconName]',
-              query: {
-                ...router.query,
-                iconName: icon.name,
-              },
-            }}
-          >
-            <IconListItem {...icon} />
-          </Link>
+          <IconListItem {...icon} key={`${category}-${icon.name}`}/>
         );
       })}
     </Grid>
