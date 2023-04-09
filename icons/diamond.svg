@@ -10,10 +10,10 @@
   stroke-linejoin="round"
 >
   <rect
-    x="12"
-    y="1"
     width="15.56"
     height="15.56"
+    x="12"
+    y="1"
     rx="2.41"
     transform="rotate(45 12 1)"
   />
