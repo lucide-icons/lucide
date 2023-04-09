@@ -64,6 +64,7 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
           categories={categories}
+          data={data}
           setCategoryView={setCategoryView}
         />
         <Box flex={1} paddingTop={1}>

@@ -100,7 +100,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
       height={0}
       key={name}
     >
-      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
+      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10, pointerEvents: 'none' }}>
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -122,6 +122,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                 ? theme.colors.white
                 : theme.colors.gray[700]
             }
+            style={{ pointerEvents: 'initial' }}
             padding={8}
           >
             <IconButton

@@ -65,6 +65,7 @@ const IconListItem = ({ name, iconNode }: IconListItemProps) => {
         position="relative"
         whiteSpace="normal"
         alignItems="center"
+        sx={{cursor: 'pointer'}}
         onClick={handleClick}
       >
         <Icon

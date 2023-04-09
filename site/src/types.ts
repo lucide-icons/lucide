@@ -15,5 +15,6 @@ export interface Contributor {
 export interface Category {
   name: string
   title: string
-  icon: string
+  icon?: string
+  iconCount: number
 }

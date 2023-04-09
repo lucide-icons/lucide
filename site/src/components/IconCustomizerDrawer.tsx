@@ -11,6 +11,9 @@ import {
   FormControl,
   FormLabel,
   Grid,
+  Hide,
+  IconButton,
+  Show,
   Slider,
   SliderFilledTrack,
   SliderThumb,
@@ -35,15 +38,25 @@ export const IconCustomizerDrawer = (props: ButtonProps) => {
 
   return (
     <>
-      <Button
-        as="a"
-        leftIcon={<Edit />}
-        size="lg"
-        onClick={() => setShowCustomize(true)}
-        {...props}
-      >
-        Customize
-      </Button>
+      <Hide below='md'>
+        <Button
+          as="a"
+          leftIcon={<Edit />}
+          size="lg"
+          onClick={() => setShowCustomize(true)}
+          {...props}
+        >Customize</Button>
+      </Hide>
+      <Show below='md'>
+        <IconButton
+          aria-label='Customize'
+          variant="solid"
+          color="current"
+          onClick={() => setShowCustomize(true)}
+          icon={<Edit />}
+          {...props}
+        ></IconButton>
+      </Show>
       <Drawer isOpen={showCustomize} placement="right" onClose={() => setShowCustomize(false)} size="md">
         <DrawerContent>
           <DrawerCloseButton />
