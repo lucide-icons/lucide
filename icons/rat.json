@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "animal",
-    "mouse"
+    "mouse",
+    "mice",
+    "rodent",
+    "pet",
+    "pest",
+    "plague"
   ],
   "categories": [
     "animals"
