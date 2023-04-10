@@ -7,7 +7,7 @@ export interface IconEntity {
   contributors: Contributor[];
   iconNode: IconNode;
   changedVersion?: Release;
-  deprecated: false;
+  deprecated?: boolean;
   created?: number;
   changed?: number;
   createdVersion?: Release;
@@ -27,6 +27,6 @@ export interface Category {
 
 export interface Release {
   name: string;
-  published: Date;
+  published: number;
   url: string;
 }
