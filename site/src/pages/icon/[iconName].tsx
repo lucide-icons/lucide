@@ -6,6 +6,7 @@ import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getAllCategories } from 'src/lib/categories';
+import {getAllReleases} from "../../lib/fetchAllReleases";
 
 const IconPage = ({ icon, data, categories }): JSX.Element => {
   const router = useRouter();
@@ -49,7 +50,8 @@ export default IconPage;
 
 export const getStaticProps: GetStaticProps = async ({ params: { iconName } }) => {
   const data = await getAllData({ withChildKeys: true });
-  const icon = await getData(iconName as string, { withChildKeys: true });
+  const releases = await getAllReleases();
+  const icon = await getData(iconName as string, releases, { withChildKeys: true });
   const categories = await getAllCategories()
 
   return { props: { icon, data, categories } };
