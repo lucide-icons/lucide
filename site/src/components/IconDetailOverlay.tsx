@@ -14,10 +14,9 @@ import {
   Tooltip,
   useColorMode,
   useDisclosure,
-  useToast,
-  useToken
-} from "@chakra-ui/react";
-import theme from "../lib/theme";
+  useToast
+} from '@chakra-ui/react';
+import theme from '../lib/theme';
 import download from 'downloadjs';
 import {
   Code as CodeIcon,
@@ -140,7 +139,7 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
         <Flex
           alignItems="center"
           justifyContent="space-between"
-          maxW={useToken('sizes', 'container-max-width')}
+          maxW={theme.semanticTokens.sizes['container-max-width']}
           w="full"
           p={theme.sizes.containerSpacing}
           style={{ pointerEvents: 'initial' }}
@@ -182,7 +181,7 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
                     align="center"
                   >
                     <CopyIcon/>
-                    <Text fontSize="3xl" fontFamily={useToken('fonts', 'mono')} ml={2}>
+                    <Text fontSize="3xl" fontFamily={theme.fonts.mono} ml={2}>
                       {icon.name}
                     </Text>
                     {icon?.contributors?.length ? (<ModifiedTooltip/>) : null}
