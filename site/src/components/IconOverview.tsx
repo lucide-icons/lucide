@@ -1,4 +1,4 @@
-import { Box, Text, IconButton, HStack } from '@chakra-ui/react';
+import {Box, Text, IconButton, HStack, useColorModeValue} from '@chakra-ui/react';
 import React, { memo, useEffect, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import IconList from './IconList';
@@ -41,16 +41,15 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
 
   return (
     <Box>
-      <HStack position="sticky" top={0} zIndex={1} gap={2} padding={5}>
+      <HStack position="sticky" top={0} zIndex={1} gap={2} padding={5} bgColor={useColorModeValue('white', 'darkgray.DEFAULT')}>
         <IconButton
           aria-label="Close overlay"
-          variant="solid"
-          color="current"
+          variant={sidebarOpen?'solid':'ghost'}
+          colorScheme={sidebarOpen?'brand':'gray'}
           onClick={() => setSidebarOpen(currentView => {
             if(currentView == null) {
               return false
             }
-
             return !currentView
           })}
           icon={<SidebarIcon />}
@@ -59,7 +58,7 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
         <IconCustomizerDrawer size="md" paddingX={6} />
       </HStack>
 
-      <HStack marginBottom="320px" padding={5} alignItems="flex-start">
+      <HStack alignItems="flex-start" bgColor={useColorModeValue('gray.50', 'gray.DEFAULT')}>
         <IconCategoryDrawer
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
@@ -67,7 +66,7 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
           data={data}
           setCategoryView={setCategoryView}
         />
-        <Box flex={1} paddingTop={1}>
+        <Box flex={1} padding={5}>
           {searchResults.length > 0 ? (
             categoryView ? (
               <IconCategoryList icons={searchResults} data={data} categories={categories} />

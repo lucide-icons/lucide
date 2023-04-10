@@ -26,7 +26,7 @@ const DocPage = ({ doc, data }) => {
             paddingX={8}
             position="sticky"
             overflowY="auto"
-            width={240}
+            width={260}
             height="100vh"
             marginTop={-4}
             top={0}
@@ -43,7 +43,7 @@ const DocPage = ({ doc, data }) => {
           <MDXRemote {...doc} data={data} components={mdxComponents} />
 
           { nextPage.map((page) => (
-            <Link href={`docs/${page}`}>
+            <Link href={`docs/${page}`} key={page}>
               <Button
                 variant="ghost"
                 borderWidth="1px"

@@ -12,10 +12,6 @@ export default [
     href: '/packages',
   },
   {
-    name: 'License',
-    href: '/license',
-  },
-  {
     name: 'Github',
     isExternal: true,
     href: 'https://github.com/lucide-icons/lucide',

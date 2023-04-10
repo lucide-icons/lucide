@@ -1,4 +1,4 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Box } from '@chakra-ui/react';
+import { chakra, Button, Flex, Link, WrapItem, Text, Wrap, Heading, Box } from '@chakra-ui/react';
 import download from 'downloadjs';
 import { Download, Github } from 'lucide-react';
 import NextLink from 'next/link';
@@ -106,8 +106,8 @@ const Header = ({ data }: HeaderProps) => {
   return (
     <Box maxW="1250px" mx="auto">
       <Flex direction="column" align="center" justify="center" py={12}>
-        <Heading as="h1" fontSize="4xl" mb="4" textAlign="center">
-          Beautiful &amp; consistent icon toolkit made by the community.
+        <Heading as="h1" fontSize="4xl" mb="4" textAlign="center" maxWidth="650px" fontWeight={500}>
+          Beautiful &amp; consistent icon toolkit <chakra.span color='brand.500'>made by the community.</chakra.span>
         </Heading>
         <Text fontSize="lg" as="p" textAlign="center" mb="1">
           Open-source project and a fork of{' '}
@@ -129,56 +129,23 @@ const Header = ({ data }: HeaderProps) => {
           align="center"
         >
           <WrapItem flexBasis="100%" style={{ marginBottom: 0 }}>
-            <NextLink href="/packages" passHref>
-              <Link _hover={{ opacity: 0.8 }} marginX="auto">
-                <Text fontSize="md" opacity={0.5} as="p" textAlign="center" width="100%">
-                  Available for:
-                </Text>
-              </Link>
-            </NextLink>
+            <Link as={NextLink} href="/packages" _hover={{ opacity: 0.8 }} marginX="auto">
+              <Text fontSize="md" opacity={0.5} as="p" textAlign="center" width="100%">
+                Available for:
+              </Text>
+            </Link>
           </WrapItem>
           {packages.map(({ name, href, Logo, label }) => (
             <WrapItem key={name}>
-              <NextLink href={href} key={name} passHref>
-                <Link _hover={{ opacity: 0.8 }} aria-label={label}>
-                  <Logo />
-                </Link>
-              </NextLink>
+              <Link as={NextLink} href={href} key={name} _hover={{ opacity: 0.8 }} aria-label={label}>
+                <Logo />
+              </Link>
             </WrapItem>
           ))}
           <WrapItem>
-            <NextLink href="/packages" passHref>
-              <Link _hover={{ opacity: 0.8 }} marginX="auto">
-                <Text fontSize="md" opacity={0.5}>More options</Text>
-              </Link>
-            </NextLink>
-          </WrapItem>
-        </Wrap>
-        <Wrap marginTop={3} marginBottom={12} spacing="15px" justify="center">
-          <WrapItem>
-            <Button
-              leftIcon={<Download />}
-              size="lg"
-              onClick={downloadAllIcons}
-              isLoading={zippingIcons}
-              loadingText="Creating zip.."
-            >
-              Download all
-            </Button>
-          </WrapItem>
-          <WrapItem>
-            <IconCustomizerDrawer />
-          </WrapItem>
-          <WrapItem>
-            <Button
-              as="a"
-              leftIcon={<Github />}
-              size="lg"
-              href={repositoryUrl}
-              target="__blank"
-            >
-              Github
-            </Button>
+            <Link as={NextLink} href="/packages" _hover={{ opacity: 0.8 }} marginX="auto">
+              <Text fontSize="md" opacity={0.5}>More options</Text>
+            </Link>
           </WrapItem>
         </Wrap>
       </Flex>

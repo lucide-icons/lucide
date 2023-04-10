@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import { serialize } from 'next-mdx-remote/serialize'
 import path from 'path';
 import grayMatter from 'gray-matter'
+import remarkGfm from 'remark-gfm';
 
 export default async function fetchAllDocuments() {
   const docsDir = path.resolve(process.cwd(), '../docs');
@@ -35,7 +36,15 @@ export default async function fetchAllDocuments() {
     const source = await fs.readFile(filePath, 'utf-8');
 
     const { content, data } = grayMatter(source)
-    const doc = await serialize(content)
+    const doc = await serialize(content, {
+      scope: {},
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [],
+        format: 'mdx',
+      },
+      parseFrontmatter: false,
+    })
 
     return {
       filename,

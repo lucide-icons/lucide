@@ -2,13 +2,14 @@ import {
   Button,
   Flex,
   Box,
+  Link,
   Heading,
   Text,
   useColorMode,
-  ButtonGroup,
+  ButtonGroup, useStyleConfig,
 } from '@chakra-ui/react';
 import { Code, FileText } from 'lucide-react';
-import Link from 'next/link';
+import NextLink from 'next/link';
 
 interface Shield {
   alt: string
@@ -25,27 +26,22 @@ export interface PackageItem {
   order?: number
   private?: boolean
   flutter?: object
+  thirdParty?: boolean
 }
 
 
-const Package = ({ name, description, icon, shields, source, documentation }: PackageItem) => {
-  const { colorMode } = useColorMode();
+const Package = ({ name, description, icon, shields, source, documentation, thirdParty }: PackageItem) => {
+  const styles = useStyleConfig('Package')
 
   return (
-    <Box
-      borderWidth="1px"
-      rounded="lg"
-      position="relative"
-      width="100%"
-      maxWidth="1152px"
-      boxShadow="lg"
-      bg={colorMode == 'light' ? 'gray-200' : 'gray.700'}
-      padding={8}
-    >
+    <Box __css={styles}>
       <Flex
         justifyContent={{
           base: 'center',
           md: 'flex-start',
+        }}
+        alignItems={{
+          base: 'center'
         }}
         flexDirection={{
           base: 'column',
@@ -87,11 +83,9 @@ const Package = ({ name, description, icon, shields, source, documentation }: Pa
           <Text mb={3}>{description}</Text>
           <ButtonGroup spacing={2}>
             {shields.map(({ alt, src, href }, index) => (
-              <Link key={index} href={href} passHref>
-                <a target="_blank">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img {...{ alt, src }} key={index} />
-                </a>
+              <Link as={NextLink} key={index} href={href} isExternal>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img {...{ alt, src }} key={index} />
               </Link>
             ))}
           </ButtonGroup>
@@ -118,13 +112,13 @@ const Package = ({ name, description, icon, shields, source, documentation }: Pa
               sm: 'flex-start',
             }}
           >
-            <Link passHref href={documentation}>
-              <Button as="a" variant="solid" textDecoration="none" leftIcon={<FileText />} my={2}>
+            <Link as={NextLink} href={documentation} isExternal={!!thirdParty}>
+              <Button variant="ghost" textDecoration="none" leftIcon={<FileText />} my={2}>
                 Documentation
               </Button>
             </Link>
-            <Link passHref href={source}>
-              <Button as="a" variant="solid" textDecoration="none" leftIcon={<Code />} my={2}>
+            <Link href={source} isExternal>
+              <Button variant="ghost" textDecoration="none" leftIcon={<Code />} my={2}>
                 Source
               </Button>
             </Link>

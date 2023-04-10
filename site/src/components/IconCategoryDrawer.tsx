@@ -1,24 +1,39 @@
-import { Box, BoxProps, Button, Divider, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue, useTheme, useColorModeValue } from "@chakra-ui/react"
-import { motion } from "framer-motion"
-import { Fragment, useMemo } from "react"
+import {
+  Box,
+  BoxProps,
+  Button,
+  Divider,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  useBreakpointValue,
+  useColorModeValue,
+  useTheme
+} from "@chakra-ui/react"
+import {motion} from "framer-motion"
+import {Fragment, useMemo} from "react"
 import {Category, IconEntity} from "src/types"
 import {createLucideIcon} from "lucide-react";
 
-const ListWrapper = ({ children, ...restProps }: BoxProps) => {
+const ListWrapper = ({children, ...restProps}: BoxProps) => {
   return (
     <Box
       w="full"
       h="full"
       overflowY="auto"
+      marginBottom={6}
       sx={{
         direction: 'rtl',
-        '&::-webkit-scrollbar' : {
+        '&::-webkit-scrollbar': {
           width: '4px',
         },
-        '&::-webkit-scrollbar-track' : {
+        '&::-webkit-scrollbar-track': {
           background: 'transparent',
         },
-        '&::-webkit-scrollbar-thumb' : {
+        '&::-webkit-scrollbar-thumb': {
           bgColor: useColorModeValue('var(--chakra-colors-gray-300)', 'var(--chakra-colors-whiteAlpha-300)'),
           borderRadius: 0,
         },
@@ -38,13 +53,13 @@ const ListWrapper = ({ children, ...restProps }: BoxProps) => {
           direction: 'ltr'
         }}
       >
-        { children }
+        {children}
       </Box>
     </Box>
   )
 }
 
-const CATEGORY_TOP_OFFSET = 100
+const CATEGORY_TOP_OFFSET = 80
 
 interface IconCategoryDrawerProps {
   data: IconEntity[];
@@ -54,10 +69,16 @@ interface IconCategoryDrawerProps {
   onClose: () => void
 }
 
-const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }: IconCategoryDrawerProps) => {
+const IconCategoryDrawer = ({
+                              open,
+                              onClose,
+                              categories,
+                              data,
+                              setCategoryView
+                            }: IconCategoryDrawerProps) => {
   const theme = useTheme()
 
-  const useCustomDrawer = useBreakpointValue({ base: false, md: true });
+  const useCustomDrawer = useBreakpointValue({base: false, md: true});
 
   const sidebarVariants = {
     closed: {
@@ -71,9 +92,14 @@ const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }
   const categoryList = useMemo(() => {
     return (
       <>
-        {[{ name: 'all', title: 'All', icon: null, iconCount: data.length }, ...categories].map(({ title, name, icon, iconCount }) => {
+        {[{
+          name: 'all',
+          title: 'All',
+          icon: null,
+          iconCount: data.length
+        }, ...categories].map(({title, name, icon, iconCount}) => {
           // Show category icon?
-          const iconData = data.find(({ name: iconName }) => iconName === icon)
+          const iconData = data.find(({name: iconName}) => iconName === icon)
           const Icon = iconData ? createLucideIcon(iconData.name, iconData.iconNode) : null
 
           return (
@@ -84,7 +110,7 @@ const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }
                 variant='ghost'
                 width="100%"
                 justifyContent="space-between"
-                leftIcon={Icon ? <Icon /> : null}
+                leftIcon={Icon ? <Icon/> : null}
                 onClick={(event) => {
                   event.stopPropagation()
 
@@ -93,9 +119,9 @@ const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }
 
                     const [routePath] = window.location.href.split('#')
 
-                    setTimeout(() =>{
+                    setTimeout(() => {
                       window.location.href = `${routePath}#${name}`
-                    },150)
+                    }, 150)
                   }
 
                   setCategoryView(name !== 'all')
@@ -114,17 +140,16 @@ const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }
                 <Box sx={{opacity: .5}}><small>{iconCount}</small></Box>
               </Button>
               {name === 'all' && (
-                <Divider marginY={2} />
+                <Divider marginY={2}/>
               )}
             </Fragment>
           )
         })}
-        <Box h={8} flexShrink={0}></Box>
       </>
     )
   }, [categories, useCustomDrawer])
 
-  if(useCustomDrawer) {
+  if (useCustomDrawer) {
     return (
       <motion.div
         variants={sidebarVariants}
@@ -133,7 +158,9 @@ const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }
         style={{
           height: `calc(100vh - ${CATEGORY_TOP_OFFSET}px)`,
           position: 'sticky',
-          top: '100px'
+          top: `${CATEGORY_TOP_OFFSET}px`,
+          padding: 'var(--chakra-space-4)',
+          paddingBottom: 'var(--chakra-space-6)',
         }}
       >
         <ListWrapper>
@@ -141,21 +168,21 @@ const IconCategoryDrawer = ({ open, onClose, categories, data, setCategoryView }
         </ListWrapper>
       </motion.div>
     )
-}
+  }
 
-return (
-  <Drawer
-    placement="left"
-    onClose={onClose}
-    isOpen={open}
-    size="sm"
-    blockScrollOnMount={false}
-  >
-    <DrawerOverlay />
+  return (
+    <Drawer
+      placement="left"
+      onClose={onClose}
+      isOpen={open}
+      size="sm"
+      blockScrollOnMount={false}
+    >
+      <DrawerOverlay/>
       <DrawerContent>
-        <DrawerCloseButton marginTop={3.5} marginRight={3} />
-        <DrawerHeader />
-        <DrawerBody>
+        <DrawerCloseButton marginTop={3.5} marginRight={3}/>
+        <DrawerHeader/>
+        <DrawerBody padding={4}>
           <ListWrapper>
             {categoryList}
           </ListWrapper>

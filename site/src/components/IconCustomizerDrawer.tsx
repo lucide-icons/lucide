@@ -40,7 +40,7 @@ export const IconCustomizerDrawer = (props: ButtonProps) => {
     <>
       <Hide below='md'>
         <Button
-          as="a"
+          variant='ghost'
           leftIcon={<Edit />}
           size="lg"
           onClick={() => setShowCustomize(true)}
@@ -50,8 +50,7 @@ export const IconCustomizerDrawer = (props: ButtonProps) => {
       <Show below='md'>
         <IconButton
           aria-label='Customize'
-          variant="solid"
-          color="current"
+          variant='ghost'
           onClick={() => setShowCustomize(true)}
           icon={<Edit />}
           {...props}

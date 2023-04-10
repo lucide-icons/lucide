@@ -48,8 +48,12 @@ const components = {
   p: (props) => <Text my={4}>{props.children}</Text>,
   img: ({ children, ...rest }) => <Image {...rest} borderRadius={4} my={2}>{children}</Image>,
   code: ({ className, children: code }) => {
-    const language = className.replace('language-', '');
-
+    const language = className?.replace('language-', '');
+    if (!language) {
+      return (
+        <InlineCode>{code}</InlineCode>
+      )
+    }
     return (
       <CodeBlock
         marginY={6}
@@ -76,7 +80,6 @@ const components = {
       {...props}
     />
   ),
-  inlineCode: InlineCode,
   hr: () => <Divider my={4} />,
   a: ({children, href, ...rest}) => {
     let link = href
@@ -89,13 +92,13 @@ const components = {
     link = link.replace('.md', '')
 
     return (
-      <NextLink
+      <Link
+        as={NextLink}
         href={isExternal ? href : `/docs/${link}`}
         {...rest}
-        passHref
-      >
-        <Link isExternal={isExternal} color='#F56565'>{children}</Link>
-      </NextLink>
+        isExternal={isExternal}
+        color='brand.500'
+      >{children}</Link>
     )
   }
 };

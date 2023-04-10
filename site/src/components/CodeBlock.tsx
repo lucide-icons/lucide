@@ -79,7 +79,10 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                   return (
                     <chakra.div
                       px="4"
-                      bg={shouldHighlightLine(i) ? 'whiteAlpha.200' : undefined}
+                      bg={shouldHighlightLine(i) ? 'brandAlpha.100' : undefined}
+                      borderLeftColor={shouldHighlightLine(i) ? 'brandAlpha.500' : 'brandAlpha.0'}
+                      borderLeftStyle={shouldHighlightLine(i) ? 'solid' : undefined}
+                      borderLeftWidth=".25rem"
                       {...lineProps}
                     >
                       {showLines && (
@@ -95,7 +98,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
                         </chakra.span>
                       )}
                       {line.map((token, key) => (
-                        <span {...getTokenProps({ token, key })} />
+                        <span {...getTokenProps({ token, key })}></span>
                       ))}
                     </chakra.div>
                   );
@@ -109,12 +112,12 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
         size="sm"
         position="absolute"
         textTransform="uppercase"
-        colorScheme="teal"
+        colorScheme="brand"
         fontSize="xs"
-        height="24px"
+        p={1}
         zIndex="1"
-        top="2.5"
-        right="1.25em"
+        top="1.5"
+        right="1.5"
         copyText={code}
         fontFamily={uiTheme.fonts.body}
         fontWeight="bold"

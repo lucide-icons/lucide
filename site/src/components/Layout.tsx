@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   IconButton,
   useBreakpointValue,
+  Spacer,
   BoxProps,
 } from '@chakra-ui/react';
 import { useKeyBindings } from '../lib/key';
@@ -15,6 +16,7 @@ import NextLink from 'next/link';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
 import Logo from './Logo';
+import Footer from './Footer';
 import menuItems from '../static/menuItems';
 
 interface LayoutProps extends BoxProps {
@@ -33,7 +35,6 @@ const Layout = ({ aside, children }: LayoutProps) => {
     size: 'md',
     fontSize: 'lg',
     variant: 'ghost',
-    color: 'current',
     ml: '3',
   };
 
@@ -58,7 +59,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
   });
 
   return (
-    <Box h="100vh">
+    <Flex minH="100vh" direction="column">
       <Flex w="full">
         <Flex
           alignItems="center"
@@ -90,11 +91,9 @@ const Layout = ({ aside, children }: LayoutProps) => {
                     );
                   }
                   return (
-                    <NextLink href={menuItem.href} passHref key={menuItem.name}>
-                      <Link marginRight={8} fontSize="lg">
-                        {menuItem.name}
-                      </Link>
-                    </NextLink>
+                    <Link as={NextLink} href={menuItem.href} key={menuItem.name} marginRight={8} fontSize="lg">
+                      {menuItem.name}
+                    </Link>
                   );
                 })}
               </>
@@ -116,7 +115,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex>
+      <Flex grow={1}>
         {aside ? (
           <Box as="aside" marginRight={{ base: 0, lg: -240 }}>
             {aside}
@@ -124,17 +123,10 @@ const Layout = ({ aside, children }: LayoutProps) => {
         ) : null}
         <Flex margin="0 auto" direction="column" width="100%">
           {children}
-          <Divider mb={6} mt={12} />
-          <p style={{ alignSelf: 'center' }}>
-            <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
-            </a>
-          </p>
-          <br />
         </Flex>
       </Flex>
-    </Box>
+      <Footer/>
+    </Flex>
   );
 };
 

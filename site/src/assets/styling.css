@@ -14,8 +14,26 @@
 }
 
 body {
-  min-height: 100%;
-  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.chakra-kbd {
+  position: relative;
+  top: -2px;
+}
+
+.icon-list-item:hover svg,
+.icon-list-item:focus svg,
+.icon-list-item:active svg {
+  stroke: white !important;
+}
+
+.version-badge {
+  transition: opacity .15s ease-in-out;
+}
+
+.icon-list-item-wrapper:hover .version-badge {
+  opacity: 1;
 }
 
 html:has(*:target) {

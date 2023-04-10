@@ -36,30 +36,19 @@ const MobileMenu = ({ children }: { children?: ReactNode }): JSX.Element => {
         </DrawerHeader>
         <DrawerBody>
           <Box mb={4}>
-            {menuItems.map(menuItem => {
-              if (menuItem.isExternal) {
-                return (
-                  <Link
-                    href="https://github.com/lucide-icons/lucide"
-                    isExternal
-                    fontSize="lg"
-                    fontWeight="bold"
-                    display="block"
-                    mb={2}
-                    key={menuItem.name}
-                  >
-                    {menuItem.name}
-                  </Link>
-                );
-              }
-              return (
-                <NextLink href={menuItem.href} passHref>
-                  <Link fontSize="lg" fontWeight="bold" display="block" mb={2}>
-                    {menuItem.name}
-                  </Link>
-                </NextLink>
-              );
-            })}
+            {menuItems.map(menuItem => (
+              <Link
+                href={menuItem.href}
+                isExternal={menuItem.isExternal}
+                fontSize="lg"
+                fontWeight="bold"
+                display="block"
+                mb={2}
+                key={menuItem.name}
+              >
+                {menuItem.name}
+              </Link>
+            ))}
           </Box>
           <Divider mt={2} />
           {children}

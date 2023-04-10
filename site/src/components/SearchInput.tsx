@@ -1,8 +1,11 @@
 import {
+  Box,
   Icon,
   Input,
   InputGroup,
   InputLeftElement,
+  InputRightElement,
+  Kbd, useBreakpointValue,
   useColorMode,
   useUpdateEffect,
 } from '@chakra-ui/react';
@@ -24,6 +27,8 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
 
   const [inputValue, setInputValue] = useState('');
   const debouncedValue = useDebounce(inputValue.trim(), 300);
+  const rightElementWidth = theme.components.SearchInput.rightElementWidth;
+  const placeholder = useBreakpointValue({base: 'Search icons...', md: `Search ${count} icons...`});
 
   useUpdateEffect(() => {
     onChange(debouncedValue);
@@ -63,11 +68,22 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
       />
       <Input
         ref={ref}
-        placeholder={`Search ${count} icons (Press "/" to focus)`}
-        onChange={event => setInputValue(event.target.value)}
+        placeholder={placeholder}
+        onChange={(event) => setInputValue(event.target.value)}
         value={inputValue}
-        bg={colorMode == 'light' ? theme.colors.white : theme.colors.gray[700]}
+        pr={[4, rightElementWidth]}
+        focusBorderColor={colorMode == 'light' ? 'brand.500' : 'brand.500'}
       />
+      <InputRightElement display={['none', 'flex']}
+                         pointerEvents="none"
+                         width={rightElementWidth}
+      >
+        <Box fontSize=".875rem"
+             textTransform="upperCase"
+        >
+          Press <Kbd>/</Kbd> to focus
+        </Box>
+      </InputRightElement>
     </InputGroup>
   );
 };

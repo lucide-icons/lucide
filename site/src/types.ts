@@ -6,6 +6,11 @@ export interface IconEntity {
   categories: string[];
   contributors: Contributor[];
   iconNode: IconNode;
+  changedVersion?: Release;
+  deprecated: false;
+  created?: number;
+  changed?: number;
+  createdVersion?: Release;
 }
 
 export interface Contributor {
@@ -15,6 +20,13 @@ export interface Contributor {
 export interface Category {
   name: string
   title: string
+  description: string;
   icon?: string
   iconCount: number
+}
+
+export interface Release {
+  name: string;
+  published: Date;
+  url: string;
 }
