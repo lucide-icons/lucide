@@ -53,6 +53,9 @@
         "@babel/core",
         "@babel/preset-env"
       ]
+    },
+    "overrides": {
+      "sharp": "^0.32.0"
     }
   }
 }
