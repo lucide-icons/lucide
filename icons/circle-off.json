@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "diameter",
+    "zero",
+    "Ø",
+    "null",
+    "nothing",
+    "cancel",
+    "ban",
+    "no",
+    "stop",
+    "forbidden",
+    "prohibited",
+    "error"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
