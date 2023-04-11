@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "clone",
+    "duplicate",
+    "done",
+    "multiple"
+  ],
+  "categories": [
+    "text",
+    "notifications"
+  ]
+}
