@@ -1,0 +1,29 @@
+{
+  "name": "@lucide/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "dev": "npx nitropack dev",
+    "build": "npx nitropack build && pnpm docs:build",
+    "preview": "node .output/server/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@lucide/docs": "workspace:*",
+    "nitropack": "latest",
+    "vitepress": "1.0.0-alpha.65",
+    "node-fetch": "2"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "jszip": "^3.7.0",
+    "lucide-vue-next": "workspace:*"
+  }
+}

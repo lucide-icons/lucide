@@ -1,0 +1,15 @@
+:root {
+  --vp-c-brand:  #F56565;
+  --vp-c-brand-light:  #F67373;
+  --vp-c-brand-lighter: #F89191;
+  --vp-c-brand-dark: #DC5A5A;
+  --vp-c-brand-darker: #C45050;
+}
+
+.VPNavBarTitle .logo {
+  height: 36px;
+}
+
+.VPNavBarTitle .title {
+  font-size: 21px;
+}
