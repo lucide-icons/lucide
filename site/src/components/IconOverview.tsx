@@ -30,12 +30,13 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
 
       setCategoryView(categories.some(({ name }) => name === hash))
     }
-  }, [])
+  }, [setCategoryView])
 
   const SidebarIcon = sidebarOpen ? SidebarOpen : SidebarClose;
 
   const searchResults = useSearch(query, data, [
-    { name: 'name', weight: 2 },
+    { name: 'name', weight: 3 },
+    { name: 'categories', weight: 2 },
     { name: 'tags', weight: 1 },
   ]);
 

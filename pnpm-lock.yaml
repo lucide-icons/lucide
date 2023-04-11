@@ -1,5 +1,8 @@
 lockfileVersion: '6.0'
 
+overrides:
+  csstype: 3.1.2
+
 importers:
 
   .:
@@ -514,6 +517,9 @@ importers:
       '@chakra-ui/react':
         specifier: 2.5.5
         version: 2.5.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.33)(framer-motion@10.11.2)(react-dom@18.2.0)(react@18.2.0)
+      '@chakra-ui/theme-tools':
+        specifier: ^2.0.16
+        version: 2.0.16(@chakra-ui/styled-system@2.8.0)
       '@chakra-ui/toast':
         specifier: ^6.1.1
         version: 6.1.1(@chakra-ui/system@2.5.5)(framer-motion@10.11.2)(react-dom@18.2.0)(react@18.2.0)
@@ -6015,6 +6021,10 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@chakra-ui/anatomy@2.1.1:
+    resolution: {integrity: sha512-LUHAoqJAgxAqmyckG5bUpBrfEo1FleEyY+1A8hkWciy58gZ+h3GoY9oBpHcdo7XdHPpy3G+3hieK/7i9NLwxAw==}
+    dev: false
+
   /@chakra-ui/anatomy@2.1.2:
     resolution: {integrity: sha512-pKfOS/mztc4sUXHNc8ypJ1gPWSolWT770jrgVRfolVbYlki8y5Y+As996zMF6k5lewTu6j9DQequ7Cc9a69IVQ==}
     dev: false
@@ -6781,6 +6791,10 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@chakra-ui/shared-utils@2.0.4:
+    resolution: {integrity: sha512-JGWr+BBj3PXGZQ2gxbKSD1wYjESbYsZjkCeE2nevyVk4rN3amV1wQzCnBAhsuJktMaZD6KC/lteo9ou9QUDzpA==}
+    dev: false
+
   /@chakra-ui/shared-utils@2.0.5:
     resolution: {integrity: sha512-4/Wur0FqDov7Y0nCXl7HbHzCg4aq86h+SXdoUeuCMD3dSj7dpsVnStLYhng1vxvlbUnLpdF4oz5Myt3i/a7N3Q==}
     dev: false
@@ -6936,6 +6950,17 @@ packages:
       '@chakra-ui/shared-utils': 2.0.5
       '@chakra-ui/system': 2.5.5(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(react@18.2.0)
       react: 18.2.0
+    dev: false
+
+  /@chakra-ui/theme-tools@2.0.16(@chakra-ui/styled-system@2.8.0):
+    resolution: {integrity: sha512-B/LD+2LNDeHYd/LVCHIJqckVZfhrycTUpNbhRVAiDRaS0AAcsPxKas7liTFkkMkM076YjiHlcla3KpVX+E9tzg==}
+    peerDependencies:
+      '@chakra-ui/styled-system': '>=2.0.0'
+    dependencies:
+      '@chakra-ui/anatomy': 2.1.1
+      '@chakra-ui/shared-utils': 2.0.4
+      '@chakra-ui/styled-system': 2.8.0
+      color2k: 2.0.2
     dev: false
 
   /@chakra-ui/theme-tools@2.0.17(@chakra-ui/styled-system@2.8.0):
@@ -9745,7 +9770,7 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
-      csstype: 3.1.0
+      csstype: 3.1.2
     dev: true
 
   /@types/react@18.0.25:
@@ -9753,7 +9778,7 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
-      csstype: 3.1.0
+      csstype: 3.1.2
     dev: true
 
   /@types/react@18.0.33:
@@ -10127,7 +10152,7 @@ packages:
     dependencies:
       '@vue/runtime-core': 3.2.45
       '@vue/shared': 3.2.45
-      csstype: 2.6.21
+      csstype: 3.1.2
     dev: true
 
   /@vue/server-renderer@3.2.45(vue@3.2.45):
@@ -12372,14 +12397,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       cssom: 0.3.8
-    dev: true
-
-  /csstype@2.6.21:
-    resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
-    dev: true
-
-  /csstype@3.1.0:
-    resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
     dev: true
 
   /csstype@3.1.2:
@@ -22149,7 +22166,7 @@ packages:
   /solid-js@1.5.4:
     resolution: {integrity: sha512-+65anSHhH27htkhP5LuC912fviMIckgc7/yN+WWrKhS9Kp3dvtDNl5/m4GWX1lpCvcubjShqJjGt16HET5z5Ig==}
     dependencies:
-      csstype: 3.1.0
+      csstype: 3.1.2
     dev: true
 
   /solid-refresh@0.4.1(solid-js@1.5.4):
@@ -24035,7 +24052,7 @@ packages:
     resolution: {integrity: sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==}
     dependencies:
       '@vue/compiler-sfc': 2.7.14
-      csstype: 3.1.0
+      csstype: 3.1.2
     dev: true
 
   /vue@3.2.45:

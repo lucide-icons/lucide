@@ -6,11 +6,11 @@ export interface IconEntity {
   categories: string[];
   contributors: Contributor[];
   iconNode: IconNode;
-  changedVersion?: Release;
   deprecated?: boolean;
   created?: number;
+  createdRelease?: Release;
   changed?: number;
-  createdVersion?: Release;
+  changedRelease?: Release;
 }
 
 export interface Contributor {
@@ -21,7 +21,7 @@ export interface Category {
   name: string
   title: string
   description: string;
-  icon?: string
+  icon?: IconEntity;
   iconCount: number
 }
 

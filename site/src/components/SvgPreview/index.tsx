@@ -9,7 +9,7 @@ const Grid = ({
 }: {
   strokeWidth: number;
   radius: number;
-} & PathProps<'stroke', 'strokeWidth'>) => (
+} & PathProps<'stroke', 'strokeWidth'|'style'>) => (
   <g className="svg-preview-grid-group" strokeLinecap="butt" {...props}>
     <rect
       width={24 - props.strokeWidth}

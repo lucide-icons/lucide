@@ -40,7 +40,7 @@ const IconPage = ({ icon, data, categories }): JSX.Element => {
 
   return (
     <Layout>
-      <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
+      <IconDetailOverlay categories={categories} icon={currentIcon} close={onClose} open />
       <IconOverview {...{ data, categories }} key="icon-overview" />
     </Layout>
   );

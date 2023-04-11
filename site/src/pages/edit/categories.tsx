@@ -30,8 +30,6 @@ const EditCategoriesPage = ({ icons = [], categories: categoryList }: EditCatego
   const dropZones = useRef<[string, HTMLDivElement][]>([]);
 
   const handleChange = (category: string) => (newIcons: string[]) => {
-    console.log(category, newIcons);
-
     setCategories(currentCategories => {
       const newCategories = {
         ...currentCategories,

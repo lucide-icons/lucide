@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import {useEffect, useRef} from 'react';
 import {useCustomizeIconContext} from "./CustomizeIconContext";
-import {IconEntity} from '../types';
+import {Category, IconEntity} from '../types';
 import ModifiedTooltip from './ModifiedTooltip';
 import IconCodeExamples from './IconCodeExamples';
 import { createLucideIcon } from 'lucide-react';
@@ -38,12 +38,13 @@ type IconDownload = {
 };
 
 interface IconDetailOverlayProps {
+  categories?: Category[]
   open?: boolean
   close?: () => void
   icon?: IconEntity
 }
 
-const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) => {
+const IconDetailOverlay = ({open = true, close, icon, categories = []}: IconDetailOverlayProps) => {
   const toast = useToast();
   const {colorMode} = useColorMode();
   const { tags = [], name, iconNode } = icon ?? {};
@@ -123,6 +124,10 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
     }
   }
 
+  const iconCategories = icon.categories
+    .map((name) => categories.find(c => c.name === name))
+    .filter(c => c)
+
   return (
     <Box
       position="fixed"
@@ -131,10 +136,9 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
       width="100%"
       left={0}
       height={0}
-      key={name}
     >
-      <Slide direction="bottom" in={isOpen} style={{zIndex: 10, pointerEvents: 'none'}}
-             mx="auto"
+      <Slide direction="bottom" in={isOpen}
+             style={{zIndex: 10, pointerEvents: 'none', margin: '0 auto'}}
       >
         <Flex
           alignItems="center"
@@ -270,29 +274,41 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
                        stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]}
                        strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">
                     {Array.from({length: (size - 1)}, (_, i) => (
-                      <g key={`grid-${i}`}>
-                        <line key={`horizontal-${i}`} x1={0} y1={i + 1} x2={size} y2={i + 1}/>
-                        <line key={`vertical-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={size}/>
+                      <g key={`grid-${name}-${i}`}>
+                        <line key={`horizontal-${name}-${i}`} x1={0} y1={i + 1} x2={size} y2={i + 1}/>
+                        <line key={`vertical-${name}-${i}`} x1={i + 1} y1={0} x2={i + 1} y2={size}/>
                       </g>
                     ))}
                   </svg>
                 </Box>
               </Flex>
               <Flex maxW="100%" minW={0} grow={1}>
-                <IconCodeExamples icon={icon} maxW="100%" w="100%" />
+                <IconCodeExamples icon={icon} />
               </Flex>
             </Flex>
             <Flex mt={{base: 4, md: 4}}
                   direction={{base: 'column', md: 'row'}}
                   alignItems={{base: 'flex-start', md: 'center'}}
             >
-              <Wrap direction={'horizontal'} gap={2}>
+              <Wrap direction={'row'} gap={2}>
+                {iconCategories.map(({name, title, icon}) => {
+                  const Icon = icon ? createLucideIcon(icon.name, icon.iconNode) : null
+                  return (
+                    <Tag
+                      variant='category'
+                      fontSize='md'
+                    >
+                      <Icon size={16} />
+                      {title}
+                    </Tag>
+                  )
+                })}
                 {tags.map((tag) => {
                   return (
                     <Tag
-                      variant='subtle'
-                      colorScheme='brand'
+                      variant='tag'
                       fontSize='md'
+                      key={`${name}-${tag}`}
                     >{tag}</Tag>
                   )
                 })}
@@ -310,8 +326,8 @@ const IconDetailOverlay = ({open = true, close, icon}: IconDetailOverlayProps) =
                   <AvatarGroup size="md">
                     {icon.contributors.map((commit, index) => (
                       <Link href={`https://github.com/${commit.author}`} isExternal
-                            key={`${index}_${commit.author}`}>
-                        <Tooltip hasArrow label={commit.author} key={commit.author}>
+                            key={`${name}-${index}_${commit.author}`}>
+                        <Tooltip hasArrow label={commit.author} key={`${name}-${commit.author}`}>
                           <Avatar name={commit.author}
                                   size='md'
                                   src={`https://github.com/${commit.author}.png?size=88`}/>

@@ -8,12 +8,12 @@ interface IconListProps {
   category?: string
 }
 
-const IconList = memo(({ icons, category = '' }: IconListProps) => {
+const IconList = memo(({ icons, category }: IconListProps) => {
   return (
     <Grid templateColumns={`repeat(auto-fill, minmax(80px, 1fr))`} gap={5} marginBottom={6} justifyItems={'center'}>
       {icons.map(icon => {
         return (
-          <IconListItem {...icon} key={`${category}-${icon.name}`}/>
+          <IconListItem {...icon} key={`${category??'all'}-${icon.name}`}/>
         );
       })}
     </Grid>

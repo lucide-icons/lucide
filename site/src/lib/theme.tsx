@@ -299,7 +299,16 @@ const theme = extendTheme({
             color: props.colorMode == 'light' ? 'brand.DEFAULT' : 'brand.DEFAULT',
           }
         }),
-        subtle: (props: StyleFunctionProps) => ({
+        category: (props: StyleFunctionProps) => ({
+          container: {
+            bg: props.colorMode == 'light' ? 'gray.100' : 'gray.900',
+            color: props.colorMode == 'light' ? 'gray.900' : 'gray.100',
+            paddingLeft: 1,
+            display: 'flex',
+            gap: 1,
+          }
+        }),
+        tag: (props: StyleFunctionProps) => ({
           container: {
             bg: props.colorMode == 'light' ? 'brand.100' : 'brand.900',
             color: props.colorMode == 'light' ? 'brand.DEFAULT' : 'brand.DEFAULT',

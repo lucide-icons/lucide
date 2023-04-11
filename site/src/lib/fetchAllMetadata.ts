@@ -69,8 +69,6 @@ export async function getMetadata(name, releases: Release[]) {
         changedRelease = findRelease(changed, releases);
       }
       return {
-        name,
-        commits,
         createdRelease,
         changedRelease,
         created: createdRelease ? createdRelease.published : created,

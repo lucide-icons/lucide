@@ -28,10 +28,11 @@ const HomePage: NextPage<HomePageProps> = ({ data, categories }) => {
     <Layout>
       <MobileMenu />
       <IconDetailOverlay
+        categories={categories}
         open={!!currentIcon?.name}
         icon={currentIcon}
         close={() => router.push({
-          pathname: '/icon/[iconName]',
+          pathname: '/icons',
           query: {
             ...router.query,
             iconName: '',

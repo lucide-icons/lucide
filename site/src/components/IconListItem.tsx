@@ -1,20 +1,12 @@
 import {Badge, Button, ButtonProps, chakra, Tooltip, useToast} from '@chakra-ui/react';
 import download from 'downloadjs';
 import {memo, useCallback} from 'react';
-import {createLucideIcon, IconNode} from 'lucide-react';
+import {createLucideIcon} from 'lucide-react';
 import {useCustomizeIconContext} from './CustomizeIconContext';
 import {useRouter} from 'next/router';
-import {Release} from "../types";
+import {IconEntity} from "../types";
 
-interface IconListItemProps extends ButtonProps {
-  deprecated: boolean;
-  name: string;
-  iconNode: IconNode;
-  active: boolean;
-  hideVersionBadge?: boolean;
-  currentVersion: string;
-  createdRelease?: Release;
-}
+type IconListItemProps = ButtonProps & IconEntity;
 
 const IconListItem = ({name, iconNode, createdRelease}: IconListItemProps) => {
   const router = useRouter()

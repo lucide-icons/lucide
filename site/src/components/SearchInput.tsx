@@ -47,7 +47,10 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
   // Keyboard `/` shortcut
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === '/' && ref.current !== document.activeElement) {
+      if (
+        (event.key === '/' && ref.current !== document.activeElement)
+        || (event.ctrlKey && event.key === 'f')
+      ) {
         event.preventDefault();
         ref.current.focus();
       }
@@ -79,7 +82,7 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
                          width={rightElementWidth}
       >
         <Box fontSize=".875rem"
-             textTransform="upperCase"
+             textTransform="uppercase"
         >
           Press <Kbd>/</Kbd> to focus
         </Box>

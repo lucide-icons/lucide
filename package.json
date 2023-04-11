@@ -48,6 +48,9 @@
   },
   "packageManager": "pnpm@7.14.0",
   "pnpm": {
+    "overrides": {
+      "csstype": "3.1.2"
+    },
     "peerDependencyRules": {
       "ignoreMissing": [
         "@babel/core",

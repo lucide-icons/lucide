@@ -98,9 +98,7 @@ const IconCategoryDrawer = ({
           icon: null,
           iconCount: data.length
         }, ...categories].map(({title, name, icon, iconCount}) => {
-          // Show category icon?
-          const iconData = data.find(({name: iconName}) => iconName === icon)
-          const Icon = iconData ? createLucideIcon(iconData.name, iconData.iconNode) : null
+          const Icon = icon ? createLucideIcon(icon.name, icon.iconNode) : null
 
           return (
             <Fragment key={name}>

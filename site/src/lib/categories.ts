@@ -20,6 +20,7 @@ export async function getData(name: string, icons: IconEntity[]): Promise<Catego
   return {
     ...categoryJson,
     name,
+    icon: icons.find(icon => icon.name === categoryJson.icon),
     iconCount: icons.reduce((acc, curr) => (curr.categories.includes(name) ? ++acc : acc), 0)
   };
 }

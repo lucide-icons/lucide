@@ -1,6 +1,7 @@
-import {BoxProps, Tab, TabList, TabPanel, TabPanels, Tabs} from '@chakra-ui/react'
+import {TabsProps, Tab, TabList, TabPanel, TabPanels, Tabs, BoxProps} from '@chakra-ui/react'
 import {IconEntity} from "../types";
 import CodeBlock from "./CodeBlock";
+import {Language} from "prism-react-renderer";
 
 interface IconCodeExamplesProps extends BoxProps {
   icon: IconEntity;
@@ -9,14 +10,14 @@ interface IconCodeExamplesProps extends BoxProps {
 type CodeExampleType = {
   title: string,
   codes: {
-    language: string,
+    language?: Language,
     code: string,
     metastring?: string,
   }[],
   breakpoint: 'base'|'sm'|'md',
 };
 
-function IconCodeExamples({icon, ...rest}: IconCodeExamplesProps) {
+function IconCodeExamples({icon}: IconCodeExamplesProps) {
   const camelCaseName = icon.name.replace(/-./g, match => match[1].toUpperCase());
   const upperCamelCaseName = camelCaseName.substr(0, 1).toUpperCase() + camelCaseName.substr(1);
 
@@ -25,7 +26,7 @@ function IconCodeExamples({icon, ...rest}: IconCodeExamplesProps) {
       title: 'HTML',
       codes: [
         {
-          language: 'html',
+          language: 'markup',
           code: `<i icon-name="${icon.name}"></i>
 `,
         },
@@ -54,7 +55,7 @@ export default App;
       title: 'Vue 3',
       codes: [
         {
-          language: 'html',
+          language: 'markup',
           code: `<template>
   <${upperCamelCaseName} color="red" :size="32" />
 </template>
@@ -72,7 +73,7 @@ import { ${upperCamelCaseName} } from 'lucide-vue-next';
       title: 'Svelte',
       codes: [
         {
-          language: 'html',
+          language: 'markup',
           code: `<script>
 import { ${upperCamelCaseName} } from 'lucide-svelte';
 </script>
@@ -100,7 +101,7 @@ export default App;
           metastring: '{1,4}',
         },
       ],
-      breakpoint: 'lg',
+      breakpoint: 'md',
     },
     {
       title: 'Angular',
@@ -119,7 +120,7 @@ import { LucideAngularModule, ${upperCamelCaseName} } from 'lucide-angular';
           metastring: '{2,6}',
         },
         {
-          language: 'html',
+          language: 'markup',
           code: `<!-- app.component.html -->
 <lucide-icon name="${icon.name}"></lucide-icon>
 `,
@@ -137,7 +138,7 @@ import { LucideAngularModule, ${upperCamelCaseName} } from 'lucide-angular';
 `,
         },
         {
-          language: 'html',
+          language: 'markup',
           code: `<div class="icon-${icon.name}"></div>
 `,
         },
@@ -148,7 +149,7 @@ import { LucideAngularModule, ${upperCamelCaseName} } from 'lucide-angular';
       title: 'Flutter',
       codes: [
         {
-          language: 'js',
+          language: 'javascript',
           code: `Icon(LucideIcons.${icon.name});
 `,
           metastring: '{1}',
@@ -159,9 +160,9 @@ import { LucideAngularModule, ${upperCamelCaseName} } from 'lucide-angular';
   ];
 
   return (
-    <Tabs {...rest}>
+    <Tabs style={{maxWidth: '100%', width: '100%'}} colorScheme='brand'>
       <TabList>
-        {codes.map((code) => {
+        {codes.map((code, index) => {
           return (
             <Tab
               px={2} pb={0}
@@ -171,6 +172,7 @@ import { LucideAngularModule, ${upperCamelCaseName} } from 'lucide-angular';
                 md: code.breakpoint=='md' || code.breakpoint=='sm' || code.breakpoint=='base' ? 'block' : 'none',
                 lg: 'block',
               }}
+              key={`code-${index}`}
             >{code.title}</Tab>
           )
         })}
