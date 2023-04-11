@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "planet",
+    "space",
+    "physics"
+  ],
+  "categories": [
+    "science"
+  ]
+}

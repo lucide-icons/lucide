@@ -8,6 +8,7 @@
     "lucide-react": "pnpm --filter lucide-react",
     "lucide-react-native": "pnpm --filter lucide-react-native",
     "lucide-preact": "pnpm --filter lucide-preact",
+    "lucide-solid": "pnpm --filter lucide-solid",
     "lucide-vue": "pnpm --filter lucide-vue",
     "lucide-vue-next": "pnpm --filter lucide-vue-next",
     "lucide-svelte": "pnpm --filter lucide-svelte",

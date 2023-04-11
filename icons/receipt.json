@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bill",
+    "voucher",
+    "slip",
+    "check",
+    "counterfoil"
+  ],
+  "categories": [
+    "money",
+    "travel"
+  ]
+}
