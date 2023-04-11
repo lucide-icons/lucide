@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "windows",
+    "application",
+    "executable"
+  ],
+  "categories": [
+    "design",
+    "files",
+    "layout"
+  ]
+}
