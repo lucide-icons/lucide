@@ -2,7 +2,6 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "cancel",
-    "ban",
     "no",
     "stop",
     "forbidden",
@@ -11,5 +10,8 @@
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "slash"
   ]
 }
