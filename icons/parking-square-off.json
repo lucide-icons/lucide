@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "parking lot",
+    "car park",
+    "no parking"
+  ],
+  "categories": [
+    "transportation",
+    "maps"
+  ]
+}

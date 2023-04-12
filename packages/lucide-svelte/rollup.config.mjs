@@ -10,17 +10,6 @@ const outputFileName = 'lucide-svelte';
 const outputDir = 'dist';
 const inputs = ['./src/lucide-svelte.ts'];
 const bundles = [
-  // Not sure if this one is needed for Svelte
-  // {
-  //   format: 'cjs',
-  //   inputs,
-  //   outputDir,
-  // },
-  {
-    format: 'es',
-    inputs,
-    outputDir,
-  },
   {
     format: 'esm',
     inputs,
