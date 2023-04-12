@@ -37,7 +37,7 @@ export default function generateSprite(svgs, packageDir) {
   };
 
   const spriteSvg = stringify(spriteSvgObject);
-  const prettifiedSprite = prettier.format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
+  const prettifiedSprite = prettier.format(spriteSvg, { parser: 'html', printWidth: 180 });
 
   const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
 
