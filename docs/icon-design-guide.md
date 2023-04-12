@@ -55,6 +55,8 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 Before an icon is added to the library, we like to have readable and optimized svg code.
 
+Don't use [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use). While it may seem like a good way to optimize file size sometimes,there's no way to ensure that the referenced element IDs are unique when SVGs are embedded in HTML documents.
+
 ### Global Attributes
 
 For each icon these attributes are applied, corresponding to the above rules.
