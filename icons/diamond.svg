@@ -9,12 +9,5 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <rect
-    width="15.56"
-    height="15.56"
-    x="12"
-    y="1"
-    rx="2.41"
-    transform="rotate(45 12 1)"
-  />
+  <rect width="15.56" height="15.56" x="12" y="1" rx="2.41" transform="rotate(45 12 1)" />
 </svg>
