@@ -5,7 +5,7 @@
   "projects": {
     "lucide-angular": {
       "projectType": "library",
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
       "prefix": "lucide",
       "architect": {
