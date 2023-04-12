@@ -59,6 +59,10 @@ You can pass additional props to adjust the icon appearance.
 <i-lucide name="home" [size]="48" color="red" [strokeWidth]="1"></i-lucide>
 ```
 
+### Global configuration
+
+You can inject the `LucideIconConfig` service in your root component to globally configure the default property values as defined above.
+
 ### Styling using a custom CSS class
 
 Any extra HTML attribute is ignored, but the `class` attribute

@@ -1,9 +1,9 @@
 export default ({ componentName, children }) => `
-import { IconData } from './types';
+import { LucideIconData } from './types';
 import defaultAttributes from './constants/default-attributes';
 
 /* eslint-disable no-shadow-restricted-names */
-const ${componentName}: IconData = [
+const ${componentName}: LucideIconData = [
     'svg',
     defaultAttributes,
     ${JSON.stringify(children)}

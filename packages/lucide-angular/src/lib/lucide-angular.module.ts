@@ -4,8 +4,8 @@ import {LucideIcons} from '../icons/types';
 import {LUCIDE_ICONS, LucideIconProvider} from './lucide-icon.provider';
 import {Icons} from './icons.provider';
 
-const legacyIconProviderFactory = (icons: LucideIcons) => {
-    return new LucideIconProvider(icons);
+const legacyIconProviderFactory = (icons?: LucideIcons) => {
+    return new LucideIconProvider(icons ?? {});
 }
 
 @NgModule({

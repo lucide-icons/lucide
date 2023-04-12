@@ -17,6 +17,6 @@ export class LucideIconProvider implements LucideIconProviderInterface {
     }
 
     hasIcon(name: string): boolean {
-        return name in this.icons;
+        return typeof this.icons === 'object' && name in this.icons;
     }
 }
