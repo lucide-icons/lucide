@@ -2,15 +2,13 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "arrow",
+    "next",
+    "music",
     "right",
-    "clockwise",
-    "refresh",
-    "reload",
-    "redo"
+    "continue"
   ],
   "categories": [
-    "arrows",
-    "design",
-    "photography"
+    "multimedia",
+    "arrows"
   ]
 }
