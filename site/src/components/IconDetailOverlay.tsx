@@ -2,11 +2,11 @@ import { Box, Text, IconButton, useColorMode, Flex, Slide, ButtonGroup, Button, 
 import theme from "../lib/theme";
 import download from 'downloadjs';
 import { X as Close } from 'lucide-react';
-import {useContext, useEffect, useRef} from "react";
-import {IconStyleContext} from "./CustomizeIconContext";
-import {IconWrapper} from "./IconWrapper";
+import { useEffect, useRef } from "react";
+import {useCustomizeIconContext} from "./CustomizeIconContext";
 import ModifiedTooltip from "./ModifiedTooltip";
 import { IconEntity } from "../types";
+import { createLucideIcon } from 'lucide-react';
 
 type IconDownload = {
   src: string;
@@ -14,15 +14,17 @@ type IconDownload = {
 };
 
 interface IconDetailOverlayProps {
-  open: boolean
-  close: () => void
+  open?: boolean
+  close?: () => void
   icon?: IconEntity
 }
 
 const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps) => {
   const toast = useToast();
   const { colorMode } = useColorMode();
-  const {color, strokeWidth, size} = useContext(IconStyleContext);
+
+  const { tags = [], name, iconNode } = icon ?? {};
+  const {color, strokeWidth, size} = useCustomizeIconContext();
   const iconRef = useRef<SVGSVGElement>(null);
   const [isMobile] = useMediaQuery("(max-width: 560px)")
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -36,8 +38,6 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
   if(icon == null) {
     return null
   }
-
-  const { tags = [], name = '' } = icon;
 
   const handleClose = () => {
     onClose();
@@ -54,10 +54,12 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     color: color,
   };
 
-  const downloadIcon = ({src, name = ''} : IconDownload) => download(src, `${name}.svg`, 'image/svg+xml');
+  const Icon = createLucideIcon(name, iconNode)
 
-  const copyIcon = async ({src, name} : IconDownload) => {
-    const trimmedSrc = src.replace(/(\r\n|\n|\r|\s\s)/gm, "")
+  const downloadIcon = ({name = ''} : IconDownload) => download(iconRef.current.outerHTML, `${name}.svg`, 'image/svg+xml');
+
+  const copyIcon = async ({name} : IconDownload) => {
+    const trimmedSrc = iconRef.current.outerHTML.replace(/(\r\n|\n|\r|\s\s)/gm, "")
 
     await navigator.clipboard.writeText(trimmedSrc)
 
@@ -70,14 +72,14 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
     });
   }
 
-  const downloadPNG = ({src, name}: IconDownload) => {
+  const downloadPNG = ({name}: IconDownload) => {
     const canvas = document.createElement('canvas');
     canvas.width = size;
     canvas.height = size;
     const ctx = canvas.getContext("2d");
 
     const image = new Image();
-    image.src = `data:image/svg+xml;base64,${btoa(src)}`;
+    image.src = `data:image/svg+xml;base64,${btoa(iconRef.current.outerHTML)}`;
     image.onload = function() {
       ctx.drawImage(image, 0, 0);
 
@@ -98,7 +100,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
       height={0}
       key={name}
     >
-      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
+      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10, pointerEvents: 'none' }}>
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -120,6 +122,7 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                 ? theme.colors.white
                 : theme.colors.gray[700]
             }
+            style={{ pointerEvents: 'initial' }}
             padding={8}
           >
             <IconButton
@@ -151,14 +154,13 @@ const IconDetailOverlay = ({ open = true, close, icon }: IconDetailOverlayProps)
                     style={iconStyling}
                     className="icon-large"
                   >
-                    <IconWrapper
-                      src={icon.src}
+                    <Icon
                       stroke={color}
                       strokeWidth={strokeWidth}
-                      height={size}
-                      width={size}
+                      size={size}
                       ref={iconRef}
                     />
+
                   </div>
 
                   <svg className="icon-grid" width="24" height="24" viewBox={`0 0 ${size} ${size}`} fill="none" stroke={colorMode == "light" ? '#E2E8F0' : theme.colors.gray[600]} strokeWidth="0.1" xmlns="http://www.w3.org/2000/svg">

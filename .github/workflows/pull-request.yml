@@ -1,4 +1,4 @@
-name: Pull request comment
+name: Add Changed Icons comment
 
 on:
   pull_request_target:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  Explore-GitHub-Actions:
+  add-changed-icons-comment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -49,7 +49,9 @@ jobs:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            Added or changed icons
-
+            ### Added or changed icons
+            <details>
+            <summary>Icon X-rays</summary>
             ${{ steps.generate-comment.outputs.body }}
+            </details>
           edit-mode: replace
