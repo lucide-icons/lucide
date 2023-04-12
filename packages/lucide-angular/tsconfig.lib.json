@@ -6,18 +6,7 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2018"
-    ]
-  },
-  "angularCompilerOptions": {
-    "skipTemplateCodegen": true,
-    "strictMetadataEmit": true,
-    "enableResourceInlining": true,
-    "fullTemplateTypeCheck": true
+    "types": []
   },
   "exclude": [
     "src/test.ts",
