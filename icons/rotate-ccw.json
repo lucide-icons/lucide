@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "arrow",
-    "left"
+    "left",
+    "counter-clockwise",
+    "restart",
+    "reload",
+    "backup",
+    "undo"
   ],
   "categories": [
     "arrows",
