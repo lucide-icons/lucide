@@ -2,7 +2,6 @@ import { Box, BoxProps, chakra, useColorMode } from '@chakra-ui/react';
 import nightOwlLightTheme from 'prism-react-renderer/themes/nightOwlLight';
 import nightOwlDarkTheme from 'prism-react-renderer/themes/nightOwl';
 import uiTheme from '../lib/theme';
-// import theme from 'prism-react-renderer/themes/nightOwl';
 import BaseHighlight, { defaultProps, Language } from 'prism-react-renderer';
 import { CSSProperties } from 'react';
 import CopyButton from './CopyButton';
@@ -49,7 +48,7 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
   const { colorMode } = useColorMode();
 
   const backgroundColor =
-    colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[700];
+    colorMode === 'light' ? uiTheme.colors.gray[100] : uiTheme.colors.gray[900];
   const codeTheme = colorMode === 'light' ? nightOwlLightTheme : nightOwlDarkTheme;
 
   const customizedCodeTheme = {
@@ -63,6 +62,8 @@ function CodeBlock({ code, language, metastring, showLines, ...props }: Highligh
   return (
     <Box position="relative" zIndex="0" {...props}>
       <CodeContainer bg={backgroundColor}>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore */}
         <BaseHighlight
           {...defaultProps}
           code={code}

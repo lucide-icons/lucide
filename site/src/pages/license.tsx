@@ -48,7 +48,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const licenseText = doc
     .split(/\n{2,}/)
-    .map(paragraph => paragraph.split('\n').join(' ').trim())
+    .map(paragraph =>
+      paragraph
+        .split('\n')
+        .join(' ')
+        .trim(),
+    )
     .filter(Boolean);
 
   return { props: { licenseText } };
