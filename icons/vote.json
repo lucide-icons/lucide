@@ -5,7 +5,9 @@
     "poll",
     "ballot",
     "political",
-    "social"
+    "social",
+    "check",
+    "tick"
   ],
   "categories": [
     "social"
