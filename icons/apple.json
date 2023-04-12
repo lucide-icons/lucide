@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "fruit",
-    "food"
+    "food",
+    "macos",
+    "osx"
   ],
   "categories": [
     "food-beverage"
