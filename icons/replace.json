@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "search",
+    "substitute",
+    "swap",
+    "change"
+  ],
+  "categories": [
+    "text"
+  ]
+}

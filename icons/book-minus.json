@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "code",
+    "version control",
+    "git",
+    "repository",
+    "remove",
+    "delete"
+  ],
+  "categories": [
+    "development",
+    "coding"
+  ]
+}

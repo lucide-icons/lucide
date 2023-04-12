@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shop",
+    "supermarket",
+    "stand",
+    "boutique",
+    "building"
+  ],
+  "categories": [
+    "buildings",
+    "maps"
+  ]
+}
