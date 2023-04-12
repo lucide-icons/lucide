@@ -12,10 +12,11 @@ export type Path = {
 };
 
 export type PathProps<
-  RequiredProps extends keyof SVGProps<SVGPathElement | SVGRectElement | SVGCircleElement>,
-  NeverProps extends keyof SVGProps<SVGPathElement | SVGRectElement | SVGCircleElement>
-> = Required<Pick<SVGProps<SVGElement & SVGRectElement & SVGCircleElement>, RequiredProps>> &
+  RequiredProps extends keyof SVGProps<ElementType>,
+  NeverProps extends keyof SVGProps<ElementType>,
+  ElementType extends SVGElement = SVGGElement
+> = Required<Pick<SVGProps<ElementType>, RequiredProps>> &
   Omit<
-    SVGProps<SVGPathElement & SVGRectElement & SVGCircleElement>,
+    SVGProps<ElementType>,
     RequiredProps & NeverProps
   >;
