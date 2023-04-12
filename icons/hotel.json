@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "building",
+    "hostel",
+    "motel",
+    "inn"
+  ],
+  "categories": [
+    "buildings",
+    "maps",
+    "travel"
+  ]
+}
