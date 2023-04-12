@@ -24,11 +24,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2021",
-    "module": "ES2021",
+    "target": "ES2020",
+    "module": "ES2020",
     "useDefineForClassFields": false,
     "lib": [
-      "ES2021",
+      "ES2020",
       "dom"
     ]
   },
