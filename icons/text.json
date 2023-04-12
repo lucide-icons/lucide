@@ -2,7 +2,11 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "find",
-    "search"
+    "search",
+    "data",
+    "txt",
+    "pdf",
+    "document"
   ],
   "categories": [
     "text",
