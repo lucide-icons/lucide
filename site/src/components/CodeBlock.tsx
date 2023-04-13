@@ -34,9 +34,17 @@ interface HighlightProps extends BoxProps {
   language?: Language;
   metastring?: string;
   showLines?: boolean;
+  showCopyButton?: boolean;
 }
 
-function CodeBlock({code, language, metastring, showLines, ...props}: HighlightProps) {
+function CodeBlock({
+                     code,
+                     language,
+                     metastring,
+                     showLines,
+                     showCopyButton = true,
+                     ...props
+                   }: HighlightProps) {
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
   const {colorMode} = useColorMode();
 
@@ -108,7 +116,7 @@ function CodeBlock({code, language, metastring, showLines, ...props}: HighlightP
           )}
         </BaseHighlight>
       </CodeContainer>
-      <CopyButton
+      {showCopyButton && <CopyButton
         size="sm"
         position="absolute"
         textTransform="uppercase"
@@ -121,7 +129,7 @@ function CodeBlock({code, language, metastring, showLines, ...props}: HighlightP
         copyText={code}
         fontFamily={uiTheme.fonts.body}
         fontWeight="bold"
-      />
+      />}
     </Box>
   );
 }

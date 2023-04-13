@@ -4,6 +4,7 @@ import '../assets/styling.css';
 import Head from 'next/head';
 import { CustomizeIconContext } from '../components/CustomizeIconContext';
 import { MobileNavigationProvider } from '../components/MobileNavigationProvider';
+import {IconDetailOverlayContext} from "../components/IconDetailOverlayContext";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -14,7 +15,9 @@ const App = ({ Component, pageProps }) => {
       <ChakraProvider theme={customTheme}>
         <MobileNavigationProvider>
           <CustomizeIconContext>
-            <Component {...pageProps} />
+            <IconDetailOverlayContext>
+              <Component {...pageProps} />
+            </IconDetailOverlayContext>
           </CustomizeIconContext>
         </MobileNavigationProvider>
       </ChakraProvider>

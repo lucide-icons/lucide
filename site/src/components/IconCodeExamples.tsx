@@ -172,23 +172,26 @@ import { LucideAngularModule, ${upperCamelCaseName} } from 'lucide-angular';
                 md: code.breakpoint=='md' || code.breakpoint=='sm' || code.breakpoint=='base' ? 'block' : 'none',
                 lg: 'block',
               }}
-              key={`code-${index}`}
+              key={`code-tab-${index}`}
             >{code.title}</Tab>
           )
         })}
       </TabList>
 
       <TabPanels mt={2}>
-        {codes.map((code) => {
+        {codes.map((code, index) => {
           return (
-            <TabPanel p={0} h="100%">
-              {code.codes.map((part) => {
+            <TabPanel p={0} h="100%"
+                      key={`code-tab-panel-${index}`}>
+              {code.codes.map((part, index2) => {
                 return (
                   <CodeBlock
-                    mb={2}
+                    showCopyButton={false}
                     code={part.code}
                     language={part.language}
                     metastring={part.metastring ?? null}
+                    marginBottom={2}
+                    key={`code-tab-panel-${index}-snippet-${index2}`}
                   />
                 )
               })}

@@ -5,17 +5,49 @@ import {createLucideIcon} from 'lucide-react';
 import {useCustomizeIconContext} from './CustomizeIconContext';
 import {useRouter} from 'next/router';
 import {IconEntity} from "../types";
+import {useIconDetailOverlayContext} from "./IconDetailOverlayContext";
 
-type IconListItemProps = ButtonProps & IconEntity;
+interface IconListItemProps extends ButtonProps {
+  icon: IconEntity;
+  click?: (icon: IconEntity) => void;
+}
 
-const IconListItem = ({name, iconNode, createdRelease}: IconListItemProps) => {
+const IconListItemIcon = ({icon}) => {
+  const {name, iconNode} = icon;
+  const Icon = createLucideIcon(name, iconNode)
+  const {color, size, strokeWidth, iconsRef} = useCustomizeIconContext();
+  return (
+    <Icon
+      ref={iconEl => (iconsRef.current[name] = iconEl)}
+      size={size}
+      stroke={color}
+      strokeWidth={strokeWidth}
+    />
+  );
+};
+
+interface IconListItemButtonProps extends ButtonProps {
+  icon: IconEntity;
+}
+
+const IconListItemButton = ({icon, children}: IconListItemButtonProps) => {
   const router = useRouter()
   const toast = useToast();
-  const {color, size, strokeWidth, iconsRef} = useCustomizeIconContext();
+  const {name} = icon;
+  const copyIconName = async (event) => {
+    event.stopPropagation();
+    await navigator.clipboard.writeText(name)
 
-  const Icon = createLucideIcon(name, iconNode)
-
-  const handleClick: ButtonProps['onClick'] = useCallback(async (event) => {
+    toast({
+      title: 'Copied!',
+      description: `Icon name "${name}" copied to clipboard.`,
+      status: 'success',
+      duration: 1500,
+    });
+  }
+  const {iconsRef} = useCustomizeIconContext();
+  const {onOpen, setIcon} = useIconDetailOverlayContext();
+  const handleClick = useCallback(async (event) => {
     const src = (iconsRef.current[name].outerHTML).replace(/(\r\n|\n|\r|(>\s\s<))/gm, "")
 
     if (event.shiftKey) {
@@ -38,57 +70,43 @@ const IconListItem = ({name, iconNode, createdRelease}: IconListItemProps) => {
       return
     }
 
-    router.push({
-        pathname: `/icon/${name}`,
-        query: (
-          router.query?.search != null
-            ? {search: router.query.search}
-            : {}
-        ),
-      },
-      undefined,
-      {
-        shallow: true,
-        scroll: false
-      })
-  }, [iconsRef, name, router, toast])
+    setIcon(icon);
+    onOpen();
+  }, [iconsRef, name, router, toast, onOpen, setIcon]);
+  return (
+    <Button
+      as="a"
+      variant="iconListItem"
+      rounded="lg"
+      padding={2}
+      height={20}
+      width={20}
+      position="relative"
+      whiteSpace="normal"
+      alignItems="center"
+      sx={{cursor: 'pointer'}}
+      tabIndex={0}
+      onClick={handleClick}
+      onKeyPress={e => {
+        if (e.key === 'Enter') {
+          handleClick(e)
+        }
+      }}
+    >
+      {children}
+    </Button>
+  );
+}
 
-  const copyIconName: ButtonProps['onClick'] = async (event) => {
-    event.stopPropagation();
-    await navigator.clipboard.writeText(name)
-
-    toast({
-      title: 'Copied!',
-      description: `Icon name "${name}" copied to clipboard.`,
-      status: 'success',
-      duration: 1500,
-    });
-  }
-
+const IconListItem = ({icon}: IconListItemProps) => {
+  const {name, createdRelease} = icon;
   return (
     <Tooltip label={name} hasArrow>
       <chakra.div position="relative"
                   className={'icon-list-item-wrapper'}>
-        <Button
-          as="a"
-          variant="iconListItem"
-          rounded="lg"
-          padding={2}
-          height={20}
-          width={20}
-          position="relative"
-          whiteSpace="normal"
-          alignItems="center"
-          sx={{cursor: 'pointer'}}
-          onClick={handleClick}
-        >
-          <Icon
-            ref={iconEl => (iconsRef.current[name] = iconEl)}
-            size={size}
-            stroke={color}
-            strokeWidth={strokeWidth}
-          />
-        </Button>
+        <IconListItemButton icon={icon}>
+          <IconListItemIcon icon={icon} />
+        </IconListItemButton>
         {createdRelease
           ? (
             <Badge variant="version"

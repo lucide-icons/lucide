@@ -16,7 +16,7 @@ interface PackagesPageProps {
 const PackagesPage = ({packages, thirdPartyPackages}: PackagesPageProps): JSX.Element => {
   return (
     <HeadingNavigationProvider>
-      <MobileMenu/>
+      <MobileMenu />
       <Layout>
         <Box bgColor={useColorModeValue('gray.50', 'gray.DEFAULT')} py={6}>
           <Heading as="h1" marginBottom={6} textAlign="center">

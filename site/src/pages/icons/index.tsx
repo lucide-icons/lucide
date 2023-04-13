@@ -3,11 +3,13 @@ import IconOverview from '../../components/IconOverview';
 import { getAllData } from '../../lib/icons';
 import { getAllCategories } from 'src/lib/categories';
 import IconDetailOverlay from 'src/components/IconDetailOverlay';
+import MobileMenu from "../../components/MobileMenu";
 
 const IconsPage = ({ data, categories }) => {
   return (
     <Layout>
-      <IconDetailOverlay />
+      <MobileMenu />
+      <IconDetailOverlay categories={categories} />
       <IconOverview {...{ data, categories }} key="icon-overview" />
     </Layout>
   );

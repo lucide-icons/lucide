@@ -27,18 +27,7 @@ const HomePage: NextPage<HomePageProps> = ({ data, categories }) => {
   return (
     <Layout>
       <MobileMenu />
-      <IconDetailOverlay
-        categories={categories}
-        open={!!currentIcon?.name}
-        icon={currentIcon}
-        close={() => router.push({
-          pathname: '/icons',
-          query: {
-            ...router.query,
-            iconName: '',
-          },
-        }, undefined, { shallow: true })}
-      />
+      <IconDetailOverlay categories={categories} />
       <Header {...{ data }} />
       <IconOverview {...{ data, categories }} />
     </Layout>

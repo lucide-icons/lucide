@@ -18,7 +18,6 @@ import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNa
 import Logo from './Logo';
 import Footer from './Footer';
 import menuItems from '../static/menuItems';
-
 interface LayoutProps extends BoxProps {
   aside?: BoxProps['children'];
 }
@@ -50,9 +49,6 @@ const Layout = ({ aside, children }: LayoutProps) => {
   }
 
   useKeyBindings({
-    Escape: {
-      fn: () => setQuery(''),
-    },
     KeyT: {
       fn: () => toggleColorMode(),
     },

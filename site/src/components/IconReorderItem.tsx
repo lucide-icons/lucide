@@ -69,7 +69,7 @@ const IconReorderItem = ({ icon, dropZones, onDrop, setDragging }: Props): JSX.E
         },
       }}
     >
-      <IconListItem {...icon} />
+      <IconListItem icon={icon} />
     </Reorder.Item>
   );
 };

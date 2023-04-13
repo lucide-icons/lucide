@@ -75,7 +75,6 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
         onChange={(event) => setInputValue(event.target.value)}
         value={inputValue}
         pr={[4, rightElementWidth]}
-        focusBorderColor={colorMode == 'light' ? 'brand.500' : 'brand.500'}
       />
       <InputRightElement display={['none', 'flex']}
                          pointerEvents="none"
