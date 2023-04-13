@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "alarm",
+    "notification",
+    "sound",
+    "reminder",
+    "unread"
+  ],
+  "categories": [
+    "account",
+    "notifications"
+  ]
+}
