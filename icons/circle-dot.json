@@ -4,9 +4,13 @@
     "pending",
     "dot",
     "progress",
-    "issue"
+    "issue",
+    "code",
+    "version control"
   ],
   "categories": [
+    "development",
+    "coding",
     "shapes"
   ]
 }
