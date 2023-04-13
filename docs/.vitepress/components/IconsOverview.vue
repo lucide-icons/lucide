@@ -23,7 +23,7 @@ const activeIcon = computed(() =>
 <template>
   <div class="icons">
     <div class="icon" v-for="icon in icons" :key="icon.name">
-      <IconItem v-bind="icon" @setActiveIcon="setActiveIconName"/>
+      <IconItem v-bind="icon" @setActiveIcon="setActiveIconName" :active="activeIconName === icon.name"/>
     </div>
   </div>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>

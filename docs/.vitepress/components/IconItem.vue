@@ -11,6 +11,7 @@ const props = defineProps<{
   categories: string[];
   // contributors: Contributor[];
   iconNode: IconNode;
+  active: boolean;
 }>()
 
 const emit = defineEmits(['setActiveIcon'])
@@ -26,7 +27,7 @@ function navigateToIcon() {
 </script>
 
 <template>
-  <button class="icon-button" @click="navigateToIcon">
+  <button class="icon-button" @click="navigateToIcon" :class="{ 'active' : active }">
     <component :is="icon" />
   </button>
 </template>
@@ -79,21 +80,15 @@ function navigateToIcon() {
   background-color: var(--vp-button-alt-hover-bg);
 }
 
-.icon-button.sponsor {
-  border-color: var(--vp-button-sponsor-border);
-  color: var(--vp-button-sponsor-text);
-  background-color: var(--vp-button-sponsor-bg);
+.icon-button:active {
+    border-color: var(--vp-button-alt-active-border);
+    color: var(--vp-button-alt-active-text);
+    background-color: var(--vp-button-alt-active-bg);
 }
 
-.icon-button.sponsor:hover {
-  border-color: var(--vp-button-sponsor-hover-border);
-  color: var(--vp-button-sponsor-hover-text);
-  background-color: var(--vp-button-sponsor-hover-bg);
-}
-
-.icon-button.sponsor:active {
-  border-color: var(--vp-button-sponsor-active-border);
-  color: var(--vp-button-sponsor-active-text);
-  background-color: var(--vp-button-sponsor-active-bg);
+.icon-button.active {
+  border-color: var(--vp-c-brand);
+  /* color: var(--vp-button-alt-active-text);
+  background-color: var(--vp-button-alt-active-bg); */
 }
 </style>
