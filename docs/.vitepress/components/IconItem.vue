@@ -13,13 +13,20 @@ const props = defineProps<{
   iconNode: IconNode;
 }>()
 
+const emit = defineEmits(['setActiveIcon'])
+
 const { go } = useRouter()
 
 const icon = createLucideIcon(props.name, props.iconNode)
+
+function navigateToIcon() {
+  window.history.pushState({}, '', `/icons/${props.name}`)
+  emit('setActiveIcon', props.name)
+}
 </script>
 
 <template>
-  <button class="icon-button" @click="go(`icons/${name}`)">
+  <button class="icon-button" @click="navigateToIcon">
     <component :is="icon" />
   </button>
 </template>

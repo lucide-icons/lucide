@@ -18,10 +18,11 @@
   "devDependencies": {
     "@lucide/docs": "workspace:*",
     "nitropack": "latest",
-    "vitepress": "1.0.0-alpha.65",
-    "node-fetch": "2"
+    "node-fetch": "2",
+    "vitepress": "1.0.0-alpha.65"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.13",
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
     "lucide-vue-next": "workspace:*"

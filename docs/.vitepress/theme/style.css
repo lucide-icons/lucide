@@ -13,3 +13,13 @@
 .VPNavBarTitle .title {
   font-size: 21px;
 }
+
+/* .VPHomeHero > .container {
+  flex-direction: column-reverse;
+} */
+
+.VPHomeHero .image-container {
+  transform: none;
+  width: auto;
+  /* padding: 0 24px; */
+}
