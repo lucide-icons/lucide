@@ -32,18 +32,55 @@ export default defineConfig({
     sidebar: {
       'guide':[
         {
+          text: 'Introduction',
           items: [
-            { text: 'Markdown Examples', link: '/guide/markdown-examples' },
-            { text: 'Runtime API Examples', link: 'docs/api-examples' }
+            { text: 'What is lucide?', link: '/guide/introduction' },
+            { text: 'Installation', link: '/guide/installation' }
           ]
-        }
-      ],
-      'guide/custom-page': [
+        },
         {
-          text: 'Examples',
+          text: 'Packages',
           items: [
-            { text: 'Markdown Examples', link: '/guide/markdown-examples' },
-            { text: 'Runtime API Examples', link: '/api-examples' }
+            {
+              text: 'Lucide',
+              link: '/guide/packages/lucide'
+            },
+            {
+              text: 'Lucide React',
+              link: '/guide/packages/lucide-react'
+            },
+            {
+              text: 'Lucide React Native',
+              link: '/guide/packages/lucide-react-native'
+            },
+            {
+              text: 'Lucide Vue',
+              link: '/guide/packages/lucide-vue'
+            },
+            {
+              text: 'Lucide Vue Next (Vue 3)',
+              link: '/guide/packages/lucide-vue-next'
+            },
+            {
+              text: 'Lucide Svelte',
+              link: '/guide/packages/lucide-svelte'
+            },
+            {
+              text: 'Lucide Preact',
+              link: '/guide/packages/lucide-preact'
+            },
+            {
+              text: 'Lucide Angular',
+              link: '/guide/packages/lucide-angular'
+            },
+            {
+              text: 'Lucide Static',
+              link: '/guide/packages/lucide-static'
+            },
+            {
+              text: 'Lucide Flutter',
+              link: '/guide/packages/lucide-flutter'
+            },
           ]
         }
       ],

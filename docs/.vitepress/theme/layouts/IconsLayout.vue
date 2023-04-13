@@ -14,5 +14,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <VPDocAsideOutline />
+  <VPDocAsideOutline v-if="data.page?.relativePath?.startsWith?.('/icons')"/>
 </template>
