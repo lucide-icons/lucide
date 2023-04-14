@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "gist",
+    "source",
+    "programming",
+    "html",
+    "xml",
+    "coding"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
