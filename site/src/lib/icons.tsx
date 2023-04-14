@@ -2,11 +2,9 @@ import fs from "fs";
 import path from "path";
 import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
-import {IconEntity, Release} from "../types";
+import {IconEntity} from "../types";
 import { getContributors } from "./fetchAllContributors";
 import { generateHashedKey } from "./helpers";
-import {filterCommits, getMetadata} from "./fetchAllMetadata";
-import {getAllReleases} from "./fetchAllReleases";
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -22,7 +20,7 @@ export interface GetDataOptions {
   withChildKeys?: boolean
 }
 
-export async function getData(name: string, releases: Release[], { withChildKeys = false }: GetDataOptions | undefined = {}) {
+export async function getData(name: string, { withChildKeys = false }: GetDataOptions | undefined = {}) {
   const svgPath = path.join(directory, `${name}.svg`);
   const svgContent = fs.readFileSync(svgPath, "utf8");
   const jsonPath = path.join(directory, `${name}.json`);
@@ -42,10 +40,6 @@ export async function getData(name: string, releases: Release[], { withChildKeys
   ) as IconNode
 
   const contributors = await getContributors(name);
-  const metadata = await getMetadata(name, releases);
-  if ('commits' in metadata) {
-    delete metadata['commits'];
-  }
 
   return {
     name,
@@ -53,16 +47,11 @@ export async function getData(name: string, releases: Release[], { withChildKeys
     categories,
     contributors,
     iconNode,
-    createdRelease: metadata.createdRelease ?? null,
-    changedRelease: metadata.changedRelease ?? null,
-    created: metadata.created ?? null,
-    changed: metadata.changed ?? null,
   };
 }
 
 export async function getAllData(options?: GetDataOptions): Promise<IconEntity[]> {
   const names = getAllNames();
-  const releases = await getAllReleases();
 
-  return Promise.all(names.map((name) => getData(name, releases, options)));
+  return Promise.all(names.map((name) => getData(name, options)));
 }
