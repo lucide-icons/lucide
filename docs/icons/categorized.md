@@ -15,8 +15,7 @@ onMounted(() => {
 
 
 <div class="VPDoc content">
-<section class="category" v-for="category in categories" :key="category.name">
-  <h2>{{ category.title }}</h2>
-</section>
-
+  <section class="category" v-for="category in categories" :key="category.name">
+    <h2 >{{ category.title }}</h2>
+  </section>
 </div>
