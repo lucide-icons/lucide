@@ -56,25 +56,30 @@ import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 .overlay-container {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: var(--left, 0);
+  right: var(--right, 0);
   bottom: 0;
   pointer-events: none;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: flex-end;
+  width: auto;
 }
 
 @media (min-width: 960px) {
   .overlay-container {
-    left: var(--vp-sidebar-width);
+    --left: var(--vp-sidebar-width);
   }
 }
 
 @media (min-width: 1440px) {
   .overlay-container {
-    left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
+    --left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
+    --right: calc(((100% - (var(--vp-layout-max-width) - var(--vp-sidebar-width))) - 272px) / 2);
+  }
+  .overlay-panel {
+    border-top-right-radius: 8px;
   }
 }
 

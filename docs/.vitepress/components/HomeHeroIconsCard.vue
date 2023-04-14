@@ -6,12 +6,14 @@ console.log(data);
 </script>
 
 <template>
-  <TransitionGroup class="icons-card" name="list" tag="div">
-    <LucideIcon
-      v-for="icon in data.icons"
-      v-bind="icon"
-    />
-  </TransitionGroup>
+  <div class="icons-card">
+    <TransitionGroup  name="list">
+      <LucideIcon
+        v-for="icon in data.icons"
+        v-bind="icon"
+      />
+    </TransitionGroup>
+  </div>
 </template>
 
 <style scoped>

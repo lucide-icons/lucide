@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import type { IconEntity } from '../types'
 import IconItem from './IconItem.vue'
 import IconDetailOverlay from './IconDetailOverlay.vue'
+import IconGrid from './IconGrid.vue'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -21,11 +22,7 @@ const activeIcon = computed(() =>
 </script>
 
 <template>
-  <div class="icons">
-    <div class="icon" v-for="icon in icons" :key="icon.name">
-      <IconItem v-bind="icon" @setActiveIcon="setActiveIconName" :active="activeIconName === icon.name"/>
-    </div>
-  </div>
+  <IconGrid :activeIcon="activeIconName" :icons="icons" @setActiveIcon="setActiveIconName"/>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
 
@@ -33,7 +30,7 @@ const activeIcon = computed(() =>
 .icons {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  padding: 32px 32px 96px;
+  /* padding: 32px 32px 96px; */
   gap: 8px;
   width: 100%;
 }

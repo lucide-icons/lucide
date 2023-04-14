@@ -1,5 +1,5 @@
 <script setup>
-  import Test from '../components/Test.vue'
+  import Test from '../.vitepress/components/Test.vue'
 </script>
 
 Hello world
