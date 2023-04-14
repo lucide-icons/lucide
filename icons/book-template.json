@@ -1,16 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "read",
     "code",
-    "command line",
-    "terminal",
-    "prompt",
-    "shell",
-    "console"
+    "version control",
+    "git",
+    "repository",
+    "dashed"
   ],
   "categories": [
-    "coding",
     "development",
-    "shapes"
+    "coding"
   ]
 }
