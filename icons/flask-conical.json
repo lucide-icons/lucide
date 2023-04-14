@@ -4,7 +4,9 @@
     "beaker",
     "erlenmeyer",
     "lab",
-    "chemistry"
+    "chemistry",
+    "experiment",
+    "test"
   ],
   "categories": [
     "science",

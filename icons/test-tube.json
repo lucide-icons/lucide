@@ -8,7 +8,9 @@
     "ampoule",
     "ampule",
     "lab",
-    "chemistry"
+    "chemistry",
+    "experiment",
+    "test"
   ],
   "categories": [
     "science"
