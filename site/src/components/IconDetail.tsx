@@ -59,6 +59,7 @@ const IconDetail = ({
   const iconRef = useRef<SVGSVGElement>(null);
   const router = useRouter();
 
+
   if (icon == null) {
     return null
   }

@@ -32,6 +32,7 @@ import {getAllData, getData} from '../../lib/icons';
 import Layout from '../../components/Layout';
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {getAllCategories} from 'src/lib/categories';
+import {getAllReleases} from "../../lib/fetchAllReleases";
 import IconDetail from "../../components/IconDetail";
 import Section from "../../components/Section";
 import useSpacing from "../../lib/useSpacing";
@@ -327,7 +328,8 @@ export default IconPage;
 
 export const getStaticProps: GetStaticProps = async ({params: {iconName}}) => {
   const data = await getAllData();
-  const icon = await getData(iconName as string, {withChildKeys: true});
+  const releases = await getAllReleases();
+  const icon = await getData(iconName as string, releases, {withChildKeys: true});
   const categories = await getAllCategories()
   const similarIcons = findSimilarIcons(data, icon);
 
