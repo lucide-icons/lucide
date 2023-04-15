@@ -3,9 +3,8 @@ import path from "path";
 import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
 import {IconEntity, Release} from "../types";
-import { getContributors } from "./fetchAllContributors";
 import { generateHashedKey } from "./helpers";
-import {filterCommits, getMetadata} from "./fetchAllMetadata";
+import {getMetadata} from "./fetchAllMetadata";
 import {getAllReleases} from "./fetchAllReleases";
 
 const directory = path.join(process.cwd(), "../icons");
@@ -19,7 +18,7 @@ export function getAllNames() {
 }
 
 export interface GetDataOptions {
-  withChildKeys?: boolean
+  withChildKeys?: boolean,
 }
 
 export async function getData(name: string, releases: Release[], { withChildKeys = false }: GetDataOptions | undefined = {}) {
@@ -41,7 +40,6 @@ export async function getData(name: string, releases: Release[], { withChildKeys
     }
   ) as IconNode
 
-  const contributors = await getContributors(name);
   const metadata = await getMetadata(name, releases);
   if ('commits' in metadata) {
     delete metadata['commits'];
@@ -51,8 +49,8 @@ export async function getData(name: string, releases: Release[], { withChildKeys
     name,
     tags,
     categories,
-    contributors,
     iconNode,
+    contributors: metadata.contributors,
     createdRelease: metadata.createdRelease ?? null,
     changedRelease: metadata.changedRelease ?? null,
     created: metadata.created ?? null,

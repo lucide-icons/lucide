@@ -6,10 +6,11 @@ import GithubApi from './githubApi';
 import NextCache from './nextCache';
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];
+const iconCacheVersion = '20230415';
 
 function getContentHashOfFile(path) {
   return new Promise<string>((resolve, reject) => {
-    const hash = crypto.createHash('sha256');
+    const hash = crypto.createHmac('sha256', iconCacheVersion);
     const stream = fs.createReadStream(path);
     stream.on('error', err => reject(err));
     stream.on('data', chunk => hash.update(chunk));

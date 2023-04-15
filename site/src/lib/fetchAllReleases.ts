@@ -19,7 +19,7 @@ export const getAllReleases = async () => {
   }
 }
 
-const fetchAllReleases = async () => {
+export const fetchAllReleases = async () => {
   try {
     return await GithubApi.getAll('/releases', {per_page: 100});
   } catch (error) {
