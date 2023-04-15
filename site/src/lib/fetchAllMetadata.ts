@@ -78,7 +78,14 @@ export async function getMetadata(name, releases: Release[]) {
       };
     });
   } catch (error) {
-    throw new Error(error);
+    console.error(`Could not fetch metadata for icon "${name}"`, error);
+    return {
+      createdRelease: null,
+      changedRelease: null,
+      created: null,
+      changed: null,
+      contributors: [],
+    };
   }
 }
 
