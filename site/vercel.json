@@ -1,5 +1,11 @@
 {
   "github": {
     "silent": true
+  },
+  "functions": {
+    "api/*.js": {
+      "memory": 64,
+      "maxDuration": 30
+    }
   }
 }
