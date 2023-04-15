@@ -41,16 +41,13 @@ export async function getData(name: string, releases: Release[], { withChildKeys
   ) as IconNode
 
   const metadata = await getMetadata(name, releases);
-  if ('commits' in metadata) {
-    delete metadata['commits'];
-  }
 
   return {
     name,
     tags,
     categories,
     iconNode,
-    contributors: metadata.contributors,
+    contributors: metadata.contributors ?? [],
     createdRelease: metadata.createdRelease ?? null,
     changedRelease: metadata.changedRelease ?? null,
     created: metadata.created ?? null,
