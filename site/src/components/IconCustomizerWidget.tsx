@@ -9,35 +9,30 @@ import {
   MenuItem,
   MenuList,
   Stack,
-  Tooltip, useColorModeValue,
+  Tooltip,
+  useColorModeValue,
   useMultiStyleConfig,
   VisuallyHidden
 } from '@chakra-ui/react';
 import {
-  createLucideIcon,
   Atom,
   Calendar,
-  ThumbsUp,
-  Cookie,
-  Music,
+  Camera,
   Coins,
+  Cookie,
   Expand as ExpandIcon,
   LucideProps,
+  Music,
   Palette as PaletteIcon,
+  Rocket,
   Scale as ScaleIcon,
   Star,
-  Camera,
-  Rocket
+  ThumbsUp
 } from 'lucide-react';
 import {useMemo, useState} from 'react';
-import {IconEntity} from "../types";
 
-interface IconCustomizerWidgetProps extends BoxProps {
-  icons: IconEntity[];
-}
-
-interface IconCustomizerProperty<T extends string | number> {
-  name: string,
+interface IconCustomizerProperty<T extends string | number = number, P extends 'size' | 'weight' | 'color' = 'size' | 'weight' | 'color'> {
+  name: P,
   icon: (props: LucideProps) => JSX.Element,
   label: string,
   set: (value: T) => void,
@@ -48,10 +43,10 @@ interface IconCustomizerProperty<T extends string | number> {
   }[]
 }
 
-const IconCustomizerWidget = ({...rest}: IconCustomizerWidgetProps) => {
+const IconCustomizerWidget = ({...rest}: BoxProps) => {
   const styles = useMultiStyleConfig('IconCustomizerWidget', {});
-  const icons: {[key: string]: (props: LucideProps) => JSX.Element} = {
-    "calendar": Calendar,
+  const icons: { [key: string]: (props: LucideProps) => JSX.Element } = {
+    'calendar': Calendar,
     'thumbs-up': ThumbsUp,
     'star': Star,
     'camera': Camera,
@@ -62,15 +57,15 @@ const IconCustomizerWidget = ({...rest}: IconCustomizerWidgetProps) => {
     'atom': Atom,
   };
 
-  const [selectedIcon, setIcon] = useState(Object.keys(icons).at(0));
-  const [selectedColor, setColor] = useState('brand');
-  const [selectedSize, setSize] = useState(24);
-  const [selectedWeight, setWeight] = useState(2);
-  const [selectedProperty, setProperty] = useState('size');
+  const [selectedIcon, setIcon] = useState<keyof typeof icons>(Object.keys(icons).at(0));
+  const [selectedColor, setColor] = useState<string>('brand');
+  const [selectedSize, setSize] = useState<number>(24);
+  const [selectedWeight, setWeight] = useState<number>(2);
+  const [selectedProperty, setProperty] = useState<'size' | 'weight' | 'color'>('size');
 
   const sizeMultiplier = 3;
 
-  const customizationOptions: IconCustomizerProperty<number | string>[] = [
+  const customizationOptions: IconCustomizerProperty<any>[] = [
     {
       name: 'size',
       icon: ExpandIcon,
@@ -164,11 +159,22 @@ const IconCustomizerWidget = ({...rest}: IconCustomizerWidgetProps) => {
       selectedProperty,
       setProperty,
     };
-  });
+  }, [
+    selectedIcon,
+    setIcon,
+    selectedColor,
+    setColor,
+    selectedWeight,
+    setWeight,
+    selectedSize,
+    setSize,
+    selectedProperty,
+    setProperty,
+  ]);
 
   const CurrentIcon = icons[memoProps.selectedIcon];
 
-  const getPropertyValueLabel = (property: IconCustomizerProperty<string | number>) => {
+  const getPropertyValueLabel = (property: IconCustomizerProperty<any>) => {
     return property.options.find((option) => option.value === property.value)?.label ?? null;
   }
 
@@ -182,10 +188,10 @@ const IconCustomizerWidget = ({...rest}: IconCustomizerWidgetProps) => {
                 <IconButton variant="ghost"
                             aria-label={iconName}
                             color={iconName == selectedIcon ? 'brand.500' : 'inherit'}
+                            opacity={iconName == selectedIcon ? 1 : .7}
+                            _hover={{opacity: 1}}
                             icon={
-                              <Icon opacity={iconName == selectedIcon ? 1 : .7}
-                                    _hover={{opacity: 1}}
-                              />
+                              <Icon/>
                             }
                             onClick={() => setIcon(iconName)}
                 />

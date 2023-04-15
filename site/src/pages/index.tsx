@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   Hide,
+  Image,
   Link,
   Text,
   Tooltip,

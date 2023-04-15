@@ -2,7 +2,7 @@ import {Flex, FlexProps, useStyleConfig} from '@chakra-ui/react';
 import {ReactNode} from 'react';
 
 interface SectionProps extends FlexProps {
-  variant: 'even'|'odd';
+  variant: 'even'|'odd'|'first';
   children?: ReactNode;
 }
 
