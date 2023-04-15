@@ -306,7 +306,7 @@ const IconDetail = ({
                 key={`${icon.name}-category-${index}`}
                 gap={1}
               >
-                <Icon size={16} key={`${icon.name}-category-${index}-icon`}/>
+                <Icon size={16} key={`${icon.name}-category-${index}-icon`} />
                 {title}
               </Button>
             )

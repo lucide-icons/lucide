@@ -70,7 +70,7 @@ const Section = defineStyleConfig({
   },
   variants: {
     first: (props: StyleFunctionProps) => ({
-      backgroundImage: mode('linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0) 100%)', 'linear-gradient(to bottom, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, 0) 100%)')(props),
+      backgroundImage: mode('linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0) 100%)', 'linear-gradient(to bottom, var(--chakra-colors-gray-DEFAULT) -100%, rgba(255, 255, 255, 0) 100%)')(props),
     }),
     odd: (props: StyleFunctionProps) => ({
       bgColor: props.colorMode === 'dark' ? 'darkgray.DEFAULT' : 'white',
@@ -191,7 +191,7 @@ const theme = extendTheme(
     },
     semanticTokens: {
       sizes: {
-        'container-max-width': '976px',
+        'container-max-width': '1020px',
       },
       colors: {
         'chakra-border-color': {
@@ -249,7 +249,6 @@ const theme = extendTheme(
         },
         variants: {
           iconListItem: (props: StyleFunctionProps) => ({
-            borderWidth: 0,
             rounded: 'lg',
             padding: 2,
             height: 'auto',

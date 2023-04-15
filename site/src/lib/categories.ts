@@ -27,7 +27,7 @@ export async function getData(name: string, icons: IconEntity[]): Promise<Catego
 
 export async function getAllCategories(): Promise<Category[]> {
   const names = getAllCategoryFiles();
-  const icons = await getAllData();
+  const icons = await getAllData({withChildKeys: true});
 
   return Promise.all(names.map((name) => getData(name, icons)));
 }

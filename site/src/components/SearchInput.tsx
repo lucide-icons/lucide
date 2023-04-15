@@ -5,24 +5,23 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
-  Kbd, useBreakpointValue,
-  useColorMode,
+  Kbd,
+  useBreakpointValue,
   useUpdateEffect,
 } from '@chakra-ui/react';
-import { Search as SearchIcon } from 'lucide-react';
-import React, { useEffect, useRef, useState } from 'react';
+import {Search as SearchIcon} from 'lucide-react';
+import React, {useEffect, useRef, useState} from 'react';
 import theme from '../lib/theme';
-import { useDebounce } from '../lib/useDebounce';
-import { useRouterParam } from '../lib/useRouterParam';
+import {useDebounce} from '../lib/useDebounce';
+import {useRouterParam} from '../lib/useRouterParam';
 
 interface SearchInputProps {
   onChange(value: string): void;
+
   count: number;
 }
 
-export const SearchInput = ({ onChange, count }: SearchInputProps) => {
-  const { colorMode } = useColorMode();
-
+export const SearchInput = ({onChange, count}: SearchInputProps) => {
   const [urlValue, setUrlValue] = useRouterParam('search');
 
   const [inputValue, setInputValue] = useState('');
@@ -65,7 +64,7 @@ export const SearchInput = ({ onChange, count }: SearchInputProps) => {
       <InputLeftElement
         children={
           <Icon>
-            <SearchIcon />
+            <SearchIcon/>
           </Icon>
         }
       />

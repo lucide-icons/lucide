@@ -1,12 +1,17 @@
-import { Button, useClipboard } from '@chakra-ui/react';
+import {IconButton, Tooltip, useClipboard} from '@chakra-ui/react';
+import {Check, Copy} from 'lucide-react';
 
-const CopyButton = ({ copyText, buttonText = 'copy', ...props }) => {
+const CopyButton = ({copyText, buttonText = 'Copy to clipboard', ...props}) => {
   const { hasCopied, onCopy } = useClipboard(copyText);
 
   return (
-    <Button onClick={onCopy} {...props} variant="solid">
-      {hasCopied ? 'copied' : buttonText}
-    </Button>
+    <Tooltip hasArrow label="Copy to clipboard">
+      <IconButton
+        onClick={onCopy} {...props}
+        aria-label={buttonText}
+        icon={(hasCopied ? <Check size={12}/> : <Copy size={12}/>)}
+      />
+    </Tooltip>
   );
 };
 

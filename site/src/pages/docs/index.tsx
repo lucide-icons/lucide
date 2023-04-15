@@ -45,8 +45,7 @@ const DocPage = ({ doc, data }) => {
           { nextPage.map((page) => (
             <Link href={`docs/${page}`} key={page}>
               <Button
-                variant="ghost"
-                borderWidth="1px"
+                variant="subtle"
                 rounded="lg"
                 padding={8}
                 position="relative"

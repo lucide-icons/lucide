@@ -112,16 +112,14 @@ const Package = ({ name, description, icon, shields, source, documentation, thir
               sm: 'flex-start',
             }}
           >
-            <Link as={NextLink} href={documentation} isExternal={!!thirdParty}>
-              <Button variant="ghost" textDecoration="none" leftIcon={<FileText />} my={2}>
-                Documentation
-              </Button>
-            </Link>
-            <Link href={source} isExternal>
-              <Button variant="ghost" textDecoration="none" leftIcon={<Code />} my={2}>
-                Source
-              </Button>
-            </Link>
+            <Button as={'a'} href={documentation} variant="subtle" textDecoration="none" leftIcon={<FileText />} my={2}
+                    target={thirdParty ? '_blank' : null}
+            >
+              Documentation
+            </Button>
+            <Button as={'a'} href={source} target="_blank" variant="subtle" textDecoration="none" leftIcon={<Code />} my={2}>
+              Source
+            </Button>
           </ButtonGroup>
         </Flex>
       </Flex>
