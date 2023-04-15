@@ -6,7 +6,7 @@ export type IconNodes = {[iconName: string]: IconNode};
 
 export function fetchIconNodes(writeCache = true, options?: GetDataOptions): Promise<IconNodes> {
   if (options?.withChildKeys) {
-    return NextCache.resolve('api-icon-nodes-json-with-keys', async () => {
+    return NextCache.resolve('api-icon-nodes-with-keys', async () => {
       return (await getAllData({ withChildKeys : true})).reduce((acc, icon) => {
         acc[icon.name] = icon.iconNode
         return acc;
@@ -14,7 +14,7 @@ export function fetchIconNodes(writeCache = true, options?: GetDataOptions): Pro
     }, writeCache);
   }
 
-  return NextCache.resolve('api-icon-nodes-json', async () => {
+  return NextCache.resolve('api-icon-nodes', async () => {
     return (await getAllData()).reduce((acc, icon) => {
       acc[icon.name] = icon.iconNode
       return acc;
