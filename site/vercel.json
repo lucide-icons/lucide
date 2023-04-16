@@ -4,15 +4,12 @@
   },
   "functions": {
     "api/icon-nodes/index.tsx": {
-      "includeFiles": [
-        ".next/cache/api-icon-nodes.json",
-        ".next/cache/api-icon-nodes-with-keys.json"
-      ]
+      "excludeFiles": "{node_modules/**/*,.next/**/*,.vercel/**/*}",
+      "includeFiles": "{.next/cache/api-icon-nodes.json,.next/cache/api-icon-nodes-with-keys.json}"
     },
     "api/tags/index.tsx": {
-      "includeFiles": [
-        ".next/cache/api-tags.json"
-      ]
+      "excludeFiles": "{node_modules/**/*,.next/**/*,.vercel/**/*}",
+      "includeFiles": "{.next/cache/api-tags.json}"
     }
   }
 }
