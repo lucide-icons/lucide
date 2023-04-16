@@ -7,5 +7,10 @@
   ],
   "categories": [
     "maths"
-  ]
+  ],
+  "contributors": [
+    "danielbayley"
+  ],
+  "createdRelease": "v0.161.0",
+  "changedRelease": "v0.161.0"
 }
