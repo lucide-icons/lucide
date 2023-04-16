@@ -52,9 +52,9 @@ const findRelease = (date, releases: Release[]) => {
 
 export async function getMetadata(name, releases: Release[]) {
   try {
-    const cacheKey = `github-api/${await getIconHash(name)}`;
+    const cacheKey = await getIconHash(name);
     return await NextCache.resolve(cacheKey, async () => {
-      const commits = []; // await fetchCommitsOfIcon(name);
+      const commits = await fetchCommitsOfIcon(name);
 
       let created = null;
       let changed = null;
@@ -89,11 +89,10 @@ export async function getMetadata(name, releases: Release[]) {
   }
 }
 
-export const fetchNumberOfContributors = async () => {
+export const fetchContributors = async () => {
   try {
     return NextCache.resolve(`contributors`, async () => {
-      const response = await GithubApi.get('/contributors', {per_page: 1});
-      return parseInt(response.headers.get('link').match(/page=([0-9]+)>; rel="last"/)[1], 10);
+      return await GithubApi.getAll('/contributors', {per_page: 1});
     });
   } catch (error) {
     throw new Error(error);

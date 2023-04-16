@@ -28,7 +28,7 @@ import useSpacing from "../lib/useSpacing";
 import IconCustomizerWidget from "../components/IconCustomizerWidget";
 import {fetchCurrentRelease} from "../lib/fetchAllReleases";
 import fetchPackages from "../lib/fetchPackages";
-import {fetchNumberOfContributors} from "../lib/fetchAllMetadata";
+import {fetchContributors} from "../lib/fetchAllMetadata";
 import packagesData from '../data/packageData.json';
 import IconList from "../components/IconList";
 
@@ -264,7 +264,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
     })
     .sort((a, b) => a.order - b.order);
 
-  const contributors = await fetchNumberOfContributors();
+  const contributors = (await fetchContributors()).length;
 
   return {
     props: {

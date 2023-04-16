@@ -5,7 +5,7 @@ import {fetchTags} from "../src/lib/fetchTags";
 import {fetchIconNodes} from "../src/lib/fetchIconNodes";
 import NextCache from "../src/lib/nextCache";
 import {fetchAllReleases, getAllReleases} from "../src/lib/fetchAllReleases";
-import {fetchNumberOfContributors} from "../src/lib/fetchAllMetadata";
+import {fetchContributors} from "../src/lib/fetchAllMetadata";
 
 const clearCache = async () => {
   await NextCache.clear('api-tags', 'api-icon-nodes', 'api-icon-nodes-with-keys', 'releases', 'contributors')
@@ -19,7 +19,7 @@ const buildCache = async () => {
     fetchIconNodes(true),
     fetchIconNodes(true, {withChildKeys: true}),
     fetchAllReleases(),
-    fetchNumberOfContributors(),
+    fetchContributors(),
   ]);
 }
 

@@ -2,3 +2,4 @@
 public/docs/images
 .vercel
 .env
+.next-cache
