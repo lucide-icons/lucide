@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "copied",
-    "pasted"
+    "pasted",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "text"
