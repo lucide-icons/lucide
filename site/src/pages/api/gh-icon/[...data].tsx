@@ -41,8 +41,8 @@ export default async function handler(req, res) {
               patternUnits="userSpaceOnUse"
               patternTransform="rotate(45 50 50)"
             >
-              <line stroke="#ff0000" stroke-width=".1" y2="1" />
-              <line stroke="#ff0000" stroke-width=".1" y2="1" />
+              <line stroke="red" strokeWidth={0.1} y2={1} />
+              <line stroke="red" strokeWidth={0.1} y2={1} />
             </pattern>
           </defs>
           <mask id="svg-preview-backdrop-mask-outline" maskUnits="userSpaceOnUse">
