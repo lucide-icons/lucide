@@ -333,16 +333,14 @@ export const getStaticProps: GetStaticProps = async ({params: {iconName}}) => {
   const categories = await getAllCategories()
   const similarIcons = findSimilarIcons(data, icon);
 
-  return {props: {icon, categories, similarIcons}};
+  return {
+    props: {icon, categories, similarIcons},
+    revalidate: 1800,
+  };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await getAllData();
-
   return {
-    paths: data.map(({name: iconName}) => ({
-      params: {iconName},
-    })),
-    fallback: false,
+    fallback: 'blocking',
   };
 };
