@@ -79,6 +79,16 @@ export default async function handler(req, res) {
             stroke="none"
             mask={'url(#svg-preview-backdrop-mask-fill)'}
           />
+          <rect
+            x="0"
+            y="0"
+            width="24"
+            height="24"
+            fill="red"
+            opacity={0.5}
+            stroke="none"
+            mask={'url(#svg-preview-backdrop-mask-fill)'}
+          />
         </>
       );
     }
