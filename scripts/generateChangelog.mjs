@@ -1,5 +1,8 @@
 import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
+import path from 'path';
+import fs from 'fs';
+import {writeFile} from "./helpers.mjs";
 
 const fetchCompareTags = (oldTag) =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
@@ -34,6 +37,21 @@ const fetchCommits = async (file) => {
 
   return { ...file, commits };
 };
+
+const extendIconMetadata = (icon, newTag) => {
+  const iconJsonPath = path.join('icons', `${icon.name}.json`);
+  const iconJson = JSON.parse(fs.readFileSync(iconJsonPath));
+  iconJson.contributors = iconJson.contributors || [];
+  if (!iconJson.contributors.includes(icon.author)) {
+    iconJson.contributors.push(icon.author);
+  }
+  iconJson.createdRelease = iconJson.createdRelease || newTag;
+  iconJson.changedRelease = newTag;
+  fs.writeFileSync(
+    iconJsonPath,
+    JSON.stringify(iconJson, null, 2)
+  );
+}
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -78,6 +96,8 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
       })
       .filter(Boolean)
       .filter(({ pullNumber }) => !!pullNumber);
+
+    mappedCommits.map(e => extendIconMetadata(e, cliArguments['new-tag']));
 
     const changelog = topics.map(({ title, filter, template }) => {
       const lines = mappedCommits.filter(filter).map(template);

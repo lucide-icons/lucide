@@ -2,8 +2,8 @@ import fetch, { Headers } from 'node-fetch';
 
 const githubApi = async (endpoint) => {
   const headers = new Headers();
-  const username = 'ericfennis';
-  const password = process.env.GITHUB_API_KEY;
+  const username = process.env['GITHUB_USERNAME'] ?? 'ericfennis';
+  const password = process.env['GITHUB_API_KEY'];
 
   headers.set(
     'Authorization',

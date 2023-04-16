@@ -1,5 +1,5 @@
 {
-  "$id": "https://lucide.dev/icons.schema.json",
+  "$id": "https://lucide.dev/icon.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$vocabulary": {
     "https://json-schema.org/draft/2020-12/vocab/core": true,
@@ -9,6 +9,22 @@
     "https://json-schema.org/draft/2020-12/vocab/meta-data": true,
     "https://json-schema.org/draft/2020-12/vocab/format-annotation": true,
     "https://json-schema.org/draft/2020-12/vocab/content": true
+  },
+  "$defs": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "personal": {
+      "email": {
+        "type": "string",
+        "format": "email"
+      },
+      "birthday": {
+        "type": "string",
+        "format": "date"
+      }
+    }
   },
   "title": "Lucide Icons icon schema",
   "type": "object",
@@ -27,7 +43,31 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "createdRelease": {
+      "type": "string"
+    },
+    "changedRelease": {
+      "type": "string"
     }
   },
+  "required": [
+    "tags",
+    "categories"
+  ],
   "description": "A JSON Schema for icons defined by Lucide Icons."
 }
