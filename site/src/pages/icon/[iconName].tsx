@@ -1,5 +1,6 @@
 import {
   Box,
+  Spinner,
   Button,
   Card,
   CardBody,
@@ -73,6 +74,12 @@ import MobileMenu from "../../components/MobileMenu";
 const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
   const router = useRouter();
   const getIcon = iconName => data.find(({name}) => name === iconName) || {};
+
+  if (router.isFallback) {
+    return (
+      <Spinner />
+    );
+  }
 
   const Icon = createLucideIcon(icon.name, icon.iconNode)
   const currentIcon = useMemo(() => {
@@ -341,6 +348,7 @@ export const getStaticProps: GetStaticProps = async ({params: {iconName}}) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
+    paths: [],
     fallback: 'blocking',
-  };
+  }
 };
