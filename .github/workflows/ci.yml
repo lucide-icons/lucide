@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - icon-metadata-update-hook
     paths:
       - icons/**/*.svg
 
