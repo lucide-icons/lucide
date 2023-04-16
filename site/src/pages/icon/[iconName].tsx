@@ -76,7 +76,7 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
   const getIcon = iconName => data.find(({name}) => name === iconName) || {};
   const containerSpacing = useSpacing('container');
   const sectionSpacingY = useSpacing('sectionY');
-  const tabOrientation = useBreakpointValue({base: 'vertical', sm: 'horizontal'});
+  const tabOrientation: 'vertical' | 'horizontal' = useBreakpointValue({base: 'vertical', sm: 'horizontal'});
   const containerMaxWidth = useToken('sizes', 'container-max-width');
 
   const Icon = createLucideIcon(icon.name, icon.iconNode)
