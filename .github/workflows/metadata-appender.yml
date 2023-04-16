@@ -1,9 +1,12 @@
 name: Add Changed Icons comment
 
 on:
-  pull_request_target:
+  push:
+    branches:
+      - main
+      - icon-metadata-update-hook
     paths:
-      - 'icons/*.svg'
+      - icons/**/*.svg
 
 permissions:
   pull-requests: write
