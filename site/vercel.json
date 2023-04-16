@@ -1,5 +1,10 @@
 {
   "github": {
     "silent": true
+  },
+  "functions": {
+    "api/icon-nodes": {
+
+    }
   }
 }

@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import {fetchIconNodes} from '../../../lib/fetchIconNodes';
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   const params = request.query
@@ -11,6 +10,8 @@ export default async function handler(request: NextApiRequest, response: NextApi
     )
     .status(200)
     .json(
-      await fetchIconNodes(false, params)
+      {
+        debug: 'Debugging API path'
+      }
     );
 }
