@@ -1,6 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "diameter",
+    "zero",
+    "Ø",
+    "null",
+    "nothing",
     "cancel",
     "ban",
     "no",
@@ -10,6 +15,6 @@
     "error"
   ],
   "categories": [
-    "account"
+    "shapes"
   ]
 }
