@@ -3,11 +3,11 @@
     "silent": true
   },
   "functions": {
-    "api/icon-nodes.ts": {
+    "api/icon-nodes.js": {
       "excludeFiles": "{node_modules/**/*,.next/**/*,.vercel/**/*}",
       "includeFiles": "{.next/cache/api-icon-nodes.json,.next/cache/api-icon-nodes-with-keys.json}"
     },
-    "api/tags.ts": {
+    "api/tags.js": {
       "excludeFiles": "{node_modules/**/*,.next/**/*,.vercel/**/*}",
       "includeFiles": "{.next/cache/api-tags.json}"
     }
