@@ -54,7 +54,7 @@ export async function getMetadata(name, releases: Release[]) {
   try {
     const cacheKey = await getIconHash(name);
     return await NextCache.resolve(cacheKey, async () => {
-      const commits = await fetchCommitsOfIcon(name);
+      const commits = []; // await fetchCommitsOfIcon(name);
 
       let created = null;
       let changed = null;

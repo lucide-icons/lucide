@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 
-const cacheDir = path.join(process.cwd(), '.next-cache');
+const cacheDir = path.join(process.cwd(), '.next/cache/app-cache');
 const cachePath = (cacheKey: string) => path.join(cacheDir, `${cacheKey}.json`);
 
 type AtomicCacheable = object|string|number|boolean|null;
