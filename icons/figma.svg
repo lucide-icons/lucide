@@ -9,7 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <circle cx="15.5" cy="12.5" r="3.5"/>
-  <rect x="5" y="2" width="14" height="7" rx="3.5"/>
-  <path d="M12 2v17.5A3.5 3.5 0 1 1 8.5 16H12 8.5a3.5 3.5 0 0 1 0-7"/>
+  <circle cx="15.5" cy="12.5" r="3.5" />
+  <rect x="5" y="2" width="14" height="7" rx="3.5" />
+  <path d="M12 2v17.5A3.5 3.5 0 1 1 8.5 16H12 8.5a3.5 3.5 0 0 1 0-7" />
 </svg>
