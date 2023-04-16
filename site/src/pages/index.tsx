@@ -16,10 +16,9 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import IconDetailOverlay from '../components/IconDetailOverlay';
-import {useRouter} from 'next/router';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
-import React, {useMemo} from 'react';
+import React from 'react';
 import {GetStaticPropsResult, NextPage} from 'next';
 import {Category, IconEntity} from '../types';
 import {getAllCategories} from 'src/lib/categories';
@@ -48,6 +47,9 @@ const HomePage: NextPage<HomePageProps> = ({
                                              currentVersion,
                                              contributors
                                            }) => {
+  const containerSpacing = useSpacing('container');
+  const sectionSpacingY = useSpacing('sectionY');
+  const containerMaxWidth = useToken('sizes', 'container-max-width');
   return (
     <Layout>
       <MobileMenu/>
@@ -69,12 +71,12 @@ const HomePage: NextPage<HomePageProps> = ({
           />
           <Box className="bg-blurrer"/>
         </Hide>
-        <Flex maxW={useToken('sizes', 'container-max-width')}>
+        <Flex maxW={containerMaxWidth}>
           <Box maxW={{base: '100%', md: '75%', lg: '50%'}}
                w="full"
                textAlign={{base: 'center', md: 'left'}}
-               px={useSpacing('container')}
-               py={useSpacing('sectionY')}
+               px={containerSpacing}
+               py={sectionSpacingY}
           >
             <Heading as="h2" variant="brandSmallCaps">Why choose Lucide?</Heading>
             <Heading as="h3">Simple to use</Heading>
@@ -126,11 +128,11 @@ const HomePage: NextPage<HomePageProps> = ({
                backgroundRepeat="repeat"
                backgroundSize="64rem"
                backgroundAttachment="fixed">
-        <Box maxW={useToken('sizes', 'container-max-width')}
+        <Box maxW={containerMaxWidth}
              w="full"
              textAlign={{base: 'center', md: 'left'}}
-             px={useSpacing('container')}
-             py={useSpacing('sectionY')}
+             px={containerSpacing}
+             py={sectionSpacingY}
         >
           <Heading variant="brandSmallCaps">What's new?</Heading>
           <Heading as="h3">Our latest icons</Heading>
@@ -149,11 +151,11 @@ const HomePage: NextPage<HomePageProps> = ({
         </Box>
       </Section>
       <Section variant="odd">
-        <Flex maxW={useToken('sizes', 'container-max-width')}
+        <Flex maxW={containerMaxWidth}
               w="full"
-              px={useSpacing('container')}
-              py={useSpacing('sectionY')}
-              gap={useSpacing('container')}
+              px={containerSpacing}
+              py={sectionSpacingY}
+              gap={containerSpacing}
               direction={{base: 'column', md: 'row'}}
         >
           <Box textAlign={{base: 'center', md: 'left'}} w={{base: '100%', md: '33%', lg: '50%'}}>
@@ -174,11 +176,11 @@ const HomePage: NextPage<HomePageProps> = ({
                backgroundRepeat="no-repeat"
           />
         </Hide>
-        <Flex maxW={useToken('sizes', 'container-max-width')}
+        <Flex maxW={containerMaxWidth}
               w="full"
-              px={useSpacing('container')}
-              py={useSpacing('sectionY')}
-              gap={useSpacing('container')}
+              px={containerSpacing}
+              py={sectionSpacingY}
+              gap={containerSpacing}
               direction={{base: 'column', md: 'row'}}
               justify={{base: 'flex-start', md: 'flex-end'}}
         >
@@ -212,11 +214,11 @@ const HomePage: NextPage<HomePageProps> = ({
                backgroundRepeat="no-repeat"
           />
         </Hide>
-        <Flex maxW={useToken('sizes', 'container-max-width')}
+        <Flex maxW={containerMaxWidth}
               w="full"
-              px={useSpacing('container')}
-              py={useSpacing('sectionY')}
-              gap={useSpacing('container')}
+              px={containerSpacing}
+              py={sectionSpacingY}
+              gap={containerSpacing}
               direction={{base: 'column', md: 'row'}}
         >
           <Box textAlign={{base: 'center', md: 'left'}} w={{base: '100%', md: '50%'}}>

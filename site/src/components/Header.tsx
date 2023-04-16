@@ -25,6 +25,8 @@ const Header = ({ data, currentVersion, contributors }: HeaderProps) => {
     );
   };
 
+  const containerSpacing = useSpacing('container');
+
   return (
     <Box maxW="1250px" mx="auto">
       <Flex direction="column" align="center" justify="center" py={12}>
@@ -51,7 +53,7 @@ const Header = ({ data, currentVersion, contributors }: HeaderProps) => {
           direction={['column', 'row']}
           textTransform="uppercase"
           fontWeight={200}
-          mt={useSpacing('container')}
+          mt={containerSpacing}
           align="center"
           justify="center"
         >

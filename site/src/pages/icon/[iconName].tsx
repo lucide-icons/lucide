@@ -74,12 +74,10 @@ import MobileMenu from "../../components/MobileMenu";
 const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
   const router = useRouter();
   const getIcon = iconName => data.find(({name}) => name === iconName) || {};
-
-  if (router.isFallback) {
-    return (
-      <Spinner />
-    );
-  }
+  const containerSpacing = useSpacing('container');
+  const sectionSpacingY = useSpacing('sectionY');
+  const tabOrientation = useBreakpointValue({base: 'vertical', sm: 'horizontal'});
+  const containerMaxWidth = useToken('sizes', 'container-max-width');
 
   const Icon = createLucideIcon(icon.name, icon.iconNode)
   const currentIcon = useMemo(() => {
@@ -88,6 +86,12 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
     }
     return getIcon(router.query.iconName);
   }, [router.query]);
+
+  if (router.isFallback) {
+    return (
+      <Spinner />
+    );
+  }
 
   const gridProps = {
     templateAreas: [
@@ -112,22 +116,22 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
       <MobileMenu/>
       <IconDetailOverlay categories={categories}/>
       <Section variant='odd'>
-        <Flex maxW={useToken('sizes', 'container-max-width')}
+        <Flex maxW={containerMaxWidth}
               w="full"
-              px={useSpacing('container')}
-              py={useSpacing('sectionY')}
-              gap={useSpacing('container')}
+              px={containerSpacing}
+              py={sectionSpacingY}
+              gap={containerSpacing}
               direction={{base: 'column', md: 'row'}}
         >
           <IconDetail categories={categories} icon={currentIcon}/>
         </Flex>
       </Section>
       <Section variant='even'>
-        <Flex maxW={useToken('sizes', 'container-max-width')}
+        <Flex maxW={containerMaxWidth}
               w="full"
-              px={useSpacing('container')}
-              py={useSpacing('sectionY')}
-              gap={useSpacing('container')}
+              px={containerSpacing}
+              py={sectionSpacingY}
+              gap={containerSpacing}
               direction={{base: 'column'}}
         >
 
@@ -207,7 +211,7 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
                 <CardBody>
                   <Tabs
                     size='sm' defaultIndex={2} colorScheme='brand'
-                    orientation={useBreakpointValue({base: 'vertical', sm: 'horizontal'})}
+                    orientation={tabOrientation}
                   >
                     <TabList>
                       <Tab gap={1}>
@@ -302,11 +306,11 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
           </Grid>
         </Flex>
         <Divider></Divider>
-        <Flex maxW={useToken('sizes', 'container-max-width')}
+        <Flex maxW={containerMaxWidth}
               w="full"
-              px={useSpacing('container')}
-              py={useSpacing('sectionY')}
-              gap={useSpacing('container')}
+              px={containerSpacing}
+              py={sectionSpacingY}
+              gap={containerSpacing}
               direction={{base: 'column'}}
         >
 
