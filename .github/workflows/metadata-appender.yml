@@ -17,9 +17,6 @@ jobs:
         with:
           node-version: 16
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - uses: actions/download-artifact@v2
       - name: Get changed files
         id: changed-files
