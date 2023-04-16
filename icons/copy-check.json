@@ -3,9 +3,11 @@
   "tags": [
     "clone",
     "duplicate",
+    "done",
     "multiple"
   ],
   "categories": [
-    "text"
+    "text",
+    "notifications"
   ]
 }

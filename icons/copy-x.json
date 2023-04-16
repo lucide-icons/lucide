@@ -1,11 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "clone",
-    "duplicate",
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "clear",
     "multiple"
   ],
   "categories": [
-    "text"
+    "notifications"
   ]
 }
