@@ -178,9 +178,8 @@ const SvgPreview = React.forwardRef<
   {
     src: string | ReturnType<typeof getPaths>;
     showGrid?: boolean;
-    backdrop?: string;
   } & React.SVGProps<SVGSVGElement>
->(({ src, backdrop, children, showGrid = false, ...props }, ref) => {
+>(({ src, children, showGrid = false, ...props }, ref) => {
   const paths = typeof src === 'string' ? getPaths(src) : src;
 
   const darkModeCss = `@media screen and (prefers-color-scheme: dark) {
@@ -205,14 +204,6 @@ const SvgPreview = React.forwardRef<
       {...props}
     >
       <style>{darkModeCss}</style>
-      {backdrop && (
-        <g
-          stroke="red"
-          strokeOpacity={0.5}
-          className="svg-preview-backdrop-group"
-          dangerouslySetInnerHTML={{ __html: backdrop.replace(/<svg[^>]*>|<\/svg>/g, '') }}
-        />
-      )}
       {showGrid && <Grid strokeWidth={0.1} stroke="#777" strokeOpacity={0.3} radius={1} />}
       <Shadow paths={paths} strokeWidth={4} stroke="#777" radius={1} strokeOpacity={0.15} />
       <ColoredPath
