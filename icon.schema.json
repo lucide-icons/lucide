@@ -10,22 +10,6 @@
     "https://json-schema.org/draft/2020-12/vocab/format-annotation": true,
     "https://json-schema.org/draft/2020-12/vocab/content": true
   },
-  "$defs": {
-    "name": {
-      "type": "string",
-      "minLength": 1
-    },
-    "personal": {
-      "email": {
-        "type": "string",
-        "format": "email"
-      },
-      "birthday": {
-        "type": "string",
-        "format": "date"
-      }
-    }
-  },
   "title": "Lucide Icons icon schema",
   "type": "object",
   "properties": {
