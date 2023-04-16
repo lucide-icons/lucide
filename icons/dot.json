@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "interpunct",
+    "interpoint",
+    "middot",
+    "step",
+    "punctuation",
+    "characters",
+    "font",
+    "typography",
+    "type",
+    "text",
+    "center"
+  ],
+  "categories": [
+    "shapes",
+    "text"
+  ]
+}
