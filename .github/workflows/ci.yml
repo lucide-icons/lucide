@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'karsa-mistmere/lucide'
 
     runs-on: ubuntu-latest
 
@@ -82,8 +82,7 @@ jobs:
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
           commit -m ":package: Add metadata to ${{ steps.changed-files.outputs.all_changed_files }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push
-        # origin HEAD:main
+          git push origin HEAD:main
 
       - name: Release
         uses: softprops/action-gh-release@v1
