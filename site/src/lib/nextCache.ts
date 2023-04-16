@@ -8,7 +8,7 @@ type AtomicCacheable = object|string|number|boolean|null;
 type Cacheable = AtomicCacheable|AtomicCacheable[];
 
 if (!fs.existsSync(cacheDir)) {
-  fs.mkdirSync(cacheDir)
+  fs.mkdirSync(cacheDir, { recursive: true })
 }
 
 function read<T extends Cacheable>(cacheKey: string): T {
