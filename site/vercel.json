@@ -1,11 +1,5 @@
 {
   "github": {
     "silent": true
-  },
-  "functions": {
-    "api/icon-nodes": {
-      "memory": 256,
-      "maxDuration": 30
-    }
   }
 }

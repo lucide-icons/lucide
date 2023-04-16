@@ -48,13 +48,6 @@ const HomePage: NextPage<HomePageProps> = ({
                                              currentVersion,
                                              contributors
                                            }) => {
-  const router = useRouter();
-  const getIcon = iconName => data.find(({name}) => name === iconName);
-
-  const currentIcon = useMemo(() => {
-    return getIcon(router.query.iconName)
-  }, [router.query])
-
   return (
     <Layout>
       <MobileMenu/>
