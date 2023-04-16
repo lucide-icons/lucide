@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "done"
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "notifications"
