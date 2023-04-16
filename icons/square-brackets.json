@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "code",
+    "token",
+    "array",
+    "list"
+  ],
+  "categories": [
+    "development",
+    "files"
+  ]
+}
