@@ -6,7 +6,13 @@
     "letter",
     "subscribe",
     "delivered",
-    "success"
+    "success",
+    "read",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "mail"
