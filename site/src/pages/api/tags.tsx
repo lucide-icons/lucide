@@ -1,4 +1,4 @@
-import {fetchTags} from '../../../lib/fetchTags';
+import {fetchTags} from '../../lib/fetchTags';
 
 export default async function handler(req, res) {
   res.setHeader(

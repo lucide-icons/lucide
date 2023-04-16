@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import {fetchIconNodes} from '../../../lib/fetchIconNodes';
+import {fetchIconNodes} from '../../lib/fetchIconNodes';
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   const params = request.query
