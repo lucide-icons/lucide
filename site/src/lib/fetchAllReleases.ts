@@ -15,7 +15,8 @@ export const getAllReleases = async () => {
       url: data.url,
     }));
   } catch (error) {
-    throw new Error(error);
+    console.error('Could not fetch releases.', error);
+    return [];
   }
 }
 
