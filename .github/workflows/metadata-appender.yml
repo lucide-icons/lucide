@@ -1,0 +1,40 @@
+name: Add Changed Icons comment
+
+on:
+  pull_request_target:
+    paths:
+      - 'icons/*.svg'
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  add-changed-icons-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - uses: actions/download-artifact@v2
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: icons/*.svg
+      - name: Add contributors and release information to JSON files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo $file
+          done
+#      - name: Commit package.jsons
+#        run: |
+#          git add packages/*/package.json packages/lucide-flutter/pubspec.yaml
+#          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+#            commit -m ":package: Add contributors to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+#          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+#          git push origin HEAD:main
