@@ -28,13 +28,15 @@ const topics = [
   },
 ];
 
-const fetchCommits = async (file) => {
-  const commits = await githubApi(
-    `https://api.github.com/repos/lucide-icons/lucide/commits?path=${file.filename}`,
-  );
+const fetchCommits = (repository) => (
+  async (file) => {
+    const commits = await githubApi(
+      `https://api.github.com/repos/${repository}/commits?path=${file.filename}`,
+    );
 
-  return { ...file, commits };
-};
+    return { ...file, commits };
+  }
+);
 
 const updateIconReleaseCache = (mappedCommits, newTag) => {
   const releaseCachePath = 'icon-releases.json';
@@ -72,7 +74,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
       ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
     );
 
-    const commits = await Promise.all(changedFiles.map(fetchCommits));
+    const commits = await Promise.all(changedFiles.map(fetchCommits(cliArguments['repository'])));
 
     if (!commits.length) {
       throw new Error('No commits found');
