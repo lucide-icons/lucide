@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "pending",
+    "dot",
+    "progress",
+    "issue",
+    "draft",
+    "code",
+    "version control"
+  ],
+  "categories": [
+    "development",
+    "coding",
+    "shapes"
+  ]
+}
