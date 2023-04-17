@@ -36,6 +36,14 @@ const semverMax = (a, b) => {
   return semver.gt(a, b) ? a : b;
 }
 
+const maxDate = (a, b) => {
+  if (!a) return new Date(b);
+  if (!b) return new Date(a);
+  const aDate = new Date(a).toISOString();
+  const bDate = new Date(b).toISOString();
+  return aDate > bDate ? aDate : bDate;
+}
+
 const updateIconReleaseCache = async (iconName, releases) => {
   const {commits} = await fetchCommits({filename: `icons/${iconName}.svg`});
   for (let commit of commits) {
@@ -48,7 +56,7 @@ const updateIconReleaseCache = async (iconName, releases) => {
     if (release) {
       releaseCache[iconName].createdRelease = semverMin(releaseCache[iconName].createdRelease, release.version);
       releaseCache[iconName].changedRelease = semverMax(releaseCache[iconName].changedRelease, release.version);
-      releaseCache[iconName].updated = release.date;
+      releaseCache[iconName].updated = maxDate(releaseCache[iconName].updated, commit.commit?.author?.date);
     }
   }
 };
@@ -77,16 +85,20 @@ const findRelease = (date, releases) => {
   return closestRelease;
 }
 
+const latestCommitDate = async (fileName) => {
+  return new Date((await simpleGit().raw('log', '--format=%cI', path.join(ICONS_DIR, fileName)))
+    .trim().split(/\n/).at(0)).toISOString();
+}
 const iconChanged = async (iconName) => {
   if (!(iconName in releaseCache)) {
     return true;
   }
-  const svgCommits = await simpleGit().log(path.join(ICONS_DIR, `${iconName}.svg`));
-  if (releaseCache[iconName].date < svgCommits.latest.date) {
+  if (!releaseCache[iconName].updated) {
     return true;
   }
-  const jsonCommits = await simpleGit().log(path.join(ICONS_DIR, `${iconName}.svg`));
-  if (releaseCache[iconName].date < jsonCommits.latest.date) {
+  const latestSvgCommitDate = await latestCommitDate(`${iconName}.svg`);
+  if (releaseCache[iconName].updated < latestSvgCommitDate) {
+    console.log(releaseCache[iconName].updated, latestSvgCommitDate);
     return true;
   }
   return false;
@@ -100,10 +112,6 @@ try {
     } else {
       console.log(`${iconName} is up to date.`);
     }
-    fs.writeFileSync(
-      releaseCachePath,
-      JSON.stringify(releaseCache, null, 2)
-    );
   }
 } catch (error) {
   console.error(error);

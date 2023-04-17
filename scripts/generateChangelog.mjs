@@ -50,7 +50,7 @@ const updateIconReleaseCache = (mappedCommits, newTag) => {
     }
     releaseCache[icon.name].createdRelease = releaseCache[icon.name].createdRelease || newTag;
     releaseCache[icon.name].changedRelease = newTag;
-    releaseCache[icon.name].updated = icon.date;
+    releaseCache[icon.name].updated = icon.date ? new Date(icon.date).toISOString() : null;
   });
 
   fs.writeFileSync(
