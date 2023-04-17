@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "x",
+    "unidentified",
+    "unknown",
+    "anonymous",
+    "enigma"
+  ],
+  "categories": [
+    "account",
+    "social"
+  ]
+}
