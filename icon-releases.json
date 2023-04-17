@@ -38,11 +38,11 @@
     "contributors": [
       "jguddas",
       "ericfennis",
-      "mittalyashu"
+      "mittalyashu",
+      "danielbayley"
     ],
     "createdRelease": "v0.14.0",
-    "changedRelease": "v0.146.0",
-    "updated": "2021-02-22T20:33:43+01:00"
+    "changedRelease": "v0.159.0"
   },
   "alarm-clock-off": {
     "contributors": [
@@ -1098,11 +1098,11 @@
   },
   "book-open-check": {
     "contributors": [
-      "schmidt-oliver"
+      "schmidt-oliver",
+      "danielbayley"
     ],
     "createdRelease": "v0.90.0",
-    "changedRelease": "v0.90.0",
-    "updated": "2022-09-20T08:12:10+02:00"
+    "changedRelease": "v0.159.0"
   },
   "book-open": {
     "contributors": [
@@ -1323,20 +1323,20 @@
   "calendar-check-2": {
     "contributors": [
       "ericfennis",
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "danielbayley"
     ],
     "createdRelease": "v0.51.0",
-    "changedRelease": "v0.132.0",
-    "updated": "2022-06-01T22:47:01+02:00"
+    "changedRelease": "v0.159.0"
   },
   "calendar-check": {
     "contributors": [
       "ericfennis",
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "danielbayley"
     ],
     "createdRelease": "v0.51.0",
-    "changedRelease": "v0.132.0",
-    "updated": "2022-06-01T22:47:01+02:00"
+    "changedRelease": "v0.159.0"
   },
   "calendar-clock": {
     "contributors": [
@@ -1546,48 +1546,48 @@
   },
   "check-check": {
     "contributors": [
-      "ericfennis"
+      "ericfennis",
+      "danielbayley"
     ],
     "createdRelease": "v0.96.0",
-    "changedRelease": "v0.96.0",
-    "updated": "2022-11-01T17:30:41+01:00"
+    "changedRelease": "v0.159.0"
   },
   "check-circle-2": {
     "contributors": [
       "ericfennis",
-      "mittalyashu"
+      "mittalyashu",
+      "danielbayley"
     ],
     "createdRelease": "v0.15.14",
-    "changedRelease": "v0.18.0",
-    "updated": "2021-05-18T21:09:58+02:00"
+    "changedRelease": "v0.159.0"
   },
   "check-circle": {
     "contributors": [
       "colebemis",
       "ericfennis",
-      "csandman"
+      "csandman",
+      "danielbayley"
     ],
     "createdRelease": "v0.13.0",
-    "changedRelease": "v0.18.0",
-    "updated": "2020-08-19T21:58:57+02:00"
+    "changedRelease": "v0.159.0"
   },
   "check-square": {
     "contributors": [
       "colebemis",
       "ericfennis",
-      "csandman"
+      "csandman",
+      "danielbayley"
     ],
     "createdRelease": "v0.13.0",
-    "changedRelease": "v0.18.0",
-    "updated": "2020-08-19T21:58:57+02:00"
+    "changedRelease": "v0.159.0"
   },
   "check": {
     "contributors": [
-      "colebemis"
+      "colebemis",
+      "danielbayley"
     ],
     "createdRelease": "v0.1.0",
-    "changedRelease": "v0.1.0",
-    "updated": "2020-08-19T21:58:57+02:00"
+    "changedRelease": "v0.159.0"
   },
   "chef-hat": {
     "contributors": [
@@ -1855,8 +1855,7 @@
       "karsa-mistmere"
     ],
     "createdRelease": "v0.84.0",
-    "changedRelease": "v0.155.0",
-    "updated": "2022-07-31T19:40:16+02:00"
+    "changedRelease": "v0.159.0"
   },
   "clapperboard": {
     "contributors": [
@@ -1870,11 +1869,11 @@
     "contributors": [
       "ericfennis",
       "karsa-mistmere",
-      "mittalyashu"
+      "mittalyashu",
+      "danielbayley"
     ],
     "createdRelease": "v0.15.12",
-    "changedRelease": "v0.132.0",
-    "updated": "2021-05-16T12:32:45+02:00"
+    "changedRelease": "v0.159.0"
   },
   "clipboard-copy": {
     "contributors": [
@@ -3163,19 +3162,19 @@
   "file-check-2": {
     "contributors": [
       "karsa-mistmere",
-      "ericfennis"
+      "ericfennis",
+      "danielbayley"
     ],
     "createdRelease": "v0.18.0",
-    "changedRelease": "v0.67.0",
-    "updated": "2020-11-19T22:06:13+01:00"
+    "changedRelease": "v0.159.0"
   },
   "file-check": {
     "contributors": [
-      "ericfennis"
+      "ericfennis",
+      "danielbayley"
     ],
     "createdRelease": "v0.18.0",
-    "changedRelease": "v0.18.0",
-    "updated": "2020-11-19T22:06:13+01:00"
+    "changedRelease": "v0.159.0"
   },
   "file-clock": {
     "contributors": [
@@ -3762,11 +3761,11 @@
   },
   "folder-check": {
     "contributors": [
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "danielbayley"
     ],
     "createdRelease": "v0.67.0",
-    "changedRelease": "v0.67.0",
-    "updated": "2022-06-20T16:20:10+02:00"
+    "changedRelease": "v0.159.0"
   },
   "folder-clock": {
     "contributors": [
@@ -5005,11 +5004,11 @@
   },
   "list-checks": {
     "contributors": [
-      "ericfennis"
+      "ericfennis",
+      "danielbayley"
     ],
     "createdRelease": "v0.132.0",
-    "changedRelease": "v0.132.0",
-    "updated": "2020-11-19T22:06:13+01:00"
+    "changedRelease": "v0.159.0"
   },
   "list-end": {
     "contributors": [
@@ -5175,11 +5174,11 @@
   },
   "mail-check": {
     "contributors": [
-      "karsa-mistmere"
+      "karsa-mistmere",
+      "danielbayley"
     ],
     "createdRelease": "v0.80.0",
-    "changedRelease": "v0.80.0",
-    "updated": "2022-07-20T21:20:33+02:00"
+    "changedRelease": "v0.159.0"
   },
   "mail-minus": {
     "contributors": [
@@ -5503,11 +5502,11 @@
   "minus": {
     "contributors": [
       "colebemis",
-      "ericfennis"
+      "ericfennis",
+      "danielbayley"
     ],
     "createdRelease": "v0.132.0",
-    "changedRelease": "v0.132.0",
-    "updated": "2020-08-19T21:58:57+02:00"
+    "changedRelease": "v0.159.0"
   },
   "monitor-off": {
     "contributors": [
@@ -5835,11 +5834,11 @@
     "contributors": [
       "ericfennis",
       "karsa-mistmere",
-      "Reund0"
+      "Reund0",
+      "danielbayley"
     ],
     "createdRelease": "v0.17.1",
-    "changedRelease": "v0.132.0",
-    "updated": "2022-02-22T21:51:48+01:00"
+    "changedRelease": "v0.159.0"
   },
   "package-minus": {
     "contributors": [
@@ -6948,11 +6947,11 @@
   "shield-check": {
     "contributors": [
       "ericfennis",
-      "mittalyashu"
+      "mittalyashu",
+      "danielbayley"
     ],
     "createdRelease": "v0.14.0",
-    "changedRelease": "v0.18.0",
-    "updated": "2021-02-22T20:33:43+01:00"
+    "changedRelease": "v0.159.0"
   },
   "shield-close": {
     "contributors": [
@@ -8139,11 +8138,11 @@
       "colebemis",
       "karsa-mistmere",
       "ericfennis",
-      "csandman"
+      "csandman",
+      "danielbayley"
     ],
     "createdRelease": "v0.13.0",
-    "changedRelease": "v0.62.0",
-    "updated": "2020-08-19T21:58:57+02:00"
+    "changedRelease": "v0.159.0"
   },
   "user-cog": {
     "contributors": [
@@ -8238,8 +8237,7 @@
       "karsa-mistmere"
     ],
     "createdRelease": "v0.97.0",
-    "changedRelease": "v0.155.0",
-    "updated": "2022-11-02T16:09:23+01:00"
+    "changedRelease": "v0.159.0"
   },
   "venetian-mask": {
     "contributors": [
@@ -8359,11 +8357,11 @@
   },
   "vote": {
     "contributors": [
-      "ptrgast"
+      "ptrgast",
+      "danielbayley"
     ],
     "createdRelease": "v0.110.0",
-    "changedRelease": "v0.110.0",
-    "updated": "2023-02-07T09:27:06+01:00"
+    "changedRelease": "v0.159.0"
   },
   "wallet": {
     "contributors": [
@@ -8608,5 +8606,26 @@
     "createdRelease": "v0.132.0",
     "changedRelease": "v0.132.0",
     "updated": "2020-08-19T21:58:57+02:00"
+  },
+  "pnpm-lock": {
+    "contributors": [
+      "ericfennis"
+    ],
+    "createdRelease": "v0.159.0",
+    "changedRelease": "v0.159.0"
+  },
+  "generateChangelog": {
+    "contributors": [
+      "Bricklou"
+    ],
+    "createdRelease": "v0.159.0",
+    "changedRelease": "v0.159.0"
+  },
+  "githubApi": {
+    "contributors": [
+      "Bricklou"
+    ],
+    "createdRelease": "v0.159.0",
+    "changedRelease": "v0.159.0"
   }
 }
