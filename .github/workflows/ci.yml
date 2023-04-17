@@ -79,10 +79,12 @@ jobs:
       - name: Commit icon-releases.json
         run: |
           git add icon-releases.json
-          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-          commit -m ":package: Update metadata for release ${{ steps.new-version.outputs.NEW_VERSION }}" --no-verify --allow-empty --quiet
-          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push origin HEAD:main
+          if ! git diff-index --quiet HEAD; then
+            git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":package: Update metadata for release ${{ steps.new-version.outputs.NEW_VERSION }}" --no-verify --quiet
+            git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+            git push origin HEAD:main
+          fi
 
       - name: Release
         uses: softprops/action-gh-release@v1
