@@ -40,7 +40,7 @@ const updateIconReleaseCache = (mappedCommits, newTag) => {
   const releaseCachePath = 'icon-releases.json';
   const releaseCache = JSON.parse(fs.readFileSync(releaseCachePath));
 
-  mappedCommits.map(icon => {
+  mappedCommits.filter(({filename}) => filename.match(iconRegex)).map(icon => {
     releaseCache[icon.name] = releaseCache[icon.name] || {};
     releaseCache[icon.name].contributors = releaseCache[icon.name].contributors || [];
     if (!releaseCache[icon.name].contributors.includes(icon.author)) {

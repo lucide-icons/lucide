@@ -8606,26 +8606,5 @@
     "createdRelease": "v0.132.0",
     "changedRelease": "v0.132.0",
     "updated": "2020-08-19T21:58:57+02:00"
-  },
-  "pnpm-lock": {
-    "contributors": [
-      "ericfennis"
-    ],
-    "createdRelease": "v0.159.0",
-    "changedRelease": "v0.159.0"
-  },
-  "generateChangelog": {
-    "contributors": [
-      "Bricklou"
-    ],
-    "createdRelease": "v0.159.0",
-    "changedRelease": "v0.159.0"
-  },
-  "githubApi": {
-    "contributors": [
-      "Bricklou"
-    ],
-    "createdRelease": "v0.159.0",
-    "changedRelease": "v0.159.0"
   }
 }
