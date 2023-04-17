@@ -80,10 +80,10 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 
     const mappedCommits = commits
       .map(({ commits: [pr], filename, sha, status }) => {
-        const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr.commit.message);
+        const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr?.commit.message);
         const nameRegex = /^\/?(.+\/)*(.+)\.(.+)$/g.exec(filename);
 
-        if (!pr.author) {
+        if (!pr?.author) {
           // Most likely bot commit
           return null;
         }
