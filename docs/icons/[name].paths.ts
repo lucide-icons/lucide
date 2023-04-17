@@ -15,8 +15,11 @@ export function getAllNames() {
 export default {
   paths: async () => {
     const icons = await getAllData()
-    return icons.map(({ name: iconName }) => ({
-      params: { iconName }
-    }))
+    return icons.map((iconData) => {
+
+      return {
+        params: iconData,
+      }
+    })
   }
 }

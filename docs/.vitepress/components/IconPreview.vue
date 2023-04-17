@@ -1,0 +1,60 @@
+<script setup lang="ts">
+import type { IconEntity } from '../types'
+import { computed } from 'vue'
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import CloseButton from './CloseButton.vue';
+
+const props = defineProps<{
+  name: IconEntity['name']
+  iconNode: IconEntity['iconNode']
+}>()
+
+const size = 24
+
+const gridLines = computed(() => Array.from({ length:(size - 1) }))
+
+const iconComponent = computed(() => {
+  if (!props.name || !props.iconNode) return null
+  return createLucideIcon(props.name, props.iconNode)
+})
+</script>
+
+
+<template>
+  <div class="icon-container">
+    <component :is="iconComponent" class="icon-component" />
+    <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
+      <g :key="`grid-${i}`" v-for="(_, i) in gridLines">
+        <line :key="`horizontal-${i}`" :x1="0" :y1="i + 1" :x2="size" :y2="i + 1" />
+        <line :key="`vertical-${i}`" :x1="i + 1" y1="0" :x2="i + 1" :y2="size" />
+      </g>
+    </svg>
+  </div>
+</template>
+
+<style scoped>
+
+.icon-grid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke: var(--vp-c-divider);
+}
+.icon-container {
+  height: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  background: var(--vp-c-bg-alt);
+  border-radius: 8px;
+}
+.icon-component {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  opacity: 0.8;
+}
+</style>

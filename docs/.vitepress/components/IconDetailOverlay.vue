@@ -1,13 +1,9 @@
 <script setup lang="ts">
   import type { IconEntity } from '../types'
   import { ref, computed } from 'vue'
-  import {
-    Dialog,
-    DialogPanel,
-    DialogTitle,
-    DialogDescription,
-  } from '@headlessui/vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import CloseButton from './CloseButton.vue';
+import IconPreview from './IconPreview.vue';
 
   const props = defineProps<{
     icon: IconEntity
@@ -29,27 +25,30 @@ import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
     if (!props.icon) return null
     return createLucideIcon(props.icon.name, props.icon.iconNode)
   })
+
+  const tags = computed(() => {
+    if (!props.icon) return []
+    return props.icon.tags.join(' • ')
+  })
 </script>
 
-<template >
-  <div class="overlay-container" v-if="props.icon">
-    <div class="overlay-panel">
-      <div class="icon-container">
-        <component :is="iconComponent" class="icon-component" />
-        <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
-          <g :key="`grid-${i}`" v-for="(_, i) in gridLines">
-            <line :key="`horizontal-${i}`" :x1="0" :y1="i + 1" :x2="size" :y2="i + 1" />
-            <line :key="`vertical-${i}`" :x1="i + 1" y1="0" :x2="i + 1" :y2="size" />
-          </g>
-        </svg>
-      </div>
-      <div class="icon-info">
-        <h1 class="icon-name">
-          {{ props.icon.name }}
-        </h1>
+<template>
+  <Transition name="drawer">
+    <div class="overlay-container" v-if="props.icon">
+      <div class="overlay-panel">
+        <CloseButton class="close-button" @click="onClose" />
+        <IconPreview :name="props.icon.name" :iconNode="props.icon.iconNode"/>
+        <div class="icon-info">
+          <h1 class="icon-name">
+            {{ props.icon.name }}
+          </h1>
+          <p class="icon-tags">
+            {{ tags }}
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <style scoped>
@@ -98,30 +97,6 @@ import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
   box-shadow: var(--vp-shadow-5);
 }
 
-.icon-container {
-  height: 100%;
-  aspect-ratio: 1/1;
-  position: relative;
-  background: var(--vp-c-bg-alt);
-  border-radius: 8px;
-}
-
-.icon-grid {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  stroke: var(--vp-c-divider);
-}
-
-.icon-component {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-}
-
 .icon-info {
   padding: 0 24px;
 }
@@ -130,8 +105,33 @@ import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
+  margin-bottom: 12px;
 }
 
+.icon-tags {
+  font-size: 16px;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+}
 
+.close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.drawer-enter-active {
+  transition: all 0.2s cubic-bezier(.21,.8,.46,.9);
+}
+
+.drawer-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.drawer-enter-from,
+.drawer-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
 
 </style>
