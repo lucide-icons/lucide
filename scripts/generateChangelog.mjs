@@ -96,7 +96,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
           title: pullNumber && pullNumber[1] ? pullNumber[1].trim() : null,
           pullNumber: pullNumber && pullNumber[2] ? pullNumber[2].trim() : null,
           author: pr.author?.login || 'unknown',
-          date: pr.author?.date,
+          date: pr.commit?.author?.date,
           sha,
           status,
         };
