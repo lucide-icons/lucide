@@ -2,8 +2,8 @@ import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
 import fs from 'fs';
 
-const fetchCompareTags = (oldTag) =>
-  githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
+const fetchCompareTags = (repository, oldTag) =>
+  githubApi(`https://api.github.com/repos/${repository}/compare/${oldTag}...main`);
 
 const iconRegex = /icons\/(.*)\.svg/g;
 const iconTemplate = ({ name, pullNumber, author }) =>
@@ -62,7 +62,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 // eslint-disable-next-line func-names
 (async function () {
   try {
-    const output = await fetchCompareTags(cliArguments['old-tag']);
+    const output = await fetchCompareTags(cliArguments['repository'], cliArguments['old-tag']);
 
     if (output?.files == null) {
       throw new Error('Tag not found!');

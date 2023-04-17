@@ -62,7 +62,7 @@ jobs:
       - name: Create change log
         id: change-log
         run: |
-          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }} --new-tag=${{ steps.new-version.outputs.NEW_VERSION }})
+          CHANGE_LOG=$(pnpm run generate:changelog --repository=$GITHUB_REPOSITORY --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }} --new-tag=${{ steps.new-version.outputs.NEW_VERSION }})
           CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
           CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
           CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
@@ -76,11 +76,11 @@ jobs:
           echo '${{ steps.new-version.outputs.NEW_VERSION }}'
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
-      - name: Commit icon.jsons
+      - name: Commit icon-releases.json
         run: |
-          git add icons/*.json
+          git add icon-releases.json
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-          commit -m ":package: Add metadata to ${{ steps.changed-files.outputs.all_changed_files }}" --no-verify --quiet
+          commit -m ":package: Update metadata for release ${{ steps.new-version.outputs.NEW_VERSION }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
           git push origin HEAD:main
 
