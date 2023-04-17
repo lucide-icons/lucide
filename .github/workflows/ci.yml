@@ -76,11 +76,11 @@ jobs:
           echo '${{ steps.new-version.outputs.NEW_VERSION }}'
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
-      - name: Commit icon-releases.json
+      - name: Commit icon.jsons
         run: |
-          git add icon-releases.json
+          git add icons/*.json
           git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-          commit -m ":package: Update icon release metadata for ${{ steps.new-version.outputs.NEW_VERSION }}" --no-verify --quiet
+          commit -m ":package: Add metadata to ${{ steps.changed-files.outputs.all_changed_files }}" --no-verify --quiet
           git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
           git push origin HEAD:main
 
