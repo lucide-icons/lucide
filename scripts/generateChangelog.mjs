@@ -38,20 +38,26 @@ const fetchCommits = async (file) => {
   return { ...file, commits };
 };
 
-const extendIconMetadata = (icon, newTag) => {
-  const iconJsonPath = path.join('icons', `${icon.name}.json`);
-  const iconJson = JSON.parse(fs.readFileSync(iconJsonPath));
-  iconJson.contributors = iconJson.contributors || [];
-  if (!iconJson.contributors.includes(icon.author)) {
-    iconJson.contributors.push(icon.author);
-  }
-  iconJson.createdRelease = iconJson.createdRelease || newTag;
-  iconJson.changedRelease = newTag;
+const updateIconReleaseCache = (mappedCommits, newTag) => {
+  const releaseCachePath = 'icon-releases.json';
+  const releaseCache = JSON.parse(fs.readFileSync(releaseCachePath));
+
+  mappedCommits.map(icon => {
+    releaseCache[icon.name] = releaseCache[icon.name] || {};
+    releaseCache[icon.name].contributors = releaseCache[icon.name].contributors || [];
+    if (!releaseCache[icon.name].contributors.includes(icon.author)) {
+      releaseCache[icon.name].contributors.push(icon.author);
+    }
+    releaseCache[icon.name].createdRelease = releaseCache[icon.name].createdRelease || newTag;
+    releaseCache[icon.name].changedRelease = newTag;
+    releaseCache[icon.name].updated = icon.date;
+  });
+
   fs.writeFileSync(
-    iconJsonPath,
-    JSON.stringify(iconJson, null, 2)
+    releaseCachePath,
+    JSON.stringify(releaseCache, null, 2)
   );
-}
+};
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -90,6 +96,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
           title: pullNumber && pullNumber[1] ? pullNumber[1].trim() : null,
           pullNumber: pullNumber && pullNumber[2] ? pullNumber[2].trim() : null,
           author: pr.author?.login || 'unknown',
+          date: pr.author?.date,
           sha,
           status,
         };
@@ -97,7 +104,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
       .filter(Boolean)
       .filter(({ pullNumber }) => !!pullNumber);
 
-    mappedCommits.map(e => extendIconMetadata(e, cliArguments['new-tag']));
+    updateIconReleaseCache(mappedCommits, cliArguments['new-tag']);
 
     const changelog = topics.map(({ title, filter, template }) => {
       const lines = mappedCommits.filter(filter).map(template);
