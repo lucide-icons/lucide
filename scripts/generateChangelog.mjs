@@ -1,8 +1,6 @@
 import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
-import path from 'path';
 import fs from 'fs';
-import {writeFile} from "./helpers.mjs";
 
 const fetchCompareTags = (oldTag) =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
