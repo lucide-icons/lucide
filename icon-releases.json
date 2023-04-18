@@ -6444,7 +6444,8 @@
   },
   "rat": {
     "contributors": [
-      "henri42"
+      "henri42",
+      "karsa-mistmere"
     ],
     "createdRelease": "v0.141.0",
     "changedRelease": "v0.141.0",
