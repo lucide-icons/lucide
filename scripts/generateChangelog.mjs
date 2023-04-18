@@ -1,6 +1,7 @@
 import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
 import fs from 'fs';
+import {updateReleaseCacheWithCommit} from "./release-cache/helpers.mjs";
 
 const fetchCompareTags = (repository, oldTag) =>
   githubApi(`https://api.github.com/repos/${repository}/compare/${oldTag}...main`);
@@ -42,16 +43,11 @@ const updateIconReleaseCache = (mappedCommits, newTag) => {
   const releaseCachePath = 'icon-releases.json';
   const releaseCache = JSON.parse(fs.readFileSync(releaseCachePath));
 
-  mappedCommits.filter(({filename}) => filename.match(iconRegex)).map(icon => {
-    releaseCache[icon.name] = releaseCache[icon.name] || {};
-    releaseCache[icon.name].contributors = releaseCache[icon.name].contributors || [];
-    if (!releaseCache[icon.name].contributors.includes(icon.author)) {
-      releaseCache[icon.name].contributors.push(icon.author);
-    }
-    releaseCache[icon.name].createdRelease = releaseCache[icon.name].createdRelease || newTag;
-    releaseCache[icon.name].changedRelease = newTag;
-    releaseCache[icon.name].updated = icon.date ? new Date(icon.date).toISOString() : null;
-  });
+  mappedCommits
+    .filter(({filename}) => filename.match(iconRegex))
+    .map(icon => {
+      updateReleaseCacheWithCommit(releaseCache, icon, newTag);
+    });
 
   fs.writeFileSync(
     releaseCachePath,

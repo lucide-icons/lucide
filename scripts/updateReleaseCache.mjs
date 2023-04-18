@@ -1,9 +1,9 @@
 import githubApi from './githubApi.mjs';
 import fs from 'fs';
-import semver from 'semver';
 import path from 'path';
 import {getCurrentDirPath, readAllMetadata} from "./helpers.mjs";
 import {CleanOptions, simpleGit} from 'simple-git';
+import {releaseCachePath, updateReleaseCacheWithCommit} from "./release-cache/helpers.mjs";
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -17,47 +17,20 @@ const fetchCommits = async (file) => {
   return {...file, commits};
 };
 
-const releaseCachePath = 'icon-releases.json';
-
 let releaseCache = {};
 if (fs.existsSync(releaseCachePath)) {
   releaseCache = JSON.parse(fs.readFileSync(releaseCachePath));
 }
 
-const semverMin = (a, b) => {
-  if (!a || !semver.valid(a)) return b;
-  if (!b || !semver.valid(b)) return a;
-  return semver.gt(a, b) ? b : a;
-}
-
-const semverMax = (a, b) => {
-  if (!a || !semver.valid(a)) return b;
-  if (!b || !semver.valid(b)) return a;
-  return semver.gt(a, b) ? a : b;
-}
-
-const maxDate = (a, b) => {
-  if (!a) return new Date(b);
-  if (!b) return new Date(a);
-  const aDate = new Date(a).toISOString();
-  const bDate = new Date(b).toISOString();
-  return aDate > bDate ? aDate : bDate;
-}
-
 const updateIconReleaseCache = async (iconName, releases) => {
   const {commits} = await fetchCommits({filename: `icons/${iconName}.svg`});
   for (let commit of commits) {
-    releaseCache[iconName] = releaseCache[iconName] || {};
-    releaseCache[iconName].contributors = releaseCache[iconName].contributors || [];
-    if (commit.author?.login && !releaseCache[iconName].contributors.includes(commit.author?.login)) {
-      releaseCache[iconName].contributors.push(commit.author?.login);
-    }
     const release = findRelease(commit.commit?.author?.date, releases);
-    if (release) {
-      releaseCache[iconName].createdRelease = semverMin(releaseCache[iconName].createdRelease, release.version);
-      releaseCache[iconName].changedRelease = semverMax(releaseCache[iconName].changedRelease, release.version);
-      releaseCache[iconName].updated = maxDate(releaseCache[iconName].updated, commit.commit?.author?.date);
-    }
+    updateReleaseCacheWithCommit(releaseCache, {
+      name: iconName,
+      author: commit.author?.login,
+      date: commit.commit?.author?.date
+    }, release.version);
   }
 };
 
