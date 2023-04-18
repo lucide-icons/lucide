@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "electricity",
+    "electronics",
+    "charge",
+    "charging",
+    "battery",
+    "connect"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
