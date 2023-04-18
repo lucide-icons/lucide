@@ -1,14 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "clone",
+    "duplicate",
     "done",
-    "directory",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "multiple"
   ],
   "categories": [
-    "files"
+    "text",
+    "notifications"
   ]
 }

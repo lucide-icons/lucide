@@ -1,11 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "clear",
+    "multiple"
   ],
   "categories": [
     "notifications"

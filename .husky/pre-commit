@@ -3,3 +3,4 @@
 
 pnpm lint-staged
 pnpm checkIcons
+pnpm checkReleaseCache

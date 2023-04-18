@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cancel",
+    "no",
+    "stop",
+    "forbidden",
+    "prohibited",
+    "error"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    "slash"
+  ]
+}

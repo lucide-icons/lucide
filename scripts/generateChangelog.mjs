@@ -1,8 +1,10 @@
 import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
+import fs from 'fs';
+import {updateReleaseCacheWithCommit} from "./release-cache/helpers.mjs";
 
-const fetchCompareTags = (oldTag) =>
-  githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
+const fetchCompareTags = (repository, oldTag) =>
+  githubApi(`https://api.github.com/repos/${repository}/compare/${oldTag}...main`);
 
 const iconRegex = /icons\/(.*)\.svg/g;
 const iconTemplate = ({ name, pullNumber, author }) =>
@@ -27,12 +29,30 @@ const topics = [
   },
 ];
 
-const fetchCommits = async (file) => {
-  const commits = await githubApi(
-    `https://api.github.com/repos/lucide-icons/lucide/commits?path=${file.filename}`,
-  );
+const fetchCommits = (repository) => (
+  async (file) => {
+    const commits = await githubApi(
+      `https://api.github.com/repos/${repository}/commits?path=${file.filename}`,
+    );
 
-  return { ...file, commits };
+    return { ...file, commits };
+  }
+);
+
+const updateIconReleaseCache = (mappedCommits, newTag) => {
+  const releaseCachePath = 'icon-releases.json';
+  const releaseCache = JSON.parse(fs.readFileSync(releaseCachePath));
+
+  mappedCommits
+    .filter(({filename}) => filename.match(iconRegex))
+    .map(icon => {
+      updateReleaseCacheWithCommit(releaseCache, icon, newTag);
+    });
+
+  fs.writeFileSync(
+    releaseCachePath,
+    JSON.stringify(releaseCache, null, 2)
+  );
 };
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
@@ -40,7 +60,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 // eslint-disable-next-line func-names
 (async function () {
   try {
-    const output = await fetchCompareTags(cliArguments['old-tag']);
+    const output = await fetchCompareTags(cliArguments['repository'], cliArguments['old-tag']);
 
     if (output?.files == null) {
       throw new Error('Tag not found!');
@@ -50,7 +70,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
       ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
     );
 
-    const commits = await Promise.all(changedFiles.map(fetchCommits));
+    const commits = await Promise.all(changedFiles.map(fetchCommits(cliArguments['repository'])));
 
     if (!commits.length) {
       throw new Error('No commits found');
@@ -58,10 +78,10 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
 
     const mappedCommits = commits
       .map(({ commits: [pr], filename, sha, status }) => {
-        const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr.commit.message);
+        const pullNumber = /(.*)\((#[0-9]*)\)/gm.exec(pr?.commit.message);
         const nameRegex = /^\/?(.+\/)*(.+)\.(.+)$/g.exec(filename);
 
-        if (!pr.author) {
+        if (!pr?.author) {
           // Most likely bot commit
           return null;
         }
@@ -72,12 +92,15 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
           title: pullNumber && pullNumber[1] ? pullNumber[1].trim() : null,
           pullNumber: pullNumber && pullNumber[2] ? pullNumber[2].trim() : null,
           author: pr.author?.login || 'unknown',
+          date: pr.commit?.author?.date,
           sha,
           status,
         };
       })
       .filter(Boolean)
       .filter(({ pullNumber }) => !!pullNumber);
+
+    updateIconReleaseCache(mappedCommits, cliArguments['new-tag']);
 
     const changelog = topics.map(({ title, filter, template }) => {
       const lines = mappedCommits.filter(filter).map(template);
