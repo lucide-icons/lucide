@@ -2,20 +2,22 @@ import {createContext, useContext, useMemo, useState} from 'react';
 import {IconEntity} from "../types";
 import {useDisclosure} from '@chakra-ui/react';
 
-interface IconDetailOverlayData {
+interface IconDetailOverlayGetData {
   icon: IconEntity | null;
-  setIcon: (open: IconEntity | null) => void,
   isOpen: boolean;
+}
+interface IconDetailOverlaySetData {
+  setIcon: (open: IconEntity | null) => void,
   onOpen: () => void,
   onClose: () => void,
 }
 
-export const IconDetailOverlayGetOptionsContext = createContext<IconDetailOverlayData>({
+export const IconDetailOverlayGetOptionsContext = createContext<IconDetailOverlayGetData>({
   icon: null,
   isOpen: false,
 });
 
-export const IconDetailOverlaySetOptionsContext = createContext<IconDetailOverlayData>({
+export const IconDetailOverlaySetOptionsContext = createContext<IconDetailOverlaySetData>({
   setIcon: () => null,
   onOpen: () => null,
   onClose: () => null,
@@ -80,16 +82,10 @@ export function useIconDetailOverlaySetContext() {
   const context = useContext(IconDetailOverlaySetOptionsContext);
   if (context === undefined) {
     return {
-      icon: null,
-      isOpen: false,
+      setIcon: () => null,
+      onClose: () => null,
+      onOpen: () => null,
     };
   }
   return context;
-}
-
-export function useIconDetailOverlayContext() {
-  return {
-    ...useIconDetailOverlayGetContext(),
-    ...useIconDetailOverlaySetContext(),
-  };
 }

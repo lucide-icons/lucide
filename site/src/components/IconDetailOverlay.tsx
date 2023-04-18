@@ -1,9 +1,12 @@
 import {Box, Flex, Slide, useColorMode} from '@chakra-ui/react';
 import theme from '../lib/theme';
-import {memo, useEffect} from 'react';
+import {memo} from 'react';
 import {Category} from '../types';
 import IconDetail from "./IconDetail";
-import {useIconDetailOverlayContext} from "./IconDetailOverlayContext";
+import {
+  useIconDetailOverlayGetContext,
+  useIconDetailOverlaySetContext
+} from "./IconDetailOverlayContext";
 import {useKeyBindings} from "../lib/key";
 
 type IconDownload = {
@@ -17,7 +20,8 @@ interface IconDetailOverlayProps {
 
 const IconDetailOverlay = memo(({categories = []}: IconDetailOverlayProps) => {
   const {colorMode} = useColorMode();
-  const {icon, isOpen, onClose} = useIconDetailOverlayContext();
+  const {icon, isOpen} = useIconDetailOverlayGetContext();
+  const {onClose} = useIconDetailOverlaySetContext();
 
   const close = () => {
     onClose();

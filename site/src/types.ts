@@ -4,17 +4,12 @@ export interface IconEntity {
   name: string;
   tags: string[];
   categories: string[];
-  contributors: Contributor[];
+  contributors: string[];
   iconNode: IconNode;
   deprecated?: boolean;
-  created?: number;
-  createdRelease?: Release;
-  changed?: number;
-  changedRelease?: Release;
-}
-
-export interface Contributor {
-  author: string;
+  createdRelease?: string;
+  updated?: string;
+  changedRelease?: string;
 }
 
 export interface Category {
@@ -23,10 +18,4 @@ export interface Category {
   description: string;
   icon?: IconEntity;
   iconCount: number
-}
-
-export interface Release {
-  name: string;
-  published: number;
-  url: string;
 }

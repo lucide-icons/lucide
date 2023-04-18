@@ -6,7 +6,6 @@ import {useCustomizeIconContext} from './CustomizeIconContext';
 import {useRouter} from 'next/router';
 import {IconEntity} from "../types";
 import {
-  useIconDetailOverlayContext,
   useIconDetailOverlaySetContext
 } from "./IconDetailOverlayContext";
 

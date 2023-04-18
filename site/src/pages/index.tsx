@@ -51,7 +51,6 @@ const HomePage: NextPage<HomePageProps> = ({
   const containerSpacing = useSpacing('container');
   const sectionSpacingY = useSpacing('sectionY');
   const containerMaxWidth = useToken('sizes', 'container-max-width');
-  const dateSorter = (a, b) => a > b ? -1 : (a < b ? 1 : 0);
   const semverSorter = (a, b) => semver.gt(a, b) ? -1 : (semver.lt(a, b) ? 1 : 0);
   return (
     <Layout>

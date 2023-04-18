@@ -1,8 +1,6 @@
 import { Grid } from '@chakra-ui/react';
-import { useMemo, memo } from 'react';
 import IconListItem from './IconListItem';
 import { IconEntity } from '../types';
-import {useIconDetailOverlayContext} from "./IconDetailOverlayContext";
 
 interface IconListProps {
   icons: IconEntity[];
