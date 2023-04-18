@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-release:
-    if: github.repository == 'karsa-mistmere/lucide'
+    if: github.repository == 'lucide-icons/lucide'
 
     runs-on: ubuntu-latest
 
