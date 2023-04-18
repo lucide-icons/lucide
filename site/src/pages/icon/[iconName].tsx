@@ -78,9 +78,8 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
   const tabOrientation: 'vertical' | 'horizontal' = useBreakpointValue({base: 'vertical', sm: 'horizontal'});
   const containerMaxWidth = useToken('sizes', 'container-max-width');
 
-  const Icon = createLucideIcon(icon.name, icon.iconNode)
   const currentIcon = useMemo(() => {
-    if (icon.name === router.query.iconName) {
+    if (icon?.name === router.query.iconName) {
       return icon;
     }
     return getIcon(router.query.iconName);
@@ -91,6 +90,8 @@ const IconPage = ({icon, data, categories, similarIcons}): JSX.Element => {
       <Spinner />
     );
   }
+
+  const Icon = createLucideIcon(icon.name, icon.iconNode)
 
   const gridProps = {
     templateAreas: [

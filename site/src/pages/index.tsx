@@ -27,7 +27,6 @@ import Section from "../components/Section";
 import useSpacing from "../lib/useSpacing";
 import IconCustomizerWidget from "../components/IconCustomizerWidget";
 import {fetchCurrentRelease} from '../lib/fetchReleases';
-import fetchPackages from "../lib/fetchPackages";
 import {fetchNumberOfContributors} from "../lib/fetchAllMetadata";
 import packagesData from '../data/packageData.json';
 import IconList from "../components/IconList";
