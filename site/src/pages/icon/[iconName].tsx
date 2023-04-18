@@ -349,8 +349,11 @@ export const getStaticProps: GetStaticProps = async ({params: {iconName}}) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const data = await getAllData();
   return {
-    paths: [],
-    fallback: 'blocking',
+    paths: data.map(({ name: iconName }) => ({
+      params: { iconName },
+    })),
+    fallback: true,
   }
 };

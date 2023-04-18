@@ -101,23 +101,13 @@ const IconListItemButton = ({icon, children}: IconListItemButtonProps) => {
 }
 
 const IconListItem = ({icon}: IconListItemProps) => {
-  const {name, createdRelease} = icon;
   return (
-    <Tooltip label={name} hasArrow>
+    <Tooltip label={icon.name} hasArrow>
       <chakra.div position="relative"
                   className={'icon-list-item-wrapper'}>
         <IconListItemButton icon={icon}>
           <IconListItemIcon icon={icon} />
         </IconListItemButton>
-        {createdRelease
-          ? (
-            <Badge variant="version"
-                   className="version-badge"
-                   opacity={0}
-            >{createdRelease}</Badge>
-          )
-          : null
-        }
       </chakra.div>
     </Tooltip>
   );
