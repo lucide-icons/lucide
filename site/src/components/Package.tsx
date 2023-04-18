@@ -27,6 +27,7 @@ export interface PackageItem {
   private?: boolean
   flutter?: object
   thirdParty?: boolean
+  promote: boolean
 }
 
 

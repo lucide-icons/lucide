@@ -94,11 +94,6 @@ const HomePage: NextPage<HomePageProps> = ({
               {packages.map(({name, icon}: PackageItem) => (
                 <WrapItem key={name}>
                   <Tooltip hasArrow label={name} aria-label={name}>
-                    <Link as={NextLink} href="https://vercel.com?utm_source=lucide&utm_campaign=oss"
-                          passHref>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src="/vercel.svg" alt="Powered by Vercel" width="150"/>
-                    </Link>
                     <Link as={NextLink} href={`/docs/${name}`} key={name} _hover={{opacity: 0.8}}
                           aria-label={name}>
                       <Image src={icon}/>
@@ -249,21 +244,15 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
   const data = await getAllData({withChildKeys: true});
   const categories = await getAllCategories()
   const currentVersion = await fetchCurrentRelease();
-  const packages: PackageItem[] = (await fetchPackages())
-    .filter(Boolean)
-    .filter((packageObj) => (packageObj.name in packagesData) && (packagesData[packageObj.name].promote ?? false))
-    .map(({name, description, flutter}) => {
-      const packageDirectory = flutter ? 'lucide-flutter' : name;
-
-      return {
-        name,
-        description,
-        source: `https://github.com/lucide-icons/lucide/tree/main/packages/${packageDirectory}`,
-        documentation: `/docs/${packageDirectory}`,
-        ...packagesData[packageDirectory],
-        icon: `/framework-logos/${packagesData[packageDirectory].icon}.svg`,
-      };
-    })
+  const packages: PackageItem[] = Object.keys(packagesData)
+    .map((name) => ({
+      name,
+      ...packagesData[name],
+      source: `https://github.com/lucide-icons/lucide/tree/main/packages/${name}`,
+      documentation: `/docs/${name}`,
+      icon: `/framework-logos/${packagesData[name].icon}.svg`,
+    }))
+    .filter(p => p.promote ?? false)
     .sort((a, b) => a.order - b.order);
 
   const contributors = await fetchNumberOfContributors();
