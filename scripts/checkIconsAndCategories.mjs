@@ -49,4 +49,6 @@ Object.keys(categories).forEach(categoryName => {
 if (error) {
   console.error('At least one error in icon JSONs prevents from committing changes.');
   process.exit(1);
+} else {
+  console.info('Categories and icons seem to line up.');
 }

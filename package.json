@@ -25,6 +25,7 @@
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "update:release-cache": "node ./scripts/updateReleaseCache.mjs",
+    "checkReleaseCache": "node scripts/checkIconsReleaseCache.mjs --presets @babel/env",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
     "prepare": "husky install",
