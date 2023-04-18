@@ -5,7 +5,10 @@ import {createLucideIcon} from 'lucide-react';
 import {useCustomizeIconContext} from './CustomizeIconContext';
 import {useRouter} from 'next/router';
 import {IconEntity} from "../types";
-import {useIconDetailOverlayContext} from "./IconDetailOverlayContext";
+import {
+  useIconDetailOverlayContext,
+  useIconDetailOverlaySetContext
+} from "./IconDetailOverlayContext";
 
 interface IconListItemProps extends ButtonProps {
   icon: IconEntity;
@@ -46,7 +49,7 @@ const IconListItemButton = ({icon, children}: IconListItemButtonProps) => {
     });
   }
   const {iconsRef} = useCustomizeIconContext();
-  const {onOpen, setIcon} = useIconDetailOverlayContext();
+  const {onOpen, setIcon} = useIconDetailOverlaySetContext();
   const handleClick = useCallback(async (event) => {
     const src = (iconsRef.current[name].outerHTML).replace(/(\r\n|\n|\r|(>\s\s<))/gm, "")
 
@@ -112,7 +115,7 @@ const IconListItem = ({icon}: IconListItemProps) => {
             <Badge variant="version"
                    className="version-badge"
                    opacity={0}
-            >{createdRelease.name}</Badge>
+            >{createdRelease}</Badge>
           )
           : null
         }

@@ -3561,8 +3561,8 @@
     "contributors": [
       "ericfennis"
     ],
-    "createdRelease": "v0.11.0^{}",
-    "changedRelease": "v0.11.0^{}",
+    "createdRelease": "v0.11.0",
+    "changedRelease": "v0.11.0",
     "updated": "2020-11-17T19:11:40.000Z"
   },
   "film": {

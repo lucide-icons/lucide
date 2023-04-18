@@ -46,6 +46,7 @@
     "react-dom": "18.2.0",
     "react-svg-loader": "^3.0.3",
     "remark-gfm": "^3.0.1",
+    "semver": "^7.5.0",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.2.1"
   },

@@ -178,7 +178,7 @@ const IconDetail = ({
               </chakra.span>
               <Hide below='sm'>
                 {createdRelease &&
-                  <Badge marginLeft={2} variant='subtle' colorScheme='brand'>{createdRelease.name}</Badge>}
+                  <Badge marginLeft={2} variant='subtle' colorScheme='brand'>{createdRelease}</Badge>}
               </Hide>
             </Box>
           </Tooltip>
@@ -332,13 +332,14 @@ const IconDetail = ({
               Contributors:
             </Heading>
             <AvatarGroup size="md">
-              {icon.contributors.map((commit, index) => (
-                <Link href={`https://github.com/${commit.author}`} isExternal
-                      key={`${name}-${index}_${commit.author}`}>
-                  <Tooltip hasArrow label={commit.author} key={`${name}-${commit.author}`}>
-                    <Avatar name={commit.author}
+              {icon.contributors.map((author, index) => (
+                <Link href={`https://github.com/${author}`} isExternal
+                      key={`${name}-${index}_${author}`}>
+                  <Tooltip hasArrow label={author} key={`${name}-${author}`}>
+                    <Avatar name={author}
                             size='md'
-                            src={`https://github.com/${commit.author}.png?size=88`}/>
+                            boxShadow='0 0 2px currentColor'
+                            src={`https://github.com/${author}.png?size=88`}/>
                   </Tooltip>
                 </Link>
               ))}

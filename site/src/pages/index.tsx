@@ -26,11 +26,12 @@ import {PackageItem} from "../components/Package";
 import Section from "../components/Section";
 import useSpacing from "../lib/useSpacing";
 import IconCustomizerWidget from "../components/IconCustomizerWidget";
-import {fetchCurrentRelease} from "../lib/fetchAllReleases";
+import {fetchCurrentRelease} from '../lib/fetchReleases';
 import fetchPackages from "../lib/fetchPackages";
-import {fetchContributors} from "../lib/fetchAllMetadata";
+import {fetchNumberOfContributors} from "../lib/fetchAllMetadata";
 import packagesData from '../data/packageData.json';
 import IconList from "../components/IconList";
+import semver from 'semver';
 
 interface HomePageProps {
   data: IconEntity[],
@@ -50,6 +51,8 @@ const HomePage: NextPage<HomePageProps> = ({
   const containerSpacing = useSpacing('container');
   const sectionSpacingY = useSpacing('sectionY');
   const containerMaxWidth = useToken('sizes', 'container-max-width');
+  const dateSorter = (a, b) => a > b ? -1 : (a < b ? 1 : 0);
+  const semverSorter = (a, b) => semver.gt(a, b) ? -1 : (semver.lt(a, b) ? 1 : 0);
   return (
     <Layout>
       <MobileMenu/>
@@ -137,7 +140,7 @@ const HomePage: NextPage<HomePageProps> = ({
           <Heading variant="brandSmallCaps">What's new?</Heading>
           <Heading as="h3">Our latest icons</Heading>
 
-          <IconList icons={data.sort((a, b) => b.created - a.created).slice(0, 30)}/>
+          <IconList icons={data.sort((a, b) => semverSorter(a.createdRelease, b.createdRelease)).slice(0, 30)}/>
 
           <Flex align="center" justify="center">
             <Button as="a"
@@ -264,7 +267,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomePagePro
     })
     .sort((a, b) => a.order - b.order);
 
-  const contributors = (await fetchContributors()).length;
+  const contributors = await fetchNumberOfContributors();
 
   return {
     props: {
