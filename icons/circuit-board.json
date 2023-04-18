@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "computing",
+    "electricity",
+    "electronics"
+  ],
+  "categories": [
+    "science",
+    "development"
+  ]
+}
