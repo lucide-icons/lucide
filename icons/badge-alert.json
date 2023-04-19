@@ -2,6 +2,7 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "check",
+    "verified",
     "unverified",
     "security",
     "safety",

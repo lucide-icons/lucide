@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "check",
-    "verified"
+    "verified",
+    "unverified"
   ],
   "categories": [
     "account",
