@@ -5,9 +5,13 @@
     "rectangle",
     "oblique",
     "rhombus",
-    "shape"
+    "shape",
+    "suit",
+    "playing",
+    "cards"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "gaming"
   ]
 }
