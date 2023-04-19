@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "effect",
+    "filter",
+    "night",
+    "sparkles",
+    "magic"
+  ],
+  "categories": [
+    "shapes",
+    "cursors",
+    "multimedia",
+    "gaming",
+    "weather"
+  ]
+}
