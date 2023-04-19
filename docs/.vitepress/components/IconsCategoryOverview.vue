@@ -16,40 +16,42 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-const activeIcon = computed(() =>
-  props.icons?.find((icon) => icon.name === activeIconName.value)
-)
+
 
 const categories = computed(() => {
   if( !props.categories?.length || !props.icons?.length ) return []
   return props.categories.map(({ name, title }) => {
-  const categoryIcons = props.icons.filter((icon) => props.icons.categories.includes(name))
+    const categoryIcons = props.icons.filter(({ categories }) => categories.includes(name))
 
-  // const isSearching = icons.length !== data.length;
-  // const searchResults = isSearching
-  //   ? categoryIcons.filter(icon => icons.some((item) => item?.name === icon?.name))
-  //   : categoryIcons;
+    // const isSearching = icons.length !== data.length;
+    // const searchResults = isSearching
+    //   ? categoryIcons.filter(icon => icons.some((item) => item?.name === icon?.name))
+    //   : categoryIcons;
 
-  return {
-    title,
-    name,
-    icons: categoryIcons,
-    // isActive: name === activeCategory,
-  };
+    return {
+      title,
+      name,
+      icons: categoryIcons,
+      // isActive: name === activeCategory,
+    };
+  })
 })
-})
+
+const activeIcon = computed(() =>
+  props.categories?.find((icon) => icon.name === activeIconName.value)
+)
 
 </script>
 
 <template>
   <section class="category" v-for="category in categories" :key="category.name">
-      <h2 >{{ category.title }}</h2>
-      <IconGrid :activeIcon="activeIcon" :icons="icons" @setActiveIcon="setActiveIconName"/>
+      <h2 class="title">{{ category.title }}</h2>
+      <IconGrid :activeIcon="activeIcon" :icons="category.icons" @setActiveIcon="setActiveIconName"/>
     </section>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
 
-<style>
+<style scoped>
 .icons {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
@@ -60,5 +62,14 @@ const categories = computed(() => {
 
 .icon {
   aspect-ratio: 1/1;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 19px;
+}
+
+.category {
+  margin-bottom: 32px;
 }
 </style>

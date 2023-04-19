@@ -13,6 +13,6 @@ import IconsCategoryOverview from '../.vitepress/components/IconsCategoryOvervie
 
 <div class="VPDoc content">
   <PageContainer>
-    <IconsCategoryOverview :categories="data.categories" :icon="data.icons" />
+    <IconsCategoryOverview :categories="data.categories" :icons="data.icons" />
   </PageContainer>
 </div>

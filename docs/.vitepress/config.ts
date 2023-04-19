@@ -34,7 +34,7 @@ export default defineConfig({
         {
           text: 'Introduction',
           items: [
-            { text: 'What is lucide?', link: '/guide/introduction' },
+            { text: 'What is lucide?', link: '/guide/' },
             { text: 'Installation', link: '/guide/installation' }
           ]
         },
