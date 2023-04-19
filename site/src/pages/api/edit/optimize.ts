@@ -1,52 +1,50 @@
 import { format } from './format';
 import { optimize } from 'svgo';
-import commander from 'svg-path-commander';
-import { parseSync, stringify } from 'svgson';
+import Commander, { ASegment, CSegment, PathSegment, SSegment } from 'svg-path-commander';
+import { INode, parseSync, stringify } from 'svgson';
 import toPath from 'element-to-path';
+import { Point } from 'src/components/SvgPreview/types';
+import { flow } from 'lodash';
 
-const isDistanceSmaller = ({ x: x1, y: y1 }, { x: x2, y: y2 }, threshold: number) => {
-  const x = x1 - x2;
-  const y = y1 - y2;
-  return x * x + y * y <= threshold * threshold;
+const commander = (d: string) => new Commander(d).toAbsolute();
+
+const isDistanceSmaller = ({ x: x1, y: y1 }: Point, { x: x2, y: y2 }: Point, threshold: number) => {
+  return (x1 - x2) ** 2 + (y1 - y2) ** 2 <= threshold * threshold;
 };
 
-const getSegmentInfo = (d: string) => {
-  const command = new commander(d);
+export const getSegmentInfo = (d: string) => {
+  const command = commander(d);
   const start = command.getPointAtLength(0);
   const end = command.getPointAtLength(command.getTotalLength());
   return { command, start, end };
 };
 
-const mergePaths = (svg: string) => {
+const mergePaths = (svg: string, maxDistance = 0.1) => {
   const data = parseSync(svg);
   for (let i = 0; i < data.children.length; i++) {
     if (data.children[i].name === 'path') {
       const b = getSegmentInfo(data.children[i].attributes.d);
-      if (!isDistanceSmaller(b.start, b.end, 0.1)) {
+      if (!isDistanceSmaller(b.start, b.end, maxDistance)) {
         for (let i2 = 0; i2 < i; i2++) {
           if (data.children[i2].name === 'path' && i !== i2) {
             const a = getSegmentInfo(data.children[i2].attributes.d);
             if (data.children[i].attributes.d) {
               if (
-                isDistanceSmaller(a.end, b.end, 0.1) &&
-                isDistanceSmaller(a.start, b.start, 0.1)
+                isDistanceSmaller(a.end, b.end, maxDistance) &&
+                isDistanceSmaller(a.start, b.start, maxDistance)
               ) {
-                data.children[i2].attributes.d = commander.pathToString(
-                  a.command
-                    .toAbsolute()
-                    .segments.concat(b.command.toAbsolute().reverse().segments.slice(1)) as any
+                data.children[i2].attributes.d = Commander.pathToString(
+                  a.command.segments.concat(b.command.reverse().segments.slice(1)) as any
                 );
                 data.children[i].name = undefined;
                 i = 0;
                 break;
               } else if (
-                isDistanceSmaller(a.end, b.start, 0.1) &&
-                isDistanceSmaller(a.start, b.end, 0.1)
+                isDistanceSmaller(a.end, b.start, maxDistance) &&
+                isDistanceSmaller(a.start, b.end, maxDistance)
               ) {
-                data.children[i2].attributes.d = commander.pathToString(
-                  a.command
-                    .toAbsolute()
-                    .segments.concat(b.command.toAbsolute().segments.slice(1)) as any
+                data.children[i2].attributes.d = Commander.pathToString(
+                  a.command.segments.concat(b.command.segments.slice(1)) as any
                 );
                 data.children[i].name = undefined;
                 i = 0;
@@ -58,40 +56,31 @@ const mergePaths = (svg: string) => {
         for (let i2 = 0; i2 < i; i2++) {
           if (data.children[i2].name === 'path' && i !== i2) {
             const a = getSegmentInfo(data.children[i2].attributes.d);
-            if (!isDistanceSmaller(a.start, a.end, 0.1)) {
-              if (isDistanceSmaller(a.end, b.end, 0.1)) {
-                data.children[i2].attributes.d = commander.pathToString(
-                  a.command
-                    .toAbsolute()
-                    .segments.concat(b.command.toAbsolute().reverse().segments.slice(1)) as any
+            if (!isDistanceSmaller(a.start, a.end, maxDistance)) {
+              if (isDistanceSmaller(a.end, b.end, maxDistance)) {
+                data.children[i2].attributes.d = Commander.pathToString(
+                  a.command.segments.concat(b.command.reverse().segments.slice(1)) as any
                 );
                 data.children[i].name = undefined;
                 i = 0;
                 break;
-              } else if (isDistanceSmaller(a.end, b.start, 0.1)) {
-                data.children[i2].attributes.d = commander.pathToString(
-                  a.command
-                    .toAbsolute()
-                    .segments.concat(b.command.toAbsolute().segments.slice(1)) as any
+              } else if (isDistanceSmaller(a.end, b.start, maxDistance)) {
+                data.children[i2].attributes.d = Commander.pathToString(
+                  a.command.segments.concat(b.command.segments.slice(1)) as any
                 );
                 data.children[i].name = undefined;
                 i = 0;
                 break;
-              } else if (isDistanceSmaller(a.start, b.end, 0.1)) {
-                data.children[i2].attributes.d = commander.pathToString(
-                  b.command
-                    .toAbsolute()
-                    .segments.concat(a.command.toAbsolute().segments.slice(1)) as any
+              } else if (isDistanceSmaller(a.start, b.end, maxDistance)) {
+                data.children[i2].attributes.d = Commander.pathToString(
+                  b.command.segments.concat(a.command.segments.slice(1)) as any
                 );
                 data.children[i].name = undefined;
                 i = 0;
                 break;
-              } else if (isDistanceSmaller(a.start, b.start, 0.1)) {
-                data.children[i2].attributes.d = commander.pathToString(
-                  b.command
-                    .toAbsolute()
-                    .reverse()
-                    .segments.concat(a.command.toAbsolute().segments.slice(1)) as any
+              } else if (isDistanceSmaller(a.start, b.start, maxDistance)) {
+                data.children[i2].attributes.d = Commander.pathToString(
+                  b.command.reverse().segments.concat(a.command.segments.slice(1)) as any
                 );
                 data.children[i].name = undefined;
                 i = 0;
@@ -110,7 +99,7 @@ const fixDots = (svg: string) => {
   const data = parseSync(svg);
   for (let i = 0; i < data.children.length; i++) {
     if (data.children[i].name === 'path') {
-      const command = new commander(data.children[i].attributes.d);
+      const command = commander(data.children[i].attributes.d);
       if (command.getTotalLength() <= 0.1) {
         const { x, y } = command.getPointAtLength(0);
         data.children[i].attributes.d = `M ${x} ${y}h0.01`;
@@ -130,38 +119,424 @@ const elementsToPath = (svg: string) => {
   return stringify(data);
 };
 
+const smartRound = (val: string) =>
+  val.replace(
+    /\d*\.(99|98|97|96|01|02|03|04|49|48|47|46|51|52|53|54|11|21|31|41|51|61|71|81|91|09|19|29|39|49|59|69|79|89)\d*/g,
+    (val) => Math.round(parseFloat(val) * 10) / 10 + ''
+  );
 const snapToGrid = (svg: string) => {
   const data = parseSync(svg);
   for (let i = 0; i < data.children.length; i++) {
+    data.children[i].attributes = Object.keys(data.children[i].attributes).reduce((acc, key) => {
+      if (key === 'd') {
+        const command = commander(data.children[i].attributes.d);
+        command.segments.forEach((s) => {
+          s[s.length - 2] = smartRound(s.at(-2) + '') as any;
+          s[s.length - 1] = smartRound(s.at(-1) + '') as any;
+        });
+        acc[key] = command.toString();
+      } else {
+        acc[key] = smartRound(data.children[i].attributes[key]);
+      }
+
+      return acc;
+    }, {});
+  }
+  return stringify(data);
+};
+
+function radian(ux, uy, vx, vy) {
+  const dot = ux * vx + uy * vy;
+  const mod = Math.sqrt((ux * ux + uy * uy) * (vx * vx + vy * vy));
+  let rad = Math.acos(dot / mod);
+  if (ux * vy - uy * vx < 0.0) {
+    rad = -rad;
+  }
+  return rad;
+}
+function getArcCenter(
+  x1: number,
+  y1: number,
+  rx: number,
+  ry: number,
+  phi: number,
+  fA: number,
+  fS: number,
+  x2: number,
+  y2: number
+) {
+  if (rx < 0) {
+    rx = -rx;
+  }
+  if (ry < 0) {
+    ry = -ry;
+  }
+  if (rx == 0.0 || ry == 0.0) {
+    throw Error('rx and ry can not be 0');
+  }
+
+  const s_phi = Math.sin(phi);
+  const c_phi = Math.cos(phi);
+  const hd_x = (x1 - x2) / 2.0; // half diff of x
+  const hd_y = (y1 - y2) / 2.0; // half diff of y
+  const hs_x = (x1 + x2) / 2.0; // half sum of x
+  const hs_y = (y1 + y2) / 2.0; // half sum of y
+
+  const x1_ = c_phi * hd_x + s_phi * hd_y;
+  const y1_ = c_phi * hd_y - s_phi * hd_x;
+
+  const lambda = (x1_ * x1_) / (rx * rx) + (y1_ * y1_) / (ry * ry);
+  if (lambda > 1) {
+    rx = rx * Math.sqrt(lambda);
+    ry = ry * Math.sqrt(lambda);
+  }
+
+  const rx_ry = rx * ry;
+  const rxy1_ = rx * y1_;
+  const ryx1_ = ry * x1_;
+  const sum_of_sq = rxy1_ * rxy1_ + ryx1_ * ryx1_; // sum of square
+  if (!sum_of_sq) {
+    throw Error('start point can not be same as end point');
+  }
+  let coe = Math.sqrt(Math.abs((rx_ry * rx_ry - sum_of_sq) / sum_of_sq));
+  if (fA == fS) {
+    coe = -coe;
+  }
+
+  const cx = (coe * rxy1_) / ry;
+  const cy = (-coe * ryx1_) / rx;
+
+  const xcr1 = (x1_ - cx) / rx;
+  const xcr2 = (x1_ + cx) / rx;
+  const ycr1 = (y1_ - cy) / ry;
+  const ycr2 = (y1_ + cy) / ry;
+
+  const startAngle = radian(1.0, 0.0, xcr1, ycr1);
+
+  const PIx2 = Math.PI * 2.0;
+  let deltaAngle = radian(xcr1, ycr1, -xcr2, -ycr2);
+  while (deltaAngle > PIx2) {
+    deltaAngle -= PIx2;
+  }
+  while (deltaAngle < 0.0) {
+    deltaAngle += PIx2;
+  }
+  if (fS == 0) {
+    deltaAngle -= PIx2;
+  }
+  let endAngle = startAngle + deltaAngle;
+  while (endAngle > PIx2) {
+    endAngle -= PIx2;
+  }
+  while (endAngle < 0.0) {
+    endAngle += PIx2;
+  }
+
+  return {
+    rx,
+    ry,
+    x: c_phi * cx - s_phi * cy + hs_x,
+    y: s_phi * cx + c_phi * cy + hs_y,
+    startAngle: startAngle,
+    deltaAngle: deltaAngle,
+    endAngle: endAngle,
+    clockwise: fS == 1,
+  };
+}
+
+const getCircle = (segments: PathSegment[]): INode | undefined => {
+  let startPoint: Point;
+  let prevPoint: Point;
+  const prevCenters: ReturnType<typeof getArcCenter>[] = [];
+  for (let j = 0; j < segments.length; j++) {
+    const segment = segments[j];
+    if (segment[0] === 'M') {
+      startPoint = { x: segment[1], y: segment[2] };
+      prevPoint = startPoint;
+    } else if (segment[0] === 'A' && segment[1] === segment[2]) {
+      const center = getArcCenter(
+        prevPoint.x,
+        prevPoint.y,
+        segment[1],
+        segment[2],
+        segment[3],
+        segment[4],
+        segment[5],
+        segment[6],
+        segment[7]
+      );
+      if (prevCenters.at(-1) && !isDistanceSmaller(center, prevCenters.at(-1), 0.1)) {
+        return undefined;
+      }
+      prevPoint = { x: segment[6], y: segment[7] };
+      prevCenters.push(center);
+    } else {
+      return undefined;
+    }
+  }
+  if (!isDistanceSmaller(prevPoint, startPoint, 0.1)) {
+    return undefined;
+  }
+  return {
+    name: 'circle',
+    type: 'element',
+    value: undefined,
+    children: undefined,
+    attributes: {
+      cx: prevCenters.reduce((acc, { x }) => acc + x, 0) / prevCenters.length + '',
+      cy: prevCenters.reduce((acc, { y }) => acc + y, 0) / prevCenters.length + '',
+      r: prevCenters.reduce((acc, { rx, ry }) => acc + rx + ry, 0) / (prevCenters.length * 2) + '',
+    },
+  };
+};
+
+const getRect = (segments: PathSegment[]): INode | undefined => {
+  const [start, ...rest] = segments;
+  let prevPoint = { x: start[1], y: start[2] };
+  const points: Point[] = [];
+  let radius = 0;
+  for (let i = 0; i < rest.length; i++) {
+    const segment = rest[i];
+    if (segment[0] === 'L') {
+      if (Math.abs(segment[1] - prevPoint.x) > 0.1 && Math.abs(segment[2] - prevPoint.y) > 0.1) {
+        return undefined;
+      }
+      prevPoint = { x: segment[1], y: segment[2] };
+    } else if (segment[0] === 'V') {
+      prevPoint = { x: prevPoint.x, y: segment[1] };
+    } else if (segment[0] === 'H') {
+      prevPoint = { x: segment[1], y: prevPoint.y };
+    } else if (segment[0] === 'Z') {
+      prevPoint = { x: start[1], y: start[2] };
+    } else if (
+      segment[0] === 'A' &&
+      segment[1] === segment[2] &&
+      (!radius || radius === segment[1])
+    ) {
+      radius = segment[1];
+      const center = getArcCenter(
+        prevPoint.x,
+        prevPoint.y,
+        segment[1],
+        segment[2],
+        segment[3],
+        segment[4],
+        segment[5],
+        segment[6],
+        segment[7]
+      );
+      if (Math.abs(Math.abs(center.deltaAngle) - Math.PI) < 0.1) {
+        points.push(center);
+        points.push(center);
+      } else if (Math.abs(Math.abs(center.deltaAngle) - Math.PI / 2) >= 0.1) {
+        return undefined;
+      }
+      if (!points.length || !isDistanceSmaller(center, points.at(-1), 0.1)) {
+        points.push(center);
+      }
+      prevPoint = { x: segment[6], y: segment[7] };
+    } else {
+      return undefined;
+    }
+    if (segments.every(([c]) => ['L', 'V', 'H', 'Z'].includes(c))) {
+      points.push(prevPoint);
+    }
+  }
+  if (points.length !== 4 || !isDistanceSmaller(prevPoint, { x: start[1], y: start[2] }, 0.1)) {
+    return undefined;
+  }
+  const [p1, p2, p3, p4] = points;
+  const x1 = Math.min(p1.x, p2.x, p3.x, p4.x);
+  const x2 = Math.max(p1.x, p2.x, p3.x, p4.x);
+  const y1 = Math.min(p1.y, p2.y, p3.y, p4.y);
+  const y2 = Math.max(p1.y, p2.y, p3.y, p4.y);
+  if (
+    x1 !== x2 &&
+    y1 !== y2 &&
+    (points.filter(({ x }) => x === x1).length !== 2 ||
+      points.filter(({ x }) => x === x2).length !== 2 ||
+      points.filter(({ y }) => y === y1).length !== 2 ||
+      points.filter(({ y }) => y === y2).length !== 2)
+  ) {
+    return undefined;
+  }
+
+  return {
+    name: 'rect',
+    type: 'element',
+    value: undefined,
+    children: undefined,
+    attributes: {
+      rx: radius ? radius + '' : undefined,
+      ry: radius ? radius + '' : undefined,
+      x: x1 - radius + '',
+      y: y1 - radius + '',
+      width: x2 - x1 + radius * 2 + '',
+      height: y2 - y1 + radius * 2 + '',
+    },
+  };
+};
+
+const pathsToElement = (svg: string) => {
+  const data = parseSync(svg);
+  for (let i = 0; i < data.children.length; i++) {
     if (data.children[i].name === 'path') {
-      data.children[i].attributes.d = new commander(data.children[i].attributes.d)
-        .toAbsolute()
-        .toString()
-        .replace(
-          /\d*\.(99|98|97|96|01|02|03|04|49|48|47|46|51|52|53|54|11|21|31|41|51|61|71|81|91|09|19|29|39|49|59|69|79|89)\d*/g,
-          (val) => Math.round(parseFloat(val) * 10) / 10 + ''
-        );
+      const command = commander(data.children[i].attributes.d);
+      const element = getCircle(command.segments) || getRect(command.segments);
+      if (element) {
+        data.children[i] = element;
+      }
     }
   }
   return stringify(data);
 };
 
-const pathsToElement = (svg: string) => {
-  return svg;
+function getDistance(point1: [number, number], point2: [number, number]) {
+  return Math.hypot(point1[0] - point2[0], point1[1] - point2[1]);
+}
+
+const arcThreshold = 2.5;
+const arcTolerance = 0.5;
+const precision = 2;
+const error = +Math.pow(0.1, precision).toFixed(precision);
+const getArc = (segment: CSegment | SSegment, prevPoint: Point): ASegment | undefined => {
+  if (!isConvex(segment)) return undefined;
+  const data: [number, number, number, number, number, number] =
+    segment[0] === 'S'
+      ? [
+          0,
+          0,
+          segment[1] - prevPoint.x,
+          segment[2] - prevPoint.y,
+          segment[3] - prevPoint.x,
+          segment[4] - prevPoint.y,
+        ]
+      : [
+          segment[1] - prevPoint.x,
+          segment[2] - prevPoint.y,
+          segment[3] - prevPoint.x,
+          segment[4] - prevPoint.y,
+          segment[5] - prevPoint.x,
+          segment[6] - prevPoint.y,
+        ];
+
+  const midPoint = getCubicBezierPoint(data, 1 / 2),
+    m1 = [midPoint[0] / 2, midPoint[1] / 2],
+    m2 = [(midPoint[0] + data[4]) / 2, (midPoint[1] + data[5]) / 2],
+    center = getIntersection([
+      m1[0],
+      m1[1],
+      m1[0] + m1[1],
+      m1[1] - m1[0],
+      m2[0],
+      m2[1],
+      m2[0] + (m2[1] - midPoint[1]),
+      m2[1] - (m2[0] - midPoint[0]),
+    ]),
+    radius = center && getDistance([0, 0], center),
+    tolerance = Math.min(arcThreshold * error, (arcTolerance * radius) / 100);
+
+  if (
+    center &&
+    radius < 1e15 &&
+    [1 / 4, 3 / 4].every(function (point) {
+      return Math.abs(getDistance(getCubicBezierPoint(data, point), center) - radius) <= tolerance;
+    })
+  ) {
+    const sweep = data[5] * data[0] - data[4] * data[1] > 0 ? 1 : 0;
+    return ['A', radius, radius, 0, 0, sweep, segment.at(-2) as number, segment.at(-1) as number];
+  }
+  return undefined;
+};
+
+function getCubicBezierPoint(
+  curve: [number, number, number, number, number, number],
+  t: number
+): [number, number] {
+  const sqrT = t * t,
+    cubT = sqrT * t,
+    mt = 1 - t,
+    sqrMt = mt * mt;
+
+  return [
+    3 * sqrMt * t * curve[0] + 3 * mt * sqrT * curve[2] + cubT * curve[4],
+    3 * sqrMt * t * curve[1] + 3 * mt * sqrT * curve[3] + cubT * curve[5],
+  ];
+}
+
+function isConvex(segment: CSegment | SSegment) {
+  const center = getIntersection([
+    0,
+    0,
+    segment[3],
+    segment[4],
+    segment[1],
+    segment[2],
+    segment[5],
+    segment[6],
+  ]);
+
+  return (
+    center != null &&
+    segment[3] < center[0] == center[0] < 0 &&
+    segment[4] < center[1] == center[1] < 0 &&
+    segment[5] < center[0] == center[0] < segment[1] &&
+    segment[6] < center[1] == center[1] < segment[2]
+  );
+}
+
+function getIntersection(coords: number[]): [number, number] {
+  const a1 = coords[1] - coords[3], // y1 - y2
+    b1 = coords[2] - coords[0], // x2 - x1
+    c1 = coords[0] * coords[3] - coords[2] * coords[1], // x1 * y2 - x2 * y1
+    a2 = coords[5] - coords[7], // y1 - y2
+    b2 = coords[6] - coords[4], // x2 - x1
+    c2 = coords[4] * coords[7] - coords[5] * coords[6], // x1 * y2 - x2 * y1
+    denom = a1 * b2 - a2 * b1;
+
+  if (!denom) return; // parallel lines haven't intersected
+
+  const cross: [number, number] = [(b1 * c2 - b2 * c1) / denom, (a1 * c2 - a2 * c1) / -denom];
+  if (!isNaN(cross[0]) && !isNaN(cross[1]) && isFinite(cross[0]) && isFinite(cross[1])) {
+    return cross;
+  }
+}
+
+const segmentsToArc = (svg: string) => {
   const data = parseSync(svg);
-  // TODO convert path to rect
-  // TODO convert path to circle
+  data.children.forEach((c, idx) => {
+    if (c.name === 'path') {
+      const command = commander(c.attributes.d);
+      for (let i = 0; i < command.segments.length; i++) {
+        const segment = command.segments[i];
+        if (segment[0] === 'C' || segment[0] === 'S') {
+          const arc = getArc(segment, {
+            x: command.segments[i - 1].at(-2) as number,
+            y: command.segments[i - 1].at(-1) as number,
+          });
+          if (arc) {
+            command.segments[i] = arc;
+            data.children[idx].attributes.d = command.toString();
+          }
+        }
+      }
+    }
+  });
   return stringify(data);
 };
 
-export const svgo = (svg: string) => {
+const segmentsToCurve = (svg: string) => {
   const data = parseSync(svg);
-  data.children.forEach((c) => {
+  data.children.forEach((c, idx) => {
     if (c.name === 'path') {
-      const d = c.attributes.d;
-      c.attributes.d = new commander(d).toCurve().toString();
+      const command = commander(c.attributes.d);
+      data.children[idx].attributes.d = command.toCurve().toString();
     }
   });
+  return stringify(data);
+};
+
+const svgo = (svg: string) => {
   return optimize(svg, {
     floatPrecision: 2,
     plugins: [
@@ -184,15 +559,89 @@ export const svgo = (svg: string) => {
   }).data;
 };
 
+const optimizeRect = (svg: string) => {
+  const data = parseSync(svg);
+  for (let i = 0; i < data.children.length; i++) {
+    if (data.children[i].name === 'rect') {
+      const x = parseFloat(data.children[i].attributes.x);
+      const y = parseFloat(data.children[i].attributes.y);
+      const width = parseFloat(data.children[i].attributes.width);
+      const height = parseFloat(data.children[i].attributes.height);
+      const rx = parseFloat(data.children[i].attributes.rx) || 0;
+      const ry = parseFloat(data.children[i].attributes.ry) || 0;
+      if (!rx || ry >= width / 2) {
+        delete data.children[i].attributes.rx;
+      } else if (rx > width / 2) {
+        data.children[i].attributes.rx = width / 2 + '';
+      } else if (!ry || rx >= height / 2 || rx === ry) {
+        delete data.children[i].attributes.ry;
+      } else if (ry > height / 2) {
+        data.children[i].attributes.ry = height / 2 + '';
+      }
+      if (ry === width / 2 && rx === height / 2) {
+        data.children[i] = {
+          name: 'circle',
+          type: 'element',
+          children: undefined,
+          value: undefined,
+          attributes: {
+            cx: x + width / 2 + '',
+            cy: y + width / 2 + '',
+            r: width / 2 + '',
+          },
+        };
+      }
+    }
+  }
+  return stringify(data);
+};
+
+const smartClose = (svg: string) => {
+  const data = parseSync(svg);
+  for (let i = 0; i < data.children.length; i++) {
+    if (data.children[i].name === 'path') {
+      const { command, start, end } = getSegmentInfo(data.children[i].attributes.d);
+      if (command.segments.length > 2 && isDistanceSmaller(start, end, 0.1)) {
+        if (['H', 'V', 'L'].includes(command.segments.at(-1)[0])) {
+          command.segments[command.segments.length - 1] = ['z'];
+          data.children[i].attributes.d = command.toString();
+        } else if (['H', 'V', 'L'].includes(command.segments[1][0])) {
+          const reversed = command.reverse();
+          reversed.segments[reversed.segments.length - 1] = ['z'];
+          data.children[i].attributes.d = reversed.toString();
+        }
+      }
+    }
+  }
+  return stringify(data);
+};
+
+const removeUselessClosingSegments = (svg: string) =>
+  svgo(svg.replace(/stroke-linecap="round"/, 'stroke-linecap="butt"'));
+
+const mergeArcs = (svg: string) => {
+  const before = svgo(svg);
+  const after = svgo(segmentsToCurve(before));
+  return after.length < before.length ? after : before;
+};
+
+const runOptimizations = flow(
+  elementsToPath,
+  mergePaths,
+  mergeArcs,
+  segmentsToArc,
+  pathsToElement,
+  optimizeRect,
+  removeUselessClosingSegments,
+  smartClose,
+  snapToGrid,
+  fixDots,
+  svgo,
+  format
+);
+
 export default async function handler(req, res) {
   const before = format(req.body);
-  const after = format(
-    svgo(
-      fixDots(snapToGrid(svgo(mergePaths(pathsToElement(elementsToPath(before)))))).replace(
-        /stroke-linecap="round"/,
-        'stroke-linecap="butt"'
-      )
-    )
-  );
-  res.status(200).end(before === after ? req.body : after);
+  const after = runOptimizations(runOptimizations(before));
+  res.status(200).end(before.length <= after.length ? req.body : after);
 }
