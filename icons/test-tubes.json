@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "beaker",
-    "erlenmeyer",
+    "tubes",
+    "vials",
+    "phials",
+    "flasks",
+    "ampoules",
+    "ampules",
     "lab",
     "chemistry",
     "experiment",
     "test"
   ],
   "categories": [
-    "science",
-    "gaming"
+    "science"
   ]
 }
