@@ -30,6 +30,10 @@ export default (iconName: string, iconNode: IconNode): Component => ({
       type: Number,
       default: 2,
     },
+    absoluteStrokeWidth: {
+      type: Boolean,
+      default: false,
+    },
     defaultClass: {
       type: String,
       default: `lucide-icon lucide lucide-${toKebabCase(iconName).replace('-icon', '')}`,
@@ -38,7 +42,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
   render(
     createElement,
     {
-      props: { color, size, strokeWidth, defaultClass },
+      props: { color, size, strokeWidth, absoluteStrokeWidth, defaultClass },
       data,
       children = [],
     },
@@ -54,7 +58,10 @@ export default (iconName: string, iconNode: IconNode): Component => ({
           width: size,
           height: size,
           stroke: color,
-          'stroke-width': strokeWidth,
+          'stroke-width':
+            absoluteStrokeWidth
+              ? Number(strokeWidth) * 24 / Number(size)
+              : strokeWidth,
           ...data.attrs,
         },
         on: data?.on || {}
