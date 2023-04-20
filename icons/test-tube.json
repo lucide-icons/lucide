@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "tube",
+    "vial",
+    "phial",
+    "flask",
+    "ampoule",
+    "ampule",
+    "lab",
+    "chemistry",
+    "experiment",
+    "test"
+  ],
+  "categories": [
+    "science"
+  ]
+}

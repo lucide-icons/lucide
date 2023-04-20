@@ -5,7 +5,12 @@
     "time",
     "event",
     "confirm",
-    "subscribe"
+    "subscribe",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "time"

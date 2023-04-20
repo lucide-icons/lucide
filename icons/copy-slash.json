@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "clone",
+    "duplicate",
     "cancel",
     "ban",
     "no",
     "stop",
     "forbidden",
     "prohibited",
-    "error"
+    "error",
+    "multiple"
   ],
   "categories": [
-    "account"
+    "text"
   ]
 }
