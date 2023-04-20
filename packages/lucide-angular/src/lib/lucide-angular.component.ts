@@ -28,7 +28,7 @@ export function formatFixed(number: number, decimals = 3): string {
 export class LucideAngularComponent implements OnChanges {
     @Input() class?: string;
     @Input() name?: string|LucideIconData;
-    @Input() set img(img: LucideIconData) {
+    @Input('img') set img(img: LucideIconData) {
         this.name = img;
     }
     @Input() color?: string;
