@@ -54,7 +54,7 @@ const iconComponent = computed(() => {
   height: 100%;
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: var(--vp-c-neutral);
   opacity: 0.8;
 }
 </style>
