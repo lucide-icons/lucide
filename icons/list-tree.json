@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "music",
-    "start",
-    "run"
+    "tree",
+    "browser"
   ],
   "categories": [
-    "shapes",
-    "multimedia"
+    "files",
+    "text",
+    "layout"
   ]
 }
