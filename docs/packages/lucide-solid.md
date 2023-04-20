@@ -1,31 +1,31 @@
-# Lucide React
+# Lucide Solid
 
-Implementation of the lucide icon library for react applications
+Implementation of the lucide icon library for solid applications.
 
 ## Installation
 
-```bash
-yarn add lucide-react
+```sh
+yarn add lucide-solid
 ```
 
 or
 
 ```sh
-npm install lucide-react
+npm install lucide-solid
 ```
 
 ## How to use
 
 It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a react component.
+Each icon can be imported as a solid component.
 
 ### Example
 
 You can pass additional props to adjust the icon.
 
 ```js
-import { Camera } from 'lucide-react';
-// Returns ReactComponent
+import { Camera } from 'lucide-solid';
+// Returns SolidComponent
 
 // Usage
 const App = () => {
@@ -44,14 +44,14 @@ export default App;
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-### Custom props
+### Custom props / svg attributes
 
-You can also pass custom props that will be added in the svg as attributes.
+You can also pass custom props that will be added in the as attributes. With that you can modify the icons look by passing svg attributes.
 
 ```js
 // Usage
 const App = () => {
-  return <Camera fill="red" />;
+  return <Camera fill="red" stroke-linejoin="bevel" />;
 };
 ```
 
@@ -63,13 +63,16 @@ It is possible to create one generic icon component to load icons.
 
 #### Icon Component Example
 
-```js
-import * as icons from 'lucide-react';
+```tsx
+import * as icons from 'lucide-solid';
+import type { LucideProps } from 'lucide-solid';
+import { splitProps } from 'solid-js';
+import { Dynamic } from 'solid-js/web';
 
-const Icon = ({ name, color, size }) => {
-  const LucideIcon = icons[name];
+const Icon = (props: { name: keyof typeof icons } & LucideProps) => {
+  const [local, others] = splitProps(props, ["name"]);
 
-  return <LucideIcon color={color} size={size} />;
+  return <Dynamic component={icons[local.name]} {...others} />
 };
 
 export default Icon;

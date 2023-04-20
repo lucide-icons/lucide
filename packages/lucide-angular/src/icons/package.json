@@ -2,7 +2,7 @@
   "ngPackage": {
     "dest": "dist",
     "lib": {
-      "entryFile": "./index.ts"
+      "entryFile": "../public-api.ts"
     }
   }
 }

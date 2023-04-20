@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
-import { render, cleanup } from '@testing-library/svelte';
-import { Smile } from '../src/icons'
+import { render, cleanup, logDOM } from '@testing-library/svelte';
+import { Smile, Pen, Edit2 } from '../src/lucide-svelte'
 import TestSlots from './TestSlots.svelte'
 
 describe('Using lucide icon components', () => {
@@ -53,5 +53,35 @@ describe('Using lucide icon components', () => {
     const textElement = getByText('Test');
     expect(textElement).toBeInTheDocument();
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render the alias icon', () => {
+    const { container } = render(Pen);
+
+    const PenIconRenderedHTML = container.innerHTML
+
+    cleanup()
+
+    const { container: Edit2Container } = render(Edit2);
+
+    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
+  });
+
+  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
+    const testId = 'smile-icon';
+    const { container, getByTestId } = render(Smile, {
+      'data-testid':testId,
+      color: 'red',
+      size: 48,
+      absoluteStrokeWidth: true
+    });
+
+    const { attributes } = getByTestId(testId) as unknown as{ attributes: Record<string, { value: string }>};
+    expect(attributes.stroke.value).toBe('red');
+    expect(attributes.width.value).toBe('48');
+    expect(attributes.height.value).toBe('48');
+    expect(attributes['stroke-width'].value).toBe('1');
+
+    expect( container.innerHTML ).toMatchSnapshot();
   });
 });
