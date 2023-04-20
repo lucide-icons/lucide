@@ -9,6 +9,6 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <polygon points="11 19 2 12 11 5 11 19" />
-  <polygon points="22 19 13 12 22 5 22 19" />
+  <path d="M11 6c0-.6-.4-.7-.8-.4l-7.4 5.8c-.4.3-.4.9 0 1.2l7.4 5.8c.4.3.8.2.8-.4V6z" />
+  <path d="M21 6c0-.6-.4-.7-.8-.4l-7.4 5.8c-.4.3-.4.9 0 1.2l7.4 5.8c.4.3.8.2.8-.4V6z" />
 </svg>
