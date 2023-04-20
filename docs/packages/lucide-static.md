@@ -53,7 +53,7 @@ Check out the [codesandbox examples](https://codesandbox.io/s/using-the-svg-spri
 To use it in for example html:
 
 ```html
-<!-- Svg File -->
+<!-- SVG file for a single icon -->
 <img src="~lucide-static/icons/home.svg" />
 ```
 
@@ -68,12 +68,12 @@ Make sure you have the correct webpack loaders to make this work. [url-loader](h
 #### SVG file as string
 
 You can simply import each SVG by targeting `lucide-static/icons/{icon-name}.svg`.
-To use svgs in your project you can for example use a [svg loader](https://v4.webpack.js.org/loaders/svg-inline-loader/).
+To use SVGs in your project you can for example use a [SVG loader](https://v4.webpack.js.org/loaders/svg-inline-loader/).
 
 ```js
 import arrowRightIcon from 'lucide-static/icons/arrow-right';
 
-// return string of a svg
+// return string of an SVG
 ```
 
 ### SVG Sprite
@@ -116,7 +116,7 @@ If you'd prefer, you can use CSS to hold your base SVG properties
 }
 ```
 
-and update the svg as follows
+and update the SVG as follows
 
 ```svg
 <svg
