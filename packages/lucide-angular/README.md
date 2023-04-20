@@ -53,7 +53,7 @@ You can pass additional props to adjust the icon appearance.
 | `size`             | _number_  | 24           |
 | `color`            | _string_  | currentColor |
 | `strokeWidth`      | _number_  | 2            |
-| `scaleStrokeWidth` | _boolean_ | true         |
+| `absoluteStrokeWidth` | _boolean_ | true         |
 
 ```html
 <i-lucide name="home" [size]="48" color="red" [strokeWidth]="1"></i-lucide>
