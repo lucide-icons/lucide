@@ -11,6 +11,7 @@ interface TypedChange<T> extends SimpleChange {
 
 type LucideAngularComponentChanges = {
     name?: TypedChange<string|LucideIconData>;
+    img?: TypedChange<LucideIconData|undefined>;
     color?: TypedChange<string>;
     size?: TypedChange<number>;
     strokeWidth?: TypedChange<number>;
@@ -28,9 +29,9 @@ export function formatFixed(number: number, decimals = 3): string {
 export class LucideAngularComponent implements OnChanges {
     @Input() class?: string;
     @Input() name?: string|LucideIconData;
-    @Input('img') set img(img: LucideIconData) {
+    @Input() set img(img: LucideIconData) {
         this.name = img;
-    }
+    };
     @Input() color?: string;
     _size?: number;
     get size(): number {
@@ -70,8 +71,8 @@ export class LucideAngularComponent implements OnChanges {
             this.strokeWidth ?? this.iconConfig.strokeWidth
         );
         this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? false;
-        if (changes.name) {
-            const name = changes.name.currentValue;
+        if (changes.name || changes.img) {
+            const name = changes.img?.currentValue ?? changes.name?.currentValue;
             if (typeof name === 'string') {
                 const icoOfName = this.getIcon(this.toPascalCase(name));
                 if (icoOfName) {
@@ -79,8 +80,10 @@ export class LucideAngularComponent implements OnChanges {
                 } else {
                     throw new Error(`The "${name}" icon has not been provided by any available icon providers.`);
                 }
-            } else {
+            } else if (typeof name === 'object') {
                 this.replaceElement(name);
+            } else {
+                throw new Error(`No icon name or image has been provided.`);
             }
         }
 
