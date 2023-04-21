@@ -6,7 +6,9 @@
     "stop",
     "forbidden",
     "prohibited",
-    "error"
+    "error",
+    "circle",
+    "slash"
   ],
   "categories": [
     "account"
