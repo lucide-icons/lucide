@@ -68,7 +68,6 @@ export default async function handler(req, res) {
               opacity={0.5}
               stroke="none"
             />
-            <g dangerouslySetInnerHTML={{ __html: src }} stroke="red" />
           </g>
           <rect
             x="0"
