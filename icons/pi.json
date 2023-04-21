@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "constant",
     "code",
     "coding",
     "programming",
     "symbol",
-    "calculate",
-    "maths",
-    "equal"
+    "trigonometry",
+    "geometry",
+    "formula"
   ],
   "categories": [
     "development",
-    "maths"
+    "maths",
+    "shapes"
   ]
 }
