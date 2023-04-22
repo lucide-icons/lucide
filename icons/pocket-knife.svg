@@ -9,7 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <rect width="6" height="20" x="9" y="2" rx="3" />
+  <rect x="8" y="2" width="8" height="20" ry="4" />
   <path d="M12 5h0" />
   <path d="M12 19h0" />
   <path d="M9.9 2.9 3.2 9.6c-1.6 1.6-1.6 4.1 0 5.7h0L9 9.4" />
