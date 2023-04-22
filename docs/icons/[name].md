@@ -29,5 +29,3 @@ const tags = computed(() => {
 # {{ $params.name }} {#name}
 
 <IconPreview :name="$params.name" :iconNode="$params.iconNode" />
-
-

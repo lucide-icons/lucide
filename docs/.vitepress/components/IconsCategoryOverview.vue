@@ -13,6 +13,8 @@ const props = defineProps<{
 const activeIconName = ref('')
 
 function setActiveIconName(name: string) {
+  console.log('activeIcon', name);
+
   activeIconName.value = name
 }
 
@@ -38,15 +40,18 @@ const categories = computed(() => {
 })
 
 const activeIcon = computed(() =>
-  props.categories?.find((icon) => icon.name === activeIconName.value)
+  props.icons?.find((icon) => icon.name === activeIconName.value)
 )
 
 </script>
 
 <template>
   <section class="category" v-for="category in categories" :key="category.name">
-      <h2 class="title">{{ category.title }}</h2>
-      <IconGrid :activeIcon="activeIcon" :icons="category.icons" @setActiveIcon="setActiveIconName"/>
+      <h2 class="title" :id="category.name">
+        <a class="header-anchor" :href="`#${category.name}`" :aria-label="`Permalink to &quot;${category.title}&quot;`">&ZeroWidthSpace;</a>
+        {{ category.title }}
+      </h2>
+      <IconGrid :activeIcon="activeIconName" :icons="category.icons" @setActiveIcon="setActiveIconName"/>
     </section>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>

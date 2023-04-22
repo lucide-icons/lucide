@@ -4,14 +4,12 @@ import IconItem from './IconItem.vue'
 
 const emit = defineEmits(['setActiveIcon'])
 
-defineProps<{
+const props = defineProps<{
   icons: IconEntity[]
-  activeIcon: string
+  activeIcon?: string
 }>()
 
 function setActiveIcon(name: string) {
-  console.log(name);
-
   emit('setActiveIcon', name)
 }
 
@@ -20,7 +18,11 @@ function setActiveIcon(name: string) {
 <template>
   <div class="icons">
     <div class="icon" v-for="icon in icons" :key="icon.name">
-      <IconItem v-bind="icon" @setActiveIcon="setActiveIcon(icon.name)" :active="activeIcon === icon.name"/>
+      <IconItem
+        v-bind="icon"
+        @setActiveIcon="setActiveIcon(icon.name)"
+        :active="activeIcon === icon.name"
+      />
     </div>
   </div>
 </template>

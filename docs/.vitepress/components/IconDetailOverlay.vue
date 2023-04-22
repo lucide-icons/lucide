@@ -2,7 +2,7 @@
   import type { IconEntity } from '../types'
   import { ref, computed } from 'vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-import CloseButton from './CloseButton.vue';
+import IconButton from './IconButton.vue';
 import IconPreview from './IconPreview.vue';
 
   const props = defineProps<{
@@ -36,7 +36,22 @@ import IconPreview from './IconPreview.vue';
   <Transition name="drawer">
     <div class="overlay-container" v-if="props.icon">
       <div class="overlay-panel">
-        <CloseButton class="close-button" @click="onClose" />
+        <IconButton class="close-button" @click="onClose">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </IconButton>
         <IconPreview :name="props.icon.name" :iconNode="props.icon.iconNode"/>
         <div class="icon-info">
           <h1 class="icon-name">

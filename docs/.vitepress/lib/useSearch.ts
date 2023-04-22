@@ -1,21 +1,21 @@
 import Fuse from 'fuse.js';
-import { useMemo } from 'react';
+import { shallowRef, computed, Ref } from 'vue';
 
-const useSearch = <T>(query = '', collection: T[], keys: Fuse.FuseOptionKey<T>[] = []) => {
-  const index = useMemo(() => {
-    return new Fuse(collection, {
-      threshold: 0.2,
-      keys,
-    });
-  }, [collection]);
+const useSearch = <T>(query: Ref<string>, collection: T[], keys: Fuse.FuseOptionKey<T>[] = []) => {
+  const index = shallowRef(
+    new Fuse(collection, {
+    threshold: 0.2,
+    keys,
+    })
+  )
 
-  const results = useMemo(() => {
-    if (query) {
-      return index.search(query).map((result) => result.item);
+  const results = computed(() => {
+    if (query.value) {
+      return index.value.search(query.value).map((result) => result.item);
     }
 
     return collection;
-  }, [query, index]);
+  });
 
   return results;
 };

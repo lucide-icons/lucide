@@ -1,6 +1,8 @@
 <script setup lang="ts">
 // import type { IconEntity } from '../types';
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import { useMediaQuery } from '@vueuse/core';
+import { useAside } from 'vitepress/dist/client/theme-default/composables/aside.js'
 import { useRouter } from 'vitepress';
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][]
@@ -17,18 +19,32 @@ const props = defineProps<{
 const emit = defineEmits(['setActiveIcon'])
 
 const { go } = useRouter()
+const showOverlay = useMediaQuery('(min-width: 720px)');
 
 const icon = createLucideIcon(props.name, props.iconNode)
 
 function navigateToIcon() {
-  window.history.pushState({}, '', `/icons/${props.name}`)
-  emit('setActiveIcon', props.name)
+  if(showOverlay.value) {
+    window.history.pushState({}, '', `/icons/${props.name}`)
+    emit('setActiveIcon', props.name)
+  }
+  else {
+    go(`/icons/${props.name}`)
+  }
 }
 </script>
 
 <template>
-  <button class="icon-button" @click="navigateToIcon" :class="{ 'active' : active }">
-    <component :is="icon" />
+  <button
+    class="icon-button"
+    @click="navigateToIcon"
+    :class="{ 'active' : active }"
+    :data-title="name"
+    :aria-label="name"
+  >
+    <KeepAlive>
+      <component :is="icon" />
+    </KeepAlive>
   </button>
 </template>
 
@@ -48,6 +64,34 @@ function navigateToIcon() {
   width: 56px;
   height: 56px;
   font-size: 24px;
+}
+
+.icon-button:hover:before {
+  opacity: 1;
+  transform: translate(-50%, 48px) scale(1);
+}
+
+.icon-button:before {
+  content: attr(data-title);
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 12px;
+  transform: translate(-50%, 48px) scale(0.9);
+  font-weight: 400;
+  position: absolute;
+  background: var(--vp-c-brand-dark);
+  color: white;
+  z-index: 10;
+  white-space: nowrap;
+  padding: 2px 8px;
+  border-radius: 4px;
+  box-shadow: var(--vp-shadow-1);
+  opacity: 0;
+  pointer-events: none;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) .2s;
+  transition-property: opacity, transform;
+
 }
 
 .icon-button:active {

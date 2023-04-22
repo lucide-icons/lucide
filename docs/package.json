@@ -23,8 +23,11 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.13",
+    "@vueuse/core": "^10.1.0",
+    "fuse.js": "^6.5.3",
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
-    "lucide-vue-next": "workspace:*"
+    "lucide-vue-next": "workspace:*",
+    "vue": "^3.2.47"
   }
 }

@@ -6,7 +6,7 @@ export default {
   async load() {
     const icons = await getAllData()
 
-    const randomIcons = Array.from({ length: 55 }, () => getRandomItem(icons))
+    const randomIcons = Array.from({ length: 100 }, () => getRandomItem(icons))
 
     return {
       icons: randomIcons,

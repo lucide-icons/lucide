@@ -1,21 +1,22 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted  } from 'vue'
 import { useData } from 'vitepress'
 
-import VPDocAsideOutline from 'vitepress/dist/client/theme-default/components/VPDocAsideOutline.vue'
 import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar.js'
+import CategoriesList from '../../components/CategoriesList.vue'
 
-const data = useData()
+const { frontmatter, page } = useData()
 const { isOpen, isSidebarEnabled } = useSidebar()
 
 onMounted(() => {
-  console.log('Data',data)
+  console.log('Data',frontmatter)
 })
+
+
 </script>
 
 <template>
   <div>
-    Categories
-    <VPDocAsideOutline v-if="data.page?.relativePath?.startsWith?.('icons')"/>
+    <CategoriesList v-if="page?.relativePath?.startsWith?.('icons')"/>
   </div>
 </template>

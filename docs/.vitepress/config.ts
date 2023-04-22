@@ -86,7 +86,7 @@ export default defineConfig({
       ],
       'icons': [
         { text: 'All', link: '/icons/' },
-        { text: 'Categorized', link: '/icons/categorized' },
+        // { text: 'Categorized', link: '/icons/categorized' },
         // {
         //   text: 'Categories',
         //   items: [

@@ -20,6 +20,36 @@
 
 .VPHomeHero .image-container {
   transform: none;
-  width: auto;
+  width: 100%;
   /* padding: 0 24px; */
+}
+
+/* .VPHomeHero .container {
+  flex-direction: column-reverse;
+} */
+.VPHomeHero .container .main {
+  flex:1;
+  flex-shirk: 0;
+}
+.VPHomeHero .container .image {
+  margin: 0;
+  order: 2;
+  flex: 1;
+  margin-top: 32px;
+}
+
+.VPHomeHero .container .image-container {
+  height: auto;
+  justify-content: flex-end;
+}
+
+@media (min-width: 960px) {
+  .VPHomeHero .container .image {
+    order: 1;
+    margin-top: auto;
+  }
+}
+
+html:has(* .outline-link:target) {
+  scroll-behavior: smooth;
 }

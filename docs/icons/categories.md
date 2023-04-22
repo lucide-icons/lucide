@@ -1,5 +1,6 @@
 ---
 layout: page
+outline: 2
 outlineTitle: Categories
 ---
 
