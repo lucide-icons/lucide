@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shape",
+    "circle",
+    "geometry",
+    "trigonometry"
+  ],
+  "categories": [
+    "shapes",
+    "maths",
+    "design"
+  ]
+}
