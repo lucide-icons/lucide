@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shape",
+    "circle",
+    "geometry",
+    "trigonometry",
+    "radii",
+    "calculate"
+  ],
+  "categories": [
+    "shapes",
+    "maths",
+    "design"
+  ]
+}
