@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "multiple",
+    "copy",
+    "documents",
+    "revisions",
+    "version control",
+    "history"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}
