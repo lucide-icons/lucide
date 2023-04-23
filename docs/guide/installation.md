@@ -8,15 +8,21 @@ title: Installation
 
 Implementation of the lucide icon library for web applications.
 
-```bash
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide
+```
+
+```sh [yarn]
+yarn add lucide
+```
+
+```sh [npm]
 npm install lucide
 ```
 
-or
-
-```sh
-yarn add lucide
-```
+:::
 
 For more details, see the [documentation](packages/lucide.md).
 
@@ -24,15 +30,21 @@ For more details, see the [documentation](packages/lucide.md).
 
 Implementation of the lucide icon library for react applications.
 
-```bash
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-react
+```
+
+```sh [yarn]
 yarn add lucide-react
 ```
 
-or
-
-```sh
+```sh [npm]
 npm install lucide-react
 ```
+
+:::
 
 For more details, see the [documentation](packages/lucide-react.md).
 

@@ -8,26 +8,35 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
+    "build:iconNodes": "node ../scripts/writeIconNodes.mjs",
+    "build:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
     "dev": "npx nitropack dev",
-    "build": "npx nitropack build && pnpm docs:build",
+    "build:api": "npx nitropack build",
+    "build": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:api && pnpm docs:build",
     "preview": "node .output/server/index.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@lucide/docs": "workspace:*",
+    "h3": "^1.6.4",
     "nitropack": "latest",
     "node-fetch": "2",
-    "vitepress": "1.0.0-alpha.65"
+    "vitepress": "1.0.0-alpha.73"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.13",
     "@vueuse/core": "^10.1.0",
+    "element-to-path": "^1.2.1",
     "fuse.js": "^6.5.3",
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
+    "lodash-es": "^4.17.21",
     "lucide-vue-next": "workspace:*",
+    "lucide-react": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svg-pathdata": "^6.0.3",
     "vue": "^3.2.47"
   }
 }

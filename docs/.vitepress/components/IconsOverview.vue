@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, nextTick, onMounted } from 'vue'
 import type { IconEntity } from '../types'
 import IconItem from './IconItem.vue'
 import IconDetailOverlay from './IconDetailOverlay.vue'
@@ -20,6 +20,7 @@ const searchQuery = ref(
       || ''
     )
 )
+const searchInput = ref()
 const searchResults = useSearch(searchQuery, props.icons, [
   { name: 'name', weight: 2 },
   { name: 'tags', weight: 1 },
@@ -37,15 +38,23 @@ watch(searchQuery, (searchString) => {
   const newUrl = new URL(window.location.href);
 
   newUrl.searchParams.set('search', searchString);
-  window.history.replaceState({}, '', newUrl)
+
+  nextTick(() => {
+    window.history.replaceState({}, '', newUrl)
+  })
 })
 
+onMounted(() => {
+  const searchParams = new URLSearchParams(window.location.search);
+  if(searchParams.has('search')) {
+    searchInput.value.focus()
+  }
 
-
+})
 </script>
 
 <template>
-  <Input type="search" placeholder="Search icons..." v-model="searchQuery" class="input-wrapper"/>
+  <Input type="search" placeholder="Search icons..." v-model="searchQuery" class="input-wrapper" ref="searchInput"/>
   <IconGrid :activeIcon="activeIconName" :icons="searchResults" @setActiveIcon="setActiveIconName"/>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
@@ -54,7 +63,6 @@ watch(searchQuery, (searchString) => {
 .icons {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  /* padding: 32px 32px 96px; */
   gap: 8px;
   width: 100%;
 }

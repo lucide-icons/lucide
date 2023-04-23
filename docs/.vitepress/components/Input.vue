@@ -5,16 +5,26 @@ export default {
 </script>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
 interface Props {
-    type: string
-    modelValue: string
-  }
+  type: string
+  modelValue: string
+}
 
 const props = withDefaults(defineProps<Props>(), {
   type: 'text'
 })
 
+const input = ref()
+
 defineEmits(['change', 'input'])
+
+defineExpose({
+  focus: () => {
+    input.value.focus()
+  }
+})
 </script>
 
 <template>
@@ -22,6 +32,7 @@ defineEmits(['change', 'input'])
     <input
       :type="type"
       class="input"
+      ref="input"
       :value="modelValue"
       v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"

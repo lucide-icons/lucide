@@ -14,8 +14,8 @@ hero:
       text: View all icons
       link: icons/index
     - theme: alt
-      text: Documentation
-      link: docs/index
+      text: Get Started
+      link: guide/index
     - theme: alt
       text: GitHub
       link: https://github.com/lucide-icons/lucide

@@ -4,6 +4,14 @@
   --vp-c-brand-lighter: #F89191;
   --vp-c-brand-dark: #DC5A5A;
   --vp-c-brand-darker: #C45050;
+
+  --vp-c-bg-alt-up: #fff;
+  --vp-c-bg-alt-down: #fff;
+}
+
+.dark {
+  --vp-c-bg-alt-up: #1B1B1D;
+  --vp-c-bg-alt-down: #0F0F10;
 }
 
 .VPNavBarTitle .logo {
@@ -14,9 +22,9 @@
   font-size: 21px;
 }
 
-/* .VPHomeHero > .container {
-  flex-direction: column-reverse;
-} */
+.VPHomeHero > .container {
+  gap: 24px;
+}
 
 .VPHomeHero .image-container {
   transform: none;
@@ -43,10 +51,36 @@
   justify-content: flex-end;
 }
 
+.VPHomeHero .container .image-bg {
+  display: none;
+}
+
+
+
+.vp-doc[class*=" _icons_"] > div {
+  max-width: 100%;
+}
+
+.VPDoc:has(.vp-doc[class*=" _icons_"]) > .container > .content{
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (min-width: 720px) {
+  .vp-doc[class^="_icons_"], .vp-doc[class*=" _icons_"] {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 24px;
+    align-items: flex-start;
+  }
+}
+
 @media (min-width: 960px) {
+
   .VPHomeHero .container .image {
     order: 1;
-    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 0;
+    position: relative;
   }
 }
 

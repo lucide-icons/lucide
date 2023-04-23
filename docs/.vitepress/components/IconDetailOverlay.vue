@@ -1,9 +1,12 @@
 <script setup lang="ts">
   import type { IconEntity } from '../types'
   import { ref, computed } from 'vue'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-import IconButton from './IconButton.vue';
-import IconPreview from './IconPreview.vue';
+  import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+  import IconButton from './IconButton.vue';
+  import IconDetailName from './IconDetailName.vue';
+  import IconPreview from './IconPreview.vue';
+  import { x, externalLink } from '../../iconNodes'
+  import { useRouter } from 'vitepress';
 
   const props = defineProps<{
     icon: IconEntity
@@ -16,6 +19,8 @@ import IconPreview from './IconPreview.vue';
   function onClose() {
     emit('close')
   }
+
+  const { go } = useRouter()
 
   const size = 24
 
@@ -30,36 +35,32 @@ import IconPreview from './IconPreview.vue';
     if (!props.icon) return []
     return props.icon.tags.join(' • ')
   })
+
+  const CloseIcon = createLucideIcon('Close', x)
+  const ExternalLinkIcon = createLucideIcon('ExternalLink', externalLink)
 </script>
 
 <template>
   <Transition name="drawer">
     <div class="overlay-container" v-if="props.icon">
       <div class="overlay-panel">
-        <IconButton class="close-button" @click="onClose">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </IconButton>
+        <nav class="overlay-menu">
+          <IconButton  @click="go(`/icons/${icon.name}`)">
+            <component :is="ExternalLinkIcon" />
+          </IconButton>
+          <IconButton  @click="onClose">
+            <component :is="CloseIcon" />
+          </IconButton>
+        </nav>
         <IconPreview :name="props.icon.name" :iconNode="props.icon.iconNode"/>
         <div class="icon-info">
-          <h1 class="icon-name">
+          <IconDetailName class="icon-name">
             {{ props.icon.name }}
-          </h1>
+          </IconDetailName>
           <p class="icon-tags">
             {{ tags }}
           </p>
+
         </div>
       </div>
     </div>
@@ -114,13 +115,8 @@ import IconPreview from './IconPreview.vue';
 
 .icon-info {
   padding: 0 24px;
-}
+  flex-basis: 100%;
 
-.icon-name {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
-  margin-bottom: 12px;
 }
 
 .icon-tags {
@@ -129,10 +125,12 @@ import IconPreview from './IconPreview.vue';
   font-weight: 500;
 }
 
-.close-button {
+.overlay-menu {
   position: absolute;
   top: 24px;
   right: 24px;
+  display: flex;
+  gap: 8px;
 }
 
 .drawer-enter-active {

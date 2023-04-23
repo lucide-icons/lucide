@@ -1,0 +1,3 @@
+# Lucide License
+
+<!--@include: ../LICENSE -->

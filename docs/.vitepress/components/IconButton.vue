@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$listeners" class="icon-button">
+  <button v-bind="$attrs" class="icon-button">
     <slot />
   </button>
 </template>

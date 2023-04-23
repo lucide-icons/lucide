@@ -4,8 +4,7 @@ outline: 2
 outlineTitle: Categories
 ---
 
-<script setup lang="ts">
-import { onMounted, computed } from 'vue'
+<script setup>
 import { data } from './index.data.ts'
 import PageContainer from '../.vitepress/components/PageContainer.vue'
 import IconsCategoryOverview from '../.vitepress/components/IconsCategoryOverview.vue'
@@ -14,6 +13,9 @@ import IconsCategoryOverview from '../.vitepress/components/IconsCategoryOvervie
 
 <div class="VPDoc content">
   <PageContainer>
-    <IconsCategoryOverview :categories="data.categories" :icons="data.icons" />
+    <IconsCategoryOverview
+      :categories="data.categories"
+      :icons="data.icons"
+    />
   </PageContainer>
 </div>

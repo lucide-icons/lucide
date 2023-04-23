@@ -11,6 +11,7 @@ export function getAllCategoryFiles() {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  cleanUrls: true,
   title: "Lucide",
   description: "Beautiful & consistent icon toolkit made by the community.",
   outDir: '.vercel/output/static',
@@ -25,7 +26,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Icons', link: '/icons/index.md' },
-      { text: 'Documentation', link: '/guide/' },
+      { text: 'Guide', link: '/guide/' },
       { text: 'License', link: '/license' },
     ],
 
