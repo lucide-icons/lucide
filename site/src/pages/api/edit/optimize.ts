@@ -1,6 +1,11 @@
 import { format } from './format';
 import { optimize } from 'svgo';
-import Commander, { ASegment, CSegment, PathSegment, SSegment } from 'svg-path-commander';
+import Commander, {
+  ASegment,
+  CSegment,
+  PathSegment,
+  SSegment,
+} from 'svg-path-commander';
 import { INode, parseSync, stringify } from 'svgson';
 import toPath from 'element-to-path';
 import { Point } from 'src/components/SvgPreview/types';
@@ -95,18 +100,179 @@ const mergePaths = (svg: string, maxDistance = 0.1) => {
   return stringify(data);
 };
 
+const getLinesAndPoints = (children: INode[]) => {
+  const lines: { prevPoint: Point; nextPoint: Point; id: number; idx: number }[] = [];
+  const points: (Point & { id: number; idx: number })[] = [];
+  for (let i = 0; i < children.length; i++) {
+    const command = commander(
+      children[i].name === 'path' ? children[i].attributes.d : toPath(children[i])
+    );
+    let prevPoint: Point;
+    let nextPoint: Point;
+    for (let i2 = 0; i2 < command.segments.length; i2++) {
+      const segment = command.segments[i2];
+      prevPoint = nextPoint;
+      if (segment[0] === 'Z') {
+        nextPoint = { x: command.segments[0][1], y: command.segments[0][2] };
+        lines.push({ prevPoint, nextPoint, id: i, idx: i2 });
+      } else if (segment[0] === 'V') {
+        nextPoint = { x: prevPoint.x, y: segment[1] };
+        lines.push({ prevPoint, nextPoint, id: i, idx: i2 });
+      } else if (segment[0] === 'H') {
+        nextPoint = { x: segment[1], y: prevPoint.y };
+        lines.push({ prevPoint, nextPoint, id: i, idx: i2 });
+      } else if (segment[0] === 'L') {
+        nextPoint = { x: segment.at(-2), y: segment.at(-1) } as Point;
+        lines.push({ prevPoint, nextPoint, id: i, idx: i2 });
+      } else {
+        nextPoint = { x: segment.at(-2), y: segment.at(-1) } as Point;
+      }
+      points.push({ ...nextPoint, id: i, idx: i2 });
+    }
+  }
+  return { lines, points };
+};
+
+const isPointOnLine = (
+  { prevPoint, nextPoint }: { prevPoint: Point; nextPoint: Point },
+  point: Point
+) => {
+  const dxc = point.x - prevPoint.x;
+  const dyc = point.y - prevPoint.y;
+  const dxl = nextPoint.x - prevPoint.x;
+  const dyl = nextPoint.y - prevPoint.y;
+
+  return Math.abs(dxc * dyl - dyc * dxl) < 0.01;
+};
+
+const isPointInLine = (
+  { prevPoint, nextPoint }: { prevPoint: Point; nextPoint: Point },
+  point: Point
+) => {
+  if (point.x > Math.max(prevPoint.x, nextPoint.x)) return false;
+  if (point.x < Math.min(prevPoint.x, nextPoint.x)) return false;
+  if (point.y > Math.max(prevPoint.y, nextPoint.y)) return false;
+  if (point.y < Math.min(prevPoint.y, nextPoint.y)) return false;
+  return isPointOnLine({ prevPoint, nextPoint }, point);
+};
+
 const fixDots = (svg: string) => {
   const data = parseSync(svg);
+  const { lines, points } = getLinesAndPoints(data.children);
   for (let i = 0; i < data.children.length; i++) {
     if (data.children[i].name === 'path') {
       const command = commander(data.children[i].attributes.d);
       if (command.getTotalLength() <= 0.1) {
         const { x, y } = command.getPointAtLength(0);
-        data.children[i].attributes.d = `M ${x} ${y}h0.01`;
+        if (
+          lines.some((line) => line.id !== i && isPointInLine(line, { x, y })) ||
+          points.some((point) => point.id !== i && isDistanceSmaller(point, { x, y }, 0.1))
+        ) {
+          data.children[i] = undefined;
+        } else {
+          data.children[i].attributes.d = `M ${x} ${y}h0.01`;
+        }
       }
     }
   }
+  data.children = data.children.filter(Boolean);
   return stringify(data);
+};
+
+const mergeLines = (svg: string) => {
+  const data = parseSync(svg);
+  const { lines } = getLinesAndPoints(data.children);
+  for (let i = 0; i < data.children.length; i++) {
+    if (data.children[i].name === 'path') {
+      const command = commander(data.children[i].attributes.d);
+      for (let i2 = 0; i2 < command.segments.length; i2++) {
+        const i3 = lines.findIndex((line) => line.id === i && line.idx === i2);
+        if (i3 !== -1) {
+          for (let i4 = 0; i4 < lines.length; i4++) {
+            const line = lines[i4];
+            if (line.id !== i || line.idx !== i2) {
+              if (
+                ((isPointOnLine(line, lines[i3].prevPoint) &&
+                  isPointInLine(line, lines[i3].nextPoint)) ||
+                  (isPointInLine(line, lines[i3].prevPoint) &&
+                    isPointOnLine(line, lines[i3].nextPoint))) &&
+                !isDistanceSmaller(lines[i3].prevPoint, lines[i3].nextPoint, 0.1) &&
+                !isDistanceSmaller(line.prevPoint, line.nextPoint, 0.1)
+              ) {
+                const [{ val: prevPoint }, { val: nextPoint }] = [
+                  line.prevPoint,
+                  line.nextPoint,
+                  lines[i3].prevPoint,
+                  lines[i3].nextPoint,
+                ]
+                  .map((val, _, arr) => ({
+                    val,
+                    distance: Math.max(...arr.map((b) => getDistance([val.x, val.y], [b.x, b.y]))),
+                  }))
+                  .sort((a, b) => b.distance - a.distance);
+
+                data.children.push({
+                  name: 'path',
+                  value: undefined,
+                  children: undefined,
+                  type: 'element',
+                  attributes: {
+                    d: `M ${prevPoint.x} ${prevPoint.y} L ${nextPoint.x} ${nextPoint.y}`,
+                  },
+                });
+                lines.push({ prevPoint, nextPoint, id: data.children.length, idx: 1 });
+                lines.splice(i3, 1);
+                lines.splice(i4, 1);
+                break;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return removeOverlappingLineSegments(stringify(data));
+};
+
+const removeOverlappingLineSegments = (svg: string) => {
+  const data = parseSync(svg);
+  const { lines } = getLinesAndPoints(data.children);
+  for (let i = 0; i < data.children.length; i++) {
+    if (data.children[i].name === 'path') {
+      const command = commander(data.children[i].attributes.d);
+      for (let i2 = 0; i2 < command.segments.length; i2++) {
+        const i3 = lines.findIndex((line) => line.id === i && line.idx === i2);
+        if (
+          i3 !== -1 &&
+          lines.some(
+            (line) =>
+              (line.id !== i || line.idx !== i2) &&
+              isPointInLine(line, lines[i3].prevPoint) &&
+              isPointInLine(line, lines[i3].nextPoint)
+          )
+        ) {
+          if (command.segments[command.segments.length - 1][0] === 'Z') {
+            command.segments[command.segments.length - 1] = [
+              'L',
+              command.segments[0][1],
+              command.segments[0][2],
+            ];
+          }
+          command.segments[i2] = ['M', lines[i3].nextPoint.x, lines[i3].nextPoint.y];
+          lines.splice(i3, 1);
+          if (command.segments.some((val) => val[0] !== 'M')) {
+            data.children[i].attributes.d = command.toString();
+          } else {
+            data.children[i] = undefined;
+            break;
+          }
+        }
+      }
+    }
+  }
+  data.children = data.children.filter(Boolean);
+  return format(stringify(data));
 };
 
 const elementsToPath = (svg: string) => {
@@ -131,8 +297,10 @@ const snapToGrid = (svg: string) => {
       if (key === 'd') {
         const command = commander(data.children[i].attributes.d);
         command.segments.forEach((s) => {
-          s[s.length - 2] = smartRound(s.at(-2) + '') as any;
-          s[s.length - 1] = smartRound(s.at(-1) + '') as any;
+          if (s[0] !== 'A') {
+            s[s.length - 2] = smartRound(s.at(-2) + '') as any;
+            s[s.length - 1] = smartRound(s.at(-1) + '') as any;
+          }
         });
         acc[key] = command.toString();
       } else {
@@ -397,7 +565,7 @@ function getDistance(point1: [number, number], point2: [number, number]) {
 
 const arcThreshold = 2.5;
 const arcTolerance = 0.5;
-const precision = 2;
+const precision = 3;
 const error = +Math.pow(0.1, precision).toFixed(precision);
 const getArc = (segment: CSegment | SSegment, prevPoint: Point): ASegment | undefined => {
   const data: [number, number, number, number, number, number] =
@@ -509,8 +677,9 @@ const segmentsToArc = (svg: string) => {
             data.children[idx].attributes.d = command.toString();
           }
         }
-        if (segment[0] === 'Z') break;
-        if (segment[0] === 'V') {
+        if (segment[0] === 'Z') {
+          prevPoint = { x: command.segments[0][1], y: command.segments[0][2] };
+        } else if (segment[0] === 'V') {
           prevPoint = { x: prevPoint.x, y: segment[1] };
         } else if (segment[0] === 'H') {
           prevPoint = { x: segment[1], y: prevPoint.y };
@@ -536,7 +705,7 @@ const segmentsToCurve = (svg: string) => {
 
 const svgo = (svg: string) => {
   return optimize(svg, {
-    floatPrecision: 2,
+    floatPrecision: precision,
     plugins: [
       {
         name: 'preset-default',
@@ -624,7 +793,10 @@ const mergeArcs = (svg: string) => {
 };
 
 const runOptimizations = flow(
+  fixDots,
   elementsToPath,
+  mergeLines,
+  removeOverlappingLineSegments,
   mergePaths,
   mergeArcs,
   segmentsToArc,
@@ -633,7 +805,6 @@ const runOptimizations = flow(
   removeUselessClosingSegments,
   smartClose,
   snapToGrid,
-  fixDots,
   svgo,
   format
 );
@@ -641,5 +812,5 @@ const runOptimizations = flow(
 export default async function handler(req, res) {
   const before = format(req.body);
   const after = runOptimizations(runOptimizations(before));
-  res.status(200).end(before.length <= after.length ? req.body : after);
+  res.status(200).end(before === after ? req.body : after);
 }
