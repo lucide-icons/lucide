@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "breakpoints",
+    "debug",
+    "step",
+    "radio buttons",
+    "selected"
+  ],
+  "categories": [
+    "development"
+  ]
+}
