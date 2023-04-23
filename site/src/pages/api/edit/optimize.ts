@@ -400,7 +400,6 @@ const arcTolerance = 0.5;
 const precision = 2;
 const error = +Math.pow(0.1, precision).toFixed(precision);
 const getArc = (segment: CSegment | SSegment, prevPoint: Point): ASegment | undefined => {
-  if (!isConvex(segment)) return undefined;
   const data: [number, number, number, number, number, number] =
     segment[0] === 'S'
       ? [
@@ -419,6 +418,8 @@ const getArc = (segment: CSegment | SSegment, prevPoint: Point): ASegment | unde
           segment[5] - prevPoint.x,
           segment[6] - prevPoint.y,
         ];
+
+  if (!isConvex(data)) return undefined;
 
   const midPoint = getCubicBezierPoint(data, 1 / 2),
     m1 = [midPoint[0] / 2, midPoint[1] / 2],
@@ -464,24 +465,15 @@ function getCubicBezierPoint(
   ];
 }
 
-function isConvex(segment: CSegment | SSegment) {
-  const center = getIntersection([
-    0,
-    0,
-    segment[3],
-    segment[4],
-    segment[1],
-    segment[2],
-    segment[5],
-    segment[6],
-  ]);
+function isConvex(data: number[]) {
+  const center = getIntersection([0, 0, data[2], data[3], data[0], data[1], data[4], data[5]]);
 
   return (
     center != null &&
-    segment[3] < center[0] == center[0] < 0 &&
-    segment[4] < center[1] == center[1] < 0 &&
-    segment[5] < center[0] == center[0] < segment[1] &&
-    segment[6] < center[1] == center[1] < segment[2]
+    data[2] < center[0] == center[0] < 0 &&
+    data[3] < center[1] == center[1] < 0 &&
+    data[4] < center[0] == center[0] < data[0] &&
+    data[5] < center[1] == center[1] < data[1]
   );
 }
 
@@ -504,20 +496,26 @@ function getIntersection(coords: number[]): [number, number] {
 
 const segmentsToArc = (svg: string) => {
   const data = parseSync(svg);
+  let prevPoint: Point;
   data.children.forEach((c, idx) => {
     if (c.name === 'path') {
       const command = commander(c.attributes.d);
       for (let i = 0; i < command.segments.length; i++) {
         const segment = command.segments[i];
         if (segment[0] === 'C' || segment[0] === 'S') {
-          const arc = getArc(segment, {
-            x: command.segments[i - 1].at(-2) as number,
-            y: command.segments[i - 1].at(-1) as number,
-          });
+          const arc = getArc(segment, prevPoint);
           if (arc) {
             command.segments[i] = arc;
             data.children[idx].attributes.d = command.toString();
           }
+        }
+        if (segment[0] === 'Z') break;
+        if (segment[0] === 'V') {
+          prevPoint = { x: prevPoint.x, y: segment[1] };
+        } else if (segment[0] === 'H') {
+          prevPoint = { x: segment[1], y: prevPoint.y };
+        } else {
+          prevPoint = { x: segment.at(-2), y: segment.at(-1) } as Point;
         }
       }
     }
