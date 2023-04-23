@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <circle cx="12" cy="12" r="10" />
-  <polygon points="10 8 16 12 10 16 10 8" />
+  <path d="m10 16 6-4-6-4Z" />
 </svg>

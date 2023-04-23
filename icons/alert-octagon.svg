@@ -9,7 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" />
-  <line x1="12" x2="12" y1="8" y2="12" />
-  <line x1="12" x2="12.01" y1="16" y2="16" />
+  <path d="M 12 16h0.01" />
+  <path d="M12 8v4" />
+  <path d="M2 7.86v8.28L7.86 22h8.28L22 16.14V7.86L16.14 2H7.86Z" />
 </svg>

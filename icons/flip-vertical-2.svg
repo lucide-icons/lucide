@@ -9,8 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="m17 3-5 5-5-5h10" />
-  <path d="m17 21-5-5-5 5h10" />
+  <path d="m7 3 5 5 5-5Z" />
+  <path d="m7 21 5-5 5 5Z" />
   <path d="M4 12H2" />
   <path d="M10 12H8" />
   <path d="M16 12h-2" />
