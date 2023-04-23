@@ -2,9 +2,10 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "key",
-    "back"
+    "download"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "files"
   ]
 }
