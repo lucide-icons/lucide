@@ -2,7 +2,7 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "key",
-    "back"
+    "forward"
   ],
   "categories": [
     "arrows"
