@@ -745,7 +745,10 @@ const optimizeRect = (svg: string) => {
       } else if (ry > height / 2) {
         data.children[i].attributes.ry = height / 2 + '';
       }
-      if ((!ry || ry === width / 2) && rx === height / 2) {
+      if (
+        (data.children[i].attributes.ry !== undefined ? ry : rx) === width / 2 &&
+        rx === height / 2
+      ) {
         data.children[i] = {
           name: 'circle',
           type: 'element',
