@@ -1,11 +1,6 @@
 import { format } from './format';
 import { optimize } from 'svgo';
-import Commander, {
-  ASegment,
-  CSegment,
-  PathSegment,
-  SSegment,
-} from 'svg-path-commander';
+import Commander, { ASegment, CSegment, PathSegment, SSegment } from 'svg-path-commander';
 import { INode, parseSync, stringify } from 'svgson';
 import toPath from 'element-to-path';
 import { Point } from 'src/components/SvgPreview/types';
@@ -142,7 +137,7 @@ const isPointOnLine = (
   const dxl = nextPoint.x - prevPoint.x;
   const dyl = nextPoint.y - prevPoint.y;
 
-  return Math.abs(dxc * dyl - dyc * dxl) < 0.01;
+  return Math.abs(dxc * dyl - dyc * dxl) < 0.1;
 };
 
 const isPointInLine = (
@@ -715,8 +710,8 @@ const svgo = (svg: string) => {
             mergePaths: false,
             convertPathData: {
               makeArcs: {
-                threshold: 20,
-                tolerance: 10,
+                threshold: 200,
+                tolerance: 100,
               },
             },
           },
@@ -809,6 +804,7 @@ const runOptimizations = flow(
   smartClose,
   snapToGrid,
   svgo,
+  fixDots,
   format
 );
 
