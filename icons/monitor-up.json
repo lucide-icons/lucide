@@ -6,7 +6,8 @@
     "display",
     "upload",
     "connect",
-    "remote"
+    "remote",
+    "screen share"
   ],
   "categories": [
     "connectivity",
