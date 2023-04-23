@@ -1,7 +1,7 @@
 node_modules
 .vitepress/cache
 .vitepress/dist
-.vitepress/temp
+.vitepress/.temp
 .vercel
 .nitro
 iconNodes
