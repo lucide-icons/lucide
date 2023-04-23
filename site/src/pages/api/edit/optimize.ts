@@ -353,10 +353,10 @@ const getRect = (segments: PathSegment[]): INode | undefined => {
   if (
     x1 !== x2 &&
     y1 !== y2 &&
-    (points.filter(({ x }) => x === x1).length !== 2 ||
-      points.filter(({ x }) => x === x2).length !== 2 ||
-      points.filter(({ y }) => y === y1).length !== 2 ||
-      points.filter(({ y }) => y === y2).length !== 2)
+    (points.filter(({ x }) => Math.abs(x - x1) < 0.01).length !== 2 ||
+      points.filter(({ x }) => Math.abs(x - x2) < 0.01).length !== 2 ||
+      points.filter(({ y }) => Math.abs(y - y1) < 0.01).length !== 2 ||
+      points.filter(({ y }) => Math.abs(y - y2) < 0.01).length !== 2)
   ) {
     return undefined;
   }
