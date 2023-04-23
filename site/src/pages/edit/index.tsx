@@ -107,7 +107,8 @@ const EditPage = () => {
               onMouseOver={() => setPreview(optimized.data)}
               onMouseOut={() => setPreview(undefined)}
             >
-              Optimize
+              Optimize{' '}
+              {Math.round((1 - formatted.data?.length / optimized.data?.length) * 1000) / 10 + '%'}
             </Button>
             <Button
               variant="outline"
