@@ -5,14 +5,10 @@
     "screen",
     "display",
     "desktop",
-    "download",
-    "clone",
-    "version control",
-    "git"
+    "download"
   ],
   "categories": [
     "connectivity",
-    "devices",
-    "development"
+    "devices"
   ]
 }
