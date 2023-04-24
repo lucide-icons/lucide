@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "radioactive",
+    "nuclear",
+    "fallout",
+    "waste",
+    "atomic",
+    "physics",
+    "particle",
+    "element",
+    "molecule"
+  ],
+  "categories": [
+    "science"
+  ]
+}
