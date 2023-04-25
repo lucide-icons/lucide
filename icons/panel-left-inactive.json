@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sidebar",
+    "primary",
+    "drawer",
+    "show",
+    "reveal",
+    "dashed"
+  ],
+  "categories": [
+    "layout"
+  ]
+}
