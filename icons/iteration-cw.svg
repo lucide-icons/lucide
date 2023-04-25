@@ -9,7 +9,6 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <circle cx="19" cy="5" r="2" />
-  <circle cx="5" cy="19" r="2" />
-  <path d="M5 17A12 12 0 0 1 17 5" />
+  <path d="M4 10c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8H4" />
+  <polyline points="8 22 4 18 8 14" />
 </svg>

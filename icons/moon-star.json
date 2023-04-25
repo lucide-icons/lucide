@@ -1,10 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "key",
-    "back"
+    "dark",
+    "night",
+    "star"
   ],
   "categories": [
-    "arrows"
+    "accessibility",
+    "weather"
   ]
 }

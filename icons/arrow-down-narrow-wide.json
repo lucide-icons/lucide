@@ -1,10 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "key",
-    "back"
+    "arrow",
+    "filter",
+    "sort",
+    "ascending"
   ],
   "categories": [
+    "text",
+    "layout",
     "arrows"
   ]
 }

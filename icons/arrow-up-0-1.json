@@ -2,15 +2,14 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "arrow",
-    "caret",
-    "keyboard",
-    "key",
-    "mac",
-    "control",
-    "ctrl",
-    "button"
+    "filter",
+    "sort",
+    "ascending",
+    "numerical"
   ],
   "categories": [
+    "text",
+    "layout",
     "arrows"
   ]
 }
