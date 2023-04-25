@@ -1,9 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "git",
-    "diff",
-    "renamed",
     "direction"
   ],
   "categories": [
