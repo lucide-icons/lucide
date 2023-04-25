@@ -1,7 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "windows",
     "application",
     "executable"
   ],
