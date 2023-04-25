@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "menu bar",
+    "drawer",
+    "show",
+    "reveal"
   ],
   "categories": [
     "layout",
