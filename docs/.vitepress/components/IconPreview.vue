@@ -2,7 +2,7 @@
 import type { IconEntity } from '../types'
 import { computed } from 'vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-import CloseButton from './CloseButton.vue';
+import { useIconSizeContext } from '../composables/useSharedSize';
 
 const props = defineProps<{
   name: IconEntity['name']
@@ -10,9 +10,9 @@ const props = defineProps<{
   customizable?: boolean
 }>()
 
-const size = 24
+const { size } = useIconSizeContext()
 
-const gridLines = computed(() => Array.from({ length:(size - 1) }))
+const gridLines = computed(() => Array.from({ length:(size.value - 1) }))
 
 const iconComponent = computed(() => {
   if (!props.name || !props.iconNode) return null
@@ -20,10 +20,14 @@ const iconComponent = computed(() => {
 })
 </script>
 
-
 <template>
   <div class="icon-container">
-    <component :is="iconComponent" class="icon-component" :class="{ customizable }"/>
+    <component
+      :is="iconComponent"
+      class="icon-component"
+      :class="{ customizable }"
+      :size="size"
+    />
     <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
       <g :key="`grid-${i}`" v-for="(_, i) in gridLines">
         <line :key="`horizontal-${i}`" :x1="0" :y1="i + 1" :x2="size" :y2="i + 1" />
@@ -34,7 +38,6 @@ const iconComponent = computed(() => {
 </template>
 
 <style scoped>
-
 .icon-grid {
   width: 100%;
   height: 100%;
@@ -63,7 +66,5 @@ const iconComponent = computed(() => {
   will-change: width, height, stroke-width, stroke;
   color: var(--customize-color, currentColor);
   stroke-width: var(--customize-strokeWidth, 2);
-  width: calc(var(--customize-size, 24) * 1px);
-  height: calc(var(--customize-size, 24) * 1px);
 }
 </style>

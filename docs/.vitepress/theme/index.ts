@@ -4,6 +4,7 @@ import './style.css'
 import { Theme } from 'vitepress'
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue'
 import HomeHeroIconsCard from '../components/HomeHeroIconsCard.vue'
+import { SIZE_CONTEXT_NAME, context } from '../composables/useSharedSize'
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -13,7 +14,9 @@ const theme: Partial<Theme> = {
       'home-hero-image': () => h(HomeHeroIconsCard)
     })
   },
-
+  enhanceApp({ app }) {
+    app.provide(SIZE_CONTEXT_NAME,context)
+  }
 }
 
 export default theme
