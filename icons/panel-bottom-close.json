@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "drawer",
+    "dock",
+    "hide"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ]
+}
