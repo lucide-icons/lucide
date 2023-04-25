@@ -5,6 +5,7 @@ aside: false
 editLink: false
 next: false
 prev: false
+sidebar: true
 ---
 <script setup>
 import IconPreview from '../.vitepress/components/IconPreview.vue'

@@ -14,7 +14,6 @@ export function getAllCategoryFiles() {
     }));
 }
 
-
 export default {
   async load() {
     const icons = await getAllData()

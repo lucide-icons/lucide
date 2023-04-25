@@ -2,6 +2,7 @@
 layout: page
 outline: 2
 outlineTitle: Categories
+sidebar: true
 ---
 
 <script setup>

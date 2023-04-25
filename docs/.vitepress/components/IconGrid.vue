@@ -22,6 +22,7 @@ function setActiveIcon(name: string) {
         v-bind="icon"
         @setActiveIcon="setActiveIcon(icon.name)"
         :active="activeIcon === icon.name"
+        customizable
       />
     </div>
   </div>

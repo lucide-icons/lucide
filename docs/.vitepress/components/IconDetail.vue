@@ -19,7 +19,12 @@ const tags = computed(() => {
 
 <template>
   <!-- <PageContainer class="overview"> -->
-    <IconPreview :name="$params.name" :iconNode="$params.iconNode" class="preview" />
+    <IconPreview
+      :name="$params.name"
+      :iconNode="$params.iconNode"
+      class="preview"
+      customizable
+    />
     <div class="details">
       <h1 class="title">
         {{ $params.name }}

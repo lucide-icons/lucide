@@ -7,6 +7,7 @@ import CloseButton from './CloseButton.vue';
 const props = defineProps<{
   name: IconEntity['name']
   iconNode: IconEntity['iconNode']
+  customizable?: boolean
 }>()
 
 const size = 24
@@ -22,7 +23,7 @@ const iconComponent = computed(() => {
 
 <template>
   <div class="icon-container">
-    <component :is="iconComponent" class="icon-component" />
+    <component :is="iconComponent" class="icon-component" :class="{ customizable }"/>
     <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
       <g :key="`grid-${i}`" v-for="(_, i) in gridLines">
         <line :key="`horizontal-${i}`" :x1="0" :y1="i + 1" :x2="size" :y2="i + 1" />
@@ -56,5 +57,13 @@ const iconComponent = computed(() => {
   z-index: 1;
   color: var(--vp-c-neutral);
   opacity: 0.8;
+}
+
+.icon-component.customizable {
+  will-change: width, height, stroke-width, stroke;
+  color: var(--customize-color, currentColor);
+  stroke-width: var(--customize-strokeWidth, 2);
+  width: calc(var(--customize-size, 24) * 1px);
+  height: calc(var(--customize-size, 24) * 1px);
 }
 </style>

@@ -14,6 +14,7 @@ const props = defineProps<{
   // contributors: Contributor[];
   iconNode: IconNode;
   active: boolean;
+  customizable?: boolean;
 }>()
 
 const emit = defineEmits(['setActiveIcon'])
@@ -43,7 +44,7 @@ function navigateToIcon() {
     :aria-label="name"
   >
     <KeepAlive>
-      <component :is="icon" />
+      <component :is="icon" class="lucide-icon" :class="{ customizable }" size="auto"/>
     </KeepAlive>
   </button>
 </template>
@@ -54,7 +55,6 @@ function navigateToIcon() {
   border: 1px solid transparent;
   text-align: center;
   font-weight: 600;
-  padding: 15px;
   border-radius: 4px;
   white-space: nowrap;
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
@@ -76,7 +76,7 @@ function navigateToIcon() {
   display: block;
   font-size: 12px;
   line-height: 20px;
-  margin-left: 12px;
+  margin-left: 24px;
   transform: translate(-50%, 48px) scale(0.9);
   font-weight: 400;
   position: absolute;
@@ -134,5 +134,16 @@ function navigateToIcon() {
   border-color: var(--vp-c-brand);
   /* color: var(--vp-button-alt-active-text);
   background-color: var(--vp-button-alt-active-bg); */
+}
+
+.lucide-icon {
+  margin: auto;
+}
+.lucide-icon.customizable {
+  will-change: width, height, stroke-width, stroke;
+  color: var(--customize-color, currentColor);
+  stroke-width: var(--customize-strokeWidth, 2);
+  width: calc(var(--customize-size, 24) * 1px);
+  height: calc(var(--customize-size, 24) * 1px);
 }
 </style>

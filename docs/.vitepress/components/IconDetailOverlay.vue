@@ -52,7 +52,11 @@
             <component :is="CloseIcon" />
           </IconButton>
         </nav>
-        <IconPreview :name="props.icon.name" :iconNode="props.icon.iconNode"/>
+        <IconPreview
+          :name="props.icon.name"
+          :iconNode="props.icon.iconNode"
+          customizable
+        />
         <div class="icon-info">
           <IconDetailName class="icon-name">
             {{ props.icon.name }}
