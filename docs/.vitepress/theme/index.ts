@@ -4,7 +4,7 @@ import './style.css'
 import { Theme } from 'vitepress'
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue'
 import HomeHeroIconsCard from '../components/HomeHeroIconsCard.vue'
-import { SIZE_CONTEXT_NAME, context } from '../composables/useSharedSize'
+import { ICON_STYLE_CONTEXT, context } from '../composables/useIconStyle'
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -15,7 +15,7 @@ const theme: Partial<Theme> = {
     })
   },
   enhanceApp({ app }) {
-    app.provide(SIZE_CONTEXT_NAME,context)
+    app.provide(ICON_STYLE_CONTEXT, context)
   }
 }
 

@@ -10,14 +10,16 @@ const icons = renderIconsObject(svgFiles, ICONS_DIR, true);
 
 const iconNodesDirectory = path.resolve(currentDir, 'iconNodes');
 
-fs.unlinkSync(path.resolve(currentDir, 'iconNodes/index.ts'));
+if (fs.existsSync(iconNodesDirectory)) {
+  fs.unlinkSync(path.resolve(currentDir, 'iconNodes'));
+}
 
 if (!fs.existsSync(iconNodesDirectory)) {
   fs.mkdirSync(iconNodesDirectory);
 }
 
 const writeIconFiles = Object.entries(icons).map(async ([iconName, { children }]) => {
-  const location = path.resolve(iconNodesDirectory, `${iconName}.json`);
+  const location = path.resolve(iconNodesDirectory, `${iconName}.node.json`);
   const iconNode = children.map(({ name, attributes }) => [name, attributes]);
 
   const output = JSON.stringify(iconNode, null, 2);
@@ -26,7 +28,7 @@ const writeIconFiles = Object.entries(icons).map(async ([iconName, { children }]
   const indexFile = path.resolve(iconNodesDirectory, `index.ts`);
   await fs.promises.appendFile(
     indexFile,
-    `export { default as ${toCamelCase(iconName)} } from './${iconName}.json';\n`,
+    `export { default as ${toCamelCase(iconName)} } from './${iconName}.node.json';\n`,
     'utf-8',
   );
 });

@@ -44,7 +44,7 @@ function navigateToIcon() {
     :aria-label="name"
   >
     <KeepAlive>
-      <component :is="icon" class="lucide-icon" :class="{ customizable }" size="auto"/>
+      <component :is="icon" class="lucide-icon" :class="{ customizable }" />
     </KeepAlive>
   </button>
 </template>

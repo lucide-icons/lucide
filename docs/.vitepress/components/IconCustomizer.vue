@@ -1,44 +1,60 @@
 <script setup>
 import { useCssVar, syncRef } from '@vueuse/core'
-import { useIconSizeContext } from '../composables/useSharedSize'
+import { useIconStyleContext } from '../composables/useIconStyle'
 import RangeSlider from './RangeSlider.vue'
+import IconButton from './IconButton.vue'
+import { rotateCw } from '../../iconNodes'
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 
+const { color, strokeWidth, size } = useIconStyleContext()
 
-const { size } = useIconSizeContext()
-
-const color = useCssVar(
+const colorCssVar = useCssVar(
   '--customize-color',
-  document.documentElement,
+  typeof document !== 'undefined' ? document?.documentElement : undefined,
   {
     initialValue: 'default'
   }
 )
 
-const strokeWidth = useCssVar(
+const strokeWidthCssVar = useCssVar(
   '--customize-strokeWidth',
-  document.documentElement,
+  typeof document !== 'undefined' ? document?.documentElement : undefined,
   {
     initialValue: '2'
   }
 )
 
-const iconSize = useCssVar(
+const sizeCssVar = useCssVar(
   '--customize-size',
-  document.documentElement,
+  typeof document !== 'undefined' ? document?.documentElement : undefined,
   {
     initialValue: '24'
   }
 )
 
-syncRef(size, iconSize)
+syncRef(color, colorCssVar)
+syncRef(strokeWidth, strokeWidthCssVar)
+syncRef(size, sizeCssVar)
 
+const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
+
+function resetStyle () {
+  color.value = 'currentColor'
+  strokeWidth.value = '2'
+  size.value = '24'
+}
 </script>
 
 <template>
   <div class="card">
-    <h2 class="card-title">
-      Customizer
-    </h2>
+    <div class="card-header">
+      <h2 class="card-title">
+        Customizer
+      </h2>
+      <IconButton class="reset-button" @click="resetStyle">
+        <RotateIcon size="20"/>
+      </IconButton>
+    </div>
     <div class="input-field">
       <div class="input-label">
       <label for="icon-color" class="customize-label">
@@ -88,13 +104,13 @@ syncRef(size, iconSize)
           Size
         </label>
         <div class="display-value">
-          <span class="customize-label">{{ iconSize }}px</span>
+          <span class="customize-label">{{ size }}px</span>
         </div>
       </div>
       <RangeSlider
         id="size"
         name="size"
-        v-model="iconSize"
+        v-model="size"
         :min="16"
         :max="48"
       />
@@ -112,12 +128,19 @@ syncRef(size, iconSize)
   display: block;
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
 .card-title {
   font-weight: 700;
   color: var(--vp-c-text-1);
   line-height: 32px;
   font-size: 16px;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 .card {
   background: var(--vp-c-bg);
@@ -189,4 +212,31 @@ syncRef(size, iconSize)
   margin-bottom: 8px;
   gap: 12px;
 }
+
+.reset-button {
+  background: none;
+  padding: 0;
+  transition: ease-in-out 0.1s transform;
+}
+
+.reset-button:hover {
+  background: none;
+  border-color: transparent;
+}
+
+/* a rotate css animation keyframes */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.reset-button:active {
+  transform: rotate(45deg);
+}
+
+
 </style>

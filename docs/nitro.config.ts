@@ -4,7 +4,7 @@ export default defineNitroConfig({
   preset: 'vercel-edge',
   srcDir: '.vitepress',
   routeRules: {
-    '/api/**': { cors: false, swr: true },
+    '/api/**': { cors: false },
   },
   esbuild: {
     options: {
