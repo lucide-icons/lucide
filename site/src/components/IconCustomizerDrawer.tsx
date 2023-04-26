@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react';
-import { IconStyleContext } from './CustomizeIconContext';
+import { useState } from 'react';
+import { useCustomizeIconContext } from './CustomizeIconContext';
 import { Edit } from 'lucide-react';
 import {
   Button,
@@ -8,30 +8,56 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
-  DrawerOverlay,
   FormControl,
   FormLabel,
   Grid,
+  Hide,
+  IconButton,
+  Show,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
   Flex,
   Text,
+  ButtonProps,
 } from '@chakra-ui/react';
 import ColorPicker from './ColorPicker';
 
-export function IconCustomizerDrawer() {
+export const IconCustomizerDrawer = (props: ButtonProps) => {
   const [showCustomize, setShowCustomize] = useState(false);
-  const { color, setColor, size, setSize, strokeWidth, setStroke, resetStyle } = useContext(IconStyleContext);
+  const {
+    color,
+    setColor,
+    size,
+    setSize,
+    strokeWidth,
+    setStroke,
+    resetStyle,
+  } = useCustomizeIconContext();
 
   return (
     <>
-      <Button as="a" leftIcon={<Edit />} size="lg" onClick={() => setShowCustomize(true)}>
-        Customize
-      </Button>
-      <Drawer isOpen={showCustomize} placement="right" onClose={() => setShowCustomize(false)}>
-        <DrawerOverlay />
+      <Hide below='md'>
+        <Button
+          as="a"
+          leftIcon={<Edit />}
+          size="lg"
+          onClick={() => setShowCustomize(true)}
+          {...props}
+        >Customize</Button>
+      </Hide>
+      <Show below='md'>
+        <IconButton
+          aria-label='Customize'
+          variant="solid"
+          color="current"
+          onClick={() => setShowCustomize(true)}
+          icon={<Edit />}
+          {...props}
+        ></IconButton>
+      </Show>
+      <Drawer isOpen={showCustomize} placement="right" onClose={() => setShowCustomize(false)} size="md">
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>Customize Icons</DrawerHeader>
@@ -42,7 +68,7 @@ export function IconCustomizerDrawer() {
                 <ColorPicker
                   color={color}
                   value={color}
-                  onChangeComplete={(col) => setColor(col.hex)}
+                  onChangeComplete={col => setColor(col.hex)}
                 />
               </FormControl>
               <FormControl>
@@ -93,4 +119,4 @@ export function IconCustomizerDrawer() {
       </Drawer>
     </>
   );
-}
+};

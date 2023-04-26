@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "floppy disks",
+    "copy"
+  ],
+  "categories": [
+    "text",
+    "files"
+  ]
+}

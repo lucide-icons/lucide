@@ -1,10 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "rotate",
     "reload",
+    "rerun",
     "synchronise",
     "synchronize",
-    "arrows"
+    "arrows",
+    "circular",
+    "cycle"
   ],
   "categories": [
     "arrows"

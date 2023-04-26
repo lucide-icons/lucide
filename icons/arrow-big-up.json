@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "keyboard",
     "key",
-    "forward"
+    "forward",
+    "shift",
+    "mac",
+    "button"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "development"
   ]
 }

@@ -1,7 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "arrow"
+    "arrow",
+    "caret",
+    "keyboard",
+    "key",
+    "mac",
+    "control",
+    "ctrl",
+    "button"
   ],
   "categories": [
     "arrows"

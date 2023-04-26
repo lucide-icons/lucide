@@ -7,6 +7,7 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
   color?: string
   size?: string | number
   strokeWidth?: string | number
+  absoluteStrokeWidth?: boolean
 }
 
 /**
@@ -21,7 +22,7 @@ export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionComponent<LucideProps> => {
   const Component = (
-    { color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }: LucideProps
+    { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, ...rest }: LucideProps
   ) =>
     h(
       'svg' as unknown as ComponentType<Partial<JSX.SVGAttributes<SVGElement> & { 'stroke-width': number | string }>>,
@@ -30,7 +31,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionCompone
         width:  String(size),
         height: size,
         stroke: color,
-        ['stroke-width' as 'strokeWidth']: strokeWidth,
+        ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
         class: `lucide lucide-${toKebabCase(iconName)}`,
         ...rest,
       },

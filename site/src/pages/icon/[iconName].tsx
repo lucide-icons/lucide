@@ -1,12 +1,13 @@
+import { useMemo } from 'react';
 import { useRouter } from 'next/router';
 import IconDetailOverlay from '../../components/IconDetailOverlay';
 import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
 import Layout from '../../components/Layout';
-import Header from '../../components/Header';
-import { useMemo } from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { getAllCategories } from 'src/lib/categories';
 
-const IconPage = ({ icon, data }) => {
+const IconPage = ({ icon, data, categories }): JSX.Element => {
   const router = useRouter();
   const getIcon = iconName => data.find(({ name }) => name === iconName) || {};
 
@@ -21,11 +22,11 @@ const IconPage = ({ icon, data }) => {
 
     router.push(
       {
-        pathname: '/',
+        pathname: '/icons',
         query,
       },
       undefined,
-      { scroll: false },
+      { scroll: false, shallow: true },
     );
   };
 
@@ -39,21 +40,22 @@ const IconPage = ({ icon, data }) => {
   return (
     <Layout>
       <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
-      <Header {...{ data }} />
-      <IconOverview {...{ data }} />
+      <IconOverview {...{ data, categories }} key="icon-overview" />
     </Layout>
   );
 };
 
 export default IconPage;
 
-export async function getStaticProps({ params: { iconName } }) {
-  const data = await getAllData();
-  const icon = await getData(iconName);
-  return { props: { icon, data } };
-}
+export const getStaticProps: GetStaticProps = async ({ params: { iconName } }) => {
+  const data = await getAllData({ withChildKeys: true });
+  const icon = await getData(iconName as string, { withChildKeys: true });
+  const categories = await getAllCategories()
 
-export async function getStaticPaths() {
+  return { props: { icon, data, categories } };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const data = await getAllData();
 
   return {
@@ -62,4 +64,4 @@ export async function getStaticPaths() {
     })),
     fallback: false,
   };
-}
+};

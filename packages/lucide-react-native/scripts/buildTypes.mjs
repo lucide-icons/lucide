@@ -29,6 +29,7 @@ declare module 'lucide-react-native'
 // Create interface extending SVGProps
 export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
   size?: string | number
+  absoluteStrokeWidth?: boolean
 }
 
 export type LucideIcon = (props: LucideProps) => JSX.Element;

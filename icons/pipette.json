@@ -2,10 +2,13 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "eye dropper",
-    "color picker"
+    "color picker",
+    "lab",
+    "chemistry"
   ],
   "categories": [
     "text",
-    "design"
+    "design",
+    "science"
   ]
 }

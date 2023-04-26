@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "direction",
+    "keyboard",
+    "key",
+    "escape",
+    "button"
+  ],
+  "categories": [
+    "arrows",
+    "development"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "upload",
+    "connect",
+    "remote",
+    "screen share"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}
