@@ -5,6 +5,8 @@ import { INode, parseSync, stringify } from 'svgson';
 import toPath from 'element-to-path';
 import { Point } from 'src/components/SvgPreview/types';
 import { flow } from 'lodash';
+import { getPaths } from 'src/components/SvgPreview/utils';
+import { SVGPathData } from 'svg-pathdata';
 
 const commander = (d: string) => new Commander(d).toAbsolute();
 
@@ -797,8 +799,46 @@ const removeUselessClosingSegments = (svg: string) =>
 
 const mergeArcs = (svg: string) => {
   const before = svgo(svg);
-  const after = svgo(segmentsToCurve(before));
-  return after.length < before.length ? after : before;
+  const simpleMergeResult = svgo(segmentsToCurve(before));
+
+  const paths = getPaths(simpleMergeResult);
+  const data = parseSync(simpleMergeResult);
+  const arcs = data.children.flatMap((node, idx) => {
+    if (node.name !== 'path') return [];
+    const segments = paths.filter(({ c }) => c.id === idx && c.type === SVGPathData.ARC);
+    return segments.map(({ d }) => ({
+      ...node,
+      attributes: {
+        d: d,
+      },
+    }));
+  });
+  const notArcs = data.children.flatMap((node, idx) => {
+    if (node.name !== 'path') return [node];
+    const segments = paths.filter(({ c }) => c.id === idx && c.type !== SVGPathData.ARC);
+    return segments.map(({ d }) => ({
+      ...node,
+      attributes: {
+        d: d,
+      },
+    }));
+  });
+
+  const after = svgo(
+    mergePaths(
+      stringify({
+        ...data,
+        children: [
+          ...notArcs,
+          ...parseSync(svgo(mergePaths(stringify({ ...data, children: arcs })))).children,
+        ],
+      })
+    )
+  );
+
+  if (after.length < simpleMergeResult.length) return after;
+  if (simpleMergeResult.length < before.length) return simpleMergeResult;
+  return before;
 };
 
 const runOptimizations = flow(
