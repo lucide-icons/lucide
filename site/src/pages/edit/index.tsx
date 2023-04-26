@@ -78,7 +78,7 @@ const EditPage = () => {
 
   return (
     <Layout keyBindings={{ s: { ctrl: true, fn: onSave } }}>
-      <Flex gap={6} marginTop={-2} direction="column">
+      <Flex gap={6} marginTop={-6} direction="column">
         <Flex justifyContent="space-between" gap={8}>
           <Text fontSize="2xl" fontWeight="semi-bold" as="h1">
             {name && user && repository ? (
