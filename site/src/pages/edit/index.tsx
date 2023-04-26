@@ -110,7 +110,7 @@ const EditPage = () => {
               {!volume.isLoading && parseFloat(volume.data) < 225 ? (
                 <Badge colorScheme="orange">Icon might be a bit small</Badge>
               ) : !volume.isLoading && parseFloat(volume.data) > 350 ? (
-                <Badge colorScheme="red">Icon is quite big, compared with square and circle.</Badge>
+                <Badge colorScheme="red">Icon is quite big, compared with square and circle</Badge>
               ) : null}
             </Flex>
             <Flex gap={2}>
