@@ -292,9 +292,20 @@ const snapToGrid = (svg: string) => {
       if (key === 'd') {
         const command = commander(data.children[i].attributes.d);
         command.segments.forEach((s) => {
-          if (s[0] !== 'A') {
-            s[s.length - 2] = smartRound(s.at(-2) + '') as any;
-            s[s.length - 1] = smartRound(s.at(-1) + '') as any;
+          if (s[0] === 'A') {
+            if (typeof s[s.length - 2] === 'number') {
+              s[1] = smartRound(Math.round(s[1] * 100) / 100 + '') as any;
+            }
+            if (typeof s[s.length - 1] === 'number') {
+              s[2] = smartRound(Math.round(s[2] * 100) / 100 + '') as any;
+            }
+          } else {
+            if (typeof s[s.length - 2] === 'number') {
+              s[s.length - 2] = smartRound(Math.round((s.at(-2) as number) * 10) / 10 + '') as any;
+            }
+            if (typeof s[s.length - 1] === 'number') {
+              s[s.length - 1] = smartRound(Math.round((s.at(-1) as number) * 10) / 10 + '') as any;
+            }
           }
         });
         acc[key] = command.toString();
