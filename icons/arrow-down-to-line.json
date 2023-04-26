@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "direction",
+    "download",
+    "git",
+    "version control",
+    "pull"
+  ],
+  "categories": [
+    "arrows",
+    "files",
+    "development"
+  ]
+}
