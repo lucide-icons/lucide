@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "view",
+    "watch",
+    "hide",
+    "hidden",
+    "nut",
+    "walnut",
+    "food",
+    "diet",
+    "leaf",
+    "autumn",
+    "fall",
+    "plant"
+  ],
+  "categories": [
+    "accessibility",
+    "photography",
+    "food-beverage",
+    "nature",
+    "seasons",
+    "sustainability"
+  ]
+}
