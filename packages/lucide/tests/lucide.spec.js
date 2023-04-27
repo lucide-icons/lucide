@@ -30,11 +30,11 @@ describe('createIcons', () => {
   });
 
   it('should customize the name attribute', () => {
-    document.body.innerHTML = `<i data-lucide="volume-2"></i>`;
+    document.body.innerHTML = `<i data-custom-name="volume-2"></i>`;
 
     createIcons({
       icons,
-      nameAttr: 'custom-name'
+      nameAttr: 'data-custom-name'
     });
 
     const hasSvg = !!document.querySelector('svg');
