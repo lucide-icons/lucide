@@ -5,7 +5,7 @@ import * as allIcons from './icons';
  * Replaces all elements with matching nameAttr with the defined icons
  * @param {{ icons?: object, nameAttr?: string, attrs?: object }} options
  */
-const createIcons = ({ icons = {}, nameAttr = 'icon-name', attrs = {} } = {}) => {
+const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) => {
   if (!Object.values(icons).length) {
     throw new Error(
       "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`",

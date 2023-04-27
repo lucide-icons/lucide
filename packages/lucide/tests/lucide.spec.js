@@ -11,7 +11,7 @@ const getOriginalSvg = (iconName) => {
   const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
   const svgParsed = parseSync(svgContent);
 
-  svgParsed.attributes['icon-name'] = iconName;
+  svgParsed.attributes['data-lucide'] = iconName;
   svgParsed.attributes['class'] = `lucide lucide-${iconName}`;
 
   return stringify(svgParsed, { selfClose: false });
@@ -19,7 +19,7 @@ const getOriginalSvg = (iconName) => {
 
 describe('createIcons', () => {
   it('should read elements from DOM and replace it with icons', () => {
-    document.body.innerHTML = `<i icon-name="volume-2"></i>`;
+    document.body.innerHTML = `<i data-lucide="volume-2"></i>`;
 
     createIcons({icons});
 
@@ -30,7 +30,7 @@ describe('createIcons', () => {
   });
 
   it('should customize the name attribute', () => {
-    document.body.innerHTML = `<i custom-name="volume-2"></i>`;
+    document.body.innerHTML = `<i data-lucide="volume-2"></i>`;
 
     createIcons({
       icons,
@@ -43,7 +43,7 @@ describe('createIcons', () => {
   });
 
   it('should add custom attributes', () => {
-    document.body.innerHTML = `<i icon-name="volume-2" class="lucide"></i>`;
+    document.body.innerHTML = `<i data-lucide="volume-2" class="lucide"></i>`;
 
     const attrs = {
       class: 'lucide lucide-volume-2 icon custom-class',
@@ -67,7 +67,7 @@ describe('createIcons', () => {
   });
 
   it('should inherit elements attributes', () => {
-    document.body.innerHTML = `<i icon-name="sun" data-theme-switcher="light"></i>`;
+    document.body.innerHTML = `<i data-lucide="sun" data-theme-switcher="light"></i>`;
 
     const attrs = {
       'data-theme-switcher':'light',
