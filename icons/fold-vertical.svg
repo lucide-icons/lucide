@@ -9,12 +9,12 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <line x1="12" x2="12" y1="8" y2="2" />
-  <polyline points="15,19 12,16 9,19" />
+  <path d="M12 22v-6" />
+  <path d="M12 8V2" />
   <path d="M4 12H2" />
   <path d="M10 12H8" />
   <path d="M16 12h-2" />
   <path d="M22 12h-2" />
-  <polyline points="15,5 12,8 9,5" />
-  <line x1="12" x2="12" y1="22" y2="16" />
+  <path d="m15 19-3-3-3 3" />
+  <path d="m15 5-3 3-3-3" />
 </svg>
