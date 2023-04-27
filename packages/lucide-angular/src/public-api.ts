@@ -1,5 +1,4 @@
 import * as icons from './icons/lucide-icons';
-import * as aliases from './aliases';
 
 export * from './lib/lucide-angular.component';
 export * from './lib/lucide-angular.module';
