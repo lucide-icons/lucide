@@ -24,18 +24,7 @@ jobs:
           files: icons/*.svg
       - name: Generate comment
         id: generate-comment
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img width=\"400\" title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/$(basename ${file//\.svg/})/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
+        run: scripts/generateCommentPreview.sh ${{ steps.changed-files.outputs.all_changed_files }}
       - name: Find Comment
         uses: peter-evans/find-comment@v2
         id: fc
