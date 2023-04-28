@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "primary",
+    "drawer",
+    "hide"
   ],
   "categories": [
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "sidebar-close"
   ]
 }
