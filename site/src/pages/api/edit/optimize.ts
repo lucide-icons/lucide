@@ -801,8 +801,8 @@ const mergeArcs = (svg: string) => {
   const before = svgo(svg);
   const simpleMergeResult = svgo(segmentsToCurve(before));
 
-  const paths = getPaths(simpleMergeResult);
-  const data = parseSync(simpleMergeResult);
+  const paths = getPaths(simpleMergeResult.length < before.length ? simpleMergeResult : before);
+  const data = parseSync(simpleMergeResult.length < before.length ? simpleMergeResult : before);
   const arcs = data.children.flatMap((node, idx) => {
     if (node.name !== 'path') return [];
     const segments = paths.filter(({ c }) => c.id === idx && c.type === SVGPathData.ARC);
@@ -836,9 +836,7 @@ const mergeArcs = (svg: string) => {
     )
   );
 
-  if (after.length < simpleMergeResult.length) return after;
-  if (simpleMergeResult.length < before.length) return simpleMergeResult;
-  return before;
+  return after;
 };
 
 const runOptimizations = flow(
