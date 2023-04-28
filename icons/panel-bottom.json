@@ -1,10 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "drawer",
+    "dock"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "layout"
   ]
 }
