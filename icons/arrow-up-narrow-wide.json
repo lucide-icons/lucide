@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "arrow",
+    "filter",
+    "sort",
+    "ascending"
+  ],
+  "aliases": [
+    "sort-asc"
   ],
   "categories": [
+    "text",
     "layout",
     "arrows"
   ]

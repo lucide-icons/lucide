@@ -32,6 +32,8 @@ export default function generateAliasesFile({
       iconAliases.forEach((alias) => {
         const componentNameAlias = toPascalCase(alias);
         importString += getImportString(componentNameAlias, iconName, aliasImportFileExtension);
+        importString += getImportString(`${componentNameAlias}Icon`, iconName, aliasImportFileExtension);
+        importString += getImportString(`Lucide${componentNameAlias}`, iconName, aliasImportFileExtension);
       });
     }
 
