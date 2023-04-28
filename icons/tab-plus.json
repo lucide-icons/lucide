@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "application",
+    "window",
+    "user interface",
+    "ui",
+    "browser",
+    "webpage",
+    "open",
+    "new"
+  ],
+  "categories": [
+    "layout",
+    "design"
+  ]
+}
