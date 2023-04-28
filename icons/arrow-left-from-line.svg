@@ -11,5 +11,5 @@
 >
   <line x1="3" x2="17" y1="12" y2="12" />
   <polyline points="9 6 3 12 9 18" />
-  <path d="M21 18V6" />
+  <path d="M21 19V5" />
 </svg>
