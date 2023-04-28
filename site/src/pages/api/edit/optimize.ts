@@ -797,6 +797,19 @@ const smartClose = (svg: string) => {
 const removeUselessClosingSegments = (svg: string) =>
   svgo(svg.replace(/stroke-linecap="round"/, 'stroke-linecap="butt"'));
 
+const getArcs = (paths: ReturnType<typeof getPaths>) =>
+  paths
+    .filter(({ c }) => c.name === 'path' && c.type === SVGPathData.ARC)
+    .map(({ d }) => ({
+      name: 'path',
+      type: 'element',
+      children: undefined,
+      value: undefined,
+      attributes: {
+        d: d,
+      },
+    }));
+
 const mergeArcs = (svg: string) => {
   let before = svgo(svg);
   const simpleMergeResult = svgo(segmentsToCurve(before));
@@ -804,16 +817,7 @@ const mergeArcs = (svg: string) => {
 
   const paths = getPaths(before);
   const data = parseSync(before);
-  const arcs = data.children.flatMap((node, idx) => {
-    if (node.name !== 'path') return [];
-    const segments = paths.filter(({ c }) => c.id === idx && c.type === SVGPathData.ARC);
-    return segments.map(({ d }) => ({
-      ...node,
-      attributes: {
-        d: d,
-      },
-    }));
-  });
+  const arcs = getArcs(paths);
   const notArcs = data.children.flatMap((node, idx) => {
     if (node.name !== 'path') return [node];
     const segments = paths.filter(({ c }) => c.id === idx && c.type !== SVGPathData.ARC);
@@ -825,13 +829,19 @@ const mergeArcs = (svg: string) => {
     }));
   });
 
-  return stringify({
-    ...data,
-    children: [
-      ...notArcs,
-      ...parseSync(svgo(mergePaths(stringify({ ...data, children: arcs })))).children,
-    ],
-  });
+  const after = flow(
+    stringify,
+    svgo,
+    getPaths,
+    getArcs,
+    (children) => ({ ...data, children: [...children, ...notArcs] }),
+    stringify,
+    mergePaths,
+    segmentsToCurve,
+    svgo
+  )({ ...data, children: arcs });
+
+  return getArcs(getPaths(after)).length < arcs.length ? after : before;
 };
 
 const runOptimizations = flow(
