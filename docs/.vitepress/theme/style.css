@@ -83,7 +83,7 @@
     position: relative;
   }
 }
-
+/*
 html:has(* .outline-link:target) {
   scroll-behavior: smooth;
-}
+} */

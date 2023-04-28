@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref, computed, watch, nextTick, onMounted } from 'vue'
 import type { IconEntity } from '../types'
+import { useMediaQuery, useOffsetPagination } from '@vueuse/core'
 import IconItem from './IconItem.vue'
 import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
 import Input from './Input.vue'
 import useSearch from '../lib/useSearch'
+import EndOfPage from './EndOfPage.vue'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -20,11 +22,44 @@ const searchQuery = ref(
       || ''
     )
 )
+
+const isExtraLargeScreen = useMediaQuery('(min-width: 1440px)');
+const isLargeScreen = useMediaQuery('(min-width: 1280px)');
+const isMediumScreen = useMediaQuery('(min-width: 960px)');
+const isSmallScreen = useMediaQuery('(min-width: 640px)');
+
 const searchInput = ref()
+const pageSize = computed(() => {
+  if(isExtraLargeScreen.value) {
+    return 16 * 16;
+  }
+  if(isLargeScreen.value) {
+    return 16 * 12;
+  }
+  if(isMediumScreen.value) {
+    return 13 * 12;
+  }
+
+  if(isSmallScreen.value) {
+    return 10 * 10;
+  }
+
+  return 10 * 5;
+})
+
 const searchResults = useSearch(searchQuery, props.icons, [
   { name: 'name', weight: 2 },
   { name: 'tags', weight: 1 },
 ])
+
+const { next, currentPage } = useOffsetPagination( { pageSize })
+
+
+const paginatedIcons = computed(() => {
+  const end = pageSize.value * currentPage.value
+
+  return searchResults.value.slice(0, end)
+})
 
 function setActiveIconName(name: string) {
   activeIconName.value = name
@@ -42,6 +77,8 @@ watch(searchQuery, (searchString) => {
   nextTick(() => {
     window.history.replaceState({}, '', newUrl)
   })
+
+  currentPage.value = 1
 })
 
 onMounted(() => {
@@ -49,13 +86,13 @@ onMounted(() => {
   if(searchParams.has('search')) {
     searchInput.value.focus()
   }
-
 })
 </script>
 
 <template>
   <Input type="search" placeholder="Search icons..." v-model="searchQuery" class="input-wrapper" ref="searchInput"/>
-  <IconGrid :activeIcon="activeIconName" :icons="searchResults" @setActiveIcon="setActiveIconName"/>
+  <IconGrid :activeIcon="activeIconName" :icons="paginatedIcons" @setActiveIcon="setActiveIconName"/>
+  <EndOfPage @end-of-page="next"/>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
 

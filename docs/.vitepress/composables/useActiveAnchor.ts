@@ -1,6 +1,10 @@
 import { onMounted, onUpdated, onUnmounted } from 'vue';
 import { throttleAndDebounce } from 'vitepress/dist/client/theme-default/support/utils'
 
+/*
+* This file is compied and adjusted from vitepress/dist/client/theme-default/composables/useActiveAnchor.ts
+*/
+
 export function useActiveAnchor(container, marker) {
   const onScroll = throttleAndDebounce(setActiveLink, 100);
   let prevActiveLink = null;

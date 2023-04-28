@@ -4,7 +4,8 @@ import './style.css'
 import { Theme } from 'vitepress'
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue'
 import HomeHeroIconsCard from '../components/HomeHeroIconsCard.vue'
-import { ICON_STYLE_CONTEXT, context } from '../composables/useIconStyle'
+import { ICON_STYLE_CONTEXT, iconStyleContext } from '../composables/useIconStyle'
+import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from '../composables/useCategoryView'
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -15,7 +16,8 @@ const theme: Partial<Theme> = {
     })
   },
   enhanceApp({ app }) {
-    app.provide(ICON_STYLE_CONTEXT, context)
+    app.provide(ICON_STYLE_CONTEXT, iconStyleContext)
+    app.provide(CATEGORY_VIEW_CONTEXT, categoryViewContext)
   }
 }
 

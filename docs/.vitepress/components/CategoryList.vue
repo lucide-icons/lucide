@@ -6,13 +6,10 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 import { isActive } from 'vitepress/dist/client/theme-default/support/utils'
 import { onContentUpdated } from 'vitepress'
 import { useActiveAnchor } from '../composables/useActiveAnchor'
-import { data } from './CategoriesList.data'
-import { useRouter } from 'vitepress';
+import { data } from './CategoryList.data'
+import CategoryListItem from './CategoryListItem.vue'
 
-
-const { go } = useRouter()
-
-const { frontmatter, theme, params, page } = useData()
+const { page } = useData()
 
 const categoriesIsActive = computed(() => {
   return isActive(page.value.relativePath, '/icons/categories');
@@ -21,17 +18,6 @@ const categoriesIsActive = computed(() => {
 const overviewIsActive = computed(() => {
   return isActive(page.value.relativePath, '/icons/');
 });
-
-interface Header {
-  level: number
-  title: string
-  slug: string
-  link: string
-  children: Header[]
-}
-type MenuItem = Omit<Header, 'slug' | 'children'> & {
-  children?: MenuItem[]
-}
 
 const headers = computed(() => {
   const linkPrefix = page.value.relativePath.startsWith('icons/categories')
@@ -61,7 +47,7 @@ useActiveAnchor(container, marker)
     <div class="content">
       <div class="outline-marker" ref="marker" />
       <nav aria-labelledby="doc-outline-aria-label">
-        <VPDocOutlineItem :headers="headers" :root="true" />
+        <CategoryListItem  :headers="headers" :root="true" />
       </nav>
     </div>
   </div>

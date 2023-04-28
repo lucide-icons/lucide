@@ -46,6 +46,9 @@ importers:
       '@headlessui/vue':
         specifier: ^1.7.13
         version: 1.7.13(vue@3.2.47)
+      '@vueuse/components':
+        specifier: ^10.1.0
+        version: 10.1.0(vue@3.2.47)
       '@vueuse/core':
         specifier: ^10.1.0
         version: 10.1.0(vue@3.2.47)
@@ -10264,6 +10267,17 @@ packages:
     dependencies:
       vue: 3.2.45
     dev: true
+
+  /@vueuse/components@10.1.0(vue@3.2.47):
+    resolution: {integrity: sha512-U3c5tPUAxfwWoBSpFbCNFMEM8/jSZ0+5M1n9YWcahyb+uRNo4UmsofX/Hzs6K56PSm0g+uuhZVwSnMq8ttD8Lw==}
+    dependencies:
+      '@vueuse/core': 10.1.0(vue@3.2.47)
+      '@vueuse/shared': 10.1.0(vue@3.2.47)
+      vue-demi: 0.14.0(vue@3.2.47)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@vueuse/core@10.1.0(vue@3.2.47):
     resolution: {integrity: sha512-3Znoa5m5RO+z4/C9w6DRaKTR3wCVJvD5rav8HTDGsr+7rOZRHtcgFJ8NcCs0ZvIpmev2kExTa311ns5j2RbzDQ==}
