@@ -798,11 +798,12 @@ const removeUselessClosingSegments = (svg: string) =>
   svgo(svg.replace(/stroke-linecap="round"/, 'stroke-linecap="butt"'));
 
 const mergeArcs = (svg: string) => {
-  const before = svgo(svg);
+  let before = svgo(svg);
   const simpleMergeResult = svgo(segmentsToCurve(before));
+  if (simpleMergeResult.length < before.length) before = simpleMergeResult;
 
-  const paths = getPaths(simpleMergeResult.length < before.length ? simpleMergeResult : before);
-  const data = parseSync(simpleMergeResult.length < before.length ? simpleMergeResult : before);
+  const paths = getPaths(before);
+  const data = parseSync(before);
   const arcs = data.children.flatMap((node, idx) => {
     if (node.name !== 'path') return [];
     const segments = paths.filter(({ c }) => c.id === idx && c.type === SVGPathData.ARC);
@@ -824,19 +825,13 @@ const mergeArcs = (svg: string) => {
     }));
   });
 
-  const after = svgo(
-    mergePaths(
-      stringify({
-        ...data,
-        children: [
-          ...notArcs,
-          ...parseSync(svgo(mergePaths(stringify({ ...data, children: arcs })))).children,
-        ],
-      })
-    )
-  );
-
-  return after;
+  return stringify({
+    ...data,
+    children: [
+      ...notArcs,
+      ...parseSync(svgo(mergePaths(stringify({ ...data, children: arcs })))).children,
+    ],
+  });
 };
 
 const runOptimizations = flow(
@@ -844,8 +839,8 @@ const runOptimizations = flow(
   elementsToPath,
   mergeLines,
   removeOverlappingLineSegments,
-  mergePaths,
   mergeArcs,
+  mergePaths,
   segmentsToArc,
   pathsToElement,
   optimizeRect,
