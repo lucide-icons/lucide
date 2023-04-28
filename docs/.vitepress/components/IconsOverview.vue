@@ -92,7 +92,7 @@ onMounted(() => {
 <template>
   <Input type="search" placeholder="Search icons..." v-model="searchQuery" class="input-wrapper" ref="searchInput"/>
   <IconGrid :activeIcon="activeIconName" :icons="paginatedIcons" @setActiveIcon="setActiveIconName"/>
-  <EndOfPage @end-of-page="next"/>
+  <EndOfPage @end-of-page="next" class="bottom-page"/>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
 
@@ -116,5 +116,9 @@ onMounted(() => {
 
 .input-wrapper {
   margin-bottom: 8px;
+}
+
+.bottom-page {
+  height: 200px;
 }
 </style>

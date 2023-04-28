@@ -18,7 +18,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <IconCustomizer/>
+    <IconCustomizer v-if="page?.relativePath?.startsWith?.('icons')"/>
     <CategoryList v-if="page?.relativePath?.startsWith?.('icons')"/>
   </div>
 </template>

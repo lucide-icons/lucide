@@ -76,7 +76,7 @@ function navigateToIcon() {
   display: block;
   font-size: 12px;
   line-height: 20px;
-  margin-left: 24px;
+  margin-left: 26px;
   transform: translate(-50%, 48px) scale(0.9);
   font-weight: 400;
   position: absolute;
@@ -91,7 +91,10 @@ function navigateToIcon() {
   pointer-events: none;
   transition: cubic-bezier(0.19, 1, 0.22, 1) .2s;
   transition-property: opacity, transform;
-
+  /* max-width: calc((32px * 2) + 56px); */
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .icon-button:active {

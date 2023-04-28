@@ -147,6 +147,8 @@ function resetStyle () {
   padding: 12px 24px 24px;
   border-radius: 12px;
   margin-bottom: 24px;
+  position: relative;
+  z-index: 0;
 }
 .color-input {
   width: 34px;

@@ -27,6 +27,7 @@ export default defineConfig({
     nav: [
       { text: 'Icons', link: '/icons/index.md' },
       { text: 'Guide', link: '/guide/' },
+      { text: 'Packages', link: '/packages' },
       { text: 'License', link: '/license' },
     ],
 
