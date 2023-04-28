@@ -49,5 +49,7 @@ features:
 ---
 
 <script setup>
-import HomeInfo from './.vitepress/components/HomeInfo.vue'
+import HomePackagesSection from './.vitepress/components/HomePackagesSection.vue'
 </script>
+
+<HomePackagesSection />
