@@ -786,7 +786,7 @@ const smartClose = (svg: string) => {
         } else if (['H', 'V', 'L'].includes(command.segments[1][0])) {
           const reversed = command.reverse();
           reversed.segments[reversed.segments.length - 1] = ['z'];
-          data.children[i].attributes.d = reversed.toString();
+          data.children[i].attributes.d = reversed.reverse().toString();
         }
       }
     }
