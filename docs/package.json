@@ -10,9 +10,10 @@
     "docs:preview": "vitepress preview",
     "build:iconNodes": "node ../scripts/writeIconNodes.mjs",
     "build:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
+    "build:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",
-    "build": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:api && pnpm docs:build",
+    "build": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
   "keywords": [],

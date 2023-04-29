@@ -11,7 +11,7 @@ const icons = renderIconsObject(svgFiles, ICONS_DIR, true);
 const iconNodesDirectory = path.resolve(currentDir, 'iconNodes');
 
 if (fs.existsSync(iconNodesDirectory)) {
-  fs.unlinkSync(path.resolve(currentDir, 'iconNodes'));
+  fs.rmSync(path.resolve(currentDir, 'iconNodes'), { recursive: true, force: true });
 }
 
 if (!fs.existsSync(iconNodesDirectory)) {
