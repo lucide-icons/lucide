@@ -1,13 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "h5",
-    "html",
-    "markup",
-    "markdown"
+    "drawer",
+    "menu bar",
+    "browser",
+    "webpage"
   ],
   "categories": [
-    "text",
+    "layout",
+    "design",
     "development"
   ]
 }

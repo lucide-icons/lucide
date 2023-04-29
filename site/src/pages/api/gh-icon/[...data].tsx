@@ -47,11 +47,11 @@ export default async function handler(req, res) {
           </defs>
           <mask id="svg-preview-backdrop-mask-outline" maskUnits="userSpaceOnUse">
             <g stroke="#fff" dangerouslySetInnerHTML={{ __html: backdropString }} />
-            <g dangerouslySetInnerHTML={{ __html: src }} />
+            <g dangerouslySetInnerHTML={{ __html: src }} strokeWidth={2.05} />
           </mask>
           <mask id="svg-preview-backdrop-mask-fill" maskUnits="userSpaceOnUse">
             <g stroke="#fff" dangerouslySetInnerHTML={{ __html: backdropString }} />
-            <g dangerouslySetInnerHTML={{ __html: src }} />
+            <g dangerouslySetInnerHTML={{ __html: src }} strokeWidth={2.05} />
             <g strokeWidth={1.75} dangerouslySetInnerHTML={{ __html: backdropString }} />
           </mask>
           <g
@@ -68,7 +68,6 @@ export default async function handler(req, res) {
               opacity={0.5}
               stroke="none"
             />
-            <g dangerouslySetInnerHTML={{ __html: src }} />
           </g>
           <rect
             x="0"
