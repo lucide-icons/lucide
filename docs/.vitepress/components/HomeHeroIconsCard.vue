@@ -32,11 +32,12 @@ function insert() {
   items.value[replaceIndex] = newIcon
 }
 
-onMounted(() => {
-  intervalTime.value = setInterval(() => {
-    insert()
-  }, 2000)
-})
+// TODO: Try maybe something else for better pref performance
+// onMounted(() => {
+//   intervalTime.value = setInterval(() => {
+//     insert()
+//   }, 2000)
+// })
 
 onBeforeUnmount(() => {
   clearInterval(intervalTime.value)

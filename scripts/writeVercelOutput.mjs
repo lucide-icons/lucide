@@ -6,13 +6,24 @@ const currentDir = process.cwd();
 const vercelRouteConfig = {
   version: 3,
   overrides: {},
+  // cleanUrls: true,
   routes: [
     {
       handle: 'filesystem',
     },
     {
+      source: '/icon/:path*',
+      destination: '/icons/:path*',
+      permanent: true,
+    },
+    {
       src: '(?<url>/api/.*)',
       dest: '/__nitro?url=$url',
+    },
+    {
+      src: '/(.*)',
+      status: 404,
+      dest: '/404.html',
     },
   ],
 };
