@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "menu bar",
+    "drawer",
+    "show",
+    "reveal",
+    "dashed"
+  ],
+  "categories": [
+    "layout"
+  ]
+}
