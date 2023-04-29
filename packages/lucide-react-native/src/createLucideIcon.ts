@@ -30,7 +30,9 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
             const upperCasedTag = (tag.charAt(0).toUpperCase() + tag.slice(1)) as keyof (typeof NativeSvg);
             return createElement(NativeSvg[upperCasedTag] as FunctionComponent<Record<string, string>>, attrs);
           }),
-          ...(children as ReactNode[] || []),
+          ...(
+            (Array.isArray(children) ? children : [children]) || []
+          ),
         ],
       ),
   );

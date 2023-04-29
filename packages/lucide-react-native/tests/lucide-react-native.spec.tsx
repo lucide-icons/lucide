@@ -80,4 +80,40 @@ describe('Using lucide icon components', () => {
 
     expect( container.innerHTML ).toMatchSnapshot();
   });
+
+  it('should work with a single child component', () => {
+    const testId = "single-child";
+    const childId = "child";
+
+    const { container, getByTestId } = render(
+      <Grid data-testid={testId}>
+        <Grid data-testid={childId}/>
+      </Grid>
+    );
+    const { children} = getByTestId(testId) as unknown as{ children: HTMLCollection};
+    const lastChild = children[children.length -1];
+
+    expect(lastChild).toEqual(getByTestId(childId));
+    expect(container.innerHTML).toMatchSnapshot();
+  })
+
+  it('should work with several children components', () => {
+    const testId = "multiple-children";
+    const childId1 = "child1";
+    const childId2 = "child2";
+
+    const { container, getByTestId } = render(
+      <Grid data-testid={testId}>
+        <Grid data-testid={childId1}/>
+        <Grid data-testid={childId2}/>
+      </Grid>
+    );
+    const {children} = getByTestId(testId) as unknown as{ children: HTMLCollection};
+    const child1 = children[children.length - 2];
+    const child2 = children[children.length - 1];
+
+    expect(child1).toEqual(getByTestId(childId1));
+    expect(child2).toEqual(getByTestId(childId2));
+    expect(container.innerHTML).toMatchSnapshot();
+  })
 })
