@@ -6,7 +6,7 @@ import IconItem from './IconItem.vue'
 import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
 import Input from './Input.vue'
-import useSearch from '../lib/useSearch'
+import useSearch from '../composables/useSearch'
 import EndOfPage from './EndOfPage.vue'
 
 const props = defineProps<{
