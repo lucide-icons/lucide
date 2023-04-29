@@ -66,11 +66,11 @@ export class LucideAngularComponent implements OnChanges {
 
     ngOnChanges(changes: LucideAngularComponentChanges): void {
         this.color = this.color ?? this.iconConfig.color;
-        this.size = this.parseNumber(this.size ?? this.defaultSize);
+        this.size = this.parseNumber(this.size ?? this.iconConfig.size);
         this.strokeWidth = this.parseNumber(
             this.strokeWidth ?? this.iconConfig.strokeWidth
         );
-        this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? false;
+        this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
         if (changes.name || changes.img) {
             const name = changes.img?.currentValue ?? changes.name?.currentValue;
             if (typeof name === 'string') {

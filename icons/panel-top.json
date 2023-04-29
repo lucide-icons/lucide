@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "split",
-    "parallel",
-    "vertical",
-    "horizontal"
+    "drawer",
+    "menu bar",
+    "browser",
+    "webpage"
   ],
   "categories": [
     "layout",
     "design",
-    "text"
+    "development"
   ]
 }

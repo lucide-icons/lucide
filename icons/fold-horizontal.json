@@ -1,9 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "arrow",
+    "collapse",
+    "fold",
+    "vertical",
+    "dashed"
   ],
   "categories": [
+    "arrows",
     "layout"
   ]
 }
