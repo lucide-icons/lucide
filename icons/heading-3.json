@@ -1,7 +1,13 @@
 {
   "$schema": "../icon.schema.json",
-  "tags": [],
+  "tags": [
+    "h3",
+    "html",
+    "markup",
+    "markdown"
+  ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }
