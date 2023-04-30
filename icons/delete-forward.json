@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "remove",
+    "right",
+    "keyboard",
+    "key",
+    "button",
+    "direction",
+    "sign",
+    "arrow",
+    "label",
+    "badge",
+    "ticket",
+    "mark"
+  ],
+  "categories": [
+    "text",
+    "arrows",
+    "navigation",
+    "account"
+  ]
+}
