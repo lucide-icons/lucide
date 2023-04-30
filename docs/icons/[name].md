@@ -8,13 +8,22 @@ prev: false
 sidebar: true
 ---
 <script setup>
+import { computed } from 'vue'
 import IconPreview from '../.vitepress/components/IconPreview.vue'
 import IconDetailName from '../.vitepress/components/IconDetailName.vue'
-import useIconCodeExamples from '../.vitepress/composables/useIconCodeExample.ts'
 import { useData } from 'vitepress'
+import CodeGroup from '../.vitepress/components/CodeGroup.vue'
 
-  const { params } = useData()
-  const codeExample = useIconCodeExamples(params.value.name)
+const { params } = useData()
+
+const tabs = computed(() => params.value.codeExamples?.map(
+  (codeExample) => codeExample.title) ?? []
+)
+
+const codeExample = computed(() => params.value.codeExamples?.map(
+    (codeExample) => codeExample.code
+  ).join('') ?? []
+)
 </script>
 
 <IconPreview
@@ -27,44 +36,12 @@ import { useData } from 'vitepress'
   {{$params.name}}
 </IconDetailName>
 
-::: code-group
-
-```html-vue [HTML]
-{{codeExample.html.codes[0].code}}
-```
-
-```jsx-vue [React]
-{{codeExample.react.codes[0].code}}
-```
-
-```vue-vue [Vue]
-{{codeExample.vue.codes[0].code}}
-```
-
-```svelte-vue [Svelte]
-{{codeExample.svelte.codes[0].code}}
-```
-
-```jsx-vue [Preact]
-{{codeExample.preact.codes[0].code}}
-```
-
-```jsx-vue [Solid]
-{{codeExample.solid.codes[0].code}}
-```
-
-```tsx-vue [Angular]
-{{codeExample.angular.codes[0].code}}
-```
-
-```html-vue [Font]
-{{codeExample.font.codes[0].code}}
-```
-
-```html-vue [Flutter]
-{{codeExample.flutter.codes[0].code}}
-```
-:::
+<CodeGroup :groups="tabs" groupName="icon-code-example">
+  <div
+    class="blocks"
+    v-html="codeExample"
+  />
+</CodeGroup>
 
 <style module>
   .preview {

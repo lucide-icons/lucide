@@ -33,11 +33,14 @@
     "fuse.js": "^6.5.3",
     "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
+    "lodash": "^4.17.20",
     "lodash-es": "^4.17.21",
     "lucide-react": "workspace:*",
     "lucide-vue-next": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "shiki": "^0.14.2",
+    "shiki-processor": "^0.1.3",
     "svg-pathdata": "^6.0.3",
     "vue": "^3.2.47"
   }

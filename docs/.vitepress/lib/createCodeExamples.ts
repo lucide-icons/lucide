@@ -1,30 +1,39 @@
-import { startCase, camelCase } from 'lodash-es'
-import { computed, Ref } from 'vue'
+import { startCase, camelCase } from "lodash";
+import {
+  BUNDLED_LANGUAGES,
+  type IThemeRegistration
+} from 'shiki'
+import {
+  getHighlighter,
+} from 'shiki-processor'
 
-type CodeExampleType = Record<string, {
+type CodeExampleType = {
   title: string,
+  lang: string,
   codes: {
     language?: string,
     code: string,
     metastring?: string,
   }[],
-}>
+}[]
 
 const getIconCodes = (name: string): CodeExampleType => {
   const pascalCase = startCase(camelCase(name)).replace(/\s/g, '')
 
-  return {
-    html: {
+  return [
+    {
+      lang: 'html',
       title: 'HTML',
       codes: [
         {
-          language: 'markup',
+          language: 'html',
           code: `<i icon-name="${name}"></i>
 `,
         },
       ],
     },
-    react: {
+    {
+      lang: 'tsx',
       title: 'React',
       codes: [
         {
@@ -47,11 +56,12 @@ export default App;
         },
       ],
     },
-    vue: {
+    {
+      lang: 'vue',
       title: 'Vue 3',
       codes: [
         {
-          language: 'markup',
+          language: 'vue',
           code: `<template>
   <${pascalCase} color="red" :size="32" />
 </template>
@@ -64,26 +74,28 @@ import { ${pascalCase} } from 'lucide-vue-next';
         },
       ],
     },
-    svelte: {
+    {
+      lang: 'svelte',
       title: 'Svelte',
       codes: [
         {
-          language: 'markup',
+          language: 'vue',
           code: `<script>
 import { ${pascalCase} } from 'lucide-svelte';
 </script>
 
 <${pascalCase}
-  color="#ff3e98"
-  size="48"
-  strokeWidth="1.5"
+  color={red}
+  size={48}
+  strokeWidth={1.5}
 />
 `,
           metastring: '{2,5}',
         },
       ],
     },
-    preact:{
+    {
+      lang: 'preact',
       title: 'Preact',
       codes: [
         {
@@ -106,7 +118,8 @@ export default App;
         },
       ],
     },
-    solid:{
+    {
+      lang: 'solid',
       title: 'Solid',
       codes: [
         {
@@ -129,7 +142,8 @@ export default App;
         },
       ],
     },
-    angular: {
+    {
+      lang: 'angular',
       title: 'Angular',
       codes: [
         {
@@ -148,11 +162,12 @@ import { LucideAngularModule, ${pascalCase} } from 'lucide-angular';\r
         },
       ],
     },
-    font: {
+    {
+      lang: 'html',
       title: 'Icon Font',
       codes: [
         {
-          language: 'css',
+          language: 'html',
           code: `<style>
 @import ('~lucide-static/font/Lucide.css')
 </style>
@@ -162,19 +177,60 @@ import { LucideAngularModule, ${pascalCase} } from 'lucide-angular';\r
         },
       ],
     },
-    flutter: {
+    {
+      lang: 'dart',
       title: 'Flutter',
       codes: [
         {
-          language: 'javascript',
+          language: 'dart',
           code: `Icon(LucideIcons.${name});
 `,
         },
       ],
     },
-  };
+  ]
 }
 
-export default function useIconCodeExamples(name: string) {
-  return computed(() => getIconCodes(name))
+export type ThemeOptions =
+  | IThemeRegistration
+  | { light: IThemeRegistration; dark: IThemeRegistration }
+
+const highLightCode = async (code: string, lang: string, active?: boolean) => {
+  const highlighter = await getHighlighter({
+    themes: ['material-theme-palenight'],
+    langs: [...BUNDLED_LANGUAGES],
+    processors: []
+  })
+
+  const highlightedCode = highlighter.codeToHtml(code, {
+    lang,
+    // lineOptions,
+    theme: 'material-theme-palenight'
+  }).replace('background-color: #292D3E', '')
+
+  return `<div class="language-${lang} ${active ? 'active' : ''}">
+  <button title="Copy Code" class="copy"></button>
+  <span class="lang">${lang}</span>
+  ${highlightedCode}
+  </div>`
+}
+
+
+export default async function createCodeExamples(name: string) {
+  const codes = getIconCodes(name);
+
+  const codeExamplePromises = codes.map(async (codeTemplate, index) => {
+    const { title, lang, codes } = codeTemplate;
+    const isFirst = index === 0;
+
+    const code = await highLightCode(codes[0].code, codes[0].language || lang, isFirst);
+
+    return {
+      title,
+      language: codes[0].language || lang,
+      code,
+    };
+  })
+
+  return Promise.all(codeExamplePromises);
 }
