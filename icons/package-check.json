@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "confirm",
-    "verified"
+    "verified",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "development"

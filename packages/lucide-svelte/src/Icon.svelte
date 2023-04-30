@@ -4,8 +4,9 @@
 
   export let name: string
   export let color = 'currentColor'
-  export let size: number|string = 24
-  export let strokeWidth: number|string = 2
+  export let size: number | string = 24
+  export let strokeWidth: number | string = 2
+  export let absoluteStrokeWidth: boolean = false
   export let iconNode: IconNode
 </script>
 
@@ -15,7 +16,11 @@
   width={size}
   height={size}
   stroke={color}
-  stroke-width={strokeWidth}
+  stroke-width={
+    absoluteStrokeWidth
+      ? Number(strokeWidth) * 24 / Number(size)
+      : strokeWidth
+  }
   class={`lucide-icon lucide lucide-${name} ${$$props.class ?? ''}`}
 >
   {#each iconNode as [tag, attrs]}

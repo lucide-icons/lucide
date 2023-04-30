@@ -4,7 +4,11 @@
     "security",
     "secure",
     "done",
-    "save"
+    "save",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "account",

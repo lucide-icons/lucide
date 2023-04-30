@@ -3,7 +3,11 @@
   "tags": [
     "followed",
     "subscribed",
-    "done"
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "account"

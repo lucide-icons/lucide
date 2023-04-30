@@ -30,6 +30,7 @@ interface LucideProps extends Partial<JSX.SvgSVGAttributes<SVGSVGElement>> {
   color?: string
   size?: string | number
   strokeWidth?: string | number
+  absoluteStrokeWidth?: boolean
   class?: string
 }
 

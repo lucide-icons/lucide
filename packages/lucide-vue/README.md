@@ -45,12 +45,13 @@ export default {
 
 ### Props
 
-| name           | type     | default      |
-| -------------- | -------- | ------------ |
-| `size`         | _Number_ | 24           |
-| `color`        | _String_ | currentColor |
-| `strokeWidth`  | _Number_ | 2            |
-| `defaultClass` | _String_ | lucide-icon  |
+|  name                   |   type    |  default     |
+| ----------------------- | --------- | ------------ |
+| `size`                  | *number*  | 24           |
+| `color`                 | *string*  | currentColor |
+| `stroke-width`          | *number*  | 2            |
+| `absolute-stroke-width` | *boolean* | false        |
+| `default-class`         | *string*  | lucide-icon  |
 
 ### Custom props
 

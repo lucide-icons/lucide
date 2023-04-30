@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "clone",
-    "duplicate"
+    "duplicate",
+    "multiple"
   ],
   "categories": [
     "text"

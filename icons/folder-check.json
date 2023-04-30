@@ -3,7 +3,10 @@
   "tags": [
     "done",
     "directory",
-    "check"
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "files"

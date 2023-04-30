@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "clear",
+    "multiple"
+  ],
+  "categories": [
+    "notifications"
+  ]
+}

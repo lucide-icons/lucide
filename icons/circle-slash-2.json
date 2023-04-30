@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "diameter",
+    "zero",
+    "Ø",
+    "null",
+    "nothing",
+    "maths"
+  ],
+  "categories": [
+    "shapes"
+  ],
+  "aliases": [
+    "circle-slashed"
+  ]
+}

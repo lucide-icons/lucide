@@ -2,16 +2,16 @@
 
 This package include the following lucide implementations:
 
-- All svg files
-- Javascript library containing strings of svgs.
+- All SVG files
+- SVG sprite
 - Icon fonts
-- Svg sprite
+- JavaScript library containing strings of SVGs.
 
 ## Why lucide-static?
 
-This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings in your javascript project.
+This package is suitable for specific use cases, for example if you want to use icon fonts, SVG sprites, normal SVGs or Common.js SVG strings in your javascript project.
 
-> ⚠️ It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Treeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](lucide), [lucide-react](lucide-react), [lucide-vue](lucide-vue), [lucide-vue-next](lucide-vue-next), [lucide-angular](lucide-angular), [lucide-preact](lucide-preact)
+> ⚠️ While they can be useful for prototyping, it is not recommended to use the SVG sprites or icon fonts provided by this package in production web apps as all the available icons are included in the app, hence increasing loading time and data usage. We recommend to use a bundler and treeshaking to make sure only the icons you use are bundled with your app. Threeshaking is only available in these packages: [lucide](lucide), [lucide-react](lucide-react), [lucide-vue](lucide-vue), [lucide-vue-next](lucide-vue-next), [lucide-angular](lucide-angular), [lucide-preact](lucide-preact)
 
 ## Installation
 
@@ -30,10 +30,10 @@ npm install lucide-static
 ### CDN
 
 ```html
-<!-- Svg File -->
+<!-- SVG file for a single icon -->
 <img src="https://unpkg.com/lucide-static@latest/icons/home.svg" />
 
-<!-- Icon Font -->
+<!-- Icon font -->
 <style>
   @font-face {
     font-family: 'LucideIcons';
@@ -44,16 +44,16 @@ npm install lucide-static
 
 ## Usage
 
-Checkout the [codesandbox examples](https://codesandbox.io/s/using-the-svg-sprite-lz1kk).
+Check out the [codesandbox examples](https://codesandbox.io/s/using-the-svg-sprite-lz1kk).
 
 ### SVG Files
 
-#### Svg file as image
+#### SVG file as image
 
 To use it in for example html:
 
 ```html
-<!-- Svg File -->
+<!-- SVG file for a single icon -->
 <img src="~lucide-static/icons/home.svg" />
 ```
 
@@ -65,15 +65,15 @@ To use it in for example html:
 
 Make sure you have the correct webpack loaders to make this work. [url-loader](https://v4.webpack.js.org/loaders/url-loader/)
 
-#### Svg file Inline
+#### SVG file as string
 
-You can simply import each svg by targeting `lucide-static/icons/{icon-name}.svg`.
-To use svgs in your project you can for example use a [svg loader](https://v4.webpack.js.org/loaders/svg-inline-loader/).
+You can simply import each SVG by targeting `lucide-static/icons/{icon-name}.svg`.
+To use SVGs in your project you can for example use a [SVG loader](https://v4.webpack.js.org/loaders/svg-inline-loader/).
 
 ```js
 import arrowRightIcon from 'lucide-static/icons/arrow-right';
 
-// return string of a svg
+// return string of an SVG
 ```
 
 ### SVG Sprite
@@ -116,7 +116,7 @@ If you'd prefer, you can use CSS to hold your base SVG properties
 }
 ```
 
-and update the svg as follows
+and update the SVG as follows
 
 ```svg
 <svg

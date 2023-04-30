@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "git",
+    "diff",
+    "modified"
+  ],
+  "categories": [
+    "shapes",
+    "development"
+  ]
+}

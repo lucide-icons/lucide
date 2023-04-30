@@ -3,7 +3,11 @@
   "tags": [
     "done",
     "received",
-    "double"
+    "double",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "notifications"

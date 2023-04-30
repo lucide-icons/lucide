@@ -1,7 +1,7 @@
 {
   "name": "lucide-react-native",
   "description": "A Lucide icon library package for React Native applications",
-  "version": "0.137.0",
+  "version": "0.160.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",

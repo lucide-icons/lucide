@@ -2,11 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "keyboard",
+    "key",
+    "mac",
     "cmd",
-    "terminal",
-    "prompt"
+    "button"
   ],
   "categories": [
-    "coding"
+    "development"
   ]
 }

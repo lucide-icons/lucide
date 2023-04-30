@@ -37,11 +37,12 @@ export default App;
 
 ### Props
 
-| name          | type     | default      |
-| ------------- | -------- | ------------ |
-| `size`        | _Number_ | 24           |
-| `color`       | _String_ | currentColor |
-| `strokeWidth` | _Number_ | 2            |
+| name                  | type      | default      |
+| --------------------- | --------- | ------------ |
+| `size`                | *number*  | 24           |
+| `color`               | *string*  | currentColor |
+| `strokeWidth`         | *number*  | 2            |
+| `absoluteStrokeWidth` | *boolean* | false        |
 
 ### Custom props
 

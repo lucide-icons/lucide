@@ -4,7 +4,9 @@
     "on",
     "off",
     "device",
-    "switch"
+    "switch",
+    "reboot",
+    "restart"
   ],
   "categories": [
     "connectivity"

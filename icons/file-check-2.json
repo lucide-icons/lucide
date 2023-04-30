@@ -2,7 +2,11 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "done",
-    "document"
+    "document",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
     "files"

@@ -46,7 +46,19 @@ export default async function fetchAllDocuments() {
     }
   }
 
-  const mappedDirectoryTree = (await Promise.all(fileNames.map(mapDirectoryTree))).flat().filter(({filename}) => filename.endsWith('.md'))
+  console.log(
+    (await Promise.all(fileNames.map(mapDirectoryTree))),
+    (await Promise.all(fileNames.map(mapDirectoryTree))).flat()
+  );
+
+
+  const mappedDirectoryTree = (await Promise.all(fileNames.map(mapDirectoryTree))).flat()
+    .filter((item) =>
+      item != null
+      && typeof item === 'object'
+      && 'filename' in item
+      && item.filename.endsWith('.md')
+    )
   const mappedFileContents = await Promise.all(
     mappedDirectoryTree
     .map(mapFileContents)
