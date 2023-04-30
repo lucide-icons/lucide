@@ -514,7 +514,7 @@ const getRect = (segments: PathSegment[]): INode | undefined => {
     } else {
       return undefined;
     }
-    if (segments.every(([c]) => ['L', 'V', 'H', 'Z'].includes(c))) {
+    if (segments.every(([c]) => ['M', 'L', 'V', 'H', 'Z'].includes(c))) {
       points.push(prevPoint);
     }
   }
@@ -543,8 +543,11 @@ const getRect = (segments: PathSegment[]): INode | undefined => {
     value: undefined,
     children: undefined,
     attributes: {
-      rx: radius ? radius + '' : undefined,
-      ry: radius ? radius + '' : undefined,
+      ...(radius
+        ? {
+            rx: radius + '',
+          }
+        : {}),
       x: x1 - radius + '',
       y: y1 - radius + '',
       width: x2 - x1 + radius * 2 + '',
