@@ -10,7 +10,7 @@
   stroke-linejoin="round"
 >
   <circle cx="12" cy="12" r="10" />
-  <path d="M16 16.5a5 5 0 0 0-8 0" />
+  <path d="M15.5 16a5 5 0 0 0-7 0" />
   <path d="M7.5 8 10 9" />
   <path d="m14 9 2.5-1" />
   <path d="M6.5 12h.01" />
