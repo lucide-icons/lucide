@@ -11,20 +11,20 @@ const vercelRouteConfig = {
     {
       handle: 'filesystem',
     },
-    {
-      source: '/icon/:path*',
-      destination: '/icons/:path*',
-      permanent: true,
-    },
+    // {
+    //   source: '/icon/:path*',
+    //   destination: '/icons/:path*',
+    //   permanent: true,
+    // },
     {
       src: '(?<url>/api/.*)',
       dest: '/__nitro?url=$url',
     },
-    {
-      src: '/(.*)',
-      // status: 404,
-      dest: '/404.html',
-    },
+    // {
+    //   src: '/(.*)',
+    //   status: 404,
+    //   dest: '/static/404.html',
+    // },
   ],
 };
 
