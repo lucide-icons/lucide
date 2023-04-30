@@ -845,8 +845,8 @@ const mergeArcs = (svg: string) => {
 };
 
 const runOptimizations = flow(
-  fixDots,
   elementsToPath,
+  fixDots,
   mergeLines,
   removeOverlappingLineSegments,
   mergeArcs,
