@@ -7,24 +7,16 @@ import useSearch from '../composables/useSearch'
 import Input from './Input.vue'
 import EndOfPage from './EndOfPage.vue'
 import { useCategoryView } from '../composables/useCategoryView'
+import useSearchInput from '../composables/useSearchInput'
 
 const props = defineProps<{
   icons: IconEntity[]
   categories: Category[]
 }>()
 
-const { selectedCategory } = useCategoryView()
 const activeIconName = ref('')
-const searchQuery = ref(
-  typeof window === 'undefined'
-    ? ''
-    : (
-      new URLSearchParams(window.location.search).get('search')
-      || ''
-    )
-)
+const { searchInput, searchQuery, searchQueryThrottled } = useSearchInput()
 
-const searchInput = ref()
 const isSearching = computed(() => !!searchQuery.value)
 
 function setActiveIconName(name: string) {
@@ -55,23 +47,6 @@ const categories = computed(() => {
     };
   })
   .filter(({ icons }) => icons.length)
-})
-
-watch(searchQuery, (searchString) => {
-  const newUrl = new URL(window.location.href);
-
-  newUrl.searchParams.set('search', searchString);
-
-  nextTick(() => {
-    window.history.replaceState({}, '', newUrl)
-  })
-})
-
-onMounted(() => {
-  const searchParams = new URLSearchParams(window.location.search);
-  if(searchParams.has('search')) {
-    searchInput.value.focus()
-  }
 })
 
 const activeIcon = computed(() =>

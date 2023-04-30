@@ -63,9 +63,9 @@ onBeforeUnmount(() => {
           </IconButton>
         </TransitionGroup>
       </div>
-      <FakeInput @click="go('/icons/?search')" class="search-box">
-    Search 964 icons...
-  </FakeInput>
+      <FakeInput @click="go('/icons/?focus')" class="search-box">
+        Search 964 icons...
+      </FakeInput>
     </div>
   </div>
 
@@ -76,6 +76,7 @@ onBeforeUnmount(() => {
   /* padding: 0 24px; */
   margin-left: auto;
   margin-bottom: auto;
+  margin-top: 48px;;
 }
 .icons-card {
   background: var(--vp-c-bg-alt);
@@ -128,9 +129,20 @@ onBeforeUnmount(() => {
 
 .search-box {
   position: absolute;
-  bottom:-24px;
   width: 100%;
-  left: -24px;
+  left: 0;
+  top: -48px;
+}
+
+@media (min-width: 960px) {
+  .search-box {
+    top: unset;
+    bottom: -24px;
+    left: -24px;
+  }
+  .card-wrapper {
+    margin-top: 0;
+  }
 }
 
 /* .search-box :deep(.input) {

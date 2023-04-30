@@ -26,15 +26,20 @@ const codeExample = computed(() => params.value.codeExamples?.map(
 )
 </script>
 
-<IconPreview
-  :name="$params.name"
-  :iconNode="$params.iconNode"
-  :class="$style.preview"
-/>
-</div><div>
-<IconDetailName>
-  {{$params.name}}
-</IconDetailName>
+<div :class="$style.layout">
+  <div>
+    <IconPreview
+      :name="$params.name"
+      :iconNode="$params.iconNode"
+      :class="$style.preview"
+    />
+  </div>
+  <div>
+    <IconDetailName>
+      {{$params.name}}
+    </IconDetailName>
+  </div>
+</div>
 
 <CodeGroup :groups="tabs" groupName="icon-code-example">
   <div
@@ -46,5 +51,19 @@ const codeExample = computed(() => params.value.codeExamples?.map(
 <style module>
   .preview {
     margin-bottom: 24px;
+    max-width: 240px;
+  }
+
+  @media (min-width: 640px) {
+    .layout {
+      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    .preview {
+      margin: 0 auto;
+    }
   }
 </style>

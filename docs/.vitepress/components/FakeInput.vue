@@ -1,8 +1,14 @@
 <script setup>
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
+import { search }  from '../../iconNodes'
+import { computed } from 'vue';
+
+const SearchIcon = createLucideIcon('search', search)
 </script>
 
 <template>
   <button class="fake-input">
+    <component :is="SearchIcon" class="search-icon"/>
     <slot/>
   </button>
 </template>
@@ -19,6 +25,8 @@
   text-align: left;
   border: 1px solid transparent;
   cursor: text;
+  display: flex;
+  gap: 12px;
 }
 
 .fake-input:hover, .fake-input:focus {
