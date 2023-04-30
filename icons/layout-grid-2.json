@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "app",
+    "home",
+    "start"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
