@@ -27,13 +27,12 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          echo "- `strokeWidth={1}`"
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
-            sed "s|.*|![\"$file\"](\"https://lucide.dev/api/gh-icon/stroke-width/1/&.svg\") |"
+            sed "s|.*|![$file](https://lucide.dev/api/gh-icon/stroke-width/1/&.svg) |"
           done | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
@@ -42,13 +41,12 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          echo "- `strokeWidth={2}`"
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
-            sed "s|.*|![\"$file\"](\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\") |"
+            sed "s|.*|![$file](https://lucide.dev/api/gh-icon/stroke-width/2/&.svg) |"
           done | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
@@ -57,13 +55,12 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          echo "- `strokeWidth={3}`"
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
-            sed "s|.*|![\"$file\"](\"https://lucide.dev/api/gh-icon/stroke-width/3/&.svg\") |"
+            sed "s|.*|![$file](https://lucide.dev/api/gh-icon/stroke-width/3/&.svg) |"
           done | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
@@ -95,9 +92,9 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             ### Added or changed icons
-            ${{ steps.generate-1px-stroke-width }}
-            ${{ steps.generate-2px-stroke-width }}
-            ${{ steps.generate-3px-stroke-width }}
+            ${{ steps.generate-1px-stroke-width.outputs.body }}
+            ${{ steps.generate-2px-stroke-width.outputs.body }}
+            ${{ steps.generate-3px-stroke-width.outputs.body }}
             <details>
             <summary>Icon X-rays</summary>
             ${{ steps.generate-x-rays.outputs.body }}
