@@ -5,9 +5,6 @@ const props = defineProps<{
   groupName: string,
 }>()
 
-console.log(props.groups);
-
-
 const getSaveIdname = (name: string) => {
   return name.toLowerCase().replace(/\s/g, '-')
 }
@@ -20,8 +17,6 @@ const tabs = computed(() => props.groups?.map((group) => {
 }))
 
 const saveTabId = (id: string) => {
-  console.log(id);
-
   localStorage.setItem(props.groupName, id)
 }
 
