@@ -22,7 +22,7 @@ const vercelRouteConfig = {
     },
     {
       src: '/(.*)',
-      status: 404,
+      // status: 404,
       dest: '/404.html',
     },
   ],
