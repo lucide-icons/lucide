@@ -5,3 +5,4 @@ node_modules
 .vercel
 .nitro
 iconNodes
+iconMetaData.ts

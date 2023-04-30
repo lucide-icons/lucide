@@ -6,7 +6,9 @@ const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
 
-fs.unlinkSync(path.resolve(currentDir, 'iconMetaData.ts'));
+if (fs.existsSync(path.resolve(currentDir, 'iconMetaData.ts'))) {
+  fs.unlinkSync(path.resolve(currentDir, 'iconMetaData.ts'));
+}
 
 const location = path.resolve(currentDir, `iconMetaData.ts`);
 
