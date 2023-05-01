@@ -91,12 +91,6 @@ watch(searchQueryThrottled, (searchString) => {
   aspect-ratio: 1/1;
 }
 
-.input-wrapper .input {
-  padding: 12px 24px;
-  font-size: 14px;
-  height: 48px;
-}
-
 .input-wrapper {
   margin-bottom: 8px;
 }

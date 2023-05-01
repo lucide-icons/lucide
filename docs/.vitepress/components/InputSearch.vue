@@ -64,4 +64,11 @@ const value = computed({
   background: var(--vp-c-bg-alt);
 }
 
+.input-wrapper:deep(.input) {
+  /* padding: 12px 24px; */
+  padding-block: 12px;
+  font-size: 14px;
+  height: 48px;
+}
+
 </style>

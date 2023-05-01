@@ -17,6 +17,7 @@ const value = computed({
 <template>
   <div class="color-picker">
     <div class="color-input-wrapper">
+      <!-- TODO: Add currentColor div if value is currentColor -->
       <input
         type="color"
         :id="id"
