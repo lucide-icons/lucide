@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "antenna",
+    "receiver",
+    "dish aerial",
+    "saucer"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "multimedia"
+  ]
+}
