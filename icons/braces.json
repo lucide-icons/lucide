@@ -3,10 +3,15 @@
   "tags": [
     "json",
     "code",
-    "token"
+    "token",
+    "curly brackets",
+    "data"
   ],
   "categories": [
     "development",
     "files"
+  ],
+  "aliases": [
+    "curly-braces"
   ]
 }
