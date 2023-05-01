@@ -1,67 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   version="1.1"
-   viewBox="0 0 24 24"
-   id="svg443"
-   sodipodi:docname="lock-2.svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs447" />
-  <sodipodi:namedview
-     id="namedview445"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="true"
-     inkscape:zoom="33.5"
-     inkscape:cx="11.985075"
-     inkscape:cy="12.014925"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg443">
-    <inkscape:grid
-       type="xygrid"
-       id="grid566"
-       empspacing="6" />
-  </sodipodi:namedview>
-  <g
-     fill="none"
-     stroke="#000"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     stroke-miterlimit="2"
-     stroke-width="2"
-     id="g441">
-    <rect
-       x="4"
-       y="10"
-       width="16"
-       height="11"
-       rx="2"
-       ry="2"
-       id="rect433" />
-    <path
-       d="M 8,10 V 5 c 0,0 0,-2 4,-2 4,0 4,2 4,2 v 5"
-       id="path435"
-       sodipodi:nodetypes="ccscc" />
-    <rect
-       x="11"
-       y="14.5"
-       width="2"
-       height="2"
-       rx="1"
-       ry="1"
-       id="rect437" />
-  </g>
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="15.5" r="1" />
+  <rect x="4" y="10" width="16" height="11" rx="2" />
+  <path d="M8 10V5s0-2 4-2 4 2 4 2v5" />
 </svg>
