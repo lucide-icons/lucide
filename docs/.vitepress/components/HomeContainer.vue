@@ -7,18 +7,29 @@
 <style scoped>
 .home-container {
   position: relative;
-  padding: 24px;
+  padding-inline: 24px;
+  margin-block: 24px;
 }
 
 @media (min-width: 640px) {
   .home-container {
-    padding: 48px;
+    padding-inline: 48px;
+    margin-block: 48px;
   }
 }
 
 @media (min-width: 960px) {
   .home-container {
-    padding: 64px;
+    padding-inline: 64px;
+    margin-block: 64px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-container {
+    margin: 64px auto;
+    max-width: 1152px;
+    padding: 0;
   }
 }
 </style>

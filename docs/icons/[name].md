@@ -54,7 +54,7 @@ const codeExample = computed(() => params.value.codeExamples?.map(
     max-width: 240px;
   }
 
-  @media (min-width: 640px) {
+   (min-width: 640px) {
     .layout {
       align-items: flex-start;
       display: grid;

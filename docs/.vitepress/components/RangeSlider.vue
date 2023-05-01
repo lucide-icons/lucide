@@ -5,6 +5,7 @@ interface Props {
     modelValue: number;
     min?: number;
     max?: number;
+    steps?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -15,6 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 defineEmits(['update:modelValue'])
 
 const percentage = computed<string>(() => `${((props.modelValue - props.min) / (props.max - props.min)) * 100}%`);
+// TODO: Steps must be implemented
 </script>
 
 <template>
@@ -37,6 +39,7 @@ const percentage = computed<string>(() => `${((props.modelValue - props.min) / (
     width: 100%;
     line-height: 10px;
     height: 20px;
+    --bar-color: var(--slider-bar-color, var(--vp-c-bg-soft));
 }
 
 .slider:hover input{
@@ -64,7 +67,7 @@ const percentage = computed<string>(() => `${((props.modelValue - props.min) / (
     border-bottom-left-radius: 4px;
 }
 .slider .bar:after {
-    background: var(--vp-c-bg-soft);
+    background: var(--bar-color);
     width: calc(100% - v-bind(percentage));
     right: 0;
     border-top-right-radius: 4px;

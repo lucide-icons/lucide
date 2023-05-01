@@ -50,6 +50,8 @@ features:
 
 <script setup>
 import HomePackagesSection from './.vitepress/components/HomePackagesSection.vue'
+import HomeIconCustomizer from './.vitepress/components/HomeIconCustomizer.vue'
 </script>
 
 <HomePackagesSection />
+<HomeIconCustomizer />

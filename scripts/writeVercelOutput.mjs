@@ -6,7 +6,7 @@ const currentDir = process.cwd();
 const vercelRouteConfig = {
   version: 3,
   overrides: {},
-  // cleanUrls: true,
+  cleanUrls: true,
   routes: [
     {
       handle: 'filesystem',

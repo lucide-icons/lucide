@@ -32,12 +32,16 @@ function insert() {
   items.value[replaceIndex] = newIcon
 }
 
+function startInterval() {
+  intervalTime.value = setInterval(() => {
+    insert()
+  }, 2000)
+}
+
 // TODO: Try maybe something else for better pref performance
-// onMounted(() => {
-//   intervalTime.value = setInterval(() => {
-//     insert()
-//   }, 2000)
-// })
+onMounted(() => {
+  window.addEventListener('mousemove', startInterval, { once: true })
+})
 
 onBeforeUnmount(() => {
   clearInterval(intervalTime.value)
@@ -76,7 +80,7 @@ onBeforeUnmount(() => {
   /* padding: 0 24px; */
   margin-left: auto;
   margin-bottom: auto;
-  margin-top: 48px;;
+  margin-top: 48px;
 }
 .icons-card {
   background: var(--vp-c-bg-alt);

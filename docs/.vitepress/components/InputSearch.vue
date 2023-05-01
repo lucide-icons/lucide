@@ -36,10 +36,11 @@ const value = computed({
 
 <template>
   <Input
+    ref="input"
     type="search"
     v-bind="$attrs"
     v-model="value"
-    class="input-wrapper" ref="searchInput"
+    class="input-wrapper"
   >
     <template #icon>
       <component :is="SearchIcon" class="search-icon" />

@@ -42,11 +42,7 @@ const getIconCodes = (name: string): CodeExampleType => {
 
 const App = () => {
   return (
-    <${pascalCase}
-      color="red"
-      size={48}
-      strokeWidth={1.5}
-    />
+    <${pascalCase}/>
   );
 };
 
@@ -63,7 +59,7 @@ export default App;
         {
           language: 'vue',
           code: `<template>
-  <${pascalCase} color="red" :size="32" />
+  <${pascalCase} />
 </template>
 
 <script setup>
@@ -84,11 +80,7 @@ import { ${pascalCase} } from 'lucide-vue-next';
 import { ${pascalCase} } from 'lucide-svelte';
 </script>
 
-<${pascalCase}
-  color={red}
-  size={48}
-  strokeWidth={1.5}
-/>
+<${pascalCase}/>
 `,
           metastring: '{2,5}',
         },
@@ -104,11 +96,7 @@ import { ${pascalCase} } from 'lucide-svelte';
 
 const App = () => {
   return (
-    <${pascalCase}
-      color="red"
-      size={48}
-      strokeWidth={1.5}
-    />
+    <${pascalCase}/>
   );
 };
 
@@ -128,11 +116,7 @@ export default App;
 
 const App = () => {
   return (
-    <${pascalCase}
-      color="red"
-      size={48}
-      strokeWidth={1.5}
-    />
+    <${pascalCase}/>
   );
 };
 
