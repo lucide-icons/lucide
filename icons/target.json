@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "logo",
-    "bullseye"
+    "bullseye",
+    "deadline",
+    "projects",
+    "overview",
+    "work",
+    "productivity"
   ],
   "categories": [
     "brands",
