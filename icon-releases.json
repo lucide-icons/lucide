@@ -2607,7 +2607,7 @@
     "changedRelease": "v0.62.0",
     "updated": "2022-06-16T09:15:49.000Z"
   },
-  "curly-braces": {
+  "braces": {
     "contributors": [
       "karsa-mistmere"
     ],
@@ -7083,7 +7083,7 @@
     "changedRelease": "v0.132.0",
     "updated": "2023-04-08T15:27:53.000Z"
   },
-  "sidebar-close": {
+  "panel-left-close": {
     "contributors": [
       "ericfennis",
       "mittalyashu"
@@ -7092,7 +7092,7 @@
     "changedRelease": "v0.132.0",
     "updated": "2023-04-08T15:27:53.000Z"
   },
-  "sidebar-open": {
+  "panel-left-open": {
     "contributors": [
       "ericfennis",
       "mittalyashu"
@@ -7101,7 +7101,7 @@
     "changedRelease": "v0.132.0",
     "updated": "2023-04-08T15:27:53.000Z"
   },
-  "sidebar": {
+  "panel-left": {
     "contributors": [
       "colebemis",
       "ericfennis"
@@ -7297,7 +7297,7 @@
     "changedRelease": "v0.51.0",
     "updated": "2022-06-01T21:04:41.000Z"
   },
-  "sort-asc": {
+  "arrow-up-narrow-wide": {
     "contributors": [
       "lukesmurray",
       "ericfennis",
@@ -7307,7 +7307,7 @@
     "changedRelease": "v0.99.0",
     "updated": "2022-11-07T09:39:01.000Z"
   },
-  "sort-desc": {
+  "arrow-down-wide-narrow": {
     "contributors": [
       "ericfennis",
       "csandman"
@@ -7749,7 +7749,7 @@
     "changedRelease": "v0.18.0",
     "updated": "2022-04-06T09:10:10.000Z"
   },
-  "text-selection": {
+  "text-select": {
     "contributors": [
       "danielbayley"
     ],
@@ -8629,5 +8629,629 @@
     "createdRelease": "v0.132.0",
     "changedRelease": "v0.132.0",
     "updated": "2023-04-08T15:27:53.000Z"
+  },
+  "app-window": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.180.0",
+    "changedRelease": "v0.180.0",
+    "updated": "2023-04-25T17:49:03.000Z"
+  },
+  "arrow-big-down-dash": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:47:31.000Z"
+  },
+  "arrow-big-left-dash": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:47:31.000Z"
+  },
+  "arrow-big-right-dash": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:47:31.000Z"
+  },
+  "arrow-big-up-dash": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:47:31.000Z"
+  },
+  "arrow-down-0-1": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-down-1-0": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-down-a-z": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-down-narrow-wide": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-down-square": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "arrow-down-up": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-down-z-a": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-left-square": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "arrow-right-left": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-right-square": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "arrow-up-0-1": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-up-1-0": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-up-a-z": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-up-square": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "arrow-up-wide-narrow": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "arrow-up-z-a": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:44:33.000Z"
+  },
+  "bell-dot": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.183.0",
+    "changedRelease": "v0.183.0",
+    "updated": "2023-04-27T21:03:48.000Z"
+  },
+  "biohazard": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.190.0",
+    "changedRelease": "v0.190.0",
+    "updated": "2023-04-30T21:57:34.000Z"
+  },
+  "brackets": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T16:58:43.000Z"
+  },
+  "circuit-board": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.164.0",
+    "changedRelease": "v0.164.0",
+    "updated": "2023-04-18T07:04:46.000Z"
+  },
+  "fold-horizontal": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.188.0",
+    "changedRelease": "v0.188.0",
+    "updated": "2023-04-29T09:06:08.000Z"
+  },
+  "fold-vertical": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.188.0",
+    "changedRelease": "v0.188.0",
+    "updated": "2023-04-29T09:06:08.000Z"
+  },
+  "folder-git-2": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.167.0",
+    "changedRelease": "v0.167.0",
+    "updated": "2023-04-20T13:52:03.000Z"
+  },
+  "folder-git": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.167.0",
+    "changedRelease": "v0.167.0",
+    "updated": "2023-04-20T13:52:03.000Z"
+  },
+  "iteration-ccw": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.177.0",
+    "changedRelease": "v0.177.0",
+    "updated": "2023-04-25T04:41:26.000Z"
+  },
+  "iteration-cw": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.177.0",
+    "changedRelease": "v0.177.0",
+    "updated": "2023-04-25T04:41:26.000Z"
+  },
+  "ligature": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T08:33:41.000Z"
+  },
+  "list-tree": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.167.0",
+    "changedRelease": "v0.167.0",
+    "updated": "2023-04-20T13:49:08.000Z"
+  },
+  "memory-stick": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "merge": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.189.0",
+    "changedRelease": "v0.189.0",
+    "updated": "2023-04-30T19:44:15.000Z"
+  },
+  "message-square-dashed": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.167.0",
+    "changedRelease": "v0.167.0",
+    "updated": "2023-04-20T14:02:27.000Z"
+  },
+  "message-square-plus": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.167.0",
+    "changedRelease": "v0.167.0",
+    "updated": "2023-04-20T14:02:27.000Z"
+  },
+  "messages-square": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.167.0",
+    "changedRelease": "v0.167.0",
+    "updated": "2023-04-20T14:02:27.000Z"
+  },
+  "monitor-down": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T11:12:32.000Z"
+  },
+  "monitor-up": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T11:12:32.000Z"
+  },
+  "moon-star": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:39:11.000Z"
+  },
+  "panel-bottom-close": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-bottom-inactive": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-bottom-open": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-bottom": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-left-inactive": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-right-close": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-right-inactive": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-right-open": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-right": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-top-close": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-top-inactive": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-top-open": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "panel-top": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T07:19:14.000Z"
+  },
+  "parentheses": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T16:58:43.000Z"
+  },
+  "pc-case": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "radiation": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.190.0",
+    "changedRelease": "v0.190.0",
+    "updated": "2023-04-30T21:57:34.000Z"
+  },
+  "radio-tower": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.164.0",
+    "changedRelease": "v0.164.0",
+    "updated": "2023-04-19T19:27:47.000Z"
+  },
+  "repeat-2": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:39:04.000Z"
+  },
+  "rows": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.184.0",
+    "changedRelease": "v0.184.0",
+    "updated": "2023-04-28T08:17:35.000Z"
+  },
+  "satellite-dish": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "satellite": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "save-all": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.172.0",
+    "changedRelease": "v0.172.0",
+    "updated": "2023-04-22T15:19:45.000Z"
+  },
+  "shield-question": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.171.0",
+    "changedRelease": "v0.171.0",
+    "updated": "2023-04-20T16:28:33.000Z"
+  },
+  "split": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.189.0",
+    "changedRelease": "v0.189.0",
+    "updated": "2023-04-30T19:44:15.000Z"
+  },
+  "square-dot": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "square-equal": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "square-slash": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.181.0",
+    "changedRelease": "v0.181.0",
+    "updated": "2023-04-26T16:11:35.000Z"
+  },
+  "stars": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.173.0",
+    "changedRelease": "v0.173.0",
+    "updated": "2023-04-23T09:39:11.000Z"
+  },
+  "test-tube-2": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.164.0",
+    "changedRelease": "v0.164.0",
+    "updated": "2023-04-19T19:40:03.000Z"
+  },
+  "test-tube": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.164.0",
+    "changedRelease": "v0.164.0",
+    "updated": "2023-04-19T19:40:03.000Z"
+  },
+  "test-tubes": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.164.0",
+    "changedRelease": "v0.164.0",
+    "updated": "2023-04-19T19:40:03.000Z"
+  },
+  "touchpad-off": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "touchpad": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "unfold-horizontal": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.188.0",
+    "changedRelease": "v0.188.0",
+    "updated": "2023-04-29T09:06:08.000Z"
+  },
+  "unfold-vertical": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.188.0",
+    "changedRelease": "v0.188.0",
+    "updated": "2023-04-29T09:06:08.000Z"
+  },
+  "wallpaper": {
+    "contributors": [
+      "karsa-mistmere"
+    ],
+    "createdRelease": "v0.191.0",
+    "changedRelease": "v0.191.0",
+    "updated": "2023-05-01T17:18:15.000Z"
+  },
+  "workflow": {
+    "contributors": [
+      "danielbayley"
+    ],
+    "createdRelease": "v0.178.0",
+    "changedRelease": "v0.178.0",
+    "updated": "2023-04-25T08:36:52.000Z"
   }
 }

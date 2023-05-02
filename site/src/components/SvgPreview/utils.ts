@@ -28,7 +28,7 @@ export const getCommands = (src: string) =>
   );
 
 export const getPaths = (src: string) => {
-  const commands = getCommands(src);
+  const commands = getCommands(src.includes('<svg') ? src : `<svg>${src}</svg>`);
   const paths: Path[] = [];
   let prev: Point | undefined = undefined;
   let start: Point | undefined = undefined;

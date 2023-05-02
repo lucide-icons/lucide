@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "directory",
+    "root",
+    "project",
+    "git",
+    "repo"
+  ],
+  "categories": [
+    "files"
+  ]
+}

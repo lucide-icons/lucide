@@ -6,6 +6,7 @@
     "counter-clockwise",
     "restart",
     "reload",
+    "rerun",
     "refresh",
     "backup",
     "undo"

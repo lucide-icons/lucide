@@ -5,6 +5,8 @@ import defaultAttributes from './defaultAttributes';
 // Create interface extending SVGAttributes
 export interface SVGProps extends Partial<SVGAttributes> {
   size?: 24 | number
+  strokeWidth?: number | string
+  absoluteStrokeWidth?: boolean
 }
 
 
@@ -21,7 +23,7 @@ type IconNode = [elementName: string, attrs: Record<string, string>][]
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionalComponent<SVGProps> => (
-  { size, color, ...props }, // props
+  { size, strokeWidth = 2, absoluteStrokeWidth, color, ...props }, // props
   { attrs, slots } // context
   ) => {
   return h(
@@ -31,6 +33,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionalCompo
       width: size || defaultAttributes.width,
       height: size || defaultAttributes.height,
       stroke: color || defaultAttributes.stroke,
+      'stroke-width': absoluteStrokeWidth ?  Number(strokeWidth) * 24 / Number(size) : strokeWidth,
       ...attrs,
       class: ['lucide', `lucide-${toKebabCase(iconName)}`, attrs?.class || ''],
       ...props,

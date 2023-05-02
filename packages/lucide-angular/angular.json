@@ -5,21 +5,24 @@
   "projects": {
     "lucide-angular": {
       "projectType": "library",
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
-      "prefix": "lib",
+      "prefix": "lucide",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "tsconfig.lib.json",
             "project": "ng-package.json"
           },
           "configurations": {
             "production": {
               "tsConfig": "tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -30,19 +33,19 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.lib.json",
-              "tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "packageManager": "pnpm"
   },
   "defaultProject": "lucide-angular"
 }

@@ -3,6 +3,7 @@
   "scripts": {
     "build": "pnpm -r --filter './packages/**' build",
     "test": "pnpm -r --filter './packages/**' test",
+    "test:update": "pnpm -r --filter './packages/**' --filter !'./packages/lucide-angular' test -- -u",
     "lucide": "pnpm --filter lucide",
     "lucide-angular": "pnpm --filter lucide-angular",
     "lucide-react": "pnpm --filter lucide-react",

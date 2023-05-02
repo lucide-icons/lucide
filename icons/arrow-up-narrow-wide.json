@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "arrow",
+    "filter",
+    "sort",
+    "ascending"
+  ],
+  "aliases": [
+    "sort-asc"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "arrows"
+  ]
+}

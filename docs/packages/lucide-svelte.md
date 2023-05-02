@@ -42,12 +42,14 @@ You can pass additional props to adjust the icon.
 
 ### Available props
 
-| name          | type     | default      |
-| ------------- | -------- | ------------ |
-| `size`        | _Number_ | 24           |
-| `color`       | _String_ | currentColor |
-| `strokeWidth` | _Number_ | 2            |
-| `*<SVGProps>` | _String_ | -            |
+| name                  | type      | default      |
+| --------------------- | --------- | ------------ |
+| `size`                | *number*  | 24           |
+| `color`               | *string*  | currentColor |
+| `strokeWidth`         | *number*  | 2            |
+| `absoluteStrokeWidth` | *boolean* | false        |
+| `*<SVGProps>`         | *string*  | -            |
+
 
 \* All SVGProps are available to style the svgs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)
 

@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "space station",
+    "orbit",
+    "transmitter"
+  ],
+  "categories": [
+    "connectivity",
+    "science"
+  ]
+}

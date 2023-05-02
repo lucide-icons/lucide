@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import {render, fireEvent, cleanup } from '@testing-library/vue'
-import { Smile } from '../src/icons'
+import { Smile, Edit2, Pen } from '../src/lucide-vue-next'
 
 describe('Using lucide icon components', () => {
   afterEach(() => cleanup())
@@ -89,4 +89,46 @@ describe('Using lucide icon components', () => {
     expect(textElement).toBeInTheDocument()
     expect(container).toMatchSnapshot();
   });
+
+  it('should render the alias icon', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        'stroke-width': 4
+      }
+    })
+
+    const PenIconRenderedHTML = container.innerHTML
+
+    cleanup()
+
+    const { container: Edit2Container } = render(Edit2, {
+      props: {
+        size: 48,
+        color: 'red',
+        'stroke-width': 4
+      }
+    })
+
+    console.log(PenIconRenderedHTML, Edit2Container.innerHTML)
+
+    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
+  })
+
+  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
+    render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true
+      }
+    })
+
+    const [icon] = document.getElementsByClassName('lucide');
+
+    expect(icon.getAttribute('width')).toBe('48')
+    expect(icon.getAttribute('stroke')).toBe('red')
+    expect(icon.getAttribute('stroke-width')).toBe('1')
+  })
 });

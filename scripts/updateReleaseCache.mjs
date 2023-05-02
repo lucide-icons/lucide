@@ -13,8 +13,11 @@ const fetchCommits = async (file) => {
   const commits = await githubApi(
     `https://api.github.com/repos/lucide-icons/lucide/commits?path=${file.filename}`,
   );
-
-  return {...file, commits};
+  if (Array.isArray(commits)) {
+    return {...file, commits};
+  } else {
+    throw new Error();
+  }
 };
 
 let releaseCache = {};
@@ -59,8 +62,12 @@ const findRelease = (date, releases) => {
 }
 
 const latestCommitDate = async (fileName) => {
-  return new Date((await simpleGit().raw('log', '--format=%cI', path.join(ICONS_DIR, fileName)))
-    .trim().split(/\n/).at(0)).toISOString();
+  try {
+    return new Date((await simpleGit().raw('log', '--format=%cI', path.join(ICONS_DIR, fileName)))
+      .trim().split(/\n/).at(0)).toISOString();
+  } catch (e) {
+    return null;
+  }
 }
 const iconChanged = async (iconName) => {
   if (!(iconName in releaseCache)) {

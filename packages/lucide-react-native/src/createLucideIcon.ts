@@ -8,20 +8,21 @@ type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
 
 export interface LucideProps extends SvgProps {
   size?: string | number
+  absoluteStrokeWidth?: boolean
 }
 
 const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef(
-    ({ color = 'currentColor', size = 24, strokeWidth = 2, children, ...rest }: LucideProps, ref) =>
+    ({ color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, ...rest }: LucideProps, ref) =>
       createElement(
-        NativeSvg.Svg,
+        NativeSvg.Svg as unknown as string,
         {
           ref,
           ...defaultAttributes,
           width: size,
           height: size,
           stroke: color,
-          strokeWidth,
+          strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
           ...rest,
         },
         [
@@ -29,7 +30,9 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
             const upperCasedTag = (tag.charAt(0).toUpperCase() + tag.slice(1)) as keyof (typeof NativeSvg);
             return createElement(NativeSvg[upperCasedTag] as FunctionComponent<Record<string, string>>, attrs);
           }),
-          ...(children as ReactNode[] || []),
+          ...(
+            (Array.isArray(children) ? children : [children]) || []
+          ),
         ],
       ),
   );

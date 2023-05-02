@@ -1,5 +1,12 @@
 import fetch, { Headers } from 'node-fetch';
 
+class HTTPResponseError extends Error {
+  constructor(response) {
+    super(`HTTP Error Response: ${response.status} ${response.statusText}`);
+    this.response = response;
+  }
+}
+
 const githubApi = async (endpoint) => {
   const headers = new Headers();
   const username = process.env['GITHUB_USERNAME'] ?? 'ericfennis';
@@ -14,6 +21,10 @@ const githubApi = async (endpoint) => {
     method: 'GET',
     headers,
   });
+
+  if (!res.ok) {
+    throw new HTTPResponseError(res);
+  }
 
   return res.json();
 };

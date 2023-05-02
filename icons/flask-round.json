@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "beaker"
+    "beaker",
+    "lab",
+    "chemistry",
+    "experiment",
+    "test"
   ],
   "categories": [
     "science",
