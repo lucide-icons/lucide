@@ -1,9 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "projects",
     "overview",
     "work",
-    "code"
+    "code",
+    "draft",
+    "template",
+    "boilerplate"
   ],
   "categories": [
     "development",

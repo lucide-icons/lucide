@@ -1,12 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "projects",
     "overview",
     "work",
-    "code",
-    "draft",
-    "boilerplate",
-    "dashed"
+    "code"
   ],
   "categories": [
     "development",
