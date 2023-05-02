@@ -34,5 +34,5 @@ export const updateReleaseCacheWithCommit = (cache, icon, version) => {
     cache[icon.name].createdRelease = semverMin(cache[icon.name].createdRelease, version);
     cache[icon.name].changedRelease = semverMax(cache[icon.name].changedRelease, version);
   }
-  cache[icon.name].updated = maxDate(cache[icon.name].updated, icon.date);
+  cache[icon.name].changed = maxDate(cache[icon.name].changed, icon.date);
 }

@@ -73,12 +73,12 @@ const iconChanged = async (iconName) => {
   if (!(iconName in releaseCache)) {
     return true;
   }
-  if (!releaseCache[iconName].updated) {
+  if (!releaseCache[iconName].changed) {
     return true;
   }
   const latestSvgCommitDate = await latestCommitDate(`${iconName}.svg`);
-  if (releaseCache[iconName].updated < latestSvgCommitDate) {
-    console.log(releaseCache[iconName].updated, latestSvgCommitDate);
+  if (releaseCache[iconName].changed < latestSvgCommitDate) {
+    console.log(releaseCache[iconName].changed, latestSvgCommitDate);
     return true;
   }
   return false;
