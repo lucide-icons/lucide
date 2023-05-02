@@ -1,14 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "sign",
-    "signpost",
-    "direction",
-    "version control"
+    "ram"
   ],
   "categories": [
-    "arrows",
-    "navigation",
+    "devices",
     "development",
     "gaming"
   ]

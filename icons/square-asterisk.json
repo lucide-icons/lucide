@@ -1,13 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "arrow",
-    "indent",
-    "tab"
+    "password",
+    "secret",
+    "access",
+    "key"
   ],
   "categories": [
-    "arrows",
     "text",
-    "development"
+    "security",
+    "account"
   ]
 }

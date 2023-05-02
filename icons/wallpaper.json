@@ -1,12 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "json",
-    "code",
-    "token"
+    "cover",
+    "lock screen"
   ],
   "categories": [
-    "development",
-    "files"
+    "account",
+    "devices"
   ]
 }

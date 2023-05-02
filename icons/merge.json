@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "text",
-    "alignment",
-    "left",
-    "list"
+    "combine",
+    "join",
+    "unite"
   ],
   "categories": [
-    "text"
+    "development",
+    "arrows"
   ]
 }

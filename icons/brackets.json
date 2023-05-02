@@ -2,12 +2,13 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "code",
-    "json",
-    "curly braces",
-    "curly brackets"
+    "token",
+    "array",
+    "list",
+    "square"
   ],
   "categories": [
-    "files",
-    "development"
+    "development",
+    "files"
   ]
 }
