@@ -40,6 +40,28 @@ export default defineConfig({
             { text: 'Installation', link: '/guide/installation' }
           ]
         },
+        // {
+        //   test: 'Using Icons',
+        //   items: [
+        //     {
+        //       text: 'How to use icons',
+        //       link: 'how-to-use-icons'
+        //     },
+        //     {
+        //     text: 'Styling icons',
+        //       link: 'styling-icons'
+        //     },
+        //     {
+        //       text: 'Accessibility',
+        //       link: 'accessibility'
+        //     },
+        //     {
+        //       text: 'What should I use',
+        //       link: 'what-should-i-use'
+        //     },
+
+        //   ]
+        // },
         {
           text: 'Packages',
           items: [
@@ -68,6 +90,10 @@ export default defineConfig({
               link: '/guide/packages/lucide-svelte'
             },
             {
+              text: 'Lucide Solid',
+              link: '/guide/packages/lucide-solid'
+            },
+            {
               text: 'Lucide Preact',
               link: '/guide/packages/lucide-preact'
             },
@@ -84,7 +110,28 @@ export default defineConfig({
               link: '/guide/packages/lucide-flutter'
             },
           ]
-        }
+        },
+        {
+          text: 'Contributing',
+          items: [
+            {
+              text: 'Icon Design Principles',
+              link: '/guide/design/icon-design-guide'
+            },
+            {
+              text: 'Designing in Illustrator',
+              link: '/guide/design/illustrator-guide'
+            },
+            {
+              text: 'Designing in InkScape',
+              link:  '/guide/design/inkscape-guide'
+            },
+            {
+              text: 'Designing in Figma',
+              link: '/guide/design/figma-guide'
+            },
+          ]
+        },
       ],
       'icons': [
         { text: '', link: '/' },

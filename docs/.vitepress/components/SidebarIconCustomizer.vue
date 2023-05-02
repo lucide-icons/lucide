@@ -83,9 +83,9 @@ function resetStyle () {
         id="stroke-width"
         name="stroke-width"
         v-model="strokeWidth"
-        :min="1"
+        :min="0.5"
         :max="4"
-        :steps="0.5"
+        :step="0.5"
       />
     </InputField>
 
@@ -102,6 +102,7 @@ function resetStyle () {
         v-model="size"
         :min="16"
         :max="48"
+        :step="4"
       />
     </InputField>
 </div>

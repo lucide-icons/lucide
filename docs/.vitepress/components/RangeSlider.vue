@@ -5,7 +5,7 @@ interface Props {
     modelValue: number;
     min?: number;
     max?: number;
-    steps?: number;
+    step?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -28,6 +28,7 @@ const percentage = computed<string>(() => `${((props.modelValue - props.min) / (
             v-on:input="$emit('update:modelValue', Number($event.target.value))"
             :min="min"
             :max="max"
+            :step="step"
         />
         <div class="bar"></div>
     </div>
