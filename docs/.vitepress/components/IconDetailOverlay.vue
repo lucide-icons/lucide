@@ -3,6 +3,8 @@
   import { ref, computed } from 'vue'
   import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
   import IconButton from './IconButton.vue';
+  import Badge from './Badge.vue';
+  import ButtonMenu from './ButtonMenu.vue';
   import IconDetailName from './IconDetailName.vue';
   import IconPreview from './IconPreview.vue';
   import { x, externalLink } from '../../iconNodes'
@@ -61,9 +63,22 @@
           <IconDetailName class="icon-name">
             {{ props.icon.name }}
           </IconDetailName>
-          <p class="icon-tags">
+          <!-- <p class="icon-tags">
             {{ tags }}
-          </p>
+          </p> -->
+          <div class="categories">
+            <Badge v-for="category in icon.categories" :href="`/icons/categories#${category}`">
+              {{ category }}
+            </Badge>
+          </div>
+
+          <ButtonMenu
+            :options="[
+              { text: 'Copy SVG' , onClick: () => {} },
+              { text: 'Copy Data URL' , onClick: () => {} },
+              { text: 'Copy PNG' , onClick: () => {} },
+            ]"
+            />
 
         </div>
       </div>
@@ -149,6 +164,12 @@
 .drawer-leave-to {
   transform: translateY(100%);
   opacity: 0;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 </style>
