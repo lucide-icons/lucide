@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "report",
+    "abuse",
+    "offense",
+    "alert",
+    "danger",
+    "caution",
+    "protected",
+    "exclamation mark"
+  ],
+  "categories": [
+    "account",
+    "notifications"
+  ]
+}
