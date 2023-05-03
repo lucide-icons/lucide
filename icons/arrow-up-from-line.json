@@ -5,7 +5,10 @@
     "upload",
     "git",
     "version control",
-    "push"
+    "push",
+    "expand",
+    "fold",
+    "vertical"
   ],
   "categories": [
     "arrows",

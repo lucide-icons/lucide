@@ -7,7 +7,10 @@
     "mac",
     "button",
     "indent",
-    "direction"
+    "direction",
+    "collapse",
+    "fold",
+    "horizontal"
   ],
   "categories": [
     "arrows",

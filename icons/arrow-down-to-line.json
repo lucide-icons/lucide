@@ -5,7 +5,10 @@
     "download",
     "git",
     "version control",
-    "pull"
+    "pull",
+    "collapse",
+    "fold",
+    "vertical"
   ],
   "categories": [
     "arrows",

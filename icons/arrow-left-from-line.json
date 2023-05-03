@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "direction"
+    "direction",
+    "expand",
+    "fold",
+    "horizontal"
   ],
   "categories": [
     "arrows"

@@ -2,7 +2,10 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "direction",
-    "upload"
+    "upload",
+    "collapse",
+    "fold",
+    "vertical"
   ],
   "categories": [
     "arrows",

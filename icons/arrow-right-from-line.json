@@ -2,7 +2,10 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "direction",
-    "export"
+    "export",
+    "expand",
+    "fold",
+    "horizontal"
   ],
   "categories": [
     "arrows"
