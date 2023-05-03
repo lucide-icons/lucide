@@ -3,12 +3,13 @@
   "tags": [
     "electricity",
     "electronics",
-    "charge",
-    "charging",
-    "battery",
-    "connect"
+    "socket",
+    "outlet",
+    "disconnect"
   ],
   "categories": [
-    "devices"
+    "devices",
+    "coding",
+    "development"
   ]
 }
