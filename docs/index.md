@@ -49,8 +49,8 @@ features:
 ---
 
 <script setup>
-import HomePackagesSection from './.vitepress/components/HomePackagesSection.vue'
-import HomeIconCustomizer from './.vitepress/components/HomeIconCustomizer.vue'
+import HomePackagesSection from './.vitepress/theme/components/home/HomePackagesSection.vue'
+import HomeIconCustomizer from './.vitepress/theme/components/home/HomeIconCustomizer.vue'
 </script>
 
 <HomePackagesSection />

@@ -7,21 +7,27 @@ next: false
 prev: false
 sidebar: true
 ---
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
-import IconPreview from '../.vitepress/components/IconPreview.vue'
-import IconDetailName from '../.vitepress/components/IconDetailName.vue'
 import { useData } from 'vitepress'
-import CodeGroup from '../.vitepress/components/CodeGroup.vue'
+import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
+import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
+import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
+import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
+import { data } from './codeExamples.data'
+import { camelCase, startCase } from 'lodash-es'
 
 const { params } = useData()
 
-const tabs = computed(() => params.value.codeExamples?.map(
+const tabs = computed(() => data.codeExamples?.map(
   (codeExample) => codeExample.title) ?? []
 )
 
-const codeExample = computed(() => params.value.codeExamples?.map(
-    (codeExample) => codeExample.code
+const codeExample = computed(() => data.codeExamples?.map(
+    (codeExample) => {
+      const pascalCase = startCase(camelCase( params.value.name)).replace(/\s/g, '')
+      return codeExample.code.replace(/PascalCase/g, pascalCase).replace(/Name/g, params.value.name)
+    }
   ).join('') ?? []
 )
 </script>
@@ -34,11 +40,7 @@ const codeExample = computed(() => params.value.codeExamples?.map(
       :class="$style.preview"
     />
   </div>
-  <div>
-    <IconDetailName>
-      {{$params.name}}
-    </IconDetailName>
-  </div>
+  <IconInfo :icon="$params"/>
 </div>
 
 <CodeGroup :groups="tabs" groupName="icon-code-example">
@@ -54,7 +56,11 @@ const codeExample = computed(() => params.value.codeExamples?.map(
     max-width: 240px;
   }
 
-   (min-width: 640px) {
+  .layout {
+    align-items: flex-start;
+  }
+
+  @media (min-width: 640px) {
     .layout {
       align-items: flex-start;
       display: grid;

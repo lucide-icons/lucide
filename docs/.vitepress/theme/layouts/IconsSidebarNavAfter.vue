@@ -1,8 +1,8 @@
 <script setup>
 import { useData } from 'vitepress'
 
-import CategoryList from '../../components/CategoryList.vue'
-import SidebarIconCustomizer from '../../components/SidebarIconCustomizer.vue'
+import CategoryList from '../components/icons/CategoryList.vue'
+import SidebarIconCustomizer from '../components/icons/SidebarIconCustomizer.vue'
 
 const { page } = useData()
 

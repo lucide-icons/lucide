@@ -8,10 +8,10 @@ const ICONS_DIR = path.resolve(currentDir, '../icons');
 const svgFiles = readSvgDirectory(ICONS_DIR);
 const icons = renderIconsObject(svgFiles, ICONS_DIR, true);
 
-const iconNodesDirectory = path.resolve(currentDir, 'iconNodes');
+const iconNodesDirectory = path.resolve(currentDir, '.vitepress/data', 'iconNodes');
 
 if (fs.existsSync(iconNodesDirectory)) {
-  fs.rmSync(path.resolve(currentDir, 'iconNodes'), { recursive: true, force: true });
+  fs.rmSync(iconNodesDirectory, { recursive: true, force: true });
 }
 
 if (!fs.existsSync(iconNodesDirectory)) {

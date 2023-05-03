@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IconEntity } from '../types'
+import type { IconEntity } from '../../types'
 import IconItem from './IconItem.vue'
 
 const emit = defineEmits(['setActiveIcon'])

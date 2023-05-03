@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { syncRef, useCssVar } from '@vueuse/core'
 import HomeContainer from './HomeContainer.vue'
-import { rotateCw } from '../../iconNodes'
+import { rotateCw } from '../../../data/iconNodes'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import RangeSlider from './RangeSlider.vue'
-import IconButton from './IconButton.vue'
-import InputField from './InputField.vue'
-import ColorPicker from './ColorPicker.vue'
+import RangeSlider from '../base/RangeSlider.vue'
+import InputField from '../base/InputField.vue'
+import ColorPicker from '../base/ColorPicker.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 const iconContainer = ref<HTMLElement | null>()
 const color = ref('currentColor')
@@ -44,21 +43,21 @@ syncRef(color, colorCssVar)
 syncRef(strokeWidth, strokeWidthCssVar)
 syncRef(size, sizeCssVar)
 
-const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
+// TODO Add Reset button
+// const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
 
-function resetStyle () {
-  color.value = 'currentColor'
-  strokeWidth.value = 2
-  size.value = 24
-}
+// function resetStyle () {
+//   color.value = 'currentColor'
+//   strokeWidth.value = 2
+//   size.value = 24
+// }
+
 </script>
 
 <template>
   <HomeContainer>
     <div class="card">
       <div class="card-column">
-
-
         <h2 class="title">
           Style as you please
         </h2>

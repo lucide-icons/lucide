@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { getAllData } from '../lib/icons';
+import { getAllData } from '../../../lib/icons';
 
 export function getAllCategoryFiles() {
   const fileNames = fs.readdirSync(path.join('../categories')).filter((file) => path.extname(file) === '.json');

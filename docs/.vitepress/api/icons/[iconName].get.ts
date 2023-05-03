@@ -1,5 +1,5 @@
 import { eventHandler, getQuery, setResponseHeader, createError } from 'h3'
-import * as iconNodes from '../../../iconNodes'
+import * as iconNodes from '../../data/iconNodes'
 import { camelCase } from 'lodash-es'
 import createLucideIcon from 'lucide-react/src/createLucideIcon'
 import { renderToString } from 'react-dom/server'

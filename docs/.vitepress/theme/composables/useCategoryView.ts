@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import {
   ref, inject, Ref
 } from 'vue';

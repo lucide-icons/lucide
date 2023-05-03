@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { IconEntity } from '../types'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][]

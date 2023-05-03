@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { ref, computed, watch, nextTick, onMounted } from 'vue'
-import type { IconEntity } from '../types'
-import { refThrottled, useMediaQuery, useOffsetPagination } from '@vueuse/core'
-import IconItem from './IconItem.vue'
+import { ref, computed, watch } from 'vue'
+import type { IconEntity } from '../../types'
+import { useMediaQuery, useOffsetPagination } from '@vueuse/core'
 import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
-import InputSearch from './InputSearch.vue'
-import useSearch from '../composables/useSearch'
-import EndOfPage from './EndOfPage.vue'
-import useSearchInput from '../composables/useSearchInput'
+import InputSearch from '../base/InputSearch.vue'
+import useSearch from '../../composables/useSearch'
+import EndOfPage from '../base/EndOfPage.vue'
+import useSearchInput from '../../composables/useSearchInput'
 
 const props = defineProps<{
   icons: IconEntity[]

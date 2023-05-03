@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { data } from './HomeHeroIconsCard.data'
-import IconButton from './IconButton.vue';
-import LucideIcon from './LucideIcon.vue'
+import LucideIcon from '../base/LucideIcon.vue'
 
 const getInitialItems = () => data.icons.slice(0, 64)
 const items = ref(getInitialItems())
@@ -44,8 +43,6 @@ const items = ref(getInitialItems())
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 56px;
-  height: 56px; */
   background: var(--vp-c-bg);
 }
 

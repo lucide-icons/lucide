@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { IconEntity } from '../types'
-import { computed } from 'vue'
+import type { IconEntity } from '../../types'
+import { computed, ref } from 'vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-import { useIconStyleContext } from '../composables/useIconStyle';
+import { useIconStyleContext } from '../../composables/useIconStyle';
 
 const props = defineProps<{
   name: IconEntity['name']
@@ -11,6 +11,7 @@ const props = defineProps<{
 }>()
 
 const { size, color, strokeWidth } = useIconStyleContext()
+const previewIcon = ref()
 
 const gridLines = computed(() => Array.from({ length:(size.value - 1) }))
 
@@ -23,11 +24,11 @@ const iconComponent = computed(() => {
 <template>
   <div class="icon-container">
     <component
+      ref="previewIcon"
       :is="iconComponent"
-      class="icon-component"
-      :class="{ customizable }"
-      :size="size"
-      :color="color"
+      :width="size"
+      :height="size"
+      :stroke="color"
       :stroke-width="strokeWidth"
     />
     <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +56,7 @@ const iconComponent = computed(() => {
   background: var(--vp-c-bg-alt);
   border-radius: 8px;
 }
-.icon-component {
+.icon-container > :deep(svg:not(.icon-grid)) {
   width: 100%;
   height: 100%;
   position: relative;

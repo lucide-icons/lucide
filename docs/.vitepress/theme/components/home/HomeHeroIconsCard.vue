@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, shallowRef, onBeforeUnmount} from 'vue';
 import { data } from './HomeHeroIconsCard.data'
-import IconButton from './IconButton.vue';
-import LucideIcon from './LucideIcon.vue'
+import IconButton from '../base/IconButton.vue';
+import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
 import { random } from 'lodash-es'
-import FakeInput from './FakeInput.vue'
+import FakeInput from '../base/FakeInput.vue'
 
 const { go } = useRouter()
 const intervalTime = shallowRef()

@@ -17,9 +17,7 @@ type CodeExampleType = {
   }[],
 }[]
 
-const getIconCodes = (name: string): CodeExampleType => {
-  const pascalCase = startCase(camelCase(name)).replace(/\s/g, '')
-
+const getIconCodes = (): CodeExampleType => {
   return [
     {
       lang: 'html',
@@ -27,7 +25,7 @@ const getIconCodes = (name: string): CodeExampleType => {
       codes: [
         {
           language: 'html',
-          code: `<i icon-name="${name}"></i>
+          code: `<i data-lucide-name="Name"></i>
 `,
         },
       ],
@@ -38,17 +36,17 @@ const getIconCodes = (name: string): CodeExampleType => {
       codes: [
         {
           language: 'tsx',
-          code: `import { ${pascalCase} } from 'lucide-react';
+          code: `import { PascalCase } from 'lucide-react';
 
 const App = () => {
   return (
-    <${pascalCase}/>
+    <PascalCase strokeWidth={2} size={32} color="#000"/>
   );
 };
 
 export default App;
 `,
-          metastring: '{1,4}',
+
         },
       ],
     },
@@ -58,15 +56,15 @@ export default App;
       codes: [
         {
           language: 'vue',
-          code: `<template>
-  <${pascalCase} />
-</template>
-
-<script setup>
-import { ${pascalCase} } from 'lucide-vue-next';
+          code: `<script setup>
+  import { PascalCase } from 'lucide-vue-next';
 </script>
+
+<template>
+  <PascalCase />
+</template>
 `,
-          metastring: '{2,6}',
+
         },
       ],
     },
@@ -75,14 +73,14 @@ import { ${pascalCase} } from 'lucide-vue-next';
       title: 'Svelte',
       codes: [
         {
-          language: 'vue',
+          language: 'svelte',
           code: `<script>
-import { ${pascalCase} } from 'lucide-svelte';
+import { PascalCase } from 'lucide-svelte';
 </script>
 
-<${pascalCase}/>
+<PascalCase />
 `,
-          metastring: '{2,5}',
+
         },
       ],
     },
@@ -92,17 +90,17 @@ import { ${pascalCase} } from 'lucide-svelte';
       codes: [
         {
           language: 'tsx',
-          code: `import { ${pascalCase} } from 'lucide-preact';
+          code: `import { PascalCase } from 'lucide-preact';
 
 const App = () => {
   return (
-    <${pascalCase}/>
+    <PascalCase />
   );
 };
 
 export default App;
 `,
-          metastring: '{1,4}',
+
         },
       ],
     },
@@ -112,17 +110,17 @@ export default App;
       codes: [
         {
           language: 'tsx',
-          code: `import { ${pascalCase} } from 'lucide-solid';
+          code: `import { PascalCase } from 'lucide-solid';
 
 const App = () => {
   return (
-    <${pascalCase}/>
+    <PascalCase />
   );
 };
 
 export default App;
 `,
-          metastring: '{1,4}',
+
         },
       ],
     },
@@ -133,15 +131,16 @@ export default App;
         {
           language: 'tsx',
           code: `// app.module.ts
-import { LucideAngularModule, ${pascalCase} } from 'lucide-angular';\r
+import { LucideAngularModule, PascalCase } from 'lucide-angular';
+
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ ${pascalCase} })
+    LucideAngularModule.pick({ PascalCase })
   ],
 })
 
 // app.component.html
-<lucide-icon name="${name}"></lucide-icon>
+<lucide-icon name="Name"></lucide-icon>
 `,
         },
       ],
@@ -153,10 +152,10 @@ import { LucideAngularModule, ${pascalCase} } from 'lucide-angular';\r
         {
           language: 'html',
           code: `<style>
-@import ('~lucide-static/font/Lucide.css')
+@import ('~lucide-static/font/Lucide.css');
 </style>
 
-<div class="icon-${name}"></div>
+<div class="icon-Name"></div>
 `,
         },
       ],
@@ -167,7 +166,7 @@ import { LucideAngularModule, ${pascalCase} } from 'lucide-angular';\r
       codes: [
         {
           language: 'dart',
-          code: `Icon(LucideIcons.${name});
+          code: `Icon(LucideIcons.Name);
 `,
         },
       ],
@@ -200,8 +199,8 @@ const highLightCode = async (code: string, lang: string, active?: boolean) => {
 }
 
 
-export default async function createCodeExamples(name: string) {
-  const codes = getIconCodes(name);
+export default async function createCodeExamples() {
+  const codes = getIconCodes();
 
   const codeExamplePromises = codes.map(async (codeTemplate, index) => {
     const { title, lang, codes } = codeTemplate;

@@ -1,4 +1,4 @@
-import { getAllData } from '../lib/icons'
+import { getAllData } from '../../../lib/icons'
 
 const getRandomItem = <Item>(items: Item[]): Item => items[Math.floor(Math.random()*items.length)];
 

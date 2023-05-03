@@ -23,7 +23,7 @@
     "h3": "^1.6.4",
     "nitropack": "latest",
     "node-fetch": "2",
-    "vitepress": "1.0.0-alpha.73"
+    "vitepress": "1.0.0-alpha.75"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.13",

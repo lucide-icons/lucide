@@ -1,8 +1,6 @@
 <script setup lang="ts">
-// import type { IconEntity } from '../types';
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import { useMediaQuery } from '@vueuse/core';
-import { useAside } from 'vitepress/dist/client/theme-default/composables/aside.js'
 import { useRouter } from 'vitepress';
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][]
@@ -11,6 +9,7 @@ const props = defineProps<{
   name: string;
   tags: string[];
   categories: string[];
+  // TODO: Add contributors
   // contributors: Contributor[];
   iconNode: IconNode;
   active: boolean;
@@ -115,12 +114,6 @@ function navigateToIcon() {
   font-size: 16px;
 }
 
-/* .icon-button {
-  border-color: var(--vp-button-alt-active-border);
-  color: var(--vp-button-alt-active-text);
-  background-color: var(--vp-button-alt-active-bg);
-} */
-
 .icon-button:hover {
   border-color: var(--vp-button-alt-hover-border);
   color: var(--vp-button-alt-hover-text);
@@ -135,8 +128,6 @@ function navigateToIcon() {
 
 .icon-button.active {
   border-color: var(--vp-c-brand);
-  /* color: var(--vp-button-alt-active-text);
-  background-color: var(--vp-button-alt-active-bg); */
 }
 
 .lucide-icon {

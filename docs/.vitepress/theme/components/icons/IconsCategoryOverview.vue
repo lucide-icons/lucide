@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { ref, computed, nextTick, watch, onMounted } from 'vue'
-import type { IconEntity, Category } from '../types'
+import { ref, computed } from 'vue'
+import type { IconEntity, Category } from '../../types'
 import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
-import useSearch from '../composables/useSearch'
-import Input from './Input.vue'
-import EndOfPage from './EndOfPage.vue'
-import { useCategoryView } from '../composables/useCategoryView'
-import useSearchInput from '../composables/useSearchInput'
+import useSearch from '../../composables/useSearch'
+import Input from '../base/Input.vue'
+import useSearchInput from '../../composables/useSearchInput'
 
 const props = defineProps<{
   icons: IconEntity[]

@@ -3,23 +3,49 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
 import { computed, ref } from 'vue'
 import {
   Listbox,
-  ListboxLabel,
   ListboxButton,
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { chevronUp }  from '../../iconNodes'
+import { chevronUp }  from '../../../data/iconNodes'
 
 const props = defineProps<{
   options: {
     text: string
     onClick?: () => void
   }[],
+  callOptionOnClick?: boolean
+  buttonClass?: string
 }>()
+
+const emit = defineEmits(['click', 'optionClick'])
+
+const buttonRef = ref(null)
 
 const selectedOption = ref(props.options[0].text)
 const selectionOptionAction = computed(() => props.options.find(option => option.text === selectedOption.value).onClick)
+
+function onClick(event) {
+  selectionOptionAction.value()
+  console.log(event);
+
+
+  emit('click', event)
+}
+
+function onOptionClick(event, option) {
+  console.log(event, option);
+
+  if(!props.callOptionOnClick) {
+    return
+  }
+
+  option.onClick()
+
+  emit('optionClick', event)
+}
+
 const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
 </script>
 
@@ -30,9 +56,11 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
         <VPButton
           v-bind="$attrs"
           :text="selectedOption"
-          @click="selectionOptionAction"
+          @click="onClick"
           theme="alt"
           class="main-button"
+          :class="[props.buttonClass]"
+          ref="buttonRef"
         />
         <ListboxButton :as="VPButton" :text="''" theme="alt" class="arrow-up-button"/>
       </div>
@@ -42,10 +70,10 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
           class="menu-item"
           v-for="option in options"
           :value="option.text"
+          @click="onOptionClick($event, option)"
         >
           {{ option.text }}
         </ListboxOption>
-
       </ListboxOptions>
     </div>
   </Listbox>
@@ -117,10 +145,14 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
 }
 
 .arrow-up-button::before {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='18 15 12 9 6 15' /%3E%3C/svg%3E%0A");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='18 15 12 9 6 15' /%3E%3C/svg%3E%0A");
   width: 20px;
   height: 28px;
   margin: auto;
   display: block;
+}
+
+.dark .arrow-up-button::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='18 15 12 9 6 15' /%3E%3C/svg%3E%0A");
 }
 </style>

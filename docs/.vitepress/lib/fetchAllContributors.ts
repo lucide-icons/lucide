@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-import { Contributor } from '../types';
+import { Contributor } from '../theme/types';
 import fetch, { Headers } from 'node-fetch'
 
 const IGNORE_COMMIT_MESSAGES = ['fork', 'optimize'];

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useCategoryView } from '../composables/useCategoryView'
-
+import { useCategoryView } from '../../composables/useCategoryView'
 
 interface Header {
   level: number

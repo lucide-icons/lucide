@@ -3,9 +3,9 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import { Theme } from 'vitepress'
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue'
-import HomeHeroIconsCard from '../components/HomeHeroIconsCard.vue'
-import { ICON_STYLE_CONTEXT, iconStyleContext } from '../composables/useIconStyle'
-import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from '../composables/useCategoryView'
+import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue'
+import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle'
+import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView'
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,

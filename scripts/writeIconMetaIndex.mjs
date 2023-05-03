@@ -6,11 +6,11 @@ const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
 
-if (fs.existsSync(path.resolve(currentDir, 'iconMetaData.ts'))) {
-  fs.unlinkSync(path.resolve(currentDir, 'iconMetaData.ts'));
-}
+const location = path.resolve(currentDir, '.vitepress/data', 'iconMetaData.ts');
 
-const location = path.resolve(currentDir, `iconMetaData.ts`);
+if (fs.existsSync(location)) {
+  fs.unlinkSync(location);
+}
 
 let outputString = '';
 
@@ -18,7 +18,7 @@ iconJsonFiles.forEach((iconJsonFile) => {
   const iconName = path.basename(iconJsonFile, '.json');
   outputString += `export { default as ${toCamelCase(
     iconName,
-  )} } from '../icons/${iconName}.json';\n`;
+  )} } from '../../../icons/${iconName}.json';\n`;
 });
 
 fs.promises

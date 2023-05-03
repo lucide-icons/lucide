@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import {Category, IconEntity} from "../types";
+import {Category, IconEntity} from "../theme/types";
 import {getAllData} from "./icons";
 
 const directory = path.join(process.cwd(), "../categories");
@@ -8,8 +8,15 @@ const directory = path.join(process.cwd(), "../categories");
 export function getAllCategoryFiles() {
   const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.json');
 
-  return fileNames
-    .map((fileName) => path.basename(fileName, '.json'));
+  return fileNames.map((fileName) => {
+    const name = path.basename(fileName, '.json')
+    const fileContent = fs.readFileSync(path.join(directory, fileName), 'utf8')
+
+    return {
+      name,
+      ...JSON.parse(fileContent)
+    }
+  });
 }
 
 export async function getData(name: string, icons: IconEntity[]): Promise<Category> {

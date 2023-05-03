@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
-import { IconEntity } from "../types";
+import { IconEntity } from "../theme/types";
 import { getContributors } from "./fetchAllContributors";
 import { generateHashedKey } from "./helpers";
 

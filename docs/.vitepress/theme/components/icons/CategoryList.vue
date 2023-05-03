@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useData } from 'vitepress'
-import VPDocOutlineItem from 'vitepress/dist/client/theme-default/components/VPDocOutlineItem.vue'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 import { isActive } from 'vitepress/dist/client/theme-default/support/utils'
-import { onContentUpdated } from 'vitepress'
-import { useActiveAnchor } from '../composables/useActiveAnchor'
+import { useActiveAnchor } from '../../composables/useActiveAnchor'
 import { data } from './CategoryList.data'
 import CategoryListItem from './CategoryListItem.vue'
 
@@ -54,9 +52,6 @@ useActiveAnchor(container, marker)
 </template>
 
 <style scoped>
-.category-list {
-  /* margin-top: -24px; */
-}
 .sidebar-title {
   font-weight: 500;
   color: var(--vp-c-text-2);

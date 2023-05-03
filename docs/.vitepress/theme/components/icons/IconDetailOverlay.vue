@@ -1,21 +1,18 @@
 <script setup lang="ts">
-  import type { IconEntity } from '../types'
-  import { ref, computed } from 'vue'
+  import type { IconEntity } from '../../types'
+  import { computed, ref } from 'vue'
   import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-  import IconButton from './IconButton.vue';
-  import Badge from './Badge.vue';
-  import ButtonMenu from './ButtonMenu.vue';
-  import IconDetailName from './IconDetailName.vue';
+  import IconButton from '../base/IconButton.vue';
   import IconPreview from './IconPreview.vue';
-  import { x, externalLink } from '../../iconNodes'
+  import { x, expand } from '../../../data/iconNodes'
   import { useRouter } from 'vitepress';
+  import IconInfo from './IconInfo.vue';
 
   const props = defineProps<{
     icon: IconEntity
   }>()
 
   const emit = defineEmits(['close'])
-
   const isOpen = computed(() => !!props.icon)
 
   function onClose() {
@@ -24,22 +21,13 @@
 
   const { go } = useRouter()
 
-  const size = 24
-
-  const gridLines = computed(() => Array.from({ length:(size - 1) }))
-
-  const iconComponent = computed(() => {
-    if (!props.icon) return null
-    return createLucideIcon(props.icon.name, props.icon.iconNode)
-  })
-
   const tags = computed(() => {
     if (!props.icon) return []
     return props.icon.tags.join(' • ')
   })
 
   const CloseIcon = createLucideIcon('Close', x)
-  const ExternalLinkIcon = createLucideIcon('ExternalLink', externalLink)
+  const Expand = createLucideIcon('Expand', expand)
 </script>
 
 <template>
@@ -48,39 +36,19 @@
       <div class="overlay-panel">
         <nav class="overlay-menu">
           <IconButton  @click="go(`/icons/${icon.name}`)">
-            <component :is="ExternalLinkIcon" />
+            <component :is="Expand" />
           </IconButton>
           <IconButton  @click="onClose">
             <component :is="CloseIcon" />
           </IconButton>
         </nav>
         <IconPreview
+          id="previewer"
           :name="props.icon.name"
           :iconNode="props.icon.iconNode"
           customizable
         />
-        <div class="icon-info">
-          <IconDetailName class="icon-name">
-            {{ props.icon.name }}
-          </IconDetailName>
-          <!-- <p class="icon-tags">
-            {{ tags }}
-          </p> -->
-          <div class="categories">
-            <Badge v-for="category in icon.categories" :href="`/icons/categories#${category}`">
-              {{ category }}
-            </Badge>
-          </div>
-
-          <ButtonMenu
-            :options="[
-              { text: 'Copy SVG' , onClick: () => {} },
-              { text: 'Copy Data URL' , onClick: () => {} },
-              { text: 'Copy PNG' , onClick: () => {} },
-            ]"
-            />
-
-        </div>
+        <IconInfo :icon="props.icon" />
       </div>
     </div>
   </Transition>
@@ -166,10 +134,6 @@
   opacity: 0;
 }
 
-.categories {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
-}
+
 
 </style>

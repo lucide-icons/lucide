@@ -1,9 +1,7 @@
 <script setup>
 import { onMounted, computed } from 'vue'
 import { useData } from 'vitepress'
-// import { data } from './index.data.ts'
 import IconPreview from './IconPreview.vue'
-import PageContainer from './PageContainer.vue'
 
 const { params } = useData()
 

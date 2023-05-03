@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { shallowRef, type Ref } from 'vue'
 import { useCssVar, syncRef } from '@vueuse/core'
-import { useIconStyleContext } from '../composables/useIconStyle'
-import RangeSlider from './RangeSlider.vue'
-import IconButton from './IconButton.vue'
-import InputField from './InputField.vue'
-import ColorPicker from './ColorPicker.vue'
-import { rotateCw } from '../../iconNodes'
+import { useIconStyleContext } from '../../composables/useIconStyle'
+import RangeSlider from '../base/RangeSlider.vue'
+import IconButton from '../base/IconButton.vue'
+import InputField from '../base/InputField.vue'
+import ColorPicker from '../base/ColorPicker.vue'
+import { rotateCw } from '../../../data/iconNodes'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 
 const props = defineProps<{

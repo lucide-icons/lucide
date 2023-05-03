@@ -1,7 +1,7 @@
 import { promises as fs, constants } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml'
-import { PackageItem } from '../types';
+import { PackageItem } from '../theme/types';
 
 const fileExist = (filePath) => fs.access(filePath, constants.F_OK).then(() => true).catch(() => false)
 

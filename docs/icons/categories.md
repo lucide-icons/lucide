@@ -7,8 +7,8 @@ sidebar: true
 
 <script setup>
 import { data } from './index.data.ts'
-import PageContainer from '../.vitepress/components/PageContainer.vue'
-import IconsCategoryOverview from '../.vitepress/components/IconsCategoryOverview.vue'
+import PageContainer from '../.vitepress/theme/components/PageContainer.vue'
+import IconsCategoryOverview from '../.vitepress/theme/components/icons/IconsCategoryOverview.vue'
 
 </script>
 

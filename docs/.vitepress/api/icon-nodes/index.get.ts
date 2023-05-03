@@ -1,5 +1,5 @@
 import { eventHandler, getQuery, setResponseHeader } from 'h3'
-import * as iconNodes from '../../../iconNodes'
+import * as iconNodes from '../../data/iconNodes'
 import { kebabCase } from 'lodash-es'
 
 export default eventHandler((event) => {

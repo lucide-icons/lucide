@@ -21,3 +21,12 @@ packages/**/LICENSE
 categories.json
 tags.json
 .vercel
+
+# docs
+docs/.vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/.temp
+docs/.vitepress/data/iconNodes
+docs/.vitepress/data/iconMetaData.ts
+docs/.vercel
+docs/.nitro

@@ -1,7 +1,6 @@
 <script setup>
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { search }  from '../../iconNodes'
-import { computed } from 'vue';
+import { search }  from '../../../data/iconNodes'
 
 const SearchIcon = createLucideIcon('search', search)
 </script>

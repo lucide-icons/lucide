@@ -8,7 +8,7 @@ export default {
 import { computed, ref } from 'vue'
 import Input from './Input.vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { search }  from '../../iconNodes'
+import { search }  from '../../../data/iconNodes'
 
 const SearchIcon = createLucideIcon('search', search)
 

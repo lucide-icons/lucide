@@ -25,7 +25,7 @@ const component = computed(() => props.href ? 'a' : 'div')
 </template>
 
 <style>
-.badge {
+.badge, a.badge {
   display: block;
   border: 1px solid transparent;
   text-align: center;
@@ -35,15 +35,17 @@ const component = computed(() => props.href ? 'a' : 'div')
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
   /* width: 56px;
   height: 56px; */
   font-size: 16px;
 }
 
-.badge:hover {
+.badge:hover, a.badge:hover  {
   border-color: var(--vp-button-alt-hover-border);
   color: var(--vp-button-alt-hover-text);
   background-color: var(--vp-button-alt-hover-bg);
+  text-decoration: none;
 }
 
 .badge:active {

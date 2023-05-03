@@ -1,8 +1,0 @@
-node_modules
-.vitepress/cache
-.vitepress/dist
-.vitepress/.temp
-.vercel
-.nitro
-iconNodes
-iconMetaData.ts
