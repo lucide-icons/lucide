@@ -173,6 +173,31 @@ const ControlPath = ({
   );
 };
 
+const Radii = ({
+  paths,
+  ...props
+}: { paths: Path[] } & PathProps<
+  'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
+  any
+>) => {
+  return (
+    <g className="svg-preview-radii-group" {...props}>
+      {paths
+        .filter(({ circle }) => circle)
+        .map(({ c, prev, next, circle: { x, y, r } }) =>
+          c.name === 'circle' ? (
+            <path d={`M${x} ${y}h.01`} />
+          ) : (
+            <>
+              <path d={`M${prev.x} ${prev.y} ${x} ${y} ${next.x} ${next.y}`} />
+              <circle cy={y} cx={x} r={r} />
+            </>
+          )
+        )}
+    </g>
+  );
+};
+
 const SvgPreview = React.forwardRef<
   SVGSVGElement,
   {
@@ -184,6 +209,7 @@ const SvgPreview = React.forwardRef<
 
   const darkModeCss = `@media screen and (prefers-color-scheme: dark) {
   .svg-preview-grid-group,
+  .svg-preview-radii-group,
   .svg-preview-shadow-mask-group,
   .svg-preview-shadow-group {
     stroke: #fff;
@@ -222,6 +248,13 @@ const SvgPreview = React.forwardRef<
           '#8ac926',
           '#52A675',
         ]}
+      />
+      <Radii
+        paths={paths}
+        strokeWidth={0.12}
+        strokeDasharray="0 0.25 0.25"
+        stroke="#777"
+        strokeOpacity={0.3}
       />
       <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
       {children}
