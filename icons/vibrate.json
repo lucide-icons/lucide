@@ -4,7 +4,8 @@
     "smartphone",
     "notification",
     "rumble",
-    "haptic feedback"
+    "haptic feedback",
+    "screen"
   ],
   "categories": [
     "devices",

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "reset",
+    "refresh",
+    "reload",
+    "playlist",
+    "replay"
+  ],
+  "categories": [
+    "multimedia",
+    "text"
+  ]
+}

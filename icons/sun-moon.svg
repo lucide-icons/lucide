@@ -9,8 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
-  <path d="M12 8a2.828 2.828 0 1 0 4 4" />
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 8a2 2 0 1 0 4 4" />
   <path d="M12 2v2" />
   <path d="M12 20v2" />
   <path d="m4.93 4.93 1.41 1.41" />

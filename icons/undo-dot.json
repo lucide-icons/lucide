@@ -1,12 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "json",
-    "code",
-    "token"
+    "redo",
+    "history",
+    "step",
+    "back"
   ],
   "categories": [
-    "development",
-    "files"
+    "text",
+    "arrows"
   ]
 }

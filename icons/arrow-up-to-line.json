@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "direction",
+    "upload",
+    "collapse",
+    "fold",
+    "vertical"
+  ],
+  "categories": [
+    "arrows",
+    "files"
+  ]
+}

@@ -1,10 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "computer",
+    "chassis"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "devices",
+    "gaming"
   ]
 }

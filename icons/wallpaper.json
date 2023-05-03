@@ -1,10 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "menu"
+    "cover",
+    "lock screen"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "account",
+    "devices"
   ]
 }

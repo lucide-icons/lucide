@@ -8,6 +8,7 @@ export type Path = {
   prev: Point;
   next: Point;
   isStart: boolean;
+  circle: { x: number; y: number; r: number };
   c: ReturnType<typeof getCommands>[number];
 };
 
