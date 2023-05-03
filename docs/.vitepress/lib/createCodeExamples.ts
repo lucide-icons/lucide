@@ -1,4 +1,3 @@
-import { startCase, camelCase } from "lodash";
 import {
   BUNDLED_LANGUAGES,
   type IThemeRegistration
