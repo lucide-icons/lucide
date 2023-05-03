@@ -5,10 +5,15 @@
     "log",
     "scripture",
     "document",
-    "parchment"
+    "parchment",
+    "list",
+    "long",
+    "script",
+    "code"
   ],
   "categories": [
     "gaming",
-    "development"
+    "development",
+    "text"
   ]
 }
