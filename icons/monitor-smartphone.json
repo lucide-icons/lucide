@@ -8,7 +8,8 @@
     "mobile",
     "desktop",
     "monitor",
-    "responsive"
+    "responsive",
+    "screens"
   ],
   "categories": [
     "connectivity",
