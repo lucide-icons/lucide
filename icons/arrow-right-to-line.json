@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "keyboard",
+    "key",
+    "tab",
+    "mac",
+    "button",
+    "indent",
+    "direction",
+    "collapse",
+    "fold",
+    "horizontal"
+  ],
+  "categories": [
+    "arrows",
+    "development"
+  ]
+}

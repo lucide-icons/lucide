@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "direction",
+    "upload",
+    "git",
+    "version control",
+    "push",
+    "expand",
+    "fold",
+    "vertical"
+  ],
+  "categories": [
+    "arrows",
+    "files",
+    "development"
+  ]
+}
