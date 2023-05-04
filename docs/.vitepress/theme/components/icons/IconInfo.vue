@@ -34,7 +34,7 @@ const { page } = useData()
       <CopySVGButton />
       <CopyCodeButton :name="icon.name"/>
       <VPButton
-        v-if="page?.relativePath?.startsWith?.(`/icons/${icon.name}`)"
+        v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
         :href="`/icons/${icon.name}`"
         text="See Code examples"
         theme="alt"

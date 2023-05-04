@@ -56,7 +56,9 @@
   display: none;
 }
 
-
+.VPFeature .icon {
+  background-color: var(--vp-c-bg);;
+}
 
 .vp-doc[class*=" _icons_"] > div {
   max-width: 100%;

@@ -2,6 +2,7 @@
 import HomeContainer from './HomeContainer.vue'
 import { useRouter } from 'vitepress';
 import { data } from './HomePackagesSection.data'
+import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 
 const { go } = useRouter()
 </script>
@@ -25,6 +26,9 @@ const { go } = useRouter()
         />
       </a>
     </div>
+    <div class="more-button-wrapper">
+      <VPButton text="And more" href="/packages" theme="alt" class="more-button"/>
+    </div>
   </HomeContainer>
 </template>
 
@@ -44,5 +48,11 @@ const { go } = useRouter()
   align-items: center;
   margin: 0 -0.5rem;
   gap: 16px;
+}
+
+.more-button-wrapper {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
 }
 </style>

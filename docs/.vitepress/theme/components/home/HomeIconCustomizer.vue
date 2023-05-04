@@ -154,7 +154,7 @@ syncRef(size, sizeCssVar)
 
   .card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 8fr 10fr;
   }
 /*
   .card-column {

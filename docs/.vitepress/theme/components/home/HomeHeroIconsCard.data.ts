@@ -10,6 +10,7 @@ export default {
 
     return {
       icons: randomIcons,
+      iconsCount: icons.length,
     }
   }
 }
