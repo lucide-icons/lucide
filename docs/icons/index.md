@@ -13,6 +13,9 @@ import PageContainer from '../.vitepress/theme/components/PageContainer.vue'
 const { categories, icons } = data
 </script>
 
-<PageContainer>
-  <IconsOverview :icons="icons" />
-</PageContainer>
+<div class="VPDoc content">
+  <PageContainer>
+    <IconsOverview :icons="icons" />
+  </PageContainer>
+</div>
+```

@@ -26,6 +26,7 @@ const SearchIcon = createLucideIcon('search', search)
   cursor: text;
   display: flex;
   gap: 12px;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
 }
 
 .fake-input:hover, .fake-input:focus {

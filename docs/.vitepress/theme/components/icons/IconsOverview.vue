@@ -68,7 +68,7 @@ watch(searchQueryThrottled, (searchString) => {
 
 <template>
   <InputSearch
-    placeholder="Search icons..."
+    :placeholder="`Search ${icons.length} icons ...`"
     v-model="searchQuery"
     class="input-wrapper"
     ref="searchInput"

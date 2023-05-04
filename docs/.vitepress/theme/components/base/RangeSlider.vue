@@ -1,11 +1,18 @@
+<script lang="ts">
+export default {
+  inheritAttrs: false
+}
+</script>
+
 <script lang="ts" setup>
 import { computed } from "vue";
 
 interface Props {
-    modelValue: number;
-    min?: number;
-    max?: number;
-    step?: number;
+  modelValue: number | string;
+  min?: number;
+  max?: number;
+  step?: number;
+  id: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -15,23 +22,25 @@ const props = withDefaults(defineProps<Props>(), {
 
 defineEmits(['update:modelValue'])
 
-const percentage = computed<string>(() => `${((props.modelValue - props.min) / (props.max - props.min)) * 100}%`);
+const percentage = computed<string>(() => `${((Number(props.modelValue) - props.min) / (props.max - props.min)) * 100}%`);
 // TODO: Steps must be implemented
 </script>
 
+
 <template>
-    <div class="slider">
-        <input
-            type="range"
-            v-bind="$attrs"
-            v-bind:value="modelValue"
-            v-on:input="$emit('update:modelValue', Number($event.target.value))"
-            :min="min"
-            :max="max"
-            :step="step"
-        />
-        <div class="bar"></div>
-    </div>
+  <div class="slider">
+    <input
+      :id="id"
+      type="range"
+      v-bind="$attrs"
+      v-bind:value="modelValue"
+      v-on:input="$emit('update:modelValue', Number($event.target.value))"
+      :min="min"
+      :max="max"
+      :step="step"
+    />
+    <div class="bar"></div>
+  </div>
 </template>
 
 <style>

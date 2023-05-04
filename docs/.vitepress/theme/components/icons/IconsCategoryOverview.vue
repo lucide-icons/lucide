@@ -4,7 +4,7 @@ import type { IconEntity, Category } from '../../types'
 import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
 import useSearch from '../../composables/useSearch'
-import Input from '../base/Input.vue'
+import InputSearch from '../base/InputSearch.vue'
 import useSearchInput from '../../composables/useSearchInput'
 
 const props = defineProps<{
@@ -53,7 +53,12 @@ const activeIcon = computed(() =>
 </script>
 
 <template>
-  <Input type="search" placeholder="Search icons..." v-model="searchQuery" class="input-wrapper" ref="searchInput"/>
+  <InputSearch
+    :placeholder="`Search ${icons.length} icons ...`"
+    v-model="searchQuery"
+    class="input-wrapper"
+    ref="searchInput"
+  />
   <section class="category" v-for="category in categories" :key="category.name">
     <h2 class="title" :id="category.name">
       <a class="header-anchor" :href="`#${category.name}`" :aria-label="`Permalink to &quot;${category.title}&quot;`">&ZeroWidthSpace;</a>
@@ -87,12 +92,6 @@ const activeIcon = computed(() =>
 
 .category {
   margin-bottom: 32px;
-}
-
-.input-wrapper:deep(.input) {
-  padding: 12px 24px;
-  font-size: 14px;
-  height: 48px;
 }
 
 .input-wrapper {

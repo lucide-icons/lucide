@@ -23,6 +23,7 @@ const { go } = useRouter()
           height="36"
           width="36"
           loading="lazy"
+          :alt="`${name} logo`"
         />
       </a>
     </div>
