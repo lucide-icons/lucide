@@ -39,7 +39,7 @@ const getIconCodes = (): CodeExampleType => {
 
 const App = () => {
   return (
-    <PascalCase strokeWidth={2} size={32} color="#000"/>
+    <PascalCase />
   );
 };
 

@@ -92,6 +92,10 @@
     display: block;
   }
 }
+
+.VPNavBarHamburger .container > span {
+  border-radius: 2px;
+}
 /*
 html:has(* .outline-link:target) {
   scroll-behavior: smooth;

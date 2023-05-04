@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url'
 import path from 'path';
 import { defineConfig } from 'vitepress'
 import sidebar from './sidebar';
@@ -8,6 +9,18 @@ export default defineConfig({
   title: "Lucide",
   description: "Beautiful & consistent icon toolkit made by the community.",
   outDir: '.vercel/output/static',
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPIconAlignLeft\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPIconAlignLeft.vue', import.meta.url)
+          )
+        }
+      ]
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {

@@ -40,15 +40,16 @@ const codeExample = computed(() => data.codeExamples?.map(
       :class="$style.preview"
     />
   </div>
-  <IconInfo :icon="$params"/>
+  <div>
+    <IconInfo :icon="$params"/>
+    <CodeGroup :groups="tabs" groupName="icon-code-example">
+      <div
+        class="blocks"
+        v-html="codeExample"
+      />
+    </CodeGroup>
+  </div>
 </div>
-
-<CodeGroup :groups="tabs" groupName="icon-code-example">
-  <div
-    class="blocks"
-    v-html="codeExample"
-  />
-</CodeGroup>
 
 <style module>
   .preview {
