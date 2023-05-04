@@ -6,7 +6,6 @@ import CopySVGButton from './CopySVGButton.vue';
 import CopyCodeButton from './CopyCodeButton.vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import {useData, useRouter} from 'vitepress';
-import { onMounted } from 'vue';
 
 defineProps<{
   icon: IconEntity

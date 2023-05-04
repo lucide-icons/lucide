@@ -7,7 +7,7 @@ next: false
 prev: false
 sidebar: true
 ---
-<script setup lang="ts">
+<script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
