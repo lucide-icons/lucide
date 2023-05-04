@@ -8,6 +8,7 @@ const getInitialItems = () => data.icons.slice(0, 64)
 const items = ref(getInitialItems())
 const showIcons = ref(false)
 
+// Added intersection observer to improve performance
 const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting }]) => {
   if (isIntersecting) {
     showIcons.value = true
