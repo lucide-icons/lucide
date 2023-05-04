@@ -2,20 +2,29 @@
 import { ref } from 'vue';
 import { data } from './HomeHeroIconsCard.data'
 import LucideIcon from '../base/LucideIcon.vue'
+import { vIntersectionObserver } from '@vueuse/components'
 
 const getInitialItems = () => data.icons.slice(0, 64)
 const items = ref(getInitialItems())
+const showIcons = ref(false)
 
+const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    showIcons.value = true
+  }
+}
 </script>
 
 <template>
-  <div class="icon-grid">
-    <div
-      v-for="icon in items"
-      class="icon-grid-item"
-    >
-      <LucideIcon v-bind="icon" class="lucide-icon"/>
-    </div>
+  <div class="icon-grid" v-intersection-observer="onIntersectionObserver">
+    <template v-if="showIcons">
+      <div
+        v-for="icon in items"
+        class="icon-grid-item"
+        >
+        <LucideIcon v-bind="icon" class="lucide-icon"/>
+      </div>
+    </template>
   </div>
 </template>
 
