@@ -92,9 +92,12 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             ### Added or changed icons
+            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
+            <summary>Preview stroke widths</summary>
             ${{ steps.generate-1px-stroke-width.outputs.body }}<br/>
             ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
             ${{ steps.generate-3px-stroke-width.outputs.body }}<br/>
+            </details>
             <details>
             <summary>Icon X-rays</summary>
             ${{ steps.generate-x-rays.outputs.body }}
