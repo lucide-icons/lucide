@@ -4,7 +4,10 @@
     "window",
     "webpage",
     "block",
-    "section"
+    "section",
+    "grid",
+    "template",
+    "structure"
   ],
   "categories": [
     "layout"
