@@ -1,3 +1,5 @@
+# Lucide Docs website
+
 The Lucide docs website is built with Vitepress: https://vitepress.dev/
 This is Markdown-based documentation powered by Vue.
 
