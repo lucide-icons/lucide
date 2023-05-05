@@ -26,6 +26,44 @@ jobs:
           echo ::set-output name=VERSION::${VERSION_REF/refs\/tags\/\v}
         env:
           VERSION_REF: ${{ github.event.inputs.version || github.ref }}
+  update-contributors:
+    if: github.repository == 'lucide-icons/lucide'
+    needs: pre-build
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm install
+      - name: Update contributors
+        run: pnpm generate:contributors
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit icon.jsons
+        run: |
+          git add icons/*.json
+          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
+            commit -m ":octocat: Update contributors ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
+          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+          git push origin HEAD:main
 
   lucide:
     if: github.repository == 'lucide-icons/lucide'
@@ -703,6 +741,7 @@ jobs:
     needs:
       [
         pre-build,
+        update-contributors,
         lucide,
         lucide-react,
         lucide-react-native,
