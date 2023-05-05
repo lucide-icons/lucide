@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "delete",
+    "remove",
+    "unfollow",
+    "unsubscribe",
+    "unavailable"
+  ],
+  "categories": [
+    "account"
+  ]
+}
