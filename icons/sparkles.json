@@ -1,10 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "stars",
     "effect",
     "filter",
     "night",
-    "sparkles",
     "magic"
   ],
   "categories": [
@@ -13,5 +13,8 @@
     "multimedia",
     "gaming",
     "weather"
+  ],
+  "aliases": [
+    "stars"
   ]
 }
