@@ -7,7 +7,7 @@
 <style scoped>
 
 .icon-button {
-  display: inline-block;
+  display: inline-flex;
   border: 1px solid transparent;
   text-align: center;
   font-weight: 600;
@@ -17,7 +17,6 @@
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
-  display: inline-flex;
   /* width: 56px;
   height: 56px; */
   font-size: 24px;

@@ -26,12 +26,12 @@ const value = computed({
         v-model="value"
       />
     </div>
-    <!-- TODO: This should have an hidden label -->
     <input
       type="text"
       :id="`${id}-input`"
       :name="`${id}-input`"
       class="color-input-text"
+      aria-label="Color picker input"
       v-model="value"
     />
   </div>

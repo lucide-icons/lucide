@@ -54,17 +54,15 @@ onBeforeUnmount(() => {
     <div class="icons-card">
       <div class="card-grid">
         <TransitionGroup  name="list" mode="out-in">
-          <IconButton
+          <div
             v-for="icon in items"
-            @click="() => go(`/icons/${icon.name}`)"
-            :aria-label="`See ${icon.name} icon`"
             :key="icon.name"
             class="random-icon"
           >
             <LucideIcon
               v-bind="icon"
             />
-          </IconButton>
+          </div>
         </TransitionGroup>
       </div>
       <FakeInput @click="go('/icons/?focus')" class="search-box">
@@ -136,6 +134,12 @@ onBeforeUnmount(() => {
   width: 100%;
   left: 0;
   top: -64px;
+}
+
+.random-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 960px) {
