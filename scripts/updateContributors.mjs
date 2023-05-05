@@ -3,7 +3,6 @@ import { Octokit } from '@octokit/rest';
 import fs from 'node:fs';
 import path from 'path';
 import pMemoize from 'p-memoize';
-import LOST_CONTRIBUTORS from './lost-contributors.json' assert { type: 'json' };
 
 const IGNORED_COMMITS = ['433bbae4f1d4abb50a26306d6679a38ace5c8b78'];
 
@@ -65,15 +64,13 @@ await getContributors('icons');
 
 await Promise.all(
   files.map(async (file) => {
+    const jsonFile = path.join(process.cwd(), file.replace('.svg', '.json'));
+    const json = JSON.parse(fs.readFileSync(jsonFile));
     const contributors = [
-      ...(LOST_CONTRIBUTORS[file.slice(6, -4)] || []),
+      ...(json.contributors || []),
       ...(await getContributors(file, true)),
     ].filter((contributor, idx, arr) => contributor && arr.indexOf(contributor) === idx);
 
-    const jsonFile = path.join(process.cwd(), file.replace('.svg', '.json'));
-    fs.writeFileSync(
-      jsonFile,
-      JSON.stringify({ ...JSON.parse(fs.readFileSync(jsonFile)), contributors }, null, 2)
-    );
+    fs.writeFileSync(jsonFile, JSON.stringify({ ...json, contributors }, null, 2));
   })
 );

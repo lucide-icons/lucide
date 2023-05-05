@@ -8,5 +8,9 @@
     "text",
     "shapes",
     "notifications"
+  ],
+  "contributors": [
+    "danbovey",
+    "colebemis"
   ]
 }

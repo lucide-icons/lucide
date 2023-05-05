@@ -13,5 +13,10 @@
     "text",
     "layout",
     "arrows"
+  ],
+  "contributors": [
+    "lukesmurray",
+    "ericfennis",
+    "csandman"
   ]
 }
