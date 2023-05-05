@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "spelling",
+    "error",
+    "mistake",
+    "oversight",
+    "typo",
+    "correction",
+    "code",
+    "linter"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
