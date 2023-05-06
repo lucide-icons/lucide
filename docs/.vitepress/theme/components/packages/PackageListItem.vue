@@ -59,9 +59,14 @@ const props = defineProps<{
 }
 .package-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+}
+@media screen and (min-width: 480px) {
+  .package-header {
+    flex-direction: row;
+  }
 }
 .package-icon-well {
   padding: 16px;
