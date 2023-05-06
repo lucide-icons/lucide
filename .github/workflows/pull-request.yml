@@ -22,6 +22,34 @@ jobs:
         uses: tj-actions/changed-files@v35
         with:
           files: icons/*.svg
+      - name: Generate cohesion check random
+        id: generate-cohesion-check-random
+        run: |
+          delimiter="$(openssl rand -hex 8)"
+          echo "body<<$delimiter" >> $GITHUB_OUTPUT
+          for file in $(printf "%s\\n" icons/*.svg | shuf | head -n$(awk -F' ' '{print NF}' <<< '${{ steps.changed-files.outputs.all_changed_files }}')); do
+            cat "$file" | # get file content
+            tr '\n' ' ' | # remove line breaks
+            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
+            base64 -w 0 | # encode svg
+            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
+          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          echo >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
+      - name: Generate cohesion check squares
+        id: generate-cohesion-check-squares
+        run: |
+          delimiter="$(openssl rand -hex 8)"
+          echo "body<<$delimiter" >> $GITHUB_OUTPUT
+          for file in $(printf "%s\\n" icons/*square*.svg | shuf | head -n$(awk -F' ' '{print NF}' <<< '${{ steps.changed-files.outputs.all_changed_files }}')); do
+            cat "$file" | # get file content
+            tr '\n' ' ' | # remove line breaks
+            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
+            base64 -w 0 | # encode svg
+            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
+          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          echo >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 1px stroke-width
         id: generate-1px-stroke-width
         run: |
@@ -93,6 +121,13 @@ jobs:
           body: |
             ### Added or changed icons
             ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
+            <details>
+            <summary>Preview cohesion</summary>
+            ${{ steps.generate-cohesion-check-squares.outputs.body }}<br/>
+            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
+            ${{ steps.generate-cohesion-check-random.outputs.body }}<br/>
+            </details>
+            <details>
             <summary>Preview stroke widths</summary>
             ${{ steps.generate-1px-stroke-width.outputs.body }}<br/>
             ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
