@@ -88,8 +88,8 @@ syncRef(size, sizeCssVar)
               name="stroke-width"
               v-model="strokeWidth"
               :min="1"
-              :max="4"
-              :steps="0.5"
+              :max="3"
+              :steps="0.25"
             />
           </InputField>
 
@@ -106,6 +106,7 @@ syncRef(size, sizeCssVar)
               v-model="size"
               :min="16"
               :max="48"
+              :step="4"
             />
           </InputField>
         </div>
