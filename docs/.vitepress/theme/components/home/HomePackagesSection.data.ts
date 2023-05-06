@@ -34,7 +34,7 @@ export default {
         },
         {
           name: 'lucide-react-native',
-          logo: '/framework-logos/react.svg',
+          logo: '/framework-logos/react-native.svg',
           label: 'Lucide documentation for React Native',
         },
         {

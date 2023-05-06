@@ -11,6 +11,8 @@ export default {
         .map((pData) => ({
         ...pData,
         ...packageData[pData.name],
+        documentation: `/guide/packages/${pData.name}`,
+        source: `https://github.com/lucide-icons/lucide/tree/main/packages/${pData.name}`,
         icon: `/framework-logos/${packageData[pData.name].icon}.svg`,
       })).sort((a, b) => a.order - b.order),
       thirdPartyPackages,

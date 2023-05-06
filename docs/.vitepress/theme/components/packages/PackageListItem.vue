@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vitepress';
 import {PackageItem} from "../../types";
+import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 
 const { go } = useRouter()
 const props = defineProps<{
@@ -21,11 +22,22 @@ const props = defineProps<{
         </a>
       </div>
     </header>
-    <div class="details">
+    <div class="package-details">
       {{ packageData.description }}
     </div>
     <footer class="package-footer">
-      <button></button>
+      <VPButton
+        :href="packageData.documentation"
+        text="Guide"
+        theme="brand"
+        @click="go(packageData.documentation)"
+      />
+      <VPButton
+        :href="packageData.source"
+        text="Source"
+        theme="alt"
+        @click="go(packageData.source)"
+      />
     </footer>
   </article>
 </template>
@@ -43,6 +55,13 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 24px;
+  height: 100%;
+}
+.package-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
 }
 .package-icon-well {
   padding: 16px;
@@ -53,21 +72,24 @@ const props = defineProps<{
   width: 64px;
   height: 64px;
 }
-.package-header {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-}
 h2.title {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 .package-title {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.package-details {
+  flex-grow: 1;
+}
+.package-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 </style>

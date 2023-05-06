@@ -1,38 +1,64 @@
 <script setup lang="ts">
-import { data } from './PackageList.data'
-import PackageListItem from "./PackageListItem.vue";
-</script>
+import {data} from './PackageList.data'
+import PackageListItem from "./PackageListItem.vue";</script>
 
 <template>
   <section class="package-group">
     <h1 class="name">Packages</h1>
     <div class="grid package-list" ref="container">
-      <PackageListItem v-for="p in data.packages" :packageData="p" />
+      <div v-for="p in data.packages" class="item">
+        <PackageListItem :packageData="p"/>
+      </div>
     </div>
   </section>
   <section class="package-group">
     <h1 class="name">Third-party packages</h1>
     <div class="grid package-list" ref="container">
-      <PackageListItem v-for="p in data.thirdPartyPackages" :packageData="p" />
+      <div v-for="p in data.thirdPartyPackages" class="item">
+        <PackageListItem :packageData="p"/>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
 .package-group {
   margin-bottom: 96px;
 }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
   align-content: space-evenly;
-  gap: 24px;
+  box-sizing: border-box;
+  margin: -8px;
 }
+
 .grid > * {
-  flex-basis: 256px;
-  flex-grow: 1;
-  flex-shrink: 0;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding: 8px;
 }
+
+@media (min-width: 960px) {
+  .grid > * {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid > * {
+    flex-basis: 33.33%;
+  }
+}
+
 </style>
