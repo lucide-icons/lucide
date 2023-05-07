@@ -35,6 +35,7 @@
     "next": "12",
     "next-mdx-remote": "^3.0.2",
     "object-path": "0.11.5",
+    "paper": "^0.12.17",
     "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
     "react-color": "^2.19.3",

@@ -1,5 +1,7 @@
 import React from 'react';
-import { PathProps, Path } from './types';
+import { SVGPathData } from 'svg-pathdata';
+import paper from 'paper';
+import { PathProps, Path, Point } from './types';
 import { getPaths, assert } from './utils';
 
 const Grid = ({
@@ -198,6 +200,84 @@ const Radii = ({
   );
 };
 
+const CurvatureComb = ({
+  paths,
+  ...props
+}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', 'd'>) => {
+  function addVectorToPoint(point: Point, vector: Point, distance: number) {
+    const magnitude = Math.sqrt(vector.x ** 2 + vector.y ** 2);
+    const scaledVector = {
+      x: (vector.x * distance) / magnitude,
+      y: (vector.y * distance) / magnitude,
+    };
+    return { x: point.x + scaledVector.x, y: point.y + scaledVector.y };
+  }
+
+  function rotateVector(vector: Point, angle: number) {
+    const rotationMatrix = [
+      [Math.cos(angle), -Math.sin(angle)],
+      [Math.sin(angle), Math.cos(angle)],
+    ];
+
+    return {
+      x: vector.x * rotationMatrix[0][0] + vector.y * rotationMatrix[0][1],
+      y: vector.x * rotationMatrix[1][0] + vector.y * rotationMatrix[1][1],
+    };
+  }
+  paper.setup(new paper.Size(24, 24));
+
+  const d = paths
+    .flatMap(({ c, d }) => {
+      if (
+        SVGPathData.ARC !== c.type &&
+        SVGPathData.CURVE_TO !== c.type &&
+        SVGPathData.QUAD_TO !== c.type &&
+        SVGPathData.SMOOTH_QUAD_TO !== c.type &&
+        SVGPathData.SMOOTH_CURVE_TO !== c.type
+      ) {
+        return null;
+      }
+      const path = new paper.Path(d);
+      const locations: paper.CurveLocation[] = [];
+      for (let i = 0; i < path.length; i += 0.25) {
+        locations.push(path.getLocationAt(i));
+      }
+      locations.push(path.getLocationAt(path.length));
+
+      return [
+        'M' +
+          locations
+            .map(({ point, curvature, tangent }) => {
+              const { x, y } = addVectorToPoint(
+                point,
+                rotateVector(tangent, Math.PI / 2),
+                Math.abs(curvature) + 1.25
+              );
+              return `${x} ${y}`;
+            })
+            .join('L'),
+        'M' +
+          locations
+            .map(({ point, curvature, tangent }) => {
+              const { x, y } = addVectorToPoint(
+                point,
+                rotateVector(tangent, -Math.PI / 2),
+                Math.abs(curvature) + 1.25
+              );
+              return `${x} ${y}`;
+            })
+            .join('L'),
+      ];
+    })
+    .join('');
+
+  return (
+    <g className="svg-preview-curvature-comb-group" {...props}>
+      <path d={d} />
+    </g>
+  );
+};
+
 const SvgPreview = React.forwardRef<
   SVGSVGElement,
   {
@@ -210,6 +290,7 @@ const SvgPreview = React.forwardRef<
   const darkModeCss = `@media screen and (prefers-color-scheme: dark) {
   .svg-preview-grid-group,
   .svg-preview-radii-group,
+  .svg-preview-curvature-comb-group,
   .svg-preview-shadow-mask-group,
   .svg-preview-shadow-group {
     stroke: #fff;
@@ -249,6 +330,7 @@ const SvgPreview = React.forwardRef<
           '#52A675',
         ]}
       />
+      <CurvatureComb paths={paths} strokeWidth={0.12} stroke="#777" strokeOpacity={0.3} />
       <Radii
         paths={paths}
         strokeWidth={0.12}
