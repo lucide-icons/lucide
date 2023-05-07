@@ -35,6 +35,7 @@ const codeExample = computed(() => data.codeExamples?.map(
 <div :class="$style.layout">
   <div>
     <IconPreview
+      id="previewer"
       :name="$params.name"
       :iconNode="$params.iconNode"
       :class="$style.preview"

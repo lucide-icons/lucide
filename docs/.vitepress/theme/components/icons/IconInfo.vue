@@ -37,7 +37,7 @@ const { page } = useData()
         text="See in action"
         @click="go(`/icons/${icon.name}`)"
       />
-      <CopySVGButton />
+      <CopySVGButton :name="icon.name" />
       <CopyCodeButton :name="icon.name"/>
     </div>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ButtonMenu from '../base/ButtonMenu.vue'
+import { useIconStyleContext } from '../../composables/useIconStyle';
 
 const allowedAttrs = [
   'xmlns',
@@ -14,6 +15,12 @@ const allowedAttrs = [
   'stroke-linejoin',
   'class',
 ]
+
+const props = defineProps<{
+  name: string
+}>()
+
+const { size } = useIconStyleContext()
 
 const animate = ref(false)
 
@@ -49,12 +56,33 @@ function copyDataUrl() {
   navigator.clipboard.writeText(dataUrl)
 }
 
-function copyPNG() {
+function downloadSVG() {
   const svgString = getSVGIcon()
 
-  // Create SVG data url
-  const dataUrl = `data:image/svg+xml;base64,${btoa(svgString)}`
-  navigator.clipboard.writeText(dataUrl)
+  const link = document.createElement('a');
+  link.download = `${props.name}.svg`;
+  link.href = `data:image/svg+xml;base64,${btoa(svgString)}`
+  link.click();
+}
+
+function downloadPNG() {
+  const svgString = getSVGIcon()
+
+  const canvas = document.createElement('canvas');
+  canvas.width = size.value;
+  canvas.height = size.value;
+  const ctx = canvas.getContext("2d");
+
+  const image = new Image();
+  image.src = `data:image/svg+xml;base64,${btoa(svgString)}`;
+  image.onload = function() {
+    ctx.drawImage(image, 0, 0);
+
+    const link = document.createElement('a');
+    link.download = `${props.name}.png`;
+    link.href = canvas.toDataURL('image/png')
+    link.click();
+  }
 }
 
 function confetti(e) {
@@ -75,7 +103,8 @@ function confetti(e) {
     :options="[
       { text: 'Copy SVG' , onClick: copySVG },
       { text: 'Copy Data URL' , onClick: copyDataUrl },
-      // { text: 'Copy PNG' , onClick: () => {} },
+      { text: 'Download SVG' , onClick: downloadSVG },
+      { text: 'Download PNG' , onClick: downloadPNG },
     ]"
   />
 </template>
