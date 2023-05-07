@@ -23,8 +23,8 @@ I have thought of everything:
 - [ ] Elements and Arcs centers align with the grid.
 - [ ] Corners have a 2px radius or have a good reason for sharpness.
 - [ ] Holes and gaps only become invisible with stroke widths of at least 4px.
-- [ ] Gaps are closed so they are 2px when possible.
-- [ ] Curves join smothly.
+- [ ] Gaps are closed, so they are 2px when possible.
+- [ ] Curves join smoothly.
 
 I have optimized everything:
 
