@@ -75,7 +75,7 @@ function navigateToIcon() {
   display: block;
   font-size: 12px;
   line-height: 20px;
-  margin-left: 26px;
+  margin-left: 27px;
   transform: translate(-50%, 48px) scale(0.9);
   font-weight: 400;
   position: absolute;
