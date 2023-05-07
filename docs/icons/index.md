@@ -18,4 +18,3 @@ const { categories, icons } = data
     <IconsOverview :icons="icons" />
   </PageContainer>
 </div>
-```
