@@ -31,15 +31,14 @@ const { page } = useData()
     </div>
 
     <div class="group">
-      <CopySVGButton />
-      <CopyCodeButton :name="icon.name"/>
       <VPButton
         v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
         :href="`/icons/${icon.name}`"
-        text="See Code examples"
-        theme="alt"
+        text="See in action"
         @click="go(`/icons/${icon.name}`)"
       />
+      <CopySVGButton />
+      <CopyCodeButton :name="icon.name"/>
     </div>
 
   </div>
