@@ -65,6 +65,7 @@ function onClick(event: Event) {
 
 .outline-link {
   display: flex;
+  align-items: baseline;
   line-height: 28px;
   color: var(--vp-c-text-2);
   white-space: nowrap;
@@ -87,5 +88,7 @@ function onClick(event: Event) {
 .icon-count {
   opacity: 0.5;
   margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
 }
 </style>
