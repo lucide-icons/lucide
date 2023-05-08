@@ -6,6 +6,8 @@ export interface IconEntity {
   categories: string[];
   contributors: Contributor[];
   iconNode: IconNode;
+  createdRelease?: Release;
+  changedRelease?: Release;
 }
 
 export interface Contributor {
@@ -35,4 +37,10 @@ export interface PackageItem {
   order?: number
   private?: boolean
   flutter?: object
+}
+
+
+export interface Release {
+  version: string
+  date: string
 }

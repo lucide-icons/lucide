@@ -2,9 +2,10 @@ import fs from "fs";
 import path from "path";
 import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
-import { IconEntity } from "../theme/types";
+import { IconEntity, Release } from "../theme/types";
 import { getContributors } from "./fetchAllContributors";
 import { generateHashedKey } from "./helpers";
+import releaseMeta from "../data/releaseMetaData.json";
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -47,6 +48,7 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
     categories,
     // contributors,
     iconNode,
+    ...(releaseMeta[name] ?? {})
   };
 }
 

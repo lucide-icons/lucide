@@ -10,10 +10,11 @@
     "docs:preview": "vitepress preview",
     "build:iconNodes": "node ../scripts/writeIconNodes.mjs",
     "build:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
+    "build:releaseJson": "node ../scripts/writeReleaseMetadata.mjs",
     "build:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",
-    "build": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
+    "build": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:releaseJson && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
   "keywords": [],
@@ -39,8 +40,10 @@
     "lucide-vue-next": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "semver": "^7.5.0",
     "shiki": "^0.14.2",
     "shiki-processor": "^0.1.3",
+    "simple-git": "^3.18.0",
     "svg-pathdata": "^6.0.3",
     "vue": "^3.2.47"
   }

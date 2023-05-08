@@ -28,5 +28,6 @@ docs/.vitepress/dist
 docs/.vitepress/.temp
 docs/.vitepress/data/iconNodes
 docs/.vitepress/data/iconMetaData.ts
+docs/.vitepress/data/releaseMetaData.json
 docs/.vercel
 docs/.nitro
