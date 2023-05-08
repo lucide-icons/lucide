@@ -85,4 +85,8 @@ const value = computed({
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
+
+.color-input[value="currentColor"] {
+
+}
 </style>
