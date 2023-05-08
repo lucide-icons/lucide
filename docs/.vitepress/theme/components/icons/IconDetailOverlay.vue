@@ -3,6 +3,7 @@
   import { computed, ref } from 'vue'
   import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
   import IconButton from '../base/IconButton.vue';
+  import IconContributors from './IconContributors.vue';
   import IconPreview from './IconPreview.vue';
   import { x, expand } from '../../../data/iconNodes'
   import { useRouter } from 'vitepress';
@@ -47,7 +48,11 @@
           :iconNode="props.icon.iconNode"
           customizable
         />
-        <IconInfo :icon="props.icon" />
+        <IconInfo :icon="props.icon">
+          <template v-slot:footer>
+            <IconContributors :icon="props.icon" />
+          </template>
+        </IconInfo>
       </div>
     </div>
   </Transition>
@@ -93,8 +98,8 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   will-change: transform;
   pointer-events: all;
-  height: 240px;
-  padding: 24px 32px;
+  height: 288px;
+  padding: 24px;
   display: flex;
   box-shadow: var(--vp-shadow-5);
 }
@@ -133,7 +138,5 @@
   transform: translateY(100%);
   opacity: 0;
 }
-
-
 
 </style>

@@ -40,7 +40,7 @@ const { page } = useData()
       <CopySVGButton :name="icon.name" />
       <CopyCodeButton :name="icon.name"/>
     </div>
-
+    <slot name="footer" />
   </div>
 </template>
 
@@ -51,8 +51,10 @@ const { page } = useData()
   gap: 8px;
   margin-bottom: 24px;
 }
-
 .category {
   text-transform: capitalize;
+}
+.icon-name {
+  margin-bottom: 12px;
 }
 </style>

@@ -4,14 +4,10 @@ export interface IconEntity {
   name: string;
   tags: string[];
   categories: string[];
-  contributors: Contributor[];
+  contributors: string[];
   iconNode: IconNode;
   createdRelease?: Release;
   changedRelease?: Release;
-}
-
-export interface Contributor {
-  author: string;
 }
 
 export interface Category {

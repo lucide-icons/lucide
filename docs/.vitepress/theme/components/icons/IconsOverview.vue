@@ -95,6 +95,6 @@ watch(searchQueryThrottled, (searchString) => {
 }
 
 .bottom-page {
-  height: 200px;
+  height: 288px;
 }
 </style>

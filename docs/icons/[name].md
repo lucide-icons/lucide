@@ -12,7 +12,9 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
 import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
+import IconContributors from '../.vitepress/theme/components/icons/IconContributors.vue'
 import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
+import Badge from '../.vitepress/theme/components/base/Badge.vue'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { data } from './codeExamples.data'
 import { camelCase, startCase } from 'lodash-es'
@@ -50,6 +52,11 @@ const codeExample = computed(() => data.codeExamples?.map(
       />
     </CodeGroup>
   </div>
+  <div class="release-info">
+    <Badge><strong>Created:</strong> v{{$params.createdRelease.version}}</Badge>
+    <Badge><strong>Last changed:</strong> v{{$params.changedRelease.version}}</Badge>
+  </div>
+  <IconContributors :icon="$params" />
 </div>
 
 <style module>
@@ -73,5 +80,16 @@ const codeExample = computed(() => data.codeExamples?.map(
     .preview {
       margin: 0 auto;
     }
+  }
+</style>
+<style scoped>
+  .release-info {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .badge {
+    font-weight: 500;
   }
 </style>

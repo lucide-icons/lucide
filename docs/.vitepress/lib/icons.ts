@@ -2,8 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
-import { IconEntity, Release } from "../theme/types";
-import { getContributors } from "./fetchAllContributors";
+import { IconEntity } from "../theme/types";
 import { generateHashedKey } from "./helpers";
 import releaseMeta from "../data/releaseMetaData.json";
 
@@ -26,7 +25,7 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
   const svgContent = fs.readFileSync(svgPath, "utf8");
   const jsonPath = path.join(directory, `${name}.json`);
   const jsonContent = fs.readFileSync(jsonPath, "utf8");
-  const { tags, categories } = JSON.parse(jsonContent);
+  const { tags, categories, contributors } = JSON.parse(jsonContent);
 
   const iconNode = parseSync(svgContent).children.map(
     (child) => {
@@ -40,14 +39,13 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
     }
   ) as IconNode
 
-  // const contributors = await getContributors(name);
-
   return {
     name,
     tags,
     categories,
-    // contributors,
     iconNode,
+    contributors,
+    // contributors: ['ericfennis', 'karsa-mistmere'],
     ...(releaseMeta[name] ?? {})
   };
 }
