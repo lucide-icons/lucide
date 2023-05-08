@@ -23,7 +23,8 @@ const props = defineProps<{
 const { selectedCategory } = useCategoryView()
 
 function onClick(event: Event) {
-  const id = '#' + (event.target as HTMLAnchorElement).href!.split('#')[1]
+  const target = (event.target as HTMLElement).nodeName === 'span' ? (event.target as HTMLElement).parentNode : event.target as HTMLElement
+  const id = '#' + (target as HTMLAnchorElement).href!.split('#')[1]
   const decodedId = decodeURIComponent(id)
 
   selectedCategory.value = decodedId.replace('#', '')
