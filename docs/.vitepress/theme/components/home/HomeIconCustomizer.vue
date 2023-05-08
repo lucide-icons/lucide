@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { syncRef, useCssVar } from '@vueuse/core'
 import HomeContainer from './HomeContainer.vue'
-import { rotateCw } from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 import RangeSlider from '../base/RangeSlider.vue'
 import InputField from '../base/InputField.vue'
 import ColorPicker from '../base/ColorPicker.vue'
-import IconButton from '../base/IconButton.vue'
+import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 
 import { ref } from 'vue'
@@ -44,8 +42,6 @@ syncRef(color, colorCssVar)
 syncRef(strokeWidth, strokeWidthCssVar)
 syncRef(size, sizeCssVar)
 
-const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
-
 function resetStyle () {
   color.value = 'currentColor'
   strokeWidth.value = 2
@@ -60,9 +56,7 @@ function resetStyle () {
       <div class="card-column">
         <h2 class="title">
           Style as you please
-          <IconButton class="reset-button" @click="resetStyle">
-            <RotateIcon :size="20"/>
-          </IconButton>
+          <ResetButton @click="resetStyle"></ResetButton>
         </h2>
         <p class="copy">
           Lucide has a lot of customization options to match the icons with you UI.
@@ -141,6 +135,7 @@ function resetStyle () {
   flex-direction: row;
   gap: 8px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copy {
