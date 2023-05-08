@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "programming",
+    "code",
+    "automation",
+    "maths",
+    "right",
+    "forward",
+    "direction",
+    "fat",
+    "double",
+    "ligature"
+  ],
+  "categories": [
+    "development",
+    "shapes",
+    "maths"
+  ]
+}
