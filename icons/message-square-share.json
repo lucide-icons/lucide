@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "network",
+    "forward"
+  ],
+  "categories": [
+    "account",
+    "social"
+  ]
+}
