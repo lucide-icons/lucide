@@ -21,7 +21,6 @@ hero:
       link: https://github.com/lucide-icons/lucide
 
 features:
-
   - title: Lightweight & Scalable
     details: Icons are lightweight, highly optimized scalable vector graphics (SVG).
     icon: |

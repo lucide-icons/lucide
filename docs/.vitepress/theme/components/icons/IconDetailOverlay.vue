@@ -7,6 +7,7 @@
   import { x, expand } from '../../../data/iconNodes'
   import { useRouter } from 'vitepress';
   import IconInfo from './IconInfo.vue';
+  import Badge from '../base/Badge.vue';
 
   const props = defineProps<{
     icon: IconEntity
@@ -35,9 +36,7 @@
     <div class="overlay-container" v-if="props.icon">
       <div class="overlay-panel">
         <nav class="overlay-menu">
-          <IconButton  @click="go(`/icons/${icon.name}`)">
-            <component :is="Expand" />
-          </IconButton>
+          <Badge>v{{ icon.createdRelease.version }}</Badge>
           <IconButton  @click="onClose">
             <component :is="CloseIcon" />
           </IconButton>
@@ -118,6 +117,7 @@
   right: 24px;
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .drawer-enter-active {
