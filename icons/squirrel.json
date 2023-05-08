@@ -5,7 +5,11 @@
     "rodent",
     "pet",
     "pest",
-    "nuts"
+    "nuts",
+    "retrieve",
+    "updates",
+    "storage",
+    "stash"
   ],
   "categories": [
     "animals"
