@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "quotation",
+    "indent",
+    "reply",
+    "response"
+  ],
+  "categories": [
+    "text"
+  ]
+}
