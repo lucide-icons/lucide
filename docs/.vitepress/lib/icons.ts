@@ -44,8 +44,8 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
     tags,
     categories,
     iconNode,
-    contributors,
-    // contributors: ['ericfennis', 'karsa-mistmere'],
+    //contributors,
+    contributors: ['ericfennis', 'karsa-mistmere'],
     ...(releaseMeta[name] ?? {})
   };
 }

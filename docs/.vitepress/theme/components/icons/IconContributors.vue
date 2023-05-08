@@ -38,15 +38,19 @@ h2.label {
 .avatar:not(:first-child) {
   margin-left: -24px;
 }
+.avatar {
+  position: relative;
+}
 .avatar:before {
   content: attr(data-name);
   display: block;
   font-size: 12px;
   line-height: 20px;
-  margin-left: 27px;
-  transform: translate(-50%, -28px) scale(0.9);
+  transform: translateX(-50%) scale(0.9);
   font-weight: 400;
   position: absolute;
+  top: -28px;
+  left: 50%;
   background: var(--vp-c-brand-dark);
   color: white;
   z-index: 10;
@@ -57,14 +61,13 @@ h2.label {
   pointer-events: none;
   transition: cubic-bezier(0.19, 1, 0.22, 1) .2s;
   transition-property: opacity, transform;
-  /* max-width: calc((32px * 2) + 56px); */
   overflow: hidden;
   white-space: nowrap;
   word-break: break-word;
 }
 .avatar:hover:before {
   opacity: 1;
-  transform: translate(-50%, -28px) scale(1);
+  transform: translateX(-50%) scale(1);
 }
 .avatar-image {
   width: 64px;
