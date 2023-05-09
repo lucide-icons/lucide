@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "blockquote",
     "quotation",
     "indent",
     "reply",
