@@ -42,7 +42,9 @@ export const fetchAllReleases = async () =>
         .split(/\n/)
         .map(async (line) => {
           const [commit, ref] = line.split(/ /);
-          if (ref == null || !ref.startsWith('refs/tags/') || commit == null) return null;
+          if (ref == null || !ref.startsWith('refs/tags/') || commit == null) {
+            return { version: null, date: null };
+          }
           const { version = null } = semver.coerce(ref.replace('refs/tags/', '')) ?? {};
           const date = (await simpleGit().show(['-s', '--format=%cI', commit])).trim();
           return { version, date };
