@@ -19,7 +19,7 @@ const props = defineProps<{
 const emit = defineEmits(['setActiveIcon'])
 
 const { go } = useRouter()
-const showOverlay = useMediaQuery('(min-width: 720px)');
+const showOverlay = useMediaQuery('(min-width: 860px)');
 
 const icon = createLucideIcon(props.name, props.iconNode)
 

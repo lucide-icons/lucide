@@ -23,11 +23,6 @@
 
   const { go } = useRouter()
 
-  const tags = computed(() => {
-    if (!props.icon) return []
-    return props.icon.tags.join(' • ')
-  })
-
   const CloseIcon = createLucideIcon('Close', x)
   const Expand = createLucideIcon('Expand', expand)
 </script>
@@ -37,7 +32,10 @@
     <div class="overlay-container" v-if="props.icon">
       <div class="overlay-panel">
         <nav class="overlay-menu">
-          <Badge>v{{ icon.createdRelease.version }}</Badge>
+          <Badge class="version">v{{ icon.createdRelease.version }}</Badge>
+          <IconButton  @click="go(`/icons/${icon.name}`)">
+            <component :is="Expand" />
+          </IconButton>
           <IconButton  @click="onClose">
             <component :is="CloseIcon" />
           </IconButton>
@@ -50,7 +48,7 @@
         />
         <IconInfo :icon="props.icon" popoverPosition="top">
           <template v-slot:footer>
-            <IconContributors :icon="props.icon" />
+            <IconContributors :icon="props.icon" class="contributors" />
           </template>
         </IconInfo>
       </div>
@@ -137,6 +135,14 @@
 .drawer-leave-to {
   transform: translateY(100%);
   opacity: 0;
+}
+
+.version {
+  margin-right: 24px;
+}
+
+.contributors {
+  justify-content: flex-end;
 }
 
 </style>

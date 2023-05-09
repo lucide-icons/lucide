@@ -15,6 +15,7 @@ import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
 import IconContributors from '../.vitepress/theme/components/icons/IconContributors.vue'
 import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
 import Badge from '../.vitepress/theme/components/base/Badge.vue'
+import Label from '../.vitepress/theme/components/base/Label.vue'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { data } from './codeExamples.data'
 import { camelCase, startCase } from 'lodash-es'
@@ -43,30 +44,57 @@ const codeExample = computed(() => data.codeExamples?.map(
       :class="$style.preview"
     />
   </div>
-  <div>
-    <IconInfo :icon="$params"/>
-    <CodeGroup :groups="tabs" groupName="icon-code-example">
+  <div >
+    <div :class="$style.info">
+      <IconInfo :icon="$params" />
+      <div :class="$style.meta">
+        <div :class="$style.version">
+          <Label>Created:</Label><Badge>v{{$params.createdRelease.version}}</Badge>
+        </div>
+        <div :class="$style.version">
+          <Label>Last changed:</Label><Badge>v{{$params.changedRelease.version}}</Badge>
+        </div>
+        <IconContributors :icon="$params" :class="$style.contributors"/>
+      </div>
+    </div>
+    <CodeGroup :groups="tabs" groupName="icon-code-example" :class="$style.code">
       <div
         class="blocks"
         v-html="codeExample"
       />
     </CodeGroup>
   </div>
-  <div class="release-info">
-    <Badge><strong>Created:</strong> v{{$params.createdRelease.version}}</Badge>
-    <Badge><strong>Last changed:</strong> v{{$params.changedRelease.version}}</Badge>
-  </div>
-  <IconContributors :icon="$params" />
+
+
 </div>
 
 <style module>
   .preview {
+    grid-area: preview;
     margin-bottom: 24px;
     max-width: 240px;
   }
 
   .layout {
     align-items: flex-start;
+  }
+
+  .meta {
+    margin-left: auto;
+    margin-top: 24px;
+  }
+
+  .version, .contributors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 0px;
+    justify-content: flex-start;
+  }
+
+  .version:first-child {
+    margin-bottom: 8px;
   }
 
   @media (min-width: 640px) {
@@ -81,15 +109,59 @@ const codeExample = computed(() => data.codeExamples?.map(
       margin: 0 auto;
     }
   }
-</style>
-<style scoped>
-  .release-info {
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-    align-items: flex-start;
+
+  @media (min-width: 860px) {
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .meta {
+      border-left: 1px solid var(--vp-c-divider);
+      padding-left: 16px;
+      margin-top: 0;
+    }
+
+    .version, .contributors {
+      flex-direction: column;
+    }
   }
-  .badge {
-    font-weight: 500;
+
+  @media (min-width: 960px) {
+    .info {
+      display: block;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .meta {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 24px;
+    }
+
+    .version, .contributors {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 1152px) {
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .meta {
+      border-left: 1px solid var(--vp-c-divider);
+      padding-left: 16px;
+      margin-top: 0;
+    }
+
+    .version, .contributors {
+      flex-direction: row;
+      margin-bottom: 8px;
+    }
   }
 </style>

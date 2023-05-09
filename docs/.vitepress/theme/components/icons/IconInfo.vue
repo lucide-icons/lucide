@@ -6,14 +6,20 @@ import CopySVGButton from './CopySVGButton.vue';
 import CopyCodeButton from './CopyCodeButton.vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import {useData, useRouter} from 'vitepress';
+import { computed } from 'vue';
 
-defineProps<{
+const props = defineProps<{
   icon: IconEntity
   popoverPosition?: 'top' | 'bottom'
 }>()
 
 const { go } = useRouter()
 const { page } = useData()
+
+const tags = computed(() => {
+  if (!props.icon) return []
+  return props.icon.tags.join(' • ')
+})
 </script>
 
 <template>
@@ -21,6 +27,9 @@ const { page } = useData()
     <IconDetailName class="icon-name">
       {{ icon.name }}
     </IconDetailName>
+    <p class="icon-tags">
+      {{ tags }}
+    </p>
     <div class="group">
       <Badge
         v-for="category in icon.categories"
@@ -31,7 +40,7 @@ const { page } = useData()
       </Badge>
     </div>
 
-    <div class="group">
+    <div class="group buttons">
       <VPButton
         v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
         :href="`/icons/${icon.name}`"
@@ -50,12 +59,25 @@ const { page } = useData()
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .category {
   text-transform: capitalize;
 }
 .icon-name {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.icon-tags {
+  font-size: 16px;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  margin-top: 0;;
+  margin-bottom: 16px;
+  line-height: 28px;
+}
+
+.buttons {
+  margin-top: 24px;
 }
 </style>

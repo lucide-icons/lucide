@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {IconEntity} from "../../types";
+import Label from "../base/Label.vue";
 
 const props = defineProps<{
   icon: IconEntity
@@ -9,7 +10,7 @@ const props = defineProps<{
 
 <template>
   <div class="contributors" v-if="props.icon.contributors?.length>0">
-    <h2 class="label">Contributors</h2>
+    <Label>Contributors:</Label>
     <div class="avatar-group">
       <a class="avatar" v-for="contributor in props.icon.contributors" :href="`https://github.com/${contributor}`" target="_blank" :data-name="contributor">
         <img class="avatar-image" :alt="contributor" :src="`https://github.com/${contributor}.png?size=128`" />
@@ -23,14 +24,8 @@ const props = defineProps<{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  gap: 24px;
-}
-h2.label {
-  font-size: 20px;
-  border: 0;
-  padding: 0;
-  margin: 0;
+  /* justify-content: flex-end; */
+  gap: 16px;
 }
 .avatar-group {
   display: flex;
@@ -70,12 +65,16 @@ h2.label {
   transform: translateX(-50%) scale(1);
 }
 .avatar-image {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 3px solid var(--vp-c-bg-elv);
 }
 .avatar:hover .avatar-image {
   border: 3px solid var(--vp-c-bg-soft-mute);
+}
+
+.avatar:hover {
+  z-index: 2;
 }
 </style>
