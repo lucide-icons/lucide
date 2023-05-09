@@ -9,21 +9,29 @@ import {
 } from '@headlessui/vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 import { chevronUp }  from '../../../data/iconNodes'
+import { useStorage } from '@vueuse/core'
 
-const props = defineProps<{
+interface Props {
   options: {
     text: string
     onClick?: () => void
   }[],
   callOptionOnClick?: boolean
   buttonClass?: string
-}>()
+  id: string
+  popoverPosition?: 'top' | 'bottom'
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  callOptionOnClick: false,
+  popoverPosition: 'bottom'
+})
 
 const emit = defineEmits(['click', 'optionClick'])
 
 const buttonRef = ref(null)
 
-const selectedOption = ref(props.options[0].text)
+const selectedOption = useStorage(props.id, props.options[0].text)
 const selectionOptionAction = computed(() => props.options.find(option => option.text === selectedOption.value).onClick)
 
 function onClick(event) {
@@ -51,7 +59,7 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
 
 <template>
   <Listbox v-model="selectedOption">
-    <div class="menu">
+    <div class="menu" >
       <div class="button-wrapper">
         <VPButton
           v-bind="$attrs"
@@ -62,9 +70,15 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
           :class="[props.buttonClass]"
           ref="buttonRef"
         />
-        <ListboxButton :as="VPButton" :text="''" theme="alt" class="arrow-up-button"/>
+        <ListboxButton
+          :as="VPButton"
+          :text="''"
+          theme="alt"
+          class="arrow-up-button"
+          :class="popoverPosition"
+        />
       </div>
-      <ListboxOptions class="menu-items">
+      <ListboxOptions class="menu-items" :class="popoverPosition">
         <ListboxOption
           as="button"
           class="menu-item"
@@ -84,10 +98,10 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
   position: relative;
 }
 .menu-items {
+  --menu-offset: 44px;
   position: absolute;
   display: flex;
   flex-direction: column;
-  bottom: 44px;
   border-radius: 12px;
   padding: 12px;
   min-width: 128px;
@@ -97,6 +111,8 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
   transition: background-color 0.5s;
   max-height: calc(100vh - var(--vp-nav-height));
   overflow-y: auto;
+  z-index: 90;
+  right: 0;
 }
 
 .menu-item {
@@ -154,5 +170,21 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
 
 .dark .arrow-up-button::before {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='18 15 12 9 6 15' /%3E%3C/svg%3E%0A");
+}
+
+.menu-items.bottom {
+  top: var(--menu-offset);
+}
+
+.menu-items.top {
+  bottom: var(--menu-offset);
+}
+
+.arrow-up-button.top::before {
+  transform: rotate(0deg);
+}
+
+.arrow-up-button.bottom::before {
+  transform: rotate(180deg);
 }
 </style>

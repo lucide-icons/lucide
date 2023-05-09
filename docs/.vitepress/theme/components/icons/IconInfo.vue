@@ -9,6 +9,7 @@ import {useData, useRouter} from 'vitepress';
 
 defineProps<{
   icon: IconEntity
+  popoverPosition?: 'top' | 'bottom'
 }>()
 
 const { go } = useRouter()
@@ -37,8 +38,8 @@ const { page } = useData()
         text="See in action"
         @click="go(`/icons/${icon.name}`)"
       />
-      <CopySVGButton :name="icon.name" />
-      <CopyCodeButton :name="icon.name"/>
+      <CopySVGButton :name="icon.name" :popoverPosition="popoverPosition"/>
+      <CopyCodeButton :name="icon.name" :popoverPosition="popoverPosition"/>
     </div>
 
   </div>

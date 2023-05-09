@@ -48,7 +48,7 @@
           :iconNode="props.icon.iconNode"
           customizable
         />
-        <IconInfo :icon="props.icon" />
+        <IconInfo :icon="props.icon" popoverPosition="top" />
       </div>
     </div>
   </Transition>
