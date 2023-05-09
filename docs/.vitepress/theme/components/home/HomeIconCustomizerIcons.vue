@@ -33,11 +33,11 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
 .icon-grid {
   display: grid;
   gap: 1px;
-  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(56px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(68px, 1fr));
   width: 100%;
   height:100%;
-  max-height: 300px;
+  max-height: 360px;
   gap: 1px;
   overflow: hidden;
   position: relative;
