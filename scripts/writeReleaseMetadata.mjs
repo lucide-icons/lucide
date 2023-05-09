@@ -1,8 +1,8 @@
-import {CleanOptions, simpleGit} from 'simple-git';
+import { CleanOptions, simpleGit } from 'simple-git';
 import semver from 'semver';
 import fs from 'fs';
 import path from 'path';
-import {readSvgDirectory} from './helpers.mjs';
+import { readSvgDirectory } from './helpers.mjs';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -18,29 +18,37 @@ export const releaseMin = (a, b) => {
   if (!a) return b;
   if (!b) return a;
   return semver.gt(a.version, b.version) ? b : a;
-}
+};
 
 export const releaseMax = (a, b) => {
   if (!a) return b;
   if (!b) return a;
   return semver.gt(a.version, b.version) ? a : b;
-}
+};
 
 export const updateReleaseMetadataWithCommit = (metadata, date, release) => {
   metadata = metadata || {};
   metadata.createdRelease = releaseMin(metadata.createdRelease, release);
   metadata.changedRelease = releaseMax(metadata.changedRelease, release);
-}
+};
 
-export const fetchAllReleases = async () => {
-  return (await Promise.all((await simpleGit().raw('show-ref', '--tags', '-d')).trim().split(/\n/)
-    .map(async (line) => {
-      const [commit, ref] = line.split(/ /);
-      const version = semver.coerce(ref.replace('refs/tags/', '')).version;
-      const date = (await simpleGit().show(['-s', '--format=%cI', commit])).trim();
-      return {version, date};
-    }))).filter(({version}) => semver.valid(version))
-}
+export const fetchAllReleases = async () =>
+  (
+    await Promise.all(
+      (
+        await simpleGit().raw('show-ref', '--tags', '-d')
+      )
+        .trim()
+        .split(/\n/)
+        .map(async (line) => {
+          const [commit, ref] = line.split(/ /);
+          if (ref == null || !ref.startsWith('refs/tags/')) return null;
+          const { version } = semver.coerce(ref.replace('refs/tags/', ''));
+          const date = (await simpleGit().show(['-s', '--format=%cI', commit])).trim();
+          return { version, date };
+        }),
+    )
+  ).filter(({ version }) => semver.valid(version));
 
 simpleGit().clean(CleanOptions.FORCE);
 
@@ -52,37 +60,40 @@ const findRelease = (date, releases) => {
     }
   }
   return closestRelease;
-}
+};
 
 const fetchCommits = async (name) => {
   const file = `../icons/${name}.svg`;
-  const {all: commits} = await simpleGit().log(['--reverse', '--follow', '--', file]);
+  const { all: commits } = await simpleGit().log(['--reverse', '--follow', '--', file]);
   return commits;
-}
+};
 
 export const getReleaseMetadata = async (name, aliases, releases) => {
-  const metadata = {name};
-  for (let alias of [name, ...(aliases ?? [])]) {
+  const metadata = { name };
+  for (const alias of [name, ...(aliases ?? [])]) {
     const commits = await fetchCommits(alias);
     for (const commit of commits) {
       const date = new Date(commit.date).toISOString();
-      const release = findRelease(date, releases)
+      const release = findRelease(date, releases);
       updateReleaseMetadataWithCommit(metadata, date, release);
     }
   }
   return metadata;
 };
 
-
 const releases = await fetchAllReleases();
-const releaseMetaData = (await Promise.all(iconJsonFiles.map(async (iconJsonFile) => {
-    const iconName = path.basename(iconJsonFile, '.json');
-    const aliases = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, iconJsonFile))).aliases;
-    return await getReleaseMetadata(iconName, aliases, releases);
-}))).reduce((acc, {name, ...rest}) => {
+const releaseMetaData = (
+  await Promise.all(
+    iconJsonFiles.map((iconJsonFile) => {
+      const iconName = path.basename(iconJsonFile, '.json');
+      const { aliases } = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, iconJsonFile)));
+      return getReleaseMetadata(iconName, aliases, releases);
+    }),
+  )
+).reduce((acc, { name, ...rest }) => {
   acc[name] = rest;
   return acc;
-}, {})
+}, {});
 
 fs.promises
   .writeFile(location, JSON.stringify(releaseMetaData, null, 2), 'utf-8')
