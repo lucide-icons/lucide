@@ -39,6 +39,17 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
     }
   ) as IconNode
 
+  const releaseData = releaseMeta?.[name] ?? {
+    "createdRelease": {
+      "version": "0.0.0",
+      "date": new Date().toISOString()
+    },
+    "changedRelease": {
+      "version": "0.0.0",
+      "date": new Date().toISOString()
+    }
+  }
+
   return {
     name,
     tags,
@@ -46,7 +57,7 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
     iconNode,
     //contributors,
     contributors: ['ericfennis', 'karsa-mistmere'],
-    ...(releaseMeta[name] ?? {})
+    ...releaseData
   };
 }
 
