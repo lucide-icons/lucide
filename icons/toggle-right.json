@@ -3,10 +3,12 @@
   "tags": [
     "on",
     "off",
-    "switch"
+    "switch",
+    "boolean"
   ],
   "categories": [
     "layout",
-    "account"
+    "account",
+    "development"
   ]
 }
