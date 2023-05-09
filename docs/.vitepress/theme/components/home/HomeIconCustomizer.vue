@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { syncRef, useCssVar } from '@vueuse/core'
 import HomeContainer from './HomeContainer.vue'
-import { rotateCw } from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 import RangeSlider from '../base/RangeSlider.vue'
 import InputField from '../base/InputField.vue'
 import ColorPicker from '../base/ColorPicker.vue'
+import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 
 import { ref } from 'vue'
@@ -43,14 +42,11 @@ syncRef(color, colorCssVar)
 syncRef(strokeWidth, strokeWidthCssVar)
 syncRef(size, sizeCssVar)
 
-// TODO Add Reset button
-// const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
-
-// function resetStyle () {
-//   color.value = 'currentColor'
-//   strokeWidth.value = 2
-//   size.value = 24
-// }
+function resetStyle () {
+  color.value = 'currentColor'
+  strokeWidth.value = 2
+  size.value = 24
+}
 
 </script>
 
@@ -60,6 +56,7 @@ syncRef(size, sizeCssVar)
       <div class="card-column">
         <h2 class="title">
           Style as you please
+          <ResetButton @click="resetStyle"></ResetButton>
         </h2>
         <p class="copy">
           Lucide has a lot of customization options to match the icons with you UI.
@@ -89,7 +86,7 @@ syncRef(size, sizeCssVar)
               v-model="strokeWidth"
               :min="1"
               :max="3"
-              :steps="0.25"
+              :step="0.25"
             />
           </InputField>
 
@@ -134,6 +131,11 @@ syncRef(size, sizeCssVar)
   line-height: 32px;
   font-size: 24px;
   font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copy {
@@ -170,6 +172,6 @@ syncRef(size, sizeCssVar)
 }
 
 .color-picker-field:deep(.display-value) {
-  width: 130px;
+  width: 138px;
 }
 </style>

@@ -54,7 +54,28 @@ function copyVue() {
   navigator.clipboard.writeText(code)
 }
 
-// TODO: This function should be moved to a composable, together with the styling
+function copyAngular() {
+  let attrs = ['']
+
+  attrs.push(`name="${props.name}"`)
+
+  if (size.value && size.value !== 24) {
+    attrs.push(`[size]="${size.value}"`)
+  }
+
+  if (color.value && color.value !== 'currentColor') {
+    attrs.push(`color="${color.value}"`)
+  }
+
+  if (strokeWidth.value && strokeWidth.value !== 2) {
+    attrs.push(`[strokeWidth]="${strokeWidth.value}"`)
+  }
+
+  const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`
+
+  navigator.clipboard.writeText(code)
+}
+
 function confetti(e) {
   animate.value = true;
 
@@ -77,6 +98,7 @@ function confetti(e) {
       { text: 'Copy JSX' , onClick: copyJSX },
       { text: 'Copy Vue' , onClick: copyVue },
       { text: 'Copy Svelte' , onClick: copyJSX },
+      { text: 'Copy Angular' , onClick: copyAngular },
     ]"
   />
 </template>

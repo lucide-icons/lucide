@@ -4,6 +4,7 @@ import './style.css'
 import { Theme } from 'vitepress'
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue'
 import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue'
+import HomeHeroInfo from "./components/home/HomeHeroInfo.vue";
 import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle'
 import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView'
 
@@ -11,6 +12,7 @@ const theme: Partial<Theme> = {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
+      'home-hero-info': () => h(HomeHeroInfo),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard)
     })

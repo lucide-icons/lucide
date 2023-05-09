@@ -41,14 +41,14 @@ const component = computed(() => props.href ? 'a' : 'div')
   font-size: 16px;
 }
 
-.badge:hover, a.badge:hover  {
+.badge[href]:hover, a.badge:hover  {
   border-color: var(--vp-button-alt-hover-border);
   color: var(--vp-button-alt-hover-text);
   background-color: var(--vp-button-alt-hover-bg);
   text-decoration: none;
 }
 
-.badge:active {
+.badge[href]:active {
   border-color: var(--vp-button-alt-active-border);
   color: var(--vp-button-alt-active-text);
   background-color: var(--vp-button-alt-active-bg);

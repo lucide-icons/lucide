@@ -3,11 +3,9 @@ import { shallowRef, type Ref } from 'vue'
 import { useCssVar, syncRef } from '@vueuse/core'
 import { useIconStyleContext } from '../../composables/useIconStyle'
 import RangeSlider from '../base/RangeSlider.vue'
-import IconButton from '../base/IconButton.vue'
 import InputField from '../base/InputField.vue'
 import ColorPicker from '../base/ColorPicker.vue'
-import { rotateCw } from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
+import ResetButton from '../base/ResetButton.vue'
 
 const props = defineProps<{
   rootEl?: Ref<HTMLElement>
@@ -44,8 +42,6 @@ syncRef(color, colorCssVar)
 syncRef(strokeWidth, strokeWidthCssVar)
 syncRef(size, sizeCssVar)
 
-const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
-
 function resetStyle () {
   color.value = 'currentColor'
   strokeWidth.value = 2
@@ -59,9 +55,7 @@ function resetStyle () {
       <h2 class="card-title">
         Customizer
       </h2>
-      <IconButton class="reset-button" @click="resetStyle">
-        <RotateIcon :size="20"/>
-      </IconButton>
+      <ResetButton @click="resetStyle"></ResetButton>
     </div>
     <InputField
       id="icon-color"
@@ -135,31 +129,5 @@ function resetStyle () {
 .color-picker {
   margin-left: auto;
 }
-
-.reset-button {
-  background: none;
-  padding: 0;
-  transition: ease-in-out 0.1s transform;
-}
-
-.reset-button:hover {
-  background: none;
-  border-color: transparent;
-}
-
-/* a rotate css animation keyframes */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
-
-.reset-button:active {
-  transform: rotate(45deg);
-}
-
 
 </style>

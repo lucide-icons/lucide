@@ -4,12 +4,10 @@ export interface IconEntity {
   name: string;
   tags: string[];
   categories: string[];
-  contributors: Contributor[];
+  contributors: string[];
   iconNode: IconNode;
-}
-
-export interface Contributor {
-  author: string;
+  createdRelease?: Release;
+  changedRelease?: Release;
 }
 
 export interface Category {
@@ -35,4 +33,10 @@ export interface PackageItem {
   order?: number
   private?: boolean
   flutter?: object
+}
+
+
+export interface Release {
+  version: string
+  date: string
 }

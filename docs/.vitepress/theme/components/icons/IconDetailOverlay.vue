@@ -3,10 +3,12 @@
   import { computed, ref } from 'vue'
   import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
   import IconButton from '../base/IconButton.vue';
+  import IconContributors from './IconContributors.vue';
   import IconPreview from './IconPreview.vue';
   import { x, expand } from '../../../data/iconNodes'
   import { useRouter } from 'vitepress';
   import IconInfo from './IconInfo.vue';
+  import Badge from '../base/Badge.vue';
 
   const props = defineProps<{
     icon: IconEntity
@@ -35,9 +37,7 @@
     <div class="overlay-container" v-if="props.icon">
       <div class="overlay-panel">
         <nav class="overlay-menu">
-          <IconButton  @click="go(`/icons/${icon.name}`)">
-            <component :is="Expand" />
-          </IconButton>
+          <Badge>v{{ icon.createdRelease.version }}</Badge>
           <IconButton  @click="onClose">
             <component :is="CloseIcon" />
           </IconButton>
@@ -48,7 +48,11 @@
           :iconNode="props.icon.iconNode"
           customizable
         />
-        <IconInfo :icon="props.icon" popoverPosition="top" />
+        <IconInfo :icon="props.icon" popoverPosition="top">
+          <template v-slot:footer>
+            <IconContributors :icon="props.icon" />
+          </template>
+        </IconInfo>
       </div>
     </div>
   </Transition>
@@ -94,8 +98,8 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   will-change: transform;
   pointer-events: all;
-  height: 240px;
-  padding: 24px 32px;
+  height: 288px;
+  padding: 24px;
   display: flex;
   box-shadow: var(--vp-shadow-5);
 }
@@ -118,6 +122,7 @@
   right: 24px;
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .drawer-enter-active {
@@ -133,7 +138,5 @@
   transform: translateY(100%);
   opacity: 0;
 }
-
-
 
 </style>

@@ -9,7 +9,6 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
-  margin-bottom: 12px;
   transition: background ease-in .15s;;
   padding: 2px 8px;
   border-radius: 8px;
