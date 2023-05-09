@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "equilateral",
     "delta",
-    "shape"
+    "shape",
+    "pyramid",
+    "hierarchy"
   ],
   "categories": [
     "shapes"
