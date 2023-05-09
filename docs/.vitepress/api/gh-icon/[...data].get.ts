@@ -29,6 +29,7 @@ export default eventHandler((event) => {
   }
 
   const svg = Buffer.from(
+    // We can't use jsx here, is not supported here by nitro.
     renderToString(createElement(SvgPreview, {src, showGrid: true}, children))
   ).toString('utf8');
 
