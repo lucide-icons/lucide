@@ -118,7 +118,7 @@ If you'd prefer, you can use CSS to hold your base SVG properties
 
 and update the SVG as follows
 
-```svg
+```xml
 <svg
   xmlns="http://www.w3.org/2000/svg"
   class="lucide-icon"

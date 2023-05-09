@@ -2,5 +2,12 @@
   "cleanUrls": true,
   "github": {
     "silent": true
-  }
+  },
+  "redirects": [
+    {
+      "source": "/icon/:path*",
+      "destination": "/icons/:path*",
+      "permanent": true
+    }
+  ]
 }

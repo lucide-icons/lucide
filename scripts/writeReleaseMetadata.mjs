@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax,  no-await-in-loop */
 import { CleanOptions, simpleGit } from 'simple-git';
 import semver from 'semver';
 import fs from 'fs';
@@ -66,12 +67,23 @@ const findRelease = (date, releases) => {
 
 const fetchCommits = async (name) => {
   const file = `../icons/${name}.svg`;
-  const { all: commits } = await simpleGit().log(['--reverse', '--follow', '--', file]);
+  const { all: commits = {} } = await simpleGit().log(['--reverse', '--follow', '--', file]);
   return commits;
 };
 
 export const getReleaseMetadata = async (name, aliases, releases) => {
-  const metadata = { name };
+  const metadata = {
+    name,
+    createdRelease: {
+      version: '0.0.0',
+      date: new Date().toISOString(),
+    },
+    changedRelease: {
+      version: '0.0.0',
+      date: new Date().toISOString(),
+    },
+  };
+
   for (const alias of [name, ...(aliases ?? [])]) {
     const commits = await fetchCommits(alias);
     for (const commit of commits) {
