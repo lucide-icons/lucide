@@ -6,7 +6,8 @@
     "meter",
     "speed",
     "pressure",
-    "measure"
+    "measure",
+    "level"
   ],
   "categories": [
     "account",
