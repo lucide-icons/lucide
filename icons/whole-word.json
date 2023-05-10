@@ -6,9 +6,16 @@
     "letters",
     "characters",
     "font",
-    "typography"
+    "typography",
+    "kerning",
+    "measure",
+    "width",
+    "ab",
+    "string",
+    "code"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

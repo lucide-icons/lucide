@@ -6,7 +6,11 @@
     "letters",
     "characters",
     "font",
-    "typography"
+    "typography",
+    "measure",
+    "rule",
+    "width",
+    " "
   ],
   "categories": [
     "text"
