@@ -10,11 +10,12 @@
     "docs:preview": "vitepress preview",
     "build:iconNodes": "node ../scripts/writeIconNodes.mjs",
     "build:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
+    "build:fetchTags": "git fetch --tags",
     "build:releaseJson": "node ../scripts/writeReleaseMetadata.mjs",
     "build:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",
-    "build": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:releaseJson && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
+    "build": "pnpm build:fetchTags && pnpm build:iconNodes && pnpm build:metaJson && pnpm build:releaseJson && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
   "keywords": [],
