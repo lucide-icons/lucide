@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, defineAsyncComponent } from 'vue'
 import type { IconEntity, Category } from '../../types'
 import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
@@ -51,6 +51,10 @@ const categories = computed(() => {
 const activeIcon = computed(() =>
   props.icons?.find((icon) => icon.name === activeIconName.value)
 )
+
+const NoResults = defineAsyncComponent(() =>
+  import('./NoResults.vue')
+)
 </script>
 
 <template>
@@ -62,6 +66,11 @@ const activeIcon = computed(() =>
       ref="searchInput"
     />
   </StickyBar>
+  <NoResults
+    v-if="categories.length === 0"
+    :searchQuery="searchQuery"
+    @clear="searchQuery = ''"
+  />
   <section class="category" v-for="category in categories" :key="category.name">
     <h2 class="title" :id="category.name">
       <a class="header-anchor" :href="`#${category.name}`" :aria-label="`Permalink to &quot;${category.title}&quot;`">&ZeroWidthSpace;</a>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, defineAsyncComponent } from 'vue'
 import type { IconEntity } from '../../types'
 import { useMediaQuery, useOffsetPagination } from '@vueuse/core'
 import IconDetailOverlay from './IconDetailOverlay.vue'
@@ -66,6 +66,10 @@ const activeIcon = computed(() =>
 watch(searchQueryThrottled, (searchString) => {
   currentPage.value = 1
 })
+
+const NoResults = defineAsyncComponent(() =>
+  import('./NoResults.vue')
+)
 </script>
 
 <template>
@@ -77,6 +81,11 @@ watch(searchQueryThrottled, (searchString) => {
       class="input-wrapper"
     />
   </StickyBar>
+  <NoResults
+    v-if="paginatedIcons.length === 0"
+    :searchQuery="searchQuery"
+    @clear="searchQuery = ''"
+  />
   <IconGrid
     overlayMode
     :activeIcon="activeIconName"
