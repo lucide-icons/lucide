@@ -8,6 +8,7 @@ import InputSearch from '../base/InputSearch.vue'
 import useSearch from '../../composables/useSearch'
 import EndOfPage from '../base/EndOfPage.vue'
 import useSearchInput from '../../composables/useSearchInput'
+import StickyBar from './StickyBar.vue'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -68,12 +69,14 @@ watch(searchQueryThrottled, (searchString) => {
 </script>
 
 <template>
-  <InputSearch
-    :placeholder="`Search ${icons.length} icons ...`"
-    v-model="searchQuery"
-    class="input-wrapper"
-    ref="searchInput"
-  />
+  <StickyBar>
+    <InputSearch
+      :placeholder="`Search ${icons.length} icons ...`"
+      v-model="searchQuery"
+      ref="searchInput"
+      class="input-wrapper"
+    />
+  </StickyBar>
   <IconGrid
     overlayMode
     :activeIcon="activeIconName"
@@ -97,7 +100,7 @@ watch(searchQueryThrottled, (searchString) => {
 }
 
 .input-wrapper {
-  margin-bottom: 16px;
+  width: 100%;
 }
 
 .bottom-page {

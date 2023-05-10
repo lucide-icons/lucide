@@ -6,6 +6,7 @@ import IconGrid from './IconGrid.vue'
 import useSearch from '../../composables/useSearch'
 import InputSearch from '../base/InputSearch.vue'
 import useSearchInput from '../../composables/useSearchInput'
+import StickyBar from './StickyBar.vue'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -53,12 +54,14 @@ const activeIcon = computed(() =>
 </script>
 
 <template>
-  <InputSearch
-    :placeholder="`Search ${icons.length} icons ...`"
-    v-model="searchQuery"
-    class="input-wrapper"
-    ref="searchInput"
-  />
+  <StickyBar>
+    <InputSearch
+      :placeholder="`Search ${icons.length} icons ...`"
+      v-model="searchQuery"
+      class="input-wrapper"
+      ref="searchInput"
+    />
+  </StickyBar>
   <section class="category" v-for="category in categories" :key="category.name">
     <h2 class="title" :id="category.name">
       <a class="header-anchor" :href="`#${category.name}`" :aria-label="`Permalink to &quot;${category.title}&quot;`">&ZeroWidthSpace;</a>
@@ -90,6 +93,10 @@ const activeIcon = computed(() =>
 }
 
 .input-wrapper {
-  margin-bottom: 32px;
+  width: 100%;
 }
+
+/* .input-wrapper {
+  margin-bottom: 32px;
+} */
 </style>
