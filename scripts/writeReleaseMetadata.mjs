@@ -33,25 +33,27 @@ export const updateReleaseMetadataWithCommit = (metadata, date, release) => {
   metadata.changedRelease = releaseMax(metadata.changedRelease, release);
 };
 
-export const fetchAllReleases = async () =>
-  (
-    await Promise.all(
-      (
-        await simpleGit().raw('show-ref', '--tags', '-d')
-      )
-        .trim()
-        .split(/\n/)
-        .map(async (line) => {
-          const [commit, ref] = line.split(/ /);
-          if (ref == null || !ref.startsWith('refs/tags/') || commit == null) {
-            return { version: null, date: null };
-          }
-          const { version = null } = semver.coerce(ref.replace('refs/tags/', '')) ?? {};
-          const date = (await simpleGit().show(['-s', '--format=%cI', commit])).trim();
-          return { version, date };
-        }),
+export const fetchAllReleases = async () => {
+  await simpleGit().fetch(['--tags', '--all']);
+  const tags = await Promise.all(
+    (
+      await simpleGit().raw('show-ref', '--tags', '-d')
     )
-  ).filter(({ version }) => semver.valid(version));
+      .trim()
+      .split(/\n/)
+      .map(async (line) => {
+        const [commit, ref] = line.split(/ /);
+        if (ref == null || !ref.startsWith('refs/tags/') || commit == null) {
+          return { version: null, date: null };
+        }
+        const { version = null } = semver.coerce(ref.replace('refs/tags/', '')) ?? {};
+        const date = (await simpleGit().show(['-s', '--format=%cI', commit])).trim();
+        return { version, date };
+      }),
+  );
+
+  return tags.filter(({ version }) => semver.valid(version));
+};
 
 simpleGit().clean(CleanOptions.FORCE);
 
