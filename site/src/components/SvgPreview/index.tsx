@@ -95,7 +95,12 @@ const ColoredPath = ({
 }: { paths: Path[]; colors: string[] } & PathProps<never, 'd' | 'stroke'>) => (
   <g className="svg-preview-colored-path-group" {...props}>
     {paths.map(({ d, c }, i) => (
-      <path key={i} d={d} stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]} />
+      <path
+        className={`svg-preview-colored-${c.name}-${c.id} svg-preview-colored-segment-${c.id}-${c.idx}`}
+        key={i}
+        d={d}
+        stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]}
+      />
     ))}
   </g>
 );
