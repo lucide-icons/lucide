@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "reference"
+    "reference",
+    "times",
+    "multiply",
+    "multiplication",
+    "operator",
+    "code",
+    "glob pattern",
+    "wildcard",
+    "*"
   ],
   "categories": [
-    "text"
+    "text",
+    "maths",
+    "development"
   ]
 }

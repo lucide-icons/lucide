@@ -5,7 +5,9 @@
     "code",
     "token",
     "curly brackets",
-    "data"
+    "data",
+    "{",
+    "}"
   ],
   "categories": [
     "development",

@@ -6,9 +6,13 @@
     "delete",
     "remove",
     "clear",
-    "multiple"
+    "multiple",
+    "multiply",
+    "multiplication",
+    "times"
   ],
   "categories": [
-    "notifications"
+    "notifications",
+    "maths"
   ]
 }

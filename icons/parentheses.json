@@ -13,7 +13,9 @@
     "call",
     "maths",
     "formula",
-    "function"
+    "function",
+    "(",
+    ")"
   ],
   "categories": [
     "development",

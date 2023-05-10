@@ -2,8 +2,8 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "calculate",
-    "maths",
-    "shape"
+    "shape",
+    "="
   ],
   "categories": [
     "maths",

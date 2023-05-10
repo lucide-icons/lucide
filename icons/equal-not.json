@@ -3,9 +3,13 @@
   "tags": [
     "calculate",
     "off",
-    "maths"
+    "maths",
+    "operator",
+    "code",
+    "≠"
   ],
   "categories": [
-    "maths"
+    "maths",
+    "development"
   ]
 }

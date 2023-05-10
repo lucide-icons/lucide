@@ -3,10 +3,13 @@
   "tags": [
     "git",
     "diff",
-    "ignored"
+    "ignored",
+    "divide",
+    "division",
+    "/"
   ],
   "categories": [
     "shapes",
-    "development"
+    "maths"
   ]
 }

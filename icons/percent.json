@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "discount"
+    "discount",
+    "percentage",
+    "modulo",
+    "modulus",
+    "remainder",
+    "%"
   ],
   "categories": [
-    "maths"
+    "maths",
+    "development"
   ]
 }

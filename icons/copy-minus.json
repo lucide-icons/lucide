@@ -6,9 +6,12 @@
     "remove",
     "delete",
     "collapse",
-    "multiple"
+    "subtract",
+    "multiple",
+    "-"
   ],
   "categories": [
-    "text"
+    "text",
+    "maths"
   ]
 }
