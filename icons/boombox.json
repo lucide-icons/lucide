@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "radio",
+    "audio",
+    "music",
+    "broadcast",
+    "live",
+    "frequency"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "social"
+  ]
+}
