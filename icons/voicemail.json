@@ -2,10 +2,15 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "phone",
-    "cassette"
+    "cassette",
+    "tape",
+    "reel",
+    "recording",
+    "audio"
   ],
   "categories": [
     "connectivity",
-    "devices"
+    "devices",
+    "social"
   ]
 }
