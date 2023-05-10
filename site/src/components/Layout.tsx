@@ -19,9 +19,10 @@ import menuItems from '../static/menuItems';
 
 interface LayoutProps extends BoxProps {
   aside?: BoxProps['children'];
+  keyBindings?: Parameters<typeof useKeyBindings>[0];
 }
 
-const Layout = ({ aside, children }: LayoutProps) => {
+const Layout = ({ aside, children, keyBindings }: LayoutProps) => {
   const router = useRouter();
   const { toggleMobileMenu } = useMobileNavigationContext();
   const { toggleColorMode } = useColorMode();
@@ -44,18 +45,20 @@ const Layout = ({ aside, children }: LayoutProps) => {
         query: { query: query },
       },
       undefined,
-      { shallow: true },
+      { shallow: true }
     );
   }
 
-  useKeyBindings({
-    Escape: {
-      fn: () => setQuery(''),
-    },
-    KeyT: {
-      fn: () => toggleColorMode(),
-    },
-  });
+  useKeyBindings(
+    keyBindings || {
+      Escape: {
+        fn: () => setQuery(''),
+      },
+      KeyT: {
+        fn: () => toggleColorMode(),
+      },
+    }
+  );
 
   return (
     <Box h="100vh">
@@ -75,7 +78,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
           <Flex justifyContent="center" alignItems="center">
             {showBaseNavigation ? (
               <>
-                {menuItems.map(menuItem => {
+                {menuItems.map((menuItem) => {
                   if (menuItem.isExternal) {
                     return (
                       <Link

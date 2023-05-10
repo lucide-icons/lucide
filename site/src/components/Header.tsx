@@ -1,6 +1,6 @@
 import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Box } from '@chakra-ui/react';
 import download from 'downloadjs';
-import { Download, Github } from 'lucide-react';
+import { Download, Github, PlusCircle } from 'lucide-react';
 import NextLink from 'next/link';
 import { IconCustomizerDrawer } from './IconCustomizerDrawer';
 import JSLogo from '../../public/framework-logos/js.svg';
@@ -27,16 +27,15 @@ const Header = ({ data }: HeaderProps) => {
   const downloadAllIcons = useCallback(async () => {
     setZippingIcons(true);
 
-    let iconEntries: IconContent[] = Object.entries(iconsRef.current)
-      .map(([name, svgEl]) => [
+    let iconEntries: IconContent[] = Object.entries(iconsRef.current).map(([name, svgEl]) => [
       name,
       svgEl.outerHTML,
     ]);
 
     // Fallback
     if (iconEntries.length === 0) {
-      const getFallbackZip = (await import('../lib/getFallbackZip')).default
-      iconEntries = getFallbackZip(data, { strokeWidth, color, size })
+      const getFallbackZip = (await import('../lib/getFallbackZip')).default;
+      iconEntries = getFallbackZip(data, { strokeWidth, color, size });
     }
 
     const zip = await generateZip(iconEntries);
@@ -149,7 +148,9 @@ const Header = ({ data }: HeaderProps) => {
           <WrapItem>
             <NextLink href="/packages" passHref>
               <Link _hover={{ opacity: 0.8 }} marginX="auto">
-                <Text fontSize="md" opacity={0.5}>More options</Text>
+                <Text fontSize="md" opacity={0.5}>
+                  More options
+                </Text>
               </Link>
             </NextLink>
           </WrapItem>
@@ -170,13 +171,12 @@ const Header = ({ data }: HeaderProps) => {
             <IconCustomizerDrawer />
           </WrapItem>
           <WrapItem>
-            <Button
-              as="a"
-              leftIcon={<Github />}
-              size="lg"
-              href={repositoryUrl}
-              target="__blank"
-            >
+            <Button as="a" leftIcon={<PlusCircle />} size="lg" href="/edit/icon" target="__blank">
+              Contribute
+            </Button>
+          </WrapItem>
+          <WrapItem>
+            <Button as="a" leftIcon={<Github />} size="lg" href={repositoryUrl} target="__blank">
               Github
             </Button>
           </WrapItem>
