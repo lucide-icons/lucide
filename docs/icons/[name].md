@@ -13,6 +13,7 @@ import { useData } from 'vitepress'
 import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
 import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
 import IconContributors from '../.vitepress/theme/components/icons/IconContributors.vue'
+import RelatedIcons from '../.vitepress/theme/components/icons/RelatedIcons.vue'
 import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
 import Badge from '../.vitepress/theme/components/base/Badge.vue'
 import Label from '../.vitepress/theme/components/base/Label.vue'
@@ -64,9 +65,9 @@ const codeExample = computed(() => data.codeExamples?.map(
       />
     </CodeGroup>
   </div>
-
-
 </div>
+
+<RelatedIcons :icons="$params.relatedIcons" />
 
 <style module>
   .preview {

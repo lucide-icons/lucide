@@ -14,6 +14,7 @@ const props = defineProps<{
   iconNode: IconNode;
   active: boolean;
   customizable?: boolean;
+  overlayMode?: boolean
 }>()
 
 const emit = defineEmits(['setActiveIcon'])
@@ -24,7 +25,7 @@ const showOverlay = useMediaQuery('(min-width: 860px)');
 const icon = createLucideIcon(props.name, props.iconNode)
 
 function navigateToIcon() {
-  if(showOverlay.value) {
+  if(props.overlayMode && showOverlay.value) {
     window.history.pushState({}, '', `/icons/${props.name}`)
     emit('setActiveIcon', props.name)
   }
@@ -41,6 +42,7 @@ function navigateToIcon() {
     :class="{ 'active' : active }"
     :data-title="name"
     :aria-label="name"
+    :href="`/icons/${props.name}`"
   >
     <KeepAlive>
       <component :is="icon" class="lucide-icon" :class="{ customizable }" />
@@ -63,6 +65,7 @@ function navigateToIcon() {
   width: 56px;
   height: 56px;
   font-size: 24px;
+  color: var(--vp-c-text-1);
 }
 
 .icon-button:hover:before {

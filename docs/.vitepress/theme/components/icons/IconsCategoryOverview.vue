@@ -68,19 +68,13 @@ const activeIcon = computed(() =>
       :activeIcon="activeIconName"
       :icons="category.icons"
       @setActiveIcon="setActiveIconName"
+      overlayMode
     />
   </section>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
 
 <style scoped>
-.icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  gap: 8px;
-  width: 100%;
-}
-
 .icon {
   aspect-ratio: 1/1;
 }
@@ -88,6 +82,7 @@ const activeIcon = computed(() =>
 .title {
   margin-bottom: 24px;
   font-size: 19px;
+  font-weight: 500;
 }
 
 .category {
@@ -95,16 +90,6 @@ const activeIcon = computed(() =>
 }
 
 .input-wrapper {
-  margin-bottom: 16px;
-}
-
-.hidden-category {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  margin-bottom: 32px;
 }
 </style>

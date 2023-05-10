@@ -7,6 +7,7 @@ const emit = defineEmits(['setActiveIcon'])
 const props = defineProps<{
   icons: IconEntity[]
   activeIcon?: string
+  overlayMode?: boolean
 }>()
 
 function setActiveIcon(name: string) {
@@ -23,6 +24,7 @@ function setActiveIcon(name: string) {
         @setActiveIcon="setActiveIcon(icon.name)"
         :active="activeIcon === icon.name"
         customizable
+        :overlayMode="overlayMode"
       />
     </div>
   </div>

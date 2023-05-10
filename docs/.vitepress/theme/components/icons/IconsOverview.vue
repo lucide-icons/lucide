@@ -40,8 +40,9 @@ const pageSize = computed(() => {
 
 const { searchInput, searchQuery, searchQueryThrottled } = useSearchInput()
 const searchResults = useSearch(searchQueryThrottled, props.icons, [
-  { name: 'name', weight: 2 },
-  { name: 'tags', weight: 1 },
+  { name: 'name', weight: 3 },
+  { name: 'tags', weight: 2 },
+  { name: 'categories', weight: 1 },
 ])
 
 const { next, currentPage } = useOffsetPagination( { pageSize })
@@ -73,7 +74,12 @@ watch(searchQueryThrottled, (searchString) => {
     class="input-wrapper"
     ref="searchInput"
   />
-  <IconGrid :activeIcon="activeIconName" :icons="paginatedIcons" @setActiveIcon="setActiveIconName"/>
+  <IconGrid
+    overlayMode
+    :activeIcon="activeIconName"
+    :icons="paginatedIcons"
+    @setActiveIcon="setActiveIconName"
+  />
   <EndOfPage @end-of-page="next" class="bottom-page"/>
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
@@ -91,7 +97,7 @@ watch(searchQueryThrottled, (searchString) => {
 }
 
 .input-wrapper {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .bottom-page {
