@@ -8,6 +8,7 @@ const props = defineProps<{
   icons: IconEntity[]
   activeIcon?: string
   overlayMode?: boolean
+  hideIcons?: boolean
 }>()
 
 function setActiveIcon(name: string) {
@@ -25,6 +26,7 @@ function setActiveIcon(name: string) {
         :active="activeIcon === icon.name"
         customizable
         :overlayMode="overlayMode"
+        :hideIcon="hideIcons"
       />
     </div>
   </div>

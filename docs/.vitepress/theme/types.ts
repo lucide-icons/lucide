@@ -15,6 +15,7 @@ export interface Category {
   title: string
   icon?: string
   iconCount: number
+  icons?: IconEntity[]
 }
 
 interface Shield {

@@ -15,6 +15,7 @@ const props = defineProps<{
   active: boolean;
   customizable?: boolean;
   overlayMode?: boolean
+  hideIcon?: boolean
 }>()
 
 const emit = defineEmits(['setActiveIcon'])
@@ -45,7 +46,12 @@ function navigateToIcon() {
     :href="`/icons/${props.name}`"
   >
     <KeepAlive>
-      <component :is="icon" class="lucide-icon" :class="{ customizable }" />
+      <component
+        v-if="!hideIcon"
+        :is="icon"
+        class="lucide-icon"
+        :class="{ customizable }"
+      />
     </KeepAlive>
   </button>
 </template>

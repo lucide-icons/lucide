@@ -2,11 +2,11 @@
 import { ref, computed, defineAsyncComponent } from 'vue'
 import type { IconEntity, Category } from '../../types'
 import IconDetailOverlay from './IconDetailOverlay.vue'
-import IconGrid from './IconGrid.vue'
 import useSearch from '../../composables/useSearch'
 import InputSearch from '../base/InputSearch.vue'
 import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
+import IconsCategory from './IconsCategory.vue'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -58,7 +58,7 @@ const NoResults = defineAsyncComponent(() =>
 </script>
 
 <template>
-  <StickyBar>
+  <StickyBar class="search-bar">
     <InputSearch
       :placeholder="`Search ${icons.length} icons ...`"
       v-model="searchQuery"
@@ -71,41 +71,22 @@ const NoResults = defineAsyncComponent(() =>
     :searchQuery="searchQuery"
     @clear="searchQuery = ''"
   />
-  <section class="category" v-for="category in categories" :key="category.name">
-    <h2 class="title" :id="category.name">
-      <a class="header-anchor" :href="`#${category.name}`" :aria-label="`Permalink to &quot;${category.title}&quot;`">&ZeroWidthSpace;</a>
-      {{ category.title }}
-    </h2>
-    <IconGrid
-      :activeIcon="activeIconName"
-      :icons="category.icons"
-      @setActiveIcon="setActiveIconName"
-      overlayMode
-    />
-  </section>
+  <IconsCategory
+    v-for="category in categories"
+    :key="category.name"
+    :category="category"
+    :activeIconName="activeIconName"
+    @setActiveIcon="setActiveIconName"
+  />
   <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
 </template>
 
 <style scoped>
-.icon {
-  aspect-ratio: 1/1;
-}
-
-.title {
-  margin-bottom: 24px;
-  font-size: 19px;
-  font-weight: 500;
-}
-
-.category {
-  margin-bottom: 32px;
-}
-
 .input-wrapper {
   width: 100%;
 }
 
-/* .input-wrapper {
-  margin-bottom: 32px;
-} */
+.search-bar {
+  margin-bottom: -54px;
+}
 </style>

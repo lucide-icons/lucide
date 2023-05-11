@@ -8,13 +8,13 @@
 .search-bar {
   margin-bottom: 16px;
   position: sticky;
-  z-index: 70;
+  z-index: 30;
   top: 48px;
   padding-top: 24px;
   margin-top: -32px;
   width: 100%;
   display: flex;
-  margin-bottom: 32px;;
+  margin-bottom: 32px;
   background: var(--vp-c-bg);
   box-shadow: 0 16px 24px var(--vp-c-bg);
 }
