@@ -1,0 +1,28 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 3v2" />
+  <path d="M10 4H8" />
+  <path d="M14 3v2" />
+  <path d="M20 4h-2" />
+  <path d="M6 9H4" />
+  <path d="M10 8v2" />
+  <path d="M16 9h-2" />
+  <path d="M20 8v2" />
+  <path d="M4 13v2" />
+  <path d="M10 14H8" />
+  <path d="M14 13v2" />
+  <path d="M20 14h-2" />
+  <path d="M6 19H4" />
+  <path d="M10 18v2" />
+  <path d="M16 19h-2" />
+  <path d="M20 18v2" />
+</svg>
