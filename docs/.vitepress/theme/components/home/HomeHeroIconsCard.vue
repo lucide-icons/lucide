@@ -153,21 +153,8 @@ onBeforeUnmount(() => {
     background: var(--vp-c-bg-soft);
   }
   .card-wrapper {
-    margin-top: 0;
+    margin-top: 8px;
   }
 }
-
-/* .search-box :deep(.input) {
-  background: var(--vp-code-block-bg-light);
-  color: var(--vp-code-block-color);
-  padding: 12px 16px;
-  height: auto;
-  font-size: 16px;
-  box-shadow: var(--vp-shadow-4);
-}
-
-.search-box :deep(.input)::placeholder {
-  color: var(--vp-c-text-inverse-2)
-} */
 
 </style>

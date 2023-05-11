@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="category">
+  <section class="related-icons">
     <h2 class="title">
       Related Icons
     </h2>
@@ -18,17 +18,13 @@ defineProps<{
 </template>
 
 <style scoped>
-.icon {
-  aspect-ratio: 1/1;
-}
-
 .title {
   margin-bottom: 24px;
   font-size: 19px;
   font-weight: 500;
 }
 
-.category {
+.related-icons {
   margin-bottom: 32px;
 }
 </style>
