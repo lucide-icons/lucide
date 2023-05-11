@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, shallowRef, onBeforeUnmount} from 'vue';
 import { data } from './HomeHeroIconsCard.data'
-import IconButton from '../base/IconButton.vue';
 import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
 import { random } from 'lodash-es'
@@ -28,6 +27,8 @@ function getRandomNewIcon() {
 function insert() {
   const replaceIndex = random(0, 48)
   const newIcon = getRandomNewIcon()
+
+  // items.value.splice(replaceIndex, 0, newIcon);
 
   items.value[replaceIndex] = newIcon
 }
@@ -98,17 +99,19 @@ onBeforeUnmount(() => {
 .card-grid {
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(38px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(36px, 1fr));
   width: 100%;
   height:100%;
-  max-height: 172px;
+  max-height: 168px;
   max-width: 512px;
   overflow: hidden;
   position: relative;
+  /* white-space: nowrap; */
 }
 
 /* 1. declare transition */
+/* .list-move, */
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s cubic-bezier(.85,.85,.25,1.1);

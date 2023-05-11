@@ -12,7 +12,7 @@ import PackageListItem from "./PackageListItem.vue";</script>
     </div>
   </section>
   <section class="package-group">
-    <h1 class="name">Third-party packages</h1>
+    <h2 class="name">Third-party packages</h2>
     <div class="grid package-list" ref="container">
       <div v-for="p in data.thirdPartyPackages" class="item">
         <PackageListItem :packageData="p"/>
@@ -22,7 +22,7 @@ import PackageListItem from "./PackageListItem.vue";</script>
 </template>
 
 <style scoped>
-h1 {
+.name {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
