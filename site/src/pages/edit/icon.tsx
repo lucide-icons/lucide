@@ -97,20 +97,14 @@ const EditPage = () => {
 
   useEffect(() => {
     const callback = async (e: ClipboardEvent) => {
-      const data = e.clipboardData.files.length
-        ? await e.clipboardData.files[0].text()
-        : e.clipboardData.getData('text');
-
+      const isFile = !!e.clipboardData.files.length;
+      const data = isFile ? await e.clipboardData.files[0].text() : e.clipboardData.getData('text');
       if (data && document.activeElement.tagName !== 'TEXTAREA') {
         setSrc((src) => {
           const value = swallowError(
             format,
             src
-          )(
-            e.clipboardData.files.length
-              ? data
-              : src.replace('</svg>', data.replace(/<svg[^>]*>/, ''))
-          );
+          )(isFile ? data : src.replace('</svg>', data.replace(/<svg[^>]*>/, '')));
           router.push(`${urlData[0]}?${Buffer.from(value).toString('base64')}`);
           return value;
         });
