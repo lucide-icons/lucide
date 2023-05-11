@@ -99,7 +99,11 @@ const EditPage = () => {
     const callback = (e: ClipboardEvent) => {
       const data = e.clipboardData.getData('text');
       if (data && document.activeElement.tagName !== 'TEXTAREA') {
-        setSrc((src) => format(src.replace('</svg>', data.replace(/<svg[^>]*>/, ''))));
+        setSrc((src) => {
+          const value = format(src.replace('</svg>', data.replace(/<svg[^>]*>/, '')));
+          router.push(`${urlData[0]}?${Buffer.from(value).toString('base64')}`);
+          return value;
+        });
       }
     };
     addEventListener('paste', callback);
