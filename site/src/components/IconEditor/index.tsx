@@ -8,22 +8,28 @@ import highlight from './highlight';
 import format from './format';
 import { getPaths } from '../SvgPreview/utils';
 
-const useIsDragging = () => {
+const useIsDragging = (onDropCallback: (value: File) => void) => {
   const [isDragging, setIsDragging] = useState(false);
   useEffect(() => {
     const onStart = () => setIsDragging(true);
     const onEnd = () => setIsDragging(false);
+    const onDrop = (e: DragEvent) => {
+      if (e.dataTransfer.files[0]) {
+        onDropCallback(e.dataTransfer.files[0]);
+      }
+      setIsDragging(false);
+    };
     window.addEventListener('dragover', onStart);
     window.addEventListener('dragleave', onEnd);
     window.addEventListener('dragend', onEnd);
-    window.addEventListener('drop', onEnd);
+    window.addEventListener('drop', onDrop);
     return () => {
       window.removeEventListener('dragover', onStart);
       window.removeEventListener('dragleave', onEnd);
       window.removeEventListener('dragend', onEnd);
-      window.removeEventListener('drop', onEnd);
+      window.removeEventListener('drop', onDrop);
     };
-  }, []);
+  }, [onDropCallback]);
   return isDragging;
 };
 
@@ -116,7 +122,11 @@ type IconEditorProps = {
 };
 const IconEditor = ({ value, onChange, actions, heading, defaultValue }: IconEditorProps) => {
   const [isPreviewTabOpen, setIsPreviewOpen] = useState(true);
-  const isDraggingState = useIsDragging();
+
+  const onFileAccepted = (file: File) =>
+    file.text().then((value) => onChange(swallowError(format, value)(value)));
+
+  const isDraggingState = useIsDragging(onFileAccepted);
   const [isDraggingDebounced, debouncing] = useDebounce(isDraggingState, 250);
 
   const isDragging = debouncing || isDraggingDebounced;
@@ -149,11 +159,7 @@ const IconEditor = ({ value, onChange, actions, heading, defaultValue }: IconEdi
           </Box>
         ) : (
           <Box display={{ base: isPreviewOpen ? 'block' : 'none', lg: 'block' }}>
-            <Dropzone
-              onFileAccepted={(file) =>
-                file.text().then((value) => onChange(swallowError(format, value)(value)))
-              }
-            />
+            <Dropzone onFileAccepted={onFileAccepted} />
           </Box>
         )}
         <Box display={{ base: isPreviewOpen ? 'none' : 'block', lg: 'block' }} width={'100%'}>

@@ -50,7 +50,7 @@ export default function Dropzone({ onFileAccepted }: DropzoneProps) {
     >
       <input {...getInputProps()} />
       <Icon as={FileUp} boxSize={12} strokeWidth={1} />
-      <Text textAlign="center">{dropText}</Text>
+      <Text textAlign="center">Drag and drop .svg file, or click to upload.</Text>
     </Center>
   );
 }
