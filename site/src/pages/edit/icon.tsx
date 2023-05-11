@@ -106,7 +106,11 @@ const EditPage = () => {
           const value = swallowError(
             format,
             src
-          )(src.replace('</svg>', data.replace(/<svg[^>]*>/, '')));
+          )(
+            e.clipboardData.files.length
+              ? data
+              : src.replace('</svg>', data.replace(/<svg[^>]*>/, ''))
+          );
           router.push(`${urlData[0]}?${Buffer.from(value).toString('base64')}`);
           return value;
         });
