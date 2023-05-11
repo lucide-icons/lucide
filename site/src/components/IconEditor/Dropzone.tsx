@@ -22,10 +22,6 @@ export default function Dropzone({ onFileAccepted }: DropzoneProps) {
     multiple: false,
   });
 
-  const dropText = isDragActive
-    ? 'Drop the file here ...'
-    : 'Drag and drop .svg file here, or click to upload.';
-
   const activeBg = useColorModeValue('gray.100', 'gray.700');
   const color = useColorModeValue('blue.500', 'blue.400');
   const hoverColor = useColorModeValue('blue.600', 'blue.300');

@@ -51,7 +51,7 @@ const useDebounce = <T,>(value: T, delay: number) => {
   return [debouncedValue, debouncing] as const;
 };
 
-const swallowError =
+export const swallowError =
   <T extends (...args: any[]) => any, F>(fn: T, fallback: F) =>
   (...args: Parameters<T>): ReturnType<T> | F => {
     try {

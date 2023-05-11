@@ -18,7 +18,7 @@ import {
 import { ExternalLink, RotateCcw } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import IconEditor from 'src/components/IconEditor';
+import IconEditor, { swallowError } from 'src/components/IconEditor';
 import format from 'src/components/IconEditor/format';
 import Layout from '../../components/Layout';
 
@@ -96,11 +96,17 @@ const EditPage = () => {
   }, [urlSrc]);
 
   useEffect(() => {
-    const callback = (e: ClipboardEvent) => {
-      const data = e.clipboardData.getData('text');
+    const callback = async (e: ClipboardEvent) => {
+      const data = e.clipboardData.files.length
+        ? await e.clipboardData.files[0].text()
+        : e.clipboardData.getData('text');
+
       if (data && document.activeElement.tagName !== 'TEXTAREA') {
         setSrc((src) => {
-          const value = format(src.replace('</svg>', data.replace(/<svg[^>]*>/, '')));
+          const value = swallowError(
+            format,
+            src
+          )(src.replace('</svg>', data.replace(/<svg[^>]*>/, '')));
           router.push(`${urlData[0]}?${Buffer.from(value).toString('base64')}`);
           return value;
         });
