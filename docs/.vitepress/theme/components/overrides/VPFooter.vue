@@ -18,6 +18,10 @@ const links = computed(() => [
     href: '/license'
   },
   {
+    text: 'Contribute',
+    href: '/contributing'
+  },
+  {
     text: 'Changelog',
     href: `${githubLink.value}/releases`
   },
