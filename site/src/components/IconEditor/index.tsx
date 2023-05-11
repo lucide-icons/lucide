@@ -1,12 +1,49 @@
-import { Box, Button, ButtonGroup, Flex, IconButton } from '@chakra-ui/react';
+import { Box, Button, ButtonGroup, Flex } from '@chakra-ui/react';
 import memoize from 'lodash/memoize';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Editor from 'react-simple-code-editor';
 import SvgPreview from 'src/components/SvgPreview';
 import Dropzone from './Dropzone';
 import highlight from './highlight';
 import format from './format';
 import { getPaths } from '../SvgPreview/utils';
+
+const useIsDragging = () => {
+  const [isDragging, setIsDragging] = useState(false);
+  useEffect(() => {
+    const onStart = () => setIsDragging(true);
+    const onEnd = () => setIsDragging(false);
+    window.addEventListener('dragover', onStart);
+    window.addEventListener('dragleave', onEnd);
+    window.addEventListener('dragend', onEnd);
+    window.addEventListener('drop', onEnd);
+    return () => {
+      window.removeEventListener('dragover', onStart);
+      window.removeEventListener('dragleave', onEnd);
+      window.removeEventListener('dragend', onEnd);
+      window.removeEventListener('drop', onEnd);
+    };
+  }, []);
+  return isDragging;
+};
+
+const useDebounce = <T,>(value: T, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  const [debouncing, setDebouncing] = useState(false);
+
+  useEffect(() => {
+    setDebouncing(true);
+    const handler = setTimeout(() => {
+      setDebouncing(false);
+      setDebouncedValue(value);
+    }, delay);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return [debouncedValue, debouncing] as const;
+};
 
 const swallowError =
   <T extends (...args: any[]) => any, F>(fn: T, fallback: F) =>
@@ -78,7 +115,12 @@ type IconEditorProps = {
   actions: React.ReactNode[];
 };
 const IconEditor = ({ value, onChange, actions, heading, defaultValue }: IconEditorProps) => {
-  const [isPreviewOpen, setIsPreviewOpen] = useState(true);
+  const [isPreviewTabOpen, setIsPreviewOpen] = useState(true);
+  const isDraggingState = useIsDragging();
+  const [isDraggingDebounced, debouncing] = useDebounce(isDraggingState, 250);
+
+  const isDragging = debouncing || isDraggingDebounced;
+  const isPreviewOpen = isPreviewTabOpen || isDragging;
 
   const paths = swallowError(getPaths, [])(value);
 
@@ -97,7 +139,7 @@ const IconEditor = ({ value, onChange, actions, heading, defaultValue }: IconEdi
         <Flex gap={2}>{actions}</Flex>
       </IconEditorHeader>
       <Flex minWidth="320px" width={{ base: isPreviewOpen ? 'inherit' : '100%', lg: 'inherit' }}>
-        {value !== defaultValue && paths.length ? (
+        {!isDragging && value !== defaultValue && paths.length ? (
           <Box
             style={iconStyling}
             className="icon-large"
