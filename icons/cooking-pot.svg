@@ -10,8 +10,8 @@
     stroke-linecap="round"
     stroke-linejoin="round"
 >
-    <line x1="2" y1="11" x2="22" y2="11" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <polyline points="10.3 5.42 9.82 3.48 13.7 2.51 14.18 4.45" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <path d="M20,11v8c0,1.1-.9,2-2,2H6c-1.1,0-2-.9-2-2V11" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <line x1="4" y1="7" x2="20" y2="3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="2" y1="11" x2="22" y2="11"/>
+    <polyline points="10.3 5.42 9.82 3.48 13.7 2.51 14.18 4.45"/>
+    <path d="M20,11v8c0,1.1-.9,2-2,2H6c-1.1,0-2-.9-2-2V11"/>
+    <line x1="4" y1="7" x2="20" y2="3"/>
 </svg>
