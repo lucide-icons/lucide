@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "thread",
+    "sewing",
+    "embroidery",
+    "waeve",
+    "woven",
+    "fabric",
+    "material",
+    "textile",
+    "upholstery",
+    "cleaning"
+  ],
+  "categories": [
+    "home",
+    "shopping",
+    "furniture"
+  ]
+}
