@@ -17,6 +17,12 @@ export default defineConfig({
           replacement: fileURLToPath(
             new URL('./theme/components/overrides/VPIconAlignLeft.vue', import.meta.url)
           )
+        },
+        {
+          find: /^.*\/VPFooter\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPFooter.vue', import.meta.url)
+          )
         }
       ]
     }
@@ -37,6 +43,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lucide-icons/lucide' },
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' }
-    ]
+    ],
+    footer: {
+      message: 'Released under the ISC License.',
+      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`
+    }
   }
 })

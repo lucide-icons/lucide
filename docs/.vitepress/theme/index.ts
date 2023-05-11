@@ -14,7 +14,7 @@ const theme: Partial<Theme> = {
     return h(DefaultTheme.Layout, null, {
       'home-hero-before': () => h(HomeHeroBefore),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
-      'home-hero-image': () => h(HomeHeroIconsCard)
+      'home-hero-image': () => h(HomeHeroIconsCard),
     })
   },
   enhanceApp({ app }) {

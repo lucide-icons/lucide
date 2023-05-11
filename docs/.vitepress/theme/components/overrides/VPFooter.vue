@@ -1,0 +1,107 @@
+<script setup lang="ts">
+import { useData } from 'vitepress'
+import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar'
+import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
+import { computed } from 'vue'
+
+const { theme } = useData()
+const { hasSidebar } = useSidebar()
+
+console.log(theme.value.socialLinks[0]);
+
+
+const githubLink = computed(() => theme.value.socialLinks.find(({icon}) => icon === 'github').link)
+
+const links = computed(() => [
+  {
+    text: 'License',
+    href: '/license'
+  },
+  {
+    text: 'Changelog',
+    href: `${githubLink.value}/releases`
+  },
+  {
+    text: 'Github',
+    href: `${githubLink.value}/issues`
+  },
+  {
+    text: 'Issues',
+    href: `${githubLink.value}/issues`
+  }
+])
+</script>
+
+<template>
+  <footer v-if="theme.footer" class="VPFooter" :class="{ 'has-sidebar': hasSidebar }">
+    <div class="container">
+      <p v-if="theme.footer.message" class="message" v-html="theme.footer.message"></p>
+      <p v-if="theme.footer.copyright" class="copyright" v-html="theme.footer.copyright"></p>
+      <div class="links">
+        <VPLink v-for="link in links" :href="link.href" :key="link.text">
+          {{ link.text }}
+        </VPLink>
+        <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+          <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+        </a>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+.VPFooter {
+  position: relative;
+  z-index: var(--vp-z-index-footer);
+  border-top: 1px solid var(--vp-c-gutter);
+  padding: 32px 24px;
+  background-color: var(--vp-c-bg);
+}
+
+.VPFooter.has-sidebar {
+  display: none;
+}
+
+
+
+.container {
+  margin: 0 auto;
+  max-width: var(--vp-layout-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.message,
+.copyright {
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+.message   { order: 2; }
+.copyright { order: 1; }
+
+.links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 1152px) {
+  .VPFooter {
+    padding: 32px;
+  }
+
+  .container {
+    flex-direction: row-reverse;
+  }
+  .links {
+    margin-left: auto;
+  }
+}
+</style>
