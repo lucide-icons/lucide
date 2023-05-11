@@ -101,7 +101,7 @@ const EditPage = () => {
         ? await e.clipboardData.files[0].text()
         : e.clipboardData.getData('text');
 
-      if (data && document.activeElement.tagName !== 'TEXTAREA') {
+      if (data && (e.clipboardData.files.length || document.activeElement.tagName !== 'TEXTAREA')) {
         setSrc((src) => {
           const value = swallowError(
             format,
