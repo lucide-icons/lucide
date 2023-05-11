@@ -95,6 +95,17 @@ const EditPage = () => {
     }
   }, [urlSrc]);
 
+  useEffect(() => {
+    const callback = (e: ClipboardEvent) => {
+      const data = e.clipboardData.getData('text');
+      if (data && document.activeElement.tagName !== 'TEXTAREA') {
+        setSrc(format(data));
+      }
+    };
+    addEventListener('paste', callback);
+    return () => removeEventListener('paste', callback);
+  }, []);
+
   return (
     <Layout
       maxWidth="1600px"
