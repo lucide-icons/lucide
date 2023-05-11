@@ -110,22 +110,16 @@ onBeforeUnmount(() => {
   /* white-space: nowrap; */
 }
 
-/* 1. declare transition */
-/* .list-move, */
-.list-enter-active,
-.list-leave-active {
+.list-enter-active {
   transition: all 0.5s cubic-bezier(.85,.85,.25,1.1);
 }
 
-/* 2. declare enter from and leave to state */
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
   transform: scale(0.01);
 }
 
-/* 3. ensure leaving items are taken out of layout flow so that moving
-      animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
   opacity: 0;
