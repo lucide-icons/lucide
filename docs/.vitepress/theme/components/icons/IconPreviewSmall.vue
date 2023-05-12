@@ -31,10 +31,10 @@ const Icon = createLucideIcon(props.name, props.iconNode)
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 24px;
-  margin-top: 24px;
+  /* margin-top: 24px; */
 }
 .icon-wrapper {
   border: 1px solid transparent;

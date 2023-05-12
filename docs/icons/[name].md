@@ -38,7 +38,7 @@ const codeExample = computed(() => data.codeExamples?.map(
 </script>
 
 <div :class="$style.layout">
-  <div>
+  <div :class="$style.iconPreviews">
     <IconPreview
       id="previewer"
       :name="$params.name"
@@ -48,6 +48,7 @@ const codeExample = computed(() => data.codeExamples?.map(
     <IconPreviewSmall
       :name="$params.name"
       :iconNode="$params.iconNode"
+       :class="$style.smallPreview"
     />
   </div>
   <div >
@@ -79,6 +80,8 @@ const codeExample = computed(() => data.codeExamples?.map(
     grid-area: preview;
     margin-bottom: 24px;
     max-width: 240px;
+    width: 240px;
+    flex-shrink: 0;
   }
 
   .layout {
@@ -103,6 +106,18 @@ const codeExample = computed(() => data.codeExamples?.map(
     margin-bottom: 8px;
   }
 
+  .iconPreviews {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .smallPreview {
+    flex-shrink: 2;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @media (min-width: 640px) {
     .layout {
       align-items: flex-start;
@@ -113,6 +128,15 @@ const codeExample = computed(() => data.codeExamples?.map(
 
     .preview {
       margin: 0 auto;
+    }
+
+    .iconPreviews {
+      flex-direction: column;
+    }
+
+    .smallPreview {
+      flex-direction: row;
+      align-items: center;
     }
   }
 
