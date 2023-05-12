@@ -2,7 +2,6 @@
 import { ref, computed, watch, defineAsyncComponent } from 'vue'
 import type { IconEntity } from '../../types'
 import { useMediaQuery, useOffsetPagination } from '@vueuse/core'
-import IconDetailOverlay from './IconDetailOverlay.vue'
 import IconGrid from './IconGrid.vue'
 import InputSearch from '../base/InputSearch.vue'
 import useSearch from '../../composables/useSearch'
@@ -14,7 +13,7 @@ const props = defineProps<{
   icons: IconEntity[]
 }>()
 
-const activeIconName = ref('')
+const activeIconName = ref(null)
 
 const isExtraLargeScreen = useMediaQuery('(min-width: 1440px)');
 const isLargeScreen = useMediaQuery('(min-width: 1280px)');
@@ -59,9 +58,7 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-const activeIcon = computed(() =>
-  props.icons.find((icon) => icon.name === activeIconName.value)
-)
+const activeIcon = computed(() => props.icons.find((icon) => icon.name === activeIconName.value))
 
 watch(searchQueryThrottled, (searchString) => {
   currentPage.value = 1
@@ -70,6 +67,11 @@ watch(searchQueryThrottled, (searchString) => {
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
 )
+
+const IconDetailOverlay = defineAsyncComponent(() =>
+  import('./IconDetailOverlay.vue')
+)
+
 </script>
 
 <template>
@@ -93,7 +95,11 @@ const NoResults = defineAsyncComponent(() =>
     @setActiveIcon="setActiveIconName"
   />
   <EndOfPage @end-of-page="next" class="bottom-page"/>
-  <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
+  <IconDetailOverlay
+    v-if="activeIconName != null"
+    :icon="activeIcon"
+    @close="setActiveIconName('')"
+  />
 </template>
 
 <style>

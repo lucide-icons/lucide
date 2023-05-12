@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import ButtonMenu from '../base/ButtonMenu.vue'
 import { useIconStyleContext } from '../../composables/useIconStyle';
+import useConfetti from '../../composables/useConfetti';
 
 const allowedAttrs = [
   'xmlns',
@@ -25,15 +26,7 @@ const props = defineProps<{
 
 const { size } = useIconStyleContext()
 
-const animate = ref(false)
-
-function confetti() {
-  animate.value = true;
-
-  setTimeout(function () {
-    animate.value = false;
-  }, 1000);
-}
+const { animate, confetti } = useConfetti()
 
 function getSVGIcon() {
   const svg = document.querySelector('#previewer svg')

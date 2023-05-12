@@ -36,15 +36,12 @@ const selectionOptionAction = computed(() => props.options.find(option => option
 
 function onClick(event) {
   selectionOptionAction.value()
-  console.log(event);
 
 
   emit('click', event)
 }
 
 function onOptionClick(event, option) {
-  console.log(event, option);
-
   if(!props.callOptionOnClick) {
     return
   }

@@ -2,25 +2,19 @@ import Fuse from "fuse.js";
 import { getAllData } from "../.vitepress/lib/icons";
 import { IconEntity } from "../.vitepress/theme/types";
 
-const getRelatedIcons = (name:string, icons: IconEntity[]) => {
-  const index = new Fuse(icons, {
-    threshold: 1,
-    keys: [
-      { name: 'name', weight: 3 },
-      { name: 'tags', weight: 2 },
-      { name: 'categories', weight: 1 },
-    ],
+// TODO: This should be ordered by relevance
+const getRelatedIcons = (currentIcon:IconEntity, icons: IconEntity[]) => {
+  return icons.filter((icon) => {
+    const { name: iconName, tags, categories } = icon;
+    const isNameRelated = iconName.includes(currentIcon.name);
+
+    const hasRelatedTags = tags?.some((tag) => currentIcon?.tags?.includes(tag));
+    const hasRelatedCategories = categories?.some((category) =>
+      currentIcon?.categories?.includes(category)
+    );
+
+    return isNameRelated || hasRelatedTags || hasRelatedCategories;
   });
-
-  return index
-    .search(name)
-    .map((result) => result.item)
-    .slice(0, 85)
-    .map(({ name, iconNode }: IconEntity) => ({
-      name,
-      iconNode
-    }))
-
 }
 
 export default {
@@ -28,7 +22,7 @@ export default {
     const icons = await getAllData()
 
     return icons.map((iconEntity) => {
-      const relatedIcons = getRelatedIcons(iconEntity.name, icons)
+      const relatedIcons = getRelatedIcons(iconEntity, icons)
       const params = {
         ...iconEntity,
         relatedIcons

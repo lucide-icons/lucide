@@ -8,7 +8,7 @@
 .search-bar {
   margin-bottom: 16px;
   position: sticky;
-  z-index: 30;
+  z-index: 10;
   top: 48px;
   padding-top: 24px;
   margin-top: -32px;

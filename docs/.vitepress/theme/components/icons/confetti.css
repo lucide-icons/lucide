@@ -15,11 +15,13 @@
   content: "";
   display: block;
   width: 140%;
+  max-width: 160px;
   height: 100%;
   left: -20%;
   z-index: -1000;
   transition: all ease-in-out 0.5s;
   background-repeat: no-repeat;
+  font-size: 14px;
 }
 
 .confetti-button:before {

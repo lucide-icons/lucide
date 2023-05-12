@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, defineAsyncComponent } from 'vue'
 import type { IconEntity, Category } from '../../types'
-import IconDetailOverlay from './IconDetailOverlay.vue'
 import useSearch from '../../composables/useSearch'
 import InputSearch from '../base/InputSearch.vue'
 import useSearchInput from '../../composables/useSearchInput'
@@ -13,7 +12,7 @@ const props = defineProps<{
   categories: Category[]
 }>()
 
-const activeIconName = ref('')
+const activeIconName = ref(null)
 const { searchInput, searchQuery, searchQueryThrottled } = useSearchInput()
 
 const isSearching = computed(() => !!searchQuery.value)
@@ -55,6 +54,10 @@ const activeIcon = computed(() =>
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
 )
+
+const IconDetailOverlay = defineAsyncComponent(() =>
+  import('./IconDetailOverlay.vue')
+)
 </script>
 
 <template>
@@ -78,7 +81,11 @@ const NoResults = defineAsyncComponent(() =>
     :activeIconName="activeIconName"
     @setActiveIcon="setActiveIconName"
   />
-  <IconDetailOverlay :icon="activeIcon" @close="setActiveIconName('')"/>
+  <IconDetailOverlay
+    v-if="activeIconName != null"
+    :icon="activeIcon"
+    @close="setActiveIconName('')"
+  />
 </template>
 
 <style scoped>

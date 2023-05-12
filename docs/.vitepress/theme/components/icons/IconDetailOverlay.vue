@@ -28,7 +28,7 @@
 </script>
 
 <template>
-  <Transition name="drawer">
+  <Transition name="drawer" appear>
     <div class="overlay-container" v-if="props.icon">
       <div class="overlay-panel">
         <nav class="overlay-menu">

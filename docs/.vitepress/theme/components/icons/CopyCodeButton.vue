@@ -3,13 +3,14 @@ import { computed, ref } from 'vue';
 import { startCase, camelCase } from 'lodash-es'
 import ButtonMenu from '../base/ButtonMenu.vue'
 import { useIconStyleContext } from '../../composables/useIconStyle';
+import useConfetti from '../../composables/useConfetti';
 
 const props = defineProps<{
   name: string
   popoverPosition?: 'top' | 'bottom'
 }>()
 const { size, color, strokeWidth } = useIconStyleContext()
-const animate = ref(false)
+const { animate, confetti } = useConfetti()
 const componentName = computed(() => {
   return startCase(camelCase(props.name)).replace(/\s/g, '')
 })
@@ -74,14 +75,6 @@ function copyAngular() {
   const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`
 
   navigator.clipboard.writeText(code)
-}
-
-function confetti(e) {
-  animate.value = true;
-
-  setTimeout(function () {
-    animate.value = false;
-  }, 1000);
 }
 </script>
 
