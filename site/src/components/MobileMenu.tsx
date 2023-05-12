@@ -53,7 +53,7 @@ const MobileMenu = ({ children }: { children?: ReactNode }): JSX.Element => {
                 );
               }
               return (
-                <NextLink href={menuItem.href} passHref>
+                <NextLink href={menuItem.href} passHref key={menuItem.name}>
                   <Link fontSize="lg" fontWeight="bold" display="block" mb={2}>
                     {menuItem.name}
                   </Link>
