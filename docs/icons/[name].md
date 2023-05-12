@@ -11,6 +11,7 @@ sidebar: true
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
+import IconPreviewSmall from '../.vitepress/theme/components/icons/IconPreviewSmall.vue'
 import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
 import IconContributors from '../.vitepress/theme/components/icons/IconContributors.vue'
 import RelatedIcons from '../.vitepress/theme/components/icons/RelatedIcons.vue'
@@ -43,6 +44,10 @@ const codeExample = computed(() => data.codeExamples?.map(
       :name="$params.name"
       :iconNode="$params.iconNode"
       :class="$style.preview"
+    />
+    <IconPreviewSmall
+      :name="$params.name"
+      :iconNode="$params.iconNode"
     />
   </div>
   <div >

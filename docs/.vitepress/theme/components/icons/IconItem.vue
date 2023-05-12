@@ -9,8 +9,6 @@ const props = defineProps<{
   name: string;
   tags: string[];
   categories: string[];
-  // TODO: Add contributors
-  // contributors: Contributor[];
   iconNode: IconNode;
   active: boolean;
   customizable?: boolean;
