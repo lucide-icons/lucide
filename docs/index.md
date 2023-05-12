@@ -3,8 +3,9 @@
 layout: home
 
 hero:
-  name: Beautiful &
-  text: consistent icons
+  name: |
+    Beautiful &
+    consistent icons
   tagline: Made by the community.
   image:
     src: /favicon.svg

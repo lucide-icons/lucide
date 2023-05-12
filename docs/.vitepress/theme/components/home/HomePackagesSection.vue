@@ -14,7 +14,7 @@ const { go } = useRouter()
       <a
         v-for="{ name, logo } in data.packages"
         :href="`/guide/packages/${name}`"
-        class="mr-4"
+        class="package-logo"
         :aria-label="`Read more about: ${name} package`"
         @click.prevent="go(`/guide/packages/${name}`)"
       >
@@ -55,5 +55,13 @@ const { go } = useRouter()
   margin-top: 24px;
   display: flex;
   justify-content: center;
+}
+
+.package-logo {
+  transition: opacity ease-in .15s;
+}
+
+.package-logo:hover {
+  opacity: .6;
 }
 </style>

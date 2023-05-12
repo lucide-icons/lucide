@@ -14,7 +14,7 @@ export default {
         },
         {
           name: 'lucide-vue-next',
-          logo: '/framework-logos/vue-next.svg',
+          logo: '/framework-logos/vue.svg',
           label: 'Lucide documentation for Vue 3',
         },
         {
@@ -26,6 +26,11 @@ export default {
           name: 'lucide-preact',
           logo: '/framework-logos/preact.svg',
           label: 'Lucide documentation for Preact',
+        },
+        {
+          name: 'lucide-solid',
+          logo: '/framework-logos/solid.svg',
+          label: 'Lucide documentation for Solid',
         },
         {
           name: 'lucide-angular',
