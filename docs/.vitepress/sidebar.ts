@@ -6,7 +6,8 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       text: 'Introduction',
       items: [
         { text: 'What is lucide?', link: '/guide/' },
-        { text: 'Installation', link: '/guide/installation' }
+        { text: 'Installation', link: '/guide/installation' },
+        { text: 'Comparison', link: '/guide/comparison' }
       ]
     },
     // {
