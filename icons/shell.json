@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "beach",
+    "sand",
+    "holiday",
+    "sealife",
+    "ocean",
+    "terminal",
+    "command line",
+    "session",
+    "bash",
+    "zsh",
+    "carpet",
+    "roll",
+    "wrap",
+    "spiral"
+  ],
+  "categories": [
+    "animals",
+    "development",
+    "nature",
+    "travel",
+    "home"
+  ]
+}
