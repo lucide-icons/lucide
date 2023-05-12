@@ -42,7 +42,7 @@ const DocPage = ({ doc, data }) => {
         <Box maxWidth="xl" width='100%' marginX='auto'>
           <MDXRemote {...doc} data={data} components={mdxComponents} />
 
-          { nextPage.map((page) => (
+          { nextPage.map((page, i) => (
             <Link href={`docs/${page}`}>
               <Button
                 variant="ghost"
@@ -54,6 +54,7 @@ const DocPage = ({ doc, data }) => {
                 minWidth={240}
                 marginTop={6}
                 rightIcon={<ArrowRight />}
+                key={i}
                 >
                   <Text fontSize={19} fontWeight="bold" textTransform="capitalize">
                     {page}
