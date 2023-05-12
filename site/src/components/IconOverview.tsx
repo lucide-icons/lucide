@@ -32,7 +32,7 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
     }
   }, [])
 
-  const SidebarIcon = sidebarOpen ? SidebarClose : SidebarOpen;
+  const SidebarIcon = typeof sidebarOpen !== 'undefined' ? (sidebarOpen ? SidebarClose : SidebarOpen) : SidebarClose;
 
   const searchResults = useSearch(query, data, [
     { name: 'name', weight: 2 },
