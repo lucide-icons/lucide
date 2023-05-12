@@ -10,11 +10,6 @@
       "permanent": true
     },
     {
-      "source": "/docs/:path*",
-      "destination": "/guide/:path*",
-      "permanent": true
-    },
-    {
       "source": "/docs/:slug(lucide-?.*)",
       "destination": "/guide/packages/:slug",
       "permanent": true
@@ -22,6 +17,11 @@
     {
       "source": "/docs/:slug(.*-?guide)",
       "destination": "/guide/design/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "/guide/:path*",
       "permanent": true
     }
   ]
