@@ -5,7 +5,8 @@
     "notification",
     "rumble",
     "haptic feedback",
-    "notifications"
+    "notifications",
+    "screen"
   ],
   "categories": [
     "devices",

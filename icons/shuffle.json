@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "music"
+    "music",
+    "random",
+    "reorder"
   ],
   "categories": [
     "multimedia",

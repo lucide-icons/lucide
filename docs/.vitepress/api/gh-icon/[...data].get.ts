@@ -30,7 +30,10 @@ export default eventHandler((event) => {
 
   const svg = Buffer.from(
     // We can't use jsx here, is not supported here by nitro.
-    renderToString(createElement(SvgPreview, {src, showGrid: true}, children))
+    renderToString(createElement(SvgPreview, {src, showGrid: true}, children)).replace(
+      />/,
+      '><style>@media screen and (prefers-color-scheme: dark) { svg { stroke: #fff } }</style>'
+    )
   ).toString('utf8');
 
   defaultContentType(event, 'image/svg+xml')

@@ -4,7 +4,8 @@
     "phone",
     "cellphone",
     "device",
-    "power"
+    "power",
+    "screen"
   ],
   "categories": [
     "connectivity",

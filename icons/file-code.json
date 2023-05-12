@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "script",
-    "document"
+    "document",
+    "gist",
+    "html",
+    "xml",
+    "property list",
+    "plist"
   ],
   "categories": [
     "files",

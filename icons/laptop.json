@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "computer"
+    "computer",
+    "screen",
+    "remote"
   ],
   "categories": [
     "devices"
