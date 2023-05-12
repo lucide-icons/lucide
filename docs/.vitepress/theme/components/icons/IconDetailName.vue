@@ -30,6 +30,7 @@ const Copy = createLucideIcon('ChevronUp', copy)
 </template>
 
 <style scoped>
+@import './confetti.css';
 .icon-name {
   font-size: 24px;
   font-weight: 500;
@@ -71,5 +72,3 @@ const Copy = createLucideIcon('ChevronUp', copy)
   opacity: .6;
 }
 </style>
-
-<style src="./confetti.css" />

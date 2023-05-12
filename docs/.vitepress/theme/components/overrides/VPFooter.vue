@@ -7,9 +7,6 @@ import { computed } from 'vue'
 const { theme } = useData()
 const { hasSidebar } = useSidebar()
 
-console.log(theme.value.socialLinks[0]);
-
-
 const githubLink = computed(() => theme.value.socialLinks.find(({icon}) => icon === 'github').link)
 
 const links = computed(() => [
