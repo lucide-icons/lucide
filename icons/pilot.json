@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "copilot",
+    "github",
+    "ai",
+    "assistant",
+    "code"
+  ],
+  "categories": [
+    "development",
+    "transportation"
+  ]
+}
