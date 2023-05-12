@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "animal",
+    "insect",
+    "slow",
+    "speed",
+    "delicacy",
+    "spiral"
+  ],
+  "categories": [
+    "animals",
+    "food-beverage"
+  ]
+}
