@@ -1,4 +1,4 @@
-import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Box } from '@chakra-ui/react';
+import { Button, Flex, Link, WrapItem, Text, Wrap, Heading, Box, Hide } from '@chakra-ui/react';
 import download from 'downloadjs';
 import { Download, Github } from 'lucide-react';
 import NextLink from 'next/link';
@@ -166,9 +166,11 @@ const Header = ({ data }: HeaderProps) => {
               Download all
             </Button>
           </WrapItem>
-          <WrapItem>
-            <IconCustomizerDrawer />
-          </WrapItem>
+          <Hide below='md'>
+            <WrapItem>
+                <IconCustomizerDrawer />
+            </WrapItem>
+          </Hide>
           <WrapItem>
             <Button
               as="a"
