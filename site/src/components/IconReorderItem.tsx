@@ -32,7 +32,6 @@ const IconReorderItem = ({ icon, dropZones, onDrop, setDragging }: Props): JSX.E
 
     if (dropZone?.[0] && onDrop) {
       const category = dropZone?.[0]
-      console.log(icon.name, category);
 
       onDrop(icon.name, category)
     }

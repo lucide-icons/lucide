@@ -46,12 +46,6 @@ export default async function fetchAllDocuments() {
     }
   }
 
-  console.log(
-    (await Promise.all(fileNames.map(mapDirectoryTree))),
-    (await Promise.all(fileNames.map(mapDirectoryTree))).flat()
-  );
-
-
   const mappedDirectoryTree = (await Promise.all(fileNames.map(mapDirectoryTree))).flat()
     .filter((item) =>
       item != null
