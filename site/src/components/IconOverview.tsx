@@ -1,4 +1,4 @@
-import { Box, Text, IconButton, HStack } from '@chakra-ui/react';
+import { Box, Text, IconButton, HStack, useBreakpointValue } from '@chakra-ui/react';
 import React, { memo, useEffect, useState } from 'react';
 import useSearch from '../lib/useSearch';
 import IconList from './IconList';
@@ -32,7 +32,8 @@ const IconOverview = ({ data, categories }: IconOverviewProps): JSX.Element => {
     }
   }, [])
 
-  const SidebarIcon = typeof sidebarOpen !== 'undefined' ? (sidebarOpen ? SidebarClose : SidebarOpen) : SidebarClose;
+  const breakpointValue = useBreakpointValue({ base: false, md: true });
+  const SidebarIcon = sidebarOpen || (breakpointValue && sidebarOpen === undefined) ? SidebarClose : SidebarOpen;
 
   const searchResults = useSearch(query, data, [
     { name: 'name', weight: 2 },
