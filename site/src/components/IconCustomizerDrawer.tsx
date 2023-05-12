@@ -43,6 +43,7 @@ export const IconCustomizerDrawer = (props: ButtonProps) => {
           as="a"
           leftIcon={<Edit />}
           size="lg"
+          cursor={'pointer'}
           onClick={() => setShowCustomize(true)}
           {...props}
         >Customize</Button>
@@ -52,6 +53,7 @@ export const IconCustomizerDrawer = (props: ButtonProps) => {
           aria-label='Customize'
           variant="solid"
           color="current"
+          cursor={'pointer'}
           onClick={() => setShowCustomize(true)}
           icon={<Edit />}
           {...props}
