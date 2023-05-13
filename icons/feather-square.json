@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "quill",
+    "pen",
+    "write",
+    "writing",
+    "prose",
+    "inkwell",
+    "scribe",
+    "scroll",
+    "draft",
+    "edit"
+  ],
+  "categories": [
+    "text",
+    "shapes"
+  ]
+}
