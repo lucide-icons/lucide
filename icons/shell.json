@@ -14,10 +14,19 @@
     "session",
     "bash",
     "zsh",
-    "carpet",
     "roll",
     "wrap",
-    "spiral"
+    "chewing gum",
+    "bubble gum",
+    "sweet",
+    "sugar",
+    "hosepipe",
+    "carpet",
+    "string",
+    "spiral",
+    "spinner",
+    "hypnotise",
+    "hypnosis"
   ],
   "categories": [
     "animals",
@@ -25,6 +34,7 @@
     "nature",
     "science",
     "travel",
+    "food-beverage",
     "home"
   ]
 }
