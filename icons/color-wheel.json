@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "colors",
+    "colours",
+    "theme",
+    "scheme",
+    "shades",
+    "tint",
+    "hue",
+    "saturation",
+    "brightness",
+    "complimentary",
+    "analogous",
+    "tetrad",
+    "rgba",
+    "hsla",
+    "hsb",
+    "hexa",
+    "swatches",
+    "palette"
+  ],
+  "categories": [
+    "design",
+    "photography",
+    "development",
+    "tools"
+  ]
+}
