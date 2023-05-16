@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "color",
-    "theme"
+    "colors",
+    "colours",
+    "theme",
+    "paint",
+    "artist"
   ],
   "categories": [
     "text",

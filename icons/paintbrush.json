@@ -4,11 +4,15 @@
     "brush",
     "paintbrush",
     "design",
-    "color"
+    "color",
+    "decoration",
+    "diy"
   ],
   "categories": [
     "text",
     "design",
-    "photography"
+    "photography",
+    "home",
+    "tools"
   ]
 }
