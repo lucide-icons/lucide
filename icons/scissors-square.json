@@ -1,12 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "cut",
-    "snippet"
+    "snippet",
+    "chop",
+    "stationery",
+    "crafts",
+    "toolbar",
+    "button"
   ],
   "categories": [
     "text",
     "design",
-    "files"
+    "tools",
+    "files",
+    "development"
   ]
 }
