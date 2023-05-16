@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "colors",
+    "colours",
+    "theme",
+    "swatches",
+    "palette",
+    "samples",
+    "textile",
+    "carpet"
+  ],
+  "categories": [
+    "design",
+    "home",
+    "furniture",
+    "photography"
+  ]
+}
