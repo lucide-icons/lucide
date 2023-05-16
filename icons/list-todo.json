@@ -3,13 +3,14 @@
   "tags": [
     "todo",
     "done",
+    "check",
     "tick",
     "complete",
-    "task",
-    "item"
+    "tasks",
+    "items",
+    "pending"
   ],
   "categories": [
-    "layout",
     "text"
   ]
 }
