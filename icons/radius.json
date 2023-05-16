@@ -6,11 +6,14 @@
     "geometry",
     "trigonometry",
     "radii",
-    "calculate"
+    "calculate",
+    "measure",
+    "size"
   ],
   "categories": [
     "shapes",
     "maths",
-    "design"
+    "design",
+    "tools"
   ]
 }
