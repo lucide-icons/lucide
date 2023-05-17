@@ -6,7 +6,9 @@
     "git",
     "repository",
     "remove",
-    "delete"
+    "delete",
+    "3d",
+    "perspective"
   ],
   "categories": [
     "development"

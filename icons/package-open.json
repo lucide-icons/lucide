@@ -4,7 +4,11 @@
     "box",
     "container",
     "unpack",
-    "open"
+    "opened",
+    "delivered",
+    "3d",
+    "perspective",
+    "isometric"
   ],
   "categories": [
     "development"

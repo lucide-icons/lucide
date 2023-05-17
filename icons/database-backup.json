@@ -7,7 +7,10 @@
     "timemachine",
     "rotate",
     "arrow",
-    "left"
+    "left",
+    "3d",
+    "perspective",
+    "isometric"
   ],
   "categories": [
     "devices",

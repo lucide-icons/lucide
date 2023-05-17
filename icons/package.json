@@ -2,7 +2,12 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "box",
-    "container"
+    "container",
+    "storage",
+    "delivery",
+    "3d",
+    "perspective",
+    "isometric"
   ],
   "categories": [
     "files",

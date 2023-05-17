@@ -9,7 +9,9 @@
     "version control",
     "git",
     "repository",
-    "clone"
+    "clone",
+    "3d",
+    "perspective"
   ],
   "categories": [
     "development"
