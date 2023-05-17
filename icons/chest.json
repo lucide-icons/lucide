@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "trunk",
+    "treasure",
+    "loot",
+    "gold",
+    "toybox",
+    "toolbox",
+    "3d",
+    "perspective"
+  ],
+  "categories": [
+    "tools",
+    "gaming"
+  ]
+}
