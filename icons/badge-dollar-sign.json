@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "verified",
+    "unverified",
+    "monetization",
+    "marketing"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "money",
+    "shapes"
+  ]
+}
