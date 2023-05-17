@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <rect width="18" height="18" x="3" y="3" rx="2" />
-  <polygon points="9 8 15 12 9 16" />
+  <path d="m9 8 6 4-6 4Z" />
 </svg>
