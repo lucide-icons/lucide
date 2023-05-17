@@ -5,19 +5,17 @@
     "screen",
     "display",
     "desktop",
-    "video",
-    "movie",
-    "film",
-    "running",
-    "start",
-    "boot",
     "virtual machine",
-    "vm"
+    "vm",
+    "close",
+    "stop",
+    "suspend",
+    "remove",
+    "delete"
   ],
   "categories": [
     "connectivity",
     "devices",
-    "multimedia",
     "development"
   ]
 }

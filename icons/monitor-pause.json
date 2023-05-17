@@ -9,7 +9,8 @@
     "movie",
     "film",
     "running",
-    "start",
+    "suspend",
+    "hibernate",
     "boot",
     "virtual machine",
     "vm"
