@@ -1,16 +1,17 @@
 {
-    "$schema": "../icon.schema.json",
-    "tags": [
-      "sparkle",
-      "star",
-      "shiny",
-      "glitter",
-      "twinkle",
-      "night",
-      "celebration"
-    ],
-    "categories": [
-      "shapes"
-    ]
-  }
-  
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "star",
+    "effect",
+    "filter",
+    "night",
+    "magic",
+    "shiny",
+    "glitter",
+    "twinkle",
+    "celebration"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
