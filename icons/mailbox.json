@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "post",
+    "inbox",
     "emails",
     "messages",
     "letters",
     "mailing list",
-    "newsletter",
-    "3d",
-    "perspective"
+    "newsletter"
   ],
   "categories": [
     "mail"
