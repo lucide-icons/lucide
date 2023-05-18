@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "triangle",
+    "triangular",
+    "hierarchy",
+    "structure",
+    "geometry",
+    "ancient",
+    "egyptian",
+    "landmark",
+    "tourism",
+    "3d",
+    "perspective",
+    "isometric"
+  ],
+  "categories": [
+    "shapes",
+    "maths",
+    "travel"
+  ]
+}
