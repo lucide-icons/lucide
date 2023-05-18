@@ -777,6 +777,28 @@ const optimizeRect = (svg: string) => {
   return stringify(data);
 };
 
+const optimizeEllipse = (svg: string) => {
+  const data = parseSync(svg);
+  for (let i = 0; i < data.children.length; i++) {
+    if (data.children[i].name === 'ellipse') {
+      if (data.children[i].attributes.rx === data.children[i].attributes.ry) {
+        data.children[i] = {
+          name: 'circle',
+          type: 'element',
+          children: undefined,
+          value: undefined,
+          attributes: {
+            cx: data.children[i].attributes.cx,
+            cy: data.children[i].attributes.cy,
+            r: data.children[i].attributes.rx,
+          },
+        };
+      }
+    }
+  }
+  return stringify(data);
+};
+
 const smartClose = (svg: string) => {
   const data = parseSync(svg);
   for (let i = 0; i < data.children.length; i++) {
@@ -857,6 +879,7 @@ const runOptimizations = flow(
   segmentsToArc,
   pathsToElement,
   optimizeRect,
+  optimizeEllipse,
   removeUselessClosingSegments,
   smartClose,
   snapToGrid,
