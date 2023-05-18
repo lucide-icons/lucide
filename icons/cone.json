@@ -8,9 +8,8 @@
     "filter",
     "funnel",
     "hopper",
-    "3d",
-    "perspective",
-    "isometric"
+    "spotlight",
+    "searchlight"
   ],
   "categories": [
     "shapes",

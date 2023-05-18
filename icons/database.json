@@ -2,7 +2,10 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "storage",
-    "memory"
+    "memory",
+    "container",
+    "tin",
+    "pot"
   ],
   "categories": [
     "devices"

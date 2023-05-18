@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "prism",
     "triangle",
     "triangular",
     "hierarchy",
@@ -9,10 +10,7 @@
     "ancient",
     "egyptian",
     "landmark",
-    "tourism",
-    "3d",
-    "perspective",
-    "isometric"
+    "tourism"
   ],
   "categories": [
     "shapes",

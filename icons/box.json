@@ -2,11 +2,15 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "cube",
-    "package"
+    "package",
+    "container",
+    "storage",
+    "geometry"
   ],
   "categories": [
     "shapes",
     "gaming",
-    "development"
+    "development",
+    "maths"
   ]
 }
