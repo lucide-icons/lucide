@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "matic",
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "brands",
+    "currency",
+    "development",
+    "money"
+  ]
+}
