@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bounce",
+    "hoop",
+    "net",
+    "court",
+    "score"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
