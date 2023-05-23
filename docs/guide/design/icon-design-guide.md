@@ -21,35 +21,35 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ### 1. Icons must be designed on a 24 by 24 pixels canvas.
 
-![24px-24px](../../images/24px-24px.png?raw=true "24px-24px")
+![24px-24px](../../images/24px-24px.svg?raw=true "24px-24px")
 
 ### 2. Icons must have at least 1 pixel padding within the canvas.
 
-![1px-padding](../../images/1px-padding.png?raw=true "1px-padding")
+![1px-padding](../../images/1px-padding.svg?raw=true "1px-padding")
 
 ### 3. Icons must have a stroke width of 2 pixels.
 
-![2px-stroke](../../images/2px-stroke.png?raw=true "2px-stroke")
+![2px-stroke](../../images/2px-stroke.svg?raw=true "2px-stroke")
 
 ### 4. Icons must use round joins.
 
-![round-joints](../../images/round-joints.png?raw=true "round-joints")
+![round-joints](../../images/round-joints.svg?raw=true "round-joints")
 
 ### 5. Icons must use round caps.
 
-![round-caps](../../images/round-caps.png?raw=true "round-caps")
+![round-caps](../../images/round-caps.svg?raw=true "round-caps")
 
 ### 6. Icons must use centered strokes.
 
-![centered-strokes](../../images/centered-strokes.png?raw=true "centered-strokes")
+![centered-strokes](../../images/centered-strokes.svg?raw=true "centered-strokes")
 
 ### 7. Shapes (such as squares) in icons must have border radius of 2 pixels.
 
-![2px-border-radius](../../images/2px-border-radius.png?raw=true "2px-border-radius")
+![2px-border-radius](../../images/2px-border-radius.svg?raw=true "2px-border-radius")
 
 ### 8. Distinct elements must have 2 pixels of spacing between each other.
 
-![2px-element-spacing](../../images/2px-element-spacing.png?raw=true "2px-element-spacing")
+![2px-element-spacing](../../images/2px-element-spacing.svg?raw=true "2px-element-spacing")
 
 ## Code Conventions
 
