@@ -10,10 +10,13 @@
     "spare",
     "score",
     "indoor sports",
-    "heavy"
+    "heavy",
+    "coconut",
+    "fruit"
   ],
   "categories": [
     "sports",
-    "gaming"
+    "gaming",
+    "food-beverage"
   ]
 }
