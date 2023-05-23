@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "badminton",
+    "court",
+    "racquet",
+    "racket",
+    "net",
+    "float"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
