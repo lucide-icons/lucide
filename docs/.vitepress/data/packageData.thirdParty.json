@@ -22,6 +22,7 @@
     "name": "hyva-lucide-icons",
     "description": "Implementation of Lucide icon's using Hyvä's svg php viewmodal to render icons for Magento 2 Hyva theme based projects.",
     "icon": "/framework-logos/hyva.svg",
+    "iconDark": "/framework-logos/hyva-dark.svg",
     "shields": [
       {
         "alt": "Latest Stable Version",
@@ -41,6 +42,7 @@
     "name": "eleventy-lucide-icons",
     "description": "Using this plugin, Eleventy projects can incorporate Lucide icons. it makes it simple to use Lucide icons into your themes via shortcodes, improving your website's overall usability and visual appeal.",
     "icon": "/framework-logos/11ty.svg",
+    "iconClass": "package-icon-invert",
     "shields": [
       {
         "alt": "Latest Stable Version",

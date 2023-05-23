@@ -28,6 +28,7 @@ export interface PackageItem {
   name: string
   description: string
   icon: string
+  iconDark: string
   shields: Shield[]
   source: string
   documentation: string

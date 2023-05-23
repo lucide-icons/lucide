@@ -13,7 +13,8 @@ const props = defineProps<{
   <article class="package">
     <header class="package-header">
       <div class="package-icon-well">
-        <img :src="packageData.icon" alt="" class="package-icon" />
+        <img :src="packageData.icon" alt="" class="package-icon" :class="{[packageData.iconClass]: true, light: packageData.iconDark}" />
+        <img v-if="packageData.iconDark" :src="packageData.iconDark" alt="" class="package-icon dark" :class="packageData.iconClass" />
       </div>
       <div class="package-title">
         <h2 class="title">{{ props.packageData.name }}</h2>
@@ -96,5 +97,14 @@ h2.title {
   display: flex;
   flex-direction: row;
   gap: 12px;
+}
+html.dark .package-icon-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+html.dark .package-icon.light {
+  display: none;
+}
+html:not(.dark) .package-icon.dark {
+  display: none;
 }
 </style>
