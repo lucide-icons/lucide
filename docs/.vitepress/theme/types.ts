@@ -5,6 +5,7 @@ export interface IconEntity {
   tags: string[];
   categories: string[];
   contributors: string[];
+  aliases?: string[];
   iconNode: IconNode;
   createdRelease?: Release;
   changedRelease?: Release;

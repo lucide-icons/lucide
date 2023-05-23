@@ -2,19 +2,38 @@ import Fuse from "fuse.js";
 import { getAllData } from "../.vitepress/lib/icons";
 import { IconEntity } from "../.vitepress/theme/types";
 
-// TODO: This should be ordered by relevance
-const getRelatedIcons = (currentIcon:IconEntity, icons: IconEntity[]) => {
-  return icons.filter((icon) => {
-    const { name: iconName, tags, categories } = icon;
-    const isNameRelated = iconName.includes(currentIcon.name);
+const nameWeight = 5;
+const tagWeight = 4;
+const categoryWeight = 3;
 
-    const hasRelatedTags = tags?.some((tag) => currentIcon?.tags?.includes(tag));
-    const hasRelatedCategories = categories?.some((category) =>
-      currentIcon?.categories?.includes(category)
-    );
+const arrayMatches = (a: string[], b: string[]) => {
+  let matches = 0;
+  for (let i = 0; i < a.length; ++i) {
+    if (b.indexOf(a[i]) != -1) {
+      matches++;
+    }
+  }
+  return matches;
+}
 
-    return isNameRelated || hasRelatedTags || hasRelatedCategories;
-  });
+const nameParts = (icon: IconEntity) => [icon.name, ...icon.aliases ?? []]
+    .join('-')
+    .split('-')
+    .filter(word => word.length > 2)
+
+const getRelatedIcons = (currentIcon: IconEntity, icons: IconEntity[]) => {
+  const iconSimilarity = (item: IconEntity) =>
+    nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon))
+    + categoryWeight * arrayMatches(item.categories, currentIcon.categories)
+    + tagWeight * arrayMatches(item.tags, currentIcon.tags)
+  ;
+  return icons
+    .filter(i => i.name !== currentIcon.name)
+    .map(icon => ({icon, similarity: iconSimilarity(icon)}))
+    .filter(a => a.similarity > 0) // @todo: maybe require a minimal non-zero similarity
+    .sort((a, b) => b.similarity - a.similarity)
+    .map(i => i.icon)
+    ;
 }
 
 export default {
