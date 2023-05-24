@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "preserver",
+    "life belt",
+    "lifesaver",
     "help",
     "rescue",
-    "ship"
+    "ship",
+    "ring",
+    "raft",
+    "inflatable",
+    "wheel",
+    "donut"
   ],
   "categories": [
     "accessibility",
