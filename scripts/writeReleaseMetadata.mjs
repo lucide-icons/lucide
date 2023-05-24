@@ -82,17 +82,7 @@ const fetchCommits = async (name) => {
 };
 
 export const getReleaseMetadata = async (name, aliases, releases) => {
-  const metadata = {
-    name,
-    createdRelease: {
-      version: '0.0.0',
-      date: new Date().toISOString(),
-    },
-    changedRelease: {
-      version: '0.0.0',
-      date: new Date().toISOString(),
-    },
-  };
+  const metadata = { name };
 
   for (const alias of [name, ...(aliases ?? [])]) {
     const commits = await fetchCommits(alias);
@@ -101,6 +91,9 @@ export const getReleaseMetadata = async (name, aliases, releases) => {
       const release = findRelease(date, releases);
       updateReleaseMetadataWithCommit(metadata, date, release);
     }
+  }
+  if (!metadata.createdRelease || !metadata.changedRelease) {
+    throw new Error(`Could not fetch release metadata for icon '${name}'.`);
   }
   return metadata;
 };
