@@ -12,5 +12,9 @@
     "devices",
     "connectivity",
     "account"
+  ],
+  "contributors": [
+    "lscheibel",
+    "ericfennis"
   ]
 }

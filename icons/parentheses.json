@@ -19,5 +19,9 @@
     "development",
     "files",
     "maths"
+  ],
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
   ]
 }

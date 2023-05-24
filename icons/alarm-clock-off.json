@@ -8,5 +8,9 @@
     "devices",
     "notifications",
     "time"
+  ],
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
   ]
 }

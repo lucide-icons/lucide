@@ -4,5 +4,8 @@
     "licence",
     "license"
   ],
-  "categories": []
+  "categories": [],
+  "contributors": [
+    "ericfennis"
+  ]
 }

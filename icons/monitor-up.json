@@ -12,5 +12,9 @@
   "categories": [
     "connectivity",
     "devices"
+  ],
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
   ]
 }

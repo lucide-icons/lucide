@@ -15,5 +15,9 @@
     "shapes",
     "development",
     "files"
+  ],
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
   ]
 }

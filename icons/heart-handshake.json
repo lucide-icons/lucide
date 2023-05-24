@@ -14,5 +14,9 @@
     "emoji",
     "account",
     "security"
+  ],
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
   ]
 }

@@ -11,5 +11,10 @@
   "categories": [
     "files",
     "development"
+  ],
+  "contributors": [
+    "danielbayley",
+    "ericfennis",
+    "karsa-mistmere"
   ]
 }

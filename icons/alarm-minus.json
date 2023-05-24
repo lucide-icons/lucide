@@ -7,5 +7,11 @@
     "devices",
     "notifications",
     "time"
+  ],
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ]
 }

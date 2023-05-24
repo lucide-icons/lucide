@@ -12,5 +12,9 @@
     "account",
     "security",
     "notifications"
+  ],
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
   ]
 }

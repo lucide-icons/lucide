@@ -12,5 +12,9 @@
     "text",
     "files",
     "cursors"
+  ],
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
   ]
 }

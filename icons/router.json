@@ -10,5 +10,9 @@
     "devices",
     "connectivity",
     "home"
+  ],
+  "contributors": [
+    "FrancoMaxime",
+    "ericfennis"
   ]
 }

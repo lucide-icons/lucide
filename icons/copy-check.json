@@ -9,5 +9,9 @@
   "categories": [
     "text",
     "notifications"
+  ],
+  "contributors": [
+    "danielbayley",
+    "jguddas"
   ]
 }
