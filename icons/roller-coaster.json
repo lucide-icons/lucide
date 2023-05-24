@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "attraction",
+    "entertainment",
+    "amusement park",
+    "theme park",
+    "funfair"
+  ],
+  "categories": [
+    "maps"
+  ]
+}
