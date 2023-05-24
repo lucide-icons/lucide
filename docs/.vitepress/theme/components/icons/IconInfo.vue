@@ -15,11 +15,6 @@ const props = defineProps<{
 
 const { go } = useRouter()
 const { page } = useData()
-
-const tags = computed(() => {
-  if (!props.icon) return []
-  return props.icon.tags.join(' • ')
-})
 </script>
 
 <template>
@@ -27,9 +22,6 @@ const tags = computed(() => {
     <IconDetailName class="icon-name">
       {{ icon.name }}
     </IconDetailName>
-    <p class="icon-tags">
-      {{ tags }}
-    </p>
     <div class="group">
       <Badge
         v-for="category in icon.categories"

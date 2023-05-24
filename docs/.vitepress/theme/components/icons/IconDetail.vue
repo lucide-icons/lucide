@@ -8,11 +8,6 @@ const { params } = useData()
 onMounted(() => {
   console.log(params, 'data')
 })
-const tags = computed(() => {
-  if (!params.tags) return []
-  return params.tags.join(' • ')
-})
-
 </script>
 
 <template>
