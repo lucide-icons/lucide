@@ -5,6 +5,13 @@ import fs from 'fs';
 import path from 'path';
 import { readSvgDirectory } from './helpers.mjs';
 
+const gitTmpPath = '/tmp/lucide-icons';
+if (fs.existsSync(gitTmpPath)) {
+  fs.rmSync(gitTmpPath, { recursive: true, force: true });
+}
+await simpleGit().clone(`https://${process.env.GITHUB_API_KEY}@github.com/lucide-icons/lucide.git`, gitTmpPath);
+const git = simpleGit(gitTmpPath);
+
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
@@ -34,10 +41,11 @@ export const updateReleaseMetadataWithCommit = (metadata, date, release) => {
 };
 
 export const fetchAllReleases = async () => {
-  await simpleGit().fetch(['--tags', '--all']);
+  await git.fetch('--tags')
+
   const tags = await Promise.all(
     (
-      await simpleGit().raw('show-ref', '--tags', '-d')
+      await git.raw('show-ref', '--tags', '-d')
     )
       .trim()
       .split(/\n/)
@@ -47,7 +55,7 @@ export const fetchAllReleases = async () => {
           return { version: null, date: null };
         }
         const { version = null } = semver.coerce(ref.replace('refs/tags/', '')) ?? {};
-        const date = (await simpleGit().show(['-s', '--format=%cI', commit])).trim();
+        const date = (await git.show(['-s', '--format=%cI', commit])).trim();
         return { version, date };
       }),
   );
@@ -55,7 +63,7 @@ export const fetchAllReleases = async () => {
   return tags.filter(({ version }) => semver.valid(version));
 };
 
-simpleGit().clean(CleanOptions.FORCE);
+git.clean(CleanOptions.FORCE);
 
 const findRelease = (date, releases) => {
   let closestRelease = null;
@@ -68,23 +76,13 @@ const findRelease = (date, releases) => {
 };
 
 const fetchCommits = async (name) => {
-  const file = `../icons/${name}.svg`;
-  const { all: commits = {} } = await simpleGit().log(['--reverse', '--follow', '--', file]);
+  const file = `icons/${name}.svg`;
+  const { all: commits = {} } = await git.log(['--reverse', '--follow', '--', file]);
   return commits;
 };
 
 export const getReleaseMetadata = async (name, aliases, releases) => {
-  const metadata = {
-    name,
-    createdRelease: {
-      version: '0.0.0',
-      date: new Date().toISOString(),
-    },
-    changedRelease: {
-      version: '0.0.0',
-      date: new Date().toISOString(),
-    },
-  };
+  const metadata = { name };
 
   for (const alias of [name, ...(aliases ?? [])]) {
     const commits = await fetchCommits(alias);
@@ -93,6 +91,9 @@ export const getReleaseMetadata = async (name, aliases, releases) => {
       const release = findRelease(date, releases);
       updateReleaseMetadataWithCommit(metadata, date, release);
     }
+  }
+  if (!metadata.createdRelease || !metadata.changedRelease) {
+    throw new Error(`Could not fetch release metadata for icon '${name}'.`);
   }
   return metadata;
 };

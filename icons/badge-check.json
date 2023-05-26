@@ -1,10 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "verified",
     "check"
   ],
   "categories": [
     "account",
-    "social"
-  ]
+    "social",
+    "shapes"
+  ],
+  "aliases": ["verified"]
 }

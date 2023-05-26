@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "verified",
+    "unverified",
+    "add",
+    "create",
+    "new"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "shapes"
+  ]
+}
