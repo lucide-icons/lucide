@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <div class="input-field">
-    <div class="input-label">
+    <div class="input-label" v-if="label">
       <label :for="id" class="customize-label">
         {{ label }}
       </label>

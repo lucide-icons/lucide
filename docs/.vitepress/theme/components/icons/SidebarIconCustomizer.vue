@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { shallowRef, type Ref } from 'vue'
+import { shallowRef, type Ref, watch } from 'vue'
 import { useCssVar, syncRef } from '@vueuse/core'
 import { useIconStyleContext } from '../../composables/useIconStyle'
 import RangeSlider from '../base/RangeSlider.vue'
 import InputField from '../base/InputField.vue'
 import ColorPicker from '../base/ColorPicker.vue'
 import ResetButton from '../base/ResetButton.vue'
+import Switch from '../base/Switch.vue'
 
 const props = defineProps<{
   rootEl?: Ref<HTMLElement>
 }>()
 
-const { color, strokeWidth, size } = useIconStyleContext()
+const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext()
 const documentRef = shallowRef<HTMLElement | undefined>(typeof document !== 'undefined' ? document?.documentElement : undefined)
 
 const colorCssVar = useCssVar(
@@ -47,6 +48,12 @@ function resetStyle () {
   strokeWidth.value = 2
   size.value = 24
 }
+
+watch(absoluteStrokeWidth, (enabled) => {
+  const htmlEl = document.documentElement
+
+  htmlEl.classList.toggle('absolute-stroke-width', enabled)
+})
 </script>
 
 <template>
@@ -99,7 +106,18 @@ function resetStyle () {
         :step="4"
       />
     </InputField>
-</div>
+
+    <InputField
+      id="absolute-stroke-width"
+      label="Absolute Stroke width"
+    >
+      <Switch
+        id="size"
+        name="size"
+        v-model="absoluteStrokeWidth"
+      />
+    </InputField>
+  </div>
 </template>
 
 <style scoped>
@@ -128,6 +146,10 @@ function resetStyle () {
 
 .color-picker {
   margin-left: auto;
+}
+
+#absolute-stroke-width {
+  flex-direction: row-reverse;
 }
 
 </style>

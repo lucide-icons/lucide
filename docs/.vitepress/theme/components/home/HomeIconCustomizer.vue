@@ -7,12 +7,15 @@ import ColorPicker from '../base/ColorPicker.vue'
 import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 
+import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
+
 import { ref } from 'vue'
 
 const iconContainer = ref<HTMLElement | null>()
 const color = ref('currentColor')
 const strokeWidth = ref(2)
 const size = ref(24)
+const absoluteStrokeWidth = ref(false)
 
 const colorCssVar = useCssVar(
   '--customize-color',
@@ -104,6 +107,21 @@ function resetStyle () {
               :min="16"
               :max="48"
               :step="4"
+            />
+          </InputField>
+
+          <InputField
+            id="absolute-stroke-width"
+            label="Absolute Stroke width"
+          >
+            <template #display>
+              <span class="customize-label">{{ strokeWidth }}px</span>
+            </template>
+
+            <Switch
+              id="size"
+              name="size"
+              v-model="absoluteStrokeWidth"
             />
           </InputField>
         </div>

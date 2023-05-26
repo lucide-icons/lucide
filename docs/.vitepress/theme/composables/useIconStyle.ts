@@ -16,6 +16,7 @@ export const iconStyleContext = {
   size: ref(24),
   strokeWidth: ref(2),
   color: ref('currentColor'),
+  absoluteStrokeWidth: ref(false),
 };
 
 export function useIconStyleContext(): IconSizeContext{

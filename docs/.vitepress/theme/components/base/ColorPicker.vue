@@ -79,6 +79,7 @@ const value = computed({
   text-align: left;
   border-radius: 8px;
   cursor: text;
+  transition: border-color 0.25s, background 0.4s ease;
 }
 
 .color-picker:hover, .color-picker:focus {

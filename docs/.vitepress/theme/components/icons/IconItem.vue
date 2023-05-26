@@ -147,4 +147,8 @@ function navigateToIcon() {
   width: calc(var(--customize-size, 24) * 1px);
   height: calc(var(--customize-size, 24) * 1px);
 }
+
+html.absolute-stroke-width .lucide-icon.customizable {
+  stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
+}
 </style>
