@@ -9,7 +9,7 @@ const props = defineProps<{
   name: string
   popoverPosition?: 'top' | 'bottom'
 }>()
-const { size, color, strokeWidth } = useIconStyleContext()
+const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext()
 const { animate, confetti } = useConfetti()
 const componentName = computed(() => {
   return startCase(camelCase(props.name)).replace(/\s/g, '')
@@ -28,6 +28,10 @@ function copyJSX() {
 
   if (strokeWidth.value && strokeWidth.value !== 2) {
     attrs.push(`strokeWidth={${strokeWidth.value}}`)
+  }
+
+  if (absoluteStrokeWidth.value) {
+    attrs.push(`absoluteStrokeWidth`)
   }
 
   const code = `<${componentName.value}${attrs.join(' ')} />`
@@ -50,6 +54,10 @@ function copyVue() {
     attrs.push(`:stroke-width="${strokeWidth.value}"`)
   }
 
+  if (absoluteStrokeWidth.value) {
+    attrs.push(`absoluteStrokeWidth`)
+  }
+
   const code = `<${componentName.value}${attrs.join(' ')} />`
 
   navigator.clipboard.writeText(code)
@@ -70,6 +78,10 @@ function copyAngular() {
 
   if (strokeWidth.value && strokeWidth.value !== 2) {
     attrs.push(`[strokeWidth]="${strokeWidth.value}"`)
+  }
+
+  if (absoluteStrokeWidth.value) {
+    attrs.push(`[absoluteStrokeWidth]="true"`)
   }
 
   const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`
