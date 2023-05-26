@@ -10,7 +10,7 @@ const props = defineProps<{
   customizable?: boolean
 }>()
 
-const { size, color, strokeWidth } = useIconStyleContext()
+const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext()
 const previewIcon = ref()
 
 const gridLines = computed(() => Array.from({ length:(size.value - 1) }))
@@ -29,7 +29,7 @@ const iconComponent = computed(() => {
       :width="size"
       :height="size"
       :stroke="color"
-      :stroke-width="strokeWidth"
+      :stroke-width="absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth"
     />
     <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
       <g :key="`grid-${i}`" v-for="(_, i) in gridLines">

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
 import { syncRef, useCssVar } from '@vueuse/core'
 import HomeContainer from './HomeContainer.vue'
 import RangeSlider from '../base/RangeSlider.vue'
@@ -6,10 +7,8 @@ import InputField from '../base/InputField.vue'
 import ColorPicker from '../base/ColorPicker.vue'
 import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
+import Switch from '../base/Switch.vue'
 
-import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
-
-import { ref } from 'vue'
 
 const iconContainer = ref<HTMLElement | null>()
 const color = ref('currentColor')
@@ -51,6 +50,9 @@ function resetStyle () {
   size.value = 24
 }
 
+watch(absoluteStrokeWidth, (enabled) => {
+  iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
+})
 </script>
 
 <template>
@@ -115,14 +117,12 @@ function resetStyle () {
             label="Absolute Stroke width"
           >
             <template #display>
-              <span class="customize-label">{{ strokeWidth }}px</span>
+              <Switch
+                id="absolute-stroke-width"
+                name="absolute-stroke-width"
+                v-model="absoluteStrokeWidth"
+              />
             </template>
-
-            <Switch
-              id="size"
-              name="size"
-              v-model="absoluteStrokeWidth"
-            />
           </InputField>
         </div>
       </div>

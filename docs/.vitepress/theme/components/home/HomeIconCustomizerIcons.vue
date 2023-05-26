@@ -70,4 +70,8 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
   width: calc(var(--customize-size, 24) * 1px);
   height: calc(var(--customize-size, 24) * 1px);
 }
+
+.icons-container.absolute-stroke-width .lucide-icon {
+  stroke-width: calc(var(--customize-strokeWidth, 2) * 24 / var(--customize-size, 24));
+}
 </style>
