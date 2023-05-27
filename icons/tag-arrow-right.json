@@ -8,11 +8,13 @@
     "label",
     "badge",
     "ticket",
-    "mark"
+    "mark",
+    "debugger"
   ],
   "categories": [
     "arrows",
     "navigation",
-    "account"
+    "account",
+    "development"
   ]
 }

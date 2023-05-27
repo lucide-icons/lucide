@@ -9,11 +9,14 @@
     "label",
     "badge",
     "ticket",
-    "mark"
+    "mark",
+    "debugger",
+    "step"
   ],
   "categories": [
     "arrows",
     "navigation",
-    "account"
+    "account",
+    "development"
   ]
 }
