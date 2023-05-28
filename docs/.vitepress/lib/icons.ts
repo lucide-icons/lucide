@@ -41,11 +41,11 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
 
   const releaseData = releaseMeta?.[name] ?? {
     "createdRelease": {
-      "version": "0.0.0",
+      "version": "0.1.0",
       "date": new Date().toISOString()
     },
     "changedRelease": {
-      "version": "0.0.0",
+      "version": "0.1.0",
       "date": new Date().toISOString()
     }
   }

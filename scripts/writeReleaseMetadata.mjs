@@ -78,11 +78,18 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
 
     if (newReleaseMetaData[iconName] == null) newReleaseMetaData[iconName] = {};
 
+    const releaseData = {
+      version,
+      date,
+    };
+
     if (status === 'A') {
-      newReleaseMetaData[iconName].createdRelease = {
-        version,
-        date,
-      };
+      if ('changedRelease' in newReleaseMetaData[iconName]) {
+        throw new Error(`Icon '${iconName}' has already changedRelease set.`);
+      }
+
+      newReleaseMetaData[iconName].createdRelease = releaseData;
+      newReleaseMetaData[iconName].changedRelease = releaseData;
     }
     if (status === 'M') {
       newReleaseMetaData[iconName].changedRelease = {
