@@ -5,6 +5,8 @@ import fs from 'fs';
 import path from 'path';
 import { readSvgDirectory } from './helpers.mjs';
 
+const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
+
 // const gitTmpPath = '/tmp/lucide-icons';
 // if (fs.existsSync(gitTmpPath)) {
 //   fs.rmSync(gitTmpPath, { recursive: true, force: true });
@@ -43,27 +45,25 @@ export const updateReleaseMetadataWithCommit = (metadata, date, release) => {
 export const fetchAllReleases = async () => {
   await git.fetch('--tags');
 
-  const tags = await Promise.all(
-    (
-      await git.raw('show-ref', '--tags', '-d')
-    )
+  return Promise.all(
+    (await git.tag(['-l']))
       .trim()
       .split(/\n/)
-      .map(async (line) => {
-        const [commit, ref] = line.split(/ /);
-        if (ref == null || !ref.startsWith('refs/tags/') || commit == null) {
-          return { version: null, date: null };
-        }
-        const { version = null } = semver.coerce(ref.replace('refs/tags/', '')) ?? {};
-        const date = (await git.show(['-s', '--format=%cI', commit])).trim();
-        return { version, date };
-      }),
+      .filter((tag) => semver.valid(tag))
+      .sort(semver.compare),
+    // .map(async (line) => {
+    //   const [commit, ref] = line.split(/ /);
+    //   if (ref == null || !ref.startsWith('refs/tags/') || commit == null) {
+    //     return { version: null, date: null };
+    //   }
+    //   const { version = null } = semver.coerce(ref.replace('refs/tags/', '')) ?? {};
+    //   const date = (await git.show(['-s', '--format=%cI', commit])).trim();
+    //   return { version, date };
+    // }),
   );
 
-  return tags.filter(({ version }) => semver.valid(version));
+  // return tags.filter(({ version }) => semver.valid(version));
 };
-
-git.clean(CleanOptions.FORCE);
 
 const findRelease = (date, releases) => {
   let closestRelease = null;
@@ -99,22 +99,102 @@ export const getReleaseMetadata = async (name, aliases, releases) => {
 };
 
 // const releases = await fetchAllReleases();
+
+const tags = await fetchAllReleases();
+// const tagDates = await Promise.all(
+//   tags.map(async (tag) => {
+//     const date = (await git.show(['-s', '--format=%cI', tag])).trim();
+//     return { tag, date };
+//   }),
+// );
+
+const comparisonsPromises = tags.map(async (tag, index) => {
+  const previousTag = tags[index - 1];
+
+  if (!previousTag) return undefined;
+  // git diff --name-status --oneline v0.222.0 v0.223.0
+  const diff = await git.diff(['--name-status', '--oneline', previousTag, tag]);
+
+  const files = diff.split('\n').map((line) => {
+    const [status, file, renamedFile] = line.split('\t');
+
+    return { status, file, renamedFile };
+  });
+
+  const iconFiles = files.filter(({ file }) => file != null && file.startsWith('icons/'));
+  let date = (await git.show(['-s', '--format=%cI', tag])).trim();
+
+  // Fallback to dat of fork if date is not valid
+  if (!date.startsWith('20')) {
+    date = DATE_OF_FORK;
+  }
+
+  return {
+    tag,
+    date,
+    iconFiles,
+  };
+});
+
+const comparisons = await Promise.all(comparisonsPromises);
+const newReleaseMetaData = {};
+
+comparisons.forEach(({ tag, iconFiles, date } = {}) => {
+  if (tag == null) return;
+
+  iconFiles.forEach(({ status, file, renamedFile }) => {
+    if (file.endsWith('.json')) return;
+
+    const version = tag.replace('v', '');
+    let iconName = path.basename(file, '.svg');
+
+    if (status.startsWith('R')) {
+      iconName = path.basename(renamedFile, '.svg');
+    }
+
+    if (newReleaseMetaData[iconName] == null) newReleaseMetaData[iconName] = {};
+
+    if (status === 'A') {
+      newReleaseMetaData[iconName].createdRelease = {
+        version,
+        date,
+      };
+    }
+    if (status === 'M') {
+      newReleaseMetaData[iconName].changedRelease = {
+        version,
+        date,
+      };
+    }
+  });
+});
+
+// console.log(comparisons);
+
 const releaseMetaData = (
   await Promise.all(
     iconJsonFiles.map((iconJsonFile) => {
       const iconName = path.basename(iconJsonFile, '.json');
       // const { aliases } = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, iconJsonFile)));
       // return getReleaseMetadata(iconName, aliases, releases);
+      if (iconName in newReleaseMetaData === false) {
+        console.error(`Could not find release metadata for icon '${iconName}'.`);
+        return {
+          name: iconName,
+          createdRelease: {
+            version: '0.1.0',
+            date: DATE_OF_FORK,
+          },
+          changedRelease: {
+            version: '0.1.0',
+            date: DATE_OF_FORK,
+          },
+        };
+      }
+
       return {
         name: iconName,
-        createdRelease: {
-          version: '0.0.0',
-          date: new Date().toISOString(),
-        },
-        changedRelease: {
-          version: '0.0.0',
-          date: new Date().toISOString(),
-        },
+        ...newReleaseMetaData[iconName],
       };
     }),
   )
