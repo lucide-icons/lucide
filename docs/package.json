@@ -15,7 +15,7 @@
     "build:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",
-    "build": "git fetch --tags && pnpm build:iconNodes && pnpm build:metaJson && pnpm build:releaseJson && pnpm build:relatedIcons && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
+    "build": "git fetch origin main -t && pnpm build:iconNodes && pnpm build:metaJson && pnpm build:releaseJson && pnpm build:relatedIcons && pnpm build:api && pnpm docs:build && pnpm build:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
   "keywords": [],
