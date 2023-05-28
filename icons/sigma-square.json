@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sum",
+    "calculate",
+    "formula",
+    "maths",
+    "enumeration",
+    "enumerate"
+  ],
+  "categories": [
+    "text",
+    "maths"
+  ]
+}
