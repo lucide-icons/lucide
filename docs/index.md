@@ -6,17 +6,30 @@ nextPage:
 ---
 
 # Introduction
-Lucide is an open source icon library for displaying icons and symbols in digital and non-digital projects. It consists of 850+ Vector (svg) files. To use these icons, lucide provides several official packages to make it easier to use these icons in projects.
 
-Lucide contains icons with different variants and states. With that, designers and developers can choose the right icon for themselves. If a desired icon doesn't exist yet, you're free to open a design request. The Lucide community contributors will help to provide new icons.
+Lucide is an open-source icon library designed for displaying icons and symbols in both digital and non-digital projects. It offers a collection of 1000+ vector (SVG) files. To simplify the integration of these icons into projects, Lucide provides several official packages.
 
-With more icons, we simply have more icons to work with in our projects. Also with rising of new applications with specific features, lucide has the goal to provide the complete set for your project.
+Lucide encompasses icons with various variants and states, allowing designers and developers to select the most suitable icon for their needs. If a desired icon is not available, users are encouraged to submit a design request. The Lucide community contributors are dedicated to creating new icons and fulfilling such requests.
 
-When designing new icons, the community is working with a set of design rules. This is to maintain some standards for the icons: recognizable, consistency in style, and readable on all sizes. The community loves creativity in new icons but recognizable design conventions are important.
+By expanding the range of available icons, Lucide provides users with a broader selection for their projects. Furthermore, as new applications with specific features emerge, Lucide aims to offer a comprehensive icon set to meet diverse project requirements.
 
-Beside design, code is also important. Assets like icons in, for example, web projects can increase the bandwidth usage significantly. With the growing internet, lucide has the responsibility to keep their assets as small as possible. To achieve this, lucide uses SVG compression and specific code architecture for tree-shaking abilities. After tree-shaking, you will only ship the icons you used, helps you to keep the software distribution size to a minimum.
+When designing new icons, the community adheres to a set of design rules to ensure consistency and usability. While creativity is encouraged, maintaining recognizable design conventions is paramount.
 
-Lucide provides several official packages for: [Web (Vanilla)](https://lucide.dev/docs/lucide), [React](https://lucide.dev/docs/lucide-react), [React Native](https://lucide.dev/docs/lucide-react-native), [Vue](https://lucide.dev/docs/lucide-vue), [Vue 3](https://lucide.dev/docs/lucide-vue-next), [Svelte](https://lucide.dev/docs/lucide-svelte), [Solid](https://lucide.dev/docs/lucide-solid), [Preact](https://lucide.dev/docs/lucide-preact), [Angular](https://lucide.dev/docs/lucide-angular), [NodeJS](https://lucide.dev/docs/lucide-static#nodejs) and [Flutter](https://lucide.dev/docs/lucide-flutter).
+In addition to design considerations, code optimization plays a vital role. Assets like icons in web projects can significantly impact bandwidth usage. In response, Lucide takes responsibility for minimizing asset size. This is achieved through SVG compression and employing a specific code architecture with tree-shaking capabilities. With tree-shaking, only the icons utilized in a project are shipped, effectively reducing the overall software distribution size.
 
-Any questions about lucide? Ask the community. Active on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
+Lucide provides several official packages for various frameworks and platforms, including:
+- [Web (Vanilla)](https://lucide.dev/docs/lucide)
+- [React](https://lucide.dev/docs/lucide-react)
+- [React Native](https://lucide.dev/docs/lucide-react-native)
+- [Vue](https://lucide.dev/docs/lucide-vue)
+- [Vue 3](https://lucide.dev/docs/lucide-vue-next)
+- [Svelte](https://lucide.dev/docs/lucide-svelte)
+- [Solid](https://lucide.dev/docs/lucide-solid)
+- [Preact](https://lucide.dev/docs/lucide-preact)
+- [Angular](https://lucide.dev/docs/lucide-angular)
+- [NodeJS](https://lucide.dev/docs/lucide-static#nodejs)
+- [Flutter](https://lucide.dev/docs/lucide-flutter)
+
+If you have any questions or require assistance with Lucide, feel free to reach out to the community. You can find active community members on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
+
 
