@@ -93,6 +93,17 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
   });
 });
 
+const defaultReleaseMetaData = {
+  createdRelease: {
+    version: '0.1.0',
+    date: DATE_OF_FORK,
+  },
+  changedRelease: {
+    version: '0.1.0',
+    date: DATE_OF_FORK,
+  },
+};
+
 const releaseMetaData = (
   await Promise.all(
     iconJsonFiles.map((iconJsonFile) => {
@@ -100,22 +111,12 @@ const releaseMetaData = (
 
       if (iconName in newReleaseMetaData === false) {
         console.error(`Could not find release metadata for icon '${iconName}'.`);
-        return {
-          name: iconName,
-          createdRelease: {
-            version: '0.1.0',
-            date: DATE_OF_FORK,
-          },
-          changedRelease: {
-            version: '0.1.0',
-            date: DATE_OF_FORK,
-          },
-        };
       }
 
       return {
         name: iconName,
-        ...newReleaseMetaData[iconName],
+        ...defaultReleaseMetaData,
+        ...(newReleaseMetaData[iconName] ?? {}),
       };
     }),
   )

@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue'
-  import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
+  import { Switch } from '@headlessui/vue'
 
   const enabled = ref(false)
 </script>
