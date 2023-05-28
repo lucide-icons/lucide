@@ -5,12 +5,12 @@ import fs from 'fs';
 import path from 'path';
 import { readSvgDirectory } from './helpers.mjs';
 
-const gitTmpPath = '/tmp/lucide-icons';
-if (fs.existsSync(gitTmpPath)) {
-  fs.rmSync(gitTmpPath, { recursive: true, force: true });
-}
-await simpleGit().clone(`https://${process.env.GITHUB_API_KEY}@github.com/lucide-icons/lucide.git`, gitTmpPath);
-const git = simpleGit(gitTmpPath);
+// const gitTmpPath = '/tmp/lucide-icons';
+// if (fs.existsSync(gitTmpPath)) {
+//   fs.rmSync(gitTmpPath, { recursive: true, force: true });
+// }
+// await simpleGit().clone(`https://${process.env.GITHUB_API_KEY}@github.com/lucide-icons/lucide.git`, gitTmpPath);
+const git = simpleGit();
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -41,7 +41,7 @@ export const updateReleaseMetadataWithCommit = (metadata, date, release) => {
 };
 
 export const fetchAllReleases = async () => {
-  await git.fetch('--tags')
+  await git.fetch('--tags');
 
   const tags = await Promise.all(
     (
@@ -98,13 +98,24 @@ export const getReleaseMetadata = async (name, aliases, releases) => {
   return metadata;
 };
 
-const releases = await fetchAllReleases();
+// const releases = await fetchAllReleases();
 const releaseMetaData = (
   await Promise.all(
     iconJsonFiles.map((iconJsonFile) => {
       const iconName = path.basename(iconJsonFile, '.json');
-      const { aliases } = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, iconJsonFile)));
-      return getReleaseMetadata(iconName, aliases, releases);
+      // const { aliases } = JSON.parse(fs.readFileSync(path.join(ICONS_DIR, iconJsonFile)));
+      // return getReleaseMetadata(iconName, aliases, releases);
+      return {
+        name: iconName,
+        createdRelease: {
+          version: '0.0.0',
+          date: new Date().toISOString(),
+        },
+        changedRelease: {
+          version: '0.0.0',
+          date: new Date().toISOString(),
+        },
+      };
     }),
   )
 ).reduce((acc, { name, ...rest }) => {

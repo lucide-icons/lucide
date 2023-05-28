@@ -6,13 +6,14 @@ const tagWeight = 4;
 const categoryWeight = 3;
 
 const arrayMatches = (a: string[], b: string[]) => {
-  let matches = 0;
-  for (let i = 0; i < a.length; ++i) {
-    if (b.indexOf(a[i]) != -1) {
-      matches++;
-    }
-  }
-  return matches;
+  // let matches = 0;
+  // for (let i = 0; i < a.length; ++i) {
+  //   if (b.indexOf(a[i]) != -1) {
+  //     matches++;
+  //   }
+  // }
+  // return matches;
+  return a.filter(item => b.includes(item)).length;
 }
 
 const nameParts = (icon: IconEntity) => [icon.name, ...icon.aliases ?? []]
