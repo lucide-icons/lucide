@@ -1,4 +1,3 @@
-import Fuse from "fuse.js";
 import { getAllData } from "../.vitepress/lib/icons";
 import { IconEntity } from "../.vitepress/theme/types";
 
