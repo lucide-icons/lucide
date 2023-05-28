@@ -43,7 +43,7 @@ export const updateReleaseMetadataWithCommit = (metadata, date, release) => {
 };
 
 export const fetchAllReleases = async () => {
-  await git.fetch('origin', 'main', '--tags');
+  await git.fetch('https://github.com/lucide-icons/lucide.git', '--tags');
 
   return Promise.all(
     (await git.tag(['-l']))
