@@ -4,7 +4,11 @@
     "pending",
     "dot",
     "progress",
-    "issue"
+    "issue",
+    "radio button",
+    "choices",
+    "multiple choice",
+    "choose"
   ],
   "categories": [
     "shapes"

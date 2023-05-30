@@ -1,10 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "stars",
     "effect",
     "filter",
     "night",
-    "sparkles",
     "magic"
   ],
   "categories": [
@@ -16,5 +16,8 @@
   ],
   "contributors": [
     "karsa-mistmere"
+  ],
+  "aliases": [
+    "stars"
   ]
 }
