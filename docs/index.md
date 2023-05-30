@@ -13,7 +13,7 @@ Lucide encompasses icons with various variants and states, allowing designers an
 
 By expanding the range of available icons, Lucide provides users with a broader selection for their projects. Furthermore, as new applications with specific features emerge, Lucide aims to be a comprehensive icon set to meet diverse project requirements.
 
-When designing new icons, the community adheres to a set of design rules to ensure consistency and usability. While creativity is encouraged, maintaining recognizable design conventions is paramount.
+When designing new icons, the community adheres to a strict set of design rules to ensure consistency and legibility on all sizes. While creativity is encouraged, easily recognizable design is of greater importance to maintain our [design conventions](https://lucide.dev/docs/icon-design-guide).
 
 In addition to design considerations, code optimization plays a vital role. Assets like icons in web projects can significantly impact bandwidth usage. In response, Lucide takes responsibility for minimizing asset size. This is achieved through SVG compression and employing a specific code architecture with tree-shaking capabilities. With tree-shaking, only the icons utilized in a project are shipped, effectively reducing the overall software distribution size.
 
