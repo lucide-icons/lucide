@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "done",
     "todo",
@@ -11,11 +17,5 @@
     "devices",
     "notifications",
     "time"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "jguddas",
-    "karsa-mistmere"
   ]
 }

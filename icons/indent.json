@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Themistoklis"
+  ],
   "tags": [
     "text",
     "tab"
@@ -7,8 +10,5 @@
   "categories": [
     "text",
     "development"
-  ],
-  "contributors": [
-    "Themistoklis"
   ]
 }

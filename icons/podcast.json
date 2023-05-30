@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "iiaishwarya",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "mic",
     "music"
@@ -7,10 +12,5 @@
   "categories": [
     "multimedia",
     "social"
-  ],
-  "contributors": [
-    "iiaishwarya",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

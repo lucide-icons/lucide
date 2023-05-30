@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "email",
     "message",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "mail"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

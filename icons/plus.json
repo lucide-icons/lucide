@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "add",
     "new",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "maths"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

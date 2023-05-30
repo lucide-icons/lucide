@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "siarie"
+  ],
   "tags": [
     "delete",
     "remove"
   ],
   "categories": [
     "account"
-  ],
-  "contributors": [
-    "siarie"
   ]
 }

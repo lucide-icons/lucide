@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "karsa-mistmere"
+  ],
   "tags": [
     "design",
     "social"
@@ -8,9 +12,5 @@
     "brands",
     "social",
     "design"
-  ],
-  "contributors": [
-    "ahtohbi4",
-    "karsa-mistmere"
   ]
 }

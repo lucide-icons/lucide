@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley"
+  ],
   "tags": [
     "quaver",
     "eighth note",
@@ -8,9 +12,5 @@
   "categories": [
     "multimedia",
     "files"
-  ],
-  "contributors": [
-    "it-is-not",
-    "danielbayley"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "ericfennis"
+  ],
   "tags": [
     "time",
     "timer",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "time"
-  ],
-  "contributors": [
-    "ahtohbi4",
-    "ericfennis"
   ]
 }

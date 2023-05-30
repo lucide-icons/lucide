@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "diameter",
     "zero",
@@ -10,11 +13,5 @@
   ],
   "categories": [
     "shapes"
-  ],
-  "aliases": [
-    "circle-slashed"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

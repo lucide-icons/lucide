@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "arrow"
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "colebemis"
   ]
 }

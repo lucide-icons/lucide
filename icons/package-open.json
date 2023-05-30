@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "box",
     "container",
@@ -8,9 +12,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

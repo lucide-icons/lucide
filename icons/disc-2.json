@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "album",
     "vinyl",
@@ -9,10 +14,5 @@
   "categories": [
     "devices",
     "multimedia"
-  ],
-  "contributors": [
-    "danielbayley",
-    "jguddas",
-    "ericfennis"
   ]
 }

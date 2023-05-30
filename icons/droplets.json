@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "water",
     "humidity",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "weather"
-  ],
-  "contributors": [
-    "Andreto",
-    "ericfennis"
   ]
 }

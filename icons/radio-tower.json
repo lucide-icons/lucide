@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "signal",
     "broadcast",
@@ -11,9 +15,5 @@
     "devices",
     "multimedia",
     "social"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
   ]
 }

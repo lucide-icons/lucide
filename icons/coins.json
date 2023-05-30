@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel"
+  ],
   "tags": [
     "money",
     "cash",
@@ -9,8 +12,5 @@
   "categories": [
     "money",
     "gaming"
-  ],
-  "contributors": [
-    "lscheibel"
   ]
 }

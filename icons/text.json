@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "find",
     "search",
@@ -12,9 +16,5 @@
     "text",
     "files",
     "cursors"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
   ]
 }

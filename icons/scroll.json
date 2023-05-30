@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "paper",
     "log",
@@ -15,9 +19,5 @@
     "gaming",
     "development",
     "text"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas"
   ]
 }

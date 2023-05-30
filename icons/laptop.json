@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
     "computer",
     "screen",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "devices"
-  ],
-  "contributors": [
-    "ericfennis",
-    "csandman"
   ]
 }

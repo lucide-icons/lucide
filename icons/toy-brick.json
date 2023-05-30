@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "lego",
     "block",
@@ -10,10 +15,5 @@
   "categories": [
     "gaming",
     "development"
-  ],
-  "contributors": [
-    "ericfennis",
-    "jguddas",
-    "karsa-mistmere"
   ]
 }

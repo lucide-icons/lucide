@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "storage",
     "logistics",
@@ -8,8 +11,5 @@
   "categories": [
     "buildings",
     "maps"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

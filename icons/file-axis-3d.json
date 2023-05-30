@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "model",
     "3d",
@@ -9,8 +12,5 @@
   "categories": [
     "design",
     "files"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

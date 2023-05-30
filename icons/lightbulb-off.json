@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "lights"
   ],
   "categories": [
     "photography"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

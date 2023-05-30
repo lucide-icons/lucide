@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel"
+  ],
   "tags": [
     "photo",
     "selfie",
@@ -9,8 +12,5 @@
   "categories": [
     "communication",
     "devices"
-  ],
-  "contributors": [
-    "lscheibel"
   ]
 }

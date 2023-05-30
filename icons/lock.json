@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
     "security",
     "password",
@@ -8,10 +13,5 @@
   ],
   "categories": [
     "security"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
   ]
 }

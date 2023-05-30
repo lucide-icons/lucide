@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "mittalyashu"
+  ],
   "tags": [
     "issue",
     "report",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "ericfennis",
-    "mittalyashu"
   ]
 }

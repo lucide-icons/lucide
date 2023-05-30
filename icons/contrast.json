@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel"
+  ],
   "tags": [
     "display",
     "accessibility"
@@ -8,8 +11,5 @@
     "photography",
     "accessibility",
     "design"
-  ],
-  "contributors": [
-    "lscheibel"
   ]
 }

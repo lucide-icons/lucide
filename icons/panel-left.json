@@ -1,18 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "primary",
     "drawer"
   ],
   "categories": [
     "layout"
-  ],
-  "aliases": [
-    "sidebar"
-  ],
-  "contributors": [
-    "colebemis",
-    "danielbayley",
-    "ericfennis"
   ]
 }

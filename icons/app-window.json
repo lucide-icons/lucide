@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "application",
     "executable"
@@ -8,9 +12,5 @@
     "design",
     "files",
     "layout"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
   ]
 }

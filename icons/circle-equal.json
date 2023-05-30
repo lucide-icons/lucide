@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "calculate",
     "maths",
@@ -8,8 +11,5 @@
   "categories": [
     "maths",
     "shapes"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

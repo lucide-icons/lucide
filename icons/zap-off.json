@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "flash",
     "camera",
@@ -10,10 +15,5 @@
     "devices",
     "photography",
     "weather"
-  ],
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

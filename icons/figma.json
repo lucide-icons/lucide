@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "logo",
     "design",
@@ -8,11 +14,5 @@
   "categories": [
     "brands",
     "design"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis"
   ]
 }

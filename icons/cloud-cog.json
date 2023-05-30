@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "computing",
     "ai",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

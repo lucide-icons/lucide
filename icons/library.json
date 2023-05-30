@@ -1,5 +1,6 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [],
   "tags": [
     "book",
     "music",
@@ -8,6 +9,5 @@
   "categories": [
     "photography",
     "multimedia"
-  ],
-  "contributors": []
+  ]
 }

@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "code",
     "version control"
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

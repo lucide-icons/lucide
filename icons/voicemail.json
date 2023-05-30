@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "phone",
     "cassette"
@@ -7,10 +12,5 @@
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

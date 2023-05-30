@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "flatscreen",
     "television",
@@ -9,8 +12,5 @@
   "categories": [
     "devices",
     "multimedia"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

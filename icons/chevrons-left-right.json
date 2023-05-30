@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "arrow",
     "expand",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

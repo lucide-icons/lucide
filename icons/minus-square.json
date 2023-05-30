@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "subtract",
     "calculate",
@@ -8,9 +12,5 @@
   "categories": [
     "maths",
     "shapes"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

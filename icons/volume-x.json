@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "music",
     "sound",
@@ -10,10 +15,5 @@
     "connectivity",
     "communication",
     "multimedia"
-  ],
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

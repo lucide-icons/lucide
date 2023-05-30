@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
     "read",
     "dictionary",
@@ -10,10 +15,5 @@
   "categories": [
     "gaming",
     "development"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie"
+  ],
   "tags": [
     "food",
     "snack",
@@ -10,8 +13,5 @@
   ],
   "categories": [
     "food-beverage"
-  ],
-  "contributors": [
-    "kemie"
   ]
 }

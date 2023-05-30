@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "air conditioner",
     "ac",
@@ -9,8 +12,5 @@
   ],
   "categories": [
     "home"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "tags": [
-    "weather"
-  ],
-  "categories": [
-    "weather"
-  ],
   "contributors": [
     "colebemis",
     "csandman",
     "ericfennis",
     "karsa-mistmere"
+  ],
+  "tags": [
+    "weather"
+  ],
+  "categories": [
+    "weather"
   ]
 }

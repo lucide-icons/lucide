@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Bowero",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "logo",
     "design",
@@ -8,10 +13,5 @@
   "categories": [
     "design",
     "photography"
-  ],
-  "contributors": [
-    "Bowero",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

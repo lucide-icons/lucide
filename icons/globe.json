@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
     "world",
     "browser",
@@ -9,10 +14,5 @@
   "categories": [
     "maps",
     "navigation"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
   ]
 }

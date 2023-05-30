@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "emoji",
     "face",
@@ -10,11 +16,5 @@
   "categories": [
     "emoji",
     "account"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis"
   ]
 }

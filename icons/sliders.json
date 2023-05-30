@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "settings",
     "controls"
   ],
   "categories": [
     "account"
-  ],
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

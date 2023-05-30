@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "lactose free",
     "bottle",
@@ -12,9 +16,5 @@
   ],
   "categories": [
     "food-beverage"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

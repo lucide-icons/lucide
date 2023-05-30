@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "navigation",
     "safari",
@@ -12,8 +15,5 @@
     "maps",
     "photography",
     "gaming"
-  ],
-  "contributors": [
-    "colebemis"
   ]
 }

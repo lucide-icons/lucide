@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "connection",
     "wireless",
@@ -12,9 +16,5 @@
   ],
   "categories": [
     "connectivity"
-  ],
-  "contributors": [
-    "ericfennis",
-    "danielbayley"
   ]
 }

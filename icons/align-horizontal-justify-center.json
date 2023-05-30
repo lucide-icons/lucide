@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "center",
     "items",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "layout"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

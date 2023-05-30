@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "badraxas",
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "smartphone",
     "phone",
@@ -14,10 +19,5 @@
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "badraxas",
-    "karsa-mistmere",
-    "jguddas"
   ]
 }

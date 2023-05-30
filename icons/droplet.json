@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
     "water",
     "weather"
@@ -7,10 +12,5 @@
   "categories": [
     "weather",
     "gaming"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis",
-    "csandman"
   ]
 }

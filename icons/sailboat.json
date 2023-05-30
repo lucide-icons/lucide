@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "ship",
     "boat",
@@ -10,9 +14,5 @@
   "categories": [
     "transportation",
     "travel"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

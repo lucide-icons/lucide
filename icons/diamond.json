@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "square",
     "rectangle",
@@ -9,9 +13,5 @@
   ],
   "categories": [
     "shapes"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

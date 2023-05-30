@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "contactless",
     "payment",
@@ -9,9 +13,5 @@
     "communication",
     "money",
     "devices"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas"
   ]
 }

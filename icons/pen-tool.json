@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ashygee",
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "vector",
     "drawing",
@@ -9,10 +14,5 @@
     "text",
     "design",
     "cursors"
-  ],
-  "contributors": [
-    "ashygee",
-    "mittalyashu",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "mittalyashu"
+  ],
   "tags": [
     "leaf",
     "nature",
@@ -8,9 +12,5 @@
   "categories": [
     "nature",
     "gaming"
-  ],
-  "contributors": [
-    "ericfennis",
-    "mittalyashu"
   ]
 }

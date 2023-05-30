@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "xnousnow",
+    "ericfennis"
+  ],
   "tags": [
     "copy",
     "paste"
@@ -7,9 +11,5 @@
   "categories": [
     "text",
     "arrows"
-  ],
-  "contributors": [
-    "xnousnow",
-    "ericfennis"
   ]
 }

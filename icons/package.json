@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "box",
     "container"
@@ -7,12 +14,5 @@
   "categories": [
     "files",
     "development"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

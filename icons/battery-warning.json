@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Kaladii"
+  ],
   "tags": [
     "power",
     "electricity",
@@ -10,8 +13,5 @@
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "Kaladii"
   ]
 }

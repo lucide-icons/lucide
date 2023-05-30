@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "code",
     "digits",
@@ -10,8 +13,5 @@
   "categories": [
     "text",
     "development"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

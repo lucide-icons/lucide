@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley"
+  ],
   "tags": [
     "load"
   ],
   "categories": [
     "multimedia",
     "layout"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "danielbayley"
   ]
 }

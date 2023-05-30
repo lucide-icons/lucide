@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "help",
     "rescue",
@@ -8,9 +12,5 @@
   "categories": [
     "accessibility",
     "medical"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

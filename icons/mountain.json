@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kerkeslager",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "climb",
     "hike",
@@ -8,10 +13,5 @@
   "categories": [
     "nature",
     "gaming"
-  ],
-  "contributors": [
-    "kerkeslager",
-    "ericfennis",
-    "danielbayley"
   ]
 }

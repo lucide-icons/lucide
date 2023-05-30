@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
   "tags": [
     "arrow",
     "filter",
     "sort",
     "descending"
   ],
-  "aliases": [
-    "sort-desc"
-  ],
   "categories": [
     "text",
     "layout",
     "arrows"
-  ],
-  "contributors": [
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
   ]
 }

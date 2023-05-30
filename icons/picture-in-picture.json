@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "cd16b",
+    "ericfennis"
+  ],
   "tags": [
     "display",
     "play",
@@ -12,9 +16,5 @@
   ],
   "categories": [
     "multimedia"
-  ],
-  "contributors": [
-    "cd16b",
-    "ericfennis"
   ]
 }

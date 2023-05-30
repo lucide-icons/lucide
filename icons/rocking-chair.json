@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "connium"
+  ],
   "tags": [
     "chair",
     "furniture",
@@ -7,8 +10,5 @@
   ],
   "categories": [
     "furniture"
-  ],
-  "contributors": [
-    "connium"
   ]
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "pairing"
   ],
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

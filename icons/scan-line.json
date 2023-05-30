@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "wojtekmaj"
+  ],
   "tags": [
     "qr-code"
   ],
   "categories": [
     "devices",
     "social"
-  ],
-  "contributors": [
-    "wojtekmaj"
   ]
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "playlist",
     "subtract",
@@ -10,8 +13,5 @@
   "categories": [
     "multimedia",
     "text"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
   "tags": [
     "clone",
     "duplicate",
@@ -8,9 +12,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "danielbayley",
-    "jguddas"
   ]
 }

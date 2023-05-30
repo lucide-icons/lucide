@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "camera",
     "photo"
   ],
   "categories": [
     "photography"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

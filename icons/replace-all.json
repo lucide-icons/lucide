@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "search",
     "substitute",
@@ -8,10 +13,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
   ]
 }

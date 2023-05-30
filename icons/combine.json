@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "cubes",
     "packages",
@@ -15,9 +19,5 @@
     "shapes",
     "development",
     "files"
-  ],
-  "contributors": [
-    "danielbayley",
-    "ericfennis"
   ]
 }

@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto"
+  ],
   "tags": [
     "key"
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "Andreto"
   ]
 }

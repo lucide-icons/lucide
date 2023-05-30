@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "interpunct",
     "interpoint",
@@ -16,9 +20,5 @@
   "categories": [
     "shapes",
     "text"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
   ]
 }

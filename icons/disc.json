@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "album",
     "cd",
@@ -9,11 +15,5 @@
   "categories": [
     "devices",
     "multimedia"
-  ],
-  "contributors": [
-    "colebemis",
-    "danielbayley",
-    "jguddas",
-    "ericfennis"
   ]
 }

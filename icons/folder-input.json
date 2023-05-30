@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "directory",
     "import",
@@ -8,9 +12,5 @@
   "categories": [
     "files",
     "arrows"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas"
   ]
 }

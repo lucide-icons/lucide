@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "kemie",
+    "ericfennis"
+  ],
   "tags": [
     "food",
     "dish",
@@ -18,10 +23,5 @@
   "categories": [
     "food-beverage",
     "animals"
-  ],
-  "contributors": [
-    "jguddas",
-    "kemie",
-    "ericfennis"
   ]
 }

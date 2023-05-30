@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "direction",
     "step",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
   ]
 }

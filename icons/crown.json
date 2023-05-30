@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "ericfennis"
+  ],
   "tags": [
     "king",
     "winner",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "gaming"
-  ],
-  "contributors": [
-    "ahtohbi4",
-    "ericfennis"
   ]
 }

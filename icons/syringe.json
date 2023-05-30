@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "medicine",
     "medical",
@@ -12,9 +16,5 @@
   "categories": [
     "science",
     "medical"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas"
   ]
 }

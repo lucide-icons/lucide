@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "food",
     "bird",
@@ -8,10 +13,5 @@
   "categories": [
     "food-beverage",
     "animals"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "Andreto",
-    "ericfennis"
   ]
 }

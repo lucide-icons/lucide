@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "maxwellito"
+  ],
   "tags": [
     "pencil",
     "drawing",
@@ -9,8 +12,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "maxwellito"
   ]
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "url",
     "unchain"
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

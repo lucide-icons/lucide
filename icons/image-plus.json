@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "add",
     "create"
@@ -8,10 +13,5 @@
     "photography",
     "multimedia",
     "files"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

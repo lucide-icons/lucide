@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "sugar",
     "food",
@@ -7,8 +10,5 @@
   ],
   "categories": [
     "food-beverage"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "tv",
     "screen",
@@ -8,9 +12,5 @@
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

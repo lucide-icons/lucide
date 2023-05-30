@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "scale",
     "fullscreen"
@@ -7,9 +11,5 @@
   "categories": [
     "layout",
     "arrows"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

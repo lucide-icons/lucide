@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "news",
     "feed",
@@ -11,10 +16,5 @@
   "categories": [
     "multimedia",
     "communication"
-  ],
-  "contributors": [
-    "ericfennis",
-    "jguddas",
-    "karsa-mistmere"
   ]
 }

@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "gubser",
+    "ericfennis"
+  ],
   "tags": [
     "funnel",
     "hopper"
   ],
   "categories": [
     "layout"
-  ],
-  "contributors": [
-    "gubser",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "ericfennis"
+  ],
   "tags": [
     "smartphone",
     "notification",
@@ -12,9 +16,5 @@
     "devices",
     "connectivity",
     "account"
-  ],
-  "contributors": [
-    "lscheibel",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "power",
     "electricity",
@@ -9,9 +13,5 @@
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

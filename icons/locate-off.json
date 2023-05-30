@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "fdev"
+  ],
   "tags": [
     "map",
     "gps",
@@ -9,8 +12,5 @@
   "categories": [
     "navigation",
     "maps"
-  ],
-  "contributors": [
-    "fdev"
   ]
 }

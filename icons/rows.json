@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "split",
     "lines",
@@ -13,8 +16,5 @@
     "layout",
     "design",
     "text"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

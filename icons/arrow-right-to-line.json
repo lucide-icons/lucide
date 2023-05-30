@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "keyboard",
     "key",
@@ -15,9 +19,5 @@
   "categories": [
     "arrows",
     "development"
-  ],
-  "contributors": [
-    "danielbayley",
-    "ericfennis"
   ]
 }

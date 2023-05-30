@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "direction"
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

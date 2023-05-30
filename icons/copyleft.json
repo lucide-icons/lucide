@@ -1,10 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "licence"
   ],
-  "categories": [],
-  "contributors": [
-    "ericfennis"
-  ]
+  "categories": []
 }

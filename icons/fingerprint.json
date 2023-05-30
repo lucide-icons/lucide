@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "2fa",
     "authentication",
@@ -12,8 +15,5 @@
     "security",
     "medical",
     "devices"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

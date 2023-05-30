@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "ericfennis"
+  ],
   "tags": [
     "gizmo",
     "transform",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "design"
-  ],
-  "contributors": [
-    "lscheibel",
-    "ericfennis"
   ]
 }

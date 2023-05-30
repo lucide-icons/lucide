@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "jguddas"
+  ],
   "tags": [
     "storage",
     "memory",
@@ -14,9 +18,5 @@
     "arrows",
     "design",
     "photography"
-  ],
-  "contributors": [
-    "ericfennis",
-    "jguddas"
   ]
 }

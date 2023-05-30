@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "universal",
     "serial",
@@ -12,8 +15,5 @@
     "devices",
     "multimedia",
     "home"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

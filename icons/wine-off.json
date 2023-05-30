@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "alcohol",
     "beverage",
@@ -14,8 +17,5 @@
   ],
   "categories": [
     "food-beverage"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

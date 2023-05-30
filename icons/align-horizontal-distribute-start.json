@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "r4lv"
+  ],
   "tags": [
     "left",
     "items",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "layout"
-  ],
-  "contributors": [
-    "r4lv"
   ]
 }

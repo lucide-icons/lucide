@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "music",
     "audio",
@@ -8,9 +12,5 @@
   "categories": [
     "multimedia",
     "shapes"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

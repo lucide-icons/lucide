@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "exit fullscreen",
     "arrows",
@@ -10,9 +14,5 @@
     "arrows",
     "layout",
     "design"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

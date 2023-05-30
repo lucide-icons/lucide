@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "advertisement",
     "attention",
@@ -9,9 +13,5 @@
   "categories": [
     "multimedia",
     "notifications"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "mallet"
   ],
   "categories": [
     "tools"
-  ],
-  "contributors": [
-    "Andreto",
-    "ericfennis"
   ]
 }

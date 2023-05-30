@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "arrow",
     "caret",
@@ -12,8 +15,5 @@
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "colebemis"
   ]
 }

@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "git",
     "diff",
@@ -8,10 +13,5 @@
   "categories": [
     "shapes",
     "development"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

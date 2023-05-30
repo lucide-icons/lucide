@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie",
+    "karsa-mistmere"
+  ],
   "tags": [
     "animal",
     "pet",
@@ -8,9 +12,5 @@
   ],
   "categories": [
     "animals"
-  ],
-  "contributors": [
-    "kemie",
-    "karsa-mistmere"
   ]
 }

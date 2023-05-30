@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
   "tags": [
     "read",
     "code",
@@ -10,9 +14,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "danielbayley",
-    "jguddas"
   ]
 }

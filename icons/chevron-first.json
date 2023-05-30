@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "dperezcabrera",
+    "ericfennis"
+  ],
   "tags": [
     "arrow",
     "previous",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "dperezcabrera",
-    "ericfennis"
   ]
 }

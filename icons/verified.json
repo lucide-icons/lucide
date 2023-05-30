@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "siarie",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "check"
   ],
   "categories": [
     "account",
     "social"
-  ],
-  "contributors": [
-    "siarie",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

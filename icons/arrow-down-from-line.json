@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "direction",
     "download",
@@ -10,9 +14,5 @@
   "categories": [
     "arrows",
     "files"
-  ],
-  "contributors": [
-    "danielbayley",
-    "ericfennis"
   ]
 }

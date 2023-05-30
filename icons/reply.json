@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "email"
   ],
   "categories": [
     "mail"
-  ],
-  "contributors": [
-    "Andreto",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "csandman",
+    "danielbayley",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "map",
     "gps",
@@ -9,11 +15,5 @@
   "categories": [
     "navigation",
     "maps"
-  ],
-  "contributors": [
-    "csandman",
-    "danielbayley",
-    "jguddas",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "alarm",
     "notification",
@@ -9,11 +15,5 @@
   "categories": [
     "account",
     "notifications"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "danielbayley"
   ]
 }

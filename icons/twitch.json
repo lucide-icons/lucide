@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4"
+  ],
   "tags": [
     "logo",
     "social"
@@ -9,8 +12,5 @@
     "social",
     "account",
     "gaming"
-  ],
-  "contributors": [
-    "ahtohbi4"
   ]
 }

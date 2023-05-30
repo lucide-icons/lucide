@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "key",
     "private",
@@ -9,8 +12,5 @@
   "categories": [
     "files",
     "security"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

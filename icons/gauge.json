@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "dashboard",
     "dial",
@@ -13,8 +16,5 @@
     "transportation",
     "sports",
     "science"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

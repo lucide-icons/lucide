@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "like",
     "love",
@@ -11,11 +17,5 @@
     "multimedia",
     "emoji",
     "gaming"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis",
-    "danielbayley",
-    "karsa-mistmere"
   ]
 }

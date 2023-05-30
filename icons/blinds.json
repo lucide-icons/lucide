@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "it-is-not"
+  ],
   "tags": [
     "shades",
     "screen",
@@ -13,9 +17,5 @@
   ],
   "categories": [
     "home"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "it-is-not"
   ]
 }

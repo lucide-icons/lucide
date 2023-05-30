@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
   "tags": [
     "computing",
     "electricity",
@@ -8,9 +12,5 @@
   "categories": [
     "science",
     "development"
-  ],
-  "contributors": [
-    "danielbayley",
-    "jguddas"
   ]
 }

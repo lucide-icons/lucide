@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
     "console"
   ],
   "categories": [
     "gaming",
     "devices"
-  ],
-  "contributors": [
-    "ericfennis",
-    "csandman"
   ]
 }

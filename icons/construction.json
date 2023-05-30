@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas"
+  ],
   "tags": [
     "roadwork",
     "maintenance",
@@ -8,10 +13,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
-    "jguddas"
   ]
 }

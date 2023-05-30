@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "boat",
     "trip",
@@ -10,8 +13,5 @@
     "transportation",
     "travel",
     "maps"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

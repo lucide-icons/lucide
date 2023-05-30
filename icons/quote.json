@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Billiam"
+  ],
   "tags": [
     "quotation"
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "Billiam"
   ]
 }

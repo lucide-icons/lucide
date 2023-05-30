@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "cancel",
     "close",
@@ -13,9 +17,5 @@
     "maths",
     "shapes",
     "notifications"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

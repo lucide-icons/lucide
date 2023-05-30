@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "it-is-not"
+  ],
   "tags": [
     "mind",
     "intellect",
@@ -12,10 +17,5 @@
   "categories": [
     "science",
     "development"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas",
-    "it-is-not"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "morning",
     "turn-off"
@@ -8,9 +12,5 @@
     "devices",
     "notifications",
     "time"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

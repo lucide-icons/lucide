@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "siarie"
+  ],
   "tags": [
     "add"
   ],
   "categories": [
     "account"
-  ],
-  "contributors": [
-    "siarie"
   ]
 }

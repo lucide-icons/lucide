@@ -1,16 +1,16 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "karsa-mistmere",
+    "FPDK",
+    "ericfennis"
+  ],
   "tags": [
     "person",
     "user"
   ],
   "categories": [
     "account"
-  ],
-  "contributors": [
-    "lscheibel",
-    "karsa-mistmere",
-    "FPDK",
-    "ericfennis"
   ]
 }

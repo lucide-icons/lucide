@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "tags": [
-    "directory"
-  ],
-  "categories": [
-    "files"
-  ],
   "contributors": [
     "colebemis",
     "csandman",
     "ericfennis",
     "karsa-mistmere"
+  ],
+  "tags": [
+    "directory"
+  ],
+  "categories": [
+    "files"
   ]
 }

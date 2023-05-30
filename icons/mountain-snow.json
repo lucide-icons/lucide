@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kerkeslager",
+    "ericfennis"
+  ],
   "tags": [
     "alpine",
     "climb",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "nature"
-  ],
-  "contributors": [
-    "kerkeslager",
-    "ericfennis"
   ]
 }

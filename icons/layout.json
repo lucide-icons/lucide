@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "window",
     "webpage"
@@ -7,9 +11,5 @@
   "categories": [
     "design",
     "layout"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

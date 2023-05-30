@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "stars",
     "effect",
@@ -13,11 +16,5 @@
     "multimedia",
     "gaming",
     "weather"
-  ],
-  "contributors": [
-    "karsa-mistmere"
-  ],
-  "aliases": [
-    "stars"
   ]
 }

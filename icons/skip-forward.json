@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "arrow",
     "skip",
@@ -9,9 +13,5 @@
   "categories": [
     "multimedia",
     "arrows"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

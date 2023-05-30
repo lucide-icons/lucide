@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "scale",
     "fullscreen"
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

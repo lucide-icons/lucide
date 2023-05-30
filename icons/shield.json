@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "security",
     "secure"
@@ -9,8 +12,5 @@
     "security",
     "gaming",
     "development"
-  ],
-  "contributors": [
-    "colebemis"
   ]
 }

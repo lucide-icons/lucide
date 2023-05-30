@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "element",
     "mouse",
@@ -12,9 +16,5 @@
     "arrows",
     "cursors",
     "development"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

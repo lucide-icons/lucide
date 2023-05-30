@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "food",
     "restaurant",
@@ -13,8 +16,5 @@
     "food-beverage",
     "travel",
     "maps"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

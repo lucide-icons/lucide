@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "read",
     "dictionary",
@@ -12,8 +15,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

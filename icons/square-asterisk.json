@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "password",
     "secret",
@@ -10,8 +13,5 @@
     "text",
     "security",
     "account"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

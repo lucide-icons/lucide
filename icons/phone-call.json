@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
   "tags": [
     "ring"
   ],
@@ -7,11 +13,5 @@
     "connectivity",
     "devices",
     "communication"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "ericfennis"
+  ],
   "tags": [
     "arrows",
     "axis",
@@ -10,9 +14,5 @@
   ],
   "categories": [
     "design"
-  ],
-  "contributors": [
-    "lscheibel",
-    "ericfennis"
   ]
 }

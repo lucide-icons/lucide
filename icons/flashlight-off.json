@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "torch"
   ],
   "categories": [
     "photography",
     "devices"
-  ],
-  "contributors": [
-    "Andreto",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "weather",
     "mist"
   ],
   "categories": [
     "weather"
-  ],
-  "contributors": [
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

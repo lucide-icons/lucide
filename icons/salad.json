@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie"
+  ],
   "tags": [
     "food",
     "vegetarian",
@@ -14,8 +17,5 @@
   "categories": [
     "food-beverage",
     "emoji"
-  ],
-  "contributors": [
-    "kemie"
   ]
 }

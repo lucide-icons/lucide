@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
   "tags": [
     "barcode"
   ],
   "categories": [
     "development",
     "social"
-  ],
-  "contributors": [
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
   ]
 }

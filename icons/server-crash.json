@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "cloud",
     "storage",
@@ -9,9 +13,5 @@
   "categories": [
     "development",
     "devices"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "bookmark",
     "favorite",
@@ -10,10 +15,5 @@
   "categories": [
     "social",
     "multimedia"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "danielbayley"
   ]
 }

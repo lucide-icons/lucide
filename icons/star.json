@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "bookmark",
     "favorite",
@@ -15,8 +18,5 @@
     "weather",
     "emoji",
     "gaming"
-  ],
-  "contributors": [
-    "colebemis"
   ]
 }

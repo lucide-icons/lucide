@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "ericfennis",
+    "Andreto"
+  ],
   "tags": [
     "bus",
     "vehicle",
@@ -8,10 +13,5 @@
   ],
   "categories": [
     "transportation"
-  ],
-  "contributors": [
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto"
   ]
 }

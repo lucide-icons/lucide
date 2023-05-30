@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "danielbayley"
+  ],
   "tags": [
     "gizmo",
     "coordinates"
   ],
   "categories": [
     "design"
-  ],
-  "contributors": [
-    "lscheibel",
-    "danielbayley"
   ]
 }

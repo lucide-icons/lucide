@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "yukosgiti",
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
     "share"
   ],
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "yukosgiti",
-    "ericfennis",
-    "csandman"
   ]
 }

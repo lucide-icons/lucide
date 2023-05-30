@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "unlimited",
     "forever",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "multimedia"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

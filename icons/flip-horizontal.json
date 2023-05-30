@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "reflect",
     "mirror",
@@ -8,9 +12,5 @@
   "categories": [
     "design",
     "photography"
-  ],
-  "contributors": [
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

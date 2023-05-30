@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "drink",
     "cup",
@@ -11,12 +18,5 @@
   ],
   "categories": [
     "food-beverage"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

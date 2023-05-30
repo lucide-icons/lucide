@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "statistics",
     "diagram",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "charts"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

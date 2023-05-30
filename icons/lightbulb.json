@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "idea",
     "bright",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "photography"
-  ],
-  "contributors": [
-    "ericfennis",
-    "danielbayley"
   ]
 }

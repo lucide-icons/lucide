@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "face",
     "biometric",
@@ -9,8 +12,5 @@
   "categories": [
     "devices",
     "social"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

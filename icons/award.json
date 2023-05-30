@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "achievement",
     "badge"
   ],
   "categories": [
     "account"
-  ],
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere"
   ]
 }

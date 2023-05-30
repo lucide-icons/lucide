@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "lscheibel",
+    "ericfennis"
+  ],
   "tags": [
     "photo",
     "webcam",
@@ -9,10 +14,5 @@
     "photography",
     "devices",
     "communication"
-  ],
-  "contributors": [
-    "colebemis",
-    "lscheibel",
-    "ericfennis"
   ]
 }

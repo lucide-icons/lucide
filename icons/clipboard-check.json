@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "copied",
     "pasted",
@@ -11,10 +16,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

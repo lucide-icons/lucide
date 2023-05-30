@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "window",
     "webpage",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "layout"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

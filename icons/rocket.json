@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "release",
     "boost",
@@ -10,8 +13,5 @@
   "categories": [
     "gaming",
     "development"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

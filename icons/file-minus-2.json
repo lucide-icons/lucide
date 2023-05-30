@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "document"
   ],
   "categories": [
     "files"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

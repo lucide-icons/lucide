@@ -70,7 +70,13 @@ await Promise.all(
       ...(json.contributors || []),
       ...(await getContributors(file, true)),
     ].filter((contributor, idx, arr) => contributor && arr.indexOf(contributor) === idx);
-
-    fs.writeFileSync(jsonFile, JSON.stringify({ ...json, contributors }, null, 2));
+    const {tags, categories, aliases, ...rest} = json;
+    fs.writeFileSync(jsonFile, JSON.stringify({
+      "$schema": "../icon.schema.json",
+      contributors,
+      tags,
+      categories,
+      ...rest
+    }, null, 2));
   })
 );

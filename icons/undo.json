@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "aelfric",
+    "ericfennis"
+  ],
   "tags": [
     "redo",
     "rerun",
@@ -8,9 +12,5 @@
   "categories": [
     "text",
     "arrows"
-  ],
-  "contributors": [
-    "aelfric",
-    "ericfennis"
   ]
 }

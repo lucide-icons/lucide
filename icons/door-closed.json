@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "entrance",
     "entry",
@@ -15,8 +18,5 @@
     "travel",
     "furniture",
     "security"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

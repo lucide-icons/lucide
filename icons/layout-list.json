@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "image",
     "photo",
@@ -9,8 +12,5 @@
     "design",
     "layout",
     "photography"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

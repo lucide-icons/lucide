@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "pulse",
     "health",
@@ -10,8 +13,5 @@
     "medical",
     "account",
     "social"
-  ],
-  "contributors": [
-    "colebemis"
   ]
 }

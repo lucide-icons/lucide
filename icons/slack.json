@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ashygee",
+    "wojtekmaj",
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "logo"
   ],
@@ -9,12 +16,5 @@
     "communication",
     "brands",
     "development"
-  ],
-  "contributors": [
-    "colebemis",
-    "ashygee",
-    "wojtekmaj",
-    "mittalyashu",
-    "ericfennis"
   ]
 }

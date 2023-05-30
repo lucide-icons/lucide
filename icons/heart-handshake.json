@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "agreement",
     "charity",
@@ -14,9 +18,5 @@
     "emoji",
     "account",
     "security"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

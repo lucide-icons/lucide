@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "arrow",
     "cursor",
@@ -8,8 +11,5 @@
   "categories": [
     "arrows",
     "cursors"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "vehicle",
     "transport",
@@ -7,8 +10,5 @@
   ],
   "categories": [
     "transportation"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

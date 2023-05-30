@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "music",
     "audio",
@@ -8,8 +11,5 @@
   "categories": [
     "multimedia",
     "shapes"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

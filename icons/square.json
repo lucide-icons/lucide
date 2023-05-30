@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "rectangle",
     "aspect ratio",
@@ -8,9 +12,5 @@
   ],
   "categories": [
     "shapes"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

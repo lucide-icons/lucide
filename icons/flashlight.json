@@ -1,11 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [],
   "tags": [
     "torch"
   ],
   "categories": [
     "photography",
     "devices"
-  ],
-  "contributors": []
+  ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "radioactive",
     "nuclear",
@@ -13,9 +17,5 @@
   ],
   "categories": [
     "science"
-  ],
-  "contributors": [
-    "danielbayley",
-    "ericfennis"
   ]
 }

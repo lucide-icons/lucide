@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
     "leaf",
     "luck",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "gaming"
-  ],
-  "contributors": [
-    "ericfennis",
-    "csandman"
   ]
 }

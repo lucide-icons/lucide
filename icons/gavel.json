@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "hammer",
     "mallet"
@@ -7,9 +11,5 @@
   "categories": [
     "maps",
     "tools"
-  ],
-  "contributors": [
-    "Andreto",
-    "ericfennis"
   ]
 }

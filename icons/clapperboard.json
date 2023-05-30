@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "ericfennis"
+  ],
   "tags": [
     "movie",
     "film",
@@ -10,9 +14,5 @@
   ],
   "categories": [
     "multimedia"
-  ],
-  "contributors": [
-    "it-is-not",
-    "ericfennis"
   ]
 }

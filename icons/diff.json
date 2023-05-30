@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "patch",
     "difference",
@@ -11,9 +15,5 @@
   "categories": [
     "development",
     "files"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

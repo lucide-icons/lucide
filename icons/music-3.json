@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley"
+  ],
   "tags": [
     "crotchet",
     "minim",
@@ -10,9 +14,5 @@
   "categories": [
     "multimedia",
     "files"
-  ],
-  "contributors": [
-    "it-is-not",
-    "danielbayley"
   ]
 }

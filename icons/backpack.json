@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "bag",
     "hiking",
@@ -12,8 +15,5 @@
     "gaming",
     "photography",
     "travel"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "draw",
     "paint",
@@ -9,8 +12,5 @@
     "text",
     "design",
     "tools"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
   "tags": [
     "table"
   ],
@@ -7,12 +14,5 @@
     "text",
     "layout",
     "design"
-  ],
-  "contributors": [
-    "colebemis",
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "mittalyashu"
   ]
 }

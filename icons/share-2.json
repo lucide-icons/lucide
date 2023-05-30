@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "network",
     "connections"
@@ -7,9 +11,5 @@
   "categories": [
     "account",
     "social"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

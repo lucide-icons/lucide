@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "brush",
     "paintbrush",
@@ -10,8 +13,5 @@
     "text",
     "design",
     "photography"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

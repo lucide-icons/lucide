@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "unflag"
   ],
   "categories": [
     "account",
     "social"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

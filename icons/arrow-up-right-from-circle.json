@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "direction"
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

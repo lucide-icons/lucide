@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "arrow",
     "left"
@@ -7,8 +10,5 @@
   "categories": [
     "arrows",
     "design"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

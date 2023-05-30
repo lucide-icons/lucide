@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "heartbreak",
     "sadness",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "emoji"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto"
+  ],
   "tags": [
     "cup",
     "lab",
@@ -10,8 +13,5 @@
   "categories": [
     "science",
     "gaming"
-  ],
-  "contributors": [
-    "Andreto"
   ]
 }

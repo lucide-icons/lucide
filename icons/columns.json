@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
   "tags": [
     "split",
     "parallel",
@@ -10,11 +16,5 @@
     "layout",
     "design",
     "text"
-  ],
-  "contributors": [
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "mittalyashu"
   ]
 }

@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "game",
     "console",
@@ -8,10 +13,5 @@
   "categories": [
     "gaming",
     "devices"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "karsa-mistmere",
-    "ericfennis"
   ]
 }

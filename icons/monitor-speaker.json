@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "devices",
     "connect",
@@ -8,9 +12,5 @@
   "categories": [
     "connectivity",
     "devices"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

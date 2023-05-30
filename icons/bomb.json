@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "fatal",
     "error",
@@ -10,9 +14,5 @@
     "explode",
     "explosive"
   ],
-  "categories": [],
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
-  ]
+  "categories": []
 }

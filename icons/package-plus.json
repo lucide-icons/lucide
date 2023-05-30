@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Reund0",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "new",
     "add",
@@ -7,10 +12,5 @@
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "Reund0",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

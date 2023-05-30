@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "gelato",
     "food",
@@ -11,10 +16,5 @@
   ],
   "categories": [
     "food-beverage"
-  ],
-  "contributors": [
-    "kemie",
-    "jguddas",
-    "karsa-mistmere"
   ]
 }

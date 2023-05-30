@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "sidebar",
     "secondary",
@@ -10,9 +14,5 @@
   ],
   "categories": [
     "layout"
-  ],
-  "contributors": [
-    "danielbayley",
-    "ericfennis"
   ]
 }

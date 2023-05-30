@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "font",
     "text",
@@ -9,8 +12,5 @@
   "categories": [
     "files",
     "text"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

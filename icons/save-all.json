@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "floppy disks",
     "copy"
@@ -7,10 +12,5 @@
   "categories": [
     "text",
     "files"
-  ],
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere",
-    "jguddas"
   ]
 }

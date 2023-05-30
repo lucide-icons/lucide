@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "paper",
     "log",
@@ -15,8 +18,5 @@
     "gaming",
     "development",
     "text"
-  ],
-  "contributors": [
-    "danielbayley"
   ]
 }

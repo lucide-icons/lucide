@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley"
+  ],
   "tags": [
     "lyrics",
     "voice",
@@ -15,9 +19,5 @@
   "categories": [
     "devices",
     "multimedia"
-  ],
-  "contributors": [
-    "it-is-not",
-    "danielbayley"
   ]
 }

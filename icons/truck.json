@@ -1,5 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ahtohbi4",
+    "ericfennis",
+    "Andreto",
+    "csandman",
+    "karsa-mistmere"
+  ],
   "tags": [
     "delivery",
     "van",
@@ -9,13 +17,5 @@
   ],
   "categories": [
     "transportation"
-  ],
-  "contributors": [
-    "colebemis",
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto",
-    "csandman",
-    "karsa-mistmere"
   ]
 }

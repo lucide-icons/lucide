@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "signal",
     "broadcast",
@@ -11,12 +18,5 @@
     "devices",
     "multimedia",
     "social"
-  ],
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

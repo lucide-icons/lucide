@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "text",
     "alignment",
@@ -9,9 +13,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }

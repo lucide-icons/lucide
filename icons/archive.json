@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "index",
     "box"
@@ -7,10 +12,5 @@
   "categories": [
     "files",
     "mail"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis",
-    "karsa-mistmere"
   ]
 }

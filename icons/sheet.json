@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "zenoamaro",
+    "ericfennis"
+  ],
   "tags": [
     "spreadsheets",
     "table",
@@ -8,9 +12,5 @@
   "categories": [
     "text",
     "files"
-  ],
-  "contributors": [
-    "zenoamaro",
-    "ericfennis"
   ]
 }

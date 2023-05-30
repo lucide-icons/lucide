@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "playlist",
     "video",
@@ -7,8 +10,5 @@
   ],
   "categories": [
     "multimedia"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

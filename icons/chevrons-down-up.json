@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "PeterlitsZo"
+  ],
   "tags": [
     "arrow",
     "collapse",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "arrows"
-  ],
-  "contributors": [
-    "PeterlitsZo"
   ]
 }

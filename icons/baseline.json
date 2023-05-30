@@ -1,5 +1,6 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [],
   "tags": [
     "text",
     "format",
@@ -7,6 +8,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": []
+  ]
 }

@@ -1,11 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "tags": [],
-  "categories": [
-    "design"
-  ],
   "contributors": [
     "ericfennis",
     "jguddas"
+  ],
+  "tags": [],
+  "categories": [
+    "design"
   ]
 }

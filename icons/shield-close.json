@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "security",
     "secure",
@@ -9,9 +13,5 @@
   ],
   "categories": [
     "security"
-  ],
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
   ]
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "fortress",
     "stronghold",
@@ -11,8 +14,5 @@
     "buildings",
     "gaming",
     "maps"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

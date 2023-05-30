@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "cross out",
     "delete",
@@ -8,8 +11,5 @@
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "ericfennis"
   ]
 }

@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "cutter",
     "scalpel",
@@ -7,9 +11,5 @@
   ],
   "categories": [
     "design"
-  ],
-  "contributors": [
-    "karsa-mistmere",
-    "danielbayley"
   ]
 }

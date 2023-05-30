@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "robot",
     "ai"
   ],
   "categories": [
     "development"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

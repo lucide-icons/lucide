@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "measure",
     "meter",
@@ -9,9 +13,5 @@
   "categories": [
     "design",
     "layout"
-  ],
-  "contributors": [
-    "Andreto",
-    "ericfennis"
   ]
 }

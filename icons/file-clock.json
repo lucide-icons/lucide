@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "history",
     "log",
@@ -8,8 +11,5 @@
   "categories": [
     "files",
     "time"
-  ],
-  "contributors": [
-    "karsa-mistmere"
   ]
 }

@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "reference"
   ],
   "categories": [
     "text"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

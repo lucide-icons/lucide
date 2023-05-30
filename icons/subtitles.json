@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "karsa-mistmere"
+  ],
   "tags": [
     "captions",
     "closed captions",
     "accessibility"
   ],
-  "categories": [],
-  "contributors": [
-    "it-is-not",
-    "karsa-mistmere"
-  ]
+  "categories": []
 }

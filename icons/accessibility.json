@@ -1,5 +1,6 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [],
   "tags": [
     "disability",
     "disabled",
@@ -9,6 +10,5 @@
   "categories": [
     "accessibility",
     "medical"
-  ],
-  "contributors": []
+  ]
 }

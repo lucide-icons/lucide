@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
   "tags": [
     "save"
   ],
   "categories": [
     "arrows",
     "files"
-  ],
-  "contributors": [
-    "mittalyashu"
   ]
 }

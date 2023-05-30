@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "cut"
   ],
   "categories": [
     "text",
     "design"
-  ],
-  "contributors": [
-    "colebemis",
-    "ericfennis"
   ]
 }
