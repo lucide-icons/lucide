@@ -5,4 +5,5 @@ export * from './lib/lucide-angular.module';
 export * from './lib/lucide-icon.config';
 export * from './lib/lucide-icon.provider';
 export * from './icons/lucide-icons';
+export * from './aliases';
 export { icons };

@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "script",
+    "document",
+    "html",
+    "xml",
+    "property list",
+    "plist"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}

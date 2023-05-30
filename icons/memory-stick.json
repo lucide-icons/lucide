@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "ram"
+  ],
+  "categories": [
+    "devices",
+    "development",
+    "gaming"
+  ]
+}

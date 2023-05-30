@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "stars",
+    "effect",
+    "filter",
+    "night",
+    "magic"
+  ],
+  "categories": [
+    "shapes",
+    "cursors",
+    "multimedia",
+    "gaming",
+    "weather"
+  ],
+  "aliases": [
+    "stars"
+  ]
+}

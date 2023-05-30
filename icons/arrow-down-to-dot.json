@@ -1,0 +1,11 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "direction",
+    "step",
+    "into"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}

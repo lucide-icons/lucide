@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "salad",
+    "lettuce",
+    "vegetable",
+    "chard",
+    "cabbage",
+    "bok choy"
+  ],
+  "categories": [
+    "food-beverage",
+    "emoji"
+  ]
+}

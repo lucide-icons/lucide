@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "electricity",
+    "electronics",
+    "socket",
+    "outlet",
+    "disconnect"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

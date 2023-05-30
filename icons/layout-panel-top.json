@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "window",
+    "webpage",
+    "block",
+    "section",
+    "grid",
+    "template",
+    "structure"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "redo",
+    "history",
+    "step",
+    "over",
+    "forward"
+  ],
+  "categories": [
+    "text",
+    "arrows"
+  ]
+}
