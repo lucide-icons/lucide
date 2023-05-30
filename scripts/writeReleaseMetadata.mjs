@@ -73,11 +73,7 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
     if (file.endsWith('.json')) return;
 
     const version = tag.replace('v', '');
-    let iconName = path.basename(file, '.svg');
-
-    if (status.startsWith('R')) {
-      iconName = path.basename(renamedFile, '.svg');
-    }
+    const iconName = path.basename(file, '.svg');
 
     if (newReleaseMetaData[iconName] == null) newReleaseMetaData[iconName] = {};
 
@@ -85,6 +81,28 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
       version,
       date,
     };
+
+    if (iconName === 'sort-asc') {
+      console.log(status, file, renamedFile, releaseData);
+    }
+
+    if (status.startsWith('R')) {
+      newReleaseMetaData[iconName].changedRelease = {
+        version,
+        date,
+      };
+
+      const renamedIconName = path.basename(renamedFile, '.svg');
+
+      if (newReleaseMetaData[renamedIconName] == null) {
+        newReleaseMetaData[renamedIconName] = {};
+      }
+
+      newReleaseMetaData[renamedIconName].changedRelease = {
+        version,
+        date,
+      };
+    }
 
     if (status === 'A') {
       if ('changedRelease' in newReleaseMetaData[iconName]) {
@@ -105,11 +123,11 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
 
 const defaultReleaseMetaData = {
   createdRelease: {
-    version: '0.1.0',
+    version: '0.0.0',
     date: DATE_OF_FORK,
   },
   changedRelease: {
-    version: '0.1.0',
+    version: '0.0.0',
     date: DATE_OF_FORK,
   },
 };

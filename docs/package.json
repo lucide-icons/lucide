@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "pnpm prebuild && vitepress dev",
+    "docs:dev": "pnpm run \"/^prebuild:.*/\" && vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",
@@ -21,8 +21,7 @@
     "build": "pnpm run \"/^prebuild:.*/\" && pnpm run \"/^build:.*/\" && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Eric Fennis",
   "license": "ISC",
   "devDependencies": {
     "h3": "^1.6.4",

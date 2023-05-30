@@ -56,10 +56,22 @@ const codeExample = computed(() => data.codeExamples?.map(
       <IconInfo :icon="$params" />
       <div :class="$style.meta">
         <div :class="$style.version">
-          <Label>Created:</Label><Badge>v{{$params.createdRelease.version}}</Badge>
+          <Label>Created:</Label>
+          <Badge
+            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.createdRelease.version}`"
+            target="_blank"
+          >
+            v{{$params.createdRelease.version}}
+          </Badge>
         </div>
         <div :class="$style.version">
-          <Label>Last changed:</Label><Badge>v{{$params.changedRelease.version}}</Badge>
+          <Label>Last changed:</Label>
+          <Badge
+            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.changedRelease.version}`"
+            target="_blank"
+          >
+            v{{$params.changedRelease.version}}
+          </Badge>
         </div>
         <IconContributors :icon="$params" :class="$style.contributors"/>
       </div>

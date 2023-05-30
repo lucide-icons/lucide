@@ -10,27 +10,12 @@
   import IconInfo from './IconInfo.vue';
   import Badge from '../base/Badge.vue';
 
-  // TODO: Retrieve data from API
-
   const props = defineProps<{
-    iconName: string
+    icon: IconEntity
   }>()
 
-  // const icon =
-  const icon = ref<IconEntity>(null)
-
-  watch(() => props.iconName, async (iconName) => {
-    if (iconName) {
-      icon.value = (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
-    } else {
-      icon.value = null
-    }
-  }, {
-    immediate: true
-  })
-
   const emit = defineEmits(['close'])
-  const isOpen = computed(() => !!icon.value)
+  const isOpen = computed(() => !!props.icon)
 
   function onClose() {
     emit('close')
@@ -47,7 +32,11 @@
     <div class="overlay-container" v-if="icon">
       <div class="overlay-panel">
         <nav class="overlay-menu">
-          <Badge class="version">v{{ icon.createdRelease.version }}</Badge>
+          <Badge
+            class="version"
+            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${icon.createdRelease.version}`"
+            target="_blank"
+          >v{{ icon.createdRelease.version }}</Badge>
           <IconButton  @click="go(`/icons/${icon.name}`)">
             <component :is="Expand" />
           </IconButton>

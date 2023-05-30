@@ -58,7 +58,7 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-// const activeIcon = computed(() => props.icons.find((icon) => icon.name === activeIconName.value))
+const activeIcon = computed(() => props.icons.find((icon) => icon.name === activeIconName.value))
 
 watch(searchQueryThrottled, (searchString) => {
   currentPage.value = 1
@@ -97,7 +97,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
   <EndOfPage @end-of-page="next" class="bottom-page"/>
   <IconDetailOverlay
     v-if="activeIconName != null"
-    :iconName="activeIconName"
+    :icon="activeIcon"
     @close="setActiveIconName('')"
   />
 </template>

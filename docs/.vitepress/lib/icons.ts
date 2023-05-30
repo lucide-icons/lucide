@@ -1,11 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { parseSync } from "svgson";
-import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
 import { IconNodeWithKeys } from "../theme/types";
 import iconNodes from '../data/iconNodes'
-import { generateHashedKey } from "./helpers";
 import releaseMeta from "../data/releaseMetaData.json";
+
+const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
 
 const directory = path.join(process.cwd(), "../icons");
 
@@ -21,33 +20,21 @@ export interface GetDataOptions {
   withChildKeys?: boolean
 }
 
-export async function getData(name: string, { withChildKeys = false }: GetDataOptions | undefined = {}) {
-  const svgPath = path.join(directory, `${name}.svg`);
-  const svgContent = fs.readFileSync(svgPath, "utf8");
+export async function getData(name: string) {
   const jsonPath = path.join(directory, `${name}.json`);
   const jsonContent = fs.readFileSync(jsonPath, "utf8");
   const { tags, categories, contributors } = JSON.parse(jsonContent);
 
-  const iconNode = parseSync(svgContent).children.map(
-    (child) => {
-      const { name, attributes } = child
-
-      if (withChildKeys) {
-        attributes.key = generateHashedKey(child)
-      }
-
-      return [name, attributes]
-    }
-  ) as IconNode
+  const iconNode = iconNodes[name]
 
   const releaseData = releaseMeta?.[name] ?? {
     "createdRelease": {
-      "version": "0.1.0",
-      "date": new Date().toISOString()
+      "version": "0.0.0",
+      "date": DATE_OF_FORK
     },
     "changedRelease": {
-      "version": "0.1.0",
-      "date": new Date().toISOString()
+      "version": "0.0.0",
+      "date": DATE_OF_FORK
     }
   }
 
@@ -61,9 +48,8 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
   };
 }
 
-export async function getAllData(options?: GetDataOptions): Promise<{ name: string, iconNode: IconNodeWithKeys}[]> {
-  // const names = getAllNames();
+export async function getAllData(): Promise<{ name: string, iconNode: IconNodeWithKeys}[]> {
+  const names = getAllNames();
 
-  // return Promise.all(names.map((name) => getData(name, options)));
-  return Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }))
+  return Promise.all(names.map((name) => getData(name)));
 }

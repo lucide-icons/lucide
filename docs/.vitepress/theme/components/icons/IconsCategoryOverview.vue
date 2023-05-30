@@ -51,6 +51,10 @@ const categories = computed(() => {
   .filter(({ icons }) => icons.length)
 })
 
+const activeIcon = computed(() =>
+  props.icons?.find((icon) => icon.name === activeIconName.value)
+)
+
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
 )
@@ -83,7 +87,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
   />
   <IconDetailOverlay
     v-if="activeIconName != null"
-    :iconName="activeIconName"
+    :icon="activeIcon"
     @close="setActiveIconName('')"
   />
 </template>
