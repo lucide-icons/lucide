@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "putting green",
+    "ball",
+    "hole",
+    "course",
+    "par",
+    "double bogey",
+    "birdie",
+    "eagle",
+    "albatross",
+    "handicap",
+    "caddie",
+    "caddy"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
