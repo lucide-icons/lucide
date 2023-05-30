@@ -4,6 +4,9 @@
     "tv",
     "screen",
     "display",
+    "desktop",
+    "running",
+    "active",
     "virtual machine",
     "vm"
   ],
@@ -13,3 +16,4 @@
     "development"
   ]
 }
+

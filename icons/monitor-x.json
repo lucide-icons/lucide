@@ -4,8 +4,14 @@
     "tv",
     "screen",
     "display",
+    "desktop",
     "virtual machine",
-    "vm"
+    "vm",
+    "close",
+    "stop",
+    "suspend",
+    "remove",
+    "delete"
   ],
   "categories": [
     "connectivity",
