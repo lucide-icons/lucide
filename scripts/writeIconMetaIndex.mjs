@@ -12,20 +12,33 @@ if (fs.existsSync(location)) {
   fs.unlinkSync(location);
 }
 
-let outputString = '';
+const iconMetaIndexFileImports = [];
+const iconMetaIndexFileExports = [];
 
 iconJsonFiles.forEach((iconJsonFile) => {
   const iconName = path.basename(iconJsonFile, '.json');
-  outputString += `export { default as ${toCamelCase(
-    iconName,
-  )} } from '../../../icons/${iconName}.json';\n`;
+
+  iconMetaIndexFileImports.push(
+    `import ${toCamelCase(iconName)}Metadata from '../../../icons/${iconName}.json';`,
+  );
+  iconMetaIndexFileExports.push(`  '${iconName}': ${toCamelCase(iconName)}Metadata,`);
 });
 
-fs.promises
-  .writeFile(location, outputString, 'utf-8')
-  .then(() => {
-    console.log('Successfully write icon json file index');
-  })
-  .catch((error) => {
-    throw new Error(`Something went wrong generating icon json file index file,\n ${error}`);
-  });
+try {
+  await fs.promises.writeFile(
+    location,
+    `\
+${iconMetaIndexFileImports.join('\n')}
+
+
+  export default {
+${iconMetaIndexFileExports.join('\n')}
+  }
+    `,
+    'utf-8',
+  );
+
+  console.log('Successfully write icon json file index');
+} catch (error) {
+  throw new Error(`Something went wrong generating icon json file index file,\n ${error}`);
+}

@@ -10,7 +10,6 @@
     "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",
     "prebuild:iconNodes": "node ../scripts/writeIconNodes.mjs",
-    "prebuild:iconDetails": "node ../scripts/writeIconDetails.mjs",
     "prebuild:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
     "prebuild:releaseJson": "node ../scripts/writeReleaseMetadata.mjs",
     "prebuild:relatedIcons": "node ../scripts/writeIconRelatedIcons.mjs",
