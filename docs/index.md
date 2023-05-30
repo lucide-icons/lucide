@@ -11,7 +11,7 @@ Lucide is an open-source icon library designed for displaying icons and symbols 
 
 Lucide encompasses icons with various variants and states, allowing designers and developers to select the most suitable icon for their needs. If a desired icon is not available, users are encouraged to submit a design request. The Lucide community contributors are dedicated to creating new icons and fulfilling such requests.
 
-By expanding the range of available icons, Lucide provides users with a broader selection for their projects. Furthermore, as new applications with specific features emerge, Lucide aims to offer a comprehensive icon set to meet diverse project requirements.
+By expanding the range of available icons, Lucide provides users with a broader selection for their projects. Furthermore, as new applications with specific features emerge, Lucide aims to be a comprehensive icon set to meet diverse project requirements.
 
 When designing new icons, the community adheres to a set of design rules to ensure consistency and usability. While creativity is encouraged, maintaining recognizable design conventions is paramount.
 
