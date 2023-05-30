@@ -2,8 +2,7 @@ import { eventHandler, setResponseHeader, defaultContentType } from 'h3'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import { createElement } from 'react'
 import SvgPreview from '../../lib/SvgPreview/index.tsx';
-import * as iconNodes from '../../data/iconNodes'
-import { camelCase } from 'lodash-es'
+import iconNodes from '../../data/iconNodes'
 import createLucideIcon from 'lucide-react/src/createLucideIcon'
 import Backdrop from '../../lib/SvgPreview/Backdrop.tsx';
 
@@ -16,10 +15,9 @@ export default eventHandler((event) => {
   const src = Buffer.from(data, 'base64').toString('utf8');
 
   const children = []
-  const camelCaseName = camelCase(name)
 
-  if (camelCaseName in iconNodes) {
-    const iconNode = iconNodes[camelCaseName]
+  if (name in iconNodes) {
+    const iconNode = iconNodes[name]
 
     const LucideIcon = createLucideIcon(name, iconNode)
     const svg = renderToStaticMarkup(createElement(LucideIcon))

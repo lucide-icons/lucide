@@ -1,4 +1,5 @@
 export type IconNode = [elementName: string, attrs: Record<string, string>][]
+export type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][]
 
 export interface IconEntity {
   name: string;

@@ -11,14 +11,16 @@ export function getAllCategoryFiles(): Category[] {
     const name = path.basename(fileName, '.json')
     const fileContent = fs.readFileSync(path.join(directory, fileName), 'utf8')
 
+    const parsedFileContent = JSON.parse(fileContent)
+
     return {
       name,
-      ...JSON.parse(fileContent)
+      title: parsedFileContent.title,
     }
   });
 }
 
-export function mapCategoryIconCount(categories: Category[], icons: IconEntity[]) {
+export function mapCategoryIconCount(categories: Category[], icons: { categories: IconEntity['categories'] }[]) {
   return categories.map((category) => ({
     ...category,
     iconCount: icons.reduce((acc, curr) => (curr.categories.includes(category.name) ? ++acc : acc), 0)

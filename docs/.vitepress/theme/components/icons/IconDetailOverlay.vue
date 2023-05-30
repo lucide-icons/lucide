@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { IconEntity } from '../../types'
-  import { computed, ref } from 'vue'
+  import { computed, ref, watch } from 'vue'
   import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
   import IconButton from '../base/IconButton.vue';
   import IconContributors from './IconContributors.vue';
@@ -10,12 +10,27 @@
   import IconInfo from './IconInfo.vue';
   import Badge from '../base/Badge.vue';
 
+  // TODO: Retrieve data from API
+
   const props = defineProps<{
-    icon: IconEntity
+    iconName: string
   }>()
 
+  // const icon =
+  const icon = ref<IconEntity>(null)
+
+  watch(() => props.iconName, async (iconName) => {
+    if (iconName) {
+      icon.value = (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+    } else {
+      icon.value = null
+    }
+  }, {
+    immediate: true
+  })
+
   const emit = defineEmits(['close'])
-  const isOpen = computed(() => !!props.icon)
+  const isOpen = computed(() => !!icon.value)
 
   function onClose() {
     emit('close')
@@ -29,7 +44,7 @@
 
 <template>
   <Transition name="drawer" appear>
-    <div class="overlay-container" v-if="props.icon">
+    <div class="overlay-container" v-if="icon">
       <div class="overlay-panel">
         <nav class="overlay-menu">
           <Badge class="version">v{{ icon.createdRelease.version }}</Badge>
@@ -42,13 +57,13 @@
         </nav>
         <IconPreview
           id="previewer"
-          :name="props.icon.name"
-          :iconNode="props.icon.iconNode"
+          :name="icon.name"
+          :iconNode="icon.iconNode"
           customizable
         />
-        <IconInfo :icon="props.icon" popoverPosition="top">
+        <IconInfo :icon="icon" popoverPosition="top">
           <template v-slot:footer>
-            <IconContributors :icon="props.icon" class="contributors" />
+            <IconContributors :icon="icon" class="contributors" />
           </template>
         </IconInfo>
       </div>

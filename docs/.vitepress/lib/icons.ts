@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import { parseSync } from "svgson";
 import { IconNode } from "../../../packages/lucide-react/src/createLucideIcon";
-import { IconEntity } from "../theme/types";
+import { IconNodeWithKeys } from "../theme/types";
+import iconNodes from '../data/iconNodes'
 import { generateHashedKey } from "./helpers";
 import releaseMeta from "../data/releaseMetaData.json";
 
@@ -60,8 +61,9 @@ export async function getData(name: string, { withChildKeys = false }: GetDataOp
   };
 }
 
-export async function getAllData(options?: GetDataOptions): Promise<IconEntity[]> {
-  const names = getAllNames();
+export async function getAllData(options?: GetDataOptions): Promise<{ name: string, iconNode: IconNodeWithKeys}[]> {
+  // const names = getAllNames();
 
-  return Promise.all(names.map((name) => getData(name, options)));
+  // return Promise.all(names.map((name) => getData(name, options)));
+  return Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }))
 }

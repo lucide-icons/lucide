@@ -10,6 +10,7 @@ import IconsCategory from './IconsCategory.vue'
 const props = defineProps<{
   icons: IconEntity[]
   categories: Category[]
+  iconCategories: Record<string, string[]>
 }>()
 
 const activeIconName = ref(null)
@@ -30,9 +31,12 @@ const categories = computed(() => {
   if( !props.categories?.length || !props.icons?.length ) return []
 
   return props.categories.map(({ name, title }) => {
-    const categoryIcons = props.icons.filter(
-      ({ categories }) => categories.includes(name)
-    )
+    const categoryIcons = props.icons.filter((icon) => {
+      const iconCategories = props.iconCategories[icon.name]
+
+      return iconCategories?.includes(name)
+    })
+
 
     const searchedCategoryIcons = isSearching
       ? categoryIcons.filter(icon => searchResults.value.some((item) => item?.name === icon?.name))
@@ -46,10 +50,6 @@ const categories = computed(() => {
   })
   .filter(({ icons }) => icons.length)
 })
-
-const activeIcon = computed(() =>
-  props.icons?.find((icon) => icon.name === activeIconName.value)
-)
 
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
@@ -83,7 +83,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
   />
   <IconDetailOverlay
     v-if="activeIconName != null"
-    :icon="activeIcon"
+    :iconName="activeIconName"
     @close="setActiveIconName('')"
   />
 </template>

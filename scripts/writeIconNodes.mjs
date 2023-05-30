@@ -18,25 +18,43 @@ if (!fs.existsSync(iconNodesDirectory)) {
   fs.mkdirSync(iconNodesDirectory);
 }
 
+const iconIndexFile = path.resolve(iconNodesDirectory, `index.ts`);
+const iconIndexFileImports = [];
+const iconIndexFileExports = [];
+const iconIndexFileDefaultExports = [];
+
 const writeIconFiles = Object.entries(icons).map(async ([iconName, { children }]) => {
+  // We need to use .node.json because the there is a file called package, which is a reserved word for packages.
   const location = path.resolve(iconNodesDirectory, `${iconName}.node.json`);
   const iconNode = children.map(({ name, attributes }) => [name, attributes]);
 
   const output = JSON.stringify(iconNode, null, 2);
   await fs.promises.writeFile(location, output, 'utf-8');
 
-  const indexFile = path.resolve(iconNodesDirectory, `index.ts`);
-  await fs.promises.appendFile(
-    indexFile,
-    `export { default as ${toCamelCase(iconName)} } from './${iconName}.node.json';\n`,
-    'utf-8',
-  );
+  iconIndexFileImports.push(`import ${toCamelCase(iconName)}Node from './${iconName}.node.json';`);
+  iconIndexFileExports.push(`  ${toCamelCase(iconName)}Node as ${toCamelCase(iconName)},`);
+  iconIndexFileDefaultExports.push(`  '${iconName}': ${toCamelCase(iconName)}Node,`);
 });
 
-Promise.all(writeIconFiles)
-  .then(() => {
-    console.log('Successfully write', writeIconFiles.length, 'iconNodes.');
-  })
-  .catch((error) => {
-    throw new Error(`Something went wrong generating iconNode files,\n ${error}`);
-  });
+try {
+  await Promise.all(writeIconFiles);
+  await fs.promises.writeFile(
+    iconIndexFile,
+    `\
+${iconIndexFileImports.join('\n')}
+
+export {
+${iconIndexFileExports.join('\n')}
+}
+
+export default {
+${iconIndexFileDefaultExports.join('\n')}
+}
+  `,
+    'utf-8',
+  );
+
+  console.log('Successfully write', writeIconFiles.length, 'iconNodes.');
+} catch (error) {
+  throw new Error(`Something went wrong generating iconNode files,\n ${error}`);
+}

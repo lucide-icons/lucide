@@ -1,13 +1,13 @@
 import { getAllData } from '../../../lib/icons';
 import { getAllCategoryFiles, mapCategoryIconCount } from '../../../lib/categories';
+import * as iconsMetaData from '../../../data/iconMetaData'
 
 
 export default {
   async load() {
-    const icons = await getAllData()
     let categories = getAllCategoryFiles()
 
-    categories = mapCategoryIconCount(categories, icons)
+    categories = mapCategoryIconCount(categories, Object.values(iconsMetaData))
 
     return {
       categories,
