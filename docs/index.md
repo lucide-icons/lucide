@@ -30,6 +30,6 @@ Lucide provides several official packages for various frameworks and platforms, 
 - [NodeJS](https://lucide.dev/docs/lucide-static#nodejs)
 - [Flutter](https://lucide.dev/docs/lucide-flutter)
 
-If you have any questions or require assistance with Lucide, feel free to reach out to the community. You can find active community members on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
+If you have any questions or need help using Lucide, feel free to reach out to the community. You can find active community members on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
 
 
