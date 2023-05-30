@@ -2,9 +2,14 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "album",
+    "music",
     "cd",
     "dvd",
-    "music"
+    "format",
+    "dj",
+    "spin",
+    "rotate",
+    "rpm"
   ],
   "categories": [
     "devices",
