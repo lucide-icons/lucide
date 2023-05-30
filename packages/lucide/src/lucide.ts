@@ -25,7 +25,7 @@ const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) 
   if (nameAttr === 'data-lucide') {
     const deprecatedElements = document.querySelectorAll('[icon-name]');
     if (deprecatedElements.length > 0) {
-      console.warn('Icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0');
+      console.warn('[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide');
       Array.from(deprecatedElements).forEach((element) =>
         replaceElement(element, { nameAttr: 'icon-name', icons, attrs }),
       );
