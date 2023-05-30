@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "tee off",
+    "driver",
+    "driving range",
+    "sand wedge",
+    "pitching wedge",
+    "putter",
+    "putting",
+    "green",
+    "course",
+    "hole in one",
+    "par",
+    "double bogey",
+    "birdie",
+    "eagle",
+    "albatross",
+    "handicap",
+    "caddie",
+    "caddy",
+    "bunker",
+    "rough",
+    "mini golf",
+    "crazy golf"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
