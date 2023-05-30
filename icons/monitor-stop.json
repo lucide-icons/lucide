@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "desktop",
+    "video",
+    "movie",
+    "film",
+    "stop",
+    "shutdown",
+    "virtual machine",
+    "vm"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "multimedia",
+    "development"
+  ]
+}

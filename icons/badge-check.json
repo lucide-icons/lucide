@@ -1,15 +1,13 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "siarie",
-    "ericfennis",
-    "karsa-mistmere"
-  ],
   "tags": [
+    "verified",
     "check"
   ],
   "categories": [
     "account",
-    "social"
-  ]
+    "social",
+    "shapes"
+  ],
+  "aliases": ["verified"]
 }

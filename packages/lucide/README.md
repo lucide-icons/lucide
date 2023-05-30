@@ -35,9 +35,9 @@ Here is a complete example with unpkg
 ```html
 <!DOCTYPE html>
 <body>
-  <i icon-name="volume-2" class="my-class"></i>
-  <i icon-name="x"></i>
-  <i icon-name="menu"></i>
+  <i data-lucide="volume-2" class="my-class"></i>
+  <i data-lucide="x"></i>
+  <i data-lucide="menu"></i>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -49,11 +49,11 @@ Here is a complete example with unpkg
 ### With ESModules
 
 To reduce bundle size, lucide is built to be fully tree-shakable.
-The `createIcons` function will search for HTMLElements with the attribute `icon-name` and replace it with the svg from the given icon name.
+The `createIcons` function will search for HTMLElements with the attribute `data-lucide` and replace it with the svg from the given icon name.
 
 ```html
 <!-- Your HTML file -->
-<i icon-name="menu"></i>
+<i data-lucide="menu"></i>
 ```
 
 ```js
@@ -89,7 +89,7 @@ createIcons({
     'stroke-width': 1,
     stroke: '#333'
   },
-  nameAttr: 'icon-name' // attribute for the icon name.
+  nameAttr: 'data-lucide' // attribute for the icon name.
 });
 ```
 

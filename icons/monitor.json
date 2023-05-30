@@ -7,10 +7,13 @@
   "tags": [
     "tv",
     "screen",
-    "display"
+    "display",
+    "virtual machine",
+    "vm"
   ],
   "categories": [
     "connectivity",
-    "devices"
+    "devices",
+    "development"
   ]
 }

@@ -11,7 +11,9 @@
     "timeline",
     "version",
     "time machine",
-    "backup"
+    "backup",
+    "rotate",
+    "ccw"
   ],
   "categories": [
     "arrows",
