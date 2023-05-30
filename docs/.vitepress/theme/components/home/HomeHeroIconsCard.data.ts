@@ -4,7 +4,7 @@ const getRandomItem = <Item>(items: Item[]): Item => items[Math.floor(Math.rando
 
 export default {
   async load() {
-    const icons = Object.values(iconNodes)
+    const icons = Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }))
 
     const randomIcons = Array.from({ length: 200 }, () => getRandomItem(icons))
 

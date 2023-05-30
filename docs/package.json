@@ -25,7 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "h3": "^1.6.4",
-    "nitropack": "latest",
+    "nitropack": "^2.4.1",
     "node-fetch": "2",
     "vitepress": "1.0.0-alpha.75"
   },
