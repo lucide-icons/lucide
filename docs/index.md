@@ -7,7 +7,7 @@ nextPage:
 
 # Introduction
 
-Lucide is an open-source icon library for displaying icons and symbols in both digital and non-digital projects. It offers a collection of 1000+ vector (SVG) files. To simplify the integration of these icons into projects, Lucide provides several official packages.
+Lucide is an open-source icon library to be used in both digital and non-digital projects. It offers a collection of 1000+ icons and symbols in the form of vector images (SVG files). To simplify the integration of these icons into projects, Lucide provides several official packages.
 
 Lucide contains icons with multiple variants and states, allowing designers and developers to select the most suitable icon for their needs. If a desired icon is not available, feel free to [submit a design request](https://github.com/lucide-icons/lucide/issues/new?assignees=&labels=%F0%9F%99%8C+icon+request&projects=&template=icon_request.md). Lucide community contributors are dedicated to creating new icons and fulfilling such requests.
 
