@@ -41,7 +41,7 @@ const EditPage = () => {
   const [debouncedSrc, debouncing] = useDebounce(src, 500);
   const formatted = useSWR(['/api/edit/format', debouncedSrc], fetcher, swrOptions);
   const optimized = useSWR(['/api/edit/optimize', debouncedSrc], fetcher, swrOptions);
-  const snapped = useSWR(['/api/edit/snap', debouncedSrc], fetcher, swrOptions);
+  // const snapped = useSWR(['/api/edit/snap', debouncedSrc], fetcher, swrOptions);
   const volume = useSWR(['/api/edit/volume', debouncedSrc], fetcher, swrOptions);
 
   const [user, repository, name, ...branchSegments] =
@@ -140,6 +140,7 @@ const EditPage = () => {
                 {Math.round((1 - formatted.data?.length / optimized.data?.length) * 1000) / 10 +
                   '%'}
               </Button>
+              {/*
               <Button
                 variant="outline"
                 isLoading={debouncing || snapped.isLoading}
@@ -150,6 +151,7 @@ const EditPage = () => {
               >
                 Snap
               </Button>
+              */}
               <Button onClick={onDownload}>Download</Button>
               <Button colorScheme={src === urlSrc ? undefined : 'green'} onClick={onSave}>
                 Save
