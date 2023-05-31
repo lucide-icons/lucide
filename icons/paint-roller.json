@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "brush",
+    "color",
+    "colour",
+    "decoration",
+    "diy"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "home",
+    "tools"
+  ]
+}
