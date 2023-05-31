@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "electricity",

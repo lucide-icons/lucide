@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "zenoamaro",
-    "ericfennis"
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
   ],
   "tags": [
     "spreadsheets",

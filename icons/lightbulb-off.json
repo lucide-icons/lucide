@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "lights"

@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "jguddas"
+    "jguddas",
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "storage",

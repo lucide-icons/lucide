@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
   ],
   "tags": [
     "unchain",

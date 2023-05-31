@@ -1,6 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [],
+  "contributors": [
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
     "book",
     "music",

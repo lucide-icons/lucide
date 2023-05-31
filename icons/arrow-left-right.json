@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "wojtekmaj"
+    "wojtekmaj",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "bidirectional",

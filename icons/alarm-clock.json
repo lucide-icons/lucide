@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel"
+    "lscheibel",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "morning"

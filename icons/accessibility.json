@@ -1,6 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [],
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "disability",
     "disabled",
