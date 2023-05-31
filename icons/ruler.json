@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "Andreto",
-    "ericfennis"
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
   ],
   "tags": [
     "measure",

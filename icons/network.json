@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "johnletey"
+    "johnletey",
+    "csandman",
+    "karsa-mistmere"
   ],
   "tags": [
     "tree"

@@ -2,7 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas",
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "electricity",

@@ -2,7 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "lscheibel",
-    "johnletey"
+    "johnletey",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "morning"

@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "siarie"
+    "siarie",
+    "ericfennis"
   ],
   "tags": [
     "add"

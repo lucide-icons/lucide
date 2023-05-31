@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Andreto"
+    "Andreto",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "beaker",
