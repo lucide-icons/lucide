@@ -1,6 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "ball",
+    "flag",
+    "hole",
+    "mini golf",
+    "crazy golf",
     "tee off",
     "driver",
     "driving range",
@@ -20,9 +25,7 @@
     "caddie",
     "caddy",
     "bunker",
-    "rough",
-    "mini golf",
-    "crazy golf"
+    "rough"
   ],
   "categories": [
     "sports",
