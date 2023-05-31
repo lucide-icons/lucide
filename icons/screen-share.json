@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "johnletey"
   ],
   "tags": [
     "host",

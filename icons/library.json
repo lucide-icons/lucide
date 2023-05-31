@@ -1,6 +1,8 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [],
+  "contributors": [
+    "johnletey"
+  ],
   "tags": [
     "book",
     "music",

@@ -17,6 +17,9 @@ const getUserName = pMemoize(
       repo: 'lucide',
       ref: commit.hash,
     });
+    if (!fetchedCommit?.author?.login) {
+      console.error(`Could not find author name for ${commit.author_email}`);
+    }
     return fetchedCommit?.author?.login;
   },
   { cacheKey: ([commit]) => commit.author_email, cache }
@@ -66,14 +69,17 @@ await Promise.all(
   files.map(async (file) => {
     const jsonFile = path.join(process.cwd(), file.replace('.svg', '.json'));
     const json = JSON.parse(fs.readFileSync(jsonFile));
-    const contributors = [
-      ...(json.contributors || []),
+    const {tags, categories, aliases, contributors, ...rest} = json;
+    const newContributors = [
+      ...(contributors || []),
       ...(await getContributors(file, true)),
     ].filter((contributor, idx, arr) => contributor && arr.indexOf(contributor) === idx);
-    const {tags, categories, aliases, ...rest} = json;
+    if (newContributors.length === 0) {
+      console.error(`${jsonFile} doesn't have any contributors added.`);
+    }
     fs.writeFileSync(jsonFile, JSON.stringify({
       "$schema": "../icon.schema.json",
-      contributors,
+      contributors: newContributors,
       tags,
       categories,
       ...rest
