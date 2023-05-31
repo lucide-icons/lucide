@@ -23,7 +23,7 @@ const getUserName = pMemoize(
 );
 
 const getContributors = async (file, includeCoAuthors) => {
-  const { all: commits } = await simpleGit().log(['--reverse', '--follow', '--', file]);
+  const { all: commits } = await simpleGit().log(['--reverse', '--', file]);
 
   const emails = new Map();
   for (let i = 0; i < commits.length; i += 1) {
@@ -66,17 +66,24 @@ await Promise.all(
   files.map(async (file) => {
     const jsonFile = path.join(process.cwd(), file.replace('.svg', '.json'));
     const json = JSON.parse(fs.readFileSync(jsonFile));
+    const { tags, categories, aliases, contributors: previousContributors, ...rest } = json;
     const contributors = [
-      ...(json.contributors || []),
+      ...(previousContributors || []),
       ...(await getContributors(file, true)),
     ].filter((contributor, idx, arr) => contributor && arr.indexOf(contributor) === idx);
-    const {tags, categories, aliases, ...rest} = json;
-    fs.writeFileSync(jsonFile, JSON.stringify({
-      "$schema": "../icon.schema.json",
-      contributors,
-      tags,
-      categories,
-      ...rest
-    }, null, 2));
+    fs.writeFileSync(
+      jsonFile,
+      JSON.stringify(
+        {
+          $schema: '../icon.schema.json',
+          contributors,
+          tags,
+          categories,
+          ...rest,
+        },
+        null,
+        2
+      )
+    );
   })
 );
