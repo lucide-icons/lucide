@@ -17,13 +17,12 @@ const iconStyling = {
 type IconEditorProps = {
   value: string;
   onChange: (value: string) => void;
-  backdrop: string;
 };
-const IconEditor = ({ value, onChange, backdrop }: IconEditorProps) => {
+const IconEditor = ({ value, onChange }: IconEditorProps) => {
   return (
     <Flex>
       <Box style={iconStyling} className="icon-large">
-        <SvgEditor src={value} onChange={onChange} backdrop={backdrop} />
+        <SvgEditor src={value} onChange={onChange} />
       </Box>
       <Editor
         value={value}

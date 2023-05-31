@@ -32,15 +32,7 @@ const pathToPathNode = (path: Path) => ({
   attributes: { d: path.d },
 });
 
-const SvgEditor = ({
-  src,
-  onChange,
-  backdrop,
-}: {
-  src: string;
-  onChange: (svg: string) => void;
-  backdrop: string;
-}) => {
+const SvgEditor = ({ src, onChange }: { src: string; onChange: (svg: string) => void }) => {
   const [paths, setPaths] = useState<Path[]>([]);
   const [isContextMenuOpen, setIsContextMenuOpen] = useState(false);
   const dragTargetRef = useRef(undefined);
@@ -64,8 +56,12 @@ const SvgEditor = ({
 
     console.log('render');
     const onMouseDown = (event: MouseEvent) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
       const className = event.target?.getAttribute('class');
       console.log('mouseDown');
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
       if (event.target?.getAttribute('role') === 'menuitem') {
         return;
       }
@@ -174,7 +170,6 @@ const SvgEditor = ({
       <SvgPreview
         showGrid
         src={paths}
-        backdrop={backdrop}
         onContextMenu={(e) => {
           if (selected) {
             setIsContextMenuOpen(true);
@@ -257,7 +252,6 @@ const SvgEditor = ({
       )}
       <style>
         {`
-.svg-preview-backdrop-group { stroke: red; stroke-opacity: 0.5; }
 .svg-editor-path:hover, .svg-editor-start:hover, .svg-editor-end:hover { stroke: black; stroke-opacity: 0.5 }
 .svg-editor-path, .svg-editor-start, .svg-editor-end { cursor: pointer }
 .svg-editor-segment-${selected?.id}-${selected?.idx}.svg-editor-path { stroke: black; stroke-opacity: 0.5 }
