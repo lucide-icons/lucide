@@ -120,7 +120,11 @@ const Layout = ({ aside, children, keyBindings }: LayoutProps) => {
         </Flex>
       </Flex>
       <Flex>
-        {aside ? <Box as="aside" marginRight={{ base: 0, lg: -240, }}>{aside}</Box> : null}
+        {aside ? (
+          <Box as="aside" marginRight={{ base: 0, lg: -240 }}>
+            {aside}
+          </Box>
+        ) : null}
         <Flex margin="0 auto" direction="column" maxW="1250px" px={5} width="100%">
           {children}
           <Divider mb={6} mt={12} />

@@ -80,9 +80,10 @@ const EditPage = () => {
     <Layout keyBindings={{ s: { ctrl: true, fn: onSave } }}>
       <Flex gap={6} marginTop={-6} direction="column">
         <Flex justifyContent="space-between" gap={8}>
-          <Text fontSize="2xl" fontWeight="semi-bold" as="h1">
+          <Text fontSize="2xl" fontWeight="semi-bold" as="h1" display="flex" gap={2}>
             {name && user && repository ? (
               <>
+                <span dangerouslySetInnerHTML={{ __html: formatted.data }} />
                 <Text textTransform="capitalize">{name}</Text>
                 <Text fontSize="xs">
                   from{' '}
@@ -102,15 +103,18 @@ const EditPage = () => {
                 </Text>
               </>
             ) : (
-              'Playground'
+              <>
+                <span dangerouslySetInnerHTML={{ __html: formatted.data }} />
+                Playground
+              </>
             )}
           </Text>
           <Flex gap={2} direction="column">
             <Flex justifyContent="end" minHeight="18px">
-              {!volume.isLoading && parseFloat(volume.data) < 225 ? (
+              {volume.data && parseFloat(volume.data) < 225 ? (
                 <Badge colorScheme="orange">Icon might be a bit small</Badge>
-              ) : !volume.isLoading && parseFloat(volume.data) > 350 ? (
-                <Badge colorScheme="red">Icon is quite big, compared with square and circle</Badge>
+              ) : volume.data && parseFloat(volume.data) > 350 ? (
+                <Badge colorScheme="red">Icon is quite big, compared to square and circle</Badge>
               ) : null}
             </Flex>
             <Flex gap={2}>

@@ -1,8 +1,9 @@
 import { Box, Flex } from '@chakra-ui/react';
 import memoize from 'lodash/memoize';
 import Editor from 'react-simple-code-editor';
-import SvgPreview from 'src/components/SvgPreview';
+import SvgEditor from './SvgEditor';
 import highlight from './highlight';
+import React from 'react';
 
 const mHighlight = memoize(highlight);
 
@@ -16,12 +17,13 @@ const iconStyling = {
 type IconEditorProps = {
   value: string;
   onChange: (value: string) => void;
+  backdrop: string;
 };
-const IconEditor = ({ value, onChange }: IconEditorProps) => {
+const IconEditor = ({ value, onChange, backdrop }: IconEditorProps) => {
   return (
     <Flex>
       <Box style={iconStyling} className="icon-large">
-        <SvgPreview src={value} showGrid />
+        <SvgEditor src={value} onChange={onChange} backdrop={backdrop} />
       </Box>
       <Editor
         value={value}

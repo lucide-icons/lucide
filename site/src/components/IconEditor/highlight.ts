@@ -120,14 +120,20 @@ const getCommands = (src: string) => {
   });
 };
 
-const highlight = (src: string) => {
+export default (src: string) => {
   const escape = (src: string) =>
     src.replace(new RegExp('&', 'g'), '&amp').replace(new RegExp('<', 'g'), '&lt');
 
-  const highlight = (src: Record<number, string>, start: number, end: number, color: string) => {
+  const highlight = (
+    src: Record<number, string>,
+    start: number,
+    end: number,
+    color: string,
+    selector: string
+  ) => {
     if (!src[start] || !src[end]) return src;
     src[start] =
-      `<span style="box-shadow: 0 0 0 1px white;color: #fff; background-color: ${color}; border-radius: 2px">` +
+      `<span class="icon-editor-highlight-${selector}" style="position: relative;box-shadow: 0 0 0 1px white;color: #fff; background-color: ${color}; border-radius: 2px">` +
       src[start];
     src[end - 1] = src[end - 1] + '</span>';
     return src;
@@ -160,15 +166,12 @@ const highlight = (src: string) => {
       const { loc, type, name, idx: cIdx, id: cId } = commands[i];
       if (type !== 'm') {
         const color = colors[idx++ % colors.length];
-        const selector =
-          name === 'path'
-            ? `.svg-preview-colored-segment-${cId}-${cIdx}`
-            : `.svg-preview-colored-${name}-${cId}`;
-        styles.push(`${selector} { stroke: ${color} }`);
+        const selector = name === 'path' ? `segment-${cId}-${cIdx}` : `${cId}`;
+        styles.push(`.svg-preview-colored-${selector} { stroke: ${color} }`);
         if (commands[i - 1]?.type === 'm') {
-          highlighted = highlight(highlighted, commands[i - 1].loc[0], loc[1], color);
+          highlighted = highlight(highlighted, commands[i - 1].loc[0], loc[1], color, selector);
         } else {
-          highlighted = highlight(highlighted, loc[0], loc[1], color);
+          highlighted = highlight(highlighted, loc[0], loc[1], color, selector);
         }
       }
     }
@@ -178,5 +181,3 @@ const highlight = (src: string) => {
 
   return Object.values(highlighted).join('') + `<style>${styles.join('\n')}</style>`;
 };
-
-export default highlight;
