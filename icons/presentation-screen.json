@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "whiteboard",
+    "marker pens",
+    "markers",
+    "school",
+    "learning",
+    "lesson",
+    "office",
+    "meeting",
+    "projection",
+    "slideshow",
+    "home movie",
+    "film",
+    "cinema",
+    "pull-down",
+    "drop-down",
+    "cord"
+  ],
+  "categories": [
+    "multimedia",
+    "photography",
+    "devices",
+    "communication",
+    "design"
+  ]
+}
