@@ -25,12 +25,14 @@
     "icons2categories": "node scripts/migrateIconsToCategories.mjs --presets @babel/env",
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
+    "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
   "devDependencies": {
+    "@octokit/rest": "^19.0.7",
     "eslint": "^8.36.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
@@ -40,7 +42,9 @@
     "lint-staged": "^13.2.0",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.1",
+    "p-memoize": "^7.1.1",
     "prettier": "2.7.1",
+    "simple-git": "^3.18.0",
     "svgo": "^3.0.2",
     "svgson": "^5.2.1"
   },

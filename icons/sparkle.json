@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Shiva953",
+    "karsa-mistmere"
+  ],
   "tags": [
     "star",
     "effect",
