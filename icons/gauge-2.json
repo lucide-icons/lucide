@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "dashboard",
+    "dial",
+    "meter",
+    "speed",
+    "pressure",
+    "measure"
+  ],
+  "categories": [
+    "account",
+    "transportation",
+    "sports",
+    "science"
+  ]
+}
