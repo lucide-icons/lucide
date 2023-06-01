@@ -65,7 +65,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
 </script>
 
 <template>
-  <StickyBar class="search-bar">
+  <StickyBar class="search-bar category-search">
     <InputSearch
       :placeholder="`Search ${icons.length} icons ...`"
       v-model="searchQuery"
@@ -97,7 +97,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
   width: 100%;
 }
 
-.search-bar {
+.search-bar.category-search {
   margin-bottom: -54px;
 }
 </style>

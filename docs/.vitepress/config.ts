@@ -27,6 +27,16 @@ export default defineConfig({
       ]
     }
   },
+  head: [
+    [
+      'script',
+      {
+        src: 'https://plausible.io/js/script.js',
+        'data-domain': 'lucide.dev',
+        defer: ''
+      }
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -47,6 +57,9 @@ export default defineConfig({
     footer: {
       message: 'Released under the ISC License.',
       copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`
-    }
+    },
+    editLink: {
+      pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path'
+    },
   }
 })
