@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "cancel",
     "no",
@@ -12,8 +15,5 @@
   ],
   "categories": [
     "account"
-  ],
-  "aliases": [
-    "slash"
   ]
 }

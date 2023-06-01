@@ -1,13 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas"
+  ],
   "tags": [
     "square",
     "rectangle",
     "oblique",
     "rhombus",
-    "shape"
+    "shape",
+    "suit",
+    "playing",
+    "cards"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "gaming"
   ]
 }

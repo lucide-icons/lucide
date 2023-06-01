@@ -43,7 +43,7 @@ export async function getData(name: string) {
     tags,
     categories,
     iconNode,
-    contributors: ['ericfennis', 'karsa-mistmere'],
+    contributors,
     ...releaseData
   };
 }

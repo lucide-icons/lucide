@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "contactless",
     "payment",

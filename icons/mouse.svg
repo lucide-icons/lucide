@@ -9,6 +9,6 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <rect width="12" height="18" x="6" y="3" rx="6" />
-  <path d="M12 7v4" />
+  <rect width="14" height="20" x="5" y="2" rx="7" />
+  <path d="M12 6v4" />
 </svg>

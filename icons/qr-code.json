@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
   "tags": [
     "barcode",
     "scan"

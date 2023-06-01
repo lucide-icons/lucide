@@ -68,10 +68,11 @@ const props = defineProps<{
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 3px solid var(--vp-c-bg-elv);
+  border: 2px solid var(--vp-c-bg-elv);
+  background-color: var(--vp-c-neutral);
 }
 .avatar:hover .avatar-image {
-  border: 3px solid var(--vp-c-bg-soft-mute);
+  border: 2px solid var(--vp-c-bg-soft-mute);
 }
 
 .avatar:hover {

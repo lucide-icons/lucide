@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "it-is-not",
+    "ericfennis"
+  ],
   "tags": [
     "mind",
     "intellect",
