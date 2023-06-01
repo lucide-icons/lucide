@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "aliases": ["text-selection"],
   "tags": [
     "find",
     "search",

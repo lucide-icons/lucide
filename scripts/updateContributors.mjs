@@ -80,6 +80,7 @@ await Promise.all(
         {
           $schema: '../icon.schema.json',
           contributors,
+          aliases,
           tags,
           categories,
           ...rest,
