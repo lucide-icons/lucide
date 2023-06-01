@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "and",
+    "typography",
+    "operator",
+    "join",
+    "concatenate",
+    "code",
+    "&"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
