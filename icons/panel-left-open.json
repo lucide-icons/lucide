@@ -5,6 +5,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "aliases": ["sidebar-open"],
   "tags": [
     "primary",
     "drawer",
