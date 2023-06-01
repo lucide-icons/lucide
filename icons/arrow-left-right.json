@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "wojtekmaj",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "bidirectional",
     "direction",
