@@ -79,6 +79,7 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
     };
 
     if (status.startsWith('R')) {
+      // Make sure set the old one as well
       newReleaseMetaData[iconName].changedRelease = {
         version,
         date,
@@ -133,7 +134,7 @@ try {
         console.error(`Could not find release metadata for icon '${iconName}'.`);
       }
 
-      let contents = {
+      const contents = {
         ...defaultReleaseMetaData,
         ...(newReleaseMetaData[iconName] ?? {}),
       };
@@ -148,10 +149,7 @@ try {
             return;
           }
 
-          contents = {
-            ...defaultReleaseMetaData,
-            ...(newReleaseMetaData[alias] ?? {}),
-          };
+          contents.createdRelease = newReleaseMetaData[alias].createdRelease;
         });
       }
 
