@@ -39,10 +39,10 @@ const links = computed(() => [
       <p v-if="theme.footer.message" class="message" v-html="theme.footer.message"></p>
       <p v-if="theme.footer.copyright" class="copyright" v-html="theme.footer.copyright"></p>
       <div class="links">
-        <VPLink v-for="link in links" :href="link.href" :key="link.text">
+        <VPLink v-for="link in links" :href="link.href" :key="link.text" :rel="link.href.startsWith('http') ? 'noreferrer noopener': undefined">
           {{ link.text }}
         </VPLink>
-        <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+        <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss" rel="noreferrer noopener">
           <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
         </a>
       </div>

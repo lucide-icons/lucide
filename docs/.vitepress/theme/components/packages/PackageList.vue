@@ -6,16 +6,16 @@ import PackageListItem from "./PackageListItem.vue";</script>
   <section class="package-group">
     <h1 class="name">Packages</h1>
     <div class="grid package-list" ref="container">
-      <div v-for="p in data.packages" class="item">
-        <PackageListItem :packageData="p"/>
+      <div v-for="packageData in data.packages" class="item">
+        <PackageListItem :packageData="packageData"/>
       </div>
     </div>
   </section>
   <section class="package-group">
     <h2 class="name">Third-party packages</h2>
     <div class="grid package-list" ref="container">
-      <div v-for="p in data.thirdPartyPackages" class="item">
-        <PackageListItem :packageData="p"/>
+      <div v-for="packageData in data.thirdPartyPackages" class="item">
+        <PackageListItem :packageData="packageData"/>
       </div>
     </div>
   </section>

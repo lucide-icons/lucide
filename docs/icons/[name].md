@@ -60,6 +60,7 @@ const codeExample = computed(() => data.codeExamples?.map(
           <Badge
             :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.createdRelease.version}`"
             target="_blank"
+            rel="noreferrer noopener"
           >
             v{{$params.createdRelease.version}}
           </Badge>
@@ -69,6 +70,7 @@ const codeExample = computed(() => data.codeExamples?.map(
           <Badge
             :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.changedRelease.version}`"
             target="_blank"
+            rel="noreferrer noopener"
           >
             v{{$params.changedRelease.version}}
           </Badge>
@@ -76,7 +78,11 @@ const codeExample = computed(() => data.codeExamples?.map(
         <IconContributors :icon="$params" :class="$style.contributors"/>
       </div>
     </div>
-    <CodeGroup :groups="tabs" groupName="icon-code-example" :class="$style.code">
+    <CodeGroup
+      :groups="tabs"
+      groupName="icon-code-example"
+      :class="$style.code"
+    >
       <div
         class="blocks"
         v-html="codeExample"

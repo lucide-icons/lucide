@@ -36,6 +36,7 @@
             class="version"
             :href="`https://github.com/lucide-icons/lucide/releases/tag/v${icon.createdRelease.version}`"
             target="_blank"
+            rel="noreferrer noopener"
           >v{{ icon.createdRelease.version }}</Badge>
           <IconButton  @click="go(`/icons/${icon.name}`)">
             <component :is="Expand" />

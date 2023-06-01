@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import Badge from '../base/Badge.vue';
-import lucidePackage from '../../../../../packages/lucide/package.json';
 import HomeContainer from './HomeContainer.vue';
-const currentVersion = lucidePackage.version;
+import { data } from './HomeHeroBefore.data'
 
 </script>
 <template>
   <HomeContainer class="container">
-    <Badge>v{{ currentVersion }}</Badge>
+    <Badge
+      :href="`https://github.com/lucide-icons/lucide/releases/tag/${data.version}`"
+      target="_blank"
+      rel="noreferrer noopener"
+    >{{ data.version }}</Badge>
   </HomeContainer>
 </template>
 

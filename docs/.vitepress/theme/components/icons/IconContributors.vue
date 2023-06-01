@@ -12,7 +12,14 @@ const props = defineProps<{
   <div class="contributors" v-if="props.icon.contributors?.length>0">
     <Label>Contributors:</Label>
     <div class="avatar-group">
-      <a class="avatar" v-for="contributor in props.icon.contributors" :href="`https://github.com/${contributor}`" target="_blank" :data-name="contributor">
+      <a class="avatar"
+        v-for="contributor in props.icon.contributors"
+        :key="contributor"
+        :href="`https://github.com/${contributor}`"
+        target="_blank"
+        :data-name="contributor"
+        rel="noreferrer noopener"
+      >
         <img class="avatar-image" :alt="contributor" :src="`https://github.com/${contributor}.png?size=128`" />
       </a>
     </div>

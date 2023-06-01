@@ -18,7 +18,7 @@ const props = defineProps<{
       </div>
       <div class="package-title">
         <h2 class="title">{{ props.packageData.name }}</h2>
-        <a v-for="shield in props.packageData.shields" :href="shield.href" class="package-shield">
+        <a v-for="shield in props.packageData.shields" :href="shield.href" class="package-shield" rel="noreferrer noopener">
           <img :src="shield.src" :alt="shield.href" />
         </a>
       </div>
