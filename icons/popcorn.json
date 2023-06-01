@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "cinema",
+    "movies",
+    "films",
+    "salted",
+    "sweet",
+    "sugar",
+    "candy",
+    "snack"
+  ],
+  "categories": [
+    "food-beverage",
+    "multimedia"
+  ]
+}
