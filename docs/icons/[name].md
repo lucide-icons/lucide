@@ -55,7 +55,10 @@ const codeExample = computed(() => data.codeExamples?.map(
     <div :class="$style.info">
       <IconInfo :icon="$params" />
       <div :class="$style.meta">
-        <div :class="$style.version">
+        <div
+          v-if="$params.createdRelease?.version"
+          :class="$style.version"
+        >
           <Label>Created:</Label>
           <Badge
             :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.createdRelease.version}`"
@@ -65,7 +68,10 @@ const codeExample = computed(() => data.codeExamples?.map(
             v{{$params.createdRelease.version}}
           </Badge>
         </div>
-        <div :class="$style.version">
+        <div
+          v-if="$params.changedRelease?.version"
+          :class="$style.version"
+        >
           <Label>Last changed:</Label>
           <Badge
             :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.changedRelease.version}`"

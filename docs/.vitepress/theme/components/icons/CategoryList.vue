@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { useData } from 'vitepress'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
-import { isActive } from 'vitepress/dist/client/theme-default/support/utils'
+import { isActive } from 'vitepress/dist/client/shared'
 import { useActiveAnchor } from '../../composables/useActiveAnchor'
 import { data } from './CategoryList.data'
 import CategoryListItem from './CategoryListItem.vue'

@@ -33,6 +33,7 @@
       <div class="overlay-panel">
         <nav class="overlay-menu">
           <Badge
+            v-if="icon.createdRelease"
             class="version"
             :href="`https://github.com/lucide-icons/lucide/releases/tag/v${icon.createdRelease.version}`"
             target="_blank"
