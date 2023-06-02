@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "area",
+    "surface",
+    "land",
+    "allotment",
+    "property",
+    "plane",
+    "acres",
+    "measure",
+    "distance",
+    "isometric"
+  ],
+  "categories": [
+    "shapes",
+    "design",
+    "tools",
+    "maths",
+    "gaming"
+  ]
+}
