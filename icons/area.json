@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "land",
-    "plot",
-    "allotment",
-    "property",
-    "plane",
-    "acres",
+    "surface",
+    "mass",
+    "volume",
     "measure",
-    "distance",
-    "isometric"
+    "geometry",
+    "isometric",
+    "cube",
+    "box",
+    "package",
+    "container",
+    "storage"
   ],
   "categories": [
     "shapes",

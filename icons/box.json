@@ -5,7 +5,9 @@
     "package",
     "container",
     "storage",
-    "geometry"
+    "geometry",
+    "3d",
+    "isometric"
   ],
   "categories": [
     "shapes",
