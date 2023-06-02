@@ -4,6 +4,9 @@
     "comment",
     "chat",
     "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
     "report",
     "abuse",
     "offense",
@@ -15,6 +18,7 @@
   ],
   "categories": [
     "account",
+    "social",
     "notifications"
   ]
 }

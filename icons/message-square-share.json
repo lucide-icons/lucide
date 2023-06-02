@@ -4,6 +4,9 @@
     "comment",
     "chat",
     "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
     "network",
     "forward"
   ],

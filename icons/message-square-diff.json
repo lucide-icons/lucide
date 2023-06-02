@@ -4,21 +4,25 @@
     "comment",
     "chat",
     "conversation",
-    "add",
+    "dialog",
     "feedback",
+    "speech bubble",
+    "add",
     "patch",
     "difference",
     "plus",
     "minus",
     "plus-minus",
     "maths",
+    "code review",
+    "coding",
     "version control",
-    "git",
-    "code"
+    "git"
   ],
   "categories": [
-    "account",
     "development",
-    "files"
+    "files",
+    "account",
+    "social"
   ]
 }

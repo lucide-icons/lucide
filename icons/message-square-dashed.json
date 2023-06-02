@@ -7,9 +7,13 @@
     "comment",
     "chat",
     "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
     "draft"
   ],
   "categories": [
-    "account"
+    "account",
+    "social"
   ]
 }

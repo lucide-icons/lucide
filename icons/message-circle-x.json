@@ -4,6 +4,9 @@
     "comment",
     "chat",
     "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
     "clear",
     "close",
     "delete",
@@ -14,6 +17,7 @@
     "moderate"
   ],
   "categories": [
-    "account"
+    "account",
+    "social"
   ]
 }

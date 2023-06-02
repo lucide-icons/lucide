@@ -4,9 +4,13 @@
     "comment",
     "chat",
     "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
     "help"
   ],
   "categories": [
-    "account"
+    "account",
+    "social"
   ]
 }
