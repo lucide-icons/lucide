@@ -4,7 +4,8 @@
     "password",
     "login",
     "authentication",
-    "secure"
+    "secure",
+    "unlock"
   ],
   "categories": [
     "security",
