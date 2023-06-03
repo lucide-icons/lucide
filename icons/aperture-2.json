@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "camera",
+    "photo",
+    "pictures",
+    "shutter",
+    "exposure"
+  ],
+  "categories": [
+    "photography"
+  ]
+}
