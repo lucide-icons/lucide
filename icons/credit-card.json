@@ -9,7 +9,10 @@
     "bank",
     "purchase",
     "payment",
-    "cc"
+    "cc",
+    "shopping",
+    "retail",
+    "consumer"
   ],
   "categories": [
     "account",
