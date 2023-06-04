@@ -16,7 +16,7 @@
     "postbuild:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",
-    "prebuild": "pnpm build:iconNodes && pnpm build:metaJson && pnpm build:releaseJson && pnpm build:relatedIcons && pnpm build:iconDetails",
+    "prebuild": "pnpm prebuild:iconNodes && pnpm prebuild:metaJson && pnpm prebuild:releaseJson && pnpm prebuild:relatedIcons && pnpm prebuild:iconDetails",
     "build": "pnpm run \"/^prebuild:.*/\" && pnpm build:api && pnpm build:docs && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
@@ -47,6 +47,7 @@
     "shiki-processor": "^0.1.3",
     "simple-git": "^3.18.0",
     "svg-pathdata": "^6.0.3",
+    "svgson": "^5.2.1",
     "vue": "^3.2.47"
   }
 }
