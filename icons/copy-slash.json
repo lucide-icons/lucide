@@ -14,9 +14,14 @@
     "forbidden",
     "prohibited",
     "error",
-    "multiple"
+    "multiple",
+    "divide",
+    "division",
+    "split",
+    "/"
   ],
   "categories": [
-    "text"
+    "text",
+    "maths"
   ]
 }

@@ -8,10 +8,14 @@
   "tags": [
     "git",
     "diff",
-    "ignored"
+    "ignored",
+    "divide",
+    "division",
+    "shortcut",
+    "/"
   ],
   "categories": [
     "shapes",
-    "development"
+    "maths"
   ]
 }

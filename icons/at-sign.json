@@ -10,7 +10,8 @@
     "mention",
     "at",
     "email",
-    "message"
+    "message",
+    "@"
   ],
   "categories": [
     "text",

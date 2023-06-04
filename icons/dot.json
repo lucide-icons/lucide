@@ -10,12 +10,17 @@
     "middot",
     "step",
     "punctuation",
+    "period",
+    "full stop",
+    "end",
+    "finish",
+    "final",
     "characters",
     "font",
     "typography",
     "type",
-    "text",
-    "center"
+    "center",
+    "."
   ],
   "categories": [
     "shapes",

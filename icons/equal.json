@@ -5,9 +5,14 @@
   ],
   "tags": [
     "calculate",
-    "maths"
+    "maths",
+    "operator",
+    "assignment",
+    "code",
+    "="
   ],
   "categories": [
-    "maths"
+    "maths",
+    "development"
   ]
 }

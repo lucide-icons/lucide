@@ -10,11 +10,16 @@
     "maths",
     "line",
     "divide",
+    "division",
     "horizontal rule",
-    "hr"
+    "hr",
+    "operator",
+    "code",
+    "-"
   ],
   "categories": [
     "maths",
-    "shapes"
+    "shapes",
+    "development"
   ]
 }
