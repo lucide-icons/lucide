@@ -46,6 +46,7 @@
     "shiki": "^0.14.2",
     "shiki-processor": "^0.1.3",
     "simple-git": "^3.18.0",
+    "sitemap": "^7.1.1",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.2.1",
     "vue": "^3.2.47"
