@@ -5,9 +5,15 @@
     "ericfennis"
   ],
   "tags": [
-    "discount"
+    "discount",
+    "percentage",
+    "modulo",
+    "modulus",
+    "remainder",
+    "%"
   ],
   "categories": [
-    "maths"
+    "maths",
+    "development"
   ]
 }

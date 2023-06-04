@@ -15,7 +15,8 @@
     "stop",
     "forbidden",
     "prohibited",
-    "error"
+    "error",
+    "/"
   ],
   "categories": [
     "shapes"

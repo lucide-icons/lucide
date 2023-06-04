@@ -8,9 +8,12 @@
     "clone",
     "duplicate",
     "add",
-    "multiple"
+    "multiple",
+    "expand",
+    "+"
   ],
   "categories": [
-    "text"
+    "text",
+    "maths"
   ]
 }

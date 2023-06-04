@@ -9,7 +9,9 @@
     "token",
     "array",
     "list",
-    "square"
+    "square",
+    "[",
+    "]"
   ],
   "categories": [
     "development",
