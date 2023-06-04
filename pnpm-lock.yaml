@@ -554,14 +554,11 @@ importers:
         specifier: ^5.8.2
         version: 5.8.3(vue-template-compiler@2.7.14)(vue@2.7.14)
       '@vitejs/plugin-vue2':
-        specifier: ^2.0.1
-        version: 2.0.1(vite@3.1.8)(vue@2.7.14)
+        specifier: 2.2.0
+        version: 2.2.0(vite@3.1.8)(vue@2.7.14)
       '@vue/test-utils':
         specifier: 1.3.0
         version: 1.3.0(vue-template-compiler@2.7.14)(vue@2.7.14)
-      jest-serializer-vue:
-        specifier: ^2.0.2
-        version: 2.0.2
       rollup:
         specifier: ^3.5.1
         version: 3.5.1
@@ -5111,7 +5108,7 @@ packages:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.5.0
+      semver: 7.5.1
       tar: 6.1.11
     transitivePeerDependencies:
       - encoding
@@ -5163,7 +5160,7 @@ packages:
     resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /@npmcli/fs@2.1.2:
@@ -5171,7 +5168,7 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /@npmcli/git@2.1.0:
@@ -5183,7 +5180,7 @@ packages:
       npm-pick-manifest: 6.1.1
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.5.0
+      semver: 7.5.1
       which: 2.0.2
     transitivePeerDependencies:
       - bluebird
@@ -6698,7 +6695,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@4.6.4)
       typescript: 4.6.4
     transitivePeerDependencies:
@@ -6719,7 +6716,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.5.0
+      semver: 7.5.1
       tsutils: 3.21.0(typescript@4.6.4)
       typescript: 4.6.4
     transitivePeerDependencies:
@@ -6740,7 +6737,7 @@ packages:
       eslint: 8.36.0
       eslint-scope: 5.1.1
       eslint-utils: 3.0.0(eslint@8.36.0)
-      semver: 7.5.0
+      semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6817,11 +6814,11 @@ packages:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-vue2@2.0.1(vite@3.1.8)(vue@2.7.14):
-    resolution: {integrity: sha512-4eFAypstsQoiR9NLZXJ6K3ZWmU2CMFNxGTjGfRdmimImXJe4eHVfMMizaOjfX6Y8HfFJ7u+L8oUg32MInAHZ+g==}
+  /@vitejs/plugin-vue2@2.2.0(vite@3.1.8)(vue@2.7.14):
+    resolution: {integrity: sha512-1km7zEuZ/9QRPvzXSjikbTYGQPG86Mq1baktpC4sXqsXlb02HQKfi+fl8qVS703JM7cgm24Ga9j+RwKmvFn90A==}
     engines: {node: ^14.18.0 || >= 16.0.0}
     peerDependencies:
-      vite: ^3.0.0
+      vite: ^3.0.0 || ^4.0.0
       vue: ^2.7.0-0
     dependencies:
       vite: 3.1.8
@@ -6932,7 +6929,7 @@ packages:
       '@vue/shared': 3.2.47
       estree-walker: 2.0.2
       magic-string: 0.25.9
-      postcss: 8.4.19
+      postcss: 8.4.24
       source-map: 0.6.1
     dev: false
 
@@ -9280,7 +9277,7 @@ packages:
       postcss-modules-scope: 3.0.0(postcss@8.4.24)
       postcss-modules-values: 4.0.0(postcss@8.4.24)
       postcss-value-parser: 4.2.0
-      semver: 7.5.0
+      semver: 7.5.1
       webpack: 5.76.1(esbuild@0.14.22)
     dev: true
 
@@ -13309,12 +13306,6 @@ packages:
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dev: true
 
-  /jest-serializer-vue@2.0.2:
-    resolution: {integrity: sha512-nK/YIFo6qe3i9Ge+hr3h4PpRehuPPGZFt8LDBdTHYldMb7ZWlkanZS8Ls7D8h6qmQP2lBQVDLP0DKn5bJ9QApQ==}
-    dependencies:
-      pretty: 2.0.0
-    dev: true
-
   /jest-serializer@27.5.1:
     resolution: {integrity: sha512-jZCyo6iIxO1aqUxpuBlwTDMkzOAJS4a3eYz3YzgxxVQFwLeSA7Jfq5cbqCY+JLvTDrWirgusI/0KwxKMgrdf7w==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -14902,12 +14893,12 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
 
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   /nanomatch@1.2.13:
     resolution: {integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==}
@@ -15197,7 +15188,7 @@ packages:
       nopt: 5.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.5.0
+      semver: 7.5.1
       tar: 6.1.15
       which: 2.0.2
     transitivePeerDependencies:
@@ -15246,7 +15237,7 @@ packages:
     resolution: {integrity: sha512-09OmyDkNLYwqKPOnbI8exiOZU2GVVmQp7tgez2BPi5OZC8M82elDAps7sxC4l//uSUtotWqoEIDwjRvWH4qz8w==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /npm-normalize-package-bin@1.0.1:
@@ -15258,7 +15249,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       hosted-git-info: 4.1.0
-      semver: 7.5.0
+      semver: 7.5.1
       validate-npm-package-name: 3.0.0
     dev: true
 
@@ -15279,7 +15270,7 @@ packages:
       npm-install-checks: 4.0.0
       npm-normalize-package-bin: 1.0.1
       npm-package-arg: 8.1.5
-      semver: 7.5.0
+      semver: 7.5.1
     dev: true
 
   /npm-registry-fetch@12.0.2:
@@ -16388,7 +16379,7 @@ packages:
       cosmiconfig: 7.0.1
       klona: 2.0.6
       postcss: 8.4.5
-      semver: 7.5.0
+      semver: 7.5.1
       webpack: 5.76.1(esbuild@0.14.22)
     dev: true
 
@@ -16726,6 +16717,7 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
 
   /postcss@8.4.24:
     resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
@@ -16734,7 +16726,6 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
-    dev: true
 
   /postcss@8.4.5:
     resolution: {integrity: sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==}
@@ -17994,7 +17985,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
 
   /send@0.18.0:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
@@ -18101,7 +18091,7 @@ packages:
       detect-libc: 1.0.3
       node-addon-api: 3.2.1
       prebuild-install: 6.1.4
-      semver: 7.5.0
+      semver: 7.5.1
       simple-get: 3.1.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
