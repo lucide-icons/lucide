@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "screens",
+    "aspect ratio",
+    "proportions",
+    "16:9",
+    "widescreen",
+    "4:3",
+    "responsive",
+    "mobile",
+    "desktop",
+    "monitor",
+    "portrait",
+    "landscape"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "design",
+    "photography"
+  ]
+}
