@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "aelfric",
-    "ericfennis",
-    "csandman"
-  ],
+  "contributors": {
+    "designedBy": [
+      "aelfric"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "undo",
     "rerun",

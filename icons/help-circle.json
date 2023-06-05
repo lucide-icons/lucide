@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danbovey",
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "danbovey"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "danielbayley"
+    ]
+  },
   "tags": [
     "question mark"
   ],

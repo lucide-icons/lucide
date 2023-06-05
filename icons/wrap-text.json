@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "bduffany",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "bduffany"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "words",
     "lines",

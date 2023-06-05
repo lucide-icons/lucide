@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "beaker",
     "erlenmeyer",

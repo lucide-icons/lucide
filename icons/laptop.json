@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "csandman"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ghost"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "computer",
     "screen",

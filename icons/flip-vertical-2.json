@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "karsa-mistmere",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "reflect",
     "mirror",

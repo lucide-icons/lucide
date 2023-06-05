@@ -1,8 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "bookmark",
     "favorite",

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "yukosgiti",
-    "ericfennis",
-    "csandman"
-  ],
+  "contributors": {
+    "designedBy": [
+      "yukosgiti"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "share"
   ],

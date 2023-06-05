@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "danielbayley",
-    "karsa-mistmere",
-    "azdle"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "azdle"
+    ]
+  },
   "tags": [
     "connection",
     "wireless",

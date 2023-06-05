@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "danielbayley"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "drawer",
     "dock",

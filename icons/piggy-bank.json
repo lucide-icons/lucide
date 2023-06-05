@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "b0b90"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "money",
     "savings"

@@ -1,8 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "wojtekmaj"
-  ],
+  "contributors": {
+    "designedBy": [
+      "wojtekmaj"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "time",
     "watch",

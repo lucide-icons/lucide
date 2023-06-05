@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "kemie",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "kemie"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "animal",
     "pet",

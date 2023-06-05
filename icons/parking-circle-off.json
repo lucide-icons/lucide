@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "parking lot",
     "car park",

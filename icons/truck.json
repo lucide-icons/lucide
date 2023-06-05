@@ -1,13 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto",
-    "csandman",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ahtohbi4",
+      "ericfennis",
+      "Andreto",
+      "csandman",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "delivery",
     "van",

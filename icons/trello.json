@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "bdbch",
-    "csandman",
-    "mittalyashu",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "bdbch"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "logo",
     "brand"

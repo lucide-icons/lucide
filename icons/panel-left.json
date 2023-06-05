@@ -1,11 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "danielbayley",
-    "ericfennis"
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "danielbayley",
+      "ericfennis"
+    ]
+  },
+  "aliases": [
+    "sidebar"
   ],
-  "aliases": ["sidebar"],
   "tags": [
     "primary",
     "drawer"

@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "it-is-not",
-    "danielbayley",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "it-is-not"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "quaver",
     "eighth note",

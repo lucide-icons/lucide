@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "kerkeslager",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "kerkeslager"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "alpine",
     "climb",

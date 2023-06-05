@@ -1,8 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "pulse",
     "health",

@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "schmidt-oliver",
-    "karsa-mistmere",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "schmidt-oliver"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "read",
     "library",

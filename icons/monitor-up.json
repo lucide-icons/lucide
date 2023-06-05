@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley",
-    "karsa-mistmere",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "danielbayley"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "tv",
     "screen",

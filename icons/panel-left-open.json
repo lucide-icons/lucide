@@ -1,11 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "mittalyashu",
-    "danielbayley",
-    "ericfennis"
+  "contributors": {
+    "designedBy": [
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "danielbayley",
+      "ericfennis"
+    ]
+  },
+  "aliases": [
+    "sidebar-open"
   ],
-  "aliases": ["sidebar-open"],
   "tags": [
     "primary",
     "drawer",

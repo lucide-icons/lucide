@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "ashygee",
-    "wojtekmaj",
-    "mittalyashu",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "wojtekmaj",
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "logo"
   ],

@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "kemie",
-    "jguddas",
-    "karsa-mistmere",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "kemie"
+    ],
+    "metadataBy": [
+      "kemie",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "gelato",
     "food",

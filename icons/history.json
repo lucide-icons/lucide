@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "ericfennis",
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "time",
     "redo",

@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "gubser",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "gubser"
+    ],
+    "metadataBy": [
+      "gubser",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "funnel",
     "hopper"

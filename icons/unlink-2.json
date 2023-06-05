@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "csandman"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "johnletey",
+      "csandman",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "url",
     "unchain"

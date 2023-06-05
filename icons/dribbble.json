@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ahtohbi4",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ahtohbi4"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "design",
     "social"

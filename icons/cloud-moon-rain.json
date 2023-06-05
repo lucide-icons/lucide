@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "it-is-not",
-    "karsa-mistmere",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "it-is-not"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "weather",
     "partly",

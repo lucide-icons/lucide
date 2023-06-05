@@ -1,12 +1,23 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis"
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
+  "aliases": [
+    "pen"
   ],
-  "aliases": ["pen"],
   "tags": [
     "pencil",
     "change"

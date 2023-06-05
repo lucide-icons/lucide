@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Andreto",
-    "ericfennis",
-    "csandman",
-    "jguddas",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Andreto"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "Andreto",
+      "csandman",
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "hatchet"
   ],

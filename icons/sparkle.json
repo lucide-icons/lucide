@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Shiva953",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Shiva953"
+    ],
+    "metadataBy": [
+      "Shiva953",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "star",
     "effect",

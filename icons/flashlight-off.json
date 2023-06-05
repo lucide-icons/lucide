@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Andreto",
-    "ericfennis",
-    "karsa-mistmere",
-    "csandman"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "torch"
   ],

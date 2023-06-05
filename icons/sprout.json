@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "mittalyashu"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "leaf",
     "nature",

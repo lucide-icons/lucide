@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "mittalyashu"
-  ],
+  "contributors": {
+    "designedBy": [
+      "zenoamaro"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "spreadsheets",
     "table",

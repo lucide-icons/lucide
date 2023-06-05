@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "csandman",
-    "ericfennis",
-    "johnletey"
-  ],
+  "contributors": {
+    "designedBy": [
+      "johnletey"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "johnletey",
+      "csandman",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "desktop",
     "disconnect",

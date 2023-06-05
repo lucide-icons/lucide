@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "dperezcabrera",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "dperezcabrera"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "arrow",
     "skip",

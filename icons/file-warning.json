@@ -1,8 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "wojtekmaj",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "hidden",
     "warning",

@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Kaladii",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Kaladii"
+    ],
+    "metadataBy": [
+      "Kaladii",
+      "wojtekmaj",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "power",
     "electricity",

@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "danielbayley",
-    "jguddas",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "danielbayley",
+      "jguddas",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "album",
     "music",

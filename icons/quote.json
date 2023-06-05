@@ -1,8 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Billiam"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Billiam"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "quotation"
   ],

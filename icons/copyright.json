@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "johnletey",
-    "csandman"
-  ],
+  "contributors": {
+    "designedBy": [
+      "johnletey"
+    ],
+    "metadataBy": [
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "johnletey",
+      "csandman",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "licence",
     "license"

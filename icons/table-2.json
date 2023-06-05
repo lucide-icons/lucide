@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "abejenaru",
-    "karsa-mistmere",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "abejenaru"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "sheet",
     "grid",

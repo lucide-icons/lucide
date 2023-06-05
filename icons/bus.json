@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ahtohbi4"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "bus",
     "vehicle",

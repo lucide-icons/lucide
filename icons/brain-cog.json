@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas",
-    "it-is-not"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "mind",
     "intellect",

@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "dislike",
     "bad",

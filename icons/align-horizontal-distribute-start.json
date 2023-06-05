@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "r4lv",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "r4lv",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "left",
     "items",

@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Tummerhore",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Tummerhore"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "school",
     "university",

@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "ericfennis",
-    "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis",
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "tv",
     "screen",

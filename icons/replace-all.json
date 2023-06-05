@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "danielbayley"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "jguddas",
+      "karsa-mistmere",
+      "danielbayley"
+    ]
+  },
   "tags": [
     "search",
     "substitute",

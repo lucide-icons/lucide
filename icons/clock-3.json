@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "wojtekmaj",
-    "ericfennis",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "wojtekmaj"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "time",
     "watch",

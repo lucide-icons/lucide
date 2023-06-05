@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "mittalyashu"
-  ],
+  "contributors": {
+    "designedBy": [
+      "zenoamaro"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "split",
     "parallel",

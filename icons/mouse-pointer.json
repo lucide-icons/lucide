@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ashygee",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ashygee"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "arrow",
     "cursor",

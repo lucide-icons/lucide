@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "cog",
     "edit",

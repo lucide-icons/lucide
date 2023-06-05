@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "karsa-mistmere",
+      "danielbayley"
+    ]
+  },
   "tags": [
     "signal",
     "broadcast",

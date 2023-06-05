@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "child",
     "childproof",

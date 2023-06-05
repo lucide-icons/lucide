@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Andreto",
-    "ericfennis",
-    "mittalyashu"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Andreto"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "send",
     "share",

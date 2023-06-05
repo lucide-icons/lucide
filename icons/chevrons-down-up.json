@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "PeterlitsZo",
-    "mittalyashu",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "PeterlitsZo"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "arrow",
     "collapse",

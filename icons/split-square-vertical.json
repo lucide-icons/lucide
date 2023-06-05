@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Patchethium",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Patchethium"
+    ],
+    "metadataBy": [
+      "Patchethium",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "split",
     "divide"

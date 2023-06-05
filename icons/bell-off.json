@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "danielbayley"
+    ]
+  },
   "tags": [
     "alarm",
     "notification",

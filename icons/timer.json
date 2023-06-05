@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ahtohbi4",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ahtohbi4"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "time",
     "timer",

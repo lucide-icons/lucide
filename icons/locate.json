@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "csandman"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "map",
     "gps",

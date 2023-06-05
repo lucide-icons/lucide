@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "mittalyashu",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "cloud",
     "storage",

@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ptrgast",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ptrgast"
+    ],
+    "metadataBy": [
+      "ptrgast",
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "vote",
     "poll",

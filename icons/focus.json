@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "danielbayley",
-    "jguddas",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "camera",
     "lens",

@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "danielbayley"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "jguddas"
+    ]
+  },
   "tags": [
     "read",
     "code",

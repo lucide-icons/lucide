@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "it-is-not",
-    "karsa-mistmere",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "it-is-not"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "bidirectional",
     "direction",

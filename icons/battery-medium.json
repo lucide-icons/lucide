@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "johnletey",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "johnletey"
+    ],
+    "metadataBy": [
+      "wojtekmaj",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "power",
     "electricity",

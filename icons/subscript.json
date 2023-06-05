@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "nabanita-sarkar",
-    "ericfennis",
-    "mittalyashu"
-  ],
+  "contributors": {
+    "designedBy": [
+      "nabanita-sarkar"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "text"
   ],

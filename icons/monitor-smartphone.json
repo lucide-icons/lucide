@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "badraxas",
-    "karsa-mistmere",
-    "jguddas",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "badraxas"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "smartphone",
     "phone",

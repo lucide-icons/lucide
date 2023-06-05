@@ -1,11 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "maxim-s-barabash",
-    "ericfennis",
-    "karsa-mistmere",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "maxim-s-barabash"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ]
+  },
   "tags": [
     "business",
     "company",

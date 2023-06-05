@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "wojtekmaj",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "wojtekmaj"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "qr-code"
   ],

@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ghost"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "transport",
     "metro",

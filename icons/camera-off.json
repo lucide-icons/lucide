@@ -1,12 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "lscheibel",
-    "Andreto",
-    "ericfennis",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "lscheibel",
+      "Andreto",
+      "ericfennis",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "photo",
     "webcam",

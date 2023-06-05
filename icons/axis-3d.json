@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "lscheibel",
-    "danielbayley",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "lscheibel"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "gizmo",
     "coordinates"

@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "koole",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "koole"
+    ],
+    "metadataBy": [
+      "koole",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "grab",
     "dots",

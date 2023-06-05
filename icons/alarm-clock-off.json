@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "karsa-mistmere",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis",
+      "karsa-mistmere",
+      "jguddas"
+    ]
+  },
   "tags": [
     "morning",
     "turn-off"

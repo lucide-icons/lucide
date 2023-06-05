@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere",
+      "danielbayley",
+      "ericfennis"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "ellipsis",
     "menu",

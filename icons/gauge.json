@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "Andreto",
-    "danielbayley",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "Andreto",
+      "ericfennis",
+      "danielbayley",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "dashboard",
     "dial",

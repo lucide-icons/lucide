@@ -1,13 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "arrows",
     "rotate",

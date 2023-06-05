@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "MoltenCoffee",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "MoltenCoffee"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "campsite",
     "wigwam"

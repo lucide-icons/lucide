@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "johnletey"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "currency",
     "money",

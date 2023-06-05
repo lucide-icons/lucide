@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "maxwellito",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "maxwellito"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "maxwellito",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "pencil",
     "drawing",

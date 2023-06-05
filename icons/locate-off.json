@@ -1,8 +1,15 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "fdev"
-  ],
+  "contributors": {
+    "designedBy": [
+      "fdev"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "map",
     "gps",

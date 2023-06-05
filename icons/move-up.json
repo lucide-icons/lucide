@@ -1,8 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "jonas-hoebenreich"
-  ],
+  "contributors": {
+    "designedBy": [
+      "jonas-hoebenreich"
+    ],
+    "metadataBy": [
+      "jonas-hoebenreich",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "arrow",
     "direction",

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "jguddas",
-    "kemie",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "jguddas"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "food",
     "dish",

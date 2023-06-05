@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "nabanita-sarkar",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "nabanita-sarkar"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "text",
     "exponent"

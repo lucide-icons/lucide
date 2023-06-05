@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "csandman",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "csandman"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere",
+      "danielbayley",
+      "ericfennis"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "calculate",
     "maths",

@@ -1,5 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": {
+    "designedBy": [
+      "danielbayley"
+    ],
+    "metadataBy": [
+      "danielbayley"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "versions",
     "multiple",

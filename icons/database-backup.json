@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "jguddas",
-    "danielbayley",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "danielbayley",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "storage",
     "memory",

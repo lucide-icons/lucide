@@ -1,9 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley"
+  "contributors": {
+    "designedBy": [
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "jguddas",
+      "karsa-mistmere",
+      "ericfennis"
+    ],
+    "optimizedBy": []
+  },
+  "aliases": [
+    "circle-slashed"
   ],
-  "aliases": ["circle-slashed"],
   "tags": [
     "diameter",
     "zero",

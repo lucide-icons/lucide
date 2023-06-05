@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ashygee",
-    "csandman",
-    "mittalyashu",
-    "ericfennis",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ashygee"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere",
+      "danielbayley"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "mittalyashu",
+      "ericfennis",
+      "jguddas"
+    ]
+  },
   "tags": [
     "password",
     "login",

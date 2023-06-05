@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere",
+      "ericfennis",
+      "jguddas"
+    ]
+  },
   "tags": [
     "processor",
     "technology",

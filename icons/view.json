@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "zenoamaro"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "eye",
     "look"

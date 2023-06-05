@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere",
+      "danielbayley",
+      "ericfennis"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "danielbayley"
+    ]
+  },
   "tags": [
     "mention",
     "at",

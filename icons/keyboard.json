@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "it-is-not",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "it-is-not"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "ericfennis"
+    ]
+  },
   "tags": [
     "layout",
     "spell",

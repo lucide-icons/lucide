@@ -1,11 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "jguddas"
-  ],
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "danielbayley",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "ericfennis",
+      "jguddas"
+    ]
+  },
   "tags": [
     "keyboard",
     "key",

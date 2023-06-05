@@ -1,11 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "henri42",
-    "jguddas",
-    "karsa-mistmere",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "henri42"
+    ],
+    "metadataBy": [
+      "henri42",
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "danielbayley",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "animal",
     "mouse",

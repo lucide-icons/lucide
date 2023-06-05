@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "zenoamaro",
-    "ericfennis",
-    "csandman",
-    "mittalyashu",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "zenoamaro"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": [
+      "ericfennis",
+      "danielbayley"
+    ]
+  },
   "tags": [
     "app",
     "home",

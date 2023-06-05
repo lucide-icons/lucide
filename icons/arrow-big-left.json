@@ -1,11 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Andreto",
-    "mittalyashu",
-    "ericfennis",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Andreto"
+    ],
+    "metadataBy": [
+      "danielbayley",
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "mittalyashu",
+      "ericfennis",
+      "danielbayley",
+      "karsa-mistmere"
+    ]
+  },
   "tags": [
     "key",
     "back"

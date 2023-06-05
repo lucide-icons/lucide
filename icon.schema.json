@@ -29,11 +29,34 @@
       "uniqueItems": true
     },
     "contributors": {
-      "type": "array",
-      "items": {
-        "type": "string"
+      "type": "object",
+      "properties": {
+        "designedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "metadataBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "optimizedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
       },
-      "uniqueItems": true
+      "required": [
+        "designedBy",
+        "metadataBy"
+      ]
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."

@@ -1,12 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "lukesmurray",
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
+  "contributors": {
+    "designedBy": [
+      "johnletey",
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "lukesmurray",
+      "csandman"
+    ]
+  },
+  "aliases": [
+    "sort-asc"
   ],
-  "aliases": ["sort-asc"],
   "tags": [
     "arrow",
     "filter",

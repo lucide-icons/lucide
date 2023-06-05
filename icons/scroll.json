@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas",
-    "danielbayley"
-  ],
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "danielbayley",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "danielbayley"
+    ]
+  },
   "tags": [
     "paper",
     "log",

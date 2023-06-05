@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
-  ],
+  "contributors": {
+    "designedBy": [
+      "ericfennis"
+    ],
+    "metadataBy": [
+      "karsa-mistmere",
+      "danielbayley",
+      "jguddas"
+    ],
+    "optimizedBy": [
+      "csandman",
+      "karsa-mistmere",
+      "ericfennis"
+    ]
+  },
   "tags": [
     "barcode",
     "scan"

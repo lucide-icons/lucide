@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "mittalyashu",
-    "Andreto",
-    "ericfennis"
-  ],
+  "contributors": {
+    "designedBy": [
+      "Andreto",
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "jguddas",
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
   "tags": [
     "food",
     "bird",
