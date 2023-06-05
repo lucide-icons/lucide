@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "doerge",
+    "airone01"
+  ],
+  "tags": [
+    "disability",
+    "disabled",
+    "dda",
+    "human",
+    "accessibility",
+    "people",
+    "sound"
+  ],
+  "categories": [
+    "accessibility",
+    "communication"
+  ]
+}
