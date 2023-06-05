@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "av",
+    "audio visual",
+    "rca",
+    "cable",
+    "wire",
+    "connection",
+    "link",
+    "signal",
+    "tv",
+    "television",
+    "optical",
+    "equipment",
+    "electricity",
+    "electronics",
+    "console",
+    "input",
+    "output"
+  ],
+  "categories": [
+    "connectivity",
+    "multimedia",
+    "devices",
+    "gaming"
+  ]
+}
