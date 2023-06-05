@@ -9,10 +9,17 @@
     "map",
     "gps",
     "location",
-    "cross"
+    "crosshair",
+    "aim",
+    "target",
+    "scope",
+    "sight",
+    "reticule"
   ],
   "categories": [
     "navigation",
-    "maps"
+    "maps",
+    "cursors",
+    "gaming"
   ]
 }

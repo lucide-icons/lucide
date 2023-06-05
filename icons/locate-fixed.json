@@ -10,10 +10,18 @@
     "map",
     "gps",
     "location",
-    "cross"
+    "crosshair",
+    "aim",
+    "scope",
+    "sight",
+    "reticule",
+    "target acquired",
+    "locked on"
   ],
   "categories": [
     "navigation",
-    "maps"
+    "maps",
+    "cursors",
+    "gaming"
   ]
 }
