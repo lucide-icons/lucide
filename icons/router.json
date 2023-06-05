@@ -2,10 +2,11 @@
   "$schema": "../icon.schema.json",
   "contributors": {
     "designedBy": [
-      "FrancoMaxime"
+      "karsa-mistmere"
     ],
     "metadataBy": [
-      "FrancoMaxime"
+      "FrancoMaxime",
+      "karsa-mistmere"
     ],
     "optimizedBy": [
       "ericfennis"

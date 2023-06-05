@@ -2,12 +2,14 @@
   "$schema": "../icon.schema.json",
   "contributors": {
     "designedBy": [
-      "henri42"
+      "henri42",
+      "karsa-mistmere"
     ],
     "metadataBy": [
       "henri42"
     ],
     "optimizedBy": [
+      "jguddas",
       "danielbayley",
       "karsa-mistmere"
     ]

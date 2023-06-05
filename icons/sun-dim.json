@@ -2,13 +2,13 @@
   "$schema": "../icon.schema.json",
   "contributors": {
     "designedBy": [
-      "mittalyashu"
+      "karsa-mistmere"
     ],
     "metadataBy": [
-      "mittalyashu"
+      "mittalyashu",
+      "bduffany"
     ],
     "optimizedBy": [
-      "karsa-mistmere"
     ]
   },
   "tags": [

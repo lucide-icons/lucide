@@ -2,12 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": {
     "designedBy": [
+      "karsa-mistmere",
       "danielbayley"
     ],
     "metadataBy": [
       "danielbayley"
     ],
-    "optimizedBy": []
+    "optimizedBy": [
+      "jguddas"
+    ]
   },
   "tags": [
     "constant",
