@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "airone01"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "brands"
+  ],
+  "categories": [
+    "currency",
+    "money"
+  ]
+}

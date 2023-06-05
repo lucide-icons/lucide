@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g clip-path="url(#a)">
+    <circle cx="14.25" cy="12" r="1" />
+    <circle cx="16.25" cy="9.5" r=".75" transform="rotate(180 16.25 9.5)" />
+    <circle cx="17" cy="12" r=".75" transform="rotate(180 17 12)" />
+    <circle cx="14.75" cy="7.75" r=".75" transform="rotate(180 14.75 7.75)" />
+    <circle cx="12" cy="6.75" r=".75" transform="rotate(180 12 6.75)" />
+    <circle cx="18.5" cy="8.25" r=".5" transform="rotate(180 18.5 8.25)" />
+    <circle cx="19.25" cy="12" r=".5" transform="rotate(180 19.25 12)" />
+    <circle cx="16" cy="5.5" r=".5" transform="rotate(180 16 5.5)" />
+    <circle cx="12" cy="4.5" r=".5" transform="rotate(180 12 4.5)" />
+    <circle cx="13.25" cy="10" r="1" transform="rotate(180 13.25 10)" />
+    <circle cx="9.75" cy="12" r="1" transform="rotate(180 9.75 12)" />
+    <circle cx="7.75" cy="14.5" r=".75" />
+    <circle cx="7" cy="12" r=".75" />
+    <circle cx="9.25" cy="16.25" r=".75" />
+    <circle cx="12" cy="17.25" r=".75" />
+    <circle cx="5.5" cy="15.75" r=".5" />
+    <circle cx="4.75" cy="12" r=".5" />
+    <circle cx="8" cy="18.5" r=".5" />
+    <circle cx="12" cy="19.5" r=".5" />
+    <circle cx="10.75" cy="14" r="1" />
+    <circle cx="1" cy="1" r="1" transform="matrix(-1 0 0 1 10.75 11)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(1 0 0 -1 7 10.25)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(1 0 0 -1 6.25 12.75)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(1 0 0 -1 8.5 8.5)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(1 0 0 -1 11.25 7.5)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(1 0 0 -1 5 8.75)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(1 0 0 -1 4.25 12.5)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(1 0 0 -1 7.5 6)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(1 0 0 -1 11.5 5)" />
+    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 9.75 11)" />
+    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 13.25 13)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(-1 0 0 1 17 13.75)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(-1 0 0 1 17.75 11.25)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(-1 0 0 1 15.5 15.5)" />
+    <circle cx=".75" cy=".75" r=".75" transform="matrix(-1 0 0 1 12.75 16.5)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(-1 0 0 1 19 15.25)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(-1 0 0 1 19.75 11.5)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(-1 0 0 1 16.5 18)" />
+    <circle cx=".5" cy=".5" r=".5" transform="matrix(-1 0 0 1 12.5 19)" />
+    <circle cx="1" cy="1" r="1" transform="matrix(-1 0 0 1 14.25 13)" />
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h24v24H0z" />
+    </clipPath>
+  </defs>
+</svg>
