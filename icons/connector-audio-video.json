@@ -18,14 +18,17 @@
     "equipment",
     "electricity",
     "electronics",
-    "console",
+    "disconnected",
+    "unplugged",
+    "interface",
     "input",
-    "output"
+    "output",
+    "console"
   ],
   "categories": [
     "connectivity",
-    "multimedia",
     "devices",
+    "multimedia",
     "gaming"
   ]
 }
