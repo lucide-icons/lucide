@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "universal",
+    "serial",
+    "bus",
+    "hdmi",
+    "cable",
+    "wire",
+    "connection",
+    "link",
+    "signal",
+    "data",
+    "transfer",
+    "computer",
+    "equipment",
+    "electricity",
+    "electronics",
+    "recharging",
+    "charger",
+    "power",
+    "supply",
+    "disconnected",
+    "unplugged",
+    "interface",
+    "input",
+    "output",
+    "console",
+    "controller"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "multimedia",
+    "gaming"
+  ]
+}
