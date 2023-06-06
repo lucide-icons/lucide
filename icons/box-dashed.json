@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "augmented reality",
+    "ar",
+    "mixed reality",
+    "virtual reality",
+    "vr",
+    "pass-through",
+    "roomscale",
+    "room-scale",
+    "guardian",
+    "boundary",
+    "bounds",
+    "edges",
+    "zone",
+    "play area",
+    "immersive",
+    "immersion",
+    "geometry",
+    "cube",
+    "cubic",
+    "mass",
+    "volume",
+    "object",
+    "3d"
+  ],
+  "categories": [
+    "gaming",
+    "maths"
+  ]
+}
