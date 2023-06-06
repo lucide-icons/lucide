@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "augmented reality",
+    "ar",
+    "mixed reality",
+    "virtual reality",
+    "vr",
+    "pass-through",
+    "environment",
+    "immersive",
+    "immersion",
+    "object",
+    "cube",
+    "cubic",
+    "3d",
+    "isometric",
+    "targeted",
+    "targeting",
+    "surveillance",
+    "camera",
+    "lens",
+    "photo",
+    "symbol",
+    "variable",
+    "code",
+    "coding"
+  ],
+  "categories": [
+    "gaming",
+    "photography",
+    "security",
+    "development"
+  ]
+}
