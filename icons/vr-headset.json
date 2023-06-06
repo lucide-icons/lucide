@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "virtual reality",
+    "mixed reality",
+    "augmented reality",
+    "ar",
+    "metaverse",
+    "immersive",
+    "immersion",
+    "oculus",
+    "valve index",
+    "headgear",
+    "console",
+    "arcade"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
