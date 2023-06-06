@@ -135,7 +135,6 @@ export default defineConfig({
 
     if (pageData.relativePath.startsWith('icons/')) {
       links.push({
-        // you might need to change this if not using clean urls mode
         url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
         lastmod: pageData?.params?.changedRelease?.date
       })
@@ -143,7 +142,6 @@ export default defineConfig({
     }
 
     links.push({
-      // you might need to change this if not using clean urls mode
       url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
       lastmod: pageData.lastUpdated
     })
