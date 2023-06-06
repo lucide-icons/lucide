@@ -13,10 +13,10 @@ hero:
   actions:
     - theme: brand
       text: View all icons
-      link: icons/index
+      link: icons/
     - theme: alt
       text: Get Started
-      link: guide/index
+      link: guide/
     - theme: alt
       text: GitHub
       link: https://github.com/lucide-icons/lucide
