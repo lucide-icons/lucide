@@ -4,12 +4,19 @@
     "danielbayley"
   ],
   "tags": [
-    "backwards",
+    "undo",
+    "redo",
+    "rerun",
+    "history",
+    "back",
+    "return",
     "reverse",
+    "revert",
     "direction",
-    "undo"
+    "u-turn"
   ],
   "categories": [
+    "text",
     "arrows"
   ]
 }

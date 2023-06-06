@@ -9,9 +9,12 @@
     "redo",
     "rerun",
     "history",
-    "backwards",
+    "back",
+    "return",
     "reverse",
-    "direction"
+    "revert",
+    "direction",
+    "u-turn"
   ],
   "categories": [
     "text",
