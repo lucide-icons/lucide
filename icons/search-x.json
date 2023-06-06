@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "ericfennis"
-  ],
   "tags": [
     "find",
     "scan",
     "magnifier",
-    "magnifying glass"
+    "magnifying glass",
+    "stop",
+    "clear",
+    "cancel",
+    "abort"
   ],
   "categories": [
     "text",
