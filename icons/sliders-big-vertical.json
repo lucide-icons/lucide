@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "settings",
+    "preferences",
+    "configuration",
+    "controls",
+    "filters",
+    "edit"
+  ],
+  "categories": [
+    "account"
+  ]
+}
