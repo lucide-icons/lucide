@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "socket",
+    "plug",
+    "controller",
+    "connector",
+    "interface",
+    "console",
+    "signal",
+    "audio",
+    "video",
+    "av",
+    "data",
+    "input",
+    "output"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "gaming"
+  ]
+}
