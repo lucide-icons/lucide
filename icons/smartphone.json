@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "phone",
     "cellphone",
-    "device"
+    "device",
+    "screen"
   ],
   "categories": [
     "connectivity",

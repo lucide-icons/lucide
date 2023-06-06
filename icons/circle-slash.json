@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "diameter",
     "zero",
@@ -12,7 +15,8 @@
     "stop",
     "forbidden",
     "prohibited",
-    "error"
+    "error",
+    "/"
   ],
   "categories": [
     "shapes"

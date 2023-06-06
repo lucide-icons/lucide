@@ -1,10 +1,21 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "album",
+    "music",
     "cd",
     "dvd",
-    "music"
+    "format",
+    "dj",
+    "spin",
+    "rotate",
+    "rpm"
   ],
   "categories": [
     "devices",

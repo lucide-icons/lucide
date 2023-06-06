@@ -1,16 +1,25 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "subtract",
     "calculate",
     "maths",
     "line",
     "divide",
+    "division",
     "horizontal rule",
-    "hr"
+    "hr",
+    "operator",
+    "code",
+    "-"
   ],
   "categories": [
     "maths",
-    "shapes"
+    "shapes",
+    "development"
   ]
 }

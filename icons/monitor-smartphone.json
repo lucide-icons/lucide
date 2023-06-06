@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "badraxas",
+    "karsa-mistmere",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "smartphone",
     "phone",
@@ -8,7 +14,8 @@
     "mobile",
     "desktop",
     "monitor",
-    "responsive"
+    "responsive",
+    "screens"
   ],
   "categories": [
     "connectivity",

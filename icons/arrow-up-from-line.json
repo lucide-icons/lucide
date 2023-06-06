@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "direction",
+    "upload",
+    "git",
+    "version control",
+    "push",
+    "expand",
+    "fold",
+    "vertical"
+  ],
+  "categories": [
+    "arrows",
+    "files",
+    "development"
+  ]
+}

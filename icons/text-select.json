@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "aliases": ["text-selection"],
   "tags": [
     "find",
     "search",
@@ -8,8 +12,5 @@
   "categories": [
     "text",
     "cursors"
-  ],
-  "aliases": [
-    "text-selection"
   ]
 }

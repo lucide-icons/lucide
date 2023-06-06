@@ -1,9 +1,23 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
+    "preserver",
+    "life belt",
+    "lifesaver",
     "help",
     "rescue",
-    "ship"
+    "ship",
+    "ring",
+    "raft",
+    "inflatable",
+    "wheel",
+    "donut"
   ],
   "categories": [
     "accessibility",

@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "desktop",
+    "virtual machine",
+    "vm",
+    "close",
+    "stop",
+    "suspend",
+    "remove",
+    "delete"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "development"
+  ]
+}

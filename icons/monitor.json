@@ -1,12 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "tv",
     "screen",
-    "display"
+    "display",
+    "virtual machine",
+    "vm"
   ],
   "categories": [
     "connectivity",
-    "devices"
+    "devices",
+    "development"
   ]
 }

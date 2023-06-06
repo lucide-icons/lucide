@@ -50,9 +50,9 @@ export interface CreateIconsOptions {
   /**
    * Search HTML emelemt by \`nameAttr\` property.
    *
-   * For example if define \`<i lucide-icon="circle"></i>\`, fill by \`lucide-icon\`.
+   * For example if define \`<i data-lucide="circle"></i>\`, fill by \`data-lucide\`.
    *
-   * @default 'icon-name'
+   * @default 'data-lucide'
    */
   nameAttr?: string;
 

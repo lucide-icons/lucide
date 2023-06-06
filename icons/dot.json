@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "interpunct",
+    "interpoint",
+    "middot",
+    "step",
+    "punctuation",
+    "period",
+    "full stop",
+    "end",
+    "finish",
+    "final",
+    "characters",
+    "font",
+    "typography",
+    "type",
+    "center",
+    "."
+  ],
+  "categories": [
+    "shapes",
+    "text"
+  ]
+}
