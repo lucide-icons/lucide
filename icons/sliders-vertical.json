@@ -7,9 +7,16 @@
   ],
   "tags": [
     "settings",
-    "controls"
+    "preferences",
+    "configuration",
+    "controls",
+    "filters",
+    "edit"
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "sliders"
   ]
 }
