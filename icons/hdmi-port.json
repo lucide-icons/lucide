@@ -6,6 +6,7 @@
   "tags": [
     "socket",
     "plug",
+    "slot",
     "controller",
     "connector",
     "interface",
@@ -13,6 +14,7 @@
     "signal",
     "audio",
     "video",
+    "visual",
     "av",
     "data",
     "input",
