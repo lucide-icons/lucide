@@ -106,7 +106,7 @@ export default defineConfig({
       dark: '/logo.dark.svg'
     },
     nav: [
-      { text: 'Icons', link: '/icons/index.md' },
+      { text: 'Icons', link: '/icons/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Packages', link: '/packages' },
       { text: 'License', link: '/license' },
@@ -123,6 +123,14 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path'
     },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'R7KKMCPXOB',
+        apiKey: '04d422179bdfbb7c49092689bd18c31f',
+        indexName: 'lucide'
+      }
+    }
   },
   transformHtml: (_, id, { pageData }) => {
     if (/[\\/]404\.html$/.test(id)) {
