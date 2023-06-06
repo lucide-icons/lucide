@@ -1,0 +1,17 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3.3 5.3c-2.3 3.7 0 7.4 0 7.4C4.4 14.6 7.9 16 12 16s7.6-1.4 8.7-3.3c0 0 2.3-3.7 0-7.4" />
+  <ellipse cx="12" cy="6.5" rx="9" ry="4.5" />
+  <path d="M18 9.8C17.8 8.3 15.2 7 12 7S6.2 8.3 6 9.8" />
+  <path d="M15.5 20H11a2 2 0 0 1-2-2v-2" />
+  <path d="m11.8 16 5.1 5.1a2.9 2.9 0 1 0 4.2-4.2l-2.3-2.3" />
+</svg>
