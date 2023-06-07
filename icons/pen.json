@@ -11,8 +11,6 @@
     "change",
     "create",
     "draw",
-    "sketch",
-    "draft",
     "writer",
     "writing",
     "biro",
@@ -28,6 +26,6 @@
     "tools"
   ],
   "aliases": [
-    "pen-line"
+    "edit-2"
   ]
 }
