@@ -9,7 +9,8 @@ import sidebar from './sidebar';
 const links = []
 
 
-const title = "Lucide Icons";
+const title = "Lucide";
+const socialTitle = "Lucide Icons";
 const description = "Beautiful & consistent icon toolkit made by the community."
 
 // https://vitepress.dev/reference/site-config
@@ -56,7 +57,7 @@ export default defineConfig({
     }],
     [ 'meta', {
       property:"og:title",
-      content: title,
+      content: socialTitle,
     }],
     [ 'meta', {
       property:"og:description",
@@ -88,7 +89,7 @@ export default defineConfig({
     }],
     [ 'meta', {
       property:"twitter:title",
-      content: title,
+      content: socialTitle,
     }],
     [ 'meta', {
       property:"twitter:description",
