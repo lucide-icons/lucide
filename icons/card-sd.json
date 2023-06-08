@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "smartphone",
+    "mobile",
+    "disk",
+    "data",
+    "format",
+    "storage",
+    "capacity",
+    "megabytes",
+    "mb",
+    "gigabytes",
+    "gb",
+    "extra",
+    "digital",
+    "camera",
+    "photos",
+    "pictures",
+    "images",
+    "raw"
+  ],
+  "categories": [
+    "photography",
+    "files",
+    "multimedia",
+    "devices"
+  ]
+}
