@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "sd",
+    "sim",
+    "data",
+    "format",
+    "floppy disk",
+    "save",
+    "storage",
+    "digital",
+    "smartphone",
+    "mobile",
+    "instructions",
+    "port",
+    "input",
+    "insert",
+    "slide",
+    "push"
+  ],
+  "categories": [
+    "multimedia",
+    "files",
+    "devices",
+    "photography"
+  ]
+}
