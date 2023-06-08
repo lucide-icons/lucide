@@ -6,7 +6,13 @@
     "ericfennis"
   ],
   "tags": [
+    "atm",
+    "cash machine",
+    "cash point",
+    "withdrawal",
     "debit",
+    "visa",
+    "mastercard",
     "bank",
     "finance",
     "financial",
@@ -17,10 +23,13 @@
     "cc",
     "shopping",
     "retail",
+    "store",
+    "mall",
     "consumer",
     "loyalty",
     "points",
-    "cashback"
+    "cashback",
+    "transaction"
   ],
   "categories": [
     "account",
