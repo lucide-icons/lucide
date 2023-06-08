@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "reading",
+    "booklet",
+    "magazine",
+    "leaflet",
+    "pamphlet",
+    "tome",
+    "library",
+    "writing",
+    "written",
+    "writer",
+    "author",
+    "story",
+    "script",
+    "fiction",
+    "novel",
+    "information",
+    "knowledge",
+    "education",
+    "school",
+    "university",
+    "college",
+    "academy",
+    "learning",
+    "study",
+    "documentation",
+    "binding",
+    "bound"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "gaming"
+  ]
+}
