@@ -1,20 +1,43 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley"
-  ],
+  "contributors": ["danielbayley"],
   "tags": [
-    "read",
-    "dictionary",
-    "booklet",
-    "library",
     "code",
+    "coding",
     "version control",
     "git",
     "repository",
-    "clone"
+    "clone",
+    "fork",
+    "duplicate",
+    "multiple",
+    "books",
+    "library",
+    "copies",
+    "copied",
+    "plagiarism",
+    "plagiarised",
+    "plagiarized",
+    "reading list",
+    "information",
+    "informed",
+    "knowledge",
+    "knowledgeable",
+    "knowledgable",
+    "education",
+    "school",
+    "university",
+    "college",
+    "academy",
+    "learning",
+    "study",
+    "smart",
+    "intelligent",
+    "intellectual"
   ],
   "categories": [
-    "development"
+    "development",
+    "text",
+    "gaming"
   ]
 }
