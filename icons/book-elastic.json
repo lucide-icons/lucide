@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "moleskine",
+    "closure",
+    "strap",
+    "band",
+    "sketchbook",
+    "notes",
+    "notepad",
+    "organizer",
+    "organiser",
+    "planner",
+    "diary",
+    "journal",
+    "writing",
+    "written",
+    "writer",
+    "reading",
+    "school",
+    "university",
+    "college",
+    "academy",
+    "study"
+  ],
+  "categories": [
+    "text",
+    "communication",
+    "social",
+    "design"
+  ]
+}
