@@ -5,6 +5,8 @@
   ],
   "tags": [
     "dictionary",
+    "define",
+    "definition",
     "thesaurus",
     "encyclopedia",
     "encyclopaedia",
@@ -26,17 +28,22 @@
     "information",
     "knowledge",
     "education",
-    "school",
+    "high school",
     "university",
     "college",
     "academy",
     "learning",
     "study",
+    "research",
     "language",
     "translate",
-    "alphabetical"
+    "alphabetical",
+    "a-z",
+    "ordered"
   ],
   "categories": [
-    "text"
+    "text",
+    "maps",
+    "gaming"
   ]
 }

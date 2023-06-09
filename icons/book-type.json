@@ -5,6 +5,7 @@
   ],
   "tags": [
     "thesaurus",
+    "synonym",
     "reading",
     "booklet",
     "magazine",
@@ -23,12 +24,13 @@
     "information",
     "knowledge",
     "education",
-    "school",
+    "high school",
     "university",
     "college",
     "academy",
     "learning",
     "study",
+    "research",
     "language",
     "translate",
     "typography",
@@ -37,6 +39,7 @@
   ],
   "categories": [
     "text",
-    "design"
+    "design",
+    "gaming"
   ]
 }
