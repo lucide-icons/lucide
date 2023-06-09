@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "diary",
+    "journal",
+    "entry",
+    "entries",
+    "personal",
+    "private",
+    "secret",
+    "crush",
+    "like",
+    "love",
+    "emotion",
+    "feminine",
+    "girls",
+    "teens",
+    "teenager",
+    "therapy",
+    "theraputic",
+    "therapist",
+    "planner",
+    "organizer",
+    "organiser",
+    "notes",
+    "notepad",
+    "sketchbook",
+    "writing",
+    "written",
+    "reading",
+    "high school"
+  ],
+  "categories": [
+    "text",
+    "communication",
+    "social",
+    "design"
+  ]
+}
