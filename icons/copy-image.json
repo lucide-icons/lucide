@@ -12,13 +12,16 @@
     "photos",
     "album",
     "collection",
-    "event"
+    "event",
+    "gallery"
   ],
   "categories": [
     "photography",
     "text",
     "multimedia",
     "files",
-    "social"
+    "social",
+    "design",
+    "development"
   ]
 }
