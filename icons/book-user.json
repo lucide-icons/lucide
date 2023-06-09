@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "person",
+    "people",
+    "family",
+    "friends",
+    "acquaintances",
+    "contacts",
+    "address book",
+    "phone book",
+    "directory",
+    "listing",
+    "networking"
+  ],
+  "categories": [
+    "account",
+    "connectivity",
+    "communication",
+    "social"
+  ]
+}
