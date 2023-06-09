@@ -9,13 +9,21 @@
     "photos",
     "album",
     "collection",
-    "event"
+    "event",
+    "magazine",
+    "catalog",
+    "catalogue",
+    "brochure",
+    "browse",
+    "gallery"
   ],
   "categories": [
     "photography",
     "text",
     "multimedia",
     "files",
-    "social"
+    "social",
+    "shopping",
+    "travel"
   ]
 }

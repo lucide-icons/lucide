@@ -10,16 +10,18 @@
     "friends",
     "acquaintances",
     "contacts",
-    "phone book",
+    "details",
+    "addresses",
+    "phone numbers",
     "directory",
     "listing",
     "networking",
-    "tabs",
     "alphabetical",
     "a-z",
     "organizer",
     "organiser",
-    "diary"
+    "diary",
+    "stationery"
   ],
   "categories": [
     "account",
