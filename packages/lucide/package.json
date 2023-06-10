@@ -1,7 +1,7 @@
 {
   "name": "lucide",
   "description": "A Lucide icon library package for web and javascript applications.",
-  "version": "0.160.0",
+  "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",

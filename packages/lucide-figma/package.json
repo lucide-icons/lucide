@@ -1,6 +1,6 @@
 {
   "name": "lucide-figma",
-  "version": "0.15.11",
+  "version": "1.0.0",
   "private": true,
   "license": "ISC",
   "main": "src/main.js",
