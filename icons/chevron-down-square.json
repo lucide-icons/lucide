@@ -5,10 +5,13 @@
     "ericfennis"
   ],
   "tags": [
-    "arrow"
+    "back",
+    "menu",
+    "panel"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }
