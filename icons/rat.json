@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "henri42",
+    "jguddas",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "animal",
     "mouse",

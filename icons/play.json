@@ -1,7 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "music",
+    "audio",
+    "video",
     "start",
     "run"
   ],

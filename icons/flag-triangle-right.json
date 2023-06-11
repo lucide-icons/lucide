@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "tidoni",
+    "ericfennis"
+  ],
   "tags": [
     "report",
     "timeline"

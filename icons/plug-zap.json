@@ -1,6 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jguddas",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
+    "electricity",
+    "electronics",
     "charge",
     "charging",
     "battery",

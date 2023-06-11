@@ -1,0 +1,80 @@
+[
+  {
+    "name": "blade-lucide-icons",
+    "description": "Implementation of Lucide icon's using blade-icons for Laravel based projects.",
+    "icon": "/framework-logos/laravel.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/packagist/v/mallardduck/blade-lucide-icons",
+        "href": "https://packagist.org/packages/mallardduck/blade-lucide-icons"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/packagist/dt/mallardduck/blade-lucide-icons",
+        "href": "https://packagist.org/packages/mallardduck/blade-lucide-icons"
+      }
+    ],
+    "source": "https://github.com/mallardduck/blade-lucide-icons",
+    "documentation": "https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md"
+  },
+  {
+    "name": "hyva-lucide-icons",
+    "description": "Implementation of Lucide icon's using Hyvä's svg php viewmodal to render icons for Magento 2 Hyva theme based projects.",
+    "icon": "/framework-logos/hyva.svg",
+    "iconDark": "/framework-logos/hyva-dark.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/packagist/v/siteation/magento2-hyva-icons-lucide",
+        "href": "https://packagist.org/packages/siteation/magento2-hyva-icons-lucide"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/packagist/dt/siteation/magento2-hyva-icons-lucide",
+        "href": "https://packagist.org/packages/siteation/magento2-hyva-icons-lucide"
+      }
+    ],
+    "source": "https://github.com/siteation/magento2-hyva-icons-lucide",
+    "documentation": "https://github.com/siteation/magento2-hyva-icons-lucide/blob/main/README.md"
+  },
+  {
+    "name": "eleventy-lucide-icons",
+    "description": "Using this plugin, Eleventy projects can incorporate Lucide icons. it makes it simple to use Lucide icons into your themes via shortcodes, improving your website's overall usability and visual appeal.",
+    "icon": "/framework-logos/11ty.svg",
+    "iconClass": "package-icon-invert",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/@grimlink/eleventy-plugin-lucide-icons",
+        "href": "https://www.npmjs.com/package/@grimlink/eleventy-plugin-lucide-icons"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dw/@grimlink/eleventy-plugin-lucide-icons",
+        "href": "https://www.npmjs.com/package/@grimlink/eleventy-plugin-lucide-icons"
+      }
+    ],
+    "source": "https://github.com/GrimLink/eleventy-plugin-lucide-icons",
+    "documentation": "https://github.com/GrimLink/eleventy-plugin-lucide-icons/blob/main/README.md"
+  },
+  {
+    "name": "nuxt-lucide-icons",
+    "description": "Using this module, Nuxt projects can incorporate Lucide icons. It is fully configurable and supports auto imports and tree-shaking.",
+    "icon": "/framework-logos/nuxt.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/nuxt-lucide-icons",
+        "href": "https://www.npmjs.com/package/nuxt-lucide-icons"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dw/nuxt-lucide-icons",
+        "href": "https://www.npmjs.com/package/nuxt-lucide-icons"
+      }
+    ],
+    "source": "https://github.com/swisnl/nuxt-lucide-icons",
+    "documentation": "https://github.com/swisnl/nuxt-lucide-icons/blob/main/README.md"
+  }
+]

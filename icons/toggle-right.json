@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "on",
     "off",
-    "switch"
+    "switch",
+    "boolean"
   ],
   "categories": [
     "layout",
-    "account"
+    "account",
+    "development"
   ]
 }

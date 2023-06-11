@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "paper",
+    "log",
+    "scripture",
+    "document",
+    "parchment",
+    "list",
+    "long",
+    "script",
+    "code"
+  ],
+  "categories": [
+    "gaming",
+    "development",
+    "text"
+  ]
+}

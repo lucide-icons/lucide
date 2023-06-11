@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "bduffany",
+    "karsa-mistmere"
+  ],
   "tags": [
     "brightness",
     "dim",
