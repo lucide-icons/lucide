@@ -1,20 +1,20 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere"
-  ],
   "tags": [
-    "pending",
-    "dot",
-    "progress",
+    "arrows",
+    "rotate",
+    "reload",
+    "synchronise",
+    "synchronize",
+    "circular",
+    "cycle",
     "issue",
     "code",
     "version control",
-    "choices",
-    "multiple choice",
-    "choose"
+    "dashed"
   ],
   "categories": [
+    "arrows",
     "development",
     "coding",
     "shapes"
