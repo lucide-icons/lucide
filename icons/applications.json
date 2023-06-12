@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "apps",
+    "launchpad",
+    "grid",
+    "browser"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "development",
+    "tools"
+  ]
+}
