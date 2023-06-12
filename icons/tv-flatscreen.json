@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "aliases": [
+    "tv-2"
+  ],
   "contributors": [
     "ericfennis"
   ],
