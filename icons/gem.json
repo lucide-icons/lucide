@@ -2,12 +2,22 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "diamond",
+    "crystal",
+    "ruby",
+    "jewellery",
     "price",
     "special",
-    "present"
+    "present",
+    "gift",
+    "ring",
+    "wedding",
+    "proposal",
+    "marriage",
+    "rubygems"
   ],
   "categories": [
     "gaming",
-    "money"
+    "money",
+    "development"
   ]
 }
