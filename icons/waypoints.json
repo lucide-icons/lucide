@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "indirection",
+    "vpn",
+    "virtual private network",
+    "proxy",
+    "connections",
+    "reroute",
+    "path",
+    "navigation",
+    "bounce",
+    "spread",
+    "viral"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "social",
+    "maps",
+    "development"
+  ]
+}
