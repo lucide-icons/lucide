@@ -7,10 +7,20 @@
     "ericfennis"
   ],
   "tags": [
-    "load"
+    "loading",
+    "wait",
+    "busy",
+    "throbber",
+    "spinner",
+    "spinning"
   ],
   "categories": [
+    "cursors",
     "multimedia",
-    "layout"
+    "layout",
+    "design"
+  ],
+  "aliases": [
+    "loader-2"
   ]
 }
