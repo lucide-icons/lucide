@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "memory",
+    "ram",
+    "technology",
+    "browser"
+  ],
+  "categories": [
+    "devices",
+    "development",
+    "tools"
+  ]
+}
