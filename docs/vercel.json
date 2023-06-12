@@ -23,6 +23,17 @@
       "source": "/docs/:path*",
       "destination": "/guide/:path*",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page"
+        }
+      ],
+      "destination": "/icons",
+      "permanent": false
     }
   ]
 }
