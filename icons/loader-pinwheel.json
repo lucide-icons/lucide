@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "loading",
+    "wait",
+    "busy",
+    "throbber",
+    "spinner",
+    "spinning",
+    "beach ball"
+  ],
+  "categories": [
+    "cursors",
+    "design"
+  ]
+}
