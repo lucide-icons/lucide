@@ -8,12 +8,18 @@
     "diameter",
     "zero",
     "Ø",
-    "null",
     "nothing",
-    "maths",
+    "null",
+    "void",
+    "ban",
     "/"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "maths",
+    "development"
+  ],
+  "aliases": [
+    "circle-slashed"
   ]
 }
