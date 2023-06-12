@@ -9,6 +9,7 @@
     "progress",
     "issue",
     "code",
+    "coding",
     "version control",
     "choices",
     "multiple choice",
@@ -16,7 +17,6 @@
   ],
   "categories": [
     "development",
-    "coding",
     "shapes"
   ]
 }
