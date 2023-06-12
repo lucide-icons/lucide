@@ -29,7 +29,7 @@
       "has": [
         {
           "type": "query",
-          "key": "page"
+          "key": "search"
         }
       ],
       "destination": "/icons",

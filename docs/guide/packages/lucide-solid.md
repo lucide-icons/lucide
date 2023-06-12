@@ -4,28 +4,34 @@ Implementation of the lucide icon library for solid applications.
 
 ## Installation
 
-```sh
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-solid
+```
+
+```sh [yarn]
 yarn add lucide-solid
 ```
 
-or
-
-```sh
+```sh [npm]
 npm install lucide-solid
 ```
 
+:::
+
 ## How to use
 
-It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a solid component.
+It's build with ES Modules so it's completely tree-shakable.
+
+Each icon can be imported as a Solid component, what renders a inline SVG Element. This way only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
 
 ### Example
 
-You can pass additional props to adjust the icon.
+Additional props can be passed to adjust the icon:
 
-```js
+```jsx
 import { Camera } from 'lucide-solid';
-// Returns SolidComponent
 
 // Usage
 const App = () => {
@@ -35,7 +41,7 @@ const App = () => {
 export default App;
 ```
 
-### Props
+## Props
 
 | name                  | type      | default      |
 | --------------------- | --------- | ------------ |
@@ -44,36 +50,53 @@ export default App;
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-### Custom props / svg attributes
+### Applying props
 
-You can also pass custom props that will be added in the as attributes. With that you can modify the icons look by passing svg attributes.
+To apply custom props to change the look of the icon, this can be done by simply pass them as props to the component. All SVG attributes are available as props to style the SVGs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
-```js
+```jsx
 // Usage
 const App = () => {
   return <Camera fill="red" stroke-linejoin="bevel" />;
 };
 ```
 
-### One generic icon component
+## One generic icon component
 
-It is possible to create one generic icon component to load icons.
+It is possible to create one generic icon component to load icons. It's not recommended.
 
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
+::: danger
+Example below importing all ES Modules, caution using this example. All icons will be imported. When using bundlers like: `Webpack`, `Rollup` or `Vite` the application build size will grow strongly and harming the performance the application.
+:::
 
-#### Icon Component Example
+### Icon Component Example
 
 ```tsx
-import * as icons from 'lucide-solid';
-import type { LucideProps } from 'lucide-solid';
+import { icons, type LucideProps } from 'lucide-solid';
 import { splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 
-const Icon = (props: { name: keyof typeof icons } & LucideProps) => {
+interface IconProps extends LucideProps {
+  name: keyof typeof icons;
+}
+
+const Icon = (props: IconProps) => {
   const [local, others] = splitProps(props, ["name"]);
 
   return <Dynamic component={icons[local.name]} {...others} />
 };
 
 export default Icon;
+```
+
+#### Using the Icon Component
+
+```tsx
+import Icon from './Icon';
+
+const App = () => {
+  return <Icon name="home" />;
+};
+
+export default App;
 ```
