@@ -11,8 +11,14 @@
     "forbidden",
     "prohibited",
     "error",
+    "incorrect",
+    "mistake",
+    "wrong",
+    "failure",
     "circle",
-    "slash"
+    "slash",
+    "null",
+    "void"
   ],
   "categories": [
     "account"

@@ -7,8 +7,9 @@
     "diameter",
     "zero",
     "Ø",
-    "null",
     "nothing",
+    "null",
+    "void",
     "cancel",
     "ban",
     "no",
@@ -16,6 +17,10 @@
     "forbidden",
     "prohibited",
     "error",
+    "incorrect",
+    "mistake",
+    "wrong",
+    "failure",
     "/"
   ],
   "categories": [
