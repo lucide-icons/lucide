@@ -6,10 +6,18 @@
     "ericfennis"
   ],
   "tags": [
-    "direction"
+    "previous",
+    "back",
+    "direction",
+    "west",
+    "sign",
+    "keyboard",
+    "button",
+    "<-"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }

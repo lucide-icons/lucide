@@ -5,10 +5,15 @@
   ],
   "tags": [
     "direction",
-    "diagonal"
+    "north-west",
+    "diagonal",
+    "sign",
+    "keyboard",
+    "button"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }

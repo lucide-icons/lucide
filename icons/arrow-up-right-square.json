@@ -5,11 +5,16 @@
   ],
   "tags": [
     "direction",
+    "north-east",
     "diagonal",
+    "sign",
+    "keyboard",
+    "button",
     "share"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes",
     "social"
   ]

@@ -5,10 +5,17 @@
   ],
   "tags": [
     "direction",
-    "diagonal"
+    "south-west",
+    "diagonal",
+    "sign",
+    "turn",
+    "keyboard",
+    "button"
   ],
   "categories": [
     "arrows",
-    "shapes"
+    "navigation",
+    "shapes",
+    "gaming"
   ]
 }
