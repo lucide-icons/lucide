@@ -11,8 +11,12 @@
     "code",
     "spread",
     "rest",
+    "...",
     "…",
-    "..."
+    "etc",
+    "loader",
+    "loading",
+    "throbber"
   ],
   "categories": [
     "layout",
