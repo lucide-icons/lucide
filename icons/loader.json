@@ -2,14 +2,21 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
-    "load",
-    "wait"
+    "loading",
+    "wait",
+    "busy",
+    "throbber",
+    "spinner",
+    "spinning"
   ],
   "categories": [
+    "cursors",
     "multimedia",
-    "layout"
+    "layout",
+    "design"
   ]
 }
