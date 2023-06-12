@@ -10,6 +10,7 @@
     "connection",
     "link",
     "signal",
+    "console",
     "computer",
     "equipment",
     "electricity",
@@ -20,9 +21,17 @@
     "supply",
     "disconnected",
     "unplugged",
+    "plugs",
     "interface",
     "input",
-    "output"
+    "output",
+    "audio video",
+    "av",
+    "rca",
+    "scart",
+    "tv",
+    "television",
+    "optical"
   ],
   "categories": [
     "connectivity",
