@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "danielbayley"
   ],
   "tags": [
     "pulse",
@@ -37,6 +37,7 @@
     "account",
     "social",
     "science",
-    "multimedia"
+    "multimedia",
+    "shapes"
   ]
 }
