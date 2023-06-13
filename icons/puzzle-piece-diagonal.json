@@ -5,13 +5,19 @@
     "ericfennis"
   ],
   "tags": [
-    "component",
     "module",
+    "component",
+    "extension",
+    "plugin",
     "part",
-    "piece"
+    "jigsaw",
+    "fit"
   ],
   "categories": [
     "development",
     "gaming"
+  ],
+  "aliases": [
+    "puzzle"
   ]
 }
