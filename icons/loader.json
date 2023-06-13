@@ -9,9 +9,10 @@
     "loading",
     "wait",
     "busy",
-    "throbber",
+    "progress",
     "spinner",
-    "spinning"
+    "spinning",
+    "throbber"
   ],
   "categories": [
     "cursors",

@@ -7,10 +7,13 @@
     "loading",
     "wait",
     "busy",
+    "progress",
     "throbber",
     "spinner",
     "spinning",
-    "beach ball"
+    "beach ball",
+    "frozen",
+    "freeze"
   ],
   "categories": [
     "cursors",
