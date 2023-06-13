@@ -10,12 +10,27 @@
   import IconInfo from './IconInfo.vue';
   import Badge from '../base/Badge.vue';
 
+  // TODO: Retrieve data from API
+
   const props = defineProps<{
-    icon: IconEntity
+    iconName: string
   }>()
 
+  // const icon =
+  const icon = ref<IconEntity>(null)
+
+  watch(() => props.iconName, async (iconName) => {
+    if (iconName) {
+      icon.value = (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+    } else {
+      icon.value = null
+    }
+  }, {
+    immediate: true
+  })
+
   const emit = defineEmits(['close'])
-  const isOpen = computed(() => !!props.icon)
+  const isOpen = computed(() => !!icon.value)
 
   function onClose() {
     emit('close')
