@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "read",
+    "clip",
+    "marker",
+    "tag",
+    "close",
+    "remove",
+    "clear"
+  ],
+  "categories": [
+    "account"
+  ]
+}
