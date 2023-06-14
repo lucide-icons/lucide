@@ -5,6 +5,7 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import sidebar from './sidebar';
+import fs from 'fs';
 
 const links = []
 
@@ -12,6 +13,10 @@ const links = []
 const title = "Lucide";
 const socialTitle = "Lucide Icons";
 const description = "Beautiful & consistent icon toolkit made by the community."
+
+const releaseMetaDataDirectory = path.resolve(process.cwd(), '.vitepress/data', 'releaseMetaData');
+
+console.log('Directory exists', fs.existsSync(releaseMetaDataDirectory));
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
