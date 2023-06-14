@@ -13,7 +13,7 @@ const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
 const location = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData.json');
-const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData');
+const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'releaseMetadata');
 
 if (fs.existsSync(location)) {
   fs.unlinkSync(location);

@@ -14,10 +14,6 @@ const title = "Lucide";
 const socialTitle = "Lucide Icons";
 const description = "Beautiful & consistent icon toolkit made by the community."
 
-const releaseMetaDataDirectory = path.resolve(process.cwd(), '.vitepress/data', 'releaseMetaData');
-
-console.log('Directory exists', fs.existsSync(releaseMetaDataDirectory));
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title,
