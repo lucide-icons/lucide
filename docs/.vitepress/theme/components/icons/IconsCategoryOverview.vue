@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent } from 'vue'
+import { ref, computed, defineAsyncComponent, watch } from 'vue'
 import type { IconEntity, Category } from '../../types'
 import useSearch from '../../composables/useSearch'
 import InputSearch from '../base/InputSearch.vue'
 import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
 import IconsCategory from './IconsCategory.vue'
+import { useFetch } from '@vueuse/core'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -22,7 +23,34 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-const searchResults = useSearch(searchQuery, props.icons, [
+const { execute: fetchTags, data: tags } = useFetch<Record<string, string[]>>(
+  `${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/tags`,
+  {
+    immediate: new URLSearchParams(window.location.search).has('search')
+  }
+)
+
+watch(searchQueryThrottled, (searchString) => {
+  if (tags.value == null) {
+    fetchTags()
+  }
+})
+
+const mappedIcons = computed(() => {
+  if(tags.value == null) {
+    return props.icons
+  }
+  return props.icons.map((icon) => {
+    const iconTags = tags.value[icon.name]
+
+    return {
+      ...icon,
+      tags: iconTags,
+    }
+  })
+})
+
+const searchResults = useSearch(searchQuery, mappedIcons, [
   { name: 'name', weight: 2 },
   { name: 'tags', weight: 1 },
 ])

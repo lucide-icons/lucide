@@ -13,10 +13,18 @@ const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
 const location = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData.json');
-const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'iconDetails');
+const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData');
 
 if (fs.existsSync(location)) {
   fs.unlinkSync(location);
+}
+
+if (fs.existsSync(releaseMetaDataDirectory)) {
+  fs.rmSync(releaseMetaDataDirectory, { recursive: true, force: true });
+}
+
+if (!fs.existsSync(releaseMetaDataDirectory)) {
+  fs.mkdirSync(releaseMetaDataDirectory);
 }
 
 const fetchAllReleases = async () => {
@@ -171,28 +179,3 @@ try {
 } catch (error) {
   throw new Error(`Something went wrong generating icon release meta cache file,\n ${error}`);
 }
-
-Promise.all(
-  iconJsonFiles.map((iconJsonFile) => {
-    const iconName = path.basename(iconJsonFile, '.json');
-    const location = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
-
-    if (iconName in newReleaseMetaData === false) {
-      console.error(`Could not find release metadata for icon '${iconName}'.`);
-    }
-
-    const contents = {
-      ...defaultReleaseMetaData,
-      ...(newReleaseMetaData[iconName] ?? {}),
-    };
-
-    const output = JSON.stringify(contents, null, 2);
-    return fs.promises.writeFile(location, output, 'utf-8');
-  }),
-)
-  .then(() => {
-    console.log('Successfully written icon release meta files');
-  })
-  .catch((error) => {
-    throw new Error(`Something went wrong generating icon release meta cache file,\n ${error}`);
-  });

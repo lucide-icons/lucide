@@ -27,9 +27,11 @@ const tags = computed(() => {
     <IconDetailName class="icon-name">
       {{ icon.name }}
     </IconDetailName>
-    <p class="icon-tags">
-      {{ tags }}
-    </p>
+    <div class="tags-scroller">
+      <p class="icon-tags">
+        {{ tags }}
+      </p>
+    </div>
     <div class="group">
       <Badge
         v-for="category in icon.categories"
@@ -72,9 +74,26 @@ const tags = computed(() => {
   font-size: 16px;
   color: var(--vp-c-text-2);
   font-weight: 500;
-  margin-top: 0;;
-  margin-bottom: 16px;
+  overflow-x: scroll;
   line-height: 28px;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tags-scroller {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 28px;
+  padding: 8px 0 16px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  align-items: center;
 }
 
 .buttons {

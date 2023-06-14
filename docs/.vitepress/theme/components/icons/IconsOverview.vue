@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent } from 'vue'
+import { ref, computed, watch, defineAsyncComponent, onMounted } from 'vue'
 import type { IconEntity } from '../../types'
-import { useMediaQuery, useOffsetPagination } from '@vueuse/core'
+import { useFetch, useMediaQuery, useOffsetPagination } from '@vueuse/core'
 import IconGrid from './IconGrid.vue'
 import InputSearch from '../base/InputSearch.vue'
 import useSearch from '../../composables/useSearch'
@@ -22,7 +22,7 @@ const isSmallScreen = useMediaQuery('(min-width: 640px)');
 
 const pageSize = computed(() => {
   if(isExtraLargeScreen.value) {
-    return 16 * 16;
+    return 16 * 20;
   }
   if(isLargeScreen.value) {
     return 16 * 12;
@@ -38,8 +38,24 @@ const pageSize = computed(() => {
   return 10 * 5;
 })
 
+const { execute: fetchTags, data: tags } = useFetch<Record<string, string[]>>(`${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/tags`, { immediate: new URLSearchParams(window.location.search).has('search') })
+
+const mappedIcons = computed(() => {
+  if(tags.value == null) {
+    return props.icons
+  }
+  return props.icons.map((icon) => {
+    const iconTags = tags.value[icon.name]
+
+    return {
+      ...icon,
+      tags: iconTags,
+    }
+  })
+})
+
 const { searchInput, searchQuery, searchQueryThrottled } = useSearchInput()
-const searchResults = useSearch(searchQueryThrottled, props.icons, [
+const searchResults = useSearch(searchQueryThrottled, mappedIcons, [
   { name: 'name', weight: 3 },
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
@@ -61,6 +77,10 @@ function setActiveIconName(name: string) {
 // const activeIcon = computed(() => props.icons.find((icon) => icon.name === activeIconName.value))
 
 watch(searchQueryThrottled, (searchString) => {
+  if (tags.value == null) {
+    fetchTags()
+  }
+
   currentPage.value = 1
 })
 

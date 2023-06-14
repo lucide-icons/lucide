@@ -35,7 +35,7 @@ export default defineConfig({
           )
         }
       ]
-    }
+    },
   },
   head: [
     [ 'script', {
