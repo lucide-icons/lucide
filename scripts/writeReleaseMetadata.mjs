@@ -138,7 +138,7 @@ try {
   const releaseMetaData = await Promise.all(
     iconJsonFiles.map(async (iconJsonFile) => {
       const iconName = path.basename(iconJsonFile, '.json');
-      const location = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
+      const metaDir = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
 
       if (iconName in newReleaseMetaData === false) {
         console.error(`Could not find release metadata for icon '${iconName}'.`);
@@ -164,7 +164,7 @@ try {
       }
 
       const output = JSON.stringify(contents, null, 2);
-      await fs.promises.writeFile(location, output, 'utf-8');
+      await fs.promises.writeFile(metaDir, output, 'utf-8');
 
       return [iconName, contents];
     }),
