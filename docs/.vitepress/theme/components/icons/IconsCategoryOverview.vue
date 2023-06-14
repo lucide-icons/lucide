@@ -61,7 +61,6 @@ const categories = computed(() => {
       return iconCategories?.includes(name)
     })
 
-
     const searchedCategoryIcons = isSearching
       ? categoryIcons.filter(icon => searchResults.value.some((item) => item?.name === icon?.name))
       : categoryIcons;
