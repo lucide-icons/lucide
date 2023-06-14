@@ -130,10 +130,6 @@ export default defineConfig({
       return
     }
 
-    if (pageData.relativePath === 'index.md') {
-      console.log('Home!');
-    }
-
     if (pageData.relativePath.startsWith('icons/')) {
       links.push({
         url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),

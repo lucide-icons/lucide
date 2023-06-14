@@ -8,6 +8,7 @@ import useSearch from '../../composables/useSearch'
 import EndOfPage from '../base/EndOfPage.vue'
 import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
+import useFetchTags from '../../composables/useFetchTags'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -38,7 +39,7 @@ const pageSize = computed(() => {
   return 10 * 5;
 })
 
-const { execute: fetchTags, data: tags } = useFetch<Record<string, string[]>>(`${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/tags`, { immediate: new URLSearchParams(window.location.search).has('search') })
+const { execute: fetchTags, data: tags } = useFetchTags()
 
 const mappedIcons = computed(() => {
   if(tags.value == null) {

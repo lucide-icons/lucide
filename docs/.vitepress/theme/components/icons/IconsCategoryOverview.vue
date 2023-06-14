@@ -7,6 +7,7 @@ import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
 import IconsCategory from './IconsCategory.vue'
 import { useFetch } from '@vueuse/core'
+import useFetchTags from '../../composables/useFetchTags'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -23,12 +24,7 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-const { execute: fetchTags, data: tags } = useFetch<Record<string, string[]>>(
-  `${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/tags`,
-  {
-    immediate: new URLSearchParams(window.location.search).has('search')
-  }
-)
+const { execute: fetchTags, data: tags } = useFetchTags()
 
 watch(searchQueryThrottled, (searchString) => {
   if (tags.value == null) {
