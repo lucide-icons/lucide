@@ -117,6 +117,10 @@ const codeExample = computed(() => data.codeExamples?.map(
     margin-top: 24px;
   }
 
+  .info {
+    --tags-gradient-background: var(--vp-c-bg);
+  }
+
   .version, .contributors {
     display: flex;
     flex-wrap: wrap;

@@ -124,9 +124,8 @@
 }
 
 .icon-info {
-  padding: 0 24px;
+  padding-left: 24px;
   flex-basis: 100%;
-
 }
 
 .icon-tags {
