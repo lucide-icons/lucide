@@ -6,6 +6,6 @@ export default eventHandler((event) => {
   setResponseHeader(event, 'Access-Control-Allow-Origin', '*')
 
   return Object.fromEntries(
-    Object.entries(iconMetaData).map(([name, { tags }]) => [ name, tags ])
+    Object.entries(iconMetaData).map(([name, { categories }]) => [ name, categories ])
   )
 })
