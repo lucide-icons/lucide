@@ -1,8 +1,9 @@
-import { getAllData } from "../.vitepress/lib/icons";
 import relatedIcons from '../.vitepress/data/relatedIcons.json'
 import iconNodes from '../.vitepress/data/iconNodes'
 import * as iconDetails from '../.vitepress/data/iconDetails'
 import { IconEntity } from "../.vitepress/theme/types";
+
+const MAX_RELATED_ICONS = 4 * 17
 
 export default {
   paths: async () => {
@@ -13,7 +14,7 @@ export default {
         relatedIcons: relatedIcons[iconEntity.name].map((name: string) => ({
           name,
           iconNode: iconNodes[name],
-        })),
+        })).slice(0, MAX_RELATED_ICONS),
       }
 
       return {

@@ -17,7 +17,7 @@ const { go } = useRouter()
 const { page } = useData()
 
 const tags = computed(() => {
-  if (!props.icon) return []
+  if (!props.icon || !props?.icon?.tags) return []
   return props.icon.tags.join(' • ')
 })
 </script>
@@ -27,7 +27,7 @@ const tags = computed(() => {
     <IconDetailName class="icon-name">
       {{ icon.name }}
     </IconDetailName>
-    <div class="tags-scroller">
+    <div class="tags-scroller" v-if="tags.length">
       <p class="icon-tags">
         {{ tags }}
       </p>
