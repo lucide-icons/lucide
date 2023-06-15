@@ -1,45 +1,38 @@
 <script setup lang="ts">
-  import type { IconEntity } from '../../types'
-  import { computed, ref, watch } from 'vue'
-  import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-  import IconButton from '../base/IconButton.vue';
-  import IconContributors from './IconContributors.vue';
-  import IconPreview from './IconPreview.vue';
-  import { x, expand } from '../../../data/iconNodes'
-  import { useRouter } from 'vitepress';
-  import IconInfo from './IconInfo.vue';
-  import Badge from '../base/Badge.vue';
+import type { IconEntity } from '../../types'
+import { computed, ref, watch } from 'vue'
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import IconButton from '../base/IconButton.vue';
+import IconContributors from './IconContributors.vue';
+import IconPreview from './IconPreview.vue';
+import { x, expand } from '../../../data/iconNodes'
+import { useRouter } from 'vitepress';
+import IconInfo from './IconInfo.vue';
+import Badge from '../base/Badge.vue';
+import { computedAsync } from '@vueuse/core';
 
-  // TODO: Retrieve data from API
+const props = defineProps<{
+  iconName: string
+}>()
 
-  const props = defineProps<{
-    iconName: string
-  }>()
-
-  // const icon =
-  const icon = ref<IconEntity>(null)
-
-  watch(() => props.iconName, async (iconName) => {
-    if (iconName) {
-      icon.value = (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
-    } else {
-      icon.value = null
-    }
-  }, {
-    immediate: true
-  })
-
-  const emit = defineEmits(['close'])
-  const isOpen = computed(() => !!icon.value)
-
-  function onClose() {
-    emit('close')
+const icon = computedAsync<IconEntity | null>(async () => {
+  if (props.iconName) {
+    return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
   }
+  return null
+}, null)
 
-  const { go } = useRouter()
+const emit = defineEmits(['close'])
+const isOpen = computed(() => !!icon.value)
 
-  const CloseIcon = createLucideIcon('Close', x)
-  const Expand = createLucideIcon('Expand', expand)
+function onClose() {
+  emit('close')
+}
+
+const { go } = useRouter()
+
+const CloseIcon = createLucideIcon('Close', x)
+const Expand = createLucideIcon('Expand', expand)
 </script>
 
 <template>
