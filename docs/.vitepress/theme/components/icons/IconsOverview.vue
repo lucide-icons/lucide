@@ -9,6 +9,7 @@ import EndOfPage from '../base/EndOfPage.vue'
 import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
 import useFetchTags from '../../composables/useFetchTags'
+import useFetchCategories from '../../composables/useFetchCategories'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -40,6 +41,7 @@ const pageSize = computed(() => {
 })
 
 const { execute: fetchTags, data: tags } = useFetchTags()
+const { execute: fetchCategories, data: categories } = useFetchCategories()
 
 const mappedIcons = computed(() => {
   if(tags.value == null) {
@@ -48,10 +50,12 @@ const mappedIcons = computed(() => {
 
   return props.icons.map((icon) => {
     const iconTags = tags.value[icon.name]
+    const iconCategories = categories.value?.[icon.name] ?? []
 
     return {
       ...icon,
       tags: iconTags,
+      categories: iconCategories,
     }
   })
 })
@@ -76,15 +80,18 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-// const activeIcon = computed(() => props.icons.find((icon) => icon.name === activeIconName.value))
-
 watch(searchQueryThrottled, (searchString) => {
+  currentPage.value = 1
+})
+
+function onFocusSearchInput() {
   if (tags.value == null) {
     fetchTags()
   }
-
-  currentPage.value = 1
-})
+  if (categories.value == null) {
+    fetchCategories()
+  }
+}
 
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
@@ -103,6 +110,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
       v-model="searchQuery"
       ref="searchInput"
       class="input-wrapper"
+      @focus="onFocusSearchInput"
     />
   </StickyBar>
   <NoResults

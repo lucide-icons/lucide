@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, watch } from 'vue'
+import { ref, computed, defineAsyncComponent } from 'vue'
 import type { IconEntity, Category } from '../../types'
 import useSearch from '../../composables/useSearch'
 import InputSearch from '../base/InputSearch.vue'
@@ -8,6 +8,7 @@ import StickyBar from './StickyBar.vue'
 import IconsCategory from './IconsCategory.vue'
 import { useFetch } from '@vueuse/core'
 import useFetchTags from '../../composables/useFetchTags'
+import useFetchCategories from '../../composables/useFetchCategories'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -25,12 +26,7 @@ function setActiveIconName(name: string) {
 }
 
 const { execute: fetchTags, data: tags } = useFetchTags()
-
-watch(searchQueryThrottled, (searchString) => {
-  if (tags.value == null) {
-    fetchTags()
-  }
-})
+const { execute: fetchCategories, data: categoriesMap } = useFetchCategories()
 
 const mappedIcons = computed(() => {
   if(tags.value == null) {
@@ -38,10 +34,12 @@ const mappedIcons = computed(() => {
   }
   return props.icons.map((icon) => {
     const iconTags = tags.value[icon.name]
+    const iconCategories = categoriesMap.value?.[icon.name] ?? []
 
     return {
       ...icon,
       tags: iconTags,
+      categories: iconCategories,
     }
   })
 })
@@ -74,6 +72,15 @@ const categories = computed(() => {
   .filter(({ icons }) => icons.length)
 })
 
+function onFocusSearchInput() {
+  if (tags.value == null) {
+    fetchTags()
+  }
+  if (categoriesMap.value == null) {
+    fetchCategories()
+  }
+}
+
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
 )
@@ -90,6 +97,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
       v-model="searchQuery"
       class="input-wrapper"
       ref="searchInput"
+      @focus="onFocusSearchInput"
     />
   </StickyBar>
   <NoResults
