@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent, onMounted } from 'vue'
+import { ref, computed, watch, defineAsyncComponent } from 'vue'
 import type { IconEntity } from '../../types'
-import { useFetch, useMediaQuery, useOffsetPagination } from '@vueuse/core'
+import { useMediaQuery, useOffsetPagination } from '@vueuse/core'
 import IconGrid from './IconGrid.vue'
 import InputSearch from '../base/InputSearch.vue'
 import useSearch from '../../composables/useSearch'
@@ -45,6 +45,7 @@ const mappedIcons = computed(() => {
   if(tags.value == null) {
     return props.icons
   }
+
   return props.icons.map((icon) => {
     const iconTags = tags.value[icon.name]
 
