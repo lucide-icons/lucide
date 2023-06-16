@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "fruit",
+    "berries",
+    "smoothie",
+    "sweet",
+    "snack",
+    "meal",
+    "lunch",
+    "ingredient",
+    "jam",
+    "conserve",
+    "preserve",
+    "healthy",
+    "eating",
+    "nutrition"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
