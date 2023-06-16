@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "citrus",
+    "orange",
+    "grapefruit",
+    "lemon",
+    "lime",
+    "segments",
+    "juice",
+    "squeeze",
+    "smoothie",
+    "tropical",
+    "sweet",
+    "snack",
+    "meal",
+    "lunch",
+    "ingredient",
+    "healthy",
+    "eating",
+    "nutrition",
+    "fruit machine",
+    "slots",
+    "gambling",
+    "jackpot"
+  ],
+  "categories": [
+    "food-beverage",
+    "gaming"
+  ]
+}
