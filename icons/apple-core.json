@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "fruit",
+    "juice",
+    "smoothie",
+    "sweet",
+    "snack",
+    "meal",
+    "lunch",
+    "ingredient",
+    "healthy",
+    "eating",
+    "nutrition",
+    "bite",
+    "bitten",
+    "consumed",
+    "litter",
+    "trash",
+    "rubbish"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
