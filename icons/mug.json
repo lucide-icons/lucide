@@ -10,7 +10,6 @@
   "tags": [
     "drink",
     "cup",
-    "mug",
     "tea",
     "cafe",
     "hot",
@@ -18,5 +17,8 @@
   ],
   "categories": [
     "food-beverage"
+  ],
+  "aliases": [
+    "coffee"
   ]
 }
