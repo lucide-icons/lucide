@@ -6,15 +6,28 @@
   ],
   "tags": [
     "alcohol",
-    "beverage",
-    "bar",
     "drink",
     "glass",
-    "sommelier",
+    "goblet",
+    "chalice",
     "vineyard",
-    "winery"
+    "winery",
+    "red",
+    "white",
+    "rose",
+    "dry",
+    "sparkling",
+    "bar",
+    "party",
+    "nightclub",
+    "nightlife",
+    "sommelier",
+    "restaurant",
+    "dinner",
+    "meal"
   ],
   "categories": [
-    "food-beverage"
+    "food-beverage",
+    "social"
   ]
 }
