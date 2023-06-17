@@ -4,10 +4,18 @@
     "birthday",
     "birthdate",
     "celebration",
-    "party"
+    "party",
+    "surprise",
+    "gateaux",
+    "dessert",
+    "fondant",
+    "icing sugar",
+    "sweet",
+    "baking"
   ],
   "categories": [
     "food-beverage",
+    "social",
     "account"
   ]
 }
