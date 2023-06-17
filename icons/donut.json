@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
+    "doughnut",
     "sprinkles",
     "topping",
     "fast food",
@@ -9,7 +10,9 @@
     "treat",
     "sweet",
     "sugar",
-    "dessert"
+    "dessert",
+    "hollow",
+    "ring"
   ],
   "categories": [
     "food-beverage"
