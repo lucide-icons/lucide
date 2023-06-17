@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "sprinkles",
+    "topping",
+    "fast food",
+    "junk food",
+    "snack",
+    "treat",
+    "sweet",
+    "sugar",
+    "dessert"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
