@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "roast",
+    "ground",
+    "filter",
+    "cafe",
+    "hot",
+    "drink",
+    "barista",
+    "fair trade"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
