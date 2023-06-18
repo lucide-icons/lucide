@@ -5,6 +5,7 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import sidebar from './sidebar';
+import fs from 'fs';
 
 const links = []
 
@@ -35,7 +36,7 @@ export default defineConfig({
           )
         }
       ]
-    }
+    },
   },
   head: [
     [ 'script', {
@@ -128,10 +129,6 @@ export default defineConfig({
   transformHtml: (_, id, { pageData }) => {
     if (/[\\/]404\.html$/.test(id)) {
       return
-    }
-
-    if (pageData.relativePath === 'index.md') {
-      console.log('Home!');
     }
 
     if (pageData.relativePath.startsWith('icons/')) {

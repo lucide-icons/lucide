@@ -6,6 +6,9 @@ import InputSearch from '../base/InputSearch.vue'
 import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
 import IconsCategory from './IconsCategory.vue'
+import { useFetch } from '@vueuse/core'
+import useFetchTags from '../../composables/useFetchTags'
+import useFetchCategories from '../../composables/useFetchCategories'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -22,7 +25,26 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-const searchResults = useSearch(searchQuery, props.icons, [
+const { execute: fetchTags, data: tags } = useFetchTags()
+const { execute: fetchCategories, data: categoriesMap } = useFetchCategories()
+
+const mappedIcons = computed(() => {
+  if(tags.value == null) {
+    return props.icons
+  }
+  return props.icons.map((icon) => {
+    const iconTags = tags.value[icon.name]
+    const iconCategories = categoriesMap.value?.[icon.name] ?? []
+
+    return {
+      ...icon,
+      tags: iconTags,
+      categories: iconCategories,
+    }
+  })
+})
+
+const searchResults = useSearch(searchQuery, mappedIcons, [
   { name: 'name', weight: 2 },
   { name: 'tags', weight: 1 },
 ])
@@ -37,7 +59,6 @@ const categories = computed(() => {
       return iconCategories?.includes(name)
     })
 
-
     const searchedCategoryIcons = isSearching
       ? categoryIcons.filter(icon => searchResults.value.some((item) => item?.name === icon?.name))
       : categoryIcons;
@@ -51,9 +72,14 @@ const categories = computed(() => {
   .filter(({ icons }) => icons.length)
 })
 
-const activeIcon = computed(() =>
-  props.icons?.find((icon) => icon.name === activeIconName.value)
-)
+function onFocusSearchInput() {
+  if (tags.value == null) {
+    fetchTags()
+  }
+  if (categoriesMap.value == null) {
+    fetchCategories()
+  }
+}
 
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
@@ -71,6 +97,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
       v-model="searchQuery"
       class="input-wrapper"
       ref="searchInput"
+      @focus="onFocusSearchInput"
     />
   </StickyBar>
   <NoResults
@@ -87,7 +114,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
   />
   <IconDetailOverlay
     v-if="activeIconName != null"
-    :icon="activeIcon"
+    :iconName="activeIconName"
     @close="setActiveIconName('')"
   />
 </template>

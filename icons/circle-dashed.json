@@ -1,19 +1,14 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere"
-  ],
   "tags": [
     "pending",
     "dot",
     "progress",
     "issue",
+    "draft",
     "code",
     "coding",
-    "version control",
-    "choices",
-    "multiple choice",
-    "choose"
+    "version control"
   ],
   "categories": [
     "development",
