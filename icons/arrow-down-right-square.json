@@ -1,21 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "forward",
     "direction",
-    "north",
-    "upload",
-    "collapse",
-    "fold",
-    "vertical"
+    "south-east",
+    "diagonal",
+    "sign",
+    "turn",
+    "keyboard",
+    "button"
   ],
   "categories": [
     "arrows",
     "navigation",
-    "files"
+    "shapes",
+    "gaming"
   ]
 }
