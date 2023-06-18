@@ -8,6 +8,8 @@ import useSearch from '../../composables/useSearch'
 import EndOfPage from '../base/EndOfPage.vue'
 import useSearchInput from '../../composables/useSearchInput'
 import StickyBar from './StickyBar.vue'
+import useFetchTags from '../../composables/useFetchTags'
+import useFetchCategories from '../../composables/useFetchCategories'
 
 const props = defineProps<{
   icons: IconEntity[]
@@ -22,7 +24,7 @@ const isSmallScreen = useMediaQuery('(min-width: 640px)');
 
 const pageSize = computed(() => {
   if(isExtraLargeScreen.value) {
-    return 16 * 16;
+    return 16 * 20;
   }
   if(isLargeScreen.value) {
     return 16 * 12;
@@ -38,8 +40,28 @@ const pageSize = computed(() => {
   return 10 * 5;
 })
 
+const { execute: fetchTags, data: tags } = useFetchTags()
+const { execute: fetchCategories, data: categories } = useFetchCategories()
+
+const mappedIcons = computed(() => {
+  if(tags.value == null) {
+    return props.icons
+  }
+
+  return props.icons.map((icon) => {
+    const iconTags = tags.value[icon.name]
+    const iconCategories = categories.value?.[icon.name] ?? []
+
+    return {
+      ...icon,
+      tags: iconTags,
+      categories: iconCategories,
+    }
+  })
+})
+
 const { searchInput, searchQuery, searchQueryThrottled } = useSearchInput()
-const searchResults = useSearch(searchQueryThrottled, props.icons, [
+const searchResults = useSearch(searchQueryThrottled, mappedIcons, [
   { name: 'name', weight: 3 },
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
@@ -58,11 +80,18 @@ function setActiveIconName(name: string) {
   activeIconName.value = name
 }
 
-const activeIcon = computed(() => props.icons.find((icon) => icon.name === activeIconName.value))
-
 watch(searchQueryThrottled, (searchString) => {
   currentPage.value = 1
 })
+
+function onFocusSearchInput() {
+  if (tags.value == null) {
+    fetchTags()
+  }
+  if (categories.value == null) {
+    fetchCategories()
+  }
+}
 
 const NoResults = defineAsyncComponent(() =>
   import('./NoResults.vue')
@@ -81,6 +110,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
       v-model="searchQuery"
       ref="searchInput"
       class="input-wrapper"
+      @focus="onFocusSearchInput"
     />
   </StickyBar>
   <NoResults
@@ -97,7 +127,7 @@ const IconDetailOverlay = defineAsyncComponent(() =>
   <EndOfPage @end-of-page="next" class="bottom-page"/>
   <IconDetailOverlay
     v-if="activeIconName != null"
-    :icon="activeIcon"
+    :iconName="activeIconName"
     @close="setActiveIconName('')"
   />
 </template>

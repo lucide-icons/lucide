@@ -13,6 +13,7 @@
     "prebuild:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
     "prebuild:releaseJson": "node ../scripts/writeReleaseMetadata.mjs",
     "prebuild:relatedIcons": "node ../scripts/writeIconRelatedIcons.mjs",
+    "prebuild:iconDetails": "node ../scripts/writeIconDetails.mjs",
     "postbuild:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",

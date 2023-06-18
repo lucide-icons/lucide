@@ -1,30 +1,38 @@
 <script setup lang="ts">
-  import type { IconEntity } from '../../types'
-  import { computed, ref, watch } from 'vue'
-  import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-  import IconButton from '../base/IconButton.vue';
-  import IconContributors from './IconContributors.vue';
-  import IconPreview from './IconPreview.vue';
-  import { x, expand } from '../../../data/iconNodes'
-  import { useRouter } from 'vitepress';
-  import IconInfo from './IconInfo.vue';
-  import Badge from '../base/Badge.vue';
+import type { IconEntity } from '../../types'
+import { computed, ref, watch } from 'vue'
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import IconButton from '../base/IconButton.vue';
+import IconContributors from './IconContributors.vue';
+import IconPreview from './IconPreview.vue';
+import { x, expand } from '../../../data/iconNodes'
+import { useRouter } from 'vitepress';
+import IconInfo from './IconInfo.vue';
+import Badge from '../base/Badge.vue';
+import { computedAsync } from '@vueuse/core';
 
-  const props = defineProps<{
-    icon: IconEntity
-  }>()
+const props = defineProps<{
+  iconName: string
+}>()
 
-  const emit = defineEmits(['close'])
-  const isOpen = computed(() => !!props.icon)
-
-  function onClose() {
-    emit('close')
+const icon = computedAsync<IconEntity | null>(async () => {
+  if (props.iconName) {
+    return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
   }
+  return null
+}, null)
 
-  const { go } = useRouter()
+const emit = defineEmits(['close'])
+const isOpen = computed(() => !!icon.value)
 
-  const CloseIcon = createLucideIcon('Close', x)
-  const Expand = createLucideIcon('Expand', expand)
+function onClose() {
+  emit('close')
+}
+
+const { go } = useRouter()
+
+const CloseIcon = createLucideIcon('Close', x)
+const Expand = createLucideIcon('Expand', expand)
 </script>
 
 <template>
@@ -109,9 +117,8 @@
 }
 
 .icon-info {
-  padding: 0 24px;
+  padding-left: 24px;
   flex-basis: 100%;
-
 }
 
 .icon-tags {
