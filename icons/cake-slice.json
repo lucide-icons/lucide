@@ -1,8 +1,5 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere"
-  ],
   "tags": [
     "birthday",
     "birthdate",
@@ -11,14 +8,15 @@
     "surprise",
     "gateaux",
     "dessert",
+    "candles",
+    "wish",
     "fondant",
     "icing sugar",
     "sweet",
-    "baking"
+    "baking"    
   ],
   "categories": [
     "food-beverage",
-    "social",
-    "account"
+    "social"
   ]
 }

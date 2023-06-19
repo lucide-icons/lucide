@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "ice lolly",
+    "ice cream",
+    "sweet",
+    "food"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
