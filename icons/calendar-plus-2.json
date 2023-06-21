@@ -5,7 +5,9 @@
   ],
   "tags": [
     "date",
-    "time",
+    "day",
+    "month",
+    "year",
     "event",
     "add",
     "subscribe",
