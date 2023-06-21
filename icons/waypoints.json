@@ -8,16 +8,17 @@
     "connections",
     "reroute",
     "path",
-    "navigation",
+    "journey planner",
     "bounce",
     "spread",
     "viral"
   ],
   "categories": [
-    "account",
     "security",
-    "social",
+    "development",
     "maps",
-    "development"
+    "navigation",
+    "account",
+    "social"
   ]
 }
