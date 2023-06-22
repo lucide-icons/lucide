@@ -6,10 +6,28 @@
   ],
   "tags": [
     "oblique",
-    "text",
-    "format"
+    "emphasis",
+    "emphasize",
+    "toolbar",
+    "formatting",
+    "styling",
+    "plain text",
+    "rich text",
+    "rtf",
+    "typography",
+    "font",
+    "slab serif",
+    "writing",
+    "writer",
+    "prose",
+    "content",
+    "markdown",
+    "markup"
   ],
   "categories": [
-    "text"
+    "text",
+    "tools",
+    "design",
+    "development"
   ]
 }

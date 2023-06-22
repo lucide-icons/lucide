@@ -9,10 +9,18 @@
     "h1",
     "html",
     "markup",
-    "markdown"
+    "markdown",
+    "#",
+    "==",
+    "toolbar",
+    "formatting",
+    "styling",
+    "typography"
   ],
   "categories": [
     "text",
+    "tools",
+    "design",
     "development"
   ]
 }

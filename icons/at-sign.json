@@ -9,12 +9,18 @@
   "tags": [
     "mention",
     "at",
-    "email",
+    "email address",
     "message",
+    "contact",
+    "networking",
+    "ping",
     "@"
   ],
   "categories": [
     "text",
-    "account"
+    "account",
+    "communication",
+    "social",
+    "notifications"
   ]
 }

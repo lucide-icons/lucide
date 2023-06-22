@@ -4,11 +4,30 @@
     "ericfennis"
   ],
   "tags": [
-    "text",
-    "format",
-    "color"
+    "color",
+    "colour",
+    "toolbar",
+    "formatting",
+    "styling",
+    "plain text",
+    "rich text",
+    "rtf",
+    "typography",
+    "fonts",
+    "font book",
+    "collection",
+    "slab serif",
+    "writing",
+    "writer",
+    "prose",
+    "content",
+    "markdown",
+    "markup"
   ],
   "categories": [
-    "text"
+    "text",
+    "tools",
+    "design",
+    "development"
   ]
 }
