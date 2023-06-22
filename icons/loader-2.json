@@ -13,15 +13,13 @@
     "progress",
     "spinner",
     "spinning",
-    "throbber"
+    "throbber",
+    "circle"
   ],
   "categories": [
     "cursors",
     "multimedia",
     "layout",
     "design"
-  ],
-  "aliases": [
-    "loader-2"
   ]
 }
