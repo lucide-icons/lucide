@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "radio",
+    "speakers",
     "audio",
     "music",
+    "sound",
     "broadcast",
     "live",
     "frequency"
