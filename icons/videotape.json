@@ -1,23 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis"
-  ],
   "tags": [
-    "camera",
+    "vhs",
     "movie",
     "film",
     "recording",
     "motion picture",
-    "camcorder",
-    "reel"
+    "showreel",
+    "cassette"
   ],
   "categories": [
     "devices",
     "communication",
     "connectivity",
-    "photography"
+    "photography",
+    "files"
   ]
 }
