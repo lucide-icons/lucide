@@ -4,14 +4,14 @@
     "projects",
     "overview",
     "work",
-    "code",
-    "draft",
-    "template",
-    "boilerplate"
+    "code"
   ],
   "categories": [
     "development",
     "design",
     "charts"
+  ],
+  "aliases": [
+    "square-kanban"
   ]
 }
