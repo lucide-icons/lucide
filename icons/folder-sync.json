@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "directory",
+    "synchronize",
+    "synchronise",
+    "refresh",
+    "reconnect",
+    "transfer",
+    "backup"
+  ],
+  "categories": [
+    "files",
+    "arrows"
+  ]
+}
