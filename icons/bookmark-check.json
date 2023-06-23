@@ -2,12 +2,13 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "read",
+    "finished",
+    "complete",
     "clip",
     "marker",
     "tag",
-    "close",
-    "remove",
-    "clear"
+    "task",
+    "todo"
   ],
   "categories": [
     "account"
