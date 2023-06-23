@@ -11,7 +11,7 @@
 >
   <circle cx="6" cy="6" r="3" />
   <path d="M8.2 8.2 12 12" />
-  <path d="m15 15 5 5" />
+  <path d="M14.8 14.8 20 20" />
   <circle cx="6" cy="18" r="3" />
   <path d="M20 4 8.2 15.8" />
 </svg>
