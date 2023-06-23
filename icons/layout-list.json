@@ -5,13 +5,17 @@
     "danielbayley"
   ],
   "tags": [
+    "todo",
+    "tasks",
+    "items",
+    "pending",
     "image",
-    "photo",
-    "item"
+    "photo"
   ],
   "categories": [
     "design",
     "layout",
-    "photography"
+    "photography",
+    "text"
   ]
 }
