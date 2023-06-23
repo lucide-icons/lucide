@@ -12,10 +12,14 @@
   },
   "author": "Eric Fennis",
   "amdName": "lucide-svelte",
+  "exports": {
+    ".": {      
+      "svelte": "./dist/svelte/lucide-svelte.js"
+    }
+  },
   "type": "module",
   "main": "dist/esm/lucide-svelte.js",
   "module": "dist/esm/lucide-svelte.js",
-  "svelte": "dist/svelte/lucide-svelte.js",
   "typings": "dist/lucide-svelte.d.ts",
   "sideEffects": false,
   "files": [
