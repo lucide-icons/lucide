@@ -19,5 +19,8 @@
     "time",
     "development",
     "design"
+  ],
+  "aliases": [
+    "gantt-square"
   ]
 }
