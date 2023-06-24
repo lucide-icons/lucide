@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "virtual reality",
+    "vr",
+    "pass-through",
+    "roomscale",
+    "room-scale",
+    "guardian",
+    "boundary",
+    "bounds",
+    "edges",
+    "zone",
+    "play area",
+    "player",
+    "immersive",
+    "immersion",
+    "safety",
+    "."
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
