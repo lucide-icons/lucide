@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "flames",
+    "smoke",
+    "foam",
+    "water",
+    "spray",
+    "hose",
+    "firefighter",
+    "fireman",
+    "department",
+    "brigade",
+    "station",
+    "emergency",
+    "suppress",
+    "safety",
+    "equipment",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "tools",
+    "travel"
+  ]
+}
