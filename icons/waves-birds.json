@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "water",
+    "aqua",
+    "sea view",
+    "seaside",
+    "holiday",
+    "beach",
+    "ocean",
+    "flow"
+  ],
+  "categories": [
+    "maps",
+    "travel"
+  ]
+}
