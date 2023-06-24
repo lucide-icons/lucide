@@ -17,6 +17,9 @@
     "station",
     "emergency",
     "suppress",
+    "compressed",
+    "tank",
+    "cylinder",
     "safety",
     "equipment",
     "amenities"
