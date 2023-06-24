@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "handle",
+    "container",
+    "fill",
+    "liquid",
+    "water",
+    "seaside",
+    "summer holiday",
+    "beach",
+    "sandcastle",
+    "sandbox",
+    "toys",
+    "kids",
+    "children",
+    "play",
+    "gardening",
+    "equipment",
+    "spade",
+    "shovel"
+  ],
+  "categories": [
+    "nature",
+    "home",
+    "tools",
+    "travel"
+  ]
+}
