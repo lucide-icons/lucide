@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
-    "floppy disk",
+    "copy",
     "format",
     "data",
     "storage",
@@ -18,5 +18,8 @@
   "categories": [
     "files",
     "text"
+  ],
+  "aliases": [
+    "save-all"
   ]
 }
