@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "projects",
+    "roadmap",
+    "overview",
+    "work",
+    "plan",
+    "date",
+    "timeline",
+    "event",
+    "range",
+    "period",
+    "code",
+    "intentions"
+  ],
+  "categories": [
+    "charts",
+    "time",
+    "development",
+    "design"
+  ]
+}

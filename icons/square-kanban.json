@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "projects",
+    "overview",
+    "work",
+    "code"
+  ],
+  "categories": [
+    "development",
+    "design",
+    "charts"
+  ]
+}
