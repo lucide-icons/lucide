@@ -8,6 +8,7 @@ export default eventHandler((event) => {
   const withUniqueKeys = query.withUniqueKeys === 'true'
 
   setResponseHeader(event, 'Cache-Control', 'public, max-age=86400')
+  setResponseHeader(event, 'Access-Control-Allow-Origin', '*')
 
   if (withUniqueKeys) {
     return iconNodes

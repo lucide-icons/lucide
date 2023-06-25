@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { shallowRef, type Ref, watch } from 'vue'
+import { shallowRef, type Ref, watch, computed } from 'vue'
 import { useCssVar, syncRef } from '@vueuse/core'
-import { useIconStyleContext } from '../../composables/useIconStyle'
+import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle'
 import RangeSlider from '../base/RangeSlider.vue'
 import InputField from '../base/InputField.vue'
 import ColorPicker from '../base/ColorPicker.vue'
@@ -19,7 +19,7 @@ const colorCssVar = useCssVar(
   '--customize-color',
   props.rootEl?.value ?? documentRef.value,
   {
-    initialValue: 'default'
+    initialValue: `${STYLE_DEFAULTS.color}`
   }
 )
 
@@ -27,7 +27,7 @@ const strokeWidthCssVar = useCssVar(
   '--customize-strokeWidth',
   props.rootEl?.value ?? documentRef.value,
   {
-    initialValue: '2'
+    initialValue: `${STYLE_DEFAULTS.strokeWidth}`
   }
 )
 
@@ -35,7 +35,7 @@ const sizeCssVar = useCssVar(
   '--customize-size',
   props.rootEl?.value ?? documentRef.value,
   {
-    initialValue: '24'
+    initialValue: `${STYLE_DEFAULTS.size}`
   }
 )
 
@@ -44,9 +44,9 @@ syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr' })
 syncRef(size, sizeCssVar, { direction: 'ltr' })
 
 function resetStyle () {
-  color.value = 'currentColor'
-  strokeWidth.value = 2
-  size.value = 24
+  color.value = STYLE_DEFAULTS.color
+  strokeWidth.value = STYLE_DEFAULTS.strokeWidth
+  size.value = STYLE_DEFAULTS.size
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
@@ -54,10 +54,18 @@ watch(absoluteStrokeWidth, (enabled) => {
 
   htmlEl.classList.toggle('absolute-stroke-width', enabled)
 })
+
+const customizingActive = computed(() => {
+  return color.value !== STYLE_DEFAULTS.color
+    || strokeWidth.value !== STYLE_DEFAULTS.strokeWidth
+    || size.value !== STYLE_DEFAULTS.size
+})
+
+
 </script>
 
 <template>
-  <div class="customizer-card">
+  <div class="customizer-card" :class="{ customized: customizingActive }">
     <div class="card-header">
       <h2 class="card-title">
         Customizer
@@ -142,6 +150,12 @@ watch(absoluteStrokeWidth, (enabled) => {
   margin-bottom: 24px;
   position: relative;
   z-index: 0;
+  border: 1px solid transparent;
+  transition: border-color .4s ease-in-out;
+}
+
+.customizer-card.customized {
+  border-color: var(--vp-c-brand);
 }
 
 .color-picker {
