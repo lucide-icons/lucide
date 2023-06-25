@@ -6,10 +6,17 @@
     "ericfennis"
   ],
   "tags": [
-    "floppy disk"
+    "floppy disk",
+    "format",
+    "data",
+    "storage",
+    "capacity",
+    "megabytes",
+    "mb",
+    "label"
   ],
   "categories": [
-    "text",
-    "files"
+    "files",
+    "text"
   ]
 }

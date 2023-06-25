@@ -7,10 +7,17 @@
   ],
   "tags": [
     "floppy disks",
-    "copy"
+    "copy",
+    "format",
+    "data",
+    "storage",
+    "capacity",
+    "megabytes",
+    "mb",
+    "label"
   ],
   "categories": [
-    "text",
-    "files"
+    "files",
+    "text"
   ]
 }
