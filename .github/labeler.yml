@@ -10,8 +10,6 @@
 # For changes in the site, but not markdown files
 🌍 site:
 - 'docs/**'
-- '!docs/*.md'
-- '!docs/**/*.md'
 
 # For changes in the metadata
 🫧 metadata:
