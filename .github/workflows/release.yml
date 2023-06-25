@@ -269,8 +269,6 @@ jobs:
 
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
         with:
           tag_name: v${{ needs.pre-release.outputs.VERSION }}
           files: |
