@@ -13,9 +13,14 @@
     "meal",
     "lunch",
     "ingredient",
-    "healthy",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
     "eating",
-    "nutrition"
+    "healthy",
+    "nutrition",
+    "diet"
   ],
   "categories": [
     "food-beverage"

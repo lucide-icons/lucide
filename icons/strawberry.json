@@ -12,13 +12,13 @@
     "snack",
     "meal",
     "lunch",
-    "ingredient",
     "jam",
     "conserve",
     "preserve",
-    "healthy",
     "eating",
-    "nutrition"
+    "healthy",
+    "nutrition",
+    "diet"
   ],
   "categories": [
     "food-beverage"

@@ -17,10 +17,10 @@
     "snack",
     "meal",
     "lunch",
-    "ingredient",
-    "healthy",
     "eating",
-    "nutrition"
+    "healthy",
+    "nutrition",
+    "diet"
   ],
   "categories": [
     "food-beverage"
