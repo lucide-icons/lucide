@@ -23,5 +23,8 @@
     "currency",
     "money",
     "shapes"
+  ],
+  "aliases": [
+    "circle-dollar-sign"
   ]
 }
