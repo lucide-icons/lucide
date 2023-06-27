@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "sails",
+    "turbine",
+    "electricity",
+    "power",
+    "energy",
+    "renewables"
+  ],
+  "categories": [
+    "buildings",
+    "sustainability"
+  ]
+}
