@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "farmland",
+    "ranch",
+    "acres",
+    "fields",
+    "harvest",
+    "silo",
+    "farmhouse",
+    "barn",
+    "door"
+  ],
+  "categories": [
+    "buildings",
+    "sustainability",
+    "animals",
+    "food-beverage"
+  ]
+}
