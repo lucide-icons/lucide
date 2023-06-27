@@ -6,7 +6,6 @@
     "ericfennis"
   ],
   "tags": [
-    "house",
     "dwelling",
     "living",
     "door"
@@ -14,5 +13,8 @@
   "categories": [
     "account",
     "buildings"
+  ],
+  "aliases": [
+    "home"
   ]
 }
