@@ -32,5 +32,8 @@
     "time",
     "development",
     "design"
+  ],
+  "aliases": [
+    "square-gantt"
   ]
 }
