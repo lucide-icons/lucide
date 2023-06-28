@@ -8,7 +8,9 @@
     "notification",
     "sound",
     "reminder",
-    "unread"
+    "unread",
+    "pending",
+    "updates"
   ],
   "categories": [
     "account",
