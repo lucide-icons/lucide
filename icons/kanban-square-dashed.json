@@ -26,5 +26,8 @@
     "charts",
     "development",
     "design"
+  ],
+  "aliases": [
+    "square-kanban-dashed"
   ]
 }
