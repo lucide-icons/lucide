@@ -1,15 +1,10 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley"
-  ],
+  "contributors": ["danielbayley"],
   "tags": [
     "projects",
     "manage",
     "overview",
-    "board",
-    "tickets",
-    "issues",
     "roadmap",
     "plan",
     "intentions",
@@ -25,10 +20,5 @@
     "code",
     "coding"
   ],
-  "categories": [
-    "charts",
-    "time",
-    "development",
-    "design"
-  ]
+  "categories": ["charts", "time", "development", "design"]
 }
