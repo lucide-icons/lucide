@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "reception",
+    "bell",
+    "porter",
+    "service",
+    "summon",
+    "hotel",
+    "accommodation",
+    "ring",
+    "ding",
+    "sound",
+    "reminder",
+    "unread",
+    "pending",
+    "updates"
+  ],
+  "categories": [
+    "travel",
+    "notifications"
+  ]
+}
