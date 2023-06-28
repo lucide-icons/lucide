@@ -43,5 +43,6 @@ function setActiveIcon(name: string) {
 
 .icon {
   aspect-ratio: 1/1;
+  position: relative;
 }
 </style>
