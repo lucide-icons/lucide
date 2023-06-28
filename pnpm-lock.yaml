@@ -57,6 +57,9 @@ importers:
 
   docs:
     dependencies:
+      '@floating-ui/vue':
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.2.47)
       '@headlessui/vue':
         specifier: ^1.7.13
         version: 1.7.13(vue@3.2.47)
@@ -4350,6 +4353,26 @@ packages:
   /@figma/plugin-typings@1.49.0:
     resolution: {integrity: sha512-72tKC61RPkrBZ+uzj+TtL3bVAmxahZKv/TfElbrY9sBoZvr4/+4gw7hnJYiln5xBJHiJ4KTcjUy+6D1qUuWlTA==}
     dev: true
+
+  /@floating-ui/core@1.3.1:
+    resolution: {integrity: sha512-Bu+AMaXNjrpjh41znzHqaz3r2Nr8hHuHZT6V2LBKMhyMl0FgKA62PNYbqnfgmzOhoWZj70Zecisbo4H1rotP5g==}
+    dev: false
+
+  /@floating-ui/dom@1.4.2:
+    resolution: {integrity: sha512-VKmvHVatWnewmGGy+7Mdy4cTJX71Pli6v/Wjb5RQBuq5wjUYx+Ef+kRThi8qggZqDgD8CogCpqhRoVp3+yQk+g==}
+    dependencies:
+      '@floating-ui/core': 1.3.1
+    dev: false
+
+  /@floating-ui/vue@1.0.1(vue@3.2.47):
+    resolution: {integrity: sha512-HZmmNWaztKYKOQxXvMzJYCYtfgG07cL/bPQvZ92AFG3Ktw71bvvLKXsZDAyIxGpqRo9WiTPsYknnSuLV2H/riA==}
+    dependencies:
+      '@floating-ui/dom': 1.4.2
+      vue-demi: 0.14.5(vue@3.2.47)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@gar/promisify@1.1.3:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
