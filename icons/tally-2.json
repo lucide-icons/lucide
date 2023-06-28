@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "count",
+    "score",
+    "enumerate",
+    "days",
+    "two",
+    "2",
+    "second",
+    "double",
+    "bars",
+    "prison",
+    "cell",
+    "sentence"
+  ],
+  "categories": [
+    "maths",
+    "gaming"
+  ]
+}
