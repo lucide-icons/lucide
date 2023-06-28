@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "flames",
+    "smoke",
+    "firefighter",
+    "fireman",
+    "department",
+    "brigade",
+    "station",
+    "emergency",
+    "safety"
+  ],
+  "categories": [
+    "devices",
+    "buildings",
+    "notifications"
+  ]
+}
