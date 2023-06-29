@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "signal",
+    "stop",
+    "go",
+    "red",
+    "green",
+    "amber",
+    "safety",
+    "road"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
