@@ -13,6 +13,7 @@
     "prebuild:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
     "prebuild:releaseJson": "node ../scripts/writeReleaseMetadata.mjs",
     "prebuild:relatedIcons": "node ../scripts/writeIconRelatedIcons.mjs",
+    "prebuild:iconDetails": "node ../scripts/writeIconDetails.mjs",
     "postbuild:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "build:api": "npx nitropack build",
@@ -29,6 +30,7 @@
     "vitepress": "1.0.0-beta.1"
   },
   "dependencies": {
+    "@floating-ui/vue": "^1.0.1",
     "@headlessui/vue": "^1.7.13",
     "@vueuse/components": "^10.1.0",
     "@vueuse/core": "^10.1.0",

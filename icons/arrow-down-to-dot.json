@@ -6,10 +6,15 @@
   ],
   "tags": [
     "direction",
+    "south",
+    "waypoint",
+    "location",
     "step",
     "into"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maps"
   ]
 }
