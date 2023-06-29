@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "railway",
+    "train",
+    "track",
+    "line"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
