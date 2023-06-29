@@ -33,23 +33,23 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "workspace:*",
     "@lucide/build-icons": "workspace:*",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@sveltejs/vite-plugin-svelte": "^2.4.1",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/svelte": "^3.0.3",
-    "@tsconfig/svelte": "^3.0.0",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/svelte": "^4.0.2",
+    "@tsconfig/svelte": "^5.0.0",
     "jsdom": "^20.0.3",
-    "rollup": "^3.5.1",
-    "rollup-plugin-svelte": "^7.1.5",
-    "svelte": "^4.0.0",
-    "svelte-check": "^3.4.3",
-    "svelte-preprocess": "^5.0.3",
-    "svelte-strip": "^1.0.3",
-    "typescript": "^5.0.0",
-    "vite": "^3.1.0",
-    "vitest": "^0.23.2"
+    "rollup": "^3.25.3",
+    "rollup-plugin-svelte": "^7.1.6",
+    "svelte": "^4.0.1",
+    "svelte-check": "^3.4.4",
+    "svelte-preprocess": "^5.0.4",
+    "svelte-strip": "^2.0.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.2"
   },
   "peerDependencies": {
     "svelte": ">=3 <5"
