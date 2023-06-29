@@ -42,11 +42,8 @@ jobs:
       - name: Outline svg Icons
         run: pnpm build:outline-icons
 
-      - name: Create directory
-        run: mkdir lucide-font
-
-      - name: Build font
-        run: fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
+      - name: Create font in ./lucide-font
+        run: pnpm build:font
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
