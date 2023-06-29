@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "transport",
+    "railway",
     "metro",
     "subway",
-    "underground"
+    "underground",
+    "speed",
+    "bullet",
+    "fast",
+    "track",
+    "line"
   ],
   "categories": [
     "transportation"
