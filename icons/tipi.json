@@ -5,7 +5,6 @@
     "ericfennis"
   ],
   "tags": [
-    "tipi",
     "teepee",
     "wigwam",
     "lodge",
@@ -23,5 +22,8 @@
     "travel",
     "nature",
     "sustainability"
+  ],
+  "aliases": [
+    "tent"
   ]
 }
