@@ -166,8 +166,8 @@ For more details, see the [documentation](https://github.com/lucide-icons/lucide
 ### Static (svg sprite, font, icons ..)
 
 Assets:
-[Font Files](https://github.com/lucide-icons/lucide/releases/tag/latest)
-[SVG Files](https://github.com/lucide-icons/lucide/releases/tag/latest)
+[Font Files](https://github.com/lucide-icons/lucide/releases/latest)
+[SVG Files](https://github.com/lucide-icons/lucide/releases/latest)
 [SVG Sprite](https://cdn.jsdelivr.net/npm/lucide-static@latest/sprite.svg)
 
 NPM package
