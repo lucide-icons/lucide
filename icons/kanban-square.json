@@ -18,14 +18,15 @@
     "agile",
     "code",
     "coding",
-    "directory",
-    "project",
-    "root"
+    "toolbar",
+    "button"
   ],
   "categories": [
     "charts",
     "development",
-    "design",
-    "files"
+    "design"
+  ],
+  "aliases": [
+    "square-kanban"
   ]
 }
