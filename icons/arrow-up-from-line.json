@@ -1,7 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
+    "forward",
     "direction",
+    "north",
     "upload",
     "git",
     "version control",
@@ -12,6 +18,7 @@
   ],
   "categories": [
     "arrows",
+    "navigation",
     "files",
     "development"
   ]

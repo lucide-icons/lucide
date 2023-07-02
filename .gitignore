@@ -20,3 +20,17 @@ packages/**/src/aliases.ts
 packages/**/LICENSE
 categories.json
 tags.json
+.vercel
+
+# docs
+docs/.vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/.temp
+docs/.vitepress/data/iconNodes
+docs/.vitepress/data/iconMetaData.ts
+docs/.vitepress/data/releaseMetaData.json
+docs/.vitepress/data/releaseMetaData
+docs/.vitepress/data/iconDetails
+docs/.vitepress/data/relatedIcons.json
+docs/.vercel
+docs/.nitro

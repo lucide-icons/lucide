@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "trading",
+    "trader",
+    "financial",
+    "markets",
+    "portfolio",
+    "assets",
+    "prices",
+    "value",
+    "valuation",
+    "commodities",
+    "currencies",
+    "currency",
+    "exchange",
+    "hedge fund",
+    "statistics",
+    "diagram",
+    "graph"
+  ],
+  "categories": [
+    "charts",
+    "money"
+  ]
+}

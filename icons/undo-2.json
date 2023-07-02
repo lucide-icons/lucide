@@ -1,9 +1,20 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "redo",
     "rerun",
-    "history"
+    "history",
+    "back",
+    "return",
+    "reverse",
+    "revert",
+    "direction",
+    "u-turn"
   ],
   "categories": [
     "text",

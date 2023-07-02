@@ -1,10 +1,21 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "mittalyashu",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
-    "key",
-    "forward"
+    "next",
+    "forward",
+    "direction",
+    "east",
+    "indicate turn"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

@@ -83,7 +83,7 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
 
   const iconAttrs = {
     ...iconAttributes,
-    'icon-name': iconName,
+    'data-lucide': iconName,
     ...attrs,
     ...elementAttrs,
   };

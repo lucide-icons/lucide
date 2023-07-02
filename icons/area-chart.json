@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nstokoe"
+  ],
+  "tags": [
+    "statistics",
+    "diagram",
+    "graph",
+    "area"
+  ],
+  "categories": [
+    "charts"
+  ]
+}

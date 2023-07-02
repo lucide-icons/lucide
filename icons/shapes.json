@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "triangle",
+    "equilateral",
+    "square",
+    "circle",
+    "classification",
+    "different",
+    "collection",
+    "toy",
+    "blocks",
+    "learning"
+  ],
+  "categories": [
+    "shapes",
+    "gaming"
+  ]
+}

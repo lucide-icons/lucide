@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "scan",
+    "sonar",
+    "detect",
+    "find",
+    "locate"
+  ],
+  "categories": [
+    "navigation",
+    "maps",
+    "security",
+    "communication"
+  ]
+}

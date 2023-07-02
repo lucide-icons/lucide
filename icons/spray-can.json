@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "paint",
+    "color",
+    "graffiti",
+    "decoration",
+    "aerosol",
+    "deodorant",
+    "shaving foam",
+    "air freshener"
+  ],
+  "categories": [
+    "design",
+    "tools"
+  ]
+}
