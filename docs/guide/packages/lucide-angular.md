@@ -4,15 +4,21 @@ Implementation of the lucide icon library for Angular applications.
 
 ## Installation
 
-```bash
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-angular
+```
+
+```sh [yarn]
 yarn add lucide-angular
 ```
 
-or
-
-```bash
+```sh [npm]
 npm install lucide-angular
 ```
+
+:::
 
 ## How to use
 
@@ -98,7 +104,9 @@ To add custom icons, you will first need to convert them to an [svgson format](h
 
 ## Loading all icons
 
-> :warning: You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
+::: danger
+You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
+:::
 
 ```js
 import { icons } from 'lucide-angular';

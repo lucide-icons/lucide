@@ -5,9 +5,12 @@
     "ericfennis"
   ],
   "tags": [
-    "direction"
+    "direction",
+    "south-west",
+    "diagonal"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

@@ -64,7 +64,7 @@ watch(absoluteStrokeWidth, (enabled) => {
           <ResetButton @click="resetStyle"></ResetButton>
         </h2>
         <p class="copy">
-          Lucide has a lot of customization options to match the icons with you UI.
+          Lucide has a lot of customization options to match the icons with your UI.
         </p>
 
         <div class="customizer">

@@ -32,8 +32,8 @@ useEventListener(document, 'mousemove', (mouseEvent) => {
       No icons found for '{{ searchQuery }}'
     </h2>
     <VPButton text="Clear your search and try again" theme="alt" @click="$emit('clear')"/>
-    or
-    <VPButton text="Check if someone has already requested this icon"
+    <span class="text-divider">or</span>
+    <VPButton text="Search on Github issues"
               theme="alt"
               :href="`https://github.com/lucide-icons/lucide/issues?q=is%3Aopen+${searchQuery}`"
               target="_blank"
@@ -73,5 +73,11 @@ useEventListener(document, 'mousemove', (mouseEvent) => {
   margin-top: 24px;
   margin-bottom: 32px;
   text-align: center;
+}
+
+.text-divider {
+  margin: 12px 0;
+  font-size: 16px;
+  color: var(--vp-c-neutral);
 }
 </style>

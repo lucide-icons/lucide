@@ -11,12 +11,16 @@ const useSearchInput = () => {
       || ''
       )
   )
-  const searchQueryThrottled = refThrottled(searchQuery, 200)
+  const searchQueryThrottled = refThrottled(searchQuery, 400)
 
   watch(searchQueryThrottled, (searchString) => {
     const newUrl = new URL(window.location.href);
 
-    newUrl.searchParams.set('search', searchString);
+    if(searchString === '') {
+      newUrl.searchParams.delete('search');
+    } else {
+      newUrl.searchParams.set('search', searchString);
+    }
 
     nextTick(() => {
       window.history.replaceState({}, '', newUrl)

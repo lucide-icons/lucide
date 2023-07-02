@@ -29,12 +29,12 @@ jobs:
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -47,7 +47,7 @@ jobs:
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "::set-output name=LATEST_TAG::$(git describe --tags `git rev-list --tags --max-count=1`)"
+        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
       - name: Install dependencies
         run: pnpm install
@@ -57,7 +57,7 @@ jobs:
 
       - name: Create new version
         id: new-version
-        run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --minor)"
+        run: echo "NEW_VERSION=$(.github/workflows/version-up.sh --minor)" >> $GITHUB_OUTPUT
 
       - name: Create change log
         id: change-log
@@ -67,7 +67,7 @@ jobs:
           CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
           CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
           echo $CHANGE_LOG
-          echo "::set-output name=CHANGE_LOG::$CHANGE_LOG"
+          echo "CHANGE_LOG=$CHANGE_LOG" >> $GITHUB_OUTPUT
         env:
           GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
@@ -76,11 +76,14 @@ jobs:
           echo '${{ steps.new-version.outputs.NEW_VERSION }}'
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
-      - name: Release
+      - name: Create Release
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
+
+      - name: Release packages
+        uses: './release.yml'
+        with:
+          version: ${{ steps.new-version.outputs.NEW_VERSION }}
