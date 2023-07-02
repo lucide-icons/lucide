@@ -63,9 +63,6 @@ jobs:
         id: change-log
         run: |
           CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
-          CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
-          CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
           echo $CHANGE_LOG
           echo "CHANGE_LOG=$CHANGE_LOG" >> $GITHUB_OUTPUT
         env:
@@ -84,6 +81,6 @@ jobs:
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
       - name: Release packages
-        uses: './release.yml'
+        uses: './.github/workflows/release.yml'
         with:
           version: ${{ steps.new-version.outputs.NEW_VERSION }}
