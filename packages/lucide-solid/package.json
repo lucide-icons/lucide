@@ -1,7 +1,7 @@
 {
   "name": "lucide-solid",
   "description": "A Lucide icon library package for Solid applications",
-  "version": "0.105.0-alpha.9",
+  "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
