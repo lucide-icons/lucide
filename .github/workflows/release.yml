@@ -191,6 +191,7 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: [
+      pre-release,
       lucide-font,
     ]
 
