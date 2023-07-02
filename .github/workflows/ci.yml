@@ -85,5 +85,5 @@ jobs:
 
       - name: Release packages
         uses: './release.yml'
-          with:
-            version: ${{ steps.new-version.outputs.NEW_VERSION }}
+        with:
+          version: ${{ steps.new-version.outputs.NEW_VERSION }}
