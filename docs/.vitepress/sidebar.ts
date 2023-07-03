@@ -11,7 +11,7 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       ]
     },
     // {
-    //   text: 'Using Icons',
+    //   text: 'Usage',
     //   items: [
     //     {
     //       text: 'How to use icons',
@@ -33,6 +33,29 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
     //   ]
     // },
     {
+      text: 'Advanced',
+      items: [
+        {
+          text: 'Global styling',
+        },
+        {
+          text: 'Animations',
+        },
+        {
+          text: 'Filled icons',
+        },
+        {
+          text: 'Combining icons',
+        },
+        {
+          text: 'Dynamic imports'
+        },
+        {
+          text: 'Auto importing'
+        },
+      ]
+    },
+    {
       text: 'Packages',
       items: [
         {
@@ -42,6 +65,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         {
           text: 'Lucide React',
           link: '/guide/packages/lucide-react'
+
+          // Extra items
+          // - nextjs imports
+          // Dynamic imports
         },
         {
           text: 'Lucide React Native',
