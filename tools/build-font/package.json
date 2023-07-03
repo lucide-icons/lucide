@@ -1,19 +1,18 @@
 {
-    "name": "build-font",
-    "private": true,
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "start": "node ./main.mjs"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "fs-extra": "^11.1.0",
-      "minimist": "^1.2.6",
-      "svgtofont": "^3.25.4"
-    }
+  "name": "build-font",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./main.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "minimist": "^1.2.6",
+    "svgtofont": "^3.25.4"
   }
-  
+}
