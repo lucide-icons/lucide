@@ -4,6 +4,7 @@ import getArgumentOptions from 'minimist';
 import path from 'path';
 
 const fontName = 'lucide';
+const classNamePrefix = 'icon';
 var preserveCharCodes = true;
 
 const inputDir = path.join(process.cwd(), '../../outlined');
@@ -53,6 +54,7 @@ async function init() {
       dist: path.resolve(process.cwd(), targetDir),
       // styleTemplates: path.resolve(process.cwd(), 'styles'), // Add different templates if needed
       fontName,
+      classNamePrefix,
       css: {
         fontSize: 'inherit',
       },
