@@ -9,7 +9,6 @@ on:
 jobs:
   lucide-font:
     runs-on: ubuntu-latest
-    container: ericfennis/lucide-font:latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3.4.1
