@@ -16,16 +16,18 @@
     "productivity",
     "work",
     "agile",
+    "draft",
+    "template",
+    "boilerplate",
     "code",
-    "coding",
-    "directory",
-    "project",
-    "root"
+    "coding"
   ],
   "categories": [
     "charts",
     "development",
-    "design",
-    "files"
+    "design"
+  ],
+  "aliases": [
+    "square-kanban-dashed"
   ]
 }
