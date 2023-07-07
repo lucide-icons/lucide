@@ -4,16 +4,22 @@
     "colebemis"
   ],
   "tags": [
-    "arrow",
     "caret",
     "keyboard",
-    "key",
     "mac",
     "control",
     "ctrl",
-    "button"
+    "superscript",
+    "exponential",
+    "power",
+    "ahead",
+    "fast",
+    "^"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maths",
+    "gaming"
   ]
 }

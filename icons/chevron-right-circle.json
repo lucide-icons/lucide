@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "danielbayley"
   ],
   "tags": [
-    "turn",
-    "corner"
+    "back",
+    "more than",
+    "greater",
+    "menu",
+    ">"
   ],
   "categories": [
     "arrows",
     "navigation",
-    "gaming"
+    "shapes"
   ]
 }
