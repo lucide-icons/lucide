@@ -61,10 +61,7 @@ jobs:
 
       - name: Create change log
         id: change-log
-        run: |
-          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          echo $CHANGE_LOG
-          echo "CHANGE_LOG=$CHANGE_LOG" >> $GITHUB_OUTPUT
+        run: echo "CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})" >> $GITHUB_OUTPUT
         env:
           GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
