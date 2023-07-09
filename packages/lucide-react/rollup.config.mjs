@@ -23,18 +23,20 @@ const bundles = [
     inputs,
     outputDir,
     aliasesSupport: true,
+    withDynamicImports: true,
   },
   {
     format: 'esm',
     inputs,
     outputDir,
     preserveModules: true,
-    aliasesSupport: true
+    aliasesSupport: true,
+    withDynamicImports: true,
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport, withDynamicImports }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -43,6 +45,15 @@ const configs = bundles
             replace({
               "export * from './aliases';": '',
               "export * as icons from './icons';": '',
+              delimiters: ['', ''],
+              preventAssignment: false,
+            }),
+          ] : []
+        ),
+        ...(
+          !withDynamicImports ? [
+            replace({
+              "export { default as dynamicIconImports } from './dynamicIconImports';": '',
               delimiters: ['', ''],
               preventAssignment: false,
             }),
