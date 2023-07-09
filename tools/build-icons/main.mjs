@@ -10,6 +10,7 @@ import generateExportsFile from './building/generateExportsFile.mjs';
 import { readSvgDirectory, getCurrentDirPath } from '../../scripts/helpers.mjs';
 import generateAliasesFile from './building/generateAliasesFile.mjs';
 import getAliases from './utils/getAliases.mjs';
+import generateDynamicImports from './building/generateDynamicImports.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -30,6 +31,7 @@ const {
   importImportFileExtension = '',
   exportFileName = 'index.js',
   withAliases = false,
+  withDynamicImports = false,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
   pretty = true,
@@ -65,6 +67,15 @@ async function buildIcons() {
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
       aliasImportFileExtension,
+      showLog: !silent,
+    });
+  }
+
+  if (withDynamicImports) {
+    generateDynamicImports({
+      iconNodes: icons,
+      outputDirectory: OUTPUT_DIR,
+      fileExtension: aliasesFileExtension,
       showLog: !silent,
     });
   }
