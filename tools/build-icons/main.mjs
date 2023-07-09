@@ -56,6 +56,7 @@ async function buildIcons() {
     showLog: !silent,
     iconFileExtension,
     pretty: JSON.parse(pretty),
+    iconsDir: ICONS_DIR,
   });
 
   if (withAliases) {
