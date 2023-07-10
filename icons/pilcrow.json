@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "paragraph",
     "mark",
@@ -7,7 +12,9 @@
     "blind",
     "typography",
     "type",
-    "text"
+    "text",
+    "prose",
+    "symbol"
   ],
   "categories": [
     "text"

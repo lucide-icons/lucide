@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "aliases": ["verified"],
   "tags": [
     "verified",
     "check"
@@ -8,6 +13,5 @@
     "account",
     "social",
     "shapes"
-  ],
-  "aliases": ["verified"]
+  ]
 }

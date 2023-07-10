@@ -1,6 +1,6 @@
 {
   "name": "lucide-vue",
-  "version": "0.160.0",
+  "version": "0.0.1",
   "author": "Eric Fennis",
   "description": "A Lucide icon library package for Vue 2 applications",
   "license": "ISC",
@@ -32,17 +32,16 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "workspace:*",
     "@lucide/build-icons": "workspace:*",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/vue": "^5.8.2",
-    "@vitejs/plugin-vue2": "^2.0.1",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/vue": "^5.9.0",
+    "@vitejs/plugin-vue2": "2.2.0",
     "@vue/test-utils": "1.3.0",
-    "jest-serializer-vue": "^2.0.2",
-    "rollup": "^3.5.1",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.0",
-    "vitest": "^0.24.3",
+    "rollup": "^3.23.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.2",
     "vue": "2.7.14",
     "vue-template-compiler": "2.7.14"
   },

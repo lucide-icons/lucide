@@ -1,9 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
   "tags": [
-    "sheet",
-    "grid",
-    "spreadsheet"
+    "spreadsheet",
+    "grid"
   ],
   "categories": [
     "text",

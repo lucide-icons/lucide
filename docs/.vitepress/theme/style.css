@@ -1,0 +1,128 @@
+:root {
+  --vp-c-brand:  #F56565;
+  --vp-c-brand-light:  #F67373;
+  --vp-c-brand-lighter: #F89191;
+  --vp-c-brand-dark: #DC5A5A;
+  --vp-c-brand-darker: #C45050;
+
+  --vp-c-bg-alt-up: #fff;
+  --vp-c-bg-alt-down: #fff;
+}
+
+.dark {
+  --vp-c-bg-alt-up: #1B1B1D;
+  --vp-c-bg-alt-down: #0F0F10;
+}
+
+.VPNavBarTitle .logo {
+  height: 36px;
+  width: 36px;
+}
+
+.VPNavBarTitle .title {
+  font-size: 21px;
+}
+
+.VPHomeHero > .container {
+  gap: 24px;
+}
+
+.VPHomeHero .image-container {
+  transform: none;
+  width: 100%;
+  /* padding: 0 24px; */
+}
+
+/* .VPHomeHero .container {
+  flex-direction: column-reverse;
+} */
+.VPHomeHero .container .main {
+  /* flex:1; */
+  flex-shirk: 0;
+}
+
+.VPHomeHero .container .main h1.name {
+  color: var(--vp-c-text);
+
+}
+.VPHomeHero .container .main h1.name .clip {
+  color: inherit;
+  -webkit-text-fill-color: unset;
+  color: var(--vp-c-text);
+  font-size: 36px;
+}
+
+.VPHomeHero .container .main h1::first-line {
+  color: var(--vp-c-brand);
+}
+
+
+/*  */
+.VPHomeHero .container .image {
+  margin: 0;
+  order: 2;
+  /* flex: 1; */
+  margin-top: 32px;
+}
+
+.VPHomeHero .container .image-container {
+  height: auto;
+  justify-content: flex-end;
+}
+
+.VPHomeHero .container .image-bg {
+  display: none;
+}
+
+.VPFeature .icon {
+  background-color: var(--vp-c-bg);;
+}
+
+.vp-doc[class*=" _icons_"] > div {
+  max-width: 100%;
+}
+
+.VPDoc:has(.vp-doc[class*=" _icons_"]) > .container > .content{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 640px) {
+  .VPHomeHero .container .main h1.name .clip {
+    font-size: unset;
+  }
+}
+
+@media (min-width: 960px) {
+
+  .VPHomeHero .container .image {
+    order: 1;
+    margin-bottom: auto;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .VPHomeHero .container .main {
+    width: 50%;
+  }
+
+  .VPHomeHero .container .image {
+    width: 50%;
+  }
+
+  .VPHomeHero .container .image-container {
+    display: block;
+  }
+
+  .VPHomeHero .container .main h1.name {
+
+  }
+}
+
+.VPNavBarHamburger .container > span {
+  border-radius: 2px;
+}
+/*
+html:has(* .outline-link:target) {
+  scroll-behavior: smooth;
+} */

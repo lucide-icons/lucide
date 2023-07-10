@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
   "tags": [
     "code",
     "coding",
@@ -10,7 +14,10 @@
     "x",
     "parentheses",
     "parenthesis",
-    "brackets"
+    "brackets",
+    "parameter",
+    "(",
+    ")"
   ],
   "categories": [
     "development",

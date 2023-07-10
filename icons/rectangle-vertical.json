@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "Reund0",
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "rectangle",
     "aspect ratio",

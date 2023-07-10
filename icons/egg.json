@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "Andreto",
+    "ericfennis"
+  ],
   "tags": [
     "food",
     "bird",

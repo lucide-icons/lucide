@@ -1,16 +1,38 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "subtract",
+    "remove",
+    "decrease",
+    "decrement",
+    "reduce",
+    "negative",
     "calculate",
-    "maths",
     "line",
-    "divide",
+    "divider",
+    "separator",
     "horizontal rule",
-    "hr"
+    "hr",
+    "html",
+    "markup",
+    "markdown",
+    "---",
+    "toolbar",
+    "operator",
+    "code",
+    "coding",
+    "minimum",
+    "downgrade"
   ],
   "categories": [
     "maths",
+    "development",
+    "text",
+    "tools",
     "shapes"
   ]
 }

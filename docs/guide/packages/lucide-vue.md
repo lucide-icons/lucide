@@ -1,0 +1,116 @@
+# Lucide Vue
+
+Implementation of the lucide icon library for Vue applications.
+
+## Vue 2 or Vue 3
+
+::: tip
+This version of lucide is for Vue 2, For Vue 3 go to [lucide-vue-next ->](lucide-vue-next)
+:::
+
+## Installation
+
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-vue
+```
+
+```sh [yarn]
+yarn add lucide-vue
+```
+
+```sh [npm]
+npm install lucide-vue
+```
+
+:::
+
+## How to use
+
+It's build with ES Modules so it's completely tree-shakable.
+
+Each icon can be imported as a Vue component, what renders a inline SVG Element. This way only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+
+### Example
+
+Additional props can be passed to adjust the icon:
+
+```vue
+<template>
+  <Camera color="red" :size="32" />
+</template>
+
+<script>
+  import { Camera } from 'lucide-vue';
+
+  export default {
+    name: 'My Component',
+    components: { Camera }
+  };
+</script>
+```
+
+## Props
+
+|  name                   |   type    |  default     |
+| ----------------------- | --------- | ------------ |
+| `size`                  | *number*  | 24           |
+| `color`                 | *string*  | currentColor |
+| `stroke-width`          | *number*  | 2            |
+| `absolute-stroke-width` | *boolean* | false        |
+| `default-class`         | *string*  | lucide-icon  |
+
+### Applying props
+
+To apply custom props to change the look of the icon, this can be done by simply pass them as props to the component. All SVG attributes are available as props to style the SVGs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+
+```vue
+<template>
+  <Camera fill="red" />
+</template>
+```
+
+## One generic icon component
+
+It is possible to create one generic icon component to load icons. It's not recommended.
+
+::: danger
+Example below importing all ES Modules, caution using this example. All icons will be imported. When using bundlers like: `Webpack`, `Rollup` or `Vite` the application build size will grow strongly and harming the performance the application.
+:::
+
+### Icon Component Example
+
+```vue
+<template>
+  <component :is="icon" />
+</template>
+
+<script>
+  import * as icons from 'lucide-vue';
+
+  export default {
+    props: {
+      name: {
+        type: String,
+        required: true
+      }
+    },
+    computed: {
+      icon() {
+        return icons[this.name];
+      }
+    }
+  };
+</script>
+```
+
+#### Using the Icon Component
+
+```vue
+<template>
+  <div id="app">
+    <Icon name="Airplay" />
+  </div>
+</template>
+```

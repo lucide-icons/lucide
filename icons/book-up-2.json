@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "code",
+    "version control",
+    "git",
+    "repository",
+    "push",
+    "force"
+  ],
+  "categories": [
+    "development"
+  ]
+}
