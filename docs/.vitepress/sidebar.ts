@@ -10,28 +10,27 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         { text: 'Comparison', link: '/guide/comparison' }
       ]
     },
-    // {
-    //   text: 'Usage',
-    //   items: [
-    //     {
-    //       text: 'How to use icons',
-    //       link: 'how-to-use-icons'
-    //     },
-    //     {
-    //     text: 'Styling icons',
-    //       link: 'styling-icons'
-    //     },
-    //     {
-    //       text: 'Accessibility',
-    //       link: 'accessibility'
-    //     },
-    //     {
-    //       text: 'What should I use',
-    //       link: 'what-should-i-use'
-    //     },
-
-    //   ]
-    // },
+    {
+      text: 'Usage',
+      items: [
+        {
+          text: 'How to use icons',
+          link: '/guide/how-to-use-icons'
+        },
+        {
+          text: 'Styling icons',
+          link: '/guide/styling-icons'
+        },
+        {
+          text: 'Accessibility',
+          link: '/guide/accessibility'
+        },
+        {
+          text: 'What should I use',
+          link: '/guide/what-should-i-use'
+        },
+      ]
+    },
     {
       text: 'Advanced',
       items: [
