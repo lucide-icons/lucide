@@ -5,7 +5,6 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "train",
     "railway",
     "metro",
     "subway",
@@ -16,5 +15,8 @@
   ],
   "categories": [
     "transportation"
+  ],
+  "aliases": [
+    "train"
   ]
 }
