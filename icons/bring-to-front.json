@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "james-yeoman"
+  ],
+  "tags": [
+    "bring to front",
+    "bring forward"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
