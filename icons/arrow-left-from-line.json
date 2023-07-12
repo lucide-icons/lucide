@@ -5,12 +5,17 @@
     "ericfennis"
   ],
   "tags": [
+    "previous",
+    "back",
     "direction",
+    "west",
     "expand",
     "fold",
-    "horizontal"
+    "horizontal",
+    "<-|"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

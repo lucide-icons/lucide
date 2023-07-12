@@ -1,7 +1,7 @@
 {
   "name": "lucide-solid",
   "description": "A Lucide icon library package for Solid applications",
-  "version": "0.105.0-alpha.9",
+  "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -46,12 +46,12 @@
     "jsdom": "^20.0.0",
     "rollup": "^3.5.1",
     "rollup-preset-solid": "^2.0.1",
-    "solid-js": "^1.4.7",
-    "solid-testing-library": "^0.3.0",
+    "solid-js": "^1.7.7",
+    "solid-testing-library": "^0.5.1",
     "typescript": "^4.9.4",
-    "vite": "^3.2.4",
-    "vite-plugin-solid": "^2.3.0",
-    "vitest": "^0.23.2"
+    "vite": "^4.3.9",
+    "vitest": "^0.32.2",
+    "vite-plugin-solid": "^2.7.0"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"
