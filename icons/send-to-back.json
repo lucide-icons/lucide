@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "james-yeoman"
+    "james-yeoman",
+    "jguddas"
   ],
   "tags": [
-    "send to back",
-    "send backward"
+    "bring",
+    "send",
+    "move",
+    "under",
+    "back",
+    "backwards",
+    "layer"
   ],
   "categories": [
     "design",

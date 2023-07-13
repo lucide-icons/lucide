@@ -1,11 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "james-yeoman"
+    "james-yeoman",
+    "jguddas"
   ],
   "tags": [
-    "bring to front",
-    "bring forward"
+    "bring",
+    "send",
+    "move",
+    "over",
+    "forward",
+    "front",
+    "layer"
   ],
   "categories": [
     "design",
