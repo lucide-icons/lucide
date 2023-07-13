@@ -67,6 +67,8 @@ It is possible to create one generic icon component to load icons. It's not reco
 
 ::: danger
 Example below importing all ES Modules, caution using this example. All icons will be imported. When using bundlers like: `Webpack`, `Rollup` or `Vite` the application build size will grow strongly and harming the performance the application.
+
+This is not the case for the latest NextJS, because it uses server side rendering. The icons will be streamed to the client when needed. For NextJS with Dynamic Imports, see [dynamic imports](#nextjs-example) section for more information.
 :::
 
 ### Icon Component Example
