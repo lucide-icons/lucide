@@ -77,6 +77,8 @@ export default Icon;
 
 Lucide react exports a dynamic import map `dynamicIconImports`. Useful for applications that want to show icons dynamically by icon name. For example when using a content management system with where icon names are stored in a database.
 
+When using client side rendering, it will fetch the icon component when it's needed. This will reduce the initial bundle size.
+
 The keys of the dynamic import map are the lucide original icon names.
 
 Example with React suspense:
@@ -106,7 +108,7 @@ export default Icon
 
 ##### NextJS Example
 
-With next you can use the dynamic function to load the icon component.
+In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to load the icon component dynamically.
 
 ```tsx
 import dynamic from 'next/dynamic'
