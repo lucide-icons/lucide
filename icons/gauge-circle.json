@@ -1,11 +1,5 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "ericfennis",
-    "Andreto",
-    "danielbayley",
-    "karsa-mistmere"
-  ],
   "tags": [
     "dashboard",
     "dial",
