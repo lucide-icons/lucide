@@ -105,7 +105,7 @@ Lucide react exports a dynamic import map `dynamicIconImports`. Useful for appli
 
 When using client side rendering, it will fetch the icon component when it's needed. This will reduce the initial bundle size.
 
-The keys of the dynamic import map are the lucide original icon names.
+The keys of the dynamic import map are the lucide original icon names (kebab case).
 
 Example with React suspense:
 
