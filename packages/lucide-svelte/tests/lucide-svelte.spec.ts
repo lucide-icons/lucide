@@ -1,5 +1,5 @@
 import { describe, it, expect, afterEach } from 'vitest';
-import { render, cleanup, logDOM } from '@testing-library/svelte';
+import { render, cleanup } from '@testing-library/svelte';
 import { Smile, Pen, Edit2 } from '../src/lucide-svelte'
 import TestSlots from './TestSlots.svelte'
 

@@ -12,8 +12,8 @@ on:
         required: true
 
 jobs:
-  pre-build:
-    if: github.repository == 'lucide-icons/lucide' && contains('["locness3","ericfennis", "johnletey", "karsa-mistmere"]', github.actor)
+  pre-release:
+    if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere"]', github.actor)
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
@@ -23,19 +23,32 @@ jobs:
         id: get_version
         run: |
           echo $VERSION_REF
-          echo ::set-output name=VERSION::${VERSION_REF/refs\/tags\/\v}
+          echo "VERSION=${VERSION_REF/refs\/tags\/\v}" >> $GITHUB_OUTPUT
         env:
           VERSION_REF: ${{ github.event.inputs.version || github.ref }}
 
-  lucide:
+  release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: pre-build
+    needs: pre-release
+    strategy:
+      matrix:
+        package: [
+          'lucide',
+          'lucide-react',
+          'lucide-react-native',
+          'lucide-vue',
+          'lucide-vue-next',
+          'lucide-angular',
+          'lucide-preact',
+          'lucide-solid',
+          'lucide-svelte',
+        ]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -47,484 +60,38 @@ jobs:
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: pnpm --filter lucide version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        run: pnpm --filter lucide build
+        run: pnpm --filter ${{ matrix.package }} build
 
       - name: Test
-        run: pnpm --filter lucide test
+        run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter lucide publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-package-json
-          path: packages/lucide/package.json
-
-  lucide-react:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set package.json version lucide
-        run: pnpm --filter lucide-react version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-react build
-
-      - name: Test
-        run: pnpm --filter lucide-react test
-
-      - name: Publish
-        run: pnpm --filter lucide-react publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-react-package-json
-          path: packages/lucide-react/package.json
-
-  lucide-react-native:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set package.json version lucide
-        run: pnpm --filter lucide-react-native version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-react-native build
-
-      - name: Test
-        run: pnpm --filter lucide-react-native test
-
-      - name: Publish
-        run: pnpm --filter lucide-react-native publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-react-native-package-json
-          path: packages/lucide-react-native/package.json
-
-  lucide-vue:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set new version
-        run: pnpm --filter lucide-vue version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-vue build
-
-      - name: Test
-        run: pnpm --filter lucide-vue test
-
-      - name: Publish
-        run: pnpm --filter lucide-vue publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-vue-package-json
-          path: packages/lucide-vue/package.json
-
-  lucide-vue-next:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set new version
-        run: pnpm --filter lucide-vue-next version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-vue-next build
-
-      - name: Test
-        run: pnpm --filter lucide-vue-next test
-
-      - name: Publish
-        run: pnpm --filter lucide-vue-next publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-vue-next-package-json
-          path: packages/lucide-vue-next/package.json
-
-  lucide-angular:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set package.json version lucide
-        run: pnpm --filter lucide-angular version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-angular build
-
-      - name: Test
-        run: pnpm --filter lucide-angular test
-
-      - name: Publish
-        run: pnpm --filter lucide-angular publish --no-git-checks --ignore-scripts
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-angular-package-json
-          path: packages/lucide-angular/package.json
-
-  lucide-preact:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set package.json version lucide
-        run: pnpm --filter lucide-preact version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-preact build
-
-      - name: Test
-        run: pnpm --filter lucide-preact test
-
-      - name: Publish
-        run: pnpm --filter lucide-preact publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-preact-package-json
-          path: packages/lucide-preact/package.json
-
-  lucide-solid:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set package.json version lucide
-        run: pnpm --filter lucide-solid version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-solid build
-
-      - name: Test
-        run: pnpm --filter lucide-solid test
-
-      - name: Publish
-        run: pnpm --filter lucide-solid publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-solid-package-json
-          path: packages/lucide-solid/package.json
-
-  lucide-svelte:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: pre-build
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-
-      - name: Set package.json version lucide
-        run: pnpm --filter lucide-svelte version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
-
-      - name: Build
-        run: pnpm --filter lucide-svelte build
-
-      - name: Test
-        run: pnpm --filter lucide-svelte test
-
-      - name: Publish
-        run: pnpm --filter lucide-svelte publish --no-git-checks
-
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-svelte-package-json
-          path: packages/lucide-svelte/package.json
+        run: pnpm --filter ${{ matrix.package }} publish --no-git-checks --ignore-scripts
 
   lucide-static:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [pre-build, lucide-font]
+    needs: [pre-release, lucide-font]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v2
@@ -543,24 +110,24 @@ jobs:
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Set Auth Token
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: pnpm --filter lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-static version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
 
       - name: Move Font
         run: cp -r lucide-font packages/lucide-static/font
@@ -571,16 +138,10 @@ jobs:
       - name: Publish
         run: pnpm --filter lucide-static publish --no-git-checks
 
-      - name: Upload package.json
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-static-package-json
-          path: packages/lucide-static/package.json
-
   lucide-font:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: pre-build
+    needs: pre-release
     container: ericfennis/lucide-font:latest
     steps:
       - uses: actions/checkout@v3
@@ -598,12 +159,12 @@ jobs:
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -626,130 +187,26 @@ jobs:
           name: lucide-font
           path: lucide-font
 
-  lucide-flutter:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: [pre-build, lucide-font]
-    container:
-      image: cirrusci/flutter:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v2
-      - uses: actions/cache@v2
-        with:
-          path: ~/.pub-cache
-          key: ${{ runner.os }}-pub-${{ hashFiles('~/.pub-cache') }}
-          restore-keys: |
-            ${{ runner.os }}-pub-
-
-      - name: Setup credentials
-        run: |
-          mkdir -p ~/.pub-cache
-          cat <<EOF > ~/.pub-cache/credentials.json
-          {
-            "accessToken": "${{ secrets.GOOGLE_OAUTH_ACCESS_TOKEN }}",
-            "refreshToken": "${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}",
-            "idToken": "${{ secrets.GOOGLE_OAUTH_ID_TOKEN }}",
-            "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
-            "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
-            "expiration": 1629835569218
-          }
-          EOF
-
-      - name: Get packages
-        run: flutter pub get
-        working-directory: packages/lucide-flutter
-
-      - name: List lucide-font folder
-        run: ls lucide-font
-
-      - name: Copy assets from lucide-font directory
-        run: |
-          mkdir packages/lucide-flutter/assets
-          cp lucide-font/lucide.ttf packages/lucide-flutter/assets/lucide.ttf
-          cp lucide-font/lucide-preview.html packages/lucide-flutter/assets/lucide-preview.html
-
-      - name: Generate exports file
-        run: |
-          dart tool/generate_fonts.dart assets/lucide-preview.html
-          flutter format .
-        working-directory: packages/lucide-flutter
-
-      - name: Test
-        run: flutter test
-        working-directory: packages/lucide-flutter
-
-      - name: Copy License
-        run: cp ../../LICENSE ./LICENSE
-        working-directory: packages/lucide-flutter
-
-      - name: Update yaml
-        run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
-        working-directory: packages/lucide-flutter
-
-      - name: Flutter publish
-        run: flutter pub publish -f
-        working-directory: packages/lucide-flutter
-
-      - name: Upload pubspec.yaml
-        uses: actions/upload-artifact@v2
-        with:
-          name: lucide-flutter-pubspec-yaml
-          path: packages/lucide-flutter/pubspec.yaml
-
   post-release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs:
-      [
-        pre-build,
-        lucide,
-        lucide-react,
-        lucide-react-native,
-        lucide-vue,
-        lucide-vue-next,
-        lucide-angular,
-        lucide-svelte,
-        lucide-preact,
-        lucide-flutter,
-        lucide-font,
-      ]
+    needs: [
+      pre-release,
+      lucide-font,
+    ]
 
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v2
-
-      - name: Commit package files
-        run: |
-          mv lucide-package-json/package.json packages/lucide/package.json
-          mv lucide-react-package-json/package.json packages/lucide-react/package.json
-          mv lucide-react-native-package-json/package.json packages/lucide-react-native/package.json
-          mv lucide-vue-package-json/package.json packages/lucide-vue/package.json
-          mv lucide-preact-package-json/package.json packages/lucide-preact/package.json
-          mv lucide-svelte-package-json/package.json packages/lucide-svelte/package.json
-          mv lucide-vue-next-package-json/package.json packages/lucide-vue-next/package.json
-          mv lucide-angular-package-json/package.json packages/lucide-angular/package.json
-          mv lucide-flutter-pubspec-yaml/pubspec.yaml packages/lucide-flutter/pubspec.yaml
-
-      - name: Commit package.jsons
-        run: |
-          git add packages/*/package.json packages/lucide-flutter/pubspec.yaml
-          git -c user.name="Lucide Bot" -c user.email="lucide-bot@users.noreply.github.com" \
-            commit -m ":package: Bump lucide package versions to ${{ needs.pre-build.outputs.VERSION }}" --no-verify --quiet
-          git remote set-url --push origin https://lucide-bot:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-          git push origin HEAD:main
-
       - name: Zip font and icons
         run: |
-          zip -r lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip lucide-font
-          zip -r lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip icons
+          zip -r lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip lucide-font
+          zip -r lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip icons
 
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
         with:
-          tag_name: v${{ needs.pre-build.outputs.VERSION }}
+          tag_name: v${{ needs.pre-release.outputs.VERSION }}
           files: |
-            lucide-font-${{ needs.pre-build.outputs.VERSION }}.zip
-            lucide-icons-${{ needs.pre-build.outputs.VERSION }}.zip
+            lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip
+            lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip

@@ -30,6 +30,7 @@
     "vitepress": "1.0.0-beta.1"
   },
   "dependencies": {
+    "@floating-ui/vue": "^1.0.1",
     "@headlessui/vue": "^1.7.13",
     "@vueuse/components": "^10.1.0",
     "@vueuse/core": "^10.1.0",
