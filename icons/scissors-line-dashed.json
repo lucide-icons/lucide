@@ -1,18 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "cut",
+    "cut here",
+    "along",
     "snip",
     "chop",
     "stationery",
-    "crafts"
+    "crafts",
+    "instructions",
+    "diagram"
   ],
   "categories": [
-    "text",
     "design",
     "tools"
   ]
