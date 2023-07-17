@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "aliases": [
+    "tv-2"
+  ],
   "contributors": [
     "ericfennis"
   ],
@@ -7,7 +10,21 @@
     "flatscreen",
     "television",
     "stream",
-    "display"
+    "display",
+    "widescreen",
+    "high-definition",
+    "hd",
+    "1080p",
+    "4k",
+    "8k",
+    "smart",
+    "digital",
+    "video",
+    "home cinema",
+    "entertainment",
+    "showtime",
+    "channels",
+    "catchup"
   ],
   "categories": [
     "devices",
