@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { render, cleanup } from '@testing-library/react'
-import { Pen, Edit2, Grid } from '../src/lucide-react';
+import { render, cleanup, waitFor } from '@testing-library/react'
+import { Pen, Edit2, Grid, dynamicIconImports, LucideProps } from '../src/lucide-react';
+import { Suspense, lazy } from 'react';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -73,4 +74,37 @@ describe('Using lucide icon components', () => {
 
     expect( container.innerHTML ).toMatchSnapshot();
   });
+
+  it('should render icons dynamically by using the dynamicIconImports module', async () => {
+    interface IconProps extends Omit<LucideProps, 'ref'> {
+      name: keyof typeof dynamicIconImports;
+    }
+
+    const Icon = ({ name, ...props }: IconProps) => {
+      const LucideIcon = lazy(dynamicIconImports[name]);
+
+      return (
+        <Suspense fallback={null}>
+          <LucideIcon {...props} />
+        </Suspense>
+      );
+    }
+
+    const { container, getByLabelText } = render(
+      <Icon
+        aria-label="smile"
+        name="smile"
+        size={48}
+        stroke="red"
+        absoluteStrokeWidth
+      />,
+    );
+
+    await waitFor(() => getByLabelText('smile'))
+
+    expect( container.innerHTML ).toMatchSnapshot();
+
+  });
+
+
 })
