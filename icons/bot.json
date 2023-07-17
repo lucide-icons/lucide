@@ -6,9 +6,12 @@
   ],
   "tags": [
     "robot",
-    "ai"
+    "ai",
+    "chat",
+    "assistant"
   ],
   "categories": [
-    "development"
+    "development",
+    "social"
   ]
 }
