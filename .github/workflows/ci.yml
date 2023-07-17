@@ -10,8 +10,9 @@ on:
 jobs:
   create-release:
     if: github.repository == 'lucide-icons/lucide'
-
     runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
 
     steps:
       - uses: actions/checkout@v3
@@ -63,6 +64,10 @@ jobs:
         id: change-log
         run: |
           CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
+          CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
+          CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
+          CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
+          CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
           echo $CHANGE_LOG
           echo "CHANGE_LOG=$CHANGE_LOG" >> $GITHUB_OUTPUT
         env:
@@ -80,7 +85,9 @@ jobs:
           name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
-      - name: Release packages
-        uses: './.github/workflows/release.yml'
-        with:
-          version: ${{ steps.new-version.outputs.NEW_VERSION }}
+  start-release:
+    if: github.repository == 'lucide-icons/lucide'
+    needs: create-release
+    uses: './.github/workflows/release.yml'
+    with:
+      version: ${{ needs.create-release.outputs.VERSION }}
