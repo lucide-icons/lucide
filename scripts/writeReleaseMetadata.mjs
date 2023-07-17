@@ -159,7 +159,8 @@ try {
             return;
           }
 
-          contents.createdRelease = newReleaseMetaData[alias].createdRelease;
+          contents.createdRelease =
+            newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
         });
       }
 
