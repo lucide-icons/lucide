@@ -10,8 +10,9 @@ on:
 jobs:
   create-release:
     if: github.repository == 'lucide-icons/lucide'
-
     runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
 
     steps:
       - uses: actions/checkout@v3
@@ -72,7 +73,6 @@ jobs:
         env:
           GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
-
       - name: Check output
         run: |
           echo '${{ steps.new-version.outputs.NEW_VERSION }}'
@@ -85,7 +85,9 @@ jobs:
           name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
-      - name: Release packages
-        uses: './.github/workflows/release.yml'
-        with:
-          version: ${{ steps.new-version.outputs.NEW_VERSION }}
+  start-release:
+    if: github.repository == 'lucide-icons/lucide'
+    needs: create-release
+    uses: './.github/workflows/release.yml'
+    with:
+      version: ${{ needs.create-release.outputs.VERSION }}
