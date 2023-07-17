@@ -1,4 +1,4 @@
-import { forwardRef, createElement, ReactSVG, SVGProps, ForwardRefExoticComponent, RefAttributes } from 'react';
+import { forwardRef, createElement, ReactSVG, SVGProps, ForwardRefExoticComponent, RefAttributes, RefObject } from 'react';
 import defaultAttributes from './defaultAttributes';
 
 export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
@@ -8,6 +8,7 @@ export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>
 export interface LucideProps extends SVGAttributes {
   size?: string | number
   absoluteStrokeWidth?: boolean
+  ref?: RefObject<SVGSVGElement>;
 }
 
 export type LucideIcon = ForwardRefExoticComponent<LucideProps & RefAttributes<SVGSVGElement>>
