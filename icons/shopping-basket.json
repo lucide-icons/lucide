@@ -1,15 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "trolley",
     "cart",
-    "basket",
     "e-commerce",
     "store",
     "purchase",
