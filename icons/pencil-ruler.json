@@ -13,18 +13,29 @@
     "writing",
     "stationery",
     "artist",
-    "measure",
-    "centimetres",
-    "meter",
+    "measurements",
+    "centimeters",
+    "cm",
+    "millimeters",
+    "mm",
+    "metre",
     "foot",
     "feet",
     "inches",
-    "units"
+    "units",
+    "size",
+    "length",
+    "width",
+    "height",
+    "dimensions",
+    "depth",
+    "breadth",
+    "extent"
   ],
   "categories": [
+    "tools",
     "design",
     "layout",
-    "tools",
     "text"
   ]
 }
