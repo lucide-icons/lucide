@@ -9,8 +9,9 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M6 19H4a2 2 0 0 1-2-2V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10" />
-  <rect width="4" height="4" x="2" y="9" rx="1" />
-  <path d="M14 19v-9c0-.6-.4-1-1-1h-2c-.6 0-1 .4-1 1v9h12v-2" />
+  <rect width="4" height="4" x="2" y="9" />
+  <rect width="4" height="10" x="10" y="9" />
+  <path d="M18 19V9a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a2 2 0 0 0 2 2h2" />
   <circle cx="8" cy="19" r="2" />
+  <path d="M10 19h12v-2" />
 </svg>
