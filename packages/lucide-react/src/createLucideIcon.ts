@@ -11,7 +11,7 @@ export interface LucideProps extends SVGAttributes {
   ref?: RefObject<SVGSVGElement>;
 }
 
-export type LucideIcon = ForwardRefExoticComponent<LucideProps>
+type LucideIcon = ForwardRefExoticComponent<LucideProps & RefAttributes<SVGSVGElement>>;
 /**
  * Converts string to KebabCase
  * Copied from scripts/helper. If anyone knows how to properly import it here
