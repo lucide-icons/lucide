@@ -1,11 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "archery",
-    "crossbow",
+    "logo",
     "bullseye",
-    "range",
-    "logo"
+    "deadline",
+    "projects",
+    "overview",
+    "work",
+    "productivity"
   ],
   "categories": [
     "sports",
