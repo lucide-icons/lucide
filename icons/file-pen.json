@@ -4,10 +4,12 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "edit",
     "signature"
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-edit"
   ]
 }
