@@ -5,10 +5,12 @@
   ],
   "tags": [
     "directory",
-    "edit",
     "rename"
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "folder-edit"
   ]
 }
