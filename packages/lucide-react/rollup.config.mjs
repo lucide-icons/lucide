@@ -9,34 +9,39 @@ const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
     format: 'umd',
+    extension: 'js',
     inputs,
     outputDir,
     minify: true,
   },
   {
     format: 'umd',
+    extension: 'js',
     inputs,
     outputDir,
   },
   {
     format: 'cjs',
+    extension: 'cjs',
     inputs,
     outputDir,
     aliasesSupport: true,
-    withDynamicImports: true,
   },
   {
     format: 'esm',
-    inputs,
+    extension: 'mjs',
+    inputs: [
+      ...inputs,
+      'src/dynamicIconImports.ts',
+    ],
     outputDir,
     preserveModules: true,
     aliasesSupport: true,
-    withDynamicImports: true,
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport, withDynamicImports }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport, extension }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -50,15 +55,6 @@ const configs = bundles
             }),
           ] : []
         ),
-        ...(
-          !withDynamicImports ? [
-            replace({
-              "export { default as dynamicIconImports } from './dynamicIconImports';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
         ...plugins(pkg, minify)
       ],
       external: ['react', 'prop-types'],
@@ -67,9 +63,10 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
             }),
         format,
         sourcemap: true,
@@ -84,6 +81,13 @@ const configs = bundles
   .flat();
 
 export default [
+  {
+    input: 'src/dynamicIconImports.ts',
+    output: [{
+      file: `dist/dynamicIconImports.d.ts`, format: "es"
+    }],
+    plugins: [dts()],
+  },
   {
     input: inputs[0],
     output: [{
