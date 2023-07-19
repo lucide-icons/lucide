@@ -15,16 +15,22 @@
   "amdName": "lucide-react",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/esm/lucide-react.mjs",
+      "require": "./dist/cjs/lucide-react.cjs",
+      "types": "./dist/lucide-react.d.ts"
     },
     "./icons": {
-      "import": "./dist/esm/icons/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/esm/icons/index.mjs",
+      "require": "./dist/cjs/lucide-react.cjs"
     },
     "./dynamicIconImports": {
-      "import": "./dist/esm/dynamicIconImports.js",
+      "import": "./dist/esm/dynamicIconImports.mjs",
       "types": "./dist/dynamicIconImports.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "dynamicIconImports": ["./dist/dynamicIconImports.d.ts"]
     }
   },
   "main": "dist/cjs/lucide-react.js",

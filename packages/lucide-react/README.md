@@ -112,7 +112,8 @@ In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-app
 
 ```tsx
 import dynamic from 'next/dynamic'
-import { dynamicIconImports, LucideProps } from 'lucide-react';
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
 
 interface IconProps extends LucideProps {
   name: keyof typeof dynamicIconImports;

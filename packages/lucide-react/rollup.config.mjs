@@ -9,23 +9,27 @@ const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
     format: 'umd',
+    extension: 'js',
     inputs,
     outputDir,
     minify: true,
   },
   {
     format: 'umd',
+    extension: 'js',
     inputs,
     outputDir,
   },
   {
     format: 'cjs',
+    extension: 'cjs',
     inputs,
     outputDir,
     aliasesSupport: true,
   },
   {
     format: 'esm',
+    extension: 'mjs',
     inputs: [
       ...inputs,
       'src/dynamicIconImports.ts',
@@ -37,7 +41,7 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport, extension }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -59,9 +63,10 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
             }),
         format,
         sourcemap: true,
