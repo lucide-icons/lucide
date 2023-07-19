@@ -26,6 +26,9 @@
     "./dynamicIconImports": {
       "import": "./dist/esm/dynamicIconImports.mjs",
       "types": "./dist/dynamicIconImports.d.ts"
+    },
+    "./src/createLucideIcon": {
+      "import": "./src/createLucideIcon.ts"
     }
   },
   "typesVersions": {
