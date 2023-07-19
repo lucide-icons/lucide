@@ -1,27 +1,32 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "wojtekmaj",
+    "colebemis",
+    "csandman",
     "mittalyashu",
-    "danielbayley"
+    "ericfennis"
   ],
   "tags": [
-    "rubber",
-    "edit",
+    "pencil",
+    "change",
     "create",
     "draw",
     "sketch",
     "draft",
     "writer",
     "writing",
+    "biro",
+    "ink",
+    "marker",
+    "felt tip",
     "stationery",
     "artist"
   ],
   "categories": [
-    "design",
-    "cursors",
-    "tools",
     "text"
+  ],
+  "aliases": [
+    "pen-box",
+    "edit"
   ]
 }

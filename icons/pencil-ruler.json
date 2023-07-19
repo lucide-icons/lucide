@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Andreto",
-    "ericfennis",
-    "csandman",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "edit",
+    "create",
+    "draw",
+    "sketch",
+    "draft",
+    "writer",
+    "writing",
+    "stationery",
+    "artist",
     "measurements",
     "centimeters",
     "cm",
@@ -24,12 +30,12 @@
     "dimensions",
     "depth",
     "breadth",
-    "extent",
-    "stationery"
+    "extent"
   ],
   "categories": [
     "tools",
     "design",
-    "layout"
+    "layout",
+    "text"
   ]
 }
