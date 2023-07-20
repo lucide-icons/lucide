@@ -10,7 +10,7 @@
     "version control",
     "git",
     "repository",
-    "dashed",
+    "template",
     "draft",
     "script",
     "screenplay",
@@ -23,5 +23,8 @@
   ],
   "categories": [
     "development"
+  ],
+  "aliases": [
+    "book-template"
   ]
 }
