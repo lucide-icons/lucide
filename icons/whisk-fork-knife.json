@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "kitchen",
+    "utensils",
+    "cutlery",
+    "culinary",
+    "cooking",
+    "cookery",
+    "restaurant",
+    "chef",
+    "mix",
+    "cut",
+    "slice",
+    "eat",
+    "meal",
+    "dinner"
+  ],
+  "categories": [
+    "food-beverage",
+    "tools"
+  ]
+}
