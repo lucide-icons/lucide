@@ -212,7 +212,7 @@ jobs:
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ needs.pre-release.outputs.VERSION }}
+          tag_name: ${{ needs.pre-release.outputs.VERSION }}
           files: |
             lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip
             lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip
