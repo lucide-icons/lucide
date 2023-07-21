@@ -6,11 +6,13 @@
   ],
   "tags": [
     "cooking",
-    "food",
     "kitchen",
     "restaurant"
   ],
   "categories": [
     "food-beverage"
+  ],
+  "aliases": [
+    "chef-hat"
   ]
 }
