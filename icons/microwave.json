@@ -8,10 +8,14 @@
     "oven",
     "cooker",
     "toaster oven",
-    "bake"
+    "kitchen",
+    "appliances",
+    "bake",
+    "reheat"
   ],
   "categories": [
     "food-beverage",
-    "home"
+    "home",
+    "devices"
   ]
 }
