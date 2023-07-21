@@ -4,16 +4,22 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "food",
     "restaurant",
-    "meal",
     "cutlery",
+    "culinary",
+    "cut",
+    "slice",
+    "eat",
+    "meal",
     "breakfast",
+    "brunch",
+    "lunch",
     "dinner",
     "supper"
   ],
   "categories": [
     "food-beverage",
+    "tools",
     "travel",
     "maps"
   ]
