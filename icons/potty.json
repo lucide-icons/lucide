@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "toilet",
+    "bowl",
+    "bedpan",
+    "newborn",
+    "children",
+    "infant",
+    "kids",
+    "toddler",
+    "mother",
+    "mum",
+    "family"
+  ],
+  "categories": [
+    "people"
+  ]
+}
