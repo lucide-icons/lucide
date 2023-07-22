@@ -10,11 +10,13 @@
     "table service",
     "served",
     "dinner",
-    "course",
+    "dining",
     "meal",
+    "course",
     "luxury"
   ],
   "categories": [
-    "food-beverage"
+    "food-beverage",
+    "people"
   ]
 }
