@@ -9,10 +9,13 @@
     "household",
     "office",
     "desk",
-    "home",
-    "furniture"
+    "appliances",
+    "ambience",
+    "ambiance",
+    "animation"
   ],
   "categories": [
-    "furniture"
+    "furniture",
+    "home"
   ]
 }

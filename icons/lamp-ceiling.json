@@ -7,10 +7,12 @@
   "tags": [
     "lighting",
     "household",
-    "home",
-    "furniture"
+    "appliances",
+    "ambience",
+    "ambiance"
   ],
   "categories": [
-    "furniture"
+    "furniture",
+    "home"
   ]
 }
