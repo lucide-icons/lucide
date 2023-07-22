@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "camera",
+    "surveillance",
+    "film",
+    "videotape",
+    "crime",
+    "disabled",
+    "blind spot"
+  ],
+  "categories": [
+    "security",
+    "devices",
+    "communication",
+    "connectivity",
+    "photography"
+  ]
+}
