@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "dummy",
+    "teething",
+    "suck",
+    "silence",
+    "quiet",
+    "newborn",
+    "childproof",
+    "children",
+    "infant",
+    "kids",
+    "toddler",
+    "mother",
+    "mum",
+    "family"
+  ],
+  "categories": [
+    "people"
+  ]
+}
