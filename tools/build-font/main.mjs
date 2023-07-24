@@ -5,45 +5,58 @@ import path from 'path';
 
 const fontName = 'lucide';
 const classNamePrefix = 'icon';
-var preserveCharCodes = true;
+const startUnicode = 57400;
 
-const inputDir = path.join(process.cwd(), '../../outlined');
+const inputDir = path.join(process.cwd(), '../../', 'outlined');
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 const { outputDir = 'lucide-font' } = cliArguments;
 const targetDir = path.join(process.cwd(), '../../', outputDir);
-const infoDataPath = path.resolve(targetDir, 'info.json');
+const releaseMetaDataDir = path.join(process.cwd(), '../../', 'docs/.vitepress/data');
+const releaseMetaDataPath = path.resolve(releaseMetaDataDir, 'releaseMetaData.json');
 
-const previousCharCodes = preserveCharCodes ? await getPreviousCharCodes() : [];
+const releaseMetaData = convertReleaseMetaData(await getReleaseMetaData());
 
-async function getPreviousCharCodes() {
-  let charCodes = {};
+async function getReleaseMetaData() {
+  let releaseMetaData = {};
   try {
-    const infoData = await readJson(infoDataPath);
-    charCodes = Object.fromEntries(
-      Object.entries(infoData).map(([key, value]) => [key, getUnicodeNumber(value)]),
-    );
+    releaseMetaData = await readJson(releaseMetaDataPath);
   } catch (err) {
-    preserveCharCodes = false;
-    console.log('Info data file does not exist. Proceeding without preserving char codes.');
+    throw new Error('Execution stopped because no release information was found.');
   }
-  return charCodes;
+  return releaseMetaData;
 }
 
-function getUnicodeNumber(item) {
-  return parseInt(item.unicode.slice(2, -1), 10);
+function convertReleaseMetaData(releaseMetaData) {
+  return Object.entries(releaseMetaData)
+    .map(([key, value]) => [key, addAttribute(value, 'name', key)])
+    .map(([, value]) => value)
+    .sort((a, b) => sortMultiple(a, b, [sortByCreatedReleaseDate, sortByName]))
+    .map((value, index) => addAttribute(value, 'index', index));
 }
 
-function getIconUnicode(name, unicode) {
-  if (!preserveCharCodes) return unicode;
-  return previousCharCodes[name]
-    ? String.fromCharCode(previousCharCodes[name])
-    : String.fromCharCode(getFreeNumber());
+function addAttribute(obj, attribute, value) {
+  obj[attribute] = value;
+  return obj;
 }
 
-let counter = 0;
-function getFreeNumber() {
-  counter += 1;
-  return Math.max(...Object.values(previousCharCodes)) + counter;
+function sortMultiple(a, b, collators = []) {
+  const comparison = collators.shift()(a, b);
+  if (comparison === 0 && collators.length > 0) return sortMultiple(a, b, collators);
+  return comparison;
+}
+
+function sortByCreatedReleaseDate(a, b) {
+  const dates = [a, b].map((value) => new Date(value.createdRelease.date).valueOf());
+  return (dates[0] > dates[1]) - (dates[0] < dates[1]);
+}
+
+function sortByName(a, b) {
+  return new Intl.Collator().compare(a.name, b.name);
+}
+
+function getIconUnicode(name) {
+  const { index } = releaseMetaData.find(({ name: iconname }) => iconname === name);
+  return String.fromCharCode(startUnicode + index);
 }
 
 async function init() {
@@ -55,6 +68,7 @@ async function init() {
       // styleTemplates: path.resolve(process.cwd(), 'styles'), // Add different templates if needed
       fontName,
       classNamePrefix,
+      startUnicode,
       css: {
         fontSize: 'inherit',
       },
