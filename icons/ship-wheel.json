@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "steering",
+    "rudder",
+    "boat",
+    "knots",
+    "nautical mile",
+    "maritime",
+    "sailing",
+    "yacht",
+    "cruise",
+    "ocean liner",
+    "tanker",
+    "vessel",
+    "navy",
+    "trip"
+  ],
+  "categories": [
+    "transportation",
+    "travel",
+    "maps"
+  ]
+}
