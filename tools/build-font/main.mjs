@@ -31,7 +31,8 @@ function convertReleaseMetaData(releaseMetaData) {
     .map(([key, value]) => [key, addAttribute(value, 'name', key)])
     .map(([, value]) => value)
     .sort((a, b) => sortMultiple(a, b, [sortByCreatedReleaseDate, sortByName]))
-    .map((value, index) => addAttribute(value, 'index', index));
+    .map((value, index) => addAttribute(value, 'index', index))
+    .map((value, index) => addAttribute(value, 'unicode', index + startUnicode));
 }
 
 function addAttribute(obj, attribute, value) {
@@ -55,8 +56,8 @@ function sortByName(a, b) {
 }
 
 function getIconUnicode(name) {
-  const { index } = releaseMetaData.find(({ name: iconname }) => iconname === name);
-  return String.fromCharCode(startUnicode + index);
+  const { unicode } = releaseMetaData.find(({ name: iconname }) => iconname === name);
+  return String.fromCharCode(unicode);
 }
 
 async function init() {
@@ -68,7 +69,6 @@ async function init() {
       // styleTemplates: path.resolve(process.cwd(), 'styles'), // Add different templates if needed
       fontName,
       classNamePrefix,
-      startUnicode,
       css: {
         fontSize: 'inherit',
       },
