@@ -31,7 +31,7 @@ jobs:
           echo $VERSION_REF
           echo "VERSION=${VERSION_REF/refs\/tags\/\v}" >> $GITHUB_OUTPUT
         env:
-          VERSION_REF: ${{ github.event.inputs.version || github.ref }}
+          VERSION_REF: ${{ inputs.version || github.event.inputs.version || github.ref }}
 
   release:
     if: github.repository == 'lucide-icons/lucide'
@@ -212,7 +212,7 @@ jobs:
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ needs.pre-release.outputs.VERSION }}
+          tag_name: ${{ needs.pre-release.outputs.VERSION }}
           files: |
             lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip
             lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip
