@@ -41,6 +41,9 @@ jobs:
       - name: Outline svg Icons
         run: pnpm build:outline-icons
 
+      - name: Install dependencies
+        run: pnpm install --filter build-font
+
       - name: Create font in ./lucide-font
         run: pnpm build:font
 
