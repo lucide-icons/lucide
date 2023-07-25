@@ -36,9 +36,9 @@
       "dynamicIconImports": ["./dist/dynamicIconImports.d.ts"]
     }
   },
-  "main": "dist/cjs/lucide-react.js",
+  "main": "dist/cjs/lucide-react.cjs",
   "main:umd": "dist/umd/lucide-react.js",
-  "module": "dist/esm/lucide-react.js",
+  "module": "dist/esm/lucide-react.mjs",
   "unpkg": "dist/umd/lucide-react.min.js",
   "typings": "dist/lucide-react.d.ts",
   "sideEffects": false,
