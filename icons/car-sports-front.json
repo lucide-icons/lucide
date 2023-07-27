@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "vehicle",
+    "drive",
+    "trip",
+    "journey",
+    "race",
+    "racing",
+    "motorsport",
+    "speed",
+    "fast",
+    "luxury"
+  ],
+  "categories": [
+    "transportation",
+    "sports"
+  ]
+}
