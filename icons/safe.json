@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "vault",
+    "lockbox",
+    "deposit",
+    "locker",
+    "coffer",
+    "strongbox",
+    "safety",
+    "secure",
+    "storage",
+    "valuables"
+  ],
+  "categories": [
+    "security",
+    "travel",
+    "home"
+  ]
+}
