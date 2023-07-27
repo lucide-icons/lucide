@@ -2,16 +2,30 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
-    "pending",
     "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
     "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "spread",
+    "rest",
     "…",
     "..."
   ],
   "categories": [
+    "layout",
+    "development",
     "shapes"
   ],
   "aliases": [
