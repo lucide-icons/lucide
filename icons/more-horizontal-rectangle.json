@@ -5,14 +5,33 @@
     "ericfennis"
   ],
   "tags": [
-    "2fa",
-    "authenticate",
     "login",
+    "password",
+    "authenticate",
+    "2fa",
     "field",
-    "text"
+    "fill",
+    "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
+    "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "spread",
+    "rest",
+    "…",
+    "..."
   ],
   "categories": [
-    "text"
+    "text",
+    "development",
+    "shapes"
   ],
   "aliases": [
     "form-input"

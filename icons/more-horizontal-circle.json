@@ -2,8 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis",
-    "danielbayley"
+    "ericfennis"
   ],
   "tags": [
     "ellipsis",
