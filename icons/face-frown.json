@@ -7,7 +7,6 @@
     "ericfennis"
   ],
   "tags": [
-    "face",
     "bad",
     "sad",
     "negative",
@@ -19,5 +18,8 @@
   ],
   "categories": [
     "emoji"
+  ],
+  "aliases": [
+    "frown"
   ]
 }
