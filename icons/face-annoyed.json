@@ -4,11 +4,13 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "face",
     "nuisance",
     "emotion"
   ],
   "categories": [
     "emoji"
+  ],
+  "aliases": [
+    "annoyed"
   ]
 }
