@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "spacesuit",
+    "spaceman",
+    "explore",
+    "interplanetary",
+    "stars",
+    "safety",
+    "protection",
+    "headgear"
+  ],
+  "categories": [
+    "science",
+    "gaming"
+  ]
+}
