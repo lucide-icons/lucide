@@ -5,7 +5,6 @@
     "ericfennis"
   ],
   "tags": [
-    "face",
     "happy",
     "good",
     "cheerful",
@@ -21,5 +20,8 @@
     "social",
     "communication",
     "notifications"
+  ],
+  "aliases": [
+    "smile-plus"
   ]
 }
