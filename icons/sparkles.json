@@ -9,13 +9,26 @@
     "effect",
     "filter",
     "night",
-    "magic"
+    "magic",
+    "dark",
+    "sky",
+    "twinkle",
+    "shine",
+    "planet",
+    "space",
+    "galaxy",
+    "universe",
+    "astro"
   ],
   "categories": [
     "shapes",
     "cursors",
     "multimedia",
     "gaming",
-    "weather"
+    "weather",
+    "science"
+  ],
+  "aliases": [
+    "stars"
   ]
 }

@@ -5,13 +5,28 @@
     "karsa-mistmere"
   ],
   "tags": [
+    "sky",
+    "day",
     "night",
+    "dark",
     "light",
-    "moon",
-    "sun",
-    "brightness"
+    "brightness",
+    "shine",
+    "star",
+    "planet",
+    "solar",
+    "lunar",
+    "orbit",
+    "eclipse",
+    "heat",
+    "hot",
+    "space",
+    "galaxy",
+    "universe",
+    "astro"
   ],
   "categories": [
-    "accessibility"
+    "accessibility",
+    "science"
   ]
 }

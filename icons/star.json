@@ -8,7 +8,20 @@
     "favorite",
     "like",
     "review",
-    "rating"
+    "rating",
+    "fame",
+    "famous",
+    "dark",
+    "night",
+    "sky",
+    "twinkle",
+    "sparkle",
+    "shine",
+    "planet",
+    "space",
+    "galaxy",
+    "universe",
+    "astro"
   ],
   "categories": [
     "account",
@@ -17,6 +30,7 @@
     "multimedia",
     "weather",
     "emoji",
-    "gaming"
+    "gaming",
+    "science"
   ]
 }
