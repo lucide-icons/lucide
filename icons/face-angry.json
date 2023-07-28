@@ -5,7 +5,6 @@
     "ericfennis"
   ],
   "tags": [
-    "face",
     "anger",
     "rage",
     "fury",
@@ -16,5 +15,8 @@
   ],
   "categories": [
     "emoji"
+  ],
+  "aliases": [
+    "angry"
   ]
 }
