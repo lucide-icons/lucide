@@ -7,7 +7,6 @@
     "ericfennis"
   ],
   "tags": [
-    "face",
     "happy",
     "good",
     "cheerful",
@@ -17,5 +16,8 @@
   ],
   "categories": [
     "emoji"
+  ],
+  "aliases": [
+    "smile"
   ]
 }
