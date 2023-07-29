@@ -1,20 +1,28 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "unimpressed",
+    "underwhelmed",
+    "unenthusiastic",
+    "lackluster",
+    "listless",
+    "lethargic",
     "nuisance",
     "disdain",
     "disapproval",
     "boredom",
+    "boring",
     "sarcasm",
     "exasperated",
     "irritated",
     "frustration",
     "frustrated",
     "unemotional",
+    ":|",
     "😑"
   ],
   "categories": [
