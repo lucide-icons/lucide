@@ -13,5 +13,5 @@
   <path d="M9 9h.01" />
   <path d="M15 9h.01" />
   <rect width="10" height="4" x="7" y="13" rx="2" />
-  <path d="M12 13v4" />
+  <path d="M11 13v4" />
 </svg>
