@@ -2,16 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
     "anger",
-    "rage",
-    "fury",
-    "furious",
+    "fuming",
     "frustration",
     "frustrated",
+    "scowl",
+    "frown",
+    "furrowed brow",
+    "negative",
     "emotion",
+    ">:(",
+    ">:|",
+    "😡",
     "😠"
   ],
   "categories": [
