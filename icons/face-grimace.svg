@@ -10,8 +10,9 @@
   stroke-linejoin="round"
 >
   <circle cx="12" cy="12" r="10" />
-  <path d="M9 9h.01" />
-  <path d="M15 9h.01" />
-  <rect width="10" height="4" x="7" y="13" rx="2" />
-  <path d="M11 13v4" />
+  <path d="M9 7h.01" />
+  <path d="M15 7h.01" />
+  <rect width="12" height="4" x="6" y="11" rx="2" />
+  <path d="M10 11v4" />
+  <path d="M14 11v4" />
 </svg>
