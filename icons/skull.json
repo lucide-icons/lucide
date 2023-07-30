@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
     "death",
+    "dead",
     "danger",
-    "bone"
+    "bones",
+    "head",
+    "💀"
   ],
   "categories": [
-    "gaming"
+    "medical",
+    "gaming",
+    "emoji"
   ]
 }
