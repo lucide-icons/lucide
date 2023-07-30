@@ -88,3 +88,4 @@ jobs:
     uses: './.github/workflows/release.yml'
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
