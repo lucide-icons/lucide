@@ -2,7 +2,10 @@
   "$schema": "../icon.schema.json",
   "tags": [
     "egg free",
-    "food"
+    "vegan",
+    "hatched",
+    "abort",
+    "bad egg"
   ],
   "categories": [
     "food-beverage"
