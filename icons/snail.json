@@ -1,16 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "egg free",
-    "vegan",
-    "hatched",
-    "bad egg"
+    "animal",
+    "insect",
+    "slow",
+    "speed",
+    "delicacy",
+    "spiral"
   ],
   "categories": [
+    "animals",
     "food-beverage"
   ]
 }

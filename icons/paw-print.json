@@ -1,15 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "it-is-not"
+    "danielbayley"
   ],
   "tags": [
-    "peace",
-    "freedom",
-    "wing",
-    "avian",
-    "tweet"
+    "pets",
+    "vets",
+    "veterinarian",
+    "domesticated",
+    "cat",
+    "dog",
+    "bear"
   ],
   "categories": [
     "animals"
