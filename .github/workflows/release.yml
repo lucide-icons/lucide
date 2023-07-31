@@ -11,10 +11,6 @@ on:
         required: true
         description: Version
         type: string
-      NPM_TOKEN:
-        description: NPM token to publish
-        type: string
-        required: true
 
   workflow_dispatch:
     inputs:
@@ -135,7 +131,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ inputs.NPM_TOKEN || secrets.NPM_TOKEN }}
+        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
         run: pnpm --filter lucide-static version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
