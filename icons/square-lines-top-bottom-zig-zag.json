@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "upper",
+    "above",
+    "lower",
+    "beneath",
+    "grill",
+    "oven",
+    "aga",
+    "cooker",
+    "furnace",
+    "kiln",
+    "reheat",
+    "roast",
+    "bake",
+    "baking",
+    "preset",
+    "setting",
+    "function",
+    "mode",
+    "kitchen",
+    "appliances",
+    "amenities",
+    "electric",
+    "gas"
+  ],
+  "categories": [
+    "food-beverage",
+    "home",
+    "devices"
+  ]
+}
