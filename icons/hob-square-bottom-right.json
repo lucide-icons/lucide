@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "stove",
+    "cooker",
+    "reheat",
+    "active",
+    "enabled",
+    "switched on",
+    "setting",
+    "mode",
+    "indicator",
+    "kitchen",
+    "appliances",
+    "amenities",
+    "electric",
+    "gas"
+  ],
+  "categories": [
+    "food-beverage",
+    "home",
+    "devices"
+  ]
+}
