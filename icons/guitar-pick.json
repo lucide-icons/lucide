@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "plectrum",
+    "strum",
+    "acoustic",
+    "instrument",
+    "strings",
+    "riff",
+    "rock",
+    "band",
+    "country",
+    "concert",
+    "performance",
+    "play",
+    "lead",
+    "loud",
+    "music",
+    "audio",
+    "sound",
+    "noise"
+  ],
+  "categories": [
+    "multimedia",
+    "tools",
+    "shapes"
+  ]
+}
