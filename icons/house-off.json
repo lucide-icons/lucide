@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "property",
+    "real estate",
+    "dwellings",
+    "living",
+    "rooms",
+    "door",
+    "automation",
+    "iot",
+    "disconnected",
+    "disabled",
+    "deactivated",
+    "unpowered"
+  ],
+  "categories": [
+    "account",
+    "home",
+    "buildings"
+  ],
+  "aliases": [
+    "home",
+    "devices"
+  ]
+}
