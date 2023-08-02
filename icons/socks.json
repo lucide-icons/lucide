@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "feet",
+    "foot",
+    "underwear",
+    "undergarment",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "fashion",
+    "thread",
+    "cotton"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}
