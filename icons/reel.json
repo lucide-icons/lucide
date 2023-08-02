@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "thread",
     "needle",
@@ -11,12 +15,15 @@
     "fabric",
     "material",
     "cloth",
+    "cotton",
     "textile",
     "string",
-    "unravel"
+    "unravel",
+    "unroll"
   ],
   "categories": [
     "home",
+    "tools",
     "social"
   ]
 }
