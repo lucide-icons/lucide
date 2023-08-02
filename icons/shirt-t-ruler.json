@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "fit",
+    "sizes",
+    "sizing",
+    "measurements",
+    "tailored",
+    "t-shirt",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "fashion",
+    "casual",
+    "slim",
+    "regular"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}
