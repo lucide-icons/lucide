@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "heated",
+    "warm",
+    "hot",
+    "flannel",
+    "bathroom",
+    "toiletries",
+    "sanitation",
+    "clean",
+    "fresh",
+    "dry",
+    "laundry",
+    "hospitality",
+    "housekeeping",
+    "room service",
+    "spa break",
+    "health club",
+    "amenities",
+    "electric",
+    "hanging"
+  ],
+  "categories": [
+    "home",
+    "travel",
+    "devices"
+  ]
+}
