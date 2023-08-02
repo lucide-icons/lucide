@@ -9,20 +9,12 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M4 3v2" />
-  <path d="M10 4H8" />
-  <path d="M14 3v2" />
-  <path d="M20 4h-2" />
-  <path d="M6 9H4" />
-  <path d="M10 8v2" />
-  <path d="M16 9h-2" />
-  <path d="M20 8v2" />
-  <path d="M4 13v2" />
-  <path d="M10 14H8" />
-  <path d="M14 13v2" />
-  <path d="M20 14h-2" />
-  <path d="M6 19H4" />
-  <path d="M10 18v2" />
-  <path d="M16 19h-2" />
-  <path d="M20 18v2" />
+  <rect width="4" height="4" x="6" y="2" />
+  <rect width="12" height="4" x="2" y="6" />
+  <rect width="4" height="12" x="14" y="2" />
+  <rect width="4" height="4" x="18" y="6" />
+  <rect width="4" height="12" x="6" y="10" />
+  <rect width="4" height="4" x="2" y="14" />
+  <rect width="12" height="4" x="10" y="14" />
+  <rect width="4" height="4" x="14" y="18" />
 </svg>
