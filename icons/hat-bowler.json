@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "hats",
+    "headwear",
+    "headgear",
+    "gentleman",
+    "mens",
+    "boys",
+    "store",
+    "clothing",
+    "clothes",
+    "accessories",
+    "apparel",
+    "fashion",
+    "classic",
+    "costume",
+    "fancy dress",
+    "formal occasion",
+    "summer holiday",
+    "straw"
+  ],
+  "categories": [
+    "shopping",
+    "social"
+  ]
+}
