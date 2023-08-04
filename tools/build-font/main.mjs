@@ -52,7 +52,7 @@ function sortByCreatedReleaseDate(a, b) {
 }
 
 function sortByName(a, b) {
-  return new Intl.Collator().compare(a.name, b.name);
+  return new Intl.Collator('en-US').compare(a.name, b.name);
 }
 
 function getIconUnicode(name) {
