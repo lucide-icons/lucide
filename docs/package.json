@@ -44,7 +44,7 @@
     "lucide-vue-next": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "semver": "^7.5.0",
+    "semver": "^7.5.2",
     "shiki": "^0.14.2",
     "shiki-processor": "^0.1.3",
     "simple-git": "^3.18.0",
