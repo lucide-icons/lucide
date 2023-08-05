@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "document",
+    "unsaved",
+    "configuration",
+    "hidden",
+    "."
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}
