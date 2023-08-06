@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "code review",
+    "coding"
+  ],
+  "categories": [
+    "development",
+    "account",
+    "social"
+  ]
+}
