@@ -8,11 +8,16 @@
     "mittalyashu"
   ],
   "tags": [
-    "table"
+    "table",
+    "rows",
+    "columns"
   ],
   "categories": [
     "text",
     "layout",
     "design"
+  ],
+  "aliases": [
+    "grid"
   ]
 }
