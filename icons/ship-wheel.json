@@ -1,9 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "steering",
+    "rudder",
     "boat",
     "knots",
     "nautical mile",
