@@ -1,17 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
+    "danielbayley",
     "ericfennis"
   ],
-  "aliases": ["pen-line"],
   "tags": [
-    "pencil",
-    "change"
+    "back",
+    "menu"
   ],
   "categories": [
-    "text"
+    "arrows",
+    "navigation",
+    "shapes"
   ]
 }

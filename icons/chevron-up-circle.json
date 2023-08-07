@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "caret",
+    "ahead",
+    "menu",
+    "^"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "shapes"
+  ]
+}

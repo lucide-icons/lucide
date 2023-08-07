@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "tags": [
-    "projects",
-    "overview",
-    "work",
-    "code"
+    "pc",
+    "chassis",
+    "codespaces",
+    "github"
   ],
   "categories": [
+    "devices",
     "development",
-    "design",
-    "charts"
+    "gaming"
   ]
 }

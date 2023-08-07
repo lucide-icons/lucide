@@ -40,7 +40,7 @@ export default defineConfig({
   },
   head: [
     [ 'script', {
-      src: 'https://plausible.io/js/script.js',
+      src: 'https://analytics.lucide.dev/js/script.js',
       'data-domain': 'lucide.dev',
       defer: ''
     }],
