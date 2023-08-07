@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fs-extra": "^11.1.0",
-    "minimist": "^1.2.6",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
     "svgtofont": "^3.25.4"
   }
 }

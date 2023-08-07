@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "minimist": "^1.2.6",
+    "minimist": "^1.2.8",
     "oslllo-svg-fixer": "^2.2.0"
   }
 }
