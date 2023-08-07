@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "recharge",
+    "battery",
+    "outlet",
+    "point",
+    "plug",
+    "power",
+    "vehicle",
+    "ev"
+  ],
+  "categories": [
+    "transportation",
+    "maps",
+    "sustainability"
+  ]
+}
