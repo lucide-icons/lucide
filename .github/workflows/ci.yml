@@ -86,5 +86,6 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     needs: create-release
     uses: './.github/workflows/release.yml'
+    secrets: inherit
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
