@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "hamburger",
+    "cheeseburger",
+    "meat",
+    "patty",
+    "bun",
+    "fast food",
+    "junk food",
+    "takeaway",
+    "takeout",
+    "snack",
+    "dish",
+    "restaurant",
+    "lunch",
+    "meal",
+    "savory",
+    "savoury",
+    "cookery",
+    "cooking",
+    "grilled",
+    "barbecue",
+    "barbeque",
+    "bbq"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
