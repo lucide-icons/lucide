@@ -1,15 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto"
+    "danielbayley"
   ],
   "tags": [
-    "vehicle",
-    "drive",
-    "trip",
-    "journey"
+    "roadworks",
+    "tarmac",
+    "safety",
+    "block"
   ],
   "categories": [
     "transportation"

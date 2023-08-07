@@ -1,15 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto"
+    "danielbayley"
   ],
   "tags": [
+    "coach",
     "vehicle",
-    "drive",
     "trip",
-    "journey"
+    "road"
   ],
   "categories": [
     "transportation"
