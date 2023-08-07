@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "drawers",
+    "documents",
+    "binders",
+    "folders",
+    "records",
+    "storage",
+    "archive"
+  ],
+  "categories": [
+    "furniture",
+    "files"
+  ]
+}
