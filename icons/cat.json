@@ -2,13 +2,17 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "kemie",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "animal",
     "pet",
     "kitten",
-    "feline"
+    "kitty",
+    "feline",
+    "meow",
+    "🐱"
   ],
   "categories": [
     "animals"
