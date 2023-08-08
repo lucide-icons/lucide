@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "piglet",
+    "farmyard",
+    "sty",
+    "mud",
+    "meat",
+    "pork",
+    "bacon",
+    "butcher"
+  ],
+  "categories": [
+    "animals",
+    "food-beverage"
+  ]
+}
