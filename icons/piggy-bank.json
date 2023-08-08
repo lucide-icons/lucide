@@ -1,13 +1,30 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
-    "money",
-    "savings"
+    "cash",
+    "finance",
+    "financial",
+    "savings",
+    "pocket money",
+    "allowance",
+    "piglet",
+    "farmyard",
+    "sty",
+    "mud",
+    "meat",
+    "pork",
+    "bacon",
+    "butcher"
   ],
   "categories": [
-    "money"
+    "money",
+    "currency",
+    "account",
+    "animals",
+    "food-beverage"
   ]
 }
