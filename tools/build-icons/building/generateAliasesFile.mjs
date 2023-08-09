@@ -37,34 +37,27 @@ export default async function generateAliasesFile({
           iconAliases.map(async (alias) => {
             const componentNameAlias = toPascalCase(alias);
             const output = `export { default } from "./${iconName}"`;
-            const location = path.join(
-              iconsDistDirectory,
-              `${componentNameAlias}${iconFileExtension}`
-            );
+            const location = path.join(iconsDistDirectory, `${alias}${iconFileExtension}`);
             await fs.promises.writeFile(location, output, 'utf-8');
-            importString += getImportString(
-              componentNameAlias,
-              componentNameAlias,
-              aliasImportFileExtension
-            );
+            importString += getImportString(componentNameAlias, alias, aliasImportFileExtension);
             importString += getImportString(
               `${componentNameAlias}Icon`,
-              componentNameAlias,
-              aliasImportFileExtension
+              alias,
+              aliasImportFileExtension,
             );
             importString += getImportString(
               `Lucide${componentNameAlias}`,
-              componentNameAlias,
-              aliasImportFileExtension
+              alias,
+              aliasImportFileExtension,
             );
-          })
+          }),
         );
       }
 
       importString += '\n';
 
       appendFile(importString, fileName, outputDirectory);
-    })
+    }),
   );
 
   appendFile('\n', fileName, outputDirectory);
