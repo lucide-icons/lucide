@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "bumble",
+    "buzz",
+    "busy",
+    "productivity",
+    "pollen",
+    "pollinate",
+    "honey",
+    "hive",
+    "keeper",
+    "garden",
+    "insect",
+    "sting",
+    "swarm",
+    "wasp"
+  ],
+  "categories": [
+    "animals"
+  ]
+}
