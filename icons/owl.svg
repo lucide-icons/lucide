@@ -14,6 +14,6 @@
   <path d="M8 9h.01" />
   <path d="M16 9h.01" />
   <path d="M20 21a3.9 3.9 0 1 1 0-7.8" />
-  <path d="M10 20v2" />
-  <path d="M14 21v1" />
+  <path d="M10 19.4V22" />
+  <path d="M14 20.85V22" />
 </svg>
