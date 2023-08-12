@@ -1,20 +1,26 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
+    "functional",
     "programming",
     "code",
+    "coding",
+    "expression",
     "automation",
     "maths",
+    "direction",
     "right",
     "forward",
-    "direction",
     "fat",
     "double",
-    "ligature"
+    "=>"
   ],
   "categories": [
+    "arrows",
     "development",
-    "shapes",
     "maths"
   ]
 }
