@@ -25,5 +25,8 @@
     "layout",
     "design",
     "text"
+  ],
+  "aliases": [
+    "rows"
   ]
 }
