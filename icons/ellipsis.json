@@ -4,7 +4,6 @@
     "colebemis"
   ],
   "tags": [
-    "ellipsis",
     "et cetera",
     "etc",
     "loader",
@@ -24,5 +23,8 @@
   "categories": [
     "layout",
     "development"
+  ],
+  "aliases": [
+    "more-horizontal"
   ]
 }
