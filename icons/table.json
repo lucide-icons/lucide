@@ -8,11 +8,15 @@
   "tags": [
     "grid",
     "spreadsheet",
+    "excel",
+    "accountancy",
     "data",
     "panels"
   ],
   "categories": [
     "layout",
-    "files"
+    "files",
+    "money",
+    "account"
   ]
 }

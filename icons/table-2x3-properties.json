@@ -4,18 +4,23 @@
     "danielbayley"
   ],
   "tags": [
-    "property list",
-    "plist",
-    "spreadsheet",
     "grid",
+    "spreadsheet",
+    "excel",
+    "accountancy",
+    "data",
     "dictionary",
     "object",
-    "hash"
+    "hash",
+    "property list",
+    "plist"
   ],
   "categories": [
     "layout",
     "development",
-    "files"
+    "files",
+    "money",
+    "account"
   ],
   "aliases": [
     "table-properties"
