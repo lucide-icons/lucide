@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-solid/**
+      - tools/build-icons/**
       - pnpm-lock.yaml
 
 jobs:

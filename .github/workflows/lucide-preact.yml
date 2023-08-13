@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-preact/**
+      - tools/build-icons/**
       - pnpm-lock.yaml
 
 jobs:
