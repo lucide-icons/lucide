@@ -8,11 +8,15 @@
     "mittalyashu"
   ],
   "tags": [
+    "grid",
     "spreadsheet",
-    "grid"
+    "data"
   ],
   "categories": [
-    "text",
+    "layout",
     "files"
+  ],
+  "aliases": [
+    "table"
   ]
 }
