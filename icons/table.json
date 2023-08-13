@@ -6,11 +6,13 @@
     "ericfennis"
   ],
   "tags": [
+    "grid",
     "spreadsheet",
-    "grid"
+    "data",
+    "panels"
   ],
   "categories": [
-    "text",
+    "layout",
     "files"
   ]
 }
