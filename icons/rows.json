@@ -10,11 +10,14 @@
     "series",
     "list",
     "vertical",
-    "horizontal"
+    "horizontal",
+    "middle",
+    "center",
+    "even",
+    "panel"
   ],
   "categories": [
     "layout",
-    "design",
-    "text"
+    "design"
   ]
 }

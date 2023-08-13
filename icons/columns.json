@@ -10,7 +10,17 @@
     "split",
     "parallel",
     "vertical",
-    "horizontal"
+    "horizontal",
+    "middle",
+    "center",
+    "even",
+    "preview",
+    "panel",
+    "gutter",
+    "fold",
+    "reflow",
+    "pages",
+    "pagination"
   ],
   "categories": [
     "layout",
