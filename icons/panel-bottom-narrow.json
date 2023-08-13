@@ -1,15 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "window",
-    "webpage"
+    "status",
+    "toolbar",
+    "dock"
   ],
   "categories": [
-    "design",
     "layout"
   ]
 }
