@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "lolly",
+    "candy",
+    "sugar",
+    "food",
+    "sweet",
+    "dessert",
+    "spiral"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

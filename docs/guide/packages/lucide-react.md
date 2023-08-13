@@ -67,6 +67,8 @@ It is possible to create one generic icon component to load icons. It's not reco
 
 ::: danger
 Example below importing all ES Modules, caution using this example. All icons will be imported. When using bundlers like: `Webpack`, `Rollup` or `Vite` the application build size will grow strongly and harming the performance the application.
+
+This is not the case for the latest NextJS, because it uses server side rendering. The icons will be streamed to the client when needed. For NextJS with Dynamic Imports, see [dynamic imports](#nextjs-example) section for more information.
 :::
 
 ### Icon Component Example
@@ -89,8 +91,65 @@ export default Icon;
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="Home" />;
 };
 
 export default App;
+```
+
+#### With Dynamic Imports
+
+> :warning: This is experimental and only works with bundlers that support dynamic imports.
+
+Lucide react exports a dynamic import map `dynamicIconImports`. Useful for applications that want to show icons dynamically by icon name. For example when using a content management system with where icon names are stored in a database.
+
+When using client side rendering, it will fetch the icon component when it's needed. This will reduce the initial bundle size.
+
+The keys of the dynamic import map are the lucide original icon names (kebab case).
+
+Example with React suspense:
+
+```tsx
+import React, { lazy, Suspense } from 'react';
+import { dynamicIconImports, LucideProps } from 'lucide-react';
+
+const fallback = <div style={{ background: '#ddd', width: 24, height: 24 }}/>
+
+interface IconProps extends Omit<LucideProps, 'ref'> {
+  name: keyof typeof dynamicIconImports;
+}
+
+const Icon = ({ name, ...props }: IconProps) => {
+  const LucideIcon = lazy(dynamicIconImports[name]);
+
+  return (
+    <Suspense fallback={fallback}>
+      <LucideIcon {...props} />
+    </Suspense>
+  );
+}
+
+export default Icon
+```
+
+##### NextJS Example
+
+In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to load the icon component dynamically.
+
+```tsx
+import dynamic from 'next/dynamic'
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
+
+interface IconProps extends LucideProps {
+  name: keyof typeof dynamicIconImports;
+}
+
+const Icon = ({ name, ...props }: IconProps) => {
+  const LucideIcon = dynamic(dynamicIconImports[name])
+
+  return <LucideIcon {...props} />;
+};
+
+export default Icon;
 ```

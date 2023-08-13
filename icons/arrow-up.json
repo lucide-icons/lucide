@@ -5,9 +5,12 @@
     "ericfennis"
   ],
   "tags": [
-    "direction"
+    "forward",
+    "direction",
+    "north"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

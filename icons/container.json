@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "storage",
+    "shipping",
+    "freight",
+    "supply chain",
+    "docker",
+    "environment",
+    "devops",
+    "code",
+    "coding"
+  ],
+  "categories": [
+    "development",
+    "transportation",
+    "mail"
+  ]
+}
