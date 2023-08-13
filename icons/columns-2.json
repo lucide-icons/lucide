@@ -34,5 +34,8 @@
     "layout",
     "design",
     "text"
+  ],
+  "aliases": [
+    "columns"
   ]
 }
