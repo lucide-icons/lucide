@@ -20,5 +20,8 @@
     "maths",
     "money",
     "account"
+  ],
+  "aliases": [
+    "sheet"
   ]
 }
