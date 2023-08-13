@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "drawers",
+    "sidebars",
+    "middle",
+    "center",
+    "alignment",
+    "justify"
+  ],
+  "categories": [
+    "layout"
+  ]
+}
