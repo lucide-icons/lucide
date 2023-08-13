@@ -8,7 +8,6 @@
     "list",
     "queue",
     "preview",
-    "panels",
     "parallel",
     "series",
     "split",
@@ -33,5 +32,8 @@
     "layout",
     "design",
     "text"
+  ],
+  "aliases": [
+    "panels-left-right"
   ]
 }

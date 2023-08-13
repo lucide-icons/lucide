@@ -8,7 +8,6 @@
     "list",
     "queue",
     "preview",
-    "panels",
     "paragraphs",
     "parallel",
     "series",
@@ -25,5 +24,8 @@
     "layout",
     "design",
     "text"
+  ],
+  "aliases": [
+    "panels-top-bottom"
   ]
 }
