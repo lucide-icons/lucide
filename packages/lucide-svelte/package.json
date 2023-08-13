@@ -16,6 +16,21 @@
   "main": "dist/esm/lucide-svelte.js",
   "module": "dist/esm/lucide-svelte.js",
   "svelte": "dist/svelte/lucide-svelte.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/lucide-svelte.js",
+      "svelte": "./dist/svelte/lucide-svelte.js",
+      "types": "./dist/lucide-svelte.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/esm/icons/index.js",
+      "svelte": "./dist/svelte/icons/index.js"
+    },
+    "./*.svelte": {
+      "import": "./dist/esm/*.js",
+      "svelte": "./dist/svelte/icons/*.svelte"
+    }
+  },
   "typings": "dist/lucide-svelte.d.ts",
   "sideEffects": false,
   "files": [
