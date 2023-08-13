@@ -13,8 +13,11 @@
     "hash"
   ],
   "categories": [
-    "text",
+    "layout",
     "development",
     "files"
+  ],
+  "aliases": [
+    "table-properties"
   ]
 }
