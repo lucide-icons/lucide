@@ -5,7 +5,6 @@
     "danielbayley",
     "ericfennis"
   ],
-  "aliases": ["sidebar-close"],
   "tags": [
     "primary",
     "drawer",
@@ -14,5 +13,8 @@
   "categories": [
     "layout",
     "arrows"
+  ],
+   "aliases": [
+    "sidebar-close"
   ]
 }
