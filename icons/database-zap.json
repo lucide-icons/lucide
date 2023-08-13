@@ -1,14 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "jguddas"
+    "danielbayley"
   ],
   "tags": [
+    "cache busting",
     "storage",
     "memory",
     "bytes",
-    "servers"
+    "servers",
+    "power",
+    "crash"
   ],
   "categories": [
     "devices",
