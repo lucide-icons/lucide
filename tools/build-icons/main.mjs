@@ -32,6 +32,7 @@ const {
   exportFileName = 'index.js',
   withAliases = false,
   withDynamicImports = false,
+  separateAliasesFile = false,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
   pretty = true,
@@ -69,6 +70,7 @@ async function buildIcons() {
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
       aliasImportFileExtension,
+      separateAliasesFile,
       showLog: !silent,
     });
   }

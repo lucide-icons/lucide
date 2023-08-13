@@ -12,6 +12,7 @@ export default async function generateAliasesFile({
   iconFileExtension = '.js',
   aliases,
   aliasImportFileExtension,
+  separateAliasesFile = false,
   showLog = true,
 }) {
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -36,18 +37,30 @@ export default async function generateAliasesFile({
         await Promise.all(
           iconAliases.map(async (alias) => {
             const componentNameAlias = toPascalCase(alias);
-            const output = `export { default } from "./${iconName}"`;
-            const location = path.join(iconsDistDirectory, `${alias}${iconFileExtension}`);
-            await fs.promises.writeFile(location, output, 'utf-8');
-            importString += getImportString(componentNameAlias, alias, aliasImportFileExtension);
+
+            if (separateAliasesFile) {
+              const output = `export { default } from "./${iconName}"`;
+              const location = path.join(iconsDistDirectory, `${alias}${iconFileExtension}`);
+
+              await fs.promises.writeFile(location, output, 'utf-8');
+            }
+
+            const exportFileIcon = separateAliasesFile ? alias : iconName;
+
             importString += getImportString(
-              `${componentNameAlias}Icon`,
-              alias,
+              componentNameAlias,
+              exportFileIcon,
               aliasImportFileExtension,
             );
             importString += getImportString(
+              `${componentNameAlias}Icon`,
+              exportFileIcon,
+              aliasImportFileExtension,
+            );
+
+            importString += getImportString(
               `Lucide${componentNameAlias}`,
-              alias,
+              exportFileIcon,
               aliasImportFileExtension,
             );
           }),
