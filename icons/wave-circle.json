@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "surfing",
+    "tidal",
+    "tide",
+    "water",
+    "aqua",
+    "sea",
+    "ocean",
+    "curl"
+  ],
+  "categories": [
+    "weather",
+    "travel"
+  ]
+}
