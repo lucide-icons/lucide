@@ -25,14 +25,14 @@
   "license": "ISC",
   "devDependencies": {
     "h3": "^1.7.1",
-    "nitropack": "2.4.1",
+    "nitropack": "^2.5.2",
     "node-fetch": "2",
     "vitepress": "1.0.0-rc.4"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.0.1",
     "@headlessui/vue": "^1.7.13",
-    "@resvg/resvg-js": "^2.4.1",
+    "@resvg/resvg-js-linux-arm64-gnu": "^2.4.1",
     "@vueuse/components": "^10.1.0",
     "@vueuse/core": "^10.1.0",
     "element-to-path": "^1.2.1",

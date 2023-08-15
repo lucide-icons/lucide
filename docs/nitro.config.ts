@@ -1,4 +1,4 @@
-import { defineNitroConfig } from "nitropack";
+import { defineNitroConfig } from 'nitropack';
 
 export default defineNitroConfig({
   preset: 'vercel-edge',
@@ -6,15 +6,10 @@ export default defineNitroConfig({
   routeRules: {
     '/api/**': { cors: false },
   },
-  esbuild: {
-    options: {
-      include: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.json'],
-      loaders: {
-        '.js': 'js',
-        '.jsx': 'jsx',
-        '.ts': 'ts',
-        '.tsx': 'tsx',
-      }
-    },
+  rollupConfig: {
+    external: ['@resvg/resvg-js-linux-arm64-gnu'],
   },
-})
+  experimental: {
+    wasm: true,
+  },
+});

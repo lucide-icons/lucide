@@ -1,5 +1,5 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
-import { Resvg } from '@resvg/resvg-js';
+import { Resvg } from '@resvg/resvg-js-linux-arm64-gnu';
 
 export default eventHandler((event) => {
   const { params = {} } = event.context;
