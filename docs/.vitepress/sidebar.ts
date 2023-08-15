@@ -11,7 +11,7 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       ]
     },
     {
-      text: 'Usage',
+      text: 'Basics',
       items: [
         {
           text: 'How to use icons',
@@ -25,10 +25,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           text: 'Accessibility',
           link: '/guide/accessibility'
         },
-        {
-          text: 'What should I use',
-          link: '/guide/what-should-i-use'
-        },
+        // {
+        //   text: 'What should I use',
+        //   link: '/guide/what-should-i-use'
+        // },
       ]
     },
     {
