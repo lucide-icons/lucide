@@ -1,17 +1,21 @@
 import path from 'path';
+import fs from 'fs';
 import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
 
 const getImportString = (componentName, iconName, aliasImportFileExtension = '') =>
   `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
 
-export default function generateAliasesFile({
+export default async function generateAliasesFile({
   iconNodes,
   outputDirectory,
   fileExtension,
+  iconFileExtension = '.js',
   aliases,
   aliasImportFileExtension,
+  separateAliasesFile = false,
   showLog = true,
 }) {
+  const iconsDistDirectory = path.join(outputDirectory, `icons`);
   const fileName = path.basename(`aliases${fileExtension}`);
   const icons = Object.keys(iconNodes);
 
@@ -19,28 +23,55 @@ export default function generateAliasesFile({
   resetFile(fileName, outputDirectory);
 
   // Generate Import for Icon VNodes
-  icons.forEach((iconName) => {
-    const componentName = toPascalCase(iconName);
-    const iconAliases = aliases[iconName]?.aliases;
+  await Promise.all(
+    icons.map(async (iconName) => {
+      const componentName = toPascalCase(iconName);
+      const iconAliases = aliases[iconName]?.aliases;
 
-    let importString = `// ${componentName} aliases\n`;
+      let importString = `// ${componentName} aliases\n`;
 
-    importString += getImportString(`${componentName}Icon`, iconName, aliasImportFileExtension);
-    importString += getImportString(`Lucide${componentName}`, iconName, aliasImportFileExtension);
+      importString += getImportString(`${componentName}Icon`, iconName, aliasImportFileExtension);
+      importString += getImportString(`Lucide${componentName}`, iconName, aliasImportFileExtension);
 
-    if (iconAliases != null && Array.isArray(iconAliases)) {
-      iconAliases.forEach((alias) => {
-        const componentNameAlias = toPascalCase(alias);
-        importString += getImportString(componentNameAlias, iconName, aliasImportFileExtension);
-        importString += getImportString(`${componentNameAlias}Icon`, iconName, aliasImportFileExtension);
-        importString += getImportString(`Lucide${componentNameAlias}`, iconName, aliasImportFileExtension);
-      });
-    }
+      if (iconAliases != null && Array.isArray(iconAliases)) {
+        await Promise.all(
+          iconAliases.map(async (alias) => {
+            const componentNameAlias = toPascalCase(alias);
 
-    importString += '\n';
+            if (separateAliasesFile) {
+              const output = `export { default } from "./${iconName}"`;
+              const location = path.join(iconsDistDirectory, `${alias}${iconFileExtension}`);
 
-    appendFile(importString, fileName, outputDirectory);
-  });
+              await fs.promises.writeFile(location, output, 'utf-8');
+            }
+
+            const exportFileIcon = separateAliasesFile ? alias : iconName;
+
+            importString += getImportString(
+              componentNameAlias,
+              exportFileIcon,
+              aliasImportFileExtension,
+            );
+            importString += getImportString(
+              `${componentNameAlias}Icon`,
+              exportFileIcon,
+              aliasImportFileExtension,
+            );
+
+            importString += getImportString(
+              `Lucide${componentNameAlias}`,
+              exportFileIcon,
+              aliasImportFileExtension,
+            );
+          }),
+        );
+      }
+
+      importString += '\n';
+
+      appendFile(importString, fileName, outputDirectory);
+    }),
+  );
 
   appendFile('\n', fileName, outputDirectory);
 
