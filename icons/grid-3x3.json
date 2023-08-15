@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "columns"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "design"
+  ],
+  "aliases": [
+    "grid"
+  ]
+}
