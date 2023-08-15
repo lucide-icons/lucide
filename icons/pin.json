@@ -9,10 +9,14 @@
     "save",
     "map",
     "lock",
-    "fix"
+    "fix",
+    "bulletin board",
+    "notice",
+    "note"
   ],
   "categories": [
     "maps",
-    "account"
+    "account",
+    "social"
   ]
 }

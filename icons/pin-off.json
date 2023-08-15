@@ -10,9 +10,14 @@
     "unlock",
     "unfix",
     "unsave",
-    "remove"
+    "remove",
+    "bulletin board",
+    "notice",
+    "note"
   ],
   "categories": [
-    "maps"
+    "maps",
+    "account",
+    "social"
   ]
 }
