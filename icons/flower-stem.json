@@ -6,7 +6,6 @@
   "tags": [
     "petals",
     "plant",
-    "stem",
     "leaves",
     "spring",
     "bloom",
@@ -28,5 +27,8 @@
     "sustainability",
     "home",
     "gaming"
+  ],
+  "aliases": [
+    "flower-2"
   ]
 }
