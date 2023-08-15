@@ -11,6 +11,8 @@
     "table",
     "rows",
     "columns",
+    "cells",
+    "data",
     "guidelines",
     "waffle"
   ],

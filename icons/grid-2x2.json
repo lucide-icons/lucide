@@ -7,6 +7,8 @@
     "table",
     "rows",
     "columns",
+    "cells",
+    "data",
     "blocks",
     "plot",
     "land",
@@ -21,7 +23,6 @@
     "acre"
   ],
   "categories": [
-    "text",
     "layout",
     "design",
     "shapes",
