@@ -12,7 +12,11 @@
     "excel",
     "accountancy",
     "calculator",
-    "data"
+    "rows",
+    "columns",
+    "cells",
+    "data",
+    "entries"
   ],
   "categories": [
     "layout",

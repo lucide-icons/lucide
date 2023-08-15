@@ -10,11 +10,23 @@
     "spreadsheet",
     "excel",
     "accountancy",
+    "rows",
+    "columns",
+    "cells",
     "data",
-    "panels"
+    "entries",
+    "projects",
+    "overview",
+    "sidebar",
+    "drawers",
+    "window",
+    "webpage"
   ],
   "categories": [
     "layout",
+    "design",
+    "development",
+    "charts",
     "files",
     "money",
     "account"
