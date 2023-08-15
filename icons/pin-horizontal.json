@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "unpin",
+    "map",
+    "unlock",
+    "unfix",
+    "unsave",
+    "remove",
+    "bulletin board",
+    "notice",
+    "note"
+  ],
+  "categories": [
+    "maps",
+    "account",
+    "social"
+  ]
+}
