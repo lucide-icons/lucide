@@ -32,10 +32,9 @@
   "dependencies": {
     "@floating-ui/vue": "^1.0.1",
     "@headlessui/vue": "^1.7.13",
+    "@resvg/resvg-js": "^2.4.1",
     "@vueuse/components": "^10.1.0",
     "@vueuse/core": "^10.1.0",
-    "canvas": "^2.11.2",
-    "canvg": "^4.0.1",
     "element-to-path": "^1.2.1",
     "fuse.js": "^6.5.3",
     "js-yaml": "^4.1.0",
@@ -53,7 +52,6 @@
     "sitemap": "^7.1.1",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.2.1",
-    "vue": "^3.2.47",
-    "xmldom": "^0.6.0"
+    "vue": "^3.2.47"
   }
 }

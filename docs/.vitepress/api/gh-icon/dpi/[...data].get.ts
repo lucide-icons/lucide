@@ -1,18 +1,5 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
-import Canvas, { Canvas as CanvasType } from 'canvas';
-import { DOMParser } from 'xmldom';
-import { Canvg, presets } from 'canvg';
-
-const preset = presets.node({ DOMParser, canvas: Canvas, fetch });
-
-const createRasterizedIcon = (svg: string, imageSize: number) => {
-  const canvas = preset.createCanvas(imageSize, imageSize);
-  const ctx = canvas.getContext('2d');
-
-  Canvg.fromString(ctx, svg, preset).render();
-
-  return canvas;
-};
+import { Resvg } from '@resvg/resvg-js';
 
 export default eventHandler((event) => {
   const { params = {} } = event.context;
@@ -33,27 +20,16 @@ export default eventHandler((event) => {
   height="${iconSize}"
   viewBox="0 0 24 24"
   fill="none"
-  stroke="currentColor"
+  stroke="#fff"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
 `
     );
 
-  const canvas: CanvasType = preset.createCanvas(imageSize, imageSize);
-  const ctx = canvas.getContext('2d');
-
-  ctx.fillStyle = '#FFF';
-  ctx.fillRect(0, 0, imageSize, imageSize);
-
-  ctx.imageSmoothingEnabled = false;
-  ctx.fillStyle = '#FFF';
-  ctx.drawImage(createRasterizedIcon(svg, iconSize), 0, 0, imageSize, imageSize);
-
-  // invert color so the image can be used as an svg mask
-  ctx.globalCompositeOperation = 'difference';
-  ctx.fillStyle = 'white';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  const resvg = new Resvg(svg, { background: '#000' });
+  const pngData = resvg.render();
+  const pngBuffer = pngData.asPng();
 
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
@@ -73,7 +49,8 @@ export default eventHandler((event) => {
     <image
       width="${imageSize}"
       height="${imageSize}"
-      href="data:image/png;base64,${canvas.toBuffer().toString('base64')}"
+      href="data:image/png;base64,${pngBuffer.toString('base64')}"
+      image-rendering="pixelated"
     />
   </mask>
   <rect
