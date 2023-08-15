@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "save",
+    "map",
+    "lock",
+    "fix",
+    "bulletin board",
+    "notice",
+    "note"
+  ],
+  "categories": [
+    "maps",
+    "account",
+    "social"
+  ]
+}
