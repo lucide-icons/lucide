@@ -46,7 +46,7 @@
 - [ ] Corners have a 2px radius or have a good reason for sharpness.
 - [ ] Holes and gaps only become invisible with stroke widths of at least 4px.
 - [ ] Gaps are closed, so they are 2px when possible.
-- [ ] Icons are sharp on low dpi displays
+- [ ] Icons are sharp on low dpi displays.
 
 ## Before Submitting <!-- For every PR! -->
 
