@@ -16,7 +16,7 @@
     "prebuild:iconDetails": "node ../scripts/writeIconDetails.mjs",
     "postbuild:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
-    "build:api": "npx nitropack build",
+    "build:api": "npx nitropack build && cp ./node_modules/@resvg/resvg-wasm/index_bg.wasm .vercel/output/functions/__nitro.func",
     "prebuild": "pnpm prebuild:iconNodes && pnpm prebuild:metaJson && pnpm prebuild:releaseJson && pnpm prebuild:relatedIcons && pnpm prebuild:iconDetails",
     "build": "pnpm prebuild && pnpm build:api && pnpm build:docs && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs"
