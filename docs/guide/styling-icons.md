@@ -1,3 +1,8 @@
+<script setup>
+import { Sandpack } from 'sandpack-vue3'
+
+</script>
+
 Lucide icons are fully customisable when using one of the official packages:
 lucide, lucide-react, lucide-react-native, lucide-vue, lucide-vue-next, lucide-angular, lucide-svelte, lucide-solid.
 
@@ -18,6 +23,9 @@ So for example if a parent element color value is `#333` and one of the children
 **Example using a Button component**
 
 <!-- Example codesandbox -->
+<Sandpack
+  template="vue3"
+/>
 
 ### Adjust the color using props
 
