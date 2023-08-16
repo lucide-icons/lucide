@@ -48,7 +48,7 @@
 - [ ] Gaps are closed, so they are 2px when possible.
 - [ ] Icons are sharp on low dpi displays
 
-### Before Submitting <!-- For every PR! -->
+## Before Submitting <!-- For every PR! -->
 
 - [ ] Read the [Contributing Guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
 - [ ] Check if there is an existing PR that solves the same issue.
