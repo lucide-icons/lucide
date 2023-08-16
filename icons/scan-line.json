@@ -1,7 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "wojtekmaj",
+    "ericfennis"
+  ],
   "tags": [
-    "qr-code"
+    "qr-code",
+    "dashed"
   ],
   "categories": [
     "devices",

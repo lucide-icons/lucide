@@ -1,19 +1,26 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
-    "keyboard",
-    "key",
-    "tab",
-    "mac",
-    "button",
-    "indent",
+    "next",
+    "forward",
     "direction",
+    "east",
+    "tab",
+    "keyboard",
+    "mac",
+    "indent",
     "collapse",
     "fold",
-    "horizontal"
+    "horizontal",
+    "->|"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "development"
   ]
 }

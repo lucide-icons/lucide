@@ -1,10 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ahtohbi4",
+    "ericfennis",
+    "Andreto",
+    "csandman",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "delivery",
     "van",
     "shipping",
-    "transport",
+    "haulage",
     "lorry"
   ],
   "categories": [

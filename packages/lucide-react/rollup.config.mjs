@@ -1,5 +1,9 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
+import dts from "rollup-plugin-dts";
+import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
+
+const aliasesEntries = await getAliasesEntryNames()
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
@@ -21,19 +25,36 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-    aliasesSupport: true
+    aliasesSupport: true,
   },
   {
     format: 'esm',
-    inputs,
+    inputs: [
+      ...inputs,
+      ...aliasesEntries
+    ],
     outputDir,
     preserveModules: true,
-    aliasesSupport: true
+    aliasesSupport: true,
+  },
+  {
+    format: 'esm',
+    inputs: ['src/dynamicIconImports.ts'],
+    outputFile: 'dynamicIconImports.js',
+    aliasesSupport: true,
+    external: [/src/],
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/)
+
+        return `dist/esm/${modulePath}.js`
+      }
+    }
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
+  .map(({ inputs, outputDir, outputFile, format, minify, preserveModules, aliasesSupport, entryFileNames, external = [], paths }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -49,16 +70,22 @@ const configs = bundles
         ),
         ...plugins(pkg, minify)
       ],
-      external: ['react', 'prop-types'],
+      external: [
+        'react',
+        'prop-types',
+        ...external
+      ],
       output: {
         name: packageName,
         ...(preserveModules
           ? {
-              dir: `${outputDir}/${format}`,
+              dir:`${outputDir}/${format}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: outputFile ?? `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
             }),
+        paths,
+        entryFileNames,
         format,
         sourcemap: true,
         preserveModules,
@@ -71,4 +98,20 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+export default [
+  {
+    input: 'src/dynamicIconImports.ts',
+    output: [{
+      file: `dynamicIconImports.d.ts`, format: "es"
+    }],
+    plugins: [dts()],
+  },
+  {
+    input: inputs[0],
+    output: [{
+      file: `dist/${outputFileName}.d.ts`, format: "es"
+    }],
+    plugins: [dts()],
+  },
+  ...configs
+];

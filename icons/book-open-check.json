@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "schmidt-oliver",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "read",
     "library",

@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
   "tags": [
     "storage",
-    "memory"
+    "memory",
+    "bytes",
+    "servers"
   ],
   "categories": [
-    "devices"
+    "devices",
+    "development"
   ]
 }

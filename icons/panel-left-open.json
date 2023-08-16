@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "ericfennis"
+  ],
+  "aliases": ["sidebar-open"],
   "tags": [
     "primary",
     "drawer",
@@ -9,8 +15,5 @@
   "categories": [
     "layout",
     "arrows"
-  ],
-  "aliases": [
-    "sidebar-open"
   ]
 }

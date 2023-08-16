@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danbovey",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "question mark"
   ],

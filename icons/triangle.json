@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
+    "equilateral",
     "delta",
-    "shape"
+    "shape",
+    "pyramid",
+    "hierarchy"
   ],
   "categories": [
     "shapes"

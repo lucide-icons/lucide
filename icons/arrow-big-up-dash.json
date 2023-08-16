@@ -1,16 +1,27 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
-    "keyboard",
-    "key",
-    "forward",
     "caps lock",
     "capitals",
+    "keyboard",
+    "button",
     "mac",
-    "button"
+    "forward",
+    "direction",
+    "north",
+    "faster",
+    "speed",
+    "boost"
   ],
   "categories": [
     "arrows",
-    "development"
+    "navigation",
+    "text",
+    "development",
+    "gaming"
   ]
 }

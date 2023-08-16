@@ -1,15 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "bidirectional",
-    "direction",
+    "two-way",
+    "2-way",
     "swap",
     "switch",
     "transaction",
     "reorder",
-    "move"
+    "move",
+    "<-",
+    "->"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }
