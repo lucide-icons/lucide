@@ -1,6 +1,6 @@
 <!-- Thank you for contributing! -->
 
-### What is the purpose of this pull request? <!-- (put an "X" next to an item) -->
+## What is the purpose of this pull request? <!-- (put an "X" next to an item) -->
 
 - [ ] New Icon
 - [ ] Bug fix
@@ -17,32 +17,38 @@
 ### Alternative icon designs <!-- ONLY for new icons, remove this part if not icon PR -->
 <!-- If you have any alternative icon designs, please attach them here. -->
 
-### I have thought of everything <!-- ONLY for new icons, remove this part if not icon PR -->
+## Icon Design Checklist <!-- ONLY for new icons, remove this part if not icon PR -->
 
-- [ ] Icon has a valid use case.
+#### Concept <!-- ONLY for new icons -->
+
+- [ ] Icons has a valid use case.
+- [ ] Icons do not represent a brand or logo.
+- [ ] Icons do not contain hate symbols.
+- [ ] Icons do not include religious or political imagery.
+- [ ] Icons is at most based on other Lucide icons and not on other people's work
+- [ ] Icons should not be a rotated or mirrored version of an already existing icon
+
+#### Naming <!-- ONLY for new icons -->
+
+- [ ] Icons are named in lowercase and use dashes instead of spaces, for example, `arrow-up` instead of `Arrow Up` and do not end with a number like -2, -3, -4, etc.
+- [ ] Icons are named by what they are rather than their use case, for example save should rather be named to floppy-disk
+- [ ] Icons that are part of a group are named group-type so, for example, badge-plus is based on badge
 - [ ] Provided a meta JSON file in `icons/[iconName].json`
+
+#### Design <!-- ONLY for new icons -->
+
 - [ ] Elements have at least 1 pixel padding within the canvas.
 - [ ] Icons are visually centered.
 - [ ] Icons have a similar optical volume as `circle` and `square`.
-- [ ] Icons have similar visual density and level of detail.
+- [ ] Icons have similar visual density and level of detail
 - [ ] Icons are fun and playful.
 - [ ] Elements and Arcs centers align with the grid.
 - [ ] Corners have a 2px radius or have a good reason for sharpness.
 - [ ] Holes and gaps only become invisible with stroke widths of at least 4px.
 - [ ] Gaps are closed, so they are 2px when possible.
-- [ ] Curves join smoothly.
+- [ ] Icons are sharp on low dpi displays
 
-### I have optimized everything <!-- ONLY for new icons, remove this part if not icon PR -->
-
-> If you don't know how to optimize, don't worry, we will help you and keep this list unchecked
-
-- [ ] Arc path segments are used in place of curves when possible.
-- [ ] `circle` and `rect` are used instead of `path` when possible.
-- [ ] `path` is used instead of `polyline`, `line` and `polygon`.
-- [ ] Paths only contain one move segment.
-- [ ] Dots use `M{{x}} {{y}}h0.01`.
-
-### Before submitting the PR, please make sure you do the following
+### Before Submitting <!-- For every PR! -->
 
 - [ ] Read the [Contributing Guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
 - [ ] Check if there is an existing PR that solves the same issue.
