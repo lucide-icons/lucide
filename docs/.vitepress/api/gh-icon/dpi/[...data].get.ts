@@ -1,6 +1,6 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { Resvg, initWasm } from '@resvg/resvg-wasm';
-const wasmPath = new URL('@resvg/resvg-wasm/index_bg.wasm', import.meta.url);
+const wasmPath = new URL('index_bg.wasm', import.meta.url);
 
 let initialized = fetch(wasmPath).then((res) => initWasm(res));
 export default eventHandler(async (event) => {
