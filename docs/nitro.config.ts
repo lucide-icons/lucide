@@ -6,6 +6,9 @@ export default defineNitroConfig({
   routeRules: {
     '/api/**': { cors: false },
   },
+  wasm: {
+    esmImport: true,
+  },
   experimental: {
     wasm: true,
   },
