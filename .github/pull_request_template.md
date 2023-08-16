@@ -26,7 +26,7 @@
 - [ ] Icons do not contain hate symbols.
 - [ ] Icons do not include religious or political imagery.
 - [ ] Icons is at most based on other Lucide icons and not on other people's work.
-- [ ] Icons should not be a rotated or mirrored version of an already existing icon
+- [ ] Icons should not be a rotated or mirrored version of an already existing icon.
 
 #### Naming <!-- ONLY for new icons -->
 
