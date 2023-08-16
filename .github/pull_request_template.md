@@ -40,7 +40,7 @@
 - [ ] Elements have at least 1 pixel padding within the canvas.
 - [ ] Icons are visually centered.
 - [ ] Icons have a similar optical volume as `circle` and `square`.
-- [ ] Icons have similar visual density and level of detail
+- [ ] Icons have similar visual density and level of detail.
 - [ ] Icons are fun and playful.
 - [ ] Elements and Arcs centers align with the grid.
 - [ ] Corners have a 2px radius or have a good reason for sharpness.
