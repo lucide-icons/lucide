@@ -1,8 +1,11 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
-import { Resvg } from '@resvg/resvg-js-linux-arm64-gnu';
+import { Resvg, initWasm } from '@resvg/resvg-wasm';
+import wasm from '@resvg/resvg-wasm/index_bg.wasm';
 
-export default eventHandler((event) => {
+let initialized = initWasm(wasm);
+export default eventHandler(async (event) => {
   const { params = {} } = event.context;
+  await initialized;
 
   const imageSize = 96;
   const [iconSizeString, svgData] = params.data.split('/');
@@ -29,7 +32,7 @@ export default eventHandler((event) => {
 
   const resvg = new Resvg(svg, { background: '#000' });
   const pngData = resvg.render();
-  const pngBuffer = pngData.asPng();
+  const pngBuffer = Buffer.from(pngData.asPng());
 
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');

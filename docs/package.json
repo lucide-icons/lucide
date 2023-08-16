@@ -32,7 +32,7 @@
   "dependencies": {
     "@floating-ui/vue": "^1.0.1",
     "@headlessui/vue": "^1.7.13",
-    "@resvg/resvg-js-linux-arm64-gnu": "^2.4.1",
+    "@resvg/resvg-wasm": "^2.4.1",
     "@vueuse/components": "^10.1.0",
     "@vueuse/core": "^10.1.0",
     "element-to-path": "^1.2.1",

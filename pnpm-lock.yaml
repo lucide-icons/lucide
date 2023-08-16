@@ -67,7 +67,7 @@ importers:
       '@headlessui/vue':
         specifier: ^1.7.13
         version: 1.7.15(vue@3.3.4)
-      '@resvg/resvg-js-linux-arm64-gnu':
+      '@resvg/resvg-wasm':
         specifier: ^2.4.1
         version: 2.4.1
       '@vueuse/components':
@@ -6041,11 +6041,9 @@ packages:
     resolution: {integrity: sha512-K0aGNn1TjalKj+65D7ycc1//H9roAQ51GJVk5ZJQFb2teECGmzd86bYDC0aYdbRf7gtovescq4Zt6FR0tgXiHQ==}
     dev: true
 
-  /@resvg/resvg-js-linux-arm64-gnu@2.4.1:
-    resolution: {integrity: sha512-uY5voSCrFI8TH95vIYBm5blpkOtltLxLRODyhKJhGfskOI7XkRw5/t1u0sWAGYD8rRSNX+CA+np86otKjubrNg==}
+  /@resvg/resvg-wasm@2.4.1:
+    resolution: {integrity: sha512-yi6R0HyHtsoWTRA06Col4WoDs7SvlXU3DLMNP2bdAgs7HK18dTEVl1weXgxRzi8gwLteGUbIg29zulxIB3GSdg==}
     engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
     dev: false
 
   /@rollup/plugin-alias@5.0.0(rollup@3.28.0):

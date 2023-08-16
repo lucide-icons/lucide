@@ -6,9 +6,6 @@ export default defineNitroConfig({
   routeRules: {
     '/api/**': { cors: false },
   },
-  rollupConfig: {
-    external: ['@resvg/resvg-js-linux-arm64-gnu'],
-  },
   experimental: {
     wasm: true,
   },
