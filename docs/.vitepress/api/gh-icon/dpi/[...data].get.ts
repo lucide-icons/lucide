@@ -1,9 +1,8 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { Resvg, initWasm } from '@resvg/resvg-wasm';
+import wasm from '@resvg/resvg-wasm/index_bg.wasm';
 
-const initialization = fetch('https://unpkg.com/@resvg/resvg-wasm/index_bg.wasm').then((res) =>
-  initWasm(res)
-);
+const initialization = initWasm(wasm);
 
 export default eventHandler(async (event) => {
   const { params = {} } = event.context;
