@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "share"
+  ],
+  "categories": [
+    "files",
+    "connectivity",
+    "multimedia",
+    "devices",
+    "brands"
+  ]
+}
