@@ -10,41 +10,41 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![24px-24px](../../images/24px-24px.svg?raw=true "24px-24px")
 
-### 2. Icons must have at least **1 pixel padding** within the canvas.
+## 2. Icons must have at least **1 pixel padding** within the canvas.
 
 ![1px-padding](../../images/1px-padding.svg?raw=true "1px-padding")
 
-### 3. Icons must have a **stroke width of 2 pixels**.
+## 3. Icons must have a **stroke width of 2 pixels**.
 
 ![2px-stroke](../../images/2px-stroke.svg?raw=true "2px-stroke")
 
-### 4. Icons must use **round joins**.
+## 4. Icons must use **round joins**.
 
 ![round-joints](../../images/round-joints.svg?raw=true "round-joints")
 
-### 5. Icons must use **round caps**.
+## 5. Icons must use **round caps**.
 
 ![round-caps](../../images/round-caps.svg?raw=true "round-caps")
 
-### 6. Icons must use **centered strokes**.
+## 6. Icons must use **centered strokes**.
 
 ![centered-strokes](../../images/centered-strokes.svg?raw=true "centered-strokes")
 
-### 7. Shapes (such as rectangles) must have a **border radius of**
+## 7. Shapes (such as rectangles) must have a **border radius of**
 
-#### C. **2 pixels** if they are at least 8 pixels in size
+### C. **2 pixels** if they are at least 8 pixels in size
 
 ![2px-border-radius](../../images/2px-border-radius.svg?raw=true "2px-border-radius")
 
-#### B. **1 pixel** if they are smaller than 8 pixels in size
+### B. **1 pixel** if they are smaller than 8 pixels in size
 
 ![1px-border-radius](../../images/1px-border-radius.svg?raw=true "1px-border-radius")
 
-### 8. Distinct elements must have **2 pixels of spacing between each other**
+## 8. Distinct elements must have **2 pixels of spacing between each other**
 
 ![2px-element-spacing](../../images/2px-element-spacing.svg?raw=true "2px-element-spacing")
 
-### 9. Icons should have a similar optical volume to `circle` and `square`.
+## 9. Icons should have a similar optical volume to `circle` and `square`.
 
 ![optical-volume-ideal](../../images/optical-volume-ideal.svg?raw=true "optical-volume-ideal")
 
@@ -54,7 +54,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 **Tip:** place your icon next to circle or square and blur them both; your icon should not feel much darker than the base shape.
 
-### 10. Icons should be visually centered by their center of gravity.
+## 10. Icons should be visually centered by their center of gravity.
 
 ![visually-centered](../../images/visually-centered.svg?raw=true "visually-centered")
 
@@ -62,7 +62,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 **Tip:** place your icon next to and below or above square or circle and check if it feels off centre. Symmetrical icons should always be aligned to the center.
 
-### 11. Icons should have similar visual density and level of detail.
+## 11. Icons should have similar visual density and level of detail.
 
 ![density-ideal](../../images/density-ideal.svg?raw=true "density-ideal")
 
@@ -70,7 +70,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 **Tip:** try to make abstractions to dense elements. Blur your icon, and when blurred it should not feel overly dark.
 
-### 12. Continuous curves should join smoothly.
+## 12. Continuous curves should join smoothly.
 
 ![curvature-smooth](../../images/curvature-smooth.svg?raw=true "curvature-smooth")
 
@@ -78,7 +78,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 **Tip:** make sure to use arcs or quadratic curves, when using cubic curves control points should have mirrored angles for smooth curves.
 
-### 13. Icons should aim to be pixel perfect so that they will be sharp on low DPI displays.
+## 13. Icons should aim to be pixel perfect so that they will be sharp on low DPI displays.
 
 ![pixel-perfection-ideal](../../images/pixel-perfection-ideal.svg?raw=true "pixel-perfection-ideal")
 
@@ -86,7 +86,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 **Tip:** whenever possible align elements and arc centers to the grid.
 
-## Naming conventions
+# Naming conventions
 
 1. Icon names use lower kebab case.\
    For example: `arrow-up` instead of `Arrow Up`.
@@ -106,11 +106,11 @@ Here are rules that should be followed to keep quality and consistency when maki
 6. Names containing numerals are not allowed, unless the number itself is represented in the icon.\
    For example: `arrow-down-0-to-1` contains both numerals.
 
-## Code Conventions
+# Code Conventions
 
 Before an icon is added to the library, we like to have readable and optimized SVG code.
 
-### Global Attributes
+## Global Attributes
 
 For each icon these attributes are applied, corresponding to the above rules.
 
@@ -130,12 +130,12 @@ For each icon these attributes are applied, corresponding to the above rules.
 </svg>
 ```
 
-### Minify paths
+## Minify paths
 
 The code of paths can sometimes get quite large. To reduce file size we like to minify the code.
 We recommend to use the [SVGOMG](https://jakearchibald.github.io/svgomg/) to minify paths to 2 points of precision.
 
-### Allowed elements
+## Allowed elements
 
 SVG files may only contain simple path and shape elements, which may not have any attributes other than sizing and spacing.\
 In practice only the following elements and attributes are allowed:
@@ -151,7 +151,7 @@ This also means that no transforms, filters, fills or explicit strokes are allow
 
 Never use [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use). While it may sometimes seem like a good way to optimize file size, there's no way to ensure that the referenced element IDs will be unique once the SVGs are embedded in HTML documents.
 
-## JSON metadata descriptor
+# JSON metadata descriptor
 
 Each icon added must also come with a matching JSON file listing tags and categories for the icon.
 Please use the following template:
