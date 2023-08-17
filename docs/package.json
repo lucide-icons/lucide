@@ -24,9 +24,11 @@
   "author": "Eric Fennis",
   "license": "ISC",
   "devDependencies": {
-    "h3": "^1.7.1",
-    "nitropack": "^2.5.2",
+    "@rollup/plugin-replace": "^5.0.2",
+    "h3": "^1.8.0",
+    "nitropack": "npm:nitropack-edge@latest",
     "node-fetch": "2",
+    "rollup-plugin-copy": "^3.4.0",
     "vitepress": "1.0.0-rc.4"
   },
   "dependencies": {
