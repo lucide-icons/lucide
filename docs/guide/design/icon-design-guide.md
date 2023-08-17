@@ -60,7 +60,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![visually-centered-bad](../../images/visually-centered-bad.svg?raw=true "visually-centered-bad")
 
-**Tip:** place your icon next to and below or above square or circle and check if it feels off centre. Symmetrical icons should always be aligned to the center.
+**Tip:** place your icon both above/below and next to the square or circle icon and check if it feels off center. Symmetrical icons should always be aligned to the center.
 
 ## 11. Icons should have similar visual density and level of detail.
 
