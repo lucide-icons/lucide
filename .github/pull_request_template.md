@@ -12,7 +12,7 @@
 <!-- Please insert your description here and provide info about the "what" this PR is contribution -->
 
 ### Icon use case <!-- ONLY for new icons, remove this part if not icon PR -->
-<!-- What is the purpose of this icon? Please insert a real life use case of icons, text like "it's a "car" icon is not accepted." -->
+<!-- What is the purpose of this icon? For each icon added, please insert at least two real life use cases (the more the better). Text like "it's a car icon" is not accepted. -->
 
 ### Alternative icon designs <!-- ONLY for new icons, remove this part if not icon PR -->
 <!-- If you have any alternative icon designs, please attach them here. -->
