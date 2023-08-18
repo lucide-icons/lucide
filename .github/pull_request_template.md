@@ -1,5 +1,7 @@
 <!-- Thank you for contributing! -->
 
+<!-- Insert `closes #issueNumber` here if merging this PR will resolve an existing issue -->
+
 ## What is the purpose of this pull request? <!-- (put an "X" next to an item) -->
 
 - [ ] New Icon
