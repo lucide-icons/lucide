@@ -152,7 +152,6 @@ jobs:
             ${{ steps.generate-18px-dpi-preview.outputs.body }}<br/>
             </details>
             <details>
-            <details>
             <summary>Icon X-rays</summary>
             ${{ steps.generate-x-rays.outputs.body }}
             </details>
