@@ -27,7 +27,7 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in $(printf "%s\\n" icons/*.svg | shuf | head -n$(awk -F' ' '{print NF}' <<< '${{ steps.changed-files.outputs.all_changed_files }}')); do
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
