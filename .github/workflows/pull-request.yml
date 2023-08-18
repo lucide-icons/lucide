@@ -148,7 +148,7 @@ jobs:
             ${{ steps.generate-3px-stroke-width.outputs.body }}<br/>
             </details>
             <details>
-            <summary>DPI Preview</summary>
+            <summary>Min DPI Preview (18px)</summary>
             ${{ steps.generate-18px-dpi-preview.outputs.body }}<br/>
             </details>
             <details>
