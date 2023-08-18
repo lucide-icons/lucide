@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "stiletto",
+    "platform",
+    "shoe",
+    "footwear",
+    "womens",
+    "girls",
+    "female",
+    "ladies",
+    "store",
+    "sexy",
+    "classy",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "outfit",
+    "fashion",
+    "formal",
+    "dressy",
+    "smart",
+    "occasion",
+    "party",
+    "nightlife"
+  ],
+  "categories": [
+    "shopping",
+    "social"
+  ]
+}
