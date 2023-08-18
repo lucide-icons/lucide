@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "debug",
+    "code",
+    "resolve",
+    "insect",
+    "kill",
+    "squash",
+    "squish",
+    "exterminate",
+    "pest control",
+    "fumigate"
+  ],
+  "categories": [
+    "development",
+    "animals"
+  ]
+}
