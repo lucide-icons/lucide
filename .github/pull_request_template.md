@@ -44,16 +44,11 @@
 
 #### Design <!-- ONLY for new icons -->
 
-- [ ] Elements have at least 1 pixel padding within the canvas.
-- [ ] Icons are visually centered.
-- [ ] Icons have a similar optical volume as `circle` and `square`.
-- [ ] Icons have similar visual density and level of detail.
-- [ ] Icons are fun and playful.
-- [ ] Elements and Arcs centers align with the grid.
-- [ ] Corners have a 2px radius or have a good reason for sharpness.
-- [ ] Holes and gaps only become invisible with stroke widths of at least 4px.
-- [ ] Gaps are closed, so they are 2px when possible.
-- [ ] Icons are sharp on low dpi displays.
+- [ ] I've read and followed the [icon design guidelines](https://lucide.dev/guide/design/icon-design-guide)
+- [ ] I've made sure that the icons look sharp on low DPI displays.
+- [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
+- [ ] I've made sure that the icons are visually centered.
+- [ ] I've correctly optimized all icons to two points of precision.
 
 ## Before Submitting <!-- For every PR! -->
 
