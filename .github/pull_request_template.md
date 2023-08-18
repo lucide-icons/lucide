@@ -57,6 +57,5 @@
 
 ## Before Submitting <!-- For every PR! -->
 
-- [ ] Read the [Contributing Guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
-- [ ] Check if there is an existing PR that solves the same issue.
-- [ ] Provide a link in the description to the issue you're solving (if there is one).
+- [ ] I've read the [Contribution Guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
+- [ ] I've checked if there was an existing PR that solves the same issue.
