@@ -37,10 +37,9 @@
 
 #### Naming <!-- ONLY for new icons -->
 
-- [ ] Icons are named in lowercase and use dashes instead of spaces, for example, `arrow-up` instead of `Arrow Up` and do not end with a number like -2, -3, -4, etc.
-- [ ] Icons are named by what they are rather than their use case, for example save should rather be named to floppy-disk.
-- [ ] Icons that are part of a group are named group-type so, for example, badge-plus is based on badge.
-- [ ] Provided a meta JSON file in `icons/[iconName].json`.
+- [ ] I've read and followed the [naming conventions](https://lucide.dev/guide/design/icon-design-guide#naming-conventions)
+- [ ] I've named icons by what they are rather than their use case.
+- [ ] I've provided meta JSON files in `icons/[iconName].json`.
 
 #### Design <!-- ONLY for new icons -->
 
