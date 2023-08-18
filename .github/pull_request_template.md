@@ -21,12 +21,17 @@
 
 #### Concept <!-- ONLY for new icons -->
 
-- [ ] Icons has a valid use case.
-- [ ] Icons do not represent a brand or logo.
-- [ ] Icons do not contain hate symbols.
-- [ ] Icons do not include religious or political imagery.
-- [ ] Icons is at most based on other Lucide icons and not on other people's work.
-- [ ] Icons should not be a rotated or mirrored version of an already existing icon.
+- [ ] I have provided valid use cases for each icon.
+- [ ] I have not added any a brand or logo icon.
+- [ ] I have not used any hate symbols.
+- [ ] I have not included any religious or political imagery.
+
+#### Author, credits & license<!-- ONLY for new icons -->
+<!-- Please choose one of the following -->
+- [ ] The icons are solely my own creation.
+- [ ] The icons were originally created in #<issueNumber> by @<githubUser>
+- [ ] I've based them on the following Lucide icons: <!-- provide the list of icons -->
+- [ ] I've based them on the following design: <!-- provide source URL and license permitting use -->
 
 #### Naming <!-- ONLY for new icons -->
 
