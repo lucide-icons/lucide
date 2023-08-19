@@ -8,8 +8,12 @@
     "diamond",
     "crystal",
     "ruby",
+    "rock",
     "jewellery",
-    "price",
+    "valuable",
+    "value",
+    "pricey",
+    "expensive",
     "special",
     "present",
     "gift",
@@ -22,6 +26,7 @@
   "categories": [
     "gaming",
     "money",
+    "shopping",
     "development"
   ]
 }
