@@ -1,5 +1,6 @@
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
+import sandpackTheme from '../.vitepress/theme/sandpackTheme.json'
 
 </script>
 
@@ -25,7 +26,19 @@ So for example if a parent element color value is `#333` and one of the children
 <!-- Example codesandbox -->
 <Sandpack
   template="vue3"
+  :theme="sandpackTheme"
 />
+
+```vue
+<template>
+  <h1>Hello asd {{ msg }}</h1>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+const msg = ref('world');
+</script>
+```
 
 ### Adjust the color using props
 

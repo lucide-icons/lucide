@@ -126,3 +126,7 @@
 html:has(* .outline-link:target) {
   scroll-behavior: smooth;
 } */
+
+.sp-wrapper .sp-layout {
+  border-radius: 8px;
+}
