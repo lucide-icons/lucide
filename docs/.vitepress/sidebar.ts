@@ -29,10 +29,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           text: 'Accessibility',
           link: '/guide/basics/accessibility'
         },
-        // {
-        //   text: 'What should I use',
-        //   link: '/guide/what-should-i-use'
-        // },
       ]
     },
     {
@@ -68,10 +64,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         {
           text: 'Lucide React',
           link: '/guide/packages/lucide-react'
-
-          // Extra items
-          // - nextjs imports
-          // Dynamic imports
         },
         {
           text: 'Lucide React Native',
@@ -132,16 +124,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         },
       ]
     },
-  ],
-  'icons': [
-    { text: '', link: '/' },
-    // { text: 'Categorized', link: '/icons/categorized' },
-    // {
-    //   text: 'Categories',
-    //   items: [
-    //     ...(getAllCategoryFiles().map((category) => ({ text: category, link: `/icons/category/${category}` })))
-    //   ]
-    // }
   ],
 }
 
