@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "blazer",
+    "coat",
+    "gentleman",
+    "mens",
+    "top",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "outfit",
+    "fashion",
+    "formal",
+    "dressy",
+    "dinner",
+    "uniform",
+    "refined",
+    "suit",
+    "smart",
+    "elegant",
+    "evening wear",
+    "special occasion",
+    "gathering",
+    "thread",
+    "tailored",
+    "regular",
+    "slim fit",
+    "warmth"
+  ],
+  "categories": [
+    "shopping",
+    "social"
+  ]
+}
