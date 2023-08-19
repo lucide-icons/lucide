@@ -16,18 +16,26 @@
     "accessories",
     "apparel",
     "attire",
+    "outfit",
     "fashion",
     "formal",
-    "elegant",
-    "occasion",
-    "classic",
-    "costume",
     "fancy dress",
+    "costume",
+    "smart",
+    "classic",
+    "refined",
+    "elegant",
+    "evening",
+    "black tie event",
+    "occasion",
+    "gathering",
+    "vacation",
     "summer holiday",
     "straw"
   ],
   "categories": [
     "shopping",
-    "social"
+    "social",
+    "travel"
   ]
 }
