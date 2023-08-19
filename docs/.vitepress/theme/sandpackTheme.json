@@ -18,11 +18,11 @@
       "fontStyle": "italic"
     },
     "keyword": "#89DDFF",
-    "tag": "#d28cf6",
+    "tag": "#FFCB6B",
     "punctuation": "#89DDFF",
     "definition": "#F07178",
     "property": "#C792EA",
-    "static": "#FF453A",
+    "static": "#F78C6C",
     "string": "#C3E88D"
   },
   "font": {

@@ -14,16 +14,20 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       text: 'Basics',
       items: [
         {
-          text: 'How to use icons',
-          link: '/guide/how-to-use-icons'
+          text: 'Color',
+          link: '/guide/basics/color'
         },
         {
-          text: 'Styling icons',
-          link: '/guide/styling-icons'
+          text: 'Sizing',
+          link: '/guide/basics/sizing'
+        },
+        {
+          text: 'Stroke width',
+          link: '/guide/basics/stroke-width'
         },
         {
           text: 'Accessibility',
-          link: '/guide/accessibility'
+          link: '/guide/basics/accessibility'
         },
         // {
         //   text: 'What should I use',
@@ -49,9 +53,9 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         {
           text: 'Dynamic imports'
         },
-        {
-          text: 'Auto importing'
-        },
+        // {
+        //   text: 'Auto importing'
+        // },
       ]
     },
     {

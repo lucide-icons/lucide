@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-font-smoothing: auto;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  background: #3c3c43;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background: #fefefe;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #0284c7;
+  color: #fff;
+}
