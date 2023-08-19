@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "nfischer623",
+    "karsa-mistmere"
   ],
   "tags": [
     "skirt",
