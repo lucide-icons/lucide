@@ -167,7 +167,7 @@ jobs:
             </details>
             <details>
             <details>
-            <summary>Min DPI Preview (24px)</summary>
+            <summary>DPI Preview (24px)</summary>
             ${{ steps.generate-24px-dpi-preview.outputs.body }}<br/>
             </details>
             <details>
