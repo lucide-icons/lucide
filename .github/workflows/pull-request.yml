@@ -22,20 +22,6 @@ jobs:
         uses: tj-actions/changed-files@v35
         with:
           files: icons/*.svg
-      - name: Generate 18px dpi preview
-        id: generate-18px-dpi-preview
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/dpi/18/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 24px dpi preview
         id: generate-24px-dpi-preview
         run: |
