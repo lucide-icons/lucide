@@ -148,11 +148,6 @@ jobs:
             ${{ steps.generate-3px-stroke-width.outputs.body }}<br/>
             </details>
             <details>
-            <summary>DPI Preview (18px)</summary>
-            ${{ steps.generate-18px-dpi-preview.outputs.body }}<br/>
-            </details>
-            <details>
-            <details>
             <summary>DPI Preview (24px)</summary>
             ${{ steps.generate-24px-dpi-preview.outputs.body }}<br/>
             </details>
