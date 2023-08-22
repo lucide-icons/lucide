@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lucascorrea30"
+  ],
+  "tags": [
+    "call",
+    "phone",
+    "brands",
+    "logo"
+  ],
+  "categories": [
+    "text",
+    "brands",
+    "devices",
+    "communication"
+  ]
+}
