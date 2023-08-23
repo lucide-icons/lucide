@@ -24,5 +24,8 @@
   "categories": [
     "travel",
     "notifications"
+  ],
+  "aliases": [
+    "concierge-bell"
   ]
 }
