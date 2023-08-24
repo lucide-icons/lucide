@@ -1,0 +1,14 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24"
+    height="24"
+    wBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    >
+    <path id="right-side" class="cls-1" d="m2.54,2.87l1.95,3.97-3.48,5.99h4.14l3.48-5.99-1.93-3.97H2.54Z"/>
+    <path id="left-side" class="cls-1" d="m16.45,1l-6.34,11.15,4.54,7.72h4.34l-4.5-7.72L20.83,1h-4.38Z"/>
+</svg>
