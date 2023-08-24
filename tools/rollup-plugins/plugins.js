@@ -14,7 +14,7 @@ const plugins = (pkg, minify, esbuildOptions = {}) =>
     license({
       banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
     }),
-    bundleSize(),
+    // bundleSize(),
     visualizer({
       sourcemap: true,
       filename: `stats/${pkg.name}${minify ? '-min' : ''}.html`,

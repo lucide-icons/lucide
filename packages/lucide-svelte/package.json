@@ -18,17 +18,17 @@
   "svelte": "dist/svelte/lucide-svelte.js",
   "exports": {
     ".": {
-      "import": "./dist/esm/lucide-svelte.js",
+      "default": "./dist/esm/lucide-svelte.js",
       "svelte": "./dist/svelte/lucide-svelte.js",
       "types": "./dist/lucide-svelte.d.ts"
     },
     "./icons": {
-      "import": "./dist/esm/icons/index.js",
+      "default": "./dist/esm/icons/index.js",
       "svelte": "./dist/svelte/icons/index.js"
     },
     "./icons/*": {
-      "import": "./dist/esm/icons/*",
-      "svelte": "./dist/svelte/icons/*"
+      "default": "./dist/esm/icons/*.js",
+      "svelte": "./dist/svelte/icons/*.svelte"
     }
   },
   "typings": "dist/lucide-svelte.d.ts",
