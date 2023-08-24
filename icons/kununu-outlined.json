@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "heahl",
+    "silverquark"
+  ],
+  "tags": [
+    "logo",
+    "social",
+    "kununu",
+    "outlined"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "brands"
+  ]
+}
