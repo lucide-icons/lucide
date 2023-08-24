@@ -15,5 +15,8 @@
     "mail",
     "communication",
     "connectivity"
+  ],
+  "aliases": [
+    "send-horizonal"
   ]
 }
