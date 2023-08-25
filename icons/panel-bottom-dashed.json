@@ -8,10 +8,12 @@
     "drawer",
     "dock",
     "show",
-    "reveal",
-    "dashed"
+    "reveal"
   ],
   "categories": [
     "layout"
+  ],
+  "aliases": [
+    "panel-bottom-inactive"
   ]
 }
