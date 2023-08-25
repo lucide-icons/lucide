@@ -8,7 +8,9 @@
   "tags": [
     "primary",
     "drawer",
-    "hide"
+    "hide",
+    "chevron",
+    "<"
   ],
   "categories": [
     "layout",

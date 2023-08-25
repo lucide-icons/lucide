@@ -9,7 +9,10 @@
     "primary",
     "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "chevron",
+    "right",
+    ">"
   ],
   "categories": [
     "layout",
