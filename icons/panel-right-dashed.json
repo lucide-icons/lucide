@@ -9,10 +9,12 @@
     "secondary",
     "drawer",
     "show",
-    "reveal",
-    "dashed"
+    "reveal"
   ],
   "categories": [
     "layout"
+  ],
+  "aliases": [
+    "panel-right-inactive"
   ]
 }
