@@ -6,7 +6,7 @@ title: Icon Design Guide
 
 Here are rules that should be followed to keep quality and consistency when making icons for Lucide.
 
-### 1. Icons must be designed on a **24 by 24 pixels** canvas.
+## 1. Icons must be designed on a **24 by 24 pixels** canvas.
 
 ![24px-24px](../../images/24px-24px.svg?raw=true "24px-24px")
 
@@ -95,7 +95,7 @@ Here are rules that should be followed to keep quality and consistency when maki
    For example:  `color` instead of `colour`.
 
 3. Icons should be named for what they depict rather than their use case or what they represent.\
-   For example: `save` instead of `floppy-disk` and `ban` rather than `circle-slash`.
+   For example: `floppy-disk` instead of `save` and `circle-slash` rather than `ban`.
 
 4. Icons that are part of a group are named `<group>-<variant>`.\
    For example: `badge-plus` is based on `badge`.
@@ -139,13 +139,13 @@ We recommend to use the [SVGOMG](https://jakearchibald.github.io/svgomg/) to min
 
 SVG files may only contain simple path and shape elements, which may not have any attributes other than sizing and spacing.\
 In practice only the following elements and attributes are allowed:
-  * `<path d>`
-  * `<line x1 x2>`
-  * `<polygon points>`
-  * `<polyline points>`
-  * `<circle cx cy r>`
-  * `<ellipse cx cy rx ry>`
-  * `<rect x y width height rx>`
+* `<path d>`
+* `<line x1 x2>`
+* `<polygon points>`
+* `<polyline points>`
+* `<circle cx cy r>`
+* `<ellipse cx cy rx ry>`
+* `<rect x y width height rx>`
 
 This also means that no transforms, filters, fills or explicit strokes are allowed.
 
