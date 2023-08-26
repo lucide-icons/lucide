@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
     "karsa-mistmere",
     "ericfennis"
   ],
@@ -14,5 +15,8 @@
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "sliders"
   ]
 }

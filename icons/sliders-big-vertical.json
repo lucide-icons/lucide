@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "cog",
-    "edit",
-    "gear",
-    "preferences"
+    "settings",
+    "preferences",
+    "configuration",
+    "controls",
+    "filters",
+    "edit"
   ],
   "categories": [
     "account"

@@ -7,12 +7,20 @@
     "ericfennis"
   ],
   "tags": [
-    "cog",
-    "edit",
+    "cogged",
     "gear",
-    "preferences"
+    "settings",
+    "preferences",
+    "configuration",
+    "edit",
+    "mechanical",
+    "machinery"
   ],
   "categories": [
-    "account"
+    "account",
+    "tools"
+  ],
+  "aliases": [
+    "settings"
   ]
 }
