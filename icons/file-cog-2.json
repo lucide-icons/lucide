@@ -4,13 +4,21 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "executable",
+    "cogged",
+    "gear",
+    "mechanical",
+    "machinery",
+    "configuration",
+    "controls",
+    "preferences",
     "settings",
-    "cog",
+    "system",
+    "admin",
     "edit",
-    "gear"
+    "executable"
   ],
   "categories": [
-    "files"
+    "files",
+    "development"
   ]
 }

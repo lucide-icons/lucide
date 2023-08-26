@@ -5,14 +5,20 @@
   ],
   "tags": [
     "directory",
-    "settings",
-    "control",
+    "cogged",
+    "gear",
+    "mechanical",
+    "machinery",
+    "configuration",
+    "controls",
     "preferences",
-    "cog",
-    "edit",
-    "gear"
+    "settings",
+    "system",
+    "admin",
+    "edit"
   ],
   "categories": [
-    "files"
+    "files",
+    "development"
   ]
 }
