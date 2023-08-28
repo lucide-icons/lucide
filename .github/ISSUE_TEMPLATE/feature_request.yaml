@@ -1,0 +1,56 @@
+name: Feature request
+description: Share with us your ideas on how Lucide could be improved upon.
+labels: ['💡 idea']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting a new feature request, please search to see if someone has filed a similar request before. If there is already an open issue, please add a 👍 and/or leave a comment with additional information.
+  - type: checkboxes
+    id: packages
+    attributes:
+      label: Package
+      description: Which Lucide package do you wish to add this feature to? You may select more than one.
+      options:
+        - lucide
+        - lucide-angular
+        - lucide-figma
+        - lucide-flutter
+        - lucide-preact
+        - lucide-react
+        - lucide-react-native
+        - lucide-solid
+        - lucide-svelte
+        - lucide-vue
+        - lucide-vue-next
+        - site
+        - all of them
+        - other/not relevant
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Try to describe in detail the feature you wish existed.
+      placeholder: e.g. I want to be able to set extra CSS classes on icon components.
+    validations:
+      required: true
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use cases
+      description: Why do you need this feature? Provide real-life use cases as to why this feature will be useful for others.
+      required: true
+      placeholder: e.g. I could use the extra classes to add animation or global custom styling to some icons.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please check the following items before submitting your issue.
+      options:
+        - label: I have searched the existing issues to make sure this bug has not already been reported.
+          required: true
