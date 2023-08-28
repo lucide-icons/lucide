@@ -11,11 +11,23 @@
     "directory": "packages/lucide-svelte"
   },
   "author": "Eric Fennis",
-  "amdName": "lucide-svelte",
   "type": "module",
   "main": "dist/esm/lucide-svelte.js",
-  "module": "dist/esm/lucide-svelte.js",
-  "svelte": "dist/svelte/lucide-svelte.js",
+  "exports": {
+    ".": {
+      "default": "./dist/esm/lucide-svelte.js",
+      "svelte": "./dist/svelte/lucide-svelte.js",
+      "types": "./dist/lucide-svelte.d.ts"
+    },
+    "./icons": {
+      "default": "./dist/esm/icons/index.js",
+      "svelte": "./dist/svelte/icons/index.js"
+    },
+    "./icons/*": {
+      "default": "./dist/esm/icons/*.js",
+      "svelte": "./dist/svelte/icons/*.svelte"
+    }
+  },
   "typings": "dist/lucide-svelte.d.ts",
   "sideEffects": false,
   "files": [
