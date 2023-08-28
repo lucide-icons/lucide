@@ -1,5 +1,5 @@
-name: Site bug report
-description: Create a report to help us improve the Lucide site
+name: lucide.dev bug report
+description: Help us improve the Lucide site
 labels: ['🐛 bug', '🌍 site']
 body:
   - type: markdown
