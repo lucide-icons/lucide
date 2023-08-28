@@ -11,11 +11,8 @@
     "directory": "packages/lucide-svelte"
   },
   "author": "Eric Fennis",
-  "amdName": "lucide-svelte",
   "type": "module",
   "main": "dist/esm/lucide-svelte.js",
-  "module": "dist/esm/lucide-svelte.js",
-  "svelte": "dist/svelte/lucide-svelte.js",
   "exports": {
     ".": {
       "default": "./dist/esm/lucide-svelte.js",
