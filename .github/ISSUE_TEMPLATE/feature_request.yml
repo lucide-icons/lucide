@@ -10,23 +10,21 @@ body:
     id: packages
     attributes:
       label: Package
-      description: Which Lucide package do you wish to add this feature to? You may select more than one.
+      description: Which Lucide project do you wish this feature were added to? You may select more than one.
       options:
-        - lucide
-        - lucide-angular
-        - lucide-figma
-        - lucide-flutter
-        - lucide-preact
-        - lucide-react
-        - lucide-react-native
-        - lucide-solid
-        - lucide-svelte
-        - lucide-vue
-        - lucide-vue-next
-        - site
-        - all of them
-        - other/not relevant
-      default: 0
+        - label: lucide
+        - label: lucide-angular
+        - label: lucide-flutter
+        - label: lucide-preact
+        - label: lucide-react
+        - label: lucide-react-native
+        - label: lucide-solid
+        - label: lucide-svelte
+        - label: lucide-vue
+        - label: lucide-vue-next
+        - label: Figma plugin
+        - label: all JS packages
+        - label: site
     validations:
       required: true
   - type: textarea

@@ -13,14 +13,13 @@ body:
       description: In which browser(s) are you experiencing the issue? You may select more than one.
       multiple: true
       options:
-        - Chrome/Chromium
-        - Firefox
-        - Safari
-        - Edge
-        - iOS Safari
-        - Opera
-        - Other/not relevant
-      default: 6
+        - label: Chrome/Chromium
+        - label: Firefox
+        - label: Safari
+        - label: Edge
+        - label: iOS Safari
+        - label: Opera
+        - label: Other/not relevant
     validations:
       required: false
   - type: checkboxes
@@ -29,10 +28,10 @@ body:
       label: Operating system
       description: In which operating systems are you experiencing the issue? You may select more than one.
       options:
-        - Windows
-        - Linux
-        - macOS
-        - Other/not relevant
+        - label: Windows
+        - label: Linux
+        - label: macOS
+        - label: Other/not relevant
   - type: textarea
     id: description
     attributes:
@@ -60,6 +59,5 @@ body:
       label: Checklist
       description: Please review the following checklist before submitting your issue.
       options:
-        - label: I have searched if someone has submitted a similar issue before and there weren't any.
-          description: Please make sure to also search closed issues, as this issue might already have been resolved.
+        - label: I have searched if someone has submitted a similar issue before and there weren't any. (Please make sure to also search closed issues, as this issue might already have been resolved.)
           required: true
