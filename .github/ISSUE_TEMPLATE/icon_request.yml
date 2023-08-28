@@ -14,7 +14,6 @@ body:
     attributes:
       label: Icon name
       description: What should this icon depict? For multiple icons, provide a comma-separated list.
-      required: true
     validations:
       required: true
   - type: textarea
@@ -22,7 +21,6 @@ body:
     attributes:
       label: Use cases
       description: Why do you need this icon? Include at least two real-life use cases per requested icon, avoiding generic descriptions like "it's a car icon".
-      required: true
       placeholder: e.g. I need a star icon to use in my rating system.
     validations:
       required: true
@@ -31,7 +29,6 @@ body:
     attributes:
       label: Design ideas
       description: What should this icon look like? Provide simple, minimalistic icon examples from other sets or your own drafts to help us visualize your request.
-      required: true
     validations:
       required: true
   - type: checkboxes

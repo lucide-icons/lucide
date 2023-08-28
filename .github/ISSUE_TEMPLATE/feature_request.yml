@@ -40,7 +40,6 @@ body:
     attributes:
       label: Use cases
       description: Why do you need this feature? Provide real-life use cases as to why this feature will be useful for others.
-      required: true
       placeholder: e.g. I could use the extra classes to add animation or global custom styling to some icons.
     validations:
       required: true
