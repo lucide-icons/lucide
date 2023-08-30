@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "jguddas"
+    "danielbayley"
   ],
   "tags": [
     "discount",
@@ -17,8 +16,8 @@
     "exchange",
     "transaction",
     "payment",
-    "usd",
-    "$"
+    "inr",
+    "₹"
   ],
   "categories": [
     "shopping",

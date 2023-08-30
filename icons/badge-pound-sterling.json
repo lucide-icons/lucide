@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "jguddas"
+    "danielbayley"
   ],
   "tags": [
     "discount",
@@ -17,8 +16,9 @@
     "exchange",
     "transaction",
     "payment",
-    "usd",
-    "$"
+    "british",
+    "gbp",
+    "£"
   ],
   "categories": [
     "shopping",
