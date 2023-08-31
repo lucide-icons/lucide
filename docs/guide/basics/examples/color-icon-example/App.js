@@ -10,7 +10,7 @@ function App() {
   }
 
   return (
-    <div class="app">
+    <div className="app">
       <Smile color={color} />
 
       <button onClick={setNewColor}>

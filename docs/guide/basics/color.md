@@ -11,6 +11,26 @@ By default all icons have the color value: `currentColor`. This keyword uses the
 
 Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
 
+## Adjust the color using props
+
+By passing props the color can adjusted by using the color prop on the element.
+
+**Example using a Lucide icon with color prop**
+
+<Sandpack
+  template="react"
+  :theme="sandpackTheme"
+  :files="iconColorExampleFiles"
+  :customSetup='{
+    dependencies: {
+      "lucide-react": "latest"
+    }
+  }'
+  :options="{
+    editorHeight: 480,
+  }"
+/>
+
 ## Using parent elements text color value
 
 Because the color of lucide icons uses `currentColor`, the color of the icon depends on the color of the parent.
@@ -23,26 +43,6 @@ So for example if a parent element color value is `#3e9392` and one of the child
   template="react"
   :theme="sandpackTheme"
   :files="buttonExampleFiles"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 480,
-  }"
-/>
-
-## Adjust the color using props
-
-By passing props the color can adjusted by using the color prop on the element.
-
-**Example using a Lucide icon with color prop**
-
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="iconColorExampleFiles"
   :customSetup='{
     dependencies: {
       "lucide-react": "latest"

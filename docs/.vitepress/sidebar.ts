@@ -25,15 +25,15 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           text: 'Stroke width',
           link: '/guide/basics/stroke-width'
         },
-        {
-          text: 'Accessibility',
-          link: '/guide/basics/accessibility'
-        },
       ]
     },
     {
       text: 'Advanced',
       items: [
+        {
+          text: 'Accessibility',
+          link: '/guide/advanced/accessibility'
+        },
         {
           text: 'Global styling',
         },

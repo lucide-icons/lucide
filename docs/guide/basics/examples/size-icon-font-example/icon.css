@@ -1,0 +1,15 @@
+.my-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.text-wrapper {
+  font-size: 96px;
+
+  /* layout stuff */
+  display: flex;
+  gap: 0.25em;
+  items-align: center;
+}
+
+
