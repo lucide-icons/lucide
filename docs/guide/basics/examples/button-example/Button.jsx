@@ -1,13 +1,21 @@
+import { useState } from "react";
 import { ThumbsUp } from "lucide-react";
+import getRandomColor from "./getRandomColor";
 import "./Button.css";
 
-export default function Button() {
+function Button() {
+  const [ color, setColor ] = useState('#3e9392');
+
+  function setNewColor() {
+    setColor(`#${getRandomColor()}`);
+  }
+
   return (
-    <button
-      style={{ color: '#3e9392' }}
-    >
+    <button style={{ color }} onClick={setNewColor}>
       <ThumbsUp />
       Like
     </button>
   );
 }
+
+export default Button;

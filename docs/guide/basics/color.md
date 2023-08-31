@@ -2,6 +2,7 @@
 import { Sandpack } from 'sandpack-vue3'
 import sandpackTheme from '../../.vitepress/theme/sandpackTheme.json'
 import buttonExampleFiles from './examples/button-example/files.ts'
+import iconColorExampleFiles from './examples/color-icon-example/files.ts'
 </script>
 
 # Color
@@ -28,7 +29,7 @@ So for example if a parent element color value is `#3e9392` and one of the child
     }
   }'
   :options="{
-    editorHeight: 400,
+    editorHeight: 480,
   }"
 />
 
@@ -36,5 +37,18 @@ So for example if a parent element color value is `#3e9392` and one of the child
 
 By passing props the color can adjusted by using the color prop on the element.
 
-<!-- Example codesandbox -->
-[Code Example codesandbox]
+**Example using a Lucide icon with color prop**
+
+<Sandpack
+  template="react"
+  :theme="sandpackTheme"
+  :files="iconColorExampleFiles"
+  :customSetup='{
+    dependencies: {
+      "lucide-react": "latest"
+    }
+  }'
+  :options="{
+    editorHeight: 480,
+  }"
+/>

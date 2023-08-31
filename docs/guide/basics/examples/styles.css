@@ -26,9 +26,10 @@ button {
   display: flex;
   align-items: center;
   font-size: 18px;
-  padding: 8px 16px;
+  padding: 10px 20px;
+  line-height: 24px;
   gap: 8px;
-  border-radius: 8px;
+  border-radius: 24px;
   outline: none;
   border: none;
   background: #fefefe;
@@ -36,6 +37,14 @@ button {
 }
 
 button:hover {
-  background: #0284c7;
+  background: #F56565;
   color: #fff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
