@@ -51,7 +51,10 @@
     "svgson": "^5.2.1"
   },
   "lint-staged": {
-    "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
+    "icons/*.svg":[
+      "node ./scripts/optimizeStagedSvgs.mjs",
+      "node ./scripts/generateNextJSAliases.mjs"
+    ]
   },
   "packageManager": "pnpm@7.14.0",
   "pnpm": {
