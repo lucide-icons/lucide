@@ -1,11 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
-import path from 'path';
 import { defineConfig } from 'vitepress'
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import sidebar from './sidebar';
-import fs from 'fs';
 
 const links = []
 
@@ -20,6 +18,7 @@ export default defineConfig({
   description,
   cleanUrls: true,
   outDir: '.vercel/output/static',
+  srcExclude: ['../README.md'],
   vite: {
     resolve: {
       alias: [
