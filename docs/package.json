@@ -29,7 +29,7 @@
     "nitropack": "npm:nitropack-edge@latest",
     "node-fetch": "2",
     "rollup-plugin-copy": "^3.4.0",
-    "vitepress": "1.0.0-rc.4"
+    "vitepress": "1.0.0-rc.10"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.0.1",
