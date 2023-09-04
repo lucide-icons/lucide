@@ -30,7 +30,7 @@ declare module 'lucide-vue-next'
 // Create interface extending SVGAttributes
 export interface SVGProps extends Partial<SVGAttributes> {
   size?: 24 | number
-  strokeWidth?: number
+  strokeWidth?: number | string
   absoluteStrokeWidth?: boolean
 }
 

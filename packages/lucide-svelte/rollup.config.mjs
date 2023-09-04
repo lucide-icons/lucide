@@ -15,6 +15,7 @@ const bundles = [
     inputs,
     outputDir,
     preserveModules: true,
+    preserveModulesRoot: 'src',
   },
   {
     format: 'svelte',
@@ -25,7 +26,7 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, preserveModulesRoot }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -35,7 +36,7 @@ const configs = bundles
             include: 'src/**/*.svelte',
             compilerOptions: {
               dev: false,
-              css: false,
+              css: 'external',
               hydratable: true,
             },
             emitCss: false,
@@ -59,11 +60,22 @@ const configs = bundles
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
             }),
         preserveModules,
+        preserveModulesRoot,
         format: format === 'svelte' ? 'esm' : format,
         sourcemap: true,
         globals: {
           svelte: 'svelte',
         },
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.name.includes('node_modules')) {
+            const [pathToReplace, directory] = chunkInfo.name.match(/.*\/([^\/]+)\//);
+            const fileName = chunkInfo.name.replace(pathToReplace, '');
+
+            return `external/${directory}/${fileName}.js`;
+          }
+
+          return '[name].js';
+        }
       },
     })),
   )
