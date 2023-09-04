@@ -125,6 +125,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       ]
     },
   ],
+  // This should be here to keep the sidebar shown on the icons page
+  'icons': [
+    { text: '', link: '/' },
+  ],
 }
 
 export default sidebar
