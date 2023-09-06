@@ -13,5 +13,8 @@
     "text",
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "arrow-down-az"
   ]
 }

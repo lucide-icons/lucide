@@ -26,6 +26,7 @@
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
+    "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
     "prepare": "husky install",
@@ -50,7 +51,10 @@
     "svgson": "^5.2.1"
   },
   "lint-staged": {
-    "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
+    "icons/*.svg":[
+      "node ./scripts/optimizeStagedSvgs.mjs",
+      "node ./scripts/generateNextJSAliases.mjs"
+    ]
   },
   "packageManager": "pnpm@7.14.0",
   "pnpm": {
