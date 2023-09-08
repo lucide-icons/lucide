@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import * as icons from '../src/icons';
-import { createIcons } from '../src/lucide';
+import { createIcons, icons } from '../src/lucide';
 import fs from 'fs';
 import path from 'path';
 import { parseSync, stringify } from 'svgson';
@@ -85,5 +84,18 @@ describe('createIcons', () => {
     },{})
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+  });
+
+  it('should read elements from DOM and replace icon with alias name', () => {
+    document.body.innerHTML = `<i data-lucide="grid"></i>`;
+
+    console.log(icons);
+
+    createIcons({ icons });
+
+    const svg = getOriginalSvg('grid-3x3');
+
+    expect(document.body.innerHTML).toBe(svg)
+    expect(document.body.innerHTML).toMatchSnapshot()
   });
 });
