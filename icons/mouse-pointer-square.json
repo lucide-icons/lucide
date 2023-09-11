@@ -6,16 +6,25 @@
     "karsa-mistmere"
   ],
   "tags": [
+    "inspector",
     "element",
     "mouse",
     "click",
-    "cursor",
     "pointer",
-    "box"
+    "box",
+    "browser",
+    "selector",
+    "target",
+    "dom",
+    "node"
   ],
   "categories": [
     "arrows",
     "cursors",
-    "development"
+    "development",
+    "tools"
+  ],
+  "aliases": [
+    "inspect"
   ]
 }
