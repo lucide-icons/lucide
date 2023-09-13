@@ -5,10 +5,19 @@
     "ericfennis"
   ],
   "tags": [
-    "direction"
+    "previous",
+    "back",
+    "direction",
+    "west",
+    "sign",
+    "turn",
+    "button",
+    "<-"
   ],
   "categories": [
     "arrows",
-    "shapes"
+    "navigation",
+    "shapes",
+    "gaming"
   ]
 }

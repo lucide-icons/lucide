@@ -3,6 +3,10 @@ layout: page
 outline: 2
 outlineTitle: Categories
 sidebar: true
+head:
+  - - link
+    - rel: canonical
+      content: https://lucide.dev/icons/
 ---
 
 <script setup>
