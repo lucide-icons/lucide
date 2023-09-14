@@ -4,6 +4,7 @@ import sandpackTheme from '../../.vitepress/theme/sandpackTheme.json'
 import sizeIconExample from './examples/size-icon-example/files.ts'
 import sizeIconCssExample from './examples/size-icon-css-example/files.ts'
 import sizeIconFontExample from './examples/size-icon-font-example/files.ts'
+import sizeIconTailwind from './examples/size-icon-tailwind-example/files.ts'
 </script>
 
 # Sizing
@@ -65,5 +66,20 @@ It is possible to resize icons based on font size. This can be accomplished by u
 ### Resizing with Tailwind
 
 `h-*` and `w-*` utlities can be used to adjust the size of the icon.
+
+<Sandpack
+  template="react"
+  :theme="sandpackTheme"
+  :files="sizeIconTailwind"
+  :customSetup='{
+    dependencies: {
+      "lucide-react": "latest",
+    }
+  }'
+  :options="{
+    externalResources: ['https://cdn.tailwindcss.com'],
+    editorHeight: 300,
+  }"
+/>
 
 <!-- Code Example -->

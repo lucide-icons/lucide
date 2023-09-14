@@ -6,24 +6,24 @@
     "clickable": "var(--vp-c-text-2)",
     "base": "#323232",
     "disabled": "#C5C5C5",
-    "hover": "#4D4D4D",
+    "hover": "var(--vp-c-brand)",
     "accent": "var(--vp-c-brand)",
     "error": "var(--vp-c-red)",
     "errorSurface": "#ffeceb"
   },
   "syntax": {
-    "plain": "#A6ACCD",
+    "plain": "var(--vp-code-editor-plain)",
     "comment": {
-      "color": "#999",
+      "color": "var(--vp-code-editor-comment)",
       "fontStyle": "italic"
     },
-    "keyword": "#89DDFF",
-    "tag": "#FFCB6B",
-    "punctuation": "#89DDFF",
-    "definition": "#F07178",
-    "property": "#C792EA",
-    "static": "#F78C6C",
-    "string": "#C3E88D"
+    "keyword": "var(--vp-code-editor-keyword)",
+    "tag": "var(--vp-code-editor-tag)",
+    "punctuation": "var(--vp-code-editor-punctuation)",
+    "definition": "var(--vp-code-editor-definition)",
+    "property": "var(--vp-code-editor-property)",
+    "static": "var(--vp-code-editor-static)",
+    "string": "var(--vp-code-editor-string)"
   },
   "font": {
     "body": "var(--vp-font-family-base)",

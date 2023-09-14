@@ -11,15 +11,33 @@
   --vp-c-brand-4: #DC5A5A;
   --vp-c-brand-5: #C45050;
 
-
-
   --vp-c-bg-alt-up: #fff;
   --vp-c-bg-alt-down: #fff;
+
+  --vp-code-editor-plain: #24292E;
+  --vp-code-editor-comment: #999;
+  --vp-code-editor-keyword: #D73A49;
+  --vp-code-editor-tag: #22863A;
+  --vp-code-editor-punctuation: #24292E;
+  --vp-code-editor-definition: #6F42C1;
+  --vp-code-editor-property: #005CC5;
+  --vp-code-editor-static: #F78C6C;
+  --vp-code-editor-string: #032F62;
 }
 
 .dark {
   --vp-c-bg-alt-up: #1B1B1D;
   --vp-c-bg-alt-down: #0F0F10;
+
+  --vp-code-editor-plain: #E1E4E8;
+  --vp-code-editor-comment: #999;
+  --vp-code-editor-keyword: #F97583;
+  --vp-code-editor-tag: #85E89D;
+  --vp-code-editor-punctuation: #9ECBFF;
+  --vp-code-editor-definition: #B392F0;
+  --vp-code-editor-property: #B392F0;
+  --vp-code-editor-static: #F78C6C;
+  --vp-code-editor-string: #9ECBFF;
 }
 
 .VPNavBarTitle .logo {
@@ -150,6 +168,10 @@ html:has(* .outline-link:target) {
   padding-bottom: 1px;
 }
 
+.sp-wrapper .sp-preview-container {
+  background-color: transparent;
+}
+
 .sp-wrapper .sp-tabs .sp-tab-button {
   padding: 0 12px;
   line-height: 48px;
@@ -179,6 +201,3 @@ html:has(* .outline-link:target) {
 .sp-wrapper .sp-tabs .sp-tab-button[data-active="true"]:after {
   background-color: var(--vp-code-tab-active-bar-color);
 }
-
-
-
