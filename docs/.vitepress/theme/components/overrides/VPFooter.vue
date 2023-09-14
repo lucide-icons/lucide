@@ -36,15 +36,22 @@ const links = computed(() => [
 <template>
   <footer v-if="theme.footer" class="VPFooter" :class="{ 'has-sidebar': hasSidebar }">
     <div class="container">
-      <p v-if="theme.footer.message" class="message" v-html="theme.footer.message"></p>
-      <p v-if="theme.footer.copyright" class="copyright" v-html="theme.footer.copyright"></p>
+      <div class="sponsors">
+        <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss" rel="noreferrer noopener">
+          <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+        </a>
+        <a href="https://vercel.com?utm_source=lucide&utm_medium=referral&utm_campaign=oss">
+          <img src="/digitalocean.svg" alt="Digital Ocean" width="200" />
+        </a>
+      </div>
       <div class="links">
         <VPLink v-for="link in links" :href="link.href" :key="link.text" :rel="link.href.startsWith('http') ? 'noreferrer noopener': undefined">
           {{ link.text }}
         </VPLink>
-        <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss" rel="noreferrer noopener">
-          <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
-        </a>
+      </div>
+      <div>
+        <p v-if="theme.footer.message" class="message" v-html="theme.footer.message"></p>
+        <p v-if="theme.footer.copyright" class="copyright" v-html="theme.footer.copyright"></p>
       </div>
     </div>
   </footer>
@@ -67,7 +74,7 @@ const links = computed(() => [
 
 .container {
   margin: 0 auto;
-  max-width: var(--vp-layout-max-width);
+  max-width: calc(var(--vp-layout-max-width) - 64px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +92,7 @@ const links = computed(() => [
 .message   { order: 2; }
 .copyright { order: 1; }
 
-.links {
+.links, .sponsors {
   display: flex;
   gap: 32px;
   align-items: center;
@@ -102,7 +109,7 @@ const links = computed(() => [
     flex-direction: row-reverse;
   }
   .links {
-    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>
