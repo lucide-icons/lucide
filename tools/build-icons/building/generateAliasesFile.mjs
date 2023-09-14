@@ -45,6 +45,11 @@ export default async function generateAliasesFile({
               await fs.promises.writeFile(location, output, 'utf-8');
             }
 
+            // Don't import the same icon twice
+            if (componentName === componentNameAlias) {
+              return;
+            }
+
             const exportFileIcon = separateAliasesFile ? alias : iconName;
 
             importString += getImportString(

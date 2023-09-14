@@ -16,6 +16,7 @@
     "lucide-static": "pnpm --filter lucide-static",
     "build:icons": "node ./scripts/buildIcons.mjs --templateSrc ./packages/lucide/scripts/exportTemplate.mjs",
     "build:outline-icons": "pnpm --filter outline-svg start",
+    "build:font": "pnpm --filter docs prebuild:releaseJson && pnpm --filter build-font start",
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addjsons": "node scripts/addMissingIconJsonFiles.mjs",
@@ -26,6 +27,7 @@
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
+    "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
     "prepare": "husky install",
@@ -50,7 +52,10 @@
     "svgson": "^5.2.1"
   },
   "lint-staged": {
-    "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
+    "icons/*.svg":[
+      "node ./scripts/optimizeStagedSvgs.mjs",
+      "node ./scripts/generateNextJSAliases.mjs"
+    ]
   },
   "packageManager": "pnpm@8.7.1",
   "pnpm": {

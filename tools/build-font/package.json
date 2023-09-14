@@ -1,7 +1,7 @@
 {
-  "name": "outline-svg",
+  "name": "build-font",
   "private": true,
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs-extra": "^11.1.1",
     "minimist": "^1.2.8",
-    "oslllo-svg-fixer": "^2.2.0"
+    "svgtofont": "^3.25.4"
   }
 }
