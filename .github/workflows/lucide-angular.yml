@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-angular/**
+      - tools/build-icons/**
       - pnpm-lock.yaml
 
 jobs:
