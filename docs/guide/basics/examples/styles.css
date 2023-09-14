@@ -33,13 +33,12 @@ button {
   border-radius: 24px;
   outline: none;
   border: none;
-  background: #fefefe;
+  background: #111;
   transition: all 0.3s ease;
 }
 
 button:hover {
   background: #F56565;
-  color: #fff;
 }
 
 .app {

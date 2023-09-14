@@ -29,7 +29,7 @@ By default the size of the icons are `24px` . This is adjustable by using passin
 
 ## Adjusting size with CSS
 
-Width and height can be used to adjust icon size.
+CSS properties `width` and `height` can be used to adjust icon size.
 
 <Sandpack
   template="react"

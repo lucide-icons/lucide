@@ -27,33 +27,34 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         },
       ]
     },
-    {
-      text: 'Advanced',
-      items: [
-        {
-          text: 'Accessibility',
-          link: '/guide/advanced/accessibility'
-        },
-        {
-          text: 'Global styling',
-        },
-        {
-          text: 'Animations',
-        },
-        {
-          text: 'Filled icons',
-        },
-        {
-          text: 'Combining icons',
-        },
-        {
-          text: 'Dynamic imports'
-        },
-        // {
-        //   text: 'Auto importing'
-        // },
-      ]
-    },
+    // TODO: Add this section
+    // {
+    //   text: 'Advanced',
+    //   items: [
+    //     {
+    //       text: 'Accessibility',
+    //       link: '/guide/advanced/accessibility'
+    //     },
+    //     {
+    //       text: 'Global styling',
+    //     },
+    //     {
+    //       text: 'Animations',
+    //     },
+    //     {
+    //       text: 'Filled icons',
+    //     },
+    //     {
+    //       text: 'Combining icons',
+    //     },
+    //     {
+    //       text: 'Dynamic imports'
+    //     },
+    //     // {
+    //     //   text: 'Auto importing'
+    //     // },
+    //   ]
+    // },
     {
       text: 'Packages',
       items: [

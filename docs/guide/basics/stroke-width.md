@@ -1,10 +1,34 @@
+<script setup>
+import { Sandpack } from 'sandpack-vue3'
+import sandpackTheme from '../../.vitepress/theme/sandpackTheme.json'
+import strokeWidth from './examples/stroke-width-icon/files.ts'
+import absoluteStrokeWidth from './examples/absolute-stroke-width-icon/files.ts'
+</script>
+
 # Stroke width
 
-All icons are designed with SVG elements using strokes. These have a default of `2px`. This `strokeWidth` can be adjust to create a different look of the icons.
+All icons are designed with SVG elements using strokes.
+These have a default of `2px` stroke width.
+
+The `strokeWidth` can be adjusted to create a different look of the icons.
 
 <!-- Image of icon stroke width comparison -->
 
-## Adjusting stroke width with `strokeWidth` prop
+### Adjusting stroke width with `strokeWidth` prop
+
+<Sandpack
+  template="react"
+  :theme="sandpackTheme"
+  :files="strokeWidth"
+  :customSetup='{
+    dependencies: {
+      "lucide-react": "latest"
+    }
+  }'
+  :options="{
+    editorHeight: 300,
+  }"
+/>
 
 <!-- Image of icon stroke width comparison -->
 
@@ -13,8 +37,25 @@ All icons are designed with SVG elements using strokes. These have a default of 
 When adjusting the `size` prop the size of the strokeWidth will be relative to the size of the icon, this is default SVG behaviour. `absoluteStrokeWidth` prop is introduced to adjust this behaviour to make strokeWidth absolute.
 
 This means that when `absoluteStrokeWidth` is enabled and the `size` of the icons is set to `48px` the `strokeWidth` will be still rendered `2px` on the screen.
-Note 2px is default `strokeWidth`, this can be adjusted to all sizes.
 
-<!-- Image of icon stroke comparison with absoluteStrokeWidth enabled -->
+Note `2px` is default `strokeWidth` for a Lucide icon, this can be adjusted to all sizes.
 
-### Example with React
+![Absolute stroke width comparison](../../images/absolute-stroke-width-compare.png?raw=true "Absolute stroke width comparison")
+
+### Adjusting stroke width with `absoluteStrokeWidth` prop
+
+Setting absoluteStrokeWidth to `true` will make the stroke width absolute.
+
+<Sandpack
+  template="react"
+  :theme="sandpackTheme"
+  :files="absoluteStrokeWidth"
+  :customSetup='{
+    dependencies: {
+      "lucide-react": "latest"
+    }
+  }'
+  :options="{
+    editorHeight: 320,
+  }"
+/>
