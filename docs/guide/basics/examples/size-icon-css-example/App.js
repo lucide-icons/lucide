@@ -1,10 +1,10 @@
-import { Landmark } from "lucide-react";
+import { Beer } from "lucide-react";
 import "./icon.css";
 
 function App() {
   return (
     <div className="app">
-      <Landmark className="my-icon" />
+      <Beer className="my-beer-icon" />
     </div>
   );
 }
