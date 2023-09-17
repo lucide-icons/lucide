@@ -108,7 +108,21 @@ export default Icon
 
 ##### NextJS Example
 
-In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to load the icon component dynamically.
+In NextJS, [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to dynamically load the icon component.
+
+To make dynamic imports work with NextJS, you need to add `lucide-react` to the [`transpilePackages`](https://nextjs.org/docs/app/api-reference/next-config-js/transpilePackages) option in your `next.config.js` like this:
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['lucide-react'] // add this
+}
+
+module.exports = nextConfig
+
+```
+
+You can then start using it:
 
 ```tsx
 import dynamic from 'next/dynamic'
