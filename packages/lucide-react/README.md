@@ -73,8 +73,6 @@ export default Icon;
 
 #### With Dynamic Imports
 
-> :warning: This is experimental and only works with bundlers that support dynamic imports.
-
 Lucide react exports a dynamic import map `dynamicIconImports`. Useful for applications that want to show icons dynamically by icon name. For example when using a content management system with where icon names are stored in a database.
 
 When using client side rendering, it will fetch the icon component when it's needed. This will reduce the initial bundle size.
