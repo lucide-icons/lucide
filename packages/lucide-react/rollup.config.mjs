@@ -1,6 +1,9 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 import dts from "rollup-plugin-dts";
+import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
+
+const aliasesEntries = await getAliasesEntryNames()
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
@@ -26,7 +29,10 @@ const bundles = [
   },
   {
     format: 'esm',
-    inputs,
+    inputs: [
+      ...inputs,
+      ...aliasesEntries
+    ],
     outputDir,
     preserveModules: true,
     aliasesSupport: true,

@@ -285,6 +285,9 @@ Thank you to all the people who contributed to Lucide!
 
 ## Sponsors
 
+
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-  <img src="/docs/public/vercel.svg" alt="Powered by Vercel" width="200" />
+  <img src="docs/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
+
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>

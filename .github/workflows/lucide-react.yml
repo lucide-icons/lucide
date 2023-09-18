@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - packages/lucide-react/**
+      - tools/build-icons/**
+      - scripts/generateNextJSAliases.mjs
       - pnpm-lock.yaml
 
 jobs:

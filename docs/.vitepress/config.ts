@@ -12,6 +12,7 @@ export default defineConfig({
   description,
   cleanUrls: true,
   outDir: '.vercel/output/static',
+  srcExclude: ['**/README.md'],
   vite: {
     resolve: {
       alias: [
