@@ -1,3 +1,16 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2V3M16 20C16 20.5304 15.7893 21.0391 15.4142 21.4142C15.0391 21.7893 14.5304 22 14 22C13.4696 22 12.9609 21.7893 12.5858 21.4142C12.2107 21.0391 12 20.5304 12 20V12H2C2.24144 9.53364 3.39726 7.24696 5.24 5.59C5.30198 5.53423 5.36466 5.47922 5.428 5.425M17.53 12H22C21.7586 9.53364 20.6027 7.24696 18.76 5.59C17.4573 4.42078 15.8737 3.60944 14.1637 3.23523C12.4537 2.86103 10.676 2.93675 9.004 3.455M2 2L22 22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 2v1" />
+  <path d="M16 20a2 2 0 0 1-4 0v-8H2a9.92 9.92 0 0 1 3.428-6.575" />
+  <path d="M17.5 12H22A10 10 0 0 0 9.004 3.455" />
+  <path d="m2 2 20 20" />
 </svg>
