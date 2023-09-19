@@ -34,7 +34,7 @@ When adjusting the `size` prop the size of the  stroke width will be relative to
 
 This means that when `absoluteStrokeWidth` is enabled and the `size` of the icons is set to `48px` the `strokeWidth` will still be `2px` on the screen.
 
-Note `2px` is default `strokeWidth` for a Lucide icon, this can be adjusted to all sizes.
+Note `2px` is the default stroke width for a Lucide icon, this can be adjusted to all sizes.
 
 ![Absolute stroke width comparison](../../images/absolute-stroke-width-compare.png?raw=true "Absolute stroke width comparison")
 
