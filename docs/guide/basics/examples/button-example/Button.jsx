@@ -1,6 +1,6 @@
 import { ThumbsUp } from "lucide-react";
 
-function Button() {
+function LikeButton() {
   return (
     <button style={{ color: "#fff" }}>
       <ThumbsUp />
@@ -9,4 +9,4 @@ function Button() {
   );
 }
 
-export default Button;
+export default LikeButton;
