@@ -66,7 +66,7 @@ It is possible to resize icons based on font size. This can be accomplished by u
 
 ### Resizing with Tailwind
 
-`h-*` and `w-*` utlities can be used to adjust the size of the icon.
+`h-*` and `w-*` utilities can be used to adjust the size of the icon.
 
 <Sandpack
   template="react"
