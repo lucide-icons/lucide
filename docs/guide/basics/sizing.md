@@ -48,7 +48,7 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 
 ### Resize based on font size
 
-It is possible to resize icons based on font size. This can be accomplished by using the `em` 's to resize based on font size.
+It is possible to resize icons based on font size. This can be accomplished by using the `em`s to resize based on font size.
 
 <Sandpack
   template="react"
