@@ -40,7 +40,7 @@ Note `2px` is default `strokeWidth` for a Lucide icon, this can be adjusted to a
 
 ### Adjusting stroke width with `absoluteStrokeWidth` prop
 
-Setting absoluteStrokeWidth to `true` will make the stroke width absolute.
+Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
 <Sandpack
   template="react"
