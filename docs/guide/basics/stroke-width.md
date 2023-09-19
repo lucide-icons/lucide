@@ -12,7 +12,8 @@ These have a default of `2px` stroke width.
 
 The `strokeWidth` can be adjusted to create a different look of the icons.
 
-### Adjusting stroke width with `strokeWidth` prop
+## Adjusting stroke width with `strokeWidth` prop
+
 
 <Sandpack
   template="react"
@@ -25,6 +26,7 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
   }'
   :options="{
     editorHeight: 300,
+    editorWidthPercentage: 60,
   }"
 />
 
@@ -53,5 +55,6 @@ Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
   }'
   :options="{
     editorHeight: 320,
+    editorWidthPercentage: 60,
   }"
 />

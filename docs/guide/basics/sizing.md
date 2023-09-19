@@ -24,6 +24,7 @@ By default, the size of all icons is `24px` times `24px`. The size is adjustable
   }'
   :options="{
     editorHeight: 300,
+    editorWidthPercentage: 60,
   }"
 />
 
@@ -79,6 +80,7 @@ It is possible to resize icons based on font size. This can be accomplished by u
   :options="{
     externalResources: ['https://cdn.tailwindcss.com'],
     editorHeight: 300,
+    editorWidthPercentage: 60,
   }"
 />
 
