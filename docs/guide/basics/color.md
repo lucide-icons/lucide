@@ -13,7 +13,7 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 ## Adjust the color using the `color` prop
 
-By passing props the color can adjusted by using the color prop on the element.
+The color can be adjusted by passing the color prop to the element.
 
 <Sandpack
   template="react"
