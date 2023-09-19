@@ -31,7 +31,7 @@ The color can be adjusted by passing the color prop to the element.
 
 ## Using parent elements text color value
 
-Because the color of lucide icons uses `currentColor`, the color of the icon depends on the computed `color` of the element or it inherits it from it's parent.
+Because the color of lucide icons uses `currentColor`, the color of the icon depends on the computed `color` of the element, or it inherits it from its parent.
 
 So for example if a parent element color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behaviour.
 
