@@ -1,8 +1,8 @@
 # Filled Icons
 
 Fills are officially not supported.
-However all SVG properties are available on all icons.
-Fill can still be used, and will work fine on certain icons.
+However, all SVG properties are available on all icons.
+Fill can still be used and will work fine on certain icons.
 
 Example with stars:
 
