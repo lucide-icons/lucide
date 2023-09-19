@@ -30,7 +30,7 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Absolute stroke width
 
-When adjusting the `size` prop the size of the strokeWidth will be relative to the size of the icon, this is default SVG behaviour. `absoluteStrokeWidth` prop is introduced to adjust this behaviour to make strokeWidth absolute.
+When adjusting the `size` prop the size of the  stroke width will be relative to the size of the icon, this is the default SVG behavior. The `absoluteStrokeWidth` prop is introduced to adjust this behavior to make the stroke width constant no matter the size of the icon.
 
 This means that when `absoluteStrokeWidth` is enabled and the `size` of the icons is set to `48px` the `strokeWidth` will be still rendered `2px` on the screen.
 
