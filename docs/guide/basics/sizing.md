@@ -11,7 +11,7 @@ import sizeIconTailwind from './examples/size-icon-tailwind-example/files.ts'
 
 By default the size of the icons are `24px` . This is adjustable by using passing the `size` prop or change it by using CSS.
 
-## Adjusting size with `size` prop
+## Adjusting the icon size using the `size` prop
 
 <Sandpack
   template="react"
