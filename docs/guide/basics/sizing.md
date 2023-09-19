@@ -9,7 +9,7 @@ import sizeIconTailwind from './examples/size-icon-tailwind-example/files.ts'
 
 # Sizing
 
-By default the size of the icons are `24px` . This is adjustable by using passing the `size` prop or change it by using CSS.
+By default, the size of all icons is `24px` times `24px`. The size is adjustable using the `size` prop and CSS.
 
 ## Adjusting the icon size using the `size` prop
 
