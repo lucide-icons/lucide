@@ -185,7 +185,7 @@ const removeTinySegments = (svg: string) => {
         .toAbs()
         .transform(SVGPathDataTransformer.NORMALIZE_HVZ());
       const command = commander(data.children[i].attributes.d);
-      for (let j = 1; j < command.segments.length; j++) {
+      for (let j = 2; j < command.segments.length; j++) {
         if (
           isDistanceSmaller(pathData.commands[j] as Point, pathData.commands[j - 1] as Point, 0.05)
         ) {
@@ -483,7 +483,7 @@ const getCircle = (segments: PathSegment[]): INode | undefined => {
       return undefined;
     }
   }
-  if (!isDistanceSmaller(prevPoint, startPoint, 0.1)) {
+  if (!prevCenters.length || !isDistanceSmaller(prevPoint, startPoint, 0.1)) {
     return undefined;
   }
   return {
@@ -926,8 +926,8 @@ const runOptimizations = flow(
   optimizeEllipse,
   smartClose,
   snapToGrid,
-  svgo,
   fixDots,
+  svgo,
   format
 );
 
