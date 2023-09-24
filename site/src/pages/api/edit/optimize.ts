@@ -95,7 +95,7 @@ const mergePaths = (svg: string, maxDistance = 0.1) => {
       }
     }
   }
-  return stringify(data);
+  return stringify({ ...data, children: data.children.filter((val) => val.name) });
 };
 
 const getLinesAndPoints = (children: INode[]) => {
@@ -831,9 +831,14 @@ const _mergeArcs = (svg: string) => {
   const data = parseSync(svg);
   for (let i = 0; i < data.children.length; i++) {
     if (data.children[i].name === 'path') {
-      const command = commander(data.children[i].attributes.d);
+      const command = commander(
+        new SVGPathData(data.children[i].attributes.d)
+          .toAbs()
+          .transform(SVGPathDataTransformer.NORMALIZE_HVZ())
+          .encode()
+      );
       const segments = command.segments;
-      for (let j = 0; j < segments.length; j++) {
+      for (let j = 2; j < segments.length; j++) {
         const prevSegment = segments[j - 1];
         const prevPrevSegment = segments[j - 2];
         const segment = segments[j];
