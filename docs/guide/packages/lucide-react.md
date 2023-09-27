@@ -45,10 +45,10 @@ export default App;
 
 | name                  | type      | default      |
 | --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| `size`                | _number_  | 24           |
+| `color`               | _string_  | currentColor |
+| `strokeWidth`         | _number_  | 2            |
+| `absoluteStrokeWidth` | _boolean_ | false        |
 
 ### Applying props
 
@@ -111,9 +111,10 @@ Example with React suspense:
 
 ```tsx
 import React, { lazy, Suspense } from 'react';
-import { dynamicIconImports, LucideProps } from 'lucide-react';
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
 
-const fallback = <div style={{ background: '#ddd', width: 24, height: 24 }}/>
+const fallback = <div style={{ background: '#ddd', width: 24, height: 24 }} />;
 
 interface IconProps extends Omit<LucideProps, 'ref'> {
   name: keyof typeof dynamicIconImports;
@@ -127,29 +128,30 @@ const Icon = ({ name, ...props }: IconProps) => {
       <LucideIcon {...props} />
     </Suspense>
   );
-}
+};
 
-export default Icon
+export default Icon;
 ```
 
 ##### NextJS Example
 
-In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to load the icon component dynamically.
+In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to load the icon component dynamically. Do not use dynamicIconImports with NextJS.
 
 ```tsx
-import dynamic from 'next/dynamic'
-import { LucideProps } from 'lucide-react';
-import dynamicIconImports from 'lucide-react/dynamicIconImports';
+import dynamic from 'next/dynamic';
+import type Lucide from 'lucide-react';
 
-interface IconProps extends LucideProps {
-  name: keyof typeof dynamicIconImports;
+export type IconNames = keyof typeof Lucide.icons;
+interface IconProps extends Lucide.LucideProps {
+  name: IconNames;
 }
 
 const Icon = ({ name, ...props }: IconProps) => {
-  const LucideIcon = dynamic(dynamicIconImports[name])
+  const LucideIcon = dynamic(() => import(`lucide-react`).then((mod) => mod[name]));
 
   return <LucideIcon {...props} />;
 };
 
 export default Icon;
+export type { IconProps };
 ```
