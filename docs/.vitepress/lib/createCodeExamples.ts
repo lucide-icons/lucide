@@ -24,7 +24,7 @@ const getIconCodes = (): CodeExampleType => {
       codes: [
         {
           language: 'html',
-          code: `<i data-lucide-name="Name"></i>
+          code: `<i data-lucide="Name"></i>
 `,
         },
       ],

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "aliases": [
+    "folder-cog-2"
+  ],
   "contributors": [
     "karsa-mistmere"
   ],

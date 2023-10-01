@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-svelte/**
+      - tools/build-icons/**
       - pnpm-lock.yaml
 
 jobs:

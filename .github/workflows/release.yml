@@ -5,6 +5,13 @@ on:
     tags:
       - 'v*'
 
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        description: Version
+        type: string
+
   workflow_dispatch:
     inputs:
       version:
@@ -25,7 +32,7 @@ jobs:
           echo $VERSION_REF
           echo "VERSION=${VERSION_REF/refs\/tags\/\v}" >> $GITHUB_OUTPUT
         env:
-          VERSION_REF: ${{ github.event.inputs.version || github.ref }}
+          VERSION_REF: ${{ inputs.version || github.event.inputs.version || github.ref }}
 
   release:
     if: github.repository == 'lucide-icons/lucide'
@@ -74,10 +81,10 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: npm config set //registry.npmjs.org/:_authToken ${{ inputs.NPM_TOKEN || secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
         run: pnpm --filter ${{ matrix.package }} build
@@ -127,7 +134,7 @@ jobs:
         run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
 
       - name: Set new version
-        run: pnpm --filter lucide-static version --new-version ${{ needs.pre-build.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-static version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
 
       - name: Move Font
         run: cp -r lucide-font packages/lucide-static/font
@@ -187,81 +194,17 @@ jobs:
           name: lucide-font
           path: lucide-font
 
-  lucide-flutter:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    needs: [pre-release, lucide-font]
-    container:
-      image: cirrusci/flutter:latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v2
-      - uses: actions/cache@v2
-        with:
-          path: ~/.pub-cache
-          key: ${{ runner.os }}-pub-${{ hashFiles('~/.pub-cache') }}
-          restore-keys: |
-            ${{ runner.os }}-pub-
-
-      - name: Setup credentials
-        run: |
-          mkdir -p ~/.pub-cache
-          cat <<EOF > ~/.pub-cache/credentials.json
-          {
-            "accessToken": "${{ secrets.GOOGLE_OAUTH_ACCESS_TOKEN }}",
-            "refreshToken": "${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}",
-            "idToken": "${{ secrets.GOOGLE_OAUTH_ID_TOKEN }}",
-            "tokenEndpoint":"https://accounts.google.com/o/oauth2/token",
-            "scopes": [ "openid", "https://www.googleapis.com/auth/userinfo.email" ],
-            "expiration": 1629835569218
-          }
-          EOF
-
-      - name: Get packages
-        run: flutter pub get
-        working-directory: packages/lucide-flutter
-
-      - name: List lucide-font folder
-        run: ls lucide-font
-
-      - name: Copy assets from lucide-font directory
-        run: |
-          mkdir packages/lucide-flutter/assets
-          cp lucide-font/lucide.ttf packages/lucide-flutter/assets/lucide.ttf
-          cp lucide-font/lucide-preview.html packages/lucide-flutter/assets/lucide-preview.html
-
-      - name: Generate exports file
-        run: |
-          dart tool/generate_fonts.dart assets/lucide-preview.html
-          flutter format .
-        working-directory: packages/lucide-flutter
-
-      - name: Test
-        run: flutter test
-        working-directory: packages/lucide-flutter
-
-      - name: Copy License
-        run: cp ../../LICENSE ./LICENSE
-        working-directory: packages/lucide-flutter
-
-      - name: Update yaml
-        run: sed -E 's/(version:)[^\n]*/\1 ${{ needs.pre-build.outputs.VERSION }}/;' pubspec.yaml > pubspec && mv pubspec pubspec.yaml
-        working-directory: packages/lucide-flutter
-
-      - name: Flutter publish
-        run: flutter pub publish -f
-        working-directory: packages/lucide-flutter
-
   post-release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: [
+      pre-release,
       lucide-font,
     ]
 
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/download-artifact@v2
-
       - name: Zip font and icons
         run: |
           zip -r lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip lucide-font
@@ -270,7 +213,7 @@ jobs:
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ needs.pre-release.outputs.VERSION }}
+          tag_name: ${{ needs.pre-release.outputs.VERSION }}
           files: |
             lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip
             lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip

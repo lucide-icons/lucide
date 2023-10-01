@@ -4,12 +4,12 @@ on:
   pull_request:
     paths:
       - icons/**
+      - tools/build-font/**
       - pnpm-lock.yaml
 
 jobs:
   lucide-font:
     runs-on: ubuntu-latest
-    container: ericfennis/lucide-font:latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3.4.1
@@ -42,11 +42,11 @@ jobs:
       - name: Outline svg Icons
         run: pnpm build:outline-icons
 
-      - name: Create directory
-        run: mkdir lucide-font
+      - name: Install dependencies
+        run: pnpm install --filter build-font
 
-      - name: Build font
-        run: fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
+      - name: Create font in ./lucide-font
+        run: pnpm build:font
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1
