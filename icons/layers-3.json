@@ -1,8 +1,5 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis"
-  ],
   "tags": [
     "stack",
     "pile",
@@ -10,7 +7,9 @@
     "sheets",
     "paperwork",
     "copies",
-    "copy"
+    "copy",
+    "duplicate",
+    "triple"
   ],
   "categories": [
     "design",
