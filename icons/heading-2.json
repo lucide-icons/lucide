@@ -1,7 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "tags": [],
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "h2",
+    "html",
+    "markup",
+    "markdown"
+  ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

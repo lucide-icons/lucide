@@ -1,12 +1,23 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "git",
     "diff",
-    "ignored"
+    "ignored",
+    "divide",
+    "division",
+    "shortcut",
+    "or",
+    "/"    
   ],
   "categories": [
     "shapes",
-    "development"
+    "development",
+    "maths"
   ]
 }

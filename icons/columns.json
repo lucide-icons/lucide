@@ -1,9 +1,20 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
   "tags": [
-    "layout"
+    "split",
+    "parallel",
+    "vertical",
+    "horizontal"
   ],
   "categories": [
+    "layout",
+    "design",
     "text"
   ]
 }

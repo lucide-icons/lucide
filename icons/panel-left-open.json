@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "ericfennis"
+  ],
+  "aliases": ["sidebar-open"],
+  "tags": [
+    "primary",
+    "drawer",
+    "show",
+    "reveal"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ]
+}

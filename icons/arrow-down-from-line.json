@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "backwards",
+    "reverse",
+    "direction",
+    "south",
+    "download",
+    "expand",
+    "fold",
+    "vertical"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "files"
+  ]
+}

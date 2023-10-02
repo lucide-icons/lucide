@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "ericfennis"
+  ],
   "tags": [
     "arrows",
     "axis",
@@ -10,5 +14,8 @@
   ],
   "categories": [
     "design"
+  ],
+  "aliases": [
+    "move-3-d"
   ]
 }

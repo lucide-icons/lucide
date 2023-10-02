@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "split",
+    "lines",
+    "queue",
+    "series",
+    "list",
+    "vertical",
+    "horizontal"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text"
+  ]
+}

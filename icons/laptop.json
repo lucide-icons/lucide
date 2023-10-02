@@ -1,7 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
-    "computer"
+    "computer",
+    "screen",
+    "remote"
   ],
   "categories": [
     "devices"

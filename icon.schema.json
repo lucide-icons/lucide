@@ -27,6 +27,13 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."

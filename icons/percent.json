@@ -1,9 +1,24 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
-    "discount"
+    "percentage",
+    "modulo",
+    "modulus",
+    "remainder",
+    "%",
+    "sale",
+    "discount",
+    "offer",
+    "marketing"
   ],
   "categories": [
-    "maths"
+    "maths",
+    "development",
+    "money",
+    "shopping"
   ]
 }
