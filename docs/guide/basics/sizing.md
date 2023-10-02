@@ -9,7 +9,7 @@ import sizeIconTailwind from './examples/size-icon-tailwind-example/files.ts'
 
 # Sizing
 
-By default, the size of all icons is `24px` times `24px`. The size is adjustable using the `size` prop and CSS.
+By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
 
 ## Adjusting the icon size using the `size` prop
 
@@ -48,7 +48,7 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 
 ### Dynamically change the icon size based on the font size
 
-It is possible to resize icons based on font size. This can be accomplished by using the `em`s to resize based on font size. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) about ems.
+It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
 
 <Sandpack
   template="react"

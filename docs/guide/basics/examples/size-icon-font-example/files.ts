@@ -12,7 +12,7 @@ const files = {
     code: App,
   },
   'styles.css': {
-    code:styles,
+    code: styles,
     hidden: true
   },
 
