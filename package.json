@@ -16,6 +16,7 @@
     "lucide-static": "pnpm --filter lucide-static",
     "build:icons": "node ./scripts/buildIcons.mjs --templateSrc ./packages/lucide/scripts/exportTemplate.mjs",
     "build:outline-icons": "pnpm --filter outline-svg start",
+    "build:font": "pnpm --filter docs prebuild:releaseJson && pnpm --filter build-font start",
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addjsons": "node scripts/addMissingIconJsonFiles.mjs",
@@ -26,31 +27,35 @@
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
+    "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
     "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
   "devDependencies": {
-    "@octokit/rest": "^19.0.7",
-    "eslint": "^8.36.0",
+    "@octokit/rest": "^19.0.13",
+    "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
+    "lint-staged": "^13.2.3",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.1",
     "p-memoize": "^7.1.1",
     "prettier": "2.7.1",
-    "semver": "^7.5.0",
-    "simple-git": "^3.18.0",
+    "semver": "^7.5.2",
+    "simple-git": "^3.19.1",
     "svgo": "^3.0.2",
     "svgson": "^5.2.1"
   },
   "lint-staged": {
-    "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
+    "icons/*.svg":[
+      "node ./scripts/optimizeStagedSvgs.mjs",
+      "node ./scripts/generateNextJSAliases.mjs"
+    ]
   },
   "packageManager": "pnpm@7.14.0",
   "pnpm": {
