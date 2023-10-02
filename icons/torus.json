@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "donut",
+    "doughnut",
+    "ring",
+    "hollow",
+    "3d",
+    "fast food",
+    "junk food",
+    "snack",
+    "treat",
+    "sweet",
+    "sugar",
+    "dessert"
+  ],
+  "categories": [
+    "shapes",
+    "design",
+    "tools",
+    "food-beverage"
+  ]
+}

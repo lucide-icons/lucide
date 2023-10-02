@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-syntax,  no-await-in-loop */
-import { simpleGit } from 'simple-git';
-import semver from 'semver';
 import fs from 'fs';
 import path from 'path';
+import { simpleGit } from 'simple-git';
+import semver from 'semver';
 import { readSvgDirectory } from './helpers.mjs';
 
 const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
@@ -14,6 +14,8 @@ const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
 const location = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData.json');
 const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'releaseMetadata');
+
+const allowedIconNameWithDoubleRelease = ['slash'];
 
 if (fs.existsSync(location)) {
   fs.unlinkSync(location);
@@ -107,7 +109,10 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
     }
 
     if (status === 'A') {
-      if ('changedRelease' in newReleaseMetaData[iconName]) {
+      if (
+        'changedRelease' in newReleaseMetaData[iconName] &&
+        !allowedIconNameWithDoubleRelease.includes(iconName)
+      ) {
         throw new Error(`Icon '${iconName}' has already changedRelease set.`);
       }
 
@@ -159,7 +164,8 @@ try {
             return;
           }
 
-          contents.createdRelease = newReleaseMetaData[alias].createdRelease;
+          contents.createdRelease =
+            newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
         });
       }
 

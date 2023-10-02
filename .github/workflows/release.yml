@@ -5,6 +5,13 @@ on:
     tags:
       - 'v*'
 
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        description: Version
+        type: string
+
   workflow_dispatch:
     inputs:
       version:
@@ -25,7 +32,7 @@ jobs:
           echo $VERSION_REF
           echo "VERSION=${VERSION_REF/refs\/tags\/\v}" >> $GITHUB_OUTPUT
         env:
-          VERSION_REF: ${{ github.event.inputs.version || github.ref }}
+          VERSION_REF: ${{ inputs.version || github.event.inputs.version || github.ref }}
 
   release:
     if: github.repository == 'lucide-icons/lucide'
@@ -74,7 +81,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set Auth Token
-        run: npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+        run: npm config set //registry.npmjs.org/:_authToken ${{ inputs.NPM_TOKEN || secrets.NPM_TOKEN }}
 
       - name: Set new version
         run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
@@ -206,7 +213,7 @@ jobs:
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ needs.pre-release.outputs.VERSION }}
+          tag_name: ${{ needs.pre-release.outputs.VERSION }}
           files: |
             lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip
             lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip
