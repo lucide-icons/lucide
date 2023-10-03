@@ -1,27 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "MoltenCoffee",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "tipi",
-    "teepee",
-    "wigwam",
-    "lodge",
     "camping",
     "campsite",
     "holiday",
     "retreat",
     "nomadic",
-    "native american",
-    "indian",
     "wilderness",
     "outdoors"
   ],
   "categories": [
     "travel",
-    "nature",
-    "sustainability"
+    "nature"
   ]
 }
