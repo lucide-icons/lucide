@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "wojtekmaj",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "checkout",
@@ -14,12 +13,10 @@
     "product",
     "packaging",
     "retail",
-    "consumer",
-    "qr-code",
-    "dashed"
+    "consumer"
   ],
   "categories": [
-    "devices",
-    "shopping"
+    "shopping",
+    "devices"
   ]
 }
