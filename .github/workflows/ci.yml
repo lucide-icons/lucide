@@ -66,7 +66,10 @@ jobs:
           CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
           CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
           echo $CHANGE_LOG
-          echo "CHANGE_LOG=$CHANGE_LOG" >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "CHANGE_LOG<<$EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGE_LOG" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
         env:
           GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
@@ -86,5 +89,6 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     needs: create-release
     uses: './.github/workflows/release.yml'
+    secrets: inherit
     with:
       version: ${{ needs.create-release.outputs.VERSION }}

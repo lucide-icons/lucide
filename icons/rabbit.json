@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "animal",
+    "rodent",
+    "pet",
+    "pest",
+    "bunny",
+    "hare",
+    "fast",
+    "speed",
+    "hop"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

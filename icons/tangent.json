@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "tangential",
+    "shape",
+    "circle",
+    "geometry",
+    "trigonometry",
+    "bezier curve"
+  ],
+  "categories": [
+    "shapes",
+    "maths",
+    "design",
+    "tools"
+  ]
+}
