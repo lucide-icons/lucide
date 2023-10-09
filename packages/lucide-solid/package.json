@@ -18,6 +18,7 @@
   "files": ["dist"],
   "exports": {
     ".": {
+      "types": "./dist/types/lucide-solid.d.ts",
       "solid": "./dist/source/lucide-solid.js",
       "import": "./dist/esm/lucide-solid.js",
       "browser": "./dist/esm/lucide-solid.js",
