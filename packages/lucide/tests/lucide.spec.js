@@ -6,12 +6,12 @@ import { parseSync, stringify } from 'svgson';
 
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
 
-const getOriginalSvg = (iconName) => {
+const getOriginalSvg = (iconName, aliasName) => {
   const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
   const svgParsed = parseSync(svgContent);
 
-  svgParsed.attributes['data-lucide'] = iconName;
-  svgParsed.attributes['class'] = `lucide lucide-${iconName}`;
+  svgParsed.attributes['data-lucide'] = aliasName ?? iconName;
+  svgParsed.attributes['class'] = `lucide lucide-${aliasName ?? iconName}`;
 
   return stringify(svgParsed, { selfClose: false });
 };
@@ -89,11 +89,9 @@ describe('createIcons', () => {
   it('should read elements from DOM and replace icon with alias name', () => {
     document.body.innerHTML = `<i data-lucide="grid"></i>`;
 
-    console.log(icons);
-
     createIcons({ icons });
 
-    const svg = getOriginalSvg('grid-3x3');
+    const svg = getOriginalSvg('grid-3x3', 'grid');
 
     expect(document.body.innerHTML).toBe(svg)
     expect(document.body.innerHTML).toMatchSnapshot()

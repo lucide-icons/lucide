@@ -1,5 +1,5 @@
 import replaceElement from './replaceElement';
-import * as iconAndAliases from './icons';
+import * as iconAndAliases from './iconsAndAliases';
 
 /**
  * Replaces all elements with matching nameAttr with the defined icons
