@@ -1,15 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "signpost",
-    "direction",
+    "bidirectional",
+    "left",
     "right",
     "east",
-    "forward",
-    "version control"
+    "west"
   ],
   "categories": [
     "arrows",
