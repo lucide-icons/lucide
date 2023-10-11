@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "image": "/company-logos/vercel.svg"
+  },
+  {
+    "name": "Supabase",
+    "url": "https://supabase.com",
+    "image": "/company-logos/vercel.svg"
+  },
+  {
+    "name": "Obsidian",
+    "url": "https://supabase.com",
+    "image": "/company-logos/vercel.svg"
+  },
+  {
+    "name": "Open Collective",
+    "url": "https://opencollective.com",
+    "image": "/company-logos/open-collective.svg"
+  },
+  {
+    "name": "Super",
+    "url": "https://super.so",
+    "image": "/company-logos/super.svg"
+  },
+  {
+    "name": "Noodle",
+    "url": "https://noodle.run/",
+    "image": "/company-logos/noodle.svg"
+  }
+]

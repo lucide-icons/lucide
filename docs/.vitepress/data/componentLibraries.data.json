@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Shadcn/ui",
+    "url": "https://ui.shadcn.com/",
+    "image": "/library-logos/shadcn.svg"
+  },
+  {
+    "name": "Tamagui",
+    "url": "https://tamagui.dev/",
+    "image": "/library-logos/tamagui.svg"
+  }
+]

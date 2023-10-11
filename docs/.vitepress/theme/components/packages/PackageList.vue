@@ -26,7 +26,7 @@ import PackageListItem from "./PackageListItem.vue";</script>
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .package-group {
