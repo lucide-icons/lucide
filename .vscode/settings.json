@@ -4,5 +4,5 @@
     "preact",
     "Preact"
   ],
-  "svg.preview.background": "dark-transparent"
+  "svg.preview.background": "transparent"
 }
