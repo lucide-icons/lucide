@@ -1,18 +1,9 @@
 import { Component } from 'vue';
 import { Vue, VueConfiguration } from 'vue/types/vue';
 import defaultAttributes from './defaultAttributes';
+import { toKebabCase} from '../../../scripts/helpers.mjs';
 
 type IconNode = [elementName: string, attrs: Record<string, string>][]
-
-/**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
- */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 export default (iconName: string, iconNode: IconNode): Component => ({
   name: iconName,
