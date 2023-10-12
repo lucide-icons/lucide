@@ -79,7 +79,7 @@ function setActiveIconName(name: string) {
   activeIconName.value = name;
 }
 
-watch(searchQueryThrottled, (searchString) => {
+watch(searchQueryDebounced, (searchString) => {
   currentPage.value = 1;
 });
 
