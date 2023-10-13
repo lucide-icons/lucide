@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "@octokit/rest": "^19.0.13",
+    "@html-eslint/eslint-plugin": "^0.19.1",
+    "@html-eslint/parser": "^0.19.1",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
@@ -52,7 +54,7 @@
     "svgson": "^5.2.1"
   },
   "lint-staged": {
-    "icons/*.svg":[
+    "icons/*.svg": [
       "node ./scripts/optimizeStagedSvgs.mjs",
       "node ./scripts/generateNextJSAliases.mjs"
     ]
