@@ -8,7 +8,7 @@ const useSearchInput = () => {
       ? ''
       : new URLSearchParams(window.location.search).get('search') || ''
   );
-  const searchQueryDebounced = useDebounce(searchQuery, 500);
+  const searchQueryDebounced = useDebounce(searchQuery, 250);
 
   watch(searchQueryDebounced, (searchString) => {
     const newUrl = new URL(window.location.href);
