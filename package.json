@@ -57,7 +57,7 @@
       "node ./scripts/generateNextJSAliases.mjs"
     ]
   },
-  "packageManager": "pnpm@7.14.0",
+  "packageManager": "pnpm@8.7.1",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
