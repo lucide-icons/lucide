@@ -2,11 +2,17 @@
   {
     "name": "Shadcn/ui",
     "url": "https://ui.shadcn.com/",
-    "image": "/library-logos/shadcn-ui.svg"
+    "image": {
+      "light": "/library-logos/shadcn-ui-light.svg",
+      "dark": "/library-logos/shadcn-ui-dark.svg"
+    }
   },
   {
     "name": "Tamagui",
     "url": "https://tamagui.dev/",
-    "image": "/library-logos/tamagui.svg"
+    "image": {
+      "light": "/library-logos/tamagui.svg",
+      "dark": "/library-logos/tamagui.svg"
+    }
   }
 ]

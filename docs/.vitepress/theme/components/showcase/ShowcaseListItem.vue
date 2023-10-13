@@ -17,8 +17,13 @@ defineProps<{
       :aria-label="showcaseItem.name"
     >
       <img
-        :src="showcaseItem.image"
-        class="logo"
+        :src="showcaseItem.image.light"
+        class="logo light"
+        :alt="`${showcaseItem.name} logo`"
+      />
+      <img
+        :src="showcaseItem.image.dark"
+        class="logo dark"
         :alt="`${showcaseItem.name} logo`"
       />
     </Card>
@@ -36,5 +41,12 @@ defineProps<{
   height:64px;
   width: 240px;
   margin: auto;
+}
+
+html.dark .logo.dark {
+  display: none;
+}
+html:not(.dark) .logo.light {
+  display: none;
 }
 </style>

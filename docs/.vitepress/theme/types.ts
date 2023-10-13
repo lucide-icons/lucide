@@ -45,8 +45,13 @@ export interface Release {
   date: string
 }
 
+interface ShowcaseItemImage {
+  light: string
+  dark: string
+}
+
 export interface ShowcaseItem {
   name: string
   url: string
-  image: string
+  image: ShowcaseItemImage
 }
