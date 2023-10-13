@@ -5,12 +5,12 @@ outlineTitle: Showcase
 ---
 <script setup>
 import PageContainer from '.vitepress/theme/components/PageContainer.vue'
-import PackageList from '.vitepress/theme/components/showcase/ShowcaseList.vue'
+import ShowcaseList from '.vitepress/theme/components/showcase/ShowcaseList.vue'
 </script>
 
 <div class="VPDoc content">
   <PageContainer>
-    <PackageList />
+    <ShowcaseList />
   </PageContainer>
 </div>
 

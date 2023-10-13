@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import companiesData from '../../../data/companiesData.json'
+import companies from '../../../data/companiesData.json'
+import componentLibraries from '../../../data/componentLibrariesData.json'
 import GridSection from '../base/GridSection.vue'
 import ShowcaseListItem from "./ShowcaseListItem.vue";
 </script>
@@ -11,8 +12,19 @@ import ShowcaseListItem from "./ShowcaseListItem.vue";
     class="package-group"
   >
     <ShowcaseListItem
-      v-for="packageData in companiesData"
-      :showcaseItem="packageData"
+      v-for="company in companies"
+      :showcaseItem="company"
+    />
+  </GridSection>
+
+  <GridSection
+    title="Used in"
+    :headingLevel="1"
+    class="package-group"
+  >
+    <ShowcaseListItem
+      v-for="componentLibrary in componentLibraries"
+      :showcaseItem="componentLibrary"
     />
   </GridSection>
 </template>
