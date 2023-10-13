@@ -314,45 +314,6 @@ const elementsToPath = (svg: string) => {
   return stringify(data);
 };
 
-const smartRound = (val: string) =>
-  val.replace(
-    /\d*\.(99|98|97|96|01|02|03|04|49|48|47|46|51|52|53|54|11|21|31|41|51|61|71|81|91|09|19|29|39|49|59|69|79|89)\d*/g,
-    (val) => Math.round(parseFloat(val) * 10) / 10 + ''
-  );
-const snapToGrid = (svg: string) => {
-  const data = parseSync(svg);
-  for (let i = 0; i < data.children.length; i++) {
-    data.children[i].attributes = Object.keys(data.children[i].attributes).reduce((acc, key) => {
-      if (key === 'd') {
-        const command = commander(data.children[i].attributes.d);
-        command.segments.forEach((s) => {
-          if (s[0] === 'A') {
-            if (typeof s[s.length - 2] === 'number') {
-              s[1] = smartRound(Math.round(s[1] * 100) / 100 + '') as any;
-            }
-            if (typeof s[s.length - 1] === 'number') {
-              s[2] = smartRound(Math.round(s[2] * 100) / 100 + '') as any;
-            }
-          } else {
-            if (typeof s[s.length - 2] === 'number') {
-              s[s.length - 2] = smartRound(Math.round((s.at(-2) as number) * 10) / 10 + '') as any;
-            }
-            if (typeof s[s.length - 1] === 'number') {
-              s[s.length - 1] = smartRound(Math.round((s.at(-1) as number) * 10) / 10 + '') as any;
-            }
-          }
-        });
-        acc[key] = command.toString();
-      } else {
-        acc[key] = smartRound(data.children[i].attributes[key]);
-      }
-
-      return acc;
-    }, {});
-  }
-  return stringify(data);
-};
-
 function radian(ux, uy, vx, vy) {
   const dot = ux * vx + uy * vy;
   const mod = Math.sqrt((ux * ux + uy * uy) * (vx * vx + vy * vy));
@@ -930,7 +891,6 @@ const runOptimizations = flow(
   optimizeRect,
   optimizeEllipse,
   smartClose,
-  snapToGrid,
   fixDots,
   svgo,
   format
