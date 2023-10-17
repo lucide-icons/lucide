@@ -1,5 +1,5 @@
 import replaceElement from './replaceElement';
-import * as allIcons from './icons';
+import * as iconAndAliases from './iconsAndAliases';
 
 /**
  * Replaces all elements with matching nameAttr with the defined icons
@@ -43,5 +43,5 @@ export { default as createElement } from './createElement';
 /*
  Icons exports.
 */
-export { allIcons as icons };
+export { iconAndAliases as icons };
 export * from './icons';

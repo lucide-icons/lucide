@@ -40,7 +40,7 @@ const configs = bundles
         ...(
           format === 'umd' ? [
             replace({
-              'icons = {}': 'icons = allIcons',
+              'icons = {}': 'icons = iconAndAliases',
               delimiters: ['', ''],
               preventAssignment: false,
             }),
