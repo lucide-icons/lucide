@@ -10,7 +10,8 @@
     "digits",
     "computer",
     "zero",
-    "one"
+    "one",
+    "boolean"
   ],
   "categories": [
     "text",

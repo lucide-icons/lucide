@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { toPascalCase } from '../../../scripts/helpers.mjs';
+import { readSvg, toPascalCase } from '../../../scripts/helpers.mjs';
 
 export default ({
   iconNodes,
@@ -10,6 +10,7 @@ export default ({
   showLog = true,
   iconFileExtension = '.js',
   pretty = true,
+  iconsDir,
 }) => {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -25,7 +26,9 @@ export default ({
     let { children } = iconNodes[iconName];
     children = children.map(({ name, attributes }) => [name, attributes]);
 
-    const elementTemplate = template({ componentName, iconName, children });
+    const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
+
+    const elementTemplate = template({ componentName, iconName, children, getSvg });
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,

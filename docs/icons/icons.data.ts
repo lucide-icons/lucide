@@ -1,9 +1,9 @@
-import { getAllData } from '../.vitepress/lib/icons'
+import iconNodes from '../.vitepress/data/iconNodes'
 
 export default {
   async load() {
     return {
-      icons: await getAllData(),
+      icons: Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode })),
     }
   }
 }

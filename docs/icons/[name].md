@@ -41,47 +41,47 @@ const codeExample = computed(() => data.codeExamples?.map(
   <div :class="$style.iconPreviews">
     <IconPreview
       id="previewer"
-      :name="$params.name"
-      :iconNode="$params.iconNode"
+      :name="params.name"
+      :iconNode="params.iconNode"
       :class="$style.preview"
     />
     <IconPreviewSmall
-      :name="$params.name"
-      :iconNode="$params.iconNode"
+      :name="params.name"
+      :iconNode="params.iconNode"
        :class="$style.smallPreview"
     />
   </div>
   <div >
     <div :class="$style.info">
-      <IconInfo :icon="$params" />
+      <IconInfo :icon="params" />
       <div :class="$style.meta">
         <div
-          v-if="$params.createdRelease?.version"
+          v-if="params.createdRelease?.version"
           :class="$style.version"
         >
           <Label>Created:</Label>
           <Badge
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.createdRelease.version}`"
+            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${params.createdRelease.version}`"
             target="_blank"
             rel="noreferrer noopener"
           >
-            v{{$params.createdRelease.version}}
+            v{{params.createdRelease.version}}
           </Badge>
         </div>
         <div
-          v-if="$params.changedRelease?.version"
+          v-if="params.changedRelease?.version"
           :class="$style.version"
         >
           <Label>Last changed:</Label>
           <Badge
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.changedRelease.version}`"
+            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${params.changedRelease.version}`"
             target="_blank"
             rel="noreferrer noopener"
           >
-            v{{$params.changedRelease.version}}
+            v{{params.changedRelease.version}}
           </Badge>
         </div>
-        <IconContributors :icon="$params" :class="$style.contributors"/>
+        <IconContributors :icon="params" :class="$style.contributors"/>
       </div>
     </div>
     <CodeGroup
@@ -97,7 +97,7 @@ const codeExample = computed(() => data.codeExamples?.map(
   </div>
 </div>
 
-<RelatedIcons :icons="$params.relatedIcons" />
+<RelatedIcons :icons="params.relatedIcons" />
 
 <style module>
   .preview {
@@ -115,6 +115,10 @@ const codeExample = computed(() => data.codeExamples?.map(
   .meta {
     margin-left: auto;
     margin-top: 24px;
+  }
+
+  .info {
+    --tags-gradient-background: var(--vp-c-bg);
   }
 
   .version, .contributors {
