@@ -1,3 +1,19 @@
+const requiredSVGAttrs = Object.entries({
+  xmlns: 'http://www.w3.org/2000/svg',
+  width: 24,
+  height: 24,
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  stroke: 'currentColor',
+  'stroke-width': 2,
+  'stroke-linecap': 'round',
+  'stroke-linejoin': 'round',
+}).map(([attr, value]) => ({
+  tag: 'svg',
+  attr,
+  value: String(value),
+}));
+
 module.exports = {
   env: {
     browser: true,
@@ -34,14 +50,8 @@ module.exports = {
     // SVG Specific
     '@html-eslint/require-doctype': 'off',
     '@html-eslint/no-duplicate-attrs': 'error',
-    '@html-eslint/require-attrs': [
-      'error',
-      {
-        tag: 'svg',
-        attr: 'viewBox',
-        value: '0 0 24 24',
-      },
-    ],
+    '@html-eslint/no-inline-styles': 'error',
+    '@html-eslint/require-attrs': ['error', ...requiredSVGAttrs],
     '@html-eslint/indent': ['error', 2],
     '@html-eslint/no-extra-spacing-attrs': [
       'error',
@@ -53,6 +63,7 @@ module.exports = {
       'error',
       {
         selfClosing: 'always',
+        allowSelfClosingCustom: true,
       },
     ],
     '@html-eslint/element-newline': 'error',
@@ -70,7 +81,6 @@ module.exports = {
     {
       files: ['*.svg'],
       parser: '@html-eslint/parser',
-      extends: ['plugin:@html-eslint/recommended'],
     },
   ],
 };
