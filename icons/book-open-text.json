@@ -1,18 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "reading",
-    "paperback",
+    "pages",
     "booklet",
     "magazine",
     "leaflet",
     "pamphlet",
-    "tome",
     "library",
     "writing",
     "written",
@@ -34,11 +31,11 @@
     "learning",
     "homework",
     "research",
-    "documentation"
+    "documentation",
+    "revealed"
   ],
   "categories": [
     "text",
-    "development",
-    "gaming"
+    "development"
   ]
 }

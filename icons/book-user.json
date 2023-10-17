@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "user",
     "person",
+    "people",
     "family",
-    "friend",
-    "acquaintance",
+    "friends",
+    "acquaintances",
+    "contacts",
+    "details",
+    "addresses",
+    "phone numbers",
+    "directory",
     "listing",
     "networking"
   ],

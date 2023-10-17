@@ -5,14 +5,26 @@
     "jguddas"
   ],
   "tags": [
-    "read",
     "code",
+    "coding",
     "version control",
     "git",
     "repository",
-    "dashed"
+    "template",
+    "draft",
+    "script",
+    "screenplay",
+    "writing",
+    "writer",
+    "author",
+    "unwritten",
+    "unpublished",
+    "untold"
   ],
   "categories": [
     "development"
+  ],
+  "aliases": [
+    "book-template"
   ]
 }

@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "dictionary",
+    "define",
+    "definition",
+    "thesaurus",
+    "encyclopedia",
+    "encyclopaedia",
     "reading",
-    "paperback",
     "booklet",
     "magazine",
     "leaflet",
@@ -34,11 +37,15 @@
     "learning",
     "homework",
     "research",
-    "documentation"
+    "language",
+    "translate",
+    "alphabetical",
+    "a-z",
+    "ordered"
   ],
   "categories": [
     "text",
-    "development",
+    "maps",
     "gaming"
   ]
 }

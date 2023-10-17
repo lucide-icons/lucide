@@ -1,13 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "schmidt-oliver",
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "read",
-    "pages",
     "booklet",
     "magazine",
     "leaflet",

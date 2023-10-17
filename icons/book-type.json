@@ -1,13 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "thesaurus",
+    "synonym",
     "reading",
-    "paperback",
     "booklet",
     "magazine",
     "leaflet",
@@ -34,11 +33,15 @@
     "learning",
     "homework",
     "research",
-    "documentation"
+    "language",
+    "translate",
+    "typography",
+    "fonts",
+    "collection"
   ],
   "categories": [
     "text",
-    "development",
+    "design",
     "gaming"
   ]
 }
