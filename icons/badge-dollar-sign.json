@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "discount",
+    "offer",
+    "sale",
+    "voucher",
+    "tag",
+    "monetization",
+    "marketing",
+    "finance",
+    "financial",
+    "exchange",
+    "transaction",
+    "payment",
+    "usd",
+    "$"
+  ],
+  "categories": [
+    "shopping",
+    "money",
+    "currency",
+    "account",
+    "shapes"
+  ]
+}

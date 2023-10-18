@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "reset",
+    "refresh",
+    "reload",
+    "playlist",
+    "replay"
+  ],
+  "categories": [
+    "multimedia",
+    "text"
+  ]
+}

@@ -1,8 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "fullscreen",
-    "expand"
+    "expand",
+    "dashed"
   ],
   "categories": [
     "layout",

@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "spelling",
+    "error",
+    "mistake",
+    "oversight",
+    "typo",
+    "correction",
+    "code",
+    "linter",
+    "a"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}

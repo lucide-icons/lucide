@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "unlimited",
     "forever",

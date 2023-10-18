@@ -66,7 +66,7 @@ interface ReplaceElementOptions {
 const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceElementOptions) => {
   const iconName = element.getAttribute(nameAttr);
 
-  if(iconName == null) return
+  if (iconName == null) return
 
   const ComponentName = toPascalCase(iconName);
 
@@ -83,7 +83,7 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
 
   const iconAttrs = {
     ...iconAttributes,
-    'icon-name': iconName,
+    'data-lucide': iconName,
     ...attrs,
     ...elementAttrs,
   };

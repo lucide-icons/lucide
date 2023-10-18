@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "password",
+    "login",
+    "authentication",
+    "secure",
+    "unlock",
+    "car key"
+  ],
+  "categories": [
+    "security",
+    "account"
+  ]
+}

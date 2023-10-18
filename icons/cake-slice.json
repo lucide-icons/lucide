@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "birthday",
+    "birthdate",
+    "celebration",
+    "party",
+    "surprise",
+    "gateaux",
+    "dessert",
+    "candles",
+    "wish",
+    "fondant",
+    "icing sugar",
+    "sweet",
+    "baking"    
+  ],
+  "categories": [
+    "food-beverage",
+    "social"
+  ]
+}

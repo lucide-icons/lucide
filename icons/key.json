@@ -1,10 +1,21 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ashygee",
+    "csandman",
+    "mittalyashu",
+    "ericfennis",
+    "jguddas"
+  ],
   "tags": [
     "password",
     "login",
     "authentication",
-    "secure"
+    "secure",
+    "unlock",
+    "keychain",
+    "key ring",
+    "fob"
   ],
   "categories": [
     "security",

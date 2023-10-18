@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "stack",
+    "pile",
+    "pages",
+    "sheets",
+    "paperwork",
+    "copies",
+    "copy",
+    "duplicate",
+    "triple"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
