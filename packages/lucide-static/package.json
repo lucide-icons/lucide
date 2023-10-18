@@ -9,6 +9,17 @@
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git"
   },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "main": "lib/index.js",
   "scripts": {
     "copy:icons": "cp -r ../../icons icons",
