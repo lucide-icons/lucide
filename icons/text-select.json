@@ -1,9 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "find",
     "search",
-    "selection"
+    "selection",
+    "dashed"
   ],
   "categories": [
     "text",

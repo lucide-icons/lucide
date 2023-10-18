@@ -1,16 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "pending",
     "dot",
     "progress",
     "issue",
-    "radio button",
+    "code",
+    "coding",
+    "version control",
     "choices",
     "multiple choice",
     "choose"
   ],
   "categories": [
+    "development",
     "shapes"
   ]
 }

@@ -1,0 +1,47 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "thesaurus",
+    "synonym",
+    "reading",
+    "booklet",
+    "magazine",
+    "leaflet",
+    "pamphlet",
+    "tome",
+    "library",
+    "writing",
+    "written",
+    "writer",
+    "author",
+    "story",
+    "script",
+    "fiction",
+    "novel",
+    "information",
+    "knowledge",
+    "education",
+    "high school",
+    "university",
+    "college",
+    "academy",
+    "student",
+    "study",
+    "learning",
+    "homework",
+    "research",
+    "language",
+    "translate",
+    "typography",
+    "fonts",
+    "collection"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "gaming"
+  ]
+}

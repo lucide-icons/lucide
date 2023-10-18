@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "brightness",
     "weather",

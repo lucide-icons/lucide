@@ -1,8 +1,16 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "jguddas",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "storage",
     "memory",
+    "bytes",
+    "servers",
     "backup",
     "timemachine",
     "rotate",
@@ -13,6 +21,7 @@
     "devices",
     "arrows",
     "design",
+    "development",
     "photography"
   ]
 }

@@ -1,10 +1,21 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
-    "direction"
+    "forward",
+    "direction",
+    "north",
+    "sign",
+    "keyboard",
+    "button"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }

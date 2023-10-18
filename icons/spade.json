@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "shape",
+    "suit",
+    "playing",
+    "cards"
+  ],
+  "categories": [
+    "shapes",
+    "gaming"
+  ]
+}

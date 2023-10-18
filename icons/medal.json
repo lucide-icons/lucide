@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "prize",
     "sports",
@@ -9,6 +12,7 @@
     "achievement"
   ],
   "categories": [
-    "sports"
+    "sports",
+    "gaming"
   ]
 }

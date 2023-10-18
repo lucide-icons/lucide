@@ -1,14 +1,28 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "code",
+    "coding",
     "version control",
     "git",
     "repository",
-    "private"
+    "private",
+    "public",
+    "secret",
+    "unlocked",
+    "hidden",
+    "revealed",
+    "knowledge",
+    "learning"
   ],
   "categories": [
     "development",
-    "security"
+    "security",
+    "gaming"
   ]
 }

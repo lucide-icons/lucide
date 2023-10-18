@@ -1,0 +1,10 @@
+{
+    "$schema": "../icon.schema.json",
+    "tags": [
+      "flag",
+      "bullseye"
+    ],
+    "categories": [
+      "gaming"
+    ]
+  }

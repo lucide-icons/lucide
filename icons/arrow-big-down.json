@@ -1,9 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "mittalyashu",
+    "danielbayley"
+  ],
   "tags": [
-    "key"
+    "backwards",
+    "reverse",
+    "direction",
+    "south"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

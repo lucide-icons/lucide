@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "desktop",
+    "video",
+    "movie",
+    "film",
+    "running",
+    "start",
+    "boot",
+    "virtual machine",
+    "vm"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "multimedia",
+    "development"
+  ]
+}

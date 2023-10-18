@@ -4,12 +4,12 @@ on:
   pull_request:
     paths:
       - icons/**
+      - tools/build-font/**
       - pnpm-lock.yaml
 
 jobs:
   lucide-font:
     runs-on: ubuntu-latest
-    container: ericfennis/lucide-font:latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3.4.1
@@ -26,15 +26,15 @@ jobs:
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-lucide-font-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-lucide-font-pnpm-store-
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
         run: pnpm install --filter outline-svg
@@ -42,11 +42,11 @@ jobs:
       - name: Outline svg Icons
         run: pnpm build:outline-icons
 
-      - name: Create directory
-        run: mkdir lucide-font
+      - name: Install dependencies
+        run: pnpm install --filter build-font
 
-      - name: Build font
-        run: fontcustom compile "./outlined" -h -n "lucide" -o ./lucide-font -F
+      - name: Create font in ./lucide-font
+        run: pnpm build:font
 
       - name: "Upload to Artifacts"
         uses: actions/upload-artifact@v1

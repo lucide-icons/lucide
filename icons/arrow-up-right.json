@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
-    "direction"
+    "direction",
+    "north-east",
+    "diagonal"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

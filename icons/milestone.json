@@ -1,9 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
-    "sign",
     "signpost",
     "direction",
+    "right",
+    "east",
+    "forward",
     "version control"
   ],
   "categories": [
