@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jmsv"
+  ],
+  "tags": [
+    "person",
+    "account",
+    "contact",
+    "find",
+    "scan",
+    "magnifier",
+    "magnifying glass"
+  ],
+  "categories": [
+    "account",
+    "social"
+  ]
+}
