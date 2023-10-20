@@ -15,24 +15,38 @@ const requiredSVGAttrs = Object.entries({
 }));
 
 module.exports = {
-  env: {
-    browser: true,
-    node: true,
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: 'tsconfig.json',
   },
-  extends: ['airbnb-base', 'prettier'],
-  plugins: ['import', 'prettier', '@html-eslint'],
+  plugins: ['@typescript-eslint', 'import', '@html-eslint'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'eslint:recommended',
+    'airbnb-base',
+    'airbnb-typescript/base',
+  ],
+  settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {},
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        'moduleDirectory': ['src', 'node_modules']
+      },
+    },
+  },
   rules: {
     'no-console': 'off',
     'no-param-reassign': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-      },
-    ],
     'import/no-extraneous-dependencies': [
       'error',
       { devDependencies: ['**/*.test.js', '**/*.spec.js', './scripts/**'] },
@@ -46,7 +60,67 @@ module.exports = {
         },
       },
     ],
+    // indent: 'off',
+    // '@typescript-eslint/indent': ['error', 2, {
+    //   ...airbnbIndentOptions,
+    //   ignoredNodes: [
+    //     'JSXElement',
+    //     'JSXElement > *',
+    //     'JSXAttribute',
+    //     'JSXIdentifier',
+    //     'JSXNamespacedName',
+    //     'JSXMemberExpression',
+    //     'JSXSpreadAttribute',
+    //     'JSXExpressionContainer',
+    //     'JSXOpeningElement',
+    //     'JSXClosingElement',
+    //     'JSXFragment',
+    //     'JSXOpeningFragment',
+    //     'JSXClosingFragment',
+    //     'JSXText',
+    //     'JSXEmptyExpression',
+    //     'JSXSpreadChild',
+    //     'PropertyDefinition[decorators]',
+    //     'TSUnionType',
+    //     'TSTypeParameterInstantiation',
+    //     'TSIntersectionType',
+    //   ]
+    // }],
 
+    // Imports
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'import/prefer-default-export': 0,
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.js',
+          '**/*.spec.js',
+          '**/*.stories.js',
+          '**/*.test.ts',
+          '**/*.spec.ts',
+          '**/*.stories.ts',
+          '**/*.stories.js',
+          '**/*.test.jsx',
+          '**/*.test.tsx',
+          '**/*.spec.tsx',
+          '**/*.stories.tsx',
+          '**/jest.config.js',
+          '**/jest.setup.js',
+        ],
+        peerDependencies: true,
+        optionalDependencies: true,
+      },
+    ],
     // SVG Specific
     '@html-eslint/require-doctype': 'off',
     '@html-eslint/no-duplicate-attrs': 'error',
@@ -71,12 +145,7 @@ module.exports = {
     '@html-eslint/no-trailing-spaces': 'error',
     '@html-eslint/quotes': 'error',
   },
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: ['./site/tsconfig.json', './packages/*/tsconfig.json'],
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
+
   overrides: [
     {
       files: ['*.svg'],
