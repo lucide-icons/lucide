@@ -7,12 +7,12 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     transformMode: {
-      web: [/\.jsx?$/],
+      web: [/\.[jt]sx?$/]
     },
     setupFiles: './tests/setupVitest.js',
-    threads: false,
-    isolate: false,
-    watch: false,
+    // threads: false,
+    // isolate: false,
+    // watch: false,
   },
   resolve: {
     conditions: ['development', 'browser'],
