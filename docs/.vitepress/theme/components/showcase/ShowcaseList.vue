@@ -1,28 +1,30 @@
 <script setup lang="ts">
-import {data} from './PackageList.data'
+import companies from '../../../data/companiesData.json'
+import componentLibraries from '../../../data/componentLibrariesData.json'
 import GridSection from '../base/GridSection.vue'
-import PackageListItem from "./PackageListItem.vue";</script>
+import ShowcaseListItem from "./ShowcaseListItem.vue";
+</script>
 
 <template>
   <GridSection
-    title="Packages"
+    title="Used by"
     :headingLevel="1"
     class="package-group"
   >
-    <PackageListItem
-      v-for="packageData in data.packages"
-      :packageData="packageData"
+    <ShowcaseListItem
+      v-for="company in companies"
+      :showcaseItem="company"
     />
   </GridSection>
 
   <GridSection
-    title="Third-party packages"
-    :headingLevel="2"
+    title="Used in"
+    :headingLevel="1"
     class="package-group"
   >
-    <PackageListItem
-      v-for="packageData in data.thirdPartyPackages"
-      :packageData="packageData"
+    <ShowcaseListItem
+      v-for="componentLibrary in componentLibraries"
+      :showcaseItem="componentLibrary"
     />
   </GridSection>
 </template>

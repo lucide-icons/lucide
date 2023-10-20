@@ -3,5 +3,6 @@
     "devs",
     "preact",
     "Preact"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }
