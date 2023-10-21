@@ -1,7 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jmsv"
+    "jmsv",
+    "jguddas",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "person",
