@@ -5,13 +5,46 @@ on:
     paths:
       - 'icons/*.svg'
 
-permissions:
-  pull-requests: write
-  contents: write
-
 jobs:
+  lint-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: icons/*
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Update contributors
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FETCH_DEPTH: ${{ github.event.pull_request.commits }}
+        run: node ./scripts/updateContributors.mjs ${{ steps.changed-files.outputs.all_changed_files }}
+      - name: Announce contributors
+        env:
+          ANNOTATION_SEVERITY: notice
+          ANNOTATION_TITLE: Contributors have changed!
+          ANNOTATION_DESCRIPTION: Don't add people who have only performed automatic optimizations.
+        run: git diff --unified=0 | perl -ne '/^(\+|- |@)/ && print' | perl -pe 's/\n/%0A/' | perl -pe 's/%0A(\+\+\+ b\/)/\n\1/g' | perl -pe "s/\+\+\+ b\/([^@]*)%0A@@ -(\d+)[^\s]* \+(\d+)[^@]*@@(.*)/::$ANNOTATION_SEVERITY file=\1,line=\2,endLine=\3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A\4/"
+      - name: Fail if contributors have changed
+        run: git diff --exit-code
   add-changed-icons-comment:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
     steps:
       - uses: actions/checkout@v2
         with:

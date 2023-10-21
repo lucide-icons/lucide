@@ -5,6 +5,7 @@ import path from 'path';
 import pMemoize from 'p-memoize';
 
 const IGNORED_COMMITS = ['433bbae4f1d4abb50a26306d6679a38ace5c8b78'];
+const FETCH_DEPTH = process.env.FETCH_DEPTH || 1000;
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
@@ -26,10 +27,10 @@ const getUserName = pMemoize(
 );
 
 const getContributors = async (file, includeCoAuthors) => {
-  const { all: commits } = await simpleGit().log(['--reverse', '--', file]);
+  const { all: commits } = await simpleGit().log([`HEAD~${FETCH_DEPTH}..`, '--', file]);
 
   const emails = new Map();
-  for (let i = 0; i < commits.length; i += 1) {
+  for (let i = commits.length - 1; i >= 0; i -= 1) {
     const commit = commits[i];
     if (!IGNORED_COMMITS.includes(commit.hash)) {
       if (!emails.has(commit.author_email)) {
