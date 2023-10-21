@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jmsv"
+    "jmsv",
+    "karsa-mistmere"
   ],
   "tags": [
     "person",
