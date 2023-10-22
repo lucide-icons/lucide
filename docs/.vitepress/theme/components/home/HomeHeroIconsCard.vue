@@ -143,7 +143,7 @@ onBeforeUnmount(() => {
   .search-box {
     top: unset;
     bottom: -24px;
-    left: -24px;
+    /* left: -24px; */
 
     box-shadow: var(--vp-shadow-3);
     background: var(--vp-c-bg);
