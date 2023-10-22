@@ -6,6 +6,10 @@ if [ -z "$newName" ] || [ -z "$oldName" ]; then
   echo "Usage: $0 <oldIcon> <newIcon>"
   exit 1
 fi
+if [ "$oldName" = "$newName" ]; then
+  echo "ERROR: Old name and new name are the same" >&2
+  exit 1
+fi
 if [ -e "icons/$newName.svg" ]; then
   echo "ERROR: Icon icons/$newName.svg already exist" >&2
   exit 1
@@ -34,7 +38,7 @@ echo "$json" | jq ".aliases |= if type==\"array\" then .+ [\"$oldName\"] else [\
 git add icons/"$newName".json
 
 echo "SUCCESS: Next steps:"
-echo "git checkout -b rename/$oldName-to-$oldName;"
-echo "git commit -m 'Renamed $oldName to $oldName';"
-echo "gh pr create --title 'Renamed $oldName to $oldName';"
+echo "git checkout -b rename/$oldName-to-$newName;"
+echo "git commit -m 'Renamed $oldName to $newName';"
+echo "gh pr create --title 'Renamed $oldName to $newName';"
 echo "git checkout main;"
