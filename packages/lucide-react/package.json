@@ -10,6 +10,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-react"
   },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "author": "Eric Fennis",
   "amdName": "lucide-react",
   "main": "dist/cjs/lucide-react.js",

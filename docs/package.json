@@ -25,6 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
+    "@types/semver": "^7.5.3",
     "h3": "^1.8.0",
     "nitropack": "npm:nitropack-edge@latest",
     "node-fetch": "2",
