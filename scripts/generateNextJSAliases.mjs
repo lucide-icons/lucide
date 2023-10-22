@@ -37,7 +37,9 @@ Promise.all(
       const iconMetaData = JSON.parse(metaJson);
 
       const aliases = iconMetaData.aliases ?? [];
-      aliases.push(iconNameKebabCaseNextjsFlavour);
+      if (!aliases.includes(iconNameKebabCaseNextjsFlavour)) {
+        aliases.push(iconNameKebabCaseNextjsFlavour);
+      }
 
       const output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
       fs.writeFile(path.resolve(ICONS_DIR, `${iconName}.json`), output, 'utf-8');
