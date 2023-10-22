@@ -1,16 +1,16 @@
 ---
 layout: page
 outline: 2
-outlineTitle: Packages
+outlineTitle: Showcase
 ---
 <script setup>
 import PageContainer from '.vitepress/theme/components/PageContainer.vue'
-import PackageList from '.vitepress/theme/components/packages/PackageList.vue'
+import ShowcaseList from '.vitepress/theme/components/showcase/ShowcaseList.vue'
 </script>
 
 <div class="VPDoc content">
   <PageContainer>
-    <PackageList />
+    <ShowcaseList />
   </PageContainer>
 </div>
 
@@ -19,5 +19,4 @@ import PackageList from '.vitepress/theme/components/packages/PackageList.vue'
   margin: 0 auto;
   max-width: 1200px;
 }
-
 </style>
