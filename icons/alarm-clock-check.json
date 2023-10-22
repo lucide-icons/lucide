@@ -17,5 +17,8 @@
     "devices",
     "notifications",
     "time"
+  ],
+  "aliases": [
+    "alarm-check"
   ]
 }
