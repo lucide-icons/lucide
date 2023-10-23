@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "mail",
+    "paper airplane",
+    "paper aeroplane",
+    "submit"
+  ],
+  "categories": [
+    "mail",
+    "communication",
+    "connectivity"
+  ],
+  "aliases": [
+    "send-horizonal"
+  ]
+}
