@@ -1,68 +1,61 @@
 <script setup lang="ts">
-import { ref, onMounted, shallowRef, onBeforeUnmount} from 'vue';
-import { data } from './HomeHeroIconsCard.data'
-import LucideIcon from '../base/LucideIcon.vue'
+import { ref, onMounted, shallowRef, onBeforeUnmount } from 'vue';
+import { data } from './HomeHeroIconsCard.data';
+import LucideIcon from '../base/LucideIcon.vue';
 import { useRouter } from 'vitepress';
-import { random } from 'lodash-es'
-import FakeInput from '../base/FakeInput.vue'
+import { random } from 'lodash-es';
+import FakeInput from '../base/FakeInput.vue';
 
-const { go } = useRouter()
-const intervalTime = shallowRef()
+const { go } = useRouter();
+const intervalTime = shallowRef();
 
-const getInitialItems = () => data.icons.slice(0, 48)
-const items = ref(getInitialItems())
-let id = items.value.length + 1
+const getInitialItems = () => data.icons.slice(0, 48);
+const items = ref(getInitialItems());
+let id = items.value.length + 1;
 
 function getRandomNewIcon() {
-  const randomIndex = random(0, 200)
-  const newRandomIcon = data.icons[randomIndex]
+  const randomIndex = random(0, 200);
+  const newRandomIcon = data.icons[randomIndex];
 
   if (items.value.some((item) => item.name === newRandomIcon.name)) {
-    return getRandomNewIcon()
+    return getRandomNewIcon();
   }
 
-  return newRandomIcon
+  return newRandomIcon;
 }
 
 function insert() {
-  const replaceIndex = random(0, 48)
-  const newIcon = getRandomNewIcon()
+  const replaceIndex = random(0, 48);
+  const newIcon = getRandomNewIcon();
 
   // items.value.splice(replaceIndex, 0, newIcon);
 
-  items.value[replaceIndex] = newIcon
+  items.value[replaceIndex] = newIcon;
 }
 
 function startInterval() {
   intervalTime.value = setInterval(() => {
-    insert()
-  }, 2000)
+    insert();
+  }, 2000);
 }
 
 // TODO: Try maybe something else for better pref performance
 onMounted(() => {
-  window.addEventListener('mousemove', startInterval, { once: true })
-})
+  window.addEventListener('mousemove', startInterval, { once: true });
+});
 
 onBeforeUnmount(() => {
-  clearInterval(intervalTime.value)
-})
-
+  clearInterval(intervalTime.value);
+});
 </script>
 
 <template>
   <div class="card-wrapper">
     <div class="icons-card">
       <div class="card-grid">
-        <TransitionGroup  name="list" mode="out-in">
-          <div
-            v-for="icon in items"
-            :key="icon.name"
-            class="random-icon"
-          >
-            <LucideIcon
-              v-bind="icon"
-            />
+        <TransitionGroup name="list" mode="out-in">
+          <div v-for="icon in items" :key="icon.name" class="random-icon">
+            <LucideIcon v-bind="icon" />
           </div>
         </TransitionGroup>
       </div>
@@ -71,7 +64,6 @@ onBeforeUnmount(() => {
       </FakeInput>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -86,7 +78,7 @@ onBeforeUnmount(() => {
   padding: 24px;
   border-radius: 8px;
   width: 100%;
-  height:100%;
+  height: 100%;
   /* box-shadow: var(--vp-shadow-2); */
   max-height: 220px;
   max-width: 560px;
@@ -102,7 +94,7 @@ onBeforeUnmount(() => {
   grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(36px, 1fr));
   width: 100%;
-  height:100%;
+  height: 100%;
   max-height: 168px;
   max-width: 512px;
   overflow: hidden;
@@ -111,7 +103,7 @@ onBeforeUnmount(() => {
 }
 
 .list-enter-active {
-  transition: all 0.5s cubic-bezier(.85,.85,.25,1.1);
+  transition: all 0.5s cubic-bezier(0.85, 0.85, 0.25, 1.1);
 }
 
 .list-enter-from,
@@ -143,7 +135,7 @@ onBeforeUnmount(() => {
   .search-box {
     top: unset;
     bottom: -24px;
-    left: -24px;
+    left: 0px;
 
     box-shadow: var(--vp-shadow-3);
     background: var(--vp-c-bg);
@@ -156,5 +148,4 @@ onBeforeUnmount(() => {
     margin-top: 8px;
   }
 }
-
 </style>
