@@ -1,13 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis",
-    "johnletey"
+    "danielbayley"
   ],
   "tags": [
     "code",
-    "version control"
+    "version control",
+    "commit graph",
+    "commits",
+    "gitlens"
   ],
   "categories": [
     "development"
