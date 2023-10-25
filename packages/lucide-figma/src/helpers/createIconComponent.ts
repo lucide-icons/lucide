@@ -1,6 +1,6 @@
 import { forwardRef, createElement, SVGProps } from 'react';
 import { IconNode } from '../api/fetchIcons';
-import { toKebabCase} from '../../../../scripts/helpers.mjs';
+import { toKebabCase} from '@lucide/utils';
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',

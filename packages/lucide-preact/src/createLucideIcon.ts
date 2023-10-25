@@ -1,6 +1,6 @@
 import { ComponentType, FunctionComponent, h, JSX, RefObject, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase} from '../../../scripts/helpers.mjs';
+import { toKebabCase} from '@lucide/utils';
 
 type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
 

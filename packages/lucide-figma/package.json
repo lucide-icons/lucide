@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.36.0",
+    "@lucide/utils": "workspace:*",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",

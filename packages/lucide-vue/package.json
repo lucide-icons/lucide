@@ -45,6 +45,7 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/utils": "workspace:*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/vue": "^5.9.0",
     "@vitejs/plugin-vue2": "2.2.0",

@@ -50,6 +50,7 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/utils": "workspace:*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.2.6",
     "@types/prop-types": "^15.7.5",

@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
+    "@lucide/utils": "workspace:*",
     "@atomico/rollup-plugin-sizes": "^1.1.4",
     "@testing-library/jest-dom": "^5.16.5",
     "rollup-plugin-license": "^3.0.1",

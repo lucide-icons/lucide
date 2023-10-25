@@ -1,7 +1,7 @@
 import { Component } from 'vue';
 import { Vue, VueConfiguration } from 'vue/types/vue';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase} from '../../../scripts/helpers.mjs';
+import { toKebabCase} from '@lucide/utils';
 
 type IconNode = [elementName: string, attrs: Record<string, string>][]
 

@@ -1,7 +1,7 @@
 import { h } from 'vue';
 import type { SVGAttributes, FunctionalComponent } from 'vue';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase} from '../../../scripts/helpers.mjs';
+import { toKebabCase} from '@lucide/utils';
 
 // Create interface extending SVGAttributes
 export interface SVGProps extends Partial<SVGAttributes> {
