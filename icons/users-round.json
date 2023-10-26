@@ -4,12 +4,13 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "delete",
-    "remove",
-    "unfollow",
-    "unsubscribe"
+    "group",
+    "people"
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "users-2"
   ]
 }
