@@ -1,17 +1,13 @@
-const simpleGit = require('simple-git');
-const fs = require('fs');
-const { promisify } = require('util');
-const exec = promisify(require('child_process').exec);
+import simpleGit from 'simple-git';
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
 
-const oldName = require('path')
-  .basename(process.argv[2])
-  .replace(/\.[^/.]+$/, '');
-const newName = require('path')
-  .basename(process.argv[3])
-  .replace(/\.[^/.]+$/, '');
+const oldName = path.basename(process.argv[2]).replace(/\.[^/.]+$/, '');
+const newName = path.basename(process.argv[3]).replace(/\.[^/.]+$/, '');
 
 if (!newName || !oldName) {
-  console.error('Usage: node script.js <oldIcon> <newIcon>');
+  console.error('Usage: node ./scripts/renameIcon.mjs <oldIcon> <newIcon>');
   process.exit(1);
 }
 if (oldName === newName) {
@@ -39,12 +35,6 @@ async function main() {
       console.error(`ERROR: Metadata file icons/${oldName}.json doesn't exist`);
       process.exit(1);
     }
-    try {
-      await exec('jq --version');
-    } catch (error) {
-      console.error('ERROR: jq is not installed.');
-      process.exit(1);
-    }
 
     await git.mv(`icons/${oldName}.svg`, `icons/${newName}.svg`);
     await git.mv(`icons/${oldName}.json`, `icons/${newName}.json`);
@@ -69,10 +59,13 @@ async function main() {
   }
 }
 
-function fileExists(filePath) {
-  return promisify(fs.access)(filePath)
-    .then(() => true)
-    .catch(() => false);
+async function fileExists(filePath) {
+  try {
+    await promisify(fs.access)(filePath);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 main();
