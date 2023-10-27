@@ -16,5 +16,8 @@
     "rollup-plugin-esbuild": "^4.10.2",
     "rollup-plugin-license": "^3.0.1",
     "rollup-plugin-visualizer": "^5.8.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.1.0"
   }
 }

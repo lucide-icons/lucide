@@ -10,23 +10,23 @@ const outputFileName = 'lucide-react';
 const outputDir = `dist`;
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
-    format: 'cjs',
-    inputs,
-    outputDir,
-    aliasesSupport: true,
-  },
+  // {
+  //   format: 'umd',
+  //   inputs,
+  //   outputDir,
+  //   minify: true,
+  // },
+  // {
+  //   format: 'umd',
+  //   inputs,
+  //   outputDir,
+  // },
+  // {
+  //   format: 'cjs',
+  //   inputs,
+  //   outputDir,
+  //   aliasesSupport: true,
+  // },
   {
     format: 'esm',
     inputs: [
@@ -93,25 +93,39 @@ const configs = bundles
           react: 'react',
           'prop-types': 'PropTypes'
         },
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.name.includes('utils')) {
+            console.log('YOOOOOO', chunkInfo.name);
+            // const [pathToReplace, directory] = chunkInfo.name.match(/.*\/([^\/]+)\//);
+            // const fileName = chunkInfo.name.replace(pathToReplace, '');
+
+            // console.log(fileName);
+
+            // return `external/${directory}/${fileName}.js`;
+            return '[name].js';
+          }
+
+          return '[name].js';
+        }
       },
     })),
   )
   .flat();
 
 export default [
-  {
-    input: 'src/dynamicIconImports.ts',
-    output: [{
-      file: `dynamicIconImports.d.ts`, format: "es"
-    }],
-    plugins: [dts()],
-  },
-  {
-    input: inputs[0],
-    output: [{
-      file: `dist/${outputFileName}.d.ts`, format: "es"
-    }],
-    plugins: [dts()],
-  },
+  // {
+  //   input: 'src/dynamicIconImports.ts',
+  //   output: [{
+  //     file: `dynamicIconImports.d.ts`, format: "es"
+  //   }],
+  //   plugins: [dts()],
+  // },
+  // {
+  //   input: inputs[0],
+  //   output: [{
+  //     file: `dist/${outputFileName}.d.ts`, format: "es"
+  //   }],
+  //   plugins: [dts()],
+  // },
   ...configs
 ];

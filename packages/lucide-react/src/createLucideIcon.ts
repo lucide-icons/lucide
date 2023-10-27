@@ -1,6 +1,6 @@
 import { forwardRef, createElement, ReactSVG, SVGProps, ForwardRefExoticComponent, RefAttributes } from 'react';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase} from '@lucide/utils';
+import { toKebabCase } from '@lucide/utils';
 
 export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
 
