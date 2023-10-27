@@ -21,6 +21,7 @@ import Label from '../.vitepress/theme/components/base/Label.vue'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { data } from './codeExamples.data'
 import { camelCase, startCase } from 'lodash-es'
+import { satisfies } from 'semver'
 
 const { params } = useData()
 
@@ -35,6 +36,12 @@ const codeExample = computed(() => data.codeExamples?.map(
     }
   ).join('') ?? []
 )
+
+function releaseTagLink(version) {
+  const shouldAddV = satisfies(version, `<0.266.0`)
+
+  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+}
 </script>
 
 <div :class="$style.layout">
@@ -61,7 +68,7 @@ const codeExample = computed(() => data.codeExamples?.map(
         >
           <Label>Created:</Label>
           <Badge
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${params.createdRelease.version}`"
+            :href="releaseTagLink(params.createdRelease.version)"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -74,7 +81,7 @@ const codeExample = computed(() => data.codeExamples?.map(
         >
           <Label>Last changed:</Label>
           <Badge
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${params.changedRelease.version}`"
+            :href="releaseTagLink(params.changedRelease.version)"
             target="_blank"
             rel="noreferrer noopener"
           >

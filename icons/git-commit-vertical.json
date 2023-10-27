@@ -1,18 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "jguddas"
+    "danielbayley"
   ],
   "tags": [
-    "read",
     "code",
     "version control",
-    "git",
-    "repository",
-    "dashed"
+    "waypoint",
+    "stop",
+    "station"
   ],
   "categories": [
-    "development"
+    "development",
+    "maps",
+    "navigation"
   ]
 }

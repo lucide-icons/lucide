@@ -20,7 +20,7 @@ The Illustrator template is created following guidelines from the [Icon Design G
 
 3. Verify that you follow the [Icon Design Guidelines](icon-design-guide.md).
 
-4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unecessary layers (especially "Padding" and "Grid").
+4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unnecessary layers (especially "Padding" and "Grid").
 
 5. Export the file with the export menu under: `Export > Export As..` than safe the file as SVG. Select the following options in the SVG Options dialog:
 

@@ -8,5 +8,6 @@
   "eslint.validate": [
     "javascript",
     "svg"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }

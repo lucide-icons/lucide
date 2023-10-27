@@ -11,6 +11,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-vue"
   },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "amdName": "lucide-vue",
   "source": "build/lucide-vue.js",
   "main": "dist/cjs/lucide-vue.js",

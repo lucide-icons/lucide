@@ -29,7 +29,11 @@
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
-    "lint": "eslint .",
+    "lint:js": "eslint .",
+    "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
+    "lint:json:categories": "ajv --spec=draft2020 -s category.schema.json -d 'categories/*.json' > /dev/null",
+    "lint:json": "pnpm run lint:json:icons && pnpm run lint:json:categories",
+    "lint": "pnpm lint:js lint:json",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
@@ -37,6 +41,7 @@
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
+    "ajv-cli": "^5.0.0",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
@@ -63,6 +68,14 @@
     "icons/*.svg": [
       "node ./scripts/optimizeStagedSvgs.mjs",
       "node ./scripts/generateNextJSAliases.mjs"
+    ],
+    "icons/*.json": [
+      "ajv --spec=draft2020 -s icon.schema.json -d",
+      "prettier --write --print-width=0"
+    ],
+    "categories/*.json": [
+      "ajv --spec=draft2020 -s category.schema.json -d",
+      "prettier --write --print-width=0"
     ]
   },
   "packageManager": "pnpm@8.7.1",
