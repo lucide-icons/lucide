@@ -10,6 +10,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-solid"
   },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "author": "Eric Fennis",
   "source": "src/lucide-solid.ts",
   "main": "dist/cjs/lucide-solid.js",
@@ -18,6 +29,7 @@
   "files": ["dist"],
   "exports": {
     ".": {
+      "types": "./dist/types/lucide-solid.d.ts",
       "solid": "./dist/source/lucide-solid.js",
       "import": "./dist/esm/lucide-solid.js",
       "browser": "./dist/esm/lucide-solid.js",
