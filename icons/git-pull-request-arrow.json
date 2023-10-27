@@ -1,20 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "danielbayley"
   ],
   "tags": [
-    "patch",
-    "difference",
-    "compare",
-    "plus",
-    "minus",
-    "plus-minus",
-    "maths"
+    "code",
+    "version control",
+    "open"
   ],
   "categories": [
     "development",
-    "files"
+    "arrows"
   ]
 }
