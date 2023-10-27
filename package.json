@@ -29,7 +29,7 @@
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
-    "lint": "eslint --ext .ts,.js .",
+    "lint": "eslint .",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
