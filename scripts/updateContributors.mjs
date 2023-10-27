@@ -29,17 +29,17 @@ const getUserName = pMemoize(
 );
 
 // Check that a commit changes more than just the icon name
-const isCommitRelevant = async (commit, file) => {
-  const summary = await git.diffSummary(['--diff-filter=AM', `${commit.hash}~1`, commit.hash]);
+const isCommitRelevant = async (hash, file) => {
+  const summary = await git.diffSummary(['--diff-filter=AM', `${hash}~1`, hash]);
   return summary.files.some(({ file: name }) => name === file);
 };
 
 const getContributors = async (file, includeCoAuthors) => {
   const { all } = await git.log([`HEAD~${FETCH_DEPTH}..`, '--', file]);
   const commits = file.endsWith('.svg')
-    ? (await Promise.all(all.map((commit) => isCommitRelevant(commit, file) && commit))).filter(
-        Boolean
-      )
+    ? (
+        await Promise.all(all.map((commit) => isCommitRelevant(commit.hash, file) && commit))
+      ).filter(Boolean)
     : all;
 
   const emails = new Map();
