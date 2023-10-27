@@ -5,10 +5,24 @@
     "ericfennis"
   ],
   "tags": [
-    "arrow"
+    "caret",
+    "keyboard",
+    "button",
+    "mac",
+    "control",
+    "ctrl",
+    "superscript",
+    "exponential",
+    "power",
+    "ahead",
+    "menu",
+    "panel",
+    "^"
   ],
   "categories": [
     "arrows",
+    "navigation",
+    "maths",
     "shapes"
   ]
 }

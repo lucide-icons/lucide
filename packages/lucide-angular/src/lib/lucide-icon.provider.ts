@@ -6,7 +6,12 @@ export interface LucideIconProviderInterface {
     getIcon(name: string): LucideIconData|null;
 }
 
-export const LUCIDE_ICONS = new InjectionToken<LucideIconProviderInterface>('LucideIcons');
+export const LUCIDE_ICONS = new InjectionToken<LucideIconProviderInterface>(
+  'LucideIcons',
+  {
+    factory: () => new LucideIconProvider({})
+  }
+);
 
 export class LucideIconProvider implements LucideIconProviderInterface {
     constructor(private icons: LucideIcons) {
