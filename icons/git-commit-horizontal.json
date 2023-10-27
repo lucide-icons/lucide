@@ -2,16 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
-    "ericfennis"
+    "ericfennis",
+    "johnletey"
   ],
   "tags": [
     "code",
     "version control",
-    "open"
+    "waypoint",
+    "stop",
+    "station"
   ],
   "categories": [
     "development",
-    "arrows"
+    "maps",
+    "navigation"
+  ],
+  "aliases": [
+    "git-commit"
   ]
 }

@@ -1,16 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "code",
     "version control",
-    "rejected",
-    "closed",
-    "cancelled",
-    "x"
+    "commit graph",
+    "commits",
+    "gitlens"
   ],
   "categories": [
     "development"
