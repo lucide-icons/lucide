@@ -16,6 +16,7 @@
     "lucide-static": "pnpm --filter lucide-static",
     "build:icons": "node ./scripts/buildIcons.mjs --templateSrc ./packages/lucide/scripts/exportTemplate.mjs",
     "build:outline-icons": "pnpm --filter outline-svg start",
+    "build:font": "pnpm --filter docs prebuild:releaseJson && pnpm --filter build-font start",
     "generate:supersprite": "node ./scripts/generateSuperSVG.mjs",
     "optimize": "node ./scripts/optimizeSvgs.mjs",
     "addjsons": "node scripts/addMissingIconJsonFiles.mjs",
@@ -25,35 +26,64 @@
     "icons2categories": "node scripts/migrateIconsToCategories.mjs --presets @babel/env",
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs --presets @babel/env",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
+    "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
+    "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
-    "lint": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
+    "lint:js": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
+    "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
+    "lint:json:categories": "ajv --spec=draft2020 -s category.schema.json -d 'categories/*.json' > /dev/null",
+    "lint:json": "pnpm run lint:json:icons && pnpm run lint:json:categories",
+    "lint": "pnpm lint:js lint:json",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
   "devDependencies": {
-    "eslint": "^8.36.0",
+    "@octokit/rest": "^19.0.13",
+    "ajv-cli": "^5.0.0",
+    "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
+    "lint-staged": "^13.2.3",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.1",
+    "p-memoize": "^7.1.1",
     "prettier": "2.7.1",
+    "semver": "^7.5.2",
+    "simple-git": "^3.19.1",
     "svgo": "^3.0.2",
     "svgson": "^5.2.1"
   },
   "lint-staged": {
-    "icons/*.svg": "node ./scripts/optimizeStagedSvgs.mjs"
+    "icons/*.svg": [
+      "node ./scripts/optimizeStagedSvgs.mjs",
+      "node ./scripts/generateNextJSAliases.mjs"
+    ],
+    "icons/*.json": [
+      "ajv --spec=draft2020 -s icon.schema.json -d",
+      "prettier --write --print-width=0"
+    ],
+    "categories/*.json": [
+      "ajv --spec=draft2020 -s category.schema.json -d",
+      "prettier --write --print-width=0"
+    ]
   },
-  "packageManager": "pnpm@7.14.0",
+  "packageManager": "pnpm@8.7.1",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "@babel/core",
         "@babel/preset-env"
       ]
+    },
+    "packageExtensions": {
+      "vue-template-compiler": {
+        "peerDependencies": {
+          "vue": "2.7.14"
+        }
+      }
     }
   }
 }

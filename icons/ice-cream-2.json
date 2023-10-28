@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie",
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "gelato",
     "food",

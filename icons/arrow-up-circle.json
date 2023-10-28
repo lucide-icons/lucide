@@ -1,10 +1,20 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
-    "direction"
+    "forward",
+    "direction",
+    "north",
+    "sign",
+    "button"
   ],
   "categories": [
     "arrows",
-    "shapes"
+    "navigation",
+    "shapes",
+    "gaming"
   ]
 }

@@ -5,13 +5,47 @@ on:
     paths:
       - 'icons/*.svg'
 
-permissions:
-  pull-requests: write
-  contents: write
-
 jobs:
+  lint-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: icons/*
+      - uses: actions/setup-node@v3.8.1
+      - name: Install simple-git (safer and faster than installing all deps)
+        run: npm install simple-git
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FETCH_DEPTH: ${{ github.event.pull_request.commits }}
+        run: node ./scripts/updateContributors.mjs ${{ steps.changed-files.outputs.all_changed_files }}
+      - name: Generate annotations
+        env:
+          ANNOTATION_SEVERITY: notice
+          ANNOTATION_TITLE: Contributors have changed!
+          ANNOTATION_DESCRIPTION: Don't add people who have only performed automatic optimizations.
+        run: |
+          git diff --unified=0 -- icons/*.json | # diff icon metadata (unified=0 gives the correct chunk line number)
+          perl -ne '/^(\+|- |@)/ && print' | # get chunks (lines that start with "+++", "@@", "+ ", "- ")
+          perl -pe 's/\n/%0A/' | # url encode line breaks (\n -> %0A)
+          perl -pe 's/%0A(\+\+\+ b\/)/\n\1/g' | # split chunks(one chunk per line)
+          perl -pe "s/\+\+\+ b\/([^@]*)%0A@@ -(\d+)[^\s]* \+(\d+)[^@]*@@(.*)/::$ANNOTATION_SEVERITY file=\1,line=\2,endLine=\3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A\4/"
+          # Example for the previous substitution
+          # input: +++ b/icons/accessibility.json%0A@@ -2,0 +3 @@%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
+          # output: ::$ANNOTATION_SEVERITY file=icons/accessibility.json,line=2,endLine=3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
+      - name: Fail if contributors have changed
+        run: git diff --exit-code -- icons/*.json
   add-changed-icons-comment:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
     steps:
       - uses: actions/checkout@v2
         with:
@@ -22,6 +56,20 @@ jobs:
         uses: tj-actions/changed-files@v35
         with:
           files: icons/*.svg
+      - name: Generate 24px dpi preview
+        id: generate-24px-dpi-preview
+        run: |
+          delimiter="$(openssl rand -hex 8)"
+          echo "body<<$delimiter" >> $GITHUB_OUTPUT
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            cat "$file" | # get file content
+            tr '\n' ' ' | # remove line breaks
+            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
+            base64 -w 0 | # encode svg
+            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/dpi/24/&.svg\"/> |"
+          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          echo >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate cohesion check random
         id: generate-cohesion-check-random
         run: |
@@ -132,6 +180,10 @@ jobs:
             ${{ steps.generate-1px-stroke-width.outputs.body }}<br/>
             ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
             ${{ steps.generate-3px-stroke-width.outputs.body }}<br/>
+            </details>
+            <details>
+            <summary>DPI Preview (24px)</summary>
+            ${{ steps.generate-24px-dpi-preview.outputs.body }}<br/>
             </details>
             <details>
             <summary>Icon X-rays</summary>

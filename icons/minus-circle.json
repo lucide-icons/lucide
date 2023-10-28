@@ -1,9 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "subtract",
+    "remove",
+    "decrease",
+    "reduce",
     "calculate",
-    "maths"
+    "line",
+    "operator",
+    "code",
+    "coding",
+    "minimum",
+    "downgrade",
+    "-"
   ],
   "categories": [
     "maths",

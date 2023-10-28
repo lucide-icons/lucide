@@ -1,4 +1,4 @@
 packages:
   - 'packages/*'
   - 'tools/*'
-  - 'site'
+  - 'docs'

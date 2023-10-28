@@ -1,8 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "bidirectional",
-    "direction",
+    "two-way",
+    "2-way",
     "swap",
     "switch",
     "network",
@@ -13,6 +19,7 @@
     "move"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

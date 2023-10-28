@@ -1,8 +1,16 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "index",
-    "box"
+    "backup",
+    "box",
+    "storage",
+    "records"
   ],
   "categories": [
     "files",

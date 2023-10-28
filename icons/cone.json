@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "conical",
+    "triangle",
+    "triangular",
+    "geometry",
+    "filter",
+    "funnel",
+    "hopper",
+    "spotlight",
+    "searchlight"
+  ],
+  "categories": [
+    "shapes",
+    "maths"
+  ]
+}

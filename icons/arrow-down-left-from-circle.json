@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
-    "direction"
+    "outwards",
+    "direction",
+    "south-west",
+    "diagonal"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maps"
   ]
 }

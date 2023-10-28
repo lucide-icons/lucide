@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
   "tags": [
     "barcode",
-    "scan"
+    "scan",
+    "link",
+    "url",
+    "information",
+    "digital"
   ],
   "categories": [
     "development",

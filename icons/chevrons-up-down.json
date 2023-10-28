@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
-    "arrow",
     "expand",
     "unfold",
     "vertical"

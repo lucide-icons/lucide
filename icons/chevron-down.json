@@ -1,9 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
-    "arrow"
+    "backwards",
+    "reverse",
+    "slow",
+    "dropdown"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

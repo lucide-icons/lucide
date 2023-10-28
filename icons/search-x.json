@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "find",
+    "scan",
+    "magnifier",
+    "magnifying glass",
+    "stop",
+    "clear",
+    "cancel",
+    "abort"
+  ],
+  "categories": [
+    "text",
+    "account",
+    "social"
+  ]
+}

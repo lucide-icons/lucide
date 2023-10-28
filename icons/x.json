@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "cancel",
     "close",
@@ -7,7 +11,9 @@
     "remove",
     "times",
     "clear",
-    "maths"
+    "maths",
+    "multiply",
+    "multiplication"
   ],
   "categories": [
     "notifications",
