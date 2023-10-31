@@ -5,7 +5,7 @@ import pkg from './package.json' assert { type: 'json' };
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
-const inputs = ['src/lucide.ts'];
+const inputs = ['src/lucide.ts', 'src/types.ts'];
 const bundles = [
   {
     format: 'umd',
@@ -52,11 +52,11 @@ const configs = bundles
         name: outputFileName,
         ...(preserveModules
           ? {
-              dir: `${outputDir}/${format}`,
-            }
+            dir: `${outputDir}/${format}`,
+          }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-            }),
+            file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+          }),
         format,
         sourcemap: true,
         preserveModules,
