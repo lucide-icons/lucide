@@ -32,7 +32,13 @@ export default eventHandler((event) => {
     const svg = renderToStaticMarkup(createElement(LucideIcon));
     const backdropString = svg.replace(/<svg[^>]*>|<\/svg>/g, '');
 
-    children.push(createElement(Backdrop, { backdropString, src }));
+    children.push(
+      createElement(Backdrop, {
+        backdropString,
+        src,
+        color: name in iconNodes ? 'red' : '#777',
+      })
+    );
   }
 
   const svg = Buffer.from(
