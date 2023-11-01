@@ -1,6 +1,4 @@
-import DEFAULT_ATTRS from './scripts/render/default-attrs.json' assert { type: 'json' };
-const requiredSVGAttrs = Object.entries(DEFAULT_ATTRS)
-  .map(([attr, value]) => ({ tag: 'svg', attr, value: String(value) }));
+const DEFAULT_ATTRS = require('./scripts/render/default-attrs.json');
 
 module.exports = {
   root: true,
