@@ -8,7 +8,7 @@ import * as allIcons from './icons';
 const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) => {
   if (!Object.values(icons).length) {
     throw new Error(
-      "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`",
+      "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`"
     );
   }
 
@@ -18,16 +18,18 @@ const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) 
 
   const elementsToReplace = document.querySelectorAll(`[${nameAttr}]`);
   Array.from(elementsToReplace).forEach((element) =>
-    replaceElement(element, { nameAttr, icons, attrs }),
+    replaceElement(element, { nameAttr, icons, attrs })
   );
 
   /** @todo: remove this block in v1.0 */
   if (nameAttr === 'data-lucide') {
     const deprecatedElements = document.querySelectorAll('[icon-name]');
     if (deprecatedElements.length > 0) {
-      console.warn('[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide');
+      console.warn(
+        '[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide'
+      );
       Array.from(deprecatedElements).forEach((element) =>
-        replaceElement(element, { nameAttr: 'icon-name', icons, attrs }),
+        replaceElement(element, { nameAttr: 'icon-name', icons, attrs })
       );
     }
   }
@@ -45,3 +47,8 @@ export { default as createElement } from './createElement';
 */
 export { allIcons as icons };
 export * from './icons';
+
+/*
+ Types exports.
+*/
+export * from './types';

@@ -5,7 +5,7 @@ import pkg from './package.json' assert { type: 'json' };
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
-const inputs = ['src/lucide.ts', 'src/types.ts'];
+const inputs = ['src/lucide.ts'];
 const bundles = [
   {
     format: 'umd',
