@@ -1,18 +1,6 @@
-const requiredSVGAttrs = Object.entries({
-  xmlns: 'http://www.w3.org/2000/svg',
-  width: 24,
-  height: 24,
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  'stroke-width': 2,
-  'stroke-linecap': 'round',
-  'stroke-linejoin': 'round',
-}).map(([attr, value]) => ({
-  tag: 'svg',
-  attr,
-  value: String(value),
-}));
+import DEFAULT_ATTRS from './scripts/render/default-attrs.json' assert { type: 'json' };
+const requiredSVGAttrs = Object.entries(DEFAULT_ATTRS)
+  .map(([attr, value]) => ({ tag: 'svg', attr, value: String(value) }));
 
 module.exports = {
   root: true,
@@ -64,7 +52,11 @@ module.exports = {
         '@html-eslint/require-doctype': 'off',
         '@html-eslint/no-duplicate-attrs': 'error',
         '@html-eslint/no-inline-styles': 'error',
-        '@html-eslint/require-attrs': ['error', ...requiredSVGAttrs],
+        '@html-eslint/require-attrs': [
+           'error',
+             ...Object.entries(DEFAULT_ATTRS)
+               .map(([attr, value]) => ({ tag: 'svg', attr, value: String(value) }))
+        ],
         '@html-eslint/indent': ['error', 2],
         "@html-eslint/no-multiple-empty-lines": ["error", { "max": 0 }],
         '@html-eslint/no-extra-spacing-attrs': [
