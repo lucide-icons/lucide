@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "responsive",
+    "screens",
+    "browser",
+    "testing",
+    "mobile"
+  ],
+  "categories": [
+    "devices",
+    "design",
+    "development",
+    "tools"
+  ]
+}

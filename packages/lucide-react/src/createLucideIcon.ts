@@ -4,13 +4,14 @@ import defaultAttributes from './defaultAttributes';
 export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>
+type ComponentAttributes = RefAttributes<SVGSVGElement> & SVGAttributes
 
-export interface LucideProps extends SVGAttributes {
+export interface LucideProps extends ComponentAttributes {
   size?: string | number
   absoluteStrokeWidth?: boolean
 }
 
-export type LucideIcon = ForwardRefExoticComponent<LucideProps & RefAttributes<SVGSVGElement>>
+export type LucideIcon = ForwardRefExoticComponent<LucideProps>;
 /**
  * Converts string to KebabCase
  * Copied from scripts/helper. If anyone knows how to properly import it here
