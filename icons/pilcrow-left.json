@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "zaaakher"
+  ],
+  "tags": [
+    "direction",
+    "paragraph",
+    "mark",
+    "paraph",
+    "blind",
+    "typography",
+    "type",
+    "text",
+    "prose",
+    "symbol"
+  ],
+  "categories": [
+    "text"
+  ]
+}
