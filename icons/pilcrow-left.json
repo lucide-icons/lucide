@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "zaaakher"
+    "zaaakher",
+    "danielbayley",
+    "jonas-hoebenreich"
   ],
   "tags": [
     "direction",
