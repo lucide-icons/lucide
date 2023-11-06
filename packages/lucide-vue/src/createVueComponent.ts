@@ -2,6 +2,8 @@ import { Component } from 'vue';
 import { Vue, VueConfiguration } from 'vue/types/vue';
 import defaultAttributes from './defaultAttributes';
 
+var showDeprecationWarning = true;
+
 type IconNode = [elementName: string, attrs: Record<string, string>][]
 
 /**
@@ -47,6 +49,13 @@ export default (iconName: string, iconNode: IconNode): Component => ({
       children = [],
     },
   ) {
+    if (showDeprecationWarning) {
+      console.warn(
+        '[Lucide Vue] This package will be deprecated end of 2023. Please use upgrade to Vue 3 and use the latest lucide package for Vue.',
+      );
+      showDeprecationWarning = false;
+    }
+
     return createElement(
       'svg',
       {
