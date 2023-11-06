@@ -33,7 +33,7 @@ Here you can find instructions on how to implement the guidelines with different
 
 #### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
+You can also [download an Adobe Illustrator template](https://lucide.dev/templates/illustrator-template.ai).
 
 #### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
 
