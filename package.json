@@ -29,11 +29,11 @@
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
-    "lint:js": "eslint .",
+    "lint:es": "eslint .",
     "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
     "lint:json:categories": "ajv --spec=draft2020 -s category.schema.json -d 'categories/*.json' > /dev/null",
     "lint:json": "pnpm run lint:json:icons && pnpm run lint:json:categories",
-    "lint": "pnpm lint:js && pnpm lint:json",
+    "lint": "pnpm lint:es && pnpm lint:json",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
