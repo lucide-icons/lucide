@@ -31,6 +31,7 @@ const {
   importImportFileExtension = '',
   exportFileName = 'index.js',
   withAliases = false,
+  aliasNamesOnly = false,
   withDynamicImports = false,
   separateAliasesFile = false,
   aliasesFileExtension = '.js',
@@ -66,6 +67,7 @@ async function buildIcons() {
     await generateAliasesFile({
       iconNodes: icons,
       aliases,
+      aliasNamesOnly,
       iconFileExtension,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
