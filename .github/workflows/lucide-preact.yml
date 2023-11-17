@@ -5,6 +5,7 @@ on:
     paths:
       - packages/lucide-preact/**
       - tools/build-icons/**
+      - tools/rollup-plugins/**
       - pnpm-lock.yaml
 
 jobs:
