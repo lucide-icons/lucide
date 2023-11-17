@@ -51,7 +51,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
   ) {
     if (showDeprecationWarning) {
       console.warn(
-        '[Lucide Vue] This package will be deprecated end of 2023. Please use upgrade to Vue 3 and use the latest lucide package for Vue.',
+        '[Lucide Vue] This package will be deprecated end of 2023. Please upgrade to Vue 3 and use the latest lucide package for Vue.',
       );
       showDeprecationWarning = false;
     }
