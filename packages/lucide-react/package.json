@@ -45,6 +45,7 @@
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {

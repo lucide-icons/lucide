@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, cleanup, waitFor } from '@testing-library/react'
-import { Pen, Edit2, Grid, LucideProps } from '../src/lucide-react';
+import { Pen, Edit2, Grid, LucideProps, Club } from '../src/lucide-react';
 import { Suspense, lazy } from 'react';
 import dynamicIconImports from '../src/dynamicIconImports';
 
@@ -76,6 +76,17 @@ describe('Using lucide icon components', () => {
     expect( container.innerHTML ).toMatchSnapshot();
   });
 
+  it('should merge default classNames with the provided classNames', () => {
+    const testClass = 'my-class';
+    const { container } = render(
+      <Club className={testClass} />,
+    );
+
+    expect(container.firstChild).toHaveClass(testClass);
+    expect(container.firstChild).toHaveClass('lucide');
+    expect(container.firstChild).toHaveClass('lucide-club');
+  });
+
   it('should render icons dynamically by using the dynamicIconImports module', async () => {
     interface IconProps extends Omit<LucideProps, 'ref'> {
       name: keyof typeof dynamicIconImports;
@@ -106,6 +117,4 @@ describe('Using lucide icon components', () => {
     expect( container.innerHTML ).toMatchSnapshot();
 
   });
-
-
 })

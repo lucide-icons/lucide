@@ -32,7 +32,7 @@ describe('Using lucide icon components', () => {
   it('should add a class to the element', () => {
     const {container} = render(Smile, {
       attrs: {
-        class: "my-icon"
+        class: "my-icon asdasdasdasd"
       }
     })
 
@@ -41,6 +41,8 @@ describe('Using lucide icon components', () => {
     const [icon] = document.getElementsByClassName('my-icon');
 
     expect(icon).toHaveClass('my-icon')
+    expect(icon).toHaveClass('lucide')
+    expect(icon).toHaveClass('lucide-smile-icon')
   });
 
   it('should add a style attribute to the element', () => {
