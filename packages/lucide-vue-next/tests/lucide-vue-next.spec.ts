@@ -32,7 +32,7 @@ describe('Using lucide icon components', () => {
   it('should add a class to the element', () => {
     const {container} = render(Smile, {
       attrs: {
-        class: "my-icon asdasdasdasd"
+        class: "my-icon"
       }
     })
 
