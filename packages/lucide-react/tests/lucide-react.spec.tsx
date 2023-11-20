@@ -76,7 +76,7 @@ describe('Using lucide icon components', () => {
     expect( container.innerHTML ).toMatchSnapshot();
   });
 
-  it('should merge default classNames with the provided classNames', () => {
+  it('should apply all classNames to the element', () => {
     const testClass = 'my-class';
     const { container } = render(
       <Club className={testClass} />,

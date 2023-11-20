@@ -80,7 +80,7 @@ describe('Using lucide icon components', () => {
     cleanup()
   });
 
-  it('should merge default classes with the provided classes', () => {
+  it('should add all classes to the element', () => {
     const testClass = 'my-class';
     const { container } = render(() =>
       <Droplet class={testClass} />,
