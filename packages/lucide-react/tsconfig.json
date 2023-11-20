@@ -18,7 +18,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "jsx": "react-jsx",
-    "types": ["node", "@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom"],
   },
   "exclude": ["**/node_modules"]
 }
