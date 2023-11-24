@@ -4,13 +4,15 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "new",
-    "add",
-    "create",
-    "follow",
-    "subscribe"
+    "person",
+    "account",
+    "contact"
   ],
   "categories": [
-    "account"
+    "account",
+    "shapes"
+  ],
+  "aliases": [
+    "user-circle-2"
   ]
 }
