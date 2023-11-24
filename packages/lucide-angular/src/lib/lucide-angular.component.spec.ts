@@ -28,6 +28,12 @@ describe('LucideAngularComponent', () => {
     expect(testHostComponent).toBeTruthy();
   });
 
+  it('should add all classes', () => {
+    testHostFixture.detectChanges();
+
+    expect(getSvgAttribute('class')).toBe('lucide lucide-demo my-icon');
+  });
+
   it('should set color', () => {
     const color = 'red';
     testHostComponent.setColor(color);
@@ -65,6 +71,7 @@ describe('LucideAngularComponent', () => {
     selector: 'lucide-spec-host-component',
     template: ` <i-lucide
       name="demo"
+      class="my-icon"
       [color]="color"
       [size]="size"
       [strokeWidth]="strokeWidth"

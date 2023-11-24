@@ -24,7 +24,7 @@ export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
-    ({ color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, ...rest }, ref) =>
+    ({ color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, className = '', children, ...rest }, ref) =>
       createElement(
         'svg',
         {
@@ -34,7 +34,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
           height: size,
           stroke: color,
           strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-          className: `lucide lucide-${toKebabCase(iconName)}`,
+          className: ['lucide', `lucide-${toKebabCase(iconName)}`, className].join(' '),
           ...rest,
         },
         [

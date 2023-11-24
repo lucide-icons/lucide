@@ -52,7 +52,7 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@atomico/rollup-plugin-sizes": "^1.1.4",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.4",
     "rollup-plugin-license": "^3.0.1",
     "babel-preset-solid": "^1.5.4",
     "jsdom": "^20.0.0",
