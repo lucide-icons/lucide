@@ -9,7 +9,9 @@
     "contact"
   ],
   "categories": [
-    "account",
-    "shapes"
+    "account"
+  ],
+  "aliases": [
+    "user-2"
   ]
 }
