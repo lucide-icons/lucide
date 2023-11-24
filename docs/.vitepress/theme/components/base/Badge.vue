@@ -36,6 +36,7 @@ const component = computed(() => props.href ? 'a' : 'div')
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
   color: var(--vp-c-text-1);
+  text-decoration: none;
   /* width: 56px;
   height: 56px; */
   font-size: 16px;

@@ -116,4 +116,25 @@ describe('Using lucide icon components', () => {
     expect(child2).toEqual(getByTestId(childId2));
     expect(container.innerHTML).toMatchSnapshot();
   })
+
+  it('should duplicate properties to children components', () => {
+    const testId = 'multiple-children';
+
+    const fill = 'red';
+    const color = 'white';
+    const strokeWidth = 10;
+
+    const { container, getByTestId } = render(
+      <Grid data-testid={testId} fill={fill} color={color} strokeWidth={strokeWidth} />
+    );
+    const { children = [] } = getByTestId(testId) as unknown as { children: HTMLCollection };
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i];
+      expect(child.getAttribute('fill')).toBe(fill);
+      expect(child.getAttribute('stroke')).toBe(color);
+      expect(child.getAttribute('stroke-width')).toBe(`${strokeWidth}`);
+    }
+
+    expect(container.innerHTML).toMatchSnapshot();
+  })
 })
