@@ -1,15 +1,12 @@
-name: Lucide Vue checks
+name: Linting
 
 on:
   pull_request:
     paths:
-      - packages/lucide-vue/**
-      - tools/build-icons/**
-      - tools/rollup-plugins/**
-      - pnpm-lock.yaml
+      - icons/**
 
 jobs:
-  lucide-vue:
+  linting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -21,11 +18,8 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm --filter lucide-vue build
-
-      - name: Test
-        run: pnpm --filter lucide-vue test
+      - name: Run Linter
+        run: pnpm lint
