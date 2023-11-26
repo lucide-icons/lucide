@@ -7,9 +7,17 @@
   ],
   "tags": [
     "code",
-    "version control"
+    "version control",
+    "waypoint",
+    "stop",
+    "station"
   ],
   "categories": [
-    "development"
+    "development",
+    "maps",
+    "navigation"
+  ],
+  "aliases": [
+    "git-commit"
   ]
 }

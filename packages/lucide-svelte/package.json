@@ -60,7 +60,7 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/svelte": "^4.0.2",
     "@tsconfig/svelte": "^5.0.0",
     "jsdom": "^20.0.3",

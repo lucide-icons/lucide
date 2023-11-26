@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "group",
-    "people"
+    "code",
+    "version control",
+    "open"
   ],
   "categories": [
-    "account"
+    "development",
+    "arrows"
   ]
 }

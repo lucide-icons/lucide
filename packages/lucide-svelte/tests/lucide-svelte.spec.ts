@@ -23,17 +23,20 @@ describe('Using lucide icon components', () => {
   });
 
   it('should add a class to the element', () => {
+    const testClass = 'my-icon';
     render(Smile, {
       props: {
-        class: "my-icon"
+        class: testClass
       }
     });
 
-    const [icon] = document.getElementsByClassName('my-icon');
+    const [icon] = document.getElementsByClassName(testClass);
 
     expect(icon).toBeInTheDocument();
     expect(icon).toMatchSnapshot();
-    expect(icon.getAttribute("class")).toBe(['lucide-icon','lucide','lucide-smile', 'my-icon'].join(' '));
+    expect(icon).toHaveClass(testClass);
+    expect(icon).toHaveClass('lucide');
+    expect(icon).toHaveClass('lucide-smile');
   });
 
   it('should add a style attribute to the element', () => {
