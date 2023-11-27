@@ -22,7 +22,7 @@ export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionComponent<LucideProps> => {
   const Component = (
-    { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, ...rest }: LucideProps
+    { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, class: classes = '', ...rest }: LucideProps
   ) =>
     h(
       'svg' as unknown as ComponentType<Partial<JSX.SVGAttributes<SVGElement> & { 'stroke-width': number | string }>>,
@@ -32,7 +32,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionCompone
         height: size,
         stroke: color,
         ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-        class: `lucide lucide-${toKebabCase(iconName)}`,
+        class: ['lucide', `lucide-${toKebabCase(iconName)}`, classes].join(' '),
         ...rest,
       },
       [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],

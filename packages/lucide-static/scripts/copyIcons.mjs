@@ -13,7 +13,8 @@ export default async function copyIcons(parsedSvgs, packageDir, license) {
   }
   // eslint-disable-next-line arrow-body-style
   const writeIconPromises = parsedSvgs.map(({ name, contents }) => {
-    const content = `<!-- ${license} -->\n${contents}`;
+    let content = `<!-- ${license} -->\n${contents}`;
+    content = content.replace('<svg', `<svg\n  class="lucide lucide-${name}"`);
 
     return writeFile(`${iconsDirectory}/${name}.svg`, content);
   });

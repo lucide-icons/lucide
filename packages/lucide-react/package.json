@@ -45,23 +45,24 @@
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^11.2.6",
-    "@types/prop-types": "^15.7.5",
-    "@types/react": "^18.0.21",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^11.2.7",
+    "@types/prop-types": "^15.7.10",
+    "@types/react": "^18.2.37",
+    "@vitejs/plugin-react": "^2.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "rollup": "^3.5.1",
-    "rollup-plugin-dts": "^5.0.0",
-    "typescript": "^4.8.4",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^5.3.1",
+    "typescript": "^4.9.5",
+    "vite": "^4.5.0",
+    "vitest": "^0.32.4"
   },
   "peerDependencies": {
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0"

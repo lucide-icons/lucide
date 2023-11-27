@@ -4,15 +4,15 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "followed",
-    "subscribed",
-    "done",
-    "todo",
-    "tick",
-    "complete",
-    "task"
+    "settings",
+    "edit",
+    "cog",
+    "gear"
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "user-cog-2"
   ]
 }
