@@ -48,7 +48,10 @@ svgs.forEach(({ name, contents }) => {
   const importString = `module.exports.${componentName} = require('./icons/${name}');\n`;
   appendFile(importString, `index.js`, LIB_DIR);
 
-  const exportString = `${jsLicense}module.exports = \`${contents}\`;\n`;
+  const svgContent = contents.replace('<svg', `<svg
+  class="lucide lucide-${name}"`);
+
+  const exportString = `${jsLicense}module.exports = \`${svgContent}\`;\n`;
   appendFile(exportString, `${name}.js`, ICON_MODULE_DIR);
 });
 
