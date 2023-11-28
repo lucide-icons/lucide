@@ -1,10 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "danielbayley",
-    "jguddas",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "album",
@@ -24,7 +21,7 @@
     "spin",
     "rotate",
     "rpm",
-    "dj"
+    "dj"    
   ],
   "categories": [
     "devices",
