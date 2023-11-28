@@ -50,7 +50,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
         },
         [
           ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-          ...((Array.isArray(children) ? children : [children]) || []),
+          ...(Array.isArray(children) ? children : [children]),
         ]
       )
   );
