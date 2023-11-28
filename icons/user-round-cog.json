@@ -4,13 +4,15 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "new",
-    "add",
-    "create",
-    "follow",
-    "subscribe"
+    "settings",
+    "edit",
+    "cog",
+    "gear"
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "user-cog-2"
   ]
 }
