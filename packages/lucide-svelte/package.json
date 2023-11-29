@@ -23,7 +23,7 @@
   ],
   "author": "Eric Fennis",
   "type": "module",
-  "main": "dist/esm/lucide-svelte.js",
+  "main": "dist/lucide-svelte.js",
   "exports": {
     ".": {
       "types": "./dist/lucide-svelte.d.ts",
