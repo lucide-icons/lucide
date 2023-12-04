@@ -1,11 +1,10 @@
 import type { SVGAttributes, SvelteHTMLElements } from 'svelte/elements';
 
-export type IconNode = [
-  elementName: keyof SvelteHTMLElements,
-  attrs: SVGAttributes<SVGSVGElement>
-][];
+type SVGAttrs = SVGAttributes<SVGSVGElement>;
 
-export interface IconProps {
+export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: SVGAttrs][];
+
+export interface IconProps extends SVGAttrs {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
