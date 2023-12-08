@@ -60,7 +60,7 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/svelte": "^4.0.2",
     "@tsconfig/svelte": "^5.0.0",
     "jsdom": "^20.0.3",
@@ -71,7 +71,7 @@
     "svelte-preprocess": "^5.0.4",
     "svelte-strip": "^2.0.0",
     "typescript": "^5.1.6",
-    "vite": "^4.3.9",
+    "vite": "^4.4.12",
     "vitest": "^0.32.2"
   },
   "peerDependencies": {

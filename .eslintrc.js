@@ -1,10 +1,13 @@
+const DEFAULT_ATTRS = require('./scripts/render/default-attrs.json');
+
 module.exports = {
+  root: true,
   env: {
     browser: true,
     node: true,
   },
   extends: ['airbnb-base', 'prettier'],
-  plugins: ['import', 'prettier'],
+  plugins: ['import', 'prettier', '@html-eslint'],
   rules: {
     'no-console': 'off',
     'no-param-reassign': 'off',
@@ -15,6 +18,7 @@ module.exports = {
       {
         singleQuote: true,
         trailingComma: 'all',
+        printWidth: 100
       },
     ],
     'import/no-extraneous-dependencies': [
@@ -37,4 +41,39 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  overrides: [
+    {
+      files: ['./icons/*.svg'],
+      parser: '@html-eslint/parser',
+      rules: {
+        'prettier/prettier': 'off',
+        '@html-eslint/require-doctype': 'off',
+        '@html-eslint/no-duplicate-attrs': 'error',
+        '@html-eslint/no-inline-styles': 'error',
+        '@html-eslint/require-attrs': [
+           'error',
+             ...Object.entries(DEFAULT_ATTRS)
+               .map(([attr, value]) => ({ tag: 'svg', attr, value: String(value) }))
+        ],
+        '@html-eslint/indent': ['error', 2],
+        "@html-eslint/no-multiple-empty-lines": ["error", { "max": 0 }],
+        '@html-eslint/no-extra-spacing-attrs': [
+          'error',
+          {
+            enforceBeforeSelfClose: true,
+          },
+        ],
+        '@html-eslint/require-closing-tags': [
+          'error',
+          {
+            selfClosing: 'always',
+            allowSelfClosingCustom: true,
+          },
+        ],
+        '@html-eslint/element-newline': 'error',
+        '@html-eslint/no-trailing-spaces': 'error',
+        '@html-eslint/quotes': 'error',
+      }
+    },
+  ],
 };
