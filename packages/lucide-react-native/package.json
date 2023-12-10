@@ -58,7 +58,7 @@
     "react-native-svg": "^13.0.0",
     "rollup": "^3.5.1",
     "typescript": "^4.8.4",
-    "vite": "^4.3.9",
+    "vite": "^4.4.12",
     "vitest": "^0.32.2"
   },
   "peerDependencies": {
