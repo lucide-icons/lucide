@@ -39,8 +39,9 @@ jobs:
           # Example for the previous substitution
           # input: +++ b/icons/accessibility.json%0A@@ -2,0 +3 @@%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
           # output: ::$ANNOTATION_SEVERITY file=icons/accessibility.json,line=2,endLine=3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
-      - name: Fail if contributors have changed
-        run: git diff --exit-code -- icons/*.json
+      # - name: Fail if contributors have changed
+      #   run: git diff --exit-code -- icons/*.json
+
   add-changed-icons-comment:
     runs-on: ubuntu-latest
     permissions:

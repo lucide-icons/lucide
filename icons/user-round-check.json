@@ -1,12 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "jguddas",
     "karsa-mistmere"
   ],
   "tags": [
+    "followed",
+    "subscribed",
     "done",
     "todo",
     "tick",
@@ -14,8 +13,9 @@
     "task"
   ],
   "categories": [
-    "devices",
-    "notifications",
-    "time"
+    "account"
+  ],
+  "aliases": [
+    "user-check-2"
   ]
 }

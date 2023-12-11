@@ -23,7 +23,7 @@ type IconNode = [elementName: string, attrs: Record<string, string>][]
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionalComponent<SVGProps> => (
-  { size, strokeWidth = 2, absoluteStrokeWidth, color, ...props }, // props
+  { size, strokeWidth = 2, absoluteStrokeWidth, color, class: classes, ...props }, // props
   { attrs, slots } // context
   ) => {
   return h(
@@ -35,7 +35,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionalCompo
       stroke: color || defaultAttributes.stroke,
       'stroke-width': absoluteStrokeWidth ?  Number(strokeWidth) * 24 / Number(size) : strokeWidth,
       ...attrs,
-      class: ['lucide', `lucide-${toKebabCase(iconName)}`, attrs?.class || ''],
+      class: ['lucide', `lucide-${toKebabCase(iconName)}`],
       ...props,
     },
     [

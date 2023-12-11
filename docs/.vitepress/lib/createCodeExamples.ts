@@ -1,41 +1,29 @@
 import {
-  BUNDLED_LANGUAGES,
-  type IThemeRegistration
-} from 'shiki'
+  bundledLanguages,
+  type ThemeRegistration
+} from 'shikiji'
 import {
   getHighlighter,
-} from 'shiki-processor'
+} from 'shikiji'
+
 
 type CodeExampleType = {
   title: string,
-  lang: string,
-  codes: {
-    language?: string,
-    code: string,
-    metastring?: string,
-  }[],
+  language: string,
+  code: string,
 }[]
 
 const getIconCodes = (): CodeExampleType => {
   return [
     {
-      lang: 'html',
+      language: 'html',
       title: 'HTML',
-      codes: [
-        {
-          language: 'html',
-          code: `<i data-lucide="Name"></i>
-`,
-        },
-      ],
+      code: `<i data-lucide="Name"></i>`
     },
     {
-      lang: 'tsx',
+      language: 'tsx',
       title: 'React',
-      codes: [
-        {
-          language: 'tsx',
-          code: `import { PascalCase } from 'lucide-react';
+      code: `import { PascalCase } from 'lucide-react';
 
 const App = () => {
   return (
@@ -45,17 +33,11 @@ const App = () => {
 
 export default App;
 `,
-
-        },
-      ],
     },
     {
-      lang: 'vue',
-      title: 'Vue 3',
-      codes: [
-        {
-          language: 'vue',
-          code: `<script setup>
+      language: 'vue',
+      title: 'Vue',
+      code: `<script setup>
   import { PascalCase } from 'lucide-vue-next';
 </script>
 
@@ -63,33 +45,21 @@ export default App;
   <PascalCase />
 </template>
 `,
-
-        },
-      ],
     },
     {
-      lang: 'svelte',
+      language: 'svelte',
       title: 'Svelte',
-      codes: [
-        {
-          language: 'svelte',
-          code: `<script>
+      code: `<script>
 import { PascalCase } from 'lucide-svelte';
 </script>
 
 <PascalCase />
 `,
-
-        },
-      ],
     },
     {
-      lang: 'preact',
+      language: 'tsx',
       title: 'Preact',
-      codes: [
-        {
-          language: 'tsx',
-          code: `import { PascalCase } from 'lucide-preact';
+      code: `import { PascalCase } from 'lucide-preact';
 
 const App = () => {
   return (
@@ -99,17 +69,11 @@ const App = () => {
 
 export default App;
 `,
-
-        },
-      ],
     },
     {
-      lang: 'solid',
+      language: 'tsx',
       title: 'Solid',
-      codes: [
-        {
-          language: 'tsx',
-          code: `import { PascalCase } from 'lucide-solid';
+      code: `import { PascalCase } from 'lucide-solid';
 
 const App = () => {
   return (
@@ -119,17 +83,11 @@ const App = () => {
 
 export default App;
 `,
-
-        },
-      ],
     },
     {
-      lang: 'angular',
+      language: 'tsx',
       title: 'Angular',
-      codes: [
-        {
-          language: 'tsx',
-          code: `// app.module.ts
+      code: `// app.module.ts
 import { LucideAngularModule, PascalCase } from 'lucide-angular';
 
 @NgModule({
@@ -141,54 +99,38 @@ import { LucideAngularModule, PascalCase } from 'lucide-angular';
 // app.component.html
 <lucide-icon name="Name"></lucide-icon>
 `,
-        },
-      ],
     },
     {
-      lang: 'html',
+      language: 'html',
       title: 'Icon Font',
-      codes: [
-        {
-          language: 'html',
-          code: `<style>
+      code: `<style>
 @import ('~lucide-static/font/Lucide.css');
 </style>
 
 <div class="icon-Name"></div>
 `,
-        },
-      ],
-    },
-    {
-      lang: 'dart',
-      title: 'Flutter',
-      codes: [
-        {
-          language: 'dart',
-          code: `Icon(LucideIcons.Name);
-`,
-        },
-      ],
-    },
+    }
   ]
 }
 
 export type ThemeOptions =
-  | IThemeRegistration
-  | { light: IThemeRegistration; dark: IThemeRegistration }
+  | ThemeRegistration
+  | { light: ThemeRegistration; dark: ThemeRegistration }
 
 const highLightCode = async (code: string, lang: string, active?: boolean) => {
   const highlighter = await getHighlighter({
-    themes: ['material-theme-palenight'],
-    langs: [...BUNDLED_LANGUAGES],
-    processors: []
+    themes: ['github-light', 'github-dark'],
+    langs: Object.keys(bundledLanguages)
   })
 
   const highlightedCode = highlighter.codeToHtml(code, {
     lang,
-    // lineOptions,
-    theme: 'material-theme-palenight'
-  }).replace('background-color: #292D3E', '')
+    themes: {
+      light: 'github-light',
+      dark: 'github-dark'
+    },
+    defaultColor: false
+  }).replace('shiki-themes', 'shiki-themes vp-code')
 
   return `<div class="language-${lang} ${active ? 'active' : ''}">
   <button title="Copy Code" class="copy"></button>
@@ -201,16 +143,15 @@ const highLightCode = async (code: string, lang: string, active?: boolean) => {
 export default async function createCodeExamples() {
   const codes = getIconCodes();
 
-  const codeExamplePromises = codes.map(async (codeTemplate, index) => {
-    const { title, lang, codes } = codeTemplate;
+  const codeExamplePromises = codes.map(async ({ title, language, code }, index) => {
     const isFirst = index === 0;
 
-    const code = await highLightCode(codes[0].code, codes[0].language || lang, isFirst);
+    const codeString = await highLightCode(code, language, isFirst);
 
     return {
       title,
-      language: codes[0].language || lang,
-      code,
+      language: language,
+      code: codeString,
     };
   })
 
