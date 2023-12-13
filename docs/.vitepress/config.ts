@@ -119,6 +119,10 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path'
     },
+    carbonAds: {
+      code: 'CWYIC53U',
+      placement: 'lucidedev'
+    }
   },
   sitemap: {
     hostname: 'https://lucide.dev/'
