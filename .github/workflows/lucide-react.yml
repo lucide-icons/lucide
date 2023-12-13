@@ -5,6 +5,7 @@ on:
     paths:
       - packages/lucide-react/**
       - tools/build-icons/**
+      - tools/rollup-plugins/**
       - scripts/generateNextJSAliases.mjs
       - pnpm-lock.yaml
 
