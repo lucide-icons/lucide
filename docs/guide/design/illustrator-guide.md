@@ -14,15 +14,15 @@ The Illustrator template is created following guidelines from the [Icon Design G
 
 **Workflow:**
 
-1. Download and open the [Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/templates/illustrator_template.ai).
+1. Download and open the [Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
 
 2. You can now remove the content from the example logo layer ("Draw") and start creating.
 
 3. Verify that you follow the [Icon Design Guidelines](icon-design-guide.md).
 
-4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unecessary layers (especially "Padding" and "Grid").
+4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unnecessary layers (especially "Padding" and "Grid").
 
-5. Export the file with the export menu under: `Export > Export As..` than safe the file as SVG. Select the following options in the SVG Options dialog:
+5. Export the file with the export menu under: `Export > Export As..` then save the file as SVG. Select the following options in the SVG Options dialog:
 
 ![SVG export options in Illustrator](../../images/illustrator-svg-options.png?raw=true "Setting Page Size")
 
