@@ -11,5 +11,5 @@
   /* layout stuff */
   display: flex;
   gap: 0.25em;
-  items-align: center;
+  align-items: center;
 }

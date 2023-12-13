@@ -18,7 +18,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 ### Why choose Lucide over Feather Icons
 
 - More icons to work with: Lucide already has hundreds of icons more than Feather does.
-- Official librairies and integrations with popular frameworks and design tools.
+- Official libraries and integrations with popular frameworks and design tools.
 - Well maintained code base.
 - Active community, regularly growing and improving the set.
 
@@ -35,7 +35,6 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
   - [Figma](#figma)
   - [Laravel](#laravel)
-  - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
   - [Hyva](#hyva)
@@ -199,16 +198,6 @@ composer require mallardduck/blade-lucide-icons
 ```
 
 For more details, see the [documentation](https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md).
-
-### Flutter
-
-Implementation of Lucide icon library for Flutter applications.
-
-```sh
-flutter pub add lucide_icons
-```
-
-For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
 
 ### Svelte
 
