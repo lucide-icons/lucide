@@ -4,15 +4,18 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "arrow",
     "filter",
     "sort",
     "descending",
-    "alphabetical"
+    "alphabetical",
+    "reverse"
   ],
   "categories": [
     "text",
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "arrow-up-za"
   ]
 }

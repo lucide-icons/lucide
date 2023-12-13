@@ -11,7 +11,8 @@
     "square",
     "rectangular",
     "marquee",
-    "tool"
+    "tool",
+    "dashed"
   ],
   "categories": [
     "text",

@@ -5,11 +5,12 @@
     "ericfennis"
   ],
   "tags": [
-    "archive",
     "unarchive",
-    "restore",
     "index",
-    "box"
+    "backup",
+    "box",
+    "storage",
+    "records"
   ],
   "categories": [
     "files",

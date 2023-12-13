@@ -12,13 +12,17 @@
   },
   "title": "Lucide Icons icon schema",
   "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "categories", "tags"],
   "properties": {
-    "tags": {
+    "$schema": {
+      "type": "string"
+    },
+    "aliases": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "minItems": 1,
       "uniqueItems": true
     },
     "categories": {
@@ -33,6 +37,15 @@
       "items": {
         "type": "string"
       },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
       "uniqueItems": true
     }
   },

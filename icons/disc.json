@@ -9,13 +9,22 @@
   "tags": [
     "album",
     "music",
+    "songs",
+    "format",
     "cd",
     "dvd",
-    "format",
-    "dj",
+    "vinyl",
+    "sleeve",
+    "cover",
+    "platinum",
+    "compilation",
+    "ep",
+    "recording",
+    "playback",
     "spin",
     "rotate",
-    "rpm"
+    "rpm",
+    "dj"
   ],
   "categories": [
     "devices",
