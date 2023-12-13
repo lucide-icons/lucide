@@ -1,19 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "karsa-mistmere"
-    ],
-    "metadataBy": [
-      "karsa-mistmere"
-    ],
-    "optimizedBy": []
-  },
   "tags": [
     "electricity",
     "energy",
     "transmission line",
-    "telegraph pole"
+    "telegraph pole",
+    "power lines"
   ],
   "categories": [
     "buildings",

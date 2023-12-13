@@ -1,16 +1,10 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "mittalyashu"
-    ],
-    "metadataBy": [
-      "mittalyashu"
-    ],
-    "optimizedBy": [
-      "ericfennis"
-    ]
-  },
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jguddas"
+  ],
   "tags": [
     "arrow",
     "cursor",

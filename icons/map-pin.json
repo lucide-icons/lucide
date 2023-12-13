@@ -15,12 +15,14 @@
   },
   "tags": [
     "location",
-    "navigation",
-    "travel",
-    "marker"
+    "waypoint",
+    "marker",
+    "drop"
   ],
   "categories": [
-    "account",
-    "maps"
+    "maps",
+    "navigation",
+    "travel",
+    "account"
   ]
 }

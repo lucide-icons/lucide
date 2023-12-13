@@ -10,14 +10,18 @@
     "optimizedBy": []
   },
   "tags": [
+    "outwards",
     "direction",
+    "north-west",
+    "diagonal",
     "keyboard",
-    "key",
-    "escape",
-    "button"
+    "button",
+    "escape"
   ],
   "categories": [
     "arrows",
+    "navigation",
+    "maps",
     "development"
   ]
 }

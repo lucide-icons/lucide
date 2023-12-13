@@ -10,10 +10,18 @@
     "optimizedBy": []
   },
   "tags": [
-    "direction"
+    "backwards",
+    "reverse",
+    "direction",
+    "south",
+    "sign",
+    "keyboard",
+    "button"
   ],
   "categories": [
     "arrows",
-    "shapes"
+    "navigation",
+    "shapes",
+    "gaming"
   ]
 }

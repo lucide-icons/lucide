@@ -16,10 +16,14 @@
   "tags": [
     "find",
     "search",
-    "selection"
+    "selection",
+    "dashed"
   ],
   "categories": [
     "text",
     "cursors"
+  ],
+  "aliases": [
+    "text-selection"
   ]
 }

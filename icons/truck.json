@@ -1,25 +1,19 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "colebemis"
-    ],
-    "metadataBy": [
-      "colebemis"
-    ],
-    "optimizedBy": [
-      "ahtohbi4",
-      "ericfennis",
-      "Andreto",
-      "csandman",
-      "karsa-mistmere"
-    ]
-  },
+  "contributors": [
+    "colebemis",
+    "ahtohbi4",
+    "ericfennis",
+    "Andreto",
+    "csandman",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "delivery",
     "van",
     "shipping",
-    "transport",
+    "haulage",
     "lorry"
   ],
   "categories": [

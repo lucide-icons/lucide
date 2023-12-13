@@ -12,10 +12,17 @@
     ]
   },
   "tags": [
-    "direction"
+    "backwards",
+    "reverse",
+    "direction",
+    "south",
+    "sign",
+    "button"
   ],
   "categories": [
     "arrows",
-    "shapes"
+    "navigation",
+    "shapes",
+    "gaming"
   ]
 }

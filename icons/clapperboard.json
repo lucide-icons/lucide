@@ -1,23 +1,22 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "it-is-not"
-    ],
-    "metadataBy": [
-      "it-is-not"
-    ],
-    "optimizedBy": [
-      "karsa-mistmere"
-    ]
-  },
+  "contributors": [
+    "it-is-not",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "movie",
     "film",
     "video",
     "camera",
+    "cinema",
+    "cut",
+    "action",
+    "television",
     "tv",
-    "television"
+    "show",
+    "entertainment"
   ],
   "categories": [
     "multimedia"

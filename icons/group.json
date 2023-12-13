@@ -16,7 +16,8 @@
     "units",
     "collection",
     "cluster",
-    "gather"
+    "gather",
+    "dashed"
   ],
   "categories": [
     "shapes",

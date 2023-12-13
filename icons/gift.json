@@ -1,17 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "colebemis"
-    ],
-    "metadataBy": [
-      "colebemis"
-    ],
-    "optimizedBy": [
-      "csandman",
-      "ericfennis"
-    ]
-  },
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas"
+  ],
   "tags": [
     "present",
     "box",

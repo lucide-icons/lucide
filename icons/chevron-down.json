@@ -10,9 +10,14 @@
     "optimizedBy": []
   },
   "tags": [
-    "arrow"
+    "backwards",
+    "reverse",
+    "slow",
+    "dropdown"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

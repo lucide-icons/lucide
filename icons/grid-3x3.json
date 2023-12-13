@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": {
+    "designedBy": [
+      "colebemis"
+    ],
+    "metadataBy": [
+      "colebemis"
+    ],
+    "optimizedBy": [
+      "zenoamaro",
+      "csandman",
+      "mittalyashu",
+      "ericfennis"
+    ]
+  },
+  "tags": [
+    "table",
+    "rows",
+    "columns"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "design"
+  ],
+  "aliases": [
+    "grid",
+    "grid-3-x-3"
+  ]
+}

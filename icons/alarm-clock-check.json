@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": {
+    "designedBy": [
+      "mittalyashu"
+    ],
+    "metadataBy": [
+      "danielbayley"
+    ],
+    "optimizedBy": [
+      "ericfennis",
+      "jguddas",
+      "karsa-mistmere"
+    ]
+  },
+  "tags": [
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
+  ],
+  "categories": [
+    "devices",
+    "notifications",
+    "time"
+  ],
+  "aliases": [
+    "alarm-check"
+  ]
+}

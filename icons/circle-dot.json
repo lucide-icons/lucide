@@ -14,12 +14,15 @@
     "dot",
     "progress",
     "issue",
-    "radio button",
+    "code",
+    "coding",
+    "version control",
     "choices",
     "multiple choice",
     "choose"
   ],
   "categories": [
+    "development",
     "shapes"
   ]
 }

@@ -10,10 +10,18 @@
     "optimizedBy": []
   },
   "tags": [
+    "user",
     "person",
-    "user"
+    "family",
+    "friend",
+    "acquaintance",
+    "listing",
+    "networking"
   ],
   "categories": [
-    "account"
+    "account",
+    "connectivity",
+    "communication",
+    "social"
   ]
 }

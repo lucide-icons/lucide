@@ -12,9 +12,12 @@
     ]
   },
   "tags": [
-    "direction"
+    "direction",
+    "north-west",
+    "diagonal"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

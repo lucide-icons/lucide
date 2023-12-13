@@ -10,16 +10,23 @@
     "optimizedBy": []
   },
   "tags": [
-    "arrow",
     "caret",
     "keyboard",
-    "key",
     "mac",
     "control",
     "ctrl",
-    "button"
+    "superscript",
+    "exponential",
+    "power",
+    "ahead",
+    "fast",
+    "^",
+    "dropdown"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maths",
+    "gaming"
   ]
 }

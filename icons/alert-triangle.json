@@ -17,10 +17,12 @@
     "warning",
     "alert",
     "danger",
-    "exclamation mark"
+    "exclamation mark",
+    "linter"
   ],
   "categories": [
     "notifications",
-    "shapes"
+    "shapes",
+    "development"
   ]
 }

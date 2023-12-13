@@ -11,9 +11,11 @@
     "optimizedBy": []
   },
   "tags": [
-    "sign",
     "signpost",
     "direction",
+    "right",
+    "east",
+    "forward",
     "version control"
   ],
   "categories": [

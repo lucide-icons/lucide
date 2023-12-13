@@ -12,10 +12,19 @@
     ]
   },
   "tags": [
-    "arrow"
+    "back",
+    "previous",
+    "less than",
+    "fewer",
+    "menu",
+    "panel",
+    "button",
+    "keyboard",
+    "<"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }

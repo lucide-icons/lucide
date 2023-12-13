@@ -12,9 +12,14 @@
     ]
   },
   "tags": [
-    "direction"
+    "previous",
+    "back",
+    "direction",
+    "west",
+    "<-"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

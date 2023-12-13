@@ -15,11 +15,17 @@
   },
   "tags": [
     "cube",
-    "package"
+    "package",
+    "container",
+    "storage",
+    "geometry",
+    "3d",
+    "isometric"
   ],
   "categories": [
     "shapes",
     "gaming",
-    "development"
+    "development",
+    "maths"
   ]
 }

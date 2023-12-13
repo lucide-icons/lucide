@@ -1,25 +1,27 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "ericfennis"
-    ],
-    "metadataBy": [
-      "ericfennis"
-    ],
-    "optimizedBy": [
-      "ericfennis",
-      "mittalyashu",
-      "wojtekmaj"
-    ]
-  },
+  "contributors": [
+    "ericfennis",
+    "wojtekmaj",
+    "mittalyashu",
+    "danielbayley"
+  ],
   "tags": [
+    "rubber",
     "edit",
-    "pen",
-    "create"
+    "create",
+    "draw",
+    "sketch",
+    "draft",
+    "writer",
+    "writing",
+    "stationery",
+    "artist"
   ],
   "categories": [
     "design",
-    "cursors"
+    "cursors",
+    "tools",
+    "text"
   ]
 }

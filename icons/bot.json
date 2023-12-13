@@ -1,21 +1,16 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "mittalyashu"
-    ],
-    "metadataBy": [
-      "karsa-mistmere"
-    ],
-    "optimizedBy": [
-      "ericfennis"
-    ]
-  },
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "robot",
-    "ai"
+    "ai",
+    "chat",
+    "assistant"
   ],
   "categories": [
-    "development"
+    "development",
+    "social"
   ]
 }

@@ -10,10 +10,16 @@
     "optimizedBy": []
   },
   "tags": [
-    "key",
-    "forward"
+    "next",
+    "forward",
+    "direction",
+    "east",
+    "turn",
+    "corner"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

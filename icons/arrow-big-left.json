@@ -15,10 +15,15 @@
     ]
   },
   "tags": [
-    "key",
-    "back"
+    "previous",
+    "back",
+    "direction",
+    "west",
+    "indicate turn"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

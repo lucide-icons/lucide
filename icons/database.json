@@ -13,9 +13,15 @@
   },
   "tags": [
     "storage",
-    "memory"
+    "memory",
+    "container",
+    "tin",
+    "pot",
+    "bytes",
+    "servers"
   ],
   "categories": [
-    "devices"
+    "devices",
+    "development"
   ]
 }

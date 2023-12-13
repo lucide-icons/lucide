@@ -17,12 +17,23 @@
     "diameter",
     "zero",
     "Ø",
-    "null",
     "nothing",
+    "null",
+    "void",
+    "ban",
     "maths",
+    "divide",
+    "division",
+    "half",
+    "split",
     "/"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "maths",
+    "development"
+  ],
+  "aliases": [
+    "circle-slashed"
   ]
 }

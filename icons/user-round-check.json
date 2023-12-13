@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
+  "tags": [
+    "followed",
+    "subscribed",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    "user-check-2"
+  ]
+}

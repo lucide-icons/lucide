@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": {
+    "designedBy": [
+      "ghost"
+    ],
+    "metadataBy": [
+      "ghost"
+    ],
+    "optimizedBy": [
+      "karsa-mistmere",
+      "ericfennis"
+    ]
+  },
+  "tags": [
+    "railway",
+    "metro",
+    "subway",
+    "underground",
+    "track",
+    "line",
+    "tourism"
+  ],
+  "categories": [
+    "transportation"
+  ],
+  "aliases": [
+    "train"
+  ]
+}

@@ -10,11 +10,17 @@
     "optimizedBy": []
   },
   "tags": [
-    "key",
+    "backwards",
+    "reverse",
+    "slow",
+    "direction",
+    "south",
     "download"
   ],
   "categories": [
     "arrows",
+    "navigation",
+    "gaming",
     "files"
   ]
 }

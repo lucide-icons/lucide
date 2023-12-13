@@ -2,6 +2,8 @@ import simpleGit from 'simple-git';
 import {Octokit} from '@octokit/rest';
 import fs from 'node:fs';
 import path from 'path';
+import simpleGit from 'simple-git';
+import { Octokit } from '@octokit/rest';
 import pMemoize from 'p-memoize';
 import crypto from 'crypto';
 
@@ -94,7 +96,7 @@ const getContributors = async (file, includeCoAuthors, isMetadata = false) => {
     unknown: new Map(),
   }
   const emails = new Map();
-  for (let i = 0; i < commits.length; i += 1) {
+  for (let i = commits.length - 1; i >= 0; i -= 1) {
     const commit = commits[i];
     let status, renamedFile;
 
@@ -219,8 +221,8 @@ await Promise.all(
           ...rest,
         },
         null,
-        2
-      )
+        2,
+      ),
     );
-  })
+  }),
 );

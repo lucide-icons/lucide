@@ -1,14 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "karsa-mistmere"
-    ],
-    "metadataBy": [
-      "karsa-mistmere"
-    ],
-    "optimizedBy": []
-  },
+  "aliases": [
+    "folder-cog-2"
+  ],
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "directory",
     "settings",

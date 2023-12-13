@@ -10,9 +10,14 @@
     "optimizedBy": []
   },
   "tags": [
-    "direction"
+    "outwards",
+    "direction",
+    "north-east",
+    "diagonal"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maps"
   ]
 }

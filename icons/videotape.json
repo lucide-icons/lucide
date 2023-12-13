@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "vhs",
+    "movie",
+    "film",
+    "recording",
+    "motion picture",
+    "showreel",
+    "cassette"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "photography",
+    "files"
+  ]
+}

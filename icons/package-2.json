@@ -12,6 +12,11 @@
   "tags": [
     "box",
     "container",
+    "storage",
+    "sealed",
+    "packed",
+    "unopened",
+    "undelivered",
     "archive",
     "zip"
   ],

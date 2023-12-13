@@ -38,6 +38,7 @@ export default eventHandler((event) => {
 
   defaultContentType(event, 'image/svg+xml')
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000')
+  setResponseHeader(event, 'Access-Control-Allow-Origin', '*')
 
   return svg
 

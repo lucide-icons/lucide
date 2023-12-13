@@ -16,7 +16,11 @@
   },
   "tags": [
     "barcode",
-    "scan"
+    "scan",
+    "link",
+    "url",
+    "information",
+    "digital"
   ],
   "categories": [
     "development",

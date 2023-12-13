@@ -10,7 +10,9 @@
     "optimizedBy": []
   },
   "tags": [
+    "forward",
     "direction",
+    "north",
     "upload",
     "git",
     "version control",
@@ -21,6 +23,7 @@
   ],
   "categories": [
     "arrows",
+    "navigation",
     "files",
     "development"
   ]

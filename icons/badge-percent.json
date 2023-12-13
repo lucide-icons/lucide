@@ -15,12 +15,17 @@
     "verified",
     "unverified",
     "sale",
-    "marketing"
+    "discount",
+    "offer",
+    "marketing",
+    "sticker",
+    "price tag"
   ],
   "categories": [
     "account",
     "social",
     "money",
+    "shopping",
     "maths",
     "shapes"
   ]

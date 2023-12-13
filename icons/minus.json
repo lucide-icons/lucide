@@ -13,20 +13,33 @@
   },
   "tags": [
     "subtract",
+    "remove",
+    "decrease",
+    "decrement",
+    "reduce",
+    "negative",
     "calculate",
-    "maths",
     "line",
-    "divide",
-    "division",
+    "divider",
+    "separator",
     "horizontal rule",
     "hr",
+    "html",
+    "markup",
+    "markdown",
+    "---",
+    "toolbar",
     "operator",
     "code",
-    "-"
+    "coding",
+    "minimum",
+    "downgrade"
   ],
   "categories": [
     "maths",
-    "shapes",
-    "development"
+    "development",
+    "text",
+    "tools",
+    "shapes"
   ]
 }

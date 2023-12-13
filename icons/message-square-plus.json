@@ -13,10 +13,13 @@
     "comment",
     "chat",
     "conversation",
-    "add",
-    "feedback"
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "add"
   ],
   "categories": [
-    "account"
+    "account",
+    "social"
   ]
 }

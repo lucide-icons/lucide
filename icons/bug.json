@@ -1,23 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": {
-    "designedBy": [
-      "ericfennis"
-    ],
-    "metadataBy": [
-      "karsa-mistmere"
-    ],
-    "optimizedBy": [
-      "mittalyashu",
-      "ericfennis"
-    ]
-  },
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "issue",
     "report",
+    "debug",
+    "code",
     "insect"
   ],
   "categories": [
-    "development"
+    "development",
+    "animals"
   ]
 }

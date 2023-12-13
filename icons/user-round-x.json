@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": {
+    "designedBy": [
+      "karsa-mistmere"
+    ],
+    "metadataBy": [
+      "karsa-mistmere"
+    ],
+    "optimizedBy": []
+  },
+  "tags": [
+    "delete",
+    "remove",
+    "unfollow",
+    "unsubscribe",
+    "unavailable"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    "user-x-2"
+  ]
+}

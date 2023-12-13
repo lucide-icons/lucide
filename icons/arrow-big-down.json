@@ -14,9 +14,14 @@
     ]
   },
   "tags": [
-    "key"
+    "backwards",
+    "reverse",
+    "direction",
+    "south"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

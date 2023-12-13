@@ -10,10 +10,18 @@
     "optimizedBy": []
   },
   "tags": [
-    "direction"
+    "next",
+    "forward",
+    "direction",
+    "west",
+    "sign",
+    "keyboard",
+    "button",
+    "->"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }

@@ -12,10 +12,16 @@
     ]
   },
   "tags": [
-    "direction"
+    "forward",
+    "direction",
+    "north",
+    "sign",
+    "button"
   ],
   "categories": [
     "arrows",
-    "shapes"
+    "navigation",
+    "shapes",
+    "gaming"
   ]
 }

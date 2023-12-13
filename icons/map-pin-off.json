@@ -14,11 +14,13 @@
   },
   "tags": [
     "location",
-    "navigation",
-    "travel",
-    "marker"
+    "waypoint",
+    "marker",
+    "remove"
   ],
   "categories": [
-    "maps"
+    "maps",
+    "navigation",
+    "travel"
   ]
 }

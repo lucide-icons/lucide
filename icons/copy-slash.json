@@ -25,10 +25,12 @@
     "divide",
     "division",
     "split",
+    "or",
     "/"
   ],
   "categories": [
     "text",
+    "development",
     "maths"
   ]
 }

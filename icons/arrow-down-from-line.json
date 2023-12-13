@@ -10,7 +10,10 @@
     "optimizedBy": []
   },
   "tags": [
+    "backwards",
+    "reverse",
     "direction",
+    "south",
     "download",
     "expand",
     "fold",
@@ -18,6 +21,7 @@
   ],
   "categories": [
     "arrows",
+    "navigation",
     "files"
   ]
 }

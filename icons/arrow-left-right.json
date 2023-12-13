@@ -13,14 +13,18 @@
   },
   "tags": [
     "bidirectional",
-    "direction",
+    "two-way",
+    "2-way",
     "swap",
     "switch",
     "transaction",
     "reorder",
-    "move"
+    "move",
+    "<-",
+    "->"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }
