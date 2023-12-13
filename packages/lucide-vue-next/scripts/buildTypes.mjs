@@ -24,7 +24,7 @@ const TYPES_FILE = 'lucide-vue-next.d.ts';
 
 // Generates header of d.ts file include some types and functions
 let declarationFileContent = `\
-import { SVGAttributes, FunctionalComponent } from 'vue';
+import { SVGAttributes, DefineComponent } from 'vue';
 declare module 'lucide-vue-next'
 
 // Create interface extending SVGAttributes
@@ -34,7 +34,7 @@ export interface SVGProps extends Partial<SVGAttributes> {
   absoluteStrokeWidth?: boolean
 }
 
-export type Icon = (props: SVGProps) => FunctionalComponent<SVGProps>
+export type Icon = DefineComponent<SVGProps>
 
 // Generated icons
 `;

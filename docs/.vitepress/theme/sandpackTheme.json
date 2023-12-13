@@ -1,0 +1,34 @@
+{
+  "colors": {
+    "surface1": "var(--vp-code-block-bg)",
+    "surface2": "var(--vp-code-block-bg)",
+    "surface3": "var(--vp-code-line-highlight-color)",
+    "clickable": "var(--vp-c-text-2)",
+    "base": "#323232",
+    "disabled": "#C5C5C5",
+    "hover": "var(--vp-c-brand)",
+    "accent": "var(--vp-c-brand)",
+    "error": "var(--vp-c-red)",
+    "errorSurface": "#ffeceb"
+  },
+  "syntax": {
+    "plain": "var(--vp-code-editor-plain)",
+    "comment": {
+      "color": "var(--vp-code-editor-comment)",
+      "fontStyle": "italic"
+    },
+    "keyword": "var(--vp-code-editor-keyword)",
+    "tag": "var(--vp-code-editor-tag)",
+    "punctuation": "var(--vp-code-editor-punctuation)",
+    "definition": "var(--vp-code-editor-definition)",
+    "property": "var(--vp-code-editor-property)",
+    "static": "var(--vp-code-editor-static)",
+    "string": "var(--vp-code-editor-string)"
+  },
+  "font": {
+    "body": "var(--vp-font-family-base)",
+    "mono": "var(--vp-font-family-mono)",
+    "size": "var(--vp-code-font-size)",
+    "lineHeight": "var(--vp-code-line-height)"
+  }
+}
