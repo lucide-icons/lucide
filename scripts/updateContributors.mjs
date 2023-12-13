@@ -1,7 +1,7 @@
-import simpleGit from 'simple-git';
-import { Octokit } from '@octokit/rest';
 import fs from 'node:fs';
 import path from 'path';
+import simpleGit from 'simple-git';
+import { Octokit } from '@octokit/rest';
 import pMemoize from 'p-memoize';
 
 const IGNORED_COMMITS = ['433bbae4f1d4abb50a26306d6679a38ace5c8b78'];
@@ -25,7 +25,7 @@ const getUserName = pMemoize(
     }
     return fetchedCommit?.author?.login;
   },
-  { cacheKey: ([commit]) => commit.author_email, cache }
+  { cacheKey: ([commit]) => commit.author_email, cache },
 );
 
 // Check that a commit changes more than just the icon name
@@ -51,7 +51,7 @@ const getContributors = async (file, includeCoAuthors) => {
       }
       if (includeCoAuthors) {
         const matches = commit.body.matchAll(
-          /(^Author:|^Co-authored-by:)\s+(?<author>[^<]+)\s+<(?<email>[^>]+)>/gm
+          /(^Author:|^Co-authored-by:)\s+(?<author>[^<]+)\s+<(?<email>[^>]+)>/gm,
         );
         // eslint-disable-next-line no-restricted-syntax
         for (const match of matches) {
@@ -66,8 +66,7 @@ const getContributors = async (file, includeCoAuthors) => {
   return Promise.all(Array.from(emails.values()));
 };
 
-const files = process.argv
-  .slice(2)
+const files = process.env.CHANGED_FILES.slice(2)
   .map((file) => file.replace('.json', '.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
 
@@ -100,8 +99,8 @@ await Promise.all(
           ...rest,
         },
         null,
-        2
-      )
+        2,
+      ),
     );
-  })
+  }),
 );
