@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "comment",
@@ -11,7 +9,9 @@
     "conversation",
     "dialog",
     "feedback",
-    "speech bubble"
+    "speech bubble",
+    "network",
+    "forward"
   ],
   "categories": [
     "account",
