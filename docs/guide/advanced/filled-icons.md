@@ -28,4 +28,4 @@ Example with stars:
 
 ## Will Lucide have fills in the future?
 
-This feature is requested several times and discussion is happening at: [#458](https://github.com/lucide-icons/lucide/discussions/458).
+This feature has been requested several times and discussion is happening at [#458](https://github.com/lucide-icons/lucide/discussions/458).
