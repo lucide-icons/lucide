@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -29,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-        run: node ./scripts/updateContributors.mjs "$CHANGED_FILES"
+        run: node ./scripts/updateContributors.mjs
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
