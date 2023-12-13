@@ -10,6 +10,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-solid"
   },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "author": "Eric Fennis",
   "source": "src/lucide-solid.ts",
   "main": "dist/cjs/lucide-solid.js",
@@ -18,6 +29,7 @@
   "files": ["dist"],
   "exports": {
     ".": {
+      "types": "./dist/types/lucide-solid.d.ts",
       "solid": "./dist/source/lucide-solid.js",
       "import": "./dist/esm/lucide-solid.js",
       "browser": "./dist/esm/lucide-solid.js",
@@ -40,7 +52,7 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@atomico/rollup-plugin-sizes": "^1.1.4",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.4",
     "rollup-plugin-license": "^3.0.1",
     "babel-preset-solid": "^1.5.4",
     "jsdom": "^20.0.0",
@@ -49,7 +61,7 @@
     "solid-js": "^1.7.7",
     "solid-testing-library": "^0.5.1",
     "typescript": "^4.9.4",
-    "vite": "^4.3.9",
+    "vite": "^4.4.12",
     "vitest": "^0.32.2",
     "vite-plugin-solid": "^2.7.0"
   },

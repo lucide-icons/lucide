@@ -44,3 +44,14 @@ export interface Release {
   version: string
   date: string
 }
+
+interface ShowcaseItemImage {
+  light: string
+  dark: string
+}
+
+export interface ShowcaseItem {
+  name: string
+  url: string
+  image: ShowcaseItemImage
+}
