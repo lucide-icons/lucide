@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "comment",
@@ -11,10 +9,16 @@
     "conversation",
     "dialog",
     "feedback",
+    "positive",
+    "like",
+    "love",
+    "interest",
+    "valentine",
+    "dating",
+    "date",
     "speech bubble"
   ],
   "categories": [
-    "account",
     "social"
   ]
 }

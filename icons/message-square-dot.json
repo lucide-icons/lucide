@@ -1,11 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "unread",
+    "unresolved",
     "comment",
     "chat",
     "conversation",
@@ -15,6 +15,7 @@
   ],
   "categories": [
     "account",
-    "social"
+    "social",
+    "notifications"
   ]
 }

@@ -10,10 +10,18 @@
     "dialog",
     "feedback",
     "speech bubble",
-    "add"
+    "report",
+    "abuse",
+    "offense",
+    "alert",
+    "danger",
+    "caution",
+    "protected",
+    "exclamation mark"
   ],
   "categories": [
     "account",
-    "social"
+    "social",
+    "notifications"
   ]
 }
