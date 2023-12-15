@@ -1,24 +1,24 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "danielbayley"
   ],
   "tags": [
-    "fruit",
-    "juice",
-    "smoothie",
-    "sweet",
-    "snack",
-    "meal",
-    "lunch",
+    "chili",
+    "chile",
+    "hot",
+    "spicy",
+    "spice",
+    "flavor",
+    "flavour",
+    "vegetable",
     "ingredient",
     "cooking",
     "cookery",
     "kitchen",
     "cuisine",
+    "culinary",
     "eating",
-    "healthy",
     "nutrition",
     "diet"
   ],

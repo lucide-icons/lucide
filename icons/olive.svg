@@ -9,6 +9,9 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M14 2a2 2 0 0 0-2 2v2.53" />
-  <path d="M8 5c1.54 0 2.94.58 4 1.53A6 6 0 0 1 22 11c0 4-4 11-7 11-1.5 0-1.5-1-3-1s-1.5 1-3 1c-3 0-7-7-7-11a6 6 0 0 1 6-6Z" />
+  <path d="m10 10 4-3" />
+  <path d="m10 7 4 3" />
+  <ellipse cx="12" cy="12" rx="9" ry="10" />
+  <path d="m2 22 5-5" />
+  <path d="M18.69 5.31 22 2" />
 </svg>

@@ -1,34 +1,36 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "jguddas"
-  ],
   "tags": [
-    "orange",
-    "grapefruit",
-    "lemon",
-    "lime",
-    "segments",
+    "bunch",
+    "wine",
+    "vineyard",
+    "seedless",
+    "blackberry",
+    "blackberries",
+    "rasberry",
+    "rasberries",
+    "wild berries",
     "juice",
     "squeeze",
     "smoothie",
-    "tropical",
     "sweet",
     "snack",
     "meal",
     "lunch",
-    "ingredient",
-    "healthy",
     "eating",
+    "healthy",
     "nutrition",
+    "diet",
+    "picked",
     "fruit machine",
     "slots",
     "gambling",
     "jackpot"
   ],
   "categories": [
-    "food-beverage",
-    "gaming"
+    "food-beverage"
+  ],
+  "aliases": [
+    "grape"
   ]
 }

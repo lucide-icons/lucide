@@ -1,26 +1,24 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "danielbayley"
   ],
   "tags": [
-    "fruit",
-    "juice",
-    "smoothie",
-    "sweet",
-    "snack",
-    "meal",
-    "lunch",
+    "grove",
+    "extra virgin",
+    "oil",
     "ingredient",
     "cooking",
     "cookery",
     "kitchen",
     "cuisine",
     "eating",
-    "healthy",
     "nutrition",
-    "diet"
+    "diet",
+    "mediterranean",
+    "bitter",
+    "fruit",
+    "cocktail"
   ],
   "categories": [
     "food-beverage"

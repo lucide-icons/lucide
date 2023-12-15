@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "danielbayley"
   ],
   "tags": [
-    "fruit",
-    "juice",
+    "segments",
+    "milk",
     "smoothie",
+    "cocktail",
+    "piña colada",
+    "tropical",
+    "beach bar",
+    "holiday",
+    "vacation",
     "sweet",
+    "creamy",
     "snack",
-    "meal",
-    "lunch",
     "ingredient",
     "cooking",
     "cookery",
@@ -23,6 +27,7 @@
     "diet"
   ],
   "categories": [
-    "food-beverage"
+    "food-beverage",
+    "travel"
   ]
 }

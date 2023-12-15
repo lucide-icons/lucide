@@ -1,28 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "cherries",
-    "smoothie",
-    "sweet",
-    "jam",
-    "conserve",
-    "preserve",
     "snack",
     "meal",
     "lunch",
-    "ingredient",
-    "healthy",
+    "juice",
+    "smoothie",
     "eating",
+    "healthy",
     "nutrition",
+    "diet",
     "fruit machine",
     "slots",
     "gambling",
-    "jackpot",
-    "cake",
-    "topping"
+    "jackpot"
   ],
   "categories": [
     "food-beverage",

@@ -1,20 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "fruit",
-    "smoothie",
-    "tropical",
-    "snack",
-    "meal",
-    "lunch",
+    "flavor",
+    "flavour",
+    "spice",
+    "vegetable",
     "ingredient",
-    "healthy",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
     "eating",
     "nutrition",
-    "monkey"
+    "diet"
   ],
   "categories": [
     "food-beverage"

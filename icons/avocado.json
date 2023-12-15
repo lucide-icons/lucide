@@ -1,20 +1,24 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
     "fruit",
-    "smoothie",
-    "tropical",
     "snack",
     "meal",
     "lunch",
     "ingredient",
-    "healthy",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
     "eating",
+    "healthy",
     "nutrition",
-    "monkey"
+    "diet",
+    "guacamole",
+    "mexican"
   ],
   "categories": [
     "food-beverage"

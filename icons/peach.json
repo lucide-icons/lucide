@@ -1,20 +1,28 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
     "fruit",
+    "nectarine",
+    "apricot",
+    "plum",
+    "damson",
+    "cherry",
+    "juice",
     "smoothie",
-    "tropical",
+    "jam",
+    "conserve",
+    "preserve",
+    "sweet",
     "snack",
     "meal",
     "lunch",
-    "ingredient",
-    "healthy",
     "eating",
+    "healthy",
     "nutrition",
-    "monkey"
+    "diet"
   ],
   "categories": [
     "food-beverage"

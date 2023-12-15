@@ -1,27 +1,43 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "jguddas"
+    "danielbayley"
   ],
   "tags": [
+    "citrus",
     "orange",
     "grapefruit",
-    "lemon",
     "lime",
-    "segments",
+    "tomato",
+    "pomodoro technique",
+    "productivity",
+    "work",
+    "egg timer",
+    "timing",
+    "alarm",
+    "alert",
+    "olive",
+    "pitted",
+    "passion fruit",
+    "guava",
     "juice",
     "squeeze",
     "smoothie",
     "tropical",
     "sweet",
+    "bitter",
     "snack",
     "meal",
     "lunch",
     "ingredient",
-    "healthy",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
     "eating",
+    "healthy",
     "nutrition",
+    "diet",
     "fruit machine",
     "slots",
     "gambling",
@@ -29,6 +45,9 @@
   ],
   "categories": [
     "food-beverage",
-    "gaming"
+    "gaming",
+    "time",
+    "devices",
+    "home"
   ]
 }
