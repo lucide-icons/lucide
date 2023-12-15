@@ -2,15 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
-    "child",
+    "newborn",
     "childproof",
-    "children"
+    "children",
+    "infant",
+    "kids",
+    "toddler",
+    "mother",
+    "mum",
+    "family"
   ],
   "categories": [
-    "accessibility",
-    "people"
+    "people",
+    "accessibility"
   ]
 }

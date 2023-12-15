@@ -10,14 +10,20 @@
   "tags": [
     "table",
     "rows",
-    "columns"
+    "columns",
+    "cells",
+    "data",
+    "guidelines",
+    "waffle"
   ],
   "categories": [
-    "text",
     "layout",
-    "design"
+    "design",
+    "tools",
+    "food-beverage"
   ],
   "aliases": [
-    "grid"
+    "grid",
+    "grid-3-x-3"
   ]
-}
+} 

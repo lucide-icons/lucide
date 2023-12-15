@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "heat",
+    "burnt",
+    "bread",
+    "breakfast",
+    "morning",
+    "kitchen",
+    "appliances",
+    "amenities",
+    "electric"
+  ],
+  "categories": [
+    "food-beverage",
+    "home",
+    "devices"
+  ]
+}

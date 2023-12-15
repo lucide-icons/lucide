@@ -6,12 +6,14 @@
     "danielbayley"
   ],
   "tags": [
-    "notification",
-    "silent",
+    "set",
     "reminder",
+    "alarm",
+    "alert",
     "add",
     "create",
-    "new"
+    "new",
+    "+"
   ],
   "categories": [
     "notifications"

@@ -7,6 +7,8 @@
     "table",
     "rows",
     "columns",
+    "cells",
+    "data",
     "blocks",
     "plot",
     "land",
@@ -21,10 +23,12 @@
     "acre"
   ],
   "categories": [
-    "text",
     "layout",
     "design",
     "shapes",
     "maths"
+  ],
+  "aliases": [
+    "grid-2-x-2"
   ]
 }

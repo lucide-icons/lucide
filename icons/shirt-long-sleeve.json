@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "jersey",
+    "top",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "fashion",
+    "thread",
+    "cotton",
+    "casual",
+    "slim fit",
+    "regular",
+    "basics",
+    "undergarment",
+    "layer"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}

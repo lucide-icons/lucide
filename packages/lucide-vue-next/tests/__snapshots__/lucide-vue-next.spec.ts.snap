@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Using lucide icon components > should add a class to the element 1`] = `
 <div>
   <svg
-    class="my-icon"
+    class="lucide lucide-smile-icon my-icon"
     fill="none"
     height="24"
     stroke="currentColor"

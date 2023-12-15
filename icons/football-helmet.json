@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "american",
+    "gridiron",
+    "touchdown",
+    "kick",
+    "pitch",
+    "team",
+    "cricket",
+    "protective equipment",
+    "protection",
+    "padding",
+    "headgear",
+    "goal",
+    "score",
+    "bounce"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

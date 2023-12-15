@@ -7,10 +7,18 @@
     "h6",
     "html",
     "markup",
-    "markdown"
+    "markdown",
+    "######",
+    "toolbar",
+    "formatting",
+    "styling",
+    "typography",
+    "heirarchy"
   ],
   "categories": [
     "text",
+    "tools",
+    "design",
     "development"
   ]
 }

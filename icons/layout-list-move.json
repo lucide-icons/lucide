@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "todo",
+    "tasks",
+    "items",
+    "pending",
+    "ascending",
+    "descending",
+    "sorting",
+    "reorder",
+    "rearrange",
+    "up",
+    "down",
+    "drag",
+    "view"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "text",
+    "tools",
+    "arrows"
+  ]
+}
