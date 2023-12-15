@@ -1,21 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "jmsv",
+    "karsa-mistmere"
   ],
   "tags": [
+    "person",
+    "account",
+    "contact",
     "find",
     "scan",
     "magnifier",
-    "magnifying glass",
-    "grep",
-    "chevrons",
-    "<>"
+    "magnifying glass"
   ],
   "categories": [
-    "text",
     "account",
-    "social",
-    "development"
+    "social"
   ]
 }
