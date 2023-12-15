@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "csandman",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "jersey",
+    "t-shirt",
+    "top",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "fashion",
+    "thread",
+    "cotton",
+    "casual",
+    "slim fit",
+    "regular",
+    "basics"
+  ],
+  "categories": [
+    "shopping"
+  ],
+  "aliases": [
+    "shirt"
+  ]
+}

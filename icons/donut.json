@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "doughnut",
+    "sprinkles",
+    "topping",
+    "fast food",
+    "junk food",
+    "snack",
+    "treat",
+    "sweet",
+    "sugar",
+    "dessert",
+    "hollow",
+    "ring"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

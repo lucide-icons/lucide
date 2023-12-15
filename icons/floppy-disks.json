@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "copy",
+    "format",
+    "data",
+    "storage",
+    "capacity",
+    "megabytes",
+    "mb",
+    "label"
+  ],
+  "categories": [
+    "files",
+    "devices"
+  ],
+  "aliases": [
+    "save-all"
+  ]
+}

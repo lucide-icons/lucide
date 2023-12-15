@@ -5,11 +5,15 @@
     "csandman"
   ],
   "tags": [
-    "number",
-    "order",
-    "queue"
+    "numbered",
+    "queue",
+    "series",
+    "html",
+    "markup",
+    "ol"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

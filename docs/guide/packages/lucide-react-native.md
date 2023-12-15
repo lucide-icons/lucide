@@ -6,28 +6,32 @@ Implementation of the lucide icon library for React Native applications
 
 First, ensure that you have `react-native-svg@^12.0.0` installed. Then, install the package:
 
-```bash
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-react-native
+```
+
+```sh [yarn]
 yarn add lucide-react-native
 ```
 
-or
-
-```sh
+```sh [npm]
 npm install lucide-react-native
 ```
 
+:::
+
 ## How to use
 
-It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a react component.
+Each icon can be imported as a React component.
 
 ### Example
 
-You can pass additional props to adjust the icon.
+Additional props can be passed to adjust the icon:
 
-```js
+```jsx
 import { Camera } from 'lucide-react-native';
-// Returns ReactComponent
 
 // Usage
 const App = () => {
@@ -37,7 +41,7 @@ const App = () => {
 export default App;
 ```
 
-### Props
+## Props
 
 | name                  | type      | default      |
 | --------------------- | --------- | ------------ |
@@ -46,27 +50,29 @@ export default App;
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-### Custom props
+### Applying props
 
-You can also pass custom props that will be added in the svg as attributes.
+To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements.
 
-```js
+```jsx
 // Usage
 const App = () => {
   return <Camera fill="red" />;
 };
 ```
 
-### One generic icon component
+## One generic icon component
 
-It is possible to create one generic icon component to load icons.
+It is possible to create one generic icon component to load icons, but it is not recommended.
 
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
+::: warning
+The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important  to keep in mind when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+:::
 
-#### Icon Component Example
+### Icon Component Example
 
-```js
-import * as icons from 'lucide-react';
+```jsx
+import { icons } from 'lucide-react';
 
 const Icon = ({ name, color, size }) => {
   const LucideIcon = icons[name];
@@ -75,4 +81,16 @@ const Icon = ({ name, color, size }) => {
 };
 
 export default Icon;
+```
+
+#### Using the Icon Component
+
+```jsx
+import Icon from './Icon';
+
+const App = () => {
+  return <Icon name="home" />;
+};
+
+export default App;
 ```
