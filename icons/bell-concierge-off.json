@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
+    "unstaffed",
+    "self-service",
+    "self-catering",
+    "hospitality",
+    "hotel",
+    "accommodation",
     "silent",
     "silence",
     "quiet",
@@ -15,6 +17,7 @@
     "forget"
   ],
   "categories": [
+    "travel",
     "notifications"
   ]
 }

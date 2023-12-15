@@ -5,12 +5,24 @@
     "danielbayley"
   ],
   "tags": [
+    "attention",
     "alarm",
-    "notification",
+    "alert",
     "sound",
-    "reminder"
+    "ding",
+    "ring",
+    "reminder",
+    "hourly",
+    "tower",
+    "town",
+    "church",
+    "cathedral",
+    "wedding",
+    "🔔"
   ],
   "categories": [
-    "notifications"
+    "account",
+    "notifications",
+    "time"
   ]
 }

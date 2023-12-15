@@ -1,15 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "reception",
-    "bell",
-    "porter"
+    "steps",
+    "staircase",
+    "stairway"
   ],
   "categories": [
-    "travel"
+    "buildings"
   ]
 }
