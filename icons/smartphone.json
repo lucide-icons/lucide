@@ -6,13 +6,19 @@
     "ericfennis"
   ],
   "tags": [
-    "phone",
     "cellphone",
-    "device",
-    "screen"
+    "mobile",
+    "touchscreen",
+    "network",
+    "digital",
+    "data",
+    "contacts",
+    "phone book"
   ],
   "categories": [
+    "communication",
     "connectivity",
-    "devices"
+    "devices",
+    "social"
   ]
 }
