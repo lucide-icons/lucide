@@ -66,9 +66,7 @@ const getContributors = async (file, includeCoAuthors) => {
   return Promise.all(Array.from(emails.values()));
 };
 
-console.log('Changed files:', process.env.CHANGED_FILES);
-
-const files = process.env.CHANGED_FILES.slice(2)
+const files = process.env.CHANGED_FILES.split(' ')
   .map((file) => file.replace('.json', '.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
 
