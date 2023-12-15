@@ -1,21 +1,24 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "healthcare",
-    "first aid",
+    "first aid kit",
+    "paramedic",
+    "medkit",
+    "medikit",
+    "medpack",
     "medicine",
     "pharmacy",
     "pharmaceutical",
-    "plus",
-    "add"
+    "add",
+    "cross",
+    "box"
   ],
   "categories": [
-    "shapes",
     "medical",
-    "maths"
+    "gaming"
   ]
 }
