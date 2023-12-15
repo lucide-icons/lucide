@@ -1,10 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "danielbayley"
   ],
   "tags": [
+    "monetization",
+    "marketing",
     "finance",
     "financial",
     "markets",
@@ -13,11 +14,14 @@
     "trading",
     "transaction",
     "payment",
-    "symbol",
-    "€"
+    "chf",
+    "₣",
+    "toolbar",
+    "button"
   ],
   "categories": [
     "currency",
-    "money"
+    "money",
+    "shapes"
   ]
 }

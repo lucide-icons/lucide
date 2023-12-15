@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "danielbayley"
   ],
   "tags": [
     "finance",
@@ -13,11 +12,13 @@
     "trading",
     "transaction",
     "payment",
-    "symbol",
-    "€"
+    "coin",
+    "inr",
+    "₹"
   ],
   "categories": [
     "currency",
-    "money"
+    "money",
+    "shapes"
   ]
 }

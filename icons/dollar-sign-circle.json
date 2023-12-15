@@ -1,10 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
+    "monetization",
+    "marketing",
     "finance",
     "financial",
     "markets",
@@ -13,11 +15,16 @@
     "trading",
     "transaction",
     "payment",
-    "symbol",
-    "€"
+    "coin",
+    "usd",
+    "$"
   ],
   "categories": [
     "currency",
-    "money"
+    "money",
+    "shapes"
+  ],
+  "aliases": [
+    "circle-dollar-sign"
   ]
 }

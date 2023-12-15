@@ -1,10 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "danielbayley"
   ],
   "tags": [
+    "cash",
     "finance",
     "financial",
     "markets",
@@ -13,11 +13,20 @@
     "trading",
     "transaction",
     "payment",
-    "symbol",
-    "€"
+    "payroll",
+    "wages",
+    "income",
+    "pocket money",
+    "allowance",
+    "savings",
+    "banking",
+    "gamble"
   ],
   "categories": [
+    "money",
     "currency",
-    "money"
+    "account",
+    "shopping",
+    "gaming"
   ]
 }

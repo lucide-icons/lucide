@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "danielbayley"
   ],
   "tags": [
     "finance",
@@ -14,7 +13,10 @@
     "transaction",
     "payment",
     "symbol",
-    "€"
+    "scarab",
+    "toolbar",
+    "button",
+    "¤"
   ],
   "categories": [
     "currency",
