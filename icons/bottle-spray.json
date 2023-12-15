@@ -1,15 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "cleaning products",
+    "toiletries",
     "bathroom",
     "amenities",
-    "services",
-    "steam",
-    "clean",
-    "wash"
+    "service",
+    "sanitizer",
+    "sanitiser"
   ],
   "categories": [
     "home",

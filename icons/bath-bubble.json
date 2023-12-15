@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "bathroom",
     "amenities",
     "services",
-    "steam",
-    "clean",
-    "wash"
+    "bathroom",
+    "towel",
+    "relax",
+    "luxury"
   ],
   "categories": [
     "home",

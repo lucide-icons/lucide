@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "toiletries",
     "bathroom",
     "amenities",
-    "services",
-    "steam",
+    "shower gel",
+    "bubble bath",
+    "shampoo",
+    "conditioner",
+    "hand soap",
+    "sanitizer",
+    "sanitiser",
     "clean",
     "wash"
   ],
