@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Andreto",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "spade",
@@ -14,12 +13,23 @@
     "excavate",
     "bury",
     "buried",
-    "treasure"
+    "treasure",
+    "seaside",
+    "summer holiday",
+    "beach",
+    "sandcastle",
+    "sandbox",
+    "toys",
+    "kids",
+    "children",
+    "play",
+    "bucket"
   ],
   "categories": [
     "nature",
     "home",
     "tools",
+    "travel",
     "gaming"
   ]
 }

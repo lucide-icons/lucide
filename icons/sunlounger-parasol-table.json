@@ -1,9 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "shade",
+    "sunbathing",
     "summer holiday",
     "vacation",
     "retreat",
@@ -16,7 +18,6 @@
     "exotic"
   ],
   "categories": [
-    "nature",
     "travel"
   ]
 }

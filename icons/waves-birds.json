@@ -1,22 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "water",
+    "aqua",
+    "seaside",
+    "view",
+    "picturesque",
+    "tourism",
     "summer holiday",
-    "vacation",
-    "retreat",
-    "relax",
-    "leisure",
-    "tropical",
-    "island",
     "beach",
-    "resort",
-    "exotic"
+    "ocean",
+    "flow"
   ],
   "categories": [
-    "nature",
+    "maps",
     "travel"
   ]
 }

@@ -1,15 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis",
-    "danielbayley",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "preserver",
-    "life belt",
-    "lifesaver",
+    "vest",
+    "buoyant",
+    "buoyancy",
     "lifeguard",
     "coastguard",
     "sea",
@@ -18,15 +15,10 @@
     "beach",
     "help",
     "rescue",
-    "ship",
-    "ring",
-    "raft",
     "inflatable",
     "safety",
     "equipment",
-    "emergency",
-    "wheel",
-    "donut"
+    "emergency"
   ],
   "categories": [
     "accessibility",
