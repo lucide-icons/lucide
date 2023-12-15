@@ -52,7 +52,7 @@ export default App;
 
 ### Applying props
 
-To apply custom props to change the look of the icon, this can be done by simply pass them as props to the component.
+To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements.
 
 ```jsx
 // Usage
@@ -63,10 +63,10 @@ const App = () => {
 
 ## One generic icon component
 
-It is possible to create one generic icon component to load icons.
+It is possible to create one generic icon component to load icons, but it is not recommended.
 
 ::: warning
-Example below importing all ES Modules, caution using this example. All icons will be imported. When using bundlers like: `Webpack`, `Rollup` or `Vite` the application build size will grow strongly and harming the performance the application.
+The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important  to keep in mind when using bundlers like `Webpack`, `Rollup`, or `Vite`.
 :::
 
 ### Icon Component Example

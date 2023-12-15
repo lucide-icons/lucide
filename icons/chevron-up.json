@@ -14,7 +14,8 @@
     "power",
     "ahead",
     "fast",
-    "^"
+    "^",
+    "dropdown"
   ],
   "categories": [
     "arrows",

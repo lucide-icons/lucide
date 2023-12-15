@@ -7,12 +7,16 @@
   ],
   "tags": [
     "world",
+    "global",
     "browser",
     "language",
-    "translate"
+    "translate",
+    "planet",
+    "space"
   ],
   "categories": [
     "maps",
-    "navigation"
+    "navigation",
+    "science"
   ]
 }

@@ -21,9 +21,14 @@
     "mistake",
     "wrong",
     "failure",
+    "divide",
+    "division",
+    "or",
     "/"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "development",
+    "maths"
   ]
 }
