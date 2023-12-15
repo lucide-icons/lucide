@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "crescent",
+    "guide",
+    "directions",
     "dark",
     "night",
     "sky",
-    "star",
     "twinkle",
     "sparkle",
     "shine",
@@ -19,8 +19,7 @@
     "astro"
   ],
   "categories": [
-    "accessibility",
-    "weather",
+    "navigation",
     "science"
   ]
 }

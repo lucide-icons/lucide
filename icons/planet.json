@@ -1,28 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "danielbayley"
   ],
   "tags": [
-    "bookmark",
-    "favorite",
-    "like",
-    "review",
-    "rating",
-    "fame",
-    "famous",
-    "dark",
-    "night",
-    "sky",
-    "twinkle",
-    "sparkle",
-    "shine",
-    "planet",
+    "ringed",
+    "orbit",
+    "saturn",
+    "interplanetary",
     "space",
     "galaxy",
     "universe",
     "astro",
-    "⭐️"
+    "🪐"
   ],
   "categories": [
     "account",
@@ -35,6 +25,6 @@
     "science"
   ],
   "unicode": [
-    "2B50"
+    "1FA90"
   ]
 }

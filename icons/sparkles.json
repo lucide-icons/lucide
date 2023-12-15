@@ -3,19 +3,36 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "aliases": ["stars"],
   "tags": [
     "stars",
-    "effect",
-    "filter",
+    "sky",
+    "darkness",
     "night",
-    "magic"
+    "new",
+    "shiny",
+    "shine",
+    "twinkle",
+    "glisten",
+    "glitter",
+    "magic",
+    "celebration",
+    "clean",
+    "filter",
+    "effect",
+    "planet",
+    "space",
+    "galaxy",
+    "universe",
+    "astro",
+    "northern",
+    "guide"
   ],
   "categories": [
-    "shapes",
-    "cursors",
-    "multimedia",
-    "gaming",
-    "weather"
+    "weather",
+    "science",
+    "navigation"
+  ],
+  "aliases": [
+    "stars"
   ]
 }
