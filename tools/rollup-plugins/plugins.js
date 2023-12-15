@@ -12,7 +12,10 @@ const plugins = (pkg, minify, esbuildOptions = {}) =>
       ...esbuildOptions,
     }),
     license({
-      banner: `${pkg.name} v${pkg.version} - ${pkg.license}`,
+      banner: `@license ${pkg.name} v${pkg.version} - ${pkg.license}
+
+This source code is licensed under the ${pkg.license} license.
+See the LICENSE file in the root directory of this source tree.`,
     }),
     bundleSize(),
     visualizer({

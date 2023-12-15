@@ -8,9 +8,13 @@
     "letters",
     "characters",
     "font",
-    "typography"
+    "typography",
+    "ab",
+    "string",
+    "code"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shape",
+    "elliptical",
+    "geometry",
+    "container",
+    "storage",
+    "tin",
+    "pot"
+  ],
+  "categories": [
+    "shapes",
+    "design",
+    "maths"
+  ]
+}

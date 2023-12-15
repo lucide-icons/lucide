@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "itsjavi",
     "mittalyashu",
     "karsa-mistmere"
   ],
@@ -24,6 +25,12 @@
     "galaxy",
     "universe",
     "astro"
+    "moon",
+    "sun",
+    "brightness",
+    "system",
+    "theme",
+    "appearance"
   ],
   "categories": [
     "accessibility",

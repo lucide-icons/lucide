@@ -8,11 +8,18 @@
   "tags": [
     "text",
     "letters",
+    "capitals",
+    "caps",
     "characters",
     "font",
-    "typography"
+    "typography",
+    "ab",
+    "constant",
+    "string",
+    "code"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

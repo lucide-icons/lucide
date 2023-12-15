@@ -28,12 +28,12 @@ import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
 
-const { tags, categories } = metaData
+const { tags, categories, contributors } = metaData
 
 const iconDetails = {
   name: '${iconName}',
   iconNode,
-  contributors: ['ericfennis', 'karsa-mistmere'],
+  contributors,
   tags,
   categories,
   ...releaseData,
