@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "cap",
+    "hats",
+    "headwear",
+    "headgear",
+    "mens",
+    "boys",
+    "store",
+    "clothing",
+    "clothes",
+    "accessories",
+    "apparel",
+    "attire",
+    "fashion"
+  ],
+  "categories": [
+    "shopping",
+    "sports"
+  ]
+}
