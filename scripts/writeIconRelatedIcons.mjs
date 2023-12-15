@@ -16,6 +16,8 @@ const nameWeight = 5;
 const tagWeight = 4;
 const categoryWeight = 3;
 
+const MAX_RELATED_ICONS = 4 * 17 // grid of 4x17 icons, = 68 icons
+
 const arrayMatches = (a, b) => {
   // let matches = 0;
   // for (let i = 0; i < a.length; ++i) {
@@ -44,6 +46,7 @@ const getRelatedIcons = (currentIcon, icons) => {
     .filter(a => a.similarity > 0) // @todo: maybe require a minimal non-zero similarity
     .sort((a, b) => b.similarity - a.similarity)
     .map(i => i.icon)
+    .slice(0, MAX_RELATED_ICONS)
     ;
 }
 

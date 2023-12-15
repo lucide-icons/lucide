@@ -10,7 +10,15 @@ interface IconSizeContext {
   size: Ref<number>
   strokeWidth: Ref<number>
   color: Ref<string>
+  absoluteStrokeWidth: Ref<boolean>
 }
+
+export const STYLE_DEFAULTS = {
+  size: 24,
+  strokeWidth: 2,
+  color: 'currentColor',
+  absoluteStrokeWidth: false,
+};
 
 export const iconStyleContext = {
   size: ref(24),

@@ -63,7 +63,7 @@ export const getPaths = (src: string) => {
     c: typeof commands[number],
     next: Point,
     d?: string,
-    circle?: Path['circle']
+    extras?: { circle?: Path['circle']; cp1?: Path['cp1']; cp2?: Path['cp2'] }
   ) => {
     assert(prev);
     paths.push({
@@ -71,7 +71,7 @@ export const getPaths = (src: string) => {
       d: d || `M ${prev.x} ${prev.y} L ${next.x} ${next.y}`,
       prev,
       next,
-      circle,
+      ...extras,
       isStart: start === prev,
     });
     prev = next;
@@ -110,7 +110,10 @@ export const getPaths = (src: string) => {
       }
       case SVGPathData.CURVE_TO: {
         assert(prev);
-        addPath(c, c, `M ${prev.x} ${prev.y} ${encodeSVGPath(c)}`);
+        addPath(c, c, `M ${prev.x} ${prev.y} ${encodeSVGPath(c)}`, {
+          cp1: { x: c.x1, y: c.y1 },
+          cp2: { x: c.x2, y: c.y2 },
+        });
         break;
       }
       case SVGPathData.SMOOTH_CURVE_TO: {
@@ -146,13 +149,20 @@ export const getPaths = (src: string) => {
             y1: prev.y - reflectedCp1.y,
             x2: c.x2,
             y2: c.y2,
-          })}`
+          })}`,
+          {
+            cp1: reflectedCp1,
+            cp2: { x: c.x2, y: c.y2 },
+          }
         );
         break;
       }
       case SVGPathData.QUAD_TO: {
         assert(prev);
-        addPath(c, c, `M ${prev.x} ${prev.y} ${encodeSVGPath(c)}`);
+        addPath(c, c, `M ${prev.x} ${prev.y} ${encodeSVGPath(c)}`, {
+          cp1: { x: c.x1, y: c.y1 },
+          cp2: { x: c.x1, y: c.y1 },
+        });
         break;
       }
       case SVGPathData.SMOOTH_QUAD_TO: {
@@ -197,7 +207,11 @@ export const getPaths = (src: string) => {
             y: c.y,
             x1: prevCP.x,
             y1: prevCP.y,
-          })}`
+          })}`,
+          {
+            cp1: { x: prevCP.x, y: prevCP.y },
+            cp2: { x: prevCP.x, y: prevCP.y },
+          }
         );
         break;
       }
@@ -218,7 +232,7 @@ export const getPaths = (src: string) => {
           c,
           c,
           `M ${prev.x} ${prev.y} A${c.rX} ${c.rY} ${c.xRot} ${c.lArcFlag} ${c.sweepFlag} ${c.x} ${c.y}`,
-          c.rX === c.rY ? { ...center, r: c.rX } : undefined
+          { circle: c.rX === c.rY ? { ...center, r: c.rX } : undefined }
         );
         break;
       }

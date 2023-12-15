@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-syntax,  no-await-in-loop */
-import { simpleGit } from 'simple-git';
-import semver from 'semver';
 import fs from 'fs';
 import path from 'path';
+import { simpleGit } from 'simple-git';
+import semver from 'semver';
 import { readSvgDirectory } from './helpers.mjs';
 
 const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
@@ -13,9 +13,20 @@ const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
 const location = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData.json');
+const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'releaseMetadata');
+
+const allowedIconNameWithDoubleRelease = ['slash'];
 
 if (fs.existsSync(location)) {
   fs.unlinkSync(location);
+}
+
+if (fs.existsSync(releaseMetaDataDirectory)) {
+  fs.rmSync(releaseMetaDataDirectory, { recursive: true, force: true });
+}
+
+if (!fs.existsSync(releaseMetaDataDirectory)) {
+  fs.mkdirSync(releaseMetaDataDirectory);
 }
 
 const fetchAllReleases = async () => {
@@ -98,7 +109,10 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
     }
 
     if (status === 'A') {
-      if ('changedRelease' in newReleaseMetaData[iconName]) {
+      if (
+        'changedRelease' in newReleaseMetaData[iconName] &&
+        !allowedIconNameWithDoubleRelease.includes(iconName)
+      ) {
         throw new Error(`Icon '${iconName}' has already changedRelease set.`);
       }
 
@@ -129,6 +143,7 @@ try {
   const releaseMetaData = await Promise.all(
     iconJsonFiles.map(async (iconJsonFile) => {
       const iconName = path.basename(iconJsonFile, '.json');
+      const metaDir = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
 
       if (iconName in newReleaseMetaData === false) {
         console.error(`Could not find release metadata for icon '${iconName}'.`);
@@ -149,9 +164,13 @@ try {
             return;
           }
 
-          contents.createdRelease = newReleaseMetaData[alias].createdRelease;
+          contents.createdRelease =
+            newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
         });
       }
+
+      const output = JSON.stringify(contents, null, 2);
+      await fs.promises.writeFile(metaDir, output, 'utf-8');
 
       return [iconName, contents];
     }),

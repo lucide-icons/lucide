@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "steam",
+    "flatten",
+    "straighten",
+    "clothes",
+    "clothing",
+    "apparel",
+    "attire",
+    "dry cleaning",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "devices",
+    "travel"
+  ]
+}

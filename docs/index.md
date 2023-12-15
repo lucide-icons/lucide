@@ -2,6 +2,11 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+head:
+  - - link
+    - rel: canonical
+      content: https://lucide.dev/
+
 hero:
   name: |
     Beautiful &

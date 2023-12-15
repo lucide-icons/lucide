@@ -11,21 +11,29 @@ This package include the following lucide implementations:
 
 This package is suitable for specific use cases, for example if you want to use icon fonts, SVG sprites, normal SVGs or Common.js SVG strings in your javascript project.
 
-> ⚠️ While they can be useful for prototyping, it is not recommended to use the SVG sprites or icon fonts provided by this package in production web apps as all the available icons are included in the app, hence increasing loading time and data usage. We recommend to use a bundler and treeshaking to make sure only the icons you use are bundled with your app. Threeshaking is only available in these packages: [lucide](lucide), [lucide-react](lucide-react), [lucide-vue](lucide-vue), [lucide-vue-next](lucide-vue-next), [lucide-angular](lucide-angular), [lucide-preact](lucide-preact)
+::: warning
+While they can be useful for prototyping, it is not recommended to use the SVG sprites or icon fonts provided by this package in production web apps as all the available icons are included in the app, hence increasing loading time and data usage. We recommend to use a bundler and tree-shaking to make sure only the icons you use are bundled with your app. Tree-shaking is only available in these packages: [lucide](lucide), [lucide-react](lucide-react), [lucide-vue](lucide-vue), [lucide-vue-next](lucide-vue-next), [lucide-angular](lucide-angular), [lucide-preact](lucide-preact)
+:::
 
 ## Installation
 
 ## Package Managers
 
-```sh
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-static
+```
+
+```sh [yarn]
 yarn add lucide-static
 ```
 
-or
-
-```sh
+```sh [npm]
 npm install lucide-static
 ```
+
+:::
 
 ### CDN
 

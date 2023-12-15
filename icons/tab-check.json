@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ptrgast",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "ballot",
+    "poll",
+    "referendum",
+    "political",
+    "governance",
+    "government",
+    "democracy",
+    "democratic",
+    "social",
+    "decision",
+    "decide",
+    "yes",
+    "aye",
+    "counted",
+    "confirm",
+    "tick",
+    "right",
+    "correct",
+    "confident",
+    "confidence",
+    "passed",
+    "output",
+    "result",
+    "log"
+  ],
+  "categories": [
+    "layout",
+    "social",
+    "development"
+  ],
+  "aliases": [
+    "vote"
+  ]
+}

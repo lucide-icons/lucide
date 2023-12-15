@@ -17,7 +17,7 @@ const { go } = useRouter()
 const { page } = useData()
 
 const tags = computed(() => {
-  if (!props.icon) return []
+  if (!props.icon || !props?.icon?.tags) return []
   return props.icon.tags.join(' • ')
 })
 </script>
@@ -27,9 +27,11 @@ const tags = computed(() => {
     <IconDetailName class="icon-name">
       {{ icon.name }}
     </IconDetailName>
-    <p class="icon-tags">
-      {{ tags }}
-    </p>
+    <div class="tags-scroller" v-if="tags.length">
+      <p class="icon-tags horizontal-scroller">
+        {{ tags }}
+      </p>
+    </div>
     <div class="group">
       <Badge
         v-for="category in icon.categories"
@@ -72,9 +74,61 @@ const tags = computed(() => {
   font-size: 16px;
   color: var(--vp-c-text-2);
   font-weight: 500;
-  margin-top: 0;;
-  margin-bottom: 16px;
   line-height: 28px;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tags-scroller {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 28px;
+  padding: 8px 0 16px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  align-items: center;
+
+  --gradient-background: var(--tags-gradient-background, var(--vp-c-bg-elv))
+}
+.horizontal-scroller {
+  overflow-x: scroll;
+  /* Hide Scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
+  scrollbar-color: currentColor transparent; /* foreground background */
+}
+.horizontal-scroller::-webkit-scrollbar {
+  width: 0;
+  display: none
+}
+
+.horizontal-scroller::-webkit-scrollbar-track {
+  background: transparent
+}
+
+.horizontal-scroller::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none
+}
+
+
+.tags-scroller::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 32px;
+  height: 100%;
+  /* Background Gradient left to right */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,var(--gradient-background) 100%);
+  right: 0;
+  pointer-events: none;
 }
 
 .buttons {
