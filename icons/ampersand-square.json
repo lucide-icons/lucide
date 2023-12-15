@@ -1,23 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "h6",
-    "html",
-    "markup",
-    "markdown",
-    "######",
-    "toolbar",
-    "formatting",
-    "styling",
+    "and",
     "typography",
-    "heirarchy"
+    "operator",
+    "join",
+    "concatenate",
+    "code",
+    "coding",
+    "&"
   ],
   "categories": [
     "text",
-    "tools",
     "design",
     "development"
   ]

@@ -1,33 +1,32 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "oblique",
-    "emphasis",
-    "emphasize",
     "toolbar",
+    "button",
     "formatting",
     "styling",
-    "plain text",
-    "rich text",
-    "rtf",
     "typography",
-    "font",
+    "fonts",
+    "font book",
+    "collection",
     "slab serif",
     "writing",
     "writer",
     "prose",
     "content",
-    "markdown",
-    "markup"
+    "alternates",
+    "alternatives",
+    "variants",
+    "variations",
+    "fi"
   ],
   "categories": [
     "text",
     "tools",
     "design",
-    "development"
+    "shapes"
   ]
 }

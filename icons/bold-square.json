@@ -1,21 +1,24 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "copy",
-    "copied",
-    "paste",
+    "emphasis",
+    "emphasize",
+    "strong",
     "toolbar",
     "formatting",
     "styling",
+    "plain text",
     "rich text",
     "rtf",
     "typography",
     "font",
-    "slab serif",
+    "sans serif",
+    "writing",
+    "writer",
+    "prose",
     "content",
     "markdown",
     "markup"
@@ -23,6 +26,7 @@
   "categories": [
     "text",
     "tools",
+    "design",
     "development"
   ]
 }

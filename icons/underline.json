@@ -7,10 +7,29 @@
     "johnletey"
   ],
   "tags": [
-    "text",
-    "format"
+    "highlight",
+    "emphasis",
+    "emphasize",
+    "toolbar",
+    "formatting",
+    "styling",
+    "plain text",
+    "rich text",
+    "rtf",
+    "typography",
+    "font",
+    "sans serif",
+    "writing",
+    "writer",
+    "prose",
+    "content",
+    "markdown",
+    "markup"
   ],
   "categories": [
-    "text"
+    "text",
+    "tools",
+    "design",
+    "development"
   ]
 }

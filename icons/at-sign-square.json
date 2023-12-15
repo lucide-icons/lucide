@@ -1,9 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
@@ -11,16 +8,25 @@
     "at",
     "email address",
     "message",
-    "contact",
+    "contacts",
+    "details",
+    "address book",
+    "directory",
+    "listing",
     "networking",
+    "business card",
     "ping",
+    "toolbar",
+    "keyboard",
+    "button",
     "@"
   ],
   "categories": [
     "text",
     "account",
+    "connectivity",
     "communication",
     "social",
-    "notifications"
+    "shapes"
   ]
 }

@@ -4,17 +4,29 @@
     "ericfennis"
   ],
   "tags": [
-    "text",
+    "delete",
+    "clear",
+    "cancel",
+    "normalise",
+    "normalize",
+    "styling",
+    "plain text",
     "font",
     "typography",
-    "format",
+    "slab serif",
+    "writing",
+    "writer",
+    "prose",
+    "content",
+    "markdown",
+    "markup",
     "x",
-    "remove",
-    "delete",
-    "times",
-    "clear"
+    "times"
   ],
   "categories": [
-    "text"
+    "text",
+    "tools",
+    "design",
+    "development"
   ]
 }
