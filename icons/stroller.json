@@ -1,23 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
+    "baby",
     "newborn",
-    "childproof",
     "children",
     "infant",
     "kids",
     "toddler",
     "mother",
     "mum",
-    "family"
+    "family",
+    "buggy",
+    "pram",
+    "pushchair",
+    "wheels"
   ],
   "categories": [
-    "people",
-    "accessibility"
+    "transportation",
+    "people"
   ]
 }

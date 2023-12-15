@@ -1,11 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
+    "unsafe",
+    "unsecured",
+    "unpinned",
+    "unfastened",
+    "loose",
+    "off",
+    "baby",
     "newborn",
     "childproof",
     "children",
@@ -18,6 +23,9 @@
   ],
   "categories": [
     "people",
-    "accessibility"
+    "security",
+    "account",
+    "home",
+    "shopping"
   ]
 }

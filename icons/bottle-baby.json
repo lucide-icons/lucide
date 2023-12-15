@@ -1,23 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
     "newborn",
-    "childproof",
     "children",
     "infant",
     "kids",
     "toddler",
     "mother",
     "mum",
-    "family"
+    "family",
+    "milk"
   ],
   "categories": [
     "people",
-    "accessibility"
+    "home",
+    "shopping"
   ]
 }

@@ -1,11 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
+    "dummy",
+    "teething",
+    "suck",
+    "silence",
+    "quiet",
     "newborn",
     "childproof",
     "children",
@@ -18,6 +21,7 @@
   ],
   "categories": [
     "people",
-    "accessibility"
+    "home",
+    "shopping"
   ]
 }

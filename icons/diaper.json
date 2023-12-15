@@ -1,11 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
+    "nappy",
+    "absorbent",
+    "potty",
     "newborn",
     "childproof",
     "children",
@@ -18,6 +19,7 @@
   ],
   "categories": [
     "people",
-    "accessibility"
+    "home",
+    "shopping"
   ]
 }
