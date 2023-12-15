@@ -4,17 +4,31 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "food",
+    "utensils",
+    "kitchenware",
+    "cutlery",
+    "culinary",
+    "cooking",
+    "cookery",
+    "cut",
+    "slice",
+    "eat",
     "restaurant",
     "meal",
-    "cutlery",
     "breakfast",
+    "brunch",
+    "lunch",
     "dinner",
     "supper"
   ],
   "categories": [
     "food-beverage",
+    "home",
+    "tools",
     "travel",
     "maps"
+  ],
+  "aliases": [
+    "utensils-crossed"
   ]
 }
