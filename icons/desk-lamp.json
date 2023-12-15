@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "danielbayley"
   ],
   "tags": [
-    "lighting",
+    "office",
+    "workstation",
+    "table",
+    "drawers",
     "household",
-    "floor",
-    "appliances",
+    "lighting",
     "ambience",
     "ambiance"
   ],
