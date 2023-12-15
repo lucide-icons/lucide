@@ -1,18 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Bowero",
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "grid",
-    "guidelines"
+    "table",
+    "guides",
+    "number",
+    "pound",
+    "tic-tac-toe",
+    "noughts and crosses"
   ],
   "categories": [
     "layout",
     "design",
     "tools",
-    "photography"
+    "maths",
+    "gaming"
   ]
 }

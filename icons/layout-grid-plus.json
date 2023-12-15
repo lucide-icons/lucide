@@ -1,21 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
-    "todo",
-    "tasks",
-    "items",
-    "pending",
-    "images",
-    "photos"
+    "apps",
+    "applications",
+    "add",
+    "collection",
+    "+"
   ],
   "categories": [
     "design",
     "layout",
-    "photography",
-    "text"
+    "tools"
   ]
 }

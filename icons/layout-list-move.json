@@ -1,7 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
@@ -9,13 +8,21 @@
     "tasks",
     "items",
     "pending",
-    "images",
-    "photos"
+    "ascending",
+    "descending",
+    "sorting",
+    "reorder",
+    "rearrange",
+    "up",
+    "down",
+    "drag",
+    "view"
   ],
   "categories": [
     "design",
     "layout",
-    "photography",
-    "text"
+    "text",
+    "tools",
+    "arrows"
   ]
 }

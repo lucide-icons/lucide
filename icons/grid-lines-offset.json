@@ -1,18 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Bowero",
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "grid",
-    "guidelines"
+    "guides"
   ],
   "categories": [
     "layout",
     "design",
-    "tools",
-    "photography"
+    "tools"
   ]
 }
