@@ -1,12 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "pac-man",
-    "spooky"
+    "phantom",
+    "spooky",
+    "halloween",
+    "costume",
+    "sheet"
   ],
   "categories": [
     "gaming"

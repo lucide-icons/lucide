@@ -7,10 +7,20 @@
   "tags": [
     "hashtag",
     "number",
-    "pound"
+    "pound",
+    "markup",
+    "markdown",
+    "heading",
+    "h1",
+    "html",
+    "code",
+    "#"
   ],
   "categories": [
     "text",
-    "social"
+    "social",
+    "layout",
+    "design",
+    "development"
   ]
 }

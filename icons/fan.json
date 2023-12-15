@@ -4,13 +4,17 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "air",
+    "airflow",
     "cooler",
     "ventilation",
     "ventilator",
-    "blower"
+    "blower",
+    "blades",
+    "propeller",
+    "propulsion"
   ],
   "categories": [
-    "home"
+    "home",
+    "transportation"
   ]
 }

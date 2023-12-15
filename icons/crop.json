@@ -7,11 +7,18 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "photo",
-    "image"
+    "image",
+    "frame",
+    "area",
+    "select",
+    "scene",
+    "size",
+    "proportions"
   ],
   "categories": [
     "photography",
-    "design"
+    "design",
+    "layout",
+    "tools"
   ]
 }
