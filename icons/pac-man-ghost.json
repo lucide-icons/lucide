@@ -1,9 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "mittalyashu",
+    "ericfennis"
   ],
   "tags": [
+    "arcade",
+    "classic",
+    "retro",
     "phantom",
     "spooky",
     "halloween",
