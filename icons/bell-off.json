@@ -8,10 +8,11 @@
     "danielbayley"
   ],
   "tags": [
-    "alarm",
-    "notification",
     "silent",
-    "reminder"
+    "silence",
+    "quiet",
+    "ignore",
+    "forget"
   ],
   "categories": [
     "notifications"

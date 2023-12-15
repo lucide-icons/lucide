@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "rain",
+    "weather",
+    "uncovered",
+    "uninsured",
+    "antivirus",
+    "unprotected",
+    "risky"
+  ],
+  "categories": [
+    "weather"
+  ]
+}

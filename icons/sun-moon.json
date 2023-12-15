@@ -1,17 +1,39 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "itsjavi",
     "mittalyashu",
     "karsa-mistmere"
   ],
   "tags": [
+    "sky",
+    "day",
     "night",
+    "dark",
     "light",
+    "brightness",
+    "shine",
+    "star",
+    "planet",
+    "solar",
+    "lunar",
+    "orbit",
+    "eclipse",
+    "heat",
+    "hot",
+    "space",
+    "galaxy",
+    "universe",
+    "astro"
     "moon",
     "sun",
-    "brightness"
+    "brightness",
+    "system",
+    "theme",
+    "appearance"
   ],
   "categories": [
-    "accessibility"
+    "accessibility",
+    "science"
   ]
 }

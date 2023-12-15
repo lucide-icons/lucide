@@ -6,13 +6,19 @@
     "karsa-mistmere"
   ],
   "tags": [
+    "global",
     "world",
+    "earth",
     "browser",
     "language",
-    "translate"
+    "translate",
+    "geography",
+    "planet",
+    "space"
   ],
   "categories": [
     "maps",
-    "navigation"
+    "navigation",
+    "science"
   ]
 }
