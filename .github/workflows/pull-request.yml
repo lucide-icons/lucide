@@ -22,13 +22,14 @@ jobs:
         with:
           files: icons/*
       - uses: actions/setup-node@v3.8.1
-      - name: Install simple-git (safer and faster than installing all deps)
-        run: npm install simple-git
-      - env:
+      - name: Install deps
+        run: pnpm install --ignore-scripts
+      - name: Generate annotations
+        run: node ./scripts/updateContributors.mjs
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-        run: node ./scripts/updateContributors.mjs
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
