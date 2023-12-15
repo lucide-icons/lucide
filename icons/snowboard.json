@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "cold",
-    "freeze",
-    "frozen",
-    "ice",
-    "winter"
+    "slope",
+    "winter holiday",
+    "vacation",
+    "trip",
+    "equipment"
   ],
   "categories": [
-    "weather",
+    "sports",
     "seasons"
   ]
 }

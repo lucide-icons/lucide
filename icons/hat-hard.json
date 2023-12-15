@@ -2,15 +2,19 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "Andreto",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
     "helmet",
     "construction",
     "safety",
-    "savety"
+    "builder"
   ],
   "categories": [
     "tools"
+  ],
+  "aliases": [
+    "hard-hat"
   ]
 }

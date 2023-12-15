@@ -1,14 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "cold",
     "freeze",
     "frozen",
-    "ice",
     "winter"
   ],
   "categories": [

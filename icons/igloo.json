@@ -1,17 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "ice blocks",
     "cold",
     "freeze",
     "frozen",
-    "ice",
-    "winter"
+    "winter",
+    "shelter",
+    "dome",
+    "eskimo"
   ],
   "categories": [
+    "buildings",
     "weather",
     "seasons"
   ]

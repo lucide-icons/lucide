@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "skiing",
+    "poles",
+    "slope",
+    "slalom",
+    "winter holiday",
+    "vacation",
+    "trip",
+    "snow",
+    "equipment"
+  ],
+  "categories": [
+    "sports",
+    "seasons"
+  ]
+}
