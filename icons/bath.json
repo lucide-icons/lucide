@@ -8,9 +8,11 @@
     "amenities",
     "services",
     "bathroom",
-    "shower"
+    "shower",
+    "relax"
   ],
   "categories": [
+    "home",
     "travel"
   ]
 }

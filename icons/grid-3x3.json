@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "columns",
+    "cells",
+    "data",
+    "guidelines",
+    "waffle"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "tools",
+    "food-beverage"
+  ],
+  "aliases": [
+    "grid",
+    "grid-3-x-3"
+  ]
+} 

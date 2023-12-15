@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "monetization",
+    "marketing",
+    "finance",
+    "financial",
+    "markets",
+    "exchange",
+    "trader",
+    "trading",
+    "transaction",
+    "payment",
+    "coin",
+    "usd",
+    "$"
+  ],
+  "categories": [
+    "currency",
+    "money",
+    "shapes"
+  ],
+  "aliases": [
+    "circle-dollar-sign"
+  ]
+}

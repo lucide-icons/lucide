@@ -18,7 +18,7 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
 ### Why choose Lucide over Feather Icons
 
 - More icons to work with: Lucide already has hundreds of icons more than Feather does.
-- Official librairies and integrations with popular frameworks and design tools.
+- Official libraries and integrations with popular frameworks and design tools.
 - Well maintained code base.
 - Active community, regularly growing and improving the set.
 
@@ -35,7 +35,6 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
   - [Figma](#figma)
   - [Laravel](#laravel)
-  - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
   - [Hyva](#hyva)
@@ -200,16 +199,6 @@ composer require mallardduck/blade-lucide-icons
 
 For more details, see the [documentation](https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md).
 
-### Flutter
-
-Implementation of Lucide icon library for Flutter applications.
-
-```sh
-flutter pub add lucide_icons
-```
-
-For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
-
 ### Svelte
 
 Implementation of the lucide icon library for Svelte applications.
@@ -285,6 +274,9 @@ Thank you to all the people who contributed to Lucide!
 
 ## Sponsors
 
+
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-  <img src="./site/public/vercel.svg" alt="Powered by Vercel" width="200" />
+  <img src="docs/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
+
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
