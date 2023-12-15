@@ -1,20 +1,12 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
-  ],
   "tags": [
     "text",
     "letters",
-    "capitals",
-    "caps",
     "characters",
     "font",
     "typography",
     "ab",
-    "constant",
     "string",
     "code"
   ],
