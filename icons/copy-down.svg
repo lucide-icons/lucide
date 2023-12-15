@@ -11,6 +11,6 @@
 >
   <path d="M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2" />
   <rect width="14" height="14" x="8" y="8" rx="2" />
-  <path d="m12 18 6-6" />
-  <path d="m12 12 6 6" />
+  <path d="M15 12v6" />
+  <path d="m12 15 3 3 3-3" />
 </svg>
