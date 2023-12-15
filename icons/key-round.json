@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "password",
+    "login",
+    "authentication",
+    "secure",
+    "unlock"
+  ],
+  "categories": [
+    "security",
+    "account"
+  ]
+}

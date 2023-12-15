@@ -1,10 +1,15 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
     "count",
     "calculating machine"
   ],
   "categories": [
-    "maths"
+    "maths",
+    "devices"
   ]
 }

@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
   "tags": [
     "time",
     "redo",
@@ -8,7 +14,9 @@
     "timeline",
     "version",
     "time machine",
-    "backup"
+    "backup",
+    "rotate",
+    "ccw"
   ],
   "categories": [
     "arrows",

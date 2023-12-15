@@ -1,8 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "movie",
-    "video"
+    "video",
+    "reel",
+    "camera",
+    "cinema",
+    "entertainment"
   ],
   "categories": [
     "photography",

@@ -1,11 +1,27 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "ellipsis",
     "menu",
-    "options"
+    "options",
+    "loading",
+    "loader",
+    "throber",
+    "etc",
+    "et cetera",
+    "operator",
+    "code",
+    "coding",
+    "spread",
+    "rest",
+    "…",
+    "..."
   ],
   "categories": [
-    "layout"
+    "layout",
+    "development"
   ]
 }

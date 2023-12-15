@@ -1,5 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "maxim-s-barabash",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
   "tags": [
     "business",
     "company",

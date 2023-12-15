@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "code",
     "token",
@@ -13,7 +17,9 @@
     "call",
     "maths",
     "formula",
-    "function"
+    "function",
+    "(",
+    ")"
   ],
   "categories": [
     "development",

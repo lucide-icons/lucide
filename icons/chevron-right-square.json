@@ -1,15 +1,29 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
+    "forward",
+    "next",
+    "more than",
+    "greater",
+    "menu",
+    "panel",
     "code",
+    "coding",
     "command line",
     "terminal",
     "prompt",
     "shell",
-    "console"
+    "console",
+    ">"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "arrows",
+    "navigation",
+    "shapes",
+    "development"
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "animal",
+    "rodent",
+    "pet",
+    "pest",
+    "nuts",
+    "retrieve",
+    "updates",
+    "storage",
+    "stash"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

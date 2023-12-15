@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
-    "arrow"
+    "back",
+    "menu",
+    "panel"
   ],
   "categories": [
     "arrows",
+    "navigation",
     "shapes"
   ]
 }

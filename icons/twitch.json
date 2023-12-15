@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "johnletey"
+  ],
   "tags": [
     "logo",
     "social"

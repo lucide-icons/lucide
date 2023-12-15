@@ -25,19 +25,19 @@ Guidelines for pull requests:
 
 Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
 
-Read it here: [ICON_GUIDELINES](/docs/icon-design-guide.md).
+Read it here: [ICON_GUIDELINES](https://lucide.dev/docs/icon-design-guide).
 
 ### Editor guides
 
 Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-#### [Adobe Illustrator Guide](/docs/illustrator-guide.md)
+#### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](/docs/templates/illustrator-template.ai).
+You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
 
-#### [Inkscape Guide](/docs/inkscape-guide.md)
+#### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
 
-#### [Figma Guide](/docs/figma-guide.md)
+#### [Figma Guide](https://lucide.dev/docs/figma-guide)
 
 ### Submitting Multiple Icons
 
@@ -70,7 +70,7 @@ pnpm install # Install dependencies, including the workspace packages
 
 ### Packages -> PNPM Workspaces
 
-To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces).
+To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/enhttps://lucide.dev/docs/workspaces).
 
 The configured directory for workspaces is the [packages](./packages) directory, located in the root directory. There you will find all the current packages from lucide.
 There are more workspaces defined, see [`pnpm-workspace.yaml`](./pnpm-workspace.yaml).
@@ -172,11 +172,11 @@ Includes usefully scripts to automate certain jobs. Big part of the scripts is t
 
 ### site
 
-The lucide.dev website using [Nextjs](https://nextjs.org).
+The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
 
 ## Documentation
 
-The documentation files are located in the [docs](./docs) directory. All these markdown files will be loaded in the build of the lucide.dev website.
+The documentation files are located in the [docs](https://github.com/lucide-icons/lucide/tree/main/docs) directory. All these markdown files will be loaded in the build of the lucide.dev website.
 
 Feel free to write, adjust or add new markdown files to improve our documentation.
 
