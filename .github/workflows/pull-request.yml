@@ -7,7 +7,10 @@ on:
 
 jobs:
   lint-contributors:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
@@ -18,13 +21,21 @@ jobs:
         uses: tj-actions/changed-files@v35
         with:
           files: icons/*
-      - uses: actions/setup-node@v3.8.1
-      - name: Install simple-git (safer and faster than installing all deps)
-        run: npm install simple-git
-      - env:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Install deps
+        run: pnpm install --ignore-scripts
+      - name: Generate annotations
+        run: node ./scripts/updateContributors.mjs
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
-        run: node ./scripts/updateContributors.mjs ${{ steps.changed-files.outputs.all_changed_files }}
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
@@ -43,6 +54,7 @@ jobs:
       #   run: git diff --exit-code -- icons/*.json
 
   add-changed-icons-comment:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -59,16 +71,18 @@ jobs:
           files: icons/*.svg
       - name: Generate 24px dpi preview
         id: generate-24px-dpi-preview
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          while IFS= read -r file; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/dpi/24/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate cohesion check random
@@ -82,7 +96,7 @@ jobs:
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate cohesion check squares
@@ -96,7 +110,7 @@ jobs:
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 1px stroke-width
@@ -104,13 +118,13 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          while IFS= read -r file; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/1/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 2px stroke-width
@@ -118,13 +132,13 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          while IFS= read -r file; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 3px stroke-width
@@ -132,13 +146,13 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          while IFS= read -r file; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/3/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate X-rays
@@ -146,13 +160,13 @@ jobs:
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          while IFS= read -r file; do
             cat "$file" | # get file content
             tr '\n' ' ' | # remove line breaks
             sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
             base64 -w 0 | # encode svg
             sed "s|.*|<img width=\"400\" title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/$(basename ${file//\.svg/})/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
+          done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Find Comment

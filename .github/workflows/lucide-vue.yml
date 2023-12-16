@@ -5,6 +5,7 @@ on:
     paths:
       - packages/lucide-vue/**
       - tools/build-icons/**
+      - tools/rollup-plugins/**
       - pnpm-lock.yaml
 
 jobs:
