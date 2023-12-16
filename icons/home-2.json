@@ -1,0 +1,20 @@
+{
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "KarandeepSWranch"
+    ],
+    "tags": [
+      "house",
+      "living",
+      "building",
+      "residence",
+      "property",
+      "shelter",
+      "quarters"
+    ],
+    "categories": [
+      "home",
+      "buildings",
+      "maps"
+    ]
+  }
