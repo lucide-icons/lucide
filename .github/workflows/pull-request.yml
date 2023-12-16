@@ -4,6 +4,8 @@ on:
   pull_request_target:
     paths:
       - 'icons/*.svg'
+    branches:
+      - main
 
 jobs:
   lint-contributors:
