@@ -23,15 +23,9 @@ jobs:
         uses: tj-actions/changed-files@v35
         with:
           files: icons/*
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: 'pnpm'
-      - name: Install deps
-        run: pnpm install --ignore-scripts
+      - uses: actions/setup-node@v3.8.1
+      - name: Install simple-git (safer and faster than installing all deps)
+        run: npm install simple-git
       - name: Generate annotations
         run: node ./scripts/updateContributors.mjs
         env:
@@ -226,7 +220,7 @@ jobs:
             </details>
             <details>
             <summary>DPI Preview (24px)</summary>
-            ${{ needs.generate-changed-icons-comment-data.outputs.generate-24px-dpi-preview }
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-24px-dpi-preview }}
             </details>
             <details>
             <summary>Icon X-rays</summary>
