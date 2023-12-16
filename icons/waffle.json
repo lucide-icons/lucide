@@ -1,18 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "kemie",
     "danielbayley"
   ],
   "tags": [
-    "food",
+    "syrup",
+    "fast food",
+    "junk food",
     "snack",
+    "sweet",
     "dish",
     "restaurant",
-    "lunch",
+    "breakfast",
+    "brunch",
+    "dessert",
     "meal",
-    "savory",
-    "savoury"
+    "cookery",
+    "cooking"
   ],
   "categories": [
     "food-beverage"

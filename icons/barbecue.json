@@ -1,25 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "kemie",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "steak",
-    "dish",
-    "restaurant",
-    "course",
+    "barbeque",
+    "bbq",
+    "grilled",
+    "smoke",
     "dinner",
     "meal",
     "meat",
-    "juicy",
-    "medium rare",
     "cookery",
     "cooking",
-    "grilled",
-    "barbecue",
-    "bbq",
-    "cow"
+    "charcoal",
+    "heat",
+    "hot",
+    "fire"
   ],
   "categories": [
     "food-beverage"
