@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { cleanup, render } from 'solid-testing-library'
+import { cleanup, render } from '@solidjs/testing-library'
 import { Edit2, Grid, Pen, Droplet } from '../src/lucide-solid'
 
 describe('Using lucide icon components', () => {
