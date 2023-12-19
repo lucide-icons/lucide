@@ -476,8 +476,8 @@ importers:
         specifier: ^0.69.0
         version: 0.69.12(react@18.2.0)
       react-native-svg:
-        specifier: ^13.0.0
-        version: 13.10.0(react-native@0.69.12)(react@18.2.0)
+        specifier: ^14.0.0
+        version: 14.1.0(react-native@0.69.12)(react@18.2.0)
       rollup:
         specifier: ^3.5.1
         version: 3.27.0
@@ -4560,7 +4560,7 @@ packages:
     dependencies:
       '@babel/helper-module-imports': 7.22.15
       '@babel/helper-plugin-utils': 7.22.5
-      babel-plugin-polyfill-corejs2: 0.4.5
+      babel-plugin-polyfill-corejs2: 0.4.5(@babel/core@7.22.9)
       babel-plugin-polyfill-corejs3: 0.8.3(@babel/core@7.22.9)
       babel-plugin-polyfill-regenerator: 0.5.2(@babel/core@7.22.9)
       semver: 6.3.1
@@ -11086,21 +11086,6 @@ packages:
       - supports-color
     dev: true
 
-  /babel-plugin-polyfill-corejs2@0.4.5:
-    resolution: {integrity: sha512-19hwUH5FKl49JEsvyTcoHakh6BE0wgXLLptIyKZ3PijHc/Ci521wygORCUCCred+E/twuqRyAkE02BAWPmsHOg==}
-    peerDependencies:
-      '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-    dependencies:
-      '@babel/compat-data': 7.23.3
-      '@babel/helper-define-polyfill-provider': 0.4.2(@babel/core@7.22.9)
-      semver: 6.3.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /babel-plugin-polyfill-corejs2@0.4.5(@babel/core@7.22.9):
     resolution: {integrity: sha512-19hwUH5FKl49JEsvyTcoHakh6BE0wgXLLptIyKZ3PijHc/Ci521wygORCUCCred+E/twuqRyAkE02BAWPmsHOg==}
     peerDependencies:
@@ -11125,7 +11110,7 @@ packages:
       '@babel/core':
         optional: true
     dependencies:
-      '@babel/compat-data': 7.23.3
+      '@babel/compat-data': 7.22.9
       '@babel/core': 7.23.3
       '@babel/helper-define-polyfill-provider': 0.4.2(@babel/core@7.23.3)
       semver: 6.3.1
@@ -20890,8 +20875,8 @@ packages:
     resolution: {integrity: sha512-+4JpbIx42zGTONhBTIXSyfyHICHC29VTvhkkoUOJAh/XHPEixpuBduYgf6Y4y9wsN1ARlQhBBoptTvXvAFQf5g==}
     dev: true
 
-  /react-native-svg@13.10.0(react-native@0.69.12)(react@18.2.0):
-    resolution: {integrity: sha512-D/oYTmUi5nsA/2Nw4WYlF1UUi3vZqhpESpiEhpYCIFB/EMd6vz4A/uq3tIzZFcfa5z2oAdGSxRU1TaYr8IcPlQ==}
+  /react-native-svg@14.1.0(react-native@0.69.12)(react@18.2.0):
+    resolution: {integrity: sha512-HeseElmEk+AXGwFZl3h56s0LtYD9HyGdrpg8yd9QM26X+d7kjETrRQ9vCjtxuT5dCZEIQ5uggU1dQhzasnsCWA==}
     peerDependencies:
       react: '*'
       react-native: '*'
