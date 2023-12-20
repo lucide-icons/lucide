@@ -4,11 +4,10 @@ import { shuffle, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
+const BASE_URL = 'https://lucide.dev/api/gh-icon';
 
-const changedFilesPathString =
-  'icons/airplay.svg icons/podcast.svg icons/radio-tower.svg icons/radio.svg';
+const changedFilesPathString = process.env.CHANGED_FILES;
 
-// const changedFiles =process.env.CHANGED_FILES
 const changedFiles = changedFilesPathString
   .split(' ')
   .map((file) => file.replace('.json', '.svg'))
@@ -36,40 +35,37 @@ const iconsFilteredByName = (search) => svgFiles.filter((file) => file.includes(
 
 const cohesionRandomImageTags = getImageTagsByFiles(
   shuffle(svgFiles).slice(0, changedFiles.length),
-  () => 'https://lucide.dev/api/gh-icon/stroke-width/2',
+  () => `${BASE_URL}/stroke-width/2`,
 );
 
 const cohesionSquaresImageTags = getImageTagsByFiles(
   shuffle(iconsFilteredByName('square')).slice(0, changedFiles.length),
-  () => 'https://lucide.dev/api/gh-icon/stroke-width/2',
+  () => `${BASE_URL}/stroke-width/2`,
 );
 
 const changeFiles1pxStrokeImageTags = getImageTagsByFiles(
   changedFiles,
-  () => 'https://lucide.dev/api/gh-icon/stroke-width/1',
+  () => `${BASE_URL}/stroke-width/1`,
 );
 
 const changeFiles2pxStrokeImageTags = getImageTagsByFiles(
   changedFiles,
-  () => 'https://lucide.dev/api/gh-icon/stroke-width/2',
+  () => `${BASE_URL}/stroke-width/2`,
 );
 
 const changeFiles3pxStrokeImageTags = getImageTagsByFiles(
   changedFiles,
-  () => 'https://lucide.dev/api/gh-icon/stroke-width/3',
+  () => `${BASE_URL}/stroke-width/3`,
 );
 
-const changeFilesLowDPIImageTags = getImageTagsByFiles(
-  changedFiles,
-  () => 'https://lucide.dev/api/gh-icon/dpi/24',
-);
+const changeFilesLowDPIImageTags = getImageTagsByFiles(changedFiles, () => `${BASE_URL}/dpi/24`);
 
 const changeFilesXRayImageTags = getImageTagsByFiles(
   changedFiles,
   (file) => {
     const iconName = path.basename(file, '.svg');
 
-    return `https://lucide.dev/api/gh-icon/${iconName}`;
+    return `${BASE_URL}/${iconName}`;
   },
   400,
 );
