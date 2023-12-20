@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "connium",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "diamond",
@@ -10,23 +9,16 @@
     "ruby",
     "rock",
     "jewellery",
-    "valuable",
-    "value",
-    "pricey",
-    "expensive",
+    "price",
     "special",
     "present",
     "gift",
-    "ring",
     "wedding",
     "proposal",
     "marriage",
-    "rubygems"
+    "accessories"
   ],
   "categories": [
-    "gaming",
-    "money",
-    "shopping",
-    "development"
+    "social"
   ]
 }
