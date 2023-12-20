@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "donkey",
+    "pony",
+    "calf",
+    "filly",
+    "stallion",
+    "steed",
+    "mare",
+    "mammal",
+    "equestrian",
+    "horseback",
+    "ride",
+    "riding",
+    "racing",
+    "furlong",
+    "betting",
+    "gambling",
+    "🐴"
+  ],
+  "categories": [
+    "animals",
+    "gaming"
+  ]
+}

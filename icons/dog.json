@@ -2,14 +2,27 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "kemie",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
-    "animal",
     "pet",
     "puppy",
     "hound",
-    "canine"
+    "household",
+    "trained",
+    "canine",
+    "mammal",
+    "omnivore",
+    "furry",
+    "fluffy",
+    "faithful",
+    "friend",
+    "fetch",
+    "bone",
+    "bark",
+    "woof",
+    "🐶"
   ],
   "categories": [
     "animals"
