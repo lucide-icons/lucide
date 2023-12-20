@@ -6,14 +6,32 @@
     "karsa-mistmere"
   ],
   "tags": [
+    "sunny",
     "brightness",
     "weather",
+    "summer",
     "light",
-    "summer"
+    "day",
+    "sky",
+    "shine",
+    "star",
+    "planet",
+    "solar",
+    "heat",
+    "hot",
+    "space",
+    "galaxy",
+    "universe",
+    "astro",
+    "☀️"
   ],
   "categories": [
     "accessibility",
     "weather",
-    "seasons"
+    "seasons",
+    "science"
+  ],
+  "unicode": [
+    "2600"
   ]
 }

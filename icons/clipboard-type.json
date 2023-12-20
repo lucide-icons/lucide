@@ -5,11 +5,24 @@
     "ericfennis"
   ],
   "tags": [
+    "copy",
+    "copied",
     "paste",
-    "format",
-    "text"
+    "toolbar",
+    "formatting",
+    "styling",
+    "rich text",
+    "rtf",
+    "typography",
+    "font",
+    "slab serif",
+    "content",
+    "markdown",
+    "markup"
   ],
   "categories": [
-    "text"
+    "text",
+    "tools",
+    "development"
   ]
 }

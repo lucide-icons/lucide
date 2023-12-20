@@ -8,10 +8,12 @@
     "lighting",
     "household",
     "floor",
-    "home",
-    "furniture"
+    "appliances",
+    "ambience",
+    "ambiance"
   ],
   "categories": [
-    "furniture"
+    "furniture",
+    "home"
   ]
 }

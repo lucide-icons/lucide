@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "spillage",
+    "drip",
+    "liquid",
+    "soup",
+    "porridge",
+    "gruel",
+    "cereal",
+    "breakfast",
+    "morning",
+    "brunch",
+    "lunch",
+    "dinner",
+    "meal",
+    "starter",
+    "appetizer",
+    "appetiser",
+    "culinary",
+    "cuisine"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

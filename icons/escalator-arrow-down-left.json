@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "steps",
+    "stairs",
+    "staircase",
+    "conveyor belt",
+    "conveyer",
+    "ground floor",
+    "levels",
+    "signage",
+    "directions",
+    "diagonal"
+  ],
+  "categories": [
+    "buildings",
+    "travel",
+    "arrows"
+  ]
+}

@@ -10,10 +10,29 @@
     "weather",
     "time",
     "evening",
-    "night"
+    "late",
+    "nightfall",
+    "twilight",
+    "dusk",
+    "dark",
+    "sky",
+    "shine",
+    "star",
+    "planet",
+    "solar",
+    "heat",
+    "hot",
+    "space",
+    "galaxy",
+    "universe",
+    "astro",
+    "orbit"
   ],
   "categories": [
     "arrows",
-    "weather"
+    "weather",
+    "seasons",
+    "time",
+    "science"
   ]
 }

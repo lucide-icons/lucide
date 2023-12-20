@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "football",
+    "field",
+    "stadium",
+    "ground",
+    "surface",
+    "grass",
+    "futbol",
+    "kick",
+    "goal",
+    "score",
+    "bounce"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "sleep",
     "hotel",
-    "furniture"
+    "accommodation",
+    "pillow",
+    "sheets"
   ],
   "categories": [
-    "furniture"
+    "furniture",
+    "home",
+    "travel"
   ]
 }

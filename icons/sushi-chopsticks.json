@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "rice",
+    "raw fish",
+    "nori",
+    "seaweed",
+    "kale",
+    "snack",
+    "brunch",
+    "lunch",
+    "dinner",
+    "culinary",
+    "cuisine",
+    "asian",
+    "japanese",
+    "chinese",
+    "oriental",
+    "eastern"
+  ],
+  "categories": [
+    "food-beverage",
+    "tools"
+  ]
+}

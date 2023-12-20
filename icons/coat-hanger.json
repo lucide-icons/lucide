@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "clothes",
+    "clothing",
+    "apparel",
+    "attire",
+    "wardrobe",
+    "dry cleaning",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "furniture",
+    "travel",
+    "maps"
+  ]
+}
