@@ -4,16 +4,17 @@
     "colebemis"
   ],
   "tags": [
-    "navigation",
+    "direction",
+    "north",
+    "east",
+    "south",
+    "west",
     "safari",
-    "travel",
-    "direction"
+    "browser"
   ],
   "categories": [
-    "transportation",
     "navigation",
     "maps",
-    "photography",
-    "gaming"
+    "travel"
   ]
 }

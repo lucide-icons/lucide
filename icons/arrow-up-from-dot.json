@@ -6,10 +6,13 @@
   ],
   "tags": [
     "direction",
+    "north",
     "step",
     "out"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maps"
   ]
 }
