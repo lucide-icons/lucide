@@ -10,9 +10,6 @@ export default defineConfig({
       web: [/\.[jt]sx?$/]
     },
     setupFiles: './tests/setupVitest.js',
-    // threads: false,
-    // isolate: false,
-    // watch: false,
   },
   resolve: {
     conditions: ['development', 'browser'],
