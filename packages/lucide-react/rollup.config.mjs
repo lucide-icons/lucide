@@ -1,6 +1,9 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 import dts from "rollup-plugin-dts";
+import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
+
+const aliasesEntries = await getAliasesEntryNames()
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
@@ -9,39 +12,49 @@ const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
     format: 'umd',
-    extension: 'js',
     inputs,
     outputDir,
     minify: true,
   },
   {
     format: 'umd',
-    extension: 'js',
     inputs,
     outputDir,
   },
   {
     format: 'cjs',
-    extension: 'cjs',
     inputs,
     outputDir,
     aliasesSupport: true,
   },
   {
     format: 'esm',
-    extension: 'mjs',
     inputs: [
       ...inputs,
-      'src/dynamicIconImports.ts',
+      ...aliasesEntries
     ],
     outputDir,
     preserveModules: true,
     aliasesSupport: true,
   },
+  {
+    format: 'esm',
+    inputs: ['src/dynamicIconImports.ts'],
+    outputFile: 'dynamicIconImports.js',
+    aliasesSupport: true,
+    external: [/src/],
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/)
+
+        return `dist/esm/${modulePath}.js`
+      }
+    }
+  },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport, extension }) =>
+  .map(({ inputs, outputDir, outputFile, format, minify, preserveModules, aliasesSupport, entryFileNames, external = [], paths }) =>
     inputs.map(input => ({
       input,
       plugins: [
@@ -57,17 +70,22 @@ const configs = bundles
         ),
         ...plugins(pkg, minify)
       ],
-      external: ['react', 'prop-types'],
+      external: [
+        'react',
+        'prop-types',
+        ...external
+      ],
       output: {
         name: packageName,
         ...(preserveModules
           ? {
-              dir: `${outputDir}/${format}`,
-              entryFileNames: `[name].${extension}`,
+              dir:`${outputDir}/${format}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
+              file: outputFile ?? `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
             }),
+        paths,
+        entryFileNames,
         format,
         sourcemap: true,
         preserveModules,
@@ -84,7 +102,7 @@ export default [
   {
     input: 'src/dynamicIconImports.ts',
     output: [{
-      file: `dist/dynamicIconImports.d.ts`, format: "es"
+      file: `dynamicIconImports.d.ts`, format: "es"
     }],
     plugins: [dts()],
   },

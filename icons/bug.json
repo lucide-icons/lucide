@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "danielbayley"
   ],
   "tags": [
     "issue",
@@ -10,6 +9,9 @@
     "insect",
     "antennae",
     "wildlife"
+    "debug",
+    "code",
+    "insect"
   ],
   "categories": [
     "development",
