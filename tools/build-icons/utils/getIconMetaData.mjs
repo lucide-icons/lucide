@@ -1,7 +1,7 @@
 import path from 'path';
 import { readSvgDirectory } from '../../../scripts/helpers.mjs';
 
-async function getAliases(iconDirectory) {
+async function getIconMetaData(iconDirectory) {
   const iconJsons = readSvgDirectory(iconDirectory, '.json');
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile) => {
@@ -13,4 +13,4 @@ async function getAliases(iconDirectory) {
   return Object.fromEntries(aliasesEntries);
 }
 
-export default getAliases
+export default getIconMetaData
