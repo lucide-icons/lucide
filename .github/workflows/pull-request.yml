@@ -6,6 +6,7 @@ on:
       - 'icons/*.svg'
     branches:
       - main
+      - fix-icon-preview
 
 jobs:
   lint-contributors:
@@ -48,7 +49,6 @@ jobs:
           # output: ::$ANNOTATION_SEVERITY file=icons/accessibility.json,line=2,endLine=3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
 
   generate-changed-icons-comment:
-    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       contents: read
