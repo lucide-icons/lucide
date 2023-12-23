@@ -1,6 +1,6 @@
 import path from 'path';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { getAliases } from '@lucide/build-icons';
+import { getIconMetaData } from '@lucide/build-icons';
 import {
   readSvgDirectory,
   resetFile,
@@ -48,7 +48,7 @@ svgFiles.forEach((svgFile) => {
   declarationFileContent += getComponentImport(componentName);
 });
 
-const aliases = await getAliases(ICONS_DIR);
+const aliases = await getIconMetaData(ICONS_DIR);
 
 declarationFileContent += `\n
 
