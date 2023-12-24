@@ -70,6 +70,6 @@
     "vitest": "^0.32.2"
   },
   "peerDependencies": {
-    "svelte": ">=3 <5"
+    "svelte": "^3 || ^4 || ^5.0.0-next.0"
   }
 }
