@@ -75,15 +75,7 @@ jobs:
           body-includes: Added or changed icons
 
       - name: Generate comment markup
-        run: |
-          COMMENT_MARKUP=$(node ./scripts/generateChangedIconsCommentMarkup.mjs)
-          COMMENT_MARKUP=$(tail -n +5 <<< $COMMENT_MARKUP)
-          echo $COMMENT_MARKUP
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "COMMENT_MARKUP<<$EOF" >> $GITHUB_OUTPUT
-          echo "$COMMENT_MARKUP" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
-
+        run: echo "comment-markup=$(node ./scripts/generateChangedIconsCommentMarkup.mjs)" >> "$GITHUB_OUTPUT"
         id: comment-markup
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
@@ -93,5 +85,5 @@ jobs:
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: ${{ steps.comment-markup.outputs }}
+          body: ${{ steps.comment-markup.outputs.comment-markup }}
           edit-mode: replace
