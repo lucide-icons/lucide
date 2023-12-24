@@ -151,7 +151,7 @@ export const getPaths = (src: string) => {
             y2: c.y2,
           })}`,
           {
-            cp1: reflectedCp1,
+            cp1: { x: prev.x - reflectedCp1.x, y: prev.y - reflectedCp1.y },
             cp2: { x: c.x2, y: c.y2 },
           }
         );
