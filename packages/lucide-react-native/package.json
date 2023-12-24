@@ -10,6 +10,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-react-native"
   },
+  "keywords": [
+    "Lucide",
+    "Angular",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "author": "Eric Fennis",
   "amdName": "lucide-react-native",
   "main": "dist/cjs/lucide-react-native.js",
@@ -44,16 +55,16 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-native": "^0.69.0",
-    "react-native-svg": "^13.0.0",
+    "react-native-svg": "^14.0.0",
     "rollup": "^3.5.1",
     "typescript": "^4.8.4",
-    "vite": "^4.3.9",
+    "vite": "^4.4.12",
     "vitest": "^0.32.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0",
     "react-native": "*",
-    "react-native-svg": "^12.0.0 || ^13.0.0"
+    "react-native-svg": "^12.0.0 || ^13.0.0 || ^14.0.0"
   }
 }
