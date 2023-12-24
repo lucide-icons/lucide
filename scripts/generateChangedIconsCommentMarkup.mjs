@@ -95,11 +95,4 @@ ${changeFilesXRayImageTags}
 </details>
 `;
 
-const commentMarkupEscaped = commentMarkup
-  .replace(/</g, '&lt;')
-  .replace(/>/g, '&gt;')
-  .replace(/%/g, '%25')
-  .replace(/\r/g, '%0D')
-  .replace(/\n/g, '%0A');
-
-console.log(commentMarkupEscaped);
+console.log(commentMarkup);
