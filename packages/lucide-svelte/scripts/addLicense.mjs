@@ -4,7 +4,10 @@ import { readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import pkg from '../package.json' assert { type: 'json' };
 
-const BANNER = `${pkg.name} v${pkg.version} - ${pkg.license}`;
+const BANNER = `@license ${pkg.name} v${pkg.version} - ${pkg.license}
+
+This source code is licensed under the ${pkg.license} license.
+See the LICENSE file in the root directory of this source tree.`;
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const targetDirectory = path.join(currentDir, '../dist');
