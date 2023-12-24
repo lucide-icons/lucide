@@ -70,7 +70,7 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
   400,
 );
 
-console.log(`\
+const commentMarkup = `\
 ### Added or changed icons
 ${changeFiles2pxStrokeImageTags}
 <details>
@@ -93,4 +93,13 @@ ${changeFilesLowDPIImageTags}<br/>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
 </details>
-`);
+`;
+
+const commentMarkupEscaped = commentMarkup
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/%/g, '%25')
+  .replace(/\r/g, '%0D')
+  .replace(/\n/g, '%0A');
+
+console.log(commentMarkupEscaped);
