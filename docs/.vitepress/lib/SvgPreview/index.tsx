@@ -198,8 +198,8 @@ const Radii = ({
                 r={0.25}
                 strokeDasharray="0"
                 stroke={
-                  (Math.round(circle.x * 1000) / 1000) % 1 !== 0 ||
-                  (Math.round(circle.y * 1000) / 1000) % 1 !== 0
+                  (Math.round(circle.x * 100) / 100) % 1 !== 0 ||
+                  (Math.round(circle.y * 100) / 100) % 1 !== 0
                     ? "red"
                     : undefined
                 }
