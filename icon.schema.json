@@ -16,7 +16,7 @@
   "required": ["$schema", "categories", "tags"],
   "properties": {
     "$schema": {
-      "const": "../icon.schema.json"
+      "type": "string"
     },
     "aliases": {
       "type": "array",

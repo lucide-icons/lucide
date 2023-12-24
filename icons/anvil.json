@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "metal",
+    "iron",
+    "alloy",
+    "materials",
+    "heavy",
+    "weight",
+    "blacksmith",
+    "forge",
+    "acme"
+  ],
+  "categories": [
+    "buildings",
+    "tools",
+    "gaming"
+  ]
+}

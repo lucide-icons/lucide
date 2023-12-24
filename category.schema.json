@@ -16,7 +16,7 @@
   "required": ["$schema", "icon", "title"],
   "properties": {
     "$schema": {
-      "const": "../category.schema.json"
+      "type": "string"
     },
     "description": {
       "type": "string"
