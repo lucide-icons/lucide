@@ -178,7 +178,7 @@ const Radii = ({
   paths,
   ...props
 }: { paths: Path[] } & PathProps<
-  "strokeWidth" | "stroke" | "strokeDasharray" | "strokeOpacity",
+  'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
   any
 >) => {
   return (
