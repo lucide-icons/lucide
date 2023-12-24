@@ -76,9 +76,13 @@ jobs:
 
       - name: Generate comment markup
         run: |
-          echo 'var<<EOF' >> $GITHUB_OUTPUT
-          echo "$(node ./scripts/generateChangedIconsCommentMarkup.mjs)" >> $GITHUB_OUTPUT
-          echo 'EOF' >> $GITHUB_OUTPUT
+          COMMENT_MARKUP=$(node ./scripts/generateChangedIconsCommentMarkup.mjs)
+          COMMENT_MARKUP=$(tail -n +5 <<< $COMMENT_MARKUP)
+          echo $COMMENT_MARKUP
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "COMMENT_MARKUP<<$EOF" >> $GITHUB_OUTPUT
+          echo "$COMMENT_MARKUP" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
 
         id: comment-markup
         env:
