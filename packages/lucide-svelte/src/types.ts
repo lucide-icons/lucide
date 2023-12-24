@@ -1,5 +1,13 @@
-/// <reference types="svelte" />
-/// <reference types="svelte2tsx/svelte-jsx" />
+import type { SVGAttributes, SvelteHTMLElements } from 'svelte/elements';
 
-export type Attrs = svelte.JSX.SVGProps<SVGSVGElement>
-export type IconNode = [elementName: keyof svelte.JSX.IntrinsicElements, attrs: Attrs][]
+type SVGAttrs = SVGAttributes<SVGSVGElement>;
+
+export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: SVGAttrs][];
+
+export interface IconProps extends SVGAttrs {
+  color?: string;
+  size?: number | string;
+  strokeWidth?: number | string;
+  absoluteStrokeWidth?: boolean;
+  class?: string;
+}
