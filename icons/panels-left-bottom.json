@@ -1,16 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
+    "drawers",
     "sidebar",
-    "secondary",
-    "drawer",
-    "show",
-    "reveal",
-    "dashed"
+    "primary"
   ],
   "categories": [
     "layout"
