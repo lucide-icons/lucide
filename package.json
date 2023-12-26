@@ -64,20 +64,6 @@
     "svgo": "^3.1.0",
     "svgson": "^5.3.1"
   },
-  "lint-staged": {
-    "icons/*.svg": [
-      "node ./scripts/optimizeStagedSvgs.mjs",
-      "node ./scripts/generateNextJSAliases.mjs"
-    ],
-    "icons/*.json": [
-      "ajv --spec=draft2020 -s icon.schema.json -d",
-      "prettier --write"
-    ],
-    "categories/*.json": [
-      "ajv --spec=draft2020 -s category.schema.json -d",
-      "prettier --write"
-    ]
-  },
   "packageManager": "pnpm@8.7.1",
   "pnpm": {
     "peerDependencyRules": {
