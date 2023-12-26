@@ -59,7 +59,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
     return createElement(
       'svg',
       {
-        // eslint-disable-next-line prettier/prettier
+        // prettier-ignore
         class: [defaultClass, data.class, data.staticClass, data.attrs && data.attrs.class].filter(Boolean),
         style: [data.style, data.staticStyle, data.attrs && data.attrs.style].filter(Boolean),
         attrs: {
