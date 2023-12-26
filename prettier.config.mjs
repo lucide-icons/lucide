@@ -1,3 +1,4 @@
+/** @satisfies {import('prettier').Config} */
 const config = {
   singleQuote: true,
   trailingComma: 'all',
@@ -12,4 +13,4 @@ const config = {
   ],
 };
 
-module.exports = config;
+export default config;
