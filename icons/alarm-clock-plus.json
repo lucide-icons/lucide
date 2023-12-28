@@ -13,5 +13,8 @@
     "devices",
     "notifications",
     "time"
+  ],
+  "aliases": [
+    "alarm-plus"
   ]
 }
