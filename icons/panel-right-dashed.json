@@ -5,13 +5,16 @@
     "ericfennis"
   ],
   "tags": [
+    "sidebar",
+    "secondary",
     "drawer",
-    "dock",
     "show",
-    "reveal",
-    "dashed"
+    "reveal"
   ],
   "categories": [
     "layout"
+  ],
+  "aliases": [
+    "panel-right-inactive"
   ]
 }
