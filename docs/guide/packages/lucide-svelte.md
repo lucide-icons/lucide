@@ -83,14 +83,14 @@ This results a filled phone icon.
 
 ## Types
 
-The package includes type definitions for all icons. This is useful if you want to dynamically load icons.
+The package includes type definitions for all icons. This is useful if you want to dynamically load icons with the `svelte:component` directive whether you are using TypeScript or JSDoc.
 
 ### TypeScript Example
 
 ```svelte
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
   import { Home, Library, Cog } from 'lucide-svelte';
+  import type { ComponentType } from 'svelte';
   import type { Icon } from 'lucide-svelte';
 
   type Route = {
@@ -118,14 +118,12 @@ The package includes type definitions for all icons. This is useful if you want 
   ];
 </script>
 
-...
 {#each routes as route}
   <a href={route.href}>
    <svelte:component this={route.icon} />
     <span>{route.name}</span>
   </a>
 {/each}
-...
 ```
 
 ### JSDoc Example
@@ -160,10 +158,9 @@ The package includes type definitions for all icons. This is useful if you want 
     }
   ];
 </script>
-
-...
-
 ```
+
+For more details about typing the `svelte:component` directive, see the [Svelte documentation](https://svelte.dev/docs/typescript#types-componenttype).
 
 ## One generic icon component
 
