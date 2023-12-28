@@ -25,7 +25,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionCompone
     { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, class: classes = '', ...rest }: LucideProps
   ) =>
     h(
-      'svg' as unknown as ComponentType<Partial<JSX.SVGAttributes<SVGElement> & { 'stroke-width': number | string }>>,
+      'svg',
       {
         ...defaultAttributes,
         width:  String(size),
