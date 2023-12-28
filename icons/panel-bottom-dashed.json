@@ -1,24 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
     "danielbayley",
     "ericfennis"
   ],
   "tags": [
-    "primary",
     "drawer",
+    "dock",
     "show",
-    "reveal",
-    "chevron",
-    "right",
-    ">"
+    "reveal"
   ],
   "categories": [
-    "layout",
-    "arrows"
+    "layout"
   ],
-   "aliases": [
-    "sidebar-open"
+  "aliases": [
+    "panel-bottom-inactive"
   ]
 }

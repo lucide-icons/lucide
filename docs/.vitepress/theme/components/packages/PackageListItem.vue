@@ -33,13 +33,11 @@ const props = defineProps<{
           :href="packageData.documentation"
           text="Guide"
           theme="brand"
-          @click="go(packageData.documentation)"
         />
         <VPButton
           :href="packageData.source"
           text="Source"
           theme="alt"
-          @click="go(packageData.source)"
         />
       </footer>
     </Card>
