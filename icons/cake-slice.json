@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "birthday",
     "birthdate",
@@ -13,7 +16,7 @@
     "fondant",
     "icing sugar",
     "sweet",
-    "baking"    
+    "baking"
   ],
   "categories": [
     "food-beverage",
