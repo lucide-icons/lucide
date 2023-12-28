@@ -7,11 +7,14 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "remove"
+    "add"
   ],
   "categories": [
     "devices",
     "notifications",
     "time"
+  ],
+  "aliases": [
+    "alarm-plus"
   ]
 }

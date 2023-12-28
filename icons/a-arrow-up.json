@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "jguddas",
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "letter",
+    "font size",
+    "text",
+    "formatting",
+    "larger",
+    "bigger"
+  ],
+  "categories": [
+    "text",
+    "design"
+  ]
+}
