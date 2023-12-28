@@ -52,11 +52,11 @@ const configs = bundles
         name: outputFileName,
         ...(preserveModules
           ? {
-              dir: `${outputDir}/${format}`,
-            }
+            dir: `${outputDir}/${format}`,
+          }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-            }),
+            file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+          }),
         format,
         sourcemap: true,
         preserveModules,

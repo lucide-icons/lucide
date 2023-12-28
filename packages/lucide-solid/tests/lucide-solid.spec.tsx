@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { cleanup, render } from 'solid-testing-library'
-import { Edit2, Grid, Pen } from '../src/lucide-solid'
+import { cleanup, render } from '@solidjs/testing-library'
+import { Edit2, Grid, Pen, Droplet } from '../src/lucide-solid'
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -78,5 +78,16 @@ describe('Using lucide icon components', () => {
 
     expect( container.innerHTML ).toMatchSnapshot();
     cleanup()
+  });
+
+  it('should add all classes to the element', () => {
+    const testClass = 'my-class';
+    const { container } = render(() =>
+      <Droplet class={testClass} />,
+    );
+
+    expect(container.firstChild).toHaveClass(testClass);
+    expect(container.firstChild).toHaveClass('lucide');
+    expect(container.firstChild).toHaveClass('lucide-droplet');
   });
 })

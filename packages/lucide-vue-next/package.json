@@ -47,13 +47,13 @@
   "devDependencies": {
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/build-icons": "workspace:*",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/vue": "^6.6.1",
     "@vue/compiler-sfc": "3.2.45",
     "@vue/test-utils": "2.2.4",
     "@vitejs/plugin-vue": "^3.2.0",
     "rollup": "^3.5.1",
-    "vite": "^4.3.9",
+    "vite": "^4.4.12",
     "vitest": "^0.32.2",
     "vue": "3.2.45",
     "jsdom": "^20.0.3"
