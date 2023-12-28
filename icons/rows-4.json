@@ -4,13 +4,22 @@
     "danielbayley"
   ],
   "tags": [
-    "split",
     "lines",
-    "queue",
-    "series",
     "list",
+    "queue",
+    "preview",
+    "paragraphs",
+    "parallel",
+    "series",
+    "split",
     "vertical",
-    "horizontal"
+    "horizontal",
+    "half",
+    "center",
+    "middle",
+    "even",
+    "drawers",
+    "grill"
   ],
   "categories": [
     "layout",
