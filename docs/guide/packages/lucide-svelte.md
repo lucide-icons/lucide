@@ -48,14 +48,24 @@ Additional props can be passed to adjust the icon:
 <Camera color="#ff3e98" />
 ```
 
+For faster builds and load times, you can import icons directly from the `lucide-svelte/icons` directory:
+
+```svelte
+<script>
+  import AlertCircle from 'lucide-svelte/icons/alert-circle';
+</script>
+
+<AlertCircle color="#ff3e98" />
+```
+
 ## Props
 
 | name                  | type      | default      |
 | --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| `size`                | _number_  | 24           |
+| `color`               | _string_  | currentColor |
+| `strokeWidth`         | _number_  | 2            |
+| `absoluteStrokeWidth` | _boolean_ | false        |
 
 ### Applying props
 
@@ -70,6 +80,90 @@ To customize the appearance of an icon, you can pass custom properties as props 
 ```
 
 This results a filled phone icon.
+
+## Types
+
+The package includes type definitions for all icons. This is useful if you want to dynamically load icons.
+
+### TypeScript Example
+
+```svelte
+<script lang="ts">
+  import type { ComponentType } from 'svelte';
+  import { Home, Library, Cog } from 'lucide-svelte';
+  import type { Icon } from 'lucide-svelte';
+
+  type Route = {
+    name: string;
+    href: string;
+    icon: ComponentType<Icon>;
+  }
+
+  const routes: Route[] = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home,
+    },
+    {
+      name: 'Blog',
+      href: '/blog',
+      icon: Library,
+    },
+    {
+      name: 'Projects',
+      href: '/projects',
+      icon: Cog,
+    }
+  ];
+</script>
+
+...
+{#each routes as route}
+  <a href={route.href}>
+   <svelte:component this={route.icon} />
+    <span>{route.name}</span>
+  </a>
+{/each}
+...
+```
+
+### JSDoc Example
+
+```svelte
+<script>
+  import { Home, Library, Cog } from 'lucide-svelte';
+
+  /**
+   * @typedef {Object} Route
+   * @property {string} name
+   * @property {string} href
+   * @property {import('svelte').ComponentType<import('lucide-svelte').Icon>} icon
+   */
+
+  /** @type {Route[]} */
+  const routes = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home,
+    },
+    {
+      name: 'Blog',
+      href: '/blog',
+      icon: Library,
+    },
+    {
+      name: 'Projects',
+      href: '/projects',
+      icon: Cog,
+    }
+  ];
+</script>
+
+...
+
+```
 
 ## One generic icon component
 
@@ -99,4 +193,3 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 <LucideIcon name="Menu" />
 ```
-
