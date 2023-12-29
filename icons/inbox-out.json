@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "email",
+    "tray",
+    "code",
+    "version control",
+    "git",
+    "stash"
+  ],
+  "categories": [
+    "account",
+    "mail",
+    "development"
+  ]
+}
