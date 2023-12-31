@@ -10,7 +10,7 @@ on:
       - pnpm-lock.yaml
 
 jobs:
-  lucide-react:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,6 +27,21 @@ jobs:
 
       - name: Build
         run: pnpm --filter lucide-react build
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Test
         run: pnpm --filter lucide-react test

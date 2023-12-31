@@ -90,12 +90,13 @@ export const writeFileIfNotExists = (content, fileName, outputDirectory) => {
  * @returns {object} A map of icon or category metadata
  */
 export const readAllMetadata = (directory) =>
-  fs.readdirSync(directory).filter((file) => path.extname(file) === '.json').reduce(
-    (acc, fileName, i) => {
+  fs
+    .readdirSync(directory)
+    .filter((file) => path.extname(file) === '.json')
+    .reduce((acc, fileName, i) => {
       acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
       return acc;
-    }, {}
-  );
+    }, {});
 
 /**
  * Reads metadata for an icon or category
