@@ -56,16 +56,16 @@
     "@lucide/build-icons": "workspace:*",
     "@solidjs/testing-library": "^0.8.4",
     "@testing-library/jest-dom": "^6.1.4",
-    "babel-preset-solid": "^1.5.4",
+    "jest-serializer-html": "^7.1.0",
     "jsdom": "^23.0.1",
-    "rollup": "^3.5.1",
+    "rollup": "^4.9.2",
     "rollup-plugin-license": "^3.0.1",
     "rollup-preset-solid": "^2.0.1",
     "solid-js": "^1.7.7",
     "typescript": "^4.9.4",
     "vite": "^4.4.12",
     "vite-plugin-solid": "^2.8.0",
-    "vitest": "^1.0.4"
+    "vitest": "^1.1.1"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"
