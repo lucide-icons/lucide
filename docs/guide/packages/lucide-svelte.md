@@ -89,7 +89,9 @@ The package includes type definitions for all icons. This is useful if you want 
 
 ```svelte
 <script lang="ts">
-  import { Home, Library, Cog } from 'lucide-svelte';
+  import Home from 'lucide-svelte/icons/home';
+  import Library from 'lucide-svelte/icons/library';
+  import Cog from 'lucide-svelte/icons/cog';
   import type { ComponentType } from 'svelte';
   import type { Icon } from 'lucide-svelte';
 
@@ -99,7 +101,7 @@ The package includes type definitions for all icons. This is useful if you want 
     icon: ComponentType<Icon>;
   }
 
-  const routes: Route[] = [
+  const menuItems: Route[] = [
     {
       name: 'Home',
       href: '/',
@@ -118,10 +120,10 @@ The package includes type definitions for all icons. This is useful if you want 
   ];
 </script>
 
-{#each routes as route}
-  <a href={route.href}>
-   <svelte:component this={route.icon} />
-    <span>{route.name}</span>
+{#each menuItems as item}
+  <a href={item.href}>
+   <svelte:component this={item.icon} />
+    <span>{item.name}</span>
   </a>
 {/each}
 ```
@@ -130,7 +132,9 @@ The package includes type definitions for all icons. This is useful if you want 
 
 ```svelte
 <script>
-  import { Home, Library, Cog } from 'lucide-svelte';
+  import Home from 'lucide-svelte/icons/home';
+  import Library from 'lucide-svelte/icons/library';
+  import Cog from 'lucide-svelte/icons/cog';
 
   /**
    * @typedef {Object} Route
@@ -140,7 +144,7 @@ The package includes type definitions for all icons. This is useful if you want 
    */
 
   /** @type {Route[]} */
-  const routes = [
+  const menuItems = [
     {
       name: 'Home',
       href: '/',
