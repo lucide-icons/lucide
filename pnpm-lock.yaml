@@ -385,6 +385,9 @@ importers:
       preact:
         specifier: ^10.19.2
         version: 10.19.2
+      rollup:
+        specifier: ^4.9.2
+        version: 4.9.2
       rollup-plugin-dts:
         specifier: ^6.1.0
         version: 6.1.0(rollup@4.9.2)(typescript@5.3.3)
