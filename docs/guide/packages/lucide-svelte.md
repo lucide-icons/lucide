@@ -95,13 +95,13 @@ The package includes type definitions for all icons. This is useful if you want 
   import type { ComponentType } from 'svelte';
   import type { Icon } from 'lucide-svelte';
 
-  type Route = {
+  type MenuItem = {
     name: string;
     href: string;
     icon: ComponentType<Icon>;
   }
 
-  const menuItems: Route[] = [
+  const menuItems: MenuItem[] = [
     {
       name: 'Home',
       href: '/',
@@ -137,13 +137,13 @@ The package includes type definitions for all icons. This is useful if you want 
   import Cog from 'lucide-svelte/icons/cog';
 
   /**
-   * @typedef {Object} Route
+   * @typedef {Object} MenuItem
    * @property {string} name
    * @property {string} href
    * @property {import('svelte').ComponentType<import('lucide-svelte').Icon>} icon
    */
 
-  /** @type {Route[]} */
+  /** @type {MenuItem[]} */
   const menuItems = [
     {
       name: 'Home',
