@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "pnpm prebuild && vitepress dev",
+    "docs:dev": "pnpm prebuild && pnpm prepare && vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",
@@ -16,6 +16,7 @@
     "prebuild:iconDetails": "node ../scripts/writeIconDetails.mjs",
     "postbuild:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
+    "prepare": "npx nitropack prepare",
     "build:api": "npx nitropack build",
     "prebuild": "pnpm prebuild:iconNodes && pnpm prebuild:metaJson && pnpm prebuild:releaseJson && pnpm prebuild:relatedIcons && pnpm prebuild:iconDetails",
     "build": "pnpm prebuild && pnpm build:api && pnpm build:docs && pnpm postbuild:vercelJson",
