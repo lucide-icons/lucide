@@ -75,7 +75,7 @@ jobs:
           body-includes: Added or changed icons
 
       - name: Generate comment markup
-        run: echo "comment-markup=$(node ./scripts/generateChangedIconsCommentMarkup.mjs)" >> "$GITHUB_OUTPUT"
+        run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> comment-markup.md
         id: comment-markup
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
@@ -85,5 +85,5 @@ jobs:
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: ${{ steps.comment-markup.outputs.comment-markup }}
+          body-path: ./comment-markup.md
           edit-mode: replace
