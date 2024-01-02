@@ -48,11 +48,11 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@testing-library/jest-dom": "^6.1.6",
     "@testing-library/vue": "^8.0.1",
-    "@vitejs/plugin-vue": "^5.0.2",
+    "@vitejs/plugin-vue": "^4.6.2",
     "@vue/test-utils": "2.4.3",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
-    "vite": "^4.4.12",
+    "vite": "5.0.10",
     "vitest": "^1.1.1",
     "vue": "^3.0.1"
   },

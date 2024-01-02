@@ -80,7 +80,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
 </svg>
 `;
 
-exports[`Using lucide icon components > should render an component 1`] = `
+exports[`Using lucide icon components > should render a component 1`] = `
 <svg width="24"
      height="24"
      stroke="currentColor"
