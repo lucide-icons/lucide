@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "pnpm prebuild && pnpm prepare && vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
+    "docs:build": "pnpm prebuild && pnpm prepare && vitepress build",
+    "docs:preview": "pnpm prebuild && pnpm prepare && vitepress preview",
     "build:docs": "vitepress build",
     "prebuild:iconNodes": "node ../scripts/writeIconNodes.mjs",
     "prebuild:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
