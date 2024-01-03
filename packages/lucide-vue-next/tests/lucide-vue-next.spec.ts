@@ -113,8 +113,6 @@ describe('Using lucide icon components', () => {
       }
     })
 
-    console.log(PenIconRenderedHTML, Edit2Container.innerHTML)
-
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
   })
 
