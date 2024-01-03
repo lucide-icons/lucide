@@ -6,12 +6,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    transformMode: {
-      web: [/\.jsx?$/],
-    },
     setupFiles: './tests/setupVitest.js',
-    threads: false,
-    isolate: false,
   },
   resolve: {
     mainFields: ['module'],

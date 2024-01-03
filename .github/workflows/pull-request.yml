@@ -14,16 +14,16 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
         with:
           files: icons/*
-      - uses: actions/setup-node@v3.8.1
+      - uses: actions/setup-node@v4
       - name: Install simple-git (safer and faster than installing all deps)
         run: npm install simple-git
       - name: Generate annotations
@@ -64,13 +64,13 @@ jobs:
       generate-x-rays: ${{ steps.generate-x-rays.outputs.body }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
         with:
           files: icons/*.svg
       - name: Generate 24px dpi preview
@@ -199,7 +199,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: Added or changed icons
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
