@@ -1,22 +1,21 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "Andreto",
-    "ericfennis",
-    "csandman"
-  ],
   "tags": [
-    "account",
+    "nut",
+    "screw",
     "settings",
-    "spanner",
+    "preferences",
+    "configuration",
+    "controls",
+    "edit",
     "diy",
-    "toolbox",
+    "fixed",
     "build",
-    "construction"
+    "contruction",
+    "parts"
   ],
   "categories": [
     "account",
-    "development",
     "tools",
     "home"
   ]
