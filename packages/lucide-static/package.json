@@ -22,17 +22,27 @@
     "Fontawesome",
     "Font Awesome"
   ],
-  "main": "lib/index.js",
+  "source": "src/lucide-static.js",
+  "main": "dist/cjs/lucide-static.js",
+  "module": "dist/esm/lucide-static.js",
+  "typings": "dist/lucide-static.d.ts",
+  "sideEffects": false,
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "build:tags": "node ../../scripts/migrateIconsToTags.mjs",
-    "build": "pnpm clean && pnpm copy:license && pnpm build:lib && pnpm build:tags",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:lib && pnpm build:tags",
+    "build:tags": "bun ../../scripts/migrateIconsToTags.mjs",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mjs",
+    "build:bundles": "rollup -c rollup.config.mjs",
     "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "prettier": "^2.3.2",
-    "svgson": "^5.2.1"
+    "svgson": "^5.2.1",
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/rollup-plugins": "workspace:*",
+    "rollup": "^4.9.2",
+    "rollup-plugin-dts": "^6.1.0"
   }
 }
