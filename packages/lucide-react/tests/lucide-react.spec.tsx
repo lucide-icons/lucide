@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { render, cleanup, waitFor } from '@testing-library/react'
-import { Pen, Edit2, Grid, dynamicIconImports, LucideProps } from '../src/lucide-react';
+import { Pen, Edit2, Grid, LucideProps, Droplet } from '../src/lucide-react';
 import { Suspense, lazy } from 'react';
+import dynamicIconImports from '../src/dynamicIconImports';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -75,6 +76,17 @@ describe('Using lucide icon components', () => {
     expect( container.innerHTML ).toMatchSnapshot();
   });
 
+  it('should apply all classNames to the element', () => {
+    const testClass = 'my-class';
+    const { container } = render(
+      <Droplet className={testClass} />,
+    );
+
+    expect(container.firstChild).toHaveClass(testClass);
+    expect(container.firstChild).toHaveClass('lucide');
+    expect(container.firstChild).toHaveClass('lucide-droplet');
+  });
+
   it('should render icons dynamically by using the dynamicIconImports module', async () => {
     interface IconProps extends Omit<LucideProps, 'ref'> {
       name: keyof typeof dynamicIconImports;
@@ -105,6 +117,4 @@ describe('Using lucide icon components', () => {
     expect( container.innerHTML ).toMatchSnapshot();
 
   });
-
-
 })

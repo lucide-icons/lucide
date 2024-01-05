@@ -7,12 +7,28 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "measure",
-    "meter",
+    "measurements",
+    "centimeters",
+    "cm",
+    "millimeters",
+    "mm",
+    "metre",
     "foot",
-    "inch"
+    "feet",
+    "inches",
+    "units",
+    "size",
+    "length",
+    "width",
+    "height",
+    "dimensions",
+    "depth",
+    "breadth",
+    "extent",
+    "stationery"
   ],
   "categories": [
+    "tools",
     "design",
     "layout"
   ]

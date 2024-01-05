@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "radio",
+    "speakers",
+    "audio",
+    "music",
+    "sound",
+    "broadcast",
+    "live",
+    "frequency"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "social"
+  ]
+}
