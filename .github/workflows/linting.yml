@@ -2,8 +2,8 @@ name: Linting
 
 on:
   pull_request:
-    paths:
-      - icons/**
+    branches:
+      - '**'
 
 jobs:
   linting:
