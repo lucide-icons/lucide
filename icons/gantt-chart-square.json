@@ -31,10 +31,6 @@
     "design"
   ],
   "aliases": [
-<<<<<<<< HEAD:icons/gantt-square.json
     "gantt-square"
-========
-    "square-gantt"
->>>>>>>> 314ee3b255fb38a16fbf9d05f3b1dbc251ace196:icons/gantt-chart-square.json
   ]
 }
