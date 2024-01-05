@@ -1,14 +1,16 @@
-import { ComponentType, FunctionComponent, h, JSX, RefObject, toChildArray } from 'preact';
+import { type FunctionComponent, h, type JSX, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 
-type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
+export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
 
-interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
+export interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
   color?: string
   size?: string | number
   strokeWidth?: string | number
   absoluteStrokeWidth?: boolean
 }
+
+export type LucideIcon = FunctionComponent<LucideProps>
 
 /**
  * Converts string to KebabCase
@@ -20,12 +22,12 @@ interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
  */
 export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionComponent<LucideProps> => {
+const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = (
     { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, class: classes = '', ...rest }: LucideProps
   ) =>
     h(
-      'svg' as unknown as ComponentType<Partial<JSX.SVGAttributes<SVGElement> & { 'stroke-width': number | string }>>,
+      'svg',
       {
         ...defaultAttributes,
         width:  String(size),

@@ -4,6 +4,8 @@ on:
   pull_request_target:
     paths:
       - 'icons/*.svg'
+    branches:
+      - main
 
 jobs:
   lint-contributors:
@@ -12,23 +14,24 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
         with:
           files: icons/*
-      - uses: actions/setup-node@v3.8.1
+      - uses: actions/setup-node@v4
       - name: Install simple-git (safer and faster than installing all deps)
         run: npm install simple-git
-      - env:
+      - name: Generate annotations
+        run: node ./scripts/updateContributors.mjs
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-        run: node ./scripts/updateContributors.mjs
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
@@ -46,20 +49,28 @@ jobs:
       # - name: Fail if contributors have changed
       #   run: git diff --exit-code -- icons/*.json
 
-  add-changed-icons-comment:
+  generate-changed-icons-comment-data:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write
-      contents: write
+      contents: read
+    outputs:
+      generate-1px-stroke-width: ${{ steps.generate-1px-stroke-width.outputs.body }}
+      generate-2px-stroke-width: ${{ steps.generate-2px-stroke-width.outputs.body }}
+      generate-3px-stroke-width: ${{ steps.generate-3px-stroke-width.outputs.body }}
+      generate-24px-dpi-preview: ${{ steps.generate-24px-dpi-preview.outputs.body }}
+      generate-cohesion-check-random: ${{ steps.generate-cohesion-check-random.outputs.body }}
+      generate-cohesion-check-squares: ${{ steps.generate-cohesion-check-squares.outputs.body }}
+      generate-x-rays: ${{ steps.generate-x-rays.outputs.body }}
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
         with:
           files: icons/*.svg
       - name: Generate 24px dpi preview
@@ -80,6 +91,8 @@ jobs:
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate cohesion check random
         id: generate-cohesion-check-random
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
@@ -94,6 +107,8 @@ jobs:
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate cohesion check squares
         id: generate-cohesion-check-squares
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
@@ -108,6 +123,8 @@ jobs:
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 1px stroke-width
         id: generate-1px-stroke-width
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
@@ -122,6 +139,8 @@ jobs:
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate 2px stroke-width
         id: generate-2px-stroke-width
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
@@ -150,6 +169,8 @@ jobs:
           echo "$delimiter" >> $GITHUB_OUTPUT
       - name: Generate X-rays
         id: generate-x-rays
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           delimiter="$(openssl rand -hex 8)"
           echo "body<<$delimiter" >> $GITHUB_OUTPUT
@@ -162,6 +183,14 @@ jobs:
           done <<< "$CHANGED_FILES" | tr '\n' ' ' >> $GITHUB_OUTPUT
           echo >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
+
+  add-changed-icons-comment:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    needs: [generate-changed-icons-comment-data]
+    steps:
       - name: Find Comment
         uses: peter-evans/find-comment@v2
         id: fc
@@ -170,31 +199,31 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: Added or changed icons
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             ### Added or changed icons
-            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-2px-stroke-width }}<br/>
             <details>
             <summary>Preview cohesion</summary>
-            ${{ steps.generate-cohesion-check-squares.outputs.body }}<br/>
-            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
-            ${{ steps.generate-cohesion-check-random.outputs.body }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-cohesion-check-squares }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-2px-stroke-width }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-cohesion-check-random }}<br/>
             </details>
             <details>
             <summary>Preview stroke widths</summary>
-            ${{ steps.generate-1px-stroke-width.outputs.body }}<br/>
-            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
-            ${{ steps.generate-3px-stroke-width.outputs.body }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-1px-stroke-width }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-2px-stroke-width }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-3px-stroke-width }}<br/>
             </details>
             <details>
             <summary>DPI Preview (24px)</summary>
-            ${{ steps.generate-24px-dpi-preview.outputs.body }}<br/>
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-24px-dpi-preview }}
             </details>
             <details>
             <summary>Icon X-rays</summary>
-            ${{ steps.generate-x-rays.outputs.body }}
+            ${{ needs.generate-changed-icons-comment-data.outputs.generate-x-rays }}
             </details>
           edit-mode: replace
