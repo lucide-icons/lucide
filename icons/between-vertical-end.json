@@ -6,17 +6,15 @@
   "tags": [
     "insert",
     "add",
+    "top",
     "slot",
     "squeeze",
     "space",
     "vertical",
     "grid",
     "table",
-    "rows",
+    "columns",
     "cells",
-    "excel",
-    "spreadsheet",
-    "accountancy",
     "data",
     "enter",
     "entry",
@@ -28,7 +26,6 @@
   "categories": [
     "layout",
     "design",
-    "tools",
-    "account"
+    "tools"
   ]
 }
