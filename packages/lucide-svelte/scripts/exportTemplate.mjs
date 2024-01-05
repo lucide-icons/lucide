@@ -3,7 +3,9 @@ export default ({ iconName, children }) =>
   `\
 <script lang="ts">
 import Icon from '../Icon.svelte';
-import type { IconNode } from '../types';
+import type { IconNode, IconProps } from '../types.js';
+
+type $$Props = IconProps;
 
 const iconNode: IconNode = ${JSON.stringify(children)};
 </script>

@@ -4,7 +4,7 @@ import { getPaths, assert } from './utils';
 
 const Grid = ({
   radius,
-  fill,
+  fill = '#fff',
   ...props
 }: {
   strokeWidth: number;
@@ -12,6 +12,7 @@ const Grid = ({
 } & PathProps<'stroke', 'strokeWidth'>) => (
   <g className="svg-preview-grid-group" strokeLinecap="butt" {...props}>
     <rect
+      className="svg-preview-grid-rect"
       width={24 - props.strokeWidth}
       height={24 - props.strokeWidth}
       x={props.strokeWidth / 2}
@@ -182,18 +183,62 @@ const Radii = ({
 >) => {
   return (
     <g className="svg-preview-radii-group" {...props}>
-      {paths
-        .filter(({ circle }) => circle)
-        .map(({ c, prev, next, circle: { x, y, r } }) =>
-          c.name === 'circle' ? (
-            <path d={`M${x} ${y}h.01`} />
-          ) : (
-            <>
-              <path d={`M${prev.x} ${prev.y} ${x} ${y} ${next.x} ${next.y}`} />
-              <circle cy={y} cx={x} r={r} />
-            </>
-          )
-        )}
+      {paths.map(
+        ({ c, prev, next, circle }, i) =>
+          circle && (
+            <React.Fragment key={i}>
+              {c.name !== "circle" && (
+                <path
+                  d={`M${prev.x} ${prev.y} ${circle.x} ${circle.y} ${next.x} ${next.y}`}
+                />
+              )}
+              <circle
+                cy={circle.y}
+                cx={circle.x}
+                r={0.25}
+                strokeDasharray="0"
+                stroke={
+                  (Math.round(circle.x * 100) / 100) % 1 !== 0 ||
+                  (Math.round(circle.y * 100) / 100) % 1 !== 0
+                    ? "red"
+                    : undefined
+                }
+              />
+              <circle
+                cy={circle.y}
+                cx={circle.x}
+                r={circle.r}
+                stroke={
+                  (Math.round(circle.r * 1000) / 1000) % 1 !== 0
+                    ? "red"
+                    : undefined
+                }
+              />
+            </React.Fragment>
+          ),
+      )}
+    </g>
+  );
+};
+
+const Handles = ({
+  paths,
+  ...props
+}: { paths: Path[] } & PathProps<
+  'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
+  any
+>) => {
+  console.log(paths);
+  return (
+    <g className="svg-preview-handles-group" {...props}>
+      {paths.map(({ c, prev, next, cp1, cp2 }) => (
+        <>
+          {cp1 && <path d={`M${prev.x} ${prev.y} ${cp1.x} ${cp1.y}`} />}
+          {cp1 && <circle cy={cp1.y} cx={cp1.x} r={0.25} />}
+          {cp2 && <path d={`M${next.x} ${next.y} ${cp2.x} ${cp2.y}`} />}
+          {cp2 && <circle cy={cp2.y} cx={cp2.x} r={0.25} />}
+        </>
+      ))}
     </g>
   );
 };
@@ -207,7 +252,12 @@ const SvgPreview = React.forwardRef<
 >(({ src, children, showGrid = false, ...props }, ref) => {
   const paths = typeof src === 'string' ? getPaths(src) : src;
 
-  const darkModeCss = `@media screen and (prefers-color-scheme: dark) {
+  const darkModeCss = `@media screen and (prefers-color-scheme: light) {
+  .svg-preview-grid-rect { fill: none }
+}
+@media screen and (prefers-color-scheme: dark) {
+  .svg-preview-grid-rect { fill: none }
+  .svg
   .svg-preview-grid-group,
   .svg-preview-radii-group,
   .svg-preview-shadow-mask-group,
@@ -232,6 +282,7 @@ const SvgPreview = React.forwardRef<
       <style>{darkModeCss}</style>
       {showGrid && <Grid strokeWidth={0.1} stroke="#777" strokeOpacity={0.3} radius={1} />}
       <Shadow paths={paths} strokeWidth={4} stroke="#777" radius={1} strokeOpacity={0.15} />
+      <Handles paths={paths} strokeWidth={0.12} stroke="#777" strokeOpacity={0.6} />
       <ColoredPath
         paths={paths}
         colors={[
@@ -257,6 +308,7 @@ const SvgPreview = React.forwardRef<
         strokeOpacity={0.3}
       />
       <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
+      <Handles paths={paths} strokeWidth={0.12} stroke="#FFF" strokeOpacity={0.3} />
       {children}
     </svg>
   );

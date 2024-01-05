@@ -22,10 +22,19 @@ export default eventHandler((event) => {
 
   const svg = Buffer.from(
     // We can't use jsx here, is not supported here by nitro.
-    renderToString(createElement(Icon, { strokeWidth })).replace(
-      />/,
-      '><style>@media screen and (prefers-color-scheme: dark) { svg { stroke: #fff } }</style>'
-    )
+    renderToString(createElement(Icon, { strokeWidth }))
+      .replace(/fill\="none"/, 'fill="#fff"')
+      .replace(
+        />/,
+        `><style>
+        @media screen and (prefers-color-scheme: light) {
+          svg { fill: transparent !important; }
+        }
+        @media screen and (prefers-color-scheme: dark) {
+          svg { stroke: #fff; fill: transparent !important; }
+        }
+      </style>`
+      )
   ).toString('utf8');
 
   defaultContentType(event, 'image/svg+xml')
