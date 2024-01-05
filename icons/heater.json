@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "heating",
+    "warmth",
+    "comfort",
+    "fire",
+    "stove",
+    "electric",
+    "electronics",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "devices",
+    "travel"
+  ]
+}
