@@ -10,11 +10,28 @@
     "weather",
     "time",
     "morning",
-    "day"
+    "early",
+    "daybreak",
+    "dawn",
+    "light",
+    "sky",
+    "shine",
+    "star",
+    "planet",
+    "solar",
+    "heat",
+    "hot",
+    "space",
+    "galaxy",
+    "universe",
+    "astro",
+    "orbit"
   ],
   "categories": [
     "arrows",
     "weather",
-    "time"
+    "seasons",
+    "time",
+    "science"
   ]
 }

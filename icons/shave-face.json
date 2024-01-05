@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "shavers only",
+    "electric",
+    "electronics",
+    "socket",
+    "plug",
+    "razor",
+    "beard",
+    "stubble",
+    "mens",
+    "grooming",
+    "toiletries",
+    "bathroom",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "travel",
+    "connectivity",
+    "devices",
+    "tools"
+  ]
+}

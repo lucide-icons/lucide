@@ -8,11 +8,17 @@
     "soy free",
     "legume",
     "soy",
-    "food",
     "seed",
+    "kidney",
     "allergy",
     "intolerance",
-    "diet"
+    "diet",
+    "nutrition",
+    "ingredient",
+    "cooking",
+    "eating",
+    "protein",
+    "mexican"
   ],
   "categories": [
     "food-beverage"

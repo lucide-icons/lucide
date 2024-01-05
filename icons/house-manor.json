@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "mansion",
+    "country",
+    "property",
+    "real estate",
+    "dwellings",
+    "living",
+    "rooms",
+    "door",
+    "chimneys",
+    "land",
+    "acres"
+  ],
+  "categories": [
+    "buildings",
+    "travel",
+    "maps",
+    "home"
+  ]
+}

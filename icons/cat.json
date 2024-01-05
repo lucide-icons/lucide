@@ -2,13 +2,25 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "kemie",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
-    "animal",
     "pet",
     "kitten",
-    "feline"
+    "kitty",
+    "litter",
+    "feline",
+    "fluffy",
+    "furry",
+    "furball",
+    "hairball",
+    "household",
+    "trained",
+    "mammal",
+    "omnivore",
+    "meow",
+    "🐱"
   ],
   "categories": [
     "animals"

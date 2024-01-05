@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "directory",
+    "synchronize",
+    "synchronise",
+    "refresh",
+    "reconnect",
+    "transfer",
+    "backup"
+  ],
+  "categories": [
+    "files",
+    "arrows"
+  ]
+}

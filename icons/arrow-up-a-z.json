@@ -4,7 +4,6 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "arrow",
     "filter",
     "sort",
     "ascending",
@@ -14,5 +13,8 @@
     "text",
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "arrow-up-az"
   ]
 }

@@ -11,10 +11,12 @@
     "join",
     "concatenate",
     "code",
+    "coding",
     "&"
   ],
   "categories": [
     "text",
+    "design",
     "development"
   ]
 }

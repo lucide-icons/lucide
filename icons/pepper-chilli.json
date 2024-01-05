@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "chili",
+    "chile",
+    "hot",
+    "spicy",
+    "spice",
+    "flavor",
+    "flavour",
+    "vegetable",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "culinary",
+    "eating",
+    "nutrition",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
