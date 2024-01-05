@@ -33,6 +33,7 @@ export default ({
       ? prettier.format(elementTemplate, {
           singleQuote: true,
           trailingComma: 'all',
+          printWidth: 100,
           parser: 'babel',
         })
       : elementTemplate;

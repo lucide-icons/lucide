@@ -33,7 +33,7 @@ Here you can find instructions on how to implement the guidelines with different
 
 #### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](https://lucide.dev/templates/illustrator-template.ai).
+You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
 
 #### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
 
@@ -144,15 +144,18 @@ Root directories
 
 ```sh
 lucide
-|
 ├── docs
+│   ├── guide
 ├── icons
 ├── packages
-├── scripts
-└── site
+└── scripts
 ```
 
 ### Docs
+
+The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory. 
+
+### Guides
 
 Detailed documentation about: installation, guides, packages, design guides etc.
 
@@ -169,10 +172,6 @@ Includes all the (npm) packages of lucide.
 ### scripts
 
 Includes usefully scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
-
-### site
-
-The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
 
 ## Documentation
 
