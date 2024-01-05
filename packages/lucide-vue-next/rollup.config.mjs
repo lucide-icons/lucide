@@ -1,5 +1,6 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
+import dts from "rollup-plugin-dts";
 
 const packageName = 'LucideVueNext';
 const outputFileName = 'lucide-vue-next';
@@ -71,4 +72,20 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+  export default [
+    {
+      input: inputs[0],
+      output: [{
+        file: `dist/${outputFileName}.d.ts`, format: "es"
+      }],
+      plugins: [
+        dts({
+          compilerOptions: {
+            preserveSymlinks: false
+          }
+        })
+      ],
+    },
+    ...configs
+  ];
+
