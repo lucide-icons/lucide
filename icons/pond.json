@@ -1,25 +1,26 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "evergreen",
-    "forest",
-    "woodland",
-    "park",
+    "marsh",
+    "bog",
+    "pool",
+    "lake",
+    "lily pads",
+    "water lillies",
+    "lotus flowers",
+    "leaves",
+    "reeds",
+    "plants",
+    "aquatic",
     "preserve",
-    "lumber",
-    "logging",
-    "outdoors",
     "wildlife",
-    "habitat",
-    "botanical",
     "flora"
   ],
   "categories": [
     "nature",
-    "seasons",
     "sustainability",
     "maps"
   ]

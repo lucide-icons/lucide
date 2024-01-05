@@ -1,12 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "roses",
+    "thorns",
     "petals",
     "plant",
     "stem",
+    "leaves",
     "spring",
     "bloom",
     "blossom",
@@ -17,6 +20,10 @@
     "bouquet",
     "bunch",
     "gift",
+    "date",
+    "romance",
+    "romantic",
+    "valentines day",
     "special occasion"
   ],
   "categories": [
@@ -24,6 +31,6 @@
     "seasons",
     "sustainability",
     "home",
-    "gaming"
+    "social"
   ]
 }

@@ -1,11 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
     "petals",
-    "plant",
+    "houseplant",
     "stem",
     "spring",
     "bloom",
@@ -13,16 +13,11 @@
     "gardening",
     "botanical",
     "flora",
-    "florist",
-    "bouquet",
-    "bunch",
-    "gift",
-    "special occasion"
+    "florist"
   ],
   "categories": [
     "nature",
     "seasons",
-    "sustainability",
     "home",
     "gaming"
   ]

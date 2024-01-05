@@ -1,12 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
     "petals",
     "plant",
     "stem",
+    "leaves",
     "spring",
     "bloom",
     "blossom",
@@ -17,6 +18,7 @@
     "bouquet",
     "bunch",
     "gift",
+    "romantic",
     "special occasion"
   ],
   "categories": [
