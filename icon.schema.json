@@ -50,8 +50,7 @@
     },
     "deprecated": {
       "type": "boolean",
-      "default": false,
-      "optional": true
+      "default": false
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."
