@@ -3,19 +3,9 @@ import { ref } from 'vue';
 import ButtonMenu from '../base/ButtonMenu.vue'
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import useConfetti from '../../composables/useConfetti';
+import getSVGIcon from '../../utils/getSVGIcon';
+import downloadData from '../../utils/downloadData';
 
-const allowedAttrs = [
-  'xmlns',
-  'width',
-  'height',
-  'viewBox',
-  'fill',
-  'stroke',
-  'stroke-width',
-  'stroke-linecap',
-  'stroke-linejoin',
-  'class',
-]
 const downloadText = 'Download!'
 const copiedText = 'Copied!'
 const confettiText = ref(copiedText)
@@ -27,24 +17,6 @@ const props = defineProps<{
 const { size } = useIconStyleContext()
 
 const { animate, confetti } = useConfetti()
-
-function getSVGIcon() {
-  const svg = document.querySelector('#previewer svg')
-  if (!svg) return
-
-  const clonedSvg = svg.cloneNode(true) as SVGElement
-
-  // Filter out attributes that are not allowed in SVGs
-  for (const attr of Array.from(clonedSvg.attributes)) {
-    if (!allowedAttrs.includes(attr.name)) {
-      clonedSvg.removeAttribute(attr.name)
-    }
-  }
-
-  const svgString = new XMLSerializer().serializeToString(clonedSvg)
-
-  return svgString
-}
 
 function copySVG() {
   confettiText.value = copiedText
@@ -70,11 +42,7 @@ function downloadSVG() {
   confettiText.value = downloadText
   const svgString = getSVGIcon()
 
-  const link = document.createElement('a');
-  link.download = `${props.name}.svg`;
-  link.href = `data:image/svg+xml;base64,${btoa(svgString)}`
-  link.click();
-
+  downloadData(`${props.name}.svg`, `data:image/svg+xml;base64,${btoa(svgString)}`)
   confetti()
 }
 
@@ -91,12 +59,7 @@ function downloadPNG() {
   image.src = `data:image/svg+xml;base64,${btoa(svgString)}`;
   image.onload = function() {
     ctx.drawImage(image, 0, 0);
-
-    const link = document.createElement('a');
-    link.download = `${props.name}.png`;
-    link.href = canvas.toDataURL('image/png')
-    link.click();
-
+    downloadData(`${props.name}.png`, canvas.toDataURL('image/png'))
     confetti()
   }
 }

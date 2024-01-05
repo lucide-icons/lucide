@@ -1,7 +1,7 @@
 {
   "name": "lucide-angular",
   "description": "A Lucide icon library package for Angular applications",
-  "version": "0.160.0",
+  "version": "0.0.1",
   "author": "SMAH1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -20,6 +20,7 @@
     "Feather",
     "Icons",
     "Icon",
+    "SVG",
     "Feather Icons",
     "Fontawesome",
     "Font Awesome"
@@ -77,7 +78,7 @@
     "zone.js": "~0.11.4"
   },
   "peerDependencies": {
-    "@angular/common": "13.x - 16.x",
-    "@angular/core": "13.x - 16.x"
+    "@angular/common": "13.x - 17.x",
+    "@angular/core": "13.x - 17.x"
   }
 }
