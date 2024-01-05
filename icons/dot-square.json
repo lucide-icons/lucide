@@ -6,11 +6,16 @@
     "ericfennis"
   ],
   "tags": [
-    "calculate",
-    "="
+    "git",
+    "diff",
+    "modified",
+    "."
   ],
   "categories": [
-    "maths",
-    "shapes"
+    "shapes",
+    "development"
+  ],
+  "aliases": [
+    "square-dot"
   ]
 }
