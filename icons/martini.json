@@ -8,12 +8,17 @@
   "tags": [
     "cocktail",
     "alcohol",
-    "beverage",
-    "bar",
+    "spirits",
     "drink",
-    "glass"
+    "glass",
+    "bar",
+    "lounge",
+    "party",
+    "nightclub",
+    "nightlife"
   ],
   "categories": [
-    "food-beverage"
+    "food-beverage",
+    "social"
   ]
 }

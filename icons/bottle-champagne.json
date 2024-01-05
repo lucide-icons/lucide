@@ -1,30 +1,26 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "alcohol",
     "drink",
     "glass",
-    "goblet",
-    "chalice",
-    "vineyard",
-    "winery",
-    "red",
-    "white",
-    "rose",
-    "dry",
+    "bubbly",
     "sparkling",
+    "fizzy",
     "bar",
     "party",
+    "special occasion",
+    "celebration",
+    "victory",
+    "champion",
+    "luxury",
     "nightclub",
     "nightlife",
     "sommelier",
-    "restaurant",
-    "dinner",
-    "meal"
+    "restaurant"
   ],
   "categories": [
     "food-beverage",
