@@ -1,13 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "beep",
+    "ring",
     "clock",
+    "timer",
+    "stopwatch",
+    "alarm",
+    "alert",
     "wear",
     "wrist",
     "strap",
