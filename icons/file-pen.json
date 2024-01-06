@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "karsa-mistmere"
   ],
   "tags": [
-    "edit",
-    "paste",
     "signature"
   ],
   "categories": [
-    "text"
+    "files"
+  ],
+  "aliases": [
+    "file-edit"
   ]
 }
