@@ -5,10 +5,12 @@
     "jguddas"
   ],
   "tags": [
-    "edit",
-    "signature"
+    "edit"
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-signature"
   ]
 }
