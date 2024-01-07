@@ -9,7 +9,9 @@
     "signature"
   ],
   "categories": [
-    "text",
-    "account"
+    "text"
+  ],
+  "aliases": [
+    "clipboard-edit"
   ]
 }
