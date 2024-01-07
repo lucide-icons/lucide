@@ -547,9 +547,21 @@ importers:
 
   packages/lucide-static:
     devDependencies:
+      '@lucide/build-icons':
+        specifier: workspace:*
+        version: link:../../tools/build-icons
+      '@lucide/rollup-plugins':
+        specifier: workspace:*
+        version: link:../../tools/rollup-plugins
       prettier:
         specifier: ^2.3.2
         version: 2.8.8
+      rollup:
+        specifier: ^4.9.2
+        version: 4.9.2
+      rollup-plugin-dts:
+        specifier: ^6.1.0
+        version: 6.1.0(rollup@4.9.2)(typescript@4.9.5)
       svgson:
         specifier: ^5.2.1
         version: 5.3.1
@@ -13790,8 +13802,8 @@ packages:
       duplexer: 0.1.2
     dev: true
 
-  /h3-nightly@1.10.0-1701948668.39f9434:
-    resolution: {integrity: sha512-ZgDOpzAr8BO/sFzWYvLZLhg3d/NRbDeff+rA6vnoog0530NPEVfO3nIzCwY3nT+Z0faROooaiCyKaAPYbo7b9A==}
+  /h3-nightly@1.10.1-1704400265.ae91fc8:
+    resolution: {integrity: sha512-R2kWa+PpzYWLel4wSyJxS3DH8GSOs515uf72bW10uo5rbR0qvLw3esTnSYQLgDiOaqiFRP56kFFK7ClTfqko0g==}
     dependencies:
       cookie-es: 1.0.0
       defu: 6.1.3
@@ -16817,7 +16829,7 @@ packages:
       fs-extra: 11.2.0
       globby: 13.2.2
       gzip-size: 7.0.0
-      h3: /h3-nightly@1.10.0-1701948668.39f9434
+      h3: /h3-nightly@1.10.1-1704400265.ae91fc8
       hookable: 5.5.3
       httpxy: 0.1.5
       is-primitive: 3.0.1

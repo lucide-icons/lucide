@@ -24,6 +24,7 @@ for (const file of files) {
   if (filestat.isFile() === false || filestat.isDirectory()) continue;
 
   const contents = await readFile(filepath, { encoding: 'utf-8' });
+  let newContents = contents;
   const ext = path.extname(filepath);
   let license;
 
@@ -36,7 +37,31 @@ for (const file of files) {
   }
 
   if (license) {
-    await writeFile(filepath, license + contents, { encoding: 'utf-8' });
+    newContents = license + contents;
+
+  }
+
+  // Places icon block comment at the top of the Svelte component class
+  if(/icons\/(.*?)\.svelte\.d\.ts/.test(filepath)) {
+    const svelteFilepath = filepath.replace('.d.ts', '')
+    let svelteFileContents = await readFile(svelteFilepath, { encoding: 'utf-8' });
+
+    const blockCommentRegex = /\/\*\*[\s\S]*?\*\//;
+    const blockCommentMatch = blockCommentRegex.exec(svelteFileContents);
+
+    if (blockCommentMatch !== null) {
+      const blockComment = blockCommentMatch[0];
+
+      const exportClassRegex = /export default class (\w+) extends SvelteComponentTyped<(.*?)> {/;
+
+      if (exportClassRegex.test(newContents)) {
+        newContents = newContents.replace(exportClassRegex, `${blockComment}\nexport default class $1 extends SvelteComponentTyped<$2> {`);
+      }
+    }
+  }
+
+  if(newContents !== contents) {
+    await writeFile(filepath, newContents, { encoding: 'utf-8' });
   }
 }
 
@@ -48,8 +73,8 @@ function getJSBanner() {
 }
 
 function getSvelteBanner() {
-  return `<!-- 
-  ${BANNER} 
+  return `<!--
+  ${BANNER}
 -->
 \n`;
 }

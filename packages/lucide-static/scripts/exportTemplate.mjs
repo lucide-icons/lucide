@@ -2,28 +2,30 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 
 export default ({ componentName, iconName, children, getSvg, deprecated }) => {
-  const svgContents = getSvg();
+  let svgContents = getSvg();
   const svgBase64 = base64SVG(svgContents);
 
-  return `
-import defaultAttributes from '../defaultAttributes';
-import type { IconNode } from '../types';
+  svgContents = svgContents.replace(
+    '<svg',
+    `
+<svg
+  class="lucide lucide-${iconName}"`,
+  );
 
+  return `
 /**
  * @name ${iconName}
- * @description Lucide SVG icon node.
+ * @description Lucide SVG string.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide - Documentation
+ * @see https://lucide.dev/guide/packages/lucide-static - Documentation
  *
- * @returns {Array}
+ * @returns {String}
  * ${deprecated ? '@deprecated' : ''}
  */
-const ${componentName}: IconNode = [
-  'svg',
-  defaultAttributes,
-  ${JSON.stringify(children)}
-];
+const ${componentName}: string = \`\
+${svgContents}\
+\`
 
 export default ${componentName};
 `;
