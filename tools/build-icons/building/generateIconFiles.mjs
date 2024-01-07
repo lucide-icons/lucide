@@ -11,6 +11,7 @@ export default ({
   iconFileExtension = '.js',
   pretty = true,
   iconsDir,
+  iconMetaData,
 }) => {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -27,8 +28,9 @@ export default ({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
+    const { deprecated = false } = iconMetaData[iconName];
 
-    const elementTemplate = template({ componentName, iconName, children, getSvg });
+    const elementTemplate = template({ componentName, iconName, children, getSvg, deprecated });
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,
