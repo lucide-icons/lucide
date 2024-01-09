@@ -183,18 +183,40 @@ const Radii = ({
 >) => {
   return (
     <g className="svg-preview-radii-group" {...props}>
-      {paths
-        .filter(({ circle }) => circle)
-        .map(({ c, prev, next, circle: { x, y, r } }) =>
-          c.name === 'circle' ? (
-            <path d={`M${x} ${y}h.01`} />
-          ) : (
-            <>
-              <path d={`M${prev.x} ${prev.y} ${x} ${y} ${next.x} ${next.y}`} />
-              <circle cy={y} cx={x} r={r} />
-            </>
-          )
-        )}
+      {paths.map(
+        ({ c, prev, next, circle }, i) =>
+          circle && (
+            <React.Fragment key={i}>
+              {c.name !== "circle" && (
+                <path
+                  d={`M${prev.x} ${prev.y} ${circle.x} ${circle.y} ${next.x} ${next.y}`}
+                />
+              )}
+              <circle
+                cy={circle.y}
+                cx={circle.x}
+                r={0.25}
+                strokeDasharray="0"
+                stroke={
+                  (Math.round(circle.x * 100) / 100) % 1 !== 0 ||
+                  (Math.round(circle.y * 100) / 100) % 1 !== 0
+                    ? "red"
+                    : undefined
+                }
+              />
+              <circle
+                cy={circle.y}
+                cx={circle.x}
+                r={circle.r}
+                stroke={
+                  (Math.round(circle.r * 1000) / 1000) % 1 !== 0
+                    ? "red"
+                    : undefined
+                }
+              />
+            </React.Fragment>
+          ),
+      )}
     </g>
   );
 };

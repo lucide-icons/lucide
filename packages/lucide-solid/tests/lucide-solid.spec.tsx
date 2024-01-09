@@ -1,13 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { cleanup, render } from 'solid-testing-library'
+import { render, cleanup } from '@solidjs/testing-library'
 import { Edit2, Grid, Pen, Droplet } from '../src/lucide-solid'
 
 describe('Using lucide icon components', () => {
-  it('should render an component', () => {
+  it('should render a component', () => {
     const { container } = render(() => <Grid /> );
 
-    expect( container.innerHTML ).toMatchSnapshot();
-    cleanup()
+    expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should adjust the size, stroke color and stroke width', async () => {
@@ -27,7 +26,6 @@ describe('Using lucide icon components', () => {
     expect(attributes.height.value).toBe('48');
     expect(attributes['stroke-width'].value).toBe('4');
     expect( container.innerHTML ).toMatchSnapshot();
-    cleanup()
   });
 
   it('should render the alias icon', () => {
@@ -55,7 +53,6 @@ describe('Using lucide icon components', () => {
     );
 
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
-    cleanup()
   });
 
 
@@ -77,7 +74,6 @@ describe('Using lucide icon components', () => {
     expect(attributes['stroke-width'].value).toBe('1');
 
     expect( container.innerHTML ).toMatchSnapshot();
-    cleanup()
   });
 
   it('should add all classes to the element', () => {

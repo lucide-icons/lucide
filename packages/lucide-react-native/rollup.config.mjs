@@ -1,4 +1,5 @@
 import plugins from '@lucide/rollup-plugins';
+import dts from "rollup-plugin-dts";
 import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideReact';
@@ -25,7 +26,7 @@ const configs = bundles
     inputs.map(input => ({
       input,
       plugins: plugins(pkg, minify),
-      external: ['react', 'prop-types', 'react-native-svg'],
+      external: ['react', 'react-native-svg'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -42,11 +43,19 @@ const configs = bundles
         globals: {
           react: 'react',
           'react-native-svg': 'react-native-svg',
-          'prop-types': 'PropTypes',
         },
       },
     })),
   )
   .flat();
 
-export default configs;
+  export default [
+    {
+      input: inputs[0],
+      output: [{
+        file: `dist/${outputFileName}.d.ts`, format: "es"
+      }],
+      plugins: [dts()],
+    },
+    ...configs
+  ];
