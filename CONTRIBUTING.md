@@ -50,7 +50,7 @@ Seperate them by two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
 
 Before creating an icon request, please search to see if someone has requested the icon already. If there is an open request, please add a :+1:.
 
-If the icon has not already been requested, [create an issue](https://github.com/lucide-icons/lucide/issues/new?title=Icon%20Request:) with a title of `Icon request: <icon name>` and add as much information as possible.
+If the icon has not already been requested, [create an icon request issue](https://github.com/lucide-icons/lucide/issues/new?assignees=&labels=%F0%9F%99%8C+icon+request&projects=&template=01_icon_request.yml) and add as much information as possible.
 
 ### Icon Requests from Feather
 
