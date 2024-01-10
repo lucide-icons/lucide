@@ -8,7 +8,15 @@
     "collapse",
     "expand",
     "details",
-    "disclosure"
+    "disclosure",
+    "show",
+    "hide",
+    "toggle",
+    "accordion",
+    "more",
+    "less",
+    "fold",
+    "unfold"
   ],
   "categories": [
     "text"
