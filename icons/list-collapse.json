@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ocavue"
+  ],
+  "tags": [
+    "items",
+    "collapse",
+    "expand",
+    "details",
+    "disclosure"
+  ],
+  "categories": [
+    "text"
+  ]
+}
