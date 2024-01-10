@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
-  "deprecated": true,
   "contributors": [
-    "colebemis",
+    "karsa-mistmere",
     "ericfennis"
   ],
   "tags": [
-    "logo"
+    "paste"
   ],
   "categories": [
-    "brands",
-    "development"
+    "text",
+    "account"
+  ],
+  "aliases": [
+    "clipboard-signature"
   ]
 }
