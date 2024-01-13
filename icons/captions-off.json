@@ -1,5 +1,5 @@
 {
-  "$schema": "../icon.captions-off.json",
+  "$schema": "../icon.schema.json",
   "contributors": [
     "defaultlp"
   ],
