@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "contributors": [
+    "defaultlp"
+  ],
+  "tags": [
+    "logo",
+    "social",
+    "video",
+    "play"
+  ],
+  "categories": [
+    "account",
+    "multimedia",
+    "social",
+    "text",
+    "brands"
+  ]
+}
