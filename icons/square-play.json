@@ -1,15 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "music",
+    "audio",
+    "video",
     "start",
     "run"
   ],
   "categories": [
-    "shapes",
+    "arrows",
     "multimedia"
+  ],
+  "aliases": [
+    "play-square"
   ]
 }
