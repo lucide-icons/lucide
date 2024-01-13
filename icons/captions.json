@@ -4,10 +4,13 @@
     "defaultlp"
   ],
   "tags": [
-    "captions",
-	"closed captions",
-    "subtitles",
-	"accassibility"
+    "closed captions",
+	  "subtitles",
+	  "subhead",
+	  "transcription",
+	  "transcribe",
+	  "dialogue",
+    "accessibility"
   ],
   "categories": [
     "multimedia"

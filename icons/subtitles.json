@@ -10,6 +10,12 @@
     "accessibility"
   ],
   "categories": [
-	"multimedia"
+    "closed captions",
+	  "subtitles",
+	  "subhead",
+	  "transcription",
+	  "transcribe",
+	  "dialogue",
+    "accessibility"
   ]
 }
