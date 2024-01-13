@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.captions-off.json",
+  "contributors": [
+    "defaultlp"
+  ],
+  "tags": [
+    "captions",
+	"closed captions",
+    "subtitles",
+	"accassibility"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
