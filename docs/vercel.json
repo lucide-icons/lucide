@@ -35,5 +35,16 @@
       "destination": "/icons",
       "permanent": false
     }
+  ],
+  "headers": [
+    {
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "cache-control: public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }
