@@ -95,7 +95,6 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
   position: relative;
 }
 ul.menu-items {
-  /* --menu-offset: 32px; */
   position: absolute;
   display: flex;
   flex-direction: column;
