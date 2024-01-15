@@ -54,15 +54,7 @@ const configs = bundles
   .map(({ inputs, outputDir, outputFile, format, minify, preserveModules, entryFileNames, external = [], paths }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        replace({
-          "export * from './aliases';": '',
-          "export * as icons from './icons';": '',
-          delimiters: ['', ''],
-          preventAssignment: false,
-        }),
-        ...plugins(pkg, minify)
-      ],
+      plugins: plugins(pkg, minify),
       external: [
         'react',
         'prop-types',
