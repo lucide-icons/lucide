@@ -35,15 +35,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        replace({
-          "export * from './aliases';": '',
-          "export * as icons from './icons';": '',
-          delimiters: ['', ''],
-          preventAssignment: false,
-        }),
-        ...plugins(pkg, minify)
-      ],
+      plugins: plugins(pkg, minify),
       external: ['vue'],
       output: {
         name: packageName,
