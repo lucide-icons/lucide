@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import { useMediaQuery } from '@vueuse/core';
 import { useRouter } from 'vitepress';
@@ -27,7 +28,10 @@ const showOverlay = useMediaQuery('(min-width: 860px)');
 const { animate, confetti, confettiText } = useConfetti()
 
 
-const icon = createLucideIcon(props.name, props.iconNode)
+const icon = computed(() => {
+  if (!props.name || !props.iconNode) return null
+  return createLucideIcon(props.name, props.iconNode)
+})
 
 async function navigateToIcon(event) {
 

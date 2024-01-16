@@ -6,7 +6,6 @@ import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
 import StickyBar from './StickyBar.vue';
 import IconsCategory from './IconsCategory.vue';
-import { useFetch } from '@vueuse/core';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 
