@@ -4,10 +4,13 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "edit",
-    "signature"
+    "directory",
+    "rename"
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "folder-edit"
   ]
 }

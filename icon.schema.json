@@ -47,6 +47,10 @@
       },
       "minItems": 1,
       "uniqueItems": true
+    },
+    "deprecated": {
+      "type": "boolean",
+      "default": false
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."
