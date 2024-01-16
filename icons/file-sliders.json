@@ -4,12 +4,6 @@
     "danielbayley"
   ],
   "tags": [
-    "directory",
-    "root",
-    "project",
-    "pinned",
-    "active",
-    "current",
     "cogged",
     "gear",
     "mechanical",
@@ -20,7 +14,8 @@
     "settings",
     "system",
     "admin",
-    "edit"
+    "edit",
+    "executable"
   ],
   "categories": [
     "files",
