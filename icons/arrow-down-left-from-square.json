@@ -1,18 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "outbound",
-    "open",
-    "share"
+    "outwards",
+    "direction",
+    "south-west",
+    "diagonal"
   ],
   "categories": [
     "arrows",
-    "text",
-    "social"
+    "navigation"
   ]
 }
