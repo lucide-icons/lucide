@@ -3,7 +3,7 @@ import { stringify } from 'svgson';
 import { format } from 'prettier';
 import { appendFile } from '../../../scripts/helpers.mjs';
 
-export default function generateSprite(svgs, packageDir) {
+export default function generateSprite(svgs, packageDir, license) {
   const symbols = svgs.map(({ name, parsedSvg }) => ({
     name: 'symbol',
     type: 'element',
@@ -32,7 +32,7 @@ export default function generateSprite(svgs, packageDir) {
   const spriteSvg = stringify(spriteSvgObject);
   const prettifiedSprite = format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
 
-  const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
+  const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n<!-- ${license} -->\n`;
 
   appendFile(xmlMeta, `sprite.svg`, packageDir);
   appendFile(prettifiedSprite, `sprite.svg`, packageDir);

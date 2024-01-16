@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, cleanup } from '@testing-library/preact'
-import { Pen, Edit2, Grid } from '../src/lucide-preact';
+import { Pen, Edit2, Grid, Droplet } from '../src/lucide-preact';
 
 type AttributesAssertion = { attributes: Record<string, { value: string }>}
 
@@ -75,5 +75,16 @@ describe('Using lucide icon components', () => {
     expect(attributes.height.value).toBe('48');
     expect(attributes['stroke-width'].value).toBe('1');
     expect( container.innerHTML ).toMatchSnapshot();
+  });
+
+  it('should apply all classes to the element', () => {
+    const testClass = 'my-class';
+    const { container } = render(
+      <Droplet class={testClass} />,
+    );
+
+    expect(container.firstChild).toHaveClass(testClass);
+    expect(container.firstChild).toHaveClass('lucide');
+    expect(container.firstChild).toHaveClass('lucide-droplet');
   });
 })

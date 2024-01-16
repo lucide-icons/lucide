@@ -8,7 +8,9 @@
     "menu bar",
     "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "chevron",
+    "down"
   ],
   "categories": [
     "layout",

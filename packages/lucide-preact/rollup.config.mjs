@@ -1,4 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
+import dts from "rollup-plugin-dts";
 import pkg from './package.json' assert { type: "json" };
 
 const packageName = 'LucidePreact';
@@ -49,7 +50,7 @@ const configs = bundles
         ),
         ...plugins(pkg, minify)
       ],
-      external: ['preact', 'prop-types'],
+      external: ['preact'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -64,11 +65,20 @@ const configs = bundles
         sourcemap: true,
         globals: {
           preact: 'preact',
-          'prop-types': 'PropTypes',
         },
       },
     })),
   )
   .flat();
 
-export default configs;
+  export default [
+    {
+      input: inputs[0],
+      output: [{
+        file: `dist/${outputFileName}.d.ts`, format: "es"
+      }],
+      plugins: [dts()],
+    },
+    ...configs
+  ];
+

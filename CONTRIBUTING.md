@@ -33,7 +33,7 @@ Here you can find instructions on how to implement the guidelines with different
 
 #### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](https://lucide.dev/templates/illustrator-template.ai).
+You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
 
 #### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
 
@@ -50,7 +50,7 @@ Seperate them by two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
 
 Before creating an icon request, please search to see if someone has requested the icon already. If there is an open request, please add a :+1:.
 
-If the icon has not already been requested, [create an issue](https://github.com/lucide-icons/lucide/issues/new?title=Icon%20Request:) with a title of `Icon request: <icon name>` and add as much information as possible.
+If the icon has not already been requested, [create an icon request issue](https://github.com/lucide-icons/lucide/issues/new?assignees=&labels=%F0%9F%99%8C+icon+request&projects=&template=01_icon_request.yml) and add as much information as possible.
 
 ### Icon Requests from Feather
 
@@ -144,15 +144,18 @@ Root directories
 
 ```sh
 lucide
-|
 ├── docs
+│   ├── guide
 ├── icons
 ├── packages
-├── scripts
-└── site
+└── scripts
 ```
 
 ### Docs
+
+The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory. 
+
+### Guides
 
 Detailed documentation about: installation, guides, packages, design guides etc.
 
@@ -169,10 +172,6 @@ Includes all the (npm) packages of lucide.
 ### scripts
 
 Includes usefully scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
-
-### site
-
-The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
 
 ## Documentation
 
