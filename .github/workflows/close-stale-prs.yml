@@ -14,5 +14,4 @@ jobs:
           close-pr-message: This PR was closed because it has been stalled for 5 days with no activity.
           close-pr-label: 🧶 stale
           days-before-stale: 30
-          days-before-close: 5
-          days-before-pr-close: -1
+          days-before-close: -1
