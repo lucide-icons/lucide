@@ -25,7 +25,6 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-    aliasesSupport: true,
   },
   {
     format: 'esm',
@@ -35,13 +34,11 @@ const bundles = [
     ],
     outputDir,
     preserveModules: true,
-    aliasesSupport: true,
   },
   {
     format: 'esm',
     inputs: ['src/dynamicIconImports.ts'],
     outputFile: 'dynamicIconImports.js',
-    aliasesSupport: true,
     external: [/src/],
     paths: (id) => {
       if (id.match(/src/)) {
@@ -54,22 +51,10 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, outputFile, format, minify, preserveModules, aliasesSupport, entryFileNames, external = [], paths }) =>
+  .map(({ inputs, outputDir, outputFile, format, minify, preserveModules, entryFileNames, external = [], paths }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        ...(
-          !aliasesSupport ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
+      plugins: plugins(pkg, minify),
       external: [
         'react',
         'prop-types',
