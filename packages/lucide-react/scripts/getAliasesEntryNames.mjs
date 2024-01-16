@@ -1,11 +1,11 @@
 import path from 'path';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import getAliases from '@lucide/build-icons/utils/getAliases.mjs';
+import getIconMetaData from '@lucide/build-icons/utils/getIconMetaData.mjs';
 
 const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
 
 export default async function getAliasesEntryNames() {
-  const metaJsonFiles = await getAliases(ICONS_DIR);
+  const metaJsonFiles = await getIconMetaData(ICONS_DIR);
 
   const iconWithAliases = Object.values(metaJsonFiles).filter(({ aliases }) => aliases != null);
 

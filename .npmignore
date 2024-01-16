@@ -4,7 +4,6 @@ stats
 node_modules
 tests
 scripts
-site
 src
 build
 babel.config.js
