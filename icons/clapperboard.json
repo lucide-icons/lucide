@@ -1,12 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "ericfennis",
+    "danielbayley"
+  ],
   "tags": [
     "movie",
     "film",
     "video",
     "camera",
+    "cinema",
+    "cut",
+    "action",
+    "television",
     "tv",
-    "television"
+    "show",
+    "entertainment"
   ],
   "categories": [
     "multimedia"

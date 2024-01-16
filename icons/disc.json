@@ -1,10 +1,30 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "ericfennis"
+  ],
   "tags": [
     "album",
+    "music",
+    "songs",
+    "format",
     "cd",
     "dvd",
-    "music"
+    "vinyl",
+    "sleeve",
+    "cover",
+    "platinum",
+    "compilation",
+    "ep",
+    "recording",
+    "playback",
+    "spin",
+    "rotate",
+    "rpm",
+    "dj"
   ],
   "categories": [
     "devices",

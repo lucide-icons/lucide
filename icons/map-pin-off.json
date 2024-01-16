@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "location",
-    "navigation",
-    "travel",
-    "marker"
+    "waypoint",
+    "marker",
+    "remove"
   ],
   "categories": [
-    "maps"
+    "maps",
+    "navigation",
+    "travel"
   ]
 }

@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "drawer",
-    "menu bar",
     "browser",
     "webpage"
   ],

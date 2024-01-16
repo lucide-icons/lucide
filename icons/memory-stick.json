@@ -1,7 +1,20 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
-    "ram"
+    "ram",
+    "random access",
+    "technology",
+    "computer",
+    "chip",
+    "circuit",
+    "specs",
+    "capacity",
+    "gigabytes",
+    "gb"
   ],
   "categories": [
     "devices",

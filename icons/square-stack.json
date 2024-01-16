@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "versions",
+    "clone",
+    "copy",
+    "duplicate",
+    "multiple",
+    "revisions",
+    "version control",
+    "backup",
+    "history"
+  ],
+  "categories": [
+    "text",
+    "files",
+    "development"
+  ]
+}

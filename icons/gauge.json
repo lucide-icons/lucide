@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "Andreto",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "dashboard",
     "dial",
     "meter",
     "speed",
     "pressure",
-    "measure"
+    "measure",
+    "level"
   ],
   "categories": [
     "account",

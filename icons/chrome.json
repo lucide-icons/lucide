@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
   "tags": [
     "browser",
     "logo"

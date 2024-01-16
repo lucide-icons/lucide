@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "calculate",
+    "="
+  ],
+  "categories": [
+    "maths",
+    "shapes"
+  ],
+  "aliases": [
+    "square-equal"
+  ]
+}

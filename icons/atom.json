@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "atomic",
     "nuclear",
     "physics",
     "particle",
     "element",
-    "molecule"
+    "molecule",
+    "electricity",
+    "energy",
+    "chemistry"
   ],
   "categories": [
     "science"

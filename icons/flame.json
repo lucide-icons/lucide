@@ -1,8 +1,23 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "johnletey",
+    "csandman"
+  ],
   "tags": [
     "fire",
-    "lit"
+    "lit",
+    "burning",
+    "spark",
+    "embers",
+    "smoke",
+    "firefighter",
+    "fireman",
+    "department",
+    "brigade",
+    "station",
+    "emergency"
   ],
   "categories": [
     "weather",

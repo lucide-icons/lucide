@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "flash",
     "camera",
-    "lightning"
+    "lightning",
+    "electricity",
+    "energy"
   ],
   "categories": [
     "connectivity",

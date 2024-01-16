@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "checkout",
+    "till",
+    "cart",
+    "transaction",
+    "purchase",
+    "buy",
+    "product",
+    "packaging",
+    "retail",
+    "consumer"
+  ],
+  "categories": [
+    "shopping",
+    "devices"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "todo",
+    "done",
+    "check",
+    "tick",
+    "complete",
+    "tasks",
+    "items",
+    "pending"
+  ],
+  "categories": [
+    "text"
+  ]
+}

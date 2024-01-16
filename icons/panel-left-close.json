@@ -1,15 +1,22 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "ericfennis"
+  ],
   "tags": [
     "primary",
     "drawer",
-    "hide"
+    "hide",
+    "chevron",
+    "<"
   ],
   "categories": [
     "layout",
     "arrows"
   ],
-  "aliases": [
+   "aliases": [
     "sidebar-close"
   ]
 }

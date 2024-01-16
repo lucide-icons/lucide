@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "farming",
+    "farmer",
+    "ranch",
+    "harvest",
+    "equipment",
+    "vehicle"
+  ],
+  "categories": [
+    "transportation",
+    "sustainability",
+    "food-beverage"
+  ]
+}
