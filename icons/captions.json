@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "defaultlp"
+    "DefaultLP"
   ],
   "tags": [
     "closed captions",
@@ -14,5 +14,8 @@
   ],
   "categories": [
     "multimedia"
+  ],
+  "aliases": [
+    "subtitles"
   ]
 }
