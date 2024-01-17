@@ -22,7 +22,6 @@ function setActiveIcon(name: string) {
     <div
       class="icon"
       v-for="icon in icons"
-      v-memo="[icon.name]"
       :key="icon.name"
     >
       <IconItem
