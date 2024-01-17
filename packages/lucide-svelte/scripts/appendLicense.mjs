@@ -36,7 +36,7 @@ for (const file of files) {
     const svelteFilepath = filepath.replace('.d.ts', '');
     let svelteFileContents = await readFile(svelteFilepath, { encoding: 'utf-8' });
 
-    const blockCommentRegex = /\/\*\*[\s\S]*?\*\//;
+    const blockCommentRegex = /\/\*\*\n\s\*\s(@component\s@name)[\s\S]*?\*\//;
     const blockCommentMatch = blockCommentRegex.exec(svelteFileContents);
 
     if (blockCommentMatch !== null) {
