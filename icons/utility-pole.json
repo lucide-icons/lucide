@@ -1,14 +1,12 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
-  ],
   "tags": [
     "electricity",
     "energy",
     "transmission line",
-    "telegraph pole"
+    "telegraph pole",
+    "power lines",
+    "phone"
   ],
   "categories": [
     "buildings",

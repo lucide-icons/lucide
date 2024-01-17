@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "cord",
+    "wire",
+    "connector",
+    "connection",
+    "link",
+    "signal",
+    "console",
+    "computer",
+    "equipment",
+    "electricity",
+    "energy",
+    "electronics",
+    "recharging",
+    "charger",
+    "power",
+    "supply",
+    "disconnected",
+    "unplugged",
+    "plugs",
+    "interface",
+    "input",
+    "output",
+    "audio video",
+    "av",
+    "rca",
+    "scart",
+    "tv",
+    "television",
+    "optical"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "multimedia"
+  ]
+}

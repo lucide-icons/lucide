@@ -10,28 +10,53 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         { text: 'Comparison', link: '/guide/comparison' }
       ]
     },
-    // {
-    //   text: 'Using Icons',
-    //   items: [
-    //     {
-    //       text: 'How to use icons',
-    //       link: 'how-to-use-icons'
-    //     },
-    //     {
-    //     text: 'Styling icons',
-    //       link: 'styling-icons'
-    //     },
-    //     {
-    //       text: 'Accessibility',
-    //       link: 'accessibility'
-    //     },
-    //     {
-    //       text: 'What should I use',
-    //       link: 'what-should-i-use'
-    //     },
-
-    //   ]
-    // },
+    {
+      text: 'Basics',
+      items: [
+        {
+          text: 'Color',
+          link: '/guide/basics/color'
+        },
+        {
+          text: 'Sizing',
+          link: '/guide/basics/sizing'
+        },
+        {
+          text: 'Stroke width',
+          link: '/guide/basics/stroke-width'
+        },
+      ]
+    },
+    // TODO: Add this section
+    {
+      text: 'Advanced',
+      items: [
+        // {
+        //   text: 'Accessibility',
+        //   link: '/guide/advanced/accessibility'
+        // },
+        {
+          text: 'Global styling',
+          link: '/guide/advanced/global-styling'
+        },
+        // {
+        //   text: 'Animations',
+        // },
+        {
+          text: 'Filled icons',
+          link: '/guide/advanced/filled-icons'
+        },
+        // {
+        //   text: 'Combining icons',
+        // },
+        // {
+        //   text: 'Dynamic imports'
+        // },
+        // {
+        //   text: 'Auto importing'
+        // },
+      ]
+    },
     {
       text: 'Packages',
       items: [
@@ -49,10 +74,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         },
         {
           text: 'Lucide Vue',
-          link: '/guide/packages/lucide-vue'
-        },
-        {
-          text: 'Lucide Vue Next (Vue 3)',
           link: '/guide/packages/lucide-vue-next'
         },
         {
@@ -74,10 +95,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         {
           text: 'Lucide Static',
           link: '/guide/packages/lucide-static'
-        },
-        {
-          text: 'Lucide Flutter',
-          link: '/guide/packages/lucide-flutter'
         },
       ]
     },
@@ -103,15 +120,9 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       ]
     },
   ],
+  // This should be here to keep the sidebar shown on the icons page
   'icons': [
     { text: '', link: '/' },
-    // { text: 'Categorized', link: '/icons/categorized' },
-    // {
-    //   text: 'Categories',
-    //   items: [
-    //     ...(getAllCategoryFiles().map((category) => ({ text: category, link: `/icons/category/${category}` })))
-    //   ]
-    // }
   ],
 }
 

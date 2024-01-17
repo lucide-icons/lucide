@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "remove"
+  ],
+  "categories": [
+    "devices",
+    "notifications",
+    "time"
+  ],
+  "aliases": [
+    "alarm-minus"
+  ]
+}
