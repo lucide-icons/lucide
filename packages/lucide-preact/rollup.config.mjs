@@ -1,4 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
+import dts from "rollup-plugin-dts";
 import pkg from './package.json' assert { type: "json" };
 
 const packageName = 'LucidePreact';
@@ -21,35 +22,21 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-    aliasesSupport: true
   },
   {
     format: 'esm',
     inputs,
     outputDir,
     preserveModules: true,
-    aliasesSupport: true
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        ...(
-          !aliasesSupport ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
-      external: ['preact', 'prop-types'],
+      plugins: plugins(pkg, minify),
+      external: ['preact'],
       output: {
         name: packageName,
         ...(preserveModules
@@ -64,11 +51,19 @@ const configs = bundles
         sourcemap: true,
         globals: {
           preact: 'preact',
-          'prop-types': 'PropTypes',
         },
       },
     })),
   )
   .flat();
 
-export default configs;
+  export default [
+    {
+      input: inputs[0],
+      output: [{
+        file: `dist/${outputFileName}.d.ts`, format: "es"
+      }],
+      plugins: [dts()],
+    },
+    ...configs
+  ];
