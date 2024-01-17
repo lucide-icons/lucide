@@ -9,7 +9,6 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 5h1a1 1 0 0 1 1 1v11m0-9h4l4 4v4a1 1 0 0 1-1 1h-2m-4 0H9M3.2 5H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2M8 5 6 8h4l-2 3" />
-  <circle cx="17" cy="17" r="2" />
-  <circle cx="7" cy="17" r="2" />
+  <path d="M12 6h1a1 1 0 0 1 1 1v11m0-9h4l4 4v4a1 1 0 0 1-1 1h-2m-4 0H9M3.2 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2M8 6 6 9h4l-2 3" />
+  <path d="M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4M7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
 </svg>
