@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "copy",
+    "paste",
+    "add",
+    "create",
+    "new",
+    "document",
+    "medical",
+    "report",
+    "doctor"
+  ],
+  "categories": [
+    "text",
+    "medical"
+  ]
+}
