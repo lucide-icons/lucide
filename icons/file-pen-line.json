@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas",
+    "danielbayley"
   ],
   "tags": [
-    "directory",
-    "edit",
-    "rename"
+    "edit"
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-signature"
   ]
 }

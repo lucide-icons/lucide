@@ -13,11 +13,11 @@ export interface IconProps extends Attrs {
   class?: string;
 }
 
-type IconEvents = {
+export type IconEvents = {
   [evt: string]: CustomEvent<any>;
 };
 
-type IconSlots = {
+export type IconSlots = {
   default: {};
 };
 

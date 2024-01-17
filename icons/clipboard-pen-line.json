@@ -5,11 +5,13 @@
     "ericfennis"
   ],
   "tags": [
-    "paste",
-    "signature"
+    "paste"
   ],
   "categories": [
     "text",
     "account"
+  ],
+  "aliases": [
+    "clipboard-signature"
   ]
 }
