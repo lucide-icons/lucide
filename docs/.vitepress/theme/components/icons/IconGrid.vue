@@ -19,7 +19,11 @@ function setActiveIcon(name: string) {
 
 <template>
   <div class="icons">
-    <div class="icon" v-for="icon in icons" :key="icon.name">
+    <div
+      class="icon"
+      v-for="icon in icons"
+      :key="icon.name"
+    >
       <IconItem
         v-bind="icon"
         @setActiveIcon="setActiveIcon(icon.name)"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { startCase, camelCase } from 'lodash-es'
 import ButtonMenu from '../base/ButtonMenu.vue'
 import { useIconStyleContext } from '../../composables/useIconStyle';

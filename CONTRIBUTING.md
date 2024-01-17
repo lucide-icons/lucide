@@ -72,8 +72,8 @@ pnpm install # Install dependencies, including the workspace packages
 
 To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/enhttps://lucide.dev/docs/workspaces).
 
-The configured directory for workspaces is the [packages](./packages) directory, located in the root directory. There you will find all the current packages from lucide.
-There are more workspaces defined, see [`pnpm-workspace.yaml`](./pnpm-workspace.yaml).
+The configured directory for workspaces is the [packages](https://github.com/lucide-icons/lucide/tree/main/packages) directory, located in the root directory. There you will find all the current packages from lucide.
+There are more workspaces defined, see [`pnpm-workspace.yaml`](https://github.com/lucide-icons/lucide/blob/main/pnpm-workspace.yaml).
 
 > Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
 
@@ -153,7 +153,7 @@ lucide
 
 ### Docs
 
-The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory. 
+The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
 
 ### Guides
 

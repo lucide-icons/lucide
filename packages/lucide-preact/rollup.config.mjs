@@ -22,34 +22,20 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-    aliasesSupport: true
   },
   {
     format: 'esm',
     inputs,
     outputDir,
     preserveModules: true,
-    aliasesSupport: true
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        ...(
-          !aliasesSupport ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
+      plugins: plugins(pkg, minify),
       external: ['preact'],
       output: {
         name: packageName,
@@ -81,4 +67,3 @@ const configs = bundles
     },
     ...configs
   ];
-

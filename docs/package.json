@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "pnpm prebuild && pnpm prepare && vitepress dev",
-    "docs:build": "pnpm prebuild && pnpm prepare && vitepress build",
-    "docs:preview": "pnpm prebuild && pnpm prepare && vitepress preview",
+    "docs:dev": "pnpm run /^prebuild:.*/ && vitepress dev",
+    "docs:build": "pnpm run /^prebuild:.*/ && vitepress build",
+    "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",
     "prebuild:iconNodes": "node ../scripts/writeIconNodes.mjs",
     "prebuild:metaJson": "node ../scripts/writeIconMetaIndex.mjs",
@@ -16,10 +16,9 @@
     "prebuild:iconDetails": "node ../scripts/writeIconDetails.mjs",
     "postbuild:vercelJson": "node ../scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
-    "prepare": "npx nitropack prepare",
+    "prebuild:api": "npx nitropack prepare",
     "build:api": "npx nitropack build",
-    "prebuild": "pnpm prebuild:iconNodes && pnpm prebuild:metaJson && pnpm prebuild:releaseJson && pnpm prebuild:relatedIcons && pnpm prebuild:iconDetails",
-    "build": "pnpm prebuild && pnpm build:api && pnpm build:docs && pnpm postbuild:vercelJson",
+    "build": "pnpm run /^prebuild:.*/ && pnpm run /^build:.*/ && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
   "author": "Eric Fennis",
@@ -28,17 +27,17 @@
     "@rollup/plugin-replace": "^5.0.2",
     "@types/semver": "^7.5.3",
     "h3": "^1.8.0",
-    "nitropack": "npm:nitropack-edge@latest",
+    "nitropack": "2.8.1",
     "node-fetch": "2",
     "rollup-plugin-copy": "^3.4.0",
-    "vitepress": "1.0.0-rc.30"
+    "vitepress": "1.0.0-rc.36"
   },
   "dependencies": {
-    "@floating-ui/vue": "^1.0.1",
-    "@headlessui/vue": "^1.7.13",
+    "@floating-ui/vue": "^1.0.3",
+    "@headlessui/vue": "^1.7.17",
     "@resvg/resvg-wasm": "^2.4.1",
-    "@vueuse/components": "^10.1.0",
-    "@vueuse/core": "^10.1.0",
+    "@vueuse/components": "^10.7.2",
+    "@vueuse/core": "^10.7.2",
     "element-to-path": "^1.2.1",
     "fuse.js": "^6.5.3",
     "js-yaml": "^4.1.0",
@@ -49,13 +48,13 @@
     "lucide-vue-next": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sandpack-vue3": "^3.1.6",
+    "sandpack-vue3": "^3.1.9",
     "semver": "^7.5.2",
     "shikiji": "^0.7.4",
     "simple-git": "^3.18.0",
     "sitemap": "^7.1.1",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.2.1",
-    "vue": "^3.2.47"
+    "vue": "^3.4.13"
   }
 }

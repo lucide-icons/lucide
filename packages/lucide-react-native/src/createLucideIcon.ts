@@ -3,7 +3,7 @@ import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
 import type { SvgProps } from 'react-native-svg';
 
-type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
+export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
 
 export interface LucideProps extends SvgProps {
   size?: string | number

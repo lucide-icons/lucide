@@ -1,10 +1,8 @@
 {
   "$schema": "../icon.schema.json",
-  "aliases": [
-    "file-cog-2"
-  ],
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "executable",
@@ -15,5 +13,8 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-cog-2"
   ]
 }

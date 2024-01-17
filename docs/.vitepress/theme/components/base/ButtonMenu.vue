@@ -94,8 +94,7 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
 .menu {
   position: relative;
 }
-.menu-items {
-  --menu-offset: 44px;
+ul.menu-items {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -103,7 +102,7 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
   padding: 12px;
   min-width: 128px;
   border: 1px solid var(--vp-c-divider);
-  background-color: var(--vp-c-bg);
+  background-color: var(--vp-c-bg-elv);
   box-shadow: var(--vp-shadow-3);
   transition: background-color 0.5s;
   max-height: calc(100vh - var(--vp-nav-height));
@@ -124,11 +123,12 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
   color: var(--vp-c-text-1);
   white-space: nowrap;
   transition: background-color .25s,color .25s;
+  list-style: none;
 }
 
 .menu-item:hover {
   color: var(--vp-c-brand);
-  background-color: var(--vp-c-bg-elv-mute);
+  background-color: var(--vp-c-default-soft);
 }
 
 .menu-item:active {
@@ -170,11 +170,11 @@ const ChevronUp = createLucideIcon('ChevronUp', chevronUp)
 }
 
 .menu-items.bottom {
-  top: var(--menu-offset);
+  top: 32px;
 }
 
 .menu-items.top {
-  bottom: var(--menu-offset);
+  bottom: 48px;
 }
 
 .arrow-up-button.top::before {
