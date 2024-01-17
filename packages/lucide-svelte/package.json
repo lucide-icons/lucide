@@ -50,7 +50,7 @@
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --withAliases --aliasesFileExtension=.ts --aliasImportFileExtension=.svelte --pretty=false",
     "build:package": "svelte-package --input ./src",
-    "build:license": "node ./scripts/addLicense.mjs",
+    "build:license": "node ./scripts/appendLicense.mjs",
     "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
