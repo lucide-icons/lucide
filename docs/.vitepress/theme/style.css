@@ -154,6 +154,10 @@ html:has(* .outline-link:target) {
   scroll-behavior: smooth;
 } */
 
+.sp-wrapper + * {
+  margin-top: 24px;
+}
+
 .sp-wrapper .sp-layout {
   border-radius: 8px;
 }

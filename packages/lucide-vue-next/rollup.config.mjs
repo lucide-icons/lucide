@@ -1,5 +1,6 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
+import dts from "rollup-plugin-dts";
 
 const packageName = 'LucideVueNext';
 const outputFileName = 'lucide-vue-next';
@@ -21,35 +22,20 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
-    aliasesSupport: true
   },
   {
     format: 'esm',
     inputs,
     outputDir,
     preserveModules: true,
-    aliasesSupport: true
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map(input => ({
       input,
-      plugins: [
-        // This for aliases, only for esm
-        ...(
-          !aliasesSupport ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
+      plugins: plugins(pkg, minify),
       external: ['vue'],
       output: {
         name: packageName,
@@ -71,4 +57,19 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+  export default [
+    {
+      input: inputs[0],
+      output: [{
+        file: `dist/${outputFileName}.d.ts`, format: "es"
+      }],
+      plugins: [
+        dts({
+          compilerOptions: {
+            preserveSymlinks: false
+          }
+        })
+      ],
+    },
+    ...configs
+  ];
