@@ -72,7 +72,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ### Icon Component Example
 
 ```jsx
-import { icons } from 'lucide-react';
+import { icons } from 'lucide-react-native';
 
 const Icon = ({ name, color, size }) => {
   const LucideIcon = icons[name];
