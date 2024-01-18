@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "contributors": [
+    "ahtohbi4",
+    "johnletey"
+  ],
   "tags": [
     "logo",
     "social"

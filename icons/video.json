@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "camera",
     "movie",
-    "film"
+    "film",
+    "recording",
+    "motion picture",
+    "camcorder",
+    "reel"
   ],
   "categories": [
     "devices",

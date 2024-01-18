@@ -12,13 +12,17 @@
   },
   "title": "Lucide Icons icon schema",
   "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "categories", "tags"],
   "properties": {
-    "tags": {
+    "$schema": {
+      "type": "string"
+    },
+    "aliases": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "minItems": 1,
       "uniqueItems": true
     },
     "categories": {
@@ -27,6 +31,26 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "deprecated": {
+      "type": "boolean",
+      "default": false
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."

@@ -1,12 +1,40 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "johnletey",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
-    "book",
+    "books",
+    "reading",
+    "written",
+    "authors",
+    "stories",
+    "fiction",
+    "novels",
+    "information",
+    "knowledge",
+    "education",
+    "high school",
+    "university",
+    "college",
+    "academy",
+    "learning",
+    "study",
+    "research",
+    "collection",
+    "vinyl",
+    "records",
+    "albums",
     "music",
-    "album"
+    "package"
   ],
   "categories": [
+    "text",
     "photography",
-    "multimedia"
+    "multimedia",
+    "maps",
+    "development"
   ]
 }

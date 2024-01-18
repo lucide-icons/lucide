@@ -1,8 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
     "import",
-    "export"
+    "export",
+    "save"
   ],
   "categories": [
     "arrows",

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
   "tags": [
     "cubes",
     "packages",
@@ -7,7 +10,8 @@
     "group",
     "units",
     "collection",
-    "cluster"
+    "cluster",
+    "geometry"
   ],
   "categories": [
     "shapes",

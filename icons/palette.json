@@ -1,8 +1,18 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
   "tags": [
-    "color",
-    "theme"
+    "colors",
+    "colours",
+    "theme",
+    "scheme",
+    "paint",
+    "watercolor",
+    "watercolour",
+    "artist"
   ],
   "categories": [
     "text",

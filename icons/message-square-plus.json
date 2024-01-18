@@ -1,13 +1,19 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "comment",
     "chat",
     "conversation",
-    "add",
-    "feedback"
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "add"
   ],
   "categories": [
-    "account"
+    "account",
+    "social"
   ]
 }

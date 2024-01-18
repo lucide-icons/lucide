@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "verified",
+    "unverified",
+    "lost",
+    "delete",
+    "remove"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "shapes"
+  ]
+}

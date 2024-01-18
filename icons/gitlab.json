@@ -1,5 +1,12 @@
 {
   "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
   "tags": [
     "logo",
     "version control"

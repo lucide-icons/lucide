@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel"
+  ],
   "tags": [
     "gizmo",
     "transform",
@@ -8,5 +11,8 @@
   ],
   "categories": [
     "design"
+  ],
+  "aliases": [
+    "rotate-3-d"
   ]
 }

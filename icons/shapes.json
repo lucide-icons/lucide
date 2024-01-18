@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "triangle",
+    "equilateral",
+    "square",
+    "circle",
+    "classification",
+    "different",
+    "collection",
+    "toy",
+    "blocks",
+    "learning"
+  ],
+  "categories": [
+    "shapes",
+    "gaming"
+  ]
+}

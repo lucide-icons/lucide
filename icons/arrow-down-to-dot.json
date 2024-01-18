@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "direction",
+    "south",
+    "waypoint",
+    "location",
+    "step",
+    "into"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "maps"
+  ]
+}

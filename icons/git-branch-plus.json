@@ -1,8 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
   "tags": [
     "add",
-    "create"
+    "create",
+    "+"
   ],
   "categories": [
     "development"

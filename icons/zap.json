@@ -1,9 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
   "tags": [
     "flash",
     "camera",
-    "lightning"
+    "lightning",
+    "electricity",
+    "energy"
   ],
   "categories": [
     "connectivity",

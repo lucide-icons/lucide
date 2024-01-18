@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
   "tags": [
     "executable",
     "settings",
@@ -9,5 +13,8 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-cog-2"
   ]
 }

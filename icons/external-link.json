@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
-    "outbound"
+    "outbound",
+    "open",
+    "share"
   ],
   "categories": [
+    "arrows",
     "text",
-    "arrows"
+    "social"
   ]
 }

@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
   "tags": [
     "stream",
     "cast",
-    "mirroring"
+    "mirroring",
+    "screen",
+    "monitor"
   ],
   "categories": [
     "multimedia",

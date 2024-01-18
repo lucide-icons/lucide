@@ -1,8 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "Kaladii",
+    "ericfennis"
+  ],
   "tags": [
     "power",
     "electricity",
+    "energy",
     "accumulator",
     "charge",
     "exclamation mark"

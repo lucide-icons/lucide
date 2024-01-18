@@ -1,7 +1,18 @@
 {
   "$schema": "../icon.schema.json",
-  "tags": [],
+  "contributors": [
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "h5",
+    "html",
+    "markup",
+    "markdown"
+  ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

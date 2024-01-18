@@ -1,9 +1,13 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
   "tags": [
     "draw",
     "paint",
-    "color"
+    "color",
+    "artist"
   ],
   "categories": [
     "text",

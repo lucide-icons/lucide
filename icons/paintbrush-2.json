@@ -1,14 +1,23 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
   "tags": [
     "brush",
     "paintbrush",
     "design",
-    "color"
+    "color",
+    "colour",
+    "decoration",
+    "diy"
   ],
   "categories": [
     "text",
     "design",
-    "photography"
+    "photography",
+    "home",
+    "tools"
   ]
 }
