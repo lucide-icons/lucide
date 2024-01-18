@@ -7,20 +7,12 @@ module.exports = {
     node: true,
   },
   extends: ['airbnb-base', 'prettier'],
-  plugins: ['import', 'prettier', '@html-eslint'],
+  plugins: ['import', '@html-eslint'],
   rules: {
     'no-console': 'off',
     'no-param-reassign': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-        printWidth: 100
-      },
-    ],
     'import/no-extraneous-dependencies': [
       'error',
       { devDependencies: ['**/*.test.js', '**/*.spec.js', './scripts/**'] },
@@ -46,7 +38,6 @@ module.exports = {
       files: ['./icons/*.svg'],
       parser: '@html-eslint/parser',
       rules: {
-        'prettier/prettier': 'off',
         '@html-eslint/require-doctype': 'off',
         '@html-eslint/no-duplicate-attrs': 'error',
         '@html-eslint/no-inline-styles': 'error',
