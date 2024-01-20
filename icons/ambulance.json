@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jordan808"
+  ],
+  "tags": [
+    "ambulance",
+    "emergency",
+    "medical",
+    "vehicle",
+    "siren",
+    "healthcare",
+    "transportation",
+    "rescue",
+    "urgent",
+    "first aid"
+  ],
+  "categories": [
+    "medical",
+    "transportation"
+  ]
+}
