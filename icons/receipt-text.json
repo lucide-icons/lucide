@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "it-is-not",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "bill",
@@ -11,14 +9,14 @@
     "slip",
     "check",
     "counterfoil",
-    "currency",
-    "dollar",
-    "usd",
-    "$"
+    "details",
+    "small print",
+    "terms",
+    "conditions",
+    "contract"
   ],
   "categories": [
     "money",
-    "currency",
     "travel"
   ]
 }
