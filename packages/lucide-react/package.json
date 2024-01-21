@@ -12,7 +12,7 @@
   },
   "keywords": [
     "Lucide",
-    "Angular",
+    "React",
     "Feather",
     "Icons",
     "Icon",
@@ -45,23 +45,24 @@
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^11.2.6",
-    "@types/prop-types": "^15.7.5",
-    "@types/react": "^18.0.21",
-    "@vitejs/plugin-react": "^2.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "rollup": "^3.5.1",
-    "rollup-plugin-dts": "^5.0.0",
-    "typescript": "^4.8.4",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
+    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/react": "^14.1.2",
+    "@types/react": "^18.2.37",
+    "@vitejs/plugin-react": "^4.2.1",
+    "jest-serializer-html": "^7.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup": "^4.9.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "typescript": "^4.9.5",
+    "vite": "5.0.10",
+    "vitest": "^1.1.1"
   },
   "peerDependencies": {
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0"
