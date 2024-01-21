@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "find",
+    "data",
+    "copy",
+    "txt",
+    "pdf",
+    "document",
+    "scan",
+    "magnifier",
+    "magnifying glass"
+  ],
+  "categories": [
+    "text"
+  ]
+}
