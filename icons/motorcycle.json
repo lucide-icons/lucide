@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jordan808"
+  ],
+  "tags": [
+    "bike",
+    "motorbike",
+    "vehicle",
+    "transportation",
+    "speed",
+    "travel",
+    "engine",
+    "chopper"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}
