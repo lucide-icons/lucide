@@ -1,22 +1,25 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
+    "discount",
+    "reduced",
+    "offer",
+    "voucher",
     "entry",
     "pass",
-    "voucher",
     "event",
     "concert",
     "show",
-    "perforated",
-    "dashed"
+    "book",
+    "purchase",
+    "%"
   ],
   "categories": [
     "account",
-    "transportation"
+    "transportation",
+    "shopping"
   ]
 }

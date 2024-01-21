@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
     "entry",
@@ -12,8 +10,12 @@
     "event",
     "concert",
     "show",
-    "perforated",
-    "dashed"
+    "remove",
+    "cancel",
+    "unbook",
+    "subtract",
+    "decrease",
+    "-"
   ],
   "categories": [
     "account",
