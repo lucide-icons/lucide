@@ -74,10 +74,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         },
         {
           text: 'Lucide Vue',
-          link: '/guide/packages/lucide-vue'
-        },
-        {
-          text: 'Lucide Vue Next (Vue 3)',
           link: '/guide/packages/lucide-vue-next'
         },
         {
@@ -99,10 +95,6 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         {
           text: 'Lucide Static',
           link: '/guide/packages/lucide-static'
-        },
-        {
-          text: 'Lucide Flutter',
-          link: '/guide/packages/lucide-flutter'
         },
       ]
     },
