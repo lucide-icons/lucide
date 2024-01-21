@@ -58,7 +58,7 @@
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^4.8.4",
-    "vite": "5.0.10",
+    "vite": "5.0.12",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
