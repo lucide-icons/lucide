@@ -12,8 +12,10 @@
   },
   "title": "Lucide Icons category schema",
   "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "icon", "title"],
   "properties": {
-    "title": {
+    "$schema": {
       "type": "string"
     },
     "description": {
@@ -22,13 +24,12 @@
     "icon": {
       "type": "string"
     },
+    "title": {
+      "type": "string"
+    },
     "weight": {
       "type": "integer"
     }
   },
-  "required": [
-    "title",
-    "icon"
-  ],
   "description": "A JSON Schema for categories defined by Lucide Icons."
 }
