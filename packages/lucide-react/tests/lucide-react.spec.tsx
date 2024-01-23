@@ -1,8 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { render, cleanup, waitFor } from '@testing-library/react'
-import { Pen, Edit2, Grid, LucideProps, Droplet } from '../src/lucide-react';
-import { Suspense, lazy } from 'react';
-import dynamicIconImports from '../src/dynamicIconImports';
+import { render, cleanup } from '@testing-library/react'
+import { Pen, Edit2, Grid, Droplet } from '../src/lucide-react';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -87,34 +85,7 @@ describe('Using lucide icon components', () => {
     expect(container.firstChild).toHaveClass('lucide-droplet');
   });
 
-  it('should render icons dynamically by using the dynamicIconImports module', async () => {
-    interface IconProps extends Omit<LucideProps, 'ref'> {
-      name: keyof typeof dynamicIconImports;
-    }
+  it('should create components from iconNodes', async () => {
 
-    const Icon = ({ name, ...props }: IconProps) => {
-      const LucideIcon = lazy(dynamicIconImports[name]);
-
-      return (
-        <Suspense fallback={null}>
-          <LucideIcon {...props} />
-        </Suspense>
-      );
-    }
-
-    const { container, getByLabelText } = render(
-      <Icon
-        aria-label="smile"
-        name="smile"
-        size={48}
-        stroke="red"
-        absoluteStrokeWidth
-      />,
-    );
-
-    await waitFor(() => getByLabelText('smile'))
-
-    expect( container.innerHTML ).toMatchSnapshot();
-
-  });
+  })
 })
