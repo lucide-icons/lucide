@@ -22,7 +22,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
- * @returns {FunctionalComponent} Vue component
+ * @returns {FunctionalComponent} Svelte component
  * ${deprecated ? '@deprecated' : ''}
  */
 </script>
