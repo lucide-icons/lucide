@@ -11,14 +11,14 @@
 
 Community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
-It began after growing disaffection with the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
+It began after growing dissatisfaction with the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
 
 Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
 
 ### Why choose Lucide over Feather Icons
 
 - More icons to work with: Lucide already has hundreds of icons more than Feather does.
-- Official librairies and integrations with popular frameworks and design tools.
+- Official libraries and integrations with popular frameworks and design tools.
 - Well maintained code base.
 - Active community, regularly growing and improving the set.
 
@@ -35,7 +35,6 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
   - [Figma](#figma)
   - [Laravel](#laravel)
-  - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
   - [Hyva](#hyva)
@@ -199,16 +198,6 @@ composer require mallardduck/blade-lucide-icons
 ```
 
 For more details, see the [documentation](https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md).
-
-### Flutter
-
-Implementation of Lucide icon library for Flutter applications.
-
-```sh
-flutter pub add lucide_icons
-```
-
-For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
 
 ### Svelte
 

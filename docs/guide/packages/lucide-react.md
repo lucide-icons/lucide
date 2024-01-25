@@ -99,8 +99,6 @@ export default App;
 
 #### With Dynamic Imports
 
-> :warning: This is experimental and only works with bundlers that support dynamic imports.
-
 Lucide react exports a dynamic import map `dynamicIconImports`, which is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system with where icon names are stored in a database.
 
 When using client side rendering, it will fetch the icon component when it's needed. This will reduce the initial bundle size.
@@ -111,7 +109,8 @@ Example with React suspense:
 
 ```tsx
 import React, { lazy, Suspense } from 'react';
-import { dynamicIconImports, LucideProps } from 'lucide-react';
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
 
 const fallback = <div style={{ background: '#ddd', width: 24, height: 24 }}/>
 
@@ -134,7 +133,21 @@ export default Icon
 
 ##### NextJS Example
 
-In NextJS [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to load the icon component dynamically.
+In NextJS, [the dynamic function](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#nextdynamic) can be used to dynamically load the icon component.
+
+To make dynamic imports work with NextJS, you need to add `lucide-react` to the [`transpilePackages`](https://nextjs.org/docs/app/api-reference/next-config-js/transpilePackages) option in your `next.config.js` like this:
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['lucide-react'] // add this
+}
+
+module.exports = nextConfig
+
+```
+
+You can then start using it:
 
 ```tsx
 import dynamic from 'next/dynamic'

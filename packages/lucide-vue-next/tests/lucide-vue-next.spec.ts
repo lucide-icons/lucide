@@ -41,6 +41,8 @@ describe('Using lucide icon components', () => {
     const [icon] = document.getElementsByClassName('my-icon');
 
     expect(icon).toHaveClass('my-icon')
+    expect(icon).toHaveClass('lucide')
+    expect(icon).toHaveClass('lucide-smile-icon')
   });
 
   it('should add a style attribute to the element', () => {
@@ -110,8 +112,6 @@ describe('Using lucide icon components', () => {
         'stroke-width': 4
       }
     })
-
-    console.log(PenIconRenderedHTML, Edit2Container.innerHTML)
 
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
   })
