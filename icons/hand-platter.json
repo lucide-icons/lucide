@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "waiter",
+    "waitress",
+    "restaurant",
+    "table service",
+    "served",
+    "dinner",
+    "dining",
+    "meal",
+    "course",
+    "luxury"
+  ],
+  "categories": [
+    "food-beverage",
+    "people"
+  ]
+}
