@@ -7,17 +7,28 @@
     "diameter",
     "zero",
     "Ø",
-    "null",
     "nothing",
+    "null",
+    "void",
     "cancel",
     "ban",
     "no",
     "stop",
     "forbidden",
     "prohibited",
-    "error"
+    "error",
+    "incorrect",
+    "mistake",
+    "wrong",
+    "failure",
+    "divide",
+    "division",
+    "or",
+    "/"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "development",
+    "maths"
   ]
 }

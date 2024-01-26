@@ -11,10 +11,18 @@
     "remove",
     "times",
     "clear",
-    "maths"
+    "error",
+    "incorrect",
+    "wrong",
+    "mistake",
+    "failure",
+    "linter",
+    "multiply",
+    "multiplication"
   ],
   "categories": [
     "maths",
-    "shapes"
+    "shapes",
+    "development"
   ]
 }

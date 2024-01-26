@@ -4,9 +4,12 @@
     "colebemis"
   ],
   "tags": [
-    "arrow"
+    "turn",
+    "corner"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "gaming"
   ]
 }

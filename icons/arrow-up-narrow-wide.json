@@ -6,9 +6,7 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "aliases": ["sort-asc"],
   "tags": [
-    "arrow",
     "filter",
     "sort",
     "ascending"
@@ -17,5 +15,8 @@
     "text",
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "sort-asc"
   ]
 }

@@ -11,7 +11,11 @@
     "password",
     "login",
     "authentication",
-    "secure"
+    "secure",
+    "unlock",
+    "keychain",
+    "key ring",
+    "fob"
   ],
   "categories": [
     "security",

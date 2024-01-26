@@ -90,12 +90,13 @@ export const writeFileIfNotExists = (content, fileName, outputDirectory) => {
  * @returns {object} A map of icon or category metadata
  */
 export const readAllMetadata = (directory) =>
-  fs.readdirSync(directory).filter((file) => path.extname(file) === '.json').reduce(
-    (acc, fileName, i) => {
+  fs
+    .readdirSync(directory)
+    .filter((file) => path.extname(file) === '.json')
+    .reduce((acc, fileName, i) => {
       acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
       return acc;
-    }, {}
-  );
+    }, {});
 
 /**
  * Reads metadata for an icon or category
@@ -111,7 +112,7 @@ export const readMetadata = (fileName, directory) =>
  * reads the icon directory
  *
  * @param {string} directory
- * @returns {array} An array of file paths containig svgs
+ * @returns {array} An array of file paths containing svgs
  */
 export const readSvgDirectory = (directory, fileExtension = '.svg') =>
   fs.readdirSync(directory).filter((file) => path.extname(file) === fileExtension);
@@ -189,4 +190,35 @@ export const mergeArrays = (a, b) => {
   return a;
 };
 
+/**
+ * @param {string} currentPath
+ * @returns {string}
+ */
 export const getCurrentDirPath = (currentPath) => path.dirname(fileURLToPath(currentPath));
+
+/**
+ * @param {array} array
+ * @returns {array}
+ */
+export const shuffle = (array) => {
+  // eslint-disable-next-line no-plusplus
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+/**
+ * Minifies SVG
+ *
+ * @param {string} string
+ * @returns string
+ */
+export function minifySvg(string){
+  return string ? string
+    .replace(/\>[\r\n ]+</g, "><")
+    .replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
+    .trim()
+    : ""
+}

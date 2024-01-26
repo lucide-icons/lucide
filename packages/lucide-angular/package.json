@@ -1,7 +1,7 @@
 {
   "name": "lucide-angular",
   "description": "A Lucide icon library package for Angular applications",
-  "version": "0.160.0",
+  "version": "0.0.1",
   "author": "SMAH1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -20,6 +20,7 @@
     "Feather",
     "Icons",
     "Icon",
+    "SVG",
     "Feather Icons",
     "Fontawesome",
     "Font Awesome"
@@ -33,7 +34,6 @@
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
-    "format": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write",
     "e2e": "ng e2e",
     "version": "pnpm version --git-tag-version=false"
   },
@@ -58,7 +58,6 @@
     "@typescript-eslint/parser": "5.48.2",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "jasmine-core": "~4.0.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.0",
@@ -77,7 +76,7 @@
     "zone.js": "~0.11.4"
   },
   "peerDependencies": {
-    "@angular/common": "13.x - 16.x",
-    "@angular/core": "13.x - 16.x"
+    "@angular/common": "13.x - 17.x",
+    "@angular/core": "13.x - 17.x"
   }
 }

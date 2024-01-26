@@ -3,16 +3,27 @@
   "contributors": [
     "danielbayley"
   ],
-  "aliases": ["circle-slashed"],
   "tags": [
     "diameter",
     "zero",
     "Ø",
-    "null",
     "nothing",
-    "maths"
+    "null",
+    "void",
+    "ban",
+    "maths",
+    "divide",
+    "division",
+    "half",
+    "split",
+    "/"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "maths",
+    "development"
+  ],
+  "aliases": [
+    "circle-slashed"
   ]
 }
