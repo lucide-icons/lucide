@@ -1,19 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere"
+    "danielbayley",
+    "kayleyhill"
   ],
   "tags": [
+    "love",
     "like",
-    "good",
     "emotion"
   ],
   "categories": [
-    "account",
-    "social",
-    "emoji"
+    "social"
   ]
 }
