@@ -98,5 +98,12 @@ export default [
     }],
     plugins: [dts()],
   },
+  {
+    input: 'src/lucide-react.prefixed.ts',
+    output: [{
+      file: `dist/lucide-react.prefixed.d.ts`, format: "es"
+    }],
+    plugins: [dts()],
+  },
   ...configs
 ];
