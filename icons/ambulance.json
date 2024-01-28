@@ -1,7 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jordan808"
+    "jordan808",
+    "jguddas",
+    "colebemis",
+    "ahtohbi4",
+    "ericfennis",
+    "Andreto",
+    "csandman",
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "ambulance",
