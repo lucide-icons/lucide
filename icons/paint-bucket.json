@@ -8,9 +8,11 @@
     "fill",
     "paint",
     "bucket",
-    "design"
+    "color",
+    "colour"
   ],
   "categories": [
-    "design"
+    "design",
+    "tools"
   ]
 }
