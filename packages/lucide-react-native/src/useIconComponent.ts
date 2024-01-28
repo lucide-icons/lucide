@@ -17,7 +17,7 @@ export const toPascalCase = <T extends string>(string: T): CamelToPascal<T> => {
 
 const useIconComponent = <Icons extends Record<string, IconNode>>(icons: Icons) => {
   if (typeof icons !== 'object') {
-    console.error('[lucide-react]: useIconComponent expects an object as argument')
+    console.error('[lucide-react-native]: useIconComponent expects an object as argument')
   }
 
   const iconNodeEntries = Object.entries(icons)
@@ -27,7 +27,7 @@ const useIconComponent = <Icons extends Record<string, IconNode>>(icons: Icons) 
   )
 
   if (!iconNodesHasCorrectType) {
-    console.error('[lucide-react]: Passed icons object has incorrect type')
+    console.error('[lucide-react-native]: Passed icons object has incorrect type')
   }
   // TODO: throw error if this function is executed inside a react component render function
 

@@ -1,4 +1,5 @@
-import createLucideIcon, { IconNode, LucideIcon } from "./createLucideIcon";
+import Icon from "./Icon";
+import { LucideProps, IconNode, LucideIcon } from "./types";
 
 type CamelToPascal<T extends string> =
   T extends `${infer FirstChar}${infer Rest}` ? `${Capitalize<FirstChar>}${Rest}` : never
@@ -17,7 +18,7 @@ export const toPascalCase = <T extends string>(string: T): CamelToPascal<T> => {
 
 const useIconComponent = <Icons extends Record<string, IconNode>>(icons: Icons) => {
   if (typeof icons !== 'object') {
-    console.error('[lucide-react]: useIconComponent expects an object as argument')
+    console.error('[lucide-solid]: useIconComponent expects an object as argument')
   }
 
   const iconNodeEntries = Object.entries(icons)
@@ -27,14 +28,21 @@ const useIconComponent = <Icons extends Record<string, IconNode>>(icons: Icons) 
   )
 
   if (!iconNodesHasCorrectType) {
-    console.error('[lucide-react]: Passed icons object has incorrect type')
+    console.error('[lucide-solid]: Passed icons object has incorrect type')
   }
-  // TODO: throw error if this function is executed inside a react component render function
 
   const iconComponents = iconNodeEntries.reduce((acc, [iconName, iconNode]) => {
     const componentName = toPascalCase(iconName) as keyof ComponentList<Icons>;
 
-    acc[componentName] = createLucideIcon(componentName as string, iconNode) as ComponentList<Icons>[typeof componentName];
+    acc[componentName] = (
+      (props: LucideProps) => (
+        <Icon
+          {...props}
+          name={componentName as string}
+          iconNode={iconNode}
+        />
+      )
+    ) as ComponentList<Icons>[typeof componentName];
 
     return acc;
   }, {} as ComponentList<Icons>)
