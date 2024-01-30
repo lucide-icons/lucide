@@ -2,15 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "jguddas"
   ],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event"
+    "push api",
+    "interface",
+    "callback"
   ],
   "categories": [
-    "time"
+    "development",
+    "social",
+    "account"
   ]
 }

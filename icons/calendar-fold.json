@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "date",
@@ -10,9 +9,11 @@
     "year",
     "event",
     "birthday",
-    "birthdate"
+    "birthdate",
+    "ics"
   ],
   "categories": [
-    "time"
+    "time",
+    "files"
   ]
 }

@@ -1,16 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley",
+    "kayleyhill"
   ],
   "tags": [
-    "date",
-    "month",
-    "year",
-    "event"
+    "love",
+    "like",
+    "emotion"
   ],
   "categories": [
-    "time"
+    "social"
   ]
 }
