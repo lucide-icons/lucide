@@ -3,10 +3,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.9')
-      format('woff2'),
-    url('https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.9')
-      format('woff');
+  src:
+    url('https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.9') format('woff2'),
+    url('https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.9') format('woff');
 }
 
 @font-face {
@@ -14,10 +13,9 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.9')
-      format('woff2'),
-    url('https://rsms.me/inter/font-files/Inter-Medium.woff?v=3.9')
-      format('woff');
+  src:
+    url('https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.9') format('woff2'),
+    url('https://rsms.me/inter/font-files/Inter-Medium.woff?v=3.9') format('woff');
 }
 
 :root {

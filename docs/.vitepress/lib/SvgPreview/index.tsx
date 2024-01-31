@@ -10,7 +10,11 @@ const Grid = ({
   strokeWidth: number;
   radius: number;
 } & PathProps<'stroke', 'strokeWidth'>) => (
-  <g className="svg-preview-grid-group" strokeLinecap="butt" {...props}>
+  <g
+    className="svg-preview-grid-group"
+    strokeLinecap="butt"
+    {...props}
+  >
     <rect
       className="svg-preview-grid-rect"
       width={24 - props.strokeWidth}
@@ -44,15 +48,21 @@ const Shadow = ({
   paths: Path[];
 } & PathProps<'stroke' | 'strokeWidth' | 'strokeOpacity', 'd'>) => {
   const groupedPaths = Object.entries(
-    paths.reduce((groups, val) => {
-      const key = val.c.id;
-      groups[key] = [...(groups[key] || []), val];
-      return groups;
-    }, {} as Record<number, Path[]>)
+    paths.reduce(
+      (groups, val) => {
+        const key = val.c.id;
+        groups[key] = [...(groups[key] || []), val];
+        return groups;
+      },
+      {} as Record<number, Path[]>,
+    ),
   );
   return (
     <>
-      <g className="svg-preview-shadow-mask-group" {...props}>
+      <g
+        className="svg-preview-shadow-mask-group"
+        {...props}
+      >
         {groupedPaths.map(([id, paths]) => (
           <mask
             id={`svg-preview-shadow-mask-${id}`}
@@ -61,7 +71,15 @@ const Shadow = ({
             strokeWidth={props.strokeWidth}
             stroke="#000"
           >
-            <rect x={0} y={0} width={24} height={24} fill="#fff" stroke="none" rx={radius} />
+            <rect
+              x={0}
+              y={0}
+              width={24}
+              height={24}
+              fill="#fff"
+              stroke="none"
+              rx={radius}
+            />
             <path
               d={paths
                 .flatMap(({ prev, next }) => [
@@ -74,9 +92,16 @@ const Shadow = ({
           </mask>
         ))}
       </g>
-      <g className="svg-preview-shadow-group" {...props}>
+      <g
+        className="svg-preview-shadow-group"
+        {...props}
+      >
         {paths.map(({ d, c: { id } }, i) => (
-          <path key={i} mask={`url(#svg-preview-shadow-mask-${id})`} d={d} />
+          <path
+            key={i}
+            mask={`url(#svg-preview-shadow-mask-${id})`}
+            d={d}
+          />
         ))}
         <path
           d={paths
@@ -94,9 +119,16 @@ const ColoredPath = ({
   paths,
   ...props
 }: { paths: Path[]; colors: string[] } & PathProps<never, 'd' | 'stroke'>) => (
-  <g className="svg-preview-colored-path-group" {...props}>
+  <g
+    className="svg-preview-colored-path-group"
+    {...props}
+  >
     {paths.map(({ d, c }, i) => (
-      <path key={i} d={d} stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]} />
+      <path
+        key={i}
+        d={d}
+        stroke={colors[(c.name === 'path' ? i : c.id) % colors.length]}
+      />
     ))}
   </g>
 );
@@ -138,7 +170,15 @@ const ControlPath = ({
                 key={i}
                 maskUnits="userSpaceOnUse"
               >
-                <rect x="0" y="0" width="24" height="24" fill="#fff" stroke="none" rx={radius} />
+                <rect
+                  x="0"
+                  y="0"
+                  width="24"
+                  height="24"
+                  fill="#fff"
+                  stroke="none"
+                  rx={radius}
+                />
                 <path d={`M${prev.x} ${prev.y}h.01`} />
                 <path d={`M${next.x} ${next.y}h.01`} />
               </mask>
@@ -146,7 +186,10 @@ const ControlPath = ({
           );
         })}
       </g>
-      <g className="svg-preview-control-path-group" {...props}>
+      <g
+        className="svg-preview-control-path-group"
+        {...props}
+      >
         {controlPaths.map(({ d, showMarker }, i) => (
           <path
             key={i}
@@ -155,18 +198,33 @@ const ControlPath = ({
           />
         ))}
       </g>
-      <g className="svg-preview-control-path-marker-group" {...props}>
+      <g
+        className="svg-preview-control-path-marker-group"
+        {...props}
+      >
         <path
           d={controlPaths
             .flatMap(({ prev, next, showMarker }) =>
-              showMarker ? [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`] : []
+              showMarker ? [`M${prev.x} ${prev.y}h.01`, `M${next.x} ${next.y}h.01`] : [],
             )
             .join('')}
         />
         {controlPaths.map(({ d, prev, next, startMarker, endMarker }, i) => (
           <React.Fragment key={i}>
-            {startMarker && <circle cx={prev.x} cy={prev.y} r={pointSize / 2} />}
-            {endMarker && <circle cx={next.x} cy={next.y} r={pointSize / 2} />}
+            {startMarker && (
+              <circle
+                cx={prev.x}
+                cy={prev.y}
+                r={pointSize / 2}
+              />
+            )}
+            {endMarker && (
+              <circle
+                cx={next.x}
+                cy={next.y}
+                r={pointSize / 2}
+              />
+            )}
           </React.Fragment>
         ))}
       </g>
@@ -182,15 +240,16 @@ const Radii = ({
   any
 >) => {
   return (
-    <g className="svg-preview-radii-group" {...props}>
+    <g
+      className="svg-preview-radii-group"
+      {...props}
+    >
       {paths.map(
         ({ c, prev, next, circle }, i) =>
           circle && (
             <React.Fragment key={i}>
-              {c.name !== "circle" && (
-                <path
-                  d={`M${prev.x} ${prev.y} ${circle.x} ${circle.y} ${next.x} ${next.y}`}
-                />
+              {c.name !== 'circle' && (
+                <path d={`M${prev.x} ${prev.y} ${circle.x} ${circle.y} ${next.x} ${next.y}`} />
               )}
               <circle
                 cy={circle.y}
@@ -200,7 +259,7 @@ const Radii = ({
                 stroke={
                   (Math.round(circle.x * 100) / 100) % 1 !== 0 ||
                   (Math.round(circle.y * 100) / 100) % 1 !== 0
-                    ? "red"
+                    ? 'red'
                     : undefined
                 }
               />
@@ -208,11 +267,7 @@ const Radii = ({
                 cy={circle.y}
                 cx={circle.x}
                 r={circle.r}
-                stroke={
-                  (Math.round(circle.r * 1000) / 1000) % 1 !== 0
-                    ? "red"
-                    : undefined
-                }
+                stroke={(Math.round(circle.r * 1000) / 1000) % 1 !== 0 ? 'red' : undefined}
               />
             </React.Fragment>
           ),
@@ -230,13 +285,28 @@ const Handles = ({
 >) => {
   console.log(paths);
   return (
-    <g className="svg-preview-handles-group" {...props}>
+    <g
+      className="svg-preview-handles-group"
+      {...props}
+    >
       {paths.map(({ c, prev, next, cp1, cp2 }) => (
         <>
           {cp1 && <path d={`M${prev.x} ${prev.y} ${cp1.x} ${cp1.y}`} />}
-          {cp1 && <circle cy={cp1.y} cx={cp1.x} r={0.25} />}
+          {cp1 && (
+            <circle
+              cy={cp1.y}
+              cx={cp1.x}
+              r={0.25}
+            />
+          )}
           {cp2 && <path d={`M${next.x} ${next.y} ${cp2.x} ${cp2.y}`} />}
-          {cp2 && <circle cy={cp2.y} cx={cp2.x} r={0.25} />}
+          {cp2 && (
+            <circle
+              cy={cp2.y}
+              cx={cp2.x}
+              r={0.25}
+            />
+          )}
         </>
       ))}
     </g>
@@ -280,9 +350,27 @@ const SvgPreview = React.forwardRef<
       {...props}
     >
       <style>{darkModeCss}</style>
-      {showGrid && <Grid strokeWidth={0.1} stroke="#777" strokeOpacity={0.3} radius={1} />}
-      <Shadow paths={paths} strokeWidth={4} stroke="#777" radius={1} strokeOpacity={0.15} />
-      <Handles paths={paths} strokeWidth={0.12} stroke="#777" strokeOpacity={0.6} />
+      {showGrid && (
+        <Grid
+          strokeWidth={0.1}
+          stroke="#777"
+          strokeOpacity={0.3}
+          radius={1}
+        />
+      )}
+      <Shadow
+        paths={paths}
+        strokeWidth={4}
+        stroke="#777"
+        radius={1}
+        strokeOpacity={0.15}
+      />
+      <Handles
+        paths={paths}
+        strokeWidth={0.12}
+        stroke="#777"
+        strokeOpacity={0.6}
+      />
       <ColoredPath
         paths={paths}
         colors={[
@@ -307,8 +395,19 @@ const SvgPreview = React.forwardRef<
         stroke="#777"
         strokeOpacity={0.3}
       />
-      <ControlPath radius={1} paths={paths} pointSize={1} stroke="#fff" strokeWidth={0.125} />
-      <Handles paths={paths} strokeWidth={0.12} stroke="#FFF" strokeOpacity={0.3} />
+      <ControlPath
+        radius={1}
+        paths={paths}
+        pointSize={1}
+        stroke="#fff"
+        strokeWidth={0.125}
+      />
+      <Handles
+        paths={paths}
+        strokeWidth={0.12}
+        stroke="#FFF"
+        strokeOpacity={0.3}
+      />
       {children}
     </svg>
   );
