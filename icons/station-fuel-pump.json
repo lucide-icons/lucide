@@ -5,13 +5,23 @@
     "ericfennis"
   ],
   "tags": [
-    "filling-station",
-    "gas",
+    "refuel",
+    "filling station",
+    "pump",
     "petrol",
-    "tank"
+    "unleaded",
+    "diesel",
+    "gas",
+    "gallon",
+    "tank",
+    "fossil",
+    "carbon"
   ],
   "categories": [
     "transportation",
     "maps"
+  ],
+  "aliases": [
+    "fuel"
   ]
 }

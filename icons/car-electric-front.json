@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "vehicle",
+    "ev",
+    "drive",
+    "trip",
+    "journey",
+    "recharge",
+    "battery",
+    "power",
+    "zap"
+  ],
+  "categories": [
+    "transportation",
+    "sustainability"
+  ]
+}
