@@ -7,10 +7,18 @@
     "map",
     "gps",
     "location",
-    "cross"
+    "crosshair",
+    "aim",
+    "target",
+    "missed",
+    "scope",
+    "sight",
+    "reticule"
   ],
   "categories": [
     "navigation",
-    "maps"
+    "maps",
+    "cursors",
+    "gaming"
   ]
 }
