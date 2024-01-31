@@ -8,12 +8,17 @@
     "danielbayley"
   ],
   "tags": [
-    "app",
+    "apps",
+    "applications",
+    "launchpad",
     "home",
-    "start"
+    "start",
+    "rows",
+    "columns"
   ],
   "categories": [
+    "layout",
     "design",
-    "layout"
+    "account"
   ]
 }

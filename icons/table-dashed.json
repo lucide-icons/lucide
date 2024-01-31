@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "abejenaru",
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "grid",
@@ -17,6 +15,8 @@
     "entries",
     "projects",
     "overview",
+    "template",
+    "boilerplate",
     "sidebar",
     "drawers",
     "window",

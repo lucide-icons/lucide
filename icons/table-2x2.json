@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "abejenaru",
-    "karsa-mistmere",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
     "grid",
@@ -14,19 +12,10 @@
     "columns",
     "cells",
     "data",
-    "entries",
-    "projects",
-    "overview",
-    "sidebar",
-    "drawers",
-    "window",
-    "webpage"
+    "entries"
   ],
   "categories": [
     "layout",
-    "design",
-    "development",
-    "charts",
     "files",
     "money",
     "account"

@@ -1,34 +1,31 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "abejenaru",
-    "karsa-mistmere",
-    "ericfennis"
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
   ],
   "tags": [
     "grid",
     "spreadsheet",
     "excel",
     "accountancy",
+    "calculator",
     "rows",
     "columns",
     "cells",
     "data",
-    "entries",
-    "projects",
-    "overview",
-    "sidebar",
-    "drawers",
-    "window",
-    "webpage"
+    "entries"
   ],
   "categories": [
     "layout",
-    "design",
-    "development",
-    "charts",
     "files",
+    "maths",
     "money",
     "account"
+  ],
+  "aliases": [
+    "sheet"
   ]
 }
