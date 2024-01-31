@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "insert",
+    "add",
+    "right",
+    "slot",
+    "squeeze",
+    "space",
+    "vertical",
+    "grid",
+    "table",
+    "rows",
+    "cells",
+    "excel",
+    "spreadsheet",
+    "accountancy",
+    "data",
+    "enter",
+    "entry",
+    "entries",
+    "blocks",
+    "rectangles",
+    "chevron"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "tools",
+    "account"
+  ],
+  "aliases": [
+    "between-horizonal-start"
+  ]
+}

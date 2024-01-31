@@ -6,9 +6,12 @@
   ],
   "tags": [
     "date",
-    "time",
+    "day",
+    "month",
+    "year",
     "event",
-    "clock"
+    "clock",
+    "hour"
   ],
   "categories": [
     "time"

@@ -10,6 +10,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide"
   },
+  "keywords": [
+    "Lucide",
+    "HTML",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "amdName": "lucide",
   "source": "src/lucide.js",
   "main": "dist/cjs/lucide.js",
@@ -25,21 +36,21 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts",
-    "build:types": "node ./scripts/buildTypes.mjs",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c rollup.config.mjs",
     "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "workspace:*",
     "@lucide/build-icons": "workspace:*",
-    "@rollup/plugin-replace": "^5.0.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "rollup": "^3.5.1",
-    "rollup-plugin-dts": "^5.0.0",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@testing-library/jest-dom": "^6.1.6",
+    "jest-serializer-html": "^7.1.0",
+    "rollup": "^4.9.2",
+    "rollup-plugin-dts": "^6.1.0",
     "typescript": "^4.9.3",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
+    "vite": "5.0.12",
+    "vitest": "^1.1.1"
   }
 }

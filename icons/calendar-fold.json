@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "date",
+    "month",
+    "year",
+    "event",
+    "birthday",
+    "birthdate",
+    "ics"
+  ],
+  "categories": [
+    "time",
+    "files"
+  ]
+}

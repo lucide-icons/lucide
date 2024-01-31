@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "shape",
+    "circle",
+    "geometry",
+    "trigonometry",
+    "radii",
+    "calculate",
+    "measure",
+    "size"
+  ],
+  "categories": [
+    "shapes",
+    "maths",
+    "design",
+    "tools"
+  ]
+}

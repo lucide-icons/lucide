@@ -2,7 +2,6 @@
 layout: page
 outline: 2
 outlineTitle: Packages
-sidebar: true
 ---
 <script setup>
 import PageContainer from '.vitepress/theme/components/PageContainer.vue'
