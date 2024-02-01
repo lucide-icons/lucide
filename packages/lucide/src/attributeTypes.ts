@@ -10,7 +10,16 @@ interface AriaAttributes {
   'aria-colindex'?: number | undefined;
   'aria-colspan'?: number | undefined;
   'aria-controls'?: string | undefined;
-  'aria-current'?: boolean | 'false' | 'true' | 'page' | 'step' | 'location' | 'date' | 'time' | undefined;
+  'aria-current'?:
+    | boolean
+    | 'false'
+    | 'true'
+    | 'page'
+    | 'step'
+    | 'location'
+    | 'date'
+    | 'time'
+    | undefined;
   'aria-describedby'?: string | undefined;
   'aria-details'?: string | undefined;
   'aria-disabled'?: Booleanish | undefined;
@@ -19,7 +28,16 @@ interface AriaAttributes {
   'aria-expanded'?: Booleanish | undefined;
   'aria-flowto'?: string | undefined;
   'aria-grabbed'?: Booleanish | undefined;
-  'aria-haspopup'?: boolean | 'false' | 'true' | 'menu' | 'listbox' | 'tree' | 'grid' | 'dialog' | undefined;
+  'aria-haspopup'?:
+    | boolean
+    | 'false'
+    | 'true'
+    | 'menu'
+    | 'listbox'
+    | 'tree'
+    | 'grid'
+    | 'dialog'
+    | undefined;
   'aria-hidden'?: Booleanish | undefined;
   'aria-invalid'?: boolean | 'false' | 'true' | 'grammar' | 'spelling' | undefined;
   'aria-keyshortcuts'?: string | undefined;
@@ -36,7 +54,18 @@ interface AriaAttributes {
   'aria-posinset'?: number | undefined;
   'aria-pressed'?: boolean | 'false' | 'mixed' | 'true' | undefined;
   'aria-readonly'?: Booleanish | undefined;
-  'aria-relevant'?: 'additions' | 'additions removals' | 'additions text' | 'all' | 'removals' | 'removals additions' | 'removals text' | 'text' | 'text additions' | 'text removals' | undefined;
+  'aria-relevant'?:
+    | 'additions'
+    | 'additions removals'
+    | 'additions text'
+    | 'all'
+    | 'removals'
+    | 'removals additions'
+    | 'removals text'
+    | 'text'
+    | 'text additions'
+    | 'text removals'
+    | undefined;
   'aria-required'?: Booleanish | undefined;
   'aria-roledescription'?: string | undefined;
   'aria-rowcount'?: number | undefined;

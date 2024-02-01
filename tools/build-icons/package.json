@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.mjs",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node ./main.mjs"
   },

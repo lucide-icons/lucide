@@ -1,5 +1,8 @@
 pnpm-lock.yaml
 
+# docs examples
+docs/**/examples/
+
 # lucide-angular
 packages/lucide-angular/.angular/cache
 
