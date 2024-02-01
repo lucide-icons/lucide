@@ -71,6 +71,6 @@
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
-    "svelte": "^3 || ^4 || ^5.0.0-next.0"
+    "svelte": "^3 || ^4 || ^5.0.0-next.42"
   }
 }
