@@ -17,8 +17,8 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
   files
     .map((file) => {
       const svgContent = fs.readFileSync(path.join(process.cwd(), file), 'utf-8');
-      const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>')
-      const minifiedSvg = minifySvg(strippedAttrsSVG)
+      const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>');
+      const minifiedSvg = minifySvg(strippedAttrsSVG);
 
       const base64 = Buffer.from(minifiedSvg).toString('base64');
       const url = getBaseUrl(file);

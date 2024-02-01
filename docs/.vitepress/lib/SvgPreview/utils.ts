@@ -51,7 +51,7 @@ export const getCommands = (src: string) =>
   getNodes(src)
     .map(convertToPathNode)
     .flatMap(({ d, name }, idx) =>
-      new SVGPathData(d).toAbs().commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name }))
+      new SVGPathData(d).toAbs().commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
     );
 
 export const getPaths = (src: string) => {
@@ -60,10 +60,10 @@ export const getPaths = (src: string) => {
   let prev: Point | undefined = undefined;
   let start: Point | undefined = undefined;
   const addPath = (
-    c: typeof commands[number],
+    c: (typeof commands)[number],
     next: Point,
     d?: string,
-    extras?: { circle?: Path['circle']; cp1?: Path['cp1']; cp2?: Path['cp2'] }
+    extras?: { circle?: Path['circle']; cp1?: Path['cp1']; cp2?: Path['cp2'] },
   ) => {
     assert(prev);
     paths.push({
@@ -153,7 +153,7 @@ export const getPaths = (src: string) => {
           {
             cp1: { x: prev.x - reflectedCp1.x, y: prev.y - reflectedCp1.y },
             cp2: { x: c.x2, y: c.y2 },
-          }
+          },
         );
         break;
       }
@@ -169,7 +169,7 @@ export const getPaths = (src: string) => {
         assert(prev);
         const backTrackCP = (
           index: number,
-          currentPoint: { x: number; y: number }
+          currentPoint: { x: number; y: number },
         ): { x: number; y: number } => {
           const previousCommand = commands[index - 1];
           if (!previousCommand) {
@@ -211,7 +211,7 @@ export const getPaths = (src: string) => {
           {
             cp1: { x: prevCP.x, y: prevCP.y },
             cp2: { x: prevCP.x, y: prevCP.y },
-          }
+          },
         );
         break;
       }
@@ -226,13 +226,13 @@ export const getPaths = (src: string) => {
           c.lArcFlag,
           c.sweepFlag,
           c.x,
-          c.y
+          c.y,
         );
         addPath(
           c,
           c,
           `M ${prev.x} ${prev.y} A${c.rX} ${c.rY} ${c.xRot} ${c.lArcFlag} ${c.sweepFlag} ${c.x} ${c.y}`,
-          { circle: c.rX === c.rY ? { ...center, r: c.rX } : undefined }
+          { circle: c.rX === c.rY ? { ...center, r: c.rX } : undefined },
         );
         break;
       }
@@ -253,7 +253,7 @@ export const arcEllipseCenter = (
   fa: number,
   fs: number,
   x2: number,
-  y2: number
+  y2: number,
 ) => {
   const phi = (a * Math.PI) / 180;
 
@@ -280,7 +280,7 @@ export const arcEllipseCenter = (
     sign *
     Math.sqrt(
       Math.max(rx * rx * ry * ry - rx * rx * y1p * y1p - ry * ry * x1p * x1p, 0) /
-        (rx * rx * y1p * y1p + ry * ry * x1p * x1p)
+        (rx * rx * y1p * y1p + ry * ry * x1p * x1p),
     );
 
   const V2 = [(rx * y1p) / ry, (-ry * x1p) / rx];

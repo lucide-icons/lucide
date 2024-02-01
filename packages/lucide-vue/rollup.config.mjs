@@ -32,7 +32,7 @@ const bundles = [
 
 const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
-    inputs.map(input => ({
+    inputs.map((input) => ({
       input,
       plugins: plugins(pkg, minify),
       external: ['vue'],

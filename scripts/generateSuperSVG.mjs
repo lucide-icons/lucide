@@ -37,7 +37,10 @@ async function generateSprite(svgs, packageDir) {
   };
 
   const spriteSvg = stringify(spriteSvgObject);
-  const prettifiedSprite = (await prettier.format(spriteSvg, { parser: 'babel' })).replace(/;/g, '');
+  const prettifiedSprite = (await prettier.format(spriteSvg, { parser: 'babel' })).replace(
+    /;/g,
+    '',
+  );
 
   const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
 

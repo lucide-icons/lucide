@@ -47,7 +47,7 @@ for (const file of files) {
       if (exportClassRegex.test(newContents)) {
         newContents = newContents.replace(
           exportClassRegex,
-          `${blockComment}\nexport default class $1 extends SvelteComponentTyped<$2> {`
+          `${blockComment}\nexport default class $1 extends SvelteComponentTyped<$2> {`,
         );
       }
     }
