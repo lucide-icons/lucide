@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel",
-    "danielbayley"
+    "lscheibel"
   ],
   "tags": [
     "gizmo",
