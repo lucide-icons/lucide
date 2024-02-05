@@ -1,54 +1,57 @@
-import { useEffect, useMemo, useState } from 'react'
-import ReactDOM from 'react-dom'
-import * as views from '../views'
+import { useEffect, useMemo, useState } from 'react';
+import ReactDOM from 'react-dom';
+import * as views from '../views';
 
-type Views = typeof views
+type Views = typeof views;
 
-import useSearch, { Icon } from '../hooks/useSearch'
+import useSearch, { Icon } from '../hooks/useSearch';
 
-import { getIcons, iconFetchListener, LucideIcons } from '../api/fetchIcons'
-import './interface.scss'
-import Menu from '../components/Menu'
+import { getIcons, iconFetchListener, LucideIcons } from '../api/fetchIcons';
+import './interface.scss';
+import Menu from '../components/Menu';
 
 function App() {
-  const [page, setPage] = useState('icons')
-  const [query, setQuery] = useState('')
-  const [icons, setIcons] = useState<Icon[]>([])
-  const [tags, setTags] = useState({})
-  const [version, setVersion ] = useState('')
+  const [page, setPage] = useState('icons');
+  const [query, setQuery] = useState('');
+  const [icons, setIcons] = useState<Icon[]>([]);
+  const [tags, setTags] = useState({});
+  const [version, setVersion] = useState('');
 
-  const searchResults = useMemo(() => useSearch(icons, tags, query), [icons, query])
+  const searchResults = useMemo(() => useSearch(icons, tags, query), [icons, query]);
 
   const handleFetchResponse = async (lucideIcons: LucideIcons) => {
-    const icons = Object.entries(lucideIcons.iconNodes)
+    const icons = Object.entries(lucideIcons.iconNodes);
 
-    setIcons(icons)
-    setTags(lucideIcons.tags)
-    setVersion(lucideIcons.version)
-  }
+    setIcons(icons);
+    setTags(lucideIcons.tags);
+    setVersion(lucideIcons.version);
+  };
 
   useEffect(() => {
-    const removeListener = iconFetchListener(handleFetchResponse)
+    const removeListener = iconFetchListener(handleFetchResponse);
 
-    return removeListener
-  }, [])
+    return removeListener;
+  }, []);
 
-  const View = views?.[page as keyof Views] ?? views.icons
+  const View = views?.[page as keyof Views] ?? views.icons;
 
   return (
     <div>
-      <Menu page={page} setPage={setPage}/>
+      <Menu
+        page={page}
+        setPage={setPage}
+      />
       <View
         {...{
           query,
           setQuery,
           searchResults,
           icons,
-          version
+          version,
         }}
       />
     </div>
-  )
+  );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'));

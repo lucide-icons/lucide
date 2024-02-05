@@ -4,7 +4,7 @@ import defaultAttributes from './defaultAttributes';
 
 var showDeprecationWarning = true;
 
-type IconNode = [elementName: string, attrs: Record<string, string>][]
+type IconNode = [elementName: string, attrs: Record<string, string>][];
 
 /**
  * Converts string to KebabCase
@@ -14,7 +14,8 @@ type IconNode = [elementName: string, attrs: Record<string, string>][]
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string: string) =>
+  string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 export default (iconName: string, iconNode: IconNode): Component => ({
   name: iconName,
@@ -43,11 +44,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
   },
   render(
     createElement,
-    {
-      props: { color, size, strokeWidth, absoluteStrokeWidth, defaultClass },
-      data,
-      children = [],
-    },
+    { props: { color, size, strokeWidth, absoluteStrokeWidth, defaultClass }, data, children = [] },
   ) {
     if (showDeprecationWarning) {
       console.warn(
@@ -59,7 +56,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
     return createElement(
       'svg',
       {
-        // eslint-disable-next-line prettier/prettier
+        // prettier-ignore
         class: [defaultClass, data.class, data.staticClass, data.attrs && data.attrs.class].filter(Boolean),
         style: [data.style, data.staticStyle, data.attrs && data.attrs.style].filter(Boolean),
         attrs: {
@@ -67,18 +64,14 @@ export default (iconName: string, iconNode: IconNode): Component => ({
           width: size,
           height: size,
           stroke: color,
-          'stroke-width':
-            absoluteStrokeWidth
-              ? Number(strokeWidth) * 24 / Number(size)
-              : strokeWidth,
+          'stroke-width': absoluteStrokeWidth
+            ? (Number(strokeWidth) * 24) / Number(size)
+            : strokeWidth,
           ...data.attrs,
         },
-        on: data?.on || {}
+        on: data?.on || {},
       },
-      [
-        ...iconNode.map(([tag, attrs]) => createElement(String(tag), { attrs })),
-        ...children
-      ],
+      [...iconNode.map(([tag, attrs]) => createElement(String(tag), { attrs })), ...children],
     );
   },
 });

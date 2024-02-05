@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { shuffle, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
+import { shuffle, readSvgDirectory, getCurrentDirPath, minifySvg } from './helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -17,11 +17,10 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
   files
     .map((file) => {
       const svgContent = fs.readFileSync(path.join(process.cwd(), file), 'utf-8');
-      const strippedAttrsSVG = svgContent
-        .replace(/<svg[^>]*>/, '<svg>')
-        .replaceAll(/\n| {2}|\t/g, '');
+      const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>');
+      const minifiedSvg = minifySvg(strippedAttrsSVG);
 
-      const base64 = Buffer.from(strippedAttrsSVG).toString('base64');
+      const base64 = Buffer.from(minifiedSvg).toString('base64');
       const url = getBaseUrl(file);
       const widthAttr = width ? `width="${width}"` : '';
 
