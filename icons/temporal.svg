@@ -1,0 +1,12 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="2"
+>
+  <path stroke="#000" d="M15.3 8.7a27.3 27.3 0 0 0-6.6 0m6.6 0c3.9.47 6.7 1.77 6.7 3.3 0 1.53-2.8 2.83-6.7 3.3-.47 3.9-1.77 6.7-3.3 6.7-1.53 0-2.83-2.8-3.3-6.7m6.6-6.6C14.83 4.8 13.53 2 12 2c-1.53 0-2.83 2.8-3.3 6.7m0 6.6C4.8 14.83 2 13.53 2 12c0-1.53 2.8-2.83 6.7-3.3m0 6.6a27.3 27.3 0 0 1 0-6.6" />
+</svg>
