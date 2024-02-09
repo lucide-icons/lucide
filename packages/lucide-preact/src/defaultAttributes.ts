@@ -1,3 +1,5 @@
+import type { JSX } from 'preact';
+
 export default {
   xmlns: 'http://www.w3.org/2000/svg',
   width: 24,
@@ -8,4 +10,4 @@ export default {
   'stroke-width': '2',
   'stroke-linecap': 'round',
   'stroke-linejoin': 'round',
-};
+} satisfies JSX.SVGAttributes;

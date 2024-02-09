@@ -2,6 +2,11 @@
 
 Implementation of the lucide icon library for Vue applications.
 
+::: warning
+This package will be deprecated end of 2023. Vue v2 will be EOF at the end of 2023 See [Announcement](https://v2.vuejs.org/lts/). We recommend to migrate to Vue 3.
+The Lucide Vue package will be only maintained for Vue 3 after the deprecation.
+:::
+
 ## Vue 2 or Vue 3
 
 ::: tip

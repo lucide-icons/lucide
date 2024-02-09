@@ -1,6 +1,6 @@
 import { forwardRef, createElement, SVGProps } from 'react';
 import { IconNode } from '../api/fetchIcons';
-import { toKebabCase} from '@lucide/utils';
+import { toKebabCase } from '@lucide/utils';
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -14,9 +14,8 @@ const defaultAttributes = {
   strokeLinejoin: 'round',
 };
 
-
 export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
-  size?: string | number
+  size?: string | number;
 }
 
 const createIconComponent = (iconName: string, iconNode: IconNode) => {
@@ -34,7 +33,12 @@ const createIconComponent = (iconName: string, iconNode: IconNode) => {
           className: `lucide lucide-${toKebabCase(iconName)}`,
           ...rest,
         },
-        [...iconNode.map(([tag, attrs]: [tag:string, attrs: SVGProps<SVGSVGElement>]) => createElement(tag, attrs)), ...([children] || [])],
+        [
+          ...iconNode.map(([tag, attrs]: [tag: string, attrs: SVGProps<SVGSVGElement>]) =>
+            createElement(tag, attrs),
+          ),
+          ...([children] || []),
+        ],
       ),
   );
 
@@ -43,4 +47,4 @@ const createIconComponent = (iconName: string, iconNode: IconNode) => {
   return Component;
 };
 
-export default createIconComponent
+export default createIconComponent;

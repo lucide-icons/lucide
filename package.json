@@ -29,55 +29,44 @@
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
     "postinstall": "husky install",
-    "lint:js": "eslint --ext .ts,.js,.mjs ./{packages/lucide,scripts}",
+    "lint:es": "eslint .",
+    "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
     "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
     "lint:json:categories": "ajv --spec=draft2020 -s category.schema.json -d 'categories/*.json' > /dev/null",
     "lint:json": "pnpm run lint:json:icons && pnpm run lint:json:categories",
-    "lint": "pnpm lint:js lint:json",
+    "lint": "pnpm lint:es && pnpm lint:format && pnpm lint:json",
+    "format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --write",
     "prepare": "husky install",
     "gi": "node ./scripts/generate/generateIcons.mjs"
   },
   "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.19.1",
+    "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
     "ajv-cli": "^5.0.0",
-    "eslint": "^8.43.0",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-custom-alias": "^1.3.2",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
+    "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
-    "node-fetch": "^3.3.1",
+    "node-fetch": "^3.3.2",
     "p-memoize": "^7.1.1",
-    "prettier": "2.7.1",
-    "semver": "^7.5.2",
-    "simple-git": "^3.19.1",
-    "svgo": "^3.0.2",
-    "svgson": "^5.2.1"
+    "prettier": "3.2.4",
+    "semver": "^7.5.4",
+    "simple-git": "^3.21.0",
+    "svgo": "^3.1.0",
+    "svgson": "^5.3.1"
   },
-  "lint-staged": {
-    "icons/*.svg": [
-      "node ./scripts/optimizeStagedSvgs.mjs",
-      "node ./scripts/generateNextJSAliases.mjs"
-    ],
-    "icons/*.json": [
-      "ajv --spec=draft2020 -s icon.schema.json -d",
-      "prettier --write --print-width=0"
-    ],
-    "categories/*.json": [
-      "ajv --spec=draft2020 -s category.schema.json -d",
-      "prettier --write --print-width=0"
-    ]
-  },
-  "packageManager": "pnpm@8.7.1",
+  "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf",
   "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@babel/core",
-        "@babel/preset-env"
-      ]
-    },
     "packageExtensions": {
       "vue-template-compiler": {
         "peerDependencies": {

@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "music",
+    "audio",
+    "sound",
+    "noise",
+    "notes",
+    "keys",
+    "chord",
+    "octave",
+    "midi",
+    "controller",
+    "instrument",
+    "electric",
+    "signal",
+    "digital",
+    "studio",
+    "production",
+    "producer",
+    "pianist",
+    "piano",
+    "play",
+    "performance",
+    "concert"
+  ],
+  "categories": [
+    "multimedia",
+    "devices"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "new",
+    "add",
+    "create",
+    "follow",
+    "subscribe"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    "user-plus-2"
+  ]
+}

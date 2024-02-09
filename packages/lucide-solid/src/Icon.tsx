@@ -5,8 +5,8 @@ import { IconNode, LucideProps } from './types';
 import { toKebabCase} from '@lucide/utils';
 
 interface IconProps {
-  name: string
-  iconNode: IconNode
+  name: string;
+  iconNode: IconNode;
 }
 
 const Icon = (props: LucideProps & IconProps) => {
@@ -18,34 +18,38 @@ const Icon = (props: LucideProps & IconProps) => {
     'class',
     'name',
     'iconNode',
-    'absoluteStrokeWidth'
+    'absoluteStrokeWidth',
   ]);
 
   return (
     <svg
       {...defaultAttributes}
       width={localProps.size ?? defaultAttributes.width}
-			height={localProps.size ?? defaultAttributes.height}
-			stroke={localProps.color ?? defaultAttributes.stroke}
-			stroke-width={
+      height={localProps.size ?? defaultAttributes.height}
+      stroke={localProps.color ?? defaultAttributes.stroke}
+      stroke-width={
         localProps.absoluteStrokeWidth
-        ? Number(localProps.strokeWidth ?? defaultAttributes['stroke-width']) * 24 / (Number(localProps.size))
-        : Number(localProps.strokeWidth ?? defaultAttributes['stroke-width'])
+          ? (Number(localProps.strokeWidth ?? defaultAttributes['stroke-width']) * 24) /
+            Number(localProps.size)
+          : Number(localProps.strokeWidth ?? defaultAttributes['stroke-width'])
       }
       class={`lucide lucide-${toKebabCase(localProps?.name ?? 'icon')} ${
-          localProps.class != null ? localProps.class : ''
+        localProps.class != null ? localProps.class : ''
       }`}
       {...rest}
     >
       <For each={localProps.iconNode}>
         {([elementName, attrs]) => {
           return (
-            <Dynamic component={elementName} {...attrs} />
+            <Dynamic
+              component={elementName}
+              {...attrs}
+            />
           );
         }}
       </For>
     </svg>
-  )
-}
+  );
+};
 
-export default Icon
+export default Icon;

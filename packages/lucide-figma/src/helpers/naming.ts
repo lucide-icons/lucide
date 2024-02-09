@@ -1,4 +1,3 @@
-
 /**
  * Converts string to camelcase
  *

@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "aliases": ["stars"],
+  "aliases": [
+    "stars"
+  ],
   "tags": [
     "stars",
     "effect",
