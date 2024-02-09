@@ -10,6 +10,7 @@
   "type": "module",
   "dependencies": {
     "@atomico/rollup-plugin-sizes": "^1.1.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
     "esbuild": "^0.19.11",
     "rollup": "^4.9.2",

@@ -1,4 +1,4 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 import dts from 'rollup-plugin-dts';
 import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
@@ -10,22 +10,22 @@ const outputFileName = 'lucide-react';
 const outputDir = `dist`;
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
-  // {
-  //   format: 'umd',
-  //   inputs,
-  //   outputDir,
-  //   minify: true,
-  // },
-  // {
-  //   format: 'umd',
-  //   inputs,
-  //   outputDir,
-  // },
-  // {
-  //   format: 'cjs',
-  //   inputs,
-  //   outputDir,
-  // },
+  {
+    format: 'umd',
+    inputs,
+    outputDir,
+    minify: true,
+  },
+  {
+    format: 'umd',
+    inputs,
+    outputDir,
+  },
+  {
+    format: 'cjs',
+    inputs,
+    outputDir,
+  },
   {
     format: 'esm',
     inputs: [...inputs, ...aliasesEntries],
@@ -80,27 +80,13 @@ const configs = bundles
           format,
           sourcemap: true,
           preserveModules,
+          preserveModulesRoot: 'src',
           globals: {
             react: 'react',
             'prop-types': 'PropTypes',
           },
         },
-        entryFileNames: (chunkInfo) => {
-          if (chunkInfo.name.includes('utils')) {
-            console.log('YOOOOOO', chunkInfo.name);
-            // const [pathToReplace, directory] = chunkInfo.name.match(/.*\/([^\/]+)\//);
-            // const fileName = chunkInfo.name.replace(pathToReplace, '');
-
-            // console.log(fileName);
-
-            // return `external/${directory}/${fileName}.js`;
-            return '[name].js';
-          }
-
-          return '[name].js';
-        }
-      },
-    )),
+      })),
   )
   .flat();
 

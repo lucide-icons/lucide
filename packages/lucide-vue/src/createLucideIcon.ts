@@ -1,7 +1,6 @@
 import { Component } from 'vue';
-import { Vue, VueConfiguration } from 'vue/types/vue';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase} from '@lucide/utils';
+import { toKebabCase } from '@lucide/utils';
 
 var showDeprecationWarning = true;
 
