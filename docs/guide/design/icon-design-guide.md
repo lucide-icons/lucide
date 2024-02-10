@@ -106,6 +106,15 @@ Here are rules that should be followed to keep quality and consistency when maki
 6. Names containing numerals are not allowed, unless the number itself is represented in the icon.\
    For example: `arrow-down-0-to-1` contains both numerals.
 
+7. Icons depicting multiple elements (e.g. a person and a circle) of different sizes must list these elements in decreasing order of size.\
+   For example: if the circle is bigger, it should be `circle-person`, if the person is bigger, it should be `person-circle`.
+
+8. Icons depicting multiple elements of roughly equal sizes (e.g. a `ruler` and a `pencil`) must list these elements in English reading order.\
+   For example: if the `pencil` is either above or left of `ruler`, it should be `pencil-ruler`, otherwise, it should be `ruler-pencil`.
+
+9. Icons depicing some sort of variation of the one element must use an `[element]-[modifier]` naming order, where modifiers are applied to each element in order.\
+   For example: a dashed circle must be named `circle-dashed`, not `dashed-circle`, and in coordination with the previous naming guidelines, a dashed circle containing a plus sign must be named `circle-dashed-plus`.
+
 ## Code Conventions
 
 Before an icon is added to the library, we like to have readable and optimized SVG code.
