@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "sugar",
     "food",

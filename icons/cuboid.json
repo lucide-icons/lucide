@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "brick",
+    "block",
+    "container",
+    "storage",
+    "geometry",
+    "rectangular",
+    "hexahedron"
+  ],
+  "categories": [
+    "shapes",
+    "maths",
+    "buildings"
+  ]
+}

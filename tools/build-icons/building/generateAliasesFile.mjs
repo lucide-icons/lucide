@@ -10,8 +10,9 @@ export default async function generateAliasesFile({
   outputDirectory,
   fileExtension,
   iconFileExtension = '.js',
-  aliases,
+  iconMetaData,
   aliasImportFileExtension,
+  aliasNamesOnly = false,
   separateAliasesFile = false,
   showLog = true,
 }) {
@@ -24,14 +25,28 @@ export default async function generateAliasesFile({
 
   // Generate Import for Icon VNodes
   await Promise.all(
-    icons.map(async (iconName) => {
+    icons.map(async (iconName, index) => {
       const componentName = toPascalCase(iconName);
-      const iconAliases = aliases[iconName]?.aliases;
+      const iconAliases = iconMetaData[iconName]?.aliases;
 
-      let importString = `// ${componentName} aliases\n`;
+      let importString = '';
 
-      importString += getImportString(`${componentName}Icon`, iconName, aliasImportFileExtension);
-      importString += getImportString(`Lucide${componentName}`, iconName, aliasImportFileExtension);
+      if ((iconAliases != null && Array.isArray(iconAliases)) || !aliasNamesOnly) {
+        if (index > 0) {
+          importString += '\n';
+        }
+
+        importString += `// ${componentName} aliases\n`;
+      }
+
+      if (!aliasNamesOnly) {
+        importString += getImportString(`${componentName}Icon`, iconName, aliasImportFileExtension);
+        importString += getImportString(
+          `Lucide${componentName}`,
+          iconName,
+          aliasImportFileExtension,
+        );
+      }
 
       if (iconAliases != null && Array.isArray(iconAliases)) {
         await Promise.all(
@@ -45,6 +60,11 @@ export default async function generateAliasesFile({
               await fs.promises.writeFile(location, output, 'utf-8');
             }
 
+            // Don't import the same icon twice
+            if (componentName === componentNameAlias) {
+              return;
+            }
+
             const exportFileIcon = separateAliasesFile ? alias : iconName;
 
             importString += getImportString(
@@ -52,22 +72,23 @@ export default async function generateAliasesFile({
               exportFileIcon,
               aliasImportFileExtension,
             );
-            importString += getImportString(
-              `${componentNameAlias}Icon`,
-              exportFileIcon,
-              aliasImportFileExtension,
-            );
 
-            importString += getImportString(
-              `Lucide${componentNameAlias}`,
-              exportFileIcon,
-              aliasImportFileExtension,
-            );
+            if (!aliasNamesOnly) {
+              importString += getImportString(
+                `${componentNameAlias}Icon`,
+                exportFileIcon,
+                aliasImportFileExtension,
+              );
+
+              importString += getImportString(
+                `Lucide${componentNameAlias}`,
+                exportFileIcon,
+                aliasImportFileExtension,
+              );
+            }
           }),
         );
       }
-
-      importString += '\n';
 
       appendFile(importString, fileName, outputDirectory);
     }),

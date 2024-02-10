@@ -26,5 +26,8 @@
     "design",
     "shapes",
     "maths"
+  ],
+  "aliases": [
+    "grid-2-x-2"
   ]
 }

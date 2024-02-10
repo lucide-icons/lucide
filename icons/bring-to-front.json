@@ -11,7 +11,9 @@
     "over",
     "forward",
     "front",
-    "layer"
+    "overlap",
+    "layer",
+    "order"
   ],
   "categories": [
     "design",

@@ -1,6 +1,6 @@
 type HtmlAttributes = { [key: string]: string | number };
 export type LucideIconNode = readonly [string, HtmlAttributes];
-export type LucideIconData = readonly [string, HtmlAttributes, LucideIconNode[]?];
+export type LucideIconData = readonly LucideIconNode[];
 export type LucideIcons = { [key: string]: LucideIconData };
 
 /** @deprecated Use LucideIconData instead. Will be removed in v1.0. */

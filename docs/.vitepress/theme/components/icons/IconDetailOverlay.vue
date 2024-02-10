@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IconEntity } from '../../types'
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import IconButton from '../base/IconButton.vue';
 import IconContributors from './IconContributors.vue';
@@ -10,6 +10,7 @@ import { useRouter } from 'vitepress';
 import IconInfo from './IconInfo.vue';
 import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
+import { satisfies } from 'semver';
 
 const props = defineProps<{
   iconName: string
@@ -24,6 +25,12 @@ const icon = computedAsync<IconEntity | null>(async () => {
 
 const emit = defineEmits(['close'])
 const isOpen = computed(() => !!icon.value)
+
+function releaseTagLink(version) {
+  const shouldAddV = satisfies(version, `<0.266.0`)
+
+  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+}
 
 function onClose() {
   emit('close')
@@ -43,7 +50,7 @@ const Expand = createLucideIcon('Expand', expand)
           <Badge
             v-if="icon.createdRelease"
             class="version"
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${icon.createdRelease.version}`"
+            :href="releaseTagLink(icon.createdRelease.version)"
             target="_blank"
             rel="noreferrer noopener"
           >v{{ icon.createdRelease.version }}</Badge>

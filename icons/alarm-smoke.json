@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "fire",
+    "alert",
+    "warning",
+    "detector",
+    "carbon monoxide",
+    "safety",
+    "equipment",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "devices",
+    "travel"
+  ]
+}
