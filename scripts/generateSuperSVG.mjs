@@ -1,6 +1,6 @@
 import path from 'path';
 import { stringify, parseSync } from 'svgson';
-import prettier from 'prettier';
+import * as prettier from 'prettier';
 import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
 import readSvgs from '../packages/lucide-static/scripts/readSvgs.mjs';
@@ -10,7 +10,7 @@ const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve('icons');
 const PACKAGE_DIR = path.resolve(currentDir);
 
-export default function generateSprite(svgs, packageDir) {
+async function generateSprite(svgs, packageDir) {
   const symbols = svgs.map(({ parsedSvg }, index) => {
     const itemsPerRow = 10;
     const numInRow = index % itemsPerRow;
@@ -37,7 +37,10 @@ export default function generateSprite(svgs, packageDir) {
   };
 
   const spriteSvg = stringify(spriteSvgObject);
-  const prettifiedSprite = prettier.format(spriteSvg, { parser: 'babel' }).replace(/;/g, '');
+  const prettifiedSprite = (await prettier.format(spriteSvg, { parser: 'babel' })).replace(
+    /;/g,
+    '',
+  );
 
   const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n`;
 
@@ -54,4 +57,4 @@ const parsedSvgs = svgs.map(({ name, contents }) => ({
   parsedSvg: parseSync(contents),
 }));
 
-generateSprite(parsedSvgs, PACKAGE_DIR);
+await generateSprite(parsedSvgs, PACKAGE_DIR);

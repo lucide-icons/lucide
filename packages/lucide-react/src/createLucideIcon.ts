@@ -35,8 +35,19 @@ export const toKebabCase = (string: string) =>
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
-    ({ color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, className = '', children, ...rest }, ref) =>
-      createElement(
+    (
+      {
+        color = 'currentColor',
+        size = 24,
+        strokeWidth = 2,
+        absoluteStrokeWidth,
+        className = '',
+        children,
+        ...rest
+      },
+      ref,
+    ) => {
+      return createElement(
         'svg',
         {
           ref,
@@ -44,15 +55,18 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
           width: size,
           height: size,
           stroke: color,
-          strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
+          strokeWidth: absoluteStrokeWidth
+            ? (Number(strokeWidth) * 24) / Number(size)
+            : strokeWidth,
           className: ['lucide', `lucide-${toKebabCase(iconName)}`, className].join(' '),
           ...rest,
         },
         [
           ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
           ...(Array.isArray(children) ? children : [children]),
-        ]
-      )
+        ],
+      );
+    },
   );
 
   Component.displayName = `${iconName}`;

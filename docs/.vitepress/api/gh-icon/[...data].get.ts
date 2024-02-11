@@ -37,13 +37,13 @@ export default eventHandler((event) => {
         backdropString,
         src,
         color: name in iconNodes ? 'red' : '#777',
-      })
+      }),
     );
   }
 
   const svg = Buffer.from(
     // We can't use jsx here, is not supported here by nitro.
-    renderToString(createElement(SvgPreview, { src, showGrid: true }, children))
+    renderToString(createElement(SvgPreview, { src, showGrid: true }, children)),
   ).toString('utf8');
 
   defaultContentType(event, 'image/svg+xml');

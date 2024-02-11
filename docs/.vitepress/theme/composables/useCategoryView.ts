@@ -1,12 +1,10 @@
-import {
-  ref, inject, Ref
-} from 'vue';
+import { ref, inject, Ref } from 'vue';
 
 export const CATEGORY_VIEW_CONTEXT = Symbol('categoryView');
 
 interface CategoryViewContext {
-  selectedCategory: Ref<string>
-  categoryCounts: Ref<Record<string, number>>
+  selectedCategory: Ref<string>;
+  categoryCounts: Ref<Record<string, number>>;
 }
 
 export const categoryViewContext = {

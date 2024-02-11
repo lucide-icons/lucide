@@ -6,5 +6,5 @@ tests
 node_modules
 .eslintrc.js
 docs/images
-docs/guide/basics/examples
+docs/**/examples/
 packages/lucide-react/dynamicIconImports.js
