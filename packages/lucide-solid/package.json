@@ -12,7 +12,8 @@
   },
   "keywords": [
     "Lucide",
-    "Angular",
+    "Solid",
+    "SolidJS",
     "Feather",
     "Icons",
     "Icon",
@@ -26,7 +27,9 @@
   "main": "dist/cjs/lucide-solid.js",
   "module": "dist/esm/lucide-solid.js",
   "types": "dist/types/lucide-solid.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/types/lucide-solid.d.ts",
@@ -50,20 +53,20 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/build-icons": "workspace:*",
     "@atomico/rollup-plugin-sizes": "^1.1.4",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@lucide/build-icons": "workspace:*",
+    "@solidjs/testing-library": "^0.8.5",
+    "@testing-library/jest-dom": "^6.1.4",
+    "jest-serializer-html": "^7.1.0",
+    "jsdom": "^23.0.1",
+    "rollup": "^4.9.2",
     "rollup-plugin-license": "^3.0.1",
-    "babel-preset-solid": "^1.5.4",
-    "jsdom": "^20.0.0",
-    "rollup": "^3.5.1",
     "rollup-preset-solid": "^2.0.1",
-    "solid-js": "^1.7.7",
-    "solid-testing-library": "^0.5.1",
+    "solid-js": "^1.8.7",
     "typescript": "^4.9.4",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2",
-    "vite-plugin-solid": "^2.7.0"
+    "vite": "5.0.12",
+    "vite-plugin-solid": "^2.8.0",
+    "vitest": "0.34.2"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"

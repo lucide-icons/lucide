@@ -8,12 +8,8 @@
   --block: rgba(0, 0, 0, 0.06);
   --loader: hsl(0 0% 89%);
 
-  background: linear-gradient(
-    -75deg,
-    transparent 40%,
-    var(--loader),
-    transparent 60%
-  ) 0 0 / 200% 100%,
+  background:
+    linear-gradient(-75deg, transparent 40%, var(--loader), transparent 60%) 0 0 / 200% 100%,
     var(--block);
 
   border-radius: calc(var(--padding) * 0.5);

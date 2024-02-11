@@ -10,7 +10,7 @@ export default async function generateAliasesFile({
   outputDirectory,
   fileExtension,
   iconFileExtension = '.js',
-  aliases,
+  iconMetaData,
   aliasImportFileExtension,
   aliasNamesOnly = false,
   separateAliasesFile = false,
@@ -27,7 +27,7 @@ export default async function generateAliasesFile({
   await Promise.all(
     icons.map(async (iconName, index) => {
       const componentName = toPascalCase(iconName);
-      const iconAliases = aliases[iconName]?.aliases;
+      const iconAliases = iconMetaData[iconName]?.aliases;
 
       let importString = '';
 

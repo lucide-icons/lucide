@@ -5,12 +5,14 @@
     "danielbayley",
     "ericfennis"
   ],
-  "aliases": ["sidebar"],
   "tags": [
     "primary",
     "drawer"
   ],
   "categories": [
     "layout"
+  ],
+  "aliases": [
+    "sidebar"
   ]
 }
