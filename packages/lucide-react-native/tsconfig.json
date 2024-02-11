@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "ESNext",
-    "lib": [
-      "es2019",
-      "DOM"
-    ],
+    "lib": ["es2019", "DOM"],
     "allowJs": true,
     "jsx": "react-jsx",
     "noEmit": true,
@@ -16,9 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "skipLibCheck": false
+    "skipLibCheck": false,
   },
-  "exclude": [
-    "node_modules",
-  ]
+  "exclude": ["node_modules"],
 }

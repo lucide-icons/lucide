@@ -1,0 +1,50 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "lines",
+    "list",
+    "queue",
+    "preview",
+    "parallel",
+    "series",
+    "split",
+    "vertical",
+    "horizontal",
+    "thirds",
+    "triple",
+    "center",
+    "middle",
+    "alignment",
+    "even",
+    "sidebars",
+    "drawers",
+    "gutters",
+    "fold",
+    "reflow",
+    "typography",
+    "pagination",
+    "pages",
+    "prison",
+    "jail",
+    "bars",
+    "sentence",
+    "police",
+    "cops",
+    "cell",
+    "crime",
+    "criminal",
+    "justice",
+    "law",
+    "enforcement",
+    "grill"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text",
+    "security"
+  ]
+}

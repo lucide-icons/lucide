@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IconEntity } from '../../types'
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import IconButton from '../base/IconButton.vue';
 import IconContributors from './IconContributors.vue';

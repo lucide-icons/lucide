@@ -1,48 +1,49 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useCategoryView } from '../../composables/useCategoryView'
+import { useCategoryView } from '../../composables/useCategoryView';
 
 interface Header {
-  level: number
-  title: string
-  slug: string
-  iconCount: number
-  link: string
-  children: Header[]
+  level: number;
+  title: string;
+  slug: string;
+  iconCount: number;
+  link: string;
+  children: Header[];
 }
 
 type MenuItem = Omit<Header, 'slug' | 'children'> & {
-  children?: MenuItem[]
-}
+  children?: MenuItem[];
+};
 
 const props = defineProps<{
-  headers: MenuItem[]
-  root?: boolean
-}>()
+  headers: MenuItem[];
+  root?: boolean;
+}>();
 
-const { selectedCategory } = useCategoryView()
+const { selectedCategory } = useCategoryView();
 
 function onClick(event: Event) {
-  const target = (event.target as HTMLElement).nodeName === 'span' ? (event.target as HTMLElement).parentNode : event.target as HTMLElement
-  const id = '#' + (target as HTMLAnchorElement).href!.split('#')[1]
-  const decodedId = decodeURIComponent(id)
+  const target =
+    (event.target as HTMLElement).nodeName === 'span'
+      ? (event.target as HTMLElement).parentNode
+      : (event.target as HTMLElement);
+  const href = (target as HTMLAnchorElement)?.href;
 
-  selectedCategory.value = decodedId.replace('#', '')
+  if (href) {
+    const id = '#' + href.split('#')[1];
+    const decodedId = decodeURIComponent(id);
 
-  const heading = document.querySelector<HTMLAnchorElement>(decodedId)
-  heading?.focus()
+    selectedCategory.value = decodedId.replace('#', '');
+
+    const heading = document.querySelector<HTMLAnchorElement>(decodedId);
+    heading?.focus();
+  }
 }
 </script>
 
 <template>
   <ul :class="root ? 'root' : 'nested'">
     <li v-for="{ children, link, title, iconCount } in headers">
-      <a
-        class="outline-link"
-        :href="link"
-        @click="onClick"
-        :title="title"
-      >
+      <a class="outline-link" :href="link" @click="onClick" :title="title">
         <span>
           {{ title }}
         </span>

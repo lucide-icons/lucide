@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "camera",
+    "surveillance",
+    "recording",
+    "film",
+    "videotape",
+    "crime",
+    "watching"
+  ],
+  "categories": [
+    "security",
+    "devices",
+    "communication",
+    "connectivity",
+    "photography"
+  ]
+}
