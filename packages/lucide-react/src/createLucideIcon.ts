@@ -7,7 +7,7 @@ import {
   RefAttributes,
 } from 'react';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase } from '@lucide/utils';
+import { toKebabCase } from '@lucide/shared';
 
 export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][];
 

@@ -1,4 +1,4 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
+import plugins from '@lucide/rollup-plugins';
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json' assert { type: 'json' };
 
@@ -49,6 +49,7 @@ const configs = bundles
         preserveModules,
         format,
         sourcemap: true,
+        preserveModulesRoot: 'src',
         globals: {
           preact: 'preact',
         },

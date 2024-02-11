@@ -44,7 +44,7 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@lucide/utils": "workspace:*",
+    "@lucide/shared": "workspace:*",
     "@preact/preset-vite": "^2.7.0",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/preact": "^3.2.3",

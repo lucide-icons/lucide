@@ -6,14 +6,15 @@ import license from 'rollup-plugin-license';
 import esbuild from 'rollup-plugin-esbuild';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
-const plugins = (pkg, minify, esbuildOptions = {}) =>
+const plugins = ({ pkg, minify = false, withEsbuild = true, esbuildOptions = {} }) =>
   [
-    nodeResolve({
-      resolveOnly: [/^@lucide\/.*$/],
-    }),
-    esbuild({
+    withEsbuild ? esbuild({
       minify,
       ...esbuildOptions,
+    }) : null,
+    nodeResolve({
+      extensions: [".js", ".ts", ".jsx", ".tsx"],
+      resolveOnly: [/^@lucide\/.*$/],
     }),
     license({
       banner: `@license ${pkg.name} v${pkg.version} - ${pkg.license}

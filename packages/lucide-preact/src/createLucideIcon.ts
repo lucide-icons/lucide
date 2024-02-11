@@ -1,6 +1,6 @@
 import { type FunctionComponent, h, type JSX, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase } from '@lucide/utils';
+import { toKebabCase } from '@lucide/shared';
 
 export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][];
 
@@ -13,6 +13,12 @@ export interface LucideProps extends Partial<Omit<JSX.SVGAttributes, 'ref' | 'si
 
 export type LucideIcon = FunctionComponent<LucideProps>;
 
+/**
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {FunctionComponent} LucideIcon
+ */
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = ({
     color = 'currentColor',
