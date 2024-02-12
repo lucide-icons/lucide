@@ -25,7 +25,7 @@ const getUserName = pMemoize(
     }
     return fetchedCommit?.author?.login;
   },
-  { cacheKey: ([commit]) => commit.author_email, cache }
+  { cacheKey: ([commit]) => commit.author_email, cache },
 );
 
 // Check that a commit changes more than just the icon name
@@ -51,7 +51,7 @@ const getContributors = async (file, includeCoAuthors) => {
       }
       if (includeCoAuthors) {
         const matches = commit.body.matchAll(
-          /(^Author:|^Co-authored-by:)\s+(?<author>[^<]+)\s+<(?<email>[^>]+)>/gm
+          /(^Author:|^Co-authored-by:)\s+(?<author>[^<]+)\s+<(?<email>[^>]+)>/gm,
         );
         // eslint-disable-next-line no-restricted-syntax
         for (const match of matches) {
@@ -99,8 +99,8 @@ await Promise.all(
           ...rest,
         },
         null,
-        2
-      ) + '\n'
+        2,
+      ) + '\n',
     );
-  })
+  }),
 );
