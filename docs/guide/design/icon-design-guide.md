@@ -112,8 +112,8 @@ Here are rules that should be followed to keep quality and consistency when maki
 8. Icons depicting multiple elements of roughly equal sizes (e.g. a `ruler` and a `pencil`) must list these elements in English reading order.\
    For example: if the `pencil` is either above or left of `ruler`, it should be `pencil-ruler`, otherwise, it should be `ruler-pencil`.
 
-9. Icons depicing some sort of variation of the one element must use an `[element]-[modifier]` naming order, where modifiers are applied to each element in order.\
-   For example: a dashed circle must be named `circle-dashed`, not `dashed-circle`, and in coordination with the previous naming guidelines, a dashed circle containing a plus sign must be named `circle-dashed-plus`.
+9. Icons depicting some sort of variation of an element must use the `[element]-[modifier]` naming scheme, with modifiers being applied to each element respectively.\
+   For example: a dashed circle must be named `circle-dashed`, not `dashed-circle`, and in coordination with the previous guidelines, a dashed circle containing a broken heart would be named `circle-dashed-heart-broken`, due to the heart being smaller than the circle.
 
 ## Code Conventions
 
