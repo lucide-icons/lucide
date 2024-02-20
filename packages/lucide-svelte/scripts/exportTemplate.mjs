@@ -2,8 +2,14 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 import { getJSBanner } from './license.mjs';
 
-export default ({ iconName, children, componentName, getSvg, deprecated, deprecationReason }) => {
-  const svgContents = getSvg();
+export default ({
+  componentName,
+  iconName,
+  children,
+  svgContents,
+  deprecated,
+  deprecationReason,
+}) => {
   const svgBase64 = base64SVG(svgContents);
 
   return `\

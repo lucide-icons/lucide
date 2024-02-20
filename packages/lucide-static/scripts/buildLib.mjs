@@ -4,7 +4,7 @@ import getArgumentOptions from 'minimist';
 import { parseSync } from 'svgson';
 
 import { readSvgDirectory, getCurrentDirPath } from '@lucide/helpers';
-import readSvgs from './readSvgs.mjs';
+import readAndProcessSvgs from './readAndProcessSvgs.mjs';
 import generateSprite from './generateSprite.mjs';
 import generateIconNodes from './generateIconNodes.mjs';
 import copyIcons from './copyIcons.mjs';
@@ -31,7 +31,7 @@ createDirectory(LIB_DIR);
 createDirectory(ICON_MODULE_DIR);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
-const svgs = readSvgs(svgFiles, ICONS_DIR);
+const svgs = await readAndProcessSvgs(svgFiles, ICONS_DIR);
 
 const parsedSvgs = svgs.map(({ name, contents }) => ({
   name,

@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { readSvg, toPascalCase } from '@lucide/helpers';
+import { toPascalCase } from '@lucide/helpers';
+import readAndProcessSvg from '../render/readAndProcessSvg.mjs';
 import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
 export default ({
@@ -28,7 +29,7 @@ export default ({
     let { children } = iconNodes[iconName];
     children = children.map(({ name, attributes }) => [name, attributes]);
 
-    const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
+    const svgContents = await readAndProcessSvg(`${iconName}.svg`, iconsDir);
     const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
     const deprecationReason = deprecated
       ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
@@ -42,7 +43,7 @@ export default ({
       componentName,
       iconName,
       children,
-      getSvg,
+      svgContents,
       deprecated,
       deprecationReason,
     });

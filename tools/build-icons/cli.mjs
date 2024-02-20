@@ -46,7 +46,7 @@ async function buildIcons() {
 
   const svgFiles = readSvgDirectory(ICONS_DIR);
 
-  const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
+  const icons = await renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
   const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
 
