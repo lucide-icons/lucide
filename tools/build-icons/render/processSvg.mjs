@@ -24,7 +24,7 @@ function svgoPlugins(flatten) {
   const convertShapeToPath = flatten && { convertArcs: true };
   const mergePaths = flatten && { force: true };
 
-  return [
+  const plugins = [
     {
       name: 'removeAttrs',
       params: { attrs: '(fill|stroke.*)' },
@@ -39,6 +39,62 @@ function svgoPlugins(flatten) {
       },
     },
   ];
+
+  if (flatten) {
+    plugins.splice(1, 0, {
+      name: 'convertRectToPath',
+      fn: () => {
+        return {
+          element: {
+            enter: convertRectToPath,
+          },
+        };
+      },
+    });
+  }
+
+  return plugins;
+}
+
+function convertRectToPath(node, parentNode) {
+  if (node.name != 'rect' || node.attributes.width == null || node.attributes.height == null) {
+    return;
+  }
+
+  // convert rect to path
+  const x = Number(node.attributes.x || '0');
+  const y = Number(node.attributes.y || '0');
+  const width = Number(node.attributes.width);
+  const height = Number(node.attributes.height);
+  const rx = Math.min(Number(node.attributes.rx || node.attributes.ry || '0'), width / 2);
+  const ry = Math.min(Number(node.attributes.ry || node.attributes.rx || '0'), height / 2);
+  if (Number.isNaN(x - y + width - height + rx - ry)) return;
+
+  let pathData = '';
+  if (rx == 0 || ry == 0) {
+    pathData += `M${x} ${y}H${x + width}V${y + height}H${x}z`;
+  } else if (rx > 0 && ry > 0) {
+    pathData += `M${x + rx} ${y}`;
+    pathData += `H${x + width - rx}`;
+    pathData += `a${rx} ${ry} 0 0 1 ${rx} ${ry}`;
+    pathData += `V${y + height - ry}`;
+    pathData += `a${rx} ${ry} 0 0 1 ${-rx} ${ry}`;
+    pathData += `H${x + rx}`;
+    pathData += `a${rx} ${ry} 0 0 1 ${-rx} ${-ry}`;
+    pathData += `V${y + ry}`;
+    pathData += `a${rx} ${ry} 0 0 1 ${rx} ${-ry}`;
+    pathData += 'z';
+  } else {
+    return;
+  }
+  node.name = 'path';
+  node.attributes.d = pathData;
+  delete node.attributes.x;
+  delete node.attributes.y;
+  delete node.attributes.width;
+  delete node.attributes.height;
+  delete node.attributes.rx;
+  delete node.attributes.ry;
 }
 
 /**

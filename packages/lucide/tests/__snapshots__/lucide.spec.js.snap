@@ -31,14 +31,7 @@ exports[`createIcons > should read elements from DOM and replace icon with alias
      data-lucide="grid"
      class="lucide lucide-grid"
 >
-  <rect width="18"
-        height="18"
-        x="3"
-        y="3"
-        rx="2"
-  >
-  </rect>
-  <path d="M3 9h18M3 15h18M9 3v18M15 3v18">
+  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18">
   </path>
 </svg>
 `;
