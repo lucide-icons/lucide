@@ -12,7 +12,7 @@ import readAndProcessSvg from './readAndProcessSvg.mjs';
 export default async (svgFiles, iconsDirectory, renderUniqueKey = false) => {
   const svgPromises = svgFiles.map(async (svgFile) => {
     const name = basename(svgFile, '.svg');
-    const svg = await readAndProcessSvg(svgFile, iconsDirectory);
+    const svg = await readAndProcessSvg(svgFile, iconsDirectory, true);
     const contents = parseSync(svg);
 
     if (!(contents.children && contents.children.length)) {

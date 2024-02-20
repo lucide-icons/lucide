@@ -31,7 +31,7 @@ createDirectory(LIB_DIR);
 createDirectory(ICON_MODULE_DIR);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
-const svgs = await readAndProcessSvgs(svgFiles, ICONS_DIR);
+const svgs = await readAndProcessSvgs(svgFiles, ICONS_DIR, true);
 
 const parsedSvgs = svgs.map(({ name, contents }) => ({
   name,

@@ -29,7 +29,7 @@ export default ({
     let { children } = iconNodes[iconName];
     children = children.map(({ name, attributes }) => [name, attributes]);
 
-    const svgContents = await readAndProcessSvg(`${iconName}.svg`, iconsDir);
+    const svgContents = await readAndProcessSvg(`${iconName}.svg`, iconsDir, true);
     const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
     const deprecationReason = deprecated
       ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {

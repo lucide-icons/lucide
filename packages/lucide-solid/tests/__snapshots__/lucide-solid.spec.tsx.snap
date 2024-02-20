@@ -21,20 +21,8 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
         key="afitv7"
   >
   </rect>
-  <path d="M3 9h18"
-        key="1pudct"
-  >
-  </path>
-  <path d="M3 15h18"
-        key="5xshup"
-  >
-  </path>
-  <path d="M9 3v18"
-        key="fh3hqa"
-  >
-  </path>
-  <path d="M15 3v18"
-        key="14nvp0"
+  <path d="M3 9h18M3 15h18M9 3v18M15 3v18"
+        key="az6gm2"
   >
   </path>
 </svg>
@@ -61,20 +49,8 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
         key="afitv7"
   >
   </rect>
-  <path d="M3 9h18"
-        key="1pudct"
-  >
-  </path>
-  <path d="M3 15h18"
-        key="5xshup"
-  >
-  </path>
-  <path d="M9 3v18"
-        key="fh3hqa"
-  >
-  </path>
-  <path d="M15 3v18"
-        key="14nvp0"
+  <path d="M3 9h18M3 15h18M9 3v18M15 3v18"
+        key="az6gm2"
   >
   </path>
 </svg>
@@ -100,20 +76,8 @@ exports[`Using lucide icon components > should render a component 1`] = `
         key="afitv7"
   >
   </rect>
-  <path d="M3 9h18"
-        key="1pudct"
-  >
-  </path>
-  <path d="M3 15h18"
-        key="5xshup"
-  >
-  </path>
-  <path d="M9 3v18"
-        key="fh3hqa"
-  >
-  </path>
-  <path d="M15 3v18"
-        key="14nvp0"
+  <path d="M3 9h18M3 15h18M9 3v18M15 3v18"
+        key="az6gm2"
   >
   </path>
 </svg>

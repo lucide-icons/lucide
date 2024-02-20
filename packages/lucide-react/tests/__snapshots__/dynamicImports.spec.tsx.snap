@@ -13,24 +13,7 @@ exports[`Using dynamicImports > should render icons dynamically by using the dyn
      class="lucide lucide-smile"
      aria-label="smile"
 >
-  <circle cx="12"
-          cy="12"
-          r="10"
-  >
-  </circle>
-  <path d="M8 14s1.5 2 4 2 4-2 4-2">
+  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01">
   </path>
-  <line x1="9"
-        x2="9.01"
-        y1="9"
-        y2="9"
-  >
-  </line>
-  <line x1="15"
-        x2="15.01"
-        y1="9"
-        y2="9"
-  >
-  </line>
 </svg>
 `;
