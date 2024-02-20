@@ -6,31 +6,39 @@ import DEFAULT_ATTRS from './default-attrs.json' assert { type: 'json' };
 /**
  * Optimize SVG with `svgo`.
  * @param {string} svg - An SVG string.
+ * @param {string} path - Path to the SVG file.
+ * @param {boolean} flatten - Whether to flatten SVG shapes.
  * @returns {Promise<string>} An optimized svg
  */
-async function optimizeSvg(svg, path) {
-  const result = optimize(svg, {
-    path,
-    plugins: [
-      {
-        name: 'preset-default',
-        params: {
-          overrides: {
-            convertShapeToPath: false,
-            mergePaths: false,
-          },
-        },
-      },
-      {
-        name: 'removeAttrs',
-        params: {
-          attrs: '(fill|stroke.*)',
-        },
-      },
-    ],
-  });
-
+async function optimizeSvg(svg, path, flatten) {
+  const result = optimize(svg, { path, plugins: svgoPlugins(flatten) });
   return result.data;
+}
+
+/**
+ * Return SVGO plugin configurations.
+ * @param {boolean} flatten - Whether to flatten SVG shapes.
+ * @returns {Object[]}
+ */
+function svgoPlugins(flatten) {
+  const convertShapeToPath = flatten && { convertArcs: true };
+  const mergePaths = flatten && { force: true };
+
+  return [
+    {
+      name: 'removeAttrs',
+      params: { attrs: '(fill|stroke.*)' },
+    },
+    {
+      name: 'preset-default',
+      params: {
+        overrides: {
+          convertShapeToPath,
+          mergePaths,
+        },
+      },
+    },
+  ];
 }
 
 /**
@@ -49,11 +57,13 @@ function setAttrs(svg) {
 /**
  * Process SVG string.
  * @param {string} svg An SVG string.
+ * @param {string} path Path to the SVG file.
+ * @param {boolean} flatten Whether to flatten SVG shapes.
  * @returns {Promise<string>} An optimized svg
  */
-function processSvg(svg, path) {
+function processSvg(svg, path, flatten = false) {
   return (
-    optimizeSvg(svg, path)
+    optimizeSvg(svg, path, flatten)
       .then(setAttrs)
       .then((optimizedSvg) => prettier.format(optimizedSvg, { parser: 'babel' }))
       // remove semicolon inserted by prettier

@@ -133,9 +133,10 @@ export const readSvg = (fileName, directory) =>
  *
  * @param {string} fileName
  * @param {string} directory
+ * @param {boolean} flatten
  */
-export const readAndProcessSvg = async (fileName, directory) =>
-  await processSvg(readSvg(fileName, directory), path.join(directory, fileName));
+export const readAndProcessSvg = async (fileName, directory, flatten) =>
+  await processSvg(readSvg(fileName, directory), path.join(directory, fileName), flatten);
 
 /**
  * writes content to a file
