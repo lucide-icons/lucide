@@ -45,8 +45,9 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:transpile": "tsc --jsx preserve -t es2020 --rootDir src --outDir dist --noEmit false",
     "build:bundle": "rollup -c rollup.config.mjs",
+    "build:types": "tsc --emitDeclarationOnly --noEmit false --root ./src --outDir ./dist/types",
+    "build:source": "esbuild ./src/** --outdir=./dist/source --loader:.js=jsx --jsx=preserve --bundle --format=esm --sourcemap --target=esnext --external:solid-js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
     "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
@@ -60,6 +61,8 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@solidjs/testing-library": "^0.8.5",
     "@testing-library/jest-dom": "^6.1.4",
@@ -75,7 +78,8 @@
     "typescript": "^4.9.4",
     "vite": "5.0.12",
     "vite-plugin-solid": "^2.8.0",
-    "vitest": "0.34.2"
+    "vitest": "0.34.2",
+    "esbuild": "^0.19.11"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"
