@@ -1,11 +1,12 @@
-import plugins, { preserveJSX } from '@lucide/rollup-plugins';
-import dts from 'rollup-plugin-dts';
+import { promises as fs } from 'fs';
+import path from 'path';
+
 import { babel } from "@rollup/plugin-babel";
-import ts from 'typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import esbuild from 'esbuild';
-import fs from 'fs';
-import path from 'path';
+import plugins from '@lucide/rollup-plugins';
+import ts from 'typescript';
+
 import pkg from './package.json' assert { type: 'json' };
 
 const packageName = 'LucideSolid';
@@ -50,7 +51,7 @@ const configs = bundles
           buildEnd() {
             // Transpile typescript to './dist/source'
             esbuild.build({
-              entryPoints: ['./src/**.tsx', './src/**.ts'],
+              entryPoints: ['./src/**/*.tsx', './src/**/*.ts'],
               outdir: './dist/source',
               loader: {
                 '.js': 'jsx',
@@ -60,6 +61,21 @@ const configs = bundles
               format: 'esm',
               sourcemap: true,
               target: ['esnext'],
+              plugins: [{
+                name: 'externalize-everything-except-own-dependencies',
+                setup(build) {
+                  build.onResolve({ filter: /(.*)/ }, (args) => {
+                    const modulePath = path.join(args.resolveDir, args.path);
+                    if (
+                      args.kind === 'import-statement'
+                      && args.path !== '@lucide/shared'
+                      && !modulePath.includes('packages/shared')
+                    ) {
+                      return { path: args.path, external: true };
+                    }
+                  });
+                },
+              }],
               external: ['solid-js'],
             });
 
