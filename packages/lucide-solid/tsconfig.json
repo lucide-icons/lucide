@@ -14,5 +14,5 @@
     "outDir": "./dist",
     "declarationDir": "./dist",
     "declaration": true,
-  }
+  },
 }

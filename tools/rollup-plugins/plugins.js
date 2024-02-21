@@ -7,10 +7,12 @@ import esbuild from 'rollup-plugin-esbuild';
 
 const plugins = ({ pkg, minify = false, withEsbuild = true, esbuildOptions = {} }) =>
   [
-    withEsbuild ? esbuild({
-      minify,
-      ...esbuildOptions,
-    }) : null,
+    withEsbuild
+      ? esbuild({
+          minify,
+          ...esbuildOptions,
+        })
+      : null,
     license({
       banner: `@license ${pkg.name} v${pkg.version} - ${pkg.license}
 
