@@ -62,7 +62,7 @@ const configs = bundles
     }) =>
       inputs.map((input) => ({
         input,
-        plugins: plugins(pkg, minify),
+        plugins: plugins({ pkg, minify }),
         external: ['react', 'prop-types', ...external],
         output: {
           name: packageName,
