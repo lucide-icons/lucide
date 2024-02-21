@@ -1,16 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "danielbayley",
-    "jguddas"
+    "chessurisme"
   ],
   "tags": [
-    "symlink",
-    "symbolic",
-    "link"
+    "spreadsheet",
+    "grid",
+    "row"
   ],
   "categories": [
+    "text",
     "files"
   ]
 }
