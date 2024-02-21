@@ -46,8 +46,6 @@
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:bundle": "rollup -c rollup.config.mjs",
-    "build:types": "tsc --emitDeclarationOnly --noEmit false --root ./src --outDir ./dist/types",
-    "build:source": "esbuild ./src/** --outdir=./dist/source --loader:.js=jsx --jsx=preserve --bundle --format=esm --sourcemap --target=esnext --external:solid-js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
     "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"

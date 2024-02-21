@@ -41,7 +41,7 @@ const configs = bundles
             ["@babel/preset-env", { bugfixes: true, targets: 'last 2 years' }],
           ],
         }),
-        resolve({ extensions: ['.js', '.ts', '.jsx' ]}),
+        resolve({ extensions: [".js", ".ts", ".jsx", ".tsx"]}),
         ...plugins({
           pkg,
           withEsbuild: false,
@@ -61,6 +61,14 @@ const configs = bundles
               format: 'esm',
               sourcemap: true,
               target: ['esnext'],
+              banner: {
+                js: `/**
+* @license ${pkg.name} v${pkg.version} - ${pkg.license}
+*
+* This source code is licensed under the ${pkg.license} license.
+* See the LICENSE file in the root directory of this source tree.
+*/`,
+              },
               plugins: [{
                 name: 'externalize-everything-except-own-dependencies',
                 setup(build) {
