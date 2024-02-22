@@ -37,7 +37,9 @@
     "lint": "pnpm lint:es && pnpm lint:format && pnpm lint:json",
     "format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --write",
     "prepare": "husky install",
-    "gi": "node ./scripts/generate/generateIcons.mjs"
+    "gi": "node ./scripts/generate/generateIcons.mjs",
+    "rename": "node ./scripts/renameIcon.mjs",
+    "renamePattern": "node ./scripts/renamePattern.mjs"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.19.1",
