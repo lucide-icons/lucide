@@ -1,5 +1,5 @@
 import path from 'path';
-import {getCurrentDirPath, readSvgDirectory, renameIcon} from './helpers.mjs';
+import { getCurrentDirPath, readSvgDirectory, renameIcon } from './helpers.mjs';
 
 async function main() {
   const currentDir = getCurrentDirPath(import.meta.url);
@@ -24,7 +24,7 @@ async function main() {
     process.exit(1);
   }
 
-  for (let oldName of iconNames.filter(name => pattern.test(name))) {
+  for (let oldName of iconNames.filter((name) => pattern.test(name))) {
     const newName = oldName.replaceAll(pattern, replacement);
     console.log(`Renaming ${oldName} => ${newName}`);
 

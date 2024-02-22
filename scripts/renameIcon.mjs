@@ -1,5 +1,5 @@
 import path from 'path';
-import {getCurrentDirPath, renameIcon} from "./helpers.mjs";
+import { getCurrentDirPath, renameIcon } from './helpers.mjs';
 
 async function main() {
   const oldName = path.basename(process.argv[2]).replace(/\.[^/.]+$/, '');

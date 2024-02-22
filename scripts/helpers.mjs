@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import simpleGit from "simple-git";
+import simpleGit from 'simple-git';
 import { promisify } from 'util';
 
 /**
@@ -264,7 +264,7 @@ export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true) {
   const json = fs.readFileSync(`${ICONS_DIR}/${newName}.json`, 'utf8');
   const jsonData = JSON.parse(json);
   if (Array.isArray(jsonData.aliases)) {
-    jsonData.aliases = jsonData.aliases.filter(name => name !== newName).push(oldName);
+    jsonData.aliases = jsonData.aliases.filter((name) => name !== newName).push(oldName);
     if (jsonData.aliases.length === 0) {
       delete jsonData.aliases;
     }
