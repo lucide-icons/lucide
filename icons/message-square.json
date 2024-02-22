@@ -3,9 +3,7 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis",
-    "jguddas",
-    "karsa-mistmere"
+    "ericfennis"
   ],
   "tags": [
     "comment",
@@ -18,8 +16,5 @@
   "categories": [
     "account",
     "social"
-  ],
-  "aliases": [
-    "message-circle"
   ]
 }

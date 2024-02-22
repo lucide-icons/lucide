@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "comment",
@@ -9,15 +13,10 @@
     "conversation",
     "dialog",
     "feedback",
-    "speech bubbles",
-    "copy",
-    "multiple"
+    "speech bubble"
   ],
   "categories": [
     "account",
     "social"
-  ],
-  "aliases": [
-    "messages-square"
   ]
 }

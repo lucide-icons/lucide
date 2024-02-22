@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
   "title": "Communication",
-  "icon": "circle-message"
+  "icon": "message-circle"
 }
