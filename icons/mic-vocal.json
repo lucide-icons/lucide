@@ -20,5 +20,8 @@
   "categories": [
     "devices",
     "multimedia"
+  ],
+  "aliases": [
+    "mic-2"
   ]
 }
