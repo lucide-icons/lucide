@@ -47,6 +47,7 @@ const configs = bundles
             }),
         format,
         preserveModules,
+        preserveModulesRoot: 'src',
         sourcemap: true,
         globals: {
           vue: 'vue',

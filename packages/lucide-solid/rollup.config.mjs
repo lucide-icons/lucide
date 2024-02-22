@@ -1,8 +1,5 @@
-import { promises as fs } from 'fs';
 import path from 'path';
-
 import { babel } from '@rollup/plugin-babel';
-import resolve from '@rollup/plugin-node-resolve';
 import esbuild from 'esbuild';
 import plugins from '@lucide/rollup-plugins';
 import ts from 'typescript';
@@ -41,7 +38,6 @@ const configs = bundles
             ['@babel/preset-env', { bugfixes: true, targets: 'last 2 years' }],
           ],
         }),
-        resolve({ extensions: ['.js', '.ts', '.jsx', '.tsx'] }),
         ...plugins({
           pkg,
           withEsbuild: false,
