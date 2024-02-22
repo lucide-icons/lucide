@@ -11,5 +11,8 @@
   "categories": [
     "text",
     "development"
+  ],
+  "aliases": [
+    "outdent"
   ]
 }
