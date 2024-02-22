@@ -1,8 +1,9 @@
+import { LUCIDE_ICONS, LucideIconProvider } from './lucide-icon.provider';
 import { ModuleWithProviders, NgModule, Optional } from '@angular/core';
+
+import { Icons } from './icons.provider';
 import { LucideAngularComponent } from './lucide-angular.component';
 import { LucideIcons } from '../icons/types';
-import { LUCIDE_ICONS, LucideIconProvider } from './lucide-icon.provider';
-import { Icons } from './icons.provider';
 
 const legacyIconProviderFactory = (icons?: LucideIcons) => {
   return new LucideIconProvider(icons ?? {});
