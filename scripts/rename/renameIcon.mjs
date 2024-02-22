@@ -1,5 +1,6 @@
 import path from 'path';
-import { getCurrentDirPath, renameIcon } from './helpers.mjs';
+import { getCurrentDirPath } from '../helpers.mjs';
+import { renameIcon } from './renameIcon.function.mjs';
 
 async function main() {
   const oldName = path.basename(process.argv[2]).replace(/\.[^/.]+$/, '');
@@ -16,7 +17,7 @@ async function main() {
 
   try {
     const currentDir = getCurrentDirPath(import.meta.url);
-    const ICONS_DIR = path.resolve(currentDir, '../icons');
+    const ICONS_DIR = path.resolve(currentDir, '../../icons');
     await renameIcon(ICONS_DIR, oldName, newName);
   } catch (err) {
     console.error(err.message);

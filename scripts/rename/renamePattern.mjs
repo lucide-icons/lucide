@@ -1,9 +1,10 @@
 import path from 'path';
-import { getCurrentDirPath, readSvgDirectory, renameIcon } from './helpers.mjs';
+import { getCurrentDirPath, readSvgDirectory } from '../helpers.mjs';
+import { renameIcon } from './renameIcon.function.mjs';
 
 async function main() {
   const currentDir = getCurrentDirPath(import.meta.url);
-  const ICONS_DIR = path.resolve(currentDir, '../icons');
+  const ICONS_DIR = path.resolve(currentDir, '../../icons');
   const svgFiles = readSvgDirectory(ICONS_DIR);
   const iconNames = svgFiles.map((icon) => icon.split('.')[0]).reverse();
 
