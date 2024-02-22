@@ -44,7 +44,7 @@ export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true) {
   const json = fs.readFileSync(newJsonPath, 'utf8');
   const jsonData = JSON.parse(json);
   if (Array.isArray(jsonData.aliases)) {
-    jsonData.aliases = jsonData.aliases.filter(name => name !== newName);
+    jsonData.aliases = jsonData.aliases.filter((name) => name !== newName);
     jsonData.aliases.push(oldName);
   } else {
     jsonData.aliases = [oldName];
