@@ -21,9 +21,6 @@ const headers = computed(() => {
   const linkPrefix = page.value.relativePath.startsWith('icons/categories')
     ? '' : '/icons/categories'
 
-  console.log();
-
-
   return data.categories.map(({ name, title, iconCount }) => ({
     level: 2,
     link: `${linkPrefix}#${name}`,

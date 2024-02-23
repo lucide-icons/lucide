@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import IconGrid from './IconGrid.vue';
@@ -59,7 +59,7 @@ const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
 });
 
-const { list, containerProps, wrapperProps } = useVirtualList(
+const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(
   chunkedIcons,
   {
     itemHeight: ICON_SIZE + ICON_GRID_GAP,
@@ -89,6 +89,10 @@ function onFocusSearchInput() {
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
+
+watch(searchQueryDebounced, () => {
+  scrollTo(0)
+})
 </script>
 
 <template>

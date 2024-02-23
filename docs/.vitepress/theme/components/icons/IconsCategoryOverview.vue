@@ -158,6 +158,10 @@ onMounted(() => {
   }, 0)
 })
 
+watch(searchQueryDebounced, () => {
+  scrollTo(0)
+})
+
 
 </script>
 
