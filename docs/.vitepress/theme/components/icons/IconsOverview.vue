@@ -14,8 +14,6 @@ import chunkArray from '../../utils/chunkArray';
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
 
-const overviewEl = ref<HTMLElement | null>(null);
-
 const props = defineProps<{
   icons: IconEntity[];
 }>();
@@ -25,6 +23,7 @@ const activeIconName = ref(null);
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
 
+const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl)
 
 const columnSize = computed(() => {
@@ -93,33 +92,31 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 </script>
 
 <template>
-  <div ref="overviewEl">
-
-
-  <StickyBar>
-    <InputSearch
-      :placeholder="`Search ${icons.length} icons ...`"
-      v-model="searchQuery"
-      ref="searchInput"
-      class="input-wrapper"
-      @focus="onFocusSearchInput"
-    />
-  </StickyBar>
+  <div ref="overviewEl" class="overview-container">
+    <StickyBar>
+      <InputSearch
+        :placeholder="`Search ${icons.length} icons ...`"
+        v-model="searchQuery"
+        ref="searchInput"
+        class="input-wrapper"
+        @focus="onFocusSearchInput"
+      />
+    </StickyBar>
     <NoResults
       v-if="list.length === 0"
       :searchQuery="searchQuery"
       @clear="searchQuery = ''"
     />
-    <div v-bind="wrapperProps">
-        <IconGrid
-          v-for="{ index, data: icons } in list"
-          :key="index"
-          overlayMode
-          :icons="icons"
-          @setActiveIcon="setActiveIconName"
-        />
+    <div v-bind="wrapperProps" class="icon">
+      <IconGrid
+        v-for="{ index, data: icons } in list"
+        :key="index"
+        overlayMode
+        :icons="icons"
+        @setActiveIcon="setActiveIconName"
+      />
     </div>
-</div>
+  </div>
 
   <IconDetailOverlay
     v-if="activeIconName != null"
@@ -130,10 +127,6 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 
 <style>
 .icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  gap: 8px;
-  width: 100%;
   margin-bottom: 8px;
 }
 
@@ -145,7 +138,7 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
   width: 100%;
 }
 
-.bottom-page {
-  height: 288px;
+.overview-container {
+  padding-bottom: 288px;
 }
 </style>

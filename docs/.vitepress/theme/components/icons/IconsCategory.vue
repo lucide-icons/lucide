@@ -9,7 +9,6 @@ defineProps<{
   category: Category
 }>()
 
-
 const emit = defineEmits(['setActiveIcon'])
 
 const showIcons = ref(false)
@@ -43,14 +42,14 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
 
 <style scoped>
 .title {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   font-size: 19px;
   font-weight: 500;
-  padding-top: 86px;
+  padding: 24px 0 8px;
   /* scroll-padding-top: 240px; */
 }
 
-.category {
+/* .category {
   margin-bottom: calc(-86px + 32px);
-}
+} */
 </style>

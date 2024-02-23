@@ -1,13 +1,19 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watchEffect, watch, nextTick } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
 import StickyBar from './StickyBar.vue';
-import IconsCategory from './IconsCategory.vue';
+import IconGrid from './IconGrid.vue'
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
+import { useElementSize, useEventListener, useVirtualList, useUrlSearchParams } from '@vueuse/core';
+import chunkArray from '../../utils/chunkArray';
+import { useCategoryView } from '../../composables/useCategoryView';
+
+const ICON_SIZE = 56;
+const ICON_GRID_GAP = 8;
 
 const props = defineProps<{
   icons: IconEntity[];
@@ -17,6 +23,7 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
+const { selectedCategory } = useCategoryView();
 
 const isSearching = computed(() => !!searchQuery.value);
 
@@ -26,6 +33,13 @@ function setActiveIconName(name: string) {
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categoriesMap } = useFetchCategories();
+
+const overviewEl = ref<HTMLElement | null>(null);
+const { width: containerWidth } = useElementSize(overviewEl)
+
+const columnSize = computed(() => {
+  return Math.floor((containerWidth.value) / ((ICON_SIZE + ICON_GRID_GAP)));
+});
 
 const mappedIcons = computed(() => {
   if (tags.value == null) {
@@ -43,10 +57,24 @@ const mappedIcons = computed(() => {
   });
 });
 
-const searchResults = useSearch(searchQuery, mappedIcons, [
-  { name: 'name', weight: 2 },
-  { name: 'tags', weight: 1 },
+const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
+  { name: 'name', weight: 3 },
+  { name: 'aliases', weight: 3 },
+  { name: 'tags', weight: 2 },
 ]);
+
+type CategoryNameRow = {
+  type: 'category';
+  title: string;
+  name: string;
+};
+
+type CategoryIconsRow = {
+  type: 'icons';
+  icons: IconEntity[];
+};
+
+type CategoryRow = CategoryNameRow | CategoryIconsRow;
 
 const categories = computed(() => {
   if (!props.categories?.length || !props.icons?.length) return [];
@@ -71,8 +99,31 @@ const categories = computed(() => {
         icons: searchedCategoryIcons,
       };
     })
-    .filter(({ icons }) => icons.length);
+    .filter(({ icons }) => icons.length)
+    .reduce<CategoryRow[]>((acc, category) => {
+      acc.push({ type: 'category', title: category.title, name: category.name });
+
+      const categoryIcons = chunkArray(category.icons, columnSize.value);
+      categoryIcons.forEach((icons) => {
+        acc.push({ type: 'icons', icons });
+      });
+
+      return acc;
+    }, []);
 });
+
+const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(
+  categories,
+  {
+    itemHeight: ICON_SIZE + ICON_GRID_GAP,
+    overscan: 10
+  },
+)
+
+onMounted(() => {
+  containerProps.ref.value = document.documentElement;
+  useEventListener(window, 'scroll', containerProps.onScroll)
+})
 
 function onFocusSearchInput() {
   if (tags.value == null) {
@@ -86,26 +137,88 @@ function onFocusSearchInput() {
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
+
+function scrollToSelectedCategory(selectedCategory: string) {
+  const category = props.categories.find((category) => category.name === selectedCategory)
+
+  if (category != null) {
+    const categoryRowIndex = categories.value.findIndex((row) => row.type === 'category' && row.name === selectedCategory)
+
+    if (categoryRowIndex !== -1) {
+      nextTick(() => {
+        scrollTo(categoryRowIndex)
+      })
+    }
+  }
+}
+
+const listLoaded = ref(false)
+
+watch(selectedCategory, scrollToSelectedCategory, {
+  immediate: true
+})
+
+watch(listLoaded, (loaded) => {
+  if (selectedCategory.value != null && loaded  ) {
+    nextTick(() => {
+      console.log('scrolling to selected category', selectedCategory.value);
+
+      scrollToSelectedCategory(selectedCategory.value)
+    })
+  }
+}, {
+  immediate: true
+})
+
+watch(list, (items) => {
+  if (items.length !== 0) {
+    listLoaded.value = true
+  }
+}, {
+  immediate: true
+})
+
+
 </script>
 
 <template>
-  <StickyBar class="search-bar category-search">
-    <InputSearch
-      :placeholder="`Search ${icons.length} icons ...`"
-      v-model="searchQuery"
-      class="input-wrapper"
-      ref="searchInput"
-      @focus="onFocusSearchInput"
-    />
-  </StickyBar>
-  <NoResults v-if="categories.length === 0" :searchQuery="searchQuery" @clear="searchQuery = ''" />
-  <IconsCategory
-    v-for="category in categories"
-    :key="category.name"
-    :category="category"
-    :activeIconName="activeIconName"
-    @setActiveIcon="setActiveIconName"
-  />
+  <div ref="overviewEl" class="overview-container">
+    <StickyBar class="category-search">
+      <InputSearch
+        :placeholder="`Search ${icons.length} icons ...`"
+        v-model="searchQuery"
+        class="input-wrapper"
+        ref="searchInput"
+        @focus="onFocusSearchInput"
+      />
+    </StickyBar>
+    <NoResults v-if="categories.length === 0" :searchQuery="searchQuery" @clear="searchQuery = ''" />
+    <div v-bind="wrapperProps">
+      <template v-for="{ index, data } in list" :key="index">
+        <h2
+          v-if="data.type === 'category'"
+          class="title"
+        >
+          <a class="header-anchor" :href="`#${data.name}`" :aria-label="`Permalink to &quot;${data.title}&quot;`">&ZeroWidthSpace;</a>
+          {{ data.title }}
+        </h2>
+        <IconGrid
+          v-else-if="data.type === 'icons'"
+          :activeIcon="activeIconName"
+          :icons="data.icons"
+          @setActiveIcon="setActiveIconName"
+          overlayMode
+        />
+      </template>
+    </div>
+    <!-- <IconsCategory
+      v-for="category in categories"
+      :key="category.name"
+      :category="category"
+      :activeIconName="activeIconName"
+      @setActiveIcon="setActiveIconName"
+    /> -->
+  </div>
   <IconDetailOverlay
     v-if="activeIconName != null"
     :iconName="activeIconName"
@@ -119,6 +232,21 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 }
 
 .search-bar.category-search {
-  margin-bottom: -54px;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: 19px;
+  font-weight: 500;
+  padding: 24px 0 8px;
+}
+
+.icons {
+  margin-bottom: 8px;
+}
+
+.overview-container {
+  padding-bottom: 288px;
 }
 </style>
