@@ -46,10 +46,6 @@ const onIntersectionObserver: IntersectionObserverCallback = ([{ isIntersecting 
   font-size: 19px;
   font-weight: 500;
   padding: 24px 0 8px;
-  /* scroll-padding-top: 240px; */
 }
 
-/* .category {
-  margin-bottom: calc(-86px + 32px);
-} */
 </style>

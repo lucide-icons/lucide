@@ -35,7 +35,15 @@ function onClick(categoryName: string) {
 <template>
   <ul :class="root ? 'root' : 'nested'">
     <li v-for="{ children, link, title, iconCount, name } in headers">
-      <a class="outline-link" :href="link" @click="onClick(name)" :title="title">
+      <a
+        class="outline-link"
+        :href="link"
+        @click="onClick(name)"
+        :title="title"
+        :class="{
+          inactive: iconCount === 0,
+        }"
+      >
         <span>
           {{ title }}
         </span>
@@ -75,6 +83,10 @@ function onClick(categoryName: string) {
   transition: color 0.25s;
 }
 
+.outline-link.inactive {
+  color: var(--vp-c-text-4);
+}
+
 .outline-link.nested {
   padding-left: 13px;
 }
@@ -84,5 +96,9 @@ function onClick(categoryName: string) {
   margin-left: auto;
   font-size: 11px;
   font-weight: 400;
+}
+
+.outline-link.inactive .icon-count {
+  opacity: 0;
 }
 </style>

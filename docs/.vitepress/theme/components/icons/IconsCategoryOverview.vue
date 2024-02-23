@@ -23,7 +23,7 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
-const { selectedCategory } = useCategoryView();
+const { selectedCategory, categoryCounts } = useCategoryView();
 
 const isSearching = computed(() => !!searchQuery.value);
 
@@ -99,6 +99,16 @@ const categories = computed(() => {
         icons: searchedCategoryIcons,
       };
     })
+});
+
+watch(categories, (items) => {
+  categoryCounts.value = Object.fromEntries(
+    items.map(({ name, icons }) => [name, icons.length])
+  );
+})
+
+const categoriesList = computed(() => {
+  return categories.value
     .filter(({ icons }) => icons.length)
     .reduce<CategoryRow[]>((acc, category) => {
       acc.push({ type: 'category', title: category.title, name: category.name });
@@ -113,7 +123,7 @@ const categories = computed(() => {
 });
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(
-  categories,
+  categoriesList,
   {
     itemHeight: ICON_SIZE + ICON_GRID_GAP,
     overscan: 10
@@ -142,10 +152,12 @@ function scrollToSelectedCategory(selectedCategory: string) {
   const category = props.categories.find((category) => category.name === selectedCategory)
 
   if (category != null) {
-    const categoryRowIndex = categories.value.findIndex((row) => row.type === 'category' && row.name === selectedCategory)
+    const categoryRowIndex = categoriesList.value.findIndex((row) => row.type === 'category' && row.name === selectedCategory)
 
     if (categoryRowIndex !== -1) {
-      scrollTo(categoryRowIndex)
+      setTimeout(() => {
+        scrollTo(categoryRowIndex)
+      }, 0)
     }
   }
 }
@@ -161,8 +173,6 @@ onMounted(() => {
 watch(searchQueryDebounced, () => {
   scrollTo(0)
 })
-
-
 </script>
 
 <template>

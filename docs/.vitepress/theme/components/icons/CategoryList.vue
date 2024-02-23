@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useData } from 'vitepress'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 import { isActive } from 'vitepress/dist/client/shared'
 import { useActiveAnchor } from '../../composables/useActiveAnchor'
 import { data } from './CategoryList.data'
 import CategoryListItem from './CategoryListItem.vue'
+import { useCategoryView } from '../../composables/useCategoryView'
 
 const { page } = useData()
+const { categoryCounts } = useCategoryView();
 
 const categoriesIsActive = computed(() => {
   return isActive(page.value.relativePath, '/icons/categories');
@@ -25,7 +27,7 @@ const headers = computed(() => {
     level: 2,
     link: `${linkPrefix}#${name}`,
     title,
-    iconCount,
+    iconCount: categoryCounts.value[name] ?? iconCount,
     name
   }))
 })
@@ -33,7 +35,13 @@ const headers = computed(() => {
 const container = ref()
 const marker = ref()
 
-useActiveAnchor(container, marker)
+const { setActiveLinkDebounced } = useActiveAnchor(container, marker)
+
+watch(headers, () => {
+  setTimeout(() => {
+    setActiveLinkDebounced()
+  }, 200)
+})
 </script>
 
 <template>

@@ -6,18 +6,18 @@ import { throttleAndDebounce } from 'vitepress/dist/client/theme-default/support
  */
 
 export function useActiveAnchor(container, marker) {
-  const onScroll = throttleAndDebounce(setActiveLink, 100);
+  const setActiveLinkDebounced = throttleAndDebounce(setActiveLink, 100);
   let prevActiveLink = null;
   onMounted(() => {
     requestAnimationFrame(setActiveLink);
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', setActiveLinkDebounced);
   });
   onUpdated(() => {
     // sidebar update means a route change
     activateLink(location.hash);
   });
   onUnmounted(() => {
-    window.removeEventListener('scroll', onScroll);
+    window.removeEventListener('scroll', setActiveLinkDebounced);
   });
   function setActiveLink() {
     const links = [].slice.call(container.value.querySelectorAll('.outline-link'));
@@ -63,6 +63,10 @@ export function useActiveAnchor(container, marker) {
       marker.value.style.top = '33px';
       marker.value.style.opacity = '0';
     }
+  }
+
+  return {
+    setActiveLinkDebounced,
   }
 }
 
