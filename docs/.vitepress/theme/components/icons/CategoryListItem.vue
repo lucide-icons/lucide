@@ -7,6 +7,7 @@ interface Header {
   slug: string;
   iconCount: number;
   link: string;
+  name: string;
   children: Header[];
 }
 
@@ -21,29 +22,20 @@ const props = defineProps<{
 
 const { selectedCategory } = useCategoryView();
 
-function onClick(event: Event) {
-  const target =
-    (event.target as HTMLElement).nodeName === 'span'
-      ? (event.target as HTMLElement).parentNode
-      : (event.target as HTMLElement);
-  const href = (target as HTMLAnchorElement)?.href;
+function onClick(categoryName: string) {
+  console.log('onClick', categoryName);
 
-  if (href) {
-    const id = '#' + href.split('#')[1];
-    const decodedId = decodeURIComponent(id);
+  selectedCategory.value = categoryName;
 
-    selectedCategory.value = decodedId.replace('#', '');
-
-    const heading = document.querySelector<HTMLAnchorElement>(decodedId);
-    heading?.focus();
-  }
+  const heading = document.querySelector<HTMLAnchorElement>(categoryName);
+  heading?.focus();
 }
 </script>
 
 <template>
   <ul :class="root ? 'root' : 'nested'">
-    <li v-for="{ children, link, title, iconCount } in headers">
-      <a class="outline-link" :href="link" @click="onClick" :title="title">
+    <li v-for="{ children, link, title, iconCount, name } in headers">
+      <a class="outline-link" :href="link" @click="onClick(name)" :title="title">
         <span>
           {{ title }}
         </span>

@@ -145,37 +145,19 @@ function scrollToSelectedCategory(selectedCategory: string) {
     const categoryRowIndex = categories.value.findIndex((row) => row.type === 'category' && row.name === selectedCategory)
 
     if (categoryRowIndex !== -1) {
-      nextTick(() => {
-        scrollTo(categoryRowIndex)
-      })
+      scrollTo(categoryRowIndex)
     }
   }
 }
 
 const listLoaded = ref(false)
 
-watch(selectedCategory, scrollToSelectedCategory, {
-  immediate: true
-})
+watch(selectedCategory, scrollToSelectedCategory)
 
-watch(listLoaded, (loaded) => {
-  if (selectedCategory.value != null && loaded  ) {
-    nextTick(() => {
-      console.log('scrolling to selected category', selectedCategory.value);
-
-      scrollToSelectedCategory(selectedCategory.value)
-    })
-  }
-}, {
-  immediate: true
-})
-
-watch(list, (items) => {
-  if (items.length !== 0) {
-    listLoaded.value = true
-  }
-}, {
-  immediate: true
+onMounted(() => {
+  setTimeout(() => {
+    scrollToSelectedCategory(selectedCategory.value)
+  }, 0)
 })
 
 

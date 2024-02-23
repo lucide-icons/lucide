@@ -25,7 +25,8 @@ const headers = computed(() => {
     level: 2,
     link: `${linkPrefix}#${name}`,
     title,
-    iconCount
+    iconCount,
+    name
   }))
 })
 

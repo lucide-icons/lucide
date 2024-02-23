@@ -66,7 +66,7 @@ export function useActiveAnchor(container, marker) {
   }
 }
 
-const PAGE_OFFSET = 64;
+const PAGE_OFFSET = 128;
 
 function getAnchorTop(anchor) {
   return anchor.parentElement.offsetTop - PAGE_OFFSET;
@@ -74,7 +74,7 @@ function getAnchorTop(anchor) {
 function isAnchorActive(index, anchor, nextAnchor) {
   const scrollTop = window.scrollY;
   if (index === 0 && scrollTop === 0) {
-    return [true, null];
+    return [true, anchor.hash];
   }
   if (scrollTop < getAnchorTop(anchor)) {
     return [false, null];
