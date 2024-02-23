@@ -117,6 +117,7 @@ watch(searchQueryDebounced, () => {
         :key="index"
         overlayMode
         :icons="icons"
+        :activeIcon="activeIconName"
         @setActiveIcon="setActiveIconName"
       />
     </div>
