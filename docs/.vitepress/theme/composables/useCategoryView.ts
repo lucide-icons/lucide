@@ -25,14 +25,14 @@ export function useCategoryView(): CategoryViewContext {
     if (window.location.hash) {
       context.selectedCategory.value = decodeURIComponent(window.location.hash.slice(1));
     }
-  })
+  });
 
   watch(route, (currentRoute) => {
     if (currentRoute.path !== '/icons/categories') {
       context.selectedCategory.value = '';
       context.categoryCounts.value = {};
     }
-  })
+  });
 
   return context;
 }

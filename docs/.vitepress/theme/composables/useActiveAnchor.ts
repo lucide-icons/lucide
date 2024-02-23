@@ -67,7 +67,7 @@ export function useActiveAnchor(container, marker) {
 
   return {
     setActiveLinkDebounced,
-  }
+  };
 }
 
 const PAGE_OFFSET = 128;

@@ -146,7 +146,11 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
         @focus="onFocusSearchInput"
       />
     </StickyBar>
-    <NoResults v-if="categories.length === 0" :searchQuery="searchQuery" @clear="searchQuery = ''" />
+    <NoResults
+      v-if="categories.length === 0"
+      :searchQuery="searchQuery"
+      @clear="searchQuery = ''"
+    />
     <div v-bind="wrapperProps">
       <IconsCategory
         v-for="{ index, data } in list"

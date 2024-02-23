@@ -20,7 +20,7 @@ const useSearch = <T>(
       return index.value.search(query.value).map((result) => result.item);
     }
 
-    if(keys.length !== 0) {
+    if (keys.length !== 0) {
       const mainKey = keys[0].name;
 
       return collection.value.sort((a, b) => {
