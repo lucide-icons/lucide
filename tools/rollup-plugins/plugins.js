@@ -15,7 +15,7 @@ const plugins = ({ pkg, minify = false, withEsbuild = true, esbuildOptions = {} 
         })
       : null,
     nodeResolve({
-      extensions: [".js", ".ts", ".jsx", ".tsx"],
+      extensions: ['.js', '.ts', '.jsx', '.tsx'],
       resolveOnly: [/^@lucide\/.*$/],
     }),
     license({
