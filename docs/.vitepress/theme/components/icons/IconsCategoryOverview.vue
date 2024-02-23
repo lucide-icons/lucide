@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, watchEffect, watch, nextTick } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
@@ -8,7 +8,7 @@ import StickyBar from './StickyBar.vue';
 import IconGrid from './IconGrid.vue'
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
-import { useElementSize, useEventListener, useVirtualList, useUrlSearchParams } from '@vueuse/core';
+import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
 import { useCategoryView } from '../../composables/useCategoryView';
 
@@ -150,8 +150,6 @@ function scrollToSelectedCategory(selectedCategory: string) {
   }
 }
 
-const listLoaded = ref(false)
-
 watch(selectedCategory, scrollToSelectedCategory)
 
 onMounted(() => {
@@ -193,13 +191,6 @@ onMounted(() => {
         />
       </template>
     </div>
-    <!-- <IconsCategory
-      v-for="category in categories"
-      :key="category.name"
-      :category="category"
-      :activeIconName="activeIconName"
-      @setActiveIcon="setActiveIconName"
-    /> -->
   </div>
   <IconDetailOverlay
     v-if="activeIconName != null"

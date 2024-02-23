@@ -28,11 +28,9 @@ export function useCategoryView(): CategoryViewContext {
   })
 
   watch(route, (currentRoute) => {
-
     if (currentRoute.path !== '/icons/categories') {
       context.selectedCategory.value = '';
     }
-
   })
 
   return context;
