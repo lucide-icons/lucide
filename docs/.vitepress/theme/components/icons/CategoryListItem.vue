@@ -15,7 +15,7 @@ type MenuItem = Omit<Header, 'slug' | 'children'> & {
   children?: MenuItem[];
 };
 
-const props = defineProps<{
+defineProps<{
   headers: MenuItem[];
   root?: boolean;
 }>();
