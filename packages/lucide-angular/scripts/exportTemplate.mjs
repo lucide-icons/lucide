@@ -22,5 +22,5 @@ import { LucideIconData } from './types';
 const ${componentName}: LucideIconData = ${JSON.stringify(children)}; //eslint-disable-line no-shadow-restricted-names
 
 export default ${componentName};
-`
+`;
 };

@@ -13,9 +13,8 @@ const defaultAttributes = {
   strokeLinejoin: 'round',
 };
 
-
 export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
-  size?: string | number
+  size?: string | number;
 }
 
 /**
@@ -26,7 +25,8 @@ export interface LucideProps extends Partial<SVGProps<SVGSVGElement>> {
  * @param {string} string
  * @returns {string} A kebabized string
  */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export const toKebabCase = (string: string) =>
+  string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 const createIconComponent = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
@@ -43,7 +43,12 @@ const createIconComponent = (iconName: string, iconNode: IconNode) => {
           className: `lucide lucide-${toKebabCase(iconName)}`,
           ...rest,
         },
-        [...iconNode.map(([tag, attrs]: [tag:string, attrs: SVGProps<SVGSVGElement>]) => createElement(tag, attrs)), ...([children] || [])],
+        [
+          ...iconNode.map(([tag, attrs]: [tag: string, attrs: SVGProps<SVGSVGElement>]) =>
+            createElement(tag, attrs),
+          ),
+          ...([children] || []),
+        ],
       ),
   );
 
@@ -52,4 +57,4 @@ const createIconComponent = (iconName: string, iconNode: IconNode) => {
   return Component;
 };
 
-export default createIconComponent
+export default createIconComponent;
