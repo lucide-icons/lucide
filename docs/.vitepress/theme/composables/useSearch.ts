@@ -22,6 +22,7 @@ const useSearch = <T>(
 
     if(keys.length !== 0) {
       const mainKey = keys[0].name;
+
       return collection.value.sort((a, b) => {
         const aString = a[mainKey as keyof T] as string;
         const bString = b[mainKey as keyof T] as string;
