@@ -1,5 +1,5 @@
-name: "Check icons"
-description: "Cross-checks icon and category references in JSON descriptors"
+name: 'Check icons'
+description: 'Cross-checks icon and category references in JSON descriptors'
 
 inputs:
   name:
@@ -7,7 +7,7 @@ inputs:
     required: true
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

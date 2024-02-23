@@ -215,10 +215,11 @@ export const shuffle = (array) => {
  * @param {string} string
  * @returns string
  */
-export function minifySvg(string){
-  return string ? string
-    .replace(/\>[\r\n ]+</g, "><")
-    .replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
-    .trim()
-    : ""
+export function minifySvg(string) {
+  return string
+    ? string
+        .replace(/\>[\r\n ]+</g, '><')
+        .replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
+        .trim()
+    : '';
 }
