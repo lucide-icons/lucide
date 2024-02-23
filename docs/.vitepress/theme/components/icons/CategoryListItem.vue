@@ -29,6 +29,8 @@ function onClick(categoryName: string) {
 
   const heading = document.querySelector<HTMLAnchorElement>(categoryName);
   heading?.focus();
+
+  window.history.pushState({}, '', `/icons/categories#${categoryName}`)
 }
 </script>
 
