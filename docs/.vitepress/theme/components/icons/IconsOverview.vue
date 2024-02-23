@@ -1,15 +1,20 @@
 <script setup lang="ts">
-import { ref, computed, watch, defineAsyncComponent } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted } from 'vue';
 import type { IconEntity } from '../../types';
-import { useMediaQuery, useOffsetPagination } from '@vueuse/core';
+import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import IconGrid from './IconGrid.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
-import EndOfPage from '../base/EndOfPage.vue';
 import useSearchInput from '../../composables/useSearchInput';
 import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
+import chunkArray from '../../utils/chunkArray';
+
+const ICON_SIZE = 56;
+const ICON_GRID_GAP = 8;
+
+const overviewEl = ref<HTMLElement | null>(null);
 
 const props = defineProps<{
   icons: IconEntity[];
@@ -17,31 +22,14 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 
-const isExtraLargeScreen = useMediaQuery('(min-width: 1440px)');
-const isLargeScreen = useMediaQuery('(min-width: 1280px)');
-const isMediumScreen = useMediaQuery('(min-width: 960px)');
-const isSmallScreen = useMediaQuery('(min-width: 640px)');
-
-const pageSize = computed(() => {
-  if (isExtraLargeScreen.value) {
-    return 16 * 20;
-  }
-  if (isLargeScreen.value) {
-    return 16 * 12;
-  }
-  if (isMediumScreen.value) {
-    return 13 * 12;
-  }
-
-  if (isSmallScreen.value) {
-    return 10 * 10;
-  }
-
-  return 10 * 5;
-});
-
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
+
+const { width: containerWidth } = useElementSize(overviewEl)
+
+const columnSize = computed(() => {
+  return Math.floor((containerWidth.value) / ((ICON_SIZE + ICON_GRID_GAP)));
+});
 
 const mappedIcons = computed(() => {
   if (tags.value == null) {
@@ -63,25 +51,32 @@ const mappedIcons = computed(() => {
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
 const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'name', weight: 3 },
+  { name: 'aliases', weight: 3 },
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
 ]);
 
-const { next, currentPage } = useOffsetPagination({ pageSize });
-
-const paginatedIcons = computed(() => {
-  const end = pageSize.value * currentPage.value;
-
-  return searchResults.value.slice(0, end);
+const chunkedIcons = computed(() => {
+  return chunkArray(searchResults.value, columnSize.value);
 });
+
+const { list, containerProps, wrapperProps } = useVirtualList(
+  chunkedIcons,
+  {
+    itemHeight: ICON_SIZE + ICON_GRID_GAP,
+    overscan: 10
+  },
+)
+
+onMounted(() => {
+  containerProps.ref.value = document.documentElement;
+  useEventListener(window, 'scroll', containerProps.onScroll)
+})
+
 
 function setActiveIconName(name: string) {
   activeIconName.value = name;
 }
-
-watch(searchQueryDebounced, (searchString) => {
-  currentPage.value = 1;
-});
 
 function onFocusSearchInput() {
   if (tags.value == null) {
@@ -98,6 +93,9 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 </script>
 
 <template>
+  <div ref="overviewEl">
+
+
   <StickyBar>
     <InputSearch
       :placeholder="`Search ${icons.length} icons ...`"
@@ -107,18 +105,22 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
       @focus="onFocusSearchInput"
     />
   </StickyBar>
-  <NoResults
-    v-if="paginatedIcons.length === 0"
-    :searchQuery="searchQuery"
-    @clear="searchQuery = ''"
-  />
-  <IconGrid
-    overlayMode
-    :activeIcon="activeIconName"
-    :icons="paginatedIcons"
-    @setActiveIcon="setActiveIconName"
-  />
-  <EndOfPage @end-of-page="next" class="bottom-page" />
+    <NoResults
+      v-if="list.length === 0"
+      :searchQuery="searchQuery"
+      @clear="searchQuery = ''"
+    />
+    <div v-bind="wrapperProps">
+        <IconGrid
+          v-for="{ index, data: icons } in list"
+          :key="index"
+          overlayMode
+          :icons="icons"
+          @setActiveIcon="setActiveIconName"
+        />
+    </div>
+</div>
+
   <IconDetailOverlay
     v-if="activeIconName != null"
     :iconName="activeIconName"
@@ -132,6 +134,7 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
   grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
   gap: 8px;
   width: 100%;
+  margin-bottom: 8px;
 }
 
 .icon {

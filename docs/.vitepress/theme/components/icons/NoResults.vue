@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import {ref} from 'vue'
-import {bird} from '../../../data/iconNodes'
+import { ref, onMounted } from 'vue'
+import { bird } from '../../../data/iconNodes'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 import {useEventListener} from '@vueuse/core'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
@@ -15,12 +15,14 @@ const birdIcon = ref<HTMLElement>()
 const Bird = createLucideIcon('bird', bird)
 const flip = ref(false)
 
-useEventListener(document, 'mousemove', (mouseEvent) => {
-  const {width, height, x, y} = birdIcon.value.getBoundingClientRect()
+onMounted(() => {
+  useEventListener(document, 'mousemove', (mouseEvent) => {
+    const {width, height, x, y} = birdIcon.value.getBoundingClientRect()
 
-  const centerX = (width / 2) + x
+    const centerX = (width / 2) + x
 
-  flip.value = mouseEvent.x < centerX
+    flip.value = mouseEvent.x < centerX
+  })
 })
 
 </script>
