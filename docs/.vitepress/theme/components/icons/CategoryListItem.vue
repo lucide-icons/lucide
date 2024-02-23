@@ -23,8 +23,6 @@ const props = defineProps<{
 const { selectedCategory } = useCategoryView();
 
 function onClick(categoryName: string) {
-  console.log('onClick', categoryName);
-
   selectedCategory.value = categoryName;
 
   const heading = document.querySelector<HTMLAnchorElement>(categoryName);
