@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis",
-    "jguddas"
+    "karsa-mistmere"
   ],
   "tags": [
     "picture",
     "photo",
-    "download",
-    "save",
-    "export"
+    "multiple",
+    "copy",
+    "gallery",
+    "album",
+    "collection",
+    "slideshow",
+    "showcase"
   ],
   "categories": [
     "photography",
