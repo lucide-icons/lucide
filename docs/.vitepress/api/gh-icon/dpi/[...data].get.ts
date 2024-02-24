@@ -8,9 +8,9 @@ export default eventHandler(async (event) => {
   const { params = {} } = event.context;
   await initializedResvg;
 
-  const imageSize = 96;
   const [iconSizeString, svgData] = params.data.split('/');
   const iconSize = parseInt(iconSizeString, 10);
+  const imageSize = iconSize * 4;
   const data = svgData.slice(0, -4);
 
   const src = Buffer.from(data, 'base64').toString('utf8');
@@ -25,7 +25,7 @@ export default eventHandler(async (event) => {
   viewBox="0 0 24 24"
   fill="none"
   stroke="#fff"
-  stroke-width="2"
+  stroke-width="${48 / iconSize}"
   stroke-linecap="round"
   stroke-linejoin="round"
 `,
