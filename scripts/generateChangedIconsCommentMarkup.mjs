@@ -60,10 +60,12 @@ const changeFiles3pxStrokeImageTags = getImageTagsByFiles(
 const changeFiles24pxLowDPIImageTags = getImageTagsByFiles(
   changedFiles,
   () => `${BASE_URL}/dpi/24`,
+  96,
 );
 const changeFiles16pxLowDPIImageTags = getImageTagsByFiles(
   changedFiles,
   () => `${BASE_URL}/dpi/32`,
+  96,
 );
 
 const changeFilesXRayImageTags = getImageTagsByFiles(
