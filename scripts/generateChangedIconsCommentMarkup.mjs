@@ -26,7 +26,7 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
 
       return `<img title="${file}" alt="${file}" ${widthAttr} src="${url}/${base64}.svg"/>`;
     })
-    .join('');
+    .join(width.includes('%') ? ' ' : '');
 
 const svgFiles = readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
 
@@ -66,7 +66,7 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
 
     return `${BASE_URL}/${iconName}`;
   },
-  400,
+  '48%',
 );
 
 const commentMarkup = `\
