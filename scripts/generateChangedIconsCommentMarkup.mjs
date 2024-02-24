@@ -57,7 +57,14 @@ const changeFiles3pxStrokeImageTags = getImageTagsByFiles(
   () => `${BASE_URL}/stroke-width/3`,
 );
 
-const changeFilesLowDPIImageTags = getImageTagsByFiles(changedFiles, () => `${BASE_URL}/dpi/24`);
+const changeFiles24pxLowDPIImageTags = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/dpi/24`,
+);
+const changeFiles16pxLowDPIImageTags = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/dpi/32`,
+);
 
 const changeFilesXRayImageTags = getImageTagsByFiles(
   changedFiles,
@@ -85,8 +92,12 @@ ${changeFiles2pxStrokeImageTags}<br/>
 ${changeFiles3pxStrokeImageTags}<br/>
 </details>
 <details>
-<summary>DPI Preview (24px)</summary>
-${changeFilesLowDPIImageTags}<br/>
+<summary>DPI Preview (24px/2px)</summary>
+${changeFiles24pxLowDPIImageTags}<br/>
+</details>
+<details>
+<summary>DPI Preview (16px/1.5px)</summary>
+${changeFiles16pxLowDPIImageTags}<br/>
 </details>
 <details>
 <summary>Icon X-rays</summary>
