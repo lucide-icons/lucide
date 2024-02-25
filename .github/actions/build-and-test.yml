@@ -1,5 +1,5 @@
-name: "Build and Test"
-description: "Builds and test a package"
+name: 'Build and Test'
+description: 'Builds and test a package'
 
 inputs:
   name:
@@ -7,7 +7,7 @@ inputs:
     required: true
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -18,7 +18,7 @@ runs:
       name: Install pnpm
       id: pnpm-install
       with:
-        version: 7
+        version: 8
         run_install: false
 
     - name: Get pnpm store directory

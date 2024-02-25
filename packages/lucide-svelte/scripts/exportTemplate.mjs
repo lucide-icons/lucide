@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
+import { getJSBanner } from './license.mjs';
 
 export default ({ iconName, children, componentName, getSvg, deprecated }) => {
   const svgContents = getSvg();
@@ -7,6 +8,7 @@ export default ({ iconName, children, componentName, getSvg, deprecated }) => {
 
   return `\
 <script lang="ts">
+${getJSBanner()}
 import Icon from '../Icon.svelte';
 import type { IconNode, IconProps } from '../types.js';
 
@@ -22,7 +24,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
- * @returns {FunctionalComponent} Vue component
+ * @returns {FunctionalComponent} Svelte component
  * ${deprecated ? '@deprecated' : ''}
  */
 </script>

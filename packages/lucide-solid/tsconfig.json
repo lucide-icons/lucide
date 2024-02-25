@@ -11,6 +11,6 @@
     "types": ["vite/client", "@testing-library/jest-dom"],
     "noEmit": true,
     "isolatedModules": true,
-    "outDir": "dist"
-  }
+    "outDir": "dist",
+  },
 }
