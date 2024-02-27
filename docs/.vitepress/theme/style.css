@@ -23,6 +23,8 @@
   --vp-code-editor-property: #005cc5;
   --vp-code-editor-static: #f78c6c;
   --vp-code-editor-string: #032f62;
+
+  --vp-c-text-4: rgba(60, 60, 67, 0.32);
 }
 
 .dark {
@@ -38,6 +40,8 @@
   --vp-code-editor-property: #79b8ff;
   --vp-code-editor-static: #f78c6c;
   --vp-code-editor-string: #9ecbff;
+
+  --vp-c-text-4: rgba(235, 235, 245, 0.16);
 }
 
 .VPNavBarTitle .logo {
