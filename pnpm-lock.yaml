@@ -476,8 +476,8 @@ importers:
         specifier: ^0.73.1
         version: 0.73.1(@babel/core@7.23.7)(@babel/preset-env@7.22.9)(react@18.2.0)
       react-native-svg:
-        specifier: ^14.1.0
-        version: 14.1.0(react-native@0.73.1)(react@18.2.0)
+        specifier: ^15.0.0
+        version: 15.0.0(react-native@0.73.1)(react@18.2.0)
       rollup:
         specifier: ^4.9.2
         version: 4.9.2
@@ -18488,8 +18488,8 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
 
-  /react-native-svg@14.1.0(react-native@0.73.1)(react@18.2.0):
-    resolution: {integrity: sha512-HeseElmEk+AXGwFZl3h56s0LtYD9HyGdrpg8yd9QM26X+d7kjETrRQ9vCjtxuT5dCZEIQ5uggU1dQhzasnsCWA==}
+  /react-native-svg@15.0.0(react-native@0.73.1)(react@18.2.0):
+    resolution: {integrity: sha512-ZUEXlzdU3cHjhOuc4BP7fbvabmz8yIuH4ocKSEr5V3P5skk2wnbEyZd3p7dzV9IoODgguCe7tcrNRGwr9pLRig==}
     peerDependencies:
       react: '*'
       react-native: '*'
