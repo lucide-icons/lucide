@@ -1,14 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "guillermo-angeles",
-    "jguddas"
+    "danielbayley"
   ],
   "tags": [
-    "flag",
-    "bullseye"
+    "robot",
+    "ai",
+    "chat",
+    "assistant"
   ],
   "categories": [
-    "gaming"
+    "development",
+    "social"
   ]
 }
