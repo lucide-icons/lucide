@@ -1,8 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
@@ -10,14 +8,15 @@
     "wait",
     "busy",
     "progress",
+    "throbber",
     "spinner",
     "spinning",
-    "throbber"
+    "beach ball",
+    "frozen",
+    "freeze"
   ],
   "categories": [
     "cursors",
-    "multimedia",
-    "layout",
     "design"
   ]
 }
