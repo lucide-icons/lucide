@@ -45,6 +45,7 @@
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
+    "@types/yargs": "^17.0.32",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "ajv-cli": "^5.0.0",
@@ -65,7 +66,8 @@
     "semver": "^7.5.4",
     "simple-git": "^3.21.0",
     "svgo": "^3.1.0",
-    "svgson": "^5.3.1"
+    "svgson": "^5.3.1",
+    "yargs": "^17.7.2"
   },
   "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf",
   "pnpm": {

@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import { promisify } from 'util';
+import {promisify} from 'util';
 import simpleGit from 'simple-git';
 
 /**
@@ -9,8 +9,9 @@ import simpleGit from 'simple-git';
  * @param {string} oldName
  * @param {string} newName
  * @param {boolean} logInfo
+ * @param {boolean} addAlias
  */
-export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true) {
+export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true, addAlias = true) {
   const git = simpleGit();
 
   async function fileExists(filePath) {
@@ -41,16 +42,18 @@ export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true) {
 
   await git.mv(oldSvgPath, newSvgPath);
   await git.mv(oldJsonPath, newJsonPath);
-  const json = fs.readFileSync(newJsonPath, 'utf8');
-  const jsonData = JSON.parse(json);
-  if (Array.isArray(jsonData.aliases)) {
-    jsonData.aliases = jsonData.aliases.filter((name) => name !== newName);
-    jsonData.aliases.push(oldName);
-  } else {
-    jsonData.aliases = [oldName];
+  if (addAlias) {
+    const json = fs.readFileSync(newJsonPath, 'utf8');
+    const jsonData = JSON.parse(json);
+    if (Array.isArray(jsonData.aliases)) {
+      jsonData.aliases = jsonData.aliases.filter((name) => name !== newName);
+      jsonData.aliases.push(oldName);
+    } else {
+      jsonData.aliases = [oldName];
+    }
+    fs.writeFileSync(newJsonPath, JSON.stringify(jsonData, null, 2));
+    await git.add(newJsonPath);
   }
-  fs.writeFileSync(newJsonPath, JSON.stringify(jsonData, null, 2));
-  await git.add(newJsonPath);
 
   if (logInfo) {
     console.log('SUCCESS: Next steps:');

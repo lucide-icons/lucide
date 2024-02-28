@@ -1,27 +1,40 @@
 import path from 'path';
-import { getCurrentDirPath, readSvgDirectory } from '../helpers.mjs';
-import { renameIcon } from './renameIcon.function.mjs';
+import {getCurrentDirPath, readSvgDirectory} from '../helpers.mjs';
+import {renameIcon} from './renameIcon.function.mjs';
+import yargs from 'yargs/yargs';
+import {hideBin} from 'yargs/helpers';
 
 async function main() {
   const currentDir = getCurrentDirPath(import.meta.url);
   const ICONS_DIR = path.resolve(currentDir, '../../icons');
   const svgFiles = readSvgDirectory(ICONS_DIR);
   const iconNames = svgFiles.map((icon) => icon.split('.')[0]).reverse();
+  const argv = yargs(hideBin(process.argv))
+    .usage('$0 <pattern> <replacement>', 'Renames all icons matching a pattern', (yargs) => {
+      yargs
+        .positional('pattern', {
+          type: 'string',
+          demandOption: true,
+          describe: 'A regular expression, e.g. "^rhombus-(.+)$"',
+        })
+        .positional('replacement', {
+          type: 'string',
+          demandOption: true,
+          describe: 'A replacement string, e.g. "diamond-\\1"',
+        });
+    })
+    .strictCommands()
+    .options({
+      'dry-run': {type: 'boolean', default: false, alias: 'd'},
+      'add-alias': {type: 'boolean', default: true, alias: 'a'},
+    })
+    .parse();
 
-  const pattern = new RegExp(process.argv[2], 'g');
-  const replacement = process.argv[3].replaceAll(/\\([0-9]+)/g, (s, i) => `$${i}`);
-  const dryRun = process.argv[4] ?? false;
+  const pattern = new RegExp(argv.pattern, 'g');
+  const replacement = argv.replacement.replaceAll(/\\([0-9]+)/g, (s, i) => `$${i}`);
 
-  if (!pattern || !replacement) {
-    console.error('Usage: pnpm renamePattern <oldRegExp> <newReplacement>');
-    process.exit(1);
-  }
   if (!(pattern instanceof RegExp)) {
     console.error(`${pattern} is not a valid regular expression.`);
-    process.exit(1);
-  }
-  if (!replacement) {
-    console.error(`No replacement string provided.`);
     process.exit(1);
   }
 
@@ -30,8 +43,8 @@ async function main() {
     console.log(`Renaming ${oldName} => ${newName}`);
 
     try {
-      if (!dryRun) {
-        await renameIcon(ICONS_DIR, oldName, newName, false);
+      if (!argv.dryRun) {
+        await renameIcon(ICONS_DIR, oldName, newName, false, argv.addAlias);
       }
     } catch (err) {
       console.error(err.message);
