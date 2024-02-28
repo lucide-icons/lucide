@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "guillermo-angeles",
-    "jguddas"
+    "chessurisme"
   ],
   "tags": [
-    "flag",
-    "bullseye"
+    "spreadsheet",
+    "grid",
+    "row"
   ],
   "categories": [
-    "gaming"
+    "text",
+    "files"
   ]
 }
