@@ -1,8 +1,8 @@
 import path from 'path';
-import {getCurrentDirPath, readSvgDirectory} from '../helpers.mjs';
-import {renameIcon} from './renameIcon.function.mjs';
+import { getCurrentDirPath, readSvgDirectory } from '../helpers.mjs';
+import { renameIcon } from './renameIcon.function.mjs';
 import yargs from 'yargs/yargs';
-import {hideBin} from 'yargs/helpers';
+import { hideBin } from 'yargs/helpers';
 
 async function main() {
   const currentDir = getCurrentDirPath(import.meta.url);
@@ -25,8 +25,8 @@ async function main() {
     })
     .strictCommands()
     .options({
-      'dry-run': {type: 'boolean', default: false, alias: 'd'},
-      'add-alias': {type: 'boolean', default: true, alias: 'a'},
+      'dry-run': { type: 'boolean', default: false, alias: 'd' },
+      'add-alias': { type: 'boolean', default: true, alias: 'a' },
     })
     .parse();
 

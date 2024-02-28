@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import {promisify} from 'util';
+import { promisify } from 'util';
 import simpleGit from 'simple-git';
 
 /**
