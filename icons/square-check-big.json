@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "colebemis",
+    "csandman",
+    "ericfennis"
   ],
   "tags": [
     "done",
@@ -15,6 +17,6 @@
     "shapes"
   ],
   "aliases": [
-    "check-square-2"
+    "check-square"
   ]
 }
