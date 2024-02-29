@@ -88,12 +88,4 @@ defineProps<TeamMember>()
   align-items: center;
   gap: 8px;
 }
-
-@media (min-width: 768px) {
-  .member-image {
-    width: 96px;
-    height: 96px;
-    border-radius: 48px;
-  }
-}
 </style>

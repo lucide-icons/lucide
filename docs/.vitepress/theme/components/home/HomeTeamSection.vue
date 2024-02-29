@@ -3,6 +3,7 @@ import HomeContainer from './HomeContainer.vue'
 import GridSection from '../base/GridSection.vue'
 import TeamMemberCard, { TeamMember } from './TeamMemberCard.vue'
 import teamData from '../../../data/teamData.json'
+import HomeSponsorCard from './HomeSponsorCard.vue';
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import teamData from '../../../data/teamData.json'
         v-bind="teamMember"
       />
     </GridSection>
+    <HomeSponsorCard />
    </HomeContainer>
 </template>
 
@@ -26,10 +28,6 @@ import teamData from '../../../data/teamData.json'
   gap: 24px;
   margin-top: 48px;
   margin-bottom: 48px;
-}
-
-.team-members :deep(.card-grid) {
-
 }
 
 @media (min-width: 640px) {
