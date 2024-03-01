@@ -91,7 +91,7 @@ export default Icon;
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="Home" />;
+  return <Icon name="home" />;
 };
 
 export default App;
