@@ -1,6 +1,7 @@
 import { h } from 'vue';
-import type { SVGAttributes, FunctionalComponent, DefineComponent } from 'vue';
+import type { SVGAttributes, FunctionalComponent } from 'vue';
 import defaultAttributes from './defaultAttributes';
+import { toKebabCase } from '@lucide/shared';
 
 // Create interface extending SVGAttributes
 export interface SVGProps extends Partial<SVGAttributes> {
@@ -11,17 +12,13 @@ export interface SVGProps extends Partial<SVGAttributes> {
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 export type Icon = FunctionalComponent<SVGProps>;
-/**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
- */
-export const toKebabCase = (string: string) =>
-  string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
+/**
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {FunctionalComponent} LucideIcon
+ */
 const createLucideIcon =
   (iconName: string, iconNode: IconNode): Icon =>
   (
