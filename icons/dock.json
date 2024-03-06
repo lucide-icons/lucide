@@ -1,14 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
-    "application",
+    "desktop",
+    "applications",
+    "launch",
+    "home",
     "menu bar",
-    "pane",
-    "executable"
+    "bottom",
+    "line",
+    "macos",
+    "osx"
   ],
   "categories": [
     "layout",
