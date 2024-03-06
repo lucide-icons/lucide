@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "cd16b",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "security"
+  ],
+  "categories": [
+    "security"
+  ]
+}

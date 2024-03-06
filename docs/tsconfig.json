@@ -4,6 +4,6 @@
     "jsx": "react",
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
-    "noEmit": true
-  }
+    "noEmit": true,
+  },
 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "audio",
+    "sound",
+    "noise",
+    "track",
+    "digital",
+    "recording",
+    "playback",
+    "piano",
+    "keyboard",
+    "keys",
+    "notes",
+    "chord",
+    "midi",
+    "octave"
+  ],
+  "categories": [
+    "files",
+    "multimedia"
+  ]
+}

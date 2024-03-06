@@ -12,7 +12,8 @@
     "todo",
     "tick",
     "complete",
-    "task"
+    "task",
+    "delivered"
   ],
   "categories": [
     "development"

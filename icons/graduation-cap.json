@@ -2,13 +2,24 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "Tummerhore",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "school",
     "university",
     "learn",
-    "study"
+    "study",
+    "mortarboard",
+    "education",
+    "ceremony",
+    "academic",
+    "hat",
+    "diploma",
+    "bachlor's",
+    "master's",
+    "doctorate"
   ],
   "categories": [
     "buildings",

@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "aliases": ["curly-braces"],
+  "aliases": [
+    "curly-braces"
+  ],
   "tags": [
     "json",
     "code",

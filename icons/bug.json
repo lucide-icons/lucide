@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu"
+    "danielbayley"
   ],
   "tags": [
     "issue",
     "report",
+    "debug",
+    "code",
     "insect"
   ],
   "categories": [
-    "development"
+    "development",
+    "animals"
   ]
 }

@@ -7,10 +7,15 @@
   "tags": [
     "box",
     "container",
+    "storage",
     "unpack",
-    "open"
+    "unarchive",
+    "unzip",
+    "opened",
+    "delivered"
   ],
   "categories": [
+    "files",
     "development"
   ]
 }

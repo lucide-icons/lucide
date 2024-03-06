@@ -11,7 +11,9 @@
     "under",
     "back",
     "backwards",
-    "layer"
+    "overlap",
+    "layer",
+    "order"
   ],
   "categories": [
     "design",

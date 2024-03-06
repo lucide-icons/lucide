@@ -5,15 +5,20 @@
     "danielbayley",
     "ericfennis"
   ],
-  "aliases": ["sidebar-open"],
   "tags": [
     "primary",
     "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "chevron",
+    "right",
+    ">"
   ],
   "categories": [
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "sidebar-open"
   ]
 }

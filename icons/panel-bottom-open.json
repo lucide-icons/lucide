@@ -8,7 +8,9 @@
     "drawer",
     "dock",
     "show",
-    "reveal"
+    "reveal",
+    "chevron",
+    "up"
   ],
   "categories": [
     "layout",
