@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "infirmary",
+    "sanatorium",
+    "hospice",
+    "clinic",
+    "emergency room",
+    "ward",
+    "building",
+    "medical",
+    "vet"
+  ],
+  "categories": [
+    "medical",
+    "buildings",
+    "maps",
+    "travel"
+  ]
+}
