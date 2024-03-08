@@ -38,6 +38,9 @@
               "deprecationReason": {
                 "type": "string"
               }
+            },
+            "dependentRequired": {
+              "deprecated": ["deprecationReason"]
             }
           }
         ]
@@ -77,6 +80,9 @@
     "unicode": {
       "type": "string"
     }
+  },
+  "dependentRequired": {
+    "deprecated": ["deprecationReason"]
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."
 }
