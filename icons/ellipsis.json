@@ -4,14 +4,15 @@
     "colebemis"
   ],
   "tags": [
-    "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
+    "progress",
+    "pending",
+    "throbber",
     "menu",
     "options",
-    "loading",
-    "loader",
-    "throber",
-    "etc",
-    "et cetera",
     "operator",
     "code",
     "coding",
@@ -23,5 +24,8 @@
   "categories": [
     "layout",
     "development"
+  ],
+  "aliases": [
+    "more-horizontal"
   ]
 }
