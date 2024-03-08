@@ -14,10 +14,10 @@
   <path d="M 2 6 A2 2 0 0 1 4 4" />
   <path d="M 20 20 L 4 20" />
   <path d="M 20 4 A2 2 0 0 1 22 6" />
-  <path d="M 22 6 L 22 17" />
+  <path d="M 22 6 L 22 16.5" />
   <path d="M 4 20 A2 2 0 0 1 2 18" />
   <path d="M 7 16 L 17.5 16" />
-  <path d="M 9 4 L 20 4" />
+  <path d="M 9.5 4 L 20 4" />
   <path d="M10 8h.01" />
   <path d="M14 8h.01" />
   <path d="M16 12h.01" />
