@@ -2,7 +2,13 @@ import path from 'path';
 import fs from 'fs';
 import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
 
-const getImportString = (componentName, iconName, aliasImportFileExtension, deprecated, deprecationReason = '') =>
+const getImportString = (
+  componentName,
+  iconName,
+  aliasImportFileExtension,
+  deprecated,
+  deprecationReason = '',
+) =>
   deprecated
     ? `export {\n` +
       `  /** @deprecated ${deprecationReason} */\n` +
@@ -32,7 +38,7 @@ export default async function generateAliasesFile({
   await Promise.all(
     icons.map(async (iconName, index) => {
       const componentName = toPascalCase(iconName);
-      const iconAliases = iconMetaData[iconName]?.aliases?.map(alias => {
+      const iconAliases = iconMetaData[iconName]?.aliases?.map((alias) => {
         if (typeof alias === 'string') {
           return {
             name: alias,
