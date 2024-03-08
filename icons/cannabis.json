@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
-    "ellipsis",
-    "menu",
-    "options"
+    "cannabis",
+    "weed",
+    "leaf"
   ],
   "categories": [
-    "layout"
+    "nature"
   ]
 }
