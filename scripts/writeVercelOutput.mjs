@@ -21,7 +21,7 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
         Location: `/icons/${iconName}`,
       },
     };
-})
+  });
 
 const vercelRouteConfig = {
   version: 3,
@@ -35,7 +35,7 @@ const vercelRouteConfig = {
       src: '(?<url>/api/.*)',
       dest: '/__nitro?url=$url',
     },
-    ...iconAliasesRedirectRoutes
+    ...iconAliasesRedirectRoutes,
   ],
 };
 
