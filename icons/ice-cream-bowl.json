@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie",
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "gelato",
+    "food",
+    "dessert",
+    "dish",
+    "restaurant",
+    "course",
+    "meal"
+  ],
+  "categories": [
+    "food-beverage"
+  ],
+  "aliases": [
+    "ice-cream-2"
+  ]
+}
