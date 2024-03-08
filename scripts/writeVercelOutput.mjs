@@ -9,7 +9,19 @@ const scriptDir = getCurrentDirPath(import.meta.url);
 
 const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
 
-console.log(iconMetaData);
+const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
+  .filter(([, { aliases }]) => aliases?.length)
+  .map(([iconName, { aliases }]) => {
+    const aliasRouteMatches = aliases.join('|');
+
+    return {
+      src: `/icons/(${aliasRouteMatches})`,
+      status: 302,
+      headers: {
+        Location: `/icons/${iconName}`,
+      },
+    };
+})
 
 const vercelRouteConfig = {
   version: 3,
@@ -23,13 +35,7 @@ const vercelRouteConfig = {
       src: '(?<url>/api/.*)',
       dest: '/__nitro?url=$url',
     },
-    {
-      src: "/icons/(grid|grid-4x4)",
-      status: 302,
-      headers: {
-        Location: "/icons/grid-3x3"
-      }
-    }
+    ...iconAliasesRedirectRoutes
   ],
 };
 
