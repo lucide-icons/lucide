@@ -7,9 +7,9 @@ import { getCurrentDirPath } from './helpers.mjs';
 const currentDir = process.cwd();
 const scriptDir = getCurrentDirPath(import.meta.url);
 
-// const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
+const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
 
-// console.log(iconMetaData);
+console.log(iconMetaData);
 
 const vercelRouteConfig = {
   version: 3,
@@ -24,21 +24,12 @@ const vercelRouteConfig = {
       dest: '/__nitro?url=$url',
     },
     {
-      "src": "(?<url>/icons/grid)",
-      "status": 302,
-      "headers": {
-        "Location": "/grid-3x3" }
+      src: "/icons/(grid|grid-4x4)",
+      status: 302,
+      headers: {
+        Location: "/icons/grid-3x3"
+      }
     }
-    // {
-    //   source: '/icon/:path*',
-    //   destination: '/icons/:path*',
-    //   permanent: true,
-    // },
-    // {
-    //   src: '/(.*)',
-    //   status: 404,
-    //   dest: '/static/404.html',
-    // },
   ],
 };
 
