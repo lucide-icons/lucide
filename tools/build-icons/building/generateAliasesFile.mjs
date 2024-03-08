@@ -2,8 +2,13 @@ import path from 'path';
 import fs from 'fs';
 import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
 
-const getImportString = (componentName, iconName, aliasImportFileExtension = '') =>
-  `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
+const getImportString = (componentName, iconName, aliasImportFileExtension, deprecated, deprecationReason = '') =>
+  deprecated
+    ? `export {\n` +
+      `  /** @deprecated ${deprecationReason} */\n` +
+      `  default as ${componentName}\n` +
+      `} from './icons/${iconName}${aliasImportFileExtension}';\n`
+    : `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
 
 export default async function generateAliasesFile({
   iconNodes,
@@ -27,7 +32,15 @@ export default async function generateAliasesFile({
   await Promise.all(
     icons.map(async (iconName, index) => {
       const componentName = toPascalCase(iconName);
-      const iconAliases = iconMetaData[iconName]?.aliases;
+      const iconAliases = iconMetaData[iconName]?.aliases?.map(alias => {
+        if (typeof alias === 'string') {
+          return {
+            name: alias,
+            deprecated: false,
+          };
+        }
+        return alias;
+      });
 
       let importString = '';
 
@@ -51,11 +64,11 @@ export default async function generateAliasesFile({
       if (iconAliases != null && Array.isArray(iconAliases)) {
         await Promise.all(
           iconAliases.map(async (alias) => {
-            const componentNameAlias = toPascalCase(alias);
+            const componentNameAlias = toPascalCase(alias.name);
 
             if (separateAliasesFile) {
               const output = `export { default } from "./${iconName}"`;
-              const location = path.join(iconsDistDirectory, `${alias}${iconFileExtension}`);
+              const location = path.join(iconsDistDirectory, `${alias.name}${iconFileExtension}`);
 
               await fs.promises.writeFile(location, output, 'utf-8');
             }
@@ -65,12 +78,14 @@ export default async function generateAliasesFile({
               return;
             }
 
-            const exportFileIcon = separateAliasesFile ? alias : iconName;
+            const exportFileIcon = separateAliasesFile ? alias.name : iconName;
 
             importString += getImportString(
               componentNameAlias,
               exportFileIcon,
               aliasImportFileExtension,
+              alias.deprecated,
+              alias.deprecationReason,
             );
 
             if (!aliasNamesOnly) {
@@ -78,12 +93,16 @@ export default async function generateAliasesFile({
                 `${componentNameAlias}Icon`,
                 exportFileIcon,
                 aliasImportFileExtension,
+                alias.deprecated,
+                alias.deprecationReason,
               );
 
               importString += getImportString(
                 `Lucide${componentNameAlias}`,
                 exportFileIcon,
                 aliasImportFileExtension,
+                alias.deprecated,
+                alias.deprecationReason,
               );
             }
           }),

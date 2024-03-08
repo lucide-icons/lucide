@@ -28,9 +28,9 @@ export default ({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false } = iconMetaData[iconName];
+    const { deprecated = false, deprecationReason = '' } = iconMetaData[iconName];
 
-    const elementTemplate = template({ componentName, iconName, children, getSvg, deprecated });
+    const elementTemplate = template({ componentName, iconName, children, getSvg, deprecated, deprecationReason });
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,

@@ -33,6 +33,10 @@
     "account"
   ],
   "aliases": [
-    "between-horizonal-start"
+    {
+      "name": "between-horizonal-start",
+      "deprecated": true,
+      "deprecationReason": "Renamed because of typo. This export will be removed in v1.0"
+    }
   ]
 }

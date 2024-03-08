@@ -17,6 +17,10 @@
     "connectivity"
   ],
   "aliases": [
-    "send-horizonal"
+    {
+      "name": "send-horizonal",
+      "deprecated": true,
+      "deprecationReason": "Renamed because of typo. This export will be removed in v1.0"
+    }
   ]
 }

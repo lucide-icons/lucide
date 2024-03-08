@@ -21,7 +21,26 @@
     "aliases": {
       "type": "array",
       "items": {
-        "type": "string"
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "deprecated": {
+                "type": "boolean",
+                "default": false
+              },
+              "deprecationReason": {
+                "type": "string"
+              }
+            }
+          }
+        ]
       },
       "uniqueItems": true
     },
@@ -51,6 +70,12 @@
     "deprecated": {
       "type": "boolean",
       "default": false
+    },
+    "deprecationReason": {
+      "type": "string"
+    },
+    "unicode": {
+      "type": "string"
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."
