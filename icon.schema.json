@@ -32,17 +32,14 @@
                 "type": "string"
               },
               "deprecated": {
-                "type": "boolean",
-                "default": false
+                "const": true
               },
               "deprecationReason": {
                 "type": "string"
               }
             },
             "dependentRequired": {
-              "deprecated": [
-                "deprecationReason"
-              ]
+              "deprecated": ["deprecationReason"]
             }
           }
         ]
@@ -73,8 +70,7 @@
       "uniqueItems": true
     },
     "deprecated": {
-      "type": "boolean",
-      "default": false
+      "const": true
     },
     "deprecationReason": {
       "type": "string"
