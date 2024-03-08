@@ -30,7 +30,7 @@ const configs = bundles
       input,
       plugins: [
         babel({
-          extensions: ['.ts', '.tsx', '.js'],
+          extensions: ['.ts', '.tsx', '.js', '.jsx'],
           babelHelpers: 'bundled',
           presets: [
             'babel-preset-solid',
@@ -50,10 +50,14 @@ const configs = bundles
                 esbuild.build({
                   entryPoints: ['./src/**/*.tsx', './src/**/*.ts'],
                   outdir: './dist/source',
+                  outExtension: {
+                    '.js': '.jsx',
+                  },
                   loader: {
                     '.js': 'jsx',
                   },
                   jsx: 'preserve',
+                  jsxImportSource: 'solid-js',
                   bundle: true,
                   format: 'esm',
                   sourcemap: true,
