@@ -1,7 +1,15 @@
 import path from 'path';
 import fs from 'fs';
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
+import getIconMetaData from '../tools/build-icons/utils/getIconMetaData.mjs';
+import { getCurrentDirPath } from './helpers.mjs';
 
 const currentDir = process.cwd();
+const scriptDir = getCurrentDirPath(import.meta.url);
+
+// const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
+
+// console.log(iconMetaData);
 
 const vercelRouteConfig = {
   version: 3,
@@ -15,6 +23,12 @@ const vercelRouteConfig = {
       src: '(?<url>/api/.*)',
       dest: '/__nitro?url=$url',
     },
+    {
+      "src": "(?<url>/icons/grid)",
+      "status": 302,
+      "headers": {
+        "Location": "/grid-3x3" }
+    }
     // {
     //   source: '/icon/:path*',
     //   destination: '/icons/:path*',
@@ -30,6 +44,6 @@ const vercelRouteConfig = {
 
 const output = JSON.stringify(vercelRouteConfig, null, 2);
 
-const vercelOutputJosn = path.resolve(currentDir, '.vercel/output/config.json');
+const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
 
-fs.writeFileSync(vercelOutputJosn, output, 'utf-8');
+fs.writeFileSync(vercelOutputJSON, output, 'utf-8');
