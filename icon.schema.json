@@ -40,7 +40,9 @@
               }
             },
             "dependentRequired": {
-              "deprecated": ["deprecationReason"]
+              "deprecated": [
+                "deprecationReason"
+              ]
             }
           }
         ]
@@ -75,9 +77,6 @@
       "default": false
     },
     "deprecationReason": {
-      "type": "string"
-    },
-    "unicode": {
       "type": "string"
     }
   },
