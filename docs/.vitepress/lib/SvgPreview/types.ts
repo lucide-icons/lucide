@@ -16,7 +16,7 @@ export type Path = {
 
 export type PathProps<
   RequiredProps extends keyof SVGProps<SVGPathElement | SVGRectElement | SVGCircleElement>,
-  NeverProps extends keyof SVGProps<SVGPathElement | SVGRectElement | SVGCircleElement>
+  NeverProps extends keyof SVGProps<SVGPathElement | SVGRectElement | SVGCircleElement>,
 > = Required<Pick<React.SVGProps<SVGElement & SVGRectElement & SVGCircleElement>, RequiredProps>> &
   Omit<
     React.SVGProps<SVGPathElement & SVGRectElement & SVGCircleElement>,

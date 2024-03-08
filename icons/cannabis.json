@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "it-is-not",
+    "jguddas",
     "karsa-mistmere"
   ],
   "tags": [
-    "captions",
-    "closed captions",
-    "accessibility"
+    "cannabis",
+    "weed",
+    "leaf"
   ],
-  "categories": []
+  "categories": [
+    "nature"
+  ]
 }

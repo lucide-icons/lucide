@@ -1,24 +1,18 @@
-import {
-  bundledLanguages,
-  type ThemeRegistration
-} from 'shikiji'
-import {
-  getHighlighter,
-} from 'shikiji'
-
+import { bundledLanguages, type ThemeRegistration } from 'shikiji';
+import { getHighlighter } from 'shikiji';
 
 type CodeExampleType = {
-  title: string,
-  language: string,
-  code: string,
-}[]
+  title: string;
+  language: string;
+  code: string;
+}[];
 
 const getIconCodes = (): CodeExampleType => {
   return [
     {
       language: 'html',
       title: 'HTML',
-      code: `<i data-lucide="Name"></i>`
+      code: `<i data-lucide="Name"></i>`,
     },
     {
       language: 'tsx',
@@ -109,36 +103,37 @@ import { LucideAngularModule, PascalCase } from 'lucide-angular';
 
 <div class="icon-Name"></div>
 `,
-    }
-  ]
-}
+    },
+  ];
+};
 
 export type ThemeOptions =
   | ThemeRegistration
-  | { light: ThemeRegistration; dark: ThemeRegistration }
+  | { light: ThemeRegistration; dark: ThemeRegistration };
 
 const highLightCode = async (code: string, lang: string, active?: boolean) => {
   const highlighter = await getHighlighter({
     themes: ['github-light', 'github-dark'],
-    langs: Object.keys(bundledLanguages)
-  })
+    langs: Object.keys(bundledLanguages),
+  });
 
-  const highlightedCode = highlighter.codeToHtml(code, {
-    lang,
-    themes: {
-      light: 'github-light',
-      dark: 'github-dark'
-    },
-    defaultColor: false
-  }).replace('shiki-themes', 'shiki-themes vp-code')
+  const highlightedCode = highlighter
+    .codeToHtml(code, {
+      lang,
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+      defaultColor: false,
+    })
+    .replace('shiki-themes', 'shiki-themes vp-code');
 
   return `<div class="language-${lang} ${active ? 'active' : ''}">
   <button title="Copy Code" class="copy"></button>
   <span class="lang">${lang}</span>
   ${highlightedCode}
-  </div>`
-}
-
+  </div>`;
+};
 
 export default async function createCodeExamples() {
   const codes = getIconCodes();
@@ -153,7 +148,7 @@ export default async function createCodeExamples() {
       language: language,
       code: codeString,
     };
-  })
+  });
 
   return Promise.all(codeExamplePromises);
 }
