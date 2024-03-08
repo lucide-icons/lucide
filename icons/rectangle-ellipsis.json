@@ -1,10 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
+    "mittalyashu",
     "ericfennis"
   ],
   "tags": [
+    "login",
+    "password",
+    "authenticate",
+    "2fa",
+    "field",
+    "fill",
     "ellipsis",
     "et cetera",
     "etc",
@@ -23,11 +29,11 @@
     "..."
   ],
   "categories": [
-    "layout",
+    "text",
     "development",
     "shapes"
   ],
   "aliases": [
-    "circle-ellipsis"
+    "form-input"
   ]
 }
