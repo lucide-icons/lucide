@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Diottodev"
+    "Diottodev",
+    "karsa-mistmere"
   ],
   "tags": [
     "unkeys"
