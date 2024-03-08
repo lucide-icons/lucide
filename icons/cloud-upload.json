@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "file"
+  ],
+  "categories": [
+    "arrows",
+    "files"
+  ],
+  "aliases": [
+    "upload-cloud"
+  ]
+}
