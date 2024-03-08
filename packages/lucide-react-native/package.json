@@ -54,16 +54,16 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-native": "^0.73.1",
-    "react-native-svg": "^14.1.0",
+    "react-native-svg": "^15.0.0",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^4.8.4",
-    "vite": "5.0.10",
+    "vite": "5.0.12",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0",
     "react-native": "*",
-    "react-native-svg": "^12.0.0 || ^13.0.0 || ^14.0.0"
+    "react-native-svg": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0"
   }
 }

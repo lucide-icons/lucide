@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "vpn",
+    "private",
+    "privacy",
+    "network",
+    "world",
+    "browser",
+    "security",
+    "encryption",
+    "protection",
+    "connection"
+  ],
+  "categories": [
+    "security",
+    "development",
+    "devices"
+  ]
+}
