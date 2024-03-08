@@ -85,8 +85,4 @@ describe('Using lucide icon components', () => {
     expect(container.firstChild).toHaveClass('lucide');
     expect(container.firstChild).toHaveClass('lucide-droplet');
   });
-
-  it('should create components from iconNodes', async () => {
-
-  })
 })

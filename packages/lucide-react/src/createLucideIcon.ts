@@ -1,25 +1,10 @@
 import {
   forwardRef,
   createElement,
-  ReactSVG,
-  SVGProps,
-  ForwardRefExoticComponent,
-  RefAttributes,
 } from 'react';
 import defaultAttributes from './defaultAttributes';
 import { toKebabCase } from '@lucide/shared';
-
-export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][];
-
-export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
-type ComponentAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
-
-export interface LucideProps extends ComponentAttributes {
-  size?: string | number;
-  absoluteStrokeWidth?: boolean;
-}
-
-export type LucideIcon = ForwardRefExoticComponent<LucideProps>;
+import { IconNode, LucideIcon, LucideProps } from './types';
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
