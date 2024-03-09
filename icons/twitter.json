@@ -2,7 +2,7 @@
   "$schema": "../icon.schema.json",
   "deprecated": true,
   "deprecationReason": "icon.brand",
-  "gracePeriod": "v1.0",
+  "toBeRemovedInVersion": "v1.0",
   "contributors": [
     "colebemis",
     "csandman",

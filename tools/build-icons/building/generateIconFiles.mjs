@@ -29,12 +29,12 @@ export default ({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false, gracePeriod = null } = iconMetaData[iconName];
+    const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
     const deprecationReason = deprecated
       ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
           componentName,
           iconName,
-          gracePeriod,
+          toBeRemovedInVersion,
         })
       : '';
 

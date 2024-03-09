@@ -37,7 +37,7 @@
       "name": "between-horizonal-start",
       "deprecated": true,
       "deprecationReason": "alias.typo",
-      "gracePeriod": "v1.0"
+      "toBeRemovedInVersion": "v1.0"
     }
   ]
 }

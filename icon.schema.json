@@ -37,13 +37,13 @@
               "deprecationReason": {
                 "$ref": "#/$defs/deprecationReasons"
               },
-              "gracePeriod": {
+              "toBeRemovedInVersion": {
                 "$ref": "#/$defs/versionNumber",
                 "description": "The version this icon will be removed in."
               }
             },
             "dependentRequired": {
-              "deprecated": ["deprecationReason", "gracePeriod"]
+              "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
             }
           }
         ]
@@ -79,13 +79,13 @@
     "deprecationReason": {
       "$ref": "#/$defs/deprecationReasons"
     },
-    "gracePeriod": {
+    "toBeRemovedInVersion": {
       "$ref": "#/$defs/versionNumber",
       "description": "The version this icon will be removed in."
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "gracePeriod"]
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
   },
   "$defs": {
     "deprecationReasons": {
