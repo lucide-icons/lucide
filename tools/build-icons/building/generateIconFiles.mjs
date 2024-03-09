@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { readSvg, toPascalCase } from '../../../scripts/helpers.mjs';
+import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
 export default ({
   iconNodes,
@@ -28,7 +29,14 @@ export default ({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false, deprecationReason = '' } = iconMetaData[iconName];
+    const { deprecated = false, gracePeriod = null } = iconMetaData[iconName];
+    const deprecationReason = deprecated
+      ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
+          componentName,
+          iconName,
+          gracePeriod,
+        })
+      : '';
 
     const elementTemplate = template({
       componentName,

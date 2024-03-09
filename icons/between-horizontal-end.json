@@ -36,7 +36,8 @@
     {
       "name": "between-horizonal-end",
       "deprecated": true,
-      "deprecationReason": "Renamed because of typo. This export will be removed in v1.0"
+      "deprecationReason": "alias.typo",
+      "gracePeriod": "v1.0"
     }
   ]
 }

@@ -35,11 +35,15 @@
                 "const": true
               },
               "deprecationReason": {
-                "type": "string"
+                "$ref": "#/$defs/deprecationReasons"
+              },
+              "gracePeriod": {
+                "$ref": "#/$defs/versionNumber",
+                "description": "The version this icon will be removed in."
               }
             },
             "dependentRequired": {
-              "deprecated": ["deprecationReason"]
+              "deprecated": ["deprecationReason", "gracePeriod"]
             }
           }
         ]
@@ -73,11 +77,28 @@
       "const": true
     },
     "deprecationReason": {
-      "type": "string"
+      "$ref": "#/$defs/deprecationReasons"
+    },
+    "gracePeriod": {
+      "$ref": "#/$defs/versionNumber",
+      "description": "The version this icon will be removed in."
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason"]
+    "deprecated": ["deprecationReason", "gracePeriod"]
+  },
+  "$defs": {
+    "deprecationReasons": {
+      "type": "string",
+      "enum": [
+        "icon.brand",
+        "alias.typo"
+      ]
+    },
+    "versionNumber": {
+      "type": "string",
+      "pattern": "v[0-9]+(\\.[0-9]+)+"
+    }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."
 }

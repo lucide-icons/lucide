@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
+import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
 const getImportString = (
   componentName,
@@ -71,6 +72,13 @@ export default async function generateAliasesFile({
         await Promise.all(
           iconAliases.map(async (alias) => {
             const componentNameAlias = toPascalCase(alias.name);
+            const deprecationReason = alias.deprecated
+              ? deprecationReasonTemplate(alias.deprecationReason, {
+                  componentName: toPascalCase(iconName),
+                  iconName,
+                  gracePeriod: alias.gracePeriod,
+                })
+              : '';
 
             if (separateAliasesFile) {
               const output = `export { default } from "./${iconName}"`;
@@ -91,7 +99,7 @@ export default async function generateAliasesFile({
               exportFileIcon,
               aliasImportFileExtension,
               alias.deprecated,
-              alias.deprecationReason,
+              deprecationReason,
             );
 
             if (!aliasNamesOnly) {
@@ -100,7 +108,7 @@ export default async function generateAliasesFile({
                 exportFileIcon,
                 aliasImportFileExtension,
                 alias.deprecated,
-                alias.deprecationReason,
+                deprecationReason,
               );
 
               importString += getImportString(
@@ -108,7 +116,7 @@ export default async function generateAliasesFile({
                 exportFileIcon,
                 aliasImportFileExtension,
                 alias.deprecated,
-                alias.deprecationReason,
+                deprecationReason,
               );
             }
           }),

@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "deprecated": true,
-  "deprecationReason": "Brand icons have been deprecated and are due to be removed, we recommend using simpleicons.org instead, refer to https://github.com/lucide-icons/lucide/issues/670",
+  "deprecationReason": "icon.brand",
+  "gracePeriod": "v1.0",
   "contributors": [
     "colebemis",
     "ericfennis"
