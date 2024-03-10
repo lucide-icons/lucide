@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "back",
+    "previous",
+    "less than",
+    "fewer",
+    "menu",
+    "<"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "shapes"
+  ],
+  "aliases": [
+    "chevron-left-circle"
+  ]
+}
