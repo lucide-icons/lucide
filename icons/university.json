@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "building",
+    "education",
+    "childhood",
+    "school"
+  ],
+  "categories": [
+    "buildings",
+    "maps"
+  ],
+  "aliases": [
+    "school-2"
+  ]
+}
