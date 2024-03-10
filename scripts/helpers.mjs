@@ -48,7 +48,7 @@ export const resetFile = (fileName, outputDirectory) =>
  * @param {string} path
  * @returns {string} The contents of a file
  */
-export const readFile = (entry) => fs.readFileSync(path.resolve(__dirname, '../', entry), 'utf-8');
+export const readFile = (path) => fs.readFileSync(path.resolve(__dirname, '../', path), 'utf-8');
 
 /**
  * append content to a file
@@ -93,7 +93,7 @@ export const readAllMetadata = (directory) =>
   fs
     .readdirSync(directory)
     .filter((file) => path.extname(file) === '.json')
-    .reduce((acc, fileName, i) => {
+    .reduce((acc, fileName) => {
       acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
       return acc;
     }, {});
@@ -112,6 +112,7 @@ export const readMetadata = (fileName, directory) =>
  * reads the icon directory
  *
  * @param {string} directory
+ * @param {string} fileExtension
  * @returns {array} An array of file paths containing svgs
  */
 export const readSvgDirectory = (directory, fileExtension = '.svg') =>
@@ -218,7 +219,7 @@ export const shuffle = (array) => {
 export function minifySvg(string) {
   return string
     ? string
-        .replace(/\>[\r\n ]+</g, '><')
+        .replace(/>[\r\n ]+</g, '><')
         .replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
         .trim()
     : '';
