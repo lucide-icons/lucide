@@ -113,10 +113,17 @@ ${changeFilesLowDPIImageTags}<br/>
 ${changeFilesXRayImageTags}
 </details>
 
-### Icons as code
+${
+  // collapse code block if it's too long
+  readyToUseCode.split('/n').length < 20
+    ? '### Icons as code'
+    : `<details>
+<summary><h3>Icons as code</h3></summary>
+`
+}
 \`\`\`ts
 ${readyToUseCode}
-\`\`\`
+\`\`\`${readyToUseCode.split('/n').length < 20 ? '' : '\n\n</details>'}
 `;
 
 console.log(commentMarkup);
