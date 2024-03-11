@@ -90,7 +90,7 @@
   "$defs": {
     "deprecationReasons": {
       "type": "string",
-      "enum": ["icon.brand", "alias.typo"]
+      "enum": ["icon.brand", "alias.typo", "alias.name"]
     },
     "versionNumber": {
       "type": "string",
