@@ -32,7 +32,7 @@ const arrayMatches = (a, b) => {
 const nameParts = (icon) =>
   [
     icon.name,
-    ...(icon.aliases.map((alias) => (typeof alias === 'string' ? alias : alias.name)) ?? []),
+    ...(icon.aliases?.map((alias) => (typeof alias === 'string' ? alias : alias.name)) ?? []),
   ]
     .join('-')
     .split('-')
