@@ -41,8 +41,8 @@ body:
       label: Can you reproduce this in the latest version?
       description: i.e. after running `npm install lucide-react@latest`
       options:
-        - label: Yes
-        - label: No
+        - label: 'Yes'
+        - label: 'No'
     validations:
       required: false
   - type: checkboxes
