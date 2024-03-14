@@ -1,12 +1,21 @@
 <script lang="ts">
+	import { getContext } from 'svelte';
+
   import defaultAttributes from './defaultAttributes'
   import type { IconNode } from './types';
 
+  import {
+    LucideContextIconColor,
+    LucideContextIconSize,
+    LucideContextIconStrokeWidth,
+    LucideContextIconAbsoluteStrokeWidth
+  } from './contextKeys';
+
   export let name: string
-  export let color = 'currentColor'
-  export let size: number | string = 24
-  export let strokeWidth: number | string = 2
-  export let absoluteStrokeWidth: boolean = false
+  export let color = getContext(LucideContextIconColor) ?? 'currentColor'
+  export let size: number | string = getContext(LucideContextIconSize) ?? 24
+  export let strokeWidth: number | string = getContext(LucideContextIconStrokeWidth) ?? 2
+  export let absoluteStrokeWidth: boolean = getContext(LucideContextIconAbsoluteStrokeWidth) ?? false
   export let iconNode: IconNode
 </script>
 
