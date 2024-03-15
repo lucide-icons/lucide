@@ -5,9 +5,15 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "unkeys"
+    "unkeys",
+    "layout",
+    "spell",
+    "settings",
+    "mouse"
   ],
   "categories": [
-    "devices"
+    "devices",
+    "text",
+    "development"
   ]
 }
