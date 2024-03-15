@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "lyrics",
+    "voice",
+    "listen",
+    "sound",
+    "music",
+    "radio",
+    "podcast",
+    "karaoke",
+    "singing",
+    "microphone"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ],
+  "aliases": [
+    "mic-2"
+  ]
+}

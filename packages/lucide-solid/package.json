@@ -33,7 +33,7 @@
   "exports": {
     ".": {
       "types": "./dist/types/lucide-solid.d.ts",
-      "solid": "./dist/source/lucide-solid.js",
+      "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.js",
       "browser": "./dist/esm/lucide-solid.js",
       "require": "./dist/cjs/lucide-solid.js",
