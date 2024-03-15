@@ -1,9 +1,9 @@
-import { toKebabCase } from "@lucide/shared";
 import { createElement, forwardRef } from "react";
 import defaultAttributes from "./defaultAttributes";
+import { IconNode, LucideProps } from "./types";
 
-interface IconComponentProps {
-
+interface IconComponentProps extends LucideProps {
+  iconNode: IconNode
 }
 
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
@@ -15,10 +15,12 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       absoluteStrokeWidth,
       className = '',
       children,
+      iconNode,
       ...rest
     },
     ref,
   ) => {
+
     return createElement(
       'svg',
       {
@@ -30,7 +32,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         strokeWidth: absoluteStrokeWidth
           ? (Number(strokeWidth) * 24) / Number(size)
           : strokeWidth,
-        className: ['lucide', `lucide-${toKebabCase(iconName)}`, className].join(' '),
+        className: ['lucide', className].join(' '),
         ...rest,
       },
       [
@@ -40,3 +42,5 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     );
   },
 );
+
+export default Icon

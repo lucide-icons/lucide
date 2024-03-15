@@ -1,45 +1,22 @@
 import {
-  forwardRef,
   createElement,
+  forwardRef,
 } from 'react';
-import defaultAttributes from './defaultAttributes';
 import { toKebabCase } from '@lucide/shared';
-import { IconNode, LucideIcon, LucideProps } from './types';
+import { IconNode, LucideProps } from './types';
+import Icon from './Icon';
 
-const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
+const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
-    (
+    ({ className, ...props}, ref) => createElement(
+      Icon,
       {
-        color = 'currentColor',
-        size = 24,
-        strokeWidth = 2,
-        absoluteStrokeWidth,
-        className = '',
-        children,
-        ...rest
+        ref,
+        iconNode,
+        className: [`lucide-${toKebabCase(iconName)}`, className].join(' '),
+        ...props,
       },
-      ref,
-    ) => {
-      return createElement(
-        'svg',
-        {
-          ref,
-          ...defaultAttributes,
-          width: size,
-          height: size,
-          stroke: color,
-          strokeWidth: absoluteStrokeWidth
-            ? (Number(strokeWidth) * 24) / Number(size)
-            : strokeWidth,
-          className: ['lucide', `lucide-${toKebabCase(iconName)}`, className].join(' '),
-          ...rest,
-        },
-        [
-          ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-          ...(Array.isArray(children) ? children : [children]),
-        ],
-      );
-    },
+    )
   );
 
   Component.displayName = `${iconName}`;

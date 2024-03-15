@@ -3,7 +3,7 @@ import { Suspense, lazy } from 'react';
 import { render, waitFor } from '@testing-library/react';
 
 import dynamicIconImports from '../src/dynamicIconImports';
-import { LucideProps } from '../src/createLucideIcon';
+import { LucideProps } from '../src/types';
 
 describe('Using dynamicImports', () => {
 

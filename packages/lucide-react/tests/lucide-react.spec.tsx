@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { render, cleanup, waitFor } from '@testing-library/react'
-import { Pen, Edit2, Grid, Droplet, LucideProps } from '../src/lucide-react';
+import { render, cleanup } from '@testing-library/react'
+import { Pen, Edit2, Grid, Droplet } from '../src/lucide-react';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {

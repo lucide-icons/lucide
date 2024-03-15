@@ -1,5 +1,7 @@
 import { CamelToPascal, ComponentList, toPascalCase } from "@lucide/shared";
-import createLucideIcon, { IconNode, LucideIcon } from "./createLucideIcon";
+import createLucideIcon from "./createLucideIcon";
+
+import { IconNode, LucideIcon } from "./types";
 
 /**
  * Create a list (object) of icon components from a list (object) of icon nodes

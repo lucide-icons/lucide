@@ -1,4 +1,4 @@
-import { IconNode } from "../src/createLucideIcon"
+import { IconNode } from "../src/types"
 
 export const airVent: IconNode = [
   [
