@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "jguddas"
   ],
   "tags": [
     "bookmark",
