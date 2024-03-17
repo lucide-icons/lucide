@@ -1,18 +1,20 @@
 .icon-button {
   padding: 8px;
-  color: var(--color-black);
+  color: var(--figma-color-text);
   background: transparent;
   border: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   appearance: none;
   outline: 0;
+  cursor: pointer;
+  aspect-ratio: 1;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.06);
+    background: var(--figma-color-bg-hover);
   }
 
   &:focus,
   &:active {
-    box-shadow: inset 0 0 0 2px var(--color-blue);
+    box-shadow: inset 0 0 0 2px var(--figma-color-border-selected);
   }
 }

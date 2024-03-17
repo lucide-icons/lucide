@@ -144,6 +144,6 @@ figma.on('run', (event) => {
       cachedIcons,
     });
   } else {
-    figma.showUI(__uiFiles__.interface, { width: 300, height: 400 });
+    figma.showUI(__uiFiles__.interface, { width: 300, height: 400, themeColors: true });
   }
 });

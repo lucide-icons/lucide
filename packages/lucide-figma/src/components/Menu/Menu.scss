@@ -4,20 +4,20 @@
   flex-shrink: 0;
   height: 40px;
   line-height: 40px;
-  border-bottom: 1px solid var(--color-border, #e5e5e5);
+  border-bottom: 1px solid var(--figma-color-border);
   justify-content: flex-start;
 }
 
 .menu-item {
   font-weight: 500;
   font-size: 11px;
-  color: var(--color-text-tertiary, #b3b3b3);
+  color: var(--figma-color-text-tertiary);
   padding: 0 8px;
   text-transform: capitalize;
   cursor: pointer;
 
   &.active {
-    color: var(--color-text, #333333);
+    color: var(--figma-color-text);
   }
 
   &:first-child {
