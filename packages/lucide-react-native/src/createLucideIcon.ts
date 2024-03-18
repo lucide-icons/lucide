@@ -7,7 +7,7 @@ import {
 } from 'react';
 import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
-import { LucideProps } from './types';
+import { IconNode, LucideIcon, LucideProps } from './types';
 
 
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
