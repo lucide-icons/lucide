@@ -2,7 +2,7 @@
 
 exports[`Using iconNode component generator > should create a component from an iconNode 1`] = `
 <svg
-  class="lucide lucide-air-vent "
+  class="lucide lucide-air-vent"
   fill="none"
   height="24"
   stroke="currentColor"
@@ -31,7 +31,7 @@ exports[`Using iconNode component generator > should create a component from an 
 exports[`Using iconNode component generator > should create multiple components 1`] = `
 <div>
   <svg
-    class="lucide lucide-air-vent "
+    class="lucide lucide-air-vent"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -56,7 +56,7 @@ exports[`Using iconNode component generator > should create multiple components 
     />
   </svg>
   <svg
-    class="lucide lucide-coffee "
+    class="lucide lucide-coffee"
     fill="none"
     height="24"
     stroke="currentColor"

@@ -2,10 +2,16 @@ import {
   createElement,
   forwardRef,
 } from 'react';
-import { toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase } from '@lucide/shared';
 import { IconNode, LucideProps } from './types';
 import Icon from './Icon';
 
+/**
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {ForwardRefExoticComponent} LucideIcon
+ */
 const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
     ({ className, ...props}, ref) => createElement(
@@ -13,7 +19,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
       {
         ref,
         iconNode,
-        className: [`lucide-${toKebabCase(iconName)}`, className].join(' '),
+        className: mergeClasses(`lucide-${toKebabCase(iconName)}`, className),
         ...props,
       },
     )

@@ -27,7 +27,7 @@ const useIconComponent = <Icons extends Record<string, IconNode>>(icons: Icons) 
   )
 
   if (!iconNodesHasCorrectType) {
-    console.error('[lucide-preact]: Passed icons object has incorrect type')
+    console.error('[lucide-preact]: Passed icons object has an incorrect children type')
   }
 
   const iconComponents = iconNodeEntries.reduce((acc, [iconName, iconNode]) => {

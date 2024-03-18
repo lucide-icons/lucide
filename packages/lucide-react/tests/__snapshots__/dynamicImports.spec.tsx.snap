@@ -10,7 +10,7 @@ exports[`Using dynamicImports > should render icons dynamically by using the dyn
      stroke-width="1"
      stroke-linecap="round"
      stroke-linejoin="round"
-     class="lucide lucide-smile "
+     class="lucide lucide-smile"
      aria-label="smile"
 >
   <circle cx="12"

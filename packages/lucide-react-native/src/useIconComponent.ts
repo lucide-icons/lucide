@@ -1,43 +1,36 @@
-import createLucideIcon, { IconNode, LucideIcon } from "./createLucideIcon";
+import { type ComponentList, toPascalCase } from "@lucide/shared";
+import createLucideIcon from "./createLucideIcon";
 
-type CamelToPascal<T extends string> =
-  T extends `${infer FirstChar}${infer Rest}` ? `${Capitalize<FirstChar>}${Rest}` : never
+import { IconNode, LucideIcon } from "./types";
 
-type ComponentList<T> = {
-  [Prop in keyof T as CamelToPascal<Prop & string>]: LucideIcon
-}
-
-export const toPascalCase = <T extends string>(string: T): CamelToPascal<T> => {
-  const camelCase = string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
-    p2 ? p2.toUpperCase() : p1.toLowerCase(),
-  );
-
-  return (camelCase.charAt(0).toUpperCase() + camelCase.slice(1)) as CamelToPascal<T>;
-};
-
-const useIconComponent = <Icons extends Record<string, IconNode>>(icons: Icons) => {
-  if (typeof icons !== 'object') {
-    console.error('[lucide-react-native]: useIconComponent expects an object as argument')
+/**
+ * Create a list (object) of icon components from a list (object) of icon nodes
+ *
+ * @param icons
+ * @returns Object of icon components
+ */
+const useIconComponent = <Icons extends Record<string, IconNode>>(iconNodes: Icons) => {
+  if (typeof iconNodes !== 'object') {
+    console.error('[lucide-react-react]: useIconComponent expects an object as argument')
   }
 
-  const iconNodeEntries = Object.entries(icons)
+  const iconNodeEntries = Object.entries(iconNodes)
 
   const iconNodesHasCorrectType = iconNodeEntries.every(
     ([, iconNode]) => Array.isArray(iconNode)
   )
 
   if (!iconNodesHasCorrectType) {
-    console.error('[lucide-react-native]: Passed icons object has incorrect type')
+    console.error('[lucide-react-react]: Passed icons object has incorrect type')
   }
-  // TODO: throw error if this function is executed inside a react component render function
 
   const iconComponents = iconNodeEntries.reduce((acc, [iconName, iconNode]) => {
-    const componentName = toPascalCase(iconName) as keyof ComponentList<Icons>;
+    const componentName = toPascalCase(iconName) as keyof ComponentList<Icons, LucideIcon>;
 
-    acc[componentName] = createLucideIcon(componentName as string, iconNode) as ComponentList<Icons>[typeof componentName];
+    acc[componentName] = createLucideIcon(componentName as string, iconNode) as ComponentList<Icons, LucideIcon>[typeof componentName];
 
     return acc;
-  }, {} as ComponentList<Icons>)
+  }, {} as ComponentList<Icons, LucideIcon>)
 
   return iconComponents
 }

@@ -457,6 +457,9 @@ importers:
       '@lucide/rollup-plugins':
         specifier: workspace:*
         version: link:../../tools/rollup-plugins
+      '@lucide/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@testing-library/jest-dom':
         specifier: ^6.1.6
         version: 6.4.2(vitest@1.2.2)
@@ -774,6 +777,8 @@ importers:
       rollup-plugin-visualizer:
         specifier: ^5.12.0
         version: 5.12.0(rollup@4.9.6)
+
+  tools/test-utils: {}
 
 packages:
 

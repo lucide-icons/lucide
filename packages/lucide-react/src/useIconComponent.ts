@@ -1,4 +1,4 @@
-import { CamelToPascal, ComponentList, toPascalCase } from "@lucide/shared";
+import { type ComponentList, toPascalCase } from "@lucide/shared";
 import createLucideIcon from "./createLucideIcon";
 
 import { IconNode, LucideIcon } from "./types";
@@ -23,7 +23,7 @@ const useIconComponent = <Icons extends Record<string, IconNode>>(iconNodes: Ico
   if (!iconNodesHasCorrectType) {
     console.error('[lucide-react]: Passed icons object has incorrect type')
   }
-  // TODO: Optional throw an warning if this function is executed inside a react component render function, because this harms performance
+  // TODO: Optional throw an warning if this function is executed inside a React component render function, because this harms performance
 
   const iconComponents = iconNodeEntries.reduce((acc, [iconName, iconNode]) => {
     const componentName = toPascalCase(iconName) as keyof ComponentList<Icons, LucideIcon>;

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/preact';
 
 import { airVent } from './testIconNodes';
 import Icon from '../src/Icon';

@@ -1,7 +1,7 @@
-import { createElement, forwardRef } from "react";
-import defaultAttributes from "./defaultAttributes";
+import { createElement, forwardRef, type FunctionComponent } from "react";
+import * as NativeSvg from 'react-native-svg';
+import defaultAttributes, { childDefaultAttributes } from "./defaultAttributes";
 import { IconNode, LucideProps } from "./types";
-import { mergeClasses } from "@lucide/shared";
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode
@@ -29,30 +29,38 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       size = 24,
       strokeWidth = 2,
       absoluteStrokeWidth,
-      className = '',
       children,
       iconNode,
       ...rest
     },
     ref,
   ) => {
+    const customAttrs = {
+      stroke: color,
+      strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+      ...rest,
+    };
+
     return createElement(
-      'svg',
+      NativeSvg.Svg as unknown as string,
       {
         ref,
         ...defaultAttributes,
         width: size,
         height: size,
-        stroke: color,
-        strokeWidth: absoluteStrokeWidth
-          ? (Number(strokeWidth) * 24) / Number(size)
-          : strokeWidth,
-        className: mergeClasses('lucide', className),
-        ...rest,
+        ...customAttrs,
       },
       [
-        ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-        ...(Array.isArray(children) ? children : [children]),
+        ...iconNode.map(([tag, attrs]) => {
+          const upperCasedTag = (tag.charAt(0).toUpperCase() +
+            tag.slice(1)) as keyof typeof NativeSvg;
+          // duplicating the attributes here because generating the OTA update bundles don't inherit the SVG properties from parent (codepush, expo-updates)
+          return createElement(
+            NativeSvg[upperCasedTag] as FunctionComponent<LucideProps>,
+            { ...childDefaultAttributes, ...customAttrs, ...attrs } as LucideProps,
+          );
+        }),
+        ...((Array.isArray(children) ? children : [children]) || []),
       ],
     );
   },

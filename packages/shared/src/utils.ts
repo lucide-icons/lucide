@@ -23,3 +23,11 @@ export const toPascalCase = <T extends string>(string: T): CamelToPascal<T> => {
 
   return (camelCase.charAt(0).toUpperCase() + camelCase.slice(1)) as CamelToPascal<T>;
 };
+
+/**
+ * Merges classes into a single string
+ *
+ * @param {array} classes
+ * @returns {string} A string of classes
+ */
+export const mergeClasses = <ClassType = string | undefined | null>(...classes: ClassType[]) => classes.filter(Boolean).join(' ');
