@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "stable",
+    "cattle",
+    "horses",
+    "farm",
+    "ranch",
+    "hay",
+    "alfalfa",
+    "door"
+  ],
+  "categories": [
+    "buildings",
+    "animals",
+    "maps"
+  ]
+}
