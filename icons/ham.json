@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis",
-    "jguddas"
+    "karsa-mistmere"
   ],
   "tags": [
-    "cooking",
     "food",
-    "kitchen",
-    "restaurant"
+    "pork",
+    "pig",
+    "meat",
+    "bone",
+    "hock",
+    "knuckle",
+    "gammon",
+    "cured"
   ],
   "categories": [
     "food-beverage"

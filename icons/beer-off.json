@@ -2,17 +2,17 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
+    "ericfennis",
     "jguddas"
   ],
   "tags": [
-    "building",
-    "hostel",
-    "motel",
-    "inn"
+    "alcohol",
+    "bar",
+    "beverage",
+    "brewery",
+    "drink"
   ],
   "categories": [
-    "buildings",
-    "maps",
-    "travel"
+    "food-beverage"
   ]
 }
