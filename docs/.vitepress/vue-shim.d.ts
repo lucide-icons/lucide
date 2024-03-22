@@ -20,5 +20,5 @@ declare module 'node:module' {
 }
 
 declare module '*.node.json' {
- export default IconNode;
+  export default IconNode;
 }
