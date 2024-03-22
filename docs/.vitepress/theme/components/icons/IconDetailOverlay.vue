@@ -13,7 +13,7 @@ import { computedAsync } from '@vueuse/core';
 import { satisfies } from 'semver';
 
 const props = defineProps<{
-  iconName: string
+  iconName: string | null
 }>()
 
 const { go } = useRouter()
@@ -148,11 +148,11 @@ const Expand = createLucideIcon('Expand', expand)
 }
 
 .drawer-enter-active {
-  transition: all 0.2s cubic-bezier(.21,.8,.46,.9);
+  transition: opacity 0.5s, transform 0.25s ease;
 }
 
 .drawer-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: opacity 0.25s ease, transform 1.6s ease-out;
 }
 
 .drawer-enter-from,

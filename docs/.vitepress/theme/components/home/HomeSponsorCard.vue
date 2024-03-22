@@ -28,11 +28,19 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
   margin: 0 auto;
   max-width: 500px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .sponsor-button {
   margin: auto 0;
+}
+
+@media (min-width: 640px) {
+  .sponsor-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 </style>
