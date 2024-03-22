@@ -112,6 +112,8 @@ describe('Using lucide icon components', () => {
     expect(child1).toEqual(getByTestId(childId1));
     expect(child2).toEqual(getByTestId(childId2));
     expect(container.innerHTML).toMatchSnapshot();
+
+    cleanup()
   });
 
   it('should duplicate properties to children components', () => {
@@ -129,7 +131,7 @@ describe('Using lucide icon components', () => {
         strokeWidth={strokeWidth}
       />,
     );
-    const { children = [] } = getByTestId(testId) as unknown as { children: HTMLCollection };
+    const { children = [] } = container.firstChild
     for (let i = 0; i < children.length; i++) {
       const child = children[i];
       expect(child.getAttribute('fill')).toBe(fill);
