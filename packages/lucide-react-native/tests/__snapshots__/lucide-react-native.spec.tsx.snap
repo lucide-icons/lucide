@@ -75,7 +75,6 @@ exports[`Using lucide icon components > should duplicate properties to children 
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
-        data-testid="multiple-children"
         width="18"
         height="18"
         x="3"
@@ -88,7 +87,6 @@ exports[`Using lucide icon components > should duplicate properties to children 
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
-        data-testid="multiple-children"
         d="M3 9h18"
   >
   </path>
@@ -97,7 +95,6 @@ exports[`Using lucide icon components > should duplicate properties to children 
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
-        data-testid="multiple-children"
         d="M3 15h18"
   >
   </path>
@@ -106,7 +103,6 @@ exports[`Using lucide icon components > should duplicate properties to children 
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
-        data-testid="multiple-children"
         d="M9 3v18"
   >
   </path>
@@ -115,7 +111,6 @@ exports[`Using lucide icon components > should duplicate properties to children 
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
-        data-testid="multiple-children"
         d="M15 3v18"
   >
   </path>
@@ -235,5 +230,291 @@ exports[`Using lucide icon components > should render an component 1`] = `
         d="M15 3v18"
   >
   </path>
+</svg>
+`;
+
+exports[`Using lucide icon components > should work with a single child component 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     data-testid="single-child"
+>
+  <rect fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        width="18"
+        height="18"
+        x="3"
+        y="3"
+        rx="2"
+  >
+  </rect>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 9h18"
+  >
+  </path>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 15h18"
+  >
+  </path>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 3v18"
+  >
+  </path>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15 3v18"
+  >
+  </path>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="24"
+       height="24"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       data-testid="child"
+  >
+    <rect fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="18"
+          height="18"
+          x="3"
+          y="3"
+          rx="2"
+    >
+    </rect>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 9h18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 15h18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 3v18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 3v18"
+    >
+    </path>
+  </svg>
+</svg>
+`;
+
+exports[`Using lucide icon components > should work with several children components 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     data-testid="multiple-children"
+>
+  <rect fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        width="18"
+        height="18"
+        x="3"
+        y="3"
+        rx="2"
+  >
+  </rect>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 9h18"
+  >
+  </path>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 15h18"
+  >
+  </path>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 3v18"
+  >
+  </path>
+  <path fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15 3v18"
+  >
+  </path>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="24"
+       height="24"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       data-testid="child1"
+  >
+    <rect fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="18"
+          height="18"
+          x="3"
+          y="3"
+          rx="2"
+    >
+    </rect>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 9h18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 15h18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 3v18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 3v18"
+    >
+    </path>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="24"
+       height="24"
+       viewbox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       data-testid="child2"
+  >
+    <rect fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="18"
+          height="18"
+          x="3"
+          y="3"
+          rx="2"
+    >
+    </rect>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 9h18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 15h18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 3v18"
+    >
+    </path>
+    <path fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 3v18"
+    >
+    </path>
+  </svg>
 </svg>
 `;

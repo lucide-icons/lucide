@@ -19,6 +19,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
         strokeWidth = 2,
         absoluteStrokeWidth,
         children,
+        'data-testid': dataTestId,
         ...rest
       }: LucideProps,
       ref,
@@ -36,6 +37,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
           ...defaultAttributes,
           width: size,
           height: size,
+          'data-testid': dataTestId,
           ...customAttrs,
         },
         [

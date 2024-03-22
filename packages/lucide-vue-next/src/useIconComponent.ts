@@ -1,4 +1,5 @@
-import createLucideIcon, { IconNode, LucideIcon } from "./createLucideIcon";
+import createLucideIcon from "./createLucideIcon";
+import { LucideIcon, IconNode } from "./types";
 
 type CamelToPascal<T extends string> =
   T extends `${infer FirstChar}${infer Rest}` ? `${Capitalize<FirstChar>}${Rest}` : never
