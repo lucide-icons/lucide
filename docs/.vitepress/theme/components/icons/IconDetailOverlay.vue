@@ -16,9 +16,15 @@ const props = defineProps<{
   iconName: string
 }>()
 
+const { go } = useRouter()
+
 const icon = computedAsync<IconEntity | null>(async () => {
   if (props.iconName) {
-    return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+    try {
+      return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+    } catch (err) {
+      go(`/icons/${props.iconName}`)
+    }
   }
   return null
 }, null)
@@ -35,8 +41,6 @@ function releaseTagLink(version) {
 function onClose() {
   emit('close')
 }
-
-const { go } = useRouter()
 
 const CloseIcon = createLucideIcon('Close', x)
 const Expand = createLucideIcon('Expand', expand)

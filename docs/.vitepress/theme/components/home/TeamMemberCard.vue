@@ -75,7 +75,7 @@ defineProps<TeamMember>()
   font-weight: 500;
   color: var(--vp-c-text-2);
   text-align: center;
-  margin-bottom: 12px;;
+  margin-bottom: 16px;;
 }
 
 .sponsor-button {

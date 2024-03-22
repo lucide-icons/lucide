@@ -24,7 +24,7 @@ const headingElement = computed(() => `h${props.headingLevel}`)
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 section {
