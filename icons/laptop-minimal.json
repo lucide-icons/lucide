@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "computer",
+    "screen",
+    "remote"
+  ],
+  "categories": [
+    "devices"
+  ],
+  "aliases": [
+    "laptop-2"
+  ]
+}
