@@ -14,6 +14,11 @@
     "account"
   ],
   "aliases": [
-    "user-x-2"
+    {
+      "name": "user-x-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

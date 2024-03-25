@@ -33,6 +33,11 @@
     "account"
   ],
   "aliases": [
-    "between-horizonal-end"
+    {
+      "name": "between-horizonal-end",
+      "deprecated": true,
+      "deprecationReason": "alias.typo",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

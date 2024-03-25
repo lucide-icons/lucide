@@ -15,6 +15,11 @@
     "development"
   ],
   "aliases": [
-    "code-2"
+    {
+      "name": "code-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

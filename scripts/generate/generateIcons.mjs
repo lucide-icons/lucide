@@ -22,6 +22,8 @@ const iconSvgTemplate = `<svg
 
 const iconJsonTemplate = `{
   "$schema": "../icon.schema.json",
+  "contributors": [
+  ],
   "tags": [
   ],
   "categories": [
