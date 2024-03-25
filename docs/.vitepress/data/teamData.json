@@ -16,13 +16,17 @@
     ]
   },
   {
-    "name": "Karsa Mistmere",
-    "title": "Maintainer of Lucide & Software engineer",
+    "name": "Karsa Rigó",
+    "title": "Maintainer of Lucide & Software engineer @sztaki",
     "image": "https://github.com/karsa-mistmere.png?size=192",
     "socialLinks": [
       {
         "icon": "github",
         "link": "https://github.com/karsa-mistmere"
+      },
+      {
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/karsamistmere"
       }
     ]
   },
