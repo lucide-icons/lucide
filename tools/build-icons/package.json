@@ -6,10 +6,10 @@
   "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "start": "node ./main.mjs"
+    "start": "node ./cli.mjs"
   },
   "bin": {
-    "build-icons": "./main.mjs"
+    "build-icons": "./cli.mjs"
   },
   "engines": {
     "node": ">= 16"

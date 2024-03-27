@@ -1,60 +1,28 @@
 import {
-  forwardRef,
   createElement,
-  ReactSVG,
-  SVGProps,
-  ForwardRefExoticComponent,
-  RefAttributes,
+  forwardRef,
 } from 'react';
-import defaultAttributes from './defaultAttributes';
-import { toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { IconNode, LucideProps } from './types';
+import Icon from './Icon';
 
-export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][];
-
-export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
-type ComponentAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
-
-export interface LucideProps extends ComponentAttributes {
-  size?: string | number;
-  absoluteStrokeWidth?: boolean;
-}
-
-export type LucideIcon = ForwardRefExoticComponent<LucideProps>;
-
-const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
+/**
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {ForwardRefExoticComponent} LucideIcon
+ */
+const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(
-    (
+    ({ className, ...props}, ref) => createElement(
+      Icon,
       {
-        color = 'currentColor',
-        size = 24,
-        strokeWidth = 2,
-        absoluteStrokeWidth,
-        className = '',
-        children,
-        ...rest
+        ref,
+        iconNode,
+        className: mergeClasses(`lucide-${toKebabCase(iconName)}`, className),
+        ...props,
       },
-      ref,
-    ) => {
-      return createElement(
-        'svg',
-        {
-          ref,
-          ...defaultAttributes,
-          width: size,
-          height: size,
-          stroke: color,
-          strokeWidth: absoluteStrokeWidth
-            ? (Number(strokeWidth) * 24) / Number(size)
-            : strokeWidth,
-          className: ['lucide', `lucide-${toKebabCase(iconName)}`, className].join(' '),
-          ...rest,
-        },
-        [
-          ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-          ...(Array.isArray(children) ? children : [children]),
-        ],
-      );
-    },
+    )
   );
 
   Component.displayName = `${iconName}`;

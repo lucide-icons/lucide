@@ -2,6 +2,10 @@ pnpm-lock.yaml
 
 # docs examples
 docs/**/examples/
+docs/.vitepress/.temp
+docs/.vitepress/cache
+docs/.vitepress/data
+docs/.nitro
 
 # lucide-angular
 packages/lucide-angular/.angular/cache

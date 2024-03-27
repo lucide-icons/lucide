@@ -1,6 +1,6 @@
-import { type FunctionComponent, h, type JSX, toChildArray } from 'preact';
-import defaultAttributes from './defaultAttributes';
-import { toKebabCase } from '@lucide/shared';
+import { type FunctionComponent, h, type JSX } from 'preact';
+import { mergeClasses, toKebabCase } from '@lucide/shared';
+import Icon from './Icon';
 
 export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][];
 
@@ -21,28 +21,21 @@ export type LucideIcon = FunctionComponent<LucideProps>;
  */
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = ({
-    color = 'currentColor',
-    size = 24,
-    strokeWidth = 2,
-    absoluteStrokeWidth,
-    children,
     class: classes = '',
-    ...rest
+    children,
+    ...props
   }: LucideProps) =>
     h(
-      'svg',
+      Icon,
       {
-        ...defaultAttributes,
-        width: String(size),
-        height: size,
-        stroke: color,
-        ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth
-          ? (Number(strokeWidth) * 24) / Number(size)
-          : strokeWidth,
-        class: ['lucide', `lucide-${toKebabCase(iconName)}`, classes].join(' '),
-        ...rest,
+        ...props,
+        iconNode,
+        class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
+          `lucide-${toKebabCase(iconName)}`,
+          classes
+        ),
       },
-      [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
+      children,
     );
 
   Component.displayName = `${iconName}`;
