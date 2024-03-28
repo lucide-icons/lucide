@@ -1,13 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
-    "email"
+    "email",
+    "tray",
+    "unread",
+    "pending"
   ],
   "categories": [
     "account",
