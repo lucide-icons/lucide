@@ -121,6 +121,8 @@ ${
 <summary><h3>Icons as code</h3></summary>
 `
 }
+Only working for:
+`lucide-react`, `lucide-react-native`, `lucide-preact`, `lucide-vue-next`
 \`\`\`ts
 ${readyToUseCode}
 \`\`\`${readyToUseCode.split('/n').length < 20 ? '' : '\n\n</details>'}
