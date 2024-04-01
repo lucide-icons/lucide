@@ -6,7 +6,6 @@ import dynamicIconImports from '../src/dynamicIconImports';
 import { LucideProps } from '../src/types';
 
 describe('Using dynamicImports', () => {
-
   it('should render icons dynamically by using the dynamicIconImports module', async () => {
     interface IconProps extends Omit<LucideProps, 'ref'> {
       name: keyof typeof dynamicIconImports;
@@ -20,7 +19,7 @@ describe('Using dynamicImports', () => {
           <LucideIcon {...props} />
         </Suspense>
       );
-    }
+    };
 
     const { container, getByLabelText } = render(
       <Icon
@@ -32,9 +31,8 @@ describe('Using dynamicImports', () => {
       />,
     );
 
-    await waitFor(() => getByLabelText('smile'))
+    await waitFor(() => getByLabelText('smile'));
 
-    expect( container.innerHTML ).toMatchSnapshot();
-
+    expect(container.innerHTML).toMatchSnapshot();
   });
-})
+});

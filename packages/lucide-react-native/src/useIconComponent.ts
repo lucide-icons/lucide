@@ -1,7 +1,7 @@
-import { type ComponentList, toPascalCase } from "@lucide/shared";
-import createLucideIcon from "./createLucideIcon";
+import { type ComponentList, toPascalCase } from '@lucide/shared';
+import createLucideIcon from './createLucideIcon';
 
-import { IconNode, LucideIcon } from "./types";
+import { IconNode, LucideIcon } from './types';
 
 /**
  * Create a list (object) of icon components from a list (object) of icon nodes
@@ -11,28 +11,32 @@ import { IconNode, LucideIcon } from "./types";
  */
 const useIconComponent = <Icons extends Record<string, IconNode>>(iconNodes: Icons) => {
   if (typeof iconNodes !== 'object') {
-    console.error('[lucide-react-react]: useIconComponent expects an object as argument')
+    console.error('[lucide-react-react]: useIconComponent expects an object as argument');
   }
 
-  const iconNodeEntries = Object.entries(iconNodes)
+  const iconNodeEntries = Object.entries(iconNodes);
 
-  const iconNodesHasCorrectType = iconNodeEntries.every(
-    ([, iconNode]) => Array.isArray(iconNode)
-  )
+  const iconNodesHasCorrectType = iconNodeEntries.every(([, iconNode]) => Array.isArray(iconNode));
 
   if (!iconNodesHasCorrectType) {
-    console.error('[lucide-react-react]: Passed icons object has incorrect type')
+    console.error('[lucide-react-react]: Passed icons object has incorrect type');
   }
 
-  const iconComponents = iconNodeEntries.reduce((acc, [iconName, iconNode]) => {
-    const componentName = toPascalCase(iconName) as keyof ComponentList<Icons, LucideIcon>;
+  const iconComponents = iconNodeEntries.reduce(
+    (acc, [iconName, iconNode]) => {
+      const componentName = toPascalCase(iconName) as keyof ComponentList<Icons, LucideIcon>;
 
-    acc[componentName] = createLucideIcon(componentName as string, iconNode) as ComponentList<Icons, LucideIcon>[typeof componentName];
+      acc[componentName] = createLucideIcon(componentName as string, iconNode) as ComponentList<
+        Icons,
+        LucideIcon
+      >[typeof componentName];
 
-    return acc;
-  }, {} as ComponentList<Icons, LucideIcon>)
+      return acc;
+    },
+    {} as ComponentList<Icons, LucideIcon>,
+  );
 
-  return iconComponents
-}
+  return iconComponents;
+};
 
-export default useIconComponent
+export default useIconComponent;

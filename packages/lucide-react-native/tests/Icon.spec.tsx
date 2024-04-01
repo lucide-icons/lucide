@@ -17,7 +17,7 @@ describe('Using Icon Component', () => {
       />,
     );
 
-    expect( container.firstChild ).toBeDefined()
+    expect(container.firstChild).toBeDefined();
   });
 
   it('should render icon and match snapshot', async () => {
@@ -30,6 +30,6 @@ describe('Using Icon Component', () => {
       />,
     );
 
-    expect( container.firstChild ).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
-})
+});

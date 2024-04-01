@@ -22,7 +22,7 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('stroke', 'red');
     expect(SVGElement).toHaveAttribute('width', '48');
@@ -68,7 +68,7 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('stroke', 'red');
     expect(SVGElement).toHaveAttribute('width', '48');
@@ -87,7 +87,7 @@ describe('Using lucide icon components', () => {
         <Grid data-testid={childId} />
       </Grid>,
     );
-    const { children } = container.firstElementChild ?? {}
+    const { children } = container.firstElementChild ?? {};
     const lastChild = children?.[children.length - 1];
 
     expect(lastChild).toEqual(getByTestId(childId));

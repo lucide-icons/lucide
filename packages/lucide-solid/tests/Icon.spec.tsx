@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, cleanup } from '@solidjs/testing-library';
+import { render } from '@solidjs/testing-library';
 
 import { airVent } from './testIconNodes';
 import { Icon } from '../src/lucide-solid';

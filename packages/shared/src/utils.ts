@@ -1,4 +1,4 @@
-import { CamelToPascal } from "./utility-types";
+import { CamelToPascal } from './utility-types';
 
 /**
  * Converts string to kebab case
@@ -8,7 +8,6 @@ import { CamelToPascal } from "./utility-types";
  */
 export const toKebabCase = (string: string) =>
   string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-
 
 /**
  * Converts string to pascal case
@@ -30,8 +29,9 @@ export const toPascalCase = <T extends string>(string: T): CamelToPascal<T> => {
  * @param {array} classes
  * @returns {string} A string of classes
  */
-export const mergeClasses = <ClassType = string | undefined | null>(
-  ...classes: ClassType[]
-) => classes.filter((className, index, array) => {
-  return Boolean(className) && array.indexOf(className) === index;
-}).join(' ');
+export const mergeClasses = <ClassType = string | undefined | null>(...classes: ClassType[]) =>
+  classes
+    .filter((className, index, array) => {
+      return Boolean(className) && array.indexOf(className) === index;
+    })
+    .join(' ');
