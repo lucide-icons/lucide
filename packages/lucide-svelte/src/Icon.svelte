@@ -3,7 +3,7 @@
   import defaultAttributes from './defaultAttributes'
   import type { IconNode } from './types';
 
-  export let name: string | undefined
+  export let name: string | undefined = undefined
   export let color = 'currentColor'
   export let size: number | string = 24
   export let strokeWidth: number | string = 2

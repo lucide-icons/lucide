@@ -1,8 +1,10 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
 
 import { airVent } from './testIconNodes';
-import { Icon } from '../src/lucide-react';
+import { Icon } from '../src/lucide-react-native';
+
+vi.mock('react-native-svg');
 
 describe('Using Icon Component', () => {
   it('should render icon based on a iconNode', async () => {

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/preact';
 
 import { airVent } from './testIconNodes';
-import Icon from '../src/Icon';
+import { Icon } from '../src/lucide-preact';
 
 describe('Using Icon Component', () => {
   it('should render icon based on a iconNode', async () => {

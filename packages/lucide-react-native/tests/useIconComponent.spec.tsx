@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import useIconComponent from '../src/useIconComponent';
+import { useIconComponent } from '../src/lucide-react-native';
 import { airVent, coffee } from './testIconNodes';
 import { render } from '@testing-library/react';
 
