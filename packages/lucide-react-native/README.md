@@ -18,57 +18,6 @@ or
 npm install lucide-react-native
 ```
 
-## How to use
+## Documentation
 
-It's built with ES modules so it's completely tree-shakable.
-Each icon can be imported as a react component.
-
-### Example
-
-You can pass additional props to adjust the icon.
-
-```js
-import { Camera } from 'lucide-react-native';
-
-const App = () => {
-  return <Camera color="red" size={48} />;
-};
-
-export default App;
-```
-
-### Props
-
-| name          | type     | default      |
-| ------------- | -------- | ------------ |
-| `size`        | _Number_ | 24           |
-| `color`       | _String_ | currentColor |
-| `strokeWidth` | _Number_ | 2            |
-
-### Custom props
-
-You can also pass custom props that will be added in the svg as attributes.
-
-```js
-const App = () => {
-  return <Camera fill="red" />;
-};
-```
-
-### Generic icon component
-
-It is possible to create a generic icon component to load icons.
-
-> :warning: The example below is importing all ES modules. This is **not** recommended when you using a bundler since your application build size will grow substantially.
-
-```js
-import * as icons from 'lucide-react-native';
-
-const Icon = ({ name, color, size }) => {
-  const LucideIcon = icons[name];
-
-  return <LucideIcon color={color} size={size} />;
-};
-
-export default Icon;
-```
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native)

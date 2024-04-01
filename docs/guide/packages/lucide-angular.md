@@ -115,3 +115,22 @@ import { icons } from 'lucide-angular';
 
 LucideAngularModule.pick(icons)
 ```
+
+## With Lucide lab or custom icons
+
+Lucide lab is a collection of icons that are not part of the official lucide library.
+You can use them in the same way as the official icons.
+
+<!-- TODO: Add link to @lucide/lab repo -->
+
+```js
+import { LucideAngularModule } from 'lucide-angular';
+import { burger } from '@lucide/lab';
+
+@NgModule({
+  imports: [
+    LucideAngularModule.pick({ burger })
+  ]
+})
+export class AppModule { }
+```

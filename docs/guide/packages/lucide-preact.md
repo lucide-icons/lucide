@@ -67,6 +67,44 @@ const App = () => {
 
 > SVG attributes in Preact aren't transformed, so if you want to change for example the `stroke-linejoin` you need to pass it in kebabcase. Basically how the SVG spec want you to write it. See this topic in the [Preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
 
+## With Lucide lab or custom icons
+
+Lucide lab is a collection of icons that are not part of the official lucide library.
+<!-- TODO: Add link to @lucide/lab repo -->
+They can be used by using the `useIconComponent` or the `Icon` component.
+For both methods all props like regular lucide icons can be passed to adjust the icon appearance.
+
+## Using `useIconComponent`
+
+This creates multiple icons based on the iconNodes passed in an object and returns an object with components that can be used as Lucide components.
+
+```jsx
+import { useIconComponent } from 'lucide-preact';
+import { burger, sausage } from '@lucide/lab';
+
+const { Burger, Pizza } = useIconComponent({ burger, sausage })
+
+const App = () => (
+  <>
+    <Burger fill="red" />
+    <Sausage />
+  </>
+);
+```
+
+## Using the Icon component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-preact';
+import { burger } from '@lucide/lab';
+
+const App = () => (
+  <Icon icon={burger} />
+);
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.
