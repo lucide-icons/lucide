@@ -12,15 +12,17 @@ import Icon from './Icon';
  * @param {array} iconNode
  * @returns {FunctionalComponent} LucideIcon
  */
-const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
-  (props, { slots }) => h(
-    Icon,
-    {
-      ...props,
-      iconNode,
-      name: iconName,
-    },
-    slots
-  )
+const createLucideIcon =
+  (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
+  (props, { slots }) =>
+    h(
+      Icon,
+      {
+        ...props,
+        iconNode,
+        name: iconName,
+      },
+      slots,
+    );
 
 export default createLucideIcon;

@@ -6,28 +6,28 @@ import { Icon } from '../src/lucide-solid';
 
 describe('Using Icon Component', () => {
   it('should render icon based on a iconNode', async () => {
-    const { container } = render(() =>
+    const { container } = render(() => (
       <Icon
         iconNode={airVent}
         size={48}
         stroke="red"
         absoluteStrokeWidth
-      />,
-    );
+      />
+    ));
 
-    expect( container.firstChild ).toBeDefined()
+    expect(container.firstChild).toBeDefined();
   });
 
   it('should render icon and match snapshot', async () => {
-    const { container } = render(() =>
+    const { container } = render(() => (
       <Icon
         iconNode={airVent}
         size={48}
         stroke="red"
         absoluteStrokeWidth
-      />,
-    );
+      />
+    ));
 
-    expect( container.firstChild ).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
-})
+});

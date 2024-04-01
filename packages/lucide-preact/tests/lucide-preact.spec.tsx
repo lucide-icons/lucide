@@ -15,7 +15,7 @@ describe('Using lucide icon components', () => {
   it('should render the icon with the default attributes', () => {
     const { container } = render(<Grid />);
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
     expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
@@ -37,7 +37,7 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('stroke', 'red');
     expect(SVGElement).toHaveAttribute('width', '48');
@@ -79,7 +79,7 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('stroke', 'red');
     expect(SVGElement).toHaveAttribute('width', '48');

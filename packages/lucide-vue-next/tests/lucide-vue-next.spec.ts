@@ -12,9 +12,9 @@ describe('Using lucide icon components', () => {
   });
 
   it('should render the icon with the default attributes', () => {
-    const { container } = render(Smile)
+    const { container } = render(Smile);
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
     expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
@@ -36,7 +36,7 @@ describe('Using lucide icon components', () => {
       },
     });
 
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('width', '48');
     expect(SVGElement).toHaveAttribute('stroke', 'red');
@@ -54,7 +54,7 @@ describe('Using lucide icon components', () => {
 
     expect(container).toMatchSnapshot();
 
-    const icon = container.firstElementChild
+    const icon = container.firstElementChild;
 
     expect(icon).toHaveClass('my-icon');
     expect(icon).toHaveClass('lucide');
@@ -70,7 +70,7 @@ describe('Using lucide icon components', () => {
 
     expect(container).toMatchSnapshot();
 
-    const icon = container.firstElementChild
+    const icon = container.firstElementChild;
 
     expect(icon).toHaveStyle({ position: 'absolute' });
   });
@@ -83,7 +83,7 @@ describe('Using lucide icon components', () => {
       },
     });
 
-    const icon = container.firstElementChild
+    const icon = container.firstElementChild;
 
     await fireEvent.click(icon);
 
@@ -141,7 +141,7 @@ describe('Using lucide icon components', () => {
       },
     });
 
-    const icon = container.firstElementChild
+    const icon = container.firstElementChild;
 
     expect(icon).toHaveAttribute('width', '48');
     expect(icon).toHaveAttribute('stroke', 'red');

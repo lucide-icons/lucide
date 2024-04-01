@@ -1,10 +1,10 @@
-import { createElement, forwardRef, type FunctionComponent } from "react";
+import { createElement, forwardRef, type FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
-import defaultAttributes, { childDefaultAttributes } from "./defaultAttributes";
-import { IconNode, LucideProps } from "./types";
+import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
+import { IconNode, LucideProps } from './types';
 
 interface IconComponentProps extends LucideProps {
-  iconNode: IconNode
+  iconNode: IconNode;
 }
 
 /**
@@ -66,4 +66,4 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
   },
 );
 
-export default Icon
+export default Icon;

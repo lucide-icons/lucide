@@ -3,7 +3,7 @@ import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './createLucideIcon';
 
 interface IconComponentProps extends LucideProps {
-  iconNode: IconNode
+  iconNode: IconNode;
 }
 
 /**
@@ -44,10 +44,7 @@ const Icon = ({
       class: ['lucide', classes].join(' '),
       ...rest,
     },
-    [
-      ...iconNode.map(([tag, attrs]) => h(tag, attrs)),
-      ...toChildArray(children)
-    ],
+    [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
   );
 
-export default Icon
+export default Icon;

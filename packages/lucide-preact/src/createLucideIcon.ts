@@ -20,11 +20,7 @@ export type LucideIcon = FunctionComponent<LucideProps>;
  * @returns {FunctionComponent} LucideIcon
  */
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
-  const Component = ({
-    class: classes = '',
-    children,
-    ...props
-  }: LucideProps) =>
+  const Component = ({ class: classes = '', children, ...props }: LucideProps) =>
     h(
       Icon,
       {
@@ -32,7 +28,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
         iconNode,
         class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
           `lucide-${toKebabCase(iconName)}`,
-          classes
+          classes,
         ),
       },
       children,
