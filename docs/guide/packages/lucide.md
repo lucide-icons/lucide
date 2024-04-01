@@ -138,8 +138,6 @@ You can use them in the same way as the official icons.
 
 <!-- TODO: Add link to @lucide/lab repo -->
 
-```sh
-
 ```js
 import { burger } from '@lucide/lab';
 

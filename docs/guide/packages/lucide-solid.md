@@ -61,6 +61,29 @@ const App = () => {
 };
 ```
 
+## With Lucide lab or custom icons
+
+Lucide Lab is a collection of icons that are not part of the official lucide library.
+<!-- TODO: Add link to @lucide/lab repo -->
+They can be used by using the `Icon` component.
+All props like the regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-solid';
+import { burger, sausage } from '@lucide/lab';
+
+const App = () => (
+  <>
+    <Icon iconNode={burger} />
+    <Icon iconNode={sausage} color="red"/>
+  </>
+);
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons. It's not recommended.

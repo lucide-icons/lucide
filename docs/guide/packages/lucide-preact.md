@@ -69,12 +69,12 @@ const App = () => {
 
 ## With Lucide lab or custom icons
 
-Lucide lab is a collection of icons that are not part of the official lucide library.
+Lucide Lab is a collection of icons that are not part of the official lucide library.
 <!-- TODO: Add link to @lucide/lab repo -->
 They can be used by using the `useIconComponent` or the `Icon` component.
-For both methods all props like regular lucide icons can be passed to adjust the icon appearance.
+For both methods, all props like regular lucide icons can be passed to adjust the icon appearance.
 
-## Using `useIconComponent`
+### Using `useIconComponent`
 
 This creates multiple icons based on the iconNodes passed in an object and returns an object with components that can be used as Lucide components.
 
@@ -92,7 +92,7 @@ const App = () => (
 );
 ```
 
-## Using the Icon component
+### Using the `Icon` component
 
 This creates a single icon based on the iconNode passed and renders a Lucide icon component.
 
@@ -101,7 +101,7 @@ import { Icon } from 'lucide-preact';
 import { burger } from '@lucide/lab';
 
 const App = () => (
-  <Icon icon={burger} />
+  <Icon iconNode={burger} />
 );
 ```
 

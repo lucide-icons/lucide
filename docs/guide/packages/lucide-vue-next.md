@@ -37,16 +37,16 @@ Each icon can be imported as a Vue component, which renders an inline SVG Elemen
 You can pass additional props to adjust the icon.
 
 ```vue
+<script setup>
+import { Camera } from 'lucide-vue-next';
+</script>
+
 <template>
   <Camera
     color="red"
     :size="32"
   />
 </template>
-
-<script setup>
-import { Camera } from 'lucide-vue-next';
-</script>
 ```
 
 ## Props
@@ -66,6 +66,48 @@ To customize the appearance of an icon, you can pass custom properties as props 
 ```vue
 <template>
   <Camera fill="red" />
+</template>
+```
+
+## With Lucide lab or custom icons
+
+Lucide Lab is a collection of icons that are not part of the official lucide library.
+<!-- TODO: Add link to @lucide/lab repo -->
+They can be used by using the `useIconComponent` or the `Icon` component.
+For both methods, all props like regular lucide icons can be passed to adjust the icon appearance.
+
+### Using `useIconComponent`
+
+This creates multiple icons based on the iconNodes passed in an object and returns an object with components that can be used as Lucide components.
+
+```vue
+<script setup>
+import { useIconComponent } from 'lucide-vue-next';
+import { burger, sausage } from '@lucide/lab';
+
+const { Burger, Pizza } = useIconComponent({ burger, sausage })
+</script>
+
+<template>
+  <Burger fill="red" />
+  <Sausage />
+</template>
+```
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```vue
+<script setup>
+import { Icon } from 'lucide-vue-next';
+import { burger } from '@lucide/lab';
+
+const { Burger, Pizza } = useIconComponent({ burger, sausage })
+</script>
+
+<template>
+  <Icon :iconNode={burger} />
 </template>
 ```
 
