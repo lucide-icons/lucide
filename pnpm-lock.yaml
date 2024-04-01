@@ -781,8 +781,6 @@ importers:
         specifier: ^5.12.0
         version: 5.12.0(rollup@4.9.6)
 
-  tools/test-utils: {}
-
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
