@@ -150,16 +150,15 @@ module.exports = nextConfig
 You can then start using it:
 
 ```tsx
-import dynamic from 'next/dynamic'
 import { LucideProps } from 'lucide-react';
-import dynamicIconImports from 'lucide-react/dynamicIconImports';
+import nextjsDynamicIconImports from 'lucide-react/nextjsDynamicIconImports';
 
 interface IconProps extends LucideProps {
-  name: keyof typeof dynamicIconImports;
+  name: keyof typeof nextjsDynamicIconImports;
 }
 
 const Icon = ({ name, ...props }: IconProps) => {
-  const LucideIcon = dynamic(dynamicIconImports[name])
+  const LucideIcon = nextjsDynamicIconImports[name];
 
   return <LucideIcon {...props} />;
 };

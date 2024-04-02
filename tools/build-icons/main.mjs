@@ -11,6 +11,7 @@ import { readSvgDirectory, getCurrentDirPath } from '../../scripts/helpers.mjs';
 import generateAliasesFile from './building/generateAliasesFile.mjs';
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
+import generateNextJsDynamicImports from './building/generateNextJsDynamicImports.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
@@ -80,6 +81,12 @@ async function buildIcons() {
 
   if (withDynamicImports) {
     generateDynamicImports({
+      iconNodes: icons,
+      outputDirectory: OUTPUT_DIR,
+      fileExtension: aliasesFileExtension,
+      showLog: !silent,
+    });
+    generateNextJsDynamicImports({
       iconNodes: icons,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
