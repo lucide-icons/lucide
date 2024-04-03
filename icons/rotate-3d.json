@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel"
+    "lscheibel",
+    "gurtt"
   ],
   "tags": [
     "gizmo",
     "transform",
     "orientation",
-    "orbit"
+    "orbit",
+    "axis"
   ],
   "categories": [
     "design"
