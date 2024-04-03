@@ -1,15 +1,15 @@
 {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "gurtt"
-    ],
-    "tags": [
-      "pulpit",
-      "podium",
-      "stand"
-    ],
-    "categories": [
-      "coomunication",
-      "multimedia"
-    ]
-  }
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gurtt"
+  ],
+  "tags": [
+    "pulpit",
+    "podium",
+    "stand"
+  ],
+  "categories": [
+    "communication",
+    "multimedia"
+  ]
+}
