@@ -3,12 +3,14 @@
   "contributors": [
     "lscheibel",
     "ericfennis",
-    "jguddas"
+    "jguddas",
+    "gurtt"
   ],
   "tags": [
     "gizmo",
     "transform",
-    "size"
+    "size",
+    "axis"
   ],
   "categories": [
     "design"
