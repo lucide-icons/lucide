@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gooyoung"
+  ],
+  "tags": [
+    "picture",
+    "photo",
+    "frame"
+  ],
+  "categories": [
+    "photography",
+    "text",
+    "multimedia",
+    "files"
+  ]
+}
