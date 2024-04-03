@@ -1,16 +1,15 @@
 {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "gurtt"
-    ],
-    "tags": [
-        "paper",
-        "bird"
-    ],
-    "categories": [
-      "anmimals",
-      "design",
-      "shapes"
-    ]
-  }
-  
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gurtt"
+  ],
+  "tags": [
+    "paper",
+    "bird"
+  ],
+  "categories": [
+    "animals",
+    "design",
+    "shapes"
+  ]
+}
