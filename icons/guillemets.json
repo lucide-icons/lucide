@@ -5,9 +5,13 @@
   ],
   "tags": [
     "quote",
-    "quotation"
+    "quotation",
+    "ditto",
+    "stereotype",
+    "merge"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }
