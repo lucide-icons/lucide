@@ -2,15 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley",
-    "jguddas"
+    "mittalyashu",
+    "ericfennis"
   ],
   "tags": [
-    "readme",
-    "help",
-    "question"
+    "device",
+    "scroll",
+    "click",
+    "disabled"
   ],
   "categories": [
-    "files"
+    "devices"
   ]
 }
