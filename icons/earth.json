@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "global",
+    "world",
+    "earth",
+    "browser",
+    "language",
+    "translate",
+    "geography",
+    "planet",
+    "globe"
+  ],
+  "categories": [
+    "maps",
+    "navigation",
+    "science"
+  ],
+  "aliases": [
+    "globe-2"
+  ]
+}

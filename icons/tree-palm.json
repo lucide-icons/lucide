@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "summer holiday",
+    "vacation",
+    "retreat",
+    "relax",
+    "leisure",
+    "tropical",
+    "island",
+    "beach",
+    "resort",
+    "exotic"
+  ],
+  "categories": [
+    "nature",
+    "travel"
+  ],
+  "aliases": [
+    "palmtree"
+  ]
+}

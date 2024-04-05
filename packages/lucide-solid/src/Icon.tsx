@@ -1,18 +1,8 @@
-import { For, JSX, splitProps } from 'solid-js';
+import { For, splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
-
-/**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
- */
-export const toKebabCase = (string: string) =>
-  string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+import { toKebabCase } from '@lucide/shared';
 
 interface IconProps {
   name: string;
