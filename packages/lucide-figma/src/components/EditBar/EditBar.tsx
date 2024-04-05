@@ -1,5 +1,3 @@
-const EditBar = () => {
+const EditBar = () => {};
 
-}
-
-export default EditBar
+export default EditBar;

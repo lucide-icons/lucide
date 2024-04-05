@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "load"
+  ],
+  "categories": [
+    "multimedia",
+    "layout"
+  ],
+  "aliases": [
+    "loader-2"
+  ]
+}
