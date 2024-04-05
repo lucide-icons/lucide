@@ -177,16 +177,14 @@ All props like the regular Lucide icons can be passed to adjust the icon appeara
 
 This creates a single icon based on the iconNode passed and renders a Lucide icon component.
 
-```jsx
+```svelte
+<script>
 import { Icon } from 'lucide-svelte';
 import { burger, sausage } from '@lucide/lab';
+</script>
 
-const App = () => (
-  <>
-    <Icon iconNode={burger} />
-    <Icon iconNode={sausage} color="red"/>
-  </>
-);
+<Icon iconNode={burger} />
+<Icon iconNode={sausage} color="red"/>
 ```
 
 ## One generic icon component

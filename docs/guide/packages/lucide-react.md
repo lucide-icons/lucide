@@ -66,7 +66,7 @@ const App = () => {
 Lucide Lab is a collection of icons that are not part of the official lucide library.
 <!-- TODO: Add link to @lucide/lab repo -->
 They can be used by using the `Icon` component.
-For both methods, all props like regular lucide icons can be passed to adjust the icon appearance.
+All props like regular lucide icons can be passed to adjust the icon appearance.
 
 ### Using the `Icon` component
 

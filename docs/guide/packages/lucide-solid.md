@@ -77,10 +77,7 @@ import { Icon } from 'lucide-solid';
 import { burger, sausage } from '@lucide/lab';
 
 const App = () => (
-  <>
-    <Icon iconNode={burger} />
-    <Icon iconNode={sausage} color="red"/>
-  </>
+  <Icon iconNode={sausage} color="red"/>
 );
 ```
 
