@@ -65,26 +65,8 @@ const App = () => {
 
 Lucide Lab is a collection of icons that are not part of the official lucide library.
 <!-- TODO: Add link to @lucide/lab repo -->
-They can be used by using the `useIconComponent` or the `Icon` component.
+They can be used by using the `Icon` component.
 For both methods, all props like regular lucide icons can be passed to adjust the icon appearance.
-
-### Using `useIconComponent`
-
-This creates multiple icons based on the iconNodes passed in an object and returns an object with components that can be used as Lucide components.
-
-```jsx
-import { useIconComponent } from 'lucide-react-native';
-import { burger, sausage } from '@lucide/lab';
-
-const { Burger, Pizza } = useIconComponent({ burger, sausage })
-
-const App = () => (
-  <>
-    <Burger fill="red" />
-    <Sausage />
-  </>
-);
-```
 
 ### Using the `Icon` component
 
