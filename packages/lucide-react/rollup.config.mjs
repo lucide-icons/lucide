@@ -1,4 +1,4 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' assert { type: 'json' };
 import dts from 'rollup-plugin-dts';
 import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
@@ -62,7 +62,7 @@ const configs = bundles
     }) =>
       inputs.map((input) => ({
         input,
-        plugins: plugins(pkg, minify),
+        plugins: plugins({ pkg, minify }),
         external: ['react', 'prop-types', ...external],
         output: {
           name: packageName,
@@ -80,6 +80,7 @@ const configs = bundles
           format,
           sourcemap: true,
           preserveModules,
+          preserveModulesRoot: 'src',
           globals: {
             react: 'react',
             'prop-types': 'PropTypes',
