@@ -122,7 +122,7 @@ ${
 `
 }
 Only working for:
-`lucide-react`, `lucide-react-native`, `lucide-preact`, `lucide-vue-next`
+\`lucide-react\`, \`lucide-react-native\`, \`lucide-preact\`, \`lucide-vue-next\`
 \`\`\`ts
 ${readyToUseCode}
 \`\`\`${readyToUseCode.split('/n').length < 20 ? '' : '\n\n</details>'}

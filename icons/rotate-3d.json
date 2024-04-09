@@ -7,7 +7,8 @@
     "gizmo",
     "transform",
     "orientation",
-    "orbit"
+    "orbit",
+    "axis"
   ],
   "categories": [
     "design"
