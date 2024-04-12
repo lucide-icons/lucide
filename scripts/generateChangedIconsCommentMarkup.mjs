@@ -1,6 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import { shuffle, readSvgDirectory, getCurrentDirPath, minifySvg } from './helpers.mjs';
+import { parseSync } from 'svgson';
+import {
+  shuffle,
+  readSvgDirectory,
+  getCurrentDirPath,
+  minifySvg,
+  toPascalCase,
+} from './helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -70,6 +77,18 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
   400,
 ).join(' ');
 
+const readyToUseCode = changedFiles
+  .map((changedFile) => {
+    const svgContent = fs.readFileSync(path.join(process.cwd(), changedFile), 'utf-8');
+    const name = path.basename(changedFile, '.svg');
+    return `const ${toPascalCase(name)}Icon = createLucideIcon('${toPascalCase(name)}', [
+  ${parseSync(svgContent)
+    .children.map(({ name, attributes }) => JSON.stringify([name, attributes]))
+    .join(',\n  ')}
+])`;
+  })
+  .join('\n\n');
+
 const commentMarkup = `\
 ### Added or changed icons
 ${changeFiles2pxStrokeImageTags}
@@ -93,6 +112,20 @@ ${changeFilesLowDPIImageTags}<br/>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
 </details>
+
+${
+  // collapse code block if it's too long
+  readyToUseCode.split('/n').length < 20
+    ? '### Icons as code'
+    : `<details>
+<summary><h3>Icons as code</h3></summary>
+`
+}
+Only working for:
+\`lucide-react\`, \`lucide-react-native\`, \`lucide-preact\`, \`lucide-vue-next\`
+\`\`\`ts
+${readyToUseCode}
+\`\`\`${readyToUseCode.split('/n').length < 20 ? '' : '\n\n</details>'}
 `;
 
 console.log(commentMarkup);
