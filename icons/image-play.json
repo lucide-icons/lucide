@@ -2,22 +2,19 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis",
     "karsa-mistmere",
+    "ericfennis",
     "jguddas"
   ],
   "tags": [
-    "drink",
-    "cup",
-    "mug",
-    "tea",
-    "cafe",
-    "hot",
-    "beverage"
+    "picture",
+    "gif",
+    "photo"
   ],
   "categories": [
-    "food-beverage"
+    "photography",
+    "text",
+    "multimedia",
+    "files"
   ]
 }
