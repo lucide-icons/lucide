@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kdsaft"
+  ],
+  "tags": [
+    "clip",
+    "marker",
+    "tag",
+    "remove",
+    "delete",
+    "minus"
+  ],
+  "categories": [
+    "account"
+  ]
+}
