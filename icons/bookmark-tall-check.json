@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kdsaft"
+  ],
+  "tags": [
+    "read",
+    "finished",
+    "complete",
+    "clip",
+    "clipped",
+    "marker",
+    "tag",
+    "tagged",
+    "task",
+    "todo"
+  ],
+  "categories": [
+    "account"
+  ]
+}
