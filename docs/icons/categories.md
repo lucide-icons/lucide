@@ -10,7 +10,6 @@ import { data } from './icons.data.ts'
 import { data as categoriesData } from './categories.data.ts'
 import PageContainer from '../.vitepress/theme/components/PageContainer.vue'
 import IconsCategoryOverview from '../.vitepress/theme/components/icons/IconsCategoryOverview.vue'
-
 </script>
 
 <div class="VPDoc content">

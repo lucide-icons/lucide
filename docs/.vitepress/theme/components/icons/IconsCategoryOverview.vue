@@ -12,6 +12,7 @@ import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
 import { CategoryRow } from './IconsCategory.vue';
 import useScrollToCategory from '../../composables/useScrollToCategory';
+import CarbonAdOverlay from './CarbonAdOverlay.vue';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -133,6 +134,12 @@ function onFocusSearchInput() {
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
+
+function handleCloseDrawer() {
+  setActiveIconName('');
+
+  window.history.pushState({}, '', '/icons/categories');
+}
 </script>
 
 <template>
@@ -164,8 +171,10 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
   <IconDetailOverlay
     v-if="activeIconName != null"
     :iconName="activeIconName"
-    @close="setActiveIconName('')"
+    @close="handleCloseDrawer"
   />
+
+  <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
 
 <style scoped>
