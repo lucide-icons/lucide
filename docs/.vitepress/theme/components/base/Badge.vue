@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-
 import { useRouter } from 'vitepress';
 
 const { go } = useRouter()
