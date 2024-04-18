@@ -112,20 +112,13 @@ ${changeFilesLowDPIImageTags}<br/>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
 </details>
+<summary>Icons as code</summary>
 
-${
-  // collapse code block if it's too long
-  readyToUseCode.split('/n').length < 20
-    ? '### Icons as code'
-    : `<details>
-<summary><h3>Icons as code</h3></summary>
-`
-}
-Only working for:
-\`lucide-react\`, \`lucide-react-native\`, \`lucide-preact\`, \`lucide-vue-next\`
+Works for: \`lucide-react\`, \`lucide-react-native\`, \`lucide-preact\`, \`lucide-vue-next\`
 \`\`\`ts
 ${readyToUseCode}
-\`\`\`${readyToUseCode.split('/n').length < 20 ? '' : '\n\n</details>'}
-`;
+\`\`\`
+
+</details>`;
 
 console.log(commentMarkup);
