@@ -1,18 +1,20 @@
 name: Close stale issues and PR
 on:
   schedule:
-    - cron: "45 1 * * *"
+    - cron: '45 1 * * *'
 
 jobs:
   stale:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
-      - uses: actions/stale@v3
+      - uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-pr-message: This PR is stale because it has been open 45 days with no activity. Remove stale label or comment or this will be closed in 5 days.
           close-pr-message: This PR was closed because it has been stalled for 5 days with no activity.
           close-pr-label: 🧶 stale
           days-before-stale: 30
-          days-before-close: 5
-          days-before-pr-close: -1
+          days-before-issue-stale: -1
+          days-before-close: -1

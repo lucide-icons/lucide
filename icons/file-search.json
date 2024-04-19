@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "lost",

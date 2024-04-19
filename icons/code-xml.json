@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "mittalyashu"
+  ],
+  "tags": [
+    "source",
+    "programming",
+    "html",
+    "xml"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ],
+  "aliases": [
+    "code-2"
+  ]
+}

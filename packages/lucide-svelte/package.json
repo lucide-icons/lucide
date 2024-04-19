@@ -12,7 +12,7 @@
   },
   "keywords": [
     "Lucide",
-    "Angular",
+    "Svelte",
     "Feather",
     "Icons",
     "Icon",
@@ -50,7 +50,7 @@
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --withAliases --aliasesFileExtension=.ts --aliasImportFileExtension=.svelte --pretty=false",
     "build:package": "svelte-package --input ./src",
-    "build:license": "node ./scripts/addLicense.mjs",
+    "build:license": "node ./scripts/appendBlockComments.mjs",
     "test": "vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
@@ -61,15 +61,16 @@
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/svelte": "^4.0.2",
     "@tsconfig/svelte": "^5.0.0",
+    "jest-serializer-html": "^7.1.0",
     "jsdom": "^20.0.3",
     "svelte": "^4.0.1",
     "svelte-check": "^3.4.4",
     "svelte-preprocess": "^5.0.4",
     "typescript": "^5.1.6",
-    "vite": "^4.4.12",
-    "vitest": "^0.32.2"
+    "vite": "5.0.13",
+    "vitest": "^1.1.1"
   },
   "peerDependencies": {
-    "svelte": ">=3 <5"
+    "svelte": "^3 || ^4 || ^5.0.0-next.42"
   }
 }

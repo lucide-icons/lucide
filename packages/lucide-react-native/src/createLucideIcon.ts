@@ -1,20 +1,38 @@
-import { forwardRef, createElement, ReactSVG, ReactNode, FunctionComponent } from 'react';
-import PropTypes from 'prop-types';
+import {
+  forwardRef,
+  createElement,
+  ReactSVG,
+  FunctionComponent,
+  ForwardRefExoticComponent,
+} from 'react';
 import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
 import type { SvgProps } from 'react-native-svg';
-type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
 
+export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][];
 
 export interface LucideProps extends SvgProps {
-  size?: string | number
-  absoluteStrokeWidth?: boolean
-  'data-testid'?: string
+  size?: string | number;
+  absoluteStrokeWidth?: boolean;
+  'data-testid'?: string;
 }
 
-const createLucideIcon = (iconName: string, iconNode: IconNode) => {
+export type LucideIcon = ForwardRefExoticComponent<LucideProps>;
+
+const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = forwardRef(
-    ({ color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, 'data-testid': dataTestId, ...rest }: LucideProps, ref) => {
+    (
+      {
+        color = 'currentColor',
+        size = 24,
+        strokeWidth = 2,
+        absoluteStrokeWidth,
+        children,
+        'data-testid': dataTestId,
+        ...rest
+      }: LucideProps,
+      ref,
+    ) => {
       const customAttrs = {
         stroke: color,
         strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
@@ -37,23 +55,15 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
               tag.slice(1)) as keyof typeof NativeSvg;
             // duplicating the attributes here because generating the OTA update bundles don't inherit the SVG properties from parent (codepush, expo-updates)
             return createElement(
-              NativeSvg[upperCasedTag] as FunctionComponent<Record<string, string>>,
-              { ...childDefaultAttributes, ...customAttrs, ...attrs },
+              NativeSvg[upperCasedTag] as FunctionComponent<LucideProps>,
+              { ...childDefaultAttributes, ...customAttrs, ...attrs } as LucideProps,
             );
           }),
-          ...(
-            (Array.isArray(children) ? children : [children]) || []
-          ),
+          ...((Array.isArray(children) ? children : [children]) || []),
         ],
       );
-    }
+    },
   );
-
-  Component.propTypes = {
-    color: PropTypes.string,
-    size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  };
 
   Component.displayName = `${iconName}`;
 

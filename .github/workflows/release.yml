@@ -41,23 +41,24 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package: [
-          'lucide',
-          'lucide-react',
-          'lucide-react-native',
-          'lucide-vue',
-          'lucide-vue-next',
-          'lucide-angular',
-          'lucide-preact',
-          'lucide-solid',
-          'lucide-svelte',
-        ]
+        package:
+          [
+            'lucide',
+            'lucide-react',
+            'lucide-react-native',
+            'lucide-vue',
+            'lucide-vue-next',
+            'lucide-angular',
+            'lucide-preact',
+            'lucide-solid',
+            'lucide-svelte',
+          ]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
@@ -85,12 +86,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: [pre-release, lucide-font]
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v3
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
@@ -118,11 +119,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-release
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
@@ -136,8 +137,8 @@ jobs:
       - name: Create font in ./lucide-font
         run: pnpm build:font
 
-      - name: "Upload to Artifacts"
-        uses: actions/upload-artifact@v1
+      - name: 'Upload to Artifacts'
+        uses: actions/upload-artifact@v3
         with:
           name: lucide-font
           path: lucide-font
@@ -145,14 +146,11 @@ jobs:
   post-release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [
-      pre-release,
-      lucide-font,
-    ]
+    needs: [pre-release, lucide-font]
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v3
       - name: Zip font and icons
         run: |
           zip -r lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip lucide-font

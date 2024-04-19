@@ -1,10 +1,14 @@
 {
-    "$schema": "../icon.schema.json",
-    "tags": [
-      "flag",
-      "bullseye"
-    ],
-    "categories": [
-      "gaming"
-    ]
-  }
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "guillermo-angeles",
+    "jguddas"
+  ],
+  "tags": [
+    "flag",
+    "bullseye"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}

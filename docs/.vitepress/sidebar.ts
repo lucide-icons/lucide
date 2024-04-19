@@ -1,31 +1,31 @@
-import { DefaultTheme, UserConfig } from "vitepress"
+import { DefaultTheme, UserConfig } from 'vitepress';
 
 const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
-  'guide':[
+  guide: [
     {
       text: 'Introduction',
       items: [
         { text: 'What is lucide?', link: '/guide/' },
         { text: 'Installation', link: '/guide/installation' },
-        { text: 'Comparison', link: '/guide/comparison' }
-      ]
+        { text: 'Comparison', link: '/guide/comparison' },
+      ],
     },
     {
       text: 'Basics',
       items: [
         {
           text: 'Color',
-          link: '/guide/basics/color'
+          link: '/guide/basics/color',
         },
         {
           text: 'Sizing',
-          link: '/guide/basics/sizing'
+          link: '/guide/basics/sizing',
         },
         {
           text: 'Stroke width',
-          link: '/guide/basics/stroke-width'
+          link: '/guide/basics/stroke-width',
         },
-      ]
+      ],
     },
     // TODO: Add this section
     {
@@ -37,14 +37,14 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         // },
         {
           text: 'Global styling',
-          link: '/guide/advanced/global-styling'
+          link: '/guide/advanced/global-styling',
         },
         // {
         //   text: 'Animations',
         // },
         {
           text: 'Filled icons',
-          link: '/guide/advanced/filled-icons'
+          link: '/guide/advanced/filled-icons',
         },
         // {
         //   text: 'Combining icons',
@@ -55,83 +55,73 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         // {
         //   text: 'Auto importing'
         // },
-      ]
+      ],
     },
     {
       text: 'Packages',
       items: [
         {
           text: 'Lucide',
-          link: '/guide/packages/lucide'
+          link: '/guide/packages/lucide',
         },
         {
           text: 'Lucide React',
-          link: '/guide/packages/lucide-react'
+          link: '/guide/packages/lucide-react',
         },
         {
           text: 'Lucide React Native',
-          link: '/guide/packages/lucide-react-native'
+          link: '/guide/packages/lucide-react-native',
         },
         {
           text: 'Lucide Vue',
-          link: '/guide/packages/lucide-vue'
-        },
-        {
-          text: 'Lucide Vue Next (Vue 3)',
-          link: '/guide/packages/lucide-vue-next'
+          link: '/guide/packages/lucide-vue-next',
         },
         {
           text: 'Lucide Svelte',
-          link: '/guide/packages/lucide-svelte'
+          link: '/guide/packages/lucide-svelte',
         },
         {
           text: 'Lucide Solid',
-          link: '/guide/packages/lucide-solid'
+          link: '/guide/packages/lucide-solid',
         },
         {
           text: 'Lucide Preact',
-          link: '/guide/packages/lucide-preact'
+          link: '/guide/packages/lucide-preact',
         },
         {
           text: 'Lucide Angular',
-          link: '/guide/packages/lucide-angular'
+          link: '/guide/packages/lucide-angular',
         },
         {
           text: 'Lucide Static',
-          link: '/guide/packages/lucide-static'
+          link: '/guide/packages/lucide-static',
         },
-        {
-          text: 'Lucide Flutter',
-          link: '/guide/packages/lucide-flutter'
-        },
-      ]
+      ],
     },
     {
       text: 'Contributing',
       items: [
         {
           text: 'Icon Design Principles',
-          link: '/guide/design/icon-design-guide'
+          link: '/guide/design/icon-design-guide',
         },
         {
           text: 'Designing in Illustrator',
-          link: '/guide/design/illustrator-guide'
+          link: '/guide/design/illustrator-guide',
         },
         {
           text: 'Designing in InkScape',
-          link:  '/guide/design/inkscape-guide'
+          link: '/guide/design/inkscape-guide',
         },
         {
           text: 'Designing in Figma',
-          link: '/guide/design/figma-guide'
+          link: '/guide/design/figma-guide',
         },
-      ]
+      ],
     },
   ],
   // This should be here to keep the sidebar shown on the icons page
-  'icons': [
-    { text: '', link: '/' },
-  ],
-}
+  icons: [{ text: '', link: '/' }],
+};
 
-export default sidebar
+export default sidebar;

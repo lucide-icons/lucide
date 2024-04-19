@@ -1,12 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "music",
     "audio",
-    "sound",    
+    "sound",
     "noise",
     "notes",
     "keys",

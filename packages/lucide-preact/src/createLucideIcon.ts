@@ -1,37 +1,44 @@
-import { ComponentType, FunctionComponent, h, JSX, RefObject, toChildArray } from 'preact';
+import { type FunctionComponent, h, type JSX, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
+import { toKebabCase } from '@lucide/shared';
 
-type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
+export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][];
 
-interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
-  color?: string
-  size?: string | number
-  strokeWidth?: string | number
-  absoluteStrokeWidth?: boolean
+export interface LucideProps extends Partial<Omit<JSX.SVGAttributes, 'ref' | 'size'>> {
+  color?: string;
+  size?: string | number;
+  strokeWidth?: string | number;
+  absoluteStrokeWidth?: boolean;
 }
 
-/**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
- */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+export type LucideIcon = FunctionComponent<LucideProps>;
 
-const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionComponent<LucideProps> => {
-  const Component = (
-    { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, class: classes = '', ...rest }: LucideProps
-  ) =>
+/**
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {FunctionComponent} LucideIcon
+ */
+const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
+  const Component = ({
+    color = 'currentColor',
+    size = 24,
+    strokeWidth = 2,
+    absoluteStrokeWidth,
+    children,
+    class: classes = '',
+    ...rest
+  }: LucideProps) =>
     h(
       'svg',
       {
         ...defaultAttributes,
-        width:  String(size),
+        width: String(size),
         height: size,
         stroke: color,
-        ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
+        ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth
+          ? (Number(strokeWidth) * 24) / Number(size)
+          : strokeWidth,
         class: ['lucide', `lucide-${toKebabCase(iconName)}`, classes].join(' '),
         ...rest,
       },
@@ -43,4 +50,4 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionCompone
   return Component;
 };
 
-export default createLucideIcon
+export default createLucideIcon;
