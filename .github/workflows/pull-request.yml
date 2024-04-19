@@ -39,21 +39,26 @@ jobs:
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
+
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v41
         with:
           files: icons/*
+
       - uses: actions/setup-node@v4
       - uses: pnpm/action-setup@v2
+
       - name: Install simple-git (safer and faster than installing all deps)
         run: pnpm install simple-git
+
       - name: Generate annotations
         run: node ./scripts/updateContributors.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
@@ -97,6 +102,7 @@ jobs:
 
       - uses: actions/setup-node@v4
       - uses: pnpm/action-setup@v2
+
       - name: Install svgson for code preview (safer and faster than installing all deps)
         run: pnpm install svgson
 
