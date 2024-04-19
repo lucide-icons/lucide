@@ -1,7 +1,7 @@
 import { optimize } from 'svgo';
 import * as prettier from 'prettier';
 import { parseSync, stringify } from 'svgson';
-import DEFAULT_ATTRS from './default-attrs.json' assert { type: 'json' };
+import DEFAULT_ATTRS from '@lucide/build-icons/render/default-attrs.json' assert { type: 'json' };
 
 /**
  * Optimize SVG with `svgo`.

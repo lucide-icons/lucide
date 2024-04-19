@@ -51,7 +51,7 @@ const getRelatedIcons = (currentIcon, icons) => {
 
 const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  const metaData = await import(`../icons/${iconName}`, {
+  const metaData = await import(`../../icons/${iconName}`, {
     assert: { type: 'json' },
   });
 

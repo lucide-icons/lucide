@@ -1,5 +1,5 @@
 import path from 'path';
-import { getCurrentDirPath } from '../helpers.mjs';
+import { getCurrentDirPath } from '@lucide/build-helpers';
 import { renameIcon } from './renameIcon.function.mjs';
 
 async function main() {

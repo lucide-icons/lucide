@@ -1,8 +1,8 @@
 import path from 'path';
-import { getCurrentDirPath, readSvgDirectory } from '../helpers.mjs';
-import { renameIcon } from './renameIcon.function.mjs';
+import { getCurrentDirPath, readSvgDirectory } from '@lucide/build-helpers';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
+import { renameIcon } from './renameIcon.function.mjs';
 
 async function main() {
   const currentDir = getCurrentDirPath(import.meta.url);
@@ -38,7 +38,7 @@ async function main() {
     process.exit(1);
   }
 
-  for (let oldName of iconNames.filter((name) => pattern.test(name))) {
+  for (const oldName of iconNames.filter((name) => pattern.test(name))) {
     const newName = oldName.replaceAll(pattern, replacement);
     console.log(`Renaming ${oldName} => ${newName}`);
 

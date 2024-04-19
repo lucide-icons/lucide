@@ -40,6 +40,8 @@
     "renamePattern": "node scripts/rename/renamePattern.mjs"
   },
   "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/build-helpers": "workspace:*",
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",

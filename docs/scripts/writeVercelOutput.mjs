@@ -1,8 +1,8 @@
 import path from 'path';
 import fs from 'fs';
-// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
-import getIconMetaData from '../tools/build-icons/utils/getIconMetaData.mjs';
-import { getCurrentDirPath } from './helpers.mjs';
+/* eslint-disable import/no-extraneous-dependencies */
+import { getIconMetaData } from '@lucide/build-icons';
+import { getCurrentDirPath } from '@lucide/build-helpers';
 
 const currentDir = process.cwd();
 const scriptDir = getCurrentDirPath(import.meta.url);

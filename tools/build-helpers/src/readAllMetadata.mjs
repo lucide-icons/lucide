@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { readMetadata } from './readMetadata.mjs';
 
 /**
  * Reads metadata from the icons/categories directories

@@ -16,6 +16,12 @@ importers:
       '@html-eslint/parser':
         specifier: ^0.19.1
         version: 0.19.1
+      '@lucide/build-helpers':
+        specifier: workspace:*
+        version: link:tools/build-helpers
+      '@lucide/build-icons':
+        specifier: workspace:*
+        version: link:tools/build-icons
       '@octokit/rest':
         specifier: ^19.0.13
         version: 19.0.13
@@ -167,6 +173,9 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../tools/build-icons
+      '@lucide/shared':
+        specifier: workspace:*
+        version: link:../packages/shared
       '@rollup/plugin-replace':
         specifier: ^5.0.2
         version: 5.0.2
@@ -10572,10 +10581,6 @@ packages:
     resolution: {integrity: sha512-mWYvfOLrfEc996hlKcdABeIiPHUPC6DM2QYZdGGOvhOTbA3tjm2eBwqlJpoFdjC89NI4Qt6h0Pu06Mp+1Pj5OQ==}
     dev: true
 
-  /cookie-es@1.1.0:
-    resolution: {integrity: sha512-L2rLOcK0wzWSfSDA33YR+PUHDG10a8px7rUHKWbGLP4YfbsMed2KFUw5fczvDPbT98DDe3LEzviswl810apTEw==}
-    dev: true
-
   /cookie-signature@1.0.6:
     resolution: {integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==}
     dev: true
@@ -10727,15 +10732,6 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  /crossws@0.2.4:
-    resolution: {integrity: sha512-DAxroI2uSOgUKLz00NX6A8U/8EE3SZHmIND+10jkVSaypvyt57J5JEOxAQOL6lQxyzi/wZbTIwssU1uy69h5Vg==}
-    peerDependencies:
-      uWebSockets.js: '*'
-    peerDependenciesMeta:
-      uWebSockets.js:
-        optional: true
-    dev: true
 
   /css-blank-pseudo@3.0.3(postcss@8.4.27):
     resolution: {integrity: sha512-VS90XWtsHGqoM0t4KpH053c4ehxZ2E6HtGI7x68YFV0pTo/QmkV/YFA+NnlvK8guxZVNWGQhVNJGC39Q8XF4OQ==}
@@ -13512,10 +13508,10 @@ packages:
     dependencies:
       cookie-es: 1.0.0
       defu: 6.1.4
-      destr: 2.0.2
-      iron-webcrypto: 1.0.0
+      destr: 2.0.3
+      iron-webcrypto: 1.1.0
       ohash: 1.1.3
-      radix3: 1.1.0
+      radix3: 1.1.2
       ufo: 1.4.0
       uncrypto: 0.1.3
       unenv: 1.9.0
@@ -16424,7 +16420,7 @@ packages:
       consola: 3.2.3
       cookie-es: 1.0.0
       defu: 6.1.4
-      destr: 2.0.2
+      destr: 2.0.3
       dot-prop: 8.0.2
       esbuild: 0.19.12
       escape-string-regexp: 5.0.0
@@ -16453,7 +16449,7 @@ packages:
       perfect-debounce: 1.0.0
       pkg-types: 1.0.3
       pretty-bytes: 6.1.1
-      radix3: 1.1.0
+      radix3: 1.1.2
       rollup: 4.9.6
       rollup-plugin-visualizer: 5.12.0(rollup@4.9.6)
       scule: 1.3.0
@@ -16482,7 +16478,6 @@ packages:
       - encoding
       - idb-keyval
       - supports-color
-      - uWebSockets.js
     dev: true
 
   /no-case@3.0.4:
@@ -16954,7 +16949,7 @@ packages:
   /ofetch@1.3.3:
     resolution: {integrity: sha512-s1ZCMmQWXy4b5K/TW9i/DtiN8Ku+xCiHcjQ6/J/nDdssirrQNOoB165Zu8EqLMA2lln1JUth9a0aW9Ap2ctrUg==}
     dependencies:
-      destr: 2.0.2
+      destr: 2.0.3
       node-fetch-native: 1.6.2
       ufo: 1.4.0
     dev: true
@@ -18485,7 +18480,7 @@ packages:
     resolution: {integrity: sha512-lNeOl38Ws0eNxpO3+wD1I9rkHGQyj1NU1jlzv4go2CtEnEQEUfqnIvZG7W+bC/aXdJ27n5x/yUjb6RoT9tko+Q==}
     dependencies:
       defu: 6.1.4
-      destr: 2.0.2
+      destr: 2.0.3
       flat: 5.0.2
     dev: true
 
@@ -21407,7 +21402,7 @@ packages:
     dependencies:
       anymatch: 3.1.3
       chokidar: 3.5.3
-      destr: 2.0.2
+      destr: 2.0.3
       h3: 1.10.1
       ioredis: 5.3.2
       listhen: 1.5.5
