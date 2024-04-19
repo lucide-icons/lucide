@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 /* eslint-disable import/no-extraneous-dependencies */
 import { getIconMetaData } from '@lucide/build-icons';
-import { getCurrentDirPath } from '@lucide/build-helpers';
+import { getCurrentDirPath } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const scriptDir = getCurrentDirPath(import.meta.url);

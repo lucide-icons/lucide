@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { simpleGit } from 'simple-git';
 import semver from 'semver';
-import { readSvgDirectory } from '@lucide/build-helpers';
+import { readSvgDirectory } from '@lucide/helpers';
 
 const DATE_OF_FORK = '2020-06-08T16:39:52+0100';
 

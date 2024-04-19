@@ -6,7 +6,7 @@ import {
   writeFile,
   mergeArrays,
   getCurrentDirPath,
-} from '@lucide/build-helpers';
+} from '@lucide/helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');

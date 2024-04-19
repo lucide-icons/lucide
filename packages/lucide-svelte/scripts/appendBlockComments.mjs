@@ -1,7 +1,7 @@
 import { lstatSync } from 'fs';
 import { readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
-import { getCurrentDirPath } from '@lucide/build-helpers';
+import { getCurrentDirPath } from '@lucide/helpers';
 import { getJSBanner } from './license.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);

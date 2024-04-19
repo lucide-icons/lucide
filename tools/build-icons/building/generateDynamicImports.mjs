@@ -1,5 +1,5 @@
 import path from 'path';
-import { resetFile, appendFile } from '@lucide/build-helpers';
+import { resetFile, appendFile } from '@lucide/helpers';
 
 export default function generateDynamicImports({
   iconNodes,

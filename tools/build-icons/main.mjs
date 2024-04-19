@@ -7,7 +7,7 @@ import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import { readSvgDirectory, getCurrentDirPath } from '@lucide/build-helpers';
+import { readSvgDirectory, getCurrentDirPath } from '@lucide/helpers';
 import generateAliasesFile from './building/generateAliasesFile.mjs';
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';

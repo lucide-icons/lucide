@@ -25,7 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
-    "@lucide/build-helpers": "workspace:*",
+    "@lucide/helpers": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-replace": "^5.0.2",
     "@types/semver": "^7.5.3",

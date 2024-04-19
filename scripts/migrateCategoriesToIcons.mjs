@@ -1,6 +1,6 @@
 import path from 'path';
 import categories from '../categories.json' assert { type: 'json' };
-import { mergeArrays, writeFile, readAllMetadata, getCurrentDirPath } from '@lucide/build-helpers';
+import { mergeArrays, writeFile, readAllMetadata, getCurrentDirPath } from '@lucide/helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');

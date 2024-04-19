@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import { readSvgDirectory, writeSvgFile } from '@lucide/helpers';
 import processSvg from './render/processSvg.mjs';
-import { readSvgDirectory, writeSvgFile } from '@lucide/build-helpers';
 
 const ICONS_DIR = path.resolve(process.cwd(), 'icons');
 

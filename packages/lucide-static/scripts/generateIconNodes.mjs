@@ -1,4 +1,4 @@
-import { writeFile } from '@lucide/build-helpers';
+import { writeFile } from '@lucide/helpers';
 
 export default function generateIconNodes(parsedSvgs, packageDir) {
   const iconNodes = parsedSvgs.reduce((acc, { name, parsedSvg }) => {

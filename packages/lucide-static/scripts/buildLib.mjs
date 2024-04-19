@@ -4,7 +4,7 @@ import path from 'path';
 import getArgumentOptions from 'minimist';
 import { parseSync } from 'svgson';
 
-import { readSvgDirectory, getCurrentDirPath } from '@lucide/build-helpers';
+import { readSvgDirectory, getCurrentDirPath } from '@lucide/helpers';
 import readSvgs from './readSvgs.mjs';
 import generateSprite from './generateSprite.mjs';
 import generateIconNodes from './generateIconNodes.mjs';

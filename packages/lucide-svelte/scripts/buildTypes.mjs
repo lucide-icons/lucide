@@ -7,7 +7,7 @@ import {
   resetFile,
   toPascalCase,
   getCurrentDirPath,
-} from '@lucide/build-helpers';
+} from '@lucide/helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const targetDirectory = path.join(currentDir, '../dist');

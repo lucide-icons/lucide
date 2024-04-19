@@ -16,7 +16,7 @@ importers:
       '@html-eslint/parser':
         specifier: ^0.19.1
         version: 0.19.1
-      '@lucide/build-helpers':
+      '@lucide/helpers':
         specifier: workspace:*
         version: link:tools/build-helpers
       '@lucide/build-icons':
@@ -167,7 +167,7 @@ importers:
         specifier: ^3.4.13
         version: 3.4.18(typescript@4.9.5)
     devDependencies:
-      '@lucide/build-helpers':
+      '@lucide/helpers':
         specifier: workspace:*
         version: link:../tools/build-helpers
       '@lucide/build-icons':
@@ -703,7 +703,7 @@ importers:
 
   tools/build-icons:
     dependencies:
-      '@lucide/build-helpers':
+      '@lucide/helpers':
         specifier: ^1.0.0
         version: link:../build-helpers
       minimist:
