@@ -11,7 +11,7 @@ export const readAllMetadata = (directory) =>
   fs
     .readdirSync(directory)
     .filter((file) => path.extname(file) === '.json')
-    .reduce((acc, fileName, i) => {
+    .reduce((acc, fileName) => {
       acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
       return acc;
     }, {});

@@ -1,0 +1,14 @@
+/**
+ * Minifies SVG
+ *
+ * @param {string} string
+ * @returns string
+ */
+export function minifySvg(string) {
+  return string
+    ? string
+        .replace(/>[\r\n ]+</g, '><')
+        .replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
+        .trim()
+    : '';
+}
