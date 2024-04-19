@@ -3,20 +3,19 @@ import fs from 'fs';
 import path from 'path';
 import getArgumentOptions from 'minimist';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { readSvgDirectory } from '@lucide/helpers';
 import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import { readSvgDirectory, getCurrentDirPath } from '@lucide/helpers';
 import generateAliasesFile from './building/generateAliasesFile.mjs';
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
-const currentDir = getCurrentDirPath(import.meta.url);
-
-const ICONS_DIR = path.resolve(currentDir, '../../icons');
+const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {

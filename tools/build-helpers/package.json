@@ -2,9 +2,9 @@
   "name": "@lucide/helpers",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "A internal used package with helpers.",
   "main": "main.mjs",
-  "module": "main.mjs",
+  "types": "module",
   "author": "",
   "license": "ISC",
   "type": "module"
