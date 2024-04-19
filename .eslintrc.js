@@ -7,20 +7,12 @@ module.exports = {
     node: true,
   },
   extends: ['airbnb-base', 'prettier'],
-  plugins: ['import', 'prettier', '@html-eslint'],
+  plugins: ['import', '@html-eslint'],
   rules: {
     'no-console': 'off',
     'no-param-reassign': 'off',
     'no-shadow': 'off',
     'no-use-before-define': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-        printWidth: 100
-      },
-    ],
     'import/no-extraneous-dependencies': [
       'error',
       { devDependencies: ['**/*.test.js', '**/*.spec.js', './scripts/**'] },
@@ -37,7 +29,7 @@ module.exports = {
   },
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./site/tsconfig.json', './packages/*/tsconfig.json'],
+    project: ['./docs/tsconfig.json', './packages/*/tsconfig.json'],
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -46,17 +38,19 @@ module.exports = {
       files: ['./icons/*.svg'],
       parser: '@html-eslint/parser',
       rules: {
-        'prettier/prettier': 'off',
         '@html-eslint/require-doctype': 'off',
         '@html-eslint/no-duplicate-attrs': 'error',
         '@html-eslint/no-inline-styles': 'error',
         '@html-eslint/require-attrs': [
-           'error',
-             ...Object.entries(DEFAULT_ATTRS)
-               .map(([attr, value]) => ({ tag: 'svg', attr, value: String(value) }))
+          'error',
+          ...Object.entries(DEFAULT_ATTRS).map(([attr, value]) => ({
+            tag: 'svg',
+            attr,
+            value: String(value),
+          })),
         ],
         '@html-eslint/indent': ['error', 2],
-        "@html-eslint/no-multiple-empty-lines": ["error", { "max": 0 }],
+        '@html-eslint/no-multiple-empty-lines': ['error', { max: 0 }],
         '@html-eslint/no-extra-spacing-attrs': [
           'error',
           {
@@ -73,7 +67,7 @@ module.exports = {
         '@html-eslint/element-newline': 'error',
         '@html-eslint/no-trailing-spaces': 'error',
         '@html-eslint/quotes': 'error',
-      }
+      },
     },
   ],
 };

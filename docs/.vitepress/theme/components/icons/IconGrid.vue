@@ -4,7 +4,7 @@ import IconItem from './IconItem.vue'
 
 const emit = defineEmits(['setActiveIcon'])
 
-const props = defineProps<{
+defineProps<{
   icons: IconEntity[]
   activeIcon?: string
   overlayMode?: boolean
@@ -19,7 +19,11 @@ function setActiveIcon(name: string) {
 
 <template>
   <div class="icons">
-    <div class="icon" v-for="icon in icons" :key="icon.name">
+    <div
+      class="icon"
+      v-for="icon in icons"
+      :key="icon.name"
+    >
       <IconItem
         v-bind="icon"
         @setActiveIcon="setActiveIcon(icon.name)"
@@ -36,7 +40,6 @@ function setActiveIcon(name: string) {
 .icons {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
-  /* padding: 32px 32px 96px; */
   gap: 8px;
   width: 100%;
 }

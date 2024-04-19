@@ -1,6 +1,9 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": ["danielbayley"],
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
   "tags": [
     "unshielded",
     "cybersecurity",

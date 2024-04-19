@@ -29,7 +29,7 @@ const iconJsonTemplate = `{
 }
 `;
 
-iconNames.forEach(iconName => {
+iconNames.forEach((iconName) => {
   writeFileIfNotExists(iconSvgTemplate, `${iconName}.svg`, ICONS_DIR);
   writeFileIfNotExists(iconJsonTemplate, `${iconName}.json`, ICONS_DIR);
 });

@@ -16,7 +16,7 @@ const nameWeight = 5;
 const tagWeight = 4;
 const categoryWeight = 3;
 
-const MAX_RELATED_ICONS = 4 * 17 // grid of 4x17 icons, = 68 icons
+const MAX_RELATED_ICONS = 4 * 17; // grid of 4x17 icons, = 68 icons
 
 const arrayMatches = (a, b) => {
   // let matches = 0;
@@ -26,49 +26,48 @@ const arrayMatches = (a, b) => {
   //   }
   // }
   // return matches;
-  return a.filter(item => b.includes(item)).length;
-}
+  return a.filter((item) => b.includes(item)).length;
+};
 
-const nameParts = (icon) => [icon.name, ...icon.aliases ?? []]
+const nameParts = (icon) =>
+  [icon.name, ...(icon.aliases ?? [])]
     .join('-')
     .split('-')
-    .filter(word => word.length > 2)
+    .filter((word) => word.length > 2);
 
 const getRelatedIcons = (currentIcon, icons) => {
   const iconSimilarity = (item) =>
-    nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon))
-    + categoryWeight * arrayMatches(item.categories, currentIcon.categories)
-    + tagWeight * arrayMatches(item.tags, currentIcon.tags)
-  ;
+    nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon)) +
+    categoryWeight * arrayMatches(item.categories, currentIcon.categories) +
+    tagWeight * arrayMatches(item.tags, currentIcon.tags);
   return icons
-    .filter(i => i.name !== currentIcon.name)
-    .map(icon => ({icon, similarity: iconSimilarity(icon)}))
-    .filter(a => a.similarity > 0) // @todo: maybe require a minimal non-zero similarity
+    .filter((i) => i.name !== currentIcon.name)
+    .map((icon) => ({ icon, similarity: iconSimilarity(icon) }))
+    .filter((a) => a.similarity > 0) // @todo: maybe require a minimal non-zero similarity
     .sort((a, b) => b.similarity - a.similarity)
-    .map(i => i.icon)
-    .slice(0, MAX_RELATED_ICONS)
-    ;
-}
+    .map((i) => i.icon)
+    .slice(0, MAX_RELATED_ICONS);
+};
 
 const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
   // eslint-disable-next-line import/no-dynamic-require, global-require
   const metaData = await import(`../icons/${iconName}`, {
-    assert: { type: 'json' }
+    assert: { type: 'json' },
   });
 
   const name = iconName.replace('.json', '');
 
   return {
     name,
-    ...metaData.default
+    ...metaData.default,
   };
 });
 
 const iconsMetaData = await Promise.all(iconsMetaDataPromises);
 
-const relatedIcons = iconsMetaData.map(icon => {
+const relatedIcons = iconsMetaData.map((icon) => {
   const iconRelatedIcons = getRelatedIcons(icon, iconsMetaData);
-  return [icon.name, iconRelatedIcons.map(i => i.name)];
+  return [icon.name, iconRelatedIcons.map((i) => i.name)];
 });
 
 fs.promises

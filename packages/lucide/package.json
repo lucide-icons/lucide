@@ -12,7 +12,7 @@
   },
   "keywords": [
     "Lucide",
-    "Angular",
+    "HTML",
     "Feather",
     "Icons",
     "Icon",
@@ -42,14 +42,15 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "workspace:*",
     "@lucide/build-icons": "workspace:*",
-    "@rollup/plugin-replace": "^5.0.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "rollup": "^3.5.1",
-    "rollup-plugin-dts": "^5.0.0",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@testing-library/jest-dom": "^6.1.6",
+    "jest-serializer-html": "^7.1.0",
+    "rollup": "^4.9.2",
+    "rollup-plugin-dts": "^6.1.0",
     "typescript": "^4.9.3",
-    "vite": "^4.4.12",
-    "vitest": "^0.32.2"
+    "vite": "5.0.13",
+    "vitest": "^1.1.1"
   }
 }

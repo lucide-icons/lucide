@@ -9,7 +9,7 @@ import generateExportsFile from './building/generateExportsFile.mjs';
 
 import { readSvgDirectory, getCurrentDirPath } from '@lucide/build-helpers';
 import generateAliasesFile from './building/generateAliasesFile.mjs';
-import getAliases from './utils/getAliases.mjs';
+import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
@@ -50,6 +50,8 @@ async function buildIcons() {
 
   const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
 
+  const iconMetaData = await getIconMetaData(ICONS_DIR);
+
   // Generates iconsNodes files for each icon
   generateIconFiles({
     iconNodes: icons,
@@ -59,14 +61,13 @@ async function buildIcons() {
     iconFileExtension,
     pretty: JSON.parse(pretty),
     iconsDir: ICONS_DIR,
+    iconMetaData,
   });
 
   if (withAliases) {
-    const aliases = await getAliases(ICONS_DIR);
-
     await generateAliasesFile({
       iconNodes: icons,
-      aliases,
+      iconMetaData,
       aliasNamesOnly,
       iconFileExtension,
       outputDirectory: OUTPUT_DIR,

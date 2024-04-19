@@ -100,7 +100,7 @@ await Promise.all(
         },
         null,
         2,
-      ),
+      ) + '\n',
     );
   }),
 );
