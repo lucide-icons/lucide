@@ -1,5 +1,5 @@
 import path from 'path';
-import { readSvgDirectory } from '../../../scripts/helpers.mjs';
+import { readSvgDirectory } from '@lucide/build-helpers';
 
 async function getAliases(iconDirectory) {
   const iconJsons = readSvgDirectory(iconDirectory, '.json');

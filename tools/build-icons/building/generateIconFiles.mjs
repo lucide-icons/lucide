@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { readSvg, toPascalCase } from '../../../scripts/helpers.mjs';
+import { readSvg, toPascalCase } from '@lucide/build-helpers';
 
 export default ({
   iconNodes,

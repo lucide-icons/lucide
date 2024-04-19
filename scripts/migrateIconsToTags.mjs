@@ -1,5 +1,5 @@
 import path from 'path';
-import { writeFile, getCurrentDirPath, readAllMetadata } from './helpers.mjs';
+import { writeFile, getCurrentDirPath, readAllMetadata } from '@lucide/build-helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');

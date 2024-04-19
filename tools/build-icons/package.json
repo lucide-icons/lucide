@@ -17,7 +17,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@lucide/build-helpers": "workspace:*"
+  },
   "dependencies": {
+    "@lucide/build-helpers": "^1.0.0",
     "minimist": "^1.2.7",
     "node-fetch": "^3.2.10",
     "prettier": "2.7.1",

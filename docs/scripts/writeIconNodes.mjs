@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import renderIconsObject from './render/renderIconsObject.mjs';
-import { readSvgDirectory, toCamelCase } from './helpers.mjs';
+import { renderIconsObject } from '@lucide/build-icons';
+import { readSvgDirectory, toCamelCase } from '@lucide/build-helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');

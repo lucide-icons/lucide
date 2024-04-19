@@ -1,0 +1,11 @@
+{
+  "name": "@lucide/build-helpers",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.mjs",
+  "module": "main.mjs",
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

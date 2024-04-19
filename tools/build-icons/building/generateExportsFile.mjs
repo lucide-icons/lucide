@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
+import { toPascalCase, resetFile, appendFile } from '@lucide/build-helpers';
 
 export default (inputEntry, outputDirectory, iconNodes, iconFileExtension = '') => {
   const fileName = path.basename(inputEntry);

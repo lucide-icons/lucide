@@ -1,6 +1,6 @@
 import path from 'path';
 import tags from '../tags.json' assert { type: 'json' };
-import { readSvgDirectory, readAllMetadata, writeFile, mergeArrays, getCurrentDirPath } from './helpers.mjs';
+import { readSvgDirectory, readAllMetadata, writeFile, mergeArrays, getCurrentDirPath } from '@lucide/build-helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url)
 const ICONS_DIR = path.resolve(currentDir, '../icons');
