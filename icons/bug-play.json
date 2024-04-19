@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "debug",
+    "code",
+    "insect"
+  ],
+  "categories": [
+    "development",
+    "animals"
+  ]
+}

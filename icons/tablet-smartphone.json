@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "responsive",
+    "screens",
+    "browser",
+    "testing",
+    "mobile"
+  ],
+  "categories": [
+    "devices",
+    "design",
+    "development",
+    "tools"
+  ]
+}

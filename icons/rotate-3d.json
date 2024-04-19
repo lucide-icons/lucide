@@ -7,9 +7,13 @@
     "gizmo",
     "transform",
     "orientation",
-    "orbit"
+    "orbit",
+    "axis"
   ],
   "categories": [
     "design"
+  ],
+  "aliases": [
+    "rotate-3-d"
   ]
 }

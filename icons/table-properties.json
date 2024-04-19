@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "property list",
+    "plist",
+    "spreadsheet",
+    "grid",
+    "dictionary",
+    "object",
+    "hash"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "files"
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "filter",
@@ -13,5 +14,8 @@
     "text",
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "arrow-up-10"
   ]
 }

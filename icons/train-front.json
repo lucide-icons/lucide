@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "railway",
+    "metro",
+    "subway",
+    "underground",
+    "high-speed",
+    "bullet",
+    "fast",
+    "track",
+    "line"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

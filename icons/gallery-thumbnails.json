@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "carousel",
+    "pictures",
+    "images",
+    "album",
+    "portfolio",
+    "preview"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development",
+    "photography",
+    "multimedia"
+  ]
+}

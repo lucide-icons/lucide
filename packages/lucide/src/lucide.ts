@@ -1,5 +1,5 @@
 import replaceElement from './replaceElement';
-import * as allIcons from './icons';
+import * as iconAndAliases from './iconsAndAliases';
 
 /**
  * Replaces all elements with matching nameAttr with the defined icons
@@ -25,7 +25,9 @@ const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) 
   if (nameAttr === 'data-lucide') {
     const deprecatedElements = document.querySelectorAll('[icon-name]');
     if (deprecatedElements.length > 0) {
-      console.warn('[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide');
+      console.warn(
+        '[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide',
+      );
       Array.from(deprecatedElements).forEach((element) =>
         replaceElement(element, { nameAttr: 'icon-name', icons, attrs }),
       );
@@ -43,5 +45,11 @@ export { default as createElement } from './createElement';
 /*
  Icons exports.
 */
-export { allIcons as icons };
+export { iconAndAliases as icons };
 export * from './icons';
+export * from './aliases';
+
+/*
+ Types exports.
+*/
+export * from './types';

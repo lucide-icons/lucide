@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "area",
+    "surface",
+    "square metres",
+    "allotment",
+    "parcel",
+    "property",
+    "plane",
+    "acres",
+    "measure",
+    "distance",
+    "isometric",
+    "flag",
+    "golf course",
+    "hole"
+  ],
+  "categories": [
+    "shapes",
+    "design",
+    "tools",
+    "maths",
+    "sports",
+    "gaming"
+  ]
+}

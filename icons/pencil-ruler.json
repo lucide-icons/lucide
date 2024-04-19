@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "edit",
+    "create",
+    "draw",
+    "sketch",
+    "draft",
+    "writer",
+    "writing",
+    "stationery",
+    "artist",
+    "measurements",
+    "centimeters",
+    "cm",
+    "millimeters",
+    "mm",
+    "metre",
+    "foot",
+    "feet",
+    "inches",
+    "units",
+    "size",
+    "length",
+    "width",
+    "height",
+    "dimensions",
+    "depth",
+    "breadth",
+    "extent"
+  ],
+  "categories": [
+    "tools",
+    "design",
+    "layout",
+    "text"
+  ]
+}

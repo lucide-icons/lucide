@@ -1,10 +1,10 @@
 import { describe, it, expect, afterEach } from 'vitest';
-import { render, cleanup, logDOM } from '@testing-library/svelte';
-import { Smile, Pen, Edit2 } from '../src/lucide-svelte'
-import TestSlots from './TestSlots.svelte'
+import { render, cleanup } from '@testing-library/svelte';
+import { Smile, Pen, Edit2 } from '../src/lucide-svelte';
+import TestSlots from './TestSlots.svelte';
 
 describe('Using lucide icon components', () => {
-  afterEach(() => cleanup())
+  afterEach(() => cleanup());
   it('should render an component', () => {
     const { container } = render(Smile);
     expect(container).toMatchSnapshot();
@@ -15,32 +15,35 @@ describe('Using lucide icon components', () => {
       props: {
         size: 48,
         color: 'red',
-        strokeWidth: 4
-      }
+        strokeWidth: 4,
+      },
     });
 
     expect(container).toMatchSnapshot();
   });
 
   it('should add a class to the element', () => {
+    const testClass = 'my-icon';
     render(Smile, {
       props: {
-        class: "my-icon"
-      }
+        class: testClass,
+      },
     });
 
-    const [icon] = document.getElementsByClassName('my-icon');
+    const [icon] = document.getElementsByClassName(testClass);
 
     expect(icon).toBeInTheDocument();
     expect(icon).toMatchSnapshot();
-    expect(icon.getAttribute("class")).toBe(['lucide-icon','lucide','lucide-smile', 'my-icon'].join(' '));
+    expect(icon).toHaveClass(testClass);
+    expect(icon).toHaveClass('lucide');
+    expect(icon).toHaveClass('lucide-smile');
   });
 
   it('should add a style attribute to the element', () => {
     render(Smile, {
       props: {
-        style: "position: absolute;"
-      }
+        style: 'position: absolute;',
+      },
     });
     const [icon] = document.getElementsByClassName('lucide');
 
@@ -58,30 +61,32 @@ describe('Using lucide icon components', () => {
   it('should render the alias icon', () => {
     const { container } = render(Pen);
 
-    const PenIconRenderedHTML = container.innerHTML
+    const PenIconRenderedHTML = container.innerHTML;
 
-    cleanup()
+    cleanup();
 
     const { container: Edit2Container } = render(Edit2);
 
-    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
+    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const testId = 'smile-icon';
     const { container, getByTestId } = render(Smile, {
-      'data-testid':testId,
+      'data-testid': testId,
       color: 'red',
       size: 48,
-      absoluteStrokeWidth: true
+      absoluteStrokeWidth: true,
     });
 
-    const { attributes } = getByTestId(testId) as unknown as{ attributes: Record<string, { value: string }>};
+    const { attributes } = getByTestId(testId) as unknown as {
+      attributes: Record<string, { value: string }>;
+    };
     expect(attributes.stroke.value).toBe('red');
     expect(attributes.width.value).toBe('48');
     expect(attributes.height.value).toBe('48');
     expect(attributes['stroke-width'].value).toBe('1');
 
-    expect( container.innerHTML ).toMatchSnapshot();
+    expect(container.innerHTML).toMatchSnapshot();
   });
 });

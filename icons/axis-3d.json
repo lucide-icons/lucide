@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lscheibel",
-    "danielbayley",
-    "karsa-mistmere"
+    "lscheibel"
   ],
   "tags": [
     "gizmo",
@@ -11,5 +9,8 @@
   ],
   "categories": [
     "design"
+  ],
+  "aliases": [
+    "axis-3-d"
   ]
 }

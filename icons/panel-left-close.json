@@ -5,14 +5,18 @@
     "danielbayley",
     "ericfennis"
   ],
-  "aliases": ["sidebar-close"],
   "tags": [
     "primary",
     "drawer",
-    "hide"
+    "hide",
+    "chevron",
+    "<"
   ],
   "categories": [
     "layout",
     "arrows"
+  ],
+  "aliases": [
+    "sidebar-close"
   ]
 }

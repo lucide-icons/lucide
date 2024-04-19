@@ -1,14 +1,19 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import { useMediaQuery } from '@vueuse/core';
 import { useRouter } from 'vitepress';
+import getSVGIcon from '../../utils/getSVGIcon';
+import useConfetti from '../../composables/useConfetti';
+import Tooltip from '../base/Tooltip.vue';
+
+const downloadText = 'Download!'
+const copiedText = 'Copied!'
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][]
 
 const props = defineProps<{
   name: string;
-  // tags: string[];
-  // categories: string[];
   iconNode: IconNode;
   active: boolean;
   customizable?: boolean;
@@ -20,39 +25,66 @@ const emit = defineEmits(['setActiveIcon'])
 
 const { go } = useRouter()
 const showOverlay = useMediaQuery('(min-width: 860px)');
+const { animate, confetti, confettiText } = useConfetti()
 
-const icon = createLucideIcon(props.name, props.iconNode)
 
-function navigateToIcon() {
+const icon = computed(() => {
+  if (!props.name || !props.iconNode) return null
+  return createLucideIcon(props.name, props.iconNode)
+})
+
+async function navigateToIcon(event) {
+
+  if (event.shiftKey) {
+    event.preventDefault()
+    const svgString = getSVGIcon(event.target.firstChild, {
+      class: `lucide lucide-${props.name}`,
+    })
+
+    await navigator.clipboard.writeText(svgString)
+
+    confettiText.value = copiedText
+    confetti()
+    return
+  }
+
   if(props.overlayMode && showOverlay.value) {
+    event.preventDefault()
     window.history.pushState({}, '', `/icons/${props.name}`)
     emit('setActiveIcon', props.name)
-  }
-  else {
+  } else {
+    event.preventDefault()
     go(`/icons/${props.name}`)
   }
 }
 </script>
 
 <template>
-  <button
-    class="icon-button"
-    @click="navigateToIcon"
-    :class="{ 'active' : active }"
-    :data-title="name"
-    :aria-label="name"
-    :href="`/icons/${props.name}`"
-  >
-    <KeepAlive>
-      <component
-        v-if="!hideIcon"
-        :is="icon"
-        class="lucide-icon"
-        :class="{ customizable }"
-      />
-    </KeepAlive>
-  </button>
+  <Tooltip :title="name">
+    <a
+      class="icon-button confetti-button vp-raw"
+      @click="navigateToIcon"
+      :class="{ active, animate }"
+      :aria-label="name"
+      :href="`/icons/${props.name}`"
+      :data-confetti-text="confettiText"
+      ref="ref"
+    >
+      <KeepAlive>
+        <component
+          v-if="!hideIcon"
+          :is="icon"
+          class="lucide-icon"
+          :class="{
+            customizable,
+          }"
+        />
+      </KeepAlive>
+    </a>
+  </Tooltip>
 </template>
+
+<style src="./confetti.css" />
 
 <style scoped>
 .icon-button {
@@ -72,35 +104,13 @@ function navigateToIcon() {
   color: var(--vp-c-text-1);
 }
 
-.icon-button:hover:before {
-  opacity: 1;
-  transform: translate(-50%, 48px) scale(1);
+.confetti-button:before,
+.confetti-button:after {
+  z-index: 100;
 }
 
-.icon-button:before {
-  content: attr(data-title);
-  display: block;
-  font-size: 12px;
-  line-height: 20px;
-  margin-left: 27px;
-  transform: translate(-50%, 48px) scale(0.9);
-  font-weight: 400;
-  position: absolute;
-  background: var(--vp-c-brand-dark);
-  color: white;
-  z-index: 10;
-  white-space: nowrap;
-  padding: 2px 8px;
-  border-radius: 4px;
-  box-shadow: var(--vp-shadow-1);
-  opacity: 0;
-  pointer-events: none;
-  transition: cubic-bezier(0.19, 1, 0.22, 1) .2s;
-  transition-property: opacity, transform;
-  /* max-width: calc((32px * 2) + 56px); */
-  overflow: hidden;
-  white-space: pre-wrap;
-  word-break: break-word;
+.confetti-button:before {
+  line-height: 80px;
 }
 
 .icon-button:active {
@@ -139,6 +149,7 @@ function navigateToIcon() {
 
 .lucide-icon {
   margin: auto;
+  pointer-events: none;
 }
 .lucide-icon.customizable {
   will-change: width, height, stroke-width, stroke;

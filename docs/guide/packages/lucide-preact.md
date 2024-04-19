@@ -26,9 +26,9 @@ npm install lucide-preact
 
 ## How to use
 
-It's build with ES Modules so it's completely tree-shakable.
+Lucide is built with ES Modules, so it's completely tree-shakable.
 
-Each icon can be imported as a Preact component, what renders a inline SVG Element. This way only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+Each icon can be imported as a Preact component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
 
 ### Example
 
@@ -56,7 +56,7 @@ export default App;
 
 ### Applying props
 
-To apply custom props to change the look of the icon, this can be done by simply pass them as props to the component. All SVG attributes are available as props to style the SVGs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```jsx
 // Usage
@@ -69,10 +69,10 @@ const App = () => {
 
 ## One generic icon component
 
-It is possible to create one generic icon component to load icons. It's not recommended.
+It is possible to create one generic icon component to load icons, but it is not recommended.
 
 ::: danger
-Example below importing all ES Modules, caution using this example. All icons will be imported. When using bundlers like: `Webpack`, `Rollup` or `Vite` the application build size will grow strongly and harming the performance the application.
+The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
 :::
 
 ### Icon Component Example

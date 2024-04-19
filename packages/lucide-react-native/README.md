@@ -6,7 +6,7 @@ Implementation of the lucide icon library for React Native applications.
 
 ## Installation
 
-First, ensure that you have`react-native-svg@^12.0.0` or `react-native-svg@^13.0.0` installed. Then, install the package:
+First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
 
 ```sh
 yarn add lucide-react-native

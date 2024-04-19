@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "arrows",
     "rotate",
@@ -11,8 +14,7 @@
     "issue",
     "code",
     "coding",
-    "version control",
-    "dashed"
+    "version control"
   ],
   "categories": [
     "arrows",

@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "pencil",
+    "change",
+    "create",
+    "draw",
+    "writer",
+    "writing",
+    "biro",
+    "ink",
+    "marker",
+    "felt tip",
+    "stationery",
+    "artist"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "tools"
+  ],
+  "aliases": [
+    "edit-3"
+  ]
+}

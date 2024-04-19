@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "beach",
+    "sand",
+    "holiday",
+    "sealife",
+    "fossil",
+    "ammonite",
+    "biology",
+    "ocean",
+    "terminal",
+    "command line",
+    "session",
+    "bash",
+    "zsh",
+    "roll",
+    "wrap",
+    "chewing gum",
+    "bubble gum",
+    "sweet",
+    "sugar",
+    "hosepipe",
+    "carpet",
+    "string",
+    "spiral",
+    "spinner",
+    "hypnotise",
+    "hypnosis"
+  ],
+  "categories": [
+    "animals",
+    "development",
+    "nature",
+    "science",
+    "travel",
+    "food-beverage",
+    "home"
+  ]
+}

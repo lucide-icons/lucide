@@ -1,5 +1,5 @@
-name: "Build and Test"
-description: "Builds and test a package"
+name: 'Build and Test'
+description: 'Builds and test a package'
 
 inputs:
   name:
@@ -7,32 +7,32 @@ inputs:
     required: true
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: 16
 
-    - uses: pnpm/action-setup@v2.0.1
+    - uses: pnpm/action-setup@v2
       name: Install pnpm
       id: pnpm-install
       with:
-        version: 7
+        version: 8
         run_install: false
 
     - name: Get pnpm store directory
       id: pnpm-cache
       run: |
-        echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+        echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
     - uses: actions/cache@v3
       name: Setup pnpm cache
       with:
-        path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-        key: ${{ runner.os }}-lucide-preact-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
-          ${{ runner.os }}-lucide-preact-pnpm-store-
+          ${{ runner.os }}-pnpm-store-
 
     - name: Install dependencies
       run: pnpm install --filter lucide-preact

@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "trading",
     "trader",
@@ -16,6 +19,7 @@
     "exchange",
     "hedge fund",
     "statistics",
+    "analytics",
     "diagram",
     "graph"
   ],

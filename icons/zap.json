@@ -1,12 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "karsa-mistmere"
   ],
   "tags": [
     "flash",
     "camera",
-    "lightning"
+    "lightning",
+    "electricity",
+    "energy"
   ],
   "categories": [
     "connectivity",

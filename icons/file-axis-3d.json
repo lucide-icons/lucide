@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "model",
@@ -12,5 +13,8 @@
   "categories": [
     "design",
     "files"
+  ],
+  "aliases": [
+    "file-axis-3-d"
   ]
 }
