@@ -1,7 +1,7 @@
 import { lstatSync } from 'fs';
 import { readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
-import { getCurrentDirPath } from '../../../scripts/helpers.mjs';
+import { getCurrentDirPath } from '@lucide/build-helpers';
 import { getJSBanner } from './license.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
@@ -12,12 +12,15 @@ const files = await readdir(targetDirectory, {
   encoding: 'utf-8',
 });
 
+// eslint-disable-next-line no-restricted-syntax
 for (const file of files) {
   const filepath = path.join(targetDirectory, file);
   const filestat = lstatSync(filepath);
 
+  // eslint-disable-next-line no-continue
   if (filestat.isFile() === false || filestat.isDirectory()) continue;
 
+  // eslint-disable-next-line no-await-in-loop
   const contents = await readFile(filepath, { encoding: 'utf-8' });
   let newContents = contents;
   const ext = path.extname(filepath);
@@ -34,7 +37,8 @@ for (const file of files) {
   // Places icon block comment at the top of the Svelte component class
   if (/icons\/(.*?)\.svelte\.d\.ts/.test(filepath)) {
     const svelteFilepath = filepath.replace('.d.ts', '');
-    let svelteFileContents = await readFile(svelteFilepath, { encoding: 'utf-8' });
+    // eslint-disable-next-line no-await-in-loop
+    const svelteFileContents = await readFile(svelteFilepath, { encoding: 'utf-8' });
 
     const blockCommentRegex = /\/\*\*\n\s\*\s(@component\s@name)[\s\S]*?\*\//;
     const blockCommentMatch = blockCommentRegex.exec(svelteFileContents);
@@ -54,6 +58,7 @@ for (const file of files) {
   }
 
   if (newContents !== contents) {
+    // eslint-disable-next-line no-await-in-loop
     await writeFile(filepath, newContents, { encoding: 'utf-8' });
   }
 }

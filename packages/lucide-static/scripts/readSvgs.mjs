@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
-import { readSvg } from '../../../scripts/helpers.mjs';
+import { readSvg } from '@lucide/build-helpers';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.

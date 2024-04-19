@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { stringify } from 'svgson';
 import { format } from 'prettier';
-import { appendFile } from '../../../scripts/helpers.mjs';
+import { appendFile } from '@lucide/build-helpers';
 
 export default function generateSprite(svgs, packageDir, license) {
   const symbols = svgs.map(({ name, parsedSvg }) => ({

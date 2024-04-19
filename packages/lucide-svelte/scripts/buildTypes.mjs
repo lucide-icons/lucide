@@ -7,7 +7,7 @@ import {
   resetFile,
   toPascalCase,
   getCurrentDirPath,
-} from '../../../scripts/helpers.mjs';
+} from '@lucide/build-helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const targetDirectory = path.join(currentDir, '../dist');

@@ -2,12 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { parseSync } from 'svgson';
 import {
-  shuffle,
+  shuffleArray,
   readSvgDirectory,
   getCurrentDirPath,
   minifySvg,
   toPascalCase,
-} from './helpers.mjs';
+} from '@lucide/build-helpers';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -38,12 +38,12 @@ const svgFiles = readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
 const iconsFilteredByName = (search) => svgFiles.filter((file) => file.includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
-  shuffle(svgFiles).slice(0, changedFiles.length),
+  shuffleArray(svgFiles).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 
 const cohesionSquaresImageTags = getImageTagsByFiles(
-  shuffle(iconsFilteredByName('square')).slice(0, changedFiles.length),
+  shuffleArray(iconsFilteredByName('square')).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 
