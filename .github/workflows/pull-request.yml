@@ -45,8 +45,9 @@ jobs:
         with:
           files: icons/*
       - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v2
       - name: Install simple-git (safer and faster than installing all deps)
-        run: npm install simple-git
+        run: pnpm install simple-git
       - name: Generate annotations
         run: node ./scripts/updateContributors.mjs
         env:
@@ -95,8 +96,9 @@ jobs:
           body-includes: Added or changed icons
 
       - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v2
       - name: Install svgson for code preview (safer and faster than installing all deps)
-        run: npm install svgson
+        run: pnpm install svgson
 
       - name: Generate comment markup
         run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> comment-markup.md
