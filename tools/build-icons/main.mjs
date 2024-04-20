@@ -72,6 +72,7 @@ async function buildIcons() {
       iconFileExtension,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
+      exportModuleNameCasing,
       aliasImportFileExtension,
       separateAliasesFile,
       showLog: !silent,

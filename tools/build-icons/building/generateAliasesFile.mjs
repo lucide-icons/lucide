@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
+import { toPascalCase, resetFile, appendFile, toCamelCase } from '@lucide/helpers';
 
 const getImportString = (componentName, iconName, aliasImportFileExtension = '') =>
   `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
@@ -12,6 +12,7 @@ export default async function generateAliasesFile({
   iconFileExtension = '.js',
   iconMetaData,
   aliasImportFileExtension,
+  exportModuleNameCasing,
   aliasNamesOnly = false,
   separateAliasesFile = false,
   showLog = true,
@@ -26,7 +27,7 @@ export default async function generateAliasesFile({
   // Generate Import for Icon VNodes
   await Promise.all(
     icons.map(async (iconName, index) => {
-      const componentName = toPascalCase(iconName);
+      const componentName = exportModuleNameCasing === 'pascal' ? toPascalCase(iconName) : toCamelCase(iconName);
       const iconAliases = iconMetaData[iconName]?.aliases;
 
       let importString = '';
@@ -51,7 +52,7 @@ export default async function generateAliasesFile({
       if (iconAliases != null && Array.isArray(iconAliases)) {
         await Promise.all(
           iconAliases.map(async (alias) => {
-            const componentNameAlias = toPascalCase(alias);
+            const componentNameAlias = exportModuleNameCasing === 'pascal' ? toPascalCase(alias) : toCamelCase(alias);;
 
             if (separateAliasesFile) {
               const output = `export { default } from "./${iconName}"`;
