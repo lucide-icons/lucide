@@ -1,8 +1,8 @@
 import path from 'path';
 
-import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
+import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
 
-export default (inputEntry, outputDirectory, iconNodes, iconFileExtension = '') => {
+export default (inputEntry, outputDirectory, iconNodes, exportModuleNameCasing, iconFileExtension = '') => {
   const fileName = path.basename(inputEntry);
 
   // Reset file
@@ -12,7 +12,13 @@ export default (inputEntry, outputDirectory, iconNodes, iconFileExtension = '') 
 
   // Generate Import for Icon VNodes
   icons.forEach((iconName) => {
-    const componentName = toPascalCase(iconName);
+    let componentName
+
+    if(exportModuleNameCasing === 'camel') {
+      componentName = toCamelCase(iconName);
+    } else if(exportModuleNameCasing === 'pascal') {
+      componentName = toPascalCase(iconName);
+    }
     const importString = `export { default as ${componentName} } from './${iconName}${iconFileExtension}';\n`;
     appendFile(importString, fileName, outputDirectory);
   });

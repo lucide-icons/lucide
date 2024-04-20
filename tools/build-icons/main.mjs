@@ -29,6 +29,7 @@ const {
   iconFileExtension = '.js',
   importImportFileExtension = '',
   exportFileName = 'index.js',
+  exportModuleNameCasing = 'pascal',
   withAliases = false,
   aliasNamesOnly = false,
   withDynamicImports = false,
@@ -91,6 +92,7 @@ async function buildIcons() {
     path.join(OUTPUT_DIR, 'icons', exportFileName),
     path.join(OUTPUT_DIR, 'icons'),
     icons,
+    exportModuleNameCasing,
     importImportFileExtension,
   );
 }
