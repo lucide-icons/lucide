@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "password",
+    "secret",
+    "access",
+    "key",
+    "multiply",
+    "multiplication",
+    "glob pattern",
+    "wildcard",
+    "*"
+  ],
+  "categories": [
+    "text",
+    "security",
+    "account",
+    "maths",
+    "development"
+  ],
+  "aliases": [
+    "asterisk-square"
+  ]
+}

@@ -33,7 +33,7 @@
   "exports": {
     ".": {
       "types": "./dist/types/lucide-solid.d.ts",
-      "solid": "./dist/source/lucide-solid.js",
+      "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.js",
       "browser": "./dist/esm/lucide-solid.js",
       "require": "./dist/cjs/lucide-solid.js",
@@ -65,7 +65,7 @@
     "rollup": "^4.9.2",
     "solid-js": "^1.8.7",
     "typescript": "^4.9.4",
-    "vite": "5.0.12",
+    "vite": "5.0.13",
     "vite-plugin-solid": "^2.10.1",
     "vitest": "^1.1.1",
     "esbuild": "^0.19.11"

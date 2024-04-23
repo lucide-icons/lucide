@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "login",
+    "password",
+    "authenticate",
+    "2fa",
+    "field",
+    "fill",
+    "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
+    "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "spread",
+    "rest",
+    "…",
+    "..."
+  ],
+  "categories": [
+    "text",
+    "development",
+    "shapes"
+  ],
+  "aliases": [
+    "form-input"
+  ]
+}
