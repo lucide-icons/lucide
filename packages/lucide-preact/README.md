@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
+    <img src="https://lucide.dev/package-logos/lucide-preact.svg#gh-light-mode-only" alt="Lucide Preact - Implementation of the lucide icon library for preact applications." width="400">
+  </a>
+  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
+    <img src="https://lucide.dev/package-logos/lucide-preact.svg#gh-dark-mode-only" alt="Lucide Preact - Implementation of the lucide icon library for preact applications." width="400">
+  </a>
+</p>
+
 # Lucide Preact
 
 Implementation of the lucide icon library for preact applications.
@@ -16,64 +25,26 @@ or
 npm install lucide-preact
 ```
 
-## How to use
+## Documentation
 
-It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a preact component.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-preact)
 
-### Example
+## Community
 
-You can pass additional props to adjust the icon.
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
-```js
-import { Camera } from 'lucide-preact';
-// Returns PreactComponent
+## License
 
-// Usage
-const App = () => {
-  return <Camera color="red" size={48} />;
-};
+Lucide is licensed under the ICS license. See [LICENSE](https://lucide.dev/license).
 
-export default App;
-```
+## Sponsors
 
-### Props
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
 
-| name          | type     | default      |
-| ------------- | -------- | ------------ |
-| `size`        | _Number_ | 24           |
-| `color`       | _String_ | currentColor |
-| `strokeWidth` | _Number_ | 2            |
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Custom props / svg attributes
+### Awesome backer 🍺
 
-You can also pass custom props that will be added in the as attributes. With that you can modify the icons look by passing svg attributes.
-
-```js
-// Usage
-const App = () => {
-  return <Camera fill="red" stroke-linejoin="bevel" />;
-};
-```
-
-> svg attributes in preact aren't transformed, so if want to change e.g. the `stroke-linejoin` you need to pass it in kebabcase, the way svg spec is written so. See this topic in the [preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
-
-### One generic icon component
-
-It is possible to create one generic icon component to load icons.
-
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
-
-#### Icon Component Example
-
-```js
-import * as icons from 'lucide-preact';
-
-const Icon = ({ name, color, size }) => {
-  const LucideIcon = icons[name];
-
-  return <LucideIcon color={color} size={size} />;
-};
-
-export default Icon;
-```
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>

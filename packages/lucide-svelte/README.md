@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
+    <img src="https://lucide.dev/package-logos/lucide-svelte.svg#gh-light-mode-only" alt="Lucide Svelte - Implementation of the lucide icon library for svelte applications." width="400">
+  </a>
+  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
+    <img src="https://lucide.dev/package-logos/lucide-svelte.svg#gh-dark-mode-only" alt="Lucide Svelte - Implementation of the lucide icon library for web applications." width="400">
+  </a>
+</p>
+
+
 # Lucide Svelte
 
 Implementation of the lucide icon library for svelte applications.
@@ -16,78 +26,26 @@ or
 npm install lucide-svelte
 ```
 
-## How to use
+## Documentation
 
-All the icons are Svelte components, that ouputs Svg elements. So each icon can be imported and used as a component. This also helps with the use of threeshaking so you only import the icons you use.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-svelte)
 
-### Example
+## Community
 
-Default usage:
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
-```sv
-<script>
-import { Skull } from 'lucide-svelte'
-</script>
+## License
 
-<Skull/>
-```
+Lucide is licensed under the ICS license. See [LICENSE](https://lucide.dev/license).
 
-You can pass additional props to adjust the icon.
+## Sponsors
 
-```sv
-<script>
-import { Camera } from 'lucide-svelte'
-</script>
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
 
-<Camera />
-```
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Available props
+### Awesome backer 🍺
 
-| name          | type     | default      |
-| ------------- | -------- | ------------ |
-| `size`        | _Number_ | 24           |
-| `color`       | _String_ | currentColor |
-| `strokeWidth` | _Number_ | 2            |
-| `*<SVGProps>` | _String_ | -            |
-
-- All SVGProps are available to style the svgs. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation)
-
-### Example of custom props
-
-```sv
-<script>
-import { Phone } from 'lucide-svelte'
-</script>
-
-<Phone fill="#333"/>
-```
-
-This results a filled phone icon.
-
-### One generic icon component
-
-It is possible to create one generic icon component to load icons.
-
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you bundle your application,the build size will grow strongly. Because it will import all the icons.
-
-#### Icon Component Example
-
-```svelte
-<script>
-  import * as icons from "lucide-svelte";
-  export let name;
-</script>
-
-<svelte:component this={icons[name]} {...$$props}/>
-```
-
-##### Then you can use it like this
-
-```svelte
-<script>
-  import LucideIcon from "./LucideIcon";
-</script>
-
-<LucideIcon name="Menu" />
-```
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
