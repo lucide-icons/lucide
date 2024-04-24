@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
+    <img src="https://lucide.dev/package-logos/lucide-vue.svg#gh-light-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="400">
+  </a>
+  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
+    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-vue.svg#gh-dark-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="400">
+  </a>
+</p>
+
 # Lucide Vue
 
 Implementation of the lucide icon library for Vue applications.
@@ -18,111 +27,26 @@ or
 npm install lucide-vue
 ```
 
-## How to use
+## Documentation
 
-It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a vue component.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-vue)
 
-### Example
+## Community
 
-You can pass additional props to adjust the icon.
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
-```vue
-<template>
-  <Camera color="red" :size="32" />
-</template>
+## License
 
-<script>
-// Returns Vue component
-import { Camera } from 'lucide-vue';
+Lucide is licensed under the ICS license. See [LICENSE](https://lucide.dev/license).
 
-export default {
-  name: 'My Component',
-  components: { Camera }
-};
-</script>
-```
+## Sponsors
 
-### Props
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
 
-|  name                   |   type    |  default     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
-| `default-class`         | *string*  | lucide-icon  |
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Custom props
+### Awesome backer 🍺
 
-You can also pass custom props that will be added in the svg as attributes.
-
-```vue
-<template>
-  <Camera fill="red" />
-</template>
-```
-
-### One generic icon component
-
-It is possible to create one generic icon component to load icons.
-
-> :warning: Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
-
-#### Icon Component Example
-
-```vue
-<template>
-  <component :is="icon" />
-</template>
-
-<script>
-import * as icons from 'lucide-vue';
-
-export default {
-  props: {
-    name: {
-      type: String,
-      required: true
-    }
-  },
-  computed: {
-    icon() {
-      return icons[this.name];
-    }
-  }
-};
-</script>
-```
-
-##### Then you can use it like this
-
-```vue
-<template>
-  <div id="app">
-    <Icon name="Airplay" />
-  </div>
-</template>
-```
-
-## Use with [@nuxt/components](https://github.com/nuxt/components#readme)
-
-### Setup
-
-In your `nuxt.config.js`, add `lucide-vue/nuxt` to your `buildModules`
-
-```js
-export default {
-  buildModules: ['lucide-vue/nuxt']
-};
-```
-
-### How to use
-
-Icon components are prefixed with `Icon`. Use icon components without importing them.
-
-### Example
-
-```html
-<IconCamera color="red" :size="32" />
-```
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
