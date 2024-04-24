@@ -3,7 +3,7 @@
     <img src="https://lucide.dev/package-logos/lucide-vue.svg#gh-light-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="400">
   </a>
   <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-vue.svg#gh-dark-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="400">
+    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-vue.svg#gh-dark-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="400">
   </a>
 </p>
 

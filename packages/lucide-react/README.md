@@ -3,7 +3,7 @@
     <img src="https://lucide.dev/package-logos/lucide-react.svg#gh-light-mode-only" alt="Lucide React - Implementation of the lucide icon library for preact applications." width="400">
   </a>
   <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-react.svg#gh-dark-mode-only" alt="Lucide React - Implementation of the lucide icon library for preact applications." width="400">
+    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-react.svg#gh-dark-mode-only" alt="Lucide React - Implementation of the lucide icon library for preact applications." width="400">
   </a>
 </p>
 
