@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "volkyeth"
+  ],
+  "tags": [
+    "siege",
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon",
+    "machine",
+    "ballistic"
+  ],
+  "categories": [
+    "gaming",
+    "machines"
+  ]
+}
