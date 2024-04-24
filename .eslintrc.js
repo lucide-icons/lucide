@@ -42,12 +42,15 @@ module.exports = {
         '@html-eslint/no-duplicate-attrs': 'error',
         '@html-eslint/no-inline-styles': 'error',
         '@html-eslint/require-attrs': [
-           'error',
-             ...Object.entries(DEFAULT_ATTRS)
-               .map(([attr, value]) => ({ tag: 'svg', attr, value: String(value) }))
+          'error',
+          ...Object.entries(DEFAULT_ATTRS).map(([attr, value]) => ({
+            tag: 'svg',
+            attr,
+            value: String(value),
+          })),
         ],
         '@html-eslint/indent': ['error', 2],
-        "@html-eslint/no-multiple-empty-lines": ["error", { "max": 0 }],
+        '@html-eslint/no-multiple-empty-lines': ['error', { max: 0 }],
         '@html-eslint/no-extra-spacing-attrs': [
           'error',
           {
@@ -64,7 +67,7 @@ module.exports = {
         '@html-eslint/element-newline': 'error',
         '@html-eslint/no-trailing-spaces': 'error',
         '@html-eslint/quotes': 'error',
-      }
+      },
     },
   ],
 };

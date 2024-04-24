@@ -13,5 +13,5 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "./dist",
-  }
+  },
 }

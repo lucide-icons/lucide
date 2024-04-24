@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "finance",
+    "pocket"
+  ],
+  "categories": [
+    "account",
+    "money"
+  ],
+  "aliases": [
+    "wallet-2"
+  ]
+}

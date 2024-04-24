@@ -1,20 +1,10 @@
 import { Component } from 'vue';
-import { Vue, VueConfiguration } from 'vue/types/vue';
 import defaultAttributes from './defaultAttributes';
+import { toKebabCase } from '@lucide/shared';
 
 var showDeprecationWarning = true;
 
-type IconNode = [elementName: string, attrs: Record<string, string>][]
-
-/**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
- */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+type IconNode = [elementName: string, attrs: Record<string, string>][];
 
 export default (iconName: string, iconNode: IconNode): Component => ({
   name: iconName,
@@ -43,11 +33,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
   },
   render(
     createElement,
-    {
-      props: { color, size, strokeWidth, absoluteStrokeWidth, defaultClass },
-      data,
-      children = [],
-    },
+    { props: { color, size, strokeWidth, absoluteStrokeWidth, defaultClass }, data, children = [] },
   ) {
     if (showDeprecationWarning) {
       console.warn(
@@ -67,18 +53,14 @@ export default (iconName: string, iconNode: IconNode): Component => ({
           width: size,
           height: size,
           stroke: color,
-          'stroke-width':
-            absoluteStrokeWidth
-              ? Number(strokeWidth) * 24 / Number(size)
-              : strokeWidth,
+          'stroke-width': absoluteStrokeWidth
+            ? (Number(strokeWidth) * 24) / Number(size)
+            : strokeWidth,
           ...data.attrs,
         },
-        on: data?.on || {}
+        on: data?.on || {},
       },
-      [
-        ...iconNode.map(([tag, attrs]) => createElement(String(tag), { attrs })),
-        ...children
-      ],
+      [...iconNode.map(([tag, attrs]) => createElement(String(tag), { attrs })), ...children],
     );
   },
 });
