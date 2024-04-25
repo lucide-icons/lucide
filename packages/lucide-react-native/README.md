@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-react-native.svg#gh-light-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="400">
+    <img src="https://lucide.dev/package-logos/lucide-react-native.svg#gh-light-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="540">
   </a>
   <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-react-native.svg#gh-dark-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="400">
+    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-react-native.svg#gh-dark-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="540">
   </a>
 </p>
 
