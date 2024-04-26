@@ -1,6 +1,6 @@
 import { h, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, LucideProps } from './createLucideIcon';
+import type { IconNode, LucideProps } from './types';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
