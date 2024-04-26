@@ -1,10 +1,10 @@
-import { createElement, forwardRef } from "react";
-import defaultAttributes from "./defaultAttributes";
-import { IconNode, LucideProps } from "./types";
-import { mergeClasses } from "@lucide/shared";
+import { createElement, forwardRef } from 'react';
+import defaultAttributes from './defaultAttributes';
+import { IconNode, LucideProps } from './types';
+import { mergeClasses } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
-  iconNode: IconNode
+  iconNode: IconNode;
 }
 
 /**
@@ -44,9 +44,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         width: size,
         height: size,
         stroke: color,
-        strokeWidth: absoluteStrokeWidth
-          ? (Number(strokeWidth) * 24) / Number(size)
-          : strokeWidth,
+        strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
         className: mergeClasses('lucide', className),
         ...rest,
       },
@@ -58,4 +56,4 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
   },
 );
 
-export default Icon
+export default Icon;

@@ -37,7 +37,7 @@ const Icon = (props: LucideProps & IconProps) => {
         'lucide',
         'lucide-icon',
         localProps.name != null ? `lucide-${toKebabCase(localProps?.name)}` : undefined,
-        localProps.class != null ? localProps.class : ''
+        localProps.class != null ? localProps.class : '',
       )}
       {...rest}
     >

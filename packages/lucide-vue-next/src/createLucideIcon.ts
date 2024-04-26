@@ -1,7 +1,6 @@
 import { h } from 'vue';
-import type { SVGAttributes, FunctionalComponent } from 'vue';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
-import { IconNode, LucideIcon, LucideProps } from './types';
+import type { FunctionalComponent } from 'vue';
+import { IconNode, LucideProps } from './types';
 import Icon from './Icon';
 
 // Create interface extending SVGAttributes

@@ -1,25 +1,16 @@
-import { type FunctionalComponent, h } from "vue";
-import { mergeClasses, toKebabCase } from "@lucide/shared";
-import defaultAttributes from "./defaultAttributes";
-import { IconNode, LucideProps } from "./types";
+import { type FunctionalComponent, h } from 'vue';
+import { mergeClasses, toKebabCase } from '@lucide/shared';
+import defaultAttributes from './defaultAttributes';
+import { IconNode, LucideProps } from './types';
 
 interface IconProps {
   iconNode: IconNode;
-  name: string
+  name: string;
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  {
-    size,
-    strokeWidth = 2,
-    absoluteStrokeWidth,
-    color,
-    iconNode,
-    name,
-    class: classes,
-    ...props
-  }, // props
-  { slots }, // context
+  { size, strokeWidth = 2, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
+  { slots },
 ) => {
   return h(
     'svg',
@@ -28,17 +19,12 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       width: size || defaultAttributes.width,
       height: size || defaultAttributes.height,
       stroke: color || defaultAttributes.stroke,
-      'stroke-width': absoluteStrokeWidth
-        ? (Number(strokeWidth) * 24) / Number(size)
-        : strokeWidth,
+      'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
       class: ['lucide', `lucide-${toKebabCase(name ?? 'icon')}`],
       ...props,
     },
-    [
-      ...iconNode.map((child) => h(...child)),
-      ...(slots.default ? [slots.default()] : [])
-    ],
+    [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],
   );
-}
+};
 
-export default Icon
+export default Icon;
