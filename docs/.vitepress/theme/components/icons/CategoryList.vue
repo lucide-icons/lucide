@@ -46,10 +46,13 @@ watch(headers, () => {
 
 <template>
   <div class="category-list" ref="container">
-    <VPLink class="sidebar-title" href="/icons/" :class="{ 'active': overviewIsActive } ">
+    <h2 class="sidebar-title sidebar-text">
+      View
+    </h2>
+    <VPLink class="sidebar-link sidebar-text" href="/icons/" :class="{ 'active': overviewIsActive } ">
       All
     </VPLink>
-    <VPLink class="sidebar-title" href="/icons/categories" :class="{ 'active': categoriesIsActive } ">
+    <VPLink class="sidebar-link sidebar-text" href="/icons/categories" :class="{ 'active': categoriesIsActive } ">
       Categories
     </VPLink>
     <div class="content">
@@ -63,16 +66,23 @@ watch(headers, () => {
 
 <style scoped>
 .sidebar-title {
-  font-weight: 500;
-  color: var(--vp-c-text-2);
-  margin-bottom: 6px;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+.sidebar-text {
   line-height: 24px;
   font-size: 14px;
   display: block;
   transition: color 0.25s;
+  padding: 4px 0;
 }
 
-.sidebar-title:hover, .sidebar-title.active {
+.sidebar-link {
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+.sidebar-link:hover, .sidebar-link.active {
   color: var(--vp-c-brand);
 }
 .content {
