@@ -52,10 +52,12 @@
     "build:package": "svelte-package --input ./src",
     "build:license": "node ./scripts/appendBlockComments.mjs",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
+    "@lucide/shared": "workspace:*",
     "@sveltejs/package": "^2.2.3",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@testing-library/jest-dom": "^6.1.4",

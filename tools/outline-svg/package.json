@@ -1,8 +1,8 @@
 {
-  "name": "outline-svg",
+  "name": "@lucide/outline-svg",
+  "description": "A internal used package to outline SVGs.",
   "private": true,
   "version": "2.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node ./main.mjs"
