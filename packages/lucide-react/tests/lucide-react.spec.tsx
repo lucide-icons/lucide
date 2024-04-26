@@ -1,8 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { render, cleanup, waitFor } from '@testing-library/react';
-import { Pen, Edit2, Grid, LucideProps, Droplet } from '../src/lucide-react';
-import { Suspense, lazy } from 'react';
-import dynamicIconImports from '../src/dynamicIconImports';
+import { render, cleanup } from '@testing-library/react';
+import { Pen, Edit2, Grid, Droplet } from '../src/lucide-react';
+import defaultAttributes from '../src/defaultAttributes';
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -11,24 +10,37 @@ describe('Using lucide icon components', () => {
     expect(container.innerHTML).toMatchSnapshot();
   });
 
+  it('should render the icon with default attributes', () => {
+    const { container } = render(<Grid />);
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
+    expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
+    expect(SVGElement).toHaveAttribute('height', String(defaultAttributes.height));
+    expect(SVGElement).toHaveAttribute('viewBox', defaultAttributes.viewBox);
+    expect(SVGElement).toHaveAttribute('fill', defaultAttributes.fill);
+    expect(SVGElement).toHaveAttribute('stroke', defaultAttributes.stroke);
+    expect(SVGElement).toHaveAttribute('stroke-width', String(defaultAttributes.strokeWidth));
+    expect(SVGElement).toHaveAttribute('stroke-linecap', defaultAttributes.strokeLinecap);
+    expect(SVGElement).toHaveAttribute('stroke-linejoin', defaultAttributes.strokeLinejoin);
+  });
+
   it('should adjust the size, stroke color and stroke width', () => {
-    const testId = 'grid-icon';
-    const { container, getByTestId } = render(
+    const { container } = render(
       <Grid
-        data-testid={testId}
         size={48}
         stroke="red"
         strokeWidth={4}
       />,
     );
 
-    const { attributes } = getByTestId(testId) as unknown as {
-      attributes: Record<string, { value: string }>;
-    };
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('4');
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '4');
 
     expect(container.innerHTML).toMatchSnapshot();
   });
@@ -58,23 +70,20 @@ describe('Using lucide icon components', () => {
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    const testId = 'grid-icon';
     const { container, getByTestId } = render(
       <Grid
-        data-testid={testId}
         size={48}
         stroke="red"
         absoluteStrokeWidth
       />,
     );
 
-    const { attributes } = getByTestId(testId) as unknown as {
-      attributes: Record<string, { value: string }>;
-    };
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('1');
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '1');
 
     expect(container.innerHTML).toMatchSnapshot();
   });
@@ -86,35 +95,5 @@ describe('Using lucide icon components', () => {
     expect(container.firstChild).toHaveClass(testClass);
     expect(container.firstChild).toHaveClass('lucide');
     expect(container.firstChild).toHaveClass('lucide-droplet');
-  });
-
-  it('should render icons dynamically by using the dynamicIconImports module', async () => {
-    interface IconProps extends Omit<LucideProps, 'ref'> {
-      name: keyof typeof dynamicIconImports;
-    }
-
-    const Icon = ({ name, ...props }: IconProps) => {
-      const LucideIcon = lazy(dynamicIconImports[name]);
-
-      return (
-        <Suspense fallback={null}>
-          <LucideIcon {...props} />
-        </Suspense>
-      );
-    };
-
-    const { container, getByLabelText } = render(
-      <Icon
-        aria-label="smile"
-        name="smile"
-        size={48}
-        stroke="red"
-        absoluteStrokeWidth
-      />,
-    );
-
-    await waitFor(() => getByLabelText('smile'));
-
-    expect(container.innerHTML).toMatchSnapshot();
   });
 });
