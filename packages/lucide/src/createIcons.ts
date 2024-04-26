@@ -34,4 +34,4 @@ const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) 
   }
 };
 
-export default createIcons
+export default createIcons;
