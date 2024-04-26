@@ -168,8 +168,8 @@ For more details about typing the `svelte:component` directive, see the [Svelte 
 
 ## With Lucide lab or custom icons
 
-Lucide Lab is a collection of icons that are not part of the official lucide library.
-<!-- TODO: Add link to @lucide/lab repo -->
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
 They can be used by using the `Icon` component.
 All props like the regular Lucide icons can be passed to adjust the icon appearance.
 

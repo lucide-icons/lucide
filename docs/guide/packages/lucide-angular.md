@@ -118,10 +118,8 @@ LucideAngularModule.pick(icons)
 
 ## With Lucide lab or custom icons
 
-Lucide lab is a collection of icons that are not part of the official lucide library.
-You can use them in the same way as the official icons.
-
-<!-- TODO: Add link to @lucide/lab repo -->
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+They can be used in the same way as the official icons.
 
 ```js
 import { LucideAngularModule } from 'lucide-angular';
