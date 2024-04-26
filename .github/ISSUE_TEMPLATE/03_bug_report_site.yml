@@ -30,6 +30,9 @@ body:
         - label: Windows
         - label: Linux
         - label: macOS
+        - label: ChromeOS
+        - label: iOS
+        - label: Android
         - label: Other/not relevant
   - type: textarea
     id: description
