@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { mergeClasses } from '@lucide/shared'
   import defaultAttributes from './defaultAttributes'
   import type { IconNode } from './types';
 
@@ -9,6 +8,14 @@
   export let strokeWidth: number | string = 2
   export let absoluteStrokeWidth: boolean = false
   export let iconNode: IconNode
+
+  export const mergeClasses = <ClassType = string | undefined | null>(
+    ...classes: ClassType[]
+  ) => classes.filter((className, index, array) => {
+      return Boolean(className) && array.indexOf(className) === index;
+    })
+    .join(' ');
+
 </script>
 
 <svg
