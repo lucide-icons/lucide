@@ -1,4 +1,11 @@
-<p align=center><img width="480" src="https://lucide.dev/lucide-logo-repo.svg" alt="Lucide Logo"></p>
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
+    <img src="https://lucide.dev/lucide-logo-repo.svg#gh-light-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+  </a>
+  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
+    <img src="https://lucide.dev/lucide-logo-repo-dark.svg#gh-dark-mode-only" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+  </a>
+</p>
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide" alt="license"></a>
   <a href="https://www.npmjs.com/package/lucide"><img src="https://img.shields.io/npm/v/lucide" alt="npm package"></a>
@@ -11,14 +18,14 @@
 
 Community-run fork of [Feather Icons](https://github.com/feathericons/feather), open for anyone to contribute icons.
 
-It began after growing disaffection with the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
+It began after growing dissatisfaction with the [Feather Icons](https://github.com/feathericons/feather) project moderation. With over 300+ open issues and over 100+ open PRs, the Feather Icons project has been abandoned. This unfortunately means that hundreds of developers and designers wasted their time contributing to Feather Icons with no chance of PRs being accepted.
 
 Lucide is trying to expand the icon set as much as possible while staying faithful to the original simplistic design language. We do this as a community of devs and designers and hope that you'll join us!
 
 ### Why choose Lucide over Feather Icons
 
 - More icons to work with: Lucide already has hundreds of icons more than Feather does.
-- Official librairies and integrations with popular frameworks and design tools.
+- Official libraries and integrations with popular frameworks and design tools.
 - Well maintained code base.
 - Active community, regularly growing and improving the set.
 
@@ -35,7 +42,6 @@ Lucide is trying to expand the icon set as much as possible while staying faithf
   - [Static (svg sprite, font, icons ..)](#static-svg-sprite-font-icons-)
   - [Figma](#figma)
   - [Laravel](#laravel)
-  - [Flutter](#flutter)
   - [Svelte](#svelte)
   - [Solid](#solid)
   - [Hyva](#hyva)
@@ -200,16 +206,6 @@ composer require mallardduck/blade-lucide-icons
 
 For more details, see the [documentation](https://github.com/mallardduck/blade-lucide-icons/blob/main/README.md).
 
-### Flutter
-
-Implementation of Lucide icon library for Flutter applications.
-
-```sh
-flutter pub add lucide_icons
-```
-
-For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
-
 ### Svelte
 
 Implementation of the lucide icon library for Svelte applications.
@@ -285,9 +281,12 @@ Thank you to all the people who contributed to Lucide!
 
 ## Sponsors
 
-
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
   <img src="docs/public/vercel.svg" alt="Powered by Vercel" width="200" />
 </a>
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+
+### Awesome backer 🍺
+
+<a href="https://www.scipress.io?utm_source=lucide"><img src="docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>

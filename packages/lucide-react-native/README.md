@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
+    <img src="https://lucide.dev/package-logos/lucide-react-native.svg#gh-light-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="540">
+  </a>
+  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
+    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-react-native.svg#gh-dark-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="540">
+  </a>
+</p>
+
+
 # Lucide React Native
 
 Implementation of the lucide icon library for React Native applications.
@@ -6,7 +16,7 @@ Implementation of the lucide icon library for React Native applications.
 
 ## Installation
 
-First, ensure that you have`react-native-svg@^12.0.0` or `react-native-svg@^13.0.0` installed. Then, install the package:
+First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
 
 ```sh
 yarn add lucide-react-native
@@ -18,57 +28,26 @@ or
 npm install lucide-react-native
 ```
 
-## How to use
+## Documentation
 
-It's built with ES modules so it's completely tree-shakable.
-Each icon can be imported as a react component.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native)
 
-### Example
+## Community
 
-You can pass additional props to adjust the icon.
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
-```js
-import { Camera } from 'lucide-react-native';
+## License
 
-const App = () => {
-  return <Camera color="red" size={48} />;
-};
+Lucide is licensed under the ICS license. See [LICENSE](https://lucide.dev/license).
 
-export default App;
-```
+## Sponsors
 
-### Props
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
 
-| name          | type     | default      |
-| ------------- | -------- | ------------ |
-| `size`        | _Number_ | 24           |
-| `color`       | _String_ | currentColor |
-| `strokeWidth` | _Number_ | 2            |
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Custom props
+### Awesome backer 🍺
 
-You can also pass custom props that will be added in the svg as attributes.
-
-```js
-const App = () => {
-  return <Camera fill="red" />;
-};
-```
-
-### Generic icon component
-
-It is possible to create a generic icon component to load icons.
-
-> :warning: The example below is importing all ES modules. This is **not** recommended when you using a bundler since your application build size will grow substantially.
-
-```js
-import * as icons from 'lucide-react-native';
-
-const Icon = ({ name, color, size }) => {
-  const LucideIcon = icons[name];
-
-  return <LucideIcon color={color} size={size} />;
-};
-
-export default Icon;
-```
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>

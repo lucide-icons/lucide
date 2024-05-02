@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IconEntity } from '../../types'
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import IconButton from '../base/IconButton.vue';
 import IconContributors from './IconContributors.vue';
@@ -10,14 +10,21 @@ import { useRouter } from 'vitepress';
 import IconInfo from './IconInfo.vue';
 import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
+import { satisfies } from 'semver';
 
 const props = defineProps<{
-  iconName: string
+  iconName: string | null
 }>()
+
+const { go } = useRouter()
 
 const icon = computedAsync<IconEntity | null>(async () => {
   if (props.iconName) {
-    return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+    try {
+      return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+    } catch (err) {
+      go(`/icons/${props.iconName}`)
+    }
   }
   return null
 }, null)
@@ -25,11 +32,15 @@ const icon = computedAsync<IconEntity | null>(async () => {
 const emit = defineEmits(['close'])
 const isOpen = computed(() => !!icon.value)
 
+function releaseTagLink(version) {
+  const shouldAddV = satisfies(version, `<0.266.0`)
+
+  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+}
+
 function onClose() {
   emit('close')
 }
-
-const { go } = useRouter()
 
 const CloseIcon = createLucideIcon('Close', x)
 const Expand = createLucideIcon('Expand', expand)
@@ -43,9 +54,7 @@ const Expand = createLucideIcon('Expand', expand)
           <Badge
             v-if="icon.createdRelease"
             class="version"
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${icon.createdRelease.version}`"
-            target="_blank"
-            rel="noreferrer noopener"
+            :href="releaseTagLink(icon.createdRelease.version)"
           >v{{ icon.createdRelease.version }}</Badge>
           <IconButton  @click="go(`/icons/${icon.name}`)">
             <component :is="Expand" />
@@ -137,11 +146,11 @@ const Expand = createLucideIcon('Expand', expand)
 }
 
 .drawer-enter-active {
-  transition: all 0.2s cubic-bezier(.21,.8,.46,.9);
+  transition: opacity 0.5s, transform 0.25s ease;
 }
 
 .drawer-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: opacity 0.25s ease, transform 1.6s ease-out;
 }
 
 .drawer-enter-from,

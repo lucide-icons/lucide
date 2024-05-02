@@ -1,5 +1,5 @@
-export type IconNode = [elementName: string, attrs: Record<string, string>][]
-export type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][]
+export type IconNode = [elementName: string, attrs: Record<string, string>][];
+export type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][];
 
 export interface IconEntity {
   name: string;
@@ -13,34 +13,44 @@ export interface IconEntity {
 }
 
 export interface Category {
-  name: string
-  title: string
-  icon?: string
-  iconCount: number
-  icons?: IconEntity[]
+  name: string;
+  title: string;
+  icon?: string;
+  iconCount: number;
+  icons?: IconEntity[];
 }
 
 interface Shield {
-  alt: string
-  src: string
-  href: string
+  alt: string;
+  src: string;
+  href: string;
 }
 
 export interface PackageItem {
-  name: string
-  description: string
-  icon: string
-  iconDark: string
-  shields: Shield[]
-  source: string
-  documentation: string
-  order?: number
-  private?: boolean
-  flutter?: object
+  name: string;
+  description: string;
+  icon: string;
+  iconDark: string;
+  shields: Shield[];
+  source: string;
+  documentation: string;
+  order?: number;
+  private?: boolean;
+  flutter?: object;
 }
 
-
 export interface Release {
-  version: string
-  date: string
+  version: string;
+  date: string;
+}
+
+interface ShowcaseItemImage {
+  light: string;
+  dark: string;
+}
+
+export interface ShowcaseItem {
+  name: string;
+  url: string;
+  image: ShowcaseItemImage;
 }

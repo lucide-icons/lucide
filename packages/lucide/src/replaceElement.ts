@@ -1,7 +1,7 @@
 import createElement from './createElement';
 import { Icons } from './types';
 
-export type CustomAttrs = { [attr:string]: any }
+export type CustomAttrs = { [attr: string]: any };
 
 /**
  * Get the attributes of an HTML element.
@@ -36,9 +36,7 @@ export const getClassNames = (attrs: Record<string, string> | string): string | 
  * @param {array} arrayOfClassnames
  * @returns {string}
  */
-export const combineClassNames = (
-  arrayOfClassnames: (string | Record<string, string>)[]
-) => {
+export const combineClassNames = (arrayOfClassnames: (string | Record<string, string>)[]) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
   return classNameArray
@@ -52,9 +50,9 @@ const toPascalCase = (string: string): string =>
   string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
 
 interface ReplaceElementOptions {
-  nameAttr: string
-  icons: Icons,
-  attrs: Record<string, string>
+  nameAttr: string;
+  icons: Icons;
+  attrs: Record<string, string>;
 }
 
 /**
@@ -66,7 +64,7 @@ interface ReplaceElementOptions {
 const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceElementOptions) => {
   const iconName = element.getAttribute(nameAttr);
 
-  if(iconName == null) return
+  if (iconName == null) return;
 
   const ComponentName = toPascalCase(iconName);
 
@@ -92,8 +90,8 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
 
   if (classNames) {
     Object.assign(iconAttrs, {
-      class: classNames
-    })
+      class: classNames,
+    });
   }
 
   const svgElement = createElement([tag, iconAttrs, children]);
@@ -101,4 +99,4 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
   return element.parentNode?.replaceChild(svgElement, element);
 };
 
-export default replaceElement
+export default replaceElement;

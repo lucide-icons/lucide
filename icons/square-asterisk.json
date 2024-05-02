@@ -20,5 +20,8 @@
     "account",
     "maths",
     "development"
+  ],
+  "aliases": [
+    "asterisk-square"
   ]
 }

@@ -1,5 +1,5 @@
-import { JSX } from "solid-js/jsx-runtime";
-import { SVGAttributes } from "./types";
+import { JSX } from 'solid-js/jsx-runtime';
+import { SVGAttributes } from './types';
 
 const defaultAttributes: SVGAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -13,4 +13,4 @@ const defaultAttributes: SVGAttributes = {
   'stroke-linejoin': 'round',
 };
 
-export default defaultAttributes
+export default defaultAttributes;
