@@ -52,8 +52,7 @@ async function navigateToIcon(event) {
     event.preventDefault()
     window.history.pushState({}, '', `/icons/${props.name}`)
     emit('setActiveIcon', props.name)
-  }
-  else {
+  } else {
     event.preventDefault()
     go(`/icons/${props.name}`)
   }
