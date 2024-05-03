@@ -60,7 +60,7 @@ interactive wrapper element.
 Icons should represent concepts or actions in a universally understandable way. Avoid using abstract
 or ambiguous, or culture-specific symbols that might confuse some users.
 
-![For example: Don't base your choice of icon on puns.](../../images/a11y/meaningfulness.svg?raw=true)
+![For example: Use universally understandable symbols and don't base your choice of icon on puns.](../../images/a11y/meaningfulness.svg?raw=true)
 
 ## Consistency
 
@@ -85,11 +85,12 @@ element. In most cases they will be part of a badge, button (including icon butt
 item or other interactive UI element.
 
 ::: warning
-In case some of your icons stand alone, and they serve a non-decorative function, make sure to provide
+In case some of your icons stand alone, and they serve a non-decorative function, make sure to
+provide
 the appropriate accessible label for them via the `aria-label` attribute.
 :::
 
-![](../../images/a11y/alttext-standalone.svg?raw=true)
+![In short: provide accessible label for semantic icons, but not for decorative icons.](../../images/a11y/alttext-standalone.svg?raw=true)
 
 In general try to avoid using functional icons with no interactivity, we recommend that:
 
@@ -111,4 +112,18 @@ screen readers, leading to nonsensical text.
 Icon buttons are buttons that do not contain any visible text apart from the icon itself (think of
 the close button of a dialog for example).
 
+As previously stated, you should provide your accessible label on the icon button itself, not the
+contained icon.
+
 ![](../../images/a11y/alttext-iconbuttons.svg?raw=true)
+
+## Further resources
+
+We also recommend checking out the following resources about accessibility:
+
+- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+- [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
+- [Learn accessibility on web.dev](https://web.dev/learn/accessibility)
+- [Inclusive Components](https://inclusive-components.design/)
+- [A11yTalks](https://www.a11ytalks.com/)
+- [A11y automation tracker](https://a11y-automation.dev/)
