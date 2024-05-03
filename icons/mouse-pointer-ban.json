@@ -1,12 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ashygee",
-    "ericfennis"
+    "danielbayley"
   ],
   "tags": [
-    "click",
-    "select"
+    "wait",
+    "busy",
+    "loading",
+    "blocked",
+    "frozen",
+    "freeze"
   ],
   "categories": [
     "arrows",
