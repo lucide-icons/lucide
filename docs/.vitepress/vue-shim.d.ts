@@ -1,5 +1,7 @@
+import { IconNode } from 'lucide-vue-next/src/createLucideIcon';
+import Vue from 'vue';
+
 declare module '*.vue' {
-  import Vue from 'vue';
   export default Vue;
 }
 
@@ -15,4 +17,8 @@ declare const resvg_wasm: RequestInfo | URL | Response | BufferSource | WebAssem
 
 declare module 'node:module' {
   function createRequire(filename: string): NodeRequire;
+}
+
+declare module '*.node.json' {
+  export default IconNode;
 }
