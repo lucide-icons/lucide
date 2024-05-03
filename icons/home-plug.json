@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": "jguddas",
+  "tags": [
+    "home",
+    "autarky",
+    "energy"
+  ],
+  "categories": [
+    "buildings",
+    "home",
+    "sustainability"
+  ]
+}
