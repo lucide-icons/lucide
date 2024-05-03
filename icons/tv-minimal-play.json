@@ -1,6 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "karsa-mistmere",
+    "jguddas",
     "ericfennis"
   ],
   "tags": [
@@ -17,6 +19,10 @@
     "smart",
     "digital",
     "video",
+    "movie",
+    "running",
+    "start",
+    "film",
     "home cinema",
     "entertainment",
     "showtime",
@@ -26,5 +32,8 @@
   "categories": [
     "devices",
     "multimedia"
+  ],
+  "aliases": [
+    "tv-2"
   ]
 }
