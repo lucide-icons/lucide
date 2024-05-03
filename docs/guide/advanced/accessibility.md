@@ -119,9 +119,8 @@ contained icon.
 ## A note on `aria-label`
 
 Although you could provide accessible labels to your elements via the `aria-label` attribute, we
-generally suggest using your chosen CSS framework's "visually hidden" utility instead whenever
-possible, since some assistive technology fails to announce `aria-label` attributes in case the
-element is not of an appropriate semantic role.
+generally recommend against this for and instead suggest that
+you [use your chosen CSS framework's "visually hidden" utility whenever possible](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
 
 E.g. in case of Bootstrap:
 
