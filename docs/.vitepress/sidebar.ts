@@ -31,10 +31,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
     {
       text: 'Advanced',
       items: [
-        // {
-        //   text: 'Accessibility',
-        //   link: '/guide/advanced/accessibility'
-        // },
+        {
+          text: 'Accessibility',
+          link: '/guide/advanced/accessibility',
+        },
         {
           text: 'Global styling',
           link: '/guide/advanced/global-styling',
