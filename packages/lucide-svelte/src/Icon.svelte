@@ -9,12 +9,12 @@
   export let absoluteStrokeWidth: boolean = false
   export let iconNode: IconNode
 
-  export const mergeClasses = <ClassType = string | undefined | null>(
-    ...classes: ClassType[]
-  ) => classes.filter((className, index, array) => {
-      return Boolean(className) && array.indexOf(className) === index;
-    })
-    .join(' ');
+  const mergeClasses = <ClassType = string | undefined | null>(
+      ...classes: ClassType[]
+    ) => classes.filter((className, index, array) => {
+        return Boolean(className) && array.indexOf(className) === index;
+      })
+      .join(' ');
 
 </script>
 
