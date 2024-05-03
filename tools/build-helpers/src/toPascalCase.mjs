@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { toCamelCase } from './toCamelCase.mjs';
 
 /**

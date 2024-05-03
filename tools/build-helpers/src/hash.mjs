@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * djb2 hashing function
  *

@@ -27,7 +27,8 @@ export default async function generateAliasesFile({
   // Generate Import for Icon VNodes
   await Promise.all(
     icons.map(async (iconName, index) => {
-      const componentName = exportModuleNameCasing === 'pascal' ? toPascalCase(iconName) : toCamelCase(iconName);
+      const componentName =
+        exportModuleNameCasing === 'pascal' ? toPascalCase(iconName) : toCamelCase(iconName);
       const iconAliases = iconMetaData[iconName]?.aliases;
 
       let importString = '';
@@ -45,14 +46,15 @@ export default async function generateAliasesFile({
         importString += getImportString(
           `Lucide${componentName}`,
           iconName,
-          aliasImportFileExtension,
+          aliasImportFileExtension
         );
       }
 
       if (iconAliases != null && Array.isArray(iconAliases)) {
         await Promise.all(
           iconAliases.map(async (alias) => {
-            const componentNameAlias = exportModuleNameCasing === 'pascal' ? toPascalCase(alias) : toCamelCase(alias);;
+            const componentNameAlias =
+              exportModuleNameCasing === 'pascal' ? toPascalCase(alias) : toCamelCase(alias);
 
             if (separateAliasesFile) {
               const output = `export { default } from "./${iconName}"`;
@@ -71,28 +73,28 @@ export default async function generateAliasesFile({
             importString += getImportString(
               componentNameAlias,
               exportFileIcon,
-              aliasImportFileExtension,
+              aliasImportFileExtension
             );
 
             if (!aliasNamesOnly) {
               importString += getImportString(
                 `${componentNameAlias}Icon`,
                 exportFileIcon,
-                aliasImportFileExtension,
+                aliasImportFileExtension
               );
 
               importString += getImportString(
                 `Lucide${componentNameAlias}`,
                 exportFileIcon,
-                aliasImportFileExtension,
+                aliasImportFileExtension
               );
             }
-          }),
+          })
         );
       }
 
       appendFile(importString, fileName, outputDirectory);
-    }),
+    })
   );
 
   appendFile('\n', fileName, outputDirectory);

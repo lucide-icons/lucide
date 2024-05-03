@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * @param {array} array
  * @returns {array}
