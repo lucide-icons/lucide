@@ -567,9 +567,6 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../../tools/build-icons
-      '@lucide/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@sveltejs/package':
         specifier: ^2.2.3
         version: 2.2.6(svelte@4.1.2)(typescript@5.1.6)
