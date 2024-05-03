@@ -86,8 +86,7 @@ item or other interactive UI element.
 
 ::: warning
 In case some of your icons stand alone, and they serve a non-decorative function, make sure to
-provide
-the appropriate accessible label for them via the `aria-label` attribute.
+provide the appropriate accessible label for them.
 :::
 
 ![In short: provide accessible label for semantic icons, but not for decorative icons.](../../images/a11y/alttext-standalone.svg?raw=true)
@@ -117,6 +116,36 @@ contained icon.
 
 ![](../../images/a11y/alttext-iconbuttons.svg?raw=true)
 
+## A note on `aria-label`
+
+Although you could provide accessible labels to your elements via the `aria-label` attribute, we
+generally suggest using your chosen CSS framework's "visually hidden" utility instead whenever
+possible, since some assistive technology fails to announce `aria-label` attributes in case the
+element is not of an appropriate semantic role.
+
+E.g. in case of Bootstrap:
+
+```html
+
+<div>
+  <i data-lucide="phone" aria-hidden="true"></i>
+  <span class="visually-hidden">Phone number</span>
+</div>
+```
+
+Or with tailwindcss:
+
+```html
+
+<div>
+  <i data-lucide="phone" aria-hidden="true"></i>
+  <span class="sr-only">Phone number</span>
+</div>
+```
+
+If you're not sure, you may consider learning more
+about [how to hide content.](https://www.a11yproject.com/posts/how-to-hide-content/)
+
 ## Further resources
 
 We also recommend checking out the following resources about accessibility:
@@ -127,3 +156,4 @@ We also recommend checking out the following resources about accessibility:
 - [Inclusive Components](https://inclusive-components.design/)
 - [A11yTalks](https://www.a11ytalks.com/)
 - [A11y automation tracker](https://a11y-automation.dev/)
+- [The A11Y Project](https://www.a11yproject.com/)
