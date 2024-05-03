@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "internet",
+    "network",
+    "connection",
+    "cable",
+    "lan",
+    "port",
+    "router",
+    "switch",
+    "hub",
+    "modem",
+    "web",
+    "online",
+    "networking",
+    "communication",
+    "socket",
+    "plug",
+    "slot",
+    "controller",
+    "connector",
+    "interface",
+    "console",
+    "signal",
+    "data",
+    "input",
+    "output"
+  ],
+  "categories": [
+    "communication",
+    "devices",
+    "multimedia",
+    "gaming"
+  ]
+}
