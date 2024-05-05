@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "cut",
+    "snippet",
+    "chop",
+    "stationery",
+    "crafts"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "tools",
+    "files",
+    "development"
+  ],
+  "aliases": [
+    "scissors-square-dashed-bottom"
+  ]
+}

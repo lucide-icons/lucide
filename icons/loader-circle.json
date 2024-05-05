@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "loading",
+    "wait",
+    "busy",
+    "progress",
+    "spinner",
+    "spinning",
+    "throbber",
+    "circle"
+  ],
+  "categories": [
+    "cursors",
+    "multimedia",
+    "layout"
+  ],
+  "aliases": [
+    "loader-2"
+  ]
+}
