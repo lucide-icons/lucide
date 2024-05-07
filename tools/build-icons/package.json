@@ -1,7 +1,7 @@
 {
   "name": "@lucide/build-icons",
   "description": "A internal used package to build icon code files for the lucide icon library packages.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.mjs",
   "type": "module",
   "scripts": {
