@@ -52,6 +52,7 @@
     "build:package": "svelte-package --input ./src",
     "build:license": "node ./scripts/appendBlockComments.mjs",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
