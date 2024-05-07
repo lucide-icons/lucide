@@ -166,6 +166,27 @@ The package includes type definitions for all icons. This is useful if you want 
 
 For more details about typing the `svelte:component` directive, see the [Svelte documentation](https://svelte.dev/docs/typescript#types-componenttype).
 
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like the regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```svelte
+<script>
+import { Icon } from 'lucide-svelte';
+import { burger, sausage } from '@lucide/lab';
+</script>
+
+<Icon iconNode={burger} />
+<Icon iconNode={sausage} color="red"/>
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.

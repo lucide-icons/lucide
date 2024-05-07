@@ -69,8 +69,6 @@ function releaseTagLink(version) {
           <Label>Created:</Label>
           <Badge
             :href="releaseTagLink(params.createdRelease.version)"
-            target="_blank"
-            rel="noreferrer noopener"
           >
             v{{params.createdRelease.version}}
           </Badge>
@@ -82,8 +80,6 @@ function releaseTagLink(version) {
           <Label>Last changed:</Label>
           <Badge
             :href="releaseTagLink(params.changedRelease.version)"
-            target="_blank"
-            rel="noreferrer noopener"
           >
             v{{params.changedRelease.version}}
           </Badge>
