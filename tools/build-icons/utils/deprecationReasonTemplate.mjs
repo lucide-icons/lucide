@@ -2,7 +2,9 @@ export function deprecationReasonTemplate(
   deprecationReason,
   { componentName, iconName, toBeRemovedInVersion },
 ) {
-  const removalNotice = toBeRemovedInVersion ? ` This ${deprecationReason.startsWith('icon') ? 'icon' : 'alias'} will be removed in ${toBeRemovedInVersion}` : undefined
+  const removalNotice = toBeRemovedInVersion
+    ? ` This ${deprecationReason.startsWith('icon') ? 'icon' : 'alias'} will be removed in ${toBeRemovedInVersion}`
+    : '';
 
   switch (deprecationReason) {
     case 'alias.typo':
