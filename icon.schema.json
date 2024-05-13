@@ -35,7 +35,7 @@
                 "const": true
               },
               "deprecationReason": {
-                "$ref": "#/$defs/deprecationReasons"
+                "$ref": "#/$defs/aliasDeprecationReasons"
               },
               "toBeRemovedInVersion": {
                 "$ref": "#/$defs/versionNumber",
@@ -77,7 +77,7 @@
       "const": true
     },
     "deprecationReason": {
-      "$ref": "#/$defs/deprecationReasons"
+      "$ref": "#/$defs/iconDeprecationReasons"
     },
     "toBeRemovedInVersion": {
       "$ref": "#/$defs/versionNumber",
@@ -88,9 +88,13 @@
     "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
   },
   "$defs": {
-    "deprecationReasons": {
+    "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.brand", "alias.typo", "alias.name"]
+      "enum": ["icon.brand"]
+    },
+    "aliasDeprecationReasons": {
+      "type": "string",
+      "enum": ["alias.typo", "alias.name"]
     },
     "versionNumber": {
       "type": "string",
