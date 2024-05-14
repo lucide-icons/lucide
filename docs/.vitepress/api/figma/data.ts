@@ -1,9 +1,8 @@
-import { eventHandler, setResponseHeader } from 'h3';
-import iconNodes from '../../data/iconNodes';
-import { IconNodeWithKeys } from '../../theme/types.ts';
-import iconMetaData from '../../data/iconMetaData.ts';
+import iconNodes from '../../data/iconNodes/index.ts';
+import { IconNodeWithKeys } from '../../theme/types';
+import iconMetaData from '../../data/iconMetaData';
 import releaseMeta from '../../data/releaseMetaData.json';
-import { getAllCategoryFiles } from '../../lib/categories.ts';
+import categories from '../../data/categoriesData.json';
 
 const dataResponse = {
   icons: Object.entries(iconNodes).reduce((acc, [name, iconNode]) => {
@@ -30,7 +29,7 @@ const dataResponse = {
 
     return acc;
   }, {}),
-  categories: getAllCategoryFiles(),
+  categories,
 };
 
 export default eventHandler((event) => {
