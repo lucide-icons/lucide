@@ -130,3 +130,18 @@ menuIcon.classList.add('my-icon-class');
 const myApp = document.getElementById('app');
 myApp.appendChild(menuIcon);
 ```
+
+### With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+They can be used in the same way as the official icons.
+
+```js
+import { burger } from '@lucide/lab';
+
+createIcons({
+  icons: {
+    burger
+  }
+});
+```

@@ -8,6 +8,7 @@ squircle
 strikethrough
 touchpad
 ungroup
+pilcrow
 
 # Brands
 codepen
