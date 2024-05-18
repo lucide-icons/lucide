@@ -2,6 +2,7 @@
 
 exports[`Using createLucideIcon > should create a component from an iconNode 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide lucide-air-vent"
   fill="none"
   height="24"
