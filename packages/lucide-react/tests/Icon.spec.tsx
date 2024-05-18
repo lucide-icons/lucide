@@ -62,7 +62,7 @@ describe('Icon Component Accessibility', () => {
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
   });
 
-  it('should not have aria-hidden prop there are children that could be a <title> element', async () => {
+  it('should not have aria-hidden prop when there are children that could be a <title> element', async () => {
     const { container } = render(
       <Icon
         iconNode={airVent}
