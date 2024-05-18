@@ -44,13 +44,14 @@
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
-    "test": "vitest run",
+    "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/shared": "workspace:*",
     "@testing-library/jest-dom": "^6.1.6",
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.37",
@@ -61,7 +62,7 @@
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^4.9.5",
-    "vite": "5.0.12",
+    "vite": "5.0.13",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
