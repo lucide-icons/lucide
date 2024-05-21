@@ -1,4 +1,3 @@
-import { eventHandler, setResponseHeader } from 'h3';
 import iconMetaData from '../../data/iconMetaData';
 
 export default eventHandler((event) => {
