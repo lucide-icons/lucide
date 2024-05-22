@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gurtt"
+  ],
+  "tags": [
+    "paint",
+    "color",
+    "decoration",
+    "aerosol",
+    "deodorant",
+    "air freshener",
+    "cleaning",
+    "airbrush",
+    "disinfectant",
+    "antiseptic",
+    "pesticide"
+  ],
+  "categories": [
+    "design",
+    "tools"
+  ]
+}
