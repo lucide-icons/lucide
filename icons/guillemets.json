@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gurtt"
+  ],
+  "tags": [
+    "quote",
+    "quotation",
+    "ditto",
+    "stereotype",
+    "merge"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
