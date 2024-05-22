@@ -2,7 +2,7 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 import { getJSBanner } from './license.mjs';
 
-export default ({ iconName, children, componentName, getSvg, deprecated }) => {
+export default ({ iconName, children, componentName, getSvg, deprecated, deprecationReason }) => {
   const svgContents = getSvg();
   const svgBase64 = base64SVG(svgContents);
 
@@ -25,7 +25,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
  * @returns {FunctionalComponent} Svelte component
- * ${deprecated ? '@deprecated' : ''}
+ * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 </script>
 
