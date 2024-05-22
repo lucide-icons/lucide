@@ -145,7 +145,7 @@ try {
       const iconName = path.basename(iconJsonFile, '.json');
       const metaDir = path.resolve(releaseMetaDataDirectory, `${iconName}.json`);
 
-      if (iconName in newReleaseMetaData === false) {
+      if (!(iconName in newReleaseMetaData)) {
         console.error(`Could not find release metadata for icon '${iconName}'.`);
       }
 
@@ -159,14 +159,16 @@ try {
       const aliases = iconMetaData.aliases ?? [];
 
       if (aliases.length) {
-        aliases.forEach((alias) => {
-          if (alias in newReleaseMetaData === false) {
-            return;
-          }
+        aliases
+          .map((alias) => (typeof alias === 'string' ? alias : alias.name))
+          .forEach((alias) => {
+            if (!(alias in newReleaseMetaData)) {
+              return;
+            }
 
-          contents.createdRelease =
-            newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
-        });
+            contents.createdRelease =
+              newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
+          });
       }
 
       const output = JSON.stringify(contents, null, 2);
