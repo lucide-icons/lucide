@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gurtt"
+  ],
+  "tags": [
+    "alcohol",
+    "beverage",
+    "bar",
+    "drink",
+    "glass",
+    "sommelier",
+    "vineyard",
+    "winery",
+    "fragile"
+  ],
+  "categories": [
+    "food-beverage",
+    "mail"
+  ]
+}
