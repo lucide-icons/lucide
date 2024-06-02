@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gurtt",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "mark",
+    "typography",
+    "punctuation",
+    "legal",
+    "type",
+    "text",
+    "prose",
+    "symbol"
+  ],
+  "categories": [
+    "text"
+  ]
+}
