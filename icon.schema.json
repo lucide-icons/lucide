@@ -21,7 +21,32 @@
     "aliases": {
       "type": "array",
       "items": {
-        "type": "string"
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "deprecated": {
+                "const": true
+              },
+              "deprecationReason": {
+                "$ref": "#/$defs/aliasDeprecationReasons"
+              },
+              "toBeRemovedInVersion": {
+                "$ref": "#/$defs/versionNumber",
+                "description": "The version this icon will be removed in."
+              }
+            },
+            "dependentRequired": {
+              "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
+            }
+          }
+        ]
       },
       "uniqueItems": true
     },
@@ -49,8 +74,31 @@
       "uniqueItems": true
     },
     "deprecated": {
-      "type": "boolean",
-      "default": false
+      "const": true
+    },
+    "deprecationReason": {
+      "$ref": "#/$defs/iconDeprecationReasons"
+    },
+    "toBeRemovedInVersion": {
+      "$ref": "#/$defs/versionNumber",
+      "description": "The version this icon will be removed in."
+    }
+  },
+  "dependentRequired": {
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
+  },
+  "$defs": {
+    "iconDeprecationReasons": {
+      "type": "string",
+      "enum": ["icon.brand"]
+    },
+    "aliasDeprecationReasons": {
+      "type": "string",
+      "enum": ["alias.typo", "alias.name"]
+    },
+    "versionNumber": {
+      "type": "string",
+      "pattern": "v[0-9]+(\\.[0-9]+)+"
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."
