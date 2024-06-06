@@ -147,8 +147,8 @@ contained icon.
   <Home aria-label="Home icon"/>
 </button>
 
-// This works but might not be the best solution, see below.
-<button aria-label="Home icon" class="btn-icon">
+// This works but might not be the best solution, see below
+<button aria-label="Go to home" class="btn-icon">
   <Home/>
 </button>
 
