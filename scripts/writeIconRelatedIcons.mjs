@@ -30,7 +30,10 @@ const arrayMatches = (a, b) => {
 };
 
 const nameParts = (icon) =>
-  [icon.name, ...(icon.aliases ?? [])]
+  [
+    icon.name,
+    ...(icon.aliases?.map((alias) => (typeof alias === 'string' ? alias : alias.name)) ?? []),
+  ]
     .join('-')
     .split('-')
     .filter((word) => word.length > 2);
