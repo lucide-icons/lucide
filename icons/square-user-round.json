@@ -13,6 +13,11 @@
     "shapes"
   ],
   "aliases": [
-    "user-square-2"
+    {
+      "name": "user-square-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

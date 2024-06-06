@@ -1,8 +1,5 @@
 {
   "$schema": "../icon.schema.json",
-  "aliases": [
-    "folder-cog-2"
-  ],
   "contributors": [
     "karsa-mistmere"
   ],
@@ -17,5 +14,13 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    {
+      "name": "folder-cog-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
