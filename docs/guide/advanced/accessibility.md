@@ -106,6 +106,24 @@ screen readers, leading to nonsensical text.
 
 ![](../../images/a11y/alttext-buttons.svg?raw=true)
 
+::: details Code examples
+
+```tsx
+// Don't do this
+<button>
+  <Plus aria-label="Plus icon"/>
+  Add document
+</button>
+
+// Do this, just leave it
+<button>
+  <Plus/>
+  Add document
+</button>
+```
+
+:::
+
 ### On icon buttons
 
 Icon buttons are buttons that do not contain any visible text apart from the icon itself (think of
@@ -116,11 +134,39 @@ contained icon.
 
 ![](../../images/a11y/alttext-iconbuttons.svg?raw=true)
 
+::: details Code examples
+
+```tsx
+// Don't do this
+<button class="btn-icon">
+  <Home/>
+</button>
+
+// Don't do this either
+<button class="btn-icon">
+  <Home aria-label="Home icon"/>
+</button>
+
+// This works but might not be the best solution, see below.
+<button aria-label="Home icon" class="btn-icon">
+  <Home/>
+</button>
+
+// Do this instead
+<button class="btn-icon">
+  <Home/>
+  <span class="visually-hidden">Go to home</span>
+</button>
+```
+
+:::
+
 ## A note on `aria-label`
 
 Although you could provide accessible labels to your elements via the `aria-label` attribute, we
-generally recommend against this for and instead suggest that
-you [use your chosen CSS framework's "visually hidden" utility whenever possible](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
+generally recommend against this and instead suggest that you use your chosen CSS framework's "
+visually hidden" utility whenever possible. You can
+[read more about why `aria-label` might not be the best solution](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
 
 E.g. in case of Bootstrap:
 
