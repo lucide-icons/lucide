@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { readSvgDirectory } from './helpers.mjs';
+import {readSvgDirectory} from './helpers.mjs';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -41,8 +41,8 @@ const nameParts = (icon) =>
 const getRelatedIcons = (currentIcon, icons) => {
   const iconSimilarity = (item) =>
     nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon)) +
-    categoryWeight * arrayMatches(item.categories, currentIcon.categories) +
-    tagWeight * arrayMatches(item.tags, currentIcon.tags);
+    categoryWeight * arrayMatches(item.categories ?? [], currentIcon.categories ?? []) +
+    tagWeight * arrayMatches(item.tags ?? [], currentIcon.tags ?? []);
   return icons
     .filter((i) => i.name !== currentIcon.name)
     .map((icon) => ({ icon, similarity: iconSimilarity(icon) }))
@@ -54,9 +54,7 @@ const getRelatedIcons = (currentIcon, icons) => {
 
 const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  const metaData = await import(`../icons/${iconName}`, {
-    assert: { type: 'json' },
-  });
+  const metaData = JSON.parse(fs.readFileSync(`../icons/${iconName}`));
 
   const name = iconName.replace('.json', '');
 
