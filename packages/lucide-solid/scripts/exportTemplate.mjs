@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 
-export default ({ componentName, iconName, children, getSvg, deprecated }) => {
+export default ({ componentName, iconName, children, getSvg, deprecated, deprecationReason }) => {
   const svgContents = getSvg();
   const svgBase64 = base64SVG(svgContents);
 
@@ -20,7 +20,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
  * @returns {JSX.Element} JSX Element
- * ${deprecated ? '@deprecated' : ''}
+ * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = (props: LucideProps) => (
   <Icon {...props} name="${componentName}" iconNode={iconNode} />
