@@ -15,6 +15,11 @@
     "files"
   ],
   "aliases": [
-    "file-cog-2"
+    {
+      "name": "file-cog-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
