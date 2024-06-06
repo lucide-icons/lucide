@@ -28,6 +28,11 @@
     "multimedia"
   ],
   "aliases": [
-    "tv-2"
+    {
+      "name": "tv-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
