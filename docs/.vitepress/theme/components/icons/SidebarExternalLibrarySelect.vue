@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import Checkbox from '../base/Checkbox.vue'
 import SidebarTitle from './SidebarTitle.vue'
-const externalLibraries = [
+import { useExternalLibs } from '../../composables/useExternalLibs';
+import { ExternalLibs } from '../../types';
+
+interface ExternalLibrary {
+  name: string;
+  value: ExternalLibs;
+}
+
+const externalLibraries: ExternalLibrary[] = [
   {
     name: 'Lab',
     value: 'lab'
   },
 ];
 
-const selectedLibraries = ref<string[]>([]);
+const { selectedLibs } = useExternalLibs();
 </script>
 
 <template>
@@ -17,7 +24,6 @@ const selectedLibraries = ref<string[]>([]);
     <SidebarTitle>
       Include external libs
     </SidebarTitle>
-    {{ selectedLibraries }}
     <ul>
       <li
         v-for="library in externalLibraries"
@@ -26,7 +32,7 @@ const selectedLibraries = ref<string[]>([]);
         <Checkbox
           :label="library.name"
           :id="library.name"
-          v-model="selectedLibraries"
+          v-model="selectedLibs"
           :value="library.value"
         />
       </li>

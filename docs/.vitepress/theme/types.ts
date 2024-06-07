@@ -8,9 +8,11 @@ export interface IconMetaData {
   aliases?: string[];
 }
 
+export type ExternalLibs = 'lab';
 export interface IconEntity extends IconMetaData {
   name: string;
   iconNode: IconNode;
+  externalLibrary?: ExternalLibs
   createdRelease?: Release;
   changedRelease?: Release;
 }

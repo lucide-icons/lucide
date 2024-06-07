@@ -100,7 +100,10 @@ function releaseTagLink(version) {
   </div>
 </div>
 
-<RelatedIcons :icons="params.relatedIcons" />
+<RelatedIcons
+  v-if="params.relatedIcons"
+  :icons="params.relatedIcons"
+/>
 
 <style module>
   .preview {

@@ -44,10 +44,10 @@ const tags = computed(() => {
 
     <div class="group buttons">
       <VPButton
-        v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
-        :href="`/icons/${icon.name}`"
+        v-if="!page?.relativePath?.startsWith?.(icon.externalLibrary ? `icons/${icon.externalLibrary}/${icon.name}`: `icons/${icon.name}`)"
+        :href="icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}`: `/icons/${icon.name}`"
         text="See in action"
-        @click="go(`/icons/${icon.name}`)"
+        @click="go(icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}`: `/icons/${icon.name}`)"
       />
       <CopySVGButton :name="icon.name" :popoverPosition="popoverPosition"/>
       <CopyCodeButton :name="icon.name" :popoverPosition="popoverPosition"/>
