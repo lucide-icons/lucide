@@ -6,6 +6,7 @@ import { isActive } from 'vitepress/dist/client/shared'
 import { useActiveAnchor } from '../../composables/useActiveAnchor'
 import { data } from './CategoryList.data'
 import CategoryListItem from './CategoryListItem.vue'
+import SidebarTitle from './SidebarTitle.vue'
 import { useCategoryView } from '../../composables/useCategoryView'
 
 const { page } = useData()
@@ -46,9 +47,9 @@ watch(headers, () => {
 
 <template>
   <div class="category-list" ref="container">
-    <h2 class="sidebar-title sidebar-text">
+    <SidebarTitle>
       View
-    </h2>
+    </SidebarTitle>
     <VPLink class="sidebar-link sidebar-text" href="/icons/" :class="{ 'active': overviewIsActive } ">
       All
     </VPLink>
@@ -65,10 +66,6 @@ watch(headers, () => {
 </template>
 
 <style scoped>
-.sidebar-title {
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-}
 .sidebar-text {
   line-height: 24px;
   font-size: 14px;

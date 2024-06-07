@@ -1,12 +1,15 @@
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 export type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][];
 
-export interface IconEntity {
-  name: string;
+export interface IconMetaData {
   tags: string[];
   categories: string[];
   contributors: string[];
   aliases?: string[];
+}
+
+export interface IconEntity extends IconMetaData {
+  name: string;
   iconNode: IconNode;
   createdRelease?: Release;
   changedRelease?: Release;
