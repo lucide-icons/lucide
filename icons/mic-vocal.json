@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "it-is-not",
-    "danielbayley",
-    "karsa-mistmere"
+    "jguddas"
   ],
   "tags": [
     "lyrics",
@@ -20,8 +18,5 @@
   "categories": [
     "devices",
     "multimedia"
-  ],
-  "aliases": [
-    "mic-2"
   ]
 }
