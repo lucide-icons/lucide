@@ -5,16 +5,21 @@
     "csandman",
     "mittalyashu",
     "ericfennis",
-    "danielbayley",
     "karsa-mistmere"
   ],
   "tags": [
+    "disabled",
+    "inactive",
+    "non-editable",
+    "locked",
+    "read-only",
+    "unmodifiable",
+    "frozen",
+    "restricted",
     "pencil",
     "change",
     "create",
     "draw",
-    "sketch",
-    "draft",
     "writer",
     "writing",
     "biro",
@@ -28,5 +33,13 @@
     "text",
     "design",
     "tools"
+  ],
+  "aliases": [
+    {
+      "name": "edit-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
