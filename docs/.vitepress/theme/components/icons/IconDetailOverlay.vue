@@ -32,7 +32,9 @@ const icon = computedAsync<IconEntity | null>(async () => {
         return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
       }
     } catch (err) {
-      go(`/icons/${props.iconName}`)
+      if (!props.iconName.includes(':')) {
+        go(`/icons/${props.iconName}`)
+      }
     }
   }
   return null
