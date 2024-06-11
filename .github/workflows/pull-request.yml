@@ -39,6 +39,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Run Test
+        # The ... means that if a dependency is changed it wil also run.
         run: pnpm --filter '...[HEAD..origin/main]' test
 
   build:
@@ -59,6 +60,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Run Test
+        # The ... means that if a dependency is changed it wil also run.
         run: pnpm --filter '...[HEAD..origin/main]' build
 
   build-font:
