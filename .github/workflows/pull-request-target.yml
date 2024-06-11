@@ -1,4 +1,4 @@
-name: Pull request checks with increased permissions
+name: Pull Request Checks (Target)
 
 on:
   pull_request_target:

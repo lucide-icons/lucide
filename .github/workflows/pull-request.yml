@@ -1,4 +1,4 @@
-name: Pull request checks with normal permissions
+name: Pull Request Checks
 
 on: pull_request
 
