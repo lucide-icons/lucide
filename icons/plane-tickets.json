@@ -7,6 +7,15 @@
     "plane",
     "trip",
     "airplane"
+    "flight",
+    "travel",
+    "fly",
+    "takeoff",
+    "vacation",
+    "passenger",
+    "pass",
+    "check-in",
+    "airport"
   ],
   "categories": [
     "transportation",
