@@ -164,7 +164,7 @@ contained icon.
 ## A note on `aria-label`
 
 Although you could provide accessible labels to your elements via the `aria-label` attribute, we
-generally recommend against this and instead suggest that you use your chosen CSS framework's "
+generally recommend avoiding this and instead suggest that you use your chosen CSS framework's "
 visually hidden" utility whenever possible. You can
 [read more about why `aria-label` might not be the best solution](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
 
