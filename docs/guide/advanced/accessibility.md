@@ -167,8 +167,19 @@ Although you could provide accessible labels to your elements via the `aria-labe
 generally recommend avoiding this and instead suggest that you use your chosen CSS framework's "
 visually hidden" utility whenever possible. You can
 [read more about why `aria-label` might not be the best solution](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
+### Example - Radix UI
 
-E.g. in case of Bootstrap:
+Use [Radix UI's built-in accessible icon utility component](https://www.radix-ui.com/primitives/docs/utilities/accessible-icon).
+
+```tsx
+import { ArrowRightIcon } from 'lucide-react';
+import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
+
+<AccessibleIcon label="Next item">
+  <ArrowRightIcon />
+</AccessibleIcon>
+```
+### Example - Bootstrap
 
 ```html
 
@@ -178,7 +189,7 @@ E.g. in case of Bootstrap:
 </div>
 ```
 
-Or with tailwindcss:
+### Example - Tailwind CSS
 
 ```html
 
