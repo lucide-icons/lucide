@@ -30,7 +30,10 @@ const arrayMatches = (a, b) => {
 };
 
 const nameParts = (icon) =>
-  [icon.name, ...(icon.aliases ?? [])]
+  [
+    icon.name,
+    ...(icon.aliases?.map((alias) => (typeof alias === 'string' ? alias : alias.name)) ?? []),
+  ]
     .join('-')
     .split('-')
     .filter((word) => word.length > 2);
@@ -38,8 +41,8 @@ const nameParts = (icon) =>
 const getRelatedIcons = (currentIcon, icons) => {
   const iconSimilarity = (item) =>
     nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon)) +
-    categoryWeight * arrayMatches(item.categories, currentIcon.categories) +
-    tagWeight * arrayMatches(item.tags, currentIcon.tags);
+    categoryWeight * arrayMatches(item.categories ?? [], currentIcon.categories ?? []) +
+    tagWeight * arrayMatches(item.tags ?? [], currentIcon.tags ?? []);
   return icons
     .filter((i) => i.name !== currentIcon.name)
     .map((icon) => ({ icon, similarity: iconSimilarity(icon) }))
@@ -51,9 +54,7 @@ const getRelatedIcons = (currentIcon, icons) => {
 
 const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  const metaData = await import(`../icons/${iconName}`, {
-    assert: { type: 'json' },
-  });
+  const metaData = JSON.parse(fs.readFileSync(`../icons/${iconName}`));
 
   const name = iconName.replace('.json', '');
 
