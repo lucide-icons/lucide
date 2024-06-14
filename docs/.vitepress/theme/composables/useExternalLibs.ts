@@ -3,11 +3,11 @@ import { ExternalLibs, IconEntity } from '../types';
 
 export const EXTERNAL_LIBS_CONTEXT = Symbol('externalLibs');
 
-type ExternalIconNodes = Partial<Record<ExternalLibs, IconEntity[]>>
+type ExternalIconNodes = Partial<Record<ExternalLibs, IconEntity[]>>;
 
 interface ExternalLibContext {
-  selectedLibs: Ref<[ExternalLibs]>
-  externalIconNodes: Ref<ExternalIconNodes>
+  selectedLibs: Ref<[ExternalLibs]>;
+  externalIconNodes: Ref<ExternalIconNodes>;
 }
 
 export const externalLibContext = {
@@ -16,8 +16,8 @@ export const externalLibContext = {
 };
 
 const externalLibIconNodesAPI = {
-  'lab': 'http://lab.lucide.dev/api/icon-details'
-}
+  lab: 'http://lab.lucide.dev/api/icon-details',
+};
 
 export function useExternalLibs(): ExternalLibContext {
   const context = inject<ExternalLibContext>(EXTERNAL_LIBS_CONTEXT);
@@ -47,7 +47,7 @@ export function useExternalLibs(): ExternalLibContext {
     } catch (error) {
       console.error(error);
     }
-  })
+  });
 
   if (!context) {
     throw new Error('useExternalLibs must be used with externalLibs context');

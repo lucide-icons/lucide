@@ -29,4 +29,4 @@ const highLightCode = async (code: string, lang: string, active?: boolean) => {
   </div>`;
 };
 
-export default highLightCode
+export default highLightCode;
