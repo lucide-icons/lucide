@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "left",
+    "counter-clockwise",
+    "rotate",
+    "image",
+    "90",
+    "45",
+    "degrees",
+    "°"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "photography",
+    "tools",
+    "shapes",
+    "arrows"
+  ]
+}

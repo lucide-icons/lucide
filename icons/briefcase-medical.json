@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "doctor",
+    "medicine",
+    "first aid"
+  ],
+  "categories": [
+    "medical",
+    "transportation"
+  ]
+}

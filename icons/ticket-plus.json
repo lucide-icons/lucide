@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "entry",
+    "pass",
+    "voucher",
+    "event",
+    "concert",
+    "show",
+    "book",
+    "purchase",
+    "add",
+    "+"
+  ],
+  "categories": [
+    "account",
+    "transportation"
+  ]
+}

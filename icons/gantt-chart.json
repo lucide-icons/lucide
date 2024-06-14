@@ -1,6 +1,8 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": ["danielbayley"],
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "projects",
     "manage",
@@ -20,5 +22,10 @@
     "code",
     "coding"
   ],
-  "categories": ["charts", "time", "development", "design"]
+  "categories": [
+    "charts",
+    "time",
+    "development",
+    "design"
+  ]
 }

@@ -20,12 +20,12 @@ describe('createIcons', () => {
   it('should read elements from DOM and replace it with icons', () => {
     document.body.innerHTML = `<i data-lucide="volume-2"></i>`;
 
-    createIcons({icons});
+    createIcons({ icons });
 
     const svg = getOriginalSvg('volume-2');
 
-    expect(document.body.innerHTML).toBe(svg)
-    expect(document.body.innerHTML).toMatchSnapshot()
+    expect(document.body.innerHTML).toBe(svg);
+    expect(document.body.innerHTML).toMatchSnapshot();
   });
 
   it('should customize the name attribute', () => {
@@ -33,12 +33,12 @@ describe('createIcons', () => {
 
     createIcons({
       icons,
-      nameAttr: 'data-custom-name'
+      nameAttr: 'data-custom-name',
     });
 
     const hasSvg = !!document.querySelector('svg');
 
-    expect(hasSvg).toBeTruthy()
+    expect(hasSvg).toBeTruthy();
   });
 
   it('should add custom attributes', () => {
@@ -58,7 +58,7 @@ describe('createIcons', () => {
       acc[item] = element.getAttribute(item);
 
       return acc;
-    },{})
+    }, {});
 
     expect(document.body.innerHTML).toMatchSnapshot();
 
@@ -69,7 +69,7 @@ describe('createIcons', () => {
     document.body.innerHTML = `<i data-lucide="sun" data-theme-switcher="light"></i>`;
 
     const attrs = {
-      'data-theme-switcher':'light',
+      'data-theme-switcher': 'light',
     };
 
     createIcons({ icons });
@@ -81,7 +81,7 @@ describe('createIcons', () => {
       acc[item] = element.getAttribute(item);
 
       return acc;
-    },{})
+    }, {});
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });
@@ -93,7 +93,7 @@ describe('createIcons', () => {
 
     const svg = getOriginalSvg('grid-3x3', 'grid');
 
-    expect(document.body.innerHTML).toBe(svg)
-    expect(document.body.innerHTML).toMatchSnapshot()
+    expect(document.body.innerHTML).toBe(svg);
+    expect(document.body.innerHTML).toMatchSnapshot();
   });
 });

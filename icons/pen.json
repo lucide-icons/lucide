@@ -4,7 +4,8 @@
     "colebemis",
     "csandman",
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "pencil",
@@ -26,6 +27,11 @@
     "tools"
   ],
   "aliases": [
-    "edit-2"
+    {
+      "name": "edit-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

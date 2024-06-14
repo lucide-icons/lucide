@@ -1,8 +1,8 @@
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default function useConfetti() {
-  const animate = ref(false)
-  const confettiText = ref('confetti!')
+  const animate = ref(false);
+  const confettiText = ref('confetti!');
 
   function confetti() {
     animate.value = true;
@@ -15,6 +15,6 @@ export default function useConfetti() {
   return {
     animate,
     confetti,
-    confettiText
-  }
+    confettiText,
+  };
 }

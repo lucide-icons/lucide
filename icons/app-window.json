@@ -6,11 +6,14 @@
   ],
   "tags": [
     "application",
+    "menu bar",
+    "pane",
     "executable"
   ],
   "categories": [
+    "layout",
     "design",
-    "files",
-    "layout"
+    "development",
+    "files"
   ]
 }

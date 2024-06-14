@@ -143,7 +143,7 @@ and update the SVG as follows
 ### Icon Font
 
 ```css
-@import ('~lucide-static/font/Lucide.css');
+@import ('~lucide-static/font/lucide.css');
 ```
 
 ```html

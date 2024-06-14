@@ -4,10 +4,7 @@ import path from 'path';
 import getArgumentOptions from 'minimist';
 import { parseSync } from 'svgson';
 
-import {
-  readSvgDirectory,
-  getCurrentDirPath,
-} from '../../../scripts/helpers.mjs';
+import { readSvgDirectory, getCurrentDirPath } from '../../../scripts/helpers.mjs';
 import readSvgs from './readSvgs.mjs';
 import generateSprite from './generateSprite.mjs';
 import generateIconNodes from './generateIconNodes.mjs';

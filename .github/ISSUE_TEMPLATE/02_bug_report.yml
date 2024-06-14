@@ -36,6 +36,16 @@ body:
     validations:
       required: true
   - type: checkboxes
+    id: can-reproduce-in-latest-version
+    attributes:
+      label: Can you reproduce this in the latest version?
+      description: i.e. after running `npm install lucide-react@latest`
+      options:
+        - label: 'Yes'
+        - label: 'No'
+    validations:
+      required: false
+  - type: checkboxes
     id: browsers
     attributes:
       label: Browser
@@ -59,6 +69,9 @@ body:
         - label: Windows
         - label: Linux
         - label: macOS
+        - label: ChromeOS
+        - label: iOS
+        - label: Android
         - label: Other/not relevant
   - type: textarea
     id: description

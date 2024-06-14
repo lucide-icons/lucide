@@ -1,4 +1,4 @@
-import type { JSX } from 'preact'
+import type { JSX } from 'preact';
 
 export default {
   xmlns: 'http://www.w3.org/2000/svg',

@@ -1,5 +1,4 @@
-import { createElement, forwardRef } from 'react'
-
+import { createElement, forwardRef } from 'react';
 
 const SearchIcon = (props: any) => (
   <svg
@@ -17,6 +16,6 @@ const SearchIcon = (props: any) => (
       stroke="none"
     />
   </svg>
-)
+);
 
-export default SearchIcon
+export default SearchIcon;

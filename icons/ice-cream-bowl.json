@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie",
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "gelato",
+    "food",
+    "dessert",
+    "dish",
+    "restaurant",
+    "course",
+    "meal"
+  ],
+  "categories": [
+    "food-beverage"
+  ],
+  "aliases": [
+    {
+      "name": "ice-cream-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

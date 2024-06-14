@@ -29,7 +29,7 @@ jobs:
       - name: Create font in ./lucide-font
         run: pnpm build:font
 
-      - name: "Upload to Artifacts"
+      - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v3
         with:
           name: lucide-font

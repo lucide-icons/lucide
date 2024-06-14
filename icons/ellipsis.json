@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
+  "tags": [
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
+    "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "coding",
+    "spread",
+    "rest",
+    "…",
+    "..."
+  ],
+  "categories": [
+    "layout",
+    "development"
+  ],
+  "aliases": [
+    "more-horizontal"
+  ]
+}

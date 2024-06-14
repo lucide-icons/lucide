@@ -9,6 +9,9 @@
     "entry",
     "pass",
     "voucher",
+    "event",
+    "concert",
+    "show",
     "perforated",
     "dashed"
   ],

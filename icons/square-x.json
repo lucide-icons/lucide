@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear",
+    "maths",
+    "multiply",
+    "multiplication"
+  ],
+  "categories": [
+    "maths",
+    "shapes",
+    "notifications"
+  ],
+  "aliases": [
+    "x-square"
+  ]
+}

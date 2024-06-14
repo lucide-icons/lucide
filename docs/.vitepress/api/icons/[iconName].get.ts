@@ -1,29 +1,29 @@
-import { eventHandler, getQuery, setResponseHeader, createError } from 'h3'
-import iconNodes from '../../data/iconNodes'
-import createLucideIcon from 'lucide-react/src/createLucideIcon'
-import { renderToString } from 'react-dom/server'
-import { createElement } from 'react'
+import { eventHandler, getQuery, setResponseHeader, createError } from 'h3';
+import iconNodes from '../../data/iconNodes';
+import createLucideIcon from 'lucide-react/src/createLucideIcon';
+import { renderToString } from 'react-dom/server';
+import { createElement } from 'react';
 
 export default eventHandler((event) => {
-  const { params } = event.context
+  const { params } = event.context;
 
-  const iconNode = iconNodes[params.iconName]
+  const iconNode = iconNodes[params.iconName];
 
   if (iconNode == null) {
     const error = createError({
       statusCode: 404,
       message: `Icon "${params.iconName}" not found`,
-    })
+    });
 
-    return sendError(event, error)
+    return sendError(event, error);
   }
 
-  const width = getQuery(event).width || undefined
-  const height = getQuery(event).height || undefined
-  const color = getQuery(event).color || undefined
-  const strokeWidth = getQuery(event).strokeWidth || undefined
+  const width = getQuery(event).width || undefined;
+  const height = getQuery(event).height || undefined;
+  const color = getQuery(event).color || undefined;
+  const strokeWidth = getQuery(event).strokeWidth || undefined;
 
-  const LucideIcon = createLucideIcon(params.iconName, iconNode)
+  const LucideIcon = createLucideIcon(params.iconName, iconNode);
 
   const svg = Buffer.from(
     renderToString(
@@ -32,14 +32,13 @@ export default eventHandler((event) => {
         height,
         color: color ? `#${color}` : undefined,
         strokeWidth,
-      }
-    ))
+      }),
+    ),
   ).toString('utf8');
 
-  defaultContentType(event, 'image/svg+xml')
-  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000')
-  setResponseHeader(event, 'Access-Control-Allow-Origin', '*')
+  defaultContentType(event, 'image/svg+xml');
+  setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
+  setResponseHeader(event, 'Access-Control-Allow-Origin', '*');
 
-  return svg
-
-})
+  return svg;
+});

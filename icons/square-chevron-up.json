@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "caret",
+    "keyboard",
+    "button",
+    "mac",
+    "control",
+    "ctrl",
+    "superscript",
+    "exponential",
+    "power",
+    "ahead",
+    "menu",
+    "panel",
+    "^"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "maths",
+    "shapes"
+  ],
+  "aliases": [
+    "chevron-up-square"
+  ]
+}

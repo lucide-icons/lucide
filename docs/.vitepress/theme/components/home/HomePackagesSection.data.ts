@@ -47,7 +47,7 @@ export default {
           logo: '/framework-logos/flutter.svg',
           label: 'Lucide documentation for Flutter',
         },
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};

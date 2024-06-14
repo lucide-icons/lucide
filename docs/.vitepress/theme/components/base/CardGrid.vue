@@ -1,11 +1,11 @@
 <template>
-  <div class="grid">
+  <div class="card-grid-flex">
     <slot />
   </div>
 </template>
 
-<style scoped>
-.grid {
+<style>
+.card-grid-flex {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -15,20 +15,20 @@
   margin: -8px;
 }
 
-.grid > * {
+.card-grid-flex > * {
   flex-basis: 100%;
   box-sizing: border-box;
   padding: 8px;
 }
 
 @media (min-width: 960px) {
-  .grid > * {
+  .card-grid-flex > * {
     flex-basis: 50%;
   }
 }
 
 @media (min-width: 1280px) {
-  .grid > * {
+  .card-grid-flex > * {
     flex-basis: 33.33%;
   }
 }

@@ -5,4 +5,4 @@ export default {
     blue: '#18a0fb',
   },
   radii: [0, 2],
-}
+};

@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "danielbayley",
-    "karsa-mistmere"
+    "ericfennis"
   ],
   "tags": [
     "connection",

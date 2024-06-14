@@ -6,7 +6,9 @@
   ],
   "tags": [
     "date",
-    "time",
+    "day",
+    "month",
+    "year",
     "event",
     "remove"
   ],

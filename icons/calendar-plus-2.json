@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "date",
+    "day",
+    "month",
+    "year",
+    "event",
+    "add",
+    "subscribe",
+    "create",
+    "new"
+  ],
+  "categories": [
+    "time"
+  ]
+}

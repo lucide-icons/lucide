@@ -10,4 +10,4 @@ const defaultAttributes = {
   'stroke-linejoin': 'round',
 };
 
-export default defaultAttributes
+export default defaultAttributes;

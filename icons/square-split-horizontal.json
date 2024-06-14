@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Patchethium",
+    "ericfennis"
+  ],
+  "tags": [
+    "split",
+    "divide"
+  ],
+  "categories": [
+    "layout"
+  ],
+  "aliases": [
+    "split-square-horizontal"
+  ]
+}

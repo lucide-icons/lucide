@@ -1,12 +1,12 @@
-import "./SearchInput.scss"
-import { ChangeEvent } from "react"
-import SearchIcon from "../icons/SearchIcon"
+import './SearchInput.scss';
+import { ChangeEvent } from 'react';
+import SearchIcon from '../icons/SearchIcon';
 
 interface SearchInputProps extends React.HTMLProps<HTMLDivElement> {
-  value: string,
-  iconCount: number,
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void
-  placeholder: string
+  value: string;
+  iconCount: number;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
 }
 
 function SearchInput({ value, onChange, placeholder, className, ...props }: SearchInputProps) {
@@ -15,7 +15,7 @@ function SearchInput({ value, onChange, placeholder, className, ...props }: Sear
       className="search-input"
       {...props}
     >
-      <SearchIcon className='icon'/>
+      <SearchIcon className="icon" />
       <input
         autoFocus
         type="search"
@@ -25,7 +25,7 @@ function SearchInput({ value, onChange, placeholder, className, ...props }: Sear
         className="input__field"
       />
     </div>
-  )
+  );
 }
 
-export default SearchInput
+export default SearchInput;

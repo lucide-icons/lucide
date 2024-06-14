@@ -24,8 +24,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm --filter lucide-preact build
-
       - name: Test
         run: pnpm --filter lucide-preact test

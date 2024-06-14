@@ -15,7 +15,7 @@
   <path d="M7 8v3" />
   <path d="M12 8v3" />
   <path d="M17 8v3" />
-  <path d="M7 4h0.01" />
-  <path d="M12 4h0.01" />
-  <path d="M17 4h0.01" />
+  <path d="M7 4h.01" />
+  <path d="M12 4h.01" />
+  <path d="M17 4h.01" />
 </svg>

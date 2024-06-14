@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "invertebrate",
+    "grub",
+    "larva",
+    "snake",
+    "crawl",
+    "wiggle",
+    "slither",
+    "pest control",
+    "computer virus",
+    "malware"
+  ],
+  "categories": [
+    "animals",
+    "security"
+  ]
+}

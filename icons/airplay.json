@@ -10,7 +10,9 @@
     "cast",
     "mirroring",
     "screen",
-    "monitor"
+    "monitor",
+    "macos",
+    "osx"
   ],
   "categories": [
     "multimedia",

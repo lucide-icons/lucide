@@ -6,9 +6,11 @@
   ],
   "tags": [
     "date",
-    "time",
-    "search",
-    "events"
+    "day",
+    "month",
+    "year",
+    "events",
+    "search"
   ],
   "categories": [
     "time"

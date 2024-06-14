@@ -25,20 +25,20 @@ describe('getAtts', () => {
 describe('getClassNames', () => {
   it('should returns an array when giving class property of string', () => {
     const elementAttrs = {
-      class: 'item1 item2 item3'
+      class: 'item1 item2 item3',
     };
 
     const attrs = getClassNames(elementAttrs);
-    expect(JSON.stringify(attrs)).toBe(JSON.stringify(['item1','item2','item3']));
+    expect(JSON.stringify(attrs)).toBe(JSON.stringify(['item1', 'item2', 'item3']));
   });
 
   it('should returns an array when givind class property with an array', () => {
     const elementAttrs = {
-      class: ['item1','item2','item3']
+      class: ['item1', 'item2', 'item3'],
     };
 
     const attrs = getClassNames(elementAttrs);
-    expect(JSON.stringify(attrs)).toBe(JSON.stringify(['item1','item2','item3']));
+    expect(JSON.stringify(attrs)).toBe(JSON.stringify(['item1', 'item2', 'item3']));
   });
 });
 
@@ -47,14 +47,14 @@ describe('combineClassNames', () => {
     const arrayOfClassnames = [
       'item',
       {
-        class: ['item1','item2','item3']
+        class: ['item1', 'item2', 'item3'],
       },
       {
-        class: ['item4','item5','item6']
+        class: ['item4', 'item5', 'item6'],
       },
       {
-        class: ['item7','item8','item9']
-      }
+        class: ['item7', 'item8', 'item9'],
+      },
     ];
 
     const combinedClassNames = combineClassNames(arrayOfClassnames);

@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "constant",
+    "code",
+    "coding",
+    "programming",
+    "symbol",
+    "trigonometry",
+    "geometry",
+    "formula"
+  ],
+  "categories": [
+    "development",
+    "maths",
+    "shapes"
+  ],
+  "aliases": [
+    "pi-square"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "calculate",
+    "maths",
+    "÷",
+    "/"
+  ],
+  "categories": [
+    "maths",
+    "shapes"
+  ],
+  "aliases": [
+    "divide-circle"
+  ]
+}

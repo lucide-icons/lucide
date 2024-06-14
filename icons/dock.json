@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "desktop",
+    "applications",
+    "launch",
+    "home",
+    "menu bar",
+    "bottom",
+    "line",
+    "macos",
+    "osx"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development",
+    "files"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "magic",
+    "wizard",
+    "magician"
+  ],
+  "categories": [
+    "design",
+    "gaming",
+    "cursors",
+    "photography"
+  ],
+  "aliases": [
+    {
+      "name": "wand-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

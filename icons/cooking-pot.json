@@ -1,5 +1,9 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "guillermo-angeles",
+    "ericfennis"
+  ],
   "tags": [
     "pod",
     "cooking",
