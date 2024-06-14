@@ -1,8 +1,7 @@
 {
   "name": "@lucide/rollup-plugins",
-  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "A internal used package with a collection of rollup plugins used to build the lucide icon library packages.",
   "main": "plugins.js",
   "module": "plugins.js",
   "author": "",

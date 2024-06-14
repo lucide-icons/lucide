@@ -51,7 +51,8 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --withAliases --aliasesFileExtension=.ts --aliasImportFileExtension=.svelte --pretty=false",
     "build:package": "svelte-package --input ./src",
     "build:license": "node ./scripts/appendBlockComments.mjs",
-    "test": "vitest run",
+    "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
@@ -67,7 +68,7 @@
     "svelte-check": "^3.4.4",
     "svelte-preprocess": "^5.0.4",
     "typescript": "^5.1.6",
-    "vite": "5.0.12",
+    "vite": "5.0.13",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {

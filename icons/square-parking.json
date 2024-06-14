@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "danielbayley"
+  ],
+  "tags": [
+    "parking lot",
+    "car park"
+  ],
+  "categories": [
+    "transportation",
+    "maps"
+  ],
+  "aliases": [
+    "parking-square"
+  ]
+}

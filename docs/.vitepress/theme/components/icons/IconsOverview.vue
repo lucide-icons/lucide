@@ -10,6 +10,7 @@ import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
+import CarbonAdOverlay from './CarbonAdOverlay.vue';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -93,6 +94,12 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 watch(searchQueryDebounced, () => {
   scrollTo(0)
 })
+
+function handleCloseDrawer() {
+  setActiveIconName('');
+
+  window.history.pushState({}, '', '/icons/');
+}
 </script>
 
 <template>
@@ -124,10 +131,11 @@ watch(searchQueryDebounced, () => {
   </div>
 
   <IconDetailOverlay
-    v-if="activeIconName != null"
     :iconName="activeIconName"
-    @close="setActiveIconName('')"
+    @close="handleCloseDrawer"
   />
+
+  <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
 
 <style>
