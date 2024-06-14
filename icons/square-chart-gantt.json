@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "projects",
+    "manage",
+    "overview",
+    "roadmap",
+    "plan",
+    "intentions",
+    "timeline",
+    "deadline",
+    "date",
+    "event",
+    "range",
+    "period",
+    "productivity",
+    "work",
+    "agile",
+    "code",
+    "coding",
+    "toolbar",
+    "button"
+  ],
+  "categories": [
+    "charts",
+    "time",
+    "development",
+    "design"
+  ],
+  "aliases": [
+    "gantt-chart-square",
+    "square-gantt-chart"
+  ]
+}
