@@ -12,5 +12,8 @@
     "account",
     "buildings",
     "home"
+  ],
+  "aliases": [
+    "home"
   ]
 }
