@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "flatscreen",
+    "television",
+    "stream",
+    "display",
+    "widescreen",
+    "high-definition",
+    "hd",
+    "1080p",
+    "4k",
+    "8k",
+    "smart",
+    "digital",
+    "video",
+    "home cinema",
+    "entertainment",
+    "showtime",
+    "channels",
+    "catchup"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "tv-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
