@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "adamplesnik"
+  ],
+  "tags": [
+    "coffee",
+    "filter",
+    "v60",
+    "chemex",
+    "specialty",
+    "arabica"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
