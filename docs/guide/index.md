@@ -20,6 +20,12 @@ As new applications with specific features arise, Lucide aims to provide a compl
 
 In addition to design, code is also important. Assets like icons can significantly increase bandwidth usage in web projects. With the growing internet, Lucide has a responsibility to keep their assets as small as possible. To achieve this, Lucide uses SVG compression and specific code architecture for tree-shaking abilities. After tree-shaking, you only ship the icons you used, which helps to keep software distribution size to a minimum.
 
+## Accessibility
+
+Icons are pictures that show what something means without using words. They can be very helpful because they can quickly give information.
+
+However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](./advanced/accessibility.md).
+
 ## Official Packages
 
 Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](https://lucide.dev/guide/packages/lucide), [React](https://lucide.dev/guide/packages/lucide-react), [React Native](https://lucide.dev/guide/packages/lucide-react-native), [Vue](https://lucide.dev/guide/packages/lucide-vue), [Vue 3](https://lucide.dev/guide/packages/lucide-vue-next), [Svelte](https://lucide.dev/guide/packages/lucide-svelte),[Preact](https://lucide.dev/guide/packages/lucide-preact), [Solid](https://lucide.dev/guide/packages/lucide-solid), [Angular](https://lucide.dev/guide/packages/lucide-angular), [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs) and [Flutter](https://lucide.dev/guide/packages/lucide-flutter).
