@@ -73,7 +73,7 @@ const prettyName = props.name
         <div class="actions">
           <button class="button button-brand">
             <iconComponent />
-            Confirm
+            {{ prettyName }}
           </button>
           <button class="button button-alt">Cancel</button>
         </div>
