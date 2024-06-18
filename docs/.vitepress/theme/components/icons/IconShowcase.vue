@@ -412,7 +412,7 @@ const prettyName = props.name
   display: flex;
   flex-direction: row;
   gap: 6px;
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-2);
   align-items: center;
 }
 
