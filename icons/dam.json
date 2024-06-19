@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AndreasSas"
+  ],
+  "tags": [
+    "electricity energy water"
+  ],
+  "categories": [
+    "buildings sustainability"
+  ]
+}
