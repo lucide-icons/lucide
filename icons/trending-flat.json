@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jonas-hoebenreich"
+  ],
+  "tags": [
+    "statistics",
+    "investment",
+    "stock",
+    "sideways"
+  ],
+  "categories": [
+    "charts",
+    "arrows"
+  ]
+}
