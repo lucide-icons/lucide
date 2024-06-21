@@ -44,7 +44,6 @@
     "@vueuse/core": "^10.7.2",
     "element-to-path": "^1.2.1",
     "fuse.js": "^6.5.3",
-    "js-yaml": "^4.1.0",
     "jszip": "^3.7.0",
     "lodash": "^4.17.20",
     "lodash-es": "^4.17.21",
