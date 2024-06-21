@@ -1,9 +1,21 @@
 import path from 'path';
 import fs from 'fs';
-import { toPascalCase, resetFile, appendFile, toCamelCase } from '@lucide/helpers';
+import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
+import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
-const getImportString = (componentName, iconName, aliasImportFileExtension = '') =>
-  `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
+const getImportString = (
+  componentName,
+  iconName,
+  aliasImportFileExtension,
+  deprecated,
+  deprecationReason = '',
+) =>
+  deprecated
+    ? `export {\n` +
+      `  /** @deprecated ${deprecationReason} */\n` +
+      `  default as ${componentName}\n` +
+      `} from './icons/${iconName}${aliasImportFileExtension}';\n`
+    : `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
 
 export default async function generateAliasesFile({
   iconNodes,
@@ -27,9 +39,16 @@ export default async function generateAliasesFile({
   // Generate Import for Icon VNodes
   await Promise.all(
     icons.map(async (iconName, index) => {
-      const componentName =
-        exportModuleNameCasing === 'pascal' ? toPascalCase(iconName) : toCamelCase(iconName);
-      const iconAliases = iconMetaData[iconName]?.aliases;
+      const componentName = toPascalCase(iconName);
+      const iconAliases = iconMetaData[iconName]?.aliases?.map((alias) => {
+        if (typeof alias === 'string') {
+          return {
+            name: alias,
+            deprecated: false,
+          };
+        }
+        return alias;
+      });
 
       let importString = '';
 
@@ -53,12 +72,18 @@ export default async function generateAliasesFile({
       if (iconAliases != null && Array.isArray(iconAliases)) {
         await Promise.all(
           iconAliases.map(async (alias) => {
-            const componentNameAlias =
-              exportModuleNameCasing === 'pascal' ? toPascalCase(alias) : toCamelCase(alias);
+            const componentNameAlias = toPascalCase(alias.name);
+            const deprecationReason = alias.deprecated
+              ? deprecationReasonTemplate(alias.deprecationReason, {
+                  componentName: toPascalCase(iconName),
+                  iconName,
+                  toBeRemovedInVersion: alias.toBeRemovedInVersion,
+                })
+              : '';
 
             if (separateAliasesFile) {
               const output = `export { default } from "./${iconName}"`;
-              const location = path.join(iconsDistDirectory, `${alias}${iconFileExtension}`);
+              const location = path.join(iconsDistDirectory, `${alias.name}${iconFileExtension}`);
 
               await fs.promises.writeFile(location, output, 'utf-8');
             }
@@ -68,25 +93,31 @@ export default async function generateAliasesFile({
               return;
             }
 
-            const exportFileIcon = separateAliasesFile ? alias : iconName;
+            const exportFileIcon = separateAliasesFile ? alias.name : iconName;
 
             importString += getImportString(
               componentNameAlias,
               exportFileIcon,
-              aliasImportFileExtension
+              aliasImportFileExtension,
+              alias.deprecated,
+              deprecationReason,
             );
 
             if (!aliasNamesOnly) {
               importString += getImportString(
                 `${componentNameAlias}Icon`,
                 exportFileIcon,
-                aliasImportFileExtension
+                aliasImportFileExtension,
+                alias.deprecated,
+                deprecationReason,
               );
 
               importString += getImportString(
                 `Lucide${componentNameAlias}`,
                 exportFileIcon,
-                aliasImportFileExtension
+                aliasImportFileExtension,
+                alias.deprecated,
+                deprecationReason,
               );
             }
           })

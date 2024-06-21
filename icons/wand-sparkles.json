@@ -15,6 +15,11 @@
     "photography"
   ],
   "aliases": [
-    "wand-2"
+    {
+      "name": "wand-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
