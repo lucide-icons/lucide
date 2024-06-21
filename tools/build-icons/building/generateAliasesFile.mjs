@@ -8,7 +8,7 @@ const getImportString = (
   iconName,
   aliasImportFileExtension,
   deprecated,
-  deprecationReason = '',
+  deprecationReason = ''
 ) =>
   deprecated
     ? `export {\n` +
@@ -100,7 +100,7 @@ export default async function generateAliasesFile({
               exportFileIcon,
               aliasImportFileExtension,
               alias.deprecated,
-              deprecationReason,
+              deprecationReason
             );
 
             if (!aliasNamesOnly) {
@@ -109,7 +109,7 @@ export default async function generateAliasesFile({
                 exportFileIcon,
                 aliasImportFileExtension,
                 alias.deprecated,
-                deprecationReason,
+                deprecationReason
               );
 
               importString += getImportString(
@@ -117,7 +117,7 @@ export default async function generateAliasesFile({
                 exportFileIcon,
                 aliasImportFileExtension,
                 alias.deprecated,
-                deprecationReason,
+                deprecationReason
               );
             }
           })

@@ -5,6 +5,7 @@ async function getIconMetaData(iconDirectory) {
   const iconJsons = readSvgDirectory(iconDirectory, '.json');
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile) => {
+      /** eslint-disable */
       const file = await import(path.join(iconDirectory, jsonFile), { assert: { type: 'json' } });
       return [path.basename(jsonFile, '.json'), file.default];
     }),
