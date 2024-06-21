@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "home",
+    "living",
+    "medical",
+    "new",
+    "addition",
+    "building",
+    "residence",
+    "architecture"
+  ],
+  "categories": [
+    "buildings",
+    "account",
+    "medical"
+  ]
+}
