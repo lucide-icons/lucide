@@ -3,7 +3,7 @@ name: Add Changed Icons comment
 on:
   pull_request_target:
     paths:
-      - 'icons/*.svg'
+      - 'icons/*'
     branches:
       - main
       - fix-icon-preview
@@ -76,7 +76,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check Uniqueness of Aliases
-        run: ! cat <(printf "%s\\n" icons/*.json | while read -r name; do basename "$name" .json; done) <(jq -cr 'select(.aliases) | .aliases[] | if type=="string" then . else .name end' icons/*.json) | sort | uniq -c | grep -ve '^   1 '
+        run: "! cat <(printf \"%s\\n\" icons/*.json | while read -r name; do basename \"$name\" .json; done) <(jq -cr 'select(.aliases) | .aliases[] | if type==\"string\" then . else .name end' icons/*.json) | sort | uniq -c | grep -ve '^\\s*1 '"
 
   generate-changed-icons-comment:
     runs-on: ubuntu-latest
