@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "vexkiddy"
+  ],
+  "tags": [
+    "barcode",
+    "scan",
+    "qrcode",
+    "url",
+    "information",
+    "digital",
+    "qr",
+    "scanner"
+  ],
+  "categories": [
+    "development"
+  ]
+}
