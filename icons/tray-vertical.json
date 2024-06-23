@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AndreasSas"
+  ],
+  "tags": [
+    "diagram",
+    "graph",
+    "tray"
+  ],
+  "categories": [
+    "shapes",
+    "food-beverage"
+  ]
+}
