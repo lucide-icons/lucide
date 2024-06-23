@@ -3,7 +3,7 @@ name: Add Changed Icons comment
 on:
   pull_request_target:
     paths:
-      - 'icons/*.svg'
+      - 'icons/*'
     branches:
       - main
       - fix-icon-preview
@@ -67,6 +67,16 @@ jobs:
           # Example for the previous substitution
           # input: +++ b/icons/accessibility.json%0A@@ -2,0 +3 @@%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
           # output: ::$ANNOTATION_SEVERITY file=icons/accessibility.json,line=2,endLine=3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
+
+  lint-aliases:
+    name: Check Uniqueness of Aliases
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Uniqueness of Aliases
+        run: "! cat <(printf \"%s\\n\" icons/*.json | while read -r name; do basename \"$name\" .json; done) <(jq -cr 'select(.aliases) | .aliases[] | if type==\"string\" then . else .name end' icons/*.json) | sort | uniq -c | grep -ve '^\\s*1 '"
 
   generate-changed-icons-comment:
     runs-on: ubuntu-latest
