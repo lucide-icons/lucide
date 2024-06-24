@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "GRA0007"
+  ],
+  "tags": [
+    "text",
+    "format",
+    "typography",
+    "letter",
+    "font size"
+  ],
+  "categories": [
+    "text"
+  ]
+}
