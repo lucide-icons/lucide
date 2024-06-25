@@ -10,18 +10,24 @@ type CodeExampleType = {
 const getIconCodes = (): CodeExampleType => {
   return [
     {
-      language: 'html',
-      title: 'HTML',
-      code: `<i data-lucide="Name"></i>`,
+      language: 'js',
+      title: 'Vanilla',
+      code: `\
+import { createIcons, icons } from 'lucide';
+
+createIcons({ icons });
+
+document.body.append('<i data-lucide="$Name"></i>');\
+  `,
     },
     {
       language: 'tsx',
       title: 'React',
-      code: `import { PascalCase } from 'lucide-react';
+      code: `import { $PascalCase } from 'lucide-react';
 
 const App = () => {
   return (
-    <PascalCase />
+    <$PascalCase />
   );
 };
 
@@ -32,11 +38,11 @@ export default App;
       language: 'vue',
       title: 'Vue',
       code: `<script setup>
-  import { PascalCase } from 'lucide-vue-next';
+import { $PascalCase } from 'lucide-vue-next';
 </script>
 
 <template>
-  <PascalCase />
+  <$PascalCase />
 </template>
 `,
     },
@@ -44,20 +50,20 @@ export default App;
       language: 'svelte',
       title: 'Svelte',
       code: `<script>
-import { PascalCase } from 'lucide-svelte';
+import { $PascalCase } from 'lucide-svelte';
 </script>
 
-<PascalCase />
+<$PascalCase />
 `,
     },
     {
       language: 'tsx',
       title: 'Preact',
-      code: `import { PascalCase } from 'lucide-preact';
+      code: `import { $PascalCase } from 'lucide-preact';
 
 const App = () => {
   return (
-    <PascalCase />
+    <$PascalCase />
   );
 };
 
@@ -67,11 +73,11 @@ export default App;
     {
       language: 'tsx',
       title: 'Solid',
-      code: `import { PascalCase } from 'lucide-solid';
+      code: `import { $PascalCase } from 'lucide-solid';
 
 const App = () => {
   return (
-    <PascalCase />
+    <$PascalCase />
   );
 };
 
@@ -82,16 +88,16 @@ export default App;
       language: 'tsx',
       title: 'Angular',
       code: `// app.module.ts
-import { LucideAngularModule, PascalCase } from 'lucide-angular';
+import { LucideAngularModule, $PascalCase } from 'lucide-angular';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ PascalCase })
+    LucideAngularModule.pick({ $PascalCase })
   ],
 })
 
 // app.component.html
-<lucide-icon name="Name"></lucide-icon>
+<lucide-icon name="$Name"></lucide-icon>
 `,
     },
     {
@@ -101,7 +107,7 @@ import { LucideAngularModule, PascalCase } from 'lucide-angular';
 @import ('~lucide-static/font/Lucide.css');
 </style>
 
-<div class="icon-Name"></div>
+<div class="icon-$Name"></div>
 `,
     },
   ];
