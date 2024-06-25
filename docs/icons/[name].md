@@ -31,8 +31,13 @@ const tabs = computed(() => data.codeExamples?.map(
 
 const codeExample = computed(() => data.codeExamples?.map(
     (codeExample) => {
-      const pascalCase = startCase(camelCase( params.value.name)).replace(/\s/g, '')
-      return codeExample.code.replace(/\$PascalCase/g, pascalCase).replace(/\$Name/g, params.value.name)
+      const pascalCaseName = startCase(camelCase( params.value.name)).replace(/\s/g, '')
+      const camelCaseName = camelCase(params.value.name)
+
+      return codeExample.code
+        .replace(/\$PascalCase/g, pascalCaseName)
+        .replace(/\$CamelCase/g, camelCaseName)
+        .replace(/\$Name/g, params.value.name)
     }
   ).join('') ?? []
 )
