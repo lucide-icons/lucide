@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lienmaas"
+  ],
+  "tags": [
+    "delivery",
+    "van",
+    "shipping",
+    "haulage",
+    "lorry",
+    "electric"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
