@@ -14,11 +14,11 @@ const getIconCodes = (): CodeExampleType => {
       title: 'Vanilla',
       code: `\
 import { createIcons, icons } from 'lucide';
-import { $Name } from '@lucide/lab';
+import { $CamelCase } from '@lucide/lab';
 
 createIcons({
   icons: {
-    $Name
+    $CamelCase
   }
 });
 
@@ -29,11 +29,11 @@ document.body.append('<i data-lucide="$Name"></i>');\
       language: 'tsx',
       title: 'React',
       code: `import { Icon } from 'lucide-react';
-import { $Name } from '@lucide/lab';
+import { $CamelCase } from '@lucide/lab';
 
 const App = () => {
   return (
-    <Icon iconNode={$Name} />
+    <Icon iconNode={$CamelCase} />
   );
 };
 
@@ -45,7 +45,7 @@ export default App;
       title: 'Vue',
       code: `<script setup>
 import { Icon } from 'lucide-vue-next';
-import { $Name } from '@lucide/lab';
+import { $CamelCase } from '@lucide/lab';
 </script>
 
 <template>
@@ -58,7 +58,7 @@ import { $Name } from '@lucide/lab';
       title: 'Svelte',
       code: `<script>
 import { Icon } from 'lucide-svelte';
-import { $Name } from '@lucide/lab';
+import { $CamelCase } from '@lucide/lab';
 </script>
 
 <Icon iconNode={burger} />
@@ -68,11 +68,11 @@ import { $Name } from '@lucide/lab';
       language: 'tsx',
       title: 'Preact',
       code: `import { Icon } from 'lucide-preact';
-import { $Name } from '@lucide/lab';
+import { $CamelCase } from '@lucide/lab';
 
 const App = () => {
   return (
-    <Icon iconNode={$Name} />
+    <Icon iconNode={$CamelCase} />
   );
 };
 
@@ -83,11 +83,11 @@ export default App;
       language: 'tsx',
       title: 'Solid',
       code: `import { Icon } from 'lucide-solid';
-import { $Name } from '@lucide/lab';
+import { $CamelCase } from '@lucide/lab';
 
 const App = () => {
   return (
-    <Icon iconNode={$Name} />
+    <Icon iconNode={$CamelCase} />
   );
 };
 
@@ -98,17 +98,17 @@ export default App;
       language: 'tsx',
       title: 'Angular',
       code: `// app.module.ts
-import { LucideAngularModule, $PascalCase } from 'lucide-angular';
-import { $Name } from '@lucide/lab';
+import { LucideAngularModule } from 'lucide-angular';
+import { $CamelCase } from '@lucide/lab';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ $Name })
+    LucideAngularModule.pick({ $CamelCase })
   ],
 })
 
 // app.component.html
-<lucide-icon name="$Name"></lucide-icon>
+<lucide-icon name="$CamelCase"></lucide-icon>
 `,
     },
   ];
