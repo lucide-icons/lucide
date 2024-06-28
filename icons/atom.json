@@ -10,7 +10,10 @@
     "physics",
     "particle",
     "element",
-    "molecule"
+    "molecule",
+    "electricity",
+    "energy",
+    "chemistry"
   ],
   "categories": [
     "science"

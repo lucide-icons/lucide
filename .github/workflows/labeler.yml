@@ -1,6 +1,6 @@
-name: "Pull Request Labeler"
+name: 'Pull Request Labeler'
 on:
-- pull_request_target
+  - pull_request_target
 
 jobs:
   triage:
@@ -9,4 +9,4 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v4
+      - uses: actions/labeler@v5

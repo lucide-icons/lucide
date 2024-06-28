@@ -2,7 +2,6 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere",
     "ericfennis"
   ],
   "tags": [
@@ -14,5 +13,8 @@
   "categories": [
     "shapes",
     "development"
+  ],
+  "aliases": [
+    "dot-square"
   ]
 }

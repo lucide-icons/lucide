@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "add",
+    "patch",
+    "difference",
+    "plus",
+    "minus",
+    "plus-minus",
+    "maths",
+    "code review",
+    "coding",
+    "version control",
+    "git"
+  ],
+  "categories": [
+    "development",
+    "files",
+    "account",
+    "social"
+  ]
+}

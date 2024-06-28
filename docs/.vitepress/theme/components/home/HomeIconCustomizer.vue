@@ -67,7 +67,10 @@ watch(absoluteStrokeWidth, (enabled) => {
           Lucide has a lot of customization options to match the icons with your UI.
         </p>
 
-        <div class="customizer">
+        <div
+          class="customizer"
+          style="--color-picker-bg: var(--vp-input-switch-bg-color)"
+        >
           <InputField
             id="icon-color"
             label="Color"

@@ -2,7 +2,6 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere",
     "ericfennis"
   ],
   "tags": [
@@ -13,11 +12,14 @@
     "division",
     "shortcut",
     "or",
-    "/"    
+    "/"
   ],
   "categories": [
     "shapes",
     "development",
     "maths"
+  ],
+  "aliases": [
+    "slash-square"
   ]
 }

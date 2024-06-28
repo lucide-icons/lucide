@@ -49,7 +49,7 @@ const percentage = computed<string>(() => `${((Number(props.modelValue) - props.
     width: 100%;
     line-height: 10px;
     height: 20px;
-    --bar-color: var(--slider-bar-color, var(--vp-c-bg-soft));
+    --bar-color: var(--slider-bar-color, var(--vp-input-switch-bg-color));
 }
 
 .slider:hover input{

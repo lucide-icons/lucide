@@ -17,7 +17,7 @@ const SearchIcon = createLucideIcon('search', search)
   background: var(--vp-c-bg-soft);
   border-radius: 8px;
   color: var(--vp-c-text-2);
-  padding: 12px 16px;
+  padding: 11px 16px;
   height: auto;
   font-size: 14px;
   /* box-shadow: var(--vp-shadow-4), var(--vp-shadow-2); */

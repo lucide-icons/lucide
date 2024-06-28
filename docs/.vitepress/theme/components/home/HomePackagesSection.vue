@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HomeContainer from './HomeContainer.vue'
+import HomeSectionTitle from './HomeSectionTitle.vue'
 import { useRouter } from 'vitepress';
 import { data } from './HomePackagesSection.data'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
@@ -9,7 +10,7 @@ const { go } = useRouter()
 
 <template>
   <HomeContainer>
-    <h2 class="section-title">Available For:</h2>
+    <HomeSectionTitle>Available For:</HomeSectionTitle>
     <div class="packages-list">
       <a
         v-for="{ name, logo } in data.packages"
@@ -34,14 +35,6 @@ const { go } = useRouter()
 </template>
 
 <style scoped>
-.section-title {
-  color: var(--vp-c-text-2);
-  font-weight: 500;
-  line-height: 32px;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 16px;
-}
 .packages-list {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "lines",
+    "list",
+    "queue",
+    "preview",
+    "panel",
+    "paragraphs",
+    "parallel",
+    "series",
+    "split",
+    "vertical",
+    "horizontal",
+    "half",
+    "center",
+    "middle",
+    "even",
+    "drawer"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text"
+  ],
+  "aliases": [
+    "rows"
+  ]
+}

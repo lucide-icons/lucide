@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import {ref} from 'vue'
-import {bird} from '../../../data/iconNodes'
+import { ref, onMounted, computed } from 'vue'
+import { bird, squirrel, rabbit } from '../../../data/iconNodes'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
 import {useEventListener} from '@vueuse/core'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
+import { IconNode } from '../../types'
 
 defineProps<{
   searchQuery: string
@@ -11,32 +12,48 @@ defineProps<{
 
 defineEmits(['clear'])
 
-const birdIcon = ref<HTMLElement>()
-const Bird = createLucideIcon('bird', bird)
+const animalIcon = ref<HTMLElement>()
+const randomAnimal = computed<IconNode>(() => {
+  return Math.random() > 0.5 ? squirrel : Math.random() > 0.5 ? rabbit : bird
+})
+const animalComponent = computed(() => createLucideIcon('animal', randomAnimal.value))
 const flip = ref(false)
 
-useEventListener(document, 'mousemove', (mouseEvent) => {
-  const {width, height, x, y} = birdIcon.value.getBoundingClientRect()
+onMounted(() => {
+  useEventListener(document, 'mousemove', (mouseEvent) => {
+    const {width, height, x, y} = animalIcon.value.getBoundingClientRect()
 
-  const centerX = (width / 2) + x
+    const centerX = (width / 2) + x
 
-  flip.value = mouseEvent.x < centerX
+    flip.value = mouseEvent.x < centerX
+  })
 })
 
 </script>
 
 <template>
   <div class="no-results">
-    <Bird class="bird-icon" ref="birdIcon" :class="{ flip }" :strokeWidth="1"/>
+    <component
+      :is="animalComponent"
+      class="animal-icon"
+      ref="animalIcon"
+      :class="{ flip }"
+      :strokeWidth="1"
+    />
     <h2 class="no-results-text">
       No icons found for '{{ searchQuery }}'
     </h2>
-    <VPButton text="Clear your search and try again" theme="alt" @click="$emit('clear')"/>
+    <VPButton
+      text="Clear your search and try again"
+      theme="alt"
+      @click="$emit('clear')"
+    />
     <span class="text-divider">or</span>
-    <VPButton text="Search on Github issues"
-              theme="alt"
-              :href="`https://github.com/lucide-icons/lucide/issues?q=is%3Aopen+${searchQuery}`"
-              target="_blank"
+    <VPButton
+      text="Search on Github issues"
+      theme="alt"
+      :href="`https://github.com/lucide-icons/lucide/issues?q=is%3Aopen+${searchQuery}`"
+      target="_blank"
     />
   </div>
 </template>
@@ -48,7 +65,7 @@ useEventListener(document, 'mousemove', (mouseEvent) => {
   align-items: center;
 }
 
-.bird-icon {
+.animal-icon {
   width: 160px;
   height: 160px;
   color: var(--vp-c-neutral);
@@ -56,12 +73,12 @@ useEventListener(document, 'mousemove', (mouseEvent) => {
   margin-top: 72px;
 }
 
-.bird-icon.flip {
+.animal-icon.flip {
   transform: rotateY(180deg);
 }
 
 @media (min-width: 960px) {
-  .bird-icon {
+  .animal-icon {
     width: 240px;
     height: 240px;
   }

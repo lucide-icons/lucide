@@ -1,5 +1,8 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "gist",
     "source",
@@ -11,5 +14,8 @@
   "categories": [
     "text",
     "development"
+  ],
+  "aliases": [
+    "code-square"
   ]
 }

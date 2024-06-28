@@ -47,7 +47,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
     }
 
     const changedFiles = output.files.filter(
-      ({ filename }) => !filename.match(/site\/(.*)|(.*)package\.json|tags.json/g),
+      ({ filename }) => !filename.match(/docs\/(.*)|(.*)package\.json|tags.json/g),
     );
 
     const commits = await Promise.all(changedFiles.map(fetchCommits));

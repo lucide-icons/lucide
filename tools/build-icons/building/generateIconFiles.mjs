@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { readSvg, toPascalCase } from '../../../scripts/helpers.mjs';
+import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
 export default ({
   iconNodes,
@@ -11,6 +12,7 @@ export default ({
   iconFileExtension = '.js',
   pretty = true,
   iconsDir,
+  iconMetaData,
 }) => {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -27,12 +29,28 @@ export default ({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
+    const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
+    const deprecationReason = deprecated
+      ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
+          componentName,
+          iconName,
+          toBeRemovedInVersion,
+        })
+      : '';
 
-    const elementTemplate = template({ componentName, iconName, children, getSvg });
+    const elementTemplate = template({
+      componentName,
+      iconName,
+      children,
+      getSvg,
+      deprecated,
+      deprecationReason,
+    });
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,
           trailingComma: 'all',
+          printWidth: 100,
           parser: 'babel',
         })
       : elementTemplate;

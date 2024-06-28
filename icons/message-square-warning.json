@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "report",
+    "abuse",
+    "offense",
+    "alert",
+    "danger",
+    "caution",
+    "protected",
+    "exclamation mark"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "notifications"
+  ]
+}

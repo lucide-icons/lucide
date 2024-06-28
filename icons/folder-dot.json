@@ -1,12 +1,26 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
   "tags": [
     "directory",
     "root",
     "project",
+    "pinned",
     "active",
     "current",
-    "pinned"
+    "cogged",
+    "gear",
+    "mechanical",
+    "machinery",
+    "configuration",
+    "controls",
+    "preferences",
+    "settings",
+    "system",
+    "admin",
+    "edit"
   ],
   "categories": [
     "files",

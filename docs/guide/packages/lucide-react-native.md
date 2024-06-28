@@ -4,7 +4,7 @@ Implementation of the lucide icon library for React Native applications
 
 ## Installation
 
-First, ensure that you have `react-native-svg@^12.0.0` installed. Then, install the package:
+First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
 
 ::: code-group
 
@@ -61,6 +61,26 @@ const App = () => {
 };
 ```
 
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-react-native';
+import { burger } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={burger} />
+);
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.
@@ -72,7 +92,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ### Icon Component Example
 
 ```jsx
-import { icons } from 'lucide-react';
+import { icons } from 'lucide-react-native';
 
 const Icon = ({ name, color, size }) => {
   const LucideIcon = icons[name];

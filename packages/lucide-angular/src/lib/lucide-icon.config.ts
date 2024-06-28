@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import defaultAttributes from "../icons/constants/default-attributes";
+import { Injectable } from '@angular/core';
+import defaultAttributes from '../icons/constants/default-attributes';
 
 /**
  * A configuration service for Lucide icon components.
@@ -9,8 +9,8 @@ import defaultAttributes from "../icons/constants/default-attributes";
  */
 @Injectable({ providedIn: 'root' })
 export class LucideIconConfig {
-    color: string = defaultAttributes.stroke;
-    size: number = defaultAttributes.width;
-    strokeWidth: number = defaultAttributes["stroke-width"];
-    absoluteStrokeWidth: boolean = false;
+  color: string = defaultAttributes.stroke;
+  size: number = defaultAttributes.width;
+  strokeWidth: number = defaultAttributes['stroke-width'];
+  absoluteStrokeWidth = false;
 }

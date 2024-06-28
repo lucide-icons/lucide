@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-
 import { useRouter } from 'vitepress';
 
 const { go } = useRouter()
@@ -8,9 +7,16 @@ const props = defineProps<{
   href?: string
 }>()
 
+const isExternal = computed(() => props.href?.startsWith('http') ?? false)
+
 const component = computed(() => props.href ? 'a' : 'div')
+const target = computed(() => isExternal.value ? '_blank' : undefined)
+const rel = computed(() => isExternal.value ? 'noreferrer noopener' : undefined)
 
-
+const onClick = computed(() => {
+  if(!props.href || isExternal) return
+  return go(props.href)
+})
 </script>
 
 <template>
@@ -18,14 +24,16 @@ const component = computed(() => props.href ? 'a' : 'div')
     :is="component"
     :href="href"
     class="badge"
-    @click="props?.href ? go(href) : undefined"
+    :target="target"
+    :rel="rel"
+    @click="onClick"
   >
     <slot/>
   </component>
 </template>
 
 <style>
-.badge, a.badge {
+.badge, a.badge, .vp-doc a.badge {
   display: block;
   border: 1px solid transparent;
   text-align: center;
@@ -36,6 +44,7 @@ const component = computed(() => props.href ? 'a' : 'div')
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
   color: var(--vp-c-text-1);
+  text-decoration: none;
   /* width: 56px;
   height: 56px; */
   font-size: 16px;
@@ -59,4 +68,6 @@ const component = computed(() => props.href ? 'a' : 'div')
   /* color: var(--vp-button-alt-active-text);
   background-color: var(--vp-button-alt-active-bg); */
 }
+
+
 </style>

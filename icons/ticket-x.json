@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "entry",
+    "pass",
+    "voucher",
+    "event",
+    "concert",
+    "show",
+    "cancelled",
+    "cancellation",
+    "refunded",
+    "used",
+    "void",
+    "invalidated",
+    "spoiled",
+    "denied",
+    "refused",
+    "banned",
+    "barred",
+    "forbidden",
+    "prohibited",
+    "delete",
+    "remove",
+    "clear",
+    "error",
+    "x"
+  ],
+  "categories": [
+    "account",
+    "transportation"
+  ]
+}

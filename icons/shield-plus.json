@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "cybersecurity",
@@ -50,6 +51,7 @@
     "account",
     "security",
     "development",
-    "gaming"
+    "gaming",
+    "medical"
   ]
 }

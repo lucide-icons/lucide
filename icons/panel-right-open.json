@@ -9,7 +9,10 @@
     "secondary",
     "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "chevron",
+    "left",
+    "<"
   ],
   "categories": [
     "layout",

@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "settings",
+    "edit",
+    "cog",
+    "gear"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    {
+      "name": "user-cog-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
