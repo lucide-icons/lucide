@@ -1,15 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
+    "danielbayley"
   ],
   "tags": [
     "direction",
+    "north",
     "step",
     "out"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation",
+    "maps"
   ]
 }

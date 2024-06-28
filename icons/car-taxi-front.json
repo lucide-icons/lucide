@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "cab",
+    "vehicle",
+    "drive",
+    "trip",
+    "journey"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

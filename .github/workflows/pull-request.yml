@@ -3,138 +3,121 @@ name: Add Changed Icons comment
 on:
   pull_request_target:
     paths:
-      - 'icons/*.svg'
-
-permissions:
-  pull-requests: write
-  contents: write
+      - 'icons/*'
+    branches:
+      - main
+      - fix-icon-preview
 
 jobs:
-  add-changed-icons-comment:
+  lint-filenames:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
+        with:
+          files: icons/*
+      - name: Generate annotations
+        run: node ./scripts/lintFilenames.mjs
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+
+  lint-contributors:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: icons/*
+      - uses: actions/setup-node@v4
+      - name: Install simple-git (safer and faster than installing all deps)
+        run: npm install simple-git
+      - name: Generate annotations
+        run: node ./scripts/updateContributors.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FETCH_DEPTH: ${{ github.event.pull_request.commits }}
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+      - name: Generate annotations
+        env:
+          ANNOTATION_SEVERITY: notice
+          ANNOTATION_TITLE: Contributors have changed!
+          ANNOTATION_DESCRIPTION: Don't add people who have only performed automatic optimizations.
+        run: |
+          git diff --unified=0 -- icons/*.json | # diff icon metadata (unified=0 gives the correct chunk line number)
+          perl -ne '/^(\+|- |@)/ && print' | # get chunks (lines that start with "+++", "@@", "+ ", "- ")
+          perl -pe 's/\n/%0A/' | # url encode line breaks (\n -> %0A)
+          perl -pe 's/%0A(\+\+\+ b\/)/\n\1/g' | # split chunks(one chunk per line)
+          perl -pe "s/\+\+\+ b\/([^@]*)%0A@@ -(\d+)[^\s]* \+(\d+)[^@]*@@(.*)/::$ANNOTATION_SEVERITY file=\1,line=\2,endLine=\3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A\4/"
+          # Example for the previous substitution
+          # input: +++ b/icons/accessibility.json%0A@@ -2,0 +3 @@%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
+          # output: ::$ANNOTATION_SEVERITY file=icons/accessibility.json,line=2,endLine=3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
+
+  lint-aliases:
+    name: Check Uniqueness of Aliases
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Uniqueness of Aliases
+        run: "! cat <(printf \"%s\\n\" icons/*.json | while read -r name; do basename \"$name\" .json; done) <(jq -cr 'select(.aliases) | .aliases[] | if type==\"string\" then . else .name end' icons/*.json) | sort | uniq -c | grep -ve '^\\s*1 '"
+
+  generate-changed-icons-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
         with:
           files: icons/*.svg
-      - name: Generate cohesion check random
-        id: generate-cohesion-check-random
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in $(printf "%s\\n" icons/*.svg | shuf | head -n$(awk -F' ' '{print NF}' <<< '${{ steps.changed-files.outputs.all_changed_files }}')); do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
-      - name: Generate cohesion check squares
-        id: generate-cohesion-check-squares
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in $(printf "%s\\n" icons/*square*.svg | shuf | head -n$(awk -F' ' '{print NF}' <<< '${{ steps.changed-files.outputs.all_changed_files }}')); do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
-      - name: Generate 1px stroke-width
-        id: generate-1px-stroke-width
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/1/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
-      - name: Generate 2px stroke-width
-        id: generate-2px-stroke-width
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/2/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
-      - name: Generate 3px stroke-width
-        id: generate-3px-stroke-width
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/stroke-width/3/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
-      - name: Generate X-rays
-        id: generate-x-rays
-        run: |
-          delimiter="$(openssl rand -hex 8)"
-          echo "body<<$delimiter" >> $GITHUB_OUTPUT
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            cat "$file" | # get file content
-            tr '\n' ' ' | # remove line breaks
-            sed -e 's/<svg[^>]*>/<svg>/g' | # remove attributes from svg element
-            base64 -w 0 | # encode svg
-            sed "s|.*|<img width=\"400\" title=\"$file\" alt=\"$file\" src=\"https://lucide.dev/api/gh-icon/$(basename ${file//\.svg/})/&.svg\"/> |"
-          done | tr '\n' ' ' >> $GITHUB_OUTPUT
-          echo >> $GITHUB_OUTPUT
-          echo "$delimiter" >> $GITHUB_OUTPUT
+
       - name: Find Comment
         uses: peter-evans/find-comment@v2
-        id: fc
+        id: pr-comment
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
           body-includes: Added or changed icons
+
+      - uses: actions/setup-node@v4
+      - name: Install svgson for code preview (safer and faster than installing all deps)
+        run: npm install svgson
+
+      - name: Generate comment markup
+        run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> comment-markup.md
+        id: comment-markup
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
+          comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            ### Added or changed icons
-            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
-            <details>
-            <summary>Preview cohesion</summary>
-            ${{ steps.generate-cohesion-check-squares.outputs.body }}<br/>
-            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
-            ${{ steps.generate-cohesion-check-random.outputs.body }}<br/>
-            </details>
-            <details>
-            <summary>Preview stroke widths</summary>
-            ${{ steps.generate-1px-stroke-width.outputs.body }}<br/>
-            ${{ steps.generate-2px-stroke-width.outputs.body }}<br/>
-            ${{ steps.generate-3px-stroke-width.outputs.body }}<br/>
-            </details>
-            <details>
-            <summary>Icon X-rays</summary>
-            ${{ steps.generate-x-rays.outputs.body }}
-            </details>
+          body-path: ./comment-markup.md
           edit-mode: replace

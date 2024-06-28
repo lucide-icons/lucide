@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "count",
+    "score",
+    "enumerate",
+    "days",
+    "one",
+    "1",
+    "first",
+    "bar",
+    "prison",
+    "cell",
+    "sentence"
+  ],
+  "categories": [
+    "maths",
+    "gaming"
+  ]
+}

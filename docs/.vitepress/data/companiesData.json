@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "image": {
+      "light": "/company-logos/vercel-light.svg",
+      "dark": "/company-logos/vercel-dark.svg"
+    }
+  },
+  {
+    "name": "Supabase",
+    "url": "https://supabase.com",
+    "image": {
+      "light": "/company-logos/supabase-light.svg",
+      "dark": "/company-logos/supabase-dark.svg"
+    }
+  },
+  {
+    "name": "Obsidian",
+    "url": "https://obsidian.md",
+    "image": {
+      "light": "/company-logos/obsidian-light.svg",
+      "dark": "/company-logos/obsidian-dark.svg"
+    }
+  },
+  {
+    "name": "Open Collective",
+    "url": "https://opencollective.com",
+    "image": {
+      "light": "/company-logos/open-collective-light.svg",
+      "dark": "/company-logos/open-collective-dark.svg"
+    }
+  },
+  {
+    "name": "Super",
+    "url": "https://super.so",
+    "image": {
+      "light": "/company-logos/super-light.svg",
+      "dark": "/company-logos/super-dark.svg"
+    }
+  },
+  {
+    "name": "Noodle",
+    "url": "https://noodle.run/",
+    "image": {
+      "light": "/company-logos/noodle-light.svg",
+      "dark": "/company-logos/noodle-dark.svg"
+    }
+  }
+]

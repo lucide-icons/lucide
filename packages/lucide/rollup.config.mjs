@@ -33,20 +33,20 @@ const bundles = [
 
 const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
-    inputs.map(input => ({
+    inputs.map((input) => ({
       input,
       plugins: [
         // This is for lucide plugin to replace an argument in createIcons so it is easier to use with UMD.
-        ...(
-          format === 'umd' ? [
-            replace({
-              'icons = {}': 'icons = allIcons',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
+        ...(format === 'umd'
+          ? [
+              replace({
+                'icons = {}': 'icons = iconAndAliases',
+                delimiters: ['', ''],
+                preventAssignment: false,
+              }),
+            ]
+          : []),
+        ...plugins({ pkg, minify }),
       ],
       output: {
         name: outputFileName,

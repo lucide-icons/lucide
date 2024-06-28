@@ -10,17 +10,18 @@ sidebar: true
 <script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
-import IconPreviewSmall from '../.vitepress/theme/components/icons/IconPreviewSmall.vue'
-import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
-import IconContributors from '../.vitepress/theme/components/icons/IconContributors.vue'
-import RelatedIcons from '../.vitepress/theme/components/icons/RelatedIcons.vue'
-import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
-import Badge from '../.vitepress/theme/components/base/Badge.vue'
-import Label from '../.vitepress/theme/components/base/Label.vue'
+import IconPreview from '~/.vitepress/theme/components/icons/IconPreview.vue'
+import IconPreviewSmall from '~/.vitepress/theme/components/icons/IconPreviewSmall.vue'
+import IconInfo from '~/.vitepress/theme/components/icons/IconInfo.vue'
+import IconContributors from '~/.vitepress/theme/components/icons/IconContributors.vue'
+import RelatedIcons from '~/.vitepress/theme/components/icons/RelatedIcons.vue'
+import CodeGroup from '~/.vitepress/theme/components/base/CodeGroup.vue'
+import Badge from '~/.vitepress/theme/components/base/Badge.vue'
+import Label from '~/.vitepress/theme/components/base/Label.vue'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { data } from './codeExamples.data'
 import { camelCase, startCase } from 'lodash-es'
+import { satisfies } from 'semver'
 
 const { params } = useData()
 
@@ -31,57 +32,59 @@ const tabs = computed(() => data.codeExamples?.map(
 const codeExample = computed(() => data.codeExamples?.map(
     (codeExample) => {
       const pascalCase = startCase(camelCase( params.value.name)).replace(/\s/g, '')
-      return codeExample.code.replace(/PascalCase/g, pascalCase).replace(/Name/g, params.value.name)
+      return codeExample.code.replace(/\$PascalCase/g, pascalCase).replace(/\$Name/g, params.value.name)
     }
   ).join('') ?? []
 )
+
+function releaseTagLink(version) {
+  const shouldAddV = satisfies(version, `<0.266.0`)
+
+  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+}
 </script>
 
 <div :class="$style.layout">
   <div :class="$style.iconPreviews">
     <IconPreview
       id="previewer"
-      :name="$params.name"
-      :iconNode="$params.iconNode"
+      :name="params.name"
+      :iconNode="params.iconNode"
       :class="$style.preview"
     />
     <IconPreviewSmall
-      :name="$params.name"
-      :iconNode="$params.iconNode"
+      :name="params.name"
+      :iconNode="params.iconNode"
        :class="$style.smallPreview"
     />
   </div>
   <div >
     <div :class="$style.info">
-      <IconInfo :icon="$params" />
+      <IconInfo :icon="params" />
       <div :class="$style.meta">
         <div
-          v-if="$params.createdRelease?.version"
+          v-if="params.createdRelease?.version"
           :class="$style.version"
         >
           <Label>Created:</Label>
           <Badge
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.createdRelease.version}`"
-            target="_blank"
-            rel="noreferrer noopener"
+            :href="releaseTagLink(params.createdRelease.version)"
           >
-            v{{$params.createdRelease.version}}
+            v{{params.createdRelease.version}}
           </Badge>
         </div>
         <div
-          v-if="$params.changedRelease?.version"
+          v-if="params.changedRelease?.version"
           :class="$style.version"
         >
           <Label>Last changed:</Label>
           <Badge
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${$params.changedRelease.version}`"
-            target="_blank"
-            rel="noreferrer noopener"
+            :href="releaseTagLink(params.changedRelease.version)"
           >
-            v{{$params.changedRelease.version}}
+            v{{params.changedRelease.version}}
           </Badge>
         </div>
-        <IconContributors :icon="$params" :class="$style.contributors"/>
+        <IconContributors :icon="params" :class="$style.contributors"/>
       </div>
     </div>
     <CodeGroup
@@ -97,7 +100,10 @@ const codeExample = computed(() => data.codeExamples?.map(
   </div>
 </div>
 
-<RelatedIcons :icons="$params.relatedIcons" />
+<RelatedIcons
+  v-if="params.relatedIcons"
+  :icons="params.relatedIcons"
+/>
 
 <style module>
   .preview {
@@ -115,6 +121,10 @@ const codeExample = computed(() => data.codeExamples?.map(
   .meta {
     margin-left: auto;
     margin-top: 24px;
+  }
+
+  .info {
+    --tags-gradient-background: var(--vp-c-bg);
   }
 
   .version, .contributors {

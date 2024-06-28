@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "programming",
+    "code",
+    "automation",
+    "maths"
+  ],
+  "categories": [
+    "development",
+    "shapes",
+    "maths"
+  ],
+  "aliases": [
+    "function-square"
+  ]
+}

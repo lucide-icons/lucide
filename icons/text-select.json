@@ -3,14 +3,17 @@
   "contributors": [
     "danielbayley"
   ],
-  "aliases": ["text-selection"],
   "tags": [
     "find",
     "search",
-    "selection"
+    "selection",
+    "dashed"
   ],
   "categories": [
     "text",
     "cursors"
+  ],
+  "aliases": [
+    "text-selection"
   ]
 }

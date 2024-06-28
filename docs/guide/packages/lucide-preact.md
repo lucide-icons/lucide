@@ -8,28 +8,34 @@ Implementation of the lucide icon library for preact applications.
 
 ## Installation
 
-```sh
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-preact
+```
+
+```sh [yarn]
 yarn add lucide-preact
 ```
 
-or
-
-```sh
+```sh [npm]
 npm install lucide-preact
 ```
 
+:::
+
 ## How to use
 
-It's build with ESmodules so it's completely tree-shakable.
-Each icon can be imported as a preact component.
+Lucide is built with ES Modules, so it's completely tree-shakable.
+
+Each icon can be imported as a Preact component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
 
 ### Example
 
-You can pass additional props to adjust the icon.
+Additional props can be passed to adjust the icon:
 
-```js
+```jsx
 import { Camera } from 'lucide-preact';
-// Returns PreactComponent
 
 // Usage
 const App = () => {
@@ -39,7 +45,7 @@ const App = () => {
 export default App;
 ```
 
-### Props
+## Props
 
 | name                  | type      | default      |
 | --------------------- | --------- | ------------ |
@@ -48,29 +54,51 @@ export default App;
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-### Custom props / svg attributes
+### Applying props
 
-You can also pass custom props that will be added in the as attributes. With that you can modify the icons look by passing svg attributes.
+To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
-```js
+```jsx
 // Usage
 const App = () => {
   return <Camera fill="red" stroke-linejoin="bevel" />;
 };
 ```
 
-> svg attributes in preact aren't transformed, so if want to change e.g. the `stroke-linejoin` you need to pass it in kebabcase, the way svg spec is written so. See this topic in the [preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
+> SVG attributes in Preact aren't transformed, so if you want to change for example the `stroke-linejoin` you need to pass it in kebabcase. Basically how the SVG spec want you to write it. See this topic in the [Preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
 
-### One generic icon component
+## With Lucide lab or custom icons
 
-It is possible to create one generic icon component to load icons.
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
-> ⚠️ Example below importing all EsModules, caution using this example, not recommended when you using bundlers, your application build size will grow strongly.
+They can be used by using the `Icon` component.
+All props like regular lucide icons can be passed to adjust the icon appearance.
 
-#### Icon Component Example
+### Using the `Icon` component
 
-```js
-import * as icons from 'lucide-preact';
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-preact';
+import { burger } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={burger} />
+);
+```
+
+## One generic icon component
+
+It is possible to create one generic icon component to load icons, but it is not recommended.
+
+::: danger
+The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+:::
+
+### Icon Component Example
+
+```jsx
+import { icons } from 'lucide-preact';
 
 const Icon = ({ name, color, size }) => {
   const LucideIcon = icons[name];
@@ -79,4 +107,16 @@ const Icon = ({ name, color, size }) => {
 };
 
 export default Icon;
+```
+
+#### Using the Icon Component
+
+```jsx
+import Icon from './Icon';
+
+const App = () => {
+  return <Icon name="home" />;
+};
+
+export default App;
 ```

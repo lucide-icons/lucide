@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "addon",
+    "plugin",
+    "integration",
+    "extension",
+    "package",
+    "build",
+    "stack",
+    "toys",
+    "kids",
+    "children",
+    "learning"
+  ],
+  "categories": [
+    "development",
+    "shapes"
+  ]
+}

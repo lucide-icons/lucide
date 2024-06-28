@@ -1,47 +1,48 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useCategoryView } from '../../composables/useCategoryView'
+import { useCategoryView } from '../../composables/useCategoryView';
 
 interface Header {
-  level: number
-  title: string
-  slug: string
-  iconCount: number
-  link: string
-  children: Header[]
+  level: number;
+  title: string;
+  slug: string;
+  iconCount: number;
+  link: string;
+  name: string;
+  children: Header[];
 }
 
 type MenuItem = Omit<Header, 'slug' | 'children'> & {
-  children?: MenuItem[]
-}
+  children?: MenuItem[];
+};
 
-const props = defineProps<{
-  headers: MenuItem[]
-  root?: boolean
-}>()
+defineProps<{
+  headers: MenuItem[];
+  root?: boolean;
+}>();
 
-const { selectedCategory } = useCategoryView()
+const { selectedCategory } = useCategoryView();
 
-function onClick(event: Event) {
-  const target = (event.target as HTMLElement).nodeName === 'span' ? (event.target as HTMLElement).parentNode : event.target as HTMLElement
-  const id = '#' + (target as HTMLAnchorElement).href!.split('#')[1]
-  const decodedId = decodeURIComponent(id)
+function onClick(categoryName: string) {
+  selectedCategory.value = categoryName;
 
-  selectedCategory.value = decodedId.replace('#', '')
+  const heading = document.querySelector<HTMLAnchorElement>(categoryName);
+  heading?.focus();
 
-  const heading = document.querySelector<HTMLAnchorElement>(decodedId)
-  heading?.focus()
+  window.history.pushState({}, '', `/icons/categories#${categoryName}`)
 }
 </script>
 
 <template>
   <ul :class="root ? 'root' : 'nested'">
-    <li v-for="{ children, link, title, iconCount } in headers">
+    <li v-for="{ children, link, title, iconCount, name } in headers">
       <a
         class="outline-link"
         :href="link"
-        @click="onClick"
+        @click="onClick(name)"
         :title="title"
+        :class="{
+          inactive: iconCount === 0,
+        }"
       >
         <span>
           {{ title }}
@@ -82,6 +83,10 @@ function onClick(event: Event) {
   transition: color 0.25s;
 }
 
+.outline-link.inactive {
+  color: var(--vp-c-text-4);
+}
+
 .outline-link.nested {
   padding-left: 13px;
 }
@@ -91,5 +96,9 @@ function onClick(event: Event) {
   margin-left: auto;
   font-size: 11px;
   font-weight: 400;
+}
+
+.outline-link.inactive .icon-count {
+  opacity: 0;
 }
 </style>

@@ -2,19 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "wojtekmaj",
-    "ericfennis",
-    "karsa-mistmere"
+    "ericfennis"
   ],
   "tags": [
     "bidirectional",
-    "direction",
+    "two-way",
+    "2-way",
     "swap",
     "switch",
     "transaction",
     "reorder",
-    "move"
+    "move",
+    "<-",
+    "->"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

@@ -5,7 +5,9 @@
     "ericfennis"
   ],
   "tags": [
+    "forward",
     "direction",
+    "north",
     "upload",
     "collapse",
     "fold",
@@ -13,6 +15,7 @@
   ],
   "categories": [
     "arrows",
+    "navigation",
     "files"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "name": "build-font",
+  "description": "A internal used package to build the font.",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./main.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "svgtofont": "^3.25.4"
+  }
+}

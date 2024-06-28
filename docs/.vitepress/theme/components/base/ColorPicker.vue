@@ -54,7 +54,7 @@ const value = computed({
   flex-shrink: 0;
 }
 .color-picker {
-  background: var(--color-picker-bg, var(--vp-c-bg-soft));
+  background: var(--color-picker-bg, var(--vp-c-bg-alt));
   border-radius: 8px;
   color: var(--vp-c-text-2);
   padding: 4px 8px;
@@ -71,10 +71,10 @@ const value = computed({
 .color-input-text {
   width: 100%;
   height: 100%;
-  padding: 0 8px;
+  padding: 0 0 0 8px;
   border: none;
   background: transparent;
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-1);
   font-size: 14px;
   text-align: left;
   border-radius: 8px;

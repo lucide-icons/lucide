@@ -4,15 +4,21 @@ Implementation of the lucide icon library for Angular applications.
 
 ## Installation
 
-```bash
+::: code-group
+
+```sh [pnpm]
+pnpm install lucide-angular
+```
+
+```sh [yarn]
 yarn add lucide-angular
 ```
 
-or
-
-```bash
+```sh [npm]
 npm install lucide-angular
 ```
+
+:::
 
 ## How to use
 
@@ -98,7 +104,9 @@ To add custom icons, you will first need to convert them to an [svgson format](h
 
 ## Loading all icons
 
-> :warning: You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
+::: danger
+You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
+:::
 
 ```js
 import { icons } from 'lucide-angular';
@@ -106,4 +114,21 @@ import { icons } from 'lucide-angular';
 ...
 
 LucideAngularModule.pick(icons)
+```
+
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+They can be used in the same way as the official icons.
+
+```js
+import { LucideAngularModule } from 'lucide-angular';
+import { burger } from '@lucide/lab';
+
+@NgModule({
+  imports: [
+    LucideAngularModule.pick({ burger })
+  ]
+})
+export class AppModule { }
 ```

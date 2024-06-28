@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "unshield",
+    "cybersecurity",
+    "unsecure",
+    "unguard",
+    "unblock",
+    "antivirus",
+    "clean",
+    "clear",
+    "disinfect",
+    "patch",
+    "fix",
+    "stop",
+    "cancel",
+    "remove",
+    "relax",
+    "admin",
+    "crest",
+    "bravery",
+    "weakened",
+    "damaged",
+    "hit",
+    "unarm",
+    "disable",
+    "deactivate",
+    "decommission",
+    "downgraded",
+    "minimum",
+    "-"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development",
+    "gaming"
+  ]
+}

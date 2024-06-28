@@ -5,9 +5,13 @@
     "ericfennis"
   ],
   "tags": [
-    "direction"
+    "backwards",
+    "reverse",
+    "direction",
+    "south"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "shape",
+    "elliptical",
+    "geometry",
+    "container",
+    "storage",
+    "tin",
+    "pot"
+  ],
+  "categories": [
+    "shapes",
+    "design",
+    "maths"
+  ]
+}

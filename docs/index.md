@@ -2,6 +2,11 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+head:
+  - - link
+    - rel: canonical
+      content: https://lucide.dev/
+
 hero:
   name: |
     Beautiful &
@@ -13,10 +18,10 @@ hero:
   actions:
     - theme: brand
       text: View all icons
-      link: icons/index
+      link: icons/
     - theme: alt
       text: Get Started
-      link: guide/index
+      link: guide/
     - theme: alt
       text: GitHub
       link: https://github.com/lucide-icons/lucide
@@ -51,7 +56,9 @@ features:
 <script setup>
 import HomePackagesSection from './.vitepress/theme/components/home/HomePackagesSection.vue'
 import HomeIconCustomizer from './.vitepress/theme/components/home/HomeIconCustomizer.vue'
+import HomeTeamSection from './.vitepress/theme/components/home/HomeTeamSection.vue'
 </script>
 
 <HomePackagesSection />
 <HomeIconCustomizer />
+<HomeTeamSection />

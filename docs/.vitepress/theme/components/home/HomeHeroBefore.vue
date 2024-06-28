@@ -8,9 +8,7 @@ import { data } from './HomeHeroBefore.data'
   <HomeContainer class="container">
     <Badge
       :href="`https://github.com/lucide-icons/lucide/releases/tag/${data.version}`"
-      target="_blank"
-      rel="noreferrer noopener"
-    >{{ data.version }}</Badge>
+    >v{{ data.version }}</Badge>
   </HomeContainer>
 </template>
 

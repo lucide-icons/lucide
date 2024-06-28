@@ -8,7 +8,9 @@
     "sidebar",
     "secondary",
     "drawer",
-    "hide"
+    "hide",
+    "chevron",
+    ">"
   ],
   "categories": [
     "layout",

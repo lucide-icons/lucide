@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "roadworks",
+    "tarmac",
+    "safety",
+    "block"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

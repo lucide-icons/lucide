@@ -10,7 +10,8 @@
     "group",
     "units",
     "collection",
-    "cluster"
+    "cluster",
+    "geometry"
   ],
   "categories": [
     "shapes",

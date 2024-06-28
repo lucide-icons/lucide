@@ -1,46 +1,22 @@
-import { forwardRef, createElement, ReactSVG, SVGProps } from 'react';
-import defaultAttributes from './defaultAttributes';
+import { createElement, forwardRef } from 'react';
+import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { IconNode, LucideProps } from './types';
+import Icon from './Icon';
 
-export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][]
-
-export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>
-
-export interface LucideProps extends SVGAttributes {
-  size?: string | number
-  absoluteStrokeWidth?: boolean
-}
 /**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {ForwardRefExoticComponent} LucideIcon
  */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-
 const createLucideIcon = (iconName: string, iconNode: IconNode) => {
-  const Component = forwardRef<SVGSVGElement, LucideProps>(
-    ({ color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, ...rest }, ref) =>
-      createElement(
-        'svg',
-        {
-          ref,
-          ...defaultAttributes,
-          width: size,
-          height: size,
-          stroke: color,
-          strokeWidth: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-          className: `lucide lucide-${toKebabCase(iconName)}`,
-          ...rest,
-        },
-        [
-          ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-          ...(
-            (Array.isArray(children) ? children : [children]) || []
-          )
-        ],
-      ),
+  const Component = forwardRef<SVGSVGElement, LucideProps>(({ className, ...props }, ref) =>
+    createElement(Icon, {
+      ref,
+      iconNode,
+      className: mergeClasses(`lucide-${toKebabCase(iconName)}`, className),
+      ...props,
+    }),
   );
 
   Component.displayName = `${iconName}`;
@@ -48,4 +24,4 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   return Component;
 };
 
-export default createLucideIcon
+export default createLucideIcon;

@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "delete",
+    "remove",
+    "unfollow",
+    "unsubscribe"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    {
+      "name": "user-minus-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

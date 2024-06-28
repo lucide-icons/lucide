@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "vhs",
+    "movie",
+    "film",
+    "recording",
+    "motion picture",
+    "showreel",
+    "cassette"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "photography",
+    "files"
+  ]
+}

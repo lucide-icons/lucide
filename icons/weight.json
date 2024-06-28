@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "mass",
+    "heavy",
+    "lead",
+    "metal",
+    "measure",
+    "geometry",
+    "scales",
+    "balance"
+  ],
+  "categories": [
+    "maths"
+  ]
+}

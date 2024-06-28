@@ -1,36 +1,35 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { cleanup, render } from '@testing-library/react'
-import { Edit2, Grid, Pen } from '../src/lucide-react-native'
+import { cleanup, render } from '@testing-library/react';
+import { Edit2, Grid, Pen } from '../src/lucide-react-native';
 
-vi.mock('react-native-svg')
+vi.mock('react-native-svg');
 
-type Attributes = Record<string, { value: unknown}>
+type Attributes = Record<string, { value: unknown }>;
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
-    const { container } = render(<Grid /> );
+    const { container } = render(<Grid />);
 
-    expect( container.innerHTML ).toMatchSnapshot();
+    expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
-    const testId = 'grid-icon';
-    const { container, getByTestId } = render(
+    const { container } = render(
       <Grid
-        data-testid={testId}
         size={48}
         stroke="red"
         strokeWidth={4}
       />,
     );
 
-    const { attributes } = getByTestId(testId);
-    expect((attributes as unknown as Attributes).stroke.value).toBe('red');
-    expect((attributes as unknown as Attributes).width.value).toBe('48');
-    expect((attributes as unknown as Attributes).height.value).toBe('48');
-    expect((attributes as unknown as Attributes)['stroke-width'].value).toBe('4');
+    const SVGElement = container.firstElementChild;
 
-    expect( container.innerHTML ).toMatchSnapshot();
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '4');
+
+    expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should render the alias icon', () => {
@@ -44,9 +43,9 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    const PenIconRenderedHTML = container.innerHTML
+    const PenIconRenderedHTML = container.innerHTML;
 
-    cleanup()
+    cleanup();
 
     const { container: Edit2Container } = render(
       <Edit2
@@ -57,63 +56,87 @@ describe('Using lucide icon components', () => {
       />,
     );
 
-    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML)
+    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
-
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    const testId = 'grid-icon';
-    const { container, getByTestId } = render(
+    const { container } = render(
       <Grid
-        data-testid={testId}
         size={48}
         stroke="red"
         absoluteStrokeWidth
       />,
     );
 
-    const { attributes } = getByTestId(testId) as unknown as{ attributes: Record<string, { value: string }>};
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('1');
+    const SVGElement = container.firstElementChild;
 
-    expect( container.innerHTML ).toMatchSnapshot();
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '1');
+
+    expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should work with a single child component', () => {
-    const testId = "single-child";
-    const childId = "child";
+    const testId = 'single-child';
+    const childId = 'child';
 
     const { container, getByTestId } = render(
       <Grid data-testid={testId}>
-        <Grid data-testid={childId}/>
-      </Grid>
+        <Grid data-testid={childId} />
+      </Grid>,
     );
-    const { children} = getByTestId(testId) as unknown as{ children: HTMLCollection};
-    const lastChild = children[children.length -1];
+    const { children } = container.firstElementChild ?? {};
+    const lastChild = children?.[children.length - 1];
 
     expect(lastChild).toEqual(getByTestId(childId));
     expect(container.innerHTML).toMatchSnapshot();
-  })
+  });
 
   it('should work with several children components', () => {
-    const testId = "multiple-children";
-    const childId1 = "child1";
-    const childId2 = "child2";
+    const testId = 'multiple-children';
+    const childId1 = 'child1';
+    const childId2 = 'child2';
 
     const { container, getByTestId } = render(
       <Grid data-testid={testId}>
-        <Grid data-testid={childId1}/>
-        <Grid data-testid={childId2}/>
-      </Grid>
+        <Grid data-testid={childId1} />
+        <Grid data-testid={childId2} />
+      </Grid>,
     );
-    const {children} = getByTestId(testId) as unknown as{ children: HTMLCollection};
+    const { children } = getByTestId(testId) as unknown as { children: HTMLCollection };
     const child1 = children[children.length - 2];
     const child2 = children[children.length - 1];
 
     expect(child1).toEqual(getByTestId(childId1));
     expect(child2).toEqual(getByTestId(childId2));
     expect(container.innerHTML).toMatchSnapshot();
-  })
-})
+  });
+
+  it('should duplicate properties to children components', () => {
+    const testId = 'multiple-children';
+
+    const fill = 'red';
+    const color = 'white';
+    const strokeWidth = 10;
+
+    const { container, getByTestId } = render(
+      <Grid
+        data-testid={testId}
+        fill={fill}
+        color={color}
+        strokeWidth={strokeWidth}
+      />,
+    );
+    const { children = [] } = getByTestId(testId) as unknown as { children: HTMLCollection };
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i];
+      expect(child.getAttribute('fill')).toBe(fill);
+      expect(child.getAttribute('stroke')).toBe(color);
+      expect(child.getAttribute('stroke-width')).toBe(`${strokeWidth}`);
+    }
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+});

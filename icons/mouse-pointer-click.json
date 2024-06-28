@@ -2,12 +2,12 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
-    "arrow",
-    "cursor",
-    "click"
+    "click",
+    "select"
   ],
   "categories": [
     "arrows",

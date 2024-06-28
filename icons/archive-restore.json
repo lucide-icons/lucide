@@ -2,14 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
   "tags": [
-    "archive",
     "unarchive",
-    "restore",
     "index",
-    "box"
+    "backup",
+    "box",
+    "storage",
+    "records"
   ],
   "categories": [
     "files",

@@ -5,8 +5,11 @@
     "ericfennis"
   ],
   "tags": [
+    "behind",
     "direction",
+    "south",
     "download",
+    "save",
     "git",
     "version control",
     "pull",
@@ -16,6 +19,7 @@
   ],
   "categories": [
     "arrows",
+    "navigation",
     "files",
     "development"
   ]

@@ -1,0 +1,95 @@
+{
+  "Lucide SVG": {
+    "scope": "xml",
+    "description": "Base SVG with Lucide attributes.",
+    "prefix": [
+      "svg",
+      "lucide"
+    ],
+    "body": [
+      "<svg",
+      "  xmlns=\"http://www.w3.org/2000/svg\"",
+      "  width=\"24\"",
+      "  height=\"24\"",
+      "  viewBox=\"0 0 24 24\"",
+      "  fill=\"none\"",
+      "  stroke=\"currentColor\"",
+      "  stroke-width=\"2\"",
+      "  stroke-linecap=\"round\"",
+      "  stroke-linejoin=\"round\"",
+      ">",
+      "  $0",
+      "</svg>"
+    ]
+  },
+  "Rectangle": {
+    "scope": "xml",
+    "description": "SVG `rect`angle, with Lucide defaults.",
+    "prefix": [
+      "rect",
+      "<rect"
+    ],
+    "body": "<rect width=\"${1:20}\" height=\"${2:12}\" x=\"${3:2}\" y=\"${4:6}\" rx=\"${5|2,1|}\"/>"
+  },
+  "Square": {
+    "scope": "xml",
+    "description": "SVG square `rect`angle, with Lucide defaults.",
+    "prefix": [
+      "square",
+      "rect",
+      "<rect",
+      "tile"
+    ],
+    "body": "<rect width=\"${1:18}\" height=\"$1\" x=\"${2:3}\" y=\"${3:$2}\" rx=\"${4|2,1|}\" />"
+  },
+  "Circle": {
+    "scope": "xml",
+    "description": "SVG `circle`, with Lucide defaults.",
+    "prefix": [
+      "circle",
+      "<circle"
+    ],
+    "body": "<circle cx=\"${2:12}\" cy=\"${3:$2}\" r=\"${1|10,2,.5\" fill=\"currentColor|}\" />"
+  },
+  "Ellipse": {
+    "scope": "xml",
+    "description": "SVG `ellipse`.",
+    "prefix": [
+      "ellipse",
+      "<ellipse"
+    ],
+    "body": "<ellipse cx=\"${3:12}\" cy=\"${4:$3}\" rx=\"${1:10}\" ry=\"${2:$1}\" />"
+  },
+  "Path": {
+    "scope": "xml",
+    "description": "SVG custom `path`.",
+    "prefix": [
+      "path",
+      "<path",
+      "polyline",
+      "<polyline",
+      "polygon",
+      "<polygon"
+    ],
+    "body": "<path d=\"${1|M,m|}$0\" />"
+  },
+  "Line": {
+    "scope": "xml",
+    "description": "SVG `path`, preffered to `line` in Lucide.",
+    "prefix": [
+      "line",
+      "<line",
+      "minus"
+    ],
+    "body": "<path d=\"M${3:5} ${4:12}${1|h,v|}${2:14}\" />"
+  },
+  "Dot": {
+    "scope": "xml",
+    "description": "SVG small dot, within the Lucide guidelines.",
+    "prefix": [
+      "dot",
+      "."
+    ],
+    "body": "<path d=\"M ${1:12} ${2:$1}h.01\" />"
+  }
+}

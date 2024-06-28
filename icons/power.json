@@ -10,8 +10,14 @@
     "off",
     "device",
     "switch",
+    "toggle",
+    "binary",
+    "boolean",
     "reboot",
-    "restart"
+    "restart",
+    "button",
+    "keyboard",
+    "troubleshoot"
   ],
   "categories": [
     "connectivity"

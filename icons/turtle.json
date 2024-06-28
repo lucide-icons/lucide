@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "animal",
+    "pet",
+    "tortoise",
+    "slow",
+    "speed"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

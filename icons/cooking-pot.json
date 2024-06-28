@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "guillermo-angeles",
+    "ericfennis"
+  ],
+  "tags": [
+    "pod",
+    "cooking",
+    "recipe",
+    "food",
+    "kitchen",
+    "chef",
+    "restaurant",
+    "dinner",
+    "lunch",
+    "breakfast",
+    "meal",
+    "eat"
+  ],
+  "categories": [
+    "food-beverage",
+    "home"
+  ]
+}

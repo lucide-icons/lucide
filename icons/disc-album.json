@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "album",
+    "music",
+    "songs",
+    "format",
+    "cd",
+    "dvd",
+    "vinyl",
+    "sleeve",
+    "cover",
+    "platinum",
+    "compilation",
+    "ep",
+    "recording",
+    "playback",
+    "spin",
+    "rotate",
+    "rpm",
+    "dj"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ]
+}

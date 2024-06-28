@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "animal",
+    "insect",
+    "slow",
+    "speed",
+    "delicacy",
+    "spiral"
+  ],
+  "categories": [
+    "animals",
+    "food-beverage"
+  ]
+}

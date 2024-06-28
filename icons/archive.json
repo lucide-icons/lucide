@@ -3,11 +3,15 @@
   "contributors": [
     "colebemis",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "index",
-    "box"
+    "backup",
+    "box",
+    "storage",
+    "records"
   ],
   "categories": [
     "files",

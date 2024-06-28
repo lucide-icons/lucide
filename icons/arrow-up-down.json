@@ -7,7 +7,8 @@
   ],
   "tags": [
     "bidirectional",
-    "direction",
+    "two-way",
+    "2-way",
     "swap",
     "switch",
     "network",
@@ -18,6 +19,7 @@
     "move"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }

@@ -5,14 +5,16 @@
     "jguddas"
   ],
   "tags": [
-    "medical",
     "health",
+    "skeleton",
+    "skull",
     "death",
-    "pet",
-    "gaming"
+    "pets",
+    "dog"
   ],
   "categories": [
+    "animals",
     "medical",
-    "animals"
+    "gaming"
   ]
 }

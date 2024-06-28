@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "flames",
+    "smoke",
+    "foam",
+    "water",
+    "spray",
+    "hose",
+    "firefighter",
+    "fireman",
+    "department",
+    "brigade",
+    "station",
+    "emergency",
+    "suppress",
+    "compressed",
+    "tank",
+    "cylinder",
+    "safety",
+    "equipment",
+    "amenities"
+  ],
+  "categories": [
+    "home",
+    "tools",
+    "travel"
+  ]
+}

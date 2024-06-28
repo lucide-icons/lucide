@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "johnletey"
+  ],
+  "tags": [
+    "code",
+    "version control",
+    "waypoint",
+    "stop",
+    "station"
+  ],
+  "categories": [
+    "development",
+    "maps",
+    "navigation"
+  ],
+  "aliases": [
+    "git-commit"
+  ]
+}

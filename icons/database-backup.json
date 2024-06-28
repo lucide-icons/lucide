@@ -9,6 +9,8 @@
   "tags": [
     "storage",
     "memory",
+    "bytes",
+    "servers",
     "backup",
     "timemachine",
     "rotate",
@@ -19,6 +21,7 @@
     "devices",
     "arrows",
     "design",
+    "development",
     "photography"
   ]
 }

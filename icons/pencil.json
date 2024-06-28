@@ -3,15 +3,26 @@
   "contributors": [
     "ericfennis",
     "wojtekmaj",
-    "mittalyashu"
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
+    "rubber",
     "edit",
-    "pen",
-    "create"
+    "create",
+    "draw",
+    "sketch",
+    "draft",
+    "writer",
+    "writing",
+    "stationery",
+    "artist"
   ],
   "categories": [
     "design",
-    "cursors"
+    "cursors",
+    "tools",
+    "text"
   ]
 }

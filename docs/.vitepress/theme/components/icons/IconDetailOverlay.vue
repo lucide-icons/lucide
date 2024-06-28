@@ -1,30 +1,60 @@
 <script setup lang="ts">
-  import type { IconEntity } from '../../types'
-  import { computed, ref, watch } from 'vue'
-  import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-  import IconButton from '../base/IconButton.vue';
-  import IconContributors from './IconContributors.vue';
-  import IconPreview from './IconPreview.vue';
-  import { x, expand } from '../../../data/iconNodes'
-  import { useRouter } from 'vitepress';
-  import IconInfo from './IconInfo.vue';
-  import Badge from '../base/Badge.vue';
+import type { IconEntity } from '../../types'
+import { computed } from 'vue'
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import IconButton from '../base/IconButton.vue';
+import IconContributors from './IconContributors.vue';
+import IconPreview from './IconPreview.vue';
+import { x, expand } from '../../../data/iconNodes'
+import { useRouter } from 'vitepress';
+import IconInfo from './IconInfo.vue';
+import Badge from '../base/Badge.vue';
+import { computedAsync } from '@vueuse/core';
+import { satisfies } from 'semver';
+import { useExternalLibs } from '../../composables/useExternalLibs';
 
-  const props = defineProps<{
-    icon: IconEntity
-  }>()
+const props = defineProps<{
+  iconName: string | null
+}>()
 
-  const emit = defineEmits(['close'])
-  const isOpen = computed(() => !!props.icon)
+const { externalIconNodes } = useExternalLibs()
 
-  function onClose() {
-    emit('close')
+const { go } = useRouter()
+
+const icon = computedAsync<IconEntity | null>(async () => {
+  if (props.iconName) {
+    try {
+      if (props.iconName.includes(':')) {
+        const [library, name] = props.iconName.split(':')
+
+        return externalIconNodes.value[library].find((icon) => icon.name === name)
+      } else {
+        return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+      }
+    } catch (err) {
+      if (!props.iconName.includes(':')) {
+        go(`/icons/${props.iconName}`)
+      }
+    }
   }
+  return null
+}, null)
 
-  const { go } = useRouter()
+const emit = defineEmits(['close'])
+const isOpen = computed(() => !!icon.value)
 
-  const CloseIcon = createLucideIcon('Close', x)
-  const Expand = createLucideIcon('Expand', expand)
+function releaseTagLink(version) {
+  const shouldAddV = satisfies(version, `<0.266.0`)
+
+  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+}
+
+function onClose() {
+  emit('close')
+}
+
+const CloseIcon = createLucideIcon('Close', x)
+const Expand = createLucideIcon('Expand', expand)
 </script>
 
 <template>
@@ -35,11 +65,9 @@
           <Badge
             v-if="icon.createdRelease"
             class="version"
-            :href="`https://github.com/lucide-icons/lucide/releases/tag/v${icon.createdRelease.version}`"
-            target="_blank"
-            rel="noreferrer noopener"
+            :href="releaseTagLink(icon.createdRelease.version)"
           >v{{ icon.createdRelease.version }}</Badge>
-          <IconButton  @click="go(`/icons/${icon.name}`)">
+          <IconButton  @click="go(icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}` : `/icons/${icon.name}`)">
             <component :is="Expand" />
           </IconButton>
           <IconButton  @click="onClose">
@@ -109,9 +137,8 @@
 }
 
 .icon-info {
-  padding: 0 24px;
+  padding-left: 24px;
   flex-basis: 100%;
-
 }
 
 .icon-tags {
@@ -130,11 +157,11 @@
 }
 
 .drawer-enter-active {
-  transition: all 0.2s cubic-bezier(.21,.8,.46,.9);
+  transition: opacity 0.5s, transform 0.25s ease;
 }
 
 .drawer-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: opacity 0.25s ease, transform 1.6s ease-out;
 }
 
 .drawer-enter-from,

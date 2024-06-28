@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "read",
+    "clip",
+    "marker",
+    "tag",
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "clear"
+  ],
+  "categories": [
+    "account"
+  ]
+}

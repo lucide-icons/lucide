@@ -1,0 +1,49 @@
+name: Icon request
+description: Suggest a new icon for this project
+labels: ['🙌 icon request']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting an icon request check if it has already been requested. If there is an open request, please add a 👍.
+
+        **Important note**: No new brand logos are allowed, see https://github.com/lucide-icons/lucide/issues/670.
+        Existing brand icons will also be phased out. For brand icons, consider using https://simpleicons.org, which offers purpose-built SVGs that are also on a 24×24px grid.
+  - type: input
+    id: name
+    attributes:
+      label: Icon name
+      description: What should this icon depict? For multiple icons, provide a comma-separated list.
+    validations:
+      required: true
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use cases
+      description: Why do you need this icon? Include at least two real-life use cases per requested icon, avoiding generic descriptions like "it's a car icon".
+      placeholder: e.g. I need a star icon to use in my rating system.
+    validations:
+      required: true
+  - type: textarea
+    id: design-ideas
+    attributes:
+      label: Design ideas
+      description: What should this icon look like? Provide simple, minimalistic icon examples from other sets or your own drafts to help us visualize your request.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please review the following checklist before submitting your request.
+      options:
+        - label: I have searched if someone has submitted a similar issue before and there weren't any. (Please make sure to also search closed issues, as this issue might already have been resolved.)
+          required: true
+        - label: I have searched existing icons to make sure it does not already exist and I didn't find any.
+          required: true
+        - label: I am not requesting a brand logo and the art is not protected by copyright.
+          required: true
+        - label: I am not requesting an icon that includes religious, political imagery or hate symbols.
+          required: true
+        - label: I have provided appropriate use cases for the icon(s) requested.
+          required: true

@@ -6,9 +6,12 @@
   "tags": [
     "todo",
     "done",
+    "check",
     "tick",
     "complete",
-    "task"
+    "tasks",
+    "items",
+    "pending"
   ],
   "categories": [
     "text"
