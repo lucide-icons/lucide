@@ -12,6 +12,8 @@ const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
 const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
   .filter(([, { aliases }]) => aliases?.length)
   .map(([iconName, { aliases }]) => {
+    aliases = aliases.map((alias) => (typeof alias === 'object' ? alias.name : alias));
+
     const aliasRouteMatches = aliases.join('|');
 
     return {

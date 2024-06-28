@@ -10,14 +10,14 @@ sidebar: true
 <script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import IconPreview from '../.vitepress/theme/components/icons/IconPreview.vue'
-import IconPreviewSmall from '../.vitepress/theme/components/icons/IconPreviewSmall.vue'
-import IconInfo from '../.vitepress/theme/components/icons/IconInfo.vue'
-import IconContributors from '../.vitepress/theme/components/icons/IconContributors.vue'
-import RelatedIcons from '../.vitepress/theme/components/icons/RelatedIcons.vue'
-import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
-import Badge from '../.vitepress/theme/components/base/Badge.vue'
-import Label from '../.vitepress/theme/components/base/Label.vue'
+import IconPreview from '~/.vitepress/theme/components/icons/IconPreview.vue'
+import IconPreviewSmall from '~/.vitepress/theme/components/icons/IconPreviewSmall.vue'
+import IconInfo from '~/.vitepress/theme/components/icons/IconInfo.vue'
+import IconContributors from '~/.vitepress/theme/components/icons/IconContributors.vue'
+import RelatedIcons from '~/.vitepress/theme/components/icons/RelatedIcons.vue'
+import CodeGroup from '~/.vitepress/theme/components/base/CodeGroup.vue'
+import Badge from '~/.vitepress/theme/components/base/Badge.vue'
+import Label from '~/.vitepress/theme/components/base/Label.vue'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { data } from './codeExamples.data'
 import { camelCase, startCase } from 'lodash-es'
@@ -31,8 +31,13 @@ const tabs = computed(() => data.codeExamples?.map(
 
 const codeExample = computed(() => data.codeExamples?.map(
     (codeExample) => {
-      const pascalCase = startCase(camelCase( params.value.name)).replace(/\s/g, '')
-      return codeExample.code.replace(/PascalCase/g, pascalCase).replace(/Name/g, params.value.name)
+      const pascalCaseName = startCase(camelCase( params.value.name)).replace(/\s/g, '')
+      const camelCaseName = camelCase(params.value.name)
+
+      return codeExample.code
+        .replace(/\$PascalCase/g, pascalCaseName)
+        .replace(/\$CamelCase/g, camelCaseName)
+        .replace(/\$Name/g, params.value.name)
     }
   ).join('') ?? []
 )
@@ -100,7 +105,10 @@ function releaseTagLink(version) {
   </div>
 </div>
 
-<RelatedIcons :icons="params.relatedIcons" />
+<RelatedIcons
+  v-if="params.relatedIcons"
+  :icons="params.relatedIcons"
+/>
 
 <style module>
   .preview {

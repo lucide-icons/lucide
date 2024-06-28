@@ -10,18 +10,30 @@ type CodeExampleType = {
 const getIconCodes = (): CodeExampleType => {
   return [
     {
-      language: 'html',
-      title: 'HTML',
-      code: `<i data-lucide="Name"></i>`,
+      language: 'js',
+      title: 'Vanilla',
+      code: `\
+import { createIcons, icons } from 'lucide';
+import { $CamelCase } from '@lucide/lab';
+
+createIcons({
+  icons: {
+    $CamelCase
+  }
+});
+
+document.body.append('<i data-lucide="$Name"></i>');\
+  `,
     },
     {
       language: 'tsx',
       title: 'React',
-      code: `import { PascalCase } from 'lucide-react';
+      code: `import { Icon } from 'lucide-react';
+import { $CamelCase } from '@lucide/lab';
 
 const App = () => {
   return (
-    <PascalCase />
+    <Icon iconNode={$CamelCase} />
   );
 };
 
@@ -32,11 +44,12 @@ export default App;
       language: 'vue',
       title: 'Vue',
       code: `<script setup>
-  import { PascalCase } from 'lucide-vue-next';
+import { Icon } from 'lucide-vue-next';
+import { $CamelCase } from '@lucide/lab';
 </script>
 
 <template>
-  <PascalCase />
+  <Icon :iconNode="burger" />
 </template>
 `,
     },
@@ -44,20 +57,22 @@ export default App;
       language: 'svelte',
       title: 'Svelte',
       code: `<script>
-import { PascalCase } from 'lucide-svelte';
+import { Icon } from 'lucide-svelte';
+import { $CamelCase } from '@lucide/lab';
 </script>
 
-<PascalCase />
+<Icon iconNode={burger} />
 `,
     },
     {
       language: 'tsx',
       title: 'Preact',
-      code: `import { PascalCase } from 'lucide-preact';
+      code: `import { Icon } from 'lucide-preact';
+import { $CamelCase } from '@lucide/lab';
 
 const App = () => {
   return (
-    <PascalCase />
+    <Icon iconNode={$CamelCase} />
   );
 };
 
@@ -67,11 +82,12 @@ export default App;
     {
       language: 'tsx',
       title: 'Solid',
-      code: `import { PascalCase } from 'lucide-solid';
+      code: `import { Icon } from 'lucide-solid';
+import { $CamelCase } from '@lucide/lab';
 
 const App = () => {
   return (
-    <PascalCase />
+    <Icon iconNode={$CamelCase} />
   );
 };
 
@@ -82,26 +98,17 @@ export default App;
       language: 'tsx',
       title: 'Angular',
       code: `// app.module.ts
-import { LucideAngularModule, PascalCase } from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
+import { $CamelCase } from '@lucide/lab';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ PascalCase })
+    LucideAngularModule.pick({ $CamelCase })
   ],
 })
 
 // app.component.html
-<lucide-icon name="Name"></lucide-icon>
-`,
-    },
-    {
-      language: 'html',
-      title: 'Icon Font',
-      code: `<style>
-@import ('~lucide-static/font/Lucide.css');
-</style>
-
-<div class="icon-Name"></div>
+<lucide-icon name="$CamelCase"></lucide-icon>
 `,
     },
   ];

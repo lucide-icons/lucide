@@ -7,7 +7,7 @@
   export let size: number | string = 24
   export let strokeWidth: number | string = 2
   export let absoluteStrokeWidth: boolean = false
-  export let iconNode: IconNode
+  export let iconNode: IconNode = []
 
   const mergeClasses = <ClassType = string | undefined | null>(
     ...classes: ClassType[]
