@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import processSvg from './render/processSvg.mjs';
 
 /**
  * Converts string to CamelCase
@@ -126,6 +127,16 @@ export const readSvgDirectory = (directory, fileExtension = '.svg') =>
  */
 export const readSvg = (fileName, directory) =>
   fs.readFileSync(path.join(directory, fileName), 'utf-8');
+
+/**
+ * Read and process svg from directory
+ *
+ * @param {string} fileName
+ * @param {string} directory
+ * @param {boolean} flatten
+ */
+export const readAndProcessSvg = async (fileName, directory, flatten) =>
+  await processSvg(readSvg(fileName, directory), path.join(directory, fileName), flatten);
 
 /**
  * writes content to a file

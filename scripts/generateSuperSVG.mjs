@@ -3,7 +3,7 @@ import { stringify, parseSync } from 'svgson';
 import * as prettier from 'prettier';
 import { appendFile, readSvgDirectory, getCurrentDirPath } from './helpers.mjs';
 
-import readSvgs from '../packages/lucide-static/scripts/readSvgs.mjs';
+import readAndProcessSvgs from '../packages/lucide-static/scripts/readAndProcessSvgs.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 
@@ -49,7 +49,7 @@ async function generateSprite(svgs, packageDir) {
 }
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
-const svgs = readSvgs(svgFiles, ICONS_DIR);
+const svgs = await readAndProcessSvgs(svgFiles, ICONS_DIR, true);
 
 const parsedSvgs = svgs.map(({ name, contents }) => ({
   name,
