@@ -23,7 +23,7 @@ function getAllCategoryFiles() {
 
 const categoriesFile = path.resolve(dataDirectory, `categoriesData.json`);
 
-const categoriesData = getAllCategoryFiles()
+const categoriesData = getAllCategoryFiles();
 
 fs.promises
   .writeFile(categoriesFile, JSON.stringify(categoriesData, null, 2), 'utf-8')
@@ -33,4 +33,3 @@ fs.promises
   .catch((error) => {
     throw new Error(`Something went wrong generating the categoriesData.json file,\n ${error}`);
   });
-

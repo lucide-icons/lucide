@@ -1,15 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis"
+    "AndreasSas"
   ],
   "tags": [
-    "house",
-    "living"
+    "floppy disk",
+    "unsalvageable"
   ],
   "categories": [
-    "account"
+    "text",
+    "files"
   ]
 }
