@@ -60,7 +60,6 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
-    "node-fetch": "^3.3.2",
     "p-memoize": "^7.1.1",
     "prettier": "3.2.4",
     "semver": "^7.5.4",

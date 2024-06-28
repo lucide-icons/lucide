@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
 import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
@@ -24,7 +25,6 @@ export default async function generateAliasesFile({
   iconFileExtension = '.js',
   iconMetaData,
   aliasImportFileExtension,
-  exportModuleNameCasing,
   aliasNamesOnly = false,
   separateAliasesFile = false,
   showLog = true,

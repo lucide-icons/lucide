@@ -70,9 +70,6 @@ importers:
       minimist:
         specifier: ^1.2.8
         version: 1.2.8
-      node-fetch:
-        specifier: ^3.3.2
-        version: 3.3.2
       p-memoize:
         specifier: ^7.1.1
         version: 7.1.1
@@ -162,7 +159,7 @@ importers:
         version: 5.3.1
       vue:
         specifier: ^3.4.13
-        version: 3.4.18
+        version: 3.4.18(typescript@4.9.5)
     devDependencies:
       '@lucide/build-icons':
         specifier: workspace:*
@@ -193,7 +190,7 @@ importers:
         version: 3.4.0
       vitepress:
         specifier: 1.0.0-rc.36
-        version: 1.0.0-rc.36(@algolia/client-search@4.19.1)(fuse.js@6.6.2)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.8.2)
+        version: 1.0.0-rc.36(@algolia/client-search@4.19.1)(fuse.js@6.6.2)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.8.2)(typescript@4.9.5)
 
   packages/lucide:
     devDependencies:
@@ -5044,7 +5041,7 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@tanstack/vue-virtual': 3.0.4(vue@3.4.18)
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     dev: false
 
   /@html-eslint/eslint-plugin@0.19.1:
@@ -7253,7 +7250,7 @@ packages:
       vue: ^2.7.0 || ^3.0.0
     dependencies:
       '@tanstack/virtual-core': 3.0.0
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     dev: false
 
   /@testing-library/dom@8.20.1:
@@ -8307,7 +8304,7 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 5.0.12
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     dev: true
 
   /@vitest/expect@0.32.4:
@@ -8556,7 +8553,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.4.18
       '@vue/shared': 3.4.18
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
 
   /@vue/server-renderer@3.4.21(vue@3.4.21):
     resolution: {integrity: sha512-aV1gXyKSN6Rz+6kZ6kr5+Ll14YzmIbeuWe7ryJl5muJ4uwSwY/aStXTixx76TwkZFJLm1aAlA/HSWEJ4EyiMkg==}
@@ -9104,7 +9101,7 @@ packages:
     dependencies:
       anser: 2.1.1
       escape-carriage: 1.3.1
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     dev: false
 
   /any-base@1.1.0:
@@ -10916,6 +10913,7 @@ packages:
   /data-uri-to-buffer@4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
+    dev: false
 
   /data-urls@3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
@@ -12876,6 +12874,7 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.2.1
+    dev: false
 
   /figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
@@ -13070,6 +13069,7 @@ packages:
     engines: {node: '>=12.20.0'}
     dependencies:
       fetch-blob: 3.2.0
+    dev: false
 
   /forwarded@0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
@@ -16487,6 +16487,7 @@ packages:
   /node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    dev: false
 
   /node-fetch-native@1.4.0:
     resolution: {integrity: sha512-F5kfEj95kX8tkDhUCYdV8dg3/8Olx/94zB8+ZNthFs6Bz31UpUi8Xh40TN3thLwXgrwXry1pEg9lJ++tLWTcqA==}
@@ -16527,6 +16528,7 @@ packages:
       data-uri-to-buffer: 4.0.1
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
+    dev: false
 
   /node-forge@1.3.1:
     resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
@@ -19178,7 +19180,7 @@ packages:
       clean-set: 1.1.2
       dequal: 2.0.3
       lz-string: 1.5.0
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     transitivePeerDependencies:
       - '@lezer/common'
     dev: false
@@ -21022,7 +21024,6 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /typescript@5.1.6:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
@@ -21679,7 +21680,7 @@ packages:
       vite: 5.0.13
     dev: true
 
-  /vitepress@1.0.0-rc.36(@algolia/client-search@4.19.1)(fuse.js@6.6.2)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.8.2):
+  /vitepress@1.0.0-rc.36(@algolia/client-search@4.19.1)(fuse.js@6.6.2)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.8.2)(typescript@4.9.5):
     resolution: {integrity: sha512-2z4dpM9PplN/yvTifhavOIAazlCR6OJ5PvLoRbc+7LdcFeIlCsuDGENLX4HjMW18jQZF5/j7++PNqdBfeazxUA==}
     hasBin: true
     peerDependencies:
@@ -21705,7 +21706,7 @@ packages:
       shikiji-core: 0.9.19
       shikiji-transformers: 0.9.19
       vite: 5.0.12
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
@@ -21936,7 +21937,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
     dev: false
 
   /vue-demi@0.14.7(vue@3.4.18):
@@ -21951,7 +21952,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.4.18
+      vue: 3.4.18(typescript@4.9.5)
 
   /vue-template-compiler@2.7.14(vue@2.7.14):
     resolution: {integrity: sha512-zyA5Y3ArvVG0NacJDkkzJuPQDF8RFeRlzV2vLeSnhSpieO6LK2OVbdLPi5MPPs09Ii+gMO8nY4S3iKQxBxDmWQ==}
@@ -21970,7 +21971,7 @@ packages:
       csstype: 3.1.2
     dev: true
 
-  /vue@3.4.18:
+  /vue@3.4.18(typescript@4.9.5):
     resolution: {integrity: sha512-0zLRYamFRe0wF4q2L3O24KQzLyLpL64ye1RUToOgOxuWZsb/FhaNRdGmeozdtVYLz6tl94OXLaK7/WQIrVCw1A==}
     peerDependencies:
       typescript: '*'
@@ -21983,6 +21984,7 @@ packages:
       '@vue/runtime-dom': 3.4.18
       '@vue/server-renderer': 3.4.18(vue@3.4.18)
       '@vue/shared': 3.4.18
+      typescript: 4.9.5
 
   /vue@3.4.21(typescript@4.9.5):
     resolution: {integrity: sha512-5hjyV/jLEIKD/jYl4cavMcnzKwjMKohureP8ejn3hhEjwhWIhWeuzL2kJAjzl/WyVsgPY56Sy4Z40C3lVshxXA==}
@@ -22044,6 +22046,7 @@ packages:
   /web-streams-polyfill@3.2.1:
     resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
     engines: {node: '>= 8'}
+    dev: false
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}

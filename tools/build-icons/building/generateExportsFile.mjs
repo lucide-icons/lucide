@@ -1,5 +1,6 @@
 import path from 'path';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
 
 export default (
