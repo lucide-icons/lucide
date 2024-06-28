@@ -8,7 +8,7 @@ export default (
   outputDirectory,
   iconNodes,
   exportModuleNameCasing,
-  iconFileExtension = ''
+  iconFileExtension = '',
 ) => {
   const fileName = path.basename(inputEntry);
 

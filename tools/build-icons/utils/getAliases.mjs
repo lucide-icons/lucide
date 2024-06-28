@@ -7,7 +7,7 @@ async function getAliases(iconDirectory) {
     iconJsons.map(async (jsonFile) => {
       const file = await import(path.join(iconDirectory, jsonFile), { assert: { type: 'json' } });
       return [path.basename(jsonFile, '.json'), file.default];
-    })
+    }),
   );
 
   return Object.fromEntries(aliasesEntries);
