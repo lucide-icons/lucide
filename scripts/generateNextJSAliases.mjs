@@ -1,6 +1,6 @@
 import path from 'path';
 import { promises as fs } from 'fs';
-import { getCurrentDirPath, readSvgDirectory } from '@lucide/helpers';
+import { getCurrentDirPath, readSvgDirectory } from '../tools/build-helpers/helpers.mjs';
 
 // This is a special case convertion NextJS uses for their modularize imports. We try to follow the same convention, to generate the same imports.
 function pascalToKebabNextJSFlavour(str) {

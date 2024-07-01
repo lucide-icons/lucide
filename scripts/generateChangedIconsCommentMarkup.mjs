@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import { parseSync } from '/usr/local/lib/node_modules/simple-git/svgson';
+import { parseSync } from 'svgson';
 import {
   shuffleArray,
   readSvgDirectory,
   getCurrentDirPath,
   minifySvg,
   toPascalCase,
-} from '../tools/build-helpers/main.mjs';
+} from '../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
