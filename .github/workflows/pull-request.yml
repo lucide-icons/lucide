@@ -46,7 +46,7 @@ jobs:
           files: icons/*
       - uses: actions/setup-node@v4
       - name: Install simple-git (safer and faster than installing all deps)
-        run: npm install simple-git
+        run: npm install simple-git --global
       - name: Generate annotations
         run: node ./scripts/updateContributors.mjs
         env:
@@ -106,7 +106,7 @@ jobs:
 
       - uses: actions/setup-node@v4
       - name: Install svgson for code preview (safer and faster than installing all deps)
-        run: npm install svgson
+        run: npm install svgson --global
 
       - name: Generate comment markup
         run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> comment-markup.md
