@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'path';
-import simpleGit from 'simple-git';
+import simpleGit from '/usr/local/lib/node_modules/simple-git';
 import { Octokit } from '@octokit/rest';
 import pMemoize from 'p-memoize';
 
