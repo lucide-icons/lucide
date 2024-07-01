@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AndreasSas"
+  ],
+  "tags": [
+    "emoji",
+    "face",
+    "happy",
+    "bad",
+    "emotion",
+    "react",
+    "reaction",
+    "remove"
+  ],
+  "categories": [
+    "emoji",
+    "social",
+    "notifications",
+    "communication"
+  ]
+}
