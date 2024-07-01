@@ -48,7 +48,7 @@ jobs:
       - name: Install simple-git (safer and faster than installing all deps)
         run: npm install simple-git --global
       - name: Generate annotations
-        run: NODE_PATH=$(npm root -g) node ./scripts/updateContributors.mjs
+        run: node ./scripts/updateContributors.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
