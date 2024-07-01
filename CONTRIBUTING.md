@@ -39,6 +39,8 @@ You can also [download an Adobe Illustrator template](https://github.com/lucide-
 
 #### [Figma Guide](https://lucide.dev/docs/figma-guide)
 
+#### [Affinity Designer Guide](https://lucide.dev/guide/design/affinity-designer-guide)
+
 ### Submitting Multiple Icons
 
 If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
