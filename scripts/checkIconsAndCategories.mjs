@@ -1,5 +1,5 @@
 import path from 'path';
-import { readSvgDirectory, getCurrentDirPath, readAllMetadata } from '@lucide/helpers';
+import { readSvgDirectory, getCurrentDirPath, readAllMetadata } from '../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
