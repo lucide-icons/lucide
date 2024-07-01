@@ -46,14 +46,13 @@ jobs:
           files: icons/*
       - uses: actions/setup-node@v4
       - name: Install simple-git (safer and faster than installing all deps)
-        run: npm install simple-git --global && npm root -g
+        run: npm install simple-git --global && npm link simple-git
       - name: Generate annotations
         run: node ./scripts/updateContributors.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-          NODE_PATH: /usr/local/lib/node_modules
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
