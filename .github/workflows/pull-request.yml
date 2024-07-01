@@ -53,7 +53,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-          NODE_PATH: /usr/lib/node_modules
+          NODE_PATH: /usr/local/lib/node_modules
       - name: Generate annotations
         env:
           ANNOTATION_SEVERITY: notice
