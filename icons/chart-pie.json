@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "presentation"
+  ],
+  "categories": [
+    "charts",
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "pie-chart",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
