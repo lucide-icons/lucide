@@ -1,5 +1,5 @@
 import path from 'path';
-import { getCurrentDirPath, readSvgDirectory } from '@lucide/helpers';
+import { getCurrentDirPath, readSvgDirectory } from '../../tools/build-helpers/helpers.mjs';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
 import { renameIcon } from './renameIcon.function.mjs';
