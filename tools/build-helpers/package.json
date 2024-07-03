@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "A internal used package with helpers.",
-  "main": "main.mjs",
+  "main": "helpers.mjs",
   "types": "module",
   "author": "",
   "license": "ISC",
