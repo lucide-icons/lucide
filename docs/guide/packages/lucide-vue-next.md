@@ -87,7 +87,7 @@ import { burger } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode={burger} />
+  <Icon :iconNode="burger" />
 </template>
 ```
 
