@@ -9,7 +9,10 @@
     "assign",
     "move",
     "give",
-    "setup"
+    "setup",
+    "self",
+    "me",
+    "myself"
   ],
   "categories": [
     "account"
