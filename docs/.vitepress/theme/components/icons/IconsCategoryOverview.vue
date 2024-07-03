@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch, watchEffect } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
@@ -69,7 +69,7 @@ const categories = computed(() => {
   return props.categories
     .map(({ name, title }) => {
       const categoryIcons = props.icons.filter((icon) => {
-        const iconCategories = props.iconCategories[icon.name];
+        const iconCategories = icon?.externalLibrary ? icon.categories : props.iconCategories[icon.name]
 
         return iconCategories?.includes(name);
       });
@@ -140,6 +140,12 @@ function handleCloseDrawer() {
 
   window.history.pushState({}, '', '/icons/categories');
 }
+
+watchEffect(() => {
+
+  console.log(props.icons.find((icon) => icon.name === 'burger'));
+
+});
 </script>
 
 <template>

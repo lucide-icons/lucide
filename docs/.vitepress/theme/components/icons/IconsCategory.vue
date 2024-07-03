@@ -19,7 +19,7 @@ export type CategoryRow = CategoryNameRow | CategoryIconsRow;
 import IconGrid from './IconGrid.vue'
 
 defineProps<{
-  activeIconName: string
+  activeIconName: string | null
   categoryRow: CategoryRow
 }>()
 
