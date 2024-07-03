@@ -1,5 +1,3 @@
-import fetch, { Headers } from 'node-fetch';
-
 const githubApi = async (endpoint) => {
   const headers = new Headers();
   const username = 'ericfennis';
