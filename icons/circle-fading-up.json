@@ -3,15 +3,20 @@
   "contributors": [
     "jordan808",
     "jguddas",
+    "colebemis",
+    "ericfennis",
     "mosch"
   ],
   "tags": [
+    "north",
     "up",
     "upgrade",
     "improve",
-    "circle"
+    "circle",
+    "button"
   ],
   "categories": [
+    "arrows",
     "communication",
     "shapes"
   ]
