@@ -8,7 +8,9 @@
     "check",
     "tick",
     "complete",
-    "list"
+    "list",
+    "to-do",
+    "bom"
   ],
   "categories": [
     "text"
