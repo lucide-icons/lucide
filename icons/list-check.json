@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "guanboo-yang"
+  ],
+  "tags": [
+    "done",
+    "check",
+    "tick",
+    "complete",
+    "list"
+  ],
+  "categories": [
+    "text"
+  ]
+}
