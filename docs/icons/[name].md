@@ -35,7 +35,7 @@ const codeExample = computed(() => data.codeExamples?.map(
       const camelCaseName = camelCase(params.value.name)
 
       return codeExample.code
-        .replace(/\$PascalCase/g, pascalCaseName)
+        .replace(/\$(?:<[^>]+>)*PascalCase/g, pascalCaseName)
         .replace(/\$CamelCase/g, camelCaseName)
         .replace(/\$Name/g, params.value.name)
     }
