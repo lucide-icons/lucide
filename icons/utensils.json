@@ -22,5 +22,8 @@
     "food-beverage",
     "travel",
     "maps"
+  ],
+  "aliases": [
+    "fork-knife"
   ]
 }
