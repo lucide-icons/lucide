@@ -5,9 +5,10 @@ import fetchPackages from '../../../lib/fetchPackages';
 export default {
   async load() {
     const packages = await fetchPackages();
+
     return {
       packages: packages
-        .filter((p) => p.name in packageData)
+        .filter((p) => p?.name != null && p.name in packageData)
         .map((pData) => ({
           ...pData,
           ...packageData[pData.name],
