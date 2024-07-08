@@ -12,7 +12,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
      stroke-linejoin="round"
      class="lucide lucide-grid3x3"
 >
-  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18">
+  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18">
   </path>
 </svg>
 `;
@@ -29,7 +29,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-linejoin="round"
      class="lucide lucide-grid3x3"
 >
-  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18">
+  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18">
   </path>
 </svg>
 `;
@@ -46,7 +46,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
      stroke-linejoin="round"
      class="lucide lucide-grid3x3"
 >
-  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18">
+  <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18">
   </path>
 </svg>
 `;

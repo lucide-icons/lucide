@@ -15,7 +15,7 @@ exports[`Using lucide icon components > should add a class to the element 1`] = 
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
+      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
     />
   </svg>
 </div>
@@ -37,7 +37,7 @@ exports[`Using lucide icon components > should add a style attribute to the elem
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
+      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
     />
   </svg>
 </div>
@@ -58,7 +58,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
+      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
     />
   </svg>
 </div>
@@ -79,7 +79,7 @@ exports[`Using lucide icon components > should pass children to the icon slot 1`
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
+      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
     />
     
     <text>
@@ -105,7 +105,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
+      d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"
     />
   </svg>
 </div>

@@ -16,7 +16,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
   >
   </path>
 </svg>
@@ -39,7 +39,7 @@ exports[`Using lucide icon components > should duplicate properties to children 
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
   >
   </path>
 </svg>
@@ -61,7 +61,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
         stroke-width="1"
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
   >
   </path>
 </svg>
@@ -83,7 +83,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
   >
   </path>
 </svg>
@@ -106,7 +106,7 @@ exports[`Using lucide icon components > should work with a single child componen
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
   >
   </path>
   <svg xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@ exports[`Using lucide icon components > should work with a single child componen
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+          d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
     >
     </path>
   </svg>
@@ -149,7 +149,7 @@ exports[`Using lucide icon components > should work with several children compon
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+        d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
   >
   </path>
   <svg xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ exports[`Using lucide icon components > should work with several children compon
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+          d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
     >
     </path>
   </svg>
@@ -188,7 +188,7 @@ exports[`Using lucide icon components > should work with several children compon
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 9h18M3 15h18M9 3v18M15 3v18"
+          d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2M3 9h18M3 15h18M9 3v18M15 3v18"
     >
     </path>
   </svg>
