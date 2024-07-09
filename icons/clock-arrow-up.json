@@ -2,25 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "colebemis"
   ],
   "tags": [
-    "filter",
+    "time",
+    "watch",
+    "alarm",
     "sort",
+    "order",
     "ascending",
     "descending",
     "increasing",
     "decreasing",
     "rising",
-    "falling",
-    "alphabetical"
+    "falling"
   ],
   "categories": [
-    "text",
-    "layout",
-    "arrows"
-  ],
-  "aliases": [
-    "arrow-up-az"
+    "time"
   ]
 }
