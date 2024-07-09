@@ -10,7 +10,12 @@
     "alarm",
     "sort",
     "order",
-    "descending"
+    "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling"
   ],
   "categories": [
     "time"

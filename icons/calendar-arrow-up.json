@@ -12,7 +12,12 @@
     "event",
     "sort",
     "order",
-    "ascending"
+    "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling"
   ],
   "categories": [
     "time"
