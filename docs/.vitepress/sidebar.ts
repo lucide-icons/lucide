@@ -117,6 +117,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           text: 'Designing in Figma',
           link: '/guide/design/figma-guide',
         },
+        {
+          text: 'Designing in Affinity Designer',
+          link: '/guide/design/affinity-designer-guide',
+        },
       ],
     },
   ],
