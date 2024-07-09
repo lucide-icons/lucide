@@ -24,7 +24,7 @@ const links = computed(() => [
   },
   {
     text: 'Github',
-    href: `${githubLink.value}/issues`
+    href: `${githubLink.value}`
   },
   {
     text: 'Issues',

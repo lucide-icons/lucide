@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
-import { toPascalCase, resetFile, appendFile } from '../../../scripts/helpers.mjs';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
 import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
 
 const getImportString = (

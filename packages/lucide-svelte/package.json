@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "workspace:*",
     "@sveltejs/package": "^2.2.3",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@testing-library/jest-dom": "^6.1.4",

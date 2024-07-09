@@ -3,7 +3,7 @@ export interface TeamMember {
   name: string
   title: string
   image: string
-  sponsor: string
+  sponsor?: string
   socialLinks: DefaultTheme.SocialLink[]
 }
 </script>
