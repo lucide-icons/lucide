@@ -2,25 +2,24 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "colebemis",
+    "ericfennis"
   ],
   "tags": [
-    "filter",
+    "date",
+    "month",
+    "year",
+    "event",
     "sort",
+    "order",
     "ascending",
     "descending",
     "increasing",
     "decreasing",
     "rising",
-    "falling",
-    "alphabetical"
+    "falling"
   ],
   "categories": [
-    "text",
-    "layout",
-    "arrows"
-  ],
-  "aliases": [
-    "arrow-up-az"
+    "time"
   ]
 }
