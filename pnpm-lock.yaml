@@ -534,6 +534,9 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../../tools/build-icons
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../../tools/build-helpers
       '@lucide/rollup-plugins':
         specifier: workspace:*
         version: link:../../tools/rollup-plugins
@@ -555,6 +558,9 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../../tools/build-icons
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../../tools/build-helpers
       '@sveltejs/package':
         specifier: ^2.2.3
         version: 2.2.6(svelte@4.1.2)(typescript@5.1.6)
