@@ -25,7 +25,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map((input) => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: plugins({ pkg, minify }),
       external: ['react', 'react-native-svg'],
       output: {
         name: packageName,

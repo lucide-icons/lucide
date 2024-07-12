@@ -25,11 +25,29 @@ const Grid = ({
       fill={fill}
     />
     <path
+      strokeDasharray={'0 0.1 ' + '0.1 0.15 '.repeat(11) + '0 0.15'}
+      strokeWidth={0.1}
       d={
         props.d ||
         new Array(Math.floor(24 - 1))
           .fill(null)
-          .flatMap((_, i) => [
+          .map((_, i) => i)
+          .filter((i) => i % 3 !== 2)
+          .flatMap((i) => [
+            `M${props.strokeWidth} ${i + 1}h${24 - props.strokeWidth * 2}`,
+            `M${i + 1} ${props.strokeWidth}v${24 - props.strokeWidth * 2}`,
+          ])
+          .join('')
+      }
+    />
+    <path
+      d={
+        props.d ||
+        new Array(Math.floor(24 - 1))
+          .fill(null)
+          .map((_, i) => i)
+          .filter((i) => i % 3 === 2)
+          .flatMap((i) => [
             `M${props.strokeWidth} ${i + 1}h${24 - props.strokeWidth * 2}`,
             `M${i + 1} ${props.strokeWidth}v${24 - props.strokeWidth * 2}`,
           ])

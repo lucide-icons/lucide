@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
+  ],
+  "categories": [
+    "notifications",
+    "shapes"
+  ],
+  "aliases": [
+    "check-square-2"
+  ]
+}

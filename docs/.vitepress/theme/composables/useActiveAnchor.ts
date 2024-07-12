@@ -6,18 +6,18 @@ import { throttleAndDebounce } from 'vitepress/dist/client/theme-default/support
  */
 
 export function useActiveAnchor(container, marker) {
-  const onScroll = throttleAndDebounce(setActiveLink, 100);
+  const setActiveLinkDebounced = throttleAndDebounce(setActiveLink, 100);
   let prevActiveLink = null;
   onMounted(() => {
     requestAnimationFrame(setActiveLink);
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', setActiveLinkDebounced);
   });
   onUpdated(() => {
     // sidebar update means a route change
     activateLink(location.hash);
   });
   onUnmounted(() => {
-    window.removeEventListener('scroll', onScroll);
+    window.removeEventListener('scroll', setActiveLinkDebounced);
   });
   function setActiveLink() {
     const links = [].slice.call(container.value.querySelectorAll('.outline-link'));
@@ -64,9 +64,13 @@ export function useActiveAnchor(container, marker) {
       marker.value.style.opacity = '0';
     }
   }
+
+  return {
+    setActiveLinkDebounced,
+  };
 }
 
-const PAGE_OFFSET = 64;
+const PAGE_OFFSET = 128;
 
 function getAnchorTop(anchor) {
   return anchor.parentElement.offsetTop - PAGE_OFFSET;
@@ -74,7 +78,7 @@ function getAnchorTop(anchor) {
 function isAnchorActive(index, anchor, nextAnchor) {
   const scrollTop = window.scrollY;
   if (index === 0 && scrollTop === 0) {
-    return [true, null];
+    return [true, anchor.hash];
   }
   if (scrollTop < getAnchorTop(anchor)) {
     return [false, null];

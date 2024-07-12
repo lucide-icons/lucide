@@ -5,13 +5,26 @@
     "ericfennis"
   ],
   "tags": [
-    "pending",
     "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
     "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "spread",
+    "rest",
     "…",
     "..."
   ],
   "categories": [
+    "layout",
+    "development",
     "shapes"
   ]
 }
