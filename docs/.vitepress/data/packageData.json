@@ -158,16 +158,5 @@
         "href": "https://www.npmjs.com/package/lucide-static"
       }
     ]
-  },
-  "lucide-flutter": {
-    "order": 9,
-    "icon": "flutter",
-    "shields": [
-      {
-        "alt": "flutter",
-        "src": "https://img.shields.io/pub/v/lucide_icons",
-        "href": "https://img.shields.io/pub/v/lucide_icons"
-      }
-    ]
   }
 }
