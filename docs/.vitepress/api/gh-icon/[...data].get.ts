@@ -38,7 +38,7 @@ export default eventHandler((event) => {
     children.push(
       createElement(Backdrop, {
         backdropString,
-        src: src,
+        src,
         color: name in iconNodes ? 'red' : '#777',
       }),
     );
