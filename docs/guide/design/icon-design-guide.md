@@ -109,8 +109,8 @@ Here are rules that should be followed to keep quality and consistency when maki
 7. Icons depicting multiple elements (e.g. a person and a circle) of different sizes must list these elements in decreasing order of size.\
    For example: if the circle is bigger, it should be `circle-person`, if the person is bigger, it should be `person-circle`.
 
-8. Icons depicting multiple elements of roughly equal sizes (e.g. a `ruler` and a `pencil`) must list these elements in English reading order.\
-   For example: if the `pencil` is either above or left of `ruler`, it should be `pencil-ruler`, otherwise, it should be `ruler-pencil`.
+8. Icons depicting multiple elements of roughly equal sizes (e.g. a `ruler` and a `pencil`) must list these elements front to back in case one element is in front of the other, otherwise in English reading order (top to bottom, left to right).\
+   For example: if the `pencil` is either in front of, above or left of `ruler`, it should be `pencil-ruler`, otherwise, it should be `ruler-pencil`.
 
 9. Icons depicting some sort of variation of an element must use the `[element]-[modifier]` naming scheme, with modifiers being applied to each element respectively.\
    For example: a dashed circle must be named `circle-dashed`, not `dashed-circle`, and in coordination with the previous guidelines, a dashed circle containing a broken heart would be named `circle-dashed-heart-broken`, due to the heart being smaller than the circle.
