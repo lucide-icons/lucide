@@ -301,7 +301,6 @@ const Handles = ({
   'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
   any
 >) => {
-  console.log(paths);
   return (
     <g
       className="svg-preview-handles-group"
