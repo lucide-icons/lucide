@@ -13,7 +13,10 @@ export default eventHandler((event) => {
   const data = pathData.at(-1).slice(0, -4);
   const [name] = pathData;
 
-  const src = Buffer.from(data, 'base64').toString('utf8');
+  const src = Buffer.from(data, 'base64')
+    .toString('utf8')
+    .replaceAll('\n', '')
+    .replace(/<svg[^>]*>|<\/svg>/g, '');
 
   const children = [];
 
@@ -30,7 +33,7 @@ export default eventHandler((event) => {
 
     const LucideIcon = createLucideIcon(backdropName, iconNode);
     const svg = renderToStaticMarkup(createElement(LucideIcon));
-    const backdropString = svg.replace(/<svg[^>]*>|<\/svg>/g, '');
+    const backdropString = svg.replaceAll('\n', '').replace(/<svg[^>]*>|<\/svg>/g, '');
 
     children.push(
       createElement(Backdrop, {
@@ -39,6 +42,15 @@ export default eventHandler((event) => {
         color: name in iconNodes ? 'red' : '#777',
       }),
     );
+    if (name in iconNodes) {
+      children.push(
+        createElement(Backdrop, {
+          backdropString: src,
+          src: backdropString,
+          color: 'lime',
+        }),
+      );
+    }
   }
 
   const svg = Buffer.from(
