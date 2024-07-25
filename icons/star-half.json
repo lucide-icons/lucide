@@ -2,9 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis",
-    "danielbayley",
-    "karsa-mistmere"
+    "ericfennis"
   ],
   "tags": [
     "bookmark",

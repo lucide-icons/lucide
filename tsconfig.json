@@ -16,5 +16,5 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "sourceMap": true,
-  }
+  },
 }

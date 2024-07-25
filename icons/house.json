@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "home",
+    "living",
+    "building",
+    "residence",
+    "architecture"
+  ],
+  "categories": [
+    "account",
+    "buildings",
+    "home"
+  ],
+  "aliases": [
+    "home"
+  ]
+}

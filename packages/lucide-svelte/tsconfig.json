@@ -10,11 +10,5 @@
     "isolatedModules": true,
     "types": ["@testing-library/jest-dom"],
   },
-  "include": [
-    "src/**/*.d.ts",
-    "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.svelte",
-    "tests/**/*.ts"
-  ],
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tests/**/*.ts"],
 }

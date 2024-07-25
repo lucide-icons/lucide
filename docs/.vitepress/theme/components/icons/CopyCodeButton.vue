@@ -39,6 +39,12 @@ function copyJSX() {
   navigator.clipboard.writeText(code)
 }
 
+function copyComponentName() {
+  const code = componentName.value
+
+  navigator.clipboard.writeText(code)
+}
+
 function copyVue() {
   let attrs = ['']
 
@@ -101,6 +107,7 @@ function copyAngular() {
     :popoverPosition="popoverPosition"
     :options="[
       { text: 'Copy JSX' , onClick: copyJSX },
+      { text: 'Copy Component Name' , onClick: copyComponentName },
       { text: 'Copy Vue' , onClick: copyVue },
       { text: 'Copy Svelte' , onClick: copyJSX },
       { text: 'Copy Angular' , onClick: copyAngular },
