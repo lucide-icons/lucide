@@ -5,19 +5,20 @@
   "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "start": "node ./cli.mjs"
+    "start": "bun ./cli.ts"
   },
   "bin": {
-    "build-icons": "./cli.mjs"
+    "build-icons": "./cli.ts"
   },
   "engines": {
-    "node": ">= 16"
+    "bun": ">=1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@lucide/helpers": "workspace:*"
+    "@lucide/helpers": "workspace:*",
+    "@types/bun": "latest"
   },
   "dependencies": {
     "@lucide/helpers": "^1.0.0",

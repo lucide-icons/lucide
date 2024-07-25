@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 import fs from 'fs';
 import path from 'path';
 import getArgumentOptions from 'minimist';
@@ -8,7 +8,7 @@ import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import generateAliasesFile from './building/generateAliasesFile.mjs';
+import generateAliasesFile from './building/aliases/generateAliasesFile.mjs';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
