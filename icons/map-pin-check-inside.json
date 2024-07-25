@@ -1,14 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "colebemis",
+    "csandman",
+    "ericfennis"
   ],
   "tags": [
     "location",
     "waypoint",
     "marker",
-    "drop"
+    "drop",
+    "done",
+    "tick",
+    "complete",
+    "task",
+    "added"
   ],
   "categories": [
     "maps",
