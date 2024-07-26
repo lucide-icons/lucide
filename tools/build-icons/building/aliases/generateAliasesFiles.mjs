@@ -2,11 +2,10 @@ import path from 'path';
 import fs from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
-import { deprecationReasonTemplate } from '../../utils/deprecationReasonTemplate.mjs';
+import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate.mjs';
 import getExportString from './getExportString.mjs';
 
-
-export default async function generateAliasesFile({
+export default async function generateAliasesFiles({
   iconNodes,
   outputDirectory,
   fileExtension,
@@ -20,14 +19,23 @@ export default async function generateAliasesFile({
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
   const icons = Object.keys(iconNodes);
 
-  const aliasFileName = path.basename(`aliases${fileExtension}`);
-  const aliasPrefixesFileName = path.basename(`aliasesPrefixes${fileExtension}`);
-  const aliasSuffixFileName = path.basename(`aliasesSuffixes${fileExtension}`);
+  const destinationDirectory = path.join(outputDirectory, 'aliases');
 
-  // Reset file
-  resetFile(aliasFileName, outputDirectory);
-  resetFile(aliasPrefixesFileName, outputDirectory);
-  resetFile(aliasSuffixFileName, outputDirectory);
+  const aliasFileName = path.basename(`aliases${fileExtension}`);
+  const aliasPrefixesFileName = path.basename(`prefixed${fileExtension}`);
+  const aliasSuffixFileName = path.basename(`suffixed${fileExtension}`);
+
+  if (!fs.existsSync(destinationDirectory)) {
+    fs.mkdirSync(destinationDirectory);
+  }
+
+  // Reset files
+  resetFile(aliasFileName, destinationDirectory);
+
+  if (!aliasNamesOnly) {
+    resetFile(aliasPrefixesFileName, destinationDirectory);
+    resetFile(aliasSuffixFileName, destinationDirectory);
+  }
 
   // Generate Import for Icon VNodes
   await Promise.all(
@@ -48,15 +56,18 @@ export default async function generateAliasesFile({
       let aliasSuffixFileContent = '';
 
       if ((iconAliases != null && Array.isArray(iconAliases)) || !aliasNamesOnly) {
-        if (index > 0) {
-          aliasFileContent += '\n';
+        if (index > 0 && aliasPrefixesFileContent !== '') {
           aliasPrefixesFileContent += '\n';
+        }
+
+        if (index > 0 && aliasSuffixFileContent !== '') {
           aliasSuffixFileContent += '\n';
         }
 
-        aliasFileContent += `// ${componentName} aliases\n`;
-        aliasPrefixesFileContent += `// ${componentName} aliases\n`;
-        aliasSuffixFileContent += `// ${componentName} aliases\n`;
+        if (!aliasNamesOnly) {
+          aliasPrefixesFileContent += `// ${componentName} aliases\n`;
+          aliasSuffixFileContent += `// ${componentName} aliases\n`;
+        }
       }
 
       if (!aliasNamesOnly) {
@@ -94,6 +105,11 @@ export default async function generateAliasesFile({
 
             const exportFileIcon = separateAliasesFile ? alias.name : iconName;
 
+            if (index > 0) {
+              aliasFileContent += '\n';
+            }
+
+            aliasFileContent += `// ${componentName} aliases\n`;
             aliasFileContent += getExportString(
               componentNameAlias,
               exportFileIcon,
@@ -123,19 +139,19 @@ export default async function generateAliasesFile({
         );
       }
 
-      appendFile(aliasFileContent, aliasFileName, outputDirectory);
-      appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, outputDirectory);
-      appendFile(aliasSuffixFileContent, aliasSuffixFileName, outputDirectory);
+      appendFile(aliasFileContent, aliasFileName, destinationDirectory);
+      appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, destinationDirectory);
+      appendFile(aliasSuffixFileContent, aliasSuffixFileName, destinationDirectory);
     }),
   );
 
-  appendFile('\n', aliasFileName, outputDirectory);
-  appendFile('\n', aliasPrefixesFileName, outputDirectory);
-  appendFile('\n', aliasSuffixFileName, outputDirectory);
+  appendFile('\n', aliasFileName, destinationDirectory);
+  appendFile('\n', aliasPrefixesFileName, destinationDirectory);
+  appendFile('\n', aliasSuffixFileName, destinationDirectory);
 
   if (showLog) {
-    console.log(`Successfully generated ${aliasFileName} file`);
-    console.log(`Successfully generated ${aliasPrefixesFileName} file`);
-    console.log(`Successfully generated ${aliasSuffixFileName} file`);
+    console.log(`Successfully generated src/aliases/${aliasFileName} file`);
+    console.log(`Successfully generated src/aliases/${aliasPrefixesFileName} file`);
+    console.log(`Successfully generated src/aliases/${aliasSuffixFileName} file`);
   }
 }

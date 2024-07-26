@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
     "declaration": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,

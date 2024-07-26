@@ -1,5 +1,5 @@
 export * as icons from './icons';
-export * from './aliases';
+export * from './aliases/prefixed';
 export * from './types';
 
 export { default as createLucideIcon } from './createLucideIcon';

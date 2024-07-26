@@ -1,4 +1,4 @@
-export function deprecationReasonTemplate(
+export default function deprecationReasonTemplate(
   deprecationReason,
   { componentName, iconName, toBeRemovedInVersion },
 ) {
@@ -13,5 +13,7 @@ export function deprecationReasonTemplate(
       return `The name of this icon was changed because it didn't meet our guidelines anymore, use {@link ${componentName}} instead.${removalNotice}`;
     case 'icon.brand':
       return `Brand icons have been deprecated and are due to be removed, please refer to https://github.com/lucide-icons/lucide/issues/670. We recommend using https://simpleicons.org/?q=${iconName} instead.${removalNotice}`;
+    default:
+      return ''
   }
 }

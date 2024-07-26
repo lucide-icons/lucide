@@ -112,16 +112,16 @@ export default [
     plugins: [dts()],
   },
   {
-    input: 'src/lucide-react.suffixed.ts',
+    input: `src/${outputFileName}.suffixed.ts`,
     output: [{
-      file: `dist/lucide-react.suffixed.d.ts`, format: "es"
+      file: `dist/${outputFileName}.suffixed.d.ts`, format: "es"
     }],
     plugins: [dts()],
   },
   {
-    input: 'src/lucide-react.prefixed.ts',
+    input: `src/${outputFileName}.prefixed.ts`,
     output: [{
-      file: `dist/lucide-react.prefixed.d.ts`, format: "es"
+      file: `dist/${outputFileName}.prefixed.d.ts`, format: "es"
     }],
     plugins: [dts()],
   },
