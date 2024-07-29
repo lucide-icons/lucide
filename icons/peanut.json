@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "food",
+    "diet",
+    "allergy",
+    "allergen",
+    "legume",
+    "nut",
+    "snack",
+    "protein",
+    "shell",
+    "plant",
+    "healthy",
+    "natural",
+    "vegan",
+    "vegetarian"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
