@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "roles",
+    "key",
+    "access",
+    "permissions",
+    "security",
+    "lock",
+    "unlock",
+    "control",
+    "safe",
+    "protection",
+    "authorization",
+    "ownership",
+    "custody"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development"
+  ]
+}
