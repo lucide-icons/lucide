@@ -1,22 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "karsa-mistmere",
-    "ericfennis"
+    "karsa-mistmere"
   ],
   "tags": [
     "view",
     "watch",
     "see",
-    "show",
-    "expose",
-    "reveal",
-    "display",
-    "visible",
+    "hide",
+    "conceal",
+    "mask",
+    "hidden",
     "visibility",
     "vision",
-    "preview",
     "accessibility",
     "read"
   ],
