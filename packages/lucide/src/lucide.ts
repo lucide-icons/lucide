@@ -47,6 +47,7 @@ export { default as createElement } from './createElement';
 */
 export { iconAndAliases as icons };
 export * from './icons';
+export * from './aliases';
 
 /*
  Types exports.
