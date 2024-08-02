@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import Card from '../base/Card.vue'
-import HomeSectionTitle from './HomeSectionTitle.vue'
-import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
+import Card from '../base/Card.vue';
+import HomeSectionTitle from './HomeSectionTitle.vue';
+import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 </script>
 
 <template>
-  <HomeSectionTitle :headingLevel="3">
-    Sponsor the Lucide maintainers
-  </HomeSectionTitle>
+  <HomeSectionTitle :headingLevel="3"> Sponsor the Lucide maintainers </HomeSectionTitle>
   <Card class="sponsor-card">
     <img
-      src="/open-collective.png"
+      src="/company-logos/open-collective-light.svg"
       alt="Open Collective logo"
+      class="logo light"
+      width="242"
+      height="42"
+    />
+    <img
+      src="/company-logos/open-collective-dark.svg"
+      alt="Open Collective logo"
+      class="logo dark"
       width="242"
       height="42"
     />
@@ -35,6 +41,13 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
 
 .sponsor-button {
   margin: auto 0;
+}
+
+html.dark .logo.dark {
+  display: none;
+}
+html:not(.dark) .logo.light {
+  display: none;
 }
 
 @media (min-width: 640px) {
