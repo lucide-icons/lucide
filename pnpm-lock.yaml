@@ -16,12 +16,6 @@ importers:
       '@html-eslint/parser':
         specifier: ^0.19.1
         version: 0.19.1
-      '@lucide/build-icons':
-        specifier: workspace:*
-        version: link:tools/build-icons
-      '@lucide/helpers':
-        specifier: workspace:*
-        version: link:tools/build-helpers
       '@octokit/rest':
         specifier: ^19.0.13
         version: 19.0.13
@@ -80,8 +74,8 @@ importers:
         specifier: ^7.5.4
         version: 7.5.4
       simple-git:
-        specifier: ^3.21.0
-        version: 3.22.0
+        specifier: ^3.25.0
+        version: 3.25.0
       svgo:
         specifier: ^3.1.0
         version: 3.2.0
@@ -540,6 +534,9 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../../tools/build-icons
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../../tools/build-helpers
       '@lucide/rollup-plugins':
         specifier: workspace:*
         version: link:../../tools/rollup-plugins
@@ -561,6 +558,9 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../../tools/build-icons
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../../tools/build-helpers
       '@sveltejs/package':
         specifier: ^2.2.3
         version: 2.2.6(svelte@4.1.2)(typescript@5.1.6)
@@ -10981,6 +10981,18 @@ packages:
     dependencies:
       ms: 2.1.2
 
+  /debug@4.3.5:
+    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
   /decamelize@1.2.0:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
@@ -19534,12 +19546,12 @@ packages:
       - supports-color
     dev: false
 
-  /simple-git@3.22.0:
-    resolution: {integrity: sha512-6JujwSs0ac82jkGjMHiCnTifvf1crOiY/+tfs/Pqih6iow7VrpNKRRNdWm6RtaXpvvv/JGNYhlUtLhGFqHF+Yw==}
+  /simple-git@3.25.0:
+    resolution: {integrity: sha512-KIY5sBnzc4yEcJXW7Tdv4viEz8KyG+nU0hay+DWZasvdFOYKeUZ6Xc25LUHHjw0tinPT7O1eY6pzX7pRT1K8rw==}
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
     dev: true

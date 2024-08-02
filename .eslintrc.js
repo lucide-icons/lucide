@@ -1,4 +1,4 @@
-const DEFAULT_ATTRS = require('@lucide/build-icons/render/default-attrs.json');
+const DEFAULT_ATTRS = require('./tools/build-icons/render/default-attrs.json');
 
 module.exports = {
   root: true,

@@ -40,8 +40,6 @@
     "renamePattern": "node scripts/rename/renamePattern.mjs"
   },
   "devDependencies": {
-    "@lucide/build-icons": "workspace:*",
-    "@lucide/helpers": "workspace:*",
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
@@ -63,7 +61,7 @@
     "p-memoize": "^7.1.1",
     "prettier": "3.2.4",
     "semver": "^7.5.4",
-    "simple-git": "^3.21.0",
+    "simple-git": "^3.25.0",
     "svgo": "^3.1.0",
     "svgson": "^5.3.1",
     "yargs": "^17.7.2"
