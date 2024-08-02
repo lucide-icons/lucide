@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear",
+    "error",
+    "incorrect",
+    "wrong",
+    "mistake",
+    "failure",
+    "linter",
+    "multiply",
+    "multiplication"
+  ],
+  "categories": [
+    "maths",
+    "shapes",
+    "development"
+  ],
+  "aliases": [
+    "x-circle"
+  ]
+}

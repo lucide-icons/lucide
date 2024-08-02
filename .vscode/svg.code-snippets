@@ -49,7 +49,7 @@
       "circle",
       "<circle"
     ],
-    "body": "<circle cx=\"${2:12}\" cy=\"${3:$2}\" r=\"${1|10,2,.5|}\" />"
+    "body": "<circle cx=\"${2:12}\" cy=\"${3:$2}\" r=\"${1|10,2,.5\" fill=\"currentColor|}\" />"
   },
   "Ellipse": {
     "scope": "xml",

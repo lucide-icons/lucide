@@ -28,7 +28,7 @@ export default eventHandler(async (event) => {
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-`
+`,
     );
 
   const resvg = new Resvg(svg, { background: '#000' });

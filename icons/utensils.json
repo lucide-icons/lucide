@@ -5,10 +5,15 @@
     "ericfennis"
   ],
   "tags": [
+    "fork",
+    "knife",
+    "cutlery",
+    "flatware",
+    "tableware",
+    "silverware",
     "food",
     "restaurant",
     "meal",
-    "cutlery",
     "breakfast",
     "dinner",
     "supper"
@@ -17,5 +22,8 @@
     "food-beverage",
     "travel",
     "maps"
+  ],
+  "aliases": [
+    "fork-knife"
   ]
 }

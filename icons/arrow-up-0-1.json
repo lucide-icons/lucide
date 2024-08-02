@@ -1,12 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
   "tags": [
     "filter",
     "sort",
     "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
     "numerical"
   ],
   "categories": [

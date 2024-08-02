@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { startCase, camelCase } from 'lodash-es'
 import ButtonMenu from '../base/ButtonMenu.vue'
 import { useIconStyleContext } from '../../composables/useIconStyle';
@@ -35,6 +35,12 @@ function copyJSX() {
   }
 
   const code = `<${componentName.value}${attrs.join(' ')} />`
+
+  navigator.clipboard.writeText(code)
+}
+
+function copyComponentName() {
+  const code = componentName.value
 
   navigator.clipboard.writeText(code)
 }
@@ -101,6 +107,7 @@ function copyAngular() {
     :popoverPosition="popoverPosition"
     :options="[
       { text: 'Copy JSX' , onClick: copyJSX },
+      { text: 'Copy Component Name' , onClick: copyComponentName },
       { text: 'Copy Vue' , onClick: copyVue },
       { text: 'Copy Svelte' , onClick: copyJSX },
       { text: 'Copy Angular' , onClick: copyAngular },
