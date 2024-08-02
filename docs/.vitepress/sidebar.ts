@@ -31,10 +31,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
     {
       text: 'Advanced',
       items: [
-        // {
-        //   text: 'Accessibility',
-        //   link: '/guide/advanced/accessibility'
-        // },
+        {
+          text: 'Accessibility',
+          link: '/guide/advanced/accessibility',
+        },
         {
           text: 'Global styling',
           link: '/guide/advanced/global-styling',
@@ -116,6 +116,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         {
           text: 'Designing in Figma',
           link: '/guide/design/figma-guide',
+        },
+        {
+          text: 'Designing in Affinity Designer',
+          link: '/guide/design/affinity-designer-guide',
         },
       ],
     },
