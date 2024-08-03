@@ -1,20 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "jordan808",
+    "jguddas",
     "colebemis",
-    "csandman",
     "ericfennis",
-    "karsa-mistmere",
-    "jguddas"
+    "mosch"
   ],
   "tags": [
-    "file"
+    "north",
+    "up",
+    "upgrade",
+    "improve",
+    "circle",
+    "button"
   ],
   "categories": [
     "arrows",
-    "files"
-  ],
-  "aliases": [
-    "upload-cloud"
+    "development"
   ]
 }
