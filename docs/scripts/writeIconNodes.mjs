@@ -6,7 +6,7 @@ import { readSvgDirectory, toCamelCase } from '@lucide/helpers';
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const svgFiles = readSvgDirectory(ICONS_DIR);
-const icons = renderIconsObject(svgFiles, ICONS_DIR, true);
+const icons = await renderIconsObject(svgFiles, ICONS_DIR, true);
 
 const iconNodesDirectory = path.resolve(currentDir, '.vitepress/data', 'iconNodes');
 

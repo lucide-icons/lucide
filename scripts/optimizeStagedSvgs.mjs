@@ -1,5 +1,5 @@
 import fs from 'fs';
-import processSvg from './render/processSvg.mjs';
+import { processSvg } from '@lucide/build-icons';
 
 const svgFiles = process.argv.slice(2);
 
