@@ -1,19 +1,10 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere",
-    "jguddas"
-  ],
   "tags": [
-    "backspace",
     "remove",
-    "left",
+    "right",
     "keyboard",
     "key",
-    "mac",
     "button",
     "direction",
     "sign",
@@ -26,6 +17,7 @@
   "categories": [
     "text",
     "arrows",
-    "navigation"
+    "navigation",
+    "account"
   ]
 }
