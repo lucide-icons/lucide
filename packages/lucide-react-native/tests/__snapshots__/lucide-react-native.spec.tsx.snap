@@ -10,7 +10,6 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
      stroke-width="4"
      stroke-linecap="round"
      stroke-linejoin="round"
-     data-testid="grid-icon"
 >
   <rect fill="none"
         stroke="red"
@@ -128,7 +127,6 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-width="1"
      stroke-linecap="round"
      stroke-linejoin="round"
-     data-testid="grid-icon"
 >
   <rect fill="none"
         stroke="red"

@@ -7,6 +7,8 @@ import CopyCodeButton from './CopyCodeButton.vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import {useData, useRouter} from 'vitepress';
 import { computed } from 'vue';
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import { diamond }  from '../../../data/iconNodes'
 
 const props = defineProps<{
   icon: IconEntity
@@ -20,13 +22,21 @@ const tags = computed(() => {
   if (!props.icon || !props?.icon?.tags) return []
   return props.icon.tags.join(' • ')
 })
+
+const DiamondIcon = createLucideIcon('Diamond', diamond)
 </script>
 
 <template>
   <div class="icon-info">
-    <IconDetailName class="icon-name">
-      {{ icon.name }}
-    </IconDetailName>
+    <div class="icon-name-wrapper">
+      <IconDetailName class="icon-name">
+        {{ icon.name }}
+      </IconDetailName>
+      <div v-if="icon.externalLibrary" class="icon-external-lib">
+        <DiamondIcon fill="currentColor" :size="12"/>
+        {{ icon.externalLibrary }}
+      </div>
+    </div>
     <div class="tags-scroller" v-if="tags.length">
       <p class="icon-tags horizontal-scroller">
         {{ tags }}
@@ -44,10 +54,10 @@ const tags = computed(() => {
 
     <div class="group buttons">
       <VPButton
-        v-if="!page?.relativePath?.startsWith?.(`icons/${icon.name}`)"
-        :href="`/icons/${icon.name}`"
+        v-if="!page?.relativePath?.startsWith?.(icon.externalLibrary ? `icons/${icon.externalLibrary}/${icon.name}`: `icons/${icon.name}`)"
+        :href="icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}`: `/icons/${icon.name}`"
         text="See in action"
-        @click="go(`/icons/${icon.name}`)"
+        @click="go(icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}`: `/icons/${icon.name}`)"
       />
       <CopySVGButton :name="icon.name" :popoverPosition="popoverPosition"/>
       <CopyCodeButton :name="icon.name" :popoverPosition="popoverPosition"/>
@@ -67,7 +77,25 @@ const tags = computed(() => {
   text-transform: capitalize;
 }
 .icon-name {
+  margin-right: -36px;
+}
+
+.icon-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   margin-bottom: 4px;
+}
+
+.icon-external-lib {
+  color: var(--vp-c-brand-dark);
+  padding: 4px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .icon-tags {

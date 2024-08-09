@@ -1,0 +1,17 @@
+# Custom words
+fullscreen
+gamepad
+gantt
+kanban
+pilcrow
+squircle
+strikethrough
+touchpad
+ungroup
+pilcrow
+toc
+
+# Brands
+codepen
+codesandbox
+dribbble
