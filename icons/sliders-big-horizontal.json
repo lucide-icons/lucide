@@ -5,12 +5,17 @@
     "ericfennis"
   ],
   "tags": [
-    "cog",
-    "edit",
-    "gear",
-    "preferences"
+    "settings",
+    "preferences",
+    "configuration",
+    "controls",
+    "filters",
+    "edit"
   ],
   "categories": [
     "account"
+  ],
+  "aliases": [
+    "settings-2"
   ]
 }

@@ -5,14 +5,20 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "computing",
+    "cogwheel",
+    "cogged",
     "settings",
-    "cog",
+    "preferences",
+    "configuration",
     "edit",
-    "gear",
-    "preferences"
+    "mechanical",
+    "machinery"
   ],
   "categories": [
-    "account"
+    "account",
+    "tools"
+  ],
+  "aliases": [
+    "cog"
   ]
 }
