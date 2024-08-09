@@ -11,7 +11,7 @@
     "build-icons": "./cli.mjs"
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 20"
   },
   "keywords": [],
   "author": "",
@@ -27,4 +27,5 @@
     "svgo": "^3.0.0",
     "svgson": "^5.2.1"
   }
+
 }

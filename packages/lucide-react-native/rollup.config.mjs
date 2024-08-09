@@ -60,5 +60,19 @@ export default [
     ],
     plugins: [dts()],
   },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [{
+      file: `dist/${outputFileName}.suffixed.d.ts`, format: "es"
+    }],
+    plugins: [dts()],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [{
+      file: `dist/${outputFileName}.prefixed.d.ts`, format: "es"
+    }],
+    plugins: [dts()],
+  },
   ...configs,
 ];

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { readSvg, toPascalCase } from '@lucide/helpers';
-import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
+import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.mjs';
 
 export default ({
   iconNodes,
