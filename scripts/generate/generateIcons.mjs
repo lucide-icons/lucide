@@ -1,5 +1,5 @@
 import path from 'path';
-import { getCurrentDirPath, writeFileIfNotExists } from '../helpers.mjs';
+import { getCurrentDirPath, writeFileIfNotExists } from '../../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../../icons');
@@ -22,6 +22,8 @@ const iconSvgTemplate = `<svg
 
 const iconJsonTemplate = `{
   "$schema": "../icon.schema.json",
+  "contributors": [
+  ],
   "tags": [
   ],
   "categories": [

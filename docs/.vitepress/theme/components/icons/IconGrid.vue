@@ -25,8 +25,10 @@ function setActiveIcon(name: string) {
       :key="icon.name"
     >
       <IconItem
-        v-bind="icon"
-        @setActiveIcon="setActiveIcon(icon.name)"
+        :iconNode="icon.iconNode"
+        :name="icon.name"
+        :externalLibrary="icon.externalLibrary"
+        @setActiveIcon="setActiveIcon"
         :active="activeIcon === icon.name"
         customizable
         :overlayMode="overlayMode"
