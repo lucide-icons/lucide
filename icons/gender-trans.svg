@@ -7,14 +7,14 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round">
-  <path d="M16 1H20C20.5523 1 21 1.44772 21 2V6" />
-  <path d="M1 6L1 2C1 1.44772 1.44772 1 2 1L6 1" />
-  <path d="M15 7L20.5 1.5" />
-  <path d="M1.5 1.5L7 7" />
-  <circle cx="11" cy="11" r="5" />
-  <path d="M11 16V21" />
-  <path d="M8 19H14" />
-  <path d="M3 7L7 3" />
+  <path d="M12 17v5" />
+  <path d="M15.5 8.5 22 2" />
+  <path d="M17 2h5v5" />
+  <path d="m2 2 6.5 6.5" />
+  <path d="M2 7V2h5" />
+  <path d="m4 9 5-5" />
+  <path d="M9 20h6" />
+  <circle cx="12" cy="12" r="5" />
 </svg>
 
 
