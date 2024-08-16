@@ -4,11 +4,16 @@
     "Alportan"
   ],
   "tags": [
-    "arrow",
     "arrows",
-    "estimated"
-    "up"
-    "down"
+    "estimated",
+    "indeterminate",
+    "data fluctuation",
+    "uncertain",
+    "forecast",
+    "variable",
+    "prediction",
+    "dynamic",
+    "volatile"
   ],
   "categories": [
     "arrows"
