@@ -19,5 +19,4 @@ packages/lucide-static/icon-nodes.json
 packages/lucide-static/font
 
 # lucide-svelte
-packages/lucide-svelte/src/icons/*.svelte
 packages/lucide-svelte/.svelte-kit

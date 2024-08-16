@@ -11,6 +11,7 @@ const config = {
         printWidth: 0,
       },
     },
+    { files: '*.svelte', options: { parser: 'svelte' } },
   ],
 };
 
