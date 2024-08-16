@@ -95,8 +95,8 @@ importers:
         specifier: ^1.7.17
         version: 1.7.19(vue@3.4.18)
       '@resvg/resvg-wasm':
-        specifier: ^2.4.1
-        version: 2.4.1
+        specifier: ^2.6.2
+        version: 2.6.2
       '@vueuse/components':
         specifier: ^10.7.2
         version: 10.7.2(vue@3.4.18)
@@ -7221,8 +7221,8 @@ packages:
       '@resvg/resvg-js-win32-x64-msvc': 2.4.1
     dev: false
 
-  /@resvg/resvg-wasm@2.4.1:
-    resolution: {integrity: sha512-yi6R0HyHtsoWTRA06Col4WoDs7SvlXU3DLMNP2bdAgs7HK18dTEVl1weXgxRzi8gwLteGUbIg29zulxIB3GSdg==}
+  /@resvg/resvg-wasm@2.6.2:
+    resolution: {integrity: sha512-FqALmHI8D4o6lk/LRWDnhw95z5eO+eAa6ORjVg09YRR7BkcM6oPHU9uyC0gtQG5vpFLvgpeU4+zEAz2H8APHNw==}
     engines: {node: '>= 10'}
     dev: false
 

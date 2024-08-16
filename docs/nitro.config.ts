@@ -32,4 +32,7 @@ export default defineNitroConfig({
       jsxFragment: 'React.Fragment',
     },
   },
+  experimental: {
+    wasm: true,
+  }
 });

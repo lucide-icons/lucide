@@ -38,7 +38,7 @@
   "dependencies": {
     "@floating-ui/vue": "^1.0.3",
     "@headlessui/vue": "^1.7.17",
-    "@resvg/resvg-wasm": "^2.4.1",
+    "@resvg/resvg-wasm": "^2.6.2",
     "@vueuse/components": "^10.7.2",
     "@vueuse/core": "^10.7.2",
     "element-to-path": "^1.2.1",
