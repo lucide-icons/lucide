@@ -9,6 +9,7 @@ strikethrough
 touchpad
 ungroup
 pilcrow
+toc
 
 # Brands
 codepen
