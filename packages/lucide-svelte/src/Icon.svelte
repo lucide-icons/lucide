@@ -1,45 +1,51 @@
 <script lang="ts">
-  import defaultAttributes from './defaultAttributes'
+  import defaultAttributes from './defaultAttributes';
   import type { IconNode } from './types';
+  import type { SvelteHTMLElements } from 'svelte/elements';
 
-  export let name: string | undefined = undefined
-  export let color = 'currentColor'
-  export let size: number | string = 24
-  export let strokeWidth: number | string = 2
-  export let absoluteStrokeWidth: boolean = false
-  export let iconNode: IconNode = []
+  const {
+    class: className,
+    children,
 
-  const mergeClasses = <ClassType = string | undefined | null>(
-    ...classes: ClassType[]
-  ) => classes.filter((className, index, array) => {
-      return Boolean(className) && array.indexOf(className) === index;
-    })
-    .join(' ');
+    name = undefined,
+    color = 'currentColor',
+    size = 24,
+    strokeWidth = 2,
+    absoluteStrokeWidth = false,
+    iconNode = [],
 
+    ...props
+  }: SvelteHTMLElements['svg'] & {
+    name: string | undefined;
+    color: string;
+    size: number | string;
+    strokeWidth: number | string;
+    absoluteStrokeWidth: boolean;
+    iconNode: IconNode;
+  } = $props();
+
+  const mergeClasses = <ClassType = string | undefined | null,>(...classes: ClassType[]) =>
+    classes
+      .filter((className, index, array) => {
+        return Boolean(className) && array.indexOf(className) === index;
+      })
+      .join(' ');
 </script>
 
 <svg
   {...defaultAttributes}
-  {...$$restProps}
+  {...props}
   width={size}
   height={size}
   stroke={color}
-  stroke-width={
-    absoluteStrokeWidth
-      ? Number(strokeWidth) * 24 / Number(size)
-      : strokeWidth
-  }
-  class={
-    mergeClasses(
-      'lucide-icon',
-      'lucide',
-      name ? `lucide-${name}`: '',
-      $$props.class
-    )
-  }
+  stroke-width={absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth}
+  class={mergeClasses('lucide-icon', 'lucide', name ? `lucide-${name}` : '', className)}
 >
   {#each iconNode as [tag, attrs]}
-    <svelte:element this={tag} {...attrs}/>
+    <svelte:element
+      this={tag}
+      {...attrs}
+    />
   {/each}
-  <slot />
+  {@render children?.()}
 </svg>

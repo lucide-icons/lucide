@@ -200,10 +200,10 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ```svelte
 <script>
   import * as icons from 'lucide-svelte';
-  export let name;
+  const { name, ...props } = $props();
 </script>
 
-<svelte:component this="{icons[name]}" {...$$props} />
+<svelte:component this="{icons[name]}" {...props} />
 ```
 
 #### Using the Icon Component
