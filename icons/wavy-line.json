@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "tags": [
+    "line",
+    "curve",
+    "stroke",
+    "pen",
+    "tool",
+    "gesture",
+    "draw",
+    "wave",
+    "art",
+    "road"
+  ],
+  "categories": [
+    "devices",
+    "navigation",
+    "shapes",
+    "maths",
+    "maps",
+    "design"
+  ]
+}
