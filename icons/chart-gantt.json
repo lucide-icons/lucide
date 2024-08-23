@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "diagram",
+    "graph",
+    "timeline",
+    "planning"
+  ],
+  "categories": [
+    "charts"
+  ],
+  "aliases": [
+    {
+      "name": "bar-chart-horizontal",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
