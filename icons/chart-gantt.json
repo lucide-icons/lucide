@@ -13,13 +13,5 @@
   ],
   "categories": [
     "charts"
-  ],
-  "aliases": [
-    {
-      "name": "bar-chart-horizontal",
-      "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
-    }
   ]
 }
