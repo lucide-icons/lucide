@@ -2,16 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
-    "tree",
-    "forest",
-    "park",
-    "nature"
+    "diagram",
+    "graph",
+    "timeline",
+    "planning"
   ],
   "categories": [
-    "nature",
-    "sustainability"
+    "charts"
   ]
 }
