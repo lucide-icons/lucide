@@ -2,20 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
+    "colebemis",
     "ericfennis"
   ],
   "tags": [
-    "water",
-    "sea",
+    "music",
     "sound",
-    "hertz",
-    "wavelength",
-    "vibrate"
+    "mute",
+    "speaker"
   ],
   "categories": [
-    "weather",
-    "maps",
-    "multimedia",
-    "sustainability"
+    "connectivity",
+    "communication",
+    "multimedia"
   ]
 }
