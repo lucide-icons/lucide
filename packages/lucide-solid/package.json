@@ -38,6 +38,22 @@
       "browser": "./dist/esm/lucide-solid.js",
       "require": "./dist/cjs/lucide-solid.js",
       "node": "./dist/cjs/lucide-solid.js"
+    },
+    "./icons": {
+      "types": "./dist/types/lucide-solid.d.ts",
+      "solid": "./dist/source/lucide-solid.jsx",
+      "import": "./dist/esm/lucide-solid.js",
+      "browser": "./dist/esm/lucide-solid.js",
+      "require": "./dist/cjs/lucide-solid.js",
+      "node": "./dist/cjs/lucide-solid.js"
+    },
+    "./icons/*": {
+      "types": "./dist/types/icons/*.d.ts",
+      "solid": "./dist/source/icons/*.jsx",
+      "import": "./dist/esm/icons/*.js",
+      "browser": "./dist/esm/icons/*.js",
+      "require": "./dist/cjs/icons/*.js",
+      "node": "./dist/cjs/icons/*.js"
     }
   },
   "sideEffects": false,
@@ -48,7 +64,7 @@
     "build:transpile": "tsc --jsx preserve -t es2020 --rootDir src --outDir dist --noEmit false",
     "build:version": "node ./scripts/replaceVersion.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --separateAliasesFile --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
     "test": "pnpm build:icons && vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
