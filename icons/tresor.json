@@ -11,8 +11,7 @@
     "secure",
     "locked",
     "hidden",
-    "vault",
-    "private"
+    "vault"
   ],
   "categories": [
     "account",
