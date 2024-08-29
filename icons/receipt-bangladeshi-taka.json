@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mayeenulislam"
+  ],
+  "tags": [
+    "bill",
+    "voucher",
+    "slip",
+    "check",
+    "counterfoil",
+    "BDT",
+    "৳"
+  ],
+  "categories": [
+    "money",
+    "currency",
+    "travel"
+  ]
+}

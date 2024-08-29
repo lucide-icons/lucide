@@ -1,0 +1,14 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 4.52991C9.14462 2.35852 10.1808 1.27282 10.1808 9.95836C10.1808 16.9068 10.1808 19.3677 10.1808 19.7296C10.8715 20.8153 12.5481 21.9406 15.3615 19.7296C19.5062 16.4725 18.47 12.1298 14.3254 14.3011" />
+  <line x1="6.75" y1="9.25" x2="18.25" y2="9.25"/>
+</svg>

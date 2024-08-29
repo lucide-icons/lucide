@@ -89,6 +89,7 @@ export declare const Baby: (props: LucideProps) => JSX.Element;
 export declare const Backpack: (props: LucideProps) => JSX.Element;
 export declare const BaggageClaim: (props: LucideProps) => JSX.Element;
 export declare const Banana: (props: LucideProps) => JSX.Element;
+export declare const BangladeshiTaka: (props: LucideProps) => JSX.Element;
 export declare const Banknote: (props: LucideProps) => JSX.Element;
 export declare const BarChart2: (props: LucideProps) => JSX.Element;
 export declare const BarChart3: (props: LucideProps) => JSX.Element;

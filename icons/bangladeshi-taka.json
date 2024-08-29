@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mayeenulislam"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "BDT",
+    "৳"
+  ],
+  "categories": [
+    "currency",
+    "money"
+  ]
+}
