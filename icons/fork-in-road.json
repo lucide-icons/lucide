@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Sempijja"
+  ],
+  "tags": [
+    "fork",
+    "junction",
+    "intersection",
+    "split",
+    "diverge",
+    "road-fork",
+    "highway-split",
+    "route-choice",
+    "navigation",
+    "wayfinding",
+    "direction",
+    "road-division",
+    "path-split",
+    "decision-point"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}
