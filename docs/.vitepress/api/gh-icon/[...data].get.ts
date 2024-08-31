@@ -28,7 +28,7 @@ export default eventHandler((event) => {
     .map((_, idx, arr) => arr.slice(0, idx + 1).join('-'))
     .reverse()
     .find((groupName) => groupName in iconNodes);
-  if (backdropName) {
+  if (!(name in iconNodes) && backdropName) {
     const iconNode = iconNodes[backdropName];
 
     const LucideIcon = createLucideIcon(backdropName, iconNode);
@@ -39,18 +39,9 @@ export default eventHandler((event) => {
       createElement(Backdrop, {
         backdropString,
         src,
-        color: name in iconNodes ? 'red' : '#777',
+        color: '#777',
       }),
     );
-    if (name in iconNodes) {
-      children.push(
-        createElement(Backdrop, {
-          backdropString: src,
-          src: backdropString,
-          color: 'lime',
-        }),
-      );
-    }
   }
 
   const svg = Buffer.from(
