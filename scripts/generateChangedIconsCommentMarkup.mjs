@@ -122,6 +122,7 @@ ${changeFilesLowDPIImageTags}<br/>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
 </details>
+<details>
 <summary>Icon Diffs</summary>
 ${changeFilesDiffImageTags}
 </details>
