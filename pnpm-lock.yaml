@@ -77,8 +77,8 @@ importers:
         specifier: ^3.25.0
         version: 3.25.0
       svgo:
-        specifier: ^3.1.0
-        version: 3.2.0
+        specifier: ^3.3.2
+        version: 3.3.2
       svgson:
         specifier: ^5.3.1
         version: 5.3.1
@@ -710,8 +710,8 @@ importers:
         specifier: 2.7.1
         version: 2.7.1
       svgo:
-        specifier: ^3.0.0
-        version: 3.0.2
+        specifier: ^3.3.2
+        version: 3.3.2
       svgson:
         specifier: ^5.2.1
         version: 5.3.1
@@ -15755,8 +15755,6 @@ packages:
     peerDependenciesMeta:
       webpack:
         optional: true
-      webpack-sources:
-        optional: true
     dependencies:
       webpack: 5.76.1(esbuild@0.14.22)
       webpack-sources: 3.2.3
@@ -21119,8 +21117,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /svgo@3.2.0:
-    resolution: {integrity: sha512-4PP6CMW/V7l/GmKRKzsLR8xxjdHTV4IMvhTnpuHwwBazSIlw5W/5SmPjN8Dwyt7lKbSJrRDgp4t9ph0HgChFBQ==}
+  /svgo@3.3.2:
+    resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -21131,7 +21129,6 @@ packages:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.0.0
-    dev: true
 
   /svgpath@2.6.0:
     resolution: {integrity: sha512-OIWR6bKzXvdXYyO4DK/UWa1VA1JeKq8E+0ug2DG98Y/vOmMpfZNj+TIG988HjfYSqtcy/hFOtZq/n/j5GSESNg==}
