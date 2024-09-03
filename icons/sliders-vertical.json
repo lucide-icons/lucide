@@ -3,11 +3,13 @@
   "contributors": [
     "colebemis",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "settings",
-    "controls"
+    "controls",
+    "equalizer"
   ],
   "categories": [
     "account"
