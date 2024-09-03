@@ -12,7 +12,9 @@
     "conversation",
     "dialog",
     "feedback",
-    "speech bubble"
+    "speech bubble",
+    "secure",
+    "encrypted"
   ],
   "categories": [
     "account",
