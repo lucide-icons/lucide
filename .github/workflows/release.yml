@@ -87,7 +87,7 @@ jobs:
     needs: [pre-release, lucide-font]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -150,7 +150,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
       - name: Zip font and icons
         run: |
           zip -r lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip lucide-font
