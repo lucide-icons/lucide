@@ -77,6 +77,16 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
   400,
 ).join(' ');
 
+const changeFilesDiffImageTags = getImageTagsByFiles(
+  changedFiles,
+  (file) => {
+    const iconName = path.basename(file, '.svg');
+
+    return `${BASE_URL}/${iconName}`;
+  },
+  400,
+).join(' ');
+
 const readyToUseCode = changedFiles
   .map((changedFile) => {
     const svgContent = fs.readFileSync(path.join(process.cwd(), changedFile), 'utf-8');
@@ -111,6 +121,9 @@ ${changeFilesLowDPIImageTags}<br/>
 <details>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
+</details>
+<summary>Icon Diffs</summary>
+${changeFilesDiffImageTags}
 </details>
 <details>
 <summary>Icons as code</summary>

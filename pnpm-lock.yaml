@@ -560,7 +560,7 @@ importers:
         version: link:../../tools/build-helpers
       '@sveltejs/package':
         specifier: ^2.2.3
-        version: 2.2.6(svelte@4.1.2)(typescript@5.1.6)
+        version: 2.2.6(svelte@4.2.19)(typescript@5.1.6)
       '@sveltejs/vite-plugin-svelte':
         specifier: ^2.4.2
         version: 2.4.3(svelte@4.1.2)(vite@5.0.13(@types/node@20.4.5)(less@4.2.0)(sass@1.77.8)(terser@5.31.6))
@@ -569,7 +569,7 @@ importers:
         version: 6.4.2(vitest@1.2.2(@types/node@20.4.5)(jsdom@20.0.3)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.31.6))
       '@testing-library/svelte':
         specifier: ^4.0.2
-        version: 4.0.3(svelte@4.1.2)
+        version: 4.0.3(svelte@4.2.19)
       '@tsconfig/svelte':
         specifier: ^5.0.0
         version: 5.0.0
@@ -580,8 +580,8 @@ importers:
         specifier: ^20.0.3
         version: 20.0.3
       svelte:
-        specifier: ^4.0.1
-        version: 4.1.2
+        specifier: ^4.2.19
+        version: 4.2.19
       svelte-check:
         specifier: ^3.4.4
         version: 3.4.6(@babel/core@7.25.2)(less@4.2.0)(postcss@8.4.41)(sass@1.77.8)(svelte@4.1.2)
@@ -15598,7 +15598,7 @@ snapshots:
   '@jridgewell/trace-mapping@0.3.19':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
@@ -16449,7 +16449,7 @@ snapshots:
 
   '@rollup/pluginutils@5.0.2(rollup@4.21.0)':
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
     optionalDependencies:
@@ -16575,8 +16575,8 @@ snapshots:
       kleur: 4.1.5
       sade: 1.8.1
       semver: 7.5.4
-      svelte: 4.1.2
-      svelte2tsx: 0.7.1(svelte@4.1.2)(typescript@5.1.6)
+      svelte: 4.2.19
+      svelte2tsx: 0.7.1(svelte@4.2.19)(typescript@5.1.6)
     transitivePeerDependencies:
       - typescript
 
@@ -17300,13 +17300,13 @@ snapshots:
 
   '@vitest/snapshot@1.2.2':
     dependencies:
-      magic-string: 0.30.7
+      magic-string: 0.30.11
       pathe: 1.1.2
       pretty-format: 29.7.0
 
   '@vitest/snapshot@1.4.0':
     dependencies:
-      magic-string: 0.30.7
+      magic-string: 0.30.11
       pathe: 1.1.2
       pretty-format: 29.7.0
 
@@ -18723,7 +18723,7 @@ snapshots:
 
   code-red@1.0.4:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
       '@types/estree': 1.0.5
       acorn: 8.10.0
       estree-walker: 3.0.3
@@ -19026,7 +19026,7 @@ snapshots:
   css-tree@2.3.1:
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.0.2
+      source-map-js: 1.2.0
 
   css-what@6.1.0: {}
 
@@ -21976,11 +21976,11 @@ snapshots:
 
   magic-string@0.30.2:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   magic-string@0.30.5:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   magic-string@0.30.7:
     dependencies:
@@ -24731,7 +24731,7 @@ snapshots:
 
   sorcery@0.11.0:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
       buffer-crc32: 0.2.13
       minimist: 1.2.8
       sander: 0.5.1
@@ -25133,7 +25133,7 @@ snapshots:
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
-      svelte: 4.1.2
+      svelte: 4.2.19
       typescript: 5.1.6
 
   svelte@4.1.2:
@@ -25149,7 +25149,7 @@ snapshots:
       estree-walker: 3.0.3
       is-reference: 3.0.1
       locate-character: 3.0.0
-      magic-string: 0.30.2
+      magic-string: 0.30.11
       periscopic: 3.1.0
 
   svg-pathdata@6.0.3: {}
