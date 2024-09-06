@@ -2,19 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
+    "danielbayley",
     "jguddas"
   ],
   "tags": [
-    "bag",
-    "hiking",
-    "travel",
-    "camping",
-    "school",
-    "childhood"
+    "diagram",
+    "graph",
+    "timeline",
+    "planning"
   ],
   "categories": [
-    "gaming",
-    "photography",
-    "travel"
+    "charts"
   ]
 }
