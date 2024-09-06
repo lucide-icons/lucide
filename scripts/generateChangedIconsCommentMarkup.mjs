@@ -82,7 +82,7 @@ const changeFilesDiffImageTags = getImageTagsByFiles(
   (file) => {
     const iconName = path.basename(file, '.svg');
 
-    return `${BASE_URL}/${iconName}`;
+    return `${BASE_URL}/diff/${iconName}`;
   },
   400,
 ).join(' ');
