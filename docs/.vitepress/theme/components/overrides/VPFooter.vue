@@ -23,7 +23,7 @@ const links = computed(() => [
     href: `${githubLink.value}/releases`
   },
   {
-    text: 'Github',
+    text: 'GitHub',
     href: `${githubLink.value}`
   },
   {
