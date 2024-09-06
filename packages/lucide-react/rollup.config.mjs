@@ -35,6 +35,19 @@ const bundles = [
   {
     format: 'esm',
     inputs: ['src/dynamicIconImports.ts'],
+    outputFile: 'dynamicIconImports.mjs',
+    external: [/src/],
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `dist/esm/${modulePath}.mjs`;
+      }
+    },
+  },
+  {
+    format: 'cjs',
+    inputs: ['src/dynamicIconImports.ts'],
     outputFile: 'dynamicIconImports.js',
     external: [/src/],
     paths: (id) => {
