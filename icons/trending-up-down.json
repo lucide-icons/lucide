@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alportan"
+  ],
+  "tags": [
+    "arrows",
+    "estimated",
+    "indeterminate",
+    "data fluctuation",
+    "uncertain",
+    "forecast",
+    "variable",
+    "prediction",
+    "dynamic",
+    "volatile"
+  ],
+  "categories": [
+    "charts",
+    "arrows"
+  ]
+}
