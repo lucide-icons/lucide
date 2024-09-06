@@ -13,13 +13,21 @@ import {
 } from "lucide-react";
 ```
 
-
 ## Choosing import name style
 
+To be consistent there an option to able the choose the import name style you want to use.
+This can be done by creating a custom module declaration file. And override the import name style.
 
+Only available for `lucide-react`, `lucide-preact`, `lucide-react-native`, `lucide-vue-next` package.
 
 ```ts
 declare module "lucide-react" {
   export * from "lucide-react/dist/lucide-react.prefixed";
 }
 ```
+
+| Import Style  | Available imports           | Declaration file import |
+| ------------- | --------------------------- | ----------------------- |
+| Default       | Home, HomeIcon, LucideHome  |                         |
+| Prefixed      | LucideHome                  | [package].prefixed      |
+| Suffixed      | HomeIcon                    | [package].suffixed      |
