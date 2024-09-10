@@ -26,7 +26,6 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
       const customAttrs = {
         stroke: color,
         strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
-        ...rest,
       };
 
       return createElement(
@@ -38,6 +37,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
           height: size,
           'data-testid': dataTestId,
           ...customAttrs,
+          ...rest,
         },
         [
           ...iconNode.map(([tag, attrs]) => {
