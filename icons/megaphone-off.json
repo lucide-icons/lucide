@@ -1,12 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw",
   ],
   "tags": [
     "advertisement",
+    "announcement",
     "attention",
     "alert",
+    "loudspeaker",
     "notification",
     "disable",
     "silent"
