@@ -2,12 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw",
   ],
   "tags": [
     "advertisement",
+    "announcement",
     "attention",
     "alert",
+    "loudspeaker",
     "notification"
   ],
   "categories": [
