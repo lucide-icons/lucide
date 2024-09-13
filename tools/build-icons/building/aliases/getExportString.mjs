@@ -12,4 +12,4 @@ const getExportString = (
       `} from '../icons/${iconName}${aliasImportFileExtension}';\n`
     : `export { default as ${componentName} } from '../icons/${iconName}${aliasImportFileExtension}';\n`;
 
-export default getExportString
+export default getExportString;

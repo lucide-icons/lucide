@@ -71,7 +71,11 @@ export default async function generateAliasesFiles({
       }
 
       if (!aliasNamesOnly) {
-        aliasSuffixFileContent += getExportString(`${componentName}Icon`, iconName, aliasImportFileExtension);
+        aliasSuffixFileContent += getExportString(
+          `${componentName}Icon`,
+          iconName,
+          aliasImportFileExtension,
+        );
         aliasPrefixesFileContent += getExportString(
           `Lucide${componentName}`,
           iconName,
