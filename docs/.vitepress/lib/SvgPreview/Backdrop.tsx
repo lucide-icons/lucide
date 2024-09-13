@@ -3,10 +3,16 @@ import React from 'react';
 interface BackdropProps {
   src: string;
   color?: string;
+  outline?: boolean;
   backdropString: string;
 }
 
-const Backdrop = ({ src, color = 'red', backdropString }: BackdropProps): JSX.Element => {
+const Backdrop = ({
+  src,
+  color = 'red',
+  outline = true,
+  backdropString,
+}: BackdropProps): JSX.Element => {
   const id = React.useId();
   return (
     <>
@@ -73,13 +79,15 @@ const Backdrop = ({ src, color = 'red', backdropString }: BackdropProps): JSX.El
           opacity={0.75}
           dangerouslySetInnerHTML={{ __html: src }}
         />
-        <g
-          stroke={color}
-          strokeWidth={2.25}
-          opacity={0.75}
-          mask={`url(#svg-preview-backdrop-mask-outline-${id})`}
-          dangerouslySetInnerHTML={{ __html: backdropString }}
-        />
+        {outline && (
+          <g
+            stroke={color}
+            strokeWidth={2.25}
+            opacity={0.75}
+            mask={`url(#svg-preview-backdrop-mask-outline-${id})`}
+            dangerouslySetInnerHTML={{ __html: backdropString }}
+          />
+        )}
       </g>
     </>
   );

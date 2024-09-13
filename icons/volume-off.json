@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "music",
+    "sound",
+    "mute",
+    "speaker"
+  ],
+  "categories": [
+    "connectivity",
+    "communication",
+    "multimedia"
+  ]
+}
