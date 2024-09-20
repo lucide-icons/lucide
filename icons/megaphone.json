@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jamiemlaw",
+    "jamiemlaw"
   ],
   "tags": [
     "advertisement",
@@ -10,9 +10,7 @@
     "alert",
     "loudspeaker",
     "megaphone",
-    "notification",
-    "disable",
-    "silent"
+    "notification"
   ],
   "categories": [
     "multimedia",
