@@ -3,13 +3,13 @@ import path from 'path';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
 
-export default (
+export default function generateIndexFile (
   inputEntry,
   outputDirectory,
   iconNodes,
   exportModuleNameCasing,
   iconFileExtension = '',
-) => {
+) {
   const fileName = path.basename(inputEntry);
 
   // Reset file
