@@ -19,5 +19,8 @@
   "categories": [
     "text",
     "design"
+  ],
+  "aliases": [
+    "box-select"
   ]
 }
