@@ -4,7 +4,8 @@
     "llaenowyd",
     "mishkaio",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "chessurisme"
   ],
   "tags": [
     "selection",
@@ -12,10 +13,14 @@
     "rectangular",
     "marquee",
     "tool",
-    "dashed"
+    "dashed",
+    "box"
   ],
   "categories": [
     "text",
     "design"
+  ],
+  "aliases": [
+    "box-select"
   ]
 }
