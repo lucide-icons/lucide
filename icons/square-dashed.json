@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "llaenowyd",
+    "mishkaio",
+    "ericfennis",
+    "karsa-mistmere",
+    "chessurisme"
+  ],
+  "tags": [
+    "selection",
+    "square",
+    "rectangular",
+    "marquee",
+    "tool",
+    "dashed",
+    "box"
+  ],
+  "categories": [
+    "text",
+    "design"
+  ],
+  "aliases": [
+    "box-select"
+  ]
+}
