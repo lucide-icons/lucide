@@ -33,6 +33,8 @@
     "dist",
     "dynamicIconImports.js",
     "dynamicIconImports.js.map",
+    "dynamicIconImports.mjs",
+    "dynamicIconImports.mjs.map",
     "dynamicIconImports.d.ts"
   ],
   "scripts": {
