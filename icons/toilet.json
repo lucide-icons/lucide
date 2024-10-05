@@ -1,18 +1,6 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "EthanHazel",
-    "staffanmowitz",
-    "karsa-mistmere"
-  ],
-  "tags": [
-    "tiolet",
-    "potty",
-    "bathroom",
-    "washroom"
-  ],
-  "categories": [
-    "devices",
-    "home"
-  ]
+  "contributors": ["EthanHazel", "staffanmowitz", "karsa-mistmere"],
+  "tags": ["toilet", "potty", "bathroom", "washroom"],
+  "categories": ["devices", "home"]
 }
