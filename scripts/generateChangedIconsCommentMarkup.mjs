@@ -1,6 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import { shuffle, readSvgDirectory, getCurrentDirPath, minifySvg } from './helpers.mjs';
+import { parseSync } from 'svgson';
+import {
+  shuffleArray,
+  readSvgDirectory,
+  getCurrentDirPath,
+  minifySvg,
+  toPascalCase,
+} from '../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -31,12 +38,12 @@ const svgFiles = readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
 const iconsFilteredByName = (search) => svgFiles.filter((file) => file.includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
-  shuffle(svgFiles).slice(0, changedFiles.length),
+  shuffleArray(svgFiles).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 
 const cohesionSquaresImageTags = getImageTagsByFiles(
-  shuffle(iconsFilteredByName('square')).slice(0, changedFiles.length),
+  shuffleArray(iconsFilteredByName('square')).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 
@@ -70,6 +77,28 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
   400,
 ).join(' ');
 
+const changeFilesDiffImageTags = getImageTagsByFiles(
+  changedFiles,
+  (file) => {
+    const iconName = path.basename(file, '.svg');
+
+    return `${BASE_URL}/diff/${iconName}`;
+  },
+  400,
+).join(' ');
+
+const readyToUseCode = changedFiles
+  .map((changedFile) => {
+    const svgContent = fs.readFileSync(path.join(process.cwd(), changedFile), 'utf-8');
+    const name = path.basename(changedFile, '.svg');
+    return `const ${toPascalCase(name)}Icon = createLucideIcon('${toPascalCase(name)}', [
+  ${parseSync(svgContent)
+    .children.map(({ name, attributes }) => JSON.stringify([name, attributes]))
+    .join(',\n  ')}
+])`;
+  })
+  .join('\n\n');
+
 const commentMarkup = `\
 ### Added or changed icons
 ${changeFiles2pxStrokeImageTags}
@@ -93,6 +122,18 @@ ${changeFilesLowDPIImageTags}<br/>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
 </details>
-`;
+<details>
+<summary>Icon Diffs</summary>
+${changeFilesDiffImageTags}
+</details>
+<details>
+<summary>Icons as code</summary>
+
+Works for: \`lucide-react\`, \`lucide-react-native\`, \`lucide-preact\`, \`lucide-vue-next\`
+\`\`\`ts
+${readyToUseCode}
+\`\`\`
+
+</details>`;
 
 console.log(commentMarkup);

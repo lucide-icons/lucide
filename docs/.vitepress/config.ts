@@ -28,6 +28,10 @@ export default defineConfig({
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
           ),
         },
+        {
+          find: '~/.vitepress',
+          replacement: fileURLToPath(new URL('./', import.meta.url)),
+        },
       ],
     },
   },

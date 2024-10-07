@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
   "title": "Home",
-  "icon": "home"
+  "icon": "house"
 }

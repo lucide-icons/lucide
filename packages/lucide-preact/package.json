@@ -38,7 +38,7 @@
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
-    "test": "vitest run",
+    "test": "pnpm build:icons && vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^5.3.3",
-    "vite": "5.0.12",
+    "vite": "5.0.13",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {

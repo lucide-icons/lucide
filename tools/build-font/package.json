@@ -1,8 +1,8 @@
 {
   "name": "build-font",
+  "description": "A internal used package to build the font.",
   "private": true,
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node ./main.mjs"
