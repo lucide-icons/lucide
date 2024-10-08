@@ -3,13 +3,16 @@ name: Continuous integration icons
 on:
   push:
     branches:
-      - main
-    paths:
-      - icons/**/*.svg
+      # - main
+      - '*'
+    # paths:
+    #   - icons/**/*.svg
 
 jobs:
   create-release:
+    # Only create a new releases for new icons
     if: github.repository == 'lucide-icons/lucide'
+    #  && startsWith(github.event.head_commit.message, 'feat(icons):')
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.semantic.outputs.new_release_version }}
@@ -28,6 +31,7 @@ jobs:
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
         with:
+          dry_run: false
           tag_format: ${version}
           extra_plugins: |
             @semantic-release/github
@@ -38,12 +42,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ steps.semantic.outputs.new_release_version }}
-          name: Version ${{ steps.semantic.outputs.new_release_version }}
-          body: ${{ steps.semantic.outputs.new_release_notes }}
+      # - name: Create Release
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     tag_name: ${{ steps.semantic.outputs.new_release_version }}
+      #     name: Version ${{ steps.semantic.outputs.new_release_version }}
+      #     body: ${{ steps.semantic.outputs.new_release_notes }}
 
   start-release:
     if: github.repository == 'lucide-icons/lucide'
