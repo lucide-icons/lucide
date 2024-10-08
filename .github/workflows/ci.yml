@@ -31,7 +31,7 @@ jobs:
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
         with:
-          dry_run: false
+          dry_run: true
           tag_format: ${version}
           extra_plugins: |
             @semantic-release/github
@@ -49,10 +49,10 @@ jobs:
       #     name: Version ${{ steps.semantic.outputs.new_release_version }}
       #     body: ${{ steps.semantic.outputs.new_release_notes }}
 
-  start-release:
-    if: github.repository == 'lucide-icons/lucide'
-    needs: create-release
-    uses: './.github/workflows/release.yml'
-    secrets: inherit
-    with:
-      version: ${{ needs.create-release.outputs.VERSION }}
+  # start-release:
+  #   if: github.repository == 'lucide-icons/lucide'
+  #   needs: create-release
+  #   uses: './.github/workflows/release.yml'
+  #   secrets: inherit
+  #   with:
+  #     version: ${{ needs.create-release.outputs.VERSION }}
