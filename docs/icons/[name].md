@@ -18,9 +18,8 @@ import RelatedIcons from '~/.vitepress/theme/components/icons/RelatedIcons.vue'
 import CodeGroup from '~/.vitepress/theme/components/base/CodeGroup.vue'
 import Badge from '~/.vitepress/theme/components/base/Badge.vue'
 import Label from '~/.vitepress/theme/components/base/Label.vue'
-import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { data } from './codeExamples.data'
-import { camelCase, startCase } from 'lodash-es'
+import { toCamelCase, toPascalCase } from '@lucide/shared'
 import { satisfies } from 'semver'
 
 const { params } = useData()
@@ -31,8 +30,8 @@ const tabs = computed(() => data.codeExamples?.map(
 
 const codeExample = computed(() => data.codeExamples?.map(
     (codeExample) => {
-      const pascalCaseName = startCase(camelCase( params.value.name)).replace(/\s/g, '')
-      const camelCaseName = camelCase(params.value.name)
+      const pascalCaseName = toPascalCase( params.value.name)
+      const camelCaseName = toCamelCase(params.value.name)
 
       return codeExample.code
         .replace(/\$(?:<[^>]+>)*PascalCase/g, pascalCaseName)
