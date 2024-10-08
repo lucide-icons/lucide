@@ -43,4 +43,5 @@ export const mergeClasses = <ClassType = string | undefined | null>(...classes: 
     .filter((className, index, array) => {
       return Boolean(className) && array.indexOf(className) === index;
     })
-    .join(' ');
+    .join(' ')
+    .trim();
