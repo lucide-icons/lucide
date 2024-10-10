@@ -35,6 +35,8 @@ jobs:
           tag_format: ${version}
           branches: |
             ['new-release-workflow']
+          extends: |
+            semantic-release-monorepo
           extra_plugins: |
             @semantic-release/github
             @semantic-release/git
