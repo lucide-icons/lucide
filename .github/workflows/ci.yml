@@ -11,8 +11,7 @@ on:
 jobs:
   create-release:
     # Only create a new releases for new icons
-    if: github.repository == 'lucide-icons/lucide'
-    #  && startsWith(github.event.head_commit.message, 'feat(icons):')
+    if: github.repository == 'lucide-icons/lucide' && !startsWith(github.event.head_commit.message, 'chore(metadata):')
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.semantic.outputs.new_release_version }}
