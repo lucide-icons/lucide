@@ -33,6 +33,8 @@ jobs:
         with:
           dry_run: true
           tag_format: ${version}
+          branches: |
+            ['new-release-workflow']
           extra_plugins: |
             @semantic-release/github
             @semantic-release/git
