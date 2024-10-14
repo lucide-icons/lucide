@@ -80,7 +80,7 @@
     "@testing-library/jest-dom": "^6.4.2",
     "babel-preset-solid": "^1.8.12",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.9.2",
+    "rollup": "^4.22.4",
     "solid-js": "^1.8.7",
     "typescript": "^4.9.4",
     "vite": "5.0.13",
