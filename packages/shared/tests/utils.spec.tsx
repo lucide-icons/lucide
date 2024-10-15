@@ -22,4 +22,8 @@ describe('mergeClasses', () => {
     const classes = mergeClasses('lucide', 'lucide-circle', ' ');
     expect(classes).toBe('lucide lucide-circle');
   });
+  it('trims the sub strings', async () => {
+    const classes = mergeClasses('lucide', ' ', 'lucide-circle');
+    expect(classes).toBe('lucide lucide-circle');
+  });
 });
