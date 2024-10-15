@@ -46,6 +46,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           text: 'Filled icons',
           link: '/guide/advanced/filled-icons',
         },
+        {
+          text: 'Aliased Names',
+          link: '/guide/advanced/aliased-names',
+        },
         // {
         //   text: 'Combining icons',
         // },
