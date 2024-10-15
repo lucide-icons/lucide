@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "liamb13"
+  ],
+  "tags": [
+    "border",
+    "radius",
+    "style",
+    "design",
+    "corner",
+    "layout",
+    "round",
+    "rounded"
+  ],
+  "categories": [
+    "design",
+    "development",
+    "layout"
+  ]
+}
