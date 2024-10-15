@@ -34,6 +34,9 @@ const {
   aliasNamesOnly = false,
   withDynamicImports = false,
   separateAliasesFile = false,
+  separateAliasesFileExtension = undefined,
+  separateIconFileExport = false,
+  separateIconFileExportExtension = undefined,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
   pretty = true,
@@ -59,6 +62,8 @@ async function buildIcons() {
     template: iconFileTemplate,
     showLog: !silent,
     iconFileExtension,
+    separateIconFileExport,
+    separateIconFileExportExtension,
     pretty: JSON.parse(pretty),
     iconsDir: ICONS_DIR,
     iconMetaData,
@@ -75,6 +80,7 @@ async function buildIcons() {
       exportModuleNameCasing,
       aliasImportFileExtension,
       separateAliasesFile,
+      separateAliasesFileExtension,
       showLog: !silent,
     });
   }
