@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "devrudraa"
+  ],
+  "tags": [
+    "link",
+    "link-add",
+    "add",
+    "link-plus"
+  ],
+  "categories": [
+    "link",
+    "account",
+    "text"
+  ]
+}
