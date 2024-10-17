@@ -15,5 +15,8 @@
   "categories": [
     "account",
     "social"
+  ],
+  "aliases": [
+    "message-circle-question"
   ]
 }
