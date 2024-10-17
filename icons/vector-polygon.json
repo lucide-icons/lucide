@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "tags": [
+    "shape",
+    "geometry",
+    "art",
+    "width",
+    "height",
+    "size",
+    "calculate",
+    "measure",
+    "select",
+    "graphics"
+  ],
+  "categories": [
+    "maths",
+    "design",
+    "tools",
+    "shapes"
+  ]
+}
