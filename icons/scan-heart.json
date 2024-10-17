@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "health",
+    "heart rate",
+    "pulse",
+    "monitoring",
+    "healthiness",
+    "screening",
+    "dashed"
+  ],
+  "categories": [
+    "medical"
+  ]
+}
