@@ -1,12 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ahtohbi4",
-    "ericfennis",
-    "Andreto",
-    "csandman",
-    "jguddas",
-    "karsa-mistmere"
+    "jguddas"
   ],
   "tags": [
     "bicycle",
