@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "chessurisme"
+    "chessurisme",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "table",
