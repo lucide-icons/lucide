@@ -30,6 +30,14 @@ npm install lucide-react
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react)
 
+## Usage Trend
+
+[Usage Trend of lucide-react](https://npm-compare.com/lucide-react#timeRange=THREE_YEARS)
+  
+<a href="https://npm-compare.com/lucide-react#timeRange=THREE_YEARS" target="_blank">
+  <img src="https://npm-compare.com/img/npm-trend/THREE_YEARS/lucide-react.png" width="70%" alt="NPM Usage Trend of lucide-react" />
+</a>
+
 ## Community
 
 Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
