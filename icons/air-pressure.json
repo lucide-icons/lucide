@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "tags": [
+    "weather",
+    "air",
+    "blow"
+  ],
+  "categories": [
+    "weather",
+    "sustainability"
+  ]
+}
