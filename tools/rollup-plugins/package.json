@@ -12,7 +12,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
     "esbuild": "^0.19.11",
-    "rollup": "^4.9.2",
+    "rollup": "^4.22.4",
     "rollup-plugin-esbuild": "^6.1.0",
     "rollup-plugin-license": "^3.2.0",
     "rollup-plugin-visualizer": "^5.12.0"
