@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "light",
+    "beam",
+    "play",
+    "theatre",
+    "show",
+    "entertainment",
+    "stage",
+    "soapbox",
+    "winner",
+    "podium",
+    "actor",
+    "actress",
+    "drama",
+    "lens",
+    "followspot",
+    "spot",
+    "focus",
+    "concert",
+    "performance",
+    "lamp",
+    "highlight",
+    "feature",
+    "best"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "multimedia",
+    "photography"
+  ]
+}
