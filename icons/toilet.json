@@ -12,5 +12,8 @@
     "bathroom",
     "washroom"
   ],
-  "categories": ["devices", "home"]
+  "categories": [
+    "devices",
+    "home"
+  ]
 }
