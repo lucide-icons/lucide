@@ -38,7 +38,7 @@ Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintaine
 
 ## License
 
-Lucide is licensed under the ICS license. See [LICENSE](https://lucide.dev/license).
+Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
 ## Sponsors
 

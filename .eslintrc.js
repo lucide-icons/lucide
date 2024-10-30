@@ -1,4 +1,4 @@
-const DEFAULT_ATTRS = require('./scripts/render/default-attrs.json');
+const DEFAULT_ATTRS = require('./tools/build-icons/render/default-attrs.json');
 
 module.exports = {
   root: true,
@@ -15,7 +15,9 @@ module.exports = {
     'no-use-before-define': 'off',
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['**/*.test.js', '**/*.spec.js', './scripts/**'] },
+      {
+        devDependencies: ['**/*.test.js', '**/*.spec.js', '**/scripts/**'],
+      },
     ],
     'import/extensions': [
       'error',
