@@ -44,7 +44,7 @@
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-   "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-replace": "^6.0.1",
     "@testing-library/jest-dom": "^6.1.6",
     "jest-serializer-html": "^7.1.0",
     "rollup": "^4.22.4",
