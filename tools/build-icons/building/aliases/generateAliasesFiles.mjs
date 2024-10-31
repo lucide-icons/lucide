@@ -144,14 +144,20 @@ export default async function generateAliasesFiles({
       }
 
       appendFile(aliasFileContent, aliasFileName, destinationDirectory);
-      appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, destinationDirectory);
-      appendFile(aliasSuffixFileContent, aliasSuffixFileName, destinationDirectory);
+
+      if (!aliasNamesOnly) {
+        appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, destinationDirectory);
+        appendFile(aliasSuffixFileContent, aliasSuffixFileName, destinationDirectory);
+      }
     }),
   );
 
   appendFile('\n', aliasFileName, destinationDirectory);
-  appendFile('\n', aliasPrefixesFileName, destinationDirectory);
-  appendFile('\n', aliasSuffixFileName, destinationDirectory);
+
+  if (!aliasNamesOnly) {
+    appendFile('\n', aliasPrefixesFileName, destinationDirectory);
+    appendFile('\n', aliasSuffixFileName, destinationDirectory);
+  }
 
   if (showLog) {
     console.log(`Successfully generated src/aliases/${aliasFileName} file`);
