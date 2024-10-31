@@ -83,7 +83,13 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
   },
   {
     input: `src/${outputFileName}.prefixed.ts`,
@@ -93,7 +99,13 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
   },
   ...configs,
 ];
