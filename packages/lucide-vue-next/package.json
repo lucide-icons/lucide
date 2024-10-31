@@ -56,7 +56,7 @@
     "rollup-plugin-dts": "^6.1.0",
     "vite": "5.1.8",
     "vitest": "^1.4.0",
-    "vue": "^3.4.21"
+    "vue": "^3.0.0"
   },
   "peerDependencies": {
     "vue": ">=3.0.1"
