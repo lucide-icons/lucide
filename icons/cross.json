@@ -2,8 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "lscheibel",
-    "ericfennis",
-    "jguddas"
+    "ericfennis"
   ],
   "tags": [
     "healthcare",
