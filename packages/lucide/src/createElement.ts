@@ -1,5 +1,4 @@
-import { IconNode, IconNodeChild, SVGProps } from "./types";
-
+import { IconNode, IconNodeChild, SVGProps } from './types';
 
 /**
  * Creates a new HTMLElement from icon node
@@ -16,7 +15,7 @@ const createElement = (tag: string, attrs: SVGProps, children: IconNodeChild[] =
   });
 
   if (children.length) {
-    children.forEach(child => {
+    children.forEach((child) => {
       const childElement = createElement(...child);
 
       element.appendChild(childElement);

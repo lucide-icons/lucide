@@ -63,7 +63,7 @@ describe('LucideAngularComponent', () => {
     testHostComponent.setAbsoluteStrokeWidth(true);
     testHostFixture.detectChanges();
     expect(getSvgAttribute('stroke-width')).toBe(
-      formatFixed(strokeWidth / (size / defaultAttributes.height))
+      formatFixed(strokeWidth / (size / defaultAttributes.height)),
     );
   });
 

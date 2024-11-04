@@ -1,0 +1,23 @@
+pnpm-lock.yaml
+
+# docs examples
+docs/**/examples/
+docs/.vitepress/.temp
+docs/.vitepress/cache
+docs/.vitepress/data
+docs/.nitro
+
+# lucide-angular
+packages/lucide-angular/.angular/cache
+
+# lucide-static
+packages/lucide-static/icons
+packages/lucide-static/lib
+packages/lucide-static/sprite.svg
+packages/lucide-static/tags.json
+packages/lucide-static/icon-nodes.json
+packages/lucide-static/font
+
+# lucide-svelte
+packages/lucide-svelte/src/icons/*.svelte
+packages/lucide-svelte/.svelte-kit

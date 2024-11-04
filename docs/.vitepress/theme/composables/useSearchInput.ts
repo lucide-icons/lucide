@@ -3,12 +3,8 @@ import { nextTick, onMounted, ref, watch } from 'vue';
 
 const useSearchInput = () => {
   const searchInput = ref();
-  const searchQuery = ref(
-    typeof window === 'undefined'
-      ? ''
-      : new URLSearchParams(window.location.search).get('search') || ''
-  );
-  const searchQueryDebounced = useDebounce(searchQuery, 250);
+  const searchQuery = ref<string>('');
+  const searchQueryDebounced = useDebounce<string>(searchQuery, 200);
 
   watch(searchQueryDebounced, (searchString) => {
     const newUrl = new URL(window.location.href);
@@ -26,6 +22,11 @@ const useSearchInput = () => {
 
   onMounted(() => {
     const searchParams = new URLSearchParams(window.location.search);
+
+    if (searchParams.has('search')) {
+      searchQuery.value = searchParams.get('search');
+    }
+
     if (searchParams.has('focus')) {
       searchInput.value.focus();
     }

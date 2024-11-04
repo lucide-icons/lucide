@@ -45,7 +45,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
 <body>
   <div>
     <svg
-      class="lucide-icon lucide lucide-smile "
+      class="lucide-icon lucide lucide-smile"
       fill="none"
       height="48"
       stroke="red"
@@ -98,7 +98,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
        stroke-linecap="round"
        stroke-linejoin="round"
        data-testid="smile-icon"
-       class="lucide-icon lucide lucide-smile "
+       class="lucide-icon lucide lucide-smile"
   >
     <circle cx="12"
             cy="12"
@@ -127,7 +127,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
 <body>
   <div>
     <svg
-      class="lucide-icon lucide lucide-smile "
+      class="lucide-icon lucide lucide-smile"
       fill="none"
       height="24"
       stroke="currentColor"
@@ -172,7 +172,7 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
 <body>
   <div>
     <svg
-      class="lucide-icon lucide lucide-smile "
+      class="lucide-icon lucide lucide-smile"
       fill="none"
       height="24"
       stroke="currentColor"

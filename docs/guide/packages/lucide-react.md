@@ -61,6 +61,26 @@ const App = () => {
 };
 ```
 
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-react';
+import { burger } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={burger} />
+);
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.
@@ -109,7 +129,8 @@ Example with React suspense:
 
 ```tsx
 import React, { lazy, Suspense } from 'react';
-import { dynamicIconImports, LucideProps } from 'lucide-react';
+import { LucideProps } from 'lucide-react';
+import dynamicIconImports from 'lucide-react/dynamicIconImports';
 
 const fallback = <div style={{ background: '#ddd', width: 24, height: 24 }}/>
 

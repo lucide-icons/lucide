@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "jguddas"
+  ],
+  "tags": [
+    "music",
+    "audio",
+    "stop"
+  ],
+  "categories": [
+    "multimedia",
+    "shapes"
+  ],
+  "aliases": [
+    "pause-octagon"
+  ]
+}

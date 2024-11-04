@@ -2,8 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "wojtekmaj",
-    "ericfennis",
-    "karsa-mistmere"
+    "ericfennis"
   ],
   "tags": [
     "bidirectional",

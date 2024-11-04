@@ -1,7 +1,7 @@
-import {optimize} from 'svgo';
-import prettier from 'prettier';
-import {parseSync, stringify} from 'svgson';
-import DEFAULT_ATTRS from './default-attrs.json' assert { type: 'json' };
+import { optimize } from 'svgo';
+import * as prettier from 'prettier';
+import { parseSync, stringify } from 'svgson';
+import DEFAULT_ATTRS from '../../tools/build-icons/render/default-attrs.json' assert { type: 'json' };
 
 /**
  * Optimize SVG with `svgo`.
@@ -25,8 +25,8 @@ async function optimizeSvg(svg, path) {
         name: 'removeAttrs',
         params: {
           attrs: '(fill|stroke.*)',
-        }
-      }
+        },
+      },
     ],
   });
 
@@ -55,9 +55,7 @@ function processSvg(svg, path) {
   return (
     optimizeSvg(svg, path)
       .then(setAttrs)
-      .then((optimizedSvg) =>
-        prettier.format(optimizedSvg, {parser: 'babel'}),
-      )
+      .then((optimizedSvg) => prettier.format(optimizedSvg, { parser: 'babel' }))
       // remove semicolon inserted by prettier
       // because prettier thinks it's formatting JSX not HTML
       .then((svg) => svg.replace(/;/g, ''))
