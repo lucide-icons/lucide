@@ -9,7 +9,7 @@ const getImportString = (
   iconName,
   aliasImportFileExtension,
   deprecated,
-  deprecationReason = '',
+  deprecationReason = ''
 ) =>
   deprecated
     ? `export {\n` +
@@ -66,7 +66,7 @@ export default async function generateAliasesFile({
         importString += getImportString(
           `Lucide${componentName}`,
           iconName,
-          aliasImportFileExtension,
+          aliasImportFileExtension
         );
       }
 
@@ -83,8 +83,13 @@ export default async function generateAliasesFile({
               : '';
 
             if (separateAliasesFile) {
-              const output = `export { default } from "./${iconName}${separateAliasesFileExtension ? iconFileExtension : ''}";\n`;
-              const location = path.join(iconsDistDirectory, `${alias.name}${separateAliasesFileExtension ?? iconFileExtension}`);
+              const output = `export { default } from "./${iconName}${
+                separateAliasesFileExtension ? iconFileExtension : ''
+              }";\n`;
+              const location = path.join(
+                iconsDistDirectory,
+                `${alias.name}${separateAliasesFileExtension ?? iconFileExtension}`
+              );
 
               await fs.promises.writeFile(location, output, 'utf-8');
             }
@@ -101,7 +106,7 @@ export default async function generateAliasesFile({
               exportFileIcon,
               aliasImportFileExtension,
               alias.deprecated,
-              deprecationReason,
+              deprecationReason
             );
 
             if (!aliasNamesOnly) {
@@ -110,7 +115,7 @@ export default async function generateAliasesFile({
                 exportFileIcon,
                 aliasImportFileExtension,
                 alias.deprecated,
-                deprecationReason,
+                deprecationReason
               );
 
               importString += getImportString(
@@ -118,15 +123,15 @@ export default async function generateAliasesFile({
                 exportFileIcon,
                 aliasImportFileExtension,
                 alias.deprecated,
-                deprecationReason,
+                deprecationReason
               );
             }
-          }),
+          })
         );
       }
 
       appendFile(importString, fileName, outputDirectory);
-    }),
+    })
   );
 
   appendFile('\n', fileName, outputDirectory);

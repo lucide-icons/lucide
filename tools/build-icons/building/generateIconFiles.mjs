@@ -62,7 +62,10 @@ export default ({
 
     if (separateIconFileExport) {
       const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
-      const location = path.join(iconsDistDirectory, `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`);
+      const location = path.join(
+        iconsDistDirectory,
+        `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`
+      );
 
       await fs.promises.writeFile(location, output, 'utf-8');
     }
