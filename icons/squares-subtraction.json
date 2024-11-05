@@ -1,13 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "EthanHazel"
+    "EthanHazel",
+    "jguddas"
   ],
   "tags": [
+    "sqaure",
     "pathfinder",
     "path",
-    "exclude",
+    "minus",
+    "subtract",
+    "subtraction",
     "shape",
+    "front",
     "vector"
   ],
   "categories": [

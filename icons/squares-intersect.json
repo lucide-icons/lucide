@@ -1,9 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "EthanHazel"
+    "EthanHazel",
+    "jguddas"
   ],
   "tags": [
+    "sqaure",
     "pathfinder",
     "path",
     "intersect",
