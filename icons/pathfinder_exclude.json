@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel"
+  ],
+  "tags": [
+    "pathfinder",
+    "path",
+    "exclude",
+    "vector"
+  ],
+  "categories": [
+    "design"
+  ]
+}
