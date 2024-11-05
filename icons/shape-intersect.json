@@ -6,8 +6,9 @@
   "tags": [
     "pathfinder",
     "path",
-    "unite",
-    "merge",
+    "intersect",
+    "shape",
+    "include",
     "vector"
   ],
   "categories": [
