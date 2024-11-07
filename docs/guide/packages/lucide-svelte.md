@@ -52,10 +52,10 @@ For faster builds and load times, you can import icons directly from the `lucide
 
 ```svelte
 <script>
-  import AlertCircle from 'lucide-svelte/icons/alert-circle';
+  import CircleAlert from "lucide-svelte/icons/circle-alert";
 </script>
 
-<AlertCircle color="#ff3e98" />
+<CircleAlert color="#ff3e98" />
 ```
 
 ## Props
