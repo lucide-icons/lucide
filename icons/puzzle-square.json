@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel"
+  ],
+  "tags": [
+    "component",
+    "module",
+    "part",
+    "piece",
+    "extension",
+    "plugin"
+  ],
+  "categories": [
+    "development",
+    "gaming"
+  ]
+}
