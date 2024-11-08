@@ -15,10 +15,20 @@ const BASE_URL = 'https://lucide.dev/api/gh-icon';
 
 const changedFilesPathString = process.env.CHANGED_FILES;
 
+if (changedFilesPathString == null) {
+  console.error('CHANGED_FILES env variable is not set');
+  process.exit(1);
+}
+
 const changedFiles = changedFilesPathString
   .split(' ')
   .map((file) => file.replace('.json', '.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
+
+if (changedFiles.length === 0) {
+  console.log('No changed icons found');
+  process.exit(0);
+}
 
 const getImageTagsByFiles = (files, getBaseUrl, width) =>
   files.map((file) => {
