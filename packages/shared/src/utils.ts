@@ -41,6 +41,11 @@ export const toPascalCase = <T extends string>(string: T): CamelToPascal<T> => {
 export const mergeClasses = <ClassType = string | undefined | null>(...classes: ClassType[]) =>
   classes
     .filter((className, index, array) => {
-      return Boolean(className) && array.indexOf(className) === index;
+      return (
+        Boolean(className) &&
+        (className as string).trim() !== '' &&
+        array.indexOf(className) === index
+      );
     })
-    .join(' ');
+    .join(' ')
+    .trim();
