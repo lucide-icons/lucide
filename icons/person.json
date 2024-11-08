@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "jguddas"
+  ],
+  "tags": [
+    "people",
+    "human",
+    "stick figure",
+    "man",
+    "men",
+    "women",
+    "woman"
+  ],
+  "categories": [
+    "accessibility",
+    "people"
+  ]
+}
