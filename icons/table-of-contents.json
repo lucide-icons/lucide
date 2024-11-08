@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "toc",
+    "outline",
+    "navigation",
+    "document structure",
+    "index",
+    "overview",
+    "sections",
+    "chapters",
+    "content",
+    "documentation",
+    "manual",
+    "knowledge base",
+    "faq"
+  ],
+  "categories": [
+    "text"
+  ]
+}

@@ -37,6 +37,23 @@ import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular
 export class AppModule { }
 ```
 
+or using standalone version:
+
+```js
+import { Component } from '@angular/core';
+import { LucideAngularModule, FileIcon } from 'lucide-angular';
+
+@Component({
+  standalone: true,
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  imports: [LucideAngularModule]
+})
+export class AppComponent {
+  readonly FileIcon = FileIcon;
+}
+```
 ### Step 2: Use the icons in templates
 
 Within your templates you may now use one of the following component tags to insert an icon:
@@ -46,6 +63,13 @@ Within your templates you may now use one of the following component tags to ins
 <lucide-icon name="home" class="my-icon"></lucide-icon>
 <i-lucide name="menu" class="my-icon"></i-lucide>
 <span-lucide name="user-check" class="my-icon"></span-lucide>
+```
+for standalone
+```html
+<lucide-angular [img]="FileIcon" class="my-icon"></lucide-angular>
+<lucide-icon [img]="FileIcon" class="my-icon"></lucide-icon>
+<i-lucide [img]="FileIcon" class="my-icon"></i-lucide>
+<span-lucide [img]="FileIcon" class="my-icon"></span-lucide>
 ```
 
 ### Props
