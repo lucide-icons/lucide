@@ -17,9 +17,25 @@ import {
 
 To be consistent in your imports or want to change the autocompletion of Lucide icons in your IDE there an option to able the choose the import name style you want.
 
-This can be done by creating a custom module declaration file. And override the lucide imports. This only works for TypeScript projects.
+This can be done by creating a custom module declaration file to override the lucide imports and turning off the autocomplete in your IDE.
+
+### Turn off autocomplete in your IDE
+
+```json [.vscode/settings.json]
+{
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "lucide-react", // or
+    "lucide-preact", // or
+    "lucide-react-native", // or
+    "lucide-vue-next",
+  ]
+}
+```
+
+### Create a custom module declaration file
 
 Only available for `lucide-react`, `lucide-preact`, `lucide-react-native`, `lucide-vue-next` package.
+This will enable you to choose the import name style you want to use in your project.
 
 ::: code-group
 
