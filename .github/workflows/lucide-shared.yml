@@ -1,21 +1,18 @@
-name: Lucide React Native checks
+name: Lucide Shared Checks
 
 on:
   pull_request:
     paths:
-      - packages/lucide-react-native/**
       - packages/shared/**
-      - tools/build-icons/**
-      - tools/rollup-plugins/**
       - pnpm-lock.yaml
 
 jobs:
-  lucide-react-native:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3.8.1
         with:
           node-version: 18
           cache: 'pnpm'
@@ -24,4 +21,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Test
-        run: pnpm --filter lucide-react-native test
+        run: pnpm --filter lucide-react test
