@@ -9,8 +9,18 @@
     "karsa-mistmere",
     "danielbayley",
     "jordan808",
-    "LienMaas"
+    "LienMaas",
+    "jguddas"
   ],
-  "tags": ["delivery", "van", "shipping", "haulage", "lorry", "electric"],
-  "categories": ["transportation"]
+  "tags": [
+    "delivery",
+    "van",
+    "shipping",
+    "haulage",
+    "lorry",
+    "electric"
+  ],
+  "categories": [
+    "transportation"
+  ]
 }
