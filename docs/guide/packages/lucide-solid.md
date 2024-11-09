@@ -41,6 +41,19 @@ const App = () => {
 export default App;
 ```
 
+Vite loading/performing issues with the dev server can be resolved by import icons directly from the `lucide-solid/icons` directory:
+
+```jsx
+import Camera from 'lucide-solid/icons/camera';
+
+// Usage
+const App = () => {
+  return <Camera color="red" size={48} />;
+};
+
+export default App;
+```
+
 ## Props
 
 | name                  | type      | default      |
@@ -59,6 +72,26 @@ To customize the appearance of an icon, you can pass custom properties as props 
 const App = () => {
   return <Camera fill="red" stroke-linejoin="bevel" />;
 };
+```
+
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like the regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-solid';
+import { burger, sausage } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={sausage} color="red"/>
+);
 ```
 
 ## One generic icon component
