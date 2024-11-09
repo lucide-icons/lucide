@@ -8,9 +8,15 @@
     "computer",
     "screen",
     "remote",
-    "success"
+    "success",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
   ],
   "categories": [
-    "devices"
+    "devices",
+    "notifications"
   ]
 }
