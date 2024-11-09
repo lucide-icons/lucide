@@ -1,17 +1,18 @@
 {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "MONOTYPEEE"
-    ],
-    "tags": [
-      "audio",
-      "earphone",
-      "sound",
-      "music"
-    ],
-    "categories": [
-      "devices",
-      "connectivity",
-      "multimedia"
-    ]
-  }
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MONOTYPEEE",
+    "jguddas"
+  ],
+  "tags": [
+    "audio",
+    "earphone",
+    "sound",
+    "music"
+  ],
+  "categories": [
+    "devices",
+    "connectivity",
+    "multimedia"
+  ]
+}
