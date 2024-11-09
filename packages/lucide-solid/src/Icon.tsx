@@ -1,21 +1,12 @@
-import { For, JSX, splitProps } from 'solid-js';
+import { For, splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
-
-/**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
- */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+import { mergeClasses, toKebabCase } from '@lucide/shared';
 
 interface IconProps {
-  name: string
-  iconNode: IconNode
+  name?: string;
+  iconNode: IconNode;
 }
 
 const Icon = (props: LucideProps & IconProps) => {
@@ -27,34 +18,41 @@ const Icon = (props: LucideProps & IconProps) => {
     'class',
     'name',
     'iconNode',
-    'absoluteStrokeWidth'
+    'absoluteStrokeWidth',
   ]);
 
   return (
     <svg
       {...defaultAttributes}
       width={localProps.size ?? defaultAttributes.width}
-			height={localProps.size ?? defaultAttributes.height}
-			stroke={localProps.color ?? defaultAttributes.stroke}
-			stroke-width={
+      height={localProps.size ?? defaultAttributes.height}
+      stroke={localProps.color ?? defaultAttributes.stroke}
+      stroke-width={
         localProps.absoluteStrokeWidth
-        ? Number(localProps.strokeWidth ?? defaultAttributes['stroke-width']) * 24 / (Number(localProps.size))
-        : Number(localProps.strokeWidth ?? defaultAttributes['stroke-width'])
+          ? (Number(localProps.strokeWidth ?? defaultAttributes['stroke-width']) * 24) /
+            Number(localProps.size)
+          : Number(localProps.strokeWidth ?? defaultAttributes['stroke-width'])
       }
-      class={`lucide lucide-${toKebabCase(localProps?.name ?? 'icon')} ${
-          localProps.class != null ? localProps.class : ''
-      }`}
+      class={mergeClasses(
+        'lucide',
+        'lucide-icon',
+        localProps.name != null ? `lucide-${toKebabCase(localProps?.name)}` : undefined,
+        localProps.class != null ? localProps.class : '',
+      )}
       {...rest}
     >
       <For each={localProps.iconNode}>
         {([elementName, attrs]) => {
           return (
-            <Dynamic component={elementName} {...attrs} />
+            <Dynamic
+              component={elementName}
+              {...attrs}
+            />
           );
         }}
       </For>
     </svg>
-  )
-}
+  );
+};
 
-export default Icon
+export default Icon;

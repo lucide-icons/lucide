@@ -27,6 +27,7 @@ type LucideAngularComponentChanges = {
   size?: TypedChange<number>;
   strokeWidth?: TypedChange<number>;
   absoluteStrokeWidth?: TypedChange<boolean>;
+  class: TypedChange<string>;
 };
 
 export function formatFixed(number: number, decimals = 3): string {
@@ -40,6 +41,7 @@ export function formatFixed(number: number, decimals = 3): string {
 export class LucideAngularComponent implements OnChanges {
   @Input() class?: string;
   @Input() name?: string | LucideIconData;
+  @Input() img?: LucideIconData;
   @Input() color?: string;
   @Input() absoluteStrokeWidth = false;
   defaultSize: number;
@@ -49,13 +51,9 @@ export class LucideAngularComponent implements OnChanges {
     @Inject(Renderer2) private renderer: Renderer2,
     @Inject(ChangeDetectorRef) private changeDetector: ChangeDetectorRef,
     @Inject(LUCIDE_ICONS) private iconProviders: LucideIconProviderInterface[],
-    @Inject(LucideIconConfig) private iconConfig: LucideIconConfig
+    @Inject(LucideIconConfig) private iconConfig: LucideIconConfig,
   ) {
     this.defaultSize = defaultAttributes.height;
-  }
-
-  @Input() set img(img: LucideIconData) {
-    this.name = img;
   }
 
   _size?: number;
@@ -87,23 +85,31 @@ export class LucideAngularComponent implements OnChanges {
   }
 
   ngOnChanges(changes: LucideAngularComponentChanges): void {
-    this.color = this.color ?? this.iconConfig.color;
-    this.size = this.parseNumber(this.size ?? this.iconConfig.size);
-    this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
-    this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
-    if (changes.name || changes.img) {
-      const name = changes.img?.currentValue ?? changes.name?.currentValue;
-      if (typeof name === 'string') {
-        const icoOfName = this.getIcon(this.toPascalCase(name));
+    if (
+      changes.name ||
+      changes.img ||
+      changes.color ||
+      changes.size ||
+      changes.absoluteStrokeWidth ||
+      changes.strokeWidth ||
+      changes.class
+    ) {
+      this.color = this.color ?? this.iconConfig.color;
+      this.size = this.parseNumber(this.size ?? this.iconConfig.size);
+      this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
+      this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
+      const nameOrIcon = this.img ?? this.name;
+      if (typeof nameOrIcon === 'string') {
+        const icoOfName = this.getIcon(this.toPascalCase(nameOrIcon));
         if (icoOfName) {
           this.replaceElement(icoOfName);
         } else {
           throw new Error(
-            `The "${name}" icon has not been provided by any available icon providers.`
+            `The "${nameOrIcon}" icon has not been provided by any available icon providers.`,
           );
         }
-      } else if (Array.isArray(name)) {
-        this.replaceElement(name);
+      } else if (Array.isArray(nameOrIcon)) {
+        this.replaceElement(nameOrIcon);
       } else {
         throw new Error(`No icon name or image has been provided.`);
       }
@@ -132,7 +138,7 @@ export class LucideAngularComponent implements OnChanges {
         ...this.class
           .split(/ /)
           .map((a) => a.trim())
-          .filter((a) => a.length > 0)
+          .filter((a) => a.length > 0),
       );
     }
     const childElements = this.elem.nativeElement.childNodes;
@@ -145,7 +151,7 @@ export class LucideAngularComponent implements OnChanges {
   toPascalCase(str: string): string {
     return str.replace(
       /(\w)([a-z0-9]*)(_|-|\s*)/g,
-      (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase()
+      (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase(),
     );
   }
 
@@ -174,7 +180,7 @@ export class LucideAngularComponent implements OnChanges {
   private createElement([tag, attrs, children = []]: readonly [
     string,
     SvgAttributes,
-    LucideIconData?
+    LucideIconData?,
   ]) {
     const element = this.renderer.createElement(tag, 'http://www.w3.org/2000/svg');
 

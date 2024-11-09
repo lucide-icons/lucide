@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "inspector",
+    "element",
+    "mouse",
+    "click",
+    "pointer",
+    "box",
+    "browser",
+    "selector",
+    "target",
+    "dom",
+    "node"
+  ],
+  "categories": [
+    "arrows",
+    "cursors",
+    "development",
+    "tools"
+  ],
+  "aliases": [
+    "mouse-pointer-square-dashed"
+  ]
+}

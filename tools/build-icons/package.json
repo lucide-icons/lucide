@@ -1,23 +1,26 @@
 {
   "name": "@lucide/build-icons",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
+  "description": "A internal used package to build icon code files for the lucide icon library packages.",
+  "version": "1.1.0",
   "main": "index.mjs",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "start": "node ./main.mjs"
+    "start": "node ./cli.mjs"
   },
   "bin": {
-    "build-icons": "./main.mjs"
+    "build-icons": "./cli.mjs"
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 20"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@lucide/helpers": "workspace:*"
+  },
   "dependencies": {
+    "@lucide/helpers": "^1.0.0",
     "minimist": "^1.2.7",
     "node-fetch": "^3.2.10",
     "prettier": "2.7.1",

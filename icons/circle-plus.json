@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "add",
+    "new",
+    "increase",
+    "increment",
+    "positive",
+    "calculate",
+    "crosshair",
+    "aim",
+    "target",
+    "scope",
+    "sight",
+    "reticule",
+    "maximum",
+    "upgrade",
+    "extra",
+    "operator",
+    "join",
+    "concatenate",
+    "code",
+    "coding",
+    "+"
+  ],
+  "categories": [
+    "maths",
+    "development",
+    "shapes",
+    "cursors",
+    "gaming"
+  ],
+  "aliases": [
+    "plus-circle"
+  ]
+}

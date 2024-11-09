@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "back",
+    "menu",
+    "panel"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "shapes"
+  ],
+  "aliases": [
+    "chevron-down-square"
+  ]
+}

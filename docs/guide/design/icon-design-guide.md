@@ -52,7 +52,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![optical-volume-high](../../images/optical-volume-high.svg?raw=true "optical-volume-high")
 
-**Tip:** place your icon next to circle or square and blur them both; your icon should not feel much darker than the base shape.
+**Tip:** place your icon next to the circle or square icon and blur them both; your icon should not feel much darker than the base shape.
 
 ### 10. Icons should be visually centered by their center of gravity.
 
@@ -76,7 +76,7 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![curvature-uneven](../../images/curvature-uneven.svg?raw=true "curvature-uneven")
 
-**Tip:** make sure to use arcs or quadratic curves, when using cubic curves control points should have mirrored angles for smooth curves.
+**Tip:** make sure to use arcs or quadratic curves. When using cubic curves control points should have mirrored angles for smooth curves.
 
 ### 13. Icons should aim to be pixel perfect so that they will be sharp on low DPI displays.
 
@@ -106,6 +106,15 @@ Here are rules that should be followed to keep quality and consistency when maki
 6. Names containing numerals are not allowed, unless the number itself is represented in the icon.\
    For example: `arrow-down-0-to-1` contains both numerals.
 
+7. Icons depicting multiple elements (e.g. a person and a circle) of different sizes must list these elements in decreasing order of size.\
+   For example: if the circle is bigger, it should be `circle-person`, if the person is bigger, it should be `person-circle`.
+
+8. Icons depicting multiple elements of roughly equal sizes (e.g. a `ruler` and a `pencil`) must list these elements front to back in case one element is in front of the other, otherwise in English reading order (top to bottom, left to right).\
+   For example: if the `pencil` is either in front of, above or left of `ruler`, it should be `pencil-ruler`, otherwise, it should be `ruler-pencil`.
+
+9. Icons depicting some sort of variation of an element must use the `[element]-[modifier]` naming scheme, with modifiers being applied to each element respectively.\
+   For example: a dashed circle must be named `circle-dashed`, not `dashed-circle`, and in coordination with the previous guidelines, a dashed circle containing a broken heart would be named `circle-dashed-heart-broken`, due to the heart being smaller than the circle.
+
 ## Code Conventions
 
 Before an icon is added to the library, we like to have readable and optimized SVG code.
@@ -133,7 +142,7 @@ For each icon these attributes are applied, corresponding to the above rules.
 ### Minify paths
 
 The code of paths can sometimes get quite large. To reduce file size we like to minify the code.
-We recommend to use the [SVGOMG](https://jakearchibald.github.io/svgomg/) to minify paths to 2 points of precision.
+We recommend to use [SVGOMG](https://jakearchibald.github.io/svgomg/) to minify paths to 2 points of precision.
 
 ### Allowed elements
 

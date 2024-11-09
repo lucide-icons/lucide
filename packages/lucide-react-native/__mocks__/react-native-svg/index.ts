@@ -3,14 +3,14 @@ import React from 'react';
 import type { LucideProps } from '../../src/createReactComponent';
 export type { SvgProps } from 'react-native-svg';
 
-const createComponent = function(name: string) {
+const createComponent = function (name: string) {
   const component = (props: LucideProps) => {
     return React.createElement(name, props, props.children);
-  }
+  };
 
   component.displayName = name;
 
-  return component
+  return component;
 };
 
 // Mock all react-native-svg exports

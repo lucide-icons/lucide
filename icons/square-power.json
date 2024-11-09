@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "on",
+    "off",
+    "device",
+    "switch",
+    "toggle",
+    "binary",
+    "boolean",
+    "reboot",
+    "restart",
+    "button",
+    "keyboard",
+    "troubleshoot"
+  ],
+  "categories": [
+    "connectivity"
+  ],
+  "aliases": [
+    "power-square"
+  ]
+}

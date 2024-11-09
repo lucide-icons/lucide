@@ -13,8 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -29,7 +27,7 @@ jobs:
       - name: Create font in ./lucide-font
         run: pnpm build:font
 
-      - name: "Upload to Artifacts"
+      - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v3
         with:
           name: lucide-font
