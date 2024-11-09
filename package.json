@@ -29,6 +29,7 @@
     "postinstall": "husky install",
     "lint:es": "eslint .",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
+    "lint:format-fix": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --write",
     "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
     "lint:json:categories": "ajv --spec=draft2020 -s category.schema.json -d 'categories/*.json' > /dev/null",
     "lint:json": "pnpm run lint:json:icons && pnpm run lint:json:categories",
