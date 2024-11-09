@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "EthanHazel",
+    "jamiemlaw"
   ],
   "tags": [
     "clone",
@@ -25,5 +27,11 @@
     "text",
     "development",
     "maths"
+  ],
+  "aliases": [
+    {
+      "name": "copy-slash",
+      "deprecationReason": "alias.name"
+    }
   ]
 }

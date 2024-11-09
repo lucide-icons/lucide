@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis",
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "EthanHazel",
+    "jamiemlaw"
   ],
   "tags": [
     "clone",
@@ -14,5 +16,11 @@
   ],
   "categories": [
     "text"
+  ],
+  "aliases": [
+    {
+      "name": "copy",
+      "deprecationReason": "alias.name"
+    }
   ]
 }

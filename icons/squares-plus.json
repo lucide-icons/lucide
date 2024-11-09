@@ -2,20 +2,26 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "EthanHazel",
+    "jamiemlaw"
   ],
   "tags": [
     "clone",
     "duplicate",
-    "remove",
-    "delete",
-    "collapse",
-    "subtract",
+    "add",
     "multiple",
-    "-"
+    "expand",
+    "+"
   ],
   "categories": [
     "text",
     "maths"
+  ],
+  "aliases": [
+    {
+      "name": "copy-plus",
+      "deprecationReason": "alias.name"
+    }
   ]
 }

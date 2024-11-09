@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "EthanHazel",
+    "jamiemlaw"
   ],
   "tags": [
     "cancel",
@@ -18,5 +20,11 @@
   "categories": [
     "notifications",
     "maths"
+  ],
+  "aliases": [
+    {
+      "name": "copy-x",
+      "deprecationReason": "alias.name"
+    }
   ]
 }

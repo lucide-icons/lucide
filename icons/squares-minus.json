@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "EthanHazel",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "clone",
+    "duplicate",
+    "remove",
+    "delete",
+    "collapse",
+    "subtract",
+    "multiple",
+    "-"
+  ],
+  "categories": [
+    "text",
+    "maths"
+  ],
+  "aliases": [
+    {
+      "name": "copy-minus",
+      "deprecationReason": "alias.name"
+    }
+  ]
+}
