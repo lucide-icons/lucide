@@ -9,6 +9,8 @@ export function deprecationReasonTemplate(
   switch (deprecationReason) {
     case 'alias.typo':
       return `Renamed because of typo, use {@link ${componentName}} instead.${removalNotice}`;
+    case 'alias.duplicate':
+      return `The icon was combined with another icon that shared the same usecase, use {@link ${componentName}} instead.${removalNotice}`;
     case 'alias.naming':
       return `The name of this icon was changed because it didn't meet our guidelines anymore, use {@link ${componentName}} instead.${removalNotice}`;
     case 'icon.brand':

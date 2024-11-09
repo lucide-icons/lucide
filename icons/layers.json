@@ -17,5 +17,11 @@
   "categories": [
     "design",
     "layout"
+  ],
+  "aliases": [
+    {
+      "name": "layers-3",
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }
