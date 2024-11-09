@@ -25,7 +25,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map((input) => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: plugins({ pkg, minify }),
       external: ['react', 'react-native-svg'],
       output: {
         name: packageName,
@@ -55,6 +55,26 @@ export default [
     output: [
       {
         file: `dist/${outputFileName}.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
         format: 'es',
       },
     ],

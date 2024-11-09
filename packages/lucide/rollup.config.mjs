@@ -46,7 +46,7 @@ const configs = bundles
               }),
             ]
           : []),
-        ...plugins(pkg, minify),
+        ...plugins({ pkg, minify }),
       ],
       output: {
         name: outputFileName,

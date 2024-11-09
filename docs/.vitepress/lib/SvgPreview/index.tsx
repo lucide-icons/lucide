@@ -2,7 +2,23 @@ import React from 'react';
 import { PathProps, Path } from './types';
 import { getPaths, assert } from './utils';
 
-const Grid = ({
+export const darkModeCss = `
+  @media screen and (prefers-color-scheme: light) {
+    .svg-preview-grid-rect { fill: none }
+  }
+  @media screen and (prefers-color-scheme: dark) {
+    .svg-preview-grid-rect { fill: none }
+    .svg
+    .svg-preview-grid-group,
+    .svg-preview-radii-group,
+    .svg-preview-shadow-mask-group,
+    .svg-preview-shadow-group {
+      stroke: #fff;
+    }
+  }
+`;
+
+export const Grid = ({
   radius,
   fill = '#fff',
   ...props
@@ -25,11 +41,29 @@ const Grid = ({
       fill={fill}
     />
     <path
+      strokeDasharray={'0 0.1 ' + '0.1 0.15 '.repeat(11) + '0 0.15'}
+      strokeWidth={0.1}
       d={
         props.d ||
         new Array(Math.floor(24 - 1))
           .fill(null)
-          .flatMap((_, i) => [
+          .map((_, i) => i)
+          .filter((i) => i % 3 !== 2)
+          .flatMap((i) => [
+            `M${props.strokeWidth} ${i + 1}h${24 - props.strokeWidth * 2}`,
+            `M${i + 1} ${props.strokeWidth}v${24 - props.strokeWidth * 2}`,
+          ])
+          .join('')
+      }
+    />
+    <path
+      d={
+        props.d ||
+        new Array(Math.floor(24 - 1))
+          .fill(null)
+          .map((_, i) => i)
+          .filter((i) => i % 3 === 2)
+          .flatMap((i) => [
             `M${props.strokeWidth} ${i + 1}h${24 - props.strokeWidth * 2}`,
             `M${i + 1} ${props.strokeWidth}v${24 - props.strokeWidth * 2}`,
           ])
@@ -283,7 +317,6 @@ const Handles = ({
   'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
   any
 >) => {
-  console.log(paths);
   return (
     <g
       className="svg-preview-handles-group"
@@ -322,19 +355,6 @@ const SvgPreview = React.forwardRef<
 >(({ src, children, showGrid = false, ...props }, ref) => {
   const paths = typeof src === 'string' ? getPaths(src) : src;
 
-  const darkModeCss = `@media screen and (prefers-color-scheme: light) {
-  .svg-preview-grid-rect { fill: none }
-}
-@media screen and (prefers-color-scheme: dark) {
-  .svg-preview-grid-rect { fill: none }
-  .svg
-  .svg-preview-grid-group,
-  .svg-preview-radii-group,
-  .svg-preview-shadow-mask-group,
-  .svg-preview-shadow-group {
-    stroke: #fff;
-  }
-}`;
   return (
     <svg
       ref={ref}
