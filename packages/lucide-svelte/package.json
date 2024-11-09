@@ -65,11 +65,11 @@
     "@tsconfig/svelte": "^5.0.0",
     "jest-serializer-html": "^7.1.0",
     "jsdom": "^20.0.3",
-    "svelte": "^4.0.1",
+    "svelte": "^4.2.19",
     "svelte-check": "^3.4.4",
     "svelte-preprocess": "^5.0.4",
     "typescript": "^5.1.6",
-    "vite": "5.0.13",
+    "vite": "5.1.8",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
