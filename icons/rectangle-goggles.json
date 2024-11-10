@@ -1,11 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "EthanHazel"
+    "EthanHazel",
+    "jguddas"
   ],
   "tags": [
     "vr",
-    "virtual reality",
+    "virtual",
+    "augmented",
+    "reality",
     "headset",
     "goggles"
   ],
