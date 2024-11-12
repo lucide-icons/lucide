@@ -171,16 +171,15 @@ watch(absoluteStrokeWidth, (enabled) => {
   margin-top: 32px;
   padding: 0;
   background: none;
-  max-width: 280px;
 }
 
 @media (min-width: 640px) {
-
   .card {
     display: grid;
     grid-template-columns: 8fr 10fr;
   }
-/*
+
+  /*
   .card-column {
     flex: 1;
   } */
