@@ -7,7 +7,7 @@ Implementation of the lucide icon library for svelte applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-svelte
+pnpm add lucide-svelte
 ```
 
 ```sh [yarn]
