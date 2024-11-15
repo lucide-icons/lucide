@@ -1,17 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "EthanHazel",
+    "staffanmowitz",
     "karsa-mistmere",
-    "ericfennis",
-    "jamiemlaw"
+    "jguddas"
   ],
   "tags": [
-    "amenities",
-    "services",
+    "toilet",
+    "potty",
     "bathroom",
-    "shower"
+    "washroom"
   ],
   "categories": [
-    "travel"
+    "devices",
+    "home"
   ]
 }

@@ -10,6 +10,8 @@ export default ({
   template,
   showLog = true,
   iconFileExtension = '.js',
+  separateIconFileExport = false,
+  separateIconFileExportExtension,
   pretty = true,
   iconsDir,
   iconMetaData,
@@ -46,6 +48,7 @@ export default ({
       deprecated,
       deprecationReason,
     });
+
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,
@@ -56,6 +59,16 @@ export default ({
       : elementTemplate;
 
     await fs.promises.writeFile(location, output, 'utf-8');
+
+    if (separateIconFileExport) {
+      const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
+      const location = path.join(
+        iconsDistDirectory,
+        `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`,
+      );
+
+      await fs.promises.writeFile(location, output, 'utf-8');
+    }
   });
 
   Promise.all(writeIconFiles)
