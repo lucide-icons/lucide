@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-svelte/**
+      - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
