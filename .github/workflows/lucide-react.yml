@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-react/**
+      - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - scripts/generateNextJSAliases.mjs

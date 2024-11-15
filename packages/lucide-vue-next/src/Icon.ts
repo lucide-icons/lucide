@@ -1,5 +1,5 @@
 import { type FunctionalComponent, h } from 'vue';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { toKebabCase } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 
