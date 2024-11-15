@@ -2,23 +2,10 @@ import path from 'path';
 import fs from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
-import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
+import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate.mjs';
+import getExportString from './getExportString.mjs';
 
-const getImportString = (
-  componentName,
-  iconName,
-  aliasImportFileExtension,
-  deprecated,
-  deprecationReason = '',
-) =>
-  deprecated
-    ? `export {\n` +
-      `  /** @deprecated ${deprecationReason} */\n` +
-      `  default as ${componentName}\n` +
-      `} from './icons/${iconName}${aliasImportFileExtension}';\n`
-    : `export { default as ${componentName} } from './icons/${iconName}${aliasImportFileExtension}';\n`;
-
-export default async function generateAliasesFile({
+export default async function generateAliasesFiles({
   iconNodes,
   outputDirectory,
   fileExtension,
@@ -31,11 +18,25 @@ export default async function generateAliasesFile({
   showLog = true,
 }) {
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
-  const fileName = path.basename(`aliases${fileExtension}`);
   const icons = Object.keys(iconNodes);
 
-  // Reset file
-  resetFile(fileName, outputDirectory);
+  const destinationDirectory = path.join(outputDirectory, 'aliases');
+
+  const aliasFileName = path.basename(`aliases${fileExtension}`);
+  const aliasPrefixesFileName = path.basename(`prefixed${fileExtension}`);
+  const aliasSuffixFileName = path.basename(`suffixed${fileExtension}`);
+
+  if (!fs.existsSync(destinationDirectory)) {
+    fs.mkdirSync(destinationDirectory);
+  }
+
+  // Reset files
+  resetFile(aliasFileName, destinationDirectory);
+
+  if (!aliasNamesOnly) {
+    resetFile(aliasPrefixesFileName, destinationDirectory);
+    resetFile(aliasSuffixFileName, destinationDirectory);
+  }
 
   // Generate Import for Icon VNodes
   await Promise.all(
@@ -51,19 +52,32 @@ export default async function generateAliasesFile({
         return alias;
       });
 
-      let importString = '';
+      let aliasFileContent = '';
+      let aliasPrefixesFileContent = '';
+      let aliasSuffixFileContent = '';
 
       if ((iconAliases != null && Array.isArray(iconAliases)) || !aliasNamesOnly) {
-        if (index > 0) {
-          importString += '\n';
+        if (index > 0 && aliasPrefixesFileContent !== '') {
+          aliasPrefixesFileContent += '\n';
         }
 
-        importString += `// ${componentName} aliases\n`;
+        if (index > 0 && aliasSuffixFileContent !== '') {
+          aliasSuffixFileContent += '\n';
+        }
+
+        if (!aliasNamesOnly) {
+          aliasPrefixesFileContent += `// ${componentName} aliases\n`;
+          aliasSuffixFileContent += `// ${componentName} aliases\n`;
+        }
       }
 
       if (!aliasNamesOnly) {
-        importString += getImportString(`${componentName}Icon`, iconName, aliasImportFileExtension);
-        importString += getImportString(
+        aliasSuffixFileContent += getExportString(
+          `${componentName}Icon`,
+          iconName,
+          aliasImportFileExtension,
+        );
+        aliasPrefixesFileContent += getExportString(
           `Lucide${componentName}`,
           iconName,
           aliasImportFileExtension,
@@ -101,7 +115,12 @@ export default async function generateAliasesFile({
 
             const exportFileIcon = separateAliasesFile ? alias.name : iconName;
 
-            importString += getImportString(
+            if (index > 0) {
+              aliasFileContent += '\n';
+            }
+
+            aliasFileContent += `// ${componentName} aliases\n`;
+            aliasFileContent += getExportString(
               componentNameAlias,
               exportFileIcon,
               aliasImportFileExtension,
@@ -110,7 +129,7 @@ export default async function generateAliasesFile({
             );
 
             if (!aliasNamesOnly) {
-              importString += getImportString(
+              aliasSuffixFileContent += getExportString(
                 `${componentNameAlias}Icon`,
                 exportFileIcon,
                 aliasImportFileExtension,
@@ -118,7 +137,7 @@ export default async function generateAliasesFile({
                 deprecationReason,
               );
 
-              importString += getImportString(
+              aliasPrefixesFileContent += getExportString(
                 `Lucide${componentNameAlias}`,
                 exportFileIcon,
                 aliasImportFileExtension,
@@ -130,13 +149,25 @@ export default async function generateAliasesFile({
         );
       }
 
-      appendFile(importString, fileName, outputDirectory);
+      appendFile(aliasFileContent, aliasFileName, destinationDirectory);
+
+      if (!aliasNamesOnly) {
+        appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, destinationDirectory);
+        appendFile(aliasSuffixFileContent, aliasSuffixFileName, destinationDirectory);
+      }
     }),
   );
 
-  appendFile('\n', fileName, outputDirectory);
+  appendFile('\n', aliasFileName, destinationDirectory);
+
+  if (!aliasNamesOnly) {
+    appendFile('\n', aliasPrefixesFileName, destinationDirectory);
+    appendFile('\n', aliasSuffixFileName, destinationDirectory);
+  }
 
   if (showLog) {
-    console.log(`Successfully generated ${fileName} file`);
+    console.log(`Successfully generated src/aliases/${aliasFileName} file`);
+    console.log(`Successfully generated src/aliases/${aliasPrefixesFileName} file`);
+    console.log(`Successfully generated src/aliases/${aliasSuffixFileName} file`);
   }
 }

@@ -8,7 +8,7 @@ import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import generateAliasesFile from './building/generateAliasesFile.mjs';
+import generateAliasesFiles from './building/aliases/generateAliasesFiles.mjs';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
@@ -70,7 +70,7 @@ async function buildIcons() {
   });
 
   if (withAliases) {
-    await generateAliasesFile({
+    await generateAliasesFiles({
       iconNodes: icons,
       iconMetaData,
       aliasNamesOnly,
@@ -105,7 +105,7 @@ async function buildIcons() {
 }
 
 try {
-  buildIcons();
+  await buildIcons();
 } catch (error) {
   console.error(error);
 }
