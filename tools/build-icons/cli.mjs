@@ -3,20 +3,19 @@ import fs from 'fs';
 import path from 'path';
 import getArgumentOptions from 'minimist';
 
+import { readSvgDirectory } from '@lucide/helpers';
 import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import { readSvgDirectory, getCurrentDirPath } from '../../scripts/helpers.mjs';
-import generateAliasesFile from './building/generateAliasesFile.mjs';
+import generateAliasesFiles from './building/aliases/generateAliasesFiles.mjs';
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 
-const currentDir = getCurrentDirPath(import.meta.url);
-
-const ICONS_DIR = path.resolve(currentDir, '../../icons');
+const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -30,6 +29,7 @@ const {
   iconFileExtension = '.js',
   importImportFileExtension = '',
   exportFileName = 'index.js',
+  exportModuleNameCasing = 'pascal',
   withAliases = false,
   aliasNamesOnly = false,
   withDynamicImports = false,
@@ -65,13 +65,14 @@ async function buildIcons() {
   });
 
   if (withAliases) {
-    await generateAliasesFile({
+    await generateAliasesFiles({
       iconNodes: icons,
       iconMetaData,
       aliasNamesOnly,
       iconFileExtension,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
+      exportModuleNameCasing,
       aliasImportFileExtension,
       separateAliasesFile,
       showLog: !silent,
@@ -92,12 +93,13 @@ async function buildIcons() {
     path.join(OUTPUT_DIR, 'icons', exportFileName),
     path.join(OUTPUT_DIR, 'icons'),
     icons,
+    exportModuleNameCasing,
     importImportFileExtension,
   );
 }
 
 try {
-  buildIcons();
+  await buildIcons();
 } catch (error) {
   console.error(error);
 }

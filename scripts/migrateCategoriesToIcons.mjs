@@ -1,6 +1,11 @@
 import path from 'path';
 import categories from '../categories.json' assert { type: 'json' };
-import { mergeArrays, writeFile, readAllMetadata, getCurrentDirPath } from './helpers.mjs';
+import {
+  mergeArrays,
+  writeFile,
+  readAllMetadata,
+  getCurrentDirPath,
+} from '../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
