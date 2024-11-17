@@ -7,7 +7,7 @@ export interface IconMetaData {
   contributors: string[];
   aliases?: string[];
   deprecated?: boolean;
-  deprecationReason?: string;  
+  deprecationReason?: string;
   toBeRemovedInVersion?: string;
 }
 
