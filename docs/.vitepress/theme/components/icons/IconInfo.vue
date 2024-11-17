@@ -45,7 +45,7 @@ const DiamondIcon = createLucideIcon('Diamond', diamond);
       <Badge
         v-if="icon.deprecated"
         class="deprecated-badge"
-        :title="`Reason: ${icon.deprecationReason}. To be removed in ${icon.toBeRemovedInVersion}`"
+        :title="deprecationReasonTemplate(…"
       >
         Deprecated
       </Badge>
