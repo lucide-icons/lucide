@@ -42,7 +42,7 @@ onMounted(() => {
   font-weight: 400;
   background: var(--vp-c-brand-dark);
   color: white;
-  z-index: 10;
+  z-index: 99;
   white-space: nowrap;
   padding: 2px 8px;
   border-radius: 4px;
