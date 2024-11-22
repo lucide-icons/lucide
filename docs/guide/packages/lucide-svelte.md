@@ -87,54 +87,95 @@ The package includes type definitions for all icons. This is useful if you want 
 
 ### TypeScript Example
 
+#### Svelte 4
+
 ```svelte
 <script lang="ts">
-  import Home from 'lucide-svelte/icons/home';
-  import Library from 'lucide-svelte/icons/library';
-  import Cog from 'lucide-svelte/icons/cog';
-  import type { ComponentType } from 'svelte';
-  import type { Icon } from 'lucide-svelte';
+	import { Home, Library, Cog, type Icon } from 'lucide-svelte';
+	import type { ComponentType } from 'svelte';
 
-  type MenuItem = {
-    name: string;
-    href: string;
-    icon: ComponentType<Icon>;
-  }
+	type MenuItem = {
+		name: string;
+		href: string;
+		icon: ComponentType<Icon>;
+	};
 
-  const menuItems: MenuItem[] = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home,
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
-      icon: Library,
-    },
-    {
-      name: 'Projects',
-      href: '/projects',
-      icon: Cog,
-    }
-  ];
+	const menuItems: MenuItem[] = [
+		{
+			name: 'Home',
+			href: '/',
+			icon: Home
+		},
+		{
+			name: 'Blog',
+			href: '/blog',
+			icon: Library
+		},
+		{
+			name: 'Projects',
+			href: '/projects',
+			icon: Cog
+		}
+	];
 </script>
 
 {#each menuItems as item}
-  <a href={item.href}>
-   <svelte:component this={item.icon} />
-    <span>{item.name}</span>
-  </a>
+	<a href={item.href}>
+		<svelte:component this={item.icon} />
+		<span>{item.name}</span>
+	</a>
+{/each}
+```
+
+
+#### Svelte 5
+Some changes are required since Svelte 5 [deprecates](https://svelte.dev/docs/svelte/v5-migration-guide#Components-are-no-longer-classes-Component-typing-changes) the `ComponentType` typescript type.
+
+```svelte
+<script lang="ts">
+	import { Home, Library, Cog, type Icon as IconType } from 'lucide-svelte';
+
+	type MenuItem = {
+		name: string;
+		href: string;
+		icon: typeof IconType;
+	};
+
+	const menuItems: MenuItem[] = [
+		{
+			name: 'Home',
+			href: '/',
+			icon: Home
+		},
+		{
+			name: 'Blog',
+			href: '/blog',
+			icon: Library
+		},
+		{
+			name: 'Projects',
+			href: '/projects',
+			icon: Cog
+		}
+	];
+</script>
+
+{#each menuItems as item}
+	{@const Icon = item.icon}
+	<a href={item.href}>
+		<Icon />
+		<span>{item.name}</span>
+	</a>
 {/each}
 ```
 
 ### JSDoc Example
 
+#### Svelte 4
+
 ```svelte
 <script>
-  import Home from 'lucide-svelte/icons/home';
-  import Library from 'lucide-svelte/icons/library';
-  import Cog from 'lucide-svelte/icons/cog';
+  import { Home, Library, Cog } from 'lucide-svelte';
 
   /**
    * @typedef {Object} MenuItem
@@ -162,6 +203,57 @@ The package includes type definitions for all icons. This is useful if you want 
     }
   ];
 </script>
+
+{#each menuItems as item}
+  <a href={item.href}>
+   <svelte:component this={item.icon} />
+    <span>{item.name}</span>
+  </a>
+{/each}
+```
+
+
+#### Svelte 5
+
+```svelte
+<script>
+	import { Home, Library, Cog } from 'lucide-svelte';
+
+	/**
+	 * @typedef {Object} MenuItem
+	 * @property {string} name
+	 * @property {string} href
+	 * @property {typeof import('lucide-svelte').Icon} icon
+	 */
+
+	/** @type {MenuItem[]} */
+	const menuItems = [
+		{
+			name: 'Home',
+			href: '/',
+			icon: Home
+		},
+		{
+			name: 'Blog',
+			href: '/blog',
+			icon: Library
+		},
+		{
+			name: 'Projects',
+			href: '/projects',
+			icon: Cog
+		}
+	];
+</script>
+
+{#each menuItems as item}
+	{@const Icon = item.icon}
+	<a href={item.href}>
+		<Icon />
+		<span>{item.name}</span>
+	</a>
+{/each}
+
 ```
 
 For more details about typing the `svelte:component` directive, see the [Svelte documentation](https://svelte.dev/docs/typescript#types-componenttype).
@@ -197,13 +289,28 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ### Icon Component Example
 
+#### Svelte 4
+
 ```svelte
 <script>
   import * as icons from 'lucide-svelte';
   export let name;
 </script>
 
-<svelte:component this="{icons[name]}" {...$$props} />
+<svelte:component this={icons[name]} {...$$props} />
+```
+
+#### Svelte 5
+
+```svelte
+<script>
+	import * as icons from 'lucide-svelte';
+	let { name } = $props();
+
+	const Icon = icons[name];
+</script>
+
+<Icon {...props} />
 ```
 
 #### Using the Icon Component
