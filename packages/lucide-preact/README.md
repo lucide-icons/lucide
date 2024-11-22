@@ -1,28 +1,42 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-preact.svg#gh-light-mode-only" alt="Lucide Preact - Implementation of the lucide icon library for preact applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/dark/lucide-preact.svg#gh-dark-mode-only" alt="Lucide Preact - Implementation of the lucide icon library for preact applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-preact.svg" alt="Lucide icon library for Preact applications." width="540">
   </a>
 </p>
 
-# Lucide Preact
+<p align="center">
+Lucide icon library for Preact applications.
+</p>
 
-Implementation of the lucide icon library for preact applications.
+<div align="center">
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+  [![npm](https://img.shields.io/npm/v/lucide-preact?color=blue)](https://www.npmjs.com/package/lucide-preact)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-preact)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-preact">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 ## Installation
 
 ```sh
-yarn add lucide-preact
+pnpm add lucide-preact
 ```
-
-or
 
 ```sh
 npm install lucide-preact
+```
+
+```sh
+yarn add lucide-preact
 ```
 
 ## Documentation

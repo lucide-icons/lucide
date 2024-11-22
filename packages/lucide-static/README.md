@@ -1,12 +1,29 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-static.svg#gh-light-mode-only" alt="Lucide Static - Implementation of the lucide icon library for web applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/dark/lucide-static.svg#gh-dark-mode-only" alt="Lucide Static - Implementation of the lucide icon library for web applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-static.svg" alt="Lucide icon library with static assets for web applications" width="540">
   </a>
 </p>
 
+<p align="center">
+Lucide icon library with static assets for web applications.
+</p>
+
+<div align="center">
+
+  [![npm](https://img.shields.io/npm/v/lucide-static?color=blue)](https://www.npmjs.com/package/lucide-static)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-static">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 # Lucide Static
 
@@ -28,16 +45,16 @@ This package is suitable for very specific use cases for example if you want to 
 
 ## Installation
 
-## Package Managers
-
 ```sh
-yarn add lucide-static
+pnpm add lucide-static
 ```
-
-or
 
 ```sh
 npm install lucide-static
+```
+
+```sh
+yarn add lucide-static
 ```
 
 ## Documentation

@@ -1,29 +1,42 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-svelte.svg#gh-light-mode-only" alt="Lucide Svelte - Implementation of the lucide icon library for svelte applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/dark/lucide-svelte.svg#gh-dark-mode-only" alt="Lucide Svelte - Implementation of the lucide icon library for web applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-svelte.svg" alt="Lucide icon library for Svelte applications." width="540">
   </a>
 </p>
 
+<p align="center">
+Lucide icon library for Svelte applications.
+</p>
 
-# Lucide Svelte
+<div align="center">
 
-Implementation of the lucide icon library for svelte applications.
+  [![npm](https://img.shields.io/npm/v/lucide-svelte?color=blue)](https://www.npmjs.com/package/lucide-svelte)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-svelte)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-svelte">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 ## Installation
 
 ```sh
-yarn add lucide-svelte
+pnpm add lucide-svelte
 ```
-
-or
 
 ```sh
 npm install lucide-svelte
+```
+
+```sh
+yarn add lucide-svelte
 ```
 
 ## Documentation

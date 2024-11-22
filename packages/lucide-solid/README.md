@@ -1,29 +1,42 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-solid.svg#gh-light-mode-only" alt="Lucide Solid - Implementation of the lucide icon library for solid applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-solid.svg#gh-dark-mode-only" alt="Lucide Solid - Implementation of the lucide icon library for solid applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-solid.svg" alt="Lucide icon library for Solid applications." width="540">
   </a>
 </p>
 
+<p align="center">
+Lucide icon library for Solid applications.
+</p>
 
-# Lucide Solid
+<div align="center">
 
-Implementation of the lucide icon library for solid applications.
+  [![npm](https://img.shields.io/npm/v/lucide-solid?color=blue)](https://www.npmjs.com/package/lucide-solid)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-solid)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-solid">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 ## Installation
 
 ```sh
-yarn add lucide-solid
+pnpm add lucide-solid
 ```
-
-or
 
 ```sh
 npm install lucide-solid
+```
+
+```sh
+yarn add lucide-solid
 ```
 
 ## Documentation

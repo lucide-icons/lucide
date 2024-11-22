@@ -1,36 +1,47 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-react-native.svg#gh-light-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/package-logos/dark/lucide-react-native.svg#gh-dark-mode-only" alt="Lucide React Native - Implementation of the lucide icon library for React Native applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-react-native.svg" alt="Lucide icon library for React Native applications." width="540">
   </a>
 </p>
 
+<p align="center">
+Lucide icon library for react-native applications.
+</p>
 
-# Lucide React Native
+<div align="center">
 
-Implementation of the lucide icon library for React Native applications.
+  [![npm](https://img.shields.io/npm/v/lucide-react-native?color=blue)](https://www.npmjs.com/package/lucide-react-native)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react-native)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-react-native">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 ## Installation
 
-First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
-
 ```sh
-yarn add lucide-react-native
+pnpm add lucide-react-native
 ```
-
-or
 
 ```sh
 npm install lucide-react-native
 ```
 
+```sh
+yarn add lucide-react-native
+```
+
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native-native)
 
 ## Community
 

@@ -1,30 +1,46 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-vue.svg#gh-light-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/dark/lucide-vue.svg#gh-dark-mode-only" alt="Lucide Vue - Implementation of the lucide icon library for Vue applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-vue.svg" alt="Lucide icon library for Vue 2 applications." width="540">
   </a>
 </p>
 
-# Lucide Vue
+<p align="center">
+Lucide icon library for Vue 2 applications.
+</p>
 
-Implementation of the lucide icon library for Vue applications.
+<div align="center">
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+  [![npm](https://img.shields.io/npm/v/lucide-vue?color=blue)](https://www.npmjs.com/package/lucide-vue)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-vue)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
 
-> :warning: This version of lucide is for Vue 2, For Vue 3 got to [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue-next#lucide-vue-next)
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-vue">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
+
+> :rotating_light:
+This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
+:::
 
 ## Installation
 
 ```sh
-yarn add lucide-vue
+pnpm add lucide-vue
 ```
-
-or
 
 ```sh
 npm install lucide-vue
+```
+
+```sh
+yarn add lucide-vue
 ```
 
 ## Documentation

@@ -2,8 +2,8 @@
 
 Implementation of the lucide icon library for Vue applications.
 
-::: error
-This package is deprecated. Vue v2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
+::: danger
+This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
 :::
 
 ## Installation

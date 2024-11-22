@@ -1,28 +1,42 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/package-logos/lucide-angular.svg#gh-light-mode-only" alt="Lucide Angular - Implementation of the lucide icon library for angular applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/dark/lucide-angular.svg#gh-dark-mode-only" alt="Lucide Angular - Implementation of the lucide icon library for angular applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-angular.svg" alt="Lucide icon library for Angular applications." width="540">
   </a>
 </p>
 
-# Lucide Angular
+<p align="center">
+Lucide icon library for Angular applications.
+</p>
 
-Implementation of the lucide icon library for angular applications.
+<div align="center">
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+  [![npm](https://img.shields.io/npm/v/lucide-angular?color=blue)](https://www.npmjs.com/package/lucide-angular)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-angular">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 ## Installation
 
-```bash
-yarn add lucide-angular
+```sh
+pnpm add lucide-angular
 ```
 
-or
-
-```bash
+```sh
 npm install lucide-angular
+```
+
+```sh
+yarn add lucide-angular
 ```
 
 ## Documentation

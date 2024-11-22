@@ -12,6 +12,17 @@
   <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://github.com/lucide-icons/lucide/actions/workflows/release.yml/badge.svg" alt="build status"></a>
   <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA" alt="discord chat"></a>
 </p>
+<p align="center">
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/">Guide</a>
+  ·
+  <a href="https://lucide.dev/packages">Packages</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+  ·
+  <a href="https://lucide.dev/showcase">Showcase</a>
+</p>
 
 # Lucide
 
