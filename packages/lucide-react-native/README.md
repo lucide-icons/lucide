@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-Lucide icon library for react-native applications.
+Lucide icon library for React Native applications.
 </p>
 
 <div align="center">
@@ -41,7 +41,7 @@ yarn add lucide-react-native
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native-native)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native)
 
 ## Community
 
