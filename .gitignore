@@ -16,7 +16,9 @@ outlined
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx
+packages/**/src/aliases/*.ts
 packages/**/src/aliases.ts
+!packages/**/src/aliases/index.ts
 packages/**/src/dynamicIconImports.ts
 packages/**/dynamicIconImports.js
 packages/**/dynamicIconImports.d.ts
