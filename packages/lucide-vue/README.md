@@ -25,6 +25,10 @@ Lucide icon library for Vue 2 applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide Vue
+
+Implementation of the lucide icon library for Vue applications.
+
 > :rotating_light:
 This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
 :::

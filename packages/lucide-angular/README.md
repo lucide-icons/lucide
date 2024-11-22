@@ -25,6 +25,10 @@ Lucide icon library for Angular applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide Angular
+
+Implementation of the lucide icon library for angular applications.
+
 ## Installation
 
 ```sh

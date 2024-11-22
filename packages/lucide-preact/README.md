@@ -25,6 +25,10 @@ Lucide icon library for Preact applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide Preact
+
+Implementation of the lucide icon library for Preact applications.
+
 ## Installation
 
 ```sh

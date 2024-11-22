@@ -25,6 +25,10 @@ Lucide icon library for Vue applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide Vue
+
+Implementation of the lucide icon library for Vue 3 applications.
+
 ## Installation
 
 ```sh

@@ -25,6 +25,10 @@ Lucide icon library for React applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide React
+
+Implementation of the lucide icon library for React applications.
+
 ## Installation
 
 ```sh

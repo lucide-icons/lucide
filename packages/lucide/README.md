@@ -31,8 +31,6 @@ Implementation of the lucide icon library for web applications.
 
 ## Installation
 
-## Installation
-
 ```sh
 pnpm add lucide
 ```

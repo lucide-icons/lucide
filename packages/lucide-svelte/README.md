@@ -25,6 +25,10 @@ Lucide icon library for Svelte applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide Svelte
+
+Implementation of the lucide icon library for svelte applications.
+
 ## Installation
 
 ```sh

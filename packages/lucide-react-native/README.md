@@ -25,6 +25,10 @@ Lucide icon library for React Native applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
+# Lucide React Native
+
+Implementation of the lucide icon library for React Native applications.
+
 ## Installation
 
 ```sh
