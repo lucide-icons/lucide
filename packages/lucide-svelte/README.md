@@ -66,4 +66,4 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 ### Awesome backers 🍺
 
 <a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
-<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
