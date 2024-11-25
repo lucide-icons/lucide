@@ -287,6 +287,7 @@ Thank you to all the people who contributed to Lucide!
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Awesome backer 🍺
+### Awesome backers 🍺
 
 <a href="https://www.scipress.io?utm_source=lucide"><img src="docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>

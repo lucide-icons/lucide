@@ -48,6 +48,7 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-### Awesome backer 🍺
+### Awesome backers 🍺
 
 <a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
