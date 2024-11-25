@@ -52,9 +52,9 @@
     "@testing-library/vue": "^8.0.3",
     "@vitejs/plugin-vue": "^4.6.2",
     "@vue/test-utils": "2.4.5",
-    "rollup": "^4.9.2",
+    "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
-    "vite": "5.0.13",
+    "vite": "5.1.8",
     "vitest": "^1.4.0",
     "vue": "^3.4.21"
   },
