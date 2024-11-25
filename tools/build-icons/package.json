@@ -11,7 +11,7 @@
     "build-icons": "./cli.mjs"
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 20"
   },
   "keywords": [],
   "author": "",
