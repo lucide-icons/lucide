@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ksk3110"
+  ],
+  "tags": [
+    "about",
+    "calculate",
+    "maths",
+    "operater"
+  ],
+  "categories": [
+    "maths"
+  ]
+}
