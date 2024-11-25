@@ -46,13 +46,5 @@
       "light": "/company-logos/noodle-light.svg",
       "dark": "/company-logos/noodle-dark.svg"
     }
-  },
-  {
-    "name": "Reflex",
-    "url": "https://reflex.dev",
-    "image": {
-      "light": "/company-logos/reflex-light.svg",
-      "dark": "/company-logos/reflex-dark.svg"
-    }
   }
 ]
