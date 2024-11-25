@@ -75,5 +75,37 @@ export default [
       }),
     ],
   },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
   ...configs,
 ];
