@@ -12,7 +12,9 @@
     "label",
     "badge",
     "ticket",
-    "mark"
+    "mark",
+    "sale",
+    "reduced"
   ],
   "categories": [
     "account"
