@@ -1,29 +1,46 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
-    <img src="https://lucide.dev/lucide-react.svg#gh-light-mode-only" alt="Lucide React - Implementation of the lucide icon library for react applications." width="540">
-  </a>
-  <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
-    <img src="https://lucide.dev/package-logos/dark/lucide-react.svg#gh-dark-mode-only" alt="Lucide React - Implementation of the lucide icon library for react applications." width="540">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-react.svg" alt="Lucide icon library for React applications." width="540">
   </a>
 </p>
 
+<p align="center">
+Lucide icon library for React applications.
+</p>
+
+<div align="center">
+
+  [![npm](https://img.shields.io/npm/v/lucide-react?color=blue)](https://www.npmjs.com/package/lucide-react)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-react">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
 # Lucide React
 
-Implementation of the lucide icon library for react applications.
-
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+Implementation of the lucide icon library for React applications.
 
 ## Installation
 
 ```sh
-yarn add lucide-react
+pnpm add lucide-react
 ```
-
-or
 
 ```sh
 npm install lucide-react
+```
+
+```sh
+yarn add lucide-react
 ```
 
 ## Documentation
