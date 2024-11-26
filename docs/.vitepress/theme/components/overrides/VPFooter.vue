@@ -38,10 +38,10 @@ const links = computed(() => [
     <div class="container">
       <div class="sponsors">
         <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss" rel="noreferrer noopener">
-          <img src="/vercel.svg" alt="Powered by Vercel" width="200" />
+          <img src="/vercel.svg" alt="Powered by Vercel" loading="lazy" width="212" height="44" />
         </a>
         <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" rel="noreferrer noopener">
-          <img src="/digitalocean.svg" alt="Digital Ocean" width="200" />
+          <img src="/digitalocean.svg" alt="Digital Ocean" loading="lazy" width="195" height="52"/>
         </a>
       </div>
       <div class="links">

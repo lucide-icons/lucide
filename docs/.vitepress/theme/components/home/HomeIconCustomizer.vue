@@ -61,7 +61,10 @@ watch(absoluteStrokeWidth, (enabled) => {
       <div class="card-column">
         <h2 class="title">
           Style as you please
-          <ResetButton @click="resetStyle"></ResetButton>
+          <ResetButton
+            @click="resetStyle"
+            aria-label="Reset style"
+          />
         </h2>
         <p class="copy">
           Lucide has a lot of customization options to match the icons with your UI.
@@ -124,6 +127,7 @@ watch(absoluteStrokeWidth, (enabled) => {
                 id="absolute-stroke-width"
                 name="absolute-stroke-width"
                 v-model="absoluteStrokeWidth"
+                aria-label="Enable absolute stroke width"
               />
             </template>
           </InputField>
