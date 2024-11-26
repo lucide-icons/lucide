@@ -40,14 +40,17 @@ export class AppModule { }
 or using standalone version:
 
 ```js
+import { Component } from '@angular/core';
 import { LucideAngularModule, FileIcon } from 'lucide-angular';
 
-@NgModule({
-  imports: [
-    LucideAngularModule
-  ]
+@Component({
+  standalone: true,
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  imports: [LucideAngularModule]
 })
-export class AppModule {
+export class AppComponent {
   readonly FileIcon = FileIcon;
 }
 ```
