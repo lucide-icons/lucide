@@ -8,6 +8,11 @@
     "filter",
     "sort",
     "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
     "numerical"
   ],
   "categories": [

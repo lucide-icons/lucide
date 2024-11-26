@@ -20,7 +20,7 @@ import CodeGroup from '../.vitepress/theme/components/base/CodeGroup.vue'
 import Badge from '../.vitepress/theme/components/base/Badge.vue'
 import Label from '../.vitepress/theme/components/base/Label.vue'
 import { data } from './codeExamples.data'
-import { camelCase, startCase } from 'lodash-es'
+import { toCamelCase, toPascalCase } from '@lucide/shared'
 import { satisfies } from 'semver'
 
 const { params } = useData()
@@ -31,8 +31,13 @@ const tabs = computed(() => data.codeExamples?.map(
 
 const codeExample = computed(() => data.codeExamples?.map(
     (codeExample) => {
-      const pascalCase = startCase(camelCase( params.value.name)).replace(/\s/g, '')
-      return codeExample.code.replace(/PascalCase/g, pascalCase).replace(/Name/g, params.value.name)
+      const pascalCaseName = toPascalCase( params.value.name)
+      const camelCaseName = toCamelCase(params.value.name)
+
+      return codeExample.code
+        .replace(/\$(?:<[^>]+>)*PascalCase/g, pascalCaseName)
+        .replace(/\$CamelCase/g, camelCaseName)
+        .replace(/\$Name/g, params.value.name)
     }
   ).join('') ?? []
 )
@@ -100,9 +105,15 @@ function releaseTagLink(version) {
   </div>
 </div>
 
-<IconShowcase :name="params.name" :iconNode="params.iconNode" />
+<IconShowcase
+  :name="params.name"
+  :iconNode="params.iconNode"
+/>
 
-<RelatedIcons v-if="params.relatedIcons.length > 0" :icons="params.relatedIcons" />
+<RelatedIcons
+  v-if="params.relatedIcons"
+  :icons="params.relatedIcons"
+/>
 
 <style module>
   .preview {
