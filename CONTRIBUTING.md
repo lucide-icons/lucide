@@ -127,7 +127,7 @@ When adding new features to for example the icon component for a framework. It i
 
 ### Local Testing
 
-To test changes in a local project, you can use `yarn link`, `npm link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
+To test changes in a local project, you can use `yarn link`, `npm link`, `bun link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
 
 ```sh
 # in packages/lucide-react

@@ -33,6 +33,10 @@ yarn add lucide-static
 npm install lucide-static
 ```
 
+```sh [bun]
+bun add lucide-static
+```
+
 :::
 
 ### CDN
