@@ -14,6 +14,7 @@ export default async function generateAliasesFiles({
   aliasImportFileExtension,
   aliasNamesOnly = false,
   separateAliasesFile = false,
+  separateAliasesFileExtension,
   showLog = true,
 }) {
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -96,8 +97,13 @@ export default async function generateAliasesFiles({
               : '';
 
             if (separateAliasesFile) {
-              const output = `export { default } from "./${iconName}"`;
-              const location = path.join(iconsDistDirectory, `${alias.name}${iconFileExtension}`);
+              const output = `export { default } from "./${iconName}${
+                separateAliasesFileExtension ? iconFileExtension : ''
+              }";\n`;
+              const location = path.join(
+                iconsDistDirectory,
+                `${alias.name}${separateAliasesFileExtension ?? iconFileExtension}`,
+              );
 
               await fs.promises.writeFile(location, output, 'utf-8');
             }

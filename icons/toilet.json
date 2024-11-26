@@ -1,19 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "ericfennis",
-    "danielbayley",
+    "EthanHazel",
+    "staffanmowitz",
     "karsa-mistmere",
     "jguddas"
   ],
   "tags": [
-    "music",
-    "random",
-    "reorder"
+    "toilet",
+    "potty",
+    "bathroom",
+    "washroom"
   ],
   "categories": [
-    "multimedia",
-    "arrows"
+    "devices",
+    "home"
   ]
 }
