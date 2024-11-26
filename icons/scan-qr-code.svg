@@ -16,5 +16,5 @@
   <path d="M3 7V5a2 2 0 0 1 2-2h2" />
   <path d="M7 17h.01" />
   <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
-  <rect width="5" height="5" x="7" y="7" rx="1" />
+  <rect x="7" y="7" width="5" height="5" rx="1" />
 </svg>
