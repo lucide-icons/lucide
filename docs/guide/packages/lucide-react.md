@@ -65,19 +65,19 @@ const App = () => {
 
 [Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
-They can be used by using the `Icon` component.
+They can be used by using the `LucideIcon` component.
 All props like regular lucide icons can be passed to adjust the icon appearance.
 
-### Using the `Icon` component
+### Using the `LucideIcon` component
 
 This creates a single icon based on the iconNode passed and renders a Lucide icon component.
 
 ```jsx
-import { Icon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 import { burger } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={burger} />
+  <LucideIcon iconNode={burger} />
 );
 ```
 
