@@ -33,6 +33,10 @@ yarn add lucide-static
 npm install lucide-static
 ```
 
+```sh [bun]
+bun add lucide-static
+```
+
 :::
 
 ### CDN
@@ -143,7 +147,7 @@ and update the SVG as follows
 ### Icon Font
 
 ```css
-@import ('~lucide-static/font/Lucide.css');
+@import ('~lucide-static/font/lucide.css');
 ```
 
 ```html

@@ -1,7 +1,7 @@
 import plugins from '@lucide/rollup-plugins';
 import replace from '@rollup/plugin-replace';
 import dts from 'rollup-plugin-dts';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
@@ -46,7 +46,7 @@ const configs = bundles
               }),
             ]
           : []),
-        ...plugins(pkg, minify),
+        ...plugins({ pkg, minify }),
       ],
       output: {
         name: outputFileName,

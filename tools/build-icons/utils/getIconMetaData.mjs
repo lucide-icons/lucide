@@ -1,11 +1,12 @@
 import path from 'path';
-import { readSvgDirectory } from '../../../scripts/helpers.mjs';
+import { readSvgDirectory } from '@lucide/helpers';
 
 async function getIconMetaData(iconDirectory) {
   const iconJsons = readSvgDirectory(iconDirectory, '.json');
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile) => {
-      const file = await import(path.join(iconDirectory, jsonFile), { assert: { type: 'json' } });
+      /** eslint-disable */
+      const file = await import(path.join(iconDirectory, jsonFile), { with: { type: 'json' } });
       return [path.basename(jsonFile, '.json'), file.default];
     }),
   );

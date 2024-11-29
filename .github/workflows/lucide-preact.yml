@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-preact/**
+      - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
@@ -14,8 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -23,9 +22,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Build
-        run: pnpm --filter lucide-preact build
 
       - name: Test
         run: pnpm --filter lucide-preact test

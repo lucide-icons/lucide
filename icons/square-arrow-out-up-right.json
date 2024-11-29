@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "outwards",
+    "direction",
+    "north-east",
+    "diagonal",
+    "share",
+    "open",
+    "external",
+    "link"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "social"
+  ],
+  "aliases": [
+    "arrow-up-right-from-square"
+  ]
+}

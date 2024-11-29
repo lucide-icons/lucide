@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { readSvg, toPascalCase } from '../../../scripts/helpers.mjs';
+import { readSvg, toPascalCase } from '@lucide/helpers';
+import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.mjs';
 
 export default ({
   iconNodes,
@@ -9,6 +10,8 @@ export default ({
   template,
   showLog = true,
   iconFileExtension = '.js',
+  separateIconFileExport = false,
+  separateIconFileExportExtension,
   pretty = true,
   iconsDir,
   iconMetaData,
@@ -28,9 +31,24 @@ export default ({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false } = iconMetaData[iconName];
+    const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
+    const deprecationReason = deprecated
+      ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
+          componentName,
+          iconName,
+          toBeRemovedInVersion,
+        })
+      : '';
 
-    const elementTemplate = template({ componentName, iconName, children, getSvg, deprecated });
+    const elementTemplate = template({
+      componentName,
+      iconName,
+      children,
+      getSvg,
+      deprecated,
+      deprecationReason,
+    });
+
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,
@@ -41,6 +59,16 @@ export default ({
       : elementTemplate;
 
     await fs.promises.writeFile(location, output, 'utf-8');
+
+    if (separateIconFileExport) {
+      const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
+      const location = path.join(
+        iconsDistDirectory,
+        `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`,
+      );
+
+      await fs.promises.writeFile(location, output, 'utf-8');
+    }
   });
 
   Promise.all(writeIconFiles)

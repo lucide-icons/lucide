@@ -16,7 +16,14 @@
   export let size: number | string = getContext(LucideContextIconSize) ?? 24
   export let strokeWidth: number | string = getContext(LucideContextIconStrokeWidth) ?? 2
   export let absoluteStrokeWidth: boolean = getContext(LucideContextIconAbsoluteStrokeWidth) ?? false
-  export let iconNode: IconNode
+  export let iconNode: IconNode = []
+
+  const mergeClasses = <ClassType = string | undefined | null>(
+    ...classes: ClassType[]
+  ) => classes.filter((className, index, array) => {
+      return Boolean(className) && array.indexOf(className) === index;
+    })
+    .join(' ');
 </script>
 
 <svg
@@ -30,7 +37,14 @@
       ? Number(strokeWidth) * 24 / Number(size)
       : strokeWidth
   }
-  class={`lucide-icon lucide lucide-${name} ${$$props.class ?? ''}`}
+  class={
+    mergeClasses(
+      'lucide-icon',
+      'lucide',
+      name ? `lucide-${name}`: '',
+      $$props.class
+    )
+  }
 >
   {#each iconNode as [tag, attrs]}
     <svelte:element this={tag} {...attrs}/>

@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "outwards",
+    "direction",
+    "north-east",
+    "diagonal"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "maps"
+  ],
+  "aliases": [
+    "arrow-up-right-from-circle"
+  ]
+}

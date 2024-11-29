@@ -35,7 +35,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map((input) => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: plugins({ pkg, minify }),
       external: ['vue'],
       output: {
         name: packageName,
@@ -48,6 +48,7 @@ const configs = bundles
             }),
         format,
         preserveModules,
+        preserveModulesRoot: 'src',
         sourcemap: true,
         globals: {
           vue: 'vue',
@@ -63,6 +64,38 @@ export default [
     output: [
       {
         file: `dist/${outputFileName}.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
         format: 'es',
       },
     ],

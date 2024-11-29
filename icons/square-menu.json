@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "bars",
+    "navigation",
+    "hamburger",
+    "options",
+    "menu bar",
+    "panel"
+  ],
+  "categories": [
+    "layout",
+    "account"
+  ],
+  "aliases": [
+    "menu-square"
+  ]
+}
