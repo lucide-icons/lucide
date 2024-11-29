@@ -43,6 +43,10 @@ npm install lucide-vue-next
 yarn add lucide-vue-next
 ```
 
+```sh
+bun add lucide-vue-next
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-vue-next)

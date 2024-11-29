@@ -43,6 +43,10 @@ npm install lucide-angular
 yarn add lucide-angular
 ```
 
+```sh
+bun add lucide-angular
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-angular)
