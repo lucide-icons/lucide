@@ -43,6 +43,10 @@ npm install lucide-preact
 yarn add lucide-preact
 ```
 
+```sh
+bun add lucide-preact
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-preact)
