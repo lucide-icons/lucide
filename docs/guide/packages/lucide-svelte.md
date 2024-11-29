@@ -18,6 +18,10 @@ yarn add lucide-svelte
 npm install lucide-svelte
 ```
 
+```sh [bun]
+bun add lucide-svelte
+```
+
 :::
 
 ## How to use
