@@ -1,19 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
+    "llaenowyd",
+    "mishkaio",
     "ericfennis",
-    "danielbayley",
     "karsa-mistmere",
     "jguddas"
   ],
   "tags": [
-    "music",
-    "random",
-    "reorder"
+    "resize",
+    "picture",
+    "sharpen",
+    "increase"
   ],
   "categories": [
-    "multimedia",
-    "arrows"
+    "photography",
+    "multimedia"
   ]
 }
