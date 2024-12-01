@@ -2,13 +2,17 @@
 title: Icon Design Guide
 ---
 
+<script setup>
+import example from '../../images/24px-24px.svg?raw'
+</script>
+
 ## Icon Design Principles
 
 Here are rules that should be followed to keep quality and consistency when making icons for Lucide.
 
 ### 1. Icons must be designed on a **24 by 24 pixels** canvas.
 
-![24px-24px](../../images/24px-24px.svg?raw=true "24px-24px")
+<i v-html="example" />
 
 ### 2. Icons must have at least **1 pixel padding** within the canvas.
 
