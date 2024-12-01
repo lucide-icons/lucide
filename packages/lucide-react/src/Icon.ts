@@ -1,4 +1,4 @@
-import { createElement, forwardRef } from 'react';
+import { cloneElement, createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { mergeClasses } from '@lucide/shared';
@@ -49,8 +49,12 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         ...rest,
       },
       [
-        ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
-        ...(Array.isArray(children) ? children : [children]),
+        ...iconNode.map(([tag, attrs], index) =>
+          createElement(tag, { ...attrs, key: `icon-${index}` }),
+        ),
+        ...(Array.isArray(children)
+          ? children.map((child, index) => cloneElement(child, { key: `child-${index}` }))
+          : [children]),
       ],
     );
   },
