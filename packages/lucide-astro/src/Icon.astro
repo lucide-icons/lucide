@@ -1,0 +1,29 @@
+---
+import defaultAttributes from './defaultAttributes';
+import type { IconProps as Props } from './types';
+
+const {
+  name,
+  color = 'currentColor',
+  size = 24,
+  strokeWidth = 2,
+  absoluteStrokeWidth = false,
+  iconNode = [],
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<svg
+  {...defaultAttributes}
+  {...rest}
+  width={size}
+  height={size}
+  stroke={color}
+  stroke-width={absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth}
+  class:list={['lucide-icon', 'lucide', name ? `lucide-${name}` : '', className]}
+>
+  <!-- TODO: Get types right later -->
+  {iconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
+  <slot />
+</svg>
