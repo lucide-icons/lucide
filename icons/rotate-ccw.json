@@ -6,7 +6,8 @@
     "ericfennis",
     "danielbayley",
     "jguddas",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "chessurisme"
   ],
   "tags": [
     "arrow",
@@ -17,7 +18,10 @@
     "rerun",
     "refresh",
     "backup",
-    "undo"
+    "undo",
+    "replay",
+    "redo",
+    "retry"
   ],
   "categories": [
     "arrows",
