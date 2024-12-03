@@ -142,7 +142,7 @@
     },
     "aliasDeprecationReasons": {
       "type": "string",
-      "enum": ["alias.typo", "alias.name"]
+      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
     },
     "versionNumber": {
       "type": "string",
