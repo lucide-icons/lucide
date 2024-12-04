@@ -18,7 +18,9 @@
     "distance",
     "surface area",
     "square meter",
-    "acre"
+    "acre",
+    "window",
+    "skylight"
   ],
   "categories": [
     "text",

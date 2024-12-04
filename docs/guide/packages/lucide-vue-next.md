@@ -18,6 +18,10 @@ yarn add lucide-vue-next
 npm install lucide-vue-next
 ```
 
+```sh [bun]
+bun add lucide-vue-next
+```
+
 :::
 
 ## How to use

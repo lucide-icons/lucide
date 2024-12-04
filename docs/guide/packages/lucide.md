@@ -20,6 +20,10 @@ yarn add lucide
 npm install lucide
 ```
 
+```sh [bun]
+bun add lucide
+```
+
 :::
 
 ### CDN
