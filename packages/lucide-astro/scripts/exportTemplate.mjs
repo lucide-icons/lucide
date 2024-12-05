@@ -22,7 +22,7 @@ import type { AstroComponent } from '../types'
  * @returns {any} Astro Component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)})\t as AstroComponent;
+const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)}) as AstroComponent;
 
 export default ${componentName};
 `;
