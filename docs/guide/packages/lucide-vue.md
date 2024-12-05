@@ -22,6 +22,10 @@ yarn add lucide-vue
 npm install lucide-vue
 ```
 
+```sh [bun]
+bun add lucide-vue
+```
+
 :::
 
 ## How to use

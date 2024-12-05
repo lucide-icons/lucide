@@ -43,6 +43,10 @@ npm install lucide-svelte
 yarn add lucide-svelte
 ```
 
+```sh
+bun add lucide-svelte
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-svelte)
