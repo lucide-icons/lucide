@@ -44,6 +44,10 @@ npm install lucide-astro
 yarn add lucide-astro
 ```
 
+```sh
+bun add lucide-solid
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-astro)
