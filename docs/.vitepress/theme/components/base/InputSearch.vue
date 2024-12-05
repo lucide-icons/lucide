@@ -38,6 +38,7 @@ const value = computed({
   <Input
     ref="input"
     type="search"
+    autofocus
     v-bind="$attrs"
     v-model="value"
     class="input-wrapper"
