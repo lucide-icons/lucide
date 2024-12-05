@@ -1,20 +1,28 @@
+import { mergeClasses, toKebabCase } from "@lucide/shared"
+import type { AstroComponentFactory } from "astro/runtime/server/render/astro/factory"
+import type { IconNode } from './types';
 import {
   render,
+  renderSlot,
   createAstro,
   createComponent,
   renderComponent,
-} from "astro/dist/runtime/compiler"
-
-// @ts-expect-error typescript doesn't handle .astro files
-// but the consumer will be an Astro file anyway
+} from "astro/compiler-runtime"
 import Icon from './Icon.astro';
-import type { IconNode } from './types';
 
-export default (iconName: string, iconNode: IconNode) => {
-  const $$Astro = createAstro(undefined);
+export default (iconName: string, iconNode: IconNode): AstroComponentFactory => {
   const Compoment = createComponent(($$result, $$props, $$slots) => {
+    const $$Astro = createAstro(undefined);
     const Astro = $$result.createAstro($$Astro, $$props, $$slots);
-    return render`${renderComponent($$result, 'Icon', Icon, { ...Astro.props, "name": iconName, "iconNode": iconNode })}`;
-  }, undefined, undefined);
+    const { class: className, ...restProps } = Astro.props;
+    return render`${renderComponent($$result, 'Icon', Icon, {
+      class: mergeClasses(
+        Boolean(iconName) && `lucide-${toKebabCase(iconName)}`,
+        Boolean(className) && className
+      ),
+      iconNode,
+      ...restProps,
+    }, { "default": () => render`${renderSlot($$result, $$slots["default"])}`, })}`;
+  }, undefined, "none");
   return Compoment;
 }

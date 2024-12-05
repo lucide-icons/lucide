@@ -6,6 +6,7 @@
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
@@ -46,17 +47,17 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.4",
     "@lucide/build-icons": "workspace:*",
-    "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "astro": "^4.16.16",
-    "esbuild": "^0.19.11",
-    "rollup": "^3.29.5",
-    "typescript": "^4.9.5",
-    "vite": "5.1.8",
-    "vitest": "^0.32.2"
+    "jest-serializer-html": "^7.1.0",
+    "linkedom": "^0.18.5",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
-    "astro": "^4"
+    "astro": "^4 || ^5"
   }
 }

@@ -15,15 +15,17 @@ const {
 ---
 
 <svg
-  {...defaultAttributes}
-  {...rest}
-  width={size}
-  height={size}
-  stroke={color}
-  stroke-width={absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth}
-  class:list={['lucide-icon', 'lucide', name ? `lucide-${name}` : '', className]}
+  {...{
+    ...defaultAttributes,
+    width: size,
+    height: size,
+    stroke: color,
+    'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+    ...rest,
+  }}
+  class:list={['lucide lucide-icon', className]}
 >
-  <!-- TODO: Get types right later -->
+  {/* TODO: Get types right later */}
   {iconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
   <slot />
 </svg>
