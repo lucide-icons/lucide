@@ -22,6 +22,10 @@ yarn add lucide
 npm install lucide
 ```
 
+```sh [bun]
+bun add lucide
+```
+
 :::
 
 For more details, see the [documentation](packages/lucide.md).
@@ -42,6 +46,10 @@ yarn add lucide-react
 
 ```sh [npm]
 npm install lucide-react
+```
+
+```sh [bun]
+bun add lucide-react
 ```
 
 :::
@@ -67,6 +75,10 @@ yarn add lucide-vue-next
 npm install lucide-vue-next
 ```
 
+```sh [bun]
+bun add lucide-vue-next
+```
+
 :::
 
 For more details, see the [documentation](packages/lucide-vue-next.md).
@@ -88,6 +100,10 @@ yarn add lucide-svelte
 
 ```sh [npm]
 npm install lucide-svelte
+```
+
+```sh [bun]
+bun add lucide-svelte
 ```
 
 :::
@@ -112,6 +128,10 @@ yarn add lucide-solid
 npm install lucide-solid
 ```
 
+```sh [bun]
+bun add lucide-solid
+```
+
 :::
 
 For more details, see the [documentation](packages/lucide-solid.md).
@@ -132,6 +152,10 @@ yarn add lucide-angular
 
 ```sh [npm]
 npm install lucide-angular
+```
+
+```sh [bun]
+bun add lucide-angular
 ```
 
 :::
@@ -156,6 +180,10 @@ yarn add lucide-preact
 npm install lucide-preact
 ```
 
+```sh [bun]
+bun add lucide-preact
+```
+
 :::
 
 ## Static usage
@@ -174,6 +202,10 @@ yarn add lucide-static
 
 ```sh [npm]
 npm install lucide-static
+```
+
+```sh [bun]
+bun add lucide-static
 ```
 
 :::
