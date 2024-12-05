@@ -8,7 +8,7 @@ import renderIconsObject from './render/renderIconsObject.mjs';
 import generateIconFiles from './building/generateIconFiles.mjs';
 import generateExportsFile from './building/generateExportsFile.mjs';
 
-import generateAliasesFile from './building/generateAliasesFile.mjs';
+import generateAliasesFiles from './building/aliases/generateAliasesFiles.mjs';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import getIconMetaData from './utils/getIconMetaData.mjs';
 import generateDynamicImports from './building/generateDynamicImports.mjs';
@@ -34,6 +34,9 @@ const {
   aliasNamesOnly = false,
   withDynamicImports = false,
   separateAliasesFile = false,
+  separateAliasesFileExtension = undefined,
+  separateIconFileExport = false,
+  separateIconFileExportExtension = undefined,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
   pretty = true,
@@ -59,13 +62,15 @@ async function buildIcons() {
     template: iconFileTemplate,
     showLog: !silent,
     iconFileExtension,
+    separateIconFileExport,
+    separateIconFileExportExtension,
     pretty: JSON.parse(pretty),
     iconsDir: ICONS_DIR,
     iconMetaData,
   });
 
   if (withAliases) {
-    await generateAliasesFile({
+    await generateAliasesFiles({
       iconNodes: icons,
       iconMetaData,
       aliasNamesOnly,
@@ -75,6 +80,7 @@ async function buildIcons() {
       exportModuleNameCasing,
       aliasImportFileExtension,
       separateAliasesFile,
+      separateAliasesFileExtension,
       showLog: !silent,
     });
   }
@@ -99,7 +105,7 @@ async function buildIcons() {
 }
 
 try {
-  buildIcons();
+  await buildIcons();
 } catch (error) {
   console.error(error);
 }

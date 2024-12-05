@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - packages/lucide-react/**
+      - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - scripts/generateNextJSAliases.mjs
@@ -15,8 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -33,8 +32,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - uses: actions/setup-node@v3.8.1
         with:
           node-version: 18

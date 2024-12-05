@@ -15,10 +15,20 @@ const BASE_URL = 'https://lucide.dev/api/gh-icon';
 
 const changedFilesPathString = process.env.CHANGED_FILES;
 
+if (changedFilesPathString == null) {
+  console.error('CHANGED_FILES env variable is not set');
+  process.exit(1);
+}
+
 const changedFiles = changedFilesPathString
   .split(' ')
   .map((file) => file.replace('.json', '.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
+
+if (changedFiles.length === 0) {
+  console.log('No changed icons found');
+  process.exit(0);
+}
 
 const getImageTagsByFiles = (files, getBaseUrl, width) =>
   files.map((file) => {
@@ -77,6 +87,16 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
   400,
 ).join(' ');
 
+const changeFilesDiffImageTags = getImageTagsByFiles(
+  changedFiles,
+  (file) => {
+    const iconName = path.basename(file, '.svg');
+
+    return `${BASE_URL}/diff/${iconName}`;
+  },
+  400,
+).join(' ');
+
 const readyToUseCode = changedFiles
   .map((changedFile) => {
     const svgContent = fs.readFileSync(path.join(process.cwd(), changedFile), 'utf-8');
@@ -111,6 +131,10 @@ ${changeFilesLowDPIImageTags}<br/>
 <details>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
+</details>
+<details>
+<summary>Icon Diffs</summary>
+${changeFilesDiffImageTags}
 </details>
 <details>
 <summary>Icons as code</summary>
