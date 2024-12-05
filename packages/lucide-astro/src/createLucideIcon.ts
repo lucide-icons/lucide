@@ -1,5 +1,5 @@
 import { mergeClasses, toKebabCase } from "@lucide/shared"
-import type { AstroComponentFactory } from "astro/runtime/server/render/astro/factory"
+import type { AstroComponentFactory } from "astro/runtime/server/render/astro/factory.js"
 import type { IconNode } from './types';
 import {
   render,

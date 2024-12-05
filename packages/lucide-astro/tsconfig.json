@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "strict": true,
-    "moduleResolution": "nodenext",
-    // "allowImportingTsExtensions": true,
-    // "resolveJsonModule": true,
-    // "verbatimModuleSyntax": true,
-    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
     "allowJs": true,
     "checkJs": true,
     "jsx": "preserve",
@@ -25,7 +24,7 @@
       {
         "name": "@astrojs/ts-plugin",
       }
-    ]
+    ],
   },
   "include": [
     "src/**/*.ts",
