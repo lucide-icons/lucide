@@ -4,7 +4,9 @@ import type { ComponentProps } from "astro/types"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
 export type RenderFn = <T = PossibleComponentType>(AstroComponent: T, options?: RenderFnOptions<T>) => RenderResult
+
 type RenderFnOptions<T> = T extends AstroComponentVirtualType ? ContainerRenderOptionsWithInferedProps<T> : ContainerRenderOptions
+
 type RenderResult = Promise<{
   container: HTMLElement;
   html: string;
