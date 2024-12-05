@@ -27,7 +27,7 @@ import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
 
-const { tags, categories, contributors, aliases } = metaData
+const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData
 
 const iconDetails = {
   name: '${iconName}',
@@ -36,6 +36,9 @@ const iconDetails = {
   tags,
   categories,
   aliases,
+  deprecated,
+  deprecationReason,
+  toBeRemovedInVersion,
   ...releaseData,
 }
 
