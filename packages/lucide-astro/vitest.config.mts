@@ -4,7 +4,7 @@ import type { ViteUserConfig } from "vitest/config"
 export default getViteConfig({
   // @ts-expect-error: types of this functions aren't correct
   test: {
-    environment: 'happy-dom',
+    environment: 'node',
     globals: true,
     setupFiles: './tests/setupVitest.js',
   },

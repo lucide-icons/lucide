@@ -11,6 +11,8 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "checkJs": true,
+    "noEmit": true,
+    "skipLibCheck": true,
     "jsx": "preserve",
     "lib": [
       "ESNext",
@@ -18,8 +20,6 @@
     "types": [
       "@testing-library/jest-dom",
     ],
-    "skipLibCheck": true,
-    "noEmit": true,
     "plugins": [
       {
         "name": "@astrojs/ts-plugin",
@@ -28,7 +28,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts",
     "src/**/*.astro",
+    "tests/**/*.ts",
   ],
 }
