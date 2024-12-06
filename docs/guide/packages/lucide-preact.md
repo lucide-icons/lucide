@@ -22,6 +22,10 @@ yarn add lucide-preact
 npm install lucide-preact
 ```
 
+```sh [bun]
+bun add lucide-preact
+```
+
 :::
 
 ## How to use
