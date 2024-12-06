@@ -1,6 +1,6 @@
 import type { SvgAttributes } from './types';
 
-const defaultAttributes: Omit<SvgAttributes, 't'> = {
+const defaultAttributes: SvgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: 24,
   height: 24,

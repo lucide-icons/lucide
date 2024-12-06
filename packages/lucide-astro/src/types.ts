@@ -8,7 +8,6 @@ export type SvgAttributes = HTMLAttributes<"svg">;
 export type IconNode = IconNodeChild[];
 
 export interface IconProps extends SvgAttributes {
-  name?: string;
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
