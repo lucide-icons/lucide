@@ -342,9 +342,6 @@ importers:
       astro:
         specifier: ^4.16.16
         version: 4.16.17(@types/node@20.4.5)(less@4.2.0)(rollup@4.22.4)(sass@1.77.8)(stylus@0.56.0)(terser@5.31.6)(typescript@5.3.3)
-      happy-dom:
-        specifier: ^15.11.7
-        version: 15.11.7
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
@@ -22005,6 +22002,7 @@ snapshots:
       entities: 4.5.0
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
+    optional: true
 
   has-bigints@1.0.2: {}
 
