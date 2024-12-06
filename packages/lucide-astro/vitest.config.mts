@@ -1,10 +1,11 @@
 import { getViteConfig } from 'astro/config'
+import type { ViteUserConfig } from "vitest/config"
 
 export default getViteConfig({
-  // @ts-ignore
+  // @ts-expect-error: types of this functions aren't correct
   test: {
-    environment: 'node',
+    environment: 'happy-dom',
     globals: true,
     setupFiles: './tests/setupVitest.js',
   },
-});
+} satisfies ViteUserConfig)

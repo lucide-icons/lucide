@@ -16,7 +16,7 @@
       "ESNext",
     ],
     "types": [
-      "@testing-library/jest-dom"
+      "@testing-library/jest-dom",
     ],
     "skipLibCheck": true,
     "noEmit": true,
