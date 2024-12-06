@@ -5,6 +5,12 @@ export default ({ componentName, iconName, children, getSvg, deprecated, depreca
   const svgContents = getSvg();
   const svgBase64 = base64SVG(svgContents);
 
+  // Astro doesn't need keyed children in loops
+  const keylessChildren = children.map((c) => {
+    const [element, { key, ...otherAttrs }] = c;
+    return [element, otherAttrs]
+  })
+
   // TODO: build-icons' `pretty` is set to false as the prettier
   // formatter uses babel which I'm not sure it supports typescript
   return `
@@ -22,7 +28,7 @@ import type { AstroComponent } from '../types'
  * @returns {any} Astro Component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)}) as AstroComponent;
+const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(keylessChildren)}) as AstroComponent;
 
 export default ${componentName};
 `;
