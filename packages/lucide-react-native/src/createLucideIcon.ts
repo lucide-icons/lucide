@@ -1,9 +1,7 @@
 import {
   forwardRef,
   createElement,
-  ReactSVG,
   FunctionComponent,
-  ForwardRefExoticComponent,
 } from 'react';
 import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
