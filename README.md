@@ -57,7 +57,7 @@ Want to help improve Lucide? Check out our [contribution guidelines](CONTRIBUTIN
 
 ## Community
 
-Join the community on our [Discord](https://discord.gg/EH6nSts) server!
+Connect with fellow Lucide enthusiasts on our [Discord server](https://discord.gg/EH6nSts)!
 
 ## License
 
