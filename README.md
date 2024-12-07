@@ -47,7 +47,7 @@ Lucide is an open-source icon library featuring over 1,000 vector icons designed
 
 Seamlessly integrate Lucide icons into your Figma designs with our official plugin. 
 
-Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
+Visit the [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
 
 <img width="420" src="https://www.figma.com/community/plugin/939567362549682242/thumbnail" alt="Figma Lucide Cover">
 
