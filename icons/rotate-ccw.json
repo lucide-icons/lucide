@@ -21,7 +21,9 @@
     "undo",
     "replay",
     "redo",
-    "retry"
+    "retry",
+    "rewind",
+    "reverse"
   ],
   "categories": [
     "arrows",
