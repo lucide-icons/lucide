@@ -53,9 +53,7 @@ Visit the [Figma community page](https://www.figma.com/community/plugin/93956736
 
 ## Contributing
 
-For more info on how to contribute please see the [contribution guidelines](https://github.com/lucide-icons/lucide/blob/main/CONTRIBUTING.md).
-
-Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/main/README.md)
+Want to help improve Lucide? Check out our [contribution guidelines](CONTRIBUTING.md).
 
 ## Community
 
