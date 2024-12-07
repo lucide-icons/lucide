@@ -1,6 +1,6 @@
-import type { SvgAttributes } from './types';
+import type { SVGAttributes } from './types';
 
-const defaultAttributes: SvgAttributes = {
+const defaultAttributes: SVGAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: 24,
   height: 24,

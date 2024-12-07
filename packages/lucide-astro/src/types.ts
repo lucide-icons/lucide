@@ -1,13 +1,9 @@
-import type { HTMLTag, HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from 'astro/types';
 
 // Type that the Astro language server needs to infer component props in Astro files
 export type AstroComponent = (_props: IconProps) => any;
 
-export type SvgAttributes = HTMLAttributes<"svg">;
-
-export type IconNode = IconNodeChild[];
-
-export interface IconProps extends SvgAttributes {
+export interface IconProps extends SVGAttributes {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
@@ -16,15 +12,65 @@ export interface IconProps extends SvgAttributes {
   iconNode?: IconNode;
 }
 
-export type IconEvents = {
-  [evt: string]: CustomEvent<any>;
-};
+export type SVGAttributes = HTMLAttributes<'svg'>;
 
-export type IconSlots = {
-  default: {};
-};
+export type IconNode = IconNodeChild[];
 
-// TODO: Could be a more specific union type
-type SVGElements = HTMLTag;
+type IconNodeChild = [elementName: SVGElements, attrs: SVGAttributes];
 
-type IconNodeChild = [elementName: SVGElements, attrs: SvgAttributes];
+// All possible svg elements according to the Astro definitions
+type SVGElements =
+  | 'svg'
+  | 'animate'
+  | 'circle'
+  | 'clipPath'
+  | 'defs'
+  | 'desc'
+  | 'ellipse'
+  | 'feBlend'
+  | 'feColorMatrix'
+  | 'feComponentTransfer'
+  | 'feComposite'
+  | 'feConvolveMatrix'
+  | 'feDiffuseLighting'
+  | 'feDisplacementMap'
+  | 'feDistantLight'
+  | 'feFlood'
+  | 'feFuncA'
+  | 'feFuncB'
+  | 'feFuncG'
+  | 'feFuncR'
+  | 'feGaussianBlur'
+  | 'feImage'
+  | 'feMerge'
+  | 'feMergeNode'
+  | 'feMorphology'
+  | 'feOffset'
+  | 'fePointLight'
+  | 'feSpecularLighting'
+  | 'feSpotLight'
+  | 'feTile'
+  | 'feTurbulence'
+  | 'filter'
+  | 'foreignObject'
+  | 'g'
+  | 'image'
+  | 'line'
+  | 'linearGradient'
+  | 'marker'
+  | 'mask'
+  | 'metadata'
+  | 'path'
+  | 'pattern'
+  | 'polygon'
+  | 'polyline'
+  | 'radialGradient'
+  | 'rect'
+  | 'stop'
+  | 'switch'
+  | 'symbol'
+  | 'text'
+  | 'textPath'
+  | 'tspan'
+  | 'use'
+  | 'view'
