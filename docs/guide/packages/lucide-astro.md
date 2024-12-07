@@ -68,7 +68,7 @@ import CircleAlert from 'lucide-astro/icons/circle-alert';
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
-| `strokeWidth`         | _number_  | 2            |
+| `stroke-width`        | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
 ### Applying props

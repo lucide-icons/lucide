@@ -33,7 +33,7 @@ describe('Using lucide icon components', () => {
         props: {
           size: 48,
           stroke: "red",
-          strokeWidth: 4
+          "stroke-width": 4
         }
       }
     );
@@ -54,7 +54,7 @@ describe('Using lucide icon components', () => {
         props: {
           size: 48,
           stroke: "red",
-          strokeWidth: 4
+          "stroke-width": 4
         }
       }
     );
@@ -66,7 +66,7 @@ describe('Using lucide icon components', () => {
         props: {
           size: 48,
           stroke: "red",
-          strokeWidth: 4
+          "stroke-width": 4
         }
       }
     );
