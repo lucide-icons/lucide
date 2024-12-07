@@ -47,6 +47,10 @@ yarn add lucide-react-native
 bun add lucide-react-native
 ```
 
+```sh
+deno add npm:lucide-react-native
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native)

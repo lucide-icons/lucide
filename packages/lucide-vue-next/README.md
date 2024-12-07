@@ -47,6 +47,10 @@ yarn add lucide-vue-next
 bun add lucide-vue-next
 ```
 
+```sh
+deno add npm:lucide-vue-next
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-vue-next)

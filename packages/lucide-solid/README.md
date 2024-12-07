@@ -47,6 +47,10 @@ yarn add lucide-solid
 bun add lucide-solid
 ```
 
+```sh
+deno add npm:lucide-solid
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-solid)

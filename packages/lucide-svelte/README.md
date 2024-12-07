@@ -47,6 +47,10 @@ yarn add lucide-svelte
 bun add lucide-svelte
 ```
 
+```sh
+deno add npm:lucide-svelte
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-svelte)
