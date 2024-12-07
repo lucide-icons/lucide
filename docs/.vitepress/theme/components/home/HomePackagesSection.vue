@@ -21,8 +21,7 @@ const { go } = useRouter()
       >
         <img
           :src="logo"
-          height="36"
-          width="36"
+          class="image-logo"
           loading="lazy"
           :alt="`${name} logo`"
         />
@@ -35,6 +34,13 @@ const { go } = useRouter()
 </template>
 
 <style scoped>
+
+.image-logo {
+  object-fit: contain;
+  width: 36px;
+  height: 36px;
+}
+
 .packages-list {
   display: flex;
   flex-wrap: wrap;
