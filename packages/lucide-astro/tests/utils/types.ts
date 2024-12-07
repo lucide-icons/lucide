@@ -1,4 +1,4 @@
-import { getQueriesForElement, } from '@testing-library/dom'
+import type { queries, BoundFunctions } from '@testing-library/dom'
 import type { ContainerRenderOptions } from "astro/container";
 import type { ComponentProps } from "astro/types"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
@@ -21,15 +21,4 @@ type ContainerRenderOptionsWithInferedProps<T extends AstroComponentVirtualType>
 type PossibleComponentType = AstroComponentFactory | AstroComponentVirtualType
 type AstroComponentVirtualType = (args: any) => any;
 
-type Queries = ReturnType<Wrapper["wrapped"]>
-
-// HACK: to unwrap the return type of getQueriesForElement
-// without calling the function
-// May possibly just use `ReturnType` if the function's ReturnType
-// doesn't depend on the first parameter, didn't check that yet
-// too much to digest for me rn 😛
-class Wrapper {
-  wrapped(e: HTMLElement) {
-    return getQueriesForElement(e)
-  }
-}
+type Queries = BoundFunctions<typeof queries>
