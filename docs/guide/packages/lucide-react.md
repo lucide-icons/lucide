@@ -22,6 +22,10 @@ npm install lucide-react
 bun add lucide-react
 ```
 
+```sh [deno]
+deno add npm:lucide-react
+```
+
 :::
 
 ## How to use

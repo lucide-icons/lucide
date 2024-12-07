@@ -22,6 +22,10 @@ npm install lucide-solid
 bun add lucide-solid
 ```
 
+```sh [deno]
+deno add npm:lucide-solid
+```
+
 :::
 
 ## How to use

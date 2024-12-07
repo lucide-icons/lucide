@@ -22,6 +22,10 @@ npm install lucide-svelte
 bun add lucide-svelte
 ```
 
+```sh [deno]
+deno add npm:lucide-svelte
+```
+
 :::
 
 ## How to use

@@ -26,6 +26,10 @@ npm install lucide
 bun add lucide
 ```
 
+```sh [deno]
+deno add npm:lucide
+```
+
 :::
 
 For more details, see the [documentation](packages/lucide.md).
@@ -50,6 +54,10 @@ npm install lucide-react
 
 ```sh [bun]
 bun add lucide-react
+```
+
+```sh [deno]
+deno add npm:lucide-react
 ```
 
 :::
@@ -79,6 +87,10 @@ npm install lucide-vue-next
 bun add lucide-vue-next
 ```
 
+```sh [deno]
+deno add npm:lucide-vue-next
+```
+
 :::
 
 For more details, see the [documentation](packages/lucide-vue-next.md).
@@ -104,6 +116,10 @@ npm install lucide-svelte
 
 ```sh [bun]
 bun add lucide-svelte
+```
+
+```sh [deno]
+deno add npm:lucide-svelte
 ```
 
 :::
@@ -132,6 +148,10 @@ npm install lucide-solid
 bun add lucide-solid
 ```
 
+```sh [deno]
+deno add npm:lucide-solid
+```
+
 :::
 
 For more details, see the [documentation](packages/lucide-solid.md).
@@ -156,6 +176,10 @@ npm install lucide-angular
 
 ```sh [bun]
 bun add lucide-angular
+```
+
+```sh [deno]
+deno add npm:lucide-angular
 ```
 
 :::
@@ -184,6 +208,10 @@ npm install lucide-preact
 bun add lucide-preact
 ```
 
+```sh [deno]
+deno add npm:lucide-preact
+```
+
 :::
 
 ## Static usage
@@ -206,6 +234,10 @@ npm install lucide-static
 
 ```sh [bun]
 bun add lucide-static
+```
+
+```sh [deno]
+deno add npm:lucide-static
 ```
 
 :::

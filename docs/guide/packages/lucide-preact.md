@@ -26,6 +26,10 @@ npm install lucide-preact
 bun add lucide-preact
 ```
 
+```sh [deno]
+deno add npm:lucide-preact
+```
+
 :::
 
 ## How to use
