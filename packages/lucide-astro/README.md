@@ -45,7 +45,7 @@ yarn add lucide-astro
 ```
 
 ```sh
-bun add lucide-solid
+bun add lucide-astro
 ```
 
 ## Documentation
