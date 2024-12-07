@@ -27,21 +27,19 @@ Lucide icon library with static assets for web applications.
 
 # Lucide Static
 
-This package include the following lucide implementations:
+This package includes:
 
-- All svg files
-- Javascript library containing strings of svgs.
+- All SVG files
+- JavaScript library with SVG strings.
 - Icon fonts
-- Svg sprite
+- SVG sprite
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+## Why Lucide Static
 
-## Why lucide-static?
-
-This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings in your javascript project.
+Lucide Static is useful for cases where you need icon fonts, SVG sprites, or CommonJS SVG strings in a JavaScript project.
 
 > [!WARNING]
-> It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](https://github.com/lucide-icons/lucide/tree/main/packages/lucide), [lucide-react](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react), [lucide-vue](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue), [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue-next), [lucide-angular](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-angular), [lucide-preact](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-preact)
+> This package is not ideal for web applications as it includes all icons, which can slow down load times. For optimized bundling (tree-shaking), use the following packages: [lucide](../lucide), [lucide-react](../lucide-react), [lucide-vue](../lucide-vue), [lucide-vue-next](../lucide-vue-next), [lucide-angular](../lucide-angular), [lucide-preact](../lucide-preact)
 
 ## Installation
 
