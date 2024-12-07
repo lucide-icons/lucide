@@ -47,6 +47,10 @@ yarn add lucide-angular
 bun add lucide-angular
 ```
 
+```sh
+deno add npm:lucide-angular
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-angular)

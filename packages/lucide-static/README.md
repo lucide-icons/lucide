@@ -61,6 +61,10 @@ yarn add lucide-static
 bun add lucide-static
 ```
 
+```sh
+deno add npm:lucide-static
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-static)
