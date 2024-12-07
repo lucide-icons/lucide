@@ -87,7 +87,7 @@ This results a filled phone icon.
 
 ## Types
 
-- review later. The package includes type definitions for all icons. This is useful if you want to dynamically render icons.
+The package includes type definitions for all icons. This is useful if you want to dynamically render icons.
 
 ### Example
 
