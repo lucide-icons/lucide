@@ -2,7 +2,7 @@
   "name": "lucide-astro",
   "version": "0.0.1",
   "author": "Moustapha Kebe",
-  "description": "A Lucide icon library package for Astro",
+  "description": "A Lucide icon library package for Astro applications",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
