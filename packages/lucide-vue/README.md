@@ -29,9 +29,8 @@ Lucide icon library for Vue 2 applications.
 
 Implementation of the lucide icon library for Vue applications.
 
-> :rotating_light:
-This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
-:::
+> [!IMPORTANT]
+> This package is deprecated as Vue 2 has reached its end of life. Please refer to the [announcement](https://v2.vuejs.org/eol/) and migrate to Vue 3.
 
 ## Installation
 
