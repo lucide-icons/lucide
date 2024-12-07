@@ -14,9 +14,9 @@
 </p>
 
 <p align="center">
-  <a href="https://lucide.dev/icons/">Icons</a>
+  <a href="https://lucide.dev/icons">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/">Guide</a>
+  <a href="https://lucide.dev/guide">Guide</a>
   ·
   <a href="https://lucide.dev/packages">Packages</a>
   ·
