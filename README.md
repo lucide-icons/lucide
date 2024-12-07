@@ -65,10 +65,9 @@ Lucide is completely free for commercial and personal use, licensed under the [I
 
 ## Credits
 
-Thank you to all the people who contributed to Lucide!
+A big thank you to all the [contributors](https://github.com/lucide-icons/lucide/graphs/contributors) who have helped shape Lucide!
 
-<a href="https://github.com/lucide-icons/lucide/graphs/contributors">
-<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" />
 
 ## Sponsors
 
