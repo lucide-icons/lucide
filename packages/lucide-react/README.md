@@ -49,15 +49,15 @@ bun add lucide-react
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react).
 
 ## Community
 
-Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
+Connect with fellow Lucide enthusiasts on our [Discord server](https://discord.gg/EH6nSts)!
 
 ## License
 
-Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
+Lucide is completely free for commercial and personal use, licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE).
 
 ## Sponsors
 
