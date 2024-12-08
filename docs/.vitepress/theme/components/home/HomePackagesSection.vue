@@ -13,7 +13,7 @@ const { go } = useRouter()
     <HomeSectionTitle>Available For:</HomeSectionTitle>
     <div class="packages-list">
       <a
-        v-for="{ name, logo } in data.packages"
+        v-for="{ name, logo, logoDark } in data.packages"
         :href="`/guide/packages/${name}`"
         class="package-logo"
         :aria-label="`Read more about: ${name} package`"
@@ -21,9 +21,17 @@ const { go } = useRouter()
       >
         <img
           :src="logo"
-          class="image-logo"
-          loading="lazy"
+          :class="{ light: logoDark, 'image-logo': true }"
           :alt="`${name} logo`"
+          loading="lazy"
+        />
+
+        <img
+          v-if="logoDark"
+          :src="logoDark"
+          :alt="`${name} logo`"
+          class="image-logo dark"
+          loading="lazy"
         />
       </a>
     </div>
@@ -62,5 +70,12 @@ const { go } = useRouter()
 
 .package-logo:hover {
   opacity: .6;
+}
+
+html.dark .image-logo.light {
+  display: none;
+}
+html:not(.dark) .image-logo.dark {
+  display: none;
 }
 </style>

@@ -130,6 +130,7 @@
   "lucide-astro": {
     "order": 8,
     "icon": "astro",
+    "iconDark": "astro-dark",
     "shields": [
       {
         "alt": "npm",

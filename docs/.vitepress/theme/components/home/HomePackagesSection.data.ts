@@ -40,6 +40,7 @@ export default {
         {
           name: 'lucide-astro',
           logo: '/framework-logos/astro.svg',
+          logoDark: '/framework-logos/astro-dark.svg',
           label: 'Lucide documentation for Astro',
         },
         {
