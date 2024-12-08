@@ -48,6 +48,7 @@
     <path d="M340 120v240" stroke="#D8D8D9" stroke-width=".5"/>
     <path d="M120 350h240" stroke="#D8D8D9" stroke-width=".5"/>
     <path d="M350 120v240" stroke="#D8D8D9" stroke-width=".5"/>
+</g>
 <g id="embed-lucide-activity" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
   <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
 </g>
