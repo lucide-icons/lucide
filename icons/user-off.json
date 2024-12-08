@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Footagesus"
+    "Footagesus",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "person",
     "account",
-    "contact"
+    "contact",
+    "off",
+    "disconnect",
+    "disabled"
   ],
   "categories": [
     "account"
