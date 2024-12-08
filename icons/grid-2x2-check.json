@@ -26,5 +26,8 @@
     "text",
     "layout",
     "math"
+  ],
+  "aliases": [
+    "grid-2-x-2-check"
   ]
 }
