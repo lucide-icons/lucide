@@ -48,6 +48,7 @@
 <path d="M340 120V360" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M120 350H360" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M350 120V360" stroke="#D8D8D9" stroke-width="0.5"/>
+</g>
 <g id="embed-lucide-layout-panel-left" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
   <rect width="7" height="18" x="3" y="3" rx="1" />
   <rect width="7" height="7" x="14" y="3" rx="1" />
