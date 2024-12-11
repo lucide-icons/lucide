@@ -22,7 +22,7 @@ export default function generateDynamicImports({
 
     const iconAliases = iconMetaData[iconName]?.aliases?.map((alias) => {
       if (typeof alias === 'string') {
-        return alias
+        return alias;
       }
       return alias.name;
     });

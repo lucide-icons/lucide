@@ -3,7 +3,7 @@ import { IconNode, LucideIcon, LucideProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';
 
-export type DynamicIconModule = { default: LucideIcon, __iconNode: IconNode };
+export type DynamicIconModule = { default: LucideIcon; __iconNode: IconNode };
 
 export type IconName = keyof typeof dynamicIconImports;
 
@@ -16,11 +16,11 @@ interface DynamicIconComponentProps extends LucideProps {
 
 async function getIconNode(name: IconName) {
   if (!(name in dynamicIconImports)) {
-    throw new Error("[lucide-react]: Name in Lucide DynamicIcon not found");
+    throw new Error('[lucide-react]: Name in Lucide DynamicIcon not found');
   }
 
   // TODO: Replace this with a generic iconNode package.
-  const icon = await dynamicIconImports[name]() as DynamicIconModule;
+  const icon = (await dynamicIconImports[name]()) as DynamicIconModule;
 
   return icon.__iconNode;
 }
@@ -41,14 +41,7 @@ async function getIconNode(name: IconName) {
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
-  (
-    {
-      name,
-      fallback: Fallback,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ name, fallback: Fallback, ...props }, ref) => {
     const [iconNode, setIconNode] = useState<IconNode>();
 
     useEffect(() => {
@@ -56,7 +49,7 @@ const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
         .then(setIconNode)
         .catch((error) => {
           console.error(error);
-        })
+        });
     }, [name]);
 
     if (iconNode == null) {

@@ -5,14 +5,10 @@ import DynamicIcon from '../src/DynamicIcon';
 
 describe('Using DynamicIcon Component', () => {
   it('should render icon by given name', async () => {
-    let container: RenderResult['container']
+    let container: RenderResult['container'];
 
-    await act( async () => {
-      const result = render(
-        <DynamicIcon
-          name='smile'
-        />,
-      );
+    await act(async () => {
+      const result = render(<DynamicIcon name="smile" />);
 
       container = result.container;
     });
@@ -20,18 +16,14 @@ describe('Using DynamicIcon Component', () => {
     await waitFor(() => {
       // I'd look for a real text here that is renderer when the data loads
       expect(container.firstChild).not.toBeNull();
-    })
+    });
   });
 
   it('should render icon by alias name', async () => {
-    let container: RenderResult['container']
+    let container: RenderResult['container'];
 
-    await act( async () => {
-      const result = render(
-        <DynamicIcon
-          name='home'
-        />,
-      );
+    await act(async () => {
+      const result = render(<DynamicIcon name="home" />);
 
       container = result.container;
     });
@@ -39,15 +31,11 @@ describe('Using DynamicIcon Component', () => {
     await waitFor(() => {
       // I'd look for a real text here that is renderer when the data loads
       expect(container.firstChild).not.toBeNull();
-    })
+    });
   });
 
   it('should render icon and match snapshot', async () => {
-    const { container } = render(
-      <DynamicIcon
-        name='circle'
-      />,
-    );
+    const { container } = render(<DynamicIcon name="circle" />);
 
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -55,7 +43,7 @@ describe('Using DynamicIcon Component', () => {
   it('should adjust the style based', async () => {
     const { container } = render(
       <DynamicIcon
-        name='circle'
+        name="circle"
         size={48}
         stroke="red"
         absoluteStrokeWidth

@@ -46,18 +46,6 @@ const bundles = [
       }
     },
   },
-  // {
-  //   format: 'cjs',
-  //   inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.tsx'],
-  //   outputDir: '',
-  //   external: [/src/],
-  //   // paths: (id) => {
-  //   //   if (id.match(/src/)) {
-  //   //     const [, modulePath] = id.match(/src\/(.*)\.ts/);
-  //   //     return `dist/cjs/${modulePath}.js`;
-  //   //   }
-  //   // },
-  // },
 ];
 
 const configs = bundles
@@ -112,9 +100,11 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts({
-      exclude: ['./src/icons']
-    })],
+    plugins: [
+      dts({
+        exclude: ['./src/icons'],
+      }),
+    ],
   },
   {
     input: 'src/dynamic.ts',
