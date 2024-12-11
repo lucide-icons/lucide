@@ -5,14 +5,16 @@ import Icon from './Icon';
 
 export type DynamicIconModule = { default: LucideIcon, __iconNode: IconNode };
 
-export type IconNames = keyof typeof dynamicIconImports;
+export type IconName = keyof typeof dynamicIconImports;
+
+export const iconNames = Object.keys(dynamicIconImports) as Array<IconName>;
 
 interface DynamicIconComponentProps extends LucideProps {
-  name: IconNames;
+  name: IconName;
   fallback?: () => JSX.Element | null;
 }
 
-async function getIconNode(name: IconNames) {
+async function getIconNode(name: IconName) {
   if (!(name in dynamicIconImports)) {
     throw new Error("[lucide-react]: Name in Lucide DynamicIcon not found");
   }
