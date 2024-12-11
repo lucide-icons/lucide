@@ -34,17 +34,30 @@ const bundles = [
   },
   {
     format: 'esm',
-    inputs: ['src/dynamicIconImports.ts'],
-    outputFile: 'dynamicIconImports.js',
+    inputs: ['src/dynamic.ts', 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts'],
+    outputDir,
+    preserveModules: true,
     external: [/src/],
     paths: (id) => {
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `dist/esm/${modulePath}.js`;
+        return `${modulePath}.js`;
       }
     },
   },
+  // {
+  //   format: 'cjs',
+  //   inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.tsx'],
+  //   outputDir: '',
+  //   external: [/src/],
+  //   // paths: (id) => {
+  //   //   if (id.match(/src/)) {
+  //   //     const [, modulePath] = id.match(/src\/(.*)\.ts/);
+  //   //     return `dist/cjs/${modulePath}.js`;
+  //   //   }
+  //   // },
+  // },
 ];
 
 const configs = bundles
@@ -95,7 +108,29 @@ export default [
     input: 'src/dynamicIconImports.ts',
     output: [
       {
-        file: `dynamicIconImports.d.ts`,
+        file: `dist/dynamicIconImports.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts({
+      exclude: ['./src/icons']
+    })],
+  },
+  {
+    input: 'src/dynamic.ts',
+    output: [
+      {
+        file: `dist/dynamic.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: 'src/DynamicIcon.ts',
+    output: [
+      {
+        file: `dist/DynamicIcon.d.ts`,
         format: 'es',
       },
     ],
