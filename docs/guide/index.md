@@ -13,7 +13,7 @@ Lucide is an open-source icon library that provides 1000+ vector (svg) files for
 
 Lucide contains icons with different variants and states, allowing users to choose the most suitable icon for their needs. And if a desired icon isn't available yet, users can open a design request, and the Lucide community contributors will help provide new icons. With more icons to choose from, users have more options to work with in their projects.
 
-## Complete Set of Icons
+### Complete Set of Icons
 
 As new applications with specific features arise, Lucide aims to provide a complete set of icons for every project. The community follows a set of design rules when designing new icons. These rules maintain standards for the icons, such as recognizability, consistency in style, and readability at all sizes. While creativity is valued in new icons, recognizable design conventions are important to ensure that the icons are easily identifiable by users.
 
