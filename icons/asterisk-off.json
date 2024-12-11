@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "reference",
+    "times",
+    "multiply",
+    "multiplication",
+    "operator",
+    "code",
+    "glob pattern",
+    "wildcard",
+    "*",
+    "optional"
+  ],
+  "categories": [
+    "text",
+    "maths",
+    "development"
+  ]
+}
