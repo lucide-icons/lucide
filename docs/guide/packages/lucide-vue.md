@@ -26,6 +26,10 @@ npm install lucide-vue
 bun add lucide-vue
 ```
 
+```sh [deno]
+deno add npm:lucide-vue
+```
+
 :::
 
 ## How to use

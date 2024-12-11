@@ -47,6 +47,10 @@ yarn add lucide-react
 bun add lucide-react
 ```
 
+```sh
+deno add npm:lucide-react
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react)

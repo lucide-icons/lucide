@@ -22,6 +22,10 @@ npm install lucide-angular
 bun add lucide-angular
 ```
 
+```sh [deno]
+deno add npm:lucide-angular
+```
+
 :::
 
 ## How to use

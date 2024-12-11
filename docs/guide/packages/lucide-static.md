@@ -37,6 +37,10 @@ npm install lucide-static
 bun add lucide-static
 ```
 
+```sh [deno]
+deno add npm:lucide-static
+```
+
 :::
 
 ### CDN
