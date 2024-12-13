@@ -43,6 +43,10 @@ npm install lucide-react
 yarn add lucide-react
 ```
 
+```sh
+bun add lucide-react
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react)
