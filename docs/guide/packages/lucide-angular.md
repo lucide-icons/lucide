@@ -18,6 +18,10 @@ yarn add lucide-angular
 npm install lucide-angular
 ```
 
+```sh [bun]
+bun add lucide-angular
+```
+
 :::
 
 ## How to use
