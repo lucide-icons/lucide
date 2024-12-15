@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "johnletey",
+    "Footagesus"
+  ],
+  "tags": [
+    "power",
+    "electricity",
+    "energy",
+    "accumulator",
+    "charge",
+    "plus",
+    "economy"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}
