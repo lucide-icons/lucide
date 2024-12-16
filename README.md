@@ -27,7 +27,7 @@
 
 # Lucide
 
-Lucide is an open-source icon library featuring over 1,000 vector icons designed for easy integration across all kinds of projects. The library offers [official pacakges](https://lucide.dev/packages) for multiple frameworks, making it simple for developers and designers to incorporate high-quality, customizable icons into their work.
+Lucide is an open-source icon library featuring over 1,000 vector icons designed for easy integration across all kinds of projects. The library offers [official packages](https://lucide.dev/packages) for multiple frameworks, making it simple for developers and designers to incorporate high-quality, customizable icons into their work.
 
 ## Packages
 
