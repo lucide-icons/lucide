@@ -22,7 +22,7 @@ const {
     'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
     ...rest,
   }}
-  class:list={['lucide lucide-icon', className]}
+  class:list={['lucide', className]}
 >
   {iconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
   <slot />
