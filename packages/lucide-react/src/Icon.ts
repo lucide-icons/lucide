@@ -50,7 +50,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       },
       [
         ...iconNode.map(([tag, attrs], index) =>
-          createElement(tag, { ...attrs, key: `icon-${index}` }),
+          createElement(tag, { key: `icon-${index}`, ...attrs }),
         ),
         ...(Array.isArray(children)
           ? children.map((child, index) => cloneElement(child, { key: `child-${index}` }))
