@@ -47,6 +47,10 @@ yarn add lucide-preact
 bun add lucide-preact
 ```
 
+```sh
+deno add npm:lucide-preact
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-preact)
