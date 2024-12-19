@@ -1,10 +1,4 @@
-import {
-  forwardRef,
-  createElement,
-  ReactSVG,
-  FunctionComponent,
-  ForwardRefExoticComponent,
-} from 'react';
+import { forwardRef, createElement, FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
 import { IconNode, LucideIcon, LucideProps } from './types';
