@@ -22,6 +22,10 @@ npm install lucide-vue-next
 bun add lucide-vue-next
 ```
 
+```sh [deno]
+deno add npm:lucide-vue-next
+```
+
 :::
 
 ## How to use

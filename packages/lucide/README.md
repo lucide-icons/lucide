@@ -47,6 +47,10 @@ yarn add lucide
 bun add lucide
 ```
 
+```sh
+deno add npm:lucide
+```
+
 ### CDN
 
 ```html

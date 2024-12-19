@@ -51,6 +51,10 @@ yarn add lucide-vue
 bun add lucide-vue
 ```
 
+```sh
+deno add npm:lucide-vue
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-vue)

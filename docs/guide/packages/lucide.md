@@ -24,6 +24,10 @@ npm install lucide
 bun add lucide
 ```
 
+```sh [deno]
+deno add npm:lucide
+```
+
 :::
 
 ### CDN

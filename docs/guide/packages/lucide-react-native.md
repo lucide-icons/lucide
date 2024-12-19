@@ -24,6 +24,10 @@ npm install lucide-react-native
 bun add lucide-react-native
 ```
 
+```sh [deno]
+deno add npm:lucide-react-native
+```
+
 :::
 
 ## How to use
