@@ -1,4 +1,4 @@
-import { mergeClasses, toKebabCase } from "@lucide/shared"
+import { mergeClasses, toKebabCase } from "./utils"
 import type { AstroComponentFactory } from "astro/runtime/server/render/astro/factory.js"
 import type { IconNode } from './types';
 import {
@@ -11,7 +11,7 @@ import {
 import Icon from './Icon.astro';
 
 export default (iconName: string, iconNode: IconNode): AstroComponentFactory => {
-  const Compoment = createComponent(($$result, $$props, $$slots) => {
+  const Component = createComponent(($$result, $$props, $$slots) => {
     const $$Astro = createAstro(undefined);
     const Astro = $$result.createAstro($$Astro, $$props, $$slots);
     const { class: className, ...restProps } = Astro.props;
@@ -24,5 +24,5 @@ export default (iconName: string, iconNode: IconNode): AstroComponentFactory => 
       ...restProps,
     }, { "default": () => render`${renderSlot($$result, $$slots["default"])}`, })}`;
   }, undefined, "none");
-  return Compoment;
+  return Component;
 }
