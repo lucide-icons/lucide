@@ -10,9 +10,9 @@ Lucide icon library for React Native applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/lucide-react-native?color=blue)](https://www.npmjs.com/package/lucide-react-native)
-  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react-native)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![npm](https://img.shields.io/npm/v/lucide-react-native?color=blue&style=for-the-badge)](https://www.npmjs.com/package/lucide-react-native)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react-native?style=for-the-badge)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide?style=for-the-badge)](https://lucide.dev/license)
 </div>
 
 <p align="center">
@@ -49,25 +49,22 @@ bun add lucide-react-native
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react-native).
 
 ## Community
 
-Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
+Connect with fellow Lucide enthusiasts on our [Discord server](https://discord.gg/EH6nSts)!
 
 ## License
 
-Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
+Lucide is completely free for commercial and personal use, licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE).
 
 ## Sponsors
 
-<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
-</a>
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss"><img src="../../docs/public/vercel.svg" alt="Powered by Vercel" width="200" /></a>
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="../../docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+### Awesome backers
 
-### Awesome backers 🍺
-
-<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
-<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://www.scipress.io?utm_source=lucide"><img src="../../docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="../../docs/public/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>

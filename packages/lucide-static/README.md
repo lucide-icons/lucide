@@ -10,9 +10,9 @@ Lucide icon library with static assets for web applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/lucide-static?color=blue)](https://www.npmjs.com/package/lucide-static)
-  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![npm](https://img.shields.io/npm/v/lucide-static?color=blue&style=for-the-badge)](https://www.npmjs.com/package/lucide-static)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static?style=for-the-badge)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide?style=for-the-badge)](https://lucide.dev/license)
 </div>
 
 <p align="center">
@@ -27,21 +27,19 @@ Lucide icon library with static assets for web applications.
 
 # Lucide Static
 
-This package include the following lucide implementations:
+This package includes:
 
-- All svg files
-- Javascript library containing strings of svgs.
+- All SVG files
+- JavaScript library with SVG strings.
 - Icon fonts
-- Svg sprite
+- SVG sprite
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
+## Why Lucide Static
 
-## Why lucide-static?
-
-This package is suitable for very specific use cases for example if you want to use icon fonts, svg sprites, normal svgs or Common.js Svg strings in your javascript project.
+Lucide Static is useful for cases where you need icon fonts, SVG sprites, or CommonJS SVG strings in a JavaScript project.
 
 > [!WARNING]
-> It is not recommended to use this package for svg sprites or icon fonts for web pages/applications, for prototyping it is ok. We recommend to bundlers for web applications to make sure you only bundle the used icons from this icon library (Threeshaking). Otherwise it will load all the icons, making you webpage loading slower. Threeshaking is only available in the packages: [lucide](https://github.com/lucide-icons/lucide/tree/main/packages/lucide), [lucide-react](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react), [lucide-vue](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue), [lucide-vue-next](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-vue-next), [lucide-angular](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-angular), [lucide-preact](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-preact)
+> This package is not ideal for web applications as it includes all icons, which can slow down load times. For optimized bundling (tree-shaking), use the following packages: [lucide](../lucide), [lucide-react](../lucide-react), [lucide-vue](../lucide-vue), [lucide-vue-next](../lucide-vue-next), [lucide-angular](../lucide-angular), [lucide-preact](../lucide-preact)
 
 ## Installation
 
@@ -63,25 +61,22 @@ bun add lucide-static
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-static)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-static).
 
 ## Community
 
-Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
+Connect with fellow Lucide enthusiasts on our [Discord server](https://discord.gg/EH6nSts)!
 
 ## License
 
-Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
+Lucide is completely free for commercial and personal use, licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE).
 
 ## Sponsors
 
-<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
-  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
-</a>
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss"><img src="../../docs/public/vercel.svg" alt="Powered by Vercel" width="200" /></a>
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="../../docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+### Awesome backers
 
-### Awesome backers 🍺
-
-<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
-<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://www.scipress.io?utm_source=lucide"><img src="../../docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="../../docs/public/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
