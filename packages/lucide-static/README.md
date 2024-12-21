@@ -10,9 +10,9 @@ Lucide icon library with static assets for web applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/lucide-static?color=blue)](https://www.npmjs.com/package/lucide-static)
-  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![npm](https://img.shields.io/npm/v/lucide-static?style=for-the-badge)](https://www.npmjs.com/package/lucide-static)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static?style=for-the-badge)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide?style=for-the-badge)](https://lucide.dev/license)
 </div>
 
 <p align="center">
