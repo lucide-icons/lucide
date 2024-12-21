@@ -10,9 +10,9 @@ Lucide icon library for Angular applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/lucide-angular?color=blue)](https://www.npmjs.com/package/lucide-angular)
-  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![npm](https://img.shields.io/npm/v/lucide-angular?style=for-the-badge)](https://www.npmjs.com/package/lucide-angular)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular?style=for-the-badge)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide?style=for-the-badge)](https://lucide.dev/license)
 </div>
 
 <p align="center">
