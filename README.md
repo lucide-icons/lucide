@@ -7,10 +7,10 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide?style=for-the-badge" alt="license"></a>
-  <a href="https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons"><img src="https://img.shields.io/badge/Figma-f24e1e?logo=figma&logoColor=white&style=for-the-badge" alt="figma installs"></a>
-  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/lucide-icons/lucide/release.yml?style=for-the-badge" alt="build status"></a>
-  <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?logo=discord&colorB=5865f2&style=for-the-badge" alt="discord chat"></a>
+  <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide?style=for-the-badge&color=077" alt="license"></a>
+  <a href="https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons"><img src="https://img.shields.io/badge/Figma-E82A2A?logo=figma&logoColor=white&style=for-the-badge" alt="figma installs"></a>
+  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/lucide-icons/lucide/release.yml?style=for-the-badge&color=077" alt="build status"></a>
+  <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?logo=discord&logoColor=white&colorB=4A60DD&style=for-the-badge" alt="discord chat"></a>
 </p>
 <p align="center">
   <a href="https://lucide.dev/icons/">Icons</a>
