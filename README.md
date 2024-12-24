@@ -63,7 +63,7 @@ Join the community on our [Discord](https://discord.gg/EH6nSts) server!
 
 ## License
 
-Lucide is totally free for commercial use and personally use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE).
+Lucide is totally free for commercial use and personal use, this software is licensed under the [ISC License](https://github.com/lucide-icons/lucide/blob/main/LICENSE).
 
 ## Credits
 
