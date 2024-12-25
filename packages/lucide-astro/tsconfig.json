@@ -16,6 +16,7 @@
     "jsx": "preserve",
     "lib": [
       "ESNext",
+      "DOM.Iterable"
     ],
     "types": [
       "@testing-library/jest-dom",
