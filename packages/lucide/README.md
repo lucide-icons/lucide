@@ -43,6 +43,10 @@ npm install lucide
 yarn add lucide
 ```
 
+```sh
+bun add lucide
+```
+
 ### CDN
 
 ```html
