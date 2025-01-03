@@ -27,9 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v4
-        with:
-          cache: 'pnpm'
 
       - name: Semantic Release
         id: semantic
