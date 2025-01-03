@@ -22,7 +22,7 @@ if (changedFilesPathString == null) {
 
 const changedFiles = changedFilesPathString
   .split(' ')
-  .map((file) => file.replace('.json', '.svg'))
+  .filter((file) => file.includes('.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
 
 if (changedFiles.length === 0) {

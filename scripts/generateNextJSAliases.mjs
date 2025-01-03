@@ -41,7 +41,8 @@ Promise.all(
         aliases.push(iconNameKebabCaseNextjsFlavour);
       }
 
-      const output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
+      let output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
+      output = `${output}\n`;
       fs.writeFile(path.resolve(ICONS_DIR, `${iconName}.json`), output, 'utf-8');
     }
   }),
