@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { createElement, forwardRef, useEffect, useState } from 'react';
 import { IconNode, LucideIcon, LucideProps } from './types';
