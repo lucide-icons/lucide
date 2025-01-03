@@ -1,8 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "temperature",
