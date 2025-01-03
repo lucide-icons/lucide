@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "deprecationReason": "icon.brand",
+  "toBeRemovedInVersion": "v1.0",
+  "contributors": [
+    "Ankita7572"
+  ],
+  "tags": [
+    "logo",
+    "social"
+    
+  ],
+  "categories": [
+    "multimedia",
+    "social",
+    "brands"
+  ]
+}
