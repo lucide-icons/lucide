@@ -18,6 +18,10 @@ yarn add lucide-react
 npm install lucide-react
 ```
 
+```sh [bun]
+bun add lucide-react
+```
+
 :::
 
 ## How to use
