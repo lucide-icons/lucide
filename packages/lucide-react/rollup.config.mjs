@@ -1,4 +1,5 @@
 import plugins from '@lucide/rollup-plugins';
+import preserveDirectives from "rollup-plugin-preserve-directives";
 import pkg from './package.json' assert { type: 'json' };
 import dts from 'rollup-plugin-dts';
 import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
@@ -63,7 +64,14 @@ const configs = bundles
     }) =>
       inputs.map((input) => ({
         input,
-        plugins: plugins({ pkg, minify }),
+        plugins: [
+          ...plugins({ pkg, minify }),
+          // Make sure we emit "use client" directive to make it compatible with Next.js
+          preserveDirectives({
+            include: 'src/DynamicIcon.ts',
+            suppressPreserveModulesWarning: true,
+          }),
+        ],
         external: ['react', 'prop-types', ...external],
         output: {
           name: packageName,

@@ -1,3 +1,5 @@
+"use client";
+
 import { createElement, forwardRef, useEffect, useState } from 'react';
 import { IconNode, LucideIcon, LucideProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
@@ -26,7 +28,7 @@ async function getIconNode(name: IconName) {
 }
 
 /**
- * Lucide icon component
+ * Dynamic Lucide icon component
  *
  * @component Icon
  * @param {object} props
