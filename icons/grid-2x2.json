@@ -18,14 +18,15 @@
     "distance",
     "surface area",
     "square meter",
-    "acre"
+    "acre",
+    "window",
+    "skylight"
   ],
   "categories": [
     "text",
     "layout",
     "design",
-    "shapes",
-    "maths"
+    "math"
   ],
   "aliases": [
     "grid-2-x-2"
