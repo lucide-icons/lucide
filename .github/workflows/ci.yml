@@ -12,6 +12,15 @@ jobs:
   create-release:
     # Only create a new releases for new icons
     runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: write
+      packages: read
+      actions: write
+      issues: write
+      pull-requests: write
+
     outputs:
       VERSION: ${{ steps.semantic.outputs.new_release_version }}
 
