@@ -42,12 +42,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Create Release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     tag_name: ${{ steps.semantic.outputs.new_release_version }}
-      #     name: Version ${{ steps.semantic.outputs.new_release_version }}
-      #     body: ${{ steps.semantic.outputs.new_release_notes }}
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.semantic.outputs.new_release_version }}
+          name: Version ${{ steps.semantic.outputs.new_release_version }}
+          body: ${{ steps.semantic.outputs.new_release_notes }}
 
   # start-release:
   #   if: github.repository == 'lucide-icons/lucide'
