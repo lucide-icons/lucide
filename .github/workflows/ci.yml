@@ -26,7 +26,6 @@ jobs:
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
         with:
-          dry_run: true
           tag_format: ${version}
           branches: |
             ['new-release-workflow']
@@ -42,6 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log version
+        if: steps.semantic.outputs.new_release_published == 'true'
         run: echo "${{ steps.semantic.outputs.new_release_version }}"
       # - name: Create Release
       #   uses: softprops/action-gh-release@v1
