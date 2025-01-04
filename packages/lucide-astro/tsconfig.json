@@ -19,17 +19,17 @@
       "DOM.Iterable"
     ],
     "types": [
-      "@testing-library/jest-dom",
+      "@testing-library/jest-dom"
     ],
     "plugins": [
       {
         "name": "@astrojs/ts-plugin",
-      }
+      },
     ],
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.astro",
-    "tests/**/*.ts",
+    "tests/**/*.ts"
   ],
 }

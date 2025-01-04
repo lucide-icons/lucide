@@ -6,7 +6,7 @@ export type AstroComponent = (_props: IconProps) => any;
 export interface IconProps extends SVGAttributes {
   color?: string;
   size?: number | string;
-  "stroke-width"?: number | string;
+  'stroke-width'?: number | string;
   absoluteStrokeWidth?: boolean;
   class?: string;
   iconNode?: IconNode;
@@ -73,4 +73,4 @@ type SVGElements =
   | 'textPath'
   | 'tspan'
   | 'use'
-  | 'view'
+  | 'view';

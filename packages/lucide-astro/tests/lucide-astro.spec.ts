@@ -11,7 +11,7 @@ describe('Using lucide icon components', () => {
 
   it('should render the icon with default attributes', async () => {
     const { container } = await render(Grid);
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
     expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
     expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
@@ -19,24 +19,21 @@ describe('Using lucide icon components', () => {
     expect(SVGElement).toHaveAttribute('viewBox', defaultAttributes.viewBox);
     expect(SVGElement).toHaveAttribute('fill', defaultAttributes.fill);
     expect(SVGElement).toHaveAttribute('stroke', defaultAttributes.stroke);
-    expect(SVGElement).toHaveAttribute('stroke-width', String(defaultAttributes["stroke-width"]));
-    expect(SVGElement).toHaveAttribute('stroke-linecap', defaultAttributes["stroke-linecap"]);
-    expect(SVGElement).toHaveAttribute('stroke-linejoin', defaultAttributes["stroke-linejoin"]);
+    expect(SVGElement).toHaveAttribute('stroke-width', String(defaultAttributes['stroke-width']));
+    expect(SVGElement).toHaveAttribute('stroke-linecap', defaultAttributes['stroke-linecap']);
+    expect(SVGElement).toHaveAttribute('stroke-linejoin', defaultAttributes['stroke-linejoin']);
 
     expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should adjust the size, stroke color and stroke width', async () => {
-    const { container } = await render(
-      Grid,
-      {
-        props: {
-          size: 48,
-          stroke: "red",
-          "stroke-width": 4
-        }
-      }
-    );
+    const { container } = await render(Grid, {
+      props: {
+        size: 48,
+        stroke: 'red',
+        'stroke-width': 4,
+      },
+    });
 
     const SVGElement = container.firstElementChild;
 
@@ -48,43 +45,33 @@ describe('Using lucide icon components', () => {
   });
 
   it('should render the alias icon', async () => {
-    const { container: PenIconContainer } = await render(
-      Pen,
-      {
-        props: {
-          size: 48,
-          stroke: "red",
-          "stroke-width": 4
-        }
-      }
-    );
+    const { container: PenIconContainer } = await render(Pen, {
+      props: {
+        size: 48,
+        stroke: 'red',
+        'stroke-width': 4,
+      },
+    });
 
-
-    const { container: Edit2Container } = await render(
-      Edit2,
-      {
-        props: {
-          size: 48,
-          stroke: "red",
-          "stroke-width": 4
-        }
-      }
-    );
+    const { container: Edit2Container } = await render(Edit2, {
+      props: {
+        size: 48,
+        stroke: 'red',
+        'stroke-width': 4,
+      },
+    });
 
     expect(PenIconContainer.innerHTML).toBe(Edit2Container.innerHTML);
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', async () => {
-    const { container } = await render(
-      Grid,
-      {
-        props: {
-          size: 48,
-          stroke: "red",
-          absoluteStrokeWidth: true
-        }
-      }
-    );
+    const { container } = await render(Grid, {
+      props: {
+        size: 48,
+        stroke: 'red',
+        absoluteStrokeWidth: true,
+      },
+    });
 
     const SVGElement = container.firstElementChild;
 
@@ -110,15 +97,14 @@ describe('Using lucide icon components', () => {
     expect(container.innerHTML).toMatchSnapshot();
   });
 
-
   it('should pass children to the icon slot', async () => {
     const { getByText, container } = await render(Smile, {
       slots: {
-        default: createAstroHTMLString("<p>Hello World</p>")
+        default: createAstroHTMLString('<p>Hello World</p>'),
       },
     });
 
-    const textElement = getByText("Hello World");
+    const textElement = getByText('Hello World');
 
     expect(textElement).toBeInTheDocument();
 
@@ -128,15 +114,15 @@ describe('Using lucide icon components', () => {
   it('should apply all classes to the element', async () => {
     const { container } = await render(Droplet, {
       props: {
-        class: "my-icon"
-      }
+        class: 'my-icon',
+      },
     });
-    const SVGElement = container.firstElementChild
+    const SVGElement = container.firstElementChild;
 
-    expect(SVGElement).toHaveClass("my-icon");
+    expect(SVGElement).toHaveClass('my-icon');
     expect(SVGElement).toHaveClass('lucide');
     expect(SVGElement).toHaveClass('lucide-droplet');
 
-    expect(container.innerHTML).toMatchSnapshot()
+    expect(container.innerHTML).toMatchSnapshot();
   });
 });

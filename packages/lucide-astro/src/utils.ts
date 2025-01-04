@@ -5,7 +5,7 @@
  * @returns {string} A kebabized string
  */
 export const toKebabCase = (string: string): string =>
-  string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+  string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
 /**
  * Merges classes into a single string
@@ -20,9 +20,9 @@ export const mergeClasses = <ClassType = string | undefined | null>(
     .filter((className, index, array) => {
       return (
         Boolean(className) &&
-        (className as string).trim() !== "" &&
+        (className as string).trim() !== '' &&
         array.indexOf(className) === index
       );
     })
-    .join(" ")
+    .join(' ')
     .trim();
