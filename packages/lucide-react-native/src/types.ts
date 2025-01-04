@@ -2,9 +2,9 @@ import type { ForwardRefExoticComponent } from "react";
 import type { SvgProps } from "react-native-svg";
 
 /**
- * Taken from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/776263e47903cf03cf64cfcc692defefcc5513ab/types/react/index.d.ts#L3873
- * This type was added in @types/react 19, and is duplicated here in order to
- * support usage with older versions.
+ * A reduced version of `SVGElementType` from @types/react. This type was added
+ * with the release of React 19, and is included here in order to support usage
+ * with older versions.
  */
 type SVGElementType =
   | "circle"
