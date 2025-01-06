@@ -49,7 +49,7 @@ import { $CamelCase } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode="burger" />
+  <Icon :iconNode="$CamelCase" />
 </template>
 `,
     },
@@ -61,7 +61,7 @@ import { Icon } from 'lucide-svelte';
 import { $CamelCase } from '@lucide/lab';
 </script>
 
-<Icon iconNode={burger} />
+<Icon iconNode={$CamelCase} />
 `,
     },
     {
