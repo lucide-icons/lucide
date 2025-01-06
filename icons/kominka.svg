@@ -16,12 +16,12 @@
   <path d="M 16 16 L 16 21" />
   <path d="M 17 6 L 17 10" />
   <path d="M 19 14 L 19 21" />
-  <path d="M 19 21 L 4.5 21" />
+  <path d="M 19 21 L 5 21" />
   <path d="M 21 13 Q 19 14 18 10" />
   <path d="M 3 13 L 21 13" />
   <path d="M 3 13 Q 5 14 6 10" />
   <path d="M 3 5 Q 5 7 12 3" />
-  <path d="M 4.5 21 L 4.5 14" />
+  <path d="M 5 21 L 5 14" />
   <path d="M 6 10 L 18 10" />
   <path d="M 6 6 L 18 6" />
   <path d="M 7 10 L 7 6" />
