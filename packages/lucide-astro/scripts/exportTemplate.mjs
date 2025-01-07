@@ -8,8 +8,8 @@ export default ({ componentName, iconName, children, getSvg, deprecated, depreca
   // Astro doesn't need keyed children in loops
   const keylessChildren = children.map((c) => {
     const [element, { key, ...otherAttrs }] = c;
-    return [element, otherAttrs]
-  })
+    return [element, otherAttrs];
+  });
 
   // TODO: build-icons' `pretty` is set to false as the prettier
   // formatter uses babel which I'm not sure it supports typescript

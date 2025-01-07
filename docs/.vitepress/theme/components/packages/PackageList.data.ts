@@ -15,7 +15,9 @@ export default {
           documentation: `/guide/packages/${pData.name}`,
           source: `https://github.com/lucide-icons/lucide/tree/main/packages/${pData.name}`,
           icon: `/framework-logos/${packageData[pData.name].icon}.svg`,
-          iconDark: Boolean(packageData[pData.name].iconDark) ? `/framework-logos/${packageData[pData.name].iconDark}.svg` : null
+          iconDark: Boolean(packageData[pData.name].iconDark)
+            ? `/framework-logos/${packageData[pData.name].iconDark}.svg`
+            : null,
         }))
         .sort((a, b) => a.order - b.order),
       thirdPartyPackages,

@@ -14,22 +14,13 @@
     "noEmit": true,
     "skipLibCheck": true,
     "jsx": "preserve",
-    "lib": [
-      "ESNext",
-      "DOM.Iterable"
-    ],
-    "types": [
-      "@testing-library/jest-dom"
-    ],
+    "lib": ["ESNext", "DOM.Iterable"],
+    "types": ["@testing-library/jest-dom"],
     "plugins": [
       {
         "name": "@astrojs/ts-plugin",
       },
     ],
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.astro",
-    "tests/**/*.ts"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"],
 }

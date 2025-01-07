@@ -5,5 +5,5 @@ import { expect } from 'vitest';
 expect.addSnapshotSerializer(htmlSerializer);
 
 expect.extend({
-  ...matchers
-})
+  ...matchers,
+});
