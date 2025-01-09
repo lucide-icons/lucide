@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "guanboo-yang"
+    "guanboo-yang",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "done",
