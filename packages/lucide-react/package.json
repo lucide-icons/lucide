@@ -65,7 +65,9 @@
       "browser": "./dist/esm/dynamicIconImports.js",
       "require": "./dist/cjs/dynamicIconImports.js",
       "node": "./dist/cjs/dynamicIconImports.js"
-    }
+    },
+    "./src/*": "./src/*.ts",
+    "./package.json": "./package.json"
   },
   "sideEffects": false,
   "scripts": {
