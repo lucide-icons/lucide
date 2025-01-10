@@ -14,10 +14,16 @@
     "accumulator",
     "charge",
     "plus",
-    "economy"
+    "economy",
+    "health",
+    "add",
+    "new",
+    "maximum",
+    "upgrade",
+    "extra",
+    "+"
   ],
   "categories": [
-    "connectivity",
     "devices"
   ]
 }
