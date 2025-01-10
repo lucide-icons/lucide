@@ -402,6 +402,9 @@ importers:
       rollup-plugin-dts:
         specifier: ^6.1.0
         version: 6.1.0(rollup@4.22.4)(typescript@4.9.5)
+      rollup-plugin-preserve-directives:
+        specifier: ^0.4.0
+        version: 0.4.0(rollup@4.22.4)
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -10022,6 +10025,11 @@ packages:
     peerDependencies:
       rollup: ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
 
+  rollup-plugin-preserve-directives@0.4.0:
+    resolution: {integrity: sha512-gx4nBxYm5BysmEQS+e2tAMrtFxrGvk+Pe5ppafRibQi0zlW7VYAbEGk6IKDw9sJGPdFWgVTE0o4BU4cdG0Fylg==}
+    peerDependencies:
+      rollup: 2.x || 3.x || 4.x
+
   rollup-plugin-sourcemaps@0.6.3:
     resolution: {integrity: sha512-paFu+nT1xvuO1tPFYXGe+XnQvg4Hjqv/eIhG8i5EspfYYPBKL57X7iVbfv55aNVASg3dzWvES9dmWsL2KhfByw==}
     engines: {node: '>=10.0.0'}
@@ -10611,6 +10619,7 @@ packages:
 
   sudo-prompt@9.2.1:
     resolution: {integrity: sha512-Mu7R0g4ig9TUuGSxJavny5Rv0egCEtpZRNMrZaYS1vxkiIxGiGUwoezU3LazIQ+KE04hTrTfNPgxU5gzi7F5Pw==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   superjson@2.2.1:
     resolution: {integrity: sha512-8iGv75BYOa0xRJHK5vRLEjE2H/i4lulTjzpUXic3Eg8akftYjkmQDa8JARQ42rlczXyFR3IeRoeFCc7RxHsYZA==}
@@ -17582,6 +17591,18 @@ snapshots:
       postcss: 8.4.49
       source-map: 0.6.1
 
+  '@vue/compiler-sfc@3.4.18':
+    dependencies:
+      '@babel/parser': 7.23.9
+      '@vue/compiler-core': 3.4.18
+      '@vue/compiler-dom': 3.4.18
+      '@vue/compiler-ssr': 3.4.18
+      '@vue/shared': 3.4.18
+      estree-walker: 2.0.2
+      magic-string: 0.30.11
+      postcss: 8.4.41
+      source-map-js: 1.2.1
+
   '@vue/compiler-sfc@3.4.21':
     dependencies:
       '@babel/parser': 7.26.1
@@ -24140,6 +24161,12 @@ snapshots:
       rollup: 4.22.4
       spdx-expression-validate: 2.0.0
       spdx-satisfies: 5.0.1
+
+  rollup-plugin-preserve-directives@0.4.0(rollup@4.22.4):
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.22.4)
+      magic-string: 0.30.11
+      rollup: 4.22.4
 
   rollup-plugin-sourcemaps@0.6.3(@types/node@12.20.55)(rollup@2.79.1):
     dependencies:
