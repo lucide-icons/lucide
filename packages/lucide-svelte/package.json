@@ -60,20 +60,20 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@sveltejs/package": "^2.2.3",
-    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/svelte": "^4.0.2",
+    "@testing-library/svelte": "^5.2.6",
     "@tsconfig/svelte": "^5.0.0",
     "jest-serializer-html": "^7.1.0",
     "jsdom": "^20.0.3",
-    "svelte": "^4.2.19",
+    "svelte": "^5.17.3",
     "svelte-check": "^3.4.4",
     "svelte-preprocess": "^5.0.4",
     "typescript": "^5.1.6",
-    "vite": "5.1.8",
+    "vite": "6.0.7",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
-    "svelte": "^3 || ^4 || ^5.0.0-next.42"
+    "svelte": "^3 || ^4 || ^5"
   }
 }
