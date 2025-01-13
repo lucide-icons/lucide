@@ -24,7 +24,7 @@
   "author": "Eric Fennis",
   "amdName": "lucide-react",
   "source": "src/lucide-react.ts",
-  "main": "dist/ems/lucide-react.js",
+  "main": "dist/esm/lucide-react.js",
   "types": "dist/lucide-react.d.ts",
   "type": "module",
   "files": [
