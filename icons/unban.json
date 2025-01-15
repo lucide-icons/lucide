@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "niko-gardenanet"
+  ],
+  "tags": [
+    "allow",
+    "permit",
+    "circle",
+    "slash",
+    "unblock"
+  ],
+  "categories": [
+    "account"
+  ],
+  "aliases": [
+    "unblock"
+  ]
+}
