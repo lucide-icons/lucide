@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "niko-gardenanet"
+    "niko-gardenanet",
+    "danielbayley"
   ],
   "tags": [
     "allow",
