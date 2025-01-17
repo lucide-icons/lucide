@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "akshaymemane",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "home",
+    "living",
+    "building",
+    "wifi",
+    "connectivity"
+  ],
+  "categories": [
+    "home",
+    "buildings",
+    "connectivity"
+  ]
+}
