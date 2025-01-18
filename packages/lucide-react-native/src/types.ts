@@ -1,5 +1,5 @@
-import type { ForwardRefExoticComponent } from "react";
-import type { SvgProps } from "react-native-svg";
+import type { ForwardRefExoticComponent } from 'react';
+import type { SvgProps } from 'react-native-svg';
 
 /**
  * A reduced version of `SVGElementType` from @types/react. This type was added
@@ -7,14 +7,14 @@ import type { SvgProps } from "react-native-svg";
  * with older versions.
  */
 type SVGElementType =
-  | "circle"
-  | "ellipse"
-  | "g"
-  | "line"
-  | "path"
-  | "polygon"
-  | "polyline"
-  | "rect";
+  | 'circle'
+  | 'ellipse'
+  | 'g'
+  | 'line'
+  | 'path'
+  | 'polygon'
+  | 'polyline'
+  | 'rect';
 
 export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>][];
 
