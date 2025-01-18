@@ -21,7 +21,7 @@ export type IconNode = [elementName: SVGElementType, attrs: Record<string, strin
 export interface LucideProps extends SvgProps {
   size?: string | number;
   absoluteStrokeWidth?: boolean;
-  "data-testid"?: string;
+  'data-testid'?: string;
 }
 
 export type LucideIcon = ForwardRefExoticComponent<LucideProps>;
