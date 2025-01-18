@@ -1,4 +1,4 @@
-import type { SVGProps, ForwardRefExoticComponent, RefAttributes } from "react";
+import type { SVGProps, ForwardRefExoticComponent, RefAttributes } from 'react';
 
 /**
  * A reduced version of `SVGElementType` from @types/react. This type was added
@@ -6,14 +6,14 @@ import type { SVGProps, ForwardRefExoticComponent, RefAttributes } from "react";
  * with older versions.
  */
 type SVGElementType =
-  | "circle"
-  | "ellipse"
-  | "g"
-  | "line"
-  | "path"
-  | "polygon"
-  | "polyline"
-  | "rect";
+  | 'circle'
+  | 'ellipse'
+  | 'g'
+  | 'line'
+  | 'path'
+  | 'polygon'
+  | 'polyline'
+  | 'rect';
 
 export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>][];
 
@@ -26,5 +26,5 @@ export interface LucideProps extends ElementAttributes {
 }
 
 export type LucideIcon = ForwardRefExoticComponent<
-  Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
 >;
