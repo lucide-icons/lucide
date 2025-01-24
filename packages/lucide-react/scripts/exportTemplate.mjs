@@ -7,6 +7,9 @@ export default ({ componentName, iconName, children, getSvg, deprecated, depreca
 
   return `
 import createLucideIcon from '../createLucideIcon';
+import { IconNode } from '../types';
+
+export const __iconNode: IconNode = ${JSON.stringify(children)}
 
 /**
  * @component @name ${componentName}
@@ -19,7 +22,7 @@ import createLucideIcon from '../createLucideIcon';
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}', ${JSON.stringify(children)});
+const ${componentName} = createLucideIcon('${componentName}', __iconNode);
 
 export default ${componentName};
 `;
