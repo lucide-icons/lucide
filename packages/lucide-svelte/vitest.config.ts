@@ -1,16 +1,19 @@
-import { defineConfig } from 'vitest/config';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { defineConfig } from 'vitest/config';
 
-export default defineConfig({
+// @ts-expect-error - type mismatch
+export default defineConfig(({ mode }) => ({
   plugins: [
     svelte({
-      hot: false,
+      compilerOptions: { hmr: false },
     }),
   ],
+  resolve: {
+    conditions: mode === 'test' ? ['browser'] : [],
+  },
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: './tests/setupVitest.ts',
-    alias: [{ find: /^svelte$/, replacement: 'svelte/internal' }],
   },
-});
+}));
