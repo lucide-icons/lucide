@@ -19,11 +19,7 @@ import type { IconNode } from '../types';
  * @returns {Array}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName}: IconNode = [
-  'svg',
-  defaultAttributes,
-  ${JSON.stringify(children)}
-];
+const ${componentName}: IconNode =  ${JSON.stringify(children)}
 
 export default ${componentName};
 `;

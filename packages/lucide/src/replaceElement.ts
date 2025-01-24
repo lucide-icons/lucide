@@ -1,4 +1,5 @@
 import createElement from './createElement';
+import defaultAttributes from './defaultAttributes';
 import { Icons } from './types';
 
 export type CustomAttrs = { [attr: string]: any };
@@ -19,7 +20,7 @@ export const getAttrs = (element: Element): Record<string, string> =>
  * @param {Object} attrs
  * @returns {Array}
  */
-export const getClassNames = (attrs: Record<string, string> | string): string | string[] => {
+export const getClassNames = (attrs: Record<string, string | string[]> | string): string | string[] => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
   if (attrs.class && typeof attrs.class === 'string') {
@@ -36,7 +37,7 @@ export const getClassNames = (attrs: Record<string, string> | string): string | 
  * @param {array} arrayOfClassnames
  * @returns {string}
  */
-export const combineClassNames = (arrayOfClassnames: (string | Record<string, string>)[]) => {
+export const combineClassNames = (arrayOfClassnames: (string | Record<string, string | string[]>)[]) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
   return classNameArray
@@ -61,7 +62,7 @@ interface ReplaceElementOptions {
  * @param {{ nameAttr: string, icons: object, attrs: object }} options: { nameAttr, icons, attrs }
  * @returns {Function}
  */
-const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceElementOptions) => {
+const  replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceElementOptions) => {
   const iconName = element.getAttribute(nameAttr);
 
   if (iconName == null) return;
@@ -77,10 +78,9 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
   }
 
   const elementAttrs = getAttrs(element);
-  const [tag, iconAttributes, children] = iconNode;
 
   const iconAttrs = {
-    ...iconAttributes,
+    ...defaultAttributes,
     'data-lucide': iconName,
     ...attrs,
     ...elementAttrs,
@@ -94,7 +94,7 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
     });
   }
 
-  const svgElement = createElement([tag, iconAttrs, children]);
+  const svgElement = createElement(['svg', iconAttrs, iconNode]);
 
   return element.parentNode?.replaceChild(svgElement, element);
 };
