@@ -12,7 +12,7 @@ ${getJSBanner()}
 import Icon from '../Icon.svelte';
 import type { IconNode, IconProps } from '../types.js';
 
-type $$Props = IconProps;
+let props: IconProps = $props();
 
 const iconNode: IconNode = ${JSON.stringify(children)};
 
@@ -29,8 +29,8 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  */
 </script>
 
-<Icon name="${iconName}" {...$$props} iconNode={iconNode}>
-  <slot/>
+<Icon name="${iconName}" {...props} iconNode={iconNode}>
+  {@render props.children?.()}
 </Icon>
 `;
 };
