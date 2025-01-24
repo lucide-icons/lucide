@@ -54,11 +54,14 @@ describe('createIcons', () => {
     const element = document.querySelector('svg') as SVGSVGElement;
     const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce((acc, item) => {
-      acc[item] = element.getAttribute(item);
+    const attributesAndValues = attributes.reduce(
+      (acc, item) => {
+        acc[item] = element.getAttribute(item);
 
-      return acc;
-    }, {} as Record<string, string | null>);
+        return acc;
+      },
+      {} as Record<string, string | null>,
+    );
 
     expect(document.body.innerHTML).toMatchSnapshot();
 
@@ -77,11 +80,14 @@ describe('createIcons', () => {
     const element = document.querySelector('svg') as SVGSVGElement;
     const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce((acc, item) => {
-      acc[item] = element.getAttribute(item);
+    const attributesAndValues = attributes.reduce(
+      (acc, item) => {
+        acc[item] = element.getAttribute(item);
 
-      return acc;
-    }, {} as Record<string, string | null>);
+        return acc;
+      },
+      {} as Record<string, string | null>,
+    );
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });
