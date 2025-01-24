@@ -2,7 +2,7 @@
   import defaultAttributes from './defaultAttributes';
   import type { IconProps } from './types';
 
-  let {
+  const {
     name,
     color = 'currentColor',
     size = 24,
