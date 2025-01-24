@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide">
-    <img src="https://lucide.dev/package-logos/lucide-svelte.svg" alt="Lucide icon library for Svelte applications." width="540">
+    <img src="https://lucide.dev/package-logos/lucide-svelte.svg" alt="Lucide icon library for Svelte 5 applications." width="540">
   </a>
 </p>
 
@@ -10,8 +10,8 @@ Lucide icon library for Svelte 5 applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/lucide-svelte?color=blue)](https://www.npmjs.com/package/lucide-svelte)
-  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-svelte)
+  [![npm](https://img.shields.io/npm/v/%40lucide%2Fsvelte?color=blue)](https://www.npmjs.com/package/lucide-svelte)
+  ![NPM Downloads](https://img.shields.io/npm/dw/%40lucide%2Fsvelte)
   [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
 </div>
 
@@ -32,19 +32,19 @@ Implementation of the lucide icon library for svelte applications.
 ## Installation
 
 ```sh
-pnpm add lucide-svelte
+pnpm add @lucide/svelte
 ```
 
 ```sh
-npm install lucide-svelte
+npm install @lucide/svelte
 ```
 
 ```sh
-yarn add lucide-svelte
+yarn add @lucide/svelte
 ```
 
 ```sh
-bun add lucide-svelte
+bun add @lucide/svelte
 ```
 
 ## Documentation
