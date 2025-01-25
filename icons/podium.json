@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas"
+  ],
+  "tags": [
+    "winning",
+    "place",
+    "placing",
+    "leaderboard",
+    "first",
+    "second",
+    "third",
+    "gold",
+    "silver",
+    "bronze"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
