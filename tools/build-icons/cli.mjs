@@ -90,6 +90,7 @@ async function buildIcons() {
       iconNodes: icons,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
+      iconMetaData,
       showLog: !silent,
     });
   }
