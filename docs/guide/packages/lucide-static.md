@@ -33,13 +33,17 @@ yarn add lucide-static
 npm install lucide-static
 ```
 
+```sh [bun]
+bun add lucide-static
+```
+
 :::
 
 ### CDN
 
 ```html
 <!-- SVG file for a single icon -->
-<img src="https://unpkg.com/lucide-static@latest/icons/home.svg" />
+<img src="https://unpkg.com/lucide-static@latest/icons/house.svg" />
 
 <!-- Icon font -->
 <style>
@@ -62,12 +66,12 @@ To use it in for example html:
 
 ```html
 <!-- SVG file for a single icon -->
-<img src="~lucide-static/icons/home.svg" />
+<img src="~lucide-static/icons/house.svg" />
 ```
 
 ```css
-.home-icon {
-  background-image: url(~lucide-static/icons/home.svg);
+.house-icon {
+  background-image: url(~lucide-static/icons/house.svg);
 }
 ```
 
@@ -90,7 +94,7 @@ You may need additional loader for this.
 
 ```html
 <!-- Icon Sprite, not recommended for production! -->
-<img src="lucide-static/sprite.svg#home" />
+<img src="lucide-static/sprite.svg#house" />
 
 <!-- or -->
 <svg
@@ -143,11 +147,11 @@ and update the SVG as follows
 ### Icon Font
 
 ```css
-@import ('~lucide-static/font/Lucide.css');
+@import ('~lucide-static/font/lucide.css');
 ```
 
 ```html
-<div class="icon-home"></div>
+<div class="icon-house"></div>
 ```
 
 ### Node.js

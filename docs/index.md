@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+markdownStyles: false
 
 head:
   - - link
@@ -56,7 +57,9 @@ features:
 <script setup>
 import HomePackagesSection from './.vitepress/theme/components/home/HomePackagesSection.vue'
 import HomeIconCustomizer from './.vitepress/theme/components/home/HomeIconCustomizer.vue'
+import HomeTeamSection from './.vitepress/theme/components/home/HomeTeamSection.vue'
 </script>
 
 <HomePackagesSection />
 <HomeIconCustomizer />
+<HomeTeamSection />
