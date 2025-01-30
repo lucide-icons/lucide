@@ -7,32 +7,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide" alt="license"></a>
-  <a href="https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons"><img src="https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white" alt="figma installs"></a>
-  <a href="https://github.com/lucide-icons/lucide/actions/workflows/release.yml"><img src="https://github.com/lucide-icons/lucide/actions/workflows/release.yml/badge.svg" alt="build status"></a>
-  <a href="https://discord.gg/EH6nSts"><img src="https://img.shields.io/discord/723074157486800936?label=chat&logo=discord&logoColor=%23ffffff&colorB=%237289DA" alt="discord chat"></a>
-</p>
-<p align="center">
-  <a href="https://lucide.dev/icons/">Icons</a>
-  ·
-  <a href="https://lucide.dev/guide/">Guide</a>
-  ·
-  <a href="https://lucide.dev/packages">Packages</a>
-  ·
-  <a href="https://lucide.dev/license">License</a>
-  ·
-  <a href="https://lucide.dev/showcase">Showcase</a>
-</p>
-
-# Lucide
-
-Lucide is an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official [packages](https://lucide.dev/packages) to make it easier to use these icons in your project.
-
-## Packages
-
-|  | Package | Version & Downloads | Links |
-| --- | --- | --- | --- |
-| <img src="https://lucide.dev/framework-logos/js.svg" alt="JS logo" width="48"> | `lucide` | [![npm](https://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide) ![NPM Downloads](https://img.shields.io/npm/dw/lucide) | [Docs](https://lucide.dev/guide/packages/lucide) [Source](./packages/lucide) |
+  <a href="https://github.com/lucs://img.shields.io/npm/v/lucide)](https://www.npmjs.com/package/lucide) ![NPM Downloads](https://img.shields.io/npm/dw/lucide) | [Docs](https://lucide.dev/guide/packages/lucide) [Source](./packages/lucide) |
 | <img src="https://lucide.dev/framework-logos/react.svg" alt="React logo" width="48"> | `lucide-react` | [![npm](https://img.shields.io/npm/v/lucide-react)](https://www.npmjs.com/package/lucide-react) ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react) | [Docs](https://lucide.dev/guide/packages/lucide-react) [Source](./packages/lucide-react) |
 | <img src="https://lucide.dev/framework-logos/vue.svg" alt="Vue logo" width="48"> | `lucide-vue-next` | [![npm](https://img.shields.io/npm/v/lucide-vue-next)](https://www.npmjs.com/package/lucide-vue-next) ![NPM Downloads](https://img.shields.io/npm/dw/lucide-vue-next) | [Docs](https://lucide.dev/guide/packages/lucide-vue-next) [Source](./packages/lucide-vue-next) |
 | <img src="https://lucide.dev/framework-logos/svelte.svg" alt="Svelte logo" width="48"> | `lucide-svelte` | [![npm](https://img.shields.io/npm/v/lucide-svelte)](https://www.npmjs.com/package/lucide-svelte) ![NPM Downloads](https://img.shields.io/npm/dw/lucide-svelte) | [Docs](https://lucide.dev/guide/packages/lucide-svelte) [Source](./packages/lucide-svelte) |
