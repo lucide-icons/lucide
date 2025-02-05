@@ -8,9 +8,6 @@ const scriptDir = getCurrentDirPath(import.meta.url);
 
 const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../../icons'));
 
-console.log(iconMetaData);
-
-
 const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
   .filter(([, { aliases }]) => aliases?.length)
   .map(([iconName, { aliases }]) => {
