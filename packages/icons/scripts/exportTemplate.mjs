@@ -8,6 +8,7 @@ export default ({ iconName, children, getSvg, deprecated, deprecationReason }) =
   const exportName = toCamelCase(iconName)
 
   return `
+import { IconNode } from '../types';
 /**
  * @name ${iconName}
  * @description Lucide SVG string.
@@ -17,8 +18,8 @@ export default ({ iconName, children, getSvg, deprecated, deprecationReason }) =
  * @returns {IconNode}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${exportName}: string = ${JSON.stringify(children)}
+const _${exportName}: string = ${JSON.stringify(children)}
 
-export default ${exportName};
+export default _${exportName};
 `;
 };
