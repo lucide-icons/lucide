@@ -6,7 +6,7 @@ import { getCurrentDirPath } from '@lucide/helpers';
 const currentDir = process.cwd();
 const scriptDir = getCurrentDirPath(import.meta.url);
 
-const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
+const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../../icons'));
 
 const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
   .filter(([, { aliases }]) => aliases?.length)
@@ -16,7 +16,7 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
     const aliasRouteMatches = aliases.join('|');
 
     return {
-      src: `/icons/(${aliasRouteMatches})`,
+      src: `/icons/${aliasRouteMatches}`,
       status: 302,
       headers: {
         Location: `/icons/${iconName}`,
