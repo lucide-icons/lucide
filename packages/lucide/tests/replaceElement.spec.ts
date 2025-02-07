@@ -43,7 +43,7 @@ describe('getClassNames', () => {
 });
 
 describe('combineClassNames', () => {
-  it('should retuns a string of classNames', () => {
+  it('should returns a string of classNames', () => {
     const arrayOfClassnames: (string | Record<string, string[]>)[] = [
       'item',
       {
