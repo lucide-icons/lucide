@@ -45,7 +45,7 @@ const getRelatedIcons = (currentIcon, icons) => {
 };
 
 const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
-  const metaDataFileContent = await fs.promises.readFile(`../icons/${iconName}`)
+  const metaDataFileContent = await fs.promises.readFile(`../icons/${iconName}`);
   const metaData = JSON.parse(metaDataFileContent);
 
   const name = iconName.replace('.json', '');

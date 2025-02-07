@@ -11,7 +11,7 @@ import { generateHashedKey, readSvg, hasDuplicatedChildren } from '@lucide/helpe
 export default async function generateIconObject(
   svgFiles,
   iconsDirectory,
-  renderUniqueKey = false
+  renderUniqueKey = false,
 ) {
   const svgsContentPromises = svgFiles.map(async (svgFile) => {
     const name = basename(svgFile, '.svg');
@@ -35,7 +35,7 @@ export default async function generateIconObject(
     }
 
     return { name, contents };
-  })
+  });
 
   const svgsContents = await Promise.all(svgsContentPromises);
 

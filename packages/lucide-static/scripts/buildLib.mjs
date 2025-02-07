@@ -43,4 +43,4 @@ await Promise.all([
   generateSprite(parsedSvgs, PACKAGE_DIR, license),
   generateIconNodes(parsedSvgs, PACKAGE_DIR),
   copyIcons(parsedSvgs, PACKAGE_DIR, license),
-])
+]);

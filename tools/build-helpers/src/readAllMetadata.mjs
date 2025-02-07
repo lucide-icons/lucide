@@ -9,8 +9,8 @@ import { readMetadata } from './readMetadata.mjs';
  * @param {string} directory
  * @returns {object} A map of icon or category metadata
  */
-export const readAllMetadata = async (directory) =>{
-  const directoryContent = await fs.readdir(directory)
+export const readAllMetadata = async (directory) => {
+  const directoryContent = await fs.readdir(directory);
 
   return directoryContent
     .filter((file) => path.extname(file) === '.json')
@@ -18,4 +18,4 @@ export const readAllMetadata = async (directory) =>{
       acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
       return acc;
     }, {});
-}
+};

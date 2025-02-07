@@ -80,6 +80,6 @@ function generateIconFiles({
     .catch((error) => {
       throw new Error(`Something went wrong generating icon files,\n ${error}`);
     });
-};
+}
 
-export default generateIconFiles
+export default generateIconFiles;
