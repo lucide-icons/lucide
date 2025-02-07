@@ -4,7 +4,7 @@ import prettier from 'prettier';
 import { readSvg, toPascalCase } from '@lucide/helpers';
 import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.mjs';
 
-export default ({
+function generateIconFiles({
   iconNodes,
   outputDirectory,
   template,
@@ -15,7 +15,7 @@ export default ({
   pretty = true,
   iconsDir,
   iconMetaData,
-}) => {
+}) {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -40,7 +40,7 @@ export default ({
         })
       : '';
 
-    const elementTemplate = template({
+    const elementTemplate = await template({
       componentName,
       iconName,
       children,
@@ -71,7 +71,7 @@ export default ({
     }
   });
 
-  Promise.all(writeIconFiles)
+  return Promise.all(writeIconFiles)
     .then(() => {
       if (showLog) {
         console.log('Successfully built', icons.length, 'icons.');
@@ -81,3 +81,5 @@ export default ({
       throw new Error(`Something went wrong generating icon files,\n ${error}`);
     });
 };
+
+export default generateIconFiles

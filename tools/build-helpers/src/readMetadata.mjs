@@ -9,5 +9,8 @@ import path from 'path';
  * @param {string} directory
  * @returns {object} The metadata for the icon or category
  */
-export const readMetadata = (fileName, directory) =>
-  JSON.parse(fs.readFileSync(path.join(directory, fileName), 'utf-8'));
+export const readMetadata = async (fileName, directory) =>{
+  const metadataFileContent = await fs.readFile(path.join(directory, fileName), 'utf-8')
+
+  return JSON.parse(metadataFileContent);
+}

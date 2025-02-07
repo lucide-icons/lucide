@@ -3,22 +3,22 @@ import path from 'path';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
 
-export default (
+export default async function generateExportFile(
   inputEntry,
   outputDirectory,
   iconNodes,
   exportModuleNameCasing,
   iconFileExtension = '',
-) => {
+) {
   const fileName = path.basename(inputEntry);
 
   // Reset file
-  resetFile(fileName, outputDirectory);
+  await resetFile(fileName, outputDirectory);
 
   const icons = Object.keys(iconNodes);
 
   // Generate Import for Icon VNodes
-  icons.forEach((iconName) => {
+  const iconImportNodesPromises = icons.map(async (iconName) => {
     let componentName;
 
     if (exportModuleNameCasing === 'camel') {
@@ -27,10 +27,12 @@ export default (
       componentName = toPascalCase(iconName);
     }
     const importString = `export { default as ${componentName} } from './${iconName}${iconFileExtension}';\n`;
-    appendFile(importString, fileName, outputDirectory);
+    return appendFile(importString, fileName, outputDirectory);
   });
 
-  appendFile('\n', fileName, outputDirectory);
+  await Promise.all(iconImportNodesPromises);
+
+  await appendFile('\n', fileName, outputDirectory);
 
   console.log(`Successfully generated ${fileName} file`);
 };

@@ -30,7 +30,7 @@ const license = `@license ${pkg.name} v${pkg.version} - ${pkg.license}`;
 createDirectory(LIB_DIR);
 createDirectory(ICON_MODULE_DIR);
 
-const svgFiles = readSvgDirectory(ICONS_DIR);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
 const svgs = readSvgs(svgFiles, ICONS_DIR);
 
 const parsedSvgs = svgs.map(({ name, contents }) => ({
