@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "irvineacosta"
+    "irvineacosta",
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "columns",
