@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "UsamaKhan"
+  ],
+  "tags": [
+    "solar panel",
+    "solar",
+    "panel"
+  ],
+  "categories": [
+    "home",
+    "science",
+    "sustainability",
+    "weather"
+  ]
+}
