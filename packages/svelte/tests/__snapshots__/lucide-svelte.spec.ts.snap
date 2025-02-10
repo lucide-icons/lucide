@@ -13,31 +13,46 @@ exports[`Using lucide icon components > should add a class to the element 1`] = 
   width="24"
   xmlns="http://www.w3.org/2000/svg"
 >
+  <!---->
   <circle
     cx="12"
     cy="12"
     r="10"
-  />
+  >
+    
+  </circle>
   
+  <!---->
   <path
     d="M8 14s1.5 2 4 2 4-2 4-2"
-  />
+  >
+    
+  </path>
   
+  <!---->
   <line
     x1="9"
     x2="9.01"
     y1="9"
     y2="9"
-  />
+  >
+    
+  </line>
   
+  <!---->
   <line
     x1="15"
     x2="15.01"
     y1="9"
     y2="9"
-  />
+  >
+    
+  </line>
   
+  <!---->
+  <!---->
   
+  <!---->
 </svg>
 `;
 
@@ -55,32 +70,48 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
     width="48"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <!---->
     <circle
       cx="12"
       cy="12"
       r="10"
-    />
+    >
+      
+    </circle>
     
+    <!---->
     <path
       d="M8 14s1.5 2 4 2 4-2 4-2"
-    />
+    >
+      
+    </path>
     
+    <!---->
     <line
       x1="9"
       x2="9.01"
       y1="9"
       y2="9"
-    />
+    >
+      
+    </line>
     
+    <!---->
     <line
       x1="15"
       x2="15.01"
       y1="9"
       y2="9"
-    />
+    >
+      
+    </line>
     
+    <!---->
+    <!---->
     
+    <!---->
   </svg>
+  
 </div>
 `;
 
@@ -133,32 +164,48 @@ exports[`Using lucide icon components > should render an component 1`] = `
     width="24"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <!---->
     <circle
       cx="12"
       cy="12"
       r="10"
-    />
+    >
+      
+    </circle>
     
+    <!---->
     <path
       d="M8 14s1.5 2 4 2 4-2 4-2"
-    />
+    >
+      
+    </path>
     
+    <!---->
     <line
       x1="9"
       x2="9.01"
       y1="9"
       y2="9"
-    />
+    >
+      
+    </line>
     
+    <!---->
     <line
       x1="15"
       x2="15.01"
       y1="9"
       y2="9"
-    />
+    >
+      
+    </line>
     
+    <!---->
+    <!---->
     
+    <!---->
   </svg>
+  
 </div>
 `;
 
@@ -176,34 +223,50 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
     width="24"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <!---->
     <circle
       cx="12"
       cy="12"
       r="10"
-    />
+    >
+      
+    </circle>
     
+    <!---->
     <path
       d="M8 14s1.5 2 4 2 4-2 4-2"
-    />
+    >
+      
+    </path>
     
+    <!---->
     <line
       x1="9"
       x2="9.01"
       y1="9"
       y2="9"
-    />
+    >
+      
+    </line>
     
+    <!---->
     <line
       x1="15"
       x2="15.01"
       y1="9"
       y2="9"
-    />
+    >
+      
+    </line>
     
-    
+    <!---->
+    <!---->
     <text>
       Test
     </text>
+    
+    <!---->
   </svg>
+  
 </div>
 `;
