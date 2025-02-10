@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "coffee",
+    "drink",
+    "hot",
+    "cafe",
+    "barista",
+    "disposable",
+    "take away"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
