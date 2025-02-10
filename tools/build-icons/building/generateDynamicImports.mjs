@@ -1,7 +1,7 @@
 import path from 'path';
 import { resetFile, appendFile } from '@lucide/helpers';
 
-export default function generateDynamicImports({
+export default async function generateDynamicImports({
   iconNodes,
   outputDirectory,
   fileExtension,
@@ -12,7 +12,7 @@ export default function generateDynamicImports({
   const icons = Object.keys(iconNodes);
 
   // Reset file
-  resetFile(fileName, outputDirectory);
+  await resetFile(fileName, outputDirectory);
 
   let importString = `const dynamicIconImports = {\n`;
 
@@ -40,7 +40,7 @@ export default function generateDynamicImports({
 
   importString += '};\nexport default dynamicIconImports;\n';
 
-  appendFile(importString, fileName, outputDirectory);
+  await appendFile(importString, fileName, outputDirectory);
 
   if (showLog) {
     console.log(`Successfully generated ${fileName} file`);
