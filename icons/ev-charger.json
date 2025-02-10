@@ -1,12 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "UsamaKhan",
     "karsa-mistmere",
     "ericfennis",
     "colebemis",
     "csandman",
-    "johnletey",
-    "UsamaKhan"
+    "johnletey"
   ],
   "tags": [
     "ev",
