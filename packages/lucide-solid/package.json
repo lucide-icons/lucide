@@ -85,7 +85,7 @@
     "typescript": "^4.9.4",
     "vite": "5.1.8",
     "vite-plugin-solid": "^2.10.1",
-    "vitest": "^1.1.1",
+    "vitest": "^1.6.1",
     "esbuild": "^0.19.11"
   },
   "peerDependencies": {
