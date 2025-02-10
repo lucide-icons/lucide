@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "colebemis",
+    "csandman",
+    "johnletey",
+    "UsamaKhan"
+  ],
+  "tags": [
+    "ev",
+    "power",
+    "electricity",
+    "energy",
+    "accumulator",
+    "charge"
+  ],
+  "categories": [
+    "transportation",
+    "navigation"
+  ]
+}
