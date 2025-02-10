@@ -18,7 +18,7 @@ import { IconNode } from '../types';
  * @returns {IconNode}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const _${exportName}: string = ${JSON.stringify(children)}
+const _${exportName}: IconNode = ${JSON.stringify(children)}
 
 export default _${exportName};
 `;
