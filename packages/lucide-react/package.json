@@ -96,6 +96,7 @@
     "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-preserve-directives": "^0.4.0",
+    "simple-icons": "^14.6.0",
     "typescript": "^4.9.5",
     "vite": "5.1.8",
     "vitest": "^1.1.1"
