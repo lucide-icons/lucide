@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Using createFromSimpleIcon > should create a component from a SimpleIcon 1`] = `
+<svg
+  class="lucide lucide-test-icon"
+  fill="none"
+  height="24"
+  stroke="currentColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="2"
+  viewBox="0 0 24 24"
+  width="24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M10 10 H 90 V 90 H 10 L 10 10"
+    fill="currentColor"
+  />
+</svg>
+`;
