@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "chessurisme"
+  ],
+  "tags": [
+    "brush",
+    "paintbrush",
+    "design",
+    "color",
+    "colour",
+    "decoration",
+    "diy",
+    "refactor",
+    "reset",
+    "remove",
+    "sweep"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "photography",
+    "home",
+    "tools"
+  ]
+}
