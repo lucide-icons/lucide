@@ -86,7 +86,7 @@
     "vite": "5.1.8",
     "vite-plugin-solid": "^2.10.1",
     "vitest": "^1.1.1",
-    "esbuild": "^0.19.11"
+    "esbuild": "^0.25.0"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"
