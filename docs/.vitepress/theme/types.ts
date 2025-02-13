@@ -6,6 +6,9 @@ export interface IconMetaData {
   categories: string[];
   contributors: string[];
   aliases?: string[];
+  deprecated?: boolean;
+  deprecationReason?: string;
+  toBeRemovedInVersion?: string;
 }
 
 export type ExternalLibs = 'lab';
