@@ -1,4 +1,4 @@
-name: Linting
+name: Linting PR
 
 on:
   pull_request:
@@ -6,14 +6,13 @@ on:
       - '**'
 
 jobs:
-  linting:
+  lint-code:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
           cache: 'pnpm'
 
       - name: Install Dependencies
@@ -21,3 +20,25 @@ jobs:
 
       - name: Run Linter
         run: pnpm lint
+
+  lint-PR-title:
+    name: PR Title Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            fix
+            feat
+            perf
+            refactor
+            test
+            style
+            docs
+            ci
+            build
+          requireScope: true
+          ignoreLabels: |
+            bot
