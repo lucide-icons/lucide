@@ -118,7 +118,7 @@ export default [
     input: 'src/dynamic.ts',
     output: [
       {
-        file: `dist/dynamic.d.ts`,
+        file: `dynamic.d.ts`,
         format: 'es',
       },
     ],
@@ -128,7 +128,7 @@ export default [
     input: 'src/DynamicIcon.ts',
     output: [
       {
-        file: `dist/DynamicIcon.d.ts`,
+        file: `DynamicIcon.d.ts`,
         format: 'es',
       },
     ],
