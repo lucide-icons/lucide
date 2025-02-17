@@ -43,10 +43,11 @@ const bundles = [
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `${modulePath}.js`;
+        return `dist/esm/${modulePath}.js`;
       }
     },
   },
+
 ];
 
 const configs = bundles
