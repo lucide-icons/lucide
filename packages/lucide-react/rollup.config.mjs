@@ -104,15 +104,11 @@ export default [
     input: 'src/dynamicIconImports.ts',
     output: [
       {
-        file: `dist/dynamicIconImports.d.ts`,
+        file: `dynamicIconImports.d.ts`,
         format: 'es',
       },
     ],
-    plugins: [
-      dts({
-        exclude: ['./src/icons'],
-      }),
-    ],
+    plugins: [dts()],
   },
   {
     input: 'src/dynamic.ts',
