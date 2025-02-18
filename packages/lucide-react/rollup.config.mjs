@@ -8,36 +8,34 @@ const aliasesEntries = await getAliasesEntryNames();
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
-const outputDir = `dist`;
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
     format: 'umd',
     inputs,
-    outputDir,
+    outputDir: 'dist/umd',
     minify: true,
   },
   {
     format: 'umd',
     inputs,
-    outputDir,
+    outputDir: 'dist/umd',
   },
   {
     format: 'cjs',
     inputs,
-    outputDir,
+    outputDir: 'dist/cjs',
   },
   {
     format: 'esm',
-    inputs: [...inputs, ...aliasesEntries],
-    outputDir,
+    inputs: [...inputs, , 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    outputDir: 'dist/esm',
     preserveModules: true,
   },
   {
     format: 'esm',
-    inputs: ['src/dynamic.ts', 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts'],
-    outputDir,
-    preserveModules: true,
+    inputs: ['src/dynamic.ts'],
+    outputFile: 'dynamic.mjs',
     external: [/src/],
     paths: (id) => {
       if (id.match(/src/)) {
@@ -78,12 +76,12 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-                dir: `${outputDir}/${format}`,
+                dir: outputDir,
               }
             : {
                 file:
                   outputFile ??
-                  `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+                  `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
               }),
           paths,
           entryFileNames,
@@ -116,16 +114,6 @@ export default [
     output: [
       {
         file: `dynamic.d.ts`,
-        format: 'es',
-      },
-    ],
-    plugins: [dts()],
-  },
-  {
-    input: 'src/DynamicIcon.ts',
-    output: [
-      {
-        file: `DynamicIcon.d.ts`,
         format: 'es',
       },
     ],
