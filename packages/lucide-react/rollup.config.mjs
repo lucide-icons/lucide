@@ -45,7 +45,6 @@ const bundles = [
       }
     },
   },
-
 ];
 
 const configs = bundles
@@ -76,13 +75,11 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-              dir: outputDir,
-            }
+                dir: outputDir,
+              }
             : {
-              file:
-                outputFile ??
-                `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
-            }),
+                file: outputFile ?? `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
+              }),
           paths,
           entryFileNames,
           format,
