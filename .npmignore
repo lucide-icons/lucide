@@ -13,3 +13,4 @@ netlify.toml
 rollup.config.js
 rollup.plugins.js
 tags.json
+icon-names.json

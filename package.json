@@ -23,6 +23,7 @@
     "icons2tags": "node scripts/migrateIconsToTags.mjs",
     "icons2categories": "node scripts/migrateIconsToCategories.mjs",
     "categories2icons": "node scripts/migrateCategoriesToIcons.mjs",
+    "generate:icon-names": "node ./scripts/generateIconNames.mjs",
     "generate:changelog": "node ./scripts/generateChangelog.mjs",
     "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",

@@ -30,6 +30,7 @@ packages/**/dynamic.mjs
 packages/**/LICENSE
 categories.json
 tags.json
+icon-names.json
 .vercel
 
 # docs
