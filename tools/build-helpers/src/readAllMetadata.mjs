@@ -12,12 +12,11 @@ import { readMetadata } from './readMetadata.mjs';
 export const readAllMetadata = async (directory) => {
   const directoryContent = await fs.readdir(directory);
 
-  const metaDataPromises =
-    directoryContent
-      .filter((file) => path.extname(file) === '.json')
-      .map(async(file) => [path.basename(file, '.json'), await readMetadata(file, directory)]);
+  const metaDataPromises = directoryContent
+    .filter((file) => path.extname(file) === '.json')
+    .map(async (file) => [path.basename(file, '.json'), await readMetadata(file, directory)]);
 
-  const metadata = await Promise.all(metaDataPromises)
+  const metadata = await Promise.all(metaDataPromises);
 
   return Object.fromEntries(metadata);
 };
