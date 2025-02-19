@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu"
+  ],
+  "tags": [
+    "user",
+    "password",
+    "key"
+  ],
+  "categories": [
+    "account"
+  ]
+}
