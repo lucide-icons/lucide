@@ -1,7 +1,7 @@
 import defaultAttributes from './defaultAttributes';
 import { IconNode, SVGProps } from './types';
 
-type CreateSVGElementParams = [tag: string, attrs: SVGProps, children?: IconNode]
+type CreateSVGElementParams = [tag: string, attrs: SVGProps, children?: IconNode];
 
 /**
  * Creates a new SVGElement
