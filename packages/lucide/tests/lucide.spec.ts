@@ -6,7 +6,7 @@ import { parseSync, stringify } from 'svgson';
 
 const ICONS_DIR = path.resolve(__dirname, '../../../icons');
 
-const getOriginalSvg = (iconName, aliasName) => {
+const getOriginalSvg = (iconName: string, aliasName?: string) => {
   const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
   const svgParsed = parseSync(svgContent);
 
@@ -51,14 +51,17 @@ describe('createIcons', () => {
 
     createIcons({ icons, attrs });
 
-    const element = document.querySelector('svg');
+    const element = document.querySelector('svg') as SVGSVGElement;
     const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce((acc, item) => {
-      acc[item] = element.getAttribute(item);
+    const attributesAndValues = attributes.reduce(
+      (acc, item) => {
+        acc[item] = element.getAttribute(item);
 
-      return acc;
-    }, {});
+        return acc;
+      },
+      {} as Record<string, string | null>,
+    );
 
     expect(document.body.innerHTML).toMatchSnapshot();
 
@@ -74,14 +77,17 @@ describe('createIcons', () => {
 
     createIcons({ icons });
 
-    const element = document.querySelector('svg');
+    const element = document.querySelector('svg') as SVGSVGElement;
     const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce((acc, item) => {
-      acc[item] = element.getAttribute(item);
+    const attributesAndValues = attributes.reduce(
+      (acc, item) => {
+        acc[item] = element.getAttribute(item);
 
-      return acc;
-    }, {});
+        return acc;
+      },
+      {} as Record<string, string | null>,
+    );
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });
