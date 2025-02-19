@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "columns",
+    "settings",
+    "customize",
+    "table",
+    "grid",
+    "adjust",
+    "configuration",
+    "panel",
+    "layout"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "system"
+  ],
+  "aliases": [
+    "columns-settings",
+    "table-config"
+  ]
+}
