@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "null78"
+    "null78",
+    "jguddas"
   ],
   "tags": [
     "currency",
