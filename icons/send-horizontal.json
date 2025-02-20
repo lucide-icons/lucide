@@ -19,7 +19,7 @@
   ],
   "aliases": [
     {
-      "name": "send-horizonal",
+      "name": "send-horizontal",
       "deprecated": true,
       "deprecationReason": "alias.typo",
       "toBeRemovedInVersion": "v1.0"
