@@ -9,10 +9,12 @@ import { readSvg } from '@lucide/helpers';
  * @returns {Object}
  */
 export default function readSVGs(svgFiles, iconsDirectory) {
-  return svgFiles.map((svgFile) => {
+  const SVGReadPromises = svgFiles.map(async (svgFile) => {
     const name = basename(svgFile, '.svg');
-    const contents = readSvg(svgFile, iconsDirectory);
+    const contents = await readSvg(svgFile, iconsDirectory);
 
     return { name, contents };
   });
+
+  return Promise.all(SVGReadPromises);
 }

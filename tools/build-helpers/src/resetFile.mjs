@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
 /**
@@ -9,4 +9,4 @@ import path from 'path';
  * @param {string} outputDirectory
  */
 export const resetFile = (fileName, outputDirectory) =>
-  fs.writeFileSync(path.join(outputDirectory, fileName), '', 'utf-8');
+  fs.writeFile(path.join(outputDirectory, fileName), '', 'utf-8');
