@@ -43,7 +43,7 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
     return `<img title="${file}" alt="${file}" ${widthAttr} src="${url}/${base64}.svg"/>`;
   });
 
-const svgFiles = readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
+const svgFiles = await readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
 
 const iconsFilteredByName = (search) => svgFiles.filter((file) => file.includes(search));
 
