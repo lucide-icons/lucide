@@ -12,5 +12,8 @@ import path from 'path';
 export const readSvgDirectory = async (directory, fileExtension = '.svg') => {
   const directoryContents = await fs.readdir(directory);
 
+  console.log(directoryContents);
+
+
   return directoryContents.filter((file) => path.extname(file) === fileExtension);
 };
