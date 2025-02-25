@@ -98,7 +98,7 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
     });
   }
 
-  const svgElement = createElement(['svg', iconAttrs, iconNode]);
+  const svgElement = createElement(iconNode, iconAttrs);
 
   return element.parentNode?.replaceChild(svgElement, element);
 };
