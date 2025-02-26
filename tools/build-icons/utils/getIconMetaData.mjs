@@ -2,7 +2,7 @@ import path from 'path';
 import { readSvgDirectory } from '@lucide/helpers';
 
 async function getIconMetaData(iconDirectory) {
-  const iconJsons = readSvgDirectory(iconDirectory, '.json');
+  const iconJsons = await readSvgDirectory(iconDirectory, '.json');
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile) => {
       /** eslint-disable */

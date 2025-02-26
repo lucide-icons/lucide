@@ -1,20 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { createIcons, icons } from '../src/lucide';
-import fs from 'fs';
-import path from 'path';
-import { parseSync, stringify } from 'svgson';
-
-const ICONS_DIR = path.resolve(__dirname, '../../../icons');
-
-const getOriginalSvg = (iconName, aliasName) => {
-  const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
-  const svgParsed = parseSync(svgContent);
-
-  svgParsed.attributes['data-lucide'] = aliasName ?? iconName;
-  svgParsed.attributes['class'] = `lucide lucide-${aliasName ?? iconName}`;
-
-  return stringify(svgParsed, { selfClose: false });
-};
+import { getOriginalSvg } from './helpers';
 
 describe('createIcons', () => {
   it('should read elements from DOM and replace it with icons', () => {
@@ -51,14 +37,17 @@ describe('createIcons', () => {
 
     createIcons({ icons, attrs });
 
-    const element = document.querySelector('svg');
+    const element = document.querySelector('svg') as SVGSVGElement;
     const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce((acc, item) => {
-      acc[item] = element.getAttribute(item);
+    const attributesAndValues = attributes.reduce(
+      (acc, item) => {
+        acc[item] = element.getAttribute(item);
 
-      return acc;
-    }, {});
+        return acc;
+      },
+      {} as Record<string, string | null>,
+    );
 
     expect(document.body.innerHTML).toMatchSnapshot();
 
@@ -74,14 +63,17 @@ describe('createIcons', () => {
 
     createIcons({ icons });
 
-    const element = document.querySelector('svg');
+    const element = document.querySelector('svg') as SVGSVGElement;
     const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce((acc, item) => {
-      acc[item] = element.getAttribute(item);
+    const attributesAndValues = attributes.reduce(
+      (acc, item) => {
+        acc[item] = element.getAttribute(item);
 
-      return acc;
-    }, {});
+        return acc;
+      },
+      {} as Record<string, string | null>,
+    );
 
     expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
   });

@@ -16,7 +16,7 @@ describe('getAtts', () => {
       ],
     };
 
-    const attrs = getAttrs(element);
+    const attrs = getAttrs(element as unknown as Element);
 
     expect(attrs.class).toBe(element.attributes[0].value);
   });
@@ -43,8 +43,8 @@ describe('getClassNames', () => {
 });
 
 describe('combineClassNames', () => {
-  it('should retuns a string of classNames', () => {
-    const arrayOfClassnames = [
+  it('should returns a string of classNames', () => {
+    const arrayOfClassnames: (string | Record<string, string[]>)[] = [
       'item',
       {
         class: ['item1', 'item2', 'item3'],

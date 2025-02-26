@@ -31,11 +31,11 @@ export default async function generateAliasesFiles({
   }
 
   // Reset files
-  resetFile(aliasFileName, destinationDirectory);
+  await resetFile(aliasFileName, destinationDirectory);
 
   if (!aliasNamesOnly) {
-    resetFile(aliasPrefixesFileName, destinationDirectory);
-    resetFile(aliasSuffixFileName, destinationDirectory);
+    await resetFile(aliasPrefixesFileName, destinationDirectory);
+    await resetFile(aliasSuffixFileName, destinationDirectory);
   }
 
   // Generate Import for Icon VNodes
@@ -149,20 +149,20 @@ export default async function generateAliasesFiles({
         );
       }
 
-      appendFile(aliasFileContent, aliasFileName, destinationDirectory);
+      await appendFile(aliasFileContent, aliasFileName, destinationDirectory);
 
       if (!aliasNamesOnly) {
-        appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, destinationDirectory);
-        appendFile(aliasSuffixFileContent, aliasSuffixFileName, destinationDirectory);
+        await appendFile(aliasPrefixesFileContent, aliasPrefixesFileName, destinationDirectory);
+        await appendFile(aliasSuffixFileContent, aliasSuffixFileName, destinationDirectory);
       }
     }),
   );
 
-  appendFile('\n', aliasFileName, destinationDirectory);
+  await appendFile('\n', aliasFileName, destinationDirectory);
 
   if (!aliasNamesOnly) {
-    appendFile('\n', aliasPrefixesFileName, destinationDirectory);
-    appendFile('\n', aliasSuffixFileName, destinationDirectory);
+    await appendFile('\n', aliasPrefixesFileName, destinationDirectory);
+    await appendFile('\n', aliasSuffixFileName, destinationDirectory);
   }
 
   if (showLog) {

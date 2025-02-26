@@ -4,7 +4,7 @@ import { readSvgDirectory, toCamelCase } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = readSvgDirectory(ICONS_DIR, '.json');
+const icons = await readSvgDirectory(ICONS_DIR, '.json');
 
 const iconDetailsDirectory = path.resolve(currentDir, '.vitepress/data', 'iconDetails');
 

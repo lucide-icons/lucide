@@ -3,7 +3,7 @@ import { writeFile, getCurrentDirPath, readAllMetadata } from '../tools/build-he
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = readAllMetadata(ICONS_DIR);
+const icons = await readAllMetadata(ICONS_DIR);
 
 const tags = Object.keys(icons)
   .sort()
@@ -14,4 +14,4 @@ const tags = Object.keys(icons)
 
 const tagsContent = JSON.stringify(tags, null, 2);
 
-writeFile(tagsContent, 'tags.json', path.resolve(process.cwd()));
+await writeFile(tagsContent, 'tags.json', path.resolve(process.cwd()));
