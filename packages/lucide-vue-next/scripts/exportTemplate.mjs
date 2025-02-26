@@ -18,7 +18,7 @@ import createLucideIcon from '../createLucideIcon';
 /**
  * @component @name ${componentName}
  * @description Lucide SVG icon component, renders SVG Element with children.
- *
+ *fnklfhlka eufipoujfopi
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
  * @see https://lucide.dev/guide/packages/lucide-vue-next - Documentation
  *
