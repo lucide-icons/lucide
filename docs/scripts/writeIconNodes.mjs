@@ -5,8 +5,8 @@ import { readSvgDirectory, toCamelCase } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const svgFiles = readSvgDirectory(ICONS_DIR);
-const icons = renderIconsObject(svgFiles, ICONS_DIR, true);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
+const icons = await renderIconsObject(svgFiles, ICONS_DIR, true);
 
 const iconNodesDirectory = path.resolve(currentDir, '.vitepress/data', 'iconNodes');
 
@@ -32,7 +32,7 @@ const writeIconFiles = Object.entries(icons).map(async ([iconName, { children }]
   await fs.promises.writeFile(location, output, 'utf-8');
 
   iconIndexFileImports.push(
-    `import ${toCamelCase(iconName)}Node from './${iconName}.node.json' assert { type: "json" };`,
+    `import ${toCamelCase(iconName)}Node from './${iconName}.node.json' with { type: "json" };`,
   );
   iconIndexFileExports.push(`  ${toCamelCase(iconName)}Node as ${toCamelCase(iconName)},`);
   iconIndexFileDefaultExports.push(`  '${iconName}': ${toCamelCase(iconName)}Node,`);

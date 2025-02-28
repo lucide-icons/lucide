@@ -4,7 +4,7 @@ import { readSvgDirectory, toCamelCase } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = readSvgDirectory(ICONS_DIR, '.json');
+const icons = await readSvgDirectory(ICONS_DIR, '.json');
 
 const iconDetailsDirectory = path.resolve(currentDir, '.vitepress/data', 'iconDetails');
 
@@ -27,7 +27,7 @@ import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
 
-const { tags, categories, contributors, aliases } = metaData
+const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData
 
 const iconDetails = {
   name: '${iconName}',
@@ -36,6 +36,9 @@ const iconDetails = {
   tags,
   categories,
   aliases,
+  deprecated,
+  deprecationReason,
+  toBeRemovedInVersion,
   ...releaseData,
 }
 
