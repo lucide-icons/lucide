@@ -1,4 +1,4 @@
-name: Pull request icon previews
+name: Pull request icon preview
 
 on:
   pull_request:
@@ -22,28 +22,22 @@ jobs:
         with:
           files: icons/*.svg
 
-      - name: Find Comment
-        uses: peter-evans/find-comment@v2
-        id: pr-comment
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Added or changed icons
-
       - uses: actions/setup-node@v4
       - name: Install svgson for code preview (safer and faster than installing all deps)
         run: npm install svgson
 
+      - name: Save PR number
+        run: |
+          mkdir -p ./pr
+          echo ${{ github.event.number }} > ./pr/NR
+
       - name: Generate comment markup
-        run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> comment-markup.md
+        run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> ./pr/comment-markup.md
         id: comment-markup
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
 
-      - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v3
+      - uses: actions/upload-artifact@v4
         with:
-          comment-id: ${{ steps.pr-comment.outputs.comment-id }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body-path: ./comment-markup.md
-          edit-mode: replace
+          name: pr
+          path: pr/
