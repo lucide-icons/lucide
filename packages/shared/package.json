@@ -13,6 +13,6 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "vitest": "^0.33.0"
+    "vitest": "^1.1.1"
   }
 }
