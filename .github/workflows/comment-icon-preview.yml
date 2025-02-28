@@ -2,7 +2,7 @@ name: Icon preview comment
 
 on:
   workflow_run:
-    workflows: ["Pull request icon preview"]
+    workflows: ['Pull request icon preview']
     types:
       - completed
 
@@ -44,7 +44,7 @@ jobs:
         uses: peter-evans/find-comment@v2
         id: pr-comment
         with:
-          issue-number:  ${{ steps.pr-number.outputs.stdout }}
+          issue-number: ${{ steps.pr-number.outputs.stdout }}
           comment-author: 'github-actions[bot]'
           body-includes: Added or changed icons
 
