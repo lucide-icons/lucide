@@ -76,7 +76,7 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^6.0.4",
-    "@solidjs/testing-library": "^0.8.6",
+    "@solidjs/testing-library": "^0.8.10",
     "@testing-library/jest-dom": "^6.4.2",
     "babel-preset-solid": "^1.8.12",
     "jest-serializer-html": "^7.1.0",
@@ -84,7 +84,7 @@
     "solid-js": "^1.9.4",
     "typescript": "^4.9.4",
     "vite": "5.4.14",
-    "vite-plugin-solid": "^2.10.1",
+    "vite-plugin-solid": "^2.11.6",
     "vitest": "^1.1.1",
     "esbuild": "^0.25.0"
   },
