@@ -117,8 +117,9 @@ const deprecatedTitle = computed(() => {
 }
 
 .deprecated-badge {
-  background-color: var(--vp-c-brand);
+  background-color: var(--vp-c-brand-5);
   margin-left: 40px;
+  opacity: .8;
 }
 
 .deprecated-badge:hover {
