@@ -71,7 +71,7 @@
     "svelte-preprocess": "^5.0.4",
     "typescript": "^5.1.6",
     "vite": "5.4.14",
-    "vitest": "^0.33.0"
+    "vitest": "^1.1.1"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5.0.0-next.42"
