@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sebinemeth",
+    "ksk3110",
+    "karsa-mistmere",
+    "colebemis"
+  ],
+  "tags": [
+    "shield",
+    "user",
+    "admin",
+    "protection",
+    "protected",
+    "safety",
+    "guard"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development"
+  ]
+}

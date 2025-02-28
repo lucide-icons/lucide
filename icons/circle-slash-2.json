@@ -6,7 +6,7 @@
   "tags": [
     "diameter",
     "zero",
-    "Ø",
+    "ø",
     "nothing",
     "null",
     "void",
@@ -16,7 +16,12 @@
     "division",
     "half",
     "split",
-    "/"
+    "/",
+    "average",
+    "avg",
+    "mean",
+    "median",
+    "normal"
   ],
   "categories": [
     "shapes",

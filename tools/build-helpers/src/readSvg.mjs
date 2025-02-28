@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
 /**
@@ -9,4 +9,4 @@ import path from 'path';
  * @param {string} directory
  */
 export const readSvg = (fileName, directory) =>
-  fs.readFileSync(path.join(directory, fileName), 'utf-8');
+  fs.readFile(path.join(directory, fileName), 'utf-8');
