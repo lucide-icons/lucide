@@ -43,12 +43,13 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
     return `<img title="${file}" alt="${file}" ${widthAttr} src="${url}/${base64}.svg"/>`;
   });
 
-const svgFiles = readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
+const svgFilePaths = svgFiles.map((file) => `icons/${file}`);
 
-const iconsFilteredByName = (search) => svgFiles.filter((file) => file.includes(search));
+const iconsFilteredByName = (search) => svgFilePaths.filter((file) => file.includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
-  shuffleArray(svgFiles).slice(0, changedFiles.length),
+  shuffleArray(svgFilePaths).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 

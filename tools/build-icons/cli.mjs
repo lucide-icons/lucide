@@ -47,16 +47,16 @@ async function buildIcons() {
     throw new Error('No `templateSrc` argument given.');
   }
 
-  const svgFiles = readSvgDirectory(ICONS_DIR);
+  const svgFiles = await readSvgDirectory(ICONS_DIR);
 
-  const icons = renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
+  const icons = await renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
   const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
 
   const iconMetaData = await getIconMetaData(ICONS_DIR);
 
   // Generates iconsNodes files for each icon
-  generateIconFiles({
+  await generateIconFiles({
     iconNodes: icons,
     outputDirectory: OUTPUT_DIR,
     template: iconFileTemplate,
@@ -86,7 +86,7 @@ async function buildIcons() {
   }
 
   if (withDynamicImports) {
-    generateDynamicImports({
+    await generateDynamicImports({
       iconNodes: icons,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
@@ -96,7 +96,7 @@ async function buildIcons() {
   }
 
   // Generates entry files for the compiler filled with icons exports
-  generateExportsFile(
+  await generateExportsFile(
     path.join(OUTPUT_DIR, 'icons', exportFileName),
     path.join(OUTPUT_DIR, 'icons'),
     icons,
