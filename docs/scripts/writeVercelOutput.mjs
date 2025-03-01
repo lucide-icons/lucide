@@ -44,4 +44,4 @@ const output = JSON.stringify(vercelRouteConfig, null, 2);
 
 const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
 
-fs.writeFileSync(vercelOutputJSON, output, 'utf-8');
+await fs.promises.writeFile(vercelOutputJSON, output, 'utf-8');
