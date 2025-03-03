@@ -7,7 +7,11 @@ import { CamelToPascal } from './utility-types';
  * @returns {string} A kebabized string
  */
 export const toKebabCase = (string: string) =>
-  string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+  string
+    .replace(/([A-Z])([A-Z])/g, '$1-$2')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/([a-zA-Z])(\d)/g, '$1-$2')
+    .toLowerCase();
 
 /**
  * Converts string to camel case
