@@ -33,6 +33,10 @@ describe('toKebabCase', () => {
     const kebabCase = toKebabCase('LoaderCircle');
     expect(kebabCase).toBe('loader-circle');
   });
+  it('handles single word', async () => {
+    const kebabCase = toKebabCase('Dot');
+    expect(kebabCase).toBe('dot');
+  });
   it('handles consecutive uppercase letters', async () => {
     const kebabCase = toKebabCase('AArrowDown');
     expect(kebabCase).toBe('a-arrow-down');
@@ -40,5 +44,13 @@ describe('toKebabCase', () => {
   it('handles numbers', async () => {
     const kebabCase = toKebabCase('Loader2');
     expect(kebabCase).toBe('loader-2');
+  });
+  it('handles consecutive numbers', async () => {
+    const kebabCase = toKebabCase('Clock10');
+    expect(kebabCase).toBe('clock-10');
+  });
+  it('handles numbers and letters', async () => {
+    const kebabCase = toKebabCase('Scale3d');
+    expect(kebabCase).toBe('scale-3d');
   });
 });
