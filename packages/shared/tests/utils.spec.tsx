@@ -37,6 +37,10 @@ describe('toKebabCase', () => {
     const kebabCase = toKebabCase('Dot');
     expect(kebabCase).toBe('dot');
   });
+  it('handles many words', async () => {
+    const kebabCase = toKebabCase('PictureInPicture');
+    expect(kebabCase).toBe('picture-in-picture');
+  });
   it('handles consecutive uppercase letters', async () => {
     const kebabCase = toKebabCase('AArrowDown');
     expect(kebabCase).toBe('a-arrow-down');
@@ -53,7 +57,6 @@ describe('toKebabCase', () => {
     const kebabCase = toKebabCase('Scale3d');
     expect(kebabCase).toBe('scale-3d');
   });
-
   it('handles numbers already in words', async () => {
     const kebabCase = toKebabCase('Grid3x3X');
     expect(kebabCase).toBe('grid-3x3-x');
