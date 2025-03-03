@@ -45,14 +45,15 @@ export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true, ad
   if (addAlias) {
     const json = fs.readFileSync(newJsonPath, 'utf8');
     const jsonData = JSON.parse(json);
-    if (Array.isArray(jsonData.aliases)) {
-      jsonData.aliases = jsonData.aliases.filter(
-        (alias) => (typeof alias === 'string' ? alias : alias.name) !== newName,
-      );
-      jsonData.aliases.push(oldName);
-    } else {
-      jsonData.aliases = [oldName];
-    }
+    jsonData.aliases = [
+      ...(jsonData.aliases ?? []),
+      {
+        name: oldName,
+        deprecate: true,
+        deprecationReason: 'alias.name',
+        toBeRemovedInVersion: 'v1.0',
+      },
+    ];
     fs.writeFileSync(newJsonPath, JSON.stringify(jsonData, null, 2));
     await git.add(newJsonPath);
   }

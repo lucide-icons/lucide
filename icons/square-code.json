@@ -16,6 +16,11 @@
     "development"
   ],
   "aliases": [
-    "code-square"
+    {
+      "name": "code-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
