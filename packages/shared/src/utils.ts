@@ -9,8 +9,8 @@ import { CamelToPascal } from './utility-types';
 export const toKebabCase = (string: string) =>
   string
     .replace(/([A-Z])([A-Z])/g, '$1-$2')
-    .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/([a-zA-Z])(\d)/g, '$1-$2')
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/(?<!\d)([a-zA-Z])(\d)/g, '$1-$2')
     .toLowerCase();
 
 /**
