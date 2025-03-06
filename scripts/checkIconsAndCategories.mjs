@@ -7,13 +7,13 @@ import {
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = readAllMetadata(ICONS_DIR);
+const icons = await readAllMetadata(ICONS_DIR);
 const CATEGORIES_DIR = path.resolve(currentDir, '../categories');
-const categories = readAllMetadata(CATEGORIES_DIR);
+const categories = await readAllMetadata(CATEGORIES_DIR);
 
 console.log('Reading all icons');
 
-const svgFiles = readSvgDirectory(ICONS_DIR);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
 const iconNames = svgFiles.map((icon) => icon.split('.')[0]);
 
 let error = false;
