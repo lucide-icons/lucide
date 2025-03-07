@@ -26,6 +26,11 @@
     "text"
   ],
   "aliases": [
-    "panels-top-bottom"
+    {
+      "name": "panels-top-bottom",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

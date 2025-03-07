@@ -27,6 +27,11 @@
     "text"
   ],
   "aliases": [
-    "rows"
+    {
+      "name": "rows",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
