@@ -38,7 +38,7 @@ jobs:
         run: unzip pr_number.zip
 
       - name: 'Get PR number'
-        run: cat "pr_number"
+        run: cat "NR"
         id: pr-number
 
       - name: Find Comment
@@ -54,5 +54,5 @@ jobs:
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ steps.pr-number.outputs.stdout }}
-          body-path: pr_number/comment-markup.md
+          body-path: comment-markup.md
           edit-mode: replace
