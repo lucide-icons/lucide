@@ -40,6 +40,8 @@ jobs:
           files: icons/*
 
       - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
       - name: Install simple-git (safer and faster than installing all deps)
         run: npm install simple-git
 
