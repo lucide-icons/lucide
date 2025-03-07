@@ -32,18 +32,13 @@ jobs:
                archive_format: 'zip',
             });
             const fs = require('fs');
-            const path = require('path');
-            const temp = '${{ runner.temp }}/artifacts';
-            if (!fs.existsSync(temp)){
-              fs.mkdirSync(temp);
-            }
-            fs.writeFileSync(path.join(temp, 'pr_number.zip'), Buffer.from(download.data));
+            fs.writeFileSync('${{github.workspace}}/pr_number.zip'), Buffer.from(download.data));
 
       - name: 'Unzip artifact'
-        run: unzip pr_number.zip -d "${{ runner.temp }}/artifacts"
+        run: unzip pr_number.zip
 
       - name: 'Get PR number'
-        run: cat "${{ runner.temp }}/artifacts/pr_number"
+        run: cat "pr_number"
         id: pr-number
 
       - name: Find Comment
@@ -59,5 +54,5 @@ jobs:
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ steps.pr-number.outputs.stdout }}
-          body-path: ${{ runner.temp }}/artifacts/pr_number/comment-markup.md
+          body-path: pr_number/comment-markup.md
           edit-mode: replace
