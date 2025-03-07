@@ -21,7 +21,6 @@ jobs:
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
-          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
