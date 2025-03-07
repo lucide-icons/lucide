@@ -6,16 +6,13 @@
   "tags": [
     "sort",
     "ascending",
-    "descending",
-    "increasing",
-    "decreasing",
-    "rising",
-    "falling"
+    "descending"
   ],
   "categories": [
-    "text",
     "layout",
     "arrows"
   ],
-  "aliases": []
+  "aliases": [
+    "sort-remove"
+  ]
 }
