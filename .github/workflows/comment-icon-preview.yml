@@ -38,14 +38,14 @@ jobs:
         run: unzip pr_number.zip
 
       - name: 'Get PR number'
-        run: cat "NR"
+        run: echo "number=$(cat NR)" >> $GITHUB_OUTPUT
         id: pr-number
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
         id: pr-comment
         with:
-          issue-number: ${{ steps.pr-number.outputs.stdout }}
+          issue-number: ${{ steps.pr-number.outputs.number }}
           comment-author: 'github-actions[bot]'
           body-includes: Added or changed icons
 
@@ -53,6 +53,6 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
-          issue-number: ${{ steps.pr-number.outputs.stdout }}
+          issue-number: ${{ steps.pr-number.outputs.number }}
           body-path: comment-markup.md
           edit-mode: replace
