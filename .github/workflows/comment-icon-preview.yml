@@ -32,7 +32,7 @@ jobs:
                archive_format: 'zip',
             });
             const fs = require('fs');
-            fs.writeFileSync('${{github.workspace}}/pr_number.zip'), Buffer.from(download.data));
+            fs.writeFileSync('${{github.workspace}}/pr_number.zip', Buffer.from(download.data));
 
       - name: 'Unzip artifact'
         run: unzip pr_number.zip
