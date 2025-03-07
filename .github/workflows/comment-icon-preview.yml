@@ -1,0 +1,57 @@
+name: Icon preview comment
+
+on:
+  workflow_run:
+    workflows: ['Pull request icon preview']
+    types:
+      - completed
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: 'Download artifact'
+        uses: actions/github-script@v3.1.0
+        with:
+          script: |
+            var artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{github.event.workflow_run.id }},
+            });
+            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "pr"
+            })[0];
+            var download = await github.actions.downloadArtifact({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               artifact_id: matchArtifact.id,
+               archive_format: 'zip',
+            });
+            var fs = require('fs');
+            fs.writeFileSync('${{github.workspace}}/pr.zip', Buffer.from(download.data));
+
+      - run: unzip pr.zip
+
+      - name: 'Get PR number'
+        run: cat pr/NR
+        id: pr-number
+
+      - name: Find Comment
+        uses: peter-evans/find-comment@v2
+        id: pr-comment
+        with:
+          issue-number: ${{ steps.pr-number.outputs.stdout }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Added or changed icons
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.pr-comment.outputs.comment-id }}
+          issue-number: ${{ steps.pr-number.outputs.stdout }}
+          body-path: ./pr/comment-markup.md
+          edit-mode: replace
