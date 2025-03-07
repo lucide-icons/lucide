@@ -39,5 +39,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: pr
+          name: pr_number
           path: pr/
