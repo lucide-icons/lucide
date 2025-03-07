@@ -1,19 +1,16 @@
-name: Linting
+name: Linting PR
 
 on:
   pull_request:
-    branches:
-      - '**'
 
 jobs:
-  linting:
+  lint-code:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
           cache: 'pnpm'
 
       - name: Install Dependencies
