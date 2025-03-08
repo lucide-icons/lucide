@@ -15,7 +15,11 @@ const createLucideIcon = (componentName: string, iconNode: IconNode, iconName: s
     createElement(Icon, {
       ref,
       iconNode,
-      className: mergeClasses(`lucide-${toKebabCase(componentName)} lucide-${iconName}`, className),
+      className: mergeClasses(
+        `lucide-${toKebabCase(componentName)}`,
+        `lucide-${iconName}`,
+        className,
+      ),
       ...props,
     }),
   );
