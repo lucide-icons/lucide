@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta",
+    "jguddas"
+  ],
+  "tags": [
+    "courier",
+    "delivery",
+    "package",
+    "shipping",
+    "parcel",
+    "logistics",
+    "transport"
+  ],
+  "categories": [
+    "commerce"
+  ]
+}
