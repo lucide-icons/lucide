@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide">
-    <img src="https://lucide.dev/package-logos/lucide-astro.svg" alt="Lucide icon library for Astro applications." width="540">
+    <img src="https://lucide.dev/package-logos/@lucide/astro.svg" alt="Lucide icon library for Astro applications." width="540">
   </a>
 </p>
 
@@ -10,8 +10,8 @@ Lucide icon library for Astro sites and applications.
 
 <div align="center">
 
-[![npm](https://img.shields.io/npm/v/lucide-astro?color=blue)](https://www.npmjs.com/package/lucide-astro)
-![NPM Downloads](https://img.shields.io/npm/dw/lucide-astro)
+[![npm](https://img.shields.io/npm/v/@lucide/astro?color=blue)](https://www.npmjs.com/package/@lucide/astro)
+![NPM Downloads](https://img.shields.io/npm/dw/@lucide/astro)
 [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
 
 </div>
@@ -21,7 +21,7 @@ Lucide icon library for Astro sites and applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-astro">Documentation</a>
+  <a href="https://lucide.dev/guide/packages/astro">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
@@ -33,24 +33,24 @@ Implementation of the lucide icon library for Astro applications.
 ## Installation
 
 ```sh
-pnpm add lucide-astro
+pnpm add @lucide/astro
 ```
 
 ```sh
-npm install lucide-astro
+npm install @lucide/astro
 ```
 
 ```sh
-yarn add lucide-astro
+yarn add @lucide/astro
 ```
 
 ```sh
-bun add lucide-astro
+bun add @lucide/astro
 ```
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-astro)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/astro)
 
 ## Community
 

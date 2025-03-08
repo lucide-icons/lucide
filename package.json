@@ -11,7 +11,7 @@
     "lucide-preact": "pnpm --filter lucide-preact",
     "lucide-solid": "pnpm --filter lucide-solid",
     "lucide-vue": "pnpm --filter lucide-vue",
-    "lucide-astro": "pnpm --filter lucide-astro",
+    "@lucide/astro": "pnpm --filter @lucide/astro",
     "lucide-vue-next": "pnpm --filter lucide-vue-next",
     "lucide-svelte": "pnpm --filter lucide-svelte",
     "lucide-static": "pnpm --filter lucide-static",

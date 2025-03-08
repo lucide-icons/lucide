@@ -1,5 +1,5 @@
 {
-  "name": "lucide-astro",
+  "name": "@lucide/astro",
   "version": "0.470.0",
   "author": "Moustapha Kebe",
   "description": "A Lucide icon library package for Astro applications",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
-    "directory": "packages/lucide-astro"
+    "directory": "packages/astro"
   },
   "keywords": [
     "Lucide",

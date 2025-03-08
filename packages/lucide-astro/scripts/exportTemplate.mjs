@@ -22,7 +22,7 @@ import type { AstroComponent } from '../types'
  * @description Lucide SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide-astro - Documentation
+ * @see https://lucide.dev/guide/packages/astro - Documentation
  *
  * @param {import('../types').IconProps} props - Lucide icons props and any valid SVG attribute
  * @returns {any} Astro Component

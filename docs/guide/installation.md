@@ -193,19 +193,19 @@ Implementation of the lucide icon library for Astro applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-astro
+pnpm install @lucide/astro
 ```
 
 ```sh [yarn]
-yarn add lucide-astro
+yarn add @lucide/astro
 ```
 
 ```sh [npm]
-npm install lucide-astro
+npm install @lucide/astro
 ```
 
 ```sh [bun]
-bun add lucide-astro
+bun add @lucide/astro
 ```
 
 :::

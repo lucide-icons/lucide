@@ -7,19 +7,19 @@ Implementation of the lucide icon library for Astro applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-astro
+pnpm add @lucide/astro
 ```
 
 ```sh [yarn]
-yarn add lucide-astro
+yarn add @lucide/astro
 ```
 
 ```sh [npm]
-npm install lucide-astro
+npm install @lucide/astro
 ```
 
 ```sh [bun]
-bun add lucide-astro
+bun add @lucide/astro
 ```
 
 :::
@@ -36,7 +36,7 @@ Default usage:
 
 ```astro
 ---
-import { Skull } from 'lucide-astro';
+import { Skull } from '@lucide/astro';
 ---
 
 <Skull />
@@ -46,17 +46,17 @@ Additional props can be passed to adjust the icon:
 
 ```astro
 ---
-import { Camera } from 'lucide-astro';
+import { Camera } from '@lucide/astro';
 ---
 
 <Camera color="#ff3e98" />
 ```
 
-For faster builds and load times, you can import icons directly from the `lucide-astro/icons` directory:
+For faster builds and load times, you can import icons directly from the `@lucide/astro/icons` directory:
 
 ```astro
 ---
-import CircleAlert from 'lucide-astro/icons/circle-alert';
+import CircleAlert from '@lucide/astro/icons/circle-alert';
 ---
 
 <CircleAlert color="#ff3e98" />
@@ -77,7 +77,7 @@ To customize the appearance of an icon, you can pass custom properties as props 
 
 ```astro
 ---
-import { Phone } from 'lucide-astro';
+import { Phone } from '@lucide/astro';
 ---
 
 <Phone fill="#333" />
@@ -93,7 +93,7 @@ The package includes type definitions for all icons. This is useful if you want 
 
 ```astro
 ---
-import { Home, Library, Cog, type Icon as IconType } from 'lucide-astro';
+import { Home, Library, Cog, type Icon as IconType } from '@lucide/astro';
 
 type MenuItem = {
   name: string;
@@ -143,7 +143,7 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```astro
 ---
-import { Icon } from 'lucide-astro';
+import { Icon } from '@lucide/astro';
 import { burger, sausage } from '@lucide/lab';
 ---
 
@@ -163,7 +163,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ```astro
 ---
-import { icons, type IconProps } from 'lucide-astro';
+import { icons, type IconProps } from '@lucide/astro';
 
 interface Props extends IconProps {
   name: keyof typeof icons;
