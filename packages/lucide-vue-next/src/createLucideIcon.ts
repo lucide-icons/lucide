@@ -7,19 +7,21 @@ import Icon from './Icon';
 
 /**
  * Create a Lucide icon component
- * @param {string} iconName
+ * @param {string} componentName
  * @param {array} iconNode
+ * @param {string} iconName
  * @returns {FunctionalComponent} LucideIcon
  */
 const createLucideIcon =
-  (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
+  (componentName: string, iconNode: IconNode, iconName: string): FunctionalComponent<LucideProps> =>
   (props, { slots }) =>
     h(
       Icon,
       {
         ...props,
         iconNode,
-        name: iconName,
+        componentName,
+        iconName,
       },
       slots,
     );
