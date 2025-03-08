@@ -29,7 +29,7 @@ export default (componentName: string, iconNode: IconNode, iconName: string): Co
     defaultClass: {
       type: String,
       default: mergeClasses(
-        `lucide-icon lucide`,
+        'lucide-icon lucide',
         `lucide-${toKebabCase(componentName).replace('-icon', '')}`,
         `lucide-${iconName}`,
       ),

@@ -1,20 +1,15 @@
 import { h, type JSX } from 'preact';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import Icon from './Icon';
 import type { IconNode, LucideIcon, LucideProps } from './types';
 
 /**
  * Create a Lucide icon component
- * @param {string} componentName
- * @param {array} iconNode
  * @param {string} iconName
+ * @param {array} iconNode
  * @returns {FunctionComponent} LucideIcon
  */
-const createLucideIcon = (
-  componentName: string,
-  iconNode: IconNode,
-  iconName: string,
-): LucideIcon => {
+const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
   const Component = ({ class: classes = '', children, ...props }: LucideProps) =>
     h(
       Icon,
@@ -22,15 +17,15 @@ const createLucideIcon = (
         ...props,
         iconNode,
         class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
-          `lucide-${toKebabCase(componentName)}`,
-          `lucide-${iconName}`,
+          `lucide-${toKebabCase(toPascalCase(iconName))}`,
+          `lucide-${toKebabCase(iconName)}`,
           classes,
         ),
       },
       children,
     );
 
-  Component.displayName = `${componentName}`;
+  Component.displayName = toPascalCase(iconName);
 
   return Component;
 };

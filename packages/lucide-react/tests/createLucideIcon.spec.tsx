@@ -5,7 +5,7 @@ import { render } from '@testing-library/react';
 
 describe('Using createLucideIcon', () => {
   it('should create a component from an iconNode', () => {
-    const AirVent = createLucideIcon('AirVent', airVent, 'air-vent');
+    const AirVent = createLucideIcon('air-vent', airVent);
 
     const { container } = render(<AirVent />);
 

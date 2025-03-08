@@ -1,26 +1,15 @@
 import { type FunctionalComponent, h } from 'vue';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 
 interface IconProps {
   iconNode: IconNode;
-  componentName: string;
-  iconName: string;
+  name: string;
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  {
-    size,
-    strokeWidth = 2,
-    absoluteStrokeWidth,
-    color,
-    iconNode,
-    componentName,
-    iconName,
-    class: classes,
-    ...props
-  },
+  { size, strokeWidth = 2, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
   { slots },
 ) => {
   return h(
@@ -32,8 +21,10 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       stroke: color || defaultAttributes.stroke,
       'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
       class: mergeClasses(
-        `lucide lucide-${toKebabCase(componentName ?? 'icon')}`,
-        iconName && `lucide-${iconName}`,
+        'lucide',
+        ...(name
+          ? [`lucide-${toKebabCase(toPascalCase(name))}-icon`, `lucide-${toKebabCase(name)}`]
+          : ['lucide-icon']),
       ),
       ...props,
     },
