@@ -2,7 +2,7 @@ import { For, splitProps } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 
 interface IconProps {
   name?: string;
@@ -36,7 +36,12 @@ const Icon = (props: LucideProps & IconProps) => {
       class={mergeClasses(
         'lucide',
         'lucide-icon',
-        localProps.name != null ? `lucide-${toKebabCase(localProps?.name)}` : undefined,
+        ...(localProps.name != null
+          ? [
+              `lucide-${toKebabCase(toPascalCase(localProps.name))}`,
+              `lucide-${toKebabCase(localProps.name)}`,
+            ]
+          : []),
         localProps.class != null ? localProps.class : '',
       )}
       {...rest}
