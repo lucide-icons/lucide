@@ -2,7 +2,7 @@
 
 exports[`Using Icon Component > should render icon and match snapshot 1`] = `
 <svg
-  class="lucide lucide-icon"
+  class="lucide lucide-icon lucide-undefined"
   fill="none"
   height="48"
   stroke="red"
