@@ -5,21 +5,22 @@ import Icon from './Icon';
 
 /**
  * Create a Lucide icon component
- * @param {string} iconName
+ * @param {string} componentName
  * @param {array} iconNode
+ * @param {string} iconName
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
-const createLucideIcon = (iconName: string, iconNode: IconNode) => {
+const createLucideIcon = (componentName: string, iconNode: IconNode, iconName: string) => {
   const Component = forwardRef<SVGSVGElement, LucideProps>(({ className, ...props }, ref) =>
     createElement(Icon, {
       ref,
       iconNode,
-      className: mergeClasses(`lucide-${toKebabCase(iconName)}`, className),
+      className: mergeClasses(`lucide-${toKebabCase(componentName)} lucide-${iconName}`, className),
       ...props,
     }),
   );
 
-  Component.displayName = `${iconName}`;
+  Component.displayName = `${componentName}`;
 
   return Component;
 };

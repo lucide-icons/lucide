@@ -5,8 +5,9 @@ import { IconNode, LucideProps } from './types';
 import { mergeClasses, toKebabCase } from '@lucide/shared';
 
 interface IconProps {
-  name?: string;
+  componentName?: string;
   iconNode: IconNode;
+  iconName: string;
 }
 
 const Icon = (props: LucideProps & IconProps) => {
@@ -16,7 +17,8 @@ const Icon = (props: LucideProps & IconProps) => {
     'strokeWidth',
     'children',
     'class',
-    'name',
+    'componentName',
+    'iconName',
     'iconNode',
     'absoluteStrokeWidth',
   ]);
@@ -36,7 +38,10 @@ const Icon = (props: LucideProps & IconProps) => {
       class={mergeClasses(
         'lucide',
         'lucide-icon',
-        localProps.name != null ? `lucide-${toKebabCase(localProps?.name)}` : undefined,
+        localProps.componentName != null
+          ? `lucide-${toKebabCase(localProps?.componentName)}`
+          : undefined,
+        `lucide-${localProps.iconName}`,
         localProps.class != null ? localProps.class : '',
       )}
       {...rest}

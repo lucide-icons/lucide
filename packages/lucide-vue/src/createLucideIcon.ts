@@ -6,8 +6,8 @@ var showDeprecationWarning = true;
 
 type IconNode = [elementName: string, attrs: Record<string, string>][];
 
-export default (iconName: string, iconNode: IconNode): Component => ({
-  name: iconName,
+export default (componentName: string, iconNode: IconNode, iconName: string): Component => ({
+  name: componentName,
   functional: true,
   props: {
     color: {
@@ -28,7 +28,7 @@ export default (iconName: string, iconNode: IconNode): Component => ({
     },
     defaultClass: {
       type: String,
-      default: `lucide-icon lucide lucide-${toKebabCase(iconName).replace('-icon', '')}`,
+      default: `lucide-icon lucide lucide-${toKebabCase(componentName).replace('-icon', '')} lucide-${iconName}`,
     },
   },
   render(

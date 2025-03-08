@@ -5,11 +5,22 @@ import { IconNode, LucideProps } from './types';
 
 interface IconProps {
   iconNode: IconNode;
-  name: string;
+  componentName: string;
+  iconName: string;
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  { size, strokeWidth = 2, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
+  {
+    size,
+    strokeWidth = 2,
+    absoluteStrokeWidth,
+    color,
+    iconNode,
+    componentName,
+    iconName,
+    class: classes,
+    ...props
+  },
   { slots },
 ) => {
   return h(
@@ -20,7 +31,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       height: size || defaultAttributes.height,
       stroke: color || defaultAttributes.stroke,
       'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
-      class: ['lucide', `lucide-${toKebabCase(name ?? 'icon')}`],
+      class: ['lucide', `lucide-${toKebabCase(componentName ?? 'icon')}`, `lucide-${iconName}`],
       ...props,
     },
     [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],

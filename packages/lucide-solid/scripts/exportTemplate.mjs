@@ -30,7 +30,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = (props: LucideProps) => (
-  <Icon {...props} name="${componentName}" iconNode={iconNode} />
+  <Icon {...props} name="${componentName}" iconNode={iconNode} iconName="${iconName}" />
 )
 
 export default ${componentName};
