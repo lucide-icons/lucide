@@ -26,7 +26,7 @@ import createLucideIcon from '../createLucideIcon';
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}', ${JSON.stringify(children)});
+const ${componentName} = createLucideIcon('${componentName}', ${JSON.stringify(children)}, '${iconName}');
 
 export default ${componentName};
 `;

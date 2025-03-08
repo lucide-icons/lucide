@@ -5,11 +5,16 @@ import type { IconNode, LucideIcon, LucideProps } from './types';
 
 /**
  * Create a Lucide icon component
- * @param {string} iconName
+ * @param {string} componentName
  * @param {array} iconNode
+ * @param {string} iconName
  * @returns {FunctionComponent} LucideIcon
  */
-const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
+const createLucideIcon = (
+  componentName: string,
+  iconNode: IconNode,
+  iconName: string,
+): LucideIcon => {
   const Component = ({ class: classes = '', children, ...props }: LucideProps) =>
     h(
       Icon,
@@ -17,14 +22,15 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
         ...props,
         iconNode,
         class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
-          `lucide-${toKebabCase(iconName)}`,
+          `lucide-${toKebabCase(componentName)}`,
+          `lucide-${iconName}`,
           classes,
         ),
       },
       children,
     );
 
-  Component.displayName = `${iconName}`;
+  Component.displayName = `${componentName}`;
 
   return Component;
 };

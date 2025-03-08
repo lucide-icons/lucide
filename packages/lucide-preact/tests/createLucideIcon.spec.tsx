@@ -5,7 +5,7 @@ import { render } from '@testing-library/preact';
 
 describe('Using createLucideIcon', () => {
   it('should create a component from an iconNode', () => {
-    const AirVent = createLucideIcon('AirVent', airVent);
+    const AirVent = createLucideIcon('AirVent', airVent, 'air-vent');
 
     const { container } = render(<AirVent />);
 
