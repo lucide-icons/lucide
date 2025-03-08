@@ -26,7 +26,7 @@ import createLucideIcon from '../createLucideIcon';
  * @returns {Component} Vue Component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}Icon', ${JSON.stringify(children)}, '${iconName}');
+const ${componentName} = createLucideIcon('${componentName}Icon', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;

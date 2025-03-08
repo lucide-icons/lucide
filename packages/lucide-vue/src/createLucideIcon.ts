@@ -1,13 +1,13 @@
 import { Component } from 'vue';
 import defaultAttributes from './defaultAttributes';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { toKebabCase } from '@lucide/shared';
 
 var showDeprecationWarning = true;
 
 type IconNode = [elementName: string, attrs: Record<string, string>][];
 
-export default (componentName: string, iconNode: IconNode, iconName: string): Component => ({
-  name: componentName,
+export default (iconName: string, iconNode: IconNode): Component => ({
+  name: iconName,
   functional: true,
   props: {
     color: {
@@ -28,11 +28,7 @@ export default (componentName: string, iconNode: IconNode, iconName: string): Co
     },
     defaultClass: {
       type: String,
-      default: mergeClasses(
-        'lucide-icon lucide',
-        `lucide-${toKebabCase(componentName).replace('-icon', '')}`,
-        `lucide-${iconName}`,
-      ),
+      default: `lucide-icon lucide lucide-${toKebabCase(iconName).replace('-icon', '')}`,
     },
   },
   render(
