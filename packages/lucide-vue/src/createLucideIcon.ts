@@ -1,6 +1,6 @@
 import { Component } from 'vue';
 import defaultAttributes from './defaultAttributes';
-import { toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase } from '@lucide/shared';
 
 var showDeprecationWarning = true;
 
@@ -28,7 +28,9 @@ export default (componentName: string, iconNode: IconNode, iconName: string): Co
     },
     defaultClass: {
       type: String,
-      default: `lucide-icon lucide lucide-${toKebabCase(componentName).replace('-icon', '')} lucide-${iconName}`,
+      default: mergeClasses(
+        `lucide-icon lucide lucide-${toKebabCase(componentName).replace('-icon', '')} lucide-${iconName}`,
+      ),
     },
   },
   render(
