@@ -32,7 +32,8 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       stroke: color || defaultAttributes.stroke,
       'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
       class: mergeClasses(
-        `lucide lucide-${toKebabCase(componentName ?? 'icon')} lucide-${iconName}`,
+        `lucide lucide-${toKebabCase(componentName ?? 'icon')}`,
+        iconName && `lucide-${iconName}`,
       ),
       ...props,
     },
