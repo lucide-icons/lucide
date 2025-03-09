@@ -60,10 +60,6 @@ Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintaine
 
 Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
-## Acknowledgements
-
-Special thanks to [Aviortheking](https://github.com/dzeiocom/lucide-astro) for creating the original lucide-astro package, and for kindly transferring ownership of it to us. We really appreciate it!
-
 ## Sponsors
 
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
