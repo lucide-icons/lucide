@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide">
-    <img src="https://lucide.dev/package-logos/@lucide/astro.svg" alt="Lucide icon library for Astro applications." width="540">
+    <img src="https://lucide.dev/package-logos/lucide-astro.svg" alt="Lucide icon library for Astro applications." width="540">
   </a>
 </p>
 
@@ -21,7 +21,7 @@ Lucide icon library for Astro sites and applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/astro">Documentation</a>
+  <a href="https://lucide.dev/guide/packages/lucide-astro">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
@@ -50,7 +50,7 @@ bun add @lucide/astro
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/astro)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-astro)
 
 ## Community
 
