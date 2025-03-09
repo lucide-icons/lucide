@@ -127,7 +127,7 @@
       }
     ]
   },
-  "lucide-astro": {
+  "@lucide/astro": {
     "order": 8,
     "icon": "astro",
     "iconDark": "astro-dark",
