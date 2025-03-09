@@ -51,12 +51,12 @@
     "@lucide/build-icons": "workspace:*",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "astro": "^4.16.16",
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.5",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
-    "vitest": "^2.1.8"
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
   },
   "peerDependencies": {
     "astro": "^4 || ^5"
