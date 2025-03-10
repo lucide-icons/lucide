@@ -69,8 +69,8 @@ Lucide is totally free for commercial use and personal use, this software is lic
 Thank you to all the people who contributed to Lucide!
 
 <a href="https://github.com/lucide-icons/lucide/graphs/contributors">
-<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" alt="Lucide Contributors" style="max-width: 100%;">
-<!-- <img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /> -->
+
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" />
 </a>
 
 ## Sponsors
