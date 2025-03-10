@@ -190,4 +190,4 @@ If you need any help or have problems with you contribution. Please don't hesita
 Thank you to all the people who already contributed to Lucide!
 
 <a href="https://github.com/lucide-icons/lucide/graphs/contributors">
-<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" /></a>
