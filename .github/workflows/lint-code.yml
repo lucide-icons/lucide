@@ -1,0 +1,20 @@
+name: Linting PR
+
+on:
+  pull_request:
+
+jobs:
+  lint-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Linter
+        run: pnpm lint
