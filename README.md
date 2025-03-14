@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://lucide.dev/lucide-logo-repo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://lucide.dev/lucide-logo-repo.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://lucide.dev/lucide-logo-repo-dark.svg" width="480">
+    <source media="(prefers-color-scheme: light)" srcset="https://lucide.dev/lucide-logo-repo.svg" width="480">
     <img alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.">
   </picture>
 </p>
