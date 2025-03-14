@@ -20,6 +20,10 @@ yarn add lucide-react-native
 npm install lucide-react-native
 ```
 
+```sh [bun]
+bun add lucide-react-native
+```
+
 :::
 
 ## How to use
