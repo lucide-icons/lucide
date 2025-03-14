@@ -32,24 +32,20 @@ jobs:
                archive_format: 'zip',
             });
             const fs = require('fs');
-            const path = require('path');
-            const temp = '${{ runner.temp }}/artifacts';
-            if (!fs.existsSync(temp)){
-              fs.mkdirSync(temp);
-            }
-            fs.writeFileSync(path.join(temp, 'pr_number.zip'), Buffer.from(download.data));
+            fs.writeFileSync('${{github.workspace}}/pr_number.zip', Buffer.from(download.data));
 
-      - run: unzip pr.zip
+      - name: 'Unzip artifact'
+        run: unzip pr_number.zip
 
       - name: 'Get PR number'
-        run: cat pr/NR
+        run: echo "number=$(cat NR)" >> $GITHUB_OUTPUT
         id: pr-number
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
         id: pr-comment
         with:
-          issue-number: ${{ steps.pr-number.outputs.stdout }}
+          issue-number: ${{ steps.pr-number.outputs.number }}
           comment-author: 'github-actions[bot]'
           body-includes: Added or changed icons
 
@@ -57,6 +53,6 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
-          issue-number: ${{ steps.pr-number.outputs.stdout }}
-          body-path: ./pr/comment-markup.md
+          issue-number: ${{ steps.pr-number.outputs.number }}
+          body-path: comment-markup.md
           edit-mode: replace
