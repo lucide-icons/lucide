@@ -53,7 +53,52 @@
     "categories": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "accessibility",
+          "account",
+          "animals",
+          "arrows",
+          "brands",
+          "buildings",
+          "charts",
+          "communication",
+          "connectivity",
+          "cursors",
+          "design",
+          "development",
+          "devices",
+          "emoji",
+          "files",
+          "finance",
+          "food-beverage",
+          "gaming",
+          "home",
+          "layout",
+          "mail",
+          "math",
+          "medical",
+          "multimedia",
+          "nature",
+          "navigation",
+          "notifications",
+          "people",
+          "photography",
+          "science",
+          "seasons",
+          "security",
+          "shapes",
+          "shopping",
+          "social",
+          "sports",
+          "sustainability",
+          "text",
+          "time",
+          "tools",
+          "transportation",
+          "travel",
+          "weather"
+        ]
       },
       "uniqueItems": true
     },
@@ -94,7 +139,7 @@
     },
     "aliasDeprecationReasons": {
       "type": "string",
-      "enum": ["alias.typo", "alias.name"]
+      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
     },
     "versionNumber": {
       "type": "string",

@@ -3,7 +3,7 @@ export interface TeamMember {
   name: string
   title: string
   image: string
-  sponsor: string
+  sponsor?: string
   socialLinks: DefaultTheme.SocialLink[]
 }
 </script>
@@ -75,6 +75,7 @@ defineProps<TeamMember>()
   font-weight: 500;
   color: var(--vp-c-text-2);
   text-align: center;
+  text-wrap: balance;
   margin-bottom: 16px;;
 }
 

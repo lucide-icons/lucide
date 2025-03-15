@@ -2,12 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { parseSync } from 'svgson';
 import {
-  shuffle,
+  shuffleArray,
   readSvgDirectory,
   getCurrentDirPath,
   minifySvg,
   toPascalCase,
-} from './helpers.mjs';
+} from '../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -15,10 +15,20 @@ const BASE_URL = 'https://lucide.dev/api/gh-icon';
 
 const changedFilesPathString = process.env.CHANGED_FILES;
 
+if (changedFilesPathString == null) {
+  console.error('CHANGED_FILES env variable is not set');
+  process.exit(1);
+}
+
 const changedFiles = changedFilesPathString
   .split(' ')
-  .map((file) => file.replace('.json', '.svg'))
+  .filter((file) => file.includes('.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
+
+if (changedFiles.length === 0) {
+  console.log('No changed icons found');
+  process.exit(0);
+}
 
 const getImageTagsByFiles = (files, getBaseUrl, width) =>
   files.map((file) => {
@@ -33,17 +43,18 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
     return `<img title="${file}" alt="${file}" ${widthAttr} src="${url}/${base64}.svg"/>`;
   });
 
-const svgFiles = readSvgDirectory(ICONS_DIR).map((file) => `icons/${file}`);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
+const svgFilePaths = svgFiles.map((file) => `icons/${file}`);
 
-const iconsFilteredByName = (search) => svgFiles.filter((file) => file.includes(search));
+const iconsFilteredByName = (search) => svgFilePaths.filter((file) => file.includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
-  shuffle(svgFiles).slice(0, changedFiles.length),
+  shuffleArray(svgFilePaths).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 
 const cohesionSquaresImageTags = getImageTagsByFiles(
-  shuffle(iconsFilteredByName('square')).slice(0, changedFiles.length),
+  shuffleArray(iconsFilteredByName('square')).slice(0, changedFiles.length),
   () => `${BASE_URL}/stroke-width/2`,
 ).join('');
 
@@ -73,6 +84,16 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
     const iconName = path.basename(file, '.svg');
 
     return `${BASE_URL}/${iconName}`;
+  },
+  400,
+).join(' ');
+
+const changeFilesDiffImageTags = getImageTagsByFiles(
+  changedFiles,
+  (file) => {
+    const iconName = path.basename(file, '.svg');
+
+    return `${BASE_URL}/diff/${iconName}`;
   },
   400,
 ).join(' ');
@@ -111,6 +132,10 @@ ${changeFilesLowDPIImageTags}<br/>
 <details>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
+</details>
+<details>
+<summary>Icon Diffs</summary>
+${changeFilesDiffImageTags}
 </details>
 <details>
 <summary>Icons as code</summary>
