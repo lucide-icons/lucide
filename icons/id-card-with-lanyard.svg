@@ -1,6 +1,17 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 20V8C5 6.89543 5.89543 6 7 6H17C18.1046 6 19 6.89543 19 8V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20Z" stroke="black" stroke-width="2"/>
-<path d="M9 2L11.6637 8M13.454 5.6L15 2" stroke="black" stroke-width="2" stroke-linecap="round"/>
-<circle cx="12" cy="13" r="2" stroke="black" stroke-width="2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8356 19.0181C15.0163 19.54 15.4477 20 16 20V20C16.5523 20 17.0104 19.5478 16.9013 19.0064C16.4405 16.721 14.4212 15 12 15C9.57879 15 7.55953 16.721 7.09873 19.0064C6.98957 19.5478 7.44772 20 8 20V20C8.55229 20 8.98369 19.54 9.16437 19.0181C9.57106 17.8435 10.687 17 12 17C13.313 17 14.4289 17.8435 14.8356 19.0181Z" fill="black"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M13.5 8h-3" />
+  <path d="m15 2-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3" />
+  <path d="m9 2 3 6" />
+  <path d="M9.17 18a3 3 0 0 1 5.66 0" />
+  <circle cx="12" cy="14" r="2" />
 </svg>

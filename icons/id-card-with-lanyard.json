@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "python2911"
+    "python2911",
+    "UsamaKhan"
   ],
   "tags": [
     "id-card",
