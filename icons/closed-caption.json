@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "UsamaKhan"
+  ],
+  "tags": [
+    "tv",
+    "movie",
+    "video"
+  ],
+  "categories": [
+    "accessibility",
+    "multimedia"
+  ]
+}
