@@ -12,5 +12,13 @@
   ],
   "categories": [
     "layout"
+  ],
+  "aliases": [
+    {
+      "name": "filter",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
