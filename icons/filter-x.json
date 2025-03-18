@@ -2,11 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "gubser",
-    "ericfennis"
+    "ericfennis",
+    "lukedukeus",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "funnel",
-    "hopper"
+    "hopper",
+    "remove",
+    "delete"
   ],
   "categories": [
     "layout"

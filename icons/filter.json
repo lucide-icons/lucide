@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "lukedukeus",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "funnel",
