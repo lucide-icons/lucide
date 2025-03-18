@@ -12,6 +12,11 @@
     "security"
   ],
   "aliases": [
-    "unlock"
+    {
+      "name": "unlock",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

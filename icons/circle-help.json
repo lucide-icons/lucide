@@ -16,6 +16,11 @@
     "notifications"
   ],
   "aliases": [
-    "help-circle"
+    {
+      "name": "help-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
