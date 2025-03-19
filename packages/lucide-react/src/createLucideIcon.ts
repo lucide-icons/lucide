@@ -9,12 +9,14 @@ import Icon from './Icon';
  * @param {array} iconNode
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
-const createLucideIcon = (iconName: string, iconNode: IconNode) => {
+const createLucideIcon = (iconName: string, iconNode: IconNode, aliasNames?: string[]) => {
+  const aliasClassNames = aliasNames != null ? aliasNames.map((aliasName) => `lucide-${toKebabCase(aliasName)}`).join(' ') : '';
+
   const Component = forwardRef<SVGSVGElement, LucideProps>(({ className, ...props }, ref) =>
     createElement(Icon, {
       ref,
       iconNode,
-      className: mergeClasses(`lucide-${toKebabCase(iconName)}`, className),
+      className: mergeClasses(`lucide-${toKebabCase(iconName)}`,aliasClassNames, className),
       ...props,
     }),
   );

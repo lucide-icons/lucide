@@ -8,9 +8,11 @@ export default async ({
   getSvg,
   deprecated,
   deprecationReason,
+  iconNameAliases,
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
+
 
   return `
 import createLucideIcon from '../createLucideIcon';
@@ -29,7 +31,7 @@ export const __iconNode: IconNode = ${JSON.stringify(children)}
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}', __iconNode);
+const ${componentName} = createLucideIcon('${componentName}', __iconNode${iconNameAliases != null ? `, ${JSON.stringify(iconNameAliases)}` : ''});
 
 export default ${componentName};
 `;

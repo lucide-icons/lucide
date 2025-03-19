@@ -47,6 +47,7 @@
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
+    "test:update": "vitest run -u",
     "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
