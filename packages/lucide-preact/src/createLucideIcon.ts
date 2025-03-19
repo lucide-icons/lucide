@@ -1,5 +1,5 @@
 import { h, type JSX } from 'preact';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { mergeClasses, createLucideClassNames } from '@lucide/shared';
 import Icon from './Icon';
 import type { IconNode, LucideIcon, LucideProps } from './types';
 
@@ -9,7 +9,12 @@ import type { IconNode, LucideIcon, LucideProps } from './types';
  * @param {array} iconNode
  * @returns {FunctionComponent} LucideIcon
  */
-const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
+const createLucideIcon = (iconName: string, iconNode: IconNode, aliasNames: string[] = []): LucideIcon => {
+  const lucideClassNames = createLucideClassNames([
+    iconName,
+    ...aliasNames,
+  ]);
+
   const Component = ({ class: classes = '', children, ...props }: LucideProps) =>
     h(
       Icon,
@@ -17,7 +22,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
         ...props,
         iconNode,
         class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
-          `lucide-${toKebabCase(iconName)}`,
+          lucideClassNames,
           classes,
         ),
       },

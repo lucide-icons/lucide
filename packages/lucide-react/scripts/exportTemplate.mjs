@@ -13,7 +13,6 @@ export default async ({
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
 
-
   return `
 import createLucideIcon from '../createLucideIcon';
 import { IconNode } from '../types';
@@ -31,7 +30,9 @@ export const __iconNode: IconNode = ${JSON.stringify(children)}
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}', __iconNode${iconNameAliases != null ? `, ${JSON.stringify(iconNameAliases)}` : ''});
+const ${componentName} = createLucideIcon('${componentName}', __iconNode${
+  iconNameAliases != null ? `, ${JSON.stringify(iconNameAliases)}` : ''
+});
 
 export default ${componentName};
 `;

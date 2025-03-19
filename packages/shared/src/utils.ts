@@ -49,3 +49,20 @@ export const mergeClasses = <ClassType = string | undefined | null>(...classes: 
     })
     .join(' ')
     .trim();
+
+/**
+ * Create list of lucide icon names
+ *
+ * @param {array} classes
+ * @returns {string} A string of classes
+ */
+export const createLucideClassNames = (iconNames?: string[]) => {
+  if (iconNames == null) {
+    return '';
+  }
+
+  return iconNames
+    .map((aliasName) => `lucide-${toKebabCase(aliasName)}`)
+    .join(' ')
+    .trim();
+};
