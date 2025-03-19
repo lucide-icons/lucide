@@ -40,6 +40,13 @@ function generateIconFiles({
         })
       : '';
 
+    const iconNameAliases = iconMetaData[iconName]?.aliases?.map((alias) => {
+      if (typeof alias === 'string') {
+        return alias;
+      }
+      return alias.name;
+    });
+
     const elementTemplate = await template({
       componentName,
       iconName,
@@ -47,6 +54,7 @@ function generateIconFiles({
       getSvg,
       deprecated,
       deprecationReason,
+      iconNameAliases
     });
 
     const output = pretty
