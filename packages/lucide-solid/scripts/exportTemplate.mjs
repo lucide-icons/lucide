@@ -8,6 +8,7 @@ export default async ({
   getSvg,
   deprecated,
   deprecationReason,
+  iconNameAliases,
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
@@ -30,7 +31,9 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = (props: LucideProps) => (
-  <Icon {...props} name="${componentName}" iconNode={iconNode} />
+  <Icon {...props} name="${componentName}" iconNode={iconNode}${
+    iconNameAliases != null ? ` aliasNames={${JSON.stringify(iconNameAliases)}}` : ''
+  } />
 )
 
 export default ${componentName};
