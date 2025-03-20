@@ -185,6 +185,9 @@ importers:
       vitepress:
         specifier: ^1.3.1
         version: 1.3.3(@algolia/client-search@4.19.1)(@types/node@20.4.5)(@types/react@18.2.55)(axios@1.7.4)(fuse.js@6.6.2)(less@4.2.0)(postcss@8.5.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.77.8)(search-insights@2.8.2)(stylus@0.56.0)(terser@5.31.6)(typescript@5.3.3)
+      vitepress-plugin-llms:
+        specifier: ^0.0.8
+        version: 0.0.8
 
   packages/lucide:
     devDependencies:
@@ -7748,6 +7751,10 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
+  gray-matter@4.0.3:
+    resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
+    engines: {node: '>=6.0'}
+
   gzip-size@5.1.1:
     resolution: {integrity: sha512-FNHi6mmoHvs1mxZAds4PpdCS6QG8B4C1krxJsMutgxl5t3+GlRTzzI3NEkifXx2pVsOvJdOGSmIgDhQ55FwdPA==}
     engines: {node: '>=6'}
@@ -8864,6 +8871,10 @@ packages:
 
   mark.js@8.11.1:
     resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
+
+  markdown-title@1.0.2:
+    resolution: {integrity: sha512-MqIQVVkz+uGEHi3TsHx/czcxxCbRIL7sv5K5DnYw/tI+apY54IbPefV/cmgxp6LoJSEx/TqcHdLs/298afG5QQ==}
+    engines: {node: '>=6'}
 
   marky@1.2.5:
     resolution: {integrity: sha512-q9JtQJKjpsVxCRVgQ+WapguSbKC3SQ5HEzFGPAJMStgh3QjCawp00UKv3MTTAArTmGmmPUvllHZoNbZ3gs0I+Q==}
@@ -10581,6 +10592,10 @@ packages:
   search-insights@2.8.2:
     resolution: {integrity: sha512-PxA9M5Q2bpBelVvJ3oDZR8nuY00Z6qwOxL53wNpgzV28M/D6u9WUbImDckjLSILBF8F1hn/mgyuUaOPtjow4Qw==}
 
+  section-matter@1.0.0:
+    resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
+    engines: {node: '>=4'}
+
   select-hose@2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
 
@@ -10988,6 +11003,10 @@ packages:
   strip-ansi@7.1.0:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
+
+  strip-bom-string@1.0.0:
+    resolution: {integrity: sha512-uCC2VHvQRYu+lMh4My/sFNmF2klFymLX1wHJeXnbEJERpV/ZsVuonzerjfrGpIGF7LBVa1O7i9kjiWvJiFck8g==}
+    engines: {node: '>=0.10.0'}
 
   strip-bom@3.0.0:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
@@ -11840,6 +11859,9 @@ packages:
     peerDependenciesMeta:
       vite:
         optional: true
+
+  vitepress-plugin-llms@0.0.8:
+    resolution: {integrity: sha512-xz4wb87TqAn75RbKwQs+w+63OToK7W57pmLKIEY849Izpzi/WvTI9T+rCDwabdhPFirI3LLT2P2nErsSrik0/A==}
 
   vitepress@1.3.3:
     resolution: {integrity: sha512-6UzEw/wZ41S/CATby7ea7UlffvRER/uekxgN6hbEvSys9ukmLOKsz87Ehq9yOx1Rwiw+Sj97yjpivP8w1sUmng==}
@@ -20677,7 +20699,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.5
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
 
@@ -20757,6 +20779,13 @@ snapshots:
   graceful-fs@4.2.11: {}
 
   graphemer@1.4.0: {}
+
+  gray-matter@4.0.3:
+    dependencies:
+      js-yaml: 3.14.1
+      kind-of: 6.0.3
+      section-matter: 1.0.0
+      strip-bom-string: 1.0.0
 
   gzip-size@5.1.1:
     dependencies:
@@ -22149,6 +22178,8 @@ snapshots:
       tmpl: 1.0.5
 
   mark.js@8.11.1: {}
+
+  markdown-title@1.0.2: {}
 
   marky@1.2.5: {}
 
@@ -24489,6 +24520,11 @@ snapshots:
 
   search-insights@2.8.2: {}
 
+  section-matter@1.0.0:
+    dependencies:
+      extend-shallow: 2.0.1
+      kind-of: 6.0.3
+
   select-hose@2.0.0: {}
 
   selfsigned@2.4.1:
@@ -24996,6 +25032,8 @@ snapshots:
   strip-ansi@7.1.0:
     dependencies:
       ansi-regex: 6.0.1
+
+  strip-bom-string@1.0.0: {}
 
   strip-bom@3.0.0: {}
 
@@ -25879,6 +25917,13 @@ snapshots:
   vitefu@1.0.5(vite@6.0.7(@types/node@20.4.5)(jiti@1.21.6)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.31.6)):
     optionalDependencies:
       vite: 6.0.7(@types/node@20.4.5)(jiti@1.21.6)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.31.6)
+
+  vitepress-plugin-llms@0.0.8:
+    dependencies:
+      gray-matter: 4.0.3
+      markdown-title: 1.0.2
+      minimatch: 10.0.1
+      picocolors: 1.1.1
 
   vitepress@1.3.3(@algolia/client-search@4.19.1)(@types/node@20.4.5)(@types/react@18.2.55)(axios@1.7.4)(fuse.js@6.6.2)(less@4.2.0)(postcss@8.5.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.77.8)(search-insights@2.8.2)(stylus@0.56.0)(terser@5.31.6)(typescript@5.3.3):
     dependencies:

@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
+import llmstxt from 'vitepress-plugin-llms';
 import sidebar from './sidebar';
 
 const title = 'Lucide';
@@ -34,6 +35,11 @@ export default defineConfig({
         },
       ],
     },
+    plugins: [
+      llmstxt({
+        ignoreFiles: ['code-of-conduct.md', 'index.md', 'packages.md', 'showcase.md'],
+      }),
+    ],
   },
   head: [
     [

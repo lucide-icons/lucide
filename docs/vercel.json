@@ -34,6 +34,26 @@
       ],
       "destination": "/icons",
       "permanent": false
+    },
+    {
+      "source": "/:path*.txt",
+      "destination": "/:path.md",
+      "permanent": true
+    },
+    {
+      "source": "/llms.md",
+      "destination": "/llms.txt",
+      "permanent": true
+    },
+    {
+      "source": "/llms.txt",
+      "destination": "/llms.txt",
+      "permanent": false
+    },
+    {
+      "source": "/llms-full.txt",
+      "destination": "/llms-full.txt",
+      "permanent": false
     }
   ],
   "headers": [
