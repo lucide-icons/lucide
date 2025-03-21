@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M11.535 12.182a.5.5 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1.004 1.004 0 0 0-.66.66l-1.067 3.443a.501.501 0 0 1-.943.033l-3.5-9Z" style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:2px"/><circle cx="18.5" cy="4.5" r="2" style="fill:none;stroke:#000;stroke-width:2px"/><circle cx="4.5" cy="18.5" r="2" style="fill:none;stroke:#000;stroke-width:2px"/><path d="M4.5 16.5c0-6.583 5.417-12 12-12" style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:2px"/></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="19" cy="5" r="2" />
+  <circle cx="5" cy="19" r="2" />
+  <path d="M5 17A12 12 0 0 1 17 5" />
+  <path d="M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z" />
+</svg>
