@@ -186,6 +186,32 @@ bun add lucide-preact
 
 :::
 
+## Astro
+
+Implementation of the lucide icon library for Astro applications.
+
+::: code-group
+
+```sh [pnpm]
+pnpm install @lucide/astro
+```
+
+```sh [yarn]
+yarn add @lucide/astro
+```
+
+```sh [npm]
+npm install @lucide/astro
+```
+
+```sh [bun]
+bun add @lucide/astro
+```
+
+:::
+
+For more details, see the [documentation](packages/lucide-astro.md).
+
 ## Static usage
 
 Implementation of the lucide icon library for multiple usages that like to use: SVG files icons, SVG Sprite, Icon Fonts and static SVG strings export in Common JS modules (for NodeJS).
