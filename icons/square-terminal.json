@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "code",
+    "command line",
+    "prompt",
+    "shell"
+  ],
+  "categories": [
+    "development"
+  ],
+  "aliases": [
+    "terminal-square"
+  ]
+}

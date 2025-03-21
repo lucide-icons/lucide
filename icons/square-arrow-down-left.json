@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "direction",
+    "south-west",
+    "diagonal",
+    "sign",
+    "turn",
+    "keyboard",
+    "button"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "gaming"
+  ],
+  "aliases": [
+    "arrow-down-left-square"
+  ]
+}

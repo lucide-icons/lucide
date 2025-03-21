@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "verified",
+    "unverified",
+    "sale",
+    "discount",
+    "offer",
+    "marketing",
+    "sticker",
+    "price tag"
+  ],
+  "categories": [
+    "social",
+    "finance",
+    "shopping",
+    "math"
+  ],
+  "aliases": [
+    "percent-diamond"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "delete",
+    "stop",
+    "alert",
+    "warning",
+    "times",
+    "clear",
+    "math"
+  ],
+  "categories": [
+    "math",
+    "notifications"
+  ],
+  "aliases": [
+    "x-octagon"
+  ]
+}

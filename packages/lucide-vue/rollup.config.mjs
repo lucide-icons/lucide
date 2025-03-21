@@ -1,5 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const packageName = 'LucideVue';
 const outputFileName = 'lucide-vue';
@@ -34,7 +34,7 @@ const configs = bundles
   .map(({ inputs, outputDir, format, minify, preserveModules }) =>
     inputs.map((input) => ({
       input,
-      plugins: plugins(pkg, minify),
+      plugins: plugins({ pkg, minify }),
       external: ['vue'],
       output: {
         name: packageName,
@@ -47,6 +47,7 @@ const configs = bundles
             }),
         format,
         preserveModules,
+        preserveModulesRoot: 'src',
         sourcemap: true,
         globals: {
           vue: 'vue',

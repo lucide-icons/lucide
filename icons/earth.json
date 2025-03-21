@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "world",
+    "browser",
+    "language",
+    "translate",
+    "globe"
+  ],
+  "categories": [
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "globe-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

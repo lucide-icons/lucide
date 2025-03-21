@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
+  "tags": [
+    "music",
+    "start",
+    "run"
+  ],
+  "categories": [
+    "multimedia"
+  ],
+  "aliases": [
+    "play-circle"
+  ]
+}

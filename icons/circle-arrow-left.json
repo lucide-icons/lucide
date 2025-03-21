@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "previous",
+    "back",
+    "direction",
+    "west",
+    "sign",
+    "turn",
+    "button",
+    "<-"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "gaming"
+  ],
+  "aliases": [
+    "arrow-left-circle"
+  ]
+}

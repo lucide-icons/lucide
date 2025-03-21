@@ -27,6 +27,7 @@ type LucideAngularComponentChanges = {
   size?: TypedChange<number>;
   strokeWidth?: TypedChange<number>;
   absoluteStrokeWidth?: TypedChange<boolean>;
+  class: TypedChange<string>;
 };
 
 export function formatFixed(number: number, decimals = 3): string {
@@ -40,6 +41,7 @@ export function formatFixed(number: number, decimals = 3): string {
 export class LucideAngularComponent implements OnChanges {
   @Input() class?: string;
   @Input() name?: string | LucideIconData;
+  @Input() img?: LucideIconData;
   @Input() color?: string;
   @Input() absoluteStrokeWidth = false;
   defaultSize: number;
@@ -52,10 +54,6 @@ export class LucideAngularComponent implements OnChanges {
     @Inject(LucideIconConfig) private iconConfig: LucideIconConfig,
   ) {
     this.defaultSize = defaultAttributes.height;
-  }
-
-  @Input() set img(img: LucideIconData) {
-    this.name = img;
   }
 
   _size?: number;
@@ -87,23 +85,31 @@ export class LucideAngularComponent implements OnChanges {
   }
 
   ngOnChanges(changes: LucideAngularComponentChanges): void {
-    this.color = this.color ?? this.iconConfig.color;
-    this.size = this.parseNumber(this.size ?? this.iconConfig.size);
-    this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
-    this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
-    if (changes.name || changes.img) {
-      const name = changes.img?.currentValue ?? changes.name?.currentValue;
-      if (typeof name === 'string') {
-        const icoOfName = this.getIcon(this.toPascalCase(name));
+    if (
+      changes.name ||
+      changes.img ||
+      changes.color ||
+      changes.size ||
+      changes.absoluteStrokeWidth ||
+      changes.strokeWidth ||
+      changes.class
+    ) {
+      this.color = this.color ?? this.iconConfig.color;
+      this.size = this.parseNumber(this.size ?? this.iconConfig.size);
+      this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
+      this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
+      const nameOrIcon = this.img ?? this.name;
+      if (typeof nameOrIcon === 'string') {
+        const icoOfName = this.getIcon(this.toPascalCase(nameOrIcon));
         if (icoOfName) {
           this.replaceElement(icoOfName);
         } else {
           throw new Error(
-            `The "${name}" icon has not been provided by any available icon providers.`,
+            `The "${nameOrIcon}" icon has not been provided by any available icon providers.`,
           );
         }
-      } else if (Array.isArray(name)) {
-        this.replaceElement(name);
+      } else if (Array.isArray(nameOrIcon)) {
+        this.replaceElement(nameOrIcon);
       } else {
         throw new Error(`No icon name or image has been provided.`);
       }

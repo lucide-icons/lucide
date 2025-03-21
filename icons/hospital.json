@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "infirmary",
+    "sanatorium",
+    "healthcare",
+    "doctor",
+    "hospice",
+    "clinic",
+    "emergency room",
+    "ward",
+    "building",
+    "medical",
+    "vet"
+  ],
+  "categories": [
+    "medical",
+    "buildings",
+    "navigation",
+    "travel"
+  ]
+}

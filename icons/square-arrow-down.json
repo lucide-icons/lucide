@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "backwards",
+    "reverse",
+    "direction",
+    "south",
+    "sign",
+    "keyboard",
+    "button"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "gaming"
+  ],
+  "aliases": [
+    "arrow-down-square"
+  ]
+}

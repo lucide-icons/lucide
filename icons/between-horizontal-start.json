@@ -29,10 +29,14 @@
   "categories": [
     "layout",
     "design",
-    "tools",
-    "account"
+    "tools"
   ],
   "aliases": [
-    "between-horizonal-start"
+    {
+      "name": "between-horizonal-start",
+      "deprecated": true,
+      "deprecationReason": "alias.typo",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

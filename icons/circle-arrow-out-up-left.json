@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "outwards",
+    "direction",
+    "north-west",
+    "diagonal",
+    "keyboard",
+    "button",
+    "escape"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "development"
+  ],
+  "aliases": [
+    "arrow-up-left-from-circle"
+  ]
+}

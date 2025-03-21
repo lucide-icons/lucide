@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "subtract",
+    "remove",
+    "decrease",
+    "reduce",
+    "calculate",
+    "line",
+    "operator",
+    "code",
+    "coding",
+    "minimum",
+    "downgrade",
+    "-"
+  ],
+  "categories": [
+    "math"
+  ],
+  "aliases": [
+    "minus-circle"
+  ]
+}

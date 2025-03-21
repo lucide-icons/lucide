@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "guillermo-angeles"
+    "guillermo-angeles",
+    "jguddas"
   ],
   "tags": [
     "flag",

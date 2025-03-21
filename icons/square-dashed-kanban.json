@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "projects",
+    "manage",
+    "overview",
+    "board",
+    "tickets",
+    "issues",
+    "roadmap",
+    "plan",
+    "intentions",
+    "productivity",
+    "work",
+    "agile",
+    "draft",
+    "template",
+    "boilerplate",
+    "code",
+    "coding"
+  ],
+  "categories": [
+    "charts",
+    "development",
+    "design"
+  ],
+  "aliases": [
+    "kanban-square-dashed"
+  ]
+}

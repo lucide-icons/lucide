@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "smnandre",
+    "jguddas"
+  ],
+  "tags": [
+    "calculate",
+    "formula",
+    "math",
+    "operator",
+    "root",
+    "square",
+    "symbol"
+  ],
+  "categories": [
+    "development",
+    "math"
+  ]
+}

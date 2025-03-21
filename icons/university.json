@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "building",
+    "education",
+    "childhood",
+    "school"
+  ],
+  "categories": [
+    "buildings",
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "school-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
