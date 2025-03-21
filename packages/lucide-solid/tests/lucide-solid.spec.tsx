@@ -53,14 +53,14 @@ describe('Using lucide icon components', () => {
   });
 
   it('should render the alias icon name classNames', () => {
-      const { container } = render(() => (
-        <Pen />
-      ));
+    const { container } = render(() => (
+      <Pen />
+    ));
 
-      const PenIcon = container.firstChild;
+    const PenIcon = container.firstChild;
 
-      expect(PenIcon).toHaveClass('lucide-edit-2');
-    })
+    expect(PenIcon).toHaveClass('lucide-edit-2');
+  })
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const { container, getByTestId } = render(() => (

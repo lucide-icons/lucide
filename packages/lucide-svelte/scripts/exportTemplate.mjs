@@ -9,6 +9,7 @@ export default async ({
   getSvg,
   deprecated,
   deprecationReason,
+  iconNameAliases
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
@@ -36,7 +37,9 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  */
 </script>
 
-<Icon name="${iconName}" {...$$props} iconNode={iconNode}>
+<Icon name="${iconName}" {...$$props} iconNode={iconNode}${
+    iconNameAliases != null ? ` aliasNames={${JSON.stringify(iconNameAliases)}}` : ''
+}>
   <slot/>
 </Icon>
 `;

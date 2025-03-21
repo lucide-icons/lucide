@@ -8,6 +8,7 @@
   export let strokeWidth: number | string = 2
   export let absoluteStrokeWidth: boolean = false
   export let iconNode: IconNode = []
+  export let aliasNames: string[] = []
 
   const mergeClasses = <ClassType = string | undefined | null>(
     ...classes: ClassType[]
@@ -34,6 +35,7 @@
       'lucide-icon',
       'lucide',
       name ? `lucide-${name}`: '',
+      ...aliasNames.map(alias => `lucide-${alias}`),
       $$props.class
     )
   }
