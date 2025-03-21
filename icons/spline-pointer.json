@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kaleidosium",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "path",
+    "pen",
+    "tool",
+    "shape",
+    "curve",
+    "draw",
+    "vector"
+  ],
+  "categories": [
+    "design"
+  ]
+}
