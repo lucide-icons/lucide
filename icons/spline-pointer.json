@@ -9,11 +9,8 @@
   ],
   "tags": [
     "path",
-    "pen",
     "tool",
-    "shape",
     "curve",
-    "draw",
     "node",
     "click",
     "pointer",
@@ -23,6 +20,7 @@
   "categories": [
     "arrows",
     "cursors",
-    "design"
+    "design",
+    "tools"
   ]
 }
