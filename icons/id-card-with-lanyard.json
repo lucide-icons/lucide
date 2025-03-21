@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "python2911",
+    "UsamaKhan"
+  ],
+  "tags": [
+    "id-card",
+    "id-card-lanyard",
+    "identity",
+    "employee",
+    "gate-pass"
+  ],
+  "categories": [
+    "security",
+    "account"
+  ]
+}
