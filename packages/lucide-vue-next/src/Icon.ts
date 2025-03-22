@@ -20,7 +20,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       height: size || defaultAttributes.height,
       stroke: color || defaultAttributes.stroke,
       'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
-      class: ['lucide', `lucide-${toKebabCase(name ?? 'icon')}`],
+      class: ['lucide', `lucide-${toKebabCase(name ?? 'icon')}`, classes],
       ...props,
     },
     [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],

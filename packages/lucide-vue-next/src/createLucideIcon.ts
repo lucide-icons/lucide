@@ -12,7 +12,7 @@ import Icon from './Icon';
  * @returns {FunctionalComponent} LucideIcon
  */
 const createLucideIcon =
-  (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
+  (iconName: string, iconNode: IconNode, aliasNames: string[] = []): FunctionalComponent<LucideProps> =>
   (props, { slots }) =>
     h(
       Icon,
