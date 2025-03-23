@@ -1,5 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
 const packageName = 'LucideVueNext';
