@@ -83,7 +83,7 @@
 🚀 astro package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/lucide-astro/*'
+          - 'packages/astro/*'
 
 # For changes in the lucide static package
 🪨 static package:

@@ -3,7 +3,7 @@ name: Lucide Astro Checks
 on:
   pull_request:
     paths:
-      - packages/lucide-astro/**
+      - packages/astro/**
       - packages/shared/**
       - tools/build-icons/**
       - pnpm-lock.yaml
