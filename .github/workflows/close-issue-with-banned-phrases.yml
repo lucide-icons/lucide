@@ -11,12 +11,12 @@ jobs:
       issues: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Check for blocked phrases in issue title
         run: |
           ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
-          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord" "bluesky")
+          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord" "bluesky" "spotify" "behance" "pix")
 
           # Check title and body for blocked phrases
           for PHRASE in "${BLOCKED_PHRASES[@]}"
