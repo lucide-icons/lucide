@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joffx"
+  ],
+  "tags": [
+    "money",
+    "cash",
+    "payment",
+    "finance",
+    "error",
+    "failed",
+    "rejected",
+    "canceled",
+    "declined"
+  ],
+  "categories": [
+    "finance",
+    "business",
+    "commerce"
+  ]
+}
