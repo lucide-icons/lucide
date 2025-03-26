@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "AnnaSasDev",
     "joffx"
   ],
   "tags": [
@@ -9,11 +10,10 @@
     "payment",
     "finance",
     "arrow",
-    "growth"
+    "growth",
+    "decrease"
   ],
   "categories": [
-    "finance",
-    "business",
-    "commerce"
+    "finance"
   ]
 }
