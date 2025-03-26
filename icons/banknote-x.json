@@ -1,6 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "AnnaSasDev",
     "joffx"
   ],
   "tags": [
@@ -15,8 +16,6 @@
     "declined"
   ],
   "categories": [
-    "finance",
-    "business",
-    "commerce"
+    "finance"
   ]
 }
