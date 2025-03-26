@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "AnnaSasDev",
-    "joffx"
+    "joffx",
+    "ericfennis",
+    "mittalyashu"
   ],
   "tags": [
     "money",
