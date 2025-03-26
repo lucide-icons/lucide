@@ -1,8 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "mittalyashu",
+    "AnnaSasDev",
     "joffx"
   ],
   "tags": [
@@ -15,8 +14,6 @@
     "increase"
   ],
   "categories": [
-    "finance",
-    "business",
-    "commerce"
+    "finance"
   ]
 }
