@@ -11,7 +11,7 @@ describe('LucideAngularComponent', () => {
   const getSvgAttribute = (attr: string) =>
     testHostFixture.nativeElement.querySelector('svg').getAttribute(attr);
   const testIcons: LucideIcons = {
-    Demo: [['polyline', { points: '1 1 22 22' }]],
+    Demo: [['polyline', { points: '1 1 22 22' }, []]],
   };
 
   beforeEach(async () => {
