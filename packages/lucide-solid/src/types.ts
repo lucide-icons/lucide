@@ -1,6 +1,6 @@
 import { JSX } from 'solid-js/jsx-runtime';
 
-export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][];
+export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>, children: IconNode][];
 export type SVGAttributes = Partial<JSX.SvgSVGAttributes<SVGSVGElement>>;
 
 export interface LucideProps extends SVGAttributes {

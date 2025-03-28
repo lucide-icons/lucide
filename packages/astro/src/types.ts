@@ -16,7 +16,7 @@ export type SVGAttributes = HTMLAttributes<'svg'>;
 
 export type IconNode = IconNodeChild[];
 
-type IconNodeChild = [elementName: SVGElements, attrs: SVGAttributes];
+type IconNodeChild = [elementName: SVGElements, attrs: SVGAttributes, children: IconNodeChild[]];
 
 // All possible svg elements according to the Astro definitions
 type SVGElements =

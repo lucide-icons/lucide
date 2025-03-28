@@ -3,6 +3,39 @@ import { type INode, parseSync } from 'svgson';
 import { generateHashedKey, readSvg, hasDuplicatedChildren } from '@lucide/helpers';
 
 /**
+ * Check if the children of an SVG have duplicated items.
+ * @param {INode} contents - The SVG contents.
+ * @param {string} name - The name of the SVG file.
+ * @throws {Error} If there are duplicated children.
+ */
+function checkForDuplicatedChildren(
+  contents: INode,
+  name: string,
+) {
+  if (hasDuplicatedChildren(contents.children)) {
+    throw new Error(`Duplicated children in ${name}.svg`);
+  }
+
+  for (const child of contents.children) {
+    checkForDuplicatedChildren(child, name);
+  }
+}
+
+/**
+ * Generate unique keys for each child.
+ * @param {INode} contents - The SVG contents.
+ * @returns {INode[]}
+ */
+function generateUniqueKeys(contents: INode): INode[] {
+  return contents.children.map((child) => {
+    child.attributes.key = generateHashedKey(child);
+    child.children = generateUniqueKeys(child);
+
+    return child;
+  });
+}
+
+/**
  * Build an object in the format: `{ <name>: <contents> }`.
  * @param {string[]} svgFiles - A list of filenames.
  * @param {string} iconsDirectory - The directory where the icons are stored.
@@ -22,16 +55,10 @@ export default async function generateIconObject(
       throw new Error(`${name}.svg has no children!`);
     }
 
-    if (hasDuplicatedChildren(contents.children)) {
-      throw new Error(`Duplicated children in ${name}.svg`);
-    }
+    checkForDuplicatedChildren(contents, name);
 
     if (renderUniqueKey) {
-      contents.children = contents.children.map((child) => {
-        child.attributes.key = generateHashedKey(child);
-
-        return child;
-      });
+      contents.children = generateUniqueKeys(contents);
     }
 
     return { name, contents };

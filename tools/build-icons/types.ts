@@ -4,12 +4,12 @@ export type SVGProps = Record<string, string | number>;
 
 export type IconNode = [tag: string, attrs: SVGProps][];
 
-export type IconNodeWithChildren = [tag: string, attrs: SVGProps, children: IconNode];
+export type IconNodeWithChildren = [tag: string, attrs: SVGProps, children: IconNodeWithChildren[]];
 
 export type TemplateFunction = (params: {
   componentName: string;
   iconName: string;
-  children: IconNode;
+  children: IconNodeWithChildren[];
   getSvg: () => Promise<string>;
   deprecated?: boolean;
   deprecationReason?: string;
