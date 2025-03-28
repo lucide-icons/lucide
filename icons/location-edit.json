@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sachinkr7368",
+    "Ryan12439"
+  ],
+  "tags": [
+    "location",
+    "waypoint",
+    "marker",
+    "drop",
+    "edit"
+  ],
+  "categories": [
+    "navigation",
+    "travel",
+    "account"
+  ]
+}
