@@ -12,4 +12,22 @@ describe('Using createLucideIcon', () => {
     expect(container.firstChild).toMatchSnapshot();
     expect(container.firstChild).toBeDefined();
   });
+
+  it('should create a component from an iconNode with iconName', () => {
+    const AirVent = createLucideIcon('air-vent', airVent);
+
+    const { container } = render(<AirVent />);
+
+    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).toBeDefined();
+  });
+
+  it('should include backwards compatible className', () => {
+    const Layout2 = createLucideIcon('layout-2', airVent);
+
+    const { container } = render(<Layout2 />);
+
+    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).toBeDefined();
+  });
 });
