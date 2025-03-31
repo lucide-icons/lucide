@@ -20,11 +20,13 @@
     "columns",
     "pillars",
     "classical",
-    "architecture"
+    "architecture",
+    "government",
+    "institution"
   ],
   "categories": [
-    "money",
-    "maps",
+    "finance",
+    "navigation",
     "buildings"
   ]
 }

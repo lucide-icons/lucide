@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "beach",
+    "sand",
+    "net",
+    "holiday",
+    "vacation",
+    "summer",
+    "soccer",
+    "football",
+    "futbol",
+    "kick",
+    "pitch",
+    "goal",
+    "score",
+    "bounce",
+    "leather",
+    "wool",
+    "yarn",
+    "knitting",
+    "sewing",
+    "thread",
+    "embroidery",
+    "textile"
+  ],
+  "categories": [
+    "sports",
+    "gaming",
+    "travel"
+  ]
+}
