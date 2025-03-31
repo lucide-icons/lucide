@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
 /**
@@ -10,4 +10,4 @@ import path from 'path';
  * @param {string} outputDirectory
  */
 export const appendFile = (content, fileName, outputDirectory) =>
-  fs.appendFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+  fs.appendFile(path.join(outputDirectory, fileName), content, 'utf-8');

@@ -76,5 +76,24 @@
     ],
     "source": "https://github.com/swisnl/nuxt-lucide-icons",
     "documentation": "https://github.com/swisnl/nuxt-lucide-icons/blob/main/README.md"
+  },
+    {
+    "name": "lucide-lustre",
+    "description": "A library providing https://lucide.dev icons to lustre",
+    "icon": "/framework-logos/lustre.webp",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/hexpm/v/lucide_lustre",
+        "href": "https://hex.pm/packages/lucide_lustre"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/hexpm/dw/lucide_lustre",
+        "href": "https://hex.pm/packages/lucide_lustre"
+      }
+    ],
+    "source": "https://github.com/dinkelspiel/lucide_lustre",
+    "documentation": "https://github.com/dinkelspiel/lucide_lustre/blob/master/README.md"
   }
 ]
