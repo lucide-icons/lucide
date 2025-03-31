@@ -54,7 +54,6 @@
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.5",
     "prettier": "^3.4.2",
-    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.8.2",
     "vitest": "^3.0.8"
   },

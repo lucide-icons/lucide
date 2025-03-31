@@ -1,6 +1,6 @@
-import packageDataList from "../../../data/packageData.json";
-import thirdPartyPackages from "../../../data/packageData.thirdParty.json";
-import fetchPackages from "../../../lib/fetchPackages";
+import packageDataList from '../../../data/packageData.json';
+import thirdPartyPackages from '../../../data/packageData.thirdParty.json';
+import fetchPackages from '../../../lib/fetchPackages';
 
 export default {
   async load() {
@@ -15,8 +15,7 @@ export default {
             ...pJson,
             ...packageData,
             documentation: `/guide/packages/${packageData.docsAlias ?? packageData.name}`,
-            source:
-              `https://github.com/lucide-icons/lucide/tree/main/packages/${packageData.packageDirname ?? packageData.name}`,
+            source: `https://github.com/lucide-icons/lucide/tree/main/packages/${packageData.packageDirname ?? packageData.name}`,
             icon: `/framework-logos/${packageData.icon}.svg`,
             iconDark: Boolean(packageData.iconDark)
               ? `/framework-logos/${packageData.iconDark}.svg`

@@ -73,6 +73,9 @@ importers:
       prettier:
         specifier: 3.2.4
         version: 3.2.4
+      prettier-plugin-astro:
+        specifier: ^0.14.1
+        version: 0.14.1
       semver:
         specifier: ^7.7.1
         version: 7.7.1
@@ -213,9 +216,6 @@ importers:
       prettier:
         specifier: ^3.4.2
         version: 3.5.3
-      prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
