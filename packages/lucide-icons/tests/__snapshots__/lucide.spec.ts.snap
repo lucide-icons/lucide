@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createIcons > should add custom attributes 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewbox="0 0 24 24"
+     fill="black"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     data-lucide="volume-2"
+     class="lucide lucide-volume-2 icon custom-class"
+>
+  <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z">
+  </path>
+  <path d="M16 9a5 5 0 0 1 0 6">
+  </path>
+  <path d="M19.364 18.364a9 9 0 0 0 0-12.728">
+  </path>
+</svg>
+`;
+
+exports[`createIcons > should read elements from DOM and replace icon with alias name 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     data-lucide="grid"
+     class="lucide lucide-grid"
+>
+  <rect width="18"
+        height="18"
+        x="3"
+        y="3"
+        rx="2"
+  >
+  </rect>
+  <path d="M3 9h18">
+  </path>
+  <path d="M3 15h18">
+  </path>
+  <path d="M9 3v18">
+  </path>
+  <path d="M15 3v18">
+  </path>
+</svg>
+`;
+
+exports[`createIcons > should read elements from DOM and replace it with icons 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     data-lucide="volume-2"
+     class="lucide lucide-volume-2"
+>
+  <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z">
+  </path>
+  <path d="M16 9a5 5 0 0 1 0 6">
+  </path>
+  <path d="M19.364 18.364a9 9 0 0 0 0-12.728">
+  </path>
+</svg>
+`;
