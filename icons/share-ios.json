@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "oosawy"
+  ],
+  "tags": [
+    "network",
+    "connections"
+  ],
+  "categories": [
+    "account",
+    "social"
+  ]
+}
