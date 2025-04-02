@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "oosawy"
+  ],
+  "tags": [
+    "notifications"
+  ],
+  "categories": [
+    "success",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
+  ]
+}
