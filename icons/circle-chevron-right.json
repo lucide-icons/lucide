@@ -15,6 +15,11 @@
     "navigation"
   ],
   "aliases": [
-    "chevron-right-circle"
+    {
+      "name": "chevron-right-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

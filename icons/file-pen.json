@@ -11,6 +11,11 @@
     "files"
   ],
   "aliases": [
-    "file-edit"
+    {
+      "name": "file-edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
