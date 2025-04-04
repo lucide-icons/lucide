@@ -31,7 +31,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = (props: LucideProps) => (
-  <Icon {...props} name="${componentName}" iconNode={iconNode}${
+  <Icon {...props} name="${iconName}" iconNode={iconNode}${
     iconNameAliases != null ? ` aliasNames={${JSON.stringify(iconNameAliases)}}` : ''
   } />
 )

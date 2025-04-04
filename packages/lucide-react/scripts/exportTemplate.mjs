@@ -30,7 +30,7 @@ export const __iconNode: IconNode = ${JSON.stringify(children)}
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}', __iconNode${
+const ${componentName} = createLucideIcon('${iconName}', __iconNode${
   iconNameAliases != null ? `, ${JSON.stringify(iconNameAliases)}` : ''
 });
 
