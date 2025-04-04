@@ -58,7 +58,7 @@ exports[`Using createLucideIcon > should create a component from an iconNode wit
 
 exports[`Using createLucideIcon > should include backwards compatible className 1`] = `
 <svg
-  class="lucide lucide-layout2 lucide-layout-2"
+  class="lucide lucide-layout-2 lucide-layout2"
   fill="none"
   height="24"
   stroke="currentColor"

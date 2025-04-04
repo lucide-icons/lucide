@@ -1,5 +1,5 @@
 import { createElement, forwardRef } from 'react';
-import { mergeClasses, createLucideClassNames, toPascalCase } from '@lucide/shared';
+import { mergeClasses, createLucideClassNames, toPascalCase, toKebabCase } from '@lucide/shared';
 import { IconNode, LucideProps } from './types';
 import Icon from './Icon';
 
@@ -21,7 +21,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode, aliasNames: stri
       iconNode,
       className: mergeClasses(
         `lucide-${toKebabCase(toPascalCase(iconName))}`,
-        lucideClassNames
+        lucideClassNames,
         className,
       ),
       ...props,
