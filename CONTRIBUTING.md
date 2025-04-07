@@ -77,7 +77,7 @@ To distribute different packages we use [PNPM workspaces](https://pnpm.io/worksp
 The configured directory for workspaces is the [packages](https://github.com/lucide-icons/lucide/tree/main/packages) directory, located in the root directory. There you will find all the current packages from lucide.
 There are more workspaces defined, see [`pnpm-workspace.yaml`](https://github.com/lucide-icons/lucide/blob/main/pnpm-workspace.yaml).
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
 ### Generated Code
 
@@ -165,13 +165,13 @@ Detailed documentation about: installation, guides, packages, design guides etc.
 
 All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
 
-### packages
+### Packages
 
 Includes all the (npm) packages of lucide.
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
-### scripts
+### Scripts
 
 Includes usefully scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
 
