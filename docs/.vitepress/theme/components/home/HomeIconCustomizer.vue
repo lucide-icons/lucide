@@ -8,7 +8,7 @@ import ColorPicker from '../base/ColorPicker.vue'
 import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 import Switch from '../base/Switch.vue'
-
+import {nextTick} from 'vue'
 
 const iconContainer = ref<HTMLElement | null>()
 const color = ref('currentColor')
@@ -48,10 +48,16 @@ function resetStyle () {
   color.value = 'currentColor'
   strokeWidth.value = 2
   size.value = 24
+  absoluteStrokeWidth.value = false;
+  nextTick(() => {
+    
+  });
+
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
   iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
+  
 })
 </script>
 
@@ -121,6 +127,9 @@ watch(absoluteStrokeWidth, (enabled) => {
           >
             <template #display>
               <Switch
+                :key="absoluteStrokeWidth"
+                class="switch"
+                :class="{ enabled: absoluteStrokeWidth }"
                 id="absolute-stroke-width"
                 name="absolute-stroke-width"
                 v-model="absoluteStrokeWidth"
