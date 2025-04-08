@@ -1,8 +1,11 @@
 {
     "$schema": "../icon.schema.json",
     "contributors": [
-        "julczka",
-        "timmy471"
+        "timmy471",
+        "colebemis",
+        "csandman",
+        "karsa-mistmere",
+        "ericfennis"
     ],
     "tags": [
         "code",
