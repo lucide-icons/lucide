@@ -8,7 +8,9 @@
         "code",
         "version control",
         "commits",
-        "diff"
+        "diff",
+        "error",
+        "conflict"
     ],
     "categories": [
         "development"
