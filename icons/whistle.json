@@ -1,0 +1,28 @@
+{
+    "$schema": "../icon.schema.json",
+    "contributors": [
+        "briz123",
+        "UsamaKhan",
+        "ajokt123",
+        "timmy471",
+        "karsa-mistmere"
+    ],
+    "tags": [
+        "alert",
+        "signal",
+        "sound",
+        "blow",
+        "noise",
+        "referee",
+        "gym",
+        "game",
+        "training",
+        "sports",
+        "traffic cops",
+        "lifeguard"
+    ],
+    "categories": [
+        "sports",
+        "notifications"
+    ]
+}
