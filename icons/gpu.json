@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "xandykati98",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "processor",
+    "cores",
+    "technology",
+    "computer",
+    "chip",
+    "circuit",
+    "specs",
+    "gpu"
+  ],
+  "categories": [
+    "devices"
+  ]
+}  
