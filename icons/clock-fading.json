@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "gubser",
-    "ericfennis"
+    "colebemis",
+    "jguddas"
   ],
   "tags": [
-    "funnel",
-    "hopper"
+    "time",
+    "watch",
+    "alarm"
   ],
   "categories": [
-    "layout"
+    "time"
   ]
 }
