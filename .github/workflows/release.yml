@@ -52,6 +52,7 @@ jobs:
             'lucide-preact',
             'lucide-solid',
             'lucide-svelte',
+            '@lucide/astro',
             '@lucide/svelte',
           ]
     steps:
@@ -78,7 +79,7 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --no-git-checks --ignore-scripts
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts
 
   lucide-static:
     if: github.repository == 'lucide-icons/lucide'
