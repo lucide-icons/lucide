@@ -811,6 +811,9 @@ importers:
       '@lucide/helpers':
         specifier: workspace:*
         version: link:../build-helpers
+      '@types/node':
+        specifier: ^12.11.1
+        version: 12.20.55
 
   tools/outline-svg:
     dependencies:

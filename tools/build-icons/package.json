@@ -17,7 +17,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@lucide/helpers": "workspace:*"
+    "@lucide/helpers": "workspace:*",
+    "@types/node": "^12.11.1"
   },
   "dependencies": {
     "minimist": "^1.2.7",

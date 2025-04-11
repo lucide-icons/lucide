@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "strict": false,
+    "strict": true,
     "declaration": true,
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
@@ -8,7 +8,6 @@
     "module": "ESNext",
     "target": "ESNext",
     "esModuleInterop": true,
-    "allowJs": true,
     "lib": ["esnext"],
     "resolveJsonModule": true,
     "sourceMap": true,
