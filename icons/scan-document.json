@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "maksimetny"
+  ],
+  "tags": [
+    "recognition",
+    "read",
+    "translate",
+    "copy",
+    "lines"
+  ],
+  "categories": [
+    "text",
+    "devices"
+  ]
+}
