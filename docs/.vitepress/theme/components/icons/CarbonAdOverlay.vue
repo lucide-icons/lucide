@@ -2,7 +2,7 @@
 import { useData } from 'vitepress';
 import { useSessionStorage } from '@vueuse/core';
 import IconButton from '../base/IconButton.vue';
-import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue'
+// import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue'
 import { x } from '../../../data/iconNodes'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import { onMounted, ref } from 'vue';
