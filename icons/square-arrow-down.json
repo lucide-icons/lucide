@@ -19,6 +19,11 @@
     "gaming"
   ],
   "aliases": [
-    "arrow-down-square"
+    {
+      "name": "arrow-down-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -16,6 +16,11 @@
     "design"
   ],
   "aliases": [
-    "move-3-d"
+    {
+      "name": "move-3-d",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
