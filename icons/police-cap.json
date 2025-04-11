@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "uibalint"
+  ],
+  "tags": [
+    "police",
+    "security",
+    "patrol",
+    "law",
+    "order",
+    "badge",
+    "officer",
+    "authority",
+    "enforcement",
+    "protection"
+  ],
+  "categories": [
+    "people"
+  ]
+}
