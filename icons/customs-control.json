@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta",
+    "jguddas"
+  ],
+  "tags": [
+    "customs",
+    "inspection",
+    "security",
+    "officer",
+    "luggage",
+    "baggage",
+    "border",
+    "travel"
+  ],
+  "categories": [
+    "travel"
+  ]
+}
