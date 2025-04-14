@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "chart",
+    "graph",
+    "diagram",
+    "levels",
+    "statistics",
+    "data",
+    "analytics",
+    "visualization",
+    "distribution",
+    "frequency",
+    "metrics",
+    "report",
+    "insights",
+    "trends",
+    "analysis",
+    "plot",
+    "curves",
+    "line chart",
+    "contrast"
+  ],
+  "categories": [
+    "design",
+    "charts",
+    "shapes"
+  ]
+}
