@@ -73,9 +73,24 @@ const changeFiles3pxStrokeImageTags = getImageTagsByFiles(
   () => `${BASE_URL}/stroke-width/3`,
 ).join('');
 
-const changeFilesLowDPIImageTags = getImageTagsByFiles(
+const changeFilesLowDPIImageTags18 = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/dpi/18`,
+).join(' ');
+
+const changeFilesLowDPIImageTags24 = getImageTagsByFiles(
   changedFiles,
   () => `${BASE_URL}/dpi/24`,
+).join(' ');
+
+const changeFilesLowDPIImageTags32 = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/dpi/32`,
+).join(' ');
+
+const changeFilesLowDPIImageTags48 = getImageTagsByFiles(
+  changedFiles,
+  () => `${BASE_URL}/dpi/48`,
 ).join(' ');
 
 const changeFilesXRayImageTags = getImageTagsByFiles(
@@ -126,8 +141,20 @@ ${changeFiles2pxStrokeImageTags}<br/>
 ${changeFiles3pxStrokeImageTags}<br/>
 </details>
 <details>
-<summary>DPI Preview (24px)</summary>
-${changeFilesLowDPIImageTags}<br/>
+<summary>DPI Preview 18px (shadcn/ui)</summary>
+${changeFilesLowDPIImageTags18}<br/>
+</details>
+<details>
+<summary>DPI Preview 24px (Default)</summary>
+${changeFilesLowDPIImageTags24}<br/>
+</details>
+<details>
+<summary>DPI Preview 32px (schadcn/ui + Retina)</summary>
+${changeFilesLowDPIImageTags32}<br/>
+</details>
+<details>
+<summary>DPI Preview 48px (Default + Retina)</summary>
+${changeFilesLowDPIImageTags48}<br/>
 </details>
 <details>
 <summary>Icon X-rays</summary>
