@@ -39,18 +39,19 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:bundle": "rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-replace": "^6.0.1",
     "@testing-library/jest-dom": "^6.1.6",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.9.2",
+    "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^4.9.3",
-    "vite": "5.0.13",
+    "vite": "5.4.15",
     "vitest": "^1.1.1"
   }
 }

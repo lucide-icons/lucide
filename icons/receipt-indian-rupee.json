@@ -9,12 +9,12 @@
     "slip",
     "check",
     "counterfoil",
+    "currency",
     "inr",
     "₹"
   ],
   "categories": [
-    "money",
-    "currency",
+    "finance",
     "travel"
   ]
 }

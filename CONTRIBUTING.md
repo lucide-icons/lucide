@@ -72,12 +72,12 @@ pnpm install # Install dependencies, including the workspace packages
 
 ### Packages -> PNPM Workspaces
 
-To distribute different packages we use PNPM workspaces. Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/lang/enhttps://lucide.dev/docs/workspaces).
+To distribute different packages we use [PNPM workspaces](https://pnpm.io/workspaces). Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces).
 
 The configured directory for workspaces is the [packages](https://github.com/lucide-icons/lucide/tree/main/packages) directory, located in the root directory. There you will find all the current packages from lucide.
 There are more workspaces defined, see [`pnpm-workspace.yaml`](https://github.com/lucide-icons/lucide/blob/main/pnpm-workspace.yaml).
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
 ### Generated Code
 
@@ -127,7 +127,7 @@ When adding new features to for example the icon component for a framework. It i
 
 ### Local Testing
 
-To test changes in a local project, you can use `yarn link`, `npm link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
+To test changes in a local project, you can use `yarn link`, `npm link`, `bun link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
 
 ```sh
 # in packages/lucide-react
@@ -165,13 +165,13 @@ Detailed documentation about: installation, guides, packages, design guides etc.
 
 All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
 
-### packages
+### Packages
 
 Includes all the (npm) packages of lucide.
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
-### scripts
+### Scripts
 
 Includes usefully scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
 
@@ -190,4 +190,4 @@ If you need any help or have problems with you contribution. Please don't hesita
 Thank you to all the people who already contributed to Lucide!
 
 <a href="https://github.com/lucide-icons/lucide/graphs/contributors">
-<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" /></a>
