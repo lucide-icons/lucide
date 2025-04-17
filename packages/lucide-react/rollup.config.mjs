@@ -1,6 +1,6 @@
 import plugins from '@lucide/rollup-plugins';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
 
@@ -8,42 +8,40 @@ const aliasesEntries = await getAliasesEntryNames();
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
-const outputDir = `dist`;
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
     format: 'umd',
     inputs,
-    outputDir,
+    outputDir: 'dist/umd',
     minify: true,
   },
   {
     format: 'umd',
     inputs,
-    outputDir,
+    outputDir: 'dist/umd',
   },
   {
     format: 'cjs',
     inputs,
-    outputDir,
+    outputDir: 'dist/cjs',
   },
   {
     format: 'esm',
-    inputs: [...inputs, ...aliasesEntries],
-    outputDir,
+    inputs: [...inputs, , 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    outputDir: 'dist/esm',
     preserveModules: true,
   },
   {
     format: 'esm',
-    inputs: ['src/dynamic.ts', 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts'],
-    outputDir,
-    preserveModules: true,
+    inputs: ['src/dynamic.ts'],
+    outputFile: 'dynamic.mjs',
     external: [/src/],
     paths: (id) => {
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `${modulePath}.js`;
+        return `dist/esm/${modulePath}.js`;
       }
     },
   },
@@ -77,12 +75,10 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-                dir: `${outputDir}/${format}`,
+                dir: outputDir,
               }
             : {
-                file:
-                  outputFile ??
-                  `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+                file: outputFile ?? `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
               }),
           paths,
           entryFileNames,
@@ -104,31 +100,17 @@ export default [
     input: 'src/dynamicIconImports.ts',
     output: [
       {
-        file: `dist/dynamicIconImports.d.ts`,
-        format: 'es',
-      },
-    ],
-    plugins: [
-      dts({
-        exclude: ['./src/icons'],
-      }),
-    ],
-  },
-  {
-    input: 'src/dynamic.ts',
-    output: [
-      {
-        file: `dist/dynamic.d.ts`,
+        file: `dynamicIconImports.d.ts`,
         format: 'es',
       },
     ],
     plugins: [dts()],
   },
   {
-    input: 'src/DynamicIcon.ts',
+    input: 'src/dynamic.ts',
     output: [
       {
-        file: `dist/DynamicIcon.d.ts`,
+        file: `dynamic.d.ts`,
         format: 'es',
       },
     ],

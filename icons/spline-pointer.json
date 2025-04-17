@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kaleidosium",
+    "mittalyashu",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "path",
+    "tool",
+    "curve",
+    "node",
+    "click",
+    "pointer",
+    "target",
+    "vector"
+  ],
+  "categories": [
+    "arrows",
+    "cursors",
+    "design",
+    "tools"
+  ]
+}
