@@ -1,8 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 
-export default ({ componentName, iconName, children, getSvg, deprecated, deprecationReason }) => {
-  const svgContents = getSvg();
+export default async ({
+  componentName,
+  iconName,
+  children,
+  getSvg,
+  deprecated,
+  deprecationReason,
+}) => {
+  const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
 
   return `
@@ -19,7 +26,7 @@ import createLucideIcon from '../createLucideIcon';
  * @returns {FunctionalComponent} Vue component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}Icon', ${JSON.stringify(children)});
+const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;
