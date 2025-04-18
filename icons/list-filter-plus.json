@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "abdeniz"
+  ],
+  "tags": [
+    "filter",
+    "plus",
+    "options",
+    "add"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}
