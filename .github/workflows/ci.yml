@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide' && ${{ !startsWith(github.event.head_commit.message, 'fix(icons)') }}
+    if: github.repository == 'lucide-icons/lucide' && ${{ !startsWith('fix(icons)', github.event.head_commit.message) }}
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
@@ -21,15 +21,6 @@ jobs:
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
-
-      - name: Log head message
-        run: echo "${{ github.event.head_commit.message }}"
-
-      - name: Log push head message
-        run: echo "${{ github.event.push.head_commit.message }}"
-
-      - name: Log github event
-        run: echo "${{ toJson(github.event) }}"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
