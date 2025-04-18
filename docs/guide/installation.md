@@ -184,7 +184,10 @@ npm install lucide-preact
 bun add lucide-preact
 ```
 
+
 :::
+
+For more details, see the [documentation](packages/lucide-preact.md).
 
 ## Astro
 
