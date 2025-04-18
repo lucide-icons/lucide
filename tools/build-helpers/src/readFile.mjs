@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
 /**
@@ -8,4 +8,4 @@ import path from 'path';
  * @param {string} path
  * @returns {string} The contents of a file
  */
-export const readFile = (path) => fs.readFileSync(path.resolve(__dirname, '../', path), 'utf-8');
+export const readFile = (path) => fs.readFile(path.resolve(__dirname, '../', path), 'utf-8');

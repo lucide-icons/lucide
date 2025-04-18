@@ -1,5 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const packageName = 'LucideVue';
 const outputFileName = 'lucide-vue';

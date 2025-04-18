@@ -11,12 +11,12 @@
     "slip",
     "check",
     "counterfoil",
+    "currency",
     "jpy",
     "¥"
   ],
   "categories": [
-    "money",
-    "currency",
+    "finance",
     "travel"
   ]
 }

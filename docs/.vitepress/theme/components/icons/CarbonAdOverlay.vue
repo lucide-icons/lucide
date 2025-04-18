@@ -5,22 +5,32 @@ import IconButton from '../base/IconButton.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue'
 import { x } from '../../../data/iconNodes'
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import { onMounted, ref } from 'vue';
 
 const { theme } = useData()
-const showAd = useSessionStorage('show-carbon-ads',true)
+const showAd = useSessionStorage('show-carbon-ads', true)
+const carbonLoaded = ref(true)
 
 defineProps<{
   drawerOpen: boolean
 }>()
 
 const CloseIcon = createLucideIcon('Close', x)
+
+onMounted(() => {
+  setTimeout(() => {
+    if (window?._carbonads == null) {
+      carbonLoaded.value = false
+    }
+  }, 5000)
+})
 </script>
 
 <template>
   <div
     :class="{
       'drawer-open': drawerOpen,
-      'hide-ad': !showAd
+      'hide-ad': !(showAd && carbonLoaded)
     }"
     class="floating-ad"
     v-if="theme.carbonAds"

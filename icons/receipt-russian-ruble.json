@@ -9,12 +9,12 @@
     "slip",
     "check",
     "counterfoil",
+    "currency",
     "rub",
     "₽"
   ],
   "categories": [
-    "money",
-    "currency",
+    "finance",
     "travel"
   ]
 }

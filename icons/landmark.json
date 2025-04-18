@@ -9,11 +9,13 @@
     "building",
     "capitol",
     "finance",
-    "money"
+    "money",
+    "government",
+    "institution"
   ],
   "categories": [
-    "money",
-    "maps",
+    "finance",
+    "navigation",
     "buildings"
   ]
 }

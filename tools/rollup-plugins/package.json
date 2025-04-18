@@ -11,7 +11,7 @@
     "@atomico/rollup-plugin-sizes": "^1.1.4",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^6.0.1",
-    "esbuild": "^0.19.11",
+    "esbuild": "^0.25.0",
     "rollup": "^4.22.4",
     "rollup-plugin-esbuild": "^6.1.0",
     "rollup-plugin-license": "^3.2.0",

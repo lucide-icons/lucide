@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alirashidy",
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "file",
+    "paper",
+    "tear",
+    "cut",
+    "delete",
+    "destroy",
+    "remove",
+    "erase",
+    "document,",
+    "destruction",
+    "secure ",
+    "security",
+    "confidential",
+    "data",
+    "trash",
+    "dispose",
+    "disposal",
+    "information",
+    "waste",
+    "permanent"
+  ],
+  "categories": [
+      "mail",
+    "files"
+  ]
+}

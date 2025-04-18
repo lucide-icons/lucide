@@ -15,7 +15,7 @@
     "args",
     "input",
     "call",
-    "maths",
+    "math",
     "formula",
     "function",
     "(",
@@ -24,6 +24,6 @@
   "categories": [
     "development",
     "files",
-    "maths"
+    "math"
   ]
 }

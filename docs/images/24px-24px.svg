@@ -48,10 +48,12 @@
     <path d="M340 120v240" stroke="#D8D8D9" stroke-width=".5"/>
     <path d="M120 350h240" stroke="#D8D8D9" stroke-width=".5"/>
     <path d="M350 120v240" stroke="#D8D8D9" stroke-width=".5"/>
-  </g>
-  <path d="m240 140-100 50 100 50 100-50-100-50Z" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="m140 290 100 50 100-50" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="m140 240 100 50 100-50" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="embed-lucide-layers" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</g>
   <g opacity=".5" stroke="#fff" stroke-width="3">
     <path d="M120 92v16"/>
     <path d="M360 92v16"/>

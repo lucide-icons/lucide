@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 
-export default ({ componentName, iconName, children, getSvg, deprecated, deprecationReason }) => {
-  let svgContents = getSvg();
+export default async ({ componentName, iconName, getSvg, deprecated, deprecationReason }) => {
+  let svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
 
   svgContents = svgContents.replace(

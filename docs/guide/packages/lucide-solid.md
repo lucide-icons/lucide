@@ -18,6 +18,10 @@ yarn add lucide-solid
 npm install lucide-solid
 ```
 
+```sh [bun]
+bun add lucide-solid
+```
+
 :::
 
 ## How to use

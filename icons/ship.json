@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "boat",
@@ -19,7 +20,7 @@
   ],
   "categories": [
     "transportation",
-    "travel",
-    "maps"
+    "navigation",
+    "travel"
   ]
 }

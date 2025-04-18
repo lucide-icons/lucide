@@ -3,7 +3,7 @@ import { stringify } from 'svgson';
 import { format } from 'prettier';
 import { appendFile } from '@lucide/helpers';
 
-export default function generateSprite(svgs, packageDir, license) {
+export default async function generateSprite(svgs, packageDir, license) {
   const symbols = svgs.map(({ name, parsedSvg }) => ({
     name: 'symbol',
     type: 'element',
@@ -34,6 +34,6 @@ export default function generateSprite(svgs, packageDir, license) {
 
   const xmlMeta = `<?xml version="1.0" encoding="utf-8"?>\n<!-- ${license} -->\n`;
 
-  appendFile(xmlMeta, `sprite.svg`, packageDir);
-  appendFile(prettifiedSprite, `sprite.svg`, packageDir);
+  await appendFile(xmlMeta, `sprite.svg`, packageDir);
+  await appendFile(prettifiedSprite, `sprite.svg`, packageDir);
 }

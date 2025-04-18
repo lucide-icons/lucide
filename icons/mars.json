@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "gender",
+    "sex",
+    "male",
+    "masculine",
+    "man",
+    "boy"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

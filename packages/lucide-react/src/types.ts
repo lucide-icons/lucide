@@ -1,6 +1,21 @@
-import { ReactSVG, SVGProps, ForwardRefExoticComponent, RefAttributes } from 'react';
+import type { SVGProps, ForwardRefExoticComponent, RefAttributes } from 'react';
 
-export type IconNode = [elementName: keyof ReactSVG, attrs: Record<string, string>][];
+/**
+ * A reduced version of `SVGElementType` from @types/react. This type was added
+ * with the release of React 19, and is included here in order to support usage
+ * with older versions.
+ */
+type SVGElementType =
+  | 'circle'
+  | 'ellipse'
+  | 'g'
+  | 'line'
+  | 'path'
+  | 'polygon'
+  | 'polyline'
+  | 'rect';
+
+export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>][];
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
 type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;

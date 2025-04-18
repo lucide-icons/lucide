@@ -36,10 +36,6 @@
     "title": "Connectivity"
   },
   {
-    "name": "currency",
-    "title": "Currency"
-  },
-  {
     "name": "cursors",
     "title": "Cursors"
   },
@@ -64,12 +60,12 @@
     "title": "File icons"
   },
   {
-    "name": "food-beverage",
-    "title": "Food & beverage"
+    "name": "finance",
+    "title": "Finance"
   },
   {
-    "name": "furniture",
-    "title": "Furniture"
+    "name": "food-beverage",
+    "title": "Food & beverage"
   },
   {
     "name": "gaming",
@@ -88,20 +84,12 @@
     "title": "Mail"
   },
   {
-    "name": "maps",
-    "title": "Maps"
-  },
-  {
-    "name": "maths",
-    "title": "Maths"
+    "name": "math",
+    "title": "Mathematics"
   },
   {
     "name": "medical",
     "title": "Medical"
-  },
-  {
-    "name": "money",
-    "title": "Money"
   },
   {
     "name": "multimedia",
@@ -117,7 +105,7 @@
   },
   {
     "name": "notifications",
-    "title": "Notifications"
+    "title": "Notification"
   },
   {
     "name": "people",

@@ -14,12 +14,10 @@
     "price tag"
   ],
   "categories": [
-    "account",
     "social",
-    "money",
+    "finance",
     "shopping",
-    "maths",
-    "shapes"
+    "math"
   ],
   "aliases": [
     "percent-square"
