@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "anthony-mariotti"
+  ],
+  "tags": [
+    "person",
+    "lock",
+    "locked",
+    "account",
+    "secure"
+  ],
+  "categories": [
+    "account",
+    "security"
+  ]
+}
