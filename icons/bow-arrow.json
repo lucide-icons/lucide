@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "danielbayley",
     "jamiemlaw"
   ],
   "tags": [
-    "lighting",
-    "household",
-    "home",
-    "furniture"
+    "archer",
+    "archery",
+    "game",
+    "war",
+    "weapon"
   ],
   "categories": [
-    "home"
+    "gaming",
+    "tools"
   ]
 }
