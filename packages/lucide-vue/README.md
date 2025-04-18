@@ -47,6 +47,10 @@ npm install lucide-vue
 yarn add lucide-vue
 ```
 
+```sh
+bun add lucide-vue
+```
+
 ## Documentation
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-vue)

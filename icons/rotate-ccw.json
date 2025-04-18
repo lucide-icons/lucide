@@ -17,7 +17,12 @@
     "rerun",
     "refresh",
     "backup",
-    "undo"
+    "undo",
+    "replay",
+    "redo",
+    "retry",
+    "rewind",
+    "reverse"
   ],
   "categories": [
     "arrows",
