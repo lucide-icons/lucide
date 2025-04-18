@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "pmrcunha"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "brands",
+    "development",
+    "finance"
+  ]
+}
