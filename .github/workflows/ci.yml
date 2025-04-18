@@ -22,6 +22,15 @@ jobs:
           cache: 'pnpm'
           node-version-file: 'package.json'
 
+      - name: Log head message
+        run: echo "${{ github.event.head_commit.message }}"
+
+      - name: Log push head message
+        run: echo "${{ github.event.push.head_commit.message }}"
+
+      - name: Log github event
+        run: echo "${{ toJson(github.event) }}"
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
