@@ -1,5 +1,9 @@
 <!-- Thank you for contributing! -->
+<!--
+📝 PR Title Guidelines:
 
+Please use the format:
+<type>(<scope>): <short description> -->
 <!-- Insert `closes #issueNumber` here if merging this PR will resolve an existing issue -->
 
 ## What is the purpose of this pull request?
