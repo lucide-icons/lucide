@@ -73,9 +73,9 @@ const changeFiles3pxStrokeImageTags = getImageTagsByFiles(
   () => `${BASE_URL}/stroke-width/3`,
 ).join('');
 
-const changeFilesLowDPIImageTags18 = getImageTagsByFiles(
+const changeFilesLowDPIImageTags16 = getImageTagsByFiles(
   changedFiles,
-  () => `${BASE_URL}/dpi/18`,
+  () => `${BASE_URL}/dpi/16`,
 ).join(' ');
 
 const changeFilesLowDPIImageTags24 = getImageTagsByFiles(
@@ -141,8 +141,8 @@ ${changeFiles2pxStrokeImageTags}<br/>
 ${changeFiles3pxStrokeImageTags}<br/>
 </details>
 <details>
-<summary>DPI Preview 18px (shadcn/ui)</summary>
-${changeFilesLowDPIImageTags18}<br/>
+<summary>DPI Preview 16px (shadcn/ui)</summary>
+${changeFilesLowDPIImageTags16}<br/>
 </details>
 <details>
 <summary>DPI Preview 24px (Default)</summary>
