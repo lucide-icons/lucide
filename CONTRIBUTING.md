@@ -19,7 +19,7 @@ Guidelines for pull requests:
 - __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `main` branch.
 - __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
 
-### Pull Requests Including Icons
+### Icon Pull Requests
 
 #### Guidelines
 
@@ -27,21 +27,25 @@ Please make sure you follow the icon guidelines, that should be followed to keep
 
 Read it here: [ICON_GUIDELINES](https://lucide.dev/docs/icon-design-guide).
 
-### Editor guides
+#### Lucide Studio
+
+For formatting and adjusting SVG icons, @jguddas made a great tool called [Lucide Studio](https://studio.lucide.dev/). It is a web-based SVG editor that allows you to edit and adjust icons in the Lucide style. You can use it to create new icons or modify existing ones.
+
+#### Editor guides
 
 Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-#### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
+##### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
 
 You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
 
-#### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
+##### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
 
-#### [Figma Guide](https://lucide.dev/docs/figma-guide)
+##### [Figma Guide](https://lucide.dev/docs/figma-guide)
 
-#### [Affinity Designer Guide](https://lucide.dev/guide/design/affinity-designer-guide)
+##### [Affinity Designer Guide](https://lucide.dev/guide/design/affinity-designer-guide)
 
-### Submitting Multiple Icons
+#### Submitting Multiple Icons
 
 If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
 So don't submit multiple icons in one PR that have noting to do with each other.
@@ -77,7 +81,7 @@ To distribute different packages we use [PNPM workspaces](https://pnpm.io/worksp
 The configured directory for workspaces is the [packages](https://github.com/lucide-icons/lucide/tree/main/packages) directory, located in the root directory. There you will find all the current packages from lucide.
 There are more workspaces defined, see [`pnpm-workspace.yaml`](https://github.com/lucide-icons/lucide/blob/main/pnpm-workspace.yaml).
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
 ### Generated Code
 
@@ -165,13 +169,13 @@ Detailed documentation about: installation, guides, packages, design guides etc.
 
 All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
 
-### packages
+### Packages
 
 Includes all the (npm) packages of lucide.
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and used pub for publishing.
+> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
-### scripts
+### Scripts
 
 Includes usefully scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
 
@@ -190,4 +194,4 @@ If you need any help or have problems with you contribution. Please don't hesita
 Thank you to all the people who already contributed to Lucide!
 
 <a href="https://github.com/lucide-icons/lucide/graphs/contributors">
-<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" /></a>
