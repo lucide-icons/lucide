@@ -29,16 +29,17 @@ defineExpose({
 
 <template>
   <div class="input-wrapper">
-    <slot name="icon" class="icon" />
+    <slot name="startIcon" class="icon" />
     <input
       :type="type"
       class="input"
-      :class="{'has-icon': $slots.icon}"
+      :class="{'has-icon': $slots.startIcon }"
       ref="input"
       :value="modelValue"
       v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"
     />
+    <slot name="endIcon" />
   </div>
 </template>
 
@@ -55,6 +56,7 @@ defineExpose({
   height: 40px;
   background-color: var(--vp-c-bg-alt);
   font-size: 14px;
+  transition: border-color .2s ease-in-out;
 }
 
 .input:hover, .input:focus {
@@ -70,7 +72,7 @@ defineExpose({
 </style>
 
 <style>
-.input-wrapper svg {
+.input-wrapper > svg {
   position: absolute;
   left: 16px;
   top: 12px;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch, watchEffect } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import IconGrid from './IconGrid.vue';
@@ -9,8 +9,11 @@ import useSearchInput from '../../composables/useSearchInput';
 import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
+import useFetchReleaseInfo from '../../composables/useFetchReleaseInfo';
 import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
+import VersionSelect from './VersionSelect.vue';
+import { sort, satisfies } from 'semver';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -21,9 +24,11 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
+const selectedVersion = ref('Latest version');
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
+const { execute: fetchReleaseInfo, data: releaseInfo } = useFetchReleaseInfo();
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl)
@@ -33,20 +38,46 @@ const columnSize = computed(() => {
 });
 
 const mappedIcons = computed(() => {
-  if (tags.value == null) {
-    return props.icons;
+  let icons = props.icons;
+
+
+  if (tags.value != null && categories.value != null) {
+    icons = props.icons.map((icon) => {
+      const iconTags = tags.value[icon.name];
+      const iconCategories = categories.value?.[icon.name] ?? [];
+
+      return {
+        ...icon,
+        tags: iconTags,
+        categories: iconCategories,
+      };
+    });
   }
 
-  return props.icons.map((icon) => {
-    const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+  if (selectedVersion.value === 'Latest version' || releaseInfo.value == null) {
+    console.log('no release info');
 
-    return {
-      ...icon,
-      tags: iconTags,
-      categories: iconCategories,
-    };
+    return icons;
+  }
+
+  return icons.filter((icon) => {
+    return satisfies(
+      releaseInfo.value[icon.name], `<=${selectedVersion.value}`
+    );
   });
+});
+
+const versions = computed(() => {
+  if (releaseInfo.value == null) {
+    return [];
+  }
+  const allVersions = Array.from<string>(
+    new Set(Object.values<string>(releaseInfo.value)).values()
+  )
+
+  return sort(allVersions, {
+    loose: true,
+  }).reverse();
 });
 
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
@@ -88,6 +119,12 @@ function onFocusSearchInput() {
   }
 }
 
+function onFocusVersionSelect() {
+  if (releaseInfo.value == null) {
+    fetchReleaseInfo();
+  }
+}
+
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
@@ -107,11 +144,16 @@ function handleCloseDrawer() {
   <div ref="overviewEl" class="overview-container">
     <StickyBar>
       <InputSearch
-        :placeholder="`Search ${icons.length} icons ...`"
+        :placeholder="`Search ${mappedIcons.length} icons ...`"
         v-model="searchQuery"
         ref="searchInput"
         class="input-wrapper"
         @focus="onFocusSearchInput"
+      />
+      <VersionSelect
+        v-model="selectedVersion"
+        :versions="versions"
+        @focus="onFocusVersionSelect"
       />
     </StickyBar>
     <NoResults
@@ -121,7 +163,6 @@ function handleCloseDrawer() {
     />
     <IconGrid
       v-else-if="list.length === 0"
-      :key="index"
       overlayMode
       :icons="[...searchResults].splice(0, DEFAULT_GRID_ITEMS)"
       :activeIcon="activeIconName"
