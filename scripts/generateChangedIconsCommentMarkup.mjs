@@ -141,20 +141,15 @@ ${changeFiles2pxStrokeImageTags}<br/>
 ${changeFiles3pxStrokeImageTags}<br/>
 </details>
 <details>
-<summary>DPI Preview 16px (shadcn/ui)</summary>
-${changeFilesLowDPIImageTags16}<br/>
-</details>
-<details>
-<summary>DPI Preview 24px (Default)</summary>
-${changeFilesLowDPIImageTags24}<br/>
-</details>
-<details>
-<summary>DPI Preview 32px (schadcn/ui + Retina)</summary>
-${changeFilesLowDPIImageTags32}<br/>
-</details>
-<details>
-<summary>DPI Preview 48px (Default + Retina)</summary>
-${changeFilesLowDPIImageTags48}<br/>
+<summary>DPI Preview</summary>
+<h4>16px (shadcn/ui)</h4>
+${changeFilesLowDPIImageTags16}
+<h4>24px (default)</h4>
+${changeFilesLowDPIImageTags24}
+<h4>32px (shadcn/ui + retina)</h4>
+${changeFilesLowDPIImageTags32}
+<h4>48px (default + retina)</h4>
+${changeFilesLowDPIImageTags48}
 </details>
 <details>
 <summary>Icon X-rays</summary>
