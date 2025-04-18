@@ -1,20 +1,26 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Ayberkyvs"
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
-    "unlike",
-    "unfavorite",
-    "remove",
-    "damage",
-    "ui & ux"
+    "like",
+    "love",
+    "emotion",
+    "suit",
+    "playing",
+    "cards"
   ],
   "categories": [
     "medical",
-    "account",
+    "social",
     "multimedia",
+    "emoji",
     "gaming",
-    "social"
+    "shapes"
   ]
 }
