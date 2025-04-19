@@ -29,7 +29,7 @@ Read it here: [ICON_GUIDELINES](https://lucide.dev/docs/icon-design-guide).
 
 #### Lucide Studio
 
-For formatting and adjusting SVG icons, @jguddas made a great tool called [Lucide Studio](https://studio.lucide.dev/). It is a web-based SVG editor that allows you to edit and adjust icons in the Lucide style. You can use it to create new icons or modify existing ones.
+For formatting and adjusting SVG icons, [@jguddas](https://github.com/jguddas) made a great tool called [Lucide Studio](https://studio.lucide.dev/). It is a web-based SVG editor that allows you to edit and adjust icons in the Lucide style. You can use it to create new icons or modify existing ones.
 
 #### Editor guides
 
