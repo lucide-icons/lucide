@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "null78",
+    "jguddas"
   ],
   "tags": [
-    "funnel",
-    "hopper"
+    "currency",
+    "money",
+    "payment"
   ],
   "categories": [
-    "layout"
+    "finance"
   ]
 }
