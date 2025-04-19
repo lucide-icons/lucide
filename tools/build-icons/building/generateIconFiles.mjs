@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import { readSvg, toPascalCase } from '@lucide/helpers';
+import {readSvg, toPascalCase} from '@lucide/helpers';
 import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.mjs';
 
 function generateIconFiles({
@@ -31,7 +31,7 @@ function generateIconFiles({
     children = children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
+    const { deprecated = false, toBeRemovedInVersion = null, aliases } = iconMetaData[iconName];
     const deprecationReason = deprecated
       ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
           componentName,
@@ -47,6 +47,8 @@ function generateIconFiles({
       getSvg,
       deprecated,
       deprecationReason,
+      aliases,
+      toPascalCase,
     });
 
     const output = pretty
@@ -54,7 +56,7 @@ function generateIconFiles({
           singleQuote: true,
           trailingComma: 'all',
           printWidth: 100,
-          parser: 'babel',
+          parser: iconFileExtension.endsWith('.ts') ? 'babel-ts' : 'babel',
         })
       : elementTemplate;
 

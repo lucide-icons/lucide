@@ -5,12 +5,12 @@ import {
   Inject,
   Input,
   OnChanges,
+  OnInit,
   Renderer2,
   SimpleChange,
 } from '@angular/core';
 import { LucideIconData } from '../icons/types';
 import defaultAttributes from '../icons/constants/default-attributes';
-import { LUCIDE_ICONS, LucideIconProviderInterface } from './lucide-icon.provider';
 import { LucideIconConfig } from './lucide-icon.config';
 
 interface TypedChange<T> extends SimpleChange {
@@ -37,23 +37,24 @@ export function formatFixed(number: number, decimals = 3): string {
 @Component({
   selector: 'lucide-angular, lucide-icon, i-lucide, span-lucide',
   template: '<ng-content></ng-content>',
+  standalone: true,
 })
-export class LucideAngularComponent implements OnChanges {
+export class LucideAngularComponent implements OnInit, OnChanges {
   @Input() class?: string;
-  @Input() name?: string | LucideIconData;
-  @Input() img?: LucideIconData;
+  @Input() name?: string;
+  @Input() icon?: LucideIconData;
   @Input() color?: string;
   @Input() absoluteStrokeWidth = false;
   defaultSize: number;
 
   constructor(
-    @Inject(ElementRef) private elem: ElementRef,
-    @Inject(Renderer2) private renderer: Renderer2,
-    @Inject(ChangeDetectorRef) private changeDetector: ChangeDetectorRef,
-    @Inject(LUCIDE_ICONS) private iconProviders: LucideIconProviderInterface[],
-    @Inject(LucideIconConfig) private iconConfig: LucideIconConfig,
+    @Inject(ElementRef) protected elem: ElementRef,
+    @Inject(Renderer2) protected renderer: Renderer2,
+    @Inject(ChangeDetectorRef) protected changeDetector: ChangeDetectorRef,
+    @Inject(LucideIconConfig) protected iconConfig: LucideIconConfig,
   ) {
     this.defaultSize = defaultAttributes.height;
+    console.log(this.name, this.icon);
   }
 
   _size?: number;
@@ -84,6 +85,10 @@ export class LucideAngularComponent implements OnChanges {
     }
   }
 
+  ngOnInit() {
+    this.buildIcon();
+  }
+
   ngOnChanges(changes: LucideAngularComponentChanges): void {
     if (
       changes.name ||
@@ -94,28 +99,21 @@ export class LucideAngularComponent implements OnChanges {
       changes.strokeWidth ||
       changes.class
     ) {
-      this.color = this.color ?? this.iconConfig.color;
-      this.size = this.parseNumber(this.size ?? this.iconConfig.size);
-      this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
-      this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
-      const nameOrIcon = this.img ?? this.name;
-      if (typeof nameOrIcon === 'string') {
-        const icoOfName = this.getIcon(this.toPascalCase(nameOrIcon));
-        if (icoOfName) {
-          this.replaceElement(icoOfName);
-        } else {
-          throw new Error(
-            `The "${nameOrIcon}" icon has not been provided by any available icon providers.`,
-          );
-        }
-      } else if (Array.isArray(nameOrIcon)) {
-        this.replaceElement(nameOrIcon);
-      } else {
-        throw new Error(`No icon name or image has been provided.`);
-      }
+      this.buildIcon();
     }
 
     this.changeDetector.markForCheck();
+  }
+
+  buildIcon(): void {
+    this.color = this.color ?? this.iconConfig.color;
+    this.size = this.parseNumber(this.size ?? this.iconConfig.size);
+    this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
+    this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
+    console.log('Hello, my name is ', this.name, ' my icon is ', this.icon);
+    if (this.icon) {
+      this.replaceElement(this.icon);
+    }
   }
 
   replaceElement(img: LucideIconData): void {
@@ -148,14 +146,7 @@ export class LucideAngularComponent implements OnChanges {
     this.renderer.appendChild(this.elem.nativeElement, icoElement);
   }
 
-  toPascalCase(str: string): string {
-    return str.replace(
-      /(\w)([a-z0-9]*)(_|-|\s*)/g,
-      (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase(),
-    );
-  }
-
-  private parseNumber(value: string | number): number {
+  protected parseNumber(value: string | number): number {
     if (typeof value === 'string') {
       const parsedValue = parseInt(value, 10);
       if (isNaN(parsedValue)) {
@@ -166,18 +157,7 @@ export class LucideAngularComponent implements OnChanges {
     return value;
   }
 
-  private getIcon(name: string): LucideIconData | null {
-    for (const iconProvider of Array.isArray(this.iconProviders)
-      ? this.iconProviders
-      : [this.iconProviders]) {
-      if (iconProvider.hasIcon(name)) {
-        return iconProvider.getIcon(name);
-      }
-    }
-    return null;
-  }
-
-  private createElement([tag, attrs, children = []]: readonly [
+  protected createElement([tag, attrs, children = []]: readonly [
     string,
     SvgAttributes,
     LucideIconData?,

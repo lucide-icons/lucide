@@ -1,7 +1,7 @@
 import path from 'path';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
+import {appendFile, resetFile, toCamelCase, toPascalCase} from '@lucide/helpers';
 
 export default async function generateExportFile(
   inputEntry,
@@ -26,7 +26,7 @@ export default async function generateExportFile(
     } else if (exportModuleNameCasing === 'pascal') {
       componentName = toPascalCase(iconName);
     }
-    const importString = `export { default as ${componentName} } from './${iconName}${iconFileExtension}';\n`;
+    const importString = `export * from './${iconName}${iconFileExtension}';\n`;
     return appendFile(importString, fileName, outputDirectory);
   });
 
