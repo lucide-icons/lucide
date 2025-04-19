@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "CristianMan"
+  ],
+  "tags": [
+    "whatsapp ws"
+  ],
+  "categories": [
+    "social",
+    "media"
+  ]
+}
