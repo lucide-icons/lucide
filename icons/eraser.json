@@ -10,7 +10,9 @@
     "drawing",
     "undo",
     "delete",
-    "clear"
+    "clear",
+    "trash",
+    "remove"
   ],
   "categories": [
     "text"
