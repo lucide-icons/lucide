@@ -153,6 +153,7 @@ export default defineConfig({
       { text: 'Icons', link: '/icons/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Packages', link: '/packages' },
+      { text: 'Studio', link: 'https://studio.lucide.dev' },
       { text: 'Showcase', link: '/showcase' },
       { text: 'License', link: '/license' },
     ],
