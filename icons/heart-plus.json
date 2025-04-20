@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Ayberkyvs",
+    "UsamaKhan"
+  ],
+  "tags": [
+    "plus",
+    "like",
+    "favorite",
+    "add",
+    "health",
+    "support"
+  ],
+  "categories": [
+    "medical",
+    "account",
+    "multimedia",
+    "gaming",
+    "social"
+  ]
+}
