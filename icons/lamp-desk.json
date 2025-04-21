@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "jguddas"
+    "jguddas",
+    "jamiemlaw"
   ],
   "tags": [
     "lighting",
@@ -13,6 +14,6 @@
     "furniture"
   ],
   "categories": [
-    "furniture"
+    "home"
   ]
 }
