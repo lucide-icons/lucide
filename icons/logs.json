@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev"
+  ],
+  "tags": [
+    "options",
+    "list",
+    "menu",
+    "order",
+    "queue",
+    "tasks",
+    "logs"
+  ],
+  "categories": [
+    "text"
+  ]
+}

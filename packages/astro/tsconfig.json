@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM.Iterable"],
+    "types": ["@testing-library/jest-dom"],
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin",
+      },
+    ],
+  },
+  "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"],
+}

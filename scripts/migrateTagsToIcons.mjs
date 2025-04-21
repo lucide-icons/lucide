@@ -1,12 +1,12 @@
 import path from 'path';
-import tags from '../tags.json' assert { type: 'json' };
+import tags from '../tags.json' with { type: 'json' };
 import {
   readSvgDirectory,
   readAllMetadata,
   writeFile,
   mergeArrays,
   getCurrentDirPath,
-} from './helpers.mjs';
+} from '../tools/build-helpers/helpers.mjs';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');

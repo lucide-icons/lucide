@@ -18,6 +18,10 @@ yarn add lucide-angular
 npm install lucide-angular
 ```
 
+```sh [bun]
+bun add lucide-angular
+```
+
 :::
 
 ## How to use
@@ -37,6 +41,23 @@ import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular
 export class AppModule { }
 ```
 
+or using standalone version:
+
+```js
+import { Component } from '@angular/core';
+import { LucideAngularModule, FileIcon } from 'lucide-angular';
+
+@Component({
+  standalone: true,
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  imports: [LucideAngularModule]
+})
+export class AppComponent {
+  readonly FileIcon = FileIcon;
+}
+```
 ### Step 2: Use the icons in templates
 
 Within your templates you may now use one of the following component tags to insert an icon:
@@ -46,6 +67,13 @@ Within your templates you may now use one of the following component tags to ins
 <lucide-icon name="home" class="my-icon"></lucide-icon>
 <i-lucide name="menu" class="my-icon"></i-lucide>
 <span-lucide name="user-check" class="my-icon"></span-lucide>
+```
+for standalone
+```html
+<lucide-angular [img]="FileIcon" class="my-icon"></lucide-angular>
+<lucide-icon [img]="FileIcon" class="my-icon"></lucide-icon>
+<i-lucide [img]="FileIcon" class="my-icon"></i-lucide>
+<span-lucide [img]="FileIcon" class="my-icon"></span-lucide>
 ```
 
 ### Props
@@ -114,4 +142,21 @@ import { icons } from 'lucide-angular';
 ...
 
 LucideAngularModule.pick(icons)
+```
+
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+They can be used in the same way as the official icons.
+
+```js
+import { LucideAngularModule } from 'lucide-angular';
+import { burger } from '@lucide/lab';
+
+@NgModule({
+  imports: [
+    LucideAngularModule.pick({ burger })
+  ]
+})
+export class AppModule { }
 ```
