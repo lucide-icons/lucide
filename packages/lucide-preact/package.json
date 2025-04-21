@@ -1,6 +1,6 @@
 {
   "name": "lucide-preact",
-  "description": "A Lucide icon library package for Preact applications",
+  "description": "A Lucide icon library package for Preact applications.",
   "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -53,7 +53,7 @@
     "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^5.3.3",
-    "vite": "5.4.14",
+    "vite": "5.4.17",
     "vitest": "^1.1.1"
   },
   "peerDependencies": {
