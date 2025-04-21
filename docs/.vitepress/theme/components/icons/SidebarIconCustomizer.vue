@@ -48,9 +48,6 @@ function resetStyle () {
   strokeWidth.value = STYLE_DEFAULTS.strokeWidth
   size.value = STYLE_DEFAULTS.size
   absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
-  nextTick(() => {
-    
-  });
 }
 
 watch(absoluteStrokeWidth, (enabled) => {

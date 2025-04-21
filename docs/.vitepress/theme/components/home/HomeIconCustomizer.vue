@@ -8,7 +8,7 @@ import ColorPicker from '../base/ColorPicker.vue'
 import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 import Switch from '../base/Switch.vue'
-import {nextTick} from 'vue'
+
 
 const iconContainer = ref<HTMLElement | null>()
 const color = ref('currentColor')
@@ -49,10 +49,6 @@ function resetStyle () {
   strokeWidth.value = 2
   size.value = 24
   absoluteStrokeWidth.value = false;
-  nextTick(() => {
-    
-  });
-
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
