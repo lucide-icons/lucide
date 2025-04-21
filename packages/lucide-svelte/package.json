@@ -1,6 +1,6 @@
 {
   "name": "lucide-svelte",
-  "description": "A Lucide icon library package for Svelte applications",
+  "description": "A Lucide icon library package for Svelte applications.",
   "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -69,9 +69,9 @@
     "svelte": "^4.2.19",
     "svelte-check": "^3.4.4",
     "svelte-preprocess": "^5.0.4",
-    "typescript": "^5.1.6",
-    "vite": "5.4.15",
-    "vitest": "^1.1.1"
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2",
+    "vitest": "^3.1.2"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5.0.0-next.42"
