@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "kasutu",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "currency",
+    "peso",
+    "money",
+    "php"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

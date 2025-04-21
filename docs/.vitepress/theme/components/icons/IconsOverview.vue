@@ -10,9 +10,11 @@ import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
+import CarbonAdOverlay from './CarbonAdOverlay.vue';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
+const DEFAULT_GRID_ITEMS = 10 * 160;
 
 const props = defineProps<{
   icons: IconEntity[];
@@ -93,6 +95,12 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 watch(searchQueryDebounced, () => {
   scrollTo(0)
 })
+
+function handleCloseDrawer() {
+  setActiveIconName('');
+
+  window.history.pushState({}, '', '/icons/');
+}
 </script>
 
 <template>
@@ -107,11 +115,23 @@ watch(searchQueryDebounced, () => {
       />
     </StickyBar>
     <NoResults
-      v-if="list.length === 0"
+      v-if="list.length === 0 && searchQuery !== ''"
       :searchQuery="searchQuery"
       @clear="searchQuery = ''"
     />
-    <div v-bind="wrapperProps" class="icon">
+    <IconGrid
+      v-else-if="list.length === 0"
+      :key="index"
+      overlayMode
+      :icons="[...searchResults].splice(0, DEFAULT_GRID_ITEMS)"
+      :activeIcon="activeIconName"
+      @setActiveIcon="setActiveIconName"
+    />
+    <div
+      v-bind="wrapperProps"
+      class="icon"
+      v-else
+    >
       <IconGrid
         v-for="{ index, data: icons } in list"
         :key="index"
@@ -124,10 +144,11 @@ watch(searchQueryDebounced, () => {
   </div>
 
   <IconDetailOverlay
-    v-if="activeIconName != null"
     :iconName="activeIconName"
-    @close="setActiveIconName('')"
+    @close="handleCloseDrawer"
   />
+
+  <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
 
 <style>

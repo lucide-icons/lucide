@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { basename } from 'path';
-import { readSvg } from '../../../scripts/helpers.mjs';
+import { readSvg } from '@lucide/helpers';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.
@@ -9,10 +9,12 @@ import { readSvg } from '../../../scripts/helpers.mjs';
  * @returns {Object}
  */
 export default function readSVGs(svgFiles, iconsDirectory) {
-  return svgFiles.map((svgFile) => {
+  const SVGReadPromises = svgFiles.map(async (svgFile) => {
     const name = basename(svgFile, '.svg');
-    const contents = readSvg(svgFile, iconsDirectory);
+    const contents = await readSvg(svgFile, iconsDirectory);
 
     return { name, contents };
   });
+
+  return Promise.all(SVGReadPromises);
 }

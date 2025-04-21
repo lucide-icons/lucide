@@ -1,5 +1,16 @@
 <!-- Thank you for contributing! -->
 
+<!--
+PR Title Guidelines:
+
+Please use the format: <type>(<scope>): <short description>
+
+Example: feat(icons): added `camera` icon
+
+Common types: feat, fix, docs, style, refactor, test, chore
+Common scopes: icons, docs, studio, site, dev
+-->
+
 <!-- Insert `closes #issueNumber` here if merging this PR will resolve an existing issue -->
 
 ## What is the purpose of this pull request?
@@ -47,7 +58,7 @@
 - [ ] I've made sure that the icons look sharp on low DPI displays.
 - [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
 - [ ] I've made sure that the icons are visually centered.
-- [ ] I've correctly optimized all icons to two points of precision.
+- [ ] I've correctly optimized all icons to three points of precision.
 
 ## Before Submitting <!-- For every PR! -->
 <!-- All of these requirements must be fulfilled. -->
