@@ -20,6 +20,10 @@ yarn add lucide-react-native
 npm install lucide-react-native
 ```
 
+```sh [bun]
+bun add lucide-react-native
+```
+
 :::
 
 ## How to use
@@ -59,6 +63,26 @@ To customize the appearance of an icon, you can pass custom properties as props 
 const App = () => {
   return <Camera fill="red" />;
 };
+```
+
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-react-native';
+import { burger } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={burger} />
+);
 ```
 
 ## One generic icon component

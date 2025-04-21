@@ -1,12 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "smnandre"
+    "smnandre",
+    "jguddas"
   ],
   "tags": [
     "calculate",
     "formula",
-    "maths",
+    "math",
     "operator",
     "root",
     "square",
@@ -14,6 +15,6 @@
   ],
   "categories": [
     "development",
-    "maths"
+    "math"
   ]
 }

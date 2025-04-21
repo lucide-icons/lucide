@@ -9,10 +9,14 @@
     "contact"
   ],
   "categories": [
-    "account",
-    "shapes"
+    "account"
   ],
   "aliases": [
-    "user-circle-2"
+    {
+      "name": "user-circle-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -25,13 +25,17 @@
     "code",
     "spread",
     "rest",
+    "more",
+    "further",
+    "extra",
+    "overflow",
+    "dots",
     "…",
     "..."
   ],
   "categories": [
     "text",
-    "development",
-    "shapes"
+    "development"
   ],
   "aliases": [
     "form-input"
