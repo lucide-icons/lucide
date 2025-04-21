@@ -4,7 +4,7 @@ import path from 'path';
 import { getCurrentDirPath } from '@lucide/helpers';
 import { getJSBanner } from './license.mjs';
 
-const currentDir = getCurrentDirPath(import.meta.url);
+const currentDir = await getCurrentDirPath(import.meta.url);
 const targetDirectory = path.join(currentDir, '../dist');
 
 const files = await readdir(targetDirectory, {
