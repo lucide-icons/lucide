@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "me",
+    "MihaiDT"
+  ],
+  "tags": [
+    "liro-icon"
+  ],
+  "categories": [
+    "liro"
+  ]
+}
