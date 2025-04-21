@@ -2,7 +2,7 @@
   "name": "@lucide/astro",
   "version": "0.470.0",
   "author": "Moustapha Kebe",
-  "description": "A Lucide icon library package for Astro applications",
+  "description": "A Lucide icon library package for Astro applications.",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -54,8 +54,8 @@
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.5",
     "prettier": "^3.4.2",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.8"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
   },
   "peerDependencies": {
     "astro": "^4 || ^5"
