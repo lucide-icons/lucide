@@ -3,9 +3,9 @@
   width="24"
   height="24"
   viewBox="0 0 24 24"
-  fill="none"  
+  fill="none"
 >
-  <rect x="3" y="7" width="9" height="13" rx="2" ry="2" fill="#2f2f2f" /> 
-  <rect x="5" y="5" width="9" height="13" rx="2" ry="2" fill="#737373" />   
-  <rect x="7" y="3" width="9" height="13" rx="2" ry="2" fill="#e3e3e3" />
+  <rect x="5.5" y="7.5" width="9" height="13" rx="2" ry="2" fill="#2f2f2f" />
+  <rect x="7.5" y="5.5" width="9" height="13" rx="2" ry="2" fill="#737373" />
+  <rect x="9.5" y="3.5" width="9" height="13" rx="2" ry="2" fill="#e3e3e3" />
 </svg>
