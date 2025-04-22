@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Konixy"
+    "Konixy",
+    "colebemis",
+    "csandman",
+    "ericfennis"
   ],
   "tags": [
     "save",
