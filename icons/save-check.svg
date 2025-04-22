@@ -9,22 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M 15.2 3 A2 2 0 0 1 16.6 3.6" />
-  <path d="M 16 13 L 8 13" />
-  <path d="M 16.6 3.6 L 20.4 7.4" />
-  <path d="M 17 14 A1 1 0 0 0 16 13" />
-  <path d="M 17 21 L 17 14" />
-  <path d="M 19 21 L 11 21" />
-  <path d="M 20.4 7.4 A2 2 0 0 1 21 8.8" />
-  <path d="M 21 19 A2 2 0 0 1 19 21" />
-  <path d="M 21 8.8 L 21 19" />
-  <path d="M 3 16 L 3 5" />
-  <path d="M 3 5 A2 2 0 0 1 5 3" />
-  <path d="M 5 22 L 2.5 19.5" />
-  <path d="M 5 3 L 15.2 3" />
-  <path d="M 7 3 L 7 7" />
-  <path d="M 7 7 A1 1 0 0 0 8 8" />
-  <path d="M 8 13 A1 1 0 0 0 7 14" />
-  <path d="M 8 8 L 15 8" />
-  <path d="M 9 17.5 L 5 22" />
+  <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1" />
+  <path d="m2.5 20 2 2 4-4" />
+  <path d="M3 16V5a2 2 0 0 1 2-2h10.2a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2h-8" />
+  <path d="M7 3v4a1 1 0 0 0 1 1h7" />
 </svg>
