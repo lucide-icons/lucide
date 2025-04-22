@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jpjacobpadilla",
+    "jguddas",
+    "ajokt123"
+  ],
+  "tags": [
+    "summary",
+    "ai",
+    "text",
+    "overview"
+  ],
+  "categories": [
+    "text"
+  ]
+}
