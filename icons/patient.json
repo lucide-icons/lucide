@@ -1,21 +1,20 @@
 {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "AdeboyeDN",
-      "jamiemlaw"
-    ],
-    "tags": [
-      "patient",
-      "physician",
-      "healthcare",
-      "medical",
-      "medicine",
-      "hospital",
-      "clinic",
-      "health"
-    ],
-    "categories": [
-      "medical"
-    ]
-  }
-  
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AdeboyeDN",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "patient",
+    "physician",
+    "healthcare",
+    "medical",
+    "medicine",
+    "hospital",
+    "clinic",
+    "health"
+  ],
+  "categories": [
+    "medical"
+  ]
+}
