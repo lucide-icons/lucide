@@ -1,0 +1,20 @@
+{
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "AdeboyeDN"
+    ],
+    "tags": [
+      "healthcare",
+      "medical",
+      "medicine",
+      "hospital",
+      "clinic",
+      "dental care",
+      "dentist",
+      "health"
+    ],
+    "categories": [
+      "medical"
+    ]
+  }
+  
