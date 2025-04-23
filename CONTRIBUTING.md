@@ -164,15 +164,23 @@ The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate 
 #### Testing VitePress Website Locally
 
 To test your VitePress website locally, follow these steps:
-1. **Navigate to docs**
+1. **Install dependencies (if not already done)**
+    ```sh
+    pnpm install
+    ```
+2. **Run build**
+    ```sh
+    npm run build
+    ```
+3. **Navigate to docs**
     ```sh
     cd docs
     ```
-2. **Start the Local Development Server**
+4. **Start the Local Development Server**
     ```sh
     pnpm run docs:dev
     ```
-3. **Open the Website Locally**
+5. **Open the Website Locally**
     Vitepress should open with the following format: 
 
     VitePress dev server is running at:
