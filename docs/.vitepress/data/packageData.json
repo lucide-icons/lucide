@@ -127,8 +127,27 @@
       }
     ]
   },
-  "lucide-static": {
+  "@lucide/astro": {
+    "docsAlias": "lucide-astro",
+    "packageDirname": "astro",
     "order": 8,
+    "icon": "astro",
+    "iconDark": "astro-dark",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/astro",
+        "href": "https://www.npmjs.com/package/@lucide/astro"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/astro",
+        "href": "https://www.npmjs.com/package/@lucide/astro"
+      }
+    ]
+  },
+  "lucide-static": {
+    "order": 9,
     "icon": "svg",
     "shields": [
       {

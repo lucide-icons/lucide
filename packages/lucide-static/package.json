@@ -43,7 +43,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/helpers": "workspace:*",
-    "rollup": "^4.22.4",
-    "rollup-plugin-dts": "^6.1.0"
+    "rollup": "^4.40.0",
+    "rollup-plugin-dts": "^6.2.1"
   }
 }

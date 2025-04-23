@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "sqaure",
+    "pathfinder",
+    "path",
+    "unite",
+    "union",
+    "shape",
+    "merge",
+    "vector"
+  ],
+  "categories": [
+    "design"
+  ]
+}

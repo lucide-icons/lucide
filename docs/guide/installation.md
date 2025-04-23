@@ -184,7 +184,36 @@ npm install lucide-preact
 bun add lucide-preact
 ```
 
+
 :::
+
+For more details, see the [documentation](packages/lucide-preact.md).
+
+## Astro
+
+Implementation of the lucide icon library for Astro applications.
+
+::: code-group
+
+```sh [pnpm]
+pnpm install @lucide/astro
+```
+
+```sh [yarn]
+yarn add @lucide/astro
+```
+
+```sh [npm]
+npm install @lucide/astro
+```
+
+```sh [bun]
+bun add @lucide/astro
+```
+
+:::
+
+For more details, see the [documentation](packages/lucide-astro.md).
 
 ## Static usage
 

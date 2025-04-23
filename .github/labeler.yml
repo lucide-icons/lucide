@@ -79,6 +79,12 @@
       - any-glob-to-any-file:
           - 'packages/lucide-solid/*'
 
+# For changes in the lucide astro package
+🚀 astro package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/astro/*'
+
 # For changes in the lucide static package
 🪨 static package:
   - changed-files:

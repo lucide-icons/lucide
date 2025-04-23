@@ -1,5 +1,5 @@
 import path from 'path';
-import tags from '../tags.json' assert { type: 'json' };
+import tags from '../tags.json' with { type: 'json' };
 import {
   readSvgDirectory,
   readAllMetadata,

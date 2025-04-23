@@ -53,9 +53,13 @@
 <path d="M350 120V360" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
 <g clip-path="url(#clip1_1612_15659)">
-<path d="M310 260C324.9 245.4 340 227.9 340 205C340 190.413 334.205 176.424 323.891 166.109C313.576 155.795 299.587 150 285 150C267.4 150 255 155 240 170C225 155 212.6 150 195 150C180.413 150 166.424 155.795 156.109 166.109C145.795 176.424 140 190.413 140 205C140 228 155 245.5 170 260L240 330L310 260Z" stroke="#F56565" stroke-width="60" stroke-linejoin="round" stroke-dasharray="0.2 0.4"/>
+<g id="embed-lucide-heart" stroke="#F56565" stroke-width="7" stroke-dasharray="0.04 0.08" stroke-linejoin="round" transform="translate(120 120), scale(10)">
+  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
 </g>
-<path d="M310 260C324.9 245.4 340 227.9 340 205C340 190.413 334.205 176.424 323.891 166.109C313.576 155.795 299.587 150 285 150C267.4 150 255 155 240 170C225 155 212.6 150 195 150C180.413 150 166.424 155.795 156.109 166.109C145.795 176.424 140 190.413 140 205C140 228 155 245.5 170 260L240 330L310 260Z" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="embed-lucide-heart" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
+  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+</g>
 <defs>
 <clipPath id="clip0_1612_15659">
 <rect x="120" y="120" width="240" height="240" rx="8" fill="white"/>
