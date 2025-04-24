@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "declaration": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["esnext"],
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+  },
+}
