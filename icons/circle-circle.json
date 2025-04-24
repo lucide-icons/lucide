@@ -12,7 +12,8 @@
     "focus",
     "button",
     "shutter",
-    "radius"
+    "radius",
+    "donut"
   ],
   "categories": [
     "shapes"
