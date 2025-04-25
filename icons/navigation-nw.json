@@ -1,14 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
+    "ericfennis",
+    "csandman",
     "jamiemlaw"
   ],
   "tags": [
-    "location",
-    "travel"
+    "click",
+    "select"
   ],
   "categories": [
+    "arrows",
+    "cursors",
     "navigation"
+  ],
+  "aliases": [
+    "mouse-pointer-2"
   ]
 }

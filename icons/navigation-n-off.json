@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
     "jamiemlaw"
   ],
   "tags": [
@@ -10,5 +11,8 @@
   ],
   "categories": [
     "navigation"
+  ],
+  "aliases": [
+    "navigation-2-off"
   ]
 }
