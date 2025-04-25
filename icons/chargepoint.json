@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "marouanechoukri31"
+  ],
+  "tags": [
+    "chargepoint"
+  ],
+  "categories": [
+    "evcharge"
+  ]
+}
