@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hxk1633"
+  ],
+  "tags": [
+    "box",
+    "container",
+    "storage",
+    "unpack",
+    "unarchive",
+    "unzip",
+    "opened",
+    "delivered"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}
