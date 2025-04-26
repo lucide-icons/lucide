@@ -1,5 +1,5 @@
 import path from 'path';
-import categories from '../categories.json' assert { type: 'json' };
+import categories from '../categories.json' with { type: 'json' };
 import {
   mergeArrays,
   writeFile,
