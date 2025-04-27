@@ -2,12 +2,6 @@
 
 Implementation of the lucide icon library for Vue 3 applications.
 
-## Vue 3 or Vue 2
-
-::: tip
-This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue ->](lucide-vue)
-:::
-
 ## Installation
 
 ::: code-group
@@ -22,6 +16,10 @@ yarn add lucide-vue-next
 
 ```sh [npm]
 npm install lucide-vue-next
+```
+
+```sh [bun]
+bun add lucide-vue-next
 ```
 
 :::
@@ -87,7 +85,7 @@ import { burger } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode={burger} />
+  <Icon :iconNode="burger" />
 </template>
 ```
 

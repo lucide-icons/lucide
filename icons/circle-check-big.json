@@ -3,7 +3,8 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "done",
@@ -13,8 +14,7 @@
     "task"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "notifications"
   ],
   "aliases": [
     "check-circle"

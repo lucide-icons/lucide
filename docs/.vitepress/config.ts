@@ -28,6 +28,10 @@ export default defineConfig({
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
           ),
         },
+        {
+          find: '~/.vitepress',
+          replacement: fileURLToPath(new URL('./', import.meta.url)),
+        },
       ],
     },
   },
@@ -149,6 +153,7 @@ export default defineConfig({
       { text: 'Icons', link: '/icons/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Packages', link: '/packages' },
+      { text: 'Studio', link: 'https://studio.lucide.dev' },
       { text: 'Showcase', link: '/showcase' },
       { text: 'License', link: '/license' },
     ],
