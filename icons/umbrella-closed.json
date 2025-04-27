@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ontur-dev"
+  ],
+  "tags": [
+    "closed",
+    "umbrella",
+    "weather",
+    "rain"
+  ],
+  "categories": [
+    "weather"
+  ]
+}
