@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "skajosborn"
+  ],
+  "tags": [
+    "picnic",
+    "outdoor",
+    "rest",
+    "table",
+    "bench",
+    "park"
+  ],
+  "categories": [
+    "ui",
+    "interface",
+    "location",
+    "activity"
+  ]
+}
