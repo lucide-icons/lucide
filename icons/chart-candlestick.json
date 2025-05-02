@@ -16,6 +16,7 @@
     "commodities",
     "currencies",
     "currency",
+    "stocks",
     "exchange",
     "hedge fund",
     "statistics",
@@ -25,7 +26,7 @@
   ],
   "categories": [
     "charts",
-    "money"
+    "finance"
   ],
   "aliases": [
     {
