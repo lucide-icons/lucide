@@ -3,11 +3,13 @@
   import { Switch } from '@headlessui/vue'
 
   const enabled = ref(false)
+  
 </script>
 
 <template>
   <Switch
     v-model="enabled"
+    :key="enabled"
     class="switch"
     :class="{ enabled }"
   >
