@@ -162,11 +162,13 @@ The package includes type definitions for all icons. This is useful if you want 
 </script>
 
 {#each menuItems as item}
+  {@const Icon = item.icon}
   <a href={item.href}>
-    <svelte:component this={item.icon} />
+    <Icon />
     <span>{item.name}</span>
   </a>
 {/each}
+
 ```
 :::
 
@@ -246,8 +248,9 @@ The package includes type definitions for all icons. This is useful if you want 
 </script>
 
 {#each menuItems as item}
+  {@const Icon = item.icon}
   <a href={item.href}>
-   <svelte:component this={item.icon} />
+    <Icon />
     <span>{item.name}</span>
   </a>
 {/each}
