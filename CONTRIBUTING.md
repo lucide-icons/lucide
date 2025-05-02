@@ -161,26 +161,18 @@ lucide
 
 The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
 
-#### Testing VitePress Website Locally
+#### Running the Docs Website Locally
 
-To test your VitePress website locally, follow these steps:
-1. **Install dependencies (if not already done)**
-    ```sh
-    pnpm install
-    ```
-2. **Run build**
-    ```sh
-    npm run build
-    ```
-3. **Navigate to docs**
+To test the docs website locally, follow these steps:
+1. **Navigate to the docs directory**
     ```sh
     cd docs
     ```
-4. **Start the Local Development Server**
+2. **Start the Local Development Server**
     ```sh
     pnpm run docs:dev
     ```
-5. **Open the Website Locally**
+3. **Open the Website Locally**
     Vitepress should open with the following format: 
 
     VitePress dev server is running at:
