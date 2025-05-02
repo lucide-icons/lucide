@@ -27,6 +27,7 @@ jobs:
             docs
             ci
             build
+            chore
           requireScope: true
           ignoreLabels: |
             bot
