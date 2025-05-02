@@ -79,7 +79,7 @@
   },
     {
     "name": "lucide-lustre",
-    "description": "A library providing https://lucide.dev icons to lustre",
+    "description": "A library providing https://lucide.dev icons to lustre.",
     "icon": "/framework-logos/lustre.webp",
     "shields": [
       {
