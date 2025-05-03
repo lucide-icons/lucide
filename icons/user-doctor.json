@@ -1,19 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AdeboyeDN"
+    "AdeboyeDN",
+    "jamiemlaw"
   ],
   "tags": [
+    "doctor",
+    "physician",
     "healthcare",
     "medical",
     "medicine",
     "hospital",
     "clinic",
-    "dental care",
-    "dentist",
+    "stethoscope",
     "health"
   ],
   "categories": [
+    "account",
     "medical"
   ]
 }
