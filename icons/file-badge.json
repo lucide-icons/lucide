@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "award",
@@ -14,5 +15,8 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-badge-2"
   ]
 }

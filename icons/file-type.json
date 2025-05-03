@@ -13,5 +13,8 @@
   "categories": [
     "files",
     "text"
+  ],
+  "aliases": [
+    "file-type-2"
   ]
 }

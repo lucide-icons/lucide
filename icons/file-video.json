@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "movie",
@@ -11,5 +12,8 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    "file-video-2"
   ]
 }

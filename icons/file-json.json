@@ -13,5 +13,8 @@
   "categories": [
     "files",
     "development"
+  ],
+  "aliases": [
+    "file-json-2"
   ]
 }
