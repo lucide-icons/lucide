@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karamalaskar"
+  ],
+  "tags": [
+    "menu",
+    "hamburger",
+    "navigation",
+    "minimal",
+    "lines"
+  ],
+  "categories": [
+    "interface"
+  ]
+}
