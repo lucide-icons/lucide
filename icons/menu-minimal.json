@@ -4,13 +4,14 @@
     "karamalaskar"
   ],
   "tags": [
-    "menu",
-    "hamburger",
+    "bars",
     "navigation",
-    "minimal",
+    "hamburger",
+    "options",
     "lines"
   ],
   "categories": [
-    "interface"
+    "layout",
+    "account"
   ]
 }
