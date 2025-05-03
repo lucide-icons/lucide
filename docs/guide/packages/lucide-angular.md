@@ -31,11 +31,11 @@ bun add lucide-angular
 In any Angular module you wish to use Lucide icons in, you have to import `LucideAngularModule`, and pick any icons you wish to use:
 
 ```js
-import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular';
+import { LucideAngularModule, File, House, Menu, UserCheck } from 'lucide-angular';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({File, Home, Menu, UserCheck})
+    LucideAngularModule.pick({File, House, Menu, UserCheck})
   ]
 })
 export class AppModule { }
@@ -64,7 +64,7 @@ Within your templates you may now use one of the following component tags to ins
 
 ```html
 <lucide-angular name="file" class="my-icon"></lucide-angular>
-<lucide-icon name="home" class="my-icon"></lucide-icon>
+<lucide-icon name="house" class="my-icon"></lucide-icon>
 <i-lucide name="menu" class="my-icon"></i-lucide>
 <span-lucide name="user-check" class="my-icon"></span-lucide>
 ```
@@ -88,7 +88,7 @@ You can pass additional props to adjust the icon appearance.
 | `absoluteStrokeWidth` | *boolean* | false        |
 
 ```html
-<i-lucide name="home" [size]="48" color="red" [strokeWidth]="1"></i-lucide>
+<i-lucide name="house" [size]="48" color="red" [strokeWidth]="1"></i-lucide>
 ```
 
 ### Global configuration
@@ -151,11 +151,11 @@ They can be used in the same way as the official icons.
 
 ```js
 import { LucideAngularModule } from 'lucide-angular';
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ burger })
+    LucideAngularModule.pick({ coconut })
   ]
 })
 export class AppModule { }
