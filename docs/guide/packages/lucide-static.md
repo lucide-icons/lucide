@@ -136,7 +136,7 @@ and update the SVG as follows
   class="lucide-icon"
 >
 <use
-    href="#alert-triangle"
+    href="#triangle-alert"
   />
 </svg>
 <svg>
