@@ -48,10 +48,12 @@ function resetStyle () {
   color.value = 'currentColor'
   strokeWidth.value = 2
   size.value = 24
+  absoluteStrokeWidth.value = false;
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
   iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
+  
 })
 </script>
 
@@ -121,6 +123,9 @@ watch(absoluteStrokeWidth, (enabled) => {
           >
             <template #display>
               <Switch
+                :key="absoluteStrokeWidth"
+                class="switch"
+                :class="{ enabled: absoluteStrokeWidth }"
                 id="absolute-stroke-width"
                 name="absolute-stroke-width"
                 v-model="absoluteStrokeWidth"
@@ -171,16 +176,14 @@ watch(absoluteStrokeWidth, (enabled) => {
   margin-top: 32px;
   padding: 0;
   background: none;
-  max-width: 280px;
 }
 
 @media (min-width: 640px) {
-
   .card {
     display: grid;
     grid-template-columns: 8fr 10fr;
   }
-/*
+  /*
   .card-column {
     flex: 1;
   } */

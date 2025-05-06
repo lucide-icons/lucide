@@ -18,6 +18,10 @@ yarn add lucide-solid
 npm install lucide-solid
 ```
 
+```sh [bun]
+bun add lucide-solid
+```
+
 :::
 
 ## How to use
@@ -32,6 +36,19 @@ Additional props can be passed to adjust the icon:
 
 ```jsx
 import { Camera } from 'lucide-solid';
+
+// Usage
+const App = () => {
+  return <Camera color="red" size={48} />;
+};
+
+export default App;
+```
+
+Vite loading/performing issues with the dev server can be resolved by import icons directly from the `lucide-solid/icons` directory:
+
+```jsx
+import Camera from 'lucide-solid/icons/camera';
 
 // Usage
 const App = () => {
@@ -74,7 +91,7 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-solid';
-import { burger, sausage } from '@lucide/lab';
+import { sausage } from '@lucide/lab';
 
 const App = () => (
   <Icon iconNode={sausage} color="red"/>
