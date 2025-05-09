@@ -9,5 +9,7 @@
     "licence",
     "license"
   ],
-  "categories": []
+  "categories": [
+    "text"
+  ]
 }

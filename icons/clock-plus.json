@@ -2,17 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "jguddas"
+    "colebemis",
+    "gubser"
   ],
   "tags": [
-    "directory",
-    "search",
-    "find",
-    "lost",
-    "browser",
-    "lens"
+    "time",
+    "watch",
+    "alarm",
+    "add",
+    "create",
+    "new"
   ],
   "categories": [
-    "files"
+    "time"
   ]
 }
