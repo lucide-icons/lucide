@@ -12,6 +12,11 @@
     "files"
   ],
   "aliases": [
-    "file-signature"
+    {
+      "name": "file-signature",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
