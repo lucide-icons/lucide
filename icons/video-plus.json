@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "abraimi"
+  ],
+  "tags": [
+    "add",
+    "video",
+    "files",
+    "upload",
+    "new",
+    "new video",
+    "add new video"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "multimedia",
+    "files",
+    "photography"
+  ]
+}
