@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "delta6626"
+  ],
+  "tags": [
+    "table",
+    "cross",
+    "row",
+    "delete"
+  ],
+  "categories": [
+    "layout",
+    "design"
+  ]
+}
