@@ -31,24 +31,8 @@
       }
     ]
   },
-  "lucide-vue": {
-    "order": 2,
-    "icon": "vue",
-    "shields": [
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/v/lucide-vue",
-        "href": "https://www.npmjs.com/package/lucide-vue"
-      },
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/lucide-vue",
-        "href": "https://www.npmjs.com/package/lucide-vue"
-      }
-    ]
-  },
   "lucide-vue-next": {
-    "order": 3,
+    "order": 2,
     "icon": "vue-next",
     "shields": [
       {
@@ -64,7 +48,7 @@
     ]
   },
   "lucide-svelte": {
-    "order": 4,
+    "order": 3,
     "icon": "svelte",
     "shields": [
       {
@@ -95,24 +79,8 @@
       }
     ]
   },
-  "lucide-preact": {
-    "order": 5,
-    "icon": "preact",
-    "shields": [
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/v/lucide-preact",
-        "href": "https://www.npmjs.com/package/lucide-preact"
-      },
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/lucide-preact",
-        "href": "https://www.npmjs.com/package/lucide-preact"
-      }
-    ]
-  },
   "lucide-react-native": {
-    "order": 6,
+    "order": 5,
     "icon": "react-native",
     "shields": [
       {
@@ -128,7 +96,7 @@
     ]
   },
   "lucide-angular": {
-    "order": 7,
+    "order": 6,
     "icon": "angular",
     "shields": [
       {
@@ -143,8 +111,43 @@
       }
     ]
   },
-  "lucide-static": {
+  "lucide-preact": {
+    "order": 7,
+    "icon": "preact",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-preact",
+        "href": "https://www.npmjs.com/package/lucide-preact"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-preact",
+        "href": "https://www.npmjs.com/package/lucide-preact"
+      }
+    ]
+  },
+  "@lucide/astro": {
+    "docsAlias": "lucide-astro",
+    "packageDirname": "astro",
     "order": 8,
+    "icon": "astro",
+    "iconDark": "astro-dark",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/astro",
+        "href": "https://www.npmjs.com/package/@lucide/astro"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/astro",
+        "href": "https://www.npmjs.com/package/@lucide/astro"
+      }
+    ]
+  },
+  "lucide-static": {
+    "order": 9,
     "icon": "svg",
     "shields": [
       {
