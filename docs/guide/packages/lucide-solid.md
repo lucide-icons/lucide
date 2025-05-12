@@ -91,7 +91,7 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-solid';
-import { burger, sausage } from '@lucide/lab';
+import { sausage } from '@lucide/lab';
 
 const App = () => (
   <Icon iconNode={sausage} color="red"/>

@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "chessurisme",
     "karsa-mistmere"
   ],
   "tags": [
-    "email",
-    "message",
-    "letter",
-    "search",
-    "lens"
+    "animal",
+    "wildlife",
+    "bear",
+    "zoo",
+    "bamboo"
   ],
   "categories": [
-    "mail"
+    "animals"
   ]
 }
