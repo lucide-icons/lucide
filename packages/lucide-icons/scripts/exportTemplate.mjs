@@ -13,7 +13,7 @@ export default async ({
   const svgBase64 = base64SVG(svgContents);
 
   return `
-import type { LucideIconData } from '../types';
+import type { LucideIcon } from '../types';
 
 /**
  * @name ${iconName}
@@ -25,7 +25,7 @@ import type { LucideIconData } from '../types';
  * @returns {Array}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName}: LucideIconData = ${JSON.stringify({
+const ${componentName}: LucideIcon = ${JSON.stringify({
     name: iconName,
     size: 24,
     node: children,

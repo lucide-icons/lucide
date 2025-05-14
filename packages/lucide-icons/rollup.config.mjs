@@ -1,83 +1,123 @@
 import plugins from '@lucide/rollup-plugins';
-import replace from '@rollup/plugin-replace';
+import pkg from './package.json' with {type: 'json'};
 import dts from 'rollup-plugin-dts';
-import pkg from './package.json' with { type: 'json' };
 
-const outputFileName = pkg.name;
-const outputDir = 'dist';
-const inputs = ['src/lucide.ts'];
+const packageName = '@lucide/icons';
+const outputFileName = 'lucide-icons';
+const inputs = [`src/lucide-icons.ts`];
 const bundles = [
   {
     format: 'umd',
     inputs,
-    outputDir,
     minify: true,
   },
   {
     format: 'umd',
     inputs,
-    outputDir,
   },
   {
     format: 'cjs',
     inputs,
-    outputDir,
+    extension: 'cjs',
   },
   {
     format: 'esm',
-    inputs,
-    outputDir,
+    inputs: [...inputs, './src/dynamic.ts', './src/build.ts'],
     preserveModules: true,
+    extension: 'mjs',
   },
+  /*
+  {
+    format: 'esm',
+    inputs: ['src/dynamic.ts'],
+    outputFileName: 'dynamic',
+    external: [/src/],
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `${modulePath}.js`;
+      }
+    },
+  },
+  {
+    format: 'esm',
+    inputs: ['src/build.ts'],
+    outputFileName: 'build.mjs',
+    external: [/src/],
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `${modulePath}.js`;
+      }
+    },
+  },
+   */
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
-    inputs.map((input) => ({
-      input,
-      plugins: [
-        // This is for lucide plugin to replace an argument in createIcons so it is easier to use with UMD.
-        ...(format === 'umd'
-          ? [
-              replace({
-                'icons = {}': 'icons = iconAndAliases',
-                delimiters: ['', ''],
-                preventAssignment: false,
-              }),
-            ]
-          : []),
-        ...plugins({ pkg, minify }),
-      ],
-      output: {
-        name: outputFileName,
-        ...(preserveModules
-          ? {
+  .map(
+    ({
+       inputs,
+       outputDir = 'dist',
+       outputFile,
+       format,
+       minify,
+       preserveModules,
+       entryFileNames,
+       external = [],
+       paths,
+       extension = 'js',
+     }) =>
+      inputs.map((input) => ({
+        input,
+        plugins: [
+          ...plugins({pkg, minify}),
+        ],
+        external,
+        output: {
+          name: packageName,
+          entryFileNames,
+          ...(preserveModules
+            ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: `[name].${extension}`,
             }
-          : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            : {
+              file: outputFile ?? `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
             }),
-        format,
-        sourcemap: true,
-        preserveModules,
-      },
-    })),
+          paths,
+          format,
+          sourcemap: true,
+          preserveModules,
+          exports: 'named',
+          globals: {},
+          preserveModulesRoot: 'src',
+        },
+      })),
   )
   .flat();
 
-const typesFileConfig = {
-  input: inputs[0],
-  output: [
+export default [
+  ...[
+    outputFileName,
+    `${outputFileName}.prefixed`,
+    `${outputFileName}.suffixed`,
+    'dynamic',
+    'build'
+  ].map(filename => (
     {
-      file: `${outputDir}/${outputFileName}.d.ts`,
-      format: 'esm',
-    },
-  ],
-  plugins: [
-    dts({
-      include: ['src'],
-    }),
-  ],
-};
-
-export default [...configs, typesFileConfig];
+      input: `./src/${filename}.ts`,
+      output: [{
+        file: `dist/esm/${filename}.d.ts`, format: 'esm'
+      }, {
+        file: `dist/cjs/${filename}.d.cts`, format: 'cjs'
+      }, {
+        file: `dist/umd/${filename}.d.ts`, format: 'umd'
+      }],
+      plugins: [dts()],
+    })
+  ),
+  ...configs,
+];

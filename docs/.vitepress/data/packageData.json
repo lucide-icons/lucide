@@ -31,8 +31,26 @@
       }
     ]
   },
-  "lucide-vue-next": {
+  "@lucide/icons": {
+    "docsAlias": "lucide-icons",
+    "packageDirname": "lucide-icons",
     "order": 2,
+    "icon": "ts",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
+      }
+    ]
+  },
+  "lucide-vue-next": {
+    "order": 3,
     "icon": "vue-next",
     "shields": [
       {
@@ -48,7 +66,7 @@
     ]
   },
   "lucide-svelte": {
-    "order": 3,
+    "order": 4,
     "icon": "svelte",
     "shields": [
       {
@@ -64,7 +82,7 @@
     ]
   },
   "lucide-solid": {
-    "order": 4,
+    "order": 5,
     "icon": "solid",
     "shields": [
       {
@@ -80,7 +98,7 @@
     ]
   },
   "lucide-react-native": {
-    "order": 5,
+    "order": 6,
     "icon": "react-native",
     "shields": [
       {
@@ -96,7 +114,7 @@
     ]
   },
   "lucide-angular": {
-    "order": 6,
+    "order": 7,
     "icon": "angular",
     "shields": [
       {
@@ -112,7 +130,7 @@
     ]
   },
   "lucide-preact": {
-    "order": 7,
+    "order": 8,
     "icon": "preact",
     "shields": [
       {
@@ -130,7 +148,7 @@
   "@lucide/astro": {
     "docsAlias": "lucide-astro",
     "packageDirname": "astro",
-    "order": 8,
+    "order": 9,
     "icon": "astro",
     "iconDark": "astro-dark",
     "shields": [
@@ -147,7 +165,7 @@
     ]
   },
   "lucide-static": {
-    "order": 9,
+    "order": 10,
     "icon": "svg",
     "shields": [
       {

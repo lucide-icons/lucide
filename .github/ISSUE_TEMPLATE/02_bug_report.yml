@@ -23,6 +23,7 @@ body:
         - label: lucide-vue
         - label: lucide-vue-next
         - label: lucide-astro
+        - label: @lucide/icons
         - label: Figma plugin
         - label: source/main
         - label: other/not relevant

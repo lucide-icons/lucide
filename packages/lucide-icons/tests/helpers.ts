@@ -9,9 +9,10 @@ export const getOriginalSvg = (iconName: string, aliasName?: string, setAttrs = 
   const svgParsed = parseSync(svgContent);
 
   if (setAttrs) {
-    svgParsed.attributes['data-lucide'] = aliasName ?? iconName;
     svgParsed.attributes['class'] = `lucide lucide-${aliasName ?? iconName}`;
   }
 
   return stringify(svgParsed, { selfClose: false });
 };
+
+export const removeKeys = (svg: string) => svg.replaceAll(/ key="[^"]+"/g, '');

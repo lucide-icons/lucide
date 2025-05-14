@@ -1,4 +1,4 @@
-export * from './icons';
 export * as icons from './icons';
-export * from './aliases';
+export * from './icons';
+export * from './aliases/index';
 export * from './types';
