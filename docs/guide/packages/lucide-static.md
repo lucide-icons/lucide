@@ -206,7 +206,7 @@ Once included, use the format `icon-{kebab-case-name}`. You can copy icon names 
 
 If you're not using a package manager, you can download the font files directly from the [latest release](https://github.com/lucide-icons/lucide/releases/latest).
 
-### Node.js
+## Node.js
 
 You can also import Lucide icons in Node.js (CommonJS) projects:
 
