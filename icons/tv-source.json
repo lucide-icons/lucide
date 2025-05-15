@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel"
+  ],
+  "tags": [
+    "tv",
+    "television",
+    "source",
+    "input",
+    "square",
+    "rectangle",
+    "arrow"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "communication"
+  ]
+}
