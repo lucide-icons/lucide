@@ -16,7 +16,7 @@
     "plus",
     "minus",
     "plus-minus",
-    "maths",
+    "math",
     "code review",
     "coding",
     "version control",
@@ -25,7 +25,6 @@
   "categories": [
     "development",
     "files",
-    "account",
     "social"
   ]
 }

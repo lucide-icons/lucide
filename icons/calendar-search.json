@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "date",
@@ -10,7 +11,8 @@
     "month",
     "year",
     "events",
-    "search"
+    "search",
+    "lens"
   ],
   "categories": [
     "time"

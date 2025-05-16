@@ -2,18 +2,20 @@ import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { readSvg, toPascalCase } from '@lucide/helpers';
-import { deprecationReasonTemplate } from '../utils/deprecationReasonTemplate.mjs';
+import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.mjs';
 
-export default ({
+function generateIconFiles({
   iconNodes,
   outputDirectory,
   template,
   showLog = true,
   iconFileExtension = '.js',
+  separateIconFileExport = false,
+  separateIconFileExportExtension,
   pretty = true,
   iconsDir,
   iconMetaData,
-}) => {
+}) {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -38,7 +40,7 @@ export default ({
         })
       : '';
 
-    const elementTemplate = template({
+    const elementTemplate = await template({
       componentName,
       iconName,
       children,
@@ -46,6 +48,7 @@ export default ({
       deprecated,
       deprecationReason,
     });
+
     const output = pretty
       ? prettier.format(elementTemplate, {
           singleQuote: true,
@@ -56,9 +59,19 @@ export default ({
       : elementTemplate;
 
     await fs.promises.writeFile(location, output, 'utf-8');
+
+    if (separateIconFileExport) {
+      const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
+      const location = path.join(
+        iconsDistDirectory,
+        `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`,
+      );
+
+      await fs.promises.writeFile(location, output, 'utf-8');
+    }
   });
 
-  Promise.all(writeIconFiles)
+  return Promise.all(writeIconFiles)
     .then(() => {
       if (showLog) {
         console.log('Successfully built', icons.length, 'icons.');
@@ -67,4 +80,6 @@ export default ({
     .catch((error) => {
       throw new Error(`Something went wrong generating icon files,\n ${error}`);
     });
-};
+}
+
+export default generateIconFiles;
