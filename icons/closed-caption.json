@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "UsamaKhan"
+  ],
+  "tags": [
+    "tv",
+    "movie",
+    "video",
+    "closed captions",
+    "subtitles",
+    "subhead",
+    "transcription",
+    "transcribe",
+    "dialogue",
+    "accessibility"
+  ],
+  "categories": [
+    "accessibility",
+    "multimedia"
+  ]
+}
