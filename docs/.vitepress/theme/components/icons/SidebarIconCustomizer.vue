@@ -47,7 +47,6 @@ function resetStyle () {
   color.value = STYLE_DEFAULTS.color
   strokeWidth.value = STYLE_DEFAULTS.strokeWidth
   size.value = STYLE_DEFAULTS.size
-  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
@@ -120,16 +119,11 @@ const customizingActive = computed(() => {
       id="absolute-stroke-width"
       label="Absolute Stroke width"
     >
-    
       <Switch
-        id="absolute-stroke-width"
-        name="absolute-stroke-width"
-        :key="absoluteStrokeWidth"
-        class="switch"
-        :class="{ enabled: absoluteStrokeWidth }"
+        id="size"
+        name="size"
         v-model="absoluteStrokeWidth"
       />
-     
     </InputField>
   </div>
 </template>
