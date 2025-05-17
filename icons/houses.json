@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "homes",
+    "housing",
+    "estate",
+    "living",
+    "buildings",
+    "development",
+    "residences",
+    "residential",
+    "village",
+    "neighbourhood",
+    "accommodation",
+    "community",
+    "dwellings",
+    "architecture"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ]
+}
