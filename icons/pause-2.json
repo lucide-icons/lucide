@@ -8,11 +8,19 @@
     "audio",
     "video",
     "stop",
+    "or",
+    "operator",
+    "parallel",
     "bars",
     "lines",
-    "double"
+    "double",
+    "||",
+    "‖",
+    "⏸"
   ],
   "categories": [
-    "multimedia"
+    "multimedia",
+    "development",
+    "maths"
   ]
 }
