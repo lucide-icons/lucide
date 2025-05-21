@@ -20,9 +20,13 @@ packages/**/src/aliases/*.ts
 packages/**/src/aliases.ts
 !packages/**/src/aliases/index.ts
 packages/**/src/dynamicIconImports.ts
+packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
 packages/**/dynamicIconImports.d.ts
 packages/**/dynamicIconImports.js.map
+packages/**/dynamic.d.ts
+packages/**/dynamic.mjs.map
+packages/**/dynamic.mjs
 packages/**/LICENSE
 categories.json
 tags.json
@@ -41,3 +45,5 @@ docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
 docs/.vercel
 docs/.nitro
+.gitignore
+

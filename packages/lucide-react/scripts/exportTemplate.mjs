@@ -1,8 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
 
-export default ({ componentName, iconName, children, getSvg, deprecated, deprecationReason }) => {
-  const svgContents = getSvg();
+export default async ({
+  componentName,
+  iconName,
+  children,
+  getSvg,
+  deprecated,
+  deprecationReason,
+}) => {
+  const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
 
   return `
@@ -22,7 +29,7 @@ export const __iconNode: IconNode = ${JSON.stringify(children)}
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${componentName}', __iconNode);
+const ${componentName} = createLucideIcon('${iconName}', __iconNode);
 
 export default ${componentName};
 `;
