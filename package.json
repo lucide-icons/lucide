@@ -11,6 +11,7 @@
     "lucide-preact": "pnpm --filter lucide-preact",
     "lucide-solid": "pnpm --filter lucide-solid",
     "lucide-vue": "pnpm --filter lucide-vue",
+    "lucide-astro": "pnpm --filter @lucide/astro",
     "lucide-vue-next": "pnpm --filter lucide-vue-next",
     "lucide-svelte": "pnpm --filter lucide-svelte",
     "lucide-static": "pnpm --filter lucide-static",
@@ -54,13 +55,14 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-custom-alias": "^1.3.2",
-    "eslint-import-resolver-typescript": "^3.8.3",
+    "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.31.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
     "p-memoize": "^7.1.1",
     "prettier": "3.2.4",
+    "prettier-plugin-astro": "^0.14.1",
     "semver": "^7.7.1",
     "simple-git": "^3.27.0",
     "svgo": "^3.3.2",
@@ -70,7 +72,7 @@
   "engines": {
     "node": ">=23.0.0"
   },
-  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3",
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
   "pnpm": {
     "packageExtensions": {
       "vue-template-compiler": {
