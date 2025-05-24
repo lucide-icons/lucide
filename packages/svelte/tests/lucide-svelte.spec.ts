@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { render, cleanup } from '@testing-library/svelte';
-import { Smile, Pen, Edit2 } from '../src/lucide-svelte';
+import { Smile, Pen, Edit2 } from '../src/lucide-svelte.js';
 import TestSlots from './TestSlots.svelte';
 
 describe('Using lucide icon components', () => {
