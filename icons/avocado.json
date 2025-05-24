@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Harijohnson",
+    "hariwebchirpy"
+  ],
+  "tags": [
+    "avocado",
+    "fruit",
+    "healthy",
+    "nutrition",
+    "wellness",
+    "organic",
+    "food",
+    "plant-based",
+    "superfood",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
