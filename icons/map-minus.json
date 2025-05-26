@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MarianoFranzese"
+  ],
+  "tags": [
+    "location",
+    "navigation",
+    "travel",
+    "drop",
+    "delete",
+    "remove",
+    "erase"
+  ],
+  "categories": [
+    "location",
+    "navigation",
+    "travel"
+  ]
+}
