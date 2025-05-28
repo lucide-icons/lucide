@@ -189,4 +189,5 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://lucide.dev/',
   },
+  ignoreDeadLinks: 'localhostLinks'
 });
