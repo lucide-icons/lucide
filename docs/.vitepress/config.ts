@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import sidebar from './sidebar';
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -34,6 +35,18 @@ export default defineConfig({
         },
       ],
     },
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          preact: 'vscode-icons:file-type-preact'
+        }
+      }),
+    ],
+  },
+  markdown: {
+    config: (md) => {
+      md.use(groupIconMdPlugin)
+    }
   },
   head: [
     [
