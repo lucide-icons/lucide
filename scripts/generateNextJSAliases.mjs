@@ -1,6 +1,6 @@
 import path from 'path';
 import { promises as fs } from 'fs';
-import { getCurrentDirPath, readSvgDirectory } from './helpers.mjs';
+import { getCurrentDirPath, readSvgDirectory } from '../tools/build-helpers/helpers.mjs';
 
 // This is a special case convertion NextJS uses for their modularize imports. We try to follow the same convention, to generate the same imports.
 function pascalToKebabNextJSFlavour(str) {
@@ -18,7 +18,7 @@ function pascalToKebabNextJSFlavour(str) {
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 
-const svgFiles = readSvgDirectory(ICONS_DIR);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
 
 const iconNames = svgFiles.map((icon) => icon.split('.')[0]).reverse();
 
@@ -41,7 +41,8 @@ Promise.all(
         aliases.push(iconNameKebabCaseNextjsFlavour);
       }
 
-      const output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
+      let output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
+      output = `${output}\n`;
       fs.writeFile(path.resolve(ICONS_DIR, `${iconName}.json`), output, 'utf-8');
     }
   }),

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+
+  "jsc": {
+    "parser": {
+      "syntax": "ecmascript",
+      "jsx": true,
+      "dynamicImport": true
+    },
+    "target": "esnext",
+    "loose": false,
+    "externalHelpers": false,
+    "keepClassNames": true
+  },
+  "module": {
+    "type": "es6",
+    "strict": true,
+    "strictMode": true,
+    "lazy": false,
+    "noInterop": false
+  },
+  "minify": false,
+  "sourceMaps": true,
+  "env": {
+    "targets": {
+      "node": "current"
+    },
+    "mode": "entry",
+    "coreJs": "3"
+  }
+
+}

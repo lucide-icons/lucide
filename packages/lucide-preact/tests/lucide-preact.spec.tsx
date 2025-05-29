@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, cleanup } from '@testing-library/preact';
 import { Pen, Edit2, Grid, Droplet } from '../src/lucide-preact';
+import defaultAttributes from '../src/defaultAttributes';
 
 type AttributesAssertion = { attributes: Record<string, { value: string }> };
 
@@ -11,30 +12,43 @@ describe('Using lucide icon components', () => {
     expect(container.innerHTML).toMatchSnapshot();
   });
 
+  it('should render the icon with the default attributes', () => {
+    const { container } = render(<Grid />);
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
+    expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
+    expect(SVGElement).toHaveAttribute('height', String(defaultAttributes.height));
+    expect(SVGElement).toHaveAttribute('viewBox', defaultAttributes.viewBox);
+    expect(SVGElement).toHaveAttribute('fill', defaultAttributes.fill);
+    expect(SVGElement).toHaveAttribute('stroke', defaultAttributes.stroke);
+    expect(SVGElement).toHaveAttribute('stroke-width', String(defaultAttributes['stroke-width']));
+    expect(SVGElement).toHaveAttribute('stroke-linecap', defaultAttributes['stroke-linecap']);
+    expect(SVGElement).toHaveAttribute('stroke-linejoin', defaultAttributes['stroke-linejoin']);
+  });
+
   it('should adjust the size, stroke color and stroke width', () => {
-    const testId = 'grid-icon';
-    const { container, getByTestId } = render(
+    const { container } = render(
       <Grid
-        data-testid={testId}
         size={48}
         stroke="red"
         strokeWidth={4}
       />,
     );
 
-    const { attributes } = getByTestId(testId) as unknown as AttributesAssertion;
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('4');
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '4');
     expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should render the alias icon', () => {
-    const testId = 'pen-icon';
     const { container } = render(
       <Pen
-        data-testid={testId}
         size={48}
         stroke="red"
         strokeWidth={4}
@@ -47,7 +61,6 @@ describe('Using lucide icon components', () => {
 
     const { container: Edit2Container } = render(
       <Edit2
-        data-testid={testId}
         size={48}
         stroke="red"
         strokeWidth={4}
@@ -58,22 +71,21 @@ describe('Using lucide icon components', () => {
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    const testId = 'grid-icon';
-    const { container, getByTestId } = render(
+    const { container } = render(
       <Grid
-        data-testid={testId}
         size={48}
         stroke="red"
         absoluteStrokeWidth
       />,
     );
 
-    const { attributes } = getByTestId(testId) as unknown as AttributesAssertion;
+    const SVGElement = container.firstElementChild;
 
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('1');
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '1');
+
     expect(container.innerHTML).toMatchSnapshot();
   });
 
