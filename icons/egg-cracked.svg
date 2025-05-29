@@ -1,23 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" 
-     width="24" height="24" 
-     viewBox="0 0 24 24" 
-     fill="none" 
-     stroke="currentColor" 
-     stroke-width="2" 
-     stroke-linecap="round" 
-     stroke-linejoin="round" 
-     class="lucide lucide-egg-cracked">
-
-  
-  <path d="M12 22
-           c6.23-.05 7.87-5.57 7.5-10
-           -.36-4.34-3.95-9.96-7.5-10
-           -3.55.04-7.14 5.66-7.5 10
-           -.37 4.43 1.27 9.95 7.5 10z
-
-           M7 13
-           Q9 12.5 10 13.5
-           Q11 14.5 12 13
-           Q13 11.5 14 13
-           Q15 14.5 17 13"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 22c6.23-.05 7.87-5.57 7.5-10-.36-4.34-3.95-9.96-7.5-10-3.55.04-7.14 5.66-7.5 10-.37 4.43 1.27 9.95 7.5 10" />
+  <path d="M7 13q2-.5 3 .5t2-.5 2 0 3 0" />
 </svg>
