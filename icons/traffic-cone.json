@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
   "tags": [
     "roadworks",
