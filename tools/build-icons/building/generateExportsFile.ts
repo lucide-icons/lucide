@@ -2,11 +2,12 @@ import path from 'path';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
+import type { IconNode } from '../types.ts';
 
 export default async function generateExportFile(
-  inputEntry,
-  outputDirectory,
-  iconNodes,
+  inputEntry: string,
+  outputDirectory: string,
+  iconNodes: IconNode,
   exportModuleNameCasing: 'camel' | 'pascal',
   iconFileExtension = '',
 ) {

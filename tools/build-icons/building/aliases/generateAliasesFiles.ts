@@ -2,8 +2,22 @@ import path from 'path';
 import fs from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
-import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate';
-import getExportString from './getExportString';
+import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate.ts';
+import getExportString from './getExportString.ts';
+import type { IconMetadata, IconNode } from '../../types.ts';
+
+interface GenerateAliasesFilesOptions {
+  iconNodes: IconNode;
+  outputDirectory: string;
+  fileExtension: string;
+  iconFileExtension?: string;
+  iconMetaData: Record<string, IconMetadata>;
+  aliasImportFileExtension: string;
+  aliasNamesOnly?: boolean;
+  separateAliasesFile?: boolean;
+  separateAliasesFileExtension?: string;
+  showLog?: boolean;
+}
 
 export default async function generateAliasesFiles({
   iconNodes,
@@ -16,7 +30,7 @@ export default async function generateAliasesFiles({
   separateAliasesFile = false,
   separateAliasesFileExtension,
   showLog = true,
-}) {
+}: GenerateAliasesFilesOptions) {
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
   const icons = Object.keys(iconNodes);
 
@@ -47,7 +61,7 @@ export default async function generateAliasesFiles({
           return {
             name: alias,
             deprecated: false,
-          };
+          } as const;
         }
         return alias;
       });
@@ -88,7 +102,8 @@ export default async function generateAliasesFiles({
         await Promise.all(
           iconAliases.map(async (alias) => {
             const componentNameAlias = toPascalCase(alias.name);
-            const deprecationReason = alias.deprecated
+            const deprecationReason =
+              alias.deprecated
               ? deprecationReasonTemplate(alias.deprecationReason, {
                   componentName: toPascalCase(iconName),
                   iconName,

@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
 import { readSvg, toPascalCase } from '@lucide/helpers';
-import deprecationReasonTemplate from '../utils/deprecationReasonTemplate';
-import { Path, TemplateFunction } from '../types';
-import { INode } from 'svgson';
+import deprecationReasonTemplate from '../utils/deprecationReasonTemplate.ts';
+import type { IconMetadata, IconNode, Path, TemplateFunction } from '../types.ts';
+import { type INode } from 'svgson';
 
 interface GenerateIconFiles {
   iconNodes: Record<string, INode>;
@@ -16,7 +16,7 @@ interface GenerateIconFiles {
   separateIconFileExportExtension?: string;
   pretty?: boolean;
   iconsDir: string;
-  iconMetaData: Record<string, { deprecated?: boolean; toBeRemovedInVersion?: string | null; deprecationReason?: string }>;
+  iconMetaData: Record<string, IconMetadata>;
 }
 
 function generateIconFiles({
@@ -42,12 +42,12 @@ function generateIconFiles({
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtension}`);
     const componentName = toPascalCase(iconName);
 
-    const children = iconNodes[iconName].children.map(({ name, attributes }) => [name, attributes]);
+    const children: IconNode = iconNodes[iconName].children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];
-    const deprecationReason = deprecated
-      ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason, {
+    const { deprecated = false, toBeRemovedInVersion = undefined } = iconMetaData[iconName];
+    const deprecationReason =  iconMetaData[iconName]?.deprecated
+      ? deprecationReasonTemplate(iconMetaData[iconName]?.deprecationReason, {
           componentName,
           iconName,
           toBeRemovedInVersion,
@@ -64,7 +64,7 @@ function generateIconFiles({
     });
 
     const output = pretty
-      ? prettier.format(elementTemplate, {
+      ? await prettier.format(elementTemplate, {
           singleQuote: true,
           trailingComma: 'all',
           printWidth: 100,

@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { PathLike } from 'fs';
+import { type PathLike } from 'fs';
 import fs from 'fs/promises';
 import path from 'path';
 

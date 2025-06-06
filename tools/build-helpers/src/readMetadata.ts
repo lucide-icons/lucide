@@ -10,7 +10,11 @@ import path from 'path';
  * @returns {object} The metadata for the icon or category
  */
 export const readMetadata = async (fileName: string, directory: string): Promise<unknown> => {
-  const metadataFileContent = await fs.readFile(path.join(directory, fileName), 'utf-8');
+  let metadataFileContent: string | Buffer = await fs.readFile(path.join(directory, fileName), 'utf-8');
+
+  if(Buffer.isBuffer(metadataFileContent)) {
+    metadataFileContent = metadataFileContent.toString('utf-8');
+  }
 
   return JSON.parse(metadataFileContent);
 };

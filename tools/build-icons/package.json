@@ -18,7 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
-    "@types/node": "^12.11.1"
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22"
   },
   "dependencies": {
     "minimist": "^1.2.7",

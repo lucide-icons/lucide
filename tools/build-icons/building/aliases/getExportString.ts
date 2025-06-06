@@ -2,7 +2,7 @@ const getExportString = (
   componentName: string,
   iconName: string,
   aliasImportFileExtension: string,
-  deprecated: boolean,
+  deprecated?: boolean,
   deprecationReason = '',
 ) =>
   deprecated

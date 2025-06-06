@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
+import base64SVG from '@lucide/build-icons/utils/base64SVG.ts';
 
 export default async ({
   componentName,
@@ -8,7 +8,7 @@ export default async ({
   getSvg,
   deprecated,
   deprecationReason,
-}) => {
+}: ) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
 

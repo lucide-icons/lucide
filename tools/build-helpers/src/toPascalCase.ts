@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { toCamelCase } from './toCamelCase.mjs';
+import { toCamelCase } from './toCamelCase.ts';
 
 /**
  * Converts string to PascalCase

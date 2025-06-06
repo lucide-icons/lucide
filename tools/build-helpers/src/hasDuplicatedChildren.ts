@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { generateHashedKey } from './generateHashedKey.mjs';
+import { generateHashedKey } from './generateHashedKey.ts';
 
 /**
  * Checks if array of items contains duplicated items

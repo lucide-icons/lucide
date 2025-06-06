@@ -13,7 +13,28 @@ import generateAliasesFiles from './building/aliases/generateAliasesFiles.ts';
 import getIconMetaData from './utils/getIconMetaData.ts';
 import generateDynamicImports from './building/generateDynamicImports.ts';
 
-const cliArguments = getArgumentOptions(process.argv.slice(2));
+interface CliArguments {
+  renderUniqueKey?: boolean;
+  templateSrc?: string;
+  silent?: boolean;
+  iconFileExtension?: string;
+  importImportFileExtension?: string;
+  exportFileName?: string;
+  exportModuleNameCasing?: 'camel' | 'pascal';
+  withAliases?: boolean;
+  aliasNamesOnly?: boolean;
+  withDynamicImports?: boolean;
+  separateAliasesFile?: boolean;
+  separateAliasesFileExtension?: string;
+  separateIconFileExport?: boolean;
+  separateIconFileExportExtension?: string;
+  aliasesFileExtension?: string;
+  aliasImportFileExtension?: string;
+  pretty?: boolean;
+  output: string | undefined;
+}
+
+const cliArguments = getArgumentOptions(process.argv.slice(2)) as unknown as CliArguments;
 
 const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
@@ -21,6 +42,8 @@ const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build'
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
 }
+
+
 
 const {
   renderUniqueKey = false,
@@ -51,6 +74,9 @@ async function buildIcons() {
 
   const icons = await renderIconsObject(svgFiles, ICONS_DIR, renderUniqueKey);
 
+  console.log(icons);
+
+
   const { default: iconFileTemplate } = await import(path.resolve(process.cwd(), templateSrc));
 
   const iconMetaData = await getIconMetaData(ICONS_DIR);
@@ -64,7 +90,7 @@ async function buildIcons() {
     iconFileExtension,
     separateIconFileExport,
     separateIconFileExportExtension,
-    pretty: JSON.parse(pretty),
+    pretty: JSON.parse(String(pretty)),
     iconsDir: ICONS_DIR,
     iconMetaData,
   });

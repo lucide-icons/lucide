@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { hash } from './hash.mjs';
+import { hash } from './hash.ts';
 
 /**
  * Generate Hashed string based on name and attributes

@@ -1,7 +1,6 @@
-/* eslint-disable import/prefer-default-export */
 import fs from 'fs/promises';
 import path from 'path';
-import { readMetadata } from './readMetadata.mjs';
+import { readMetadata } from './readMetadata.ts';
 
 /**
  * Reads metadata from the icons/categories directories
