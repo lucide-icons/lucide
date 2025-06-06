@@ -7,7 +7,7 @@ import { generateHashedKey } from './generateHashedKey.mjs';
  * @param {array} children an array of items
  * @returns {Boolean} if items contains duplicated items.
  */
-export const hasDuplicatedChildren = (children) => {
+export const hasDuplicatedChildren = (children: Array<{ name: string; attributes: Record<string, unknown> }>): boolean => {
   const hashedKeys = children.map(generateHashedKey);
 
   return !hashedKeys.every(

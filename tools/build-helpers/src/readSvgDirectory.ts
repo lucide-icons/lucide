@@ -10,7 +10,10 @@ import path from 'path';
  * @param {string} fileExtension
  * @returns {array} An array of file paths containing svgs
  */
-export const readSvgDirectory = async (directory: PathLike, fileExtension = '.svg'): Promise<string[]> => {
+export const readSvgDirectory = async (
+  directory: PathLike,
+  fileExtension: string = '.svg',
+): Promise<string[]> => {
   const directoryContents = await fs.readdir(directory);
 
   return directoryContents.filter((file) => path.extname(file) === fileExtension);

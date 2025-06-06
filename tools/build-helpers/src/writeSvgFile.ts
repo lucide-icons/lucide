@@ -9,5 +9,9 @@ import path from 'path';
  * @param {string} outputDirectory
  * @param {string} content
  */
-export const writeSvgFile = (fileName, outputDirectory, content) =>
+export const writeSvgFile = (
+  fileName: string,
+  outputDirectory: string,
+  content: string,
+): Promise<void> =>
   fs.writeFile(path.join(outputDirectory, fileName), content, 'utf-8');

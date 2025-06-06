@@ -8,5 +8,5 @@ import path from 'path';
  * @param {string} fileName
  * @param {string} directory
  */
-export const readSvg = (fileName, directory) =>
+export const readSvg = (fileName: string, directory: string): Promise<string> =>
   fs.readFile(path.join(directory, fileName), 'utf-8');

@@ -5,7 +5,7 @@
  * @param {string} string
  * @returns string
  */
-export function minifySvg(string) {
+export function minifySvg(string: string): string {
   return string
     ? string
         .replace(/>[\r\n ]+</g, '><')

@@ -9,5 +9,9 @@ import path from 'path';
  * @param {string} fileName
  * @param {string} outputDirectory
  */
-export const writeFile = (content, fileName, outputDirectory) =>
+export const writeFile = (
+  content: string,
+  fileName: string,
+  outputDirectory: string,
+): Promise<void> =>
   fs.writeFile(path.join(outputDirectory, fileName), content, 'utf-8');

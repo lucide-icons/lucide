@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import fs from 'fs/promises';
+import fs from 'fs';
 import path from 'path';
 import { writeFile } from './writeFile.mjs';
 
@@ -10,7 +10,11 @@ import { writeFile } from './writeFile.mjs';
  * @param {string} fileName
  * @param {string} outputDirectory
  */
-export const writeFileIfNotExists = (content, fileName, outputDirectory) => {
+export const writeFileIfNotExists = (
+  content: string,
+  fileName: string,
+  outputDirectory: string,
+): void => {
   if (!fs.existsSync(path.join(outputDirectory, fileName))) {
     writeFile(content, fileName, outputDirectory);
   }

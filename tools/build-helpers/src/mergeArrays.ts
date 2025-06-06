@@ -6,7 +6,7 @@
  * @param {array} b
  * @returns {array}
  */
-export const mergeArrays = (a, b) => {
+export const mergeArrays = <T>(a: T[], b: T[]): T[] => {
   a = a.concat(b);
   a = a.filter((i, p) => a.indexOf(i) === p);
   return a;

@@ -6,7 +6,7 @@
  * @param {number} seed
  * @returns {string} A hashed string of 6 characters
  */
-export const hash = (string, seed = 5381) => {
+export const hash = (string: string, seed: number = 5381): string => {
   let i = string.length;
 
   while (i) {

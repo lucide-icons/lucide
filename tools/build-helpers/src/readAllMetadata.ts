@@ -9,7 +9,7 @@ import { readMetadata } from './readMetadata.mjs';
  * @param {string} directory
  * @returns {object} A map of icon or category metadata
  */
-export const readAllMetadata = async (directory) => {
+export const readAllMetadata = async (directory: string): Promise<Record<string, unknown>> => {
   const directoryContent = await fs.readdir(directory);
 
   const metaDataPromises = directoryContent

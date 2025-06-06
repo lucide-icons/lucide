@@ -8,5 +8,5 @@ import path from 'path';
  * @param {string} fileName
  * @param {string} outputDirectory
  */
-export const resetFile = (fileName, outputDirectory) =>
+export const resetFile = (fileName: string, outputDirectory: string): Promise<void> =>
   fs.writeFile(path.join(outputDirectory, fileName), '', 'utf-8');

@@ -8,4 +8,5 @@ import { fileURLToPath } from 'url';
  * @param {string} currentPath
  * @returns {string}
  */
-export const getCurrentDirPath = (currentPath) => path.dirname(fileURLToPath(currentPath));
+export const getCurrentDirPath = (currentPath: string): string =>
+  path.dirname(fileURLToPath(currentPath));

@@ -3,6 +3,21 @@ import path from 'path';
 import prettier from 'prettier';
 import { readSvg, toPascalCase } from '@lucide/helpers';
 import deprecationReasonTemplate from '../utils/deprecationReasonTemplate';
+import { Path, TemplateFunction } from '../types';
+import { INode } from 'svgson';
+
+interface GenerateIconFiles {
+  iconNodes: Record<string, INode>;
+  outputDirectory: Path;
+  template: TemplateFunction;
+  showLog?: boolean;
+  iconFileExtension?: string;
+  separateIconFileExport?: boolean;
+  separateIconFileExportExtension?: string;
+  pretty?: boolean;
+  iconsDir: string;
+  iconMetaData: Record<string, { deprecated?: boolean; toBeRemovedInVersion?: string | null; deprecationReason?: string }>;
+}
 
 function generateIconFiles({
   iconNodes,
@@ -15,7 +30,7 @@ function generateIconFiles({
   pretty = true,
   iconsDir,
   iconMetaData,
-}) {
+}: GenerateIconFiles) {
   const icons = Object.keys(iconNodes);
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
 
@@ -27,8 +42,7 @@ function generateIconFiles({
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtension}`);
     const componentName = toPascalCase(iconName);
 
-    let { children } = iconNodes[iconName];
-    children = children.map(({ name, attributes }) => [name, attributes]);
+    const children = iconNodes[iconName].children.map(({ name, attributes }) => [name, attributes]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
     const { deprecated = false, toBeRemovedInVersion = null } = iconMetaData[iconName];

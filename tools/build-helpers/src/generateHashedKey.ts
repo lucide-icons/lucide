@@ -9,4 +9,10 @@ import { hash } from './hash.mjs';
  * @param {object} seed.attributes An object of SVGElement Attrbutes
  * @returns {string} A hashed string of 6 characters
  */
-export const generateHashedKey = ({ name, attributes }) => hash(JSON.stringify([name, attributes]));
+export const generateHashedKey = ({
+  name,
+  attributes,
+}: {
+  name: string;
+  attributes: Record<string, unknown>;
+}): string => hash(JSON.stringify([name, attributes]));

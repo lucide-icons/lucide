@@ -9,5 +9,9 @@ import path from 'path';
  * @param {string} fileName
  * @param {string} outputDirectory
  */
-export const appendFile = (content, fileName, outputDirectory) =>
+export const appendFile = (
+  content: string,
+  fileName: string,
+  outputDirectory: string,
+): Promise<void> =>
   fs.appendFile(path.join(outputDirectory, fileName), content, 'utf-8');

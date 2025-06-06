@@ -1,7 +1,7 @@
 export type TemplateFunction = (params: {
     componentName: string;
     iconName: string;
-    children: Array<[string, Record<string, any>]>;
+    children: (string | Record<string, string>)[][];
     getSvg: () => string;
     deprecated?: boolean;
     deprecationReason?: string;
