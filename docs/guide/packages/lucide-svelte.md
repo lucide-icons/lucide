@@ -274,10 +274,10 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 ```svelte
 <script>
 import { Icon } from '@lucide/svelte';
-import { burger, sausage } from '@lucide/lab';
+import { pear, sausage } from '@lucide/lab';
 </script>
 
-<Icon iconNode={burger} />
+<Icon iconNode={pear} />
 <Icon iconNode={sausage} color="red"/>
 ```
 
