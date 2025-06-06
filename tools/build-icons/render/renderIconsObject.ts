@@ -1,16 +1,16 @@
 import { basename } from 'path';
-import { parseSync } from 'svgson';
+import { INode, parseSync } from 'svgson';
 import { generateHashedKey, readSvg, hasDuplicatedChildren } from '@lucide/helpers';
 
 /**
  * Build an object in the format: `{ <name>: <contents> }`.
  * @param {string[]} svgFiles - A list of filenames.
- * @param {Function} getSvg - A function that returns the contents of an SVG file given a filename.
+ * @param {string} iconsDirectory - The directory where the icons are stored.
  * @returns {Object}
  */
 export default async function generateIconObject(
-  svgFiles,
-  iconsDirectory,
+  svgFiles: string[],
+  iconsDirectory: string,
   renderUniqueKey = false,
 ) {
   const svgsContentPromises = svgFiles.map(async (svgFile) => {
@@ -39,7 +39,7 @@ export default async function generateIconObject(
 
   const svgsContents = await Promise.all(svgsContentPromises);
 
-  return svgsContents.reduce((icons, icon) => {
+  return svgsContents.reduce<Record<string, INode>>((icons, icon) => {
     icons[icon.name] = icon.contents;
     return icons;
   }, {});

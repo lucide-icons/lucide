@@ -10,6 +10,8 @@
     "esModuleInterop": true,
     "lib": ["esnext"],
     "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "sourceMap": true,
     "outDir": "./dist",
   },

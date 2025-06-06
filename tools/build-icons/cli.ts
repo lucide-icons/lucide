@@ -4,14 +4,14 @@ import path from 'path';
 import getArgumentOptions from 'minimist';
 
 import { readSvgDirectory } from '@lucide/helpers';
-import renderIconsObject from './render/renderIconsObject';
-import generateIconFiles from './building/generateIconFiles';
-import generateExportsFile from './building/generateExportsFile';
+import renderIconsObject from './render/renderIconsObject.ts';
+import generateIconFiles from './building/generateIconFiles.ts';
+import generateExportsFile from './building/generateExportsFile.ts';
 
-import generateAliasesFiles from './building/aliases/generateAliasesFiles';
+import generateAliasesFiles from './building/aliases/generateAliasesFiles.ts';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
-import getIconMetaData from './utils/getIconMetaData';
-import generateDynamicImports from './building/generateDynamicImports';
+import getIconMetaData from './utils/getIconMetaData.ts';
+import generateDynamicImports from './building/generateDynamicImports.ts';
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 

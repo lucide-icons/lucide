@@ -1,7 +1,8 @@
 import path from 'path';
 import { readSvgDirectory } from '@lucide/helpers';
+import { Path } from '../types';
 
-async function getAliases(iconDirectory) {
+async function getAliases(iconDirectory: Path) {
   const iconJsons = await readSvgDirectory(iconDirectory, '.json');
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile) => {

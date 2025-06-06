@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import { PathLike } from 'fs';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -9,7 +10,7 @@ import path from 'path';
  * @param {string} fileExtension
  * @returns {array} An array of file paths containing svgs
  */
-export const readSvgDirectory = async (directory, fileExtension = '.svg') => {
+export const readSvgDirectory = async (directory: PathLike, fileExtension = '.svg'): Promise<string[]> => {
   const directoryContents = await fs.readdir(directory);
 
   return directoryContents.filter((file) => path.extname(file) === fileExtension);

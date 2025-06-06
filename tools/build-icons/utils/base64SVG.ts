@@ -1,4 +1,4 @@
-const base64SVG = (svgContents) =>
+const base64SVG = (svgContents: string) =>
   Buffer.from(
     svgContents
       .replace('\n', '')
