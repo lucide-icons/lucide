@@ -164,22 +164,26 @@ The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate 
 #### Running the Docs Website Locally
 
 To test the docs website locally, follow these steps:
+
 1. **Navigate to the docs directory**
-    ```sh
-    cd docs
-    ```
+
+```sh
+cd docs
+```
+
 2. **Start the Local Development Server**
-    ```sh
-    pnpm run docs:dev
-    ```
+
+```sh
+  pnpm run docs:dev
+```
+
 3. **Open the Website Locally**
-    Vitepress should open with the following format: 
 
-    VitePress dev server is running at:
-    - **Local**: http://localhost:3000/
-    - **Network**: http://192.168.x.x:3000/
+Vitepress should open with the following format:
 
-
+VitePress dev server is running at:
+- **Local**: `http://localhost:3000/`
+- **Network**: `http://192.168.x.x:3000/`
 
 ### Guides
 
@@ -192,8 +196,6 @@ All the icons of lucide in SVG format. These will be used as source for all the 
 ### Packages
 
 Includes all the (npm) packages of lucide.
-
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
 
 ### Scripts
 
