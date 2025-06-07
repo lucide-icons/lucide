@@ -1,16 +1,18 @@
 <!-- Thank you for contributing! -->
 
+<!--
+PR Title Guidelines:
+
+Please use the format: <type>(<scope>): <short description>
+
+Example: feat(icons): added `camera` icon
+
+Available types: fix, feat, perf, docs, style, refactor, test, chore, ci, build
+Common scopes: icons, docs, studio, site, dev
+-->
+
 <!-- Insert `closes #issueNumber` here if merging this PR will resolve an existing issue -->
-
-## What is the purpose of this pull request?
-<!-- Please choose one of the following, and put an "x" next to it. -->
-- [ ] New Icon
-- [ ] Bug fix
-- [ ] New Feature
-- [ ] Documentation update
-- [ ] Other:
-
-### Description
+## Description
 <!-- Please insert your description here and provide info about the "what" this PR is contribution -->
 
 ### Icon use case <!-- ONLY for new icons, remove this part if not icon PR -->
@@ -47,7 +49,7 @@
 - [ ] I've made sure that the icons look sharp on low DPI displays.
 - [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
 - [ ] I've made sure that the icons are visually centered.
-- [ ] I've correctly optimized all icons to two points of precision.
+- [ ] I've correctly optimized all icons to three points of precision.
 
 ## Before Submitting <!-- For every PR! -->
 <!-- All of these requirements must be fulfilled. -->

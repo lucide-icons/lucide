@@ -10,8 +10,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
      stroke-width="4"
      stroke-linecap="round"
      stroke-linejoin="round"
-     class="lucide lucide-grid3x3 "
-     data-testid="grid-icon"
+     class="lucide lucide-grid3x3 lucide-grid-3x3"
 >
   <rect width="18"
         height="18"
@@ -41,8 +40,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-width="1"
      stroke-linecap="round"
      stroke-linejoin="round"
-     class="lucide lucide-grid3x3 "
-     data-testid="grid-icon"
+     class="lucide lucide-grid3x3 lucide-grid-3x3"
 >
   <rect width="18"
         height="18"
@@ -72,7 +70,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
      stroke-width="2"
      stroke-linecap="round"
      stroke-linejoin="round"
-     class="lucide lucide-grid3x3 "
+     class="lucide lucide-grid3x3 lucide-grid-3x3"
 >
   <rect width="18"
         height="18"

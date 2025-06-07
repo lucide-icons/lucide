@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "taichimaeda",
+    "ericfennis"
+  ],
+  "tags": [
+    "robot",
+    "ai",
+    "chat",
+    "assistant"
+  ],
+  "categories": [
+    "development",
+    "social"
+  ]
+}
