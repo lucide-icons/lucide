@@ -30,10 +30,10 @@ bun add lucide
 
 ```html
 <!-- Development version -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://www.unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
 <!-- Production version -->
-<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://www.unpkg.com/lucide@latest"></script>
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ Here is a complete example with unpkg
   <i data-lucide="x"></i>
   <i data-lucide="menu"></i>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://www.unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
   </script>
