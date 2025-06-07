@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
-import { Icon } from '../src/lucide-svelte';
+import { Icon } from '../src/lucide-svelte.js';
 
-import { airVent } from './testIconNodes';
+import { airVent } from './testIconNodes.js';
 
 describe('Using Icon Component', () => {
   it('should render icon based on a iconNode', async () => {
