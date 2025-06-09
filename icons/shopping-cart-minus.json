@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+      "Veatec22"
+  ],
+  "tags": [
+    "trolley",
+    "cart",
+    "basket",
+    "e-commerce",
+    "store",
+    "purchase",
+    "products",
+    "items",
+    "ingredients",
+    "remove",
+    "minus",
+    "buy"
+  ],
+  "categories": [
+    "shopping"
+  ]
+}
