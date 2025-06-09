@@ -5,9 +5,10 @@ import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
 import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate.ts';
 import getExportString from './getExportString.ts';
 import type { IconMetadata, IconNode } from '../../types.ts';
+import { type INode } from 'svgson';
 
 interface GenerateAliasesFilesOptions {
-  iconNodes: IconNode;
+  iconNodes: Record<string, INode>;
   outputDirectory: string;
   fileExtension: string;
   iconFileExtension?: string;

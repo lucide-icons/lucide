@@ -1,7 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
+import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default async ({
+export default defineExportTemplate(async ({
   componentName,
   iconName,
   children,
@@ -13,26 +13,21 @@ export default async ({
   const svgBase64 = base64SVG(svgContents);
 
   return `
-import Icon from '../Icon';
-import type { IconNode, LucideProps } from '../types';
-
-const iconNode: IconNode = ${JSON.stringify(children)};
+import createLucideIcon from '../createLucideIcon';
 
 /**
  * @component @name ${componentName}
  * @description Lucide SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide-solid - Documentation
+ * @see https://lucide.dev/guide/packages/lucide-preact - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = (props: LucideProps) => (
-  <Icon {...props} iconNode={iconNode} name="${iconName}" />
-)
+const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)});
 
 export default ${componentName};
 `;
-};
+});

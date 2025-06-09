@@ -13,6 +13,20 @@
   "engines": {
     "node": ">= 23"
   },
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts"
+    },
+    "./cli": {
+      "import": "./cli.ts",
+      "require": "./cli.ts"
+    },
+    "./utils/*": {
+      "import": "./utils/*.ts",
+      "require": "./utils/*.ts"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

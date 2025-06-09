@@ -1,14 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.ts';
+import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default async ({
+export default defineExportTemplate(async ({
   componentName,
   iconName,
   children,
   getSvg,
   deprecated,
   deprecationReason,
-}: ) => {
+}) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
 
@@ -30,4 +30,4 @@ const ${componentName}: IconNode =  ${JSON.stringify(children)}
 
 export default ${componentName};
 `;
-};
+});

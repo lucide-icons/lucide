@@ -1,4 +1,4 @@
-import { INode } from "svgson";
+import { type INode } from "svgson";
 
 export type SVGProps = Record<string, string | number>;
 

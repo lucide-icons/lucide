@@ -1,7 +1,12 @@
 import { writeFile } from 'fs/promises';
 import { existsSync, unlinkSync, mkdirSync } from 'fs';
+import { type SVGFile } from './readSvgs.mts';
 
-export default async function copyIcons(parsedSvgs, packageDir, license) {
+export default async function copyIcons(
+  parsedSvgs: SVGFile[],
+  packageDir: string,
+  license: string
+) {
   const iconsDirectory = `${packageDir}/icons`;
 
   if (existsSync(iconsDirectory)) {

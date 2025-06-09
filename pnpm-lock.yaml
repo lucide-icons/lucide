@@ -570,6 +570,10 @@ importers:
         version: 1.6.1(@types/node@22.15.30)(jsdom@20.0.3)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.31.6)
 
   packages/lucide-static:
+    dependencies:
+      '@types/node':
+        specifier: ^22.15.30
+        version: 22.15.30
     devDependencies:
       '@lucide/build-icons':
         specifier: workspace:*
@@ -16647,14 +16651,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -16697,7 +16701,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -18261,20 +18265,20 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 4.19.5
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/cookie@0.4.1': {}
 
@@ -18282,7 +18286,7 @@ snapshots:
 
   '@types/cors@2.8.17':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/debug@4.1.12':
     dependencies:
@@ -18308,7 +18312,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.5':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -18322,16 +18326,16 @@ snapshots:
 
   '@types/fs-extra@8.1.2':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/hast@3.0.4':
     dependencies:
@@ -18341,7 +18345,7 @@ snapshots:
 
   '@types/http-proxy@1.17.15':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/istanbul-lib-coverage@2.0.4': {}
 
@@ -18399,7 +18403,7 @@ snapshots:
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/node@12.20.55': {}
 
@@ -18439,7 +18443,7 @@ snapshots:
 
   '@types/resolve@1.17.1':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/resolve@1.20.2': {}
 
@@ -18447,11 +18451,11 @@ snapshots:
 
   '@types/sax@1.2.4':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/scheduler@0.16.3': {}
 
@@ -18462,7 +18466,7 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -18471,12 +18475,12 @@ snapshots:
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       '@types/send': 0.17.4
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/stack-utils@2.0.1': {}
 
@@ -18489,7 +18493,7 @@ snapshots:
 
   '@types/ws@8.5.12':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -20158,7 +20162,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -20169,7 +20173,7 @@ snapshots:
 
   chromium-edge-launcher@0.2.0:
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -20979,7 +20983,7 @@ snapshots:
     dependencies:
       '@types/cookie': 0.4.1
       '@types/cors': 2.8.17
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.4.2
@@ -23037,7 +23041,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -23047,7 +23051,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -23074,7 +23078,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       jest-util: 29.7.0
 
   jest-regex-util@29.6.3: {}
@@ -23086,7 +23090,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -23103,13 +23107,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.15.30
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1

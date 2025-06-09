@@ -1,7 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
+import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default async ({
+export default defineExportTemplate(async ({
   componentName,
   iconName,
   children,
@@ -39,4 +39,4 @@ const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(keyles
 
 export default ${componentName};
 `;
-};
+});
