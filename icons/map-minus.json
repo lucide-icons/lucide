@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "MarianoFranzese"
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "MarianoFranzese",
+    "jguddas"
   ],
   "tags": [
     "location",
