@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "qubrat"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "columns",
+    "blocks",
+    "plot",
+    "land",
+    "geometry",
+    "measure",
+    "size",
+    "width",
+    "height",
+    "distance",
+    "surface area",
+    "square meter",
+    "acre",
+    "window",
+    "skylight"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "design",
+    "maths"
+  ]
+}
