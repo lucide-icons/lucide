@@ -2,7 +2,7 @@ import path from 'path';
 import { getCurrentDirPath, readSvgDirectory } from '../../tools/build-helpers/helpers.ts';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
-import { renameIcon } from './renameIcon.function.mjs';
+import { renameIcon } from './renameIcon.function.mts';
 import { type Arguments } from 'yargs';
 
 async function main() {
