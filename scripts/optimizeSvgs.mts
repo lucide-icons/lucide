@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { readSvgDirectory, writeSvgFile } from '../tools/build-helpers/helpers.ts';
-import processSvg from './render/processSvg.mjs';
+import processSvg from './render/processSvg.mts';
 
 const ICONS_DIR = path.resolve(process.cwd(), 'icons');
 
