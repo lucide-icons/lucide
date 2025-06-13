@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "tags": [
+    "purse"
+  ],
+  "categories": [
+    "shopping",
+    "transportation"
+  ]
+}
