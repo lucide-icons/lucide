@@ -5,19 +5,19 @@
     "csandman",
     "ericfennis",
     "karsa-mistmere",
-    "danielbayley",
-    "jguddas"
+    "jguddas",
+    "lscheibel"
   ],
   "tags": [
-    "signal",
-    "broadcast",
-    "connectivity",
-    "live",
-    "frequency"
+    "sync",
+    "network",
+    "success",
+    "done",
+    "completed",
+    "saved",
+    "persisted"
   ],
   "categories": [
-    "devices",
-    "multimedia",
-    "social"
+    "development"
   ]
 }
