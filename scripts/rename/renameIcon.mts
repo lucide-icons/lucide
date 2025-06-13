@@ -1,6 +1,6 @@
 import path from 'path';
-import { getCurrentDirPath } from '../../tools/build-helpers/helpers.mjs';
-import { renameIcon } from './renameIcon.function.mjs';
+import { getCurrentDirPath } from '../../tools/build-helpers/helpers.ts';
+import { renameIcon } from './renameIcon.function.mts';
 
 async function main() {
   const oldName = path.basename(process.argv[2]).replace(/\.[^/.]+$/, '');
@@ -20,7 +20,11 @@ async function main() {
     const ICONS_DIR = path.resolve(currentDir, '../../icons');
     await renameIcon(ICONS_DIR, oldName, newName);
   } catch (err) {
-    console.error(err.message);
+    if(err instanceof Error) {
+      console.error(err.message);
+    } else {
+      console.error('An unexpected error occurred:', err);
+    }
     process.exit(1);
   }
 }

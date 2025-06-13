@@ -1,5 +1,5 @@
 import path from 'path';
-import { getCurrentDirPath, writeFileIfNotExists } from '../../tools/build-helpers/helpers.mjs';
+import { getCurrentDirPath, writeFileIfNotExists } from '../../tools/build-helpers/helpers.ts';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../../icons');

@@ -21,7 +21,7 @@ jobs:
           files: icons/*
 
       - name: Generate annotations
-        run: node ./scripts/lintFilenames.mjs
+        run: node ./scripts/lintFilenames.mts
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
 

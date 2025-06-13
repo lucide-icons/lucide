@@ -4,13 +4,13 @@ import {
   readAllMetadata,
   readSvgDirectory,
   writeFile,
-} from '../tools/build-helpers/helpers.mjs';
+} from '../tools/build-helpers/helpers.ts';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const icons = readAllMetadata(ICONS_DIR);
+const icons = await readAllMetadata(ICONS_DIR);
 
-const svgFiles = readSvgDirectory(ICONS_DIR);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
 
 const iconNames = svgFiles.map((icon) => icon.split('.')[0]);
 

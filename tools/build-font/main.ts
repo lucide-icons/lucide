@@ -26,38 +26,57 @@ async function getReleaseMetaData() {
   return releaseMetaData;
 }
 
-function convertReleaseMetaData(releaseMetaData) {
-  return Object.entries(releaseMetaData)
-    .map(([key, value]) => [key, addAttribute(value, 'name', key)])
-    .map(([, value]) => value)
+type Releases = Record<string, ReleaseMetaData>
+
+type ReleaseMetaData = {
+  createdRelease: {
+    version: string,
+    date: string
+  },
+  changedRelease: {
+    version: string,
+    date: string
+  }
+}
+
+type ReleaseMetaDataWithName = ReleaseMetaData & {
+  name: string,
+};
+
+function convertReleaseMetaData(releases: Releases) {
+  return Object.entries(releases)
+    .map(([key, data]) => ({
+      ...data,
+      name: key,
+    }))
     .sort((a, b) => sortMultiple(a, b, [sortByCreatedReleaseDate, sortByName]))
-    .map((value, index) => addAttribute(value, 'index', index))
-    .map((value, index) => addAttribute(value, 'unicode', index + startUnicode));
+    .map((value, index) => ({ ...value, index }))
+    .map((value, index) => ({
+      ...value,
+      'unicode': index + startUnicode
+    }));
 }
 
-function addAttribute(obj, attribute, value) {
-  obj[attribute] = value;
-  return obj;
-}
+type CollatorFunction = (a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName) => number;
 
-function sortMultiple(a, b, collators = []) {
-  const comparison = collators.shift()(a, b);
+function sortMultiple(a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName, collators: CollatorFunction[] = []) {
+  const comparison = collators?.shift?.()?.(a, b) ?? 0;
   if (comparison === 0 && collators.length > 0) return sortMultiple(a, b, collators);
   return comparison;
 }
 
-function sortByCreatedReleaseDate(a, b) {
-  const dates = [a, b].map((value) => new Date(value.createdRelease.date).valueOf());
-  return (dates[0] > dates[1]) - (dates[0] < dates[1]);
+function sortByCreatedReleaseDate(a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName) {
+  const [dateA, dateB] = [a, b].map((value) => new Date(value.createdRelease.date).valueOf())
+  return Number(dateA > dateB) - Number(dateA < dateB);
 }
 
-function sortByName(a, b) {
+function sortByName(a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName) {
   return new Intl.Collator('en-US').compare(a.name, b.name);
 }
 
-function getIconUnicode(name) {
-  const { unicode } = releaseMetaData.find(({ name: iconname }) => iconname === name);
-  return String.fromCharCode(unicode);
+function getIconUnicode(name: string): [string, number] {
+  const { unicode } = releaseMetaData.find(({ name: iconName }) => iconName === name) ?? { unicode: startUnicode };
+  return [String.fromCharCode(unicode), startUnicode];
 }
 
 async function init() {
@@ -83,7 +102,7 @@ async function init() {
       generateInfoData: true,
       website: {
         title: 'Lucide',
-        logo: null,
+        logo: undefined,
         meta: {
           description: 'Lucide icons as TTF/EOT/WOFF/WOFF2/SVG.',
           keywords: 'Lucide,TTF,EOT,WOFF,WOFF2,SVG',

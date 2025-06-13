@@ -1,4 +1,4 @@
-const githubApi = async (endpoint) => {
+const githubApi = async (endpoint: string) => {
   const headers = new Headers();
   const username = 'ericfennis';
   const password = process.env.GITHUB_API_KEY;

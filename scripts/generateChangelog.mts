@@ -1,11 +1,11 @@
 import getArgumentOptions from 'minimist';
 import githubApi from './githubApi.mjs';
 
-const fetchCompareTags = (oldTag) =>
+const fetchCompareTags = (oldTag: string) =>
   githubApi(`https://api.github.com/repos/lucide-icons/lucide/compare/${oldTag}...main`);
 
 const iconRegex = /icons\/(.*)\.svg/g;
-const iconTemplate = ({ name, pullNumber, author }) =>
+const iconTemplate = ({ name, pullNumber, author }: { name: string, pullNumber: number, author: string }) =>
   `- \`${name}\` (${pullNumber}) by @${author}`;
 
 const topics = [
@@ -47,7 +47,7 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
     }
 
     const changedFiles = output.files.filter(
-      ({ filename }) => !filename.match(/docs\/(.*)|(.*)package\.json|tags.json/g),
+      ({ filename }: { filename: string }) => !filename.match(/docs\/(.*)|(.*)package\.json|tags.json/g),
     );
 
     const commits = await Promise.all(changedFiles.map(fetchCommits));
@@ -76,11 +76,11 @@ const cliArguments = getArgumentOptions(process.argv.slice(2));
           status,
         };
       })
-      .filter(Boolean)
+      .filter((commit): commit is NonNullable<typeof commit> => Boolean(commit))
       .filter(({ pullNumber }) => !!pullNumber);
 
     const changelog = topics.map(({ title, filter, template }) => {
-      const lines = mappedCommits.filter(filter).map(template);
+      const lines = mappedCommits.filter(filter).map<string>(template);
 
       if (lines.length) {
         return [`## ${title}`, ' ', ...lines, ' '];

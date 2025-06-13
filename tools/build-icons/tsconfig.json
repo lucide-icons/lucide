@@ -13,6 +13,5 @@
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "sourceMap": true,
-    "outDir": "./dist",
   },
 }

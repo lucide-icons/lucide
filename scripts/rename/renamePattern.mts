@@ -1,15 +1,17 @@
 import path from 'path';
-import { getCurrentDirPath, readSvgDirectory } from '../../tools/build-helpers/helpers.mjs';
+import { getCurrentDirPath, readSvgDirectory } from '../../tools/build-helpers/helpers.ts';
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
 import { renameIcon } from './renameIcon.function.mjs';
+import { type Arguments } from 'yargs';
 
 async function main() {
   const currentDir = getCurrentDirPath(import.meta.url);
   const ICONS_DIR = path.resolve(currentDir, '../../icons');
-  const svgFiles = readSvgDirectory(ICONS_DIR);
+  const svgFiles = await readSvgDirectory(ICONS_DIR);
   const iconNames = svgFiles.map((icon) => icon.split('.')[0]).reverse();
-  const argv = yargs(hideBin(process.argv))
+  const argv = (yargs(hideBin(process.argv))
+  // @ts-ignore
     .usage('$0 <pattern> <replacement>', 'Renames all icons matching a pattern', (yargs) => {
       yargs
         .positional('pattern', {
@@ -28,9 +30,14 @@ async function main() {
       'dry-run': { type: 'boolean', default: false, alias: 'd' },
       'add-alias': { type: 'boolean', default: true, alias: 'a' },
     })
-    .parse();
+    .parse()) as unknown as Arguments<{
+      pattern: string;
+      replacement: string;
+      dryRun: boolean;
+      addAlias: boolean;
+    }>;
 
-  const pattern = new RegExp(argv.pattern, 'g');
+  const pattern = new RegExp(argv?.pattern, 'g');
   const replacement = argv.replacement.replaceAll(/\\([0-9]+)/g, (s, i) => `$${i}`);
 
   if (!(pattern instanceof RegExp)) {
@@ -47,7 +54,11 @@ async function main() {
         await renameIcon(ICONS_DIR, oldName, newName, false, argv.addAlias);
       }
     } catch (err) {
+       if(err instanceof Error) {
       console.error(err.message);
+    } else {
+      console.error('An unexpected error occurred:', err);
+    }
     }
   }
 }

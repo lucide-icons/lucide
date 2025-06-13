@@ -17,11 +17,11 @@ cspell.stdout.on('data', (data) => {
   data
     .toString()
     .split('\n')
-    .forEach((line) => {
+    .forEach((line: string) => {
       const match = line.match(regex);
       if (match) {
-        const { line, message } = match.groups;
-        console.log(`::error file=${fileList[line - 1]},line=1,column=1::${message}`);
+        const { line, message } = match.groups ?? {};
+        console.log(`::error file=${fileList[Number(line) - 1]},line=1,column=1::${message}`);
       }
     });
 });

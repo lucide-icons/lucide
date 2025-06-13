@@ -29,23 +29,29 @@ const getUserName = pMemoize(
 );
 
 // Check that a commit changes more than just the icon name
-const isCommitRelevant = async (hash, file) => {
+const isCommitRelevant = async (hash: string, file: string) => {
   const summary = await git.diffSummary(['--diff-filter=AM', `${hash}~1`, hash]);
   return summary.files.some(({ file: name }) => name === file);
 };
 
-const getContributors = async (file, includeCoAuthors) => {
+const getContributors = async (file: string, includeCoAuthors?: boolean) => {
   const { all } = await git.log([`HEAD~${FETCH_DEPTH}..`, '--', file]);
   const commits = file.endsWith('.svg')
     ? (
-        await Promise.all(all.map((commit) => isCommitRelevant(commit.hash, file) && commit))
+        await Promise.all(all.map(async (commit) => await isCommitRelevant(commit.hash, file) && commit))
       ).filter(Boolean)
     : all;
 
   const emails = new Map();
   for (let i = commits.length - 1; i >= 0; i -= 1) {
     const commit = commits[i];
-    if (!IGNORED_COMMITS.includes(commit.hash)) {
+
+    if(!commit || !commit.author_email) {
+      console.warn(`Skipping commit without author email: ${JSON.stringify(commit)}`);
+      continue;
+    }
+
+    if ("hash" in commit && !IGNORED_COMMITS.includes(commit.hash)) {
       if (!emails.has(commit.author_email)) {
         emails.set(commit.author_email, getUserName(commit));
       }
@@ -55,8 +61,8 @@ const getContributors = async (file, includeCoAuthors) => {
         );
         // eslint-disable-next-line no-restricted-syntax
         for (const match of matches) {
-          if (!emails.has(match.groups.email) && cache.has(match.groups.email)) {
-            emails.set(match.groups.email, Promise.resolve(cache.get(match.groups.email)));
+          if (!emails.has(match.groups?.email) && cache.has(match.groups?.email)) {
+            emails.set(match.groups?.email, Promise.resolve(cache.get(match.groups?.email)));
           }
         }
       }
@@ -66,7 +72,7 @@ const getContributors = async (file, includeCoAuthors) => {
   return Promise.all(Array.from(emails.values()));
 };
 
-const files = process.env.CHANGED_FILES.split(' ')
+const files = (process.env.CHANGED_FILES?.split(' ') ?? [])
   .map((file) => file.replace('.json', '.svg'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
 
@@ -81,7 +87,7 @@ await getContributors('icons');
 await Promise.all(
   files.map(async (file) => {
     const jsonFile = path.join(process.cwd(), file.replace('.svg', '.json'));
-    const json = JSON.parse(fs.readFileSync(jsonFile));
+    const json = JSON.parse(fs.readFileSync(jsonFile, 'utf-8'));
     const { tags, categories, aliases, contributors: previousContributors, ...rest } = json;
     const contributors = [
       ...(previousContributors || []),

@@ -8,7 +8,7 @@ import DEFAULT_ATTRS from '../../tools/build-icons/render/default-attrs.json' wi
  * @param {string} svg - An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-async function optimizeSvg(svg, path) {
+async function optimizeSvg(svg: string, path: string) {
   const result = optimize(svg, {
     path,
     plugins: [
@@ -38,10 +38,16 @@ async function optimizeSvg(svg, path) {
  * @param {string} svg - An SVG string.
  * @returns {string} An SVG string, included with the default attributes.
  */
-function setAttrs(svg) {
+function setAttrs(svg: string) {
   const contents = parseSync(svg);
 
-  contents.attributes = DEFAULT_ATTRS;
+  contents.attributes = {
+    ...DEFAULT_ATTRS,
+    width: String(DEFAULT_ATTRS.width),
+    height: String(DEFAULT_ATTRS.height),
+    "stroke-width": String(DEFAULT_ATTRS['stroke-width']),
+    ...contents.attributes,
+  };
 
   return stringify(contents);
 }
@@ -51,7 +57,7 @@ function setAttrs(svg) {
  * @param {string} svg An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-function processSvg(svg, path) {
+function processSvg(svg: string, path: string) {
   return (
     optimizeSvg(svg, path)
       .then(setAttrs)

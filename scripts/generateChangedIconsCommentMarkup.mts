@@ -7,7 +7,7 @@ import {
   getCurrentDirPath,
   minifySvg,
   toPascalCase,
-} from '../tools/build-helpers/helpers.mjs';
+} from '../tools/build-helpers/helpers.ts';
 
 const currentDir = getCurrentDirPath(import.meta.url);
 const ICONS_DIR = path.resolve(currentDir, '../icons');
@@ -30,7 +30,7 @@ if (changedFiles.length === 0) {
   process.exit(0);
 }
 
-const getImageTagsByFiles = (files, getBaseUrl, width) =>
+const getImageTagsByFiles = (files: string[], getBaseUrl: (file: string) => string, width?: number) =>
   files.map((file) => {
     const svgContent = fs.readFileSync(path.join(process.cwd(), file), 'utf-8');
     const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>');
@@ -46,7 +46,7 @@ const getImageTagsByFiles = (files, getBaseUrl, width) =>
 const svgFiles = await readSvgDirectory(ICONS_DIR);
 const svgFilePaths = svgFiles.map((file) => `icons/${file}`);
 
-const iconsFilteredByName = (search) => svgFilePaths.filter((file) => file.includes(search));
+const iconsFilteredByName = (search: string) => svgFilePaths.filter((file) => file.includes(search));
 
 const cohesionRandomImageTags = getImageTagsByFiles(
   shuffleArray(svgFilePaths).slice(0, changedFiles.length),

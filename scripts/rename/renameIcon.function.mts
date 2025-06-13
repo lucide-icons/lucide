@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { promisify } from 'util';
 import simpleGit from 'simple-git';
+import { IconMetadata } from '../../tools/build-icons/types';
 
 /**
  * Renames an icon and adds the old name as an alias.
@@ -11,10 +12,10 @@ import simpleGit from 'simple-git';
  * @param {boolean} logInfo
  * @param {boolean} addAlias
  */
-export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true, addAlias = true) {
+export async function renameIcon(ICONS_DIR: string, oldName: string, newName: string, logInfo = true, addAlias = true) {
   const git = simpleGit();
 
-  async function fileExists(filePath) {
+  async function fileExists(filePath: string) {
     try {
       await promisify(fs.access)(filePath);
       return true;
@@ -44,7 +45,7 @@ export async function renameIcon(ICONS_DIR, oldName, newName, logInfo = true, ad
   await git.mv(oldJsonPath, newJsonPath);
   if (addAlias) {
     const json = fs.readFileSync(newJsonPath, 'utf8');
-    const jsonData = JSON.parse(json);
+    const jsonData: IconMetadata = JSON.parse(json);
     if (Array.isArray(jsonData.aliases)) {
       jsonData.aliases = jsonData.aliases.filter(
         (alias) => (typeof alias === 'string' ? alias : alias.name) !== newName,
