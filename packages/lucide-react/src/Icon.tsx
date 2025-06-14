@@ -2,6 +2,7 @@ import { createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { mergeClasses, hasA11yProp } from '@lucide/shared';
+import { useLucideContext } from './context';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -25,9 +26,9 @@ interface IconComponentProps extends LucideProps {
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
   (
     {
-      color = 'currentColor',
-      size = 24,
-      strokeWidth = 2,
+      color,
+      size,
+      strokeWidth,
       absoluteStrokeWidth,
       className = '',
       children,
@@ -35,16 +36,29 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       ...rest
     },
     ref,
-  ) =>
-    createElement(
+  ) =>{
+    const lucideContext = useLucideContext() ?? {};
+
+    const {
+      size: contextSize = 24,
+      strokeWidth: contextStrokeWidth = 2,
+      absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+      color: contextColor = 'currentColor',
+    } = lucideContext;
+
+    const calculatedStrokeWidth = (absoluteStrokeWidth ?? contextAbsoluteStrokeWidth)
+      ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
+      : strokeWidth ?? contextStrokeWidth
+
+    return createElement(
       'svg',
       {
         ref,
         ...defaultAttributes,
-        width: size,
-        height: size,
-        stroke: color,
-        strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+        width: size ?? contextSize ?? 24,
+        height: size ?? contextSize ?? 24,
+        stroke: color ?? contextColor,
+        strokeWidth: calculatedStrokeWidth,
         className: mergeClasses('lucide', className),
         ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
         ...rest,
@@ -53,7 +67,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
         ...(Array.isArray(children) ? children : [children]),
       ],
-    ),
+    )
+  }
 );
 
 export default Icon;
