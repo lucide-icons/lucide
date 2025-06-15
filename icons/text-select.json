@@ -14,6 +14,11 @@
     "cursors"
   ],
   "aliases": [
-    "text-selection"
+    {
+      "name": "text-selection",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

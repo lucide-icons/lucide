@@ -11,6 +11,11 @@
     "food-beverage"
   ],
   "aliases": [
-    "ice-cream"
+    {
+      "name": "ice-cream",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -13,6 +13,11 @@
     "development"
   ],
   "aliases": [
-    "indent"
+    {
+      "name": "indent",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

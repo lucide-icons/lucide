@@ -13,6 +13,11 @@
     "development"
   ],
   "aliases": [
-    "outdent"
+    {
+      "name": "outdent",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
