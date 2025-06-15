@@ -1,14 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis"
+    "jamiemlaw",
+    "jguddas"
   ],
   "tags": [
     "people",
     "human",
-    "accessibility",
-    "stick figure"
+    "stick figure",
+    "man",
+    "men",
+    "women",
+    "woman"
   ],
   "categories": [
     "accessibility",
