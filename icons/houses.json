@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "homes",
+    "living",
+    "buildings",
+    "residences",
+    "architecture"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ]
+}
