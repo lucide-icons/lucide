@@ -1,18 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis",
+    "zefir-git",
     "jguddas"
   ],
   "tags": [
-    "cog",
-    "edit",
-    "gear",
-    "preferences",
-    "slider"
+    "compose",
+    "keyboard",
+    "key",
+    "button"
   ],
   "categories": [
-    "account"
+    "development",
+    "text"
   ]
 }
