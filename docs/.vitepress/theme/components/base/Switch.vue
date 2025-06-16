@@ -1,17 +1,22 @@
 <script setup>
-  import { ref } from 'vue'
   import { Switch } from '@headlessui/vue'
 
-  const enabled = ref(false)
-  
+  defineProps({
+    modelValue: {
+      type: Boolean,
+      default: false
+    }
+  })
+
+  const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
   <Switch
-    v-model="enabled"
-    :key="enabled"
+    :model-value="modelValue"
+    @update:model-value="emit('update:modelValue', $event)"
     class="switch"
-    :class="{ enabled }"
+    :class="{ enabled: modelValue }"
   >
     <span class="thumb" />
   </Switch>
