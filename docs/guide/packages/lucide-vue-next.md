@@ -18,6 +18,10 @@ yarn add lucide-vue-next
 npm install lucide-vue-next
 ```
 
+```sh [bun]
+bun add lucide-vue-next
+```
+
 :::
 
 ## How to use
@@ -77,11 +81,11 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 ```vue
 <script setup>
 import { Icon } from 'lucide-vue-next';
-import { burger } from '@lucide/lab';
+import { baseball } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode="burger" />
+  <Icon :iconNode="baseball" />
 </template>
 ```
 
