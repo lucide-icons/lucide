@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
-    "@lucide/build-helpers": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@types/node": "^22.15.30",
