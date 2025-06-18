@@ -42,12 +42,14 @@ function generateIconFiles({
     const location = path.join(iconsDistDirectory, `${iconName}${iconFileExtension}`);
     const componentName = toPascalCase(iconName);
 
-    const children: IconNode = iconNodes[iconName].children.map(({ name, attributes }) => [name, attributes]);
+    const children: IconNode = iconNodes[iconName].children.map(({ name, attributes }) => [
+      name,
+      attributes,
+    ]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
     const { deprecated = false, toBeRemovedInVersion = undefined } = iconMetaData[iconName];
-    const deprecationReason =  iconMetaData[iconName]?.deprecated
-      ? deprecationReasonTemplate(iconMetaData[iconName]?.deprecationReason, {
+    const deprecationReason = iconMetaData[iconName].deprecated === true ? deprecationReasonTemplate(iconMetaData[iconName]?.deprecationReason ?? '', {
           componentName,
           iconName,
           toBeRemovedInVersion,

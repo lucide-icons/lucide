@@ -3,7 +3,7 @@ import { resetFile, appendFile } from '@lucide/helpers';
 import type { IconMetadata, IconNode } from '../types.ts';
 
 interface GenerateDynamicImports {
-  iconNodes: Record<string, IconNode>
+  iconNodes: Record<string, IconNode>;
   outputDirectory: string;
   fileExtension: string;
   iconMetaData: Record<string, IconMetadata>;

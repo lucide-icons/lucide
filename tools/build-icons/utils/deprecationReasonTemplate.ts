@@ -1,11 +1,11 @@
-import type { AliasDeprecationReason, IconDeprecationReason } from "../types.ts";
+import type { AliasDeprecationReason, IconDeprecationReason } from '../types.ts';
 
 export default function deprecationReasonTemplate(
   deprecationReason: AliasDeprecationReason | IconDeprecationReason,
   {
     componentName,
     iconName,
-    toBeRemovedInVersion
+    toBeRemovedInVersion,
   }: {
     componentName: string;
     iconName: string;

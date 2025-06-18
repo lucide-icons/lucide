@@ -1,5 +1,4 @@
-declare module "oslllo-svg-fixer" {
-
+declare module 'oslllo-svg-fixer' {
   export interface SVGFixerOptions {
     showProgressBar?: boolean;
     traceResolution?: number;
@@ -8,7 +7,7 @@ declare module "oslllo-svg-fixer" {
   export default function SVGFixer(
     inputDir: string,
     outputDir: string,
-    options?: SVGFixerOptions
+    options?: SVGFixerOptions,
   ): {
     fix: () => Promise<void>;
   };

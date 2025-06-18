@@ -26,21 +26,21 @@ async function getReleaseMetaData() {
   return releaseMetaData;
 }
 
-type Releases = Record<string, ReleaseMetaData>
+type Releases = Record<string, ReleaseMetaData>;
 
 type ReleaseMetaData = {
   createdRelease: {
-    version: string,
-    date: string
-  },
+    version: string;
+    date: string;
+  };
   changedRelease: {
-    version: string,
-    date: string
-  }
-}
+    version: string;
+    date: string;
+  };
+};
 
 type ReleaseMetaDataWithName = ReleaseMetaData & {
-  name: string,
+  name: string;
 };
 
 function convertReleaseMetaData(releases: Releases) {
@@ -53,20 +53,24 @@ function convertReleaseMetaData(releases: Releases) {
     .map((value, index) => ({ ...value, index }))
     .map((value, index) => ({
       ...value,
-      'unicode': index + startUnicode
+      unicode: index + startUnicode,
     }));
 }
 
 type CollatorFunction = (a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName) => number;
 
-function sortMultiple(a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName, collators: CollatorFunction[] = []) {
+function sortMultiple(
+  a: ReleaseMetaDataWithName,
+  b: ReleaseMetaDataWithName,
+  collators: CollatorFunction[] = [],
+) {
   const comparison = collators?.shift?.()?.(a, b) ?? 0;
   if (comparison === 0 && collators.length > 0) return sortMultiple(a, b, collators);
   return comparison;
 }
 
 function sortByCreatedReleaseDate(a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName) {
-  const [dateA, dateB] = [a, b].map((value) => new Date(value.createdRelease.date).valueOf())
+  const [dateA, dateB] = [a, b].map((value) => new Date(value.createdRelease.date).valueOf());
   return Number(dateA > dateB) - Number(dateA < dateB);
 }
 
@@ -75,7 +79,9 @@ function sortByName(a: ReleaseMetaDataWithName, b: ReleaseMetaDataWithName) {
 }
 
 function getIconUnicode(name: string): [string, number] {
-  const { unicode } = releaseMetaData.find(({ name: iconName }) => iconName === name) ?? { unicode: startUnicode };
+  const { unicode } = releaseMetaData.find(({ name: iconName }) => iconName === name) ?? {
+    unicode: startUnicode,
+  };
   return [String.fromCharCode(unicode), startUnicode];
 }
 

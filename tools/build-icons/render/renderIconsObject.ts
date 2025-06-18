@@ -12,7 +12,7 @@ export default async function generateIconObject(
   svgFiles: string[],
   iconsDirectory: string,
   renderUniqueKey = false,
-)  {
+) {
   const svgsContentPromises = svgFiles.map(async (svgFile) => {
     const name = basename(svgFile, '.svg');
     const svg = await readSvg(svgFile, iconsDirectory);

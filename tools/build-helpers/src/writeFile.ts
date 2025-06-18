@@ -13,5 +13,4 @@ export const writeFile = (
   content: string,
   fileName: string,
   outputDirectory: string,
-): Promise<void> =>
-  fs.writeFile(path.join(outputDirectory, fileName), content, 'utf-8');
+): Promise<void> => fs.writeFile(path.join(outputDirectory, fileName), content, 'utf-8');

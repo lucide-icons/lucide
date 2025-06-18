@@ -43,8 +43,6 @@ if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR);
 }
 
-
-
 const {
   renderUniqueKey = false,
   templateSrc,

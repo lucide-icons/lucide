@@ -103,8 +103,7 @@ export default async function generateAliasesFiles({
         await Promise.all(
           iconAliases.map(async (alias) => {
             const componentNameAlias = toPascalCase(alias.name);
-            const deprecationReason =
-              alias.deprecated
+            const deprecationReason = alias.deprecated
               ? deprecationReasonTemplate(alias.deprecationReason, {
                   componentName: toPascalCase(iconName),
                   iconName,

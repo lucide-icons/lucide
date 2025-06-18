@@ -13,5 +13,4 @@ export const appendFile = (
   content: string,
   fileName: string,
   outputDirectory: string,
-): Promise<void> =>
-  fs.appendFile(path.join(outputDirectory, fileName), content, 'utf-8');
+): Promise<void> => fs.appendFile(path.join(outputDirectory, fileName), content, 'utf-8');

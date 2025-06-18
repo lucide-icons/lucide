@@ -13,5 +13,4 @@ export const writeSvgFile = (
   fileName: string,
   outputDirectory: string,
   content: string,
-): Promise<void> =>
-  fs.writeFile(path.join(outputDirectory, fileName), content, 'utf-8');
+): Promise<void> => fs.writeFile(path.join(outputDirectory, fileName), content, 'utf-8');
