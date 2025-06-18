@@ -1,14 +1,15 @@
 import {
   createContext,
-  type ReactNode,
   useContext,
-} from "react";
+  type JSXElement
+} from "solid-js";
 
-const LucideContext = createContext<{
+export const LucideContext = createContext<{
   size?: number;
   fill?: string;
   color?: string;
   strokeWidth?: number;
+  absoluteStrokeWidth?: boolean;
 }>({
   size: 24,
   fill: 'none',
@@ -17,7 +18,7 @@ const LucideContext = createContext<{
 });
 
 interface LucideProviderProps {
-  children: ReactNode;
+  children: JSXElement;
   size?: number
   fill?: string;
   color?: string;
@@ -32,5 +33,3 @@ export function LucideProvider({ children, ...props }: LucideProviderProps) {
     </LucideContext.Provider>
   );
 }
-
-export const useLucideContext = () => useContext(LucideContext);
