@@ -1,8 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
-import { getJSBanner } from './license.mjs';
+import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import { getJSBanner } from './license.mts';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default async ({
+export default defineExportTemplate(async ({
   iconName,
   children,
   componentName,
@@ -19,7 +19,7 @@ ${getJSBanner()}
 import Icon from '../Icon.svelte';
 import type { IconNode, IconProps } from '../types.js';
 
-let props: IconProps = $props();
+type $$Props = IconProps;
 
 const iconNode: IconNode = ${JSON.stringify(children)};
 
@@ -36,8 +36,8 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  */
 </script>
 
-<Icon name="${iconName}" {...props} iconNode={iconNode}>
-  {@render props.children?.()}
+<Icon name="${iconName}" {...$$props} iconNode={iconNode}>
+  <slot/>
 </Icon>
 `;
-};
+});

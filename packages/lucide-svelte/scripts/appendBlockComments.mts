@@ -2,7 +2,7 @@ import { lstatSync } from 'fs';
 import { readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { getCurrentDirPath } from '@lucide/helpers';
-import { getJSBanner } from './license.mjs';
+import { getJSBanner } from './license.mts';
 
 const currentDir = await getCurrentDirPath(import.meta.url);
 const targetDirectory = path.join(currentDir, '../dist');
@@ -21,7 +21,7 @@ for (const file of files) {
   if (filestat.isFile() === false || filestat.isDirectory()) continue;
 
   // eslint-disable-next-line no-await-in-loop
-  const contents = await readFile(filepath, { encoding: 'utf-8' });
+  const contents = (await readFile(filepath, { encoding: 'utf-8' }) as unknown as string);
   let newContents = contents;
   const ext = path.extname(filepath);
   let license;
@@ -38,7 +38,7 @@ for (const file of files) {
   if (/icons\/(.*?)\.svelte\.d\.ts/.test(filepath)) {
     const svelteFilepath = filepath.replace('.d.ts', '');
     // eslint-disable-next-line no-await-in-loop
-    const svelteFileContents = await readFile(svelteFilepath, { encoding: 'utf-8' });
+    const svelteFileContents = (await readFile(svelteFilepath, { encoding: 'utf-8' }) as unknown as string);
 
     const blockCommentRegex = /\/\*\*\n\s\*\s(@component\s@name)[\s\S]*?\*\//;
     const blockCommentMatch = blockCommentRegex.exec(svelteFileContents);
