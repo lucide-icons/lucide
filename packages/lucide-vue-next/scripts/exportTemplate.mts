@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
+import base64SVG from '@lucide/build-icons/utils/base64SVG';
 
 export default async ({
   componentName,
