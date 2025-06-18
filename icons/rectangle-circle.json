@@ -1,16 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "danielbayley",
+    "zefir-git",
     "jguddas"
   ],
   "tags": [
-    "readme",
-    "help",
-    "question"
+    "compose",
+    "keyboard",
+    "key",
+    "button"
   ],
   "categories": [
-    "files"
+    "development",
+    "text"
   ]
 }
