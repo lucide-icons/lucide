@@ -2,15 +2,19 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley",
     "jguddas"
   ],
   "tags": [
-    "readme",
-    "help",
-    "question"
+    "verified",
+    "unverified",
+    "help"
   ],
   "categories": [
-    "files"
+    "accessibility",
+    "social",
+    "shapes"
+  ],
+  "aliases": [
+    "badge-help"
   ]
 }
