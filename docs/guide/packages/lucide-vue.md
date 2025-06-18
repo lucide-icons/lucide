@@ -1,25 +1,25 @@
-# Lucide Vue Next
+# Lucide Vue
 
-Implementation of the lucide icon library for Vue 3 applications.
+Implementation of the lucide icon library for Vue applications.
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm install @lucide/vue
 ```
 
 ```sh [yarn]
-yarn add lucide-vue-next
+yarn add @lucide/vue
 ```
 
 ```sh [npm]
-npm install lucide-vue-next
+npm install @lucide/vue
 ```
 
 ```sh [bun]
-bun add lucide-vue-next
+bun add @lucide/vue
 ```
 
 :::
@@ -36,7 +36,7 @@ You can pass additional props to adjust the icon.
 
 ```vue
 <script setup>
-import { Camera } from 'lucide-vue-next';
+import { Camera } from '@lucide/vue';
 </script>
 
 <template>
@@ -80,7 +80,7 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```vue
 <script setup>
-import { Icon } from 'lucide-vue-next';
+import { Icon } from '@lucide/vue';
 import { baseball } from '@lucide/lab';
 </script>
 
@@ -102,7 +102,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ```vue
 <script setup>
 import { computed } from 'vue';
-import * as icons from "lucide-vue-next";
+import * as icons from "@lucide/vue";
 
 const props = defineProps({
   name: {
