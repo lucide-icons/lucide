@@ -28,8 +28,6 @@ export type AliasDeprecation = {
 
 export type IconDeprecationReason = 'icon.brand' | '';
 
-
-
 export type IconMetadataBase = {
   toBeRemovedInVersion?: string;
   categories?: string[];
