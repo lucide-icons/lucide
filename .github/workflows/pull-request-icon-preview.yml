@@ -32,7 +32,7 @@ jobs:
           echo ${{ github.event.number }} > ./pr/NR
 
       - name: Generate comment markup
-        run: node ./scripts/generateChangedIconsCommentMarkup.mjs >> ./pr/comment-markup.md
+        run: node ./scripts/generateChangedIconsCommentMarkup.mts >> ./pr/comment-markup.md
         id: comment-markup
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
