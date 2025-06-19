@@ -12,6 +12,10 @@ packageExtensionsChecksum: sha256-iadh7fHFnueQwqCQdCI9Kni0+s5mxkL9biStuN8E4yQ=
 importers:
 
   .:
+    dependencies:
+      openai:
+        specifier: ^5.5.1
+        version: 5.5.1(ws@8.18.0)(zod@3.24.2)
     devDependencies:
       '@html-eslint/eslint-plugin':
         specifier: ^0.19.1
@@ -10292,6 +10296,18 @@ packages:
   open@8.4.2:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
+
+  openai@5.5.1:
+    resolution: {integrity: sha512-5i19097mGotHA1eFsM6Tjd/tJ8uo9sa5Ysv4Q6bKJ2vtN6rc0MzMrUefXnLXYAJcmMQrC1Efhj0AvfIkXrQamw==}
+    hasBin: true
+    peerDependencies:
+      ws: ^8.18.0
+      zod: ^3.23.8
+    peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
 
   openapi-typescript@6.7.6:
     resolution: {integrity: sha512-c/hfooPx+RBIOPM09GSxABOZhYPblDoyaGhqBkD/59vtpN21jEuWKDlM0KYTvqJVlSYjKs0tBcIdeXKChlSPtw==}
@@ -24714,6 +24730,11 @@ snapshots:
       define-lazy-prop: 2.0.0
       is-docker: 2.2.1
       is-wsl: 2.2.0
+
+  openai@5.5.1(ws@8.18.0)(zod@3.24.2):
+    optionalDependencies:
+      ws: 8.18.0
+      zod: 3.24.2
 
   openapi-typescript@6.7.6:
     dependencies:
