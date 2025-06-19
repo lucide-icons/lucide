@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "uxwing"
+  ],
+  "tags": [
+    "medicine",
+    "helicopter",
+    "copter",
+    "military"
+  ],
+  "categories": [
+    "medicine",
+    "military"
+  ]
+}
