@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "liloudreams"
+  ],
+  "tags": [
+    "helicopter",
+    "aircraft",
+    "vehicle"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}
