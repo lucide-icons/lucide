@@ -4,10 +4,15 @@
     "karsa-mistmere"
   ],
   "tags": [
+    "fork",
+    "knife",
+    "cutlery",
+    "flatware",
+    "tableware",
+    "silverware",
     "food",
     "restaurant",
     "meal",
-    "cutlery",
     "breakfast",
     "dinner",
     "supper"
@@ -15,6 +20,9 @@
   "categories": [
     "food-beverage",
     "travel",
-    "maps"
+    "navigation"
+  ],
+  "aliases": [
+    "fork-knife-crossed"
   ]
 }
