@@ -81,11 +81,11 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 ```vue
 <script setup>
 import { Icon } from 'lucide-vue-next';
-import { burger } from '@lucide/lab';
+import { baseball } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode="burger" />
+  <Icon :iconNode="baseball" />
 </template>
 ```
 
