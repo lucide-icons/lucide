@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
+    "mittalyashu",
     "lscheibel",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "smartphone",
