@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "colebemis",
+    "gubser"
+  ],
+  "tags": [
+    "time",
+    "watch",
+    "alarm",
+    "add",
+    "create",
+    "new"
+  ],
+  "categories": [
+    "time"
+  ]
+}
