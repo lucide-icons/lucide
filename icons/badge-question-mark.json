@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "verified",
+    "unverified",
+    "help"
+  ],
+  "categories": [
+    "accessibility",
+    "social",
+    "shapes"
+  ],
+  "aliases": [
+    "badge-help"
+  ]
+}
