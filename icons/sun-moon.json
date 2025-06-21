@@ -1,12 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "itsjavi",
-    "mittalyashu",
-    "karsa-mistmere"
+    "zishankadri",
+    "jamiemlaw",
+    "jguddas"
   ],
   "tags": [
-    "night",
     "dark",
     "light",
     "moon",
