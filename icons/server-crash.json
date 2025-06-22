@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "cloud",
+    "storage",
+    "problem",
+    "error"
+  ],
+  "categories": [
+    "development",
+    "devices"
+  ]
+}

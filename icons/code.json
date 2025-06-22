@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
+  "tags": [
+    "source",
+    "programming",
+    "html",
+    "xml"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "previous",
+    "back",
+    "direction",
+    "west",
+    "<-"
+  ],
+  "categories": [
+    "arrows",
+    "navigation"
+  ]
+}

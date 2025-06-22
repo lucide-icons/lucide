@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "rotate",
+    "reload",
+    "rerun",
+    "synchronise",
+    "synchronize",
+    "arrows",
+    "circular",
+    "cycle",
+    "cancel",
+    "no",
+    "stop",
+    "error",
+    "disconnect",
+    "ignore"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}

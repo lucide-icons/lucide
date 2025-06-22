@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "arrow",
+    "skip",
+    "next",
+    "music"
+  ],
+  "categories": [
+    "multimedia",
+    "arrows"
+  ]
+}

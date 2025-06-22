@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "aliases": [
+    "curly-braces"
+  ],
+  "tags": [
+    "json",
+    "code",
+    "token",
+    "curly brackets",
+    "data",
+    "{",
+    "}"
+  ],
+  "categories": [
+    "development",
+    "files"
+  ]
+}

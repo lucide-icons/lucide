@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
+  "tags": [
+    "click",
+    "select"
+  ],
+  "categories": [
+    "arrows",
+    "cursors"
+  ]
+}

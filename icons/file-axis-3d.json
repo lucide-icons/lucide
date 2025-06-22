@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "model",
+    "3d",
+    "axis",
+    "coordinates"
+  ],
+  "categories": [
+    "design",
+    "files"
+  ],
+  "aliases": [
+    "file-axis-3-d"
+  ]
+}

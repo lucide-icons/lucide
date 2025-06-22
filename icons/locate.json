@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "map",
+    "gps",
+    "location",
+    "cross"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}

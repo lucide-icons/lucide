@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "drummer",
+    "kit",
+    "sticks",
+    "instrument",
+    "beat",
+    "bang",
+    "bass",
+    "backing track",
+    "band",
+    "play",
+    "performance",
+    "concert",
+    "march",
+    "music",
+    "audio",
+    "sound",
+    "noise",
+    "loud"
+  ],
+  "categories": [
+    "multimedia",
+    "devices"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "stream",
+    "cast",
+    "mirroring",
+    "screen",
+    "monitor",
+    "macos",
+    "osx"
+  ],
+  "categories": [
+    "multimedia",
+    "connectivity",
+    "devices",
+    "brands"
+  ]
+}

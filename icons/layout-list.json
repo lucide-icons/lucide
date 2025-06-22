@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "todo",
+    "tasks",
+    "items",
+    "pending",
+    "image",
+    "photo"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "photography",
+    "text"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman"
+  ],
+  "tags": [
+    "lost"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

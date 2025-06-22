@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "work",
+    "bag",
+    "baggage",
+    "folder"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

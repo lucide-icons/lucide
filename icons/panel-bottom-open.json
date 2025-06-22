@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "drawer",
+    "dock",
+    "show",
+    "reveal",
+    "chevron",
+    "up"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ]
+}

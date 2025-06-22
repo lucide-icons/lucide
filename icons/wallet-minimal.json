@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "finance",
+    "pocket"
+  ],
+  "categories": [
+    "account",
+    "finance"
+  ],
+  "aliases": [
+    {
+      "name": "wallet-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "koole",
+    "ericfennis"
+  ],
+  "tags": [
+    "grab",
+    "dots",
+    "handle",
+    "move",
+    "drag"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

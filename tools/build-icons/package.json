@@ -1,0 +1,47 @@
+{
+  "name": "@lucide/build-icons",
+  "description": "A internal used package to build icon code files for the lucide icon library packages.",
+  "version": "1.1.0",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node ./cli.ts"
+  },
+  "bin": {
+    "build-icons": "./cli.ts"
+  },
+  "engines": {
+    "node": ">= 23"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts"
+    },
+    "./cli": {
+      "import": "./cli.ts",
+      "require": "./cli.ts"
+    },
+    "./utils/*": {
+      "import": "./utils/*.ts",
+      "require": "./utils/*.ts"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@lucide/helpers": "workspace:*",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22"
+  },
+  "dependencies": {
+    "minimist": "^1.2.7",
+    "prettier": "2.7.1",
+    "svgo": "^3.0.0",
+    "svgson": "^5.2.1"
+  },
+  "peerDependencies": {
+    "@lucide/helpers": "*"
+  }
+}

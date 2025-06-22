@@ -1,0 +1,12 @@
+{
+  "extends": "./.nitro/types/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "paths": {
+      "~/.vitepress/*": ["./.vitepress/*"],
+    },
+  },
+}

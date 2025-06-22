@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Billiam",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "quotation"
+  ],
+  "categories": [
+    "text"
+  ]
+}

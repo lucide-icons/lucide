@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "text",
+    "font",
+    "typography",
+    "format",
+    "x",
+    "remove",
+    "delete",
+    "times",
+    "clear"
+  ],
+  "categories": [
+    "text"
+  ]
+}

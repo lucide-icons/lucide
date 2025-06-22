@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "phone",
+    "cellphone",
+    "device",
+    "power",
+    "screen"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

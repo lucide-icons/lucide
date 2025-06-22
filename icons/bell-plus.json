@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "notification",
+    "silent",
+    "reminder",
+    "add",
+    "create",
+    "new"
+  ],
+  "categories": [
+    "notifications"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "fdev",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "map",
+    "gps",
+    "location",
+    "cross"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "television",
+    "stream",
+    "display",
+    "widescreen",
+    "high-definition",
+    "hd",
+    "1080p",
+    "4k",
+    "8k",
+    "smart",
+    "digital",
+    "video",
+    "entertainment",
+    "showtime",
+    "channels",
+    "terrestrial",
+    "satellite",
+    "cable",
+    "broadcast",
+    "live",
+    "frequency",
+    "tune",
+    "scan",
+    "aerial",
+    "receiver",
+    "transmission",
+    "signal",
+    "connection",
+    "connectivity"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "communication"
+  ]
+}

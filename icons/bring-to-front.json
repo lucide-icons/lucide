@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "james-yeoman",
+    "jguddas"
+  ],
+  "tags": [
+    "bring",
+    "send",
+    "move",
+    "over",
+    "forward",
+    "front",
+    "overlap",
+    "layer",
+    "order"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

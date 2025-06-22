@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "food",
+    "breakfast"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

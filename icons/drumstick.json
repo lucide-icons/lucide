@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "food",
+    "chicken",
+    "meat"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

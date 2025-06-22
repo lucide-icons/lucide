@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "lego",
+    "block",
+    "addon",
+    "plugin",
+    "integration"
+  ],
+  "categories": [
+    "gaming",
+    "development"
+  ]
+}

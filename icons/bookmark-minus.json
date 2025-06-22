@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "siarie",
+    "ericfennis"
+  ],
+  "tags": [
+    "delete",
+    "remove"
+  ],
+  "categories": [
+    "account"
+  ]
+}

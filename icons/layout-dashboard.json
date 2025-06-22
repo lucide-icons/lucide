@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "masonry",
+    "brick"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

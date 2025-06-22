@@ -1,0 +1,98 @@
+# For changed dependencies
+📦 dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - pnpm-lock.yaml
+
+# For changes in documentation
+📖 documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - docs/*.md
+          - docs/**/*.md
+
+# For changes in the site, but not markdown files
+🌍 site:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'docs/**'
+
+# For changes in the metadata
+🫧 metadata:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'icons/*.json'
+          - categories/*
+
+# For changes or added icons
+🎨 icon:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'icons/*.svg'
+
+# For changes in the lucide package
+🧳 lucide package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide/*'
+
+# For changes in the lucide React package
+⚛️ react package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-react/*'
+
+# For changes in the lucide React Native package
+⚛️ react native package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-react-native/*'
+
+# For changes in the lucide vue packages
+💎 vue package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-vue/*'
+          - 'packages/lucide-vue-next/*'
+
+# For changes in the lucide angular package
+🅰️ angular package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-angular/*'
+
+# For changes in the lucide preact package
+⚛️ preact package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-preact/*'
+
+# For changes in the lucide svelte package
+🧣 svelte package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-svelte/*'
+
+# For changes in the lucide solid package
+🪝 solid package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-solid/*'
+
+# For changes in the lucide astro package
+🚀 astro package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/astro/*'
+
+# For changes in the lucide static package
+🪨 static package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-static/*'
+
+# For changes in the lucide flutter package
+🏹 flutter package:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-flutter/*'

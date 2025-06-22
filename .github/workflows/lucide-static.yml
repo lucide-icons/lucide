@@ -1,0 +1,25 @@
+name: Lucide Static checks
+
+on:
+  pull_request:
+    paths:
+      - packages/lucide-static/**
+      - tools/build-icons/**
+      - pnpm-lock.yaml
+
+jobs:
+  lucide-static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm --filter lucide-static build

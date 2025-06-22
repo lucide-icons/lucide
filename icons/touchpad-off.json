@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "trackpad",
+    "cursor"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

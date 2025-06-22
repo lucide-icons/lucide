@@ -1,0 +1,54 @@
+name: Feature request
+description: Share with us your ideas on how Lucide could be improved upon.
+labels: ['💡 idea']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting a new feature request, please search to see if someone has filed a similar request before. If there is already an open issue, please add a 👍 and/or leave a comment with additional information.
+  - type: checkboxes
+    id: packages
+    attributes:
+      label: Package
+      description: Which Lucide project do you wish this feature were added to? You may select more than one.
+      options:
+        - label: lucide
+        - label: lucide-angular
+        - label: lucide-flutter
+        - label: lucide-preact
+        - label: lucide-react
+        - label: lucide-react-native
+        - label: lucide-solid
+        - label: lucide-svelte
+        - label: lucide-vue
+        - label: lucide-vue-next
+        - label: lucide-astro
+        - label: Figma plugin
+        - label: all JS packages
+        - label: site
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Try to describe in detail the feature you wish existed.
+      placeholder: e.g. I want to be able to set extra CSS classes on icon components.
+    validations:
+      required: true
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use cases
+      description: Why do you need this feature? Provide real-life use cases as to why this feature will be useful for others.
+      placeholder: e.g. I could use the extra classes to add animation or global custom styling to some icons.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please check the following items before submitting your issue.
+      options:
+        - label: I have searched the existing issues to make sure this bug has not already been reported.
+          required: true

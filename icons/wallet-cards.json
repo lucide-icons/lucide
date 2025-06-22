@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "money",
+    "finance",
+    "pocket",
+    "credit",
+    "purchase",
+    "payment",
+    "shopping",
+    "retail",
+    "consumer",
+    "cc"
+  ],
+  "categories": [
+    "account",
+    "finance"
+  ]
+}

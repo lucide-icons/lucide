@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "filling-station",
+    "gas",
+    "petrol",
+    "tank"
+  ],
+  "categories": [
+    "transportation",
+    "navigation"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "lucide": {
+    "order": 0,
+    "icon": "js",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide",
+        "href": "https://www.npmjs.com/package/lucide"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide",
+        "href": "https://www.npmjs.com/package/lucide"
+      }
+    ]
+  },
+  "lucide-react": {
+    "order": 1,
+    "icon": "react",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-react",
+        "href": "https://www.npmjs.com/package/lucide-react"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-react",
+        "href": "https://www.npmjs.com/package/lucide-react"
+      }
+    ]
+  },
+  "lucide-vue-next": {
+    "order": 2,
+    "icon": "vue-next",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-vue-next",
+        "href": "https://www.npmjs.com/package/lucide-vue-next"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-vue-next",
+        "href": "https://www.npmjs.com/package/lucide-vue-next"
+      }
+    ]
+  },
+  "lucide-svelte": {
+    "order": 3,
+    "icon": "svelte",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-svelte",
+        "href": "https://www.npmjs.com/package/lucide-svelte"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-svelte",
+        "href": "https://www.npmjs.com/package/lucide-svelte"
+      }
+    ]
+  },
+  "lucide-solid": {
+    "order": 4,
+    "icon": "solid",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-solid",
+        "href": "https://www.npmjs.com/package/lucide-solid"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-solid",
+        "href": "https://www.npmjs.com/package/lucide-solid"
+      }
+    ]
+  },
+  "lucide-react-native": {
+    "order": 5,
+    "icon": "react-native",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-react-native",
+        "href": "https://www.npmjs.com/package/lucide-react-native"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-react-native",
+        "href": "https://www.npmjs.com/package/lucide-react-native"
+      }
+    ]
+  },
+  "lucide-angular": {
+    "order": 6,
+    "icon": "angular",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-angular",
+        "href": "https://www.npmjs.com/package/lucide-angular"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-angular",
+        "href": "https://www.npmjs.com/package/lucide-angular"
+      }
+    ]
+  },
+  "lucide-preact": {
+    "order": 7,
+    "icon": "preact",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-preact",
+        "href": "https://www.npmjs.com/package/lucide-preact"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-preact",
+        "href": "https://www.npmjs.com/package/lucide-preact"
+      }
+    ]
+  },
+  "@lucide/astro": {
+    "docsAlias": "lucide-astro",
+    "packageDirname": "astro",
+    "order": 8,
+    "icon": "astro",
+    "iconDark": "astro-dark",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/astro",
+        "href": "https://www.npmjs.com/package/@lucide/astro"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/astro",
+        "href": "https://www.npmjs.com/package/@lucide/astro"
+      }
+    ]
+  },
+  "lucide-static": {
+    "order": 9,
+    "icon": "svg",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-static",
+        "href": "https://www.npmjs.com/package/lucide-static"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-static",
+        "href": "https://www.npmjs.com/package/lucide-static"
+      }
+    ]
+  }
+}

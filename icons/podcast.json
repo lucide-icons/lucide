@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "iiaishwarya",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "mic",
+    "talk",
+    "voice",
+    "subscribe",
+    "subscription",
+    "stream"
+  ],
+  "categories": [
+    "multimedia",
+    "social"
+  ]
+}

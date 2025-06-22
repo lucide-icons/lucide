@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "ship",
+    "boat",
+    "harbor",
+    "harbour",
+    "dock"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}

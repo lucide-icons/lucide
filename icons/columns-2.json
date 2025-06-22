@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
+  "tags": [
+    "lines",
+    "list",
+    "queue",
+    "preview",
+    "panel",
+    "parallel",
+    "series",
+    "split",
+    "vertical",
+    "horizontal",
+    "half",
+    "center",
+    "middle",
+    "even",
+    "sidebar",
+    "drawer",
+    "gutter",
+    "fold",
+    "reflow",
+    "typography",
+    "pagination",
+    "pages"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text"
+  ],
+  "aliases": [
+    "columns"
+  ]
+}

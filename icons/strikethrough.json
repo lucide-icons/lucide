@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "johnletey",
+    "csandman"
+  ],
+  "tags": [
+    "cross out",
+    "delete",
+    "remove",
+    "format"
+  ],
+  "categories": [
+    "text"
+  ]
+}

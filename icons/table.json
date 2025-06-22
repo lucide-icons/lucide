@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "zenoamaro",
+    "ericfennis",
+    "csandman",
+    "mittalyashu"
+  ],
+  "tags": [
+    "spreadsheet",
+    "grid"
+  ],
+  "categories": [
+    "text",
+    "files"
+  ]
+}

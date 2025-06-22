@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "forward",
+    "next",
+    "more than",
+    "greater",
+    "menu",
+    "panel",
+    "code",
+    "coding",
+    "command line",
+    "terminal",
+    "prompt",
+    "shell",
+    "console",
+    ">"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "development"
+  ],
+  "aliases": [
+    "chevron-right-square"
+  ]
+}

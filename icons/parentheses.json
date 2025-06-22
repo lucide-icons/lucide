@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "code",
+    "token",
+    "parenthesis",
+    "parens",
+    "brackets",
+    "parameters",
+    "arguments",
+    "args",
+    "input",
+    "call",
+    "math",
+    "formula",
+    "function",
+    "(",
+    ")"
+  ],
+  "categories": [
+    "development",
+    "files",
+    "math"
+  ]
+}

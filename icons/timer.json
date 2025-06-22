@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "ericfennis"
+  ],
+  "tags": [
+    "time",
+    "timer",
+    "stopwatch"
+  ],
+  "categories": [
+    "time"
+  ]
+}

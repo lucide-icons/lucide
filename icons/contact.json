@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "karsa-mistmere",
+    "FPDK",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "user",
+    "person",
+    "family",
+    "friend",
+    "acquaintance",
+    "listing",
+    "networking"
+  ],
+  "categories": [
+    "account",
+    "connectivity",
+    "communication",
+    "social"
+  ]
+}

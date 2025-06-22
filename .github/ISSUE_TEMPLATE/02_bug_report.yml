@@ -1,0 +1,104 @@
+name: Bug report
+description: Create a report to help us improve
+labels: ['🐛 bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before reporting an issue, please search to see if someone has filed a similar issue before. If there is already an open issue, please add a 👍 and/or leave a comment with additional information.
+  - type: checkboxes
+    id: packages
+    attributes:
+      label: Package
+      description: Which Lucide packages are affected? You may select more than one.
+      options:
+        - label: lucide
+        - label: lucide-angular
+        - label: lucide-flutter
+        - label: lucide-preact
+        - label: lucide-react
+        - label: lucide-react-native
+        - label: lucide-solid
+        - label: lucide-svelte
+        - label: lucide-vue
+        - label: lucide-vue-next
+        - label: lucide-astro
+        - label: Figma plugin
+        - label: source/main
+        - label: other/not relevant
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of Lucide are you running?
+      placeholder: e.g. 0.289.1
+    validations:
+      required: true
+  - type: checkboxes
+    id: can-reproduce-in-latest-version
+    attributes:
+      label: Can you reproduce this in the latest version?
+      description: i.e. after running `npm install lucide-react@latest`
+      options:
+        - label: 'Yes'
+        - label: 'No'
+    validations:
+      required: false
+  - type: checkboxes
+    id: browsers
+    attributes:
+      label: Browser
+      description: In which browser(s) are you experiencing the issue? You may select more than one.
+      options:
+        - label: Chrome/Chromium
+        - label: Firefox
+        - label: Safari
+        - label: Edge
+        - label: iOS Safari
+        - label: Opera
+        - label: Other/not relevant
+    validations:
+      required: false
+  - type: checkboxes
+    id: operating-systems
+    attributes:
+      label: Operating system
+      description: In which operating systems a you experiencing the issue? You may select more than one.
+      options:
+        - label: Windows
+        - label: Linux
+        - label: macOS
+        - label: ChromeOS
+        - label: iOS
+        - label: Android
+        - label: Other/not relevant
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Try to describe in detail the problem you're running into and provide additional context about your working environment if necessary.
+      placeholder: e.g. When I do X, Y happens instead of Z
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Please provide a detailed guide on how this issue can be reproduced or a live example with a working reproduction on Codesandbox, JSFiddle or similar.
+      placeholder: |
+        1. Import `check` icon
+        2. Add to a React component/view
+        3. Run the react app
+        4. Notice that the `check` isn't rendering correctly which seems a encoding problem
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please review the following checklist before submitting your issue.
+      options:
+        - label: I have searched if someone has submitted a similar issue before and there weren't any. (Please make sure to also search closed issues, as this issue might already have been resolved.)
+          required: true

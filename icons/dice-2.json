@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "dice",
+    "random",
+    "tabletop",
+    "2",
+    "board",
+    "game"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie"
+  ],
+  "tags": [
+    "animal",
+    "pet",
+    "kitten",
+    "feline"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

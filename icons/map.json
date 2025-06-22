@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "location",
+    "navigation",
+    "travel"
+  ],
+  "categories": [
+    "text",
+    "navigation"
+  ]
+}

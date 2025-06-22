@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "stack",
+    "pile",
+    "pages",
+    "sheets",
+    "paperwork",
+    "copies",
+    "copy"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ],
+  "aliases": [
+    {
+      "name": "layers-3",
+      "deprecationReason": "alias.duplicate"
+    }
+  ]
+}

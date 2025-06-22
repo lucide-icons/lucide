@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "arrow",
+    "left"
+  ],
+  "categories": [
+    "arrows",
+    "design"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "johnletey",
+    "csandman"
+  ],
+  "tags": [
+    "licence"
+  ],
+  "categories": [
+    "text"
+  ]
+}

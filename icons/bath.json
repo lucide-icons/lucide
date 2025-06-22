@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "amenities",
+    "services",
+    "bathroom",
+    "shower"
+  ],
+  "categories": [
+    "travel"
+  ]
+}

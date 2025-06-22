@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "storage",
+    "shipping",
+    "freight",
+    "supply chain",
+    "docker",
+    "environment",
+    "devops",
+    "code",
+    "coding"
+  ],
+  "categories": [
+    "development",
+    "transportation",
+    "mail"
+  ]
+}

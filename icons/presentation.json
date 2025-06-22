@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "screen",
+    "whiteboard",
+    "marker pens",
+    "markers",
+    "blackboard",
+    "chalk",
+    "easel",
+    "school",
+    "learning",
+    "lesson",
+    "office",
+    "meeting",
+    "project",
+    "planning"
+  ],
+  "categories": [
+    "multimedia",
+    "photography",
+    "devices",
+    "communication",
+    "design"
+  ]
+}

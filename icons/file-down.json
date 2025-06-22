@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "download",
+    "import",
+    "export"
+  ],
+  "categories": [
+    "files",
+    "arrows"
+  ]
+}

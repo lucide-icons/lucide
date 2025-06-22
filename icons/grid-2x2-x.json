@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "chessurisme"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "columns",
+    "data",
+    "blocks",
+    "plot",
+    "land",
+    "geometry",
+    "measure",
+    "size",
+    "width",
+    "height",
+    "distance",
+    "surface area",
+    "square meter",
+    "acre"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "math"
+  ],
+  "aliases": [
+    "grid-2-x-2-x"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "connection",
+    "signal",
+    "wireless"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

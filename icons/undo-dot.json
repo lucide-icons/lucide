@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "redo",
+    "history",
+    "step",
+    "back"
+  ],
+  "categories": [
+    "text",
+    "arrows"
+  ]
+}

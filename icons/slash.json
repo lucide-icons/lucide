@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "divide",
+    "division",
+    "or",
+    "/"
+  ],
+  "categories": [
+    "development",
+    "math"
+  ]
+}

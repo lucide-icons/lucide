@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "deprecationReason": "icon.brand",
+  "toBeRemovedInVersion": "v1.0",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "logo",
+    "camera",
+    "social"
+  ],
+  "categories": [
+    "brands",
+    "social",
+    "photography"
+  ]
+}

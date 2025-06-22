@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "plane",
+    "trip",
+    "airplane"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}

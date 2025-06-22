@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "next",
+    "forward",
+    "direction",
+    "east",
+    "export",
+    "expand",
+    "fold",
+    "horizontal",
+    "|->"
+  ],
+  "categories": [
+    "arrows",
+    "navigation"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "henri42",
+    "jguddas",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "mouse",
+    "mice",
+    "gerbil",
+    "rodent",
+    "pet",
+    "pest",
+    "plague",
+    "disease"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

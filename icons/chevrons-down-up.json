@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "PeterlitsZo",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "collapse",
+    "fold",
+    "vertical"
+  ],
+  "categories": [
+    "arrows"
+  ]
+}

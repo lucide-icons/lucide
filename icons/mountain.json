@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kerkeslager",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "climb",
+    "hike",
+    "rock"
+  ],
+  "categories": [
+    "nature",
+    "gaming"
+  ]
+}

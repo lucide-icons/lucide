@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "connium",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "bank",
+    "building",
+    "capitol",
+    "finance",
+    "money",
+    "museum",
+    "art gallery",
+    "hall",
+    "institute",
+    "pediment",
+    "portico",
+    "columns",
+    "pillars",
+    "classical",
+    "architecture",
+    "government",
+    "institution"
+  ],
+  "categories": [
+    "finance",
+    "navigation",
+    "buildings"
+  ]
+}

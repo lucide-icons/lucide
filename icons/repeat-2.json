@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "arrows",
+    "retweet",
+    "repost",
+    "share",
+    "repeat",
+    "loop"
+  ],
+  "categories": [
+    "arrows",
+    "social",
+    "multimedia"
+  ]
+}

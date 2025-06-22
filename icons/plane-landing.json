@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "it-is-not"
+  ],
+  "tags": [
+    "arrival",
+    "plane",
+    "trip",
+    "airplane",
+    "landing"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "path",
+    "journey",
+    "planner",
+    "points",
+    "stops",
+    "stations",
+    "reset",
+    "clear",
+    "cancelled",
+    "closed",
+    "blocked"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}

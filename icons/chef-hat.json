@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "cooking",
+    "food",
+    "kitchen",
+    "restaurant"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

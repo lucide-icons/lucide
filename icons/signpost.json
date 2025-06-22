@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "bidirectional",
+    "left",
+    "right",
+    "east",
+    "west"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "development",
+    "gaming"
+  ]
+}

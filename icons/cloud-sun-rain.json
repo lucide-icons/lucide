@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "weather",
+    "partly",
+    "rainfall"
+  ],
+  "categories": [
+    "weather"
+  ]
+}

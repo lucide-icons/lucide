@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Reund0",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "find",
+    "product process",
+    "lens"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}

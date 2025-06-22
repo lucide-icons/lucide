@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "csandman",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "hatchet",
+    "weapon",
+    "chop",
+    "sharp",
+    "equipment",
+    "fireman",
+    "firefighter",
+    "brigade",
+    "lumberjack",
+    "woodcutter",
+    "logger",
+    "forestry"
+  ],
+  "categories": [
+    "tools",
+    "gaming"
+  ]
+}

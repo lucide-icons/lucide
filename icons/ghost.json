@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "pac-man",
+    "spooky"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}

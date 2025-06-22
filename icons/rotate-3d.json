@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel"
+  ],
+  "tags": [
+    "gizmo",
+    "transform",
+    "orientation",
+    "orbit",
+    "axis"
+  ],
+  "categories": [
+    "design"
+  ],
+  "aliases": [
+    "rotate-3-d"
+  ]
+}

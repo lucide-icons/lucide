@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "reflect",
+    "mirror",
+    "alignment",
+    "dashed"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas",
+    "ericfennis"
+  ],
+  "tags": [
+    "camera",
+    "lens",
+    "photo",
+    "dashed"
+  ],
+  "categories": [
+    "photography"
+  ]
+}

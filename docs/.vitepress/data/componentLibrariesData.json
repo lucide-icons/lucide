@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Shadcn/ui",
+    "url": "https://ui.shadcn.com/",
+    "image": {
+      "light": "/library-logos/shadcn-ui-light.svg",
+      "dark": "/library-logos/shadcn-ui-dark.svg"
+    }
+  },
+  {
+    "name": "Tamagui",
+    "url": "https://tamagui.dev/",
+    "image": {
+      "light": "/library-logos/tamagui.svg",
+      "dark": "/library-logos/tamagui.svg"
+    }
+  },
+  {
+    "name": "Reflex",
+    "url": "https://reflex.dev",
+    "image": {
+      "light": "/library-logos/reflex-light.svg",
+      "dark": "/library-logos/reflex-dark.svg"
+    }
+  }
+]

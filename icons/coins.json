@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "money",
+    "cash",
+    "finance",
+    "gamble"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}

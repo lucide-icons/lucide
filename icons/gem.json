@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "connium",
+    "ericfennis"
+  ],
+  "tags": [
+    "diamond",
+    "crystal",
+    "ruby",
+    "jewellery",
+    "price",
+    "special",
+    "present",
+    "gift",
+    "ring",
+    "wedding",
+    "proposal",
+    "marriage",
+    "rubygems"
+  ],
+  "categories": [
+    "gaming",
+    "development",
+    "finance"
+  ]
+}

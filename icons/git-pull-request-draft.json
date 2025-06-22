@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "code",
+    "version control",
+    "open",
+    "draft",
+    "dashed"
+  ],
+  "categories": [
+    "development"
+  ]
+}

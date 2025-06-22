@@ -1,0 +1,18 @@
+{
+  "name": "@lucide/shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.3"
+  }
+}

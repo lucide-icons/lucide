@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "note",
+    "quaver",
+    "eighth note"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ]
+}

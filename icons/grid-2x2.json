@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "table",
+    "rows",
+    "columns",
+    "blocks",
+    "plot",
+    "land",
+    "geometry",
+    "measure",
+    "size",
+    "width",
+    "height",
+    "distance",
+    "surface area",
+    "square meter",
+    "acre",
+    "window",
+    "skylight"
+  ],
+  "categories": [
+    "text",
+    "layout",
+    "design",
+    "math"
+  ],
+  "aliases": [
+    "grid-2-x-2"
+  ]
+}

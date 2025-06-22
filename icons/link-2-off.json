@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "unchain",
+    "chain"
+  ],
+  "categories": [
+    "text"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "fire alarm",
+    "flames",
+    "smoke",
+    "firefighter",
+    "fireman",
+    "department",
+    "brigade",
+    "station",
+    "emergency",
+    "alert",
+    "safety",
+    "school bell",
+    "period break",
+    "recess",
+    "doorbell",
+    "entrance",
+    "entry",
+    "ring",
+    "reception"
+  ],
+  "categories": [
+    "devices",
+    "notifications",
+    "home"
+  ]
+}

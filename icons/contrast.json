@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "display",
+    "accessibility"
+  ],
+  "categories": [
+    "photography",
+    "accessibility",
+    "design"
+  ]
+}

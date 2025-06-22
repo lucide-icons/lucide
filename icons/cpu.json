@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "processor",
+    "cores",
+    "technology",
+    "computer",
+    "chip",
+    "circuit",
+    "memory",
+    "ram",
+    "specs",
+    "gigahertz",
+    "ghz"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

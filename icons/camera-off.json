@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "lscheibel",
+    "Andreto",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "photo",
+    "webcam",
+    "video"
+  ],
+  "categories": [
+    "photography",
+    "devices",
+    "communication"
+  ]
+}

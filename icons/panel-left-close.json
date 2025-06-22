@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "primary",
+    "drawer",
+    "hide",
+    "chevron",
+    "<"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ],
+  "aliases": [
+    "sidebar-close"
+  ]
+}

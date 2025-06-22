@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "Andreto",
+    "ericfennis",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "bird",
+    "chicken",
+    "nest",
+    "hatch",
+    "shell",
+    "incubate",
+    "soft boiled",
+    "hard",
+    "breakfast",
+    "brunch",
+    "morning",
+    "easter"
+  ],
+  "categories": [
+    "food-beverage",
+    "animals"
+  ]
+}

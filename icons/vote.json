@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ptrgast",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "vote",
+    "poll",
+    "ballot",
+    "political",
+    "social",
+    "check",
+    "tick"
+  ],
+  "categories": [
+    "social"
+  ]
+}

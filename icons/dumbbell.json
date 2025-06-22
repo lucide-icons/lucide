@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "barbell",
+    "weight",
+    "workout",
+    "gym"
+  ],
+  "categories": [
+    "navigation",
+    "sports"
+  ]
+}

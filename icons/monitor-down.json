@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "desktop",
+    "download"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

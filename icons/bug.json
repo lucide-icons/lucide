@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "issue",
+    "report",
+    "debug",
+    "code",
+    "insect"
+  ],
+  "categories": [
+    "development",
+    "animals"
+  ]
+}

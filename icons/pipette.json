@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "eye dropper",
+    "color picker",
+    "lab",
+    "chemistry"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "science"
+  ]
+}

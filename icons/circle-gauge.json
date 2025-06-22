@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "dashboard",
+    "dial",
+    "meter",
+    "speed",
+    "pressure",
+    "measure",
+    "level"
+  ],
+  "categories": [
+    "transportation",
+    "sports",
+    "science"
+  ],
+  "aliases": [
+    "gauge-circle"
+  ]
+}

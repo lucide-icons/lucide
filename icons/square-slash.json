@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "git",
+    "diff",
+    "ignored",
+    "divide",
+    "division",
+    "shortcut",
+    "or",
+    "/"
+  ],
+  "categories": [
+    "development",
+    "math"
+  ],
+  "aliases": [
+    "slash-square"
+  ]
+}

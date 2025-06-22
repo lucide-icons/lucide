@@ -1,7 +1,7 @@
 {
   "name": "lucide-preact",
-  "description": "A Lucide icon library package for Preact applications",
-  "version": "0.61.0",
+  "description": "A Lucide icon library package for Preact applications.",
+  "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -10,6 +10,17 @@
     "url": "https://github.com/lucide-icons/lucide.git",
     "directory": "packages/lucide-preact"
   },
+  "keywords": [
+    "Lucide",
+    "Preact",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
   "author": "Eric Fennis",
   "amdName": "lucide-preact",
   "main": "dist/cjs/lucide-preact.js",
@@ -17,21 +28,33 @@
   "module": "dist/esm/lucide-preact.js",
   "unpkg": "dist/umd/lucide-preact.min.js",
   "typings": "dist/lucide-preact.d.ts",
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "scripts": {
-    "build": "yarn clean && yarn build:icons && (yarn build:es & yarn build:types & yarn build:bundles)",
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
-    "build:icons": "yarn --cwd ../../ build:icons --output=../packages/lucide-preact/src --templateSrc=../packages/lucide-preact/scripts/exportTemplate --renderUniqueKey",
-    "build:es": "babel src -d dist/esm",
-    "build:types": "yarn --cwd ../../ babel-node packages/lucide-preact/scripts/buildTypes.js",
-    "build:bundles": "yarn --cwd ../../ rollup -c packages/lucide-preact/rollup.config.js",
-    "test": "jest"
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "test": "pnpm build:icons && vitest run",
+    "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@testing-library/preact": "^2.0.1",
-    "babel-preset-preact": "^2.0.0",
-    "jest": "^26.6.3",
-    "preact": "^10.5.13"
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/shared": "workspace:*",
+    "@preact/preset-vite": "^2.7.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/preact": "^3.2.3",
+    "jest-serializer-html": "^7.1.0",
+    "preact": "^10.19.2",
+    "rollup": "^4.22.4",
+    "rollup-plugin-dts": "^6.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4",
+    "vitest": "^3.1.3"
   },
   "peerDependencies": {
     "preact": "^10.5.13"

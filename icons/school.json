@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "building",
+    "education",
+    "childhood",
+    "university",
+    "learning",
+    "campus",
+    "scholar",
+    "student",
+    "lecture",
+    "degree",
+    "course",
+    "academia",
+    "study",
+    "knowledge",
+    "classroom",
+    "research",
+    "diploma",
+    "graduation",
+    "professor",
+    "tutorial",
+    "homework",
+    "assignment",
+    "exam"
+  ],
+  "categories": [
+    "buildings",
+    "navigation"
+  ]
+}

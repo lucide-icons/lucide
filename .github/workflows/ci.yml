@@ -3,53 +3,52 @@ name: Continuous integration icons
 on:
   push:
     branches:
-      - master
+      - main
     paths:
-      - icons/**
+      - icons/**/*.svg
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
-
+    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
     runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Fetch tags
         run: git fetch --all --tags
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "::set-output name=LATEST_TAG::$(git describe --tags `git rev-list --tags --max-count=1`)"
-
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
       - name: Check if we can patch
         run: .github/workflows/version-up.sh --minor
 
       - name: Create new version
         id: new-version
-        run: echo "::set-output name=NEW_VERSION::$(.github/workflows/version-up.sh --minor)"
+        run: echo "NEW_VERSION=$(.github/workflows/version-up.sh --minor)" >> $GITHUB_OUTPUT
 
       - name: Create change log
         id: change-log
         run: |
-          CHANGE_LOG=$(yarn --silent run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          CHANGE_LOG="${CHANGE_LOG//'%'/'%25'}"
-          CHANGE_LOG="${CHANGE_LOG//$'\n'/'%0A'}"
-          CHANGE_LOG="${CHANGE_LOG//$'\r'/'%0D'}"
+          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
+          CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
           echo $CHANGE_LOG
-          echo "::set-output name=CHANGE_LOG::$CHANGE_LOG"
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "CHANGE_LOG<<$EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGE_LOG" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
         env:
           GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 
@@ -58,11 +57,49 @@ jobs:
           echo '${{ steps.new-version.outputs.NEW_VERSION }}'
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
-      - name: Release
+      - name: Create Release
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.CREATE_RELEASE_TOKEN }}
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
-          name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
-          body: ${{ steps.change-log.outputs.CHANGE_LOG }}
+          name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
+          generate_release_notes: true
+
+  test-semantic-release:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          tag_format: ${version}
+          branches: |
+            ['new-release-workflow']
+          extends: |
+            semantic-release-monorepo
+          extra_plugins: |
+            @semantic-release/github
+            @semantic-release/git
+            @semantic-release/release-notes-generator
+            conventional-changelog-conventionalcommits
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log output
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          echo ${{ steps.semantic.outputs.new_release_version }}
+          echo ${{ steps.semantic.outputs.new_release_major_version }}
+          echo ${{ steps.semantic.outputs.new_release_minor_version }}
+          echo ${{ steps.semantic.outputs.new_release_patch_version }}
+
+  start-release:
+    if: github.repository == 'lucide-icons/lucide'
+    needs: create-release
+    uses: './.github/workflows/release.yml'
+    secrets: inherit
+    with:
+      version: ${{ needs.create-release.outputs.VERSION }}

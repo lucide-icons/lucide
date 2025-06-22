@@ -1,0 +1,49 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "code",
+    "coding",
+    "version control",
+    "git",
+    "repository",
+    "clone",
+    "fork",
+    "duplicate",
+    "multiple",
+    "books",
+    "library",
+    "copies",
+    "copied",
+    "plagiarism",
+    "plagiarised",
+    "plagiarized",
+    "reading list",
+    "information",
+    "informed",
+    "knowledge",
+    "knowledgeable",
+    "knowledgable",
+    "education",
+    "high school",
+    "university",
+    "college",
+    "academy",
+    "student",
+    "study",
+    "learning",
+    "research",
+    "smart",
+    "intelligent",
+    "intellectual"
+  ],
+  "categories": [
+    "development",
+    "text",
+    "gaming"
+  ]
+}

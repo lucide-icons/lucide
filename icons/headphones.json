@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "music",
+    "audio",
+    "sound"
+  ],
+  "categories": [
+    "multimedia",
+    "connectivity",
+    "devices",
+    "files",
+    "gaming"
+  ]
+}

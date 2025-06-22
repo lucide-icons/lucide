@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "deprecated": true,
+  "deprecationReason": "icon.brand",
+  "toBeRemovedInVersion": "v1.0",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "logo",
+    "social"
+  ],
+  "categories": [
+    "social",
+    "brands"
+  ]
+}

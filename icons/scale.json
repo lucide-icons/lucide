@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "balance",
+    "legal",
+    "license",
+    "right",
+    "rule",
+    "law"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}

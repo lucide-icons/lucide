@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "tags": [
+    "people",
+    "human",
+    "accessibility",
+    "stick figure"
+  ],
+  "categories": [
+    "accessibility",
+    "people"
+  ]
+}

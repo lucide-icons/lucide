@@ -1,0 +1,5 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Weather",
+  "icon": "cloud-sun"
+}

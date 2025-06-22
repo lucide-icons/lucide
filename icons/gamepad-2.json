@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "johnletey"
+  ],
+  "tags": [
+    "console"
+  ],
+  "categories": [
+    "gaming",
+    "devices"
+  ]
+}

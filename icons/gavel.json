@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "hammer",
+    "mallet"
+  ],
+  "categories": [
+    "navigation",
+    "tools"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "water",
+    "sea",
+    "sound",
+    "hertz",
+    "wavelength",
+    "vibrate"
+  ],
+  "categories": [
+    "weather",
+    "navigation",
+    "multimedia",
+    "sustainability"
+  ]
+}

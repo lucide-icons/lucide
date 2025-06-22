@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "volume",
+    "controls",
+    "controller",
+    "tv remote",
+    "geometry",
+    "delta",
+    "ramp",
+    "slope",
+    "incline",
+    "increase"
+  ],
+  "categories": [
+    "shapes",
+    "math"
+  ]
+}

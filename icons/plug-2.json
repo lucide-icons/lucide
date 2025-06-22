@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "electricity",
+    "energy",
+    "socket",
+    "outlet"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

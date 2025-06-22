@@ -1,9 +1,21 @@
-<script>
+<script lang="ts">
   import defaultAttributes from './defaultAttributes'
-  export let name
+  import type { IconNode } from './types';
+
+  export let name: string | undefined = undefined
   export let color = 'currentColor'
-  export let size = 24
-  export let strokeWidth = 2
+  export let size: number | string = 24
+  export let strokeWidth: number | string = 2
+  export let absoluteStrokeWidth: boolean = false
+  export let iconNode: IconNode = []
+
+  const mergeClasses = <ClassType = string | undefined | null>(
+    ...classes: ClassType[]
+  ) => classes.filter((className, index, array) => {
+      return Boolean(className) && array.indexOf(className) === index;
+    })
+    .join(' ');
+
 </script>
 
 <svg
@@ -12,8 +24,22 @@
   width={size}
   height={size}
   stroke={color}
-  stroke-width={strokeWidth}
-  class={`lucide-icon lucide lucide-${name} ${$$props.class ?? ''}`}
+  stroke-width={
+    absoluteStrokeWidth
+      ? Number(strokeWidth) * 24 / Number(size)
+      : strokeWidth
+  }
+  class={
+    mergeClasses(
+      'lucide-icon',
+      'lucide',
+      name ? `lucide-${name}`: '',
+      $$props.class
+    )
+  }
 >
+  {#each iconNode as [tag, attrs]}
+    <svelte:element this={tag} {...attrs}/>
+  {/each}
   <slot />
 </svg>

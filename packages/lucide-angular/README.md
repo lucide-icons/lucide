@@ -1,163 +1,73 @@
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-angular.svg" alt="Lucide icon library for Angular applications." width="540">
+  </a>
+</p>
+
+<p align="center">
+Lucide icon library for Angular applications.
+</p>
+
+<div align="center">
+
+  [![npm](https://img.shields.io/npm/v/lucide-angular?color=blue)](https://www.npmjs.com/package/lucide-angular)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-angular">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
+
 # Lucide Angular
 
 Implementation of the lucide icon library for angular applications.
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
-
 ## Installation
 
-``` sh
-yarn add lucide-angular
+```sh
+pnpm add lucide-angular
+```
 
-# or
-
+```sh
 npm install lucide-angular
 ```
 
-## How to use
-
-There are three ways for use this library.
-
-### Method 1: createElement
-
-After install `lucide-angular` change content of file `app.component.html` and `app.component.ts`.
-
-``` html
-<!-- app.component.html -->
-<div id="lucide-icon"></div>
+```sh
+yarn add lucide-angular
 ```
 
-``` js
-// app.component.ts
-
-import { Component, OnInit } from '@angular/core';
-import { createElement } from 'lucide-angular';
-import { Activity } from 'lucide-angular/icons';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-
-export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    const div = document.getElementById('lucide-icon');
-    const elm = createElement(Activity);
-    elm.setAttribute('color', 'red'); // or set `width`, `height`, `fill`, `stroke-width`, ...
-
-    if (div) {
-      div.appendChild(elm);
-    }
-  }
-}
+```sh
+bun add lucide-angular
 ```
 
-### Method 2: User __Tag__ with __name__ property
+## Documentation
 
-After install `lucide-angular` change content of file `app.component.html`, `app.component.ts`, `app.component.css` and `app.module.ts`.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-angular)
 
-``` js
-// app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+## Community
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LucideAngularModule, AlarmCheck, Edit } from 'lucide-angular';
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    LucideAngularModule.pick({ AlarmCheck, Edit })  // add all of icons that is imported.
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
+## License
 
-``` html
-<!-- app.component.html -->
-<lucide-icon name="alarm-check" class="myicon"></lucide-icon>
-<lucide-icon name="edit" class="myicon"></lucide-icon>
-```
+Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
-### Method 3: User __Tag__ with __img__ property
+## Sponsors
 
-After install `lucide-angular` change content of file `app.component.html`, `app.component.ts`, `app.component.css` and `app.module.ts`.
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
 
-``` js
-// app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LucideAngularModule } from 'lucide-angular';
+### Awesome backers 🍺
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    LucideAngularModule.pick({ })
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-``` xml
-<!-- app.component.html -->
-<lucide-icon [img]="ico1" class="myicon"></lucide-icon>
-<lucide-icon [img]="ico2" class="myicon"></lucide-icon>
-```
-
-``` js
-// app.component.ts
-import { Component } from '@angular/core';
-import { Airplay, Circle } from 'lucide-angular';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-
-export class AppComponent {
-  ico1 = Airplay;
-  ico2 = Circle;
-}
-```
-
-## Notes
-
-### Import all icons
-
-In `Method 2`: import all icons in `app.module.ts` by:
-
-``` js
-...
-import { icons } from 'lucide-angular/icons';
-....
-LucideAngularModule.pick(icons)
-....
-```
-
-### Tags
-
-You can use the following tags instead of `lucide-icon`:
-
-- lucide-angular
-- i-lucide
-- span-lucide
-
-All of the above are the same
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>

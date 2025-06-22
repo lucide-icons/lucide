@@ -1,0 +1,5 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "File icons",
+  "icon": "panels-top-left"
+}

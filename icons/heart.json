@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "like",
+    "love",
+    "emotion",
+    "suit",
+    "playing",
+    "cards"
+  ],
+  "categories": [
+    "medical",
+    "social",
+    "multimedia",
+    "emoji",
+    "gaming",
+    "shapes"
+  ]
+}

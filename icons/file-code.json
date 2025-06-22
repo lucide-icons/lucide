@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "script",
+    "document",
+    "gist",
+    "html",
+    "xml",
+    "property list",
+    "plist"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "bidirectional",
+    "two-way",
+    "2-way",
+    "swap",
+    "switch",
+    "network",
+    "mobile data",
+    "internet",
+    "sort",
+    "reorder",
+    "move"
+  ],
+  "categories": [
+    "arrows",
+    "navigation"
+  ]
+}

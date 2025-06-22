@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "colors",
+    "colours",
+    "swatches",
+    "pantone",
+    "shades",
+    "tint",
+    "hue",
+    "saturation",
+    "brightness",
+    "theme",
+    "scheme",
+    "palette",
+    "samples",
+    "textile",
+    "carpet"
+  ],
+  "categories": [
+    "design",
+    "home",
+    "photography"
+  ]
+}

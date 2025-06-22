@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "preview",
+    "zoom",
+    "expand",
+    "fullscreen",
+    "gallery",
+    "image",
+    "camera",
+    "watch",
+    "surveillance",
+    "retina",
+    "focus",
+    "lens",
+    "biometric",
+    "identification",
+    "authentication",
+    "access",
+    "login"
+  ],
+  "categories": [
+    "photography",
+    "multimedia",
+    "accessibility",
+    "security",
+    "devices",
+    "account"
+  ]
+}

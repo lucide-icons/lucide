@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "phone",
+    "cassette",
+    "tape",
+    "reel",
+    "recording",
+    "audio"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "social"
+  ]
+}

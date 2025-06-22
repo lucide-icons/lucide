@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "itsjavi",
+    "mittalyashu",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "night",
+    "dark",
+    "light",
+    "moon",
+    "sun",
+    "brightness",
+    "theme",
+    "auto theme",
+    "system theme",
+    "appearance"
+  ],
+  "categories": [
+    "accessibility"
+  ]
+}

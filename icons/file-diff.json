@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "diff",
+    "patch"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "keyboard",
+    "key",
+    "mac",
+    "alt",
+    "button"
+  ],
+  "categories": [
+    "development"
+  ]
+}

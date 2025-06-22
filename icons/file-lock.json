@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "lock",
+    "password",
+    "security"
+  ],
+  "categories": [
+    "files",
+    "security"
+  ]
+}

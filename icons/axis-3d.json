@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lscheibel",
+    "jguddas"
+  ],
+  "tags": [
+    "gizmo",
+    "coordinates"
+  ],
+  "categories": [
+    "design"
+  ],
+  "aliases": [
+    "axis-3-d"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis"
+  ],
+  "tags": [
+    "dig",
+    "spade",
+    "treasure"
+  ],
+  "categories": [
+    "nature",
+    "tools",
+    "gaming"
+  ]
+}

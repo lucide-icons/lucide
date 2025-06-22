@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "key",
+    "private",
+    "public",
+    "security"
+  ],
+  "categories": [
+    "files",
+    "security"
+  ]
+}

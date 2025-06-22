@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "bduffany",
+    "ericfennis"
+  ],
+  "tags": [
+    "words",
+    "lines",
+    "break",
+    "paragraph"
+  ],
+  "categories": [
+    "text",
+    "arrows"
+  ]
+}

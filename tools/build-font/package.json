@@ -1,0 +1,24 @@
+{
+  "name": "build-font",
+  "description": "A internal used package to build the font.",
+  "private": true,
+  "version": "1.0.0",
+  "main": "main.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node ./main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "minimist": "^1.2.8",
+    "svgtofont": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22"
+  }
+}

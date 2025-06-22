@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "ice lolly",
+    "ice cream",
+    "sweet",
+    "food"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

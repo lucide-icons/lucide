@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "mittalyashu"
+  ],
+  "tags": [
+    "send",
+    "share",
+    "email"
+  ],
+  "categories": [
+    "mail"
+  ]
+}

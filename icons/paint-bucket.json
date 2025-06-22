@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "fill",
+    "paint",
+    "bucket",
+    "color",
+    "colour"
+  ],
+  "categories": [
+    "design",
+    "tools"
+  ]
+}

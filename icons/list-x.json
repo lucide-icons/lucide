@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "playlist",
+    "subtract",
+    "remove",
+    "delete",
+    "unqueue"
+  ],
+  "categories": [
+    "multimedia",
+    "text"
+  ]
+}

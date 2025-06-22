@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "items",
+    "flex",
+    "justify",
+    "distribute"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

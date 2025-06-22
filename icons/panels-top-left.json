@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "tags": [
+    "menu bar",
+    "sidebar",
+    "primary",
+    "drawers",
+    "window",
+    "webpage",
+    "projects",
+    "overview"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development"
+  ],
+  "aliases": [
+    "layout"
+  ]
+}

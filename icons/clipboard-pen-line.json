@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "paste"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    "clipboard-signature"
+  ]
+}

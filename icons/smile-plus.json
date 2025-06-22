@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "emoji",
+    "face",
+    "happy",
+    "good",
+    "emotion",
+    "react",
+    "reaction",
+    "add"
+  ],
+  "categories": [
+    "emoji",
+    "social",
+    "notifications",
+    "communication"
+  ]
+}

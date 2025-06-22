@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "arrow",
+    "previous",
+    "music",
+    "left",
+    "reverse"
+  ],
+  "categories": [
+    "multimedia",
+    "arrows"
+  ]
+}

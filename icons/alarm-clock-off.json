@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "morning",
+    "turn-off"
+  ],
+  "categories": [
+    "devices",
+    "notifications",
+    "time"
+  ]
+}

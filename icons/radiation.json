@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "ericfennis"
+  ],
+  "tags": [
+    "radioactive",
+    "nuclear",
+    "fallout",
+    "waste",
+    "atomic",
+    "physics",
+    "particle",
+    "element",
+    "molecule"
+  ],
+  "categories": [
+    "science"
+  ]
+}

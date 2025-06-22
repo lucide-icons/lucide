@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "ericfennis"
+  ],
+  "tags": [
+    "contactless",
+    "payment",
+    "near-field communication",
+    "screen"
+  ],
+  "categories": [
+    "communication",
+    "finance",
+    "devices"
+  ]
+}

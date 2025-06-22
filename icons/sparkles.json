@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "aliases": [
+    "stars"
+  ],
+  "tags": [
+    "stars",
+    "effect",
+    "filter",
+    "night",
+    "magic"
+  ],
+  "categories": [
+    "cursors",
+    "multimedia",
+    "gaming",
+    "weather"
+  ]
+}

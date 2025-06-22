@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "temple",
+    "building"
+  ],
+  "categories": [
+    "buildings",
+    "navigation"
+  ]
+}

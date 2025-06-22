@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "bduffany",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "brightness",
+    "dim",
+    "low",
+    "brightness low"
+  ],
+  "categories": [
+    "accessibility",
+    "weather"
+  ]
+}

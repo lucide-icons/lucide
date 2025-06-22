@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "arrow",
+    "expand",
+    "vertical",
+    "dashed"
+  ],
+  "categories": [
+    "arrows",
+    "layout"
+  ]
+}

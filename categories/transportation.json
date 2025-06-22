@@ -1,0 +1,5 @@
+{
+  "$schema": "../category.schema.json",
+  "title": "Transportation",
+  "icon": "train-front"
+}

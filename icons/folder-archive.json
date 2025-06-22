@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "archive",
+    "zip",
+    "package"
+  ],
+  "categories": [
+    "files"
+  ]
+}

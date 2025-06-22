@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "search",
+    "lens"
+  ],
+  "categories": [
+    "mail"
+  ]
+}

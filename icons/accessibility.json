@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "disability",
+    "disabled",
+    "dda",
+    "wheelchair"
+  ],
+  "categories": [
+    "accessibility",
+    "medical"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "ericfennis"
+  ],
+  "tags": [
+    "biscuit",
+    "privacy",
+    "legal",
+    "food"
+  ],
+  "categories": [
+    "account",
+    "food-beverage"
+  ]
+}
