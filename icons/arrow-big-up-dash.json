@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas",
+    "jamiemlaw"
   ],
   "tags": [
     "caps lock",
