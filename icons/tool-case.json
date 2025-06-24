@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AlexNaskida"
+    "AlexNaskida",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "tools",
