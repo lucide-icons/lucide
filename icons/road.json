@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "uibalint"
+  ],
+  "tags": [
+    "road",
+    "street",
+    "highway",
+    "route",
+    "path",
+    "transport",
+    "traffic",
+    "drive",
+    "map"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
