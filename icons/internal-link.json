@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "aramsoneson"
+  ],
+  "tags": [
+    "inbound",
+    "open"
+  ],
+  "categories": [
+    "arrows",
+    "text",
+    "navigation"
+  ]
+}
