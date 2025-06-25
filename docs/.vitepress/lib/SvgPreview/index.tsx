@@ -200,7 +200,7 @@ const ControlPath = ({
 } & PathProps<'stroke' | 'strokeWidth', 'd'>) => {
   const controlPaths = paths.map((path, i) => {
     const element = paths.filter((p) => p.c.id === path.c.id);
-    const lastElement = element[element.length - 1]?.next;
+    const lastElement = element.at(-1)?.next;
     assert(lastElement);
     const isClosed = element[0].prev.x === lastElement.x && element[0].prev.y === lastElement.y;
     const showMarker = !['rect', 'circle', 'ellipse'].includes(path.c.name);
