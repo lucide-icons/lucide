@@ -6,6 +6,9 @@ on:
       - packages/shared/**
       - pnpm-lock.yaml
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest

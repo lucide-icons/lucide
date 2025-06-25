@@ -9,6 +9,9 @@ on:
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest

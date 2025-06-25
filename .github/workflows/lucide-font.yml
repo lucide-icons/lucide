@@ -6,6 +6,9 @@ on:
       - tools/build-font/**
       - pnpm-lock.yaml
 
+permissions:
+  contents: read
+
 jobs:
   lucide-font:
     runs-on: ubuntu-latest

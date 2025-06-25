@@ -4,12 +4,14 @@ on:
     types: [opened]
     paths: icons/*.svg
 
+permissions:
+  contents: read
+
 jobs:
   request-review:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       pull-requests: write
     steps:
       - uses: actions/checkout@v4

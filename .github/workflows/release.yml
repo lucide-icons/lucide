@@ -18,6 +18,8 @@ on:
         description: Version
         required: true
 
+permissions: read-all
+
 jobs:
   pre-release:
     if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere"]', github.actor)

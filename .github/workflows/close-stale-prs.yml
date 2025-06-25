@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: '45 1 * * *'
 
+permissions: read-all
+
 jobs:
   stale:
     runs-on: ubuntu-latest

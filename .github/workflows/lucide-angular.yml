@@ -7,6 +7,9 @@ on:
       - tools/build-icons/**
       - pnpm-lock.yaml
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
