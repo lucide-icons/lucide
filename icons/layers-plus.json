@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "juanisidoro"
+    "juanisidoro",
+    "karsa-mistmere"
   ],
   "tags": [
     "stack",
