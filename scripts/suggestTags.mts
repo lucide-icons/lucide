@@ -27,9 +27,9 @@ if (changedFiles.length === 0) {
   process.exit(0);
 }
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// const client = new OpenAI({
+//   apiKey: process.env.OPENAI_API_KEY,
+// });
 
 const suggestionsByFile = changedFiles.map(async (file) => {
   const filePath = file.replace('.json', '');
@@ -37,13 +37,23 @@ const suggestionsByFile = changedFiles.map(async (file) => {
 
   const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces. Make sure you format the list in JSON and do not return any other text.`
 
-  const response = await client.responses.create({
-      model: "gpt-4.1-nano",
-      input,
-  });
+  // const response = await client.responses.create({
+  //     model: "gpt-4.1-nano",
+  //     input,
+  // });
 
-  const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
-  const suggestedTags = JSON.parse(strippedResponse)
+  // const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
+  // const suggestedTags = JSON.parse(strippedResponse)
+  const suggestedTags = [
+    'trash',      'delete',
+    'remove',     'bin',
+    'rubbish',    'discard',
+    'garbage',    'waste',
+    'binoculars', 'dump',
+    'garbagecan', 'wastebasket',
+    'recycle',    'kill',
+    'cancel'
+  ];
 
   console.log(`Suggesting tags for ${iconName}:`, suggestedTags);
 
@@ -63,18 +73,23 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   // Find the startLine in the json file
   const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
-  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
+  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \n\`\`\`suggestion\n"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
 Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
 
-  return octokit.pulls.createReviewComment({
-    owner,
-    repo,
-    pull_number: pullRequestNumber,
+  return {
+    path: file,          // Required
+    line: startLine,  // Required — line number in the file
     body: message,
-    commit_id: commitSha,
-    path: file,
-    line: startLine,
-  });
+  }
 })
 
-Promise.all(suggestionsByFile)
+const comments = await Promise.all(suggestionsByFile)
+
+await octokit.pulls.createReview({
+  owner,
+  repo,
+  pull_number: pullRequestNumber,
+  body: "🤖✨ ChatGPT Tags suggestions:",
+  event: "COMMENT",
+  comments,
+});
