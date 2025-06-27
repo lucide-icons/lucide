@@ -70,7 +70,6 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   // const currentContent = require(`../${filePath}`);
   const jsonFile = path.join(process.cwd(), file);
   const currentFileContent = await fs.readFile(jsonFile, 'utf-8') as unknown as string;
-  console.log(currentFileContent)
   const metaData = JSON.parse(currentFileContent);
 
   console.log(`Current tags for ${iconName}:`, metaData.tags || []);
@@ -96,13 +95,11 @@ Try asking it your self if you want to get more suggestions. [Open ChatGPT](http
 
 const comments = await Promise.all(suggestionsByFile)
 
-console.log('Comments to be added:', comments);
-
-// await octokit.pulls.createReview({
-//   owner,
-//   repo,
-//   pull_number: pullRequestNumber,
-//   body: "🤖✨ ChatGPT Tags suggestions:",
-//   event: "COMMENT",
-//   comments,
-// });
+await octokit.pulls.createReview({
+  owner,
+  repo,
+  pull_number: pullRequestNumber,
+  body: "🤖✨ ChatGPT Tags suggestions:",
+  event: "COMMENT",
+  comments,
+});
