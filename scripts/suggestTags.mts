@@ -1,5 +1,6 @@
 import OpenAI from "openai";
-import { notice } from '@actions/core';
+import * as core from '@actions/core';
+import * as github from '@actions/github';
 
 import path from "node:path";
 import fs from "node:fs/promises";
@@ -59,9 +60,9 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
   const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
-  Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
+Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
 
-  notice(message, {
+  core.notice(message, {
     title: `Suggested tags for ${iconName}`,
     file,
     startLine,

@@ -42,6 +42,9 @@
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+
     "@types/yargs": "^17.0.33",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -57,6 +60,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
+    "openai": "^5.8.1",
     "p-memoize": "^7.1.1",
     "prettier": "3.2.4",
     "prettier-plugin-astro": "^0.14.1",
@@ -81,9 +85,5 @@
     "overrides": {
       "cross-spawn": "7.0.5"
     }
-  },
-  "dependencies": {
-    "@actions/core": "^1.11.1",
-    "openai": "^5.8.1"
   }
 }
