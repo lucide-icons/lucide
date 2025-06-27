@@ -35,8 +35,6 @@ jobs:
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-
-      - name: Review with gh
-        run: gh pr review ${{ github.event.pull_request.number }} --comment -b "Great work, just one small suggestion!"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PULL_REQUEST_NUMBER: ${{ github.event.number }}
+          COMMIT_SHA: ${{ github.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

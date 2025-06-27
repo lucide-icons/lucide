@@ -1,12 +1,25 @@
 import OpenAI from "openai";
-import * as core from '@actions/core';
-import * as github from '@actions/github';
+import { Octokit } from "@octokit/rest";
 
 import path from "node:path";
 import fs from "node:fs/promises";
 
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
+const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 
 const changedFilesPathString = process.env.CHANGED_FILES;
+
+const owner = process.env.GITHUB_REPOSITORY_OWNER || 'lucide-icons';
+const repo = process.env.GITHUB_REPOSITORY_NAME || 'lucide';
+
+const { data: files } = await octokit.pulls.listFiles({
+  owner,
+  repo,
+  pull_number: pullRequestNumber,
+});
+
+console.log(files)
 
 if (changedFilesPathString == null) {
   console.error('CHANGED_FILES env variable is not set');
@@ -62,14 +75,15 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
 Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
 
-  core.notice(message, {
-    title: `Suggested tags for ${iconName}`,
-    file,
-    startLine,
-    startColumn: 3,
-  })
-
-  return Promise.resolve()
+  return octokit.pulls.createReviewComment({
+    owner,
+    repo,
+    pull_number: pullRequestNumber,
+    body: message,
+    commit_id: commitSha,
+    path: file,
+    position: startLine,
+  });
 })
 
 Promise.all(suggestionsByFile)
