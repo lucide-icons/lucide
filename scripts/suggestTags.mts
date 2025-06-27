@@ -1,4 +1,7 @@
-// import OpenAI from "openai";
+import OpenAI from "openai";
+
+import path from "node:path";
+import fs from "node:fs/promises";
 
 const changedFilesPathString = process.env.CHANGED_FILES;
 
@@ -9,7 +12,7 @@ if (changedFilesPathString == null) {
 
 const changedFiles = changedFilesPathString
   .split(' ')
-  .filter((file) => file.includes('.json') && )
+  .filter((file) => file.includes('.json'))
   .filter((file, idx, arr) => arr.indexOf(file) === idx);
 
 if (changedFiles.length === 0) {
@@ -17,51 +20,46 @@ if (changedFiles.length === 0) {
   process.exit(0);
 }
 
-// const client = new OpenAI({
-//   apiKey: process.env.OPENAI_API_KEY,
-// });
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
-// const response = await client.responses.create({
-//     model: "gpt-4.1-nano",
-//     input: "Create a list of tags for a `trashcan` icon. Don't include words like: 'icon'. Make sure you format the list in JSON and do not return any other text."
-// });
-
-// const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
-// const suggestedTags = JSON.parse(strippedResponse)
-
-const suggestedTags = [
-  'trash',      'bin',
-  'waste',      'garbage',
-  'delete',     'remove',
-  'recycle',    'discard',
-  'binoculars', 'rubbish',
-  'empty',      'deletion',
-  'cleanup',    'junk',
-  'clear'
-];
-
-const suggestionsByFile = changedFiles.forEach((file) => {
+const suggestionsByFile = changedFiles.map(async (file) => {
   const filePath = file.replace('.json', '');
   const iconName = filePath.split('/').pop();
 
+  const response = await client.responses.create({
+      model: "gpt-4.1-nano",
+      input: `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces. Make sure you format the list in JSON and do not return any other text.`
+  });
 
-  // Log to the actions console
-  core.error('Missing semicolon', {file, startLine: 1})
+  const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
+  const suggestedTags = JSON.parse(strippedResponse)
 
-  // const iconContent = JSON.stringify(
-  //   {
-  //     $schema: '../icon.schema.json',
-  //     tags: suggestedTags,
-  //     categories: [],
-  //   },
-  //   null,
-  //   2,
-  // );
+  console.log(`Suggesting tags for ${iconName}:`, suggestedTags);
 
-  // const fs = require('fs');
-  // const path = require('path');
-  // const outputPath = path.resolve(__dirname, '..', 'icons', `${iconName}.json`);
+  // const currentContent = require(`../${filePath}`);
+  const jsonFile = path.join(process.cwd(), file);
+  const currentFileContent = await fs.readFile(jsonFile, 'utf-8') as unknown as string;
+  const metaData = JSON.parse(currentFileContent);
 
-  // fs.writeFileSync(outputPath, iconContent);
-  // console.log(`Updated tags for ${iconName}`);
+  console.log(`Current tags for ${iconName}:`, metaData.tags || []);
+
+  const tagSuggestionsWithoutDuplicates = suggestedTags.filter((tag) => {
+    return !metaData.tags?.includes(tag) && tag !== iconName;
+  });
+
+  console.log(`Tag suggestions for ${iconName} without duplicates:`, tagSuggestionsWithoutDuplicates);
+
+  // Find the startLine in the json file
+  const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
+
+  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\``;
+
+  // Log the suggested tags to the actions console
+  console.log(`::notice file=${file},line=${startLine},column=3::${message}`);
+
+  return Promise.resolve()
 })
+
+Promise.all(suggestionsByFile)

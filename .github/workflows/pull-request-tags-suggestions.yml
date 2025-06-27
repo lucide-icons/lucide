@@ -1,0 +1,37 @@
+name: Pull request tags suggestions
+
+on:
+  pull_request:
+    paths:
+      - 'icons/*.json'
+
+jobs:
+  pull-request-tags-suggestions:
+    name: Pull Request Tags Suggestions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v46
+        with:
+          files: icons/*.json
+
+      - name: Generate comment markup
+        run: node ./scripts/generateChangedIconsCommentMarkup.mts
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
