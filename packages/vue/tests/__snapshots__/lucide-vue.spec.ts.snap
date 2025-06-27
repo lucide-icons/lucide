@@ -1,0 +1,197 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Using lucide icon components > should add a class to the element 1`] = `
+<div>
+  <svg
+    class="lucide lucide-smile-icon lucide-smile my-icon"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    />
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    />
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should add a style attribute to the element 1`] = `
+<div>
+  <svg
+    class="lucide lucide-smile-icon lucide-smile"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    style="position: absolute;"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    />
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    />
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
+<div>
+  <svg
+    class="lucide lucide-smile-icon lucide-smile"
+    fill="none"
+    height="48"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+    viewBox="0 0 24 24"
+    width="48"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    />
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    />
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should pass children to the icon slot 1`] = `
+<div>
+  <svg
+    class="lucide lucide-smile-icon lucide-smile"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    />
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    />
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    />
+    
+    <text>
+      Hello World
+    </text>
+    
+  </svg>
+</div>
+`;
+
+exports[`Using lucide icon components > should render an component 1`] = `
+<div>
+  <svg
+    class="lucide lucide-smile-icon lucide-smile"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    />
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    />
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    />
+  </svg>
+</div>
+`;
