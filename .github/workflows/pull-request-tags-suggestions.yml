@@ -31,7 +31,7 @@ jobs:
           files: icons/*.json
 
       - name: Generate comment markup
-        run: node ./scripts/generateChangedIconsCommentMarkup.mts
+        run: node ./scripts/suggestTags.mts
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
