@@ -4,6 +4,8 @@ import { Octokit } from "@octokit/rest";
 import path from "node:path";
 import fs from "node:fs/promises";
 
+console.log(process.env.GITHUB_TOKEN)
+
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
@@ -45,13 +47,21 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   // const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
   // const suggestedTags = JSON.parse(strippedResponse)
   const suggestedTags = [
-    'trash',      'delete',
-    'remove',     'bin',
-    'rubbish',    'discard',
-    'garbage',    'waste',
-    'binoculars', 'dump',
-    'garbagecan', 'wastebasket',
-    'recycle',    'kill',
+    'trash',
+    'delete',
+    'remove',
+    'bin',
+    'rubbish',
+    'discard',
+    'garbage',
+    'waste',
+    'binoculars',
+    'dump',
+    'garbagecan',
+    'wastebasket',
+    'recycle',
+    'kill',
+    'empty',
     'cancel'
   ];
 
@@ -60,6 +70,7 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   // const currentContent = require(`../${filePath}`);
   const jsonFile = path.join(process.cwd(), file);
   const currentFileContent = await fs.readFile(jsonFile, 'utf-8') as unknown as string;
+  console.log(currentFileContent)
   const metaData = JSON.parse(currentFileContent);
 
   console.log(`Current tags for ${iconName}:`, metaData.tags || []);
@@ -85,11 +96,13 @@ Try asking it your self if you want to get more suggestions. [Open ChatGPT](http
 
 const comments = await Promise.all(suggestionsByFile)
 
-await octokit.pulls.createReview({
-  owner,
-  repo,
-  pull_number: pullRequestNumber,
-  body: "🤖✨ ChatGPT Tags suggestions:",
-  event: "COMMENT",
-  comments,
-});
+console.log('Comments to be added:', comments);
+
+// await octokit.pulls.createReview({
+//   owner,
+//   repo,
+//   pull_number: pullRequestNumber,
+//   body: "🤖✨ ChatGPT Tags suggestions:",
+//   event: "COMMENT",
+//   comments,
+// });
