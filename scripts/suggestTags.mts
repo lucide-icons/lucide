@@ -28,9 +28,11 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   const filePath = file.replace('.json', '');
   const iconName = filePath.split('/').pop();
 
+  const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces. Make sure you format the list in JSON and do not return any other text.`
+
   const response = await client.responses.create({
       model: "gpt-4.1-nano",
-      input: `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces. Make sure you format the list in JSON and do not return any other text.`
+      input,
   });
 
   const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
@@ -54,7 +56,8 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   // Find the startLine in the json file
   const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
-  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\``;
+  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
+Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
 
   // Log the suggested tags to the actions console
   console.log(`::notice file=${file},line=${startLine},column=3::${message}`);
