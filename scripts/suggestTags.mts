@@ -1,8 +1,10 @@
 import OpenAI from "openai";
 import { Octokit } from "@octokit/rest";
+import { zodTextFormat } from "openai/helpers/zod";
 
 import path from "node:path";
 import fs from "node:fs/promises";
+import z from "zod";
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
@@ -11,6 +13,10 @@ const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 
 const owner = 'lucide-icons';
 const repo = 'lucide';
+
+const tagsSchema = z.object({
+  tags: z.array(z.string()),
+})
 
 const { data: files } = await octokit.pulls.listFiles({
   owner,
@@ -42,41 +48,25 @@ if (changedFiles.length === 0) {
   process.exit(0);
 }
 
-// const client = new OpenAI({
-//   apiKey: process.env.OPENAI_API_KEY,
-// });
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 const suggestionsByFile = changedFiles.map(async (file) => {
   const filePath = file.replace('.json', '');
   const iconName = filePath.split('/').pop();
 
-  const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces. Make sure you format the list in JSON and do not return any other text.`
+  const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces.`
 
-  // const response = await client.responses.create({
-  //     model: "gpt-4.1-nano",
-  //     input,
-  // });
+  const response = await client.responses.create({
+      model: "gpt-4.1-nano",
+      input,
+      text: {
+        format: zodTextFormat(tagsSchema, "tags"),
+      },
+  });
 
-  // const strippedResponse = response.output_text.replace(/^\s*```json\s*|\s*```$/g, '');
-  // const suggestedTags = JSON.parse(strippedResponse)
-  const suggestedTags = [
-    'trash',
-    'delete',
-    'remove',
-    'bin',
-    'rubbish',
-    'discard',
-    'garbage',
-    'waste',
-    'binoculars',
-    'dump',
-    'garbagecan',
-    'wastebasket',
-    'recycle',
-    'kill',
-    'empty',
-    'cancel'
-  ];
+  const { tags: suggestedTags } = JSON.parse(response.output_text);
 
   console.log(`Suggesting tags for ${iconName}:`, suggestedTags);
 
@@ -94,14 +84,14 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   console.log(`Tag suggestions for ${iconName} without duplicates:`, tagSuggestionsWithoutDuplicates);
 
   // Find the startLine in the json file
-  const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 2;
+  const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
   const codeSuggestion = tagSuggestionsWithoutDuplicates.map((tag) => `    "${tag}"`).join(',\n');
 
   const message = `Suggestions for the \`${iconName}\` icon.
-  Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})
+  Try asking it your self if you want more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})
 Here are the suggestions:
-\`\`\`suggestion\n ${codeSuggestion},\`\`\``;
+\`\`\`suggestion\n  "tags": [\n${codeSuggestion}`;
 
   return {
     path: file,
@@ -116,7 +106,7 @@ await octokit.pulls.createReview({
   owner,
   repo,
   pull_number: pullRequestNumber,
-  body: `## 🤖✨ ChatGPT Tags suggestions
+  body: `### 🤖 ChatGPT Tags suggestions ✨
 I've asked ChatGPT for some suggestions for tags.`,
   event: "COMMENT",
   comments,

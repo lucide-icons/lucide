@@ -12,6 +12,10 @@ packageExtensionsChecksum: sha256-iadh7fHFnueQwqCQdCI9Kni0+s5mxkL9biStuN8E4yQ=
 importers:
 
   .:
+    dependencies:
+      zod:
+        specifier: ^3.25.67
+        version: 3.25.67
     devDependencies:
       '@actions/core':
         specifier: ^1.11.1
@@ -75,7 +79,7 @@ importers:
         version: 1.2.8
       openai:
         specifier: ^5.8.1
-        version: 5.8.1(ws@8.18.0)(zod@3.24.2)
+        version: 5.8.1(ws@8.18.0)(zod@3.25.67)
       p-memoize:
         specifier: ^7.1.1
         version: 7.1.1
@@ -13544,6 +13548,9 @@ packages:
   zod@3.24.2:
     resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
+  zod@3.25.67:
+    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
+
   zone.js@0.11.8:
     resolution: {integrity: sha512-82bctBg2hKcEJ21humWIkXRlLBBmrc3nN7DFh5LGGhcyycO2S7FN8NmdvlcKaGFDNVL4/9kFLmwmInTavdJERA==}
 
@@ -24887,10 +24894,10 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@5.8.1(ws@8.18.0)(zod@3.24.2):
+  openai@5.8.1(ws@8.18.0)(zod@3.25.67):
     optionalDependencies:
       ws: 8.18.0
-      zod: 3.24.2
+      zod: 3.25.67
 
   openapi-typescript@6.7.6:
     dependencies:
@@ -28608,6 +28615,8 @@ snapshots:
       zod: 3.24.2
 
   zod@3.24.2: {}
+
+  zod@3.25.67: {}
 
   zone.js@0.11.8:
     dependencies:

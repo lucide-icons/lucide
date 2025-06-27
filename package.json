@@ -24,7 +24,7 @@
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
     "suggest:tags": "node ./scripts/suggestTags.mts",
-    "suggest:tags:watch":"node --env-file .env --watch ./scripts/suggestTags.mts ",
+    "suggest:tags:watch": "node --env-file .env --watch ./scripts/suggestTags.mts ",
     "postinstall": "husky install",
     "lint:es": "eslint .",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
@@ -40,12 +40,11 @@
     "renamePattern": "node ./scripts/rename/renamePattern.mts"
   },
   "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
-    "@actions/core": "^1.11.1",
-    "@actions/github": "^6.0.1",
-
     "@types/yargs": "^17.0.33",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -86,5 +85,8 @@
     "overrides": {
       "cross-spawn": "7.0.5"
     }
+  },
+  "dependencies": {
+    "zod": "^3.25.67"
   }
 }
