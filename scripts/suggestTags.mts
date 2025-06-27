@@ -4,10 +4,9 @@ import { Octokit } from "@octokit/rest";
 import path from "node:path";
 import fs from "node:fs/promises";
 
-console.log(process.env.GITHUB_TOKEN)
-
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
+const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 
 const owner = 'lucide-icons';
@@ -18,6 +17,20 @@ const { data: files } = await octokit.pulls.listFiles({
   repo,
   pull_number: pullRequestNumber,
 });
+
+const { data: reviews } = await octokit.pulls.listReviews({
+  owner,
+  repo,
+  pull_number: pullRequestNumber,
+  query: `in:body author:github-actions[bot]`,
+});
+
+const hasUserReviews = reviews.some(review => review.user?.login === username);
+
+// if(hasUserReviews) {
+//   console.log(`Pull request #${pullRequestNumber} already has reviews from ${username}. Skipping...`);
+//   process.exit(0);
+// }
 
 const changedFiles = files
   .map((file) => file.filename)
@@ -83,8 +96,12 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   // Find the startLine in the json file
   const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 2;
 
-  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \n\`\`\`suggestion\n ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
-Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
+  const codeSuggestion = tagSuggestionsWithoutDuplicates.map((tag) => `    "${tag}"`).join(',\n');
+
+  const message = `Suggestions for the \`${iconName}\` icon.
+  Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})
+Here are the suggestions:
+\`\`\`suggestion\n ${codeSuggestion},\`\`\``;
 
   return {
     path: file,
@@ -99,7 +116,8 @@ await octokit.pulls.createReview({
   owner,
   repo,
   pull_number: pullRequestNumber,
-  body: "🤖✨ ChatGPT Tags suggestions:",
+  body: `## 🤖✨ ChatGPT Tags suggestions
+I've asked ChatGPT for some suggestions for tags.`,
   event: "COMMENT",
   comments,
 });
