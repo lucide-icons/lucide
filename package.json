@@ -81,5 +81,8 @@
     "overrides": {
       "cross-spawn": "7.0.5"
     }
+  },
+  "dependencies": {
+    "openai": "^5.8.1"
   }
 }
