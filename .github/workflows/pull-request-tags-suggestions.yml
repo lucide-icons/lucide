@@ -24,16 +24,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v46
-        with:
-          files: icons/*.json
-
       - name: Generate comment markup
         run: node ./scripts/suggestTags.mts
         env:
-          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PULL_REQUEST_NUMBER: ${{ github.event.number }}
           COMMIT_SHA: ${{ github.sha }}

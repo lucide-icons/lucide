@@ -8,10 +8,8 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
 
-const changedFilesPathString = process.env.CHANGED_FILES;
-
-const owner = process.env.GITHUB_REPOSITORY_OWNER || 'lucide-icons';
-const repo = process.env.GITHUB_REPOSITORY_NAME || 'lucide';
+const owner = 'lucide-icons';
+const repo = 'lucide';
 
 const { data: files } = await octokit.pulls.listFiles({
   owner,
@@ -19,17 +17,10 @@ const { data: files } = await octokit.pulls.listFiles({
   pull_number: pullRequestNumber,
 });
 
-console.log(files)
-
-if (changedFilesPathString == null) {
-  console.error('CHANGED_FILES env variable is not set');
-  process.exit(1);
-}
-
-const changedFiles = changedFilesPathString
-  .split(' ')
-  .filter((file) => file.includes('.json'))
-  .filter((file, idx, arr) => arr.indexOf(file) === idx);
+const changedFiles = files
+  .map((file) => file.filename)
+  .filter((file) => file.startsWith('icons/') && file.includes('.json'))
+  .filter((file, idx, arr) => arr.indexOf(file) === idx);;
 
 if (changedFiles.length === 0) {
   console.log('No changed icons found');
@@ -82,7 +73,7 @@ Try asking it your self if you want to get more suggestions. [Open ChatGPT](http
     body: message,
     commit_id: commitSha,
     path: file,
-    position: startLine,
+    line: startLine,
   });
 })
 
