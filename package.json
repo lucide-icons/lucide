@@ -83,6 +83,7 @@
     }
   },
   "dependencies": {
+    "@actions/core": "^1.11.1",
     "openai": "^5.8.1"
   }
 }

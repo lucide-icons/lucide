@@ -1,7 +1,9 @@
 import OpenAI from "openai";
+import { notice } from '@actions/core';
 
 import path from "node:path";
 import fs from "node:fs/promises";
+
 
 const changedFilesPathString = process.env.CHANGED_FILES;
 
@@ -57,10 +59,14 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
   const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \nsuggestion\`\`\`"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
-Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
+  Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
 
-  // Log the suggested tags to the actions console
-  console.log(`::notice file=${file},line=${startLine},column=3::${message}`);
+  notice(message, {
+    title: `Suggested tags for ${iconName}`,
+    file,
+    startLine,
+    startColumn: 3,
+  })
 
   return Promise.resolve()
 })
