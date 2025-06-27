@@ -33,10 +33,11 @@ const { data: reviews } = await octokit.pulls.listReviews({
 
 const hasUserReviews = reviews.some(review => review.user?.login === username);
 
-// if(hasUserReviews) {
-//   console.log(`Pull request #${pullRequestNumber} already has reviews from ${username}. Skipping...`);
-//   process.exit(0);
-// }
+// TODO: Find a better way to check if the PR has been updated since the last review
+if(hasUserReviews) {
+  console.log(`Pull request #${pullRequestNumber} already has reviews from ${username}. Skipping...`);
+  process.exit(0);
+}
 
 const changedFiles = files
   .map((file) => file.filename)
@@ -56,7 +57,7 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   const filePath = file.replace('.json', '');
   const iconName = filePath.split('/').pop();
 
-  const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and don't include spaces.`
+  const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and preferably use single words.`;
 
   const response = await client.responses.create({
       model: "gpt-4.1-nano",
@@ -83,6 +84,10 @@ const suggestionsByFile = changedFiles.map(async (file) => {
 
   console.log(`Tag suggestions for ${iconName} without duplicates:`, tagSuggestionsWithoutDuplicates);
 
+  if (tagSuggestionsWithoutDuplicates.length === 0) {
+    console.log(`No new tags to suggest for ${iconName}. Skipping...`);
+    return Promise.resolve(null);
+  }
   // Find the startLine in the json file
   const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
@@ -91,7 +96,7 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   const message = `Suggestions for the \`${iconName}\` icon.
   Try asking it your self if you want more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})
 Here are the suggestions:
-\`\`\`suggestion\n  "tags": [\n${codeSuggestion}`;
+\`\`\`suggestion\n  "tags": [\n${codeSuggestion},`;
 
   return {
     path: file,
@@ -100,7 +105,12 @@ Here are the suggestions:
   }
 })
 
-const comments = await Promise.all(suggestionsByFile)
+const comments = (await Promise.all(suggestionsByFile)).filter(comment => comment !== null)
+
+if (comments.length === 0) {
+  console.log('No new tags to suggest for any icons.');
+  process.exit(0);
+}
 
 await octokit.pulls.createReview({
   owner,
@@ -110,4 +120,5 @@ await octokit.pulls.createReview({
 I've asked ChatGPT for some suggestions for tags.`,
   event: "COMMENT",
   comments,
+  commit_id: commitSha,
 });
