@@ -71,14 +71,14 @@ const suggestionsByFile = changedFiles.map(async (file) => {
   console.log(`Tag suggestions for ${iconName} without duplicates:`, tagSuggestionsWithoutDuplicates);
 
   // Find the startLine in the json file
-  const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
+  const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 2;
 
-  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \n\`\`\`suggestion\n"tags": ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
+  const message = `I've asked ChatGPT for some suggestions for tags for the \`${iconName}\` icon. \nHere are the suggestions: \n\`\`\`suggestion\n ${JSON.stringify(tagSuggestionsWithoutDuplicates, null, 2)},\`\`\`
 Try asking it your self if you want to get more suggestions. [Open ChatGPT](https://chatgpt.com/?q=${encodeURIComponent(input)})`;
 
   return {
-    path: file,          // Required
-    line: startLine,  // Required — line number in the file
+    path: file,
+    line: startLine,
     body: message,
   }
 })

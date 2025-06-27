@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "metal",
+    "object",
+    "tool",
+    "hardware",
+    "construction",
+    "building"
+  ],
+  "categories": [
+    "home"
+  ]
+}
