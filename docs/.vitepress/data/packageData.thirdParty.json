@@ -95,5 +95,24 @@
     ],
     "source": "https://github.com/dinkelspiel/lucide_lustre",
     "documentation": "https://github.com/dinkelspiel/lucide_lustre/blob/master/README.md"
+  },
+  {
+    "name": "reanimated-lucide",
+    "description": "A library providing Lucide icons support with Reanimated Animated wrapper.",
+    "icon": "/framework-logos/reanimated-lucide.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/%40vega-ui%2Freanimated-lucide",
+        "href": "https://www.npmjs.com/package/@vega-ui/reanimated-lucide"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dw/%40vega-ui%2Freanimated-lucide",
+        "href": "https://www.npmjs.com/package/@vega-ui/reanimated-lucide"
+      }
+    ],
+    "source": "https://github.com/vega-ui/reanimated-lucide",
+    "documentation": "https://github.com/vega-ui/reanimated-lucide/blob/main/README.md"
   }
 ]
