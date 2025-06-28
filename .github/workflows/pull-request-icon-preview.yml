@@ -5,12 +5,14 @@ on:
     paths:
       - 'icons/*.svg'
 
+permissions:
+  contents: read
+
 jobs:
   generate-changed-icons-comment:
     name: Generate Changed Icons Comment
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       pull-requests: write
 
     steps:

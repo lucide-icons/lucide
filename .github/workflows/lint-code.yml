@@ -5,6 +5,9 @@ on:
     paths-ignore:
       - icons/*.svg
 
+permissions:
+  contents: read
+
 jobs:
   lint-code:
     runs-on: ubuntu-latest

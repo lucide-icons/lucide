@@ -5,13 +5,15 @@ on:
     paths:
       - 'icons/*'
 
+permissions:
+  contents: read
+
 jobs:
   lint-filenames:
     name: Lint Filenames
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,8 +33,6 @@ jobs:
   lint-aliases:
     name: Check Uniqueness of Aliases
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Check Uniqueness of Aliases

@@ -4,6 +4,8 @@ on:
   issues:
     types: [opened]
 
+permissions: read-all
+
 jobs:
   block_phrases:
     runs-on: ubuntu-latest
