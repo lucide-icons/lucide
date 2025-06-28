@@ -1,8 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "barbell",
@@ -11,7 +11,7 @@
     "gym"
   ],
   "categories": [
-    "maps",
+    "navigation",
     "sports"
   ]
 }

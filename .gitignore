@@ -4,6 +4,7 @@
 .obsidian
 .now
 .idea
+.env
 node_modules
 dist
 build
@@ -16,11 +17,17 @@ outlined
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx
+packages/**/src/aliases/*.ts
 packages/**/src/aliases.ts
+!packages/**/src/aliases/index.ts
 packages/**/src/dynamicIconImports.ts
+packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
 packages/**/dynamicIconImports.d.ts
 packages/**/dynamicIconImports.js.map
+packages/**/dynamic.d.ts
+packages/**/dynamic.mjs.map
+packages/**/dynamic.mjs
 packages/**/LICENSE
 categories.json
 tags.json
@@ -34,7 +41,10 @@ docs/.vitepress/data/iconNodes
 docs/.vitepress/data/iconMetaData.ts
 docs/.vitepress/data/releaseMetaData.json
 docs/.vitepress/data/releaseMetaData
+docs/.vitepress/data/categoriesData.json
 docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
 docs/.vercel
 docs/.nitro
+.gitignore
+

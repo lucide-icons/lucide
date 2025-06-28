@@ -11,19 +11,30 @@ import IconInfo from './IconInfo.vue';
 import Badge from '../base/Badge.vue';
 import { computedAsync } from '@vueuse/core';
 import { satisfies } from 'semver';
+import { useExternalLibs } from '../../composables/useExternalLibs';
 
 const props = defineProps<{
   iconName: string | null
 }>()
+
+const { externalIconNodes } = useExternalLibs()
 
 const { go } = useRouter()
 
 const icon = computedAsync<IconEntity | null>(async () => {
   if (props.iconName) {
     try {
-      return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+      if (props.iconName.includes(':')) {
+        const [library, name] = props.iconName.split(':')
+
+        return externalIconNodes.value[library].find((icon) => icon.name === name)
+      } else {
+        return (await import(`../../../data/iconDetails/${props.iconName}.ts`)).default as IconEntity
+      }
     } catch (err) {
-      go(`/icons/${props.iconName}`)
+      if (!props.iconName.includes(':')) {
+        go(`/icons/${props.iconName}`)
+      }
     }
   }
   return null
@@ -55,10 +66,8 @@ const Expand = createLucideIcon('Expand', expand)
             v-if="icon.createdRelease"
             class="version"
             :href="releaseTagLink(icon.createdRelease.version)"
-            target="_blank"
-            rel="noreferrer noopener"
           >v{{ icon.createdRelease.version }}</Badge>
-          <IconButton  @click="go(`/icons/${icon.name}`)">
+          <IconButton  @click="go(icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}` : `/icons/${icon.name}`)">
             <component :is="Expand" />
           </IconButton>
           <IconButton  @click="onClose">
