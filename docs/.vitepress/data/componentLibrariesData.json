@@ -22,5 +22,13 @@
       "light": "/library-logos/reflex-light.svg",
       "dark": "/library-logos/reflex-dark.svg"
     }
+  },
+  {
+    "name": "VegaUI",
+    "url": "https://github.com/vega-ui",
+    "image": {
+      "light": "/library-logos/vegaui-light.svg",
+      "dark": "/library-logos/vegaui-dark.svg"
+    }
   }
 ]
