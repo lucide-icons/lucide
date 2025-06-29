@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "alexisoules"
+  ],
+  "tags": [
+    "traffic light",
+    "stoplight",
+    "signal",
+    "traffic signal",
+    "lights",
+    "stop",
+    "go",
+    "caution",
+    "road",
+    "intersection",
+    "control",
+    "street",
+    "status",
+    "indicator",
+    "alert",
+    "progress",
+    "permission"
+  ],
+  "categories": [
+    "travel",
+    "transportation"
+  ]
+}
