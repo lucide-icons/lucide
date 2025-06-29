@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hieu-onefold"
+  ],
+  "tags": [
+    "birdhouse",
+    "bird",
+    "garden",
+    "home",
+    "house",
+    "woodwork"
+  ],
+  "categories": [
+    "nature",
+    "animals",
+    "navigation",
+    "home"
+  ]
+}
