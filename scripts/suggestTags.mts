@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import OpenAI from "openai";
 import { Octokit } from "@octokit/rest";
 import { zodTextFormat } from "openai/helpers/zod";
