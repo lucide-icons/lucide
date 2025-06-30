@@ -2,7 +2,6 @@ name: Pull request tags suggestions
 
 on:
   pull_request_target:
-    types: [opened, reopened]
     paths:
       - 'icons/*.json'
 
