@@ -2,6 +2,8 @@ name: Linting PR
 
 on:
   pull_request:
+    paths-ignore:
+      - icons/*.svg
 
 jobs:
   lint-code:
@@ -12,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile

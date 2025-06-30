@@ -14,56 +14,19 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v41
-        with:
-          files: icons/*
-
-      - name: Generate annotations
-        run: node ./scripts/lintFilenames.mjs
-        env:
-          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-
-  lint-contributors:
-    name: Lint Contributors
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v41
-        with:
-          files: icons/*
-
       - uses: actions/setup-node@v4
-      - name: Install simple-git (safer and faster than installing all deps)
-        run: npm install simple-git
+        with:
+          node-version-file: 'package.json'
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v46
+        with:
+          files: icons/*
 
       - name: Generate annotations
-        run: node ./scripts/updateContributors.mjs
+        run: node ./scripts/lintFilenames.mts
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FETCH_DEPTH: ${{ github.event.pull_request.commits }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-
-      - name: Generate annotations
-        env:
-          ANNOTATION_SEVERITY: notice
-          ANNOTATION_TITLE: Contributors have changed!
-          ANNOTATION_DESCRIPTION: Don't add people who have only performed automatic optimizations.
-        run: |
-          git diff --unified=0 -- icons/*.json | # diff icon metadata (unified=0 gives the correct chunk line number)
-          perl -ne '/^(\+|- |@)/ && print' | # get chunks (lines that start with "+++", "@@", "+ ", "- ")
-          perl -pe 's/\n/%0A/' | # url encode line breaks (\n -> %0A)
-          perl -pe 's/%0A(\+\+\+ b\/)/\n\1/g' | # split chunks(one chunk per line)
-          perl -pe "s/\+\+\+ b\/([^@]*)%0A@@ -(\d+)[^\s]* \+(\d+)[^@]*@@(.*)/::$ANNOTATION_SEVERITY file=\1,line=\2,endLine=\3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A\4/"
-          # Example for the previous substitution
-          # input: +++ b/icons/accessibility.json%0A@@ -2,0 +3 @@%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
-          # output: ::$ANNOTATION_SEVERITY file=icons/accessibility.json,line=2,endLine=3,title=$ANNOTATION_TITLE::$ANNOTATION_DESCRIPTION%0A%0A+  "contributors": ["hi"],%0A@@ -13 +14 @@%0A+}%0A
 
   lint-aliases:
     name: Check Uniqueness of Aliases
