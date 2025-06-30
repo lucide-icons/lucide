@@ -1,17 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
+    "AlexNaskida",
     "karsa-mistmere",
-    "jamiemlaw"
+    "jguddas"
   ],
   "tags": [
-    "clock",
-    "time"
+    "tools",
+    "maintenance",
+    "repair"
   ],
   "categories": [
-    "time"
+    "tools",
+    "development",
+    "home"
   ]
 }
