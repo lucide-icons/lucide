@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Rahulskumaroks"
+  ],
+  "tags": [
+    "upvote",
+    "like",
+    "vote"
+  ],
+  "categories": [
+    "post",
+    "post-interaction"
+  ]
+}
