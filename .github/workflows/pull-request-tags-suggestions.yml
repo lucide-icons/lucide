@@ -1,7 +1,7 @@
 name: Pull request tags suggestions
 
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - 'icons/*.json'
 
@@ -14,7 +14,11 @@ jobs:
       pull-requests: write
 
     steps:
+      #  We checkout the main branch of main repository for security reasons.
+      #  This is to prevent the workflow from running on a forked repository.
       - uses: actions/checkout@v4
+        with:
+          repository: lucide-icons/lucide
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
