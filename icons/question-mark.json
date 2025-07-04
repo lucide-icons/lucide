@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "assistance",
+    "doubt",
+    "faq",
+    "guess",
+    "help",
+    "hint",
+    "information",
+    "inquiry",
+    "punctuation",
+    "query",
+    "question",
+    "support",
+    "symbol",
+    "uncertain",
+    "unsure",
+    "?"
+  ],
+  "categories": [
+    "accessibility",
+    "text",
+    "notifications"
+  ]
+}
