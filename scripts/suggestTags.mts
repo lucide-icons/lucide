@@ -6,7 +6,7 @@ import { zodTextFormat } from "openai/helpers/zod";
 import path from "node:path";
 import fs from "node:fs/promises";
 import z from "zod";
-import { IconMetadata } from '../tools/build-icons/types';
+import { type IconMetadata } from '../tools/build-icons/types.ts';
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
