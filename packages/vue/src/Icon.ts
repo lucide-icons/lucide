@@ -2,6 +2,7 @@ import { type FunctionalComponent, h } from 'vue';
 import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
+import { useLucideProps } from './context';
 
 interface IconProps {
   iconNode: IconNode;
@@ -9,17 +10,27 @@ interface IconProps {
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  { size, strokeWidth = 2, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
+  { size, strokeWidth, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
   { slots },
 ) => {
+  const {
+    size: contextSize,
+    color: contextColor,
+    strokeWidth: contextStrokeWidth = 2,
+    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+  } = useLucideProps();
+
   return h(
     'svg',
     {
       ...defaultAttributes,
-      width: size || defaultAttributes.width,
-      height: size || defaultAttributes.height,
-      stroke: color || defaultAttributes.stroke,
-      'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+      width: size ?? contextSize ?? defaultAttributes.width,
+      height: size ?? contextSize ?? defaultAttributes.height,
+      stroke: color ?? contextColor ?? defaultAttributes.stroke,
+      'stroke-width':
+          (absoluteStrokeWidth ?? contextAbsoluteStrokeWidth)
+          ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
+          : strokeWidth ?? contextStrokeWidth,
       class: mergeClasses(
         'lucide',
         ...(name

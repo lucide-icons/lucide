@@ -9,6 +9,6 @@ export interface LucideGlobalContext {
   absoluteStrokeWidth?: boolean
 }
 
-export const setLucideProperties = (globalProps: LucideGlobalContext) => setContext(LucideContext, globalProps)
+export const setLucideProps = (globalProps: LucideGlobalContext) => setContext(LucideContext, globalProps)
 
 export let getLucideContext = () => getContext<LucideGlobalContext>(LucideContext)

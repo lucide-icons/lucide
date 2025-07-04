@@ -53,8 +53,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       {
         ref,
         ...defaultAttributes,
-        width: size ?? contextSize ?? 24,
-        height: size ?? contextSize ?? 24,
+        width: size ?? contextSize ?? defaultAttributes.width,
+        height: size ?? contextSize ?? defaultAttributes.height,
         stroke: color ?? contextColor,
         strokeWidth: calculatedStrokeWidth,
         className: mergeClasses('lucide', className),

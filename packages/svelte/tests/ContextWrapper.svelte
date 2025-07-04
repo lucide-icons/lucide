@@ -1,9 +1,9 @@
 <script lang="ts">
   import { setContext } from 'svelte';
   import Smile from '../src/icons/smile.svelte'
-  import { setLucideProperties } from '../src/lucide-svelte';
+  import { setLucideProps } from '../src/lucide-svelte';
 
-  setLucideProperties({
+  setLucideProps({
     size: 32,
     color: 'red',
     strokeWidth: 1,
