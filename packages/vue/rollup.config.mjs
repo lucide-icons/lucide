@@ -1,7 +1,8 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' with { type: 'json' };
+import dts from 'rollup-plugin-dts';
 
-const packageName = 'LucideVue';
+const packageName = '@lucide/vue';
 const outputFileName = 'lucide-vue';
 const outputDir = 'dist';
 const inputs = ['src/lucide-vue.ts'];
@@ -57,4 +58,54 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+export default [
+  {
+    input: inputs[0],
+    output: [
+      {
+        file: `dist/${outputFileName}.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  ...configs,
+];

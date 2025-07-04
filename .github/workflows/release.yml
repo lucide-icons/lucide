@@ -56,6 +56,7 @@ jobs:
             'lucide-svelte',
             '@lucide/astro',
             '@lucide/svelte',
+            '@lucide/vue',
           ]
     steps:
       - uses: actions/checkout@v4
