@@ -19,7 +19,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       width: size || defaultAttributes.width,
       height: size || defaultAttributes.height,
       stroke: color || defaultAttributes.stroke,
-      'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+      'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * Number(defaultAttributes.width)) / Number(size) : strokeWidth,
       class: mergeClasses(
         'lucide',
         ...(name
