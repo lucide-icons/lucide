@@ -14,22 +14,22 @@ var showDeprecationWarning = true;
 const createLucideIcon =
   (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
   (props, { slots }) => {
-  if (showDeprecationWarning) {
+    if (showDeprecationWarning) {
       console.warn(
         '[lucide-vue-nuxt]: This package is renamed to `@lucide/vue`. Please update your imports to avoid potential issues in the future.',
       );
       showDeprecationWarning = false;
     }
 
-  return h(
-    Icon,
-    {
-      ...props,
-      iconNode,
-      name: iconName,
-    },
-    slots,
-  );
-}
+    return h(
+      Icon,
+      {
+        ...props,
+        iconNode,
+        name: iconName,
+      },
+      slots,
+    );
+  };
 
 export default createLucideIcon;
