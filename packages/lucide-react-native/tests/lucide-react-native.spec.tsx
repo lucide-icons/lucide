@@ -14,49 +14,53 @@ describe('Using lucide icon components', () => {
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
-    const { container } = render(
+    const testId = 'grid-icon';
+    const { getByTestId } = render(
       <Grid
         size={48}
         stroke="red"
         strokeWidth={4}
+        testID={testId}
       />,
     );
 
-    const SVGElement = container.firstElementChild;
+    const GridIcon = getByTestId(testId);
 
-    expect(SVGElement).toHaveAttribute('stroke', 'red');
-    expect(SVGElement).toHaveAttribute('width', '48');
-    expect(SVGElement).toHaveAttribute('height', '48');
-    expect(SVGElement).toHaveAttribute('stroke-width', '4');
+    expect(GridIcon).toHaveAttribute('stroke', 'red');
+    expect(GridIcon).toHaveAttribute('width', '48');
+    expect(GridIcon).toHaveAttribute('height', '48');
+    expect(GridIcon).toHaveAttribute('stroke-width', '4');
 
-    expect(container.innerHTML).toMatchSnapshot();
+    expect(GridIcon).toMatchSnapshot();
   });
 
   it('should render the alias icon', () => {
-    const testId = 'pen-icon';
-    const { container } = render(
+    const penTestId = 'pen-icon';
+    const { getByTestId: getByTestId1 } = render(
       <Pen
-        data-testid={testId}
+        testID={penTestId}
         size={48}
         stroke="red"
         strokeWidth={4}
       />,
     );
 
-    const PenIconRenderedHTML = container.innerHTML;
+    const penIcon = getByTestId1(penTestId);
 
     cleanup();
 
-    const { container: Edit2Container } = render(
+    const { getByTestId: getByTestId2 } = render(
       <Edit2
-        data-testid={testId}
+        testID={penTestId}
         size={48}
         stroke="red"
         strokeWidth={4}
       />,
     );
 
-    expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
+    const edit2Icon = getByTestId2(penTestId);
+
+    expect(penIcon).toStrictEqual(edit2Icon);
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
@@ -83,8 +87,8 @@ describe('Using lucide icon components', () => {
     const childId = 'child';
 
     const { container, getByTestId } = render(
-      <Grid data-testid={testId}>
-        <Grid data-testid={childId} />
+      <Grid testID={testId}>
+        <Grid testID={childId} />
       </Grid>,
     );
     const { children } = container.firstElementChild ?? {};
@@ -100,9 +104,9 @@ describe('Using lucide icon components', () => {
     const childId2 = 'child2';
 
     const { container, getByTestId } = render(
-      <Grid data-testid={testId}>
-        <Grid data-testid={childId1} />
-        <Grid data-testid={childId2} />
+      <Grid testID={testId}>
+        <Grid testID={childId1} />
+        <Grid testID={childId2} />
       </Grid>,
     );
     const { children } = getByTestId(testId) as unknown as { children: HTMLCollection };
@@ -123,7 +127,7 @@ describe('Using lucide icon components', () => {
 
     const { container, getByTestId } = render(
       <Grid
-        data-testid={testId}
+        testID={testId}
         fill={fill}
         color={color}
         strokeWidth={strokeWidth}
