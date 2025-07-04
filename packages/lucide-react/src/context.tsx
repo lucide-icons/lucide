@@ -9,11 +9,13 @@ const LucideContext = createContext<{
   fill?: string;
   color?: string;
   strokeWidth?: number;
+  absoluteStrokeWidth?: boolean;
 }>({
   size: 24,
   fill: 'none',
   color: 'currentColor',
   strokeWidth: 2,
+  absoluteStrokeWidth: false,
 });
 
 interface LucideProviderProps {

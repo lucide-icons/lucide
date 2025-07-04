@@ -1,6 +1,6 @@
 import {
   createContext,
-  useContext,
+  splitProps,
   type JSXElement
 } from "solid-js";
 
@@ -15,6 +15,7 @@ export const LucideContext = createContext<{
   fill: 'none',
   color: 'currentColor',
   strokeWidth: 2,
+  absoluteStrokeWidth: false,
 });
 
 interface LucideProviderProps {
@@ -26,10 +27,17 @@ interface LucideProviderProps {
   absoluteStrokeWidth?: boolean;
 }
 
-export function LucideProvider({ children, ...props }: LucideProviderProps) {
+export function LucideProvider(props: LucideProviderProps) {
+  const [value, rest] = splitProps(props, [
+    'size',
+    'color',
+    'strokeWidth',
+    'absoluteStrokeWidth',
+  ]);
+
   return (
-    <LucideContext.Provider value={props}>
-      {children}
+    <LucideContext.Provider value={value}>
+      {rest.children}
     </LucideContext.Provider>
   );
 }
