@@ -392,7 +392,7 @@ importers:
         specifier: ^2.7.0
         version: 2.10.1(@babel/core@7.27.1)(preact@10.26.6)(vite@6.3.4(@types/node@22.15.30)(jiti@2.4.2)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.39.2)(yaml@2.8.0))
       '@testing-library/jest-dom':
-        specifier: ^6.1.4
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/preact':
         specifier: ^3.2.3
@@ -431,7 +431,7 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.1.6
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/react':
         specifier: ^14.1.2
@@ -482,7 +482,7 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.1.6
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/react':
         specifier: ^14.1.2
@@ -554,7 +554,7 @@ importers:
         specifier: ^0.8.10
         version: 0.8.10(@solidjs/router@0.11.5(solid-js@1.9.6))(solid-js@1.9.6)
       '@testing-library/jest-dom':
-        specifier: ^6.4.2
+        specifier: ^6.6.3
         version: 6.6.3
       babel-preset-solid:
         specifier: ^1.8.12
@@ -626,7 +626,7 @@ importers:
         specifier: ^2.4.2
         version: 2.5.3(svelte@4.2.19)(vite@6.3.4(@types/node@22.15.30)(jiti@2.4.2)(less@4.2.0)(sass@1.77.8)(terser@5.39.2)(yaml@2.8.0))
       '@testing-library/jest-dom':
-        specifier: ^6.1.4
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/svelte':
         specifier: ^4.0.2
@@ -671,7 +671,7 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.1.6
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/vue':
         specifier: ^8.0.3
@@ -719,7 +719,7 @@ importers:
         specifier: ^5.0.3
         version: 5.0.3(svelte@5.30.1)(vite@6.1.6(@types/node@22.15.30)(jiti@2.4.2)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.39.2)(yaml@2.8.0))
       '@testing-library/jest-dom':
-        specifier: ^6.1.4
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/svelte':
         specifier: ^5.2.7
@@ -764,10 +764,10 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.1.6
+        specifier: ^6.6.3
         version: 6.6.3
       '@testing-library/vue':
-        specifier: ^8.0.3
+        specifier: ^8.1.0
         version: 8.1.0(@vue/compiler-sfc@3.5.14)(vue@3.5.14(typescript@5.8.3))
       '@vitejs/plugin-vue':
         specifier: ^4.6.2

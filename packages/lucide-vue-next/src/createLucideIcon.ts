@@ -5,8 +5,6 @@ import Icon from './Icon';
 
 var showDeprecationWarning = true;
 
-// Create interface extending SVGAttributes
-
 /**
  * Create a Lucide icon component
  * @param {string} iconName

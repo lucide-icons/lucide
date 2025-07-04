@@ -9,6 +9,7 @@ describe('Using Icon Component', () => {
     const { container } = render(Icon, {
       props: {
         iconNode: airVent,
+        name: 'AirVent',
         size: 48,
         color: 'red',
         absoluteStrokeWidth: true,
@@ -22,6 +23,7 @@ describe('Using Icon Component', () => {
     const { container } = render(Icon, {
       props: {
         iconNode: airVent,
+        name: 'AirVent',
         size: 48,
         color: 'red',
         absoluteStrokeWidth: true,
