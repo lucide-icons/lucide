@@ -34,4 +34,44 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke', 'red');
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
+
+  it('should render the icon with LucideProvider and custom absoluteStrokeWidth', () => {
+    const { container } = render(
+      <LucideProvider
+        size={48}
+        color="red"
+        absoluteStrokeWidth
+      >
+        <House/>
+      </LucideProvider>
+    );
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('stroke-width', '1');
+  });
+
+  it('should render override the providers global props when passed props to the icon', () => {
+    const { container } = render(
+      <LucideProvider
+        size={48}
+        color="red"
+        strokeWidth={4}
+      >
+        <House
+          size={24}
+          color="blue"
+          strokeWidth={2}
+        />
+      </LucideProvider>
+    );
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '24');
+    expect(IconComponent).toHaveAttribute('height', '24');
+    expect(IconComponent).toHaveAttribute('stroke', 'blue');
+    expect(IconComponent).toHaveAttribute('stroke-width', '2');
+  }
+  );
 })
