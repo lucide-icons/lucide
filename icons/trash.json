@@ -25,5 +25,8 @@
   "categories": [
     "files",
     "mail"
+  ],
+  "aliases": [
+    "trash-2"
   ]
 }
