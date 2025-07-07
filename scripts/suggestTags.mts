@@ -6,6 +6,7 @@ import { zodTextFormat } from "openai/helpers/zod";
 import path from "node:path";
 import fs from "node:fs/promises";
 import z from "zod";
+import { type IconMetadata } from '../tools/build-icons/types.ts';
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
@@ -68,7 +69,7 @@ const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
       },
   });
 
-  const { tags: suggestedTags } = JSON.parse(response.output_text);
+  const { tags: suggestedTags }: IconMetadata = JSON.parse(response.output_text);
 
   console.log(`Suggesting tags for ${iconName}:`, suggestedTags);
 
@@ -114,6 +115,7 @@ Here are the suggestions:
     path: filename,
     line: startLine,
     body: message,
+    side: "RIGHT"
   }
 })
 
@@ -124,13 +126,28 @@ if (comments.length === 0) {
   process.exit(0);
 }
 
-await octokit.pulls.createReview({
-  owner,
-  repo,
-  pull_number: pullRequestNumber,
-  body: `### 🤖 ChatGPT Tags suggestions ✨
-I've asked ChatGPT for some suggestions for tags.`,
-  event: "COMMENT",
-  comments,
-  commit_id: commitSha,
-});
+try {
+  console.log({
+    owner,
+    repo,
+    pull_number: pullRequestNumber,
+    body: `### 🤖 ChatGPT Tags suggestions ✨
+  I've asked ChatGPT for some suggestions for tags.`,
+    event: "COMMENT",
+    comments,
+    commit_id: commitSha,
+  })
+  await octokit.pulls.createReview({
+    owner,
+    repo,
+    pull_number: pullRequestNumber,
+    body: `### 🤖 ChatGPT Tags suggestions ✨
+  I've asked ChatGPT for some suggestions for tags.`,
+    event: "COMMENT",
+    comments,
+    commit_id: commitSha,
+  });
+} catch (error) {
+  console.error('Error creating review:', error);
+  process.exit(0);
+}
