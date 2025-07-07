@@ -5,6 +5,9 @@
 .now
 .idea
 .env
+.backup
+.screenshots
+.vectors
 node_modules
 dist
 build
@@ -47,4 +50,3 @@ docs/.vitepress/data/relatedIcons.json
 docs/.vercel
 docs/.nitro
 .gitignore
-
