@@ -93,6 +93,11 @@ Thank you to all the people who contributed to Lucide!
 
 To keep your bundle size optimized, we recommend importing icons using **deep imports**. This ensures only the icons you use are included in your final build.
 
+>Deep imports can help reduce bundle size in projects using bundlers without proper tree-shaking support, such as:
+> - Webpack v4 or older
+> - Rollup (without tree-shaking config)
+> - Some older build systems
+
 ```js
 //Recommended (loads only this icon)
 import VideoIcon from 'lucide-react/icons/video';
