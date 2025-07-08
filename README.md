@@ -86,3 +86,16 @@ Thank you to all the people who contributed to Lucide!
 
 <a href="https://www.scipress.io?utm_source=lucide"><img src="docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
 <a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+ 
+ ---
+
+## ⚠️ Importing Icons in React
+
+To keep your bundle size optimized, we recommend importing icons using **deep imports**. This ensures only the icons you use are included in your final build.
+
+```js
+//Recommended (loads only this icon)
+import VideoIcon from 'lucide-react/icons/video';
+
+//Avoid (loads the entire icon set into your bundle)
+import { VideoIcon } from 'lucide-react';
