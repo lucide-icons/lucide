@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "craigfrancies"
+  ],
+  "tags": [
+    "check",
+    "double-check",
+    "tick",
+    "confirm",
+    "done",
+    "approved",
+    "yes"
+  ],
+  "categories": [
+    "notifications"
+  ]
+}
