@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "abhishek-junghare"
+  ],
+  "tags": [
+    "blank",
+    "empty",
+    "transparent",
+    "invisible",
+    "hidden",
+    "placeholder",
+    "ghost",
+    "fallback"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "shapes"
+  ]
+}
