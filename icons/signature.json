@@ -1,7 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AndreasSas",
+    "AnnaSasDev",
     "jguddas"
   ],
   "tags": [
@@ -27,7 +27,6 @@
     "unique"
   ],
   "categories": [
-    "text",
-    "layout"
+    "text"
   ]
 }

@@ -126,11 +126,23 @@ import { createElement, Menu } from 'lucide';
 
 const menuIcon = createElement(Menu); // Returns HTMLElement (svg)
 
-// set custom attributes with browser native functions
-menuIcon.setAttribute('stroke', '#333');
-menuIcon.classList.add('my-icon-class');
+// Append HTMLElement in the DOM
+const myApp = document.getElementById('app');
+myApp.appendChild(menuIcon);
+```
 
-// Append HTMLElement in webpage
+#### Custom Element binding with custom attributes
+
+```js
+import { createElement, Menu } from 'lucide';
+
+const menuIcon = createElement(Menu, {
+  class: ['my-custom-class', 'icon'],
+  'stroke-width': 1,
+  stroke: '#333'
+}); // Returns HTMLElement (svg)
+
+// Append HTMLElement in the DOM
 const myApp = document.getElementById('app');
 myApp.appendChild(menuIcon);
 ```
@@ -141,11 +153,11 @@ myApp.appendChild(menuIcon);
 They can be used in the same way as the official icons.
 
 ```js
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 createIcons({
   icons: {
-    burger
+    coconut
   }
 });
 ```

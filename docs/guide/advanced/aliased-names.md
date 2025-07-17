@@ -7,9 +7,9 @@ Beside aliases names lucide also includes prefixed and suffixed names to use wit
 ```tsx
 // These are all the same icon
 import {
-  Home,
-  HomeIcon,
-  LucideHome,
+  House,
+  HouseIcon,
+  LucideHouse,
 } from "lucide-react";
 ```
 
