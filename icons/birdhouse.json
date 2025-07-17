@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "hieu-onefold"
+    "hieu-onefold",
+    "karsa-mistmere"
   ],
   "tags": [
     "birdhouse",
