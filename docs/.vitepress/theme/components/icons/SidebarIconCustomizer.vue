@@ -161,9 +161,4 @@ const customizingActive = computed(() => {
 .color-picker {
   margin-left: auto;
 }
-
-#absolute-stroke-width {
-  flex-direction: row-reverse;
-}
-
 </style>

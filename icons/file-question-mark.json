@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "readme",
+    "help",
+    "question"
+  ],
+  "categories": [
+    "files"
+  ],
+  "aliases": [
+    "file-question"
+  ]
+}

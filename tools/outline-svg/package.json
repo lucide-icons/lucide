@@ -3,9 +3,10 @@
   "description": "A internal used package to outline SVGs.",
   "private": true,
   "version": "2.0.0",
-  "main": "index.js",
+  "main": "main.ts",
+  "type": "module",
   "scripts": {
-    "start": "node ./main.mjs"
+    "start": "node ./main.ts"
   },
   "keywords": [],
   "author": "",

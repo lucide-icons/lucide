@@ -2,10 +2,20 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
   "tags": [
-    "report"
+    "report",
+    "marker",
+    "notification",
+    "warning",
+    "milestone",
+    "goal",
+    "notice",
+    "signal",
+    "attention",
+    "banner"
   ],
   "categories": [
     "account",
