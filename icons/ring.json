@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "zishankadri"
+    "zishankadri",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "diamond",
