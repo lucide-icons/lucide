@@ -16,6 +16,9 @@
   ],
   "aliases": [
     {
+      "name": "wand"
+    },
+    {
       "name": "wand-2",
       "deprecated": true,
       "deprecationReason": "alias.name",
