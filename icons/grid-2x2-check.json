@@ -27,8 +27,9 @@
   "categories": [
     "text",
     "layout",
-    "design",
-    "shapes",
-    "maths"
+    "math"
+  ],
+  "aliases": [
+    "grid-2-x-2-check"
   ]
 }
