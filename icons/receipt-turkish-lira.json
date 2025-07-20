@@ -1,17 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "wojtekmaj",
-    "ericfennis",
     "danielbayley",
     "jamiemlaw"
   ],
   "tags": [
-    "time",
-    "watch",
-    "alarm"
+    "bill",
+    "voucher",
+    "slip",
+    "check",
+    "counterfoil",
+    "currency",
+    "try",
+    "₺"
   ],
   "categories": [
-    "time"
+    "finance",
+    "travel"
   ]
 }

@@ -1,17 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "karsa-mistmere",
     "jamiemlaw"
   ],
   "tags": [
-    "clock",
-    "time"
+    "currency",
+    "money",
+    "payment"
   ],
   "categories": [
-    "time"
+    "finance"
   ]
 }
