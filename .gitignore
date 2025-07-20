@@ -5,9 +5,6 @@
 .now
 .idea
 .env
-.backup
-.screenshots
-.vectors
 node_modules
 dist
 build
