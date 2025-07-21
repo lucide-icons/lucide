@@ -3,9 +3,6 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "aliases": [
-    "stars"
-  ],
   "tags": [
     "stars",
     "effect",
@@ -19,5 +16,8 @@
     "multimedia",
     "gaming",
     "weather"
+  ],
+  "aliases": [
+    "stars"
   ]
 }
