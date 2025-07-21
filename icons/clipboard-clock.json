@@ -13,7 +13,21 @@
     "paste",
     "history",
     "log",
-    "clock"
+    "clock",
+    "time",
+    "watch",
+    "alarm",
+    "hour",
+    "minute",
+    "history",
+    "reminder",
+    "scheduled",
+    "deadline",
+    "pending",
+    "time tracking",
+    "timesheets",
+    "appointment",
+    "logbook"
   ],
   "categories": [
     "text"
