@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "beanduong"
+  ],
+  "tags": [
+    "copy",
+    "paste",
+    "history",
+    "log",
+    "clock"
+  ],
+  "categories": [
+    "text"
+  ]
+}
