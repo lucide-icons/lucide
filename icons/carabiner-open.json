@@ -1,0 +1,52 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "szamfirov"
+  ],
+  "tags": [
+    "accessory",
+    "attachment",
+    "carabiner",
+    "clamp",
+    "clasp",
+    "clip",
+    "clipart",
+    "clipper",
+    "clipping",
+    "climber",
+    "climbing",
+    "connect",
+    "connector",
+    "equipment",
+    "fastener",
+    "gear",
+    "hanger",
+    "hardware",
+    "hook",
+    "knot",
+    "latch",
+    "ligature",
+    "link",
+    "lock",
+    "lockable",
+    "metal",
+    "mount",
+    "mountaineering",
+    "open",
+    "outdoor",
+    "outdoors",
+    "quickdraw",
+    "reliable",
+    "safety",
+    "sport",
+    "strap",
+    "tool",
+    "travel",
+    "utility"
+  ],
+  "categories": [
+    "safety",
+    "sports",
+    "tools"
+  ]
+}
