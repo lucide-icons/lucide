@@ -2,12 +2,19 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "mittalyashu"
+    "mittalyashu",
+    "jamiemlaw"
   ],
   "tags": [
+    "eco",
+    "green",
+    "growth",
     "leaf",
     "nature",
-    "plant"
+    "plant",
+    "seed",
+    "spring",
+    "sustainability"
   ],
   "categories": [
     "nature",
