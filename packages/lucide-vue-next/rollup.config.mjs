@@ -1,5 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
 const packageName = 'LucideVueNext';
@@ -64,6 +64,38 @@ export default [
     output: [
       {
         file: `dist/${outputFileName}.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [
+      dts({
+        compilerOptions: {
+          preserveSymlinks: false,
+        },
+      }),
+    ],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
         format: 'es',
       },
     ],

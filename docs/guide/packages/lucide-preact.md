@@ -22,6 +22,10 @@ yarn add lucide-preact
 npm install lucide-preact
 ```
 
+```sh [bun]
+bun add lucide-preact
+```
+
 :::
 
 ## How to use
@@ -80,10 +84,10 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-preact';
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={burger} />
+  <Icon iconNode={coconut} />
 );
 ```
 
@@ -115,7 +119,7 @@ export default Icon;
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="house" />;
 };
 
 export default App;
