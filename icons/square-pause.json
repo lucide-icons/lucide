@@ -2,21 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
-    "stop",
-    "playback",
     "music",
     "audio",
-    "video",
-    "rectangle",
-    "aspect ratio",
-    "1:1",
-    "shape"
+    "stop"
   ],
   "categories": [
-    "shapes",
     "multimedia"
   ]
 }

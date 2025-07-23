@@ -1,18 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
+    "colebemis",
+    "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
-    "arrow",
-    "previous",
-    "music",
-    "left",
-    "reverse"
+    "media",
+    "music"
   ],
   "categories": [
-    "multimedia",
-    "arrows"
+    "multimedia"
   ]
 }
