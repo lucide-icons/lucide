@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere",
+    "marvfash"
+  ],
+  "tags": [
+    "device",
+    "scroll",
+    "click"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
