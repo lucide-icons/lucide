@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "beanduong",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "copy",
+    "paste",
+    "history",
+    "log",
+    "clock",
+    "time",
+    "watch",
+    "alarm",
+    "hour",
+    "minute",
+    "history",
+    "reminder",
+    "scheduled",
+    "deadline",
+    "pending",
+    "time tracking",
+    "timesheets",
+    "appointment",
+    "logbook"
+  ],
+  "categories": [
+    "time",
+    "text"
+  ]
+}
