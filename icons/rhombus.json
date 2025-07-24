@@ -1,11 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "karsa-mistmere",
     "jamiemlaw"
   ],
   "tags": [
+    "oblique",
+    "diamond",
     "shape",
     "suit",
     "playing",
