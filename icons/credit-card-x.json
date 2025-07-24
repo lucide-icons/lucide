@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "maxgeor"
+  ],
+  "tags": [
+    "account",
+    "finance"
+  ],
+  "categories": [
+    "bank",
+    "purchase",
+    "payment",
+    "cc",
+    "failure",
+    "declined"
+  ]
+}
