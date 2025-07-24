@@ -2,6 +2,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { render, cleanup } from '@testing-library/svelte';
 import { Smile, Pen, Edit2 } from '../src/lucide-svelte';
 import TestSlots from './TestSlots.svelte';
+import ContextWrapper from './ContextWrapper.svelte';
 
 describe('Using lucide icon components', () => {
   afterEach(() => cleanup());
@@ -12,11 +13,9 @@ describe('Using lucide icon components', () => {
 
   it('should adjust the size, stroke color and stroke width', () => {
     const { container } = render(Smile, {
-      props: {
-        size: 48,
-        color: 'red',
-        strokeWidth: 4,
-      },
+      size: 48,
+      color: 'red',
+      strokeWidth: 4,
     });
 
     expect(container).toMatchSnapshot();
@@ -25,9 +24,7 @@ describe('Using lucide icon components', () => {
   it('should add a class to the element', () => {
     const testClass = 'my-icon';
     render(Smile, {
-      props: {
-        class: testClass,
-      },
+      class: testClass,
     });
 
     const [icon] = document.getElementsByClassName(testClass);
@@ -41,9 +38,7 @@ describe('Using lucide icon components', () => {
 
   it('should add a style attribute to the element', () => {
     render(Smile, {
-      props: {
-        style: 'position: absolute;',
-      },
+      style: 'position: absolute;',
     });
     const [icon] = document.getElementsByClassName('lucide');
 
@@ -85,6 +80,20 @@ describe('Using lucide icon components', () => {
     expect(attributes.stroke.value).toBe('red');
     expect(attributes.width.value).toBe('48');
     expect(attributes.height.value).toBe('48');
+    expect(attributes['stroke-width'].value).toBe('1');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should use context values from he global set properties', () => {
+    const { container, getByLabelText } = render(ContextWrapper);
+
+    const { attributes } = getByLabelText('smile') as unknown as {
+      attributes: Record<string, { value: string }>;
+    };
+    expect(attributes.stroke.value).toBe('red');
+    expect(attributes.width.value).toBe('32');
+    expect(attributes.height.value).toBe('32');
     expect(attributes['stroke-width'].value).toBe('1');
 
     expect(container.innerHTML).toMatchSnapshot();
