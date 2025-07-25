@@ -2,12 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "connium",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
   "tags": [
     "chair",
     "furniture",
-    "seat"
+    "seat",
+    "comfort",
+    "relax"
   ],
   "categories": [
     "home"
