@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  block_phrases:
+  close-issue:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -33,3 +33,20 @@ jobs:
           done
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Check for latest version in issue body
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch --tags
+          LATEST_VERSION="$(git describe --tags `git rev-list --tags --max-count=1`)"
+          echo "LATEST_VERSION: $LATEST_VERSION"
+          if grep -q "Can you reproduce this in the latest version?" <<< "$ISSUE_BODY" && ! grep -q "$LATEST_VERSION" <<< "$ISSUE_BODY"; then
+            gh issue close ${{ github.event.issue.number }} --reason "not planned" --comment "**Can you reproduce this in the latest version?**
+
+          Having issues finding/importing an icon? Ensure you are using a version that is new enough!
+          ![in the icon preview top right corner of lucide.com you can find the required version](https://github.com/lucide-icons/lucide/blob/d5425d3d36d07f869216cc6365a15426ca7474f5/.github/close-issue-missing-version-image.png?raw=true)
+          "
+            exit 1
+          fi
