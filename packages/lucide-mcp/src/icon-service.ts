@@ -2,15 +2,6 @@ import { readFile, readdir } from 'fs/promises';
 import * as path from 'path';
 import type { IconData, IconMetadata, IconSearchResult } from './types';
 
-// Simple utility function to avoid dependency issues
-function toPascalCase(str: string): string {
-  return str
-    .replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
-      p2 ? p2.toUpperCase() : p1.toLowerCase(),
-    )
-    .replace(/^./, match => match.toUpperCase());
-}
-
 async function getIconMetaData(iconDirectory: string): Promise<Record<string, IconMetadata>> {
   const files = await readdir(iconDirectory);
   const jsonFiles = files.filter(file => file.endsWith('.json'));
@@ -159,6 +150,11 @@ export class IconService {
     return Array.from(categories).sort();
   }
 
+  async iconExists(iconName: string): Promise<boolean> {
+    const metadata = await this.getIconMetadata();
+    return iconName in metadata;
+  }
+
   private calculateRelevanceScore(iconName: string, metadata: IconMetadata, query: string): number {
     let score = 0;
 
@@ -204,9 +200,5 @@ export class IconService {
     }
 
     return score;
-  }
-
-  getComponentName(iconName: string): string {
-    return toPascalCase(iconName);
   }
 }

@@ -28,14 +28,17 @@ npx lucide-mcp
 ### Available Tools
 
 #### 1. `search_icons`
+
 Search for icons by name, tags, categories, or aliases.
 
 **Parameters:**
+
 - `query` (required): Search term
 - `limit` (optional): Maximum results (default: 50)
 - `category` (optional): Filter by specific category
 
 **Example:**
+
 ```json
 {
   "query": "arrow",
@@ -44,13 +47,16 @@ Search for icons by name, tags, categories, or aliases.
 ```
 
 #### 2. `get_icon_template`
+
 Generate framework-specific template code for an icon.
 
 **Parameters:**
+
 - `iconName` (required): Name of the icon
 - `framework` (required): Target framework (`react`, `vue`, `angular`, `svelte`, `preact`, `solid`)
 
 **Example:**
+
 ```json
 {
   "iconName": "arrow-right",
@@ -59,20 +65,25 @@ Generate framework-specific template code for an icon.
 ```
 
 #### 3. `list_categories`
+
 Get all available icon categories.
 
 **Example:**
+
 ```json
 {}
 ```
 
 #### 4. `get_icons_by_category`
+
 Get all icons in a specific category.
 
 **Parameters:**
+
 - `category` (required): Category name
 
 **Example:**
+
 ```json
 {
   "category": "arrows"

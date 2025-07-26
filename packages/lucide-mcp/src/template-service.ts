@@ -1,113 +1,52 @@
+import { toCamelCase } from '@lucide/shared';
 import type { FlavourTemplate, SupportedFlavour, TemplateContext } from './types';
 
-// Simple utility function to avoid dependency issues
-function toPascalCase(str: string): string {
-  return str
-    .replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
-      p2 ? p2.toUpperCase() : p1.toLowerCase(),
-    )
-    .replace(/^./, match => match.toUpperCase());
-}
-
 export class TemplateService {
-  private base64SVG(svgContent: string): string {
-    return Buffer.from(svgContent).toString('base64');
-  }
+  generateTemplate(flavour: SupportedFlavour, iconName: string): FlavourTemplate {
 
-  private parseSvgChildren(svgContent: string): any[] {
-    // Simple parser to extract path elements and other children from SVG
-    const children: any[] = [];
-    const pathMatches = svgContent.match(/<path[^>]*>/g) || [];
-    const circleMatches = svgContent.match(/<circle[^>]*>/g) || [];
-    const lineMatches = svgContent.match(/<line[^>]*>/g) || [];
-    const rectMatches = svgContent.match(/<rect[^>]*>/g) || [];
-    const polygonMatches = svgContent.match(/<polygon[^>]*>/g) || [];
-    const polylineMatches = svgContent.match(/<polyline[^>]*>/g) || [];
-
-    const parseAttributes = (element: string): Record<string, string> => {
-      const attrs: Record<string, string> = {};
-      const attrRegex = /(\w+(?:-\w+)*)="([^"]*)"/g;
-      let match;
-      while ((match = attrRegex.exec(element)) !== null) {
-        attrs[match[1]] = match[2];
-      }
-      return attrs;
-    };
-
-    pathMatches.forEach(path => {
-      children.push(['path', parseAttributes(path)]);
-    });
-
-    circleMatches.forEach(circle => {
-      children.push(['circle', parseAttributes(circle)]);
-    });
-
-    lineMatches.forEach(line => {
-      children.push(['line', parseAttributes(line)]);
-    });
-
-    rectMatches.forEach(rect => {
-      children.push(['rect', parseAttributes(rect)]);
-    });
-
-    polygonMatches.forEach(polygon => {
-      children.push(['polygon', parseAttributes(polygon)]);
-    });
-
-    polylineMatches.forEach(polyline => {
-      children.push(['polyline', parseAttributes(polyline)]);
-    });
-
-    return children;
-  }
-
-  generateTemplate(flavour: SupportedFlavour, iconName: string, svgContent: string): FlavourTemplate {
-    const componentName = toPascalCase(iconName);
-    const children = this.parseSvgChildren(svgContent);
-    const svgBase64 = this.base64SVG(svgContent);
+    const camelCase = toCamelCase(iconName);
+    const componentName = camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
 
     const context: TemplateContext = {
       componentName,
       iconName,
-      children,
-      svgContent,
     };
 
     let code: string;
 
     switch (flavour) {
       case 'react':
-        code = this.generateReactTemplate(context, svgBase64);
+        code = this.generateReactTemplate(context);
         break;
       case 'vue':
-        code = this.generateVueTemplate(context, svgBase64);
+        code = this.generateVueTemplate(context);
         break;
       case 'vue-next':
-        code = this.generateVueNextTemplate(context, svgBase64);
+        code = this.generateVueNextTemplate(context);
         break;
       case 'angular':
-        code = this.generateAngularTemplate(context, svgBase64);
+        code = this.generateAngularTemplate(context);
         break;
       case 'svelte':
-        code = this.generateSvelteTemplate(context, svgBase64);
+        code = this.generateSvelteTemplate(context);
         break;
       case 'preact':
-        code = this.generatePreactTemplate(context, svgBase64);
+        code = this.generatePreactTemplate(context);
         break;
       case 'solid':
-        code = this.generateSolidTemplate(context, svgBase64);
+        code = this.generateSolidTemplate(context);
         break;
       case 'astro':
-        code = this.generateAstroTemplate(context, svgBase64);
+        code = this.generateAstroTemplate(context);
         break;
       case 'react-native':
-        code = this.generateReactNativeTemplate(context, svgBase64);
+        code = this.generateReactNativeTemplate(context);
         break;
       case 'vanilla':
-        code = this.generateVanillaTemplate(context, svgBase64);
+        code = this.generateVanillaTemplate(context);
         break;
       case 'node':
-        code = this.generateNodeTemplate(context, svgBase64);
+        code = this.generateNodeTemplate(context);
         break;
       default:
         throw new Error(`Unsupported flavour: ${flavour}`);
@@ -120,8 +59,8 @@ export class TemplateService {
     };
   }
 
-  private generateReactTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateReactTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `import { ${componentName} } from 'lucide-react';
 
@@ -145,8 +84,8 @@ const ExampleComponent = () => {
 export default App;`;
   }
 
-  private generateVueTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateVueTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `<!-- Vue 2 -->
 <script>
@@ -165,8 +104,8 @@ export default {
 </template>`;
   }
 
-  private generateVueNextTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateVueNextTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `<!-- Using composition API -->
 <script setup>
@@ -190,7 +129,7 @@ export default {
 </script>`;
   }
 
-  private generateAngularTemplate(context: TemplateContext, svgBase64: string): string {
+  private generateAngularTemplate(context: TemplateContext): string {
     const { componentName, iconName } = context;
 
     return `// app.module.ts
@@ -214,8 +153,8 @@ import { LucideAngularModule, ${componentName} } from 'lucide-angular';
 <span-lucide name="${iconName}"></span-lucide>`;
   }
 
-  private generateSvelteTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateSvelteTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `<script>
   import { ${componentName} } from 'lucide-svelte';
@@ -231,8 +170,8 @@ import { LucideAngularModule, ${componentName} } from 'lucide-angular';
 <${componentName} class="my-icon" size={48} color="red" />`;
   }
 
-  private generatePreactTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generatePreactTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `import { ${componentName} } from 'lucide-preact';
 
@@ -256,8 +195,8 @@ const ExampleComponent = () => {
 export default App;`;
   }
 
-  private generateSolidTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateSolidTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `import { ${componentName} } from 'solid-lucide';
 
@@ -280,8 +219,8 @@ const ExampleComponent = () => {
 export default App;`;
   }
 
-  private generateAstroTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateAstroTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `---
 // Component script (runs during build)
@@ -300,8 +239,8 @@ export default App;`;
 <${componentName} class="my-icon" size={48} color="red" />`;
   }
 
-  private generateReactNativeTemplate(context: TemplateContext, svgBase64: string): string {
-    const { componentName, iconName } = context;
+  private generateReactNativeTemplate(context: TemplateContext): string {
+    const { componentName } = context;
 
     return `import { ${componentName} } from 'lucide-react-native';
 
@@ -324,7 +263,7 @@ const ExampleComponent = () => {
 export default App;`;
   }
 
-  private generateVanillaTemplate(context: TemplateContext, svgBase64: string): string {
+  private generateVanillaTemplate(context: TemplateContext): string {
     const { componentName, iconName } = context;
 
     return `// Using ES modules
@@ -353,7 +292,7 @@ document.body.appendChild(iconElement);
 </script>`;
   }
 
-  private generateNodeTemplate(context: TemplateContext, svgBase64: string): string {
+  private generateNodeTemplate(context: TemplateContext): string {
     const { componentName, iconName } = context;
 
     return `// Using lucide-static for Node.js

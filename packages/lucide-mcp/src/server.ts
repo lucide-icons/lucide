@@ -195,15 +195,14 @@ class LucideMCPServer {
       throw new Error(`Unsupported flavour: ${targetFlavour}. Supported flavours: ${supportedFlavours.join(', ')}`);
     }
 
-    const iconData = await this.iconService.getIconData(iconName);
-    if (!iconData) {
+    const iconExists = await this.iconService.iconExists(iconName);
+    if (!iconExists) {
       throw new Error(`Icon '${iconName}' not found`);
     }
 
     const template = this.templateService.generateTemplate(
       targetFlavour as SupportedFlavour,
-      iconName,
-      iconData.svgContent
+      iconName
     );
 
     return {

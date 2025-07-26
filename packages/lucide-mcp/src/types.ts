@@ -41,8 +41,4 @@ export type SupportedFlavour =
 export interface TemplateContext {
   componentName: string;
   iconName: string;
-  children: any[];
-  svgContent: string;
-  deprecated?: boolean;
-  deprecationReason?: string;
 }
