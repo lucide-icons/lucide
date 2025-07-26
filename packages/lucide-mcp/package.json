@@ -1,0 +1,47 @@
+{
+  "name": "lucide-mcp",
+  "description": "A Model Context Protocol (MCP) server for Lucide icons, providing search and template generation tools.",
+  "version": "0.0.1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-mcp"
+  },
+  "keywords": [
+    "Lucide",
+    "MCP",
+    "Model Context Protocol",
+    "Icons",
+    "Search",
+    "Templates"
+  ],
+  "author": "Ricardo Cabral",
+  "main": "dist/server.js",
+  "bin": {
+    "lucide-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/server.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0"
+  },
+  "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@types/node": "^22",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

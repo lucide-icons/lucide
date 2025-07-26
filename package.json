@@ -15,6 +15,7 @@
     "lucide-vue-next": "pnpm --filter lucide-vue-next",
     "lucide-svelte": "pnpm --filter lucide-svelte",
     "lucide-static": "pnpm --filter lucide-static",
+    "lucide-mcp": "pnpm --filter lucide-mcp",
     "build:outline-icons": "pnpm --filter outline-svg start",
     "build:font": "pnpm --filter docs prebuild:releaseJson && pnpm --filter build-font start",
     "optimize": "node ./scripts/optimizeSvgs.mts",
