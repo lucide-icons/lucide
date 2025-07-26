@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "richardhenry"
+  ],
+  "tags": [
+    "application",
+    "pane",
+    "executable",
+    "sidebar",
+    "secondary"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development",
+    "files"
+  ]
+}
