@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "uibalint"
+    "uibalint",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "road",
