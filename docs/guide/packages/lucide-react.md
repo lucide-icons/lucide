@@ -78,17 +78,16 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-react';
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={burger} />
+  <Icon iconNode={coconut} />
 );
 ```
 
 ## Dynamic Icon Component
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
-Since it is importing all icons during build. This increases build time and the different modules it will create.
+It is possible to create one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. This increases build time and the different modules it will create.
 
 `DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system with where icon names are stored in a database.
 
