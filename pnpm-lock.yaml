@@ -379,6 +379,9 @@ importers:
 
   packages/lucide-mcp:
     dependencies:
+      '@lucide/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@modelcontextprotocol/sdk':
         specifier: ^1.16.0
         version: 1.16.0
@@ -386,9 +389,6 @@ importers:
       '@lucide/build-icons':
         specifier: workspace:*
         version: link:../../tools/build-icons
-      '@lucide/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@types/node':
         specifier: ^22
         version: 22.15.30

@@ -1,16 +1,16 @@
-import { readFile, readdir } from 'fs/promises';
+import { access, readFile, readdir } from 'fs/promises';
 import * as path from 'path';
 import type { IconData, IconMetadata, IconSearchResult } from './types';
 
 async function getIconMetaData(iconDirectory: string): Promise<Record<string, IconMetadata>> {
   const files = await readdir(iconDirectory);
-  const jsonFiles = files.filter(file => file.endsWith('.json'));
+  const iconFiles = files.filter(file => file.endsWith('.json'));
 
   const metadataEntries = await Promise.all(
-    jsonFiles.map(async (jsonFile: string) => {
-      const content = await readFile(path.join(iconDirectory, jsonFile), 'utf-8');
+    iconFiles.map(async (iconFile: string) => {
+      const content = await readFile(path.join(iconDirectory, iconFile), 'utf-8');
       const metadata = JSON.parse(content) as IconMetadata;
-      return [path.basename(jsonFile, '.json'), metadata];
+      return [path.basename(iconFile, '.json'), metadata];
     }),
   );
 
@@ -23,9 +23,37 @@ export class IconService {
   private iconsDirectory: string;
 
   constructor(iconsDirectory?: string) {
-    // Default to the icons directory relative to the server script location
-    // When running from dist/server.js, we need to go up to the workspace root and find icons
-    this.iconsDirectory = iconsDirectory || path.resolve(__dirname, '../../../icons');
+    if (iconsDirectory) {
+      this.iconsDirectory = iconsDirectory;
+    } else {
+      // Default priority: first try dist/icons (for npm package), then fallback to workspace icons
+      this.iconsDirectory = this.findIconsDirectory();
+    }
+  }
+
+  private findIconsDirectory(): string {
+    // When running from dist/server.js, try dist/icons first (npm package)
+    const distIconsPath = path.resolve(__dirname, 'icons');
+
+    // We'll use the dist path as default and validate during runtime
+    return distIconsPath;
+  }
+
+  private async getIconsDirectory(): Promise<string> {
+    try {
+      await access(this.iconsDirectory);
+      return this.iconsDirectory;
+    } catch {
+      // Fallback to workspace icons directory
+      const fallbackPath = path.resolve(__dirname, '../../../icons');
+      try {
+        await access(fallbackPath);
+        console.warn(`Icons not found in ${this.iconsDirectory}, falling back to ${fallbackPath}`);
+        return fallbackPath;
+      } catch {
+        throw new Error(`Icons directory not found in either ${this.iconsDirectory} or ${fallbackPath}`);
+      }
+    }
   }
 
   async getIconMetadata(): Promise<Record<string, IconMetadata>> {
@@ -34,7 +62,8 @@ export class IconService {
     }
 
     try {
-      this.metadataCache = await getIconMetaData(this.iconsDirectory);
+      const validIconsDir = await this.getIconsDirectory();
+      this.metadataCache = await getIconMetaData(validIconsDir);
       return this.metadataCache;
     } catch (error) {
       console.error('Error loading icon metadata:', error);
@@ -49,8 +78,9 @@ export class IconService {
     }
 
     try {
-      const metadataPath = path.join(this.iconsDirectory, `${iconName}.json`);
-      const svgPath = path.join(this.iconsDirectory, `${iconName}.svg`);
+      const validIconsDir = await this.getIconsDirectory();
+      const metadataPath = path.join(validIconsDir, `${iconName}.json`);
+      const svgPath = path.join(validIconsDir, `${iconName}.svg`);
 
       const [metadataContent, svgContent] = await Promise.all([
         readFile(metadataPath, 'utf-8'),
@@ -104,7 +134,8 @@ export class IconService {
 
   async getAllIconNames(): Promise<string[]> {
     try {
-      const files = await readdir(this.iconsDirectory);
+      const validIconsDir = await this.getIconsDirectory();
+      const files = await readdir(validIconsDir);
       return files
         .filter((file: string) => file.endsWith('.svg'))
         .map((file: string) => path.basename(file, '.svg'))

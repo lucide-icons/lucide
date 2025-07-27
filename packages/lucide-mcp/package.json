@@ -28,7 +28,10 @@
     "README.md"
   ],
   "scripts": {
+    "prebuild": "npm run clean-icons && npm run copy-icons",
     "build": "tsc",
+    "clean-icons": "rm -rf dist/icons/",
+    "copy-icons": "mkdir -p dist/icons && cp -l ../../icons/*.json dist/icons/",
     "dev": "tsc --watch",
     "start": "node dist/server.js",
     "test": "echo \"No tests yet\" && exit 0"
