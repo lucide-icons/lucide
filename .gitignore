@@ -4,6 +4,7 @@
 .obsidian
 .now
 .idea
+.env
 node_modules
 dist
 build

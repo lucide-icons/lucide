@@ -1,7 +1,7 @@
 import { createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
-import { mergeClasses } from '@lucide/shared';
+import { mergeClasses, hasA11yProp } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -35,8 +35,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       ...rest
     },
     ref,
-  ) => {
-    return createElement(
+  ) =>
+    createElement(
       'svg',
       {
         ref,
@@ -46,14 +46,14 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         stroke: color,
         strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
         className: mergeClasses('lucide', className),
+        ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
         ...rest,
       },
       [
         ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
         ...(Array.isArray(children) ? children : [children]),
       ],
-    );
-  },
+    ),
 );
 
 export default Icon;
