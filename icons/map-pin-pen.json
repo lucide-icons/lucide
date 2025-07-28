@@ -20,6 +20,11 @@
     "account"
   ],
   "aliases": [
-    "location-edit"
+    {
+      "name": "location-edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
