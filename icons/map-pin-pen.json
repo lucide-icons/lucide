@@ -18,5 +18,13 @@
     "navigation",
     "travel",
     "account"
+  ],
+  "aliases": [
+    {
+      "name": "location-edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
