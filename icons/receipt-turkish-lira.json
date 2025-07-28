@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "bill",
+    "voucher",
+    "slip",
+    "check",
+    "counterfoil",
+    "currency",
+    "try",
+    "₺"
+  ],
+  "categories": [
+    "finance",
+    "travel"
+  ]
+}
