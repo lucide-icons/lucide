@@ -18,5 +18,8 @@
     "navigation",
     "travel",
     "account"
+  ],
+  "aliases": [
+    "location-edit"
   ]
 }

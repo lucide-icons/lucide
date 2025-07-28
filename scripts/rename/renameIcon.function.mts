@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { promisify } from 'util';
 import simpleGit from 'simple-git';
-import { IconMetadata } from '../../tools/build-icons/types';
+import { type IconMetadata } from '../../tools/build-icons/types.ts';
 
 /**
  * Renames an icon and adds the old name as an alias.
