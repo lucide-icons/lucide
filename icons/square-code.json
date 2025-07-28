@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
   ],
   "tags": [
     "gist",
