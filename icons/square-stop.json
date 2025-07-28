@@ -1,17 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mishkaio",
+    "colebemis",
     "ericfennis",
-    "csandman",
-    "jguddas"
+    "karsa-mistmere"
   ],
   "tags": [
-    "select",
-    "cursor"
+    "media",
+    "music"
   ],
   "categories": [
-    "design",
-    "cursors"
+    "multimedia"
   ]
 }

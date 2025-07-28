@@ -1,14 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "karsa-mistmere"
+    "jamiemlaw"
   ],
   "tags": [
-    "music"
+    "currency",
+    "money",
+    "payment"
   ],
   "categories": [
-    "arrows",
-    "multimedia"
+    "finance"
   ]
 }
