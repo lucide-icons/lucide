@@ -6,11 +6,13 @@ import { zodTextFormat } from "openai/helpers/zod";
 import path from "node:path";
 import fs from "node:fs/promises";
 import z from "zod";
+import { type IconMetadata } from '../tools/build-icons/types.ts';
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);
 const username = process.env.REVIEWER ?? 'github-actions[bot]';
 const commitSha = process.env.COMMIT_SHA ?? "HEAD";
+const useFileSystem = process.env.USE_FILE_SYSYEM === 'true' || false;
 
 const owner = 'lucide-icons';
 const repo = 'lucide';
@@ -40,10 +42,9 @@ if(hasUserReviews) {
   process.exit(0);
 }
 
-const changedFiles = files
-  .map((file) => file.filename)
-  .filter((file) => file.startsWith('icons/') && file.includes('.json'))
-  .filter((file, idx, arr) => arr.indexOf(file) === idx);;
+const changedFiles = files.filter(
+  ({filename}) => filename.startsWith('icons/') && filename.includes('.json')
+)
 
 if (changedFiles.length === 0) {
   console.log('No changed icons found');
@@ -54,8 +55,8 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const suggestionsByFile = changedFiles.map(async (file) => {
-  const filePath = file.replace('.json', '');
+const suggestionsByFile = changedFiles.map(async ({ filename, raw_url }) => {
+  const filePath = filename.replace('.json', '');
   const iconName = filePath.split('/').pop();
 
   const input = `Create a list of tags for a \`${iconName}\` icon. Don't include words like: 'icon' and preferably use single words.`;
@@ -68,19 +69,30 @@ const suggestionsByFile = changedFiles.map(async (file) => {
       },
   });
 
-  const { tags: suggestedTags } = JSON.parse(response.output_text);
+  const { tags: suggestedTags }: IconMetadata = JSON.parse(response.output_text);
 
   console.log(`Suggesting tags for ${iconName}:`, suggestedTags);
 
-  // const currentContent = require(`../${filePath}`);
-  const jsonFile = path.join(process.cwd(), file);
-  const currentFileContent = await fs.readFile(jsonFile, 'utf-8') as unknown as string;
-  const metaData = JSON.parse(currentFileContent);
+  let fileContent: string
 
-  console.log(`Current tags for ${iconName}:`, metaData.tags || []);
+  if( useFileSystem ) {
+    const jsonFile = path.join(process.cwd(), filename);
+    fileContent = await fs.readFile(jsonFile, 'utf-8') as unknown as string;
+  } else {
+    const fileGithubRequest = await octokit.request(`GET ${raw_url}`, {
+      headers: {
+        'Accept': 'application/vnd.github.v3.raw',
+      },
+    });
+    fileContent = fileGithubRequest.data
+  }
+
+  const metadata = JSON.parse(fileContent)
+
+  console.log(`Current tags for ${iconName}:`, metadata.tags || []);
 
   const tagSuggestionsWithoutDuplicates = suggestedTags.filter((tag) => {
-    return !metaData.tags?.includes(tag) && tag !== iconName;
+    return !metadata.tags?.includes(tag) && tag !== iconName;
   });
 
   console.log(`Tag suggestions for ${iconName} without duplicates:`, tagSuggestionsWithoutDuplicates);
@@ -90,7 +102,7 @@ const suggestionsByFile = changedFiles.map(async (file) => {
     return Promise.resolve(null);
   }
   // Find the startLine in the json file
-  const startLine = currentFileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
+  const startLine = fileContent.split('\n').findIndex((line) => line.includes('"tags":')) + 1;
 
   const codeSuggestion = tagSuggestionsWithoutDuplicates.map((tag) => `    "${tag}"`).join(',\n');
 
@@ -100,9 +112,10 @@ Here are the suggestions:
 \`\`\`suggestion\n  "tags": [\n${codeSuggestion},`;
 
   return {
-    path: file,
+    path: filename,
     line: startLine,
     body: message,
+    side: "RIGHT"
   }
 })
 
@@ -113,13 +126,28 @@ if (comments.length === 0) {
   process.exit(0);
 }
 
-await octokit.pulls.createReview({
-  owner,
-  repo,
-  pull_number: pullRequestNumber,
-  body: `### 🤖 ChatGPT Tags suggestions ✨
-I've asked ChatGPT for some suggestions for tags.`,
-  event: "COMMENT",
-  comments,
-  commit_id: commitSha,
-});
+try {
+  console.log({
+    owner,
+    repo,
+    pull_number: pullRequestNumber,
+    body: `### 🤖 ChatGPT Tags suggestions ✨
+  I've asked ChatGPT for some suggestions for tags.`,
+    event: "COMMENT",
+    comments,
+    commit_id: commitSha,
+  })
+  await octokit.pulls.createReview({
+    owner,
+    repo,
+    pull_number: pullRequestNumber,
+    body: `### 🤖 ChatGPT Tags suggestions ✨
+  I've asked ChatGPT for some suggestions for tags.`,
+    event: "COMMENT",
+    comments,
+    commit_id: commitSha,
+  });
+} catch (error) {
+  console.error('Error creating review:', error);
+  process.exit(0);
+}
