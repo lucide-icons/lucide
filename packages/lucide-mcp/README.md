@@ -5,7 +5,7 @@ A Model Context Protocol (MCP) server for Lucide icons that provides tools to se
 ## Features
 
 - **Icon Search**: Search through all Lucide icons by name, tags, categories, or aliases
-- **Template Generation**: Generate framework-specific component code for React, Vue, Angular, Svelte, Preact, and Solid
+- **Template Generation**: Generate flavour-specific component code for React, Vue, Angular, Svelte, Preact, Solid, Astro, React Native, and more
 - **Category Browsing**: List all categories and get icons by category
 - **Fast and Efficient**: Built-in caching for optimal performance
 
@@ -48,19 +48,20 @@ Search for icons by name, tags, categories, or aliases.
 
 #### 2. `get_icon_template`
 
-Generate framework-specific template code for an icon.
+Generate flavour-specific template code for an icon.
 
 **Parameters:**
 
 - `iconName` (required): Name of the icon
-- `framework` (required): Target framework (`react`, `vue`, `angular`, `svelte`, `preact`, `solid`)
+- `flavour` (required): Target flavour (`react`, `vue`, `vue-next`, `angular`, `svelte`, `preact`, `solid`, `astro`, `react-native`, `vanilla`, `node`)
+- `framework` (deprecated): Use `flavour` instead
 
 **Example:**
 
 ```json
 {
   "iconName": "arrow-right",
-  "framework": "react"
+  "flavour": "react"
 }
 ```
 
@@ -90,14 +91,19 @@ Get all icons in a specific category.
 }
 ```
 
-## Supported Frameworks
+## Supported Flavours
 
 - **React**: Complete React component with TypeScript support
-- **Vue**: Vue 3 composition API component
+- **Vue**: Vue 2 component
+- **Vue Next**: Vue 3 composition API component
 - **Angular**: Angular component template
 - **Svelte**: Svelte component with props
 - **Preact**: Preact component (similar to React)
 - **Solid**: SolidJS component
+- **Astro**: Astro component
+- **React Native**: React Native component
+- **Vanilla**: Plain JavaScript/HTML
+- **Node**: Node.js/server-side usage
 
 ## Development
 
