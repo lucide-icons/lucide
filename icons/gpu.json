@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "xandykati98",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "processor",
+    "cores",
+    "technology",
+    "computer",
+    "chip",
+    "circuit",
+    "specs",
+    "graphics processing unit",
+    "video card",
+    "display adapter",
+    "gddr",
+    "rendering",
+    "digital image processing",
+    "crypto mining"
+  ],
+  "categories": [
+    "devices",
+    "gaming"
+  ]
+}
