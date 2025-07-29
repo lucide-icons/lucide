@@ -40,8 +40,8 @@ export default defineConfig({
       'link',
       {
         rel: 'preconnect',
-        href: 'https://analytics.lucide.dev'
-      }
+        href: 'https://analytics.lucide.dev',
+      },
     ],
     [
       'script',
