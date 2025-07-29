@@ -1,0 +1,46 @@
+name: Pull request icon preview
+
+on:
+  pull_request:
+    paths:
+      - 'icons/*.svg'
+
+jobs:
+  generate-changed-icons-comment:
+    name: Generate Changed Icons Comment
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v46
+        with:
+          files: icons/*.svg
+
+      - uses: actions/setup-node@v4
+      - name: Install svgson for code preview (safer and faster than installing all deps)
+        run: npm install svgson@5.3.1 --force
+
+      - name: Save PR number
+        run: |
+          mkdir -p ./pr
+          echo ${{ github.event.number }} > ./pr/NR
+
+      - name: Generate comment markup
+        run: node ./scripts/generateChangedIconsCommentMarkup.mts >> ./pr/comment-markup.md
+        id: comment-markup
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pr_number
+          path: pr/
