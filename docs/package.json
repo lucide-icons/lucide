@@ -30,7 +30,7 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-replace": "^6.0.2",
     "@types/semver": "^7.5.3",
-    "nitropack": "2.12.4",
+    "nitropack": "2.8.1",
     "rollup-plugin-copy": "^3.5.0",
     "vitepress": "^1.6.3"
   },
