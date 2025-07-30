@@ -1,7 +1,5 @@
 import type { FunctionalComponent, SVGAttributes } from 'vue';
 
-
-
 export interface LucideProps extends Partial<SVGAttributes> {
   size?: 24 | number;
   strokeWidth?: number | string;

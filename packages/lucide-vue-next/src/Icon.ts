@@ -9,12 +9,13 @@ interface IconProps {
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  {name, iconNode, ...props},
+  { name, iconNode, ...props },
   { slots },
 ) => {
   const size = props.size || defaultAttributes.width;
   const color = props.color || defaultAttributes.stroke;
-  const strokeWidth = props['strokeWidth'] || props['stroke-width'] || defaultAttributes['stroke-width'];
+  const strokeWidth =
+    props['strokeWidth'] || props['stroke-width'] || defaultAttributes['stroke-width'];
   const absoluteStrokeWidth = props['absoluteStrokeWidth'] || props['absolute-stroke-width'];
 
   return h(
@@ -25,7 +26,8 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       width: size,
       height: size,
       stroke: color,
-      'stroke-width': absoluteStrokeWidth != null ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+      'stroke-width':
+        absoluteStrokeWidth != null ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
       class: mergeClasses(
         'lucide',
         props.class,
