@@ -9,24 +9,30 @@ interface IconProps {
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  { size, strokeWidth = 2, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
+  {name, iconNode, ...props},
   { slots },
 ) => {
+  const size = props.size || defaultAttributes.width;
+  const color = props.color || defaultAttributes.stroke;
+  const strokeWidth = props['strokeWidth'] || props['stroke-width'] || defaultAttributes['stroke-width'];
+  const absoluteStrokeWidth = props['absoluteStrokeWidth'] || props['absolute-stroke-width'];
+
   return h(
     'svg',
     {
       ...defaultAttributes,
-      width: size || defaultAttributes.width,
-      height: size || defaultAttributes.height,
-      stroke: color || defaultAttributes.stroke,
-      'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+      ...props,
+      width: size,
+      height: size,
+      stroke: color,
+      'stroke-width': absoluteStrokeWidth != null ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
       class: mergeClasses(
         'lucide',
+        props.class,
         ...(name
           ? [`lucide-${toKebabCase(toPascalCase(name))}-icon`, `lucide-${toKebabCase(name)}`]
           : ['lucide-icon']),
       ),
-      ...props,
     },
     [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],
   );
