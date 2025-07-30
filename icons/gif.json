@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "tallneil"
+  ],
+  "tags": [
+    "image",
+    "media",
+    "asset",
+    "picture",
+    "photo",
+    "gallery",
+    "album"
+  ],
+  "categories": [
+    "photography",
+    "text",
+    "multimedia",
+    "files"
+  ]
+}
