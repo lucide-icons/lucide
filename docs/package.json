@@ -32,7 +32,8 @@
     "@types/semver": "^7.5.3",
     "nitropack": "2.8.1",
     "rollup-plugin-copy": "^3.5.0",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "svg-path-commander": "^2.1.11"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.0.3",
