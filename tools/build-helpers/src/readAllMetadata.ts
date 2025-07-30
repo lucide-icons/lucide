@@ -16,6 +16,9 @@ export const readAllMetadata = async (directory: string): Promise<Record<string,
     .map(async (file) => [path.basename(file, '.json'), await readMetadata(file, directory)]);
 
   const metadata = await Promise.all(metaDataPromises);
+  if (metadata.length === 0) {
+    throw new Error(`No metadata files found in directory: ${directory}`);
+  }
 
   return Object.fromEntries(metadata);
 };
