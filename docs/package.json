@@ -28,7 +28,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
     "@types/semver": "^7.5.3",
     "nitropack": "2.12.4",
     "rollup-plugin-copy": "^3.5.0",
