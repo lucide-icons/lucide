@@ -3,8 +3,6 @@ import { mergeClasses, toKebabCase, toPascalCase, isEmptyString } from '@lucide/
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 
-
-
 interface IconProps {
   iconNode: IconNode;
   name: string;
@@ -20,10 +18,10 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     'stroke-width': strokeWidthKebabCase,
     size = defaultAttributes.width,
     color = defaultAttributes.stroke,
-    ...props },
+    ...props
+  },
   { slots },
 ) => {
-
   return h(
     'svg',
     {
@@ -33,14 +31,14 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       height: size,
       stroke: color,
       'stroke-width':
-        (
-          isEmptyString(absoluteStrokeWidth)
-          || isEmptyString(absoluteStrokeWidthKebabCase)
-          || absoluteStrokeWidth === true
-          || absoluteStrokeWidthKebabCase === true
-        )
-          ? (Number((strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'])) * 24) / Number(size)
-          : (strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width']),
+        isEmptyString(absoluteStrokeWidth) ||
+        isEmptyString(absoluteStrokeWidthKebabCase) ||
+        absoluteStrokeWidth === true ||
+        absoluteStrokeWidthKebabCase === true
+          ? (Number(strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width']) *
+              24) /
+            Number(size)
+          : strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'],
       class: mergeClasses(
         'lucide',
         props.class,
