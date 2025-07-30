@@ -1,7 +1,9 @@
 import { type FunctionalComponent, h } from 'vue';
-import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase, toPascalCase, isEmptyString } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
+
+
 
 interface IconProps {
   iconNode: IconNode;
@@ -9,14 +11,18 @@ interface IconProps {
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  { name, iconNode, ...props },
+  {
+    name,
+    iconNode,
+    absoluteStrokeWidth,
+    'absolute-stroke-width': absoluteStrokeWidthKebabCase,
+    strokeWidth,
+    'stroke-width': strokeWidthKebabCase,
+    size = defaultAttributes.width,
+    color = defaultAttributes.stroke,
+    ...props },
   { slots },
 ) => {
-  const size = props.size || defaultAttributes.width;
-  const color = props.color || defaultAttributes.stroke;
-  const strokeWidth =
-    props['strokeWidth'] || props['stroke-width'] || defaultAttributes['stroke-width'];
-  const absoluteStrokeWidth = props['absoluteStrokeWidth'] || props['absolute-stroke-width'];
 
   return h(
     'svg',
@@ -27,7 +33,14 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       height: size,
       stroke: color,
       'stroke-width':
-        absoluteStrokeWidth != null ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+        (
+          isEmptyString(absoluteStrokeWidth)
+          || isEmptyString(absoluteStrokeWidthKebabCase)
+          || absoluteStrokeWidth === true
+          || absoluteStrokeWidthKebabCase === true
+        )
+          ? (Number((strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'])) * 24) / Number(size)
+          : (strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width']),
       class: mergeClasses(
         'lucide',
         props.class,

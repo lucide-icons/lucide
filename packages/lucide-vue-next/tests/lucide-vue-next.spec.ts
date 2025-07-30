@@ -169,6 +169,7 @@ describe('Using lucide icon components', () => {
       props: {
         size: 48,
         color: 'red',
+        'stroke-width': '2',
         'absolute-stroke-width': '',
       },
     });
