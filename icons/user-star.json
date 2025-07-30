@@ -2,26 +2,23 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
+    "csandman",
     "ericfennis",
-    "danielbayley",
     "karsa-mistmere",
     "jguddas",
-    "Ayberkyvs",
-    "UsamaKhan"
+    "MArtytraM99"
   ],
   "tags": [
-    "plus",
-    "like",
+    "person",
+    "account",
     "favorite",
-    "add",
-    "health",
-    "support"
+    "contact",
+    "like",
+    "review",
+    "rating",
+    "admin"
   ],
   "categories": [
-    "medical",
-    "account",
-    "multimedia",
-    "gaming",
-    "social"
+    "account"
   ]
 }
