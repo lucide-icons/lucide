@@ -12,7 +12,13 @@
     "refresh",
     "reconnect",
     "transfer",
-    "backup"
+    "backup",
+    "storage",
+    "upload",
+    "download",
+    "connection",
+    "network",
+    "data"
   ],
   "categories": [
     "arrows",
