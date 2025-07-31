@@ -22,6 +22,11 @@
     "arrows"
   ],
   "aliases": [
-    "sort-asc"
+    {
+      "name": "sort-asc",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -13,6 +13,11 @@
     "multimedia"
   ],
   "aliases": [
-    "play-circle"
+    {
+      "name": "play-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
