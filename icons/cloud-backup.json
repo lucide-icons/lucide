@@ -18,7 +18,13 @@
     "synchronise",
     "refresh",
     "reconnect",
-    "transfer"
+    "transfer",
+    "data",
+    "security",          
+    "upload",
+    "save",
+    "remote",
+    "safety"
   ],
   "categories": [
     "arrows",
