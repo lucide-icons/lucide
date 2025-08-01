@@ -1,4 +1,4 @@
-import type { IconNode } from '../src/lucide-svelte';
+import type { IconNode } from '../src/lucide-svelte.js';
 
 export const airVent: IconNode = [
   [
