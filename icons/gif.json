@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "fatihsever",
+    "karsa-mistmere",
+    "tallneil"
+  ],
+  "tags": [
+    "image",
+    "media",
+    "asset",
+    "picture",
+    "photo",
+    "gallery",
+    "album"
+  ],
+  "categories": [
+    "photography",
+    "text",
+    "multimedia",
+    "files"
+  ]
+}
