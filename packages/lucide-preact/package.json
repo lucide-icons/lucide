@@ -24,9 +24,7 @@
   "author": "Eric Fennis",
   "amdName": "lucide-preact",
   "main": "dist/cjs/lucide-preact.js",
-  "main:umd": "dist/umd/lucide-preact.js",
   "module": "dist/esm/lucide-preact.js",
-  "unpkg": "dist/umd/lucide-preact.min.js",
   "typings": "dist/lucide-preact.d.ts",
   "files": [
     "dist"

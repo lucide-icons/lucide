@@ -11,17 +11,6 @@ const outputFileName = 'lucide-react';
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir: 'dist/umd',
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir: 'dist/umd',
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir: 'dist/cjs',
@@ -54,7 +43,6 @@ const configs = bundles
       outputDir,
       outputFile,
       format,
-      minify,
       preserveModules,
       entryFileNames,
       external = [],
@@ -63,7 +51,7 @@ const configs = bundles
       inputs.map((input) => ({
         input,
         plugins: [
-          ...plugins({ pkg, minify }),
+          ...plugins({ pkg }),
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
             include: 'src/DynamicIcon.ts',
@@ -78,7 +66,7 @@ const configs = bundles
                 dir: outputDir,
               }
             : {
-                file: outputFile ?? `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
+                file: outputFile ?? `${outputDir}/${outputFileName}.js`,
               }),
           paths,
           entryFileNames,
