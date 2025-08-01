@@ -23,10 +23,14 @@
   "categories": [
     "arrows",
     "navigation",
-    "shapes",
     "development"
   ],
   "aliases": [
-    "chevron-right-square"
+    {
+      "name": "chevron-right-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

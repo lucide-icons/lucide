@@ -21,32 +21,29 @@
     "aliases": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
             "type": "string"
           },
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "deprecated": {
-                "const": true
-              },
-              "deprecationReason": {
-                "$ref": "#/$defs/aliasDeprecationReasons"
-              },
-              "toBeRemovedInVersion": {
-                "$ref": "#/$defs/versionNumber",
-                "description": "The version this icon will be removed in."
-              }
-            },
-            "dependentRequired": {
-              "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
-            }
+          "deprecated": {
+            "const": true
+          },
+          "deprecationReason": {
+            "$ref": "#/$defs/aliasDeprecationReasons"
+          },
+          "toBeRemovedInVersion": {
+            "$ref": "#/$defs/versionNumber",
+            "description": "The version this icon will be removed in."
           }
-        ]
+        },
+        "dependentRequired": {
+          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecationReason": ["deprecated"],
+          "toBeRemovedInVersion": ["deprecated"]
+        }
       },
       "uniqueItems": true
     },
@@ -64,23 +61,20 @@
           "charts",
           "communication",
           "connectivity",
-          "currency",
           "cursors",
           "design",
           "development",
           "devices",
           "emoji",
           "files",
+          "finance",
           "food-beverage",
-          "furniture",
           "gaming",
           "home",
           "layout",
           "mail",
-          "maps",
-          "maths",
+          "math",
           "medical",
-          "money",
           "multimedia",
           "nature",
           "navigation",
@@ -133,7 +127,9 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecationReason": ["deprecated"],
+    "toBeRemovedInVersion": ["deprecated"]
   },
   "$defs": {
     "iconDeprecationReasons": {
@@ -142,7 +138,7 @@
     },
     "aliasDeprecationReasons": {
       "type": "string",
-      "enum": ["alias.typo", "alias.name"]
+      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
     },
     "versionNumber": {
       "type": "string",

@@ -9,6 +9,8 @@ import {useData, useRouter} from 'vitepress';
 import { computed } from 'vue';
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import { diamond }  from '../../../data/iconNodes'
+import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
+
 
 const props = defineProps<{
   icon: IconEntity
@@ -24,6 +26,15 @@ const tags = computed(() => {
 })
 
 const DiamondIcon = createLucideIcon('Diamond', diamond)
+
+const deprecatedTitle = computed(() => {
+  if (!props.icon.deprecationReason) return '';
+  return deprecationReasonTemplate(props.icon.deprecationReason, {
+    componentName: props.icon.name,
+    iconName: props.icon.name,
+    toBeRemovedInVersion: props.icon.toBeRemovedInVersion,
+  });
+});
 </script>
 
 <template>
@@ -36,6 +47,13 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
         <DiamondIcon fill="currentColor" :size="12"/>
         {{ icon.externalLibrary }}
       </div>
+      <Badge
+        v-if="icon.deprecated"
+        class="deprecated-badge"
+        :title="deprecatedTitle"
+      >
+        Deprecated
+      </Badge>
     </div>
     <div class="tags-scroller" v-if="tags.length">
       <p class="icon-tags horizontal-scroller">
@@ -96,6 +114,16 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+.deprecated-badge {
+  background-color: var(--vp-c-brand-5);
+  margin-left: 40px;
+  opacity: .8;
+}
+
+.deprecated-badge:hover {
+  background-color: var(--vp-c-brand-2);
 }
 
 .icon-tags {

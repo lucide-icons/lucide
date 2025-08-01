@@ -8,10 +8,14 @@
     "paste"
   ],
   "categories": [
-    "text",
-    "account"
+    "text"
   ],
   "aliases": [
-    "clipboard-signature"
+    {
+      "name": "clipboard-signature",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

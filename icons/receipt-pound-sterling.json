@@ -10,12 +10,12 @@
     "check",
     "counterfoil",
     "british",
+    "currency",
     "gbp",
     "£"
   ],
   "categories": [
-    "money",
-    "currency",
+    "finance",
     "travel"
   ]
 }

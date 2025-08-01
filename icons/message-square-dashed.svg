@@ -9,12 +9,17 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M3 6V5c0-1.1.9-2 2-2h2" />
-  <path d="M11 3h3" />
-  <path d="M18 3h1c1.1 0 2 .9 2 2" />
-  <path d="M21 9v2" />
-  <path d="M21 15c0 1.1-.9 2-2 2h-1" />
-  <path d="M14 17h-3" />
-  <path d="m7 17-4 4v-5" />
-  <path d="M3 12v-2" />
+  <path d="M12 19h.01" />
+  <path d="M12 3h.01" />
+  <path d="M16 19h.01" />
+  <path d="M16 3h.01" />
+  <path d="M2 13h.01" />
+  <path d="M2 17v4.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H8" />
+  <path d="M2 5a2 2 0 0 1 2-2" />
+  <path d="M2 9h.01" />
+  <path d="M20 3a2 2 0 0 1 2 2" />
+  <path d="M22 13h.01" />
+  <path d="M22 17a2 2 0 0 1-2 2" />
+  <path d="M22 9h.01" />
+  <path d="M8 3h.01" />
 </svg>

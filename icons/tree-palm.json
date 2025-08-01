@@ -9,9 +9,15 @@
     "island"
   ],
   "categories": [
-    "nature"
+    "nature",
+    "sustainability"
   ],
   "aliases": [
-    "palmtree"
+    {
+      "name": "palmtree",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
