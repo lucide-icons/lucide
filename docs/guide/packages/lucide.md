@@ -153,11 +153,11 @@ myApp.appendChild(menuIcon);
 They can be used in the same way as the official icons.
 
 ```js
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 createIcons({
   icons: {
-    burger
+    coconut
   }
 });
 ```

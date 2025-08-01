@@ -54,7 +54,7 @@ import { Camera } from 'lucide-vue-next';
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
 | `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
+| `absoluteStrokeWidth`   | *boolean* | false        |
 | `default-class`         | *string*  | lucide-icon  |
 
 ### Applying props
@@ -81,11 +81,11 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 ```vue
 <script setup>
 import { Icon } from 'lucide-vue-next';
-import { burger } from '@lucide/lab';
+import { baseball } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode="burger" />
+  <Icon :iconNode="baseball" />
 </template>
 ```
 
