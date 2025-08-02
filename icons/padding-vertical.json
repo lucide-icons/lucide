@@ -5,12 +5,13 @@
   ],
   "tags": [
     "margin",
-    "paddingers",
-    "adjustment",
-    "paddinging",
-    "verticality",
+    "design",
     "padding",
     "spacing",
+    "space",
+    "offset",
+    "alignment",
+    "position",
     "layout",
     "css",
     "vertical",
@@ -20,7 +21,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "coding & development"
+    "design"
   ]
 }

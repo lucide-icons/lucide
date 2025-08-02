@@ -4,23 +4,22 @@
     "irvineacosta"
   ],
   "tags": [
-    "indent",
     "margin",
-    "alignment",
     "design",
-    "UI",
-    "userinterface",
-    "visual",
     "padding",
     "spacing",
+    "space",
+    "offset",
+    "alignment",
+    "position",
     "layout",
     "css",
     "left",
-    "ui"
+    "ui",
+    "indent"
   ],
   "categories": [
     "layout",
-    "design",
-    "coding & development"
+    "design"
   ]
 }
