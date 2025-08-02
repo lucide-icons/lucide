@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta"
+  ],
+  "tags": [
+    "padding",
+    "spacing",
+    "layout",
+    "css",
+    "vertical",
+    "y",
+    "y-axis",
+    "ui"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "coding & development"
+  ]
+}
