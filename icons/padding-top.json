@@ -5,12 +5,13 @@
   ],
   "tags": [
     "margin",
+    "design",
+    "padding",
+    "spacing",
     "space",
     "offset",
     "alignment",
     "position",
-    "padding",
-    "spacing",
     "layout",
     "css",
     "top",
@@ -18,7 +19,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "coding & development"
+    "design"
   ]
 }

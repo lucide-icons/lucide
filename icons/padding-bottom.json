@@ -8,6 +8,10 @@
     "design",
     "padding",
     "spacing",
+    "space",
+    "offset",
+    "alignment",
+    "position",
     "layout",
     "css",
     "bottom",
@@ -15,7 +19,6 @@
   ],
   "categories": [
     "layout",
-    "design",
-    "coding & development"
+    "design"
   ]
 }
