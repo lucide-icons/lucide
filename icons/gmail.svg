@@ -1,0 +1,13 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7.955 19.863a1 1 0 0 1-1 1H4.136A1.636 1.636 0 0 1 2.5 19.226V5.317C2.5 3.5 4 2 7 4l4.502 2.701a1 1 0 0 0 1.004.014L17.5 3.908c2.472-1.763 4-.408 3.955 1.819v13.909c0 .904-.5 1.634-1.636 1.636H17a1 1 0 0 1-1-1v-7.37a.5.5 0 0 0-.765-.424l-2.666 1.666a1 1 0 0 1-1.114-.036L8.747 12.16a.5.5 0 0 0-.792.406z" />
+</svg>
