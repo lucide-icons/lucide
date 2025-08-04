@@ -2,13 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "ericfennis"
+    "ericfennis",
+    "irvineacosta"
   ],
   "tags": [
     "menu bar",
     "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "padding",
+    "margin",
+    "guide",
+    "layout"
   ],
   "categories": [
     "layout"

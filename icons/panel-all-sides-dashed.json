@@ -6,8 +6,9 @@
     "irvineacosta"
   ],
   "tags": [
+    "sidebar",
+    "primary",
     "drawer",
-    "dock",
     "show",
     "reveal",
     "padding",
@@ -17,13 +18,5 @@
   ],
   "categories": [
     "layout"
-  ],
-  "aliases": [
-    {
-      "name": "panel-bottom-inactive",
-      "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
   ]
 }
