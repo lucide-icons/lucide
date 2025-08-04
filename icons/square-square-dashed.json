@@ -6,21 +6,16 @@
     "jguddas"
   ],
   "tags": [
-    "stop",
-    "playback",
-    "music",
-    "audio",
-    "video",
-    "rectangle",
-    "aspect ratio",
-    "1:1",
+    "padding",
+    "margin",
     "shape",
     "float",
-    "center"
+    "center",
+    "expand",
+    "contract"
   ],
   "categories": [
     "shapes",
-    "multimedia",
     "layout"
   ]
 }
