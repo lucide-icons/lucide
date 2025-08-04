@@ -3,19 +3,25 @@
   "contributors": [
     "colebemis",
     "ericfennis",
-    "jguddas"
+    "jguddas",
+    "irvineacosta"
   ],
   "tags": [
-    "padding",
-    "margin",
+    "stop",
+    "playback",
+    "music",
+    "audio",
+    "video",
+    "rectangle",
+    "aspect ratio",
+    "1:1",
     "shape",
     "float",
-    "center",
-    "expand",
-    "contract"
+    "center"
   ],
   "categories": [
     "shapes",
+    "multimedia",
     "layout"
   ]
 }
