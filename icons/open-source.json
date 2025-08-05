@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel"
+  ],
+  "tags": [
+    "open",
+    "source",
+    "license",
+    "licensing",
+    "os",
+    "foss"
+  ],
+  "categories": [
+    "development"
+  ]
+}
