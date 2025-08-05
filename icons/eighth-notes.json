@@ -7,12 +7,20 @@
     "ericfennis"
   ],
   "tags": [
+    "music",
     "note",
-    "quaver",
-    "eighth note"
+    "quaver"
   ],
   "categories": [
     "multimedia",
     "files"
+  ],
+  "aliases": [
+    {
+      "name": "music",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

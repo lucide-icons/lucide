@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "music",
+    "note",
+    "quaver"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "music-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
