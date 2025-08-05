@@ -14,7 +14,15 @@ import CarbonAdOverlay from './CarbonAdOverlay.vue';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
-const DEFAULT_GRID_ITEMS = 10 * 160;
+
+const initialGridItems = computed(() => {
+  if (containerWidth.value === 0) return 120;
+  
+  const itemsPerRow = columnSize.value || 10;
+  const visibleRows = Math.ceil(window.innerHeight / (ICON_SIZE + ICON_GRID_GAP));
+
+  return Math.min(itemsPerRow * (visibleRows + 2), 200); 
+});
 
 const props = defineProps<{
   icons: IconEntity[];
@@ -115,15 +123,14 @@ function handleCloseDrawer() {
       />
     </StickyBar>
     <NoResults
-      v-if="list.length === 0 && searchQuery !== ''"
+      v-if="searchResults.length === 0 && searchQuery !== ''"
       :searchQuery="searchQuery"
       @clear="searchQuery = ''"
     />
     <IconGrid
       v-else-if="list.length === 0"
-      :key="index"
       overlayMode
-      :icons="[...searchResults].splice(0, DEFAULT_GRID_ITEMS)"
+      :icons="searchResults.slice(0, initialGridItems)"
       :activeIcon="activeIconName"
       @setActiveIcon="setActiveIconName"
     />

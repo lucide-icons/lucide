@@ -93,7 +93,7 @@ The package includes type definitions for all icons. This is useful if you want 
 
 ```astro
 ---
-import { Home, Library, Cog, type Icon as IconType } from '@lucide/astro';
+import { House, Library, Cog, type Icon as IconType } from '@lucide/astro';
 
 type MenuItem = {
   name: string;
@@ -105,7 +105,7 @@ const menuItems: MenuItem[] = [
   {
     name: 'Home',
     href: '/',
-    icon: Home,
+    icon: House,
   },
   {
     name: 'Blog',
