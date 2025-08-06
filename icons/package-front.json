@@ -7,6 +7,8 @@
   ],
   "tags": [
     "box",
+    "bundle",
+    "parcel",
     "container",
     "storage",
     "sealed",
@@ -19,5 +21,8 @@
   "categories": [
     "files",
     "development"
+  ],
+  "aliases": [
+    "package-2"
   ]
 }
