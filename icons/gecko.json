@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lucasrosasc"
+  ],
+  "tags": [
+    "gecko",
+    "lizard",
+    "pet",
+    "reptile"
+  ],
+  "categories": [
+    "animals"
+  ]
+}
