@@ -10,7 +10,5 @@ export default async function getAliasesEntryNames() {
 
   const aliases = iconWithAliases.flatMap(({ aliases }) => aliases);
 
-  return aliases
-    .map((alias) => (typeof alias === 'string' ? alias : alias?.name))
-    .map((alias) => path.join('src/icons', `${alias}.ts`));
+  return aliases.map((alias) => path.join('src/icons', `${alias.name}.ts`));
 }

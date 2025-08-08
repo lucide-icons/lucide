@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "AlexNaskida",
     "karsa-mistmere",
-    "danielbayley"
+    "jguddas"
   ],
   "tags": [
-    "movie",
-    "video",
-    "film"
+    "tools",
+    "maintenance",
+    "repair"
   ],
   "categories": [
-    "files"
+    "tools",
+    "development",
+    "home"
   ]
 }
