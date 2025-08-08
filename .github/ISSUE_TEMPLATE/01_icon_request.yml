@@ -43,7 +43,7 @@ body:
           required: true
         - label: I am not requesting a brand logo and the art is not protected by copyright.
           required: true
-        - label: I am not requesting an icon that includes religious, political imagery or hate symbols.
+        - label: I am not requesting an icon that includes religious, war/violence related, political imagery or hate symbols.
           required: true
         - label: I have provided appropriate use cases for the icon(s) requested.
           required: true

@@ -12,6 +12,11 @@
     "layout"
   ],
   "aliases": [
-    "split-square-horizontal"
+    {
+      "name": "split-square-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
