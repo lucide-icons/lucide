@@ -1,6 +1,6 @@
 <script lang="ts">
-  import defaultAttributes from './defaultAttributes';
-  import type { IconProps } from './types';
+  import defaultAttributes from './defaultAttributes.js';
+  import type { IconProps } from './types.js';
 
   const {
     name,

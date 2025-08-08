@@ -16,7 +16,17 @@
     "notifications"
   ],
   "aliases": [
-    "help-circle",
-    "circle-help"
+    {
+      "name": "help-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "circle-help",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

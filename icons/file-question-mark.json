@@ -14,6 +14,11 @@
     "files"
   ],
   "aliases": [
-    "file-question"
+    {
+      "name": "file-question",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

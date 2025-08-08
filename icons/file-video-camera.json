@@ -2,6 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
+    "ericfennis",
     "danielbayley"
   ],
   "tags": [
@@ -11,5 +12,13 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-video-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
