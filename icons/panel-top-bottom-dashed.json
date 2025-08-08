@@ -15,7 +15,8 @@
     "margin",
     "guide",
     "layout",
-    "horizontal"
+    "horizontal",
+    "bleed"
   ],
   "categories": [
     "layout"

@@ -14,7 +14,8 @@
     "padding",
     "margin",
     "guide",
-    "layout"
+    "layout",
+    "bleed"
   ],
   "categories": [
     "layout"
