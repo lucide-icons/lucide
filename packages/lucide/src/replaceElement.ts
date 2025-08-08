@@ -1,6 +1,7 @@
 import createElement from './createElement';
 import defaultAttributes from './defaultAttributes';
 import { Icons } from './types';
+import { hasA11yProp } from '@lucide/shared';
 
 export type CustomAttrs = { [attr: string]: any };
 
@@ -83,9 +84,12 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
 
   const elementAttrs = getAttrs(element);
 
+  const ariaProps = hasA11yProp(elementAttrs) ? {} : { 'aria-hidden': 'true' };
+
   const iconAttrs = {
     ...defaultAttributes,
     'data-lucide': iconName,
+    ...ariaProps,
     ...attrs,
     ...elementAttrs,
   };

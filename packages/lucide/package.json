@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
+    "@lucide/shared": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@rollup/plugin-replace": "^6.0.2",
     "@testing-library/jest-dom": "^6.6.3",
