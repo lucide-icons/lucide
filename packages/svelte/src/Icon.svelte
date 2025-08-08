@@ -1,7 +1,7 @@
 <script lang="ts">
-  import defaultAttributes from './defaultAttributes';
-  import type { IconProps } from './types';
-  import { getLucideContext } from './context';
+  import defaultAttributes from './defaultAttributes.js';
+  import type { IconProps } from './types.js';
+  import { getLucideContext } from './context.js';
 
   const globalProps = getLucideContext() ?? {}
 
