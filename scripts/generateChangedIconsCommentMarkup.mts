@@ -73,25 +73,25 @@ const changeFiles3pxStrokeImageTags = getImageTagsByFiles(
   () => `${BASE_URL}/stroke-width/3`,
 ).join('');
 
-const changeFilesLowDPIImageTags16 = getImageTagsByFiles(
-  changedFiles,
-  () => `${BASE_URL}/dpi/16`,
-).join(' ');
+const changeFilesLowDPIImageTags16 = getImageTagsByFiles(changedFiles, (file) => {
+  const iconName = path.basename(file, '.svg');
+  return `${BASE_URL}/dpi/${iconName}/16`;
+}).join(' ');
 
-const changeFilesLowDPIImageTags24 = getImageTagsByFiles(
-  changedFiles,
-  () => `${BASE_URL}/dpi/24`,
-).join(' ');
+const changeFilesLowDPIImageTags24 = getImageTagsByFiles(changedFiles, (file) => {
+  const iconName = path.basename(file, '.svg');
+  return `${BASE_URL}/dpi/${iconName}/24`;
+}).join(' ');
 
-const changeFilesLowDPIImageTags32 = getImageTagsByFiles(
-  changedFiles,
-  () => `${BASE_URL}/dpi/32`,
-).join(' ');
+const changeFilesLowDPIImageTags32 = getImageTagsByFiles(changedFiles, (file) => {
+  const iconName = path.basename(file, '.svg');
+  return `${BASE_URL}/dpi/${iconName}/32`;
+}).join(' ');
 
-const changeFilesLowDPIImageTags48 = getImageTagsByFiles(
-  changedFiles,
-  () => `${BASE_URL}/dpi/48`,
-).join(' ');
+const changeFilesLowDPIImageTags48 = getImageTagsByFiles(changedFiles, (file) => {
+  const iconName = path.basename(file, '.svg');
+  return `${BASE_URL}/dpi/${iconName}/48`;
+}).join(' ');
 
 const changeFilesXRayImageTags = getImageTagsByFiles(
   changedFiles,
