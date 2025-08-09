@@ -7,7 +7,12 @@
   "tags": [
     "filter",
     "sort",
+    "ascending",
     "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
     "numerical"
   ],
   "categories": [
@@ -16,6 +21,11 @@
     "arrows"
   ],
   "aliases": [
-    "arrow-up-10"
+    {
+      "name": "arrow-up-10",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

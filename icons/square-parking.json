@@ -11,9 +11,14 @@
   ],
   "categories": [
     "transportation",
-    "maps"
+    "navigation"
   ],
   "aliases": [
-    "parking-square"
+    {
+      "name": "parking-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

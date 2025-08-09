@@ -8,6 +8,11 @@
     "filter",
     "sort",
     "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
     "alphabetical"
   ],
   "categories": [
@@ -16,6 +21,11 @@
     "arrows"
   ],
   "aliases": [
-    "arrow-up-az"
+    {
+      "name": "arrow-up-az",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -7,13 +7,26 @@
     "ericfennis"
   ],
   "tags": [
-    "load"
+    "loading",
+    "wait",
+    "busy",
+    "progress",
+    "spinner",
+    "spinning",
+    "throbber",
+    "circle"
   ],
   "categories": [
+    "cursors",
     "multimedia",
     "layout"
   ],
   "aliases": [
-    "loader-2"
+    {
+      "name": "loader-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

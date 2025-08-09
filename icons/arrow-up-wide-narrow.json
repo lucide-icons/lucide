@@ -6,7 +6,12 @@
   "tags": [
     "filter",
     "sort",
-    "descending"
+    "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling"
   ],
   "categories": [
     "text",

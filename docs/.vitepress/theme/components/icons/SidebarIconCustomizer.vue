@@ -47,6 +47,7 @@ function resetStyle () {
   color.value = STYLE_DEFAULTS.color
   strokeWidth.value = STYLE_DEFAULTS.strokeWidth
   size.value = STYLE_DEFAULTS.size
+  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
@@ -59,9 +60,8 @@ const customizingActive = computed(() => {
   return color.value !== STYLE_DEFAULTS.color
     || strokeWidth.value !== STYLE_DEFAULTS.strokeWidth
     || size.value !== STYLE_DEFAULTS.size
+    || absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
 })
-
-
 </script>
 
 <template>
@@ -110,7 +110,7 @@ const customizingActive = computed(() => {
         name="size"
         v-model="size"
         :min="16"
-        :max="48"
+        :max="256"
         :step="4"
       />
     </InputField>
@@ -120,8 +120,8 @@ const customizingActive = computed(() => {
       label="Absolute Stroke width"
     >
       <Switch
-        id="size"
-        name="size"
+        id="absolute-stroke-width"
+        name="absolute-stroke-width"
         v-model="absoluteStrokeWidth"
       />
     </InputField>
@@ -161,9 +161,4 @@ const customizingActive = computed(() => {
 .color-picker {
   margin-left: auto;
 }
-
-#absolute-stroke-width {
-  flex-direction: row-reverse;
-}
-
 </style>

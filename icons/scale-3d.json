@@ -8,12 +8,18 @@
   "tags": [
     "gizmo",
     "transform",
-    "size"
+    "size",
+    "axis"
   ],
   "categories": [
     "design"
   ],
   "aliases": [
-    "scale-3-d"
+    {
+      "name": "scale-3-d",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

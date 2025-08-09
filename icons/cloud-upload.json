@@ -4,7 +4,8 @@
     "colebemis",
     "csandman",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "file"
@@ -14,6 +15,11 @@
     "files"
   ],
   "aliases": [
-    "upload-cloud"
+    {
+      "name": "upload-cloud",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

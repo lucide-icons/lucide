@@ -1,0 +1,47 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "projects",
+    "manage",
+    "overview",
+    "roadmap",
+    "plan",
+    "intentions",
+    "timeline",
+    "deadline",
+    "date",
+    "event",
+    "range",
+    "period",
+    "productivity",
+    "work",
+    "agile",
+    "code",
+    "coding",
+    "toolbar",
+    "button"
+  ],
+  "categories": [
+    "charts",
+    "time",
+    "development",
+    "design"
+  ],
+  "aliases": [
+    {
+      "name": "gantt-chart-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "square-gantt-chart",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

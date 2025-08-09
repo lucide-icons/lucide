@@ -10,10 +10,14 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "shapes"
+    "navigation"
   ],
   "aliases": [
-    "chevron-down-circle"
+    {
+      "name": "chevron-down-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

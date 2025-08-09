@@ -2,12 +2,6 @@
 
 Implementation of the lucide icon library for Vue 3 applications.
 
-## Vue 3 or Vue 2
-
-::: tip
-This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue ->](lucide-vue)
-:::
-
 ## Installation
 
 ::: code-group
@@ -24,6 +18,10 @@ yarn add lucide-vue-next
 npm install lucide-vue-next
 ```
 
+```sh [bun]
+bun add lucide-vue-next
+```
+
 :::
 
 ## How to use
@@ -37,16 +35,16 @@ Each icon can be imported as a Vue component, which renders an inline SVG Elemen
 You can pass additional props to adjust the icon.
 
 ```vue
+<script setup>
+import { Camera } from 'lucide-vue-next';
+</script>
+
 <template>
   <Camera
     color="red"
     :size="32"
   />
 </template>
-
-<script setup>
-import { Camera } from 'lucide-vue-next';
-</script>
 ```
 
 ## Props
@@ -56,7 +54,7 @@ import { Camera } from 'lucide-vue-next';
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
 | `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
+| `absoluteStrokeWidth`   | *boolean* | false        |
 | `default-class`         | *string*  | lucide-icon  |
 
 ### Applying props
@@ -66,6 +64,28 @@ To customize the appearance of an icon, you can pass custom properties as props 
 ```vue
 <template>
   <Camera fill="red" />
+</template>
+```
+
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```vue
+<script setup>
+import { Icon } from 'lucide-vue-next';
+import { baseball } from '@lucide/lab';
+</script>
+
+<template>
+  <Icon :iconNode="baseball" />
 </template>
 ```
 

@@ -11,3 +11,5 @@ export interface LucideProps extends SVGAttributes {
   class?: string;
   absoluteStrokeWidth?: boolean;
 }
+
+export type LucideIcon = (props: LucideProps) => JSX.Element;

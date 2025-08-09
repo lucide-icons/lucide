@@ -3,15 +3,22 @@ import React from 'react';
 interface BackdropProps {
   src: string;
   color?: string;
+  outline?: boolean;
   backdropString: string;
 }
 
-const Backdrop = ({ src, color = 'red', backdropString }: BackdropProps): JSX.Element => {
+const Backdrop = ({
+  src,
+  color = 'red',
+  outline = true,
+  backdropString,
+}: BackdropProps): JSX.Element => {
+  const id = React.useId();
   return (
     <>
       <defs xmlns="http://www.w3.org/2000/svg">
         <pattern
-          id="pattern"
+          id={`pattern-${id}`}
           width=".1"
           height=".1"
           patternUnits="userSpaceOnUse"
@@ -30,69 +37,58 @@ const Backdrop = ({ src, color = 'red', backdropString }: BackdropProps): JSX.El
         </pattern>
       </defs>
       <mask
-        id="svg-preview-backdrop-mask-outline"
+        id={`svg-preview-backdrop-mask-${id}`}
         maskUnits="userSpaceOnUse"
       >
         <g
           stroke="#fff"
           dangerouslySetInnerHTML={{ __html: backdropString }}
         />
-        <g
-          dangerouslySetInnerHTML={{ __html: src }}
-          strokeWidth={2.05}
-        />
+        <g dangerouslySetInnerHTML={{ __html: src }} />
       </mask>
       <mask
-        id="svg-preview-backdrop-mask-fill"
+        id={`svg-preview-backdrop-mask-outline-${id}`}
         maskUnits="userSpaceOnUse"
       >
-        <g
-          stroke="#fff"
-          dangerouslySetInnerHTML={{ __html: backdropString }}
-        />
-        <g
-          dangerouslySetInnerHTML={{ __html: src }}
-          strokeWidth={2.05}
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          fill="#fff"
+          stroke="none"
         />
         <g
           strokeWidth={1.75}
           dangerouslySetInnerHTML={{ __html: backdropString }}
         />
       </mask>
-      <g
-        strokeWidth={2.25}
-        stroke="url(#pattern)"
-        mask={'url(#svg-preview-backdrop-mask-outline)'}
-      >
+      <g mask={`url(#svg-preview-backdrop-mask-${id})`}>
         <rect
           x="0"
           y="0"
-          width="24"
-          height="24"
-          fill="url(#pattern)"
+          width="100%"
+          height="100%"
           opacity={0.5}
+          fill={`url(#pattern-${id})`}
           stroke="none"
         />
+        <g
+          stroke={color}
+          strokeWidth={2.25}
+          opacity={0.75}
+          dangerouslySetInnerHTML={{ __html: src }}
+        />
+        {outline && (
+          <g
+            stroke={color}
+            strokeWidth={2.25}
+            opacity={0.75}
+            mask={`url(#svg-preview-backdrop-mask-outline-${id})`}
+            dangerouslySetInnerHTML={{ __html: backdropString }}
+          />
+        )}
       </g>
-      <rect
-        x="0"
-        y="0"
-        width="24"
-        height="24"
-        fill="url(#pattern)"
-        stroke="none"
-        mask={'url(#svg-preview-backdrop-mask-fill)'}
-      />
-      <rect
-        x="0"
-        y="0"
-        width="24"
-        height="24"
-        fill={color}
-        opacity={0.5}
-        stroke="none"
-        mask={'url(#svg-preview-backdrop-mask-fill)'}
-      />
     </>
   );
 };
