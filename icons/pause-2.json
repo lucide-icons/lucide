@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "zefir-git"
+  ],
+  "tags": [
+    "music",
+    "audio",
+    "video",
+    "stop",
+    "or",
+    "operator",
+    "parallel",
+    "bars",
+    "lines",
+    "double",
+    "||",
+    "‖",
+    "⏸"
+  ],
+  "categories": [
+    "multimedia",
+    "development",
+    "math"
+  ]
+}
