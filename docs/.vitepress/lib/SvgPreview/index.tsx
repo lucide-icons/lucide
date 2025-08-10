@@ -4,18 +4,24 @@ import getPaths, { assert } from './utils';
 import { GapViolationHighlight } from './GapViolationHighlight.tsx';
 
 export const darkModeCss = `
-  @media screen and (prefers-color-scheme: light) {
-    .svg-preview-grid-rect { fill: none }
+  :root { color-scheme: light dark }
+  .svg-preview-grid-rect { fill: none }
+  .svg
+  .svg-preview-grid-group,
+  .svg-preview-radii-group,
+  .svg-preview-shadow-mask-group,
+  .svg-preview-shadow-group {
+    stroke: currentColor;
   }
-  @media screen and (prefers-color-scheme: dark) {
-    .svg-preview-grid-rect { fill: none }
+  _::-webkit-full-page-media, _:future, :root *:where(
     .svg
     .svg-preview-grid-group,
     .svg-preview-radii-group,
     .svg-preview-shadow-mask-group,
-    .svg-preview-shadow-group {
-      stroke: #fff;
-    }
+    .svg-preview-shadow-group
+  ) {
+    stroke: #fff;
+    mix-blend-mode: difference;
   }
 `;
 
