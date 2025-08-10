@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "uibalint",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "road",
+    "street",
+    "highway",
+    "route",
+    "path",
+    "transport",
+    "traffic",
+    "drive",
+    "map"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
