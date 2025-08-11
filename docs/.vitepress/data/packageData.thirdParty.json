@@ -99,7 +99,7 @@
   {
     "name": "lucide_icons_flutter",
     "description": "A library providing https://lucide.dev icons to lustre.",
-    "icon": "/framework-logos/lustre.webp",
+    "icon": "/framework-logos/flutter.svg",
     "shields": [
       {
         "alt": "Latest Stable Version",
