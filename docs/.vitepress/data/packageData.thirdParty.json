@@ -108,7 +108,7 @@
       },
       {
         "alt": "Total Downloads",
-        "src": "hhttps://img.shields.io/pub/dm/lucide_icons_flutter",
+        "src": "https://img.shields.io/pub/dm/lucide_icons_flutter",
         "href": "https://pub.dev/packages/lucide_icons_flutter"
       }
     ],
