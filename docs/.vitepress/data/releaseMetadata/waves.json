@@ -1,0 +1,10 @@
+{
+  "createdRelease": {
+    "version": "0.17.9",
+    "date": "2022-03-08T08:55:17+01:00"
+  },
+  "changedRelease": {
+    "version": "0.62.0",
+    "date": "2022-06-16T13:44:15+02:00"
+  }
+}
