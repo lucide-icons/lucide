@@ -12,7 +12,7 @@ If you need brand icons, we recommend [Simple Icons](https://simpleicons.org/), 
 
 This is not a new debate — other icon sets have gone through the same discussion:
 
-- **Material Design Icons** [deprecated all brand icon](https://github.com/Templarian/MaterialDesign/issues/6602) because they were not stylistically consistent, did not fit within a single-color / 24×24px grid in a recognisable way, and were a poor match for the overall set.
+- **Material Design Icons** [deprecated all brand icons](https://github.com/Templarian/MaterialDesign/issues/6602) because they were not stylistically consistent, did not fit within a single-color / 24×24px grid in a recognisable way, and were a poor match for the overall set.
 - **Feather Icons** [reached a similar conclusion](https://github.com/feathericons/feather/issues/763): brand marks have their own design language, and trying to “Feather-ify” them inevitably leads to aesthetic compromises.
 - We at **Lucide** have learnt from these lessons and choose to focus on what Lucide does best — a cohesive, consistent set of non-brand icons.
 
