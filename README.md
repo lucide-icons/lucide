@@ -57,6 +57,12 @@ For more info on how to contribute please see the [contribution guidelines](http
 
 Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/main/README.md)
 
+## About brand logos
+
+Lucide **does not accept** brand logos, and we do not plan to add them in the future. This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
+
+[Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS_STATEMENT.md)
+
 ## Community
 
 Join the community on our [Discord](https://discord.gg/EH6nSts) server!

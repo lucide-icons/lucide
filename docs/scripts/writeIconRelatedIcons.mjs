@@ -21,10 +21,7 @@ const MAX_RELATED_ICONS = 4 * 17; // grid of 4x17 icons, = 68 icons
 const arrayMatches = (a, b) => a.filter((item) => b.includes(item)).length;
 
 const nameParts = (icon) =>
-  [
-    icon.name,
-    ...(icon.aliases?.map((alias) => (typeof alias === 'string' ? alias : alias.name)) ?? []),
-  ]
+  [icon.name, ...(icon.aliases?.map((alias) => alias.name) ?? [])]
     .join('-')
     .split('-')
     .filter((word) => word.length > 2);
