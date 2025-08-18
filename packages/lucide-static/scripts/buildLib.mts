@@ -31,8 +31,24 @@ createDirectory(ICON_MODULE_DIR);
 const svgFiles = await readSvgDirectory(ICONS_DIR);
 const svgs = await readSvgs(svgFiles, ICONS_DIR);
 
+const aliases = (await Promise.all(
+  (await readSvgDirectory(ICONS_DIR, '.json')).map(async (metadataFile) => {
+    const filePath = path.join(ICONS_DIR, metadataFile);
+    const fileContent = await fs.promises.readFile(filePath, 'utf-8');
+    const { aliases }: {aliases: undefined | (string | { name: string })[]} = JSON.parse(fileContent);
+    if (!aliases?.length) return [];
+    const svgName = path.basename(metadataFile, '.json');
+    const svg = svgs.find((s) => s.name === svgName);
+    if (!svg) return [];
+    return aliases.map(alias => ({
+      ...svg,
+      name: typeof alias === 'string' ? alias : alias.name,
+    }));
+  })
+)).flat();
+
 await Promise.all([
   generateSprite(svgs, PACKAGE_DIR, license),
   generateIconNodes(svgs, PACKAGE_DIR),
-  copyIcons(svgs, PACKAGE_DIR, license),
+  copyIcons([...svgs, ...aliases], PACKAGE_DIR, license),
 ]);
