@@ -28,7 +28,7 @@ Common scopes: icons, docs, studio, site, dev
 <!-- IMPORTANT! Please read our official statement on brand logos in Lucide: -->
 <!-- https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md -->
 - [ ] I have provided valid use cases for each icon.
-- [ ] I have [not added any a brand or logo icon](https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md).
+- [ ] I have [not added any brand or logo icon](https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md).
 - [ ] I have not used any hate symbols.
 - [ ] I have not included any religious, war/violence related or political imagery.
 
