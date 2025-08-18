@@ -31,3 +31,78 @@ describe('Using Icon Component', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+
+describe('Icon Component Accessibility', () => {
+  it('shpuld have aria-hidden prop when no aria prop is present', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+      },
+    });
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('should not have aria-hidden prop when aria prop is present', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        'aria-label': 'Air conditioning',
+      },
+    });
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+
+  it('should not have aria-hidden prop when title prop is present', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        'title': 'Air conditioning',
+      },
+    });
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+
+  it('should not have aria-hidden prop when there are children that could be a <title> element', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        'aria-label': 'Air conditioning',
+      },
+      slot: '<title>Air conditioning</title>',
+    });
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+
+  it('should never override aria-hidden prop', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        'aria-hidden': 'true',
+      },
+    });
+
+
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'false');
+  });
+});

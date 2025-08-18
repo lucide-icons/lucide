@@ -1,6 +1,7 @@
 import { h, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 import type { IconNode, LucideProps } from './types';
+import { hasA11yProp } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -42,6 +43,7 @@ const Icon = ({
         ? (Number(strokeWidth) * 24) / Number(size)
         : strokeWidth,
       class: ['lucide', classes].join(' '),
+      ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
       ...rest,
     },
     [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
