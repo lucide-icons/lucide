@@ -10,6 +10,7 @@ export interface IconProps extends SVGAttributes {
   absoluteStrokeWidth?: boolean;
   class?: string;
   iconNode?: IconNode;
+  title?: string;
 }
 
 export type SVGAttributes = HTMLAttributes<'svg'>;

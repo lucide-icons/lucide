@@ -1,6 +1,8 @@
 ---
 import defaultAttributes from './defaultAttributes';
 import type { IconProps as Props } from './types';
+import { hasA11yProp } from './utils/hasA11yProp';
+
 
 const {
   color = 'currentColor',
@@ -20,6 +22,7 @@ const {
     height: size,
     stroke: color,
     'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+    ...(!hasA11yProp(rest) && { 'aria-hidden': 'true' }),
     ...rest,
   }}
   class:list={['lucide', className]}

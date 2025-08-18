@@ -39,11 +39,13 @@
     }
   },
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons",
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
     "copy:license": "cp ../../LICENSE ./LICENSE",
+    "copy:utils": "mkdir -p ./src/utils && cp -rf ../../packages/shared/src/utils/{hasA11yProp,toKebabCase,mergeClasses}.ts ./src/utils/",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "pnpm build:icons && vitest run --watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
