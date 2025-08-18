@@ -27,6 +27,22 @@ describe('createIcons', () => {
     expect(hasSvg).toBeTruthy();
   });
 
+  it('should only execute given provided context', () => {
+    document.body.innerHTML = `<div id="context"><i data-lucide="volume-2"></i></div><i data-lucide="funnel"></i>`;
+
+    const context = document.querySelector('#context')!;
+    createIcons({
+      icons,
+      root: context,
+    });
+
+    const hasSvg = !!document.querySelector('svg.lucide-volume-2');
+    const hasUnreplaced = !!document.querySelector('i[data-lucide="funnel"]');
+
+    expect(hasSvg).toBeTruthy();
+    expect(hasUnreplaced).toBeTruthy();
+  });
+
   it('should add custom attributes', () => {
     document.body.innerHTML = `<i data-lucide="volume-2" class="lucide"></i>`;
 
