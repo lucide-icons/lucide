@@ -61,7 +61,7 @@ Caught a mistake or want to contribute to the documentation? [Edit this page on 
 
 Lucide **does not accept** brand logos, and we do not plan to add them in the future. This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
 
-[Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS.md)
+[Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS_STATEMENT.md)
 
 ## Community
 
