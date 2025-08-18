@@ -33,7 +33,7 @@ describe('createIcons', () => {
     const context = document.querySelector('#context')!;
     createIcons({
       icons,
-      context,
+      root: context,
     });
 
     const hasSvg = !!document.querySelector('svg.lucide-volume-2');

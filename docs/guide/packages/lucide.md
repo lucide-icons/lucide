@@ -92,7 +92,7 @@ In the `createIcons` function you can pass some extra parameters:
 
 - you can pass `nameAttr` to adjust the attribute name to replace for
 - you can pass `attrs` to pass additional custom attributes, for instance CSS classes or stroke options.
-- you can pass `context` to provide a custom DOM element the icons should be replaced in (useful when manipulating small sections of a large DOM or elements in the shadow DOM)
+- you can pass `root` to provide a custom DOM element the icons should be replaced in (useful when manipulating small sections of a large DOM or elements in the shadow DOM)
 
 Here is a full example:
 
@@ -106,7 +106,7 @@ createIcons({
     stroke: '#333'
   },
   nameAttr: 'data-lucide', // attribute for the icon name.
-  context: element, // DOM element to replace icons in.
+  root: element, // DOM element to replace icons in.
 });
 ```
 
