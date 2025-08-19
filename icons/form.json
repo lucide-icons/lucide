@@ -13,7 +13,9 @@
     "formality",
     "structure",
     "template",
-    "inputs"
+    "inputs",
+    "design",
+    "components"
   ],
   "categories": [
     "development"
