@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "chessurisme"
+  ],
+  "tags": [
+    "clone",
+    "duplicate",
+    "multiple",
+    "restore",
+    "window",
+    "desktop",
+    "maximize"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
