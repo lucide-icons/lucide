@@ -1,0 +1,68 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "unshielded",
+    "cybersecurity",
+    "insecure",
+    "unsecured",
+    "safety",
+    "unsafe",
+    "protection",
+    "unprotected",
+    "guardian",
+    "unguarded",
+    "unarmored",
+    "unarmoured",
+    "defenseless",
+    "defenceless",
+    "undefended",
+    "defender",
+    "threat",
+    "prevention",
+    "unprevented",
+    "antivirus",
+    "vigilance",
+    "vigilant",
+    "detection",
+    "undetected",
+    "scan",
+    "find",
+    "exploit",
+    "vulnerability",
+    "vulnerable",
+    "weakness",
+    "infection",
+    "comprimised",
+    "data leak",
+    "audit",
+    "admin",
+    "verification",
+    "unverified",
+    "uncertified",
+    "uncertain",
+    "unknown",
+    "inactive",
+    "crest",
+    "question mark",
+    "?"
+  ],
+  "categories": [
+    "account",
+    "security",
+    "development",
+    "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "shield-question",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

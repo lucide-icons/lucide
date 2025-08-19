@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "stack",
@@ -16,5 +17,13 @@
   "categories": [
     "design",
     "layout"
+  ],
+  "aliases": [
+    {
+      "name": "layers-3",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0",
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }

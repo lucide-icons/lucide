@@ -9,10 +9,14 @@
     "music"
   ],
   "categories": [
-    "multimedia",
-    "shapes"
+    "multimedia"
   ],
   "aliases": [
-    "stop-circle"
+    {
+      "name": "stop-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

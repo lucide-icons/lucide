@@ -15,10 +15,14 @@
   "categories": [
     "arrows",
     "navigation",
-    "maps",
     "development"
   ],
   "aliases": [
-    "arrow-up-left-from-circle"
+    {
+      "name": "arrow-up-left-from-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

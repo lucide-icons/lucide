@@ -11,10 +11,14 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "maps"
+    "navigation"
   ],
   "aliases": [
-    "arrow-down-left-from-circle"
+    {
+      "name": "arrow-down-left-from-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

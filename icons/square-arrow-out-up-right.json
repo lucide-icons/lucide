@@ -19,6 +19,11 @@
     "social"
   ],
   "aliases": [
-    "arrow-up-right-from-square"
+    {
+      "name": "arrow-up-right-from-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
