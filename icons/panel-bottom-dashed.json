@@ -14,6 +14,11 @@
     "layout"
   ],
   "aliases": [
-    "panel-bottom-inactive"
+    {
+      "name": "panel-bottom-inactive",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
