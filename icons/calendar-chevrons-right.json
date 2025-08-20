@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "tags": [
+    "date",
+    "day",
+    "month",
+    "year",
+    "events",
+    "chevrons",
+    "lens"
+  ],
+  "categories": [
+    "time",
+    "arrows",
+    "navigation"
+  ]
+}
