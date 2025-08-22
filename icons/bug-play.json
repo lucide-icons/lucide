@@ -3,10 +3,14 @@
   "contributors": [
     "danielbayley",
     "jguddas",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
   "tags": [
+    "issue",
+    "testing",
     "debug",
+    "reproduce",
     "code",
     "insect"
   ],
