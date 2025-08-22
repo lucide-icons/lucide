@@ -21,10 +21,13 @@ const createIcons = ({
     throw new Error('`createIcons()` only works in a browser environment.');
   }
 
-  const elementsToReplace = root.querySelectorAll(`[${nameAttr}]`);
-  Array.from(elementsToReplace).forEach((element) =>
-    replaceElement(element, { nameAttr, icons, attrs }),
-  );
+  const elementsToReplace = Array.from(root.querySelectorAll(`[${nameAttr}]`));
+  const templates = Array.from(root.querySelectorAll('template'));
+  templates.forEach((template) => {
+    const contentToReplace = Array.from(template.content.querySelectorAll(`[${nameAttr}]`));
+    elementsToReplace.push.apply(elementsToReplace, contentToReplace);
+  });
+  elementsToReplace.forEach((element) => replaceElement(element, { nameAttr, icons, attrs }));
 
   /** @todo: remove this block in v1.0 */
   if (nameAttr === 'data-lucide') {
