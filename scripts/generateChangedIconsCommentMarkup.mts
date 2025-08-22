@@ -30,17 +30,23 @@ if (changedFiles.length === 0) {
   process.exit(0);
 }
 
-const getImageTagsByFiles = (files: string[], getBaseUrl: (file: string) => string, width?: number) =>
+const getImageTagsByFiles = (
+  files: string[],
+  getBaseUrl: (file: string) => string,
+  width?: number,
+  linkToLucideStudio = false,
+) =>
   files.map((file) => {
     const svgContent = fs.readFileSync(path.join(process.cwd(), file), 'utf-8');
     const strippedAttrsSVG = svgContent.replace(/<svg[^>]*>/, '<svg>');
     const minifiedSvg = minifySvg(strippedAttrsSVG);
+    const name = path.basename(file, '.svg');
 
     const base64 = Buffer.from(minifiedSvg).toString('base64');
     const url = getBaseUrl(file);
     const widthAttr = width ? `width="${width}"` : '';
 
-    return `<img title="${file}" alt="${file}" ${widthAttr} src="${url}/${base64}.svg"/>`;
+    return `${linkToLucideStudio ? `<a title="Open ${name} in lucide studio" target="_blank" href="https://studio.lucide.dev/edit?value=${encodeURI(minifiedSvg)}&name=${name}">` : ''}<img title="${name}" alt="${name}" ${widthAttr} src="${url}/${base64}.svg"/>${linkToLucideStudio ? '</a>' : ''}`;
   });
 
 const svgFiles = await readSvgDirectory(ICONS_DIR);
@@ -101,6 +107,7 @@ const changeFilesXRayImageTags = getImageTagsByFiles(
     return `${BASE_URL}/${iconName}`;
   },
   400,
+  true,
 ).join(' ');
 
 const changeFilesDiffImageTags = getImageTagsByFiles(
