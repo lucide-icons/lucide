@@ -1,0 +1,46 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "Muhammad-Aqib-Bashir"
+  ],
+  "tags": [
+    "book search",
+    "reading",
+    "paperback",
+    "booklet",
+    "magazine",
+    "leaflet",
+    "pamphlet",
+    "tome",
+    "library",
+    "writing",
+    "written",
+    "story",
+    "script",
+    "information",
+    "knowledge",
+    "education",
+    "high school",
+    "university",
+    "college",
+    "academy",
+    "student",
+    "study",
+    "learning",
+    "homework",
+    "research",
+    "documentation",
+    "find",
+    "scan",
+    "magnifier",
+    "magnifying glass",
+    "lens"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "gaming",
+    "social"
+  ]
+}
