@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MattGeiger"
+  ],
+  "tags": [
+    "dairy",
+    "milk",
+    "cheese",
+    "swiss",
+    "wedge",
+    "food",
+    "edible",
+    "lactose"
+  ],
+  "categories": [
+    "dairy",
+    "milk",
+    "cheese",
+    "food",
+    "grocery",
+    "edible"
+  ]
+}
