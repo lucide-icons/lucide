@@ -2,21 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
-    "ericfennis",
     "karsa-mistmere",
-    "sachinkr7368"
+    "ericfennis",
+    "MarianoFranzese",
+    "jguddas"
   ],
   "tags": [
     "location",
-    "waypoint",
-    "marker",
+    "navigation",
+    "travel",
     "drop",
-    "edit"
+    "delete",
+    "remove",
+    "erase"
   ],
   "categories": [
     "navigation",
-    "travel",
-    "account"
+    "travel"
   ]
 }
