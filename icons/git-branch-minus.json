@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joris-gallot"
+  ],
+  "tags": [
+    "delete",
+    "remove",
+    "-"
+  ],
+  "categories": [
+    "development"
+  ]
+}
