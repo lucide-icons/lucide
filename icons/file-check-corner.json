@@ -15,5 +15,13 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-check-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
