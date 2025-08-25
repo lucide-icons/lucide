@@ -1,22 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
+    "bduffany",
     "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "words",
+    "lines",
+    "break",
+    "paragraph"
   ],
   "categories": [
-    "charts"
+    "text",
+    "arrows"
   ],
   "aliases": [
     {
-      "name": "bar-chart-2",
+      "name": "wrap-text",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"

@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "jguddas",
-    "GRA0007"
+    "GRA0007",
+    "karsa-mistmere"
   ],
   "tags": [
     "drop cap",
@@ -14,5 +15,13 @@
   ],
   "categories": [
     "text"
+  ],
+  "aliases": [
+    {
+      "name": "letter-text",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
