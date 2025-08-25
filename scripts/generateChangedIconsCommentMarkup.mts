@@ -134,7 +134,15 @@ const readyToUseCode = changedFiles
 
 const commentMarkup = `\
 ### Added or changed icons
-${changeFiles2pxStrokeImageTags}
+${
+  changedFiles.length >= 8
+    ? `<details>
+<summary>Icon X-rays</summary>
+${changeFilesXRayImageTags}
+</details>
+`
+    : ''
+}${changeFiles2pxStrokeImageTags}
 <details>
 <summary>Preview cohesion</summary>
 ${cohesionSquaresImageTags}<br/>
@@ -157,11 +165,15 @@ ${changeFilesLowDPIImageTags24}
 ${changeFilesLowDPIImageTags32}
 <h4>48px (default + retina)</h4>
 ${changeFilesLowDPIImageTags48}
-</details>
+</details>${
+  changedFiles.length < 8
+    ? `
 <details>
 <summary>Icon X-rays</summary>
 ${changeFilesXRayImageTags}
-</details>
+</details>`
+    : ''
+}
 <details>
 <summary>Icon Diffs</summary>
 ${changeFilesDiffImageTags}
