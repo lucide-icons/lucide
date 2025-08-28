@@ -53,8 +53,8 @@ const Backdrop = ({
         <rect
           x="0"
           y="0"
-          width="24"
-          height="24"
+          width="100%"
+          height="100%"
           fill="#fff"
           stroke="none"
         />
@@ -67,8 +67,8 @@ const Backdrop = ({
         <rect
           x="0"
           y="0"
-          width="24"
-          height="24"
+          width="100%"
+          height="100%"
           opacity={0.5}
           fill={`url(#pattern-${id})`}
           stroke="none"

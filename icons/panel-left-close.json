@@ -17,6 +17,11 @@
     "arrows"
   ],
   "aliases": [
-    "sidebar-close"
+    {
+      "name": "sidebar-close",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "ocavue",
+    "jguddas",
+    "PeterlitsZo",
+    "mittalyashu",
+    "juliankellydesign"
+  ],
+  "tags": [
+    "options",
+    "items",
+    "collapse",
+    "expand",
+    "details",
+    "disclosure",
+    "show",
+    "hide",
+    "toggle",
+    "accordion",
+    "more",
+    "less",
+    "fold",
+    "unfold",
+    "vertical"
+  ],
+  "categories": [
+    "text",
+    "arrows"
+  ]
+}
