@@ -11,6 +11,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
      stroke="red"
      stroke-width="4"
      class="lucide lucide-icon lucide-grid3x3 lucide-grid-3x3"
+     aria-hidden="true"
      data-testid="grid-icon"
 >
   <rect width="18"
@@ -51,6 +52,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke="red"
      stroke-width="1"
      class="lucide lucide-icon lucide-grid3x3 lucide-grid-3x3"
+     aria-hidden="true"
      data-testid="grid-icon"
 >
   <rect width="18"
@@ -91,6 +93,7 @@ exports[`Using lucide icon components > should render a component 1`] = `
      stroke="currentColor"
      stroke-width="2"
      class="lucide lucide-icon lucide-grid3x3 lucide-grid-3x3"
+     aria-hidden="true"
 >
   <rect width="18"
         height="18"
