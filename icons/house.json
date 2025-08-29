@@ -12,11 +12,15 @@
     "architecture"
   ],
   "categories": [
-    "account",
     "buildings",
     "home"
   ],
   "aliases": [
-    "home"
+    {
+      "name": "home",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

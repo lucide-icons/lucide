@@ -12,10 +12,14 @@
   ],
   "categories": [
     "transportation",
-    "maps",
     "navigation"
   ],
   "aliases": [
-    "m-square"
+    {
+      "name": "m-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

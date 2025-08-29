@@ -14,14 +14,17 @@
     "price tag"
   ],
   "categories": [
-    "account",
     "social",
-    "money",
+    "finance",
     "shopping",
-    "maths",
-    "shapes"
+    "math"
   ],
   "aliases": [
-    "percent-square"
+    {
+      "name": "percent-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

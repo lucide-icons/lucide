@@ -6,17 +6,15 @@ import { getCurrentDirPath } from '@lucide/helpers';
 const currentDir = process.cwd();
 const scriptDir = getCurrentDirPath(import.meta.url);
 
-const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../icons'));
+const iconMetaData = await getIconMetaData(path.resolve(scriptDir, '../../icons'));
 
 const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
   .filter(([, { aliases }]) => aliases?.length)
   .map(([iconName, { aliases }]) => {
-    aliases = aliases.map((alias) => (typeof alias === 'object' ? alias.name : alias));
-
-    const aliasRouteMatches = aliases.join('|');
+    const aliasRouteMatches = aliases.map((alias) => alias.name).join('|');
 
     return {
-      src: `/icons/(${aliasRouteMatches})`,
+      src: `/icons/${aliasRouteMatches}`,
       status: 302,
       headers: {
         Location: `/icons/${iconName}`,
@@ -44,4 +42,4 @@ const output = JSON.stringify(vercelRouteConfig, null, 2);
 
 const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
 
-fs.writeFileSync(vercelOutputJSON, output, 'utf-8');
+await fs.promises.writeFile(vercelOutputJSON, output, 'utf-8');
