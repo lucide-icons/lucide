@@ -52,7 +52,7 @@
     "@astrojs/ts-plugin": "^1.10.4",
     "@lucide/build-icons": "workspace:*",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/jest-dom": "^6.8.0",
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.5",
     "prettier": "^3.4.2",

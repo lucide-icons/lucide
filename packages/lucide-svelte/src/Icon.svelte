@@ -14,7 +14,7 @@
 
 <svg
   {...defaultAttributes}
-  aria-hidden={$$slots.default && !hasA11yProp($$restProps) ? 'true' : undefined}
+  {...(!hasA11yProp($$restProps) ? {'aria-hidden': 'true'} : undefined)}
   {...$$restProps}
   width={size}
   height={size}
