@@ -3,7 +3,7 @@
 exports[`Using lucide icon components > should add a class to the element 1`] = `
 <div>
   <svg
-    class="lucide lucide-smile-icon my-icon"
+    class="lucide my-icon lucide-smile-icon lucide-smile my-icon"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -41,7 +41,7 @@ exports[`Using lucide icon components > should add a class to the element 1`] = 
 exports[`Using lucide icon components > should add a style attribute to the element 1`] = `
 <div>
   <svg
-    class="lucide lucide-smile-icon"
+    class="lucide lucide-smile-icon lucide-smile"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -80,7 +80,7 @@ exports[`Using lucide icon components > should add a style attribute to the elem
 exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
 <div>
   <svg
-    class="lucide lucide-smile-icon"
+    class="lucide lucide-smile-icon lucide-smile"
     fill="none"
     height="48"
     stroke="red"
@@ -118,7 +118,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
 exports[`Using lucide icon components > should pass children to the icon slot 1`] = `
 <div>
   <svg
-    class="lucide lucide-smile-icon"
+    class="lucide lucide-smile-icon lucide-smile"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -161,7 +161,7 @@ exports[`Using lucide icon components > should pass children to the icon slot 1`
 exports[`Using lucide icon components > should render an component 1`] = `
 <div>
   <svg
-    class="lucide lucide-smile-icon"
+    class="lucide lucide-smile-icon lucide-smile"
     fill="none"
     height="24"
     stroke="currentColor"
