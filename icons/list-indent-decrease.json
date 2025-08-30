@@ -1,22 +1,27 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
+    "Themistoklis",
     "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "text",
+    "tab"
   ],
   "categories": [
-    "charts"
+    "text",
+    "development"
   ],
   "aliases": [
     {
-      "name": "bar-chart-2",
+      "name": "outdent",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "indent-decrease",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"

@@ -6,17 +6,16 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "statistics",
-    "analytics",
-    "diagram",
-    "graph"
+    "text",
+    "alignment",
+    "center"
   ],
   "categories": [
-    "charts"
+    "text"
   ],
   "aliases": [
     {
-      "name": "bar-chart-2",
+      "name": "align-center",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
