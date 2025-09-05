@@ -12,6 +12,8 @@ import { LucideIconData } from '../icons/types';
 import defaultAttributes from '../icons/constants/default-attributes';
 import { LUCIDE_ICONS, LucideIconProviderInterface } from './lucide-icon.provider';
 import { LucideIconConfig } from './lucide-icon.config';
+import { hasA11yProp } from 'src/utils/hasA11yProp';
+
 
 interface TypedChange<T> extends SimpleChange {
   previousValue: T;
@@ -119,11 +121,17 @@ export class LucideAngularComponent implements OnChanges {
   }
 
   replaceElement(img: LucideIconData): void {
+    const childElements = this.elem.nativeElement.childNodes;
+    const restAttributeMap: NamedNodeMap = this.elem.nativeElement.attributes;
+    const restAttributes = Object.fromEntries(Array.from(restAttributeMap).map(item => [item.name, item.value]));
+
+    const hasChildren = childElements.length > 0;
     const attributes = {
       ...defaultAttributes,
       width: this.size,
       height: this.size,
       stroke: this.color ?? this.iconConfig.color,
+      ...(!hasChildren && !hasA11yProp(restAttributes) && { 'aria-hidden': 'true' }),
       'stroke-width': this.absoluteStrokeWidth
         ? formatFixed(this.strokeWidth / (this.size / this.defaultSize))
         : this.strokeWidth.toString(10),
@@ -133,6 +141,14 @@ export class LucideAngularComponent implements OnChanges {
     if (typeof this.name === 'string') {
       icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
     }
+
+    // Forward aria-* and role from host to svg
+    Object.entries(restAttributes).forEach(([attr, value]) => {
+      if (attr.startsWith('aria-') || attr === 'role' || attr === 'title') {
+        this.renderer.setAttribute(icoElement, attr, value as string);
+      }
+    });
+
     if (this.class) {
       icoElement.classList.add(
         ...this.class
@@ -141,7 +157,7 @@ export class LucideAngularComponent implements OnChanges {
           .filter((a) => a.length > 0),
       );
     }
-    const childElements = this.elem.nativeElement.childNodes;
+
     for (const child of childElements) {
       this.renderer.removeChild(this.elem.nativeElement, child);
     }

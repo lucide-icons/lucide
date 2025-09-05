@@ -10,4 +10,6 @@ export const hasA11yProp = (props: Record<string, any>) => {
       return true;
     }
   }
+
+  return false
 };
