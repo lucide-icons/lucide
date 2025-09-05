@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "casey-j-r"
+  ],
+  "tags": [
+    "tournament",
+    "bracket",
+    "sports",
+    "competition",
+    "pairings",
+    "round-robin",
+    "knockout"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
