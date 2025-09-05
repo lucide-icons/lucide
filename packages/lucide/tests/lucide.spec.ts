@@ -116,7 +116,7 @@ describe('createIcons', () => {
   it('should replace icons inside template elements when replaceInsideTemplates is true', () => {
     document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
 
-    createIcons({ icons, replaceInsideTemplates: true });
+    createIcons({ icons, inTemplates: true });
     const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
     expect(hasIcon).toBeTruthy();
   });

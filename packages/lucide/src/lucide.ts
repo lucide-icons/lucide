@@ -6,8 +6,8 @@ export interface CreateIconsOptions {
   icons?: Icons;
   nameAttr?: string;
   attrs?: SVGProps;
-  root?: Element | Document;
-  replaceInsideTemplates?: boolean;
+  root?: Element | Document | DocumentFragment;
+  inTemplates?: boolean;
 }
 
 /**
@@ -19,7 +19,7 @@ const createIcons = ({
   nameAttr = 'data-lucide',
   attrs = {},
   root = document,
-  replaceInsideTemplates,
+  inTemplates,
 }: CreateIconsOptions) => {
   if (!Object.values(icons).length) {
     throw new Error(
@@ -33,16 +33,21 @@ const createIcons = ({
 
   const elementsToReplace = Array.from(root.querySelectorAll(`[${nameAttr}]`));
 
-  if (replaceInsideTemplates) {
+  elementsToReplace.forEach((element) => replaceElement(element, { nameAttr, icons, attrs }));
+
+  if (inTemplates) {
     const templates = Array.from(root.querySelectorAll('template'));
 
-    templates.forEach((template) => {
-      const contentToReplace = Array.from(template.content.querySelectorAll(`[${nameAttr}]`));
-      elementsToReplace.push.apply(elementsToReplace, contentToReplace);
-    });
+    templates.forEach((template) =>
+      createIcons({
+        icons,
+        nameAttr,
+        attrs,
+        root: template.content,
+        inTemplates,
+      }),
+    );
   }
-
-  elementsToReplace.forEach((element) => replaceElement(element, { nameAttr, icons, attrs }));
 
   /** @todo: remove this block in v1.0 */
   if (nameAttr === 'data-lucide') {
