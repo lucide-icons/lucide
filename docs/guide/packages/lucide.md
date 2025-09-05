@@ -141,7 +141,7 @@ createIcons({
 });
 ```
 
-### Apply icons inside <template> tags
+### Apply icons inside `<template>` tags
 
 By default icons inside `<template>` tags are not added.
 By setting the `inTemplates` option to `true`, icons inside templates will also be replaced.
@@ -153,7 +153,6 @@ createIcons({
   inTemplates: true
 });
 ```
-
 
 ### Custom Element binding
 
