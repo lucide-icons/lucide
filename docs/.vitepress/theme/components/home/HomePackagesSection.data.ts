@@ -13,9 +13,9 @@ export default {
           label: 'Lucide documentation for React',
         },
         {
-          name: 'lucide-vue-next',
+          name: 'lucide-vue',
           logo: '/framework-logos/vue.svg',
-          label: 'Lucide documentation for Vue 3',
+          label: 'Lucide documentation for Vue',
         },
         {
           name: 'lucide-svelte',
