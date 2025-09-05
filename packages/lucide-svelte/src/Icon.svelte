@@ -1,6 +1,8 @@
 <script lang="ts">
   import defaultAttributes from './defaultAttributes'
   import type { IconNode } from './types';
+  import { hasA11yProp } from './utils/hasA11yProp';
+  import { mergeClasses } from './utils/mergeClasses';
 
   export let name: string | undefined = undefined
   export let color = 'currentColor'
@@ -8,18 +10,11 @@
   export let strokeWidth: number | string = 2
   export let absoluteStrokeWidth: boolean = false
   export let iconNode: IconNode = []
-
-  const mergeClasses = <ClassType = string | undefined | null>(
-    ...classes: ClassType[]
-  ) => classes.filter((className, index, array) => {
-      return Boolean(className) && array.indexOf(className) === index;
-    })
-    .join(' ');
-
 </script>
 
 <svg
   {...defaultAttributes}
+  {...(!hasA11yProp($$restProps) ? {'aria-hidden': 'true'} : undefined)}
   {...$$restProps}
   width={size}
   height={size}

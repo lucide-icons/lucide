@@ -46,13 +46,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:package && pnpm build:license",
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons && pnpm build:package && pnpm build:license",
     "copy:license": "cp ../../LICENSE ./LICENSE",
+    "copy:utils": "mkdir -p ./src/utils && for f in hasA11yProp mergeClasses; do cp -f ../../packages/shared/src/utils/$f.ts ./src/utils/; done",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --separateIconFileExport --separateIconFileExportExtension=.ts --withAliases --aliasesFileExtension=.ts --separateAliasesFile  --separateAliasesFileExtension=.ts --aliasImportFileExtension=.js --pretty=false",
     "build:package": "svelte-package --input ./src",
     "build:license": "node ./scripts/appendBlockComments.mts",
-    "test": "pnpm copy:license && pnpm build:icons && vitest run",
+    "test": "pnpm copy:license && pnpm copy:utils && pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
@@ -61,7 +62,7 @@
     "@lucide/helpers": "workspace:*",
     "@sveltejs/package": "^2.2.3",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/svelte": "^4.0.2",
     "@tsconfig/svelte": "^5.0.0",
     "jest-serializer-html": "^7.1.0",

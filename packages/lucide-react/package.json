@@ -54,7 +54,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.37",
     "@vitejs/plugin-react": "^4.4.1",

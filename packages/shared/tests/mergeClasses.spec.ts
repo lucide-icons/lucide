@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { mergeClasses } from '../src/utils';
+import { mergeClasses } from '../src/utils/mergeClasses';
 
 describe('mergeClasses', () => {
   it('merges classes', async () => {
