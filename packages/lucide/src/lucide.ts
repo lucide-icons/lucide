@@ -19,7 +19,7 @@ const createIcons = ({
   nameAttr = 'data-lucide',
   attrs = {},
   root = document,
-  replaceInsideTemplates
+  replaceInsideTemplates,
 }: CreateIconsOptions) => {
   if (!Object.values(icons).length) {
     throw new Error(
