@@ -32,7 +32,7 @@
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=lucide-icons.ts",
     "build:ng": "ng build --configuration production",
-    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "test": "pnpm copy:utils && ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "e2e": "ng e2e",
