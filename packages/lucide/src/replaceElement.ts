@@ -1,6 +1,6 @@
 import createElement from './createElement';
 import defaultAttributes from './defaultAttributes';
-import { Icons } from './types';
+import { Icons, SVGProps } from './types';
 
 export type CustomAttrs = { [attr: string]: any };
 
@@ -21,7 +21,7 @@ export const getAttrs = (element: Element): Record<string, string> =>
  * @returns {Array}
  */
 export const getClassNames = (
-  attrs: Record<string, string | string[]> | string,
+  attrs: Record<string, number | string | string[]> | string,
 ): string | string[] => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
@@ -40,7 +40,7 @@ export const getClassNames = (
  * @returns {string}
  */
 export const combineClassNames = (
-  arrayOfClassnames: (string | Record<string, string | string[]>)[],
+  arrayOfClassnames: (string | Record<string, number | string | string[]>)[],
 ) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
@@ -57,7 +57,7 @@ const toPascalCase = (string: string): string =>
 interface ReplaceElementOptions {
   nameAttr: string;
   icons: Icons;
-  attrs: Record<string, string>;
+  attrs: SVGProps;
 }
 
 /**
