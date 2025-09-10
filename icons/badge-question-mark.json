@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "verified",
+    "unverified",
+    "help"
+  ],
+  "categories": [
+    "accessibility",
+    "social",
+    "shapes"
+  ],
+  "aliases": [
+    {
+      "name": "badge-help",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

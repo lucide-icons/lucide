@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "llaenowyd",
+    "mishkaio",
+    "ericfennis",
+    "karsa-mistmere",
+    "chessurisme",
+    "danielbayley",
+    "colebemis",
+    "juanpablofernandez"
+  ],
+  "tags": [
+    "square",
+    "border",
+    "width",
+    "layout",
+    "style",
+    "design",
+    "rectangular",
+    "marquee",
+    "dashed",
+    "box",
+    "rectangle",
+    "aspect ratio",
+    "1:1"
+  ],
+  "categories": [
+    "design",
+    "development",
+    "layout"
+  ]
+}
