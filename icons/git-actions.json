@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "actions",
+    "workflows",
+    "continuous integration",
+    "continuous delivery",
+    "continuous deployment",
+    "ci",
+    "cd",
+    "automation",
+    "devops",
+    "build",
+    "network",
+    "nodes",
+    "connections",
+    "connected"
+  ],
+  "categories": [
+    "development"
+  ]
+}
