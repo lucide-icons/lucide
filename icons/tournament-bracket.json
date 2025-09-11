@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "casey-j-r"
+  ],
+  "tags": [
+    "control",
+    "structure",
+    "progression",
+    "elimination",
+    "single-elimination",
+    "playoffs",
+    "matchup",
+    "tournament",
+    "bracket",
+    "sports",
+    "competition",
+    "pairings",
+    "round-robin",
+    "knockout"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
