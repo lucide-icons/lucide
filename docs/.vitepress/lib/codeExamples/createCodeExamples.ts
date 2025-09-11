@@ -37,7 +37,7 @@ export default App;
       language: 'vue',
       title: 'Vue',
       code: `<script setup>
-import { $PascalCase } from 'lucide-vue-next';
+import { $PascalCase } from '@lucide/vue';
 </script>
 
 <template>

@@ -34,6 +34,11 @@
       ],
       "destination": "/icons",
       "permanent": false
+    },
+    {
+      "source": "/guide/packages/lucide-vue-next",
+      "destination": "/guide/packages/lucide-vue",
+      "permanent": false
     }
   ],
   "headers": [

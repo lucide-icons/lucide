@@ -2,28 +2,24 @@
 
 Implementation of the lucide icon library for Vue applications.
 
-::: danger
-This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
-:::
-
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue
+pnpm install @lucide/vue
 ```
 
 ```sh [yarn]
-yarn add lucide-vue
+yarn add @lucide/vue
 ```
 
 ```sh [npm]
-npm install lucide-vue
+npm install @lucide/vue
 ```
 
 ```sh [bun]
-bun add lucide-vue
+bun add @lucide/vue
 ```
 
 :::
@@ -36,21 +32,19 @@ Each icon can be imported as a Vue component, which renders an inline SVG Elemen
 
 ### Example
 
-Additional props can be passed to adjust the icon:
+You can pass additional props to adjust the icon.
 
 ```vue
-<template>
-  <Camera color="red" :size="32" />
-</template>
-
-<script>
-  import { Camera } from 'lucide-vue';
-
-  export default {
-    name: 'My Component',
-    components: { Camera }
-  };
+<script setup>
+import { Camera } from '@lucide/vue';
 </script>
+
+<template>
+  <Camera
+    color="red"
+    :size="32"
+  />
+</template>
 ```
 
 ## Props
@@ -73,6 +67,28 @@ To customize the appearance of an icon, you can pass custom properties as props 
 </template>
 ```
 
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```vue
+<script setup>
+import { Icon } from '@lucide/vue';
+import { baseball } from '@lucide/lab';
+</script>
+
+<template>
+  <Icon :iconNode="baseball" />
+</template>
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.
@@ -84,30 +100,37 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ### Icon Component Example
 
 ```vue
-<template>
-  <component :is="icon" />
-</template>
+<script setup>
+import { computed } from 'vue';
+import * as icons from "@lucide/vue";
 
-<script>
-  import * as icons from 'lucide-vue';
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
+  },
+  size: Number,
+  color: String,
+  strokeWidth: Number,
+  defaultClass: String
+})
 
-  export default {
-    props: {
-      name: {
-        type: String,
-        required: true
-      }
-    },
-    computed: {
-      icon() {
-        return icons[this.name];
-      }
-    }
-  };
+const icon = computed(() => icons[props.name]);
 </script>
+
+<template>
+  <component
+    :is="icon"
+    :size="size"
+    :color="color"
+    :stroke-width="strokeWidth" :default-class="defaultClass"
+  />
+</template>
 ```
 
-#### Using the Icon Component
+### Using the Icon Component
+
+All other props listed above also work on the `Icon` Component.
 
 ```vue
 <template>
