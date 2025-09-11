@@ -26,10 +26,9 @@ const iconComponent = computed(() => {
     <component
       ref="previewIcon"
       :is="iconComponent"
-      :width="size"
-      :height="size"
-      :stroke="color"
-      :stroke-width="absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth"
+      :size="size"
+      :color="color"
+      :strokeWidth="absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth"
     />
     <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
       <g :key="`grid-${i}`" v-for="(_, i) in gridLines">
