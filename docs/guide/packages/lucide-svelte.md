@@ -324,3 +324,19 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 <LucideIcon name="Menu" />
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```svelte
+<script>
+  import { Camera } from '@lucide/svelte';
+</script>
+
+<Camera aria-label="Camera icon" />
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

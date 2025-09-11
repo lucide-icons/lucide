@@ -139,3 +139,25 @@ All other props listed above also work on the `Icon` Component.
   </div>
 </template>
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```vue
+<script setup>
+import { Camera } from 'lucide-vue-next';
+</script>
+
+<template>
+  <Camera
+    color="red"
+    :size="32"
+    aria-label="Camera icon"
+  />
+</template>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
