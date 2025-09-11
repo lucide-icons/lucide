@@ -1,11 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danbovey",
-    "colebemis",
-    "csandman",
-    "ericfennis",
-    "danielbayley"
+    "Goodbyehorses"
   ],
   "tags": [
     "question mark"
