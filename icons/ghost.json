@@ -2,9 +2,20 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
+    "spirit",
+    "haunt",
+    "specter",
+    "apparition",
+    "wraith",
+    "shade",
+    "phantom",
+    "entity",
+    "shadow",
+    "silhouette",
     "pac-man",
     "spooky"
   ],
