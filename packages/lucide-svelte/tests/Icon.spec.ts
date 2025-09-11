@@ -34,7 +34,7 @@ describe('Using Icon Component', () => {
 
 
 describe('Icon Component Accessibility', () => {
-  it('shpuld have aria-hidden prop when no aria prop is present', async () => {
+  it('should have aria-hidden prop when no aria prop is present', async () => {
     const { container } = render(Icon, {
       props: {
         iconNode: airVent,
