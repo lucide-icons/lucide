@@ -44,7 +44,7 @@ const Icon = (props: LucideProps & IconProps) => {
           : []),
         localProps.class != null ? localProps.class : '',
       )}
-      aria-hidden={(!localProps.children && !hasA11yProp(rest)) ? 'true' : undefined}
+      aria-hidden={!localProps.children && !hasA11yProp(rest) ? 'true' : undefined}
       {...rest}
     >
       <For each={localProps.iconNode}>

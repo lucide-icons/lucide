@@ -40,8 +40,8 @@ describe('Icon Component Accessibility', () => {
         size={48}
         stroke="red"
         absoluteStrokeWidth
-      />)
-    );
+      />
+    ));
 
     expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
   });
@@ -54,8 +54,8 @@ describe('Icon Component Accessibility', () => {
         stroke="red"
         absoluteStrokeWidth
         aria-label="Air conditioning"
-      />)
-    );
+      />
+    ));
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
   });
@@ -69,8 +69,8 @@ describe('Icon Component Accessibility', () => {
         absoluteStrokeWidth
         // @ts-expect-error
         title="Air conditioning"
-      />)
-    );
+      />
+    ));
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
   });
@@ -84,8 +84,8 @@ describe('Icon Component Accessibility', () => {
         absoluteStrokeWidth
       >
         <title>Some title</title>
-      </Icon>)
-    );
+      </Icon>
+    ));
 
     expect(container.firstChild).not.toHaveAttribute('aria-hidden');
   });
@@ -98,8 +98,8 @@ describe('Icon Component Accessibility', () => {
         stroke="red"
         absoluteStrokeWidth
         aria-hidden={false}
-      />)
-    );
+      />
+    ));
 
     expect(container.firstChild).toHaveAttribute('aria-hidden', 'false');
   });

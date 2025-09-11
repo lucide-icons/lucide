@@ -77,7 +77,12 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
   const elementClassNames = getClassNames(elementAttrs);
   const className = getClassNames(attrs);
 
-  const classNames = mergeClasses('lucide', `lucide-${iconName}`, ...elementClassNames, ...className);
+  const classNames = mergeClasses(
+    'lucide',
+    `lucide-${iconName}`,
+    ...elementClassNames,
+    ...className,
+  );
 
   if (classNames) {
     Object.assign(iconAttrs, {

@@ -68,7 +68,7 @@ describe('Icon Component Accessibility', () => {
         size: 48,
         color: 'red',
         absoluteStrokeWidth: true,
-        'title': 'Air conditioning',
+        title: 'Air conditioning',
       },
     });
 

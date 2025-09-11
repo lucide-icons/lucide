@@ -1,4 +1,3 @@
-
 import type { AstroComponentFactory } from 'astro/runtime/server/render/astro/factory.js';
 import type { IconNode } from './types';
 import { render, renderSlot, createComponent, renderComponent } from 'astro/compiler-runtime';

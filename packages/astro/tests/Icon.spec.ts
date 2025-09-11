@@ -17,7 +17,6 @@ describe('Using Icon Component', async () => {
   });
 });
 
-
 describe('Icon Component Accessibility', () => {
   it('should have aria-hidden prop when no aria prop is present', async () => {
     const { container } = await render(Icon, {
@@ -25,12 +24,12 @@ describe('Icon Component Accessibility', () => {
         iconNode: airVent,
         size: 48,
         stroke: 'red',
-        absoluteStrokeWidth: true
+        absoluteStrokeWidth: true,
       },
     });
 
-      expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
-    });
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
 
   it('should not have aria-hidden prop when aria prop is present', async () => {
     const { container } = await render(Rocket, {

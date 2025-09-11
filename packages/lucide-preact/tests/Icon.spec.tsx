@@ -32,7 +32,6 @@ describe('Using Icon Component', () => {
   });
 });
 
-
 describe('Icon Component Accessibility', () => {
   it('should not have aria-hidden prop when aria prop is present', async () => {
     const { container } = render(

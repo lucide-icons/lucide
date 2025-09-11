@@ -14,7 +14,6 @@ import { LUCIDE_ICONS, LucideIconProviderInterface } from './lucide-icon.provide
 import { LucideIconConfig } from './lucide-icon.config';
 import { hasA11yProp } from 'src/utils/hasA11yProp';
 
-
 interface TypedChange<T> extends SimpleChange {
   previousValue: T;
   currentValue: T;
@@ -123,7 +122,9 @@ export class LucideAngularComponent implements OnChanges {
   replaceElement(img: LucideIconData): void {
     const childElements = this.elem.nativeElement.childNodes;
     const restAttributeMap: NamedNodeMap = this.elem.nativeElement.attributes;
-    const restAttributes = Object.fromEntries(Array.from(restAttributeMap).map(item => [item.name, item.value]));
+    const restAttributes = Object.fromEntries(
+      Array.from(restAttributeMap).map((item) => [item.name, item.value]),
+    );
 
     const hasChildren = childElements.length > 0;
     const attributes = {

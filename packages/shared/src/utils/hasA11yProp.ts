@@ -11,5 +11,5 @@ export const hasA11yProp = (props: Record<string, any>) => {
     }
   }
 
-  return false
+  return false;
 };

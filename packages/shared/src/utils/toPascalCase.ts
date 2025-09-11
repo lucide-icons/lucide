@@ -1,5 +1,5 @@
-import { CamelToPascal } from "../utility-types";
-import { toCamelCase } from "./toCamelCase";
+import { CamelToPascal } from '../utility-types';
+import { toCamelCase } from './toCamelCase';
 
 /**
  * Converts string to pascal case

@@ -1,5 +1,5 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { svelteTesting } from '@testing-library/svelte/vite'
+import { svelteTesting } from '@testing-library/svelte/vite';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig(({ mode }) => ({
@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => ({
     svelte({
       compilerOptions: { hmr: false },
     }),
-    svelteTesting()
+    svelteTesting(),
   ],
   resolve: {
     conditions: mode === 'test' ? ['browser'] : [],
