@@ -1,9 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
   "tags": [
+    "issue",
+    "fixed",
+    "resolved",
+    "testing",
     "debug",
     "code",
     "insect",
