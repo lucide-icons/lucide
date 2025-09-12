@@ -6,13 +6,19 @@
   ],
   "tags": [
     "action",
+    "workflow",
     "continuous integration",
+    "continuous delivery",
+    "continuous deployment",
     "ci",
+    "cd",
     "automation",
     "devops",
+    "build",
     "network",
     "node",
-    "connection"
+    "connection",
+    "connected"
   ],
   "categories": [
     "development"
