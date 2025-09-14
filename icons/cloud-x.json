@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samet404"
+  ],
+  "tags": [
+    "disconnect",
+    "offline",
+    "error",
+    "failure",
+    "unavailable"
+  ],
+  "categories": [
+    "connectivity",
+    "weather"
+  ]
+}
