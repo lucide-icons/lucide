@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "czanbaka"
+  ],
+  "tags": [
+    "snooze icon"
+  ],
+  "categories": [
+    "alarm",
+    "bell"
+  ]
+}
