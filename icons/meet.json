@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MarianoFranzese",
+    "danielbayley"
+  ],
+  "tags": [
+    "meet",
+    "direction"
+  ],
+  "categories": [
+    "navigation",
+    "arrows"
+  ]
+}
