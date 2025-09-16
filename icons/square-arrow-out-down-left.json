@@ -14,6 +14,11 @@
     "navigation"
   ],
   "aliases": [
-    "arrow-down-left-from-square"
+    {
+      "name": "arrow-down-left-from-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

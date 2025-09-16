@@ -1,13 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis"
+    "jamiemlaw"
   ],
   "tags": [
     "advertisement",
+    "announcement",
     "attention",
     "alert",
+    "loudspeaker",
+    "megaphone",
     "notification"
   ],
   "categories": [

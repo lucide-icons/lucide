@@ -296,7 +296,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ```svelte [Svelte 5]
 <script>
   import * as icons from '@lucide/svelte';
-  let { name } = $props();
+  let { name, ...props } = $props();
 
   const Icon = icons[name];
 </script>

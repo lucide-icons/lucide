@@ -31,6 +31,11 @@
     "development"
   ],
   "aliases": [
-    "more-horizontal"
+    {
+      "name": "more-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
