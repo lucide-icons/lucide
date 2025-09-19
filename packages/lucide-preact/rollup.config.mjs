@@ -8,17 +8,6 @@ const outputDir = 'dist';
 const inputs = [`src/lucide-preact.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir,
@@ -32,7 +21,7 @@ const bundles = [
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, preserveModules }) =>
     inputs.map((input) => ({
       input,
       plugins: plugins({ pkg, minify }),
@@ -44,7 +33,7 @@ const configs = bundles
               dir: `${outputDir}/${format}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}.js`,
             }),
         preserveModules,
         format,

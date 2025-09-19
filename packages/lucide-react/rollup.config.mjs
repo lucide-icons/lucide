@@ -11,17 +11,6 @@ const outputFileName = 'lucide-react';
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir: 'dist/umd',
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir: 'dist/umd',
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir: 'dist/cjs',
@@ -78,7 +67,7 @@ const configs = bundles
                 dir: outputDir,
               }
             : {
-                file: outputFile ?? `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
+                file: outputFile ?? `${outputDir}/${outputFileName}.js`,
               }),
           paths,
           entryFileNames,
