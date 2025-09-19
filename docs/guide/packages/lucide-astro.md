@@ -194,10 +194,10 @@ You can add accessibility attributes using aria-labels.
 
 ```jsx
 ---
-import { Camera } from '@lucide/astro';
+import { Check } from '@lucide/astro';
 ---
 
-<Camera aria-label="Camera icon" />
+<Check aria-label="Task completed" />
 ```
 
 For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

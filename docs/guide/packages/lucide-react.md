@@ -110,10 +110,10 @@ By default, we hide icons from screen readers using `aria-hidden="true"`.
 You can add accessibility attributes using aria-labels.
 
 ```jsx
-import { Camera } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const App = () => {
-  return <Camera aria-label="Camera icon" />;
+  return <Check aria-label="Task completed" />;
 };
 ```
 

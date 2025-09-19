@@ -168,7 +168,7 @@ By default, we hide icons from screen readers using `aria-hidden="true"`.
 You can add accessibility attributes using aria-labels.
 
 ```html
-<lucide-icon name="camera" aria-label="Camera icon"></lucide-icon>
+<lucide-icon name="check" aria-label="Task completed"></lucide-icon>
 ```
 
 For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

@@ -333,10 +333,10 @@ You can add accessibility attributes using aria-labels.
 
 ```svelte
 <script>
-  import { Camera } from '@lucide/svelte';
+  import { Check } from '@lucide/svelte';
 </script>
 
-<Camera aria-label="Camera icon" />
+<Check aria-label="Task completed" />
 ```
 
 For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

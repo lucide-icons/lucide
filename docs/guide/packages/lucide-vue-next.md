@@ -152,10 +152,10 @@ import { Camera } from 'lucide-vue-next';
 </script>
 
 <template>
-  <Camera
+  <Check
     color="red"
     :size="32"
-    aria-label="Camera icon"
+    aria-label="Task completed"
   />
 </template>
 ```
