@@ -148,7 +148,7 @@ You can add accessibility attributes using aria-labels.
 
 ```vue
 <script setup>
-import { Camera } from 'lucide-vue-next';
+import { Check } from 'lucide-vue-next';
 </script>
 
 <template>
