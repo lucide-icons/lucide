@@ -29,7 +29,12 @@ const props = defineProps<{
 
 const iconComponent = computed(() => {
   if (!props.name || !props.iconNode) return null;
-  return createLucideIcon(props.name, props.iconNode);
+  try {
+    return createLucideIcon(props.name, props.iconNode);
+  } catch (error) {
+    console.warn(`Icon ${props.name} not found, using fallback`);
+    return null;
+  }
 });
 
 const CalendarIcon = createLucideIcon('calendar', Calendar.iconNode);
@@ -61,7 +66,7 @@ const prettyName = props.name
 </script>
 
 <template>
-  <section class="showcase">
+  <section class="showcase" v-if="iconComponent">
     <h2 class="title">See this icon in action</h2>
     <div class="showcase-grid">
       <div class="showcase-item column">
