@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "csandman",
+    "domingasp"
+  ],
+  "tags": [
+    "pointer",
+    "mouse",
+    "cursor",
+    "off",
+    "disable",
+    "arrow",
+    "navigation",
+    "selection",
+    "select",
+    "click",
+    "no-click",
+    "interaction"
+  ],
+  "categories": [
+    "arrows",
+    "cursors"
+  ]
+}
