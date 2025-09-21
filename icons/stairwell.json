@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas"
+  ],
+  "tags": [
+    "staircase",
+    "steps",
+    "ladder",
+    "transition",
+    "access",
+    "structure",
+    "espiral",
+    "building",
+    "vertical",
+    "movement",
+    "floor",
+    "level"
+  ],
+  "categories": [
+    "home"
+  ]
+}
