@@ -17,7 +17,7 @@ Icons are a helpful tool to improve perception, but they aren't a replacement fo
 In most cases, it is probably a good idea to also provide a textual representation of your icon's
 function.
 
-![In short: Don’t rely on communicating the function of elements by icons alone. Do also provide a written description of the your interactive elements. For example: write out "On this page" on your on-page navigation element.](../../images/a11y/visible-labels.svg?raw=true)
+<!--@include: ../../images/a11y/visible-labels.svg -->
 
 ## Contrast
 
@@ -104,7 +104,7 @@ elements (badges, buttons, nav items etc.) only, _not_ the icons themselves.
 Do not provide an accessible label to icons when used on a button, as this label will be read out by
 screen readers, leading to nonsensical text.
 
-![](../../images/a11y/alttext-buttons.svg?raw=true)
+![](../../images/a11y/alttext-buttons.svg)
 
 ::: details Code examples
 
