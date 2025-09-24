@@ -1,14 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "jguddas"
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
+    "forward",
     "direction",
-    "north",
-    "step",
-    "out"
+    "north"
   ],
   "categories": [
     "arrows",
