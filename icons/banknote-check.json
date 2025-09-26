@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "mittalyashu",
+    "AnnaSasDev",
+    "joffx",
+    "colebemis",
+    "clapann"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "bill",
+    "funds",
+    "transaction",
+    "cash",
+    "finance",
+    "error",
+    "failed",
+    "rejected",
+    "canceled",
+    "declined",
+    "lost",
+    "delete",
+    "remove",
+    "done",
+    "todo",
+    "tick",
+    "complete",
+    "task"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
