@@ -9,13 +9,13 @@
     "docs:build": "pnpm run /^prebuild:.*/ && vitepress build",
     "docs:preview": "vitepress preview",
     "build:docs": "vitepress build",
-    "prebuild:iconNodes": "node ./scripts/writeIconNodes.mjs",
-    "prebuild:metaJson": "node ./scripts/writeIconMetaIndex.mjs",
-    "prebuild:releaseJson": "node ./scripts/writeReleaseMetadata.mjs",
-    "prebuild:categoriesJson": "node ./scripts/writeCategoriesMetadata.mjs",
-    "prebuild:relatedIcons": "node ./scripts/writeIconRelatedIcons.mjs",
-    "prebuild:iconDetails": "node ./scripts/writeIconDetails.mjs",
-    "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mjs",
+    "prebuild:iconNodes": "node --experimental-strip-types ./scripts/writeIconNodes.mjs",
+    "prebuild:metaJson": "node --experimental-strip-types ./scripts/writeIconMetaIndex.mjs",
+    "prebuild:releaseJson": "node --experimental-strip-types ./scripts/writeReleaseMetadata.mjs",
+    "prebuild:categoriesJson": "node --experimental-strip-types ./scripts/writeCategoriesMetadata.mjs",
+    "prebuild:relatedIcons": "node --experimental-strip-types ./scripts/writeIconRelatedIcons.mjs",
+    "prebuild:iconDetails": "node --experimental-strip-types ./scripts/writeIconDetails.mjs",
+    "postbuild:vercelJson": "node --experimental-strip-types ./scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "prebuild:api": "npx nitropack prepare",
     "build:api": "npx nitropack build",
@@ -28,12 +28,12 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
     "@types/semver": "^7.5.3",
-    "h3": "^1.8.0",
     "nitropack": "2.8.1",
-    "rollup-plugin-copy": "^3.4.0",
-    "vitepress": "^1.3.1"
+    "rollup-plugin-copy": "^3.5.0",
+    "vitepress": "^1.6.3",
+    "svg-path-commander": "^2.1.11"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.0.3",
@@ -57,6 +57,6 @@
     "sitemap": "^7.1.1",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.2.1",
-    "vue": "^3.5.13"
+    "vue": "^3.5.18"
   }
 }

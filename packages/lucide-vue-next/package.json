@@ -38,7 +38,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
@@ -54,7 +54,7 @@
     "@vue/test-utils": "2.4.5",
     "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
-    "vite": "^6.3.4",
+    "vite": "^6.3.6",
     "vitest": "^3.1.3",
     "vue": "^3.4.21"
   },

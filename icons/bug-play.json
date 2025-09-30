@@ -2,10 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
   "tags": [
+    "issue",
+    "testing",
     "debug",
+    "reproduce",
     "code",
     "insect"
   ],
