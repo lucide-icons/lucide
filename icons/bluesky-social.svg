@@ -9,11 +9,11 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M 11 12 C11 10 8.5 2 2 2" />
+  <path d="M 11 12 C11 10 9 2 2 2" />
   <path d="M 12 12 C2 14 2 22 8 22" />
   <path d="M 12 12 C22 14 22 22 16 22" />
   <path d="M 12 12 L 12 12" />
-  <path d="M 13 12 C13 10 16 2 22 2" />
+  <path d="M 13 12 C13 10 15 2 22 2" />
   <path d="M 16 22 C10 22 13 14 13 12" />
   <path d="M 2 2 C-4 2 -2.5 14.5 12 12" />
   <path d="M 22 2 C28 2 28 14.5 12 12" />
