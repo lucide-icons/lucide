@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "katarinasava"
+  ],
+  "tags": [
+    "shadow",
+    "effect",
+    "css",
+    "style",
+    "design",
+    "elevation",
+    "depth"
+  ],
+  "categories": [
+    "design",
+    "development",
+    "layout"
+  ]
+}

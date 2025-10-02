@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "katarinasava"
+  ],
+  "tags": [
+    "items",
+    "flex",
+    "justify",
+    "stretch",
+    "height",
+    "css",
+    "flexbox"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development"
+  ]
+}

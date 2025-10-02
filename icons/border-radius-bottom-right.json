@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "katarinasava"
+  ],
+  "tags": [
+    "border",
+    "radius",
+    "corner",
+    "round",
+    "rounded",
+    "style",
+    "design",
+    "css",
+    "bottom-right"
+  ],
+  "categories": [
+    "design",
+    "development",
+    "layout"
+  ]
+}

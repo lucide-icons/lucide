@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "katarinasava"
+  ],
+  "tags": [
+    "margin",
+    "spacing",
+    "layout",
+    "css",
+    "vertical",
+    "top",
+    "bottom",
+    "space"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "development"
+  ]
+}
