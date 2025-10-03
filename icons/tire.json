@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mefidahussain"
+  ],
+  "tags": [
+    "tire",
+    "circle",
+    "car"
+  ],
+  "categories": [
+    "circle",
+    "car",
+    "tire"
+  ]
+}
