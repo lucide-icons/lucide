@@ -20,6 +20,11 @@
     "science"
   ],
   "aliases": [
-    "test-tube-2"
+    {
+      "name": "test-tube-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
