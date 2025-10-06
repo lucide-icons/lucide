@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "tags": [
+    "hand"
+  ],
+  "categories": [
+    "cursors",
+    "design",
+    "layout"
+  ],
+  "aliases": [
+    {
+      "name": "grab",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

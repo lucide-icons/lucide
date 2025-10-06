@@ -37,6 +37,13 @@ export default defineConfig({
   },
   head: [
     [
+      'link',
+      {
+        rel: 'preconnect',
+        href: 'https://analytics.lucide.dev',
+      },
+    ],
+    [
       'script',
       {
         src: 'https://analytics.lucide.dev/js/script.js',
