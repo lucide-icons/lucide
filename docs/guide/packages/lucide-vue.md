@@ -1,6 +1,13 @@
 # Lucide Vue
 
-Implementation of the lucide icon library for Vue applications.
+Vue 2 components for Lucide icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
+
+**What you can accomplish:**
+- Use icons as Vue 2 components with Options API integration
+- Maintain legacy Vue 2 applications with modern icon components
+- Integrate with Vue 2's template system and component lifecycle
+- Build applications using Vue 2's familiar syntax and patterns
+- Bridge the gap while planning migration to Vue 3
 
 ::: danger
 This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
