@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "pulak"
+  ],
+  "tags": [
+    "taka",
+    "currency",
+    "money",
+    "bangladesh",
+    "finance",
+    "payment",
+    "symbol",
+    "bdt"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
