@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kriparajp1"
+  ],
+  "tags": [
+   "bird",
+    "chicken",
+    "egg ",
+    "cracked ",
+    "break ",
+    "shell "
+  ],
+  "categories": [
+   "food-beverage",
+    "animals"
+  ]
+}
