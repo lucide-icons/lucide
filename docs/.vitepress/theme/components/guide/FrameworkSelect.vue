@@ -1,0 +1,73 @@
+<script setup lang="tsx">
+import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue';
+import { guideSidebarTop } from '../../../sidebar';
+import { useData, useRouter } from 'vitepress';
+import Select from '../base/Select.vue';
+import { computed, ref, watch } from 'vue';
+import { route } from '~/.vitepress/data/iconNodes';
+
+const { page } = useData()
+const router = useRouter()
+
+const frameworks = [
+  { name: 'Vanilla', icon: '/framework-logos/js.svg', route: '/guide/lucide' },
+  { name: 'React', icon: '/framework-logos/react.svg', route: '/guide/react' },
+  { name: 'Vue', icon: '/framework-logos/vue.svg', route: '/guide/vue' },
+  { name: 'Svelte', icon: '/framework-logos/svelte.svg', route: '/guide/svelte' },
+  { name: 'Solid', icon: '/framework-logos/solid.svg', route: '/guide/solid' },
+  { name: 'Angular', icon: '/framework-logos/angular.svg', route: '/guide/angular' },
+  { name: 'Preact', icon: '/framework-logos/preact.svg', route: '/guide/preact' },
+  { name: 'React Native', icon: '/framework-logos/react-native.svg', route: '/guide/react-native' },
+  { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro' },
+]
+
+const selected = computed(() => {
+  const current = frameworks.find(({route}) => router.route.path.startsWith(route))
+  return current || frameworks[1]
+})
+
+function onSelectFramework(item: { name: string, icon: string, route: string }) {
+  if (item.route !== router.route.path) {
+    router.go(item.route)
+  }
+}
+</script>
+
+<template>
+  <VPSidebarGroup :items="guideSidebarTop" v-if="page?.relativePath?.startsWith?.('guide')"/>
+  <div class="framework-select" v-if="page?.relativePath?.startsWith?.('guide')">
+    <label for="framework-select">Framework</label>
+    <Select
+      id="framework-select"
+      :items="frameworks"
+      @update:model-value="onSelectFramework"
+      v-model="selected"
+    />
+  </div>
+</template>
+
+<style scoped>
+.framework-select {
+  font-size: 12px;
+  transition: border-color 0.5s, background-color 0.5s ease;
+  margin-bottom: 20px;
+  position: sticky;
+  top: -0.5px;
+  background-color: var(--vt-c-bg);
+  z-index: 10;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 10px;
+  margin-top: -10px;
+}
+
+label {
+  color: var(--vp-c-text-1);
+  padding: 4px 0;
+  line-height: 24px;
+  font-size: 14px;
+  transition: color 0.25s;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+</style>

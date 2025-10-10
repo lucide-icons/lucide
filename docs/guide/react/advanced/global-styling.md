@@ -1,6 +1,6 @@
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../.vitepress/theme/sandpackTheme.json'
+import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
 import globalIconCssExample from './examples/global-styling-css-example/files.ts'
 import globalAbsoluteStrokewidthExample from './examples/global-styling-absolute-strokewidth-example/files.ts'
 

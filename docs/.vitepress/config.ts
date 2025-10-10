@@ -29,6 +29,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPHomeHero\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/Hero.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },

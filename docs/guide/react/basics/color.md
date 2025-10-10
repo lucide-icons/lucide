@@ -1,6 +1,6 @@
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../.vitepress/theme/sandpackTheme.json'
+import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
 import buttonExampleFiles from './examples/button-example/files.ts'
 import iconColorExampleFiles from './examples/color-icon/files.ts'
 </script>

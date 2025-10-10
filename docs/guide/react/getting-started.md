@@ -1,6 +1,13 @@
-# Lucide React
+<script setup>
+import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
+import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
+import { reactSidebar } from '../../.vitepress/sidebar/react'
+</script>
 
-Implementation of the lucide icon library for react applications
+# Getting started
+
+This guide will help you get started with Lucide in your React project.
+Make sure you have a React environment set up. If you don't have one yet, you can create a new React project using Create React App, Vite, or any other React boilerplate of your choice.
 
 ## Installation
 
@@ -24,7 +31,7 @@ bun add lucide-react
 
 :::
 
-## How to use
+## Importing your first icon
 
 Lucide is built with ES Modules, so it's completely tree-shakable.
 
@@ -65,40 +72,8 @@ const App = () => {
 };
 ```
 
-## With Lucide lab or custom icons
+More examples and details how to use props, continue the guide:
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
-
-They can be used by using the `Icon` component.
-All props like regular lucide icons can be passed to adjust the icon appearance.
-
-### Using the `Icon` component
-
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
-
-```jsx
-import { Icon } from 'lucide-react';
-import { coconut } from '@lucide/lab';
-
-const App = () => (
-  <Icon iconNode={coconut} />
-);
-```
-
-## Dynamic Icon Component
-
-It is possible to create one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. This increases build time and the different modules it will create.
-
-`DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system with where icon names are stored in a database.
-
-For static use cases, it is recommended to import the icons directly.
-
-The same props can be passed to adjust the icon appearance. The `name` prop is required to load the correct icon.
-
-```jsx
-import { DynamicIcon } from 'lucide-react/dynamic';
-
-const App = () => (
-  <DynamicIcon name="camera" color="red" size={48} />
-);
-```
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in reactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid >

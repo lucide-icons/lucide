@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, shallowRef, onBeforeUnmount} from 'vue';
+import { ref, onMounted, shallowRef, onBeforeUnmount, watchEffect} from 'vue';
 import { data } from './HomeHeroIconsCard.data'
 import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
@@ -31,7 +31,7 @@ function insert() {
 
   items.value = [
     ...items.value,
-    ...newIcon
+    newIcon
   ]
 
   console.log('inserted', items.value.length);
@@ -68,6 +68,11 @@ function startInterval() {
     insert()
   }, 2000)
 }
+
+watchEffect(() => {
+  console.log(items.value);
+
+})
 
 // TODO: Try maybe something else for better pref performance
 onMounted(() => {
@@ -129,21 +134,22 @@ onBeforeUnmount(() => {
       <g v-for="(path, index) in paths" :key="index">
         <animateMotion
           :path="path"
-          :begin="`${(((index) + 1) % ITEM_COUNT) }s`"
+          :begin="`${(((index) + 1) % ITEM_COUNT) }s;this.DOMActivate`"
           dur="20s"
           calcMode="spline" keySplines="0.8 0.7 0.1 0.1"
           keyPoints="1;0"
           keyTimes="0;1"
           from="10"
+
         />
         <animate attributeName="opacity"
              values="0;0;0;1" dur="3s"
-              :begin="`${(((index) + 1) % ITEM_COUNT) }s`"
+              :begin="`${(((index) + 1) % ITEM_COUNT) }s;this.DOMActivate`"
         />
         <animate attributeName="opacity"
              values="0;1" dur="3s"
              start-offset="17s"
-              :begin="`${(((index) + 1) % ITEM_COUNT) }s`"
+              :begin="`${(((index) + 1) % ITEM_COUNT) }s;this.DOMActivate`"
         />
         <LucideIcon
           y="-16"
