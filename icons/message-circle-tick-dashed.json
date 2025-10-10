@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "aliyasirnac"
+  ],
+  "tags": [
+    "communication",
+    "verification",
+    "confirmation",
+    "success",
+    "status",
+    "check",
+    "approval",
+    "message",
+    "notification",
+    "symbol",
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble"
+  ],
+  "categories": [
+    "social"
+  ]
+}
