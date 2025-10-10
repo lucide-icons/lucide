@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "tags": [
+    "animal",
+    "bird",
+    "pet",
+    "toy",
+    "debug"
+  ],
+  "categories": [
+    "animals"
+  ]
+}
