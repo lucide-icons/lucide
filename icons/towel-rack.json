@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "tags": [
+    "flannel",
+    "bathroom",
+    "toiletries",
+    "sanitation",
+    "clean",
+    "fresh",
+    "dry",
+    "laundry",
+    "laundrette",
+    "hospitality",
+    "housekeeping",
+    "room service",
+    "spa break",
+    "health club",
+    "amenities",
+    "hanging"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}
