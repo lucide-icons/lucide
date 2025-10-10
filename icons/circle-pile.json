@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "nathan-de-pachtere"
+  ],
+  "tags": [
+    "off",
+    "zero",
+    "record",
+    "shape",
+    "circle-pile"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
