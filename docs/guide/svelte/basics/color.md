@@ -15,11 +15,13 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
+<!-- This one is faked, since codesandbox doesn't support svelte 5 yet -->
 <Sandpack
-  template="vite-vue"
+  template="vue"
   :theme="sandpackTheme"
   :customSetup='{
     dependencies: {
+      "@lucide/svelte": "latest",
       "lucide-vue-next": "latest"
     }
   }'
@@ -27,6 +29,7 @@ The color can be adjusted by passing the color prop to the element.
   :options="{
     editorHeight: 295,
     editorWidthPercentage: 60,
+    showOpenInCodeSandbox: false,
   }"
 />
 
@@ -36,17 +39,20 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
+<!-- This one is faked, since codesandbox doesn't support svelte 5 yet -->
 <Sandpack
-  template="vite-vue"
+  template="vue"
   :theme="sandpackTheme"
   :files="buttonExampleFiles"
   :customSetup='{
     dependencies: {
+      "@lucide/svelte": "latest",
       "lucide-vue-next": "latest"
     }
   }'
   :options="{
     editorHeight: 320,
     editorWidthPercentage: 60,
+    showOpenInCodeSandbox: false
   }"
 />

@@ -1,6 +1,7 @@
 import { DefaultTheme, UserConfig } from 'vitepress';
 import { reactSidebar } from './react';
 import { vueSidebar } from './vue';
+import { svelteSidebar } from './svelte';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar']
 
@@ -27,6 +28,7 @@ const sidebar: Sidebar = {
   'guide': [ ...reactSidebar ],
   'guide/react': reactSidebar,
   'guide/vue': vueSidebar,
+  'guide/svelte': svelteSidebar,
   'resources': [
     {
       text: 'Contributing',
