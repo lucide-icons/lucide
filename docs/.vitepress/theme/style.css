@@ -45,6 +45,10 @@
   --vp-c-text-4: rgba(235, 235, 245, 0.16);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 .VPNavBarTitle .logo {
   height: 36px;
   width: 36px;

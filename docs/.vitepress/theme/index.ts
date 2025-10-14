@@ -4,6 +4,7 @@ import './style.css';
 import { Theme } from 'vitepress';
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue';
 import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue';
+import HomeHeroAfter from './components/home/HomeHeroAfter.vue';
 import HomeHeroBefore from './components/home/HomeHeroBefore.vue';
 import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle';
 import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView';
@@ -18,6 +19,7 @@ const theme: Partial<Theme> = {
       'home-hero-before': () => h(HomeHeroBefore),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
+      'home-hero-actions-after': () => h(HomeHeroAfter),
     });
   },
   enhanceApp({ app }) {

@@ -1,279 +1,290 @@
 <script setup lang="ts">
-import { ref, onMounted, shallowRef, onBeforeUnmount, watchEffect} from 'vue';
+import { ref, onMounted, shallowRef, onBeforeUnmount, watchEffect, computed} from 'vue';
 import { data } from './HomeHeroIconsCard.data'
 import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
 import { random } from 'lodash-es'
 import FakeInput from '../base/FakeInput.vue'
+import { useScroll } from '@vueuse/core';
+import { motion, Variants } from "motion-v"
 
 const { go } = useRouter()
 const intervalTime = shallowRef()
 
-const ITEM_COUNT = 8;
+const { y } = useScroll(window)
 
-const getInitialItems = () => data.icons.slice(0, 20)
-const items = ref(getInitialItems())
-let id = items.value.length + 1
-
-function getRandomNewIcon() {
-  const randomIndex = random(0, 200)
-  const newRandomIcon = data.icons[randomIndex]
-
-  if (items.value.some((item) => item.name === newRandomIcon.name)) {
-    return getRandomNewIcon()
-  }
-
-  return newRandomIcon
-}
-
-function insert() {
-  const newIcon = getRandomNewIcon()
-
-  items.value = [
-    ...items.value,
-    newIcon
-  ]
-
-  console.log('inserted', items.value.length);
-}
-
-
-const CENTER = 360;
-
-const paths = ref(
-  Array.from({ length: ITEM_COUNT }).map((_, i) => {
-    {
-      const angleOffset = (i / ITEM_COUNT) * Math.PI * 2;
-      const cx = CENTER, cy = CENTER;
-      const turns = 0.5;
-      const steps = 600;
-      const a = 120;
-
-      const d = Array.from({ length: steps }, (_, s) => {
-        const t = angleOffset + (s / (steps - 1)) * (turns * Math.PI * 2);
-        const r = a * (t - angleOffset);
-        const x = cx + r * Math.sin(t);
-        const y = cy + r * Math.cos(t);
-        return `${s ? 'L' : 'M'}${x},${y}`;
-      }).join(' ');
-
-      return d;
-    }
-  })
-)
-
-
-function startInterval() {
-  intervalTime.value = setInterval(() => {
-    insert()
-  }, 2000)
-}
-
-watchEffect(() => {
-  console.log(items.value);
-
+const opacity = computed(() => {
+  if (y.value < 0) return 1
+  if (y.value > 300) return 0
+  return 1 - (y.value / 300)
 })
 
-// TODO: Try maybe something else for better pref performance
-onMounted(() => {
-  window.addEventListener('mousemove', startInterval, { once: true })
-})
+const draw: Variants = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i: number = 1) => {
+        const delay = i * 1
+        return {
+            pathLength: 1,
+            opacity: 1,
+            transition: {
+                pathLength: { delay, type: "spring", duration: 5, bounce: 0 },
+                opacity: { delay, duration: 0.1 },
+            },
+        }
+    },
+}
 
-onBeforeUnmount(() => {
-  clearInterval(intervalTime.value)
-})
 
 </script>
 
 <template>
-  <div class="card-wrapper">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 720 720" class="spiral" aria-hidden="true">
-      <defs>
-        <radialGradient id="grad">
-          <stop stop-color="#65F5F5" stop-opacity="0" offset="22%"></stop>
-          <stop stop-color="#65F5F5" stop-opacity="0.3" offset="85%"></stop>
-          <stop stop-color="#65F5F5" stop-opacity="0" offset="100%"></stop>
-        </radialGradient>
-        <filter id="iconShadow" width="120" height="120">
-          <feDropShadow
-            dx="-0.8"
-            dy="-0.8"
-            stdDeviation="0"
-            flood-color="pink"
-            flood-opacity="0.5"
-          />
-        </filter>
-        <filter id="logoShadow" width="400" height="400" y="-100" x="-100">
-          <feDropShadow
-          dx="0"
-          dy="0"
-          stdDeviation="40"
-          flood-color="#F5656599"
-          flood-opacity="0.8" />
-        </filter>
-      </defs>
-      <!-- <rect width="720" height="720" fill="url(#grad)"/> -->
-       <!-- <path d="M0 0h320v720H0z" fill="none" stroke="url(#grad)"/> -->
-      <mask id="mask1">
+  <div>
+    <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 48 48" fill="none" overflow="auto"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-background"
+      :style="{ opacity: opacity }">
+
+      <g class="svg-preview-grid-group" stroke-linecap="butt" stroke-width="0.1" stroke="#777"
+        mask="url(#svg-preview-bounding-box-mask)" stroke-opacity="0.3">
+        <!-- <rect class="svg-preview-grid-rect" width="23.9" height="23.9" x="0.05" y="0.05" rx="1"></rect> -->
         <path
-          v-for="(path, index) in paths"
-          :key="path"
-          fill="none"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke="white"
-          :d="path"
-        />
-      </mask>
-
-      <g mask="url(#mask1)">
-        <rect width="720" height="720" fill="url(#grad)"/>
+          stroke-dasharray="0 0.1 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0 0.15"
+          stroke-width="0.1"
+          d="M1 0.1v23.8M2 0.1v23.8M4 0.1v23.8M5 0.1v23.8M7 0.1v23.8M8 0.1v23.8M10 0.1v23.8M11 0.1v23.8M13 0.1v23.8M14 0.1v23.8M16 0.1v23.8M17 0.1v23.8M19 0.1v23.8M20 0.1v23.8M22 0.1v23.8M23 0.1v23.8M0.1 1h23.8M0.1 2h23.8M0.1 4h23.8M0.1 5h23.8M0.1 7h23.8M0.1 8h23.8M0.1 10h23.8M0.1 11h23.8M0.1 13h23.8M0.1 14h23.8M0.1 16h23.8M0.1 17h23.8M0.1 19h23.8M0.1 20h23.8M0.1 22h23.8M0.1 23h23.8">
+        </path>
+        <path
+          d="M3 0.1v23.8M6 0.1v23.8M9 0.1v23.8M12 0.1v23.8M15 0.1v23.8M18 0.1v23.8M21 0.1v23.8M0.1 3h23.8M0.1 6h23.8M0.1 9h23.8M0.1 12h23.8M0.1 15h23.8M0.1 18h23.8M0.1 21h23.8">
+        </path>
       </g>
 
-      <g v-for="(path, index) in paths" :key="index">
-        <animateMotion
-          :path="path"
-          :begin="`${(((index) + 1) % ITEM_COUNT) }s;this.DOMActivate`"
-          dur="20s"
-          calcMode="spline" keySplines="0.8 0.7 0.1 0.1"
-          keyPoints="1;0"
-          keyTimes="0;1"
-          from="10"
-
-        />
-        <animate attributeName="opacity"
-             values="0;0;0;1" dur="3s"
-              :begin="`${(((index) + 1) % ITEM_COUNT) }s;this.DOMActivate`"
-        />
-        <animate attributeName="opacity"
-             values="0;1" dur="3s"
-             start-offset="17s"
-              :begin="`${(((index) + 1) % ITEM_COUNT) }s;this.DOMActivate`"
-        />
-        <LucideIcon
-          y="-16"
-          x="-16"
-          size="32"
-          v-if="items[index]"
-          v-bind="items[index]"
-          filter="url(#f3)"
-        />
+      <g>
+        <defs xmlns="http://www.w3.org/2000/svg">
+          <pattern id="backdrop-pattern-:R4:" width=".1" height=".1" patternUnits="userSpaceOnUse"
+            patternTransform="rotate(45 50 50)">
+            <line stroke="red" stroke-width="0.1" y2="1"></line>
+            <line stroke="red" stroke-width="0.1" y2="1"></line>
+          </pattern>
+        </defs>
+        <g stroke-width="4">
+          <mask id="svg-preview-backdrop-mask-:R4:-0" maskUnits="userSpaceOnUse">
+            <path stroke="white"
+              d="M 14 12 C14 9.79086 12.2091 8 10 8 M 10 8 C7.79086 8 6 9.79086 6 12 M 6 12 C6 16.4183 9.58172 20 14 20 M 14 20 C18.4183 20 22 16.4183 22 12 M 22 12 C22 8.446 20.455 5.25285 18 3.05557">
+            </path>
+          </mask>
+          <path
+            d="M 10 12 C10 14.2091 11.7909 16 14 16 M 14 16 C16.2091 16 18 14.2091 18 12 M 18 12 C18 7.58172 14.4183 4 10 4 M 10 4 C5.58172 4 2 7.58172 2 12 M 2 12 C2 15.5841 3.57127 18.8012 6.06253 21"
+            stroke="url(#backdrop-pattern-:R4:)" stroke-width="4" stroke-opacity="0.75"
+            mask="url(#svg-preview-backdrop-mask-:R4:-0)"></path>
+        </g>
       </g>
-      <g filter="url(#logoShadow)">
-        <svg
-          width="200"
-          height="200"
-          x="260"
-          y="260"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-
-        >
-          <path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557" stroke="currentColor" />
-          <path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21" stroke="#F56565" />
-        </svg>
+      <motion.svg class="svg-preview-handles-group" stroke-width="0.12" stroke="#777" stroke-opacity="0.6" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 2, duration: 1 }">
+        <path d="M14 12 14 9.79086"></path>
+        <circle cy="9.79086" cx="14" r="0.25"></circle>
+        <path d="M10 8 12.2091 8"></path>
+        <circle cy="8" cx="12.2091" r="0.25"></circle>
+        <path d="M10 8 7.79086 8"></path>
+        <circle cy="8" cx="7.79086" r="0.25"></circle>
+        <path d="M6 12 6 9.79086"></path>
+        <circle cy="9.79086" cx="6" r="0.25"></circle>
+        <path d="M6 12 6 16.4183"></path>
+        <circle cy="16.4183" cx="6" r="0.25"></circle>
+        <path d="M14 20 9.58172 20"></path>
+        <circle cy="20" cx="9.58172" r="0.25"></circle>
+        <path d="M14 20 18.4183 20"></path>
+        <circle cy="20" cx="18.4183" r="0.25"></circle>
+        <path d="M22 12 22 16.4183"></path>
+        <circle cy="16.4183" cx="22" r="0.25"></circle>
+        <path d="M22 12 22 8.446"></path>
+        <circle cy="8.446" cx="22" r="0.25"></circle>
+        <path d="M18 3.05557 20.455 5.25285"></path>
+        <circle cy="5.25285" cx="20.455" r="0.25"></circle>
+        <path d="M10 12 10 14.2091"></path>
+        <circle cy="14.2091" cx="10" r="0.25"></circle>
+        <path d="M14 16 11.7909 16"></path>
+        <circle cy="16" cx="11.7909" r="0.25"></circle>
+        <path d="M14 16 16.2091 16"></path>
+        <circle cy="16" cx="16.2091" r="0.25"></circle>
+        <path d="M18 12 18 14.2091"></path>
+        <circle cy="14.2091" cx="18" r="0.25"></circle>
+        <path d="M18 12 18 7.58172"></path>
+        <circle cy="7.58172" cx="18" r="0.25"></circle>
+        <path d="M10 4 14.4183 4"></path>
+        <circle cy="4" cx="14.4183" r="0.25"></circle>
+        <path d="M10 4 5.58172 4"></path>
+        <circle cy="4" cx="5.58172" r="0.25"></circle>
+        <path d="M2 12 2 7.58172"></path>
+        <circle cy="7.58172" cx="2" r="0.25"></circle>
+        <path d="M2 12 2 15.5841"></path>
+        <circle cy="15.5841" cx="2" r="0.25"></circle>
+        <path d="M6.06253 21 3.57127 18.8012"></path>
+        <circle cy="18.8012" cx="3.57127" r="0.25"></circle>
+      </motion.svg>
+      <g class="svg-preview-colored-path-group" opacity="0.7">
+        <!-- <path d="M 14 12 C14 9.79086 12.2091 8 10 8" stroke="##dfdfd6"></path>
+        <path d="M 10 8 C7.79086 8 6 9.79086 6 12" stroke="##dfdfd6"></path>
+        <path d="M 6 12 C6 16.4183 9.58172 20 14 20" stroke="##dfdfd6"></path>
+        <path d="M 14 20 C18.4183 20 22 16.4183 22 12" stroke="##dfdfd6"></path>
+        <path d="M 22 12 C22 8.446 20.455 5.25285 18 3.05557" stroke="##dfdfd6"></path>
+        <path d="M 10 12 C10 14.2091 11.7909 16 14 16" stroke="##dfdfd6"></path>
+        <path d="M 14 16 C16.2091 16 18 14.2091 18 12" stroke="##dfdfd6"></path>
+        <path d="M 18 12 C18 7.58172 14.4183 4 10 4" stroke="##dfdfd6"></path>
+        <path d="M 10 4 C5.58172 4 2 7.58172 2 12" stroke="##dfdfd6"></path>
+        <path d="M 2 12 C2 15.5841 3.57127 18.8012 6.06253 21" stroke="##dfdfd6"></path> -->
+        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557" stroke="#fff" :custom="8" animate="visible" initial="hidden"
+                :variants="draw"/>
+        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21" stroke="#F56565" :custom="8" animate="visible" initial="hidden"
+                :variants="draw" />
       </g>
-
-    </svg>
+      <g class="svg-preview-radii-group" stroke-width="0.12" stroke-dasharray="0 0.25 0.25" stroke="#777"
+        stroke-opacity="0.3"></g>
+      <g class="svg-preview-control-path-marker-mask-group" stroke-width="1" stroke="#000">
+        <mask id="svg-preview-control-path-marker-mask-0" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M14 12h.01"></path>
+          <path d="M10 8h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-1" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M10 8h.01"></path>
+          <path d="M6 12h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-2" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M6 12h.01"></path>
+          <path d="M14 20h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-3" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M14 20h.01"></path>
+          <path d="M22 12h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-4" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M22 12h.01"></path>
+          <path d="M18 3.05557h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-5" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M10 12h.01"></path>
+          <path d="M14 16h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-6" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M14 16h.01"></path>
+          <path d="M18 12h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-7" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M18 12h.01"></path>
+          <path d="M10 4h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-8" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M10 4h.01"></path>
+          <path d="M2 12h.01"></path>
+        </mask>
+        <mask id="svg-preview-control-path-marker-mask-9" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
+          <path d="M2 12h.01"></path>
+          <path d="M6.06253 21h.01"></path>
+        </mask>
+      </g>
+      <g class="svg-preview-control-path-group" stroke="#fff" stroke-width="0.125">
+        <path mask="url(#svg-preview-control-path-marker-mask-0)" d="M 14 12 C14 9.79086 12.2091 8 10 8"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-1)" d="M 10 8 C7.79086 8 6 9.79086 6 12"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-2)" d="M 6 12 C6 16.4183 9.58172 20 14 20"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-3)" d="M 14 20 C18.4183 20 22 16.4183 22 12"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-4)" d="M 22 12 C22 8.446 20.455 5.25285 18 3.05557">
+        </path>
+        <path mask="url(#svg-preview-control-path-marker-mask-5)" d="M 10 12 C10 14.2091 11.7909 16 14 16"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-6)" d="M 14 16 C16.2091 16 18 14.2091 18 12"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-7)" d="M 18 12 C18 7.58172 14.4183 4 10 4"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-8)" d="M 10 4 C5.58172 4 2 7.58172 2 12"></path>
+        <path mask="url(#svg-preview-control-path-marker-mask-9)" d="M 2 12 C2 15.5841 3.57127 18.8012 6.06253 21">
+        </path>
+      </g>
+      <g class="svg-preview-control-path-marker-group" stroke="#fff" stroke-width="0.125">
+        <path
+          d="M14 12h.01M10 8h.01M10 8h.01M6 12h.01M6 12h.01M14 20h.01M14 20h.01M22 12h.01M22 12h.01M18 3.05557h.01M10 12h.01M14 16h.01M14 16h.01M18 12h.01M18 12h.01M10 4h.01M10 4h.01M2 12h.01M2 12h.01M6.06253 21h.01">
+        </path>
+        <circle cx="14" cy="12" r="0.5"></circle>
+        <circle cx="18" cy="3.05557" r="0.5"></circle>
+        <circle cx="10" cy="12" r="0.5"></circle>
+        <circle cx="6.06253" cy="21" r="0.5"></circle>
+      </g>
+      <g class="svg-preview-handles-group" stroke-width="0.12" stroke="#FFF" stroke-opacity="0.3">
+        <path d="M14 12 14 9.79086"></path>
+        <circle cy="9.79086" cx="14" r="0.25"></circle>
+        <path d="M10 8 12.2091 8"></path>
+        <circle cy="8" cx="12.2091" r="0.25"></circle>
+        <path d="M10 8 7.79086 8"></path>
+        <circle cy="8" cx="7.79086" r="0.25"></circle>
+        <path d="M6 12 6 9.79086"></path>
+        <circle cy="9.79086" cx="6" r="0.25"></circle>
+        <path d="M6 12 6 16.4183"></path>
+        <circle cy="16.4183" cx="6" r="0.25"></circle>
+        <path d="M14 20 9.58172 20"></path>
+        <circle cy="20" cx="9.58172" r="0.25"></circle>
+        <path d="M14 20 18.4183 20"></path>
+        <circle cy="20" cx="18.4183" r="0.25"></circle>
+        <path d="M22 12 22 16.4183"></path>
+        <circle cy="16.4183" cx="22" r="0.25"></circle>
+        <path d="M22 12 22 8.446"></path>
+        <circle cy="8.446" cx="22" r="0.25"></circle>
+        <path d="M18 3.05557 20.455 5.25285"></path>
+        <circle cy="5.25285" cx="20.455" r="0.25"></circle>
+        <path d="M10 12 10 14.2091"></path>
+        <circle cy="14.2091" cx="10" r="0.25"></circle>
+        <path d="M14 16 11.7909 16"></path>
+        <circle cy="16" cx="11.7909" r="0.25"></circle>
+        <path d="M14 16 16.2091 16"></path>
+        <circle cy="16" cx="16.2091" r="0.25"></circle>
+        <path d="M18 12 18 14.2091"></path>
+        <circle cy="14.2091" cx="18" r="0.25"></circle>
+        <path d="M18 12 18 7.58172"></path>
+        <circle cy="7.58172" cx="18" r="0.25"></circle>
+        <path d="M10 4 14.4183 4"></path>
+        <circle cy="4" cx="14.4183" r="0.25"></circle>
+        <path d="M10 4 5.58172 4"></path>
+        <circle cy="4" cx="5.58172" r="0.25"></circle>
+        <path d="M2 12 2 7.58172"></path>
+        <circle cy="7.58172" cx="2" r="0.25"></circle>
+        <path d="M2 12 2 15.5841"></path>
+        <circle cy="15.5841" cx="2" r="0.25"></circle>
+        <path d="M6.06253 21 3.57127 18.8012"></path>
+        <circle cy="18.8012" cx="3.57127" r="0.25"></circle>
+      </g>
+    </motion.svg>
   </div>
-
 </template>
 
 <style scoped>
-.spiral {
-  width: 800px;
-  height: 640px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -180px;
-  left: -140px;
-
-}
-.card-wrapper {
-  margin-left: auto;
-  margin-bottom: auto;
-  position: relative;
-  top:-60px;
-
-  /* margin-top: 48px; */
-}
-.icons-card {
-  background: var(--vp-c-bg-alt);
-  padding: 24px;
-  border-radius: 8px;
-  width: 100%;
-  height:100%;
-  max-height: 220px;
-  max-width: 560px;
-  margin: 0 auto;
-  position: relative;
+.hero-background {
+  transform: rotateX(-51deg) rotateZ(-43deg);
+  transform-style: preserve-3d;
+  position: fixed;
+  top: -240px;
+  right: -480px;
+  width: 120vw;
+  height: 120vh;
 }
 
-.card-grid {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(36px, 1fr));
-  width: 100%;
-  height:100%;
-  max-height: 168px;
-  max-width: 512px;
-  overflow: hidden;
-  position: relative;
-}
-
-.list-enter-active {
-  transition: all 0.5s cubic-bezier(.85,.85,.25,1.1);
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: scale(0.01);
-}
-
-.list-leave-active {
-  position: absolute;
-  opacity: 0;
-  display: none;
-}
+@media screen and (prefers-color-scheme: light) {
+    .svg-preview-grid-rect { fill: none }
+  }
+  @media screen and (prefers-color-scheme: dark) {
+    .svg-preview-grid-rect { fill: none }
+    .svg
+    .svg-preview-grid-group,
+    .svg-preview-radii-group,
+    .svg-preview-shadow-mask-group,
+    .svg-preview-shadow-group {
+      stroke: #fff;
+    }
+  }
 
 .search-box {
-  position: absolute;
+  /* width: calc(100vw - 272px); */
   width: 100%;
-  left: 0;
-  top: -64px;
+  margin-top: 24px;
 }
-
-.random-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 960px) {
-  .search-box {
-    top: unset;
-    bottom: -24px;
-    left: -24px;
-
-    box-shadow: var(--vp-shadow-3);
-    background: var(--vp-c-bg);
-  }
-
-  .dark .search-box {
-    background: var(--vp-c-bg-soft);
-  }
-  .card-wrapper {
-    margin-top: 8px;
-  }
-}
-
 </style>

@@ -28,12 +28,12 @@ export default defineConfig({
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
           ),
         },
-        {
-          find: /^.*\/VPHomeHero\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/overrides/Hero.vue', import.meta.url),
-          ),
-        },
+        // {
+        //   find: /^.*\/VPHomeHero\.vue$/,
+        //   replacement: fileURLToPath(
+        //     new URL('./theme/components/overrides/Hero.vue', import.meta.url),
+        //   ),
+        // },
         {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),

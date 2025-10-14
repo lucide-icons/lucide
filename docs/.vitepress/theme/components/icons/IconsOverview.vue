@@ -17,11 +17,11 @@ const ICON_GRID_GAP = 8;
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
-  
+
   const itemsPerRow = columnSize.value || 10;
   const visibleRows = Math.ceil(window.innerHeight / (ICON_SIZE + ICON_GRID_GAP));
 
-  return Math.min(itemsPerRow * (visibleRows + 2), 200); 
+  return Math.min(itemsPerRow * (visibleRows + 2), 200);
 });
 
 const props = defineProps<{
@@ -169,6 +169,7 @@ function handleCloseDrawer() {
 
 .input-wrapper {
   width: 100%;
+  view-transition-name: icons-search-box;
 }
 
 .overview-container {
