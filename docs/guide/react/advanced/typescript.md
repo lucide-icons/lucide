@@ -19,7 +19,7 @@ interface LucideProps {
 ### Using `LucideProps`
 You can use the `LucideProps` interface to type your custom icon components or when you need to work with icon props.
 
-```ts
+```tsx
 import { type LucideProps } from 'lucide-react';
 import { Camera } from 'lucide-react';
 
@@ -42,7 +42,7 @@ type LucideIcon = React.FC<LucideProps>;
 
 You can use the `LucideIcon` type when you need to work with icon components directly.
 
-```ts
+```tsx
 import { type LucideIcon, Camera } from 'lucide-react';
 
 interface ButtonProps {
@@ -73,7 +73,7 @@ type IconNode = [string, { [key: string]: string | number | boolean }][];
 ### Using `IconNode`
 You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
 
-```ts
+```tsx
 import { type IconNode, Icon } from 'lucide-react';
 
 const customIcon: IconNode = [

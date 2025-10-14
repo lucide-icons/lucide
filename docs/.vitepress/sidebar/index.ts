@@ -2,6 +2,7 @@ import { DefaultTheme, UserConfig } from 'vitepress';
 import { reactSidebar } from './react';
 import { vueSidebar } from './vue';
 import { svelteSidebar } from './svelte';
+import { lucideSidebar } from './lucide';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar']
 
@@ -25,13 +26,17 @@ export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
 ]
 
 const sidebar: Sidebar = {
-  'guide': [ ...reactSidebar ],
-  'guide/react': reactSidebar,
-  'guide/vue': vueSidebar,
-  'guide/svelte': svelteSidebar,
-  'resources': [
+  '/guide': [{ text: '', link: '/' }],
+  '/guide/lucide': lucideSidebar,
+  '/guide/react': reactSidebar,
+  '/guide/vue': vueSidebar,
+  '/guide/svelte': svelteSidebar,
+  '/resources': [
     {
-      text: 'Contributing',
+      text: "Community",
+    },
+    {
+      text: 'Designing icons',
       items: [
         {
           text: 'Icon Design Principles',

@@ -12,6 +12,7 @@ defineProps<{
   <VPLink
     class="overview-link"
     :href="href"
+    :aria-label="`${title} - ${desc}`"
   >
     <span class="title">
       {{ title }}

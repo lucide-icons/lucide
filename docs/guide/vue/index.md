@@ -1,36 +1,42 @@
 ---
-title: What is Lucide?
+title: Overview
 nextPage:
-  - comparison
-  - installation
+  - getting-started
 ---
 
-# What is Lucide?
+<script setup>
+import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
+import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
+import { vueSidebar } from '../../.vitepress/sidebar/vue'
+</script>
 
-Lucide is an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official [packages](/packages) to make it easier to use these icons in your project.
+<img src="/package-logos/dark/lucide-vue.svg" alt="Lucide icon library for Vue applications." width="540" style="margin-bottom: 48px;"/>
 
-## Available Icons
+# Lucide for Vue
 
-Lucide contains icons with different variants and states, allowing users to choose the most suitable icon for their needs. And if a desired icon isn't available yet, users can open a design request, and the Lucide community contributors will help provide new icons. With more icons to choose from, users have more options to work with in their projects.
+Lucide provides a Vue icon component library that makes it easy to integrate icons into your Vue applications.
+Each icon is available as a standalone Vue component, allowing for seamless integration and customization.
 
-### Complete Set of Icons
+List of features:
+- **Easy to Use**: Import icons as Vue components and use them directly in your Vue components with JSX.
+- **Customizable**: Adjust size, color, and other properties via props.
+- **Tree-shakable**: Only the icons you use are included in your final bundle
+- **TypeScript Support**: Fully typed components for better developer experience.
 
-As new applications with specific features arise, Lucide aims to provide a complete set of icons for every project. The community follows a set of design rules when designing new icons. These rules maintain standards for the icons, such as recognizability, consistency in style, and readability at all sizes. While creativity is valued in new icons, recognizable design conventions are important to ensure that the icons are easily identifiable by users.
+## Overview
 
-## Code Optimization
+<OverviewLink href="/guide/vue/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your Vue project."/>
 
-In addition to design, code is also important. Assets like icons can significantly increase bandwidth usage in web projects. With the growing internet, Lucide has a responsibility to keep their assets as small as possible. To achieve this, Lucide uses SVG compression and specific code architecture for tree-shaking abilities. After tree-shaking, you only ship the icons you used, which helps to keep software distribution size to a minimum.
+### Basics
+{{''}}
 
-## Accessibility
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in vueSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid >
 
-Icons are pictures that show what something means without using words. They can be very helpful because they can quickly give information.
+### Advanced
+{{''}}
 
-However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](./advanced/accessibility.md).
-
-## Official Packages
-
-Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](https://lucide.dev/guide/packages/lucide), [React](https://lucide.dev/guide/packages/lucide-react), [React Native](https://lucide.dev/guide/packages/lucide-react-native), [Vue](https://lucide.dev/guide/packages/lucide-vue), [Vue 3](https://lucide.dev/guide/packages/lucide-vue-next), [Svelte](https://lucide.dev/guide/packages/lucide-svelte), [Preact](https://lucide.dev/guide/packages/lucide-preact), [Solid](https://lucide.dev/guide/packages/lucide-solid), [Angular](https://lucide.dev/guide/packages/lucide-angular), [Astro](https://lucide.dev/guide/packages/lucide-astro), and [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs).
-
-## Community
-
-If you have any questions about Lucide, feel free to reach out to the community. You can find them on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in vueSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid >

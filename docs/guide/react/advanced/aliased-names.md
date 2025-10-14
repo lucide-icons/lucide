@@ -24,20 +24,15 @@ This can be done by creating a custom module declaration file to override the lu
 ```json [.vscode/settings.json]
 {
   "typescript.preferences.autoImportFileExcludePatterns": [
-    "lucide-react", // or
-    "lucide-preact", // or
-    "lucide-react-native", // or
-    "lucide-vue-next",
+    "lucide-react",
   ]
 }
 ```
 
 ### Create a custom module declaration file
 
-Only available for `lucide-react`, `lucide-preact`, `lucide-react-native`, `lucide-vue-next` package.
+Only available for `lucide-react` package.
 This will enable you to choose the import name style you want to use in your project.
-
-::: code-group
 
 ```ts [React]
 declare module "lucide-react" {
@@ -49,45 +44,13 @@ declare module "lucide-react" {
 }
 ```
 
-```ts [Vue]
-declare module "lucide-vue-next" {
-  // Prefixed import names
-  export * from "lucide-vue-next/dist/lucide-vue-next.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-vue-next/dist/lucide-vue-next.suffixed";
-}
-```
-
-```ts [Preact]
-declare module "lucide-preact" {
-  // Prefixed import names
-  export * from "lucide-preact/dist/lucide-preact.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-preact/dist/lucide-preact.suffixed";
-}
-```
-
-```ts [React Native]
-declare module "lucide-react-native" {
-  // Prefixed import names
-  export * from "lucide-react-native/dist/lucide-react-native.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-react-native/dist/lucide-react-native.suffixed";
-}
-```
-
-:::
-
 Place this in your project root or in a folder where your tsconfig.json is located, or locate it in your defined type directory.
-Easiest way is to create a `@types` folder in your project root and name the file `[package-name].d.ts`.
+Easiest way is to create a `@types` folder in your project root and name the file `lucide-react.d.ts`.
 
 ### Import name styles
 
 | Import Style  | Available imports           | Declaration file import |
 | ------------- | --------------------------- | ----------------------- |
 | Default       | Home, HomeIcon, LucideHome  |                         |
-| Prefixed      | LucideHome                  | [package].prefixed      |
-| Suffixed      | HomeIcon                    | [package].suffixed      |
+| Prefixed      | LucideHome                  | lucide-react.prefixed   |
+| Suffixed      | HomeIcon                    | lucide-react.suffixed   |

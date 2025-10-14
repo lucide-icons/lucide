@@ -40,7 +40,7 @@ export const reactSidebar = [
         {
           text: 'Typescript',
           link: '/guide/react/advanced/typescript',
-          desc: 'Typescript support in lucide-react',
+          desc: 'All exported types and how to use them',
         },
         {
           text: 'Accessibility',
@@ -57,11 +57,11 @@ export const reactSidebar = [
           link: '/guide/react/advanced/with-lucide-lab',
           desc: 'Using lucide-lab with lucide-react',
         },
-        {
-          text: 'Animations',
-          link: '/guide/react/advanced/animations',
-          desc: 'Add animations to your icons',
-        },
+        // {
+        //   text: 'Animations',
+        //   link: '/guide/react/advanced/animations',
+        //   desc: 'Add animations to your icons',
+        // },
         {
           text: 'Filled icons',
           link: '/guide/react/advanced/filled-icons',
@@ -90,50 +90,5 @@ export const reactSidebar = [
         },
       ],
     },
-    // {
-    //   text: 'Packages',
-    //   items: [
-    //     {
-    //       text: 'Lucide',
-    //       link: '/guide/packages/lucide',
-    //     },
-    //     {
-    //       text: 'Lucide React',
-    //       link: '/guide/packages/lucide-react',
-    //     },
-    //     {
-    //       text: 'Lucide Vue',
-    //       link: '/guide/packages/lucide-vue',
-    //     },
-    //     {
-    //       text: 'Lucide Svelte',
-    //       link: '/guide/packages/lucide-svelte',
-    //     },
-    //     {
-    //       text: 'Lucide Solid',
-    //       link: '/guide/packages/lucide-solid',
-    //     },
-    //     {
-    //       text: 'Lucide React Native',
-    //       link: '/guide/packages/lucide-react-native',
-    //     },
-    //     {
-    //       text: 'Lucide Angular',
-    //       link: '/guide/packages/lucide-angular',
-    //     },
-    //     {
-    //       text: 'Lucide Preact',
-    //       link: '/guide/packages/lucide-preact',
-    //     },
-    //     {
-    //       text: 'Lucide Astro',
-    //       link: '/guide/packages/lucide-astro',
-    //     },
-    //     {
-    //       text: 'Lucide Static',
-    //       link: '/guide/packages/lucide-static',
-    //     },
-    //   ],
-    // },
   ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];
 

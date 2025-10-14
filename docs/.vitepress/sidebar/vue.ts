@@ -1,100 +1,92 @@
 import { DefaultTheme } from "vitepress";
 
-export const vueSidebar: DefaultTheme.SidebarItem[] = [
+export const vueSidebar = [
+    {
+      items: [
+        {
+          text: 'Overview',
+          link: '/guide/vue/',
+        },
+        {
+          text: 'Getting started',
+          link: '/guide/vue/getting-started',
+        },
+      ],
+    },
     {
       text: 'Basics',
       items: [
         {
           text: 'Color',
+          desc: 'Adjust the color of your icons',
           link: '/guide/vue/basics/color',
         },
         {
           text: 'Sizing',
+          desc: 'Adjust the size of your icons',
           link: '/guide/vue/basics/sizing',
         },
         {
           text: 'Stroke width',
+          desc: 'Adjust the stroke width of your icons',
           link: '/guide/vue/basics/stroke-width',
         },
       ],
     },
-    // TODO: Add this section
     {
       text: 'Advanced',
       items: [
         {
+          text: 'Typescript',
+          link: '/guide/vue/advanced/typescript',
+          desc: 'All exported types and how to use them',
+        },
+        {
           text: 'Accessibility',
           link: '/guide/vue/advanced/accessibility',
+          desc: 'Making your icons accessible',
         },
         {
           text: 'Global styling',
           link: '/guide/vue/advanced/global-styling',
+          desc: 'Apply global styles to all icons',
         },
-        // {
-        //   text: 'Animations',
-        // },
+        {
+          text: 'With lucide lab',
+          link: '/guide/vue/advanced/with-lucide-lab',
+          desc: 'Using lucide-lab with @lucide/vue',
+        },
+        {
+          text: 'Animations',
+          link: '/guide/vue/advanced/animations',
+          desc: 'Add animations to your icons',
+        },
         {
           text: 'Filled icons',
           link: '/guide/vue/advanced/filled-icons',
+          desc: 'Using filled icons in @lucide/vue',
         },
         {
           text: 'Aliased Names',
           link: '/guide/vue/advanced/aliased-names',
+          desc: 'Using aliased icon names',
         },
-        // {
-        //   text: 'Combining icons',
-        // },
-        // {
-        //   text: 'Dynamic imports'
-        // },
-        // {
-        //   text: 'Auto importing'
-        // },
+
+        {
+          text: 'Combining icons',
+          link: '/guide/vue/advanced/combining-icons',
+          desc: 'Combine multiple icons into one',
+        },
+        {
+          text: 'Dynamic imports',
+          link: '/guide/vue/advanced/dynamic-imports',
+          desc: 'Dynamically import icons as needed',
+        },
+        {
+          text: 'VSCode',
+          link: '/guide/vue/advanced/vscode',
+          desc: 'Configure VSCode for @lucide/vue',
+        },
       ],
     },
-    // {
-    //   text: 'Packages',
-    //   items: [
-    //     {
-    //       text: 'Lucide',
-    //       link: '/guide/packages/lucide',
-    //     },
-    //     {
-    //       text: 'Lucide React',
-    //       link: '/guide/packages/lucide-vue',
-    //     },
-    //     {
-    //       text: 'Lucide Vue',
-    //       link: '/guide/packages/lucide-vue',
-    //     },
-    //     {
-    //       text: 'Lucide Svelte',
-    //       link: '/guide/packages/lucide-svelte',
-    //     },
-    //     {
-    //       text: 'Lucide Solid',
-    //       link: '/guide/packages/lucide-solid',
-    //     },
-    //     {
-    //       text: 'Lucide React Native',
-    //       link: '/guide/packages/lucide-vue-native',
-    //     },
-    //     {
-    //       text: 'Lucide Angular',
-    //       link: '/guide/packages/lucide-angular',
-    //     },
-    //     {
-    //       text: 'Lucide Pvue',
-    //       link: '/guide/packages/lucide-pvue',
-    //     },
-    //     {
-    //       text: 'Lucide Astro',
-    //       link: '/guide/packages/lucide-astro',
-    //     },
-    //     {
-    //       text: 'Lucide Static',
-    //       link: '/guide/packages/lucide-static',
-    //     },
-    //   ],
-    // },
-  ]
+  ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

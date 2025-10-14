@@ -1,10 +1,11 @@
 <script setup lang="tsx">
 import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue';
-import { guideSidebarTop } from '../../../sidebar';
+import sidebar, { guideSidebarTop } from '../../../sidebar';
 import { useData, useRouter } from 'vitepress';
 import Select from '../base/Select.vue';
 import { computed, ref, watch } from 'vue';
 import { route } from '~/.vitepress/data/iconNodes';
+import { useLocalStorage } from '@vueuse/core';
 
 const { page } = useData()
 const router = useRouter()
@@ -21,12 +22,15 @@ const frameworks = [
   { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro' },
 ]
 
+const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1])
+
 const selected = computed(() => {
   const current = frameworks.find(({route}) => router.route.path.startsWith(route))
-  return current || frameworks[1]
+  return current || fallbackFramework.value
 })
 
 function onSelectFramework(item: { name: string, icon: string, route: string }) {
+  fallbackFramework.value = item
   if (item.route !== router.route.path) {
     router.go(item.route)
   }
@@ -44,13 +48,18 @@ function onSelectFramework(item: { name: string, icon: string, route: string }) 
       v-model="selected"
     />
   </div>
+
+  <VPSidebarGroup
+    v-if="page?.relativePath?.startsWith?.('guide') && !page?.relativePath?.startsWith?.(selected.route.substring(1))"
+    :items="sidebar[selected.route]"
+  />
 </template>
 
 <style scoped>
 .framework-select {
   font-size: 12px;
   transition: border-color 0.5s, background-color 0.5s ease;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: sticky;
   top: -0.5px;
   background-color: var(--vt-c-bg);
