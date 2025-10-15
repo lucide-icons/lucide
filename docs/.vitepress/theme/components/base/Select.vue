@@ -72,8 +72,10 @@ const selected = defineModel<{ name: string, icon: string }>()
   position: relative;
 }
 
+
+
 .select-button {
-  background: var(--vp-c-bg-soft);
+  background: var(--vp-sidebar-input);
   border-radius: 8px;
   color: var(--vp-c-text-1);
   padding: 7px 14px;

@@ -62,7 +62,6 @@ function onSelectFramework(item: { name: string, icon: string, route: string }) 
   margin-bottom: 10px;
   position: sticky;
   top: -0.5px;
-  background-color: var(--vt-c-bg);
   z-index: 10;
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 10px;

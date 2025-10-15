@@ -7,6 +7,7 @@ import FakeInput from '../base/FakeInput.vue'
 // import { useScroll } from '@vueuse/core';
 import { motion, Variants, useScroll, useSpring, useTransform } from "motion-v"
 import LucideIcon from '../base/LucideIcon.vue'
+import { shrink } from '~/.vitepress/data/iconNodes';
 
 const MotionLucideIcon = motion.create(LucideIcon)
 
@@ -21,6 +22,15 @@ const icons = ref(data.icons.slice(0, 64).map((icon, index) => {
   const x = index % COLUMNS;
   const y = Math.floor(index / COLUMNS);
 
+  if (index === 0) {
+    return {
+      ...icon,
+      x: 9999,
+      y: 9999,
+      opacity: 0
+    }
+  }
+
   return {
     ...icon,
     x: x * (SIZE + GAP) + 0.5,
@@ -30,40 +40,98 @@ const icons = ref(data.icons.slice(0, 64).map((icon, index) => {
 
 const { go } = useRouter()
 const intervalTime = shallowRef()
+const showHandles = ref(true)
+const scaleDownVariants: Variants = {
+  fullSize: {
+    scale: 1
+  },
+  riseUp: {
+    x: 0.5,
+    y: -0.5,
+    animationName: 'riseUp',
+    scale: 1,
+    transition: {
+      delay: 0.5,
+      duration: 1.5,
+      ease: "easeIn"
+    }
+  },
+  small: {
+    x: -10.5,
+    y: -10.5,
+    scale: 0.1,
+    animationName: 'small',
+    transition: {
+      delay: 1,
+      duration: 1,
+      ease: "easeInOut"
+    }
+  }
+}
+const scaleDownAnimation = ref('fullSize')
 
-const animateIconGrid = ref(false)
+const iconGridAnimation = ref('initial')
 
 const drawAnimation = ref('visible')
 const draw: Variants = {
   hidden: { pathLength: 0, opacity: 0 },
   visible:  {
+    animationName: 'visible',
     pathLength: 1,
     opacity: 1,
     transition: {
-        pathLength: { delay: 2.5, type: "spring", duration: 2, bounce: 0 },
-        opacity: { delay: 2.5, duration: 0.1 },
-        onComplete: () => {
-          animateIconGrid.value = true
-        }
+        pathLength: { delay: 2.4, type: "spring", duration: 2.8, bounce: 0 },
+        opacity: { delay: 2.4, duration: 0.1 },
     },
-
   },
   exit: {
+    animationName: 'exit',
     stroke: 'var(--vp-c-text-1)',
     pathLength: 1,
     opacity: 1,
     transition: {
-      duration: 1.5,
+      duration: 0.8,
     },
   },
-  scaleDown: {
-    scale: 0.2,
-    transition: {
-      duration: 1.5,
-
-    }
-  }
 };
+
+const onAnimationComplete = (item) => {
+  console.log(item.animationName);
+  if (item.animationName === 'visible') {
+    drawAnimation.value = 'exit'
+    return
+  }
+  if (item.animationName === 'exit') {
+    showHandles.value = false
+    scaleDownAnimation.value = 'small'
+  }
+  if(item.animationName === 'small') {
+    iconGridAnimation.value = 'showIcons'
+  }
+  if(item.animationName === 'riseUp') {
+    scaleDownAnimation.value = 'small'
+  }
+
+}
+
+const iconAnimationVariants = {
+  initial: { opacity: 0 },
+  showIcons: (index) => ({
+    animationName: 'showIcons',
+    opacity: [0, 1, 1],
+    x: [0.5, 0, 0],
+    y: [-0.5, 0, 0],
+    strokeWidth: [2, 2, 2],
+    transition: { delay: 0.5 + index * 0.023, duration: 1.5, ease: 'easeInOut' }
+  }),
+  shrinkIcons: (index) => ({
+    animationName: 'shrinkIcons',
+    opacity: 1,
+    strokeWidth: 0,
+    transition: { delay: 5, duration: 1.5, ease: 'easeInOut' }
+  })
+}
+
 </script>
 
 <template>
@@ -72,16 +140,7 @@ const draw: Variants = {
       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-background"
       :style="{ opacity }">
 
-      <MotionLucideIcon
-        size="2"
-        v-for="(icon, index) in icons"
-        :key="icon.name"
-        opacity="0"
-        class="animated-icon"
-        :animate="animateIconGrid ? { opacity: [0, 1, 1], x: [0.5, 0, 0], y: [-0.5, 0, 0], strokeWidth: [2, 2, 2] }: undefined"
-        :transition="{ delay: 0.5 + index * 0.023, duration: 1.5, ease: 'easeInOut' }"
-        v-bind="icon"
-      />
+
 
       <g class="svg-preview-grid-group" stroke-linecap="butt" stroke-width="0.1" stroke="#777"
         mask="url(#svg-preview-bounding-box-mask)" stroke-opacity="0.3">
@@ -95,54 +154,53 @@ const draw: Variants = {
         </path>
       </g>
 
-      <g>
-        <defs xmlns="http://www.w3.org/2000/svg">
-          <pattern id="backdrop-pattern-:R4:" width=".1" height=".1" patternUnits="userSpaceOnUse"
-            patternTransform="rotate(45 50 50)">
-            <line stroke="red" stroke-width="0.1" y2="1"></line>
-            <line stroke="red" stroke-width="0.1" y2="1"></line>
-          </pattern>
-        </defs>
-        <g stroke-width="4">
-          <mask id="svg-preview-backdrop-mask-:R4:-0" maskUnits="userSpaceOnUse">
-            <path stroke="white"
-              d="M 14 12 C14 9.79086 12.2091 8 10 8 M 10 8 C7.79086 8 6 9.79086 6 12 M 6 12 C6 16.4183 9.58172 20 14 20 M 14 20 C18.4183 20 22 16.4183 22 12 M 22 12 C22 8.446 20.455 5.25285 18 3.05557">
-            </path>
-          </mask>
-          <path
-            d="M 10 12 C10 14.2091 11.7909 16 14 16 M 14 16 C16.2091 16 18 14.2091 18 12 M 18 12 C18 7.58172 14.4183 4 10 4 M 10 4 C5.58172 4 2 7.58172 2 12 M 2 12 C2 15.5841 3.57127 18.8012 6.06253 21"
-            stroke="url(#backdrop-pattern-:R4:)" stroke-width="4" stroke-opacity="0.75"
-            mask="url(#svg-preview-backdrop-mask-:R4:-0)"></path>
-        </g>
-      </g>
-      <motion.svg class="svg-preview-handles-group" stroke-width="0.12" stroke="#777" stroke-opacity="0.6" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 0.2, duration: 0.6 }">
-        <path d="M14 12 14 9.79086"></path>
-      </motion.svg>
-      <g class="svg-preview-colored-path-group">
+      <MotionLucideIcon
+        size="2"
+        v-for="(icon, index) in icons"
+        :key="icon.name"
+        opacity="0"
+        class="animated-icon"
+        :variants="iconAnimationVariants"
+        :animate="iconGridAnimation"
+        initial="initial"
+        :custom="index"
+        v-bind="icon"
+        @animation-complete="onAnimationComplete"
+      />
+      <motion.g
+        class="svg-preview-colored-path-group"
+        :variants="scaleDownVariants"
+        :animate="scaleDownAnimation"
+        initial="hidden"
+        @animation-complete="onAnimationComplete"
+      >
         <motion.path
           d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"
           :style="{ stroke: 'var(--vp-c-gray-1)'}"
-
           :animate="drawAnimation"
           initial="hidden"
           :variants="draw"
-          :onAnimationComplete="() => drawAnimation = 'exit'"
+          @animation-complete="onAnimationComplete"
         />
         <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"
           :style="{ stroke: 'var(--vp-c-gray-1)'}"
-
           :animate="drawAnimation"
           initial="hidden"
           :variants="draw"
          />
-      </g>
+      </motion.g>
       <g class="svg-preview-radii-group" stroke-width="0.12" stroke-dasharray="0 0.25 0.25" stroke="#777"
         stroke-opacity="0.3"></g>
-      <g class="svg-preview-control-path-group" stroke="#fff" stroke-width="0.125">
+      <motion.g
+        class="svg-preview-control-path-marker-group"
+        stroke="#fff"
+        stroke-width="0.125"
+        :initial="{ opacity: 1 }"
+        :animate="showHandles ? { opacity: 1 } : { opacity: 0 }"
+        :transition="{ delay: 0, duration: 0.2 }"
+      >
         <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"   :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 1.6, duration: 1.5 }"/>
         <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"  :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 1.6, duration: 1.5 }" />
-      </g>
-      <g class="svg-preview-control-path-marker-group" stroke="#fff" stroke-width="0.125">
         <motion.g :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 0.2, duration: 0.3 }">
         <path
           d="M14 12h.01M10 8h.01M10 8h.01M6 12h.01M6 12h.01M14 20h.01M14 20h.01M22 12h.01M22 12h.01M18 3.05557h.01M10 12h.01M14 16h.01M14 16h.01M18 12h.01M18 12h.01M10 4h.01M10 4h.01M2 12h.01M2 12h.01M6.06253 21h.01">
@@ -155,24 +213,32 @@ const draw: Variants = {
           :transition="{ delay: 0, duration: 0.8 }"
           cx="14" cy="12" r="0.5"
         />
-          <motion.circle
-          :initial="{ opacity: 0, scale: 0.2 }"
-          :animate="{ opacity: 1, scale: 1 }"
-          :transition="{ delay: 0, duration: 0.8 }"cx="14" cy="12" r="0.5"></motion.circle>
-          <motion.circle
-          :initial="{ opacity: 0, scale: 0.2 }"
-          :animate="{ opacity: 1, scale: 1 }"
-          :transition="{ delay: 0, duration: 0.8 }"cx="18" cy="3.05557" r="0.5"></motion.circle>
-          <motion.circle
-          :initial="{ opacity: 0, scale: 0.2 }"
-          :animate="{ opacity: 1, scale: 1 }"
-          :transition="{ delay: 0, duration: 0.8 }"cx="10" cy="12" r="0.5"></motion.circle>
-          <motion.circle
-          :initial="{ opacity: 0, scale: 0.2 }"
-          :animate="{ opacity: 1, scale: 1 }"
-          :transition="{ delay: 0, duration: 0.8 }" cx="6.06253" cy="21" r="0.5"></motion.circle>
-      </g>
-      <g class="svg-preview-handles-group" stroke-width="0.12" stroke="#FFF" stroke-opacity="0.3">
+        <motion.circle
+        :initial="{ opacity: 0, scale: 0.2 }"
+        :animate="{ opacity: 1, scale: 1 }"
+        :transition="{ delay: 0, duration: 0.8 }"cx="14" cy="12" r="0.5"/>
+        <motion.circle
+        :initial="{ opacity: 0, scale: 0.2 }"
+        :animate="{ opacity: 1, scale: 1 }"
+        :transition="{ delay: 0, duration: 0.8 }"cx="18" cy="3.05557" r="0.5"/>
+        <motion.circle
+        :initial="{ opacity: 0, scale: 0.2 }"
+        :animate="{ opacity: 1, scale: 1 }"
+        :transition="{ delay: 0, duration: 0.8 }"cx="10" cy="12" r="0.5"/>
+        <motion.circle
+        :initial="{ opacity: 0, scale: 0.2 }"
+        :animate="{ opacity: 1, scale: 1 }"
+        :transition="{ delay: 0, duration: 0.8 }" cx="6.06253" cy="21" r="0.5"/>
+      </motion.g>
+      <motion.g
+        class="svg-preview-handles-group"
+        stroke-width="0.12"
+        stroke="#FFF"
+        stroke-opacity="0.3"
+        :initial="{ opacity: 1 }"
+        :animate="showHandles ? { opacity: 1 } : { opacity: 0 }"
+        :transition="{ delay: 0, duration: 0.6 }"
+      >
         <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.2, duration: 0.3 }">
           <path d="M14 12 14 9.79086"></path>
           <circle cy="9.79086" cx="14" r="0.25"></circle>
@@ -244,7 +310,7 @@ const draw: Variants = {
         <path d="M6.06253 21 3.57127 18.8012"></path>
         <circle cy="18.8012" cx="3.57127" r="0.25"></circle>
         </motion.g>
-      </g>
+      </motion.g>
     </motion.svg>
   </div>
 </template>

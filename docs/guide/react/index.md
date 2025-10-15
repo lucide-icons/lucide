@@ -44,3 +44,10 @@ List of features:
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >
+
+### Resources
+{{''}}
+
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in reactSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid >

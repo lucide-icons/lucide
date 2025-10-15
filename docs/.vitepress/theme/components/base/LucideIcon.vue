@@ -5,8 +5,8 @@ export type IconNode = [elementName: string, attrs: Record<string, string>][]
 
 const props = defineProps<{
   name: string;
-  tags: string[];
-  categories: string[];
+  tags?: string[];
+  categories?: string[];
   // contributors: Contributor[];
   iconNode: IconNode;
 }>()

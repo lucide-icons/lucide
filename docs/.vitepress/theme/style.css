@@ -30,6 +30,8 @@
   --vp-a11y-danger: var(--vp-c-danger-3);
   --vp-a11y-success: var(--vp-c-success-3);
   --vp-a11y-warning: #da9200;
+
+  --vp-sidebar-input: var(--vp-c-gray-3);
 }
 
 .dark {
@@ -51,6 +53,8 @@
   --vp-a11y-danger: var(--vp-c-danger-2);
   --vp-a11y-success: var(--vp-c-success-2);
   --vp-a11y-warning: var(--vp-c-warning-2);
+
+  --vp-sidebar-input: var(--vp-c-bg-soft);
 }
 
 @view-transition {
