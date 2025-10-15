@@ -26,6 +26,10 @@
 
   --vp-c-text-4: rgba(60, 60, 67, 0.32);
   --vp-home-hero-name-color: var(--vp-c-text);
+
+  --vp-a11y-danger: var(--vp-c-danger-3);
+  --vp-a11y-success: var(--vp-c-success-3);
+  --vp-a11y-warning: #da9200;
 }
 
 .dark {
@@ -43,6 +47,10 @@
   --vp-code-editor-string: #9ecbff;
 
   --vp-c-text-4: rgba(235, 235, 245, 0.16);
+
+  --vp-a11y-danger: var(--vp-c-danger-2);
+  --vp-a11y-success: var(--vp-c-success-2);
+  --vp-a11y-warning: var(--vp-c-warning-2);
 }
 
 @view-transition {

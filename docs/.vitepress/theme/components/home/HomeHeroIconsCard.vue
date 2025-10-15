@@ -54,12 +54,6 @@ const draw: Variants = {
     opacity: 1,
     transition: {
       duration: 1.5,
-      // onComplete: () => {
-      //   drawAnimation.value = 'scaleDown'
-      // }
-      // onComplete: () => {
-      //   animateIconGrid.value = true
-      // },
     },
   },
   scaleDown: {

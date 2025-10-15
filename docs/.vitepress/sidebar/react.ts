@@ -79,8 +79,8 @@ export const reactSidebar = [
           desc: 'Combine multiple icons into one',
         },
         {
-          text: 'Dynamic imports',
-          link: '/guide/react/advanced/dynamic-imports',
+          text: 'Dynamic icon component',
+          link: '/guide/react/advanced/dynamic-icon-component.md',
           desc: 'Dynamically import icons as needed',
         },
         {
@@ -90,5 +90,20 @@ export const reactSidebar = [
         },
       ],
     },
+     {
+      text: 'Resources',
+      items: [
+        {
+          text: 'Accessibility in depth',
+          link: '/guide/accessibility',
+          desc: 'Accessibility best practices',
+        },
+         {
+          text: 'VSCode',
+          link: '/guide/vscode',
+          desc: 'VSCode and Lucide',
+        },
+      ],
+    }
   ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];
 

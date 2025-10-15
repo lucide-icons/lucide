@@ -2,7 +2,7 @@
 title: Accessibility
 ---
 
-# Accessible Icons
+# Accessibility in dept
 
 Icons are pictures that show what something means without using words. They can be very helpful
 because they can quickly give information.
@@ -17,7 +17,7 @@ Icons are a helpful tool to improve perception, but they aren't a replacement fo
 In most cases, it is probably a good idea to also provide a textual representation of your icon's
 function.
 
-<!--@include: ../../../images/a11y/visible-labels.svg -->
+<!--@include: ../../docs/images/a11y/visible-labels.svg -->
 
 ## Contrast
 
@@ -27,21 +27,21 @@ with low vision or color vision deficiencies.
 We recommend
 following [WCAG 2.1 SC 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
-![In short: use a contrast ratio of at least 4.5:1](../../../images/a11y/contrast.svg?raw=true)
+<!--@include: ../../docs/images/a11y/contrast.svg -->
 
 ## Use of color
 
 Avoid relying solely on color to convey meaning in icons, as some users may have color blindness.
 Instead, use additional visual cues like shape, shading or text.
 
-![For example: Don’t mark state with color, mark it with distinct visuals.](../../../images/a11y/use-of-color.svg?raw=true)
+<!--@include: ../../docs/images/a11y/use-of-color.svg -->
 
 ## Interactivity
 
 Ensure that interactive icons are accessible via keyboard navigation and provide clear feedback when
 activated.
 
-![](../../../images/a11y/interactivity.svg?raw=true)
+<!--@include: ../../docs/images/a11y/interactivity.svg -->
 
 In most cases this is easily done by wrapping them in icon buttons.
 
@@ -50,7 +50,7 @@ In most cases this is easily done by wrapping them in icon buttons.
 Small targets can be difficult to click or touch, if your icon is interactive, we recommend that it
 should have a minimum target size of 44×44 pixels.
 
-![](../../../images/a11y/target-size.svg?raw=true)
+<!--@include: ../../docs/images/a11y/target-size.svg -->
 
 In practice, this doesn't necessarily mean that the icon itself should be this large, only its
 interactive wrapper element.
@@ -60,14 +60,14 @@ interactive wrapper element.
 Icons should represent concepts or actions in a universally understandable way. Avoid using abstract
 or ambiguous, or culture-specific symbols that might confuse some users.
 
-![For example: Use universally understandable symbols and don't base your choice of icon on puns.](../../../images/a11y/meaningfulness.svg?raw=true)
+<!--@include: ../../docs/images/a11y/meaningfulness.svg -->
 
 ## Consistency
 
 Maintain consistency in icon design and usage across your interface to help users learn and
 understand their meanings more easily.
 
-![For example: Don’t use the same icon for multiple distinct purposes or meanings. Don’t use different icons for the same purpose or function.](../../../images/a11y/consistency.svg?raw=true)
+<!--@include: ../../docs/images/a11y/consistency.svg -->
 
 ## Text Alternatives
 
@@ -89,7 +89,7 @@ In case some of your icons stand alone, and they serve a non-decorative function
 provide the appropriate accessible label for them.
 :::
 
-![In short: provide accessible label for semantic icons, but not for decorative icons.](../../../images/a11y/alttext-standalone.svg?raw=true)
+<!--@include: ../../docs/images/a11y/alttext-standalone.svg -->
 
 In general try to avoid using functional icons with no interactivity, we recommend that:
 
@@ -104,7 +104,8 @@ elements (badges, buttons, nav items etc.) only, _not_ the icons themselves.
 Do not provide an accessible label to icons when used on a button, as this label will be read out by
 screen readers, leading to nonsensical text.
 
-![](../../../images/a11y/alttext-buttons.svg)
+<!--@include: ../../docs/images/a11y/alttext-buttons.svg -->
+
 
 ::: details Code examples
 
@@ -132,7 +133,7 @@ the close button of a dialog for example).
 As previously stated, you should provide your accessible label on the icon button itself, not the
 contained icon.
 
-![](../../../images/a11y/alttext-iconbuttons.svg?raw=true)
+<!--@include: ../../docs/images/a11y/alttext-iconbuttons.svg -->
 
 ::: details Code examples
 

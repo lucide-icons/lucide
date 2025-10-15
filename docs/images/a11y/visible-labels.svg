@@ -4,9 +4,9 @@
   <path d="M232 46H248" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M232 40H248" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M232 52H248" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M42 98L30 110" style="stroke: var(--vp-c-danger-2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M30 98L42 110" style="stroke: var(--vp-c-danger-2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="58" y="111" style="fill: var(--vp-c-danger-2)" font-size="18" font-weight="800">
+  <path d="M42 98L30 110" style="stroke: var(--vp-a11y-danger)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 98L42 110" style="stroke: var(--vp-a11y-danger)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="111" style="fill: var(--vp-a11y-danger)" font-size="18" font-weight="800">
     <tspan>Don't rely on communicating the</tspan>
     <tspan x="58" y="136">function of elements by icons alone.</tspan>
   </text>
@@ -15,8 +15,8 @@
   <path d="M298 240H314" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M298 234H314" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M298 246H314" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M42 298L33 309L28 304" style="stroke: var(--vp-c-success-2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="58" y="311" style="fill: var(--vp-c-success-2)" font-size="18" font-weight="800">
+  <path d="M44 298L33 309L28 304" style="stroke: var(--vp-a11y-success)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="311" style="fill: var(--vp-a11y-success)" font-size="18" font-weight="800">
     <tspan>Do also provide a written description</tspan>
     <tspan x="58" y="338">of your interacive elements.</tspan>
   </text>
