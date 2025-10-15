@@ -2,7 +2,7 @@
 title: Accessibility
 ---
 
-# Accessibility
+# Accessible Icons
 
 Icons are pictures that show what something means without using words. They can be very helpful
 because they can quickly give information.

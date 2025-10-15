@@ -33,19 +33,42 @@ const intervalTime = shallowRef()
 
 const animateIconGrid = ref(false)
 
+const drawAnimation = ref('visible')
 const draw: Variants = {
   hidden: { pathLength: 0, opacity: 0 },
-  visible: (i: number = 1) => {
-      const delay = i * 1
-      return {
-          pathLength: 1,
-          opacity: 1,
-          transition: {
-              pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
-              opacity: { delay, duration: 0.1 },
-          },
-      }
+  visible:  {
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+        pathLength: { delay: 2.5, type: "spring", duration: 2, bounce: 0 },
+        opacity: { delay: 2.5, duration: 0.1 },
+        onComplete: () => {
+          animateIconGrid.value = true
+        }
+    },
+
   },
+  exit: {
+    stroke: 'var(--vp-c-text-1)',
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      // onComplete: () => {
+      //   drawAnimation.value = 'scaleDown'
+      // }
+      // onComplete: () => {
+      //   animateIconGrid.value = true
+      // },
+    },
+  },
+  scaleDown: {
+    scale: 0.2,
+    transition: {
+      duration: 1.5,
+
+    }
+  }
 };
 </script>
 
@@ -68,7 +91,6 @@ const draw: Variants = {
 
       <g class="svg-preview-grid-group" stroke-linecap="butt" stroke-width="0.1" stroke="#777"
         mask="url(#svg-preview-bounding-box-mask)" stroke-opacity="0.3">
-        <!-- <rect class="svg-preview-grid-rect" width="23.9" height="23.9" x="0.05" y="0.05" rx="1"></rect> -->
         <path
           stroke-dasharray="0 0.1 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0 0.15"
           stroke-width="0.1"
@@ -99,110 +121,135 @@ const draw: Variants = {
             mask="url(#svg-preview-backdrop-mask-:R4:-0)"></path>
         </g>
       </g>
-      <motion.svg class="svg-preview-handles-group" stroke-width="0.12" stroke="#777" stroke-opacity="0.6" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 2, duration: 1 }">
+      <motion.svg class="svg-preview-handles-group" stroke-width="0.12" stroke="#777" stroke-opacity="0.6" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 0.2, duration: 0.6 }">
         <path d="M14 12 14 9.79086"></path>
-        <circle cy="9.79086" cx="14" r="0.25"></circle>
-        <path d="M10 8 12.2091 8"></path>
-        <circle cy="8" cx="12.2091" r="0.25"></circle>
-        <path d="M10 8 7.79086 8"></path>
-        <circle cy="8" cx="7.79086" r="0.25"></circle>
-        <path d="M6 12 6 9.79086"></path>
-        <circle cy="9.79086" cx="6" r="0.25"></circle>
-        <path d="M6 12 6 16.4183"></path>
-        <circle cy="16.4183" cx="6" r="0.25"></circle>
-        <path d="M14 20 9.58172 20"></path>
-        <circle cy="20" cx="9.58172" r="0.25"></circle>
-        <path d="M14 20 18.4183 20"></path>
-        <circle cy="20" cx="18.4183" r="0.25"></circle>
-        <path d="M22 12 22 16.4183"></path>
-        <circle cy="16.4183" cx="22" r="0.25"></circle>
-        <path d="M22 12 22 8.446"></path>
-        <circle cy="8.446" cx="22" r="0.25"></circle>
-        <path d="M18 3.05557 20.455 5.25285"></path>
-        <circle cy="5.25285" cx="20.455" r="0.25"></circle>
-        <path d="M10 12 10 14.2091"></path>
-        <circle cy="14.2091" cx="10" r="0.25"></circle>
-        <path d="M14 16 11.7909 16"></path>
-        <circle cy="16" cx="11.7909" r="0.25"></circle>
-        <path d="M14 16 16.2091 16"></path>
-        <circle cy="16" cx="16.2091" r="0.25"></circle>
-        <path d="M18 12 18 14.2091"></path>
-        <circle cy="14.2091" cx="18" r="0.25"></circle>
-        <path d="M18 12 18 7.58172"></path>
-        <circle cy="7.58172" cx="18" r="0.25"></circle>
-        <path d="M10 4 14.4183 4"></path>
-        <circle cy="4" cx="14.4183" r="0.25"></circle>
-        <path d="M10 4 5.58172 4"></path>
-        <circle cy="4" cx="5.58172" r="0.25"></circle>
-        <path d="M2 12 2 7.58172"></path>
-        <circle cy="7.58172" cx="2" r="0.25"></circle>
-        <path d="M2 12 2 15.5841"></path>
-        <circle cy="15.5841" cx="2" r="0.25"></circle>
-        <path d="M6.06253 21 3.57127 18.8012"></path>
-        <circle cy="18.8012" cx="3.57127" r="0.25"></circle>
       </motion.svg>
-      <g class="svg-preview-colored-path-group" opacity="0.7">
-        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557" stroke="#fff" :custom="3" animate="visible" initial="hidden"
-                :variants="draw"/>
-        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21" stroke="#F56565" :custom="3" animate="visible" initial="hidden"
-                :variants="draw" />
+      <g class="svg-preview-colored-path-group">
+        <motion.path
+          d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"
+          :style="{ stroke: 'var(--vp-c-gray-1)'}"
+
+          :animate="drawAnimation"
+          initial="hidden"
+          :variants="draw"
+          :onAnimationComplete="() => drawAnimation = 'exit'"
+        />
+        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"
+          :style="{ stroke: 'var(--vp-c-gray-1)'}"
+
+          :animate="drawAnimation"
+          initial="hidden"
+          :variants="draw"
+         />
       </g>
       <g class="svg-preview-radii-group" stroke-width="0.12" stroke-dasharray="0 0.25 0.25" stroke="#777"
         stroke-opacity="0.3"></g>
       <g class="svg-preview-control-path-group" stroke="#fff" stroke-width="0.125">
-        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"   :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 2, duration: 1.5 }"/>
-        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"  :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 2, duration: 1.5 }" />
+        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"   :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 1.6, duration: 1.5 }"/>
+        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"  :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 1.6, duration: 1.5 }" />
       </g>
       <g class="svg-preview-control-path-marker-group" stroke="#fff" stroke-width="0.125">
+        <motion.g :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 0.2, duration: 0.3 }">
         <path
           d="M14 12h.01M10 8h.01M10 8h.01M6 12h.01M6 12h.01M14 20h.01M14 20h.01M22 12h.01M22 12h.01M18 3.05557h.01M10 12h.01M14 16h.01M14 16h.01M18 12h.01M18 12h.01M10 4h.01M10 4h.01M2 12h.01M2 12h.01M6.06253 21h.01">
         </path>
-        <circle cx="14" cy="12" r="0.5"></circle>
-        <circle cx="18" cy="3.05557" r="0.5"></circle>
-        <circle cx="10" cy="12" r="0.5"></circle>
-        <circle cx="6.06253" cy="21" r="0.5"></circle>
+        </motion.g>
+
+        <motion.circle
+          :initial="{ opacity: 0, scale: 0.2 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ delay: 0, duration: 0.8 }"
+          cx="14" cy="12" r="0.5"
+        />
+          <motion.circle
+          :initial="{ opacity: 0, scale: 0.2 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ delay: 0, duration: 0.8 }"cx="14" cy="12" r="0.5"></motion.circle>
+          <motion.circle
+          :initial="{ opacity: 0, scale: 0.2 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ delay: 0, duration: 0.8 }"cx="18" cy="3.05557" r="0.5"></motion.circle>
+          <motion.circle
+          :initial="{ opacity: 0, scale: 0.2 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ delay: 0, duration: 0.8 }"cx="10" cy="12" r="0.5"></motion.circle>
+          <motion.circle
+          :initial="{ opacity: 0, scale: 0.2 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ delay: 0, duration: 0.8 }" cx="6.06253" cy="21" r="0.5"></motion.circle>
       </g>
       <g class="svg-preview-handles-group" stroke-width="0.12" stroke="#FFF" stroke-opacity="0.3">
-        <path d="M14 12 14 9.79086"></path>
-        <circle cy="9.79086" cx="14" r="0.25"></circle>
-        <path d="M10 8 12.2091 8"></path>
-        <circle cy="8" cx="12.2091" r="0.25"></circle>
-        <path d="M10 8 7.79086 8"></path>
-        <circle cy="8" cx="7.79086" r="0.25"></circle>
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.2, duration: 0.3 }">
+          <path d="M14 12 14 9.79086"></path>
+          <circle cy="9.79086" cx="14" r="0.25"></circle>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.4, duration: 0.3 }">
+          <path d="M10 8 12.2091 8"></path>
+          <circle cy="8" cx="12.2091" r="0.25"></circle>
+          <path d="M10 8 7.79086 8"></path>
+          <circle cy="8" cx="7.79086" r="0.25"></circle>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.6, duration: 0.3 }">
         <path d="M6 12 6 9.79086"></path>
         <circle cy="9.79086" cx="6" r="0.25"></circle>
         <path d="M6 12 6 16.4183"></path>
         <circle cy="16.4183" cx="6" r="0.25"></circle>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.8, duration: 0.3 }">
         <path d="M14 20 9.58172 20"></path>
         <circle cy="20" cx="9.58172" r="0.25"></circle>
         <path d="M14 20 18.4183 20"></path>
         <circle cy="20" cx="18.4183" r="0.25"></circle>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 1, duration: 0.3 }">
         <path d="M22 12 22 16.4183"></path>
         <circle cy="16.4183" cx="22" r="0.25"></circle>
         <path d="M22 12 22 8.446"></path>
         <circle cy="8.446" cx="22" r="0.25"></circle>
+        </motion.g>
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 1.2, duration: 0.3 }">
         <path d="M18 3.05557 20.455 5.25285"></path>
         <circle cy="5.25285" cx="20.455" r="0.25"></circle>
-        <path d="M10 12 10 14.2091"></path>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.2, duration: 0.3 }">
+         <path d="M10 12 10 14.2091"></path>
         <circle cy="14.2091" cx="10" r="0.25"></circle>
+        </motion.g>
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.4, duration: 0.3 }">
         <path d="M14 16 11.7909 16"></path>
         <circle cy="16" cx="11.7909" r="0.25"></circle>
         <path d="M14 16 16.2091 16"></path>
         <circle cy="16" cx="16.2091" r="0.25"></circle>
-        <path d="M18 12 18 14.2091"></path>
-        <circle cy="14.2091" cx="18" r="0.25"></circle>
-        <path d="M18 12 18 7.58172"></path>
-        <circle cy="7.58172" cx="18" r="0.25"></circle>
-        <path d="M10 4 14.4183 4"></path>
-        <circle cy="4" cx="14.4183" r="0.25"></circle>
-        <path d="M10 4 5.58172 4"></path>
-        <circle cy="4" cx="5.58172" r="0.25"></circle>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.6, duration: 0.3 }">
+          <path d="M18 12 18 14.2091"></path>
+          <circle cy="14.2091" cx="18" r="0.25"></circle>
+          <path d="M18 12 18 7.58172"></path>
+          <circle cy="7.58172" cx="18" r="0.25"></circle>
+        </motion.g>
+
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 0.8, duration: 0.3 }">
+          <path d="M10 4 14.4183 4"></path>
+          <circle cy="4" cx="14.4183" r="0.25"></circle>
+          <path d="M10 4 5.58172 4"></path>
+          <circle cy="4" cx="5.58172" r="0.25"></circle>
+        </motion.g>
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 1, duration: 0.3 }">
         <path d="M2 12 2 7.58172"></path>
         <circle cy="7.58172" cx="2" r="0.25"></circle>
         <path d="M2 12 2 15.5841"></path>
         <circle cy="15.5841" cx="2" r="0.25"></circle>
+        </motion.g>
+        <motion.g :initial="{ opacity: 0, scale: 0.2 }" :animate="{ opacity: 1, scale: 1 }" :transition="{ delay: 1.2, duration: 0.3 }">
         <path d="M6.06253 21 3.57127 18.8012"></path>
         <circle cy="18.8012" cx="3.57127" r="0.25"></circle>
+        </motion.g>
       </g>
     </motion.svg>
   </div>
