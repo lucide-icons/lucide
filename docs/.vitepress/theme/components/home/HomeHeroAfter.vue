@@ -2,17 +2,35 @@
 import { useRouter } from 'vitepress';
 import Badge from '../base/Badge.vue';
 import HomeContainer from './HomeContainer.vue';
-import { data } from './HomeHeroBefore.data'
+import { data } from './HomeHeroIconsCard.data'
 import FakeInput from '../base/FakeInput.vue'
+import { nextTick, provide } from 'vue'
 
 const { go } = useRouter()
 
-function handleClick() {
-  if (!document.startViewTransition) {
+const enableTransitions = () =>
+  'startViewTransition' in document &&
+  window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+
+async function handleClick(event: MouseEvent) {
+  if (!enableTransitions()) {
     go('/icons/?focus')
     return;
   }
-  document.startViewTransition(() => go('/icons/?focus'));
+
+
+  await document.startViewTransition(async () => {
+    await go('/icons/?focus');
+    await nextTick()
+  }).ready
+  // (event.target as HTMLElement).style.viewTransitionName = 'icons-search-box';
+  // document.startViewTransition(async () => {
+
+  //   await go('/icons/?focus');
+  //   (event.target as HTMLElement).style.viewTransitionName = '';
+  // });
+
+
 }
 </script>
 <template>

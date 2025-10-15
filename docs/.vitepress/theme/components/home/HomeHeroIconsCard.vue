@@ -1,47 +1,70 @@
 <script setup lang="ts">
 import { ref, onMounted, shallowRef, onBeforeUnmount, watchEffect, computed} from 'vue';
 import { data } from './HomeHeroIconsCard.data'
-import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
 import { random } from 'lodash-es'
 import FakeInput from '../base/FakeInput.vue'
-import { useScroll } from '@vueuse/core';
-import { motion, Variants } from "motion-v"
+// import { useScroll } from '@vueuse/core';
+import { motion, Variants, useScroll, useSpring, useTransform } from "motion-v"
+import LucideIcon from '../base/LucideIcon.vue'
+
+const MotionLucideIcon = motion.create(LucideIcon)
+
+const COLUMNS = 8;
+const SIZE = 2;
+const GAP = 1;
+
+const { scrollYProgress } = useScroll()
+const opacity = useTransform(() => (1 - scrollYProgress.get() * 8))
+
+const icons = ref(data.icons.slice(0, 64).map((icon, index) => {
+  const x = index % COLUMNS;
+  const y = Math.floor(index / COLUMNS);
+
+  return {
+    ...icon,
+    x: x * (SIZE + GAP) + 0.5,
+    y: y * (SIZE + GAP) + 0.5
+  }
+}))
 
 const { go } = useRouter()
 const intervalTime = shallowRef()
 
-const { y } = useScroll(window)
-
-const opacity = computed(() => {
-  if (y.value < 0) return 1
-  if (y.value > 300) return 0
-  return 1 - (y.value / 300)
-})
+const animateIconGrid = ref(false)
 
 const draw: Variants = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number = 1) => {
-        const delay = i * 1
-        return {
-            pathLength: 1,
-            opacity: 1,
-            transition: {
-                pathLength: { delay, type: "spring", duration: 5, bounce: 0 },
-                opacity: { delay, duration: 0.1 },
-            },
-        }
-    },
-}
-
-
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: (i: number = 1) => {
+      const delay = i * 1
+      return {
+          pathLength: 1,
+          opacity: 1,
+          transition: {
+              pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
+              opacity: { delay, duration: 0.1 },
+          },
+      }
+  },
+};
 </script>
 
 <template>
   <div>
     <motion.svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 48 48" fill="none" overflow="auto"
       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-background"
-      :style="{ opacity: opacity }">
+      :style="{ opacity }">
+
+      <MotionLucideIcon
+        size="2"
+        v-for="(icon, index) in icons"
+        :key="icon.name"
+        opacity="0"
+        class="animated-icon"
+        :animate="animateIconGrid ? { opacity: [0, 1, 1], x: [0.5, 0, 0], y: [-0.5, 0, 0], strokeWidth: [2, 2, 2] }: undefined"
+        :transition="{ delay: 0.5 + index * 0.023, duration: 1.5, ease: 'easeInOut' }"
+        v-bind="icon"
+      />
 
       <g class="svg-preview-grid-group" stroke-linecap="butt" stroke-width="0.1" stroke="#777"
         mask="url(#svg-preview-bounding-box-mask)" stroke-opacity="0.3">
@@ -119,88 +142,16 @@ const draw: Variants = {
         <circle cy="18.8012" cx="3.57127" r="0.25"></circle>
       </motion.svg>
       <g class="svg-preview-colored-path-group" opacity="0.7">
-        <!-- <path d="M 14 12 C14 9.79086 12.2091 8 10 8" stroke="##dfdfd6"></path>
-        <path d="M 10 8 C7.79086 8 6 9.79086 6 12" stroke="##dfdfd6"></path>
-        <path d="M 6 12 C6 16.4183 9.58172 20 14 20" stroke="##dfdfd6"></path>
-        <path d="M 14 20 C18.4183 20 22 16.4183 22 12" stroke="##dfdfd6"></path>
-        <path d="M 22 12 C22 8.446 20.455 5.25285 18 3.05557" stroke="##dfdfd6"></path>
-        <path d="M 10 12 C10 14.2091 11.7909 16 14 16" stroke="##dfdfd6"></path>
-        <path d="M 14 16 C16.2091 16 18 14.2091 18 12" stroke="##dfdfd6"></path>
-        <path d="M 18 12 C18 7.58172 14.4183 4 10 4" stroke="##dfdfd6"></path>
-        <path d="M 10 4 C5.58172 4 2 7.58172 2 12" stroke="##dfdfd6"></path>
-        <path d="M 2 12 C2 15.5841 3.57127 18.8012 6.06253 21" stroke="##dfdfd6"></path> -->
-        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557" stroke="#fff" :custom="8" animate="visible" initial="hidden"
+        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557" stroke="#fff" :custom="3" animate="visible" initial="hidden"
                 :variants="draw"/>
-        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21" stroke="#F56565" :custom="8" animate="visible" initial="hidden"
+        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21" stroke="#F56565" :custom="3" animate="visible" initial="hidden"
                 :variants="draw" />
       </g>
       <g class="svg-preview-radii-group" stroke-width="0.12" stroke-dasharray="0 0.25 0.25" stroke="#777"
         stroke-opacity="0.3"></g>
-      <g class="svg-preview-control-path-marker-mask-group" stroke-width="1" stroke="#000">
-        <mask id="svg-preview-control-path-marker-mask-0" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M14 12h.01"></path>
-          <path d="M10 8h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-1" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M10 8h.01"></path>
-          <path d="M6 12h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-2" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M6 12h.01"></path>
-          <path d="M14 20h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-3" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M14 20h.01"></path>
-          <path d="M22 12h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-4" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M22 12h.01"></path>
-          <path d="M18 3.05557h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-5" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M10 12h.01"></path>
-          <path d="M14 16h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-6" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M14 16h.01"></path>
-          <path d="M18 12h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-7" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M18 12h.01"></path>
-          <path d="M10 4h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-8" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M10 4h.01"></path>
-          <path d="M2 12h.01"></path>
-        </mask>
-        <mask id="svg-preview-control-path-marker-mask-9" maskUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="100%" height="100%" fill="#fff" stroke="none" rx="1"></rect>
-          <path d="M2 12h.01"></path>
-          <path d="M6.06253 21h.01"></path>
-        </mask>
-      </g>
       <g class="svg-preview-control-path-group" stroke="#fff" stroke-width="0.125">
-        <path mask="url(#svg-preview-control-path-marker-mask-0)" d="M 14 12 C14 9.79086 12.2091 8 10 8"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-1)" d="M 10 8 C7.79086 8 6 9.79086 6 12"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-2)" d="M 6 12 C6 16.4183 9.58172 20 14 20"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-3)" d="M 14 20 C18.4183 20 22 16.4183 22 12"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-4)" d="M 22 12 C22 8.446 20.455 5.25285 18 3.05557">
-        </path>
-        <path mask="url(#svg-preview-control-path-marker-mask-5)" d="M 10 12 C10 14.2091 11.7909 16 14 16"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-6)" d="M 14 16 C16.2091 16 18 14.2091 18 12"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-7)" d="M 18 12 C18 7.58172 14.4183 4 10 4"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-8)" d="M 10 4 C5.58172 4 2 7.58172 2 12"></path>
-        <path mask="url(#svg-preview-control-path-marker-mask-9)" d="M 2 12 C2 15.5841 3.57127 18.8012 6.06253 21">
-        </path>
+        <motion.path d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"   :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 2, duration: 1.5 }"/>
+        <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"  :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :transition="{ delay: 2, duration: 1.5 }" />
       </g>
       <g class="svg-preview-control-path-marker-group" stroke="#fff" stroke-width="0.125">
         <path
@@ -261,6 +212,7 @@ const draw: Variants = {
 .hero-background {
   transform: rotateX(-51deg) rotateZ(-43deg);
   transform-style: preserve-3d;
+  will-change: transform, opacity;
   position: fixed;
   top: -240px;
   right: -480px;
@@ -286,5 +238,9 @@ const draw: Variants = {
   /* width: calc(100vw - 272px); */
   width: 100%;
   margin-top: 24px;
+}
+
+.animated-icon {
+  will-change: transform, opacity;
 }
 </style>

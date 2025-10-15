@@ -49,6 +49,12 @@
   navigation: auto;
 }
 
+/* ::view-transition-old(icons-search-box),
+::view-transition-new(icons-search-box) {
+  animation: .3s transition 0s ease;
+} */
+
+
 .VPNavBarTitle .logo {
   height: 36px;
   width: 36px;

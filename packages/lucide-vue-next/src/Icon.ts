@@ -6,6 +6,7 @@ import { IconNode, LucideProps } from './types';
 interface IconProps {
   iconNode: IconNode;
   name: string;
+  as?: string | FunctionalComponent;
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
@@ -16,6 +17,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     'absolute-stroke-width': absoluteStrokeWidthKebabCase,
     strokeWidth,
     'stroke-width': strokeWidthKebabCase,
+    as = 'svg',
     size = defaultAttributes.width,
     color = defaultAttributes.stroke,
     ...props
@@ -23,7 +25,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
   { slots },
 ) => {
   return h(
-    'svg',
+    as,
     {
       ...defaultAttributes,
       ...props,
