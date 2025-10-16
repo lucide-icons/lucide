@@ -13,5 +13,13 @@
   "categories": [
     "files",
     "development"
+  ],
+  "aliases": [
+    {
+      "name": "file-json",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -2,21 +2,26 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis",
     "danielbayley"
   ],
   "tags": [
-    "lock",
-    "password",
-    "security"
+    "music",
+    "audio",
+    "sound",
+    "headphones"
   ],
   "categories": [
-    "files",
-    "security"
+    "files"
   ],
   "aliases": [
     {
-      "name": "file-lock-2",
+      "name": "file-audio",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "file-audio-2",
       "deprecated": true,
       "deprecationReason": "alias.duplicate",
       "toBeRemovedInVersion": "v1.0"
