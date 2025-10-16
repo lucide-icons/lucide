@@ -1,6 +1,6 @@
 import { render } from '@testing-library/vue';
 import { describe, expect, it } from 'vitest';
-import { House } from '../src/lucide-vue';
+// @ts-ignore
 import ContextWrapper from './ContextWrapper.vue';
 
 describe('Using lucide icon context', () => {
