@@ -51,6 +51,14 @@ export const mergeClasses = <ClassType = string | undefined | null>(...classes: 
     .trim();
 
 /**
+ * Is empty string
+ *
+ * @param {unknown} value
+ * @returns {boolean} Whether the value is an empty string
+ */
+export const isEmptyString = (value: unknown): boolean => value === '';
+
+/**
  * Check if a component has an accessibility prop
  *
  * @param {object} props

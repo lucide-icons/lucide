@@ -21,7 +21,17 @@
     "design"
   ],
   "aliases": [
-    "columns-settings",
-    "table-config"
+    {
+      "name": "columns-settings",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "table-config",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

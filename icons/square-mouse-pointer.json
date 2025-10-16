@@ -25,6 +25,11 @@
     "tools"
   ],
   "aliases": [
-    "inspect"
+    {
+      "name": "inspect",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
