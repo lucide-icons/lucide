@@ -33,4 +33,4 @@ const ${componentName} = createLucideIcon('${iconName}', __iconNode);
 
 export default ${componentName};
 `;
-};
+});
