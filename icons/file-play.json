@@ -13,6 +13,11 @@
     "files"
   ],
   "aliases": [
-    "file-video"
+    {
+      "name": "file-video",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

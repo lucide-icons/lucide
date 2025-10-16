@@ -3,6 +3,14 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "aliases": [
+    {
+      "name": "stars",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ],
   "tags": [
     "stars",
     "effect",
@@ -15,8 +23,5 @@
     "multimedia",
     "gaming",
     "weather"
-  ],
-  "aliases": [
-    "stars"
   ]
 }

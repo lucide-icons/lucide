@@ -14,6 +14,11 @@
     "development"
   ],
   "aliases": [
-    "terminal-square"
+    {
+      "name": "terminal-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
