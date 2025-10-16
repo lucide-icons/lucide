@@ -23,9 +23,7 @@
   "amdName": "lucide-vue",
   "source": "build/lucide-vue.js",
   "main": "dist/cjs/lucide-vue.js",
-  "main:umd": "dist/umd/lucide-vue.js",
   "module": "dist/esm/lucide-vue.js",
-  "unpkg": "dist/umd/lucide-vue.min.js",
   "typings": "dist/lucide-vue.d.ts",
   "sideEffects": false,
   "files": [
