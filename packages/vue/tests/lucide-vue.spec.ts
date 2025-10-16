@@ -77,16 +77,15 @@ describe('Using lucide icon components', () => {
 
   it('should call the onClick event', async () => {
     const onClick = vi.fn();
-    const { getByLabelText } = render(Smile, {
+    const { container } = render(Smile, {
       attrs: {
         onClick,
-        'aria-label': 'smile-icon',
       },
     });
 
-    const icon = getByLabelText('smile-icon');
+    const icon = container.firstElementChild;
 
-    await fireEvent.click(icon);
+    await fireEvent.click(icon as Element);
 
     expect(onClick).toHaveBeenCalled();
   });

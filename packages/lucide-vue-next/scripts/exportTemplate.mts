@@ -1,6 +1,7 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default async ({
+export default defineExportTemplate(async({
   componentName,
   iconName,
   children,
@@ -13,20 +14,23 @@ export default async ({
 
   return `
 import createLucideIcon from '../createLucideIcon';
+import { IconNode } from '../types';
+
+export const __iconNode: IconNode = ${JSON.stringify(children)}
 
 /**
  * @component @name ${componentName}
  * @description Lucide SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide-vue-next - Documentation
+ * @see https://lucide.dev/guide/packages/lucide-react - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
- * @returns {FunctionalComponent} Vue component
+ * @returns {JSX.Element} JSX Element
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)});
+const ${componentName} = createLucideIcon('${iconName}', __iconNode);
 
 export default ${componentName};
 `;
-};
+});

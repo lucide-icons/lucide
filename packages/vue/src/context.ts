@@ -11,7 +11,7 @@ interface LucideIconsContext {
 }
 
 export function setLucideProps(props: LucideIconsContext) {
-  return provide(LUCIDE_CONTEXT, props);;
+  return provide(LUCIDE_CONTEXT, props);
 }
 
 export function useLucideProps() {
