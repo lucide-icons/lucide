@@ -9,6 +9,4 @@ export interface LucideProps extends Partial<SVGAttributes> {
 
 export type IconNode = [elementName: string, attrs: Record<string, string>][];
 export type LucideIcon = FunctionalComponent<LucideProps>;
-
-// Legacy exports
-export type SVGProps = LucideProps;
+x
