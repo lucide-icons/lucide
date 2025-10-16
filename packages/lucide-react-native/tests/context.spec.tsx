@@ -54,7 +54,7 @@ describe('Using LucideProvider', () => {
       expect(IconComponent).toHaveAttribute('stroke-width', '1');
     });
 
-    it('should render override the providers global props when passed props to the icon', () => {
+    it("should override the provider's global props when passing props to the icon", () => {
       cleanup();
       const { container } = render(
         <LucideProvider
