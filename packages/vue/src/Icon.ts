@@ -39,10 +39,15 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       contextAbsoluteStrokeWidth === true;
 
     const strokeWidthValue =
-      strokeWidth || strokeWidthKebabCase || contextStrokeWidth || defaultAttributes['stroke-width'];
+      strokeWidth ||
+      strokeWidthKebabCase ||
+      contextStrokeWidth ||
+      defaultAttributes['stroke-width'];
 
     if (isAbsoluteStrokeWidth) {
-      return (Number(strokeWidthValue) * 24) / Number(size ?? contextSize ?? defaultAttributes.width);
+      return (
+        (Number(strokeWidthValue) * 24) / Number(size ?? contextSize ?? defaultAttributes.width)
+      );
     }
 
     return strokeWidthValue;
