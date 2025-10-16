@@ -2,9 +2,11 @@ import { createElement, forwardRef, type FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
 import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
+import { useLucideContext } from './context';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
+  testID?: string;
 }
 
 /**
@@ -23,21 +25,22 @@ interface IconComponentProps extends LucideProps {
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
-  (
-    {
-      color = 'currentColor',
-      size = 24,
-      strokeWidth = 2,
-      absoluteStrokeWidth,
-      children,
-      iconNode,
-      ...rest
-    },
-    ref,
-  ) => {
+  ({ color, size, strokeWidth, absoluteStrokeWidth, children, iconNode, testID, ...rest }, ref) => {
+    const {
+      size: contextSize = 24,
+      strokeWidth: contextStrokeWidth = 2,
+      absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+      color: contextColor = 'currentColor',
+    } = useLucideContext() ?? {};
+
+    const calculatedStrokeWidth =
+      absoluteStrokeWidth ?? contextAbsoluteStrokeWidth
+        ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
+        : strokeWidth ?? contextStrokeWidth;
+
     const customAttrs = {
-      stroke: color,
-      strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+      stroke: color ?? contextColor ?? defaultAttributes.stroke,
+      strokeWidth: calculatedStrokeWidth,
       ...rest,
     };
 
@@ -46,8 +49,9 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       {
         ref,
         ...defaultAttributes,
-        width: size,
-        height: size,
+        width: size ?? contextSize ?? defaultAttributes.width,
+        height: size ?? contextSize ?? defaultAttributes.height,
+        'data-testid': testID,
         ...customAttrs,
       },
       [
