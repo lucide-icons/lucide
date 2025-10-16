@@ -23,14 +23,14 @@ export const __iconNode: IconNode = ${JSON.stringify(children)}
  * @description Lucide SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide-react - Documentation
+ * @see https://lucide.dev/guide/packages/lucide-vue-next - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
- * @returns {JSX.Element} JSX Element
+ * @returns {FunctionalComponent} Vue component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = createLucideIcon('${iconName}', __iconNode);
 
 export default ${componentName};
 `;
-});
+};
