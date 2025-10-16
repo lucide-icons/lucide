@@ -1,6 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas",
     "Ayberkyvs",
     "UsamaKhan"
   ],

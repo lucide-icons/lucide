@@ -31,7 +31,17 @@
     "design"
   ],
   "aliases": [
-    "gantt-chart-square",
-    "square-gantt-chart"
+    {
+      "name": "gantt-chart-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "square-gantt-chart",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

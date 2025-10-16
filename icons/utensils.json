@@ -24,6 +24,11 @@
     "navigation"
   ],
   "aliases": [
-    "fork-knife"
+    {
+      "name": "fork-knife",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

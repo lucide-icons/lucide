@@ -16,7 +16,7 @@ jobs:
       - name: Check for blocked phrases in issue title
         run: |
           ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
-          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord" "bluesky" "spotify" "behance" "pix" "x.com")
+          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord" "bluesky" "spotify" "behance" "pix" "x.com" "telegram")
 
           # Check title and body for blocked phrases
           for PHRASE in "${BLOCKED_PHRASES[@]}"
