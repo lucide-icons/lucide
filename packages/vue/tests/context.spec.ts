@@ -21,7 +21,7 @@ describe('Using lucide icon context', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
 
-  it('should render override the providers global props when passed props to the icon', () => {
+  it("should override the provider's global props when passing props to the icon", () => {
     const { container } = render(ContextWrapper, {
       props: {
         strokeWidth: 1,
