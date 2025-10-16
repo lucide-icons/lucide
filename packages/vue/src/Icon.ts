@@ -17,8 +17,8 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     'absolute-stroke-width': absoluteStrokeWidthKebabCase,
     strokeWidth,
     'stroke-width': strokeWidthKebabCase,
-    size = defaultAttributes.width,
-    color = defaultAttributes.stroke,
+    size,
+    color,
     ...props
   },
   { slots },
@@ -35,13 +35,14 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       isEmptyString(absoluteStrokeWidth) ||
       isEmptyString(absoluteStrokeWidthKebabCase) ||
       absoluteStrokeWidth === true ||
-      absoluteStrokeWidthKebabCase === true;
+      absoluteStrokeWidthKebabCase === true ||
+      contextAbsoluteStrokeWidth === true;
 
     const strokeWidthValue =
-      strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'];
+      strokeWidth || strokeWidthKebabCase || contextStrokeWidth || defaultAttributes['stroke-width'];
 
     if (isAbsoluteStrokeWidth) {
-      return (Number(strokeWidthValue) * 24) / Number(size);
+      return (Number(strokeWidthValue) * 24) / Number(size ?? contextSize);
     }
 
     return strokeWidthValue;
@@ -55,7 +56,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       width: size ?? contextSize ?? defaultAttributes.width,
       height: size ?? contextSize ?? defaultAttributes.height,
       stroke: color ?? contextColor ?? defaultAttributes.stroke,
-      'stroke-width': calculatedStrokeWidth,
+      'stroke-width': calculatedStrokeWidth.value,
       class: mergeClasses(
         'lucide',
         ...(name
