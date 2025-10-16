@@ -49,11 +49,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
       : strokeWidth ?? contextStrokeWidth
 
-      console.log('calculatedStrokeWidth', {strokeWidth, contextStrokeWidth});
-
-
     const customAttrs = {
-      stroke: color ?? contextColor ?? defaultAttributes.fill,
+      stroke: color ?? contextColor ?? defaultAttributes.stroke,
       strokeWidth: calculatedStrokeWidth,
       ...rest,
     };
