@@ -51,6 +51,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     'svg',
     {
       ...defaultAttributes,
+      ...props,
       width: size ?? contextSize ?? defaultAttributes.width,
       height: size ?? contextSize ?? defaultAttributes.height,
       stroke: color ?? contextColor ?? defaultAttributes.stroke,
@@ -61,7 +62,6 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
           ? [`lucide-${toKebabCase(toPascalCase(name))}-icon`, `lucide-${toKebabCase(name)}`]
           : ['lucide-icon']),
       ),
-      ...props,
     },
     [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],
   );
