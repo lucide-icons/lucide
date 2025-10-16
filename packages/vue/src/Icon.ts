@@ -1,5 +1,5 @@
-import { type FunctionalComponent, h } from 'vue';
-import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
+import { computed, type FunctionalComponent, h } from 'vue';
+import { isEmptyString, mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { useLucideProps } from './context';
@@ -10,7 +10,17 @@ interface IconProps {
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
-  { size, strokeWidth, absoluteStrokeWidth, color, iconNode, name, class: classes, ...props },
+  {
+    name,
+    iconNode,
+    absoluteStrokeWidth,
+    'absolute-stroke-width': absoluteStrokeWidthKebabCase,
+    strokeWidth,
+    'stroke-width': strokeWidthKebabCase,
+    size = defaultAttributes.width,
+    color = defaultAttributes.stroke,
+    ...props
+  },
   { slots },
 ) => {
   const {
@@ -20,6 +30,22 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
   } = useLucideProps();
 
+  const calculatedStrokeWidth = computed(() => {
+    const isAbsoluteStrokeWidth =
+        isEmptyString(absoluteStrokeWidth) ||
+        isEmptyString(absoluteStrokeWidthKebabCase) ||
+        absoluteStrokeWidth === true ||
+        absoluteStrokeWidthKebabCase === true
+
+    const strokeWidthValue = strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'];
+
+    if(isAbsoluteStrokeWidth) {
+      return (Number(strokeWidthValue) * 24) / Number(size);
+    }
+
+    return strokeWidthValue;
+  })
+
   return h(
     'svg',
     {
@@ -27,10 +53,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       width: size ?? contextSize ?? defaultAttributes.width,
       height: size ?? contextSize ?? defaultAttributes.height,
       stroke: color ?? contextColor ?? defaultAttributes.stroke,
-      'stroke-width':
-          (absoluteStrokeWidth ?? contextAbsoluteStrokeWidth)
-          ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
-          : strokeWidth ?? contextStrokeWidth,
+      'stroke-width': calculatedStrokeWidth,
       class: mergeClasses(
         'lucide',
         ...(name

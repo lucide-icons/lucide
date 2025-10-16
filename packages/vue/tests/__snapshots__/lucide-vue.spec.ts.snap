@@ -149,11 +149,11 @@ exports[`Using lucide icon components > should pass children to the icon slot 1`
       y1="9"
       y2="9"
     />
-    
+
     <text>
       Hello World
     </text>
-    
+
   </svg>
 </div>
 `;

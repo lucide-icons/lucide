@@ -21,14 +21,7 @@ This package includes the following implementations of Lucide icons:
 
 SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
 
-For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using:
-
-- [lucide](lucide)
-- [lucide-react](lucide-react)
-- [lucide-vue](lucide-vue)
-- [lucide-vue-next](lucide-vue-next)
-- [lucide-angular](lucide-angular)
-- [lucide-preact](lucide-preact)
+For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages).
 :::
 
 ## Installation
@@ -101,11 +94,20 @@ Make sure you have the correct Webpack loader configured, such as [`url-loader`]
 
 To import an SVG as a string (e.g., for templating):
 
-```js
+::: code-group
+
+```js [Webpack]
 import arrowRightIcon from 'lucide-static/icons/arrow-right';
 ```
 
+```js [Vite]
+import arrowRightIcon from 'lucide-static/icons/arrow-right.svg?raw';
+```
+
+:::
+
 You'll need an SVG loader like [`svg-inline-loader`](https://v4.webpack.js.org/loaders/svg-inline-loader/).
+
 
 ### Using the SVG sprite
 
@@ -208,19 +210,27 @@ If you're not using a package manager, you can download the font files directly 
 
 ## Node.js
 
-You can also import Lucide icons in Node.js (CommonJS) projects:
+You can also import Lucide icons in Node.js projects:
 
-```js
-const {messageSquare} = require('lucide-static/lib');
+::: code-group
+
+```js [ESM]
+import {MessageSquare} from 'lucide-static';
 ```
 
-> Note: Each icon name is in camelCase.
+```js [CommonJs]
+const {MessageSquare} = require('lucide-static');
+```
+
+:::
+
+> Note: Each icon name is in PascalCase.
 
 #### Express app example in Node.js
 
 ```js
-const express = require('express');
-const {messageSquare} = require('lucide-static/lib');
+import express from 'express';
+import {MessageSquare} from 'lucide-static';
 const app = express();
 const port = 3000;
 
@@ -233,7 +243,7 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <h1>Lucide Icons</h1>
-        <p>This is a Lucide icon ${messageSquare}</p>
+        <p>This is a Lucide icon ${MessageSquare}</p>
 
       </body>
     </html>

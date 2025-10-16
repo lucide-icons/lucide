@@ -11,10 +11,11 @@ import Icon from './Icon';
  */
 const createLucideIcon =
   (iconName: string, iconNode: IconNode): LucideIcon =>
-  (props, { slots }) =>
+  (props, { slots, attrs }) =>
     h(
       Icon,
       {
+        ...attrs,
         ...props,
         iconNode,
         name: iconName,

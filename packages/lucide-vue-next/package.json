@@ -25,9 +25,7 @@
   "amdName": "lucide-vue-next",
   "source": "build/lucide-vue-next.js",
   "main": "dist/cjs/lucide-vue-next.js",
-  "main:umd": "dist/umd/lucide-vue-next.js",
   "module": "dist/esm/lucide-vue-next.js",
-  "unpkg": "dist/umd/lucide-vue-next.min.js",
   "typings": "dist/lucide-vue-next.d.ts",
   "sideEffects": false,
   "files": [
@@ -54,7 +52,7 @@
     "@vue/test-utils": "2.4.5",
     "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
-    "vite": "^6.3.4",
+    "vite": "^6.3.6",
     "vitest": "^3.1.3",
     "vue": "^3.4.21"
   },

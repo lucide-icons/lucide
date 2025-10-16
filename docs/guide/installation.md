@@ -64,25 +64,24 @@ Implementation of the lucide icon library for Vue applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm install @lucide/vue
 ```
 
 ```sh [yarn]
-yarn add lucide-vue-next
+yarn add @lucide/vue
 ```
 
 ```sh [npm]
-npm install lucide-vue-next
+npm install @lucide/vue
 ```
 
 ```sh [bun]
-bun add lucide-vue-next
+bun add @lucide/vue
 ```
 
 :::
 
-For more details, see the [documentation](packages/lucide-vue-next.md).
-For Vue 2 use the `lucide-vue` package.
+For more details, see the [documentation](packages/lucide-vue.md).
 
 ## Svelte
 
@@ -91,22 +90,22 @@ Implementation of the lucide icon library for Svelte applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-svelte
+pnpm add @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add lucide-svelte
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install lucide-svelte
+npm install @lucide/svelte
 ```
 
 ```sh [bun]
-bun add lucide-svelte
+bun add @lucide/svelte
 ```
-
 :::
+> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
 
 For more details, see the [documentation](packages/lucide-svelte.md).
 

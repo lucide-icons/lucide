@@ -13,5 +13,13 @@
   ],
   "categories": [
     "brands"
+  ],
+  "aliases": [
+    {
+      "name": "chrome",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
