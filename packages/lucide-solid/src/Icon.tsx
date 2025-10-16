@@ -32,9 +32,18 @@ const Icon = (props: LucideProps & IconProps) => {
       stroke={localProps.color ?? globalProps.color ?? defaultAttributes.stroke}
       stroke-width={
         (localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth) === true
-          ? (Number(localProps.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width']) * 24) /
-            Number(localProps.size ?? globalProps.size )
-          : Number(localProps.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'])
+          ? (Number(
+              localProps.strokeWidth ??
+                globalProps.strokeWidth ??
+                defaultAttributes['stroke-width'],
+            ) *
+              24) /
+            Number(localProps.size ?? globalProps.size)
+          : Number(
+              localProps.strokeWidth ??
+                globalProps.strokeWidth ??
+                defaultAttributes['stroke-width'],
+            )
       }
       class={mergeClasses(
         'lucide',

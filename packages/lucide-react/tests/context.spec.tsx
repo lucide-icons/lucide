@@ -1,6 +1,6 @@
-import { render } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-import { House, LucideProvider } from "../src/lucide-react";
+import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
+import { House, LucideProvider } from '../src/lucide-react';
 
 describe('Using LucideProvider', () => {
   it('should render the icon with LucideProvider', () => {
@@ -9,8 +9,8 @@ describe('Using LucideProvider', () => {
         size={48}
         color="red"
       >
-        <House/>
-      </LucideProvider>
+        <House />
+      </LucideProvider>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -23,8 +23,8 @@ describe('Using LucideProvider', () => {
         color="red"
         strokeWidth={4}
       >
-        <House/>
-      </LucideProvider>
+        <House />
+      </LucideProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -42,8 +42,8 @@ describe('Using LucideProvider', () => {
         color="red"
         absoluteStrokeWidth
       >
-        <House/>
-      </LucideProvider>
+        <House />
+      </LucideProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -63,7 +63,7 @@ describe('Using LucideProvider', () => {
           color="blue"
           strokeWidth={2}
         />
-      </LucideProvider>
+      </LucideProvider>,
     );
 
     const IconComponent = container.firstElementChild;
@@ -72,6 +72,5 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('height', '24');
     expect(IconComponent).toHaveAttribute('stroke', 'blue');
     expect(IconComponent).toHaveAttribute('stroke-width', '2');
-  }
-  );
-})
+  });
+});

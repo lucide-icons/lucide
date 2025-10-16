@@ -25,28 +25,20 @@ interface IconComponentProps extends LucideProps {
  */
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
   (
-    {
-      color,
-      size,
-      strokeWidth,
-      absoluteStrokeWidth,
-      className = '',
-      children,
-      iconNode,
-      ...rest
-    },
+    { color, size, strokeWidth, absoluteStrokeWidth, className = '', children, iconNode, ...rest },
     ref,
-  ) =>{
+  ) => {
     const {
       size: contextSize = 24,
       strokeWidth: contextStrokeWidth = 2,
       absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
       color: contextColor = 'currentColor',
-    } =  useLucideContext() ?? {};
+    } = useLucideContext() ?? {};
 
-    const calculatedStrokeWidth = (absoluteStrokeWidth ?? contextAbsoluteStrokeWidth)
-      ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
-      : strokeWidth ?? contextStrokeWidth
+    const calculatedStrokeWidth =
+      absoluteStrokeWidth ?? contextAbsoluteStrokeWidth
+        ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
+        : strokeWidth ?? contextStrokeWidth;
 
     return createElement(
       'svg',
@@ -65,8 +57,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
         ...(Array.isArray(children) ? children : [children]),
       ],
-    )
-  }
+    );
+  },
 );
 
 export default Icon;

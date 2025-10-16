@@ -1,10 +1,10 @@
-import { render } from "@testing-library/vue";
-import { describe, expect, it } from "vitest";
-import { House } from "../src/lucide-vue";
-import ContextWrapper from "./ContextWrapper.vue";
+import { render } from '@testing-library/vue';
+import { describe, expect, it } from 'vitest';
+import { House } from '../src/lucide-vue';
+import ContextWrapper from './ContextWrapper.vue';
 
 describe('Using lucide icon context', () => {
- it('should render the icon with LucideProvider', () => {
+  it('should render the icon with LucideProvider', () => {
     const { container } = render(ContextWrapper);
 
     expect(container.firstChild).toMatchSnapshot();
@@ -37,4 +37,4 @@ describe('Using lucide icon context', () => {
     expect(IconComponent).toHaveAttribute('stroke', 'blue');
     expect(IconComponent).toHaveAttribute('stroke-width', '1');
   });
-})
+});

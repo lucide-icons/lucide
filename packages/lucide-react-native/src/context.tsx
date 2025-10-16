@@ -1,8 +1,4 @@
-import {
-  createContext,
-  type ReactNode,
-  useContext,
-} from "react";
+import { createContext, type ReactNode, useContext } from 'react';
 
 const LucideContext = createContext<{
   size?: number;
@@ -20,7 +16,7 @@ const LucideContext = createContext<{
 
 interface LucideProviderProps {
   children: ReactNode;
-  size?: number
+  size?: number;
   fill?: string;
   color?: string;
   strokeWidth?: number;
@@ -28,11 +24,7 @@ interface LucideProviderProps {
 }
 
 export function LucideProvider({ children, ...props }: LucideProviderProps) {
-  return (
-    <LucideContext.Provider value={props}>
-      {children}
-    </LucideContext.Provider>
-  );
+  return <LucideContext.Provider value={props}>{children}</LucideContext.Provider>;
 }
 
 export const useLucideContext = () => useContext(LucideContext);

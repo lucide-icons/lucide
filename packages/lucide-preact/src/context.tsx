@@ -1,7 +1,4 @@
-import {
-  createContext,
-  type ComponentChildren,
-} from "preact";
+import { createContext, type ComponentChildren } from 'preact';
 import { useContext } from 'preact/hooks';
 
 const LucideContext = createContext<{
@@ -20,7 +17,7 @@ const LucideContext = createContext<{
 
 interface LucideProviderProps {
   children: ComponentChildren;
-  size?: number
+  size?: number;
   fill?: string;
   color?: string;
   strokeWidth?: number;
@@ -28,11 +25,7 @@ interface LucideProviderProps {
 }
 
 export function LucideProvider({ children, ...props }: LucideProviderProps) {
-  return (
-    <LucideContext.Provider value={props}>
-      {children}
-    </LucideContext.Provider>
-  );
+  return <LucideContext.Provider value={props}>{children}</LucideContext.Provider>;
 }
 
 export const useLucideContext = () => useContext(LucideContext);

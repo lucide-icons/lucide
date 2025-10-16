@@ -15,5 +15,5 @@ export function setLucideProps(props: LucideIconsContext) {
 }
 
 export function useLucideProps() {
-  return inject<LucideIconsContext>(LUCIDE_CONTEXT , {});
+  return inject<LucideIconsContext>(LUCIDE_CONTEXT, {});
 }

@@ -31,17 +31,18 @@ const Icon = ({
   iconNode,
   class: classes = '',
   ...rest
-}: IconComponentProps) =>{
+}: IconComponentProps) => {
   const {
-      size: contextSize = 24,
-      strokeWidth: contextStrokeWidth = 2,
-      absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
-      color: contextColor = 'currentColor',
-    } =  useLucideContext() ?? {};
+    size: contextSize = 24,
+    strokeWidth: contextStrokeWidth = 2,
+    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    color: contextColor = 'currentColor',
+  } = useLucideContext() ?? {};
 
-    const calculatedStrokeWidth = (absoluteStrokeWidth ?? contextAbsoluteStrokeWidth)
+  const calculatedStrokeWidth =
+    absoluteStrokeWidth ?? contextAbsoluteStrokeWidth
       ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
-      : strokeWidth ?? contextStrokeWidth
+      : strokeWidth ?? contextStrokeWidth;
 
   return h(
     'svg',
@@ -54,10 +55,8 @@ const Icon = ({
       class: ['lucide', classes].join(' '),
       ...rest,
     },
-    [
-      ...iconNode.map(([tag, attrs]) => h(tag, attrs)),
-      ...toChildArray(children)
-    ],
-  );}
+    [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
+  );
+};
 
 export default Icon;

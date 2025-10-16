@@ -1,6 +1,6 @@
-import { render } from "@solidjs/testing-library";
-import { describe, expect, it } from "vitest";
-import { House, LucideProvider } from "../src/lucide-solid";
+import { render } from '@solidjs/testing-library';
+import { describe, expect, it } from 'vitest';
+import { House, LucideProvider } from '../src/lucide-solid';
 
 describe('Using LucideProvider', () => {
   it('should render the icon with LucideProvider', () => {
@@ -9,7 +9,7 @@ describe('Using LucideProvider', () => {
         size={48}
         color="red"
       >
-        <House/>
+        <House />
       </LucideProvider>
     ));
 
@@ -23,7 +23,7 @@ describe('Using LucideProvider', () => {
         color="red"
         strokeWidth={4}
       >
-        <House/>
+        <House />
       </LucideProvider>
     ));
 
@@ -34,4 +34,4 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke', 'red');
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
   });
-})
+});

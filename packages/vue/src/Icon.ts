@@ -32,19 +32,20 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
 
   const calculatedStrokeWidth = computed(() => {
     const isAbsoluteStrokeWidth =
-        isEmptyString(absoluteStrokeWidth) ||
-        isEmptyString(absoluteStrokeWidthKebabCase) ||
-        absoluteStrokeWidth === true ||
-        absoluteStrokeWidthKebabCase === true
+      isEmptyString(absoluteStrokeWidth) ||
+      isEmptyString(absoluteStrokeWidthKebabCase) ||
+      absoluteStrokeWidth === true ||
+      absoluteStrokeWidthKebabCase === true;
 
-    const strokeWidthValue = strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'];
+    const strokeWidthValue =
+      strokeWidth || strokeWidthKebabCase || defaultAttributes['stroke-width'];
 
-    if(isAbsoluteStrokeWidth) {
+    if (isAbsoluteStrokeWidth) {
       return (Number(strokeWidthValue) * 24) / Number(size);
     }
 
     return strokeWidthValue;
-  })
+  });
 
   return h(
     'svg',
