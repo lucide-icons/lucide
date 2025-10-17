@@ -1,4 +1,4 @@
-<svg width="480" height="328" viewBox="0 0 480 328" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="328" viewBox="0 0 480 328" fill="none" class="a11y-example">
   <title>In short: use a contrast ratio of at least 4.5:1</title>
   <rect width="480" height="152" rx="8" style="fill: var(--vp-code-block-bg)" />
   <rect x="183.5" y="24" width="113" height="56" rx="28" fill="#712CF8"/>

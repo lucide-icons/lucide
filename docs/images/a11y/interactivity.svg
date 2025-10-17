@@ -1,4 +1,4 @@
-<svg width="480" height="376" viewBox="0 0 480 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="376" viewBox="0 0 480 376" fill="none" class="a11y-example">
   <rect width="480" height="164" rx="8" style="fill: var(--vp-code-block-bg)"/>
   <path d="M240 47C240.552 47 241 46.5523 241 46C241 45.4477 240.552 45 240 45C239.448 45 239 45.4477 239 46C239 46.5523 239.448 47 240 47Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M240 40C240.552 40 241 39.5523 241 39C241 38.4477 240.552 38 240 38C239.448 38 239 38.4477 239 39C239 39.5523 239.448 40 240 40Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

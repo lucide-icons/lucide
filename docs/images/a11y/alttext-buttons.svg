@@ -1,4 +1,4 @@
-<svg width="480" height="368" viewBox="0 0 480 368" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="368" viewBox="0 0 480 368" fill="none" class="a11y-example">
   <rect width="480" height="184" rx="8" style="fill: var(--vp-code-block-bg)"/>
   <rect x="174.5" y="32" width="131" height="56" rx="28" fill="#712CF8"/>
   <path d="M218.5 54L207.5 65L202.5 60" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

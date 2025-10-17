@@ -1,4 +1,4 @@
-<svg width="480" height="364" viewBox="0 0 480 364" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="364" viewBox="0 0 480 364" fill="none" class="a11y-example">
   <title>In short: Don’t rely on communicating the function of elements by icons alone. Do also provide a written description of the your interactive elements. For example: write out "On this page" on your on-page navigation element.</title>
   <rect width="480" height="164" rx="8" style="fill: var(--vp-code-block-bg)" />
   <path d="M232 46H248" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -1,4 +1,4 @@
-<svg width="480" height="440" viewBox="0 0 480 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="440" viewBox="0 0 480 440" fill="none" class="a11y-example">
   <title>For example: Don’t mark state with color, mark it with distinct visuals.</title>
   <rect width="480" height="208" rx="8" style="fill: var(--vp-code-block-bg)"/>
   <rect x="46.25" y="24" width="56" height="56" rx="28" style="fill: var(--vp-a11y-success)"fill-opacity="0.15"/>

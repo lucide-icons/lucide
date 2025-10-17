@@ -1,4 +1,4 @@
-<svg width="480" height="336" viewBox="0 0 480 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="336" viewBox="0 0 480 336" fill="none" class="a11y-example">
   <title>Example of using target size correctly</title>
 
   <rect width="480" height="148" rx="8" style="fill: var(--vp-code-block-bg)"/>

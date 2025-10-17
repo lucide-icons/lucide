@@ -216,3 +216,16 @@ We also recommend checking out the following resources about accessibility:
 - [A11yTalks](https://www.a11ytalks.com/)
 - [A11y automation tracker](https://a11y-automation.dev/)
 - [The A11Y Project](https://www.a11yproject.com/)
+
+<style>
+svg.a11y-example {
+  max-width: calc(100% + 48px);
+  margin: 0 -24px;
+}
+@media (min-width: 480px) {
+  svg.a11y-example {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+</style>
