@@ -93,6 +93,7 @@ In the `createIcons` function you can pass some extra parameters:
 - you can pass `nameAttr` to adjust the attribute name to replace for
 - you can pass `attrs` to pass additional custom attributes, for instance CSS classes or stroke options.
 - you can pass `root` to provide a custom DOM element the icons should be replaced in (useful when manipulating small sections of a large DOM or elements in the shadow DOM)
+- you can pass `inTemplates: true` to also replace icons inside `<template>` tags.
 
 Here is a full example:
 
@@ -107,6 +108,7 @@ createIcons({
   },
   nameAttr: 'data-lucide', // attribute for the icon name.
   root: element, // DOM element to replace icons in.
+  inTemplates: true // Also replace icons inside <template> tags.
 });
 ```
 
@@ -121,6 +123,34 @@ createIcons({
     ArrowRight,
     Globe
   }
+});
+```
+
+### Custom Document root
+
+Apply icons in a custom root element, for instance a shadow DOM root.
+
+```js
+import { createIcons } from 'lucide';
+
+// Custom root element, for instance a shadow DOM root.
+const shadowRoot = element.attachShadow({ mode: 'open' });
+
+createIcons({
+  root: shadowRoot
+});
+```
+
+### Apply icons inside `<template>` tags
+
+By default icons inside `<template>` tags are not added.
+By setting the `inTemplates` option to `true`, icons inside templates will also be replaced.
+
+```js
+import { createIcons } from 'lucide';
+
+createIcons({
+  inTemplates: true
 });
 ```
 
