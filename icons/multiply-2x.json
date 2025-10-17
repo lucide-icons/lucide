@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "media",
+    "math",
+    "actions"
+  ],
+  "categories": [
+    "double",
+    "2x",
+    "times-two",
+    "multiply",
+    "speed",
+    "fast",
+    "boost",
+    "duplicate",
+    "math",
+    "ratio"
+  ]
+}
