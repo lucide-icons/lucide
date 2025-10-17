@@ -82,12 +82,7 @@ export const reactSidebar = [
           text: 'Dynamic icon component',
           link: '/guide/react/advanced/dynamic-icon-component.md',
           desc: 'Dynamically import icons as needed',
-        },
-        {
-          text: 'VSCode',
-          link: '/guide/react/advanced/vscode',
-          desc: 'Configure VSCode for lucide-react',
-        },
+        }
       ],
     },
      {
