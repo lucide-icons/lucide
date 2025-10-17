@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "actions",
+    "controls",
+    "math"
+  ],
+  "categories": [
+    "max",
+    "maximum",
+    "full",
+    "total",
+    "limit",
+    "upper",
+    "top",
+    "quantity",
+    "amount",
+    "fill",
+    "complete"
+  ]
+}
