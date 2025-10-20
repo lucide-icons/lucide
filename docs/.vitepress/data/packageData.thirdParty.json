@@ -97,8 +97,8 @@
     "documentation": "https://github.com/dinkelspiel/lucide_lustre/blob/master/README.md"
   },
   {
-    "name": "lucide_icons_flutter",
-    "description": "A library providing https://lucide.dev icons to lustre.",
+    "name": "lucide-icons-flutter",
+    "description": "A library providing https://lucide.dev icons to Flutter.",
     "icon": "/framework-logos/flutter.svg",
     "shields": [
       {
