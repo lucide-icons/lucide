@@ -33,9 +33,8 @@ function onSelectFramework(item: { name: string, icon: string, route: string }) 
   fallbackFramework.value = item
   if (item.route !== router.route.path) {
     const likeRoute = router.route.path.replace(selected.value.route, item.route);
-    console.log(sidebar[item.route]);
 
-    const hasRoute = sidebar[item.route].some(section =>
+    const hasRoute = sidebar[item.route]?.some(section =>
       section?.items?.some(({ link }) => link === likeRoute)
     );
 

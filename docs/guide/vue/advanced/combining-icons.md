@@ -12,12 +12,12 @@ You can combine multiple icons into a single icon by using SVG in SVG.
 This is useful for if you want to be creative and make your own custom icons by combining existing icons.
 
 <Sandpack
-  template="react"
+  template="vue"
   :theme="sandpackTheme"
   :files="combineIconsExample"
   :customSetup='{
     dependencies: {
-      "lucide-react": "latest"
+      "lucide-vue-next": "latest"
     }
   }'
   :options="{
@@ -40,12 +40,12 @@ You can also use SVG elements to create your own icons.
 ## Example with notification badge
 
 <Sandpack
-  template="react"
+  template="vue"
   :theme="sandpackTheme"
   :files="combineNotificationExample"
   :customSetup='{
     dependencies: {
-      "lucide-react": "latest"
+      "lucide-vue-next": "latest"
     }
   }'
   :options="{
@@ -59,12 +59,12 @@ You can also use SVG elements to create your own icons.
 You can also use the `text` SVG element to add text to your icon.
 
 <Sandpack
-  template="react"
+  template="vue"
   :theme="sandpackTheme"
   :files="combineCustomExample"
   :customSetup='{
     dependencies: {
-      "lucide-react": "latest"
+      "lucide-vue-next": "latest"
     }
   }'
   :options="{

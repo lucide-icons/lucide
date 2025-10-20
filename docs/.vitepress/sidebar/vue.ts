@@ -57,11 +57,6 @@ export const vueSidebar = [
           desc: 'Using lucide-lab with @lucide/vue',
         },
         {
-          text: 'Animations',
-          link: '/guide/vue/advanced/animations',
-          desc: 'Add animations to your icons',
-        },
-        {
           text: 'Filled icons',
           link: '/guide/vue/advanced/filled-icons',
           desc: 'Using filled icons in @lucide/vue',
@@ -77,16 +72,21 @@ export const vueSidebar = [
           link: '/guide/vue/advanced/combining-icons',
           desc: 'Combine multiple icons into one',
         },
-        {
-          text: 'Dynamic imports',
-          link: '/guide/vue/advanced/dynamic-imports',
-          desc: 'Dynamically import icons as needed',
-        },
-        {
-          text: 'VSCode',
-          link: '/guide/vue/advanced/vscode',
-          desc: 'Configure VSCode for @lucide/vue',
-        },
       ],
     },
+    {
+      text: 'Resources',
+      items: [
+        {
+          text: 'Accessibility in depth',
+          link: '/guide/accessibility',
+          desc: 'Accessibility best practices',
+        },
+         {
+          text: 'VSCode',
+          link: '/guide/vscode',
+          desc: 'VSCode and Lucide',
+        },
+      ],
+    }
   ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];

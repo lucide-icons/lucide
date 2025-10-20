@@ -1,10 +1,3 @@
----
-head:
-  - - link
-    - rel: canonical
-      href: https://lucide.dev/guide/vue/advanced/filled-icons
----
-
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
 import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
@@ -19,12 +12,12 @@ Fill can still be used and will work fine on certain icons.
 
 Example with stars:
 <Sandpack
-  template="react"
+  template="vue"
   :theme="sandpackTheme"
   :files="sizeIconExample"
   :customSetup='{
     dependencies: {
-      "lucide-react": "latest"
+      "lucide-vue-next": "latest"
     }
   }'
   :options="{

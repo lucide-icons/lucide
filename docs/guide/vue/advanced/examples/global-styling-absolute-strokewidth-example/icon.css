@@ -1,0 +1,16 @@
+.lucide {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}

@@ -1,0 +1,14 @@
+.star-rating {
+  position: relative;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rating {
+  position: absolute;
+  top: 0;
+}
+
