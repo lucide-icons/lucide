@@ -4,7 +4,7 @@ import sidebar, { guideSidebarTop } from '../../../sidebar';
 import { useData, useRouter } from 'vitepress';
 import Select from '../base/Select.vue';
 import { computed, ref, watch } from 'vue';
-import { route } from '~/.vitepress/data/iconNodes';
+import { link, route } from '~/.vitepress/data/iconNodes';
 import { useLocalStorage } from '@vueuse/core';
 
 const { page } = useData()
@@ -32,6 +32,18 @@ const selected = computed(() => {
 function onSelectFramework(item: { name: string, icon: string, route: string }) {
   fallbackFramework.value = item
   if (item.route !== router.route.path) {
+    const likeRoute = router.route.path.replace(selected.value.route, item.route);
+    console.log(sidebar[item.route]);
+
+    const hasRoute = sidebar[item.route].some(section =>
+      section?.items?.some(({ link }) => link === likeRoute)
+    );
+
+    if (hasRoute) {
+      router.go(likeRoute)
+      return;
+    }
+
     router.go(item.route)
   }
 }
