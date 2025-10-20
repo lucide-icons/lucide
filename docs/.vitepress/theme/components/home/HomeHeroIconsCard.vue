@@ -53,7 +53,7 @@ const scaleDownVariants: Variants = {
     transition: {
       delay: 0.5,
       duration: 1.5,
-      ease: "easeIn"
+      ease: [0.22, 1, 0.36, 1]
     }
   },
   small: {
@@ -64,7 +64,7 @@ const scaleDownVariants: Variants = {
     transition: {
       delay: 1,
       duration: 1,
-      ease: "easeInOut"
+      ease: [0.22, 1, 0.36, 1]
     }
   }
 }
@@ -122,7 +122,7 @@ const iconAnimationVariants = {
     x: [0.5, 0, 0],
     y: [-0.5, 0, 0],
     strokeWidth: [2, 2, 2],
-    transition: { delay: 0.5 + index * 0.023, duration: 1.5, ease: 'easeInOut' }
+    transition: { delay: index * 0.023, duration: 1.5, ease: 'easeInOut' }
   }),
   shrinkIcons: (index) => ({
     animationName: 'shrinkIcons',
