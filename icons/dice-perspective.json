@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "dice",
+    "cube",
+    "game",
+    "chance",
+    "random",
+    "luck",
+    "gambling",
+    "roll",
+    "probability",
+    "block",
+    "perspective"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
