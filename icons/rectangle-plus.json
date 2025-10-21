@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ammar08429"
+  ],
+  "tags": [
+    "add",
+    "new",
+    "increase",
+    "increment",
+    "positive",
+    "calculate",
+    "calculator",
+    "button",
+    "keyboard",
+    "toolbar",
+    "maximum",
+    "upgrade",
+    "extra",
+    "operator",
+    "join",
+    "concatenate",
+    "code",
+    "coding",
+    "rectangle",
+    "+"
+  ],
+  "categories": [
+    "math",
+    "tools",
+    "development",
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "plus-rectangle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
