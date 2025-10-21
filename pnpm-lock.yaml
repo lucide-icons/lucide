@@ -149,8 +149,8 @@ importers:
         specifier: workspace:*
         version: link:../packages/lucide-vue-next
       motion-v:
-        specifier: ^1.7.1
-        version: 1.7.1(@vueuse/core@12.8.2(typescript@5.9.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.21(typescript@5.9.2))
+        specifier: ^1.7.3
+        version: 1.7.3(@vueuse/core@12.8.2(typescript@5.9.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.21(typescript@5.9.2))
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -10016,8 +10016,8 @@ packages:
   motion-utils@12.23.6:
     resolution: {integrity: sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==}
 
-  motion-v@1.7.1:
-    resolution: {integrity: sha512-B22fYcHGx05moUtoIH0ZP/JzeacGOHzLkLmMTKU9tRB+uVMSfgqiXVzZb602qiG1ap8W7TZ+5RD5R3MmODu9oA==}
+  motion-v@1.7.3:
+    resolution: {integrity: sha512-lwgrge7Y7FF9LxBxZ//MsSLPPjh4z1yYE9ie236Pa89mRCsBlONXbLcseln6G6LyAG8pt3PpzUxWt2grwMcBAA==}
     peerDependencies:
       '@vueuse/core': '>=10.0.0'
       vue: '>=3.0.0'
@@ -24534,7 +24534,7 @@ snapshots:
 
   motion-utils@12.23.6: {}
 
-  motion-v@1.7.1(@vueuse/core@12.8.2(typescript@5.9.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.21(typescript@5.9.2)):
+  motion-v@1.7.3(@vueuse/core@12.8.2(typescript@5.9.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.21(typescript@5.9.2)):
     dependencies:
       '@vueuse/core': 12.8.2(typescript@5.9.2)
       framer-motion: 12.23.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)

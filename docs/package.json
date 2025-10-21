@@ -49,7 +49,7 @@
     "lucide-react": "workspace:*",
     "lucide-vue-next": "workspace:*",
     "lucide": "workspace:*",
-    "motion-v": "^1.7.1",
+    "motion-v": "^1.7.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sandpack-vue3": "3.1.12",
