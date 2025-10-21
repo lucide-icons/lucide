@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "sports",
+    "table tennis",
+    "ping pong",
+    "racket",
+    "paddle",
+    "ball",
+    "game",
+    "recreation",
+    "activity",
+    "equipment"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
