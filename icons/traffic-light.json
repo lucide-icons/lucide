@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AleksejDix"
+  ],
+  "tags": [
+    "traffic",
+    "light",
+    "car",
+    "sign"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}
