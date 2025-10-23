@@ -9,8 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <circle cx="12" cy="12" r="1" fill="currentColor" />
-  <circle cx="12" cy="16" r="1" fill="currentColor" />
-  <circle cx="12" cy="8" r="1" fill="currentColor" />
-  <rect x="7" y="3" width="10" height="18" rx="2" />
+  <circle cx="12" cy="12" r="2" />
+  <circle cx="12" cy="16" r="2" />
+  <circle cx="12" cy="8" r="2" />
+  <rect x="6" y="2" width="12" height="20" rx="2" />
 </svg>
