@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "AleksejDix"
+  ],
+  "tags": [
+    "world",
+    "browser",
+    "language",
+    "translate"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}
