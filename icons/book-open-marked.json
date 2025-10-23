@@ -1,0 +1,48 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "AleksejDix"
+  ],
+  "tags": [
+    "reading",
+    "pages",
+    "booklet",
+    "magazine",
+    "leaflet",
+    "pamphlet",
+    "library",
+    "writing",
+    "written",
+    "writer",
+    "author",
+    "story",
+    "script",
+    "screenplay",
+    "fiction",
+    "novel",
+    "information",
+    "knowledge",
+    "education",
+    "high school",
+    "university",
+    "college",
+    "academy",
+    "student",
+    "study",
+    "learning",
+    "homework",
+    "research",
+    "documentation",
+    "revealed",
+    "blank",
+    "plain"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "gaming"
+  ]
+}
