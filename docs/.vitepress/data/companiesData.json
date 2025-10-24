@@ -8,6 +8,14 @@
     }
   },
   {
+    "name": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/",
+    "image": {
+      "light": "/company-logos/mdn-light.svg",
+      "dark": "/company-logos/mdn-dark.svg"
+    }
+  },
+  {
     "name": "Supabase",
     "url": "https://supabase.com",
     "image": {
@@ -21,6 +29,14 @@
     "image": {
       "light": "/company-logos/obsidian-light.svg",
       "dark": "/company-logos/obsidian-dark.svg"
+    }
+  },
+  {
+    "name": "Nuxt",
+    "url": "https://nuxt.com/",
+    "image": {
+      "light": "/company-logos/nuxt-light.svg",
+      "dark": "/company-logos/nuxt-dark.svg"
     }
   },
   {

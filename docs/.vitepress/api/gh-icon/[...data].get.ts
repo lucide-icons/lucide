@@ -13,10 +13,12 @@ export default eventHandler((event) => {
   const data = pathData.at(-1).slice(0, -4);
   const [name] = pathData;
 
-  const src = Buffer.from(data, 'base64')
-    .toString('utf8')
-    .replaceAll('\n', '')
-    .replace(/<svg[^>]*>|<\/svg>/g, '');
+  const src = Buffer.from(data, 'base64').toString('utf8').replaceAll('\n', '');
+
+  const width = parseInt((src.includes('<svg ') ? src.match(/width="(\d+)"/)?.[1] : null) ?? '24');
+  const height = parseInt(
+    (src.includes('<svg ') ? src.match(/height="(\d+)"/)?.[1] : null) ?? '24',
+  );
 
   const children = [];
 
@@ -38,7 +40,7 @@ export default eventHandler((event) => {
     children.push(
       createElement(Backdrop, {
         backdropString,
-        src,
+        src: src.replace(/<svg[^>]*>|<\/svg>/g, ''),
         color: '#777',
       }),
     );
@@ -46,7 +48,18 @@ export default eventHandler((event) => {
 
   const svg = Buffer.from(
     // We can't use jsx here, is not supported here by nitro.
-    renderToString(createElement(SvgPreview, { src, showGrid: true }, children)),
+    renderToString(
+      createElement(
+        SvgPreview,
+        {
+          src: src.replace(/<svg[^>]*>|<\/svg>/g, ''),
+          height,
+          width,
+          showGrid: true,
+        },
+        children,
+      ),
+    ),
   ).toString('utf8');
 
   defaultContentType(event, 'image/svg+xml');

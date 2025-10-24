@@ -1,29 +1,57 @@
 import replaceElement from './replaceElement';
 import * as iconAndAliases from './iconsAndAliases';
+import { Icons, SVGProps } from './types';
+
+export interface CreateIconsOptions {
+  icons?: Icons;
+  nameAttr?: string;
+  attrs?: SVGProps;
+  root?: Element | Document | DocumentFragment;
+  inTemplates?: boolean;
+}
 
 /**
  * Replaces all elements with matching nameAttr with the defined icons
- * @param {{ icons?: object, nameAttr?: string, attrs?: object }} options
+ * @param {CreateIconsOptions} options
  */
-const createIcons = ({ icons = {}, nameAttr = 'data-lucide', attrs = {} } = {}) => {
+const createIcons = ({
+  icons = {},
+  nameAttr = 'data-lucide',
+  attrs = {},
+  root = document,
+  inTemplates,
+}: CreateIconsOptions) => {
   if (!Object.values(icons).length) {
     throw new Error(
       "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`",
     );
   }
 
-  if (typeof document === 'undefined') {
+  if (typeof root === 'undefined') {
     throw new Error('`createIcons()` only works in a browser environment.');
   }
 
-  const elementsToReplace = document.querySelectorAll(`[${nameAttr}]`);
-  Array.from(elementsToReplace).forEach((element) =>
-    replaceElement(element, { nameAttr, icons, attrs }),
-  );
+  const elementsToReplace = Array.from(root.querySelectorAll(`[${nameAttr}]`));
+
+  elementsToReplace.forEach((element) => replaceElement(element, { nameAttr, icons, attrs }));
+
+  if (inTemplates) {
+    const templates = Array.from(root.querySelectorAll('template'));
+
+    templates.forEach((template) =>
+      createIcons({
+        icons,
+        nameAttr,
+        attrs,
+        root: template.content,
+        inTemplates,
+      }),
+    );
+  }
 
   /** @todo: remove this block in v1.0 */
   if (nameAttr === 'data-lucide') {
-    const deprecatedElements = document.querySelectorAll('[icon-name]');
+    const deprecatedElements = root.querySelectorAll('[icon-name]');
     if (deprecatedElements.length > 0) {
       console.warn(
         '[Lucide] Some icons were found with the now deprecated icon-name attribute. These will still be replaced for backwards compatibility, but will no longer be supported in v1.0 and you should switch to data-lucide',

@@ -27,6 +27,22 @@ describe('createIcons', () => {
     expect(hasSvg).toBeTruthy();
   });
 
+  it('should only execute given provided context', () => {
+    document.body.innerHTML = `<div id="context"><i data-lucide="volume-2"></i></div><i data-lucide="funnel"></i>`;
+
+    const context = document.querySelector('#context')!;
+    createIcons({
+      icons,
+      root: context,
+    });
+
+    const hasSvg = !!document.querySelector('svg.lucide-volume-2');
+    const hasUnreplaced = !!document.querySelector('i[data-lucide="funnel"]');
+
+    expect(hasSvg).toBeTruthy();
+    expect(hasUnreplaced).toBeTruthy();
+  });
+
   it('should add custom attributes', () => {
     document.body.innerHTML = `<i data-lucide="volume-2" class="lucide"></i>`;
 
@@ -87,5 +103,21 @@ describe('createIcons', () => {
 
     expect(document.body.innerHTML).toBe(svg);
     expect(document.body.innerHTML).toMatchSnapshot();
+  });
+
+  it('should not replace icons inside template elements by default', () => {
+    document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
+
+    createIcons({ icons });
+    const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
+    expect(hasIcon).toBeFalsy();
+  });
+
+  it('should replace icons inside template elements when replaceInsideTemplates is true', () => {
+    document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
+
+    createIcons({ icons, inTemplates: true });
+    const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
+    expect(hasIcon).toBeTruthy();
   });
 });

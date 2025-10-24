@@ -159,16 +159,14 @@ try {
       const aliases = iconMetaData.aliases ?? [];
 
       if (aliases.length) {
-        aliases
-          .map((alias) => (typeof alias === 'string' ? alias : alias.name))
-          .forEach((alias) => {
-            if (!(alias in newReleaseMetaData)) {
-              return;
-            }
+        aliases.forEach((alias) => {
+          if (!(alias.name in newReleaseMetaData)) {
+            return;
+          }
 
-            contents.createdRelease =
-              newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
-          });
+          contents.createdRelease =
+            newReleaseMetaData[alias.name].createdRelease ?? defaultReleaseMetaData.createdRelease;
+        });
       }
 
       const output = JSON.stringify(contents, null, 2);

@@ -54,7 +54,7 @@ import { Camera } from 'lucide-vue-next';
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
 | `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
+| `absoluteStrokeWidth`   | *boolean* | false        |
 | `default-class`         | *string*  | lucide-icon  |
 
 ### Applying props
