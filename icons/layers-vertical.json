@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "stack",
+    "pile",
+    "pages",
+    "sheets",
+    "paperwork",
+    "copies",
+    "copy",
+    "collection"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
