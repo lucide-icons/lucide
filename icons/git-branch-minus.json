@@ -1,17 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu",
-    "ericfennis"
+    "joris-gallot"
   ],
   "tags": [
     "code",
     "version control",
     "vcs",
     "repository",
-    "add",
-    "create",
-    "+"
+    "delete",
+    "remove",
+    "-"
   ],
   "categories": [
     "development"
