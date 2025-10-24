@@ -16,7 +16,8 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 
 ## Context Provider
 
-Lucide Vue provides a context API called `setLucideProps` that allows you to set global default properties for all Lucide icons in your application.
+
+Lucide Svelte provides a context API called `setLucideProps` that allows you to set global default properties for all Lucide icons in your application.
 This is useful if you want all icons to share the same size, color, or stroke width by default.
 
 ### Setting global defaults
@@ -24,7 +25,7 @@ This is useful if you want all icons to share the same size, color, or stroke wi
 You can call `setLucideProps` in your main entry file or in a top-level component to set the default properties for all icons.
 
 ```js
-import { setLucideProps } from '@lucide/vue';
+import { setLucideProps } from '@lucide/svelte';
 
 setLucideProps({
   size: 32,

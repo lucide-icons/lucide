@@ -33,7 +33,6 @@ export const reactSidebar = [
         },
       ],
     },
-    // TODO: Add this section
     {
       text: 'Advanced',
       items: [

@@ -33,7 +33,6 @@ export const svelteSidebar = [
         },
       ],
     },
-    // TODO: Add this section
     {
       text: 'Advanced',
       items: [
@@ -58,37 +57,31 @@ export const svelteSidebar = [
           desc: 'Using lucide-lab with @lucide/svelte',
         },
         {
-          text: 'Animations',
-          link: '/guide/svelte/advanced/animations',
-          desc: 'Add animations to your icons',
-        },
-        {
           text: 'Filled icons',
           link: '/guide/svelte/advanced/filled-icons',
           desc: 'Using filled icons in @lucide/svelte',
         },
         {
-          text: 'Aliased Names',
-          link: '/guide/svelte/advanced/aliased-names',
-          desc: 'Using aliased icon names',
-        },
-
-        {
           text: 'Combining icons',
           link: '/guide/svelte/advanced/combining-icons',
           desc: 'Combine multiple icons into one',
         },
-        {
-          text: 'Dynamic imports',
-          link: '/guide/svelte/advanced/dynamic-imports',
-          desc: 'Dynamically import icons as needed',
-        },
-        {
-          text: 'VSCode',
-          link: '/guide/svelte/advanced/vscode',
-          desc: 'Configure VSCode for @lucide/svelte',
-        },
       ],
     },
+    {
+      text: 'Resources',
+      items: [
+        {
+          text: 'Accessibility in depth',
+          link: '/guide/accessibility',
+          desc: 'Accessibility best practices',
+        },
+         {
+          text: 'VSCode',
+          link: '/guide/vscode',
+          desc: 'VSCode and Lucide',
+        },
+      ],
+    }
   ] satisfies DefaultTheme.SidebarItem[] & { items: { desc?: string }[] }[];
 
