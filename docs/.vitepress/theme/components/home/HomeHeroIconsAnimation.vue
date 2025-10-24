@@ -86,15 +86,15 @@ const draw: Variants = {
         opacity: { delay: 2.4, duration: 0.1 },
     },
   },
-  exit: {
+  exit: (path) => ({
     animationName: 'exit',
-    stroke: 'var(--vp-c-text-1)',
+    stroke: path ? 'var(--vp-c-text-1)' : 'var(--vp-c-brand)' ,
     pathLength: 1,
     opacity: 1,
     transition: {
       duration: 0.8,
     },
-  },
+  }),
 };
 
 const onAnimationComplete = (item) => {
@@ -120,11 +120,13 @@ const onAnimationComplete = (item) => {
 
     setTimeout(() => {
       emit('animation-complete')
-    }, 2000)
+    }, 2800)
   }
 }
 
-const randomIndex = ref(Math.floor(Math.random() * 64))
+const randomIndex = ref(
+  Math.floor(Math.random() * 64)
+)
 
 const iconAnimationVariants = {
   initial: {
@@ -132,7 +134,7 @@ const iconAnimationVariants = {
     opacity: 0,
     x: 0,
     y: 0,
-    transition: { duration: 1, ease: 'easeInOut' }
+    transition: { duration: 1, delay: 1, ease: 'easeInOut' }
   },
   showIcons: (index) => ({
     animationName: 'showIcons',
@@ -140,7 +142,7 @@ const iconAnimationVariants = {
     x: [0.5, 0, 0],
     y: [-0.5, 0, 0],
     strokeWidth: randomIndex.value === index ? [0, 2, 2] : undefined,
-    transition: { delay: index * 0.023, duration: 1.5, ease: 'easeInOut' }
+    transition: { delay: index * 0.023 , duration: 1.6, ease: 'easeInOut' }
   }),
 }
 
@@ -152,7 +154,7 @@ const shrinkIconVariants = {
     animationName: 'shrinkIcons',
     opacity: 1,
     strokeWidth: 0,
-    transition: { delay: 0.5, duration: 1.5, ease: 'easeInOut' }
+    transition: { delay: 1.8, duration: 1.5, ease: 'easeInOut' }
   })
 }
 
@@ -207,6 +209,7 @@ const shrinkIconVariants = {
             :animate="drawAnimation"
             initial="hidden"
             :variants="draw"
+            :custom="1"
             @animation-complete="onAnimationComplete"
           />
           <motion.path d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"
@@ -214,6 +217,7 @@ const shrinkIconVariants = {
             :animate="drawAnimation"
             initial="hidden"
             :variants="draw"
+            :custom="0"
           />
         </motion.g>
       </motion.g>
