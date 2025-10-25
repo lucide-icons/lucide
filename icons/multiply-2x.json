@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "multiply",
+    "scale",
+    "resize",
+    "expand",
+    "enlarge",
+    "increase",
+    "zoom",
+    "vector",
+    "graphic",
+    "symbol",
+    "media",
+    "math",
+    "actions"
+  ],
+  "categories": [
+    "double",
+    "2x",
+    "times-two",
+    "multiply",
+    "speed",
+    "fast",
+    "boost",
+    "duplicate",
+    "math",
+    "ratio"
+  ]
+}
