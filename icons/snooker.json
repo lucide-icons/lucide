@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "cue",
+    "sport",
+    "playing",
+    "cueball",
+    "clubs",
+    "match",
+    "competition",
+    "sports",
+    "snooker",
+    "billiards",
+    "pool",
+    "cue sport",
+    "balls",
+    "table",
+    "recreation",
+    "indoor game",
+    "precision"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
