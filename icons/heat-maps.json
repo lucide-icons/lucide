@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KISHORE-KUMAR-S"
+  ],
+  "tags": [
+    "heatmaps",
+    "heatmap",
+    "thermal-view",
+    "motion-density",
+    "heat-intensity"
+  ],
+  "categories": [
+    "heat",
+    "density",
+    "intensity",
+    "thermal",
+    "heatmap"
+  ]
+}
