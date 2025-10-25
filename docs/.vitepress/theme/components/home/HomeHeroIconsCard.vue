@@ -8,6 +8,7 @@ import FakeInput from '../base/FakeInput.vue'
 
 const { go } = useRouter()
 const intervalTime = shallowRef()
+const kbdSearchShortcut = ref('')
 
 const getInitialItems = () => data.icons.slice(0, 48)
 const items = ref(getInitialItems())
@@ -37,13 +38,27 @@ function startInterval() {
   }, 2000)
 }
 
+function handleKeydown(event: KeyboardEvent) {
+  // Check for Cmd+K (Mac), Ctrl+K (Windows/Linux), or forward slash
+  if (((event.metaKey || event.ctrlKey) && event.key === 'k') || event.key === '/') {
+    event.preventDefault()
+    go('/icons/?focus')
+  }
+}
+
 // TODO: Try maybe something else for better pref performance
 onMounted(() => {
   window.addEventListener('mousemove', startInterval, { once: true })
+  window.addEventListener('keydown', handleKeydown)
+
+  // Detect platform and set appropriate keyboard shortcut for search focus
+  const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
+  kbdSearchShortcut.value = isMac ? '⌘K' : 'Ctrl+K'
 })
 
 onBeforeUnmount(() => {
   clearInterval(intervalTime.value)
+  window.removeEventListener('keydown', handleKeydown)
 })
 
 </script>
@@ -64,7 +79,11 @@ onBeforeUnmount(() => {
           </div>
         </TransitionGroup>
       </div>
-      <FakeInput @click="go('/icons/?focus')" class="search-box">
+      <FakeInput
+        @click="go('/icons/?focus')"
+        :shortcut="kbdSearchShortcut"
+        class="search-box"
+      >
         Search {{ data.iconsCount }} icons...
       </FakeInput>
     </div>
