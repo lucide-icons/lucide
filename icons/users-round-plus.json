@@ -11,7 +11,11 @@
     "follow",
     "subscribe",
     "group",
-    "people"
+    "people",
+    "users",
+    "team",
+    "members",
+    "collection"
   ],
   "categories": [
     "account"
