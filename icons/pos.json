@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Feli-dev"
+  ],
+  "tags": [
+    "devices",
+    "fintech",
+    "payment",
+    "checkout",
+    "terminal",
+    "register",
+    "cash",
+    "retail",
+    "shop",
+    "sale",
+    "transaction",
+    "commerce",
+    "card",
+    "receipt",
+    "counter",
+    "purchase",
+    "store",
+    "kiosk",
+    "billing",
+    "swipe",
+    "tap",
+    "customer"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
