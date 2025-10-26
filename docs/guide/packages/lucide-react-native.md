@@ -16,7 +16,7 @@ First, ensure that you have `react-native-svg` (version between 12 and 15) insta
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react-native
+pnpm add lucide-react-native
 ```
 
 ```sh [yarn]
