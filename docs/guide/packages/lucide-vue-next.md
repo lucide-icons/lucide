@@ -14,7 +14,7 @@ Vue 3 components for Lucide icons that leverage the Composition API and modern V
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm add lucide-vue-next
 ```
 
 ```sh [yarn]
