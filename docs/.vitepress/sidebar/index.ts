@@ -3,6 +3,7 @@ import { reactSidebar } from './react';
 import { vueSidebar } from './vue';
 import { svelteSidebar } from './svelte';
 import { lucideSidebar } from './lucide';
+import { solidSidebar } from './solid';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar']
 
@@ -31,6 +32,7 @@ const sidebar: Sidebar = {
   '/guide/react': reactSidebar,
   '/guide/vue': vueSidebar,
   '/guide/svelte': svelteSidebar,
+  '/guide/solid': solidSidebar,
   '/resources': [
     {
       text: "Community",
