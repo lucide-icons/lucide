@@ -1,22 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Themistoklis",
-    "ericfennis"
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "text",
-    "tab"
+    "alignment",
+    "right"
   ],
   "categories": [
-    "text",
-    "development"
+    "text"
   ],
   "aliases": [
     {
-      "name": "outdent",
-      "deprecationReason": "alias.name",
+      "name": "align-right",
       "deprecated": true,
+      "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
     }
   ]
