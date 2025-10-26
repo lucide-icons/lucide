@@ -46,9 +46,9 @@
     "jszip": "^3.7.0",
     "lodash": "^4.17.20",
     "lodash-es": "^4.17.21",
+    "lucide": "workspace:*",
     "lucide-react": "workspace:*",
     "lucide-vue-next": "workspace:*",
-    "lucide": "workspace:*",
     "motion-v": "^1.7.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -59,6 +59,7 @@
     "sitemap": "^7.1.1",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.2.1",
+    "vitepress-plugin-group-icons": "^1.6.5",
     "vue": "^3.5.18"
   }
 }

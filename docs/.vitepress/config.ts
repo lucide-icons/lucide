@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import sidebar from './sidebar';
 
 const title = 'Lucide';
@@ -13,6 +14,11 @@ export default defineConfig({
   cleanUrls: true,
   outDir: '.vercel/output/static',
   srcExclude: ['**/README.md'],
+   markdown: {
+    config(md) {
+      md.use(groupIconMdPlugin)
+    },
+  },
   vite: {
     resolve: {
       alias: [
@@ -40,6 +46,9 @@ export default defineConfig({
         },
       ],
     },
+    plugins: [
+      groupIconVitePlugin()
+    ],
   },
   head: [
     [

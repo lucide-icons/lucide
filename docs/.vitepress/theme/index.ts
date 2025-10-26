@@ -1,6 +1,7 @@
 import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import './style.css';
+import 'virtual:group-icons.css'
 import { Theme } from 'vitepress';
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue';
 import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue';
