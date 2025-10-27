@@ -45,7 +45,7 @@ For production environments, we recommend using a bundler with tree-shaking supp
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add lucide-static
 ```
 
 ```sh [yarn]

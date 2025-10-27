@@ -16,7 +16,7 @@ The core Lucide package for vanilla JavaScript applications. This package allows
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
