@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KISHORE-KUMAR-S"
+  ],
+  "tags": [
+    "heat-maps",
+    "thermal-maps",
+    "heat-map",
+    "thermal-map"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
