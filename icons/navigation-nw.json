@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "csandman"
+    "csandman",
+    "jamiemlaw"
   ],
   "tags": [
     "click",
@@ -10,6 +11,10 @@
   ],
   "categories": [
     "arrows",
-    "cursors"
+    "cursors",
+    "navigation"
+  ],
+  "aliases": [
+    "mouse-pointer-2"
   ]
 }
