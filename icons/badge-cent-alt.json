@@ -8,10 +8,10 @@
     "money",
     "payment",
     "cent",
-    "invoice",
-    "bill"
+    "alternative"
   ],
   "categories": [
     "finance"
   ]
 }
+
