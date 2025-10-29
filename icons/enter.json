@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MarianoFranzese",
+    "danielbayley"
+  ],
+  "tags": [
+    "enter",
+    "direction",
+    "step in"
+  ],
+  "categories": [
+    "navigation",
+    "arrows"
+  ]
+}
