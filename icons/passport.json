@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sicin",
+    "jguddas"
+  ],
+  "tags": [
+    "identity",
+    "authentication",
+    "secure",
+    "boarding",
+    "flying",
+    "flight",
+    "checkpoint",
+    "border",
+    "visa",
+    "control",
+    "airport"
+  ],
+  "categories": [
+    "travel",
+    "security"
+  ]
+}
