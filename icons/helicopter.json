@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "liloudreams"
+    "liloudreams",
+    "ericfennis",
+    "jamiemlaw"
   ],
   "tags": [
     "helicopter",
