@@ -15,5 +15,13 @@
   "categories": [
     "files",
     "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "file-warning",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
