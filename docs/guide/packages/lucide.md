@@ -1,6 +1,13 @@
 # Lucide
 
-Implementation of the lucide icon library for web applications.
+The core Lucide package for vanilla JavaScript applications. This package allows you to easily add scalable vector icons to any web project without framework dependencies. Perfect for static websites, legacy applications, or when you need lightweight icon integration with maximum browser compatibility.
+
+**What you can accomplish:**
+- Add icons to HTML using simple data attributes
+- Dynamically create and insert SVG icons with JavaScript
+- Customize icon appearance with CSS classes and inline styles
+- Tree-shake unused icons to keep bundle sizes minimal
+- Use icons in any JavaScript environment or plain HTML
 
 ## Installation
 
@@ -9,7 +16,7 @@ Implementation of the lucide icon library for web applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
@@ -93,6 +100,7 @@ In the `createIcons` function you can pass some extra parameters:
 - you can pass `nameAttr` to adjust the attribute name to replace for
 - you can pass `attrs` to pass additional custom attributes, for instance CSS classes or stroke options.
 - you can pass `root` to provide a custom DOM element the icons should be replaced in (useful when manipulating small sections of a large DOM or elements in the shadow DOM)
+- you can pass `inTemplates: true` to also replace icons inside `<template>` tags.
 
 Here is a full example:
 
@@ -107,6 +115,7 @@ createIcons({
   },
   nameAttr: 'data-lucide', // attribute for the icon name.
   root: element, // DOM element to replace icons in.
+  inTemplates: true // Also replace icons inside <template> tags.
 });
 ```
 
@@ -121,6 +130,34 @@ createIcons({
     ArrowRight,
     Globe
   }
+});
+```
+
+### Custom Document root
+
+Apply icons in a custom root element, for instance a shadow DOM root.
+
+```js
+import { createIcons } from 'lucide';
+
+// Custom root element, for instance a shadow DOM root.
+const shadowRoot = element.attachShadow({ mode: 'open' });
+
+createIcons({
+  root: shadowRoot
+});
+```
+
+### Apply icons inside `<template>` tags
+
+By default icons inside `<template>` tags are not added.
+By setting the `inTemplates` option to `true`, icons inside templates will also be replaced.
+
+```js
+import { createIcons } from 'lucide';
+
+createIcons({
+  inTemplates: true
 });
 ```
 
