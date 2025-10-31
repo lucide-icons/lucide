@@ -2,16 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
-    "ericfennis"
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
-    "code",
-    "version control",
-    "vcs",
-    "repository"
+    "time",
+    "watch",
+    "alarm"
   ],
   "categories": [
-    "development"
+    "time"
   ]
 }
