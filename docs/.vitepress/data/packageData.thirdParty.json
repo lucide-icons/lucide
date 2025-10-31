@@ -114,5 +114,43 @@
     ],
     "source": "https://github.com/vqh2602/lucide-flutter-main",
     "documentation": "https://pub.dev/documentation/lucide_icons_flutter/latest/"
+  },
+  {
+    "name": "lucide-slint",
+    "description": "Implementation of the lucide icon library for Slint.",
+    "icon": "/framework-logos/slint.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/crates/v/lucide-slint",
+        "href": "https://crates.io/crates/lucide-slint"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/crates/d/lucide-slint",
+        "href": "https://crates.io/crates/lucide-slint"
+      }
+    ],
+    "source": "https://github.com/cnlancehu/lucide-slint",
+    "documentation": "https://github.com/cnlancehu/lucide-slint/blob/main/README.md"
+  },
+  {
+    "name": "lucide-go",
+    "description": "Implementation of Lucide icons for Go's html/template package.",
+    "icon": "/framework-logos/go.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/github/v/release/kaugesaar/lucide-go",
+        "href": "https://github.com/kaugesaar/lucide-go/releases"
+      },
+      {
+        "alt": "Go Reference",
+        "src": "https://pkg.go.dev/badge/github.com/kaugesaar/lucide-go.svg",
+        "href": "https://pkg.go.dev/github.com/kaugesaar/lucide-go"
+      }
+    ],
+    "source": "https://github.com/kaugesaar/lucide-go",
+    "documentation": "https://github.com/kaugesaar/lucide-go/blob/master/README.md"
   }
 ]
