@@ -133,5 +133,24 @@
     ],
     "source": "https://github.com/cnlancehu/lucide-slint",
     "documentation": "https://github.com/cnlancehu/lucide-slint/blob/main/README.md"
+  },
+  {
+    "name": "lucide-go",
+    "description": "Implementation of Lucide icons for Go's html/template package.",
+    "icon": "/framework-logos/go.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/github/v/release/kaugesaar/lucide-go",
+        "href": "https://github.com/kaugesaar/lucide-go/releases"
+      },
+      {
+        "alt": "Go Reference",
+        "src": "https://pkg.go.dev/badge/github.com/kaugesaar/lucide-go.svg",
+        "href": "https://pkg.go.dev/github.com/kaugesaar/lucide-go"
+      }
+    ],
+    "source": "https://github.com/kaugesaar/lucide-go",
+    "documentation": "https://github.com/kaugesaar/lucide-go/blob/master/README.md"
   }
 ]
