@@ -11,7 +11,7 @@
 >
   <path d="M10 12H6" />
   <path d="M10 15V9" />
-  <path d="M14 15V9h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2z" />
+  <path d="M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z" />
   <path d="M6 15V9" />
-  <rect width="20" height="14" x="2" y="5" rx="2" />
+  <rect x="2" y="5" width="20" height="14" rx="2" />
 </svg>
