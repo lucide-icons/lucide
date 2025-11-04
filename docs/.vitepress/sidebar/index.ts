@@ -4,6 +4,7 @@ import { vueSidebar } from './vue';
 import { svelteSidebar } from './svelte';
 import { lucideSidebar } from './lucide';
 import { solidSidebar } from './solid';
+import { preactSidebar } from './preact';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar']
 
@@ -16,14 +17,6 @@ export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
       { text: 'Comparison', link: '/guide/comparison' },
     ],
   },
-  // {
-  //   text: 'General',
-  //   collapsed: true,
-  //   items: [
-  //     { text: 'Accessibility', link: '/guide/general/accessibility' },
-  //     { text: 'Accessibility', link: '/guide/general/accessibility' },
-  //   ]
-  // }
 ]
 
 const sidebar: Sidebar = {
@@ -33,6 +26,7 @@ const sidebar: Sidebar = {
   '/guide/vue': vueSidebar,
   '/guide/svelte': svelteSidebar,
   '/guide/solid': solidSidebar,
+  '/guide/preact': preactSidebar,
   '/resources': [
     {
       text: "Community",
