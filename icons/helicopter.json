@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "liloudreams",
+    "ericfennis",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "transport",
+    "flying",
+    "rotor",
+    "aviation",
+    "helipad",
+    "gear",
+    "flyer",
+    "technology",
+    "helicopter",
+    "aircraft",
+    "vehicle"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}

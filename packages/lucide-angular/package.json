@@ -1,6 +1,6 @@
 {
   "name": "lucide-angular",
-  "description": "A Lucide icon library package for Angular applications",
+  "description": "A Lucide icon library package for Angular applications.",
   "version": "0.0.1",
   "author": "SMAH1",
   "license": "ISC",
@@ -29,7 +29,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:ng",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=lucide-icons.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=lucide-icons.ts",
     "build:ng": "ng build --configuration production",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
@@ -74,7 +74,7 @@
     "zone.js": "~0.11.4"
   },
   "peerDependencies": {
-    "@angular/common": "13.x - 19.x",
-    "@angular/core": "13.x - 19.x"
+    "@angular/common": "13.x - 20.x",
+    "@angular/core": "13.x - 20.x"
   }
 }

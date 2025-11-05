@@ -11,21 +11,20 @@
     "lucide-preact": "pnpm --filter lucide-preact",
     "lucide-solid": "pnpm --filter lucide-solid",
     "lucide-vue": "pnpm --filter lucide-vue",
+    "lucide-astro": "pnpm --filter @lucide/astro",
     "lucide-vue-next": "pnpm --filter lucide-vue-next",
     "lucide-svelte": "pnpm --filter lucide-svelte",
     "lucide-static": "pnpm --filter lucide-static",
     "build:outline-icons": "pnpm --filter outline-svg start",
     "build:font": "pnpm --filter docs prebuild:releaseJson && pnpm --filter build-font start",
-    "optimize": "node ./scripts/optimizeSvgs.mjs",
-    "addjsons": "node scripts/addMissingIconJsonFiles.mjs",
-    "checkIcons": "node scripts/checkIconsAndCategories.mjs",
-    "tags2icons": "node scripts/migrateTagsToIcons.mjs",
-    "icons2tags": "node scripts/migrateIconsToTags.mjs",
-    "icons2categories": "node scripts/migrateIconsToCategories.mjs",
-    "categories2icons": "node scripts/migrateCategoriesToIcons.mjs",
-    "generate:changelog": "node ./scripts/generateChangelog.mjs",
-    "generate:contributors": "node ./scripts/updateContributors.mjs icons/*.svg",
-    "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mjs",
+    "optimize": "node ./scripts/optimizeSvgs.mts",
+    "addjsons": "node ./scripts/addMissingIconJsonFiles.mts",
+    "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
+    "generate:changelog": "node ./scripts/generateChangelog.mts",
+    "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
+    "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
+    "suggest:tags": "node ./scripts/suggestTags.mts",
+    "suggest:tags:watch": "node --env-file .env --watch ./scripts/suggestTags.mts ",
     "postinstall": "husky install",
     "lint:es": "eslint .",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
@@ -36,11 +35,13 @@
     "lint": "pnpm lint:es && pnpm lint:format && pnpm lint:json",
     "format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --write",
     "prepare": "husky install",
-    "gi": "node ./scripts/generate/generateIcons.mjs",
-    "rename": "node scripts/rename/renameIcon.mjs",
-    "renamePattern": "node scripts/rename/renamePattern.mjs"
+    "gi": "node ./scripts/generate/generateIcons.mts",
+    "rename": "node ./scripts/rename/renameIcon.mts",
+    "renamePattern": "node ./scripts/rename/renamePattern.mts"
   },
   "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
@@ -54,23 +55,27 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-custom-alias": "^1.3.2",
-    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.31.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
+    "openai": "^5.8.1",
     "p-memoize": "^7.1.1",
     "prettier": "3.2.4",
-    "semver": "^7.6.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "semver": "^7.7.1",
     "simple-git": "^3.27.0",
     "svgo": "^3.3.2",
     "svgson": "^5.3.1",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "dotenv": "^17.0.0",
+    "zod": "^3.25.67"
   },
   "engines": {
     "node": ">=23.0.0"
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
   "pnpm": {
     "packageExtensions": {
       "vue-template-compiler": {
@@ -78,6 +83,9 @@
           "vue": "2.7.14"
         }
       }
+    },
+    "overrides": {
+      "cross-spawn": "7.0.5"
     }
   }
 }

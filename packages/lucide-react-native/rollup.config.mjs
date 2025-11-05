@@ -1,6 +1,6 @@
 import plugins from '@lucide/rollup-plugins';
 import dts from 'rollup-plugin-dts';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';

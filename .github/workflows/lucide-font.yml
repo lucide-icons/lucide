@@ -3,7 +3,6 @@ name: Lucide font checks
 on:
   pull_request:
     paths:
-      - icons/**
       - tools/build-font/**
       - pnpm-lock.yaml
 
@@ -16,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

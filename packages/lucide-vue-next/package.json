@@ -2,7 +2,7 @@
   "name": "lucide-vue-next",
   "version": "0.0.1",
   "author": "Eric Fennis",
-  "description": "A Lucide icon library package for Vue 3 applications",
+  "description": "A Lucide icon library package for Vue 3 applications.",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -38,7 +38,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
@@ -54,8 +54,8 @@
     "@vue/test-utils": "2.4.5",
     "rollup": "^4.22.4",
     "rollup-plugin-dts": "^6.1.0",
-    "vite": "5.4.14",
-    "vitest": "^1.1.1",
+    "vite": "^6.3.6",
+    "vitest": "^3.1.3",
     "vue": "^3.4.21"
   },
   "peerDependencies": {

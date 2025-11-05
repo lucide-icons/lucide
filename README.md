@@ -40,6 +40,7 @@ Lucide is an open-source icon library that provides 1000+ vector (svg) files for
 | <img src="https://lucide.dev/framework-logos/preact.svg" alt="Preact logo" width="48"> | **`lucide-preact`** | [![npm](https://img.shields.io/npm/v/lucide-preact)](https://www.npmjs.com/package/lucide-preact) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-preact) | [Docs](https://lucide.dev/guide/packages/lucide-preact) · [Source](./packages/lucide-preact) |
 | <img src="https://lucide.dev/framework-logos/react-native.svg" alt="React Native logo" width="48"> | **`lucide-react-native`** | [![npm](https://img.shields.io/npm/v/lucide-react-native)](https://www.npmjs.com/package/lucide-react-native) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react-native) | [Docs](https://lucide.dev/guide/packages/lucide-react-native) · [Source](./packages/lucide-react-native) |
 | <img src="https://lucide.dev/framework-logos/angular.svg" alt="Angular logo" width="48"> | **`lucide-angular`** | [![npm](https://img.shields.io/npm/v/lucide-angular)](https://www.npmjs.com/package/lucide-angular) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular) | [Docs](https://lucide.dev/guide/packages/lucide-angular) · [Source](./packages/lucide-angular) |
+| <img src="https://lucide.dev/framework-logos/astro.svg" alt="Astro logo" width="48"> | **`@lucide/astro`** | [![npm](https://img.shields.io/npm/v/@lucide/astro)](https://www.npmjs.com/package/@lucide/astro) | ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/astro) | [Docs](https://lucide.dev/guide/packages/lucide-astro) · [Source](./packages/astro) |
 | <img src="https://lucide.dev/framework-logos/svg.svg" alt="SVG logo" width="48"> | **`lucide-static`** | [![npm](https://img.shields.io/npm/v/lucide-static)](https://www.npmjs.com/package/lucide-static) | ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static) | [Docs](https://lucide.dev/guide/packages/lucide-static) · [Source](./packages/lucide-static) |
 
 ### Figma
@@ -56,6 +57,12 @@ For more info on how to contribute please see the [contribution guidelines](http
 
 Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/main/README.md)
 
+## About brand logos
+
+Lucide **does not accept** brand logos, and we do not plan to add them in the future. This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
+
+[Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS_STATEMENT.md)
+
 ## Community
 
 Join the community on our [Discord](https://discord.gg/EH6nSts) server!
@@ -69,7 +76,9 @@ Lucide is totally free for commercial use and personal use, this software is lic
 Thank you to all the people who contributed to Lucide!
 
 <a href="https://github.com/lucide-icons/lucide/graphs/contributors">
-<img src="https://opencollective.com/lucide-icons/contributors.svg?width=890" /></a>
+
+<img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" />
+</a>
 
 ## Sponsors
 
@@ -81,5 +90,5 @@ Thank you to all the people who contributed to Lucide!
 
 ### Awesome backers 🍺
 
-<a href="https://www.scipress.io?utm_source=lucide"><img src="docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
 <a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://www.fina.money/"><img src="docs/public/sponsors/fina-money.png" width="180" alt="Fina Money sponsor badge" /></a>
