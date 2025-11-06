@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KISHORE-KUMAR-S"
+  ],
+  "tags": [
+    "node",
+    "connect",
+    "connector",
+    "link"
+  ],
+  "categories": [
+    "connectivity"
+  ]
+}
