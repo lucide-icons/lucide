@@ -20,8 +20,9 @@
   "aliases": [
     {
       "name": "fingerprint",
-      "deprecate": true,
-      "deprecationReason": "alias.name"
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
     }
   ]
 }
