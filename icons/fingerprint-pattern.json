@@ -16,5 +16,12 @@
     "security",
     "medical",
     "devices"
+  ],
+  "aliases": [
+    {
+      "name": "fingerprint",
+      "deprecate": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
