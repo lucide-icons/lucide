@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "brush",
+    "paintbrush",
+    "design",
+    "color",
+    "colour",
+    "decoration",
+    "diy"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "photography",
+    "home",
+    "tools"
+  ],
+  "aliases": [
+    {
+      "name": "paintbrush-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

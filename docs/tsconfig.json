@@ -5,5 +5,8 @@
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "paths": {
+      "~/.vitepress/*": ["./.vitepress/*"],
+    },
   },
 }

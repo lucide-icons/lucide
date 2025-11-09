@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "UsamaKhan"
   ],
   "tags": [
     "settings",
@@ -13,6 +14,11 @@
     "account"
   ],
   "aliases": [
-    "user-cog-2"
+    {
+      "name": "user-cog-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

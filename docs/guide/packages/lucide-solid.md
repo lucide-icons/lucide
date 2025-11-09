@@ -1,13 +1,20 @@
 # Lucide Solid
 
-Implementation of the lucide icon library for solid applications.
+SolidJS components for Lucide icons that leverage Solid's fine-grained reactivity system. Each icon is a reactive Solid component that renders as an inline SVG, providing exceptional performance through Solid's compile-time optimizations and reactive primitives.
+
+**What you can accomplish:**
+- Use icons as SolidJS components with fine-grained reactivity
+- Create highly performant interfaces with Solid's reactive system
+- Build dynamic icon components that respond to signals and stores
+- Integrate seamlessly with Solid's JSX and component patterns
+- Optimize performance with direct icon imports and minimal runtime overhead
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
@@ -16,6 +23,10 @@ yarn add lucide-solid
 
 ```sh [npm]
 npm install lucide-solid
+```
+
+```sh [bun]
+bun add lucide-solid
 ```
 
 :::
@@ -32,6 +43,19 @@ Additional props can be passed to adjust the icon:
 
 ```jsx
 import { Camera } from 'lucide-solid';
+
+// Usage
+const App = () => {
+  return <Camera color="red" size={48} />;
+};
+
+export default App;
+```
+
+Vite loading/performing issues with the dev server can be resolved by import icons directly from the `lucide-solid/icons` directory:
+
+```jsx
+import Camera from 'lucide-solid/icons/camera';
 
 // Usage
 const App = () => {
@@ -59,6 +83,26 @@ To customize the appearance of an icon, you can pass custom properties as props 
 const App = () => {
   return <Camera fill="red" stroke-linejoin="bevel" />;
 };
+```
+
+## With Lucide lab or custom icons
+
+[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like the regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-solid';
+import { sausage } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={sausage} color="red"/>
+);
 ```
 
 ## One generic icon component

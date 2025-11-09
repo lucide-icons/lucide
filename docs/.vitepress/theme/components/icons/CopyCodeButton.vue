@@ -1,92 +1,98 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { startCase, camelCase } from 'lodash-es'
-import ButtonMenu from '../base/ButtonMenu.vue'
+import { toPascalCase } from '@lucide/shared';
+import ButtonMenu from '../base/ButtonMenu.vue';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 import useConfetti from '../../composables/useConfetti';
 
 const props = defineProps<{
-  name: string
-  popoverPosition?: 'top' | 'bottom'
-}>()
-const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext()
-const { animate, confetti } = useConfetti()
+  name: string;
+  popoverPosition?: 'top' | 'bottom';
+}>();
+const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext();
+const { animate, confetti } = useConfetti();
 const componentName = computed(() => {
-  return startCase(camelCase(props.name)).replace(/\s/g, '')
-})
+  return (toPascalCase(props.name) as string).replace(/\s/g, '');
+});
 
 function copyJSX() {
-  let attrs = ['']
+  let attrs = [''];
 
   if (size.value && size.value !== 24) {
-    attrs.push(`size={${size.value}}`)
+    attrs.push(`size={${size.value}}`);
   }
 
   if (color.value && color.value !== 'currentColor') {
-    attrs.push(`color="${color.value}"`)
+    attrs.push(`color="${color.value}"`);
   }
 
   if (strokeWidth.value && strokeWidth.value !== 2) {
-    attrs.push(`strokeWidth={${strokeWidth.value}}`)
+    attrs.push(`strokeWidth={${strokeWidth.value}}`);
   }
 
   if (absoluteStrokeWidth.value) {
-    attrs.push(`absoluteStrokeWidth`)
+    attrs.push(`absoluteStrokeWidth`);
   }
 
-  const code = `<${componentName.value}${attrs.join(' ')} />`
+  const code = `<${componentName.value}${attrs.join(' ')} />`;
 
-  navigator.clipboard.writeText(code)
+  navigator.clipboard.writeText(code);
+}
+
+function copyComponentName() {
+  const code = componentName.value;
+
+  navigator.clipboard.writeText(code);
 }
 
 function copyVue() {
-  let attrs = ['']
+  let attrs = [''];
 
   if (size.value && size.value !== 24) {
-    attrs.push(`:size="${size.value}"`)
+    attrs.push(`:size="${size.value}"`);
   }
 
   if (color.value && color.value !== 'currentColor') {
-    attrs.push(`color="${color.value}"`)
+    attrs.push(`color="${color.value}"`);
   }
 
   if (strokeWidth.value && strokeWidth.value !== 2) {
-    attrs.push(`:stroke-width="${strokeWidth.value}"`)
+    attrs.push(`:stroke-width="${strokeWidth.value}"`);
   }
 
   if (absoluteStrokeWidth.value) {
-    attrs.push(`absoluteStrokeWidth`)
+    attrs.push(`absoluteStrokeWidth`);
   }
 
-  const code = `<${componentName.value}${attrs.join(' ')} />`
+  const code = `<${componentName.value}${attrs.join(' ')} />`;
 
-  navigator.clipboard.writeText(code)
+  navigator.clipboard.writeText(code);
 }
 
 function copyAngular() {
-  let attrs = ['']
+  let attrs = [''];
 
-  attrs.push(`name="${props.name}"`)
+  attrs.push(`name="${props.name}"`);
 
   if (size.value && size.value !== 24) {
-    attrs.push(`[size]="${size.value}"`)
+    attrs.push(`[size]="${size.value}"`);
   }
 
   if (color.value && color.value !== 'currentColor') {
-    attrs.push(`color="${color.value}"`)
+    attrs.push(`color="${color.value}"`);
   }
 
   if (strokeWidth.value && strokeWidth.value !== 2) {
-    attrs.push(`[strokeWidth]="${strokeWidth.value}"`)
+    attrs.push(`[strokeWidth]="${strokeWidth.value}"`);
   }
 
   if (absoluteStrokeWidth.value) {
-    attrs.push(`[absoluteStrokeWidth]="true"`)
+    attrs.push(`[absoluteStrokeWidth]="true"`);
   }
 
-  const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`
+  const code = `<lucide-icon${attrs.join(' ')}></lucide-icon>`;
 
-  navigator.clipboard.writeText(code)
+  navigator.clipboard.writeText(code);
 }
 </script>
 
@@ -100,10 +106,11 @@ function copyAngular() {
     data-confetti-text="Copied!"
     :popoverPosition="popoverPosition"
     :options="[
-      { text: 'Copy JSX' , onClick: copyJSX },
-      { text: 'Copy Vue' , onClick: copyVue },
-      { text: 'Copy Svelte' , onClick: copyJSX },
-      { text: 'Copy Angular' , onClick: copyAngular },
+      { text: 'Copy JSX', onClick: copyJSX },
+      { text: 'Copy Component Name', onClick: copyComponentName },
+      { text: 'Copy Vue', onClick: copyVue },
+      { text: 'Copy Svelte', onClick: copyJSX },
+      { text: 'Copy Angular', onClick: copyAngular },
     ]"
   />
 </template>

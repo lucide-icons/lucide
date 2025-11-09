@@ -6,6 +6,7 @@ import { isActive } from 'vitepress/dist/client/shared'
 import { useActiveAnchor } from '../../composables/useActiveAnchor'
 import { data } from './CategoryList.data'
 import CategoryListItem from './CategoryListItem.vue'
+import SidebarTitle from './SidebarTitle.vue'
 import { useCategoryView } from '../../composables/useCategoryView'
 
 const { page } = useData()
@@ -46,10 +47,13 @@ watch(headers, () => {
 
 <template>
   <div class="category-list" ref="container">
-    <VPLink class="sidebar-title" href="/icons/" :class="{ 'active': overviewIsActive } ">
+    <SidebarTitle>
+      View
+    </SidebarTitle>
+    <VPLink class="sidebar-link sidebar-text" href="/icons/" :class="{ 'active': overviewIsActive } ">
       All
     </VPLink>
-    <VPLink class="sidebar-title" href="/icons/categories" :class="{ 'active': categoriesIsActive } ">
+    <VPLink class="sidebar-link sidebar-text" href="/icons/categories" :class="{ 'active': categoriesIsActive } ">
       Categories
     </VPLink>
     <div class="content">
@@ -62,17 +66,20 @@ watch(headers, () => {
 </template>
 
 <style scoped>
-.sidebar-title {
-  font-weight: 500;
-  color: var(--vp-c-text-2);
-  margin-bottom: 6px;
+.sidebar-text {
   line-height: 24px;
   font-size: 14px;
   display: block;
   transition: color 0.25s;
+  padding: 4px 0;
 }
 
-.sidebar-title:hover, .sidebar-title.active {
+.sidebar-link {
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+.sidebar-link:hover, .sidebar-link.active {
   color: var(--vp-c-brand);
 }
 .content {

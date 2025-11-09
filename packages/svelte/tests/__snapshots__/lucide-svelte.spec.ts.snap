@@ -1,0 +1,272 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Using lucide icon components > should add a class to the element 1`] = `
+<svg
+  class="lucide-icon lucide lucide-smile my-icon"
+  fill="none"
+  height="24"
+  stroke="currentColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="2"
+  viewBox="0 0 24 24"
+  width="24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!---->
+  <circle
+    cx="12"
+    cy="12"
+    r="10"
+  >
+    
+  </circle>
+  
+  <!---->
+  <path
+    d="M8 14s1.5 2 4 2 4-2 4-2"
+  >
+    
+  </path>
+  
+  <!---->
+  <line
+    x1="9"
+    x2="9.01"
+    y1="9"
+    y2="9"
+  >
+    
+  </line>
+  
+  <!---->
+  <line
+    x1="15"
+    x2="15.01"
+    y1="9"
+    y2="9"
+  >
+    
+  </line>
+  
+  <!---->
+  <!---->
+  
+  <!---->
+</svg>
+`;
+
+exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
+<div>
+  <svg
+    class="lucide-icon lucide lucide-smile"
+    fill="none"
+    height="48"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+    viewBox="0 0 24 24"
+    width="48"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <!---->
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    >
+      
+    </circle>
+    
+    <!---->
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    >
+      
+    </path>
+    
+    <!---->
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    >
+      
+    </line>
+    
+    <!---->
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    >
+      
+    </line>
+    
+    <!---->
+    <!---->
+    
+    <!---->
+  </svg>
+  
+</div>
+`;
+
+exports[`Using lucide icon components > should not scale the strokeWidth when absoluteStrokeWidth is set 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="48"
+     height="48"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="red"
+     stroke-width="1"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     data-testid="smile-icon"
+     class="lucide-icon lucide lucide-smile"
+>
+  <circle cx="12"
+          cy="12"
+          r="10"
+  >
+  </circle>
+  <path d="M8 14s1.5 2 4 2 4-2 4-2">
+  </path>
+  <line x1="9"
+        x2="9.01"
+        y1="9"
+        y2="9"
+  >
+  </line>
+  <line x1="15"
+        x2="15.01"
+        y1="9"
+        y2="9"
+  >
+  </line>
+</svg>
+`;
+
+exports[`Using lucide icon components > should render an component 1`] = `
+<div>
+  <svg
+    class="lucide-icon lucide lucide-smile"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <!---->
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    >
+      
+    </circle>
+    
+    <!---->
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    >
+      
+    </path>
+    
+    <!---->
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    >
+      
+    </line>
+    
+    <!---->
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    >
+      
+    </line>
+    
+    <!---->
+    <!---->
+    
+    <!---->
+  </svg>
+  
+</div>
+`;
+
+exports[`Using lucide icon components > should render an icon slot 1`] = `
+<div>
+  <svg
+    class="lucide-icon lucide lucide-smile"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <!---->
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    >
+      
+    </circle>
+    
+    <!---->
+    <path
+      d="M8 14s1.5 2 4 2 4-2 4-2"
+    >
+      
+    </path>
+    
+    <!---->
+    <line
+      x1="9"
+      x2="9.01"
+      y1="9"
+      y2="9"
+    >
+      
+    </line>
+    
+    <!---->
+    <line
+      x1="15"
+      x2="15.01"
+      y1="9"
+      y2="9"
+    >
+      
+    </line>
+    
+    <!---->
+    <!---->
+    <text>
+      Test
+    </text>
+    
+    <!---->
+  </svg>
+  
+</div>
+`;

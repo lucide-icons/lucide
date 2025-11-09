@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "home",
+    "living",
+    "building",
+    "residence",
+    "architecture"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ],
+  "aliases": [
+    {
+      "name": "home",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

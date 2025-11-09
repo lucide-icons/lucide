@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "on",
@@ -21,6 +22,11 @@
     "connectivity"
   ],
   "aliases": [
-    "power-circle"
+    {
+      "name": "power-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

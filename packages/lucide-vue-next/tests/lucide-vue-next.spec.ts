@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, fireEvent, cleanup } from '@testing-library/vue';
 import { Smile, Edit2, Pen } from '../src/lucide-vue-next';
+import defaultAttributes from '../src/defaultAttributes';
 
 describe('Using lucide icon components', () => {
   afterEach(() => cleanup());
@@ -8,6 +9,22 @@ describe('Using lucide icon components', () => {
   it('should render an component', () => {
     const { container } = render(Smile);
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render the icon with the default attributes', () => {
+    const { container } = render(Smile);
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('xmlns', defaultAttributes.xmlns);
+    expect(SVGElement).toHaveAttribute('width', String(defaultAttributes.width));
+    expect(SVGElement).toHaveAttribute('height', String(defaultAttributes.height));
+    expect(SVGElement).toHaveAttribute('viewBox', defaultAttributes.viewBox);
+    expect(SVGElement).toHaveAttribute('fill', defaultAttributes.fill);
+    expect(SVGElement).toHaveAttribute('stroke', defaultAttributes.stroke);
+    expect(SVGElement).toHaveAttribute('stroke-width', String(defaultAttributes['stroke-width']));
+    expect(SVGElement).toHaveAttribute('stroke-linecap', defaultAttributes['stroke-linecap']);
+    expect(SVGElement).toHaveAttribute('stroke-linejoin', defaultAttributes['stroke-linejoin']);
   });
 
   it('should adjust the size, stroke color and stroke width', () => {
@@ -19,11 +36,11 @@ describe('Using lucide icon components', () => {
       },
     });
 
-    const [icon] = document.getElementsByClassName('lucide');
+    const SVGElement = container.firstElementChild;
 
-    expect(icon.getAttribute('width')).toBe('48');
-    expect(icon.getAttribute('stroke')).toBe('red');
-    expect(icon.getAttribute('stroke-width')).toBe('4');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('stroke-width', '4');
 
     expect(container).toMatchSnapshot();
   });
@@ -37,7 +54,7 @@ describe('Using lucide icon components', () => {
 
     expect(container).toMatchSnapshot();
 
-    const [icon] = document.getElementsByClassName('my-icon');
+    const icon = container.firstElementChild;
 
     expect(icon).toHaveClass('my-icon');
     expect(icon).toHaveClass('lucide');
@@ -53,20 +70,20 @@ describe('Using lucide icon components', () => {
 
     expect(container).toMatchSnapshot();
 
-    const [icon] = document.getElementsByClassName('lucide');
+    const icon = container.firstElementChild;
 
     expect(icon).toHaveStyle({ position: 'absolute' });
   });
 
   it('should call the onClick event', async () => {
     const onClick = vi.fn();
-    render(Smile, {
+    const { container } = render(Smile, {
       attrs: {
         onClick,
       },
     });
 
-    const [icon] = document.getElementsByClassName('lucide');
+    const icon = container.firstElementChild;
 
     await fireEvent.click(icon);
 
@@ -116,7 +133,7 @@ describe('Using lucide icon components', () => {
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    render(Pen, {
+    const { container } = render(Pen, {
       props: {
         size: 48,
         color: 'red',
@@ -124,10 +141,43 @@ describe('Using lucide icon components', () => {
       },
     });
 
-    const [icon] = document.getElementsByClassName('lucide');
+    const icon = container.firstElementChild;
 
-    expect(icon.getAttribute('width')).toBe('48');
-    expect(icon.getAttribute('stroke')).toBe('red');
-    expect(icon.getAttribute('stroke-width')).toBe('1');
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '1');
+  });
+
+  it('should not scale the strokeWidth when absoluteStrokeWidth is as empty value attribute', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: '',
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '1');
+  });
+
+  it('should not scale the strokeWidth when absoluteStrokeWidth is written in kebabCase', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        'stroke-width': '2',
+        'absolute-stroke-width': '',
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '1');
   });
 });

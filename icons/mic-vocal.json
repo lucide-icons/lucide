@@ -1,9 +1,7 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "it-is-not",
-    "danielbayley",
-    "karsa-mistmere"
+    "jguddas"
   ],
   "tags": [
     "lyrics",
@@ -22,6 +20,11 @@
     "multimedia"
   ],
   "aliases": [
-    "mic-2"
+    {
+      "name": "mic-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

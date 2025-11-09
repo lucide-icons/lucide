@@ -5,9 +5,14 @@ import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
 import { random } from 'lodash-es'
 import FakeInput from '../base/FakeInput.vue'
+import useSearchShortcut from '../../utils/useSearchShortcut'
 
 const { go } = useRouter()
 const intervalTime = shallowRef()
+
+const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
+  go('/icons/?focus')
+})
 
 const getInitialItems = () => data.icons.slice(0, 48)
 const items = ref(getInitialItems())
@@ -27,8 +32,6 @@ function getRandomNewIcon() {
 function insert() {
   const replaceIndex = random(0, 48)
   const newIcon = getRandomNewIcon()
-
-  // items.value.splice(replaceIndex, 0, newIcon);
 
   items.value[replaceIndex] = newIcon
 }
@@ -66,7 +69,11 @@ onBeforeUnmount(() => {
           </div>
         </TransitionGroup>
       </div>
-      <FakeInput @click="go('/icons/?focus')" class="search-box">
+      <FakeInput
+        @click="go('/icons/?focus')"
+        :shortcut="kbdSearchShortcut"
+        class="search-box"
+      >
         Search {{ data.iconsCount }} icons...
       </FakeInput>
     </div>
@@ -76,7 +83,6 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .card-wrapper {
-  /* padding: 0 24px; */
   margin-left: auto;
   margin-bottom: auto;
   margin-top: 48px;
@@ -87,13 +93,10 @@ onBeforeUnmount(() => {
   border-radius: 8px;
   width: 100%;
   height:100%;
-  /* box-shadow: var(--vp-shadow-2); */
   max-height: 220px;
   max-width: 560px;
   margin: 0 auto;
   position: relative;
-  /* max-height: 240px; */
-  /* margin-top: 96px; */
 }
 
 .card-grid {
@@ -107,7 +110,6 @@ onBeforeUnmount(() => {
   max-width: 512px;
   overflow: hidden;
   position: relative;
-  /* white-space: nowrap; */
 }
 
 .list-enter-active {

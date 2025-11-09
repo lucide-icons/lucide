@@ -13,10 +13,14 @@
     "globe"
   ],
   "categories": [
-    "maps",
     "navigation"
   ],
   "aliases": [
-    "globe-2"
+    {
+      "name": "globe-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

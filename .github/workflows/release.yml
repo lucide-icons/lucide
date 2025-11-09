@@ -38,6 +38,8 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: pre-release
+    permissions:
+      id-token: write
     strategy:
       fail-fast: false
       matrix:
@@ -46,22 +48,21 @@ jobs:
             'lucide',
             'lucide-react',
             'lucide-react-native',
-            'lucide-vue',
             'lucide-vue-next',
             'lucide-angular',
             'lucide-preact',
             'lucide-solid',
             'lucide-svelte',
+            '@lucide/astro',
+            '@lucide/svelte',
           ]
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -79,22 +80,24 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --no-git-checks --ignore-scripts
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts
+        env:
+          NPM_CONFIG_PROVENANCE: true
 
   lucide-static:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: [pre-release, lucide-font]
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - uses: actions/download-artifact@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -113,6 +116,8 @@ jobs:
 
       - name: Publish
         run: pnpm --filter lucide-static publish --no-git-checks
+        env:
+          NPM_CONFIG_PROVENANCE: true
 
   lucide-font:
     if: github.repository == 'lucide-icons/lucide'
@@ -120,13 +125,11 @@ jobs:
     needs: pre-release
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -138,7 +141,7 @@ jobs:
         run: pnpm build:font
 
       - name: 'Upload to Artifacts'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lucide-font
           path: lucide-font
@@ -150,14 +153,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
       - name: Zip font and icons
         run: |
           zip -r lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip lucide-font
           zip -r lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip icons
 
       - name: Release zip and fonts
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.pre-release.outputs.VERSION }}
           files: |

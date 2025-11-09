@@ -14,6 +14,7 @@ const SearchIcon = createLucideIcon('search', search)
 
 interface Props {
   modelValue: string
+  shortcut?: string
 }
 
 const props = defineProps<Props>()
@@ -38,6 +39,8 @@ const value = computed({
   <Input
     ref="input"
     type="search"
+    autofocus
+    :shortcut="shortcut"
     v-bind="$attrs"
     v-model="value"
     class="input-wrapper"
@@ -70,5 +73,4 @@ const value = computed({
   font-size: 14px;
   height: 48px;
 }
-
 </style>

@@ -1,111 +1,73 @@
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-angular.svg" alt="Lucide icon library for Angular applications." width="540">
+  </a>
+</p>
+
+<p align="center">
+Lucide icon library for Angular applications.
+</p>
+
+<div align="center">
+
+  [![npm](https://img.shields.io/npm/v/lucide-angular?color=blue)](https://www.npmjs.com/package/lucide-angular)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-angular">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
+
 # Lucide Angular
 
 Implementation of the lucide icon library for angular applications.
 
-> What is lucide? Read it [here](https://github.com/lucide-icons/lucide#what-is-lucide).
-
 ## Installation
 
-```bash
-yarn add lucide-angular
+```sh
+pnpm add lucide-angular
 ```
 
-or
-
-```bash
+```sh
 npm install lucide-angular
 ```
 
-## How to use
-
-### Step 1: Import `LucideAngularModule`
-
-In any Angular module you wish to use Lucide icons in, you have to import `LucideAngularModule`, and pick any icons you wish to use:
-
-```js
-import { LucideAngularModule, File, Home, Menu, UserCheck } from 'lucide-angular';
-
-@NgModule({
-  imports: [
-    LucideAngularModule.pick({File, Home, Menu, UserCheck})
-  ]
-})
-export class AppModule { }
+```sh
+yarn add lucide-angular
 ```
 
-### Step 2: Use the icons in templates
-
-Within your templates you may now use one of the following component tags to insert an icon:
-
-```html
-<lucide-angular name="file" class="my-icon"></lucide-angular>
-<lucide-icon name="home" class="my-icon"></lucide-icon>
-<i-lucide name="menu" class="my-icon"></i-lucide>
-<span-lucide name="user-check" class="my-icon"></span-lucide>
+```sh
+bun add lucide-angular
 ```
 
-### Props
+## Documentation
 
-You can pass additional props to adjust the icon appearance.
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-angular)
 
-| name               | type      | default      |
-| ------------------ | --------- | ------------ |
-| `size`             | _number_  | 24           |
-| `color`            | _string_  | currentColor |
-| `strokeWidth`      | _number_  | 2            |
-| `absoluteStrokeWidth` | _boolean_ | true         |
+## Community
 
-```html
-<i-lucide name="home" [size]="48" color="red" [strokeWidth]="1"></i-lucide>
-```
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
 
-### Global configuration
+## License
 
-You can inject the `LucideIconConfig` service in your root component to globally configure the default property values as defined above.
+Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
-### Styling using a custom CSS class
+## Sponsors
 
-Any extra HTML attribute is ignored, but the `class` attribute
-is passed onto the internal SVG image element and it can be used to style it:
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
 
-```css
-svg.my-icon {
-    width: 12px;
-    height: 12px;
-    stroke-width: 3;
-}
-```
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-## Injecting multiple icon providers
+### Awesome backers 🍺
 
-You may provide additional icons using the `LUCIDE_ICONS` injection token,
-which accepts multiple providers of the interface `LucideIconsProviderInterface`
-with the utility class `LucideIconsProvider` available for easier usage:
-
-```js
-import { LUCIDE_ICONS, LucideIconProvider } from 'lucide-angular';
-import { MyIcon } from './icons/my-icon';
-
-const myIcons = {MyIcon};
-
-@NgModule({
-  providers: [
-    {provide: LUCIDE_ICONS, multi: true, useValue: new LucideIconProvider(myIcons)},
-  ]
-})
-export class AppModule { }
-```
-
-To add custom icons, you will first need to convert them to an [svgson format](https://github.com/elrumordelaluz/svgson).
-
-## Loading all icons
-
-> :warning: You may also opt to import all icons if necessary using the following format but be aware that this will significantly increase your application build size.
-
-```js
-import { icons } from 'lucide-angular';
-
-...
-
-LucideAngularModule.pick(icons)
-```
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>

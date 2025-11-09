@@ -21,14 +21,81 @@
     "aliases": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "deprecated": {
+            "const": true
+          },
+          "deprecationReason": {
+            "$ref": "#/$defs/aliasDeprecationReasons"
+          },
+          "toBeRemovedInVersion": {
+            "$ref": "#/$defs/versionNumber",
+            "description": "The version this icon will be removed in."
+          }
+        },
+        "dependentRequired": {
+          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecationReason": ["deprecated"],
+          "toBeRemovedInVersion": ["deprecated"]
+        }
       },
       "uniqueItems": true
     },
     "categories": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "accessibility",
+          "account",
+          "animals",
+          "arrows",
+          "brands",
+          "buildings",
+          "charts",
+          "communication",
+          "connectivity",
+          "cursors",
+          "design",
+          "development",
+          "devices",
+          "emoji",
+          "files",
+          "finance",
+          "food-beverage",
+          "gaming",
+          "home",
+          "layout",
+          "mail",
+          "math",
+          "medical",
+          "multimedia",
+          "nature",
+          "navigation",
+          "notifications",
+          "people",
+          "photography",
+          "science",
+          "seasons",
+          "security",
+          "shapes",
+          "shopping",
+          "social",
+          "sports",
+          "sustainability",
+          "text",
+          "time",
+          "tools",
+          "transportation",
+          "travel",
+          "weather"
+        ]
       },
       "uniqueItems": true
     },
@@ -49,8 +116,33 @@
       "uniqueItems": true
     },
     "deprecated": {
-      "type": "boolean",
-      "default": false
+      "const": true
+    },
+    "deprecationReason": {
+      "$ref": "#/$defs/iconDeprecationReasons"
+    },
+    "toBeRemovedInVersion": {
+      "$ref": "#/$defs/versionNumber",
+      "description": "The version this icon will be removed in."
+    }
+  },
+  "dependentRequired": {
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecationReason": ["deprecated"],
+    "toBeRemovedInVersion": ["deprecated"]
+  },
+  "$defs": {
+    "iconDeprecationReasons": {
+      "type": "string",
+      "enum": ["icon.brand"]
+    },
+    "aliasDeprecationReasons": {
+      "type": "string",
+      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
+    },
+    "versionNumber": {
+      "type": "string",
+      "pattern": "v[0-9]+(\\.[0-9]+)+"
     }
   },
   "description": "A JSON Schema for icons defined by Lucide Icons."

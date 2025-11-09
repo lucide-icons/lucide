@@ -1,6 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "deprecated": true,
+  "deprecationReason": "icon.brand",
+  "toBeRemovedInVersion": "v1.0",
   "contributors": [
     "colebemis",
     "ashygee",
@@ -14,7 +16,6 @@
   "categories": [
     "account",
     "social",
-    "communication",
     "brands",
     "development"
   ]

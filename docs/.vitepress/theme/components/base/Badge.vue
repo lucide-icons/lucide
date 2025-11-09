@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-
 import { useRouter } from 'vitepress';
 
 const { go } = useRouter()
@@ -8,7 +7,16 @@ const props = defineProps<{
   href?: string
 }>()
 
+const isExternal = computed(() => props.href?.startsWith('http') ?? false)
+
 const component = computed(() => props.href ? 'a' : 'div')
+const target = computed(() => isExternal.value ? '_blank' : undefined)
+const rel = computed(() => isExternal.value ? 'noreferrer noopener' : undefined)
+
+const onClick = computed(() => {
+  if(!props.href || isExternal) return
+  return go(props.href)
+})
 </script>
 
 <template>
@@ -16,7 +24,9 @@ const component = computed(() => props.href ? 'a' : 'div')
     :is="component"
     :href="href"
     class="badge"
-    @click="props?.href ? go(href) : undefined"
+    :target="target"
+    :rel="rel"
+    @click="onClick"
   >
     <slot/>
   </component>

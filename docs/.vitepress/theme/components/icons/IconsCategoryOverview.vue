@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch, watchEffect } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
+import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import IconsCategory from './IconsCategory.vue';
 import useFetchTags from '../../composables/useFetchTags';
@@ -12,6 +13,7 @@ import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
 import { CategoryRow } from './IconsCategory.vue';
 import useScrollToCategory from '../../composables/useScrollToCategory';
+import CarbonAdOverlay from './CarbonAdOverlay.vue';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -25,6 +27,10 @@ const props = defineProps<{
 const activeIconName = ref(null);
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
 const isSearching = computed(() => !!searchQuery.value);
+
+const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
+  searchInput.value?.focus();
+});
 
 function setActiveIconName(name: string) {
   activeIconName.value = name;
@@ -68,7 +74,7 @@ const categories = computed(() => {
   return props.categories
     .map(({ name, title }) => {
       const categoryIcons = props.icons.filter((icon) => {
-        const iconCategories = props.iconCategories[icon.name];
+        const iconCategories = icon?.externalLibrary ? icon.categories : props.iconCategories[icon.name]
 
         return iconCategories?.includes(name);
       });
@@ -133,6 +139,18 @@ function onFocusSearchInput() {
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
+
+function handleCloseDrawer() {
+  setActiveIconName('');
+
+  window.history.pushState({}, '', '/icons/categories');
+}
+
+watchEffect(() => {
+
+  console.log(props.icons.find((icon) => icon.name === 'burger'));
+
+});
 </script>
 
 <template>
@@ -141,6 +159,7 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
       <InputSearch
         :placeholder="`Search ${icons.length} icons ...`"
         v-model="searchQuery"
+        :shortcut="kbdSearchShortcut"
         class="input-wrapper"
         ref="searchInput"
         @focus="onFocusSearchInput"
@@ -164,8 +183,10 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
   <IconDetailOverlay
     v-if="activeIconName != null"
     :iconName="activeIconName"
-    @close="setActiveIconName('')"
+    @close="handleCloseDrawer"
   />
+
+  <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
 
 <style scoped>

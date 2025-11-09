@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "geometry",
@@ -18,8 +19,7 @@
     "sketch"
   ],
   "categories": [
-    "shapes",
-    "maths",
+    "math",
     "design",
     "tools"
   ]

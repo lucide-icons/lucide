@@ -7,13 +7,21 @@
     "building",
     "education",
     "childhood",
-    "school"
+    "school",
+    "college",
+    "academy",
+    "institute"
   ],
   "categories": [
     "buildings",
-    "maps"
+    "navigation"
   ],
   "aliases": [
-    "school-2"
+    {
+      "name": "school-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

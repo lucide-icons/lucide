@@ -1,17 +1,9 @@
 import { h } from 'vue';
-import type { SVGAttributes, FunctionalComponent } from 'vue';
-import defaultAttributes from './defaultAttributes';
-import { toKebabCase } from '@lucide/shared';
+import type { FunctionalComponent } from 'vue';
+import { IconNode, LucideProps } from './types';
+import Icon from './Icon';
 
 // Create interface extending SVGAttributes
-export interface SVGProps extends Partial<SVGAttributes> {
-  size?: 24 | number;
-  strokeWidth?: number | string;
-  absoluteStrokeWidth?: boolean;
-}
-
-export type IconNode = [elementName: string, attrs: Record<string, string>][];
-export type Icon = FunctionalComponent<SVGProps>;
 
 /**
  * Create a Lucide icon component
@@ -20,27 +12,17 @@ export type Icon = FunctionalComponent<SVGProps>;
  * @returns {FunctionalComponent} LucideIcon
  */
 const createLucideIcon =
-  (iconName: string, iconNode: IconNode): Icon =>
-  (
-    { size, strokeWidth = 2, absoluteStrokeWidth, color, class: classes, ...props }, // props
-    { attrs, slots }, // context
-  ) => {
-    return h(
-      'svg',
+  (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
+  (props, { slots, attrs }) =>
+    h(
+      Icon,
       {
-        ...defaultAttributes,
-        width: size || defaultAttributes.width,
-        height: size || defaultAttributes.height,
-        stroke: color || defaultAttributes.stroke,
-        'stroke-width': absoluteStrokeWidth
-          ? (Number(strokeWidth) * 24) / Number(size)
-          : strokeWidth,
         ...attrs,
-        class: ['lucide', `lucide-${toKebabCase(iconName)}`],
         ...props,
+        iconNode,
+        name: iconName,
       },
-      [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],
+      slots,
     );
-  };
 
 export default createLucideIcon;

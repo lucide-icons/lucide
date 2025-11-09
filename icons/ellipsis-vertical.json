@@ -6,12 +6,24 @@
   "tags": [
     "menu",
     "options",
+    "spread",
+    "more",
+    "further",
+    "extra",
+    "overflow",
+    "dots",
+    "…",
     "..."
   ],
   "categories": [
     "layout"
   ],
   "aliases": [
-    "more-vertical"
+    {
+      "name": "more-vertical",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -1,0 +1,39 @@
+name: Linting Icons
+
+on:
+  pull_request:
+    paths:
+      - 'icons/*'
+
+jobs:
+  lint-filenames:
+    name: Lint Filenames
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v46
+        with:
+          files: icons/*
+
+      - name: Generate annotations
+        run: node ./scripts/lintFilenames.mts
+        env:
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+
+  lint-aliases:
+    name: Check Uniqueness of Aliases
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Uniqueness of Aliases
+        run: "! cat <(printf \"%s\\n\" icons/*.json | while read -r name; do basename \"$name\" .json; done) <(jq -cr 'select(.aliases) | .aliases[] | if type==\"string\" then . else .name end' icons/*.json) | sort | uniq -c | grep -ve '^\\s*1 '"

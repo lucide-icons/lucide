@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "warning",
@@ -15,6 +16,11 @@
     "shapes"
   ],
   "aliases": [
-    "alert-octagon"
+    {
+      "name": "alert-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

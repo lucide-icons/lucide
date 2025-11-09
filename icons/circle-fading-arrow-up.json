@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jordan808",
+    "jguddas",
+    "colebemis",
+    "ericfennis",
+    "mosch"
+  ],
+  "tags": [
+    "north",
+    "up",
+    "upgrade",
+    "improve",
+    "circle",
+    "button"
+  ],
+  "categories": [
+    "arrows",
+    "development"
+  ]
+}

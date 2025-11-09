@@ -1,0 +1,14 @@
+{
+  "name": "@lucide/helpers",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A internal used package with helpers.",
+  "main": "helpers.ts",
+  "types": "helpers.ts",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22"
+  }
+}
