@@ -18,7 +18,7 @@ This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.or
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue
+pnpm add lucide-vue
 ```
 
 ```sh [yarn]

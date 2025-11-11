@@ -14,7 +14,7 @@ Angular components and services for Lucide icons that integrate with Angular's d
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-angular
+pnpm add lucide-angular
 ```
 
 ```sh [yarn]

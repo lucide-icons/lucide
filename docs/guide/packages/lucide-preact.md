@@ -18,7 +18,7 @@ Preact components for Lucide icons that provide React-like development experienc
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]

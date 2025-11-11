@@ -14,7 +14,7 @@ React components for Lucide icons that integrate seamlessly into your React appl
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]

@@ -14,7 +14,7 @@ SolidJS components for Lucide icons that leverage Solid's fine-grained reactivit
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
