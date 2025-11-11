@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joffx"
+  ],
+  "tags": [
+    "cricket",
+    "bat",
+    "sports",
+    "game",
+    "equipment",
+    "stick",
+    "ball",
+    "match",
+    "play"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
