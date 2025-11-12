@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "viralcodex"
+  ],
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "exclamation mark",
+    "rectangle",
+    "square",
+    "notification",
+    "attention",
+    "important",
+    "caution"
+  ],
+  "categories": [
+    "notifications",
+    "shapes"
+  ]
+}
