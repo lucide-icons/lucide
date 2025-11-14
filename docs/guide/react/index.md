@@ -27,6 +27,8 @@ List of features:
 - **Tree-shakable**: Only the icons you use are included in your final bundle
 - **TypeScript Support**: Fully typed components for better developer experience.
 
+React components for Lucide icons that integrate seamlessly into your React applications. Each icon is a fully-typed React component that renders as an optimized inline SVG, giving you the flexibility of components with the performance of vector graphics.
+
 ## Overview
 
 <OverviewLink href="/guide/react/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your React project."/>

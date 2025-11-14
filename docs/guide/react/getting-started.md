@@ -14,7 +14,7 @@ Make sure you have a React environment set up. If you don't have one yet, you ca
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
