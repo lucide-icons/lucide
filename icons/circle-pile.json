@@ -9,7 +9,19 @@
     "zero",
     "record",
     "shape",
-    "circle-pile"
+    "circle-pile",
+    "circle",
+    "pile",
+    "stack",
+    "layer",
+    "structure",
+    "form",
+    "group",
+    "collection",
+    "stock",
+    "inventory",
+    "materials",
+    "warehouse"
   ],
   "categories": [
     "shapes"
