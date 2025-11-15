@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "KISHORE-KUMAR-S"
+  ],
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "check bubble",
+    "verification",
+    "delivery",
+    "send"
+  ],
+  "categories": [
+    "social"
+  ]
+}
