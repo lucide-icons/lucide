@@ -1,6 +1,13 @@
 # Lucide React Native
 
-Implementation of the lucide icon library for React Native applications
+React Native components for Lucide icons that work seamlessly across iOS and Android platforms. Built on top of react-native-svg, each icon renders as a native SVG component, providing consistent visual appearance and performance across mobile devices.
+
+**What you can accomplish:**
+- Use icons as React Native components with platform-consistent rendering
+- Build cross-platform mobile apps with scalable vector icons
+- Create responsive interfaces that adapt to different screen densities
+- Integrate with React Native's styling system and animation libraries
+- Maintain consistent icon appearance across iOS and Android platforms
 
 ## Installation
 
@@ -9,7 +16,7 @@ First, ensure that you have `react-native-svg` (version between 12 and 15) insta
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react-native
+pnpm add lucide-react-native
 ```
 
 ```sh [yarn]

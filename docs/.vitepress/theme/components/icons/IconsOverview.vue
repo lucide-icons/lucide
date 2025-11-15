@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, onBeforeUnmount, watch } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
+import { useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
 import useSearchInput from '../../composables/useSearchInput';
+import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
@@ -58,6 +60,11 @@ const mappedIcons = computed(() => {
 });
 
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
+
+const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
+  searchInput.value?.focus();
+});
+
 const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'name', weight: 3 },
   { name: 'aliases', weight: 3 },
@@ -80,8 +87,13 @@ const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(
 onMounted(() => {
   containerProps.ref.value = document.documentElement;
   useEventListener(window, 'scroll', containerProps.onScroll)
-})
 
+  // Check if we should focus the search input from URL parameter
+  const route = useRoute()
+  if (route.data?.relativePath && window.location.search.includes('focus')) {
+    searchInput.value?.focus()
+  }
+})
 
 function setActiveIconName(name: string) {
   activeIconName.value = name;
@@ -118,6 +130,7 @@ function handleCloseDrawer() {
         :placeholder="`Search ${icons.length} icons ...`"
         v-model="searchQuery"
         ref="searchInput"
+        :shortcut="kbdSearchShortcut"
         class="input-wrapper"
         @focus="onFocusSearchInput"
       />
