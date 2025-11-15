@@ -14,7 +14,10 @@
     "conversation",
     "dialog",
     "feedback",
-    "check bubble"
+    "check bubble",
+    "verification",
+    "delivery",
+    "send"
   ],
   "categories": [
     "social"
