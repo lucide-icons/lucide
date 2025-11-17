@@ -1,19 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
     "karsa-mistmere",
-    "ericfennis",
     "jguddas"
   ],
   "tags": [
-    "directory",
-    "root",
-    "project",
-    "git",
-    "repo"
+    "castle",
+    "piece",
+    "board game"
   ],
   "categories": [
-    "files"
+    "gaming",
+    "emoji"
   ]
 }
