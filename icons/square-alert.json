@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "viralcodex"
+    "viralcodex",
+    "colebemis",
+    "ericfennis"
   ],
   "tags": [
     "warning",
