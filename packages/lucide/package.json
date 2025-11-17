@@ -36,21 +36,22 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:bundle": "rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@rollup/plugin-replace": "^5.0.5",
-    "@testing-library/jest-dom": "^6.1.6",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@testing-library/jest-dom": "^6.6.3",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.22.4",
-    "rollup-plugin-dts": "^6.1.0",
-    "typescript": "^4.9.3",
-    "vite": "5.0.13",
-    "vitest": "^1.1.1"
+    "rollup": "^4.40.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.6",
+    "vitest": "^3.1.3"
   }
 }

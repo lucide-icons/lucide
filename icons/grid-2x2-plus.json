@@ -26,8 +26,14 @@
   "categories": [
     "text",
     "layout",
-    "design",
-    "shapes",
-    "maths"
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "grid-2-x-2-plus",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

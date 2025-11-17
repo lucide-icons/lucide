@@ -17,10 +17,14 @@
   "categories": [
     "arrows",
     "navigation",
-    "shapes",
     "gaming"
   ],
   "aliases": [
-    "arrow-left-circle"
+    {
+      "name": "arrow-left-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

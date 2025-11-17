@@ -9,12 +9,12 @@
   "type": "module",
   "dependencies": {
     "@atomico/rollup-plugin-sizes": "^1.1.4",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-replace": "^5.0.5",
-    "esbuild": "^0.19.11",
-    "rollup": "^4.22.4",
-    "rollup-plugin-esbuild": "^6.1.0",
-    "rollup-plugin-license": "^3.2.0",
-    "rollup-plugin-visualizer": "^5.12.0"
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-replace": "^6.0.1",
+    "esbuild": "^0.25.2",
+    "rollup": "^4.40.0",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "rollup-plugin-license": "^3.6.0",
+    "rollup-plugin-visualizer": "^5.14.0"
   }
 }

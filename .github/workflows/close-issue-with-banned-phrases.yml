@@ -11,12 +11,12 @@ jobs:
       issues: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Check for blocked phrases in issue title
         run: |
           ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
-          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord")
+          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord" "bluesky" "spotify" "behance" "pix" "x.com" "telegram")
 
           # Check title and body for blocked phrases
           for PHRASE in "${BLOCKED_PHRASES[@]}"
@@ -24,7 +24,7 @@ jobs:
             if echo "$ISSUE_TITLE" | grep -i "$PHRASE"; then
               gh issue close ${{ github.event.issue.number }} --reason "not planned" --comment "This looks like a duplicate, use the [search](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue+$PHRASE) to find similar issues.
 
-          Read more about brand guideline rules at [We're not accepting new Brand icons #670](https://github.com/lucide-icons/lucide/issues/670).
+          Read [our official statement about brand logos in Lucide](https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md).
 
           Always happy to help on [Discord](https://discord.gg/EH6nSts)."
               gh issue lock ${{ github.event.issue.number }} --reason spam

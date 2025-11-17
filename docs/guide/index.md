@@ -7,12 +7,13 @@ nextPage:
 
 # What is Lucide?
 
-Lucide is an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official [packages](/packages) to make it easier to use these icons in your project.
+Lucide is an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official [packages](/packages).
 
 ## Available Icons
 
 Lucide contains icons with different variants and states, allowing users to choose the most suitable icon for their needs. And if a desired icon isn't available yet, users can open a design request, and the Lucide community contributors will help provide new icons. With more icons to choose from, users have more options to work with in their projects.
-Complete Set of Icons
+
+### Complete Set of Icons
 
 As new applications with specific features arise, Lucide aims to provide a complete set of icons for every project. The community follows a set of design rules when designing new icons. These rules maintain standards for the icons, such as recognizability, consistency in style, and readability at all sizes. While creativity is valued in new icons, recognizable design conventions are important to ensure that the icons are easily identifiable by users.
 
@@ -28,7 +29,8 @@ However, not everyone can understand them easily. Read more about [how to use Lu
 
 ## Official Packages
 
-Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](https://lucide.dev/guide/packages/lucide), [React](https://lucide.dev/guide/packages/lucide-react), [React Native](https://lucide.dev/guide/packages/lucide-react-native), [Vue](https://lucide.dev/guide/packages/lucide-vue), [Vue 3](https://lucide.dev/guide/packages/lucide-vue-next), [Svelte](https://lucide.dev/guide/packages/lucide-svelte), [Preact](https://lucide.dev/guide/packages/lucide-preact), [Solid](https://lucide.dev/guide/packages/lucide-solid), [Angular](https://lucide.dev/guide/packages/lucide-angular), [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs) and [Flutter](https://lucide.dev/guide/packages/lucide-flutter).
+Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](https://lucide.dev/guide/packages/lucide), [React](https://lucide.dev/guide/packages/lucide-react), [React Native](https://lucide.dev/guide/packages/lucide-react-native), [Vue](https://lucide.dev/guide/packages/lucide-vue), [Vue 3](https://lucide.dev/guide/packages/lucide-vue-next), [Svelte](https://lucide.dev/guide/packages/lucide-svelte), [Preact](https://lucide.dev/guide/packages/lucide-preact), [Solid](https://lucide.dev/guide/packages/lucide-solid), [Angular](https://lucide.dev/guide/packages/lucide-angular), [Astro](https://lucide.dev/guide/packages/lucide-astro), and [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs).
 
 ## Community
+
 If you have any questions about Lucide, feel free to reach out to the community. You can find them on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).

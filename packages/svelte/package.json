@@ -1,0 +1,79 @@
+{
+  "name": "@lucide/svelte",
+  "description": "A Lucide icon library package for Svelte applications.",
+  "version": "0.1.0",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/svelte"
+  },
+  "keywords": [
+    "Lucide",
+    "Svelte",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "author": "Eric Fennis",
+  "type": "module",
+  "main": "dist/lucide-svelte.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-svelte.d.ts",
+      "svelte": "./dist/lucide-svelte.js",
+      "default": "./dist/lucide-svelte.js"
+    },
+    "./icons": {
+      "types": "./dist/lucide-svelte.d.ts",
+      "svelte": "./dist/lucide-svelte.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.svelte.d.ts",
+      "svelte": "./dist/icons/*.js",
+      "default": "./dist/icons/*.js"
+    }
+  },
+  "typings": "dist/lucide-svelte.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:package && pnpm build:license",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist stats ./src/icons/*.{ts,svelte} ./src/aliases/{aliases,prefixed,suffixed}.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --separateIconFileExport --separateIconFileExportExtension=.ts --withAliases --aliasesFileExtension=.ts --separateAliasesFile  --separateAliasesFileExtension=.ts --aliasImportFileExtension=.js --pretty=false",
+    "build:package": "svelte-package --input ./src",
+    "build:license": "node ./scripts/appendBlockComments.mts",
+    "test": "pnpm copy:license && pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "workspace:*",
+    "@sveltejs/package": "^2.3.10",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/svelte": "^5.2.7",
+    "@tsconfig/svelte": "^5.0.4",
+    "jest-serializer-html": "^7.1.0",
+    "jsdom": "^20.0.3",
+    "svelte": "^5.20.5",
+    "svelte-check": "^4.1.4",
+    "svelte-preprocess": "^6.0.3",
+    "typescript": "^5.8.3",
+    "vite": "6.1.6",
+    "vitest": "^3.1.3"
+  },
+  "peerDependencies": {
+    "svelte": "^5"
+  }
+}

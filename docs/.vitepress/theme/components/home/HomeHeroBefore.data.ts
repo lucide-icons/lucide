@@ -9,7 +9,7 @@ export default {
         }
         return null;
       })
-      .then((res) => res.tag_name);
+      .then((res) => res?.tag_name);
 
     return {
       version,

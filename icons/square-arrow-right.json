@@ -16,10 +16,14 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "shapes"
+    "navigation"
   ],
   "aliases": [
-    "arrow-right-square"
+    {
+      "name": "arrow-right-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

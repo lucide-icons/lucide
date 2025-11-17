@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "comment",
@@ -14,7 +15,6 @@
     "draft"
   ],
   "categories": [
-    "account",
     "social"
   ]
 }

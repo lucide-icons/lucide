@@ -3,7 +3,6 @@ name: Lucide font checks
 on:
   pull_request:
     paths:
-      - icons/**
       - tools/build-font/**
       - pnpm-lock.yaml
 
@@ -12,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -28,7 +27,7 @@ jobs:
         run: pnpm build:font
 
       - name: 'Upload to Artifacts'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: lucide-font
           path: lucide-font
