@@ -1,6 +1,13 @@
 # Lucide
 
-Implementation of the lucide icon library for web applications.
+The core Lucide package for vanilla JavaScript applications. This package allows you to easily add scalable vector icons to any web project without framework dependencies. Perfect for static websites, legacy applications, or when you need lightweight icon integration with maximum browser compatibility.
+
+**What you can accomplish:**
+- Add icons to HTML using simple data attributes
+- Dynamically create and insert SVG icons with JavaScript
+- Customize icon appearance with CSS classes and inline styles
+- Tree-shake unused icons to keep bundle sizes minimal
+- Use icons in any JavaScript environment or plain HTML
 
 ## Installation
 
@@ -9,7 +16,7 @@ Implementation of the lucide icon library for web applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
