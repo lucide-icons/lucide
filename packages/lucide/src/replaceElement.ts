@@ -22,7 +22,7 @@ export const getAttrs = (element: Element): Record<string, string> =>
  * @returns {Array}
  */
 export const getClassNames = (
-  attrs: Record<string, string | string[]> | string,
+  attrs: Record<string, number | string | string[]> | string,
 ): string | string[] => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
@@ -38,7 +38,7 @@ export const getClassNames = (
 interface ReplaceElementOptions {
   nameAttr: string;
   icons: Icons;
-  attrs: Record<string, string>;
+  attrs: SVGProps;
 }
 
 /**

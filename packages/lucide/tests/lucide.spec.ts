@@ -109,5 +109,22 @@ describe('createIcons', () => {
 
     expect(element).not.toHaveAttribute('aria-hidden');
     expect(element).toHaveAttribute('aria-label', 'Volume');
+
+  });
+
+  it('should not replace icons inside template elements by default', () => {
+    document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
+
+    createIcons({ icons });
+    const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
+    expect(hasIcon).toBeFalsy();
+  });
+
+  it('should replace icons inside template elements when replaceInsideTemplates is true', () => {
+    document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
+
+    createIcons({ icons, inTemplates: true });
+    const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
+    expect(hasIcon).toBeTruthy();
   });
 });
