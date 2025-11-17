@@ -109,7 +109,6 @@ describe('createIcons', () => {
 
     expect(element).not.toHaveAttribute('aria-hidden');
     expect(element).toHaveAttribute('aria-label', 'Volume');
-
   });
 
   it('should not replace icons inside template elements by default', () => {
