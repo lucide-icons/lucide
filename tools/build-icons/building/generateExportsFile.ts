@@ -1,13 +1,11 @@
 import path from 'path';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, toCamelCase, resetFile, appendFile } from '@lucide/helpers';
-import type { IconNode } from '../types.ts';
+import type { INode } from 'svgson';
 
 export default async function generateExportFile(
   inputEntry: string,
   outputDirectory: string,
-  iconNodes: IconNode,
+  iconNodes: Record<string, INode>,
   exportModuleNameCasing: 'camel' | 'pascal',
   iconFileExtension = '',
 ) {

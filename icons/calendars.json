@@ -2,15 +2,21 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
     "ericfennis",
+    "jguddas",
     "karsa-mistmere"
   ],
   "tags": [
-    "ship"
+    "date",
+    "month",
+    "year",
+    "event",
+    "dates",
+    "months",
+    "years",
+    "events"
   ],
   "categories": [
-    "transportation",
-    "text"
+    "time"
   ]
 }
