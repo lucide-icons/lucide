@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "caicaiwan-T"
+  ],
+  "tags": [
+    "chat",
+    "new-chat",
+    "conversation",
+    "comment"
+  ],
+  "categories": [
+    "daily-life"
+  ]
+}
