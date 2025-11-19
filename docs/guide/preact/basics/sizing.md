@@ -14,16 +14,11 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 ## Adjusting the icon size using the `size` prop
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="sizeIconExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 300,
+    editorHeight: 320,
     editorWidthPercentage: 60,
   }"
 />
@@ -33,16 +28,11 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 The CSS properties `width` and `height` can be used to adjust the icon size.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="sizeIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 300,
+    editorHeight: 320,
   }"
 />
 
@@ -51,16 +41,11 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="sizeIconFontExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 300,
+    editorHeight: 320,
   }"
 />
 
@@ -69,14 +54,9 @@ It is possible to resize icons based on font size. This can be achieved using th
 `size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="sizeIconTailwind"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest",
-    }
-  }'
   :options="{
     externalResources: ['https://cdn.tailwindcss.com'],
     editorHeight: 300,

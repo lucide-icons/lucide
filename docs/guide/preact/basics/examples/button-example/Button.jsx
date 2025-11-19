@@ -1,4 +1,5 @@
-import { ThumbsUp } from "lucide-react";
+import { h } from "preact";
+import { ThumbsUp } from "lucide-preact";
 
 function LikeButton() {
   return (

@@ -1,4 +1,5 @@
-import { RollerCoaster } from "lucide-react";
+import { h } from "preact";
+import { RollerCoaster } from "lucide-preact";
 
 function App() {
   return (

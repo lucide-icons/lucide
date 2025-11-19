@@ -19,14 +19,9 @@ Fill can still be used and will work fine on certain icons.
 
 Example with stars:
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="sizeIconExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
     editorHeight: 480,
     editorWidthPercentage: 60,

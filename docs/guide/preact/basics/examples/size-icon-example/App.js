@@ -1,4 +1,5 @@
-import { Landmark } from "lucide-react";
+import { h } from "preact";
+import { Landmark } from "lucide-preact";
 
 function App() {
   return (

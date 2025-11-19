@@ -1,4 +1,5 @@
-import { File } from "lucide-react";
+import { File } from "lucide-preact";
+import { h } from "preact";
 
 function App() {
   return (
@@ -7,9 +8,9 @@ function App() {
         <text
           x={7.5}
           y={19}
-          fontSize={8}
-          fontFamily="Verdana,sans-serif"
-          strokeWidth={1}
+          font-size={8}
+          font-family="Verdana,sans-serif"
+          stroke-width={1}
         >
           JS
         </text>

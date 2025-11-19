@@ -1,4 +1,5 @@
-import { PartyPopper } from "lucide-react";
+import { h } from "preact";
+import { PartyPopper } from "lucide-preact";
 
 function App() {
   return (

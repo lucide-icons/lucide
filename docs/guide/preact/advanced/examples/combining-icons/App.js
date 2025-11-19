@@ -1,4 +1,5 @@
-import { Scan, User } from "lucide-react";
+import { Scan, User } from "lucide-preact";
+import { h } from "preact";
 
 function App() {
   return (

@@ -1,4 +1,5 @@
-import { FolderLock } from "lucide-react";
+import { h } from "preact";
+import { FolderLock } from "lucide-preact";
 
 function App() {
   return (

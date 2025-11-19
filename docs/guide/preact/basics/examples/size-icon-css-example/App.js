@@ -1,4 +1,5 @@
-import { Beer } from "lucide-react";
+import { h } from "preact";
+import { Beer } from "lucide-preact";
 import "./icon.css";
 
 function App() {

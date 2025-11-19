@@ -1,12 +1,12 @@
 .lucide {
   /* Change this! */
   color: #ffadff;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   stroke-width: 1px;
 }
 
-.app {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;

@@ -16,16 +16,11 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 The color can be adjusted by passing the color prop to the element.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="iconColorExampleFiles"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 295,
+    editorHeight: 320,
     editorWidthPercentage: 60,
   }"
 />
@@ -37,16 +32,11 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="buttonExampleFiles"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 320,
+    editorHeight: 340,
     editorWidthPercentage: 60,
   }"
 />

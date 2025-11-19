@@ -8,12 +8,13 @@ import {
   Map,
   CloudMoon,
   Sparkles,
-} from "lucide-react";
+} from "lucide-preact";
+import { h } from "preact";
 import "./icon.css";
 
 function App() {
   return (
-    <div className="app">
+    <div className="grid">
       <TentTree />
       <Caravan />
       <FlameKindling />

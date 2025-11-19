@@ -1,6 +1,6 @@
 import App from './App.js?raw'
 import Button from './Button.jsx?raw'
-import styles from '../styles.css?raw'
+import { preactFiles } from '../files'
 
 const files = {
   'App.js': {
@@ -12,10 +12,7 @@ const files = {
     active: true,
     readOnly: false,
   },
-  'styles.css': {
-    code:styles,
-    hidden: true
-  },
+  ...preactFiles
 }
 
 export default files

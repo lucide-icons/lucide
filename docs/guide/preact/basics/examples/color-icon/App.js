@@ -1,4 +1,5 @@
-import { Smile } from "lucide-react";
+import { h } from "preact";
+import { Smile } from "lucide-preact";
 
 function App() {
   return (

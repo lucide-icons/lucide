@@ -1,4 +1,5 @@
-import { Star, StarHalf } from "lucide-react";
+import { Star, StarHalf } from "lucide-preact";
+import { h } from "preact";
 import "./icon.css";
 
 function App() {

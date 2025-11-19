@@ -16,16 +16,11 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="strokeWidth"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 300,
+    editorHeight: 320,
     editorWidthPercentage: 60,
   }"
 />
@@ -45,16 +40,11 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="absoluteStrokeWidth"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 320,
+    editorHeight: 340,
     editorWidthPercentage: 60,
   }"
 />

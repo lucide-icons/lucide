@@ -1,15 +1,12 @@
 import App from './App.js?raw'
-import styles from '../../../basics/examples/styles.css?raw'
+import { preactFiles } from '../../../basics/examples/files'
 
 const files = {
   'App.js': {
     code: App,
     active: true,
   },
-  'styles.css': {
-    code: styles,
-    hidden: true
-  },
+  ...preactFiles
 }
 
 export default files

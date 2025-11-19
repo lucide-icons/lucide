@@ -1,4 +1,5 @@
-import { Mail } from "lucide-react";
+import { Mail } from "lucide-preact";
+import { h } from "preact";
 
 function App() {
   const hasUnreadMessages = true;

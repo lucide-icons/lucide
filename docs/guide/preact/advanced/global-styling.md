@@ -45,16 +45,12 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 - The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="globalIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-preact": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 300,
+    eeditorHeight: 480,
+    editorWidthPercentage: 60,
   }"
 />
 
@@ -63,16 +59,12 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
 
 <Sandpack
-  template="react"
+  template="vanilla"
   :theme="sandpackTheme"
   :files="globalAbsoluteStrokewidthExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-preact": "latest"
-    }
-  }'
   :options="{
-    editorHeight: 300,
+    editorHeight: 480,
+    editorWidthPercentage: 60,
   }"
 />
 

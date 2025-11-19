@@ -1,6 +1,7 @@
 import App from './App.js?raw'
 import styles from '../styles.css?raw'
 import IconCss from './icon.css?raw'
+import { preactFiles } from '../files'
 
 const files = {
   'icon.css': {
@@ -11,11 +12,7 @@ const files = {
   'App.js': {
     code: App,
   },
-  'styles.css': {
-    code: styles,
-    hidden: true
-  },
-
+  ...preactFiles
 }
 
 export default files
