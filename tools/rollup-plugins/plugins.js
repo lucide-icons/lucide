@@ -4,9 +4,15 @@ import replace from '@rollup/plugin-replace';
 import license from 'rollup-plugin-license';
 import esbuild from 'rollup-plugin-esbuild';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import summary from "rollup-plugin-summary";
+import summary from 'rollup-plugin-summary';
 
-const plugins = ({ pkg, minify = false, withEsbuild = true, esbuildOptions = {}, withSummary = false }) =>
+const plugins = ({
+  pkg,
+  minify = false,
+  withEsbuild = true,
+  esbuildOptions = {},
+  withSummary = false,
+}) =>
   [
     withEsbuild
       ? esbuild({

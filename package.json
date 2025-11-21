@@ -91,7 +91,6 @@
       "webpack-dev-middleware": "^5.3.4",
       "semver": "^7.7.3",
       "axios": "^1.12.0",
-      "glob": "^11.1.0",
       "vite-prerender-plugin": "0.5.12"
     }
   }
