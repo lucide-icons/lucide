@@ -25,9 +25,7 @@
   "amdName": "lucide-vue-next",
   "source": "build/lucide-vue-next.js",
   "main": "dist/cjs/lucide-vue-next.js",
-  "main:umd": "dist/umd/lucide-vue-next.js",
   "module": "dist/esm/lucide-vue-next.js",
-  "unpkg": "dist/umd/lucide-vue-next.min.js",
   "typings": "dist/lucide-vue-next.d.ts",
   "sideEffects": false,
   "files": [
