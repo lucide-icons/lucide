@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nkowa"
+  ],
+  "tags": [
+    "text",
+    "font",
+    "typography",
+    "format"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "files"
+  ]
+}
