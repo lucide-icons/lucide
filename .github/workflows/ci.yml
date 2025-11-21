@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide' && ${{ !startsWith(github.event.head_commit.message, 'fix(icons):') }}
+    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}

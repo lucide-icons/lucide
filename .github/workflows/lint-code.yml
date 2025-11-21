@@ -2,6 +2,8 @@ name: Linting PR
 
 on:
   pull_request:
+    paths-ignore:
+      - icons/*.svg
 
 jobs:
   lint-code:
