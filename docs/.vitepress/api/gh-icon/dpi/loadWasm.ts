@@ -1,6 +1,6 @@
 import fs from 'fs';
 import module from 'node:module';
-/* WASM_IMPORT */
+import resvg_wasm from "@resvg/resvg-wasm/index_bg.wasm"
 
 let wasm;
 

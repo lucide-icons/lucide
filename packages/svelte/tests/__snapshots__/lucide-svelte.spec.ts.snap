@@ -112,6 +112,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
     <!---->
   </svg>
   
+  
 </div>
 `;
 
@@ -206,6 +207,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
     <!---->
   </svg>
   
+  
 </div>
 `;
 
@@ -267,6 +269,7 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
     
     <!---->
   </svg>
+  
   
 </div>
 `;

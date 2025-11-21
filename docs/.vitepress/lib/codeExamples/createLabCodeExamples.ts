@@ -1,5 +1,5 @@
-import { bundledLanguages, type ThemeRegistration } from 'shikiji';
-import { getHighlighter } from 'shikiji';
+import { bundledLanguages, type ThemeRegistration } from 'shiki';
+import { createHighlighter } from 'shiki';
 
 type CodeExampleType = {
   title: string;
@@ -119,7 +119,7 @@ export type ThemeOptions =
   | { light: ThemeRegistration; dark: ThemeRegistration };
 
 const highLightCode = async (code: string, lang: string, active?: boolean) => {
-  const highlighter = await getHighlighter({
+  const highlighter = await createHighlighter({
     themes: ['github-light', 'github-dark'],
     langs: Object.keys(bundledLanguages),
   });
