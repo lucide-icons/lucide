@@ -7,6 +7,10 @@ on:
     paths:
       - icons/**/*.svg
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   create-release:
     if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
