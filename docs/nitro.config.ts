@@ -2,8 +2,8 @@ import copy from 'rollup-plugin-copy';
 import replace from '@rollup/plugin-replace';
 
 export default defineNitroConfig({
-  compatibilityDate: '2025-21-11',
-  preset: 'vercel_edge',
+  compatibilityDate: '2025-11-21'
+  preset: 'vercel-edge',
   srcDir: '.vitepress',
   routeRules: {
     '/api/**': { cors: false },
