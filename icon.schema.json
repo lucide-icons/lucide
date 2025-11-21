@@ -56,7 +56,6 @@
           "account",
           "animals",
           "arrows",
-          "brands",
           "buildings",
           "charts",
           "communication",
@@ -132,10 +131,6 @@
     "toBeRemovedInVersion": ["deprecated"]
   },
   "$defs": {
-    "iconDeprecationReasons": {
-      "type": "string",
-      "enum": ["icon.brand"]
-    },
     "aliasDeprecationReasons": {
       "type": "string",
       "enum": ["alias.typo", "alias.name", "alias.duplicate"]
