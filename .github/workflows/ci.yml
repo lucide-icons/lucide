@@ -8,7 +8,7 @@ on:
       - icons/**/*.svg
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
   contents: read
 
 jobs:

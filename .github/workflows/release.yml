@@ -19,7 +19,7 @@ on:
         required: true
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
   contents: read
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-release
     permissions:
-      id-token: write  # Required for OIDC
+      id-token: write # Required for OIDC
       contents: read
     strategy:
       fail-fast: false
@@ -94,7 +94,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [pre-release, lucide-font]
     permissions:
-      id-token: write  # Required for OIDC
+      id-token: write # Required for OIDC
       contents: read
 
     steps:
