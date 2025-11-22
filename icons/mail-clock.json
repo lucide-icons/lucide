@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KnarliX"
+  ],
+  "tags": [
+    "mail clock",
+    "mail",
+    "email",
+    "scheduled",
+    "scheduled mail",
+    "email schedule",
+    "email time"
+  ],
+  "categories": [
+    "mail",
+    "clock",
+    "email"
+  ]
+}
