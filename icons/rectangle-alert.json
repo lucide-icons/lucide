@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KnarliX"
+  ],
+  "tags": [
+    "rectangle-alert",
+    "alert",
+    "rectangle",
+    "alert box"
+  ],
+  "categories": [
+    "alert"
+  ]
+}
