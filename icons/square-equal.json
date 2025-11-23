@@ -12,6 +12,11 @@
     "math"
   ],
   "aliases": [
-    "equal-square"
+    {
+      "name": "equal-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

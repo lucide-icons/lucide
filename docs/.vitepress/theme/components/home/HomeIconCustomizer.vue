@@ -48,6 +48,7 @@ function resetStyle () {
   color.value = 'currentColor'
   strokeWidth.value = 2
   size.value = 24
+  absoluteStrokeWidth.value = false
 }
 
 watch(absoluteStrokeWidth, (enabled) => {

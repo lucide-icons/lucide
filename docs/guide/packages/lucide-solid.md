@@ -1,13 +1,20 @@
 # Lucide Solid
 
-Implementation of the lucide icon library for solid applications.
+SolidJS components for Lucide icons that leverage Solid's fine-grained reactivity system. Each icon is a reactive Solid component that renders as an inline SVG, providing exceptional performance through Solid's compile-time optimizations and reactive primitives.
+
+**What you can accomplish:**
+- Use icons as SolidJS components with fine-grained reactivity
+- Create highly performant interfaces with Solid's reactive system
+- Build dynamic icon components that respond to signals and stores
+- Integrate seamlessly with Solid's JSX and component patterns
+- Optimize performance with direct icon imports and minimal runtime overhead
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
