@@ -1,5 +1,4 @@
-import { bundledLanguages, type ThemeRegistration } from 'shikiji';
-import { getHighlighter } from 'shikiji';
+import { bundledLanguages, getHighlighter, type ThemeRegistration } from 'shikiji';
 
 type CodeExampleType = {
   title: string;
@@ -102,13 +101,8 @@ import { LucideAngularModule, $PascalCase } from 'lucide-angular';
     },
     {
       language: 'html',
-      title: 'Icon Font',
-      code: `<style>
-@import ('~lucide-static/font/Lucide.css');
-</style>
-
-<div class="icon-$Name"></div>
-`,
+      title: 'Icon font',
+      code: `<div class="icon-$Name"></div>`,
     },
   ];
 };

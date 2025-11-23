@@ -60,9 +60,8 @@ const customizingActive = computed(() => {
   return color.value !== STYLE_DEFAULTS.color
     || strokeWidth.value !== STYLE_DEFAULTS.strokeWidth
     || size.value !== STYLE_DEFAULTS.size
+    || absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
 })
-
-
 </script>
 
 <template>
@@ -111,7 +110,7 @@ const customizingActive = computed(() => {
         name="size"
         v-model="size"
         :min="16"
-        :max="48"
+        :max="256"
         :step="4"
       />
     </InputField>
@@ -120,16 +119,11 @@ const customizingActive = computed(() => {
       id="absolute-stroke-width"
       label="Absolute Stroke width"
     >
-    
       <Switch
         id="absolute-stroke-width"
         name="absolute-stroke-width"
-        :key="absoluteStrokeWidth"
-        class="switch"
-        :class="{ enabled: absoluteStrokeWidth }"
         v-model="absoluteStrokeWidth"
       />
-     
     </InputField>
   </div>
 </template>
@@ -167,9 +161,4 @@ const customizingActive = computed(() => {
 .color-picker {
   margin-left: auto;
 }
-
-#absolute-stroke-width {
-  flex-direction: row-reverse;
-}
-
 </style>
