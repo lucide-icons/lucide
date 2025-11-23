@@ -3,7 +3,6 @@ import { LucideProps } from './types';
 
 type LucideConfig = {
   size: number;
-  fill: string;
   color: string;
   strokeWidth: number;
   absoluteStrokeWidth: boolean;
@@ -18,7 +17,6 @@ type LucideProviderProps = {
 export function LucideProvider({
   children,
   size,
-  fill,
   color,
   strokeWidth,
   absoluteStrokeWidth,
@@ -26,12 +24,11 @@ export function LucideProvider({
   const value = useMemo(
     () => ({
       size,
-      fill,
       color,
       strokeWidth,
       absoluteStrokeWidth,
     }),
-    [size, fill, color, strokeWidth, absoluteStrokeWidth],
+    [size, color, strokeWidth, absoluteStrokeWidth],
   );
 
   return <LucideContext.Provider value={value}>{children}</LucideContext.Provider>;

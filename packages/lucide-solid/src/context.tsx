@@ -2,13 +2,11 @@ import { createContext, splitProps, type JSXElement } from 'solid-js';
 
 export const LucideContext = createContext<{
   size?: number;
-  fill?: string;
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
 }>({
   size: 24,
-  fill: 'none',
   color: 'currentColor',
   strokeWidth: 2,
   absoluteStrokeWidth: false,
@@ -17,7 +15,6 @@ export const LucideContext = createContext<{
 interface LucideProviderProps {
   children: JSXElement;
   size?: number;
-  fill?: string;
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
