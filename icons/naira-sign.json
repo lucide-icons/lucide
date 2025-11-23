@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "eberechia"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "naira",
+    "nigeria",
+    "NGN"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
