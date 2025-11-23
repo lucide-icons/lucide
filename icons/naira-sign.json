@@ -8,8 +8,10 @@
     "money",
     "payment",
     "naira",
-    "nigeria",
-    "NGN"
+    "Nigeria",
+    "NGN",
+    "coin",
+    "symbol"
   ],
   "categories": [
     "finance"
