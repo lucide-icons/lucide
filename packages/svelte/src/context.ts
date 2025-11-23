@@ -12,4 +12,4 @@ export interface LucideGlobalContext {
 export const setLucideProps = (globalProps: LucideGlobalContext) =>
   setContext(LucideContext, globalProps);
 
-export let getLucideContext = () => getContext<LucideGlobalContext>(LucideContext);
+export const getLucideContext = () => getContext<LucideGlobalContext>(LucideContext);
