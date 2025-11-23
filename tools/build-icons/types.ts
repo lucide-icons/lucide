@@ -30,9 +30,9 @@ export type IconDeprecationReason = 'icon.brand' | '';
 
 export type IconMetadataBase = {
   toBeRemovedInVersion?: string;
-  categories?: string[];
+  categories: string[];
   aliases?: (string | AliasDeprecation)[];
-  tags?: string[];
+  tags: string[];
   deprecationReason?: IconDeprecationReason;
   deprecated?: boolean;
 };

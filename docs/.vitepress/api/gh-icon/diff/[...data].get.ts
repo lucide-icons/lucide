@@ -17,6 +17,13 @@ export default eventHandler((event) => {
     .replaceAll('\n', '')
     .replace(/<svg[^>]*>|<\/svg>/g, '');
 
+  const width = parseInt(
+    (newSrc.includes('<svg ') ? newSrc.match(/width="(\d+)"/)?.[1] : null) ?? '24',
+  );
+  const height = parseInt(
+    (newSrc.includes('<svg ') ? newSrc.match(/height="(\d+)"/)?.[1] : null) ?? '24',
+  );
+
   const children = [];
 
   const oldSrc = iconNodes[name]
@@ -27,7 +34,9 @@ export default eventHandler((event) => {
 
   const svg = Buffer.from(
     // We can't use jsx here, is not supported here by nitro.
-    renderToString(createElement(Diff, { oldSrc, newSrc, showGrid: true }, children)),
+    renderToString(
+      createElement(Diff, { oldSrc, newSrc, showGrid: true, height, width }, children),
+    ),
   ).toString('utf8');
 
   defaultContentType(event, 'image/svg+xml');
