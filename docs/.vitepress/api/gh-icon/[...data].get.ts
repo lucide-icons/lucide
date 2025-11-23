@@ -15,8 +15,10 @@ export default eventHandler((event) => {
 
   const src = Buffer.from(data, 'base64').toString('utf8').replaceAll('\n', '');
 
-  const width = parseInt((src.includes('svg') ? src.match(/width="(\d+)"/)?.[1] : null) ?? '24');
-  const height = parseInt((src.includes('svg') ? src.match(/height="(\d+)"/)?.[1] : null) ?? '24');
+  const width = parseInt((src.includes('<svg ') ? src.match(/width="(\d+)"/)?.[1] : null) ?? '24');
+  const height = parseInt(
+    (src.includes('<svg ') ? src.match(/height="(\d+)"/)?.[1] : null) ?? '24',
+  );
 
   const children = [];
 

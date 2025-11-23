@@ -110,7 +110,7 @@ const customizingActive = computed(() => {
         name="size"
         v-model="size"
         :min="16"
-        :max="48"
+        :max="256"
         :step="4"
       />
     </InputField>

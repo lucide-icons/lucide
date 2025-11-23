@@ -1,13 +1,20 @@
 # Lucide Vue Next
 
-Implementation of the lucide icon library for Vue 3 applications.
+Vue 3 components for Lucide icons that leverage the Composition API and modern Vue features. Each icon is a reactive Vue component that renders as an inline SVG, providing excellent performance and developer experience in Vue 3 applications.
+
+**What you can accomplish:**
+- Use icons as Vue 3 components with full reactivity and TypeScript support
+- Bind icon properties to reactive data and computed values
+- Customize icons with props, slots, and Vue's powerful templating system
+- Integrate seamlessly with Vue 3's Composition API and script setup syntax
+- Build dynamic interfaces where icons respond to application state changes
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm add lucide-vue-next
 ```
 
 ```sh [yarn]
