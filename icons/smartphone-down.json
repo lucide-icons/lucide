@@ -1,0 +1,22 @@
+{
+    "$schema": "../icon.schema.json",
+    "contributors": [
+      "tallneil"
+    ],
+    "tags": [
+      "phone",
+      "cellphone",
+      "device",
+      "screen", 
+      "iphone",
+      "download",
+      "import",
+      "export",
+      "app"
+    ],
+    "categories": [
+      "connectivity",
+      "devices",
+      "arrows"
+    ]
+  }
