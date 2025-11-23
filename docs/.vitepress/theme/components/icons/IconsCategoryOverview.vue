@@ -4,6 +4,7 @@ import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
+import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import IconsCategory from './IconsCategory.vue';
 import useFetchTags from '../../composables/useFetchTags';
@@ -26,6 +27,10 @@ const props = defineProps<{
 const activeIconName = ref(null);
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
 const isSearching = computed(() => !!searchQuery.value);
+
+const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
+  searchInput.value?.focus();
+});
 
 function setActiveIconName(name: string) {
   activeIconName.value = name;
@@ -154,6 +159,7 @@ watchEffect(() => {
       <InputSearch
         :placeholder="`Search ${icons.length} icons ...`"
         v-model="searchQuery"
+        :shortcut="kbdSearchShortcut"
         class="input-wrapper"
         ref="searchInput"
         @focus="onFocusSearchInput"
