@@ -131,6 +131,10 @@
     "toBeRemovedInVersion": ["deprecated"]
   },
   "$defs": {
+    "iconDeprecationReasons": {
+      "type": "string",
+      "enum": ["icon.renamed"]
+    },
     "aliasDeprecationReasons": {
       "type": "string",
       "enum": ["alias.typo", "alias.name", "alias.duplicate"]
