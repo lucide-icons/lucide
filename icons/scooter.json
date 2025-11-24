@@ -7,7 +7,13 @@
     "vehicle",
     "drive",
     "trip",
-    "journey"
+    "journey",
+    "transport",
+    "electric",
+    "ride",
+    "urban",
+    "commute",
+    "speed"
   ],
   "categories": [
     "transportation"
