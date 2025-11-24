@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "battle",
+    "challenge",
+    "game",
+    "war",
+    "weapon"
+  ],
+  "categories": [
+    "gaming",
+    "tools"
+  ]
+}
