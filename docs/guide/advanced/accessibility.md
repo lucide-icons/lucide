@@ -10,6 +10,11 @@ because they can quickly give information.
 However, not everyone can understand them easily. When using icons it is very important to consider
 the following aspects of accessibility.
 
+::: info
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+You can make them accessible yourself by following the guidelines below.
+:::
+
 ## Provide visible labels
 
 Icons are a helpful tool to improve perception, but they aren't a replacement for text.
