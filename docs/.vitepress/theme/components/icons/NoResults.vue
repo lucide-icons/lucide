@@ -83,7 +83,7 @@ const brandPlaceholders: Placeholder[] = shallowReadonly([
   },
   {
     title: 'The cake is a lie',
-    message: 'And so is the promise of a [name] icon at Lucide.',
+    message: 'And so is the promise of an icon for [name] at Lucide.',
     icon: markRaw(cake),
   },
   {
