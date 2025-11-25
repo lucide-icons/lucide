@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "codeiku"
+  ],
+  "tags": [
+    "distribution",
+    "gaussian",
+    "curve",
+    "probability",
+    "statistics",
+    "data",
+    "analytics",
+    "chart",
+    "graph",
+    "frequency",
+    "density",
+    "symmetric",
+    "statistical",
+    "analysis"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
