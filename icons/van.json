@@ -8,7 +8,11 @@
     "drive",
     "trip",
     "journey",
-    "van"
+    "van",
+    "transport",
+    "carriage",
+    "delivery",
+    "travel"
   ],
   "categories": [
     "transportation"
