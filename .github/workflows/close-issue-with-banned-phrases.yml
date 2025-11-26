@@ -18,13 +18,14 @@ jobs:
         run: |
           ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
           ISSUE_BODY=$(jq -r '.issue.body // ""' "$GITHUB_EVENT_PATH")
+          ICON_NAME_SECTION=$(printf '%s\n' "$ISSUE_BODY" | awk '/### Icon name/{flag=1; next} /^### /{flag=0} flag')
 
           jq -r 'to_entries[] | "\(.key) \(.value)"' brand-stopwords.json | while read -r KEY VALUE; do
             SAFE_KEY=$(printf '%s\n' "$KEY" | sed 's/[][\.^$*]/\\&/g')
             SAFE_VALUE=$(printf '%s\n' "$VALUE" | sed 's/[][\.^$*]/\\&/g')
 
             if echo "$ISSUE_TITLE" | grep -iqE "$SAFE_KEY|$SAFE_VALUE" || \
-              echo "$ISSUE_BODY" | grep -iqE "$SAFE_KEY|$SAFE_VALUE"; then
+              { [ -n "$ICON_NAME_SECTION" ] && echo "$ICON_NAME_SECTION" | grep -iqE "$SAFE_KEY|$SAFE_VALUE"; }; then
 
               gh issue close ${{ github.event.issue.number }} \
                 --reason "not_planned" \
