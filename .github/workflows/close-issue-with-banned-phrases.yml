@@ -1,4 +1,4 @@
-name: Close Issue with Banned Phrases
+name: Close Icon Requests with Brand Terms
 
 on:
   issues:
@@ -13,23 +13,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check for blocked phrases in issue title
+      - name: Load stopwords from JSON & check issue title & body
+        if: contains(github.event.issue.labels.*.name, '🙌 icon request')
         run: |
           ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
-          BLOCKED_PHRASES=("twitter" "whatsapp" "logo" "google" "tiktok" "facebook" "slack" "discord" "bluesky" "spotify" "behance" "pix" "x.com" "telegram")
+          ISSUE_BODY=$(jq -r '.issue.body // ""' "$GITHUB_EVENT_PATH")
 
-          # Check title and body for blocked phrases
-          for PHRASE in "${BLOCKED_PHRASES[@]}"
-          do
-            if echo "$ISSUE_TITLE" | grep -i "$PHRASE"; then
-              gh issue close ${{ github.event.issue.number }} --reason "not planned" --comment "This looks like a duplicate, use the [search](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue+$PHRASE) to find similar issues.
+          jq -r 'to_entries[] | "\(.key) \(.value)"' brand-stopwords.json | while read -r KEY VALUE; do
+            SAFE_KEY=$(printf '%s\n' "$KEY" | sed 's/[][\.^$*]/\\&/g')
+            SAFE_VALUE=$(printf '%s\n' "$VALUE" | sed 's/[][\.^$*]/\\&/g')
 
-          Read [our official statement about brand logos in Lucide](https://github.com/lucide-icons/lucide/blob/main/BRAND_LOGOS_STATEMENT.md).
+            if echo "$ISSUE_TITLE" | grep -iqE "$SAFE_KEY|$SAFE_VALUE" || \
+              echo "$ISSUE_BODY" | grep -iqE "$SAFE_KEY|$SAFE_VALUE"; then
 
-          Always happy to help on [Discord](https://discord.gg/EH6nSts)."
+              gh issue close ${{ github.event.issue.number }} \
+                --reason "not_planned" \
+                --comment "It looks like this request is about **${VALUE}**, which is a brand logo.
+
+          Lucide **does not accept** brand logos, and we do not plan to add them in the future. This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
+
+          [Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS_STATEMENT.md)
+
+          You can [search for similar issues.](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue+${VALUE})
+
+          We’re always happy to help on [Discord](https://discord.gg/EH6nSts)."
+
               gh issue lock ${{ github.event.issue.number }} --reason spam
-              exit 1
+              exit 0
             fi
           done
-        env:
-          GH_TOKEN: ${{ github.token }}
+
+env:
+  GH_TOKEN: ${{ github.token }}
