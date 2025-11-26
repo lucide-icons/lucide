@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "andrea9nta"
+  ],
+  "tags": [
+    "weather",
+    "warning",
+    "sync",
+    "network",
+    "question"
+  ],
+  "categories": [
+    "development"
+  ]
+}
