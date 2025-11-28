@@ -15,6 +15,7 @@
     "prebuild:categoriesJson": "node --experimental-strip-types ./scripts/writeCategoriesMetadata.mjs",
     "prebuild:relatedIcons": "node --experimental-strip-types ./scripts/writeIconRelatedIcons.mjs",
     "prebuild:iconDetails": "node --experimental-strip-types ./scripts/writeIconDetails.mjs",
+    "prebuild:brandStopwords": "node --experimental-strip-types ./scripts/writeBrandStopwords.mjs",
     "postbuild:vercelJson": "node --experimental-strip-types ./scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "prebuild:api": "npx nitropack prepare",
