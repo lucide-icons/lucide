@@ -23,6 +23,8 @@ export default defineConfig({
       md.use(snackPlayer);
       md.use(container, 'sandbox', {
         render (tokens, idx) {
+          console.log(tokens);
+
           return renderSandbox(tokens, idx, 'sandbox');
         },
       });

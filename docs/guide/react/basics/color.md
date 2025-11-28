@@ -40,6 +40,34 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
+<!-- ::: sandbox {template=react showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-react"}
+
+```jsx /Button.jsx [active]
+import { ThumbsUp } from "lucide-react";
+
+function LikeButton() {
+  return (
+    <button style={{ color: "#fff" }}>
+      <ThumbsUp />
+      Like
+    </button>
+  );
+}
+
+export default LikeButton;
+```
+
+```jsx /App.js [hidden]
+import Button from "./Button";
+
+export default function App() {
+  return <Button />;
+}
+
+```
+::: -->
+
+
 <Sandpack
   template="react"
   :theme="sandpackTheme"

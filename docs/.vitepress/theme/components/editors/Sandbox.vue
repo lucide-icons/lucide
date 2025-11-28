@@ -48,9 +48,6 @@ const resolveFiles = async () => {
       hidden: true
     },
   };
-
-  console.log(props);
-
 };
 
 watch(props, resolveFiles);
