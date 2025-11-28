@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "joffx"
+  ],
+  "tags": [
+    "sport",
+    "outdoor",
+    "play",
+    "competition",
+    "recreation",
+    "foot",
+    "athletics",
+    "training",
+    "football",
+    "soccer",
+    "sports",
+    "ball",
+    "mls",
+    "world cup",
+    "game"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
