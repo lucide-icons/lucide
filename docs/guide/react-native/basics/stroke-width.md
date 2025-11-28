@@ -1,10 +1,3 @@
-<!-- <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import strokeWidth from './examples/stroke-width-icon/files.ts'
-import absoluteStrokeWidth from './examples/absolute-stroke-width-icon/files.ts'
-</script> -->
-
 # Stroke width
 
 All icons are designed with SVG elements using strokes.
@@ -14,21 +7,23 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
+```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
+import React, {useState, useEffect} from 'react';
+import { View } from 'react-native';
+import { FolderLock } from "lucide-react-native";
 
-<!-- <Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="strokeWidth"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 60,
-  }"
-/> -->
+const style = { height: '100%', alignItems: 'center', display: 'flex', justifyContent: 'center', backgroundColor: '#202127', color: '#fff' }
+
+const App = () => {
+  return (
+    <View style={style}>
+      <FolderLock strokeWidth={1} />
+    </View>
+  );
+};
+
+export default App;
+```
 
 ## Absolute stroke width
 
@@ -43,6 +38,27 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 ### Adjusting stroke width with `absoluteStrokeWidth` prop
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
+
+```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
+import React, {useState, useEffect} from 'react';
+import { View } from 'react-native';
+import { RollerCoaster } from "lucide-react-native";
+
+const style = { height: '100%', alignItems: 'center', display: 'flex', justifyContent: 'center', backgroundColor: '#202127', color: '#fff' }
+
+const App = () => {
+  return (
+    <View style={style}>
+      <RollerCoaster
+        size={96}
+        absoluteStrokeWidth={true}
+      />
+    </View>
+  );
+};
+
+export default App;
+```
 
 <!-- <Sandpack
   template="react"

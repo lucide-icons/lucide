@@ -10,7 +10,7 @@ import {
   House,
   HouseIcon,
   LucideHouse,
-} from "lucide-react";
+} from "lucide-react-native";
 ```
 
 ## Choosing import name style
@@ -24,7 +24,7 @@ This can be done by creating a custom module declaration file to override the lu
 ```json [.vscode/settings.json]
 {
   "typescript.preferences.autoImportFileExcludePatterns": [
-    "lucide-react",
+    "lucide-react-native",
   ]
 }
 ```
@@ -34,22 +34,22 @@ This can be done by creating a custom module declaration file to override the lu
 This will enable you to choose the import name style you want to use in your project.
 
 ```ts [React]
-declare module "lucide-react" {
+declare module "lucide-react-native" {
   // Prefixed import names
-  export * from "lucide-react/dist/lucide-react.prefixed";
+  export * from "lucide-react-native/dist/lucide-react-native.prefixed";
   // or
   // Suffixed import names
-  export * from "lucide-react/dist/lucide-react.suffixed";
+  export * from "lucide-react-native/dist/lucide-react-native.suffixed";
 }
 ```
 
 Place this in your project root or in a folder where your tsconfig.json is located, or locate it in your defined type directory.
-Easiest way is to create a `@types` folder in your project root and name the file `lucide-react.d.ts`.
+Easiest way is to create a `@types` folder in your project root and name the file `lucide-react-native.d.ts`.
 
 ### Import name styles
 
 | Import Style  | Available imports           | Declaration file import |
 | ------------- | --------------------------- | ----------------------- |
 | Default       | Home, HomeIcon, LucideHome  |                         |
-| Prefixed      | LucideHome                  | lucide-react.prefixed   |
-| Suffixed      | HomeIcon                    | lucide-react.suffixed   |
+| Prefixed      | LucideHome                  | lucide-react-native.prefixed   |
+| Suffixed      | HomeIcon                    | lucide-react-native.suffixed   |

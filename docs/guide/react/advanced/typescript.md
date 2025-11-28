@@ -44,7 +44,7 @@ type LucideIcon = React.FC<LucideProps>;
 You can use the `LucideIcon` type when you need to work with icon components directly.
 
 ```tsx
-import { type LucideIcon, Camera } from 'lucide-react';
+import { type LucideIcon } from 'lucide-react';
 
 interface ButtonProps {
   icon: LucideIcon;

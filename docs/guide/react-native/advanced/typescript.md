@@ -1,11 +1,11 @@
 # TypeScript Support
 
-List of exported types from the `lucide-react` package.
+List of exported types from the `lucide-react-native` package.
 These can be used to type your components when using Lucide icons in a TypeScript React project
 
 ## `LucideProps`
 
-Exports all props that can be passed to an icon component and any other SVG attributes, see: [SVG Presentation Attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+Exports all props that can be passed to an icon component and SVG props supported by [react-native-svg](https://github.com/software-mansion/react-native-svg).
 
 ```ts
 interface LucideProps {
@@ -13,7 +13,7 @@ interface LucideProps {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
-  [key: string]: any; // Any other SVG attributes
+  [key: string]: any; // Any other SVG props, supported by react-native-svg
 }
 ```
 
@@ -21,8 +21,7 @@ interface LucideProps {
 You can use the `LucideProps` interface to type your custom icon components or when you need to work with icon props.
 
 ```tsx
-import { type LucideProps } from 'lucide-react';
-import { Camera } from 'lucide-react';
+import { Camera, type LucideProps } from 'lucide-react-native';
 
 const WrapIcon = (props: LucideProps) => {
   return <Camera {...props} />;
@@ -44,7 +43,7 @@ type LucideIcon = React.FC<LucideProps>;
 You can use the `LucideIcon` type when you need to work with icon components directly.
 
 ```tsx
-import { type LucideIcon, Camera } from 'lucide-react';
+import { type LucideIcon } from 'lucide-react-native';
 
 interface ButtonProps {
   icon: LucideIcon;
@@ -75,7 +74,7 @@ type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
 
 ```tsx
-import { type IconNode, Icon } from 'lucide-react';
+import { type IconNode, Icon } from 'lucide-react-native';
 
 const customIcon: IconNode = [
   ['circle', { cx: 12, cy: 12, r: 10 }],

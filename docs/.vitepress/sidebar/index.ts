@@ -28,7 +28,7 @@ const sidebar: Sidebar = {
   '/guide/svelte': svelteSidebar,
   '/guide/solid': solidSidebar,
   '/guide/preact': preactSidebar,
-  '/guide/react-native': reactNativeSidebar,
+  '/guide/react-native/': reactNativeSidebar,
   '/resources': [
     {
       text: "Community",

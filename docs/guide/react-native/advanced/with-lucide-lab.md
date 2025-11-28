@@ -10,7 +10,7 @@ All props like regular lucide icons can be passed to adjust the icon appearance.
 This creates a single icon based on the iconNode passed and renders a Lucide icon component.
 
 ```jsx
-import { Icon } from 'lucide-react';
+import { Icon } from 'lucide-react-native';
 import { coconut } from '@lucide/lab';
 
 const App = () => (

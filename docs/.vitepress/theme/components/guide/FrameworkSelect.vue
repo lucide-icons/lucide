@@ -28,6 +28,7 @@ const selected = computed(() => {
   const current = frameworks.find(({ route }) => {
     return router.route.path.split('/').slice(0, 3).join('/') === route
   })
+
   return current || fallbackFramework.value
 })
 
@@ -56,8 +57,8 @@ function onSelectFramework(item: { name: string, icon: string, route: string }) 
     <label for="framework-select">Framework</label>
     <Select id="framework-select" :items="frameworks" @update:model-value="onSelectFramework" v-model="selected" />
   </div>
-  <!--  -->
-  <VPSidebarGroup :key="selected.route" v-if="page?.relativePath?.startsWith?.('guide')"
+  <VPSidebarGroup :key="selected.route"
+    v-if="page?.relativePath?.startsWith?.('guide') && !page?.relativePath?.startsWith?.(selected.route.substring(1))"
     :items="sidebar[selected.route]" />
 </template>
 

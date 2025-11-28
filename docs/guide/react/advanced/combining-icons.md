@@ -2,8 +2,8 @@
 import { Sandpack } from 'sandpack-vue3'
 import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
 import combineIconsExample from './examples/combining-icons/files.ts'
-import combineCustomExample from './examples/combining-icons-custom/files.ts'
 import combineNotificationExample from './examples/combining-icons-notification/files.ts'
+import combineCustomExample from './examples/combining-icons-custom/files.ts'
 </script>
 
 # Combining icons

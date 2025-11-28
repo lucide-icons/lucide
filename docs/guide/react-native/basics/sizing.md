@@ -1,87 +1,56 @@
-<!-- <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import sizeIconExample from './examples/size-icon-example/files.ts'
-import sizeIconCssExample from './examples/size-icon-css-example/files.ts'
-import sizeIconFontExample from './examples/size-icon-font-example/files.ts'
-import sizeIconTailwind from './examples/size-icon-tailwind-example/files.ts'
-</script> -->
-
 # Sizing
 
 By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
 
 ## Adjusting the icon size using the `size` prop
 
-<!-- <Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="sizeIconExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 60,
-  }"
-/> -->
+```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
+import React, {useState, useEffect} from 'react';
+import { View } from 'react-native';
+import { Landmark } from "lucide-react-native";
 
-## Adjusting the icon size via CSS
+const style = { height: '100%', alignItems: 'center', display: 'flex', justifyContent: 'center' }
 
-The CSS properties `width` and `height` can be used to adjust the icon size.
+const App = () => {
+  return (
+    <View style={style}>
+      <Landmark size={48}  />
+    </View>
+  );
+};
 
-<!-- <Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="sizeIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-  }"
-/> -->
+export default App;
+```
 
-### Dynamically change the icon size based on the font size
+## Adjusting the icon size via the style prop
 
-It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
+The style properties `width` and `height` can be used to adjust the icon size.
 
-<!-- <Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="sizeIconFontExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-  }"
-/> -->
+```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
+import React, {useState, useEffect} from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Landmark } from "lucide-react-native";
 
-### Resizing with Tailwind
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  icon: {
+    width: 48,
+    height: 48
+  },
+});
 
-`size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Landmark style={styles.icon}  />
+    </View>
+  );
+};
 
-<!-- <Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="sizeIconTailwind"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest",
-    }
-  }'
-  :options="{
-    externalResources: ['https://cdn.tailwindcss.com'],
-    editorHeight: 300,
-    editorWidthPercentage: 60,
-  }"
-/> -->
-
-<!-- Code Example -->
+export default App;
+```

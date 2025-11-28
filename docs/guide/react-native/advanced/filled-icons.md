@@ -2,14 +2,8 @@
 head:
   - - link
     - rel: canonical
-      href: https://lucide.dev/guide/vue/advanced/filled-icons
+      href: https://lucide.dev/guide/react/advanced/filled-icons
 ---
-
-<!-- <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import sizeIconExample from './examples/filled-icon-example/files.ts'
-</script> -->
 
 # Filled Icons
 
@@ -18,20 +12,54 @@ However, all SVG properties are available on all icons.
 Fill can still be used and will work fine on certain icons.
 
 Example with stars:
-<!-- <Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="sizeIconExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 480,
-    editorWidthPercentage: 60,
-  }"
-/> -->
+
+```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
+import React, {useState, useEffect} from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Star, StarHalf } from "lucide-react-native";
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.starRating}>
+        <View style={styles.stars}>
+          { Array.from({ length: 5 }, () => (
+              <Star fill="#111" strokeWidth={0} />
+          ))}
+        </View>
+        <View style={[styles.stars, styles.rating]}>
+          <Star fill="orange" strokeWidth={0} />
+          <Star fill="orange" strokeWidth={0} />
+          <StarHalf fill="orange" strokeWidth={0} />
+        </View>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  starRating: {
+    position: 'relative',
+  },
+  stars: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 4,
+  },
+  rating: {
+    position: 'absolute',
+    top: 0,
+  }
+});
+
+export default App;
+```
 
 ## Will Lucide have fills in the future?
 
