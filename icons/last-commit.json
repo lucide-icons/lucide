@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "johnletey",
+    "nathan-de-pachtere"
+  ],
+  "tags": [
+    "commit",
+    "history",
+    "version",
+    "update",
+    "change",
+    "revision",
+    "diff",
+    "log",
+    "timestamp",
+    "code",
+    "version control",
+    "waypoint",
+    "stop",
+    "station",
+    "last",
+    "end"
+  ],
+  "categories": [
+    "development",
+    "navigation"
+  ]
+}
