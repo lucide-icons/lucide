@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import sidebar from './sidebar';
+import snackPlayer from './plugins/snackPlayer';
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -14,9 +15,10 @@ export default defineConfig({
   cleanUrls: true,
   outDir: '.vercel/output/static',
   srcExclude: ['**/README.md'],
-   markdown: {
+  markdown: {
     config(md) {
-      md.use(groupIconMdPlugin)
+      md.use(groupIconMdPlugin);
+      md.use(snackPlayer);
     },
   },
   vite: {

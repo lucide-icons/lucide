@@ -5,6 +5,7 @@ import { svelteSidebar } from './svelte';
 import { lucideSidebar } from './lucide';
 import { solidSidebar } from './solid';
 import { preactSidebar } from './preact';
+import { reactNativeSidebar } from './react-native';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar']
 
@@ -27,6 +28,7 @@ const sidebar: Sidebar = {
   '/guide/svelte': svelteSidebar,
   '/guide/solid': solidSidebar,
   '/guide/preact': preactSidebar,
+  '/guide/react-native': reactNativeSidebar,
   '/resources': [
     {
       text: "Community",

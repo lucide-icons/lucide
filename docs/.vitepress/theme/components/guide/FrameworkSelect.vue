@@ -3,7 +3,7 @@ import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSid
 import sidebar, { guideSidebarTop } from '../../../sidebar';
 import { useData, useRouter } from 'vitepress';
 import Select from '../base/Select.vue';
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watch, watchEffect } from 'vue';
 import { link, route } from '~/.vitepress/data/iconNodes';
 import { useLocalStorage } from '@vueuse/core';
 
@@ -25,7 +25,9 @@ const frameworks = [
 const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1])
 
 const selected = computed(() => {
-  const current = frameworks.find(({route}) => router.route.path.startsWith(route))
+  const current = frameworks.find(({ route }) => {
+    return router.route.path.split('/').slice(0, 3).join('/') === route
+  })
   return current || fallbackFramework.value
 })
 
@@ -49,21 +51,14 @@ function onSelectFramework(item: { name: string, icon: string, route: string }) 
 </script>
 
 <template>
-  <VPSidebarGroup :items="guideSidebarTop" v-if="page?.relativePath?.startsWith?.('guide')"/>
+  <VPSidebarGroup :items="guideSidebarTop" v-if="page?.relativePath?.startsWith?.('guide')" />
   <div class="framework-select" v-if="page?.relativePath?.startsWith?.('guide')">
     <label for="framework-select">Framework</label>
-    <Select
-      id="framework-select"
-      :items="frameworks"
-      @update:model-value="onSelectFramework"
-      v-model="selected"
-    />
+    <Select id="framework-select" :items="frameworks" @update:model-value="onSelectFramework" v-model="selected" />
   </div>
-
-  <VPSidebarGroup
-    v-if="page?.relativePath?.startsWith?.('guide') && !page?.relativePath?.startsWith?.(selected.route.substring(1))"
-    :items="sidebar[selected.route]"
-  />
+  <!--  -->
+  <VPSidebarGroup :key="selected.route" v-if="page?.relativePath?.startsWith?.('guide')"
+    :items="sidebar[selected.route]" />
 </template>
 
 <style scoped>
