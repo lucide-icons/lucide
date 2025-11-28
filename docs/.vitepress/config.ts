@@ -1,6 +1,8 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import container from 'markdown-it-container';
+import { renderSandbox } from 'vitepress-plugin-sandpack';
 import sidebar from './sidebar';
 import snackPlayer from './plugins/snackPlayer';
 
@@ -19,6 +21,11 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
+      md.use(container, 'sandbox', {
+        render (tokens, idx) {
+          return renderSandbox(tokens, idx, 'sandbox');
+        },
+      });
     },
   },
   vite: {
@@ -36,12 +43,6 @@ export default defineConfig({
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
           ),
         },
-        // {
-        //   find: /^.*\/VPHomeHero\.vue$/,
-        //   replacement: fileURLToPath(
-        //     new URL('./theme/components/overrides/Hero.vue', import.meta.url),
-        //   ),
-        // },
         {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),

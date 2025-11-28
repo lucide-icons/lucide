@@ -15,20 +15,24 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="iconColorExampleFiles"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 295,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandbox {template=react showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-react"}
+
+```js
+import { Smile } from "lucide-react";
+
+function App() {
+  return (
+    <div className="app">
+      <Smile color="#3e9392" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+:::
+
 
 ## Using parent elements text color value
 

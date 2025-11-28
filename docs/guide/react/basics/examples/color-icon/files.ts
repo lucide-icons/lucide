@@ -2,7 +2,7 @@ import App from './App.js?raw'
 import styles from '../styles.css?raw'
 
 const files = {
-  'App.js': {
+  '/App.js': {
     code: App,
     active: true,
   },

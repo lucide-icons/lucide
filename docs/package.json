@@ -30,10 +30,12 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-replace": "^6.0.3",
     "@types/semver": "^7.7.1",
+    "markdown-it-container": "^4.0.0",
     "nitropack": "2.8.1",
     "rollup-plugin-copy": "^3.5.0",
     "svg-path-commander": "^2.1.11",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-sandpack": "^1.1.4"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.1.9",
@@ -51,16 +53,16 @@
     "lucide-vue-next": "workspace:*",
     "markdown-it": "^14.1.0",
     "motion-v": "^1.7.3",
-    "sandpack-vue3": "3.1.12",
-    "vitepress-plugin-group-icons": "^1.6.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sandpack-vue3": "3.1.12",
     "semver": "^7.7.3",
     "shiki": "^3.15.0",
     "simple-git": "^3.30.0",
     "sitemap": "^7.1.2",
     "svg-pathdata": "^6.0.3",
     "svgson": "^5.3.1",
+    "vitepress-plugin-group-icons": "^1.6.5",
     "vue": "^3.5.24"
   }
 }
