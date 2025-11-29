@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Muhammad-Aqib-Bashir",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "prism",
+    "light",
+    "refraction",
+    "spectrum",
+    "rainbow",
+    "optics",
+    "physics",
+    "science",
+    "triangular",
+    "glass",
+    "dispersion",
+    "color",
+    "lab"
+  ],
+  "categories": [
+    "science",
+    "tools"
+  ]
+}
