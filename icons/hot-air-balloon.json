@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "roygommer"
+  ],
+  "tags": [
+    "hot-air-balloon"
+  ],
+  "categories": [
+    "aircraft",
+    "balloon",
+    "sky"
+  ]
+}
