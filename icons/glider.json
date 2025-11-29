@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "roygommer"
+  ],
+  "tags": [
+    "glider"
+  ],
+  "categories": [
+    "airplane",
+    "aircraft",
+    "sky",
+    "flying",
+    "adventure",
+    "thermals"
+  ]
+}
