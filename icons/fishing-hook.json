@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "7ender"
+  ],
+  "tags": [
+    "fish",
+    "fishing",
+    "hook",
+    "sports",
+    "travel"
+  ],
+  "categories": [
+    "sports",
+    "travel"
+  ]
+}
