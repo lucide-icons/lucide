@@ -22,7 +22,7 @@ createIcons({
   }
 });
 
-document.body.append('<i data-lucide="$Name"></i>');\
+document.body.insertAdjacentHTML('beforeend', '<i data-lucide="$Name"></i>');\
   `,
     },
     {
