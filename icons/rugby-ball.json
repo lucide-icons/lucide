@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "dev-mralph"
+  ],
+  "tags": [
+    "rugby",
+    "football",
+    "ball",
+    "goal",
+    "sport"
+  ],
+  "categories": [
+    "sport"
+  ]
+}
