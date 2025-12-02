@@ -7,8 +7,8 @@ const filenamesToAjvOption = (filenames) => filenames.map((filename) => `-d ${fi
 /** @satisfies {import('lint-staged').Config} */
 const config = {
   'icons/*.svg': [
-    'node ./scripts/optimizeStagedSvgs.mts',
-    'node ./scripts/generateNextJSAliases.mts',
+    'node ./scripts/optimizeStagedSvgs.mjs',
+    'node ./scripts/generateNextJSAliases.mjs',
   ],
   'icons/*.json': (filenames) => [
     `ajv --spec=draft2020 -s icon.schema.json ${filenamesToAjvOption(filenames)}`,
