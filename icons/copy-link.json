@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KnarliX"
+  ],
+  "tags": [
+    "copy link",
+    "link copy",
+    "copy",
+    "link"
+  ],
+  "categories": [
+    "button"
+  ]
+}
