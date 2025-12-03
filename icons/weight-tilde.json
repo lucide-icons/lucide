@@ -13,7 +13,8 @@
     "measurement",
     "quantity",
     "mass",
-    "weight"
+    "weight",
+    "tilde"
   ],
   "categories": [
     "math"
