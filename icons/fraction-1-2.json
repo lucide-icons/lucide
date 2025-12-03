@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "part",
+    "section",
+    "slice",
+    "portion",
+    "half",
+    "fraction",
+    "division",
+    "math",
+    "proportion",
+    "ratio",
+    "divide",
+    "1/2",
+    "measurement"
+  ],
+  "categories": [
+    "math",
+    "mathematics",
+    "measurement"
+  ]
+}
