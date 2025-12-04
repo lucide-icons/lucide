@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere",
+    "Alportan"
+  ],
+  "tags": [
+    "solar",
+    "pv",
+    "photovoltaic",
+    "cell",
+    "panel"
+  ],
+  "categories": [
+    "devices",
+    "science"
+  ]
+}
