@@ -11,6 +11,12 @@ declare module '*.data.ts' {
   export { data };
 }
 
+declare module '*.data' {
+  const data: any;
+
+  export { data };
+}
+
 declare module '*.wasm' {}
 
 declare const resvg_wasm: RequestInfo | URL | Response | BufferSource | WebAssembly.Module;

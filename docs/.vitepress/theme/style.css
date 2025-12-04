@@ -91,7 +91,7 @@
 .VPHomeHero .container .image {
   margin: 0;
   order: 2;
-  margin-top: 32px;
+  /* margin-top: 32px; */
 }
 
 .VPHomeHero .container .image-container {
@@ -112,6 +112,10 @@
   padding-left: 0;
 }
 
+.VPHomeHero .container {
+  flex-direction: column-reverse;
+}
+
 @media (min-width: 960px) {
   .VPHomeHero .container .image {
     order: 1;
@@ -130,6 +134,10 @@
 
   .VPHomeHero .container .image-container {
     display: block;
+  }
+
+  .VPHomeHero .container {
+    flex-direction: row;
   }
 }
 

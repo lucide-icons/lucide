@@ -6,7 +6,7 @@ import { Theme, useRouter } from 'vitepress';
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue';
 import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue';
 import HomeHeroAfter from './components/home/HomeHeroAfter.vue';
-import HomeHeroBefore from './components/home/HomeHeroBefore.vue';
+import HomeHeroInfoBefore from './components/home/HomeHeroInfoBefore.vue';
 import { ICON_STYLE_CONTEXT, iconStyleContext } from './composables/useIconStyle';
 import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCategoryView';
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
@@ -19,7 +19,7 @@ const theme: Partial<Theme> = {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'sidebar-nav-before': () => h(FrameworkSelect),
-      'home-hero-before': () => h(HomeHeroBefore),
+      'home-hero-info-before': () => h(HomeHeroInfoBefore),
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
