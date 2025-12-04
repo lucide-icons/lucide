@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { copy }  from '../../../data/iconNodes'
+import { copy } from '../../../data/iconNodes'
 import useConfetti from '../../composables/useConfetti';
+import Icon from 'lucide-vue-next/src/Icon';
 const { animate, confetti } = useConfetti()
 const slots = useSlots()
 
@@ -13,29 +13,23 @@ function copyText() {
 
   confetti()
 }
-
-const Copy = createLucideIcon('ChevronUp', copy)
 </script>
 
 <template>
-  <h1
-    class="icon-name confetti-button"
-    :class="{animate}"
-    data-confetti-text="Copied!"
-    @click="copyText"
-  >
+  <h1 class="icon-name confetti-button" :class="{ animate }" data-confetti-text="Copied!" @click="copyText">
     <slot />
-    <Copy :size="20" class="copy-icon"/>
+    <Icon :iconNode="copy" :size="20" class="copy-icon" />
   </h1>
 </template>
 
 <style scoped>
 @import './confetti.css';
+
 .icon-name {
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
-  transition: background ease-in .15s;;
+  transition: background ease-in .15s;
   padding: 2px 8px;
   border-radius: 8px;
   width: auto;
@@ -65,7 +59,7 @@ const Copy = createLucideIcon('ChevronUp', copy)
   opacity: 0;
   margin-left: 12px;
   margin-top: 6px;
-  transition:ease .3s opacity;
+  transition: ease .3s opacity;
 }
 
 .icon-name:hover .copy-icon:hover {

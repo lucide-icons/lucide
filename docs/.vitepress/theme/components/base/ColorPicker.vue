@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useData } from 'vitepress';
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -6,10 +7,18 @@ const props = defineProps<{
   id: string
 }>()
 
+const { isDark } = useData()
+
 const emit = defineEmits(['update:modelValue'])
 
 const value = computed({
-  get: () => props.modelValue,
+  get: () => {
+    if (props.modelValue === 'currentColor') {
+      return isDark.value ? '#ffffff' : '#000000';
+    }
+
+    return props.modelValue
+  },
   set: (val) => emit('update:modelValue', val)
 })
 </script>
@@ -17,23 +26,10 @@ const value = computed({
 <template>
   <div class="color-picker">
     <div class="color-input-wrapper">
-      <!-- TODO: Add currentColor div if value is currentColor -->
-      <input
-        type="color"
-        :id="id"
-        :name="id"
-        class="color-input"
-        v-model="value"
-      />
+      <input type="color" :id="id" :name="id" class="color-input" v-model="value" value="#ffffff" />
     </div>
-    <input
-      type="text"
-      :id="`${id}-input`"
-      :name="`${id}-input`"
-      class="color-input-text"
-      aria-label="Color picker input"
-      v-model="value"
-    />
+    <input type="text" :id="`${id}-input`" :name="`${id}-input`" class="color-input-text"
+      aria-label="Color picker input" v-model="value" placeholder="[default]" />
   </div>
 </template>
 
@@ -45,19 +41,21 @@ const value = computed({
   top: -5px;
   left: -5px;
 }
+
 .color-input-wrapper {
   height: 24px;
   width: 24px;
   overflow: hidden;
   position: relative;
-  border-radius: 12px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
+
 .color-picker {
   background: var(--color-picker-bg, var(--vp-c-bg-alt));
   border-radius: 8px;
   color: var(--vp-c-text-2);
-  padding: 4px 8px;
+  padding: 3px 8px 3px 3px;
   height: auto;
   font-size: 14px;
   text-align: left;
@@ -66,6 +64,7 @@ const value = computed({
   display: flex;
   align-items: center;
   gap: 2px;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
 }
 
 .color-input-text {
@@ -80,14 +79,14 @@ const value = computed({
   border-radius: 8px;
   cursor: text;
   transition: border-color 0.25s, background 0.4s ease;
+  letter-spacing: 1px;
 }
 
-.color-picker:hover, .color-picker:focus {
+.color-picker:hover,
+.color-picker:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
 
-.color-input[value="currentColor"] {
-
-}
+.color-input[value="currentColor"] {}
 </style>

@@ -81,8 +81,8 @@ const categories = computed(() => {
 
       const searchedCategoryIcons = isSearching
         ? categoryIcons.filter((icon) =>
-            searchResults.value.some((item) => item?.name === icon?.name)
-          )
+          searchResults.value.some((item) => item?.name === icon?.name)
+        )
         : categoryIcons;
 
       return {
@@ -156,35 +156,18 @@ watchEffect(() => {
 <template>
   <div ref="overviewEl" class="overview-container">
     <StickyBar class="category-search">
-      <InputSearch
-        :placeholder="`Search ${icons.length} icons ...`"
-        v-model="searchQuery"
-        :shortcut="kbdSearchShortcut"
-        class="input-wrapper"
-        ref="searchInput"
-        @focus="onFocusSearchInput"
-      />
+      <InputSearch :placeholder="`Search ${icons.length} icons ...`" v-model="searchQuery" :shortcut="kbdSearchShortcut"
+        class="input-wrapper" ref="searchInput" @focus="onFocusSearchInput" />
+      <Button>
+        < </Button>
     </StickyBar>
-    <NoResults
-      v-if="categories.length === 0"
-      :searchQuery="searchQuery"
-      @clear="searchQuery = ''"
-    />
+    <NoResults v-if="categories.length === 0" :searchQuery="searchQuery" @clear="searchQuery = ''" />
     <div v-bind="wrapperProps">
-      <IconsCategory
-        v-for="{ index, data } in list"
-        :categoryRow="data"
-        :activeIconName="activeIconName"
-        @setActiveIcon="setActiveIconName"
-        :key="index"
-      />
+      <IconsCategory v-for="{ index, data } in list" :categoryRow="data" :activeIconName="activeIconName"
+        @setActiveIcon="setActiveIconName" :key="index" />
     </div>
   </div>
-  <IconDetailOverlay
-    v-if="activeIconName != null"
-    :iconName="activeIconName"
-    @close="handleCloseDrawer"
-  />
+  <IconDetailOverlay v-if="activeIconName != null" :iconName="activeIconName" @close="handleCloseDrawer" />
 
   <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>

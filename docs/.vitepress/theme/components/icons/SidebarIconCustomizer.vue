@@ -43,7 +43,7 @@ syncRef(color, colorCssVar, { direction: 'ltr' })
 syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr' })
 syncRef(size, sizeCssVar, { direction: 'ltr' })
 
-function resetStyle () {
+function resetStyle() {
   color.value = STYLE_DEFAULTS.color
   strokeWidth.value = STYLE_DEFAULTS.strokeWidth
   size.value = STYLE_DEFAULTS.size
@@ -72,58 +72,28 @@ const customizingActive = computed(() => {
       </h2>
       <ResetButton @click="resetStyle"></ResetButton>
     </div>
-    <InputField
-      id="icon-color"
-      label="Color"
-    >
+    <InputField id="icon-color" label="Color">
       <template #display>
-        <ColorPicker v-model="color" id="icon-color" class="color-picker"/>
+        <ColorPicker v-model="color" id="icon-color" class="color-picker" />
       </template>
     </InputField>
 
-    <InputField
-      id="stroke-width"
-      label="Stroke width"
-    >
+    <InputField id="stroke-width" label="Stroke width">
       <template #display>
         <span class="customize-label">{{ strokeWidth }}px</span>
       </template>
-      <RangeSlider
-        id="stroke-width"
-        name="stroke-width"
-        v-model="strokeWidth"
-        :min="0.5"
-        :max="3"
-        :step="0.25"
-      />
+      <RangeSlider id="stroke-width" name="stroke-width" v-model="strokeWidth" :min="0.5" :max="3" :step="0.25" />
     </InputField>
 
-    <InputField
-      id="size"
-      label="Size"
-    >
+    <InputField id="size" label="Size">
       <template #display>
         <span class="customize-label">{{ size }}px</span>
       </template>
-      <RangeSlider
-        id="size"
-        name="size"
-        v-model="size"
-        :min="16"
-        :max="256"
-        :step="4"
-      />
+      <RangeSlider id="size" name="size" v-model="size" :min="16" :max="256" :step="4" />
     </InputField>
 
-    <InputField
-      id="absolute-stroke-width"
-      label="Absolute Stroke width"
-    >
-      <Switch
-        id="absolute-stroke-width"
-        name="absolute-stroke-width"
-        v-model="absoluteStrokeWidth"
-      />
+    <InputField id="absolute-stroke-width" label="Absolute stroke width">
+      <Switch id="absolute-stroke-width" name="absolute-stroke-width" v-model="absoluteStrokeWidth" />
     </InputField>
   </div>
 </template>
@@ -143,6 +113,7 @@ const customizingActive = computed(() => {
   font-size: 16px;
   /* margin-bottom: 12px; */
 }
+
 .customizer-card {
   background: var(--vp-c-bg);
   padding: 12px 24px 24px;

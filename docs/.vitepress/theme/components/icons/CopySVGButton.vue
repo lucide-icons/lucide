@@ -57,7 +57,7 @@ function downloadPNG() {
 
   const image = new Image();
   image.src = `data:image/svg+xml;base64,${btoa(svgString)}`;
-  image.onload = function() {
+  image.onload = function () {
     ctx.drawImage(image, 0, 0);
     downloadData(`${props.name}.png`, canvas.toDataURL('image/png'))
     confetti()
@@ -68,19 +68,13 @@ function downloadPNG() {
 </script>
 
 <template>
-  <ButtonMenu
-    :buttonClass="`confetti-button ${animate ? 'animate' : ''}`"
-    callOptionOnClick
-    id="copy-svg-button"
-    :data-confetti-text="confettiText"
-    :popoverPosition="popoverPosition"
-    :options="[
-      { text: 'Copy SVG' , onClick: copySVG },
-      { text: 'Copy Data URL' , onClick: copyDataUrl },
-      { text: 'Download SVG' , onClick: downloadSVG },
-      { text: 'Download PNG' , onClick: downloadPNG },
-    ]"
-  />
+  <ButtonMenu :buttonClass="`confetti-button ${animate ? 'animate' : ''}`" callOptionOnClick id="copy-svg-button"
+    :data-confetti-text="confettiText" :popoverPosition="popoverPosition" :options="[
+      { text: 'Copy SVG', onClick: copySVG },
+      { text: 'Copy Data URL', onClick: copyDataUrl },
+      { text: 'Download SVG', onClick: downloadSVG },
+      { text: 'Download PNG', onClick: downloadPNG },
+    ]" />
 </template>
 
 <style src="./confetti.css" />

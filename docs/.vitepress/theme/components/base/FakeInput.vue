@@ -1,8 +1,6 @@
 <script setup>
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { search }  from '../../../data/iconNodes'
-
-const SearchIcon = createLucideIcon('search', search)
+import Icon from 'lucide-vue-next/src/Icon'
+import { search } from '../../../data/iconNodes'
 
 defineProps({
   shortcut: {
@@ -14,8 +12,8 @@ defineProps({
 
 <template>
   <button class="fake-input">
-    <component :is="SearchIcon" class="search-icon"/>
-    <slot/>
+    <Icon :iconNode="search" class="search-icon" />
+    <slot />
     <kbd v-if="shortcut" class="shortcut">{{ shortcut }}</kbd>
   </button>
 </template>
@@ -37,7 +35,8 @@ defineProps({
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
 }
 
-.fake-input:hover, .fake-input:focus {
+.fake-input:hover,
+.fake-input:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }

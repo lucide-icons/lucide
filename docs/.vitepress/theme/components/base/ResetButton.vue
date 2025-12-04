@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { rotateCw } from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
+import Icon from 'lucide-vue-next/src/Icon'
 import IconButton from "./IconButton.vue";
-
-const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
 </script>
 
 <template>
   <IconButton class="reset-button">
-    <RotateIcon :size="20"/>
+    <Icon :size="20" :iconNode="rotateCw" />
   </IconButton>
 </template>
 
@@ -32,6 +30,7 @@ const RotateIcon = createLucideIcon('RotateIcon', rotateCw)
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(359deg);
   }

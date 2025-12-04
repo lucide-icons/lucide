@@ -7,10 +7,9 @@ export default {
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import Input from './Input.vue'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { search }  from '../../../data/iconNodes'
+import Icon from 'lucide-vue-next/src/Icon'
+import { search } from '../../../data/iconNodes'
 
-const SearchIcon = createLucideIcon('search', search)
 
 interface Props {
   modelValue: string
@@ -36,18 +35,10 @@ const value = computed({
 </script>
 
 <template>
-  <Input
-    ref="input"
-    type="search"
-    autofocus
-    :shortcut="shortcut"
-    v-bind="$attrs"
-    v-model="value"
-    class="input-wrapper"
-  >
-    <template #icon>
-      <component :is="SearchIcon" class="search-icon" />
-    </template>
+  <Input ref="input" type="search" autofocus :shortcut="shortcut" v-bind="$attrs" v-model="value" class="input-wrapper">
+  <template #icon>
+    <Icon :iconNode="search" class="search-icon" />
+  </template>
   </Input>
 </template>
 
@@ -62,7 +53,8 @@ const value = computed({
   background-color: var(--vp-c-bg-alt);
 }
 
-.input:hover, .input:focus {
+.input:hover,
+.input:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
