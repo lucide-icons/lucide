@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alportan"
+  ],
+  "tags": [
+    "energy",
+    "hot",
+    "geothermal"
+  ],
+  "categories": [
+    "weather",
+    "sustainability"
+  ]
+}
