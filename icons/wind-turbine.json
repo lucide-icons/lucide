@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "Alportan"
+  ],
+  "tags": [
+    "weather",
+    "air",
+    "blow",
+    "windmill",
+    "energy",
+    "power",
+    "renewable",
+    "technology"
+  ],
+  "categories": [
+    "weather"
+  ]
+}
