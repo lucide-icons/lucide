@@ -7,22 +7,24 @@ on:
     paths:
       - icons/**/*.svg
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
-          version: 8
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -63,8 +65,40 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
-          name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
-          body: ${{ steps.change-log.outputs.CHANGE_LOG }}
+          name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
+          generate_release_notes: true
+
+  test-semantic-release:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          tag_format: ${version}
+          branches: |
+            ['new-release-workflow']
+          extends: |
+            semantic-release-monorepo
+          extra_plugins: |
+            @semantic-release/github
+            @semantic-release/git
+            @semantic-release/release-notes-generator
+            conventional-changelog-conventionalcommits
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log output
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          echo ${{ steps.semantic.outputs.new_release_version }}
+          echo ${{ steps.semantic.outputs.new_release_major_version }}
+          echo ${{ steps.semantic.outputs.new_release_minor_version }}
+          echo ${{ steps.semantic.outputs.new_release_patch_version }}
 
   start-release:
     if: github.repository == 'lucide-icons/lucide'

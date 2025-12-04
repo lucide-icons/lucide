@@ -1,19 +1,20 @@
 # Lucide Vue Next
 
-Implementation of the lucide icon library for Vue 3 applications.
+Vue 3 components for Lucide icons that leverage the Composition API and modern Vue features. Each icon is a reactive Vue component that renders as an inline SVG, providing excellent performance and developer experience in Vue 3 applications.
 
-## Vue 3 or Vue 2
-
-::: tip
-This version of lucide is for Vue 3, For Vue 2 got to [lucide-vue ->](lucide-vue)
-:::
+**What you can accomplish:**
+- Use icons as Vue 3 components with full reactivity and TypeScript support
+- Bind icon properties to reactive data and computed values
+- Customize icons with props, slots, and Vue's powerful templating system
+- Integrate seamlessly with Vue 3's Composition API and script setup syntax
+- Build dynamic interfaces where icons respond to application state changes
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm add lucide-vue-next
 ```
 
 ```sh [yarn]
@@ -22,6 +23,10 @@ yarn add lucide-vue-next
 
 ```sh [npm]
 npm install lucide-vue-next
+```
+
+```sh [bun]
+bun add lucide-vue-next
 ```
 
 :::
@@ -56,7 +61,7 @@ import { Camera } from 'lucide-vue-next';
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
 | `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
+| `absoluteStrokeWidth`   | *boolean* | false        |
 | `default-class`         | *string*  | lucide-icon  |
 
 ### Applying props
@@ -83,11 +88,11 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 ```vue
 <script setup>
 import { Icon } from 'lucide-vue-next';
-import { burger } from '@lucide/lab';
+import { baseball } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode="burger" />
+  <Icon :iconNode="baseball" />
 </template>
 ```
 

@@ -4,14 +4,21 @@ title: Lucide Preact
 
 # Lucide Preact
 
-Implementation of the lucide icon library for preact applications.
+Preact components for Lucide icons that provide React-like development experience with a smaller footprint. Each icon is a lightweight Preact component that renders as an inline SVG, perfect for applications that need React compatibility with minimal bundle size.
+
+**What you can accomplish:**
+- Use icons as Preact components with React-like syntax and patterns
+- Build lightweight applications with Preact's smaller runtime
+- Create fast, responsive interfaces with minimal JavaScript overhead
+- Maintain React compatibility while reducing bundle size
+- Integrate with existing Preact applications and component libraries
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]
@@ -20,6 +27,10 @@ yarn add lucide-preact
 
 ```sh [npm]
 npm install lucide-preact
+```
+
+```sh [bun]
+bun add lucide-preact
 ```
 
 :::
@@ -80,10 +91,10 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-preact';
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={burger} />
+  <Icon iconNode={coconut} />
 );
 ```
 
@@ -115,7 +126,7 @@ export default Icon;
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="house" />;
 };
 
 export default App;

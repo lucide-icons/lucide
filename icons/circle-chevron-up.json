@@ -10,11 +10,14 @@
     "^"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "shapes"
+    "arrows"
   ],
   "aliases": [
-    "chevron-up-circle"
+    {
+      "name": "chevron-up-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

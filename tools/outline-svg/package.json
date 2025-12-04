@@ -3,15 +3,16 @@
   "description": "A internal used package to outline SVGs.",
   "private": true,
   "version": "2.0.0",
-  "main": "index.js",
+  "main": "main.ts",
+  "type": "module",
   "scripts": {
-    "start": "node ./main.mjs"
+    "start": "node ./main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "minimist": "^1.2.8",
-    "oslllo-svg-fixer": "^3.0.0"
+    "oslllo-svg-fixer": "^5.0.0"
   }
 }

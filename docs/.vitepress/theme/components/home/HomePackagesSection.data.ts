@@ -38,6 +38,12 @@ export default {
           label: 'Lucide documentation for Angular',
         },
         {
+          name: 'lucide-astro',
+          logo: '/framework-logos/astro.svg',
+          logoDark: '/framework-logos/astro-dark.svg',
+          label: 'Lucide documentation for Astro',
+        },
+        {
           name: 'lucide-react-native',
           logo: '/framework-logos/react-native.svg',
           label: 'Lucide documentation for React Native',
