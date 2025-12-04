@@ -19,11 +19,11 @@ const ICON_GRID_GAP = 8;
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
-  
+
   const itemsPerRow = columnSize.value || 10;
   const visibleRows = Math.ceil(window.innerHeight / (ICON_SIZE + ICON_GRID_GAP));
 
-  return Math.min(itemsPerRow * (visibleRows + 2), 200); 
+  return Math.min(itemsPerRow * (visibleRows + 2), 200);
 });
 
 const props = defineProps<{
@@ -36,10 +36,10 @@ const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
-const { width: containerWidth } = useElementSize(overviewEl)
+const { width: containerWidth } = useElementSize(overviewEl);
 
 const columnSize = computed(() => {
-  return Math.floor((containerWidth.value) / ((ICON_SIZE + ICON_GRID_GAP)));
+  return Math.floor(containerWidth.value / (ICON_SIZE + ICON_GRID_GAP));
 });
 
 const mappedIcons = computed(() => {
@@ -76,24 +76,21 @@ const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
 });
 
-const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(
-  chunkedIcons,
-  {
-    itemHeight: ICON_SIZE + ICON_GRID_GAP,
-    overscan: 10
-  },
-)
+const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedIcons, {
+  itemHeight: ICON_SIZE + ICON_GRID_GAP,
+  overscan: 10,
+});
 
 onMounted(() => {
   containerProps.ref.value = document.documentElement;
-  useEventListener(window, 'scroll', containerProps.onScroll)
+  useEventListener(window, 'scroll', containerProps.onScroll);
 
   // Check if we should focus the search input from URL parameter
-  const route = useRoute()
+  const route = useRoute();
   if (route.data?.relativePath && window.location.search.includes('focus')) {
-    searchInput.value?.focus()
+    searchInput.value?.focus();
   }
-})
+});
 
 function setActiveIconName(name: string) {
   activeIconName.value = name;
@@ -113,8 +110,8 @@ const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
 
 watch(searchQueryDebounced, () => {
-  scrollTo(0)
-})
+  scrollTo(0);
+});
 
 function handleCloseDrawer() {
   setActiveIconName('');
@@ -126,47 +123,20 @@ function handleCloseDrawer() {
 <template>
   <div ref="overviewEl" class="overview-container">
     <StickyBar>
-      <InputSearch
-        :placeholder="`Search ${icons.length} icons ...`"
-        v-model="searchQuery"
-        ref="searchInput"
-        :shortcut="kbdSearchShortcut"
-        class="input-wrapper"
-        @focus="onFocusSearchInput"
-      />
+      <InputSearch :placeholder="`Search ${icons.length} icons ...`" v-model="searchQuery" ref="searchInput"
+        :shortcut="kbdSearchShortcut" class="input-wrapper" @focus="onFocusSearchInput" />
     </StickyBar>
-    <NoResults
-      v-if="searchResults.length === 0 && searchQuery !== ''"
-      :searchQuery="searchQuery"
-      @clear="searchQuery = ''"
-    />
-    <IconGrid
-      v-else-if="list.length === 0"
-      overlayMode
-      :icons="searchResults.slice(0, initialGridItems)"
-      :activeIcon="activeIconName"
-      @setActiveIcon="setActiveIconName"
-    />
-    <div
-      v-bind="wrapperProps"
-      class="icon"
-      v-else
-    >
-      <IconGrid
-        v-for="{ index, data: icons } in list"
-        :key="index"
-        overlayMode
-        :icons="icons"
-        :activeIcon="activeIconName"
-        @setActiveIcon="setActiveIconName"
-      />
+    <NoResults v-if="searchResults.length === 0 && searchQuery !== ''" :searchQuery="searchQuery"
+      @clear="searchQuery = ''" />
+    <IconGrid v-else-if="list.length === 0" overlayMode :icons="searchResults.slice(0, initialGridItems)"
+      :activeIcon="activeIconName" @setActiveIcon="setActiveIconName" />
+    <div v-bind="wrapperProps" class="icon" v-else>
+      <IconGrid v-for="{ index, data: icons } in list" :key="index" overlayMode :icons="icons"
+        :activeIcon="activeIconName" @setActiveIcon="setActiveIconName" />
     </div>
   </div>
 
-  <IconDetailOverlay
-    :iconName="activeIconName"
-    @close="handleCloseDrawer"
-  />
+  <IconDetailOverlay :iconName="activeIconName" @close="handleCloseDrawer" />
 
   <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>

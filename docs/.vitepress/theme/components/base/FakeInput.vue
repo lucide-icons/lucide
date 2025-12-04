@@ -1,20 +1,27 @@
 <script setup>
-import Icon from 'lucide-vue-next/src/Icon'
-import { search } from '../../../data/iconNodes'
+import Icon from 'lucide-vue-next/src/Icon';
+import { search } from '../../../data/iconNodes';
 
 defineProps({
   shortcut: {
     type: String,
-    required: false
-  }
-})
+    required: false,
+  },
+});
 </script>
 
 <template>
   <button class="fake-input">
-    <Icon :iconNode="search" class="search-icon" />
+    <Icon
+      :iconNode="search"
+      class="search-icon"
+    />
     <slot />
-    <kbd v-if="shortcut" class="shortcut">{{ shortcut }}</kbd>
+    <kbd
+      v-if="shortcut"
+      class="shortcut"
+      >{{ shortcut }}</kbd
+    >
   </button>
 </template>
 
@@ -32,7 +39,10 @@ defineProps({
   cursor: text;
   display: flex;
   gap: 12px;
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
 }
 
 .fake-input:hover,

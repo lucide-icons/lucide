@@ -3,13 +3,13 @@ import { useData } from 'vitepress';
 import { computed } from 'vue';
 
 const props = defineProps<{
-  modelValue: string
-  id: string
-}>()
+  modelValue: string;
+  id: string;
+}>();
 
-const { isDark } = useData()
+const { isDark } = useData();
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 
 const value = computed({
   get: () => {
@@ -17,19 +17,33 @@ const value = computed({
       return isDark.value ? '#ffffff' : '#000000';
     }
 
-    return props.modelValue
+    return props.modelValue;
   },
-  set: (val) => emit('update:modelValue', val)
-})
+  set: (val) => emit('update:modelValue', val),
+});
 </script>
 
 <template>
   <div class="color-picker">
     <div class="color-input-wrapper">
-      <input type="color" :id="id" :name="id" class="color-input" v-model="value" value="#ffffff" />
+      <input
+        type="color"
+        :id="id"
+        :name="id"
+        class="color-input"
+        v-model="value"
+        value="#ffffff"
+      />
     </div>
-    <input type="text" :id="`${id}-input`" :name="`${id}-input`" class="color-input-text"
-      aria-label="Color picker input" v-model="value" placeholder="[default]" />
+    <input
+      type="text"
+      :id="`${id}-input`"
+      :name="`${id}-input`"
+      class="color-input-text"
+      aria-label="Color picker input"
+      v-model="value"
+      placeholder="[default]"
+    />
   </div>
 </template>
 
@@ -64,7 +78,10 @@ const value = computed({
   display: flex;
   align-items: center;
   gap: 2px;
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
 }
 
 .color-input-text {
@@ -78,7 +95,9 @@ const value = computed({
   text-align: left;
   border-radius: 8px;
   cursor: text;
-  transition: border-color 0.25s, background 0.4s ease;
+  transition:
+    border-color 0.25s,
+    background 0.4s ease;
   letter-spacing: 1px;
 }
 
@@ -88,5 +107,6 @@ const value = computed({
   background: var(--vp-c-bg-alt);
 }
 
-.color-input[value="currentColor"] {}
+.color-input[value='currentColor'] {
+}
 </style>

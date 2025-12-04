@@ -1,24 +1,33 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue';
-import { copy } from '../../../data/iconNodes'
+import { copy } from '../../../data/iconNodes';
 import useConfetti from '../../composables/useConfetti';
 import Icon from 'lucide-vue-next/src/Icon';
-const { animate, confetti } = useConfetti()
-const slots = useSlots()
+const { animate, confetti } = useConfetti();
+const slots = useSlots();
 
-const copiedText = computed(() => slots.default?.()[0].children)
+const copiedText = computed(() => slots.default?.()[0].children);
 
 function copyText() {
-  navigator.clipboard.writeText(copiedText.value)
+  navigator.clipboard.writeText(copiedText.value);
 
-  confetti()
+  confetti();
 }
 </script>
 
 <template>
-  <h1 class="icon-name confetti-button" :class="{ animate }" data-confetti-text="Copied!" @click="copyText">
+  <h1
+    class="icon-name confetti-button"
+    :class="{ animate }"
+    data-confetti-text="Copied!"
+    @click="copyText"
+  >
     <slot />
-    <Icon :iconNode="copy" :size="20" class="copy-icon" />
+    <Icon
+      :iconNode="copy"
+      :size="20"
+      class="copy-icon"
+    />
   </h1>
 </template>
 
@@ -29,7 +38,7 @@ function copyText() {
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
-  transition: background ease-in .15s;
+  transition: background ease-in 0.15s;
   padding: 2px 8px;
   border-radius: 8px;
   width: auto;
@@ -42,7 +51,7 @@ function copyText() {
 }
 
 .icon-name:hover .copy-icon {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .icon-name:before,
@@ -59,10 +68,10 @@ function copyText() {
   opacity: 0;
   margin-left: 12px;
   margin-top: 6px;
-  transition: ease .3s opacity;
+  transition: ease 0.3s opacity;
 }
 
 .icon-name:hover .copy-icon:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 </style>

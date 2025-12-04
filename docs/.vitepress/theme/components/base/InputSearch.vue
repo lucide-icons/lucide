@@ -1,44 +1,54 @@
 <script lang="ts">
 export default {
   inheritAttrs: false,
-}
+};
 </script>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import Input from './Input.vue'
-import Icon from 'lucide-vue-next/src/Icon'
-import { search } from '../../../data/iconNodes'
-
+import { computed, ref } from 'vue';
+import Input from './Input.vue';
+import Icon from 'lucide-vue-next/src/Icon';
+import { search } from '../../../data/iconNodes';
 
 interface Props {
-  modelValue: string
-  shortcut?: string
+  modelValue: string;
+  shortcut?: string;
 }
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 
-const input = ref()
+const input = ref();
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 
 defineExpose({
   focus: () => {
-    input.value.focus()
-  }
-})
+    input.value.focus();
+  },
+});
 
 const value = computed({
   get: () => props.modelValue,
-  set: (val) => emit('update:modelValue', val)
-})
+  set: (val) => emit('update:modelValue', val),
+});
 </script>
 
 <template>
-  <Input ref="input" type="search" autofocus :shortcut="shortcut" v-bind="$attrs" v-model="value" class="input-wrapper">
-  <template #icon>
-    <Icon :iconNode="search" class="search-icon" />
-  </template>
+  <Input
+    ref="input"
+    type="search"
+    autofocus
+    :shortcut="shortcut"
+    v-bind="$attrs"
+    v-model="value"
+    class="input-wrapper"
+  >
+    <template #icon>
+      <Icon
+        :iconNode="search"
+        class="search-icon"
+      />
+    </template>
   </Input>
 </template>
 
