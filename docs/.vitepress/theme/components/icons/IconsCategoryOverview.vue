@@ -163,7 +163,6 @@ watchEffect(() => {
         ref="searchInput"
         @focus="onFocusSearchInput"
       />
-      <Button> < </Button>
     </StickyBar>
     <NoResults
       v-if="categories.length === 0"

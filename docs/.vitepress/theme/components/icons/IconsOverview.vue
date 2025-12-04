@@ -121,22 +121,52 @@ function handleCloseDrawer() {
 </script>
 
 <template>
-  <div ref="overviewEl" class="overview-container">
+  <div
+    ref="overviewEl"
+    class="overview-container"
+  >
     <StickyBar>
-      <InputSearch :placeholder="`Search ${icons.length} icons ...`" v-model="searchQuery" ref="searchInput"
-        :shortcut="kbdSearchShortcut" class="input-wrapper" @focus="onFocusSearchInput" />
+      <InputSearch
+        :placeholder="`Search ${icons.length} icons ...`"
+        v-model="searchQuery"
+        ref="searchInput"
+        :shortcut="kbdSearchShortcut"
+        class="input-wrapper"
+        @focus="onFocusSearchInput"
+      />
     </StickyBar>
-    <NoResults v-if="searchResults.length === 0 && searchQuery !== ''" :searchQuery="searchQuery"
-      @clear="searchQuery = ''" />
-    <IconGrid v-else-if="list.length === 0" overlayMode :icons="searchResults.slice(0, initialGridItems)"
-      :activeIcon="activeIconName" @setActiveIcon="setActiveIconName" />
-    <div v-bind="wrapperProps" class="icon" v-else>
-      <IconGrid v-for="{ index, data: icons } in list" :key="index" overlayMode :icons="icons"
-        :activeIcon="activeIconName" @setActiveIcon="setActiveIconName" />
+    <NoResults
+      v-if="searchResults.length === 0 && searchQuery !== ''"
+      :searchQuery="searchQuery"
+      @clear="searchQuery = ''"
+    />
+    <IconGrid
+      v-else-if="list.length === 0"
+      overlayMode
+      :icons="searchResults.slice(0, initialGridItems)"
+      :activeIcon="activeIconName"
+      @setActiveIcon="setActiveIconName"
+    />
+    <div
+      v-bind="wrapperProps"
+      class="icon"
+      v-else
+    >
+      <IconGrid
+        v-for="{ index, data: icons } in list"
+        :key="index"
+        overlayMode
+        :icons="icons"
+        :activeIcon="activeIconName"
+        @setActiveIcon="setActiveIconName"
+      />
     </div>
   </div>
 
-  <IconDetailOverlay :iconName="activeIconName" @close="handleCloseDrawer" />
+  <IconDetailOverlay
+    :iconName="activeIconName"
+    @close="handleCloseDrawer"
+  />
 
   <CarbonAdOverlay :drawerOpen="!!activeIconName" />
 </template>
