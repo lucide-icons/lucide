@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "baggage",
+    "luggage",
+    "travel",
+    "suitcase",
+    "conveyor",
+    "carousel"
+  ],
+  "categories": [
+    "travel",
+    "transportation"
+  ]
+}
