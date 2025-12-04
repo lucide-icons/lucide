@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alportan"
+  ],
+  "tags": [
+    "coal",
+    "stone",
+    "rock",
+    "boulder"
+  ],
+  "categories": [
+    "nature"
+  ]
+}
