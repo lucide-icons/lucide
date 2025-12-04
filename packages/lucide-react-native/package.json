@@ -1,6 +1,6 @@
 {
   "name": "lucide-react-native",
-  "description": "A Lucide icon library package for React Native applications",
+  "description": "A Lucide icon library package for React Native applications.",
   "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -37,7 +37,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "version": "pnpm version --git-tag-version=false"
@@ -54,16 +54,16 @@
     "jest-serializer-html": "^7.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-native": "^0.73.1",
-    "react-native-svg": "^15.0.0",
-    "rollup": "^4.9.2",
-    "rollup-plugin-dts": "^6.1.0",
-    "typescript": "^4.8.4",
-    "vite": "5.0.13",
-    "vitest": "^1.1.1"
+    "react-native": "^0.76.0",
+    "react-native-svg": "^15.8.0",
+    "rollup": "^4.53.3",
+    "rollup-plugin-dts": "^6.2.3",
+    "typescript": "^5.8.3",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.12"
   },
   "peerDependencies": {
-    "react": "^16.5.1 || ^17.0.0 || ^18.0.0",
+    "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-native": "*",
     "react-native-svg": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0"
   }
