@@ -11,10 +11,14 @@
     "exclamation mark"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "notifications"
   ],
   "aliases": [
-    "alert-circle"
+    {
+      "name": "alert-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

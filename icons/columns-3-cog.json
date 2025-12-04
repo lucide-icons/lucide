@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "irvineacosta",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "columns",
+    "settings",
+    "customize",
+    "table",
+    "grid",
+    "adjust",
+    "configuration",
+    "panel",
+    "layout"
+  ],
+  "categories": [
+    "layout",
+    "design"
+  ],
+  "aliases": [
+    {
+      "name": "columns-settings",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "table-config",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

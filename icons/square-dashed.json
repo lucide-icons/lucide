@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "llaenowyd",
+    "mishkaio",
+    "ericfennis",
+    "karsa-mistmere",
+    "chessurisme"
+  ],
+  "tags": [
+    "selection",
+    "square",
+    "rectangular",
+    "marquee",
+    "tool",
+    "dashed",
+    "box"
+  ],
+  "categories": [
+    "text",
+    "design"
+  ],
+  "aliases": [
+    {
+      "name": "box-select",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

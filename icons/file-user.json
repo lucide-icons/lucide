@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "colebemis",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "person",
+    "personal information",
+    "people",
+    "listing",
+    "networking",
+    "document",
+    "contact",
+    "cover letter",
+    "resume",
+    "cv",
+    "curriculum vitae",
+    "application form"
+  ],
+  "categories": [
+    "account",
+    "files"
+  ]
+}
