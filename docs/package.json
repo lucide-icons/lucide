@@ -15,6 +15,7 @@
     "prebuild:categoriesJson": "node ./scripts/writeCategoriesMetadata.mjs",
     "prebuild:relatedIcons": "node ./scripts/writeIconRelatedIcons.mjs",
     "prebuild:iconDetails": "node ./scripts/writeIconDetails.mjs",
+    "prebuild:brandStopwords": "node ./scripts/writeBrandStopwords.mjs",
     "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mjs",
     "dev": "npx nitropack dev",
     "prebuild:api": "npx nitropack prepare",
