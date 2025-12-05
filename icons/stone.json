@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alportan"
+  ],
+  "tags": [
+    "mineral",
+    "geology",
+    "nature",
+    "solid",
+    "pebble",
+    "crystal",
+    "ore",
+    "hard",
+    "coal",
+    "stone",
+    "rock",
+    "boulder"
+  ],
+  "categories": [
+    "nature"
+  ]
+}
