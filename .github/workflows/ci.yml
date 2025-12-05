@@ -37,11 +37,11 @@ jobs:
         run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
       - name: Check if we can patch
-        run: .github/workflows/version-up.sh --minor
+        run: pnpm semver $LATEST_TAG -i minor
 
       - name: Create new version
         id: new-version
-        run: echo "NEW_VERSION=$(.github/workflows/version-up.sh --minor)" >> $GITHUB_OUTPUT
+        run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
 
       - name: Create change log
         id: change-log
