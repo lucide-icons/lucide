@@ -32,7 +32,6 @@ const value = computed({
         :name="id"
         class="color-input"
         v-model="value"
-        value="#ffffff"
       />
     </div>
     <input
