@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "nananecy"
+  ],
+  "tags": [
+    "picture",
+    "photo",
+    "sparkles"
+  ],
+  "categories": [
+    "photography",
+    "text",
+    "multimedia",
+    "files"
+  ]
+}
