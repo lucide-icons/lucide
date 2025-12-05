@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, watch, watchEffect } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
-import IconsCategory from './IconsCategory.vue';
+import IconsCategory, { CategoryRow } from './IconsCategory.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
-import { CategoryRow } from './IconsCategory.vue';
 import useScrollToCategory from '../../composables/useScrollToCategory';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
+import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -108,6 +108,7 @@ const categoriesList = computed(() => {
       return acc;
     }, []);
 });
+const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
   itemHeight: ICON_SIZE + ICON_GRID_GAP,
@@ -143,10 +144,6 @@ function handleCloseDrawer() {
 
   window.history.pushState({}, '', '/icons/categories');
 }
-
-watchEffect(() => {
-  console.log(props.icons.find((icon) => icon.name === 'burger'));
-});
 </script>
 
 <template>
@@ -165,8 +162,9 @@ watchEffect(() => {
       />
     </StickyBar>
     <NoResults
-      v-if="categories.length === 0"
-      :searchQuery="searchQuery"
+      v-if="searchPlaceholder.isNoResults"
+      :searchQuery="searchPlaceholder.query"
+      :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
     <div v-bind="wrapperProps">
@@ -206,9 +204,5 @@ watchEffect(() => {
 
 .icons {
   margin-bottom: 8px;
-}
-
-.overview-container {
-  padding-bottom: 288px;
 }
 </style>

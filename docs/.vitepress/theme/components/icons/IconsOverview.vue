@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, onBeforeUnmount, watch } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
@@ -13,6 +13,7 @@ import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
+import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -71,6 +72,7 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
 ]);
+const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 
 const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
@@ -136,8 +138,9 @@ function handleCloseDrawer() {
       />
     </StickyBar>
     <NoResults
-      v-if="searchResults.length === 0 && searchQuery !== ''"
-      :searchQuery="searchQuery"
+      v-if="searchPlaceholder.isNoResults"
+      :searchQuery="searchPlaceholder.query"
+      :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
     <IconGrid
@@ -182,9 +185,5 @@ function handleCloseDrawer() {
 
 .input-wrapper {
   width: 100%;
-}
-
-.overview-container {
-  padding-bottom: 288px;
 }
 </style>
