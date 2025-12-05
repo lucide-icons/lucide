@@ -9,6 +9,7 @@ if (process.env.NODE_ENV === 'development') {
 
   wasm = fs.readFileSync(require.resolve('@resvg/resvg-wasm/index_bg.wasm'));
 } else {
+  // @ts-ignore
   wasm = resvg_wasm;
 }
 

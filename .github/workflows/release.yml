@@ -18,9 +18,13 @@ on:
         description: Version
         required: true
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
 jobs:
   pre-release:
-    if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere"]', github.actor)
+    if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
@@ -39,7 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-release
     permissions:
-      id-token: write
+      id-token: write # Required for OIDC
+      contents: read
     strategy:
       fail-fast: false
       matrix:
@@ -57,9 +62,9 @@ jobs:
             '@lucide/svelte',
           ]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -89,12 +94,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [pre-release, lucide-font]
     permissions:
-      id-token: write
+      id-token: write # Required for OIDC
+      contents: read
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/download-artifact@v4
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -124,9 +131,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: pre-release
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -152,7 +159,7 @@ jobs:
     needs: [pre-release, lucide-font]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/download-artifact@v4
       - name: Zip font and icons
         run: |
