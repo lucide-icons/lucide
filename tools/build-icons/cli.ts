@@ -26,6 +26,7 @@ interface CliArguments {
   withDynamicImports?: boolean;
   separateAliasesFile?: boolean;
   separateAliasesFileExtension?: string;
+  separateAliasesFileIgnore?: string;
   separateIconFileExport?: boolean;
   separateIconFileExportExtension?: string;
   aliasesFileExtension?: string;
@@ -56,6 +57,7 @@ const {
   withDynamicImports = false,
   separateAliasesFile = false,
   separateAliasesFileExtension = undefined,
+  separateAliasesFileIgnore = undefined,
   separateIconFileExport = false,
   separateIconFileExportExtension = undefined,
   aliasesFileExtension = '.js',
@@ -98,10 +100,10 @@ async function buildIcons() {
       iconFileExtension,
       outputDirectory: OUTPUT_DIR,
       fileExtension: aliasesFileExtension,
-      exportModuleNameCasing,
       aliasImportFileExtension,
       separateAliasesFile,
       separateAliasesFileExtension,
+      separateAliasesFileIgnore,
       showLog: !silent,
     });
   }

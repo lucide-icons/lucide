@@ -16,5 +16,13 @@
     "security",
     "medical",
     "devices"
+  ],
+  "aliases": [
+    {
+      "name": "fingerprint",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
