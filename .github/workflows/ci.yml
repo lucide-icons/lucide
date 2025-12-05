@@ -68,38 +68,6 @@ jobs:
           name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
           generate_release_notes: true
 
-  test-semantic-release:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Semantic Release
-        id: semantic
-        uses: cycjimmy/semantic-release-action@v4
-        with:
-          tag_format: ${version}
-          branches: |
-            ['new-release-workflow']
-          extends: |
-            semantic-release-monorepo
-          extra_plugins: |
-            @semantic-release/github
-            @semantic-release/git
-            @semantic-release/release-notes-generator
-            conventional-changelog-conventionalcommits
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Log output
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: |
-          echo ${{ steps.semantic.outputs.new_release_version }}
-          echo ${{ steps.semantic.outputs.new_release_major_version }}
-          echo ${{ steps.semantic.outputs.new_release_minor_version }}
-          echo ${{ steps.semantic.outputs.new_release_patch_version }}
-
   start-release:
     if: github.repository == 'lucide-icons/lucide'
     needs: create-release
