@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "smncd"
+  ],
+  "tags": [
+    "usb",
+    "usb drive",
+    "flash drive",
+    "usb stick",
+    "storage",
+    "memory"
+  ],
+  "categories": [
+    "multimedia",
+    "devices",
+    "connectivity"
+  ]
+}
