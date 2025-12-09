@@ -9,14 +9,19 @@ type CodeExampleType = {
 const getIconCodes = (): CodeExampleType => {
   return [
     {
-      language: 'js',
+      language: 'html',
       title: 'Vanilla',
       code: `\
-import { createIcons, icons } from 'lucide';
-
-createIcons({ icons });
-
-document.body.append('<i data-lucide="$Name"></i>');\
+<script>
+import { createIcons } from 'lucide';
+import { $CamelCase } from '@lucide/lab';
+createIcons({
+  icons: {
+    $CamelCase
+  },
+});
+</script>
+<i data-lucide="$Name"></i>\
   `,
     },
     {
