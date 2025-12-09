@@ -36,7 +36,7 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:bundle": "rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
@@ -48,10 +48,10 @@
     "@rollup/plugin-replace": "^6.0.2",
     "@testing-library/jest-dom": "^6.6.3",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.40.0",
-    "rollup-plugin-dts": "^6.2.1",
+    "rollup": "^4.53.3",
+    "rollup-plugin-dts": "^6.2.3",
     "typescript": "^5.8.3",
-    "vite": "^6.3.2",
-    "vitest": "^3.1.2"
+    "vite": "^7.2.4",
+    "vitest": "^4.0.12"
   }
 }

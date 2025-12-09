@@ -11,7 +11,7 @@ Implementation of the lucide icon library for web applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
@@ -37,7 +37,7 @@ Implementation of the lucide icon library for React applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
@@ -64,7 +64,7 @@ Implementation of the lucide icon library for Vue applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm add lucide-vue-next
 ```
 
 ```sh [yarn]
@@ -91,7 +91,7 @@ Implementation of the lucide icon library for Svelte applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-svelte
+pnpm add lucide-svelte
 ```
 
 ```sh [yarn]
@@ -117,7 +117,7 @@ Implementation of the lucide icon library for Solid applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
@@ -143,7 +143,7 @@ Implementation of the lucide icon library for Angular applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-angular
+pnpm add lucide-angular
 ```
 
 ```sh [yarn]
@@ -169,7 +169,7 @@ Implementation of the lucide icon library for preact applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]
@@ -196,7 +196,7 @@ Implementation of the lucide icon library for Astro applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/astro
+pnpm add @lucide/astro
 ```
 
 ```sh [yarn]
@@ -222,7 +222,7 @@ Implementation of the lucide icon library for multiple usages that like to use: 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
