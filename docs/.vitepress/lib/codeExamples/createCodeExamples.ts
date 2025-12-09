@@ -18,7 +18,7 @@ import { $CamelCase } from '@lucide/lab';
 createIcons({
   icons: {
     $CamelCase
-  },
+  }
 });
 </script>
 <i data-lucide="$Name"></i>\
