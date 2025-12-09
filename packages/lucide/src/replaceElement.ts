@@ -1,5 +1,6 @@
 import createElement from './createElement';
-import { Icons } from './types';
+import defaultAttributes from './defaultAttributes';
+import { Icons, SVGProps } from './types';
 
 export type CustomAttrs = { [attr: string]: any };
 
@@ -19,7 +20,9 @@ export const getAttrs = (element: Element): Record<string, string> =>
  * @param {Object} attrs
  * @returns {Array}
  */
-export const getClassNames = (attrs: Record<string, string> | string): string | string[] => {
+export const getClassNames = (
+  attrs: Record<string, number | string | string[]> | string,
+): string | string[] => {
   if (typeof attrs === 'string') return attrs;
   if (!attrs || !attrs.class) return '';
   if (attrs.class && typeof attrs.class === 'string') {
@@ -36,7 +39,9 @@ export const getClassNames = (attrs: Record<string, string> | string): string | 
  * @param {array} arrayOfClassnames
  * @returns {string}
  */
-export const combineClassNames = (arrayOfClassnames: (string | Record<string, string>)[]) => {
+export const combineClassNames = (
+  arrayOfClassnames: (string | Record<string, number | string | string[]>)[],
+) => {
   const classNameArray = arrayOfClassnames.flatMap(getClassNames);
 
   return classNameArray
@@ -52,7 +57,7 @@ const toPascalCase = (string: string): string =>
 interface ReplaceElementOptions {
   nameAttr: string;
   icons: Icons;
-  attrs: Record<string, string>;
+  attrs: SVGProps;
 }
 
 /**
@@ -77,10 +82,9 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
   }
 
   const elementAttrs = getAttrs(element);
-  const [tag, iconAttributes, children] = iconNode;
 
   const iconAttrs = {
-    ...iconAttributes,
+    ...defaultAttributes,
     'data-lucide': iconName,
     ...attrs,
     ...elementAttrs,
@@ -94,7 +98,7 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
     });
   }
 
-  const svgElement = createElement([tag, iconAttrs, children]);
+  const svgElement = createElement(iconNode, iconAttrs);
 
   return element.parentNode?.replaceChild(svgElement, element);
 };

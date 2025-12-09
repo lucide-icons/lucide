@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere",
+    "chessurisme"
+  ],
+  "tags": [
+    "repeat",
+    "refresh",
+    "reconnect",
+    "transfer",
+    "backup",
+    "date",
+    "month",
+    "year",
+    "event",
+    "subscribe",
+    "recurring",
+    "schedule",
+    "reminder",
+    "automatic",
+    "auto"
+  ],
+  "categories": [
+    "arrows",
+    "time"
+  ]
+}
