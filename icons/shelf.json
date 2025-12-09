@@ -7,9 +7,20 @@
     "ledge",
     "rack",
     "storage",
+    "inventory",
     "furniture",
     "sill",
-    "shelving"
+    "shelving",
+    "shelf",
+    "organize",
+    "display",
+    "store",
+    "arrange",
+    "unit",
+    "cabinet",
+    "fixture",
+    "retail",
+    "warehouse"
   ],
   "categories": [
     "home"
