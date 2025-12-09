@@ -11,7 +11,8 @@
     "month",
     "year",
     "events",
-    "search"
+    "search",
+    "lens"
   ],
   "categories": [
     "time"

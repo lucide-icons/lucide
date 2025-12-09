@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "bill",
@@ -16,7 +18,7 @@
     "contract"
   ],
   "categories": [
-    "money",
+    "finance",
     "travel"
   ]
 }

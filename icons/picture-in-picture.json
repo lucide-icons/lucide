@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "cd16b",
-    "ericfennis"
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "display",

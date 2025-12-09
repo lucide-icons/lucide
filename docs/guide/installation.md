@@ -11,7 +11,7 @@ Implementation of the lucide icon library for web applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
@@ -20,6 +20,10 @@ yarn add lucide
 
 ```sh [npm]
 npm install lucide
+```
+
+```sh [bun]
+bun add lucide
 ```
 
 :::
@@ -33,7 +37,7 @@ Implementation of the lucide icon library for React applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
@@ -42,6 +46,10 @@ yarn add lucide-react
 
 ```sh [npm]
 npm install lucide-react
+```
+
+```sh [bun]
+bun add lucide-react
 ```
 
 :::
@@ -56,7 +64,7 @@ Implementation of the lucide icon library for Vue applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm add lucide-vue-next
 ```
 
 ```sh [yarn]
@@ -65,6 +73,10 @@ yarn add lucide-vue-next
 
 ```sh [npm]
 npm install lucide-vue-next
+```
+
+```sh [bun]
+bun add lucide-vue-next
 ```
 
 :::
@@ -79,7 +91,7 @@ Implementation of the lucide icon library for Svelte applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-svelte
+pnpm add lucide-svelte
 ```
 
 ```sh [yarn]
@@ -88,6 +100,10 @@ yarn add lucide-svelte
 
 ```sh [npm]
 npm install lucide-svelte
+```
+
+```sh [bun]
+bun add lucide-svelte
 ```
 
 :::
@@ -101,7 +117,7 @@ Implementation of the lucide icon library for Solid applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
@@ -110,6 +126,10 @@ yarn add lucide-solid
 
 ```sh [npm]
 npm install lucide-solid
+```
+
+```sh [bun]
+bun add lucide-solid
 ```
 
 :::
@@ -123,7 +143,7 @@ Implementation of the lucide icon library for Angular applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-angular
+pnpm add lucide-angular
 ```
 
 ```sh [yarn]
@@ -132,6 +152,10 @@ yarn add lucide-angular
 
 ```sh [npm]
 npm install lucide-angular
+```
+
+```sh [bun]
+bun add lucide-angular
 ```
 
 :::
@@ -145,7 +169,7 @@ Implementation of the lucide icon library for preact applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]
@@ -156,7 +180,40 @@ yarn add lucide-preact
 npm install lucide-preact
 ```
 
+```sh [bun]
+bun add lucide-preact
+```
+
+
 :::
+
+For more details, see the [documentation](packages/lucide-preact.md).
+
+## Astro
+
+Implementation of the lucide icon library for Astro applications.
+
+::: code-group
+
+```sh [pnpm]
+pnpm add @lucide/astro
+```
+
+```sh [yarn]
+yarn add @lucide/astro
+```
+
+```sh [npm]
+npm install @lucide/astro
+```
+
+```sh [bun]
+bun add @lucide/astro
+```
+
+:::
+
+For more details, see the [documentation](packages/lucide-astro.md).
 
 ## Static usage
 
@@ -165,7 +222,7 @@ Implementation of the lucide icon library for multiple usages that like to use: 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
@@ -174,6 +231,10 @@ yarn add lucide-static
 
 ```sh [npm]
 npm install lucide-static
+```
+
+```sh [bun]
+bun add lucide-static
 ```
 
 :::

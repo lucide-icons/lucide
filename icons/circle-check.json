@@ -12,10 +12,14 @@
     "task"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "notifications"
   ],
   "aliases": [
-    "check-circle-2"
+    {
+      "name": "check-circle-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
