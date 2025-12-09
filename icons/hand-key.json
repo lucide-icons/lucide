@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "makeXnow"
+  ],
+  "tags": [
+    "hand",
+    "key",
+    "access",
+    "permissions"
+  ],
+  "categories": [
+    "security"
+  ]
+}
