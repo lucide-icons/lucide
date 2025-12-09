@@ -20,7 +20,7 @@ import { $CamelCase } from '@lucide/lab';
 createIcons({
   icons: {
     $CamelCase
-  },
+  }
 });
 </script>
 
