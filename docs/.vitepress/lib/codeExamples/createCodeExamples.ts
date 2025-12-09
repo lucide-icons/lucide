@@ -13,14 +13,15 @@ const getIconCodes = (): CodeExampleType => {
       title: 'Vanilla',
       code: `\
 <script>
-import { createIcons } from 'lucide';
-import { $CamelCase } from '@lucide/lab';
+import { createIcons, $CamelCase } from 'lucide';
+
 createIcons({
   icons: {
     $CamelCase
   }
 });
 </script>
+
 <i data-lucide="$Name"></i>\
   `,
     },
