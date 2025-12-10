@@ -13,7 +13,7 @@ const emit = defineEmits(['update:modelValue']);
 
 const value = computed({
   get: () => {
-    if (props.modelValue === 'currentColor') {
+    if (props.modelValue == null || props.modelValue === 'currentColor') {
       return isDark.value ? '#ffffff' : '#000000';
     }
 
