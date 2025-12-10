@@ -6,17 +6,20 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
-    "start": "node ./main.ts"
+    "start": "node ./src/main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/blob": "^2.0.0",
     "fs-extra": "^11.2.0",
     "minimist": "^1.2.8",
-    "svgtofont": "^6.5.0"
+    "svgtofont": "^6.5.0",
+    "oslllo-svg-fixer": "^5.0.0"
   },
   "devDependencies": {
+    "@lucide/helpers": "workspace:*",
     "@types/fs-extra": "^11.0.4",
     "@types/minimist": "^1.2.5",
     "@types/node": "^22"

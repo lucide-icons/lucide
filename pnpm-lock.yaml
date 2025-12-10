@@ -199,7 +199,7 @@ importers:
         version: 7.7.1
       nitropack:
         specifier: 2.8.1
-        version: 2.8.1(db0@0.3.4)(encoding@0.1.13)(ioredis@5.8.2)(xml2js@0.6.2)
+        version: 2.8.1(@vercel/blob@2.0.0)(db0@0.3.4)(encoding@0.1.13)(ioredis@5.8.2)(xml2js@0.6.2)
       rollup-plugin-copy:
         specifier: ^3.5.0
         version: 3.5.0
@@ -226,7 +226,7 @@ importers:
         version: 6.9.1
       astro:
         specifier: ^5.16.0
-        version: 5.16.0(@types/node@24.10.1)(db0@0.3.4)(ioredis@5.8.2)(jiti@2.6.1)(less@4.2.0)(rollup@4.53.3)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.0)
+        version: 5.16.0(@types/node@24.10.1)(@vercel/blob@2.0.0)(db0@0.3.4)(ioredis@5.8.2)(jiti@2.6.1)(less@4.2.0)(rollup@4.53.3)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.0)
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
@@ -807,16 +807,25 @@ importers:
 
   tools/build-font:
     dependencies:
+      '@vercel/blob':
+        specifier: ^2.0.0
+        version: 2.0.0
       fs-extra:
         specifier: ^11.2.0
         version: 11.3.2
       minimist:
         specifier: ^1.2.8
         version: 1.2.8
+      oslllo-svg-fixer:
+        specifier: ^5.0.0
+        version: 5.0.0(encoding@0.1.13)
       svgtofont:
         specifier: ^6.5.0
         version: 6.5.0(@types/svg2ttf@5.0.1)(chokidar@3.6.0)
     devDependencies:
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../build-helpers
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -866,6 +875,10 @@ importers:
       oslllo-svg-fixer:
         specifier: ^5.0.0
         version: 5.0.0(encoding@0.1.13)
+    devDependencies:
+      '@lucide/helpers':
+        specifier: workspace:*
+        version: link:../build-helpers
 
   tools/rollup-plugins:
     dependencies:
@@ -5612,6 +5625,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@vercel/blob@2.0.0':
+    resolution: {integrity: sha512-oAj7Pdy83YKSwIaMFoM7zFeLYWRc+qUpW3PiDSblxQMnGFb43qs4bmfq7dr/+JIfwhs6PTwe1o2YBwKhyjWxXw==}
+    engines: {node: '>=20.0.0'}
+
   '@vercel/nft@0.24.4':
     resolution: {integrity: sha512-KjYAZty7boH5fi5udp6p+lNu6nawgs++pHW+3koErMgbRkkHuToGX/FwjN5clV1FcaM3udfd4zW/sUapkMgpZw==}
     engines: {node: '>=16'}
@@ -6166,6 +6183,9 @@ packages:
 
   async-limiter@1.0.1:
     resolution: {integrity: sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==}
+
+  async-retry@1.3.3:
+    resolution: {integrity: sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==}
 
   async-sema@3.1.1:
     resolution: {integrity: sha512-tLRNUXati5MFePdAk8dw7Qt7DpxPB60ofAgn8WRhW6a2rcimZnYBP9oxHiv0OHy+Wz7kPMG+t4LGdt31+4EmGg==}
@@ -8112,10 +8132,6 @@ packages:
     resolution: {integrity: sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==}
     engines: {node: '>=8'}
 
-  fast-glob@3.3.2:
-    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
-    engines: {node: '>=8.6.0'}
-
   fast-glob@3.3.3:
     resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
@@ -8880,6 +8896,10 @@ packages:
   is-buffer@1.1.6:
     resolution: {integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==}
 
+  is-buffer@2.0.5:
+    resolution: {integrity: sha512-i2R6zNFDwgEHJyQUtJEk0XFi1i0dPFn/oqjK3/vPCcDeJvW5NQ83V8QbicfF1SupOaB0h8ntgBC2YiE7dfyctQ==}
+    engines: {node: '>=4'}
+
   is-builtin-module@3.2.1:
     resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
     engines: {node: '>=6'}
@@ -8977,6 +8997,9 @@ packages:
   is-negative-zero@2.0.3:
     resolution: {integrity: sha512-5KoIu2Ngpyek75jXodFvnafB6DJgr3u8uuK0LEZJjrU19DrMD3EVERaR8sjz8CCGgpZvxPl9SuE1GMVPFHx1mw==}
     engines: {node: '>= 0.4'}
+
+  is-node-process@1.2.0:
+    resolution: {integrity: sha512-Vg4o6/fqPxIjtxgUH5QLJhwZ7gW5diGCVlXpuUfELC62CuxM1iHcRe51f2W1FDy04Ai4KJkagKjx3XaqyfRKXw==}
 
   is-number-object@1.0.7:
     resolution: {integrity: sha512-k1U0IRzLMo7ZlYIfzRu23Oh6MiIFasgpb9X76eqfFZAqwH44UI4KTBvBYIZ1dSL9ZzChTB9ShHfLkR4pdW5krQ==}
@@ -12381,6 +12404,10 @@ packages:
 
   throat@5.0.0:
     resolution: {integrity: sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==}
+
+  throttleit@2.1.0:
+    resolution: {integrity: sha512-nt6AMGKW1p/70DF/hGBdJB57B8Tspmbp5gfJ8ilhLnt7kkr2ye7hzD6NVG8GGErk2HWF34igrL2CXmNIkzKqKw==}
+    engines: {node: '>=18'}
 
   through2@2.0.5:
     resolution: {integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==}
@@ -16704,14 +16731,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -16745,7 +16772,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       '@types/yargs': 17.0.35
       chalk: 4.1.2
 
@@ -18452,11 +18479,11 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/chai@5.2.2':
     dependencies:
@@ -18465,17 +18492,17 @@ snapshots:
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 4.19.5
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/cookie@0.4.1': {}
 
   '@types/cors@2.8.17':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/debug@4.1.12':
     dependencies:
@@ -18503,7 +18530,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.5':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -18517,7 +18544,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
 
   '@types/fs-extra@11.0.4':
     dependencies:
@@ -18531,11 +18558,11 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 6.0.0
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
 
   '@types/hast@3.0.4':
     dependencies:
@@ -18596,7 +18623,7 @@ snapshots:
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/node@12.20.55': {}
 
@@ -18635,7 +18662,7 @@ snapshots:
 
   '@types/resolve@1.17.1':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/resolve@1.20.2': {}
 
@@ -18650,7 +18677,7 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -18659,12 +18686,12 @@ snapshots:
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
       '@types/send': 0.17.4
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/stack-utils@2.0.1': {}
 
@@ -18677,7 +18704,7 @@ snapshots:
 
   '@types/ws@8.5.12':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -18946,6 +18973,14 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.6.2':
     optional: true
+
+  '@vercel/blob@2.0.0':
+    dependencies:
+      async-retry: 1.3.3
+      is-buffer: 2.0.5
+      is-node-process: 1.2.0
+      throttleit: 2.1.0
+      undici: 5.28.5
 
   '@vercel/nft@0.24.4(encoding@0.1.13)':
     dependencies:
@@ -19591,7 +19626,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  astro@5.16.0(@types/node@24.10.1)(db0@0.3.4)(ioredis@5.8.2)(jiti@2.6.1)(less@4.2.0)(rollup@4.53.3)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.0):
+  astro@5.16.0(@types/node@24.10.1)(@vercel/blob@2.0.0)(db0@0.3.4)(ioredis@5.8.2)(jiti@2.6.1)(less@4.2.0)(rollup@4.53.3)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -19646,7 +19681,7 @@ snapshots:
       ultrahtml: 1.6.0
       unifont: 0.6.0
       unist-util-visit: 5.0.0
-      unstorage: 1.17.3(db0@0.3.4)(ioredis@5.8.2)
+      unstorage: 1.17.3(@vercel/blob@2.0.0)(db0@0.3.4)(ioredis@5.8.2)
       vfile: 6.0.3
       vite: 6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)
       vitefu: 1.1.1(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
@@ -19696,6 +19731,10 @@ snapshots:
   async-function@1.0.0: {}
 
   async-limiter@1.0.1: {}
+
+  async-retry@1.3.3:
+    dependencies:
+      retry: 0.13.1
 
   async-sema@3.1.1: {}
 
@@ -20260,7 +20299,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -20271,7 +20310,7 @@ snapshots:
 
   chromium-edge-launcher@0.2.0:
     dependencies:
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -20503,7 +20542,7 @@ snapshots:
 
   copy-webpack-plugin@10.2.1(webpack@5.76.1(@swc/core@1.7.23(@swc/helpers@0.5.17))(esbuild@0.14.22)):
     dependencies:
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       glob-parent: 6.0.2
       globby: 12.2.0
       normalize-path: 3.0.0
@@ -21072,7 +21111,7 @@ snapshots:
     dependencies:
       '@types/cookie': 0.4.1
       '@types/cors': 2.8.17
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.4.2
@@ -21937,14 +21976,6 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.8
 
-  fast-glob@3.3.2:
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.8
-
   fast-glob@3.3.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -22380,7 +22411,7 @@ snapshots:
     dependencies:
       array-union: 3.0.1
       dir-glob: 3.0.1
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       ignore: 5.3.2
       merge2: 1.4.1
       slash: 4.0.0
@@ -22884,6 +22915,8 @@ snapshots:
 
   is-buffer@1.1.6: {}
 
+  is-buffer@2.0.5: {}
+
   is-builtin-module@3.2.1:
     dependencies:
       builtin-modules: 3.3.0
@@ -22959,6 +22992,8 @@ snapshots:
   is-module@1.0.0: {}
 
   is-negative-zero@2.0.3: {}
+
+  is-node-process@1.2.0: {}
 
   is-number-object@1.0.7:
     dependencies:
@@ -23170,7 +23205,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -23197,7 +23232,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       jest-util: 29.7.0
 
   jest-regex-util@29.6.3: {}
@@ -23209,7 +23244,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -23226,13 +23261,13 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.19.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 24.10.1
+      '@types/node': 22.19.1
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -24637,7 +24672,7 @@ snapshots:
       node-gyp-build: 4.8.4
     optional: true
 
-  nitropack@2.8.1(db0@0.3.4)(encoding@0.1.13)(ioredis@5.8.2)(xml2js@0.6.2):
+  nitropack@2.8.1(@vercel/blob@2.0.0)(db0@0.3.4)(encoding@0.1.13)(ioredis@5.8.2)(xml2js@0.6.2):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -24702,7 +24737,7 @@ snapshots:
       unctx: 2.4.1
       unenv: 1.10.0
       unimport: 3.14.6(rollup@4.53.3)
-      unstorage: 1.17.3(db0@0.3.4)(ioredis@5.8.2)
+      unstorage: 1.17.3(@vercel/blob@2.0.0)(db0@0.3.4)(ioredis@5.8.2)
     optionalDependencies:
       xml2js: 0.6.2
     transitivePeerDependencies:
@@ -25147,7 +25182,7 @@ snapshots:
     dependencies:
       ansi-colors: 4.1.3
       cli-progress: 3.12.0
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       oslllo-potrace: 3.0.0(encoding@0.1.13)
       oslllo-svg2: 3.0.0(encoding@0.1.13)
       oslllo-validator: 3.1.0
@@ -27289,7 +27324,7 @@ snapshots:
 
   stylus-loader@6.2.0(stylus@0.56.0)(webpack@5.76.1(@swc/core@1.7.23(@swc/helpers@0.5.17))(esbuild@0.14.22)):
     dependencies:
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       klona: 2.0.6
       normalize-path: 3.0.0
       stylus: 0.56.0
@@ -27620,6 +27655,8 @@ snapshots:
       any-promise: 1.3.0
 
   throat@5.0.0: {}
+
+  throttleit@2.1.0: {}
 
   through2@2.0.5:
     dependencies:
@@ -28082,7 +28119,7 @@ snapshots:
       '@unrs/resolver-binding-win32-ia32-msvc': 1.6.2
       '@unrs/resolver-binding-win32-x64-msvc': 1.6.2
 
-  unstorage@1.17.3(db0@0.3.4)(ioredis@5.8.2):
+  unstorage@1.17.3(@vercel/blob@2.0.0)(db0@0.3.4)(ioredis@5.8.2):
     dependencies:
       anymatch: 3.1.3
       chokidar: 4.0.3
@@ -28093,6 +28130,7 @@ snapshots:
       ofetch: 1.5.1
       ufo: 1.6.1
     optionalDependencies:
+      '@vercel/blob': 2.0.0
       db0: 0.3.4
       ioredis: 5.8.2
 
