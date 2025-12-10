@@ -34,7 +34,7 @@ jobs:
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
+        run: LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
 
       - name: Check if we can patch
         run: pnpm semver $LATEST_TAG -i minor
