@@ -11,6 +11,9 @@ permissions:
   id-token: write # Required for OIDC
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   create-release:
     if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
