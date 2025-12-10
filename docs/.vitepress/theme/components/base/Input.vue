@@ -126,8 +126,8 @@ defineExpose({
   position: absolute;
   right: 56px;
   top: 9px;
-  background-color: var(--vp-button-alt-bg);
   padding: 4px;
+  transition: background-color .25s;
 }
 
 .shortcut {
