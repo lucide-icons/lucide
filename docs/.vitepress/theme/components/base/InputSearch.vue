@@ -1,42 +1,43 @@
 <script lang="ts">
 export default {
   inheritAttrs: false,
-}
+};
 </script>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import Input from './Input.vue'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
-import { search, x }  from '../../../data/iconNodes'
+import { computed, ref } from 'vue';
+import Input from './Input.vue';
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import { search, x } from '../../../data/iconNodes';
 
-const SearchIcon = createLucideIcon('search', search)
-const XIcon = createLucideIcon('close', x)
+const SearchIcon = createLucideIcon('search', search);
+const XIcon = createLucideIcon('close', x);
 
 interface Props {
-  modelValue: string
+  modelValue: string;
+  shortcut?: string;
 }
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 
-const input = ref()
+const input = ref();
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 
 defineExpose({
   focus: () => {
-    input.value.focus()
-  }
-})
+    input.value.focus();
+  },
+});
 
 const value = computed({
   get: () => props.modelValue,
-  set: (val) => emit('update:modelValue', val)
-})
+  set: (val) => emit('update:modelValue', val),
+});
 
 const clear = () => {
-  value.value = ''
-}
+  value.value = '';
+};
 </script>
 
 <template>
@@ -44,20 +45,31 @@ const clear = () => {
     ref="input"
     type="search"
     autofocus
+    :shortcut="shortcut"
     v-bind="$attrs"
     v-model="value"
     class="input-wrapper"
   >
     <template #startIcon>
-      <component :is="SearchIcon" class="search-icon" />
+      <component
+        :is="SearchIcon"
+        class="search-icon"
+      />
     </template>
 
     <template #endIcon>
-      <button class="clear-button" type="button" v-if="value">
-        <component :is="XIcon" class="x-icon" @click="clear" />
+      <button
+        class="clear-button"
+        type="button"
+        v-if="value"
+      >
+        <component
+          :is="XIcon"
+          class="x-icon"
+          @click="clear"
+        />
       </button>
     </template>
-
   </Input>
 </template>
 
@@ -71,10 +83,11 @@ const clear = () => {
   height: 40px;
   color: var(--vp-c-text-1);
   background-color: var(--vp-c-bg-alt);
-  transition: border-color .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
 }
 
-.input:hover, .input:focus {
+.input:hover,
+.input:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
@@ -104,6 +117,7 @@ const clear = () => {
 .input-wrapper:deep(.input)::-webkit-search-decoration,
 .input-wrapper:deep(.input)::-webkit-search-cancel-button,
 .input-wrapper:deep(.input)::-webkit-search-results-button,
-.input-wrapper:deep(.input)::-webkit-search-results-decoration { display: none; }
-
+.input-wrapper:deep(.input)::-webkit-search-results-decoration {
+  display: none;
+}
 </style>

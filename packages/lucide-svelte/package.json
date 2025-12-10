@@ -1,6 +1,6 @@
 {
   "name": "lucide-svelte",
-  "description": "A Lucide icon library package for Svelte applications",
+  "description": "A Lucide icon library package for Svelte applications.",
   "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -49,9 +49,9 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:package && pnpm build:license",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.svelte && rm -f index.js",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --separateIconFileExport --separateIconFileExportExtension=.ts --withAliases --aliasesFileExtension=.ts --separateAliasesFile  --separateAliasesFileExtension=.ts --aliasImportFileExtension=.js --pretty=false",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --exportFileName=index.ts --iconFileExtension=.svelte --importImportFileExtension=.svelte --separateIconFileExport --separateIconFileExportExtension=.ts --withAliases --aliasesFileExtension=.ts --separateAliasesFile  --separateAliasesFileExtension=.ts --aliasImportFileExtension=.js --pretty=false",
     "build:package": "svelte-package --input ./src",
-    "build:license": "node ./scripts/appendBlockComments.mjs",
+    "build:license": "node ./scripts/appendBlockComments.mts",
     "test": "pnpm copy:license && pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
@@ -69,9 +69,9 @@
     "svelte": "^4.2.19",
     "svelte-check": "^3.4.4",
     "svelte-preprocess": "^5.0.4",
-    "typescript": "^5.1.6",
-    "vite": "5.4.15",
-    "vitest": "^1.1.1"
+    "typescript": "^5.8.3",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.12"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4 || ^5.0.0-next.42"

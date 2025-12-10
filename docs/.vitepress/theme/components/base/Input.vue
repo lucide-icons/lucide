@@ -1,45 +1,71 @@
 <script lang="ts">
 export default {
   inheritAttrs: false,
-}
+};
 
 export interface InputProps {
-  type: string
-  modelValue: string
+  type: string;
+  modelValue: string;
+  shortcut?: string;
 }
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, nextTick, watch } from 'vue';
 
 const props = withDefaults(defineProps<InputProps>(), {
-  type: 'text'
-})
+  type: 'text',
+});
 
-const input = ref()
+const input = ref();
+const wrapperEl = ref();
+const shortcutEl = ref();
 
-defineEmits(['change', 'input', 'update:modelValue'])
+defineEmits(['change', 'input', 'update:modelValue']);
+
+const updateShortcutSpacing = () => {
+  nextTick(() => {
+    if (shortcutEl.value && wrapperEl.value) {
+      const shortcutWidth = shortcutEl.value.offsetWidth;
+      wrapperEl.value.style.setProperty('--shortcut-width', `${shortcutWidth}px`);
+    }
+  });
+};
+
+onMounted(updateShortcutSpacing);
+watch(() => props.shortcut, updateShortcutSpacing);
 
 defineExpose({
   focus: () => {
-    input.value.focus()
-  }
-})
+    input.value.focus();
+  },
+});
 </script>
 
 <template>
-  <div class="input-wrapper">
-    <slot name="startIcon" class="icon" />
+  <div
+    class="input-wrapper"
+    ref="wrapperEl"
+  >
+    <slot
+      name="icon"
+      class="icon"
+    />
     <input
       :type="type"
       class="input"
-      :class="{'has-icon': $slots.startIcon }"
+      :class="{ 'has-icon': $slots.icon, 'has-shortcut': shortcut }"
       ref="input"
       :value="modelValue"
       v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"
     />
-    <slot name="endIcon" />
+    <kbd
+      v-if="shortcut"
+      class="shortcut"
+      ref="shortcutEl"
+      >{{ shortcut }}</kbd
+    >
   </div>
 </template>
 
@@ -56,10 +82,15 @@ defineExpose({
   height: 40px;
   background-color: var(--vp-c-bg-alt);
   font-size: 14px;
-  transition: border-color .2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.input:hover, .input:focus {
+.input.has-shortcut {
+  padding-right: calc(var(--shortcut-width, 40px) + 22px);
+}
+
+.input:hover,
+.input:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
@@ -68,7 +99,28 @@ defineExpose({
   padding-left: 52px;
 }
 
+.shortcut {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 6px;
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--vp-c-text-3);
+  background: var(--vp-c-default-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  pointer-events: none;
+}
 
+@media (hover: none) {
+  .shortcut {
+    display: none;
+  }
+}
 </style>
 
 <style>

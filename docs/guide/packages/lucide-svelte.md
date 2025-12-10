@@ -1,6 +1,13 @@
 # Lucide Svelte
 
-Implementation of the lucide icon library for svelte applications.
+Svelte components for Lucide icons that work seamlessly with both Svelte 4 and Svelte 5. Each icon is a reactive Svelte component that renders as an inline SVG, providing excellent performance and integration with Svelte's reactive system and modern features.
+
+**What you can accomplish:**
+- Use icons as Svelte components with full reactivity and TypeScript support
+- Bind icon properties to reactive variables and stores
+- Create dynamic icon systems that respond to application state
+- Build type-safe interfaces with comprehensive TypeScript definitions
+- Optimize bundle sizes with direct icon imports and tree-shaking
 
 ## Installation
 
@@ -162,11 +169,13 @@ The package includes type definitions for all icons. This is useful if you want 
 </script>
 
 {#each menuItems as item}
+  {@const Icon = item.icon}
   <a href={item.href}>
-    <svelte:component this={item.icon} />
+    <Icon />
     <span>{item.name}</span>
   </a>
 {/each}
+
 ```
 :::
 
@@ -246,8 +255,9 @@ The package includes type definitions for all icons. This is useful if you want 
 </script>
 
 {#each menuItems as item}
+  {@const Icon = item.icon}
   <a href={item.href}>
-   <svelte:component this={item.icon} />
+    <Icon />
     <span>{item.name}</span>
   </a>
 {/each}
@@ -271,10 +281,10 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 ```svelte
 <script>
 import { Icon } from '@lucide/svelte';
-import { burger, sausage } from '@lucide/lab';
+import { pear, sausage } from '@lucide/lab';
 </script>
 
-<Icon iconNode={burger} />
+<Icon iconNode={pear} />
 <Icon iconNode={sausage} color="red"/>
 ```
 
@@ -293,7 +303,7 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ```svelte [Svelte 5]
 <script>
   import * as icons from '@lucide/svelte';
-  let { name } = $props();
+  let { name, ...props } = $props();
 
   const Icon = icons[name];
 </script>
