@@ -29,7 +29,7 @@ if (!fs.existsSync(releaseMetaDataDirectory)) {
   fs.mkdirSync(releaseMetaDataDirectory);
 }
 
-const fetchAllReleases = async () => {
+export const fetchAllReleases = async () => {
   await git.fetch('https://github.com/lucide-icons/lucide.git', '--tags');
 
   return Promise.all(
@@ -73,7 +73,7 @@ const comparisonsPromises = tags.map(async (tag, index) => {
 const comparisons = await Promise.all(comparisonsPromises);
 const newReleaseMetaData = {};
 
-comparisons.forEach(({ tag, iconFiles, date } = {}) => {
+comparisons.forEach(({ tag, iconFiles, date } = {} as typeof comparisons[number]) => {
   if (tag == null) return;
 
   iconFiles.forEach(({ status, file, renamedFile }) => {

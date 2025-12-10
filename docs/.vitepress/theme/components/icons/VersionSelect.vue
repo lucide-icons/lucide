@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from 'vue';
 import {
   Combobox,
   ComboboxInput,
   ComboboxButton,
   ComboboxOptions,
   ComboboxOption,
-} from '@headlessui/vue'
+} from '@headlessui/vue';
 
-import { chevronsUpDown, check }  from '../../../data/iconNodes'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon'
+import { chevronsUpDown, check } from '../../../data/iconNodes';
+import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 
-const model = defineModel<string>()
+const model = defineModel<string | undefined>();
 const props = defineProps<{
-  versions: string[]
-}>()
+  versions: string[];
+}>();
 
-let query = ref('')
+let query = ref('');
 
 let filteredVersions = computed(() =>
   query.value === ''
-    ? ['Latest version', ...props.versions]
+    ? [...props.versions]
     : props.versions.filter((version) =>
         version
           .toLowerCase()
           .replace(/\s+/g, '')
-          .includes(query.value.toLowerCase().replace(/\s+/g, ''))
-      )
-)
+          .includes(query.value.toLowerCase().replace(/\s+/g, '')),
+      ),
+);
 
-const emit = defineEmits(['focus'])
+const emit = defineEmits(['focus']);
 
-const ChevronUpDown = createLucideIcon('ChevronUpDown', chevronsUpDown)
-const Check = createLucideIcon('Check', check)
+const ChevronUpDown = createLucideIcon('ChevronUpDown', chevronsUpDown);
+const Check = createLucideIcon('Check', check);
 </script>
 
 <template>
@@ -46,10 +46,12 @@ const Check = createLucideIcon('Check', check)
           @focus="emit('focus')"
         />
         <ComboboxButton class="combobox-button">
-          <ChevronUpDown class="icon-chevron" aria-hidden="true" />
+          <ChevronUpDown
+            class="icon-chevron"
+            aria-hidden="true"
+          />
         </ComboboxButton>
       </div>
-
 
       <ComboboxOptions class="combobox-options">
         <div
@@ -68,20 +70,23 @@ const Check = createLucideIcon('Check', check)
         >
           <li
             class="combobox-option"
-            :class="{ 'active': active }"
+            :class="{ active: active }"
           >
             <span
               class="combobox-option-text"
-              :class="{ 'selected': selected }"
+              :class="{ selected: selected }"
             >
               {{ version }}
             </span>
             <span
               v-if="selected"
               class="combobox-option-icon"
-              :class="{ 'active': active }"
+              :class="{ active: active }"
             >
-              <Check class="icon-check" aria-hidden="true" />
+              <Check
+                class="icon-check"
+                aria-hidden="true"
+              />
             </span>
           </li>
         </ComboboxOption>
@@ -113,10 +118,11 @@ const Check = createLucideIcon('Check', check)
   line-height: 1.25rem;
   color: var(--vp-c-text-1);
   border: 1px solid transparent;
-  transition: border-color .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
 }
 
-.combobox-input:hover, .combobox-input:focus {
+.combobox-input:hover,
+.combobox-input:focus {
   border-color: var(--vp-c-brand);
   background: var(--vp-c-bg-alt);
 }
@@ -129,7 +135,7 @@ const Check = createLucideIcon('Check', check)
   display: flex;
   align-items: center;
   padding-right: 0.5rem;
-  z-index: 10;;
+  z-index: 10;
 }
 
 .icon-chevron {
@@ -173,7 +179,9 @@ const Check = createLucideIcon('Check', check)
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
-  transition: background-color .25s,color .25s;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
 }
 
 .combobox-option.active {
@@ -207,7 +215,7 @@ const Check = createLucideIcon('Check', check)
 }
 
 .icon-check {
-  height:20px;
-  width:20px;
+  height: 20px;
+  width: 20px;
 }
 </style>

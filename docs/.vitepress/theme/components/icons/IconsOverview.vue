@@ -11,12 +11,13 @@ import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
-import useFetchReleaseInfo from '../../composables/useFetchReleaseInfo';
+import useFetchVersionIcons from '../../composables/useFetchVersionIcons';
 import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import VersionSelect from './VersionSelect.vue';
 import { sort, satisfies } from 'semver';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
+import { data as versionData } from './IconsOverview.data';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -35,11 +36,15 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedVersion = ref('Latest version');
+const selectedVersion = ref();
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
-const { execute: fetchReleaseInfo, data: releaseInfo } = useFetchReleaseInfo();
+const { execute: fetchVersionIcons, data: versionIcons } = useFetchVersionIcons(selectedVersion);
+
+watch(selectedVersion, () => {
+  fetchVersionIcons();
+});
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl);
@@ -64,28 +69,16 @@ const mappedIcons = computed(() => {
     });
   }
 
-  if (selectedVersion.value === 'Latest version' || releaseInfo.value == null) {
+  if (selectedVersion.value == null || versionIcons.value == null) {
     console.log('no release info');
 
     return icons;
   }
 
-  return icons.filter((icon) => {
-    return satisfies(releaseInfo.value[icon.name], `<=${selectedVersion.value}`);
-  });
-});
-
-const versions = computed(() => {
-  if (releaseInfo.value == null) {
-    return [];
-  }
-  const allVersions = Array.from<string>(
-    new Set(Object.values<string>(releaseInfo.value)).values(),
-  );
-
-  return sort(allVersions, {
-    loose: true,
-  }).reverse();
+  return Object.values(versionIcons.value).filter(([name, iconNode]) => ({
+    name,
+    iconNode,
+  }));
 });
 
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
@@ -135,11 +128,11 @@ function onFocusSearchInput() {
   }
 }
 
-function onFocusVersionSelect() {
-  if (releaseInfo.value == null) {
-    fetchReleaseInfo();
-  }
-}
+// function onFocusVersionSelect() {
+//   if (releaseInfo.value == null) {
+//     fetchReleaseInfo();
+//   }
+// }
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
@@ -172,8 +165,7 @@ function handleCloseDrawer() {
       />
       <VersionSelect
         v-model="selectedVersion"
-        :versions="versions"
-        @focus="onFocusVersionSelect"
+        :versions="versionData.versions"
       />
     </StickyBar>
     <NoResults
