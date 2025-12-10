@@ -20,6 +20,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-tags: true
+
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
@@ -29,32 +32,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Fetch tags
-        run: git fetch --all --tags
-
       - name: Get latest tag
         id: latest-tag
-        run: LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
       - name: Check if we can patch
-        run: pnpm semver $LATEST_TAG -i minor
+        run: pnpm semver ${{ steps.latest-tag.outputs.LATEST_TAG }} -i minor
 
       - name: Create new version
         id: new-version
-        run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
-
-      - name: Create change log
-        id: change-log
-        run: |
-          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
-          echo $CHANGE_LOG
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "CHANGE_LOG<<$EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGE_LOG" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
-        env:
-          GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "NEW_VERSION=$(pnpm semver ${{ steps.latest-tag.outputs.LATEST_TAG }} -i minor)" >> $GITHUB_OUTPUT
 
       - name: Check output
         run: |
