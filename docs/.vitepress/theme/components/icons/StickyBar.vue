@@ -14,6 +14,7 @@
   margin-top: -32px;
   width: 100%;
   display: flex;
+  gap: 16px;
   margin-bottom: 32px;
   background: var(--vp-c-bg);
   box-shadow: 0 16px 24px var(--vp-c-bg);

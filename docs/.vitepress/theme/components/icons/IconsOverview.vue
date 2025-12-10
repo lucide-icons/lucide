@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
+import { ref, computed, defineAsyncComponent, onMounted, watch, watchEffect } from 'vue';
 import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
@@ -11,9 +11,13 @@ import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
+import useFetchVersionIcons from '../../composables/useFetchVersionIcons';
 import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
+import VersionSelect from './VersionSelect.vue';
+import { sort, satisfies } from 'semver';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
+import { data as versionData } from './IconsOverview.data';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -32,9 +36,15 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
+const selectedVersion = ref();
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
+const { execute: fetchVersionIcons, data: versionIcons } = useFetchVersionIcons(selectedVersion);
+
+watch(selectedVersion, () => {
+  fetchVersionIcons();
+});
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl);
@@ -44,20 +54,31 @@ const columnSize = computed(() => {
 });
 
 const mappedIcons = computed(() => {
-  if (tags.value == null) {
-    return props.icons;
+  let icons = props.icons;
+
+  if (tags.value != null && categories.value != null) {
+    icons = props.icons.map((icon) => {
+      const iconTags = tags.value[icon.name];
+      const iconCategories = categories.value?.[icon.name] ?? [];
+
+      return {
+        ...icon,
+        tags: iconTags,
+        categories: iconCategories,
+      };
+    });
   }
 
-  return props.icons.map((icon) => {
-    const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+  if (selectedVersion.value == null || versionIcons.value == null) {
+    console.log('no release info');
 
-    return {
-      ...icon,
-      tags: iconTags,
-      categories: iconCategories,
-    };
-  });
+    return icons;
+  }
+
+  return Object.values(versionIcons.value).filter(([name, iconNode]) => ({
+    name,
+    iconNode,
+  }));
 });
 
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
@@ -107,6 +128,12 @@ function onFocusSearchInput() {
   }
 }
 
+// function onFocusVersionSelect() {
+//   if (releaseInfo.value == null) {
+//     fetchReleaseInfo();
+//   }
+// }
+
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
@@ -129,12 +156,16 @@ function handleCloseDrawer() {
   >
     <StickyBar>
       <InputSearch
-        :placeholder="`Search ${icons.length} icons ...`"
+        :placeholder="`Search ${mappedIcons.length} icons ...`"
         v-model="searchQuery"
         ref="searchInput"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
         @focus="onFocusSearchInput"
+      />
+      <VersionSelect
+        v-model="selectedVersion"
+        :versions="versionData.versions"
       />
     </StickyBar>
     <NoResults

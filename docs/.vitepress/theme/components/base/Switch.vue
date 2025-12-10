@@ -52,7 +52,6 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  /* background-color: var(--vp-c-neutral); */
   box-shadow: var(--vp-shadow-1);
 }
 
