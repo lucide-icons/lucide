@@ -1,25 +1,25 @@
 {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-      "colebemis",
-      "ericfennis",
-      "jguddas",
-      "Veatec22"
-    ],
-    "tags": [
-      "find",
-      "scan",
-      "magnifier",
-      "magnifying glass",
-      "stop",
-      "warning",
-      "alert",
-      "error",
-      "anomaly",
-      "lens"
-    ],
-    "categories": [
-      "text",
-      "social"
-    ]
-  }
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "Veatec22"
+  ],
+  "tags": [
+    "find",
+    "scan",
+    "magnifier",
+    "magnifying glass",
+    "stop",
+    "warning",
+    "alert",
+    "error",
+    "anomaly",
+    "lens"
+  ],
+  "categories": [
+    "text",
+    "social"
+  ]
+}
