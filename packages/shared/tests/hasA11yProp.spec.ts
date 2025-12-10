@@ -16,8 +16,8 @@ describe('hasA11yProp', () => {
   });
 
   it('returns false if props do not contain any a11y attributes', () => {
-    expect(hasA11yProp({ className: 'foo', id: 'bar' })).toBe(undefined);
-    expect(hasA11yProp({})).toBe(undefined);
+    expect(hasA11yProp({ className: 'foo', id: 'bar' })).toBe(false);
+    expect(hasA11yProp({})).toBe(false);
   });
 
   it('returns true if multiple a11y props are present', () => {
