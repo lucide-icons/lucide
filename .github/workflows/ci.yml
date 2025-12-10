@@ -32,16 +32,27 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Fetch tags
+        run: git fetch --all --tags
+
       - name: Get latest tag
         id: latest-tag
         run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
+      - name: Log latest tag
+        run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
+
       - name: Check if we can patch
-        run: pnpm semver ${{ steps.latest-tag.outputs.LATEST_TAG }} -i minor
+        run: pnpm semver $LATEST_TAG -i minor
+        env:
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
+
 
       - name: Create new version
         id: new-version
-        run: echo "NEW_VERSION=$(pnpm semver ${{ steps.latest-tag.outputs.LATEST_TAG }} -i minor)" >> $GITHUB_OUTPUT
+        run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
+        env:
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Check output
         run: |
