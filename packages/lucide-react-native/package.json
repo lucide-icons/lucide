@@ -24,11 +24,23 @@
   "author": "Eric Fennis",
   "amdName": "lucide-react-native",
   "main": "dist/cjs/lucide-react-native.js",
-  "main:umd": "dist/umd/lucide-react-native.js",
   "module": "dist/esm/lucide-react-native.js",
-  "unpkg": "dist/umd/lucide-react-native.min.js",
   "typings": "dist/lucide-react-native.d.ts",
   "react-native": "dist/esm/lucide-react-native.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-react-native.d.ts",
+      "import": "./dist/esm/lucide-react-native.js",
+      "browser": "./dist/esm/lucide-react-native.js",
+      "require": "./dist/cjs/lucide-react-native.js"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/esm/icons/index.js",
+      "browser": "./dist/esm/icons/index.js",
+      "require": "./dist/cjs/icons/index.js"
+    }
+  },
   "sideEffects": false,
   "files": [
     "dist"

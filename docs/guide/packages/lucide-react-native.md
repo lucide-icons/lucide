@@ -102,10 +102,16 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ### Icon Component Example
 
-```jsx
-import { icons } from 'lucide-react-native';
+```tsx
+import * as icons from 'lucide-react-native/icons';
 
-const Icon = ({ name, color, size }) => {
+interface IconProps {
+  name: keyof typeof icons;
+  color?: string;
+  size?: number;
+}
+
+const Icon = ({ name, color, size }: IconProps) => {
   const LucideIcon = icons[name];
 
   return <LucideIcon color={color} size={size} />;
@@ -116,11 +122,11 @@ export default Icon;
 
 #### Using the Icon Component
 
-```jsx
+```tsx
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="house" />;
+  return <Icon name="House" />;
 };
 
 export default App;
