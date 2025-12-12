@@ -60,6 +60,7 @@ jobs:
             'lucide-svelte',
             '@lucide/astro',
             '@lucide/svelte',
+            '@lucide/icons',
           ]
     steps:
       - uses: actions/checkout@v6
