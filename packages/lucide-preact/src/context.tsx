@@ -30,7 +30,7 @@ export function LucideProvider({
   color,
   strokeWidth,
   absoluteStrokeWidth,
-  class: className
+  class: className,
 }: LucideProviderProps) {
   const value = useMemo(
     () => ({

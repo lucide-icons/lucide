@@ -24,7 +24,13 @@ interface LucideProviderProps {
 }
 
 export function LucideProvider(props: LucideProviderProps) {
-  const [value, rest] = splitProps(props, ['size', 'color', 'strokeWidth', 'absoluteStrokeWidth', 'class']);
+  const [value, rest] = splitProps(props, [
+    'size',
+    'color',
+    'strokeWidth',
+    'absoluteStrokeWidth',
+    'class',
+  ]);
 
   return <LucideContext.Provider value={value}>{rest.children}</LucideContext.Provider>;
 }

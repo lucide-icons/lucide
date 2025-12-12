@@ -76,9 +76,7 @@ describe('Using LucideProvider', () => {
 
   it('should merge class names from LucideProvider and icon props', () => {
     const { container } = render(
-      <LucideProvider
-        class="provider-class"
-      >
+      <LucideProvider class="provider-class">
         <House class="icon-class" />
       </LucideProvider>,
     );
