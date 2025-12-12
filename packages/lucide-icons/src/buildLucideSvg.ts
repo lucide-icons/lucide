@@ -6,6 +6,12 @@ const buildDomNode = ([tagName, attributes, children = []]: LucideIconNode): str
     .map(([attrName, value]) => `${attrName}="${value}"`)
     .join(' ')}>${children?.map((child) => buildDomNode(child)).join('')}</${tagName}>`;
 
+/**
+ * Creates an SVG string from a Lucide icon object.
+ *
+ * @param icon The icon to build.
+ * @param params Additional build parameters.
+ */
 function buildLucideSvg(icon: LucideIcon, params: LucideBuildParams = {}) {
   return buildDomNode(buildLucideIconNode(icon, params));
 }

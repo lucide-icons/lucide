@@ -12,6 +12,12 @@ const defaultAttributes = {
   'stroke-linejoin': 'round',
 };
 
+/**
+ * Creates a Lucide icon node (an svgson-like format) from a Lucide icon object.
+ *
+ * @param icon The icon to build.
+ * @param params Additional build parameters.
+ */
 function buildLucideIconNode(icon: LucideIcon, params: LucideBuildParams = {}): LucideIconNode {
   const viewBoxWidth = ('size' in icon ? icon.size : icon.width) ?? defaultAttributes.width;
   const viewBoxHeight = ('size' in icon ? icon.size : icon.height) ?? defaultAttributes.height;
