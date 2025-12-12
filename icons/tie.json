@@ -1,0 +1,14 @@
+{
+    "$schema": "../icon.schema.json",
+    "contributors": [
+        "adnan-bhaldar"
+    ],
+  "tags": [
+    "tie",
+    "suit"
+  ],
+  "categories": [
+    "tie",
+    "suit"
+  ]
+}
