@@ -33,6 +33,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       strokeWidth: contextStrokeWidth = 2,
       absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
       color: contextColor = 'currentColor',
+      className: contextClass = '',
     } = useLucideContext() ?? {};
 
     const calculatedStrokeWidth =
@@ -49,7 +50,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         height: size ?? contextSize ?? defaultAttributes.height,
         stroke: color ?? contextColor,
         strokeWidth: calculatedStrokeWidth,
-        className: mergeClasses('lucide', className),
+        className: mergeClasses('lucide', contextClass, className),
         ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
         ...rest,
       },

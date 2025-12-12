@@ -6,6 +6,7 @@ type LucideConfig = {
   color: string;
   strokeWidth: number;
   absoluteStrokeWidth: boolean;
+  className: string;
 };
 
 const LucideContext = createContext<LucideProps>({});
@@ -20,6 +21,7 @@ export function LucideProvider({
   color,
   strokeWidth,
   absoluteStrokeWidth,
+  className,
 }: LucideProviderProps) {
   const value = useMemo(
     () => ({
@@ -27,8 +29,9 @@ export function LucideProvider({
       color,
       strokeWidth,
       absoluteStrokeWidth,
+      className,
     }),
-    [size, color, strokeWidth, absoluteStrokeWidth],
+    [size, color, strokeWidth, absoluteStrokeWidth, className],
   );
 
   return <LucideContext.Provider value={value}>{children}</LucideContext.Provider>;

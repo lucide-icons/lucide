@@ -16,6 +16,17 @@ describe('Using LucideProvider', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('should render the icon with default props when no provider is used', () => {
+    const { container } = render(<House />);
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '24');
+    expect(IconComponent).toHaveAttribute('height', '24');
+    expect(IconComponent).toHaveAttribute('stroke', 'currentColor');
+    expect(IconComponent).toHaveAttribute('stroke-width', '2');
+  });
+
   it('should render the icon with LucideProvider and custom strokeWidth', () => {
     const { container } = render(
       <LucideProvider
@@ -72,5 +83,17 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('height', '24');
     expect(IconComponent).toHaveAttribute('stroke', 'blue');
     expect(IconComponent).toHaveAttribute('stroke-width', '2');
+  });
+
+  it('should merge className from provider and icon', () => {
+    const { container } = render(
+      <LucideProvider className="provider-class">
+        <House className="icon-class" />
+      </LucideProvider>,
+    );
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('class', 'lucide provider-class lucide-house icon-class');
   });
 });

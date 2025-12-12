@@ -48,13 +48,14 @@ const Icon = (props: LucideProps & IconProps) => {
       class={mergeClasses(
         'lucide',
         'lucide-icon',
+        globalProps.class,
         ...(localProps.name != null
           ? [
               `lucide-${toKebabCase(toPascalCase(localProps.name))}`,
               `lucide-${toKebabCase(localProps.name)}`,
             ]
           : []),
-        localProps.class != null ? localProps.class : '',
+        localProps.class,
       )}
       {...rest}
     >

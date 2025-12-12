@@ -7,6 +7,7 @@ export interface LucideGlobalContext {
   size?: number;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
+  class?: string;
 }
 
 export const setLucideProps = (globalProps: LucideGlobalContext) =>

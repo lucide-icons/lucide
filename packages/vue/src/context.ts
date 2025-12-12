@@ -7,6 +7,7 @@ interface LucideIconsContext {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
+  class?: string;
 }
 
 export function setLucideProps(props: LucideIconsContext) {

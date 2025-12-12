@@ -3,7 +3,7 @@
   import type { IconProps } from './types.js';
   import { getLucideContext } from './context.js';
 
-  const globalProps = getLucideContext() ?? {}
+  const globalProps = getLucideContext() ?? {};
 
   const {
     name,
@@ -17,9 +17,7 @@
   }: IconProps = $props();
 
   const calculatedStrokeWidth = $derived(
-    absoluteStrokeWidth
-      ? (Number(strokeWidth) * 24) / Number(size)
-      : strokeWidth
+    absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
   );
 </script>
 
@@ -30,7 +28,7 @@
   height={size}
   stroke={color}
   stroke-width={calculatedStrokeWidth}
-  class={['lucide-icon lucide', name && `lucide-${name}`, props.class]}
+  class={['lucide-icon lucide', globalProps.class, name && `lucide-${name}`, props.class]}
 >
   {#each iconNode as [tag, attrs]}
     <svelte:element

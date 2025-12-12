@@ -1,16 +1,18 @@
 import { createContext, type ComponentChildren } from 'preact';
-import { useContext } from 'preact/hooks';
+import { useContext, useMemo } from 'preact/hooks';
 
 const LucideContext = createContext<{
   size?: number;
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
+  class?: string;
 }>({
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
   absoluteStrokeWidth: false,
+  class: '',
 });
 
 interface LucideProviderProps {
@@ -19,10 +21,29 @@ interface LucideProviderProps {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
+  class?: string
 }
 
-export function LucideProvider({ children, ...props }: LucideProviderProps) {
-  return <LucideContext.Provider value={props}>{children}</LucideContext.Provider>;
+export function LucideProvider({
+  children,
+  size,
+  color,
+  strokeWidth,
+  absoluteStrokeWidth,
+  class: className
+}: LucideProviderProps) {
+  const value = useMemo(
+    () => ({
+      size,
+      color,
+      strokeWidth,
+      absoluteStrokeWidth,
+      class: className,
+    }),
+    [size, color, strokeWidth, absoluteStrokeWidth, className],
+  );
+
+  return <LucideContext.Provider value={value}>{children}</LucideContext.Provider>;
 }
 
 export const useLucideContext = () => useContext(LucideContext);

@@ -2,6 +2,7 @@ import { h, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 import type { IconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
+import { mergeClasses } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -37,6 +38,7 @@ const Icon = ({
     strokeWidth: contextStrokeWidth = 2,
     absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
     color: contextColor = 'currentColor',
+    class: contextClass = '',
   } = useLucideContext() ?? {};
 
   const calculatedStrokeWidth =
@@ -52,7 +54,7 @@ const Icon = ({
       height: size ?? contextSize ?? 24,
       stroke: color ?? contextColor,
       ['stroke-width' as 'strokeWidth']: calculatedStrokeWidth,
-      class: ['lucide', classes].join(' '),
+      class: mergeClasses('lucide', contextClass, classes),
       ...rest,
     },
     [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],

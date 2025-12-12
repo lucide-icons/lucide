@@ -23,26 +23,27 @@ describe('Using lucide icon components', () => {
 
   it('should add a class to the element', () => {
     const testClass = 'my-icon';
-    render(Smile, {
+    const { container } = render(Smile, {
       class: testClass,
     });
 
-    const [icon] = document.getElementsByClassName(testClass);
+    const IconComponent = container.firstElementChild;
 
-    expect(icon).toBeInTheDocument();
-    expect(icon).toMatchSnapshot();
-    expect(icon).toHaveClass(testClass);
-    expect(icon).toHaveClass('lucide');
-    expect(icon).toHaveClass('lucide-smile');
+    expect(IconComponent).toBeInTheDocument();
+    expect(IconComponent).toMatchSnapshot();
+    expect(IconComponent).toHaveClass(testClass);
+    expect(IconComponent).toHaveClass('lucide');
+    expect(IconComponent).toHaveClass('lucide-smile');
   });
 
   it('should add a style attribute to the element', () => {
-    render(Smile, {
+    const { container } = render(Smile, {
       style: 'position: absolute;',
     });
-    const [icon] = document.getElementsByClassName('lucide');
 
-    expect(icon.getAttribute('style')).toContain('position: absolute');
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('style', 'position: absolute;');
   });
 
   it('should render an icon slot', () => {
@@ -66,36 +67,30 @@ describe('Using lucide icon components', () => {
   });
 
   it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
-    const testId = 'smile-icon';
-    const { container, getByTestId } = render(Smile, {
-      'data-testid': testId,
+    const { container } = render(Smile, {
       color: 'red',
       size: 48,
       absoluteStrokeWidth: true,
     });
 
-    const { attributes } = getByTestId(testId) as unknown as {
-      attributes: Record<string, { value: string }>;
-    };
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('48');
-    expect(attributes.height.value).toBe('48');
-    expect(attributes['stroke-width'].value).toBe('1');
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '48');
+    expect(IconComponent).toHaveAttribute('height', '48');
+    expect(IconComponent).toHaveAttribute('stroke', 'red');
+    expect(IconComponent).toHaveAttribute('stroke-width', '1');
 
     expect(container.innerHTML).toMatchSnapshot();
   });
 
   it('should use context values from he global set properties', () => {
-    const { container, getByLabelText } = render(ContextWrapper);
+    const { container } = render(ContextWrapper);
 
-    const { attributes } = getByLabelText('smile') as unknown as {
-      attributes: Record<string, { value: string }>;
-    };
-    expect(attributes.stroke.value).toBe('red');
-    expect(attributes.width.value).toBe('32');
-    expect(attributes.height.value).toBe('32');
-    expect(attributes['stroke-width'].value).toBe('1');
+    const IconComponent = container.firstElementChild;
 
-    expect(container.innerHTML).toMatchSnapshot();
+    expect(IconComponent).toHaveAttribute('width', '32');
+    expect(IconComponent).toHaveAttribute('height', '32');
+    expect(IconComponent).toHaveAttribute('stroke', 'red');
+    expect(IconComponent).toHaveAttribute('stroke-width', '1');
   });
 });

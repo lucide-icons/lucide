@@ -12,9 +12,10 @@ setLucideProps({
   size: 48,
   color: 'red',
   strokeWidth: 4,
-})
+  class: 'provider-class',
+});
 </script>
 
 <template>
-  <House v-bind="props"/>
+  <House v-bind="props" />
 </template>

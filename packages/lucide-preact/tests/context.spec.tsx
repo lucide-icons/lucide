@@ -73,4 +73,18 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('stroke', 'blue');
     expect(IconComponent).toHaveAttribute('stroke-width', '2');
   });
+
+  it('should merge class names from LucideProvider and icon props', () => {
+    const { container } = render(
+      <LucideProvider
+        class="provider-class"
+      >
+        <House class="icon-class" />
+      </LucideProvider>,
+    );
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('class', 'lucide provider-class lucide-house icon-class');
+  });
 });

@@ -28,6 +28,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     color: contextColor,
     strokeWidth: contextStrokeWidth = 2,
     absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    class: contextClass = '',
   } = useLucideProps();
 
   const calculatedStrokeWidth = computed(() => {
@@ -64,6 +65,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
       'stroke-width': calculatedStrokeWidth.value,
       class: mergeClasses(
         'lucide',
+        contextClass,
         ...(name
           ? [`lucide-${toKebabCase(toPascalCase(name))}-icon`, `lucide-${toKebabCase(name)}`]
           : ['lucide-icon']),
