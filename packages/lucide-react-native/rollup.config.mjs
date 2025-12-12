@@ -5,7 +5,7 @@ import pkg from './package.json' with { type: 'json' };
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
-const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts', 'src/icons/*.ts'];
+const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts'];
 const bundles = [
   {
     format: 'cjs',
@@ -31,12 +31,12 @@ const configs = bundles
         name: packageName,
         ...(preserveModules
           ? {
-            dir: `${outputDir}/${format}`,
-            exports: 'auto',
-          }
+              dir: `${outputDir}/${format}`,
+              exports: 'auto',
+            }
           : {
-            file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-          }),
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+            }),
         format,
         preserveModules,
         sourcemap: true,
