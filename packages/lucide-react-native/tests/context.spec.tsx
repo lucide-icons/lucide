@@ -63,18 +63,18 @@ describe('Using LucideProvider', () => {
         strokeWidth={4}
       >
         <House
-          size={24}
+          size={32}
           color="blue"
-          strokeWidth={2}
+          strokeWidth={3}
         />
       </LucideProvider>,
     );
 
     const IconComponent = container.firstElementChild;
 
-    expect(IconComponent).toHaveAttribute('width', '24');
-    expect(IconComponent).toHaveAttribute('height', '24');
+    expect(IconComponent).toHaveAttribute('width', '32');
+    expect(IconComponent).toHaveAttribute('height', '32');
     expect(IconComponent).toHaveAttribute('stroke', 'blue');
-    expect(IconComponent).toHaveAttribute('stroke-width', '2');
+    expect(IconComponent).toHaveAttribute('stroke-width', '3');
   });
 });

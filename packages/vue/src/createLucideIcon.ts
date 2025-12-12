@@ -1,6 +1,5 @@
 import { h } from 'vue';
-import type { FunctionalComponent } from 'vue';
-import { IconNode, LucideProps, LucideIcon } from './types';
+import { IconNode, LucideIcon } from './types';
 import Icon from './Icon';
 
 /**

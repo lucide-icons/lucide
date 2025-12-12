@@ -1,9 +1,6 @@
 import { forwardRef, createElement } from 'react';
-import { IconNode, LucideIcon, LucideProps } from './types';
-
-// import { createElement, forwardRef } from 'react';
-import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
-// import { IconNode, LucideProps } from './types';
+import { IconNode, LucideProps } from './types';
+import { toPascalCase } from '@lucide/shared';
 import Icon from './Icon';
 
 /**

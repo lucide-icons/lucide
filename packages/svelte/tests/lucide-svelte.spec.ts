@@ -83,7 +83,7 @@ describe('Using lucide icon components', () => {
     expect(container.innerHTML).toMatchSnapshot();
   });
 
-  it('should use context values from he global set properties', () => {
+  it('should use context values from the global set properties', () => {
     const { container } = render(ContextWrapper);
 
     const IconComponent = container.firstElementChild;

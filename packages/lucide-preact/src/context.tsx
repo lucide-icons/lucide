@@ -21,7 +21,7 @@ interface LucideProviderProps {
   color?: string;
   strokeWidth?: number;
   absoluteStrokeWidth?: boolean;
-  class?: string
+  class?: string;
 }
 
 export function LucideProvider({
