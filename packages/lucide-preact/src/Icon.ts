@@ -1,6 +1,8 @@
 import { h, toChildArray } from 'preact';
 import defaultAttributes from './defaultAttributes';
 import type { IconNode, LucideProps } from './types';
+import { useLucideContext } from './context';
+import { mergeClasses } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -22,29 +24,41 @@ interface IconComponentProps extends LucideProps {
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const Icon = ({
-  color = 'currentColor',
-  size = 24,
-  strokeWidth = 2,
+  color,
+  size,
+  strokeWidth,
   absoluteStrokeWidth,
   children,
   iconNode,
   class: classes = '',
   ...rest
-}: IconComponentProps) =>
-  h(
+}: IconComponentProps) => {
+  const {
+    size: contextSize = 24,
+    strokeWidth: contextStrokeWidth = 2,
+    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    color: contextColor = 'currentColor',
+    class: contextClass = '',
+  } = useLucideContext() ?? {};
+
+  const calculatedStrokeWidth =
+    absoluteStrokeWidth ?? contextAbsoluteStrokeWidth
+      ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
+      : strokeWidth ?? contextStrokeWidth;
+
+  return h(
     'svg',
     {
       ...defaultAttributes,
-      width: String(size),
-      height: size,
-      stroke: color,
-      ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth
-        ? (Number(strokeWidth) * 24) / Number(size)
-        : strokeWidth,
-      class: ['lucide', classes].join(' '),
+      width: size ?? contextSize ?? 24,
+      height: size ?? contextSize ?? 24,
+      stroke: color ?? contextColor,
+      ['stroke-width' as 'strokeWidth']: calculatedStrokeWidth,
+      class: mergeClasses('lucide', contextClass, classes),
       ...rest,
     },
     [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
   );
+};
 
 export default Icon;
