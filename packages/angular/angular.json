@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "pnpm"
+  },
+  "newProjectRoot": ".",
+  "projects": {
+    "@lucide/angular": {
+      "projectType": "library",
+      "root": "./",
+      "sourceRoot": "./src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "./tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "./tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "./tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  }
+}
