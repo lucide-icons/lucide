@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "tags": [
+    "mixer",
+    "liquidizer",
+    "processor",
+    "food",
+    "liquid",
+    "juicer",
+    "vitamizer",
+    "mix",
+    "puree",
+    "grind",
+    "empulsify",
+    "whip up",
+    "smoothie",
+    "soup",
+    "drink",
+    "powder",
+    "blade",
+    "appliance",
+    "container",
+    "kitchen",
+    "milkshake",
+    "cocktail",
+    "beverage",
+    "culinary",
+    "shredder",
+    "cooking",
+    "recipe",
+    "chef",
+    "restaurant"
+  ],
+  "categories": [
+    "food-beverage",
+    "home"
+  ]
+}
