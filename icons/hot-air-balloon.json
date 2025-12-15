@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "roygommer"
+  ],
+  "tags": [
+    "hotair",
+    "balloon",
+    "aircraft",
+    "summer",
+    "flight",
+    "adventure",
+    "travel",
+    "sky",
+    "celebration",
+    "festive",
+    "hot-air-balloon"
+  ],
+  "categories": [
+    "aircraft",
+    "balloon",
+    "sky"
+  ]
+}
