@@ -16,8 +16,8 @@ Guidelines for pull requests:
 
 - __Make your commit messages as descriptive as possible.__ Include as much information as you can. Explain anything that the file diffs themselves won’t make apparent.
 - __Document your pull request__. Explain your fix, link to the relevant issue, add screenshots when adding new icons.
-- __Make sure the target of your pull request is the relevant branch__. Most of bugfix or new feature should go to the `main` branch.
-- __Include only related work__. If your pull request has unrelated commit, it won't be accepted.
+- __Make sure the target of your pull request is the relevant branch__. Most of bug fixes or new feature should go to the `main` branch.
+- __Include only related work__. If your pull request has unrelated commits, it won't be accepted.
 
 ### Icon Pull Requests
 
@@ -47,10 +47,10 @@ You can also [download an Adobe Illustrator template](https://github.com/lucide-
 
 #### Submitting Multiple Icons
 
-If you want submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keep the thread clean and scoped.
-So don't submit multiple icons in one PR that have noting to do with each other.
+If you want to submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keeps the thread clean and scoped.
+So don't submit multiple icons in one PR that have nothing to do with each other.
 So for example don't create one PR with icons: `arrow-up`, `bicycle`, `arrow-down`.
-Seperate them by two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
+Separate them into two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
 
 ## Icon Requests
 
@@ -131,7 +131,7 @@ When adding new features to for example the icon component for a framework. It i
 
 ### Local Testing
 
-To test changes in a local project, you can use `yarn link`, `npm link`, `bun link` or `pnpm link` to link the package. Before you do this make sure you builded the package first.
+To test changes in a local project, you can use `yarn link`, `npm link`, `bun link` or `pnpm link` to link the package. Before you do this make sure you've built the package first.
 
 ```sh
 # in packages/lucide-react
@@ -161,6 +161,30 @@ lucide
 
 The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
 
+#### Running the Docs Website Locally
+
+To test the docs website locally, follow these steps:
+
+1. **Navigate to the docs directory**
+
+```sh
+cd docs
+```
+
+2. **Start the Local Development Server**
+
+```sh
+  pnpm run docs:dev
+```
+
+3. **Open the Website Locally**
+
+Vitepress should open with the following format:
+
+VitePress dev server is running at:
+- **Local**: `http://localhost:3000/`
+- **Network**: `http://192.168.x.x:3000/`
+
 ### Guides
 
 Detailed documentation about: installation, guides, packages, design guides etc.
@@ -173,11 +197,9 @@ All the icons of lucide in SVG format. These will be used as source for all the 
 
 Includes all the (npm) packages of lucide.
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
-
 ### Scripts
 
-Includes usefully scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
+Includes useful scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
 
 ## Documentation
 

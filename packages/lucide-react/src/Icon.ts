@@ -35,8 +35,8 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       ...rest
     },
     ref,
-  ) => {
-    return createElement(
+  ) =>
+    createElement(
       'svg',
       {
         ref,
@@ -53,8 +53,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
         ...(Array.isArray(children) ? children : [children]),
       ],
-    );
-  },
+    ),
 );
 
 export default Icon;

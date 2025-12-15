@@ -37,6 +37,13 @@ export default defineConfig({
   },
   head: [
     [
+      'link',
+      {
+        rel: 'preconnect',
+        href: 'https://analytics.lucide.dev',
+      },
+    ],
+    [
       'script',
       {
         src: 'https://analytics.lucide.dev/js/script.js',
@@ -153,7 +160,6 @@ export default defineConfig({
       { text: 'Icons', link: '/icons/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'Packages', link: '/packages' },
-      { text: 'Studio', link: 'https://studio.lucide.dev' },
       { text: 'Showcase', link: '/showcase' },
       { text: 'License', link: '/license' },
     ],

@@ -1,0 +1,37 @@
+name: Pull request tags suggestions
+
+on:
+  pull_request_target:
+    paths:
+      - 'icons/*.json'
+
+jobs:
+  pull-request-tags-suggestions:
+    name: Pull Request Tags Suggestions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      #  We checkout the main branch of main repository for security reasons.
+      #  This is to prevent the workflow from running on a forked repository.
+      - uses: actions/checkout@v6
+        with:
+          repository: lucide-icons/lucide
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate comment markup
+        run: node ./scripts/suggestTags.mts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PULL_REQUEST_NUMBER: ${{ github.event.number }}
+          COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,11 +3,8 @@
   "contributors": [
     "Alirashidy",
     "colebemis",
-    "ericfennis",
     "danielbayley",
-    "colebemis",
     "ericfennis",
-    "danielbayley",
     "jguddas",
     "karsa-mistmere"
   ],
@@ -20,9 +17,9 @@
     "destroy",
     "remove",
     "erase",
-    "document,",
+    "document",
     "destruction",
-    "secure ",
+    "secure",
     "security",
     "confidential",
     "data",
@@ -34,7 +31,7 @@
     "permanent"
   ],
   "categories": [
-      "mail",
+    "mail",
     "files"
   ]
 }

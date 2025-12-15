@@ -1,6 +1,13 @@
 # Lucide Astro
 
-Implementation of the lucide icon library for Astro applications.
+Astro components for Lucide icons that work perfectly with Astro's island architecture and multi-framework support. Each icon is an Astro component that renders as an inline SVG, providing excellent performance for static sites and server-side rendering scenarios.
+
+**What you can accomplish:**
+- Use icons as Astro components with zero JavaScript runtime overhead
+- Build fast, static websites with optimized SVG icons
+- Integrate seamlessly with Astro's component islands and partial hydration
+- Create multi-framework applications where icons work across different UI libraries
+- Optimize performance with direct icon imports and build-time rendering
 
 ## Installation
 
@@ -93,7 +100,7 @@ The package includes type definitions for all icons. This is useful if you want 
 
 ```astro
 ---
-import { Home, Library, Cog, type Icon as IconType } from '@lucide/astro';
+import { House, Library, Cog, type Icon as IconType } from '@lucide/astro';
 
 type MenuItem = {
   name: string;
@@ -105,7 +112,7 @@ const menuItems: MenuItem[] = [
   {
     name: 'Home',
     href: '/',
-    icon: Home,
+    icon: House,
   },
   {
     name: 'Blog',
