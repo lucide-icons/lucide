@@ -70,7 +70,7 @@ const value = computed({
   color: var(--vp-c-text-2);
   padding: 3px 8px 3px 3px;
   height: auto;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   border: 1px solid transparent;
   cursor: text;
@@ -90,7 +90,7 @@ const value = computed({
   border: none;
   background: transparent;
   color: var(--vp-c-text-1);
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   border-radius: 8px;
   cursor: text;
