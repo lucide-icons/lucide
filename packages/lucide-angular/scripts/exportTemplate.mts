@@ -15,19 +15,14 @@ export default defineExportTemplate(async ({
   const svgBase64 = base64SVG(svgContents);
   const angularComponentName = `Lucide${componentName}Component`;
   const selectors = [`svg[lucide-${iconName}]`];
-  const aliasExports: {[aliasComponentName: string]: string[]} = {};
+  const aliasExports: {[aliasComponentName: string]: boolean} = {};
   for (const alias of aliases) {
     const aliasName = typeof alias === 'string' ? alias : alias.name;
     const aliasComponentName = `Lucide${toPascalCase(aliasName)}Component`;
     const aliasSelector = `svg[lucide-${aliasName}]`;
-    if (aliasComponentName === angularComponentName) {
-      selectors.push(aliasSelector);
-    } else {
-      if (aliasComponentName in aliasExports) {
-        aliasExports[aliasComponentName] = [aliasSelector];
-      } else {
-        aliasExports[aliasComponentName].push(aliasSelector);
-      }
+    selectors.push(aliasSelector);
+    if (aliasComponentName !== angularComponentName && !(aliasComponentName in aliasExports)) {
+      aliasExports[aliasComponentName] = true;
     }
   }
 
@@ -56,19 +51,13 @@ export class ${angularComponentName} extends LucideAngularComponent {
   override name = '${iconName}';
 }
 
-${Object.entries(aliasExports).map(([aliasComponentName, aliasSelectors]) => {
+${Object.entries(aliasExports).map(([aliasComponentName]) => {
     return `
 /**
  * @deprecated
  * @see ${angularComponentName}
  */
-@Component({
-  selector: '${aliasSelectors.join(', ')}',
-  template: '',
-  standalone: true,
-})
-export class ${aliasComponentName} extends ${angularComponentName} {
-}
+export const ${aliasComponentName} = ${angularComponentName};
 `;
   }).join(`\n\n`)}
 `;

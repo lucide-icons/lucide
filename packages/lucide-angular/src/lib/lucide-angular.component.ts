@@ -22,7 +22,7 @@ type SvgAttributes = { [key: string]: string | number };
 
 type LucideAngularComponentChanges = {
   name?: TypedChange<string | LucideIconData>;
-  img?: TypedChange<LucideIconData | undefined>;
+  icon?: TypedChange<LucideIconData | undefined>;
   color?: TypedChange<string>;
   size?: TypedChange<number>;
   strokeWidth?: TypedChange<number>;
@@ -35,14 +35,15 @@ export function formatFixed(number: number, decimals = 3): string {
 }
 
 @Component({
-  selector: 'lucide-angular, lucide-icon, i-lucide, span-lucide',
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'svg[lucideIcon]',
   template: '<ng-content></ng-content>',
   standalone: true,
 })
 export class LucideAngularComponent implements OnInit, OnChanges {
   @Input() class?: string;
   @Input() name?: string;
-  @Input() icon?: LucideIconData;
+  @Input('lucideIcon') icon?: LucideIconData;
   @Input() color?: string;
   @Input() absoluteStrokeWidth = false;
   defaultSize: number;
@@ -51,7 +52,7 @@ export class LucideAngularComponent implements OnInit, OnChanges {
     @Inject(ElementRef) protected elem: ElementRef,
     @Inject(Renderer2) protected renderer: Renderer2,
     @Inject(ChangeDetectorRef) protected changeDetector: ChangeDetectorRef,
-    @Inject(LucideIconConfig) protected iconConfig: LucideIconConfig,
+    @Inject(LucideIconConfig) protected iconConfig: LucideIconConfig
   ) {
     this.defaultSize = defaultAttributes.height;
     console.log(this.name, this.icon);
@@ -92,7 +93,7 @@ export class LucideAngularComponent implements OnInit, OnChanges {
   ngOnChanges(changes: LucideAngularComponentChanges): void {
     if (
       changes.name ||
-      changes.img ||
+      changes.icon ||
       changes.color ||
       changes.size ||
       changes.absoluteStrokeWidth ||
@@ -126,7 +127,10 @@ export class LucideAngularComponent implements OnInit, OnChanges {
         ? formatFixed(this.strokeWidth / (this.size / this.defaultSize))
         : this.strokeWidth.toString(10),
     };
-    const icoElement = this.createElement(['svg', attributes, img]);
+    const icoElement = this.elem.nativeElement;
+    for (const [name, value] of Object.entries(attributes)) {
+      icoElement.setAttribute(name, value);
+    }
     icoElement.classList.add('lucide');
     if (typeof this.name === 'string') {
       icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
@@ -136,14 +140,16 @@ export class LucideAngularComponent implements OnInit, OnChanges {
         ...this.class
           .split(/ /)
           .map((a) => a.trim())
-          .filter((a) => a.length > 0),
+          .filter((a) => a.length > 0)
       );
     }
-    const childElements = this.elem.nativeElement.childNodes;
-    for (const child of childElements) {
+    for (const child of icoElement.children) {
       this.renderer.removeChild(this.elem.nativeElement, child);
     }
-    this.renderer.appendChild(this.elem.nativeElement, icoElement);
+    for (const node of img) {
+      const childElement = this.createElement(node);
+      this.renderer.appendChild(icoElement, childElement);
+    }
   }
 
   protected parseNumber(value: string | number): number {
@@ -160,7 +166,7 @@ export class LucideAngularComponent implements OnInit, OnChanges {
   protected createElement([tag, attrs, children = []]: readonly [
     string,
     SvgAttributes,
-    LucideIconData?,
+    LucideIconData?
   ]) {
     const element = this.renderer.createElement(tag, 'http://www.w3.org/2000/svg');
 

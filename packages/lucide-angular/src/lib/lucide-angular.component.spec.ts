@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LucideAngularModule } from './lucide-angular.module';
 import { formatFixed, LucideAngularComponent } from './lucide-angular.component';
 import defaultAttributes from '../icons/constants/default-attributes';
-import { LucideIcons } from '../icons/types';
+import { LucideIconData } from '../icons/types';
 
 describe('LucideAngularComponent', () => {
   let testHostComponent: TestHostComponent;
   let testHostFixture: ComponentFixture<TestHostComponent>;
   const getSvgAttribute = (attr: string) =>
     testHostFixture.nativeElement.querySelector('svg').getAttribute(attr);
-  const testIcons: LucideIcons = {
-    Demo: [['polyline', { points: '1 1 22 22' }]],
-  };
-
+  const testIcon: LucideIconData = [['polyline', { points: '1 1 22 22' }]];
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LucideAngularComponent, TestHostComponent],
-      imports: [LucideAngularModule.pick(testIcons)],
+      imports: [],
     }).compileComponents();
     testHostFixture = TestBed.createComponent(TestHostComponent);
     testHostComponent = testHostFixture.componentInstance;
@@ -63,7 +59,7 @@ describe('LucideAngularComponent', () => {
     testHostComponent.setAbsoluteStrokeWidth(true);
     testHostFixture.detectChanges();
     expect(getSvgAttribute('stroke-width')).toBe(
-      formatFixed(strokeWidth / (size / defaultAttributes.height)),
+      formatFixed(strokeWidth / (size / defaultAttributes.height))
     );
   });
 
@@ -71,6 +67,7 @@ describe('LucideAngularComponent', () => {
     selector: 'lucide-spec-host-component',
     template: ` <i-lucide
       name="demo"
+      [img]="testIcon"
       class="my-icon"
       [color]="color"
       [size]="size"
@@ -83,6 +80,7 @@ describe('LucideAngularComponent', () => {
     size?: number;
     strokeWidth?: number;
     absoluteStrokeWidth = true;
+    readonly testIcon = testIcon;
 
     setColor(color: string): void {
       this.color = color;
