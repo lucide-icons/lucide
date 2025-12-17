@@ -8,65 +8,26 @@ export default defineExportTemplate(async ({
   getSvg,
   deprecated,
   deprecationReason,
-  aliases = [],
-  toPascalCase,
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
-  const angularComponentName = `Lucide${componentName}`;
-  const selectors = [`svg[lucide${toPascalCase(iconName)}]`];
-  const aliasComponentNames: string[] = [];
-  for (const alias of aliases) {
-    const aliasName = typeof alias === 'string' ? alias : alias.name;
-    const aliasComponentName = `Lucide${toPascalCase(aliasName)}`;
-    const aliasSelector = `svg[lucide${toPascalCase(aliasName)}]`;
-    if (!selectors.includes(aliasSelector)) {
-      selectors.push(aliasSelector);
-    }
-    if (aliasComponentName !== angularComponentName && !aliasComponentNames.includes(aliasComponentName)) {
-      aliasComponentNames.push(aliasComponentName);
-    }
-  }
 
   return `\
 import { LucideIconData } from './types';
-import { LucideIcon } from '../lib/lucide-icon.component';
-import { Component } from '@angular/core';
 
 /**
  * @component @name ${componentName}
  * @description Lucide SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide-angular - Documentation
+ * @see https://lucide.dev/guide/packages/lucide-vue-next - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
+ * @returns {FunctionalComponent} Vue component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
 */
-@Component({
-  selector: '${selectors.join(', ')}',
-  template: '',
-  standalone: true,
-})
-export class ${angularComponentName} extends LucideIcon {
-  static iconData: LucideIconData = ${JSON.stringify(children)};
-  static iconName = '${iconName}';
-  override get icon() {
-    return ${angularComponentName}.iconData;
-  }
-  override get name() {
-    return ${angularComponentName}.iconName;
-  }
-}
+const ${componentName}: LucideIconData = ${JSON.stringify(children)}; //eslint-disable-line no-shadow-restricted-names
 
-${aliasComponentNames.map(([aliasComponentName]) => {
-    return `
-/**
- * @deprecated
- * @see ${angularComponentName}
- */
-export const ${aliasComponentName} = ${angularComponentName};
-`;
-  }).join(`\n\n`)}
+export default ${componentName};
 `;
 });
