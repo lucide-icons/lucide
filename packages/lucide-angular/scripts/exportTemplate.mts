@@ -13,22 +13,24 @@ export default defineExportTemplate(async ({
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
-  const angularComponentName = `Lucide${componentName}Component`;
-  const selectors = [`svg[lucide-${iconName}]`];
-  const aliasExports: {[aliasComponentName: string]: boolean} = {};
+  const angularComponentName = `Lucide${componentName}`;
+  const selectors = [`svg[lucide${toPascalCase(iconName)}]`];
+  const aliasComponentNames: string[] = [];
   for (const alias of aliases) {
     const aliasName = typeof alias === 'string' ? alias : alias.name;
-    const aliasComponentName = `Lucide${toPascalCase(aliasName)}Component`;
-    const aliasSelector = `svg[lucide-${aliasName}]`;
-    selectors.push(aliasSelector);
-    if (aliasComponentName !== angularComponentName && !(aliasComponentName in aliasExports)) {
-      aliasExports[aliasComponentName] = true;
+    const aliasComponentName = `Lucide${toPascalCase(aliasName)}`;
+    const aliasSelector = `svg[lucide${toPascalCase(aliasName)}]`;
+    if (!selectors.includes(aliasSelector)) {
+      selectors.push(aliasSelector);
+    }
+    if (aliasComponentName !== angularComponentName && !aliasComponentNames.includes(aliasComponentName)) {
+      aliasComponentNames.push(aliasComponentName);
     }
   }
 
   return `\
 import { LucideIconData } from './types';
-import { LucideAngularComponent } from '../lib/lucide-angular.component';
+import { LucideIcon } from '../lib/lucide-icon.component';
 import { Component } from '@angular/core';
 
 /**
@@ -46,12 +48,18 @@ import { Component } from '@angular/core';
   template: '',
   standalone: true,
 })
-export class ${angularComponentName} extends LucideAngularComponent {
-  override icon = ${JSON.stringify(children)} as LucideIconData;
-  override name = '${iconName}';
+export class ${angularComponentName} extends LucideIcon {
+  static iconData: LucideIconData = ${JSON.stringify(children)};
+  static iconName = '${iconName}';
+  override get icon() {
+    return ${angularComponentName}.iconData;
+  }
+  override get name() {
+    return ${angularComponentName}.iconName;
+  }
 }
 
-${Object.entries(aliasExports).map(([aliasComponentName]) => {
+${aliasComponentNames.map(([aliasComponentName]) => {
     return `
 /**
  * @deprecated

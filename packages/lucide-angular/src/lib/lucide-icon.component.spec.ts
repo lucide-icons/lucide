@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { formatFixed, LucideAngularComponent } from './lucide-angular.component';
+import { formatFixed, LucideIcon } from './lucide-icon.component';
 import defaultAttributes from '../icons/constants/default-attributes';
 import { LucideIconData } from '../icons/types';
 
@@ -12,7 +12,7 @@ describe('LucideAngularComponent', () => {
   const testIcon: LucideIconData = [['polyline', { points: '1 1 22 22' }]];
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LucideAngularComponent, TestHostComponent],
+      declarations: [LucideIcon, TestHostComponent],
       imports: [],
     }).compileComponents();
     testHostFixture = TestBed.createComponent(TestHostComponent);

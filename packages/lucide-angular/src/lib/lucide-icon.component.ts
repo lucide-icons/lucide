@@ -8,6 +8,7 @@ import {
   OnInit,
   Renderer2,
   SimpleChange,
+  Type,
 } from '@angular/core';
 import { LucideIconData } from '../icons/types';
 import defaultAttributes from '../icons/constants/default-attributes';
@@ -34,16 +35,41 @@ export function formatFixed(number: number, decimals = 3): string {
   return parseFloat(number.toFixed(decimals)).toString(10);
 }
 
+export type LucideIconComponentType = Type<LucideIcon> & { iconData: LucideIconData; name: string };
+
+function isLucideIconComponent(icon: unknown): icon is LucideIconComponentType {
+  return (
+    icon instanceof Type &&
+    'iconData' in icon &&
+    Array.isArray(icon.iconData) &&
+    'iconName' in icon &&
+    typeof icon.iconName === 'string'
+  );
+}
+
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'svg[lucideIcon]',
   template: '<ng-content></ng-content>',
   standalone: true,
 })
-export class LucideAngularComponent implements OnInit, OnChanges {
+// eslint-disable-next-line @angular-eslint/component-class-suffix
+export class LucideIcon implements OnInit, OnChanges {
   @Input() class?: string;
-  @Input() name?: string;
-  @Input('lucideIcon') icon?: LucideIconData;
+  _name?: string;
+  @Input() set name(name: string | undefined) {
+    this._name = name;
+  }
+  get name() {
+    return this._name;
+  }
+  _icon?: LucideIconData | LucideIconComponentType | null;
+  @Input('lucideIcon') set icon(icon: LucideIconData | LucideIconComponentType | null | undefined) {
+    this._icon = icon;
+  }
+  get icon() {
+    return this._icon;
+  }
   @Input() color?: string;
   @Input() absoluteStrokeWidth = false;
   defaultSize: number;
@@ -55,7 +81,6 @@ export class LucideAngularComponent implements OnInit, OnChanges {
     @Inject(LucideIconConfig) protected iconConfig: LucideIconConfig
   ) {
     this.defaultSize = defaultAttributes.height;
-    console.log(this.name, this.icon);
   }
 
   _size?: number;
@@ -113,7 +138,7 @@ export class LucideAngularComponent implements OnInit, OnChanges {
     this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
     console.log('Hello, my name is ', this.name, ' my icon is ', this.icon);
     if (this.icon) {
-      this.replaceElement(this.icon);
+      this.replaceElement(isLucideIconComponent(this.icon) ? this.icon.iconData : this.icon);
     }
   }
 
