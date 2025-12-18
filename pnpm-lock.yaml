@@ -867,19 +867,6 @@ importers:
         specifier: ^22
         version: 22.19.1
 
-  tools/outline-svg:
-    dependencies:
-      minimist:
-        specifier: ^1.2.8
-        version: 1.2.8
-      oslllo-svg-fixer:
-        specifier: ^5.0.0
-        version: 5.0.0(encoding@0.1.13)
-    devDependencies:
-      '@lucide/helpers':
-        specifier: workspace:*
-        version: link:../build-helpers
-
   tools/rollup-plugins:
     dependencies:
       '@rollup/plugin-node-resolve':
