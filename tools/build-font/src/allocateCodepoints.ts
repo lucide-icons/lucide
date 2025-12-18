@@ -32,7 +32,7 @@ export async function allocateCodePoints({
   await Promise.all(
     iconsWithAliases.map(async ([iconName, aliases]) => {
       if(!baseCodePoints[iconName]) {
-        console.log('Codepoint not found creating new one for', iconName);
+        console.log('Code point not found creating new one for', iconName);
         baseCodePoints[iconName] = endCodePoint + 1;
       }
 
@@ -41,7 +41,7 @@ export async function allocateCodePoints({
           return;
         }
 
-        console.log('Codepoint not found creating new one for');
+        console.log('Code point not found creating new one for');
 
         baseCodePoints[alias] = endCodePoint + index + 1;
       });

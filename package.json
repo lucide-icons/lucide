@@ -16,7 +16,7 @@
     "lucide-svelte": "pnpm --filter lucide-svelte",
     "lucide-static": "pnpm --filter lucide-static",
     "build:outline-icons": "pnpm --filter outline-svg start",
-    "build:font": "pnpm --filter docs prebuild:releaseJson && pnpm --filter build-font start",
+    "build:font": "pnpm --filter build-font start",
     "optimize": "node ./scripts/optimizeSvgs.mts",
     "addjsons": "node ./scripts/addMissingIconJsonFiles.mts",
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",

@@ -6,6 +6,7 @@ import { getAllIconAliases } from '@lucide/helpers';
 import { outlineSVG } from './outlineSVGs.ts';
 import { allocateCodePoints } from './allocateCodepoints.ts';
 import { buildFont } from './buildFont.ts';
+import { hasMissingCodePoints } from './helpers.ts';
 
 const fontName = 'lucide';
 const classNamePrefix = 'icon';
@@ -34,21 +35,9 @@ const codePoints = await allocateCodePoints({
   iconsWithAliases
 });
 
-// Check if all icons and aliases exist in the codePoints
-const missingIcons = iconsWithAliases
-  .map(([iconName, aliases]) => ([iconName, ...aliases]))
-  .flat()
-  .some(name => {
-    if (!codePoints?.[name]) {
-      console.log(`Missing codepoint for icon/alias: ${name}`);
-      return true;
-    }
 
-    return false;
-  });
-
-if (missingIcons) {
-  throw new Error('Some icons or aliases are missing codepoints. See log for details.');
+if (hasMissingCodePoints(iconsWithAliases, codePoints)) {
+  throw new Error('Some icons or aliases are missing code points. See log for details.');
 }
 
 await buildFont({
