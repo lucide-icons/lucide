@@ -5,7 +5,6 @@
 </template>
 
 <style scoped>
-
 .icon-button {
   display: inline-flex;
   border: 1px solid transparent;
@@ -30,9 +29,9 @@
 }
 
 .icon-button:active {
-    border-color: var(--vp-button-alt-active-border);
-    color: var(--vp-button-alt-active-text);
-    background-color: var(--vp-button-alt-active-bg);
+  border-color: var(--vp-button-alt-active-border);
+  color: var(--vp-button-alt-active-text);
+  background-color: var(--vp-button-alt-active-bg);
 }
 
 .icon-button.active {
