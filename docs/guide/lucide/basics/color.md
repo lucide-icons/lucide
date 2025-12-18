@@ -1,8 +1,5 @@
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
-// import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-// import buttonExampleFiles from './examples/button-example/files.ts'
-// import iconColorExampleFiles from './examples/color-icon/files.ts'
 </script>
 
 # Color
@@ -20,26 +17,18 @@ The color can be adjusted by passing the color attribute to the element.
 ```html /index.html [active]
 <!DOCTYPE html>
 <html>
+  <body>
+    <i data-lucide="menu" color="red"></i>
 
-<head>
-  <title>My appp</title>
-  <meta charset="UTF-8" />
-</head>
-
-<body>
-  <i data-lucide="menu" color="#ff0000"></i>
-
-  <script src="index.js">
-  </script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
 ```
 
 ```js /index.js
 import "./styles.css";
 
-import { createIcons, Menu } from 'lucide';
+import { createIcons, Menu } from 'lucide/dist/cjs/lucide';
 
 createIcons({
   icons: {

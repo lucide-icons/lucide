@@ -6,34 +6,7 @@ import sandpackTheme from '../theme/sandpackTheme.json'
 
 type SnackParams = Record<string, string>;
 
-function parseParams(paramString = ''): SnackParams {
-  const params = Object.fromEntries(
-    new URLSearchParams(paramString),
-  ) as SnackParams;
-
-  if (!params.platform) {
-    params.platform = 'web';
-  }
-
-  return params;
-}
-
-const useSnippets = (input = '') => {
-  const strings = input.split(' ');
-  let usedSnippets = false;
-  for (const str of strings) {
-    if (/([{1})([\s\S]*)([\.]{1}([\s\S]+))(]{1})/.test(str)) {
-      usedSnippets = true;
-      break;
-    }
-  }
-  return usedSnippets;
-};
-
-
-
 type ContainerArgs = [typeof container, string, { render: RenderRule }]
-
 
 export default function sandpackPlugin(md: MarkdownIt) {
   const escapeHtml = md.utils.escapeHtml;
@@ -48,49 +21,69 @@ export default function sandpackPlugin(md: MarkdownIt) {
       const fileAttr: string[] = [];
       const attrs = Object.fromEntries(tokens[idx].attrs || []);
 
-
-      console.log(attrs);
-
+      const files: Record<string, {
+        code: string;
+        active?: boolean;
+        hidden?: boolean;
+      }> = {};
 
       for (
         let i = idx + 1;
         !(
-              tokens[i].nesting === -1 &&
-              tokens[i].type === 'container_sandpack_close'
-            );
+          tokens[i].nesting === -1 &&
+          tokens[i].type === 'container_sandpack_close'
+        );
         ++i
       ) {
         if (tokens[i].type === 'fence' && tokens[i].tag === 'code') {
-          let lang = '';
-          let tokenVal = (tokens[i]?.info as string) || '';
+          const info = tokens[i].info ?? '';
+          const [lang, fileName, params = ''] = info.split(' ');
 
-          console.log(tokenVal);
+          const active = params.includes('[active]');
+          const hidden = params.includes('[hidden]');
 
+          const code = tokens[i].content;
 
-          if (useSnippets(tokenVal)) {
-            if (!tokenVal.includes('prefix=')) {
-              tokenVal = tokenVal.replace('[', ' /').replace(']', '');
-            } else {
-              tokenVal = tokenVal.replace('prefix=', '').replace('[', '').replace(']', '');
-            }
+          if (fileName && code) {
+              files[fileName] = {
+                code,
+              };
 
-            console.log(tokens[i]);
+              if (active) {
+                (files[fileName] as any).active = true;
+              }
 
-
-            lang = tokenVal.substring(tokenVal.lastIndexOf('.') + 1);
-
-            console.log(lang);
-
-            tokenVal = `${lang} ${tokenVal}`;
+              if (hidden) {
+                (files[fileName] as any).hidden = true;
+              }
           }
-          fileAttr.push(tokenVal);
         }
       }
 
-      // console.log(attrs);
+      const { dependencies, ...options } = attrs
 
-      // const attrs = tokens[idx].attrs?.map(([key, val]) => (val ? `${key}="${val}"` : key)) || [];
-      return `<Sandpack :theme="${escapeHtml(JSON.stringify(sandpackTheme)}" ${fileAttr>`;
+      const dependencyList = dependencies.split(',').map((dep: string) => dep.trim());
+
+      const dependencyObject = dependencyList.reduce((acc: Record<string, string>, cur: string) => {
+        const [name, version] = cur.split('@').map((str) => str.trim());
+        acc[name] = version || 'latest';
+        return acc;
+      }, {});
+
+      return `\
+        <Sandpack\
+          template="${escapeHtml(attrs.template || 'vanilla')}"\
+          :theme="${escapeHtml(JSON.stringify(sandpackTheme))}"\
+          :customSetup="${escapeHtml(
+            JSON.stringify({
+              dependencies: dependencyList.length
+                ? dependencyObject
+                : {},
+            }),
+          )}"
+          :files="${escapeHtml(JSON.stringify(files))}"\
+          :options="${escapeHtml(JSON.stringify(options))}"\
+        >`;
     }
     return `</Sandpack>`;
   };

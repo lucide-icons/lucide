@@ -15,7 +15,7 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-::: sandbox {template=react showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-react"}
+::: sandpack {template=react showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-react"}
 
 ```js
 import { Smile } from "lucide-react";

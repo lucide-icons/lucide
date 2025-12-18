@@ -12,7 +12,7 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import FrameworkSelect from './components/guide/FrameworkSelect.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import Sandbox from './components/editors/Sandbox.vue';
+// import Sandpack from './components/editors/Sandpack.vue';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -30,7 +30,7 @@ const theme: Partial<Theme> = {
     app.provide(CATEGORY_VIEW_CONTEXT, categoryViewContext);
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer)
-    app.component('Sandbox', Sandbox);
+    // app.component('Sandpack', Sandpack);
   },
 };
 
