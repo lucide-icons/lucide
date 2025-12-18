@@ -5,6 +5,7 @@ import container from 'markdown-it-container';
 import { renderSandbox } from 'vitepress-plugin-sandpack';
 import sidebar from './sidebar';
 import snackPlayer from './plugins/snackPlayer';
+import sandpackPlugin from './plugins/sandpack';
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -21,13 +22,14 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
-      md.use(container, 'sandbox', {
-        render (tokens, idx) {
-          console.log(tokens);
+      md.use(sandpackPlugin)
+      // md.use(container, 'sandbox', {
+      //   render (tokens, idx) {
+      //     console.log(tokens);
 
-          return renderSandbox(tokens, idx, 'sandbox');
-        },
-      });
+      //     return renderSandbox(tokens, idx, 'sandbox');
+      //   },
+      // });
     },
   },
   vite: {

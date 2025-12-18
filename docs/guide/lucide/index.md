@@ -7,7 +7,12 @@ The core Lucide package for vanilla JavaScript applications. This package allows
 - Dynamically create and insert SVG icons with JavaScript
 - Customize icon appearance with CSS classes and inline styles
 - Tree-shake unused icons to keep bundle sizes minimal
-- Use icons in any JavaScript environment or plain HTML
+- Use icons in Vanilla JS with HTML
+
+Lucide is designed to be lightweight and easy to use, making it an excellent choice for projects that require icons without the overhead of a full framework integration.
+
+## Overview
+
 
 ## Installation
 

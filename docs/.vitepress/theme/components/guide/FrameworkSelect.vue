@@ -7,8 +7,8 @@ import { computed, ref, watch, watchEffect } from 'vue';
 import { link, route } from '~/.vitepress/data/iconNodes';
 import { useLocalStorage } from '@vueuse/core';
 
-const { page } = useData()
-const router = useRouter()
+const { page } = useData();
+const router = useRouter();
 
 const frameworks = [
   { name: 'Vanilla', icon: '/framework-logos/js.svg', route: '/guide/lucide' },
@@ -18,54 +18,76 @@ const frameworks = [
   { name: 'Solid', icon: '/framework-logos/solid.svg', route: '/guide/solid' },
   { name: 'Angular', icon: '/framework-logos/angular.svg', route: '/guide/angular' },
   { name: 'Preact', icon: '/framework-logos/preact.svg', route: '/guide/preact' },
-  { name: 'React Native', icon: '/framework-logos/react-native.svg', route: '/guide/react-native' },
+  {
+    name: 'React Native',
+    icon: '/framework-logos/react-native.svg',
+    route: '/guide/react-native/',
+  },
   { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro' },
-]
+];
 
-const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1])
+const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1]);
 
 const selected = computed(() => {
   const current = frameworks.find(({ route }) => {
-    return router.route.path.split('/').slice(0, 3).join('/') === route
-  })
+    return router.route.path.split('/').slice(0, 3).join('/') === route;
+  });
 
-  return current || fallbackFramework.value
-})
+  return current || fallbackFramework.value;
+});
 
-function onSelectFramework(item: { name: string, icon: string, route: string }) {
-  fallbackFramework.value = item
+function onSelectFramework(item: { name: string; icon: string; route: string }) {
+  fallbackFramework.value = item;
   if (item.route !== router.route.path) {
     const likeRoute = router.route.path.replace(selected.value.route, item.route);
 
-    const hasRoute = sidebar[item.route]?.some(section =>
-      section?.items?.some(({ link }) => link === likeRoute)
+    const hasRoute = sidebar[item.route]?.some((section) =>
+      section?.items?.some(({ link }) => link === likeRoute),
     );
 
     if (hasRoute) {
-      router.go(likeRoute)
+      router.go(likeRoute);
       return;
     }
 
-    router.go(item.route)
+    router.go(item.route);
   }
 }
 </script>
 
 <template>
-  <VPSidebarGroup :items="guideSidebarTop" v-if="page?.relativePath?.startsWith?.('guide')" />
-  <div class="framework-select" v-if="page?.relativePath?.startsWith?.('guide')">
+  <VPSidebarGroup
+    :items="guideSidebarTop"
+    v-if="page?.relativePath?.startsWith?.('guide')"
+  />
+  <div
+    class="framework-select"
+    v-if="page?.relativePath?.startsWith?.('guide')"
+  >
     <label for="framework-select">Framework</label>
-    <Select id="framework-select" :items="frameworks" @update:model-value="onSelectFramework" v-model="selected" />
+    <Select
+      id="framework-select"
+      :items="frameworks"
+      @update:model-value="onSelectFramework"
+      v-model="selected"
+    />
   </div>
-  <VPSidebarGroup :key="selected.route"
-    v-if="page?.relativePath?.startsWith?.('guide') && !page?.relativePath?.startsWith?.(selected.route.substring(1))"
-    :items="sidebar[selected.route]" />
+  <VPSidebarGroup
+    :key="selected.route"
+    v-if="
+      page?.relativePath?.startsWith?.('guide') &&
+      !page?.relativePath?.startsWith?.(selected.route.substring(1))
+    "
+    :items="sidebar[selected.route]"
+  />
 </template>
 
 <style scoped>
 .framework-select {
   font-size: 12px;
-  transition: border-color 0.5s, background-color 0.5s ease;
+  transition:
+    border-color 0.5s,
+    background-color 0.5s ease;
   margin-bottom: 10px;
   position: sticky;
   top: -0.5px;
