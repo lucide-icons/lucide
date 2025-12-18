@@ -35,13 +35,17 @@ const codePoints = await allocateCodePoints({
 });
 
 // Check if all icons and aliases exist in the codePoints
-const missingIcons = iconsWithAliases.map(([iconName, aliases]) => ([iconName, ...aliases])).flat().some(name => {
-  if (!codePoints?.[name]) {
-    console.log(`Missing codepoint for icon/alias: ${name}`);
-    return true;
-  }
-  return false;
-});
+const missingIcons = iconsWithAliases
+  .map(([iconName, aliases]) => ([iconName, ...aliases]))
+  .flat()
+  .some(name => {
+    if (!codePoints?.[name]) {
+      console.log(`Missing codepoint for icon/alias: ${name}`);
+      return true;
+    }
+
+    return false;
+  });
 
 if (missingIcons) {
   throw new Error('Some icons or aliases are missing codepoints. See log for details.');
