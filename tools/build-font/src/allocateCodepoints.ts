@@ -6,9 +6,14 @@ import { cwd } from "process";
 export type CodePoints = Record<string, number>;
 
 async function getLatestCodePoints(): Promise<CodePoints> {
+  // This is for the first release where no codepoints.json exists yet
   const codepointsContents = await fs.readFile(path.join(cwd(), 'codepoints.json'), 'utf-8')
 
   return JSON.parse(codepointsContents) as CodePoints
+
+  // Next releases will use the codepoints.json from latest release in lucide-static.
+  // const codepointsContents = await fetch('https://unpkg.com/lucide-static@latest/font/codepoints.json')
+  // return codepointsContents.json() as Promise<CodePoints>
 }
 
 interface AllocateCodePointsOptions {
@@ -29,8 +34,6 @@ export async function allocateCodePoints({
       if(!baseCodePoints[iconName]) {
         console.log('Codepoint not found creating new one for', iconName);
         baseCodePoints[iconName] = endCodePoint + 1;
-
-        console.log('YEAHHH',baseCodePoints['balloon']);
       }
 
       aliases.forEach((alias, index) => {
