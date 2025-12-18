@@ -32,12 +32,13 @@ interface CliArguments {
   aliasesFileExtension?: string;
   aliasImportFileExtension?: string;
   pretty?: boolean;
+  icons?: string;
   output: string | undefined;
 }
 
 const cliArguments = getArgumentOptions(process.argv.slice(2)) as unknown as CliArguments;
 
-const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
+const ICONS_DIR = path.resolve(process.cwd(), cliArguments.icons || '../../icons');
 const OUTPUT_DIR = path.resolve(process.cwd(), cliArguments.output || '../build');
 
 if (!fs.existsSync(OUTPUT_DIR)) {

@@ -10,12 +10,13 @@ type SVGElementType =
   | 'ellipse'
   | 'g'
   | 'line'
+  | 'mask'
   | 'path'
   | 'polygon'
   | 'polyline'
   | 'rect';
 
-export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>][];
+export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>, children: IconNode][];
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
 type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
