@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Prebuild
+        run: pnpm --filter @lucide/angular prebuild
+
       - name: Build
         run: pnpm --filter @lucide/angular build
 
