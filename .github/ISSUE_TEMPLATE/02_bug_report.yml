@@ -23,7 +23,7 @@ body:
         - label: lucide-solid
         - label: lucide-static
         - label: lucide-svelte (old version)
-        - label: `@lucide/svelte (new version)`
+        - label: '@lucide/svelte (new version)'
         - label: lucide-vue
         - label: lucide-vue-next
         - label: Figma plugin
