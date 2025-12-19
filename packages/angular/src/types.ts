@@ -1,16 +1,16 @@
-import { InputSignal, Signal, Type } from '@angular/core';
+import { Signal, Type } from '@angular/core';
 
 type HtmlAttributes = { [key: string]: string | number };
 export type LucideIconNode = readonly [string, HtmlAttributes];
 export type LucideIconData = readonly LucideIconNode[];
 export type LucideIcons = { [key: string]: LucideIconData };
 
-export interface LucideIconComponent {
-  name: Signal<Nullable<string>>;
-  icon: Signal<Nullable<LucideIconData>>;
+export interface LucideIconComponentInterface {
+  iconName: Signal<Nullable<string>>;
+  iconData: Signal<Nullable<LucideIconData>>;
 }
 
-export type LucideIconComponentType = Type<LucideIconComponent> & {
+export type LucideIconComponentType = Type<LucideIconComponentInterface> & {
   iconName: string;
   iconData: LucideIconData;
 };

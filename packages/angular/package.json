@@ -1,6 +1,19 @@
 {
   "name": "@lucide/angular",
+  "description": "A Lucide icon library package for Angular applications.",
   "version": "0.0.1",
+  "author": "SMAH1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-angular"
+  },
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "ng": "ng",
     "watch": "ng build --watch --configuration development",
@@ -30,6 +43,11 @@
   },
   "private": true,
   "devDependencies": {
+    "@angular-eslint/builder": "~21.1.0",
+    "@angular-eslint/eslint-plugin": "~21.1.0",
+    "@angular-eslint/eslint-plugin-template": "~21.1.0",
+    "@angular-eslint/schematics": "~21.1.0",
+    "@angular-eslint/template-parser": "~21.1.0",
     "@angular/build": "^21.0.3",
     "@angular/cli": "^21.0.3",
     "@angular/common": "^21.0.0",
@@ -42,6 +60,7 @@
     "@lucide/build-icons": "workspace:*",
     "@vitest/browser-playwright": "^4.0.16",
     "@vitest/coverage-v8": "^4.0.16",
+    "angular-eslint": "21.1.0",
     "jsdom": "^27.1.0",
     "ng-packagr": "^21.0.0",
     "rxjs": "~7.8.0",

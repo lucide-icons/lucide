@@ -85,8 +85,8 @@ describe('LucideIcon', () => {
       name.set('custom-name');
       fixture.detectChanges();
 
-      expect(component.icon()).toBe(testIcon);
-      expect(component.name()).toBe('custom-name');
+      expect(component.iconData()).toBe(testIcon);
+      expect(component.iconName()).toBe('custom-name');
       expect(fixture.nativeElement.innerHTML).toBe(
         '<!--container--><polyline points="1 1 22 22"></polyline>',
       );
@@ -95,15 +95,15 @@ describe('LucideIcon', () => {
       icon.set(LucideActivity);
       fixture.detectChanges();
 
-      expect(component.icon()).toBe(LucideActivity.iconData);
-      expect(component.name()).toBe(LucideActivity.iconName);
+      expect(component.iconData()).toBe(LucideActivity.iconData);
+      expect(component.iconName()).toBe(LucideActivity.iconName);
     });
     it('should support string icon name', () => {
       icon.set('demo');
       fixture.detectChanges();
 
-      expect(component.icon()).toBe(testIcon);
-      expect(component.name()).toBe('demo');
+      expect(component.iconData()).toBe(testIcon);
+      expect(component.iconName()).toBe('demo');
     });
     it('should throw error if no icon founds', () => {
       icon.set('invalid');

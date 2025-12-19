@@ -17,18 +17,18 @@ interface LucideResolvedIcon {
 })
 export class LucideIcon extends LucideIconBase {
   protected readonly icons = inject(LUCIDE_ICONS);
-  readonly nameInput = input<string | null>(null, { alias: 'name' });
+  readonly name = input<string | null>();
   readonly iconInput = input.required<LucideIconInput | null>({
     alias: 'lucideIcon',
   });
   readonly resolvedIcon = computed<LucideResolvedIcon | null>(() => {
-    return this.resolveIcon(this.nameInput(), this.iconInput());
+    return this.resolveIcon(this.name(), this.iconInput());
   });
-  override readonly name = computed<string | null>(() => {
-    return this.resolvedIcon()?.name ?? null;
+  override readonly iconName = computed(() => {
+    return this.resolvedIcon()?.name;
   });
-  override readonly icon = computed<LucideIconData | null>(() => {
-    return this.resolvedIcon()?.data ?? null;
+  override readonly iconData = computed(() => {
+    return this.resolvedIcon()?.data;
   });
 
   protected resolveIcon(

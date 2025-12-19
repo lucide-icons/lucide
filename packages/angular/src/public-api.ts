@@ -4,4 +4,5 @@ export * from './lucide-config';
 export * from './lucide-icon';
 export * from './lucide-icons';
 export * from './types';
+export * from './icons/lucide-angular';
 export { icons };

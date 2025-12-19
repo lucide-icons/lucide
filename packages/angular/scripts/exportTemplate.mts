@@ -49,10 +49,10 @@ import { Component, signal } from '@angular/core';
   standalone: true,
 })
 export class ${angularComponentName} extends LucideIconBase {
-  static iconData: LucideIconData = ${JSON.stringify(children)};
   static iconName = '${iconName}';
-  override readonly icon = signal(${angularComponentName}.iconData);
-  override readonly name = signal(${angularComponentName}.iconName);
+  static iconData: LucideIconData = ${JSON.stringify(children)};
+  override readonly iconName = signal(${angularComponentName}.iconName);
+  override readonly iconData = signal(${angularComponentName}.iconData);
 }
 
 ${aliasComponentNames.map((aliasComponentName) => {

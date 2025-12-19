@@ -46,8 +46,8 @@ function transformNumericStringInput(
   },
 })
 export abstract class LucideIconBase {
-  abstract icon: Signal<Nullable<LucideIconData>>;
-  abstract name: Signal<Nullable<string>>;
+  abstract iconName: Signal<Nullable<string>>;
+  abstract iconData: Signal<Nullable<LucideIconData>>;
   protected readonly iconConfig = inject(LUCIDE_CONFIG);
   protected readonly elRef = inject(ElementRef);
   protected readonly renderer = inject(Renderer2);
@@ -79,7 +79,7 @@ export abstract class LucideIconBase {
 
   constructor() {
     effect((onCleanup) => {
-      const icon = this.icon();
+      const icon = this.iconData();
       if (icon) {
         const elements = icon.map(([name, attrs]) => {
           const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
@@ -101,7 +101,7 @@ export abstract class LucideIconBase {
       }
     });
     effect((onCleanup) => {
-      const name = this.name();
+      const name = this.iconName();
       if (name) {
         const cssClass = `lucide-${toKebabCase(name)}`;
         this.renderer.addClass(this.elRef.nativeElement, cssClass);

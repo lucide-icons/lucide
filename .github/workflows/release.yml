@@ -58,6 +58,7 @@ jobs:
             'lucide-preact',
             'lucide-solid',
             'lucide-svelte',
+            '@lucide/angular',
             '@lucide/astro',
             '@lucide/svelte',
           ]
