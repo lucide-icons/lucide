@@ -10,6 +10,9 @@ interface LucideResolvedIcon {
   data: LucideIconData;
 }
 
+/**
+ * Generic icon component for rendering LucideIconData.
+ */
 @Component({
   selector: 'svg[lucideIcon]',
   templateUrl: './lucide-icon.html',
@@ -24,10 +27,10 @@ export class LucideIcon extends LucideIconBase {
   readonly resolvedIcon = computed<LucideResolvedIcon | null>(() => {
     return this.resolveIcon(this.name(), this.iconInput());
   });
-  override readonly iconName = computed(() => {
+  protected override readonly iconName = computed(() => {
     return this.resolvedIcon()?.name;
   });
-  override readonly iconData = computed(() => {
+  protected override readonly iconData = computed(() => {
     return this.resolvedIcon()?.data;
   });
 

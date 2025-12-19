@@ -1,5 +1,11 @@
 # Lucide Angular
 
+::: warning
+This documentation if for our legacy package for Angular.
+
+For our modern, standalone-first implementation, please refer to [`@lucide/angular`](./angular).
+:::
+
 Angular components and services for Lucide icons that integrate with Angular's dependency injection and component system. Provides both traditional module-based and modern standalone component approaches for maximum flexibility in Angular applications.
 
 **What you can accomplish:**

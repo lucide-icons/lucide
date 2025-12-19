@@ -46,26 +46,61 @@ function transformNumericStringInput(
   },
 })
 export abstract class LucideIconBase {
-  abstract iconName: Signal<Nullable<string>>;
-  abstract iconData: Signal<Nullable<LucideIconData>>;
+  protected abstract readonly iconName: Signal<Nullable<string>>;
+  protected abstract readonly iconData: Signal<Nullable<LucideIconData>>;
   protected readonly iconConfig = inject(LUCIDE_CONFIG);
   protected readonly elRef = inject(ElementRef);
   protected readonly renderer = inject(Renderer2);
-  readonly title = input<Nullable<string>>();
-  readonly ariaHidden = computed(() => {
+  protected readonly ariaHidden = computed(() => {
     return !this.title();
   });
+  /**
+   * An optional accessible label for the icon.
+   * - If provided, it will add the title as an [`<svg:title>` element](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title).
+   * - If not provided, the component will add an `aria-hidden="true"` attribute automatically.
+   *
+   * @remarks
+   * Please refer to our [Accessibility guide](https://lucide.dev/guide/advanced/accessibility) regarding this matter.
+   * Adding accessible labels to icons is normally not necessary:
+   * - If your icon is decorative (as most icons are) just leave it as hidden from screen readers.
+   * - If your icon is interactive, it should be contained within an interactive element (e.g. button), and you should probably set your accessible label on that element.
+   * - If your icon is functional (e.g. used in place of a label), feel free to use this property.
+   */
+  readonly title = input<Nullable<string>>();
+  /**
+   * Width and height.
+   * @default 24
+   */
   readonly size = input(this.iconConfig.size, {
     transform: (value: Nullable<string | number>) =>
       transformNumericStringInput(value, this.iconConfig.size),
   });
+  /**
+   * Stroke color.
+   * @default currentColor
+   */
   readonly color = input(this.iconConfig.color, {
     transform: (value: Nullable<string>) => value ?? this.iconConfig.color,
   });
+  /**
+   * Stroke width
+   * @default 2
+   */
   readonly strokeWidth = input(this.iconConfig.strokeWidth, {
     transform: (value: Nullable<string | number>) =>
       transformNumericStringInput(value, this.iconConfig.strokeWidth),
   });
+  /**
+   * Whether stroke width should be scaled to appear uniform regardless of icon size.
+   *
+   * @remarks
+   * Use CSS to set on SVG paths instead:
+   * ```css
+   * .lucide * {
+   *   vector-effect: non-scaling-stroke;
+   * }
+   * ```
+   */
   readonly absoluteStrokeWidth = input(this.iconConfig.absoluteStrokeWidth, {
     transform: (value: Nullable<boolean>) => value ?? this.iconConfig.absoluteStrokeWidth,
   });
@@ -83,20 +118,20 @@ export abstract class LucideIconBase {
       if (icon) {
         const elements = icon.map(([name, attrs]) => {
           const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
-          for (const [name, value] of Object.entries(attrs)) {
+          Object.entries(attrs).forEach(([name, value]) =>
             this.renderer.setAttribute(
               element,
               name,
               typeof value === 'number' ? value.toString(10) : value,
-            );
-          }
+            ),
+          );
           this.renderer.appendChild(this.elRef.nativeElement, element);
           return element;
         });
         onCleanup(() => {
-          for (const element of elements) {
-            this.renderer.removeChild(this.elRef.nativeElement, element);
-          }
+          elements.forEach((element) =>
+            this.renderer.removeChild(this.elRef.nativeElement, element),
+          );
         });
       }
     });
