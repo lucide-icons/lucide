@@ -32,24 +32,24 @@ Implementation of the lucide icon library for angular applications.
 ## Installation
 
 ```sh
-pnpm add lucide-angular
+pnpm add @lucide/angular
 ```
 
 ```sh
-npm install lucide-angular
+npm install @lucide/angular
 ```
 
 ```sh
-yarn add lucide-angular
+yarn add @lucide/angular
 ```
 
 ```sh
-bun add lucide-angular
+bun add @lucide/angular
 ```
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-angular)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/angular)
 
 ## Community
 
