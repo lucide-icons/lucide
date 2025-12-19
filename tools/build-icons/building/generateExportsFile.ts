@@ -8,7 +8,7 @@ export default async function generateExportFile(
   iconNodes: Record<string, INode>,
   exportModuleNameCasing: 'camel' | 'pascal',
   iconFileExtension = '',
-  useDefaultExports = true
+  useDefaultExports = true,
 ) {
   const fileName = path.basename(inputEntry);
 

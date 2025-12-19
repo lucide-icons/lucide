@@ -127,7 +127,7 @@ async function buildIcons() {
     icons,
     exportModuleNameCasing,
     importImportFileExtension,
-    useDefaultExports
+    useDefaultExports,
   );
 }
 
