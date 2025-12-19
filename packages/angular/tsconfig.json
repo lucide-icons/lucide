@@ -3,18 +3,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@lucide/angular": [
+        "./dist"
+      ]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "paths": {
-      "my-lib": [
-        "./dist/my-lib"
-      ]
-    },
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
@@ -29,10 +31,10 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/my-lib/tsconfig.lib.json"
+      "path": "./tsconfig.lib.json"
     },
     {
-      "path": "./projects/my-lib/tsconfig.spec.json"
+      "path": "./tsconfig.spec.json"
     }
   ]
 }

@@ -1,5 +1,8 @@
-/*
- * Public API Surface of my-lib
- */
+import * as icons from './icons/lucide-angular';
 
-export * from './lib/my-lib';
+export * from './lucide-config';
+export * from './lucide-icon';
+export * from './lucide-icons';
+export * from './types';
+export * from './icons/lucide-angular';
+export { icons };

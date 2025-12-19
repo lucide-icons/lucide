@@ -6,14 +6,17 @@ export type IconNode = [tag: string, attrs: SVGProps][];
 
 export type IconNodeWithChildren = [tag: string, attrs: SVGProps, children: IconNode];
 
-export type TemplateFunction = (params: {
+export interface ExportTemplate {
   componentName: string;
   iconName: string;
   children: IconNode;
   getSvg: () => Promise<string>;
-  deprecated?: boolean;
-  deprecationReason?: string;
-}) => Promise<string>;
+  deprecated: boolean;
+  deprecationReason: string;
+  aliases?: (string | AliasDeprecation)[];
+}
+
+export type TemplateFunction = (params: ExportTemplate) => Promise<string>;
 
 export type Path = string;
 

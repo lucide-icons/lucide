@@ -1,14 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "pnpm"
-  },
-  "newProjectRoot": ".",
+  "newProjectRoot": "projects",
   "projects": {
     "@lucide/angular": {
       "projectType": "library",
-      "root": "./",
+      "root": ".",
       "sourceRoot": "./src",
       "prefix": "lib",
       "architect": {
@@ -27,10 +24,28 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "tsConfig": "./tsconfig.spec.json"
+            "tsConfig": "./tsconfig.spec.json",
+            "coverage": true,
+            "coverageReporters": ["html", "lcov"],
+            "coverageExclude": ["src/icons/*"],
+            "coverageThresholds": {
+              "statements": 80,
+              "branches": 80,
+              "functions": 80,
+              "lines": 80
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "packageManager": "pnpm"
   }
 }

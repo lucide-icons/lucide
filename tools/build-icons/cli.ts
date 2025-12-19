@@ -31,6 +31,7 @@ interface CliArguments {
   separateIconFileExportExtension?: string;
   aliasesFileExtension?: string;
   aliasImportFileExtension?: string;
+  useDefaultExports?: boolean;
   pretty?: boolean;
   output: string | undefined;
 }
@@ -62,6 +63,7 @@ const {
   separateIconFileExportExtension = undefined,
   aliasesFileExtension = '.js',
   aliasImportFileExtension = '',
+  useDefaultExports = true,
   pretty = true,
 } = cliArguments;
 
@@ -125,6 +127,7 @@ async function buildIcons() {
     icons,
     exportModuleNameCasing,
     importImportFileExtension,
+    useDefaultExports
   );
 }
 
