@@ -9,8 +9,11 @@ export type LucideIcons = { [key: string]: LucideIconData };
  * Represents a Lucide icon component that has `iconName` and `iconData` signals inherited from `LucideIconBase` and respective static members accessible without instantiating the component.
  */
 export type LucideIconComponentType = Type<{
-  iconName: Signal<Nullable<string>>;
-  iconData: Signal<Nullable<LucideIconData>>;
+  title: Signal<Nullable<string>>;
+  size: Signal<Nullable<number>>;
+  color: Signal<Nullable<string>>;
+  strokeWidth: Signal<Nullable<number>>;
+  absoluteStrokeWidth: Signal<Nullable<boolean>>;
 }> & {
   iconName: string;
   iconData: LucideIconData;
