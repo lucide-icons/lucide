@@ -3,7 +3,7 @@ name: Lucide Icons Checks
 on:
   pull_request:
     paths:
-      - packages/lucide-icons/**
+      - packages/icons/**
       - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
