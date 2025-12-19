@@ -51,6 +51,10 @@ bun add @lucide/angular
 
 For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/angular)
 
+## Migration guide
+
+Migrating from `lucide-angular`? Read our [comprehensive migration guide](./MIGRATION.md).
+
 ## Community
 
 Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.

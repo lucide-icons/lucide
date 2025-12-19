@@ -70,7 +70,7 @@
     "vitest": "^4.0.16"
   },
   "peerDependencies": {
-    "@angular/common": "13.x - 21.x",
-    "@angular/core": "13.x - 21.x"
+    "@angular/common": "17.x - 21.x",
+    "@angular/core": "17.x - 21.x"
   }
 }

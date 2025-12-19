@@ -259,9 +259,19 @@ export class Foobar {
 ## Troubleshooting
 
 ### The icon is not being displayed
-1. Ensure the icon is provided via `provideLucideIcons()` if using string names
+If using per-icon-components:
+1. Ensure that the icon component is being imported, if using per-icon-components
 2. Check that the icon name matches exactly (case-sensitive)
-3. Verify the icon is imported from `@lucide/angular` and not the legacy package
+
+If using the dynamic component:
+1. Ensure the icon is provided via `provideLucideIcons()` if using string names
+2. Verify the icon is imported from `@lucide/angular` and not the legacy package
 
 ### TypeScript errors?
 Make sure you're importing from `@lucide/angular` and not `lucide-angular`.
+
+### Icons render with wrong defaults
+Ensure `provideLucideConfig()` is used at the right level.
+
+## Migration guide
+Migrating from `lucide-angular`? Read our [comprehensive migration guide](https://github.com/lucide-icons/lucide/blob/main/packages/angular/MIGRATION.md).
