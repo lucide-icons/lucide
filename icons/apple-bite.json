@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "KnarliX"
+  ],
+  "tags": [
+    "fruit",
+    "food",
+    "healthy",
+    "snack",
+    "nutrition",
+    "fresh",
+    "produce",
+    "grocery",
+    "organic",
+    "harvest",
+    "vitamin",
+    "red",
+    "green",
+    "juicy",
+    "sweet",
+    "tart",
+    "bite",
+    "orchard",
+    "plant",
+    "core",
+    "raw",
+    "diet"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
