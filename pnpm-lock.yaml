@@ -261,10 +261,10 @@ importers:
         specifier: workspace:*
         version: link:../../tools/build-helpers
       '@vitest/browser-playwright':
-        specifier: ^4.0.16
+        specifier: ^4.0.12
         version: 4.0.16(playwright@1.57.0)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.93.2)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))(vitest@4.0.16)
       '@vitest/coverage-v8':
-        specifier: ^4.0.16
+        specifier: ^4.0.12
         version: 4.0.16(@vitest/browser@4.0.16(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.93.2)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))(vitest@4.0.16))(vitest@4.0.16)
       angular-eslint:
         specifier: 21.1.0
@@ -285,7 +285,7 @@ importers:
         specifier: ~5.9.2
         version: 5.9.3
       vitest:
-        specifier: ^4.0.16
+        specifier: ^4.0.12
         version: 4.0.16(@types/node@24.10.1)(@vitest/browser-playwright@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(less@4.2.0)(sass@1.93.2)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)
     publishDirectory: dist
 
@@ -16805,7 +16805,7 @@ snapshots:
 
   '@babel/parser@7.27.1':
     dependencies:
-      '@babel/types': 7.27.1
+      '@babel/types': 7.28.5
 
   '@babel/parser@7.27.2':
     dependencies:
@@ -21241,16 +21241,16 @@ snapshots:
 
   '@types/babel__generator@7.6.4':
     dependencies:
-      '@babel/types': 7.28.4
+      '@babel/types': 7.28.5
 
   '@types/babel__template@7.4.1':
     dependencies:
-      '@babel/parser': 7.27.1
-      '@babel/types': 7.28.4
+      '@babel/parser': 7.28.5
+      '@babel/types': 7.28.5
 
   '@types/babel__traverse@7.20.1':
     dependencies:
-      '@babel/types': 7.28.4
+      '@babel/types': 7.28.5
 
   '@types/body-parser@1.19.5':
     dependencies:
