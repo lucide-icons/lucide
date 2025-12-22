@@ -6,7 +6,7 @@
 
 - The library defines modern signal-based, standalone components, without zone.js based change detection.
 - Icons are consumed as standalone imports (one component per icon).
-- Dynamic icon registration is done via `provideLucideIcon()`, not using `NgModule`.
+- Dynamic icon registration is done via `provideLucideIcons()`, not using `NgModule`.
 - Static icons use per-icon components for better tree-shaking.
 - Dynamic icons still use a single dynamic component (`svg[lucideIcon]`).
 - Global defaults are configured via `provideLucideConfig()`.

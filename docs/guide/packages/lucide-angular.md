@@ -1,7 +1,7 @@
 # Lucide Angular
 
 ::: warning
-This documentation if for our legacy package for Angular.
+This documentation is for our legacy package for Angular.
 
 For our modern, standalone-first implementation, please refer to [`@lucide/angular`](./angular).
 :::

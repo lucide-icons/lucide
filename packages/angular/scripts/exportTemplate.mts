@@ -38,7 +38,7 @@ import { Component, signal } from '@angular/core';
  * @description Lucide SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
- * @see https://lucide.dev/guide/packages/lucide-angular - Documentation
+ * @see https://lucide.dev/guide/packages/angular - Documentation
  *
  * @param {Object} props - Lucide icons props and any valid SVG attribute
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}

@@ -6,7 +6,7 @@ import { toKebabCase } from './utils/to-kebab-case';
 /**
  * Injection token for providing Lucide icons by name.
  *
- * @internal Use {@link provideLucideConfig}
+ * @internal Use {@link provideLucideIcons}
  */
 export const LUCIDE_ICONS = new InjectionToken<LucideIcons>('Lucide icons', {
   factory: () => ({}),

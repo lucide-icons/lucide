@@ -28,7 +28,7 @@ export interface LucideConfig {
    * ```css
    * .lucide * {
    *   vector-effect: non-scaling-stroke;
-   * }`
+   * }
    * ```
    */
   absoluteStrokeWidth: boolean;

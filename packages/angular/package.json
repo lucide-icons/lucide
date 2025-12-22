@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
-    "directory": "packages/lucide-angular"
+    "directory": "packages/angular"
   },
   "publishConfig": {
     "directory": "dist"
