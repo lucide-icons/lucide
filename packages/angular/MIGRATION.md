@@ -29,6 +29,7 @@ Remove `lucide-angular`, add `@lucide/angular`, see http://lucide.dev/guide/pack
 
 #### NgModule based
 ```ts
+import { BrowserModule, NgModule } from '@angular/core';
 import { LucideAngularModule, AirVent, AlarmClock } from 'lucide-angular';
 
 @NgModule({
@@ -44,9 +45,11 @@ export class AppModule {}
 
 ```ts
 import { ApplicationConfig } from '@angular/core';
+import { LucideAngularModule, AirVent, AlarmClock } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    // ...
     importProvidersFrom(LucideAngularModule.pick({ AirVent, AlarmClock })),
   ]
 };
