@@ -1,60 +1,62 @@
 {
-  "name": "lucide-preact",
-  "description": "A Lucide icon library package for Preact applications.",
+  "name": "@lucide/vue",
   "version": "0.0.1",
+  "author": "Eric Fennis",
+  "description": "A Lucide icon library package for Vue applications.",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
-    "directory": "packages/lucide-preact"
+    "directory": "packages/vue"
   },
   "keywords": [
     "Lucide",
-    "Preact",
+    "Vue",
     "Feather",
     "Icons",
     "Icon",
     "SVG",
-    "Feather Icons",
-    "Fontawesome",
-    "Font Awesome"
+    "Feather Icons"
   ],
-  "author": "Eric Fennis",
-  "amdName": "lucide-preact",
-  "main": "dist/cjs/lucide-preact.js",
-  "module": "dist/esm/lucide-preact.js",
-  "typings": "dist/lucide-preact.d.ts",
+  "amdName": "lucide-vue",
+  "source": "build/lucide-vue.js",
+  "main": "dist/cjs/lucide-vue.js",
+  "module": "dist/esm/lucide-vue.js",
+  "typings": "dist/lucide-vue.d.ts",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
-  "sideEffects": false,
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.js",
+    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@preact/preset-vite": "^2.10.2",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/preact": "^3.2.3",
-    "jest-serializer-html": "^7.1.0",
-    "preact": "^10.19.2",
+    "@testing-library/vue": "^8.1.0",
+    "@vitejs/plugin-vue": "^4.6.2",
+    "@vue/test-utils": "2.4.5",
     "rollup": "^4.53.3",
-    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-dts": "^6.1.0",
     "typescript": "^5.8.3",
     "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "vitest": "^4.0.12",
+    "vue": "^3.4.21"
   },
   "peerDependencies": {
-    "preact": "^10.27.2"
+    "vue": ">=3.0.1"
   }
 }

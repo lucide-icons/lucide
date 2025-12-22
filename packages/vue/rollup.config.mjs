@@ -1,11 +1,11 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
+import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
-const packageName = 'LucideVueNext';
-const outputFileName = 'lucide-vue-next';
+const packageName = '@lucide/vue';
+const outputFileName = 'lucide-vue';
 const outputDir = 'dist';
-const inputs = ['src/lucide-vue-next.ts'];
+const inputs = ['src/lucide-vue.ts'];
 const bundles = [
   {
     format: 'cjs',

@@ -74,7 +74,7 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
         },
         {
           text: 'Lucide Vue',
-          link: '/guide/packages/lucide-vue-next',
+          link: '/guide/packages/lucide-vue',
         },
         {
           text: 'Lucide Svelte',

@@ -24,9 +24,7 @@
   "author": "Eric Fennis",
   "amdName": "lucide-react",
   "main": "dist/cjs/lucide-react.js",
-  "main:umd": "dist/umd/lucide-react.js",
   "module": "dist/esm/lucide-react.js",
-  "unpkg": "dist/umd/lucide-react.min.js",
   "typings": "dist/lucide-react.d.ts",
   "sideEffects": false,
   "files": [
@@ -54,7 +52,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.37",
     "@vitejs/plugin-react": "^4.4.1",

@@ -9,9 +9,3 @@ strikethrough
 touchpad
 ungroup
 toc
-
-# Brands
-codepen
-codesandbox
-dribbble
-x.com

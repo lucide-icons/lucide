@@ -61,7 +61,7 @@
     "@lucide/helpers": "workspace:*",
     "@sveltejs/package": "^2.3.10",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/svelte": "^5.2.7",
     "@tsconfig/svelte": "^5.0.4",
     "jest-serializer-html": "^7.1.0",
