@@ -52,10 +52,12 @@ describe('buildLucideIconNode', () => {
     expect(HouseSVG[1]['stroke-width']).toBe('12');
   });
 
-  it('should set non-scaling-stroke', () => {
+  it('should set non-scaling-stroke to child nodes', () => {
     const HouseSVG = buildLucideIconNode(House, { absoluteStrokeWidth: true });
 
-    expect(HouseSVG[1]['vector-effect']).toBe('non-scaling-stroke');
+    for (const node of HouseSVG[2]!) {
+      expect(node[1]['vector-effect']).toBe('non-scaling-stroke');
+    }
   });
 
   it('should not set non-scaling-stroke', () => {
