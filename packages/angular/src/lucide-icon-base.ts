@@ -42,7 +42,7 @@ function transformNumericStringInput(
     '[attr.height]': 'size().toString(10)',
     '[attr.stroke]': 'color()',
     '[attr.stroke-width]': 'computedStrokeWidth()',
-    '[attr.aria-hidden]': 'ariaHidden()',
+    '[attr.aria-hidden]': '!title()',
   },
 })
 export abstract class LucideIconBase {
@@ -51,9 +51,6 @@ export abstract class LucideIconBase {
   protected readonly iconConfig = inject(LUCIDE_CONFIG);
   protected readonly elRef = inject(ElementRef);
   protected readonly renderer = inject(Renderer2);
-  protected readonly ariaHidden = computed(() => {
-    return !this.title();
-  });
   /**
    * An optional accessible label for the icon.
    * - If provided, it will add the title as an [`<svg:title>` element](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title).

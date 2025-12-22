@@ -219,12 +219,12 @@ describe('LucideIcon', () => {
     it('should not set aria-hidden when title is set', () => {
       title.set('Foobar');
       fixture.detectChanges();
-      expect(getSvgAttribute('aria-hidden')).toBeUndefined();
+      expect(getSvgAttribute('aria-hidden')).toBe('false');
     });
     it('should set aria-hidden if no title is provided', () => {
       title.set(undefined);
       fixture.detectChanges();
-      expect(getSvgAttribute('aria-hidden')).toBeUndefined();
+      expect(getSvgAttribute('aria-hidden')).toBe('true');
     });
   });
 

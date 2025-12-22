@@ -5,6 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  '@testing-library/jest-dom': 6.6.3
   '@vitest/*': 4.0.12
   axios: ^1.12.0
   cross-spawn: 7.0.5
@@ -312,8 +313,8 @@ importers:
         specifier: ^10.4.0
         version: 10.4.1
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       astro:
         specifier: ^5.16.0
         version: 5.16.0(@types/node@24.10.1)(db0@0.3.4)(ioredis@5.8.2)(jiti@2.6.1)(less@4.2.0)(rollup@4.53.3)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.0)
@@ -348,8 +349,8 @@ importers:
         specifier: ^6.0.2
         version: 6.0.3(rollup@4.53.3)
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
@@ -490,8 +491,8 @@ importers:
         specifier: ^2.10.2
         version: 2.10.2(@babel/core@7.28.5)(preact@10.27.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/preact':
         specifier: ^3.2.3
         version: 3.2.4(preact@10.27.2)
@@ -529,8 +530,8 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/react':
         specifier: ^14.1.2
         version: 14.3.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -580,8 +581,8 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/react':
         specifier: ^14.1.2
         version: 14.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -652,8 +653,8 @@ importers:
         specifier: ^0.8.10
         version: 0.8.10(@solidjs/router@0.11.5(solid-js@1.9.10))(solid-js@1.9.10)
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       babel-preset-solid:
         specifier: ^1.8.12
         version: 1.9.10(@babel/core@7.28.5)(solid-js@1.9.10)
@@ -677,7 +678,7 @@ importers:
         version: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)
       vite-plugin-solid:
         specifier: ^2.11.6
-        version: 2.11.10(@testing-library/jest-dom@6.9.1)(solid-js@1.9.10)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
+        version: 2.11.10(@testing-library/jest-dom@6.6.3)(solid-js@1.9.10)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
       vitest:
         specifier: 4.0.12
         version: 4.0.12(@types/debug@4.1.12)(@types/node@24.10.1)(@vitest/ui@4.0.12)(jiti@2.6.1)(jsdom@27.3.0)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)
@@ -724,8 +725,8 @@ importers:
         specifier: ^2.4.2
         version: 2.5.3(svelte@4.2.20)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/svelte':
         specifier: ^4.0.2
         version: 4.2.3(svelte@4.2.20)
@@ -769,8 +770,8 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/vue':
         specifier: ^8.1.0
         version: 8.1.0(@vue/compiler-sfc@3.5.24)(vue@3.5.24(typescript@5.9.3))
@@ -820,11 +821,11 @@ importers:
         specifier: ^5.0.3
         version: 5.1.1(svelte@5.43.14)(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/svelte':
-        specifier: ^5.2.7
-        version: 5.2.9(svelte@5.43.14)(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))(vitest@4.0.12)
+        specifier: 5.2.7
+        version: 5.2.7(svelte@5.43.14)(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))(vitest@4.0.12)
       '@tsconfig/svelte':
         specifier: ^5.0.4
         version: 5.0.6
@@ -865,8 +866,8 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@testing-library/jest-dom':
-        specifier: ^6.6.3
-        version: 6.9.1
+        specifier: 6.6.3
+        version: 6.6.3
       '@testing-library/vue':
         specifier: ^8.1.0
         version: 8.1.0(@vue/compiler-sfc@3.5.24)(vue@3.5.24(typescript@5.9.3))
@@ -6101,8 +6102,8 @@ packages:
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
     engines: {node: '>=14'}
 
-  '@testing-library/jest-dom@6.9.1':
-    resolution: {integrity: sha512-zIcONa+hVtVSSep9UT3jZ5rizo2BsxgyDYU7WFD5eICBE7no3881HGeb/QkGfsJs6JTkY1aQhT7rIPC7e+0nnA==}
+  '@testing-library/jest-dom@6.6.3':
+    resolution: {integrity: sha512-IteBhl4XqYNkM54f4ejhLRJiZNqcSCoXUOG2CPK7qbD322KjQozM4kHQOfkG2oln9b9HTYqs+Sae8vBATubxxA==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
 
   '@testing-library/preact@3.2.4':
@@ -6124,8 +6125,8 @@ packages:
     peerDependencies:
       svelte: ^3 || ^4 || ^5
 
-  '@testing-library/svelte@5.2.9':
-    resolution: {integrity: sha512-p0Lg/vL1iEsEasXKSipvW9nBCtItQGhYvxL8OZ4w7/IDdC+LGoSJw4mMS5bndVFON/gWryitEhMr29AlO4FvBg==}
+  '@testing-library/svelte@5.2.7':
+    resolution: {integrity: sha512-aGhUaFmEXEVost4QOsbHUUbHLwi7ZZRRxAHFDO2Cmr0BZD3/3+XvaYEPq70Rdw0NRNjdqZHdARBEcrCOkPuAqw==}
     engines: {node: '>= 10'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
@@ -7735,6 +7736,10 @@ packages:
   chai@6.2.1:
     resolution: {integrity: sha512-p4Z49OGG5W/WBCPSS/dH3jQ73kD6tiMmUM+bckNK6Jr5JHMG3k9bg/BvKR8lKmtVBKmOiuVaV2ws8s9oSbwysg==}
     engines: {node: '>=18'}
+
+  chalk@3.0.0:
+    resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
+    engines: {node: '>=8'}
 
   chalk@4.1.0:
     resolution: {integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==}
@@ -14617,7 +14622,7 @@ packages:
   vite-plugin-solid@2.11.10:
     resolution: {integrity: sha512-Yr1dQybmtDtDAHkii6hXuc1oVH9CPcS/Zb2jN/P36qqcrkNnVPsMTzQ06jyzFPFjj3U1IYKMVt/9ZqcwGCEbjw==}
     peerDependencies:
-      '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
+      '@testing-library/jest-dom': 6.6.3
       solid-js: ^1.7.2
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
     peerDependenciesMeta:
@@ -21005,13 +21010,14 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.9.1':
+  '@testing-library/jest-dom@6.6.3':
     dependencies:
       '@adobe/css-tools': 4.4.2
       aria-query: 5.3.2
+      chalk: 3.0.0
       css.escape: 1.5.1
       dom-accessibility-api: 0.6.3
-      picocolors: 1.1.1
+      lodash: 4.17.21
       redent: 3.0.0
 
   '@testing-library/preact@3.2.4(preact@10.27.2)':
@@ -21040,7 +21046,7 @@ snapshots:
       '@testing-library/dom': 9.3.4
       svelte: 4.2.20
 
-  '@testing-library/svelte@5.2.9(svelte@5.43.14)(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))(vitest@4.0.12)':
+  '@testing-library/svelte@5.2.7(svelte@5.43.14)(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))(vitest@4.0.12)':
     dependencies:
       '@testing-library/dom': 10.4.1
       svelte: 5.43.14
@@ -23131,6 +23137,11 @@ snapshots:
   ccount@2.0.1: {}
 
   chai@6.2.1: {}
+
+  chalk@3.0.0:
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
 
   chalk@4.1.0:
     dependencies:
@@ -31829,7 +31840,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-solid@2.11.10(@testing-library/jest-dom@6.9.1)(solid-js@1.9.10)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)):
+  vite-plugin-solid@2.11.10(@testing-library/jest-dom@6.6.3)(solid-js@1.9.10)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)):
     dependencies:
       '@babel/core': 7.28.5
       '@types/babel__core': 7.20.5
@@ -31840,7 +31851,7 @@ snapshots:
       vite: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)
       vitefu: 1.0.5(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.97.1)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
     optionalDependencies:
-      '@testing-library/jest-dom': 6.9.1
+      '@testing-library/jest-dom': 6.6.3
     transitivePeerDependencies:
       - supports-color
 
