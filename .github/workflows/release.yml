@@ -61,6 +61,7 @@ jobs:
             '@lucide/angular',
             '@lucide/astro',
             '@lucide/svelte',
+            '@lucide/vue',
           ]
     steps:
       - uses: actions/checkout@v6

@@ -30,14 +30,7 @@ This package includes the following implementations of Lucide icons:
 
 SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
 
-For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using:
-
-- [lucide](lucide)
-- [lucide-react](lucide-react)
-- [lucide-vue](lucide-vue)
-- [lucide-vue-next](lucide-vue-next)
-- [lucide-angular](lucide-angular)
-- [lucide-preact](lucide-preact)
+For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages).
 :::
 
 ## Installation

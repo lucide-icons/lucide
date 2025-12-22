@@ -29,7 +29,7 @@ export type AliasDeprecation = {
   toBeRemovedInVersion: string;
 };
 
-export type IconDeprecationReason = 'icon.brand' | '';
+export type IconDeprecationReason = 'icon.renamed' | '';
 
 export type IconMetadataBase = {
   toBeRemovedInVersion?: string;

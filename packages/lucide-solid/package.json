@@ -74,7 +74,7 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^6.0.4",
     "@solidjs/testing-library": "^0.8.10",
-    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/jest-dom": "^6.6.3",
     "babel-preset-solid": "^1.8.12",
     "jest-serializer-html": "^7.1.0",
     "rollup": "^4.53.3",

@@ -3,7 +3,7 @@ import type { FunctionalComponent } from 'vue';
 import { IconNode, LucideProps } from './types';
 import Icon from './Icon';
 
-var showDeprecationWarning = true;
+// Create interface extending SVGAttributes
 
 /**
  * Create a Lucide icon component
@@ -13,15 +13,8 @@ var showDeprecationWarning = true;
  */
 const createLucideIcon =
   (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
-  (props, { slots, attrs }) => {
-    if (showDeprecationWarning) {
-      console.warn(
-        '[lucide-vue-nuxt]: This package is renamed to `@lucide/vue`. Please update your imports to avoid potential issues in the future.',
-      );
-      showDeprecationWarning = false;
-    }
-
-    return h(
+  (props, { slots, attrs }) =>
+    h(
       Icon,
       {
         ...attrs,
@@ -31,6 +24,5 @@ const createLucideIcon =
       },
       slots,
     );
-  };
 
 export default createLucideIcon;
