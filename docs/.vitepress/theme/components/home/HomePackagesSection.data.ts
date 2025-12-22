@@ -33,7 +33,7 @@ export default {
           label: 'Lucide documentation for Preact',
         },
         {
-          name: 'lucide-angular',
+          name: 'angular',
           logo: '/framework-logos/angular.svg',
           label: 'Lucide documentation for Angular',
         },

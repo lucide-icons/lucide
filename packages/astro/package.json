@@ -56,7 +56,6 @@
     "prettier": "^3.4.2",
     "typescript": "^5.8.3",
     "vite": "^6.3.6",
-    "vitest": "^4.0.12",
     "astro": "^5.16.0"
   },
   "peerDependencies": {

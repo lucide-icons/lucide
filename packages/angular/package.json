@@ -1,0 +1,73 @@
+{
+  "name": "@lucide/angular",
+  "description": "A Lucide icon library package for Angular applications.",
+  "version": "0.0.1",
+  "author": "SMAH1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/angular"
+  },
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "scripts": {
+    "ng": "ng",
+    "watch": "ng build --watch --configuration development",
+    "prebuild": "pnpm clean && pnpm copy:license && pnpm build:icons",
+    "build": "pnpm prebuild && pnpm build:ng",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=lucide-angular.ts --useDefaultExports=0",
+    "build:ng": "ng build --configuration production",
+    "test": "pnpm prebuild && ng test --no-watch",
+    "test:watch": "ng test",
+    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
+    "e2e": "ng e2e",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "devDependencies": {
+    "@angular-eslint/builder": "~21.1.0",
+    "@angular-eslint/eslint-plugin": "~21.1.0",
+    "@angular-eslint/eslint-plugin-template": "~21.1.0",
+    "@angular-eslint/schematics": "~21.1.0",
+    "@angular-eslint/template-parser": "~21.1.0",
+    "@angular/build": "^21.0.3",
+    "@angular/cli": "^21.0.3",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/compiler-cli": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "workspace:*",
+    "@vitest/browser-playwright": "^4.0.12",
+    "angular-eslint": "21.1.0",
+    "ng-packagr": "^21.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "typescript": "~5.9.2"
+  },
+  "peerDependencies": {
+    "@angular/common": "17.x - 21.x",
+    "@angular/core": "17.x - 21.x"
+  }
+}
