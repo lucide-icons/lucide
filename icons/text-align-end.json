@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "text",
+    "alignment",
+    "right"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "align-right",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

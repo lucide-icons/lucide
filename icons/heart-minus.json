@@ -1,7 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Ayberkyvs"
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "Ayberkyvs",
+    "jguddas"
   ],
   "tags": [
     "unlike",
