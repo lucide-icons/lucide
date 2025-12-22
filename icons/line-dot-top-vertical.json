@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nathan-de-pachtere"
+  ],
+  "tags": [
+    "code",
+    "version control",
+    "waypoint",
+    "stop",
+    "station",
+    "last",
+    "end"
+  ],
+  "categories": [
+    "development",
+    "navigation"
+  ]
+}
