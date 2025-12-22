@@ -1,17 +1,16 @@
 <p align="center">
   <a href="https://github.com/lucide-icons/lucide">
-    <img src="https://lucide.dev/package-logos/lucide.svg" alt="Lucide icon library for web applications." width="540">
+    <img src="https://lucide.dev/package-logos/icons.svg" alt="" width="540">
   </a>
 </p>
 
 <p align="center">
-Lucide icon library for web applications.
+Lucide helper library that exports icon data.
 </p>
 
 <div align="center">
-
-  [![npm](https://img.shields.io/npm/v/lucide?color=blue)](https://www.npmjs.com/package/lucide)
-  ![NPM Downloads](https://img.shields.io/npm/dw/lucide)
+  [![npm](https://img.shields.io/npm/v/@lucide/icons?color=blue)](https://www.npmjs.com/package/@lucide/icons)
+  ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/icons)
   [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
 </div>
 
@@ -25,41 +24,41 @@ Lucide icon library for web applications.
   <a href="https://lucide.dev/license">License</a>
 </p>
 
-# Lucide
+# @lucide/icons
 
-Implementation of the lucide icon library for web applications.
+A helper library that exports Lucide icon data in a tree-shakable format, also providing utilities for dynamic importing icons.
 
 ## Installation
 
 ```sh
-pnpm add lucide
+pnpm add @lucide/icons
 ```
 
 ```sh
-npm install lucide
+npm install @lucide/icons
 ```
 
 ```sh
-yarn add lucide
+yarn add @lucide/icons
 ```
 
 ```sh
-bun add lucide
+bun add @lucide/icons
 ```
 
 ### CDN
 
 ```html
 <!-- Development version -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://unpkg.com/@lucide/icons@latest/dist/umd/lucide.js"></script>
 
 <!-- Production version -->
-<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/@lucide/icons@latest"></script>
 ```
 
 ## Documentation
 
-For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide)
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/icons)
 
 ## Community
 

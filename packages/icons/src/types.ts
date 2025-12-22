@@ -39,4 +39,4 @@ export type LucideBuildParams = {
    * Any extra attributes to pass to the SVG element.
    */
   attributes?: SVGProps;
-} & ({ size: number } | { width: number; height: number });
+} & ({ size?: number } | { width?: number; height?: number });

@@ -31,26 +31,8 @@
       }
     ]
   },
-  "@lucide/icons": {
-    "docsAlias": "lucide-icons",
-    "packageDirname": "lucide-icons",
-    "order": 2,
-    "icon": "ts",
-    "shields": [
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/v/@lucide/icons",
-        "href": "https://www.npmjs.com/package/@lucide/icons"
-      },
-      {
-        "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/@lucide/icons",
-        "href": "https://www.npmjs.com/package/@lucide/icons"
-      }
-    ]
-  },
   "@lucide/vue": {
-    "order": 3,
+    "order": 2,
     "icon": "vue",
     "docsAlias": "lucide-vue",
     "packageDirname": "vue",
@@ -58,7 +40,7 @@
     ]
   },
   "lucide-svelte": {
-    "order": 4,
+    "order": 3,
     "icon": "svelte",
     "shields": [
       {
@@ -74,7 +56,7 @@
     ]
   },
   "lucide-solid": {
-    "order": 5,
+    "order": 4,
     "icon": "solid",
     "shields": [
       {
@@ -90,7 +72,7 @@
     ]
   },
   "lucide-react-native": {
-    "order": 6,
+    "order": 5,
     "icon": "react-native",
     "shields": [
       {
@@ -106,7 +88,7 @@
     ]
   },
   "lucide-angular": {
-    "order": 7,
+    "order": 6,
     "icon": "angular",
     "shields": [
       {
@@ -122,7 +104,7 @@
     ]
   },
   "lucide-preact": {
-    "order": 8,
+    "order": 7,
     "icon": "preact",
     "shields": [
       {
@@ -140,7 +122,7 @@
   "@lucide/astro": {
     "docsAlias": "lucide-astro",
     "packageDirname": "astro",
-    "order": 9,
+    "order": 8,
     "icon": "astro",
     "iconDark": "astro-dark",
     "shields": [
@@ -157,7 +139,7 @@
     ]
   },
   "lucide-static": {
-    "order": 10,
+    "order": 9,
     "icon": "svg",
     "shields": [
       {
@@ -169,6 +151,24 @@
         "alt": "npm",
         "src": "https://img.shields.io/npm/dw/lucide-static",
         "href": "https://www.npmjs.com/package/lucide-static"
+      }
+    ]
+  },
+  "@lucide/icons": {
+    "docsAlias": "icons",
+    "packageDirname": "icons",
+    "order": 10,
+    "icon": "ts",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
       }
     ]
   }
