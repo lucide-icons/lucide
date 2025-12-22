@@ -33,13 +33,18 @@ function buildLucideIconNode(icon: LucideIcon, params: LucideBuildParams = {}): 
     ...('height' in params && params['height'] && { height: params['height'].toString(10) }),
     ...('strokeWidth' in params &&
       params['strokeWidth'] && { 'stroke-width': params['strokeWidth'].toString(10) }),
-    ...('absoluteStrokeWidth' in params &&
-      params['absoluteStrokeWidth'] && { 'vector-effect': 'non-scaling-stroke' }),
     class: `lucide lucide-${icon.name} ${params['className'] ?? ''}`.trim(),
     viewBox: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
     ...('attributes' in params && params.attributes),
   };
-  return ['svg', attributes, icon.node];
+  return [
+    'svg',
+    attributes,
+    icon.node.map(([name, attrs]) => [
+      name,
+      params['absoluteStrokeWidth'] ? { 'vector-effect': 'non-scaling-stroke', ...attrs } : attrs,
+    ]),
+  ];
 }
 
 export default buildLucideIconNode;

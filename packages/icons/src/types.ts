@@ -28,7 +28,7 @@ export type LucideBuildParams = {
    */
   strokeWidth?: number;
   /**
-   * @deprecated Use vector-effect: non-scaling-stroke instead.
+   * Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
    */
   absoluteStrokeWidth?: boolean;
   /**

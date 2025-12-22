@@ -72,7 +72,7 @@ The following parameters are supported (names reflect the current implementation
 | `width`               | `number`                 | Sets `width` only.                                                                 |
 | `height`              | `number`                 | Sets `height` only.                                                                |
 | `strokeWidth`         | `number`                 | Sets `stroke-width` (defaults to 2).                                               |
-| `absoluteStrokeWidth` | `boolean`                | Adds `vector-effect="non-scaling-stroke"`.                                         |
+| `absoluteStrokeWidth` | `boolean`                | Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.                   |
 | `className`           | `string`                 | Appended to the generated `class` attribute.                                       |
 | `attributes`          | `Record<string, string>` | Add or override any generated SVG attributes (including `class`, `viewBox`, etc.). |
 
