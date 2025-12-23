@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "linus-sch"
+  ],
+  "tags": [
+    "brainstorm",
+    "diagramm",
+    "flow",
+    "hierarchy",
+    "nodes",
+    "organization",
+    "structure",
+    "tree",
+    "workflow"
+  ],
+  "categories": [
+    "design",
+    "charts"
+  ]
+}
