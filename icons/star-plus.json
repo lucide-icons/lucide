@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "KnarliX"
+  ],
+  "tags": [
+    "bookmark",
+    "favorite",
+    "like",
+    "review",
+    "rating",
+    "plus",
+    "add",
+    "join",
+    "star"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "shapes",
+    "multimedia",
+    "weather",
+    "emoji",
+    "gaming"
+  ]
+}
