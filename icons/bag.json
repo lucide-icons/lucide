@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KnarliX"
+  ],
+  "tags": [
+    "bag",
+    "luggage",
+    "carry",
+    "container",
+    "storage",
+    "shopping",
+    "travel",
+    "inventory",
+    "items",
+    "portable"
+  ],
+  "categories": [
+    "shopping",
+    "transportation",
+    "travel"
+  ]
+}
