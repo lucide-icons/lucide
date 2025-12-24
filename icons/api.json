@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KnarliX"
+  ],
+  "tags": [
+    "api",
+    "interface",
+    "integration",
+    "developer",
+    "backend",
+    "service",
+    "endpoint",
+    "system",
+    "framework",
+    "connection"
+  ],
+  "categories": [
+    "development",
+    "account"
+  ]
+}
