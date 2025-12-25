@@ -101,9 +101,11 @@ const value = computed({
 }
 
 .color-picker:hover,
-.color-picker:focus {
+.color-picker:focus-within {
   border-color: var(--vp-c-brand);
-  background: var(--vp-c-bg-alt);
+}
+.color-picker:focus-within {
+  background-color: var(--vp-c-bg);
 }
 
 .color-input[value='currentColor'] {

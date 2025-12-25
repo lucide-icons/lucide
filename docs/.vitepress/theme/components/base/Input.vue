@@ -115,7 +115,9 @@ defineExpose({
 .input:hover,
 .input:focus {
   border-color: var(--vp-c-brand);
-  background: var(--vp-c-bg-alt);
+}
+.input:focus {
+  background-color: var(--vp-c-bg);
 }
 
 .input.has-icon {
@@ -162,5 +164,8 @@ defineExpose({
   z-index: 1;
   color: var(--vp-c-text-2);
   pointer-events: none;
+}
+.input-wrapper > svg:has(+ .input.has-icon:focus) {
+  color: var(--vp-c-text-1);
 }
 </style>
