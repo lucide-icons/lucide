@@ -1,4 +1,5 @@
 ---
+title: Categories
 layout: page
 outline: 2
 outlineTitle: Categories
