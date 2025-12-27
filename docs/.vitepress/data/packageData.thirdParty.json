@@ -78,7 +78,7 @@
     "documentation": "https://github.com/swisnl/nuxt-lucide-icons/blob/main/README.md"
   },
   {
-    "name": "lucide-lustre",
+    "name": "lucide_lustre",
     "description": "A library providing https://lucide.dev icons to lustre.",
     "icon": "/framework-logos/lustre.webp",
     "shields": [
@@ -98,7 +98,7 @@
   },
   {
     "name": "lucide_icons_flutter",
-    "description": "A library providing https://lucide.dev icons to lustre.",
+    "description": "A library providing https://lucide.dev icons to Flutter.",
     "icon": "/framework-logos/flutter.svg",
     "shields": [
       {
@@ -152,5 +152,24 @@
     ],
     "source": "https://github.com/kaugesaar/lucide-go",
     "documentation": "https://github.com/kaugesaar/lucide-go/blob/master/README.md"
+  },
+  {
+    "name": "lucide-rails",
+    "description": "Ruby on Rails views helper method for rendering Lucide icons.",
+    "icon": "/framework-logos/rails.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/gem/v/lucide-rails",
+        "href": "https://rubygems.org/gems/lucide-rails"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/gem/dt/lucide-rails",
+        "href": "https://rubygems.org/gems/lucide-rails"
+      }
+    ],
+    "source": "https://github.com/heyvito/lucide-rails",
+    "documentation": "https://github.com/heyvito/lucide-rails/blob/master/README.md"
   }
 ]
