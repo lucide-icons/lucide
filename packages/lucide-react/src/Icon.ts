@@ -32,6 +32,12 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       className = '',
       children,
       iconNode,
+      strokeLinecap,
+      strokeLinejoin,
+      strokeDasharray,
+      strokeDashoffset,
+      opacity,
+      strokeOpacity,
       ...rest
     },
     ref,
@@ -47,6 +53,13 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         strokeWidth: absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
         className: mergeClasses('lucide', className),
         ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
+        // Pass through SVG stroke attributes only when explicitly provided
+        ...(strokeLinecap && { strokeLinecap }),
+        ...(strokeLinejoin && { strokeLinejoin }),
+        ...(strokeDasharray !== undefined && { strokeDasharray }),
+        ...(strokeDashoffset !== undefined && { strokeDashoffset }),
+        ...(opacity !== undefined && { opacity }),
+        ...(strokeOpacity !== undefined && { strokeOpacity }),
         ...rest,
       },
       [
