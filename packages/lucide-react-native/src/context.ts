@@ -37,7 +37,7 @@ export function LucideProvider({
     [size, color, strokeWidth, absoluteStrokeWidth],
   );
 
-  return createElement(LucideContext.Provider, { value }, children)
+  return createElement(LucideContext.Provider, { value }, children);
 }
 
 export const useLucideContext = () => useContext(LucideContext);
