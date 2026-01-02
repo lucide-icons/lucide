@@ -1,4 +1,4 @@
-import { createContext, type ReactNode, useContext, useMemo } from 'react';
+import { createContext, createElement, type ReactNode, useContext, useMemo } from 'react';
 
 const LucideContext = createContext<{
   size?: number;
@@ -37,7 +37,7 @@ export function LucideProvider({
     [size, color, strokeWidth, absoluteStrokeWidth],
   );
 
-  return <LucideContext.Provider value={value}>{children}</LucideContext.Provider>;
+  return createElement(LucideContext.Provider, { value }, children)
 }
 
 export const useLucideContext = () => useContext(LucideContext);

@@ -37,6 +37,7 @@ export function LucideProvider({
   return createElement(
     LucideContext.Provider,
     { value },
+    children,
   )
 }
 

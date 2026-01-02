@@ -1,4 +1,4 @@
-import { createContext, type ComponentChildren } from 'preact';
+import { createContext, h, type ComponentChildren } from 'preact';
 import { useContext, useMemo } from 'preact/hooks';
 
 const LucideContext = createContext<{
@@ -43,7 +43,7 @@ export function LucideProvider({
     [size, color, strokeWidth, absoluteStrokeWidth, className],
   );
 
-  return <LucideContext.Provider value={value}>{children}</LucideContext.Provider>;
+  return h(LucideContext.Provider, { value }, children);
 }
 
 export const useLucideContext = () => useContext(LucideContext);
