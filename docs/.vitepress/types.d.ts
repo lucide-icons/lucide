@@ -1,4 +1,4 @@
-import { IconNode } from 'lucide-vue-next/src/createLucideIcon';
+import { type IconNode } from 'lucide-vue-next/src/types';
 import Vue from 'vue';
 
 declare module '*.vue' {
@@ -26,7 +26,8 @@ declare module 'node:module' {
 }
 
 declare module '*.node.json' {
-  export default IconNode;
+  const value: IconNode;
+  export default value;
 }
 
 declare global {

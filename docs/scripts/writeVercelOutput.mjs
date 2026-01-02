@@ -32,7 +32,7 @@ const vercelRouteConfig = {
     },
     {
       src: '(?<url>/api/.*)',
-      dest: '/__fallback?url=$url',
+      dest: '/__nitro?url=$url',
     },
     ...iconAliasesRedirectRoutes,
   ],

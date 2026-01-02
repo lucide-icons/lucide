@@ -101,6 +101,7 @@ async function init() {
       useCSSVars: false,
       outSVGReact: false,
       outSVGPath: false,
+      addLigatures: true,
       svgicons2svgfont: {
         fontHeight: 1000, // At least 1000 is recommended
         normalize: false,
