@@ -1,7 +1,7 @@
 import { createElement, forwardRef } from 'react';
 import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import { IconNode, LucideProps } from './types';
-import Icon from './Icon';
+import Icon from './Icon.tsx';
 
 /**
  * Create a Lucide icon component
