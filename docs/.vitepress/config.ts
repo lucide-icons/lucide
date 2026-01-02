@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
-import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import container from 'markdown-it-container';
 import { renderSandbox } from 'vitepress-plugin-sandpack';
 import sidebar from './sidebar';
@@ -22,7 +22,7 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
-      md.use(sandpackPlugin)
+      md.use(sandpackPlugin);
       // md.use(container, 'sandbox', {
       //   render (tokens, idx) {
       //     console.log(tokens);
@@ -53,9 +53,7 @@ export default defineConfig({
         },
       ],
     },
-    plugins: [
-      groupIconVitePlugin()
-    ],
+    plugins: [groupIconVitePlugin()],
   },
   head: [
     [

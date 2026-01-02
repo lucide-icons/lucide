@@ -21,9 +21,7 @@ import type MarkdownIt from 'markdown-it';
 type SnackParams = Record<string, string>;
 
 function parseParams(paramString = ''): SnackParams {
-  const params = Object.fromEntries(
-    new URLSearchParams(paramString),
-  ) as SnackParams;
+  const params = Object.fromEntries(new URLSearchParams(paramString)) as SnackParams;
 
   if (!params.platform) {
     params.platform = 'web';
@@ -36,8 +34,7 @@ export default function snackPlayerPlugin(md: MarkdownIt) {
   const escapeHtml = md.utils.escapeHtml;
   const defaultFence =
     md.renderer.rules.fence ||
-    ((tokens, idx, options, env, self) =>
-      self.renderToken(tokens, idx, options));
+    ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
 
   md.renderer.rules.fence = (tokens, idx, options, env, self) => {
     const token = tokens[idx];
@@ -56,9 +53,7 @@ export default function snackPlayerPlugin(md: MarkdownIt) {
     const params = parseParams(paramString);
 
     // Gather necessary params
-    const name = params.name
-      ? decodeURIComponent(params.name)
-      : 'Example';
+    const name = params.name ? decodeURIComponent(params.name) : 'Example';
     const description = params.description
       ? decodeURIComponent(params.description)
       : 'Example usage';
@@ -75,11 +70,9 @@ export default function snackPlayerPlugin(md: MarkdownIt) {
     );
 
     const dependencies =
-      'react-native-safe-area-context' +
-      (params.dependencies ? `,${params.dependencies}` : '');
+      'react-native-safe-area-context' + (params.dependencies ? `,${params.dependencies}` : '');
     const platform = params.platform ?? 'web';
-    const supportedPlatforms =
-      params.supportedPlatforms ?? 'ios,android,web';
+    const supportedPlatforms = params.supportedPlatforms ?? 'ios,android,web';
     const theme = params.theme ?? 'light';
     const preview = params.preview ?? 'true';
     const loading = params.loading ?? 'lazy';
@@ -94,15 +87,11 @@ export default function snackPlayerPlugin(md: MarkdownIt) {
       ` data-snack-files="${files}"` +
       ` data-snack-dependencies="${escapeHtml(dependencies)}"` +
       ` data-snack-platform="${escapeHtml(platform)}"` +
-      ` data-snack-supported-platforms="${escapeHtml(
-        supportedPlatforms,
-      )}"` +
+      ` data-snack-supported-platforms="${escapeHtml(supportedPlatforms)}"` +
       // ` data-snack-theme="${escapeHtml(theme)}"` +
       ` data-snack-preview="${escapeHtml(preview)}"` +
       ` data-snack-loading="${escapeHtml(loading)}"` +
-      ` data-snack-device-appearance="${escapeHtml(
-        deviceAppearance,
-      )}"` +
+      ` data-snack-device-appearance="${escapeHtml(deviceAppearance)}"` +
       ` data-snack-device-frame="false"` +
       `></SnackPlayer>`
     );

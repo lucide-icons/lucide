@@ -1,7 +1,7 @@
 import { h, nextTick, onMounted, watch } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import './style.css';
-import 'virtual:group-icons.css'
+import 'virtual:group-icons.css';
 import { Theme, useRouter } from 'vitepress';
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue';
 import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue';
@@ -29,7 +29,7 @@ const theme: Partial<Theme> = {
     app.provide(ICON_STYLE_CONTEXT, iconStyleContext);
     app.provide(CATEGORY_VIEW_CONTEXT, categoryViewContext);
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
-    app.component('SnackPlayer', SnackPlayer)
+    app.component('SnackPlayer', SnackPlayer);
     // app.component('Sandpack', Sandpack);
   },
 };

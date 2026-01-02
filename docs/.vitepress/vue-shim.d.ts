@@ -46,5 +46,4 @@ declare global {
       append(container: Element): void;
     };
   }
-
 }

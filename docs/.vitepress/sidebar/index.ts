@@ -7,7 +7,7 @@ import { solidSidebar } from './solid';
 import { preactSidebar } from './preact';
 import { reactNativeSidebar } from './react-native';
 
-type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar']
+type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'];
 
 export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
   {
@@ -18,7 +18,7 @@ export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
       { text: 'Comparison', link: '/guide/comparison' },
     ],
   },
-]
+];
 
 const sidebar: Sidebar = {
   '/guide': [{ text: '', link: '/' }],
@@ -31,7 +31,7 @@ const sidebar: Sidebar = {
   '/guide/react-native/': reactNativeSidebar,
   '/resources': [
     {
-      text: "Community",
+      text: 'Community',
     },
     {
       text: 'Designing icons',

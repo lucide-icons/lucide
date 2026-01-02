@@ -456,9 +456,7 @@ const SvgPreview = React.forwardRef<
       />
       <ColoredPath
         paths={paths}
-        colors={[
-          '##dfdfd6',
-        ]}
+        colors={['##dfdfd6']}
       />
       <Radii
         paths={paths}
