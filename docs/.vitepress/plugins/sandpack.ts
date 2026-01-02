@@ -68,10 +68,7 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           }
         }
 
-        const { dependencies, showTabs,...options } = attrs;
-
-        console.log(attrs);
-
+        const { dependencies, showTabs, externalResources ,...options } = attrs;
 
         const dependencyList = dependencies.split(',').map((dep: string) => dep.trim());
 
@@ -83,6 +80,8 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           },
           {},
         );
+
+        const externalResourcesList = externalResources?.split(',')?.map((res: string) => res.trim())?.filter((res: string) => res.length > 0);
 
         const filesWithDefaultStyles = {
           ...pluginOptions.defaultFiles,
@@ -101,6 +100,7 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           :files="${escapeHtml(JSON.stringify(filesWithDefaultStyles))}"\
           :options="${escapeHtml(JSON.stringify({
             ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
+            externalResources:externalResourcesList,
             ...options,
           }))}"\
         >`;

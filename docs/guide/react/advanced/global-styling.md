@@ -1,9 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import globalIconCssExample from './examples/global-styling-css-example/files.ts'
-import globalAbsoluteStrokewidthExample from './examples/global-styling-absolute-strokewidth-example/files.ts'
-
+import { Sandpack } from 'sandpack-vue3';
 </script>
 
 # Global Styling
@@ -18,6 +14,7 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 
 For global styling using a context provider, you can use the `LucideProvider` component that is provided by the `lucide-react` package.
 
+<!-- TODO: Add codesandbox example -->
 ```tsx
 import { LucideProvider, Home } from 'lucide-react';
 
@@ -44,35 +41,117 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 - The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
 - The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="globalIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-  }"
-/>
+::: sandpack {template=react editorHeight=300 dependencies="lucide-react"}
+
+```css icon.css [active]
+.lucide {
+  /* Change this! */
+  color: #ffadff;
+  width: 56px;
+  height: 56px;
+  stroke-width: 1px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+```
+
+```jsx App.js
+import {
+  CakeSlice,
+  Candy,
+  Apple,
+  Cookie,
+  Martini,
+  IceCream2,
+  Sandwich,
+  Wine,
+  Dessert,
+} from "lucide-react";
+import "./icon.css";
+
+function App() {
+  return (
+    <div className="app">
+      <CakeSlice />
+      <Candy />
+      <Apple />
+      <Cookie />
+      <Martini />
+      <IceCream2 />
+      <Sandwich />
+      <Wine />
+      <Dessert />
+    </div>
+  );
+}
+
+export default App;
+```
+
+:::
 
 ### Absolute stroke width
 
 For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="globalAbsoluteStrokewidthExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-  }"
-/>
+::: sandpack {template=react editorHeight=300 dependencies="lucide-react"}
 
+```css icon.css [active]
+.lucide {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+```
+
+```jsx App.js
+import {
+  TentTree,
+  Caravan,
+  FlameKindling,
+  MountainSnow,
+  Trees,
+  Axe,
+  Map,
+  CloudMoon,
+  Sparkles,
+} from "lucide-react";
+import "./icon.css";
+
+function App() {
+  return (
+    <div className="app">
+      <TentTree />
+      <Caravan />
+      <FlameKindling />
+      <MountainSnow />
+      <Trees />
+      <Axe />
+      <Map />
+      <CloudMoon />
+      <Sparkles />
+    </div>
+  );
+}
+
+export default App;
+```
+
+:::

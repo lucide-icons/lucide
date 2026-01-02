@@ -24,9 +24,9 @@ This is useful for if you want to be creative and make your own custom icons by 
 This is valid SVG and all SVG properties are supported on the icons.
 The `x` and `y` coordinates can be adjusted to position the icons as you like.
 
-## Caveats
-
-When combining icons, you need to make sure that the icon you is in the `viewBox` of the outer icon (24x24).
+::: info Limitation
+When combining icons, you need to make sure that the `x` and `y` coordinates are within the `viewBox` of the outer icon (24x24).
+:::
 
 ## With custom SVG elements
 
@@ -57,6 +57,3 @@ You can also use the `text` SVG element to add text to your icon.
     editorWidthPercentage: 60,
   }"
 />
-
-
-
