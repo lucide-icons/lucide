@@ -42,16 +42,11 @@ Each icon can be imported as a Svelte component, which renders an inline SVG ele
 Additional props can be passed to adjust the icon:
 
 ```vue
-<script setup>
-import { Camera } from '@lucide/vue';
+<script>
+  import Camera from '@lucide/svelte/icons/camera';
 </script>
 
-<template>
-  <Camera
-    color="red"
-    :size="32"
-  />
-</template>
+<Camera />
 ```
 
 ## Props
@@ -69,13 +64,15 @@ import { Camera } from '@lucide/vue';
 To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```vue
-<template>
-  <Camera fill="red" />
-</template>
+<script>
+  import Camera from '@lucide/svelte/icons/camera';
+</script>
+
+<Camera fill="red" />
 ```
 
 More examples and details how to use props, continue the guide:
 
 <OverviewLinkGrid>
-  <OverviewLink v-for="item in vueSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+  <OverviewLink v-for="item in svelteSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >

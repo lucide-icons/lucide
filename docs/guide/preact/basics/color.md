@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '../../../.vitepress/theme/components/editors/SandpackPreact.vue'
 import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
 import buttonExampleFiles from './examples/button-example/files.ts'
 import iconColorExampleFiles from './examples/color-icon/files.ts'
@@ -24,6 +24,24 @@ The color can be adjusted by passing the color prop to the element.
     editorWidthPercentage: 60,
   }"
 />
+
+<!-- ::: sandpack {template=react showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-react"}
+
+```js App.js [active]
+import { Smile } from "lucide-react";
+
+function App() {
+  return (
+    <div className="app">
+      <Smile color="#3e9392" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+::: -->
 
 ## Using parent elements text color value
 

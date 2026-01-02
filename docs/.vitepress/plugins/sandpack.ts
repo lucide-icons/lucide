@@ -68,9 +68,9 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           }
         }
 
-        const { dependencies, showTabs, externalResources ,...options } = attrs;
+        const { dependencies, showTabs, externalResources, editorWidthPercentage ,...options } = attrs;
 
-        const dependencyList = dependencies.split(',').map((dep: string) => dep.trim());
+        const dependencyList = dependencies?.split(',')?.map((dep: string) => dep.trim()) ?? [];
 
         const dependencyObject = dependencyList.reduce(
           (acc: Record<string, string>, cur: string) => {
@@ -93,14 +93,15 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           template="${escapeHtml(attrs.template || 'vanilla')}"\
           :theme="${escapeHtml(JSON.stringify(sandpackTheme))}"\
           :customSetup="${escapeHtml(
-            JSON.stringify({
+            dependencyList ? JSON.stringify({
               dependencies: dependencyList.length ? dependencyObject : {},
-            }),
+            }) : undefined,
           )}"
           :files="${escapeHtml(JSON.stringify(filesWithDefaultStyles))}"\
           :options="${escapeHtml(JSON.stringify({
             ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
             externalResources:externalResourcesList,
+            editorWidthPercentage: editorWidthPercentage ? Number(editorWidthPercentage) : undefined,
             ...options,
           }))}"\
         >`;

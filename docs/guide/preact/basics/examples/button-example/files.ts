@@ -12,7 +12,7 @@ const files = {
     active: true,
     readOnly: false,
   },
-  ...preactFiles
+  // ...preactFiles
 }
 
 export default files

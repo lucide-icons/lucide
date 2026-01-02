@@ -41,7 +41,8 @@ button:hover {
   background: #f56565;
 }
 
-.app {
+.app,
+#app {
   display: flex;
   flex-direction: column;
   align-items: center;

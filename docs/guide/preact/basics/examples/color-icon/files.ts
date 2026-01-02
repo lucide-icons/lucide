@@ -6,7 +6,7 @@ const files = {
     code: App,
     active: true,
   },
-  ...preactFiles
+  // ...preactFiles
 }
 
 export default files
