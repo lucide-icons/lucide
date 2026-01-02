@@ -126,7 +126,7 @@ defineExpose({
 
 .clear-button {
   position: absolute;
-  right: 56px;
+  right: 68px;
   top: 9px;
   padding: 4px;
   transition: background-color .25s;
@@ -147,6 +147,24 @@ defineExpose({
   border: 1px solid var(--vp-c-divider);
   border-radius: 4px;
   pointer-events: none;
+}
+
+.input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.input[type="search"]::-ms-clear {
+  display: none;
+}
+
+.input[type="search"]::-o-clear {
+  display: none;
+}
+
+.input[type="search"]::-moz-clear {
+  display: none;
 }
 
 @media (hover: none) {
