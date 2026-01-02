@@ -1,9 +1,6 @@
 import { h } from 'vue';
-import type { FunctionalComponent } from 'vue';
-import { IconNode, LucideProps } from './types';
+import { IconNode, LucideIcon } from './types';
 import Icon from './Icon';
-
-// Create interface extending SVGAttributes
 
 /**
  * Create a Lucide icon component
@@ -12,7 +9,7 @@ import Icon from './Icon';
  * @returns {FunctionalComponent} LucideIcon
  */
 const createLucideIcon =
-  (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
+  (iconName: string, iconNode: IconNode): LucideIcon =>
   (props, { slots, attrs }) =>
     h(
       Icon,

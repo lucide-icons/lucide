@@ -52,6 +52,7 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {

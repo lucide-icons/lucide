@@ -3,7 +3,7 @@
 exports[`Using lucide icon components > should add a class to the element 1`] = `
 <div>
   <svg
-    class="lucide my-icon lucide-smile-icon lucide-smile my-icon"
+    class="lucide lucide-smile-icon lucide-smile my-icon"
     fill="none"
     height="24"
     stroke="currentColor"

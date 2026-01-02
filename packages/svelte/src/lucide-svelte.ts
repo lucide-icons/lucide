@@ -4,3 +4,4 @@ export * from './aliases/index.js';
 export { default as defaultAttributes } from './defaultAttributes.js';
 export * from './types.js';
 export { default as Icon } from './Icon.svelte';
+export * from './context.js';
