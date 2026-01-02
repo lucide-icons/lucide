@@ -171,6 +171,10 @@ defineExpose({
   .shortcut {
     display: none;
   }
+
+  .clear-button {
+    right: 16px;
+  }
 }
 </style>
 
