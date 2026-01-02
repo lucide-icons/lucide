@@ -7,6 +7,7 @@ import { useLucideContext } from './context';
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
   testID?: string;
+  className?: string;
 }
 
 /**
@@ -25,7 +26,7 @@ interface IconComponentProps extends LucideProps {
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
-  ({ color, size, strokeWidth, absoluteStrokeWidth, children, iconNode, testID, ...rest }, ref) => {
+  ({ color, size, strokeWidth, absoluteStrokeWidth, children, iconNode, className, testID, ...rest }, ref) => {
     const {
       size: contextSize = 24,
       strokeWidth: contextStrokeWidth = 2,
@@ -52,6 +53,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         width: size ?? contextSize ?? defaultAttributes.width,
         height: size ?? contextSize ?? defaultAttributes.height,
         'data-testid': testID,
+        className,
         ...customAttrs,
       },
       [
