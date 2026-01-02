@@ -153,7 +153,7 @@ function handleCloseDrawer() {
   >
     <StickyBar class="category-search">
       <InputSearch
-        :placeholder="`Search ${icons.length} icons ...`"
+        :placeholder="`Search ${icons.length} icons…`"
         v-model="searchQuery"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
