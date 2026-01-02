@@ -2,12 +2,22 @@ import type MarkdownIt from 'markdown-it';
 import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
 import container from 'markdown-it-container';
 import sandpackTheme from '../theme/sandpackTheme.json';
+import defaultStyle from '../theme/sandpack-default.css?raw';
 
-type SnackParams = Record<string, string>;
+type SnackParams = {
+  defaultFiles?: Record<
+    string,
+    {
+      code: string;
+      active?: boolean;
+      hidden?: boolean;
+    }
+  >;
+};
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
 
-export default function sandpackPlugin(md: MarkdownIt) {
+export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {
   const escapeHtml = md.utils.escapeHtml;
   const defaultFence =
     md.renderer.rules.fence ||
@@ -58,7 +68,10 @@ export default function sandpackPlugin(md: MarkdownIt) {
           }
         }
 
-        const { dependencies, ...options } = attrs;
+        const { dependencies, showTabs,...options } = attrs;
+
+        console.log(attrs);
+
 
         const dependencyList = dependencies.split(',').map((dep: string) => dep.trim());
 
@@ -71,6 +84,11 @@ export default function sandpackPlugin(md: MarkdownIt) {
           {},
         );
 
+        const filesWithDefaultStyles = {
+          ...pluginOptions.defaultFiles,
+          ...files,
+        }
+
         return `\
         <Sandpack\
           template="${escapeHtml(attrs.template || 'vanilla')}"\
@@ -80,8 +98,11 @@ export default function sandpackPlugin(md: MarkdownIt) {
               dependencies: dependencyList.length ? dependencyObject : {},
             }),
           )}"
-          :files="${escapeHtml(JSON.stringify(files))}"\
-          :options="${escapeHtml(JSON.stringify(options))}"\
+          :files="${escapeHtml(JSON.stringify(filesWithDefaultStyles))}"\
+          :options="${escapeHtml(JSON.stringify({
+            ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
+            ...options,
+          }))}"\
         >`;
       }
       return `</Sandpack>`;

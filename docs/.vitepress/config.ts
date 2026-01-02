@@ -1,11 +1,12 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
-import container from 'markdown-it-container';
-import { renderSandbox } from 'vitepress-plugin-sandpack';
 import sidebar from './sidebar';
 import snackPlayer from './plugins/snackPlayer';
 import sandpackPlugin from './plugins/sandpack';
+import { readFile } from 'node:fs/promises';
+
+const defaultSandpackCSS = await readFile(fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)), 'utf-8');
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -22,14 +23,14 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
-      md.use(sandpackPlugin);
-      // md.use(container, 'sandbox', {
-      //   render (tokens, idx) {
-      //     console.log(tokens);
-
-      //     return renderSandbox(tokens, idx, 'sandbox');
-      //   },
-      // });
+      md.use(sandpackPlugin, {
+        defaultFiles: {
+          '/styles.css': {
+            code: defaultSandpackCSS,
+            hidden: true,
+          },
+        },
+      });
     },
   },
   vite: {

@@ -17,7 +17,7 @@ The color can be adjusted by passing the color prop to the element.
 
 ::: sandpack {template=react showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-react"}
 
-```js
+```js App.js [active]
 import { Smile } from "lucide-react";
 
 function App() {
@@ -40,9 +40,9 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-<!-- ::: sandbox {template=react showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-react"}
+::: sandpack {template=react showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-react"}
 
-```jsx /Button.jsx [active]
+```jsx Button.jsx [active]
 import { ThumbsUp } from "lucide-react";
 
 function LikeButton() {
@@ -57,7 +57,7 @@ function LikeButton() {
 export default LikeButton;
 ```
 
-```jsx /App.js [hidden]
+```jsx App.js [hidden]
 import Button from "./Button";
 
 export default function App() {
@@ -65,20 +65,5 @@ export default function App() {
 }
 
 ```
-::: -->
 
-
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="buttonExampleFiles"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 320,
-    editorWidthPercentage: 60,
-  }"
-/>
+:::
