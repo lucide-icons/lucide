@@ -14,7 +14,7 @@
   "dependencies": {
     "fs-extra": "^11.2.0",
     "minimist": "^1.2.8",
-    "svgtofont": "^6.0.0"
+    "svgtofont": "^6.5.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
