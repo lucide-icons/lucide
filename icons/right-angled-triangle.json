@@ -18,5 +18,13 @@
   "categories": [
     "shapes",
     "math"
+  ],
+  "aliases": [
+    {
+      "name": "triangle-right",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
