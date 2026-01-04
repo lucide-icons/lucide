@@ -14,5 +14,13 @@
     "design",
     "text",
     "photography"
+  ],
+  "aliases": [
+    {
+      "name": "zoom-out",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

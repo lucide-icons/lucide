@@ -21,5 +21,13 @@
   "categories": [
     "text",
     "social"
+  ],
+  "aliases": [
+    {
+      "name": "search-alert",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
