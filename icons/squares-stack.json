@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "versions",
@@ -18,5 +19,13 @@
     "text",
     "files",
     "development"
+  ],
+  "aliases": [
+    {
+      "name": "square-stack",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
