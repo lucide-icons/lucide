@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Nykoula"
+  ],
+  "tags": [
+    "bridge",
+    "lift-bridge",
+    "infrastructure",
+    "transportation",
+    "crossing",
+    "road",
+    "river"
+  ],
+  "categories": [
+    "travel",
+    "transportation",
+    "buildings"
+  ]
+}
