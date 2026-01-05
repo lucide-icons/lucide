@@ -171,7 +171,7 @@
     ],
     "source": "https://github.com/heyvito/lucide-rails",
     "documentation": "https://github.com/heyvito/lucide-rails/blob/master/README.md"
-  }
+  },
   {
     "name": "lucide-web-components",
     "description": "Implementation of Lucide icons in Web Components custom elements.",
