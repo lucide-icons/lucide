@@ -11,8 +11,10 @@
     "fax",
     "office",
     "device",
-    "success",
-    "printed"
+    "cross",
+    "cancel",
+    "remove",
+    "error"
   ],
   "categories": [
     "devices"
