@@ -154,6 +154,25 @@
     "documentation": "https://github.com/kaugesaar/lucide-go/blob/master/README.md"
   },
   {
+    "name": "lucide-rails",
+    "description": "Ruby on Rails views helper method for rendering Lucide icons.",
+    "icon": "/framework-logos/rails.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/gem/v/lucide-rails",
+        "href": "https://rubygems.org/gems/lucide-rails"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/gem/dt/lucide-rails",
+        "href": "https://rubygems.org/gems/lucide-rails"
+      }
+    ],
+    "source": "https://github.com/heyvito/lucide-rails",
+    "documentation": "https://github.com/heyvito/lucide-rails/blob/master/README.md"
+  }
+  {
     "name": "lucide-web-components",
     "description": "Implementation of Lucide icons in Web Components custom elements.",
     "icon": "/framework-logos/web-components.svg",
