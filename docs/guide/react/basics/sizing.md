@@ -118,5 +118,3 @@ function App() {
 export default App;
 ```
 :::
-
-<!-- Code Example -->

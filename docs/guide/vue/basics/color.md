@@ -16,7 +16,7 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 The color can be adjusted by passing the color prop to the element.
 
 <Sandpack
-  template="vite-vue"
+  template="vue"
   :theme="sandpackTheme"
   :customSetup='{
     dependencies: {

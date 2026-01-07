@@ -1,9 +1,5 @@
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import globalIconCssExample from './examples/global-styling-css-example/files.ts'
-import globalAbsoluteStrokewidthExample from './examples/global-styling-absolute-strokewidth-example/files.ts'
-
 </script>
 
 # Global Styling
@@ -17,6 +13,8 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 ## Context Provider
 
 For global styling using a context provider, you can use the `LucideProvider` component that is provided by the `lucide-solid` package.
+
+<!-- TODO: Replace this with new package -->
 
 ```tsx
 import { LucideProvider, Home } from 'lucide-solid';
@@ -44,35 +42,112 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 - The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
 - The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="globalIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-solid": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-  }"
-/>
+::: sandpack {template=vite-solid editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid"}
+
+```css icon.css [active]
+.lucide {
+  /* Change this! */
+  color: #ffadff;
+  width: 48px;
+  height: 48px;
+  stroke-width: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+```
+
+```jsx App.tsx
+import CakeSlice from 'lucide-solid/icons/cake-slice';
+import Candy from 'lucide-solid/icons/candy';
+import Apple from 'lucide-solid/icons/apple';
+import Cookie from 'lucide-solid/icons/cookie';
+import Martini from 'lucide-solid/icons/martini';
+import IceCream2 from 'lucide-solid/icons/ice-cream-2';
+import Sandwich from 'lucide-solid/icons/sandwich';
+import Wine from 'lucide-solid/icons/wine';
+import Dessert from 'lucide-solid/icons/dessert';
+import "./icon.css";
+
+function App() {
+  return (
+    <div class="grid">
+      <CakeSlice />
+      <Candy />
+      <Apple />
+      <Cookie />
+      <Martini />
+      <IceCream2 />
+      <Sandwich />
+      <Wine />
+      <Dessert />
+    </div>
+  );
+}
+
+export default App;
+```
+:::
 
 ### Absolute stroke width
 
 For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="globalAbsoluteStrokewidthExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-solid": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-  }"
-/>
+::: sandpack {template=vite-solid editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid"}
 
+```css icon.css [active]
+.lucide {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+```
+
+```jsx App.tsx
+import TentTree from 'lucide-solid/icons/tent-tree';
+import Caravan from 'lucide-solid/icons/caravan';
+import FlameKindling from 'lucide-solid/icons/flame-kindling';
+import MountainSnow from 'lucide-solid/icons/mountain-snow';
+import Trees from 'lucide-solid/icons/trees';
+import Axe from 'lucide-solid/icons/axe';
+import Map from 'lucide-solid/icons/map';
+import CloudMoon from 'lucide-solid/icons/cloud-moon';
+import Sparkles from 'lucide-solid/icons/sparkles';
+import "./icon.css";
+
+function App() {
+  return (
+    <div class="grid">
+      <TentTree />
+      <Caravan />
+      <FlameKindling />
+      <MountainSnow />
+      <Trees />
+      <Axe />
+      <Map />
+      <CloudMoon />
+      <Sparkles />
+    </div>
+  );
+}
+
+export default App;
+```
+
+:::

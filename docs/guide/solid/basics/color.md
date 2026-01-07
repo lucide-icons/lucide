@@ -12,7 +12,7 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-::: sandpack {template=vite-solid showTabs=false editorHeight=295 editorWidthPercentage=60, dependencies="lucide-solid"}
+::: sandpack {template=vite-solid showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-solid"}
 
 ```js ./App.tsx [active]
 import Smile from 'lucide-solid/icons/smile';
@@ -35,7 +35,7 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-::: sandpack {template=vite-solid editorHeight=320 editorWidthPercentage=40, dependencies="lucide-solid"}
+::: sandpack {template=vite-solid editorHeight=320 editorWidthPercentage=60 dependencies="lucide-solid"}
 
 ```js ./Button.tsx [active]
 import ThumbsUp from 'lucide-solid/icons/thumbs-up';
@@ -50,7 +50,6 @@ function LikeButton() {
 }
 
 export default LikeButton;
-
 ```
 
 ```js ./App.tsx

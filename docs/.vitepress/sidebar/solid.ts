@@ -71,12 +71,12 @@ export const solidSidebar = [
         link: '/guide/solid/advanced/aliased-names',
         desc: 'Using aliased icon names',
       },
-
-      {
-        text: 'Combining icons',
-        link: '/guide/solid/advanced/combining-icons',
-        desc: 'Combine multiple icons into one',
-      },
+      // Add support for this later
+      // {
+      //   text: 'Combining icons',
+      //   link: '/guide/solid/advanced/combining-icons',
+      //   desc: 'Combine multiple icons into one',
+      // },
     ],
   },
   {

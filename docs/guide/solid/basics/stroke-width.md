@@ -1,8 +1,5 @@
 <script setup>
 import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import strokeWidth from './examples/stroke-width-icon/files.ts'
-import absoluteStrokeWidth from './examples/absolute-stroke-width-icon/files.ts'
 </script>
 
 # Stroke width
@@ -14,21 +11,22 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
+::: sandpack {template=vite-solid showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="strokeWidth"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 60,
-  }"
-/>
+```jsx App.tsx [active]
+import FolderLock from 'lucide-solid/icons/folder-lock';
+
+function App() {
+  return (
+    <div class="app">
+      <FolderLock strokeWidth={1} />
+    </div>
+  );
+}
+
+export default App;
+```
+:::
 
 ## Absolute stroke width
 
@@ -44,17 +42,22 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
-<Sandpack
-  template="react"
-  :theme="sandpackTheme"
-  :files="absoluteStrokeWidth"
-  :customSetup='{
-    dependencies: {
-      "lucide-react": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 320,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {template=vite-solid showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-solid"}
+
+```jsx App.tsx [active]
+import RollerCoaster from 'lucide-solid/icons/roller-coaster';
+
+function App() {
+  return (
+    <div class="app">
+      <RollerCoaster
+        size={96}
+        absoluteStrokeWidth={true}
+      />
+    </div>
+  );
+}
+
+export default App;
+```
+:::

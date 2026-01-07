@@ -88,6 +88,9 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           ...files,
         }
 
+        console.log(editorWidthPercentage);
+
+
         return `\
         <Sandpack\
           template="${escapeHtml(attrs.template || 'vanilla')}"\
