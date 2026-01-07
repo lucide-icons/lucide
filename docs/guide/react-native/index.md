@@ -10,10 +10,7 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 </script>
 
-<img src="/package-logos/dark/lucide-react-native.svg" alt="Lucide icon library for React Native applications." width="540" style="margin-bottom: 48px;"/>
-
-<!-- [![npm](https://img.shields.io/npm/v/lucide-native-react?color=blue)](https://www.npmjs.com/package/lucide-native-react)
-[![NPM Downloads](https://img.shields.io/npm/dw/lucide-native-react)](https://www.npmjs.com/package/lucide-native-react) -->
+<!--@include: ../../../docs/images/package-logos/lucide-react-native.svg -->
 
 # Lucide for React Native
 

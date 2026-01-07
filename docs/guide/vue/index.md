@@ -10,7 +10,7 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { vueSidebar } from '../../.vitepress/sidebar/vue'
 </script>
 
-<img src="/package-logos/dark/lucide-vue.svg" alt="Lucide icon library for Vue applications." width="540" style="margin-bottom: 48px;"/>
+<!--@include: ../../../docs/images/package-logos/lucide-vue.svg -->
 
 # Lucide for Vue
 

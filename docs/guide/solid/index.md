@@ -10,10 +10,7 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { solidSidebar } from '../../.vitepress/sidebar/solid'
 </script>
 
-<img src="/package-logos/dark/lucide-solid.svg" alt="Lucide icon library for Solid applications." width="540" style="margin-bottom: 48px;"/>
-
-<!-- [![npm](https://img.shields.io/npm/v/lucide-solid?color=blue)](https://www.npmjs.com/package/lucide-solid)
-[![NPM Downloads](https://img.shields.io/npm/dw/lucide-solid)](https://www.npmjs.com/package/lucide-solid) -->
+<!--@include: ../../../docs/images/package-logos/lucide-solid.svg -->
 
 
 # Lucide for Solid

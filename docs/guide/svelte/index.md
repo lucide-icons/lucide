@@ -10,7 +10,7 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { svelteSidebar } from '../../.vitepress/sidebar/svelte'
 </script>
 
-<img src="/package-logos/dark/lucide-svelte.svg" alt="Lucide icon library for Svelte applications." width="540" style="margin-bottom: 48px;"/>
+<!--@include: ../../../docs/images/package-logos/lucide-svelte.svg -->
 
 # Lucide for Svelte
 

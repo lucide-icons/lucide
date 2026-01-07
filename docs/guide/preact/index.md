@@ -10,10 +10,7 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { preactSidebar } from '../../.vitepress/sidebar/preact'
 </script>
 
-<img src="/package-logos/dark/lucide-preact.svg" alt="Lucide icon library for Preact applications." width="540" style="margin-bottom: 48px;"/>
-
-<!-- [![npm](https://img.shields.io/npm/v/lucide-preact?color=blue)](https://www.npmjs.com/package/lucide-preact)
-[![NPM Downloads](https://img.shields.io/npm/dw/lucide-preact)](https://www.npmjs.com/package/lucide-preact) -->
+<!--@include: ../../../docs/images/package-logos/lucide-preact.svg -->
 
 
 # Lucide for Preact

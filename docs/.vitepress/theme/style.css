@@ -201,3 +201,7 @@
   color: var(--sp-colors-clickable);
   text-decoration: none;
 }
+
+.package-logo {
+  margin-bottom: 48px;
+}
