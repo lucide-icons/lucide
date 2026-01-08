@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mfjramirezf"
+  ],
+  "tags": [
+    "tick",
+    "verified",
+    "accepted",
+    "done",
+    "complete",
+    "found",
+    "paid",
+    "task",
+    "check",
+    "successed"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
