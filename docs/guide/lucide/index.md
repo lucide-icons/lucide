@@ -1,3 +1,5 @@
+<!--@include: ../../../docs/images/package-logos/lucide.svg -->
+
 # Lucide
 
 The core Lucide package for vanilla JavaScript applications. This package allows you to easily add scalable vector icons to any web project without framework dependencies. Perfect for static websites, legacy applications, or when you need lightweight icon integration with maximum browser compatibility.

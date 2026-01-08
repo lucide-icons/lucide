@@ -18,6 +18,7 @@
   "lucide-react": {
     "order": 1,
     "icon": "react",
+    "docsAlias": "react",
     "shields": [
       {
         "alt": "npm",
@@ -34,14 +35,14 @@
   "@lucide/vue": {
     "order": 2,
     "icon": "vue",
-    "docsAlias": "lucide-vue",
+    "docsAlias": "vue",
     "packageDirname": "vue",
-    "shields": [
-    ]
+    "shields": []
   },
   "lucide-svelte": {
     "order": 3,
     "icon": "svelte",
+    "docsAlias": "svelte",
     "shields": [
       {
         "alt": "npm",
@@ -58,6 +59,7 @@
   "lucide-solid": {
     "order": 4,
     "icon": "solid",
+    "docsAlias": "solid",
     "shields": [
       {
         "alt": "npm",
@@ -74,6 +76,7 @@
   "lucide-react-native": {
     "order": 5,
     "icon": "react-native",
+    "docsAlias": "react-native",
     "shields": [
       {
         "alt": "npm",
@@ -90,6 +93,7 @@
   "lucide-angular": {
     "order": 6,
     "icon": "angular",
+    "docsAlias": "angular",
     "shields": [
       {
         "alt": "npm",
@@ -106,6 +110,7 @@
   "lucide-preact": {
     "order": 7,
     "icon": "preact",
+    "docsAlias": "preact",
     "shields": [
       {
         "alt": "npm",
@@ -120,7 +125,7 @@
     ]
   },
   "@lucide/astro": {
-    "docsAlias": "lucide-astro",
+    "docsAlias": "astro",
     "packageDirname": "astro",
     "order": 8,
     "icon": "astro",
@@ -141,6 +146,7 @@
   "lucide-static": {
     "order": 9,
     "icon": "svg",
+    "docsAlias": "static",
     "shields": [
       {
         "alt": "npm",

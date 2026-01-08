@@ -14,7 +14,7 @@ export default {
           return {
             ...pJson,
             ...packageData,
-            documentation: `/guide/packages/${packageData.docsAlias ?? pJson.name}`,
+            documentation: `/guide/${packageData.docsAlias ?? pJson.name}`,
             source: `https://github.com/lucide-icons/lucide/tree/main/packages/${packageData.packageDirname ?? pJson.name}`,
             icon: `/framework-logos/${packageData.icon}.svg`,
             iconDark: Boolean(packageData.iconDark)

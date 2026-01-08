@@ -10,7 +10,7 @@ import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLin
 import { reactSidebar } from '../../.vitepress/sidebar/react'
 </script>
 
-<!--@include: ../../../docs/images/package-logos/lucide-solid.svg -->
+<!--@include: ../../../docs/images/package-logos/lucide-react.svg -->
 
 
 # Lucide for React

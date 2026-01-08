@@ -1,39 +1,44 @@
 <script setup lang="ts">
 import { useMutationObserver, useScriptTag } from '@vueuse/core';
 import { useData } from 'vitepress';
-import { onMounted, useTemplateRef, watchEffect } from 'vue';
+import { onMounted, useTemplateRef } from 'vue';
 
-const { isDark } = useData()
-const el = useTemplateRef('el')
+const { isDark } = useData();
+const el = useTemplateRef('el');
 
-useScriptTag('https://snack.expo.dev/embed.js')
+useScriptTag('https://snack.expo.dev/embed.js');
 
-watchEffect(() => {
-  console.log(isDark.value);
-})
-
-useMutationObserver(el, (mutations) => {
-  const container = el.value;
-  if (mutations[0]) {
-    if ('ExpoSnack' in window) {
-      window?.ExpoSnack?.remove(container);
-      window?.ExpoSnack?.append(container);
+useMutationObserver(
+  el,
+  (mutations) => {
+    const container = el.value;
+    if (mutations[0]) {
+      if ('ExpoSnack' in window) {
+        window?.ExpoSnack?.remove(container);
+        window?.ExpoSnack?.append(container);
+      }
     }
-  }
-}, {
-  attributes: true,
-})
+  },
+  {
+    attributes: true,
+  },
+);
 
 onMounted(() => {
   const container = el.value;
   if ('ExpoSnack' in window) {
     window?.ExpoSnack?.append(container);
   }
-})
+});
 </script>
 
 <template>
-  <div v-bind="$attrs" class="snack-player" ref="el" :data-snack-theme="isDark ? 'dark' : 'light'" />
+  <div
+    v-bind="$attrs"
+    class="snack-player"
+    ref="el"
+    :data-snack-theme="isDark ? 'dark' : 'light'"
+  />
 </template>
 
 <style>

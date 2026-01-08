@@ -30,6 +30,12 @@ const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', fram
 
 const selected = computed(() => {
   const current = frameworks.find(({ route }) => {
+    if (router.route.path?.startsWith?.('/guide')) {
+      const [, , framework] = router.route.path.split('/');
+      const [, frameWorkRoute] = route.split('/').filter(Boolean);
+
+      return framework === frameWorkRoute;
+    }
     return router.route.path.split('/').slice(0, 3).join('/') === route;
   });
 
