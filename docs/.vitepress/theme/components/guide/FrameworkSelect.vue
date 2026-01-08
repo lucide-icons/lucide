@@ -11,19 +11,19 @@ const { page } = useData();
 const router = useRouter();
 
 const frameworks = [
-  { name: 'Vanilla', icon: '/framework-logos/js.svg', route: '/guide/lucide' },
-  { name: 'React', icon: '/framework-logos/react.svg', route: '/guide/react' },
-  { name: 'Vue', icon: '/framework-logos/vue.svg', route: '/guide/vue' },
-  { name: 'Svelte', icon: '/framework-logos/svelte.svg', route: '/guide/svelte' },
-  { name: 'Solid', icon: '/framework-logos/solid.svg', route: '/guide/solid' },
-  { name: 'Angular', icon: '/framework-logos/angular.svg', route: '/guide/angular' },
-  { name: 'Preact', icon: '/framework-logos/preact.svg', route: '/guide/preact' },
+  { name: 'Vanilla', icon: '/framework-logos/js.svg', route: '/guide/lucide/' },
+  { name: 'React', icon: '/framework-logos/react.svg', route: '/guide/react/' },
+  { name: 'Vue', icon: '/framework-logos/vue.svg', route: '/guide/vue/' },
+  { name: 'Svelte', icon: '/framework-logos/svelte.svg', route: '/guide/svelte/' },
+  { name: 'Solid', icon: '/framework-logos/solid.svg', route: '/guide/solid/' },
+  { name: 'Angular', icon: '/framework-logos/angular.svg', route: '/guide/angular/' },
+  { name: 'Preact', icon: '/framework-logos/preact.svg', route: '/guide/preact/' },
   {
     name: 'React Native',
     icon: '/framework-logos/react-native.svg',
     route: '/guide/react-native/',
   },
-  { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro' },
+  { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro/' },
 ];
 
 const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1]);
@@ -46,6 +46,8 @@ function onSelectFramework(item: { name: string; icon: string; route: string }) 
   fallbackFramework.value = item;
   if (item.route !== router.route.path) {
     const likeRoute = router.route.path.replace(selected.value.route, item.route);
+
+    console.log(likeRoute);
 
     const hasRoute = sidebar[item.route]?.some((section) =>
       section?.items?.some(({ link }) => link === likeRoute),

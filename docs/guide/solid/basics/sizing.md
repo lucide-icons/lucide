@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Sizing
@@ -10,7 +10,7 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import Landmark from 'lucide-solid/icons/landmark';
 
 function App() {
@@ -39,7 +39,7 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 }
 ```
 
-```jsx App.tsx
+```tsx App.tsx
 import Beer from 'lucide-solid/icons/beer';
 
 import "./icon.css";
@@ -81,7 +81,7 @@ It is possible to resize icons based on font size. This can be achieved using th
 }
 ```
 
-```jsx App.tsx
+```tsx App.tsx
 import Star from 'lucide-solid/icons/star';
 import "./icon.css";
 
@@ -105,7 +105,7 @@ export default App;
 
 ::: sandpack {template=vite-solid editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid" externalResources="https://cdn.tailwindcss.com"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import PartyPopper from 'lucide-solid/icons/party-popper';
 
 function App() {

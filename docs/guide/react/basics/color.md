@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Color

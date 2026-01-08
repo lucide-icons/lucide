@@ -1,8 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import buttonExampleFiles from './examples/button-example/files.ts'
-import iconColorExampleFiles from './examples/color-icon/files.ts'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
 
 # Color
@@ -15,20 +12,19 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :files="iconColorExampleFiles"
-  :options="{
-    editorHeight: 295,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {template=vue showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+
+```vue src/App.vue [active]
+<script setup>
+import { Smile } from "lucide-vue-next";
+</script>
+
+<template>
+  <Smile color="#3e9392" />
+</template>
+```
+
+:::
 
 ## Using parent elements text color value
 
@@ -36,17 +32,19 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-<Sandpack
-  template="vite-vue"
-  :theme="sandpackTheme"
-  :files="buttonExampleFiles"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 320,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {template=vue showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+
+```vue src/App.vue [active]
+<script setup>
+import { ThumbsUp } from "lucide-vue-next";
+</script>
+
+<template>
+  <button :style="{ color: '#fff' }">
+    <ThumbsUp />
+    Like
+  </button>
+</template>
+
+```
+:::

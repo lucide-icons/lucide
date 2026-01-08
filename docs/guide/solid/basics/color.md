@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Color
@@ -14,7 +14,7 @@ The color can be adjusted by passing the color prop to the element.
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```js ./App.tsx [active]
+```tsx ./App.tsx [active]
 import Smile from 'lucide-solid/icons/smile';
 
 function App() {
@@ -37,7 +37,7 @@ For example, if a parent element's color value is `#fff` and one of the children
 
 ::: sandpack {template=vite-solid editorHeight=320 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```js ./Button.tsx [active]
+```tsx ./Button.tsx [active]
 import ThumbsUp from 'lucide-solid/icons/thumbs-up';
 
 function LikeButton() {
@@ -52,7 +52,7 @@ function LikeButton() {
 export default LikeButton;
 ```
 
-```js ./App.tsx
+```tsx ./App.tsx
 import Button from "./Button";
 
 export default function App() {

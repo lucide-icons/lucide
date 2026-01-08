@@ -32,7 +32,9 @@ When combining icons, you need to make sure that the `x` and `y` coordinates are
 
 You can also use SVG elements to create your own icons.
 
-## Example with notification badge
+### Example with notification badge
+
+For example, you can add a notification badge to an icon by using the `circle` SVG element.
 
 <Sandpack
   template="vanilla"

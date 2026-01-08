@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Global Styling
@@ -61,7 +61,7 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 }
 ```
 
-```jsx App.tsx
+```tsx App.tsx
 import CakeSlice from 'lucide-solid/icons/cake-slice';
 import Candy from 'lucide-solid/icons/candy';
 import Apple from 'lucide-solid/icons/apple';
@@ -119,7 +119,7 @@ For global absolute stroke width styling the `vector-effect: non-scaling-stroke`
 
 ```
 
-```jsx App.tsx
+```tsx App.tsx
 import TentTree from 'lucide-solid/icons/tent-tree';
 import Caravan from 'lucide-solid/icons/caravan';
 import FlameKindling from 'lucide-solid/icons/flame-kindling';

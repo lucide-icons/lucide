@@ -1,6 +1,6 @@
 <!-- Not working yet -->
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Combining icons
@@ -10,7 +10,7 @@ This is useful for if you want to be creative and make your own custom icons by 
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import Scan from 'lucide-solid/icons/scan';
 import User from 'lucide-solid/icons/user';
 
@@ -44,11 +44,13 @@ When combining icons, you need to make sure that the `x` and `y` coordinates are
 
 You can also use SVG elements to create your own icons.
 
-## Example with notification badge
+### Example with notification badge
+
+For example, you can add a notification badge to an icon by using the `circle` SVG element.
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=580 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import Mail from 'lucide-solid/icons/mail';
 
 function App() {
@@ -81,7 +83,7 @@ You can also use the `text` SVG element to add text to your icon.
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import File from 'lucide-solid/icons/file';
 
 function App() {

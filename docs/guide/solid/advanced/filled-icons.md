@@ -6,7 +6,7 @@ head:
 ---
 
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Filled Icons
@@ -16,9 +16,10 @@ However, all SVG properties are available on all icons.
 Fill can still be used and will work fine on certain icons.
 
 Example with stars:
+
 ::: sandpack {template=vite-solid editorHeight=580 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import Star from 'lucide-solid/icons/star';
 import StarHalf from 'lucide-solid/icons/star-half';
 
@@ -64,7 +65,3 @@ export default App;
 ```
 
 :::
-
-## Will Lucide have fills in the future?
-
-This feature has been requested several times and discussion is happening at [#458](https://github.com/lucide-icons/lucide/discussions/458).

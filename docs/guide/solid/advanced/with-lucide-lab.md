@@ -9,7 +9,7 @@ All props like regular lucide icons can be passed to adjust the icon appearance.
 
 This creates a single icon based on the iconNode passed and renders a Lucide icon component.
 
-```jsx
+```tsx
 import { Icon } from 'lucide-solid';
 import { coconut } from '@lucide/lab';
 

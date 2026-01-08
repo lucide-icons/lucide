@@ -22,12 +22,12 @@ export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
 
 const sidebar: Sidebar = {
   '/guide': [{ text: '', link: '/' }],
-  '/guide/lucide': lucideSidebar,
-  '/guide/react': reactSidebar,
-  '/guide/vue': vueSidebar,
-  '/guide/svelte': svelteSidebar,
-  '/guide/solid': solidSidebar,
-  '/guide/preact': preactSidebar,
+  '/guide/lucide/': lucideSidebar,
+  '/guide/react/': reactSidebar,
+  '/guide/vue/': vueSidebar,
+  '/guide/svelte/': svelteSidebar,
+  '/guide/solid/': solidSidebar,
+  '/guide/preact/': preactSidebar,
   '/guide/react-native/': reactNativeSidebar,
   '/resources': [
     {

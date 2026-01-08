@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Stroke width
@@ -13,7 +13,7 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import FolderLock from 'lucide-solid/icons/folder-lock';
 
 function App() {
@@ -44,7 +44,7 @@ Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
 ::: sandpack {template=vite-solid showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-solid"}
 
-```jsx App.tsx [active]
+```tsx App.tsx [active]
 import RollerCoaster from 'lucide-solid/icons/roller-coaster';
 
 function App() {

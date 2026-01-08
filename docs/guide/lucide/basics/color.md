@@ -1,5 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
 # Color
@@ -18,7 +18,7 @@ The color can be adjusted by passing the color attribute to the element.
 <!DOCTYPE html>
 <html>
   <body>
-    <i data-lucide="menu" color="#3e9392"></i>
+    <i data-lucide="smile" color="#3e9392"></i>
 
     <script src="index.js"></script>
   </body>
@@ -28,11 +28,11 @@ The color can be adjusted by passing the color attribute to the element.
 ```js /index.js
 import "./styles.css";
 
-import { createIcons, Menu } from 'lucide/dist/cjs/lucide';
+import { createIcons, Smile } from 'lucide/dist/cjs/lucide';
 
 createIcons({
   icons: {
-    Menu,
+    Smile,
   }
 });
 

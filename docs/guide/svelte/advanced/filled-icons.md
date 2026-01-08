@@ -11,6 +11,7 @@ However, all SVG properties are available on all icons.
 Fill can still be used and will work fine on certain icons.
 
 Example with stars:
+
 <Sandpack
   template="vue"
   :theme="sandpackTheme"
@@ -25,7 +26,3 @@ Example with stars:
     editorWidthPercentage: 60,
   }"
 />
-
-## Will Lucide have fills in the future?
-
-This feature has been requested several times and discussion is happening at [#458](https://github.com/lucide-icons/lucide/discussions/458).
