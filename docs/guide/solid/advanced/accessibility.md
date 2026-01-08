@@ -1,5 +1,5 @@
 <script setup>
-import OverviewLink from '../../../.vitepress/theme/components/base/OverviewLink.vue'
+import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>
 
 # Accessibility

@@ -1,8 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import strokeWidth from './examples/stroke-width-icon/files.ts'
-import absoluteStrokeWidth from './examples/absolute-stroke-width-icon/files.ts'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue'
 </script>
 
 # Stroke width
@@ -14,22 +11,16 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
-<!-- This one is faked, since codesandbox doesn't support svelte 5 yet -->
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="strokeWidth"
-  :customSetup='{
-    dependencies: {
-      "@lucide/svelte": "latest",
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {template=vite-svelte editorHeight=240 editorWidthPercentage=60}
+
+```svelte src/App.svelte
+<script >
+import FolderLock from "@lucide/svelte/icons/folder-lock";
+</script>
+
+<FolderLock strokeWidth={1} />
+```
+:::
 
 ## Absolute stroke width
 
@@ -45,19 +36,17 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
-<!-- This one is faked, since codesandbox doesn't support svelte 5 yet -->
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="absoluteStrokeWidth"
-  :customSetup='{
-    dependencies: {
-      "@lucide/svelte": "latest",
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 320,
-    editorWidthPercentage: 60,
-  }"
+::: sandpack {template=vite-svelte editorHeight=240 editorWidthPercentage=60}
+
+```svelte src/App.svelte
+<script>
+import RollerCoaster from "@lucide/svelte/icons/roller-coaster";
+</script>
+
+<RollerCoaster
+  size={96}
+  absoluteStrokeWidth
 />
+```
+
+:::

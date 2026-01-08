@@ -1,6 +1,6 @@
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
+import sandpackTheme from '~/.vitepress/theme/sandpackTheme.json'
 import sizeIconExample from './examples/size-icon-example/files.ts'
 import sizeIconCssExample from './examples/size-icon-css-example/files.ts'
 import sizeIconFontExample from './examples/size-icon-font-example/files.ts'

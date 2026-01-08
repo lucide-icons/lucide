@@ -1,8 +1,5 @@
 <script setup>
-import Sandpack from '../../../.vitepress/theme/components/editors/SandpackPreact.vue'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import buttonExampleFiles from './examples/button-example/files.ts'
-import iconColorExampleFiles from './examples/color-icon/files.ts'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
 
 # Color
@@ -15,20 +12,11 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-<Sandpack
-  template="vanilla"
-  :theme="sandpackTheme"
-  :files="iconColorExampleFiles"
-  :options="{
-    editorHeight: 320,
-    editorWidthPercentage: 60,
-  }"
-/>
-
-<!-- ::: sandpack {template=react showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-react"}
+::: sandpack {showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-preact"}
 
 ```js App.js [active]
-import { Smile } from "lucide-react";
+import { h } from "preact";
+import { Smile } from "lucide-preact";
 
 function App() {
   return (
@@ -41,7 +29,7 @@ function App() {
 export default App;
 ```
 
-::: -->
+:::
 
 ## Using parent elements text color value
 
@@ -49,12 +37,32 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-<Sandpack
-  template="vanilla"
-  :theme="sandpackTheme"
-  :files="buttonExampleFiles"
-  :options="{
-    editorHeight: 340,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {showTabs=false editorHeight=340 editorWidthPercentage=60 dependencies="lucide-preact"}
+
+```jsx Button.jsx [active]
+import { h } from "preact";
+import { ThumbsUp } from "lucide-preact";
+
+function LikeButton() {
+  return (
+    <button style={{ color: "#fff" }}>
+      <ThumbsUp />
+      Like
+    </button>
+  );
+}
+
+export default LikeButton;
+```
+
+```js App.js [hidden]
+import { h } from "preact";
+import Button from "./Button";
+
+export default function App() {
+  return <Button />;
+}
+
+```
+
+:::

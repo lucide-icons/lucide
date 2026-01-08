@@ -73,9 +73,8 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
         const dependencyList = dependencies?.split(',')?.map((dep: string) => dep.trim()) ?? [];
 
         const dependencyObject = dependencyList.reduce(
-          (acc: Record<string, string>, cur: string) => {
-            const [name, version] = cur.split('@').map((str) => str.trim());
-            acc[name] = version || 'latest';
+          (acc: Record<string, string>, name: string) => {
+            acc[name] = 'latest';
             return acc;
           },
           {},

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { SandpackFiles } from 'sandpack-vue3';
+import { type SandpackFiles } from 'sandpack-vue3';
 import styledCSS from '../../sandpack-default.css?raw';
 import Sandpack from './Sandpack.vue';
 
@@ -18,6 +18,7 @@ const props = defineProps<{
         hidden: true,
       },
       '/package.json': {
+        hidden: true,
         code: JSON.stringify(
           {
             type: 'module',
@@ -39,6 +40,7 @@ const props = defineProps<{
         ),
       },
       '/vite.config.js': {
+        hidden: true,
         code: `import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 

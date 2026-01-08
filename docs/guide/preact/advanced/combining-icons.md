@@ -1,9 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import combineIconsExample from './examples/combining-icons/files.ts'
-import combineCustomExample from './examples/combining-icons-custom/files.ts'
-import combineNotificationExample from './examples/combining-icons-notification/files.ts'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>
 
 # Combining icons
@@ -11,15 +7,31 @@ import combineNotificationExample from './examples/combining-icons-notification/
 You can combine multiple icons into a single icon by using SVG in SVG.
 This is useful for if you want to be creative and make your own custom icons by combining existing icons.
 
-<Sandpack
-  template="vanilla"
-  :theme="sandpackTheme"
-  :files="combineIconsExample"
-  :options="{
-    editorHeight: 400,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
+
+```jsx App.js [active]
+import { Scan, User } from "lucide-preact";
+import { h } from "preact";
+
+function App() {
+  return (
+    <div className="app">
+      <Scan size={48}>
+        <User
+          size={12}
+          x={6}
+          y={6}
+          absoluteStrokeWidth
+        />
+      </Scan>
+    </div>
+  );
+}
+
+export default App;
+
+```
+:::
 
 This is valid SVG and all SVG properties are supported on the icons.
 The `x` and `y` coordinates can be adjusted to position the icons as you like.
@@ -36,26 +48,66 @@ You can also use SVG elements to create your own icons.
 
 For example, you can add a notification badge to an icon by using the `circle` SVG element.
 
-<Sandpack
-  template="vanilla"
-  :theme="sandpackTheme"
-  :files="combineNotificationExample"
-  :options="{
-    editorHeight: 480,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {showTabs=false editorHeight=580 editorWidthPercentage=60 dependencies="lucide-preact"}
+
+```jsx App.js [active]
+import { Mail } from "lucide-preact";
+import { h } from "preact";
+
+function App() {
+  const hasUnreadMessages = true;
+
+  return (
+    <div className="app">
+      <Mail size={48}>
+        {hasUnreadMessages && (
+          <circle
+            r="3"
+            cx="21"
+            cy="5"
+            stroke="none"
+            fill="#F56565"
+          />
+        )}
+      </Mail>
+    </div>
+  );
+}
+
+export default App;
+
+```
+:::
 
 ### Example with text element
 
 You can also use the `text` SVG element to add text to your icon.
 
-<Sandpack
-  template="vanilla"
-  :theme="sandpackTheme"
-  :files="combineCustomExample"
-  :options="{
-    editorHeight: 480,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
+
+```jsx App.js [active]
+import { File } from "lucide-preact";
+import { h } from "preact";
+
+function App() {
+  return (
+    <div className="app">
+      <File size={48}>
+        <text
+          x={7.5}
+          y={19}
+          font-size={8}
+          font-family="Verdana,sans-serif"
+          stroke-width={1}
+        >
+          JS
+        </text>
+      </File>
+    </div>
+  );
+}
+
+export default App;
+
+```
+:::

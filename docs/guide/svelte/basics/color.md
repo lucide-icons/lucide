@@ -1,10 +1,5 @@
 <script setup>
-// import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import buttonExampleFiles from './examples/button-example/files.ts'
-import iconColorExampleFiles from './examples/color-icon/files.ts'
-
-import Sandpack from '../../../.vitepress/theme/components/editors/SandpackSvelte.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue'
 </script>
 
 # Color
@@ -16,24 +11,6 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 ## Adjust the color using the `color` prop
 
 The color can be adjusted by passing the color prop to the element.
-
-<!-- This one is faked, since codesandbox doesn't support svelte 5 yet -->
-<!-- <Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :customSetup='{
-    dependencies: {
-      "@lucide/svelte": "latest",
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :files="iconColorExampleFiles"
-  :options="{
-    editorHeight: 295,
-    editorWidthPercentage: 60,
-    showOpenInCodeSandbox: false,
-  }"
-/> -->
 
 ::: sandpack {template=vite-svelte showTabs=false editorHeight=240 editorWidthPercentage=60}
 
@@ -63,5 +40,4 @@ import ThumbsUp from "@lucide/svelte/icons/thumbs-up";
   <ThumbsUp />
   Like
 </button>
-
 :::

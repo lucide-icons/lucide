@@ -1,11 +1,3 @@
-<!-- <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import globalIconCssExample from './examples/global-styling-css-example/files.ts'
-import globalAbsoluteStrokewidthExample from './examples/global-styling-absolute-strokewidth-example/files.ts'
-
-</script> -->
-
 # Global Styling
 
 Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).

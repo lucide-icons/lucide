@@ -31,8 +31,8 @@ let props: LucideProps = $props();
 </script>
 
 <template>
-  <div class>
-    <Camera v-bind="$props" />
+  <div>
+    <Camera {...props} />
   </div>
 </template>
 ```
@@ -94,7 +94,7 @@ You can use the `LucideIcon` type when you need to work with icon components dir
 
 ```svelte [Svelte 4]
 <script lang="ts">
-  import { Home, Library, Cog, type Icon } from '@lucide/svelte';
+  import { Home, Library, Cog, type Icon } from 'lucide-svelte';
   import type { ComponentType } from 'svelte';
 
   type MenuItem = {

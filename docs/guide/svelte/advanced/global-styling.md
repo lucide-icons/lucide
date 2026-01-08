@@ -1,9 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import globalIconCssExample from './examples/global-styling-css-example/files.ts'
-import globalAbsoluteStrokewidthExample from './examples/global-styling-absolute-strokewidth-example/files.ts'
-
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
 
 # Global Styling
@@ -44,37 +40,104 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 - The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
 - The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
 
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="globalIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 55,
-  }"
-/>
+::: sandpack {template=vite-svelte editorHeight=420 editorWidthPercentage=55}
+
+```css src/icon.css [active]
+.lucide {
+  /* Change this! */
+  color: #ffadff;
+  width: 56px;
+  height: 56px;
+  stroke-width: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+```
+
+```svelte src/App.svelte
+<script>
+import CakeSlice from '@lucide/svelte/icons/cake-slice';
+import Candy from '@lucide/svelte/icons/candy';
+import Apple from '@lucide/svelte/icons/apple';
+import Cookie from '@lucide/svelte/icons/cookie';
+import Martini from '@lucide/svelte/icons/martini';
+import IceCream2 from '@lucide/svelte/icons/ice-cream-2';
+import Sandwich from '@lucide/svelte/icons/sandwich';
+import Wine from '@lucide/svelte/icons/wine';
+import Dessert from '@lucide/svelte/icons/dessert';
+
+import "./icon.css";
+</script>
+
+<div class="grid">
+  <CakeSlice />
+  <Candy />
+  <Apple />
+  <Cookie />
+  <Martini />
+  <IceCream2 />
+  <Sandwich />
+  <Wine />
+  <Dessert />
+</div>
+```
+:::
 
 ### Absolute stroke width
 
 For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
 
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="globalAbsoluteStrokewidthExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 55,
-  }"
-/>
+::: sandpack {template=vite-svelte editorHeight=420 editorWidthPercentage=55}
 
+```css src/icon.css [active]
+.lucide {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+```
+
+```svelte src/App.svelte
+<script>
+import TentTree from '@lucide/svelte/icons/tent-tree';
+import Caravan from '@lucide/svelte/icons/caravan';
+import FlameKindling from '@lucide/svelte/icons/flame-kindling';
+import MountainSnow from '@lucide/svelte/icons/mountain-snow';
+import Trees from '@lucide/svelte/icons/trees';
+import Axe from '@lucide/svelte/icons/axe';
+import Map from '@lucide/svelte/icons/map';
+import CloudMoon from '@lucide/svelte/icons/cloud-moon';
+import Sparkles from '@lucide/svelte/icons/sparkles';
+
+import "./icon.css";
+</script>
+
+<div class="grid">
+  <TentTree />
+  <Caravan />
+  <FlameKindling />
+  <MountainSnow />
+  <Trees />
+  <Axe />
+  <Map />
+  <CloudMoon />
+  <Sparkles />
+</div>
+```
+:::

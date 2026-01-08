@@ -1,7 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import sizeIconExample from './examples/filled-icon-example/files.ts'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
 
 # Filled Icons
@@ -12,17 +10,50 @@ Fill can still be used and will work fine on certain icons.
 
 Example with stars:
 
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="sizeIconExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 480,
-    editorWidthPercentage: 60,
-  }"
-/>
+::: sandpack {template=vite-svelte showTabs=false editorHeight=480 editorWidthPercentage=60}
+
+```svelte src/App.svelte [active]
+<script>
+import Star from '@lucide/svelte/icons/star';
+import StarHalf from '@lucide/svelte/icons/star-half';
+import "./icon.css";
+
+const items = Array.from({ length: 5 })
+</script>
+
+<div class="app">
+  <div class="star-rating">
+    <div class="stars">
+      {#each items as item}
+        <Star
+          fill="#111"
+          strokeWidth="0"
+        />
+      {/each}
+    </div>
+    <div class="stars rating">
+      <Star fill="yellow" strokeWidth="0" />
+      <Star fill="yellow" strokeWidth="0" />
+      <StarHalf fill="yellow" strokeWidth="0" />
+    </div>
+  </div>
+</div>
+```
+
+```css src/icon.css
+.star-rating {
+  position: relative;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rating {
+  position: absolute;
+  top: 0;
+}
+```
+
+:::

@@ -1,6 +1,6 @@
 <!-- <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import sandpackTheme from '~/.vitepress/theme/sandpackTheme.json'
 import combineIconsExample from './examples/combining-icons/files.ts'
 import combineCustomExample from './examples/combining-icons-custom/files.ts'
 import combineNotificationExample from './examples/combining-icons-notification/files.ts'
