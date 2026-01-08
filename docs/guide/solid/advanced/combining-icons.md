@@ -31,6 +31,7 @@ function App() {
 
 export default App;
 ```
+
 :::
 
 This is valid SVG and all SVG properties are supported on the icons.
@@ -75,9 +76,10 @@ function App() {
 
 export default App;
 ```
+
 :::
 
-## Example with text element
+### Example with text element
 
 You can also use the `text` SVG element to add text to your icon.
 
@@ -106,4 +108,5 @@ function App() {
 
 export default App;
 ```
+
 :::

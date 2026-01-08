@@ -1,7 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import sizeIconExample from './examples/filled-icon-example/files.ts'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
 
 # Filled Icons
@@ -11,21 +9,49 @@ However, all SVG properties are available on all icons.
 Fill can still be used and will work fine on certain icons.
 
 Example with stars:
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="sizeIconExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 480,
-    editorWidthPercentage: 60,
-  }"
-/>
 
-## Will Lucide have fills in the future?
+::: sandpack {template=vue editorHeight=580 editorWidthPercentage=60 dependencies="lucide-vue-next"}
 
-This feature has been requested several times and discussion is happening at [#458](https://github.com/lucide-icons/lucide/discussions/458).
+```vue src/App.vue [active]
+<script setup>
+import { Star, StarHalf } from "lucide-vue-next";
+import "./icon.css";
+</script>
+
+<template>
+  <div class="app">
+    <div class="star-rating">
+      <div class="stars">
+        <Star
+          v-for="i in 5"
+          fill="#111"
+          strokeWidth="0"
+        />
+      </div>
+      <div class="stars rating">
+        <Star fill="yellow" strokeWidth="0" />
+        <Star fill="yellow" strokeWidth="0" />
+        <StarHalf fill="yellow" strokeWidth="0" />
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+```css src/icon.css
+.star-rating {
+  position: relative;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rating {
+  position: absolute;
+  top: 0;
+}
+
+```
+:::

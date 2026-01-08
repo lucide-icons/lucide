@@ -46,7 +46,7 @@ For example, you can add a notification badge to an icon by using the `circle` S
   }"
 />
 
-## Example with text element
+### Example with text element
 
 You can also use the `text` SVG element to add text to your icon.
 

@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-## Example with text element
+### Example with text element
 
 You can also use the `text` SVG element to add text to your icon.
 

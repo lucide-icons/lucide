@@ -1,9 +1,5 @@
 <script setup>
-import { Sandpack } from 'sandpack-vue3'
-import sandpackTheme from '../../../.vitepress/theme/sandpackTheme.json'
-import globalIconCssExample from './examples/global-styling-css-example/files.ts'
-import globalAbsoluteStrokewidthExample from './examples/global-styling-absolute-strokewidth-example/files.ts'
-
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
 
 # Global Styling
@@ -43,37 +39,113 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 - The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
 - The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
 
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="globalIconCssExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 55,
-  }"
-/>
+::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="lucide-vue-next"}
+
+```css src/icon.css [active]
+.lucide {
+  /* Change this! */
+  color: #ffadff;
+  width: 56px;
+  height: 56px;
+  stroke-width: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+```
+
+```vue src/App.vue
+<script setup>
+import {
+  CakeSlice,
+  Candy,
+  Apple,
+  Cookie,
+  Martini,
+  IceCream2,
+  Sandwich,
+  Wine,
+  Dessert,
+} from "lucide-vue-next";
+
+import "./icon.css";
+</script>
+
+<template>
+  <div class="grid">
+    <CakeSlice />
+    <Candy />
+    <Apple />
+    <Cookie />
+    <Martini />
+    <IceCream2 />
+    <Sandwich />
+    <Wine />
+    <Dessert />
+  </div>
+</template>
+```
+:::
 
 ### Absolute stroke width
 
 For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
 
-<Sandpack
-  template="vue"
-  :theme="sandpackTheme"
-  :files="globalAbsoluteStrokewidthExample"
-  :customSetup='{
-    dependencies: {
-      "lucide-vue-next": "latest"
-    }
-  }'
-  :options="{
-    editorHeight: 300,
-    editorWidthPercentage: 55,
-  }"
-/>
+::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="lucide-vue-next"}
 
+```css src/icon.css [active]
+.lucide {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
+```
+
+```vue src/App.vue
+<script setup>
+import {
+  TentTree,
+  Caravan,
+  FlameKindling,
+  MountainSnow,
+  Trees,
+  Axe,
+  Map,
+  CloudMoon,
+  Sparkles,
+} from "lucide-vue-next";
+
+import "./icon.css";
+</script>
+
+<template>
+  <div class="grid">
+    <TentTree />
+    <Caravan />
+    <FlameKindling />
+    <MountainSnow />
+    <Trees />
+    <Axe />
+    <Map />
+    <CloudMoon />
+    <Sparkles />
+  </div>
+</template>
+
+```
+:::
