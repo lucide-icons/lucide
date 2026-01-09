@@ -1,16 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Nykoula"
+    "Nykoula",
+    "jamiemlaw"
   ],
   "tags": [
     "bridge",
-    "lift-bridge",
+    "suspension",
     "infrastructure",
     "transportation",
     "crossing",
     "road",
-    "river"
+    "river",
+    "gate",
+    "golden",
+    "travel"
   ],
   "categories": [
     "travel",
