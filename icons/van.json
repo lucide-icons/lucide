@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Ahmed-Dghaies",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "minivan",
+    "cart",
+    "wagon",
+    "truck",
+    "lorry",
+    "trailer",
+    "camper",
+    "vehicle",
+    "drive",
+    "trip",
+    "journey",
+    "van",
+    "transport",
+    "carriage",
+    "delivery",
+    "travel"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

@@ -1,4 +1,5 @@
 ---
+title: License
 aside: false
 editLink: false
 ---

@@ -40,7 +40,7 @@
   },
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "test": "pnpm build:icons && vitest run",
@@ -55,7 +55,9 @@
     "linkedom": "^0.18.5",
     "prettier": "^3.4.2",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
+    "vite": "^6.3.6",
+    "vitest": "^4.0.12",
+    "astro": "^5.16.0"
   },
   "peerDependencies": {
     "astro": "^4 || ^5"

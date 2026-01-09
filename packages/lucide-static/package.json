@@ -30,20 +30,21 @@
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles && pnpm build:lib && pnpm build:tags",
-    "build:tags": "node ../../scripts/migrateIconsToTags.mjs",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
-    "build:lib": "node ./scripts/buildLib.mjs",
+    "build:tags": "node ./scripts/migrateIconsToTags.mts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
+    "build:lib": "node ./scripts/buildLib.mts",
     "build:bundles": "rollup -c rollup.config.mjs",
     "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "workspace:*",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@types/node": "^22.15.30",
     "prettier": "^2.3.2",
     "svgson": "^5.2.1",
-    "@lucide/build-icons": "workspace:*",
-    "@lucide/rollup-plugins": "workspace:*",
-    "@lucide/helpers": "workspace:*",
-    "rollup": "^4.40.0",
+    "rollup": "^4.53.3",
     "rollup-plugin-dts": "^6.2.1"
   }
 }
