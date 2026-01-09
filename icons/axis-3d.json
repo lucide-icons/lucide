@@ -12,6 +12,11 @@
     "design"
   ],
   "aliases": [
-    "axis-3-d"
+    {
+      "name": "axis-3-d",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

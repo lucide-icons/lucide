@@ -15,6 +15,11 @@
     "time"
   ],
   "aliases": [
-    "alarm-minus"
+    {
+      "name": "alarm-minus",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

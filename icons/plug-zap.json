@@ -20,6 +20,11 @@
     "devices"
   ],
   "aliases": [
-    "plug-zap-2"
+    {
+      "name": "plug-zap-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
