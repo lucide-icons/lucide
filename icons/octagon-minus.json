@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "tags": [
+    "stop",
+    "forbidden",
+    "subtract",
+    "remove",
+    "decrease",
+    "reduce",
+    "-",
+    "traffic",
+    "halt",
+    "restricted"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

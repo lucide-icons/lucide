@@ -21,11 +21,15 @@
     "multiplication"
   ],
   "categories": [
-    "maths",
-    "shapes",
+    "math",
     "development"
   ],
   "aliases": [
-    "x-circle"
+    {
+      "name": "x-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

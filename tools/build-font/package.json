@@ -3,16 +3,22 @@
   "description": "A internal used package to build the font.",
   "private": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.ts",
+  "type": "module",
   "scripts": {
-    "start": "node ./main.mjs"
+    "start": "node ./main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fs-extra": "^11.1.1",
+    "fs-extra": "^11.2.0",
     "minimist": "^1.2.8",
-    "svgtofont": "^3.25.4"
+    "svgtofont": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22"
   }
 }

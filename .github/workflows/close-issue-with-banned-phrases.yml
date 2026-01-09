@@ -1,0 +1,48 @@
+name: Close Icon Requests with Brand Terms
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  block_phrases:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Load stopwords from JSON & check issue title & body
+        if: contains(github.event.issue.labels.*.name, '🙌 icon request')
+        run: |
+          ISSUE_TITLE=$(jq -r '.issue.title' "$GITHUB_EVENT_PATH")
+          ISSUE_BODY=$(jq -r '.issue.body // ""' "$GITHUB_EVENT_PATH")
+          ICON_NAME_SECTION=$(printf '%s\n' "$ISSUE_BODY" | awk '/### Icon name/{flag=1; next} /^### /{flag=0} flag')
+
+          jq -r 'to_entries[] | "\(.key) \(.value)"' brand-stopwords.json | while read -r KEY VALUE; do
+            SAFE_KEY=$(printf '%s\n' "$KEY" | sed 's/[][\.^$*]/\\&/g')
+            SAFE_VALUE=$(printf '%s\n' "$VALUE" | sed 's/[][\.^$*]/\\&/g')
+
+            if echo "$ISSUE_TITLE" | grep -iqE "$SAFE_KEY|$SAFE_VALUE" || \
+              { [ -n "$ICON_NAME_SECTION" ] && echo "$ICON_NAME_SECTION" | grep -iqE "$SAFE_KEY|$SAFE_VALUE"; }; then
+
+              gh issue close ${{ github.event.issue.number }} \
+                --reason "not_planned" \
+                --comment "It looks like this request is about **${VALUE}**, which is a brand logo.
+
+          Lucide **does not accept** brand logos, and we do not plan to add them in the future. This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
+
+          [Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS_STATEMENT.md)
+
+          You can [search for similar issues.](https://github.com/lucide-icons/lucide/issues?q=is%3Aissue+${VALUE})
+
+          We’re always happy to help on [Discord](https://discord.gg/EH6nSts)."
+
+              gh issue lock ${{ github.event.issue.number }} --reason spam
+              exit 0
+            fi
+          done
+
+env:
+  GH_TOKEN: ${{ github.token }}

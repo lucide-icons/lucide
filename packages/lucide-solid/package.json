@@ -1,6 +1,6 @@
 {
   "name": "lucide-solid",
-  "description": "A Lucide icon library package for Solid applications",
+  "description": "A Lucide icon library package for Solid applications.",
   "version": "0.0.1",
   "license": "ISC",
   "homepage": "https://lucide.dev",
@@ -36,8 +36,21 @@
       "solid": "./dist/source/lucide-solid.jsx",
       "import": "./dist/esm/lucide-solid.js",
       "browser": "./dist/esm/lucide-solid.js",
-      "require": "./dist/cjs/lucide-solid.js",
-      "node": "./dist/cjs/lucide-solid.js"
+      "require": "./dist/cjs/lucide-solid.js"
+    },
+    "./icons": {
+      "types": "./dist/types/lucide-solid.d.ts",
+      "solid": "./dist/source/lucide-solid.jsx",
+      "import": "./dist/esm/lucide-solid.js",
+      "browser": "./dist/esm/lucide-solid.js",
+      "require": "./dist/cjs/lucide-solid.js"
+    },
+    "./icons/*": {
+      "types": "./dist/types/icons/*.d.ts",
+      "solid": "./dist/source/icons/*.jsx",
+      "import": "./dist/esm/icons/*.js",
+      "browser": "./dist/esm/icons/*.js",
+      "require": "./dist/cjs/icons/*.js"
     }
   },
   "sideEffects": false,
@@ -48,7 +61,7 @@
     "build:transpile": "tsc --jsx preserve -t es2020 --rootDir src --outDir dist --noEmit false",
     "build:version": "node ./scripts/replaceVersion.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
     "test": "pnpm build:icons && vitest run",
     "version": "pnpm version --git-tag-version=false"
   },
@@ -60,17 +73,17 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^6.0.4",
-    "@solidjs/testing-library": "^0.8.6",
+    "@solidjs/testing-library": "^0.8.10",
     "@testing-library/jest-dom": "^6.4.2",
     "babel-preset-solid": "^1.8.12",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.9.2",
-    "solid-js": "^1.8.7",
-    "typescript": "^4.9.4",
-    "vite": "5.0.13",
-    "vite-plugin-solid": "^2.10.1",
-    "vitest": "^1.1.1",
-    "esbuild": "^0.19.11"
+    "rollup": "^4.53.3",
+    "solid-js": "^1.9.4",
+    "typescript": "^5.8.3",
+    "vite": "^7.2.4",
+    "vite-plugin-solid": "^2.11.6",
+    "vitest": "^4.0.12",
+    "esbuild": "^0.25.0"
   },
   "peerDependencies": {
     "solid-js": "^1.4.7"

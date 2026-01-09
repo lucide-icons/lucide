@@ -7,22 +7,24 @@ on:
     paths:
       - icons/**/*.svg
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: write
+
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
-          version: 8
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
           cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -34,25 +36,19 @@ jobs:
         id: latest-tag
         run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
+      - name: Log latest tag
+        run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
+
       - name: Check if we can patch
-        run: .github/workflows/version-up.sh --minor
+        run: pnpm semver $LATEST_TAG -i minor
+        env:
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Create new version
         id: new-version
-        run: echo "NEW_VERSION=$(.github/workflows/version-up.sh --minor)" >> $GITHUB_OUTPUT
-
-      - name: Create change log
-        id: change-log
-        run: |
-          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
-          echo $CHANGE_LOG
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "CHANGE_LOG<<$EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGE_LOG" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
+        run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
         env:
-          GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Check output
         run: |
@@ -63,8 +59,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
-          name: New icons ${{ steps.new-version.outputs.NEW_VERSION }}
-          body: ${{ steps.change-log.outputs.CHANGE_LOG }}
+          name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
+          generate_release_notes: true
 
   start-release:
     if: github.repository == 'lucide-icons/lucide'

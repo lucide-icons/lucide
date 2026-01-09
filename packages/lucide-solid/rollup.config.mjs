@@ -4,7 +4,7 @@ import esbuild from 'esbuild';
 import plugins from '@lucide/rollup-plugins';
 import ts from 'typescript';
 
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const packageName = 'LucideSolid';
 const outputFileName = 'lucide-solid';
@@ -16,11 +16,13 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
+    preserveModules: true,
   },
   {
     format: 'esm',
     inputs,
     outputDir,
+    preserveModules: true,
   },
 ];
 
