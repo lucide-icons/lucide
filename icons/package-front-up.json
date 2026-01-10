@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "danielbayley"
+  ],
+  "tags": [
+    "box",
+    "bundle",
+    "parcel",
+    "contain",
+    "store",
+    "seal",
+    "pack",
+    "open",
+    "deliver",
+    "archive",
+    "zip",
+    "backup",
+    "order",
+    "return",
+    "send",
+    "post",
+    "publish",
+    "release",
+    "shipping"
+  ],
+  "categories": [
+    "files",
+    "development",
+    "mail"
+  ]
+}
