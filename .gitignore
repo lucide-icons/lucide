@@ -4,6 +4,7 @@
 .obsidian
 .now
 .idea
+.env
 node_modules
 dist
 build
@@ -43,7 +44,7 @@ docs/.vitepress/data/releaseMetaData
 docs/.vitepress/data/categoriesData.json
 docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
+docs/.vitepress/data/brandStopwords.json
 docs/.vercel
 docs/.nitro
 .gitignore
-

@@ -19,6 +19,11 @@
     "development"
   ],
   "aliases": [
-    "alert-triangle"
+    {
+      "name": "alert-triangle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

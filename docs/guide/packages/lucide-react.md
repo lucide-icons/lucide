@@ -1,13 +1,20 @@
 # Lucide React
 
-Implementation of the lucide icon library for react applications
+React components for Lucide icons that integrate seamlessly into your React applications. Each icon is a fully-typed React component that renders as an optimized inline SVG, giving you the flexibility of components with the performance of vector graphics.
+
+**What you can accomplish:**
+- Import icons as React components with full TypeScript support
+- Pass props to customize size, color, stroke width, and other SVG attributes
+- Use icons in JSX with the same ease as any other React component
+- Benefit from automatic tree-shaking to include only the icons you use
+- Create dynamic icon components that respond to state and user interactions
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
@@ -78,17 +85,16 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-react';
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={burger} />
+  <Icon iconNode={coconut} />
 );
 ```
 
 ## Dynamic Icon Component
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
-Since it is importing all icons during build. This increases build time and the different modules it will create.
+It is possible to create one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. This increases build time and the different modules it will create.
 
 `DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system with where icon names are stored in a database.
 
