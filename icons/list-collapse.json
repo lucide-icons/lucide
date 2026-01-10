@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ocavue"
+    "ocavue",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "items",

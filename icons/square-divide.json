@@ -6,15 +6,19 @@
   ],
   "tags": [
     "calculate",
-    "maths",
+    "math",
     "÷",
     "/"
   ],
   "categories": [
-    "maths",
-    "shapes"
+    "math"
   ],
   "aliases": [
-    "divide-square"
+    {
+      "name": "divide-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

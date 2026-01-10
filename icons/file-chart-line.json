@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph",
+    "presentation"
+  ],
+  "categories": [
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-line-chart",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

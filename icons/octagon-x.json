@@ -11,14 +11,18 @@
     "warning",
     "times",
     "clear",
-    "maths"
+    "math"
   ],
   "categories": [
-    "maths",
-    "shapes",
+    "math",
     "notifications"
   ],
   "aliases": [
-    "x-octagon"
+    {
+      "name": "x-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

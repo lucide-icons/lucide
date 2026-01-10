@@ -14,11 +14,14 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "shapes",
     "gaming"
   ],
   "aliases": [
-    "arrow-down-left-square"
+    {
+      "name": "arrow-down-left-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

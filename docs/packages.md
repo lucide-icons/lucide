@@ -1,4 +1,5 @@
 ---
+title: Packages
 layout: page
 outline: 2
 outlineTitle: Packages

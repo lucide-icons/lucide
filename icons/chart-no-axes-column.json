@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph"
+  ],
+  "categories": [
+    "charts"
+  ],
+  "aliases": [
+    {
+      "name": "bar-chart-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

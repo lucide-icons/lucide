@@ -2,13 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "scale",
-    "fullscreen"
+    "fullscreen",
+    "maximize",
+    "minimize",
+    "contract"
   ],
   "categories": [
-    "text"
+    "text",
+    "arrows"
   ]
 }

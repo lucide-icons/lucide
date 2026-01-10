@@ -3,7 +3,8 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "done",
@@ -13,10 +14,14 @@
     "task"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "notifications"
   ],
   "aliases": [
-    "check-circle"
+    {
+      "name": "check-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

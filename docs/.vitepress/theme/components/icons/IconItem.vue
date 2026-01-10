@@ -6,6 +6,7 @@ import { useRouter } from 'vitepress';
 import getSVGIcon from '../../utils/getSVGIcon';
 import useConfetti from '../../composables/useConfetti';
 import Tooltip from '../base/Tooltip.vue';
+import { diamond }  from '../../../data/iconNodes'
 
 const downloadText = 'Download!'
 const copiedText = 'Copied!'
@@ -16,6 +17,7 @@ const props = defineProps<{
   name: string;
   iconNode: IconNode;
   active: boolean;
+  externalLibrary?: string;
   customizable?: boolean;
   overlayMode?: boolean
   hideIcon?: boolean
@@ -33,8 +35,9 @@ const icon = computed(() => {
   return createLucideIcon(props.name, props.iconNode)
 })
 
-async function navigateToIcon(event) {
+const href = computed(() => props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
 
+async function navigateToIcon(event) {
   if (event.shiftKey) {
     event.preventDefault()
     const svgString = getSVGIcon(event.target.firstChild, {
@@ -50,13 +53,16 @@ async function navigateToIcon(event) {
 
   if(props.overlayMode && showOverlay.value) {
     event.preventDefault()
-    window.history.pushState({}, '', `/icons/${props.name}`)
-    emit('setActiveIcon', props.name)
+
+    window.history.pushState({}, '', props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
+    emit('setActiveIcon', props.externalLibrary ? `${props.externalLibrary}:${props.name}`: props.name)
   } else {
     event.preventDefault()
-    go(`/icons/${props.name}`)
+    go(props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
   }
 }
+
+const DiamondIcon = createLucideIcon('Diamond', diamond)
 </script>
 
 <template>
@@ -66,7 +72,7 @@ async function navigateToIcon(event) {
       @click="navigateToIcon"
       :class="{ active, animate }"
       :aria-label="name"
-      :href="`/icons/${props.name}`"
+
       :data-confetti-text="confettiText"
       ref="ref"
     >
@@ -80,6 +86,13 @@ async function navigateToIcon(event) {
           }"
         />
       </KeepAlive>
+      <div
+        v-if="externalLibrary"
+        class="floating-diamond"
+        aria-hidden="true"
+      >
+        <DiamondIcon fill="currentColor" :size="8"/>
+      </div>
     </a>
   </Tooltip>
 </template>
@@ -88,6 +101,7 @@ async function navigateToIcon(event) {
 
 <style scoped>
 .icon-button {
+  position: relative;
   display: inline-block;
   border: 1px solid transparent;
   text-align: center;
@@ -102,6 +116,13 @@ async function navigateToIcon(event) {
   height: 56px;
   font-size: 24px;
   color: var(--vp-c-text-1);
+}
+
+.floating-diamond {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: var(--vp-c-brand);
 }
 
 .confetti-button:before,
@@ -157,6 +178,8 @@ async function navigateToIcon(event) {
   stroke-width: var(--customize-strokeWidth, 2);
   width: calc(var(--customize-size, 24) * 1px);
   height: calc(var(--customize-size, 24) * 1px);
+  max-width: 3rem;
+  max-height: 3rem;
 }
 
 html.absolute-stroke-width .lucide-icon.customizable {

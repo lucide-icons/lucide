@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph",
+    "curve",
+    "continuous",
+    "smooth",
+    "polynomial",
+    "quadratic",
+    "function",
+    "interpolation"
+  ],
+  "categories": [
+    "charts"
+  ]
+}

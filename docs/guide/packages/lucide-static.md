@@ -1,28 +1,51 @@
 # Lucide Static
 
-This package include the following lucide implementations:
+Static assets and utilities for Lucide icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
 
-- All SVG files
+**What you can accomplish:**
+- Use individual SVG files as images or CSS background images
+- Implement icon fonts for CSS-based icon systems
+- Create SVG sprites for efficient icon loading in static sites
+- Import SVG strings in Node.js applications and server-side rendering
+- Build static websites and applications without JavaScript framework dependencies
+
+This package includes the following implementations of Lucide icons:
+
+- Individual SVG files
 - SVG sprite
-- Icon fonts
-- JavaScript library containing strings of SVGs.
+- Icon font files
+- A JavaScript library exporting SVG strings
 
-## Why lucide-static?
+## Who is this for?
 
-This package is suitable for specific use cases, for example if you want to use icon fonts, SVG sprites, normal SVGs or Common.js SVG strings in your javascript project.
+`lucide-static` is suitable for _very specific use cases_ where you want to use Lucide icons without relying on a JavaScript framework or component system. It's ideal for:
 
-::: warning
-While they can be useful for prototyping, it is not recommended to use the SVG sprites or icon fonts provided by this package in production web apps as all the available icons are included in the app, hence increasing loading time and data usage. We recommend to use a bundler and tree-shaking to make sure only the icons you use are bundled with your app. Tree-shaking is only available in these packages: [lucide](lucide), [lucide-react](lucide-react), [lucide-vue](lucide-vue), [lucide-vue-next](lucide-vue-next), [lucide-angular](lucide-angular), [lucide-preact](lucide-preact)
+- Projects that use icon fonts with plain CSS or utility-first frameworks
+- Embedding raw SVG files or sprites directly in HTML
+- Using SVGs as CSS background images
+- Importing SVG strings into Node.js (CommonJS) environments
+
+::: danger
+### Not recommended for production {#production-warning}
+
+SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
+
+For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using:
+
+- [lucide](lucide)
+- [lucide-react](lucide-react)
+- [lucide-vue](lucide-vue)
+- [lucide-vue-next](lucide-vue-next)
+- [lucide-angular](lucide-angular)
+- [lucide-preact](lucide-preact)
 :::
 
 ## Installation
 
-## Package Managers
-
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
@@ -33,66 +56,92 @@ yarn add lucide-static
 npm install lucide-static
 ```
 
+```sh [bun]
+bun add lucide-static
+```
+
 :::
 
-### CDN
+## SVG Files
 
-```html
+You can use standalone SVG files or SVG sprites in several ways.
+
+Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk).
+
+### SVG file as image
+
+#### In HTML:
+
+::: code-group
+
+```html [Webpack]
 <!-- SVG file for a single icon -->
-<img src="https://unpkg.com/lucide-static@latest/icons/home.svg" />
-
-<!-- Icon font -->
-<style>
-  @font-face {
-    font-family: 'LucideIcons';
-    src: url(https://unpkg.com/lucide-static@latest/font/Lucide.ttf) format('truetype');
-  }
-</style>
+<img src="~lucide-static/icons/house.svg" />
 ```
 
-## Usage
-
-Check out the [codesandbox examples](https://codesandbox.io/s/using-the-svg-sprite-lz1kk).
-
-### SVG Files
-
-#### SVG file as image
-
-To use it in for example html:
-
-```html
+```html [CDN]
 <!-- SVG file for a single icon -->
-<img src="~lucide-static/icons/home.svg" />
+<img src="https://unpkg.com/lucide-static@latest/icons/house.svg" />
 ```
 
-```css
-.home-icon {
-  background-image: url(~lucide-static/icons/home.svg);
+:::
+
+#### In CSS:
+
+::: code-group
+
+```css [Webpack]
+.house-icon {
+  background-image: url(~lucide-static/icons/house.svg);
 }
 ```
 
-Make sure you have the correct webpack loaders to make this work. [url-loader](https://v4.webpack.js.org/loaders/url-loader/)
-
-#### SVG file as string
-
-You can simply import each SVG by targeting `lucide-static/icons/{icon-name}.svg`.
-To use SVGs in your project you can for example use a [SVG loader](https://v4.webpack.js.org/loaders/svg-inline-loader/).
-
-```js
-import arrowRightIcon from 'lucide-static/icons/arrow-right';
-
-// return string of an SVG
+```css [CDN]
+.house-icon {
+  background-image: url(https://unpkg.com/lucide-static@latest/icons/house.svg);
+}
 ```
 
-### SVG Sprite
+:::
 
-You may need additional loader for this.
+Make sure you have the correct Webpack loader configured, such as [`url-loader`](https://v4.webpack.js.org/loaders/url-loader/).
+
+### SVG file as string
+
+To import an SVG as a string (e.g., for templating):
+
+::: code-group
+
+```js [Webpack]
+import arrowRightIcon from 'lucide-static/icons/arrow-right';
+```
+
+```js [Vite]
+import arrowRightIcon from 'lucide-static/icons/arrow-right.svg?raw';
+```
+
+:::
+
+You'll need an SVG loader like [`svg-inline-loader`](https://v4.webpack.js.org/loaders/svg-inline-loader/).
+
+
+### Using the SVG sprite
+
+:::danger
+[Not intended for production use.](#production-warning)
+:::
+
+You may also need an additional SVG loader to handle this.
+
+#### Basic sprite usage (not production-optimized):
 
 ```html
-<!-- Icon Sprite, not recommended for production! -->
-<img src="lucide-static/sprite.svg#home" />
+<img src="lucide-static/sprite.svg#house" />
+```
 
-<!-- or -->
+#### Inline usage:
+
+```html
 <svg
   width="24"
   height="24"
@@ -105,12 +154,13 @@ You may need additional loader for this.
   <use href="#alert-triangle" />
 </svg>
 
-<svg>
-  ...sprite svg
-</svg>
+<!-- sprite SVG -->
+<svg>...</svg>
 ```
 
-If you'd prefer, you can use CSS to hold your base SVG properties
+#### Inline with CSS helper class
+
+If you'd prefer, you can use CSS to hold your base SVG properties:
 
 ```css
 .lucide-icon {
@@ -124,47 +174,79 @@ If you'd prefer, you can use CSS to hold your base SVG properties
 }
 ```
 
-and update the SVG as follows
+...and update the SVG as follows:
 
 ```xml
 <svg
   xmlns="http://www.w3.org/2000/svg"
   class="lucide-icon"
 >
-<use
-    href="#alert-triangle"
-  />
+  <use href="#triangle-alert" />
 </svg>
-<svg>
-  ...sprite svg
-</svg>
+
+<!-- sprite SVG -->
+<svg>...</svg>
 ```
 
-### Icon Font
+## Icon font
 
-```css
+:::danger
+[Not intended for production use.](#production-warning)
+:::
+
+Lucide icons are also available as a web font. To use them, you first need to include the corresponding stylesheet:
+
+::: code-group
+
+```css [Vite]
+@import 'lucide-static/font/lucide.css';
+```
+
+```css [Webpack]
 @import ('~lucide-static/font/lucide.css');
 ```
 
+```html [CDN]
+<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
+```
+
+```html [Static asset]
+<link rel="stylesheet" href="/your/path/to/lucide.css" />
+```
+
+:::
+
+Once included, use the format `icon-{kebab-case-name}`. You can copy icon names from the [Lucide Icons page](https://lucide.dev/icons).
+
 ```html
-<div class="icon-home"></div>
+<div class="icon-house"></div>
 ```
 
-### Node.js
+If you're not using a package manager, you can download the font files directly from the [latest release](https://github.com/lucide-icons/lucide/releases/latest).
 
-To use lucide icons in your Nodejs project you can import each icon as:
+## Node.js
 
-```js
-const { messageSquare } = require('lucide-static/lib');
+You can also import Lucide icons in Node.js projects:
+
+::: code-group
+
+```js [ESM]
+import {MessageSquare} from 'lucide-static';
 ```
 
-> Note: Each icon name is in camelCase.
+```js [CommonJs]
+const {MessageSquare} = require('lucide-static');
+```
 
-#### Example in node.js project
+:::
+
+> Note: Each icon name is in PascalCase.
+
+#### Express app example in Node.js
 
 ```js
-const express = require('express');
-const { messageSquare } = require('lucide-static/lib');
+import express from 'express';
+import {MessageSquare} from 'lucide-static';
 const app = express();
 const port = 3000;
 
@@ -177,7 +259,7 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <h1>Lucide Icons</h1>
-        <p>This is a lucide icon ${messageSquare}</p>
+        <p>This is a Lucide icon ${MessageSquare}</p>
 
       </body>
     </html>

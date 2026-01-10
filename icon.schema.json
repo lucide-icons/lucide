@@ -21,39 +21,81 @@
     "aliases": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
             "type": "string"
           },
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "deprecated": {
-                "const": true
-              },
-              "deprecationReason": {
-                "$ref": "#/$defs/aliasDeprecationReasons"
-              },
-              "toBeRemovedInVersion": {
-                "$ref": "#/$defs/versionNumber",
-                "description": "The version this icon will be removed in."
-              }
-            },
-            "dependentRequired": {
-              "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
-            }
+          "deprecated": {
+            "const": true
+          },
+          "deprecationReason": {
+            "$ref": "#/$defs/aliasDeprecationReasons"
+          },
+          "toBeRemovedInVersion": {
+            "$ref": "#/$defs/versionNumber",
+            "description": "The version this icon will be removed in."
           }
-        ]
+        },
+        "dependentRequired": {
+          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecationReason": ["deprecated"],
+          "toBeRemovedInVersion": ["deprecated"]
+        }
       },
       "uniqueItems": true
     },
     "categories": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "accessibility",
+          "account",
+          "animals",
+          "arrows",
+          "brands",
+          "buildings",
+          "charts",
+          "communication",
+          "connectivity",
+          "cursors",
+          "design",
+          "development",
+          "devices",
+          "emoji",
+          "files",
+          "finance",
+          "food-beverage",
+          "gaming",
+          "home",
+          "layout",
+          "mail",
+          "math",
+          "medical",
+          "multimedia",
+          "nature",
+          "navigation",
+          "notifications",
+          "people",
+          "photography",
+          "science",
+          "seasons",
+          "security",
+          "shapes",
+          "shopping",
+          "social",
+          "sports",
+          "sustainability",
+          "text",
+          "time",
+          "tools",
+          "transportation",
+          "travel",
+          "weather"
+        ]
       },
       "uniqueItems": true
     },
@@ -85,7 +127,9 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecationReason": ["deprecated"],
+    "toBeRemovedInVersion": ["deprecated"]
   },
   "$defs": {
     "iconDeprecationReasons": {
@@ -94,7 +138,7 @@
     },
     "aliasDeprecationReasons": {
       "type": "string",
-      "enum": ["alias.typo", "alias.name"]
+      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
     },
     "versionNumber": {
       "type": "string",

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { data } from './PackageList.data'
 import GridSection from '../base/GridSection.vue'
-import PackageListItem from "./PackageListItem.vue";</script>
+import PackageListItem from "./PackageListItem.vue";
+</script>
 
 <template>
   <GridSection

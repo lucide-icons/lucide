@@ -9,6 +9,7 @@ const description = 'Beautiful & consistent icon toolkit made by the community.'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title,
+  titleTemplate: ':title \u2013 Lucide',
   description,
   cleanUrls: true,
   outDir: '.vercel/output/static',
@@ -28,10 +29,21 @@ export default defineConfig({
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
           ),
         },
+        {
+          find: '~/.vitepress',
+          replacement: fileURLToPath(new URL('./', import.meta.url)),
+        },
       ],
     },
   },
   head: [
+    [
+      'link',
+      {
+        rel: 'preconnect',
+        href: 'https://analytics.lucide.dev',
+      },
+    ],
     [
       'script',
       {

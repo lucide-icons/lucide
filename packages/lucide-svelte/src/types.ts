@@ -1,4 +1,3 @@
-import type { SvelteComponent } from 'svelte';
 import type { SVGAttributes, SvelteHTMLElements } from 'svelte/elements';
 
 export type Attrs = SVGAttributes<SVGSVGElement>;
@@ -6,11 +5,13 @@ export type Attrs = SVGAttributes<SVGSVGElement>;
 export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: Attrs][];
 
 export interface IconProps extends Attrs {
+  name?: string;
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
   absoluteStrokeWidth?: boolean;
   class?: string;
+  iconNode?: IconNode;
 }
 
 export type IconEvents = {
@@ -20,5 +21,3 @@ export type IconEvents = {
 export type IconSlots = {
   default: {};
 };
-
-export type Icon = SvelteComponent<IconProps, IconEvents, IconSlots>;

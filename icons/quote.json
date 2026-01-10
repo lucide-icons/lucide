@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Billiam"
+    "Billiam",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "quotation"

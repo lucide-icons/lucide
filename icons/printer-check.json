@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "fax",
+    "office",
+    "device",
+    "success",
+    "printed"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
