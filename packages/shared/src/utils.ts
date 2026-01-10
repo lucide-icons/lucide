@@ -49,3 +49,25 @@ export const mergeClasses = <ClassType = string | undefined | null>(...classes: 
     })
     .join(' ')
     .trim();
+
+/**
+ * Is empty string
+ *
+ * @param {unknown} value
+ * @returns {boolean} Whether the value is an empty string
+ */
+export const isEmptyString = (value: unknown): boolean => value === '';
+
+/**
+ * Check if a component has an accessibility prop
+ *
+ * @param {object} props
+ * @returns {boolean} Whether the component has an accessibility prop
+ */
+export const hasA11yProp = (props: Record<string, any>) => {
+  for (const prop in props) {
+    if (prop.startsWith('aria-') || prop === 'role' || prop === 'title') {
+      return true;
+    }
+  }
+};
