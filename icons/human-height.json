@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Anthony-Gaudino"
+  ],
+  "tags": [
+    "human",
+    "height",
+    "length",
+    "measurement"
+  ],
+  "categories": [
+    "people",
+    "medical",
+    "science"
+  ]
+}
