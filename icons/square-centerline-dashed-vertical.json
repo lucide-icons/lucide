@@ -18,6 +18,7 @@
     {
       "name": "flip-vertical",
       "deprecationReason": "alias.name",
+      "deprecate": true,
       "toBeRemovedInVersion": "v1.0"
     }
   ]
