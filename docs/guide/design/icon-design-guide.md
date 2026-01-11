@@ -90,6 +90,15 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 **Tip:** whenever possible align elements and arc centers to the grid.
 
+### 14. Icons should share common shapes
+
+You should try to create consistent groups and variants, reuse and try to create uniformity.
+Consistency inside groups and variants has a lower priority than the rules above.
+
+**Example:** All `-off` icons should look the same unless it for example violates the optical volume rule.
+
+**Tip:** Try to not move the base shape to enable better use in a toggle context.
+
 ## Naming conventions
 
 1. Icon names use lower kebab case.\
