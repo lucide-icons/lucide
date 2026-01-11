@@ -1,7 +1,7 @@
 # TypeScript Support
 
 List of exported types from the `@lucide/svelte` package.
-These can be used to type your components when using Lucide icons in a TypeScript Vue project.
+These can be used to type your components when using Lucide icons in a TypeScript Svelte project.
 
 ## `LucideProps`
 
