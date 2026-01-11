@@ -17,7 +17,6 @@
   "aliases": [
     {
       "name": "flip-vertical",
-      "deprecate": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
     }
