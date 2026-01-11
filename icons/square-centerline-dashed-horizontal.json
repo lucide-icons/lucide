@@ -18,6 +18,7 @@
     {
       "name": "flip-horizontal",
       "deprecationReason": "alias.name",
+      "deprecate": true,
       "toBeRemovedInVersion": "v1.0"
     }
   ]
