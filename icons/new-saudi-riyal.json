@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "umairfaruk"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "saudi",
+    "riyal",
+    "sar"
+  ],
+  "categories": [
+    "finance",
+    "currency"
+  ]
+}
