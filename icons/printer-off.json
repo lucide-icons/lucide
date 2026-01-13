@@ -1,6 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
     "Spleefies"
   ],
   "tags": [
