@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ddikodroid"
+  ],
+  "tags": [
+    "document",
+    "format",
+    "paper",
+    "read",
+    "type",
+    "extension"
+  ],
+  "categories": [
+    "files"
+  ]
+}
