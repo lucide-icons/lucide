@@ -56,16 +56,6 @@ export const astroSidebar = [
         link: '/guide/astro/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with @lucide/astro',
       },
-      // {
-      //   text: 'Filled icons',
-      //   link: '/guide/astro/advanced/filled-icons',
-      //   desc: 'Using filled icons in @lucide/astro',
-      // },
-      {
-        text: 'Aliased Names',
-        link: '/guide/astro/advanced/aliased-names',
-        desc: 'Using aliased icon names',
-      },
     ],
   },
   {

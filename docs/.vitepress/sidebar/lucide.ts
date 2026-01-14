@@ -33,25 +33,29 @@ export const lucideSidebar = [
       },
     ],
   },
-  // TODO: Add this section
   {
     text: 'Advanced',
     items: [
       {
-        text: 'Typescript',
-        link: '/guide/lucide/advanced/typescript',
-        desc: 'All exported types and how to use them',
+        text: 'Global styling',
+        link: '/guide/lucide/advanced/global-styling',
+        desc: 'Apply options and styles globally',
       },
       {
-        text: 'With shadow DOM',
+        text: 'Shadow DOM',
         link: '/guide/lucide/advanced/shadow-dom',
         desc: 'All exported types and how to use them',
       },
       {
-        text: 'Accessibility',
-        link: '/guide/lucide/advanced/accessibility',
-        desc: 'Making your icons accessible',
+        text: 'Template element',
+        link: '/guide/lucide/advanced/content-template-element',
+        desc: 'Using content template element with lucide',
       },
+      // {
+      //   text: 'Accessibility',
+      //   link: '/guide/lucide/advanced/accessibility',
+      //   desc: 'Making your icons accessible',
+      // },
       {
         text: 'With lucide lab',
         link: '/guide/lucide/advanced/with-lucide-lab',
@@ -61,6 +65,16 @@ export const lucideSidebar = [
         text: 'Filled icons',
         link: '/guide/lucide/advanced/filled-icons',
         desc: 'Using filled icons in lucide',
+      },
+    ],
+  },
+  {
+    text: 'Resources',
+    items: [
+      {
+        text: 'Accessibility in depth',
+        link: '/guide/accessibility',
+        desc: 'Accessibility best practices',
       },
     ],
   },

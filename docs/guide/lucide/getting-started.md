@@ -74,7 +74,35 @@ createIcons({
 });
 ```
 
-### Example using a CND
+### Advanced Usage
+
+### Additional Options
+
+In the `createIcons` function you can pass some extra parameters:
+
+- you can pass `nameAttr` to adjust the attribute name to replace icons (default is `data-lucide`).
+- you can pass `attrs` to pass additional custom attributes, for instance CSS classes or stroke options.
+- you can pass `root` to provide a custom DOM element the icons should be replaced in (useful when manipulating small sections of a large DOM or elements in the shadow DOM)
+- you can pass `inTemplates: true` to also replace icons inside `<template>` tags.
+
+Here is a full example:
+
+```js
+import { createIcons } from 'lucide';
+
+createIcons({
+  attrs: {
+    class: ['my-custom-class', 'icon'],
+    'stroke-width': 1,
+    stroke: '#333'
+  },
+  nameAttr: 'data-lucide', // attribute for the icon name.
+  root: element, // DOM element to replace icons in.
+  inTemplates: true // Also replace icons inside <template> tags.
+});
+```
+
+### Example using a CDN
 
 ```html
 <!DOCTYPE html>
