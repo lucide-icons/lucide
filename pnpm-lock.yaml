@@ -398,19 +398,19 @@ importers:
         version: link:../shared
       '@preact/preset-vite':
         specifier: ^2.10.2
-        version: 2.10.2(@babel/core@7.28.5)(preact@10.27.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
+        version: 2.10.2(@babel/core@7.28.5)(preact@10.28.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
       '@testing-library/jest-dom':
         specifier: ^6.1.4
         version: 6.9.1
       '@testing-library/preact':
         specifier: ^3.2.3
-        version: 3.2.4(preact@10.27.2)
+        version: 3.2.4(preact@10.28.2)
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
       preact:
-        specifier: ^10.19.2
-        version: 10.27.2
+        specifier: ^10.27.3
+        version: 10.28.2
       rollup:
         specifier: ^4.53.3
         version: 4.53.3
@@ -2565,14 +2565,17 @@ packages:
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
 
-  '@emnapi/core@1.7.1':
-    resolution: {integrity: sha512-o1uhUASyo921r2XtHYOHy7gdkGLge8ghBEQHMWmyJFoXlpU58kIrhhN3w26lpQb6dspetweapMn2CSNwQ8I4wg==}
+  '@emnapi/core@1.8.1':
+    resolution: {integrity: sha512-AvT9QFpxK0Zd8J0jopedNm+w/2fIzvtPKPjqyw9jwvBaReTTqPBk9Hixaz7KbjimP+QNz605/XnjFcDAL2pqBg==}
 
   '@emnapi/runtime@1.4.3':
     resolution: {integrity: sha512-pBPWdu6MLKROBX05wSNKcNb++m5Er+KQ9QkB+WVM+pW2Kx9hoSrVTnu3BdkI5eBLZoKu/J6mW/B6i6bJB2ytXQ==}
 
   '@emnapi/runtime@1.7.1':
     resolution: {integrity: sha512-PVtJr5CmLwYAU9PZDMITZoR5iAOShYREoR45EyyLrbntV50mdePTgUn4AmOw90Ifcj+x2kRjdzr1HP3RrNiHGA==}
+
+  '@emnapi/runtime@1.8.1':
+    resolution: {integrity: sha512-mehfKSMWjjNol8659Z8KxEMrdSJDDot5SXMq00dM8BN4o+CLNXQ0xH2V7EchNHV4RmbZLmmPdEaXZc5H2FXmDg==}
 
   '@emnapi/wasi-threads@1.0.2':
     resolution: {integrity: sha512-5n3nTJblwRi8LlXkJ9eBzu+kZR8Yxcc7ubakyQTFzPMtIhFpUBRbsnc2Dv88IZDIbCDlBiWrknhB4Lsz7mg6BA==}
@@ -11018,8 +11021,8 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  preact@10.27.2:
-    resolution: {integrity: sha512-5SYSgFKSyhCbk6SrXyMpqjb5+MQBgfvEKE/OC+PujcY34sOpqtr+0AZQtPYx5IA6VxynQ7rUPCtKzyovpj9Bpg==}
+  preact@10.28.2:
+    resolution: {integrity: sha512-lbteaWGzGHdlIuiJ0l2Jq454m6kcpI1zNje6d8MlGAFlYvP2GO4ibnat7P74Esfz4sPTdM6UxtTwh/d3pwM9JA==}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -13298,10 +13301,12 @@ packages:
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-fetch@3.6.17:
     resolution: {integrity: sha512-c4ghIvG6th0eudYwKZY5keb81wtFz9/WeAHAoy8+r18kcWlitUIrmGFQ2rWEl4UCKUilD3zCLHOIPheHx5ypRQ==}
@@ -16052,7 +16057,7 @@ snapshots:
   '@docsearch/js@3.8.2(@algolia/client-search@5.44.0)(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.8.2)':
     dependencies:
       '@docsearch/react': 3.8.2(@algolia/client-search@5.44.0)(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.8.2)
-      preact: 10.27.2
+      preact: 10.28.2
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -16080,7 +16085,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@emnapi/core@1.7.1':
+  '@emnapi/core@1.8.1':
     dependencies:
       '@emnapi/wasi-threads': 1.1.0
       tslib: 2.8.1
@@ -16092,6 +16097,11 @@ snapshots:
     optional: true
 
   '@emnapi/runtime@1.7.1':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/runtime@1.8.1':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -17096,8 +17106,8 @@ snapshots:
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
-      '@emnapi/core': 1.7.1
-      '@emnapi/runtime': 1.7.1
+      '@emnapi/core': 1.8.1
+      '@emnapi/runtime': 1.8.1
       '@tybys/wasm-util': 0.10.1
     optional: true
 
@@ -17534,12 +17544,12 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@preact/preset-vite@2.10.2(@babel/core@7.28.5)(preact@10.27.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))':
+  '@preact/preset-vite@2.10.2(@babel/core@7.28.5)(preact@10.28.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-transform-react-jsx': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-react-jsx-development': 7.22.5(@babel/core@7.28.5)
-      '@prefresh/vite': 2.4.1(preact@10.27.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
+      '@prefresh/vite': 2.4.1(preact@10.28.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.28.5)
       debug: 4.4.3
@@ -17552,20 +17562,20 @@ snapshots:
 
   '@prefresh/babel-plugin@0.5.0': {}
 
-  '@prefresh/core@1.5.1(preact@10.27.2)':
+  '@prefresh/core@1.5.1(preact@10.28.2)':
     dependencies:
-      preact: 10.27.2
+      preact: 10.28.2
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.1(preact@10.27.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))':
+  '@prefresh/vite@2.4.1(preact@10.28.2)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0))':
     dependencies:
       '@babel/core': 7.28.5
       '@prefresh/babel-plugin': 0.5.0
-      '@prefresh/core': 1.5.1(preact@10.27.2)
+      '@prefresh/core': 1.5.1(preact@10.28.2)
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
-      preact: 10.27.2
+      preact: 10.28.2
       vite: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(less@4.2.0)(sass@1.77.8)(stylus@0.56.0)(terser@5.44.1)(yaml@2.8.0)
     transitivePeerDependencies:
       - supports-color
@@ -18356,10 +18366,10 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
 
-  '@testing-library/preact@3.2.4(preact@10.27.2)':
+  '@testing-library/preact@3.2.4(preact@10.28.2)':
     dependencies:
       '@testing-library/dom': 8.20.1
-      preact: 10.27.2
+      preact: 10.28.2
 
   '@testing-library/react@14.3.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -25915,7 +25925,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact@10.27.2: {}
+  preact@10.28.2: {}
 
   prelude-ls@1.2.1: {}
 
