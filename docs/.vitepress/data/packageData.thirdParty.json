@@ -77,8 +77,8 @@
     "source": "https://github.com/swisnl/nuxt-lucide-icons",
     "documentation": "https://github.com/swisnl/nuxt-lucide-icons/blob/main/README.md"
   },
-    {
-    "name": "lucide-lustre",
+  {
+    "name": "lucide_lustre",
     "description": "A library providing https://lucide.dev icons to lustre.",
     "icon": "/framework-logos/lustre.webp",
     "shields": [
@@ -95,5 +95,100 @@
     ],
     "source": "https://github.com/dinkelspiel/lucide_lustre",
     "documentation": "https://github.com/dinkelspiel/lucide_lustre/blob/master/README.md"
+  },
+  {
+    "name": "lucide_icons_flutter",
+    "description": "A library providing https://lucide.dev icons to Flutter.",
+    "icon": "/framework-logos/flutter.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/pub/v/lucide_icons_flutter",
+        "href": "https://pub.dev/packages/lucide_icons_flutter"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/pub/dm/lucide_icons_flutter",
+        "href": "https://pub.dev/packages/lucide_icons_flutter"
+      }
+    ],
+    "source": "https://github.com/vqh2602/lucide-flutter-main",
+    "documentation": "https://pub.dev/documentation/lucide_icons_flutter/latest/"
+  },
+  {
+    "name": "lucide-slint",
+    "description": "Implementation of the lucide icon library for Slint.",
+    "icon": "/framework-logos/slint.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/crates/v/lucide-slint",
+        "href": "https://crates.io/crates/lucide-slint"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/crates/d/lucide-slint",
+        "href": "https://crates.io/crates/lucide-slint"
+      }
+    ],
+    "source": "https://github.com/cnlancehu/lucide-slint",
+    "documentation": "https://github.com/cnlancehu/lucide-slint/blob/main/README.md"
+  },
+  {
+    "name": "lucide-go",
+    "description": "Implementation of Lucide icons for Go's html/template package.",
+    "icon": "/framework-logos/go.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/github/v/release/kaugesaar/lucide-go",
+        "href": "https://github.com/kaugesaar/lucide-go/releases"
+      },
+      {
+        "alt": "Go Reference",
+        "src": "https://pkg.go.dev/badge/github.com/kaugesaar/lucide-go.svg",
+        "href": "https://pkg.go.dev/github.com/kaugesaar/lucide-go"
+      }
+    ],
+    "source": "https://github.com/kaugesaar/lucide-go",
+    "documentation": "https://github.com/kaugesaar/lucide-go/blob/master/README.md"
+  },
+  {
+    "name": "lucide-rails",
+    "description": "Ruby on Rails views helper method for rendering Lucide icons.",
+    "icon": "/framework-logos/rails.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/gem/v/lucide-rails",
+        "href": "https://rubygems.org/gems/lucide-rails"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/gem/dt/lucide-rails",
+        "href": "https://rubygems.org/gems/lucide-rails"
+      }
+    ],
+    "source": "https://github.com/heyvito/lucide-rails",
+    "documentation": "https://github.com/heyvito/lucide-rails/blob/master/README.md"
+  },
+  {
+    "name": "lucide-web-components",
+    "description": "Implementation of Lucide icons in Web Components custom elements.",
+    "icon": "/framework-logos/web-components.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/@dile/iconlib",
+        "href": "https://dile-components.com/icons/lucide-icons/"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dt/@dile/iconlib",
+        "href": "https://dile-components.com/icons/lucide-icons/"
+      }
+    ],
+    "source": "https://github.com/Polydile/dile-components",
+    "documentation": "https://github.com/Polydile/dile-components/blob/master/packages/iconlib/README.md"
   }
 ]
