@@ -36,25 +36,19 @@ jobs:
         id: latest-tag
         run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
+      - name: Log latest tag
+        run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
+
       - name: Check if we can patch
         run: pnpm semver $LATEST_TAG -i minor
+        env:
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Create new version
         id: new-version
         run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
-
-      - name: Create change log
-        id: change-log
-        run: |
-          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
-          echo $CHANGE_LOG
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "CHANGE_LOG<<$EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGE_LOG" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
         env:
-          GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Check output
         run: |
