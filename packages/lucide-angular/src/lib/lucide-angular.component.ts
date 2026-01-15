@@ -52,7 +52,7 @@ export class LucideAngularComponent implements OnChanges {
     @Inject(Renderer2) private renderer: Renderer2,
     @Inject(ChangeDetectorRef) private changeDetector: ChangeDetectorRef,
     @Inject(LUCIDE_ICONS) private iconProviders: LucideIconProviderInterface[],
-    @Inject(LucideIconConfig) private iconConfig: LucideIconConfig
+    @Inject(LucideIconConfig) private iconConfig: LucideIconConfig,
   ) {
     this.defaultSize = defaultAttributes.height;
   }
@@ -106,7 +106,7 @@ export class LucideAngularComponent implements OnChanges {
           this.replaceElement(icoOfName);
         } else {
           throw new Error(
-            `The "${nameOrIcon}" icon has not been provided by any available icon providers.`
+            `The "${nameOrIcon}" icon has not been provided by any available icon providers.`,
           );
         }
       } else if (Array.isArray(nameOrIcon)) {
@@ -123,7 +123,7 @@ export class LucideAngularComponent implements OnChanges {
     const childElements = this.elem.nativeElement.childNodes;
     const restAttributeMap: NamedNodeMap = this.elem.nativeElement.attributes;
     const restAttributes = Object.fromEntries(
-      Array.from(restAttributeMap).map((item) => [item.name, item.value])
+      Array.from(restAttributeMap).map((item) => [item.name, item.value]),
     );
 
     const hasChildren = childElements.length > 0;
@@ -155,7 +155,7 @@ export class LucideAngularComponent implements OnChanges {
         ...this.class
           .split(/ /)
           .map((a) => a.trim())
-          .filter((a) => a.length > 0)
+          .filter((a) => a.length > 0),
       );
     }
 
@@ -168,7 +168,7 @@ export class LucideAngularComponent implements OnChanges {
   toPascalCase(str: string): string {
     return str.replace(
       /(\w)([a-z0-9]*)(_|-|\s*)/g,
-      (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase()
+      (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase(),
     );
   }
 
@@ -197,7 +197,7 @@ export class LucideAngularComponent implements OnChanges {
   private createElement([tag, attrs, children = []]: readonly [
     string,
     SvgAttributes,
-    LucideIconData?
+    LucideIconData?,
   ]) {
     const element = this.renderer.createElement(tag, 'http://www.w3.org/2000/svg');
 
