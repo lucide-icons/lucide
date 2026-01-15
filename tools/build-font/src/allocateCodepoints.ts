@@ -11,7 +11,7 @@ async function getLatestCodePoints(): Promise<CodePoints> {
 
   return JSON.parse(codepointsContents) as CodePoints;
 
-  // Next releases will use the codepoints.json from latest release in lucide-static.
+  // TODO: Next releases will use the codepoints.json from latest release in lucide-static.
   // const codepointsContents = await fetch('https://unpkg.com/lucide-static@latest/font/codepoints.json')
   // return codepointsContents.json() as Promise<CodePoints>
 }
