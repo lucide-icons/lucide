@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "llaenowyd",
+    "mishkaio",
+    "karsa-mistmere",
+    "chessurisme",
+    "jguddas"
+  ],
+  "tags": [
+    "stop",
+    "playback",
+    "music",
+    "audio",
+    "video",
+    "rectangle",
+    "aspect ratio",
+    "1:1",
+    "shape",
+    "selection",
+    "square",
+    "rectangular",
+    "marquee",
+    "tool",
+    "dashed",
+    "box"
+  ],
+  "categories": [
+    "shapes",
+    "multimedia",
+    "text",
+    "design"
+  ]
+}
