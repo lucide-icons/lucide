@@ -18,5 +18,13 @@
   "categories": [
     "text",
     "social"
+  ],
+  "aliases": [
+    {
+      "name": "search-slash",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
