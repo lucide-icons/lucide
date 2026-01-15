@@ -6,7 +6,7 @@ interface BuildFontOptions {
   targetDir: string;
   fontName: string;
   classNamePrefix: string;
-  codePoints: CodePoints
+  codePoints: CodePoints;
   startUnicode: number;
 }
 
@@ -16,7 +16,7 @@ export async function buildFont({
   fontName,
   classNamePrefix,
   codePoints,
-  startUnicode
+  startUnicode,
 }: BuildFontOptions) {
   console.time('Font generation');
   try {
