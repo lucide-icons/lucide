@@ -19,6 +19,12 @@
       "deprecationReason": "alias.name",
       "deprecated": true,
       "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "text-select",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
     }
   ]
 }
