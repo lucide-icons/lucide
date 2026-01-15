@@ -41,7 +41,7 @@ export async function allocateCodePoints({
           return;
         }
 
-        console.log('Code point not found creating new one for');
+        console.log('Code point not found creating new one for', alias);
 
         baseCodePoints[alias] = endCodePoint + index + 1;
       });
