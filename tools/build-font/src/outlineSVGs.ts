@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import SVGFixer from 'oslllo-svg-fixer';
-import { getAllIconAliases, type IconAliases } from '@lucide/helpers';
+import { type IconAliases } from '@lucide/helpers';
 import path from 'path';
 
 interface OutlineSVGOptions {
