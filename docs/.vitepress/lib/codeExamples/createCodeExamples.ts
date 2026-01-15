@@ -1,4 +1,4 @@
-import { bundledLanguages, getHighlighter, type ThemeRegistration } from 'shikiji';
+import { bundledLanguages, createHighlighter, type ThemeRegistration } from 'shiki';
 
 type CodeExampleType = {
   title: string;
@@ -9,14 +9,20 @@ type CodeExampleType = {
 const getIconCodes = (): CodeExampleType => {
   return [
     {
-      language: 'js',
+      language: 'html',
       title: 'Vanilla',
       code: `\
-import { createIcons, icons } from 'lucide';
+<script>
+import { createIcons, $CamelCase } from 'lucide';
 
-createIcons({ icons });
+createIcons({
+  icons: {
+    $CamelCase
+  }
+});
+</script>
 
-document.body.append('<i data-lucide="$Name"></i>');\
+<i data-lucide="$Name"></i>\
   `,
     },
     {
@@ -112,7 +118,7 @@ export type ThemeOptions =
   | { light: ThemeRegistration; dark: ThemeRegistration };
 
 const highLightCode = async (code: string, lang: string, active?: boolean) => {
-  const highlighter = await getHighlighter({
+  const highlighter = await createHighlighter({
     themes: ['github-light', 'github-dark'],
     langs: Object.keys(bundledLanguages),
   });
