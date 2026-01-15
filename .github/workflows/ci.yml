@@ -11,6 +11,7 @@ permissions:
   id-token: write # Required for OIDC
   contents: write
 
+# This is added to make sure we wait until last release is done, this is needed for the font-build process
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
