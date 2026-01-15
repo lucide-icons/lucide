@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Alberto6677"
+  ],
+  "tags": [
+    "qr",
+    "qr-code",
+    "add",
+    "plus",
+    "new",
+    "scan",
+    "scanner",
+    "code",
+    "barcode",
+    "data",
+    "square"
+  ],
+  "categories": [
+    "communication",
+    "devices",
+    "development",
+    "design"
+  ]
+}
