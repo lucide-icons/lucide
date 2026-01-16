@@ -100,6 +100,12 @@ export class LucideAngularComponent implements OnChanges {
       this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
       this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
       const nameOrIcon = this.img ?? this.name;
+      const restAttributes = this.getRestAttributes();
+
+      if(!hasA11yProp(restAttributes)) {
+        this.renderer.setAttribute(this.elem.nativeElement, 'aria-hidden', 'true');
+      }
+
       if (typeof nameOrIcon === 'string') {
         const icoOfName = this.getIcon(this.toPascalCase(nameOrIcon));
         if (icoOfName) {
@@ -121,18 +127,12 @@ export class LucideAngularComponent implements OnChanges {
 
   replaceElement(img: LucideIconData): void {
     const childElements = this.elem.nativeElement.childNodes;
-    const restAttributeMap: NamedNodeMap = this.elem.nativeElement.attributes;
-    const restAttributes = Object.fromEntries(
-      Array.from(restAttributeMap).map((item) => [item.name, item.value]),
-    );
 
-    const hasChildren = childElements.length > 0;
     const attributes = {
       ...defaultAttributes,
       width: this.size,
       height: this.size,
       stroke: this.color ?? this.iconConfig.color,
-      ...(!hasChildren && !hasA11yProp(restAttributes) && { 'aria-hidden': 'true' }),
       'stroke-width': this.absoluteStrokeWidth
         ? formatFixed(this.strokeWidth / (this.size / this.defaultSize))
         : this.strokeWidth.toString(10),
@@ -142,13 +142,6 @@ export class LucideAngularComponent implements OnChanges {
     if (typeof this.name === 'string') {
       icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
     }
-
-    // Forward aria-* and role from host to svg
-    Object.entries(restAttributes).forEach(([attr, value]) => {
-      if (attr.startsWith('aria-') || attr === 'role' || attr === 'title') {
-        this.renderer.setAttribute(icoElement, attr, value as string);
-      }
-    });
 
     if (this.class) {
       icoElement.classList.add(
@@ -163,6 +156,14 @@ export class LucideAngularComponent implements OnChanges {
       this.renderer.removeChild(this.elem.nativeElement, child);
     }
     this.renderer.appendChild(this.elem.nativeElement, icoElement);
+  }
+
+  getRestAttributes(): Record<string, string> {
+    const restAttributeMap: NamedNodeMap = this.elem.nativeElement.attributes;
+    const restAttributes = Object.fromEntries(
+      Array.from(restAttributeMap).map((item) => [item.name, item.value]),
+    );
+    return restAttributes;
   }
 
   toPascalCase(str: string): string {

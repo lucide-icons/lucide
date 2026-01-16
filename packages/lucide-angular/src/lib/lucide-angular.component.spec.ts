@@ -10,6 +10,8 @@ describe('LucideAngularComponent', () => {
   let testHostFixture: ComponentFixture<TestHostComponent>;
   const getAttribute = (attr: string) =>
     testHostFixture.nativeElement.querySelector('svg').getAttribute(attr);
+  const getRootAttribute = (attr: string) =>
+    testHostFixture.nativeElement.querySelector('i-lucide').getAttribute(attr);
   const testIcons: LucideIcons = {
     Demo: [['polyline', { points: '1 1 22 22' }]],
   };
@@ -69,29 +71,29 @@ describe('LucideAngularComponent', () => {
 
   it('should have aria-hidden prop when no aria prop is present', async () => {
     testHostFixture.detectChanges();
-    expect(getAttribute('aria-hidden')).toBe('true');
+    expect(getRootAttribute('aria-hidden')).toBe('true');
   });
 
   it('should not have aria-hidden prop when aria prop is present', async () => {
     const ariaLabel = 'Demo icon';
     testHostComponent.setAriaLabel(ariaLabel);
     testHostFixture.detectChanges();
-    expect(getAttribute('aria-label')).toBe(ariaLabel);
-    expect(getAttribute('aria-hidden')).toBeNull();
+    expect(getRootAttribute('aria-label')).toBe(ariaLabel);
+    expect(getRootAttribute('aria-hidden')).toBeNull();
   });
 
   it('should not have aria-hidden prop when title prop is present', async () => {
     const ariaLabel = 'Demo icon';
     testHostComponent.setTitle(ariaLabel);
     testHostFixture.detectChanges();
-    expect(getAttribute('title')).toBe(ariaLabel);
-    expect(getAttribute('aria-hidden')).toBeNull();
+    expect(getRootAttribute('title')).toBe(ariaLabel);
+    expect(getRootAttribute('aria-hidden')).toBeNull();
   });
 
   it('should never override aria-hidden prop', async () => {
     testHostComponent.setAriaHidden(true);
     testHostFixture.detectChanges();
-    expect(getAttribute('aria-hidden')).toBe('true');
+    expect(getRootAttribute('aria-hidden')).toBe('true');
   });
 
   @Component({
@@ -114,9 +116,9 @@ describe('LucideAngularComponent', () => {
     size?: number;
     strokeWidth?: number;
     absoluteStrokeWidth = true;
-    ariaLabel?: string;
-    title?: string;
-    ariaHidden?: boolean;
+    ariaLabel?: string = undefined;
+    title?: string = undefined;
+    ariaHidden?: boolean = undefined;
 
     setColor(color: string): void {
       this.color = color;
