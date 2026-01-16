@@ -102,7 +102,7 @@ export class LucideAngularComponent implements OnChanges {
       const nameOrIcon = this.img ?? this.name;
       const restAttributes = this.getRestAttributes();
 
-      if(!hasA11yProp(restAttributes)) {
+      if (!hasA11yProp(restAttributes)) {
         this.renderer.setAttribute(this.elem.nativeElement, 'aria-hidden', 'true');
       }
 
