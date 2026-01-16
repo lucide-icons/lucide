@@ -203,3 +203,23 @@ createIcons({
   }
 });
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```html
+<!DOCTYPE html>
+<body>
+  <i data-lucide="house" aria-label="Home icon"></i>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

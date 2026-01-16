@@ -46,7 +46,7 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@preact/preset-vite": "^2.10.2",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/preact": "^3.2.3",
     "jest-serializer-html": "^7.1.0",
     "preact": "^10.27.3",
