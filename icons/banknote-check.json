@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mfjramirezf"
+  ],
+  "tags": [
+    "banknote",
+    "bill",
+    "currency",
+    "payment",
+    "money",
+    "finance",
+    "document",
+    "verification",
+    "finance",
+    "tick",
+    "verified",
+    "accepted",
+    "done",
+    "complete",
+    "found",
+    "paid",
+    "task",
+    "check",
+    "successed"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
