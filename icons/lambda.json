@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kaleidosium"
+  ],
+  "tags": [
+    "lambda",
+    "greek",
+    "symbol",
+    "math",
+    "function",
+    "programming",
+    "serverless"
+  ],
+  "categories": [
+    "development",
+    "math",
+    "text"
+  ]
+}
