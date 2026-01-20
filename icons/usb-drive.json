@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "smncd"
+    "smncd",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "tags": [
     "drive",
