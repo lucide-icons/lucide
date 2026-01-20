@@ -1,6 +1,7 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default async ({
+export default defineExportTemplate(async({
   componentName,
   iconName,
   children,
@@ -13,6 +14,9 @@ export default async ({
 
   return `
 import createLucideIcon from '../createLucideIcon';
+import { IconNode } from '../types';
+
+export const __iconNode: IconNode = ${JSON.stringify(children)}
 
 /**
  * @component @name ${componentName}
@@ -25,8 +29,8 @@ import createLucideIcon from '../createLucideIcon';
  * @returns {FunctionalComponent} Vue component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${iconName}', ${JSON.stringify(children)});
+const ${componentName} = createLucideIcon('${iconName}', __iconNode);
 
 export default ${componentName};
 `;
-};
+});
