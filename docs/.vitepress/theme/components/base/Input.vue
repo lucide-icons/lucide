@@ -35,6 +35,8 @@ const updateShortcutSpacing = () => {
   });
 };
 
+const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+
 onMounted(updateShortcutSpacing);
 watch(() => props.shortcut, updateShortcutSpacing);
 
@@ -73,6 +75,7 @@ defineExpose({
       v-if="type === 'search' && modelValue"
       class="clear-button"
       aria-label="Clear input"
+      :style="{ right: isMac ? '50px' : '68px' }"
     >
       <Icon
         :iconNode="x"
@@ -173,7 +176,7 @@ defineExpose({
   }
 
   .clear-button {
-    right: 16px;
+    right: 16px !important;
   }
 }
 </style>
