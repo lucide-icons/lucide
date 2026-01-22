@@ -45,7 +45,7 @@
     "element-to-path": "^1.2.1",
     "fuse.js": "^7.1.0",
     "jszip": "^3.10.1",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "lodash-es": "^4.17.23",
     "lucide-react": "workspace:*",
     "lucide-vue-next": "workspace:*",
