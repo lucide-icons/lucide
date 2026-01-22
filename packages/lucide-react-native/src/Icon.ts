@@ -31,6 +31,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       absoluteStrokeWidth,
       children,
       iconNode,
+      className,
       ...rest
     },
     ref,
@@ -46,6 +47,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       {
         ref,
         ...defaultAttributes,
+        className,
         width: size,
         height: size,
         ...customAttrs,

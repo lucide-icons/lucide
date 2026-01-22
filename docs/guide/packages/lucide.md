@@ -1,6 +1,13 @@
 # Lucide
 
-Implementation of the lucide icon library for web applications.
+The core Lucide package for vanilla JavaScript applications. This package allows you to easily add scalable vector icons to any web project without framework dependencies. Perfect for static websites, legacy applications, or when you need lightweight icon integration with maximum browser compatibility.
+
+**What you can accomplish:**
+- Add icons to HTML using simple data attributes
+- Dynamically create and insert SVG icons with JavaScript
+- Customize icon appearance with CSS classes and inline styles
+- Tree-shake unused icons to keep bundle sizes minimal
+- Use icons in any JavaScript environment or plain HTML
 
 ## Installation
 
@@ -9,7 +16,7 @@ Implementation of the lucide icon library for web applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
@@ -55,6 +62,7 @@ Here is a complete example with unpkg
   </script>
 </body>
 ```
+We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`, rather than using `@latest`. 
 
 ### With ESModules
 
@@ -196,3 +204,23 @@ createIcons({
   }
 });
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```html
+<!DOCTYPE html>
+<body>
+  <i data-lucide="house" aria-label="Home icon"></i>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
