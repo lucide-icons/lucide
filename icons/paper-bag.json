@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "karsa-mistmere",
+    "jguddas",
+    "EthanHazel",
+    "congemcd",
+    "dkast"
+  ],
+  "tags": [
+    "paper bag",
+    "lunch bag",
+    "takeout"
+  ],
+  "categories": [
+    "food-beverage",
+    "shopping"
+  ]
+}
