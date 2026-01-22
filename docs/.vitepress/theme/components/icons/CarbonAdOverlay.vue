@@ -22,6 +22,10 @@ onMounted(() => {
     }
   }, 5000);
 });
+
+function handleHideAd() {
+  showAd.value = false;
+}
 </script>
 
 <template>
@@ -34,7 +38,7 @@ onMounted(() => {
     v-if="theme.carbonAds"
   >
     <IconButton
-      @click="showAd = false"
+      @click="handleHideAd"
       class="hide-button"
     >
       <Icon
