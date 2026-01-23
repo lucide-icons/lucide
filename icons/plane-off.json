@@ -1,6 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "karsa-mistmere",
+    "jguddas",
     "dango0812"
   ],
   "tags": [
