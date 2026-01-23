@@ -1,6 +1,9 @@
 name: Lucide Vue Next checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/lucide-vue-next/**
