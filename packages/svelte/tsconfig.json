@@ -9,18 +9,8 @@
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
-    "types": [
-      "@testing-library/jest-dom"
-    ],
+    "types": ["@testing-library/jest-dom"],
   },
-  "include": [
-    "src/**/*.d.ts",
-    "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.svelte",
-    "tests/**/*.ts"
-  ],
-  "exclude": [
-    "tests/setupVitest.ts"
-  ]
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tests/**/*.ts"],
+  "exclude": ["tests/setupVitest.ts"],
 }
