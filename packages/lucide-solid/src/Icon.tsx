@@ -4,6 +4,7 @@ import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import { LucideContext } from './context';
+import { hasA11yProp, mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 
 interface IconProps {
   name?: string;
@@ -57,6 +58,7 @@ const Icon = (props: LucideProps & IconProps) => {
           : []),
         localProps.class,
       )}
+      aria-hidden={!localProps.children && !hasA11yProp(rest) ? 'true' : undefined}
       {...rest}
     >
       <For each={localProps.iconNode}>
