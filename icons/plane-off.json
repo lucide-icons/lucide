@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "dango0812"
+  ],
+  "tags": [
+    "plane",
+    "trip",
+    "airplane"
+  ],
+  "categories": [
+    "transportation",
+    "travel",
+    "navigation"
+  ]
+}
