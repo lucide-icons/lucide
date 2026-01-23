@@ -46,7 +46,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:package && pnpm build:license",
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons && pnpm build:package && pnpm build:license",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "copy:utils": "mkdir -p ./src/utils && cp -rf ../../packages/shared/src/utils/hasA11yProp.ts ./src/utils/",
     "clean": "rm -rf dist stats ./src/icons/*.{ts,svelte} ./src/aliases/{aliases,prefixed,suffixed}.ts",
