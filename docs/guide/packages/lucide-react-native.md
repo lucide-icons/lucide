@@ -1,6 +1,13 @@
 # Lucide React Native
 
-Implementation of the lucide icon library for React Native applications
+React Native components for Lucide icons that work seamlessly across iOS and Android platforms. Built on top of react-native-svg, each icon renders as a native SVG component, providing consistent visual appearance and performance across mobile devices.
+
+**What you can accomplish:**
+- Use icons as React Native components with platform-consistent rendering
+- Build cross-platform mobile apps with scalable vector icons
+- Create responsive interfaces that adapt to different screen densities
+- Integrate with React Native's styling system and animation libraries
+- Maintain consistent icon appearance across iOS and Android platforms
 
 ## Installation
 
@@ -9,7 +16,7 @@ First, ensure that you have `react-native-svg` (version between 12 and 15) insta
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react-native
+pnpm add lucide-react-native
 ```
 
 ```sh [yarn]
@@ -78,10 +85,10 @@ This creates a single icon based on the iconNode passed and renders a Lucide ico
 
 ```jsx
 import { Icon } from 'lucide-react-native';
-import { burger } from '@lucide/lab';
+import { coconut } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={burger} />
+  <Icon iconNode={coconut} />
 );
 ```
 
@@ -95,10 +102,16 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ### Icon Component Example
 
-```jsx
-import { icons } from 'lucide-react-native';
+```tsx
+import * as icons from 'lucide-react-native/icons';
 
-const Icon = ({ name, color, size }) => {
+interface IconProps {
+  name: keyof typeof icons;
+  color?: string;
+  size?: number;
+}
+
+const Icon = ({ name, color, size }: IconProps) => {
   const LucideIcon = icons[name];
 
   return <LucideIcon color={color} size={size} />;
@@ -109,11 +122,11 @@ export default Icon;
 
 #### Using the Icon Component
 
-```jsx
+```tsx
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="House" />;
 };
 
 export default App;

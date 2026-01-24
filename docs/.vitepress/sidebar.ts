@@ -97,6 +97,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           link: '/guide/packages/lucide-preact',
         },
         {
+          text: 'Lucide Astro',
+          link: '/guide/packages/lucide-astro',
+        },
+        {
           text: 'Lucide Static',
           link: '/guide/packages/lucide-static',
         },

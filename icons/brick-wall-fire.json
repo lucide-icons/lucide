@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "firewall",
+    "security",
+    "bricks",
+    "mortar",
+    "cement",
+    "materials",
+    "construction",
+    "builder",
+    "labourer",
+    "quantity surveyor",
+    "blocks",
+    "stone",
+    "campfire",
+    "camping",
+    "wilderness",
+    "outdoors",
+    "lit",
+    "warmth",
+    "wood",
+    "twigs",
+    "sticks"
+  ],
+  "categories": [
+    "security",
+    "home",
+    "connectivity"
+  ]
+}
