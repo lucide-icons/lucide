@@ -171,5 +171,24 @@
     ],
     "source": "https://github.com/heyvito/lucide-rails",
     "documentation": "https://github.com/heyvito/lucide-rails/blob/master/README.md"
+  },
+  {
+    "name": "lucide-web-components",
+    "description": "Implementation of Lucide icons in Web Components custom elements.",
+    "icon": "/framework-logos/web-components.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/@dile/iconlib",
+        "href": "https://dile-components.com/icons/lucide-icons/"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dt/@dile/iconlib",
+        "href": "https://dile-components.com/icons/lucide-icons/"
+      }
+    ],
+    "source": "https://github.com/Polydile/dile-components",
+    "documentation": "https://github.com/Polydile/dile-components/blob/master/packages/iconlib/README.md"
   }
 ]
