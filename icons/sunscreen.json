@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AlecRust"
+  ],
+  "tags": [
+    "sunscreen",
+    "sunblock",
+    "spf",
+    "uv",
+    "lotion",
+    "cream",
+    "skincare",
+    "toothpaste",
+    "ointment",
+    "tube",
+    "bottle",
+    "toiletries",
+    "bathroom",
+    "beach",
+    "summer"
+  ],
+  "categories": [
+    "medical",
+    "home",
+    "shopping",
+    "travel",
+    "seasons"
+  ]
+}
