@@ -35,6 +35,8 @@ const updateShortcutSpacing = () => {
   });
 };
 
+const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+
 onMounted(updateShortcutSpacing);
 watch(() => props.shortcut, updateShortcutSpacing);
 
@@ -73,6 +75,7 @@ defineExpose({
       v-if="type === 'search' && modelValue"
       class="clear-button"
       aria-label="Clear input"
+      :style="{ right: isMac ? '50px' : '68px' }"
     >
       <Icon
         :iconNode="x"
@@ -115,7 +118,9 @@ defineExpose({
 .input:hover,
 .input:focus {
   border-color: var(--vp-c-brand);
-  background: var(--vp-c-bg-alt);
+}
+.input:focus {
+  background-color: var(--vp-c-bg);
 }
 
 .input.has-icon {
@@ -124,7 +129,7 @@ defineExpose({
 
 .clear-button {
   position: absolute;
-  right: 56px;
+  right: 68px;
   top: 9px;
   padding: 4px;
   transition: background-color .25s;
@@ -147,9 +152,31 @@ defineExpose({
   pointer-events: none;
 }
 
+.input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.input[type="search"]::-ms-clear {
+  display: none;
+}
+
+.input[type="search"]::-o-clear {
+  display: none;
+}
+
+.input[type="search"]::-moz-clear {
+  display: none;
+}
+
 @media (hover: none) {
   .shortcut {
     display: none;
+  }
+
+  .clear-button {
+    right: 16px !important;
   }
 }
 </style>
@@ -162,5 +189,8 @@ defineExpose({
   z-index: 1;
   color: var(--vp-c-text-2);
   pointer-events: none;
+}
+.input-wrapper > svg:has(+ .input.has-icon:focus) {
+  color: var(--vp-c-text-1);
 }
 </style>
