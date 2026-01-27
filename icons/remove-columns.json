@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "damianof"
+  ],
+  "tags": [
+    "add",
+    "remove",
+    "row",
+    "column",
+    "grid",
+    "table"
+  ],
+  "categories": [
+    "add",
+    "remove",
+    "row",
+    "column",
+    "grid",
+    "table"
+  ]
+}
