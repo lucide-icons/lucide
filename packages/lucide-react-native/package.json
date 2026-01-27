@@ -24,11 +24,23 @@
   "author": "Eric Fennis",
   "amdName": "lucide-react-native",
   "main": "dist/cjs/lucide-react-native.js",
-  "main:umd": "dist/umd/lucide-react-native.js",
   "module": "dist/esm/lucide-react-native.js",
-  "unpkg": "dist/umd/lucide-react-native.min.js",
   "typings": "dist/lucide-react-native.d.ts",
   "react-native": "dist/esm/lucide-react-native.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-react-native.d.ts",
+      "import": "./dist/esm/lucide-react-native.js",
+      "browser": "./dist/esm/lucide-react-native.js",
+      "require": "./dist/cjs/lucide-react-native.js"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/esm/icons/index.js",
+      "browser": "./dist/esm/icons/index.js",
+      "require": "./dist/cjs/icons/index.js"
+    }
+  },
   "sideEffects": false,
   "files": [
     "dist"
@@ -46,7 +58,7 @@
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/build-icons": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^14.1.2",
     "@types/prop-types": "^15.7.5",
     "@types/react": "^18.0.21",
