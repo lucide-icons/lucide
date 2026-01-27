@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mendrik"
+  ],
+  "tags": [
+    "fast-mail",
+    "mail",
+    "send"
+  ],
+  "categories": [
+    "emails",
+    "messages",
+    "send",
+    "speed"
+  ]
+}
