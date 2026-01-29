@@ -5,7 +5,7 @@ import IconButton from '../base/IconButton.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 import { x } from '../../../data/iconNodes';
 import Icon from 'lucide-vue-next/src/Icon';
-import { onMounted, ref, watchEffect } from 'vue';
+import { onMounted } from 'vue';
 
 const { theme } = useData();
 const showAd = useSessionStorage('show-carbon-ads', true);
@@ -23,6 +23,8 @@ onMounted(() => {
 });
 
 function handleHideAd() {
+  console.log('CLOSE');
+
   showAd.value = false;
 }
 </script>
@@ -52,7 +54,6 @@ function handleHideAd() {
 
 <style scoped>
 .floating-ad {
-  display: none;
   position: fixed;
   bottom: 32px;
   width: 224px;
@@ -80,18 +81,6 @@ function handleHideAd() {
   transition:
     opacity 0.25s,
     transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-@media (min-width: 1280px) {
-  .floating-ad {
-    display: block;
-  }
-}
-
-@media (min-width: 1440px) {
-  .floating-ad {
-    right: calc(((100% - (var(--vp-layout-max-width) - var(--vp-sidebar-width))) - 272px) / 2);
-  }
 }
 
 .hide-button {
