@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, shallowRef, onBeforeUnmount, watchEffect, computed } from 'vue';
+import { ref, shallowRef } from 'vue';
 import { data } from './HomeHeroIconsCard.data';
 import { useRouter } from 'vitepress';
-import { random } from 'lodash-es';
-import FakeInput from '../base/FakeInput.vue';
-import { motion, Variants, useScroll, useSpring, useTransform } from 'motion-v';
+import { motion, Variants, useScroll, useTransform } from 'motion-v';
 import LucideIcon from '../base/LucideIcon.vue';
-import { shrink } from '~/.vitepress/data/iconNodes';
 
 const emit = defineEmits(['animation-complete']);
 
