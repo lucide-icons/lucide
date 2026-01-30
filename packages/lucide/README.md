@@ -20,7 +20,7 @@ Lucide icon library for web applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide">Documentation</a>
+  <a href="https://lucide.dev/guide/lucide">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>

@@ -20,7 +20,7 @@ Lucide icon library with static assets for web applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-static">Documentation</a>
+  <a href="https://lucide.dev/guide/static">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>

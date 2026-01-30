@@ -13,7 +13,7 @@ Lucide icon library for Vue applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-vue">Documentation</a>
+  <a href="https://lucide.dev/guide/vue">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>

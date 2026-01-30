@@ -21,7 +21,7 @@ Lucide icon library for Astro sites and applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-astro">Documentation</a>
+  <a href="https://lucide.dev/guide/astro">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>

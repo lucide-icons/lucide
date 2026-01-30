@@ -28,7 +28,7 @@ Set the following:
    1. Stroke width: 2px
    2. Stroke alignment: center
 
-![Figma Stroke Options](../../images/figma-stroke-options.png)
+![Figma Stroke Options](../images/figma-stroke-options.png)
 
 ## Export Or Copy Your Icon
 Once you have completed your icon, you can export it.

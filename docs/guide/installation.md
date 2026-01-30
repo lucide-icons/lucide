@@ -28,7 +28,7 @@ bun add lucide
 
 :::
 
-For more details, see the [documentation](packages/lucide.md).
+For more details, see the [documentation](./lucide/index.md).
 
 ## React
 
@@ -54,7 +54,7 @@ bun add lucide-react
 
 :::
 
-For more details, see the [documentation](packages/lucide-react.md).
+For more details, see the [documentation](./react/index.md).
 For React Native use the `lucide-react-native` package.
 
 ## Vue
@@ -81,7 +81,7 @@ bun add @lucide/vue
 
 :::
 
-For more details, see the [documentation](packages/lucide-vue.md).
+For more details, see the [documentation](./vue/index.md).
 
 ## Svelte
 
@@ -107,7 +107,7 @@ bun add @lucide/svelte
 :::
 > `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
 
-For more details, see the [documentation](packages/lucide-svelte.md).
+For more details, see the [documentation](./svelte/index.md).
 
 ## Solid
 
@@ -133,7 +133,7 @@ bun add lucide-solid
 
 :::
 
-For more details, see the [documentation](packages/lucide-solid.md).
+For more details, see the [documentation](./solid/index.md).
 
 ## Angular
 
@@ -159,7 +159,7 @@ bun add lucide-angular
 
 :::
 
-For more details, see the [documentation](packages/lucide-angular.md).
+For more details, see the [documentation](./angular/index.md).
 
 ## Preact
 
@@ -186,7 +186,7 @@ bun add lucide-preact
 
 :::
 
-For more details, see the [documentation](packages/lucide-preact.md).
+For more details, see the [documentation](./preact/index.md).
 
 ## Astro
 
@@ -212,7 +212,7 @@ bun add @lucide/astro
 
 :::
 
-For more details, see the [documentation](packages/lucide-astro.md).
+For more details, see the [documentation](./astro/index.md).
 
 ## Static usage
 
@@ -238,7 +238,7 @@ bun add lucide-static
 
 :::
 
-For more details, see the [documentation](packages/lucide-static.md).
+For more details, see the [documentation](./static/index.md).
 
 ## Figma
 

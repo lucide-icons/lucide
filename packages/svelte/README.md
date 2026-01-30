@@ -20,7 +20,7 @@ Lucide icon library for Svelte 5 applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-svelte">Documentation</a>
+  <a href="https://lucide.dev/guide/svelte">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>

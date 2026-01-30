@@ -36,7 +36,7 @@ This means that when `absoluteStrokeWidth` is enabled and the `size` of the icon
 
 Note `2px` is the default stroke width for a Lucide icon, this can be adjusted to all sizes.
 
-![Absolute stroke width comparison](../../images/absolute-stroke-width-compare.png?raw=true "Absolute stroke width comparison")
+![Absolute stroke width comparison](../../../images/absolute-stroke-width-compare.png?raw=true "Absolute stroke width comparison")
 
 ### Adjusting stroke width with `absoluteStrokeWidth` prop
 

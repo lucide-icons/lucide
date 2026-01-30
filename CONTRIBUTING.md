@@ -26,7 +26,7 @@ We love contributions of new icons from the community! If you want to contribute
 
 Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
 
-Read it here: [ICON_GUIDELINES](https://lucide.dev/docs/icon-design-guide).
+Read it here: [ICON_GUIDELINES](https://lucide.dev/contribute/icon-design-guide).
 
 #### Lucide Studio
 
@@ -36,15 +36,15 @@ For formatting and adjusting SVG icons, [@jguddas](https://github.com/jguddas) m
 
 Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-##### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
+##### [Adobe Illustrator Guide](https://lucide.dev/contribute/illustrator-guide/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
+You can also [download an Adobe Illustrator template](https://lucide.dev/templates/illustrator_template.ai).
 
-##### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
+##### [Inkscape Guide](https://lucide.dev/contribute/inkscape-guide)
 
-##### [Figma Guide](https://lucide.dev/docs/figma-guide)
+##### [Figma Guide](https://lucide.dev/contribute/figma-guide)
 
-##### [Affinity Designer Guide](https://lucide.dev/guide/design/affinity-designer-guide)
+##### [Affinity Designer Guide](https://lucide.dev/contribute/affinity-designer-guide)
 
 #### Submitting Multiple Icons
 

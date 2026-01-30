@@ -35,10 +35,10 @@ See our guides:
 - guide for [Vue](/guide/vue/getting-started)
 - guide for [Svelte](/guide/svelte/getting-started)
 - guide for [Solid](/guide/solid/getting-started)
-- guide for [Angular](/guide/angular/getting-started)
-- guide for [Preact](/guide/web-components/getting-started)
-- guide for [Astro](/guide/astro/getting-started)
-- guide for [Static](/guide/web-components/getting-started)
+<!-- - guide for [Angular](/guide/angular/getting-started) -->
+- guide for [Preact](/guide/preact/getting-started)
+<!-- - guide for [Astro](/guide/astro/getting-started)
+- guide for [Static](/guide/static/getting-started) -->
 
 
 ## Removed All Brand Icons

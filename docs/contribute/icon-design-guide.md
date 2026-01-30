@@ -11,85 +11,85 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ### 1. Icons must be designed on a **24 by 24 pixels** canvas.
 
-![24px-24px](../../images/24px-24px.svg?raw=true "24px-24px")
+![24px-24px](../images/24px-24px.svg?raw=true "24px-24px")
 
 ### 2. Icons must have at least **1 pixel padding** within the canvas.
 
-![1px-padding](../../images/1px-padding.svg?raw=true "1px-padding")
+![1px-padding](../images/1px-padding.svg?raw=true "1px-padding")
 
 ### 3. Icons must have a **stroke width of 2 pixels**.
 
-![2px-stroke](../../images/2px-stroke.svg?raw=true "2px-stroke")
+![2px-stroke](../images/2px-stroke.svg?raw=true "2px-stroke")
 
 ### 4. Icons must use **round joins**.
 
-![round-joints](../../images/round-joints.svg?raw=true "round-joints")
+![round-joints](../images/round-joints.svg?raw=true "round-joints")
 
 ### 5. Icons must use **round caps**.
 
-![round-caps](../../images/round-caps.svg?raw=true "round-caps")
+![round-caps](../images/round-caps.svg?raw=true "round-caps")
 
 ### 6. Icons must use **centered strokes**.
 
-![centered-strokes](../../images/centered-strokes.svg?raw=true "centered-strokes")
+![centered-strokes](../images/centered-strokes.svg?raw=true "centered-strokes")
 
 ### 7. Shapes (such as rectangles) must have a **border radius of**
 
 #### A. **2 pixels** if they are at least 8 pixels in size
 
-![2px-border-radius](../../images/2px-border-radius.svg?raw=true "2px-border-radius")
+![2px-border-radius](../images/2px-border-radius.svg?raw=true "2px-border-radius")
 
 #### B. **1 pixel** if they are smaller than 8 pixels in size
 
-![1px-border-radius](../../images/1px-border-radius.svg?raw=true "1px-border-radius")
+![1px-border-radius](../images/1px-border-radius.svg?raw=true "1px-border-radius")
 
 ### 8. Distinct elements must have **2 pixels of spacing between each other**
 
-![2px-element-spacing](../../images/2px-element-spacing.svg?raw=true '2px-element-spacing')
+![2px-element-spacing](../images/2px-element-spacing.svg?raw=true '2px-element-spacing')
 
-![2px-element-spacing-connected](../../images/2px-element-spacing-connected.svg?raw=true '2px-element-spacing-connected')
+![2px-element-spacing-connected](../images/2px-element-spacing-connected.svg?raw=true '2px-element-spacing-connected')
 
-![2px-element-spacing-abrupt-cut](../../images/2px-element-spacing-abrupt-cut.svg?raw=true '2px-element-spacing-abrupt-cut')
+![2px-element-spacing-abrupt-cut](../images/2px-element-spacing-abrupt-cut.svg?raw=true '2px-element-spacing-abrupt-cut')
 
 ### 9. Icons should have a similar optical volume to `circle` and `square`.
 
-![optical-volume-ideal](../../images/optical-volume-ideal.svg?raw=true "optical-volume-ideal")
+![optical-volume-ideal](../images/optical-volume-ideal.svg?raw=true "optical-volume-ideal")
 
-![optical-volume-low](../../images/optical-volume-low.svg?raw=true "optical-volume-low")
+![optical-volume-low](../images/optical-volume-low.svg?raw=true "optical-volume-low")
 
-![optical-volume-high](../../images/optical-volume-high.svg?raw=true "optical-volume-high")
+![optical-volume-high](../images/optical-volume-high.svg?raw=true "optical-volume-high")
 
 **Tip:** place your icon next to the circle or square icon and blur them both; your icon should not feel much darker than the base shape.
 
 ### 10. Icons should be visually centered by their center of gravity.
 
-![visually-centered](../../images/visually-centered.svg?raw=true "visually-centered")
+![visually-centered](../images/visually-centered.svg?raw=true "visually-centered")
 
-![visually-centered-bad](../../images/visually-centered-bad.svg?raw=true "visually-centered-bad")
+![visually-centered-bad](../images/visually-centered-bad.svg?raw=true "visually-centered-bad")
 
 **Tip:** place your icon both above/below and next to the square or circle icon and check if it feels off center. Symmetrical icons should always be aligned to the center.
 
 ### 11. Icons should have similar visual density and level of detail.
 
-![density-ideal](../../images/density-ideal.svg?raw=true "density-ideal")
+![density-ideal](../images/density-ideal.svg?raw=true "density-ideal")
 
-![density-high](../../images/density-high.svg?raw=true "density-high")
+![density-high](../images/density-high.svg?raw=true "density-high")
 
 **Tip:** try to make abstractions to dense elements. Blur your icon, and when blurred it should not feel overly dark.
 
 ### 12. Continuous curves should join smoothly.
 
-![curvature-smooth](../../images/curvature-smooth.svg?raw=true "curvature-smooth")
+![curvature-smooth](../images/curvature-smooth.svg?raw=true "curvature-smooth")
 
-![curvature-uneven](../../images/curvature-uneven.svg?raw=true "curvature-uneven")
+![curvature-uneven](../images/curvature-uneven.svg?raw=true "curvature-uneven")
 
 **Tip:** make sure to use arcs or quadratic curves. When using cubic curves control points should have mirrored angles for smooth curves.
 
 ### 13. Icons should aim to be pixel perfect so that they will be sharp on low DPI displays.
 
-![pixel-perfection-ideal](../../images/pixel-perfection-ideal.svg?raw=true "pixel-perfection-ideal")
+![pixel-perfection-ideal](../images/pixel-perfection-ideal.svg?raw=true "pixel-perfection-ideal")
 
-![pixel-perfection-bad](../../images/pixel-perfection-bad.svg?raw=true "pixel-perfection-bad")
+![pixel-perfection-bad](../images/pixel-perfection-bad.svg?raw=true "pixel-perfection-bad")
 
 **Tip:** whenever possible align elements and arc centers to the grid.
 

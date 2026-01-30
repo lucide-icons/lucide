@@ -24,7 +24,7 @@ The Illustrator template is created following guidelines from the [Icon Design G
 
 5. Export the file with the export menu under: `Export > Export As..` then save the file as SVG. Select the following options in the SVG Options dialog:
 
-![SVG export options in Illustrator](../../images/illustrator-svg-options.png?raw=true "Setting Page Size")
+![SVG export options in Illustrator](../images/illustrator-svg-options.png?raw=true "Setting Page Size")
 
 After that, double check that the [code conventions and SVG global attributes](icon-design-guide.md#code-conventions) are correct.
 
