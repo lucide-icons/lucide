@@ -7,7 +7,8 @@ import {
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/vue';
-import { CheckIcon, ChevronsUpDownIcon } from '@lucide/vue';
+import Icon from '@lucide/vue/src/Icon';
+import { chevronsUpDown, check } from '../../../data/iconNodes';
 
 defineProps<{
   id?: string;
@@ -32,7 +33,8 @@ const selected = defineModel<{ name: string; icon: string }>();
         />
         <span class="select-text">{{ selected.name }}</span>
         <span class="select-icon">
-          <ChevronsUpDownIcon
+          <Icon
+            :iconNode="chevronsUpDown"
             class="chevron-icon"
             aria-hidden="true"
           />
@@ -64,7 +66,8 @@ const selected = defineModel<{ name: string; icon: string }>();
                 v-if="selected"
                 class="check-icon"
               >
-                <CheckIcon
+                <Icon
+                  :iconNode="check"
                   class="check"
                   aria-hidden="true"
                 />
