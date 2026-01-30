@@ -52,4 +52,6 @@ import { data } from './HomeHeroInfoBefore.data';
 }
 </style>
 
-<style src="../icons/confetti.css" />
+<style>
+@import '../icons/confetti.css';
+</style>
