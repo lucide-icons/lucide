@@ -1,3 +1,8 @@
+---
+title: TypeScript Support - Astro
+description: Learn about the TypeScript types exported by the @lucide/astro package.
+---
+
 # TypeScript Support
 
 List of exported types from the `@lucide/astro` package.

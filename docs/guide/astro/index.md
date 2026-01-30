@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for Astro
+description: Learn how to use Lucide icons in your Astro applications with our comprehensive guide.
 nextPage:
   - getting-started
 ---

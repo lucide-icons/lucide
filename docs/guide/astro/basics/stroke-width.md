@@ -1,3 +1,8 @@
+---
+title: Stroke width - Astro
+description: Learn how to customize the stroke width of Lucide icons in your Astro applications using the strokeWidth and absoluteStrokeWidth props.
+---
+
 # Stroke width
 
 All icons are designed with SVG elements using strokes.

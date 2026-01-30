@@ -1,7 +1,3 @@
----
-title: Getting started - Lucide
-description: This guide will help you get started with Lucide in your Vanilla JavaScript project.
----
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'

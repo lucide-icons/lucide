@@ -1,7 +1,3 @@
----
-title: Stroke width - Lucide
-description: Learn how to customize the stroke width of Lucide icons in your Vanilla JavaScript applications using the strokeWidth and absoluteStrokeWidth attributes.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

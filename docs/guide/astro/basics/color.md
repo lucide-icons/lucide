@@ -1,3 +1,8 @@
+---
+title: Color - Astro
+description: Learn how to customize the color of Lucide icons in your Astro applications using the color prop and CSS.
+---
+
 # Color
 
 By default, all icons have the color value: `currentColor`. This keyword uses the element's computed text `color` value to represent the icon color.

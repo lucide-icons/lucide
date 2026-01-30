@@ -1,4 +1,6 @@
-# Our Official Stance on Including Brand Logos in Lucide
+# Brand Logos Statement
+
+Our official stance on including brand logos in Lucide
 
 ## TL;DR
 

@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for React
+description: Learn how to use Lucide icons in your React applications with our comprehensive guide.
 nextPage:
   - getting-started
 ---
@@ -11,7 +12,6 @@ import { reactSidebar } from '../../.vitepress/sidebar/react'
 </script>
 
 <!--@include: ../../../docs/images/package-logos/lucide-react.svg -->
-
 
 # Lucide for React
 

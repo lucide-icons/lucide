@@ -1,5 +1,4 @@
 ---
-aside: false
 editLink: false
 ---
 

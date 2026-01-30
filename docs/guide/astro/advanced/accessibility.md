@@ -1,11 +1,6 @@
 ---
-head:
-  - - link
-    - rel: canonical
-      href: https://lucide.dev/guide/react/advanced/accessibility
-  - - meta
-    - name: description
-      content: Best practices for accessible icons in your application.
+title: Accessibility - Astro
+description: Best practices for accessible icons in your application.
 ---
 
 <script setup>

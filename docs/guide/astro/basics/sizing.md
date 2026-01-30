@@ -1,3 +1,8 @@
+---
+title: Sizing - Astro
+description: Learn how to adjust the size of Lucide icons in your Astro applications using the size prop and CSS.
+---
+
 # Sizing
 
 By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.

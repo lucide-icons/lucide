@@ -1,7 +1,3 @@
----
-title: Content Template element - Lucide
-description: Learn how to include Lucide icons inside HTML template elements using the inTemplates option.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

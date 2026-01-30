@@ -5,8 +5,12 @@ import sidebar from './sidebar';
 import snackPlayer from './plugins/snackPlayer';
 import sandpackPlugin from './plugins/sandpack';
 import { readFile } from 'node:fs/promises';
+import { resourcesSidebar } from './sidebar/resources';
 
-const defaultSandpackCSS = await readFile(fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)), 'utf-8');
+const defaultSandpackCSS = await readFile(
+  fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
+  'utf-8',
+);
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -180,9 +184,15 @@ export default defineConfig({
     nav: [
       { text: 'Icons', link: '/icons/' },
       { text: 'Guide', link: '/guide/' },
+      {
+        text: 'Resources',
+        items: [
+          ...resourcesSidebar[0].items,
+          { text: 'Design icons', link: '/contribute/icon-design-guide' },
+        ],
+      },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
-      { text: 'License', link: '/license' },
     ],
     sidebar,
     socialLinks: [

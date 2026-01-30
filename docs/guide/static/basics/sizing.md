@@ -1,7 +1,3 @@
----
-title: Sizing - Lucide
-description: Learn how to adjust the size of Lucide icons in your Vanilla JavaScript applications using the width and height attributes and CSS.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

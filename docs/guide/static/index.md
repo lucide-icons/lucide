@@ -1,6 +1,5 @@
 ---
-title: Lucide for Vanilla JavaScript
-description: The core Lucide package for vanilla JavaScript applications. Learn how to add scalable vector icons to any web project without framework dependencies.
+title: Overview
 nextPage:
   - getting-started
 ---

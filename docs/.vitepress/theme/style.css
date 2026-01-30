@@ -48,6 +48,7 @@
   --vp-code-editor-static: #f78c6c;
   --vp-code-editor-string: #9ecbff;
 
+  --vp-c-text-1: #dfdfd6;
   --vp-c-text-4: rgba(235, 235, 245, 0.16);
 
   --vp-a11y-danger: var(--vp-c-danger-2);
@@ -145,6 +146,7 @@
   border-radius: 2px;
 }
 
-.package-logo {
-  margin-bottom: 48px;
+.package-lucide-logo {
+  margin: 0 auto 48px;
+  max-width: 480px;
 }

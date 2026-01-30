@@ -1,5 +1,4 @@
-
-# Contribution Guidelines
+# Contribution Guide
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
@@ -19,7 +18,9 @@ Guidelines for pull requests:
 - __Make sure the target of your pull request is the relevant branch__. Most of bug fixes or new feature should go to the `main` branch.
 - __Include only related work__. If your pull request has unrelated commits, it won't be accepted.
 
-### Icon Pull Requests
+### Contributing Icons
+
+We love contributions of new icons from the community! If you want to contribute new icons, please follow the guidelines below.
 
 #### Guidelines
 

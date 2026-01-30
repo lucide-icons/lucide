@@ -1,3 +1,8 @@
+---
+title: Global Styling - Astro
+description: Learn how to apply global styling to Lucide icons in your Astro applications using CSS.
+---
+
 # Global Styling
 
 Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).

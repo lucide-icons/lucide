@@ -1,7 +1,3 @@
----
-title: Global styling - Lucide
-description: Learn how to apply global styles to Lucide icons in your Vanilla JavaScript applications using CSS or the attrs option in createIcons.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue';
 </script>

@@ -1,6 +1,8 @@
 ---
-title: Filled Icons - Lucide
-description: Fills are not officially supported in Lucide, but you can still use the fill attribute on certain icons to create filled versions.
+head:
+  - - link
+    - rel: canonical
+      href: https://lucide.dev/guide/vue/advanced/filled-icons
 ---
 
 <script setup>

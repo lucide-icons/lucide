@@ -1,7 +1,3 @@
----
-title: Color - Lucide
-description: Learn how to customize the color of Lucide icons in your Vanilla JavaScript applications using the color attribute and CSS.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

@@ -1,7 +1,3 @@
----
-title: Shadow DOM - Lucide
-description: Learn how to use Lucide icons within a shadow DOM in your Vanilla JavaScript applications.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

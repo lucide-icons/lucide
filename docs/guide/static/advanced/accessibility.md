@@ -1,7 +1,3 @@
----
-title: Accessibility - Lucide
-description: Best practices for accessible icons in your application.
----
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>

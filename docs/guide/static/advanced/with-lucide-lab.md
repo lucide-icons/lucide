@@ -1,7 +1,3 @@
----
-title: With Lucide lab or custom icons - Lucide
-description: Learn how to use Lucide lab or custom icons in your Vanilla JavaScript applications.
----
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

@@ -1,6 +1,9 @@
 ---
-title: Icon Design Guide
+description: Guidelines and best practices for designing icons for the Lucide icon library.
 ---
+# Icon Design Guide
+
+Guidelines and best practices for designing icons for the Lucide icon library.
 
 ## Icon Design Principles
 
