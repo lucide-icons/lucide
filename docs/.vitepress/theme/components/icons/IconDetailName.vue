@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue';
 import { copy } from '../../../data/iconNodes';
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import useConfetti from '../../composables/useConfetti';
 const { animate, confetti } = useConfetti();
 const slots = useSlots();

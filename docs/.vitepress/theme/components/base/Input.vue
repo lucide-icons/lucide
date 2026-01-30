@@ -12,7 +12,7 @@ export interface InputProps {
 
 <script setup lang="ts">
 import { ref, onMounted, nextTick, watch } from 'vue';
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import { x } from '../../../data/iconNodes';
 import IconButton from './IconButton.vue';
 
@@ -127,7 +127,7 @@ defineExpose({
   right: 56px;
   top: 9px;
   padding: 4px;
-  transition: background-color .25s;
+  transition: background-color 0.25s;
 }
 
 .shortcut {

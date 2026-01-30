@@ -1,78 +1,86 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 import {
   Listbox,
   ListboxLabel,
   ListboxButton,
   ListboxOptions,
   ListboxOption,
-} from '@headlessui/vue'
-import { CheckIcon, ChevronsUpDownIcon } from 'lucide-vue-next'
-
+} from '@headlessui/vue';
+import { CheckIcon, ChevronsUpDownIcon } from '@lucide/vue';
 
 defineProps<{
-  id?: string
-  items?: { name: string, icon: string }[]
-}>()
+  id?: string;
+  items?: { name: string; icon: string }[];
+}>();
 
-const selected = defineModel<{ name: string, icon: string }>()
+const selected = defineModel<{ name: string; icon: string }>();
 </script>
 
 <template>
-    <Listbox v-model="selected">
-      <div class="select-wrapper">
-        <ListboxButton class="select-button" :id="id">
-          <img
-            :src="selected.icon"
-            :class="{ 'select-item-icon': true }"
-            :alt="`${selected.name} logo`"
-            loading="lazy"
+  <Listbox v-model="selected">
+    <div class="select-wrapper">
+      <ListboxButton
+        class="select-button"
+        :id="id"
+      >
+        <img
+          :src="selected.icon"
+          :class="{ 'select-item-icon': true }"
+          :alt="`${selected.name} logo`"
+          loading="lazy"
+        />
+        <span class="select-text">{{ selected.name }}</span>
+        <span class="select-icon">
+          <ChevronsUpDownIcon
+            class="chevron-icon"
+            aria-hidden="true"
           />
-          <span class="select-text">{{ selected.name }}</span>
-          <span class="select-icon">
-            <ChevronsUpDownIcon class="chevron-icon" aria-hidden="true" />
-          </span>
-        </ListboxButton>
+        </span>
+      </ListboxButton>
 
-        <transition
-          leave-active-class="transition-leave"
-          leave-from-class="transition-leave-from"
-          leave-to-class="transition-leave-to"
-        >
-          <ListboxOptions class="select-options">
-            <ListboxOption
-              v-slot="{ active, selected }"
-              v-for="item in items"
-              :key="item.name"
-              :value="item"
-              as="template"
-            >
-              <li :class="['select-option', { active, selected }]">
-                <img
-                  :src="item.icon"
-                  :class="{ 'select-item-icon': true }"
-                  :alt="`${item.name} logo`"
-                  loading="lazy"
+      <transition
+        leave-active-class="transition-leave"
+        leave-from-class="transition-leave-from"
+        leave-to-class="transition-leave-to"
+      >
+        <ListboxOptions class="select-options">
+          <ListboxOption
+            v-slot="{ active, selected }"
+            v-for="item in items"
+            :key="item.name"
+            :value="item"
+            as="template"
+          >
+            <li :class="['select-option', { active, selected }]">
+              <img
+                :src="item.icon"
+                :class="{ 'select-item-icon': true }"
+                :alt="`${item.name} logo`"
+                loading="lazy"
+              />
+              <span :class="['option-text', { selected }]">{{ item.name }}</span>
+              <span
+                v-if="selected"
+                class="check-icon"
+              >
+                <CheckIcon
+                  class="check"
+                  aria-hidden="true"
                 />
-                <span :class="['option-text', { selected }]">{{ item.name }}</span>
-                <span v-if="selected" class="check-icon">
-                  <CheckIcon class="check" aria-hidden="true" />
-                </span>
-              </li>
-            </ListboxOption>
-          </ListboxOptions>
-        </transition>
-      </div>
-    </Listbox>
-
+              </span>
+            </li>
+          </ListboxOption>
+        </ListboxOptions>
+      </transition>
+    </div>
+  </Listbox>
 </template>
 
 <style scoped>
 .select-wrapper {
   position: relative;
 }
-
-
 
 .select-button {
   background: var(--vp-sidebar-input);
@@ -85,7 +93,10 @@ const selected = defineModel<{ name: string, icon: string }>()
   cursor: text;
   display: flex;
   gap: 12px;
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   width: 100%;
   align-items: center;
 }
@@ -99,7 +110,6 @@ const selected = defineModel<{ name: string, icon: string }>()
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
 }
 
 .select-icon {
@@ -171,11 +181,14 @@ const selected = defineModel<{ name: string, icon: string }>()
   font-weight: 500;
   color: var(--vp-c-text-1);
   white-space: nowrap;
-  transition: background-color .25s,color .25s;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
   list-style: none;
 }
 
-.select-option:hover, .select-option.active {
+.select-option:hover,
+.select-option.active {
   color: var(--vp-c-brand);
   background-color: var(--vp-c-default-soft);
 }
@@ -220,7 +233,4 @@ const selected = defineModel<{ name: string, icon: string }>()
     line-height: 1.25rem;
   }
 }
-
 </style>
-
-

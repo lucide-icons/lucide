@@ -7,7 +7,7 @@ export default {
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import Input from './Input.vue';
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import { search } from '../../../data/iconNodes';
 
 interface Props {

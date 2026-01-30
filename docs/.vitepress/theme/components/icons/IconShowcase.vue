@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IconEntity } from '../../types';
 import { computed } from 'vue';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon.ts';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon.ts';
 import Calendar from '../../../data/iconDetails/calendar.ts';
 import Clock from '../../../data/iconDetails/clock.ts';
 import Bug from '../../../data/iconDetails/bug.ts';
@@ -66,7 +66,10 @@ const prettyName = props.name
 </script>
 
 <template>
-  <section class="showcase" v-if="iconComponent">
+  <section
+    class="showcase"
+    v-if="iconComponent"
+  >
     <h2 class="title">See this icon in action</h2>
     <div class="showcase-grid">
       <div class="showcase-item column">

@@ -121,6 +121,9 @@ importers:
       '@headlessui/vue':
         specifier: ^1.7.23
         version: 1.7.23(vue@3.5.24(typescript@5.9.3))
+      '@lucide/vue':
+        specifier: workspace:*
+        version: link:../packages/vue
       '@resvg/resvg-wasm':
         specifier: ^2.6.2
         version: 2.6.2
@@ -151,9 +154,6 @@ importers:
       lucide-react:
         specifier: workspace:*
         version: link:../packages/lucide-react
-      lucide-vue-next:
-        specifier: workspace:*
-        version: link:../packages/lucide-vue-next
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -15846,7 +15846,7 @@ snapshots:
       '@babel/parser': 7.28.5
       '@babel/template': 7.27.2
       '@babel/types': 7.28.5
-      debug: 4.3.5
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -22616,7 +22616,7 @@ snapshots:
     dependencies:
       '@tootallnate/once': 1.1.2
       agent-base: 6.0.2
-      debug: 4.3.3
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -27008,7 +27008,7 @@ snapshots:
   socks-proxy-agent@6.2.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.3
+      debug: 4.4.3
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
@@ -27016,7 +27016,7 @@ snapshots:
   socks-proxy-agent@7.0.0:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.3
+      debug: 4.4.3
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color

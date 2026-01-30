@@ -51,7 +51,7 @@
     "lodash-es": "^4.17.21",
     "lucide": "workspace:*",
     "lucide-react": "workspace:*",
-    "lucide-vue-next": "workspace:*",
+    "@lucide/vue": "workspace:*",
     "markdown-it": "^14.1.0",
     "motion-v": "^1.7.3",
     "react": "^18.3.1",

@@ -1,4 +1,4 @@
-import { type IconNode } from 'lucide-vue-next/src/types';
+import { type IconNode } from '@lucide/vue/src/types';
 import Vue from 'vue';
 
 declare module '*.vue' {

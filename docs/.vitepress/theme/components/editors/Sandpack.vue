@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { type FunctionalComponent } from 'vue';
-import { type LucideProps } from 'lucide-vue-next';
+import { type LucideProps } from '@lucide/vue';
 import { Sandpack } from 'sandpack-vue3';
 
 defineProps<FunctionalComponent<LucideProps>>();

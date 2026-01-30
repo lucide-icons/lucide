@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Badge from '../base/Badge.vue';
 import { arrowRight } from '../../../data/iconNodes';
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import { data } from './HomeHeroInfoBefore.data';
 </script>
 
