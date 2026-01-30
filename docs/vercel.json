@@ -36,6 +36,16 @@
       "permanent": false
     },
     {
+      "source": "/guide/basics",
+      "destination": "/guide/react/basics",
+      "permanent": true
+    },
+    {
+      "source": "/guide/advanced",
+      "destination": "/guide/react/advanced",
+      "permanent": true
+    },
+    {
       "source": "/guide/packages/lucide",
       "destination": "/guide/lucide",
       "permanent": true
@@ -89,7 +99,7 @@
       "source": "/contributing",
       "destination": "/contribute",
       "permanent": true
-    },
+    }
   ],
   "headers": [
     {
