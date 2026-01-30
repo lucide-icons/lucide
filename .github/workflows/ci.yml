@@ -36,25 +36,19 @@ jobs:
         id: latest-tag
         run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
+      - name: Log latest tag
+        run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
+
       - name: Check if we can patch
-        run: .github/workflows/version-up.sh --minor
+        run: pnpm semver $LATEST_TAG -i minor
+        env:
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Create new version
         id: new-version
-        run: echo "NEW_VERSION=$(.github/workflows/version-up.sh --minor)" >> $GITHUB_OUTPUT
-
-      - name: Create change log
-        id: change-log
-        run: |
-          CHANGE_LOG=$(pnpm run generate:changelog --old-tag=${{ steps.latest-tag.outputs.LATEST_TAG }})
-          CHANGE_LOG=$(tail -n +5 <<< $CHANGE_LOG)
-          echo $CHANGE_LOG
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "CHANGE_LOG<<$EOF" >> $GITHUB_OUTPUT
-          echo "$CHANGE_LOG" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
+        run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
         env:
-          GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+          LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Check output
         run: |
@@ -67,38 +61,6 @@ jobs:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
           generate_release_notes: true
-
-  test-semantic-release:
-    if: github.repository == 'lucide-icons/lucide'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Semantic Release
-        id: semantic
-        uses: cycjimmy/semantic-release-action@v4
-        with:
-          tag_format: ${version}
-          branches: |
-            ['new-release-workflow']
-          extends: |
-            semantic-release-monorepo
-          extra_plugins: |
-            @semantic-release/github
-            @semantic-release/git
-            @semantic-release/release-notes-generator
-            conventional-changelog-conventionalcommits
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Log output
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: |
-          echo ${{ steps.semantic.outputs.new_release_version }}
-          echo ${{ steps.semantic.outputs.new_release_major_version }}
-          echo ${{ steps.semantic.outputs.new_release_minor_version }}
-          echo ${{ steps.semantic.outputs.new_release_patch_version }}
 
   start-release:
     if: github.repository == 'lucide-icons/lucide'
