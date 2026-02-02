@@ -9,7 +9,8 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <circle cx="8" cy="21" r="1" />
-  <circle cx="19" cy="21" r="1" />
-  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+  <path d="M18 18H8a2 2 0 0 1 0-4h10.962a2 2 0 0 0 1.991-1.57l1.026-6.226A1 1 0 0 0 20.998 5L4.64 5.046" />
+  <path d="M2.05 2.05h1.178a1 1 0 0 1 .98.807L6.5 14.675" />
+  <circle cx="18" cy="20" r="2" />
+  <circle cx="8" cy="20" r="2" />
 </svg>
