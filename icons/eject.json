@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "BorisDelchambre"
+    "danielbayley",
+    "BorisDelchambre",
+    "ThibautMarechal",
+    "karsa-mistmere"
   ],
   "tags": [
     "arrow",
