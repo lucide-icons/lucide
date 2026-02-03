@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "flannel",
