@@ -13,7 +13,11 @@
     "data",
     "ssd",
     "disk",
-    "hard disk"
+    "hard disk",
+    "storage",
+    "hardware",
+    "backup",
+    "media"
   ],
   "categories": [
     "development",
