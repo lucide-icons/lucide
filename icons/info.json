@@ -6,7 +6,15 @@
     "danielbayley"
   ],
   "tags": [
-    "help"
+    "about",
+    "advice",
+    "details",
+    "help",
+    "hint",
+    "information",
+    "notice",
+    "status",
+    "tooltip"
   ],
   "categories": [
     "accessibility",
