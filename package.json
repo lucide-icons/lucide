@@ -21,8 +21,11 @@
     "addjsons": "node ./scripts/addMissingIconJsonFiles.mts",
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
     "generate:changelog": "node ./scripts/generateChangelog.mts",
+    "generate:backers": "node scripts/updateOpenCollectiveBackers.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
+    "suggest:tags": "node ./scripts/suggestTags.mts",
+    "suggest:tags:watch": "node --env-file .env --watch ./scripts/suggestTags.mts ",
     "postinstall": "husky install",
     "lint:es": "eslint .",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
@@ -38,6 +41,8 @@
     "renamePattern": "node ./scripts/rename/renamePattern.mts"
   },
   "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
     "@html-eslint/eslint-plugin": "^0.19.1",
     "@html-eslint/parser": "^0.19.1",
     "@octokit/rest": "^19.0.13",
@@ -45,6 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "ajv-cli": "^5.0.0",
+    "dotenv": "^17.0.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -56,19 +62,21 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
+    "openai": "^5.8.1",
     "p-memoize": "^7.1.1",
     "prettier": "3.2.4",
     "prettier-plugin-astro": "^0.14.1",
-    "semver": "^7.7.1",
+    "semver": "^7.7.3",
     "simple-git": "^3.27.0",
     "svgo": "^3.3.2",
     "svgson": "^5.3.1",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "zod": "^3.25.67"
   },
   "engines": {
-    "node": ">=23.0.0"
+    "node": ">=24.11.1"
   },
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "pnpm": {
     "packageExtensions": {
       "vue-template-compiler": {
@@ -78,7 +86,13 @@
       }
     },
     "overrides": {
-      "cross-spawn": "7.0.5"
+      "cross-spawn": "7.0.5",
+      "form-data": "^4.0.4",
+      "fast-json-patch": "^3.1.1",
+      "webpack-dev-middleware": "^5.3.4",
+      "semver": "^7.7.3",
+      "axios": "^1.12.0",
+      "vite-prerender-plugin": "0.5.12"
     }
   }
 }

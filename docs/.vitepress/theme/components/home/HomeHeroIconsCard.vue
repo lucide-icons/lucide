@@ -5,9 +5,14 @@ import LucideIcon from '../base/LucideIcon.vue'
 import { useRouter } from 'vitepress';
 import { random } from 'lodash-es'
 import FakeInput from '../base/FakeInput.vue'
+import useSearchShortcut from '../../utils/useSearchShortcut'
 
 const { go } = useRouter()
 const intervalTime = shallowRef()
+
+const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
+  go('/icons/?focus')
+})
 
 const getInitialItems = () => data.icons.slice(0, 48)
 const items = ref(getInitialItems())
@@ -64,7 +69,11 @@ onBeforeUnmount(() => {
           </div>
         </TransitionGroup>
       </div>
-      <FakeInput @click="go('/icons/?focus')" class="search-box">
+      <FakeInput
+        @click="go('/icons/?focus')"
+        :shortcut="kbdSearchShortcut"
+        class="search-box"
+      >
         Search {{ data.iconsCount }} icons...
       </FakeInput>
     </div>

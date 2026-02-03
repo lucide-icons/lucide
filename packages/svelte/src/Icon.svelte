@@ -1,6 +1,7 @@
 <script lang="ts">
-  import defaultAttributes from './defaultAttributes';
-  import type { IconProps } from './types';
+  import defaultAttributes from './defaultAttributes.js';
+  import type { IconProps } from './types.js';
+  import { hasA11yProp } from './utils/hasA11yProp.js';
 
   const {
     name,
@@ -16,6 +17,7 @@
 
 <svg
   {...defaultAttributes}
+  {...(!children && !hasA11yProp(props) && { 'aria-hidden': 'true' })}
   {...props}
   width={size}
   height={size}
