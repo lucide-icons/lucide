@@ -1,13 +1,20 @@
 # Lucide React
 
-Implementation of the lucide icon library for react applications
+React components for Lucide icons that integrate seamlessly into your React applications. Each icon is a fully-typed React component that renders as an optimized inline SVG, giving you the flexibility of components with the performance of vector graphics.
+
+**What you can accomplish:**
+- Import icons as React components with full TypeScript support
+- Pass props to customize size, color, stroke width, and other SVG attributes
+- Use icons in JSX with the same ease as any other React component
+- Benefit from automatic tree-shaking to include only the icons you use
+- Create dynamic icon components that respond to state and user interactions
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
@@ -102,3 +109,19 @@ const App = () => (
   <DynamicIcon name="camera" color="red" size={48} />
 );
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```jsx
+import { Check } from 'lucide-react';
+
+const App = () => {
+  return <Check aria-label="Task completed" />;
+};
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

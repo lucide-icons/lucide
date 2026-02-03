@@ -20,6 +20,11 @@
     "notifications"
   ],
   "aliases": [
-    "x-square"
+    {
+      "name": "x-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

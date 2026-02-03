@@ -20,6 +20,8 @@ packages/**/src/icons/*.tsx
 packages/**/src/aliases/*.ts
 packages/**/src/aliases.ts
 !packages/**/src/aliases/index.ts
+packages/**/src/utils/*.ts
+!packages/shared/src/utils/*.ts
 packages/**/src/dynamicIconImports.ts
 packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
@@ -44,7 +46,7 @@ docs/.vitepress/data/releaseMetaData
 docs/.vitepress/data/categoriesData.json
 docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
+docs/.vitepress/data/brandStopwords.json
 docs/.vercel
 docs/.nitro
 .gitignore
-
