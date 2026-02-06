@@ -62,7 +62,10 @@
     "build:version": "node ./scripts/replaceVersion.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
@@ -74,7 +77,7 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^6.0.4",
     "@solidjs/testing-library": "^0.8.10",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/jest-dom": "^6.8.0",
     "babel-preset-solid": "^1.8.12",
     "jest-serializer-html": "^7.1.0",
     "rollup": "^4.53.3",

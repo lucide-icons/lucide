@@ -1,60 +1,62 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="48"
-     height="48"
-     viewbox="0 0 24 24"
-     fill="none"
-     stroke="red"
-     stroke-width="4"
-     stroke-linecap="round"
-     stroke-linejoin="round"
+<svg
+  data-testid="grid-icon"
+  fill="none"
+  height="48"
+  stroke="red"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="4"
+  viewBox="0 0 24 24"
+  width="48"
+  xmlns="http://www.w3.org/2000/svg"
 >
-  <rect fill="none"
-        stroke="red"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        width="18"
-        height="18"
-        x="3"
-        y="3"
-        rx="2"
-  >
-  </rect>
-  <path fill="none"
-        stroke="red"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M3 9h18"
-  >
-  </path>
-  <path fill="none"
-        stroke="red"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M3 15h18"
-  >
-  </path>
-  <path fill="none"
-        stroke="red"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M9 3v18"
-  >
-  </path>
-  <path fill="none"
-        stroke="red"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M15 3v18"
-  >
-  </path>
+  <rect
+    fill="none"
+    height="18"
+    rx="2"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+    width="18"
+    x="3"
+    y="3"
+  />
+  <path
+    d="M3 9h18"
+    fill="none"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+  />
+  <path
+    d="M3 15h18"
+    fill="none"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+  />
+  <path
+    d="M9 3v18"
+    fill="none"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+  />
+  <path
+    d="M15 3v18"
+    fill="none"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+  />
 </svg>
 `;
 

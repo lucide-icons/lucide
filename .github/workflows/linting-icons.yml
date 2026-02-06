@@ -1,6 +1,9 @@
 name: Linting Icons
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - 'icons/*'

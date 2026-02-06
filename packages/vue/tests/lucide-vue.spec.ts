@@ -85,7 +85,7 @@ describe('Using lucide icon components', () => {
 
     const icon = container.firstElementChild;
 
-    await fireEvent.click(icon);
+    await fireEvent.click(icon as Element);
 
     expect(onClick).toHaveBeenCalled();
   });
@@ -153,7 +153,7 @@ describe('Using lucide icon components', () => {
       props: {
         size: 48,
         color: 'red',
-        absoluteStrokeWidth: '',
+        absoluteStrokeWidth: '' as unknown as boolean, // Vue treats empty string as true for boolean props
       },
     });
 
@@ -170,7 +170,7 @@ describe('Using lucide icon components', () => {
         size: 48,
         color: 'red',
         'stroke-width': '2',
-        'absolute-stroke-width': '',
+        'absolute-stroke-width': '' as unknown as boolean, // Vue treats empty string as true for boolean props
       },
     });
 
