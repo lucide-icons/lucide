@@ -14,17 +14,16 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 
 ## What's New in Version 1? TLDR;
 
-<!-- TODO: CHECK FOR MORE WHAT IS MERGED IN MAIN -->
-
 - Removed brand icons, see our [brand logo statement](/brand-logo-statement) for more details.
 - Improved documentation, guides per framework.
-- Enhanced performance and accessibility.
+- Improved accessibility, `aria-hidden` is now set by default on icons.
 - Removed UMD build, only ESM and CJS now. (Exception for `lucide` package).
 - Package rename from `lucide-vue-next` to `@lucide/vue`.
 - Support for context providers in React, Vue, Svelte, and Solid.
-- Aliases icon names in class names.
-- Finally stable codepoints for Lucide font.
+<!-- - Aliases icon names in class names. -->
+- Stable code points for Lucide font.
 - Many bug fixes and improvements.
+- Support for shadow DOM in Lucide package.
 
 ## Upgrading to Version 1
 
@@ -40,7 +39,6 @@ See our guides:
 <!-- - guide for [Astro](/guide/astro/getting-started)
 - guide for [Static](/guide/static/getting-started) -->
 
-
 ## Removed All Brand Icons
 
 As part of our commitment to maintaining a sustainable and legally compliant icon library, we have made the decision to remove all brand icons from Lucide version 1. This change is in response to increasing legal pressures and the complexities associated with trademarked brand icons. See our [brand logo statement](/brand-logo-statement) for more details.
@@ -53,8 +51,12 @@ For users who still require brand icons, we recommend [Simple Icons](https://sim
 
 We have revamped our documentation to provide clearer, more comprehensive guides tailored to each supported framework. Whether you're using React, Vue, Svelte, Solid, Angular, Astro or Vanilla JavaScript, you'll find: step-by-step instructions, code example and best practices to help you integrate Lucide seamlessly into your projects.
 
-## Enhanced performance and accessibility.
+## Improved accessibility.
 
-....
+We have improved the accessibility of our icons by setting `aria-hidden` to `true` by default. This change ensures that screen readers will ignore icons that are purely decorative, improving the overall accessibility of your applications. If you need to make an icon accessible, you can provide an appropriate `aria-label` or add a `title` attribute to the icon element.
 
-WIP
+See our [accessibility in-depth guide](/guide/accessibility) for more details and best practices on making your icons accessible.
+
+## Removed UMD build, only ESM and CJS now.
+
+To streamline our build process and focus on modern JavaScript module formats, we have removed the UMD build from Lucide version 1. We now only support ESM (ECMAScript Modules) and CJS (CommonJS) formats.
