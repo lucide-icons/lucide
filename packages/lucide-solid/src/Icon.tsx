@@ -2,7 +2,6 @@ import { For, splitProps, useContext } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
-import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import { LucideContext } from './context';
 import { hasA11yProp, mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 
