@@ -48,7 +48,6 @@ defineProps({
 .fake-input:hover,
 .fake-input:focus {
   border-color: var(--vp-c-brand);
-  background: var(--vp-c-bg-alt);
 }
 
 .shortcut {

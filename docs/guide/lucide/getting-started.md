@@ -47,6 +47,8 @@ bun add lucide
 <script src="https://unpkg.com/lucide@latest"></script>
 ```
 
+We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`, rather than using `@latest`. This is because the latest version may introduce breaking changes that could potentially break your application. By anchoring to a specific version, you can ensure that your application remains stable and functional, even if there are updates to the library in the future.
+
 ## Importing your first icon
 
 Lucide is built with ES Modules, so it's completely tree-shakable.
