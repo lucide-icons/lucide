@@ -12,23 +12,28 @@ import { lucideSidebar } from '../../.vitepress/sidebar/lucide'
 
 <!--@include: ../../../docs/images/package-logos/lucide.svg -->
 
-# Lucide for Vanilla JavaScript
+# Lucide Static Assets
 
-The core Lucide package for vanilla JavaScript applications. This package allows you to easily add scalable vector icons to any web project without framework dependencies. Perfect for static websites, legacy applications, or when you need lightweight icon integration with maximum browser compatibility.
+Static assets and utilities for Lucide icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
 
 **What you can accomplish:**
 
-- Add icons to HTML using simple data attributes
-- Dynamically create and insert SVG icons with JavaScript
-- Customize icon appearance with CSS classes and inline styles
-- Tree-shake unused icons to keep bundle sizes minimal
-- Use icons in Vanilla JS with HTML
+- Use individual SVG files as images or CSS background images
+- Implement icon fonts for CSS-based icon systems
+- Create SVG sprites for efficient icon loading in static sites
+- Import SVG strings in Node.js applications and server-side rendering
+- Build static websites and applications without JavaScript framework dependencies
 
-Lucide is designed to be lightweight and easy to use, making it an excellent choice for projects that require icons without the overhead of a full framework integration.
+This package includes the following implementations of Lucide icons:
+
+- Individual SVG files
+- SVG sprite
+- Icon font files
+- A JavaScript library exporting SVG strings
 
 ## Overview
 
-<OverviewLink href="/guide/react/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your JS project."/>
+<OverviewLink href="/guide/static/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your project."/>
 
 ### Basics
 {{''}}
