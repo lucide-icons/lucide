@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "TimNekk"
+  ],
+  "tags": [
+    "world",
+    "browser",
+    "language",
+    "translate",
+    "internet",
+    "offline",
+    "disconnected",
+    "network",
+    "connection",
+    "no connection",
+    "network failure",
+    "signal off"
+  ],
+  "categories": [
+    "navigation",
+    "connectivity",
+    "devices"
+  ]
+}
