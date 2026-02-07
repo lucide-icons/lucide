@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "TimNekk"
+    "TimNekk",
+    "karsa-mistmere",
+    "colebemis",
+    "csandman",
+    "ericfennis"
   ],
   "tags": [
     "globe",
