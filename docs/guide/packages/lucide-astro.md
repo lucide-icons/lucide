@@ -192,3 +192,19 @@ import LucideIcon from './LucideIcon.astro';
 
 <LucideIcon name="Menu" />
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```jsx
+---
+import { Check } from '@lucide/astro';
+---
+
+<Check aria-label="Task completed" />
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
