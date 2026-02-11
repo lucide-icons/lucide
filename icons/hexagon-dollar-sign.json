@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Redfill",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "monetization",
+    "marketing",
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
