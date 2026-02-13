@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "6teloiv"
+  ],
+  "tags": [
+    "outwards",
+    "direction",
+    "west",
+    "back",
+    "reverse"
+  ],
+  "categories": [
+    "arrows",
+    "navigation"
+  ]
+}
