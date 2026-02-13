@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "simoncoudeville"
+  ],
+  "tags": [
+    "midi",
+    "connector",
+    "interface",
+    "equipment"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "multimedia"
+  ]
+}
