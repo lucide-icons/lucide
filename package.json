@@ -21,6 +21,7 @@
     "addjsons": "node ./scripts/addMissingIconJsonFiles.mts",
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
     "generate:changelog": "node ./scripts/generateChangelog.mts",
+    "generate:backers": "node scripts/updateOpenCollectiveBackers.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
     "suggest:tags": "node ./scripts/suggestTags.mts",
@@ -73,9 +74,9 @@
     "zod": "^3.25.67"
   },
   "engines": {
-    "node": ">=23.0.0"
+    "node": ">=24.11.1"
   },
-  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b",
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "pnpm": {
     "packageExtensions": {
       "vue-template-compiler": {
