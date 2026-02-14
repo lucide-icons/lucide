@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "adam-kov",
+    "colebemis",
+    "csandman",
+    "aaofyi",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "label",
+    "badge",
+    "ticket",
+    "mark",
+    "x",
+    "delete",
+    "remove"
+  ],
+  "categories": [
+    "account"
+  ]
+}
