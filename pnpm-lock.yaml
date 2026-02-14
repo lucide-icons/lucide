@@ -140,11 +140,11 @@ importers:
         specifier: ^3.10.1
         version: 3.10.1
       lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
+        specifier: ^4.17.23
+        version: 4.17.23
       lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
+        specifier: ^4.17.23
+        version: 4.17.23
       lucide-react:
         specifier: workspace:*
         version: link:../packages/lucide-react
@@ -793,7 +793,7 @@ importers:
         specifier: ^5.38.6
         version: 5.43.14
       svelte-check:
-        specifier: ^4.3.1
+        specifier: ^4.3.4
         version: 4.3.4(picomatch@4.0.3)(svelte@5.43.14)(typescript@5.9.3)
       svelte-preprocess:
         specifier: ^6.0.3
@@ -1227,6 +1227,10 @@ packages:
 
   '@babel/generator@7.28.5':
     resolution: {integrity: sha512-3EwLFhZ38J4VyIP6WNtt2kUdW9dokXA9Cr4IVIFHuCpZ3H8/YFOl5JjZHisrn1fATPBmKKqXzDFvh9fUwHz6CQ==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/generator@7.28.6':
+    resolution: {integrity: sha512-lOoVRwADj8hjf7al89tvQ2a1lf53Z+7tiXMgpZJL3maQPDxh0DgLMN62B2MKUOFcoodBHLMbDM6WAbKgNy5Suw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-annotate-as-pure@7.16.7':
@@ -2392,6 +2396,10 @@ packages:
 
   '@babel/traverse@7.28.5':
     resolution: {integrity: sha512-TCCj4t55U90khlYkVV/0TfkJkAkUg3jZFA3Neb7unZT8CPok7iiRfaX0F+WnqWqt7OxhOn0uBKXCw4lbL8W0aQ==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/traverse@7.28.6':
+    resolution: {integrity: sha512-fgWX62k02qtjqdSNTAGxmKYY/7FSL9WAS1o2Hu5+I5m9T0yxZzr4cnrfXQ/MX0rIifthCSs6FKTlzYbJcPtMNg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.1':
@@ -9497,8 +9505,8 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
-  lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+  lodash-es@4.17.23:
+    resolution: {integrity: sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==}
 
   lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
@@ -9515,8 +9523,8 @@ packages:
   lodash.throttle@4.1.1:
     resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -11604,6 +11612,10 @@ packages:
   sax@1.4.3:
     resolution: {integrity: sha512-yqYn1JhPczigF94DMS+shiDMjDowYO6y9+wB/4WgO0Y19jWYk0lQ4tuG5KI7kj4FTp1wxPj5IFfcrz/s1c3jjQ==}
 
+  sax@1.4.4:
+    resolution: {integrity: sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw==}
+    engines: {node: '>=11.0.0'}
+
   saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -12286,6 +12298,7 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
 
   temp@0.8.4:
     resolution: {integrity: sha512-s0ZZzd0BzYv5tLSptZooSjK8oj6C+c19p7Vqta9+6NPOf7r+fxq0cJe6/oN4LTC79sy5NY8ucOJNgwsKCSbfqg==}
@@ -14151,6 +14164,14 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.31
       jsesc: 3.1.0
 
+  '@babel/generator@7.28.6':
+    dependencies:
+      '@babel/parser': 7.28.6
+      '@babel/types': 7.28.6
+      '@jridgewell/gen-mapping': 0.3.13
+      '@jridgewell/trace-mapping': 0.3.31
+      jsesc: 3.1.0
+
   '@babel/helper-annotate-as-pure@7.16.7':
     dependencies:
       '@babel/types': 7.27.1
@@ -14296,21 +14317,21 @@ snapshots:
   '@babel/helper-member-expression-to-functions@7.24.8':
     dependencies:
       '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-member-expression-to-functions@7.27.1':
     dependencies:
       '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-member-expression-to-functions@7.28.5':
     dependencies:
       '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -14383,11 +14404,11 @@ snapshots:
 
   '@babel/helper-optimise-call-expression@7.24.7':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
 
   '@babel/helper-optimise-call-expression@7.27.1':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
 
   '@babel/helper-plugin-utils@7.25.9': {}
 
@@ -14479,9 +14500,9 @@ snapshots:
 
   '@babel/helper-wrap-function@7.27.1':
     dependencies:
-      '@babel/template': 7.27.2
+      '@babel/template': 7.28.6
       '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/types': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
@@ -15801,6 +15822,18 @@ snapshots:
       '@babel/template': 7.27.2
       '@babel/types': 7.28.5
       debug: 4.3.5
+    transitivePeerDependencies:
+      - supports-color
+
+  '@babel/traverse@7.28.6':
+    dependencies:
+      '@babel/code-frame': 7.28.6
+      '@babel/generator': 7.28.6
+      '@babel/helper-globals': 7.28.0
+      '@babel/parser': 7.28.6
+      '@babel/template': 7.28.6
+      '@babel/types': 7.28.6
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -17570,7 +17603,7 @@ snapshots:
       '@babel/plugin-transform-sticky-regex': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
       '@babel/plugin-transform-unicode-regex': 7.27.1(@babel/core@7.28.5)
-      '@babel/template': 7.27.2
+      '@babel/template': 7.28.6
       '@react-native/babel-plugin-codegen': 0.76.9(@babel/preset-env@7.28.5(@babel/core@7.28.5))
       babel-plugin-syntax-hermes-parser: 0.25.1
       babel-plugin-transform-flow-enums: 0.0.2(@babel/core@7.28.5)
@@ -19079,7 +19112,7 @@ snapshots:
   '@vue/test-utils@1.3.0(vue-template-compiler@2.7.14(vue@2.7.14))(vue@2.7.14)':
     dependencies:
       dom-event-types: 1.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty: 2.0.0
       vue: 2.7.14
       vue-template-compiler: 2.7.14(vue@2.7.14)
@@ -19426,7 +19459,7 @@ snapshots:
       glob: 8.1.0
       graceful-fs: 4.2.11
       lazystream: 1.0.1
-      lodash: 4.17.21
+      lodash: 4.17.23
       normalize-path: 3.0.0
       readable-stream: 3.6.2
 
@@ -19656,7 +19689,7 @@ snapshots:
 
   async@2.6.4:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
 
   async@3.2.6: {}
 
@@ -19752,8 +19785,8 @@ snapshots:
 
   babel-plugin-jest-hoist@29.6.3:
     dependencies:
-      '@babel/template': 7.27.2
-      '@babel/types': 7.28.5
+      '@babel/template': 7.28.6
+      '@babel/types': 7.28.6
       '@types/babel__core': 7.20.5
       '@types/babel__traverse': 7.20.1
 
@@ -22741,7 +22774,7 @@ snapshots:
       cli-width: 3.0.0
       external-editor: 3.1.0
       figures: 3.2.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       mute-stream: 0.0.8
       ora: 5.4.1
       run-async: 2.4.1
@@ -23107,7 +23140,7 @@ snapshots:
 
   jest-message-util@29.7.0:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.28.6
       '@jest/types': 29.6.3
       '@types/stack-utils': 2.0.1
       chalk: 4.1.2
@@ -23373,7 +23406,7 @@ snapshots:
       graceful-fs: 4.2.11
       http-proxy: 1.18.1
       isbinaryfile: 4.0.10
-      lodash: 4.17.21
+      lodash: 4.17.23
       log4js: 6.9.1
       mime: 2.6.0
       minimatch: 3.1.2
@@ -23580,7 +23613,7 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash-es@4.17.21: {}
+  lodash-es@4.17.23: {}
 
   lodash.debounce@4.0.8: {}
 
@@ -23594,7 +23627,7 @@ snapshots:
 
   lodash.throttle@4.1.1: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   log-symbols@4.1.0:
     dependencies:
@@ -23983,7 +24016,7 @@ snapshots:
   metro-source-map@0.81.0:
     dependencies:
       '@babel/traverse': 7.27.1
-      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.28.5'
+      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.28.6'
       '@babel/types': 7.28.4
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
@@ -23998,8 +24031,8 @@ snapshots:
   metro-source-map@0.81.5:
     dependencies:
       '@babel/traverse': 7.28.5
-      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.28.5'
-      '@babel/types': 7.28.5
+      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.28.6'
+      '@babel/types': 7.28.6
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
       metro-symbolicate: 0.81.5
@@ -24036,8 +24069,8 @@ snapshots:
   metro-transform-plugins@0.81.5:
     dependencies:
       '@babel/core': 7.28.5
-      '@babel/generator': 7.28.5
-      '@babel/template': 7.27.2
+      '@babel/generator': 7.28.6
+      '@babel/template': 7.28.6
       '@babel/traverse': 7.28.5
       flow-enums-runtime: 0.0.6
       nullthrows: 1.1.1
@@ -24047,9 +24080,9 @@ snapshots:
   metro-transform-worker@0.81.5:
     dependencies:
       '@babel/core': 7.28.5
-      '@babel/generator': 7.28.5
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/generator': 7.28.6
+      '@babel/parser': 7.28.6
+      '@babel/types': 7.28.6
       flow-enums-runtime: 0.0.6
       metro: 0.81.5
       metro-babel-transformer: 0.81.5
@@ -26376,7 +26409,7 @@ snapshots:
     dependencies:
       commenting: 1.1.0
       fdir: 6.4.4(picomatch@4.0.3)
-      lodash: 4.17.21
+      lodash: 4.17.23
       magic-string: 0.30.17
       moment: 2.30.1
       package-name-regex: 2.0.6
@@ -26595,6 +26628,9 @@ snapshots:
   sax@1.2.4: {}
 
   sax@1.4.3: {}
+
+  sax@1.4.4:
+    optional: true
 
   saxes@6.0.0:
     dependencies:
@@ -27377,7 +27413,7 @@ snapshots:
       '@xmldom/xmldom': 0.7.13
       argparse: 2.0.1
       cubic2quad: 1.2.1
-      lodash: 4.17.21
+      lodash: 4.17.23
       microbuffer: 1.0.0
       svgpath: 2.6.0
 
@@ -28620,7 +28656,7 @@ snapshots:
 
   xml2js@0.6.2:
     dependencies:
-      sax: 1.4.3
+      sax: 1.4.4
       xmlbuilder: 11.0.1
     optional: true
 
