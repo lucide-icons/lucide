@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "talyuk"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "scheduled"
+  ],
+  "categories": [
+    "mail"
+  ]
+}
