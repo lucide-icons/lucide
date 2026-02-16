@@ -21,6 +21,7 @@ export type IconNode = [elementName: SVGElementType, attrs: Record<string, strin
 export interface LucideProps extends SvgProps {
   size?: string | number;
   absoluteStrokeWidth?: boolean;
+  className?: string;
   'data-testid'?: string;
 }
 

@@ -27,9 +27,34 @@ describe('Using Icon Component', () => {
         size={48}
         stroke="red"
         absoluteStrokeWidth
+        className="test-class"
+        data-testid="test-id"
       />,
     );
 
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should not apply className or data-testid to children', async () => {
+    const rootClassName = 'root-class';
+    const rootTestId = 'root-test-id';
+
+    const { getByTestId } = render(
+      <Icon
+        iconNode={airVent}
+        className={rootClassName}
+        data-testid={rootTestId}
+      />,
+    );
+
+    const root = getByTestId(rootTestId);
+    const children = root.children;
+
+    expect(root.classList.contains(rootClassName)).toBe(true);
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i];
+      expect(child.classList.contains(rootClassName)).toBe(false);
+      expect(child.getAttribute('data-testid')).not.toBe(rootTestId);
+    }
   });
 });

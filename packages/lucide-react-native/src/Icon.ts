@@ -17,6 +17,7 @@ interface IconComponentProps extends LucideProps {
  * @param {number} props.strokeWidth - The stroke width of the icon
  * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {string} props.className - The class name of the icon
+ * @param {string} props.data-testid - The test id of the root SVG element
  * @param {IconNode} props.children - The children of the icon
  * @param {IconNode} props.iconNode - The icon node of the icon
  *
@@ -32,6 +33,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       children,
       iconNode,
       className,
+      'data-testid': dataTestId,
       ...rest
     },
     ref,
@@ -50,6 +52,7 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         className,
         width: size,
         height: size,
+        'data-testid': dataTestId,
         ...customAttrs,
       },
       [

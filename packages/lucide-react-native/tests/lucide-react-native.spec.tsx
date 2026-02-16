@@ -120,6 +120,7 @@ describe('Using lucide icon components', () => {
     const fill = 'red';
     const color = 'white';
     const strokeWidth = 10;
+    const className = 'root-class';
 
     const { container, getByTestId } = render(
       <Grid
@@ -127,14 +128,20 @@ describe('Using lucide icon components', () => {
         fill={fill}
         color={color}
         strokeWidth={strokeWidth}
+        className={className}
       />,
     );
-    const { children = [] } = getByTestId(testId) as unknown as { children: HTMLCollection };
+    const root = getByTestId(testId) as unknown as { children: HTMLCollection; getAttribute: (name: string) => string | null };
+    const { children = [] } = root;
+
+    expect(root.getAttribute('class')).toBe(className);
     for (let i = 0; i < children.length; i++) {
       const child = children[i];
       expect(child.getAttribute('fill')).toBe(fill);
       expect(child.getAttribute('stroke')).toBe(color);
       expect(child.getAttribute('stroke-width')).toBe(`${strokeWidth}`);
+      expect(child.getAttribute('class')).toBeNull();
+      expect(child.getAttribute('data-testid')).toBeNull();
     }
 
     expect(container.innerHTML).toMatchSnapshot();
