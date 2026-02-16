@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lukesmurray",
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere",
+    "AllanJard"
+  ],
+  "tags": [
+    "sort",
+    "ascending",
+    "descending"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ],
+  "aliases": [
+    "sort-remove"
+  ]
+}
