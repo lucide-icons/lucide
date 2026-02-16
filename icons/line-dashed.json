@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "Yohh"
+  ],
+  "tags": [
+    "draw",
+    "create",
+    "line",
+    "dashed"
+  ],
+  "categories": [
+    "design",
+    "tools"
+  ]
+}
