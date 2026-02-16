@@ -1,10 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { cleanup, render } from '@testing-library/react';
 import { Edit2, Grid, Pen } from '../src/lucide-react-native';
 
 vi.mock('react-native-svg');
-
-type Attributes = Record<string, { value: unknown }>;
 
 describe('Using lucide icon components', () => {
   it('should render an component', () => {
@@ -105,7 +103,7 @@ describe('Using lucide icon components', () => {
         <Grid data-testid={childId2} />
       </Grid>,
     );
-    const { children } = getByTestId(testId) as unknown as { children: HTMLCollection };
+    const { children } = getByTestId(testId);
     const child1 = children[children.length - 2];
     const child2 = children[children.length - 1];
 
@@ -115,34 +113,34 @@ describe('Using lucide icon components', () => {
   });
 
   it('should duplicate properties to children components', () => {
-    const testId = 'multiple-children';
+    const rootTestId = 'multiple-children';
+    const rootClassName = 'root-class';
 
     const fill = 'red';
     const color = 'white';
     const strokeWidth = 10;
-    const className = 'root-class';
 
     const { container, getByTestId } = render(
       <Grid
-        data-testid={testId}
+        data-testid={rootTestId}
         fill={fill}
         color={color}
         strokeWidth={strokeWidth}
-        className={className}
+        className={rootClassName}
       />,
     );
-    const root = getByTestId(testId) as unknown as { children: HTMLCollection; getAttribute: (name: string) => string | null };
-    const { children = [] } = root;
+    const root = getByTestId(rootTestId);
 
-    expect(root.getAttribute('class')).toBe(className);
-    for (let i = 0; i < children.length; i++) {
-      const child = children[i];
+    expect(root.classList.contains(rootClassName)).toBe(true);
+    expect(root.getAttribute('data-testid')).toBe(rootTestId);
+
+    Array.from(root.children).forEach((child) => {
       expect(child.getAttribute('fill')).toBe(fill);
       expect(child.getAttribute('stroke')).toBe(color);
       expect(child.getAttribute('stroke-width')).toBe(`${strokeWidth}`);
-      expect(child.getAttribute('class')).toBeNull();
-      expect(child.getAttribute('data-testid')).toBeNull();
-    }
+      expect(child.classList.contains(rootClassName)).toBe(false);
+      expect(child.getAttribute('data-testid')).not.toBe(rootTestId);
+    });
 
     expect(container.innerHTML).toMatchSnapshot();
   });

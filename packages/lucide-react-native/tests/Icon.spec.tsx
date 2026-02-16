@@ -48,13 +48,11 @@ describe('Using Icon Component', () => {
     );
 
     const root = getByTestId(rootTestId);
-    const children = root.children;
 
     expect(root.classList.contains(rootClassName)).toBe(true);
-    for (let i = 0; i < children.length; i++) {
-      const child = children[i];
+    Array.from(root.children).forEach((child) => {
       expect(child.classList.contains(rootClassName)).toBe(false);
       expect(child.getAttribute('data-testid')).not.toBe(rootTestId);
-    }
+    });
   });
 });
