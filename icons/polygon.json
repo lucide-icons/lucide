@@ -1,0 +1,19 @@
+{
+    "$schema": "../icon.schema.json",
+    "contributors": [
+        "daboudii",
+        "timmy471"
+    ],
+    "tags": [
+        "map",
+        "vector",
+        "geometry",
+        "coordinates",
+        "shape",
+        "location"
+    ],
+    "categories": [
+        "design",
+        "shapes"
+    ]
+}
