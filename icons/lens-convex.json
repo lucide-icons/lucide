@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Muhammad-Aqib-Bashir",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "convex",
+    "lens",
+    "optics",
+    "magnification",
+    "focus",
+    "light",
+    "refraction",
+    "physics",
+    "eyeglass",
+    "telescope",
+    "microscope",
+    "curved",
+    "science"
+  ],
+  "categories": [
+    "science",
+    "tools",
+    "shapes"
+  ]
+}
