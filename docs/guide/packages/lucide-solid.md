@@ -144,3 +144,19 @@ const App = () => {
 
 export default App;
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```jsx
+import { Check } from 'lucide-solid';
+
+const App = () => {
+  return <Check aria-label="Task completed" />;
+};
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
