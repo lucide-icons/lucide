@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "jguddas",
+      "Veatec22"
+  ],
+  "tags": [
+    "sql", 
+    "database", 
+    "intersection", 
+    "venn", 
+    "merge"
+  ],
+  "categories": [
+    "tools",
+    "development"
+  ]
+}
