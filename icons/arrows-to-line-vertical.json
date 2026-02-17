@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "dg-ac"
+  ],
+  "tags": [
+    "arrow",
+    "vertical",
+    "alignment",
+    "middle"
+  ],
+  "categories": [
+    "arrows",
+    "navigation"
+  ]
+}
