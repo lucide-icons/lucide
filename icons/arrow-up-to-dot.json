@@ -1,19 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
+    "colebemis",
+    "ericfennis",
     "jguddas",
     "karsa-mistmere"
   ],
   "tags": [
+    "forward",
     "direction",
-    "south",
-    "waypoint",
-    "location",
-    "step",
-    "into"
+    "north"
   ],
   "categories": [
-    "arrows"
+    "arrows",
+    "navigation"
   ]
 }
