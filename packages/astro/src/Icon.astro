@@ -1,0 +1,32 @@
+---
+import defaultAttributes from './defaultAttributes';
+import type { IconProps as Props } from './types';
+import { hasA11yProp } from './utils/hasA11yProp';
+
+
+const {
+  color = 'currentColor',
+  size = 24,
+  'stroke-width': strokeWidth = 2,
+  absoluteStrokeWidth = false,
+  iconNode = [],
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<svg
+  {...{
+    ...defaultAttributes,
+    width: size,
+    height: size,
+    stroke: color,
+    'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+    ...(!hasA11yProp(rest) && { 'aria-hidden': 'true' }),
+    ...rest,
+  }}
+  class:list={['lucide', className]}
+>
+  {iconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
+  <slot />
+</svg>

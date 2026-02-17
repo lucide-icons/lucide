@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "delivery",
+    "undelivered"
+  ],
+  "categories": [
+    "mail"
+  ],
+  "aliases": [
+    {
+      "name": "mail-question",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

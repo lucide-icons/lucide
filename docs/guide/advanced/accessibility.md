@@ -10,6 +10,11 @@ because they can quickly give information.
 However, not everyone can understand them easily. When using icons it is very important to consider
 the following aspects of accessibility.
 
+::: info
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+You can make them accessible yourself by following the guidelines below.
+:::
+
 ## Provide visible labels
 
 Icons are a helpful tool to improve perception, but they aren't a replacement for text.
@@ -139,22 +144,22 @@ contained icon.
 ```tsx
 // Don't do this
 <button class="btn-icon">
-  <Home/>
+  <House/>
 </button>
 
 // Don't do this either
 <button class="btn-icon">
-  <Home aria-label="Home icon"/>
+  <House aria-label="Home icon"/>
 </button>
 
 // This works but might not be the best solution, see below
 <button aria-label="Go to home" class="btn-icon">
-  <Home/>
+  <House/>
 </button>
 
 // Do this instead
 <button class="btn-icon">
-  <Home/>
+  <House/>
   <span class="visually-hidden">Go to home</span>
 </button>
 ```
@@ -167,6 +172,7 @@ Although you could provide accessible labels to your elements via the `aria-labe
 generally recommend avoiding this and instead suggest that you use your chosen CSS framework's "
 visually hidden" utility whenever possible. You can
 [read more about why `aria-label` might not be the best solution](https://gomakethings.com/revisting-aria-label-versus-a-visually-hidden-class/).
+
 ### Example - Radix UI
 
 Use [Radix UI's built-in accessible icon utility component](https://www.radix-ui.com/primitives/docs/utilities/accessible-icon).
@@ -179,6 +185,7 @@ import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
   <ArrowRightIcon />
 </AccessibleIcon>
 ```
+
 ### Example - Bootstrap
 
 ```html

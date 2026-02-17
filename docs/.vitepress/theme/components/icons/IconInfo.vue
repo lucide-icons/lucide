@@ -9,7 +9,7 @@ import {useData, useRouter} from 'vitepress';
 import { computed } from 'vue';
 import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
 import { diamond }  from '../../../data/iconNodes'
-import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.mjs';
+import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
 
 
 const props = defineProps<{
