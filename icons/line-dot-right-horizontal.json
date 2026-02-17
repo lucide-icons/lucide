@@ -2,17 +2,21 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "csandman",
     "ericfennis",
-    "jguddas"
+    "johnletey",
+    "nathan-de-pachtere"
   ],
   "tags": [
     "code",
     "version control",
-    "vcs",
-    "repository"
+    "waypoint",
+    "stop",
+    "station",
+    "last",
+    "end"
   ],
   "categories": [
-    "development"
+    "development",
+    "navigation"
   ]
 }

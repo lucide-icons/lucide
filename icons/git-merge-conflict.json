@@ -1,22 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "timmy471",
     "colebemis",
     "csandman",
-    "ericfennis",
     "karsa-mistmere",
-    "lscheibel",
-    "jguddas"
+    "ericfennis"
   ],
   "tags": [
-    "weather",
-    "danger",
-    "warning",
-    "alert",
+    "code",
+    "version control",
+    "commits",
+    "diff",
     "error",
-    "sync",
-    "network",
-    "exclamation"
+    "conflict"
   ],
   "categories": [
     "development"
