@@ -2,16 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ethanhazel",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "ericfennis"
   ],
   "tags": [
-    "arrow",
-    "right",
-    "exit",
-    "out",
-    "export"
+    "left",
+    "in",
+    "inside",
+    "input",
+    "insert",
+    "source",
+    "import",
+    "place",
+    "->"
   ],
   "categories": [
+    "arrows",
     "shapes",
     "layout",
     "multimedia"

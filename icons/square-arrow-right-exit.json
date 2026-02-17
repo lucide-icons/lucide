@@ -1,16 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ethanhazel"
+    "ethanhazel",
+    "karsa-mistmere",
+    "ericfennis"
   ],
   "tags": [
-    "arrow",
-    "in",
-    "inside",
-    "input",
-    "insert"
+    "out",
+    "outside",
+    "output",
+    "export",
+    "->"
   ],
   "categories": [
+    "arrows",
     "shapes",
     "layout",
     "multimedia"
