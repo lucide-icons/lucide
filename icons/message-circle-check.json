@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Shrinks99"
+  ],
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "moderate",
+    "check",
+    "done",
+    "todo",
+    "complete"
+  ],
+  "categories": [
+    "social",
+    "account"
+  ]
+}
