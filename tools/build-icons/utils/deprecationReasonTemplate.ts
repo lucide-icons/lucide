@@ -9,7 +9,7 @@ export default function deprecationReasonTemplate(
     componentName: string;
     iconName: string;
     toBeRemovedInVersion?: string;
-  }
+  },
 ) {
   const resourceName = deprecationReason.startsWith('icon') ? 'icon' : 'alias';
   const removalNotice = toBeRemovedInVersion
