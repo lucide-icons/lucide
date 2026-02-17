@@ -13,10 +13,11 @@ import Icon from './Icon';
  */
 const createLucideIcon =
   (iconName: string, iconNode: IconNode): FunctionalComponent<LucideProps> =>
-  (props, { slots }) =>
+  (props, { slots, attrs }) =>
     h(
       Icon,
       {
+        ...attrs,
         ...props,
         iconNode,
         name: iconName,

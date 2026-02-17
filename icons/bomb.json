@@ -14,5 +14,8 @@
     "explode",
     "explosive"
   ],
-  "categories": []
+  "categories": [
+    "security",
+    "tools"
+  ]
 }
