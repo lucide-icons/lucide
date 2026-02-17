@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KISHORE-KUMAR-S", 
+    "karsa-mistmere",
+  ],
+  "tags": [
+    "temperature",
+    "grid",
+    "color",
+    "data",
+    "visualization",
+    "analytics",
+    "metrics",
+    "distribution",
+    "thermal map"
+  ],
+  "categories": [
+    "charts"
+  ]
+}
