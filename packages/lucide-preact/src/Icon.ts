@@ -3,6 +3,7 @@ import defaultAttributes from './defaultAttributes';
 import type { IconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
 import { mergeClasses } from '@lucide/shared';
+import { hasA11yProp } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -55,6 +56,7 @@ const Icon = ({
       stroke: color ?? contextColor,
       ['stroke-width' as 'strokeWidth']: calculatedStrokeWidth,
       class: mergeClasses('lucide', contextClass, classes),
+      ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
       ...rest,
     },
     [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],

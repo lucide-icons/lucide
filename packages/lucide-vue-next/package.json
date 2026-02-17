@@ -46,7 +46,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/test-utils": "2.4.6",
@@ -54,7 +54,7 @@
     "rollup-plugin-dts": "^6.2.3",
     "vite": "^7.2.4",
     "vitest": "^4.0.12",
-    "vue": "^3.4.21"
+    "vue": "^3.5.20"
   },
   "peerDependencies": {
     "vue": ">=3.0.1"
