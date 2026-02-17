@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "tags": [
+    "time",
+    "watch",
+    "alarm",
+    "range",
+    "unassign"
+  ],
+  "categories": [
+    "time"
+  ]
+}
