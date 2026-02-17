@@ -62,6 +62,7 @@ Here is a complete example with unpkg
   </script>
 </body>
 ```
+We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`, rather than using `@latest`. 
 
 ### With ESModules
 
