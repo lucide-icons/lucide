@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "AleksejDix"
+  ],
+  "tags": [
+    "website",
+    "internet",
+    "globe",
+    "connection",
+    "network",
+    "digital",
+    "access",
+    "global",
+    "link",
+    "world",
+    "browser",
+    "language",
+    "translate"
+  ],
+  "categories": [
+    "navigation"
+  ]
+}
