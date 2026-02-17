@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nathan-de-pachtere"
+  ],
+  "tags": [
+    "line",
+    "dot",
+    "left",
+    "horizontal",
+    "shape",
+    "symbol",
+    "navigation",
+    "arrow",
+    "pointer",
+    "code",
+    "version control",
+    "waypoint",
+    "stop",
+    "start",
+    "first",
+    "station"
+  ],
+  "categories": [
+    "development",
+    "navigation"
+  ]
+}
