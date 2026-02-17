@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "carlosepcc"
+  ],
+  "tags": [
+    "food",
+    "fruit",
+    "avocado"
+  ],
+  "categories": [
+    "food",
+    "fruit"
+  ]
+}
