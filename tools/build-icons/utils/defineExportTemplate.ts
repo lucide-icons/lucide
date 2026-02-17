@@ -1,9 +1,9 @@
-import { type IconNode } from '../types.ts';
+import { type IconNodeWithChildren } from '../types.ts';
 
 export interface ExportTemplate {
   componentName: string;
   iconName: string;
-  children: IconNode;
+  children: IconNodeWithChildren[];
   getSvg: () => Promise<string>;
   deprecated: boolean;
   deprecationReason: string;

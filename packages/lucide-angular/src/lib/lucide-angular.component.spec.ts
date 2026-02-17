@@ -13,7 +13,7 @@ describe('LucideAngularComponent', () => {
   const getRootAttribute = (attr: string) =>
     testHostFixture.nativeElement.querySelector('i-lucide').getAttribute(attr);
   const testIcons: LucideIcons = {
-    Demo: [['polyline', { points: '1 1 22 22' }]],
+    Demo: [['polyline', { points: '1 1 22 22' }, []]],
   };
 
   beforeEach(async () => {

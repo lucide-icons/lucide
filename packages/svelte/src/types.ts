@@ -3,7 +3,7 @@ import type { Snippet } from 'svelte';
 
 export type Attrs = SVGAttributes<SVGSVGElement>;
 
-export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: Attrs][];
+export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: Attrs, children: IconNode][];
 
 export interface IconProps extends Attrs {
   name?: string;
