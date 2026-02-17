@@ -21,6 +21,11 @@ const defaultAttributes = {
 function buildLucideIconNode(icon: LucideIcon, params: LucideBuildParams = {}): LucideIconNode {
   const viewBoxWidth = ('size' in icon ? icon.size : icon.width) ?? defaultAttributes.width;
   const viewBoxHeight = ('size' in icon ? icon.size : icon.height) ?? defaultAttributes.height;
+  const aliasClassNames = icon.aliases?.map((alias) => `lucide-${alias}`) ?? [];
+  const classList = ['lucide', `lucide-${icon.name}`, ...aliasClassNames];
+  if (params['className']) {
+    classList.push(params['className']);
+  }
   const attributes = {
     ...defaultAttributes,
     ...('color' in params && { stroke: params['color'] }),
@@ -33,7 +38,7 @@ function buildLucideIconNode(icon: LucideIcon, params: LucideBuildParams = {}): 
     ...('height' in params && params['height'] && { height: params['height'].toString(10) }),
     ...('strokeWidth' in params &&
       params['strokeWidth'] && { 'stroke-width': params['strokeWidth'].toString(10) }),
-    class: `lucide lucide-${icon.name} ${params['className'] ?? ''}`.trim(),
+    class: classList.join(' '),
     viewBox: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
     ...('attributes' in params && params.attributes),
   };

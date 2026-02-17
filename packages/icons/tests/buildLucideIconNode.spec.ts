@@ -78,9 +78,15 @@ describe('buildLucideIconNode', () => {
     expect(HouseSVG[1]['class']).toBe('icon');
   });
 
+  it('should add backwards-compatible classes', () => {
+    const HouseSVG = buildLucideIconNode(House);
+
+    expect(HouseSVG[1]['class']).toBe('lucide lucide-house lucide-home');
+  });
+
   it('should merge classes', () => {
     const HouseSVG = buildLucideIconNode(House, { className: 'icon' });
 
-    expect(HouseSVG[1]['class']).toBe('lucide lucide-house icon');
+    expect(HouseSVG[1]['class']).toBe('lucide lucide-house lucide-home icon');
   });
 });

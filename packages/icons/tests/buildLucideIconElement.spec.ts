@@ -28,16 +28,22 @@ describe('buildLucideIconElement', () => {
     expect(HomeSVG.getAttribute('class')).toBe('icon');
   });
 
+  it('should add backwards-compatible classes', () => {
+    const HomeSVG = buildLucideIconElement(document, House);
+
+    expect(HomeSVG.getAttribute('class')).toBe('lucide lucide-house lucide-home');
+  });
+
   it('should merge classes', () => {
     const HomeSVG = buildLucideIconElement(document, House, { className: 'icon' });
 
-    expect(HomeSVG.getAttribute('class')).toBe('lucide lucide-house icon');
+    expect(HomeSVG.getAttribute('class')).toBe('lucide lucide-house lucide-home icon');
   });
 
   it('should create the correct svg element', () => {
     const HomeSVG = buildLucideIconElement(document, House);
 
-    const svg = getOriginalSvg('house', undefined, true);
+    const svg = getOriginalSvg('house', ['home']);
 
     expect(removeKeys(HomeSVG.outerHTML)).toBe(svg);
   });

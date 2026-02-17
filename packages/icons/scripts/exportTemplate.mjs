@@ -4,10 +4,10 @@ import base64SVG from '@lucide/build-icons/utils/base64SVG';
 export default async ({
   componentName,
   iconName,
-  children,
   getSvg,
   deprecated,
   deprecationReason,
+  iconData,
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
@@ -25,11 +25,7 @@ import type { LucideIcon } from '../types';
  * @returns {Array}
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName}: LucideIcon = ${JSON.stringify({
-    name: iconName,
-    size: 24,
-    node: children,
-  })}
+const ${componentName}: LucideIcon = ${JSON.stringify(iconData)}
 
 export default ${componentName};
 `;

@@ -48,15 +48,27 @@ function generateIconFiles({
     ]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false, toBeRemovedInVersion = undefined } = iconMetaData[iconName];
+    const {
+      deprecated = false,
+      toBeRemovedInVersion = undefined,
+      aliases = [],
+    } = iconMetaData[iconName];
     const deprecationReason = deprecated
-      ? deprecationReasonTemplate(iconMetaData[iconName]?.deprecationReason ?? '', {
+      ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason ?? '', {
           componentName,
           iconName,
           toBeRemovedInVersion,
         })
       : '';
 
+    const iconData = {
+      name: iconName,
+      size: 24,
+      node: children,
+      ...((aliases?.length ?? 0) > 0 && {
+        aliases: aliases.map((alias) => (typeof alias === 'string' ? alias : alias.name)),
+      }),
+    };
     const elementTemplate = await template({
       componentName,
       iconName,
@@ -64,6 +76,7 @@ function generateIconFiles({
       getSvg,
       deprecated,
       deprecationReason,
+      iconData,
     });
 
     const output = pretty
@@ -81,7 +94,7 @@ function generateIconFiles({
       const output = `export { default } from "./${iconName}${iconFileExtension}";\n`;
       const location = path.join(
         iconsDistDirectory,
-        `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`,
+        `${iconName}${separateIconFileExportExtension ?? iconFileExtension}`
       );
 
       await fs.promises.writeFile(location, output, 'utf-8');

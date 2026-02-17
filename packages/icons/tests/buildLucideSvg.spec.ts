@@ -14,7 +14,7 @@ describe('buildLucideSvg', () => {
   it('should create the correct svg element', () => {
     const HouseSVG = buildLucideSvg(House);
 
-    const svg = getOriginalSvg('house', undefined, true);
+    const svg = getOriginalSvg('house', ['home']);
 
     expect(removeKeys(HouseSVG)).toBe(svg);
   });

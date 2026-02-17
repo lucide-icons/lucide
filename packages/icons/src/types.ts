@@ -13,6 +13,7 @@ export type LucideIconNode =
 export type LucideIcon = {
   name: string;
   node: LucideIconNode[];
+  aliases?: string[];
 } & ({ size: number } | { width: number; height: number });
 
 /**
