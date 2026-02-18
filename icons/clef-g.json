@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "tags": [
+    "sol",
+    "music",
+    "note",
+    "key",
+    "treble",
+    "staff",
+    "pitch",
+    "violin",
+    "solfege",
+    "major",
+    "scale"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}

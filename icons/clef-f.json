@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "tags": [
+    "fa",
+    "music",
+    "note",
+    "key",
+    "baritone",
+    "staff",
+    "pitch",
+    "bass",
+    "subbass",
+    "major",
+    "scale"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
