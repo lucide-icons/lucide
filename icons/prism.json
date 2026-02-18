@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Muhammad-Aqib-Bashir",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "optics",
+    "focus",
+    "light",
+    "refraction",
+    "physics",
+    "science",
+    "shape",
+    "triangle",
+    "geometry"
+  ],
+  "categories": [
+    "science",
+    "tools",
+    "shapes"
+  ]
+}
