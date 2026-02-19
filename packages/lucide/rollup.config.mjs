@@ -60,6 +60,7 @@ const configs = bundles
         format,
         sourcemap: true,
         preserveModules,
+        preserveModulesRoot: 'src',
       },
     })),
   )
