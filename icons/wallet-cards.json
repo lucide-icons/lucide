@@ -1,9 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "tallneil",
+    "karsa-mistmere"
   ],
   "tags": [
+    "wallet",
+    "cards",
+    "banking",
+    "cash",
+    "debit",
+    "transport",
     "money",
     "finance",
     "pocket",
