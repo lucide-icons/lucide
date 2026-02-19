@@ -39,12 +39,12 @@ const configs = bundles
         // This is for lucide plugin to replace an argument in createIcons so it is easier to use with UMD.
         ...(format === 'umd'
           ? [
-              replace({
-                'icons = {}': 'icons = iconAndAliases',
-                delimiters: ['', ''],
-                preventAssignment: false,
-              }),
-            ]
+            replace({
+              'icons = {}': 'icons = iconAndAliases',
+              delimiters: ['', ''],
+              preventAssignment: false,
+            }),
+          ]
           : []),
         ...plugins({ pkg, minify }),
       ],
@@ -52,14 +52,15 @@ const configs = bundles
         name: outputFileName,
         ...(preserveModules
           ? {
-              dir: `${outputDir}/${format}`,
-            }
+            dir: `${outputDir}/${format}`,
+          }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-            }),
+            file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+          }),
         format,
         sourcemap: true,
         preserveModules,
+        preserveModulesRoot: 'src',
       },
     })),
   )
