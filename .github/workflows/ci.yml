@@ -23,8 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
-    steps:
+      SKIP: ${{ steps.check-tag-date.outputs.SKIP }}
 
+    steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
@@ -42,26 +43,43 @@ jobs:
         id: latest-tag
         run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
 
+      - name: Check if latest tag was created today
+        id: check-tag-date
+        run: |
+          LATEST_TAG="${{ steps.latest-tag.outputs.LATEST_TAG }}"
+          TAG_DATE=$(git log -1 --format=%cs "$LATEST_TAG")
+          TODAY=$(date +%Y-%m-%d)
+          if [ "$TAG_DATE" == "$TODAY" ]; then
+            echo "SKIP=true" >> $GITHUB_OUTPUT
+            echo "::warning::Latest tag $LATEST_TAG was created today ($TAG_DATE). Skipping release."
+          else
+            echo "SKIP=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Log latest tag
         run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
 
       - name: Check if we can patch
+        if: steps.check-tag-date.outputs.SKIP != 'true'
         run: pnpm semver $LATEST_TAG -i minor
         env:
           LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Create new version
+        if: steps.check-tag-date.outputs.SKIP != 'true'
         id: new-version
         run: echo "NEW_VERSION=$(pnpm semver $LATEST_TAG -i minor)" >> $GITHUB_OUTPUT
         env:
           LATEST_TAG: ${{ steps.latest-tag.outputs.LATEST_TAG }}
 
       - name: Check output
+        if: steps.check-tag-date.outputs.SKIP != 'true'
         run: |
           echo '${{ steps.new-version.outputs.NEW_VERSION }}'
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Create Release
+        if: steps.check-tag-date.outputs.SKIP != 'true'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
@@ -69,7 +87,7 @@ jobs:
           generate_release_notes: true
 
   start-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lucide-icons/lucide' && needs.create-release.outputs.SKIP != 'true'
     needs: create-release
     uses: './.github/workflows/release.yml'
     secrets: inherit
