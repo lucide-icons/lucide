@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "flight",
+    "aviation",
+    "plane"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
