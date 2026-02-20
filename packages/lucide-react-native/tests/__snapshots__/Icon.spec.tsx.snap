@@ -2,6 +2,8 @@
 
 exports[`Using Icon Component > should render icon and match snapshot 1`] = `
 <svg
+  class="test-class"
+  data-testid="test-id"
   fill="none"
   height="48"
   stroke="red"
