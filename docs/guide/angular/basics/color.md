@@ -8,26 +8,20 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-::: code-group
-
-```html [app.html]
-<svg lucideSmile color="#3e9392"></svg>
-```
-
-```ts [app.ts]
+```angular-ts
 import { Component } from '@angular/core';
 import { LucideSmile } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.html',
-  imports: [LucideSmile],
+  selector: "smile",
+  imports: [ LucideSmile ],
+  template: `
+    <svg lucideSmile color="#3e9392"></svg>
+  `,
 })
 
-export class App { }
+export class SmileComponent { }
 ```
-
-:::
 
 ## Using parent elements text color value
 
@@ -35,26 +29,20 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-::: code-group
-
-```html [app.html]
-<button style="color:#fff">
-  <svg lucideThumbsUp></svg>
-  Like
-</button>
-```
-
-```ts [app.ts]
+```angular-ts
 import { Component } from '@angular/core';
 import { LucideThumbsUp } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.html',
-  imports: [LucideThumbsUp],
+  selector: "like-button",
+  imports: [ LucideThumbsUp ],
+  template: `
+    <button style="color:#fff">
+      <svg lucideThumbsUp></svg>
+      Like
+    </button>
+  `,
 })
 
-export class App { }
+export class LikeButtonComponent { }
 ```
-
-:::

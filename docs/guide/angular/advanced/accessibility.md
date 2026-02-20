@@ -17,14 +17,18 @@ This is done because most of the time icons are used for decorative purposes onl
 If you need to make an icon accessible, you can do so by passing a `title` element as a child or passing the `aria-label` prop to the icon component.
 This will remove the `aria-hidden` attribute and make the icon accessible.
 
-```tsx
-<House>
+```angular-html
+<svg lucideHouse>
   <title>This is my house</title>
-</House>
+</svg>
 
 // or
 
-<House aria-label="This is my house" />
+<svg lucideHouse title="This is my house"></svg>
+
+// or
+
+<svg lucideHouse> aria-label="This is my house" />
 ```
 
 We recommend to describe the icon in a way that makes sense for the user, or the action it represents and that makes sense in the context of your application.
@@ -33,9 +37,9 @@ We recommend to describe the icon in a way that makes sense for the user, or the
 
 When using icon buttons, you should not provide an accessible label on the icon itself, but rather on the button.
 
-```tsx
+```angular-html
 <button aria-label="Go to home">
-  <House />
+  <svg lucideHouse></svg>
 </button>
 ```
 

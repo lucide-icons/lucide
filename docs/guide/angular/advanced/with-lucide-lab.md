@@ -2,20 +2,28 @@
 
 [Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
-They can be used by using the `Icon` component.
-All props like regular lucide icons can be passed to adjust the icon appearance.
+While they aren't provided as standalone components, they can be still be passed to the `LucideIcon` component the same way as official icons:
 
-## Using the `Icon` component
+```html
+<!-- Directly as LucideIconData: -->
+<svg [lucideIcon]="CoconutIcon"></svg>
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+<!-- As a provided icon by name: -->
+<svg lucideIcon="coconut"></svg>
+```
 
-```vue
-<script setup>
-import { Icon } from '@lucide/vue';
-import { baseball } from '@lucide/lab';
-</script>
+```ts{2,6-7,11-12}
+import { provideLucideIcons } from '@lucide/angular';
+import { coconut } from '@lucide/lab';
 
-<template>
-  <Icon :iconNode="baseball" />
-</template>
+@Component({
+  templateUrl: './foobar.html',
+  // For using by name via provider:
+  providers: [provideLucideIcons({ coconut })],
+  imports: [LucideIcon]
+})
+export class Foobar {
+  // For passing directly as LucideIconData:
+  readonly CoconutIcon = coconut;
+}
 ```

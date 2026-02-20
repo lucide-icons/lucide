@@ -7,26 +7,20 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
-::: code-group
-
-```html [app.html]
-<svg lucideFolderLock strokeWidth="1"></svg>
-```
-
-```ts [app.ts]
+```angular-ts
 import { Component } from '@angular/core';
 import { LucideFolderLock } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-  imports: [LucideFolderLock],
+  selector: "locked-folder",
+  imports: [ LucideFolderLock ],
+  template: `
+    <svg lucideFolderLock strokeWidth="1"></svg>
+  `,
 })
 
-export class App { }
+export class LockedFolderComponent { }
 ```
-:::
 
 ## Absolute stroke width
 
@@ -42,27 +36,21 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
-::: code-group
-
-```html [app.html]
-<svg
-  lucideRollerCoaster
-  size="96"
-  absoluteStrokeWidth
-/>
-```
-
-```ts [app.ts]
+```angular-ts
 import { Component } from '@angular/core';
-import { LucideFolderLock } from '@lucide/angular';
+import { LucideRollerCoaster } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-  imports: [LucideFolderLock],
+  selector: "roller-coaster",
+  imports: [ LucideRollerCoaster ],
+  template: `
+    <svg
+      lucideRollerCoaster
+      size="96"
+      absoluteStrokeWidth
+    ></svg>
+  `,
 })
 
-export class App { }
+export class RollerCoasterComponent { }
 ```
-:::

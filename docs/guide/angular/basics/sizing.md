@@ -4,26 +4,20 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 
 ## Adjusting the icon size using the `size` prop
 
-::: code-group
-
-```html [app.html]
-<svg lucideLandmark size="64"></svg>
-```
-
-```ts [app.ts]
+```angular-ts
 import { Component } from '@angular/core';
 import { LucideLandmark } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.html',
-  imports: [LucideLandmark],
+  selector: "landmark",
+  imports: [ LucideLandmark ],
+  template: `
+    <svg lucideLandmark size="64"></svg>
+  `,
 })
 
-export class App { }
+export class LandmarkComponent { }
 ```
-
-:::
 
 ## Adjusting the icon size via CSS
 
@@ -38,11 +32,11 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 }
 ```
 
-```html [app.html]
+```angular-html [app.html]
 <svg lucideBeer class="my-beer-icon"></svg>
 ```
 
-```ts [app.ts]
+```angular-ts [app.ts]
 import { Component } from '@angular/core';
 import { LucideBeer } from '@lucide/angular';
 
@@ -81,14 +75,14 @@ It is possible to resize icons based on font size. This can be achieved using th
 }
 ```
 
-```html [app.html]
+```angular-html [app.html]
 <div className="text-wrapper">
   <svg lucideStar class="my-icon"></svg>
   <div>Yes</div>
 </div>
 ```
 
-```ts [app.ts]
+```angular-ts [app.ts]
 import { Component } from '@angular/core';
 import { LucideStar } from '@lucide/angular';
 
@@ -109,6 +103,6 @@ export class App { }
 
 ```html [app.html]
 <div>
-  <svg lucidePartyPopper class="size-24" />
+  <svg lucidePartyPopper class="size-24"></svg>
 </div>
 ```
