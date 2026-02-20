@@ -1,17 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "mittalyashu",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "marvfash"
   ],
   "tags": [
-    "reflect",
-    "mirror",
-    "alignment",
-    "dashed"
+    "device",
+    "scroll",
+    "click"
   ],
   "categories": [
-    "design",
-    "photography"
+    "devices"
   ]
 }
