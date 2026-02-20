@@ -36,11 +36,11 @@ export const angularSidebar = [
   {
     text: 'Advanced',
     items: [
-      {
-        text: 'Typescript',
-        link: '/guide/angular/advanced/typescript',
-        desc: 'All exported types and how to use them',
-      },
+      // {
+      //   text: 'Typescript',
+      //   link: '/guide/angular/advanced/typescript',
+      //   desc: 'All exported types and how to use them',
+      // },
       {
         text: 'Accessibility',
         link: '/guide/angular/advanced/accessibility',
@@ -66,11 +66,11 @@ export const angularSidebar = [
         link: '/guide/angular/advanced/filled-icons',
         desc: 'Using filled icons in @lucide/angular',
       },
-      {
-        text: 'Combining icons',
-        link: '/guide/angular/advanced/combining-icons',
-        desc: 'Combine multiple icons into one',
-      },
+      // {
+      //   text: 'Combining icons',
+      //   link: '/guide/angular/advanced/combining-icons',
+      //   desc: 'Combine multiple icons into one',
+      // },
       {
         text: 'Dynamic icon component',
         link: '/guide/angular/advanced/dynamic-icon-component.md',

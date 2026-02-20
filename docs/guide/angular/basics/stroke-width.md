@@ -1,7 +1,3 @@
-<script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
-</script>
-
 # Stroke width
 
 All icons are designed with SVG elements using strokes.
@@ -11,16 +7,24 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
-::: sandpack {template=vue showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: code-group
 
-```vue src/App.vue [active]
-<script setup>
-import { FolderLock } from "lucide-vue-next";
-</script>
+```html [app.html]
+<svg lucideFolderLock strokeWidth="1"></svg>
+```
 
-<template>
-  <FolderLock :strokeWidth="1" />
-</template>
+```ts [app.ts]
+import { Component } from '@angular/core';
+import { LucideFolderLock } from '@lucide/angular';
+
+@Component({
+  selector: 'app',
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+  imports: [LucideFolderLock],
+})
+
+export class App { }
 ```
 :::
 
@@ -38,19 +42,27 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
-::: sandpack {template=vue showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: code-group
 
-```vue src/App.vue [active]
-<script setup>
-import { RollerCoaster } from "lucide-vue-next";
-</script>
+```html [app.html]
+<svg
+  lucideRollerCoaster
+  size="96"
+  absoluteStrokeWidth
+/>
+```
 
-<template>
-  <RollerCoaster
-    :size="96"
-    absoluteStrokeWidth
-  />
-</template>
+```ts [app.ts]
+import { Component } from '@angular/core';
+import { LucideFolderLock } from '@lucide/angular';
 
+@Component({
+  selector: 'app',
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+  imports: [LucideFolderLock],
+})
+
+export class App { }
 ```
 :::

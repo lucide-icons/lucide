@@ -6,8 +6,8 @@ import { angularSidebar } from '../../.vitepress/sidebar/angular'
 
 # Getting started
 
-This guide will help you get started with Lucide in your Vue project.
-Make sure you have a Vue environment set up. If you don't have one yet, you can create a new Vue project using Vite, or any other Vue boilerplate of your choice.
+This guide will help you get started with Lucide in your Angular project.
+Make sure you have a Angular environment set up. If you don't have one yet, you can create a new Angular project using Vite, or any other Angular boilerplate of your choice.
 
 ## Prerequisites
 
@@ -50,11 +50,11 @@ import { Component } from '@angular/core';
 import { LucideFileText } from '@lucide/angular';
 
 @Component({
-  selector: 'app-foobar',
-  templateUrl: './foobar.html',
+  selector: 'app',
+  templateUrl: './app.html',
   imports: [LucideFileText],
 })
-export class Foobar { }
+export class App { }
 ```
 
 ```html

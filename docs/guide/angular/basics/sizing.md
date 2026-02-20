@@ -1,51 +1,59 @@
-<script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
-</script>
-
 # Sizing
 
 By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
 
 ## Adjusting the icon size using the `size` prop
 
-::: sandpack {template=vue showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: code-group
 
-```vue src/App.vue [active]
-<script setup>
-import { Landmark } from 'lucide-vue-next'
-</script>
+```html [app.html]
+<svg lucideLandmark size="64"></svg>
+```
 
-<template>
-  <Landmark :size="64" />
-</template>
+```ts [app.ts]
+import { Component } from '@angular/core';
+import { LucideLandmark } from '@lucide/angular';
+
+@Component({
+  selector: 'app',
+  templateUrl: './app.html',
+  imports: [LucideLandmark],
+})
+
+export class App { }
 ```
 
 :::
-
 
 ## Adjusting the icon size via CSS
 
 The CSS properties `width` and `height` can be used to adjust the icon size.
 
-::: sandpack {template=vue editorHeight=300 dependencies="lucide-vue-next"}
+::: code-group
 
-```css src/icon.css [active]
+```css [app.css]
 .my-beer-icon {
-  /* Change this! */
   width: 64px;
   height: 64px;
 }
 ```
 
-```vue src/App.vue
-<script setup>
-import { Beer } from "lucide-vue-next";
-import './icon.css'
-</script>
+```html [app.html]
+<svg lucideBeer class="my-beer-icon"></svg>
+```
 
-<template>
-  <Beer class="my-beer-icon" />
-</template>
+```ts [app.ts]
+import { Component } from '@angular/core';
+import { LucideBeer } from '@lucide/angular';
+
+@Component({
+  selector: 'app',
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+  imports: [LucideBeer],
+})
+
+export class App { }
 ```
 :::
 
@@ -53,9 +61,9 @@ import './icon.css'
 
 It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
 
-::: sandpack {template=vue editorHeight=300 dependencies="lucide-vue-next"}
+::: code-group
 
-```css src/icon.css [active]
+```css [app.css]
 .my-icon {
   /* Icon size will relative to font-size of .text-wrapper */
   width: 1em;
@@ -73,19 +81,25 @@ It is possible to resize icons based on font size. This can be achieved using th
 }
 ```
 
-```vue src/App.vue
-<script setup>
-import { Star } from "lucide-vue-next";
-import "./icon.css";
-</script>
+```html [app.html]
+<div className="text-wrapper">
+  <svg lucideStar class="my-icon"></svg>
+  <div>Yes</div>
+</div>
+```
 
-<template>
-  <div className="text-wrapper">
-    <Star class="my-icon" />
-    <div>Yes</div>
-  </div>
-</template>
+```ts [app.ts]
+import { Component } from '@angular/core';
+import { LucideStar } from '@lucide/angular';
 
+@Component({
+  selector: 'app',
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+  imports: [LucideStar],
+})
+
+export class App { }
 ```
 :::
 
@@ -93,17 +107,8 @@ import "./icon.css";
 
 `size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
 
-::: sandpack {template=vue editorHeight=300 editorWidthPercentage=60 dependencies="lucide-vue-next" externalResources="https://cdn.tailwindcss.com"}
-
-```vue src/App.vue [active]
-<script setup>
-import { PartyPopper } from "lucide-vue-next";
-</script>
-
-<template>
-  <div>
-    <PartyPopper class="size-24" />
-  </div>
-</template>
+```html [app.html]
+<div>
+  <svg lucidePartyPopper class="size-24" />
+</div>
 ```
-:::
