@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "sound",
+    "notes",
+    "semiquavers"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "music-4",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
