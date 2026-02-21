@@ -1,3 +1,8 @@
+---
+title: Color - Angular
+description: Learn how to adjust the color of icons in your Angular application using the `color` prop or by using parent elements text color value.
+---
+
 # Color
 
 By default, all icons have the color value: `currentColor`. This keyword uses the element's computed text `color` value to represent the icon color.

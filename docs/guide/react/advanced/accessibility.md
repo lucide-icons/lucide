@@ -1,3 +1,7 @@
+---
+title: Accessibility - React
+description: Best practices for accessible icons in your React application.
+---
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>

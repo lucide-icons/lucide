@@ -1,3 +1,8 @@
+---
+title: Aliased Names - Solid
+description: Learn about the different import name styles available for Lucide icons in your Solid project and how to choose the one that best fits your needs.
+---
+
 # Aliased Names
 
 Icons can have multiple names for the same icon. This is because we choose to rename some icons to make them more consistent with the rest of the icon set, or the name was not generic. For example, the `edit-2` icon is renamed to `pen` to make the name more generic, since it is just a pen icon.

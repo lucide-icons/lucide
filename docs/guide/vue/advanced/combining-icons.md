@@ -1,3 +1,7 @@
+---
+title: Combining icons - Vue
+description: Learn how to combine multiple icons into a single icon using SVG in SVG in your Vue application.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>

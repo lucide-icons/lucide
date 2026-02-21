@@ -1,3 +1,7 @@
+---
+title: Typescript - React
+description: Learn about the different types exported by the `lucide-react` package and how to use them in your React application.
+---
 # TypeScript Support
 
 List of exported types from the `lucide-react` package.

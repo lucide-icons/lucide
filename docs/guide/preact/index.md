@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for Preact
+description: Lucide provides a Preact icon component library that makes it easy to integrate icons into your Preact applications. Each icon is available as a standalone Preact component, allowing for seamless integration and customization.
 nextPage:
   - getting-started
 ---

@@ -1,11 +1,6 @@
 ---
-head:
-  - - link
-    - rel: canonical
-      href: https://lucide.dev/guide/react/advanced/accessibility
-  - - meta
-    - name: description
-      content: Best practices for accessible icons in your application.
+title: Accessibility - Svelte
+description: Best practices for accessible icons in your Svelte application.
 ---
 
 <script setup>

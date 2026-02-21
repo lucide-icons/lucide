@@ -1,3 +1,7 @@
+---
+title: Typescript - Svelte
+description: Learn about the different types exported by the `@lucide/svelte` package and how to use them in your Svelte application.
+---
 # TypeScript Support
 
 List of exported types from the `@lucide/svelte` package.

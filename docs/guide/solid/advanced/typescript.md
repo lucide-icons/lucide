@@ -1,3 +1,7 @@
+---
+title: Typescript - Solid
+description: Learn about the different types exported by the `lucide-solid` package and how to use them in your Solid application.
+---
 # TypeScript Support
 
 List of exported types from the `lucide-solid` package.

@@ -1,3 +1,8 @@
+---
+title: Accessibility - Preact
+description: Best practices for accessible icons in your Preact application.
+---
+
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>

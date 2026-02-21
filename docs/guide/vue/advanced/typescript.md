@@ -1,3 +1,7 @@
+---
+title: Typescript - Vue
+description: Learn about the different types exported by the `@lucide/vue` package and how to use them in your Vue application.
+---
 # TypeScript Support
 
 List of exported types from the `@lucide/vue` package.

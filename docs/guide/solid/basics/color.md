@@ -1,3 +1,7 @@
+---
+title: Color - Solid
+description: Learn how to adjust the color of icons in your Solid application using the `color` prop or by using parent elements text color value.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

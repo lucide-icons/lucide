@@ -1,3 +1,7 @@
+---
+title: Dynamic Icon Component - React
+description: Learn how to use the DynamicIcon component to load icons dynamically by name in your React application, and understand the caveats of using this approach.
+---
 # Dynamic Icon Component
 
 It is possible to use one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. See [Caveats](#caveats).

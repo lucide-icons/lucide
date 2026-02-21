@@ -1,3 +1,7 @@
+---
+title: Global Styling - Solid
+description: Learn how to style all Lucide icons globally in your Solid application using CSS or the Lucide context provider.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

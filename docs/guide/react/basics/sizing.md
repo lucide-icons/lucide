@@ -1,3 +1,7 @@
+---
+title: Sizing - React
+description: Learn how to adjust the size of icons in your React application using the `size` prop or by using CSS.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

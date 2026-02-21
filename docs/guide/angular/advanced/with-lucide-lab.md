@@ -1,3 +1,8 @@
+---
+title: Lucide Lab - Angular
+description: Learn how to use icons from Lucide Lab in your Angular application.
+---
+
 # With Lucide lab or custom icons
 
 [Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.

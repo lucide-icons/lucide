@@ -1,3 +1,7 @@
+---
+title: Global Styling - React Native
+description: Learn how to style all Lucide icons globally in your React Native application using CSS or the Lucide context provider.
+---
 # Global Styling
 
 Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).

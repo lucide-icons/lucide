@@ -1,3 +1,7 @@
+---
+title: Sizing - Svelte
+description: Learn how to adjust the size of icons in your Svelte application using the `size` prop or by using CSS.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue'
 </script>

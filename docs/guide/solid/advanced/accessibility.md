@@ -1,3 +1,7 @@
+---
+title: Accessibility - Solid
+description: Best practices for accessible icons in your Solid application.
+---
 <script setup>
 import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 </script>

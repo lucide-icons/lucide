@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for Angular
+description: A standalone, signal-based, zoneless implementation that makes it easy to integrate icons into your Angular projects.
 nextPage:
   - getting-started
 ---

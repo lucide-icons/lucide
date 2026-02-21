@@ -1,3 +1,7 @@
+---
+title: Sizing - Preact
+description: Learn how to adjust the size of icons in your Preact application using the `size` prop or by using CSS.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>

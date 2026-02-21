@@ -1,3 +1,7 @@
+---
+title: Combining icons - Svelte
+description: Learn how to combine multiple icons into a single icon using SVG in SVG in your Svelte application.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>

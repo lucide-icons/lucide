@@ -1,3 +1,7 @@
+---
+title: Stroke width - React Native
+description: Learn how to adjust the stroke width of icons in your React Native application using the `strokeWidth` prop or adjust the strokeWidth appearance using the `absoluteStrokeWidth` prop.
+---
 # Stroke width
 
 All icons are designed with SVG elements using strokes.

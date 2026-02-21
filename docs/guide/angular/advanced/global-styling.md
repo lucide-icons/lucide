@@ -1,3 +1,8 @@
+---
+title: Global Styling - Angular
+description: Learn how to style all icons globally in your Angular application using CSS or the Lucide context provider.
+---
+
 # Global Styling
 
 Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).

@@ -1,3 +1,7 @@
+---
+title: Getting started - Angular
+description: This guide will help you get started with Lucide in your Angular project.
+---
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'

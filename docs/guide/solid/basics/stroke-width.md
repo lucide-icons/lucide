@@ -1,3 +1,7 @@
+---
+title: Stroke width - Solid
+description: Learn how to adjust the stroke width of icons in your Solid application using the `strokeWidth` prop or adjust the strokeWidth appearance using the `absoluteStrokeWidth` prop.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

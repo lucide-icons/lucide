@@ -1,8 +1,6 @@
 ---
-head:
-  - - link
-    - rel: canonical
-      href: https://lucide.dev/guide/react/advanced/filled-icons
+title: Filled Icons - React Native
+description: Learn how to use fills with Lucide icons in your React Native application, and the limitations of using fills with Lucide icons.
 ---
 
 # Filled Icons

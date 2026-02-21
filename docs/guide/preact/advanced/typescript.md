@@ -1,4 +1,8 @@
-# TypeScript Support
+---
+title: Typescript - Preact
+description: Learn about the different types exported by the `lucide-preact` package and how to use them in your Preact application.
+---
+# TypeScript
 
 List of exported types from the `lucide-preact` package.
 These can be used to type your components when using Lucide icons in a TypeScript React project

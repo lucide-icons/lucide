@@ -1,8 +1,6 @@
 ---
-head:
-  - - meta
-    - name: description
-      content: Best practices for accessible icons in your application.
+title: Accessibility - Angular
+description: Best practices for accessible icons in your Angular application.
 ---
 
 <script setup>

@@ -1,3 +1,7 @@
+---
+title: Combining icons - Preact
+description: Learn how to combine multiple icons into a single icon using SVG in SVG in your Preact application.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>

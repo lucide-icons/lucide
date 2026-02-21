@@ -1,3 +1,7 @@
+---
+title: Stroke width - Preact
+description: Learn how to adjust the stroke width of icons in your Preact application using the `strokeWidth` prop or adjust the strokeWidth appearance using the `absoluteStrokeWidth` prop.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>

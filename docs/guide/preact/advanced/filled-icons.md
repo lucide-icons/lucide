@@ -1,10 +1,7 @@
 ---
-head:
-  - - link
-    - rel: canonical
-      href: https://lucide.dev/guide/vue/advanced/filled-icons
+title: Filled Icons - Preact
+description: Learn how to use fills with Lucide icons in your Preact application, and the limitations of using fills with Lucide icons.
 ---
-
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>

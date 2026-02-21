@@ -1,3 +1,7 @@
+---
+title: Global Styling - Vue
+description: Learn how to style all Lucide icons globally in your Vue application using CSS or the Lucide context provider.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>

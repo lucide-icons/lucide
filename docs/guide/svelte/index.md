@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for Svelte
+description: Lucide provides a Svelte icon component library that makes it easy to integrate icons into your Svelte applications. Each icon is available as a standalone Svelte component, allowing for seamless integration and customization.
 nextPage:
   - getting-started
 ---

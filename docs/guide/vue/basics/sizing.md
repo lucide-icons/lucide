@@ -1,3 +1,7 @@
+---
+title: Sizing - Vue
+description: Learn how to adjust the size of icons in your Vue application using the `size` prop or by using CSS.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>

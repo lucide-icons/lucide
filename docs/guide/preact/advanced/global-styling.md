@@ -1,3 +1,7 @@
+---
+title: Global Styling - Preact
+description: Learn how to style all Lucide icons globally in your Preact application using CSS or the Lucide context provider.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 </script>

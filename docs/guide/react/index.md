@@ -1,6 +1,6 @@
 ---
 title: Lucide for React
-description: Learn how to use Lucide icons in your React applications with our comprehensive guide.
+description: Lucide provides a React icon component library that makes it easy to integrate icons into your React applications. Each icon is available as a standalone React component, allowing for seamless integration and customization.
 nextPage:
   - getting-started
 ---

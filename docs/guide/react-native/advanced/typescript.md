@@ -1,3 +1,7 @@
+---
+title: Typescript - React Native
+description: Learn about the different types exported by the `lucide-react-native` package and how to use them in your React Native application.
+---
 # TypeScript Support
 
 List of exported types from the `lucide-react-native` package.

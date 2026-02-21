@@ -1,3 +1,7 @@
+---
+title: Filled Icons - Vue
+description: Learn how to use fills with Lucide icons in your Vue application, and the limitations of using fills with Lucide icons.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>

@@ -1,3 +1,7 @@
+---
+title: Combining icons - React
+description: Learn how to combine multiple icons into a single icon using SVG in SVG in your React application.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>

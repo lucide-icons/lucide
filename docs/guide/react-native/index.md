@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for React Native
+description: Lucide provides a React Native icon component library that makes it easy to integrate icons into your React Native applications. Each icon is available as a standalone React Native component, allowing for seamless integration and customization.
 nextPage:
   - getting-started
 ---

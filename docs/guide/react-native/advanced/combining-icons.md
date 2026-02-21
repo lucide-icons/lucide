@@ -1,10 +1,7 @@
-<!-- <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
-import sandpackTheme from '~/.vitepress/theme/sandpackTheme.json'
-import combineIconsExample from './examples/combining-icons/files.ts'
-import combineCustomExample from './examples/combining-icons-custom/files.ts'
-import combineNotificationExample from './examples/combining-icons-notification/files.ts'
-</script> -->
+---
+title: Combining icons - React Native
+description: Learn how to combine multiple icons into a single icon using SVG in SVG in your React Native application.
+---
 
 # Combining icons
 
@@ -137,6 +134,3 @@ const styles = StyleSheet.create({
 
 export default App;
 ```
-
-
-

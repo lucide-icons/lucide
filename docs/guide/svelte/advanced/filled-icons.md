@@ -1,3 +1,7 @@
+---
+title: Filled Icons - Svelte
+description: Learn how to use fills with Lucide icons in your Svelte application, and the limitations of using fills with Lucide icons.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>

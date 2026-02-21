@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for Vue
+description: Lucide provides a Vue icon component library that makes it easy to integrate icons into your Vue applications. Each icon is available as a standalone Vue component, allowing for seamless integration and customization.
 nextPage:
   - getting-started
 ---

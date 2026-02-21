@@ -1,5 +1,6 @@
 ---
-title: Overview
+title: Lucide for Solid
+description: Lucide provides a Solid icon component library that makes it easy to integrate icons into your Solid applications. Each icon is available as a standalone Solid component, allowing for seamless integration and customization.
 nextPage:
   - getting-started
 ---

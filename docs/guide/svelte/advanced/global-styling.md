@@ -1,3 +1,7 @@
+---
+title: Global Styling - Svelte
+description: Learn how to style all Lucide icons globally in your Svelte application using CSS or the Lucide context provider.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 </script>
@@ -11,7 +15,6 @@ We recommend using CSS for global styling, as it is the most straightforward way
 But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to use the Lucide context provider.
 
 ## Context Provider
-
 
 Lucide Svelte provides a context API called `setLucideProps` that allows you to set global default properties for all Lucide icons in your application.
 This is useful if you want all icons to share the same size, color, or stroke width by default.

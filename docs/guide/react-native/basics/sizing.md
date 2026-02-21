@@ -1,3 +1,7 @@
+---
+title: Sizing - React Native
+description: Learn how to adjust the size of icons in your React Native application using the `size` prop or by using CSS.
+---
 # Sizing
 
 By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.

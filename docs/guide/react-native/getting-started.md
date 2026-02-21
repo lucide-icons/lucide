@@ -1,3 +1,7 @@
+---
+title: Getting started - React Native
+description: This guide will help you get started with Lucide in your React Native project.
+---
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
@@ -6,8 +10,8 @@ import { reactNativeSidebar } from '../../.vitepress/sidebar/react-native'
 
 # Getting started
 
-This guide will help you get started with Lucide in your React project.
-Make sure you have a React environment set up. If you don't have one yet, you can create a new React project using Create React App, Vite, or any other React boilerplate of your choice.
+This guide will help you get started with Lucide in your React Native project.
+Make sure you have a React Native environment set up. If you don't have one yet, you can create a new React Native project using React Native CLI, Expo, or any other React Native boilerplate of your choice.
 
 ## Installation
 

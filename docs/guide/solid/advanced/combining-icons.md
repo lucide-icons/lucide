@@ -1,3 +1,7 @@
+---
+title: Combining icons - Solid
+description: Learn how to combine multiple icons into a single icon using SVG in SVG in your Solid application.
+---
 <!-- Not working yet -->
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'

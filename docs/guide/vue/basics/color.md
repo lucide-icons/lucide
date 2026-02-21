@@ -1,3 +1,7 @@
+---
+title: Color - Vue
+description: Learn how to adjust the color of icons in your Vue application using the `color` prop or by using parent elements text color value.
+---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
