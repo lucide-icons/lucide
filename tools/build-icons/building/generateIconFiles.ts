@@ -48,7 +48,11 @@ function generateIconFiles({
     ]);
 
     const getSvg = () => readSvg(`${iconName}.svg`, iconsDir);
-    const { deprecated = false, toBeRemovedInVersion = undefined } = iconMetaData[iconName];
+    const {
+      deprecated = false,
+      toBeRemovedInVersion = undefined,
+      aliases = [],
+    } = iconMetaData[iconName];
     const deprecationReason = deprecated
       ? deprecationReasonTemplate(iconMetaData[iconName]?.deprecationReason ?? '', {
           componentName,
@@ -64,6 +68,7 @@ function generateIconFiles({
       getSvg,
       deprecated,
       deprecationReason,
+      aliases,
     });
 
     const output = pretty
@@ -71,7 +76,7 @@ function generateIconFiles({
           singleQuote: true,
           trailingComma: 'all',
           printWidth: 100,
-          parser: 'babel',
+          parser: iconFileExtension.endsWith('.ts') ? 'babel-ts' : 'babel',
         })
       : elementTemplate;
 
