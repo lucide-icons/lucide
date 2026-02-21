@@ -6,6 +6,7 @@ import snackPlayer from './plugins/snackPlayer';
 import sandpackPlugin from './plugins/sandpack';
 import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
+import getStructuredData from './getStructuredData';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -176,8 +177,36 @@ export default defineConfig({
       },
     ],
   ],
+  async transformPageData(pageData) {
+    if (
+      pageData.relativePath.startsWith('icons/') &&
+      !pageData.relativePath.startsWith('icons/lab/') &&
+      pageData.params?.name
+    ) {
+      const iconName = pageData.params.name;
+      pageData.title = `${iconName} icon details`;
+
+      const taggedAs = pageData.params?.tags?.length
+        ? `Tagged as: ${pageData.params.tags.join(', ')}.`
+        : '';
+      const categorizedIn = pageData.params?.category?.length
+        ? `Categorized in: ${pageData.params.category.join(', ')}.`
+        : '';
+
+      pageData.description =
+        `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
+
+      const structuredData = await getStructuredData(iconName, pageData);
+
+      pageData.frontmatter.head ??= [];
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(structuredData),
+      ]);
+    }
+  },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: {
       light: '/logo.light.svg',
       dark: '/logo.dark.svg',

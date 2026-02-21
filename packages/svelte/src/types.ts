@@ -22,6 +22,7 @@ export interface LucideProps extends Attrs {
   absoluteStrokeWidth?: boolean;
   iconNode?: IconNode;
   children?: Snippet;
+  title?: string;
 }
 
 export type IconProps = LucideProps;
