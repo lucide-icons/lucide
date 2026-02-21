@@ -346,4 +346,4 @@ You can add accessibility attributes using aria-labels.
 <Check aria-label="Task completed" />
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

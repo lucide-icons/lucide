@@ -41,6 +41,11 @@
       "permanent": true
     },
     {
+      "source": "/guide/advanced/accessibility",
+      "destination": "/guide/accessibility",
+      "permanent": true
+    },
+    {
       "source": "/guide/advanced",
       "destination": "/guide/react/advanced",
       "permanent": true

@@ -159,4 +159,4 @@ const App = () => {
 };
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

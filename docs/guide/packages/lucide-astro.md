@@ -207,4 +207,4 @@ import { Check } from '@lucide/astro';
 <Check aria-label="Task completed" />
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

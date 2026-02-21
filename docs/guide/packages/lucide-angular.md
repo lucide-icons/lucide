@@ -178,4 +178,4 @@ You can add accessibility attributes using aria-labels.
 <lucide-icon name="check" aria-label="Task completed"></lucide-icon>
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).
