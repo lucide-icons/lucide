@@ -12,12 +12,6 @@ on:
         description: Version
         type: string
 
-  workflow_dispatch:
-    inputs:
-      version:
-        description: Version
-        required: true
-
 permissions:
   id-token: write # Required for OIDC
   contents: write
