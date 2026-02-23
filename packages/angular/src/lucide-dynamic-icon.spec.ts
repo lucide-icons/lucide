@@ -1,5 +1,6 @@
 import { Component, input, inputBinding, signal, WritableSignal } from '@angular/core';
-import { LucideIcon } from './lucide-icon';
+import { LucideDynamicIcon } from './lucide-dynamic-icon';
+import { provideLucideConfig } from './lucide-config';
 import { LucideIconData, LucideIconInput } from './types';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideLucideIcons } from './lucide-icons';
@@ -12,44 +13,39 @@ import { By } from '@angular/platform-browser';
       <rect x="1" y="1" width="22" height="22" />
     </svg>
   }`,
-  imports: [LucideIcon],
+  imports: [LucideDynamicIcon],
 })
 class TestHostComponent {
   readonly icon = input<LucideIconData>();
 }
 
-describe('LucideIcon', () => {
-  let component: LucideIcon;
-  let fixture: ComponentFixture<LucideIcon>;
+describe('LucideDynamicIcon', () => {
+  let component: LucideDynamicIcon;
+  let fixture: ComponentFixture<LucideDynamicIcon>;
   let icon: WritableSignal<LucideIconInput | null | undefined>;
-  let name: WritableSignal<string | undefined>;
   let title: WritableSignal<string | undefined>;
   let color: WritableSignal<string | undefined>;
   let size: WritableSignal<string | number | undefined>;
   let strokeWidth: WritableSignal<string | number | undefined>;
   let absoluteStrokeWidth: WritableSignal<boolean | undefined>;
   const getSvgAttribute = (attr: string) => fixture.nativeElement.getAttribute(attr);
-  const testIcon: LucideIconData = [['polyline', { points: '1 1 22 22' }]];
-  const testIcon2: LucideIconData = [
-    ['circle', { cx: 12, cy: 12, r: 8 }],
-    ['polyline', { points: '1 1 22 22' }],
-  ];
-  beforeEach(async () => {
-    TestBed.configureTestingModule({
-      providers: [provideLucideIcons({ demo: testIcon })],
-    });
-    icon = signal('demo');
-    name = signal(undefined);
-    title = signal(undefined);
-    color = signal(undefined);
-    size = signal(undefined);
-    strokeWidth = signal(undefined);
-    absoluteStrokeWidth = signal(undefined);
-    fixture = TestBed.createComponent(LucideIcon, {
+  const testIcon: LucideIconData = {
+    name: 'demo',
+    node: [['polyline', { points: '1 1 22 22' }]],
+  };
+  const testIcon2: LucideIconData = {
+    name: 'demo-other',
+    node: [
+      ['circle', { cx: 12, cy: 12, r: 8 }],
+      ['polyline', { points: '1 1 22 22' }],
+    ],
+    aliases: ['demo-2'],
+  };
+  function createComponent() {
+    return TestBed.createComponent(LucideDynamicIcon, {
       inferTagName: true,
       bindings: [
         inputBinding('lucideIcon', icon),
-        inputBinding('name', name),
         inputBinding('title', title),
         inputBinding('color', color),
         inputBinding('size', size),
@@ -57,6 +53,18 @@ describe('LucideIcon', () => {
         inputBinding('absoluteStrokeWidth', absoluteStrokeWidth),
       ],
     });
+  }
+  beforeEach(async () => {
+    TestBed.configureTestingModule({
+      providers: [provideLucideIcons(testIcon)],
+    });
+    icon = signal('demo');
+    title = signal(undefined);
+    color = signal(undefined);
+    size = signal(undefined);
+    strokeWidth = signal(undefined);
+    absoluteStrokeWidth = signal(undefined);
+    fixture = createComponent();
     component = fixture.componentInstance;
   });
 
@@ -82,30 +90,23 @@ describe('LucideIcon', () => {
   describe('iconInput', () => {
     it('should support LucideIconData input', () => {
       icon.set(testIcon);
-      name.set('custom-name');
       fixture.detectChanges();
-
-      expect(component['iconData']()).toBe(testIcon);
-      expect(component['iconName']()).toBe('custom-name');
+      expect(component['icon']()).toBe(testIcon);
       expect(fixture.nativeElement.innerHTML).toBe(
         '<!--container--><polyline points="1 1 22 22"></polyline>',
       );
     });
-    it('should support LucideIconComponentType input', () => {
+    it('should support LucideIcon input', () => {
       icon.set(LucideActivity);
       fixture.detectChanges();
-
-      expect(component['iconData']()).toBe(LucideActivity.iconData);
-      expect(component['iconName']()).toBe(LucideActivity.iconName);
+      expect(component['icon']()).toBe(LucideActivity.icon);
     });
     it('should support string icon name', () => {
       icon.set('demo');
       fixture.detectChanges();
-
-      expect(component['iconData']()).toBe(testIcon);
-      expect(component['iconName']()).toBe('demo');
+      expect(component['icon']()).toBe(testIcon);
     });
-    it('should throw error if no icon founds', () => {
+    it('should throw error if no icon found', () => {
       icon.set('invalid');
       expect(() => fixture.detectChanges()).toThrowError(`Unable to resolve icon 'invalid'`);
     });
@@ -116,12 +117,10 @@ describe('LucideIcon', () => {
       fixture.detectChanges();
       expect(getSvgAttribute('class')).toBe('lucide lucide-demo');
     });
-    it('should add class from name, even if icon has name', () => {
-      icon.set(LucideActivity);
-      name.set('custom-name');
+    it('should add backwards compatible classes from aliases', () => {
+      icon.set(testIcon2);
       fixture.detectChanges();
-
-      expect(getSvgAttribute('class')).toBe('lucide lucide-custom-name');
+      expect(getSvgAttribute('class')).toBe('lucide lucide-demo-other lucide-demo-2');
     });
     it('should add class icon if available', () => {
       icon.set(LucideActivity);
@@ -195,16 +194,21 @@ describe('LucideIcon', () => {
     it('should not adjust stroke width', () => {
       strokeWidth.set(2);
       size.set(12);
-      absoluteStrokeWidth.set(false);
+      absoluteStrokeWidth.set(true);
       fixture.detectChanges();
       expect(getSvgAttribute('stroke-width')).toBe('2');
     });
-    it('should adjust stroke width', () => {
-      strokeWidth.set(2);
-      size.set(12);
+    it('should not set vector-effect on children', () => {
+      absoluteStrokeWidth.set(false);
+      for (const child of fixture.nativeElement.children) {
+        expect(child.getAttribute('vector-effect')).toBeNull();
+      }
+    });
+    it('should set vector-effect on children', () => {
       absoluteStrokeWidth.set(true);
-      fixture.detectChanges();
-      expect(getSvgAttribute('stroke-width')).toBe('4');
+      for (const child of fixture.nativeElement.children) {
+        expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
+      }
     });
   });
 
@@ -238,6 +242,74 @@ describe('LucideIcon', () => {
       const rect = hostFixture.debugElement.query(By.css('rect')).nativeElement;
       expect(rect).toBeInstanceOf(SVGElement);
       expect(rect.outerHTML).toBe('<rect x="1" y="1" width="22" height="22"></rect>');
+    });
+  });
+
+  describe('LUCIDE_CONFIG', () => {
+    beforeEach(async () => {
+      TestBed.resetTestingModule();
+      TestBed.configureTestingModule({
+        providers: [
+          provideLucideIcons(testIcon),
+          provideLucideConfig({
+            color: 'red',
+            strokeWidth: 1,
+            size: 12,
+            absoluteStrokeWidth: true,
+          }),
+        ],
+      });
+      await TestBed.compileComponents();
+      fixture = createComponent();
+      component = fixture.componentInstance;
+    });
+    describe('color', () => {
+      it('should use color from config', () => {
+        fixture.detectChanges();
+        expect(getSvgAttribute('stroke')).toBe('red');
+      });
+      it('should use override color from config', () => {
+        color.set('pink');
+        fixture.detectChanges();
+        expect(getSvgAttribute('stroke')).toBe('pink');
+      });
+    });
+    describe('strokeWidth', () => {
+      it('should use stroke width from config', () => {
+        fixture.detectChanges();
+        expect(getSvgAttribute('stroke-width')).toBe('1');
+      });
+      it('should use override stroke width from config', () => {
+        strokeWidth.set(3);
+        fixture.detectChanges();
+        expect(getSvgAttribute('stroke-width')).toBe('3');
+      });
+    });
+    describe('size', () => {
+      it('should use size from config', () => {
+        fixture.detectChanges();
+        expect(getSvgAttribute('width')).toBe('12');
+        expect(getSvgAttribute('height')).toBe('12');
+      });
+      it('should use override size from config', () => {
+        size.set('48');
+        fixture.detectChanges();
+        expect(getSvgAttribute('width')).toBe('48');
+        expect(getSvgAttribute('height')).toBe('48');
+      });
+    });
+    describe('absoluteStrokeWidth', () => {
+      it('should use absoluteStrokeWidth from config', () => {
+        for (const child of fixture.nativeElement.children) {
+          expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
+        }
+      });
+      it('should override absoluteStrokeWidth', () => {
+        absoluteStrokeWidth.set(false);
+        for (const child of fixture.nativeElement.children) {
+          expect(child.getAttribute('vector-effect')).toBeNull();
+        }
+      });
     });
   });
 });

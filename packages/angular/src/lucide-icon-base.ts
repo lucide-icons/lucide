@@ -11,8 +11,6 @@ import {
 import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, Nullable } from './types';
 import defaultAttributes from './default-attributes';
-import { formatFixed } from './utils/format-fixed';
-import { toKebabCase } from './utils/to-kebab-case';
 
 function transformNumericStringInput(
   value: Nullable<string | number>,
@@ -41,13 +39,12 @@ function transformNumericStringInput(
     '[attr.width]': 'size().toString(10)',
     '[attr.height]': 'size().toString(10)',
     '[attr.stroke]': 'color()',
-    '[attr.stroke-width]': 'computedStrokeWidth()',
+    '[attr.stroke-width]': 'strokeWidth().toString(10)',
     '[attr.aria-hidden]': '!title()',
   },
 })
 export abstract class LucideIconBase {
-  protected abstract readonly iconName: Signal<Nullable<string>>;
-  protected abstract readonly iconData: Signal<Nullable<LucideIconData>>;
+  protected abstract readonly icon: Signal<Nullable<LucideIconData>>;
   protected readonly iconConfig = inject(LUCIDE_CONFIG);
   protected readonly elRef = inject(ElementRef);
   protected readonly renderer = inject(Renderer2);
@@ -88,33 +85,27 @@ export abstract class LucideIconBase {
       transformNumericStringInput(value, this.iconConfig.strokeWidth),
   });
   /**
-   * Whether stroke width should be scaled to appear uniform regardless of icon size.
-   *
-   * @remarks
-   * Use CSS to set on SVG paths instead:
-   * ```css
-   * .lucide * {
-   *   vector-effect: non-scaling-stroke;
-   * }
-   * ```
+   * If set to true, it adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
    */
   readonly absoluteStrokeWidth = input(this.iconConfig.absoluteStrokeWidth, {
     transform: (value: Nullable<boolean>) => value ?? this.iconConfig.absoluteStrokeWidth,
   });
-  protected readonly computedStrokeWidth = computed(() => {
-    const strokeWidth = this.strokeWidth();
-    const size = this.size();
-    return this.absoluteStrokeWidth()
-      ? formatFixed(strokeWidth / (size / 24))
-      : strokeWidth.toString(10);
-  });
 
   constructor() {
     effect((onCleanup) => {
-      const icon = this.iconData();
+      const icon = this.icon();
       if (icon) {
-        const elements = icon.map(([name, attrs]) => {
+        const absoluteStrokeWidth = this.absoluteStrokeWidth();
+        const { name, node, aliases = [] } = icon;
+        const classes = [name, ...aliases].map((item) => `lucide-${item}`);
+        for (const cssClass of classes) {
+          this.renderer.addClass(this.elRef.nativeElement, cssClass);
+        }
+        const elements = node.map(([name, attrs]) => {
           const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
+          if (absoluteStrokeWidth) {
+            this.renderer.setAttribute(element, 'vector-effect', 'non-scaling-stroke');
+          }
           Object.entries(attrs).forEach(([name, value]) =>
             this.renderer.setAttribute(
               element,
@@ -129,16 +120,9 @@ export abstract class LucideIconBase {
           elements.forEach((element) =>
             this.renderer.removeChild(this.elRef.nativeElement, element),
           );
-        });
-      }
-    });
-    effect((onCleanup) => {
-      const name = this.iconName();
-      if (name) {
-        const cssClass = `lucide-${toKebabCase(name)}`;
-        this.renderer.addClass(this.elRef.nativeElement, cssClass);
-        onCleanup(() => {
-          this.renderer.removeClass(this.elRef.nativeElement, cssClass);
+          for (const cssClass of classes) {
+            this.renderer.removeClass(this.elRef.nativeElement, cssClass);
+          }
         });
       }
     });

@@ -16,10 +16,10 @@ export default defineExportTemplate(async ({
   const angularComponentName = `Lucide${componentName}`;
   const selectors = [`svg[lucide${toPascalCase(iconName)}]`];
   const aliasComponentNames: string[] = [];
-  for (const alias of aliases) {
-    const aliasName = typeof alias === 'string' ? alias : alias.name;
-    const aliasComponentName = `Lucide${toPascalCase(aliasName)}`;
-    const aliasSelector = `svg[lucide${toPascalCase(aliasName)}]`;
+  const aliasNames = aliases.map(alias => typeof alias === 'string' ? alias : alias.name);
+  for (const alias of aliasNames) {
+    const aliasComponentName = `Lucide${toPascalCase(alias)}`;
+    const aliasSelector = `svg[lucide${toPascalCase(alias)}]`;
     if (!selectors.includes(aliasSelector)) {
       selectors.push(aliasSelector);
     }
@@ -49,10 +49,12 @@ import { Component, signal } from '@angular/core';
   standalone: true,
 })
 export class ${angularComponentName} extends LucideIconBase {
-  static readonly iconName = '${iconName}';
-  static readonly iconData: LucideIconData = ${JSON.stringify(children)};
-  protected override readonly iconName = signal(${angularComponentName}.iconName);
-  protected override readonly iconData = signal(${angularComponentName}.iconData);
+  static readonly icon: LucideIconData = ${JSON.stringify({
+    name: iconName,
+    node: children,
+    ...(aliasNames.length > 0 && { aliases: aliasNames }),
+  })};
+  protected override readonly icon = signal(${angularComponentName}.icon);
 }
 
 ${aliasComponentNames.map((aliasComponentName) => {
