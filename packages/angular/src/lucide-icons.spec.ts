@@ -6,9 +6,7 @@ import {
   provideLucideIcons,
 } from './lucide-icons';
 import { LucideIconData } from './types';
-import { LucideActivity } from './icons/activity';
 import { LucideCircle } from './icons/circle';
-import { LucideSquareX } from './icons/square-x';
 
 describe('Lucide icons', () => {
   describe('LUCIDE_ICONS', () => {

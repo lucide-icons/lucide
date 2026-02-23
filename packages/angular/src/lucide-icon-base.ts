@@ -1,13 +1,4 @@
-import {
-  Component,
-  computed,
-  effect,
-  ElementRef,
-  inject,
-  input,
-  Renderer2,
-  Signal,
-} from '@angular/core';
+import { Component, effect, ElementRef, inject, input, Renderer2, Signal } from '@angular/core';
 import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, Nullable } from './types';
 import defaultAttributes from './default-attributes';
