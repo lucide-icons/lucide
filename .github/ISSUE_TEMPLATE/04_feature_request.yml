@@ -13,19 +13,23 @@ body:
       description: Which Lucide project do you wish this feature were added to? You may select more than one.
       options:
         - label: lucide
-        - label: lucide-angular
+        - label: lucide-angular (old version)
+        - label: '@lucide/angular (new version)'
+        - label: '@lucide/astro'
         - label: lucide-flutter
         - label: lucide-preact
         - label: lucide-react
         - label: lucide-react-native
         - label: lucide-solid
-        - label: lucide-svelte
+        - label: lucide-static
+        - label: lucide-svelte (old version)
+        - label: '@lucide/svelte (new version)'
         - label: lucide-vue
         - label: lucide-vue-next
-        - label: lucide-astro
         - label: Figma plugin
         - label: all JS packages
         - label: site
+        - label: other/not relevant
     validations:
       required: true
   - type: textarea

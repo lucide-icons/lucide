@@ -8,3 +8,4 @@ node_modules
 docs/images
 docs/**/examples/
 packages/lucide-react/dynamicIconImports.js
+packages/angular/.angular

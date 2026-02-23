@@ -49,6 +49,8 @@
     "@types/yargs": "^17.0.33",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "@vitest/coverage-v8": "4.0.12",
+    "@vitest/ui": "4.0.12",
     "ajv-cli": "^5.0.0",
     "dotenv": "^17.0.0",
     "eslint": "^8.57.1",
@@ -60,6 +62,7 @@
     "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.31.0",
     "husky": "^8.0.3",
+    "jsdom": "^27.3.0",
     "lint-staged": "^13.3.0",
     "minimist": "^1.2.8",
     "openai": "^5.8.1",
@@ -70,6 +73,7 @@
     "simple-git": "^3.27.0",
     "svgo": "^3.3.2",
     "svgson": "^5.3.1",
+    "vitest": "4.0.12",
     "yargs": "^17.7.2",
     "zod": "^3.25.67"
   },
@@ -86,13 +90,13 @@
       }
     },
     "overrides": {
-      "cross-spawn": "7.0.5",
-      "form-data": "^4.0.4",
-      "fast-json-patch": "^3.1.1",
-      "webpack-dev-middleware": "^5.3.4",
-      "semver": "^7.7.3",
       "axios": "^1.12.0",
-      "vite-prerender-plugin": "0.5.12"
+      "cross-spawn": "7.0.5",
+      "fast-json-patch": "^3.1.1",
+      "form-data": "^4.0.4",
+      "semver": "^7.7.3",
+      "vite-prerender-plugin": "0.5.12",
+      "webpack-dev-middleware": "^5.3.4"
     }
   }
 }

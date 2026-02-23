@@ -13,7 +13,6 @@
     "test:watch": "vitest watch"
   },
   "devDependencies": {
-    "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "vite": "^7.2.4"
   }
 }

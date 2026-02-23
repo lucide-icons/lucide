@@ -69,39 +69,39 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           link: '/guide/packages/lucide',
         },
         {
-          text: 'Lucide React',
+          text: 'React',
           link: '/guide/packages/lucide-react',
         },
         {
-          text: 'Lucide Vue',
+          text: 'Vue',
           link: '/guide/packages/lucide-vue',
         },
         {
-          text: 'Lucide Svelte',
+          text: 'Svelte',
           link: '/guide/packages/lucide-svelte',
         },
         {
-          text: 'Lucide Solid',
+          text: 'Solid',
           link: '/guide/packages/lucide-solid',
         },
         {
-          text: 'Lucide React Native',
+          text: 'React Native',
           link: '/guide/packages/lucide-react-native',
         },
         {
-          text: 'Lucide Angular',
-          link: '/guide/packages/lucide-angular',
+          text: 'Angular',
+          link: '/guide/packages/angular',
         },
         {
-          text: 'Lucide Preact',
+          text: 'Preact',
           link: '/guide/packages/lucide-preact',
         },
         {
-          text: 'Lucide Astro',
+          text: 'Astro',
           link: '/guide/packages/lucide-astro',
         },
         {
-          text: 'Lucide Static',
+          text: 'Static',
           link: '/guide/packages/lucide-static',
         },
       ],

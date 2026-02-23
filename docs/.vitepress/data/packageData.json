@@ -87,8 +87,24 @@
       }
     ]
   },
-  "lucide-angular": {
+  "@lucide/angular": {
     "order": 6,
+    "icon": "angular",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/angular",
+        "href": "https://www.npmjs.com/package/@lucide/angular"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/angular",
+        "href": "https://www.npmjs.com/package/@lucide/angular"
+      }
+    ]
+  },
+  "lucide-angular": {
+    "order": 7,
     "icon": "angular",
     "shields": [
       {
@@ -104,7 +120,7 @@
     ]
   },
   "lucide-preact": {
-    "order": 7,
+    "order": 8,
     "icon": "preact",
     "shields": [
       {
@@ -122,7 +138,7 @@
   "@lucide/astro": {
     "docsAlias": "lucide-astro",
     "packageDirname": "astro",
-    "order": 8,
+    "order": 9,
     "icon": "astro",
     "iconDark": "astro-dark",
     "shields": [
@@ -139,7 +155,7 @@
     ]
   },
   "lucide-static": {
-    "order": 9,
+    "order": 10,
     "icon": "svg",
     "shields": [
       {
