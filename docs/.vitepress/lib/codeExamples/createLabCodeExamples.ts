@@ -105,12 +105,12 @@ import { $CamelCase } from '@lucide/lab';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ $CamelCase })
+    LucideAngularModule.pick({ $PascalCase: $CamelCase })
   ],
 })
 
 // app.component.html
-<lucide-icon name="$CamelCase"></lucide-icon>
+<lucide-icon name="$PascalCase"></lucide-icon>
 `,
     },
   ];
