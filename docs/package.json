@@ -20,7 +20,7 @@
     "dev": "npx nitropack dev",
     "prebuild:api": "npx nitropack prepare",
     "build:api": "npx nitropack build",
-    "build": "pnpm run /^prebuild:.*/ && pnpm run /^build:.*/ && pnpm postbuild:vercelJson",
+    "build": "pnpm run /^prebuild:.*/ && pnpm run build:api && pnpm run build:docs && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs"
   },
   "author": "Eric Fennis",
