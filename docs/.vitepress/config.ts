@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import sidebar from './sidebar';
 import getStructuredData from './getStructuredData';
+import nitro from '@analogjs/vite-plugin-nitro';
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -36,6 +37,13 @@ export default defineConfig({
         },
       ],
     },
+    plugins: [
+      nitro({
+        ssr: false,
+        entryServer: '.vitepress/api/main.ts',
+        sourceRoot: '.vitepress/api',
+      }),
+    ],
   },
   head: [
     [

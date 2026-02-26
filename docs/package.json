@@ -38,6 +38,7 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
+    "@analogjs/vite-plugin-nitro": "^2.3.0",
     "@floating-ui/vue": "^1.1.9",
     "@headlessui/vue": "^1.7.23",
     "@vueuse/components": "^14.0.0",
