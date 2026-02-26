@@ -25,7 +25,7 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
 
 const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
 
-const vercelConfig = fs.promises.readFile(vercelOutputJSON, 'utf-8');
+const vercelConfig = await fs.promises.readFile(vercelOutputJSON, 'utf-8');
 
 const vercelRouteConfig = JSON.parse(vercelConfig);
 
