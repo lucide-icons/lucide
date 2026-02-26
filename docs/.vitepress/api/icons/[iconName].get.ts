@@ -1,4 +1,4 @@
-// import { eventHandler, getQuery, setResponseHeader, createError } from 'h3';
+import { eventHandler, getQuery, setResponseHeader, createError } from 'h3';
 import iconNodes from '../../data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
 import { renderToString } from 'react-dom/server';

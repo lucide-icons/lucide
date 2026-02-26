@@ -389,15 +389,15 @@ const Handles = ({
   </g>
 );
 
-const SvgPreview = React.forwardRef<
-  SVGSVGElement,
-  {
-    height?: number;
-    width?: number;
-    src: string | ReturnType<typeof getPaths>;
-    showGrid?: boolean;
-  } & React.SVGProps<SVGSVGElement>
->(({ src, children, height = 24, width = 24, showGrid = false, ...props }, ref) => {
+interface SvgPreviewProps extends React.SVGProps<SVGSVGElement> {
+  height?: number;
+  width?: number;
+  src: string | ReturnType<typeof getPaths>;
+  showGrid?: boolean;
+  children?: React.ReactNode;
+}
+
+const SvgPreview = ({ src, children, height = 24, width = 24, showGrid = false, ...props }: SvgPreviewProps, ref) => {
   const subGridSize =
     Math.max(height, width) % 3 === 0
       ? Math.max(height, width) > 24
@@ -494,7 +494,7 @@ const SvgPreview = React.forwardRef<
       {children}
     </svg>
   );
-});
+};
 
 SvgPreview.displayName = 'SvgPreview';
 
