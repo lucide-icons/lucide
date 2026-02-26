@@ -40,7 +40,6 @@
   "dependencies": {
     "@floating-ui/vue": "^1.1.9",
     "@headlessui/vue": "^1.7.23",
-    "@resvg/resvg-wasm": "^2.6.2",
     "@vueuse/components": "^14.0.0",
     "@vueuse/core": "^14.0.0",
     "element-to-path": "^1.2.1",
