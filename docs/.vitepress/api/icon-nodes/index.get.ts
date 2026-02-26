@@ -1,4 +1,4 @@
-import { eventHandler, getQuery, setResponseHeader } from 'h3';
+// import { eventHandler, getQuery, setResponseHeader } from 'h3';
 import iconNodes from '../../data/iconNodes';
 import { IconNodeWithKeys } from '../../theme/types';
 

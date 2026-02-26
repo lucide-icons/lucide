@@ -1,4 +1,4 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
+// import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { createElement } from 'react';
 import Diff from '../../../lib/SvgPreview/Diff.tsx';

@@ -1,5 +1,5 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
-import { Resvg, initWasm } from '@resvg/resvg-wasm';
+// import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
+// import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import iconNodes from '../../../data/iconNodes';
 // import wasm from './loadWasm';
 import { createElement } from 'react';
