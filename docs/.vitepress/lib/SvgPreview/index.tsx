@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { PathProps, Path } from './types';
 import getPaths, { assert } from './utils';
 import { GapViolationHighlight } from './GapViolationHighlight.tsx';
