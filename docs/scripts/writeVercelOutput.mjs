@@ -22,24 +22,18 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
     };
   });
 
-const vercelRouteConfig = {
-  version: 3,
-  overrides: {},
-  cleanUrls: true,
-  routes: [
-    {
-      handle: 'filesystem',
-    },
-    {
-      src: '(?<url>/api/.*)',
-      dest: '/__nitro?url=$url',
-    },
-    ...iconAliasesRedirectRoutes,
-  ],
-};
-
-const output = JSON.stringify(vercelRouteConfig, null, 2);
 
 const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
+
+const vercelConfig = fs.promises.readFile(vercelOutputJSON, 'utf-8');
+
+const vercelRouteConfig = JSON.parse(vercelConfig);
+
+vercelRouteConfig.routes = [
+  ...iconAliasesRedirectRoutes,
+  ...vercelRouteConfig.routes,
+]
+
+const output = JSON.stringify(vercelRouteConfig, null, 2);
 
 await fs.promises.writeFile(vercelOutputJSON, output, 'utf-8');
