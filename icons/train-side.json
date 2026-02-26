@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "SlDo"
+  ],
+  "tags": [
+    "railway",
+    "high-speed",
+    "fast",
+    "line",
+    "track",
+    "train"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
