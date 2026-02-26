@@ -1,3 +1,7 @@
+---
+title: Version 1 🚀
+description: After years of work and dedication, Lucide version 1 has been officially released! This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
+---
 <!--@include: ../../docs/images/version-1.svg -->
 
 # Lucide version 1

@@ -7,6 +7,7 @@ import sandpackPlugin from './plugins/sandpack';
 import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
 import getStructuredData from './getStructuredData';
+import { createGeneralOGImage, createIconOGImage } from './createOGImage';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -178,6 +179,7 @@ export default defineConfig({
     ],
   ],
   async transformPageData(pageData) {
+    pageData.frontmatter.head ??= [];
     if (
       pageData.relativePath.startsWith('icons/') &&
       !pageData.relativePath.startsWith('icons/lab/') &&
@@ -198,12 +200,57 @@ export default defineConfig({
 
       const structuredData = await getStructuredData(iconName, pageData);
 
-      pageData.frontmatter.head ??= [];
+      const ogPath = await createIconOGImage(iconName, pageData.params?.tags || []);
+
+      if (ogPath) {
+        const content = `https://lucide.dev${ogPath}`;
+        pageData.frontmatter.head.push(
+          [
+            'meta',
+            {
+              property: 'og:image',
+              content,
+            },
+          ],
+          [
+            'meta',
+            {
+              property: 'twitter:image',
+              content,
+            },
+          ],
+        );
+      }
+
       pageData.frontmatter.head.push([
         'script',
         { type: 'application/ld+json' },
         JSON.stringify(structuredData),
       ]);
+    }
+
+    if (pageData.relativePath.startsWith('guide/')) {
+      const ogPath = await createGeneralOGImage(pageData);
+
+      if (ogPath) {
+        const content = `https://lucide.dev${ogPath}`;
+        pageData.frontmatter.head.push(
+          [
+            'meta',
+            {
+              property: 'og:image',
+              content,
+            },
+          ],
+          [
+            'meta',
+            {
+              property: 'twitter:image',
+              content,
+            },
+          ],
+        );
+      }
     }
   },
   themeConfig: {

@@ -1,3 +1,7 @@
+---
+title: Visual Studio Code
+description: Learn how to use Lucide icons in Visual Studio Code, including tips on turning off autocomplete, viewing JS docs and icon previews, and exploring third-party plugins for enhanced functionality.
+---
 # Visual Studio Code
 
 Visual Studio Code (VS Code) is a popular code editor that provides a wide range of features and extensions to enhance your development experience.

@@ -1,5 +1,6 @@
 ---
 title: Accessibility
+description: Learn how to make your icons accessible to all users, including those with disabilities.
 ---
 
 # Accessibility in dept

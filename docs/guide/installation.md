@@ -1,5 +1,6 @@
 ---
 title: Installation
+description: A guide on how to install Lucide, an open-source icon library, for various platforms and frameworks.
 ---
 
 # Installation
