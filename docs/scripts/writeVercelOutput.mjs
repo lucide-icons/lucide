@@ -22,27 +22,23 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
     };
   });
 
-
 const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
 
 const vercelConfig = await fs.promises.readFile(vercelOutputJSON, 'utf-8');
 
 const vercelRouteConfig = JSON.parse(vercelConfig);
 
-vercelRouteConfig.routes = [
-  ...iconAliasesRedirectRoutes,
-  ...vercelRouteConfig.routes,
-]
+vercelRouteConfig.routes = [...iconAliasesRedirectRoutes, ...vercelRouteConfig.routes];
 
 // Adjust the existing catch-all route to only catch API routes, so that we can add a new catch-all route for 404s
 const allCatchRoute = '/(.*)';
-const fallBackIndex = vercelRouteConfig.routes.findIndex(route => route.src === allCatchRoute);
+const fallBackIndex = vercelRouteConfig.routes.findIndex((route) => route.src === allCatchRoute);
 
-vercelRouteConfig.routes[fallBackIndex].src = '/api/(.*)'
+vercelRouteConfig.routes[fallBackIndex].src = '/api/(.*)';
 vercelRouteConfig.routes.push({
   src: allCatchRoute,
   dest: '/404.html',
-})
+});
 
 const output = JSON.stringify(vercelRouteConfig, null, 2);
 

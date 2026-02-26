@@ -26,10 +26,10 @@ export default eventHandler((event) => {
 
   const children = [];
 
-  const Icon = createLucideIcon(name, iconNodes[name])
+  const Icon = createLucideIcon(name, iconNodes[name]);
 
   const oldSrc = iconNodes[name]
-    ? renderToStaticMarkup(<Icon/>)
+    ? renderToStaticMarkup(<Icon />)
         .replaceAll('\n', '')
         .replace(/<svg[^>]*>|<\/svg>/g, '')
     : '';
@@ -46,6 +46,6 @@ export default eventHandler((event) => {
       width={width}
     >
       {children}
-    </Diff>
-  )
+    </Diff>,
+  );
 });

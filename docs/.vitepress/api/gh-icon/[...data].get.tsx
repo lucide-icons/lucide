@@ -34,7 +34,7 @@ export default eventHandler((event) => {
     const iconNode = iconNodes[backdropName];
 
     const LucideIcon = createLucideIcon(backdropName, iconNode);
-    const svg = renderToStaticMarkup(<LucideIcon/>);
+    const svg = renderToStaticMarkup(<LucideIcon />);
     const backdropString = svg.replaceAll('\n', '').replace(/<svg[^>]*>|<\/svg>/g, '');
 
     children.push(
@@ -42,7 +42,7 @@ export default eventHandler((event) => {
         backdropString={backdropString}
         src={src.replace(/<svg[^>]*>|<\/svg>/g, '')}
         color="#777"
-      />
+      />,
     );
   }
 
@@ -52,12 +52,11 @@ export default eventHandler((event) => {
   return renderToString(
     <SvgPreview
       src={src.replace(/<svg[^>]*>|<\/svg>/g, '')}
-
       showGrid
       height={height}
       width={width}
     >
       {children}
-    </SvgPreview>
-  )
+    </SvgPreview>,
+  );
 });
