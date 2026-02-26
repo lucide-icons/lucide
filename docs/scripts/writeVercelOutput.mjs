@@ -34,6 +34,16 @@ vercelRouteConfig.routes = [
   ...vercelRouteConfig.routes,
 ]
 
+// Adjust the existing catch-all route to only catch API routes, so that we can add a new catch-all route for 404s
+const allCatchRoute = '/(.*)';
+const fallBackIndex = vercelRouteConfig.routes.findIndex(route => route.handle === allCatchRoute);
+
+vercelRouteConfig.routes[fallBackIndex].src = '/api/(.*)'
+vercelRouteConfig.routes.push({
+  src: allCatchRoute,
+  dest: '/404.html',
+})
+
 const output = JSON.stringify(vercelRouteConfig, null, 2);
 
 await fs.promises.writeFile(vercelOutputJSON, output, 'utf-8');
