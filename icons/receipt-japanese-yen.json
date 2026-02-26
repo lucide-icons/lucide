@@ -1,9 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "it-is-not",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "tags": [
     "bill",
