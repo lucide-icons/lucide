@@ -91,22 +91,23 @@ Implementation of the lucide icon library for Svelte applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-svelte
+pnpm add @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add lucide-svelte
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install lucide-svelte
+npm install @lucide/svelte
 ```
 
 ```sh [bun]
-bun add lucide-svelte
+bun add @lucide/svelte
 ```
 
 :::
+> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
 
 For more details, see the [documentation](packages/lucide-svelte.md).
 
