@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "smncd",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "drive",
+    "port",
+    "device",
+    "technology",
+    "data",
+    "transfer",
+    "connectivity",
+    "hardware",
+    "usb",
+    "usb drive",
+    "flash drive",
+    "usb stick",
+    "storage",
+    "memory"
+  ],
+  "categories": [
+    "multimedia",
+    "devices",
+    "connectivity"
+  ]
+}
