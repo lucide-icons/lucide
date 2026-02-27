@@ -68,7 +68,7 @@
     "react-dom": "^18.0.0",
     "react-native": "^0.76.0",
     "react-native-svg": "^15.8.0",
-    "rollup": "^4.53.3",
+    "rollup": "^4.59.0",
     "rollup-plugin-dts": "^6.2.3",
     "typescript": "^5.8.3",
     "vite": "^7.2.4",
