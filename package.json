@@ -21,6 +21,7 @@
     "addjsons": "node ./scripts/addMissingIconJsonFiles.mts",
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
     "generate:changelog": "node ./scripts/generateChangelog.mts",
+    "generate:backers": "node scripts/updateOpenCollectiveBackers.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
     "suggest:tags": "node ./scripts/suggestTags.mts",

@@ -7,6 +7,12 @@ on:
     paths:
       - icons/**/*.svg
 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version
+        required: true
+
 permissions:
   id-token: write # Required for OIDC
   contents: write
@@ -17,11 +23,10 @@ concurrency:
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
+    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)') && github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
-
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
@@ -73,3 +78,10 @@ jobs:
     secrets: inherit
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
+
+  dispatch-release:
+    if: github.event_name == 'workflow_dispatch'
+    uses: './.github/workflows/release.yml'
+    secrets: inherit
+    with:
+      version: ${{ inputs.version }}
