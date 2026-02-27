@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "file-search-corner.svg",
+    "map-pin-house.svg"
+  ],
+  "tags": [
+    "map",
+    "search",
+    "pin"
+  ],
+  "categories": [
+    "search",
+    "map"
+  ]
+}
