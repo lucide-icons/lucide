@@ -1,4 +1,4 @@
-import { LucideBuildParams, LucideIcon, LucideIconNode } from './types';
+import { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
 
 const defaultAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -18,7 +18,7 @@ const defaultAttributes = {
  * @param icon The icon to build.
  * @param params Additional build parameters.
  */
-function buildLucideIconNode(icon: LucideIcon, params: LucideBuildParams = {}): LucideIconNode {
+function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {}): LucideIconNode {
   const viewBoxWidth = ('size' in icon ? icon.size : icon.width) ?? defaultAttributes.width;
   const viewBoxHeight = ('size' in icon ? icon.size : icon.height) ?? defaultAttributes.height;
   const aliasClassNames = icon.aliases?.map((alias) => `lucide-${alias}`) ?? [];

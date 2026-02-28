@@ -1,4 +1,4 @@
-import { LucideBuildParams, LucideIcon, LucideIconNode } from './types';
+import { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
 import buildLucideIconNode from './buildLucideIconNode';
 
 const buildDomElement = (
@@ -25,7 +25,7 @@ const buildDomElement = (
  */
 function buildLucideIconElement(
   document: Document,
-  icon: LucideIcon,
+  icon: LucideIconData,
   params: LucideBuildParams = {},
 ) {
   return buildDomElement(document, buildLucideIconNode(icon, params));

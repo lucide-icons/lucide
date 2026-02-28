@@ -1,4 +1,4 @@
-import { LucideBuildParams, LucideIcon } from './types';
+import { LucideBuildParams, LucideIconData } from './types';
 import buildLucideSvg from './buildLucideSvg';
 
 /**
@@ -7,7 +7,7 @@ import buildLucideSvg from './buildLucideSvg';
  * @param icon The icon to build.
  * @param params Additional build parameters.
  */
-function buildLucideDataUri(icon: LucideIcon, params: LucideBuildParams = {}) {
+function buildLucideDataUri(icon: LucideIconData, params: LucideBuildParams = {}) {
   const svg = buildLucideSvg(icon, params);
 
   // Browser

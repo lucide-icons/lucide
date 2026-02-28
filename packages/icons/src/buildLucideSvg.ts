@@ -1,4 +1,4 @@
-import { LucideBuildParams, LucideIcon, LucideIconNode } from './types';
+import { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
 import buildLucideIconNode from './buildLucideIconNode';
 
 const buildDomNode = ([tagName, attributes, children = []]: LucideIconNode): string =>
@@ -12,7 +12,7 @@ const buildDomNode = ([tagName, attributes, children = []]: LucideIconNode): str
  * @param icon The icon to build.
  * @param params Additional build parameters.
  */
-function buildLucideSvg(icon: LucideIcon, params: LucideBuildParams = {}) {
+function buildLucideSvg(icon: LucideIconData, params: LucideBuildParams = {}) {
   return buildDomNode(buildLucideIconNode(icon, params));
 }
 

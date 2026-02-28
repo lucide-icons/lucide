@@ -10,7 +10,7 @@ export type LucideIconNode =
 /**
  * A Lucide icon object that fully describes an icon to be displayed.
  */
-export type LucideIcon = {
+export type LucideIconData = {
   name: string;
   node: LucideIconNode[];
   aliases?: string[];
