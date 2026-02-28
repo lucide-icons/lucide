@@ -48,6 +48,7 @@ Common scopes: icons, docs, studio, site, dev
 ### Design <!-- ONLY for new icons -->
 <!-- All of these requirements must be fulfilled. -->
 - [ ] I've read and followed the [icon design guidelines](https://lucide.dev/guide/design/icon-design-guide)
+- [ ] I've made sure that the icons don't [already exist](https://lucide.dev/icons), including the [Lab branch](https://github.com/lucide-icons/lucide/tree/lab/icons).
 - [ ] I've made sure that the icons look sharp on low DPI displays.
 - [ ] I've made sure that the icons look consistent with the icon set in size, optical volume and density.
 - [ ] I've made sure that the icons are visually centered.
