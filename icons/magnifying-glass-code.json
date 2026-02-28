@@ -18,5 +18,13 @@
     "text",
     "social",
     "development"
+  ],
+  "aliases": [
+    {
+      "name": "search-code",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
