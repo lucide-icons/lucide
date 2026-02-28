@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="6"
+  height="6"
+  viewBox="0 0 6 6"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m1.5875 1.8521v1.0583" />
+  <path d="m2.6458 1.8521v1.0583" />
+  <path d="m3.7042 1.8521v1.0583" />
+  <path d="m4.7625 1.8521v1.0583" />
+  <path d="m5.2917 4.7625v1.0583" />
+  <path d="m5.8207 4.4979h-5.2915" />
+  <circle cx="1.0583" cy="5.2917" r=".52917" />
+  <circle cx="2.1167" cy="5.2917" r=".52917" />
+  <circle cx="3.175" cy="5.2917" r=".52917" />
+  <rect x=".52917" y="1.0583" width="5.2917" height="2.6458" />
+</svg>
