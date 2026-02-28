@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
   "tags": [
     "water",
@@ -10,12 +11,23 @@
     "sound",
     "hertz",
     "wavelength",
-    "vibrate"
+    "vibrate",
+    "ocean",
+    "swimming",
+    "frequency"
   ],
   "categories": [
     "weather",
     "navigation",
     "multimedia",
     "sustainability"
+  ],
+  "aliases": [
+    {
+      "name": "waves",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
