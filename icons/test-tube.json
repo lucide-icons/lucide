@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "tube",
@@ -17,5 +18,19 @@
   ],
   "categories": [
     "science"
+  ],
+  "aliases": [
+    {
+      "name": "test-tube-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "test-tube-diagonal",
+      "deprecate": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
