@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "ahtohbi4",
+    "csandman",
+    "ericfennis",
+    "dango0812"
+  ],
+  "tags": [
+    "plane",
+    "trip",
+    "airplane"
+  ],
+  "categories": [
+    "transportation",
+    "travel",
+    "navigation"
+  ]
+}
