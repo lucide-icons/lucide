@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "it-is-not",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "sound",
+    "note",
+    "crotchet",
+    "minim",
+    "quarter note"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "music-3",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
