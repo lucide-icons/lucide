@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Nykoula",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "bridge",
+    "suspension",
+    "infrastructure",
+    "transportation",
+    "crossing",
+    "road",
+    "river",
+    "gate",
+    "golden",
+    "travel"
+  ],
+  "categories": [
+    "travel",
+    "transportation",
+    "buildings"
+  ]
+}
