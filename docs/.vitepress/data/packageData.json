@@ -153,5 +153,23 @@
         "href": "https://www.npmjs.com/package/lucide-static"
       }
     ]
+  },
+  "@lucide/icons": {
+    "docsAlias": "icons",
+    "packageDirname": "icons",
+    "order": 10,
+    "icon": "ts",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
+      }
+    ]
   }
 }

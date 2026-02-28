@@ -1,0 +1,77 @@
+{
+  "name": "@lucide/icons",
+  "description": "A Lucide icon library that contains icon data in a standard Lucide format.",
+  "version": "0.0.1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide"
+  },
+  "keywords": [
+    "Lucide",
+    "HTML",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons"
+  ],
+  "amdName": "lucide-icons",
+  "source": "src/lucide-icons.ts",
+  "main": "dist/cjs/lucide-icons.cjs",
+  "module": "dist/esm/lucide-icons.mjs",
+  "types": "dist/esm/lucide-icons.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/esm/lucide-icons.d.ts",
+      "import": "./dist/esm/lucide-icons.mjs",
+      "require": "./dist/cjs/lucide-icons.cjs",
+      "default": "./dist/esm/lucide-icons.mjs"
+    },
+    "./icons/*": {
+      "import": "./dist/esm/icons/*.mjs",
+      "default": "./dist/esm/icons/*.mjs"
+    },
+    "./dynamic": {
+      "types": "./dist/esm/dynamic.d.ts",
+      "import": "./dist/esm/dynamic.mjs",
+      "require": "./dist/cjs/dynamic.cjs",
+      "default": "./dist/esm/dynamic.mjs"
+    },
+    "./build": {
+      "types": "./dist/esm/build.d.ts",
+      "import": "./dist/esm/build.mjs",
+      "require": "./dist/cjs/build.cjs",
+      "default": "./dist/esm/build.mjs"
+    }
+  },
+  "scripts": {
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --renderUniqueKey --withAliases --withDynamicImports --separateAliasesFile --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:bundle": "rollup -c rollup.config.mjs",
+    "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
+    "test:update": "vitest -u",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "^1.0.0",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "jest-serializer-html": "^7.1.0",
+    "rollup": "^4.53.3",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.12"
+  }
+}

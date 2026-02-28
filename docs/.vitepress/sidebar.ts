@@ -104,6 +104,10 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
           text: 'Lucide Static',
           link: '/guide/packages/lucide-static',
         },
+        {
+          text: 'Icon data & helpers',
+          link: '/guide/packages/icons',
+        },
       ],
     },
     {
