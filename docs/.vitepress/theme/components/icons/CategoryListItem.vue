@@ -91,6 +91,7 @@ function onClick(categoryName: string) {
 
 .outline-link.inactive {
   color: var(--vp-c-text-4);
+  pointer-events: none;
 }
 
 .outline-link.nested {
