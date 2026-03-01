@@ -16,6 +16,9 @@ permissions:
   id-token: write # Required for OIDC
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   pre-release:
     if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
@@ -129,11 +132,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Outline svg Icons
-        run: pnpm build:outline-icons
-
       - name: Create font in ./lucide-font
-        run: pnpm build:font
+        run: pnpm build:font --saveCodePoints
 
       - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v4
