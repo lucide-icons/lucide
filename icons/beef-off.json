@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "food",
+    "dish",
+    "restaurant",
+    "course",
+    "meal",
+    "meat",
+    "bbq",
+    "steak",
+    "vegetarian"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
