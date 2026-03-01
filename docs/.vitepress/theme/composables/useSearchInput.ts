@@ -1,5 +1,5 @@
 import { useDebounce } from '@vueuse/core';
-import { nextTick, onMounted, ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 
 const useSearchInput = () => {
   const searchInput = ref();
@@ -13,11 +13,10 @@ const useSearchInput = () => {
       newUrl.searchParams.delete('search');
     } else {
       newUrl.searchParams.set('search', searchString);
+      newUrl.hash = '';
     }
 
-    nextTick(() => {
-      window.history.replaceState({}, '', newUrl);
-    });
+    window.history.replaceState({}, '', newUrl);
   });
 
   onMounted(() => {
