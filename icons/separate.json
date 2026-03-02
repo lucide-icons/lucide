@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Iuliia-Iushchenko"
+    "karsa-mistmere",
+    "jguddas",
+    "danielbayley",
+    "Iuliia-Iushchenko",
+    
   ],
   "tags": [
     "disassemble",
@@ -21,6 +25,6 @@
   ],
   "categories": [
     "layout",
-    "arrows"
+    "text"
   ]
 }
