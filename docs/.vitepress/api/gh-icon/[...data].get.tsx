@@ -1,6 +1,6 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { createElement } from 'react';
+import React from 'react';
 import SvgPreview from '../../lib/SvgPreview/index.tsx';
 import iconNodes from '../../data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
@@ -34,36 +34,29 @@ export default eventHandler((event) => {
     const iconNode = iconNodes[backdropName];
 
     const LucideIcon = createLucideIcon(backdropName, iconNode);
-    const svg = renderToStaticMarkup(createElement(LucideIcon));
+    const svg = renderToStaticMarkup(<LucideIcon />);
     const backdropString = svg.replaceAll('\n', '').replace(/<svg[^>]*>|<\/svg>/g, '');
 
     children.push(
-      createElement(Backdrop, {
-        backdropString,
-        src: src.replace(/<svg[^>]*>|<\/svg>/g, ''),
-        color: '#777',
-      }),
+      <Backdrop
+        backdropString={backdropString}
+        src={src.replace(/<svg[^>]*>|<\/svg>/g, '')}
+        color="#777"
+      />,
     );
   }
-
-  const svg = Buffer.from(
-    // We can't use jsx here, is not supported here by nitro.
-    renderToString(
-      createElement(
-        SvgPreview,
-        {
-          src: src.replace(/<svg[^>]*>|<\/svg>/g, ''),
-          height,
-          width,
-          showGrid: true,
-        },
-        children,
-      ),
-    ),
-  ).toString('utf8');
 
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
 
-  return svg;
+  return renderToString(
+    <SvgPreview
+      src={src.replace(/<svg[^>]*>|<\/svg>/g, '')}
+      showGrid
+      height={height}
+      width={width}
+    >
+      {children}
+    </SvgPreview>,
+  );
 });

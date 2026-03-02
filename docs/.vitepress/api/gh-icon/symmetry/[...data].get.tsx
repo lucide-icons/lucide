@@ -1,6 +1,6 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString } from 'react-dom/server';
-import { createElement } from 'react';
+import React from 'react';
 import Diff from '../../../lib/SvgPreview/Diff.tsx';
 
 export default eventHandler((event) => {
@@ -41,15 +41,18 @@ export default eventHandler((event) => {
     return '';
   }
 
-  const svg = Buffer.from(
-    // We can't use jsx here, is not supported here by nitro.
-    renderToString(
-      createElement(Diff, { oldSrc, newSrc, showGrid: true, height, width }, children),
-    ),
-  ).toString('utf8');
-
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
 
-  return svg;
+  return renderToString(
+    <Diff
+      oldSrc={oldSrc}
+      newSrc={newSrc}
+      showGrid
+      height={height}
+      width={width}
+    >
+      {children}
+    </Diff>,
+  );
 });

@@ -1,17 +1,11 @@
-import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
-import { Resvg, initWasm } from '@resvg/resvg-wasm';
 import iconNodes from '../../../data/iconNodes';
-import wasm from './loadWasm';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
-
-var initializedResvg = initWasm(wasm);
+import sharp from 'sharp';
 
 export default eventHandler(async (event) => {
   const { params = {} } = event.context;
-  await initializedResvg;
-
   const imageSize = 96;
   const name = params.data.split('/').at(-3);
   const iconSizeString = params.data.split('/').at(-2);
@@ -45,9 +39,7 @@ export default eventHandler(async (event) => {
     )
     .replace(/<\/svg>/, '</g></svg>');
 
-  const resvg = new Resvg(svg, { background: '#000' });
-  const pngData = resvg.render();
-  const pngBuffer = Buffer.from(pngData.asPng());
+  const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
 
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
@@ -67,7 +59,7 @@ export default eventHandler(async (event) => {
     <image
       width="${imageSize}"
       height="${prevSvg ? imageSize * 2 : imageSize}"
-      href="data:image/png;base64,${pngBuffer.toString('base64')}"
+       href="data:image/png;base64,${pngBuffer.toString('base64')}"
       image-rendering="pixelated"
     />
   </mask>
