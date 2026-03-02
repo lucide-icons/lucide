@@ -20,6 +20,12 @@ const iconsDir = path.join(repoRoot, 'icons');
 const outlinedDir = path.join(repoRoot, 'outlined');
 const targetDir = path.join(repoRoot, outputDir);
 
+if (saveCodePoints && !process.env.BLOB_READ_WRITE_TOKEN) {
+  throw new Error(
+    'Saving code points requires BLOB_READ_WRITE_TOKEN environment variable to be set.',
+  );
+}
+
 const iconsWithAliases = await getAllIconAliases(iconsDir);
 
 await outlineSVG({

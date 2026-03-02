@@ -6,12 +6,13 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
-    "start": "node ./src/main.ts"
+    "start": "node --env-file-if-exists=.env ./src/main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/blob": "^2.3.0",
     "fs-extra": "^11.2.0",
     "minimist": "^1.2.8",
     "oslllo-svg-fixer": "^5.0.0",
