@@ -46,6 +46,7 @@ yarn add @lucide/svelte
 ```sh
 bun add @lucide/svelte
 ```
+> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the [`lucide-svelte`](https://www.npmjs.com/package/lucide-svelte) package.
 
 ## Documentation
 
