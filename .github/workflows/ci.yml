@@ -19,7 +19,7 @@ permissions:
 
 # This is added to make sure we wait until last release is done, this is needed for the font-build process
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: continuous-integration
 
 jobs:
   create-release:

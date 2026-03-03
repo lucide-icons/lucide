@@ -2,18 +2,18 @@ import { type IconAliases } from '@lucide/helpers';
 import path from 'path';
 import { promises as fs } from 'fs';
 import { cwd } from 'process';
+import { put } from '@vercel/blob';
+
+const VERCEL_BLOB_CODEPOINTS_PATH = 'latest/font/codepoints.json';
 
 export type CodePoints = Record<string, number>;
 
 async function getLatestCodePoints(): Promise<CodePoints> {
-  // This is for the first release where no codepoints.json exists yet
-  const codepointsContents = await fs.readFile(path.join(cwd(), 'codepoints.json'), 'utf-8');
+  const codepointsContents = await fetch(
+    `https://geoxmjocxfnaryc4.public.blob.vercel-storage.com/${VERCEL_BLOB_CODEPOINTS_PATH}`,
+  );
 
-  return JSON.parse(codepointsContents) as CodePoints;
-
-  // TODO: Next releases will use the codepoints.json from latest release in lucide-static.
-  // const codepointsContents = await fetch('https://unpkg.com/lucide-static@latest/font/codepoints.json')
-  // return codepointsContents.json() as Promise<CodePoints>
+  return codepointsContents.json() as Promise<CodePoints>;
 }
 
 interface AllocateCodePointsOptions {
@@ -49,11 +49,12 @@ export async function allocateCodePoints({
   );
 
   if (saveCodePoints) {
-    await fs.writeFile(
-      path.join(cwd(), 'codepoints.json'),
-      JSON.stringify(baseCodePoints, null, 2),
-      'utf-8',
-    );
+    const content = JSON.stringify(baseCodePoints, null, 2);
+    await fs.writeFile(path.join(cwd(), 'codepoints.json'), content, 'utf-8');
+
+    await put(VERCEL_BLOB_CODEPOINTS_PATH, content, { access: 'public', allowOverwrite: true });
+
+    console.log('Code points saved to codepoints.json and uploaded to Vercel Blob Storage.');
   }
 
   return baseCodePoints;
