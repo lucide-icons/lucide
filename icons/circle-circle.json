@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "tags": [
+    "goal",
+    "target",
+    "radio",
+    "center",
+    "focus",
+    "button",
+    "shutter",
+    "radius",
+    "donut"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
