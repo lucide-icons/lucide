@@ -194,7 +194,7 @@
   {
     "name": "strapi-lucide-icons",
     "description": "Lucide icon picker custom field for Strapi.",
-    "icon": "/framework-logos/js.svg",
+    "icon": "/framework-logos/strapi.svg",
     "shields": [
       {
         "alt": "Latest Stable Version",
