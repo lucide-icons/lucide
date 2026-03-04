@@ -27,10 +27,10 @@ export async function allocateCodePoints({
 }: AllocateCodePointsOptions): Promise<CodePoints> {
   const baseCodePoints = await getLatestCodePoints();
 
-  const endCodePoint = Math.max(...Object.values(baseCodePoints));
-
   await Promise.all(
     iconsWithAliases.map(async ([iconName, aliases]) => {
+      const endCodePoint = Math.max(...Object.values(baseCodePoints));
+
       if (!baseCodePoints[iconName]) {
         console.log('Code point not found creating new one for', iconName);
         baseCodePoints[iconName] = endCodePoint + 1;
