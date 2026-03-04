@@ -1,7 +1,7 @@
-import { h, toChildArray } from 'preact';
+import { h, toChildArray, type JSX } from 'preact';
 import defaultAttributes from './defaultAttributes';
 import type { IconNode, LucideProps } from './types';
-import { hasA11yProp } from '@lucide/shared';
+import { hasA11yProp, mergeClasses } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
   iconNode: IconNode;
@@ -30,6 +30,7 @@ const Icon = ({
   children,
   iconNode,
   class: classes = '',
+  className = '',
   ...rest
 }: IconComponentProps) =>
   h(
@@ -42,7 +43,11 @@ const Icon = ({
       ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth
         ? (Number(strokeWidth) * 24) / Number(size)
         : strokeWidth,
-      class: ['lucide', classes].join(' '),
+      class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
+        'lucide',
+        classes,
+        className
+      ),
       ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
       ...rest,
     },
