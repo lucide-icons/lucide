@@ -6,7 +6,7 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
-    "start": "node --env-file-if-exists=.env ./src/main.ts"
+    "start": "node ./src/main.ts"
   },
   "keywords": [],
   "author": "",
