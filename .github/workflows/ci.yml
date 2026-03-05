@@ -17,6 +17,10 @@ permissions:
   id-token: write # Required for OIDC
   contents: write
 
+# This is added to make sure we wait until last release is done, this is needed for the font-build process
+concurrency:
+  group: continuous-integration
+
 jobs:
   create-release:
     if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)') && github.event_name != 'workflow_dispatch'
@@ -24,7 +28,6 @@ jobs:
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
     steps:
-
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
