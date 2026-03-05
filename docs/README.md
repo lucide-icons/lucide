@@ -2,6 +2,7 @@
 
 The Lucide docs website is built with Vitepress: https://vitepress.dev/
 This is Markdown-based documentation powered by Vue.
+For API endpoints, we use Nitro: https://nitro.unjs.io/ to create a custom API server.
 
 ## Development
 
@@ -11,10 +12,7 @@ pnpm install
 ```
 
 ```sh
-# Start docs dev server
-pnpm docs:dev
-
-# Start api dev server
+# Start dev server
 pnpm dev
 ```
 
@@ -22,12 +20,7 @@ pnpm dev
 
 ```sh
 # Build docs
-pnpm docs:build
-```
-
-```sh
-# Build api
-pnpm build:api
+pnpm build
 ```
 
 ## Components

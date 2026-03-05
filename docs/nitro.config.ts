@@ -3,7 +3,8 @@ import { defineNitroConfig } from 'nitropack/config';
 export default defineNitroConfig({
   compatibilityDate: '2026-02-26',
   preset: 'vercel',
-  srcDir: '.vitepress',
+  srcDir: '.',
+  apiDir: 'api',
   routeRules: {
     '/api/**': { cors: false },
   },

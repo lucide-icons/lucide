@@ -174,7 +174,7 @@ cd docs
 2. **Start the Local Development Server**
 
 ```sh
-  pnpm run docs:dev
+pnpm dev
 ```
 
 3. **Open the Website Locally**
