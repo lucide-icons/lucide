@@ -14,7 +14,7 @@ export default eventHandler((event) => {
   const src = Buffer.from(data, 'base64').toString('utf8');
   const iconNode = parseSync(src.includes('<svg') ? src : `<svg>${src}</svg>`).children.map(
     ({ name, attributes }) => [name, attributes],
-  ) as IconNode
+  ) as IconNode;
 
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
@@ -25,13 +25,13 @@ export default eventHandler((event) => {
       strokeWidth={strokeWidth}
     >
       <style>
-      { `@media screen and (prefers-color-scheme: light) {
+        {`@media screen and (prefers-color-scheme: light) {
           svg { fill: transparent !important; }
         }
         @media screen and (prefers-color-scheme: dark) {
           svg { stroke: #fff; fill: transparent !important; }
         }`}
       </style>
-    </Icon>
-  )
+    </Icon>,
+  );
 });

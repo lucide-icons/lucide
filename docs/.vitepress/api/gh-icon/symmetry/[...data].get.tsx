@@ -53,6 +53,6 @@ export default eventHandler((event) => {
       width={width}
     >
       {children}
-    </Diff>
-  )
+    </Diff>,
+  );
 });

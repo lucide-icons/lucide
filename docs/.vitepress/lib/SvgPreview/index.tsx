@@ -397,7 +397,10 @@ interface SvgPreviewProps extends React.SVGProps<SVGSVGElement> {
   children?: React.ReactNode;
 }
 
-const SvgPreview = ({ src, children, height = 24, width = 24, showGrid = false, ...props }: SvgPreviewProps, ref) => {
+const SvgPreview = (
+  { src, children, height = 24, width = 24, showGrid = false, ...props }: SvgPreviewProps,
+  ref,
+) => {
   const subGridSize =
     Math.max(height, width) % 3 === 0
       ? Math.max(height, width) > 24
