@@ -1,4 +1,5 @@
 import iconMetaData from '../../data/iconMetaData';
+import { eventHandler, setResponseHeader } from 'h3';
 
 export default eventHandler((event) => {
   setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');

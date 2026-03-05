@@ -117,7 +117,7 @@ importers:
     dependencies:
       '@analogjs/vite-plugin-nitro':
         specifier: ^2.3.0
-        version: 2.3.0(encoding@0.1.13)(xml2js@0.6.2)
+        version: 2.3.0(@vercel/blob@2.0.0)(encoding@0.1.13)(xml2js@0.6.2)
       '@floating-ui/vue':
         specifier: ^1.1.9
         version: 1.1.9(vue@3.5.24(typescript@5.9.3))
@@ -13894,11 +13894,11 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
 
-  '@analogjs/vite-plugin-nitro@2.3.0(encoding@0.1.13)(xml2js@0.6.2)':
+  '@analogjs/vite-plugin-nitro@2.3.0(@vercel/blob@2.0.0)(encoding@0.1.13)(xml2js@0.6.2)':
     dependencies:
       defu: 6.1.4
       esbuild: 0.25.12
-      nitropack: 2.13.1(encoding@0.1.13)(xml2js@0.6.2)
+      nitropack: 2.13.1(@vercel/blob@2.0.0)(encoding@0.1.13)(xml2js@0.6.2)
       radix3: 1.1.2
       xmlbuilder2: 4.0.3
     transitivePeerDependencies:

@@ -1,5 +1,4 @@
-import copy from 'rollup-plugin-copy';
-import replace from '@rollup/plugin-replace';
+import { defineNitroConfig } from 'nitropack/config';
 
 export default defineNitroConfig({
   compatibilityDate: '2026-02-26',

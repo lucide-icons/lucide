@@ -17,9 +17,9 @@
     "prebuild:iconDetails": "node ./scripts/writeIconDetails.mjs",
     "prebuild:brandStopwords": "node ./scripts/writeBrandStopwords.mjs",
     "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mjs",
-    "dev": "npx nitropack dev",
-    "prebuild:api": "npx nitropack prepare",
-    "build:api": "npx nitropack build",
+    "dev": "pnpm nitropack dev",
+    "prebuild:api": "pnpm nitropack prepare",
+    "build:api": "pnpm nitropack build",
     "build": "pnpm run /^prebuild:.*/ && pnpm run build:api && pnpm run build:docs && pnpm postbuild:vercelJson",
     "preview": "node .output/server/index.mjs"
   },

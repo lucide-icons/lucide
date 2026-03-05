@@ -3,10 +3,15 @@ import { defineConfig } from 'vitepress';
 import sidebar from './sidebar';
 import getStructuredData from './getStructuredData';
 import nitro from '@analogjs/vite-plugin-nitro';
+import nitroConfig from '../nitro.config';
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
 const description = 'Beautiful & consistent icon toolkit made by the community.';
+
+const isDev = process.env.NODE_ENV !== 'production';
+
+console.log(isDev);
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -38,11 +43,13 @@ export default defineConfig({
       ],
     },
     plugins: [
-      nitro({
-        ssr: false,
-        entryServer: '.vitepress/api/main.ts',
-        sourceRoot: '.vitepress/api',
-      }),
+      nitro(
+        {
+          ssr: false,
+          sourceRoot: '.vitepress',
+        },
+        nitroConfig,
+      ),
     ],
   },
   head: [
