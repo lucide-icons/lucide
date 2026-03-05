@@ -5,6 +5,7 @@ export default defineNitroConfig({
   preset: 'vercel',
   srcDir: '.',
   apiDir: 'api',
+  noPublicDir: true,
   routeRules: {
     '/api/**': { cors: false },
   },
