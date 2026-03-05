@@ -21,7 +21,8 @@
     "prebuild:api": "pnpm nitropack prepare",
     "build:api": "pnpm nitropack build",
     "build": "pnpm run /^prebuild:.*/ && pnpm run build:api && pnpm run build:docs && pnpm postbuild:vercelJson",
-    "preview": "node .output/server/index.mjs"
+    "preview": "node .output/server/index.mjs",
+    "typecheck": "vue-tsc --noEmit"
   },
   "author": "Eric Fennis",
   "license": "ISC",
@@ -35,7 +36,9 @@
     "nitropack": "^2.12.4",
     "rollup-plugin-copy": "^3.5.0",
     "svg-path-commander": "^2.1.11",
-    "vitepress": "^1.6.4"
+    "typescript": "^5.9.3",
+    "vitepress": "^1.6.4",
+    "vue-tsc": "^3.2.5"
   },
   "dependencies": {
     "@analogjs/vite-plugin-nitro": "^2.3.0",

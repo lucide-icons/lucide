@@ -18,6 +18,7 @@ if (!fs.existsSync(iconDetailsDirectory)) {
 
 const indexFile = path.resolve(iconDetailsDirectory, `index.ts`);
 
+// TODO: User correct aliases type from next branch
 const writeIconFiles = icons.map(async (iconFileName) => {
   const iconName = path.basename(iconFileName, '.json');
   const location = path.resolve(iconDetailsDirectory, `${iconName}.ts`);
@@ -26,8 +27,9 @@ const writeIconFiles = icons.map(async (iconFileName) => {
 import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
+import { type IconMetaData } from '~/.vitepress/theme/types'
 
-const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData
+const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData as Record<string, any> as IconMetaData
 
 const iconDetails = {
   name: '${iconName}',

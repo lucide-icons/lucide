@@ -4,7 +4,7 @@ import { Category, IconEntity } from '../theme/types';
 
 const directory = path.join(process.cwd(), '../categories');
 
-export function getAllCategoryFiles(): Category[] {
+export function getAllCategoryFiles(): Omit<Category, 'iconCount'>[] {
   const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.json');
 
   return fileNames.map((fileName) => {
@@ -24,11 +24,13 @@ export function mapCategoryIconCount(
   categories: Category[],
   icons: { categories: IconEntity['categories'] }[],
 ) {
-  return categories.map((category) => ({
-    ...category,
-    iconCount: icons.reduce(
-      (acc, curr) => (curr.categories.includes(category.name) ? ++acc : acc),
-      0,
-    ),
-  }));
+  return categories.map(
+    (category): Category => ({
+      ...category,
+      iconCount: icons.reduce(
+        (acc, curr) => (curr.categories.includes(category.name) ? ++acc : acc),
+        0,
+      ),
+    }),
+  );
 }
