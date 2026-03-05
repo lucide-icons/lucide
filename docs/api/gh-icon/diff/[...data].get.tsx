@@ -1,8 +1,8 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
-import Diff from '../../../lib/SvgPreview/Diff.tsx';
-import iconNodes from '../../../data/iconNodes';
+import Diff from '~/.vitepress/lib/SvgPreview/Diff.tsx';
+import iconNodes from '~/.vitepress/data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
 
 export default eventHandler((event) => {

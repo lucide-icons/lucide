@@ -1,10 +1,10 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
-import SvgPreview from '../../lib/SvgPreview/index.tsx';
-import iconNodes from '../../data/iconNodes';
+import SvgPreview from '~/.vitepress/lib/SvgPreview/index.tsx';
+import iconNodes from '~/.vitepress/data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
-import Backdrop from '../../lib/SvgPreview/Backdrop.tsx';
+import Backdrop from '~/.vitepress/lib/SvgPreview/Backdrop.tsx';
 
 export default eventHandler((event) => {
   const { params } = event.context;

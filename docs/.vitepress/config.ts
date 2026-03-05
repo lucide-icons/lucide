@@ -11,8 +11,6 @@ const description = 'Beautiful & consistent icon toolkit made by the community.'
 
 const isDev = process.env.NODE_ENV !== 'production';
 
-console.log(isDev);
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title,
@@ -42,13 +40,18 @@ export default defineConfig({
         },
       ],
     },
-    plugins: [
+    plugins: isDev && [
       nitro(
         {
           ssr: false,
-          sourceRoot: '.vitepress',
+          sourceRoot: '.',
         },
-        nitroConfig,
+        {
+          ...nitroConfig,
+          srcDir: '.',
+          routesDir: 'api',
+          scanDirs: ['.'],
+        },
       ),
     ],
   },

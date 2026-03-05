@@ -1,7 +1,7 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
-import Diff from '../../../lib/SvgPreview/Diff.tsx';
+import Diff from '~/.vitepress/lib/SvgPreview/Diff.tsx';
 
 export default eventHandler((event) => {
   const { params } = event.context;

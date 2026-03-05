@@ -1,5 +1,5 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
-import iconNodes from '../../../data/iconNodes';
+import iconNodes from '~/.vitepress/data/iconNodes';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';

@@ -1,6 +1,6 @@
 import { eventHandler, getQuery, setResponseHeader } from 'h3';
-import iconNodes from '../../data/iconNodes';
-import { IconNodeWithKeys } from '../../theme/types';
+import iconNodes from '~/.vitepress/data/iconNodes';
+import { IconNodeWithKeys } from '~/.vitepress/theme/types';
 
 export default eventHandler((event) => {
   const query = getQuery(event);
