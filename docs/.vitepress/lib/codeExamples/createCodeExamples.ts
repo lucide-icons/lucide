@@ -113,16 +113,16 @@ import { LucideAngularModule, $PascalCase } from 'lucide-angular';
   ];
 };
 
+const highlighter = await createHighlighter({
+  themes: ['github-light', 'github-dark'],
+  langs: Object.keys(bundledLanguages),
+});
+
 export type ThemeOptions =
   | ThemeRegistration
   | { light: ThemeRegistration; dark: ThemeRegistration };
 
-const highLightCode = async (code: string, lang: string, active?: boolean) => {
-  const highlighter = await createHighlighter({
-    themes: ['github-light', 'github-dark'],
-    langs: Object.keys(bundledLanguages),
-  });
-
+export const highLightCode = async (code: string, lang: string, active?: boolean) => {
   const highlightedCode = highlighter
     .codeToHtml(code, {
       lang,
