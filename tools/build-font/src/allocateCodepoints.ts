@@ -1,5 +1,4 @@
 import { type IconAliases } from '@lucide/helpers';
-import path from 'path';
 import { promises as fs } from 'fs';
 import { cwd } from 'process';
 import { put } from '@vercel/blob';
@@ -50,11 +49,10 @@ export async function allocateCodePoints({
 
   if (saveCodePoints) {
     const content = JSON.stringify(baseCodePoints, null, 2);
-    await fs.writeFile(path.join(cwd(), 'codepoints.json'), content, 'utf-8');
 
     await put(VERCEL_BLOB_CODEPOINTS_PATH, content, { access: 'public', allowOverwrite: true });
 
-    console.log('Code points saved to codepoints.json and uploaded to Vercel Blob Storage.');
+    console.log('Code points uploaded to Vercel Blob Storage.');
   }
 
   return baseCodePoints;
