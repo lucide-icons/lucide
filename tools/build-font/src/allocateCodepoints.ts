@@ -1,5 +1,4 @@
 import { type IconAliases } from '@lucide/helpers';
-import path from 'path';
 import { promises as fs } from 'fs';
 import { cwd } from 'process';
 import { put } from '@vercel/blob';

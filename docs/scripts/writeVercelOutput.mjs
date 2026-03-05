@@ -34,6 +34,10 @@ vercelRouteConfig.routes = [...iconAliasesRedirectRoutes, ...vercelRouteConfig.r
 const allCatchRoute = '/(.*)';
 const fallBackIndex = vercelRouteConfig.routes.findIndex((route) => route.src === allCatchRoute);
 
+if (fallBackIndex === -1) {
+  throw new Error(`Could not find the expected catch-all route with src "${allCatchRoute}" in the existing Vercel config. Please make sure that the existing config has a catch-all route and that its src is "${allCatchRoute}".`);
+}
+
 vercelRouteConfig.routes[fallBackIndex].src = '/api/(.*)';
 vercelRouteConfig.routes.push({
   src: allCatchRoute,
