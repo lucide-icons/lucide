@@ -1,5 +1,5 @@
-import iconMetaData from '~/.vitepress/data/iconMetaData';
 import { eventHandler, setResponseHeader } from 'h3';
+import iconMetaData from '~/.vitepress/data/iconMetaData';
 
 export default eventHandler((event) => {
   setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');
