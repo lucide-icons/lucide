@@ -4,14 +4,21 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+
+    <!-- NuGet Package -->
     <PackageId>Lucide.Net</PackageId>
     <Version>0.1.0</Version>
     <Authors>lucide-contributors</Authors>
-    <Description>Lucide icon library for .NET - Beautiful and consistent icons</Description>
+    <Description>Lucide icon library for .NET — 1700+ beautiful open-source icons as code. Supports any .NET platform via netstandard2.0.</Description>
     <PackageLicenseExpression>ISC</PackageLicenseExpression>
     <PackageProjectUrl>https://lucide.dev</PackageProjectUrl>
     <RepositoryUrl>https://github.com/lucide-icons/lucide</RepositoryUrl>
-    <PackageTags>icons;svg;lucide</PackageTags>
+    <PackageTags>icons;svg;lucide;dotnet</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
 </Project>

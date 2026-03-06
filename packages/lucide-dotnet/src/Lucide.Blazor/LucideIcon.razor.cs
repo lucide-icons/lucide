@@ -6,12 +6,14 @@ public partial class LucideIcon : ComponentBase
 {
     /// <summary>
     /// The icon data to render. Use LucideIcons.IconName (e.g., LucideIcons.Activity).
+    /// Takes priority over <see cref="Name"/>.
     /// </summary>
     [Parameter]
     public IconData? Icon { get; set; }
 
     /// <summary>
     /// The icon name for dynamic lookup (e.g., "activity", "arrow-right").
+    /// Used only when <see cref="Icon"/> is not set.
     /// </summary>
     [Parameter]
     public string? Name { get; set; }
@@ -56,14 +58,14 @@ public partial class LucideIcon : ComponentBase
 
     protected override void OnParametersSet()
     {
-        if (Icon != null)
-        {
-            _icon = Icon;
-        }
-        else if (!string.IsNullOrEmpty(Name))
-        {
-            LucideIcons.RegisterAll();
-            _icon = LucideIconRegistry.GetIcon(Name);
-        }
+        _icon = Icon ?? ResolveByName(Name);
+    }
+
+    private static IconData? ResolveByName(string? name)
+    {
+        if (string.IsNullOrEmpty(name))
+            return null;
+
+        return LucideIconRegistry.GetIcon(name);
     }
 }

@@ -1,4 +1,5 @@
 @namespace Lucide.Blazor
+@using System.Globalization
 
 @if (_icon != null)
 {
@@ -8,7 +9,7 @@
          viewBox="0 0 24 24"
          fill="@Fill"
          stroke="@Color"
-         stroke-width="@StrokeWidth"
+         stroke-width="@StrokeWidth.ToString(CultureInfo.InvariantCulture)"
          stroke-linecap="round"
          stroke-linejoin="round"
          class="@CssClass"

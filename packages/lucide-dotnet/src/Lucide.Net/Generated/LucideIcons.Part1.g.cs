@@ -4,4754 +4,4155 @@
 // </auto-generated>
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Lucide;
 
 public static partial class LucideIcons
 {
-    /// <summary>
-    /// Gets the AArrowDown icon.
-    /// </summary>
-    public static IconData AArrowDown { get; } = new IconData("a-arrow-down", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m14 12 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 16V7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.304 13h6.392" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AArrowUp icon.
-    /// </summary>
-    public static IconData AArrowUp { get; } = new IconData("a-arrow-up", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m14 11 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 16V7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.304 13h6.392" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ALargeSmall icon.
-    /// </summary>
-    public static IconData ALargeSmall { get; } = new IconData("a-large-small", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15.697 14h5.606" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.304 13h6.392" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Accessibility icon.
-    /// </summary>
-    public static IconData Accessibility { get; } = new IconData("accessibility", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "16" },
-            { "cy", "4" },
-            { "r", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m18 19 1-7-6 1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m5 8 3-3 5.5 3-2.36 3.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4.24 14.5a5 5 0 0 0 6.88 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13.76 17.5a5 5 0 0 0-6.88-6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Activity icon.
-    /// </summary>
-    public static IconData Activity { get; } = new IconData("activity", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AirVent icon.
-    /// </summary>
-    public static IconData AirVent { get; } = new IconData("air-vent", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 17.5a2.5 2.5 0 1 1-4 2.03V12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 8h12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.6 15.572A2 2 0 1 0 10 17v-5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Airplay icon.
-    /// </summary>
-    public static IconData Airplay { get; } = new IconData("airplay", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m12 15 5 6H7Z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlarmClockCheck icon.
-    /// </summary>
-    public static IconData AlarmClockCheck { get; } = new IconData("alarm-clock-check", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "13" },
-            { "r", "8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 3 2 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 6-3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.38 18.7 4 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.64 18.67 20 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 13 2 2 4-4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlarmClockMinus icon.
-    /// </summary>
-    public static IconData AlarmClockMinus { get; } = new IconData("alarm-clock-minus", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "13" },
-            { "r", "8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 3 2 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 6-3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.38 18.7 4 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.64 18.67 20 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 13h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlarmClockOff icon.
-    /// </summary>
-    public static IconData AlarmClockOff { get; } = new IconData("alarm-clock-off", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.87 6.87a8 8 0 1 0 11.26 11.26" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19.9 14.25a8 8 0 0 0-9.15-9.15" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 6-3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.26 18.67 4 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 2 20 20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 4 2 6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlarmClockPlus icon.
-    /// </summary>
-    public static IconData AlarmClockPlus { get; } = new IconData("alarm-clock-plus", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "13" },
-            { "r", "8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 3 2 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 6-3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.38 18.7 4 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.64 18.67 20 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 10v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 13h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlarmClock icon.
-    /// </summary>
-    public static IconData AlarmClock { get; } = new IconData("alarm-clock", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "13" },
-            { "r", "8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 9v4l2 2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 3 2 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 6-3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.38 18.7 4 21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.64 18.67 20 21" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlarmSmoke icon.
-    /// </summary>
-    public static IconData AlarmSmoke { get; } = new IconData("alarm-smoke", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 21c0-2.5 2-2.5 2-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 21c0-2.5 2-2.5 2-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m19 8-.8 3a1.25 1.25 0 0 1-1.2 1H7a1.25 1.25 0 0 1-1.2-1L5 8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 3a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 21c0-2.5 2-2.5 2-5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Album icon.
-    /// </summary>
-    public static IconData Album { get; } = new IconData("album", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "18" },
-            { "height", "18" },
-            { "x", "3" },
-            { "y", "3" },
-            { "rx", "2" },
-            { "ry", "2" }
-        }),
-        new IconElement("polyline", new Dictionary<string, string>
-        {
-            { "points", "11 3 11 11 14 8 17 11 17 3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignCenterHorizontal icon.
-    /// </summary>
-    public static IconData AlignCenterHorizontal { get; } = new IconData("align-center-horizontal", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 12h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 8V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 16v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 8V7c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignCenterVertical icon.
-    /// </summary>
-    public static IconData AlignCenterVertical { get; } = new IconData("align-center-vertical", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 2v20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 10H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 10h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 20H7a2 2 0 0 1-2-2v-2c0-1.1.9-2 2-2h1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 14h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignEndHorizontal icon.
-    /// </summary>
-    public static IconData AlignEndHorizontal { get; } = new IconData("align-end-horizontal", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "16" },
-            { "x", "4" },
-            { "y", "2" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "9" },
-            { "x", "14" },
-            { "y", "9" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 22H2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignEndVertical icon.
-    /// </summary>
-    public static IconData AlignEndVertical { get; } = new IconData("align-end-vertical", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "16" },
-            { "height", "6" },
-            { "x", "2" },
-            { "y", "4" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "9" },
-            { "height", "6" },
-            { "x", "9" },
-            { "y", "14" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 22V2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalDistributeCenter icon.
-    /// </summary>
-    public static IconData AlignHorizontalDistributeCenter { get; } = new IconData("align-horizontal-distribute-center", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "4" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "14" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 22v-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 7V2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 22v-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 5V2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalDistributeEnd icon.
-    /// </summary>
-    public static IconData AlignHorizontalDistributeEnd { get; } = new IconData("align-horizontal-distribute-end", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "4" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "14" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 2v20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalDistributeStart icon.
-    /// </summary>
-    public static IconData AlignHorizontalDistributeStart { get; } = new IconData("align-horizontal-distribute-start", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "4" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "14" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 2v20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalJustifyCenter icon.
-    /// </summary>
-    public static IconData AlignHorizontalJustifyCenter { get; } = new IconData("align-horizontal-justify-center", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "2" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "16" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalJustifyEnd icon.
-    /// </summary>
-    public static IconData AlignHorizontalJustifyEnd { get; } = new IconData("align-horizontal-justify-end", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "2" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "12" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalJustifyStart icon.
-    /// </summary>
-    public static IconData AlignHorizontalJustifyStart { get; } = new IconData("align-horizontal-justify-start", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "6" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "16" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalSpaceAround icon.
-    /// </summary>
-    public static IconData AlignHorizontalSpaceAround { get; } = new IconData("align-horizontal-space-around", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "9" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 22V2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 22V2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignHorizontalSpaceBetween icon.
-    /// </summary>
-    public static IconData AlignHorizontalSpaceBetween { get; } = new IconData("align-horizontal-space-between", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "14" },
-            { "x", "3" },
-            { "y", "5" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "10" },
-            { "x", "15" },
-            { "y", "7" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 2v20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignStartHorizontal icon.
-    /// </summary>
-    public static IconData AlignStartHorizontal { get; } = new IconData("align-start-horizontal", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "16" },
-            { "x", "4" },
-            { "y", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "6" },
-            { "height", "9" },
-            { "x", "14" },
-            { "y", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 2H2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignStartVertical icon.
-    /// </summary>
-    public static IconData AlignStartVertical { get; } = new IconData("align-start-vertical", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "9" },
-            { "height", "6" },
-            { "x", "6" },
-            { "y", "14" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "16" },
-            { "height", "6" },
-            { "x", "6" },
-            { "y", "4" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 2v20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalDistributeCenter icon.
-    /// </summary>
-    public static IconData AlignVerticalDistributeCenter { get; } = new IconData("align-vertical-distribute-center", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 17h-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 7h-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 17H2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 7H2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "5" },
-            { "y", "14" },
-            { "width", "14" },
-            { "height", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "7" },
-            { "y", "4" },
-            { "width", "10" },
-            { "height", "6" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalDistributeEnd icon.
-    /// </summary>
-    public static IconData AlignVerticalDistributeEnd { get; } = new IconData("align-vertical-distribute-end", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "14" },
-            { "height", "6" },
-            { "x", "5" },
-            { "y", "14" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "4" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 20h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 10h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalDistributeStart icon.
-    /// </summary>
-    public static IconData AlignVerticalDistributeStart { get; } = new IconData("align-vertical-distribute-start", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "14" },
-            { "height", "6" },
-            { "x", "5" },
-            { "y", "14" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "4" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 14h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 4h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalJustifyCenter icon.
-    /// </summary>
-    public static IconData AlignVerticalJustifyCenter { get; } = new IconData("align-vertical-justify-center", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "14" },
-            { "height", "6" },
-            { "x", "5" },
-            { "y", "16" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "2" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 12h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalJustifyEnd icon.
-    /// </summary>
-    public static IconData AlignVerticalJustifyEnd { get; } = new IconData("align-vertical-justify-end", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "14" },
-            { "height", "6" },
-            { "x", "5" },
-            { "y", "12" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "2" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 22h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalJustifyStart icon.
-    /// </summary>
-    public static IconData AlignVerticalJustifyStart { get; } = new IconData("align-vertical-justify-start", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "14" },
-            { "height", "6" },
-            { "x", "5" },
-            { "y", "16" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 2h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalSpaceAround icon.
-    /// </summary>
-    public static IconData AlignVerticalSpaceAround { get; } = new IconData("align-vertical-space-around", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "9" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 20H2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 4H2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AlignVerticalSpaceBetween icon.
-    /// </summary>
-    public static IconData AlignVerticalSpaceBetween { get; } = new IconData("align-vertical-space-between", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "14" },
-            { "height", "6" },
-            { "x", "5" },
-            { "y", "15" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "10" },
-            { "height", "6" },
-            { "x", "7" },
-            { "y", "3" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 21h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 3h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Ambulance icon.
-    /// </summary>
-    public static IconData Ambulance { get; } = new IconData("ambulance", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 10H6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 8v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 18h6" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "17" },
-            { "cy", "18" },
-            { "r", "2" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "7" },
-            { "cy", "18" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Ampersand icon.
-    /// </summary>
-    public static IconData Ampersand { get; } = new IconData("ampersand", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 12h3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Ampersands icon.
-    /// </summary>
-    public static IconData Ampersands { get; } = new IconData("ampersands", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 17c-5-3-7-7-7-9a2 2 0 0 1 4 0c0 2.5-5 2.5-5 6 0 1.7 1.3 3 3 3 2.8 0 5-2.2 5-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 17c-5-3-7-7-7-9a2 2 0 0 1 4 0c0 2.5-5 2.5-5 6 0 1.7 1.3 3 3 3 2.8 0 5-2.2 5-5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Amphora icon.
-    /// </summary>
-    public static IconData Amphora { get; } = new IconData("amphora", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 5H8a2 2 0 0 0 0 4h.68" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 5h2a2 2 0 0 1 0 4h-.68" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 22H6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 2h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Anchor icon.
-    /// </summary>
-    public static IconData Anchor { get; } = new IconData("anchor", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 6v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m19 13 2-1a9 9 0 0 1-18 0l2 1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 11h6" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "4" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Angry icon.
-    /// </summary>
-    public static IconData Angry { get; } = new IconData("angry", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 16s-1.5-2-4-2-4 2-4 2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7.5 8 10 9" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m14 9 2.5-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 10h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 10h.01" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Annoyed icon.
-    /// </summary>
-    public static IconData Annoyed { get; } = new IconData("annoyed", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 15h8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 9h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 9h2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Antenna icon.
-    /// </summary>
-    public static IconData Antenna { get; } = new IconData("antenna", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 12 7 2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m7 12 5-10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m12 12 5-10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m17 12 5-10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4.5 7h15" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 16v6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Anvil icon.
-    /// </summary>
-    public static IconData Anvil { get; } = new IconData("anvil", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 12v5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 12v5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Aperture icon.
-    /// </summary>
-    public static IconData Aperture { get; } = new IconData("aperture", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m14.31 8 5.74 9.94" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9.69 8h11.48" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m7.38 12 5.74-9.94" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9.69 16 3.95 6.06" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14.31 16H2.83" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m16.62 12-5.74 9.94" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AppWindowMac icon.
-    /// </summary>
-    public static IconData AppWindowMac { get; } = new IconData("app-window-mac", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "20" },
-            { "height", "16" },
-            { "x", "2" },
-            { "y", "4" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 8h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 8h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 8h.01" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AppWindow icon.
-    /// </summary>
-    public static IconData AppWindow { get; } = new IconData("app-window", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "2" },
-            { "y", "4" },
-            { "width", "20" },
-            { "height", "16" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 4v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 8h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 4v4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Apple icon.
-    /// </summary>
-    public static IconData Apple { get; } = new IconData("apple", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 6.528V3a1 1 0 0 1 1-1h0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArchiveRestore icon.
-    /// </summary>
-    public static IconData ArchiveRestore { get; } = new IconData("archive-restore", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "20" },
-            { "height", "5" },
-            { "x", "2" },
-            { "y", "3" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 8v11a2 2 0 0 0 2 2h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 8v11a2 2 0 0 1-2 2h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 15 3-3 3 3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 12v9" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArchiveX icon.
-    /// </summary>
-    public static IconData ArchiveX { get; } = new IconData("archive-x", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "20" },
-            { "height", "5" },
-            { "x", "2" },
-            { "y", "3" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9.5 17 5-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9.5 12 5 5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Archive icon.
-    /// </summary>
-    public static IconData Archive { get; } = new IconData("archive", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "20" },
-            { "height", "5" },
-            { "x", "2" },
-            { "y", "3" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 12h4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Armchair icon.
-    /// </summary>
-    public static IconData Armchair { get; } = new IconData("armchair", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 18v2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 18v2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigDownDash icon.
-    /// </summary>
-    public static IconData ArrowBigDownDash { get; } = new IconData("arrow-big-down-dash", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 4h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigDown icon.
-    /// </summary>
-    public static IconData ArrowBigDown { get; } = new IconData("arrow-big-down", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigLeftDash icon.
-    /// </summary>
-    public static IconData ArrowBigLeftDash { get; } = new IconData("arrow-big-left-dash", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 9v6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigLeft icon.
-    /// </summary>
-    public static IconData ArrowBigLeft { get; } = new IconData("arrow-big-left", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigRightDash icon.
-    /// </summary>
-    public static IconData ArrowBigRightDash { get; } = new IconData("arrow-big-right-dash", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 9v6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigRight icon.
-    /// </summary>
-    public static IconData ArrowBigRight { get; } = new IconData("arrow-big-right", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigUpDash icon.
-    /// </summary>
-    public static IconData ArrowBigUpDash { get; } = new IconData("arrow-big-up-dash", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 20h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowBigUp icon.
-    /// </summary>
-    public static IconData ArrowBigUp { get; } = new IconData("arrow-big-up", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDown01 icon.
-    /// </summary>
-    public static IconData ArrowDown01 { get; } = new IconData("arrow-down-0-1", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 20V4" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "15" },
-            { "y", "4" },
-            { "width", "4" },
-            { "height", "6" },
-            { "ry", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 20v-6h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 20h4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDown10 icon.
-    /// </summary>
-    public static IconData ArrowDown10 { get; } = new IconData("arrow-down-1-0", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 20V4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 10V4h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 10h4" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "15" },
-            { "y", "14" },
-            { "width", "4" },
-            { "height", "6" },
-            { "ry", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownAZ icon.
-    /// </summary>
-    public static IconData ArrowDownAZ { get; } = new IconData("arrow-down-a-z", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 20V4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 8h-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 10V6.5a2.5 2.5 0 0 1 5 0V10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 14h5l-5 6h5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownFromLine icon.
-    /// </summary>
-    public static IconData ArrowDownFromLine { get; } = new IconData("arrow-down-from-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 3H5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 21V7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m6 15 6 6 6-6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownLeft icon.
-    /// </summary>
-    public static IconData ArrowDownLeft { get; } = new IconData("arrow-down-left", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 7 7 17" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 17H7V7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownNarrowWide icon.
-    /// </summary>
-    public static IconData ArrowDownNarrowWide { get; } = new IconData("arrow-down-narrow-wide", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 20V4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 4h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 8h7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 12h10" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownRight icon.
-    /// </summary>
-    public static IconData ArrowDownRight { get; } = new IconData("arrow-down-right", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m7 7 10 10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 7v10H7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownToDot icon.
-    /// </summary>
-    public static IconData ArrowDownToDot { get; } = new IconData("arrow-down-to-dot", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 2v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m19 9-7 7-7-7" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "21" },
-            { "r", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownToLine icon.
-    /// </summary>
-    public static IconData ArrowDownToLine { get; } = new IconData("arrow-down-to-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 17V3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m6 11 6 6 6-6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 21H5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownUp icon.
-    /// </summary>
-    public static IconData ArrowDownUp { get; } = new IconData("arrow-down-up", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 20V4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m21 8-4-4-4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 4v16" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownWideNarrow icon.
-    /// </summary>
-    public static IconData ArrowDownWideNarrow { get; } = new IconData("arrow-down-wide-narrow", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 20V4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 4h10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 8h7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 12h4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDownZA icon.
-    /// </summary>
-    public static IconData ArrowDownZA { get; } = new IconData("arrow-down-z-a", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 16 4 4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 4h5l-5 6h5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 20v-3.5a2.5 2.5 0 0 1 5 0V20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 18h-5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowDown icon.
-    /// </summary>
-    public static IconData ArrowDown { get; } = new IconData("arrow-down", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 5v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m19 12-7 7-7-7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowLeftFromLine icon.
-    /// </summary>
-    public static IconData ArrowLeftFromLine { get; } = new IconData("arrow-left-from-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 6-6 6 6 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 12h14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 19V5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowLeftRight icon.
-    /// </summary>
-    public static IconData ArrowLeftRight { get; } = new IconData("arrow-left-right", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 3 4 7l4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 7h16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m16 21 4-4-4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 17H4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowLeftToLine icon.
-    /// </summary>
-    public static IconData ArrowLeftToLine { get; } = new IconData("arrow-left-to-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 19V5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m13 6-6 6 6 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 12h14" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowLeft icon.
-    /// </summary>
-    public static IconData ArrowLeft { get; } = new IconData("arrow-left", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m12 19-7-7 7-7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 12H5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowRightFromLine icon.
-    /// </summary>
-    public static IconData ArrowRightFromLine { get; } = new IconData("arrow-right-from-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 5v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 12H7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15 18 6-6-6-6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowRightLeft icon.
-    /// </summary>
-    public static IconData ArrowRightLeft { get; } = new IconData("arrow-right-left", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m16 3 4 4-4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 7H4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m8 21-4-4 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 17h16" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowRightToLine icon.
-    /// </summary>
-    public static IconData ArrowRightToLine { get; } = new IconData("arrow-right-to-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 12H3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m11 18 6-6-6-6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 5v14" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowRight icon.
-    /// </summary>
-    public static IconData ArrowRight { get; } = new IconData("arrow-right", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 12h14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m12 5 7 7-7 7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUp01 icon.
-    /// </summary>
-    public static IconData ArrowUp01 { get; } = new IconData("arrow-up-0-1", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "15" },
-            { "y", "4" },
-            { "width", "4" },
-            { "height", "6" },
-            { "ry", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 20v-6h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 20h4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUp10 icon.
-    /// </summary>
-    public static IconData ArrowUp10 { get; } = new IconData("arrow-up-1-0", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 10V4h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 10h4" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "15" },
-            { "y", "14" },
-            { "width", "4" },
-            { "height", "6" },
-            { "ry", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpAZ icon.
-    /// </summary>
-    public static IconData ArrowUpAZ { get; } = new IconData("arrow-up-a-z", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 8h-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 10V6.5a2.5 2.5 0 0 1 5 0V10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 14h5l-5 6h5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpDown icon.
-    /// </summary>
-    public static IconData ArrowUpDown { get; } = new IconData("arrow-up-down", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m21 16-4 4-4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 20V4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpFromDot icon.
-    /// </summary>
-    public static IconData ArrowUpFromDot { get; } = new IconData("arrow-up-from-dot", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m5 9 7-7 7 7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 16V2" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "21" },
-            { "r", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpFromLine icon.
-    /// </summary>
-    public static IconData ArrowUpFromLine { get; } = new IconData("arrow-up-from-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m18 9-6-6-6 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 3v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 21h14" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpLeft icon.
-    /// </summary>
-    public static IconData ArrowUpLeft { get; } = new IconData("arrow-up-left", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 17V7h10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 17 7 7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpNarrowWide icon.
-    /// </summary>
-    public static IconData ArrowUpNarrowWide { get; } = new IconData("arrow-up-narrow-wide", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 12h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 16h7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 20h10" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpRight icon.
-    /// </summary>
-    public static IconData ArrowUpRight { get; } = new IconData("arrow-up-right", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 7h10v10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 17 17 7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpToLine icon.
-    /// </summary>
-    public static IconData ArrowUpToLine { get; } = new IconData("arrow-up-to-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 3h14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m18 13-6-6-6 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 7v14" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpWideNarrow icon.
-    /// </summary>
-    public static IconData ArrowUpWideNarrow { get; } = new IconData("arrow-up-wide-narrow", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 12h10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 16h7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 20h4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUpZA icon.
-    /// </summary>
-    public static IconData ArrowUpZA { get; } = new IconData("arrow-up-z-a", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 4-4 4 4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 4h5l-5 6h5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 20v-3.5a2.5 2.5 0 0 1 5 0V20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 18h-5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowUp icon.
-    /// </summary>
-    public static IconData ArrowUp { get; } = new IconData("arrow-up", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m5 12 7-7 7 7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 19V5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the ArrowsUpFromLine icon.
-    /// </summary>
-    public static IconData ArrowsUpFromLine { get; } = new IconData("arrows-up-from-line", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m4 6 3-3 3 3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 17V3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m14 6 3-3 3 3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 17V3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 21h16" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Asterisk icon.
-    /// </summary>
-    public static IconData Asterisk { get; } = new IconData("asterisk", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 6v12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.196 9 6.804 15" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m6.804 9 10.392 6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AtSign icon.
-    /// </summary>
-    public static IconData AtSign { get; } = new IconData("at-sign", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Atom icon.
-    /// </summary>
-    public static IconData Atom { get; } = new IconData("atom", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AudioLines icon.
-    /// </summary>
-    public static IconData AudioLines { get; } = new IconData("audio-lines", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 10v3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 6v11" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 3v18" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 8v7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 5v13" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 10v3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the AudioWaveform icon.
-    /// </summary>
-    public static IconData AudioWaveform { get; } = new IconData("audio-waveform", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Award icon.
-    /// </summary>
-    public static IconData Award { get; } = new IconData("award", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "8" },
-            { "r", "6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Axe icon.
-    /// </summary>
-    public static IconData Axe { get; } = new IconData("axe", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m14 12-8.381 8.38a1 1 0 0 1-3.001-3L11 9" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 15.5a.5.5 0 0 0 .5.5A6.5 6.5 0 0 0 22 9.5a.5.5 0 0 0-.5-.5h-1.672a2 2 0 0 1-1.414-.586l-5.062-5.062a1.205 1.205 0 0 0-1.704 0L9.352 5.648a1.205 1.205 0 0 0 0 1.704l5.062 5.062A2 2 0 0 1 15 13.828z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Axis3d icon.
-    /// </summary>
-    public static IconData Axis3d { get; } = new IconData("axis-3d", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13.5 10.5 15 9" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 4v15a1 1 0 0 0 1 1h15" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4.293 19.707 6 18" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 15 1.5-1.5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Baby icon.
-    /// </summary>
-    public static IconData Baby { get; } = new IconData("baby", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 12h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 12h.01" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Backpack icon.
-    /// </summary>
-    public static IconData Backpack { get; } = new IconData("backpack", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 10h8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 18h8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeAlert icon.
-    /// </summary>
-    public static IconData BadgeAlert { get; } = new IconData("badge-alert", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "12" },
-            { "x2", "12" },
-            { "y1", "8" },
-            { "y2", "12" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "12" },
-            { "x2", "12.01" },
-            { "y1", "16" },
-            { "y2", "16" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeCent icon.
-    /// </summary>
-    public static IconData BadgeCent { get; } = new IconData("badge-cent", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 7v10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15.4 10a4 4 0 1 0 0 4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeCheck icon.
-    /// </summary>
-    public static IconData BadgeCheck { get; } = new IconData("badge-check", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 12 2 2 4-4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeDollarSign icon.
-    /// </summary>
-    public static IconData BadgeDollarSign { get; } = new IconData("badge-dollar-sign", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 18V6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeEuro icon.
-    /// </summary>
-    public static IconData BadgeEuro { get; } = new IconData("badge-euro", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 12h5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 9.4a4 4 0 1 0 0 5.2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeIndianRupee icon.
-    /// </summary>
-    public static IconData BadgeIndianRupee { get; } = new IconData("badge-indian-rupee", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 8h8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 12h8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m13 17-5-1h1a4 4 0 0 0 0-8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeInfo icon.
-    /// </summary>
-    public static IconData BadgeInfo { get; } = new IconData("badge-info", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "12" },
-            { "x2", "12" },
-            { "y1", "16" },
-            { "y2", "12" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "12" },
-            { "x2", "12.01" },
-            { "y1", "8" },
-            { "y2", "8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeJapaneseYen icon.
-    /// </summary>
-    public static IconData BadgeJapaneseYen { get; } = new IconData("badge-japanese-yen", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 8 3 3v7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m12 11 3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 12h6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 16h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeMinus icon.
-    /// </summary>
-    public static IconData BadgeMinus { get; } = new IconData("badge-minus", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "8" },
-            { "x2", "16" },
-            { "y1", "12" },
-            { "y2", "12" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgePercent icon.
-    /// </summary>
-    public static IconData BadgePercent { get; } = new IconData("badge-percent", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15 9-6 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 9h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 15h.01" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgePlus icon.
-    /// </summary>
-    public static IconData BadgePlus { get; } = new IconData("badge-plus", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "12" },
-            { "x2", "12" },
-            { "y1", "8" },
-            { "y2", "16" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "8" },
-            { "x2", "16" },
-            { "y1", "12" },
-            { "y2", "12" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgePoundSterling icon.
-    /// </summary>
-    public static IconData BadgePoundSterling { get; } = new IconData("badge-pound-sterling", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 12h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 16V9.5a2.5 2.5 0 0 1 5 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 16h7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeQuestionMark icon.
-    /// </summary>
-    public static IconData BadgeQuestionMark { get; } = new IconData("badge-question-mark", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "12" },
-            { "x2", "12.01" },
-            { "y1", "17" },
-            { "y2", "17" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeRussianRuble icon.
-    /// </summary>
-    public static IconData BadgeRussianRuble { get; } = new IconData("badge-russian-ruble", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 16h5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 12h5a2 2 0 1 0 0-4h-3v9" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeSwissFranc icon.
-    /// </summary>
-    public static IconData BadgeSwissFranc { get; } = new IconData("badge-swiss-franc", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 17V8h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 12h3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 16h4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeTurkishLira icon.
-    /// </summary>
-    public static IconData BadgeTurkishLira { get; } = new IconData("badge-turkish-lira", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11 7v10a5 5 0 0 0 5-5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15 8-6 3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BadgeX icon.
-    /// </summary>
-    public static IconData BadgeX { get; } = new IconData("badge-x", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "15" },
-            { "x2", "9" },
-            { "y1", "9" },
-            { "y2", "15" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "9" },
-            { "x2", "15" },
-            { "y1", "9" },
-            { "y2", "15" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Badge icon.
-    /// </summary>
-    public static IconData Badge { get; } = new IconData("badge", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BaggageClaim icon.
-    /// </summary>
-    public static IconData BaggageClaim { get; } = new IconData("baggage-claim", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 14V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v10" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "13" },
-            { "height", "8" },
-            { "x", "8" },
-            { "y", "6" },
-            { "rx", "1" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "18" },
-            { "cy", "20" },
-            { "r", "2" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "9" },
-            { "cy", "20" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Balloon icon.
-    /// </summary>
-    public static IconData Balloon { get; } = new IconData("balloon", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 16v1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 6a2 2 0 0 1 2 2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 8c0 4-3.5 8-6 8s-6-4-6-8a6 6 0 0 1 12 0" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Ban icon.
-    /// </summary>
-    public static IconData Ban { get; } = new IconData("ban", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4.929 4.929 19.07 19.071" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Banana icon.
-    /// </summary>
-    public static IconData Banana { get; } = new IconData("banana", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 13c3.5-2 8-2 10 2a5.5 5.5 0 0 1 8 5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5.15 17.89c5.52-1.52 8.65-6.89 7-12C11.55 4 11.5 2 13 2c3.22 0 5 5.5 5 8 0 6.5-4.2 12-10.49 12C5.11 22 2 22 2 20c0-1.5 1.14-1.55 3.15-2.11Z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bandage icon.
-    /// </summary>
-    public static IconData Bandage { get; } = new IconData("bandage", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 10.01h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 14.01h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 10.01h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 14.01h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 6v12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 6v12" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "2" },
-            { "y", "6" },
-            { "width", "20" },
-            { "height", "12" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BanknoteArrowDown icon.
-    /// </summary>
-    public static IconData BanknoteArrowDown { get; } = new IconData("banknote-arrow-down", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m16 19 3 3 3-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 12h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 16v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12h.01" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BanknoteArrowUp icon.
-    /// </summary>
-    public static IconData BanknoteArrowUp { get; } = new IconData("banknote-arrow-up", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 12h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 22v-6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 19-3-3-3 3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12h.01" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BanknoteX icon.
-    /// </summary>
-    public static IconData BanknoteX { get; } = new IconData("banknote-x", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m17 17 5 5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 12h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 17-5 5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12h.01" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Banknote icon.
-    /// </summary>
-    public static IconData Banknote { get; } = new IconData("banknote", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "20" },
-            { "height", "12" },
-            { "x", "2" },
-            { "y", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12h.01M18 12h.01" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Barcode icon.
-    /// </summary>
-    public static IconData Barcode { get; } = new IconData("barcode", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 5v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 5v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 5v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 5v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 5v14" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Barrel icon.
-    /// </summary>
-    public static IconData Barrel { get; } = new IconData("barrel", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 3a41 41 0 0 0 0 18" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 3a41 41 0 0 1 0 18" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.84 17h16.32" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.84 7h16.32" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Baseline icon.
-    /// </summary>
-    public static IconData Baseline { get; } = new IconData("baseline", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 20h16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m6 16 6-12 6 12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 12h8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bath icon.
-    /// </summary>
-    public static IconData Bath { get; } = new IconData("bath", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 4 8 6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 19v2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 12h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 19v2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BatteryCharging icon.
-    /// </summary>
-    public static IconData BatteryCharging { get; } = new IconData("battery-charging", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m11 7-3 5h4l-3 5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BatteryFull icon.
-    /// </summary>
-    public static IconData BatteryFull { get; } = new IconData("battery-full", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 10v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 10v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 10v4" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "2" },
-            { "y", "6" },
-            { "width", "16" },
-            { "height", "12" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BatteryLow icon.
-    /// </summary>
-    public static IconData BatteryLow { get; } = new IconData("battery-low", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 14v-4" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "2" },
-            { "y", "6" },
-            { "width", "16" },
-            { "height", "12" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BatteryMedium icon.
-    /// </summary>
-    public static IconData BatteryMedium { get; } = new IconData("battery-medium", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 14v-4" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "2" },
-            { "y", "6" },
-            { "width", "16" },
-            { "height", "12" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BatteryPlus icon.
-    /// </summary>
-    public static IconData BatteryPlus { get; } = new IconData("battery-plus", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 9v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12.543 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.605" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 12h6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7.606 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.606" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BatteryWarning icon.
-    /// </summary>
-    public static IconData BatteryWarning { get; } = new IconData("battery-warning", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 17h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 7v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 14v-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Battery icon.
-    /// </summary>
-    public static IconData Battery { get; } = new IconData("battery", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M 22 14 L 22 10" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "2" },
-            { "y", "6" },
-            { "width", "16" },
-            { "height", "12" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Beaker icon.
-    /// </summary>
-    public static IconData Beaker { get; } = new IconData("beaker", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4.5 3h15" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 14h12" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BeanOff icon.
-    /// </summary>
-    public static IconData BeanOff { get; } = new IconData("bean-off", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 9c-.64.64-1.521.954-2.402 1.165A6 6 0 0 0 8 22a13.96 13.96 0 0 0 9.9-4.1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.75 5.093A6 6 0 0 1 22 8c0 2.411-.61 4.68-1.683 6.66" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5.341 10.62a4 4 0 0 0 6.487 1.208M10.62 5.341a4.015 4.015 0 0 1 2.039 2.04" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "2" },
-            { "x2", "22" },
-            { "y1", "2" },
-            { "y2", "22" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bean icon.
-    /// </summary>
-    public static IconData Bean { get; } = new IconData("bean", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.165 6.598C9.954 7.478 9.64 8.36 9 9c-.64.64-1.521.954-2.402 1.165A6 6 0 0 0 8 22c7.732 0 14-6.268 14-14a6 6 0 0 0-11.835-1.402Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5.341 10.62a4 4 0 1 0 5.279-5.28" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BedDouble icon.
-    /// </summary>
-    public static IconData BedDouble { get; } = new IconData("bed-double", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 4v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 18h20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BedSingle icon.
-    /// </summary>
-    public static IconData BedSingle { get; } = new IconData("bed-single", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 18h18" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bed icon.
-    /// </summary>
-    public static IconData Bed { get; } = new IconData("bed", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 4v16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 8h18a2 2 0 0 1 2 2v10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M2 17h20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 8v9" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Beef icon.
-    /// </summary>
-    public static IconData Beef { get; } = new IconData("beef", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16.4 13.7A6.5 6.5 0 1 0 6.28 6.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m18.5 6 2.19 4.5a6.48 6.48 0 0 1-2.29 7.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12.5" },
-            { "cy", "8.5" },
-            { "r", "2.5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BeerOff icon.
-    /// </summary>
-    public static IconData BeerOff { get; } = new IconData("beer-off", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13 13v5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 11.47V8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 11h1a3 3 0 0 1 2.745 4.211" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 2 20 20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7.536 7.535C6.766 7.649 6.154 8 5.5 8a2.5 2.5 0 0 1-1.768-4.268" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8.727 3.204C9.306 2.767 9.885 2 11 2c1.56 0 2 1.5 3 1.5s1.72-.5 2.5-.5a1 1 0 1 1 0 5c-.78 0-1.5-.5-2.5-.5a3.149 3.149 0 0 0-.842.12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 14.6V18" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Beer icon.
-    /// </summary>
-    public static IconData Beer { get; } = new IconData("beer", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 11h1a3 3 0 0 1 0 6h-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 12v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13 12v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BellDot icon.
-    /// </summary>
-    public static IconData BellDot { get; } = new IconData("bell-dot", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11.68 2.009A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673c-.824-.85-1.678-1.731-2.21-3.348" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "18" },
-            { "cy", "5" },
-            { "r", "3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BellElectric icon.
-    /// </summary>
-    public static IconData BellElectric { get; } = new IconData("bell-electric", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18.518 17.347A7 7 0 0 1 14 19" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18.8 4A11 11 0 0 1 20 9" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 9h.01" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "20" },
-            { "cy", "16" },
-            { "r", "2" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "9" },
-            { "cy", "9" },
-            { "r", "7" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "4" },
-            { "y", "16" },
-            { "width", "10" },
-            { "height", "6" },
-            { "rx", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BellMinus icon.
-    /// </summary>
-    public static IconData BellMinus { get; } = new IconData("bell-minus", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 8h6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16.243 3.757A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673A9.4 9.4 0 0 1 18.667 12" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BellOff icon.
-    /// </summary>
-    public static IconData BellOff { get; } = new IconData("bell-off", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 .258-1.742" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 2 20 20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BellPlus icon.
-    /// </summary>
-    public static IconData BellPlus { get; } = new IconData("bell-plus", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 8h6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 5v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20.002 14.464a9 9 0 0 0 .738.863A1 1 0 0 1 20 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 8.75-5.332" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BellRing icon.
-    /// </summary>
-    public static IconData BellRing { get; } = new IconData("bell-ring", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 8c0-2.3-.8-4.3-2-6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 2C2.8 3.7 2 5.7 2 8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bell icon.
-    /// </summary>
-    public static IconData Bell { get; } = new IconData("bell", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BetweenHorizontalEnd icon.
-    /// </summary>
-    public static IconData BetweenHorizontalEnd { get; } = new IconData("between-horizontal-end", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "13" },
-            { "height", "7" },
-            { "x", "3" },
-            { "y", "3" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 15-3-3 3-3" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "13" },
-            { "height", "7" },
-            { "x", "3" },
-            { "y", "14" },
-            { "rx", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BetweenHorizontalStart icon.
-    /// </summary>
-    public static IconData BetweenHorizontalStart { get; } = new IconData("between-horizontal-start", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "13" },
-            { "height", "7" },
-            { "x", "8" },
-            { "y", "3" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 9 3 3-3 3" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "13" },
-            { "height", "7" },
-            { "x", "8" },
-            { "y", "14" },
-            { "rx", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BetweenVerticalEnd icon.
-    /// </summary>
-    public static IconData BetweenVerticalEnd { get; } = new IconData("between-vertical-end", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "7" },
-            { "height", "13" },
-            { "x", "3" },
-            { "y", "3" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 22 3-3 3 3" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "7" },
-            { "height", "13" },
-            { "x", "14" },
-            { "y", "3" },
-            { "rx", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BetweenVerticalStart icon.
-    /// </summary>
-    public static IconData BetweenVerticalStart { get; } = new IconData("between-vertical-start", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "7" },
-            { "height", "13" },
-            { "x", "3" },
-            { "y", "8" },
-            { "rx", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15 2-3 3-3-3" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "width", "7" },
-            { "height", "13" },
-            { "x", "14" },
-            { "y", "8" },
-            { "rx", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BicepsFlexed icon.
-    /// </summary>
-    public static IconData BicepsFlexed { get; } = new IconData("biceps-flexed", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M15 14a5 5 0 0 0-7.584 2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9.964 6.825C8.019 7.977 9.5 13 8 15" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bike icon.
-    /// </summary>
-    public static IconData Bike { get; } = new IconData("bike", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "18.5" },
-            { "cy", "17.5" },
-            { "r", "3.5" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "5.5" },
-            { "cy", "17.5" },
-            { "r", "3.5" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "15" },
-            { "cy", "5" },
-            { "r", "1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 17.5V14l-3-3 4-3 2 3h2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Binary icon.
-    /// </summary>
-    public static IconData Binary { get; } = new IconData("binary", new IconElement[]
-    {
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "14" },
-            { "y", "14" },
-            { "width", "4" },
-            { "height", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "6" },
-            { "y", "4" },
-            { "width", "4" },
-            { "height", "6" },
-            { "rx", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 20h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 10h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 14h2v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 4h2v6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Binoculars icon.
-    /// </summary>
-    public static IconData Binoculars { get; } = new IconData("binoculars", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 10h4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M 22 16 L 2 16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Biohazard icon.
-    /// </summary>
-    public static IconData Biohazard { get; } = new IconData("biohazard", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "11.9" },
-            { "r", "2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6.7 3.4c-.9 2.5 0 5.2 2.2 6.7C6.5 9 3.7 9.6 2 11.6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m8.9 10.1 1.4.8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.3 3.4c.9 2.5 0 5.2-2.2 6.7 2.4-1.2 5.2-.6 6.9 1.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m15.1 10.1-1.4.8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16.7 20.8c-2.6-.4-4.6-2.6-4.7-5.3-.2 2.6-2.1 4.8-4.7 5.2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 13.9v1.6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13.5 5.4c-1-.2-2-.2-3 0" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 16.4c.7-.7 1.2-1.6 1.5-2.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5.5 13.9c.3.9.8 1.8 1.5 2.5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bird icon.
-    /// </summary>
-    public static IconData Bird { get; } = new IconData("bird", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 7h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m20 7 2 .5-2 .5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 18v3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14 17.75V21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 18a6 6 0 0 0 3.84-10.61" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Birdhouse icon.
-    /// </summary>
-    public static IconData Birdhouse { get; } = new IconData("birdhouse", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 18v4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m17 18 1.956-11.468" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m3 8 7.82-5.615a2 2 0 0 1 2.36 0L21 8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 18h16" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M7 18 5.044 6.532" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "10" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bitcoin icon.
-    /// </summary>
-    public static IconData Bitcoin { get; } = new IconData("bitcoin", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.215-6.893m-1.215 6.893-3.94-.694m5.155-6.2L8.29 4.26m5.908 1.042.348-1.97M7.48 20.364l3.126-17.727" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Blend icon.
-    /// </summary>
-    public static IconData Blend { get; } = new IconData("blend", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "9" },
-            { "cy", "9" },
-            { "r", "7" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "15" },
-            { "cy", "15" },
-            { "r", "7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Blinds icon.
-    /// </summary>
-    public static IconData Blinds { get; } = new IconData("blinds", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 3h18" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 7H8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 11H8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 19h10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 15h12" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 3v14" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "4" },
-            { "cy", "19" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Blocks icon.
-    /// </summary>
-    public static IconData Blocks { get; } = new IconData("blocks", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "14" },
-            { "y", "2" },
-            { "width", "8" },
-            { "height", "8" },
-            { "rx", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BluetoothConnected icon.
-    /// </summary>
-    public static IconData BluetoothConnected { get; } = new IconData("bluetooth-connected", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m7 7 10 10-5 5V2l5 5L7 17" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "18" },
-            { "x2", "21" },
-            { "y1", "12" },
-            { "y2", "12" }
-        }),
-        new IconElement("line", new Dictionary<string, string>
-        {
-            { "x1", "3" },
-            { "x2", "6" },
-            { "y1", "12" },
-            { "y2", "12" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BluetoothOff icon.
-    /// </summary>
-    public static IconData BluetoothOff { get; } = new IconData("bluetooth-off", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m17 17-5 5V12l-5 5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m2 2 20 20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14.5 9.5 17 7l-5-5v4.5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BluetoothSearching icon.
-    /// </summary>
-    public static IconData BluetoothSearching { get; } = new IconData("bluetooth-searching", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m7 7 10 10-5 5V2l5 5L7 17" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20.83 14.83a4 4 0 0 0 0-5.66" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 12h.01" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bluetooth icon.
-    /// </summary>
-    public static IconData Bluetooth { get; } = new IconData("bluetooth", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m7 7 10 10-5 5V2l5 5L7 17" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bold icon.
-    /// </summary>
-    public static IconData Bold { get; } = new IconData("bold", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bolt icon.
-    /// </summary>
-    public static IconData Bolt { get; } = new IconData("bolt", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "12" },
-            { "cy", "12" },
-            { "r", "4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bomb icon.
-    /// </summary>
-    public static IconData Bomb { get; } = new IconData("bomb", new IconElement[]
-    {
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "11" },
-            { "cy", "13" },
-            { "r", "9" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M14.35 4.65 16.3 2.7a2.41 2.41 0 0 1 3.4 0l1.6 1.6a2.4 2.4 0 0 1 0 3.4l-1.95 1.95" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m22 2-1.5 1.5" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the Bone icon.
-    /// </summary>
-    public static IconData Bone { get; } = new IconData("bone", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookA icon.
-    /// </summary>
-    public static IconData BookA { get; } = new IconData("book-a", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m8 13 4-7 4 7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9.1 11h5.7" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookAlert icon.
-    /// </summary>
-    public static IconData BookAlert { get; } = new IconData("book-alert", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 13h.01" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 6v3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookAudio icon.
-    /// </summary>
-    public static IconData BookAudio { get; } = new IconData("book-audio", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 6v7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 8v3" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 8v3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookCheck icon.
-    /// </summary>
-    public static IconData BookCheck { get; } = new IconData("book-check", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 9.5 2 2 4-4" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookCopy icon.
-    /// </summary>
-    public static IconData BookCopy { get; } = new IconData("book-copy", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5 7a2 2 0 0 0-2 2v11" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M5.803 18H5a2 2 0 0 0 0 4h9.5a.5.5 0 0 0 .5-.5V21" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 15V4a2 2 0 0 1 2-2h9.5a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H11a2 2 0 0 1 0-4h10" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookDashed icon.
-    /// </summary>
-    public static IconData BookDashed { get; } = new IconData("book-dashed", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 17h1.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 22h1.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 2h1.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.5 22H19a1 1 0 0 0 1-1" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17.5 2H19a1 1 0 0 1 1 1v1.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 14v3h-2.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 8.5V10" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 10V8.5" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5V14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 4.5A2.5 2.5 0 0 1 6.5 2H8" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 22H6.5a1 1 0 0 1 0-5H8" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookDown icon.
-    /// </summary>
-    public static IconData BookDown { get; } = new IconData("book-down", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 13V7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m9 10 3 3 3-3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookHeadphones icon.
-    /// </summary>
-    public static IconData BookHeadphones { get; } = new IconData("book-headphones", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8 12v-2a4 4 0 0 1 8 0v2" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "15" },
-            { "cy", "12" },
-            { "r", "1" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "9" },
-            { "cy", "12" },
-            { "r", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookHeart icon.
-    /// </summary>
-    public static IconData BookHeart { get; } = new IconData("book-heart", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M8.62 9.8A2.25 2.25 0 1 1 12 6.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookImage icon.
-    /// </summary>
-    public static IconData BookImage { get; } = new IconData("book-image", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "10" },
-            { "cy", "8" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookKey icon.
-    /// </summary>
-    public static IconData BookKey { get; } = new IconData("book-key", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M13 2H6.5A2.5 2.5 0 0 0 4 4.5v15" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 2v6" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M17 4h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 15.2V21a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("circle", new Dictionary<string, string>
-        {
-            { "cx", "17" },
-            { "cy", "10" },
-            { "r", "2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookLock icon.
-    /// </summary>
-    public static IconData BookLock { get; } = new IconData("book-lock", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M18 6V4a2 2 0 1 0-4 0v2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M20 15v6a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H10" }
-        }),
-        new IconElement("rect", new Dictionary<string, string>
-        {
-            { "x", "12" },
-            { "y", "6" },
-            { "width", "8" },
-            { "height", "5" },
-            { "rx", "1" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookMarked icon.
-    /// </summary>
-    public static IconData BookMarked { get; } = new IconData("book-marked", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M10 2v8l3-3 3 3V2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookMinus icon.
-    /// </summary>
-    public static IconData BookMinus { get; } = new IconData("book-minus", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M9 10h6" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookOpenCheck icon.
-    /// </summary>
-    public static IconData BookOpenCheck { get; } = new IconData("book-open-check", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 21V7" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "m16 12 2 2 4-4" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookOpenText icon.
-    /// </summary>
-    public static IconData BookOpenText { get; } = new IconData("book-open-text", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 7v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 12h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M16 8h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 12h2" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M6 8h2" }
-        })
-    });
-
-    /// <summary>
-    /// Gets the BookOpen icon.
-    /// </summary>
-    public static IconData BookOpen { get; } = new IconData("book-open", new IconElement[]
-    {
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M12 7v14" }
-        }),
-        new IconElement("path", new Dictionary<string, string>
-        {
-            { "d", "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" }
-        })
-    });
+        public static IconData AArrowDown { get; } = new IconData("a-arrow-down", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m14 12 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 16V7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.304 13h6.392" }
+            }))
+        });
+
+        public static IconData AArrowUp { get; } = new IconData("a-arrow-up", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m14 11 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 16V7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.304 13h6.392" }
+            }))
+        });
+
+        public static IconData ALargeSmall { get; } = new IconData("a-large-small", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15.697 14h5.606" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.304 13h6.392" }
+            }))
+        });
+
+        public static IconData Accessibility { get; } = new IconData("accessibility", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "16" },
+                { "cy", "4" },
+                { "r", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m18 19 1-7-6 1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m5 8 3-3 5.5 3-2.36 3.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4.24 14.5a5 5 0 0 0 6.88 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13.76 17.5a5 5 0 0 0-6.88-6" }
+            }))
+        });
+
+        public static IconData Activity { get; } = new IconData("activity", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" }
+            }))
+        });
+
+        public static IconData AirVent { get; } = new IconData("air-vent", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 17.5a2.5 2.5 0 1 1-4 2.03V12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 8h12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.6 15.572A2 2 0 1 0 10 17v-5" }
+            }))
+        });
+
+        public static IconData Airplay { get; } = new IconData("airplay", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m12 15 5 6H7Z" }
+            }))
+        });
+
+        public static IconData AlarmClockCheck { get; } = new IconData("alarm-clock-check", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "13" },
+                { "r", "8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 3 2 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 6-3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.38 18.7 4 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.64 18.67 20 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 13 2 2 4-4" }
+            }))
+        });
+
+        public static IconData AlarmClockMinus { get; } = new IconData("alarm-clock-minus", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "13" },
+                { "r", "8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 3 2 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 6-3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.38 18.7 4 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.64 18.67 20 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 13h6" }
+            }))
+        });
+
+        public static IconData AlarmClockOff { get; } = new IconData("alarm-clock-off", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.87 6.87a8 8 0 1 0 11.26 11.26" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19.9 14.25a8 8 0 0 0-9.15-9.15" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 6-3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.26 18.67 4 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 2 20 20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 4 2 6" }
+            }))
+        });
+
+        public static IconData AlarmClockPlus { get; } = new IconData("alarm-clock-plus", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "13" },
+                { "r", "8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 3 2 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 6-3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.38 18.7 4 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.64 18.67 20 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 10v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 13h6" }
+            }))
+        });
+
+        public static IconData AlarmClock { get; } = new IconData("alarm-clock", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "13" },
+                { "r", "8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 9v4l2 2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 3 2 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 6-3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.38 18.7 4 21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.64 18.67 20 21" }
+            }))
+        });
+
+        public static IconData AlarmSmoke { get; } = new IconData("alarm-smoke", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 21c0-2.5 2-2.5 2-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 21c0-2.5 2-2.5 2-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m19 8-.8 3a1.25 1.25 0 0 1-1.2 1H7a1.25 1.25 0 0 1-1.2-1L5 8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 3a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 21c0-2.5 2-2.5 2-5" }
+            }))
+        });
+
+        public static IconData Album { get; } = new IconData("album", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "18" },
+                { "height", "18" },
+                { "x", "3" },
+                { "y", "3" },
+                { "rx", "2" },
+                { "ry", "2" }
+            })),
+            new IconElement("polyline", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "points", "11 3 11 11 14 8 17 11 17 3" }
+            }))
+        });
+
+        public static IconData AlignCenterHorizontal { get; } = new IconData("align-center-horizontal", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 12h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 8V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 16v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 8V7c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v1" }
+            }))
+        });
+
+        public static IconData AlignCenterVertical { get; } = new IconData("align-center-vertical", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 2v20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 10H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 10h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 20H7a2 2 0 0 1-2-2v-2c0-1.1.9-2 2-2h1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 14h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1" }
+            }))
+        });
+
+        public static IconData AlignEndHorizontal { get; } = new IconData("align-end-horizontal", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "16" },
+                { "x", "4" },
+                { "y", "2" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "9" },
+                { "x", "14" },
+                { "y", "9" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 22H2" }
+            }))
+        });
+
+        public static IconData AlignEndVertical { get; } = new IconData("align-end-vertical", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "16" },
+                { "height", "6" },
+                { "x", "2" },
+                { "y", "4" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "9" },
+                { "height", "6" },
+                { "x", "9" },
+                { "y", "14" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 22V2" }
+            }))
+        });
+
+        public static IconData AlignHorizontalDistributeCenter { get; } = new IconData("align-horizontal-distribute-center", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "4" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "14" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 22v-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 7V2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 22v-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 5V2" }
+            }))
+        });
+
+        public static IconData AlignHorizontalDistributeEnd { get; } = new IconData("align-horizontal-distribute-end", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "4" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "14" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 2v20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 2v20" }
+            }))
+        });
+
+        public static IconData AlignHorizontalDistributeStart { get; } = new IconData("align-horizontal-distribute-start", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "4" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "14" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 2v20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 2v20" }
+            }))
+        });
+
+        public static IconData AlignHorizontalJustifyCenter { get; } = new IconData("align-horizontal-justify-center", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "2" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "16" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 2v20" }
+            }))
+        });
+
+        public static IconData AlignHorizontalJustifyEnd { get; } = new IconData("align-horizontal-justify-end", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "2" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "12" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 2v20" }
+            }))
+        });
+
+        public static IconData AlignHorizontalJustifyStart { get; } = new IconData("align-horizontal-justify-start", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "6" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "16" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 2v20" }
+            }))
+        });
+
+        public static IconData AlignHorizontalSpaceAround { get; } = new IconData("align-horizontal-space-around", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "9" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 22V2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 22V2" }
+            }))
+        });
+
+        public static IconData AlignHorizontalSpaceBetween { get; } = new IconData("align-horizontal-space-between", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "14" },
+                { "x", "3" },
+                { "y", "5" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "10" },
+                { "x", "15" },
+                { "y", "7" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 2v20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 2v20" }
+            }))
+        });
+
+        public static IconData AlignStartHorizontal { get; } = new IconData("align-start-horizontal", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "16" },
+                { "x", "4" },
+                { "y", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "6" },
+                { "height", "9" },
+                { "x", "14" },
+                { "y", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 2H2" }
+            }))
+        });
+
+        public static IconData AlignStartVertical { get; } = new IconData("align-start-vertical", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "9" },
+                { "height", "6" },
+                { "x", "6" },
+                { "y", "14" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "16" },
+                { "height", "6" },
+                { "x", "6" },
+                { "y", "4" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 2v20" }
+            }))
+        });
+
+        public static IconData AlignVerticalDistributeCenter { get; } = new IconData("align-vertical-distribute-center", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 17h-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 7h-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 17H2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 7H2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "5" },
+                { "y", "14" },
+                { "width", "14" },
+                { "height", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "7" },
+                { "y", "4" },
+                { "width", "10" },
+                { "height", "6" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData AlignVerticalDistributeEnd { get; } = new IconData("align-vertical-distribute-end", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "14" },
+                { "height", "6" },
+                { "x", "5" },
+                { "y", "14" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "4" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 20h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 10h20" }
+            }))
+        });
+
+        public static IconData AlignVerticalDistributeStart { get; } = new IconData("align-vertical-distribute-start", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "14" },
+                { "height", "6" },
+                { "x", "5" },
+                { "y", "14" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "4" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 14h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 4h20" }
+            }))
+        });
+
+        public static IconData AlignVerticalJustifyCenter { get; } = new IconData("align-vertical-justify-center", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "14" },
+                { "height", "6" },
+                { "x", "5" },
+                { "y", "16" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "2" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 12h20" }
+            }))
+        });
+
+        public static IconData AlignVerticalJustifyEnd { get; } = new IconData("align-vertical-justify-end", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "14" },
+                { "height", "6" },
+                { "x", "5" },
+                { "y", "12" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "2" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 22h20" }
+            }))
+        });
+
+        public static IconData AlignVerticalJustifyStart { get; } = new IconData("align-vertical-justify-start", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "14" },
+                { "height", "6" },
+                { "x", "5" },
+                { "y", "16" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 2h20" }
+            }))
+        });
+
+        public static IconData AlignVerticalSpaceAround { get; } = new IconData("align-vertical-space-around", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "9" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 20H2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 4H2" }
+            }))
+        });
+
+        public static IconData AlignVerticalSpaceBetween { get; } = new IconData("align-vertical-space-between", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "14" },
+                { "height", "6" },
+                { "x", "5" },
+                { "y", "15" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "10" },
+                { "height", "6" },
+                { "x", "7" },
+                { "y", "3" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 21h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 3h20" }
+            }))
+        });
+
+        public static IconData Ambulance { get; } = new IconData("ambulance", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 10H6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 8v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 18h6" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "17" },
+                { "cy", "18" },
+                { "r", "2" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "7" },
+                { "cy", "18" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData Ampersand { get; } = new IconData("ampersand", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 12h3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13" }
+            }))
+        });
+
+        public static IconData Ampersands { get; } = new IconData("ampersands", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 17c-5-3-7-7-7-9a2 2 0 0 1 4 0c0 2.5-5 2.5-5 6 0 1.7 1.3 3 3 3 2.8 0 5-2.2 5-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 17c-5-3-7-7-7-9a2 2 0 0 1 4 0c0 2.5-5 2.5-5 6 0 1.7 1.3 3 3 3 2.8 0 5-2.2 5-5" }
+            }))
+        });
+
+        public static IconData Amphora { get; } = new IconData("amphora", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 5H8a2 2 0 0 0 0 4h.68" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 5h2a2 2 0 0 1 0 4h-.68" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 22H6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 2h6" }
+            }))
+        });
+
+        public static IconData Anchor { get; } = new IconData("anchor", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 6v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m19 13 2-1a9 9 0 0 1-18 0l2 1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 11h6" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "4" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData Angry { get; } = new IconData("angry", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 16s-1.5-2-4-2-4 2-4 2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7.5 8 10 9" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m14 9 2.5-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 10h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 10h.01" }
+            }))
+        });
+
+        public static IconData Annoyed { get; } = new IconData("annoyed", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 15h8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 9h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 9h2" }
+            }))
+        });
+
+        public static IconData Antenna { get; } = new IconData("antenna", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 12 7 2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m7 12 5-10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m12 12 5-10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m17 12 5-10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4.5 7h15" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 16v6" }
+            }))
+        });
+
+        public static IconData Anvil { get; } = new IconData("anvil", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 12v5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 12v5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1" }
+            }))
+        });
+
+        public static IconData Aperture { get; } = new IconData("aperture", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m14.31 8 5.74 9.94" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9.69 8h11.48" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m7.38 12 5.74-9.94" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9.69 16 3.95 6.06" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14.31 16H2.83" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m16.62 12-5.74 9.94" }
+            }))
+        });
+
+        public static IconData AppWindowMac { get; } = new IconData("app-window-mac", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "20" },
+                { "height", "16" },
+                { "x", "2" },
+                { "y", "4" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 8h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 8h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 8h.01" }
+            }))
+        });
+
+        public static IconData AppWindow { get; } = new IconData("app-window", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "2" },
+                { "y", "4" },
+                { "width", "20" },
+                { "height", "16" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 4v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 8h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 4v4" }
+            }))
+        });
+
+        public static IconData Apple { get; } = new IconData("apple", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 6.528V3a1 1 0 0 1 1-1h0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21" }
+            }))
+        });
+
+        public static IconData ArchiveRestore { get; } = new IconData("archive-restore", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "20" },
+                { "height", "5" },
+                { "x", "2" },
+                { "y", "3" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 8v11a2 2 0 0 0 2 2h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 8v11a2 2 0 0 1-2 2h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 15 3-3 3 3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 12v9" }
+            }))
+        });
+
+        public static IconData ArchiveX { get; } = new IconData("archive-x", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "20" },
+                { "height", "5" },
+                { "x", "2" },
+                { "y", "3" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9.5 17 5-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9.5 12 5 5" }
+            }))
+        });
+
+        public static IconData Archive { get; } = new IconData("archive", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "20" },
+                { "height", "5" },
+                { "x", "2" },
+                { "y", "3" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 12h4" }
+            }))
+        });
+
+        public static IconData Armchair { get; } = new IconData("armchair", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 18v2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 18v2" }
+            }))
+        });
+
+        public static IconData ArrowBigDownDash { get; } = new IconData("arrow-big-down-dash", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 4h6" }
+            }))
+        });
+
+        public static IconData ArrowBigDown { get; } = new IconData("arrow-big-down", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z" }
+            }))
+        });
+
+        public static IconData ArrowBigLeftDash { get; } = new IconData("arrow-big-left-dash", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 9v6" }
+            }))
+        });
+
+        public static IconData ArrowBigLeft { get; } = new IconData("arrow-big-left", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z" }
+            }))
+        });
+
+        public static IconData ArrowBigRightDash { get; } = new IconData("arrow-big-right-dash", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 9v6" }
+            }))
+        });
+
+        public static IconData ArrowBigRight { get; } = new IconData("arrow-big-right", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 9a1 1 0 0 0 1-1V5.061a1 1 0 0 1 1.811-.75l6.836 6.836a1.207 1.207 0 0 1 0 1.707l-6.836 6.835a1 1 0 0 1-1.811-.75V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z" }
+            }))
+        });
+
+        public static IconData ArrowBigUpDash { get; } = new IconData("arrow-big-up-dash", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 20h6" }
+            }))
+        });
+
+        public static IconData ArrowBigUp { get; } = new IconData("arrow-big-up", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z" }
+            }))
+        });
+
+        public static IconData ArrowDown01 { get; } = new IconData("arrow-down-0-1", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 20V4" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "15" },
+                { "y", "4" },
+                { "width", "4" },
+                { "height", "6" },
+                { "ry", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 20v-6h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 20h4" }
+            }))
+        });
+
+        public static IconData ArrowDown10 { get; } = new IconData("arrow-down-1-0", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 20V4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 10V4h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 10h4" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "15" },
+                { "y", "14" },
+                { "width", "4" },
+                { "height", "6" },
+                { "ry", "2" }
+            }))
+        });
+
+        public static IconData ArrowDownAZ { get; } = new IconData("arrow-down-a-z", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 20V4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 8h-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 10V6.5a2.5 2.5 0 0 1 5 0V10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 14h5l-5 6h5" }
+            }))
+        });
+
+        public static IconData ArrowDownFromLine { get; } = new IconData("arrow-down-from-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 3H5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 21V7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m6 15 6 6 6-6" }
+            }))
+        });
+
+        public static IconData ArrowDownLeft { get; } = new IconData("arrow-down-left", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 7 7 17" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 17H7V7" }
+            }))
+        });
+
+        public static IconData ArrowDownNarrowWide { get; } = new IconData("arrow-down-narrow-wide", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 20V4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 4h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 8h7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 12h10" }
+            }))
+        });
+
+        public static IconData ArrowDownRight { get; } = new IconData("arrow-down-right", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m7 7 10 10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 7v10H7" }
+            }))
+        });
+
+        public static IconData ArrowDownToDot { get; } = new IconData("arrow-down-to-dot", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 2v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m19 9-7 7-7-7" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "21" },
+                { "r", "1" }
+            }))
+        });
+
+        public static IconData ArrowDownToLine { get; } = new IconData("arrow-down-to-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 17V3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m6 11 6 6 6-6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 21H5" }
+            }))
+        });
+
+        public static IconData ArrowDownUp { get; } = new IconData("arrow-down-up", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 20V4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m21 8-4-4-4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 4v16" }
+            }))
+        });
+
+        public static IconData ArrowDownWideNarrow { get; } = new IconData("arrow-down-wide-narrow", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 20V4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 4h10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 8h7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 12h4" }
+            }))
+        });
+
+        public static IconData ArrowDownZA { get; } = new IconData("arrow-down-z-a", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 16 4 4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 4h5l-5 6h5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 20v-3.5a2.5 2.5 0 0 1 5 0V20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 18h-5" }
+            }))
+        });
+
+        public static IconData ArrowDown { get; } = new IconData("arrow-down", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 5v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m19 12-7 7-7-7" }
+            }))
+        });
+
+        public static IconData ArrowLeftFromLine { get; } = new IconData("arrow-left-from-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 6-6 6 6 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 12h14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 19V5" }
+            }))
+        });
+
+        public static IconData ArrowLeftRight { get; } = new IconData("arrow-left-right", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 3 4 7l4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 7h16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m16 21 4-4-4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 17H4" }
+            }))
+        });
+
+        public static IconData ArrowLeftToLine { get; } = new IconData("arrow-left-to-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 19V5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m13 6-6 6 6 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 12h14" }
+            }))
+        });
+
+        public static IconData ArrowLeft { get; } = new IconData("arrow-left", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m12 19-7-7 7-7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 12H5" }
+            }))
+        });
+
+        public static IconData ArrowRightFromLine { get; } = new IconData("arrow-right-from-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 5v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 12H7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15 18 6-6-6-6" }
+            }))
+        });
+
+        public static IconData ArrowRightLeft { get; } = new IconData("arrow-right-left", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m16 3 4 4-4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 7H4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m8 21-4-4 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 17h16" }
+            }))
+        });
+
+        public static IconData ArrowRightToLine { get; } = new IconData("arrow-right-to-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 12H3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m11 18 6-6-6-6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 5v14" }
+            }))
+        });
+
+        public static IconData ArrowRight { get; } = new IconData("arrow-right", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 12h14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m12 5 7 7-7 7" }
+            }))
+        });
+
+        public static IconData ArrowUp01 { get; } = new IconData("arrow-up-0-1", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "15" },
+                { "y", "4" },
+                { "width", "4" },
+                { "height", "6" },
+                { "ry", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 20v-6h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 20h4" }
+            }))
+        });
+
+        public static IconData ArrowUp10 { get; } = new IconData("arrow-up-1-0", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 10V4h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 10h4" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "15" },
+                { "y", "14" },
+                { "width", "4" },
+                { "height", "6" },
+                { "ry", "2" }
+            }))
+        });
+
+        public static IconData ArrowUpAZ { get; } = new IconData("arrow-up-a-z", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 8h-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 10V6.5a2.5 2.5 0 0 1 5 0V10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 14h5l-5 6h5" }
+            }))
+        });
+
+        public static IconData ArrowUpDown { get; } = new IconData("arrow-up-down", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m21 16-4 4-4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 20V4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            }))
+        });
+
+        public static IconData ArrowUpFromDot { get; } = new IconData("arrow-up-from-dot", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m5 9 7-7 7 7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 16V2" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "21" },
+                { "r", "1" }
+            }))
+        });
+
+        public static IconData ArrowUpFromLine { get; } = new IconData("arrow-up-from-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m18 9-6-6-6 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 3v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 21h14" }
+            }))
+        });
+
+        public static IconData ArrowUpLeft { get; } = new IconData("arrow-up-left", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 17V7h10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 17 7 7" }
+            }))
+        });
+
+        public static IconData ArrowUpNarrowWide { get; } = new IconData("arrow-up-narrow-wide", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 12h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 16h7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 20h10" }
+            }))
+        });
+
+        public static IconData ArrowUpRight { get; } = new IconData("arrow-up-right", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 7h10v10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 17 17 7" }
+            }))
+        });
+
+        public static IconData ArrowUpToLine { get; } = new IconData("arrow-up-to-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 3h14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m18 13-6-6-6 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 7v14" }
+            }))
+        });
+
+        public static IconData ArrowUpWideNarrow { get; } = new IconData("arrow-up-wide-narrow", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 12h10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 16h7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 20h4" }
+            }))
+        });
+
+        public static IconData ArrowUpZA { get; } = new IconData("arrow-up-z-a", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 4-4 4 4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 4h5l-5 6h5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 20v-3.5a2.5 2.5 0 0 1 5 0V20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 18h-5" }
+            }))
+        });
+
+        public static IconData ArrowUp { get; } = new IconData("arrow-up", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m5 12 7-7 7 7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 19V5" }
+            }))
+        });
+
+        public static IconData ArrowsUpFromLine { get; } = new IconData("arrows-up-from-line", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m4 6 3-3 3 3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 17V3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m14 6 3-3 3 3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 17V3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 21h16" }
+            }))
+        });
+
+        public static IconData Asterisk { get; } = new IconData("asterisk", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 6v12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.196 9 6.804 15" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m6.804 9 10.392 6" }
+            }))
+        });
+
+        public static IconData AtSign { get; } = new IconData("at-sign", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" }
+            }))
+        });
+
+        public static IconData Atom { get; } = new IconData("atom", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" }
+            }))
+        });
+
+        public static IconData AudioLines { get; } = new IconData("audio-lines", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 10v3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 6v11" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 3v18" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 8v7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 5v13" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 10v3" }
+            }))
+        });
+
+        public static IconData AudioWaveform { get; } = new IconData("audio-waveform", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2" }
+            }))
+        });
+
+        public static IconData Award { get; } = new IconData("award", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "8" },
+                { "r", "6" }
+            }))
+        });
+
+        public static IconData Axe { get; } = new IconData("axe", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m14 12-8.381 8.38a1 1 0 0 1-3.001-3L11 9" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 15.5a.5.5 0 0 0 .5.5A6.5 6.5 0 0 0 22 9.5a.5.5 0 0 0-.5-.5h-1.672a2 2 0 0 1-1.414-.586l-5.062-5.062a1.205 1.205 0 0 0-1.704 0L9.352 5.648a1.205 1.205 0 0 0 0 1.704l5.062 5.062A2 2 0 0 1 15 13.828z" }
+            }))
+        });
+
+        public static IconData Axis3d { get; } = new IconData("axis-3d", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13.5 10.5 15 9" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 4v15a1 1 0 0 0 1 1h15" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4.293 19.707 6 18" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 15 1.5-1.5" }
+            }))
+        });
+
+        public static IconData Baby { get; } = new IconData("baby", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 12h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 12h.01" }
+            }))
+        });
+
+        public static IconData Backpack { get; } = new IconData("backpack", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 10h8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 18h8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" }
+            }))
+        });
+
+        public static IconData BadgeAlert { get; } = new IconData("badge-alert", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "12" },
+                { "x2", "12" },
+                { "y1", "8" },
+                { "y2", "12" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "12" },
+                { "x2", "12.01" },
+                { "y1", "16" },
+                { "y2", "16" }
+            }))
+        });
+
+        public static IconData BadgeCent { get; } = new IconData("badge-cent", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 7v10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15.4 10a4 4 0 1 0 0 4" }
+            }))
+        });
+
+        public static IconData BadgeCheck { get; } = new IconData("badge-check", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 12 2 2 4-4" }
+            }))
+        });
+
+        public static IconData BadgeDollarSign { get; } = new IconData("badge-dollar-sign", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 18V6" }
+            }))
+        });
+
+        public static IconData BadgeEuro { get; } = new IconData("badge-euro", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 12h5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 9.4a4 4 0 1 0 0 5.2" }
+            }))
+        });
+
+        public static IconData BadgeIndianRupee { get; } = new IconData("badge-indian-rupee", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 8h8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 12h8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m13 17-5-1h1a4 4 0 0 0 0-8" }
+            }))
+        });
+
+        public static IconData BadgeInfo { get; } = new IconData("badge-info", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "12" },
+                { "x2", "12" },
+                { "y1", "16" },
+                { "y2", "12" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "12" },
+                { "x2", "12.01" },
+                { "y1", "8" },
+                { "y2", "8" }
+            }))
+        });
+
+        public static IconData BadgeJapaneseYen { get; } = new IconData("badge-japanese-yen", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 8 3 3v7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m12 11 3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 12h6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 16h6" }
+            }))
+        });
+
+        public static IconData BadgeMinus { get; } = new IconData("badge-minus", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "8" },
+                { "x2", "16" },
+                { "y1", "12" },
+                { "y2", "12" }
+            }))
+        });
+
+        public static IconData BadgePercent { get; } = new IconData("badge-percent", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15 9-6 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 9h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 15h.01" }
+            }))
+        });
+
+        public static IconData BadgePlus { get; } = new IconData("badge-plus", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "12" },
+                { "x2", "12" },
+                { "y1", "8" },
+                { "y2", "16" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "8" },
+                { "x2", "16" },
+                { "y1", "12" },
+                { "y2", "12" }
+            }))
+        });
+
+        public static IconData BadgePoundSterling { get; } = new IconData("badge-pound-sterling", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 12h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 16V9.5a2.5 2.5 0 0 1 5 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 16h7" }
+            }))
+        });
+
+        public static IconData BadgeQuestionMark { get; } = new IconData("badge-question-mark", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "12" },
+                { "x2", "12.01" },
+                { "y1", "17" },
+                { "y2", "17" }
+            }))
+        });
+
+        public static IconData BadgeRussianRuble { get; } = new IconData("badge-russian-ruble", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 16h5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 12h5a2 2 0 1 0 0-4h-3v9" }
+            }))
+        });
+
+        public static IconData BadgeSwissFranc { get; } = new IconData("badge-swiss-franc", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 17V8h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 12h3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 16h4" }
+            }))
+        });
+
+        public static IconData BadgeTurkishLira { get; } = new IconData("badge-turkish-lira", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11 7v10a5 5 0 0 0 5-5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15 8-6 3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76" }
+            }))
+        });
+
+        public static IconData BadgeX { get; } = new IconData("badge-x", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "15" },
+                { "x2", "9" },
+                { "y1", "9" },
+                { "y2", "15" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "9" },
+                { "x2", "15" },
+                { "y1", "9" },
+                { "y2", "15" }
+            }))
+        });
+
+        public static IconData Badge { get; } = new IconData("badge", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            }))
+        });
+
+        public static IconData BaggageClaim { get; } = new IconData("baggage-claim", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 14V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v10" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "13" },
+                { "height", "8" },
+                { "x", "8" },
+                { "y", "6" },
+                { "rx", "1" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "18" },
+                { "cy", "20" },
+                { "r", "2" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "9" },
+                { "cy", "20" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData Balloon { get; } = new IconData("balloon", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 16v1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 6a2 2 0 0 1 2 2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 8c0 4-3.5 8-6 8s-6-4-6-8a6 6 0 0 1 12 0" }
+            }))
+        });
+
+        public static IconData Ban { get; } = new IconData("ban", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4.929 4.929 19.07 19.071" }
+            }))
+        });
+
+        public static IconData Banana { get; } = new IconData("banana", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 13c3.5-2 8-2 10 2a5.5 5.5 0 0 1 8 5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5.15 17.89c5.52-1.52 8.65-6.89 7-12C11.55 4 11.5 2 13 2c3.22 0 5 5.5 5 8 0 6.5-4.2 12-10.49 12C5.11 22 2 22 2 20c0-1.5 1.14-1.55 3.15-2.11Z" }
+            }))
+        });
+
+        public static IconData Bandage { get; } = new IconData("bandage", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 10.01h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 14.01h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 10.01h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 14.01h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 6v12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 6v12" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "2" },
+                { "y", "6" },
+                { "width", "20" },
+                { "height", "12" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData BanknoteArrowDown { get; } = new IconData("banknote-arrow-down", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m16 19 3 3 3-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 12h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 16v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12h.01" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData BanknoteArrowUp { get; } = new IconData("banknote-arrow-up", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 12h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 22v-6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 19-3-3-3 3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12h.01" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData BanknoteX { get; } = new IconData("banknote-x", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m17 17 5 5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 12h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 17-5 5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12h.01" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData Banknote { get; } = new IconData("banknote", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "20" },
+                { "height", "12" },
+                { "x", "2" },
+                { "y", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12h.01M18 12h.01" }
+            }))
+        });
+
+        public static IconData Barcode { get; } = new IconData("barcode", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 5v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 5v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 5v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 5v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 5v14" }
+            }))
+        });
+
+        public static IconData Barrel { get; } = new IconData("barrel", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 3a41 41 0 0 0 0 18" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 3a41 41 0 0 1 0 18" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.84 17h16.32" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.84 7h16.32" }
+            }))
+        });
+
+        public static IconData Baseline { get; } = new IconData("baseline", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 20h16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m6 16 6-12 6 12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 12h8" }
+            }))
+        });
+
+        public static IconData Bath { get; } = new IconData("bath", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 4 8 6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 19v2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 12h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 19v2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" }
+            }))
+        });
+
+        public static IconData BatteryCharging { get; } = new IconData("battery-charging", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m11 7-3 5h4l-3 5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" }
+            }))
+        });
+
+        public static IconData BatteryFull { get; } = new IconData("battery-full", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 10v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 10v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 10v4" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "2" },
+                { "y", "6" },
+                { "width", "16" },
+                { "height", "12" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData BatteryLow { get; } = new IconData("battery-low", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 14v-4" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "2" },
+                { "y", "6" },
+                { "width", "16" },
+                { "height", "12" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData BatteryMedium { get; } = new IconData("battery-medium", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 14v-4" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "2" },
+                { "y", "6" },
+                { "width", "16" },
+                { "height", "12" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData BatteryPlus { get; } = new IconData("battery-plus", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 9v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12.543 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.605" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 12h6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7.606 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.606" }
+            }))
+        });
+
+        public static IconData BatteryWarning { get; } = new IconData("battery-warning", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 17h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 7v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 14v-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" }
+            }))
+        });
+
+        public static IconData Battery { get; } = new IconData("battery", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M 22 14 L 22 10" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "2" },
+                { "y", "6" },
+                { "width", "16" },
+                { "height", "12" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData Beaker { get; } = new IconData("beaker", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4.5 3h15" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 14h12" }
+            }))
+        });
+
+        public static IconData BeanOff { get; } = new IconData("bean-off", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 9c-.64.64-1.521.954-2.402 1.165A6 6 0 0 0 8 22a13.96 13.96 0 0 0 9.9-4.1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.75 5.093A6 6 0 0 1 22 8c0 2.411-.61 4.68-1.683 6.66" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5.341 10.62a4 4 0 0 0 6.487 1.208M10.62 5.341a4.015 4.015 0 0 1 2.039 2.04" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "2" },
+                { "x2", "22" },
+                { "y1", "2" },
+                { "y2", "22" }
+            }))
+        });
+
+        public static IconData Bean { get; } = new IconData("bean", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.165 6.598C9.954 7.478 9.64 8.36 9 9c-.64.64-1.521.954-2.402 1.165A6 6 0 0 0 8 22c7.732 0 14-6.268 14-14a6 6 0 0 0-11.835-1.402Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5.341 10.62a4 4 0 1 0 5.279-5.28" }
+            }))
+        });
+
+        public static IconData BedDouble { get; } = new IconData("bed-double", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 4v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 18h20" }
+            }))
+        });
+
+        public static IconData BedSingle { get; } = new IconData("bed-single", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 18h18" }
+            }))
+        });
+
+        public static IconData Bed { get; } = new IconData("bed", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 4v16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 8h18a2 2 0 0 1 2 2v10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M2 17h20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 8v9" }
+            }))
+        });
+
+        public static IconData Beef { get; } = new IconData("beef", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16.4 13.7A6.5 6.5 0 1 0 6.28 6.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m18.5 6 2.19 4.5a6.48 6.48 0 0 1-2.29 7.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12.5" },
+                { "cy", "8.5" },
+                { "r", "2.5" }
+            }))
+        });
+
+        public static IconData BeerOff { get; } = new IconData("beer-off", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13 13v5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 11.47V8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 11h1a3 3 0 0 1 2.745 4.211" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 2 20 20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7.536 7.535C6.766 7.649 6.154 8 5.5 8a2.5 2.5 0 0 1-1.768-4.268" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8.727 3.204C9.306 2.767 9.885 2 11 2c1.56 0 2 1.5 3 1.5s1.72-.5 2.5-.5a1 1 0 1 1 0 5c-.78 0-1.5-.5-2.5-.5a3.149 3.149 0 0 0-.842.12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 14.6V18" }
+            }))
+        });
+
+        public static IconData Beer { get; } = new IconData("beer", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 11h1a3 3 0 0 1 0 6h-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 12v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13 12v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" }
+            }))
+        });
+
+        public static IconData BellDot { get; } = new IconData("bell-dot", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11.68 2.009A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673c-.824-.85-1.678-1.731-2.21-3.348" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "18" },
+                { "cy", "5" },
+                { "r", "3" }
+            }))
+        });
+
+        public static IconData BellElectric { get; } = new IconData("bell-electric", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18.518 17.347A7 7 0 0 1 14 19" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18.8 4A11 11 0 0 1 20 9" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 9h.01" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "20" },
+                { "cy", "16" },
+                { "r", "2" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "9" },
+                { "cy", "9" },
+                { "r", "7" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "4" },
+                { "y", "16" },
+                { "width", "10" },
+                { "height", "6" },
+                { "rx", "2" }
+            }))
+        });
+
+        public static IconData BellMinus { get; } = new IconData("bell-minus", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 8h6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16.243 3.757A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673A9.4 9.4 0 0 1 18.667 12" }
+            }))
+        });
+
+        public static IconData BellOff { get; } = new IconData("bell-off", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 .258-1.742" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 2 20 20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05" }
+            }))
+        });
+
+        public static IconData BellPlus { get; } = new IconData("bell-plus", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 8h6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 5v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20.002 14.464a9 9 0 0 0 .738.863A1 1 0 0 1 20 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 8.75-5.332" }
+            }))
+        });
+
+        public static IconData BellRing { get; } = new IconData("bell-ring", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 8c0-2.3-.8-4.3-2-6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 2C2.8 3.7 2 5.7 2 8" }
+            }))
+        });
+
+        public static IconData Bell { get; } = new IconData("bell", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10.268 21a2 2 0 0 0 3.464 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" }
+            }))
+        });
+
+        public static IconData BetweenHorizontalEnd { get; } = new IconData("between-horizontal-end", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "13" },
+                { "height", "7" },
+                { "x", "3" },
+                { "y", "3" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 15-3-3 3-3" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "13" },
+                { "height", "7" },
+                { "x", "3" },
+                { "y", "14" },
+                { "rx", "1" }
+            }))
+        });
+
+        public static IconData BetweenHorizontalStart { get; } = new IconData("between-horizontal-start", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "13" },
+                { "height", "7" },
+                { "x", "8" },
+                { "y", "3" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 9 3 3-3 3" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "13" },
+                { "height", "7" },
+                { "x", "8" },
+                { "y", "14" },
+                { "rx", "1" }
+            }))
+        });
+
+        public static IconData BetweenVerticalEnd { get; } = new IconData("between-vertical-end", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "7" },
+                { "height", "13" },
+                { "x", "3" },
+                { "y", "3" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 22 3-3 3 3" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "7" },
+                { "height", "13" },
+                { "x", "14" },
+                { "y", "3" },
+                { "rx", "1" }
+            }))
+        });
+
+        public static IconData BetweenVerticalStart { get; } = new IconData("between-vertical-start", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "7" },
+                { "height", "13" },
+                { "x", "3" },
+                { "y", "8" },
+                { "rx", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15 2-3 3-3-3" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "width", "7" },
+                { "height", "13" },
+                { "x", "14" },
+                { "y", "8" },
+                { "rx", "1" }
+            }))
+        });
+
+        public static IconData BicepsFlexed { get; } = new IconData("biceps-flexed", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M15 14a5 5 0 0 0-7.584 2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9.964 6.825C8.019 7.977 9.5 13 8 15" }
+            }))
+        });
+
+        public static IconData Bike { get; } = new IconData("bike", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "18.5" },
+                { "cy", "17.5" },
+                { "r", "3.5" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "5.5" },
+                { "cy", "17.5" },
+                { "r", "3.5" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "15" },
+                { "cy", "5" },
+                { "r", "1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 17.5V14l-3-3 4-3 2 3h2" }
+            }))
+        });
+
+        public static IconData Binary { get; } = new IconData("binary", new IconElement[]
+        {
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "14" },
+                { "y", "14" },
+                { "width", "4" },
+                { "height", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "6" },
+                { "y", "4" },
+                { "width", "4" },
+                { "height", "6" },
+                { "rx", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 20h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 10h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 14h2v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 4h2v6" }
+            }))
+        });
+
+        public static IconData Binoculars { get; } = new IconData("binoculars", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 10h4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M 22 16 L 2 16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3" }
+            }))
+        });
+
+        public static IconData Biohazard { get; } = new IconData("biohazard", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "11.9" },
+                { "r", "2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6.7 3.4c-.9 2.5 0 5.2 2.2 6.7C6.5 9 3.7 9.6 2 11.6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m8.9 10.1 1.4.8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.3 3.4c.9 2.5 0 5.2-2.2 6.7 2.4-1.2 5.2-.6 6.9 1.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m15.1 10.1-1.4.8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16.7 20.8c-2.6-.4-4.6-2.6-4.7-5.3-.2 2.6-2.1 4.8-4.7 5.2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 13.9v1.6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13.5 5.4c-1-.2-2-.2-3 0" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 16.4c.7-.7 1.2-1.6 1.5-2.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5.5 13.9c.3.9.8 1.8 1.5 2.5" }
+            }))
+        });
+
+        public static IconData Bird { get; } = new IconData("bird", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 7h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m20 7 2 .5-2 .5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 18v3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14 17.75V21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 18a6 6 0 0 0 3.84-10.61" }
+            }))
+        });
+
+        public static IconData Birdhouse { get; } = new IconData("birdhouse", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 18v4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m17 18 1.956-11.468" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m3 8 7.82-5.615a2 2 0 0 1 2.36 0L21 8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 18h16" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M7 18 5.044 6.532" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "10" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData Bitcoin { get; } = new IconData("bitcoin", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.215-6.893m-1.215 6.893-3.94-.694m5.155-6.2L8.29 4.26m5.908 1.042.348-1.97M7.48 20.364l3.126-17.727" }
+            }))
+        });
+
+        public static IconData Blend { get; } = new IconData("blend", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "9" },
+                { "cy", "9" },
+                { "r", "7" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "15" },
+                { "cy", "15" },
+                { "r", "7" }
+            }))
+        });
+
+        public static IconData Blinds { get; } = new IconData("blinds", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 3h18" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 7H8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 11H8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 19h10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 15h12" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 3v14" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "4" },
+                { "cy", "19" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData Blocks { get; } = new IconData("blocks", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "14" },
+                { "y", "2" },
+                { "width", "8" },
+                { "height", "8" },
+                { "rx", "1" }
+            }))
+        });
+
+        public static IconData BluetoothConnected { get; } = new IconData("bluetooth-connected", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m7 7 10 10-5 5V2l5 5L7 17" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "18" },
+                { "x2", "21" },
+                { "y1", "12" },
+                { "y2", "12" }
+            })),
+            new IconElement("line", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x1", "3" },
+                { "x2", "6" },
+                { "y1", "12" },
+                { "y2", "12" }
+            }))
+        });
+
+        public static IconData BluetoothOff { get; } = new IconData("bluetooth-off", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m17 17-5 5V12l-5 5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m2 2 20 20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14.5 9.5 17 7l-5-5v4.5" }
+            }))
+        });
+
+        public static IconData BluetoothSearching { get; } = new IconData("bluetooth-searching", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m7 7 10 10-5 5V2l5 5L7 17" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20.83 14.83a4 4 0 0 0 0-5.66" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 12h.01" }
+            }))
+        });
+
+        public static IconData Bluetooth { get; } = new IconData("bluetooth", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m7 7 10 10-5 5V2l5 5L7 17" }
+            }))
+        });
+
+        public static IconData Bold { get; } = new IconData("bold", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" }
+            }))
+        });
+
+        public static IconData Bolt { get; } = new IconData("bolt", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "12" },
+                { "cy", "12" },
+                { "r", "4" }
+            }))
+        });
+
+        public static IconData Bomb { get; } = new IconData("bomb", new IconElement[]
+        {
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "11" },
+                { "cy", "13" },
+                { "r", "9" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M14.35 4.65 16.3 2.7a2.41 2.41 0 0 1 3.4 0l1.6 1.6a2.4 2.4 0 0 1 0 3.4l-1.95 1.95" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m22 2-1.5 1.5" }
+            }))
+        });
+
+        public static IconData Bone { get; } = new IconData("bone", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" }
+            }))
+        });
+
+        public static IconData BookA { get; } = new IconData("book-a", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m8 13 4-7 4 7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9.1 11h5.7" }
+            }))
+        });
+
+        public static IconData BookAlert { get; } = new IconData("book-alert", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 13h.01" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 6v3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            }))
+        });
+
+        public static IconData BookAudio { get; } = new IconData("book-audio", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 6v7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 8v3" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 8v3" }
+            }))
+        });
+
+        public static IconData BookCheck { get; } = new IconData("book-check", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 9.5 2 2 4-4" }
+            }))
+        });
+
+        public static IconData BookCopy { get; } = new IconData("book-copy", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5 7a2 2 0 0 0-2 2v11" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M5.803 18H5a2 2 0 0 0 0 4h9.5a.5.5 0 0 0 .5-.5V21" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 15V4a2 2 0 0 1 2-2h9.5a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H11a2 2 0 0 1 0-4h10" }
+            }))
+        });
+
+        public static IconData BookDashed { get; } = new IconData("book-dashed", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 17h1.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 22h1.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 2h1.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.5 22H19a1 1 0 0 0 1-1" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17.5 2H19a1 1 0 0 1 1 1v1.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 14v3h-2.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 8.5V10" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 10V8.5" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5V14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 4.5A2.5 2.5 0 0 1 6.5 2H8" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 22H6.5a1 1 0 0 1 0-5H8" }
+            }))
+        });
+
+        public static IconData BookDown { get; } = new IconData("book-down", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 13V7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m9 10 3 3 3-3" }
+            }))
+        });
+
+        public static IconData BookHeadphones { get; } = new IconData("book-headphones", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8 12v-2a4 4 0 0 1 8 0v2" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "15" },
+                { "cy", "12" },
+                { "r", "1" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "9" },
+                { "cy", "12" },
+                { "r", "1" }
+            }))
+        });
+
+        public static IconData BookHeart { get; } = new IconData("book-heart", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M8.62 9.8A2.25 2.25 0 1 1 12 6.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" }
+            }))
+        });
+
+        public static IconData BookImage { get; } = new IconData("book-image", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "10" },
+                { "cy", "8" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData BookKey { get; } = new IconData("book-key", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M13 2H6.5A2.5 2.5 0 0 0 4 4.5v15" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 2v6" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M17 4h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 15.2V21a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("circle", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "cx", "17" },
+                { "cy", "10" },
+                { "r", "2" }
+            }))
+        });
+
+        public static IconData BookLock { get; } = new IconData("book-lock", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M18 6V4a2 2 0 1 0-4 0v2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M20 15v6a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H10" }
+            })),
+            new IconElement("rect", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "x", "12" },
+                { "y", "6" },
+                { "width", "8" },
+                { "height", "5" },
+                { "rx", "1" }
+            }))
+        });
+
+        public static IconData BookMarked { get; } = new IconData("book-marked", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M10 2v8l3-3 3 3V2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            }))
+        });
+
+        public static IconData BookMinus { get; } = new IconData("book-minus", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M9 10h6" }
+            }))
+        });
+
+        public static IconData BookOpenCheck { get; } = new IconData("book-open-check", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 21V7" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "m16 12 2 2 4-4" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3" }
+            }))
+        });
+
+        public static IconData BookOpenText { get; } = new IconData("book-open-text", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 7v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 12h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M16 8h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 12h2" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M6 8h2" }
+            }))
+        });
+
+        public static IconData BookOpen { get; } = new IconData("book-open", new IconElement[]
+        {
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M12 7v14" }
+            })),
+            new IconElement("path", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+            {
+                { "d", "M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" }
+            }))
+        });
 }

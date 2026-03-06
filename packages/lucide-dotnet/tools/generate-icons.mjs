@@ -2,9 +2,10 @@
 
 /**
  * Generates C# source files from Lucide SVG icons.
- * Produces:
- *   - LucideIcons.Generated.cs (static properties for each icon)
- *   - Individual icon data registered in the icon registry
+ *
+ * Output:
+ *   - LucideIcons.Part{N}.g.cs  — Static IconData properties (partial class)
+ *   - LucideIcons.Registry.g.cs — RegisterAll() method for name-based lookup
  */
 
 import fs from 'fs';
@@ -12,163 +13,155 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const iconsDir = path.resolve(__dirname, '../../../icons');
-const outputDir = path.resolve(__dirname, '../src/Lucide.Net/Generated');
+const ICONS_DIR = path.resolve(__dirname, '../../../icons');
+const OUTPUT_DIR = path.resolve(__dirname, '../src/Lucide.Net/Generated');
+const ICONS_PER_FILE = 200;
 
-function toPascalCase(str) {
-  return str
-    .split('-')
-    .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
-    .join('');
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function toPascalCase(kebab) {
+  return kebab.split('-').map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join('');
 }
 
-function escapeXml(s) {
-  return s.replace(/&/g, '&amp;').replace(/"/g, '\\"');
+function escapeCs(s) {
+  return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
-function parseSvgChildren(svgContent) {
-  // Extract child elements from the SVG (everything inside the root <svg> tag)
+/**
+ * Parses SVG child elements (path, circle, rect, line, polyline, polygon, ellipse)
+ * from the inner content of an <svg> root element.
+ */
+function parseSvgElements(svgContent) {
   const innerMatch = svgContent.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
   if (!innerMatch) return [];
 
   const inner = innerMatch[1].trim();
   const elements = [];
 
-  // Match self-closing tags like <path ... />, <circle ... />, <rect ... />, etc.
-  const tagRegex = /<(\w+)\s+([^>]*?)\/>/g;
-  let match;
-  while ((match = tagRegex.exec(inner)) !== null) {
-    const tag = match[1];
-    const attrsStr = match[2].trim();
-    const attrs = {};
-
-    const attrRegex = /(\w[\w-]*)="([^"]*)"/g;
-    let attrMatch;
-    while ((attrMatch = attrRegex.exec(attrsStr)) !== null) {
-      attrs[attrMatch[1]] = attrMatch[2];
-    }
-
-    elements.push({ tag, attrs });
+  // Self-closing tags: <path d="..." />
+  const selfClosing = /<(\w+)\s+([^>]*?)\/>/g;
+  let m;
+  while ((m = selfClosing.exec(inner)) !== null) {
+    elements.push({ tag: m[1], attrs: parseAttributes(m[2]) });
   }
 
-  // Also match non-self-closing tags (rare but possible)
-  const openTagRegex = /<(\w+)\s+([^>]*?)>([^<]*)<\/\1>/g;
-  while ((match = openTagRegex.exec(inner)) !== null) {
-    const tag = match[1];
-    const attrsStr = match[2].trim();
-    const attrs = {};
-
-    const attrRegex = /(\w[\w-]*)="([^"]*)"/g;
-    let attrMatch;
-    while ((attrMatch = attrRegex.exec(attrsStr)) !== null) {
-      attrs[attrMatch[1]] = attrMatch[2];
-    }
-
-    elements.push({ tag, attrs });
+  // Non-self-closing tags (rare): <text x="0">...</text>
+  const openClose = /<(\w+)\s+([^>]*?)>[^<]*<\/\1>/g;
+  while ((m = openClose.exec(inner)) !== null) {
+    elements.push({ tag: m[1], attrs: parseAttributes(m[2]) });
   }
 
   return elements;
 }
 
-function generateIconMethod(iconName, elements) {
-  const pascalName = toPascalCase(iconName);
-  const elementsCode = elements
-    .map((el) => {
-      const attrsDict = Object.entries(el.attrs)
-        .map(([k, v]) => `            { "${k}", "${escapeXml(v)}" }`)
-        .join(',\n');
-      return `        new IconElement("${el.tag}", new Dictionary<string, string>\n        {\n${attrsDict}\n        })`;
-    })
-    .join(',\n');
-
-  return `    /// <summary>
-    /// Gets the ${pascalName} icon.
-    /// </summary>
-    public static IconData ${pascalName} { get; } = new IconData("${iconName}", new IconElement[]
-    {
-${elementsCode}
-    });`;
-}
-
-// Main
-if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir, { recursive: true });
-}
-
-const svgFiles = fs
-  .readdirSync(iconsDir)
-  .filter((f) => f.endsWith('.svg'))
-  .sort();
-
-console.log(`Found ${svgFiles.length} SVG icons`);
-
-// Split into chunks to avoid huge single files
-const CHUNK_SIZE = 200;
-const chunks = [];
-for (let i = 0; i < svgFiles.length; i += CHUNK_SIZE) {
-  chunks.push(svgFiles.slice(i, i + CHUNK_SIZE));
-}
-
-const allIconNames = [];
-
-for (let chunkIdx = 0; chunkIdx < chunks.length; chunkIdx++) {
-  const chunk = chunks[chunkIdx];
-  const methods = [];
-
-  for (const file of chunk) {
-    const iconName = file.replace('.svg', '');
-    const svgContent = fs.readFileSync(path.join(iconsDir, file), 'utf-8');
-    const elements = parseSvgChildren(svgContent);
-
-    if (elements.length === 0) {
-      console.warn(`Warning: No elements found in ${file}`);
-      continue;
-    }
-
-    methods.push(generateIconMethod(iconName, elements));
-    allIconNames.push(iconName);
+function parseAttributes(attrString) {
+  const attrs = {};
+  const re = /([\w-]+)="([^"]*)"/g;
+  let m;
+  while ((m = re.exec(attrString)) !== null) {
+    attrs[m[1]] = m[2];
   }
+  return attrs;
+}
 
-  const classContent = `// <auto-generated>
+// ---------------------------------------------------------------------------
+// Code generation
+// ---------------------------------------------------------------------------
+
+const FILE_HEADER = `// <auto-generated>
 // This file was generated by the Lucide icon generator.
 // Do not edit this file directly.
 // </auto-generated>
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Lucide;
 
-public static partial class LucideIcons
+`;
+
+function generateIconProperty(iconName, elements) {
+  const pascal = toPascalCase(iconName);
+  const elems = elements.map((el) => {
+    const pairs = Object.entries(el.attrs)
+      .map(([k, v]) => `                { "${escapeCs(k)}", "${escapeCs(v)}" }`)
+      .join(',\n');
+    return `            new IconElement("${el.tag}", new ReadOnlyDictionary<string, string>(new Dictionary<string, string>\n            {\n${pairs}\n            }))`;
+  });
+
+  return `        public static IconData ${pascal} { get; } = new IconData("${iconName}", new IconElement[]
+        {
+${elems.join(',\n')}
+        });`;
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+// Clean previous generated files
+for (const f of fs.readdirSync(OUTPUT_DIR)) {
+  if (f.endsWith('.g.cs')) {
+    fs.unlinkSync(path.join(OUTPUT_DIR, f));
+  }
+}
+
+const svgFiles = fs.readdirSync(ICONS_DIR).filter((f) => f.endsWith('.svg')).sort();
+console.log(`Found ${svgFiles.length} SVG icons`);
+
+const allIcons = []; // { name, pascal }
+
+// Split into chunks
+const chunks = [];
+for (let i = 0; i < svgFiles.length; i += ICONS_PER_FILE) {
+  chunks.push(svgFiles.slice(i, i + ICONS_PER_FILE));
+}
+
+for (let ci = 0; ci < chunks.length; ci++) {
+  const properties = [];
+
+  for (const file of chunks[ci]) {
+    const iconName = file.replace('.svg', '');
+    const svgContent = fs.readFileSync(path.join(ICONS_DIR, file), 'utf-8');
+    const elements = parseSvgElements(svgContent);
+
+    if (elements.length === 0) {
+      console.warn(`  ⚠ No elements in ${file}, skipping`);
+      continue;
+    }
+
+    properties.push(generateIconProperty(iconName, elements));
+    allIcons.push({ name: iconName, pascal: toPascalCase(iconName) });
+  }
+
+  const content = `${FILE_HEADER}public static partial class LucideIcons
 {
-${methods.join('\n\n')}
+${properties.join('\n\n')}
 }
 `;
 
-  const fileName = `LucideIcons.Part${chunkIdx + 1}.g.cs`;
-  fs.writeFileSync(path.join(outputDir, fileName), classContent, 'utf-8');
-  console.log(`Generated ${fileName} with ${chunk.length} icons`);
+  const fileName = `LucideIcons.Part${ci + 1}.g.cs`;
+  fs.writeFileSync(path.join(OUTPUT_DIR, fileName), content, 'utf-8');
+  console.log(`  ${fileName} — ${chunks[ci].length} icons`);
 }
 
 // Generate registry initializer
-const registrations = allIconNames
-  .map((name) => `        LucideIconRegistry.Register("${name}", LucideIcons.${toPascalCase(name)});`)
+const registrations = allIcons
+  .map(({ name, pascal }) => `            LucideIconRegistry.Register("${name}", ${pascal});`)
   .join('\n');
 
-const registryInit = `// <auto-generated>
-// This file was generated by the Lucide icon generator.
-// Do not edit this file directly.
-// </auto-generated>
-
-namespace Lucide;
-
-public static partial class LucideIcons
+const registryContent = `${FILE_HEADER}public static partial class LucideIcons
 {
-    private static bool _initialized;
+    private static volatile bool _initialized;
     private static readonly object _lock = new object();
 
     /// <summary>
-    /// Registers all icons in the LucideIconRegistry for name-based lookup.
-    /// Called automatically on first registry access, or call explicitly.
+    /// Registers all icons in the <see cref="LucideIconRegistry"/> for name-based lookup.
+    /// Called automatically on first registry access.
     /// </summary>
     public static void RegisterAll()
     {
@@ -185,6 +178,6 @@ ${registrations}
 }
 `;
 
-fs.writeFileSync(path.join(outputDir, 'LucideIcons.Registry.g.cs'), registryInit, 'utf-8');
+fs.writeFileSync(path.join(OUTPUT_DIR, 'LucideIcons.Registry.g.cs'), registryContent, 'utf-8');
 
-console.log(`\nTotal: ${allIconNames.length} icons generated in ${chunks.length} file(s)`);
+console.log(`\nTotal: ${allIcons.length} icons in ${chunks.length} part file(s) + registry`);
