@@ -1,0 +1,21 @@
+@namespace Lucide.Blazor
+
+@if (_icon != null)
+{
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="@Size"
+         height="@Size"
+         viewBox="0 0 24 24"
+         fill="@Fill"
+         stroke="@Color"
+         stroke-width="@StrokeWidth"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         class="@CssClass"
+         @attributes="AdditionalAttributes">
+        @foreach (var element in _icon.Elements)
+        {
+            @((MarkupString)element.ToSvgString())
+        }
+    </svg>
+}
