@@ -14,7 +14,7 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
     const aliasRouteMatches = aliases.map((alias) => alias.name).join('|');
 
     return {
-      src: `^/icons/${aliasRouteMatches}$`,
+      src: `^/icons/(${aliasRouteMatches})$`,
       status: 308,
       headers: {
         Location: `/icons/${iconName}`,
