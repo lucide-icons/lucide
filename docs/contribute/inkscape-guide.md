@@ -4,7 +4,7 @@ title: Icon Design Guide
 
 # Inkscape Setup Guide
 
-This guide shows the steps to setup Inkscape for creating icons that conform to the Featherity design
+This guide shows the steps to setup Inkscape for creating icons that conform to the Lucide design
 guidelines.
 
 ## Setting up The Canvas
