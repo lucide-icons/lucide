@@ -1,6 +1,6 @@
 import { eventHandler, setResponseHeader, defaultContentType } from 'h3';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { createElement } from 'react';
+import React from 'react';
 import Diff from '../../../lib/SvgPreview/Diff.tsx';
 import iconNodes from '../../../data/iconNodes';
 import createLucideIcon from 'lucide-react/src/createLucideIcon';
@@ -26,21 +26,26 @@ export default eventHandler((event) => {
 
   const children = [];
 
+  const Icon = createLucideIcon(name, iconNodes[name]);
+
   const oldSrc = iconNodes[name]
-    ? renderToStaticMarkup(createElement(createLucideIcon(name, iconNodes[name])))
+    ? renderToStaticMarkup(<Icon />)
         .replaceAll('\n', '')
         .replace(/<svg[^>]*>|<\/svg>/g, '')
     : '';
 
-  const svg = Buffer.from(
-    // We can't use jsx here, is not supported here by nitro.
-    renderToString(
-      createElement(Diff, { oldSrc, newSrc, showGrid: true, height, width }, children),
-    ),
-  ).toString('utf8');
-
   defaultContentType(event, 'image/svg+xml');
   setResponseHeader(event, 'Cache-Control', 'public,max-age=31536000');
 
-  return svg;
+  return renderToString(
+    <Diff
+      oldSrc={oldSrc}
+      newSrc={newSrc}
+      showGrid
+      height={height}
+      width={width}
+    >
+      {children}
+    </Diff>,
+  );
 });
