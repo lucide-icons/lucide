@@ -101,8 +101,8 @@ importers:
         specifier: ^3.27.0
         version: 3.30.0
       svgo:
-        specifier: ^3.3.2
-        version: 3.3.2
+        specifier: ^3.3.3
+        version: 3.3.3
       svgson:
         specifier: ^5.3.1
         version: 5.3.1
@@ -854,8 +854,8 @@ importers:
         specifier: 2.7.1
         version: 2.7.1
       svgo:
-        specifier: ^3.0.0
-        version: 3.3.2
+        specifier: ^3.3.3
+        version: 3.3.3
       svgson:
         specifier: ^5.2.1
         version: 5.3.1
@@ -6985,6 +6985,9 @@ packages:
   css-select@5.1.0:
     resolution: {integrity: sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==}
 
+  css-select@5.2.2:
+    resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
+
   css-tree@1.1.3:
     resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
     engines: {node: '>=8.0.0'}
@@ -7003,6 +7006,10 @@ packages:
 
   css-what@6.1.0:
     resolution: {integrity: sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==}
+    engines: {node: '>= 6'}
+
+  css-what@6.2.2:
+    resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
     engines: {node: '>= 6'}
 
   css.escape@1.5.1:
@@ -10709,9 +10716,6 @@ packages:
   piccolore@0.1.3:
     resolution: {integrity: sha512-o8bTeDWjE086iwKrROaDf31K0qC/BENdm15/uH9usSC/uZjJOKb2YGiVHfLY4GhwsERiPI1jmwI2XrA7ACOxVw==}
 
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
-
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -11651,8 +11655,8 @@ packages:
   sax@1.4.3:
     resolution: {integrity: sha512-yqYn1JhPczigF94DMS+shiDMjDowYO6y9+wB/4WgO0Y19jWYk0lQ4tuG5KI7kj4FTp1wxPj5IFfcrz/s1c3jjQ==}
 
-  sax@1.4.4:
-    resolution: {integrity: sha512-1n3r/tGXO6b6VXMdFT54SHzT9ytu9yr7TaELowdYpMqY/Ao7EnlQGmAQ1+RatX7Tkkdm6hONI2owqNx2aZj5Sw==}
+  sax@1.5.0:
+    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
     engines: {node: '>=11.0.0'}
 
   saxes@6.0.0:
@@ -12297,6 +12301,11 @@ packages:
 
   svgo@3.3.2:
     resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
+  svgo@3.3.3:
+    resolution: {integrity: sha512-+wn7I4p7YgJhHs38k2TNjy1vCfPIfLIJWR5MnCStsN8WuuTcBnRKcMHQLMM2ijxGZmDoZwNv8ipl5aTTen62ng==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -20345,8 +20354,8 @@ snapshots:
   cheerio-select@2.1.0:
     dependencies:
       boolbase: 1.0.0
-      css-select: 5.1.0
-      css-what: 6.1.0
+      css-select: 5.2.2
+      css-what: 6.2.2
       domelementtype: 2.3.0
       domhandler: 5.0.3
       domutils: 3.2.2
@@ -20757,7 +20766,7 @@ snapshots:
   css-select@4.3.0:
     dependencies:
       boolbase: 1.0.0
-      css-what: 6.1.0
+      css-what: 6.2.2
       domhandler: 4.3.1
       domutils: 2.8.0
       nth-check: 2.1.1
@@ -20766,6 +20775,14 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
       css-what: 6.1.0
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      nth-check: 2.1.1
+
+  css-select@5.2.2:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 6.2.2
       domhandler: 5.0.3
       domutils: 3.2.2
       nth-check: 2.1.1
@@ -20791,6 +20808,8 @@ snapshots:
       source-map-js: 1.2.1
 
   css-what@6.1.0: {}
+
+  css-what@6.2.2: {}
 
   css.escape@1.5.1: {}
 
@@ -24702,7 +24721,7 @@ snapshots:
     dependencies:
       debug: 3.2.7
       iconv-lite: 0.4.24
-      sax: 1.4.3
+      sax: 1.5.0
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -24710,7 +24729,7 @@ snapshots:
   needle@3.3.1:
     dependencies:
       iconv-lite: 0.6.3
-      sax: 1.4.3
+      sax: 1.5.0
     optional: true
 
   negotiator@0.6.3: {}
@@ -24935,7 +24954,7 @@ snapshots:
 
   node-html-parser@6.1.13:
     dependencies:
-      css-select: 5.1.0
+      css-select: 5.2.2
       he: 1.2.0
 
   node-int64@0.4.0: {}
@@ -25519,8 +25538,6 @@ snapshots:
   phin@2.9.3: {}
 
   piccolore@0.1.3: {}
-
-  picocolors@1.0.0: {}
 
   picocolors@1.1.1: {}
 
@@ -26793,8 +26810,7 @@ snapshots:
 
   sax@1.4.3: {}
 
-  sax@1.4.4:
-    optional: true
+  sax@1.5.0: {}
 
   saxes@6.0.0:
     dependencies:
@@ -27612,7 +27628,7 @@ snapshots:
       commander: 12.1.0
       debug: 4.4.3
       glob: 11.1.0
-      sax: 1.4.3
+      sax: 1.5.0
       svg-pathdata: 7.2.0
       transformation-matrix: 3.0.0
       yerror: 8.0.0
@@ -27623,11 +27639,21 @@ snapshots:
     dependencies:
       '@trysound/sax': 0.2.0
       commander: 7.2.0
-      css-select: 5.1.0
+      css-select: 5.2.2
       css-tree: 2.3.1
-      css-what: 6.1.0
+      css-what: 6.2.2
       csso: 5.0.5
-      picocolors: 1.0.0
+      picocolors: 1.1.1
+
+  svgo@3.3.3:
+    dependencies:
+      commander: 7.2.0
+      css-select: 5.2.2
+      css-tree: 2.3.1
+      css-what: 6.2.2
+      csso: 5.0.5
+      picocolors: 1.1.1
+      sax: 1.5.0
 
   svgo@4.0.0:
     dependencies:
@@ -28885,12 +28911,12 @@ snapshots:
 
   xml2js@0.4.23:
     dependencies:
-      sax: 1.4.3
+      sax: 1.5.0
       xmlbuilder: 11.0.1
 
   xml2js@0.6.2:
     dependencies:
-      sax: 1.4.4
+      sax: 1.5.0
       xmlbuilder: 11.0.1
     optional: true
 
