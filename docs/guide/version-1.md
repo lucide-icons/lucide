@@ -6,10 +6,6 @@ description: After years of work and dedication, Lucide version 1 has been offic
 
 # Lucide version 1
 
-:::warning
-STILL WORK IN PROGRESS, some guides and docs are not finished yet.
-:::
-
 After years of work and dedication, Lucide version 1 has been officially **released**! This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 
 It's been crazy especially the last year, Lucide went over 20 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
@@ -33,15 +29,15 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 
 See our guides:
 
-- guide for [Vanilla JavaScript](/guide/static/index)
-- guide for [React](/guide/react/getting-started)
-- guide for [Vue](/guide/vue/getting-started)
-- guide for [Svelte](/guide/svelte/getting-started)
-- guide for [Solid](/guide/solid/getting-started)
-<!-- - guide for [Angular](/guide/angular/getting-started) -->
-- guide for [Preact](/guide/preact/getting-started)
-<!-- - guide for [Astro](/guide/astro/getting-started)
-- guide for [Static](/guide/static/getting-started) -->
+- guide for [Vanilla JavaScript](/guide/migration)
+- guide for [React](/guide/react/migration)
+- guide for [Vue](/guide/vue/migration)
+- guide for [Svelte](/guide/svelte/migration)
+- guide for [Solid](/guide/solid/migration)
+- guide for [Angular](/guide/angular/migration)
+- guide for [Preact](/guide/preact/migration)
+- guide for [Astro](/guide/astro/migration)
+- guide for [Static](/guide/static/migration)
 
 ## Removed All Brand Icons
 
