@@ -68,6 +68,7 @@ exports[`Using lucide icon components > should duplicate properties to children 
      stroke-width="10"
      stroke-linecap="round"
      stroke-linejoin="round"
+     class="root-class"
      data-testid="multiple-children"
 >
   <rect fill="red"
