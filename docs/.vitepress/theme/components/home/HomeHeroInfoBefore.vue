@@ -29,6 +29,13 @@ import { data } from './HomeHeroInfoBefore.data';
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+  justify-content: center;
+}
+
+@media (min-width: 960px) {
+  .info {
+    justify-content: flex-start;
+  }
 }
 
 .badge {
