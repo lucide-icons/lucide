@@ -1,5 +1,4 @@
 @namespace Lucide.Blazor
-@using System.Globalization
 
 @if (_icon != null)
 {
@@ -9,14 +8,26 @@
          viewBox="0 0 24 24"
          fill="@Fill"
          stroke="@Color"
-         stroke-width="@StrokeWidth.ToString(CultureInfo.InvariantCulture)"
+         stroke-width="@StrokeWidthString"
          stroke-linecap="round"
          stroke-linejoin="round"
          class="@CssClass"
          @attributes="AdditionalAttributes">
-        @foreach (var element in _icon.Elements)
+        @if (SvgTransform != null)
         {
-            @((MarkupString)element.ToSvgString())
+            <g transform="@SvgTransform">
+                @foreach (var element in _icon.Elements)
+                {
+                    @((MarkupString)element.ToSvgString())
+                }
+            </g>
+        }
+        else
+        {
+            @foreach (var element in _icon.Elements)
+            {
+                @((MarkupString)element.ToSvgString())
+            }
         }
     </svg>
 }

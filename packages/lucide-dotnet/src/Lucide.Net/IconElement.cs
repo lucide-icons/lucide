@@ -5,7 +5,7 @@ namespace Lucide;
 /// <summary>
 /// Represents a single SVG child element (e.g., path, circle, rect) within an icon.
 /// </summary>
-public sealed class IconElement
+public class IconElement
 {
     public string Tag { get; }
     public IReadOnlyDictionary<string, string> Attributes { get; }
@@ -19,7 +19,7 @@ public sealed class IconElement
     /// <summary>
     /// Renders this element as an SVG string (e.g., &lt;path d="..." /&gt;).
     /// </summary>
-    public string ToSvgString()
+    public virtual string ToSvgString()
     {
         var sb = new StringBuilder();
         sb.Append('<').Append(Tag);
@@ -37,7 +37,7 @@ public sealed class IconElement
         return sb.ToString();
     }
 
-    private static string XmlEscape(string value)
+    internal static string XmlEscape(string value)
     {
         if (value.IndexOfAny(new[] { '&', '<', '>', '"' }) < 0)
             return value;

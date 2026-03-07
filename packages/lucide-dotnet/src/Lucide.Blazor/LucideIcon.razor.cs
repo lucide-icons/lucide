@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Components;
 
 namespace Lucide.Blazor;
@@ -43,10 +44,16 @@ public partial class LucideIcon : ComponentBase
     public float StrokeWidth { get; set; } = 2f;
 
     /// <summary>
-    /// Additional CSS class.
+    /// Additional CSS class for the SVG element.
     /// </summary>
     [Parameter]
     public string? CssClass { get; set; }
+
+    /// <summary>
+    /// Transform to apply (rotation, flip).
+    /// </summary>
+    [Parameter]
+    public IconTransform? Transform { get; set; }
 
     /// <summary>
     /// Any additional HTML attributes to apply to the SVG element.
@@ -54,17 +61,30 @@ public partial class LucideIcon : ComponentBase
     [Parameter(CaptureUnmatchedValues = true)]
     public Dictionary<string, object>? AdditionalAttributes { get; set; }
 
+    [Inject]
+    private IIconProvider? IconProvider { get; set; }
+
     private IconData? _icon;
+
+    internal string StrokeWidthString =>
+        StrokeWidth.ToString(CultureInfo.InvariantCulture);
+
+    internal string? SvgTransform =>
+        Transform?.ToSvgTransform();
 
     protected override void OnParametersSet()
     {
         _icon = Icon ?? ResolveByName(Name);
     }
 
-    private static IconData? ResolveByName(string? name)
+    private IconData? ResolveByName(string? name)
     {
         if (string.IsNullOrEmpty(name))
             return null;
+
+        // Prefer injected provider if available, fallback to static registry
+        if (IconProvider != null)
+            return IconProvider.GetIcon(name);
 
         return LucideIconRegistry.GetIcon(name);
     }
