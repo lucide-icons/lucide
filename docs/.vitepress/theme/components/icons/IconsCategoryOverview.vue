@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted } from 'vue';
+import { ref, computed, watch, defineAsyncComponent, onMounted } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
@@ -12,6 +12,7 @@ import useFetchCategories from '../../composables/useFetchCategories';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
 import useScrollToCategory from '../../composables/useScrollToCategory';
+import { useCategoryView } from '../../composables/useCategoryView';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 
@@ -26,7 +27,14 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
+const { selectedCategory } = useCategoryView();
 const isSearching = computed(() => !!searchQuery.value);
+
+watch(searchQueryDebounced, (searchString) => {
+  if (searchString !== '') {
+    selectedCategory.value = '';
+  }
+});
 
 const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
   searchInput.value?.focus();
@@ -142,7 +150,14 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  window.history.pushState({}, '', '/icons/categories');
+  let url = '/icons/categories';
+  if (searchQueryDebounced.value) {
+    url += `?search=${encodeURIComponent(searchQueryDebounced.value)}`;
+  }
+  if (selectedCategory.value) {
+    url += `#${selectedCategory.value}`;
+  }
+  window.history.pushState({}, '', url);
 }
 </script>
 
