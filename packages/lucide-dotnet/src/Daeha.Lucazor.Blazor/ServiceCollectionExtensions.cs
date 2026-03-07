@@ -1,34 +1,34 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Lucide.Blazor;
+namespace Lucazor.Blazor;
 
 /// <summary>
-/// Extension methods for registering Lucide icon services.
+/// Extension methods for registering Lucazor icon services.
 /// </summary>
 public static class ServiceCollectionExtensions
 {
     /// <summary>
-    /// Adds Lucide icon services to the DI container.
+    /// Adds Lucazor icon services to the DI container.
     /// Registers <see cref="IIconProvider"/> and <see cref="ISvgRenderer"/>.
     /// </summary>
-    public static IServiceCollection AddLucideIcons(this IServiceCollection services)
+    public static IServiceCollection AddLucazor(this IServiceCollection services)
     {
-        services.TryAddSingleton<IIconProvider, LucideIconProvider>();
+        services.TryAddSingleton<IIconProvider, LucazorIconProvider>();
         services.TryAddSingleton<ISvgRenderer, StringSvgRenderer>();
         return services;
     }
 
     /// <summary>
-    /// Adds Lucide icon services with a custom icon provider configuration.
+    /// Adds Lucazor icon services with a custom icon provider configuration.
     /// </summary>
-    public static IServiceCollection AddLucideIcons(
+    public static IServiceCollection AddLucazor(
         this IServiceCollection services,
-        Action<LucideIconProvider> configure)
+        Action<LucazorIconProvider> configure)
     {
         services.AddSingleton<IIconProvider>(sp =>
         {
-            var provider = new LucideIconProvider();
+            var provider = new LucazorIconProvider();
             configure(provider);
             return provider;
         });

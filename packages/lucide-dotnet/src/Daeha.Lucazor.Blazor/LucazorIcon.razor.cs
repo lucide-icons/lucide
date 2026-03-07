@@ -1,12 +1,12 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Components;
 
-namespace Lucide.Blazor;
+namespace Lucazor.Blazor;
 
-public partial class LucideIcon : ComponentBase
+public partial class LucazorIcon : ComponentBase
 {
     /// <summary>
-    /// The icon data to render. Use LucideIcons.IconName (e.g., LucideIcons.Activity).
+    /// The icon data to render. Use LucazorIcons.IconName (e.g., LucazorIcons.Activity).
     /// Takes priority over <see cref="Name"/>.
     /// </summary>
     [Parameter]
@@ -82,10 +82,9 @@ public partial class LucideIcon : ComponentBase
         if (string.IsNullOrEmpty(name))
             return null;
 
-        // Prefer injected provider if available, fallback to static registry
         if (IconProvider != null)
             return IconProvider.GetIcon(name);
 
-        return LucideIconRegistry.GetIcon(name);
+        return LucazorIconRegistry.GetIcon(name);
     }
 }

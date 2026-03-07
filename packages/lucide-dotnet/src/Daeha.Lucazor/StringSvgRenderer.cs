@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Default SVG renderer that produces an SVG string.

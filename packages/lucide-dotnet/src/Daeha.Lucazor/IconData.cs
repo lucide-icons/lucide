@@ -1,4 +1,4 @@
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Represents a Lucide icon's SVG data.
@@ -40,5 +40,5 @@ public class IconData
     }
 
     /// <inheritdoc/>
-    public override string ToString() => $"LucideIcon({Name}, {Elements.Count} elements)";
+    public override string ToString() => $"LucazorIcon({Name}, {Elements.Count} elements)";
 }

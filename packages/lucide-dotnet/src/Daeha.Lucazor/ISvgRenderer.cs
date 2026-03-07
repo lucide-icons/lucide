@@ -1,4 +1,4 @@
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Renders <see cref="IconData"/> to SVG string output.

@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Options for rendering an icon as SVG.

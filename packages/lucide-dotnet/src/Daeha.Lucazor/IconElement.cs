@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Represents a single SVG child element (e.g., path, circle, rect) within an icon.

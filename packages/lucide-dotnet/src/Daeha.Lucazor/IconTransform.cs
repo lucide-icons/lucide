@@ -1,4 +1,4 @@
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Describes a visual transform applied to an icon (rotation, flip).

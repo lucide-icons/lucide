@@ -1,4 +1,4 @@
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Provides icon lookup by name.

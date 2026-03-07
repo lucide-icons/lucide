@@ -1,13 +1,13 @@
 using System.Collections.Concurrent;
 
-namespace Lucide;
+namespace Lucazor;
 
 /// <summary>
 /// Default implementation of <see cref="IIconProvider"/> backed by the
-/// generated <see cref="LucideIcons"/> static class.
+/// generated <see cref="LucazorIcons"/> static class.
 /// Supports registering custom icons alongside the built-in ones.
 /// </summary>
-public class LucideIconProvider : IIconProvider
+public class LucazorIconProvider : IIconProvider
 {
     private readonly ConcurrentDictionary<string, IconData> _customIcons
         = new ConcurrentDictionary<string, IconData>(StringComparer.OrdinalIgnoreCase);
@@ -15,11 +15,10 @@ public class LucideIconProvider : IIconProvider
     /// <inheritdoc/>
     public IconData? GetIcon(string name)
     {
-        // Custom icons take priority
         if (_customIcons.TryGetValue(name, out var custom))
             return custom;
 
-        return LucideIconRegistry.GetIcon(name);
+        return LucazorIconRegistry.GetIcon(name);
     }
 
     /// <inheritdoc/>
@@ -28,7 +27,7 @@ public class LucideIconProvider : IIconProvider
         foreach (var name in _customIcons.Keys)
             yield return name;
 
-        foreach (var name in LucideIconRegistry.GetIconNames())
+        foreach (var name in LucazorIconRegistry.GetIconNames())
         {
             if (!_customIcons.ContainsKey(name))
                 yield return name;
@@ -36,7 +35,7 @@ public class LucideIconProvider : IIconProvider
     }
 
     /// <inheritdoc/>
-    public int Count => LucideIconRegistry.Count + _customIcons.Count;
+    public int Count => LucazorIconRegistry.Count + _customIcons.Count;
 
     /// <summary>
     /// Registers a custom icon. Overrides any built-in icon with the same name.
