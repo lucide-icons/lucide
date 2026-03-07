@@ -14,11 +14,11 @@
     <PackageProjectUrl>https://lucide.dev</PackageProjectUrl>
     <RepositoryUrl>https://github.com/lucide-icons/lucide</RepositoryUrl>
     <PackageTags>icons;svg;lucide;lucazor;dotnet</PackageTags>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="../../NUGET_README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 
 </Project>
