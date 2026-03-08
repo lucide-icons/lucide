@@ -26,13 +26,17 @@
     "+"
   ],
   "categories": [
-    "maths",
+    "math",
     "tools",
     "development",
-    "text",
-    "shapes"
+    "text"
   ],
   "aliases": [
-    "plus-square"
+    {
+      "name": "plus-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

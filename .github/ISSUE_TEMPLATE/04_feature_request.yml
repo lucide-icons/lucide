@@ -22,6 +22,7 @@ body:
         - label: lucide-svelte
         - label: lucide-vue
         - label: lucide-vue-next
+        - label: lucide-astro
         - label: Figma plugin
         - label: all JS packages
         - label: site

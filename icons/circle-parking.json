@@ -10,9 +10,14 @@
   ],
   "categories": [
     "transportation",
-    "maps"
+    "navigation"
   ],
   "aliases": [
-    "parking-circle"
+    {
+      "name": "parking-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

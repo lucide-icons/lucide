@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "csandman",
+    "johnletey",
+    "jguddas",
+    "Footagesus"
+  ],
+  "tags": [
+    "water",
+    "weather",
+    "liquid",
+    "fluid",
+    "wet",
+    "moisture",
+    "damp",
+    "bead",
+    "globule"
+  ],
+  "categories": [
+    "weather",
+    "gaming"
+  ]
+}

@@ -1,5 +1,5 @@
 import { createElement, forwardRef } from 'react';
-import { mergeClasses, toKebabCase } from '@lucide/shared';
+import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 import { IconNode, LucideProps } from './types';
 import Icon from './Icon';
 
@@ -14,12 +14,16 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
     createElement(Icon, {
       ref,
       iconNode,
-      className: mergeClasses(`lucide-${toKebabCase(iconName)}`, className),
+      className: mergeClasses(
+        `lucide-${toKebabCase(toPascalCase(iconName))}`,
+        `lucide-${iconName}`,
+        className,
+      ),
       ...props,
     }),
   );
 
-  Component.displayName = `${iconName}`;
+  Component.displayName = toPascalCase(iconName);
 
   return Component;
 };

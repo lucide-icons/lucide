@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Ahmed-Dghaies",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "vehicle",
+    "drive",
+    "trip",
+    "journey",
+    "transport",
+    "electric",
+    "ride",
+    "urban",
+    "commute",
+    "speed"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

@@ -14,10 +14,14 @@
   ],
   "categories": [
     "development",
-    "maps",
     "navigation"
   ],
   "aliases": [
-    "git-commit"
+    {
+      "name": "git-commit",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

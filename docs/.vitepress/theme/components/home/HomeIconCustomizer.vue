@@ -48,6 +48,7 @@ function resetStyle () {
   color.value = 'currentColor'
   strokeWidth.value = 2
   size.value = 24
+  absoluteStrokeWidth.value = false
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
@@ -171,16 +172,14 @@ watch(absoluteStrokeWidth, (enabled) => {
   margin-top: 32px;
   padding: 0;
   background: none;
-  max-width: 280px;
 }
 
 @media (min-width: 640px) {
-
   .card {
     display: grid;
     grid-template-columns: 8fr 10fr;
   }
-/*
+  /*
   .card-column {
     flex: 1;
   } */

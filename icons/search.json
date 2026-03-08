@@ -2,17 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "find",
     "scan",
     "magnifier",
-    "magnifying glass"
+    "magnifying glass",
+    "lens"
   ],
   "categories": [
     "text",
-    "account",
     "social"
   ]
 }

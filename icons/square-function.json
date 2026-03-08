@@ -8,14 +8,18 @@
     "programming",
     "code",
     "automation",
-    "maths"
+    "math"
   ],
   "categories": [
     "development",
-    "shapes",
-    "maths"
+    "math"
   ],
   "aliases": [
-    "function-square"
+    {
+      "name": "function-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

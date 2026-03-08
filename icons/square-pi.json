@@ -15,10 +15,14 @@
   ],
   "categories": [
     "development",
-    "maths",
-    "shapes"
+    "math"
   ],
   "aliases": [
-    "pi-square"
+    {
+      "name": "pi-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

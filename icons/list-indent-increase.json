@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Themistoklis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "text",
+    "tab"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "indent",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "indent-increase",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

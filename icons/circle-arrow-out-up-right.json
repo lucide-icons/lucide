@@ -10,11 +10,14 @@
     "diagonal"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "maps"
+    "arrows"
   ],
   "aliases": [
-    "arrow-up-right-from-circle"
+    {
+      "name": "arrow-up-right-from-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

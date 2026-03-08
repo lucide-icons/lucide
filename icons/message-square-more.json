@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "comment",
@@ -20,7 +21,6 @@
     "…"
   ],
   "categories": [
-    "account",
     "social"
   ]
 }

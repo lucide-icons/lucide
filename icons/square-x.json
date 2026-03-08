@@ -11,16 +11,20 @@
     "remove",
     "times",
     "clear",
-    "maths",
+    "math",
     "multiply",
     "multiplication"
   ],
   "categories": [
-    "maths",
-    "shapes",
+    "math",
     "notifications"
   ],
   "aliases": [
-    "x-square"
+    {
+      "name": "x-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

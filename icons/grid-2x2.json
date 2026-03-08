@@ -18,16 +18,22 @@
     "distance",
     "surface area",
     "square meter",
-    "acre"
+    "acre",
+    "window",
+    "skylight"
   ],
   "categories": [
     "text",
     "layout",
     "design",
-    "shapes",
-    "maths"
+    "math"
   ],
   "aliases": [
-    "grid-2-x-2"
+    {
+      "name": "grid-2-x-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -12,10 +12,14 @@
     "panel"
   ],
   "categories": [
-    "layout",
-    "account"
+    "layout"
   ],
   "aliases": [
-    "menu-square"
+    {
+      "name": "menu-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

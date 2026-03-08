@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
   ],
   "tags": [
     "gist",
@@ -16,6 +19,11 @@
     "development"
   ],
   "aliases": [
-    "code-square"
+    {
+      "name": "code-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

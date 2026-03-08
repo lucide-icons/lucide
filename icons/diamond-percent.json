@@ -14,14 +14,17 @@
     "price tag"
   ],
   "categories": [
-    "account",
     "social",
-    "money",
+    "finance",
     "shopping",
-    "maths",
-    "shapes"
+    "math"
   ],
   "aliases": [
-    "percent-diamond"
+    {
+      "name": "percent-diamond",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

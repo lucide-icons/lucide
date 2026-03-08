@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "indirection",
@@ -23,7 +24,6 @@
   "categories": [
     "security",
     "account",
-    "maps",
     "navigation",
     "development",
     "social"

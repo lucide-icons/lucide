@@ -10,7 +10,13 @@
     "cog",
     "edit",
     "gear",
-    "preferences"
+    "preferences",
+    "controls",
+    "configuration",
+    "fixed",
+    "build",
+    "construction",
+    "parts"
   ],
   "categories": [
     "account"

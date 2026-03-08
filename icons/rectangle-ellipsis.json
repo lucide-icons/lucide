@@ -35,10 +35,14 @@
   ],
   "categories": [
     "text",
-    "development",
-    "shapes"
+    "development"
   ],
   "aliases": [
-    "form-input"
+    {
+      "name": "form-input",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

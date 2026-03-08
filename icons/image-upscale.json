@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "llaenowyd",
+    "mishkaio",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "resize",
+    "picture",
+    "sharpen",
+    "increase"
+  ],
+  "categories": [
+    "photography",
+    "multimedia"
+  ]
+}

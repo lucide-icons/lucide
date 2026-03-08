@@ -1,16 +1,16 @@
 # Lucide Vue
 
-Implementation of the lucide icon library for Vue applications.
+Vue 2 components for Lucide icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
 
-::: warning
-This package will be deprecated end of 2023. Vue v2 will be EOF at the end of 2023 See [Announcement](https://v2.vuejs.org/lts/). We recommend to migrate to Vue 3.
-The Lucide Vue package will be only maintained for Vue 3 after the deprecation.
-:::
+**What you can accomplish:**
+- Use icons as Vue 2 components with Options API integration
+- Maintain legacy Vue 2 applications with modern icon components
+- Integrate with Vue 2's template system and component lifecycle
+- Build applications using Vue 2's familiar syntax and patterns
+- Bridge the gap while planning migration to Vue 3
 
-## Vue 2 or Vue 3
-
-::: tip
-This version of lucide is for Vue 2, For Vue 3 go to [lucide-vue-next ->](lucide-vue-next)
+::: danger
+This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
 :::
 
 ## Installation
@@ -18,7 +18,7 @@ This version of lucide is for Vue 2, For Vue 3 go to [lucide-vue-next ->](lucide
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue
+pnpm add lucide-vue
 ```
 
 ```sh [yarn]
@@ -27,6 +27,10 @@ yarn add lucide-vue
 
 ```sh [npm]
 npm install lucide-vue
+```
+
+```sh [bun]
+bun add lucide-vue
 ```
 
 :::
@@ -63,7 +67,7 @@ Additional props can be passed to adjust the icon:
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
 | `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
+| `absoluteStrokeWidth`   | *boolean* | false        |
 | `default-class`         | *string*  | lucide-icon  |
 
 ### Applying props

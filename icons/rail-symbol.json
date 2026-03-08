@@ -3,6 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.brand",
+  "toBeRemovedInVersion": "v1.0",
   "tags": [
     "railway",
     "train",
@@ -11,6 +14,6 @@
   ],
   "categories": [
     "transportation",
-    "maps"
+    "navigation"
   ]
 }

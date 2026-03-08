@@ -74,6 +74,11 @@
     "gaming"
   ],
   "aliases": [
-    "shield-close"
+    {
+      "name": "shield-close",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

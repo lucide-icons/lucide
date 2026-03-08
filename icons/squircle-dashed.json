@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "aramsoneson"
+  ],
+  "tags": [
+    "shape",
+    "pending",
+    "progress",
+    "issue",
+    "draft",
+    "code",
+    "coding",
+    "version control"
+  ],
+  "categories": [
+    "development",
+    "shapes",
+    "design"
+  ]
+}

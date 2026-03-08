@@ -1,0 +1,67 @@
+{
+  "name": "@lucide/astro",
+  "version": "0.470.0",
+  "author": "Moustapha Kebe",
+  "description": "A Lucide icon library package for Astro applications.",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/astro"
+  },
+  "keywords": [
+    "Lucide",
+    "Astro",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "sideEffects": false,
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/lucide-astro.ts"
+    },
+    "./icons": {
+      "import": "./src/lucide-astro.ts"
+    },
+    "./icons/*": {
+      "import": "./src/icons/*.ts"
+    }
+  },
+  "scripts": {
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts --pretty=false",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "copy:utils": "mkdir -p ./src/utils && for f in hasA11yProp toKebabCase mergeClasses; do cp -f ../../packages/shared/src/utils/$f.ts ./src/utils/; done",
+    "test": "pnpm copy:utils && pnpm build:icons && vitest run",
+    "test:watch": "pnpm build:icons && vitest run --watch",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.4",
+    "@lucide/build-icons": "workspace:*",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "jest-serializer-html": "^7.1.0",
+    "linkedom": "^0.18.5",
+    "prettier": "^3.4.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.6",
+    "vitest": "^4.0.12",
+    "astro": "^5.16.0"
+  },
+  "peerDependencies": {
+    "astro": "^4 || ^5"
+  }
+}

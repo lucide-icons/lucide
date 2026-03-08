@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "document"
+  ],
+  "categories": [
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-minus-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

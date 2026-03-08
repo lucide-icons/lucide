@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "comment",
@@ -16,7 +17,7 @@
     "plus",
     "minus",
     "plus-minus",
-    "maths",
+    "math",
     "code review",
     "coding",
     "version control",
@@ -25,7 +26,6 @@
   "categories": [
     "development",
     "files",
-    "account",
     "social"
   ]
 }
