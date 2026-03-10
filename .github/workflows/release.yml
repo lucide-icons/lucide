@@ -134,6 +134,8 @@ jobs:
 
       - name: Create font in ./lucide-font
         run: pnpm build:font --saveCodePoints
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 
       - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v4
