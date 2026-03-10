@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Patolord"
+  ],
+  "tags": [
+    "health",
+    "skeleton",
+    "skull",
+    "death",
+    "pets",
+    "dog",
+    "broken"
+  ],
+  "categories": [
+    "medical",
+    "animals",
+    "gaming"
+  ]
+}
