@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Patolord"
+  ],
+  "tags": [
+    "bone",
+    "fracture",
+    "injury",
+    "orthopedic",
+    "medical",
+    "anatomy",
+    "skeletal",
+    "broken",
+    "xray",
+    "trauma",
+    "health",
+    "vet",
+    "veterinary",
+    "crack",
+    "break",
+    "damage"  ],
+  "categories": [
+    "medical",
+    "animals"
+  ]
+}
