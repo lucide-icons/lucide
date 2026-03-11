@@ -57,6 +57,12 @@ For more info on how to contribute please see the [contribution guidelines](http
 
 Caught a mistake or want to contribute to the documentation? [Edit this page on Github](https://github.com/lucide-icons/lucide/blob/main/README.md)
 
+## About brand logos
+
+Lucide **does not accept** brand logos, and we do not plan to add them in the future. This is due to a combination of **legal restrictions**, **design consistency concerns**, and **practical maintenance reasons**.
+
+[Click here to read our official statement about brand logos in Lucide.](./BRAND_LOGOS_STATEMENT.md)
+
 ## Community
 
 Join the community on our [Discord](https://discord.gg/EH6nSts) server!
@@ -82,7 +88,16 @@ Thank you to all the people who contributed to Lucide!
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
+[//]: <> (Open Collective backers)
 ### Awesome backers 🍺
 
-<a href="https://www.scipress.io?utm_source=lucide"><img src="docs/public/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
-<a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
+<a href="https://www.paxhistoria.co/"><img src="docs/public/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
+
+### Backers ☕
+
+<a href="https://www.fina.money/"><img src="docs/public/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+
+### Other contributors 💸
+
+You can find all our past and non-recurring financial contributors at [our Open Collective page](https://opencollective.com/lucide-icons).

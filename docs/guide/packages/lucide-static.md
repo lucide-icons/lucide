@@ -1,5 +1,14 @@
 # Lucide Static
 
+Static assets and utilities for Lucide icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
+
+**What you can accomplish:**
+- Use individual SVG files as images or CSS background images
+- Implement icon fonts for CSS-based icon systems
+- Create SVG sprites for efficient icon loading in static sites
+- Import SVG strings in Node.js applications and server-side rendering
+- Build static websites and applications without JavaScript framework dependencies
+
 This package includes the following implementations of Lucide icons:
 
 - Individual SVG files
@@ -36,7 +45,7 @@ For production environments, we recommend using a bundler with tree-shaking supp
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
@@ -101,11 +110,20 @@ Make sure you have the correct Webpack loader configured, such as [`url-loader`]
 
 To import an SVG as a string (e.g., for templating):
 
-```js
+::: code-group
+
+```js [Webpack]
 import arrowRightIcon from 'lucide-static/icons/arrow-right';
 ```
 
+```js [Vite]
+import arrowRightIcon from 'lucide-static/icons/arrow-right.svg?raw';
+```
+
+:::
+
 You'll need an SVG loader like [`svg-inline-loader`](https://v4.webpack.js.org/loaders/svg-inline-loader/).
+
 
 ### Using the SVG sprite
 
@@ -208,19 +226,27 @@ If you're not using a package manager, you can download the font files directly 
 
 ## Node.js
 
-You can also import Lucide icons in Node.js (CommonJS) projects:
+You can also import Lucide icons in Node.js projects:
 
-```js
-const {messageSquare} = require('lucide-static/lib');
+::: code-group
+
+```js [ESM]
+import {MessageSquare} from 'lucide-static';
 ```
 
-> Note: Each icon name is in camelCase.
+```js [CommonJs]
+const {MessageSquare} = require('lucide-static');
+```
+
+:::
+
+> Note: Each icon name is in PascalCase.
 
 #### Express app example in Node.js
 
 ```js
-const express = require('express');
-const {messageSquare} = require('lucide-static/lib');
+import express from 'express';
+import {MessageSquare} from 'lucide-static';
 const app = express();
 const port = 3000;
 
@@ -233,7 +259,7 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <h1>Lucide Icons</h1>
-        <p>This is a Lucide icon ${messageSquare}</p>
+        <p>This is a Lucide icon ${MessageSquare}</p>
 
       </body>
     </html>

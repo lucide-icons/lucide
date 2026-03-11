@@ -1,13 +1,20 @@
 # Lucide Angular
 
-Implementation of the lucide icon library for Angular applications.
+Angular components and services for Lucide icons that integrate with Angular's dependency injection and component system. Provides both traditional module-based and modern standalone component approaches for maximum flexibility in Angular applications.
+
+**What you can accomplish:**
+- Use icons as Angular components with full dependency injection support
+- Configure icons globally through Angular services and providers
+- Choose from multiple component selectors (lucide-angular, lucide-icon, i-lucide, span-lucide)
+- Integrate with Angular's reactive forms and data binding
+- Build scalable applications with tree-shaken icon bundles and lazy loading support
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-angular
+pnpm add lucide-angular
 ```
 
 ```sh [yarn]
@@ -160,3 +167,15 @@ import { coconut } from '@lucide/lab';
 })
 export class AppModule { }
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```html
+<lucide-icon name="check" aria-label="Task completed"></lucide-icon>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
