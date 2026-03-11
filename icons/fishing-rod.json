@@ -1,20 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
+    "7ender",
+    "jguddas",
     "karsa-mistmere"
   ],
   "tags": [
-    "bill",
-    "voucher",
-    "slip",
-    "check",
-    "counterfoil",
-    "currency",
-    "€"
+    "fishing",
+    "rod",
+    "hobby",
+    "equipment",
+    "reel"
   ],
   "categories": [
-    "finance",
+    "sports",
     "travel"
   ]
 }
