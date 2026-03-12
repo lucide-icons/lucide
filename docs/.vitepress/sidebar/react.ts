@@ -17,6 +17,11 @@ export const reactSidebar = [
         link: '/guide/react/migration',
         desc: 'Learn how to migrate from v0 to v1 of Lucide.',
       },
+      {
+        text: 'Migration from React Feather',
+        link: '/guide/react/migration-from-feather',
+        desc: 'Learn how to migrate from `react-feather` to `lucide-react`',
+      },
     ],
   },
   {

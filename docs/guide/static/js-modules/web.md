@@ -5,7 +5,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 # Use Lucide in Web
 
 :::warning Not recommended for high traffic production use
-This library exports each svg as basic strings. We have a more optimized library for web. Which is smaller in size and supports color, size and strokeWidth. See [Lucide](../../lucide).
+This library exports each svg as basic strings. We have a more optimized library for web. Which is smaller in size and supports color, size and strokeWidth. See [Lucide](../../lucide/index.md).
 :::
 
 You can also import SVG strings in your web projects, with the lucide-static package. Each icon is exported as a string containing the SVG markup, which can be used in client-side rendering.

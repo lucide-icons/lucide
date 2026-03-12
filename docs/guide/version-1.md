@@ -2,6 +2,10 @@
 title: Version 1 🚀
 description: After years of work and dedication, Lucide version 1 has been officially released! This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 ---
+<script setup>
+import OverviewLink from '../.vitepress/theme/components/base/OverviewLink.vue'
+import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGrid.vue'
+</script>
 <!--@include: ../../docs/images/version-1.svg -->
 
 # Lucide version 1
@@ -29,15 +33,17 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 
 See our guides:
 
-- guide for [Vanilla JavaScript](/guide/migration)
-- guide for [React](/guide/react/migration)
-- guide for [Vue](/guide/vue/migration)
-- guide for [Svelte](/guide/svelte/migration)
-- guide for [Solid](/guide/solid/migration)
-- guide for [Angular](/guide/angular/migration)
-- guide for [Preact](/guide/preact/migration)
-- guide for [Astro](/guide/astro/migration)
-- guide for [Static](/guide/static/migration)
+<OverviewLinkGrid>
+  <OverviewLink href="/guide/lucide/migration" title="Lucide for Vanilla JavaScript Migration" />
+  <OverviewLink href="/guide/react/migration" title="Lucide for React Migration" />
+  <OverviewLink href="/guide/vue/migration" title="Lucide for Vue Migration" />
+  <OverviewLink href="/guide/svelte/migration" title="Lucide for Svelte Migration" />
+  <OverviewLink href="/guide/solid/migration" title="Lucide for Solid Migration" />
+  <OverviewLink href="/guide/angular/migration" title="Lucide for Angular Migration" />
+  <OverviewLink href="/guide/preact/migration" title="Lucide for Preact Migration" />
+  <OverviewLink href="/guide/astro/migration" title="Lucide for Astro Migration" />
+  <OverviewLink href="/guide/static/migration" title="Lucide for Static Migration" />
+</OverviewLinkGrid>
 
 ## Removed All Brand Icons
 

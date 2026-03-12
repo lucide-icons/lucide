@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
+import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 
 defineProps<{
-  href?: string
-  title?: string
-  desc?: string
-}>()
+  href?: string;
+  title?: string;
+  desc?: string;
+}>();
 </script>
 
 <template>
@@ -18,11 +18,12 @@ defineProps<{
       {{ title }}
     </span>
     <span
-      class="desc">
+      v-if="desc"
+      class="desc"
+    >
       {{ desc }}
     </span>
   </VPLink>
-
 </template>
 
 <style scoped>
@@ -47,6 +48,7 @@ defineProps<{
   font-size: 12px;
   font-weight: 500;
   color: var(--vp-c-text-2);
+  margin-top: 2px;
 }
 
 .title {
@@ -56,6 +58,5 @@ defineProps<{
   font-weight: 500;
   color: var(--vp-c-brand-1);
   transition: color 0.25s;
-  margin-bottom: 2px;
 }
 </style>
