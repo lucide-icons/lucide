@@ -9,7 +9,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 Learn how to use SVG sprites with Lucide icons in your project, including basic usage and inline options.
 
 :::warning Not recommended for high traffic production use
-The SVG sprite includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages).
+The SVG sprite includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
 :::
 
 SVG sprites can be loaded as individual image, or used inline with the `<use>` element.

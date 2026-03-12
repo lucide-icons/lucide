@@ -621,7 +621,9 @@ const shrinkIconVariants = {
 
 @media (min-width: 1280px) {
   .home-hero-animation-container {
-    margin-right: calc(((((100vw - 1152px) / 2)) * -1) + 24px);
+    margin-right: -420px;
+    margin-top: -64px;
+    /* margin-right: calc(((((100vw - 1152px) / 2)) * -1) + 24px); */
     margin-left: -128px;
   }
 

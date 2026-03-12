@@ -11,7 +11,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 Lucide icons are also available as a web font. The font includes all icons as glyphs, allowing you to use them in your project with CSS classes. This can be a convenient option for projects that prefer using icon fonts.
 
 :::warning Not recommended for high traffic production use
-The Icon font includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages/).
+The Icon font includes all icons, which can significantly increase your app's bundle size and load time. For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../../packages.md).
 :::
 
 ## Using the CSS Stylesheet
