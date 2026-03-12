@@ -25,18 +25,20 @@ List of features:
 
 ## Overview
 
-<OverviewLink href="/guide/astro/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your Astro project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in astroSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in astroSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in astroSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

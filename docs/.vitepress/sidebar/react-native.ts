@@ -10,6 +10,12 @@ export const reactNativeSidebar = [
       {
         text: 'Getting started',
         link: '/guide/react-native/getting-started',
+        desc: 'Learn how to get started with Lucide React Native',
+      },
+      {
+        text: 'Migration from v0',
+        link: '/guide/react-native/migration',
+        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
       },
     ],
   },

@@ -27,25 +27,27 @@ List of features:
 
 ## Overview
 
-<OverviewLink href="/guide/preact/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your Preact project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in preactSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in preactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in preactSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Resources
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in preactSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

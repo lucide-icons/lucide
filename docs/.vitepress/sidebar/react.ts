@@ -10,6 +10,12 @@ export const reactSidebar = [
       {
         text: 'Getting started',
         link: '/guide/react/getting-started',
+        desc: 'Learn how to get started with Lucide for React.',
+      },
+      {
+        text: 'Migration from v0',
+        link: '/guide/react/migration',
+        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
       },
     ],
   },

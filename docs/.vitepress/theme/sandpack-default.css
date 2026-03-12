@@ -49,3 +49,7 @@ button:hover {
   justify-content: center;
   gap: 32px;
 }
+
+svg {
+  display: block;
+}

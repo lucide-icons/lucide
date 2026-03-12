@@ -7,7 +7,7 @@ nextPage:
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
-import { lucideSidebar } from '../../.vitepress/sidebar/lucide'
+import { lucideStaticSidebar } from '../../.vitepress/sidebar/static'
 </script>
 
 <!--@include: ../../../docs/images/package-logos/lucide.svg -->
@@ -33,25 +33,34 @@ This package includes the following implementations of Lucide icons:
 
 ## Overview
 
-<OverviewLink href="/guide/static/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in lucideStaticSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
-### Basics
+### SVG Files & Sprite
 {{''}}
 
 <OverviewLinkGrid>
-  <OverviewLink v-for="item in lucideSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+  <OverviewLink v-for="item in lucideStaticSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >
 
-### Advanced
+### Icon Font
 {{''}}
 
 <OverviewLinkGrid>
-  <OverviewLink v-for="item in lucideSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+  <OverviewLink v-for="item in lucideStaticSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid >
+
+### Javascript modules
+{{''}}
+
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in lucideStaticSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >
 
 ### Resources
 {{''}}
 
 <OverviewLinkGrid>
-  <OverviewLink v-for="item in lucideSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+  <OverviewLink v-for="item in lucideStaticSidebar[4].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid >

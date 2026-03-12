@@ -18,9 +18,7 @@ Make sure you have a your environment set up. If you don't have one yet, you can
 - Using SVGs as CSS background images
 - Importing SVG strings into Node.js environments
 
-::: danger
-### Not recommended for production {#production-warning}
-
+::: danger Not recommended for production high performance needs {#production-warning}
 SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
 
 For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages).

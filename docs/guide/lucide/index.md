@@ -29,25 +29,27 @@ Lucide is designed to be lightweight and easy to use, making it an excellent cho
 
 ## Overview
 
-<OverviewLink href="/guide/react/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your JS project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in lucideSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in lucideSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in lucideSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Resources
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in lucideSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

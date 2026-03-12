@@ -10,6 +10,12 @@ export const astroSidebar = [
       {
         text: 'Getting started',
         link: '/guide/astro/getting-started',
+        desc: 'Learn how to get started with Lucide for Astro.',
+      },
+      {
+        text: 'Migration from v0',
+        link: '/guide/astro/migration',
+        desc: 'Learn how to migrate from v0 to v1 of Lucide Astro.',
       },
     ],
   },

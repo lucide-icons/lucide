@@ -1,15 +1,22 @@
 import { DefaultTheme } from 'vitepress';
 
-export const vueSidebar = [
+export const lucideStaticSidebar = [
   {
     items: [
       {
         text: 'Overview',
-        link: '/guide/vue/',
+        desc: 'Overview of using Lucide icons as static assets in your projects',
+        link: '/guide/static/',
       },
       {
         text: 'Getting started',
         link: '/guide/static/getting-started',
+        desc: 'Learn how to get started with Lucide static.',
+      },
+      {
+        text: 'Migration from v0',
+        link: '/guide/static/migration',
+        desc: 'Learn how to migrate from v0 to v1 of Lucide static.',
       },
     ],
   },
@@ -17,19 +24,14 @@ export const vueSidebar = [
     text: 'SVG Files & Sprite',
     items: [
       {
-        text: 'Link as image',
+        text: 'Import SVG files as images',
         desc: 'Use icons as images in your project',
-        link: '',
-      },
-      {
-        text: 'Use in css',
-        desc: 'Use icons in your css files',
-        link: '',
+        link: '/guide/static/link-as-image',
       },
       {
         text: 'SVG Sprite',
         desc: 'Use SVG sprites in your project',
-        link: '',
+        link: '/guide/static/svg-sprite',
       },
     ],
   },
@@ -37,24 +39,34 @@ export const vueSidebar = [
     text: 'Icon Font',
     items: [
       {
+        text: 'Import as font',
+        desc: 'Use icons as a web font in your project',
+        link: '/guide/static/font/',
+      },
+      {
         text: 'Color',
         desc: 'Adjust the color of your icons',
-        link: '',
+        link: '/guide/static/font/color',
+      },
+      {
+        text: 'Sizing',
+        desc: 'Adjust the size of your icons',
+        link: '/guide/static/font/sizing',
       },
     ],
   },
   {
-    text: 'Javascript modules',
+    text: 'SVG String JS modules',
     items: [
       {
         text: 'Use in Node.js',
         desc: 'Use Lucide in your Node.js projects',
-        link: '',
+        link: '/guide/static/js-modules/node',
       },
       {
         text: 'Use in JS projects',
         desc: 'Use Lucide in your JavaScript projects',
-        link: '',
+        link: '/guide/static/js-modules/web',
       },
     ],
   },

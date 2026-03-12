@@ -80,4 +80,4 @@ More examples and details how to use props, continue the guide:
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in astroSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

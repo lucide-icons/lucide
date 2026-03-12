@@ -27,25 +27,27 @@ List of features:
 
 ## Overview
 
-<OverviewLink href="/guide/solid/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your Solid project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in solidSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in solidSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in solidSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Resources
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in solidSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

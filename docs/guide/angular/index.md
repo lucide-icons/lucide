@@ -25,18 +25,20 @@ List of features:
 
 ## Overview
 
-<OverviewLink href="/guide/angular/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your Angular project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in angularSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in angularSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

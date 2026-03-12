@@ -10,6 +10,12 @@ export const svelteSidebar = [
       {
         text: 'Getting started',
         link: '/guide/svelte/getting-started',
+        desc: 'Learn how to get started with Lucide for Svelte.',
+      },
+      {
+        text: 'Migration from v0',
+        link: '/guide/svelte/migration',
+        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
       },
     ],
   },

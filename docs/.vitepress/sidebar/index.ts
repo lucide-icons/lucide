@@ -9,6 +9,7 @@ import { reactNativeSidebar } from './react-native';
 import { astroSidebar } from './astro';
 import { resourcesSidebar } from './resources';
 import { angularSidebar } from './angular';
+import { lucideStaticSidebar } from './static';
 
 type Sidebar = UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'];
 
@@ -35,6 +36,7 @@ const sidebar: Sidebar = {
   '/guide/preact/': preactSidebar,
   '/guide/react-native/': reactNativeSidebar,
   '/guide/angular/': angularSidebar,
+  '/guide/static/': lucideStaticSidebar,
   '/community': resourcesSidebar,
   '/contribute': resourcesSidebar,
   '/license': resourcesSidebar,

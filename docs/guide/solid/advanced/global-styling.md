@@ -18,7 +18,7 @@ But using CSS prevents you from using props like `size`, `color` and `strokeWidt
 
 For global styling using a context provider, you can use the `LucideProvider` component that is provided by the `lucide-solid` package.
 
-<!-- TODO: Replace this with new package -->
+<!-- TODO: Replace this with live example after release -->
 
 ```tsx
 import { LucideProvider, Home } from 'lucide-solid';

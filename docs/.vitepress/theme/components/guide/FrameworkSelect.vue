@@ -24,7 +24,7 @@ const frameworks = [
     route: '/guide/react-native/',
   },
   { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro/' },
-  { name: 'Static', icon: '/framework-logos/static.svg', route: '/guide/static/' },
+  { name: 'Static', icon: '/framework-logos/svg.svg', route: '/guide/static/' },
 ];
 
 const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1]);

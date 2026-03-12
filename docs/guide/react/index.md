@@ -28,25 +28,27 @@ React components for Lucide icons that integrate seamlessly into your React appl
 
 ## Overview
 
-<OverviewLink href="/guide/react/getting-started" title="Getting Started" desc="Learn how to get started with Lucide in your React project."/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in reactSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[1].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[2].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Resources
 {{''}}
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in reactSidebar[3].items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
-</OverviewLinkGrid >
+</OverviewLinkGrid>

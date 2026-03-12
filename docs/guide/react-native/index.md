@@ -28,11 +28,9 @@ React components for Lucide icons that integrate seamlessly into your React Nati
 
 ## Overview
 
-<OverviewLink
-  href="/guide/react-native/getting-started"
-  title="Getting Started"
-  desc="Learn how to get started with Lucide in your React Native project."
-/>
+<OverviewLinkGrid>
+  <OverviewLink v-for="item in reactNativeSidebar[0].items.slice(1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+</OverviewLinkGrid>
 
 ### Basics
 {{''}}
@@ -45,7 +43,7 @@ React components for Lucide icons that integrate seamlessly into your React Nati
     :title="item.text"
     :desc="item.desc"
   />
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Advanced
 {{''}}
@@ -58,7 +56,7 @@ React components for Lucide icons that integrate seamlessly into your React Nati
     :title="item.text"
     :desc="item.desc"
   />
-</OverviewLinkGrid >
+</OverviewLinkGrid>
 
 ### Resources
 {{''}}
@@ -71,4 +69,4 @@ React components for Lucide icons that integrate seamlessly into your React Nati
     :title="item.text"
     :desc="item.desc"
   />
-</OverviewLinkGrid >
+</OverviewLinkGrid>

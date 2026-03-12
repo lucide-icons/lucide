@@ -10,6 +10,12 @@ export const angularSidebar = [
       {
         text: 'Getting started',
         link: '/guide/angular/getting-started',
+        desc: 'Learn how to get started with Lucide for Angular.',
+      },
+      {
+        text: 'Migration from v0',
+        link: '/guide/angular/migration',
+        desc: 'Learn how to migrate from v0 to v1 of Lucide.',
       },
     ],
   },
@@ -36,11 +42,11 @@ export const angularSidebar = [
   {
     text: 'Advanced',
     items: [
-      // {
-      //   text: 'Typescript',
-      //   link: '/guide/angular/advanced/typescript',
-      //   desc: 'All exported types and how to use them',
-      // },
+      {
+        text: 'Typescript',
+        link: '/guide/angular/advanced/typescript',
+        desc: 'All exported types and how to use them',
+      },
       {
         text: 'Accessibility',
         link: '/guide/angular/advanced/accessibility',
@@ -71,11 +77,11 @@ export const angularSidebar = [
       //   link: '/guide/angular/advanced/combining-icons',
       //   desc: 'Combine multiple icons into one',
       // },
-      {
-        text: 'Dynamic icon component',
-        link: '/guide/angular/advanced/dynamic-icon-component.md',
-        desc: 'Dynamically import icons as needed',
-      },
+      // {
+      //   text: 'Dynamic icon component',
+      //   link: '/guide/angular/advanced/dynamic-icon-component.md',
+      //   desc: 'Dynamically import icons as needed',
+      // },
     ],
   },
   {
