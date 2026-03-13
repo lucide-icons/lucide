@@ -11,10 +11,9 @@ export default function deprecationReasonTemplate(
     toBeRemovedInVersion?: string;
   },
 ) {
+  const resourceName = deprecationReason.startsWith('icon') ? 'icon' : 'alias';
   const removalNotice = toBeRemovedInVersion
-    ? ` This ${
-        deprecationReason.startsWith('icon') ? 'icon' : 'alias'
-      } will be removed in ${toBeRemovedInVersion}`
+    ? ` This ${resourceName} will be removed in ${toBeRemovedInVersion}`
     : '';
 
   switch (deprecationReason) {
@@ -24,6 +23,7 @@ export default function deprecationReasonTemplate(
       return `The icon was combined with another icon that shares the same use case, use {@link ${componentName}} instead.${removalNotice}`;
     case 'alias.name':
       return `The name of this icon was changed because it didn't meet our guidelines anymore, use {@link ${componentName}} instead.${removalNotice}`;
+    default:
       throw new Error(`Unknown deprecation reason: ${deprecationReason}`);
   }
 }
