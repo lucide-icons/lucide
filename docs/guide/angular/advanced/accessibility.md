@@ -15,7 +15,7 @@ Lucide icons ship with `aria-hidden="true"` by default. In almost all cases this
 
 Icons are often used purely for decoration or visual reinforcement. Exposing decorative icons to assistive technologies can create unnecessary noise for screen reader users.
 
-For a broader explanation of this approach and general guidance on accessible icon usage, please refer to the global accessibility guide first:
+For a broader explanation of this, and other best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility:
 
 <OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
 
