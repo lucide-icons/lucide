@@ -18,7 +18,8 @@ While they aren't provided as standalone components, they can be still be passed
 ```
 
 ```ts{2,6-7,11-12}
-import { provideLucideIcons } from '@lucide/angular';
+import { Component } from '@angular/core';
+import { LucideIcon, lucideLegacyIcon, provideLucideIcons } from '@lucide/angular';
 import { coconut } from '@lucide/lab';
 
 @Component({
@@ -43,7 +44,8 @@ Be sure to use an SVG element selector, e.g. `svg[lucide{IconName}]`
 import {
   createLucideIcon,
   LucideIconData,
-  lucideIconTemplate
+  lucideIconTemplate,
+  lucideLegacyIcon
 } from '@lucide/angular';
 import { coconut } from '@lucide/lab';
 import { Component, signal } from '@angular/core';

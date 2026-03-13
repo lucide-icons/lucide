@@ -3,10 +3,6 @@ title: Icon provider - Angular
 description: Learn how to register icons globally using provideLucideIcons, including custom and legacy icons.
 ---
 
-<script setup>
-import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
-</script>
-
 # Icon provider
 
 You can use the `LucideDynamicIcon` component to render icons by name. To use an icon by name, you must first register it with `provideLucideIcons`.
@@ -19,13 +15,13 @@ Use `provideLucideIcons` in your application providers to register icons.
 
 ```ts [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
-import { provideLucideIcons, SquareCheck, CircleAlert } from '@lucide/angular';
+import { provideLucideIcons, LucideSquareCheck, LucideCircleAlert } from '@lucide/angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideLucideIcons(
-      SquareCheck,
-      CircleAlert,
+      LucideSquareCheck,
+      LucideCircleAlert,
     ),
   ],
 };
@@ -42,7 +38,7 @@ You can then reference the registered icons by name:
 
 Each registered icon is stored by its icon name. For built-in Lucide icons, this is typically the kebab-case icon name.
 
-For example, registering `SquareCheck` makes it available as:
+For example, registering `LucideSquareCheck` makes it available as:
 
 ```html
 <svg lucideIcon="square-check"></svg>

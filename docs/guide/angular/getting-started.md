@@ -74,7 +74,7 @@ import { LucideDynamicIcon, LucideCircleCheck, LucideCircleX } from '@lucide/ang
 })
 export class App {
   protected readonly model = signal<boolean>(true);
-  protected readonly icon = computed(this.model() ? LucideCircleCheck : LucideCircleX);
+  protected readonly icon = computed(() => this.model() ? LucideCircleCheck : LucideCircleX);
 }
 ```
 

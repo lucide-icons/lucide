@@ -52,7 +52,7 @@ import { LucideBeer } from '@lucide/angular';
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
   imports: [LucideBeer],
 })
 
@@ -98,7 +98,7 @@ import { LucideStar } from '@lucide/angular';
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
   imports: [LucideStar],
 })
 

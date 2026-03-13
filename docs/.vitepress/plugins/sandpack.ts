@@ -16,15 +16,21 @@ type SnackParams = {
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
 
-function registerCustomAngularTemplates(filesWithDefaultStyles: Record<string, string>) {
+function registerCustomAngularTemplates(
+  filesWithDefaultStyles: NonNullable<SnackParams['defaultFiles']>,
+) {
   Object.assign(filesWithDefaultStyles, {
-    '/src/polyfills.ts': '',
-    '/src/main.ts': `import "@angular/compiler";
+    '/src/polyfills.ts': {
+      code: '',
+    },
+    '/src/main.ts': {
+      code: `import "@angular/compiler";
 import { bootstrapApplication } from '@angular/platform-browser';
 import { App } from './app/app.component';
 
 void bootstrapApplication(App, {})
   .catch((err) => console.error(err));`,
+    },
     '/package.json': {
       code: JSON.stringify({
         dependencies: {
