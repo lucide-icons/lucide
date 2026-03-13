@@ -548,6 +548,7 @@ const shrinkIconVariants = {
   left: -82px;
   width: 560px;
   height: 560px;
+  pointer-events: none;
 }
 
 @media (min-width: 640px) {
