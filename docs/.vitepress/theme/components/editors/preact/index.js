@@ -1,7 +1,7 @@
-import { render, h } from "preact";
-import App from "./App";
-import "./styles.css"
+import { render, h } from 'preact';
+import App from './App';
+import './styles.css';
 
-if (typeof window !== "undefined") {
-  render(<App />, document.getElementById("root"));
+if (typeof window !== 'undefined') {
+  render(<App />, document.getElementById('root'));
 }
