@@ -54,13 +54,21 @@ function generateIconFiles({
       aliases = [],
     } = iconMetaData[iconName];
     const deprecationReason = deprecated
-      ? deprecationReasonTemplate(iconMetaData[iconName]?.deprecationReason ?? '', {
+      ? deprecationReasonTemplate(iconMetaData[iconName].deprecationReason ?? '', {
           componentName,
           iconName,
           toBeRemovedInVersion,
         })
       : '';
 
+    const iconData = {
+      name: iconName,
+      size: 24,
+      node: children,
+      ...((aliases?.length ?? 0) > 0 && {
+        aliases: aliases.map((alias) => (typeof alias === 'string' ? alias : alias.name)),
+      }),
+    };
     const elementTemplate = await template({
       componentName,
       iconName,
@@ -68,7 +76,7 @@ function generateIconFiles({
       getSvg,
       deprecated,
       deprecationReason,
-      aliases,
+      iconData,
     });
 
     const output = pretty

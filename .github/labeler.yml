@@ -86,6 +86,12 @@
       - any-glob-to-any-file:
           - 'packages/astro/*'
 
+# For changes in the @lucide/icons package
+❇️ lucide-icons:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'packages/lucide-icons/*'
+
 # For changes in the lucide static package
 🪨 static package:
   - changed-files:

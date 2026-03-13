@@ -26,6 +26,8 @@ body:
         - label: '@lucide/svelte (new version)'
         - label: lucide-vue
         - label: lucide-vue-next
+        - label: lucide-astro
+        - label: '@lucide/icons'
         - label: Figma plugin
         - label: source/main
         - label: other/not relevant

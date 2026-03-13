@@ -58,6 +58,7 @@ jobs:
             '@lucide/angular',
             '@lucide/astro',
             '@lucide/svelte',
+            '@lucide/icons',
             '@lucide/vue',
           ]
     steps:
