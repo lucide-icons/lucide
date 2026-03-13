@@ -1,6 +1,6 @@
 ---
 title: Global Styling - Angular
-description: Learn how to style all icons globally in your Angular application using CSS or the Lucide context provider.
+description: Learn how to style all icons globally in your Angular application using CSS or the provideLucideConfig provider.
 ---
 
 # Global Styling
