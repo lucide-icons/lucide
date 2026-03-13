@@ -17,7 +17,7 @@
 ## Step 1 – Update dependencies
 
 Remove `lucide-angular`, and add `@lucide/angular`, see:\
-[Getting Started # Installation](/guide/packages/angular#installation)
+[Getting Started # Installation](/guide/angular/getting-started.md#installation)
 
 ---
 
