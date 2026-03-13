@@ -43,4 +43,4 @@ When an icon is used inside a button, the accessible label should usually be app
 </button>
 ```
 
-This ensures assistive technologies describe the **interactive element**, rather than the decorative graphic inside it.
+This ensures assistive technologies describe the interactive element, rather than the decorative graphic inside it.
