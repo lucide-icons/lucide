@@ -459,7 +459,7 @@ const SvgPreview = (
       />
       <ColoredPath
         paths={paths}
-        colors={['##dfdfd6']}
+        colors={['#dfdfd6']}
       />
       <Radii
         paths={paths}

@@ -1,8 +1,8 @@
-import { h, nextTick, onMounted, watch } from 'vue';
+import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import './style.css';
 import 'virtual:group-icons.css';
-import { Theme, useRouter } from 'vitepress';
+import { Theme } from 'vitepress';
 import IconsSidebarNavAfter from './layouts/IconsSidebarNavAfter.vue';
 import HomeHeroIconsCard from './components/home/HomeHeroIconsCard.vue';
 import HomeHeroAfter from './components/home/HomeHeroAfter.vue';
@@ -12,7 +12,6 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import FrameworkSelect from './components/guide/FrameworkSelect.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-// import Sandpack from './components/editors/Sandpack.vue';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -30,7 +29,6 @@ const theme: Partial<Theme> = {
     app.provide(CATEGORY_VIEW_CONTEXT, categoryViewContext);
     app.provide(EXTERNAL_LIBS_CONTEXT, externalLibContext);
     app.component('SnackPlayer', SnackPlayer);
-    // app.component('Sandpack', Sandpack);
   },
 };
 

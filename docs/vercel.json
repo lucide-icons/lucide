@@ -98,7 +98,7 @@
       "permanent": true
     },
     {
-      "source": "/guide/packages/lucide-statuc",
+      "source": "/guide/packages/lucide-static",
       "destination": "/guide/static",
       "permanent": true
     },
