@@ -5,20 +5,19 @@ description: Learn how to style all icons globally in your Angular application u
 
 # Global Styling
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or use a context provider.
+Lucide icons can be customized using the component inputs for [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
+To style all icons globally, you can either use CSS, or configure global defaults using `provideLucideConfig`.
 
 We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
-But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to use the Lucide context provider.
+But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to configure global defaults using `provideLucideConfig`.
 
-## Context Provider
+## Configuring global defaults
 
-Lucide Angular provides a context API called `provideLucideConfig` that allows you to set global default properties for all Lucide icons in your application.
-This is useful if you want all icons to share the same size, color, or stroke width by default.
+Lucide Angular exposes an Angular provider called `provideLucideConfig` that allows you to configure default properties for all icons.
 
-### Setting global defaults
+This lets you define global defaults (such as `size`, `color`, or `strokeWidth`) while still allowing individual icons to override them via inputs.
 
-You can call `provideLucideConfig` in your main entry file or in a top-level component to set the default properties for all icons.
+You can register the provider in your application configuration or in a top-level component.
 
 ```ts
 import { ApplicationConfig } from '@angular/core';

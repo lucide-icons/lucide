@@ -24,11 +24,31 @@ import { coconut } from '@lucide/lab';
 @Component({
   templateUrl: './foobar.html',
   // For using by name via provider:
-  providers: [provideLucideIcons({ coconut })],
+  providers: [provideLucideIcons(lucideLegacyIcon('coconut', coconut))],
   imports: [LucideIcon]
 })
 export class Foobar {
   // For passing directly as LucideIconData:
-  readonly CoconutIcon = coconut;
+  readonly CoconutIcon = lucideLegacyIcon('coconut', coconut);
+}
+```
+
+### Creating custom icon components
+
+```ts
+import { LucideIconData, LucideIconBase } from '@lucide/angular';
+import { Component, signal } from '@angular/core';
+
+@Component({
+  selector: 'svg[appCoconut]',
+  template: lucideIconTemplate,
+  standalone: true,
+})
+export class AppCoconutIcon extends LucideIconBase {
+  static readonly icon: LucideIconData = {
+    name: 'coconut',
+    node: coconut,
+  };
+  protected override readonly icon = signal(CoconutIcon.icon);
 }
 ```

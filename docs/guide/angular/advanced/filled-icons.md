@@ -1,14 +1,14 @@
 ---
 title: Filled Icons - Angular
-description: Fills are officially not supported. However, all SVG properties are available on all icons. Fill can still be used and will work fine on certain icons.
+description: Fills are not officially supported, but can still be applied using standard SVG attributes, this may in some cases produce acceptable results.
 ---
 # Filled Icons
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+Fills are not officially supported by Lucide.
 
-Example with stars:
+However, since the icons are standard SVG elements, SVG attributes such as `fill` can still be applied. Depending on the icon, this may produce acceptable results.
+
+## Example with stars:
 
 ::: code-group
 

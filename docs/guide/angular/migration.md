@@ -16,7 +16,8 @@
 
 ## Step 1 – Update dependencies
 
-Remove `lucide-angular`, add `@lucide/angular`, see http://lucide.dev/guide/packages/angular#installation
+Remove `lucide-angular`, and add `@lucide/angular`, see:\
+[Getting Started # Installation](/guide/packages/angular#installation)
 
 ---
 
@@ -64,10 +65,10 @@ import { provideLucideIcons, LucideAirVent, LucideAlarmClock } from '@lucide/ang
 export const appConfig: ApplicationConfig = {
   providers: [
     // ...
-    provideLucideIcons([
+    provideLucideIcons(
       LucideAirVent,
       LucideAlarmClock,
-    ]),
+    ),
   ]
 };
 ```
@@ -176,16 +177,7 @@ Make sure you're importing from `@lucide/angular` and not `lucide-angular`.
 
 ### Icons render with wrong defaults
 Ensure `provideLucideConfig()` is used at the right level.
-
 ---
-
-## TL;DR
-- `LucideAngularModule` ⇒ static: removed; dynamic: `LucideIcon`
-- `LucideAngularModule.pick(...)` ⇒ `provideLucideIcons(...)`
-- `<lucide-angular name="foo-bar">` ⇒ `<svg lucideFooBar>`
-- `<lucide-icon [name]="expr">` ⇒ `<svg [lucideIcon]="expr">`
-- `<lucide-icon [img]="expr">` ⇒ `<svg [lucideIcon]="expr">`
-- `LucideIconConfig` ⇒ `provideLucideConfig(...)`
 
 ## Removed Brand Icons
 
@@ -207,3 +199,16 @@ Brand icons are removed in v1. If you are using any of the following icons, you 
 - Slack
 
 We recommend to use the official SVG icons provided by the respective brands, most of them can be found on their websites or in their brand guidelines. Alternatively, you can use the icons from [Simple Icons](https://simpleicons.org/), which provides a large collection of brand icons. Also with links to the official Brand Guidelines and SVG icons.
+
+An [Angular package for Simple Icons](https://github.com/gridatek/semantic-icons/tree/main/libs/simple-icons) with standalone component support is also available.
+
+---
+
+## TL;DR
+- `LucideAngularModule` ⇒ static: removed; dynamic: `LucideIcon`
+- `LucideAngularModule.pick(...)` ⇒ `provideLucideIcons(...)`
+- `<lucide-angular name="foo-bar">` ⇒ `<svg lucideFooBar>`
+- `<lucide-icon [name]="expr">` ⇒ `<svg [lucideIcon]="expr">`
+- `<lucide-icon [img]="expr">` ⇒ `<svg [lucideIcon]="expr">`
+- `LucideIconConfig` ⇒ `provideLucideConfig(...)`
+- Replace brand icon usages with [`simple-icons`](https://github.com/gridatek/semantic-icons/tree/main/libs/simple-icons).
