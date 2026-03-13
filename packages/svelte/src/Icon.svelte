@@ -34,7 +34,7 @@
 >
   {#each iconNode as [tag, attrs]}
     <svelte:element
-      this={tag}
+      this={tag as string}
       {...attrs}
     />
   {/each}
