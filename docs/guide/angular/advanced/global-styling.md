@@ -5,19 +5,19 @@ description: Learn how to style all icons globally in your Angular application u
 
 # Global Styling
 
-Lucide icons can be customized using the component inputs for [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or configure global defaults using `provideLucideConfig`.
+Lucide icons can be customized using the inputs for [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
 
-We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
-But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to configure global defaults using `provideLucideConfig`.
+To style all icons globally, you can either use CSS or configure global defaults using `provideLucideConfig`.
+
+We recommend using CSS for global styling, as it is the most straightforward approach. However, CSS rules may override the `size`, `color`, and `strokeWidth` inputs on individual icons. If you need to keep those inputs configurable per icon, use `provideLucideConfig` instead.
 
 ## Configuring global defaults
 
-Lucide Angular exposes an Angular provider called `provideLucideConfig` that allows you to configure default properties for all icons.
+Lucide Angular provides the `provideLucideConfig` provider to set default properties for all icons.
 
-This lets you define global defaults (such as `size`, `color`, or `strokeWidth`) while still allowing individual icons to override them via inputs.
+You can define global defaults (such as `size`, `color`, or `strokeWidth`) while still allowing individual icons to override them through inputs.
 
-You can register the provider in your application configuration or in a top-level component.
+Register the provider in your application configuration or in a top-level component:
 
 ```ts
 import { ApplicationConfig } from '@angular/core';
@@ -34,13 +34,13 @@ export const appConfig: ApplicationConfig = {
 
 ## Style by using CSS
 
-Styling icons is easy to accomplish using CSS.
+Styling icons globally can be done using CSS.
 
-Every icon has a class attribute applied called `lucide`. This class name can be used in the CSS file to target all icons that are being used within the app.
+All Lucide icons include the `lucide` class. You can use this class in your styles to target every icon in your application.
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
+- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height).
+- The **stroke width** of the icons can be changed using [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width).
 
 ::: code-group
 
@@ -65,7 +65,7 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 
 ### Absolute stroke width
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more details.
 
 ::: code-group
 

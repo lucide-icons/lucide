@@ -17,7 +17,7 @@ import { LucideLandmark } from '@lucide/angular';
   selector: "landmark",
   imports: [ LucideLandmark ],
   template: `
-    <svg lucideLandmark size="64"></svg>
+    <svg lucideLandmark [size]="64"></svg>
   `,
 })
 

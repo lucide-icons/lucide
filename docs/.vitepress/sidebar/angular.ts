@@ -72,16 +72,21 @@ export const angularSidebar = [
         link: '/guide/angular/advanced/filled-icons',
         desc: 'Using filled icons in @lucide/angular',
       },
-      // {
-      //   text: 'Combining icons',
-      //   link: '/guide/angular/advanced/combining-icons',
-      //   desc: 'Combine multiple icons into one',
-      // },
+      {
+        text: 'Combining icons',
+        link: '/guide/angular/advanced/combining-icons',
+        desc: 'Combine multiple icons into one',
+      },
       // {
       //   text: 'Dynamic icon component',
       //   link: '/guide/angular/advanced/dynamic-icon-component.md',
       //   desc: 'Dynamically import icons as needed',
       // },
+      {
+        text: 'Icon provider',
+        link: '/guide/angular/advanced/icon-provider',
+        desc: 'Provide icons at app level and use them by name',
+      },
     ],
   },
   {

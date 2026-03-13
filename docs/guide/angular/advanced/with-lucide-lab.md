@@ -35,20 +35,39 @@ export class Foobar {
 
 ### Creating custom icon components
 
-```ts
-import { LucideIconData, LucideIconBase } from '@lucide/angular';
+You can also create your own standalone icon components using `createLucideIcon`.
+
+Be sure to use an SVG element selector, e.g. `svg[lucide{IconName}]`
+
+```ts [icons/coconut.ts]
+import {
+  createLucideIcon,
+  LucideIconData,
+  lucideIconTemplate
+} from '@lucide/angular';
+import { coconut } from '@lucide/lab';
 import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'svg[appCoconut]',
+  selector: 'svg[lucideCoconut]',
   template: lucideIconTemplate,
   standalone: true,
 })
-export class AppCoconutIcon extends LucideIconBase {
-  static readonly icon: LucideIconData = {
-    name: 'coconut',
-    node: coconut,
-  };
-  protected override readonly icon = signal(CoconutIcon.icon);
+export class LucideCoconut extends createLucideIcon(
+  lucideLegacyIcon('coconut', coconut)
+) {
+}
+```
+
+```ts [app.ts]
+import { Component } from "@angular/core";
+import { LucideCoconut } from "./icons/coconut.ts";
+
+@Component({
+  selector: 'app',
+  imports: [LucideCoconut],
+  template: `<svg lucideCoconut></svg>`,
+})
+export class App {
 }
 ```

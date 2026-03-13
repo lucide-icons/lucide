@@ -19,7 +19,7 @@ import { LucideFolderLock } from '@lucide/angular';
   selector: "locked-folder",
   imports: [ LucideFolderLock ],
   template: `
-    <svg lucideFolderLock strokeWidth="1"></svg>
+    <svg lucideFolderLock [strokeWidth]="1"></svg>
   `,
 })
 
@@ -50,8 +50,8 @@ import { LucideRollerCoaster } from '@lucide/angular';
   template: `
     <svg
       lucideRollerCoaster
-      size="96"
-      absoluteStrokeWidth
+      [size]="96"
+      [absoluteStrokeWidth]="true"
     ></svg>
   `,
 })
