@@ -2,6 +2,9 @@
 title: Color - Angular
 description: Learn how to adjust the color of icons in your Angular application using the `color` prop or by using parent elements text color value.
 ---
+<script setup>
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+</script>
 
 # Color
 
@@ -13,20 +16,21 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-```angular-ts
-import { Component } from '@angular/core';
-import { LucideSmile } from '@lucide/angular';
+::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
+
+```ts /src/app/app.component.ts [active]
+import { Component } from "@angular/core";
+import { LucideSmile } from "@lucide/angular";
 
 @Component({
-  selector: "smile",
-  imports: [ LucideSmile ],
-  template: `
-    <svg lucideSmile color="#3e9392"></svg>
-  `,
+  selector: 'app-root',
+  imports: [LucideSmile],
+  template: `<svg lucideSmile color="#3e9392" />`,
 })
-
-export class SmileComponent { }
+export class App {
+}
 ```
+:::
 
 ## Using parent elements text color value
 

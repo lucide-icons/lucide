@@ -13,7 +13,7 @@ This is useful for if you want to be creative and make your own custom icons by 
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
-```ts app.ts [active]
+```ts /src/app/app.component.ts [active]
 import { Component } from "@angular/core";
 import { LucideScan, LucideUser } from "@lucide/angular";
 
@@ -53,7 +53,7 @@ For example, you can add a notification badge to an icon by using the `circle` S
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
-```ts app.ts [active]
+```ts /src/app/app.component.ts [active]
 import { Component, signal } from "@angular/core";
 import { LucideMail } from "@lucide/angular";
 
@@ -86,7 +86,7 @@ You can also use the `text` SVG element to add text to your icon.
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
-```ts app.ts [active]
+```ts /src/app/app.component.ts [active]
 import { Component, signal } from "@angular/core";
 import { LucideFile } from "@lucide/angular";
 
@@ -107,7 +107,6 @@ import { LucideFile } from "@lucide/angular";
       </svg>`,
 })
 export class App {
-  protected readonly hasUnreadMessages = signal<boolean>(true);
 }
 ```
 :::

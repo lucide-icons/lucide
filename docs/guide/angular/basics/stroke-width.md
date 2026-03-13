@@ -2,6 +2,10 @@
 title: Stroke width - Angular
 description: Learn how to adjust the stroke width of icons in your Angular application using the `strokeWidth` prop or adjust the strokeWidth appearance using the `absoluteStrokeWidth` prop.
 ---
+<script setup>
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+</script>
+
 # Stroke width
 
 All icons are designed with SVG elements using strokes.
@@ -11,20 +15,21 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
-```angular-ts
-import { Component } from '@angular/core';
-import { LucideFolderLock } from '@lucide/angular';
+::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
+
+```ts /src/app/app.component.ts [active]
+import { Component } from "@angular/core";
+import { LucideFolderLock } from "@lucide/angular";
 
 @Component({
-  selector: "locked-folder",
-  imports: [ LucideFolderLock ],
-  template: `
-    <svg lucideFolderLock [strokeWidth]="1"></svg>
-  `,
+  selector: 'app-root',
+  imports: [LucideFolderLock],
+  template: `<svg lucideFolderLock [strokeWidth]="1" />`,
 })
-
-export class LockedFolderComponent { }
+export class App {
+}
 ```
+:::
 
 ## Absolute stroke width
 

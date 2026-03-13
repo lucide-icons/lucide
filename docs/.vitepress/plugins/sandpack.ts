@@ -17,6 +17,39 @@ type SnackParams = {
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
 
+function registerCustomAngularTemplates(filesWithDefaultStyles: Record<string, string>) {
+  Object.assign(filesWithDefaultStyles, {
+    '/src/polyfills.ts': '',
+    '/src/main.ts': `import "@angular/compiler";
+import { bootstrapApplication } from '@angular/platform-browser';
+import { App } from './app/app.component';
+
+void bootstrapApplication(App, {})
+  .catch((err) => console.error(err));`,
+    '/package.json': {
+      code: JSON.stringify({
+        dependencies: {
+          '@angular/common': '^21.0.0',
+          '@angular/compiler': '^21.0.0',
+          '@angular/core': '^21.0.0',
+          '@angular/forms': '^21.0.0',
+          '@angular/platform-browser': '^21.0.0',
+          '@angular/router': '^21.0.0',
+          'zone.js': '0.16.1',
+          'core-js': '3.48.0',
+          rxjs: '7.4.0',
+        },
+        main: '/src/main.ts',
+        devDependencies: {
+          '@angular/build': '^21.0.3',
+          '@angular/cli': '^21.0.3',
+          '@angular/compiler-cli': '^21.0.0',
+        },
+      }),
+    },
+  });
+}
+
 export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {
   const escapeHtml = md.utils.escapeHtml;
   const defaultFence =
@@ -68,7 +101,8 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           }
         }
 
-        const { dependencies, showTabs, externalResources, editorWidthPercentage ,...options } = attrs;
+        const { dependencies, showTabs, externalResources, editorWidthPercentage, ...options } =
+          attrs;
 
         const dependencyList = dependencies?.split(',')?.map((dep: string) => dep.trim()) ?? [];
 
@@ -80,11 +114,18 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           {},
         );
 
-        const externalResourcesList = externalResources?.split(',')?.map((res: string) => res.trim())?.filter((res: string) => res.length > 0);
+        const externalResourcesList = externalResources
+          ?.split(',')
+          ?.map((res: string) => res.trim())
+          ?.filter((res: string) => res.length > 0);
 
         const filesWithDefaultStyles = {
           ...pluginOptions.defaultFiles,
           ...files,
+        };
+
+        if (attrs.template === 'angular') {
+          registerCustomAngularTemplates(filesWithDefaultStyles);
         }
 
         return `\
@@ -92,17 +133,23 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           template="${escapeHtml(attrs.template || 'vanilla')}"\
           :theme="${escapeHtml(JSON.stringify(sandpackTheme))}"\
           :customSetup="${escapeHtml(
-            dependencyList ? JSON.stringify({
-              dependencies: dependencyList.length ? dependencyObject : {},
-            }) : undefined,
+            dependencyList
+              ? JSON.stringify({
+                  dependencies: dependencyList.length ? dependencyObject : {},
+                })
+              : undefined,
           )}"
           :files="${escapeHtml(JSON.stringify(filesWithDefaultStyles))}"\
-          :options="${escapeHtml(JSON.stringify({
-            ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
-            externalResources:externalResourcesList,
-            editorWidthPercentage: editorWidthPercentage ? Number(editorWidthPercentage) : undefined,
-            ...options,
-          }))}"\
+          :options="${escapeHtml(
+            JSON.stringify({
+              ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
+              externalResources: externalResourcesList,
+              editorWidthPercentage: editorWidthPercentage
+                ? Number(editorWidthPercentage)
+                : undefined,
+              ...options,
+            }),
+          )}"\
         >`;
       }
       return `</Sandpack>`;

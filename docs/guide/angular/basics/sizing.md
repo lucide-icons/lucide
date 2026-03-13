@@ -2,6 +2,9 @@
 title: Sizing - Angular
 description: Learn how to adjust the size of icons in your Angular application using the `size` prop or by using CSS.
 ---
+<script setup>
+import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+</script>
 
 # Sizing
 
@@ -9,20 +12,21 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 
 ## Adjusting the icon size using the `size` prop
 
-```angular-ts
-import { Component } from '@angular/core';
-import { LucideLandmark } from '@lucide/angular';
+::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
+
+```ts /src/app/app.component.ts [active]
+import { Component } from "@angular/core";
+import { LucideLandmark } from "@lucide/angular";
 
 @Component({
-  selector: "landmark",
-  imports: [ LucideLandmark ],
-  template: `
-    <svg lucideLandmark [size]="64"></svg>
-  `,
+  selector: 'app-root',
+  imports: [LucideLandmark],
+  template: `<svg lucideLandmark [size]="64" />`,
 })
-
-export class LandmarkComponent { }
+export class App {
+}
 ```
+:::
 
 ## Adjusting the icon size via CSS
 
@@ -46,7 +50,7 @@ import { Component } from '@angular/core';
 import { LucideBeer } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css'
   imports: [LucideBeer],
@@ -92,7 +96,7 @@ import { Component } from '@angular/core';
 import { LucideStar } from '@lucide/angular';
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css'
   imports: [LucideStar],
