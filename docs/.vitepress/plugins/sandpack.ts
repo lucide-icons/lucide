@@ -2,7 +2,6 @@ import type MarkdownIt from 'markdown-it';
 import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
 import container from 'markdown-it-container';
 import sandpackTheme from '../theme/sandpackTheme.json';
-import defaultStyle from '../theme/sandpack-default.css?raw';
 
 type SnackParams = {
   defaultFiles?: Record<

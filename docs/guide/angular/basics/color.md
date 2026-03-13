@@ -1,6 +1,6 @@
 ---
 title: Color - Angular
-description: Learn how to adjust the color of icons in your Angular application using the `color` prop or by using parent elements text color value.
+description: Learn how to adjust the color of icons in your Angular application using the `color` input or by using parent elements text color value.
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
@@ -12,9 +12,9 @@ By default, all icons have the color value: `currentColor`. This keyword uses th
 
 Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword).
 
-## Adjust the color using the `color` prop
+## Adjust the color using the `color` input
 
-The color can be adjusted by passing the color prop to the element.
+The color can be adjusted by binding the `color` input of the element.
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 

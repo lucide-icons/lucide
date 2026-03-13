@@ -1,6 +1,6 @@
 ---
 title: Sizing - Angular
-description: Learn how to adjust the size of icons in your Angular application using the `size` prop or by using CSS.
+description: Learn how to adjust the size of icons in your Angular application using the `size` input or by using CSS.
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
@@ -8,9 +8,9 @@ import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 
 # Sizing
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
+By default, the size of all icons is `24px` by `24px`. The size is adjustable either by binding the `size` input and CSS.
 
-## Adjusting the icon size using the `size` prop
+## Adjusting the icon size using the `size` input
 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 

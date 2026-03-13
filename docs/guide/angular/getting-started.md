@@ -47,22 +47,16 @@ Every icon can be imported as a ready-to-use standalone component, which renders
 
 ### Standalone icons
 
-Additional props can be passed to adjust the icon:
-
 ```ts
 import { Component } from '@angular/core';
 import { LucideFileText } from '@lucide/angular';
 
 @Component({
   selector: 'app',
-  templateUrl: './app.html',
+  template: '<svg lucideFileText></svg>',
   imports: [LucideFileText],
 })
 export class App { }
-```
-
-```html
-<svg lucideFileText color="red" [size]="48"></svg>
 ```
 
 ### Dynamic icon component
@@ -75,7 +69,7 @@ import { LucideDynamicIcon, LucideCircleCheck, LucideCircleX } from '@lucide/ang
 
 @Component({
   selector: 'app',
-  templateUrl: './app.html',
+  template: `<svg [lucideIcon]="icon()"></svg>`,
   imports: [LucideDynamicIcon],
 })
 export class App {
@@ -84,11 +78,9 @@ export class App {
 }
 ```
 
-```html
-<svg [lucideIcon]="icon()" color="red" [size]="48"></svg>
-```
-
 ## Component inputs
+
+The components also accept additional inputs:
 
 |  name                   |   type    |  default     |
 | ----------------------- | --------- | ------------ |
@@ -98,7 +90,7 @@ export class App {
 | `absoluteStrokeWidth`   | *boolean* | false        |
 | `title`                 | *string*  | null         |
 
-### Binding to inputs
+### Binding inputs
 
 To customize the appearance of an icon, you can bind to these inputs directly. Because the component renders an `<svg>` element, you can also bind standard SVG attributes for flexible styling. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 

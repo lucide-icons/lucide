@@ -19,7 +19,7 @@ Only if an icon **conveys essential meaning on its own** should you make it acce
 
 ## Making an Icon Accessible
 
-To expose an icon to assistive technologies, you can provide an accessible name by binding to the `title` input of the icon component.
+To expose an icon to assistive technologies, you can provide an accessible name by binding the `title` input of the icon component.
 This will remove the `aria-hidden` attribute and the icon becomes visible to screen readers.
 
 ```angular-html
