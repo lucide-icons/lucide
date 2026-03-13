@@ -5,19 +5,17 @@ import { toPascalCase } from '@lucide/helpers';
 export default defineExportTemplate(async ({
   componentName,
   iconName,
-  children,
   getSvg,
   deprecated,
   deprecationReason,
-  aliases = [],
+  iconData,
 }) => {
   const svgContents = await getSvg();
   const svgBase64 = base64SVG(svgContents);
   const angularComponentName = `Lucide${componentName}`;
   const selectors = [`svg[lucide${toPascalCase(iconName)}]`];
   const aliasComponentNames: string[] = [];
-  const aliasNames = aliases.map(alias => typeof alias === 'string' ? alias : alias.name);
-  for (const alias of aliasNames) {
+  for (const alias of iconData.aliases ?? []) {
     const aliasComponentName = `Lucide${toPascalCase(alias)}`;
     const aliasSelector = `svg[lucide${toPascalCase(alias)}]`;
     if (!selectors.includes(aliasSelector)) {
@@ -29,9 +27,9 @@ export default defineExportTemplate(async ({
   }
 
   return `\
-import { LucideIconData } from '../types';
-import { LucideIconBase } from '../lucide-icon-base';
-import { Component, signal } from '@angular/core';
+import { createLucideIcon } from '../create-lucide-icon';
+import { lucideIconTemplate } from '../lucide-icon-template';
+import { Component } from '@angular/core';
 
 /**
  * @component @name ${componentName}
@@ -45,16 +43,10 @@ import { Component, signal } from '@angular/core';
 */
 @Component({
   selector: '${selectors.join(', ')}',
-  templateUrl: '../lucide-icon.html',
+  template: lucideIconTemplate,
   standalone: true,
 })
-export class ${angularComponentName} extends LucideIconBase {
-  static readonly icon: LucideIconData = ${JSON.stringify({
-    name: iconName,
-    node: children,
-    ...(aliasNames.length > 0 && { aliases: aliasNames }),
-  })};
-  protected override readonly icon = signal(${angularComponentName}.icon);
+export class ${angularComponentName} extends createLucideIcon(${JSON.stringify(iconData)}) {
 }
 
 ${aliasComponentNames.map((aliasComponentName) => {

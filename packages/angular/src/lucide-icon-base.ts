@@ -2,6 +2,7 @@ import { Component, effect, ElementRef, inject, input, Renderer2, Signal } from 
 import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, Nullable } from './types';
 import defaultAttributes from './default-attributes';
+import { lucideIconTemplate } from './lucide-icon-template';
 
 function transformNumericStringInput(
   value: Nullable<string | number>,
@@ -23,7 +24,7 @@ function transformNumericStringInput(
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'svg[lucideIcon]',
-  templateUrl: './lucide-icon.html',
+  template: lucideIconTemplate,
   host: {
     ...defaultAttributes,
     class: 'lucide',

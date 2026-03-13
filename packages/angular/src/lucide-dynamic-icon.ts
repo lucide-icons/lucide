@@ -2,13 +2,14 @@ import { Component, computed, inject, input } from '@angular/core';
 import { isLucideIconComponent, isLucideIconData, LucideIconInput } from './types';
 import { LucideIconBase } from './lucide-icon-base';
 import { LUCIDE_ICONS } from './lucide-icons';
+import { lucideIconTemplate } from './lucide-icon-template';
 
 /**
  * Generic icon component for rendering LucideIconData.
  */
 @Component({
   selector: 'svg[lucideIcon]',
-  templateUrl: './lucide-icon.html',
+  template: lucideIconTemplate,
   standalone: true,
 })
 export class LucideDynamicIcon extends LucideIconBase {

@@ -9,6 +9,7 @@ export type LucideIcons = { [key: string]: LucideIconData };
  */
 export type LucideIconData = {
   name: string;
+  size?: number;
   node: LucideIconNode[];
   aliases?: string[];
 };
