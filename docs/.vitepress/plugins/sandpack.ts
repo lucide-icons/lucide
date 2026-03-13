@@ -68,7 +68,8 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           }
         }
 
-        const { dependencies, showTabs, externalResources, editorWidthPercentage ,...options } = attrs;
+        const { dependencies, showTabs, externalResources, editorWidthPercentage, ...options } =
+          attrs;
 
         const dependencyList = dependencies?.split(',')?.map((dep: string) => dep.trim()) ?? [];
 
@@ -80,29 +81,38 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           {},
         );
 
-        const externalResourcesList = externalResources?.split(',')?.map((res: string) => res.trim())?.filter((res: string) => res.length > 0);
+        const externalResourcesList = externalResources
+          ?.split(',')
+          ?.map((res: string) => res.trim())
+          ?.filter((res: string) => res.length > 0);
 
         const filesWithDefaultStyles = {
           ...pluginOptions.defaultFiles,
           ...files,
-        }
+        };
 
         return `\
         <Sandpack\
           template="${escapeHtml(attrs.template || 'vanilla')}"\
           :theme="${escapeHtml(JSON.stringify(sandpackTheme))}"\
           :customSetup="${escapeHtml(
-            dependencyList ? JSON.stringify({
-              dependencies: dependencyList.length ? dependencyObject : {},
-            }) : undefined,
+            dependencyList
+              ? JSON.stringify({
+                  dependencies: dependencyList.length ? dependencyObject : {},
+                })
+              : undefined,
           )}"
           :files="${escapeHtml(JSON.stringify(filesWithDefaultStyles))}"\
-          :options="${escapeHtml(JSON.stringify({
-            ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
-            externalResources:externalResourcesList,
-            editorWidthPercentage: editorWidthPercentage ? Number(editorWidthPercentage) : undefined,
-            ...options,
-          }))}"\
+          :options="${escapeHtml(
+            JSON.stringify({
+              ...(showTabs ? { showTabs: JSON.parse(showTabs) } : {}),
+              externalResources: externalResourcesList,
+              editorWidthPercentage: editorWidthPercentage
+                ? Number(editorWidthPercentage)
+                : undefined,
+              ...options,
+            }),
+          )}"\
         >`;
       }
       return `</Sandpack>`;
