@@ -26,12 +26,13 @@
     "Font Awesome"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:ng",
+    "build": "pnpm clean && pnpm copy:license && pnpm copy:utils &&pnpm build:icons && pnpm build:ng",
     "copy:license": "cp ../../LICENSE ./LICENSE",
+    "copy:utils": "mkdir -p ./src/utils && cp -rf ../../packages/shared/src/utils/hasA11yProp.ts ./src/utils/",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=lucide-icons.ts",
     "build:ng": "ng build --configuration production",
-    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "test": "pnpm copy:utils && ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "e2e": "ng e2e",

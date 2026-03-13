@@ -31,3 +31,60 @@ describe('Using Icon Component', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+describe('Icon Component Accessibility', () => {
+  it('should have aria-hidden prop when no aria prop is present', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+      },
+    });
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('should not have aria-hidden prop when aria prop is present', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        'aria-label': 'Air conditioning',
+      },
+    });
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+
+  it('should not have aria-hidden prop when title prop is present', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        title: 'Air conditioning',
+      },
+    });
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+
+  it('should never override aria-hidden prop', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+        'aria-hidden': 'false',
+      },
+    });
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'false');
+  });
+});

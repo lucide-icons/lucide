@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
 import sidebar from './sidebar';
+import getStructuredData from './getStructuredData';
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -151,8 +152,36 @@ export default defineConfig({
       },
     ],
   ],
+  async transformPageData(pageData) {
+    if (
+      pageData.relativePath.startsWith('icons/') &&
+      !pageData.relativePath.startsWith('icons/lab/') &&
+      pageData.params?.name
+    ) {
+      const iconName = pageData.params.name;
+      pageData.title = `${iconName} icon details`;
+
+      const taggedAs = pageData.params?.tags?.length
+        ? `Tagged as: ${pageData.params.tags.join(', ')}.`
+        : '';
+      const categorizedIn = pageData.params?.category?.length
+        ? `Categorized in: ${pageData.params.category.join(', ')}.`
+        : '';
+
+      pageData.description =
+        `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
+
+      const structuredData = await getStructuredData(iconName, pageData);
+
+      pageData.frontmatter.head ??= [];
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(structuredData),
+      ]);
+    }
+  },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: {
       light: '/logo.light.svg',
       dark: '/logo.dark.svg',

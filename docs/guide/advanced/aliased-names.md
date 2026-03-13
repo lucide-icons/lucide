@@ -79,6 +79,16 @@ declare module "lucide-react-native" {
 }
 ```
 
+```ts [@lucide-icons]
+declare module "@lucide/icons" {
+  // Prefixed import names
+  export * from "@lucide/icons/dist/lucide-icons.prefixed";
+  // or
+  // Suffixed import names
+  export * from "@lucide/icons/dist/lucide-icons.suffixed";
+}
+```
+
 :::
 
 Place this in your project root or in a folder where your tsconfig.json is located, or locate it in your defined type directory.

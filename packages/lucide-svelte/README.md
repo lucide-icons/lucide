@@ -46,6 +46,7 @@ yarn add lucide-svelte
 ```sh
 bun add lucide-svelte
 ```
+> For Svelte 5, check out [`@lucide/svelte`](https://www.npmjs.com/package/@lucide/svelte) package.
 
 ## Documentation
 
@@ -67,7 +68,16 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
+[//]: <> (Open Collective backers)
 ### Awesome backers 🍺
 
-<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
-<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
+<a href="https://www.paxhistoria.co/"><img src="https://lucide.dev/sponsors/paxhistoria.svg?" width="180" alt="Pax Historia – An alternate history sandbox game" /></a>
+
+### Backers ☕
+
+<a href="https://www.fina.money/"><img src="https://lucide.dev/sponsors/fina-money.png" width="180" alt="Fina Money – Modular Finance Tracker" /></a>
+
+### Other contributors 💸
+
+You can find all our past and non-recurring financial contributors at [our Open Collective page](https://opencollective.com/lucide-icons).

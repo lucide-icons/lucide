@@ -1,6 +1,9 @@
 name: Lucide Vue checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/lucide-vue/**
