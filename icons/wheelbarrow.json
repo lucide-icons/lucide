@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "tags": [
+    "gardening",
+    "farming",
+    "yard",
+    "cart",
+    "construction",
+    "building"
+  ],
+  "categories": [
+    "home",
+    "nature",
+    "tools"
+  ]
+}
