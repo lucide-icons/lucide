@@ -1,17 +1,17 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="26"
-  height="26"
-  viewBox="0 0 26 26"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M13 21v-1" />
-  <path d="M17 21v-2" />
-  <path d="M21 21V8" />
-  <path d="M5 5v16" />
-  <path d="M9 21v-4" />
+  <path d="M12 20v-1" />
+  <path d="M16 20v-2" />
+  <path d="M20 20V7" />
+  <path d="M4 4v16" />
+  <path d="M8 20v-4" />
 </svg>
