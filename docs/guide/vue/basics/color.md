@@ -20,7 +20,7 @@ The color can be adjusted by passing the color prop to the element.
 
 ```vue src/App.vue [active]
 <script setup>
-import { Smile } from "lucide-vue-next";
+import { Smile } from "@lucide/vue";
 </script>
 
 <template>
@@ -40,7 +40,7 @@ For example, if a parent element's color value is `#fff` and one of the children
 
 ```vue src/App.vue [active]
 <script setup>
-import { ThumbsUp } from "lucide-vue-next";
+import { ThumbsUp } from "@lucide/vue";
 </script>
 
 <template>
