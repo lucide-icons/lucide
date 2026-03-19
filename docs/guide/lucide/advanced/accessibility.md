@@ -38,7 +38,7 @@ When an icon is used inside a button, the accessible label should usually be app
 
 ```html
 <button aria-label="Go to home">
-  <i data-lucide="house" aria-label="This is my house"></i>
+  <i data-lucide="house"></i>
 </button>
 ```
 

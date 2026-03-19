@@ -26,7 +26,7 @@ This will remove the `aria-hidden` attribute and make the icon accessible.
 
 // or
 
-<svg lucideHouse> aria-label="This is my house" />
+<svg lucideHouse aria-label="This is my house" />
 ```
 
 We recommend to describe the icon in a way that makes sense for the user, or the action it represents and that makes sense in the context of your application.
