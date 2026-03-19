@@ -27,9 +27,15 @@ export default defineExportTemplate(async ({
   }
 
   return `\
-import { createLucideIcon } from '../create-lucide-icon';
+import { LucideIconBase } from '../lucide-icon-base';
 import { lucideIconTemplate } from '../lucide-icon-template';
-import { Component } from '@angular/core';
+import { LucideIconData } from '../types';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ViewEncapsulation,
+  signal,
+} from '@angular/core';
 
 /**
  * @component @name ${componentName}
@@ -45,8 +51,12 @@ import { Component } from '@angular/core';
   selector: '${selectors.join(', ')}',
   template: lucideIconTemplate,
   standalone: true,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ${angularComponentName} extends createLucideIcon(${JSON.stringify(iconData)}) {
+export class ${angularComponentName} extends LucideIconBase {
+  static readonly icon: LucideIconData = ${JSON.stringify(iconData)};
+  protected override readonly icon = signal(${angularComponentName}.icon);
 }
 
 ${aliasComponentNames.map((aliasComponentName) => {

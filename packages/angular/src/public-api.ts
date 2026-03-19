@@ -1,6 +1,5 @@
 import * as icons from './icons/lucide-angular';
 
-export * from './create-lucide-icon';
 export * from './lucide-config';
 export * from './lucide-dynamic-icon';
 export * from './lucide-icon-base';

@@ -1,24 +1,37 @@
-import { Component, inputBinding, signal, WritableSignal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inputBinding,
+  signal,
+  ViewEncapsulation,
+  WritableSignal,
+} from '@angular/core';
 import { provideLucideConfig } from './lucide-config';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { lucideIconTemplate } from './lucide-icon-template';
-import { createLucideIcon } from './create-lucide-icon';
+import { LucideIconBase } from './lucide-icon-base';
+import { LucideIconData } from './types';
 
 @Component({
   selector: 'svg[lucideCircleCheck], svg[lucideCheckCircle2]',
   template: lucideIconTemplate,
   standalone: true,
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LucideCircleCheck extends createLucideIcon({
-  name: 'circle-check',
-  size: 24,
-  node: [
-    ['circle', { cx: '12', cy: '12', r: '10' }],
-    ['path', { d: 'm9 12 2 2 4-4' }],
-  ],
-  aliases: ['check-circle-2'],
-}) {}
+export class LucideCircleCheck extends LucideIconBase {
+  static readonly icon: LucideIconData = {
+    name: 'circle-check',
+    size: 24,
+    node: [
+      ['circle', { cx: '12', cy: '12', r: '10' }],
+      ['path', { d: 'm9 12 2 2 4-4' }],
+    ],
+    aliases: ['check-circle-2'],
+  };
+  protected override readonly icon = signal(LucideCircleCheck.icon);
+}
 
 describe('LucideIconBase', () => {
   let component: LucideCircleCheck;
