@@ -155,8 +155,8 @@ importers:
         specifier: ^14.1.0
         version: 14.1.0
       motion-v:
-        specifier: ^2.0.1
-        version: 2.0.1(@vueuse/core@14.0.0(vue@3.5.24(typescript@5.9.3)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.24(typescript@5.9.3))
+        specifier: 1.10.3
+        version: 1.10.3(@vueuse/core@14.0.0(vue@3.5.24(typescript@5.9.3)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.24(typescript@5.9.3))
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -10166,8 +10166,8 @@ packages:
   motion-utils@12.29.2:
     resolution: {integrity: sha512-G3kc34H2cX2gI63RqU+cZq+zWRRPSsNIOjpdl9TN4AQwC4sgwYPl/Q/Obf/d53nOm569T0fYK+tcoSV50BWx8A==}
 
-  motion-v@2.0.1:
-    resolution: {integrity: sha512-oTzIRROq01knJLnCV4BqQQ7jdonrp29AIdYE1tJar/ls7b5rEZnexWGhuilVmZUl+ulI+6a7HXEFe1YV/FEPBA==}
+  motion-v@1.10.3:
+    resolution: {integrity: sha512-9Ewo/wwGv7FO3PqYJpllBF/Efc7tbeM1iinVrM73s0RUQrnXHwMZCaRX98u4lu0PQCrZghPPfCsQ14pWKIEbnQ==}
     peerDependencies:
       '@vueuse/core': '>=10.0.0'
       vue: '>=3.0.0'
@@ -24781,13 +24781,12 @@ snapshots:
 
   motion-utils@12.29.2: {}
 
-  motion-v@2.0.1(@vueuse/core@14.0.0(vue@3.5.24(typescript@5.9.3)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.24(typescript@5.9.3)):
+  motion-v@1.10.3(@vueuse/core@14.0.0(vue@3.5.24(typescript@5.9.3)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.24(typescript@5.9.3)):
     dependencies:
       '@vueuse/core': 14.0.0(vue@3.5.24(typescript@5.9.3))
       framer-motion: 12.33.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       hey-listen: 1.0.8
       motion-dom: 12.33.0
-      motion-utils: 12.29.2
       vue: 3.5.24(typescript@5.9.3)
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
