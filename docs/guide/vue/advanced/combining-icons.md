@@ -11,11 +11,11 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 You can combine multiple icons into a single icon by nesting SVG elements.
 This is useful if you want to create custom icons icons by combining existing ones.
 
-::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Scan, User } from "lucide-vue-next";
+import { Scan, User } from "@lucide/vue";
 </script>
 
 <template>
@@ -50,11 +50,11 @@ You can also combine Lucide icons with native SVG elements to build custom icon 
 
 For example, you can add a notification badge to an icon by using the `circle` SVG element.
 
-::: sandpack {template=vue showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Mail } from "lucide-vue-next";
+import { Mail } from "@lucide/vue";
 
 const hasUnreadMessages = true;
 </script>
@@ -82,11 +82,11 @@ const hasUnreadMessages = true;
 
 You can also use the `text` SVG element to add text to your icon.
 
-::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { File } from "lucide-vue-next";
+import { File } from "@lucide/vue";
 </script>
 
 <template>

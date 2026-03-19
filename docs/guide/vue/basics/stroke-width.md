@@ -15,11 +15,11 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 
 ## Adjusting stroke width with `strokeWidth` prop
 
-::: sandpack {template=vue showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { FolderLock } from "lucide-vue-next";
+import { FolderLock } from "@lucide/vue";
 </script>
 
 <template>
@@ -42,11 +42,11 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
-::: sandpack {template=vue showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { RollerCoaster } from "lucide-vue-next";
+import { RollerCoaster } from "@lucide/vue";
 </script>
 
 <template>

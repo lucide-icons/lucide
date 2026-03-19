@@ -12,11 +12,11 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
 
 ## Adjusting the icon size using the `size` prop
 
-::: sandpack {template=vue showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=300 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Landmark } from 'lucide-vue-next'
+import { Landmark } from "@lucide/vue"
 </script>
 
 <template>
@@ -31,7 +31,7 @@ import { Landmark } from 'lucide-vue-next'
 
 The CSS properties `width` and `height` can be used to adjust the icon size.
 
-::: sandpack {template=vue editorHeight=300 dependencies="lucide-vue-next"}
+::: sandpack {template=vue editorHeight=300 dependencies="@lucide/vue"}
 
 ```css src/icon.css [active]
 .my-beer-icon {
@@ -43,7 +43,7 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
 
 ```vue src/App.vue
 <script setup>
-import { Beer } from "lucide-vue-next";
+import { Beer } from "@lucide/vue";
 import './icon.css'
 </script>
 
@@ -57,7 +57,7 @@ import './icon.css'
 
 It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
 
-::: sandpack {template=vue editorHeight=300 dependencies="lucide-vue-next"}
+::: sandpack {template=vue editorHeight=300 dependencies="@lucide/vue"}
 
 ```css src/icon.css [active]
 .my-icon {
@@ -79,7 +79,7 @@ It is possible to resize icons based on font size. This can be achieved using th
 
 ```vue src/App.vue
 <script setup>
-import { Star } from "lucide-vue-next";
+import { Star } from "@lucide/vue";
 import "./icon.css";
 </script>
 
@@ -97,11 +97,11 @@ import "./icon.css";
 
 `size-*` utilities can be used to adjust the size of the icon. See the [Tailwind documentation](https://tailwindcss.com/docs/width#setting-both-width-and-height) for more information on the `size-*` utilities.
 
-::: sandpack {template=vue editorHeight=300 editorWidthPercentage=60 dependencies="lucide-vue-next" externalResources="https://cdn.tailwindcss.com"}
+::: sandpack {template=vue editorHeight=300 editorWidthPercentage=60 dependencies="@lucide/vue" externalResources="https://cdn.tailwindcss.com"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { PartyPopper } from "lucide-vue-next";
+import { PartyPopper } from "@lucide/vue";
 </script>
 
 <template>

@@ -14,11 +14,11 @@ Fill can still be used and will work fine on certain icons.
 
 Example with stars:
 
-::: sandpack {template=vue editorHeight=580 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue editorHeight=580 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Star, StarHalf } from "lucide-vue-next";
+import { Star, StarHalf } from "@lucide/vue";
 import "./icon.css";
 </script>
 
