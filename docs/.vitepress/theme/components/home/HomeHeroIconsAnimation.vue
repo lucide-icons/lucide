@@ -220,7 +220,8 @@ const shrinkIconVariants = {
             strokeWidth="inherit"
             v-bind="icon"
             @animation-complete="onAnimationComplete"
-            v-bind="preventFocusProps"
+            tabindex="-1"
+            focusable="false"
           />
           <motion.g
             :variants="scaleDownVariants"
