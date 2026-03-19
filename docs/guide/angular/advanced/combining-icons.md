@@ -18,7 +18,7 @@ import { Component } from "@angular/core";
 import { LucideScan, LucideUser } from "@lucide/angular";
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   imports: [LucideScan, LucideUser],
   template: `
       <svg lucideScan [size]="48">
@@ -58,7 +58,7 @@ import { Component, signal } from "@angular/core";
 import { LucideMail } from "@lucide/angular";
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   imports: [LucideMail],
   template: `
       <svg lucideMail [size]="48">
@@ -91,7 +91,7 @@ import { Component, signal } from "@angular/core";
 import { LucideFile } from "@lucide/angular";
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   imports: [LucideFile],
   template: `
       <svg lucideFile [size]="48">
