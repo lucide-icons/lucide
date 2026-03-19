@@ -9,11 +9,23 @@ import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
 
 # Accessibility
 
-By default all lucide icons are applied with `aria-hidden="true"` which makes them **not** accessible for screen readers.
-This is done because most of the time icons are used for decorative purposes only.
+Lucide icons ship with `aria-hidden="true"` by default. In almost all cases this is exactly what you want.
 
-If you need to make an icon accessible, you can do so by passing a `title` element as a child or passing the `aria-label` prop to the icon component.
-This will remove the `aria-hidden` attribute and make the icon accessible.
+## Should icons be accessible?
+
+Most of the time, icons are used purely for decoration or visual reinforcement. Exposing decorative icons to assistive technologies can create unnecessary noise for screen reader users.
+
+For a broader explanation of this, and other best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility:
+
+<OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
+
+Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in Astro.
+
+## Making an icon accessible
+
+To expose an icon to assistive technologies, provide an accessible name by passing a `title` element as a child or passing the `aria-label` prop to the icon component.
+
+This removes the `aria-hidden` attribute and makes the icon visible to screen readers.
 
 ```astro
 <House>
@@ -25,11 +37,11 @@ This will remove the `aria-hidden` attribute and make the icon accessible.
 <House aria-label="This is my house" />
 ```
 
-We recommend to describe the icon in a way that makes sense for the user, or the action it represents and that makes sense in the context of your application.
+Choose a label that clearly describes the meaning of the icon or the action it represents in the context of your application.
 
-## Accessible Icon Buttons
+## Accessible icon buttons
 
-When using icon buttons, you should not provide an accessible label on the icon itself, but rather on the button.
+When an icon is used inside a button, the accessible label should usually be applied to the button itself, and not the icon.
 
 ```astro
 <button aria-label="Go to home">
@@ -37,8 +49,4 @@ When using icon buttons, you should not provide an accessible label on the icon 
 </button>
 ```
 
-## Detailed Guide on Accessibility
-
-For best practices on how to use icons accessibly in your application, please refer to our detailed guide on accessibility.
-
-<OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
+This ensures assistive technologies describe the interactive element, rather than the decorative graphic inside it.

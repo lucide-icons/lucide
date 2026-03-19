@@ -16,11 +16,11 @@ Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/doc
 
 The color can be adjusted by passing the color prop to the element.
 
-::: sandpack {template=vue showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=295 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Smile } from "lucide-vue-next";
+import { Smile } from "@lucide/vue";
 </script>
 
 <template>
@@ -36,11 +36,11 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-::: sandpack {template=vue showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=320 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { ThumbsUp } from "lucide-vue-next";
+import { ThumbsUp } from "@lucide/vue";
 </script>
 
 <template>

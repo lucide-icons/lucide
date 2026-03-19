@@ -1,6 +1,6 @@
 ---
 title: Combining icons - Vue
-description: Learn how to combine multiple icons into a single icon using SVG in SVG in your Vue application.
+description: Learn how to combine multiple icons into a single icon nested SVG elements in your Vue application.
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
@@ -8,14 +8,14 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 
 # Combining icons
 
-You can combine multiple icons into a single icon by using SVG in SVG.
-This is useful for if you want to be creative and make your own custom icons by combining existing icons.
+You can combine multiple icons into a single icon by nesting SVG elements.
+This is useful if you want to create custom icons icons by combining existing ones.
 
-::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Scan, User } from "lucide-vue-next";
+import { Scan, User } from "@lucide/vue";
 </script>
 
 <template>
@@ -35,26 +35,26 @@ import { Scan, User } from "lucide-vue-next";
 
 :::
 
-This is valid SVG and all SVG properties are supported on the icons.
+This is valid, since [SVGs can be nested](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg#nested_svg_element), and all SVG properties are supported on the icons.
 The `x` and `y` coordinates can be adjusted to position the icons as you like.
 
 ::: info Limitation
 When combining icons, you need to make sure that the `x` and `y` coordinates are within the `viewBox` of the outer icon (24x24).
 :::
 
-## With custom SVG elements
+## With native SVG elements
 
-You can also use SVG elements to create your own icons.
+You can also combine Lucide icons with native SVG elements to build custom icon variations.
 
 ### Example with notification badge
 
 For example, you can add a notification badge to an icon by using the `circle` SVG element.
 
-::: sandpack {template=vue showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=480 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { Mail } from "lucide-vue-next";
+import { Mail } from "@lucide/vue";
 
 const hasUnreadMessages = true;
 </script>
@@ -82,11 +82,11 @@ const hasUnreadMessages = true;
 
 You can also use the `text` SVG element to add text to your icon.
 
-::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-vue-next"}
+::: sandpack {template=vue showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/vue"}
 
 ```vue src/App.vue [active]
 <script setup>
-import { File } from "lucide-vue-next";
+import { File } from "@lucide/vue";
 </script>
 
 <template>

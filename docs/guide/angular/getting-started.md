@@ -80,7 +80,7 @@ export class App {
 
 ## Component inputs
 
-The components also accept additional inputs:
+To customize the appearance of an icon, you can use the following inputs:
 
 |  name                   |   type    |  default     |
 | ----------------------- | --------- | ------------ |
@@ -90,9 +90,7 @@ The components also accept additional inputs:
 | `absoluteStrokeWidth`   | *boolean* | false        |
 | `title`                 | *string*  | null         |
 
-### Binding inputs
-
-To customize the appearance of an icon, you can bind to these inputs directly. Because the component renders an `<svg>` element, you can also bind standard SVG attributes for flexible styling. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```html
 <svg lucideHouse [size]="48" color="red" [strokeWidth]="1" title="Home"></svg>

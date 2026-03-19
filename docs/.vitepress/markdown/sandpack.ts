@@ -56,7 +56,10 @@ void bootstrapApplication(App, {})
 }
 
 export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {
-  const escapeHtml = md.utils.escapeHtml;
+  if (md == null) {
+    throw new Error('MarkdownIt instance is required for sandpackPlugin');
+  }
+  const escapeHtml = md?.utils?.escapeHtml;
   const defaultFence =
     md.renderer.rules.fence ||
     ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));

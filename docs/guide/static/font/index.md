@@ -23,7 +23,7 @@ The Icon font includes all icons, which can significantly increase your app's bu
 ```
 
 ```css [Webpack]
-@import ('~lucide-static/font/lucide.css');
+@import "~lucide-static/font/lucide.css";
 ```
 
 ```html [CDN]

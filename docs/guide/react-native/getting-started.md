@@ -43,22 +43,20 @@ Lucide is built with ES Modules.
 
 Each icon can be imported as a React component, which renders an `react-native-svg` element.
 
-### Example
-
-Additional props can be passed to adjust the icon:
-
 ```jsx
 import { Camera } from 'lucide-react-native';
 
 // Usage
 const App = () => {
-  return <Camera color="red" size={48} />;
+  return <Camera />;
 };
 
 export default App;
 ```
 
 ## Props
+
+To customize the appearance of an icon, you can use the following props:
 
 | name                  | type      | default      |
 | --------------------- | --------- | ------------ |
@@ -67,14 +65,12 @@ export default App;
 | `strokeWidth`         | *number*  | 2            |
 | `absoluteStrokeWidth` | *boolean* | false        |
 
-### Applying props
-
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```jsx
 // Usage
 const App = () => {
-  return <Camera size={48} fill="red" />;
+  return <Camera size={48} color="red" strokeWidth={1} />;
 };
 ```
 

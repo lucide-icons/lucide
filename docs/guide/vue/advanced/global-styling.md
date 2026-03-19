@@ -43,7 +43,7 @@ Every icon has a class attribute applied called `lucide`. This class name can be
 - The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
 - The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
 
-::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="lucide-vue-next"}
+::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="@lucide/vue"}
 
 ```css src/icon.css [active]
 .lucide {
@@ -74,7 +74,7 @@ import {
   Sandwich,
   Wine,
   Dessert,
-} from "lucide-vue-next";
+} from "@lucide/vue";
 
 import "./icon.css";
 </script>
@@ -99,7 +99,7 @@ import "./icon.css";
 
 For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
 
-::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="lucide-vue-next"}
+::: sandpack {template=vue editorHeight=300 editorWidthPercentage=55 dependencies="@lucide/vue"}
 
 ```css src/icon.css [active]
 .lucide {
@@ -132,7 +132,7 @@ import {
   Map,
   CloudMoon,
   Sparkles,
-} from "lucide-vue-next";
+} from "@lucide/vue";
 
 import "./icon.css";
 </script>
