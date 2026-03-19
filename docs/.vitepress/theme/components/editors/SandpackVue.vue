@@ -11,7 +11,7 @@ const props = defineProps<{
 
 <template>
   <Sandpack
-    template="vite-svelte"
+    template="vue"
     :files="{
       ...props.files,
       '/src/styles.css': {

@@ -35,7 +35,7 @@ This can be done by creating a custom module declaration file to override Lucide
 
 ### Create a custom module declaration file
 
-TCreate a custom TypeScript declaration file that re-exports the preferred naming style:
+Create a custom TypeScript declaration file that re-exports the preferred naming style:
 
 ```ts [lucide-react-native.d.ts]
 declare module "lucide-react-native" {

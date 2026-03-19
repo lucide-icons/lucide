@@ -18,7 +18,7 @@ For a broader explanation of this, and other best practices on how to use icons 
 
 <OverviewLink href="/guide/accessibility" title="Accessible Icons" desc="Best practices for accessible icons in your application."/>
 
-Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in React.
+Only if an icon **conveys essential meaning on its own** should it be made accessible. The sections below explain how to do that in Solid.
 
 ## Making an icon accessible
 

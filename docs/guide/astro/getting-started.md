@@ -11,8 +11,8 @@ import { astroSidebar } from '../../.vitepress/sidebar/astro'
 
 # Getting started
 
-This guide will help you get started with Lucide in your astro project.
-Make sure you have a astro environment set up. If you don't have one yet, you can create a new astro project using Vite, or any other astro boilerplate of your choice.
+This guide will help you get started with Lucide in your Astro project.
+Make sure you have a Astro environment set up. If you don't have one yet, you can create a new Astro project using Vite, or any other Astro boilerplate of your choice.
 
 ## Installation
 
