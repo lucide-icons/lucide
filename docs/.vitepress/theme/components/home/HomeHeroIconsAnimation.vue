@@ -9,6 +9,11 @@ const emit = defineEmits(['animation-complete']);
 
 const MotionLucideIcon = motion.create(LucideIcon);
 
+const preventFocusProps = {
+  tabindex: '-1',
+  focusable: 'false',
+};
+
 const COLUMNS = 8;
 const SIZE = 2;
 const GAP = 1;
@@ -116,9 +121,9 @@ const onAnimationComplete = (item) => {
   if (item.animationName === 'shrinkIcons') {
     iconGridAnimation.value = 'initial';
 
-    setTimeout(() => {
-      emit('animation-complete');
-    }, 2800);
+    // setTimeout(() => {
+    //   emit('animation-complete');
+    // }, 2800);
   }
 };
 
@@ -156,8 +161,14 @@ const shrinkIconVariants = {
 </script>
 
 <template>
-  <div class="home-hero-animation-container">
-    <div class="home-hero-animation">
+  <div
+    class="home-hero-animation-container"
+    v-bind="preventFocusProps"
+  >
+    <div
+      class="home-hero-animation"
+      v-bind="preventFocusProps"
+    >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="-12 -12 48 48"
@@ -169,6 +180,7 @@ const shrinkIconVariants = {
         stroke-linejoin="round"
         class="hero-background"
         :style="{ opacity }"
+        v-bind="preventFocusProps"
       >
         <g
           class="svg-preview-grid-group"
@@ -177,6 +189,7 @@ const shrinkIconVariants = {
           stroke="#777"
           mask="url(#svg-preview-bounding-box-mask)"
           stroke-opacity="0.3"
+          v-bind="preventFocusProps"
         >
           <path
             stroke-dasharray="0 0.1 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0.1 0.15 0 0.15"
@@ -194,6 +207,7 @@ const shrinkIconVariants = {
           :variants="shrinkIconVariants"
           :animate="shrinkIconAnimation"
           @animation-complete="onAnimationComplete"
+          v-bind="preventFocusProps"
         >
           <MotionLucideIcon
             v-for="(icon, index) in icons"
@@ -206,12 +220,14 @@ const shrinkIconVariants = {
             strokeWidth="inherit"
             v-bind="icon"
             @animation-complete="onAnimationComplete"
+            v-bind="preventFocusProps"
           />
           <motion.g
             :variants="scaleDownVariants"
             :animate="scaleDownAnimation"
             initial="hidden"
             @animation-complete="onAnimationComplete"
+            v-bind="preventFocusProps"
           >
             <motion.path
               d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"
@@ -221,6 +237,7 @@ const shrinkIconVariants = {
               :variants="draw"
               :custom="1"
               @animation-complete="onAnimationComplete"
+              v-bind="preventFocusProps"
             />
 
             <motion.path
@@ -230,6 +247,7 @@ const shrinkIconVariants = {
               initial="hidden"
               :variants="draw"
               :custom="0"
+              v-bind="preventFocusProps"
             />
           </motion.g>
         </motion.g>
@@ -240,23 +258,27 @@ const shrinkIconVariants = {
           :initial="{ opacity: 1 }"
           :animate="showHandles ? { opacity: 1 } : { opacity: 0 }"
           :transition="{ delay: 0, duration: 0.2 }"
+          v-bind="preventFocusProps"
         >
           <motion.path
             d="M14 12C14 9.79086 12.2091 8 10 8C7.79086 8 6 9.79086 6 12C6 16.4183 9.58172 20 14 20C18.4183 20 22 16.4183 22 12C22 8.446 20.455 5.25285 18 3.05557"
             :initial="{ opacity: 0 }"
             :animate="{ opacity: 1 }"
             :transition="{ delay: 1.6, duration: 1.5 }"
+            v-bind="preventFocusProps"
           />
           <motion.path
             d="M10 12C10 14.2091 11.7909 16 14 16C16.2091 16 18 14.2091 18 12C18 7.58172 14.4183 4 10 4C5.58172 4 2 7.58172 2 12C2 15.5841 3.57127 18.8012 6.06253 21"
             :initial="{ opacity: 0 }"
             :animate="{ opacity: 1 }"
             :transition="{ delay: 1.6, duration: 1.5 }"
+            v-bind="preventFocusProps"
           />
           <motion.g
             :initial="{ opacity: 0 }"
             :animate="{ opacity: 1 }"
             :transition="{ delay: 0.2, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path
               d="M14 12h.01M10 8h.01M10 8h.01M6 12h.01M6 12h.01M14 20h.01M14 20h.01M22 12h.01M22 12h.01M18 3.05557h.01M10 12h.01M14 16h.01M14 16h.01M18 12h.01M18 12h.01M10 4h.01M10 4h.01M2 12h.01M2 12h.01M6.06253 21h.01"
@@ -271,6 +293,7 @@ const shrinkIconVariants = {
             cx="14"
             cy="12"
             r="0.5"
+            v-bind="preventFocusProps"
           />
           <motion.circle
             :initial="{ opacity: 0, scale: 0.2 }"
@@ -279,6 +302,7 @@ const shrinkIconVariants = {
             cx="14"
             cy="12"
             r="0.5"
+            v-bind="preventFocusProps"
           />
           <motion.circle
             :initial="{ opacity: 0, scale: 0.2 }"
@@ -287,6 +311,7 @@ const shrinkIconVariants = {
             cx="18"
             cy="3.05557"
             r="0.5"
+            v-bind="preventFocusProps"
           />
           <motion.circle
             :initial="{ opacity: 0, scale: 0.2 }"
@@ -295,6 +320,7 @@ const shrinkIconVariants = {
             cx="10"
             cy="12"
             r="0.5"
+            v-bind="preventFocusProps"
           />
           <motion.circle
             :initial="{ opacity: 0, scale: 0.2 }"
@@ -303,6 +329,7 @@ const shrinkIconVariants = {
             cx="6.06253"
             cy="21"
             r="0.5"
+            v-bind="preventFocusProps"
           />
         </motion.g>
         <motion.g
@@ -313,11 +340,13 @@ const shrinkIconVariants = {
           :initial="{ opacity: 1 }"
           :animate="showHandles ? { opacity: 1 } : { opacity: 0 }"
           :transition="{ delay: 0, duration: 0.6 }"
+          v-bind="preventFocusProps"
         >
           <motion.g
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.2, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M14 12 14 9.79086"></path>
             <circle
@@ -331,6 +360,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.4, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M10 8 12.2091 8"></path>
             <circle
@@ -350,6 +380,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.6, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M6 12 6 9.79086"></path>
             <circle
@@ -369,6 +400,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.8, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M14 20 9.58172 20"></path>
             <circle
@@ -388,6 +420,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 1, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M22 12 22 16.4183"></path>
             <circle
@@ -406,6 +439,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 1.2, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M18 3.05557 20.455 5.25285"></path>
             <circle
@@ -419,6 +453,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.2, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M10 12 10 14.2091"></path>
             <circle
@@ -431,6 +466,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.4, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M14 16 11.7909 16"></path>
             <circle
@@ -450,6 +486,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.6, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M18 12 18 14.2091"></path>
             <circle
@@ -469,6 +506,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 0.8, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M10 4 14.4183 4"></path>
             <circle
@@ -487,6 +525,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 1, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M2 12 2 7.58172"></path>
             <circle
@@ -505,6 +544,7 @@ const shrinkIconVariants = {
             :initial="{ opacity: 0, scale: 0.2 }"
             :animate="{ opacity: 1, scale: 1 }"
             :transition="{ delay: 1.2, duration: 0.3 }"
+            v-bind="preventFocusProps"
           >
             <path d="M6.06253 21 3.57127 18.8012"></path>
             <circle
@@ -520,6 +560,12 @@ const shrinkIconVariants = {
 </template>
 
 <style scoped>
+/* svg:focus,
+svg:focus-visible,
+svg *:focus,
+svg *:focus-visible {
+  outline: none;
+} */
 .home-hero-animation-container {
   margin: -48px -24px 0;
   display: flex;
