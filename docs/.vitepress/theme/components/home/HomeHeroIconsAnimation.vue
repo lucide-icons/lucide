@@ -121,9 +121,9 @@ const onAnimationComplete = (item) => {
   if (item.animationName === 'shrinkIcons') {
     iconGridAnimation.value = 'initial';
 
-    // setTimeout(() => {
-    //   emit('animation-complete');
-    // }, 2800);
+    setTimeout(() => {
+      emit('animation-complete');
+    }, 2800);
   }
 };
 

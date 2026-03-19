@@ -18,6 +18,7 @@ import { astroSidebar } from '../../.vitepress/sidebar/astro'
 Astro components for Lucide icons that work perfectly with Astro's island architecture and multi-framework support. Each icon is an Astro component that renders as an inline SVG, providing excellent performance for static sites and server-side rendering scenarios.
 
 List of features:
+
 - **Easy to Use**: Import icons as Astro components and use them directly in your Astro application.
 - **Customizable**: Adjust size, color, and other properties via props.
 - **Tree-shakable**: Integrate seamlessly with Astro's component islands and partial hydration

@@ -45,10 +45,6 @@ This library is built with standalone components, so it's completely tree-shakab
 
 Every icon can be imported as a ready-to-use standalone component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
 
-### Example
-
-Additional props can be passed to adjust the icon:
-
 ```ts
 import { Component } from '@angular/core';
 import { LucideFileText } from '@lucide/angular';
@@ -67,6 +63,8 @@ export class App { }
 
 ## Props
 
+To customize the appearance of an icon, you can use the following props:
+
 |  name                   |   type    |  default     |
 | ----------------------- | --------- | ------------ |
 | `size`                  | *number*  | 24           |
@@ -74,9 +72,7 @@ export class App { }
 | `stroke-width`          | *number*  | 2            |
 | `absoluteStrokeWidth`   | *boolean* | false        |
 
-### Applying props
-
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```html
 <svg lucideHouse size="48" color="red" strokeWidth="1"></svg>

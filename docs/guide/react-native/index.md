@@ -19,12 +19,11 @@ Lucide provides a React Native icon component library that makes it easy to inte
 Each icon is available as a standalone React component, allowing for seamless integration and customization.
 
 List of features:
-- **Easy to Use**: Import icons as React components and use them directly in your React components with JSX.
-- **Customizable**: Adjust size, color, and other properties via props.
-- **Tree-shakable**: Only the icons you use are included in your final bundle
-- **TypeScript Support**: Fully typed components for better developer experience.
 
-React components for Lucide icons that integrate seamlessly into your React Native applications. Each icon is a fully-typed React component that renders as an optimized inline SVG, giving you the flexibility of components with the performance of vector graphics.
+- **Easy to use** – Import icons and use them directly in JSX.
+- **Customizable** – Adjust size, color, stroke width, and other properties via props.
+- **Tree-shakable** – Only the icons you import are included in your final bundle.
+- **TypeScript support** – Fully typed components for a better developer experience.
 
 ## Overview
 

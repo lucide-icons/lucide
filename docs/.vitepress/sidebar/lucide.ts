@@ -57,11 +57,11 @@ export const lucideSidebar = [
         link: '/guide/lucide/advanced/content-template-element',
         desc: 'Using content template element with lucide',
       },
-      // {
-      //   text: 'Accessibility',
-      //   link: '/guide/lucide/advanced/accessibility',
-      //   desc: 'Making your icons accessible',
-      // },
+      {
+        text: 'Accessibility',
+        link: '/guide/lucide/advanced/accessibility',
+        desc: 'Making your icons accessible',
+      },
       {
         text: 'With lucide lab',
         link: '/guide/lucide/advanced/with-lucide-lab',

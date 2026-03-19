@@ -80,7 +80,7 @@ createIcons({
 });
 ```
 
-### Advanced Usage
+## Advanced Usage
 
 ### Additional Options
 
