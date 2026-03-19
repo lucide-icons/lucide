@@ -15,13 +15,15 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable ei
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
 ```ts /src/app/app.component.ts [active]
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { LucideLandmark } from "@lucide/angular";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   imports: [LucideLandmark],
   template: `<svg lucideLandmark [size]="64" />`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
 }
@@ -50,7 +52,7 @@ import { Component } from '@angular/core';
 import { LucideBeer } from '@lucide/angular';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   templateUrl: './app.html',
   styleUrl: './app.css',
   imports: [LucideBeer],
@@ -96,7 +98,7 @@ import { Component } from '@angular/core';
 import { LucideStar } from '@lucide/angular';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   templateUrl: './app.html',
   styleUrl: './app.css',
   imports: [LucideStar],

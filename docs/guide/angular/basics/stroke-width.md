@@ -18,13 +18,15 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
 ```ts /src/app/app.component.ts [active]
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { LucideFolderLock } from "@lucide/angular";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   imports: [LucideFolderLock],
   template: `<svg lucideFolderLock [strokeWidth]="1" />`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
 }

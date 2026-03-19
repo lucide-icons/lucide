@@ -14,21 +14,24 @@ This is useful for if you want to be creative and make your own custom icons by 
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
 ```ts /src/app/app.component.ts [active]
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { LucideScan, LucideUser } from "@lucide/angular";
 
 @Component({
-  selector: 'app-root',
-  imports: [LucideScan, LucideUser],
+  selector: 'app',
+  imports: [LucideScan, LucideUserRound],
   template: `
       <svg lucideScan [size]="48">
         <svg lucideUser
           [size]="12"
           x="6"
           y="6"
+          [strokeWidth]="4"
           [absoluteStrokeWidth]="true"
         />
       </svg>`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
 }
@@ -54,11 +57,11 @@ For example, you can add a notification badge to an icon by using the `circle` S
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
 ```ts /src/app/app.component.ts [active]
-import { Component, signal } from "@angular/core";
+import { Component, ViewEncapsulation, signal } from "@angular/core";
 import { LucideMail } from "@lucide/angular";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   imports: [LucideMail],
   template: `
       <svg lucideMail [size]="48">
@@ -72,6 +75,8 @@ import { LucideMail } from "@lucide/angular";
           />
         }
       </svg>`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
   protected readonly hasUnreadMessages = signal<boolean>(true);
@@ -87,24 +92,26 @@ You can also use the `text` SVG element to add text to your icon.
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
 ```ts /src/app/app.component.ts [active]
-import { Component, signal } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { LucideFile } from "@lucide/angular";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   imports: [LucideFile],
   template: `
       <svg lucideFile [size]="48">
         <text
           x="7.5"
           y="19"
-          fontSize="8"
-          fontFamily="Verdana,sans-serif"
-          [strokeWidth]="1"
+          font-size="8"
+          font-family="Verdana,sans-serif"
+          stroke-width="1"
         >
           JS
         </text>
       </svg>`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
 }

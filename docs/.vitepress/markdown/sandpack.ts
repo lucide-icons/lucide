@@ -20,6 +20,27 @@ function registerCustomAngularTemplates(
   filesWithDefaultStyles: NonNullable<SnackParams['defaultFiles']>,
 ) {
   Object.assign(filesWithDefaultStyles, {
+    '/src/index.html': {
+      code: `<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <app></app>
+</body>
+
+</html>`,
+    },
+    '/src/app/app.component.css': filesWithDefaultStyles['/styles.css'],
     '/src/polyfills.ts': {
       code: '',
     },
@@ -53,6 +74,7 @@ void bootstrapApplication(App, {})
       }),
     },
   });
+  delete filesWithDefaultStyles['/styles.css'];
 }
 
 export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {

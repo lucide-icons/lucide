@@ -19,13 +19,15 @@ The color can be adjusted by binding the `color` input of the element.
 ::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
 
 ```ts /src/app/app.component.ts [active]
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { LucideSmile } from "@lucide/angular";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app',
   imports: [LucideSmile],
   template: `<svg lucideSmile color="#3e9392" />`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
 }
