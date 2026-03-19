@@ -49,8 +49,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package:
-          [
+        package: [
             'lucide',
             'lucide-react',
             'lucide-react-native',
