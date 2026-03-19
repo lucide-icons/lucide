@@ -41,7 +41,6 @@
       }
     ]
   },
-  "private": true,
   "devDependencies": {
     "@angular-eslint/builder": "~21.1.0",
     "@angular-eslint/eslint-plugin": "~21.1.0",
