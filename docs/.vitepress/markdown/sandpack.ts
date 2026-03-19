@@ -2,7 +2,6 @@ import type MarkdownIt from 'markdown-it';
 import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
 import container from 'markdown-it-container';
 import sandpackTheme from '../theme/sandpackTheme.json';
-import defaultStyle from '../theme/sandpack-default.css?raw';
 
 type SnackParams = {
   defaultFiles?: Record<
@@ -18,7 +17,10 @@ type SnackParams = {
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
 
 export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {
-  const escapeHtml = md.utils.escapeHtml;
+  if (md == null) {
+    throw new Error('MarkdownIt instance is required for sandpackPlugin');
+  }
+  const escapeHtml = md?.utils?.escapeHtml;
   const defaultFence =
     md.renderer.rules.fence ||
     ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
