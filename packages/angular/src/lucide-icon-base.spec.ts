@@ -72,7 +72,7 @@ describe('LucideIconBase', () => {
   it('should render children', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.innerHTML).toBe(
-      '<!--container--><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path>',
+      '<!--container--><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path><!--ng-container-->',
     );
   });
 

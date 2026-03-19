@@ -1,4 +1,13 @@
-import { Component, effect, ElementRef, inject, input, Renderer2, Signal } from '@angular/core';
+import {
+  Component,
+  effect,
+  ElementRef,
+  inject,
+  input,
+  Renderer2,
+  Signal,
+  viewChild,
+} from '@angular/core';
 import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, Nullable } from './types';
 import defaultAttributes from './default-attributes';
@@ -40,6 +49,7 @@ export abstract class LucideIconBase {
   protected readonly iconConfig = inject(LUCIDE_CONFIG);
   protected readonly elRef = inject(ElementRef);
   protected readonly renderer = inject(Renderer2);
+  protected readonly contentRef = viewChild.required<ElementRef>('contentRef');
   /**
    * An optional accessible label for the icon.
    * - If provided, it will add the title as an [`<svg:title>` element](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title).
@@ -93,6 +103,8 @@ export abstract class LucideIconBase {
         for (const cssClass of classes) {
           this.renderer.addClass(this.elRef.nativeElement, cssClass);
         }
+        const contentRef = this.contentRef();
+        const refChild = contentRef.nativeElement;
         const elements = node.map(([name, attrs]) => {
           const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
           if (absoluteStrokeWidth) {
@@ -105,7 +117,7 @@ export abstract class LucideIconBase {
               typeof value === 'number' ? value.toString(10) : value,
             ),
           );
-          this.renderer.appendChild(this.elRef.nativeElement, element);
+          this.renderer.insertBefore(this.elRef.nativeElement, element, refChild);
           return element;
         });
         onCleanup(() => {

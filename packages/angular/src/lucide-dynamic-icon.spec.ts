@@ -59,14 +59,14 @@ describe('LucideDynamicIcon', () => {
     icon.set(testIcon2);
     fixture.detectChanges();
     expect(fixture.nativeElement.innerHTML).toBe(
-      '<!--container--><circle cx="12" cy="12" r="8"></circle><polyline points="1 1 22 22"></polyline>',
+      '<!--container--><circle cx="12" cy="12" r="8"></circle><polyline points="1 1 22 22"></polyline><!--ng-container-->',
     );
   });
 
   it('should remove children on change', () => {
     icon.set(null);
     fixture.detectChanges();
-    expect(fixture.nativeElement.innerHTML).toBe('<!--container-->');
+    expect(fixture.nativeElement.innerHTML).toBe('<!--container--><!--ng-container-->');
   });
 
   describe('iconInput', () => {
@@ -75,7 +75,7 @@ describe('LucideDynamicIcon', () => {
       fixture.detectChanges();
       expect(component['icon']()).toBe(testIcon);
       expect(fixture.nativeElement.innerHTML).toBe(
-        '<!--container--><polyline points="1 1 22 22"></polyline>',
+        '<!--container--><polyline points="1 1 22 22"></polyline><!--ng-container-->',
       );
     });
     it('should support LucideIcon input', () => {
@@ -124,7 +124,7 @@ describe('LucideDynamicIcon', () => {
       hostFixture.detectChanges();
       hostFixture.componentRef.setInput('icon', testIcon2);
       hostFixture.detectChanges();
-      const rect = hostFixture.debugElement.query(By.css('rect')).nativeElement;
+      const rect = hostFixture.debugElement.query(By.css('svg :last-child')).nativeElement;
       expect(rect).toBeInstanceOf(SVGElement);
       expect(rect.outerHTML).toBe('<rect x="1" y="1" width="22" height="22"></rect>');
     });
