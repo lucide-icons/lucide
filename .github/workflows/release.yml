@@ -85,7 +85,7 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
         env:
           NPM_CONFIG_PROVENANCE: true
 
@@ -119,7 +119,7 @@ jobs:
         run: pnpm --filter lucide-static build
 
       - name: Publish
-        run: pnpm --filter lucide-static publish --no-git-checks
+        run: pnpm --filter lucide-static publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
         env:
           NPM_CONFIG_PROVENANCE: true
 
