@@ -20,7 +20,7 @@ Make sure you have a Preact environment set up. If you don't have one yet, you c
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact@next
+pnpm add lucide-preact@next
 ```
 
 ```sh [yarn]

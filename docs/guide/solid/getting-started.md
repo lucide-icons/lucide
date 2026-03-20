@@ -21,7 +21,7 @@ Make sure you have a Solid environment set up. If you don't have one yet, you ca
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid@next
+pnpm add lucide-solid@next
 ```
 
 ```sh [yarn]

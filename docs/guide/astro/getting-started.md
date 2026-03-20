@@ -21,7 +21,7 @@ Make sure you have a Astro environment set up. If you don't have one yet, you ca
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/astro@next
+pnpm add @lucide/astro@next
 ```
 
 ```sh [yarn]

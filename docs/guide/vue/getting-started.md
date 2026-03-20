@@ -20,7 +20,7 @@ Make sure you have a Vue environment set up. If you don't have one yet, you can 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/vue
+pnpm add @lucide/vue
 ```
 
 ```sh [yarn]
