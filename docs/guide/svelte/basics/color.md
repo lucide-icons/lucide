@@ -24,6 +24,8 @@ import Smile from '@lucide/svelte/icons/smile';
 </script>
 
 <Smile color="#3e9392" />
+```
+
 :::
 
 
