@@ -14,7 +14,7 @@ import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGr
 <!-- After years of work and dedication, Lucide Version 1 has been officially **released**!. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike. -->
 After years of work and dedication, Lucide Version 1 is almost ready for release. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 
-It's been crazy especially the last year, Lucide went over 30 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
+It's been quite a ride — especially over the past year. Lucide has grown to over 30 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
 
 Thank you to everyone who has supported us along the way. We couldn't have done this without you!
 
