@@ -15,8 +15,8 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
       <VPLink
         class="notification-link"
         href="https://v0.lucide.dev"
-        >v0 site</VPLink>
-      
+        >v0 site</VPLink
+      >
     </p>
   </div>
 </template>
@@ -53,6 +53,10 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 .notification-link {
   font-weight: 500;
   text-decoration: underline;
+}
+
+.notification-link::after {
+  display: none !important;
 }
 
 @media (min-width: 640px) {
