@@ -8,6 +8,7 @@ import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
 import getStructuredData from './getStructuredData';
 import { createGeneralOGImage, createIconOGImage } from './createOGImage';
+import llmstxt from 'vitepress-plugin-llms';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -61,7 +62,18 @@ export default defineConfig({
         },
       ],
     },
-    plugins: [groupIconVitePlugin()],
+    plugins: [
+      groupIconVitePlugin(),
+      llmstxt({
+        ignoreFiles: [
+          'code-of-conduct.md',
+          'index.md',
+          'packages.md',
+          'showcase.md',
+          'brand-logo-statement.md',
+        ],
+      }),
+    ],
   },
   head: [
     [
