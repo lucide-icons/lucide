@@ -25,6 +25,7 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Improved accessibility, `aria-hidden` is now set by default on icons.
 - Removed UMD build, only ESM and CJS now (exception for the [`lucide`](/guide/lucide) package).
 - Package rename from `lucide-vue-next` to `@lucide/vue`.
+- A modern, standalone implementation for Angular, `@lucide/angular`
 - Support for context providers in React, Vue, Svelte, and Solid.
 <!-- - Aliases icon names in class names. -->
 - Stable code points for Lucide font.
