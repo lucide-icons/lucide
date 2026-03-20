@@ -6,7 +6,7 @@ description: Learn how to use the DynamicIcon component to load icons dynamicall
 
 It is possible to use one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. See [Caveats](#caveats).
 
-`DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system with where icon names are stored in a database.
+`DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system where icon names are stored in a database.
 
 For static use cases, it is recommended to import the icons directly.
 
