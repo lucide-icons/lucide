@@ -11,12 +11,12 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
         href="/guide/version-1"
         >Lucide v1 is out!</VPLink
       >🚀<br />
-      You looking at the site for v1, for v0 go to
+      You're looking at the site for v1, for v0 go to
       <VPLink
         class="notification-link"
         href="https://v0.lucide.dev"
-        >v0 site</VPLink
-      >
+        >v0 site</VPLink>
+      
     </p>
   </div>
 </template>
