@@ -39,7 +39,7 @@ export default {
           path: '/guide/preact/',
         },
         {
-          name: 'lucide-angular',
+          name: 'angular',
           logo: '/framework-logos/angular.svg',
           label: 'Lucide documentation for Angular',
           path: '/guide/angular/',

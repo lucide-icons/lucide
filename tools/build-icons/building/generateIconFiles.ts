@@ -84,7 +84,7 @@ function generateIconFiles({
           singleQuote: true,
           trailingComma: 'all',
           printWidth: 100,
-          parser: 'babel',
+          parser: iconFileExtension.endsWith('.ts') ? 'babel-ts' : 'babel',
         })
       : elementTemplate;
 

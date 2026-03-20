@@ -19,7 +19,6 @@ export interface ExportTemplate {
   getSvg: () => Promise<string>;
   deprecated: boolean;
   deprecationReason: string;
-  aliases?: (string | AliasDeprecation)[];
   iconData: IconData;
 }
 
