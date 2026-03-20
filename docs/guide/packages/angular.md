@@ -125,10 +125,10 @@ import { provideLucideIcons, LucideCircleCheck, LucideCircleX } from '@lucide/an
 export const appConfig: ApplicationConfig = {
   providers: [
     // ...
-    provideLucideIcons([
+    provideLucideIcons(
       LucideCircleCheck,
       LucideCircleX,
-    ]),
+    ),
   ]
 };
 ```
