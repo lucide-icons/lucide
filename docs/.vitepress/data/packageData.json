@@ -18,6 +18,7 @@
   "lucide-react": {
     "order": 1,
     "icon": "react",
+    "docsAlias": "react",
     "shields": [
       {
         "alt": "npm",
@@ -34,14 +35,25 @@
   "@lucide/vue": {
     "order": 2,
     "icon": "vue",
-    "docsAlias": "lucide-vue",
+    "docsAlias": "vue",
     "packageDirname": "vue",
     "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/vue",
+        "href": "https://www.npmjs.com/package/@lucide/vue"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/vue",
+        "href": "https://www.npmjs.com/package/@lucide/vue"
+      }
     ]
   },
   "lucide-svelte": {
     "order": 3,
     "icon": "svelte",
+    "docsAlias": "svelte",
     "shields": [
       {
         "alt": "npm",
@@ -58,6 +70,7 @@
   "lucide-solid": {
     "order": 4,
     "icon": "solid",
+    "docsAlias": "solid",
     "shields": [
       {
         "alt": "npm",
@@ -74,6 +87,7 @@
   "lucide-react-native": {
     "order": 5,
     "icon": "react-native",
+    "docsAlias": "react-native",
     "shields": [
       {
         "alt": "npm",
@@ -90,6 +104,7 @@
   "@lucide/angular": {
     "order": 6,
     "icon": "angular",
+    "docsAlias": "angular",
     "shields": [
       {
         "alt": "npm",
@@ -105,7 +120,9 @@
   },
   "lucide-angular": {
     "order": 7,
-    "icon": "angular",
+    "icon": "angular-old",
+    "description": "Our legacy Angular package with a module based API.",
+    "documentation": "https://v0.lucide.dev/guide/packages/lucide-angular",
     "shields": [
       {
         "alt": "npm",
@@ -122,6 +139,7 @@
   "lucide-preact": {
     "order": 8,
     "icon": "preact",
+    "docsAlias": "preact",
     "shields": [
       {
         "alt": "npm",
@@ -136,7 +154,7 @@
     ]
   },
   "@lucide/astro": {
-    "docsAlias": "lucide-astro",
+    "docsAlias": "astro",
     "packageDirname": "astro",
     "order": 9,
     "icon": "astro",
@@ -157,6 +175,7 @@
   "lucide-static": {
     "order": 10,
     "icon": "svg",
+    "docsAlias": "static",
     "shields": [
       {
         "alt": "npm",
@@ -171,6 +190,7 @@
     ]
   },
   "@lucide/icons": {
+    "hide": true,
     "docsAlias": "icons",
     "packageDirname": "icons",
     "order": 10,

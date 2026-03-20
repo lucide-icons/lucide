@@ -20,14 +20,14 @@ Lucide icon library for Vue applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-vue-next">Documentation</a>
+  <a href="https://lucide.dev/guide/vue">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Vue
 
-Implementation of the lucide icon library for Vue 3 applications.
+Implementation of the Lucide icon library for Vue 3 applications.
 
 ## Installation
 

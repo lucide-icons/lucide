@@ -10,7 +10,7 @@ It intentionally ships **no real rendering logic or components** — other packa
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/icons
+pnpm add @lucide/icons
 ```
 
 ```sh [yarn]

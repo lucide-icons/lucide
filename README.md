@@ -45,7 +45,7 @@ Lucide is an open-source icon library that provides 1000+ vector (svg) files for
 
 ### Figma
 
-The lucide figma plugin.
+The Lucide Figma plugin.
 
 Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
 

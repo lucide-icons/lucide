@@ -20,14 +20,14 @@ Lucide icon library for Angular applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-angular">Documentation</a>
+  <a href="https://lucide.dev/guide/angular">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Angular
 
-Implementation of the lucide icon library for angular applications.
+Implementation of the Lucide icon library for angular applications.
 
 ## Installation
 

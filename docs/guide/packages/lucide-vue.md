@@ -74,12 +74,12 @@ To customize the appearance of an icon, you can pass custom properties as props 
 </template>
 ```
 
-## With Lucide lab or custom icons
+## With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
 They can be used by using the `Icon` component.
-All props like regular lucide icons can be passed to adjust the icon appearance.
+All props like regular Lucide icons can be passed to adjust the icon appearance.
 
 ### Using the `Icon` component
 
@@ -167,4 +167,4 @@ import { Check } from 'lucide-vue-next';
 </template>
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).
