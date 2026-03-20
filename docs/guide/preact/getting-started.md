@@ -15,22 +15,24 @@ Make sure you have a Preact environment set up. If you don't have one yet, you c
 
 ## Installation
 
+<!-- TODO: v1 Remove After full release -->
+
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm install lucide-preact@next
 ```
 
 ```sh [yarn]
-yarn add lucide-preact
+yarn add lucide-preact@next
 ```
 
 ```sh [npm]
-npm install lucide-preact
+npm install lucide-preact@next
 ```
 
 ```sh [bun]
-bun add lucide-preact
+bun add lucide-preact@next
 ```
 
 :::

@@ -15,24 +15,26 @@ Make sure you have a React Native environment set up. If you don't have one yet,
 
 ## Installation
 
+<!-- TODO: v1 Remove After full release -->
+
 First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-react-native
+pnpm add lucide-react-native@next
 ```
 
 ```sh [yarn]
-yarn add lucide-react-native
+yarn add lucide-react-native@next
 ```
 
 ```sh [npm]
-npm install lucide-react-native
+npm install lucide-react-native@next
 ```
 
 ```sh [bun]
-bun add lucide-react-native
+bun add lucide-react-native@next
 ```
 
 :::

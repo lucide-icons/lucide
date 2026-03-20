@@ -6,13 +6,14 @@ description: After years of work and dedication, Lucide version 1 has been offic
 import OverviewLink from '../.vitepress/theme/components/base/OverviewLink.vue'
 import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGrid.vue'
 </script>
+
 <!--@include: ../../docs/images/version-1.svg -->
 
 # Lucide version 1
 
 After years of work and dedication, Lucide version 1 has been officially **released**! This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 
-It's been crazy especially the last year, Lucide went over 20 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
+It's been crazy especially the last year, Lucide went over 30 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
 
 Thank you to everyone who has supported us along the way. We couldn't have done it without you!
 
@@ -29,7 +30,8 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Support for shadow DOM in Lucide package.
 - Many bug fixes and improvements.
 
-## Upgrading to Version 1
+## Trying out version 1
+<!-- ## Upgrading to Version 1 -->
 
 See our guides:
 
@@ -53,21 +55,23 @@ We understand that brand icons are important to many of our users, and we want t
 
 For users who still require brand icons, we recommend [Simple Icons](https://simpleicons.org/), which provides an extensive, legally safer collection of brand logos.
 
-## Improved documentation, guides per framework.
+## Improved documentation, guides per framework
 
 We have revamped our documentation to provide clearer, more comprehensive guides tailored to each supported framework. Whether you're using React, Vue, Svelte, Solid, Angular, Astro or Vanilla JavaScript, you'll find: step-by-step instructions, code example and best practices to help you integrate Lucide seamlessly into your projects.
 
-## Improved accessibility.
+Also a `llms.txt` is now available for LLMs to use.
+
+## Improved accessibility
 
 We have improved the accessibility of our icons by setting `aria-hidden` to `true` by default. This change ensures that screen readers will ignore icons that are purely decorative, improving the overall accessibility of your applications. If you need to make an icon accessible, you can provide an appropriate `aria-label` or add a `title` attribute to the icon element.
 
 See our [accessibility in-depth guide](/guide/accessibility) for more details and best practices on making your icons accessible.
 
-## Removed UMD build, only ESM and CJS now.
+## Removed UMD build, only ESM and CJS now
 
 To streamline our build process and focus on modern JavaScript module formats, we have removed the UMD build from Lucide version 1. We now only support ESM (ECMAScript Modules) and CJS (CommonJS) formats. This is a reduction of -32.3% reduction (11,4 MB, 1 MB Gzipped) for `lucide-react`, with more than 25 million weekly downloads, this is a huge saving for the ecosystem.
 
-## Package rename from `lucide-vue-next` to `@lucide/vue`.
+## Package rename from `lucide-vue-next` to `@lucide/vue`
 
 `lucide-vue-next` is now renamed to `@lucide/vue` to get rid of the "next" suffix, which was only meant to indicate that it was the next version of the Vue package. This change is part of our effort to simplify our package naming and make it more consistent across all frameworks.
 
@@ -172,10 +176,10 @@ const App = () => (
 
 :::
 
-## Stable code points for Lucide font.
+## Stable code points for Lucide font
 
 We have assigned stable code points for the Lucide font, each icon has a fixed code point that will not change in future releases. This ensures that if you are using the Lucide font in your projects, you can rely on the code points to remain consistent, even as we continue to add new icons and make improvements to the library.
 
-## Support for shadow DOM in Lucide package.
+## Support for shadow DOM in Lucide package
 
 Lucide package supports shadow DOM, allowing you to use Lucide icons in web components and other contexts where shadow DOM is used. This ensures that your icons will render correctly and maintain their styles, even when used within a shadow DOM.

@@ -15,22 +15,24 @@ Make sure you have a React environment set up. If you don't have one yet, you ca
 
 ## Installation
 
+<!-- TODO: v1 Remove After full release -->
+
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-react
+pnpm add lucide-react@next
 ```
 
 ```sh [yarn]
-yarn add lucide-react
+yarn add lucide-react@next
 ```
 
 ```sh [npm]
-npm install lucide-react
+npm install lucide-react@next
 ```
 
 ```sh [bun]
-bun add lucide-react
+bun add lucide-react@next
 ```
 
 :::
