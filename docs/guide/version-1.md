@@ -10,7 +10,7 @@ import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGr
 <!--@include: ../../docs/images/version-1.svg -->
 
 # Lucide version 1
-
+<!-- TODO: v1 Remove After full release -->
 <!-- After years of work and dedication, Lucide version 1 has been officially **released**!. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike. -->
 After years of work and dedication, Lucide version 1 is almost ready for release. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 
@@ -31,6 +31,7 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Support for shadow DOM in Lucide package.
 - Many bug fixes and improvements.
 
+<!-- TODO: v1 Remove After full release -->
 ## Trying out version 1
 <!-- ## Upgrading to Version 1 -->
 
