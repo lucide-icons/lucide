@@ -9,8 +9,8 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
       <VPLink
         class="notification-link"
         href="/guide/version-1"
-        >Lucide v1 is out!<br
-      /></VPLink>
+        >Lucide v1 is out!</VPLink
+      >🚀<br />
       You looking at the site for v1, for v0 go to
       <VPLink
         class="notification-link"
@@ -45,6 +45,7 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
   justify-content: center;
   align-items: center;
   background: var(--vp-c-brand-dark);
+  color: var(--vp-c-bg-alt-down);
   font-size: 14px;
   padding: 0 16px;
 }
