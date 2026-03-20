@@ -36,7 +36,7 @@ export const resourcesSidebar = [
         link: '/contribute/illustrator-guide',
       },
       {
-        text: 'Designing in InkScape',
+        text: 'Designing in Inkscape',
         link: '/contribute/inkscape-guide',
       },
       {
