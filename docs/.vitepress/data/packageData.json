@@ -37,7 +37,18 @@
     "icon": "vue",
     "docsAlias": "vue",
     "packageDirname": "vue",
-    "shields": []
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/vue",
+        "href": "https://www.npmjs.com/package/@lucide/vue"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/vue",
+        "href": "https://www.npmjs.com/package/@lucide/vue"
+      }
+    ]
   },
   "lucide-svelte": {
     "order": 3,
@@ -109,7 +120,9 @@
   },
   "lucide-angular": {
     "order": 7,
-    "icon": "angular",
+    "icon": "angular-old",
+    "description": "Our legacy Angular package with a module based API.",
+    "documentation": "https://v0.lucide.dev/guide/packages/lucide-angular",
     "shields": [
       {
         "alt": "npm",
@@ -177,6 +190,7 @@
     ]
   },
   "@lucide/icons": {
+    "hide": true,
     "docsAlias": "icons",
     "packageDirname": "icons",
     "order": 10,

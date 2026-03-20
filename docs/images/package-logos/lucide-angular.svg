@@ -10,7 +10,7 @@
   <path fill="currentColor"
     d="M42.682 13.33V8.272h2.057V17h-1.995v-1.551h-.09c-.198.489-.521.888-.972 1.199-.447.31-.998.466-1.654.466-.572 0-1.077-.127-1.517-.381a2.645 2.645 0 0 1-1.022-1.12c-.246-.492-.37-1.086-.37-1.784V8.273h2.057v5.238c0 .553.152.993.455 1.319.303.325.7.488 1.193.488.303 0 .596-.074.88-.221.285-.148.518-.368.7-.66.185-.295.278-.664.278-1.107Z" />
   <path fill="currentColor" d="M28.148 17V5.364h2.108v9.869h5.125V17h-7.233Z" />
-  <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
     d="M14 11a4 4 0 0 0-8 0 8 8 0 0 0 16 0 11.97 11.97 0 0 0-4-8.944" />
   <path stroke="#F56565" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
     d="M10 11a4 4 0 0 0 8 0 8 8 0 1 0-16 0c0 3.584 1.571 6.801 4.063 9" />
