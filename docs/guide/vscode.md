@@ -17,7 +17,7 @@ You can turn this off by adding the following setting to your VS Code settings.
     "lucide-react", // or
     "lucide-preact", // or
     "lucide-react-native", // or
-    "lucide-vue-next",
+    "@lucide/vue",
   ]
 }
 ```

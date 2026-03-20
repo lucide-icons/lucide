@@ -71,6 +71,7 @@ export default defineConfig({
           'packages.md',
           'showcase.md',
           'brand-logo-statement.md',
+          'icons/**', // Not working, need investigation
         ],
       }),
     ],
