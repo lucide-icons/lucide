@@ -1,6 +1,6 @@
 ---
 title: Filled Icons - Angular
-description: Fills are not officially supported, but can still be applied using standard SVG attributes, this may in some cases produce acceptable results.
+description: Fills are not officially supported, but can still be applied using standard SVG attributes. This may in some cases produce acceptable results.
 ---
 # Filled Icons
 
