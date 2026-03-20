@@ -36,7 +36,7 @@ For formatting and adjusting SVG icons, [@jguddas](https://github.com/jguddas) m
 
 Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-##### [Adobe Illustrator Guide](https://lucide.dev/contribute/illustrator-guide/illustrator-guide)
+##### [Adobe Illustrator Guide](https://lucide.dev/contribute/illustrator-guide)
 
 You can also [download an Adobe Illustrator template](https://lucide.dev/templates/illustrator_template.ai).
 
