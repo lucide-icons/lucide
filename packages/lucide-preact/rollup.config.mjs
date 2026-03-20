@@ -24,17 +24,17 @@ const configs = bundles
   .map(({ inputs, outputDir, format, preserveModules }) =>
     inputs.map((input) => ({
       input,
-      plugins: plugins({ pkg, minify }),
+      plugins: plugins({ pkg }),
       external: ['preact'],
       output: {
         name: packageName,
         ...(preserveModules
           ? {
-              dir: `${outputDir}/${format}`,
-            }
+            dir: `${outputDir}/${format}`,
+          }
           : {
-              file: `${outputDir}/${format}/${outputFileName}.js`,
-            }),
+            file: `${outputDir}/${format}/${outputFileName}.js`,
+          }),
         preserveModules,
         format,
         sourcemap: true,
