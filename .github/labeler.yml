@@ -59,6 +59,7 @@
 🅰️ angular package:
   - changed-files:
       - any-glob-to-any-file:
+          - 'packages/angular/*'
           - 'packages/lucide-angular/*'
 
 # For changes in the lucide preact package
