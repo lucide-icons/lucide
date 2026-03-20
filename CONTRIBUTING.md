@@ -192,7 +192,7 @@ Detailed documentation about: installation, guides, packages, design guides etc.
 
 ### Icons
 
-All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
+All the icons of Lucide in SVG format. These will be used as source for all the packages and other distributions for the Lucide icons.
 
 ### Packages
 

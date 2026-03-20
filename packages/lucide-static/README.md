@@ -27,7 +27,7 @@ Lucide icon library with static assets for web applications.
 
 # Lucide Static
 
-This package include the following lucide implementations:
+This package include the following Lucide implementations:
 
 - All svg files
 - Javascript library containing strings of svgs.

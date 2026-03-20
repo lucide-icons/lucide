@@ -27,7 +27,7 @@ Lucide icon library for Angular applications.
 
 # Lucide Angular
 
-Implementation of the lucide icon library for angular applications.
+Implementation of the Lucide icon library for angular applications.
 
 ## Installation
 

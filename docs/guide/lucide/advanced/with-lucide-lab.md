@@ -1,19 +1,19 @@
 ---
-title: With Lucide lab or custom icons - Lucide
-description: Learn how to use Lucide lab or custom icons in your Vanilla JavaScript applications.
+title: With Lucide Lab or custom icons - Lucide
+description: Learn how to use Lucide Lab or custom icons in your Vanilla JavaScript applications.
 ---
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
 </script>
 
-# With Lucide lab or custom icons
+# With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
 They can be used by adding the `@lucide/lab` package to your project.
 All props like regular lucide icons can be passed to adjust the icon appearance.
 
-## Using Lucide lab icons
+## Using Lucide Lab icons
 
 This creates a single icon based on the iconNode passed and renders a Lucide icon component.
 

@@ -58,7 +58,7 @@ export const vueSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/vue/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with @lucide/vue',
       },

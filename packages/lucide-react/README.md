@@ -27,7 +27,7 @@ Lucide icon library for React applications.
 
 # Lucide React
 
-Implementation of the lucide icon library for React applications.
+Implementation of the Lucide icon library for React applications.
 
 ## Installation
 

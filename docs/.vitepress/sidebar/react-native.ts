@@ -53,7 +53,7 @@ export const reactNativeSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/react-native/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with lucide-react-native',
       },

@@ -63,7 +63,7 @@ export const reactSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/react/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with lucide-react',
       },

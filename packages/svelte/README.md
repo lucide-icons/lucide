@@ -27,7 +27,7 @@ Lucide icon library for Svelte 5 applications.
 
 # Lucide Svelte
 
-Implementation of the lucide icon library for svelte applications.
+Implementation of the Lucide icon library for svelte applications.
 
 ## Installation
 

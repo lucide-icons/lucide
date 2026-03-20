@@ -267,9 +267,9 @@ The package includes type definitions for all icons. This is useful if you want 
 
 For more details about typing the `svelte:component` directive, see the [Svelte documentation](https://svelte.dev/docs/typescript#types-componenttype).
 
-## With Lucide lab or custom icons
+## With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
 They can be used by using the `Icon` component.
 All props like the regular Lucide icons can be passed to adjust the icon appearance.

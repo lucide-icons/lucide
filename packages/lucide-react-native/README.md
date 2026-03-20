@@ -27,7 +27,7 @@ Lucide icon library for React Native applications.
 
 # Lucide React Native
 
-Implementation of the lucide icon library for React Native applications.
+Implementation of the Lucide icon library for React Native applications.
 
 ## Installation
 

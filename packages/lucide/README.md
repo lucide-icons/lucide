@@ -27,7 +27,7 @@ Lucide icon library for web applications.
 
 # Lucide
 
-Implementation of the lucide icon library for web applications.
+Implementation of the Lucide icon library for web applications.
 
 ## Installation
 
