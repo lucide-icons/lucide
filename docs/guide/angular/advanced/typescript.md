@@ -10,23 +10,9 @@ These can be used to type your components when using Lucide icons in a TypeScrip
 
 ## Types
 
-### `LucideIconProps`
-
-Exports all props that can be passed to an icon component.
-
-```ts
-interface LucideIconProps {
-  title: Signal<Nullable<string>>;
-  size: Signal<Nullable<number>>;
-  color: Signal<Nullable<string>>;
-  strokeWidth: Signal<Nullable<number>>;
-  absoluteStrokeWidth: Signal<Nullable<boolean>>;
-}
-```
-
 ### `LucideIcon`
 
-Represents a Lucide icon component type that has `iconName` and `iconData` signals inherited from `LucideIconBase` and respective static members accessible without instantiating the component.
+Represents a self-containing Lucide icon component type that has a static `icon` property. You can use this type in schemas that declare an icon property.
 
 ```ts
 export interface LucideIcon extends Type<LucideIconProps> {

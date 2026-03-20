@@ -1,24 +1,26 @@
 ---
 title: Global Styling - Angular
-description: Learn how to style all icons globally in your Angular application using CSS or the Lucide context provider.
+description: Learn how to style all icons globally in your Angular application using CSS or the provideLucideConfig provider.
 ---
+<script setup>
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
+</script>
 
 # Global Styling
 
-Adjusting icons can be done by using [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
-To style all icons globally, you can either use CSS, or use a context provider.
+Lucide icons can be customized using the inputs for [color](../basics/color.md), [size](../basics/sizing.md) and [stroke width](../basics/stroke-width.md).
 
-We recommend using CSS for global styling, as it is the most straightforward way to achieve this.
-But using CSS prevents you from using props like `size`, `color` and `strokeWidth` on individual icons, since CSS specificity will override these props, to be able to use the props on individual ones you need to use the Lucide context provider.
+To style all icons globally, you can either use CSS or configure global defaults using `provideLucideConfig`.
 
-## Context Provider
+We recommend using CSS for global styling, as it is the most straightforward approach. However, CSS rules may override the `size`, `color`, and `strokeWidth` inputs on individual icons. If you need to keep those inputs configurable per icon, use `provideLucideConfig` instead.
 
-Lucide Angular provides a context API called `provideLucideConfig` that allows you to set global default properties for all Lucide icons in your application.
-This is useful if you want all icons to share the same size, color, or stroke width by default.
+## Configuring global defaults
 
-### Setting global defaults
+Lucide Angular provides the `provideLucideConfig` provider to set default properties for all icons.
 
-You can call `provideLucideConfig` in your main entry file or in a top-level component to set the default properties for all icons.
+You can define global defaults (such as `size`, `color`, or `strokeWidth`) while still allowing individual icons to override them through inputs.
+
+Register the provider in your application configuration or in a top-level component:
 
 ```ts
 import { ApplicationConfig } from '@angular/core';
@@ -35,60 +37,148 @@ export const appConfig: ApplicationConfig = {
 
 ## Style by using CSS
 
-Styling icons is easy to accomplish using CSS.
+Styling icons globally can be done using CSS.
 
-Every icon has a class attribute applied called `lucide`. This class name can be used in the CSS file to target all icons that are being used within the app.
+All Lucide icons include the `lucide` class. You can use this class in your styles to target every icon in your application.
 
-- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) CSS property.
-- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) CSS properties.
-- The **stroke width** of the icons can be changed using the [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width) CSS property.
+- The **color** of the icons can be changed using the [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) property.
+- The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height).
+- The **stroke width** of the icons can be changed using [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width).
 
-::: code-group
+::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
-```css [app.css]
+```css /src/app/icon.css [active]
 .lucide {
+  /* Change this! */
   color: #ffadff;
   width: 56px;
   height: 56px;
   stroke-width: 1px;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
 ```
 
-```html app.html
-<div>
-  <svg lucideCakeSlice />
-  <svg lucideCandy />
-  <svg lucideApple />
-  <svg lucideCookie />
-</div>
+```ts /src/app/app.component.ts
+import { Component, ViewEncapsulation } from "@angular/core";
+import {
+  LucideCakeSlice,
+  LucideCandy,
+  LucideApple,
+  LucideCookie,
+  LucideMartini,
+  LucideIceCream2,
+  LucideSandwich,
+  LucideWine,
+  LucideDessert,
+} from "@lucide/angular";
+
+@Component({
+  selector: 'app',
+  imports: [
+    LucideCakeSlice,
+    LucideCandy,
+    LucideApple,
+    LucideCookie,
+    LucideMartini,
+    LucideIceCream2,
+    LucideSandwich,
+    LucideWine,
+    LucideDessert,
+  ],
+  template: `<div class="grid">
+      <svg lucideCakeSlice />
+      <svg lucideCandy />
+      <svg lucideApple />
+      <svg lucideCookie />
+      <svg lucideMartini />
+      <svg lucideIceCream2 />
+      <svg lucideSandwich />
+      <svg lucideWine />
+      <svg lucideDessert />
+    </div>`,
+  styleUrls: ['./app.component.css', './icon.css'],
+  encapsulation: ViewEncapsulation.None,
+})
+export class App {
+}
 ```
+
 :::
 
 ### Absolute stroke width
 
-For global absolute stroke width styling the `vector-effect: non-scaling-stroke` CSS property can be applied to the children. This will keep the stroke-width the same size no matter the size of the icon. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more info.
+To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more details.
 
-::: code-group
+::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
-```css [app.css]
+```css /src/app/icon.css [active]
 .lucide {
-  color: #ffadff;
-  width: 56px;
-  height: 56px;
-  stroke-width: 1px;
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
 }
 
 .lucide * {
   vector-effect: non-scaling-stroke;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
 ```
 
-```html app.html
-<div>
-  <svg lucideTentTree />
-  <svg lucideCaravan />
-  <svg lucideFlameKindling />
-  <svg lucideMountainSnow />
-</div>
+```ts /src/app/app.component.ts
+import { Component, ViewEncapsulation } from "@angular/core";
+import {
+  LucideTentTree,
+  LucideCaravan,
+  LucideFlameKindling,
+  LucideMountainSnow,
+  LucideTrees,
+  LucideAxe,
+  LucideMap,
+  LucideCloudMoon,
+  LucideSparkles,
+} from "@lucide/angular";
+
+@Component({
+  selector: 'app',
+  imports: [
+    LucideTentTree,
+    LucideCaravan,
+    LucideFlameKindling,
+    LucideMountainSnow,
+    LucideTrees,
+    LucideAxe,
+    LucideMap,
+    LucideCloudMoon,
+    LucideSparkles,
+  ],
+  template: `<div class="grid">
+      <svg lucideTentTree />
+      <svg lucideCaravan />
+      <svg lucideFlameKindling />
+      <svg lucideMountainSnow />
+      <svg lucideTrees />
+      <svg lucideAxe />
+      <svg lucideMap />
+      <svg lucideCloudMoon />
+      <svg lucideSparkles />
+    </div>`,
+  styleUrls: ['./app.component.css', './icon.css'],
+  encapsulation: ViewEncapsulation.None,
+})
+export class App {
+}
 ```
+
 :::

@@ -20,7 +20,7 @@ A standalone, signal-based, zoneless implementation that makes it easy to integr
 List of features:
 
 - **Easy to Use**: Use icons as standalone Angular components with full dependency injection support.
-- **Customizable**: Adjust size, color, and other properties via props or globally with angular provider.
+- **Customizable**: Adjust size, color, and other properties via inputs or globally with an Angular provider.
 - **Tree-shakable**: Only the icons you use are included in your final bundle
 - **TypeScript Support**: Fully typed components for better developer experience.
 
