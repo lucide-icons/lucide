@@ -40,20 +40,25 @@ Because the color of lucide icons uses `currentColor`, the color of the icon dep
 
 For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
 
-```angular-ts
-import { Component } from '@angular/core';
-import { LucideThumbsUp } from '@lucide/angular';
+::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
+
+```ts /src/app/app.component.ts [active]
+import { Component, ViewEncapsulation } from "@angular/core";
+import { LucideThumbsUp } from "@lucide/angular";
 
 @Component({
-  selector: "like-button",
-  imports: [ LucideThumbsUp ],
+  selector: 'app',
+  imports: [LucideThumbsUp],
   template: `
     <button style="color:#fff">
       <svg lucideThumbsUp></svg>
       Like
     </button>
   `,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
-
-export class LikeButtonComponent { }
+export class App {
+}
 ```
+:::

@@ -2,6 +2,9 @@
 title: Global Styling - Angular
 description: Learn how to style all icons globally in your Angular application using CSS or the provideLucideConfig provider.
 ---
+<script setup>
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
+</script>
 
 # Global Styling
 
@@ -42,52 +45,140 @@ All Lucide icons include the `lucide` class. You can use this class in your styl
 - The **size** of the icons can be changed using [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height).
 - The **stroke width** of the icons can be changed using [`stroke-width`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width).
 
-::: code-group
+::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
-```css [app.css]
+```css /src/app/icon.css [active]
 .lucide {
+  /* Change this! */
   color: #ffadff;
   width: 56px;
   height: 56px;
   stroke-width: 1px;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
 ```
 
-```html app.html
-<div>
-  <svg lucideCakeSlice />
-  <svg lucideCandy />
-  <svg lucideApple />
-  <svg lucideCookie />
-</div>
+```ts /src/app/app.component.ts
+import { Component, ViewEncapsulation } from "@angular/core";
+import {
+  LucideCakeSlice,
+  LucideCandy,
+  LucideApple,
+  LucideCookie,
+  LucideMartini,
+  LucideIceCream2,
+  LucideSandwich,
+  LucideWine,
+  LucideDessert,
+} from "@lucide/angular";
+
+@Component({
+  selector: 'app',
+  imports: [
+    LucideCakeSlice,
+    LucideCandy,
+    LucideApple,
+    LucideCookie,
+    LucideMartini,
+    LucideIceCream2,
+    LucideSandwich,
+    LucideWine,
+    LucideDessert,
+  ],
+  template: `<div class="grid">
+      <svg lucideCakeSlice />
+      <svg lucideCandy />
+      <svg lucideApple />
+      <svg lucideCookie />
+      <svg lucideMartini />
+      <svg lucideIceCream2 />
+      <svg lucideSandwich />
+      <svg lucideWine />
+      <svg lucideDessert />
+    </div>`,
+  styleUrls: ['./app.component.css', './icon.css'],
+  encapsulation: ViewEncapsulation.None,
+})
+export class App {
+}
 ```
+
 :::
 
 ### Absolute stroke width
 
 To keep the stroke width constant regardless of icon size, apply `vector-effect: non-scaling-stroke` to the icon's children. See [absolute-stroke-width](../basics/stroke-width.md#absolute-stroke-width) for more details.
 
-::: code-group
+::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
-```css [app.css]
+```css /src/app/icon.css [active]
 .lucide {
-  color: #ffadff;
-  width: 56px;
-  height: 56px;
-  stroke-width: 1px;
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.5;
 }
 
 .lucide * {
   vector-effect: non-scaling-stroke;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 6px;
+}
 ```
 
-```html app.html
-<div>
-  <svg lucideTentTree />
-  <svg lucideCaravan />
-  <svg lucideFlameKindling />
-  <svg lucideMountainSnow />
-</div>
+```ts /src/app/app.component.ts
+import { Component, ViewEncapsulation } from "@angular/core";
+import {
+  LucideTentTree,
+  LucideCaravan,
+  LucideFlameKindling,
+  LucideMountainSnow,
+  LucideTrees,
+  LucideAxe,
+  LucideMap,
+  LucideCloudMoon,
+  LucideSparkles,
+} from "@lucide/angular";
+
+@Component({
+  selector: 'app',
+  imports: [
+    LucideTentTree,
+    LucideCaravan,
+    LucideFlameKindling,
+    LucideMountainSnow,
+    LucideTrees,
+    LucideAxe,
+    LucideMap,
+    LucideCloudMoon,
+    LucideSparkles,
+  ],
+  template: `<div class="grid">
+      <svg lucideTentTree />
+      <svg lucideCaravan />
+      <svg lucideFlameKindling />
+      <svg lucideMountainSnow />
+      <svg lucideTrees />
+      <svg lucideAxe />
+      <svg lucideMap />
+      <svg lucideCloudMoon />
+      <svg lucideSparkles />
+    </div>`,
+  styleUrls: ['./app.component.css', './icon.css'],
+  encapsulation: ViewEncapsulation.None,
+})
+export class App {
+}
 ```
+
 :::

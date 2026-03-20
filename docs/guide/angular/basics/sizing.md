@@ -34,41 +34,40 @@ export class App {
 
 The CSS properties `width` and `height` can be used to adjust the icon size.
 
-::: code-group
+::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
-```css [app.css]
+```css /src/app/icon.css [active]
 .my-beer-icon {
+  /* Change this! */
   width: 64px;
   height: 64px;
 }
 ```
 
-```angular-html [app.html]
-<svg lucideBeer class="my-beer-icon"></svg>
-```
-
-```angular-ts [app.ts]
-import { Component } from '@angular/core';
-import { LucideBeer } from '@lucide/angular';
+```ts /src/app/app.component.ts
+import { Component, ViewEncapsulation } from "@angular/core";
+import { LucideBeer } from "@lucide/angular";
 
 @Component({
   selector: 'app',
-  templateUrl: './app.html',
-  styleUrl: './app.css',
   imports: [LucideBeer],
+  template: `<svg lucideBeer class="my-beer-icon"></svg>`,
+  styleUrls: ['./app.component.css', './icon.css'],
+  encapsulation: ViewEncapsulation.None,
 })
-
-export class App { }
+export class App {
+}
 ```
+
 :::
 
 ### Dynamically change the icon size based on the font size
 
 It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
 
-::: code-group
+::: sandpack {template=angular editorHeight=300 dependencies="@lucide/angular"}
 
-```css [app.css]
+```css /src/app/icon.css [active]
 .my-icon {
   /* Icon size will relative to font-size of .text-wrapper */
   width: 1em;
@@ -86,26 +85,24 @@ It is possible to resize icons based on font size. This can be achieved using th
 }
 ```
 
-```angular-html [app.html]
-<div className="text-wrapper">
-  <svg lucideStar class="my-icon"></svg>
-  <div>Yes</div>
-</div>
-```
-
-```angular-ts [app.ts]
-import { Component } from '@angular/core';
-import { LucideStar } from '@lucide/angular';
+```ts /src/app/app.component.ts
+import { Component, ViewEncapsulation } from "@angular/core";
+import { LucideStar } from "@lucide/angular";
 
 @Component({
   selector: 'app',
-  templateUrl: './app.html',
-  styleUrl: './app.css',
   imports: [LucideStar],
+  template: `<div class="text-wrapper">
+  <svg lucideStar class="my-icon"></svg>
+  <div>Yes</div>
+</div>`,
+  styleUrls: ['./app.component.css', './icon.css'],
+  encapsulation: ViewEncapsulation.None,
 })
-
-export class App { }
+export class App {
+}
 ```
+
 :::
 
 ### Resizing with Tailwind

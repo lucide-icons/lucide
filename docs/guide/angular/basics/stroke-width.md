@@ -47,21 +47,26 @@ Note `2px` is the default stroke width for a Lucide icon, this can be adjusted t
 
 Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
 
-```angular-ts
-import { Component } from '@angular/core';
-import { LucideRollerCoaster } from '@lucide/angular';
+::: sandpack {template=angular showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="@lucide/angular"}
+
+```ts /src/app/app.component.ts [active]
+import { Component, ViewEncapsulation } from "@angular/core";
+import { LucideRollerCoaster } from "@lucide/angular";
 
 @Component({
-  selector: "roller-coaster",
-  imports: [ LucideRollerCoaster ],
+  selector: 'app',
+  imports: [LucideRollerCoaster],
   template: `
-    <svg
+  <svg
       lucideRollerCoaster
       [size]="96"
       [absoluteStrokeWidth]="true"
     ></svg>
-  `,
+`,
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
-
-export class RollerCoasterComponent { }
+export class App {
+}
 ```
+:::

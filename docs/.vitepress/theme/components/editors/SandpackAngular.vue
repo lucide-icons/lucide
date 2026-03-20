@@ -27,18 +27,34 @@ const angularFiles = {
 </body>
 
 </html>`,
+    hidden: true,
   },
-  '/src/app/app.component.css': styledCSS,
+  '/src/app/app.component.css': {
+    code: styledCSS,
+    hidden: true,
+  },
   '/src/polyfills.ts': {
     code: '',
+    hidden: true,
+  },
+  '/src/app/app.config.ts': {
+    code: `import { ApplicationConfig } from '@angular/core';
+
+export const appConfig: ApplicationConfig = {
+  providers: []
+};
+`,
+    hidden: true,
   },
   '/src/main.ts': {
     code: `import "@angular/compiler";
 import { bootstrapApplication } from '@angular/platform-browser';
 import { App } from './app/app.component';
+import { appConfig } from './app/app.config';
 
-void bootstrapApplication(App, {})
+void bootstrapApplication(App, appConfig)
   .catch((err) => console.error(err));`,
+    hidden: true,
   },
   '/package.json': {
     code: JSON.stringify({
@@ -60,6 +76,7 @@ void bootstrapApplication(App, {})
         '@angular/compiler-cli': '^21.0.0',
       },
     }),
+    hidden: true,
   },
 };
 </script>
@@ -68,8 +85,8 @@ void bootstrapApplication(App, {})
   <Sandpack
     template="angular"
     :files="{
-      ...props.files,
       ...angularFiles,
+      ...props.files,
     }"
   />
 </template>
