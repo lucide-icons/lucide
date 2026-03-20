@@ -19,7 +19,7 @@ import { LucideScan, LucideUser } from "@lucide/angular";
 
 @Component({
   selector: 'app',
-  imports: [LucideScan, LucideUserRound],
+  imports: [LucideScan, LucideUser],
   template: `
       <svg lucideScan [size]="48">
         <svg lucideUser
