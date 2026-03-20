@@ -6,9 +6,9 @@ description: Learn how to use icons from Lucide Lab in your Angular application.
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
-# With Lucide lab or custom icons
+# With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
 While they aren't provided as standalone components, they can be still be passed to the `LucideIcon` component the same way as official icons:
 

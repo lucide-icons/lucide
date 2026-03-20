@@ -36,50 +36,50 @@
       - any-glob-to-any-file:
           - 'packages/lucide/*'
 
-# For changes in the lucide React package
+# For changes in the Lucide React package
 ⚛️ react package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-react/*'
 
-# For changes in the lucide React Native package
+# For changes in the Lucide React Native package
 ⚛️ react native package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-react-native/*'
 
-# For changes in the lucide vue packages
+# For changes in the Lucide vue packages
 💎 vue package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-vue/*'
           - 'packages/lucide-vue-next/*'
 
-# For changes in the lucide angular package
+# For changes in the Lucide angular package
 🅰️ angular package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-angular/*'
 
-# For changes in the lucide preact package
+# For changes in the Lucide preact package
 ⚛️ preact package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-preact/*'
 
-# For changes in the lucide svelte package
+# For changes in the Lucide svelte package
 🧣 svelte package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-svelte/*'
 
-# For changes in the lucide solid package
+# For changes in the Lucide solid package
 🪝 solid package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-solid/*'
 
-# For changes in the lucide astro package
+# For changes in the Lucide astro package
 🚀 astro package:
   - changed-files:
       - any-glob-to-any-file:
@@ -91,13 +91,13 @@
       - any-glob-to-any-file:
           - 'packages/lucide-icons/*'
 
-# For changes in the lucide static package
+# For changes in the Lucide static package
 🪨 static package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-static/*'
 
-# For changes in the lucide flutter package
+# For changes in the Lucide flutter package
 🏹 flutter package:
   - changed-files:
       - any-glob-to-any-file:

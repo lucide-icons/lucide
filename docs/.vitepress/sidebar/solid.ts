@@ -58,7 +58,7 @@ export const solidSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/solid/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with lucide-solid',
       },

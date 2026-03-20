@@ -27,7 +27,7 @@ Lucide icon library for Vue applications.
 
 # Lucide Vue
 
-Implementation of the lucide icon library for Vue 3 applications.
+Implementation of the Lucide icon library for Vue 3 applications.
 
 ## Installation
 

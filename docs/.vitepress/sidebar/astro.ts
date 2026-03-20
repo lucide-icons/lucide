@@ -58,7 +58,7 @@ export const astroSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/astro/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with @lucide/astro',
       },

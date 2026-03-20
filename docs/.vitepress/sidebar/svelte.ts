@@ -58,7 +58,7 @@ export const svelteSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/svelte/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with @lucide/svelte',
       },

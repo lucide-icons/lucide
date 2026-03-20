@@ -151,9 +151,9 @@ import { icons } from 'lucide-angular';
 LucideAngularModule.pick(icons)
 ```
 
-## With Lucide lab or custom icons
+## With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 They can be used in the same way as the official icons.
 
 ```js

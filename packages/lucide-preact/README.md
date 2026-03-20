@@ -27,7 +27,7 @@ Lucide icon library for Preact applications.
 
 # Lucide Preact
 
-Implementation of the lucide icon library for Preact applications.
+Implementation of the Lucide icon library for Preact applications.
 
 ## Installation
 

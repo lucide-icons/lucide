@@ -68,7 +68,7 @@ export default IconButton;
 ## `IconNode`
 
 Type for the raw SVG structure of an icon. This is an array of SVG elements and their attributes to render the icon.
-Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with Lucide lab.
+Not commonly used directly in application code. But can be useful for advanced use cases, such as using custom icons or with Lucide Lab.
 
 ```ts
 type IconNode = [elementName: string, attrs: Record<string, string | number>][];

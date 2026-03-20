@@ -63,7 +63,7 @@ export const lucideSidebar = [
         desc: 'Making your icons accessible',
       },
       {
-        text: 'With lucide lab',
+        text: 'With Lucide Lab',
         link: '/guide/lucide/advanced/with-lucide-lab',
         desc: 'Using lucide-lab with lucide',
       },

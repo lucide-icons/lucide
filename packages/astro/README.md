@@ -28,7 +28,7 @@ Lucide icon library for Astro sites and applications.
 
 # Lucide Astro
 
-Implementation of the lucide icon library for Astro applications.
+Implementation of the Lucide icon library for Astro applications.
 
 ## Installation
 
