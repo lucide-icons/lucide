@@ -3,7 +3,7 @@ title: Sizing - Angular
 description: Learn how to adjust the size of icons in your Angular application using the `size` input or by using CSS.
 ---
 <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
 # Sizing
