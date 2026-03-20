@@ -16,67 +16,6 @@ type SnackParams = {
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
 
-function registerCustomAngularTemplates(
-  filesWithDefaultStyles: NonNullable<SnackParams['defaultFiles']>,
-) {
-  Object.assign(filesWithDefaultStyles, {
-    '/src/index.html': {
-      code: `<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Angular</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-   <app></app>
-</body>
-
-</html>`,
-    },
-    '/src/app/app.component.css': filesWithDefaultStyles['/styles.css'],
-    '/src/polyfills.ts': {
-      code: '',
-    },
-    '/src/main.ts': {
-      code: `import "@angular/compiler";
-import { bootstrapApplication } from '@angular/platform-browser';
-import { App } from './app/app.component';
-
-void bootstrapApplication(App, {})
-  .catch((err) => console.error(err));`,
-    },
-    '/package.json': {
-      code: JSON.stringify({
-        dependencies: {
-          '@angular/common': '^21.0.0',
-          '@angular/compiler': '^21.0.0',
-          '@angular/core': '^21.0.0',
-          '@angular/forms': '^21.0.0',
-          '@angular/platform-browser': '^21.0.0',
-          '@angular/router': '^21.0.0',
-          'zone.js': '0.16.1',
-          'core-js': '3.48.0',
-          rxjs: '7.4.0',
-        },
-        main: '/src/main.ts',
-        devDependencies: {
-          '@angular/build': '^21.0.3',
-          '@angular/cli': '^21.0.3',
-          '@angular/compiler-cli': '^21.0.0',
-        },
-      }),
-    },
-  });
-  delete filesWithDefaultStyles['/styles.css'];
-}
-
 export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParams = {}) {
   if (md == null) {
     throw new Error('MarkdownIt instance is required for sandpackPlugin');
@@ -153,10 +92,6 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
           ...pluginOptions.defaultFiles,
           ...files,
         };
-
-        if (attrs.template === 'angular') {
-          registerCustomAngularTemplates(filesWithDefaultStyles);
-        }
 
         return `\
         <Sandpack\

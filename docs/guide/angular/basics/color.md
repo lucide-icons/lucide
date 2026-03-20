@@ -3,7 +3,7 @@ title: Color - Angular
 description: Learn how to adjust the color of icons in your Angular application using the `color` input or by using parent elements text color value.
 ---
 <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
 # Color

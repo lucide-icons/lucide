@@ -3,7 +3,7 @@ title: Stroke width - Angular
 description: Learn how to adjust the stroke width of icons in your Angular application using the `strokeWidth` input or adjust the strokeWidth appearance using the `absoluteStrokeWidth` input.
 ---
 <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
 # Stroke width

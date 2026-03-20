@@ -3,7 +3,7 @@ title: Combining icons - Angular
 description: Learn how to combine multiple icons into a single icon using SVG in SVG in your Angular application.
 ---
 <script setup>
-import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
+import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 </script>
 
 # Combining icons
