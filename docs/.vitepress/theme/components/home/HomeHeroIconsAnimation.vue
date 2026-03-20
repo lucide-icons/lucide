@@ -561,12 +561,6 @@ const shrinkIconVariants = {
 </template>
 
 <style scoped>
-/* svg:focus,
-svg:focus-visible,
-svg *:focus,
-svg *:focus-visible {
-  outline: none;
-} */
 .home-hero-animation-container {
   margin: -48px -24px 0;
   display: flex;

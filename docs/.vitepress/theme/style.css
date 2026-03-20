@@ -67,6 +67,10 @@
   animation: .3s transition 0s ease;
 } */
 
+.VPHome {
+  overflow-x: hidden;
+}
+
 .VPNavBarTitle .logo {
   height: 36px;
   width: 36px;

@@ -1,7 +1,3 @@
-<!-- <script setup lang="ts">
-import { useElementSize } from '@vueuse/core';
-import { watchEffect } from 'vue';
-</script> -->
 <script setup lang="ts">
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 </script>
@@ -13,13 +9,13 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
       <VPLink
         class="notification-link"
         href="/guide/version-1"
-        >Lucide v1 is now available!</VPLink
-      >
+        >Lucide v1 is out!<br
+      /></VPLink>
       You looking at the site for v1, for v0 go to
       <VPLink
         class="notification-link"
         href="https://v0.lucide.dev"
-        >v0.lucide.dev</VPLink
+        >v0 site</VPLink
       >
     </p>
   </div>
@@ -27,7 +23,13 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 
 <style>
 :root {
-  --vp-layout-top-height: 32px;
+  --vp-layout-top-height: 64px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-layout-top-height: 32px;
+  }
 }
 </style>
 
@@ -44,11 +46,17 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
   align-items: center;
   background: var(--vp-c-brand-dark);
   font-size: 14px;
+  padding: 0 16px;
 }
 
 .notification-link {
-  /* color: var(--vp-c-brand-light); */
   font-weight: 500;
   text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .top-notification br {
+    display: none;
+  }
 }
 </style>
