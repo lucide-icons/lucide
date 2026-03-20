@@ -63,7 +63,7 @@ export class LucideCoconut extends createLucideIcon(
 
 ```ts [app.ts]
 import { Component } from "@angular/core";
-import { LucideCoconut } from "./icons/coconut.ts";
+import { LucideCoconut } from "./icons/coconut";
 
 @Component({
   selector: 'app',
