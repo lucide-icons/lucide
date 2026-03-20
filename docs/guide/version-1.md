@@ -23,7 +23,7 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Removed brand icons, see our [brand logo statement](/brand-logo-statement) for more details.
 - Improved documentation, guides per framework.
 - Improved accessibility, `aria-hidden` is now set by default on icons.
-- Removed UMD build, only ESM and CJS now (exception for the [`lucide`](/guide/lucide) package).
+- Removed UMD build, only ESM and CJS now (exception for the [`lucide`](../guide/lucide/index.md) package).
 - Package rename from `lucide-vue-next` to `@lucide/vue`.
 - A modern, standalone implementation for Angular, `@lucide/angular`
 - Support for context providers in React, Vue, Svelte, and Solid.
