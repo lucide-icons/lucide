@@ -62,6 +62,7 @@ Here is a complete example with unpkg
   </script>
 </body>
 ```
+We strongly suggest you anchor to a specific version, such as `https://unpkg.com/lucide@x.xxx.x/dist/umd/lucide.min.js`, rather than using `@latest`. 
 
 ### With ESModules
 
@@ -203,3 +204,23 @@ createIcons({
   }
 });
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```html
+<!DOCTYPE html>
+<body>
+  <i data-lucide="house" aria-label="Home icon"></i>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).

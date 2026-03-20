@@ -13,6 +13,7 @@ export interface IconProps extends Attrs {
   absoluteStrokeWidth?: boolean;
   iconNode?: IconNode;
   children?: Snippet;
+  title?: string;
 }
 
 export type IconEvents = {

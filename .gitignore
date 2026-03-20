@@ -14,12 +14,15 @@ coverage
 stats
 *.log
 outlined
+lucide-font
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx
 packages/**/src/aliases/*.ts
 packages/**/src/aliases.ts
 !packages/**/src/aliases/index.ts
+packages/**/src/utils/*.ts
+!packages/shared/src/utils/*.ts
 packages/**/src/dynamicIconImports.ts
 packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
@@ -40,7 +43,7 @@ docs/.vitepress/.temp
 docs/.vitepress/data/iconNodes
 docs/.vitepress/data/iconMetaData.ts
 docs/.vitepress/data/releaseMetaData.json
-docs/.vitepress/data/releaseMetaData
+docs/.vitepress/data/releaseMetadata
 docs/.vitepress/data/categoriesData.json
 docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json

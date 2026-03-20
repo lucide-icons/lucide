@@ -12,15 +12,12 @@ on:
         description: Version
         type: string
 
-  workflow_dispatch:
-    inputs:
-      version:
-        description: Version
-        required: true
-
 permissions:
   id-token: write # Required for OIDC
   contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   pre-release:
@@ -135,11 +132,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Outline svg Icons
-        run: pnpm build:outline-icons
-
       - name: Create font in ./lucide-font
-        run: pnpm build:font
+        run: pnpm build:font --saveCodePoints
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 
       - name: 'Upload to Artifacts'
         uses: actions/upload-artifact@v4
