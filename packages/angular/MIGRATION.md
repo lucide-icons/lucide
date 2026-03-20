@@ -63,10 +63,10 @@ import { provideLucideIcons, LucideAirVent, LucideAlarmClock } from '@lucide/ang
 export const appConfig: ApplicationConfig = {
   providers: [
     // ...
-    provideLucideIcons([
+    provideLucideIcons(
       LucideAirVent,
       LucideAlarmClock,
-    ]),
+    ),
   ]
 };
 ```
