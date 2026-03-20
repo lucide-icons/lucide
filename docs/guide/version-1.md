@@ -16,7 +16,7 @@ After years of work and dedication, Lucide Version 1 is almost ready for release
 
 It's been crazy especially the last year, Lucide went over 30 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
 
-Thank you to everyone who has supported us along the way. We couldn't have done it without you!
+Thank you to everyone who has supported us along the way. We couldn't have done this without you!
 
 ## What's New in Version 1? TLDR;
 
@@ -29,7 +29,7 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Support for context providers in React, Vue, Svelte, and Solid.
 <!-- - Aliases icon names in class names. -->
 - Stable code points for Lucide font.
-- Support for shadow DOM in Lucide package.
+- Support for shadow DOM in the `lucide` package.
 - Many bug fixes and improvements.
 
 <!-- TODO: v1 Remove After full release -->
@@ -62,7 +62,7 @@ For users who still require brand icons, we recommend [Simple Icons](https://sim
 
 We have revamped our documentation to provide clearer, more comprehensive guides tailored to each supported framework. Whether you're using React, Vue, Svelte, Solid, Angular, Astro or Vanilla JavaScript, you'll find: step-by-step instructions, code examples and best practices to help you integrate Lucide seamlessly into your projects.
 
-Also a `llms.txt` is now available for LLMs to use.
+Also, a `llms.txt` is now available for LLMs to use.
 
 ## Improved accessibility
 
@@ -72,7 +72,7 @@ See our [accessibility in-depth guide](/guide/accessibility) for more details an
 
 ## Removed UMD build, only ESM and CJS now
 
-To streamline our build process and focus on modern JavaScript module formats, we have removed the UMD build from Lucide Version 1. We now only support ESM (ECMAScript Modules) and CJS (CommonJS) formats. This is a reduction of -32.3% reduction (11,4 MB, 1 MB Gzipped) for `lucide-react`, with more than 25 million weekly downloads, this is a huge saving for the ecosystem.
+To streamline our build process and focus on modern JavaScript module formats, we have removed the UMD build from Lucide Version 1. We now only support ESM (ECMAScript Modules) and CJS (CommonJS) formats. This results in a 32.3% size reduction (11.4 MB → 1 MB gzipped) for `lucide-react`, with more than 25 million weekly downloads, this is a huge saving for the ecosystem.
 
 ## Package rename from `lucide-vue-next` to `@lucide/vue`
 
@@ -82,7 +82,7 @@ To streamline our build process and focus on modern JavaScript module formats, w
 
 We have added support for context providers in React, Vue, Svelte, and Solid. This allows you to set default properties for all icons within a specific context, making it easier to manage icon styles and behavior across your application.
 
-We always recommended to use CSS, but with this was not possible to set properties like `size` or `color` on specific icons, since CSS is always overriding this. With this new feature, you can now easily set default properties for all icons within a specific context, without having to manually set them on each icon.
+We have always recommended using CSS, but with this it was not possible to set properties like `size` or `color` on specific icons, as CSS would override them. With this new feature, you can now easily set default properties for all icons within a specific context, without having to manually define them on each icon.
 
 ::: code-group
 
