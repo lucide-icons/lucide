@@ -60,7 +60,7 @@ For users who still require brand icons, we recommend [Simple Icons](https://sim
 
 ## Improved documentation, guides per framework
 
-We have revamped our documentation to provide clearer, more comprehensive guides tailored to each supported framework. Whether you're using React, Vue, Svelte, Solid, Angular, Astro or Vanilla JavaScript, you'll find: step-by-step instructions, code example and best practices to help you integrate Lucide seamlessly into your projects.
+We have revamped our documentation to provide clearer, more comprehensive guides tailored to each supported framework. Whether you're using React, Vue, Svelte, Solid, Angular, Astro or Vanilla JavaScript, you'll find: step-by-step instructions, code examples and best practices to help you integrate Lucide seamlessly into your projects.
 
 Also a `llms.txt` is now available for LLMs to use.
 
