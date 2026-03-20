@@ -1,6 +1,6 @@
 ---
 title: Version 1 🚀
-description: After years of work and dedication, Lucide version 1 has been officially released! This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
+description: After years of work and dedication, Lucide Version 1 has been officially released! This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 ---
 <script setup>
 import OverviewLink from '../.vitepress/theme/components/base/OverviewLink.vue'
@@ -9,10 +9,10 @@ import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGr
 
 <!--@include: ../../docs/images/version-1.svg -->
 
-# Lucide version 1
+# Lucide Version 1
 <!-- TODO: v1 Remove After full release -->
-<!-- After years of work and dedication, Lucide version 1 has been officially **released**!. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike. -->
-After years of work and dedication, Lucide version 1 is almost ready for release. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
+<!-- After years of work and dedication, Lucide Version 1 has been officially **released**!. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike. -->
+After years of work and dedication, Lucide Version 1 is almost ready for release. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 
 It's been crazy especially the last year, Lucide went over 30 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
 
@@ -23,7 +23,7 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Removed brand icons, see our [brand logo statement](/brand-logo-statement) for more details.
 - Improved documentation, guides per framework.
 - Improved accessibility, `aria-hidden` is now set by default on icons.
-- Removed UMD build, only ESM and CJS now. (Exception for `lucide` package).
+- Removed UMD build, only ESM and CJS now (exception for the [`lucide`](/guide/lucide) package).
 - Package rename from `lucide-vue-next` to `@lucide/vue`.
 - Support for context providers in React, Vue, Svelte, and Solid.
 <!-- - Aliases icon names in class names. -->
@@ -32,7 +32,7 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Many bug fixes and improvements.
 
 <!-- TODO: v1 Remove After full release -->
-## Trying out version 1
+## Trying out Version 1
 <!-- ## Upgrading to Version 1 -->
 
 See our guides:
@@ -51,7 +51,7 @@ See our guides:
 
 ## Removed All Brand Icons
 
-As part of our commitment to maintaining a sustainable and legally compliant icon library, we have made the decision to remove all brand icons from Lucide version 1. This change is in response to increasing legal pressures and the complexities associated with trademarked brand icons. See our [brand logo statement](/brand-logo-statement) for more details.
+As part of our commitment to maintaining a sustainable and legally compliant icon library, we have made the decision to remove all brand icons from Lucide Version 1. This change is in response to increasing legal pressures and the complexities associated with trademarked brand icons. See our [brand logo statement](/brand-logo-statement) for more details.
 
 We understand that brand icons are important to many of our users, and we want to assure you that this decision was not made lightly. Our primary goal is to ensure that Lucide remains a reliable and legally sound resource for the community.
 
@@ -71,7 +71,7 @@ See our [accessibility in-depth guide](/guide/accessibility) for more details an
 
 ## Removed UMD build, only ESM and CJS now
 
-To streamline our build process and focus on modern JavaScript module formats, we have removed the UMD build from Lucide version 1. We now only support ESM (ECMAScript Modules) and CJS (CommonJS) formats. This is a reduction of -32.3% reduction (11,4 MB, 1 MB Gzipped) for `lucide-react`, with more than 25 million weekly downloads, this is a huge saving for the ecosystem.
+To streamline our build process and focus on modern JavaScript module formats, we have removed the UMD build from Lucide Version 1. We now only support ESM (ECMAScript Modules) and CJS (CommonJS) formats. This is a reduction of -32.3% reduction (11,4 MB, 1 MB Gzipped) for `lucide-react`, with more than 25 million weekly downloads, this is a huge saving for the ecosystem.
 
 ## Package rename from `lucide-vue-next` to `@lucide/vue`
 
