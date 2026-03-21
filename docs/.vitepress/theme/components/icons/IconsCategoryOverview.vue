@@ -150,13 +150,17 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  let url = '/icons/categories';
+  const url = new URL(window.location);
+  url.pathname = '/icons/categories';
+
   if (searchQueryDebounced.value) {
-    url += `?search=${encodeURIComponent(searchQueryDebounced.value)}`;
+    url.searchParams.set('search', searchQueryDebounced.value);
   }
+  
   if (selectedCategory.value) {
-    url += `#${selectedCategory.value}`;
+    url.hash = selectedCategory.value;
   }
+  
   window.history.pushState({}, '', url);
 }
 </script>
