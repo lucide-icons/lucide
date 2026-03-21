@@ -20,7 +20,6 @@ export const guideSidebarTop: DefaultTheme.SidebarItem[] = [
       { text: 'What is Lucide?', link: '/guide/' },
       { text: 'Version 1', link: '/guide/version-1' },
       { text: 'Installation', link: '/guide/installation' },
-      { text: 'Comparison', link: '/guide/comparison' },
     ],
   },
 ];
