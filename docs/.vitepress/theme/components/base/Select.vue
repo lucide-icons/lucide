@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import {
-  Listbox,
-  ListboxLabel,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption,
-} from '@headlessui/vue';
+import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue';
 import Icon from '@lucide/vue/src/Icon';
 import { chevronsUpDown, check } from '../../../data/iconNodes';
+import SelectIcon from './SelectIcon.vue';
 
 defineProps<{
   id?: string;
-  items?: { name: string; icon: string }[];
+  items?: { name: string; route: string; icon: string; iconDark?: string }[];
 }>();
 
-const selected = defineModel<{ name: string; icon: string }>();
+const selected = defineModel<{ name: string; icon: string; iconDark?: string }>();
 </script>
 
 <template>
@@ -25,12 +19,7 @@ const selected = defineModel<{ name: string; icon: string }>();
         class="select-button"
         :id="id"
       >
-        <img
-          :src="selected.icon"
-          :class="{ 'select-item-icon': true }"
-          :alt="`${selected.name} logo`"
-          loading="lazy"
-        />
+        <SelectIcon :item="selected" />
         <span class="select-text">{{ selected.name }}</span>
         <span class="select-icon">
           <Icon
@@ -55,12 +44,7 @@ const selected = defineModel<{ name: string; icon: string }>();
             as="template"
           >
             <li :class="['select-option', { active, selected }]">
-              <img
-                :src="item.icon"
-                :class="{ 'select-item-icon': true }"
-                :alt="`${item.name} logo`"
-                loading="lazy"
-              />
+              <SelectIcon :item="item" />
               <span :class="['option-text', { selected }]">{{ item.name }}</span>
               <span
                 v-if="selected"
@@ -124,12 +108,6 @@ const selected = defineModel<{ name: string; icon: string }>();
   display: flex;
   align-items: center;
   padding-right: 0.5rem;
-}
-
-.select-item-icon {
-  object-fit: contain;
-  width: 24px;
-  height: 24px;
 }
 
 .chevron-icon {
