@@ -28,12 +28,9 @@ function onClick(categoryName: string) {
   const heading = document.querySelector<HTMLAnchorElement>(categoryName);
   heading?.focus();
 
-  const searchParam = new URLSearchParams(window.location.search).get('search');
-  let url = '/icons/categories';
-  if (searchParam) {
-    url += `?search=${encodeURIComponent(searchParam)}`;
-  }
-  url += `#${categoryName}`;
+  const url = new URL(window.location.href);
+  url.pathname = '/icons/categories';
+  url.hash = categoryName;
   window.history.pushState({}, '', url);
 }
 </script>
