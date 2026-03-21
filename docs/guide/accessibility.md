@@ -3,7 +3,7 @@ title: Accessibility
 description: Learn how to make your icons accessible to all users, including those with disabilities.
 ---
 
-# Accessibility in dept
+# Accessibility in depth
 
 Icons are pictures that show what something means without using words. They can be very helpful
 because they can quickly give information.
