@@ -23,7 +23,12 @@ const frameworks = [
     icon: '/framework-logos/react-native.svg',
     route: '/guide/react-native/',
   },
-  { name: 'Astro', icon: '/framework-logos/astro-dark.svg', route: '/guide/astro/' },
+  {
+    name: 'Astro',
+    icon: '/framework-logos/astro.svg',
+    iconDark: '/framework-logos/astro-dark.svg',
+    route: '/guide/astro/',
+  },
   { name: 'Static', icon: '/framework-logos/svg.svg', route: '/guide/static/' },
 ];
 
@@ -43,12 +48,10 @@ const selected = computed(() => {
   return current || fallbackFramework.value;
 });
 
-function onSelectFramework(item: { name: string; icon: string; route: string }) {
+function onSelectFramework(item: { name: string; icon: string; iconDark?: string; route: string }) {
   fallbackFramework.value = item;
   if (item.route !== router.route.path) {
     const likeRoute = router.route.path.replace(selected.value.route, item.route);
-
-    console.log(likeRoute);
 
     const hasRoute = sidebar[item.route]?.some((section) =>
       section?.items?.some(({ link }) => link === likeRoute),
