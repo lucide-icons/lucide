@@ -17,8 +17,18 @@ const bundles = [
   },
   {
     format: 'esm',
-    inputs: [...inputs, , 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    inputs,
     outputDir: 'dist/esm',
+    preserveModules: true,
+  },
+
+  {
+    format: 'esm',
+    inputs: [
+      'src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries,
+    ],
+    outputDir: 'dist/esm',
+    external: [/src/],
     preserveModules: true,
   },
   {
@@ -55,7 +65,11 @@ const configs = bundles
           ...plugins({ pkg, minify }),
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
-            include: 'src/DynamicIcon.ts',
+            include: [
+              'src/DynamicIcon.ts',
+              "src/context.ts",
+              "src/Icon.ts",
+            ],
             suppressPreserveModulesWarning: true,
           }),
         ],
@@ -64,11 +78,11 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-                dir: outputDir,
-              }
+              dir: outputDir,
+            }
             : {
-                file: outputFile ?? `${outputDir}/${outputFileName}.js`,
-              }),
+              file: outputFile ?? `${outputDir}/${outputFileName}.js`,
+            }),
           paths,
           entryFileNames,
           format,
