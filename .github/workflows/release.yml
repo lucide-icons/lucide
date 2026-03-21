@@ -58,11 +58,11 @@ jobs:
             'lucide-preact',
             'lucide-solid',
             'lucide-svelte',
-            # '@lucide/angular', // <- Need to be release with custom tag
+            '@lucide/angular', # <- If published with next tag, latest tag need to be set:  npm dist-tag add @lucide/angular@{version} latest
             '@lucide/astro',
             '@lucide/svelte',
             '@lucide/icons',
-            # '@lucide/vue', // <- Need to be release with custom tag
+            '@lucide/vue', # <- If published with next tag, latest tag need to be set:  npm dist-tag add @lucide/vue@{version} latest
           ]
     steps:
       - uses: actions/checkout@v6
