@@ -31,7 +31,7 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-replace": "^6.0.3",
     "@types/semver": "^7.7.1",
-    "h3": "^1.15.6",
+    "h3": "^1.15.9",
     "nitropack": "^2.12.4",
     "rollup-plugin-copy": "^3.5.0",
     "svg-path-commander": "^2.1.11",
