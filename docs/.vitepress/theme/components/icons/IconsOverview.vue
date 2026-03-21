@@ -118,10 +118,13 @@ watch(searchQueryDebounced, () => {
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  let url = '/icons/';
+  const url = new URL(window.location);
+  url.pathname = '/icons/';
+
   if (searchQueryDebounced.value) {
-    url += `?search=${encodeURIComponent(searchQueryDebounced.value)}`;
+    url.searchParams.set('search', searchQueryDebounced.value);
   }
+  
   window.history.pushState({}, '', url);
 }
 </script>
