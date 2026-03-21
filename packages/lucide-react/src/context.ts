@@ -1,3 +1,5 @@
+'use-client';
+
 import { createContext, createElement, type ReactNode, useContext, useMemo } from 'react';
 import { LucideProps } from './types';
 
