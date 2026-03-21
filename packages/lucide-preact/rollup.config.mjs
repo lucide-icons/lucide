@@ -30,11 +30,11 @@ const configs = bundles
         name: packageName,
         ...(preserveModules
           ? {
-            dir: `${outputDir}/${format}`,
-          }
+              dir: `${outputDir}/${format}`,
+            }
           : {
-            file: `${outputDir}/${format}/${outputFileName}.js`,
-          }),
+              file: `${outputDir}/${format}/${outputFileName}.js`,
+            }),
         preserveModules,
         format,
         sourcemap: true,
