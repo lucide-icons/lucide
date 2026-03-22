@@ -13,7 +13,7 @@ You can turn this off by adding the following setting to your VS Code settings.
 
 ```json [.vscode/settings.json]
 {
-  "typescript.preferences.autoImportFileExcludePatterns": [
+  "js/ts.preferences.autoImportFileExcludePatterns": [
     "lucide-react", // or
     "lucide-preact", // or
     "lucide-react-native", // or
