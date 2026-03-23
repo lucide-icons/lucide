@@ -12,6 +12,16 @@ on:
       version:
         description: Version
         required: true
+      tag:
+        required: true
+        description: NPM tag
+        default: 'latest'
+        type: choice
+        options:
+          - latest
+          - next
+          - beta
+          - alpha
 
 permissions:
   id-token: write # Required for OIDC
@@ -85,3 +95,4 @@ jobs:
     secrets: inherit
     with:
       version: ${{ inputs.version }}
+      tag: ${{ inputs.tag }}

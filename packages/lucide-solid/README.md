@@ -20,14 +20,14 @@ Lucide icon library for Solid applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-solid">Documentation</a>
+  <a href="https://lucide.dev/guide/solid">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Solid
 
-Implementation of the lucide icon library for solid applications.
+Implementation of the Lucide icon library for solid applications.
 
 ## Installation
 

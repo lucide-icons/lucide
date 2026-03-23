@@ -50,4 +50,6 @@ docs/.vitepress/data/relatedIcons.json
 docs/.vitepress/data/brandStopwords.json
 docs/.vercel
 docs/.nitro
+docs/public/og/**
+!docs/public/og/general.png
 .gitignore

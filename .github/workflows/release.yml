@@ -11,6 +11,10 @@ on:
         required: true
         description: Version
         type: string
+      tag:
+        description: NPM tag
+        default: 'next' # set to latest after v1 release
+        type: string
 
 permissions:
   id-token: write # Required for OIDC
@@ -20,7 +24,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  pre-release:
+  prepare:
     if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
     runs-on: ubuntu-latest
     outputs:
@@ -38,25 +42,27 @@ jobs:
   release:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: pre-release
+    needs: prepare
     permissions:
       id-token: write # Required for OIDC
       contents: read
     strategy:
       fail-fast: false
       matrix:
-        package:
-          [
+        package: [
             'lucide',
             'lucide-react',
             'lucide-react-native',
-            'lucide-vue-next',
-            'lucide-angular',
+            # 'lucide-vue-next',
+            # 'lucide-angular',
             'lucide-preact',
             'lucide-solid',
             'lucide-svelte',
+            '@lucide/angular', # <- If published with next tag, latest tag need to be set:  npm dist-tag add @lucide/angular@{version} latest
             '@lucide/astro',
             '@lucide/svelte',
+            '@lucide/icons',
+            '@lucide/vue', # <- If published with next tag, latest tag need to be set:  npm dist-tag add @lucide/vue@{version} latest
           ]
     steps:
       - uses: actions/checkout@v6
@@ -70,7 +76,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
         run: pnpm --filter ${{ matrix.package }} build
@@ -79,14 +85,14 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
         env:
           NPM_CONFIG_PROVENANCE: true
 
   lucide-static:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [pre-release, lucide-font]
+    needs: [prepare, lucide-font]
     permissions:
       id-token: write # Required for OIDC
       contents: read
@@ -104,7 +110,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        run: pnpm --filter lucide-static version --new-version ${{ needs.pre-release.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-static version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
 
       - name: Move Font
         run: cp -r lucide-font packages/lucide-static/font
@@ -113,14 +119,14 @@ jobs:
         run: pnpm --filter lucide-static build
 
       - name: Publish
-        run: pnpm --filter lucide-static publish --no-git-checks
+        run: pnpm --filter lucide-static publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
         env:
           NPM_CONFIG_PROVENANCE: true
 
   lucide-font:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: pre-release
+    needs: prepare
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
@@ -144,9 +150,9 @@ jobs:
           path: lucide-font
 
   post-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_call'
     runs-on: ubuntu-latest
-    needs: [pre-release, lucide-font]
+    needs: [prepare, lucide-font]
     permissions:
       id-token: write # Required for OIDC
       contents: write
@@ -155,13 +161,14 @@ jobs:
       - uses: actions/download-artifact@v4
       - name: Zip font and icons
         run: |
-          zip -r lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip lucide-font
-          zip -r lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip icons
+          zip -r lucide-font-${{ needs.prepare.outputs.VERSION }}.zip lucide-font
+          zip -r lucide-icons-${{ needs.prepare.outputs.VERSION }}.zip icons
 
       - name: Release zip and fonts
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ needs.pre-release.outputs.VERSION }}
+          tag_name: ${{ needs.prepare.outputs.VERSION }}
+
           files: |
-            lucide-font-${{ needs.pre-release.outputs.VERSION }}.zip
-            lucide-icons-${{ needs.pre-release.outputs.VERSION }}.zip
+            lucide-font-${{ needs.prepare.outputs.VERSION }}.zip
+            lucide-icons-${{ needs.prepare.outputs.VERSION }}.zip
