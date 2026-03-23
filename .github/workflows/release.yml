@@ -50,20 +50,17 @@ jobs:
       fail-fast: false
       matrix:
         package: [
-            'lucide',
-            'lucide-react',
-            'lucide-react-native',
-            # 'lucide-vue-next',
-            # 'lucide-angular',
-            'lucide-preact',
-            'lucide-solid',
-            'lucide-svelte',
-            '@lucide/angular', # <- If published with next tag, latest tag need to be set:  npm dist-tag add @lucide/angular@{version} latest
-            '@lucide/astro',
-            '@lucide/svelte',
-            '@lucide/icons',
-            '@lucide/vue', # <- If published with next tag, latest tag need to be set:  npm dist-tag add @lucide/vue@{version} latest
-          ]
+          'lucide',
+          'lucide-react',
+          'lucide-react-native',
+          'lucide-preact',
+          'lucide-solid',
+          'angular',
+          'astro',
+          'svelte',
+          'icons',
+          'vue',
+        ]
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
@@ -76,16 +73,20 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+        run: pnpm version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/${{ matrix.package }}
 
       - name: Build
-        run: pnpm --filter ${{ matrix.package }} build
+        run: pnpm build
+        working-directory: packages/${{ matrix.package }}
 
       - name: Test
-        run: pnpm --filter ${{ matrix.package }} test
+        run: pnpm test
+        working-directory: packages/${{ matrix.package }}
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
+        run: pnpm publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
+        working-directory: packages/${{ matrix.package }}
         env:
           NPM_CONFIG_PROVENANCE: true
 
