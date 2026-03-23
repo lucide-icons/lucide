@@ -25,26 +25,24 @@ For production environments, we recommend using a bundler with tree-shaking supp
 
 ## Installation
 
-<!-- TODO: v1 Remove After full release -->
-
 ### Package Managers
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-static@next
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
-yarn add lucide-static@next
+yarn add lucide-static
 ```
 
 ```sh [npm]
-npm install lucide-static@next
+npm install lucide-static
 ```
 
 ```sh [bun]
-bun add lucide-static@next
+bun add lucide-static
 ```
 
 :::

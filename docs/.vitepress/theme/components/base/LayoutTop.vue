@@ -5,7 +5,6 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
 <template>
   <div class="top-notification">
     <p>
-      Release candidate for
       <VPLink
         class="notification-link"
         href="/guide/version-1"

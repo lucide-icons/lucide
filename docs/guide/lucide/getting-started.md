@@ -17,24 +17,22 @@ Make sure you have a your environment set up. If you don't have one yet, you can
 
 ### Package Managers
 
-<!-- TODO: v1 Remove After full release -->
-
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide@next
+pnpm add lucide
 ```
 
 ```sh [yarn]
-yarn add lucide@next
+yarn add lucide
 ```
 
 ```sh [npm]
-npm install lucide@next
+npm install lucide
 ```
 
 ```sh [bun]
-bun add lucide@next
+bun add lucide
 ```
 
 :::

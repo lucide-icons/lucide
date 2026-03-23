@@ -16,24 +16,22 @@ Make sure you have a Astro environment set up. If you don't have one yet, you ca
 
 ## Installation
 
-<!-- TODO: v1 Remove After full release -->
-
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @lucide/astro@next
+pnpm add @lucide/astro
 ```
 
 ```sh [yarn]
-yarn add @lucide/astro@next
+yarn add @lucide/astro
 ```
 
 ```sh [npm]
-npm install @lucide/astro@next
+npm install @lucide/astro
 ```
 
 ```sh [bun]
-bun add @lucide/astro@next
+bun add @lucide/astro
 ```
 
 :::

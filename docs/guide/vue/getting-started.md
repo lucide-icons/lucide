@@ -15,8 +15,6 @@ Make sure you have a Vue environment set up. If you don't have one yet, you can 
 
 ## Installation
 
-<!-- TODO: v1 Remove After full release -->
-
 ::: code-group
 
 ```sh [pnpm]

@@ -10,9 +10,7 @@ import OverviewLinkGrid from '../.vitepress/theme/components/base/OverviewLinkGr
 <!--@include: ../../docs/images/version-1.svg -->
 
 # Lucide Version 1
-<!-- TODO: v1 Remove After full release -->
-<!-- After years of work and dedication, Lucide Version 1 has been officially **released**!. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike. -->
-After years of work and dedication, Lucide Version 1 is almost ready for release. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
+After years of work and dedication, Lucide Version 1 has been officially **released**!. This milestone marks a significant achievement in our journey to provide a comprehensive and versatile icon library for developers and designers alike.
 
 It's been quite a ride — especially over the past year. Lucide has grown to over 30 million downloads per week and is used by million of projects worldwide. This release is a testament to the hard work of our community and contributors who have helped shape Lucide into what it is today.
 
@@ -27,14 +25,11 @@ Thank you to everyone who has supported us along the way. We couldn't have done 
 - Package rename from `lucide-vue-next` to `@lucide/vue`.
 - A modern, standalone implementation for Angular, `@lucide/angular`
 - Support for context providers in React, Vue, Svelte, and Solid.
-<!-- - Aliases icon names in class names. -->
 - Stable code points for Lucide font.
 - Support for shadow DOM in the `lucide` package.
 - Many bug fixes and improvements.
 
-<!-- TODO: v1 Remove After full release -->
-## Trying out Version 1
-<!-- ## Upgrading to Version 1 -->
+## Upgrading to Version 1
 
 See our guides:
 

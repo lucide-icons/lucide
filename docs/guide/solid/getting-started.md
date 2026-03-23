@@ -11,8 +11,6 @@ import { solidSidebar } from '../../.vitepress/sidebar/solid'
 
 # Getting started
 
-<!-- TODO: v1 Remove After full release -->
-
 This guide will help you get started with Lucide in your Solid project.
 Make sure you have a Solid environment set up. If you don't have one yet, you can create a new Solid project using Create Solid App, Vite, or any other Solid boilerplate of your choice.
 
@@ -21,19 +19,19 @@ Make sure you have a Solid environment set up. If you don't have one yet, you ca
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-solid@next
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
-yarn add lucide-solid@next
+yarn add lucide-solid
 ```
 
 ```sh [npm]
-npm install lucide-solid@next
+npm install lucide-solid
 ```
 
 ```sh [bun]
-bun add lucide-solid@next
+bun add lucide-solid
 ```
 
 :::
