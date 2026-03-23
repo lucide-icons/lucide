@@ -1,4 +1,4 @@
-'use-client';
+'use client';
 
 import { createElement, forwardRef } from 'react';
 import defaultAttributes from './defaultAttributes';
