@@ -27,7 +27,7 @@ This can be done by creating a custom module declaration file to override Lucide
 
 ```json [.vscode/settings.json]
 {
-  "typescript.preferences.autoImportFileExcludePatterns": [
+  "js/ts.preferences.autoImportFileExcludePatterns": [
     "@lucide/vue",
   ]
 }

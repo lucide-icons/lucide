@@ -22,7 +22,7 @@ import {
 
 ```json [.vscode/settings.json]
 {
-  "typescript.preferences.autoImportFileExcludePatterns": [
+  "js/ts.preferences.autoImportFileExcludePatterns": [
     "lucide-solid",
   ]
 }
