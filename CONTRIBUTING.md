@@ -25,7 +25,7 @@ Guidelines for pull requests:
 
 Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
 
-Read it here: [ICON_GUIDELINES](https://lucide.dev/docs/icon-design-guide).
+Read it here: [ICON_GUIDELINES](https://lucide.dev/contribute/icon-design-guide).
 
 #### Lucide Studio
 
