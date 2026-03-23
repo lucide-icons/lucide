@@ -23,22 +23,22 @@
   ],
   "author": "Eric Fennis",
   "amdName": "lucide-react-native",
-  "main": "dist/cjs/lucide-react-native.js",
-  "module": "dist/esm/lucide-react-native.js",
+  "main": "dist/cjs/lucide-react-native/src/lucide-react-native.js",
+  "module": "dist/esm/lucide-react-native/src/lucide-react-native.js",
   "typings": "dist/lucide-react-native.d.ts",
-  "react-native": "dist/esm/lucide-react-native.js",
+  "react-native": "dist/esm/lucide-react-native/src/lucide-react-native.js",
   "exports": {
     ".": {
       "types": "./dist/lucide-react-native.d.ts",
-      "import": "./dist/esm/lucide-react-native.js",
-      "browser": "./dist/esm/lucide-react-native.js",
-      "require": "./dist/cjs/lucide-react-native.js"
+      "import": "./dist/esm/lucide-react-native/src/lucide-react-native.js",
+      "browser": "./dist/esm/lucide-react-native/src/lucide-react-native.js",
+      "require": "./dist/cjs/lucide-react-native/src/lucide-react-native.js"
     },
     "./icons": {
       "types": "./dist/icons.d.ts",
-      "import": "./dist/esm/icons/index.js",
-      "browser": "./dist/esm/icons/index.js",
-      "require": "./dist/cjs/icons/index.js"
+      "import": "./dist/esm/lucide-react-native/src/icons/index.js",
+      "browser": "./dist/esm/lucide-react-native/src/icons/index.js",
+      "require": "./dist/cjs/lucide-react-native/src/icons/index.js"
     }
   },
   "sideEffects": false,
