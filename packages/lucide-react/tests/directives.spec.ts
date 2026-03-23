@@ -1,7 +1,9 @@
+// @ts-ignore
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
-const readFirstLine = (fileName) => readFileSync(`./src/${fileName}`, 'utf8').split('\n')[0];
+const readFirstLine = (fileName: string) =>
+  readFileSync(`./src/${fileName}`, 'utf8').split('\n')[0];
 
 describe('client directives', () => {
   it('uses a valid React client directive in Icon.ts', () => {
