@@ -74,6 +74,8 @@ jobs:
       - name: Debug
         run: |
           pwd
+          node -v
+          pnpm -v
           ls -la packages/angular
           ls -la packages/angular/dist || true
           cat packages/angular/dist/package.json || true
