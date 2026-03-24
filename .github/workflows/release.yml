@@ -49,18 +49,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package: [
-          'lucide',
-          'lucide-react',
-          'lucide-react-native',
-          'lucide-preact',
-          'lucide-solid',
-          'angular',
-          'astro',
-          'svelte',
-          'icons',
-          'vue',
-        ]
+        package:
+          [
+            'lucide',
+            'lucide-react',
+            'lucide-react-native',
+            'lucide-preact',
+            'lucide-solid',
+            'angular',
+            'astro',
+            'svelte',
+            'icons',
+            'vue',
+          ]
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
