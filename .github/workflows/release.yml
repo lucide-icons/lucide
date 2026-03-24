@@ -93,7 +93,7 @@ jobs:
         run: |
           node -e "const fs=require('fs'); const p='package.json'; const pkg=JSON.parse(fs.readFileSync(p,'utf8')); if(pkg.publishConfig){ delete pkg.publishConfig.directory; if(Object.keys(pkg.publishConfig).length===0) delete pkg.publishConfig; } fs.writeFileSync(p, JSON.stringify(pkg, null, 2)+'\n');"
           pnpm publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
-        working-directory: packages/${{ matrix.package }}/dist
+        working-directory: packages/angular/dist
         env:
           NPM_CONFIG_PROVENANCE: true
 
