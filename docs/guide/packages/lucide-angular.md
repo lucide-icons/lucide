@@ -1,5 +1,11 @@
 # Lucide Angular
 
+::: warning
+This documentation is for our legacy package for Angular.
+
+For our modern, standalone-first implementation, please refer to [`@lucide/angular`](./angular).
+:::
+
 Angular components and services for Lucide icons that integrate with Angular's dependency injection and component system. Provides both traditional module-based and modern standalone component approaches for maximum flexibility in Angular applications.
 
 **What you can accomplish:**
@@ -151,9 +157,9 @@ import { icons } from 'lucide-angular';
 LucideAngularModule.pick(icons)
 ```
 
-## With Lucide lab or custom icons
+## With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 They can be used in the same way as the official icons.
 
 ```js
@@ -167,3 +173,15 @@ import { coconut } from '@lucide/lab';
 })
 export class AppModule { }
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```html
+<lucide-icon name="check" aria-label="Task completed"></lucide-icon>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

@@ -137,9 +137,9 @@ const menuItems: MenuItem[] = [
 }
 ```
 
-## With Lucide lab or custom icons
+## With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
 They can be used by using the `Icon` component.
 All props of the regular Lucide icons can be passed to adjust the icon appearance.
@@ -192,3 +192,19 @@ import LucideIcon from './LucideIcon.astro';
 
 <LucideIcon name="Menu" />
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```jsx
+---
+import { Check } from '@lucide/astro';
+---
+
+<Check aria-label="Task completed" />
+```
+
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).
