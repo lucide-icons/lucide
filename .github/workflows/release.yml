@@ -83,7 +83,17 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
+        if: matrix.package != '@lucide/angular'
         run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
+        env:
+          NPM_CONFIG_PROVENANCE: true
+
+      - name: Publish
+        if: matrix.package == '@lucide/angular'
+        run: |
+          node -e "const fs=require('fs'); const p='package.json'; const pkg=JSON.parse(fs.readFileSync(p,'utf8')); if(pkg.publishConfig){ delete pkg.publishConfig.directory; if(Object.keys(pkg.publishConfig).length===0) delete pkg.publishConfig; } fs.writeFileSync(p, JSON.stringify(pkg, null, 2)+'\n');"
+          pnpm publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
+        working-directory: packages/${{ matrix.package }}/dist
         env:
           NPM_CONFIG_PROVENANCE: true
 
@@ -117,17 +127,7 @@ jobs:
         run: pnpm --filter lucide-static build
 
       - name: Publish
-        if: matrix.package != '@lucide/angular'
         run: pnpm --filter lucide-static publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
-        env:
-          NPM_CONFIG_PROVENANCE: true
-
-      - name: Publish
-        if: matrix.package == '@lucide/angular'
-        run: |
-          node -e "const fs=require('fs'); const p='package.json'; const pkg=JSON.parse(fs.readFileSync(p,'utf8')); if(pkg.publishConfig){ delete pkg.publishConfig.directory; if(Object.keys(pkg.publishConfig).length===0) delete pkg.publishConfig; } fs.writeFileSync(p, JSON.stringify(pkg, null, 2)+'\n');"
-          pnpm publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
-        working-directory: packages/${{ matrix.package }}/dist
         env:
           NPM_CONFIG_PROVENANCE: true
 
