@@ -97,7 +97,7 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} build
 
       - name: Debug
-        if: matrix.package == '@lucide-angular'
+        if: matrix.package == '@lucide/angular'
         run: |
           pwd
           node -v
