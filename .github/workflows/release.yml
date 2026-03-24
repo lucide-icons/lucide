@@ -83,7 +83,7 @@ jobs:
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
         env:
           NPM_CONFIG_PROVENANCE: true
 
