@@ -39,6 +39,7 @@ const configs = bundles
             }),
         format,
         preserveModules,
+        preserveModulesRoot: 'src',
         sourcemap: true,
         globals: {
           react: 'react',
