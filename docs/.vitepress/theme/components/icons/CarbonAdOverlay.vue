@@ -4,7 +4,7 @@ import { useSessionStorage } from '@vueuse/core';
 import IconButton from '../base/IconButton.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 import { x } from '../../../data/iconNodes';
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import { onMounted, ref } from 'vue';
 
 const { theme } = useData();

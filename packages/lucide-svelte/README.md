@@ -20,14 +20,14 @@ Lucide icon library for Svelte applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-svelte">Documentation</a>
+  <a href="https://lucide.dev/guide/svelte">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Svelte
 
-Implementation of the lucide icon library for svelte applications.
+Implementation of the Lucide icon library for svelte applications.
 
 ## Installation
 

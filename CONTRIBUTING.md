@@ -1,5 +1,4 @@
-
-# Contribution Guidelines
+# Contribution Guide
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
@@ -19,7 +18,9 @@ Guidelines for pull requests:
 - __Make sure the target of your pull request is the relevant branch__. Most of bug fixes or new feature should go to the `main` branch.
 - __Include only related work__. If your pull request has unrelated commits, it won't be accepted.
 
-### Icon Pull Requests
+### Contributing Icons
+
+We love contributions of new icons from the community! If you want to contribute new icons, please follow the guidelines below.
 
 #### Guidelines
 
@@ -35,15 +36,15 @@ For formatting and adjusting SVG icons, [@jguddas](https://github.com/jguddas) m
 
 Here you can find instructions on how to implement the guidelines with different vector graphics editors:
 
-##### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
+##### [Adobe Illustrator Guide](https://lucide.dev/contribute/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
+You can also [download an Adobe Illustrator template](https://lucide.dev/templates/illustrator_template.ai).
 
-##### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
+##### [Inkscape Guide](https://lucide.dev/contribute/inkscape-guide)
 
-##### [Figma Guide](https://lucide.dev/docs/figma-guide)
+##### [Figma Guide](https://lucide.dev/contribute/figma-guide)
 
-##### [Affinity Designer Guide](https://lucide.dev/guide/design/affinity-designer-guide)
+##### [Affinity Designer Guide](https://lucide.dev/contribute/affinity-designer-guide)
 
 #### Submitting Multiple Icons
 
@@ -191,7 +192,7 @@ Detailed documentation about: installation, guides, packages, design guides etc.
 
 ### Icons
 
-All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
+All the icons of Lucide in SVG format. These will be used as source for all the packages and other distributions for the Lucide icons.
 
 ### Packages
 
