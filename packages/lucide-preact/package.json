@@ -25,6 +25,13 @@
   "amdName": "lucide-preact",
   "main": "dist/cjs/lucide-preact.js",
   "module": "dist/esm/lucide-preact.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-preact.d.ts",
+      "import": "./dist/esm/lucide-preact.js",
+      "require": "./dist/cjs/lucide-preact.js"
+    }
+  },
   "typings": "dist/lucide-preact.d.ts",
   "files": [
     "dist"
