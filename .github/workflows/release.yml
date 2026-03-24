@@ -86,7 +86,7 @@ jobs:
         working-directory: packages/${{ matrix.package }}
 
       - name: Publish
-        run: pnpm publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
+        run: pnpm publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
         working-directory: packages/${{ matrix.package }}
         env:
           NPM_CONFIG_PROVENANCE: true
