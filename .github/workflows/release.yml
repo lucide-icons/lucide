@@ -56,11 +56,11 @@ jobs:
             'lucide-react-native',
             'lucide-preact',
             'lucide-solid',
-            '@lucide/angular',
-            '@lucide/astro',
-            '@lucide/icons',
-            '@lucide/svelte',
-            '@lucide/vue',
+            'angular',
+            'astro',
+            'icons',
+            'svelte',
+            'vue',
           ]
     steps:
       - uses: actions/checkout@v6
@@ -74,16 +74,20 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        run: pnpm --fail-if-no-match --filter ${{ matrix.package }} version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+        run: pnpm version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+        working-directory: packages/${{ matrix.package }}
 
       - name: Build
-        run: pnpm --filter ${{ matrix.package }} build
+        run: pnpm build
+        working-directory: packages/${{ matrix.package }}
 
       - name: Test
-        run: pnpm --filter ${{ matrix.package }} test
+        run: pnpm test
+        working-directory: packages/${{ matrix.package }}
 
       - name: Publish
-        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
+        run: pnpm publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
+        working-directory: packages/${{ matrix.package }}
         env:
           NPM_CONFIG_PROVENANCE: true
 
