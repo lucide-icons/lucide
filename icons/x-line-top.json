@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas"
+  ],
+  "tags": [
+    "line",
+    "top",
+    "arrow",
+    "navigation",
+    "up",
+    "pointer",
+    "direction",
+    "vector",
+    "symbol",
+    "cancel",
+    "close",
+    "delete",
+    "remove",
+    "times",
+    "clear",
+    "math",
+    "multiply",
+    "multiplication",
+    "mean",
+    "median",
+    "average",
+    "x̄"
+  ],
+  "categories": [
+    "notifications",
+    "math"
+  ]
+}
