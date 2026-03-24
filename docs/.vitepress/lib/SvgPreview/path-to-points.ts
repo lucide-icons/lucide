@@ -1,4 +1,4 @@
-import memoize from 'lodash/memoize';
+import { memoize } from 'lodash-es';
 import SVGPathCommander from 'svg-path-commander';
 import { Path } from './types';
 

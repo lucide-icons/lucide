@@ -12,6 +12,16 @@ on:
       version:
         description: Version
         required: true
+      tag:
+        required: true
+        description: NPM tag
+        default: 'latest'
+        type: choice
+        options:
+          - latest
+          - next
+          - beta
+          - alpha
 
 permissions:
   id-token: write # Required for OIDC
@@ -19,7 +29,7 @@ permissions:
 
 # This is added to make sure we wait until last release is done, this is needed for the font-build process
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: continuous-integration
 
 jobs:
   create-release:
@@ -43,7 +53,7 @@ jobs:
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
+        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> $GITHUB_OUTPUT
 
       - name: Log latest tag
         run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
@@ -85,3 +95,4 @@ jobs:
     secrets: inherit
     with:
       version: ${{ inputs.version }}
+      tag: ${{ inputs.tag }}

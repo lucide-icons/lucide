@@ -192,5 +192,6 @@ function handleCloseDrawer() {
 
 .input-wrapper {
   width: 100%;
+  /* view-transition-name: icons-search-box; */
 }
 </style>

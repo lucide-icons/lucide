@@ -20,14 +20,14 @@ Lucide icon library for Svelte 5 applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-svelte">Documentation</a>
+  <a href="https://lucide.dev/guide/svelte">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Svelte
 
-Implementation of the lucide icon library for svelte applications.
+Implementation of the Lucide icon library for svelte applications.
 
 ## Installation
 
@@ -46,6 +46,7 @@ yarn add @lucide/svelte
 ```sh
 bun add @lucide/svelte
 ```
+> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the [`lucide-svelte`](https://www.npmjs.com/package/lucide-svelte) package.
 
 ## Documentation
 

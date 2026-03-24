@@ -20,6 +20,12 @@ const iconsDir = path.join(repoRoot, 'icons');
 const outlinedDir = path.join(repoRoot, 'outlined');
 const targetDir = path.join(repoRoot, outputDir);
 
+if (saveCodePoints && !process.env.BLOB_READ_WRITE_TOKEN) {
+  throw new Error(
+    'Saving code points requires BLOB_READ_WRITE_TOKEN environment variable to be set.',
+  );
+}
+
 const iconsWithAliases = await getAllIconAliases(iconsDir);
 
 await outlineSVG({
@@ -46,7 +52,5 @@ await buildFont({
   startUnicode,
 });
 
-await fs.copyFile(
-  path.join(process.cwd(), 'codepoints.json'),
-  path.join(targetDir, 'codepoints.json'),
-);
+const codepointsContent = JSON.stringify(codePoints, null, 2);
+await fs.writeFile(path.join(targetDir, 'codepoints.json'), codepointsContent, 'utf-8');
