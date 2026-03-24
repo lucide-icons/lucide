@@ -77,3 +77,8 @@ jobs:
           ls -la packages/angular
           ls -la packages/angular/dist || true
           cat packages/angular/dist/package.json || true
+
+      - name: Publish
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
+        env:
+          NPM_CONFIG_PROVENANCE: true
