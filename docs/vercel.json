@@ -1,4 +1,6 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "fluid": true,
   "cleanUrls": true,
   "github": {
     "silent": true
@@ -34,6 +36,76 @@
       ],
       "destination": "/icons",
       "permanent": false
+    },
+    {
+      "source": "/guide/basics",
+      "destination": "/guide/react/basics",
+      "permanent": true
+    },
+    {
+      "source": "/guide/advanced/accessibility",
+      "destination": "/guide/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/guide/advanced",
+      "destination": "/guide/react/advanced",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide",
+      "destination": "/guide/lucide",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-react",
+      "destination": "/guide/react",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-vue-next",
+      "destination": "/guide/vue",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-vue",
+      "destination": "/guide/vue",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-svelte",
+      "destination": "/guide/svelte",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-solid",
+      "destination": "/guide/solid",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-angular",
+      "destination": "/guide/angular",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-preact",
+      "destination": "/guide/preact",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-astro",
+      "destination": "/guide/astro",
+      "permanent": true
+    },
+    {
+      "source": "/guide/packages/lucide-static",
+      "destination": "/guide/static",
+      "permanent": true
+    },
+    {
+      "source": "/contributing",
+      "destination": "/contribute",
+      "permanent": true
     }
   ],
   "headers": [

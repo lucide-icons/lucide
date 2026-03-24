@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { PathProps, Path } from './types';
 import getPaths, { assert } from './utils';
 import { GapViolationHighlight } from './GapViolationHighlight.tsx';
@@ -389,15 +389,18 @@ const Handles = ({
   </g>
 );
 
-const SvgPreview = React.forwardRef<
-  SVGSVGElement,
-  {
-    height?: number;
-    width?: number;
-    src: string | ReturnType<typeof getPaths>;
-    showGrid?: boolean;
-  } & React.SVGProps<SVGSVGElement>
->(({ src, children, height = 24, width = 24, showGrid = false, ...props }, ref) => {
+interface SvgPreviewProps extends React.SVGProps<SVGSVGElement> {
+  height?: number;
+  width?: number;
+  src: string | ReturnType<typeof getPaths>;
+  showGrid?: boolean;
+  children?: React.ReactNode;
+}
+
+const SvgPreview = (
+  { src, children, height = 24, width = 24, showGrid = false, ...props }: SvgPreviewProps,
+  ref,
+) => {
   const subGridSize =
     Math.max(height, width) % 3 === 0
       ? Math.max(height, width) > 24
@@ -456,20 +459,7 @@ const SvgPreview = React.forwardRef<
       />
       <ColoredPath
         paths={paths}
-        colors={[
-          '#1982c4',
-          '#4267AC',
-          '#6a4c93',
-          '#B55379',
-          '#FF595E',
-          '#FF7655',
-          '#ff924c',
-          '#FFAE43',
-          '#ffca3a',
-          '#C5CA30',
-          '#8ac926',
-          '#52A675',
-        ]}
+        colors={['#dfdfd6']}
       />
       <Radii
         paths={paths}
@@ -494,7 +484,7 @@ const SvgPreview = React.forwardRef<
       {children}
     </svg>
   );
-});
+};
 
 SvgPreview.displayName = 'SvgPreview';
 
