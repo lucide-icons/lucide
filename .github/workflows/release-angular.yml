@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   prepare:
-    if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
+    if: github.repository == 'karsa-mistmere/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
@@ -41,7 +41,7 @@ jobs:
           VERSION_REF: ${{ inputs.version || github.event.inputs.version || github.ref }}
 
   release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'karsa-mistmere/lucide'
     runs-on: ubuntu-latest
     needs: prepare
     permissions:
