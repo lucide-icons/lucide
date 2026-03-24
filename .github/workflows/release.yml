@@ -79,14 +79,6 @@ jobs:
       - name: Build
         run: pnpm --filter ${{ matrix.package }} build
 
-      - name: Debug angular
-        if: matrix.package == '@lucide/angular'
-        run: |
-          pwd
-          ls -la packages/angular
-          ls -la packages/angular/dist || true
-          cat packages/angular/dist/package.json || true
-
       - name: Test
         run: pnpm --filter ${{ matrix.package }} test
 

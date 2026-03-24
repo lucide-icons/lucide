@@ -1,0 +1,84 @@
+name: Release Angular
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version
+        required: true
+      tag:
+        required: true
+        description: NPM tag
+        default: 'latest'
+        type: choice
+        options:
+          - latest
+          - next
+          - beta
+          - alpha
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  prepare:
+    if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
+    runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.get_version.outputs.VERSION }}
+
+    steps:
+      - name: Get the version
+        id: get_version
+        run: |
+          echo $VERSION_REF
+          echo "VERSION=${VERSION_REF/refs\/tags\/\v}" >> $GITHUB_OUTPUT
+        env:
+          VERSION_REF: ${{ inputs.version || github.event.inputs.version || github.ref }}
+
+  release:
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    needs: prepare
+    permissions:
+      id-token: write # Required for OIDC
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          [
+            '@lucide/angular'
+          ]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Set new version
+        run: pnpm --fail-if-no-match --filter ${{ matrix.package }} version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+
+      - name: Build
+        run: pnpm --filter ${{ matrix.package }} build
+
+      - name: Debug
+        run: |
+          pwd
+          ls -la packages/angular
+          ls -la packages/angular/dist || true
+          cat packages/angular/dist/package.json || true
+
+      - name: Publish
+        run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
+        env:
+          NPM_CONFIG_PROVENANCE: true
