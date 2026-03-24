@@ -16,17 +16,6 @@ on:
         default: 'latest'
         type: string
 
-  workflow_dispatch:
-    inputs:
-      version:
-        required: true
-        description: Version (e.g. 1.2.3 or v1.2.3)
-        type: string
-      tag:
-        description: NPM tag
-        default: 'next'
-        type: string
-
 permissions:
   id-token: write # Required for OIDC
   contents: write
@@ -75,53 +64,33 @@ jobs:
           ]
     steps:
       - uses: actions/checkout@v6
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
       - uses: pnpm/action-setup@v4
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
       - uses: actions/setup-node@v6
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
 
       - name: Install dependencies
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
         run: pnpm --fail-if-no-match --filter ${{ matrix.package }} version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
         run: pnpm --filter ${{ matrix.package }} build
 
-      - name: Debug
-        if: matrix.package == '@lucide/angular'
-        run: |
-          pwd
-          node -v
-          pnpm -v
-          ls -la packages/angular
-          ls -la packages/angular/dist || true
-          cat packages/angular/dist/package.json || true
-
       - name: Test
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
         run: pnpm --filter ${{ matrix.package }} test
 
       - name: Publish
-        if: github.event_name != 'workflow_dispatch' || matrix.package == '@lucide/angular'
         run: pnpm --filter ${{ matrix.package }} publish --access public --no-git-checks --ignore-scripts --tag ${{ inputs.tag }}
         env:
           NPM_CONFIG_PROVENANCE: true
 
   lucide-static:
-    # revert to:
-    # if: github.repository == 'lucide-icons/lucide'
-    if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_dispatch'
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
-    needs: [prepare, lucide-font]
+    needs: [ prepare, lucide-font ]
     permissions:
       id-token: write # Required for OIDC
       contents: read
@@ -147,25 +116,13 @@ jobs:
       - name: Build
         run: pnpm --filter lucide-static build
 
-      - name: Debug
-        if: matrix.package == '@lucide-angular'
-        run: |
-          pwd
-          node -v
-          pnpm -v
-          ls -la packages/angular
-          ls -la packages/angular/dist || true
-          cat packages/angular/dist/package.json || true
-
       - name: Publish
         run: pnpm --filter lucide-static publish --no-git-checks --ignore-scripts --tag ${{ inputs.tag }} --access public
         env:
           NPM_CONFIG_PROVENANCE: true
 
   lucide-font:
-    # revert to:
-    # if: github.repository == 'lucide-icons/lucide'
-    if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_dispatch'
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: prepare
     steps:
@@ -191,11 +148,9 @@ jobs:
           path: lucide-font
 
   post-release:
-    # revert to:
-    # if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_call'
-    if: github.repository == 'lucide-icons/lucide' && github.event_name == 'push'
+    if: github.repository == 'lucide-icons/lucide' && github.event_name != 'workflow_call'
     runs-on: ubuntu-latest
-    needs: [prepare, lucide-font]
+    needs: [ prepare, lucide-font ]
     permissions:
       id-token: write # Required for OIDC
       contents: write
