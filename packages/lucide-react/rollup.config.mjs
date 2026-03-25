@@ -78,11 +78,11 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-              dir: outputDir,
-            }
+                dir: outputDir,
+              }
             : {
-              file: outputFile ?? `${outputDir}/${outputFileName}.js`,
-            }),
+                file: outputFile ?? `${outputDir}/${outputFileName}.js`,
+              }),
           paths,
           entryFileNames,
           format,
