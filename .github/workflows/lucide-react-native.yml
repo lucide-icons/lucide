@@ -1,6 +1,9 @@
 name: Lucide React Native checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/lucide-react-native/**

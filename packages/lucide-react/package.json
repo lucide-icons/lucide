@@ -24,9 +24,7 @@
   "author": "Eric Fennis",
   "amdName": "lucide-react",
   "main": "dist/cjs/lucide-react.js",
-  "main:umd": "dist/umd/lucide-react.js",
   "module": "dist/esm/lucide-react.js",
-  "unpkg": "dist/umd/lucide-react.min.js",
   "typings": "dist/lucide-react.d.ts",
   "sideEffects": false,
   "files": [
@@ -57,16 +55,15 @@
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.37",
-    "@vitejs/plugin-react": "^4.4.1",
+    "@vitejs/plugin-react": "^4.6.0",
     "jest-serializer-html": "^7.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rollup": "^4.53.3",
+    "rollup": "^4.59.0",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "typescript": "^5.8.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "vite": "^7.2.4"
   },
   "peerDependencies": {
     "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0"

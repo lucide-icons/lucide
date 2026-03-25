@@ -1,5 +1,6 @@
 ---
 title: Packages
+description: Discover the various packages available in the Lucide ecosystem.
 layout: page
 outline: 2
 outlineTitle: Packages

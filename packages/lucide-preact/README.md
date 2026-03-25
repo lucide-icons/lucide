@@ -20,14 +20,14 @@ Lucide icon library for Preact applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-preact">Documentation</a>
+  <a href="https://lucide.dev/guide/preact">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Preact
 
-Implementation of the lucide icon library for Preact applications.
+Implementation of the Lucide icon library for Preact applications.
 
 ## Installation
 
