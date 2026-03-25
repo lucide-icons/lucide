@@ -21,13 +21,19 @@ const bundles = [
     outputDir: 'dist/esm',
     preserveModules: true,
   },
-
   {
     format: 'esm',
     inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
     outputDir: 'dist/esm',
     external: [/src/],
     preserveModules: true,
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `./${modulePath}.js`;
+      }
+    },
   },
   {
     format: 'esm',
@@ -72,11 +78,11 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-                dir: outputDir,
-              }
+              dir: outputDir,
+            }
             : {
-                file: outputFile ?? `${outputDir}/${outputFileName}.js`,
-              }),
+              file: outputFile ?? `${outputDir}/${outputFileName}.js`,
+            }),
           paths,
           entryFileNames,
           format,
@@ -100,6 +106,11 @@ export default [
         file: `dynamicIconImports.d.ts`,
         format: 'es',
       },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamicIconImports.d.mts`,
+        format: 'es',
+      },
     ],
     plugins: [dts()],
   },
@@ -108,6 +119,11 @@ export default [
     output: [
       {
         file: `dynamic.d.ts`,
+        format: 'es',
+      },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamic.d.mts`,
         format: 'es',
       },
     ],

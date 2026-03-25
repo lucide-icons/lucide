@@ -31,10 +31,12 @@
     "dist",
     "dynamic.mjs",
     "dynamic.js.map",
+    "dynamic.d.mts",
     "dynamic.d.ts",
     "dynamicIconImports.mjs",
     "dynamicIconImports.js.map",
-    "dynamicIconImports.d.ts"
+    "dynamicIconImports.d.ts",
+    "dynamicIconImports.d.mts"
   ],
   "scripts": {
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm typecheck && pnpm build:bundles",
