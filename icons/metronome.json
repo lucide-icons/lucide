@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "edwloef"
+  ],
+  "tags": [
+    "metronome",
+    "tempo",
+    "rhythm",
+    "beat",
+    "bpm",
+    "music",
+    "audio",
+    "sound",
+    "practice",
+    "timing",
+    "timer",
+    "time",
+    "pulse",
+    "sync",
+    "cadence",
+    "control",
+    "playback",
+    "studio",
+    "tool"
+  ],
+  "categories": [
+    "multimedia",
+    "time"
+  ]
+}

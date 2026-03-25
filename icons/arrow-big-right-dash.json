@@ -3,7 +3,8 @@
   "contributors": [
     "danielbayley",
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
   "tags": [
     "next",
@@ -15,7 +16,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ]
 }
