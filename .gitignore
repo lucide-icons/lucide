@@ -27,8 +27,10 @@ packages/**/src/dynamicIconImports.ts
 packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
 packages/**/dynamicIconImports.d.ts
+packages/**/dynamicIconImports.d.mts
 packages/**/dynamicIconImports.js.map
 packages/**/dynamic.d.ts
+packages/**/dynamic.d.mts
 packages/**/dynamic.mjs.map
 packages/**/dynamic.mjs
 packages/**/LICENSE

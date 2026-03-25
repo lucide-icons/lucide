@@ -21,13 +21,19 @@ const bundles = [
     outputDir: 'dist/esm',
     preserveModules: true,
   },
-
   {
     format: 'esm',
     inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
     outputDir: 'dist/esm',
     external: [/src/],
     preserveModules: true,
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `./${modulePath}.js`;
+      }
+    },
   },
   {
     format: 'esm',
@@ -63,7 +69,7 @@ const configs = bundles
           ...plugins({ pkg, minify }),
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
-            include: ['src/DynamicIcon.ts', 'src/context.ts', 'src/Icon.ts'],
+            include: ['src/lucide-react.ts', 'src/DynamicIcon.ts', 'src/context.ts', 'src/Icon.ts'],
             suppressPreserveModulesWarning: true,
           }),
         ],
@@ -100,6 +106,11 @@ export default [
         file: `dynamicIconImports.d.ts`,
         format: 'es',
       },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamicIconImports.d.mts`,
+        format: 'es',
+      },
     ],
     plugins: [dts()],
   },
@@ -108,6 +119,11 @@ export default [
     output: [
       {
         file: `dynamic.d.ts`,
+        format: 'es',
+      },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamic.d.mts`,
         format: 'es',
       },
     ],
