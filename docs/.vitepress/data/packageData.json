@@ -105,6 +105,7 @@
     "order": 6,
     "icon": "angular",
     "docsAlias": "angular",
+    "packageDirname": "angular",
     "shields": [
       {
         "alt": "npm",
