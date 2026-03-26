@@ -9,6 +9,7 @@ import { resourcesSidebar } from './sidebar/resources';
 import getStructuredData from './getStructuredData';
 import { createGeneralOGImage, createIconOGImage } from './createOGImage';
 import llmstxt from 'vitepress-plugin-llms';
+import getHead from './getHead';
 
 const defaultSandpackCSS = await readFile(
   fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
@@ -76,121 +77,7 @@ export default defineConfig({
       }),
     ],
   },
-  head: [
-    [
-      'link',
-      {
-        rel: 'preconnect',
-        href: 'https://analytics.lucide.dev',
-      },
-    ],
-    [
-      'script',
-      {
-        src: 'https://analytics.lucide.dev/js/script.js',
-        'data-domain': 'lucide.dev',
-        defer: '',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:locale',
-        content: 'en_US',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:type',
-        content: 'website',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:site_name',
-        content: title,
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:title',
-        content: socialTitle,
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:url',
-        content: 'https://lucide.dev',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image',
-        content: 'https://lucide.dev/og.png',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image:width',
-        content: '1200',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image:height',
-        content: '630',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image:type',
-        content: 'image/png',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'twitter:card',
-        content: 'summary_large_image',
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'twitter:title',
-        content: socialTitle,
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'twitter:description',
-        content: description,
-      },
-    ],
-    [
-      'meta',
-      {
-        property: 'twitter:image',
-        content: 'https://lucide.dev/og.png',
-      },
-    ],
-  ],
+  head: getHead({ title, socialTitle, description }),
   async transformPageData(pageData) {
     pageData.frontmatter.head ??= [];
     if (
