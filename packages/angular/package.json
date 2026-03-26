@@ -23,7 +23,7 @@
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=lucide-angular.ts --useDefaultExports=0",
     "build:ng": "ng build --configuration production",
-    "test": "pnpm prebuild && ng test --no-watch",
+    "test": "pnpm build:icons && ng test --no-watch",
     "test:watch": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "e2e": "ng e2e",
