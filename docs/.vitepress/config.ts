@@ -221,6 +221,20 @@ export default defineConfig({
           [
             'meta',
             {
+              property: 'og:title',
+              content: pageData.title,
+            },
+          ],
+          [
+            'meta',
+            {
+              property: 'og:description',
+              content: pageData.description,
+            },
+          ],
+          [
+            'meta',
+            {
               property: 'og:image',
               content,
             },
