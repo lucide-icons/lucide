@@ -6,8 +6,24 @@ interface GetHeadOptions {
   description: string;
 }
 
+const brandColor = '#f56565'
+
 const getHead = ({ title, socialTitle, description }: GetHeadOptions): HeadConfig[] => [
   // Favicons and meta tags
+    [
+      'meta',
+      {
+        name: 'robots',
+        content: 'index,follow',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'theme-color',
+        content: brandColor,
+      },
+    ],
     [
       'link',
       {
@@ -20,7 +36,7 @@ const getHead = ({ title, socialTitle, description }: GetHeadOptions): HeadConfi
       'link',
       {
         rel: 'icon',
-        href: '/favicon-dark.svg',
+        href: '/favicon.svg',
         type: 'image/svg+xml',
       },
     ],
@@ -55,7 +71,7 @@ const getHead = ({ title, socialTitle, description }: GetHeadOptions): HeadConfi
       {
         rel: 'mask-icon',
         href: '/safari-pinned-tab.svg',
-        color: '#020308',
+        color: brandColor,
       },
     ],
     // Analytics
@@ -148,8 +164,22 @@ const getHead = ({ title, socialTitle, description }: GetHeadOptions): HeadConfi
     [
       'meta',
       {
+        property: 'og:image:alt',
+        content: 'Lucide icon library preview image',
+      },
+    ],
+    [
+      'meta',
+      {
         property: 'twitter:card',
         content: 'summary_large_image',
+      },
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:site',
+        content: '@lucide_icons',
       },
     ],
     [
