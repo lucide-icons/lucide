@@ -1,15 +1,15 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "csandman"
+    "ilyavred"
   ],
   "tags": [
-    "count",
-    "calculating machine"
+    "opacity",
+    "opaque",
+    "transparency"
   ],
   "categories": [
-    "math",
-    "devices"
+    "design",
+    "photography"
   ]
 }
