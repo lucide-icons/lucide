@@ -80,6 +80,8 @@ Thank you to all the people who contributed to Lucide!
 <img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" />
 </a>
 
+[//]: <> (Sponsors)
+
 ## Sponsors
 
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
@@ -88,7 +90,10 @@ Thank you to all the people who contributed to Lucide!
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="docs/public/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-[//]: <> (Open Collective backers)
+### Hero backers 🦸
+
+<a href="https://https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+
 ### Awesome backers 🍺
 
 <a href="https://github.com/pdfme/pdfme"><img src="docs/public/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
