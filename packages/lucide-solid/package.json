@@ -62,6 +62,8 @@
     "build:version": "node ./scripts/replaceVersion.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.tsx --exportFileName=index.ts",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
@@ -83,7 +85,6 @@
     "typescript": "^5.8.3",
     "vite": "^7.2.4",
     "vite-plugin-solid": "^2.11.6",
-    "vitest": "^4.0.12",
     "esbuild": "^0.25.0"
   },
   "peerDependencies": {
