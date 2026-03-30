@@ -126,7 +126,6 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-width="1"
      stroke-linecap="round"
      stroke-linejoin="round"
-     data-testid="smile-icon"
      class="lucide-icon lucide lucide-smile"
 >
   <circle cx="12"
