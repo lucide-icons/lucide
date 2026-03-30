@@ -20,7 +20,7 @@ import {
   testTubeDiagonal,
   sword,
 } from '../../../data/iconNodes';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { useEventListener } from '@vueuse/core';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 import { IconNode } from '../../types';

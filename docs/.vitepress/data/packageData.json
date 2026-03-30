@@ -18,6 +18,7 @@
   "lucide-react": {
     "order": 1,
     "icon": "react",
+    "docsAlias": "react",
     "shields": [
       {
         "alt": "npm",
@@ -31,25 +32,28 @@
       }
     ]
   },
-  "lucide-vue-next": {
+  "@lucide/vue": {
     "order": 2,
-    "icon": "vue-next",
+    "icon": "vue",
+    "docsAlias": "vue",
+    "packageDirname": "vue",
     "shields": [
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/v/lucide-vue-next",
-        "href": "https://www.npmjs.com/package/lucide-vue-next"
+        "src": "https://img.shields.io/npm/v/@lucide/vue",
+        "href": "https://www.npmjs.com/package/@lucide/vue"
       },
       {
         "alt": "npm",
-        "src": "https://img.shields.io/npm/dw/lucide-vue-next",
-        "href": "https://www.npmjs.com/package/lucide-vue-next"
+        "src": "https://img.shields.io/npm/dw/@lucide/vue",
+        "href": "https://www.npmjs.com/package/@lucide/vue"
       }
     ]
   },
   "lucide-svelte": {
     "order": 3,
     "icon": "svelte",
+    "docsAlias": "svelte",
     "shields": [
       {
         "alt": "npm",
@@ -66,6 +70,7 @@
   "lucide-solid": {
     "order": 4,
     "icon": "solid",
+    "docsAlias": "solid",
     "shields": [
       {
         "alt": "npm",
@@ -82,6 +87,7 @@
   "lucide-react-native": {
     "order": 5,
     "icon": "react-native",
+    "docsAlias": "react-native",
     "shields": [
       {
         "alt": "npm",
@@ -95,9 +101,29 @@
       }
     ]
   },
-  "lucide-angular": {
+  "@lucide/angular": {
     "order": 6,
     "icon": "angular",
+    "docsAlias": "angular",
+    "packageDirname": "angular",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/angular",
+        "href": "https://www.npmjs.com/package/@lucide/angular"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/angular",
+        "href": "https://www.npmjs.com/package/@lucide/angular"
+      }
+    ]
+  },
+  "lucide-angular": {
+    "order": 7,
+    "icon": "angular-old",
+    "description": "Our legacy Angular package with a module based API.",
+    "documentation": "https://v0.lucide.dev/guide/packages/lucide-angular",
     "shields": [
       {
         "alt": "npm",
@@ -112,8 +138,9 @@
     ]
   },
   "lucide-preact": {
-    "order": 7,
+    "order": 8,
     "icon": "preact",
+    "docsAlias": "preact",
     "shields": [
       {
         "alt": "npm",
@@ -128,9 +155,9 @@
     ]
   },
   "@lucide/astro": {
-    "docsAlias": "lucide-astro",
+    "docsAlias": "astro",
     "packageDirname": "astro",
-    "order": 8,
+    "order": 9,
     "icon": "astro",
     "iconDark": "astro-dark",
     "shields": [
@@ -147,8 +174,9 @@
     ]
   },
   "lucide-static": {
-    "order": 9,
+    "order": 10,
     "icon": "svg",
+    "docsAlias": "static",
     "shields": [
       {
         "alt": "npm",
@@ -159,6 +187,25 @@
         "alt": "npm",
         "src": "https://img.shields.io/npm/dw/lucide-static",
         "href": "https://www.npmjs.com/package/lucide-static"
+      }
+    ]
+  },
+  "@lucide/icons": {
+    "hide": true,
+    "docsAlias": "icons",
+    "packageDirname": "icons",
+    "order": 10,
+    "icon": "ts",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/@lucide/icons",
+        "href": "https://www.npmjs.com/package/@lucide/icons"
       }
     ]
   }

@@ -24,9 +24,14 @@
   "author": "Eric Fennis",
   "amdName": "lucide-preact",
   "main": "dist/cjs/lucide-preact.js",
-  "main:umd": "dist/umd/lucide-preact.js",
   "module": "dist/esm/lucide-preact.js",
-  "unpkg": "dist/umd/lucide-preact.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-preact.d.ts",
+      "import": "./dist/esm/lucide-preact.js",
+      "require": "./dist/cjs/lucide-preact.js"
+    }
+  },
   "typings": "dist/lucide-preact.d.ts",
   "files": [
     "dist"
@@ -39,6 +44,7 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
@@ -53,8 +59,7 @@
     "rollup": "^4.59.0",
     "rollup-plugin-dts": "^6.2.3",
     "typescript": "^5.8.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "vite": "^7.2.4"
   },
   "peerDependencies": {
     "preact": "^10.27.2"
