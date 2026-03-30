@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nathan-de-pachtere"
+  ],
+  "tags": [
+    "measure",
+    "scale",
+    "estimate",
+    "load",
+    "balance",
+    "size",
+    "measurement",
+    "quantity",
+    "mass"
+  ],
+  "categories": [
+    "math"
+  ]
+}

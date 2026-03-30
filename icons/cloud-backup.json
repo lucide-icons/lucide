@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "jguddas",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "servers",
+    "backup",
+    "timemachine",
+    "rotate",
+    "synchronize",
+    "synchronise",
+    "refresh",
+    "reconnect",
+    "transfer",
+    "data",
+    "security",
+    "upload",
+    "save",
+    "remote",
+    "safety"
+  ],
+  "categories": [
+    "arrows",
+    "files"
+  ]
+}

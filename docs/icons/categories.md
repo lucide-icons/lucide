@@ -1,4 +1,6 @@
 ---
+title: Categories
+description: Explore Lucide icons organized into various categories for easier browsing.
 layout: page
 outline: 2
 outlineTitle: Categories

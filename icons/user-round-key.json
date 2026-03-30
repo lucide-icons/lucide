@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "mittalyashu",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "passkey",
+    "password",
+    "login",
+    "authentication",
+    "authorization",
+    "roles",
+    "permissions",
+    "private",
+    "public",
+    "security",
+    "person",
+    "account",
+    "contact"
+  ],
+  "categories": [
+    "account"
+  ]
+}
