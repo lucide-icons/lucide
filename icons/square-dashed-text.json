@@ -22,7 +22,7 @@
     },
     {
       "name": "text-select",
-      "deprecate": true,
+      "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
     }
