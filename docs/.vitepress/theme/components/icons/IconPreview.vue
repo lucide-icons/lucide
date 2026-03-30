@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import type { IconEntity } from '../../types'
-import { computed, ref } from 'vue'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import type { IconEntity } from '../../types';
+import { computed, ref } from 'vue';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { useIconStyleContext } from '../../composables/useIconStyle';
 
 const props = defineProps<{
-  name: IconEntity['name']
-  iconNode: IconEntity['iconNode']
-  customizable?: boolean
-}>()
+  name: IconEntity['name'];
+  iconNode: IconEntity['iconNode'];
+  customizable?: boolean;
+}>();
 
-const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext()
-const previewIcon = ref()
+const { size, color, strokeWidth, absoluteStrokeWidth } = useIconStyleContext();
+const previewIcon = ref();
 
-const gridLines = computed(() => Array.from({ length:(size.value - 1) }))
+const gridLines = computed(() => Array.from({ length: size.value - 1 }));
 
 const iconComponent = computed(() => {
-  if (!props.name || !props.iconNode) return null
-  return createLucideIcon(props.name, props.iconNode)
-})
+  if (!props.name || !props.iconNode) return null;
+  return createLucideIcon(props.name, props.iconNode);
+});
 </script>
 
 <template>
@@ -28,12 +28,33 @@ const iconComponent = computed(() => {
       :is="iconComponent"
       :size="size"
       :color="color"
-      :strokeWidth="absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth"
+      :strokeWidth="absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth"
     />
-    <svg class="icon-grid" :viewBox="`0 0 ${size} ${size}`" fill="none" stroke-width="0.1" xmlns="http://www.w3.org/2000/svg">
-      <g :key="`grid-${i}`" v-for="(_, i) in gridLines">
-        <line :key="`horizontal-${i}`" :x1="0" :y1="i + 1" :x2="size" :y2="i + 1" />
-        <line :key="`vertical-${i}`" :x1="i + 1" y1="0" :x2="i + 1" :y2="size" />
+    <svg
+      class="icon-grid"
+      :viewBox="`0 0 ${size} ${size}`"
+      fill="none"
+      stroke-width="0.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        :key="`grid-${i}`"
+        v-for="(_, i) in gridLines"
+      >
+        <line
+          :key="`horizontal-${i}`"
+          :x1="0"
+          :y1="i + 1"
+          :x2="size"
+          :y2="i + 1"
+        />
+        <line
+          :key="`vertical-${i}`"
+          :x1="i + 1"
+          y1="0"
+          :x2="i + 1"
+          :y2="size"
+        />
       </g>
     </svg>
   </div>

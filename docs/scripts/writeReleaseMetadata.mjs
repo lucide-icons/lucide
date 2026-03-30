@@ -82,6 +82,10 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
     const version = tag.replace('v', '');
     const iconName = path.basename(file, '.svg');
 
+    if (iconName === 'chromium') {
+      console.log({ status, file, renamedFile });
+    }
+
     if (newReleaseMetaData[iconName] == null) newReleaseMetaData[iconName] = {};
 
     const releaseData = {
@@ -113,12 +117,14 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
         'changedRelease' in newReleaseMetaData[iconName] &&
         !allowedIconNameWithDoubleRelease.includes(iconName)
       ) {
-        throw new Error(`Icon '${iconName}' has already changedRelease set.`);
+        console.error(`Icon '${iconName}' has already changedRelease set.`);
+        return;
       }
 
       newReleaseMetaData[iconName].createdRelease = releaseData;
       newReleaseMetaData[iconName].changedRelease = releaseData;
     }
+
     if (status === 'M') {
       newReleaseMetaData[iconName].changedRelease = {
         version,
