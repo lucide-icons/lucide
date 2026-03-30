@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Turboman3000",
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "add",
+    "create",
+    "new",
+    "cloud",
+    "storage",
+    "computing"
+  ],
+  "categories": [
+    "development",
+    "devices"
+  ]
+}
