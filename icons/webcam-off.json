@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere",
+    "jordan-burnett"
+  ],
+  "tags": [
+    "camera",
+    "security"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "communication"
+  ]
+}
