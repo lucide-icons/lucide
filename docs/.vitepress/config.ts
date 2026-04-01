@@ -1,6 +1,19 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vitepress';
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import sidebar from './sidebar';
+import snackPlayer from './markdown/snackPlayer';
+import sandpackPlugin from './markdown/sandpack';
+import { readFile } from 'node:fs/promises';
+import { resourcesSidebar } from './sidebar/resources';
+import getStructuredData from './getStructuredData';
+import { createGeneralOGImage, createIconOGImage } from './createOGImage';
+import llmstxt from 'vitepress-plugin-llms';
+
+const defaultSandpackCSS = await readFile(
+  fileURLToPath(new URL('./theme/sandpack-default.css', import.meta.url)),
+  'utf-8',
+);
 
 const title = 'Lucide';
 const socialTitle = 'Lucide Icons';
@@ -14,6 +27,20 @@ export default defineConfig({
   cleanUrls: true,
   outDir: '.vercel/output/static',
   srcExclude: ['**/README.md'],
+  markdown: {
+    config(md) {
+      md.use(groupIconMdPlugin);
+      md.use(snackPlayer);
+      md.use(sandpackPlugin, {
+        defaultFiles: {
+          '/styles.css': {
+            code: defaultSandpackCSS,
+            hidden: true,
+          },
+        },
+      });
+    },
+  },
   vite: {
     resolve: {
       alias: [
@@ -35,6 +62,19 @@ export default defineConfig({
         },
       ],
     },
+    plugins: [
+      groupIconVitePlugin(),
+      llmstxt({
+        ignoreFiles: [
+          'code-of-conduct.md',
+          'index.md',
+          'packages.md',
+          'showcase.md',
+          'brand-logo-statement.md',
+          'icons/**', // Not working, need investigation
+        ],
+      }),
+    ],
   },
   head: [
     [
@@ -151,8 +191,82 @@ export default defineConfig({
       },
     ],
   ],
+  async transformPageData(pageData) {
+    pageData.frontmatter.head ??= [];
+    if (
+      pageData.relativePath.startsWith('icons/') &&
+      !pageData.relativePath.startsWith('icons/lab/') &&
+      pageData.params?.name
+    ) {
+      const iconName = pageData.params.name;
+      pageData.title = `${iconName} icon details`;
+
+      const taggedAs = pageData.params?.tags?.length
+        ? `Tagged as: ${pageData.params.tags.join(', ')}.`
+        : '';
+      const categorizedIn = pageData.params?.category?.length
+        ? `Categorized in: ${pageData.params.category.join(', ')}.`
+        : '';
+
+      pageData.description =
+        `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
+
+      const structuredData = await getStructuredData(iconName, pageData);
+
+      const ogPath = await createIconOGImage(iconName, pageData.params?.tags || []);
+
+      if (ogPath) {
+        const content = `https://lucide.dev${ogPath}`;
+        pageData.frontmatter.head.push(
+          [
+            'meta',
+            {
+              property: 'og:image',
+              content,
+            },
+          ],
+          [
+            'meta',
+            {
+              property: 'twitter:image',
+              content,
+            },
+          ],
+        );
+      }
+
+      pageData.frontmatter.head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(structuredData),
+      ]);
+    }
+
+    if (pageData.relativePath.startsWith('guide/')) {
+      const ogPath = await createGeneralOGImage(pageData);
+
+      if (ogPath) {
+        const content = `https://lucide.dev${ogPath}`;
+        pageData.frontmatter.head.push(
+          [
+            'meta',
+            {
+              property: 'og:image',
+              content,
+            },
+          ],
+          [
+            'meta',
+            {
+              property: 'twitter:image',
+              content,
+            },
+          ],
+        );
+      }
+    }
+  },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: {
       light: '/logo.light.svg',
       dark: '/logo.dark.svg',
@@ -160,9 +274,15 @@ export default defineConfig({
     nav: [
       { text: 'Icons', link: '/icons/' },
       { text: 'Guide', link: '/guide/' },
+      {
+        text: 'Resources',
+        items: [
+          ...resourcesSidebar[0].items,
+          { text: 'Design icons', link: '/contribute/icon-design-guide' },
+        ],
+      },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
-      { text: 'License', link: '/license' },
     ],
     sidebar,
     socialLinks: [

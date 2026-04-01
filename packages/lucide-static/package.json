@@ -44,7 +44,7 @@
     "@types/node": "^22.15.30",
     "prettier": "^2.3.2",
     "svgson": "^5.2.1",
-    "rollup": "^4.53.3",
+    "rollup": "^4.59.0",
     "rollup-plugin-dts": "^6.2.1"
   }
 }

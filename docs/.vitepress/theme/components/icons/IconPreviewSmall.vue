@@ -1,27 +1,32 @@
 <script setup lang="ts">
-import type { IconEntity } from '../../types'
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import type { IconEntity } from '../../types';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 
 const props = defineProps<{
-  name: IconEntity['name']
-  iconNode: IconEntity['iconNode']
-  customizable?: boolean
-}>()
+  name: IconEntity['name'];
+  iconNode: IconEntity['iconNode'];
+  customizable?: boolean;
+}>();
 
-const Icon = createLucideIcon(props.name, props.iconNode)
-
+const Icon = createLucideIcon(props.name, props.iconNode);
 </script>
 
 <template>
   <div class="icons-small-preview">
     <div class="icon-wrapper">
-      <Icon :size="48" class="lucide-icon"/>
+      <Icon
+        :size="48"
+        class="lucide-icon"
+      />
     </div>
     <div class="icon-wrapper">
-      <Icon :size="32" class="lucide-icon"/>
+      <Icon
+        :size="32"
+        class="lucide-icon"
+      />
     </div>
     <div class="icon-wrapper">
-      <Icon class="lucide-icon"/>
+      <Icon class="lucide-icon" />
     </div>
   </div>
 </template>
@@ -42,7 +47,10 @@ const Icon = createLucideIcon(props.name, props.iconNode)
   font-weight: 600;
   border-radius: 4px;
   white-space: nowrap;
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
   display: inline-flex;
