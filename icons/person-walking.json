@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mihirJWA"
+  ],
+  "tags": [
+    "people",
+    "human",
+    "accessibility",
+    "stick figure",
+    "navigation"
+  ],
+  "categories": [
+    "accessibility",
+    "people",
+    "navigation",
+    "travel"
+  ]
+}
