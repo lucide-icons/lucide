@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Barakudum"
+  ],
+  "tags": [
+    "cards",
+    "playing",
+    "playing cards",
+    "deck",
+    "stack",
+    "poker",
+    "casino",
+    "game",
+    "gambling"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
