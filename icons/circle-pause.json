@@ -13,6 +13,11 @@
     "multimedia"
   ],
   "aliases": [
-    "pause-circle"
+    {
+      "name": "pause-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

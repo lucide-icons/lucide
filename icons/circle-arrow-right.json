@@ -16,10 +16,14 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ],
   "aliases": [
-    "arrow-right-circle"
+    {
+      "name": "arrow-right-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

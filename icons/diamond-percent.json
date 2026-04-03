@@ -20,6 +20,11 @@
     "math"
   ],
   "aliases": [
-    "percent-diamond"
+    {
+      "name": "percent-diamond",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -23,6 +23,11 @@
     "tools"
   ],
   "aliases": [
-    "mouse-pointer-square-dashed"
+    {
+      "name": "mouse-pointer-square-dashed",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

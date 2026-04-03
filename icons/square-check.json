@@ -14,6 +14,11 @@
     "notifications"
   ],
   "aliases": [
-    "check-square-2"
+    {
+      "name": "check-square-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

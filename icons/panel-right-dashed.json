@@ -2,19 +2,30 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "ericfennis"
+    "ericfennis",
+    "irvineacosta"
   ],
   "tags": [
     "sidebar",
     "secondary",
     "drawer",
     "show",
-    "reveal"
+    "reveal",
+    "padding",
+    "margin",
+    "guide",
+    "layout",
+    "bleed"
   ],
   "categories": [
     "layout"
   ],
   "aliases": [
-    "panel-right-inactive"
+    {
+      "name": "panel-right-inactive",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

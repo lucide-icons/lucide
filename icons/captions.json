@@ -16,6 +16,11 @@
     "multimedia"
   ],
   "aliases": [
-    "subtitles"
+    {
+      "name": "subtitles",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
