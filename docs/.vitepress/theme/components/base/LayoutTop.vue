@@ -1,15 +1,22 @@
 <script setup lang="ts">
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
+import Icon from '@lucide/vue/src/Icon';
+import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
 </script>
 
 <template>
   <div class="top-notification">
     <p>
+      <Icon
+        :iconNode="RocketDuotoneIcon"
+        size="18"
+        class="rocket-icon"
+      />
       <VPLink
         class="notification-link"
         href="/guide/version-1"
         >Lucide v1 is out!</VPLink
-      >🚀<br />
+      ><br class="hide" />
       You're looking at the site for v1, for v0 go to
       <VPLink
         class="notification-link"
@@ -25,9 +32,22 @@ import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue';
   --vp-layout-top-height: 64px;
 }
 
+br.hide {
+  display: none;
+}
+
+.rocket-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 @media (min-width: 640px) {
   :root {
     --vp-layout-top-height: 32px;
+  }
+  br.hide {
+    display: block;
   }
 }
 </style>
