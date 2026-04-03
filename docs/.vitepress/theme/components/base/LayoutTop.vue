@@ -16,7 +16,7 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
         class="notification-link"
         href="/guide/version-1"
         >Lucide v1 is out!</VPLink
-      ><br class="hide" />
+      >
       You're looking at the site for v1, for v0 go to
       <VPLink
         class="notification-link"
@@ -27,46 +27,21 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
   </div>
 </template>
 
-<style>
-:root {
-  --vp-layout-top-height: 64px;
-}
-
-br.hide {
-  display: none;
-}
-
-.rocket-icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 4px;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-layout-top-height: 32px;
-  }
-  br.hide {
-    display: block;
-  }
-}
-</style>
-
 <style scoped>
 .top-notification {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
   display: flex;
-  height: var(--vp-layout-top-height);
   justify-content: center;
   align-items: center;
   background: var(--vp-c-brand-dark);
   color: var(--vp-c-bg-alt-down);
   font-size: 14px;
-  padding: 0 16px;
+  padding: 4px 16px;
+  text-wrap: balance;
 }
 
 .notification-link {
@@ -78,9 +53,9 @@ br.hide {
   display: none !important;
 }
 
-@media (min-width: 640px) {
-  .top-notification br {
-    display: none;
-  }
+.rocket-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
 }
 </style>
