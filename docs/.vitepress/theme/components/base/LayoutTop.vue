@@ -27,6 +27,14 @@ import RocketDuotoneIcon from '../home/RocketDuotoneIcon.ts';
   </div>
 </template>
 
+<style>
+@media (min-width: 960px) {
+  :root {
+    --vp-layout-top-height: 32px;
+  }
+}
+</style>
+
 <style scoped>
 .top-notification {
   position: sticky;
