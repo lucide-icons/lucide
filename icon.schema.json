@@ -56,7 +56,6 @@
           "account",
           "animals",
           "arrows",
-          "brands",
           "buildings",
           "charts",
           "communication",
@@ -134,7 +133,7 @@
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.brand"]
+      "enum": ["icon.renamed"]
     },
     "aliasDeprecationReasons": {
       "type": "string",
