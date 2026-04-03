@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Barakudum"
+    "Barakudum",
+    "jamiemlaw",
+    "karsa-mistmere"
   ],
   "tags": [
     "card",
