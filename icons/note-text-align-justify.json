@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "aniketh703"
+  ],
+  "tags": [
+    "note",
+    "text",
+    "align",
+    "justify",
+    "editor",
+    "document",
+    "formatting",
+    "paragraph"
+  ],
+  "categories": [
+    "text",
+    "editor",
+    "documents"
+  ]
+}
