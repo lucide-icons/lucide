@@ -1,15 +1,23 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import { useSessionStorage } from '@vueuse/core';
+import { onMounted, ref, computed } from 'vue';
 import IconButton from '../base/IconButton.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
-import { x } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
-import { onMounted, ref } from 'vue';
+import { x } from '../../../data/iconNodes';
 
 const { theme } = useData();
 const showAd = useSessionStorage('show-carbon-ads', true);
 const carbonLoaded = ref(true);
+
+const isHidden = computed(() => {
+  return showAd.value === false || String(showAd.value) === 'false' || !carbonLoaded.value;
+});
+
+const closeAd = () => {
+  showAd.value = false;
+};
 
 defineProps<{
   drawerOpen: boolean;
@@ -28,13 +36,13 @@ onMounted(() => {
   <div
     :class="{
       'drawer-open': drawerOpen,
-      'hide-ad': !(showAd && carbonLoaded),
+      'hide-ad': isHidden,
     }"
     class="floating-ad"
     v-if="theme.carbonAds"
   >
     <IconButton
-      @click="showAd = false"
+      @click="closeAd"
       class="hide-button"
     >
       <Icon
@@ -66,6 +74,7 @@ onMounted(() => {
 .floating-ad.hide-ad {
   transform: translateX(224px);
   opacity: 0;
+  pointer-events: none;
 }
 
 .floating-ad.drawer-open.hide-ad {
