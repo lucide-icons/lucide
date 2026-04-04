@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "swastik7805",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "unlike",
+    "unfavorite",
+    "remove",
+    "reject",
+    "dismiss",
+    "ui & ux",
+    "delete",
+    "clear"
+  ],
+  "categories": [
+    "social",
+    "multimedia",
+    "design",
+    "shapes"
+  ]
+}
