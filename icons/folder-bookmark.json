@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "swastik7805",
+    "Spleefies",
+    "ramazansancar"
+  ],
+  "tags": [
+    "directory",
+    "root",
+    "project",
+    "favorite",
+    "save",
+    "read later"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}
