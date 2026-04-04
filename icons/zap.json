@@ -2,14 +2,17 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "swastik7805"
   ],
   "tags": [
     "flash",
     "camera",
     "lightning",
     "electricity",
-    "energy"
+    "energy",
+    "power",
+    "quick"
   ],
   "categories": [
     "connectivity",
