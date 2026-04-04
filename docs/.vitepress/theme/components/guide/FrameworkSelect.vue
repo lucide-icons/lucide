@@ -107,7 +107,6 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 10px;
   margin-top: -10px;
-  backdrop-filter: blur(1px);
 }
 
 label {
