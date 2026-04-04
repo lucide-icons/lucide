@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "swastik7805"
+  ],
+  "tags": [
+    "dome",
+    "building",
+    "monument",
+    "structure",
+    "architecture"
+  ],
+  "categories": [
+    "buildings",
+    "social",
+    "travel"
+  ]
+}
