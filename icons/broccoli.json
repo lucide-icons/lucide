@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "swastik7805",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "vegetable",
+    "food",
+    "healthy",
+    "vegan",
+    "vegetarian",
+    "nutrition",
+    "diet",
+    "plant",
+    "green",
+    "produce"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
