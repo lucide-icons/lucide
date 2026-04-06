@@ -68,6 +68,7 @@ onMounted(() => {
 .floating-ad.hide-ad {
   transform: translateX(224px);
   opacity: 0;
+  pointer-events: none;
 }
 
 .floating-ad.drawer-open.hide-ad {
