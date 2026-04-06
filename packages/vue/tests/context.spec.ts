@@ -59,7 +59,7 @@ describe('Using lucide icon context', () => {
 
     expect(IconComponent).toHaveAttribute(
       'class',
-      'lucide provider-class lucide-house-icon lucide-house icon-class',
+      'lucide lucide-house-icon lucide-home provider-class icon-class',
     );
   });
 });

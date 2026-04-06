@@ -47,7 +47,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
      stroke-linecap="round"
      stroke-linejoin="round"
      aria-hidden="true"
-     class="lucide lucide-grid-3x3"
+     class="lucide lucide-grid-3x3 lucide-grid lucide-grid-3-x-3"
 >
   <rect width="18"
         height="18"
@@ -96,7 +96,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-linecap="round"
      stroke-linejoin="round"
      aria-hidden="true"
-     class="lucide lucide-grid-3x3"
+     class="lucide lucide-grid-3x3 lucide-grid lucide-grid-3-x-3"
 >
   <rect width="18"
         height="18"
@@ -165,7 +165,7 @@ exports[`Using lucide icon components > should render a component 1`] = `
      stroke-linecap="round"
      stroke-linejoin="round"
      aria-hidden="true"
-     class="lucide lucide-grid-3x3"
+     class="lucide lucide-grid-3x3 lucide-grid lucide-grid-3-x-3"
 >
   <rect width="18"
         height="18"
@@ -196,7 +196,7 @@ exports[`Using lucide icon components > should render the icon with default attr
      stroke-linecap="round"
      stroke-linejoin="round"
      aria-hidden="true"
-     class="lucide lucide-grid-3x3"
+     class="lucide lucide-grid-3x3 lucide-grid lucide-grid-3-x-3"
 >
   <rect width="18"
         height="18"

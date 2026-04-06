@@ -12,6 +12,7 @@ import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, Nullable } from './types';
 import defaultAttributes from './default-attributes';
 import { lucideIconTemplate } from './lucide-icon-template';
+import buildLucideIconNode from './utils/buildLucideIconNode';
 
 function transformNumericStringInput(
   value: Nullable<string | number>,
@@ -98,18 +99,27 @@ export abstract class LucideIconBase {
       const icon = this.icon();
       if (icon) {
         const absoluteStrokeWidth = this.absoluteStrokeWidth();
-        const { name, node, aliases = [] } = icon;
-        const classes = [name, ...aliases].map((item) => `lucide-${item}`);
+        const [, iconAttributes, iconNode] = buildLucideIconNode(icon as any, {
+          absoluteStrokeWidth,
+          hasA11yProp: this.title() != null,
+        });
+
+        const classes =
+          typeof iconAttributes['class'] === 'string'
+            ? iconAttributes['class']
+                .split(' ')
+                .filter((cssClass) => cssClass && cssClass !== 'lucide')
+            : [];
+
         for (const cssClass of classes) {
           this.renderer.addClass(this.elRef.nativeElement, cssClass);
         }
+
         const contentRef = this.contentRef();
         const refChild = contentRef.nativeElement;
-        const elements = node.map(([name, attrs]) => {
+        const elements = (iconNode ?? []).map(([name, attrs]) => {
           const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
-          if (absoluteStrokeWidth) {
-            this.renderer.setAttribute(element, 'vector-effect', 'non-scaling-stroke');
-          }
+
           Object.entries(attrs).forEach(([name, value]) =>
             this.renderer.setAttribute(
               element,

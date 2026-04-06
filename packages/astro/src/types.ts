@@ -9,6 +9,8 @@ export interface IconProps extends SVGAttributes {
   'stroke-width'?: number | string;
   absoluteStrokeWidth?: boolean;
   class?: string;
+  name?: string;
+  aliases?: string[];
   iconNode?: IconNode;
   title?: string;
 }
@@ -16,6 +18,12 @@ export interface IconProps extends SVGAttributes {
 export type SVGAttributes = HTMLAttributes<'svg'>;
 
 export type IconNode = IconNodeChild[];
+
+export interface LucideIconData {
+  name: string;
+  node: IconNode;
+  aliases?: string[];
+}
 
 type IconNodeChild = [elementName: SVGElements, attrs: SVGAttributes];
 

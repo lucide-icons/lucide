@@ -1,7 +1,13 @@
+export { default as buildLucideDataUri } from './build/buildLucideDataUri';
+export { default as buildLucideIconElement } from './build/buildLucideIconElement';
+export { default as buildLucideIconNode } from './build/buildLucideIconNode';
+export { default as buildLucideSvg } from './build/buildLucideSvg';
+export type { LucideBuildParams, LucideIconData, LucideIconNode, SVGProps } from './build/types';
 export * from './utils/hasA11yProp';
 export * from './utils/isEmptyString';
 export * from './utils/mergeClasses';
 export * from './utils/toCamelCase';
 export * from './utils/toKebabCase';
+export * from './utils/toLucideIconData';
 export * from './utils/toPascalCase';
 export * from './utility-types';

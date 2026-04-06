@@ -1,7 +1,6 @@
-import createElement from './createElement';
-import defaultAttributes from './defaultAttributes';
-import { Icons, SVGProps } from './types';
 import { hasA11yProp, mergeClasses, toPascalCase } from '@lucide/shared';
+import createElement from './createElement';
+import { Icons, SVGProps } from './types';
 
 export type CustomAttrs = { [attr: string]: any };
 
@@ -63,15 +62,15 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
   }
 
   const elementAttrs = getAttrs(element);
-
   const ariaProps = hasA11yProp(elementAttrs) ? {} : { 'aria-hidden': 'true' };
+  const { class: _attrsClassName, ...attrsWithoutClass } = attrs;
+  const { class: _elementClassName, ...elementAttrsWithoutClass } = elementAttrs;
 
   const iconAttrs = {
-    ...defaultAttributes,
     'data-lucide': iconName,
     ...ariaProps,
-    ...attrs,
-    ...elementAttrs,
+    ...attrsWithoutClass,
+    ...elementAttrsWithoutClass,
   } satisfies SVGProps;
 
   const elementClassNames = getClassNames(elementAttrs);

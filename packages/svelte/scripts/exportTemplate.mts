@@ -2,26 +2,20 @@ import base64SVG from '@lucide/build-icons/utils/base64SVG';
 import { getJSBanner } from './license.mts';
 import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default defineExportTemplate(async ({
-  iconName,
-  children,
-  componentName,
-  getSvg,
-  deprecated,
-  deprecationReason,
-}) => {
-  const svgContents = await getSvg();
-  const svgBase64 = base64SVG(svgContents);
+export default defineExportTemplate(
+  async ({ iconName, iconData, componentName, getSvg, deprecated, deprecationReason }) => {
+    const svgContents = await getSvg();
+    const svgBase64 = base64SVG(svgContents);
 
-  return `\
+    return `\
 <script lang="ts">
 ${getJSBanner()}
 import Icon from '../Icon.svelte';
-import type { IconNode, IconProps } from '../types.js';
+import type { IconProps, LucideIconData } from '../types.js';
 
 let props: IconProps = $props();
 
-const iconNode: IconNode = ${JSON.stringify(children)};
+const iconData: LucideIconData = ${JSON.stringify(iconData)};
 
 /**
  * @component @name ${componentName}
@@ -36,6 +30,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  */
 </script>
 
-<Icon name="${iconName}" {...props} iconNode={iconNode} />
+<Icon name={iconData.name} aliases={iconData.aliases} {...props} iconNode={iconData.node} />
 `;
-});
+  },
+);

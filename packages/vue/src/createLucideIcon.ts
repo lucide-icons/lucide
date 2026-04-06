@@ -1,23 +1,23 @@
 import { h } from 'vue';
-import { IconNode, LucideIcon } from './types';
+import { LucideIcon, LucideIconData } from './types';
 import Icon from './Icon';
 
 /**
  * Create a Lucide icon component
- * @param {string} iconName
- * @param {array} iconNode
+ * @param {object} iconData
  * @returns {FunctionalComponent} LucideIcon
  */
 const createLucideIcon =
-  (iconName: string, iconNode: IconNode): LucideIcon =>
+  (iconData: LucideIconData): LucideIcon =>
   (props, { slots, attrs }) =>
     h(
       Icon,
       {
         ...attrs,
         ...props,
-        iconNode,
-        name: iconName,
+        iconNode: iconData.node,
+        name: iconData.name,
+        aliases: iconData.aliases,
       },
       slots,
     );

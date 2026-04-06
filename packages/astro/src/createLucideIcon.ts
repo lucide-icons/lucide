@@ -1,11 +1,9 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/render/astro/factory.js';
-import type { IconNode } from './types';
+import type { LucideIconData } from './types';
 import { render, renderSlot, createComponent, renderComponent } from 'astro/compiler-runtime';
 import Icon from './Icon.astro';
-import { mergeClasses } from './utils/mergeClasses';
-import { toKebabCase } from './utils/toKebabCase';
 
-export default (iconName: string, iconNode: IconNode): AstroComponentFactory => {
+export default (iconData: LucideIconData): AstroComponentFactory => {
   const Component = createComponent(
     ($$result, $$props: Record<string, any>, $$slots) => {
       const { class: className, ...restProps } = $$props;
@@ -14,11 +12,10 @@ export default (iconName: string, iconNode: IconNode): AstroComponentFactory => 
         'Icon',
         Icon,
         {
-          class: mergeClasses(
-            Boolean(iconName) && `lucide-${toKebabCase(iconName)}`,
-            Boolean(className) && className,
-          ),
-          iconNode,
+          class: className,
+          name: iconData.name,
+          aliases: iconData.aliases,
+          iconNode: iconData.node,
           ...restProps,
         },
         { default: () => render`${renderSlot($$result, $$slots['default'])}` },

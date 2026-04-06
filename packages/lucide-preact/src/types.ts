@@ -1,6 +1,20 @@
 import { type FunctionComponent, type JSX } from 'preact';
+import type {
+  LucideIconData as SharedLucideIconData,
+  LucideIconNode as SharedLucideIconNode,
+} from '@lucide/shared';
 
-export type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][];
+export type LucideIconNode = SharedLucideIconNode[];
+
+export type LucideIconData = SharedLucideIconData & {
+  name: string;
+  node: LucideIconNode;
+};
+
+/**
+ * @deprecated Use LucideIconNode instead.
+ */
+export type IconNode = LucideIconNode;
 
 export interface LucideProps extends Partial<Omit<JSX.SVGAttributes, 'ref' | 'size'>> {
   color?: string;
