@@ -12,6 +12,10 @@ const showAd = useSessionStorage('show-carbon-ads', true);
 const carbonLoaded = ref(true);
 const shouldHideAd = computed(() => !showAd.value || !carbonLoaded.value);
 
+function hideAd() {
+  showAd.value = false;
+}
+
 defineProps<{
   drawerOpen: boolean;
 }>();
@@ -35,7 +39,7 @@ onMounted(() => {
     v-if="theme.carbonAds"
   >
     <IconButton
-      @click="showAd = false"
+      @click="hideAd"
       class="hide-button"
     >
       <Icon
