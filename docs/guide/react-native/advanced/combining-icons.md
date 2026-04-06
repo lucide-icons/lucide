@@ -6,7 +6,7 @@ description: Learn how to combine multiple icons into a single icon nested SVG e
 # Combining icons
 
 You can combine multiple icons into a single icon by nesting SVG elements.
-This is useful if you want to create custom icons icons by combining existing ones.
+This is useful if you want to create custom icons by combining existing ones.
 
 ```SnackPlayer name=State&ext=js&dependencies=react-native-svg,lucide-react-native
 import React, {useState, useEffect} from 'react';
