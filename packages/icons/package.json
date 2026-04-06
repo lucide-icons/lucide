@@ -64,6 +64,7 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "^1.0.0",
     "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/shared": "workspace:*",
     "@rollup/plugin-replace": "^6.0.2",
     "@testing-library/jest-dom": "^6.6.3",
     "jest-serializer-html": "^7.1.0",

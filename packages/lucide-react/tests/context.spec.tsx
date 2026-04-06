@@ -94,6 +94,9 @@ describe('Using LucideProvider', () => {
 
     const IconComponent = container.firstElementChild;
 
-    expect(IconComponent).toHaveAttribute('class', 'lucide provider-class lucide-house icon-class');
+    expect(IconComponent).toHaveAttribute(
+      'class',
+      'lucide lucide-house lucide-home provider-class icon-class',
+    );
   });
 });

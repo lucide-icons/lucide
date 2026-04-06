@@ -89,4 +89,30 @@ describe('buildLucideIconNode', () => {
 
     expect(HouseSVG[1]['class']).toBe('lucide lucide-house lucide-home icon');
   });
+
+  it('should support className with multiple classes', () => {
+    const HouseSVG = buildLucideIconNode(House, {
+      className: ' icon   custom lucide-house ',
+    });
+
+    expect(HouseSVG[1]['class']).toBe('lucide lucide-house lucide-home icon custom');
+  });
+
+  it('should not include default classes when includeDefaultClasses is false', () => {
+    const HouseSVG = buildLucideIconNode(House, { includeDefaultClasses: false });
+
+    expect(HouseSVG[1]['class']).toBeUndefined();
+  });
+
+  it('should add aria-hidden when hasA11yProp is false', () => {
+    const HouseSVG = buildLucideIconNode(House, { hasA11yProp: false });
+
+    expect(HouseSVG[1]['aria-hidden']).toBe('true');
+  });
+
+  it('should not add aria-hidden when hasA11yProp is true', () => {
+    const HouseSVG = buildLucideIconNode(House, { hasA11yProp: true });
+
+    expect(HouseSVG[1]['aria-hidden']).toBeUndefined();
+  });
 });

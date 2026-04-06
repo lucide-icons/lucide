@@ -1,5 +1,5 @@
 <script lang="ts">
-  import defaultAttributes from './defaultAttributes.js';
+  import buildLucideIconNode from './utils/buildLucideIconNode.js';
   import type { IconProps } from './types.js';
   import { hasA11yProp } from './utils/hasA11yProp.js';
   import { getLucideContext } from './context.js';
@@ -8,6 +8,7 @@
 
   const {
     name,
+    aliases,
     color = globalProps.color ?? 'currentColor',
     size = globalProps.size ?? 24,
     strokeWidth = globalProps.strokeWidth ?? 2,
@@ -20,19 +21,51 @@
   const calculatedStrokeWidth = $derived(
     absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
   );
+
+  const iconClassName = $derived(
+    ['lucide-icon', globalProps.class, props.class]
+      .filter(
+        (className): className is string =>
+          typeof className === 'string' && className.trim() !== '',
+      )
+      .join(' '),
+  );
+
+  const hasAccessibleProp = $derived(
+    Boolean(children) || hasA11yProp(props as Record<string, any>),
+  );
+
+  const [, builtSvgAttributes, builtIconNode = []] = $derived(
+    buildLucideIconNode(
+      {
+        name,
+        aliases,
+        size: 24,
+        node: iconNode,
+      },
+      {
+        size,
+        color,
+        strokeWidth: calculatedStrokeWidth,
+        className: iconClassName,
+        hasA11yProp: hasAccessibleProp,
+      },
+    ),
+  );
+
+  const iconAttributes = $derived({
+    ...builtSvgAttributes,
+    ...props,
+    width: builtSvgAttributes.width,
+    height: builtSvgAttributes.height,
+    stroke: builtSvgAttributes.stroke,
+    'stroke-width': builtSvgAttributes['stroke-width'],
+    class: builtSvgAttributes.class,
+  });
 </script>
 
-<svg
-  {...defaultAttributes}
-  {...!children && !hasA11yProp(props) && { 'aria-hidden': 'true' }}
-  {...props}
-  width={size}
-  height={size}
-  stroke={color}
-  stroke-width={calculatedStrokeWidth}
-  class={['lucide-icon lucide', globalProps.class, name && `lucide-${name}`, props.class]}
->
-  {#each iconNode as [tag, attrs]}
+<svg {...iconAttributes}>
+  {#each builtIconNode as [tag, attrs]}
     <svelte:element
       this={tag as string}
       {...attrs}

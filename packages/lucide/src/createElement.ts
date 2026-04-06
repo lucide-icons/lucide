@@ -1,32 +1,5 @@
-import defaultAttributes from './defaultAttributes';
+import { buildLucideIconElement } from '@lucide/shared';
 import { IconNode, SVGProps } from './types';
-
-type CreateSVGElementParams = [tag: string, attrs: SVGProps, children?: IconNode];
-
-/**
- * Creates a new SVGElement
- * @param {string} tag - Tag name of the element
- * @param {object} attrs - Attributes of the element
- * @param {array} children - Children of the element
- * @returns {SVGElement}
- */
-const createSVGElement = ([tag, attrs, children]: CreateSVGElementParams) => {
-  const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
-
-  Object.keys(attrs).forEach((name) => {
-    element.setAttribute(name, String(attrs[name]));
-  });
-
-  if (children?.length) {
-    children.forEach((child) => {
-      const childElement = createSVGElement(child);
-
-      element.appendChild(childElement);
-    });
-  }
-
-  return element;
-};
 
 /**
  * Creates a new HTMLElement from icon node
@@ -35,13 +8,17 @@ const createSVGElement = ([tag, attrs, children]: CreateSVGElementParams) => {
  * @returns {HTMLElement}
  */
 const createElement = (iconNode: IconNode, customAttrs: SVGProps = {}) => {
-  const tag = 'svg';
-  const attrs = {
-    ...defaultAttributes,
-    ...customAttrs,
-  };
-
-  return createSVGElement([tag, attrs, iconNode]);
+  return buildLucideIconElement(
+    document,
+    {
+      size: 24,
+      node: iconNode,
+    },
+    {
+      includeDefaultClasses: false,
+      attributes: customAttrs,
+    },
+  ) as SVGElement;
 };
 
 export default createElement;

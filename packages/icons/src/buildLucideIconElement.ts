@@ -1,20 +1,5 @@
-import { LucideBuildParams, LucideIconData, LucideIconNode } from './types';
-import buildLucideIconNode from './buildLucideIconNode';
-
-const buildDomElement = (
-  document: Document,
-  [tagName, attributes, children = []]: LucideIconNode,
-): Element => {
-  const element = document.createElementNS('http://www.w3.org/2000/svg', tagName);
-  for (const [attrName, value] of Object.entries(attributes)) {
-    element.setAttribute(attrName, value);
-  }
-  for (const node of children) {
-    const childNode = buildDomElement(document, node);
-    element.appendChild(childNode);
-  }
-  return element;
-};
+import { buildLucideIconElement as sharedBuildLucideIconElement } from '@lucide/shared';
+import { LucideBuildParams, LucideIconData } from './types';
 
 /**
  * Creates an SvgElement from a Lucide icon object.
@@ -28,7 +13,7 @@ function buildLucideIconElement(
   icon: LucideIconData,
   params: LucideBuildParams = {},
 ) {
-  return buildDomElement(document, buildLucideIconNode(icon, params));
+  return sharedBuildLucideIconElement(document, icon as any, params as any);
 }
 
 export default buildLucideIconElement;

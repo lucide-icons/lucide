@@ -1,11 +1,15 @@
 'use client';
 
 import { createElement, forwardRef, useEffect, useState } from 'react';
-import { IconNode, LucideIcon, LucideProps } from './types';
+import { LucideIcon, LucideIconData, LucideIconNode, LucideProps } from './types';
 import dynamicIconImports from './dynamicIconImports';
 import Icon from './Icon';
 
-export type DynamicIconModule = { default: LucideIcon; __iconNode: IconNode };
+export type DynamicIconModule = {
+  default: LucideIcon;
+  __iconNode?: LucideIconNode;
+  __iconData?: LucideIconData;
+};
 
 export type IconName = keyof typeof dynamicIconImports;
 
@@ -24,7 +28,15 @@ async function getIconNode(name: IconName) {
   // TODO: Replace this with a generic iconNode package.
   const icon = (await dynamicIconImports[name]()) as DynamicIconModule;
 
-  return icon.__iconNode;
+  if (icon.__iconData != null) {
+    return icon.__iconData.node;
+  }
+
+  if (icon.__iconNode != null) {
+    return icon.__iconNode;
+  }
+
+  throw new Error('[lucide-react]: Failed to resolve icon data for DynamicIcon');
 }
 
 /**
@@ -37,14 +49,14 @@ async function getIconNode(name: IconName) {
  * @param {number} props.strokeWidth - The stroke width of the icon
  * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {string} props.className - The class name of the icon
- * @param {IconNode} props.children - The children of the icon
- * @param {IconNode} props.iconNode - The icon node of the icon
+ * @param {LucideIconNode} props.children - The children of the icon
+ * @param {LucideIconNode} props.iconNode - The icon node of the icon
  *
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const DynamicIcon = forwardRef<SVGSVGElement, DynamicIconComponentProps>(
   ({ name, fallback: Fallback, ...props }, ref) => {
-    const [iconNode, setIconNode] = useState<IconNode>();
+    const [iconNode, setIconNode] = useState<LucideIconNode>();
 
     useEffect(() => {
       getIconNode(name)
