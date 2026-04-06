@@ -58,10 +58,12 @@ const model = computed({
 <style scoped>
 .checkbox-wrapper {
   display: flex;
-  background-color: var(--vp-input-bg-color);
   align-items: center;
-  border: 1px solid var(--vp-input-border-color);
   gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: var(--vp-sidebar-input, var(--vp-input-bg-color));
 }
 
 .checkbox-label {
