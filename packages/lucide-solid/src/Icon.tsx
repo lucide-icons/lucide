@@ -1,12 +1,13 @@
 import { For, splitProps, useContext } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
+import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { LucideContext } from './context';
-import { hasA11yProp, mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
 
 interface IconProps {
   name?: string;
+  aliases?: string[];
   iconNode: IconNode;
 }
 
@@ -18,49 +19,60 @@ const Icon = (props: LucideProps & IconProps) => {
     'children',
     'class',
     'name',
+    'aliases',
     'iconNode',
     'absoluteStrokeWidth',
   ]);
 
   const globalProps = useContext(LucideContext);
 
+  const calculatedStrokeWidth =
+    (localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth) === true
+      ? (Number(
+          localProps.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'],
+        ) *
+          24) /
+        Number(localProps.size ?? globalProps.size)
+      : Number(
+          localProps.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'],
+        );
+
+  const hasAccessibleProp = Boolean(localProps.children) || hasA11yProp(rest);
+
+  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(
+    {
+      name: localProps.name,
+      aliases: localProps.aliases,
+      size: 24,
+      node: localProps.iconNode,
+    },
+    {
+      color: localProps.color ?? globalProps.color ?? defaultAttributes.stroke,
+      size: localProps.size ?? globalProps.size ?? defaultAttributes.width,
+      strokeWidth: calculatedStrokeWidth,
+      className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
+      hasA11yProp: hasAccessibleProp,
+    },
+  );
+
+  const svgElementAttributes = {
+    xmlns: svgAttributes.xmlns,
+    viewBox: svgAttributes.viewBox,
+    fill: svgAttributes.fill,
+    'stroke-linecap': svgAttributes['stroke-linecap'],
+    'stroke-linejoin': svgAttributes['stroke-linejoin'],
+    width: svgAttributes.width,
+    height: svgAttributes.height,
+    stroke: svgAttributes.stroke,
+    'stroke-width': svgAttributes['stroke-width'],
+    class: svgAttributes.class,
+    'aria-hidden': svgAttributes['aria-hidden'],
+    ...rest,
+  };
+
   return (
-    <svg
-      {...defaultAttributes}
-      width={localProps.size ?? globalProps.size ?? defaultAttributes.width}
-      height={localProps.size ?? globalProps.size ?? defaultAttributes.height}
-      stroke={localProps.color ?? globalProps.color ?? defaultAttributes.stroke}
-      stroke-width={
-        (localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth) === true
-          ? (Number(
-              localProps.strokeWidth ??
-                globalProps.strokeWidth ??
-                defaultAttributes['stroke-width'],
-            ) *
-              24) /
-            Number(localProps.size ?? globalProps.size)
-          : Number(
-              localProps.strokeWidth ??
-                globalProps.strokeWidth ??
-                defaultAttributes['stroke-width'],
-            )
-      }
-      class={mergeClasses(
-        'lucide',
-        'lucide-icon',
-        globalProps.class,
-        ...(localProps.name != null
-          ? [
-              `lucide-${toKebabCase(toPascalCase(localProps.name))}`,
-              `lucide-${toKebabCase(localProps.name)}`,
-            ]
-          : []),
-        localProps.class,
-      )}
-      aria-hidden={!localProps.children && !hasA11yProp(rest) ? 'true' : undefined}
-      {...rest}
-    >
-      <For each={localProps.iconNode}>
+    <svg {...svgElementAttributes}>
+      <For each={builtIconNode}>
         {([elementName, attrs]) => {
           return (
             <Dynamic

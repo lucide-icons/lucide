@@ -14,8 +14,15 @@ type IconNodeElements =
 
 export type IconNode = [elementName: IconNodeElements, attrs: Attrs][];
 
+export interface LucideIconData {
+  name: string;
+  node: IconNode;
+  aliases?: string[];
+}
+
 export interface LucideProps extends Attrs {
   name?: string;
+  aliases?: string[];
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;

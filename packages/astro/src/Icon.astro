@@ -1,32 +1,50 @@
 ---
-import defaultAttributes from './defaultAttributes';
+import buildLucideIconNode from './utils/buildLucideIconNode';
 import type { IconProps as Props } from './types';
 import { hasA11yProp } from './utils/hasA11yProp';
-
 
 const {
   color = 'currentColor',
   size = 24,
   'stroke-width': strokeWidth = 2,
   absoluteStrokeWidth = false,
+  name,
+  aliases,
   iconNode = [],
   class: className,
   ...rest
 } = Astro.props;
+
+const calculatedStrokeWidth =
+  absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth;
+
+const [, rawIconAttributes, builtIconNode = []] = buildLucideIconNode(
+  {
+    name,
+    aliases,
+    size: 24,
+    node: iconNode,
+  },
+  {
+    color,
+    size,
+    strokeWidth: calculatedStrokeWidth,
+    className,
+    hasA11yProp: hasA11yProp(rest),
+  },
+);
+
+const { class: iconClassName, ...builtIconAttributes } = rawIconAttributes;
+const iconAttributes = {
+  ...builtIconAttributes,
+  ...rest,
+};
 ---
 
 <svg
-  {...{
-    ...defaultAttributes,
-    width: size,
-    height: size,
-    stroke: color,
-    'stroke-width': absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
-    ...(!hasA11yProp(rest) && { 'aria-hidden': 'true' }),
-    ...rest,
-  }}
-  class:list={['lucide', className]}
+  {...iconAttributes}
+  class={iconClassName}
 >
-  {iconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
+  {builtIconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
   <slot />
 </svg>

@@ -1,14 +1,39 @@
 'use client';
 
 import { createElement, forwardRef } from 'react';
+import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, LucideProps } from './types';
-import { mergeClasses, hasA11yProp } from '@lucide/shared';
+import { LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
 
 interface IconComponentProps extends LucideProps {
-  iconNode: IconNode;
+  name?: string;
+  aliases?: string[];
+  iconNode: LucideIconNode;
 }
+
+const toReactAttributeName = (attributeName: string) => {
+  if (attributeName === 'class') {
+    return 'className';
+  }
+
+  if (attributeName.startsWith('data-') || attributeName.startsWith('aria-')) {
+    return attributeName;
+  }
+
+  return attributeName.replace(/-([a-z])/g, (_, character: string) => character.toUpperCase());
+};
+
+const toReactAttributes = (attributes: Record<string, any>) => {
+  return Object.entries(attributes).reduce<Record<string, any>>((acc, [attributeName, value]) => {
+    if (value === undefined) {
+      return acc;
+    }
+
+    acc[toReactAttributeName(attributeName)] = value;
+    return acc;
+  }, {});
+};
 
 /**
  * Lucide icon component
@@ -20,14 +45,25 @@ interface IconComponentProps extends LucideProps {
  * @param {number} props.strokeWidth - The stroke width of the icon
  * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {string} props.className - The class name of the icon
- * @param {IconNode} props.children - The children of the icon
- * @param {IconNode} props.iconNode - The icon node of the icon
+ * @param {LucideIconNode} props.children - The children of the icon
+ * @param {LucideIconNode} props.iconNode - The icon node of the icon
  *
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
 const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
   (
-    { color, size, strokeWidth, absoluteStrokeWidth, className = '', children, iconNode, ...rest },
+    {
+      color,
+      size,
+      strokeWidth,
+      absoluteStrokeWidth,
+      className = '',
+      children,
+      iconNode,
+      name,
+      aliases,
+      ...rest
+    },
     ref,
   ) => {
     const {
@@ -43,21 +79,33 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
         ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
         : strokeWidth ?? contextStrokeWidth;
 
+    const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
+
+    const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(
+      {
+        name,
+        aliases,
+        size: 24,
+        node: iconNode,
+      },
+      {
+        color: color ?? contextColor,
+        size: size ?? contextSize ?? defaultAttributes.width,
+        strokeWidth: calculatedStrokeWidth,
+        className: mergeClasses(contextClass, className),
+        hasA11yProp: hasAccessibleProp,
+      },
+    );
+
     return createElement(
       'svg',
       {
         ref,
-        ...defaultAttributes,
-        width: size ?? contextSize ?? defaultAttributes.width,
-        height: size ?? contextSize ?? defaultAttributes.height,
-        stroke: color ?? contextColor,
-        strokeWidth: calculatedStrokeWidth,
-        className: mergeClasses('lucide', contextClass, className),
-        ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
+        ...toReactAttributes(svgAttributes),
         ...rest,
       },
       [
-        ...iconNode.map(([tag, attrs]) => createElement(tag, attrs)),
+        ...builtIconNode.map(([tag, attrs]) => createElement(tag, attrs)),
         ...(Array.isArray(children) ? children : [children]),
       ],
     );

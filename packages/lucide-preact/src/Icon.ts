@@ -1,12 +1,13 @@
 import { h, toChildArray } from 'preact';
+import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
-import type { IconNode, LucideProps } from './types';
+import type { LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
-import { mergeClasses } from '@lucide/shared';
-import { hasA11yProp } from '@lucide/shared';
 
 interface IconComponentProps extends LucideProps {
-  iconNode: IconNode;
+  name?: string;
+  aliases?: string[];
+  iconNode: LucideIconNode;
 }
 
 /**
@@ -19,8 +20,8 @@ interface IconComponentProps extends LucideProps {
  * @param {number} props.strokeWidth - The stroke width of the icon
  * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {string} props.class - The class name of the icon
- * @param {IconNode} props.children - The children of the icon
- * @param {IconNode} props.iconNode - The icon node of the icon
+ * @param {LucideIconNode} props.children - The children of the icon
+ * @param {LucideIconNode} props.iconNode - The icon node of the icon
  *
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
@@ -31,6 +32,8 @@ const Icon = ({
   absoluteStrokeWidth,
   children,
   iconNode,
+  name,
+  aliases,
   class: classes = '',
   ...rest
 }: IconComponentProps) => {
@@ -47,20 +50,28 @@ const Icon = ({
       ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
       : strokeWidth ?? contextStrokeWidth;
 
-  return h(
-    'svg',
+  const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
+
+  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(
     {
-      ...defaultAttributes,
-      width: size ?? contextSize ?? 24,
-      height: size ?? contextSize ?? 24,
-      stroke: color ?? contextColor,
-      ['stroke-width' as 'strokeWidth']: calculatedStrokeWidth,
-      class: mergeClasses('lucide', contextClass, classes),
-      ...(!children && !hasA11yProp(rest) && { 'aria-hidden': 'true' }),
-      ...rest,
+      name,
+      aliases,
+      size: 24,
+      node: iconNode,
     },
-    [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
+    {
+      color: color ?? contextColor,
+      size: size ?? contextSize ?? defaultAttributes.width,
+      strokeWidth: calculatedStrokeWidth,
+      className: mergeClasses(contextClass, classes as string),
+      hasA11yProp: hasAccessibleProp,
+    },
   );
+
+  return h('svg', { ...svgAttributes, ...rest }, [
+    ...builtIconNode.map(([tag, attrs]) => h(tag, attrs)),
+    ...toChildArray(children),
+  ]);
 };
 
 export default Icon;
