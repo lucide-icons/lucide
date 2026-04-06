@@ -7,9 +7,8 @@ import { x } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
 import { onMounted, ref } from 'vue';
 
-
 const { theme } = useData();
-const showAd = useSessionStorage('show-carbon-ads', true ,{
+const showAd = useSessionStorage('show-carbon-ads', true, {
   serializer: StorageSerializers.boolean,
 });
 const carbonLoaded = ref(true);
