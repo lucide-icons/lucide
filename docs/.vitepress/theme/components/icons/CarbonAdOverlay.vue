@@ -5,13 +5,13 @@ import IconButton from '../base/IconButton.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 import { x } from '../../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 const { theme } = useData();
-const showAd = useSessionStorage('show-carbon-ads', true, {
-  serializer: StorageSerializers.boolean,
-});
+const showAd = useSessionStorage('show-carbon-ads', true);
 const carbonLoaded = ref(true);
+const isHidden = computed(() => !showAd.value || !carbonLoaded.value);
+const closeAd = () => showAd.value = false;
 
 defineProps<{
   drawerOpen: boolean;
@@ -30,13 +30,13 @@ onMounted(() => {
   <div
     :class="{
       'drawer-open': drawerOpen,
-      'hide-ad': !(showAd && carbonLoaded),
+      'hide-ad': isHidden,
     }"
     class="floating-ad"
     v-if="theme.carbonAds"
   >
     <IconButton
-      @click="showAd = false"
+      @click="closeAd"
       class="hide-button"
     >
       <Icon
@@ -99,6 +99,7 @@ onMounted(() => {
   position: absolute;
   top: 8px;
   right: 8px;
+  z-index: 3;
   background-color: transparent;
 }
 </style>
