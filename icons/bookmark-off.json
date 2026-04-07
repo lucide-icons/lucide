@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ZeenatLawal",
+    "swastik7805",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "save",
+    "favorite",
+    "mark",
+    "label",
+    "disabled",
+    "removed",
+    "unsaved",
+    "unmarked"
+  ],
+  "categories": [
+    "account"
+  ]
+}
