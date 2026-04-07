@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "kfina-planxy"
+  ],
+  "tags": [
+    "document",
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "files",
+    "finance"
+  ]
+}

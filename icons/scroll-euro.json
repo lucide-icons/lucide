@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere",
+    "kfina-planxy"
+  ],
+  "tags": [
+    "paper",
+    "log",
+    "scripture",
+    "document",
+    "notes",
+    "parchment",
+    "list",
+    "long",
+    "script",
+    "story",
+    "code",
+    "coding",
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

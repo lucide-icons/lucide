@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "mittalyashu",
+    "kfina-planxy"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "paid",
+    "checked"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
