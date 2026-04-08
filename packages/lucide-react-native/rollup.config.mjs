@@ -18,11 +18,12 @@ const bundles = [
     inputs,
     outputDir,
     preserveModules: true,
+    extension: 'mjs',
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, preserveModules }) =>
+  .map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) =>
     inputs.map((input) => ({
       input,
       plugins: plugins({ pkg }),
@@ -33,9 +34,10 @@ const configs = bundles
           ? {
               dir: `${outputDir}/${format}`,
               exports: 'auto',
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}.js`,
+              file: `${outputDir}/${format}/${outputFileName}.${extension}`,
             }),
         format,
         preserveModules,
