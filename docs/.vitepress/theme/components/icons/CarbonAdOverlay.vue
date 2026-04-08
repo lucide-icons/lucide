@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import { StorageSerializers, useSessionStorage } from '@vueuse/core';
+import { useSessionStorage } from '@vueuse/core';
 import IconButton from '../base/IconButton.vue';
 import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 import { x } from '../../../data/iconNodes';
@@ -9,7 +9,7 @@ import { computed, onMounted, ref } from 'vue';
 
 const { theme } = useData();
 const showAd = useSessionStorage('show-carbon-ads', true, {
-  serializer: StorageSerializers.boolean,
+  initOnMounted: true,
 });
 const carbonLoaded = ref(true);
 const shouldHideAd = computed(() => !showAd.value || !carbonLoaded.value);
