@@ -1,6 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "siarie",
+    "jguddas",
     "swastik7805",
     "Spleefies",
     "ramazansancar"
@@ -9,20 +15,16 @@
     "folder",
     "bookmark",
     "file",
-    "navigation",
     "mark",
     "storage",
     "archive",
-    "organized",
     "directory",
-    "root",
     "project",
     "favorite",
     "save",
     "read later"
   ],
   "categories": [
-    "files",
-    "development"
+    "files"
   ]
 }
