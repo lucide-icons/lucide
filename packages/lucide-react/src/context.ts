@@ -4,7 +4,7 @@ import { createContext, createElement, type ReactNode, useContext, useMemo } fro
 import { LucideProps } from './types';
 
 type LucideConfig = {
-  size: string | number;
+  size: number;
   color: string;
   strokeWidth: number;
   absoluteStrokeWidth: boolean;
