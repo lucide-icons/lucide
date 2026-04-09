@@ -57,7 +57,7 @@
     "element-to-path": "^1.2.1",
     "fuse.js": "^7.1.0",
     "jszip": "^3.10.1",
-    "lodash-es": "^4.17.23",
+    "lodash-es": "^4.18.1",
     "lucide": "workspace:*",
     "lucide-react": "workspace:*",
     "motion-v": "1.10.3",
