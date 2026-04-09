@@ -57,7 +57,7 @@
     "linkedom": "^0.18.5",
     "prettier": "^3.4.2",
     "typescript": "^5.8.3",
-    "vite": "^7.3.1",
+    "vite": "^7.3.2",
     "vitest": "^4.1.1",
     "astro": "^6.0.8"
   },
