@@ -136,6 +136,11 @@ describe('LucideIconBase', () => {
       fixture.detectChanges();
       expect(getSvgAttribute('stroke-width')).toBe('1');
     });
+    it('should allow float string stroke width', () => {
+      strokeWidth.set('1.5');
+      fixture.detectChanges();
+      expect(getSvgAttribute('stroke-width')).toBe('1.5');
+    });
   });
 
   describe('absoluteStrokeWidth', () => {
