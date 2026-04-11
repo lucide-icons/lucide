@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Barakudum"
+    "Barakudum",
+    "rrod497"
   ],
   "tags": [
     "label",
