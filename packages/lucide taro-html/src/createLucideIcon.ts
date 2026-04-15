@@ -8,6 +8,7 @@ export interface LucideIconComponentProps extends LucideProps {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
+  fill?: string;
   alt?: string;
 }
 
@@ -18,11 +19,13 @@ const LucideIconToString = ({
   color = 'currentColor',
   size = 24,
   strokeWidth = 2,
+  fill = 'none',
   iconNode,
 }: {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
+  fill?: string;
   iconNode: IconNode;
 }) => {
   const innerSVG = iconNode
@@ -41,7 +44,7 @@ const LucideIconToString = ({
       width="${size}" 
       height="${size}" 
       viewBox="0 0 24 24" 
-      fill="none" 
+      fill="${fill}" 
       stroke="${color}" 
       stroke-width="${strokeWidth}" 
       stroke-linecap="round" 
