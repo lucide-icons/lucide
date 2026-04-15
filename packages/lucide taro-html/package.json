@@ -1,0 +1,74 @@
+{
+  "name": "lucide-taro-html",
+  "description": "A Lucide icon library package for Taro and React applications.",
+  "version": "0.0.1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-taro-html"
+  },
+  "keywords": [
+    "Lucide",
+    "React",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "author": "Eric Fennis",
+  "amdName": "lucide-taro-html",
+  "main": "dist/cjs/lucide-taro-html.js",
+  "module": "dist/esm/lucide-taro-html.js",
+  "typings": "dist/lucide-taro-html.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "dynamic.js",
+    "dynamic.mjs",
+    "dynamic.js.map",
+    "dynamic.d.mts",
+    "dynamic.d.ts",
+    "dynamicIconImports.mjs",
+    "dynamicIconImports.js.map",
+    "dynamicIconImports.d.ts",
+    "dynamicIconImports.d.mts"
+  ],
+  "scripts": {
+    "build": "pnpm clean && pnpm build:icons && pnpm typecheck && pnpm build:bundles",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "npx rimraf dist",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --withDynamicImports --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w",
+    "test": "pnpm build:icons && vitest run",
+    "test:watch": "vitest watch",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/shared": "workspace:*",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/react": "^18.2.37",
+    "@vitejs/plugin-react": "^4.6.0",
+    "jest-serializer-html": "^7.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup": "^4.59.0",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}
