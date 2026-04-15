@@ -7,7 +7,7 @@ async function getIconMetaData(iconDirectory: string): Promise<Record<string, Ic
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile: string) => {
       /** eslint-disable */
-      const file = await import(path.join(iconDirectory, jsonFile), { with: { type: 'json' } });
+      const file = await import(`file:///${path.join(iconDirectory, jsonFile).replace(/\\/g, '/')}`, { with: { type: 'json' } });
       return [path.basename(jsonFile, '.json'), file.default];
     }),
   );
