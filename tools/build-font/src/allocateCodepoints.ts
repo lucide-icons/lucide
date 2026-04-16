@@ -26,23 +26,27 @@ export async function allocateCodePoints({
 }: AllocateCodePointsOptions): Promise<CodePoints> {
   const baseCodePoints = await getLatestCodePoints();
 
-  const endCodePoint = Math.max(...Object.values(baseCodePoints));
+  let maxCodePoint = Math.max(...Object.values(baseCodePoints));
 
   await Promise.all(
     iconsWithAliases.map(async ([iconName, aliases]) => {
-      if (!baseCodePoints[iconName]) {
-        console.log('Code point not found creating new one for', iconName);
-        baseCodePoints[iconName] = endCodePoint + 1;
+      // Check if a stable code point was already assigned to this icon
+      let codepoint = baseCodePoints[iconName];
+      if (!codepoint) {
+        console.log(`Code point not found for ${iconName}. Creating new one.`);
+        codepoint = ++maxCodePoint;
+        baseCodePoints[iconName] = codepoint;
       }
 
-      aliases.forEach((alias, index) => {
+      aliases.forEach((alias) => {
         if (baseCodePoints[alias]) {
           return;
         }
 
-        console.log('Code point not found creating new one for', alias);
-
-        baseCodePoints[alias] = endCodePoint + index + 1;
+        // If the alias does not have a stable code point yet, reuse the one
+        // assigned to the original icon
+        console.log(`Code point not found for alias ${alias}. Reusing from ${iconName}.`);
+        baseCodePoints[alias] = codepoint;
       });
     }),
   );
