@@ -30,24 +30,35 @@ export async function allocateCodePoints({
 
   await Promise.all(
     iconsWithAliases.map(async ([iconName, aliases]) => {
-      // Check if a stable code point was already assigned to this icon
-      let codepoint = baseCodePoints[iconName];
-      if (!codepoint) {
+      const names = [iconName, ...aliases];
+      const existingCodePoints = [
+        ...names
+          .reduce((codePoints, name) => {
+            const codePoint = baseCodePoints[name];
+            if (codePoint !== undefined) {
+              codePoints.add(codePoint);
+            }
+            return codePoints;
+          }, new Set<number>()),
+      ].sort((a, b) => a - b);
+
+      if (existingCodePoints.length > 1) {
+        const aliasList = aliases.join(', ');
+        const codeList = existingCodePoints.join(', ');
+        console.warn(
+          `Conflicting code points found for ${iconName} and its aliases ${aliasList}: ${codeList}. Using lowest.`,
+        );
+      } else if (existingCodePoints.length === 0) {
         console.log(`Code point not found for ${iconName}. Creating new one.`);
-        codepoint = ++maxCodePoint;
-        baseCodePoints[iconName] = codepoint;
       }
 
-      aliases.forEach((alias) => {
-        if (baseCodePoints[alias]) {
-          return;
+      const codePoint = existingCodePoints.length > 0 ? existingCodePoints[0] : ++maxCodePoint;
+      for (const name of names) {
+        if (baseCodePoints[name] !== codePoint) {
+          console.log(`Assigning code point ${codePoint} to ${name}.`);
+          baseCodePoints[name] = codePoint;
         }
-
-        // If the alias does not have a stable code point yet, reuse the one
-        // assigned to the original icon
-        console.log(`Code point not found for alias ${alias}. Reusing from ${iconName}.`);
-        baseCodePoints[alias] = codepoint;
-      });
+      }
     }),
   );
 
