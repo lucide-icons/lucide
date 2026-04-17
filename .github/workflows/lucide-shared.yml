@@ -1,6 +1,9 @@
 name: Lucide Shared Checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/shared/**

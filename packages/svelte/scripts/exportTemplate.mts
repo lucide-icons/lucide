@@ -36,8 +36,6 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  */
 </script>
 
-<Icon name="${iconName}" {...props} iconNode={iconNode}>
-  {@render props.children?.()}
-</Icon>
+<Icon name="${iconName}" {...props} iconNode={iconNode} />
 `;
 });
