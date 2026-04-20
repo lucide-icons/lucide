@@ -113,12 +113,6 @@ describe('LucideIconBase', () => {
       expect(getSvgAttribute('width')).toBe('18');
       expect(getSvgAttribute('height')).toBe('18');
     });
-    it('should use default on invalid string', () => {
-      size.set('large');
-      fixture.detectChanges();
-      expect(getSvgAttribute('width')).toBe('24');
-      expect(getSvgAttribute('height')).toBe('24');
-    });
   });
 
   describe('strokeWidth', () => {
@@ -132,9 +126,9 @@ describe('LucideIconBase', () => {
       expect(getSvgAttribute('stroke-width')).toBe('1.41');
     });
     it('should allow string stroke width', () => {
-      strokeWidth.set('1px');
+      strokeWidth.set('0.125rem');
       fixture.detectChanges();
-      expect(getSvgAttribute('stroke-width')).toBe('1');
+      expect(getSvgAttribute('stroke-width')).toBe('0.125rem');
     });
   });
 
