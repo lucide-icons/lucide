@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/react';
 
 import { airVent } from './testIconNodes';
-import { Icon } from '../src/lucide-taro-html';
+import { Icon } from '../src/lucide-taro-base64';
 
 describe('Using Icon Component', () => {
   it('should render icon based on a iconNode', async () => {

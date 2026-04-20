@@ -7,8 +7,8 @@ import getAliasesEntryNames from './scripts/getAliasesEntryNames.mts';
 const aliasesEntries = await getAliasesEntryNames();
 
 const packageName = 'LucideTaroHtml';
-const outputFileName = 'lucide-taro-html';
-const inputs = [`src/lucide-taro-html.ts`];
+const outputFileName = 'lucide-taro-base64';
+const inputs = [`src/lucide-taro-base64.ts`];
 const bundles = [
   {
     format: 'cjs',
@@ -72,7 +72,7 @@ const configs = bundles
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
             include: [
-              'src/lucide-taro-html.ts',
+              'src/lucide-taro-base64.ts',
               'src/DynamicIcon.ts',
               'src/context.ts',
               'src/Icon.ts',

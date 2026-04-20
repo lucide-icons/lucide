@@ -4,6 +4,7 @@ import { IconNode, LucideProps } from './types';
 
 // 定义图标组件接收的 Props（继承所有 img 标签属性 + Lucide 标准属性）
 export interface LucideIconComponentProps extends LucideProps {
+  style?: React.CSSProperties;
   className?: string;
   color?: string;
   size?: number | string;
@@ -65,13 +66,23 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
   // 使用 forwardRef 支持组件 ref 转发（React 最佳实践）
   const LucideIcon = forwardRef<HTMLImageElement, LucideIconComponentProps>((props, ref) => {
     // 解构自定义 props + 剩余原生 img props
-    const { color, size, strokeWidth, className, alt = iconName, ...restProps } = props;
+    const {
+      style,
+      color,
+      size,
+      strokeWidth,
+      fill,
+      className,
+      alt = iconName,
+      ...restProps
+    } = props;
 
     // 动态生成 SVG Data URL（根据传入的 props 变化）
     const src = LucideIconToString({
       color,
       size,
       strokeWidth,
+      fill,
       iconNode,
     });
 
@@ -83,6 +94,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode) => {
       ref,
       src,
       alt,
+      style,
       className: mergedClass,
       ...restProps,
     });

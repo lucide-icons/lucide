@@ -1,5 +1,5 @@
 {
-  "name": "lucide-taro-html",
+  "name": "lucide-taro-base64",
   "description": "A Lucide icon library package for Taro and React applications.",
   "version": "0.0.1",
   "license": "ISC",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lucide-icons/lucide.git",
-    "directory": "packages/lucide-taro-html"
+    "directory": "packages/lucide-taro-base64"
   },
   "keywords": [
     "Lucide",
@@ -22,10 +22,10 @@
     "Font Awesome"
   ],
   "author": "Eric Fennis",
-  "amdName": "lucide-taro-html",
-  "main": "dist/cjs/lucide-taro-html.js",
-  "module": "dist/esm/lucide-taro-html.js",
-  "typings": "dist/lucide-taro-html.d.ts",
+  "amdName": "lucide-taro-base64",
+  "main": "dist/cjs/lucide-taro-base64.js",
+  "module": "dist/esm/lucide-taro-base64.js",
+  "typings": "dist/lucide-taro-base64.d.ts",
   "sideEffects": false,
   "files": [
     "dist",

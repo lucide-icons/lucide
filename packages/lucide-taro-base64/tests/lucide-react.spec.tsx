@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, cleanup } from '@testing-library/react';
-import { Pen, Edit2, Grid, Droplet } from '../src/lucide-taro-html';
+import { Pen, Edit2, Grid, Droplet } from '../src/lucide-taro-base64';
 import defaultAttributes from '../src/defaultAttributes';
 
 describe('Using lucide icon components', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { createLucideIcon } from '../src/lucide-taro-html';
+import { createLucideIcon } from '../src/lucide-taro-base64';
 import { airVent } from './testIconNodes';
 import { render } from '@testing-library/react';
 

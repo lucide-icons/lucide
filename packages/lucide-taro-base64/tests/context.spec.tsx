@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { House, LucideProvider } from '../src/lucide-taro-html';
+import { House, LucideProvider } from '../src/lucide-taro-base64';
 
 describe('Using LucideProvider', () => {
   it('should render the icon with LucideProvider', () => {
