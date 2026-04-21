@@ -16,6 +16,7 @@ You can turn this off by adding the following setting to your VS Code settings.
   "js/ts.preferences.autoImportFileExcludePatterns": [
     "lucide-react", // or
     "lucide-preact", // or
+    "lucide-lit", // or
     "lucide-react-native", // or
     "@lucide/vue",
   ]

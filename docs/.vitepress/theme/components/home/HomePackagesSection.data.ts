@@ -39,6 +39,12 @@ export default {
           path: '/guide/preact/',
         },
         {
+          name: 'lucide-lit',
+          logo: '/framework-logos/lit.svg',
+          label: 'Lucide documentation for Lit',
+          path: '/guide/lit/',
+        },
+        {
           name: 'angular',
           logo: '/framework-logos/angular.svg',
           label: 'Lucide documentation for Angular',

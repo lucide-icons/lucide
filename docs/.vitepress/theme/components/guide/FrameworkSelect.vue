@@ -18,6 +18,7 @@ const frameworks = [
   { name: 'Solid', icon: '/framework-logos/solid.svg', route: '/guide/solid/' },
   { name: 'Angular', icon: '/framework-logos/angular.svg', route: '/guide/angular/' },
   { name: 'Preact', icon: '/framework-logos/preact.svg', route: '/guide/preact/' },
+  { name: 'Lit', icon: '/framework-logos/lit.svg', route: '/guide/lit/' },
   {
     name: 'React Native',
     icon: '/framework-logos/react-native.svg',

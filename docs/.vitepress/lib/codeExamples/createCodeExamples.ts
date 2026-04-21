@@ -90,6 +90,22 @@ export default App;
 `,
     },
     {
+      language: 'html',
+      title: 'Lit',
+      code: `<script type="module">
+import { html, LitElement } from 'lit';
+import { $PascalCase } from 'lucide-lit';
+
+void $PascalCase;
+
+class Demo extends LitElement {
+  render() {
+    return html\`<lucide-$Name></lucide-$Name>\`;
+  }
+}
+</script>`,
+    },
+    {
       language: 'tsx',
       title: 'Angular',
       code: `// app.module.ts
