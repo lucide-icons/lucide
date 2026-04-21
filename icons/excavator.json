@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "madsmadsdk"
+  ],
+  "tags": [
+    "excavator",
+    "machine",
+    "construction",
+    "digging",
+    "shovel"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
