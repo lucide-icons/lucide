@@ -1,0 +1,33 @@
+name: Lucide Lit Checks
+
+on:
+  push:
+    branches:
+      - next
+  pull_request:
+    paths:
+      - packages/lucide-lit/**
+      - packages/shared/**
+      - tools/build-icons/**
+      - tools/rollup-plugins/**
+      - pnpm-lock.yaml
+
+jobs:
+  lucide-lit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        run: pnpm --filter lucide-lit exec playwright install chromium --with-deps
+
+      - name: Test
+        run: pnpm --filter lucide-lit test
