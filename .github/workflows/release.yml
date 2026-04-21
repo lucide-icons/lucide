@@ -55,6 +55,7 @@ jobs:
             'lucide-react',
             'lucide-react-native',
             'lucide-preact',
+            'lucide-lit',
             'lucide-solid',
             '@lucide/angular',
             '@lucide/astro',
