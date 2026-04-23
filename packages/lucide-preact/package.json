@@ -24,11 +24,11 @@
   "author": "Eric Fennis",
   "amdName": "lucide-preact",
   "main": "dist/cjs/lucide-preact.js",
-  "module": "dist/esm/lucide-preact.js",
+  "module": "dist/esm/lucide-preact.mjs",
   "exports": {
     ".": {
       "types": "./dist/lucide-preact.d.ts",
-      "import": "./dist/esm/lucide-preact.js",
+      "import": "./dist/esm/lucide-preact.mjs",
       "require": "./dist/cjs/lucide-preact.js"
     }
   },
