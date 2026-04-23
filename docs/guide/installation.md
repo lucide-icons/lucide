@@ -189,6 +189,32 @@ bun add lucide-preact@next
 
 For more details, see the [documentation](./preact/index.md).
 
+## Lit
+
+Implementation of the Lucide icon library for Lit web components.
+
+::: code-group
+
+```sh [pnpm]
+pnpm add lucide-lit@next
+```
+
+```sh [yarn]
+yarn add lucide-lit@next
+```
+
+```sh [npm]
+npm install lucide-lit@next
+```
+
+```sh [bun]
+bun add lucide-lit@next
+```
+
+:::
+
+For more details, see the [documentation](./lit/index.md).
+
 ## Astro
 
 Implementation of the Lucide icon library for Astro applications.

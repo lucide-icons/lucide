@@ -1,0 +1,70 @@
+{
+  "name": "lucide-lit",
+  "description": "A Lucide icon library package for Lit applications.",
+  "version": "0.0.1",
+  "license": "ISC",
+  "homepage": "https://lucide.dev",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucide-icons/lucide.git",
+    "directory": "packages/lucide-lit"
+  },
+  "keywords": [
+    "Lucide",
+    "Lit",
+    "Web Components",
+    "Feather",
+    "Icons",
+    "Icon",
+    "SVG",
+    "Feather Icons",
+    "Fontawesome",
+    "Font Awesome"
+  ],
+  "author": "Eric Fennis",
+  "amdName": "lucide-lit",
+  "main": "dist/cjs/lucide-lit.js",
+  "module": "dist/esm/lucide-lit.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-lit.d.ts",
+      "import": "./dist/esm/lucide-lit.js",
+      "require": "./dist/cjs/lucide-lit.js"
+    }
+  },
+  "typings": "dist/lucide-lit.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
+    "copy:license": "cp ../../LICENSE ./LICENSE",
+    "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --withAliases --aliasesFileExtension=.ts --iconFileExtension=.ts --exportFileName=index.ts",
+    "build:bundles": "rollup -c ./rollup.config.mjs",
+    "test": "pnpm build:icons && web-test-runner",
+    "test:watch": "pnpm build:icons && web-test-runner --watch",
+    "test:update-fixtures": "pnpm build:icons && web-test-runner --config web-test-runner.record.mjs --static-logging 2>&1 | node ./scripts/write-expected-shadow.mjs",
+    "version": "pnpm version --git-tag-version=false"
+  },
+  "devDependencies": {
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/rollup-plugins": "workspace:*",
+    "@lucide/shared": "workspace:*",
+    "@open-wc/testing": "^4.0.0",
+    "@types/mocha": "^10.0.10",
+    "@web/dev-server-esbuild": "^1.0.5",
+    "@web/test-runner": "^0.20.2",
+    "@web/test-runner-playwright": "^0.11.1",
+    "lit": "^3.3.1",
+    "playwright": "^1.53.0",
+    "rollup": "^4.59.0",
+    "rollup-plugin-dts": "^6.2.3",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "lit": "^3.0.0"
+  }
+}

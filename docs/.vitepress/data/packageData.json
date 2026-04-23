@@ -154,10 +154,27 @@
       }
     ]
   },
+  "lucide-lit": {
+    "order": 9,
+    "icon": "lit",
+    "docsAlias": "lit",
+    "shields": [
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/v/lucide-lit",
+        "href": "https://www.npmjs.com/package/lucide-lit"
+      },
+      {
+        "alt": "npm",
+        "src": "https://img.shields.io/npm/dw/lucide-lit",
+        "href": "https://www.npmjs.com/package/lucide-lit"
+      }
+    ]
+  },
   "@lucide/astro": {
     "docsAlias": "astro",
     "packageDirname": "astro",
-    "order": 9,
+    "order": 10,
     "icon": "astro",
     "iconDark": "astro-dark",
     "shields": [
@@ -174,7 +191,7 @@
     ]
   },
   "lucide-static": {
-    "order": 10,
+    "order": 11,
     "icon": "svg",
     "docsAlias": "static",
     "shields": [

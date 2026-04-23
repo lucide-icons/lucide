@@ -5,6 +5,7 @@ import { svelteSidebar } from './svelte';
 import { lucideSidebar } from './lucide';
 import { solidSidebar } from './solid';
 import { preactSidebar } from './preact';
+import { litSidebar } from './lit';
 import { reactNativeSidebar } from './react-native';
 import { astroSidebar } from './astro';
 import { resourcesSidebar } from './resources';
@@ -33,6 +34,7 @@ const sidebar: Sidebar = {
   '/guide/solid/': solidSidebar,
   '/guide/astro/': astroSidebar,
   '/guide/preact/': preactSidebar,
+  '/guide/lit/': litSidebar,
   '/guide/react-native/': reactNativeSidebar,
   '/guide/angular/': angularSidebar,
   '/guide/static/': lucideStaticSidebar,
