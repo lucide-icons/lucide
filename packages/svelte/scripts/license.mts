@@ -8,7 +8,8 @@ export function getHTMLBanner() {
 <!--
 ${pkg.name} v${pkg.version} - ${pkg.license}
 
-${license}
+This source code is licensed under the ${pkg.license} license.
+See the LICENSE file in the root directory of this source tree.
 -->
 
 `;
@@ -20,8 +21,8 @@ export function getJSBanner() {
  * @file
  * @license ${pkg.name} v${pkg.version} - ${pkg.license}
  *
- * ${license.split('\n').join('\n * ')}
+ * This source code is licensed under the ${pkg.license} license.
+ * See the LICENSE file in the root directory of this source tree.
  */
-
 `;
 }
