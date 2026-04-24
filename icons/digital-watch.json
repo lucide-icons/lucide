@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "akinshaywai"
+  ],
+  "tags": [
+    "watch",
+    "smartwatch",
+    "wearable",
+    "time",
+    "clock",
+    "digital",
+    "fitness tracker"
+  ],
+  "categories": [
+    "devices",
+    "time"
+  ]
+}
