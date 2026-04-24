@@ -8,6 +8,13 @@
 Lucide icon library for Vue applications.
 </p>
 
+<div align="center">
+
+  [![npm](https://img.shields.io/npm/v/@lucide/vue?color=blue)](https://www.npmjs.com/package/@lucide/vue)
+  ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/vue)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
+
 <p align="center">
   <a href="https://lucide.dev/guide/">About</a>
   ·
@@ -20,7 +27,7 @@ Lucide icon library for Vue applications.
 
 # Lucide Vue
 
-Implementation of the lucide icon library for Vue 3 applications.
+Implementation of the lucide icon library for Vue applications.
 
 ## Installation
 
