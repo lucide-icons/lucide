@@ -12,7 +12,7 @@ Lucide icon library for Preact applications.
 
   [![npm](https://img.shields.io/npm/v/lucide-preact?color=blue)](https://www.npmjs.com/package/lucide-preact)
   ![NPM Downloads](https://img.shields.io/npm/dw/lucide-preact)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ICS-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">

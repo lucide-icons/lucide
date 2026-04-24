@@ -12,7 +12,7 @@ Lucide icon library for Svelte 5 applications.
 
   [![npm](https://img.shields.io/npm/v/%40lucide%2Fsvelte?color=blue)](https://www.npmjs.com/package/lucide-svelte)
   ![NPM Downloads](https://img.shields.io/npm/dw/%40lucide%2Fsvelte)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ICS-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
@@ -46,6 +46,7 @@ yarn add @lucide/svelte
 ```sh
 bun add @lucide/svelte
 ```
+
 > `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the [`lucide-svelte`](https://www.npmjs.com/package/lucide-svelte) package.
 
 ## Documentation

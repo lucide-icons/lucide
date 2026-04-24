@@ -12,7 +12,7 @@ Lucide icon library for Vue applications.
 
   [![npm](https://img.shields.io/npm/v/@lucide/vue?color=blue)](https://www.npmjs.com/package/@lucide/vue)
   ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/vue)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ICS-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
