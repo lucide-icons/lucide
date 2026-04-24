@@ -20,14 +20,14 @@ Lucide icon library for Svelte 5 applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-svelte">Documentation</a>
+  <a href="https://lucide.dev/guide/svelte">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Svelte
 
-Implementation of the lucide icon library for svelte applications.
+Implementation of the Lucide icon library for svelte applications.
 
 ## Installation
 
@@ -60,6 +60,8 @@ Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintaine
 
 Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
+[//]: <> (Sponsors)
+
 ## Sponsors
 
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
@@ -68,7 +70,10 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-[//]: <> (Open Collective backers)
+### Hero backers 🦸
+
+<a href="https://https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+
 ### Awesome backers 🍺
 
 <a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>

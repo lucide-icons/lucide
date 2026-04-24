@@ -13,7 +13,8 @@ const classNamePrefix = 'icon';
 const startUnicode = 57400;
 const outputDir = 'lucide-font';
 
-const { saveCodePoints = false } = getArgumentOptions(process.argv.slice(2)) ?? {};
+const { saveCodePoints = false, allowFixes = false } =
+  getArgumentOptions(process.argv.slice(2)) ?? {};
 
 const repoRoot = path.join(process.cwd(), '../../');
 const iconsDir = path.join(repoRoot, 'icons');
@@ -36,6 +37,7 @@ await outlineSVG({
 
 const codePoints = await allocateCodePoints({
   saveCodePoints,
+  allowFixes,
   iconsWithAliases,
 });
 

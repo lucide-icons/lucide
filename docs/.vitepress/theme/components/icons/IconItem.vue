@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { useMediaQuery } from '@vueuse/core';
 import { useRouter } from 'vitepress';
 import getSVGIcon from '../../utils/getSVGIcon';
 import useConfetti from '../../composables/useConfetti';
 import Tooltip from '../base/Tooltip.vue';
-import { diamond }  from '../../../data/iconNodes'
+import { diamond } from '../../../data/iconNodes';
 
-const downloadText = 'Download!'
-const copiedText = 'Copied!'
+const downloadText = 'Download!';
+const copiedText = 'Copied!';
 
-export type IconNode = [elementName: string, attrs: Record<string, string>][]
+export type IconNode = [elementName: string, attrs: Record<string, string>][];
 
 const props = defineProps<{
   name: string;
@@ -19,50 +19,64 @@ const props = defineProps<{
   active: boolean;
   externalLibrary?: string;
   customizable?: boolean;
-  overlayMode?: boolean
-  hideIcon?: boolean
-}>()
+  overlayMode?: boolean;
+  hideIcon?: boolean;
+}>();
 
-const emit = defineEmits(['setActiveIcon'])
+const emit = defineEmits(['setActiveIcon']);
 
-const { go } = useRouter()
+const { go } = useRouter();
 const showOverlay = useMediaQuery('(min-width: 860px)');
-const { animate, confetti, confettiText } = useConfetti()
-
+const { animate, confetti, confettiText } = useConfetti();
 
 const icon = computed(() => {
-  if (!props.name || !props.iconNode) return null
-  return createLucideIcon(props.name, props.iconNode)
-})
+  if (!props.name || !props.iconNode) return null;
+  return createLucideIcon(props.name, props.iconNode);
+});
 
-const href = computed(() => props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
+const href = computed(() =>
+  props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`,
+);
 
 async function navigateToIcon(event) {
   if (event.shiftKey) {
-    event.preventDefault()
+    event.preventDefault();
     const svgString = getSVGIcon(event.target.firstChild, {
       class: `lucide lucide-${props.name}`,
-    })
+    });
 
-    await navigator.clipboard.writeText(svgString)
+    await navigator.clipboard.writeText(svgString);
 
-    confettiText.value = copiedText
-    confetti()
-    return
+    confettiText.value = copiedText;
+    confetti();
+    return;
   }
 
-  if(props.overlayMode && showOverlay.value) {
-    event.preventDefault()
+  if (props.overlayMode && showOverlay.value) {
+    event.preventDefault();
 
-    window.history.pushState({}, '', props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
-    emit('setActiveIcon', props.externalLibrary ? `${props.externalLibrary}:${props.name}`: props.name)
+    window.history.pushState(
+      {},
+      '',
+      props.externalLibrary
+        ? `/icons/${props.externalLibrary}/${props.name}`
+        : `/icons/${props.name}`,
+    );
+    emit(
+      'setActiveIcon',
+      props.externalLibrary ? `${props.externalLibrary}:${props.name}` : props.name,
+    );
   } else {
-    event.preventDefault()
-    go(props.externalLibrary ? `/icons/${props.externalLibrary}/${props.name}` : `/icons/${props.name}`)
+    event.preventDefault();
+    go(
+      props.externalLibrary
+        ? `/icons/${props.externalLibrary}/${props.name}`
+        : `/icons/${props.name}`,
+    );
   }
 }
 
-const DiamondIcon = createLucideIcon('Diamond', diamond)
+const DiamondIcon = createLucideIcon('Diamond', diamond);
 </script>
 
 <template>
@@ -72,7 +86,6 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
       @click="navigateToIcon"
       :class="{ active, animate }"
       :aria-label="name"
-
       :data-confetti-text="confettiText"
       ref="ref"
     >
@@ -91,7 +104,10 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
         class="floating-diamond"
         aria-hidden="true"
       >
-        <DiamondIcon fill="currentColor" :size="8"/>
+        <DiamondIcon
+          fill="currentColor"
+          :size="8"
+        />
       </div>
     </a>
   </Tooltip>
@@ -108,7 +124,10 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   font-weight: 600;
   border-radius: 4px;
   white-space: nowrap;
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   border-radius: 6px;
   background-color: var(--vp-c-bg-alt);
   display: inline-flex;
@@ -135,7 +154,10 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
 }
 
 .icon-button:active {
-  transition: color 0.1s, border-color 0.1s, background-color 0.1s;
+  transition:
+    color 0.1s,
+    border-color 0.1s,
+    background-color 0.1s;
 }
 
 .icon-button.medium {
@@ -159,9 +181,9 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
 }
 
 .icon-button:active {
-    border-color: var(--vp-button-alt-active-border);
-    color: var(--vp-button-alt-active-text);
-    background-color: var(--vp-button-alt-active-bg);
+  border-color: var(--vp-button-alt-active-border);
+  color: var(--vp-button-alt-active-text);
+  background-color: var(--vp-button-alt-active-bg);
 }
 
 .icon-button.active {

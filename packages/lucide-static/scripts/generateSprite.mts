@@ -15,6 +15,7 @@ export default async function generateSprite(
     value: '',
     attributes: {
       id: name,
+      viewBox: parsedSvg.attributes.viewBox,
     },
     children: parsedSvg.children,
   }));
