@@ -13,7 +13,7 @@ on:
         type: string
       tag:
         description: NPM tag
-        default: 'next' # set to latest after v1 release
+        default: 'latest'
         type: string
 
 permissions:

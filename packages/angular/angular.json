@@ -11,7 +11,7 @@
       "projectType": "library",
       "root": ".",
       "sourceRoot": "./src",
-      "prefix": "lib",
+      "prefix": "lucide",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",

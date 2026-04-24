@@ -25,7 +25,7 @@
   "author": "Eric Fennis",
   "source": "src/lucide-solid.ts",
   "main": "dist/cjs/lucide-solid.js",
-  "module": "dist/esm/lucide-solid.js",
+  "module": "dist/esm/lucide-solid.mjs",
   "types": "dist/types/lucide-solid.d.ts",
   "files": [
     "dist"
@@ -34,22 +34,22 @@
     ".": {
       "types": "./dist/types/lucide-solid.d.ts",
       "solid": "./dist/source/lucide-solid.jsx",
-      "import": "./dist/esm/lucide-solid.js",
-      "browser": "./dist/esm/lucide-solid.js",
+      "import": "./dist/esm/lucide-solid.mjs",
+      "browser": "./dist/esm/lucide-solid.mjs",
       "require": "./dist/cjs/lucide-solid.js"
     },
     "./icons": {
       "types": "./dist/types/lucide-solid.d.ts",
       "solid": "./dist/source/lucide-solid.jsx",
-      "import": "./dist/esm/lucide-solid.js",
-      "browser": "./dist/esm/lucide-solid.js",
+      "import": "./dist/esm/lucide-solid.mjs",
+      "browser": "./dist/esm/lucide-solid.mjs",
       "require": "./dist/cjs/lucide-solid.js"
     },
     "./icons/*": {
       "types": "./dist/types/icons/*.d.ts",
       "solid": "./dist/source/icons/*.jsx",
-      "import": "./dist/esm/icons/*.js",
-      "browser": "./dist/esm/icons/*.js",
+      "import": "./dist/esm/icons/*.mjs",
+      "browser": "./dist/esm/icons/*.mjs",
       "require": "./dist/cjs/icons/*.js"
     }
   },
