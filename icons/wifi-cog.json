@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "luisdlopera"
+  ],
+  "tags": [
+    "connection",
+    "signal",
+    "wireless",
+    "directory",
+    "settings",
+    "control",
+    "preferences",
+    "cog",
+    "edit",
+    "gear"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "files"
+  ]
+}

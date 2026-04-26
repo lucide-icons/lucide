@@ -11,6 +11,7 @@
     "allowJs": true,
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
     "sourceMap": true,
     "outDir": "./dist",
   },

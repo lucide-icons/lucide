@@ -2,7 +2,8 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
   "tags": [
     "plaster",
@@ -18,7 +19,8 @@
     "protection",
     "emergency",
     "aid",
-    "safety"
+    "safety",
+    "patch"
   ],
   "categories": [
     "medical"

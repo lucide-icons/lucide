@@ -1,0 +1,46 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "kemie",
+    "karsa-mistmere",
+    "jguddas",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "burger",
+    "cheeseburger",
+    "meat",
+    "beef",
+    "patty",
+    "bun",
+    "fast food",
+    "junk food",
+    "takeaway",
+    "takeout",
+    "snack",
+    "dish",
+    "restaurant",
+    "lunch",
+    "meal",
+    "savory",
+    "savoury",
+    "cookery",
+    "cooking",
+    "grilled",
+    "barbecue",
+    "barbeque",
+    "bbq",
+    "lettuce",
+    "tomato",
+    "relish",
+    "pickles",
+    "onions",
+    "ketchup",
+    "mustard",
+    "mayonnaise"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

@@ -12,7 +12,8 @@
     "clear",
     "cancel",
     "abort",
-    "/"
+    "/",
+    "lens"
   ],
   "categories": [
     "text",

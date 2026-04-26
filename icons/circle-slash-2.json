@@ -29,6 +29,11 @@
     "development"
   ],
   "aliases": [
-    "circle-slashed"
+    {
+      "name": "circle-slashed",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

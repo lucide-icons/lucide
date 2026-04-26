@@ -18,6 +18,11 @@
     "text"
   ],
   "aliases": [
-    "pilcrow-square"
+    {
+      "name": "pilcrow-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
