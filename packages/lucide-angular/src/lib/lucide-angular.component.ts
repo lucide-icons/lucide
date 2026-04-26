@@ -12,6 +12,7 @@ import { LucideIconData } from '../icons/types';
 import defaultAttributes from '../icons/constants/default-attributes';
 import { LUCIDE_ICONS, LucideIconProviderInterface } from './lucide-icon.provider';
 import { LucideIconConfig } from './lucide-icon.config';
+import { hasA11yProp } from '../utils/hasA11yProp';
 
 interface TypedChange<T> extends SimpleChange {
   previousValue: T;
@@ -99,6 +100,12 @@ export class LucideAngularComponent implements OnChanges {
       this.strokeWidth = this.parseNumber(this.strokeWidth ?? this.iconConfig.strokeWidth);
       this.absoluteStrokeWidth = this.absoluteStrokeWidth ?? this.iconConfig.absoluteStrokeWidth;
       const nameOrIcon = this.img ?? this.name;
+      const restAttributes = this.getRestAttributes();
+
+      if (!hasA11yProp(restAttributes)) {
+        this.renderer.setAttribute(this.elem.nativeElement, 'aria-hidden', 'true');
+      }
+
       if (typeof nameOrIcon === 'string') {
         const icoOfName = this.getIcon(this.toPascalCase(nameOrIcon));
         if (icoOfName) {
@@ -119,6 +126,8 @@ export class LucideAngularComponent implements OnChanges {
   }
 
   replaceElement(img: LucideIconData): void {
+    const childElements = this.elem.nativeElement.childNodes;
+
     const attributes = {
       ...defaultAttributes,
       width: this.size,
@@ -133,6 +142,7 @@ export class LucideAngularComponent implements OnChanges {
     if (typeof this.name === 'string') {
       icoElement.classList.add(`lucide-${this.name.replace('_', '-')}`);
     }
+
     if (this.class) {
       icoElement.classList.add(
         ...this.class
@@ -141,11 +151,19 @@ export class LucideAngularComponent implements OnChanges {
           .filter((a) => a.length > 0),
       );
     }
-    const childElements = this.elem.nativeElement.childNodes;
+
     for (const child of childElements) {
       this.renderer.removeChild(this.elem.nativeElement, child);
     }
     this.renderer.appendChild(this.elem.nativeElement, icoElement);
+  }
+
+  getRestAttributes(): Record<string, string> {
+    const restAttributeMap: NamedNodeMap = this.elem.nativeElement.attributes;
+    const restAttributes = Object.fromEntries(
+      Array.from(restAttributeMap).map((item) => [item.name, item.value]),
+    );
+    return restAttributes;
   }
 
   toPascalCase(str: string): string {

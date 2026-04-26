@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Using DynamicIcon Component > should adjust the style based 1`] = `null`;
+
+exports[`Using DynamicIcon Component > should render icon and match snapshot 1`] = `null`;

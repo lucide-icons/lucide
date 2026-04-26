@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "numerical",
+    "decimal",
+    "decrease",
+    "less",
+    "fewer",
+    "precision",
+    "rounding",
+    "digits",
+    "fraction",
+    "float",
+    "number"
+  ],
+  "categories": [
+    "design",
+    "text",
+    "arrows",
+    "math"
+  ]
+}

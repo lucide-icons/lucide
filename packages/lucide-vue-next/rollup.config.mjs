@@ -1,5 +1,5 @@
 import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
 const packageName = 'LucideVueNext';
@@ -7,17 +7,6 @@ const outputFileName = 'lucide-vue-next';
 const outputDir = 'dist';
 const inputs = ['src/lucide-vue-next.ts'];
 const bundles = [
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
   {
     format: 'cjs',
     inputs,
@@ -44,7 +33,7 @@ const configs = bundles
               dir: `${outputDir}/${format}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}.js`,
             }),
         format,
         preserveModules,

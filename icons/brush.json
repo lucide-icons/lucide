@@ -1,9 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "chessurisme",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
+    "clean",
+    "sweep",
+    "refactor",
+    "remove",
     "draw",
     "paint",
     "color",

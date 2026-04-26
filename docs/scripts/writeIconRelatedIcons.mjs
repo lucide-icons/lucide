@@ -4,7 +4,7 @@ import { readSvgDirectory } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const svgFiles = readSvgDirectory(ICONS_DIR, '.json');
+const svgFiles = await readSvgDirectory(ICONS_DIR, '.json');
 
 const location = path.resolve(currentDir, '.vitepress/data', 'relatedIcons.json');
 
@@ -18,15 +18,10 @@ const categoryWeight = 3;
 
 const MAX_RELATED_ICONS = 4 * 17; // grid of 4x17 icons, = 68 icons
 
-const arrayMatches = (a, b) => {
-  return a.filter((item) => b.includes(item)).length;
-};
+const arrayMatches = (a, b) => a.filter((item) => b.includes(item)).length;
 
 const nameParts = (icon) =>
-  [
-    icon.name,
-    ...(icon.aliases?.map((alias) => (typeof alias === 'string' ? alias : alias.name)) ?? []),
-  ]
+  [icon.name, ...(icon.aliases?.map((alias) => alias.name) ?? [])]
     .join('-')
     .split('-')
     .filter((word) => word.length > 2);
@@ -36,6 +31,7 @@ const getRelatedIcons = (currentIcon, icons) => {
     nameWeight * arrayMatches(nameParts(item), nameParts(currentIcon)) +
     categoryWeight * arrayMatches(item.categories ?? [], currentIcon.categories ?? []) +
     tagWeight * arrayMatches(item.tags ?? [], currentIcon.tags ?? []);
+
   return icons
     .filter((i) => i.name !== currentIcon.name)
     .map((icon) => ({ icon, similarity: iconSimilarity(icon) }))
@@ -46,7 +42,8 @@ const getRelatedIcons = (currentIcon, icons) => {
 };
 
 const iconsMetaDataPromises = svgFiles.map(async (iconName) => {
-  const metaData = JSON.parse(fs.readFileSync(`../icons/${iconName}`));
+  const metaDataFileContent = await fs.promises.readFile(`../icons/${iconName}`);
+  const metaData = JSON.parse(metaDataFileContent);
 
   const name = iconName.replace('.json', '');
 

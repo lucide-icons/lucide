@@ -9,7 +9,9 @@
     "camera",
     "lightning",
     "electricity",
-    "energy"
+    "energy",
+    "power",
+    "quick"
   ],
   "categories": [
     "connectivity",

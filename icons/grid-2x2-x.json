@@ -26,5 +26,13 @@
     "text",
     "layout",
     "math"
+  ],
+  "aliases": [
+    {
+      "name": "grid-2-x-2-x",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

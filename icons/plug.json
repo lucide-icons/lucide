@@ -10,7 +10,11 @@
     "energy",
     "electronics",
     "socket",
-    "outlet"
+    "outlet",
+    "power",
+    "voltage",
+    "current",
+    "charger"
   ],
   "categories": [
     "devices",

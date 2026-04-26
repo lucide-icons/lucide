@@ -16,10 +16,6 @@
     "title": "Arrows"
   },
   {
-    "name": "brands",
-    "title": "Brands"
-  },
-  {
     "name": "buildings",
     "title": "Buildings"
   },
@@ -61,7 +57,7 @@
   },
   {
     "name": "finance",
-    "title": "Money"
+    "title": "Finance"
   },
   {
     "name": "food-beverage",
@@ -85,7 +81,7 @@
   },
   {
     "name": "math",
-    "title": "Math"
+    "title": "Mathematics"
   },
   {
     "name": "medical",
@@ -101,7 +97,7 @@
   },
   {
     "name": "navigation",
-    "title": "Navigation"
+    "title": "Navigation, Maps, and POIs"
   },
   {
     "name": "notifications",

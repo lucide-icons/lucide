@@ -11,7 +11,7 @@ const git = simpleGit();
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const iconJsonFiles = readSvgDirectory(ICONS_DIR, '.json');
+const iconJsonFiles = await readSvgDirectory(ICONS_DIR, '.json');
 const location = path.resolve(currentDir, '.vitepress/data', 'releaseMetaData.json');
 const releaseMetaDataDirectory = path.resolve(currentDir, '.vitepress/data', 'releaseMetadata');
 
@@ -82,6 +82,10 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
     const version = tag.replace('v', '');
     const iconName = path.basename(file, '.svg');
 
+    if (iconName === 'chromium') {
+      console.log({ status, file, renamedFile });
+    }
+
     if (newReleaseMetaData[iconName] == null) newReleaseMetaData[iconName] = {};
 
     const releaseData = {
@@ -113,12 +117,14 @@ comparisons.forEach(({ tag, iconFiles, date } = {}) => {
         'changedRelease' in newReleaseMetaData[iconName] &&
         !allowedIconNameWithDoubleRelease.includes(iconName)
       ) {
-        throw new Error(`Icon '${iconName}' has already changedRelease set.`);
+        console.error(`Icon '${iconName}' has already changedRelease set.`);
+        return;
       }
 
       newReleaseMetaData[iconName].createdRelease = releaseData;
       newReleaseMetaData[iconName].changedRelease = releaseData;
     }
+
     if (status === 'M') {
       newReleaseMetaData[iconName].changedRelease = {
         version,
@@ -159,16 +165,14 @@ try {
       const aliases = iconMetaData.aliases ?? [];
 
       if (aliases.length) {
-        aliases
-          .map((alias) => (typeof alias === 'string' ? alias : alias.name))
-          .forEach((alias) => {
-            if (!(alias in newReleaseMetaData)) {
-              return;
-            }
+        aliases.forEach((alias) => {
+          if (!(alias.name in newReleaseMetaData)) {
+            return;
+          }
 
-            contents.createdRelease =
-              newReleaseMetaData[alias].createdRelease ?? defaultReleaseMetaData.createdRelease;
-          });
+          contents.createdRelease =
+            newReleaseMetaData[alias.name].createdRelease ?? defaultReleaseMetaData.createdRelease;
+        });
       }
 
       const output = JSON.stringify(contents, null, 2);

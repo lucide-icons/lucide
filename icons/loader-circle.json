@@ -22,6 +22,11 @@
     "layout"
   ],
   "aliases": [
-    "loader-2"
+    {
+      "name": "loader-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

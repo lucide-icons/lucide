@@ -1,6 +1,6 @@
 import plugins from '@lucide/rollup-plugins';
 import dts from 'rollup-plugin-dts';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 const outputFileName = pkg.name;
 const outputDir = 'dist';
@@ -16,11 +16,12 @@ const bundles = [
     inputs,
     outputDir,
     preserveModules: true,
+    extension: 'mjs',
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, minify, preserveModules, extension = 'js' }) =>
     inputs.map((input) => ({
       input,
       plugins: plugins({ pkg, minify }),
@@ -29,9 +30,10 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.${extension}`,
             }),
         format,
         sourcemap: true,

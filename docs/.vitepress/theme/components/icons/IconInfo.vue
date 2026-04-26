@@ -5,25 +5,35 @@ import Badge from '../base/Badge.vue';
 import CopySVGButton from './CopySVGButton.vue';
 import CopyCodeButton from './CopyCodeButton.vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
-import {useData, useRouter} from 'vitepress';
+import { useData, useRouter } from 'vitepress';
 import { computed } from 'vue';
-import createLucideIcon from 'lucide-vue-next/src/createLucideIcon';
-import { diamond }  from '../../../data/iconNodes'
+import createLucideIcon from '@lucide/vue/src/createLucideIcon';
+import { diamond } from '../../../data/iconNodes';
+import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
 
 const props = defineProps<{
-  icon: IconEntity
-  popoverPosition?: 'top' | 'bottom'
-}>()
+  icon: IconEntity;
+  popoverPosition?: 'top' | 'bottom';
+}>();
 
-const { go } = useRouter()
-const { page } = useData()
+const { go } = useRouter();
+const { page } = useData();
 
 const tags = computed(() => {
-  if (!props.icon || !props?.icon?.tags) return []
-  return props.icon.tags.join(' • ')
-})
+  if (!props.icon || !props?.icon?.tags) return [];
+  return props.icon.tags.join(' • ');
+});
 
-const DiamondIcon = createLucideIcon('Diamond', diamond)
+const DiamondIcon = createLucideIcon('Diamond', diamond);
+
+const deprecatedTitle = computed(() => {
+  if (!props.icon.deprecationReason) return '';
+  return deprecationReasonTemplate(props.icon.deprecationReason, {
+    componentName: props.icon.name,
+    iconName: props.icon.name,
+    toBeRemovedInVersion: props.icon.toBeRemovedInVersion,
+  });
+});
 </script>
 
 <template>
@@ -32,12 +42,28 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
       <IconDetailName class="icon-name">
         {{ icon.name }}
       </IconDetailName>
-      <div v-if="icon.externalLibrary" class="icon-external-lib">
-        <DiamondIcon fill="currentColor" :size="12"/>
+      <div
+        v-if="icon.externalLibrary"
+        class="icon-external-lib"
+      >
+        <DiamondIcon
+          fill="currentColor"
+          :size="12"
+        />
         {{ icon.externalLibrary }}
       </div>
+      <Badge
+        v-if="icon.deprecated"
+        class="deprecated-badge"
+        :title="deprecatedTitle"
+      >
+        Deprecated
+      </Badge>
     </div>
-    <div class="tags-scroller" v-if="tags.length">
+    <div
+      class="tags-scroller"
+      v-if="tags.length"
+    >
       <p class="icon-tags horizontal-scroller">
         {{ tags }}
       </p>
@@ -54,13 +80,35 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
 
     <div class="group buttons">
       <VPButton
-        v-if="!page?.relativePath?.startsWith?.(icon.externalLibrary ? `icons/${icon.externalLibrary}/${icon.name}`: `icons/${icon.name}`)"
-        :href="icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}`: `/icons/${icon.name}`"
+        v-if="
+          !page?.relativePath?.startsWith?.(
+            icon.externalLibrary
+              ? `icons/${icon.externalLibrary}/${icon.name}`
+              : `icons/${icon.name}`,
+          )
+        "
+        :href="
+          icon.externalLibrary
+            ? `/icons/${icon.externalLibrary}/${icon.name}`
+            : `/icons/${icon.name}`
+        "
         text="See in action"
-        @click="go(icon.externalLibrary ? `/icons/${icon.externalLibrary}/${icon.name}`: `/icons/${icon.name}`)"
+        @click="
+          go(
+            icon.externalLibrary
+              ? `/icons/${icon.externalLibrary}/${icon.name}`
+              : `/icons/${icon.name}`,
+          )
+        "
       />
-      <CopySVGButton :name="icon.name" :popoverPosition="popoverPosition"/>
-      <CopyCodeButton :name="icon.name" :popoverPosition="popoverPosition"/>
+      <CopySVGButton
+        :name="icon.name"
+        :popoverPosition="popoverPosition"
+      />
+      <CopyCodeButton
+        :name="icon.name"
+        :popoverPosition="popoverPosition"
+      />
     </div>
     <slot name="footer" />
   </div>
@@ -98,6 +146,16 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   align-items: center;
 }
 
+.deprecated-badge {
+  background-color: var(--vp-c-brand-5);
+  margin-left: 40px;
+  opacity: 0.8;
+}
+
+.deprecated-badge:hover {
+  background-color: var(--vp-c-brand-2);
+}
+
 .icon-tags {
   font-size: 16px;
   color: var(--vp-c-text-2);
@@ -122,7 +180,7 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   margin-top: 8px;
   align-items: center;
 
-  --gradient-background: var(--tags-gradient-background, var(--vp-c-bg-elv))
+  --gradient-background: var(--tags-gradient-background, var(--vp-c-bg-elv));
 }
 .horizontal-scroller {
   overflow-x: scroll;
@@ -134,18 +192,17 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
 }
 .horizontal-scroller::-webkit-scrollbar {
   width: 0;
-  display: none
+  display: none;
 }
 
 .horizontal-scroller::-webkit-scrollbar-track {
-  background: transparent
+  background: transparent;
 }
 
 .horizontal-scroller::-webkit-scrollbar-thumb {
   background: transparent;
-  border: none
+  border: none;
 }
-
 
 .tags-scroller::after {
   content: '';
@@ -154,7 +211,7 @@ const DiamondIcon = createLucideIcon('Diamond', diamond)
   width: 32px;
   height: 100%;
   /* Background Gradient left to right */
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%,var(--gradient-background) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--gradient-background) 100%);
   right: 0;
   pointer-events: none;
 }

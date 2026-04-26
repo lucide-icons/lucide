@@ -23,6 +23,11 @@
     "navigation"
   ],
   "aliases": [
-    "fork-knife-crossed"
+    {
+      "name": "fork-knife-crossed",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "vichotech",
+    "karsa-mistmere"
   ],
   "tags": [
     "text",
@@ -12,6 +14,7 @@
     "typography"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

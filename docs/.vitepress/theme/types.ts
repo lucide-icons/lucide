@@ -6,6 +6,9 @@ export interface IconMetaData {
   categories: string[];
   contributors: string[];
   aliases?: string[];
+  deprecated?: boolean;
+  deprecationReason?: string;
+  toBeRemovedInVersion?: string;
 }
 
 export type ExternalLibs = 'lab';
@@ -33,12 +36,19 @@ interface Shield {
 
 export interface PackageItem {
   name: string;
+  // set when the package's directory
+  // name under the `packages/` directory
+  // is diffrent from the package name
+  packageDirname?: string;
   description: string;
   icon: string;
   iconDark: string;
   shields: Shield[];
   source: string;
   documentation: string;
+  // set when the docs page name is
+  // diffrent from the package name
+  docsAlias?: string;
   order?: number;
   private?: boolean;
   flutter?: object;

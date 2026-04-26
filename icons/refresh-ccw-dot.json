@@ -1,7 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "csandman",
+    "ericfennis",
+    "danielbayley",
+    "jamiemlaw"
   ],
   "tags": [
     "arrows",

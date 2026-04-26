@@ -2,7 +2,7 @@
 
 import { ref, inject, Ref } from 'vue';
 
-export const ICON_STYLE_CONTEXT = Symbol('size');
+export const ICON_STYLE_CONTEXT = Symbol('style');
 
 interface IconSizeContext {
   size: Ref<number>;

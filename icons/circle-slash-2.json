@@ -6,7 +6,7 @@
   "tags": [
     "diameter",
     "zero",
-    "Ø",
+    "ø",
     "nothing",
     "null",
     "void",
@@ -16,7 +16,12 @@
     "division",
     "half",
     "split",
-    "/"
+    "/",
+    "average",
+    "avg",
+    "mean",
+    "median",
+    "normal"
   ],
   "categories": [
     "shapes",
@@ -24,6 +29,11 @@
     "development"
   ],
   "aliases": [
-    "circle-slashed"
+    {
+      "name": "circle-slashed",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

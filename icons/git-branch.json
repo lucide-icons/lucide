@@ -3,11 +3,14 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
   "tags": [
     "code",
-    "version control"
+    "version control",
+    "vcs",
+    "repository"
   ],
   "categories": [
     "development"

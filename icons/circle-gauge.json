@@ -18,6 +18,11 @@
     "science"
   ],
   "aliases": [
-    "gauge-circle"
+    {
+      "name": "gauge-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
