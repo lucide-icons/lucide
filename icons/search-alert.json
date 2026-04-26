@@ -16,7 +16,12 @@
     "alert",
     "error",
     "anomaly",
-    "lens"
+    "lens",
+    "locate",
+    "explore",
+    "discover",
+    "enlarge",
+    "zoom"
   ],
   "categories": [
     "text",
