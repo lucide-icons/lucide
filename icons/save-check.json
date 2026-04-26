@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Konixy",
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "tags": [
+    "save",
+    "save-check",
+    "floppy-disk",
+    "saved",
+    "check",
+    "save-success"
+  ],
+  "categories": [
+    "text",
+    "files",
+    "development"
+  ]
+}
