@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas",
+    "AntoninKadrmas"
+  ],
+  "tags": [
+    "computer",
+    "screen",
+    "remote",
+    "tv",
+    "display",
+    "desktop",
+    "download"
+  ],
+  "categories": [
+    "devices",
+    "connectivity"
+  ]
+}
