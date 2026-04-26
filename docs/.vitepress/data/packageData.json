@@ -54,6 +54,7 @@
     "order": 3,
     "icon": "svelte",
     "docsAlias": "svelte",
+    "packageDirname": "svelte",
     "shields": [
       {
         "alt": "npm",
