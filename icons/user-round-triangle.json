@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KeyboardRage"
+  ],
+  "tags": [
+    "warning",
+    "alert",
+    "triangle",
+    "danger"
+  ],
+  "categories": [
+    "account"
+  ]
+}
