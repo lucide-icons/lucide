@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "mittalyashu",
+    "ericfennis",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "sound",
+    "notes",
+    "quavers"
+  ],
+  "categories": [
+    "multimedia",
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "music",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
