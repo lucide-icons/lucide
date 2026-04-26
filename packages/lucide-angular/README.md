@@ -12,7 +12,7 @@ Lucide icon library for Angular applications.
 
   [![npm](https://img.shields.io/npm/v/lucide-angular?color=blue)](https://www.npmjs.com/package/lucide-angular)
   ![NPM Downloads](https://img.shields.io/npm/dw/lucide-angular)
-  [![License](https://img.shields.io/badge/license-ICS-green)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">

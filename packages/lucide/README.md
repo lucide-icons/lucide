@@ -12,7 +12,7 @@ Lucide icon library for web applications.
 
   [![npm](https://img.shields.io/npm/v/lucide?color=blue)](https://www.npmjs.com/package/lucide)
   ![NPM Downloads](https://img.shields.io/npm/dw/lucide)
-  [![License](https://img.shields.io/badge/license-ICS-green)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
