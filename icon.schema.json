@@ -13,7 +13,12 @@
   "title": "Lucide Icons icon schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "categories", "tags"],
+  "required": [
+    "$schema",
+    "categories",
+    "tags",
+    "use-cases"
+  ],
   "properties": {
     "$schema": {
       "type": "string"
@@ -23,7 +28,9 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -40,9 +47,16 @@
           }
         },
         "dependentRequired": {
-          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
-          "deprecationReason": ["deprecated"],
-          "toBeRemovedInVersion": ["deprecated"]
+          "deprecated": [
+            "deprecationReason",
+            "toBeRemovedInVersion"
+          ],
+          "deprecationReason": [
+            "deprecated"
+          ],
+          "toBeRemovedInVersion": [
+            "deprecated"
+          ]
         }
       },
       "uniqueItems": true
@@ -114,6 +128,14 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "use-cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "deprecated": {
       "const": true
     },
@@ -126,18 +148,31 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
-    "deprecationReason": ["deprecated"],
-    "toBeRemovedInVersion": ["deprecated"]
+    "deprecated": [
+      "deprecationReason",
+      "toBeRemovedInVersion"
+    ],
+    "deprecationReason": [
+      "deprecated"
+    ],
+    "toBeRemovedInVersion": [
+      "deprecated"
+    ]
   },
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.renamed"]
+      "enum": [
+        "icon.renamed"
+      ]
     },
     "aliasDeprecationReasons": {
       "type": "string",
-      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
+      "enum": [
+        "alias.typo",
+        "alias.name",
+        "alias.duplicate"
+      ]
     },
     "versionNumber": {
       "type": "string",
