@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "nathan-de-pachtere"
+  ],
+  "tags": [
+    "off",
+    "zero",
+    "record",
+    "shape",
+    "circle-pile",
+    "circle",
+    "pile",
+    "stack",
+    "layer",
+    "structure",
+    "form",
+    "group",
+    "collection",
+    "stock",
+    "inventory",
+    "materials",
+    "warehouse"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
