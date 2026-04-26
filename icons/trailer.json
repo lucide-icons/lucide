@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "aydinza"
+  ],
+  "tags": [
+    "container",
+    "logistics",
+    "truck",
+    "flatbed"
+  ],
+  "categories": [
+    "transport",
+    "logistics",
+    "vehicles"
+  ]
+}
