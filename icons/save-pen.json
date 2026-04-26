@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "vaporvee"
+  ],
+  "tags": [
+    "floppy disk",
+    "directory",
+    "rename"
+  ],
+  "categories": [
+    "text",
+    "files"
+  ]
+}
