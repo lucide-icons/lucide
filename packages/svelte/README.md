@@ -10,7 +10,7 @@ Lucide icon library for Svelte 5 applications.
 
 <div align="center">
 
-  [![npm](https://img.shields.io/npm/v/%40lucide%2Fsvelte?color=blue)](https://www.npmjs.com/package/lucide-svelte)
+  [![npm](https://img.shields.io/npm/v/%40lucide%2Fsvelte?color=blue)](https://www.npmjs.com/package/@lucide/svelte)
   ![NPM Downloads](https://img.shields.io/npm/dw/%40lucide%2Fsvelte)
   [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
