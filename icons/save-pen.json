@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gcailly"
+  ],
+  "tags": [
+    "document",
+    "edit",
+    "file",
+    "floppy disk",
+    "pen",
+    "save",
+    "save as"
+  ],
+  "categories": [
+    "files",
+    "tools"
+  ]
+}
