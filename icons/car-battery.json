@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "andreynaz4renko"
+  ],
+  "tags": [
+    "battery",
+    "automobile",
+    "powercell",
+    "electric",
+    "power",
+    "electricity",
+    "energy",
+    "accumulator",
+    "charge",
+    "transport",
+    "vehicle",
+    "car"
+  ],
+  "categories": [
+    "connectivity",
+    "transportation"
+  ]
+}
