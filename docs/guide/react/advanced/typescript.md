@@ -5,7 +5,7 @@ description: Learn about the different types exported by the `lucide-react` pack
 # TypeScript Support
 
 List of exported types from the `lucide-react` package.
-These can be used to type your components when using Lucide icons in a TypeScript React project
+These can be used to type your components when using Lucide icons in a TypeScript React project.
 
 ## `LucideProps`
 

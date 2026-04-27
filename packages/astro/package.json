@@ -59,7 +59,7 @@
     "typescript": "^5.8.3",
     "vite": "^7.3.2",
     "vitest": "^4.1.1",
-    "astro": "^6.0.8"
+    "astro": "^6.1.6"
   },
   "peerDependencies": {
     "astro": "^4 || ^5 || ^6"
