@@ -1,6 +1,9 @@
 name: Lucide font checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - tools/build-font/**
@@ -20,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Outline svg Icons
-        run: pnpm build:outline-icons
+      - name: Execute unit tests for build-font
+        run: pnpm test:font
 
       - name: Create font in ./lucide-font
         run: pnpm build:font

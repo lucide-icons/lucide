@@ -7,17 +7,36 @@ on:
     paths:
       - icons/**/*.svg
 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version
+        required: true
+      tag:
+        required: true
+        description: NPM tag
+        default: 'latest'
+        type: choice
+        options:
+          - latest
+          - next
+          - beta
+          - alpha
+
 permissions:
   id-token: write # Required for OIDC
   contents: write
 
+# This is added to make sure we wait until last release is done, this is needed for the font-build process
+concurrency:
+  group: continuous-integration
+
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)')
+    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)') && github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
-
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
@@ -34,7 +53,7 @@ jobs:
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
+        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> $GITHUB_OUTPUT
 
       - name: Log latest tag
         run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
@@ -69,3 +88,11 @@ jobs:
     secrets: inherit
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
+
+  dispatch-release:
+    if: github.event_name == 'workflow_dispatch'
+    uses: './.github/workflows/release.yml'
+    secrets: inherit
+    with:
+      version: ${{ inputs.version }}
+      tag: ${{ inputs.tag }}

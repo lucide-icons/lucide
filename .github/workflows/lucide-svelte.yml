@@ -1,6 +1,9 @@
 name: Lucide Svelte checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/lucide-svelte/**

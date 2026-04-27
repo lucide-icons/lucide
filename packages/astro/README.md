@@ -12,7 +12,7 @@ Lucide icon library for Astro sites and applications.
 
 [![npm](https://img.shields.io/npm/v/@lucide/astro?color=blue)](https://www.npmjs.com/package/@lucide/astro)
 ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/astro)
-[![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+[![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 
 </div>
 
@@ -21,14 +21,14 @@ Lucide icon library for Astro sites and applications.
   ·
   <a href="https://lucide.dev/icons/">Icons</a>
   ·
-  <a href="https://lucide.dev/guide/packages/lucide-astro">Documentation</a>
+  <a href="https://lucide.dev/guide/astro">Documentation</a>
   ·
   <a href="https://lucide.dev/license">License</a>
 </p>
 
 # Lucide Astro
 
-Implementation of the lucide icon library for Astro applications.
+Implementation of the Lucide icon library for Astro applications.
 
 ## Installation
 
@@ -60,6 +60,8 @@ Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintaine
 
 Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
 
+[//]: <> (Sponsors)
+
 ## Sponsors
 
 <a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
@@ -68,7 +70,10 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 <a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
 
-[//]: <> (Open Collective backers)
+### Hero backers 🦸
+
+<a href="https://https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+
 ### Awesome backers 🍺
 
 <a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme – Open-source PDF generation library built with TypeScript and React." /></a>
