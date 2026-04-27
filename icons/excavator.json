@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "madsmadsdk"
+  ],
+  "tags": [
+    "heavy",
+    "bulldozer",
+    "earthmoving",
+    "equipment",
+    "industrial",
+    "excavator",
+    "machine",
+    "construction",
+    "digging",
+    "shovel",
+    "heavy equipment"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
