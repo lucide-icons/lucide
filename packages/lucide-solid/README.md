@@ -12,7 +12,7 @@ Lucide icon library for Solid applications.
 
   [![npm](https://img.shields.io/npm/v/lucide-solid?color=blue)](https://www.npmjs.com/package/lucide-solid)
   ![NPM Downloads](https://img.shields.io/npm/dw/lucide-solid)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
