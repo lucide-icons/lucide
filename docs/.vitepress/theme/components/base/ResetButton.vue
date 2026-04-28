@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { rotateCw } from '../../../data/iconNodes';
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import IconButton from './IconButton.vue';
 </script>
 
