@@ -1,24 +1,23 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "roriwa"
+    "roriwa",
+    "karsa-mistmere"
   ],
   "tags": [
-    "list",
-    "order",
-    "reorder",
-    "stack",
-    "layer",
-    "z-index",
+    "queue",
     "lower",
-    "move-down",
     "down",
-    "decrease",
-    "priority"
+    "playlist",
+    "layer",
+    "order",
+    "z-index",
+    "priority",
+    "move"
   ],
   "categories": [
-    "arrows",
     "design",
-    "layout"
+    "layout",
+    "multimedia"
   ]
 }
