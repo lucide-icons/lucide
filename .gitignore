@@ -14,6 +14,7 @@ coverage
 stats
 *.log
 outlined
+lucide-font
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx
@@ -25,9 +26,13 @@ packages/**/src/utils/*.ts
 packages/**/src/dynamicIconImports.ts
 packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js
+packages/**/dynamicIconImports.mjs
 packages/**/dynamicIconImports.d.ts
+packages/**/dynamicIconImports.d.mts
 packages/**/dynamicIconImports.js.map
+packages/**/dynamicIconImports.mjs.map
 packages/**/dynamic.d.ts
+packages/**/dynamic.d.mts
 packages/**/dynamic.mjs.map
 packages/**/dynamic.mjs
 packages/**/LICENSE
@@ -42,11 +47,13 @@ docs/.vitepress/.temp
 docs/.vitepress/data/iconNodes
 docs/.vitepress/data/iconMetaData.ts
 docs/.vitepress/data/releaseMetaData.json
-docs/.vitepress/data/releaseMetaData
+docs/.vitepress/data/releaseMetadata
 docs/.vitepress/data/categoriesData.json
 docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
 docs/.vitepress/data/brandStopwords.json
 docs/.vercel
 docs/.nitro
+docs/public/og/**
+!docs/public/og/general.png
 .gitignore

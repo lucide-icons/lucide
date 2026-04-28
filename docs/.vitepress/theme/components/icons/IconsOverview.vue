@@ -118,7 +118,14 @@ watch(searchQueryDebounced, () => {
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  window.history.pushState({}, '', '/icons/');
+  const url = new URL(window.location);
+  url.pathname = '/icons/';
+
+  if (searchQueryDebounced.value) {
+    url.searchParams.set('search', searchQueryDebounced.value);
+  }
+  
+  window.history.pushState({}, '', url);
 }
 </script>
 
@@ -185,5 +192,6 @@ function handleCloseDrawer() {
 
 .input-wrapper {
   width: 100%;
+  /* view-transition-name: icons-search-box; */
 }
 </style>

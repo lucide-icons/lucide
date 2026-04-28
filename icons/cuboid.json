@@ -1,20 +1,34 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "tags": [
     "brick",
     "block",
+    "box",
+    "3d",
+    "solid",
+    "volume",
     "container",
     "storage",
+    "shipping",
+    "carton",
     "geometry",
     "rectangular",
-    "hexahedron"
+    "hexahedron",
+    "butter",
+    "tofu",
+    "soap",
+    "cheese",
+    "package",
+    "parcel",
+    "crate"
   ],
   "categories": [
     "shapes",
     "math",
-    "buildings"
+    "food-beverage"
   ]
 }
