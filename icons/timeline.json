@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "tags",
+    "history"
+  ],
+  "categories": [
+    "time"
+  ]
+}

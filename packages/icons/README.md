@@ -11,7 +11,7 @@ Lucide helper library that exports icon data.
 <div align="center">
   [![npm](https://img.shields.io/npm/v/@lucide/icons?color=blue)](https://www.npmjs.com/package/@lucide/icons)
   ![NPM Downloads](https://img.shields.io/npm/dw/@lucide/icons)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
