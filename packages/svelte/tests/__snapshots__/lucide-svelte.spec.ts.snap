@@ -2,6 +2,7 @@
 
 exports[`Using lucide icon components > should add a class to the element 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide-icon lucide lucide-smile my-icon"
   fill="none"
   height="24"
@@ -51,14 +52,13 @@ exports[`Using lucide icon components > should add a class to the element 1`] = 
   
   <!---->
   <!---->
-  
-  <!---->
 </svg>
 `;
 
 exports[`Using lucide icon components > should adjust the size, stroke color and stroke width 1`] = `
 <div>
   <svg
+    aria-hidden="true"
     class="lucide-icon lucide lucide-smile"
     fill="none"
     height="48"
@@ -108,8 +108,6 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
     
     <!---->
     <!---->
-    
-    <!---->
   </svg>
   
   
@@ -126,6 +124,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-width="1"
      stroke-linecap="round"
      stroke-linejoin="round"
+     aria-hidden="true"
      class="lucide-icon lucide lucide-smile"
 >
   <circle cx="12"
@@ -153,6 +152,7 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
 exports[`Using lucide icon components > should render an component 1`] = `
 <div>
   <svg
+    aria-hidden="true"
     class="lucide-icon lucide lucide-smile"
     fill="none"
     height="24"
@@ -201,8 +201,6 @@ exports[`Using lucide icon components > should render an component 1`] = `
     </line>
     
     <!---->
-    <!---->
-    
     <!---->
   </svg>
   
@@ -261,11 +259,9 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
     </line>
     
     <!---->
-    <!---->
     <text>
       Test
     </text>
-    
     <!---->
   </svg>
   

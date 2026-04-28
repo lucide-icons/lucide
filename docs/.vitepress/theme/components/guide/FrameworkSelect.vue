@@ -118,5 +118,15 @@ label {
   font-weight: bold;
   margin-bottom: 4px;
   display: block;
+  position: relative;
+}
+
+.framework-select:before {
+  content: ' ';
+  position: absolute;
+  inset: 0 -16px -24px;
+  background: color-mix(in srgb, var(--vp-c-bg-alt), transparent 50%);
+  backdrop-filter: blur(4px);
+  mask-image: linear-gradient(to bottom, black calc(100% - 16px), transparent 100%);
 }
 </style>
