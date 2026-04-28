@@ -21,6 +21,11 @@
     "development"
   ],
   "aliases": [
-    "asterisk-square"
+    {
+      "name": "asterisk-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

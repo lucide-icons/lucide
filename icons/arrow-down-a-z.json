@@ -21,6 +21,11 @@
     "arrows"
   ],
   "aliases": [
-    "arrow-down-az"
+    {
+      "name": "arrow-down-az",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -15,6 +15,11 @@
     "navigation"
   ],
   "aliases": [
-    "parking-circle-off"
+    {
+      "name": "parking-circle-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

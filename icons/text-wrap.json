@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "bduffany",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "words",
+    "lines",
+    "break",
+    "paragraph"
+  ],
+  "categories": [
+    "text",
+    "arrows"
+  ],
+  "aliases": [
+    {
+      "name": "wrap-text",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

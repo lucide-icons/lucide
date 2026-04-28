@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "audio",
+    "music",
+    "volume"
+  ],
+  "categories": [
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-volume-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

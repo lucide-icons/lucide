@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "code",
+    "json",
+    "curly braces",
+    "curly brackets"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "file-json",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

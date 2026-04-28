@@ -21,6 +21,11 @@
     "tools"
   ],
   "aliases": [
-    "paintbrush-2"
+    {
+      "name": "paintbrush-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

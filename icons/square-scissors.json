@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "eden881"
   ],
   "tags": [
     "cut",
@@ -20,6 +21,11 @@
     "development"
   ],
   "aliases": [
-    "scissors-square"
+    {
+      "name": "scissors-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -21,32 +21,29 @@
     "aliases": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
             "type": "string"
           },
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "deprecated": {
-                "const": true
-              },
-              "deprecationReason": {
-                "$ref": "#/$defs/aliasDeprecationReasons"
-              },
-              "toBeRemovedInVersion": {
-                "$ref": "#/$defs/versionNumber",
-                "description": "The version this icon will be removed in."
-              }
-            },
-            "dependentRequired": {
-              "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
-            }
+          "deprecated": {
+            "const": true
+          },
+          "deprecationReason": {
+            "$ref": "#/$defs/aliasDeprecationReasons"
+          },
+          "toBeRemovedInVersion": {
+            "$ref": "#/$defs/versionNumber",
+            "description": "The version this icon will be removed in."
           }
-        ]
+        },
+        "dependentRequired": {
+          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecationReason": ["deprecated"],
+          "toBeRemovedInVersion": ["deprecated"]
+        }
       },
       "uniqueItems": true
     },
@@ -59,7 +56,6 @@
           "account",
           "animals",
           "arrows",
-          "brands",
           "buildings",
           "charts",
           "communication",
@@ -130,12 +126,14 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecationReason": ["deprecated"],
+    "toBeRemovedInVersion": ["deprecated"]
   },
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.brand"]
+      "enum": ["icon.renamed"]
     },
     "aliasDeprecationReasons": {
       "type": "string",

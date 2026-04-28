@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "virtual machine",
+    "virtual desktop",
+    "vm",
+    "vdi",
+    "computing",
+    "remote work",
+    "monitoring",
+    "infrastructure",
+    "software as a service",
+    "saas",
+    "workstation",
+    "environment",
+    "tv",
+    "screen",
+    "display"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "development"
+  ]
+}

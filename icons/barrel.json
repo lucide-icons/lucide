@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "keg",
+    "drum",
+    "tank",
+    "wine",
+    "beer",
+    "oak",
+    "wood",
+    "firkin",
+    "hogshead",
+    "kilderkin",
+    "barrique",
+    "solera",
+    "aging",
+    "whiskey",
+    "brewery",
+    "distillery",
+    "winery",
+    "vineyard"
+  ],
+  "categories": [
+    "food-beverage",
+    "navigation"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "Muhammad-Aqib-Bashir"
+  ],
+  "tags": [
+    "reading",
+    "library",
+    "study",
+    "education",
+    "research",
+    "knowledge",
+    "discover",
+    "browsing",
+    "lookup",
+    "finding",
+    "scanning"
+  ],
+  "categories": [
+    "text",
+    "development",
+    "gaming"
+  ]
+}

@@ -147,4 +147,37 @@ describe('Using lucide icon components', () => {
     expect(icon).toHaveAttribute('stroke', 'red');
     expect(icon).toHaveAttribute('stroke-width', '1');
   });
+
+  it('should not scale the strokeWidth when absoluteStrokeWidth is as empty value attribute', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: '',
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '1');
+  });
+
+  it('should not scale the strokeWidth when absoluteStrokeWidth is written in kebabCase', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        'stroke-width': '2',
+        'absolute-stroke-width': '',
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '1');
+  });
 });

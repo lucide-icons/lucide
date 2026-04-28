@@ -36,6 +36,11 @@
     "devices"
   ],
   "aliases": [
-    "minus-square"
+    {
+      "name": "minus-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

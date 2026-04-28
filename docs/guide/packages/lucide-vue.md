@@ -1,29 +1,32 @@
 # Lucide Vue
 
-Implementation of the lucide icon library for Vue applications.
+Vue 2 components for Lucide icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
 
-::: danger
-This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
-:::
+**What you can accomplish:**
+- Use icons as Vue 2 components with Options API integration
+- Maintain legacy Vue 2 applications with modern icon components
+- Integrate with Vue 2's template system and component lifecycle
+- Build applications using Vue 2's familiar syntax and patterns
+- Bridge the gap while planning migration to Vue 3
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue
+pnpm add @lucide/vue
 ```
 
 ```sh [yarn]
-yarn add lucide-vue
+yarn add @lucide/vue
 ```
 
 ```sh [npm]
-npm install lucide-vue
+npm install @lucide/vue
 ```
 
 ```sh [bun]
-bun add lucide-vue
+bun add @lucide/vue
 ```
 
 :::
@@ -36,21 +39,19 @@ Each icon can be imported as a Vue component, which renders an inline SVG Elemen
 
 ### Example
 
-Additional props can be passed to adjust the icon:
+You can pass additional props to adjust the icon.
 
 ```vue
-<template>
-  <Camera color="red" :size="32" />
-</template>
-
-<script>
-  import { Camera } from 'lucide-vue';
-
-  export default {
-    name: 'My Component',
-    components: { Camera }
-  };
+<script setup>
+import { Camera } from '@lucide/vue';
 </script>
+
+<template>
+  <Camera
+    color="red"
+    :size="32"
+  />
+</template>
 ```
 
 ## Props
@@ -60,7 +61,7 @@ Additional props can be passed to adjust the icon:
 | `size`                  | *number*  | 24           |
 | `color`                 | *string*  | currentColor |
 | `stroke-width`          | *number*  | 2            |
-| `absolute-stroke-width` | *boolean* | false        |
+| `absoluteStrokeWidth`   | *boolean* | false        |
 | `default-class`         | *string*  | lucide-icon  |
 
 ### Applying props
@@ -70,6 +71,28 @@ To customize the appearance of an icon, you can pass custom properties as props 
 ```vue
 <template>
   <Camera fill="red" />
+</template>
+```
+
+## With Lucide Lab or custom icons
+
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```vue
+<script setup>
+import { Icon } from '@lucide/vue';
+import { baseball } from '@lucide/lab';
+</script>
+
+<template>
+  <Icon :iconNode="baseball" />
 </template>
 ```
 
@@ -84,30 +107,37 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 ### Icon Component Example
 
 ```vue
-<template>
-  <component :is="icon" />
-</template>
+<script setup>
+import { computed } from 'vue';
+import * as icons from "@lucide/vue";
 
-<script>
-  import * as icons from 'lucide-vue';
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
+  },
+  size: Number,
+  color: String,
+  strokeWidth: Number,
+  defaultClass: String
+})
 
-  export default {
-    props: {
-      name: {
-        type: String,
-        required: true
-      }
-    },
-    computed: {
-      icon() {
-        return icons[this.name];
-      }
-    }
-  };
+const icon = computed(() => icons[props.name]);
 </script>
+
+<template>
+  <component
+    :is="icon"
+    :size="size"
+    :color="color"
+    :stroke-width="strokeWidth" :default-class="defaultClass"
+  />
+</template>
 ```
 
-#### Using the Icon Component
+### Using the Icon Component
+
+All other props listed above also work on the `Icon` Component.
 
 ```vue
 <template>
@@ -116,3 +146,25 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
   </div>
 </template>
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```vue
+<script setup>
+import { Check } from 'lucide-vue-next';
+</script>
+
+<template>
+  <Check
+    color="red"
+    :size="32"
+    aria-label="Task completed"
+  />
+</template>
+```
+
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

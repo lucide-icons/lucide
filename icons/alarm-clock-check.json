@@ -19,6 +19,11 @@
     "time"
   ],
   "aliases": [
-    "alarm-check"
+    {
+      "name": "alarm-check",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

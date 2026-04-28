@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "bobbin",
+    "spindle",
+    "yarn",
+    "thread",
+    "string",
+    "sewing",
+    "needlework"
+  ],
+  "categories": [
+    "communication",
+    "tools",
+    "social"
+  ]
+}
