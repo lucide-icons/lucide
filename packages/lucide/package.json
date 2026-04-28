@@ -25,7 +25,7 @@
   "source": "src/lucide.js",
   "main": "dist/cjs/lucide.js",
   "main:umd": "dist/umd/lucide.js",
-  "module": "dist/esm/lucide.js",
+  "module": "dist/esm/lucide.mjs",
   "unpkg": "dist/umd/lucide.min.js",
   "typings": "dist/lucide.d.ts",
   "sideEffects": false,
@@ -52,7 +52,6 @@
     "rollup": "^4.59.0",
     "rollup-plugin-dts": "^6.2.3",
     "typescript": "^5.8.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "vite": "^7.2.4"
   }
 }
