@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "reflect",
+    "mirror",
+    "alignment",
+    "dashed"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ],
+  "aliases": [
+    {
+      "name": "flip-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

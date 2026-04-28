@@ -8,8 +8,10 @@ import { LucideIcons } from '../icons/types';
 describe('LucideAngularComponent', () => {
   let testHostComponent: TestHostComponent;
   let testHostFixture: ComponentFixture<TestHostComponent>;
-  const getSvgAttribute = (attr: string) =>
+  const getAttribute = (attr: string) =>
     testHostFixture.nativeElement.querySelector('svg').getAttribute(attr);
+  const getRootAttribute = (attr: string) =>
+    testHostFixture.nativeElement.querySelector('i-lucide').getAttribute(attr);
   const testIcons: LucideIcons = {
     Demo: [['polyline', { points: '1 1 22 22' }]],
   };
@@ -31,28 +33,28 @@ describe('LucideAngularComponent', () => {
   it('should add all classes', () => {
     testHostFixture.detectChanges();
 
-    expect(getSvgAttribute('class')).toBe('lucide lucide-demo my-icon');
+    expect(getAttribute('class')).toBe('lucide lucide-demo my-icon');
   });
 
   it('should set color', () => {
     const color = 'red';
     testHostComponent.setColor(color);
     testHostFixture.detectChanges();
-    expect(getSvgAttribute('stroke')).toBe(color);
+    expect(getAttribute('stroke')).toBe(color);
   });
 
   it('should set size', () => {
     const size = 12;
     testHostComponent.setSize(size);
     testHostFixture.detectChanges();
-    expect(getSvgAttribute('width')).toBe(size.toString(10));
+    expect(getAttribute('width')).toBe(size.toString(10));
   });
 
   it('should set stroke width', () => {
     const strokeWidth = 1.41;
     testHostComponent.setStrokeWidth(strokeWidth);
     testHostFixture.detectChanges();
-    expect(getSvgAttribute('stroke-width')).toBe(strokeWidth.toString(10));
+    expect(getAttribute('stroke-width')).toBe(strokeWidth.toString(10));
   });
 
   it('should adjust stroke width', () => {
@@ -62,27 +64,61 @@ describe('LucideAngularComponent', () => {
     testHostComponent.setSize(12);
     testHostComponent.setAbsoluteStrokeWidth(true);
     testHostFixture.detectChanges();
-    expect(getSvgAttribute('stroke-width')).toBe(
+    expect(getAttribute('stroke-width')).toBe(
       formatFixed(strokeWidth / (size / defaultAttributes.height)),
     );
   });
 
+  it('should have aria-hidden prop when no aria prop is present', async () => {
+    testHostFixture.detectChanges();
+    expect(getRootAttribute('aria-hidden')).toBe('true');
+  });
+
+  it('should not have aria-hidden prop when aria prop is present', async () => {
+    const ariaLabel = 'Demo icon';
+    testHostComponent.setAriaLabel(ariaLabel);
+    testHostFixture.detectChanges();
+    expect(getRootAttribute('aria-label')).toBe(ariaLabel);
+    expect(getRootAttribute('aria-hidden')).toBeNull();
+  });
+
+  it('should not have aria-hidden prop when title prop is present', async () => {
+    const ariaLabel = 'Demo icon';
+    testHostComponent.setTitle(ariaLabel);
+    testHostFixture.detectChanges();
+    expect(getRootAttribute('title')).toBe(ariaLabel);
+    expect(getRootAttribute('aria-hidden')).toBeNull();
+  });
+
+  it('should never override aria-hidden prop', async () => {
+    testHostComponent.setAriaHidden(true);
+    testHostFixture.detectChanges();
+    expect(getRootAttribute('aria-hidden')).toBe('true');
+  });
+
   @Component({
     selector: 'lucide-spec-host-component',
-    template: ` <i-lucide
+    template: `<i-lucide
       name="demo"
       class="my-icon"
       [color]="color"
       [size]="size"
       [strokeWidth]="strokeWidth"
       [absoluteStrokeWidth]="absoluteStrokeWidth"
-    ></i-lucide>`,
+      [attr.aria-label]="ariaLabel"
+      [attr.title]="title"
+      [attr.aria-hidden]="ariaHidden"
+    >
+    </i-lucide>`,
   })
   class TestHostComponent {
     color?: string;
     size?: number;
     strokeWidth?: number;
     absoluteStrokeWidth = true;
+    ariaLabel?: string = undefined;
+    title?: string = undefined;
+    ariaHidden?: boolean = undefined;
 
     setColor(color: string): void {
       this.color = color;
@@ -98,6 +134,18 @@ describe('LucideAngularComponent', () => {
 
     setAbsoluteStrokeWidth(absoluteStrokeWidth: boolean): void {
       this.absoluteStrokeWidth = absoluteStrokeWidth;
+    }
+
+    setAriaLabel(label: string): void {
+      this.ariaLabel = label;
+    }
+
+    setTitle(title: string): void {
+      this.title = title;
+    }
+
+    setAriaHidden(ariaHidden: boolean): void {
+      this.ariaHidden = ariaHidden;
     }
   }
 });

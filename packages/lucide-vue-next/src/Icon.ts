@@ -1,11 +1,18 @@
 import { type FunctionalComponent, h } from 'vue';
-import { mergeClasses, toKebabCase, toPascalCase, isEmptyString } from '@lucide/shared';
+import {
+  mergeClasses,
+  toKebabCase,
+  toPascalCase,
+  isEmptyString,
+  hasA11yProp,
+} from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 
 interface IconProps {
   iconNode: IconNode;
   name: string;
+  as?: string | FunctionalComponent;
 }
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
@@ -16,6 +23,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     'absolute-stroke-width': absoluteStrokeWidthKebabCase,
     strokeWidth,
     'stroke-width': strokeWidthKebabCase,
+    as = 'svg',
     size = defaultAttributes.width,
     color = defaultAttributes.stroke,
     ...props
@@ -23,7 +31,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
   { slots },
 ) => {
   return h(
-    'svg',
+    as,
     {
       ...defaultAttributes,
       ...props,
@@ -46,6 +54,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
           ? [`lucide-${toKebabCase(toPascalCase(name))}-icon`, `lucide-${toKebabCase(name)}`]
           : ['lucide-icon']),
       ),
+      ...(!slots.default && !hasA11yProp(props) && { 'aria-hidden': 'true' }),
     },
     [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],
   );

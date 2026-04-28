@@ -29,7 +29,7 @@ export default function useSearchPlaceholder(
         }
       }
       state.value = {
-        isNoResults: query in BRAND_STOPWORDS || (searchResults.length === 0 && query !== ''),
+        isNoResults: query in BRAND_STOPWORDS && searchResults.length === 0 && query !== '',
         isBrand: query in BRAND_STOPWORDS,
         query: BRAND_STOPWORDS[query] ?? query,
       };
