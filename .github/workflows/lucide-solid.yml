@@ -1,6 +1,9 @@
 name: Lucide Solid Checks
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - packages/lucide-solid/**

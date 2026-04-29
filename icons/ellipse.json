@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KISHORE-KUMAR-S"
+  ],
+  "tags": [
+    "shape",
+    "geometry",
+    "rounded",
+    "smooth",
+    "outline",
+    "form",
+    "boundary",
+    "curve",
+    "shapes",
+    "ellipse",
+    "oval"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
