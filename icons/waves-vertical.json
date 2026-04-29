@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "steam",
+    "warmth",
+    "temperature",
+    "burn",
+    "hot",
+    "boiling",
+    "heat",
+    "smoke",
+    "vapor",
+    "smell",
+    "aroma",
+    "sauna"
+  ],
+  "categories": [
+    "weather",
+    "sustainability"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "ledge",
+    "rack",
+    "storage",
+    "inventory",
+    "furniture",
+    "sill",
+    "shelves",
+    "shelf",
+    "organize",
+    "display",
+    "store",
+    "arrange",
+    "unit",
+    "cabinet",
+    "fixture",
+    "retail",
+    "warehouse"
+  ],
+  "categories": [
+    "home"
+  ]
+}
