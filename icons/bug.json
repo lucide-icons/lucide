@@ -1,14 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
   "tags": [
     "issue",
+    "error",
+    "defect",
+    "testing",
+    "troubleshoot",
+    "problem",
     "report",
     "debug",
     "code",
-    "insect"
+    "insect",
+    "beetle"
   ],
   "categories": [
     "development",

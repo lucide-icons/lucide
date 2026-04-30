@@ -21,6 +21,11 @@
     "design"
   ],
   "aliases": [
-    "box-select"
+    {
+      "name": "box-select",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

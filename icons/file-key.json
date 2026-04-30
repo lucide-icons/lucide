@@ -13,5 +13,13 @@
   "categories": [
     "files",
     "security"
+  ],
+  "aliases": [
+    {
+      "name": "file-key-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

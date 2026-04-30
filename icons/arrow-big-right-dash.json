@@ -2,7 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
   "tags": [
     "next",
@@ -14,7 +16,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ]
 }

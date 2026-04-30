@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "tags": [
+    "music",
+    "audio",
+    "sound",
+    "headphones"
+  ],
+  "categories": [
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-audio",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "file-audio-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

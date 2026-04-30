@@ -27,6 +27,11 @@
     "design"
   ],
   "aliases": [
-    "kanban-square"
+    {
+      "name": "kanban-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

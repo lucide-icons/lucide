@@ -19,6 +19,11 @@
     "layout"
   ],
   "aliases": [
-    "more-vertical"
+    {
+      "name": "more-vertical",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

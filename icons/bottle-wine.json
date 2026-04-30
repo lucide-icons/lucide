@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "tags": [
+    "alcohol",
+    "drink",
+    "glass",
+    "goblet",
+    "chalice",
+    "vineyard",
+    "winery",
+    "red",
+    "white",
+    "rose",
+    "dry",
+    "sparkling",
+    "bar",
+    "party",
+    "nightclub",
+    "nightlife",
+    "sommelier",
+    "restaurant",
+    "dinner",
+    "meal"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "danielbayley",
+    "luisdlopera"
+  ],
+  "tags": [
+    "connection",
+    "signal",
+    "wireless",
+    "synchronize",
+    "reconnect",
+    "reset",
+    "restart"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

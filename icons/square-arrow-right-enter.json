@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ethanhazel",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "left",
+    "in",
+    "inside",
+    "input",
+    "insert",
+    "source",
+    "import",
+    "place",
+    "->"
+  ],
+  "categories": [
+    "arrows",
+    "shapes",
+    "layout",
+    "multimedia"
+  ]
+}

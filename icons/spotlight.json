@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme",
+    "jguddas",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "winner",
+    "soapbox",
+    "stage",
+    "entertainment",
+    "drama",
+    "podium",
+    "actor",
+    "actress",
+    "singer",
+    "light",
+    "beam",
+    "play",
+    "theatre",
+    "show",
+    "focus",
+    "concert",
+    "performance",
+    "lens",
+    "leaderboard",
+    "followspot",
+    "best",
+    "highlight"
+  ],
+  "categories": [
+    "devices",
+    "photography",
+    "multimedia",
+    "communication"
+  ]
+}

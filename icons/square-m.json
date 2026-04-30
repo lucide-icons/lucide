@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "metro",
@@ -15,6 +17,11 @@
     "navigation"
   ],
   "aliases": [
-    "m-square"
+    {
+      "name": "m-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
