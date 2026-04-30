@@ -6,12 +6,11 @@
     "karsa-mistmere"
   ],
   "tags": [
-    "add to cart",
-    "buy",
+    "remove from cart",
     "ecommerce",
     "shopping",
-    "plus",
-    "new item"
+    "minus",
+    "remove item"
   ],
   "categories": [
     "shopping"
