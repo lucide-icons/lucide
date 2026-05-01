@@ -23,7 +23,7 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
-      'layout-top': () => h(LayoutTop),
+      // 'layout-top': () => h(LayoutTop),
     });
   },
   enhanceApp({ app }) {

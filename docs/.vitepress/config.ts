@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url';
-import { defineConfig } from 'vitepress';
+import { defineConfig, ThemeOptions, UserConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import sidebar from './sidebar';
 import snackPlayer from './markdown/snackPlayer';
@@ -59,6 +59,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPCarbonAds\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPCarbonAds.vue', import.meta.url),
+          ),
+        },
+        {
           find: '~/.vitepress',
           replacement: fileURLToPath(new URL('./', import.meta.url)),
         },
@@ -75,7 +81,7 @@ export default defineConfig({
           'brand-logo-statement.md',
           'icons/**', // Not working, need investigation
         ],
-      }),
+      }) as unknown as UserConfig['vite']['plugins'][0],
     ],
   },
   head: getHeadConfig({ title, description, socialTitle }),

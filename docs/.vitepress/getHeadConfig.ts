@@ -24,6 +24,13 @@ const getHeadConfig = ({
         defer: '',
       },
     ],
+    // [
+    //   'script',
+    //   {
+    //     src: 'https://media.bitterbrains.com/main.js?from=LUCIDE&type=top',
+    //     async: 'true',
+    //   },
+    // ],
     [
       'meta',
       {

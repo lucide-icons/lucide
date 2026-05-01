@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import type { DefaultTheme } from 'vitepress/theme'
 import { ref, watch, onMounted } from 'vue'
-import { useAside } from '../composables/aside'
-import { useData } from '../composables/data'
+import { useAside } from 'vitepress/dist/client/theme-default/composables/aside.js'
+import { useData } from 'vitepress/dist/client/theme-default/composables/data.js'
 
 const { page } = useData()
 const props = defineProps<{
   carbonAds: DefaultTheme.CarbonAdsOptions
+  overlay?: boolean
 }>()
 
 const carbonOptions = props.carbonAds
@@ -45,7 +46,7 @@ if (carbonOptions) {
     // if the page is loaded when aside is active, load carbon directly.
     // otherwise, only load it if the page resizes to wide enough. this avoids
     // loading carbon at all on mobile where it's never shown
-    if (isAsideEnabled.value) {
+    if (isAsideEnabled.value || props.overlay) {
       init()
     } else {
       watch(isAsideEnabled, (wide) => wide && init())
@@ -63,7 +64,7 @@ if (carbonOptions) {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 20px;
   border-radius: 12px;
   min-height: 256px;
   text-align: center;
@@ -89,10 +90,10 @@ if (carbonOptions) {
 .VPCarbonAds :deep(.carbon-text:hover) {
   color: var(--vp-carbon-ads-hover-text-color);
 }
-
+.VPCarbonAds :deep(#carbon-responsive .carbon-poweredby),
 .VPCarbonAds :deep(.carbon-poweredby) {
   display: block;
-  padding-top: 6px;
+  padding-bottom: 2px;
   font-size: 11px;
   font-weight: 500;
   color: var(--vp-carbon-ads-poweredby-color);
@@ -100,6 +101,11 @@ if (carbonOptions) {
   transition: color 0.25s;
 }
 
+.VPCarbonAds :deep(#carbon-responsive .carbon-poweredby) {
+  text-align: left;
+}
+
+.VPCarbonAds :deep(#carbon-responsive .carbon-poweredby:hover),
 .VPCarbonAds :deep(.carbon-poweredby:hover) {
   color: var(--vp-carbon-ads-hover-poweredby-color);
 }
@@ -110,5 +116,13 @@ if (carbonOptions) {
 
 .VPCarbonAds :deep(> div:first-of-type) {
   display: block;
+}
+
+.VPCarbonAds :deep(#carbon-responsive) {
+  flex-direction: column-reverse;
+}
+
+.VPCarbonAds :deep(#carbon-responsive .carbon-responsive-wrap) {
+  border-radius: 10px;
 }
 </style>
