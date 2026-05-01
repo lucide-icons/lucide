@@ -18,12 +18,21 @@
     "institute",
     "pediment",
     "portico",
+    "doric",
     "columns",
     "pillars",
     "classical",
     "architecture",
     "government",
-    "institution"
+    "institution",
+    "monument",
+    "site",
+    "history",
+    "historic",
+    "library",
+    "temple",
+    "ancient",
+    "structure"
   ],
   "categories": [
     "finance",
