@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ethanhazel",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "out",
+    "outside",
+    "output",
+    "export",
+    "->"
+  ],
+  "categories": [
+    "arrows",
+    "shapes",
+    "layout",
+    "multimedia"
+  ]
+}
