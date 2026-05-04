@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "oil",
+    "rig",
+    "oil well",
+    "fracking",
+    "frack well",
+    "frack site",
+    "well site",
+    "oil site"
+  ],
+  "categories": [
+    "fracking",
+    "oil",
+    "gas"
+  ]
+}
