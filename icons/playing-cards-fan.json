@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Barakudum",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "cards",
+    "playing",
+    "playing cards",
+    "deck",
+    "fan",
+    "spread",
+    "hand",
+    "poker",
+    "casino",
+    "game",
+    "gambling"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
