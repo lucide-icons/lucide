@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "oil",
+    "gas",
+    "fracking",
+    "drilling",
+    "oil rig",
+    "oil well",
+    "frack site",
+    "water well",
+    "drill-site"
+  ],
+  "categories": [
+    "energy",
+    "oil and gas",
+    "petroleum",
+    "drilling",
+    "natural resources",
+    "water"
+  ]
+}
