@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "umbrella",
+    "sunshade",
+    "beach",
+    "shade",
+    "sun",
+    "protection",
+    "cover",
+    "canopy",
+    "garden",
+    "outdoors",
+    "resort",
+    "travel",
+    "vacation",
+    "holiday",
+    "summer",
+    "apparel",
+    "accessory",
+    "sunbathing",
+    "relax",
+    "tropical"
+  ],
+  "categories": [
+    "travel",
+    "weather"
+  ]
+}
