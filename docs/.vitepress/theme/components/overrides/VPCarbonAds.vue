@@ -74,6 +74,8 @@ if (carbonOptions) {
   background-color: var(--vp-carbon-ads-bg-color);
 }
 
+.VPCarbonAds
+
 .VPCarbonAds :deep(img) {
   margin: 0 auto;
   border-radius: 6px;
@@ -99,6 +101,11 @@ if (carbonOptions) {
   color: var(--vp-carbon-ads-poweredby-color);
   text-transform: uppercase;
   transition: color 0.25s;
+}
+.VPCarbonAds :deep(#carbon-responsive) {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
 }
 
 .VPCarbonAds :deep(#carbon-responsive .carbon-poweredby) {
