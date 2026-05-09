@@ -14,12 +14,14 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir: 'dist/cjs',
+    extension: 'js',
   },
   {
     format: 'esm',
     inputs,
     outputDir: 'dist/esm',
     preserveModules: true,
+    extension: 'mjs',
   },
   {
     format: 'esm',
@@ -27,11 +29,12 @@ const bundles = [
     outputDir: 'dist/esm',
     external: [/src/],
     preserveModules: true,
+    extension: 'mjs',
     paths: (id) => {
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `./${modulePath}.js`;
+        return `./${modulePath}.mjs`;
       }
     },
   },
@@ -40,11 +43,12 @@ const bundles = [
     inputs: ['src/dynamic.ts'],
     outputFile: 'dynamic.mjs',
     external: [/src/],
+    extension: 'mjs',
     paths: (id) => {
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `dist/esm/${modulePath}.js`;
+        return `dist/esm/${modulePath}.mjs`;
       }
     },
   },
@@ -60,6 +64,7 @@ const configs = bundles
       minify,
       preserveModules,
       entryFileNames,
+      extension = 'js',
       external = [],
       paths,
     }) =>
@@ -79,12 +84,12 @@ const configs = bundles
           ...(preserveModules
             ? {
                 dir: outputDir,
+                entryFileNames: entryFileNames ?? `[name].${extension}`,
               }
             : {
-                file: outputFile ?? `${outputDir}/${outputFileName}.js`,
+                file: outputFile ?? `${outputDir}/${outputFileName}.${extension}`,
               }),
           paths,
-          entryFileNames,
           format,
           sourcemap: true,
           preserveModules,

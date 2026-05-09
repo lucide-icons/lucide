@@ -6,7 +6,8 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
-    "start": "node ./src/main.ts"
+    "start": "node ./src/main.ts",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
