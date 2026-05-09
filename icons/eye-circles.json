@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "peterthoeny"
+  ],
+  "tags": [
+    "mirror",
+    "vision",
+    "look",
+    "see",
+    "face",
+    "expression",
+    "appearance",
+    "gaze",
+    "ocular",
+    "eye",
+    "circle",
+    "switch",
+    "mode"
+  ],
+  "categories": [
+    "shapes",
+    "emoji"
+  ]
+}
