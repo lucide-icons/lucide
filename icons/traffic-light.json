@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AleksejDix"
+  ],
+  "tags": [
+    "signal",
+    "street",
+    "crosswalk",
+    "stop",
+    "go",
+    "pedestrian",
+    "traffic",
+    "light",
+    "car",
+    "sign"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}
