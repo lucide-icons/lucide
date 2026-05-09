@@ -11,7 +11,26 @@
     "alert",
     "danger",
     "protected",
-    "exclamation mark"
+    "exclamation mark",
+    "bang",
+    "ecphoneme",
+    "screamer",
+    "gasper",
+    "slammer",
+    "startler",
+    "shriek",
+    "factorial",
+    "surprise",
+    "humour",
+    "anger",
+    "interjection",
+    "emphasis",
+    "negation",
+    "click",
+    "good",
+    "excellent",
+    "imperative",
+    "emphasis"
   ],
   "categories": [
     "notifications"
