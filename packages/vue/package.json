@@ -23,7 +23,7 @@
   "amdName": "lucide-vue",
   "source": "build/lucide-vue.js",
   "main": "dist/cjs/lucide-vue.js",
-  "module": "dist/esm/lucide-vue.js",
+  "module": "dist/esm/lucide-vue.mjs",
   "typings": "dist/lucide-vue.d.ts",
   "sideEffects": false,
   "files": [
