@@ -10,8 +10,6 @@
   position: sticky;
   z-index: 10;
   top: var(--vp-layout-top-height);
-  /* padding-top: 24px;
-  margin-top: calc(var(--vp-layout-top-height) * -1); */
   width: 100%;
   display: flex;
   margin-bottom: 32px;
