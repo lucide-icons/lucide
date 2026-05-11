@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { readMetadata } from './readMetadata.ts';
+import { resolveMetadataExtends } from './resolveMetadataExtends.ts';
 import { type IconMetadata } from '../../build-icons/types.ts';
 
 /**
@@ -22,5 +23,12 @@ export const readAllMetadata = async (directory: string): Promise<Record<string,
     throw new Error(`No metadata files found in directory: ${directory}`);
   }
 
-  return Object.fromEntries(metadata);
+  const metadataMap = Object.fromEntries(metadata);
+
+  // Resolve extends references
+  try {
+    return await resolveMetadataExtends(metadataMap);
+  } catch (error) {
+    throw new Error(`Failed to resolve metadata extends: ${error instanceof Error ? error.message : String(error)}`);
+  }
 };

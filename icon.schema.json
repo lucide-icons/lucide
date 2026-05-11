@@ -13,7 +13,11 @@
   "title": "Lucide Icons icon schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "categories", "tags"],
+  "required": [
+    "$schema",
+    "categories",
+    "tags"
+  ],
   "properties": {
     "$schema": {
       "type": "string"
@@ -23,7 +27,9 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -40,9 +46,16 @@
           }
         },
         "dependentRequired": {
-          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
-          "deprecationReason": ["deprecated"],
-          "toBeRemovedInVersion": ["deprecated"]
+          "deprecated": [
+            "deprecationReason",
+            "toBeRemovedInVersion"
+          ],
+          "deprecationReason": [
+            "deprecated"
+          ],
+          "toBeRemovedInVersion": [
+            "deprecated"
+          ]
         }
       },
       "uniqueItems": true
@@ -123,21 +136,55 @@
     "toBeRemovedInVersion": {
       "$ref": "#/$defs/versionNumber",
       "description": "The version this icon will be removed in."
+    },
+    "$extends.tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Icon names to inherit tags from"
+    },
+    "$extends.categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Icon names to inherit categories from"
+    },
+    "$extends.contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Icon names to inherit contributors from"
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
-    "deprecationReason": ["deprecated"],
-    "toBeRemovedInVersion": ["deprecated"]
+    "deprecated": [
+      "deprecationReason",
+      "toBeRemovedInVersion"
+    ],
+    "deprecationReason": [
+      "deprecated"
+    ],
+    "toBeRemovedInVersion": [
+      "deprecated"
+    ]
   },
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.renamed"]
+      "enum": [
+        "icon.renamed"
+      ]
     },
     "aliasDeprecationReasons": {
       "type": "string",
-      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
+      "enum": [
+        "alias.typo",
+        "alias.name",
+        "alias.duplicate"
+      ]
     },
     "versionNumber": {
       "type": "string",
