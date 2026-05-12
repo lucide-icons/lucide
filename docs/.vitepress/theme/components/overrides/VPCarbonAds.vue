@@ -74,8 +74,6 @@ if (carbonOptions) {
   background-color: var(--vp-carbon-ads-bg-color);
 }
 
-.VPCarbonAds
-
 .VPCarbonAds :deep(img) {
   margin: 0 auto;
   border-radius: 6px;

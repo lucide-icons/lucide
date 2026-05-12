@@ -1,13 +1,11 @@
 import { fileURLToPath, URL } from 'node:url';
-import { defineConfig, ThemeOptions, UserConfig } from 'vitepress';
+import { defineConfig, UserConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import sidebar from './sidebar';
 import snackPlayer from './markdown/snackPlayer';
 import sandpackPlugin from './markdown/sandpack';
 import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
-import getStructuredData from './getStructuredData';
-import { createGeneralOGImage, createIconOGImage } from './createOGImage';
 import llmstxt from 'vitepress-plugin-llms';
 import { transformPageData } from './transformPageData';
 import getHeadConfig from './getHeadConfig';
