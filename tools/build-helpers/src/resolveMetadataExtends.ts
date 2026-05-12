@@ -2,6 +2,7 @@ import { type IconMetadata } from '../../build-icons/types.ts';
 import { mergeArrays } from './mergeArrays.ts';
 
 type MetadataWithExtends = IconMetadata & {
+  '$extends'?: string[];
   '$extends.tags'?: string[];
   '$extends.categories'?: string[];
   '$extends.contributors'?: string[];
@@ -14,7 +15,7 @@ interface ResolveOptions {
 /**
  * Resolves metadata extends for all icons
  * Recursively resolves extends chains and merges inherited properties
- * Removes $extends.* properties from final metadata
+ * Removes $extends* properties from final metadata
  */
 export const resolveMetadataExtends = async (
   allMetadata: Record<string, MetadataWithExtends>,
@@ -73,7 +74,20 @@ export const resolveIconExtends = (
   const inheritedCategories: string[] = [];
   const inheritedContributors: string[] = [];
 
-  // Resolve tags extends
+  // Resolve generic $extends first (inherits tags, categories, contributors)
+  if (metadata['$extends']?.length) {
+    for (const parentName of metadata['$extends']) {
+      validateParentExists(iconName, parentName, allMetadata);
+      validateNotSelfReference(iconName, parentName);
+
+      const parent = resolveIconExtends(parentName, allMetadata, visited, recursionStack);
+      inheritedTags.push(...parent.tags);
+      inheritedCategories.push(...parent.categories);
+      inheritedContributors.push(...parent.contributors);
+    }
+  }
+
+  // Resolve specific $extends.tags
   if (metadata['$extends.tags']?.length) {
     for (const parentName of metadata['$extends.tags']) {
       validateParentExists(iconName, parentName, allMetadata);
@@ -84,7 +98,7 @@ export const resolveIconExtends = (
     }
   }
 
-  // Resolve categories extends
+  // Resolve specific $extends.categories
   if (metadata['$extends.categories']?.length) {
     for (const parentName of metadata['$extends.categories']) {
       validateParentExists(iconName, parentName, allMetadata);
@@ -95,7 +109,7 @@ export const resolveIconExtends = (
     }
   }
 
-  // Resolve contributors extends
+  // Resolve specific $extends.contributors
   if (metadata['$extends.contributors']?.length) {
     for (const parentName of metadata['$extends.contributors']) {
       validateParentExists(iconName, parentName, allMetadata);
@@ -118,6 +132,7 @@ export const resolveIconExtends = (
   };
 
   // Remove extends properties from resolved metadata
+  delete (resolvedMetadata as any)['$extends'];
   delete (resolvedMetadata as any)['$extends.tags'];
   delete (resolvedMetadata as any)['$extends.categories'];
   delete (resolvedMetadata as any)['$extends.contributors'];
@@ -137,6 +152,7 @@ export const validateExtendsReferences = (
   allMetadata: Record<string, MetadataWithExtends>,
 ): void => {
   const allExtends = [
+    ...(metadata['$extends'] || []),
     ...(metadata['$extends.tags'] || []),
     ...(metadata['$extends.categories'] || []),
     ...(metadata['$extends.contributors'] || []),

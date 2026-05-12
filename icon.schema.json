@@ -137,6 +137,13 @@
       "$ref": "#/$defs/versionNumber",
       "description": "The version this icon will be removed in."
     },
+    "$extends": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Icon names to inherit all properties from (tags, categories, contributors)"
+    },
     "$extends.tags": {
       "type": "array",
       "items": {
