@@ -44,7 +44,7 @@ export type IconMetadataBase = {
   tags: string[];
   deprecationReason?: IconDeprecationReason;
   deprecated?: boolean;
-  '$extends'?: string[];
+  $extends?: string[];
   '$extends.tags'?: string[];
   '$extends.categories'?: string[];
   '$extends.contributors'?: string[];

@@ -2,7 +2,7 @@ import { type IconMetadata } from '../../build-icons/types.ts';
 import { mergeArrays } from './mergeArrays.ts';
 
 type MetadataWithExtends = IconMetadata & {
-  '$extends'?: string[];
+  $extends?: string[];
   '$extends.tags'?: string[];
   '$extends.categories'?: string[];
   '$extends.contributors'?: string[];

@@ -29,6 +29,8 @@ export const readAllMetadata = async (directory: string): Promise<Record<string,
   try {
     return await resolveMetadataExtends(metadataMap);
   } catch (error) {
-    throw new Error(`Failed to resolve metadata extends: ${error instanceof Error ? error.message : String(error)}`);
+    throw new Error(
+      `Failed to resolve metadata extends: ${error instanceof Error ? error.message : String(error)}`,
+    );
   }
 };
