@@ -17,6 +17,7 @@ packages/lucide-static/sprite.svg
 packages/lucide-static/tags.json
 packages/lucide-static/icon-nodes.json
 packages/lucide-static/font
+packages/svelte/.svelte-kit
 
 # lucide-svelte
 packages/lucide-svelte/src/icons/*.svelte
