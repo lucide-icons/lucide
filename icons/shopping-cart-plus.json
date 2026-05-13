@@ -2,16 +2,19 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ajay199210",
+    "jguddas",
     "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
     "add to cart",
     "buy",
-    "ecommerce",
+    "purchase",
+    "e-commerce",
     "shopping",
     "plus",
-    "new item"
+    "new item",
+    "add item"
   ],
   "categories": [
     "shopping"

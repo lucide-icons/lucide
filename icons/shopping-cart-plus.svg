@@ -9,11 +9,11 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M12 5.5H4.729" />
-  <path d="M16 5.5h5" />
-  <path d="M18 18H8a2 2 0 0 1 0-4h10.446a2 2 0 0 0 1.73-1l.324-1.5" />
-  <path d="M18.5 3v5" />
-  <path d="M2.05 2.05h2L6.5 14.5" />
+  <path d="M16 5h5" />
+  <path d="M18.5 2.5v5" />
+  <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+  <path d="m21.189 11-.236 1.43A2 2 0 0 1 18.962 14H6.25" />
+  <path d="M4.563 5H12" />
   <circle cx="18" cy="20" r="2" />
   <circle cx="8" cy="20" r="2" />
 </svg>

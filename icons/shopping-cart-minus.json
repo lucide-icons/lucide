@@ -2,12 +2,13 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ajay199210",
+    "jguddas",
     "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
     "remove from cart",
-    "ecommerce",
+    "e-commerce",
     "shopping",
     "minus",
     "remove item"
