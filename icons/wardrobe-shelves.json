@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["AJAyanbisi"],
+  "tags": [
+    "armoire",
+    "bedroom",
+    "cabinet",
+    "closet",
+    "clothes",
+    "cupboard",
+    "dresser",
+    "furniture",
+    "organizer",
+    "shelving",
+    "storage"
+  ],
+  "categories": [
+    "buildings",
+    "home"
+  ]
+}
