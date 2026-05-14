@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "alexrefshauge"
+  ],
+  "tags": [
+    "golf",
+    "club",
+    "course",
+    "tee",
+    "fairway",
+    "green",
+    "putting",
+    "putt",
+    "golfer",
+    "hole",
+    "tournament",
+    "recreation",
+    "leisure",
+    "outdoor",
+    "game",
+    "bounce"
+  ],
+  "categories": [
+    "sports"
+  ]
+}
