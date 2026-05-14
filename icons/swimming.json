@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["AJAyanbisi"],
+  "tags": [
+    "athlete",
+    "exercise",
+    "fitness",
+    "leisure",
+    "ocean",
+    "pool",
+    "sport",
+    "swimmer",
+    "water"
+  ],
+  "categories": [
+    "people",
+    "sports",
+    "travel"
+  ]
+}
