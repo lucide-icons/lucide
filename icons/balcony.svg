@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2 22H22" />
+  <path d="M2 14H22" />
+  <path d="M4 14V22" />
+  <path d="M20 14V22" />
+  <path d="M8 14V22" />
+  <path d="M16 14V22" />
+  <path d="M12 14V22" />
+  <path d="M6 14V4C6 2.895 6.895 2 8 2H16C17.105 2 18 2.895 18 4V14" />
+  <path d="M12 2V14" />
+  <path d="M6 9H18" />
+</svg>
