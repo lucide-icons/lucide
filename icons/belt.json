@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": ["AJAyanbisi"],
+  "tags": [
+    "accessory",
+    "buckle",
+    "clothing",
+    "fashion",
+    "leather",
+    "strap",
+    "waist"
+  ],
+  "categories": [
+    "home"
+  ]
+}
