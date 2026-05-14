@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Guido3000"
+  ],
+  "tags": [
+    "€",
+    "euro",
+    "currency",
+    "money",
+    "payment",
+    "coin",
+    "finance",
+    "financial",
+    "exchange"
+  ],
+  "categories": [
+    "shopping",
+    "currency"
+  ]
+}
