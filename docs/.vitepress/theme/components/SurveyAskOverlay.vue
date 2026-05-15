@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useSessionStorage } from '@vueuse/core';
+import { useLocalStorage } from '@vueuse/core';
 import IconButton from './base/IconButton.vue';
 import { x } from '../../data/iconNodes';
 import Icon from '@lucide/vue/src/Icon';
 import { computed, onMounted, ref } from 'vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 
-const showAskSurvey = useSessionStorage('show-ask-overlay', true, {
+const showAskSurvey = useLocalStorage('show-ask-overlay', true, {
   initOnMounted: true,
 });
 
