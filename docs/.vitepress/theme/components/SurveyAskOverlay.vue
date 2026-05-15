@@ -54,7 +54,7 @@ function initTally() {
   }
 }
 
-function hideAd() {
+function hidePopup() {
   showAskSurvey.value = false;
 }
 </script>
@@ -69,7 +69,7 @@ function hideAd() {
       v-if="theme.carbonAds"
     >
       <IconButton
-        @click="hideAd"
+        @click="hidePopup"
         class="hide-button"
       >
         <Icon
@@ -97,7 +97,7 @@ function hideAd() {
         <VPButton
           text="Close"
           theme="alt"
-          @click="hideAd"
+          @click="hidePopup"
         />
       </div>
 
@@ -115,8 +115,8 @@ function hideAd() {
   max-width: 420px;
   left: 24px;
   transition:
-    opacity 0.5s,
-    transform 0.25s ease;
+    opacity 0.25s,
+    transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   padding: 20px;
   border-radius: 12px;
   box-shadow: var(--vp-shadow-4);
@@ -150,10 +150,10 @@ function hideAd() {
   gap: 16px;
 }
 
-.ask-overlay.hide-ad {
+.ask-overlay.show-popup {
   transition:
-    opacity 0.25s,
-    transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity 0.5s,
+    transform 0.25s ease;
 }
 
 .hide-button {
