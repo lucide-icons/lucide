@@ -1,23 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
+    "ajay199210",
     "jguddas",
     "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
-    "trolley",
-    "cart",
-    "basket",
+    "remove from cart",
     "e-commerce",
     "shopping",
-    "store",
-    "purchase",
-    "products",
-    "items",
-    "ingredients"
+    "minus",
+    "remove item"
   ],
   "categories": [
     "shopping"

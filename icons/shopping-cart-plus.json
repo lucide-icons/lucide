@@ -1,23 +1,20 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
+    "ajay199210",
     "jguddas",
     "ericfennis",
     "karsa-mistmere"
   ],
   "tags": [
-    "trolley",
-    "cart",
-    "basket",
+    "add to cart",
+    "buy",
+    "purchase",
     "e-commerce",
     "shopping",
-    "store",
-    "purchase",
-    "products",
-    "items",
-    "ingredients"
+    "plus",
+    "new item",
+    "add item"
   ],
   "categories": [
     "shopping"
