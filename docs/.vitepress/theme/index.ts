@@ -12,8 +12,6 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import FrameworkSelect from './components/guide/FrameworkSelect.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import VPFooter from './components/overrides/VPFooter.vue';
-
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -24,7 +22,6 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
-      'page-bottom': () => h(VPFooter),
       // Keep this here for now, we might want to add more things to the top bar in the future
       // 'layout-top': () => h(LayoutTop),
     });
