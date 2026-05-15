@@ -66,7 +66,6 @@ function hidePopup() {
         'show-popup': showPopup,
       }"
       class="ask-overlay"
-      v-if="theme.carbonAds"
     >
       <IconButton
         @click="hidePopup"
