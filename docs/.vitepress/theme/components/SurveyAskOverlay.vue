@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
 import { useSessionStorage } from '@vueuse/core';
 import IconButton from './base/IconButton.vue';
 import { x } from '../../data/iconNodes';
@@ -7,7 +6,6 @@ import Icon from '@lucide/vue/src/Icon';
 import { computed, onMounted, ref } from 'vue';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 
-const { theme } = useData();
 const showAskSurvey = useSessionStorage('show-ask-overlay', true, {
   initOnMounted: true,
 });
@@ -99,13 +97,11 @@ function hidePopup() {
           @click="hidePopup"
         />
       </div>
-
     </div>
   </Teleport>
 </template>
 
 <style scoped>
-
 .ask-overlay {
   position: fixed;
   z-index: 99;;
