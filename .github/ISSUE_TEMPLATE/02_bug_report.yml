@@ -1,6 +1,6 @@
 name: Bug report
 description: Create a report to help us improve
-labels: ['🐛 bug']
+labels: ["🐛 bug"]
 body:
   - type: markdown
     attributes:
@@ -13,21 +13,19 @@ body:
       description: Which Lucide packages are affected? You may select more than one.
       options:
         - label: lucide
-        - label: lucide-angular (old version)
-        - label: '@lucide/angular (new version)'
-        - label: '@lucide/astro'
-        - label: lucide-flutter
-        - label: lucide-preact
         - label: lucide-react
+        - label: "@lucide/vue"
+        - label: "@lucide/svelte"
+        - label: "@lucide/angular"
+        - label: "@lucide/astro"
         - label: lucide-react-native
+        - label: lucide-preact
         - label: lucide-solid
         - label: lucide-static
-        - label: lucide-svelte (old version)
-        - label: '@lucide/svelte (new version)'
-        - label: lucide-vue
-        - label: lucide-vue-next
-        - label: lucide-astro
-        - label: '@lucide/icons'
+        - label: "@lucide/icons"
+        - label: lucide-vue-next (deprecated)
+        - label: lucide-svelte (deprecated)
+        - label: lucide-angular (deprecated)
         - label: Figma plugin
         - label: source/main
         - label: other/not relevant
@@ -38,7 +36,7 @@ body:
     attributes:
       label: Version
       description: What version of Lucide are you running?
-      placeholder: e.g. 0.289.1
+      placeholder: e.g. 1.1.0
     validations:
       required: true
   - type: checkboxes
@@ -47,8 +45,8 @@ body:
       label: Can you reproduce this in the latest version?
       description: i.e. after running `npm install lucide-react@latest`
       options:
-        - label: 'Yes'
-        - label: 'No'
+        - label: "Yes"
+        - label: "No"
     validations:
       required: false
   - type: checkboxes
