@@ -59,21 +59,30 @@ declare global {
           overlay?: boolean;
           emoji?: {
             text: string;
-            animation: 'none' | 'wave' | 'tada' | 'heart-beat' | 'spin' | 'flash' | 'bounce' | 'rubber-band' | 'head-shake';
+            animation:
+              | 'none'
+              | 'wave'
+              | 'tada'
+              | 'heart-beat'
+              | 'spin'
+              | 'flash'
+              | 'bounce'
+              | 'rubber-band'
+              | 'head-shake';
           };
           autoClose?: number; // in milliseconds
           showOnce?: boolean;
           doNotShowAfterSubmit?: boolean;
           customFormUrl?: string; // when you want to load the form via it's custom domain URL
           hiddenFields?: {
-            [key: string]: any,
+            [key: string]: any;
           };
           onOpen?: () => void;
           onClose?: () => void;
           onPageView?: (page: number) => void;
           onSubmit?: (payload: SubmissionPayload) => void;
-        }
+        },
       ) => void;
-    }
+    };
   }
 }
