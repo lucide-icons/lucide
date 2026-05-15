@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "tags": [
+    "diploma",
+    "official",
+    "proof",
+    "fact",
+    "verified",
+    "license",
+    "warrant",
+    "authorization",
+    "legal",
+    "ownership",
+    "credential",
+    "ssl",
+    "tls",
+    "security",
+    "trust",
+    "cybersecurity",
+    "authority",
+    "graduation",
+    "study"
+  ],
+  "categories": [
+    "connectivity",
+    "security"
+  ]
+}
