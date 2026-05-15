@@ -17,9 +17,9 @@ let isInitialized = false
 
 function startTally() {
   window.Tally.openPopup('EkvOpB', {
-    layout: 'modal', // Open as a centered modal
-    width: 700, // Set the width of the modal
-    autoClose: 5000, // Close the popup 5 seconds after form was submitted (in ms)
+    layout: 'modal',
+    width: 700,
+    autoClose: 5000,
     onClose() {
       showAskSurvey.value = false;
     },
