@@ -1,6 +1,6 @@
 name: Feature request
 description: Share with us your ideas on how Lucide could be improved upon.
-labels: ["💡 idea"]
+labels: ['💡 idea']
 body:
   - type: markdown
     attributes:
@@ -14,15 +14,15 @@ body:
       options:
         - label: lucide
         - label: lucide-react
-        - label: "@lucide/vue"
-        - label: "@lucide/svelte"
-        - label: "@lucide/angular"
-        - label: "@lucide/astro"
+        - label: '@lucide/vue'
+        - label: '@lucide/svelte'
+        - label: '@lucide/angular'
+        - label: '@lucide/astro'
         - label: lucide-react-native
         - label: lucide-preact
         - label: lucide-solid
         - label: lucide-static
-        - label: "@lucide/icons"
+        - label: '@lucide/icons'
         - label: lucide-vue-next (deprecated)
         - label: lucide-svelte (deprecated)
         - label: lucide-angular (deprecated)

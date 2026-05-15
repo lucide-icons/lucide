@@ -1,6 +1,6 @@
 name: Bug report
 description: Create a report to help us improve
-labels: ["🐛 bug"]
+labels: ['🐛 bug']
 body:
   - type: markdown
     attributes:
@@ -14,15 +14,15 @@ body:
       options:
         - label: lucide
         - label: lucide-react
-        - label: "@lucide/vue"
-        - label: "@lucide/svelte"
-        - label: "@lucide/angular"
-        - label: "@lucide/astro"
+        - label: '@lucide/vue'
+        - label: '@lucide/svelte'
+        - label: '@lucide/angular'
+        - label: '@lucide/astro'
         - label: lucide-react-native
         - label: lucide-preact
         - label: lucide-solid
         - label: lucide-static
-        - label: "@lucide/icons"
+        - label: '@lucide/icons'
         - label: lucide-vue-next (deprecated)
         - label: lucide-svelte (deprecated)
         - label: lucide-angular (deprecated)
@@ -45,8 +45,8 @@ body:
       label: Can you reproduce this in the latest version?
       description: i.e. after running `npm install lucide-react@latest`
       options:
-        - label: "Yes"
-        - label: "No"
+        - label: 'Yes'
+        - label: 'No'
     validations:
       required: false
   - type: checkboxes
