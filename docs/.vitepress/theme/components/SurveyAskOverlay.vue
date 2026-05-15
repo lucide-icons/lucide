@@ -133,22 +133,20 @@ function hidePopup() {
   font-weight: 500;
   color: var(--vp-c-text-2);
 }
+
 .ask-overlay.show-popup {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
+  transition:
+    opacity 0.5s,
+    transform 0.25s ease;
 }
 
 .ask-overlay .buttons {
   margin-top: 16px;
   display: flex;
   gap: 16px;
-}
-
-.ask-overlay.show-popup {
-  transition:
-    opacity 0.5s,
-    transform 0.25s ease;
 }
 
 .hide-button {
