@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "swastik7805",
+    "rrod497"
+  ],
+  "tags": [
+    "roof",
+    "geodesic",
+    "engineering",
+    "construction",
+    "shelter",
+    "circular",
+    "dome",
+    "building",
+    "architecture",
+    "structure"
+  ],
+  "categories": [
+    "buildings",
+    "shapes"
+  ]
+}
