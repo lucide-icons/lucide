@@ -63,7 +63,6 @@ module.exports = {
           'error',
           {
             selfClosing: 'always',
-            allowSelfClosingCustom: true,
           },
         ],
         '@html-eslint/element-newline': 'error',
