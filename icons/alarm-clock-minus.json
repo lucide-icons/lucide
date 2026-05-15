@@ -14,6 +14,13 @@
     "notifications",
     "time"
   ],
+  "$extends.tags": [
+    "alarm-clock",
+    "minus"
+  ],
+  "$extends.categories": [
+    "alarm-clock"
+  ],
   "aliases": [
     {
       "name": "alarm-minus",
