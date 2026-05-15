@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "dirt pile",
+    "sand pile",
+    "sand with shovel",
+    "pile with shovel"
+  ],
+  "categories": [
+    "construction",
+    "sand",
+    "beach"
+  ]
+}
