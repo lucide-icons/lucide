@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "minus",
+    "remove",
+    "delete",
+    "reduce"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

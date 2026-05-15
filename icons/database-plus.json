@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "plus",
+    "add",
+    "create",
+    "insert",
+    "new",
+    "expand"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}
