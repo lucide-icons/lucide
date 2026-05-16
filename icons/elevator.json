@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AJAyanbisi"
+  ],
+  "tags": [
+    "building",
+    "doors",
+    "floor",
+    "lift",
+    "lobby",
+    "shaft",
+    "transportation",
+    "vertical"
+  ],
+  "categories": [
+    "accessibility",
+    "buildings",
+    "home",
+    "navigation",
+    "transportation"
+  ]
+}
