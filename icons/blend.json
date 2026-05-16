@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
   "tags": [
     "mode",
@@ -21,7 +22,11 @@
     "brightness",
     "overlap",
     "colors",
-    "colours"
+    "colours",
+    "marriage",
+    "rings",
+    "couple",
+    "connection"
   ],
   "categories": [
     "design",
