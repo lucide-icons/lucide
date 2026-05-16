@@ -58,9 +58,9 @@ export const vueSidebar = [
         desc: 'Apply global styles to all icons',
       },
       {
-        text: 'With Lucide Lab',
-        link: '/guide/vue/advanced/with-lucide-lab',
-        desc: 'Using lucide-lab with @lucide/vue',
+        text: 'Custom icons',
+        link: '/guide/vue/advanced/custom-icons',
+        desc: 'Create custom icons or use icons from lucide-lab',
       },
       {
         text: 'Filled icons',
@@ -72,7 +72,6 @@ export const vueSidebar = [
         link: '/guide/vue/advanced/aliased-names',
         desc: 'Using aliased icon names',
       },
-
       {
         text: 'Combining icons',
         link: '/guide/vue/advanced/combining-icons',
