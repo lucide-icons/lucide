@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "aaofyi",
+    "ericfennis",
+    "karsa-mistmere",
+    "Barakudum"
+  ],
+  "tags": [
+    "label",
+    "badge",
+    "ticket",
+    "mark",
+    "category",
+    "classification",
+    "metadata",
+    "settings",
+    "configuration",
+    "manage",
+    "preferences",
+    "attributes",
+    "properties"
+  ],
+  "categories": [
+    "account",
+    "development",
+    "files"
+  ]
+}
