@@ -13,11 +13,15 @@
     "badge",
     "ticket",
     "mark",
-    "price",
-    "sale",
     "category",
     "classification",
-    "metadata"
+    "metadata",
+    "settings",
+    "configuration",
+    "manage",
+    "preferences",
+    "attributes",
+    "properties"
   ],
   "categories": [
     "account",

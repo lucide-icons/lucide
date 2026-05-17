@@ -13,11 +13,12 @@
     "badge",
     "ticket",
     "mark",
-    "price",
-    "sale",
     "category",
     "classification",
-    "metadata"
+    "metadata",
+    "add",
+    "create",
+    "new"
   ],
   "categories": [
     "account",

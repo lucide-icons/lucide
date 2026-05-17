@@ -6,18 +6,21 @@
     "aaofyi",
     "ericfennis",
     "karsa-mistmere",
-    "Barakudum"
+    "Barakudum",
+    "jguddas"
   ],
   "tags": [
     "label",
     "badge",
     "ticket",
     "mark",
-    "price",
-    "sale",
     "category",
     "classification",
-    "metadata"
+    "metadata",
+    "close",
+    "cancel",
+    "remove",
+    "delete"
   ],
   "categories": [
     "account",

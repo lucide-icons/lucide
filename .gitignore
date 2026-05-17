@@ -38,6 +38,7 @@ packages/**/dynamic.mjs
 packages/**/LICENSE
 categories.json
 tags.json
+!/icons/tags.json
 .vercel
 package-lock.json
 
@@ -57,4 +58,3 @@ docs/.vercel
 docs/.nitro
 docs/public/og/**
 !docs/public/og/general.png
-.gitignore
