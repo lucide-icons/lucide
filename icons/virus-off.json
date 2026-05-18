@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas"
+  ],
+  "tags": [
+    "infection",
+    "blocker",
+    "spyware",
+    "ransomware",
+    "safe",
+    "covid",
+    "influenza"
+  ],
+  "categories": [
+    "medical",
+    "security"
+  ]
+}
