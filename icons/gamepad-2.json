@@ -3,10 +3,13 @@
   "contributors": [
     "ericfennis",
     "csandman",
-    "johnletey"
+    "johnletey",
+    "jamiemlaw"
   ],
   "tags": [
-    "console"
+    "console",
+    "controller",
+    "joypad"
   ],
   "categories": [
     "gaming",
