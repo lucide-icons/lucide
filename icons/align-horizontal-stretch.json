@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MarwanFr"
+  ],
+  "tags": [
+    "items",
+    "flex",
+    "justify",
+    "align",
+    "stretch"
+  ],
+  "categories": [
+    "layout"
+  ]
+}
