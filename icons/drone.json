@@ -1,9 +1,6 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "bernatfortet",
-    "shopped",
-    "karsa-mistmere",
     "jguddas"
   ],
   "tags": [
@@ -14,10 +11,13 @@
     "flying",
     "technology",
     "airborne",
-    "robotics"
+    "robotics",
+    "mind-map",
+    "mindmap"
   ],
   "categories": [
     "transportation",
-    "devices"
+    "devices",
+    "charts"
   ]
 }
