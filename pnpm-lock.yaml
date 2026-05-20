@@ -93,7 +93,7 @@ importers:
         version: 1.2.8
       openai:
         specifier: ^5.8.1
-        version: 5.23.2(ws@8.20.0)(zod@3.25.76)
+        version: 5.23.2(ws@8.20.1)(zod@3.25.76)
       p-memoize:
         specifier: ^7.1.1
         version: 7.1.1
@@ -12548,20 +12548,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.18.0:
-    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
-  ws@8.20.0:
-    resolution: {integrity: sha512-sAt8BhgNbzCtgGbt2OxmpuryO63ZoDk/sqaB/znQm94T4fCEsy/yV+7CdC1kJhOU9lboAEU7R3kquuycDoibVA==}
+  ws@8.20.1:
+    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -18493,7 +18481,7 @@ snapshots:
       sirv: 3.0.2
       tinyrainbow: 3.0.3
       vitest: 4.1.1(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jsdom@20.0.3)(vite@6.4.2(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.98.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
-      ws: 8.20.0
+      ws: 8.20.1
     transitivePeerDependencies:
       - bufferutil
       - msw
@@ -18511,7 +18499,7 @@ snapshots:
       sirv: 3.0.2
       tinyrainbow: 3.0.3
       vitest: 4.0.12(@types/debug@4.1.12)(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jiti@2.7.0)(jsdom@27.4.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0)
-      ws: 8.20.0
+      ws: 8.20.1
     transitivePeerDependencies:
       - bufferutil
       - msw
@@ -18528,7 +18516,7 @@ snapshots:
       sirv: 3.0.2
       tinyrainbow: 3.0.3
       vitest: 4.1.1(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jsdom@27.4.0)(vite@7.3.2(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.98.0)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
-      ws: 8.20.0
+      ws: 8.20.1
     transitivePeerDependencies:
       - bufferutil
       - msw
@@ -22291,7 +22279,7 @@ snapshots:
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
-      ws: 8.18.0
+      ws: 8.20.1
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -22318,7 +22306,7 @@ snapshots:
       webidl-conversions: 8.0.1
       whatwg-mimetype: 4.0.0
       whatwg-url: 15.1.0
-      ws: 8.20.0
+      ws: 8.20.1
       xml-name-validator: 5.0.0
     transitivePeerDependencies:
       - '@noble/hashes'
@@ -23971,9 +23959,9 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@5.23.2(ws@8.20.0)(zod@3.25.76):
+  openai@5.23.2(ws@8.20.1)(zod@3.25.76):
     optionalDependencies:
-      ws: 8.20.0
+      ws: 8.20.1
       zod: 3.25.76
 
   optionator@0.9.4:
@@ -27019,9 +27007,7 @@ snapshots:
 
   ws@7.5.10: {}
 
-  ws@8.18.0: {}
-
-  ws@8.20.0: {}
+  ws@8.20.1: {}
 
   wsl-utils@0.3.1:
     dependencies:
