@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley",
+    "Barakudum"
+  ],
+  "tags": [
+    "post-it",
+    "annotation",
+    "memo",
+    "reminder",
+    "todo",
+    "tasks",
+    "ideas",
+    "brainstorm",
+    "documents",
+    "notes",
+    "multiple",
+    "collection",
+    "group",
+    "stack",
+    "clone",
+    "duplicate",
+    "copy"
+  ],
+  "categories": [
+    "text",
+    "social"
+  ]
+}
