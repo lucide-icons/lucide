@@ -23,7 +23,7 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
-      'aside-ads-before': () => h(CertificatesLink)
+      'aside-ads-before': () => h(CertificatesLink),
       // Keep this here for now, we might want to add more things to the top bar in the future
       // 'layout-top': () => h(LayoutTop),
     });
