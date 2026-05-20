@@ -6,7 +6,7 @@ const router = useRouter();
 
 const frameworks = [
   {
-    ariaLabel: 'Get Javascript certificates from certificates.dev',
+    ariaLabel: 'Get JavaScript certificates from certificates.dev',
     image: '/certificates-dev/js-certificates-dev.jpg',
     href: 'https://certificates.dev/javascript?friend=LUCIDE',
     routes: [
