@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 import { ref, inject, Ref } from 'vue';
+import { useLocalStorage } from '@vueuse/core';
 
 export const ICON_STYLE_CONTEXT = Symbol('style');
 
@@ -19,10 +20,10 @@ export const STYLE_DEFAULTS = {
 };
 
 export const iconStyleContext = {
-  size: ref(24),
-  strokeWidth: ref(2),
-  color: ref('currentColor'),
-  absoluteStrokeWidth: ref(false),
+  size: useLocalStorage('lucide-custom-size', STYLE_DEFAULTS.size),
+  strokeWidth: useLocalStorage('lucide-custom-strokeWidth', STYLE_DEFAULTS.strokeWidth),
+  color: useLocalStorage('lucide-custom-color', STYLE_DEFAULTS.color),
+  absoluteStrokeWidth: useLocalStorage('lucide-custom-absoluteStroke', STYLE_DEFAULTS.absoluteStrokeWidth),
 };
 
 export function useIconStyleContext(): IconSizeContext {

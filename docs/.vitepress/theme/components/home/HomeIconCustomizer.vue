@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { syncRef, useCssVar, useLocalStorage } from '@vueuse/core'
+import { syncRef, useCssVar } from '@vueuse/core'
 import HomeContainer from './HomeContainer.vue'
 import RangeSlider from '../base/RangeSlider.vue'
 import InputField from '../base/InputField.vue'
@@ -9,12 +9,13 @@ import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 import Switch from '../base/Switch.vue'
 
-
 const iconContainer = ref<HTMLElement | null>()
-const color = useLocalStorage('lucide-custom-color', 'currentColor')
-const strokeWidth = useLocalStorage('lucide-custom-strokeWidth', 2)
-const size = useLocalStorage('lucide-custom-size', 24)
-const absoluteStrokeWidth = useLocalStorage('lucide-custom-absoluteStroke', false)
+
+// Reverted back to standard refs so they don't persist on refresh
+const color = ref('currentColor')
+const strokeWidth = ref(2)
+const size = ref(24)
+const absoluteStrokeWidth = ref(false)
 
 const colorCssVar = useCssVar(
   '--customize-color',
