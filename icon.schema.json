@@ -119,7 +119,7 @@
       "items": {
         "type": "string"
       },
-      "minItems": 1,
+      "minItems": 0,
       "uniqueItems": true
     },
     "deprecated": {
