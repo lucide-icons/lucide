@@ -1,0 +1,27 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.5 33h2" />
+  <path d="M11 35.5a1 1 0 0 1 1 1" />
+  <path d="M12.5 43.5v-9" />
+  <path d="M13 36.5a4 4 0 0 0-4 4" />
+  <path d="M14 34.5V36" />
+  <path d="M14 38.5a1 1 0 0 1-1 1" />
+  <path d="M14 47.5A8.5 8.5 0 0 0 5.5 39" />
+  <path d="M15 33v9" />
+  <path d="M15 36H7" />
+  <path d="M16 37.5a1 1 0 0 1 1 1" />
+  <path d="M18 15V9a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v4a2 2 0 0 0 2 2h2" />
+  <path d="M22 13v1a1 1 0 0 1-1 1H10" />
+  <path d="M8 38.5H5" />
+  <path d="M8.5 33a1 1 0 0 1 1-1" />
+  <circle cx="8" cy="15" r="2" />
+</svg>
