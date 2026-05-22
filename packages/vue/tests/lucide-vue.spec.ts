@@ -59,7 +59,7 @@ describe('Using lucide icon components', () => {
 
     expect(icon).toHaveClass('my-icon');
     expect(icon).toHaveClass('lucide');
-    expect(icon).toHaveClass('lucide-smile-icon');
+    expect(icon).toHaveClass('lucide-smile');
   });
 
   it('should add a style attribute to the element', () => {
@@ -152,7 +152,7 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const { container } = render(Pen, {
       props: {
         size: 48,
@@ -168,7 +168,7 @@ describe('Using lucide icon components', () => {
     expect(icon).toHaveAttribute('stroke-width', '1');
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is as empty value attribute', () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is as empty value attribute', () => {
     const { container } = render(Pen, {
       props: {
         size: 48,
@@ -184,7 +184,7 @@ describe('Using lucide icon components', () => {
     expect(icon).toHaveAttribute('stroke-width', '1');
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is written in kebabCase', () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is written in kebabCase', () => {
     const { container } = render(Pen, {
       props: {
         size: 48,
@@ -199,5 +199,57 @@ describe('Using lucide icon components', () => {
     expect(icon).toHaveAttribute('width', '48');
     expect(icon).toHaveAttribute('stroke', 'red');
     expect(icon).toHaveAttribute('stroke-width', '1');
+  });
+
+  it('should apply vector-effect when nonScalingStroke is set', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        nonScalingStroke: true,
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '2');
+    expect(icon?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
+  });
+
+  it('should apply vector-effect when nonScalingStroke is as empty value attribute', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        nonScalingStroke: '' as unknown as boolean, // Vue treats empty string as true for boolean props
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '2');
+    expect(icon?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
+  });
+
+  it('should apply vector-effect when nonScalingStroke is written in kebabCase', () => {
+    const { container } = render(Pen, {
+      props: {
+        size: 48,
+        color: 'red',
+        'stroke-width': '2',
+        'non-scaling-stroke': '' as unknown as boolean, // Vue treats empty string as true for boolean props
+      },
+    });
+
+    const icon = container.firstElementChild;
+
+    expect(icon).toHaveAttribute('width', '48');
+    expect(icon).toHaveAttribute('stroke', 'red');
+    expect(icon).toHaveAttribute('stroke-width', '2');
+    expect(icon?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
   });
 });

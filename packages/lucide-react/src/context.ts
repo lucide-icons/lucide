@@ -7,7 +7,11 @@ type LucideConfig = {
   size: number;
   color: string;
   strokeWidth: number;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth: boolean;
+  nonScalingStroke: boolean;
   className: string;
 };
 
@@ -23,6 +27,7 @@ export function LucideProvider({
   color,
   strokeWidth,
   absoluteStrokeWidth,
+  nonScalingStroke,
   className,
 }: LucideProviderProps) {
   const value = useMemo(
@@ -31,9 +36,10 @@ export function LucideProvider({
       color,
       strokeWidth,
       absoluteStrokeWidth,
+      nonScalingStroke,
       className,
     }),
-    [size, color, strokeWidth, absoluteStrokeWidth, className],
+    [size, color, strokeWidth, absoluteStrokeWidth, nonScalingStroke, className],
   );
 
   return createElement(LucideContext.Provider, { value }, children);

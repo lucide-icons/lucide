@@ -18,24 +18,24 @@ describe('buildLucideIconNode', () => {
   it('should override dimensions, but not viewBox', () => {
     const HouseSVG = buildLucideIconNode(House, { size: 12 });
 
-    expect(HouseSVG[1]['width']).toBe('12');
-    expect(HouseSVG[1]['height']).toBe('12');
+    expect(HouseSVG[1]['width']).toBe(12);
+    expect(HouseSVG[1]['height']).toBe(12);
     expect(HouseSVG[1]['viewBox']).toBe('0 0 24 24');
   });
 
   it('should override width, but not height', () => {
     const HouseSVG = buildLucideIconNode(House, { width: 12 });
 
-    expect(HouseSVG[1]['width']).toBe('12');
-    expect(HouseSVG[1]['height']).toBe('24');
+    expect(HouseSVG[1]['width']).toBe(12);
+    expect(HouseSVG[1]['height']).toBe(24);
     expect(HouseSVG[1]['viewBox']).toBe('0 0 24 24');
   });
 
   it('should override height, but not width', () => {
     const HouseSVG = buildLucideIconNode(House, { height: 12 });
 
-    expect(HouseSVG[1]['width']).toBe('24');
-    expect(HouseSVG[1]['height']).toBe('12');
+    expect(HouseSVG[1]['width']).toBe(24);
+    expect(HouseSVG[1]['height']).toBe(12);
     expect(HouseSVG[1]['viewBox']).toBe('0 0 24 24');
   });
 
@@ -49,11 +49,31 @@ describe('buildLucideIconNode', () => {
   it('should override stroke width', () => {
     const HouseSVG = buildLucideIconNode(House, { strokeWidth: 12 });
 
-    expect(HouseSVG[1]['stroke-width']).toBe('12');
+    expect(HouseSVG[1]['stroke-width']).toBe(12);
+  });
+
+  it('should scale the stroke width', () => {
+    const HouseSVG = buildLucideIconNode(House, {
+      size: 12,
+      strokeWidth: 2,
+      absoluteStrokeWidth: true,
+    });
+
+    expect(HouseSVG[1]['stroke-width']).toBe(4);
+  });
+
+  it('should not scale the stroke width', () => {
+    const HouseSVG = buildLucideIconNode(House, {
+      size: 12,
+      strokeWidth: 2,
+      absoluteStrokeWidth: false,
+    });
+
+    expect(HouseSVG[1]['stroke-width']).toBe(2);
   });
 
   it('should set non-scaling-stroke to child nodes', () => {
-    const HouseSVG = buildLucideIconNode(House, { absoluteStrokeWidth: true });
+    const HouseSVG = buildLucideIconNode(House, { nonScalingStroke: true });
 
     for (const node of HouseSVG[2]!) {
       expect(node[1]['vector-effect']).toBe('non-scaling-stroke');
@@ -61,7 +81,7 @@ describe('buildLucideIconNode', () => {
   });
 
   it('should not set non-scaling-stroke', () => {
-    const HouseSVG = buildLucideIconNode(House, { absoluteStrokeWidth: false });
+    const HouseSVG = buildLucideIconNode(House, { nonScalingStroke: false });
 
     expect(HouseSVG[1]['vector-effect']).toBeUndefined();
   });

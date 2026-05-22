@@ -5,21 +5,9 @@ import { airVent } from './testIconNodes';
 import { Icon } from '../src/lucide-vue';
 
 describe('Using Icon Component', () => {
-  it('should render icon based on a iconNode', async () => {
-    const { container } = render(Icon, {
-      props: {
-        iconNode: airVent,
-        name: 'AirVent',
-        size: 48,
-        color: 'red',
-        absoluteStrokeWidth: true,
-      },
-    });
+  const airVentIcon = { name: 'air-vent', node: airVent, size: 24 };
 
-    expect(container.firstChild).toBeDefined();
-  });
-
-  it('should render icon and match snapshot', async () => {
+  it('should render icon based on an icon node', async () => {
     const { container } = render(Icon, {
       props: {
         iconNode: airVent,
@@ -31,5 +19,43 @@ describe('Using Icon Component', () => {
     });
 
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render icon based on icon data', async () => {
+    const { container } = render(Icon, {
+      props: {
+        icon: airVentIcon,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+      },
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render icon and match snapshot', async () => {
+    const { container } = render(Icon, {
+      props: {
+        icon: airVentIcon,
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+      },
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should render icon based on icon data', async () => {
+    const { container } = render(Icon, {
+      props: {
+        icon: airVentIcon,
+        size: 48,
+        color: 'red',
+      },
+    });
+
+    expect(container.firstChild).toBeDefined();
   });
 });

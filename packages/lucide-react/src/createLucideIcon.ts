@@ -6,10 +6,10 @@ import Icon from './Icon';
 /**
  * Creates a Lucide icon component from icon data.
  *
- * @param iconData Icon data object.
+ * @param icon Icon data object.
  * @returns Lucide icon component.
  */
-function createLucideIcon(iconData: LucideIconData): LucideIcon;
+function createLucideIcon(icon: LucideIconData): LucideIcon;
 
 /**
  * Creates a Lucide icon component from the legacy icon arguments.
@@ -21,32 +21,32 @@ function createLucideIcon(iconData: LucideIconData): LucideIcon;
  */
 function createLucideIcon(
   iconName: string,
-  iconNode: LucideIconNode,
+  iconNode: LucideIconNode[],
   aliases?: string[],
 ): LucideIcon;
 
 function createLucideIcon(
   iconDataOrName: LucideIconData | string,
-  iconNode?: LucideIconNode,
+  iconNode: LucideIconNode[] = [],
   aliases: string[] = [],
 ): LucideIcon {
   const iconData =
     typeof iconDataOrName === 'string'
-      ? toLucideIconData(iconDataOrName, iconNode as LucideIconNode, aliases)
+      ? toLucideIconData(iconDataOrName, iconNode, aliases)
       : iconDataOrName;
 
   const Component = forwardRef<SVGSVGElement, LucideProps>(({ className, ...props }, ref) =>
     createElement(Icon, {
       ref,
-      name: iconData.name,
-      aliases: iconData.aliases,
-      iconNode: iconData.node,
+      icon: iconData,
       className,
       ...props,
     }),
   );
 
-  Component.displayName = toPascalCase(iconData.name);
+  if (iconData.name) {
+    Component.displayName = toPascalCase(iconData.name);
+  }
 
   return Component;
 }

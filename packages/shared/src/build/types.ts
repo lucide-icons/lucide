@@ -1,25 +1,34 @@
-export type SVGProps = Record<string, any>;
+export type SVGProps = Record<string, unknown>;
 
 /**
  * A Lucide icon node (an svgson-like internal format)
  */
-export type LucideIconNode =
-  | [attrName: string, attributes: SVGProps]
-  | [attrName: string, attributes: SVGProps, children: LucideIconNode[]];
+export type LucideIconNode<
+  TName extends string = string,
+  TProps extends Record<string, unknown> = SVGProps,
+> =
+  | [name: TName, attributes: TProps]
+  | [name: TName, attributes: TProps, children: LucideIconNode<TName, TProps>[]];
 
 /**
  * A Lucide icon object that fully describes an icon to be displayed.
  */
-export type LucideIconData = {
+export type LucideIconData<
+  TName extends string = string,
+  TProps extends Record<string, unknown> = SVGProps,
+> = {
   name?: string;
-  node: LucideIconNode[];
+  node: LucideIconNode<TName, TProps>[];
   aliases?: string[];
-} & ({ size?: number } | { width?: number; height?: number });
+} & (
+  | { size?: number; width?: never; height?: never }
+  | { size?: never; width?: number; height?: number }
+);
 
 /**
  * Build parameters for creating a Lucide icon instance for display.
  */
-export type LucideBuildParams = {
+export type LucideBuildParams<TProps extends Record<string, unknown> = SVGProps> = {
   /**
    * The color of the icon.
    */
@@ -29,9 +38,14 @@ export type LucideBuildParams = {
    */
   strokeWidth?: string | number;
   /**
-   * Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
+   * Whether to use absolute stroke width.
+   * @deprecated Use `nonScalingStroke` instead.
    */
   absoluteStrokeWidth?: boolean;
+  /**
+   * Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
+   */
+  nonScalingStroke?: boolean;
   /**
    * Extra CSS class names to pass to the SVG element.
    */
@@ -50,5 +64,12 @@ export type LucideBuildParams = {
   /**
    * Any extra attributes to pass to the SVG element.
    */
-  attributes?: SVGProps;
-} & ({ size?: string | number } | { width?: string | number; height?: string | number });
+  attributes?: TProps;
+  /**
+   * The attribute names to use for various HTML attributes.
+   */
+  attributeNames?: Record<string, string>;
+} & (
+  | { size?: string | number; width?: never; height?: never }
+  | { size?: never; width?: string | number; height?: string | number }
+);

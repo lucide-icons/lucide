@@ -8,9 +8,14 @@ export default defineExportTemplate(
 
     return `
 import createLucideIcon from '../createLucideIcon';
-import type { LucideIconData } from '../types';
+import type { LucideIconNode, LucideIconData } from '../types';
 
 export const __iconData: LucideIconData = ${JSON.stringify(iconData)}
+
+/**
+ * @deprecated Access \`__iconData\` instead.
+ */
+export const __iconNode: LucideIconNode[] = __iconData.node;
 
 /**
  * @component @name ${componentName}

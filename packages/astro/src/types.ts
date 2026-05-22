@@ -1,31 +1,47 @@
 import type { HTMLAttributes } from 'astro/types';
+import type {
+  LucideIconData as SharedLucideIconData,
+  LucideIconNode as SharedLucideIconNode,
+} from './utils/types';
 
 // Type that the Astro language server needs to infer component props in Astro files
-export type AstroComponent = (_props: IconProps) => any;
+export type AstroComponent = (_props: LucideProps) => any;
 
-export interface IconProps extends SVGAttributes {
+export type LucideProps = SVGAttributes & {
   color?: string;
   size?: number | string;
   'stroke-width'?: number | string;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
+  nonScalingStroke?: boolean;
   class?: string;
-  name?: string;
-  aliases?: string[];
-  iconNode?: IconNode;
   title?: string;
-}
+};
+
+export type IconProps = LucideProps &
+  (
+    | {
+        icon: LucideIconData;
+        iconNode?: never;
+      }
+    | {
+        icon?: never;
+        iconNode: LucideIconNode;
+      }
+  );
 
 export type SVGAttributes = HTMLAttributes<'svg'>;
 
-export type IconNode = IconNodeChild[];
+export type LucideIconNode = SharedLucideIconNode<SVGElements, SVGAttributes>;
 
-export interface LucideIconData {
-  name: string;
-  node: IconNode;
-  aliases?: string[];
-}
+export type LucideIconData = SharedLucideIconData<SVGElements, SVGAttributes>;
 
-type IconNodeChild = [elementName: SVGElements, attrs: SVGAttributes];
+/**
+ * @deprecated Use LucideIconNode instead.
+ */
+export type IconNode = LucideIconNode[];
 
 // All possible svg elements according to the Astro definitions
 type SVGElements =

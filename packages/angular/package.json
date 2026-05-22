@@ -20,7 +20,7 @@
     "prebuild": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons",
     "build": "pnpm prebuild && pnpm build:ng",
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "copy:utils": "mkdir -p ./src/utils && cp -f ../../packages/shared/src/build/buildLucideIconNode.ts ./src/utils/ && cp -f ../../packages/shared/src/build/types.ts ./src/utils/",
+    "copy:utils": "cpy ../../packages/shared/src/build/{buildLucideIconNode.ts,defaultAttributes.ts,types.ts} ../../packages/shared/src/utils/mergeClasses.ts ./src/utils/",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=lucide-angular.ts --useDefaultExports=0",
     "build:ng": "ng build --configuration production",

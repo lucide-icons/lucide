@@ -53,6 +53,7 @@
     "@vitest/coverage-v8": "4.0.12",
     "@vitest/ui": "4.0.12",
     "ajv-cli": "^5.0.0",
+    "cpy-cli": "^7.0.0",
     "dotenv": "^17.4.2",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",

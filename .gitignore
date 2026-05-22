@@ -25,6 +25,7 @@ packages/**/src/utils/*.ts
 !packages/shared/src/utils/*.ts
 !packages/shared/src/build/
 !packages/shared/src/build/*.ts
+packages/shared/src/build/types.d.ts
 packages/**/src/dynamicIconImports.ts
 packages/**/DynamicIcon.d.ts
 packages/**/dynamicIconImports.js

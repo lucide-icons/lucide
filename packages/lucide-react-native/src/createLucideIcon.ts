@@ -6,10 +6,10 @@ import Icon from './Icon';
 /**
  * Creates a Lucide icon component from icon data.
  *
- * @param iconData Icon data object.
+ * @param icon Icon data object.
  * @returns Lucide icon component.
  */
-function createLucideIcon(iconData: LucideIconData): LucideIcon;
+function createLucideIcon(icon: LucideIconData): LucideIcon;
 
 /**
  * Creates a Lucide icon component from the legacy icon arguments.
@@ -38,7 +38,7 @@ function createLucideIcon(
   const Component = forwardRef<SVGSVGElement, LucideProps>((props, ref) =>
     createElement(Icon, {
       ref,
-      iconNode: iconData.node,
+      icon: iconData,
       ...props,
     }),
   );
