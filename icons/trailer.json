@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MadsMadsDk"
+  ],
+  "tags": [
+    "trailer",
+    "shipping",
+    "delivery",
+    "haulage",
+    "vehicle",
+    "equipment",
+    "freight"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
