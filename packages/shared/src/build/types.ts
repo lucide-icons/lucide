@@ -1,4 +1,5 @@
-export type SVGProps = Record<string, unknown>;
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+export type SVGProps = Record<string, any>;
 
 /**
  * A Lucide icon node (an svgson-like internal format)
@@ -70,6 +71,6 @@ export type LucideBuildParams<TProps extends Record<string, unknown> = SVGProps>
    */
   attributeNames?: Record<string, string>;
 } & (
-  | { size?: string | number; width?: never; height?: never }
-  | { size?: never; width?: string | number; height?: string | number }
+  | { size?: string | number | null; width?: never; height?: never }
+  | { size?: never; width?: string | number | null; height?: string | number | null }
 );

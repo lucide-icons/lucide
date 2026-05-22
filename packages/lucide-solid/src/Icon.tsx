@@ -39,7 +39,7 @@ const Icon = (props: LucideProps & IconProps) => {
     aliases: [],
   };
 
-  const [, svgAttributes, builtIconNode] = buildLucideIconNode(icon, {
+  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
     color: localProps.color ?? globalProps.color,
     width: localProps.width ?? localProps.size ?? globalProps.size,
     height: localProps.height ?? localProps.size ?? globalProps.size,

@@ -1,18 +1,17 @@
 import { h, toChildArray } from 'preact';
 import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
-import defaultAttributes from './defaultAttributes';
 import type { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
 
 type IconComponentProps = LucideProps &
   (
     | {
-        iconNode: LucideIconNode;
-        icon?: never;
-      }
-    | {
         icon: LucideIconData;
         iconNode?: never;
+      }
+    | {
+        iconNode: LucideIconNode[];
+        icon?: never;
       }
   );
 
@@ -59,7 +58,7 @@ const Icon = ({
     class: contextClass = '',
   } = useLucideContext() ?? {};
 
-  const [name, svgAttributes, builtIconNode] = buildLucideIconNode(icon, {
+  const [name, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
     color: color ?? contextColor,
     width: width ?? size ?? contextSize,
     height: height ?? size ?? contextSize,

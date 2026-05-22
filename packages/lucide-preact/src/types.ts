@@ -2,7 +2,7 @@ import { type FunctionComponent, type JSX } from 'preact';
 import type {
   LucideIconData as SharedLucideIconData,
   LucideIconNode as SharedLucideIconNode,
-} from '@lucide/shared';
+} from '@lucide/shared/types';
 
 export type LucideIconNode = SharedLucideIconNode;
 
