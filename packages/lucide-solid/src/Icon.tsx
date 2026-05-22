@@ -1,77 +1,58 @@
 import { For, splitProps, useContext } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
 import { buildLucideIconNode, hasA11yProp, mergeClasses } from '@lucide/shared';
-import defaultAttributes from './defaultAttributes';
-import { IconNode, LucideProps } from './types';
+import { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { LucideContext } from './context';
 
-interface IconProps {
-  name?: string;
-  aliases?: string[];
-  iconNode: IconNode;
-}
+type IconProps =
+  | {
+      icon: LucideIconData;
+      iconNode?: never;
+    }
+  | {
+      icon?: never;
+      iconNode?: LucideIconNode[];
+    };
 
 const Icon = (props: LucideProps & IconProps) => {
   const [localProps, rest] = splitProps(props, [
     'color',
     'size',
+    'width',
+    'height',
     'strokeWidth',
     'children',
     'class',
-    'name',
-    'aliases',
+    'icon',
     'iconNode',
     'absoluteStrokeWidth',
+    'nonScalingStroke',
   ]);
 
   const globalProps = useContext(LucideContext);
 
-  const calculatedStrokeWidth =
-    (localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth) === true
-      ? (Number(
-          localProps.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'],
-        ) *
-          24) /
-        Number(localProps.size ?? globalProps.size)
-      : Number(
-          localProps.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'],
-        );
-
   const hasAccessibleProp = Boolean(localProps.children) || hasA11yProp(rest);
 
-  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(
-    {
-      name: localProps.name,
-      aliases: localProps.aliases,
-      size: 24,
-      node: localProps.iconNode,
-    },
-    {
-      color: localProps.color ?? globalProps.color ?? defaultAttributes.stroke,
-      size: localProps.size ?? globalProps.size ?? defaultAttributes.width,
-      strokeWidth: calculatedStrokeWidth,
-      className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
-      hasA11yProp: hasAccessibleProp,
-    },
-  );
-
-  const svgElementAttributes = {
-    xmlns: svgAttributes.xmlns,
-    viewBox: svgAttributes.viewBox,
-    fill: svgAttributes.fill,
-    'stroke-linecap': svgAttributes['stroke-linecap'],
-    'stroke-linejoin': svgAttributes['stroke-linejoin'],
-    width: svgAttributes.width,
-    height: svgAttributes.height,
-    stroke: svgAttributes.stroke,
-    'stroke-width': svgAttributes['stroke-width'],
-    class: svgAttributes.class,
-    'aria-hidden': svgAttributes['aria-hidden'],
-    ...rest,
+  const icon: LucideIconData = localProps.icon ?? {
+    node: localProps.iconNode ?? ([] as LucideIconNode[]),
+    size: 24,
+    aliases: [],
   };
 
+  const [, svgAttributes, builtIconNode] = buildLucideIconNode(icon, {
+    color: localProps.color ?? globalProps.color,
+    width: localProps.width ?? localProps.size ?? globalProps.size,
+    height: localProps.height ?? localProps.size ?? globalProps.size,
+    strokeWidth: localProps.strokeWidth ?? globalProps.strokeWidth,
+    absoluteStrokeWidth: localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth,
+    nonScalingStroke: localProps.nonScalingStroke ?? globalProps.nonScalingStroke,
+    className: mergeClasses('lucide-icon', globalProps.class, localProps.class),
+    hasA11yProp: hasAccessibleProp,
+    attributes: rest,
+  });
+
   return (
-    <svg {...svgElementAttributes}>
+    <svg {...svgAttributes}>
       <For each={builtIconNode}>
         {([elementName, attrs]) => {
           return (

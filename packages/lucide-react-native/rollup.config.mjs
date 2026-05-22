@@ -2,6 +2,11 @@ import plugins from '@lucide/rollup-plugins';
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json' with { type: 'json' };
 
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
@@ -61,7 +66,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: inputs[1],
@@ -71,7 +76,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.suffixed.ts`,
@@ -81,7 +86,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   {
     input: `src/${outputFileName}.prefixed.ts`,
@@ -91,7 +96,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   },
   ...configs,
 ];

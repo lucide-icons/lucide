@@ -1,4 +1,4 @@
-import { h, type JSX } from 'preact';
+import { h, JSX } from 'preact';
 import { mergeClasses, toLucideIconData, toPascalCase } from '@lucide/shared';
 import Icon from './Icon';
 import type { LucideIcon, LucideIconData, LucideIconNode, LucideProps } from './types';
@@ -6,10 +6,10 @@ import type { LucideIcon, LucideIconData, LucideIconNode, LucideProps } from './
 /**
  * Creates a Lucide icon component from icon data.
  *
- * @param iconData Icon data object.
+ * @param icon Icon data object.
  * @returns Lucide icon component.
  */
-function createLucideIcon(iconData: LucideIconData): LucideIcon;
+function createLucideIcon(icon: LucideIconData): LucideIcon;
 
 /**
  * Creates a Lucide icon component from the legacy icon arguments.
@@ -21,18 +21,18 @@ function createLucideIcon(iconData: LucideIconData): LucideIcon;
  */
 function createLucideIcon(
   iconName: string,
-  iconNode: LucideIconNode,
+  iconNode: LucideIconNode[],
   aliases?: string[],
 ): LucideIcon;
 
 function createLucideIcon(
   iconDataOrName: LucideIconData | string,
-  iconNode?: LucideIconNode,
+  iconNode?: LucideIconNode[],
   aliases: string[] = [],
 ): LucideIcon {
   const iconData =
     typeof iconDataOrName === 'string'
-      ? toLucideIconData(iconDataOrName, iconNode as LucideIconNode, aliases)
+      ? toLucideIconData(iconDataOrName, iconNode as LucideIconNode[], aliases)
       : iconDataOrName;
 
   const Component = ({ class: classes = '', className = '', children, ...props }: LucideProps) =>
@@ -40,15 +40,15 @@ function createLucideIcon(
       Icon,
       {
         ...props,
-        name: iconData.name,
-        aliases: iconData.aliases,
-        iconNode: iconData.node,
+        icon: iconData,
         class: mergeClasses<string | JSX.SignalLike<string | undefined>>(classes, className),
       },
       children,
     );
 
-  Component.displayName = toPascalCase(iconData.name);
+  if (iconData.name) {
+    Component.displayName = toPascalCase(iconData.name);
+  }
 
   return Component;
 }

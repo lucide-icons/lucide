@@ -1,5 +1,9 @@
 import type { SVGAttributes } from 'svelte/elements';
 import type { Snippet, Component } from 'svelte';
+import type {
+  LucideIconData as SharedLucideIconData,
+  LucideIconNode as SharedLucideIconNode,
+} from '@lucide/shared/types';
 
 export type Attrs = SVGAttributes<SVGSVGElement>;
 type IconNodeElements =
@@ -12,27 +16,39 @@ type IconNodeElements =
   | 'polyline'
   | 'rect';
 
-export type IconNode = [elementName: IconNodeElements, attrs: Attrs][];
+export type LucideIconNode = SharedLucideIconNode<IconNodeElements, Attrs>;
 
-export interface LucideIconData {
-  name: string;
-  node: IconNode;
-  aliases?: string[];
-}
+export type LucideIconData = SharedLucideIconData<IconNodeElements, Attrs>;
 
-export interface LucideProps extends Attrs {
-  name?: string;
-  aliases?: string[];
+/**
+ * @deprecated Use LucideIconNode instead.
+ */
+export type IconNode = LucideIconNode[];
+
+export type LucideProps = Attrs & {
   color?: string;
   size?: number | string;
   strokeWidth?: number | string;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
-  iconNode?: IconNode;
+  nonScalingStroke?: boolean;
   children?: Snippet;
   title?: string;
-}
+};
 
-export type IconProps = LucideProps;
+export type IconProps = LucideProps &
+  (
+    | {
+        icon: LucideIconData;
+        iconNode?: never;
+      }
+    | {
+        icon?: never;
+        iconNode: LucideIconNode[];
+      }
+  );
 
 export type LucideIcon = Component<LucideProps>;
 

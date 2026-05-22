@@ -12,6 +12,13 @@
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": {
+      "types": "./src/build/types.ts",
+      "default": "./src/build/types.ts"
+    }
+  },
   "devDependencies": {
     "vite": "^7.2.4"
   }

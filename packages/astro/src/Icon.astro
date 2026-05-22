@@ -6,45 +6,39 @@ import { hasA11yProp } from './utils/hasA11yProp';
 const {
   color = 'currentColor',
   size = 24,
+  width,
+  height,
   'stroke-width': strokeWidth = 2,
   absoluteStrokeWidth = false,
-  name,
-  aliases,
-  iconNode = [],
+  nonScalingStroke = false,
+  iconNode,
+  icon = {
+    node: iconNode,
+    aliases: [],
+    size: 24,
+  },
   class: className,
   ...rest
 } = Astro.props;
 
-const calculatedStrokeWidth =
-  absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth;
+const [, builtIconAttributes, builtIconNode] = buildLucideIconNode(icon, {
+  color,
+  width: width ?? size,
+  height: height ?? size,
+  strokeWidth,
+  absoluteStrokeWidth,
+  nonScalingStroke,
+  className,
+  hasA11yProp: hasA11yProp(rest),
+});
 
-const [, rawIconAttributes, builtIconNode = []] = buildLucideIconNode(
-  {
-    name,
-    aliases,
-    size: 24,
-    node: iconNode,
-  },
-  {
-    color,
-    size,
-    strokeWidth: calculatedStrokeWidth,
-    className,
-    hasA11yProp: hasA11yProp(rest),
-  },
-);
-
-const { class: iconClassName, ...builtIconAttributes } = rawIconAttributes;
 const iconAttributes = {
   ...builtIconAttributes,
   ...rest,
 };
 ---
 
-<svg
-  {...iconAttributes}
-  class={iconClassName}
->
+<svg {...iconAttributes}>
   {builtIconNode.map(([Tag, attrs]) => <Tag {...attrs} />)}
   <slot />
 </svg>

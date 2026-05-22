@@ -1,15 +1,14 @@
 import { createElement, forwardRef, type FunctionComponent } from 'react';
 import * as NativeSvg from 'react-native-svg';
-import { buildLucideIconNode } from '@lucide/shared';
-import defaultAttributes, { childDefaultAttributes } from './defaultAttributes';
-import { LucideIconNode, LucideProps } from './types';
+import { buildLucideIconForReact, hasA11yProp, mergeClasses } from '@lucide/shared';
+import { childDefaultAttributes } from './defaultAttributes';
+import { LucideIconData, LucideIconNode, LucideProps } from './types';
 import { useLucideContext } from './context';
 
-interface IconComponentProps extends LucideProps {
-  iconNode: LucideIconNode;
+type IconComponentProps = LucideProps & {
   testID?: string;
   className?: string;
-}
+} & ({ icon: LucideIconData; iconNode?: never } | { icon?: never; iconNode: LucideIconNode[] });
 
 const toNativeSvgAttrName = (attributeName: string) => {
   if (attributeName === 'class') {
@@ -44,8 +43,8 @@ const toNativeSvgAttributes = (attributes: Record<string, any>) => {
  * @param {number} props.strokeWidth - The stroke width of the icon
  * @param {boolean} props.absoluteStrokeWidth - Whether to use absolute stroke width
  * @param {string} props.className - The class name of the icon
- * @param {LucideIconNode} props.children - The children of the icon
- * @param {LucideIconNode} props.iconNode - The icon node of the icon
+ * @param {LucideIconNode[]} props.children - The children of the icon
+ * @param {LucideIconNode[]} props.iconNode - The icon node of the icon
  *
  * @returns {ForwardRefExoticComponent} LucideIcon
  */
@@ -54,10 +53,17 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     {
       color,
       size,
+      width = size,
+      height = size,
       strokeWidth,
       absoluteStrokeWidth,
+      nonScalingStroke,
       children,
-      iconNode,
+      iconNode = [],
+      icon = {
+        node: iconNode,
+        size: 24,
+      },
       className,
       testID,
       ...rest
@@ -68,31 +74,28 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
       size: contextSize = 24,
       strokeWidth: contextStrokeWidth = 2,
       absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+      nonScalingStroke: contextNonScalingStroke = false,
       color: contextColor = 'currentColor',
+      className: contextClass = '',
     } = useLucideContext() ?? {};
 
-    const calculatedStrokeWidth =
-      absoluteStrokeWidth ?? contextAbsoluteStrokeWidth
-        ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
-        : strokeWidth ?? contextStrokeWidth;
+    const hasAccessibleProp = Boolean(children) || hasA11yProp(rest);
 
-    const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(
-      {
-        size: 24,
-        node: iconNode,
-      },
-      {
-        color: color ?? contextColor ?? defaultAttributes.stroke,
-        size: size ?? contextSize ?? defaultAttributes.width,
-        strokeWidth: calculatedStrokeWidth,
-        className,
-        includeDefaultClasses: false,
-      },
-    );
+    const [, svgAttributes, builtIconNode] = buildLucideIconForReact(icon, {
+      color: color ?? contextColor,
+      width: width ?? size ?? contextSize,
+      height: height ?? size ?? contextSize,
+      strokeWidth: strokeWidth ?? contextStrokeWidth,
+      absoluteStrokeWidth: absoluteStrokeWidth ?? contextAbsoluteStrokeWidth,
+      nonScalingStroke: nonScalingStroke ?? contextNonScalingStroke,
+      className: mergeClasses(contextClass, className),
+      hasA11yProp: hasAccessibleProp,
+      attributes: rest,
+    });
 
     const customAttrs = {
-      stroke: color ?? contextColor ?? defaultAttributes.stroke,
-      strokeWidth: calculatedStrokeWidth,
+      stroke: svgAttributes['stroke'],
+      strokeWidth: svgAttributes['strokeWidth'],
       ...rest,
     };
 

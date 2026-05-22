@@ -1,26 +1,48 @@
-import { computed, type FunctionalComponent, h } from 'vue';
-import { buildLucideIconNode, isEmptyString, toKebabCase } from '@lucide/shared';
+import { type FunctionalComponent, h } from 'vue';
+import {
+  buildLucideIconNode,
+  hasA11yProp,
+  isEmptyString,
+  mergeClasses,
+  toKebabCase,
+} from '@lucide/shared';
 import defaultAttributes from './defaultAttributes';
-import { IconNode, LucideProps } from './types';
+import { LucideIconNode, LucideIconData, LucideProps } from './types';
 import { useLucideProps } from './context';
 
-interface IconProps {
-  iconNode: IconNode;
-  name: string;
-  aliases?: string[];
-}
+type IconProps =
+  | {
+      icon: LucideIconData;
+      iconNode?: never;
+      name?: never;
+    }
+  | {
+      icon?: never;
+      iconNode: LucideIconNode[];
+      name: string;
+    };
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
   {
     name,
-    aliases,
-    iconNode,
+    iconNode = [],
+    icon = {
+      name: toKebabCase(name),
+      node: iconNode,
+      size: 24,
+      aliases: [],
+    },
     absoluteStrokeWidth,
     'absolute-stroke-width': absoluteStrokeWidthKebabCase,
+    nonScalingStroke,
+    'non-scaling-stroke': nonScalingStrokeKebabCase,
     strokeWidth,
     'stroke-width': strokeWidthKebabCase,
     size,
+    width = size,
+    height = size,
     color,
+    class: classes = '',
     ...props
   },
   { slots },
@@ -30,62 +52,43 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     color: contextColor,
     strokeWidth: contextStrokeWidth = 2,
     absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    nonScalingStroke: contextNonScalingStroke = false,
     class: contextClass = '',
   } = useLucideProps();
 
-  const calculatedStrokeWidth = computed(() => {
-    const isAbsoluteStrokeWidth =
-      isEmptyString(absoluteStrokeWidth) ||
-      isEmptyString(absoluteStrokeWidthKebabCase) ||
-      absoluteStrokeWidth === true ||
-      absoluteStrokeWidthKebabCase === true ||
-      contextAbsoluteStrokeWidth === true;
+  const isAbsoluteStrokeWidth =
+    isEmptyString(absoluteStrokeWidth) ||
+    isEmptyString(absoluteStrokeWidthKebabCase) ||
+    absoluteStrokeWidth === true ||
+    absoluteStrokeWidthKebabCase === true ||
+    contextAbsoluteStrokeWidth === true;
 
-    const strokeWidthValue =
-      strokeWidth ||
-      strokeWidthKebabCase ||
-      contextStrokeWidth ||
-      defaultAttributes['stroke-width'];
+  const isNonScalingStroke =
+    isEmptyString(nonScalingStroke) ||
+    isEmptyString(nonScalingStrokeKebabCase) ||
+    nonScalingStroke === true ||
+    nonScalingStrokeKebabCase === true ||
+    contextNonScalingStroke === true;
 
-    if (isAbsoluteStrokeWidth) {
-      return (
-        (Number(strokeWidthValue) * 24) / Number(size ?? contextSize ?? defaultAttributes.width)
-      );
-    }
+  const { class: propsClass, ...restProps } = props;
 
-    return strokeWidthValue;
+  const [, svgAttributes, builtIconNode] = buildLucideIconNode(icon, {
+    color: color ?? contextColor,
+    width: width ?? size ?? contextSize,
+    height: height ?? size ?? contextSize,
+    strokeWidth:
+      strokeWidth ??
+      strokeWidthKebabCase ??
+      contextStrokeWidth ??
+      defaultAttributes['stroke-width'],
+    absoluteStrokeWidth: isAbsoluteStrokeWidth,
+    nonScalingStroke: isNonScalingStroke,
+    className: mergeClasses(contextClass, propsClass),
+    hasA11yProp: !!slots || hasA11yProp(restProps),
+    attributes: restProps,
   });
 
-  const normalizedName = computed(() => (name != null ? toKebabCase(name) : undefined));
-
-  const iconName = computed(() => (normalizedName.value ? `${normalizedName.value}-icon` : 'icon'));
-
-  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(
-    {
-      name: iconName.value,
-      aliases,
-      size: 24,
-      node: iconNode,
-    },
-    {
-      size: size ?? contextSize ?? defaultAttributes.width,
-      color: color ?? contextColor ?? defaultAttributes.stroke,
-      strokeWidth: calculatedStrokeWidth.value,
-      className: contextClass,
-    },
-  );
-
-  const iconAttributes = {
-    ...svgAttributes,
-    ...props,
-    width: svgAttributes.width,
-    height: svgAttributes.height,
-    stroke: svgAttributes.stroke,
-    'stroke-width': svgAttributes['stroke-width'],
-    class: svgAttributes.class,
-  };
-
-  return h('svg', iconAttributes, [
+  return h('svg', svgAttributes, [
     ...builtIconNode.map((child) => h(...child)),
     ...(slots.default ? [slots.default()] : []),
   ]);
