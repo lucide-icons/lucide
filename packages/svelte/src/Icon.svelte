@@ -1,10 +1,10 @@
 <script lang="ts">
   import buildLucideIconNode from './utils/buildLucideIconNode.js';
   import type {IconProps} from './types.js';
-  import { hasA11yProp } from './utils/hasA11yProp.js';
-  import { getLucideContext } from './context.js';
+  import {hasA11yProp} from './utils/hasA11yProp.js';
+  import {getLucideContext} from './context.js';
   import {mergeClasses} from './utils/mergeClasses.js';
-  import type {ClassValue} from "svelte/elements";
+  import type {ClassValue} from 'svelte/elements';
 
   const globalProps = getLucideContext() ?? {};
 
@@ -31,7 +31,7 @@
     Boolean(children) || hasA11yProp(props as Record<string, any>),
   );
 
-  const [, svgAttributes, builtIconNode] = $derived(
+  const [, svgAttributes, builtIconNode = []] = $derived(
     buildLucideIconNode(
       icon,
       {

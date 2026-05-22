@@ -5,7 +5,7 @@ import type {
   LucideIconNode as SharedLucideIconNode,
 } from '@lucide/shared/types';
 
-export type Attrs = SVGAttributes<SVGSVGElement>;
+export type Attrs = Record<string, unknown> & SVGAttributes<SVGSVGElement>;
 type IconNodeElements =
   | 'circle'
   | 'ellipse'

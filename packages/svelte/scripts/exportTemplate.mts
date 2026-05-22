@@ -8,8 +8,8 @@ export default defineExportTemplate(
     const svgBase64 = base64SVG(svgContents);
 
     return `\
-<script lang="ts">
 ${getHTMLBanner()}
+<script lang="ts">
 import Icon from '../Icon.svelte';
 import type { LucideProps, LucideIconData } from '../types.js';
 
@@ -29,7 +29,7 @@ Lucide SVG icon component, renders SVG Element with children.
 ${deprecated ? `\n@deprecated ${deprecationReason}\n` : ''}\
 -->
 
-<Icon icon={iconData} {...props} />
+<Icon {...props} icon={iconData} />
 `;
   },
 );

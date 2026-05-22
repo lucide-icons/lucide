@@ -21,7 +21,7 @@ const {
   ...rest
 } = Astro.props;
 
-const [, builtIconAttributes, builtIconNode] = buildLucideIconNode(icon, {
+const [, builtIconAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
   color,
   width: width ?? size,
   height: height ?? size,

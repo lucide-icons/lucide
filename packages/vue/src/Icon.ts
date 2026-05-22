@@ -6,7 +6,6 @@ import {
   mergeClasses,
   toKebabCase,
 } from '@lucide/shared';
-import defaultAttributes from './defaultAttributes';
 import { LucideIconNode, LucideIconData, LucideProps } from './types';
 import { useLucideProps } from './context';
 
@@ -72,15 +71,11 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
 
   const { class: propsClass, ...restProps } = props;
 
-  const [, svgAttributes, builtIconNode] = buildLucideIconNode(icon, {
+  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
     color: color ?? contextColor,
     width: width ?? size ?? contextSize,
     height: height ?? size ?? contextSize,
-    strokeWidth:
-      strokeWidth ??
-      strokeWidthKebabCase ??
-      contextStrokeWidth ??
-      defaultAttributes['stroke-width'],
+    strokeWidth: strokeWidth ?? strokeWidthKebabCase ?? contextStrokeWidth,
     absoluteStrokeWidth: isAbsoluteStrokeWidth,
     nonScalingStroke: isNonScalingStroke,
     className: mergeClasses(contextClass, propsClass),

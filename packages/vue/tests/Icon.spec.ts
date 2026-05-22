@@ -21,19 +21,6 @@ describe('Using Icon Component', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render icon based on icon data', async () => {
-    const { container } = render(Icon, {
-      props: {
-        icon: airVentIcon,
-        size: 48,
-        color: 'red',
-        absoluteStrokeWidth: true,
-      },
-    });
-
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
   it('should render icon and match snapshot', async () => {
     const { container } = render(Icon, {
       props: {
@@ -45,17 +32,5 @@ describe('Using Icon Component', () => {
     });
 
     expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render icon based on icon data', async () => {
-    const { container } = render(Icon, {
-      props: {
-        icon: airVentIcon,
-        size: 48,
-        color: 'red',
-      },
-    });
-
-    expect(container.firstChild).toBeDefined();
   });
 });

@@ -17,8 +17,8 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
   const viewBoxHeight = icon.size ?? icon.height ?? defaultAttributes['height'];
   const aliasClassNames =
     icon.aliases
-      ?.filter((alias): alias is string => typeof alias === 'string' && alias.trim() !== '')
-      .map((alias) => `lucide-${alias}`) ?? [];
+      ?.filter((alias: string): alias is string => typeof alias === 'string' && alias.trim() !== '')
+      .map((alias: string) => `lucide-${alias}`) ?? [];
   const iconClassNames = [...(icon.name ? [`lucide-${icon.name}`] : []), ...aliasClassNames];
   const classNamesFromClassName = params.className?.split(' ').filter(Boolean) ?? [];
   const className =
@@ -55,12 +55,14 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
   return [
     'svg',
     attributes,
-    icon.node.map(([name, attrs]) => [
-      name,
-      params.nonScalingStroke
+    icon.node.map((child): LucideIconNode => {
+      const [name, attrs, children] = child;
+      const nextAttrs = params.nonScalingStroke
         ? { [getAttributeName('vector-effect')]: 'non-scaling-stroke', ...attrs }
-        : attrs,
-    ]),
+        : attrs;
+
+      return children ? [name, nextAttrs, children] : [name, nextAttrs];
+    }),
   ];
 }
 
