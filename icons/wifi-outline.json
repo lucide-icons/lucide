@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mirojones"
+  ],
+  "tags": [
+    "wifi",
+    "disconnected",
+    "empty"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}
