@@ -25,7 +25,7 @@
     "build:ng": "ng build --configuration production",
     "test": "pnpm build:icons && ng test --no-watch",
     "test:watch": "ng test",
-    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "e2e": "ng e2e",
     "version": "pnpm version --git-tag-version=false"
   },
@@ -56,14 +56,18 @@
     "@angular/forms": "^21.0.0",
     "@angular/platform-browser": "^21.0.0",
     "@angular/router": "^21.0.0",
+    "@eslint/js": "^10.0.1",
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@vitest/browser-playwright": "^4.0.12",
     "angular-eslint": "21.1.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
     "ng-packagr": "^21.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.59.4"
   },
   "peerDependencies": {
     "@angular/common": "17.x - 21.x",

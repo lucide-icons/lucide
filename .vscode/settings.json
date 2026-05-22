@@ -1,11 +1,5 @@
 {
-  "cSpell.words": [
-    "devs",
-    "linecap",
-    "linejoin",
-    "preact",
-    "Preact"
-  ],
+  "cSpell.words": ["devs", "linecap", "linejoin", "preact", "Preact"],
   "eslint.enable": true,
   "eslint.validate": ["javascript", "svg"],
   "svg.preview.background": "editor"

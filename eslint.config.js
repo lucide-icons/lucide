@@ -1,17 +1,34 @@
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import airbnbBase from 'eslint-config-airbnb-base';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import htmlEslint from '@html-eslint/eslint-plugin';
 import htmlParser from '@html-eslint/parser';
+import defaultAttrs from './tools/build-icons/render/default-attrs.json' with { type: 'json' };
+import tseslint from 'typescript-eslint';
 
-const DEFAULT_ATTRS = (
-  await import('./tools/build-icons/render/default-attrs.json', { assert: { type: 'json' } })
-).default;
-
-export default [
+export default defineConfig([
+   tseslint.configs.recommended,
   {
-    ignores: ['node_modules/', 'dist/'],
+    ignores: [
+      '**/dist',
+      '**/build',
+      'coverage',
+      'lib',
+      '**/tests',
+      'packages/**/tests/*',
+      '**/node_modules',
+      'docs/images',
+      'docs/**/examples/',
+      'docs/.vercel',
+      'docs/.nitro',
+      'docs/.vitepress/cache',
+      'docs/.vitepress/theme/components/editors/preact/index.js',
+      'packages/lucide-react/dynamicIconImports.js',
+      'packages/angular/.angular',
+      'packages/svelte/.svelte-kit',
+    ],
   },
   {
     files: ['**/*.js'],
@@ -39,7 +56,14 @@ export default [
       'import/no-extraneous-dependencies': [
         'error',
         {
-          devDependencies: ['**/*.test.js', '**/*.spec.js', '**/scripts/**'],
+          devDependencies: [
+            '**/*.test.js',
+            '**/*.spec.js',
+            '**/scripts/**',
+            'eslint.config.js',
+            'packages/**/tests/**',
+            'packages/angular/eslint.config.js',
+          ],
         },
       ],
       'import/extensions': [
@@ -67,7 +91,7 @@ export default [
       '@html-eslint/no-inline-styles': 'error',
       '@html-eslint/require-attrs': [
         'error',
-        ...Object.entries(DEFAULT_ATTRS).map(([attr, value]) => ({
+        ...Object.entries(defaultAttrs).map(([attr, value]) => ({
           tag: 'svg',
           attr,
           value: String(value),
@@ -81,6 +105,12 @@ export default [
           enforceBeforeSelfClose: true,
         },
       ],
+      '@html-eslint/attrs-newline': [
+        'error',
+        {
+          inline: ['path', 'line', 'polyline', 'polygon', 'rect', 'circle', 'ellipse'],
+        },
+      ],
       '@html-eslint/require-closing-tags': [
         'error',
         {
@@ -92,4 +122,4 @@ export default [
       '@html-eslint/quotes': 'error',
     },
   },
-];
+]);

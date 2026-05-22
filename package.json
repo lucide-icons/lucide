@@ -28,7 +28,7 @@
     "suggest:tags": "node ./scripts/suggestTags.mts",
     "suggest:tags:watch": "node --env-file .env --watch ./scripts/suggestTags.mts ",
     "postinstall": "husky install",
-    "lint:es": "ESLINT_USE_FLAT_CONFIG=false eslint .",
+    "lint:es": "eslint .",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
     "lint:format-fix": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --write",
     "lint:json:icons": "ajv --spec=draft2020 -s icon.schema.json -d 'icons/*.json' > /dev/null",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
+    "@eslint/js": "^10.0.1",
     "@html-eslint/eslint-plugin": "^0.60.0",
     "@html-eslint/parser": "^0.60.0",
     "@octokit/rest": "^19.0.13",
@@ -74,6 +75,8 @@
     "simple-git": "^3.36.0",
     "svgo": "^3.3.3",
     "svgson": "^5.3.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4",
     "vitest": "4.0.12",
     "yargs": "^17.7.2",
     "zod": "^3.25.67"
