@@ -19,9 +19,9 @@ export type LucideIconData = {
  */
 interface LucideIconProps {
   title: Signal<Nullable<string>>;
-  size: Signal<Nullable<number>>;
+  size: Signal<Nullable<number | string>>;
   color: Signal<Nullable<string>>;
-  strokeWidth: Signal<Nullable<number>>;
+  strokeWidth: Signal<Nullable<number | string>>;
   absoluteStrokeWidth: Signal<Nullable<boolean>>;
 }
 
