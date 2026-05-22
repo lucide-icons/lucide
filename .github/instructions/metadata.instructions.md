@@ -7,7 +7,7 @@ The schema for the JSON metadata descriptor can be found in `icon.schema.json`. 
 
 ## Contributors
 
-The `contributors` property is an array of GitHub usernames of the contributors who created or contributed to the icon. This property is require, it's used to give credit to the contributors and to track the history of the icon. The contributor of the PR should be added to the `contributors` array if they are not already listed. This is only if the contributor has made a significant contribution to the svg of the icon.
+The `contributors` property is a required array of GitHub usernames for the people who created or contributed to the icon. It is used to give credit to contributors and to track the icon's history. Add the PR author to the `contributors` array if they are not already listed and they have made a significant contribution to the icon's SVG.
 
 ## Tags
 
