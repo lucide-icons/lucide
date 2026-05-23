@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "pratik1258m"
+  ],
+  "tags": [
+    "globe",
+    "world",
+    "browser",
+    "language",
+    "translate",
+    "internationalization",
+    "localization",
+    "done",
+    "check",
+    "status",
+    "verified",
+    "complete",
+    "success"
+  ],
+  "categories": [
+    "navigation",
+    "connectivity"
+  ]
+}
