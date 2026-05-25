@@ -1,0 +1,12 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Ahmed-Dghaies"
+  ],
+  "tags": [
+    "music audit start stop run"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
