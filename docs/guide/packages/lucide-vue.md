@@ -3,6 +3,7 @@
 Vue 2 components for Lucide icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
 
 **What you can accomplish:**
+
 - Use icons as Vue 2 components with Options API integration
 - Maintain legacy Vue 2 applications with modern icon components
 - Integrate with Vue 2's template system and component lifecycle
@@ -155,7 +156,7 @@ You can add accessibility attributes using aria-labels.
 
 ```vue
 <script setup>
-import { Check } from 'lucide-vue-next';
+import { Check } from '@lucide/vue';
 </script>
 
 <template>

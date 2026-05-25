@@ -12,7 +12,7 @@ Lucide icon library with static assets for web applications.
 
   [![npm](https://img.shields.io/npm/v/lucide-static?color=blue)](https://www.npmjs.com/package/lucide-static)
   ![NPM Downloads](https://img.shields.io/npm/dw/lucide-static)
-  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+  [![License](https://img.shields.io/badge/license-ISC-green)](https://lucide.dev/license)
 </div>
 
 <p align="center">
@@ -85,7 +85,7 @@ Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/licen
 
 ### Hero backers 🦸
 
-<a href="https://https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://zephyr-cloud.io/"><img src="https://lucide.dev/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
 
 ### Awesome backers 🍺
 
