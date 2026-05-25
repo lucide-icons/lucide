@@ -14,7 +14,11 @@
     "blocked",
     "forbidden",
     "warning",
-    "music audit start stop run"
+    "music",
+    "audit",
+    "start",
+    "stop",
+    "run"
   ],
   "categories": [
     "multimedia"
