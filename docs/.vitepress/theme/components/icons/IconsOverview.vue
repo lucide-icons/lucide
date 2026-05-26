@@ -33,8 +33,12 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 
-const { execute: fetchTags, data: tags } = useFetchTags();
-const { execute: fetchCategories, data: categories } = useFetchCategories();
+const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
+const {
+  execute: fetchCategories,
+  data: categories,
+  isFetching: isFetchingCategories,
+} = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl);
@@ -73,6 +77,12 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'categories', weight: 1 },
 ]);
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
+const isSearchMetadataLoading = computed(
+  () =>
+    searchQuery.value.length > 0 &&
+    ((tags.value == null && isFetchingTags.value) ||
+      (categories.value == null && isFetchingCategories.value)),
+);
 
 const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
@@ -98,14 +108,20 @@ function setActiveIconName(name: string) {
   activeIconName.value = name;
 }
 
-function onFocusSearchInput() {
-  if (tags.value == null) {
-    fetchTags();
+function loadSearchMetadata() {
+  if (tags.value == null && !isFetchingTags.value) {
+    void fetchTags();
   }
-  if (categories.value == null) {
-    fetchCategories();
+  if (categories.value == null && !isFetchingCategories.value) {
+    void fetchCategories();
   }
 }
+
+watch(searchQuery, (searchString) => {
+  if (searchString !== '') {
+    loadSearchMetadata();
+  }
+});
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
@@ -141,11 +157,11 @@ function handleCloseDrawer() {
         ref="searchInput"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
-        @focus="onFocusSearchInput"
+        @focus="loadSearchMetadata"
       />
     </StickyBar>
     <NoResults
-      v-if="searchPlaceholder.isNoResults"
+      v-if="searchPlaceholder.isNoResults && !isSearchMetadataLoading"
       :searchQuery="searchPlaceholder.query"
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
