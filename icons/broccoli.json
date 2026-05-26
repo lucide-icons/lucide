@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "leafy",
+    "crisp",
+    "fresh",
+    "culinary",
+    "vegetation",
+    "vegetable",
+    "food",
+    "healthy",
+    "vegan",
+    "vegetarian",
+    "nutrition",
+    "diet",
+    "plant",
+    "green",
+    "produce"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
