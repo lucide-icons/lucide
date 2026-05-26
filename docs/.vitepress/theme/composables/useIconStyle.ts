@@ -23,7 +23,10 @@ export const iconStyleContext = {
   size: useLocalStorage('lucide-custom-size', STYLE_DEFAULTS.size),
   strokeWidth: useLocalStorage('lucide-custom-strokeWidth', STYLE_DEFAULTS.strokeWidth),
   color: useLocalStorage('lucide-custom-color', STYLE_DEFAULTS.color),
-  absoluteStrokeWidth: useLocalStorage('lucide-custom-absoluteStroke', STYLE_DEFAULTS.absoluteStrokeWidth),
+  absoluteStrokeWidth: useLocalStorage(
+    'lucide-custom-absoluteStroke',
+    STYLE_DEFAULTS.absoluteStrokeWidth,
+  ),
 };
 
 export function useIconStyleContext(): IconSizeContext {
