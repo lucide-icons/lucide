@@ -13,7 +13,7 @@
   "title": "Lucide Icons icon schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "categories", "tags"],
+  "required": ["$schema", "contributors", "categories", "tags"],
   "properties": {
     "$schema": {
       "type": "string"
@@ -56,7 +56,6 @@
           "account",
           "animals",
           "arrows",
-          "brands",
           "buildings",
           "charts",
           "communication",
@@ -134,7 +133,7 @@
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.brand"]
+      "enum": ["icon.renamed"]
     },
     "aliasDeprecationReasons": {
       "type": "string",

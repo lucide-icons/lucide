@@ -78,12 +78,12 @@ const App = () => {
 
 > SVG attributes in Preact aren't transformed, so if you want to change for example the `stroke-linejoin` you need to pass it in kebabcase. Basically how the SVG spec want you to write it. See this topic in the [Preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
 
-## With Lucide lab or custom icons
+## With Lucide Lab or custom icons
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
 
 They can be used by using the `Icon` component.
-All props like regular lucide icons can be passed to adjust the icon appearance.
+All props like regular Lucide icons can be passed to adjust the icon appearance.
 
 ### Using the `Icon` component
 
@@ -131,3 +131,19 @@ const App = () => {
 
 export default App;
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```jsx
+import { Check } from 'lucide-preact';
+
+const App = () => {
+  return <Check aria-label="Task completed" />;
+};
+```
+
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

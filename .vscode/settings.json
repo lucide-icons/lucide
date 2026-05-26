@@ -2,5 +2,5 @@
   "cSpell.words": ["devs", "preact", "Preact"],
   "eslint.enable": true,
   "eslint.validate": ["javascript", "svg"],
-  "svg.preview.background": "transparent"
+  "svg.preview.background": "editor"
 }

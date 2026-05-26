@@ -1,19 +1,20 @@
 <script setup lang="ts">
-import { ref, computed, defineAsyncComponent, onMounted, watch, watchEffect } from 'vue';
+import { ref, computed, watch, defineAsyncComponent, onMounted } from 'vue';
 import type { IconEntity, Category } from '../../types';
 import useSearch from '../../composables/useSearch';
 import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
-import IconsCategory from './IconsCategory.vue';
+import IconsCategory, { CategoryRow } from './IconsCategory.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import chunkArray from '../../utils/chunkArray';
-import { CategoryRow } from './IconsCategory.vue';
 import useScrollToCategory from '../../composables/useScrollToCategory';
+import { useCategoryView } from '../../composables/useCategoryView';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
+import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -26,7 +27,14 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 const { searchInput, searchQuery, searchQueryDebounced } = useSearchInput();
+const { selectedCategory } = useCategoryView();
 const isSearching = computed(() => !!searchQuery.value);
+
+watch(searchQueryDebounced, (searchString) => {
+  if (searchString !== '') {
+    selectedCategory.value = '';
+  }
+});
 
 const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
   searchInput.value?.focus();
@@ -40,10 +48,10 @@ const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categoriesMap } = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
-const { width: containerWidth } = useElementSize(overviewEl)
+const { width: containerWidth } = useElementSize(overviewEl);
 
 const columnSize = computed(() => {
-  return Math.floor((containerWidth.value) / ((ICON_SIZE + ICON_GRID_GAP)));
+  return Math.floor(containerWidth.value / (ICON_SIZE + ICON_GRID_GAP));
 });
 
 const mappedIcons = computed(() => {
@@ -71,26 +79,27 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
 const categories = computed(() => {
   if (!props.categories?.length || !props.icons?.length) return [];
 
-  return props.categories
-    .map(({ name, title }) => {
-      const categoryIcons = props.icons.filter((icon) => {
-        const iconCategories = icon?.externalLibrary ? icon.categories : props.iconCategories[icon.name]
+  return props.categories.map(({ name, title }) => {
+    const categoryIcons = props.icons.filter((icon) => {
+      const iconCategories = icon?.externalLibrary
+        ? icon.categories
+        : props.iconCategories[icon.name];
 
-        return iconCategories?.includes(name);
-      });
+      return iconCategories?.includes(name);
+    });
 
-      const searchedCategoryIcons = isSearching
-        ? categoryIcons.filter((icon) =>
-            searchResults.value.some((item) => item?.name === icon?.name)
-          )
-        : categoryIcons;
+    const searchedCategoryIcons = isSearching
+      ? categoryIcons.filter((icon) =>
+          searchResults.value.some((item) => item?.name === icon?.name),
+        )
+      : categoryIcons;
 
-      return {
-        title,
-        name,
-        icons: searchedCategoryIcons,
-      };
-    })
+    return {
+      title,
+      name,
+      icons: searchedCategoryIcons,
+    };
+  });
 });
 
 const categoriesList = computed(() => {
@@ -107,26 +116,24 @@ const categoriesList = computed(() => {
       return acc;
     }, []);
 });
+const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 
-const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(
-  categoriesList,
-  {
-    itemHeight: ICON_SIZE + ICON_GRID_GAP,
-    overscan: 10
-  },
-)
+const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
+  itemHeight: ICON_SIZE + ICON_GRID_GAP,
+  overscan: 10,
+});
 
 useScrollToCategory({
   categories,
   categoriesList,
   scrollTo,
   searchQueryDebounced,
-})
+});
 
 onMounted(() => {
   containerProps.ref.value = document.documentElement;
-  useEventListener(window, 'scroll', containerProps.onScroll)
-})
+  useEventListener(window, 'scroll', containerProps.onScroll);
+});
 
 function onFocusSearchInput() {
   if (tags.value == null) {
@@ -143,21 +150,29 @@ const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  window.history.pushState({}, '', '/icons/categories');
+  const url = new URL(window.location);
+  url.pathname = '/icons/categories';
+
+  if (searchQueryDebounced.value) {
+    url.searchParams.set('search', searchQueryDebounced.value);
+  }
+  
+  if (selectedCategory.value) {
+    url.hash = selectedCategory.value;
+  }
+  
+  window.history.pushState({}, '', url);
 }
-
-watchEffect(() => {
-
-  console.log(props.icons.find((icon) => icon.name === 'burger'));
-
-});
 </script>
 
 <template>
-  <div ref="overviewEl" class="overview-container">
+  <div
+    ref="overviewEl"
+    class="overview-container"
+  >
     <StickyBar class="category-search">
       <InputSearch
-        :placeholder="`Search ${icons.length} icons ...`"
+        :placeholder="`Search ${icons.length} icons…`"
         v-model="searchQuery"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
@@ -166,8 +181,9 @@ watchEffect(() => {
       />
     </StickyBar>
     <NoResults
-      v-if="categories.length === 0"
-      :searchQuery="searchQuery"
+      v-if="searchPlaceholder.isNoResults"
+      :searchQuery="searchPlaceholder.query"
+      :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
     <div v-bind="wrapperProps">
@@ -207,9 +223,5 @@ watchEffect(() => {
 
 .icons {
   margin-bottom: 8px;
-}
-
-.overview-container {
-  padding-bottom: 288px;
 }
 </style>
