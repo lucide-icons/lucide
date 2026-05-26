@@ -144,6 +144,14 @@
   .VPHomeHero .container {
     flex-direction: row;
   }
+
+  html.has-bb-banner {
+    --vp-layout-top-height: 72px;
+  }
+
+  html.has-bb-banner {
+    --Dark-Background: #161618;
+  }
 }
 
 .VPNavBarHamburger .container > span {
