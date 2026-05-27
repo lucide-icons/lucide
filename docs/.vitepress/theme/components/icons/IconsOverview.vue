@@ -78,10 +78,7 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
 ]);
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
-  () =>
-    searchQuery.value.length > 0 &&
-    ((tags.value == null && isFetchingTags.value) ||
-      (categories.value == null && isFetchingCategories.value)),
+  () => searchQuery.value.length > 0 && (tags.value == null || categories.value == null),
 );
 
 const chunkedIcons = computed(() => {
