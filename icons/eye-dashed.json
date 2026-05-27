@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "view",
+    "watch",
+    "see",
+    "hide",
+    "conceal",
+    "mask",
+    "hidden",
+    "invisible",
+    "visibility",
+    "vision"
+  ],
+  "categories": [
+    "accessibility",
+    "photography",
+    "design",
+    "security"
+  ]
+}
