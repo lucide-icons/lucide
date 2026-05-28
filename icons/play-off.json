@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "Ahmed-Dghaies"
+  ],
+  "tags": [
+    "audio",
+    "video",
+    "music",
+    "start",
+    "run",
+    "off",
+    "disabled",
+    "blocked",
+    "forbidden"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
