@@ -121,7 +121,9 @@ const categoriesList = computed(() => {
     }, []);
 });
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
-const isSearchMetadataLoading = computed(() => searchQuery.value.length > 0 && tags.value == null);
+const isSearchMetadataLoading = computed(
+  () => searchQuery.value.length > 0 && (tags.value == null || categoriesMap.value == null),
+);
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
   itemHeight: ICON_SIZE + ICON_GRID_GAP,
