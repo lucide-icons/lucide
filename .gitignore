@@ -39,6 +39,7 @@ packages/**/LICENSE
 categories.json
 tags.json
 .vercel
+package-lock.json
 
 # docs
 docs/.vitepress/cache

@@ -1,4 +1,4 @@
-import { type PageData } from 'vitepress';
+import { PageData } from 'vitepress';
 import getStructuredData from './getStructuredData';
 import { createGeneralOGImage, createIconOGImage } from './createOGImage';
 
