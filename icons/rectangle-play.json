@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "scottgriffinm"
+  ],
+  "tags": [
+    "music",
+    "video",
+    "start",
+    "movie"
+  ],
+  "categories": [
+    "arrows",
+    "multimedia"
+  ]
+}
