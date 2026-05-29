@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas",
+    "sezze",
+    "thanakritju"
+  ],
+  "tags": [
+    "box",
+    "container",
+    "storage",
+    "sealed",
+    "delivery",
+    "undelivered",
+    "unopened",
+    "packed",
+    "archive",
+    "zip",
+    "module",
+    "returned"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}
