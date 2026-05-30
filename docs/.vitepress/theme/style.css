@@ -162,3 +162,9 @@
   margin: 0 auto 48px;
   max-width: 480px;
 }
+
+html:not(.has-bb-banner) #bb-banner {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
