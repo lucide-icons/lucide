@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "Ahmed-Dghaies"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicates that playback is disabled for video, live stream, or audio file",
+    "Indicates that video, live stream, or audio file cannot be played."
+  ],
   "tags": [
     "audio",
     "video",
