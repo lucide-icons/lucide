@@ -3,6 +3,11 @@
   "contributors": [
     "whoisBugsbunny"
   ],
+  "use-cases": [
+    "representing the golden ratio",
+    "indicating mathematical formulas",
+    "labeling scientific variables"
+  ],
   "tags": [
     "math",
     "golden-ratio",
