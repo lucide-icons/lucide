@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "tags": [
+    "parfum",
+    "aroma",
+    "fragrance",
+    "smell",
+    "scent",
+    "gift",
+    "duty free",
+    "spray",
+    "puff",
+    "atomizer",
+    "mist"
+  ],
+  "categories": [
+    "social",
+    "travel"
+  ]
+}
