@@ -3,6 +3,11 @@
   "contributors": [
     "rrod497"
   ],
+  "use-cases": [
+    "Product category: perfume, cosmetics, self-care",
+    "Retail store indication: duty-free, boutique",
+    "Scented vs. unscented options: skincare, lotions, deodorant"
+  ],
   "tags": [
     "parfum",
     "aroma",
