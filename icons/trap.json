@@ -3,6 +3,12 @@
   "contributors": [
     "rrod497"
   ],
+  "use-cases": [
+    "Phishing & Scam: Flag malicious links, fake websites, or deceptive social engineering tactics.",
+    "Data Privacy Alert: Indicate risk of user data getting exposed, tracked, or lockdown by restrictive user agreements.",
+    "Financial & Law Pitfalls: Represent risky investment schemes or contracts.",
+    "Gaming: Gameplay icon for trap mechanics, field hazards, or skills that immobilize targets"
+  ],
   "tags": [
     "trap",
     "danger",
