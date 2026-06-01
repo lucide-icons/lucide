@@ -5,7 +5,25 @@
     "jguddas",
     "RajnishKMehta"
   ],
+  "use-cases": [
+    "remove from favorites",
+    "unstar item",
+    "reject favorite",
+    "exclude item",
+    "remove bookmark",
+    "disallow recommendation",
+    "remove featured status",
+    "dismiss saved item",
+    "block preferred content",
+    "clear favorite selection"
+  ]
   "tags": [
+    "mark",
+    "symbol",
+    "shape",
+    "vector",
+    "design",
+    "graphic",
     "bookmark",
     "favorite",
     "like",
