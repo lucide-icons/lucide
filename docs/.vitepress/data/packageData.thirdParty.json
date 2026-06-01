@@ -117,7 +117,7 @@
   },
   {
     "name": "lucide-slint",
-    "description": "Implementation of the lucide icon library for Slint.",
+    "description": "Implementation of the Lucide icon library for Slint.",
     "icon": "/framework-logos/slint.svg",
     "shields": [
       {
