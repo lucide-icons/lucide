@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "flask",
+    "pipette",
+    "lab",
+    "chemistry",
+    "beaker",
+    "erlenmeyer",
+    "experiment",
+    "test"
+  ],
+  "categories": [
+    "chemistry",
+    "science",
+    "medical"
+  ]
+}
