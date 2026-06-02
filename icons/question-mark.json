@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Lucide",
+    "jwlinqx"
+  ],
+  "tags": [
+    "?",
+    "question",
+    "question mark"
+  ],
+  "categories": [
+    "design",
+    "accessibility",
+    "communication"
+  ]
+}
