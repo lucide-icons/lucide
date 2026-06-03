@@ -9,9 +9,8 @@ import ResetButton from '../base/ResetButton.vue'
 import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
 import Switch from '../base/Switch.vue'
 
-const iconContainer = ref<HTMLElement | null>()
 
-// Reverted back to standard refs so they don't persist on refresh
+const iconContainer = ref<HTMLElement | null>()
 const color = ref('currentColor')
 const strokeWidth = ref(2)
 const size = ref(24)
