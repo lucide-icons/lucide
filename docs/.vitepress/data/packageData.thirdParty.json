@@ -209,5 +209,24 @@
     ],
     "source": "https://github.com/shx08/strapi-lucide-icons",
     "documentation": "https://github.com/shx08/strapi-lucide-icons/blob/main/README.md"
+  },
+  {
+    "name": "@respeak/lucide-motion-vue",
+    "description": "Lucide icons animated with Motion for Vue 3. Tree-shakable, TypeScript-first — with animateOnHover, animateOnTap, animateOnView triggers and a composable <AnimateIcon> wrapper that turns any element into the trigger.",
+    "icon": "/framework-logos/vue-next.svg",
+    "shields": [
+      {
+        "alt": "Latest Stable Version",
+        "src": "https://img.shields.io/npm/v/@respeak/lucide-motion-vue",
+        "href": "https://www.npmjs.com/package/@respeak/lucide-motion-vue"
+      },
+      {
+        "alt": "Total Downloads",
+        "src": "https://img.shields.io/npm/dm/@respeak/lucide-motion-vue",
+        "href": "https://www.npmjs.com/package/@respeak/lucide-motion-vue"
+      }
+    ],
+    "source": "https://github.com/respeak-io/lucide-motion-vue",
+    "documentation": "https://respeak-io.github.io/lucide-motion-vue/"
   }
 ]
