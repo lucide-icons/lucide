@@ -6,7 +6,8 @@
   "main": "main.ts",
   "type": "module",
   "scripts": {
-    "start": "node ./src/main.ts"
+    "start": "node ./src/main.ts",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,7 @@
     "fs-extra": "^11.2.0",
     "minimist": "^1.2.8",
     "oslllo-svg-fixer": "^5.0.0",
-    "svgtofont": "^6.5.0"
+    "svgtofont": "^6.5.2"
   },
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
