@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "nilsjonsson"
+  ],
+  "tags": [
+    "account",
+    "settings",
+    "spanner",
+    "diy",
+    "toolbox",
+    "build",
+    "construction",
+    "off"
+  ],
+  "categories": [
+    "account",
+    "development",
+    "tools"
+  ]
+}
