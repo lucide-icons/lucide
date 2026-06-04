@@ -9,7 +9,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackSvelte.vue';
 # Combining icons
 
 You can combine multiple icons into a single icon by nesting SVG elements.
-This is useful if you want to create custom icons icons by combining existing ones.
+This is useful if you want to create custom icons by combining existing ones.
 
 ::: sandpack {template=vite-svelte showTabs=false editorHeight=400 editorWidthPercentage=60}
 

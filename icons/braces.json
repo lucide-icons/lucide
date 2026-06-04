@@ -12,6 +12,7 @@
       "toBeRemovedInVersion": "v1.0"
     }
   ],
+  "use-cases": [],
   "tags": [
     "json",
     "code",

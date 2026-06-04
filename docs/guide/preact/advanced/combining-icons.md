@@ -9,7 +9,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackPreact.vue'
 # Combining icons
 
 You can combine multiple icons into a single icon by nesting SVG elements.
-This is useful if you want to create custom icons icons by combining existing ones.
+This is useful if you want to create custom icons by combining existing ones.
 
 ::: sandpack {showTabs=false editorHeight=400 editorWidthPercentage=60 dependencies="lucide-preact"}
 
