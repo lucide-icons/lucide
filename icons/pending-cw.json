@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "NielsLazaroms"
+  ],
+  "tags": [
+    "pending",
+    "time",
+    "watch"
+  ],
+  "categories": [
+    "time & calendar"
+  ]
+}
