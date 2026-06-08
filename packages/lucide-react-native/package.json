@@ -39,6 +39,13 @@
       "import": "./dist/esm/icons/index.mjs",
       "browser": "./dist/esm/icons/index.mjs",
       "require": "./dist/cjs/icons/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/esm/icons/*.d.ts",
+      "react-native": "./dist/esm/icons/*.mjs",
+      "import": "./dist/esm/icons/*.mjs",
+      "browser": "./dist/esm/icons/*.mjs",
+      "require": "./dist/cjs/icons/*.js"
     }
   },
   "sideEffects": false,
