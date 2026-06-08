@@ -14,8 +14,8 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version-file: 'package.json'
 
@@ -25,7 +25,7 @@ jobs:
         with:
           files: icons/*.svg
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
       - name: Install svgson for code preview (safer and faster than installing all deps)
         run: npm install svgson@5.3.1 --force
 

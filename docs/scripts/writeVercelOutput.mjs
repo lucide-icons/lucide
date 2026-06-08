@@ -14,32 +14,38 @@ const iconAliasesRedirectRoutes = Object.entries(iconMetaData)
     const aliasRouteMatches = aliases.map((alias) => alias.name).join('|');
 
     return {
-      src: `/icons/${aliasRouteMatches}`,
-      status: 302,
+      src: `^/icons/(${aliasRouteMatches})$`,
+      status: 308,
       headers: {
         Location: `/icons/${iconName}`,
       },
     };
   });
 
-const vercelRouteConfig = {
-  version: 3,
-  overrides: {},
-  cleanUrls: true,
-  routes: [
-    {
-      handle: 'filesystem',
-    },
-    {
-      src: '(?<url>/api/.*)',
-      dest: '/__nitro?url=$url',
-    },
-    ...iconAliasesRedirectRoutes,
-  ],
-};
+const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
+
+const vercelConfig = await fs.promises.readFile(vercelOutputJSON, 'utf-8');
+
+const vercelRouteConfig = JSON.parse(vercelConfig);
+
+vercelRouteConfig.routes = [...iconAliasesRedirectRoutes, ...vercelRouteConfig.routes];
+
+// Adjust the existing catch-all route to only catch API routes, so that we can add a new catch-all route for 404s
+const allCatchRoute = '/(.*)';
+const fallBackIndex = vercelRouteConfig.routes.findIndex((route) => route.src === allCatchRoute);
+
+if (fallBackIndex === -1) {
+  throw new Error(
+    `Could not find the expected catch-all route with src "${allCatchRoute}" in the existing Vercel config. Please make sure that the existing config has a catch-all route and that its src is "${allCatchRoute}".`,
+  );
+}
+
+vercelRouteConfig.routes[fallBackIndex].src = '/api/(.*)';
+vercelRouteConfig.routes.push({
+  src: allCatchRoute,
+  dest: '/404.html',
+});
 
 const output = JSON.stringify(vercelRouteConfig, null, 2);
-
-const vercelOutputJSON = path.resolve(currentDir, '.vercel/output/config.json');
 
 await fs.promises.writeFile(vercelOutputJSON, output, 'utf-8');
