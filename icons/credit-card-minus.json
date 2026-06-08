@@ -4,21 +4,29 @@
     "ameniti-mx"
   ],
   "tags": [
-    "credit",
-    "card",
-    "minus",
+    "credit card",
+    "debit card",
+    "payment",
     "remove",
+    "delete",
     "subtract",
-    "debit",
-    "financial",
+    "minus",
     "banking",
-    "credit-card",
-    "new-icon",
-    "icon"
+    "finance",
+    "wallet",
+    "card",
+    "transaction",
+    "cancel payment",
+    "remove card",
+    "unlink card",
+    "revoke",
+    "decline",
+    "refund",
+    "chargeback",
+    "account"
   ],
   "categories": [
-    "icon-proposal",
-    "credit-card",
-    "icon"
+    "finance",
+    "money"
   ]
 }
