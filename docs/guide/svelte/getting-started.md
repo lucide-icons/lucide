@@ -15,24 +15,22 @@ Make sure you have a Svelte environment set up. If you don't have one yet, you c
 
 ## Installation
 
-<!-- TODO: v1 Remove After full release -->
-
 ::: code-group
 
 ```sh [pnpm]
-pnpm install @lucide/svelte@next
+pnpm install @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add @lucide/svelte@next
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install @lucide/svelte@next
+npm install @lucide/svelte
 ```
 
 ```sh [bun]
-bun add @lucide/svelte@next
+bun add @lucide/svelte
 ```
 
 :::
