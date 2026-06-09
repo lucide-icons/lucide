@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "wojtekmaj",
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere",
+    "jennieboops"
+  ],
+  "tags": [
+    "edit",
+    "ai",
+    "tools",
+    "smart",
+    "create",
+    "draw",
+    "sketch",
+    "draft",
+    "writer",
+    "writing",
+    "stationery",
+    "artist",
+    "magic",
+    "wizard",
+    "magician"
+  ],
+  "categories": [
+    "design",
+    "cursors",
+    "tools",
+    "text",
+    "photography"
+  ]
+}
