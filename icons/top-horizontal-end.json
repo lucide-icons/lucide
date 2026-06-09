@@ -4,6 +4,12 @@
     "jwlinqx"
   ],
   "tags": [
+    "alignment",
+    "direction",
+    "orientation",
+    "position",
+    "shape",
+    "line",
     "panel",
     "layout",
     "row",
