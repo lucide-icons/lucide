@@ -92,7 +92,7 @@ Thank you to all the people who contributed to Lucide!
 
 ### Hero backers 🦸
 
-<a href="https://https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
+<a href="https://zephyr-cloud.io/"><img src="docs/public/sponsors/zephyr-cloud.svg" width="180" alt="Zephyr Cloud – From idea to prod: fast micro-frontend delivery!" /></a>
 
 ### Awesome backers 🍺
 
