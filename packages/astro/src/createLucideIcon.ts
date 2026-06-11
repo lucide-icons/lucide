@@ -1,11 +1,43 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/render/astro/factory.js';
-import type { IconNode } from './types';
+import type { LucideIconData, LucideIconNode } from './types';
 import { render, renderSlot, createComponent, renderComponent } from 'astro/compiler-runtime';
 import Icon from './Icon.astro';
-import { mergeClasses } from './utils/mergeClasses';
-import { toKebabCase } from './utils/toKebabCase';
 
-export default (iconName: string, iconNode: IconNode): AstroComponentFactory => {
+/**
+ * Creates a Lucide icon component from icon data.
+ *
+ * @param icon Icon data object.
+ * @returns Lucide icon component.
+ */
+function createLucideIcon(icon: LucideIconData): AstroComponentFactory;
+
+/**
+ * Creates a Lucide icon component from the legacy icon arguments.
+ *
+ * @param iconName Icon name.
+ * @param iconNode Icon node.
+ * @param aliases Optional icon aliases.
+ * @returns Lucide icon component.
+ */
+function createLucideIcon(
+  iconName: string,
+  iconNode: LucideIconNode[],
+  aliases?: string[],
+): AstroComponentFactory;
+
+function createLucideIcon(
+  iconOrIconName: string | LucideIconData,
+  iconNode: LucideIconNode[] = [],
+  aliases: string[] = [],
+): AstroComponentFactory {
+  const icon =
+    typeof iconOrIconName === 'string'
+      ? {
+          name: iconOrIconName,
+          node: iconNode,
+          aliases,
+        }
+      : iconOrIconName;
   const Component = createComponent(
     ($$result, $$props: Record<string, any>, $$slots) => {
       const { class: className, ...restProps } = $$props;
@@ -14,11 +46,8 @@ export default (iconName: string, iconNode: IconNode): AstroComponentFactory => 
         'Icon',
         Icon,
         {
-          class: mergeClasses(
-            Boolean(iconName) && `lucide-${toKebabCase(iconName)}`,
-            Boolean(className) && className,
-          ),
-          iconNode,
+          class: className,
+          icon,
           ...restProps,
         },
         { default: () => render`${renderSlot($$result, $$slots['default'])}` },
@@ -28,4 +57,6 @@ export default (iconName: string, iconNode: IconNode): AstroComponentFactory => 
     'none',
   );
   return Component;
-};
+}
+
+export default createLucideIcon;

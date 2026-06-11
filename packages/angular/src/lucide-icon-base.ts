@@ -1,5 +1,6 @@
 import {
   Component,
+  computed,
   effect,
   ElementRef,
   inject,
@@ -9,9 +10,10 @@ import {
   viewChild,
 } from '@angular/core';
 import { LUCIDE_CONFIG } from './lucide-config';
-import { LucideIconData, Nullable } from './types';
+import { LucideIconData, LucideIconNode, Nullable } from './types';
 import defaultAttributes from './default-attributes';
 import { lucideIconTemplate } from './lucide-icon-template';
+import buildLucideIconNode from './utils/buildLucideIconNode';
 
 /**
  * @internal
@@ -22,12 +24,13 @@ import { lucideIconTemplate } from './lucide-icon-template';
   template: lucideIconTemplate,
   host: {
     ...defaultAttributes,
-    class: 'lucide',
-    '[attr.width]': 'size()',
-    '[attr.height]': 'size()',
-    '[attr.stroke]': 'color()',
-    '[attr.stroke-width]': 'strokeWidth()',
-    '[attr.aria-hidden]': '!title()',
+    '[attr.class]': 'computedClass()',
+    '[attr.width]': 'computedWidth()',
+    '[attr.height]': 'computedHeight()',
+    '[attr.viewBox]': 'computedViewbox()',
+    '[attr.stroke]': 'computedStroke()',
+    '[attr.stroke-width]': 'computedStrokeWidth()',
+    '[attr.aria-hidden]': 'computedAriaHidden()',
   },
 })
 export abstract class LucideIconBase {
@@ -57,6 +60,16 @@ export abstract class LucideIconBase {
     transform: (value: Nullable<string | number>) => value ?? this.iconConfig.size,
   });
   /**
+   * Icon width.
+   * @default 24
+   */
+  readonly width = input(null);
+  /**
+   * Icon height.
+   * @default 24
+   */
+  readonly height = input(null);
+  /**
    * Stroke color.
    * @default currentColor
    */
@@ -71,29 +84,107 @@ export abstract class LucideIconBase {
     transform: (value: Nullable<string | number>) => value ?? this.iconConfig.strokeWidth,
   });
   /**
-   * If set to true, it adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
+   * Whether to use absolute stroke width.
    */
   readonly absoluteStrokeWidth = input(this.iconConfig.absoluteStrokeWidth, {
     transform: (value: Nullable<boolean>) => value ?? this.iconConfig.absoluteStrokeWidth,
   });
+  /**
+   * If set to true, it adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.
+   */
+  readonly nonScalingStroke = input(this.iconConfig.nonScalingStroke, {
+    transform: (value: Nullable<boolean>) => value ?? this.iconConfig.nonScalingStroke,
+  });
+
+  /**
+   * @internal
+   */
+  protected readonly computedIcon = computed(() => {
+    const icon = this.icon();
+    return icon
+      ? buildLucideIconNode(icon, {
+          width: this.width() ?? this.size(),
+          height: this.height() ?? this.size(),
+          color: this.color(),
+          strokeWidth: this.strokeWidth(),
+          absoluteStrokeWidth: this.absoluteStrokeWidth(),
+          nonScalingStroke: this.nonScalingStroke(),
+          hasA11yProp: this.title() != null,
+        })
+      : null;
+  });
+
+  /**
+   * @internal
+   */
+  protected readonly computedAttributes = computed<LucideIconNode[1] | undefined>(
+    () => this.computedIcon()?.[1],
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedIconNode = computed(() => this.computedIcon()?.[2]);
+
+  /**
+   * @internal
+   */
+  protected readonly computedWidth = computed(
+    () => this.computedAttributes()?.['width'] ?? this.iconConfig.size,
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedHeight = computed(
+    () => this.computedAttributes()?.['height'] ?? this.iconConfig.size,
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedStroke = computed(
+    () => this.computedAttributes()?.['stroke'] ?? this.iconConfig.color,
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedStrokeWidth = computed(
+    () => this.computedAttributes()?.['stroke-width'] ?? this.iconConfig.strokeWidth,
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedAriaHidden = computed(
+    () => this.computedAttributes()?.['aria-hidden'] === 'true',
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedViewbox = computed(
+    () => this.computedAttributes()?.['viewBox'] ?? '0 0 24 24',
+  );
+
+  /**
+   * @internal
+   */
+  protected readonly computedClass = computed(
+    () => this.computedAttributes()?.['class'] ?? 'lucide',
+  );
 
   constructor() {
     effect((onCleanup) => {
-      const icon = this.icon();
-      if (icon) {
-        const absoluteStrokeWidth = this.absoluteStrokeWidth();
-        const { name, node, aliases = [] } = icon;
-        const classes = [name, ...aliases].map((item) => `lucide-${item}`);
-        for (const cssClass of classes) {
-          this.renderer.addClass(this.elRef.nativeElement, cssClass);
-        }
+      const iconNode = this.computedIconNode();
+      const iconAttributes = this.computedIconNode();
+      if (iconNode && iconAttributes) {
         const contentRef = this.contentRef();
         const refChild = contentRef.nativeElement;
-        const elements = node.map(([name, attrs]) => {
+        const elements = iconNode.map(([name, attrs]) => {
           const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
-          if (absoluteStrokeWidth) {
-            this.renderer.setAttribute(element, 'vector-effect', 'non-scaling-stroke');
-          }
+
           Object.entries(attrs).forEach(([name, value]) =>
             this.renderer.setAttribute(
               element,
@@ -108,9 +199,6 @@ export abstract class LucideIconBase {
           elements.forEach((element) =>
             this.renderer.removeChild(this.elRef.nativeElement, element),
           );
-          for (const cssClass of classes) {
-            this.renderer.removeClass(this.elRef.nativeElement, cssClass);
-          }
         });
       }
     });
