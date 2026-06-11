@@ -6,10 +6,10 @@ import SelectIcon from './SelectIcon.vue';
 
 defineProps<{
   id?: string;
-  items?: { name: string; route: string; icon?: string; iconDark?: string }[];
+  items?: { name: string; value: string; icon?: string; iconDark?: string }[];
 }>();
 
-const selected = defineModel<{ name: string; icon: string; iconDark?: string }>();
+const selected = defineModel<{ name: string; icon?: string; iconDark?: string }>();
 </script>
 
 <template>

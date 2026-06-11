@@ -1,9 +1,14 @@
-import iconNodes from '../.vitepress/data/iconNodes';
+import * as iconDetails from '../.vitepress/data/iconDetails';
 
 export default {
   async load() {
     return {
-      icons: Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode })),
+      icons: Object.entries(iconDetails).map(([, { name, iconNode, popularity, createdRelease }]) => ({
+        name,
+        iconNode,
+        popularity: popularity.count,
+        createdRelease,
+      })),
     };
   },
 };

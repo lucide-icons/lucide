@@ -16,7 +16,6 @@ import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
-import { textAlignStart } from '../../../data/iconNodes';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -86,12 +85,33 @@ const columnSize = computed(() => {
   return Math.floor(containerWidth.value / (ICON_SIZE + ICON_GRID_GAP));
 });
 
+const sortedIcons = computed(() => {
+  switch (selectedSort.value.value) {
+    case 'popularity':
+      return [...props.icons].sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    case 'release-date':
+      return [...props.icons].sort((a, b) => {
+        const aDate = new Date(a.createdRelease.date).getTime();
+        const bDate = new Date(b.createdRelease.date).getTime();
+        return bDate - aDate;
+      });
+    case 'name':
+      return [...props.icons].sort((a, b) => a.name.localeCompare(b.name));
+    default:
+      return props.icons;
+  }
+});
+
+watch(sortedIcons, (value) => {
+  console.log(value)
+})
+
 const mappedIcons = computed(() => {
   if (tags.value == null) {
-    return props.icons;
+    return sortedIcons.value;
   }
 
-  return props.icons.map((icon) => {
+  return sortedIcons.value.map((icon) => {
     const iconTags = tags.value[icon.name];
     const iconCategories = categories.value?.[icon.name] ?? [];
 
@@ -115,6 +135,7 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
 ]);
+
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 
 const chunkedIcons = computed(() => {
@@ -158,10 +179,6 @@ watch(searchQueryDebounced, () => {
   scrollTo(0);
 });
 
-watch(selectedSort, (iconName) => {
-  console.log(iconName)
-});
-
 function handleCloseDrawer() {
   setActiveIconName('');
 
@@ -196,11 +213,11 @@ function handleCloseDrawer() {
         v-model="selectedSort"
       >
         <template #start-icon>
-           <Icon
-              :iconNode="sortIcon"
-              class="chevron-icon"
-              aria-hidden="true"
-            />
+          <Icon
+            :iconNode="sortIcon"
+            class="chevron-icon"
+            aria-hidden="true"
+          />
         </template>
       </Select>
     </StickyBar>
