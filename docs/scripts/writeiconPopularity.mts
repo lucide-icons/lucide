@@ -8,7 +8,10 @@ const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
 const iconPopularityDirectory = path.resolve(currentDir, '.vitepress/data', 'iconPopularity');
 
-loadEnvFile(`${currentDir}/.env.local`);
+try {
+  // Load environment variables from .env file, if it exists.
+  loadEnvFile(`${currentDir}/.env`);
+} catch (error) {}
 
 if (fs.existsSync(iconPopularityDirectory)) {
   fs.rmSync(iconPopularityDirectory, { recursive: true, force: true });
