@@ -10,8 +10,8 @@
     "skip",
     "next",
     "jump",
-    "move to bottom",
-    "last"
+    "move to top",
+    "first"
   ],
   "categories": [
     "arrows",
