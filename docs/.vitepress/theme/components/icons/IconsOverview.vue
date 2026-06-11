@@ -4,6 +4,7 @@ import type { IconEntity } from '../../types';
 import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
+import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
 import useSearchInput from '../../composables/useSearchInput';
@@ -14,9 +15,50 @@ import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
+import Icon from '@lucide/vue/src/Icon';
+import { textAlignStart } from '../../../data/iconNodes';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
+const SORTING = [
+  {
+    name: 'Popularity',
+    value: 'popularity',
+  },
+  {
+    name: 'Release date',
+    value: 'release-date',
+  },
+  {
+    name: 'Name',
+    value: 'name',
+  },
+]
+
+const sortIcon = [
+  [
+    "path",
+    {
+      "d": "M21 5H3",
+      "key": "1fi0y6"
+    }
+  ],
+  [
+    "path",
+    {
+      "d": "M15 12H3",
+      "key": "6jk70r"
+    }
+  ],
+  [
+    "path",
+    {
+      "d": "M9 19H3",
+      "key": "z6ezky"
+    }
+  ]
+]
+
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -32,6 +74,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
+const selectedSort = ref(SORTING[0])
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
@@ -115,6 +158,10 @@ watch(searchQueryDebounced, () => {
   scrollTo(0);
 });
 
+watch(selectedSort, (iconName) => {
+  console.log(iconName)
+});
+
 function handleCloseDrawer() {
   setActiveIconName('');
 
@@ -124,7 +171,7 @@ function handleCloseDrawer() {
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
   }
-  
+
   window.history.pushState({}, '', url);
 }
 </script>
@@ -143,6 +190,19 @@ function handleCloseDrawer() {
         class="input-wrapper"
         @focus="onFocusSearchInput"
       />
+      <Select
+        id="sort-select"
+        :items="SORTING"
+        v-model="selectedSort"
+      >
+        <template #start-icon>
+           <Icon
+              :iconNode="sortIcon"
+              class="chevron-icon"
+              aria-hidden="true"
+            />
+        </template>
+      </Select>
     </StickyBar>
     <NoResults
       v-if="searchPlaceholder.isNoResults"

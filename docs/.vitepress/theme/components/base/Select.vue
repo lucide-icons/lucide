@@ -6,7 +6,7 @@ import SelectIcon from './SelectIcon.vue';
 
 defineProps<{
   id?: string;
-  items?: { name: string; route: string; icon: string; iconDark?: string }[];
+  items?: { name: string; route: string; icon?: string; iconDark?: string }[];
 }>();
 
 const selected = defineModel<{ name: string; icon: string; iconDark?: string }>();
@@ -19,14 +19,18 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
         class="select-button"
         :id="id"
       >
-        <SelectIcon :item="selected" />
+        <slot name="start-icon">
+          <SelectIcon  v-if="selected.icon" :item="selected" />
+        </slot>
         <span class="select-text">{{ selected.name }}</span>
         <span class="select-icon">
-          <Icon
-            :iconNode="chevronsUpDown"
-            class="chevron-icon"
-            aria-hidden="true"
-          />
+          <slot name="end-icon">
+            <Icon
+              :iconNode="chevronsUpDown"
+              class="chevron-icon"
+              aria-hidden="true"
+            />
+          </slot>
         </span>
       </ListboxButton>
 
@@ -43,8 +47,9 @@ const selected = defineModel<{ name: string; icon: string; iconDark?: string }>(
             :value="item"
             as="template"
           >
+
             <li :class="['select-option', { active, selected }]">
-              <SelectIcon :item="item" />
+              <SelectIcon v-if="item.icon" :item="item" />
               <span :class="['option-text', { selected }]">{{ item.name }}</span>
               <span
                 v-if="selected"

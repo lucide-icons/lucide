@@ -15,6 +15,36 @@
   margin-bottom: 32px;
   background: var(--vp-c-bg);
   box-shadow: 0 16px 24px var(--vp-c-bg);
+  gap:16px;
+}
+
+.search-bar :deep(.select-button) {
+  padding: 11px 16px 11px 16px;
+  background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-2);
+  flex-shrink: 0;
+  flex: 1;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-bar :deep(.select-button):hover,
+.search-bar :deep(.select-button):focus {
+  border-color: var(--vp-c-brand);
+  background: var(--vp-c-bg-alt);
+}
+
+.search-bar :deep(.select-options) {
+  min-width: 160px;
+}
+
+.search-bar :deep(.select-option) {
+  padding-right: 36px;
+  padding-left: 8px;
+}
+
+.search-bar :deep(.select-icon) {
+  display: none;
 }
 
 @media (min-width: 960px) {
