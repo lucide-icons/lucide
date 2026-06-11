@@ -6,6 +6,7 @@ const useSearch = <T>(
   collection: Ref<T[]>,
   keys: Fuse.FuseOptionKeyObject<T>[] = [],
 ) => {
+  console.log(collection.value);
   const index = shallowRef(
     new Fuse(collection.value, {
       threshold: 0.2,

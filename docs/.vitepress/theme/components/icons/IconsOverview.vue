@@ -131,7 +131,7 @@ const { shortcutText: kbdSearchShortcut } = useSearchShortcut(() => {
 
 const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
   { name: 'name', weight: 3 },
-  { name: 'aliases', weight: 3 },
+  { name: 'aliases', weight: 8 },
   { name: 'tags', weight: 2 },
   { name: 'categories', weight: 1 },
 ]);
