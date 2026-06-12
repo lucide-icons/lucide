@@ -3,6 +3,12 @@
   "contributors": [
     "MadsMadsDk"
   ],
+  "use-cases": [
+    "Ecommerce (self pick-up options for large items)",
+    "Trailer lending services",
+    "Map markers",
+    "Asset tracking systems in construction"
+  ],
   "tags": [
     "trailer",
     "shipping",
