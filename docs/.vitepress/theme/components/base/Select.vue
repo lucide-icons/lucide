@@ -9,7 +9,7 @@ defineProps<{
   items?: { name: string; value: string; icon?: string; iconDark?: string }[];
 }>();
 
-const selected = defineModel<{ name: string; icon?: string; iconDark?: string }>();
+const selected = defineModel<{ name: string; value: string; icon?: string; iconDark?: string }>();
 </script>
 
 <template>
