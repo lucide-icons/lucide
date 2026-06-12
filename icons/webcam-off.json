@@ -6,6 +6,9 @@
     "karsa-mistmere",
     "jordan-burnett"
   ],
+  "use-cases": [
+    "For showing an 'off' or 'disabled' state for a webcam indicator."
+  ],
   "tags": [
     "camera",
     "security"
