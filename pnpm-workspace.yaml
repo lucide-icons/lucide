@@ -2,3 +2,30 @@ packages:
   - 'packages/*'
   - 'tools/*'
   - 'docs'
+
+packageExtensions:
+  vue-template-compiler:
+    peerDependencies:
+      vue: 2.7.14
+
+overrides:
+  axios: ^1.12.0
+  cross-spawn: 7.0.5
+  fast-json-patch: ^3.1.1
+  form-data: ^4.0.4
+  semver: ^7.7.3
+  vite-prerender-plugin: 0.5.12
+  webpack-dev-middleware: ^5.3.4
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
+  esbuild: false
+  lmdb: false
+  msgpackr-extract: false
+  nice-napi: false
+  sharp: false
+  svelte-preprocess: false
+  ttf2woff2: false
+  unrs-resolver: false
+  vue-demi: false
