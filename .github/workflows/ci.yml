@@ -53,7 +53,7 @@ jobs:
           TODAY=$(date +%Y-%m-%d)
 
           if [ "$TAG_DATE" == "$TODAY" ]; then
-            echo "::warning::A release tag already exists for today ($TODAY): $LATEST_TAG. Manual dispatch will require approval."
+            echo "::warning::A release tag already exists for today ($TODAY): $LATEST_TAG. Manual approval will be required to proceed."
             echo "RELEASE_ENVIRONMENT=Icon Release Gated" >> $GITHUB_OUTPUT
           else
             echo "RELEASE_ENVIRONMENT=Icon Release" >> $GITHUB_OUTPUT
