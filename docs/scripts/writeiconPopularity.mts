@@ -35,6 +35,11 @@ interface AnalyticsResponse {
   }[];
 }
 
+if (process.env.LUCIDE_ANALYTICS_TOKEN === undefined) {
+  console.error('LUCIDE_ANALYTICS_TOKEN environment variable is not set. Please set it to fetch analytics data.');
+  process.exit(1);
+}
+
 try {
   const response = await fetch('https://analytics.lucide.dev/api/v2/query', {
     method: 'POST',
