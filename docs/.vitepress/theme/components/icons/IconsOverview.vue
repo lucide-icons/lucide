@@ -102,10 +102,6 @@ const sortedIcons = computed(() => {
   }
 });
 
-watch(sortedIcons, (value) => {
-  console.log(value)
-})
-
 const mappedIcons = computed(() => {
   if (tags.value == null) {
     return sortedIcons.value;
