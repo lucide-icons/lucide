@@ -1,8 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "Andreto",
+    "ericfennis",
+    "csandman",
+    "karsa-mistmere",
     "nilsjonsson"
   ],
+  "use-cases": [],
   "tags": [
     "account",
     "settings",
