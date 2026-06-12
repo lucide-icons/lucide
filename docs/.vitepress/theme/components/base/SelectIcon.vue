@@ -9,7 +9,7 @@ const { item } = defineProps<{
 </script>
 
 <template>
-  <div>
+  <div v-if="item.icon || item.iconDark">
     <img
       v-if="item.icon"
       :src="item.icon"
