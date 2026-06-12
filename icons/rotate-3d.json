@@ -3,16 +3,23 @@
   "contributors": [
     "lscheibel"
   ],
+  "use-cases": [],
   "tags": [
     "gizmo",
     "transform",
     "orientation",
-    "orbit"
+    "orbit",
+    "axis"
   ],
   "categories": [
     "design"
   ],
   "aliases": [
-    "rotate-3-d"
+    {
+      "name": "rotate-3-d",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

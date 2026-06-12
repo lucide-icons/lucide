@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "stop",
     "shape"

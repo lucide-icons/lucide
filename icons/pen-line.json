@@ -4,8 +4,11 @@
     "colebemis",
     "csandman",
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "pencil",
     "change",
@@ -26,6 +29,11 @@
     "tools"
   ],
   "aliases": [
-    "edit-3"
+    {
+      "name": "edit-3",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

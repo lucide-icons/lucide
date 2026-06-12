@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "lock",
     "password",
@@ -12,5 +14,13 @@
   "categories": [
     "files",
     "security"
+  ],
+  "aliases": [
+    {
+      "name": "file-lock-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

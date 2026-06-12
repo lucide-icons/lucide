@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "scan",
@@ -11,11 +12,11 @@
     "stop",
     "clear",
     "cancel",
-    "abort"
+    "abort",
+    "lens"
   ],
   "categories": [
     "text",
-    "account",
     "social"
   ]
 }

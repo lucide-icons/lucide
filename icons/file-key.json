@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "key",
     "private",
@@ -12,5 +14,13 @@
   "categories": [
     "files",
     "security"
+  ],
+  "aliases": [
+    {
+      "name": "file-key-2",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

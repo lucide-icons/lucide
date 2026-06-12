@@ -1,0 +1,33 @@
+name: 'Request Review'
+on:
+  pull_request_target:
+    types: [opened]
+    paths:
+      - icons/*.svg
+
+jobs:
+  request-review:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: icons/*.svg
+      - run: |
+          while IFS= read -r file; do
+            jq -r '.contributors[]' "${file%.svg}.json"
+          done <<< "$CHANGED_FILES" | while read -r contributor; do
+            gh pr edit "${{ github.event.pull_request.number }}" --add-reviewer "$contributor" || true
+          done
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}

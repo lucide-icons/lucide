@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HomeContainer from './HomeContainer.vue'
+import HomeSectionTitle from './HomeSectionTitle.vue'
 import { useRouter } from 'vitepress';
 import { data } from './HomePackagesSection.data'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
@@ -9,10 +10,10 @@ const { go } = useRouter()
 
 <template>
   <HomeContainer>
-    <h2 class="section-title">Available For:</h2>
+    <HomeSectionTitle>Available For:</HomeSectionTitle>
     <div class="packages-list">
       <a
-        v-for="{ name, logo } in data.packages"
+        v-for="{ name, logo, logoDark } in data.packages"
         :href="`/guide/packages/${name}`"
         class="package-logo"
         :aria-label="`Read more about: ${name} package`"
@@ -20,10 +21,17 @@ const { go } = useRouter()
       >
         <img
           :src="logo"
-          height="36"
-          width="36"
-          loading="lazy"
+          :class="{ light: logoDark, 'image-logo': true }"
           :alt="`${name} logo`"
+          loading="lazy"
+        />
+
+        <img
+          v-if="logoDark"
+          :src="logoDark"
+          :alt="`${name} logo`"
+          class="image-logo dark"
+          loading="lazy"
         />
       </a>
     </div>
@@ -34,14 +42,13 @@ const { go } = useRouter()
 </template>
 
 <style scoped>
-.section-title {
-  color: var(--vp-c-text-2);
-  font-weight: 500;
-  line-height: 32px;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 16px;
+
+.image-logo {
+  object-fit: contain;
+  width: 36px;
+  height: 36px;
 }
+
 .packages-list {
   display: flex;
   flex-wrap: wrap;
@@ -63,5 +70,12 @@ const { go } = useRouter()
 
 .package-logo:hover {
   opacity: .6;
+}
+
+html.dark .image-logo.light {
+  display: none;
+}
+html:not(.dark) .image-logo.dark {
+  display: none;
 }
 </style>

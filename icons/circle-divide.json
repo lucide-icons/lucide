@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "csandman",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "calculate",
+    "math",
+    "÷",
+    "/"
+  ],
+  "categories": [
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "divide-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

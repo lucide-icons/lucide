@@ -3,13 +3,16 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "date",
-    "time",
+    "month",
+    "year",
     "event",
     "heart",
     "favourite",
-    "subscribe"
+    "subscribe",
+    "valentines day"
   ],
   "categories": [
     "time"

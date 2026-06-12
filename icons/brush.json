@@ -1,12 +1,21 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "chessurisme",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
+    "clean",
+    "sweep",
+    "refactor",
+    "remove",
     "draw",
     "paint",
-    "color"
+    "color",
+    "artist"
   ],
   "categories": [
     "text",

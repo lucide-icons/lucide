@@ -1,5 +1,14 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "cd16b",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
   "tags": [
     "security",
     "password",

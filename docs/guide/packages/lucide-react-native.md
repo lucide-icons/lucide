@@ -1,15 +1,22 @@
 # Lucide React Native
 
-Implementation of the lucide icon library for React Native applications
+React Native components for Lucide icons that work seamlessly across iOS and Android platforms. Built on top of react-native-svg, each icon renders as a native SVG component, providing consistent visual appearance and performance across mobile devices.
+
+**What you can accomplish:**
+- Use icons as React Native components with platform-consistent rendering
+- Build cross-platform mobile apps with scalable vector icons
+- Create responsive interfaces that adapt to different screen densities
+- Integrate with React Native's styling system and animation libraries
+- Maintain consistent icon appearance across iOS and Android platforms
 
 ## Installation
 
-First, ensure that you have `react-native-svg` (version between 12 and 14) installed. Then, install the package:
+First, ensure that you have `react-native-svg` (version between 12 and 15) installed. Then, install the package:
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react-native
+pnpm add lucide-react-native
 ```
 
 ```sh [yarn]
@@ -18,6 +25,10 @@ yarn add lucide-react-native
 
 ```sh [npm]
 npm install lucide-react-native
+```
+
+```sh [bun]
+bun add lucide-react-native
 ```
 
 :::
@@ -61,6 +72,26 @@ const App = () => {
 };
 ```
 
+## With Lucide Lab or custom icons
+
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-react-native';
+import { coconut } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={coconut} />
+);
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.
@@ -71,10 +102,16 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ### Icon Component Example
 
-```jsx
-import { icons } from 'lucide-react';
+```tsx
+import * as icons from 'lucide-react-native/icons';
 
-const Icon = ({ name, color, size }) => {
+interface IconProps {
+  name: keyof typeof icons;
+  color?: string;
+  size?: number;
+}
+
+const Icon = ({ name, color, size }: IconProps) => {
   const LucideIcon = icons[name];
 
   return <LucideIcon color={color} size={size} />;
@@ -85,11 +122,11 @@ export default Icon;
 
 #### Using the Icon Component
 
-```jsx
+```tsx
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="House" />;
 };
 
 export default App;

@@ -6,9 +6,13 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "picture",
-    "photo"
+    "photo",
+    "download",
+    "save",
+    "export"
   ],
   "categories": [
     "photography",

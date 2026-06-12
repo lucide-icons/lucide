@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "music",
+    "audio",
+    "video",
+    "start",
+    "run"
+  ],
+  "categories": [
+    "arrows",
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "play-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

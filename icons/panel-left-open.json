@@ -5,6 +5,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "primary",
     "drawer",
@@ -18,7 +19,12 @@
     "layout",
     "arrows"
   ],
-   "aliases": [
-    "sidebar-open"
+  "aliases": [
+    {
+      "name": "sidebar-open",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

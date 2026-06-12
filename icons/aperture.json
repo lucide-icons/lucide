@@ -4,9 +4,13 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "camera",
-    "photo"
+    "photo",
+    "pictures",
+    "shutter",
+    "exposure"
   ],
   "categories": [
     "photography"

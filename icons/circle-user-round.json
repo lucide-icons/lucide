@@ -3,16 +3,21 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "person",
     "account",
     "contact"
   ],
   "categories": [
-    "account",
-    "shapes"
+    "account"
   ],
   "aliases": [
-    "user-circle-2"
+    {
+      "name": "user-circle-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

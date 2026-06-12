@@ -5,9 +5,29 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "feed",
-    "subscribe"
+    "subscribe",
+    "news",
+    "updates",
+    "notifications",
+    "content",
+    "blog",
+    "articles",
+    "broadcast",
+    "syndication",
+    "reader",
+    "channels",
+    "posts",
+    "publishing",
+    "digest",
+    "alert",
+    "following",
+    "inbox",
+    "newsletter",
+    "weblog",
+    "podcast"
   ],
   "categories": [
     "development",

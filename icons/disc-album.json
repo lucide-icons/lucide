@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "album",
     "music",
@@ -21,7 +22,7 @@
     "spin",
     "rotate",
     "rpm",
-    "dj"    
+    "dj"
   ],
   "categories": [
     "devices",

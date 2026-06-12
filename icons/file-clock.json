@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "history",
     "log",

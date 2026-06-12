@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps, onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 const props = defineProps<{
   groups: string[] | undefined,
   groupName: string,

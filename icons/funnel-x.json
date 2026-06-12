@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gubser",
+    "ericfennis",
+    "lukedukeus",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "filter",
+    "hopper",
+    "remove",
+    "delete"
+  ],
+  "categories": [
+    "layout"
+  ],
+  "aliases": [
+    {
+      "name": "filter-x",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

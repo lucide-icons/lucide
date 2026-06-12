@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "add",
+    "new",
+    "increase",
+    "increment",
+    "positive",
+    "calculate",
+    "crosshair",
+    "aim",
+    "target",
+    "scope",
+    "sight",
+    "reticule",
+    "maximum",
+    "upgrade",
+    "extra",
+    "operator",
+    "join",
+    "concatenate",
+    "code",
+    "coding",
+    "+"
+  ],
+  "categories": [
+    "math",
+    "development",
+    "cursors",
+    "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "plus-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

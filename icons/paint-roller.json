@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "brush",
+    "color",
+    "colour",
+    "decoration",
+    "diy"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "home",
+    "tools"
+  ]
+}

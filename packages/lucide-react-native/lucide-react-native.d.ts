@@ -1,13 +1,16 @@
 /// <reference types="react" />
 
-declare module 'lucide-react-native'
+declare module 'lucide-react-native';
 
 // Create interface extending SVGProps
 export interface LucideProps extends Partial<React.SVGProps<SVGSVGElement>> {
-    size?: string | number
+  size?: string | number;
 }
 
-export declare const createLucideIcon: (iconName: string, iconNode: any[]) => (props: LucideProps) => JSX.Element;
+export declare const createLucideIcon: (
+  iconName: string,
+  iconNode: any[],
+) => (props: LucideProps) => JSX.Element;
 
 export type Icon = React.FC<LucideProps>;
 

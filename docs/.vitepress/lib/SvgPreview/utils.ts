@@ -2,6 +2,7 @@ import { INode, parseSync } from 'svgson';
 import toPath from 'element-to-path';
 import { SVGPathData, encodeSVGPath } from 'svg-pathdata';
 import { Path, Point } from './types';
+import { memoize } from 'lodash-es';
 
 function assertNever(x: never): never {
   throw new Error('Unknown type: ' + x['type']);
@@ -44,26 +45,30 @@ const extractNodes = (node: INode): INode[] => {
   return [];
 };
 
-export const getNodes = (src: string) =>
-  extractNodes(parseSync(src.includes('<svg') ? src : `<svg>${src}</svg>`));
+export const getNodes = memoize((src: string) =>
+  extractNodes(parseSync(src.includes('<svg') ? src : `<svg>${src}</svg>`)),
+);
 
 export const getCommands = (src: string) =>
   getNodes(src)
     .map(convertToPathNode)
     .flatMap(({ d, name }, idx) =>
-      new SVGPathData(d).toAbs().commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name }))
+      new SVGPathData(d)
+        .toAbs()
+        // @ts-ignore
+        .commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
     );
 
-export const getPaths = (src: string) => {
+const getPaths = (src: string) => {
   const commands = getCommands(src.includes('<svg') ? src : `<svg>${src}</svg>`);
   const paths: Path[] = [];
   let prev: Point | undefined = undefined;
   let start: Point | undefined = undefined;
   const addPath = (
-    c: typeof commands[number],
+    c: (typeof commands)[number],
     next: Point,
     d?: string,
-    extras?: { circle?: Path['circle']; cp1?: Path['cp1']; cp2?: Path['cp2'] }
+    extras?: { circle?: Path['circle']; cp1?: Path['cp1']; cp2?: Path['cp2'] },
   ) => {
     assert(prev);
     paths.push({
@@ -153,7 +158,7 @@ export const getPaths = (src: string) => {
           {
             cp1: { x: prev.x - reflectedCp1.x, y: prev.y - reflectedCp1.y },
             cp2: { x: c.x2, y: c.y2 },
-          }
+          },
         );
         break;
       }
@@ -169,7 +174,7 @@ export const getPaths = (src: string) => {
         assert(prev);
         const backTrackCP = (
           index: number,
-          currentPoint: { x: number; y: number }
+          currentPoint: { x: number; y: number },
         ): { x: number; y: number } => {
           const previousCommand = commands[index - 1];
           if (!previousCommand) {
@@ -211,7 +216,7 @@ export const getPaths = (src: string) => {
           {
             cp1: { x: prevCP.x, y: prevCP.y },
             cp2: { x: prevCP.x, y: prevCP.y },
-          }
+          },
         );
         break;
       }
@@ -226,17 +231,18 @@ export const getPaths = (src: string) => {
           c.lArcFlag,
           c.sweepFlag,
           c.x,
-          c.y
+          c.y,
         );
         addPath(
           c,
           c,
           `M ${prev.x} ${prev.y} A${c.rX} ${c.rY} ${c.xRot} ${c.lArcFlag} ${c.sweepFlag} ${c.x} ${c.y}`,
-          { circle: c.rX === c.rY ? { ...center, r: c.rX } : undefined }
+          { circle: c.rX === c.rY ? { ...center, r: c.rX } : undefined },
         );
         break;
       }
       default: {
+        // @ts-ignore
         assertNever(c);
       }
     }
@@ -244,7 +250,7 @@ export const getPaths = (src: string) => {
   return paths;
 };
 
-export const arcEllipseCenter = (
+const arcEllipseCenter = (
   x1: number,
   y1: number,
   rx: number,
@@ -253,7 +259,7 @@ export const arcEllipseCenter = (
   fa: number,
   fs: number,
   x2: number,
-  y2: number
+  y2: number,
 ) => {
   const phi = (a * Math.PI) / 180;
 
@@ -280,7 +286,7 @@ export const arcEllipseCenter = (
     sign *
     Math.sqrt(
       Math.max(rx * rx * ry * ry - rx * rx * y1p * y1p - ry * ry * x1p * x1p, 0) /
-        (rx * rx * y1p * y1p + ry * ry * x1p * x1p)
+        (rx * rx * y1p * y1p + ry * ry * x1p * x1p),
     );
 
   const V2 = [(rx * y1p) / ry, (-ry * x1p) / rx];
@@ -296,5 +302,52 @@ export const arcEllipseCenter = (
     M2[1][0] * Cp[0] + M2[1][1] * Cp[1] + V3[1],
   ];
 
-  return { x: C[0], y: C[1] };
+  return {
+    x: C[0],
+    y: C[1],
+    tangentIntersection: intersectTangents(
+      { x: x1, y: y1 },
+      { x: x2, y: y2 },
+      { x: C[0], y: C[1] },
+    ),
+  };
 };
+
+function getTangentDirection(p: Point, center: Point): Point {
+  // Tangent is perpendicular to the radius vector (rotate radius 90°)
+  const dx = p.x - center.x;
+  const dy = p.y - center.y;
+  return { x: -dy, y: dx }; // 90° rotation
+}
+
+function intersectTangents(start: Point, end: Point, center: Point): Point | null {
+  const t1 = getTangentDirection(start, center);
+  const t2 = getTangentDirection(end, center);
+
+  // Solve: start + λ * t1 = end + μ * t2
+  const A = [
+    [t1.x, -t2.x],
+    [t1.y, -t2.y],
+  ];
+  const b = [end.x - start.x, end.y - start.y];
+
+  // Compute determinant
+  const det = A[0][0] * A[1][1] - A[0][1] * A[1][0];
+
+  if (Math.abs(det) < 1e-10) {
+    // Lines are parallel, no intersection
+    return null;
+  }
+
+  const invDet = 1 / det;
+
+  const lambda = (b[0] * A[1][1] - b[1] * A[0][1]) * invDet;
+
+  // Intersection point = start + lambda * t1
+  return {
+    x: start.x + lambda * t1.x,
+    y: start.y + lambda * t1.y,
+  };
+}
+
+export default memoize(getPaths);

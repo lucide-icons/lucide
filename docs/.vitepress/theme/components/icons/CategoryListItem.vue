@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { useCategoryView } from '../../composables/useCategoryView';
 
 interface Header {
@@ -8,6 +7,7 @@ interface Header {
   slug: string;
   iconCount: number;
   link: string;
+  name: string;
   children: Header[];
 }
 
@@ -15,36 +15,38 @@ type MenuItem = Omit<Header, 'slug' | 'children'> & {
   children?: MenuItem[];
 };
 
-const props = defineProps<{
+defineProps<{
   headers: MenuItem[];
   root?: boolean;
 }>();
 
 const { selectedCategory } = useCategoryView();
 
-function onClick(event: Event) {
-  const target =
-    (event.target as HTMLElement).nodeName === 'span'
-      ? (event.target as HTMLElement).parentNode
-      : (event.target as HTMLElement);
-  const href = (target as HTMLAnchorElement)?.href;
+function onClick(categoryName: string) {
+  selectedCategory.value = categoryName;
 
-  if (href) {
-    const id = '#' + href.split('#')[1];
-    const decodedId = decodeURIComponent(id);
+  const heading = document.querySelector<HTMLAnchorElement>(categoryName);
+  heading?.focus();
 
-    selectedCategory.value = decodedId.replace('#', '');
-
-    const heading = document.querySelector<HTMLAnchorElement>(decodedId);
-    heading?.focus();
-  }
+  const url = new URL(window.location.href);
+  url.pathname = '/icons/categories';
+  url.hash = categoryName;
+  window.history.pushState({}, '', url);
 }
 </script>
 
 <template>
   <ul :class="root ? 'root' : 'nested'">
-    <li v-for="{ children, link, title, iconCount } in headers">
-      <a class="outline-link" :href="link" @click="onClick" :title="title">
+    <li v-for="{ children, link, title, iconCount, name } in headers">
+      <a
+        class="outline-link"
+        :href="link"
+        @click="onClick(name)"
+        :title="title"
+        :class="{
+          inactive: iconCount === 0,
+        }"
+      >
         <span>
           {{ title }}
         </span>
@@ -84,6 +86,11 @@ function onClick(event: Event) {
   transition: color 0.25s;
 }
 
+.outline-link.inactive {
+  color: var(--vp-c-text-4);
+  pointer-events: none;
+}
+
 .outline-link.nested {
   padding-left: 13px;
 }
@@ -93,5 +100,9 @@ function onClick(event: Event) {
   margin-left: auto;
   font-size: 11px;
   font-weight: 400;
+}
+
+.outline-link.inactive .icon-count {
+  opacity: 0;
 }
 </style>

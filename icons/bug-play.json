@@ -1,10 +1,17 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
+    "issue",
+    "testing",
     "debug",
+    "reproduce",
     "code",
     "insect"
   ],

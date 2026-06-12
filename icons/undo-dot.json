@@ -1,9 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "redo",
     "history",

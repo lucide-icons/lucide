@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "music",
+    "audio",
+    "stop"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}

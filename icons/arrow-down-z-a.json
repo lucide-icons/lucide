@@ -1,12 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "filter",
     "sort",
+    "ascending",
     "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
     "alphabetical",
     "reverse"
   ],
@@ -16,6 +23,11 @@
     "arrows"
   ],
   "aliases": [
-    "arrow-down-za"
+    {
+      "name": "arrow-down-za",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

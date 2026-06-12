@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "exclamation mark"
+  ],
+  "categories": [
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "alert-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

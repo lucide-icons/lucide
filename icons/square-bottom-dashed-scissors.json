@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "eden881"
+  ],
+  "use-cases": [],
+  "tags": [
+    "cut",
+    "snippet",
+    "chop",
+    "stationery",
+    "crafts"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "tools",
+    "files",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "scissors-square-dashed-bottom",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

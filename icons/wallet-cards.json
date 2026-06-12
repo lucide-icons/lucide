@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "money",
     "finance",
@@ -17,6 +18,6 @@
   ],
   "categories": [
     "account",
-    "money"
+    "finance"
   ]
 }

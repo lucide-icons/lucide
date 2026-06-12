@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "direction",
     "north",
@@ -14,7 +16,6 @@
   ],
   "categories": [
     "navigation",
-    "maps",
     "travel"
   ]
 }

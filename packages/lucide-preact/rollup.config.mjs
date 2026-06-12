@@ -1,5 +1,6 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: "json" };
+import plugins from '@lucide/rollup-plugins';
+import dts from 'rollup-plugin-dts';
+import pkg from './package.json' with { type: 'json' };
 
 const packageName = 'LucidePreact';
 const outputFileName = 'lucide-preact';
@@ -7,68 +8,77 @@ const outputDir = 'dist';
 const inputs = [`src/lucide-preact.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir,
-    aliasesSupport: true
   },
   {
     format: 'esm',
     inputs,
     outputDir,
     preserveModules: true,
-    aliasesSupport: true
+    extension: 'mjs',
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules, aliasesSupport }) =>
-    inputs.map(input => ({
+  .map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) =>
+    inputs.map((input) => ({
       input,
-      plugins: [
-        ...(
-          !aliasesSupport ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
-      external: ['preact', 'prop-types'],
+      plugins: plugins({ pkg }),
+      external: ['preact'],
       output: {
         name: packageName,
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}.${extension}`,
             }),
         preserveModules,
         format,
         sourcemap: true,
+        preserveModulesRoot: 'src',
         globals: {
           preact: 'preact',
-          'prop-types': 'PropTypes',
         },
       },
     })),
   )
   .flat();
 
-export default configs;
+export default [
+  {
+    input: inputs[0],
+    output: [
+      {
+        file: `dist/${outputFileName}.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  ...configs,
+];

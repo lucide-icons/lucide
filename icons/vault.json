@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "safe",
+    "lockbox",
+    "deposit",
+    "locker",
+    "coffer",
+    "strongbox",
+    "safety",
+    "secure",
+    "storage",
+    "valuables",
+    "bank"
+  ],
+  "categories": [
+    "security",
+    "travel",
+    "home"
+  ]
+}

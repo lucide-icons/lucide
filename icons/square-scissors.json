@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "eden881"
+  ],
+  "use-cases": [],
+  "tags": [
+    "cut",
+    "snippet",
+    "chop",
+    "stationery",
+    "crafts",
+    "toolbar",
+    "button"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "tools",
+    "files",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "scissors-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

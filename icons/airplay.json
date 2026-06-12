@@ -5,17 +5,18 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "stream",
     "cast",
     "mirroring",
     "screen",
-    "monitor"
+    "monitor",
+    "macos",
+    "osx"
   ],
   "categories": [
     "multimedia",
-    "connectivity",
-    "devices",
-    "brands"
+    "connectivity"
   ]
 }

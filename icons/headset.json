@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "music",
+    "audio",
+    "sound",
+    "gaming",
+    "headphones",
+    "headset",
+    "call",
+    "center",
+    "phone",
+    "telephone",
+    "voip",
+    "video"
+  ],
+  "categories": [
+    "multimedia",
+    "connectivity",
+    "devices",
+    "files",
+    "gaming"
+  ]
+}

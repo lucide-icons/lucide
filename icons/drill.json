@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "power",
+    "bit",
+    "head",
+    "hole",
+    "diy",
+    "toolbox",
+    "build",
+    "construction"
+  ],
+  "categories": [
+    "tools",
+    "home",
+    "devices"
+  ]
+}

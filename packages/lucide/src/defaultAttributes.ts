@@ -1,4 +1,4 @@
-import { SVGProps } from "./types";
+import { SVGProps } from './types';
 
 const defaultAttributes: SVGProps = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -12,4 +12,4 @@ const defaultAttributes: SVGProps = {
   'stroke-linejoin': 'round',
 };
 
-export default defaultAttributes
+export default defaultAttributes;

@@ -2,15 +2,22 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "calculate",
     "="
   ],
   "categories": [
-    "maths",
-    "shapes"
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "equal-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

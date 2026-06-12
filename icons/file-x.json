@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "lost",
     "delete",

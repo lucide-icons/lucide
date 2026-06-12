@@ -3,11 +3,19 @@
   "contributors": [
     "iiaishwarya",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "audio",
+    "music",
     "mic",
-    "music"
+    "talk",
+    "voice",
+    "subscribe",
+    "subscription",
+    "stream"
   ],
   "categories": [
     "multimedia",

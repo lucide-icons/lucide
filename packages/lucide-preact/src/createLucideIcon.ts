@@ -1,46 +1,34 @@
-import { ComponentType, FunctionComponent, h, JSX, RefObject, toChildArray } from 'preact';
-import defaultAttributes from './defaultAttributes';
-
-type IconNode = [elementName: keyof JSX.IntrinsicElements, attrs: Record<string, string>][]
-
-interface LucideProps extends Partial<Omit<JSX.SVGAttributes, "ref" | "size">> {
-  color?: string
-  size?: string | number
-  strokeWidth?: string | number
-  absoluteStrokeWidth?: boolean
-}
+import { h, type JSX } from 'preact';
+import { mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
+import Icon from './Icon';
+import type { IconNode, LucideIcon, LucideProps } from './types';
 
 /**
- * Converts string to KebabCase
- * Copied from scripts/helper. If anyone knows how to properly import it here
- * then please fix it.
- *
- * @param {string} string
- * @returns {string} A kebabized string
+ * Create a Lucide icon component
+ * @param {string} iconName
+ * @param {array} iconNode
+ * @returns {FunctionComponent} LucideIcon
  */
-export const toKebabCase = (string: string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-
-const createLucideIcon = (iconName: string, iconNode: IconNode): FunctionComponent<LucideProps> => {
-  const Component = (
-    { color = 'currentColor', size = 24, strokeWidth = 2, absoluteStrokeWidth, children, class: classes = '', ...rest }: LucideProps
-  ) =>
+const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
+  const Component = ({ class: classes = '', className = '', children, ...props }: LucideProps) =>
     h(
-      'svg',
+      Icon,
       {
-        ...defaultAttributes,
-        width:  String(size),
-        height: size,
-        stroke: color,
-        ['stroke-width' as 'strokeWidth']: absoluteStrokeWidth ? Number(strokeWidth) * 24 / Number(size) : strokeWidth,
-        class: ['lucide', `lucide-${toKebabCase(iconName)}`, classes].join(' '),
-        ...rest,
+        ...props,
+        iconNode,
+        class: mergeClasses<string | JSX.SignalLike<string | undefined>>(
+          `lucide-${toKebabCase(toPascalCase(iconName))}`,
+          `lucide-${toKebabCase(iconName)}`,
+          classes,
+          className,
+        ),
       },
-      [...iconNode.map(([tag, attrs]) => h(tag, attrs)), ...toChildArray(children)],
+      children,
     );
 
-  Component.displayName = `${iconName}`;
+  Component.displayName = toPascalCase(iconName);
 
   return Component;
 };
 
-export default createLucideIcon
+export default createLucideIcon;

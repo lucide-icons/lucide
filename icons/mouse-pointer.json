@@ -4,10 +4,10 @@
     "ashygee",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "arrow",
-    "cursor",
-    "click"
+    "click",
+    "select"
   ],
   "categories": [
     "arrows",

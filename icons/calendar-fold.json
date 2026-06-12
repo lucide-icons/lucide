@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "date",
+    "month",
+    "year",
+    "event",
+    "birthday",
+    "birthdate",
+    "ics"
+  ],
+  "categories": [
+    "time",
+    "files"
+  ]
+}

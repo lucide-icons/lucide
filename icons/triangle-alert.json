@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "exclamation mark",
+    "linter"
+  ],
+  "categories": [
+    "notifications",
+    "shapes",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "alert-triangle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

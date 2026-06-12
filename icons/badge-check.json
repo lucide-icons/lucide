@@ -4,14 +4,20 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "aliases": ["verified"],
+  "aliases": [
+    {
+      "name": "verified",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ],
+  "use-cases": [],
   "tags": [
     "verified",
     "check"
   ],
   "categories": [
-    "account",
-    "social",
-    "shapes"
+    "social"
   ]
 }

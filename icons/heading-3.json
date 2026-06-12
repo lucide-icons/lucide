@@ -2,9 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "jguddas",
-    "karsa-mistmere"
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "h3",
     "html",
@@ -12,7 +12,6 @@
     "markdown"
   ],
   "categories": [
-    "text",
-    "development"
+    "text"
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "password",
     "secret",
@@ -17,8 +18,15 @@
   "categories": [
     "text",
     "security",
-    "account",
-    "maths",
+    "math",
     "development"
+  ],
+  "aliases": [
+    {
+      "name": "asterisk-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

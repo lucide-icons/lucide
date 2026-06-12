@@ -1,11 +1,12 @@
 {
   "$schema": "../icon.schema.json",
-  "aliases": [
-    "file-cog-2"
-  ],
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas",
+    "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
     "executable",
     "settings",
@@ -15,5 +16,13 @@
   ],
   "categories": [
     "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-cog-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

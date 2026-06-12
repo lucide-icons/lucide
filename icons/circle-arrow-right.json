@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "next",
+    "forward",
+    "direction",
+    "east",
+    "sign",
+    "turn",
+    "button",
+    "->"
+  ],
+  "categories": [
+    "arrows",
+    "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "arrow-right-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

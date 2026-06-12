@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "menu bar",
     "sidebar",
@@ -17,10 +18,14 @@
   "categories": [
     "layout",
     "design",
-    "development",
-    "charts"
+    "development"
   ],
   "aliases": [
-    "layout"
+    {
+      "name": "layout",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

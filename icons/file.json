@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "document"
   ],

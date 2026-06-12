@@ -2,10 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "danielbayley",
-    "karsa-mistmere",
     "azdle"
   ],
+  "use-cases": [],
   "tags": [
     "connection",
     "wireless",

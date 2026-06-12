@@ -1,9 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley",
-    "karsa-mistmere"
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "direction",
     "south",
@@ -13,8 +13,6 @@
     "into"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "maps"
+    "arrows"
   ]
 }

@@ -3,13 +3,25 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "directory",
     "root",
     "project",
+    "pinned",
     "active",
     "current",
-    "pinned"
+    "cogged",
+    "gear",
+    "mechanical",
+    "machinery",
+    "configuration",
+    "controls",
+    "preferences",
+    "settings",
+    "system",
+    "admin",
+    "edit"
   ],
   "categories": [
     "files",

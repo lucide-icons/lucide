@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "text",
+    "font",
+    "typography",
+    "silhouette",
+    "profile",
+    "contour",
+    "stroke",
+    "line"
+  ],
+  "categories": [
+    "text"
+  ]
+}

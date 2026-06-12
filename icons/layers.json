@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "stack",
     "pile",
@@ -16,5 +18,13 @@
   "categories": [
     "design",
     "layout"
+  ],
+  "aliases": [
+    {
+      "name": "layers-3",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0",
+      "deprecationReason": "alias.duplicate"
+    }
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "person",
     "account",
@@ -12,6 +13,11 @@
     "account"
   ],
   "aliases": [
-    "user-2"
+    {
+      "name": "user-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

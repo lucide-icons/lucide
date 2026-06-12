@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "shape",
     "circle",
@@ -16,7 +18,7 @@
   ],
   "categories": [
     "shapes",
-    "maths",
+    "math",
     "design",
     "tools"
   ]

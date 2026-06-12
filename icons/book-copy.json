@@ -1,6 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "contributors": ["danielbayley"],
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
   "tags": [
     "code",
     "coding",

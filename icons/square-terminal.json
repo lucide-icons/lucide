@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "code",
+    "command line",
+    "prompt",
+    "shell"
+  ],
+  "categories": [
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "terminal-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

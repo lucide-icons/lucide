@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "exclamation mark"
+  ],
+  "categories": [
+    "notifications",
+    "shapes"
+  ],
+  "aliases": [
+    {
+      "name": "alert-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

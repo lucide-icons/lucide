@@ -4,11 +4,17 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "fork",
+    "knife",
+    "cutlery",
+    "flatware",
+    "tableware",
+    "silverware",
     "food",
     "restaurant",
     "meal",
-    "cutlery",
     "breakfast",
     "dinner",
     "supper"
@@ -16,6 +22,14 @@
   "categories": [
     "food-beverage",
     "travel",
-    "maps"
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "fork-knife",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "scan",
@@ -10,11 +12,11 @@
     "magnifying glass",
     "grep",
     "chevrons",
-    "<>"
+    "<>",
+    "lens"
   ],
   "categories": [
     "text",
-    "account",
     "social",
     "development"
   ]
