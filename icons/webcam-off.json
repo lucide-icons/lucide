@@ -7,7 +7,8 @@
     "jordan-burnett"
   ],
   "use-cases": [
-    "For showing an 'off' or 'disabled' state for a webcam indicator."
+    "indicating that a webcam is disabled or turned off",
+    "showing a camera feed is unavailable or blocked for privacy"
   ],
   "tags": [
     "camera",
