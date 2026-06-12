@@ -71,8 +71,8 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
-          cache: "pnpm"
-          node-version-file: "package.json"
+          cache: 'pnpm'
+          node-version-file: 'package.json'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -113,14 +113,14 @@ jobs:
   start-release:
     if: github.repository == 'lucide-icons/lucide'
     needs: create-release
-    uses: "./.github/workflows/release.yml"
+    uses: './.github/workflows/release.yml'
     secrets: inherit
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
 
   dispatch-release:
     if: github.event_name == 'workflow_dispatch'
-    uses: "./.github/workflows/release.yml"
+    uses: './.github/workflows/release.yml'
     secrets: inherit
     with:
       version: ${{ inputs.version }}
