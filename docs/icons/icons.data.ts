@@ -7,8 +7,10 @@ export default {
         ([, { name, iconNode, popularity, createdRelease, aliases = [] }]) => ({
           name,
           iconNode,
-          popularity: popularity.count,
-          aliases: aliases?.map((alias) => alias.name),
+          popularity: popularity?.count ?? 0,
+          aliases: aliases
+            .map((alias) => (typeof alias === 'string' ? alias : alias?.name))
+            .filter((alias): alias is string => Boolean(alias)),
           createdRelease,
         }),
       ),
