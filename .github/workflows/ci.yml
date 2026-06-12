@@ -48,7 +48,7 @@ jobs:
       - name: Check if latest tag was created today
         id: environment
         run: |
-          LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> $GITHUB_OUTPUT)
+          LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
           TAG_DATE=$(git log -1 --format=%cs "$LATEST_TAG")
           TODAY=$(date +%Y-%m-%d)
 
