@@ -11,6 +11,7 @@ const { item } = defineProps<{
 <template>
   <div>
     <img
+      v-if="item.icon"
       :src="item.icon"
       :class="{ 'select-item-icon': true, light: item.iconDark }"
       :alt="`${item.name} logo`"
