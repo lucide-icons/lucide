@@ -3,7 +3,10 @@
   "contributors": [
     "smnandre"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing square roots on calculator buttons",
+    "Tagging or sorting math lessons"
+  ],
   "tags": [
     "calculate",
     "formula",

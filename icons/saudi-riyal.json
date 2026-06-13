@@ -4,7 +4,10 @@
     "null78",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying prices or amounts in Saudi riyals",
+    "Indicating SAR transactions in shopping and payment platforms"
+  ],
   "tags": [
     "currency",
     "money",

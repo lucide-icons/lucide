@@ -6,7 +6,11 @@
     "domingasp",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Hiding the cursor in fullscreen apps or presentations",
+    "Marking non-interactive elements that cannot be clicked",
+    "Indicating disabled pointer input, e.g. in games or modal dialogs"
+  ],
   "tags": [
     "pointer",
     "mouse",

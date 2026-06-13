@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing in or joining a session or room",
+    "Indicating an input or source selection"
+  ],
   "tags": [
     "left",
     "in",

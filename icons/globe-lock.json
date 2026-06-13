@@ -6,7 +6,11 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a secure connection or internet security",
+    "Representing privacy mode or data encryption",
+    "Protecting digital identity or passwords"
+  ],
   "tags": [
     "vpn",
     "private",

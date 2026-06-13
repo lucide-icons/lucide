@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing mild dissatisfaction in feedback or rating scales",
+    "Marking an unhappy step on a contentment scale (very unhappy to very happy)"
+  ],
   "tags": [
     "emoji",
     "nuisance",

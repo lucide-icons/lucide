@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "RajnishKMehta"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing security configuration and protection settings",
+    "Indicating admin controls for adjusting security parameters"
+  ],
   "tags": [
     "cybersecurity",
     "secure",

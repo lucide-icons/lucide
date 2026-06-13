@@ -5,7 +5,9 @@
     "jguddas",
     "Spleefies"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching a database, e.g. in backend-as-a-service tools"
+  ],
   "tags": [
     "storage",
     "memory",

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a delivery error or removing an email"
+  ],
   "tags": [
     "email",
     "message",

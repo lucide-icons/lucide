@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a message was delivered or approved",
+    "Marking a conversation or task discussion as resolved"
+  ],
   "tags": [
     "comment",
     "chat",

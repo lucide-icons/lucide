@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving an item to the start of a playlist or queue",
+    "Inserting media to play next"
+  ],
   "tags": [
     "queue",
     "top",

@@ -3,7 +3,13 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking sightseeing spots, viewpoints, or scenic lookouts on maps",
+    "Representing search, discovery, or exploration features",
+    "Indicating birdwatching, wildlife watching, or nature tours",
+    "Representing surveillance or monitoring capabilities",
+    "Denoting scouting or exploration modes in games"
+  ],
   "tags": [
     "field glasses",
     "lorgnette",

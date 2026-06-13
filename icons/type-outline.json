@@ -5,7 +5,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying outline styling to text in editors",
+    "Representing outlined typography options"
+  ],
   "tags": [
     "text",
     "font",

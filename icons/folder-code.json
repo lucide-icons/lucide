@@ -7,7 +7,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a folder that contains code or source files"
+  ],
   "tags": [
     "directory",
     "coding",

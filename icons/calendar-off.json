@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or deleting an event",
+    "Indicating that a calendar or scheduling is disabled"
+  ],
   "tags": [
     "date",
     "day",

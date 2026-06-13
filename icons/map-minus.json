@@ -7,7 +7,10 @@
     "MarianoFranzese",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing an element from a map",
+    "Zooming out of a map view"
+  ],
   "tags": [
     "location",
     "navigation",

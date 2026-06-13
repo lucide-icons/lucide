@@ -5,7 +5,11 @@
     "UsamaKhan",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an employee or staff member",
+    "Indicating a verified employee",
+    "Representing an event pass or badge"
+  ],
   "tags": [
     "id-card",
     "id-card-lanyard",

@@ -4,7 +4,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that an operation on a computer completed successfully"
+  ],
   "tags": [
     "computer",
     "screen",

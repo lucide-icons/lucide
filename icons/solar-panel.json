@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing solar power in energy monitoring dashboards",
+    "Indicating solar devices in home automation apps"
+  ],
   "tags": [
     "solar panel",
     "solar",

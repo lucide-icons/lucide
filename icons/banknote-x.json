@@ -6,7 +6,10 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a failed, rejected, or canceled payment",
+    "Signifying insufficient funds, transaction errors, or declined payments"
+  ],
   "tags": [
     "bill",
     "currency",

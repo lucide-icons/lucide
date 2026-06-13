@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a successful print",
+    "Indicating a printer is connected and healthy"
+  ],
   "tags": [
     "fax",
     "office",

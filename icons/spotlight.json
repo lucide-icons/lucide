@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Highlighting winners, featured items, or people on stage"
+  ],
   "tags": [
     "winner",
     "soapbox",

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating sleeping areas or bedrooms in hotel and booking apps",
+    "Representing bedroom controls in smart home applications"
+  ],
   "tags": [
     "sleep",
     "hotel",

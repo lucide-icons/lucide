@@ -6,7 +6,12 @@
     "ericfennis",
     "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a verified or trusted website, domain, or service",
+    "Showing successful connectivity to a global service such as an API or CDN",
+    "Confirming language or translation features are active",
+    "Serving as an online-and-operational status indicator"
+  ],
   "tags": [
     "world",
     "browser",

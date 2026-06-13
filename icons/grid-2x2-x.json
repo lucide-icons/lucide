@@ -4,7 +4,11 @@
     "danielbayley",
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating errors in data tables",
+    "Disabling or removing a grid feature",
+    "Signifying a removed or failed task within a grid"
+  ],
   "tags": [
     "table",
     "rows",

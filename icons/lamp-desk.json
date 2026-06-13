@@ -5,7 +5,10 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling desk lamps in smart home apps",
+    "Indicating workspace lighting in booking apps"
+  ],
   "tags": [
     "lighting",
     "household",

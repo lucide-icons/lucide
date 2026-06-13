@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that privacy mode is activated",
+    "Marking hidden content that can be revealed",
+    "Representing sleep mode, do-not-disturb, or muted video",
+    "Denoting inactive or stealth states"
+  ],
   "tags": [
     "view",
     "watch",

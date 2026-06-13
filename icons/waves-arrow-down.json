@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating falling tide levels in marine weather applications"
+  ],
   "tags": [
     "water",
     "sea",

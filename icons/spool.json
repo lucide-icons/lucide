@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing discussion threads or ongoing conversations",
+    "Navigating knitting, crochet, or sewing-related features"
+  ],
   "tags": [
     "bobbin",
     "spindle",

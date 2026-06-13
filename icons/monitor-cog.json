@@ -5,7 +5,11 @@
     "colebemis",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing system settings or configuration menus",
+    "Indicating system management in IT dashboards and admin panels",
+    "Signifying maintenance, updates, or device management"
+  ],
   "tags": [
     "tv",
     "screen",

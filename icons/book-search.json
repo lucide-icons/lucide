@@ -4,7 +4,11 @@
     "karsa-mistmere",
     "Muhammad-Aqib-Bashir"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching books by title, author, or ISBN in library systems",
+    "Representing search functionality in e-book platforms and bookstore apps",
+    "Searching course materials, manuals, or documentation"
+  ],
   "tags": [
     "reading",
     "library",

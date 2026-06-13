@@ -7,7 +7,10 @@
     "jguddas",
     "lt25106"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing that a print job failed",
+    "Indicating that no printer is available at a location"
+  ],
   "tags": [
     "fax",
     "office",

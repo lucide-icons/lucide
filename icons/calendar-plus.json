@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Creating a new event or adding an event to a calendar"
+  ],
   "tags": [
     "date",
     "day",

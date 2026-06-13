@@ -4,7 +4,10 @@
     "jguddas",
     "vexkiddy"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a QR code scanner feature",
+    "Differentiating scanning from merely displaying a QR code"
+  ],
   "tags": [
     "barcode",
     "scan",

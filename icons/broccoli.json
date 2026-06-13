@@ -5,7 +5,11 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing vegetables in health and nutrition apps",
+    "Gamifying healthy eating in children's educational apps",
+    "Categorizing recipes or groceries, including vegetarian and vegan filters"
+  ],
   "tags": [
     "leafy",
     "crisp",

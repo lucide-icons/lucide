@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Composing a new email or adding mail"
+  ],
   "tags": [
     "email",
     "message",

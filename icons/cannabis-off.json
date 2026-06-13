@@ -3,7 +3,10 @@
   "contributors": [
     "nickveles"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting a non-smoking preference, e.g. on dating apps",
+    "Marking places or situations where cannabis use is prohibited"
+  ],
   "tags": [
     "cannabis",
     "weed",

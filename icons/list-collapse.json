@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a set of collapsed sections, e.g. expandable details elements"
+  ],
   "tags": [
     "items",
     "collapse",

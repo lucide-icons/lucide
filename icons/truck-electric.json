@@ -13,7 +13,9 @@
     "jguddas",
     "AnnaSasDev"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Distinguishing electric trucks from regular trucks"
+  ],
   "tags": [
     "delivery",
     "van",

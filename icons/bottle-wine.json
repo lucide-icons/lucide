@@ -3,7 +3,11 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking wineries, wine stores, or restaurants on a map",
+    "Representing wine options on a food menu",
+    "Indicating wine tasting or alcohol content"
+  ],
   "tags": [
     "alcohol",
     "drink",

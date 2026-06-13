@@ -4,7 +4,10 @@
     "jguddas",
     "aramsoneson"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Serving as a placeholder for an unset app icon or squircle element",
+    "Indicating a squircle-shaped cropping or masking area in design tools"
+  ],
   "tags": [
     "shape",
     "pending",

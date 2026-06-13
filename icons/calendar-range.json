@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a date range, e.g. in date range picker widgets"
+  ],
   "tags": [
     "date",
     "day",

@@ -4,7 +4,11 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing bones in medical and health contexts",
+    "Indicating dog treats or pet supplies",
+    "Symbolizing skeletal anatomy"
+  ],
   "tags": [
     "health",
     "skeleton",
