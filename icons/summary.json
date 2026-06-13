@@ -5,6 +5,12 @@
     "jguddas",
     "ajokt123"
   ],
+  "use-cases": [
+    "summarizing with ai",
+    "summarizing long email threads",
+    "turning meeting transcripts into summaries",
+    "summarizing articles"
+  ],
   "tags": [
     "brief",
     "abstract",
