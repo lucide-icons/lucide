@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "tectonicpluto"
+  ],
+  "tags": [
+    "movie",
+    "theater",
+    "screen",
+    "projector",
+    "seats",
+    "film",
+    "watching",
+    "streaming",
+    "entertainment",
+    "auditorium"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
