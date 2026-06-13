@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "back",
     "previous",
@@ -12,8 +13,7 @@
     "<"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ],
   "aliases": [
     {

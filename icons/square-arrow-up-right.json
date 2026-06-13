@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "direction",
     "north-east",
@@ -14,7 +16,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "social"
   ],
   "aliases": [

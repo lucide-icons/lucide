@@ -4,6 +4,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "home",
     "living",
@@ -13,7 +14,8 @@
   ],
   "categories": [
     "buildings",
-    "home"
+    "home",
+    "navigation"
   ],
   "aliases": [
     {

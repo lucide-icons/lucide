@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "direction",
     "south-west",
@@ -14,7 +16,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ],
   "aliases": [
