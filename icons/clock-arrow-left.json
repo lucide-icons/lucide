@@ -4,6 +4,11 @@
     "colebemis",
     "jguddas"
   ],
+  "use-cases": [
+    "indicating the start of a time range",
+    "assign timing information",
+    "open time settings"
+  ],
   "tags": [
     "time",
     "watch",
