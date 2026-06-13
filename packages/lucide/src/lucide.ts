@@ -1,16 +1,26 @@
 import replaceElement from './replaceElement';
 import * as iconAndAliases from './iconsAndAliases';
+import { Icons, SVGProps } from './types';
+
+export interface CreateIconsOptions {
+  icons?: Icons;
+  nameAttr?: string;
+  attrs?: SVGProps;
+  root?: Element | Document | DocumentFragment;
+  inTemplates?: boolean;
+}
 
 /**
  * Replaces all elements with matching nameAttr with the defined icons
- * @param {{ icons?: object, nameAttr?: string, attrs?: object, root?: Element | Document }} options
+ * @param {CreateIconsOptions} options
  */
 const createIcons = ({
   icons = {},
   nameAttr = 'data-lucide',
   attrs = {},
   root = document,
-}: { icons?: object; nameAttr?: string; attrs?: object; root?: Element | Document } = {}) => {
+  inTemplates,
+}: CreateIconsOptions = {}) => {
   if (!Object.values(icons).length) {
     throw new Error(
       "Please provide an icons object.\nIf you want to use all the icons you can import it like:\n `import { createIcons, icons } from 'lucide';\nlucide.createIcons({icons});`",
@@ -21,10 +31,23 @@ const createIcons = ({
     throw new Error('`createIcons()` only works in a browser environment.');
   }
 
-  const elementsToReplace = root.querySelectorAll(`[${nameAttr}]`);
-  Array.from(elementsToReplace).forEach((element) =>
-    replaceElement(element, { nameAttr, icons, attrs }),
-  );
+  const elementsToReplace = Array.from(root.querySelectorAll(`[${nameAttr}]`));
+
+  elementsToReplace.forEach((element) => replaceElement(element, { nameAttr, icons, attrs }));
+
+  if (inTemplates) {
+    const templates = Array.from(root.querySelectorAll('template'));
+
+    templates.forEach((template) =>
+      createIcons({
+        icons,
+        nameAttr,
+        attrs,
+        root: template.content,
+        inTemplates,
+      }),
+    );
+  }
 
   /** @todo: remove this block in v1.0 */
   if (nameAttr === 'data-lucide') {

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "outwards",
     "direction",
@@ -14,7 +15,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "development"
   ],
   "aliases": [
