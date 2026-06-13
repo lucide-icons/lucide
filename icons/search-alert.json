@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "Veatec22"
+  ],
+  "use-cases": [],
+  "tags": [
+    "find",
+    "scan",
+    "magnifier",
+    "magnifying glass",
+    "stop",
+    "warning",
+    "alert",
+    "error",
+    "anomaly",
+    "lens",
+    "locate",
+    "explore",
+    "discover",
+    "enlarge",
+    "zoom"
+  ],
+  "categories": [
+    "text",
+    "social"
+  ]
+}

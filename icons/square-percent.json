@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "verified",
     "unverified",
@@ -20,6 +21,11 @@
     "math"
   ],
   "aliases": [
-    "percent-square"
+    {
+      "name": "percent-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

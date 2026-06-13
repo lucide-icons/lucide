@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "back",
     "more than",
@@ -11,10 +12,14 @@
     ">"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ],
   "aliases": [
-    "chevron-right-circle"
+    {
+      "name": "chevron-right-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

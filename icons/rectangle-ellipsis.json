@@ -4,6 +4,7 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "login",
     "password",
@@ -38,6 +39,11 @@
     "development"
   ],
   "aliases": [
-    "form-input"
+    {
+      "name": "form-input",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
