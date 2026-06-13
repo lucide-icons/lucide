@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "lifting",
+    "mechanical",
+    "steel",
+    "industrial",
+    "equipment",
+    "assembly",
+    "transport",
+    "crane",
+    "hook",
+    "construction",
+    "building"
+  ],
+  "categories": [
+    "transportation",
+    "devices"
+  ]
+}
