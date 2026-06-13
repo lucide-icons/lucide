@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "Spleefies"
   ],
+  "use-cases": [],
   "tags": [
     "paste",
     "signature"
@@ -12,6 +14,11 @@
     "text"
   ],
   "aliases": [
-    "clipboard-edit"
+    {
+      "name": "clipboard-edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

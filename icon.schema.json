@@ -13,7 +13,7 @@
   "title": "Lucide Icons icon schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "categories", "tags"],
+  "required": ["$schema", "contributors", "categories", "tags", "use-cases"],
   "properties": {
     "$schema": {
       "type": "string"
@@ -21,32 +21,29 @@
     "aliases": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
             "type": "string"
           },
-          {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "deprecated": {
-                "const": true
-              },
-              "deprecationReason": {
-                "$ref": "#/$defs/aliasDeprecationReasons"
-              },
-              "toBeRemovedInVersion": {
-                "$ref": "#/$defs/versionNumber",
-                "description": "The version this icon will be removed in."
-              }
-            },
-            "dependentRequired": {
-              "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
-            }
+          "deprecated": {
+            "const": true
+          },
+          "deprecationReason": {
+            "$ref": "#/$defs/aliasDeprecationReasons"
+          },
+          "toBeRemovedInVersion": {
+            "$ref": "#/$defs/versionNumber",
+            "description": "The version this icon will be removed in."
           }
-        ]
+        },
+        "dependentRequired": {
+          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecationReason": ["deprecated"],
+          "toBeRemovedInVersion": ["deprecated"]
+        }
       },
       "uniqueItems": true
     },
@@ -59,7 +56,6 @@
           "account",
           "animals",
           "arrows",
-          "brands",
           "buildings",
           "charts",
           "communication",
@@ -118,6 +114,14 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "use-cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
     "deprecated": {
       "const": true
     },
@@ -130,12 +134,14 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"]
+    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecationReason": ["deprecated"],
+    "toBeRemovedInVersion": ["deprecated"]
   },
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.brand"]
+      "enum": ["icon.renamed"]
     },
     "aliasDeprecationReasons": {
       "type": "string",

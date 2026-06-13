@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "anthony-mariotti"
+    "anthony-mariotti",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "person",
     "lock",

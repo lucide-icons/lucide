@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "Muhammad-Aqib-Bashir"
+  ],
+  "use-cases": [],
+  "tags": [
+    "globe",
+    "internet",
+    "offline",
+    "disconnected",
+    "network",
+    "connection",
+    "world",
+    "no connection",
+    "network failure",
+    "signal off"
+  ],
+  "categories": [
+    "connectivity",
+    "devices",
+    "navigation"
+  ]
+}

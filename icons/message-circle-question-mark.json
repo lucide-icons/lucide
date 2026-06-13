@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -16,6 +19,11 @@
     "social"
   ],
   "aliases": [
-    "message-circle-question"
+    {
+      "name": "message-circle-question",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

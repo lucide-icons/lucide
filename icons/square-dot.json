@@ -4,6 +4,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "git",
     "diff",
@@ -14,6 +15,11 @@
     "development"
   ],
   "aliases": [
-    "dot-square"
+    {
+      "name": "dot-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

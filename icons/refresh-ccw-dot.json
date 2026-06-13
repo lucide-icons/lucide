@@ -1,8 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "csandman",
+    "ericfennis",
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "arrows",
     "rotate",

@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "metro",
     "subway",
@@ -15,6 +18,11 @@
     "navigation"
   ],
   "aliases": [
-    "m-square"
+    {
+      "name": "m-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

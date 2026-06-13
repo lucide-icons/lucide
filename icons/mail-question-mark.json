@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "email",
     "message",
@@ -14,6 +15,11 @@
     "mail"
   ],
   "aliases": [
-    "mail-question"
+    {
+      "name": "mail-question",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

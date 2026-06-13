@@ -7,6 +7,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "file"
   ],
@@ -15,6 +16,11 @@
     "files"
   ],
   "aliases": [
-    "upload-cloud"
+    {
+      "name": "upload-cloud",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
