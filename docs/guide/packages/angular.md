@@ -3,12 +3,13 @@
 ::: warning
 This documentation is for `@lucide/angular`.
 
-To learn about our legacy package for Angular, please refer to [`lucide-angular`](./lucide-angular).
+To learn about our legacy package for Angular, please refer to [`lucide-angular`](https://v0.lucide.dev/guide/packages/lucide-angular).
 :::
 
 A standalone, signal-based, zoneless implementation of Lucide icons for Angular.
 
 **What you can accomplish:**
+
 - Use icons as standalone Angular components with full dependency injection support
 - Configure icons globally through modern Angular providers
 - Integrate with Angular's reactive forms and data binding
@@ -118,6 +119,7 @@ Alternatively, the component also accepts string inputs.
 To use icons this way, first, you have to provide icons via `provideLucideIcons`:
 
 :::code-group
+
 ```ts{7-10} [app.config.ts]
 import { ApplicationConfig } from '@angular/core';
 import { provideLucideIcons, LucideCircleCheck, LucideCircleX } from '@lucide/angular';
@@ -148,6 +150,7 @@ import { LucideIcon } from '@lucide/angular';
 })
 export class Foobar { }
 ```
+
 :::
 
 ::: tip
@@ -259,19 +262,25 @@ export class Foobar {
 ## Troubleshooting
 
 ### The icon is not being displayed
+
 If using per-icon-components:
+
 1. Ensure that the icon component is being imported, if using per-icon-components
 2. Check that the icon name matches exactly (case-sensitive)
 
 If using the dynamic component:
+
 1. Ensure the icon is provided via `provideLucideIcons()` if using string names
 2. Verify the icon is imported from `@lucide/angular` and not the legacy package
 
 ### TypeScript errors?
+
 Make sure you're importing from `@lucide/angular` and not `lucide-angular`.
 
 ### Icons render with wrong defaults
+
 Ensure `provideLucideConfig()` is used at the right level.
 
 ## Migration guide
+
 Migrating from `lucide-angular`? Read our [comprehensive migration guide](https://github.com/lucide-icons/lucide/blob/main/packages/angular/MIGRATION.md).
