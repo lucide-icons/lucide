@@ -8,7 +8,10 @@
     "karsa-mistmere",
     "jennieboops"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "indicating AI-assisted writing or editing features",
+    "representing automated writing or content generation tools"
+  ],
   "tags": [
     "edit",
     "ai",
