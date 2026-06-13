@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "marking content as sponsored",
+    "linking to an advertise with us page"
+  ],
   "tags": [
     "advert",
     "affiliate",
