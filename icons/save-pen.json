@@ -7,6 +7,10 @@
     "karsa-mistmere",
     "vaporvee"
   ],
+  "use-cases": [
+    "saving a file with a specific name and/or to a specific location",
+    "exporting or saving a copy of the current document with a different name or format"
+  ],
   "tags": [
     "floppy disk",
     "directory",
