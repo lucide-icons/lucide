@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "python2911"
+  ],
+  "tags": [
+    "feed",
+    "rss",
+    "news",
+    "activity",
+    "updates",
+    "timeline",
+    "posts",
+    "content",
+    "log"
+  ],
+  "categories": [
+    "social",
+    "communication"
+  ]
+}
