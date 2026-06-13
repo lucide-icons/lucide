@@ -6,13 +6,13 @@
     "ericfennis"
   ],
   "use-cases": [
-    "Privacy Mode: Indicate that privacy mode is activated, hiding personal information or activity from other users.",
-    "Do Not Disturb: Show that notifications, alerts, or incoming messages are temporarily muted to prevent interruptions.",
-    "Hidden Content: Mark content that is concealed by default and requires user interaction to reveal or view.",
-    "Inactive Status: Denote that a user is currently inactive, away, or not actively engaging with the application.",
-    "Stealth Mode: Represent a feature or operation that runs discreetly in the background without being visible to others.",
-    "Accessibility Feature: Indicate an accessibility option designed to assist users with visual impairments or other accessibility needs."
-],
+    "Indicating that privacy mode is activated",
+    "Showing that notifications are muted or do-not-disturb is on",
+    "Marking hidden content that can be revealed on interaction",
+    "Denoting an inactive or away user status",
+    "Representing a stealth mode running discreetly in the background",
+    "Offering an accessibility option for visual impairments"
+  ],
   "tags": [
     "view",
     "watch",
