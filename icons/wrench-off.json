@@ -19,7 +19,10 @@
     "toolbox",
     "build",
     "construction",
-    "off"
+    "off",
+    "service",
+    "maintenance",
+    "disabled"
   ],
   "categories": [
     "account",
