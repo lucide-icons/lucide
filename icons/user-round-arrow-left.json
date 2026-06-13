@@ -4,7 +4,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "assigning a task to the current user",
+    "marking a message as directed to me",
+    "navigating to the user's profile",
+    "setting the current user as recipient",
+    "indicating an inbound user request"
+  ],
   "tags": [
     "person",
     "assign",
@@ -13,9 +19,17 @@
     "setup",
     "self",
     "me",
-    "myself"
+    "myself",
+    "profile",
+    "avatar",
+    "incoming",
+    "recipient",
+    "assignee",
+    "inbound"
   ],
   "categories": [
-    "account"
+    "account",
+    "people",
+    "arrows"
   ]
 }
