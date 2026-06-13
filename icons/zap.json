@@ -4,12 +4,15 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "flash",
     "camera",
     "lightning",
     "electricity",
-    "energy"
+    "energy",
+    "power",
+    "quick"
   ],
   "categories": [
     "connectivity",
