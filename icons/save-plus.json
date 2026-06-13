@@ -6,13 +6,17 @@
     "ericfennis",
     "jwlinqx"
   ],
+  "use-cases": [
+    "saving a new copy of a file or document",
+    "creating a new item by saving the current work"
+  ],
   "tags": [
     "floppy disk",
     "save",
     "plus",
     "add",
     "update",
-    "create",
+    "create"
   ],
   "categories": [
     "text",
