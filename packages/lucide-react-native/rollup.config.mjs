@@ -1,3 +1,4 @@
+import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 import plugins from '@lucide/rollup-plugins';
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json' with { type: 'json' };
@@ -6,6 +7,25 @@ const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
 const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts'];
+
+const generateIconDeclarationFiles = () => ({
+  name: 'generate-icon-declaration-files',
+  writeBundle() {
+    const iconDeclarationsDir = new URL('./dist/esm/icons/', import.meta.url);
+    mkdirSync(iconDeclarationsDir, { recursive: true });
+
+    const iconIndex = readFileSync(new URL('./src/icons/index.ts', import.meta.url), 'utf8');
+    Array.from(
+      iconIndex.matchAll(/export \{ default as ([A-Za-z0-9_$]+) \} from '\.\/([^']+)';/g),
+    ).forEach(([, componentName, fileName]) => {
+      writeFileSync(
+        new URL(`./${fileName}.d.ts`, iconDeclarationsDir),
+        `export { ${componentName} as default } from '../../icons';\n`,
+      );
+    });
+  },
+});
+
 const bundles = [
   {
     format: 'cjs',
@@ -70,7 +90,7 @@ export default [
         format: 'es',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(), generateIconDeclarationFiles()],
   },
   {
     input: `src/${outputFileName}.suffixed.ts`,
