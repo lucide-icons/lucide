@@ -203,6 +203,7 @@ function handleCloseDrawer() {
         class="input-wrapper"
         @focus="onFocusSearchInput"
       />
+
       <Select
         id="sort-select"
         :items="SORTING"
