@@ -5,7 +5,7 @@
   ],
   "use-cases": [
     "sorting items in a table by column (name, date, price, status)",
-    "reordering a list in ascending or descending order"
+    "reordering a list in descending order"
   ],
   "tags": [
     "list",
