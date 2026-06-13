@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AdeboyeDN",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "nurse",
+    "physician",
+    "healthcare",
+    "medical",
+    "medicine",
+    "hospital",
+    "clinic",
+    "stethoscope",
+    "health"
+  ],
+  "categories": [
+    "account",
+    "medical"
+  ]
+}
