@@ -1,4 +1,4 @@
-name: Pull request tags suggestions
+name: Pull request metadata suggestions
 
 on:
   pull_request_target:
@@ -6,8 +6,8 @@ on:
       - 'icons/*.json'
 
 jobs:
-  pull-request-tags-suggestions:
-    name: Pull Request Tags Suggestions
+  pull-request-metadata-suggestions:
+    name: Pull Request Metadata Suggestions
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Generate comment markup
-        run: node ./scripts/suggestTags.mts
+        run: node ./scripts/suggestMetaData.mts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           PULL_REQUEST_NUMBER: ${{ github.event.number }}
