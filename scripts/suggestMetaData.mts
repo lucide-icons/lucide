@@ -213,7 +213,7 @@ Reference examples from existing icons:
 ${JSON.stringify(referenceExamples, null, 2)}`;
 
   const response = await client.responses.create({
-      model: "gpt-4.1-nano",
+      model: "gpt-5-mini",
       input,
       text: {
         format: zodTextFormat(metadataSchema, "metadata"),
