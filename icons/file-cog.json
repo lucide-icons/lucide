@@ -3,8 +3,10 @@
   "contributors": [
     "karsa-mistmere",
     "danielbayley",
-    "jguddas"
+    "jguddas",
+    "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
     "executable",
     "settings",

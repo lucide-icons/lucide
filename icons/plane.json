@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "plane",
     "trip",
@@ -12,6 +13,7 @@
   ],
   "categories": [
     "transportation",
-    "travel"
+    "travel",
+    "navigation"
   ]
 }

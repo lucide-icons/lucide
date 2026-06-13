@@ -5,13 +5,15 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "date",
     "day",
     "month",
     "year",
     "events",
-    "search"
+    "search",
+    "lens"
   ],
   "categories": [
     "time"

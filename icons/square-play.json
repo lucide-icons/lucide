@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "audio",
@@ -16,6 +17,11 @@
     "multimedia"
   ],
   "aliases": [
-    "play-square"
+    {
+      "name": "play-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "money",
     "savings"

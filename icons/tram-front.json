@@ -4,6 +4,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "railway",
     "metro",
@@ -17,6 +18,11 @@
     "transportation"
   ],
   "aliases": [
-    "train"
+    {
+      "name": "train",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
