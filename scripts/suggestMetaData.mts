@@ -279,8 +279,10 @@ if (comments.length === 0) {
   process.exit(0);
 }
 
-const reviewBody = `### 🤖 ChatGPT metadata suggestions ✨
-I've asked ChatGPT for some suggestions for \`tags\`, \`categories\` and \`use-cases\`.`;
+const reviewBody = `### 🤖 Metadata suggestions ✨
+I've asked ChatGPT for some suggestions for \`tags\`, \`categories\` and \`use-cases\`.
+Please review them and apply any that you find useful.
+`;
 
 try {
   console.log({
