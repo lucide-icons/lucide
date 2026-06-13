@@ -57,11 +57,6 @@ function releaseTagLink(version) {
       :iconNode="params.iconNode"
       :class="$style.preview"
     />
-    <IconPreviewSmall
-      :name="params.name"
-      :iconNode="params.iconNode"
-       :class="$style.smallPreview"
-    />
   </div>
   <div >
     <div :class="$style.info">
@@ -92,7 +87,11 @@ function releaseTagLink(version) {
         <IconContributors :icon="params" :class="$style.contributors"/>
       </div>
     </div>
-    <CodeGroup
+
+  </div>
+
+</div>
+<CodeGroup
       :groups="tabs"
       groupName="icon-code-example"
       :class="$style.code"
@@ -102,18 +101,16 @@ function releaseTagLink(version) {
         v-html="codeExample"
       />
     </CodeGroup>
-  </div>
-</div>
 
 <div class="icon-page-sections">
   <IconShowcase
-  :name="params.name"
-  :iconNode="params.iconNode"
+    :name="params.name"
+    :iconNode="params.iconNode"
   />
 
   <RelatedIcons
-  v-if="params.relatedIcons"
-  :icons="params.relatedIcons"
+    v-if="params.relatedIcons"
+    :icons="params.relatedIcons"
   />
 </div>
 
@@ -131,12 +128,18 @@ function releaseTagLink(version) {
   }
 
   .meta {
-    margin-left: auto;
-    margin-top: 24px;
+    /* margin-left: auto;
+    margin-top: 24px; */
+    display: flex;
+    gap: 24px;
+    align-items: center;
   }
 
   .info {
     --tags-gradient-background: var(--vp-c-bg);
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start; */
   }
 
   .version, .contributors {
@@ -187,17 +190,12 @@ function releaseTagLink(version) {
   }
 
   @media (min-width: 860px) {
-    .info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
 
-    .meta {
+    /* .meta {
       border-left: 1px solid var(--vp-c-divider);
       padding-left: 16px;
       margin-top: 0;
-    }
+    } */
 
     .version, .contributors {
       flex-direction: column;
@@ -205,17 +203,17 @@ function releaseTagLink(version) {
   }
 
   @media (min-width: 960px) {
-    .info {
+    /* .info {
       display: block;
       justify-content: space-between;
       align-items: flex-start;
-    }
+    } */
 
-    .meta {
+    /* .meta {
       border-left: none;
       padding-left: 0;
       margin-top: 24px;
-    }
+    } */
 
     .version, .contributors {
       flex-direction: row;
@@ -223,17 +221,17 @@ function releaseTagLink(version) {
   }
 
   @media (min-width: 1152px) {
-    .info {
+    /* .info {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-    }
+    } */
 
-    .meta {
+    /* .meta {
       border-left: 1px solid var(--vp-c-divider);
       padding-left: 16px;
       margin-top: 0;
-    }
+    } */
 
     .version, .contributors {
       flex-direction: row;
