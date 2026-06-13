@@ -172,3 +172,24 @@ html:not(.has-bb-banner) #bb-banner {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+.VPSidebar {
+  /* Hide Scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
+  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
+}
+.VPSidebar::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}

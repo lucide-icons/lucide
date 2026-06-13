@@ -70,10 +70,10 @@ const comparisonsPromises = tags.map(async (tag, index) => {
   };
 });
 
-const comparisons = await Promise.all(comparisonsPromises);
+const comparisons = (await Promise.all(comparisonsPromises)).filter((comparison) => comparison != null && Object.keys(comparison.iconFiles).length > 0);
 const newReleaseMetaData = {};
 
-comparisons.forEach(({ tag, iconFiles, date } = {}) => {
+comparisons.forEach(({ tag, iconFiles, date }) => {
   if (tag == null) return;
 
   iconFiles.forEach(({ status, file, renamedFile }) => {
