@@ -26,7 +26,7 @@
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
     "suggest:metadata": "node ./scripts/suggestMetaData.mts",
-    "suggest:metadata:watch": "node --env-file .env --watch ./scripts/suggestMetaData.mts ",
+    "suggest:metadata:watch": "node --env-file .env --watch ./scripts/suggestMetaData.mts",
     "postinstall": "husky install",
     "lint:es": "eslint .",
     "lint:format": "prettier \"**/*.{js,mjs,ts,jsx,tsx,html,css,scss,json,yml,yaml}\" --check",
