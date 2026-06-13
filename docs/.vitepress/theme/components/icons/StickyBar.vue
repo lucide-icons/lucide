@@ -15,7 +15,7 @@
   margin-bottom: 32px;
   background: var(--vp-c-bg);
   box-shadow: 0 16px 24px var(--vp-c-bg);
-  gap:16px;
+  gap: 16px;
 }
 
 .search-bar :deep(.select-button) {
@@ -61,7 +61,6 @@
   }
 }
 
-
 @media (min-width: 960px) {
   .search-bar {
     padding-top: 32px;
@@ -69,7 +68,4 @@
     top: calc(var(--vp-layout-top-height, 0px) + 64px);
   }
 }
-
-
-
 </style>
