@@ -3,6 +3,10 @@
   "contributors": [
     "NielsLazaroms"
   ],
+  "use-cases": [
+    "To indicate when you need to process items.",
+    "To indicate that a process is happening",
+  ],
   "tags": [
     "clock",
     "waiting",
