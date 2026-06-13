@@ -118,7 +118,14 @@ watch(searchQueryDebounced, () => {
 function handleCloseDrawer() {
   setActiveIconName('');
 
-  window.history.pushState({}, '', '/icons/');
+  const url = new URL(window.location);
+  url.pathname = '/icons/';
+
+  if (searchQueryDebounced.value) {
+    url.searchParams.set('search', searchQueryDebounced.value);
+  }
+
+  window.history.pushState({}, '', url);
 }
 </script>
 
@@ -126,6 +133,7 @@ function handleCloseDrawer() {
   <div
     ref="overviewEl"
     class="overview-container"
+    :class="{ 'icon-drawer-open': activeIconName }"
   >
     <StickyBar>
       <InputSearch
@@ -185,5 +193,6 @@ function handleCloseDrawer() {
 
 .input-wrapper {
   width: 100%;
+  /* view-transition-name: icons-search-box; */
 }
 </style>
