@@ -4,7 +4,10 @@
     "colebemis",
     "jguddas"
   ],
-  "aliases": [],
+  "use-cases": [
+    "indicating the end of a time range",
+    "unassign timing information"
+  ],
   "tags": [
     "time",
     "watch",
