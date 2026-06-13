@@ -4,7 +4,10 @@
     "taichimaeda",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that AI-powered features or assistants are disabled",
+    "Showing the off state of inline AI completions in editors"
+  ],
   "tags": [
     "robot",
     "ai",

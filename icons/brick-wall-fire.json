@@ -4,7 +4,11 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing firewalls and firewall rules on cybersecurity platforms",
+    "Indicating network security settings on devices and configuration panels",
+    "Marking firewall elements in network architecture diagrams"
+  ],
   "tags": [
     "firewall",
     "security",

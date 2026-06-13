@@ -5,7 +5,10 @@
     "colebemis",
     "gubser"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Creating a new timer",
+    "Adding a new clock or time zone to a dashboard"
+  ],
   "tags": [
     "time",
     "watch",

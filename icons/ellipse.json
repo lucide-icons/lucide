@@ -3,7 +3,9 @@
   "contributors": [
     "KISHORE-KUMAR-S"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting the ellipse or oval drawing mode in editors"
+  ],
   "tags": [
     "shape",
     "geometry",

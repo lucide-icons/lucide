@@ -4,7 +4,11 @@
     "colebemis",
     "oosawy"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a completed download or data save",
+    "Indicating successful synchronization or backup",
+    "Showing that an installation or update finished successfully"
+  ],
   "tags": [
     "done",
     "todo",

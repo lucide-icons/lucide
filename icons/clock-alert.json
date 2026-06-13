@@ -5,7 +5,10 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating delays, e.g. for public transport",
+    "Reflecting time-related validation warnings"
+  ],
   "tags": [
     "time",
     "watch",

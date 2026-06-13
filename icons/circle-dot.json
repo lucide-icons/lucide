@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an open or uncompleted issue",
+    "Indicating a selected radio button or active state"
+  ],
   "tags": [
     "pending",
     "dot",

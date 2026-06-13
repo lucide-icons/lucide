@@ -4,7 +4,11 @@
     "ericfennis",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Enabling subtitles on streaming platforms",
+    "Indicating live transcription availability in video conferencing",
+    "Providing captions in online courses for accessibility"
+  ],
   "tags": [
     "tv",
     "movie",

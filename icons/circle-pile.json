@@ -4,7 +4,10 @@
     "colebemis",
     "nathan-de-pachtere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing stacked bars or piled materials in industry",
+    "Depicting a snowball pile"
+  ],
   "tags": [
     "off",
     "zero",

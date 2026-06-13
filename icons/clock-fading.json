@@ -4,7 +4,9 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing time fading away or running out"
+  ],
   "tags": [
     "time",
     "watch",

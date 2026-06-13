@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a time entry or schedule as valid",
+    "Indicating on-time status, e.g. for public transport"
+  ],
   "tags": [
     "time",
     "watch",

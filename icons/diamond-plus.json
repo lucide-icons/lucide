@@ -3,7 +3,9 @@
   "contributors": [
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding keyframes in animation or video editing"
+  ],
   "tags": [
     "keyframe",
     "add",

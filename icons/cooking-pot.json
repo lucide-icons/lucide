@@ -4,7 +4,10 @@
     "guillermo-angeles",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating recipes, cooking, or dinner time",
+    "Representing the kitchen"
+  ],
   "tags": [
     "pod",
     "cooking",

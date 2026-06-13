@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the rook piece in chess applications",
+    "Illustrating chess educational materials or algebraic notation"
+  ],
   "tags": [
     "castle",
     "piece",

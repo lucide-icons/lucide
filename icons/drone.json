@@ -6,7 +6,11 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing interfaces that connect with drones",
+    "Filtering drone footage",
+    "Showing drone locations as a map layer"
+  ],
   "tags": [
     "quadcopter",
     "uav",
