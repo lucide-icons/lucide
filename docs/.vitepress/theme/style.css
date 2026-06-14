@@ -117,6 +117,10 @@
   padding-left: 0;
 }
 
+.overview-container.icon-drawer-open {
+  padding-bottom: 288px;
+}
+
 .VPHomeHero .container {
   flex-direction: column-reverse;
 }
@@ -144,6 +148,14 @@
   .VPHomeHero .container {
     flex-direction: row;
   }
+
+  html.has-bb-banner {
+    --vp-layout-top-height: 72px;
+  }
+
+  html.has-bb-banner {
+    --Dark-Background: #161618;
+  }
 }
 
 .VPNavBarHamburger .container > span {
@@ -153,4 +165,31 @@
 .package-lucide-logo {
   margin: 0 auto 48px;
   max-width: 480px;
+}
+
+html:not(.has-bb-banner) #bb-banner {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.VPSidebar {
+  /* Hide Scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
+  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
+}
+.VPSidebar::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
 }
