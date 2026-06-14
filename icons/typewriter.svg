@@ -1,18 +1,26 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="18"
-  height="18"
-  viewBox="0 0 18 18"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <path d="M1.5,7.5l0,3" />
-  <path d="M1.5,9l15,0" />
-  <path d="M16.5,7.5l0,3" />
-  <path d="M3.75,9l0,5.4c0,0.745 0.605,1.35 1.35,1.35l7.8,0c0.745,0 1.35,-0.605 1.35,-1.35l0,-5.4" />
-  <path d="M5.25,8.25l0,-4.65c0,-0.745 0.605,-1.35 1.35,-1.35l4.8,0c0.745,0 1.35,0.605 1.35,1.35l0,4.65" />
-  <path d="M7.5 12.5 L10.5 12.5" />
+  <path d="M10 18 L14 18" />
+  <path d="M16.5 2 C17.245 2 18 2.755 18 3.5" />
+  <path d="M18 22 C18.745 22 19.5 21.245 19.5 20.5" />
+  <path d="M18 3.5 L18 12" />
+  <path d="M19.5 20.5 L19.5 12" />
+  <path d="M2 10.5 L2 13.5" />
+  <path d="M2 12 L22 12" />
+  <path d="M22 10.5 L22 13.5" />
+  <path d="M4.5 12 L4.5 20.5" />
+  <path d="M4.5 20.5 C4.5 21.245 5.255 22 6 22" />
+  <path d="M6 12 L6 3.5" />
+  <path d="M6 22 L18 22" />
+  <path d="M6 3.5 C6 2.755 6.755 2 7.5 2" />
+  <path d="M7.5 2 L16.5 2" />
 </svg>
