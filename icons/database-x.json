@@ -6,6 +6,11 @@
     "Barakudum",
     "rrod497"
   ],
+  "use-cases": [
+    "indicating a failed or lost database connection",
+    "displaying error states in monitoring tools",
+    "representing rejected queries or destructive operations"
+  ],
   "tags": [
     "storage",
     "memory",
