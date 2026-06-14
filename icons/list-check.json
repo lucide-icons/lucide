@@ -4,7 +4,10 @@
     "guanboo-yang",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an item has been added to a to-do list",
+    "Showing a product was added to a wishlist"
+  ],
   "tags": [
     "done",
     "check",

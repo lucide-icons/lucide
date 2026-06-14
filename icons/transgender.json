@@ -3,7 +3,10 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating transgender identity in personal profiles",
+    "Denoting gender inclusivity (all genders)"
+  ],
   "tags": [
     "gender",
     "inclusive"

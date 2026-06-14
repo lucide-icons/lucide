@@ -5,7 +5,10 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing volleyball courts on a map",
+    "Representing volleyball as a sport"
+  ],
   "tags": [
     "beach",
     "sand",

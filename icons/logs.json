@@ -4,7 +4,9 @@
     "AnnaSasDev",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing log entries or line-numbered data lists"
+  ],
   "tags": [
     "options",
     "list",

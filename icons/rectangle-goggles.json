@@ -4,7 +4,10 @@
     "EthanHazel",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Entering virtual reality mode in an application",
+    "Filtering or sorting by VR in a game library"
+  ],
   "tags": [
     "vr",
     "virtual",

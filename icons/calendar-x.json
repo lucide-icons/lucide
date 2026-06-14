@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or deleting an event",
+    "Marking a date as taken or busy"
+  ],
   "tags": [
     "date",
     "day",

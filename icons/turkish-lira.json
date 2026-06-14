@@ -3,7 +3,10 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying prices or amounts in Turkish lira",
+    "Currency lists, pricing tables, and banking statements"
+  ],
   "tags": [
     "currency",
     "money",

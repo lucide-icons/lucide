@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Accessing an admin area",
+    "Marking a user with elevated access rights"
+  ],
   "tags": [
     "shield",
     "user",

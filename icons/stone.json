@@ -4,7 +4,10 @@
     "Alportan",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing coal energy in energy-related dashboards",
+    "Symbolizing rocks, stone materials, or minerals"
+  ],
   "tags": [
     "mineral",
     "geology",

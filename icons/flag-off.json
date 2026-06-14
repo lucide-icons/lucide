@@ -6,7 +6,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing the flagged state from a previously flagged item"
+  ],
   "tags": [
     "unflag",
     "unmark",

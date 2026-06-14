@@ -10,7 +10,10 @@
     "colebemis",
     "juanpablofernandez"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting one side of a component for editing in design tools",
+    "Setting border width or style for a single side in CSS controls"
+  ],
   "tags": [
     "square",
     "border",

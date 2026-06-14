@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing video playlists or watch queues"
+  ],
   "tags": [
     "playlist",
     "video",

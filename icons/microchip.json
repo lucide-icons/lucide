@@ -5,7 +5,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing processors, chips, or embedded hardware"
+  ],
   "tags": [
     "processor",
     "cores",

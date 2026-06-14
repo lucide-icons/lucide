@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating rooms with a single bed in hotel and booking apps",
+    "Representing a single bedroom in smart home applications"
+  ],
   "tags": [
     "sleep",
     "hotel",

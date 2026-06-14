@@ -10,7 +10,11 @@
     "UsamaKhan",
     "swastik7805"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing an item from favorites",
+    "Marking content as not interested or rejected",
+    "Representing a lost life or failed health check in games"
+  ],
   "tags": [
     "unlike",
     "unfavorite",

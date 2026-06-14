@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting a timer or marking an item as timed",
+    "Indicating waiting or elapsed time"
+  ],
   "tags": [
     "timer",
     "time",

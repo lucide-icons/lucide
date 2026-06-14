@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing air conditioning or ventilation in smart home apps",
+    "Indicating climate control amenities on hotel and booking platforms"
+  ],
   "tags": [
     "air conditioner",
     "ac",

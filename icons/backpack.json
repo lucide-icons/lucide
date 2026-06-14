@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing hand luggage or carry-on baggage in airport and hotel apps",
+    "Indicating hiking or travel gear"
+  ],
   "tags": [
     "bag",
     "hiking",

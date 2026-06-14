@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing toolkits or repair utilities",
+    "Indicating maintenance, configuration, or setup features",
+    "Marking developer or engineering tools",
+    "Depicting DIY, workshop, or hardware resources"
+  ],
   "tags": [
     "toolkit",
     "tools",

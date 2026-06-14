@@ -7,7 +7,9 @@
     "jguddas",
     "Need-an-AwP"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that audio output is muted or headphones are disconnected"
+  ],
   "tags": [
     "music",
     "audio",

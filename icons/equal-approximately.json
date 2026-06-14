@@ -3,7 +3,9 @@
   "contributors": [
     "ksk3110"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that a value is an approximation"
+  ],
   "tags": [
     "about",
     "calculate",

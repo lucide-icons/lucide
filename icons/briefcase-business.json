@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing business, work, or professional contexts",
+    "Indicating a portfolio or business documents"
+  ],
   "tags": [
     "work",
     "bag",

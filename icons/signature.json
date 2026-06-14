@@ -4,7 +4,10 @@
     "AnnaSasDev",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Declaring an input field as a signature",
+    "Representing freely written text input"
+  ],
   "tags": [
     "text",
     "format",

@@ -6,7 +6,9 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Excluding overlapping shape areas with pathfinder-style vector tools"
+  ],
   "tags": [
     "square",
     "pathfinder",

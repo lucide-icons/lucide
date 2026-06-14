@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing lighting controls in smart home apps",
+    "Indicating lamps as amenities in booking apps"
+  ],
   "tags": [
     "lighting",
     "household",

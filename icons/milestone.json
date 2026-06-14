@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing project or git milestones",
+    "Indicating signposts or waypoints"
+  ],
   "tags": [
     "signpost",
     "direction",

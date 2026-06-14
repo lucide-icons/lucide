@@ -6,7 +6,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Disliking or unliking something previously liked"
+  ],
   "tags": [
     "unlike",
     "dislike",

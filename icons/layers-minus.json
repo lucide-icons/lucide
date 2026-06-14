@@ -8,7 +8,9 @@
     "karsa-mistmere",
     "Spleefies"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or deleting a layer in design or editing tools"
+  ],
   "tags": [
     "stack",
     "pile",

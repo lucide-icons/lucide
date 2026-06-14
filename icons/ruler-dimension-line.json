@@ -4,7 +4,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Configuring dimensions or sizes in design tools"
+  ],
   "tags": [
     "measurements",
     "centimeters",

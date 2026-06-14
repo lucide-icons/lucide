@@ -4,7 +4,10 @@
     "hieu-onefold",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Serving as a playful alternative to the standard home icon in nature, wellness, or learning apps",
+    "Representing actual birdhouses in birdwatching, DIY, or eco-education apps"
+  ],
   "tags": [
     "birdhouse",
     "bird",

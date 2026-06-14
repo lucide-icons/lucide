@@ -8,7 +8,8 @@
   ],
   "use-cases": [
     "indicating that a webcam is disabled or turned off",
-    "showing a camera feed is unavailable or blocked for privacy"
+    "showing a camera feed is unavailable or blocked for privacy",
+    "Showing that a webcam is off or disabled"
   ],
   "tags": [
     "camera",

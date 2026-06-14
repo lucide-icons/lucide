@@ -5,7 +5,10 @@
     "ericfennis",
     "peteruithoven"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Identifying one-time, non-repeating events",
+    "Marking the first day of a month or a specific date"
+  ],
   "tags": [
     "date",
     "month",

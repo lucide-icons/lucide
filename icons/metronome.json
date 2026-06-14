@@ -4,7 +4,11 @@
     "jguddas",
     "edwloef"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting tempo or toggling a click track in audio workstations",
+    "Representing pacing or intervals in fitness, meditation, or productivity tools",
+    "Symbolizing timing, synchronization, or calibration in creative tools"
+  ],
   "tags": [
     "metronome",
     "tempo",

@@ -4,7 +4,11 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating male gender in personal profiles",
+    "Denoting the biological sex of a person, animal, or plant",
+    "Marking masculine grammatical gender"
+  ],
   "tags": [
     "gender",
     "sex",

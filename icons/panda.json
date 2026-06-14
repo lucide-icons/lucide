@@ -4,7 +4,10 @@
     "chessurisme",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Serving kid-targeted projects as a friendly animal icon",
+    "Marking zoos on maps"
+  ],
   "tags": [
     "animal",
     "wildlife",

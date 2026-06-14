@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that a package is in transit",
+    "Showing road types on a map"
+  ],
   "tags": [
     "road",
     "street",

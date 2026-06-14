@@ -3,7 +3,11 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating gender options in personal profiles",
+    "Denoting biological sex of people, animals, or plants",
+    "Expressing gender beyond male and female"
+  ],
   "tags": [
     "gender",
     "sex",

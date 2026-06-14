@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Listing available parasols on beach-related websites",
+    "Including sun protection in travel checklists"
+  ],
   "tags": [
     "umbrella",
     "sunshade",

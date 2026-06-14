@@ -6,7 +6,12 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Editing profile information",
+    "Representing account creation or sign-up",
+    "Submitting feedback or writing reviews",
+    "Modifying user permissions in admin interfaces"
+  ],
   "tags": [
     "person",
     "account",

@@ -3,7 +3,10 @@
   "contributors": [
     "qubrat"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting a three-column, two-row grid layout",
+    "Representing a sewer or ventilation grid"
+  ],
   "tags": [
     "table",
     "rows",

@@ -5,7 +5,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Cutting or slicing paths in design interfaces"
+  ],
   "tags": [
     "cutter",
     "scalpel",

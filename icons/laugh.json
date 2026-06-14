@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing high satisfaction in feedback or rating scales",
+    "Marking the happiest score on a contentment scale (very unhappy to very happy)"
+  ],
   "tags": [
     "emoji",
     "face",

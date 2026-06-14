@@ -11,7 +11,12 @@
     "Spleefies",
     "ramazansancar"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a dedicated bookmarks or reading list folder",
+    "Indicating that a folder has been bookmarked for quick access",
+    "Organizing saved collections, wishlists, or favourites",
+    "Denoting saved study materials in educational platforms"
+  ],
   "tags": [
     "folder",
     "bookmark",

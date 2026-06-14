@@ -7,7 +7,9 @@
     "UsamaKhan",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Accessing settings related to a calendar or its events"
+  ],
   "tags": [
     "date",
     "day",

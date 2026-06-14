@@ -5,7 +5,11 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing medical or health topics",
+    "Indicating a system health check",
+    "Showing pulse or heartbeat measurements"
+  ],
   "tags": [
     "heartbeat",
     "pulse",

@@ -3,7 +3,10 @@
   "contributors": [
     "whoisBugsbunny"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating AI-assisted features or smart actions, as a sharper alternative to a sparkle",
+    "Representing hypocycloid curves or vector anchor points in math and vector tools"
+  ],
   "tags": [
     "star",
     "math",
