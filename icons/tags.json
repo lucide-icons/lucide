@@ -6,6 +6,10 @@
     "jguddas",
     "Barakudum"
   ],
+  "use-cases": [
+    "representing multiple labels or categories",
+    "indicating multiple metadata items"
+  ],
   "tags": [
     "labels",
     "badges",

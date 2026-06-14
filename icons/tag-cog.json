@@ -8,6 +8,10 @@
     "karsa-mistmere",
     "Barakudum"
   ],
+  "use-cases": [
+    "configuring and editing tags",
+    "managing tag settings or preferences"
+  ],
   "tags": [
     "label",
     "badge",

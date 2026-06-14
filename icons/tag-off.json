@@ -8,6 +8,10 @@
     "karsa-mistmere",
     "Barakudum"
   ],
+  "use-cases": [
+    "representing disabled, inactive, or missing tagging",
+    "indicating hidden or unavailable labels or tags"
+  ],
   "tags": [
     "label",
     "badge",

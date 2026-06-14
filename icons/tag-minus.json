@@ -8,6 +8,10 @@
     "karsa-mistmere",
     "Barakudum"
   ],
+  "use-cases": [
+    "removing assigned tags from files or resources",
+    "indicating removed labels in issue trackers"
+  ],
   "tags": [
     "label",
     "badge",

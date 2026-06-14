@@ -8,6 +8,10 @@
     "karsa-mistmere",
     "Barakudum"
   ],
+  "use-cases": [
+    "indicating validated, approved, or active tags",
+    "showing successfully assigned labels or categories"
+  ],
   "tags": [
     "label",
     "badge",

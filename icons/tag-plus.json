@@ -6,7 +6,12 @@
     "aaofyi",
     "ericfennis",
     "karsa-mistmere",
+    "adam-kov",
     "Barakudum"
+  ],
+  "use-cases": [
+    "adding a tag to an item",
+    "creating a new product or entry with a tag"
   ],
   "tags": [
     "label",

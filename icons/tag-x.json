@@ -6,8 +6,13 @@
     "aaofyi",
     "ericfennis",
     "karsa-mistmere",
+    "adam-kov",
     "Barakudum",
     "jguddas"
+  ],
+  "use-cases": [
+    "removing a tag from an item",
+    "deleting a labeled product or entry"
   ],
   "tags": [
     "label",
@@ -19,8 +24,9 @@
     "metadata",
     "close",
     "cancel",
-    "remove",
-    "delete"
+    "x",
+    "delete",
+    "remove"
   ],
   "categories": [
     "account",

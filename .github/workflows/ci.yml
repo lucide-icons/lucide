@@ -32,8 +32,37 @@ concurrency:
   group: continuous-integration
 
 jobs:
+  check-dispatch-gate:
+    if: github.repository == 'lucide-icons/lucide' &&
+      startsWith(github.event.head_commit.message, 'feat(icons)') &&
+      github.event_name != 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    outputs:
+      RELEASE_ENVIRONMENT: ${{ steps.environment.outputs.RELEASE_ENVIRONMENT }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Fetch tags
+        run: git fetch --all --tags
+
+      - name: Check if latest tag was created today
+        id: environment
+        run: |
+          LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
+          TAG_DATE=$(git log -1 --format=%cs "$LATEST_TAG")
+          TODAY=$(date +%Y-%m-%d)
+
+          if [ "$TAG_DATE" == "$TODAY" ]; then
+            echo "::warning::A release tag already exists for today ($TODAY): $LATEST_TAG. Manual approval will be required to proceed."
+            echo "RELEASE_ENVIRONMENT=Icon Release Gated" >> $GITHUB_OUTPUT
+          else
+            echo "RELEASE_ENVIRONMENT=Icon Release" >> $GITHUB_OUTPUT
+          fi
+
   create-release:
-    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)') && github.event_name != 'workflow_dispatch'
+    if: github.repository == 'lucide-icons/lucide'
+    needs: check-dispatch-gate
+    environment: ${{ needs.check-dispatch-gate.outputs.RELEASE_ENVIRONMENT }}
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
