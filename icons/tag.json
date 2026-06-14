@@ -5,16 +5,27 @@
     "csandman",
     "aaofyi",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "representing a label or category for items",
+    "marking items with metadata"
+  ],
   "tags": [
     "label",
     "badge",
     "ticket",
-    "mark"
+    "mark",
+    "price",
+    "sale",
+    "category",
+    "classification",
+    "metadata"
   ],
   "categories": [
-    "account"
+    "account",
+    "development",
+    "files"
   ]
 }
