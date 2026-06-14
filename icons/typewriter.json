@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Jepl4r"
+  ],
+  "tags": [
+    "writing",
+    "writer",
+    "paper",
+    "pages"
+  ],
+  "categories": [
+    "text",
+    "tools"
+  ]
+}
