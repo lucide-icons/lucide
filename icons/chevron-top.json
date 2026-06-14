@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "dperezcabrera",
+    "ericfennis",
+    "jwlinqx"
+  ],
+  "tags": [
+    "previous",
+    "skip",
+    "next",
+    "jump",
+    "move to top",
+    "first"
+  ],
+  "categories": [
+    "arrows",
+    "multimedia"
+  ]
+}

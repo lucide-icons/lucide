@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "panel",
+    "layout",
+    "row",
+    "horizontal",
+    "bottom",
+    "end",
+    "align",
+    "insert",
+    "divider",
+    "arrow"
+  ],
+  "categories": [
+    "layout",
+    "arrows"
+  ]
+}
