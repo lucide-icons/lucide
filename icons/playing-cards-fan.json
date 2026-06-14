@@ -4,6 +4,10 @@
     "Barakudum",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "representing a player's hand in card games",
+    "conveying distribution of cards"
+  ],
   "tags": [
     "cards",
     "playing",

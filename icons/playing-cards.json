@@ -5,6 +5,10 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "representing a deck or collection of cards",
+    "indicating casino or poker related gameplay"
+  ],
   "tags": [
     "cards",
     "playing",

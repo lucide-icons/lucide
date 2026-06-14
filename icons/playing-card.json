@@ -5,6 +5,11 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "representing a selectable item in card based UIs",
+    "indicating card related actions in games",
+    "symbolizing randomness or change"
+  ],
   "tags": [
     "card",
     "playing",
