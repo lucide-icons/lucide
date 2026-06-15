@@ -1,1 +1,17 @@
-
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis",
+    "jwlinqx"
+  ],
+  "use-cases": [],
+  "tags": [
+    "export",
+    "download",
+  ],
+  "categories": [
+    "arrows",
+    "files"
+  ]
+}
