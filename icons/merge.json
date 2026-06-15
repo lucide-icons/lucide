@@ -1,17 +1,16 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "safvanms"
   ],
-  "use-cases": [],
   "tags": [
-    "combine",
-    "join",
-    "unite"
+    "node",
+    "workflow",
+    "merge"
   ],
   "categories": [
-    "development",
-    "arrows"
+    "merge",
+    "node",
+    "workflow"
   ]
 }
