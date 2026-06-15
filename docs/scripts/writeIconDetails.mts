@@ -26,6 +26,7 @@ const writeIconFiles = icons.map(async (iconFileName) => {
 import iconNode from '../iconNodes/${iconName}.node.json'
 import metaData from '../../../../icons/${iconName}.json'
 import releaseData from '../releaseMetadata/${iconName}.json'
+import popularity from '../iconPopularity/${iconName}.json'
 
 const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData
 
@@ -37,6 +38,7 @@ const iconDetails = {
   categories,
   aliases,
   deprecated,
+  popularity,
   deprecationReason,
   toBeRemovedInVersion,
   ...releaseData,
