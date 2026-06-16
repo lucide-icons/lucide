@@ -57,8 +57,7 @@
     "build:bundle": "rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
-    "test:update": "vitest -u",
-    "version": "pnpm version --git-tag-version=false"
+    "test:update": "vitest -u"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",

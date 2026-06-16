@@ -26,8 +26,7 @@
     "test": "pnpm build:icons && ng test --no-watch",
     "test:watch": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
-    "e2e": "ng e2e",
-    "version": "pnpm version --git-tag-version=false"
+    "e2e": "ng e2e"
   },
   "prettier": {
     "printWidth": 100,
