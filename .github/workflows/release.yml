@@ -74,7 +74,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        run: pnpm --fail-if-no-match --filter ${{ matrix.package }} version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --fail-if-no-match --filter ${{ matrix.package }} version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
 
       - name: Build
         run: pnpm --filter ${{ matrix.package }} build
@@ -108,7 +108,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Set new version
-        run: pnpm --filter lucide-static version --new-version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
+        run: pnpm --filter lucide-static version ${{ needs.prepare.outputs.VERSION }} --no-git-tag-version
 
       - name: Move Font
         run: cp -r lucide-font packages/lucide-static/font
