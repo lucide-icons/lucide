@@ -72,7 +72,7 @@
     "svelte-check": "^4.3.4",
     "svelte-preprocess": "^6.0.3",
     "typescript": "^5.8.3",
-    "vite": "^6.3.6"
+    "vite": "^6.4.3"
   },
   "peerDependencies": {
     "svelte": "^5"
