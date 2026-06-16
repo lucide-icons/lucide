@@ -49,7 +49,7 @@
     "@angular-eslint/template-parser": "~21.1.0",
     "@angular/build": "^21.0.3",
     "@angular/cli": "^21.0.3",
-    "@angular/common": "^21.0.0",
+    "@angular/common": "^21.2.17",
     "@angular/compiler": "^21.2.17",
     "@angular/compiler-cli": "^21.0.0",
     "@angular/core": "^21.2.17",
