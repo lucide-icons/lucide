@@ -5,7 +5,7 @@
   ],
   "use-cases": [
     "To indicate when you need to process items.",
-    "To indicate that a process is happening",
+    "To indicate that a process is happening"
   ],
   "tags": [
     "clock",
@@ -19,6 +19,6 @@
     "watch"
   ],
   "categories": [
-    "time & calendar"
+    "time"
   ]
 }
