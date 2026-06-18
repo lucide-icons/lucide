@@ -5,7 +5,10 @@
     "lscheibel",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating snow, cold, or winter",
+    "Representing a freeze or cooling mode"
+  ],
   "tags": [
     "cold",
     "weather",

@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a leftward direction or going back"
+  ],
   "tags": [
     "previous",
     "back",

@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adjusting settings with vertical sliders"
+  ],
   "tags": [
     "settings",
     "controls"

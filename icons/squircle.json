@@ -3,7 +3,9 @@
   "contributors": [
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a squircle or rounded square shape"
+  ],
   "tags": [
     "shape"
   ],

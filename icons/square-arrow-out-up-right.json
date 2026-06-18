@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening an external link or sharing"
+  ],
   "tags": [
     "outwards",
     "direction",

@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing wayfinding, directions, or a route marker"
+  ],
   "tags": [
     "navigation",
     "direction",

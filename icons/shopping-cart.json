@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a shopping cart or checkout",
+    "Adding items to a cart"
+  ],
   "tags": [
     "trolley",
     "cart",

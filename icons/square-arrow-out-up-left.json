@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating outward movement to the upper left"
+  ],
   "tags": [
     "outwards",
     "direction",

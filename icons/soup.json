@@ -3,7 +3,10 @@
   "contributors": [
     "kemie"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing soup or a warm meal",
+    "Categorizing starters on a menu"
+  ],
   "tags": [
     "food",
     "dish",

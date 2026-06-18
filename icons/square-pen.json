@@ -6,7 +6,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Editing or composing content"
+  ],
   "tags": [
     "pencil",
     "edit",

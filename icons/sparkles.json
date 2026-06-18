@@ -11,7 +11,10 @@
       "toBeRemovedInVersion": "v1.0"
     }
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing magic, AI features, or a 'new' indicator",
+    "Indicating effects or a clear night"
+  ],
   "tags": [
     "stars",
     "effect",

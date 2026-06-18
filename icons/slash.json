@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a slash, division, or separator"
+  ],
   "tags": [
     "divide",
     "division",

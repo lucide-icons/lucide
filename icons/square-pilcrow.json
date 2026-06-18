@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling paragraph marks in editors"
+  ],
   "tags": [
     "paragraph",
     "mark",

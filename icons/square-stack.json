@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing stacked items or version history"
+  ],
   "tags": [
     "versions",
     "clone",

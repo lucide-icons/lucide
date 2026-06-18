@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a shopping bag or purchases",
+    "Indicating a store or checkout"
+  ],
   "tags": [
     "ecommerce",
     "cart",

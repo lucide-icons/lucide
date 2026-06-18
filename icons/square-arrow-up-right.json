@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an upward-right direction or sharing"
+  ],
   "tags": [
     "direction",
     "north-east",

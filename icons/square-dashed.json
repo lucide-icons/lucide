@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a selection or marquee tool"
+  ],
   "tags": [
     "selection",
     "square",

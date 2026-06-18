@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an ignored file or division"
+  ],
   "tags": [
     "git",
     "diff",

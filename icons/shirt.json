@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing clothing or apparel",
+    "Categorizing fashion items in a store"
+  ],
   "tags": [
     "t-shirt",
     "shopping",

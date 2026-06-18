@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an activity or vitals monitor",
+    "Indicating a pulse or waveform"
+  ],
   "tags": [
     "pulse",
     "action",

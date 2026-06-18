@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing sailing or maritime navigation",
+    "Indicating a boat or cruise"
+  ],
   "tags": [
     "steering",
     "rudder",

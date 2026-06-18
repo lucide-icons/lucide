@@ -5,7 +5,10 @@
     "johnletey",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a sum or summation in math",
+    "Inserting sigma in formulas"
+  ],
   "tags": [
     "sum",
     "calculate",

@@ -5,7 +5,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a smartphone or mobile device"
+  ],
   "tags": [
     "phone",
     "cellphone",

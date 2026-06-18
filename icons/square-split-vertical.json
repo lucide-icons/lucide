@@ -4,7 +4,9 @@
     "Patchethium",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Splitting a view vertically"
+  ],
   "tags": [
     "split",
     "divide"

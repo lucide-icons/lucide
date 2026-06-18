@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a placeholder or snippet area"
+  ],
   "tags": [
     "rectangle",
     "aspect ratio",

@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a code snippet or gist"
+  ],
   "tags": [
     "gist",
     "source",

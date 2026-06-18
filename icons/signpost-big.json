@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing wayfinding or directions at a junction"
+  ],
   "tags": [
     "bidirectional",
     "left",

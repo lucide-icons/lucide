@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a metro or subway station"
+  ],
   "tags": [
     "metro",
     "subway",

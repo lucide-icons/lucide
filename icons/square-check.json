@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a completed task or selection"
+  ],
   "tags": [
     "done",
     "todo",

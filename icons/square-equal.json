@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing equality on a calculator button"
+  ],
   "tags": [
     "calculate",
     "="

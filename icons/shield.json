@@ -4,7 +4,10 @@
     "colebemis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing security or protection",
+    "Indicating antivirus or a defense feature"
+  ],
   "tags": [
     "cybersecurity",
     "secure",

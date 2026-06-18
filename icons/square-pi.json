@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the constant pi in math or code"
+  ],
   "tags": [
     "constant",
     "code",

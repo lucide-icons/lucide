@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Skipping to the previous track"
+  ],
   "tags": [
     "arrow",
     "previous",

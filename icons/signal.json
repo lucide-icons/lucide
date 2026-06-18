@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cellular signal strength"
+  ],
   "tags": [
     "connection",
     "wireless",

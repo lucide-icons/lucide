@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an unknown or unverified security status"
+  ],
   "tags": [
     "unshielded",
     "cybersecurity",

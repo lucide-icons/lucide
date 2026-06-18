@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Starting media playback or running an action"
+  ],
   "tags": [
     "music",
     "audio",

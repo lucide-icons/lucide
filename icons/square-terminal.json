@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a terminal or command line"
+  ],
   "tags": [
     "code",
     "command line",

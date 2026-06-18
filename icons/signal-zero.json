@@ -4,7 +4,9 @@
     "ericfennis",
     "azdle"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating no cellular signal"
+  ],
   "tags": [
     "connection",
     "wireless",

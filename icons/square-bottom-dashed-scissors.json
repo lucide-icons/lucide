@@ -4,7 +4,9 @@
     "danielbayley",
     "eden881"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Cutting out a snippet or selection"
+  ],
   "tags": [
     "cut",
     "snippet",

@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding a section or dropdown"
+  ],
   "tags": [
     "back",
     "menu",

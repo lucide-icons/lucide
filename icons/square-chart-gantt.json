@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a Gantt chart or project timeline"
+  ],
   "tags": [
     "projects",
     "manage",

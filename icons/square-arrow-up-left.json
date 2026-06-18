@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an upward-left direction"
+  ],
   "tags": [
     "direction",
     "north-west",

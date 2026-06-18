@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a function in math or code"
+  ],
   "tags": [
     "programming",
     "code",

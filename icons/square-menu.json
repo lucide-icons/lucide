@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening a navigation or hamburger menu"
+  ],
   "tags": [
     "bars",
     "navigation",

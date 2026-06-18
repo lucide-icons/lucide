@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a speaker or audio output"
+  ],
   "tags": [
     "sound",
     "audio",

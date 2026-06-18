@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a sum or summation in math"
+  ],
   "tags": [
     "sum",
     "calculate",

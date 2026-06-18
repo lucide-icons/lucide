@@ -6,7 +6,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing satisfaction in feedback or ratings",
+    "Representing a happy mood"
+  ],
   "tags": [
     "emoji",
     "face",
