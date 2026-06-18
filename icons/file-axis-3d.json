@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a 3D model file"
+  ],
   "tags": [
     "model",
     "3d",

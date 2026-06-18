@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Warning about a file or flagging an issue"
+  ],
   "tags": [
     "hidden",
     "warning",

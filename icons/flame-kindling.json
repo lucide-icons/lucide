@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a campfire or camping",
+    "Indicating warmth or the outdoors"
+  ],
   "tags": [
     "campfire",
     "camping",

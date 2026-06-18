@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a locked or protected folder"
+  ],
   "tags": [
     "directory",
     "lock",

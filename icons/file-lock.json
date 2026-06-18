@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a locked or protected file"
+  ],
   "tags": [
     "lock",
     "password",

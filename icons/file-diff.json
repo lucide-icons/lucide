@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing changes or a diff between file versions"
+  ],
   "tags": [
     "diff",
     "patch"

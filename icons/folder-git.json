@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a git repository folder"
+  ],
   "tags": [
     "directory",
     "root",

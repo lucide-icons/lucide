@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a key or credentials file"
+  ],
   "tags": [
     "key",
     "private",

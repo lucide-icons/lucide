@@ -6,7 +6,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting the focus point in camera or photo tools"
+  ],
   "tags": [
     "camera",
     "lens",

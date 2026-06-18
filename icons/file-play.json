@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a playable video file"
+  ],
   "tags": [
     "movie",
     "video",

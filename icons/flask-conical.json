@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing chemistry or lab experiments"
+  ],
   "tags": [
     "beaker",
     "erlenmeyer",

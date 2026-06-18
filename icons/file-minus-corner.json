@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a file"
+  ],
   "tags": [
     "document"
   ],

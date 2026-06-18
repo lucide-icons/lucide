@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing equality or an assignment operator"
+  ],
   "tags": [
     "calculate",
     "math",

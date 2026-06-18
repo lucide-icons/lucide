@@ -5,7 +5,9 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a folder's history or recent changes"
+  ],
   "tags": [
     "history",
     "directory",

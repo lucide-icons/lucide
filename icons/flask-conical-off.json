@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a non-toxic or safe substance",
+    "Marking experiments as disabled"
+  ],
   "tags": [
     "beaker",
     "erlenmeyer",

@@ -5,7 +5,10 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing film, video, or cinema",
+    "Indicating a movie or media library"
+  ],
   "tags": [
     "movie",
     "video",

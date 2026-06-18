@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a font or typography file"
+  ],
   "tags": [
     "font",
     "text",

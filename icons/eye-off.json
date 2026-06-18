@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Hiding content or a password",
+    "Indicating something is not visible"
+  ],
   "tags": [
     "view",
     "watch",

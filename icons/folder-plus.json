@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding or creating a new folder"
+  ],
   "tags": [
     "directory",
     "add",

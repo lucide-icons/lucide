@@ -6,7 +6,9 @@
     "jguddas",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Configuring a file or its settings"
+  ],
   "tags": [
     "executable",
     "settings",

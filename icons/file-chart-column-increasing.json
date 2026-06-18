@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a report file with an upward trend"
+  ],
   "tags": [
     "statistics",
     "analytics",

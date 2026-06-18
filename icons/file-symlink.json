@@ -5,7 +5,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a symbolic link or shortcut file"
+  ],
   "tags": [
     "symlink",
     "symbolic",

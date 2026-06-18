@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding content to fullscreen",
+    "Maximizing or enlarging a view"
+  ],
   "tags": [
     "scale",
     "fullscreen",

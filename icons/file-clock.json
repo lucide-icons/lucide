@@ -5,7 +5,9 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a file's history or recent changes"
+  ],
   "tags": [
     "history",
     "log",

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a file with a column chart or report"
+  ],
   "tags": [
     "statistics",
     "analytics",

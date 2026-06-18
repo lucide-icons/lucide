@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a secured or access-controlled folder"
+  ],
   "tags": [
     "directory",
     "key",

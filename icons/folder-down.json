@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading or moving a folder down"
+  ],
   "tags": [
     "directory",
     "download",

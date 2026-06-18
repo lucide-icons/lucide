@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a package or 3D model file"
+  ],
   "tags": [
     "box",
     "package",

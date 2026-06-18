@@ -7,7 +7,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Exporting data from a file"
+  ],
   "tags": [
     "document"
   ],

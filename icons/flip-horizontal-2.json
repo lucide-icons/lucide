@@ -4,7 +4,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Flipping an element horizontally in design tools"
+  ],
   "tags": [
     "reflect",
     "mirror",

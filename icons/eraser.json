@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Erasing or clearing content",
+    "Representing an eraser tool in drawing apps"
+  ],
   "tags": [
     "pencil",
     "drawing",

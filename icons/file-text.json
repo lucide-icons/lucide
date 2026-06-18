@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a text or document file"
+  ],
   "tags": [
     "data",
     "txt",

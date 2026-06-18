@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adjusting a file's settings or configuration"
+  ],
   "tags": [
     "cogged",
     "gear",

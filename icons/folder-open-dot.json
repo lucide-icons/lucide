@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an open active or project folder"
+  ],
   "tags": [
     "directory",
     "root",

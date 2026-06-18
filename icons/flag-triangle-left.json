@@ -5,7 +5,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a point or milestone on a timeline"
+  ],
   "tags": [
     "report",
     "timeline",

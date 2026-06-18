@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or deleting a file"
+  ],
   "tags": [
     "delete",
     "remove",

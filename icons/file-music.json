@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a music or audio file"
+  ],
   "tags": [
     "audio",
     "sound",

@@ -5,7 +5,10 @@
     "kemie",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking fish-free dishes",
+    "Indicating a seafood allergy"
+  ],
   "tags": [
     "food",
     "dish",

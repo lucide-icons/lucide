@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening a link in a new tab or window",
+    "Indicating an outbound link"
+  ],
   "tags": [
     "outbound",
     "open",

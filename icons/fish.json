@@ -3,7 +3,10 @@
   "contributors": [
     "kemie"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing fish or seafood",
+    "Indicating marine life or aquariums"
+  ],
   "tags": [
     "dish",
     "restaurant",

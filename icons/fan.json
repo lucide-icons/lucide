@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling a fan in smart home apps",
+    "Representing ventilation or cooling"
+  ],
   "tags": [
     "air",
     "cooler",

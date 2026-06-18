@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing fish or marine life",
+    "Symbolizing seafood"
+  ],
   "tags": [
     "dish",
     "restaurant",

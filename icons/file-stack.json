@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing multiple file versions or revisions"
+  ],
   "tags": [
     "versions",
     "multiple",

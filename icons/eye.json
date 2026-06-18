@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing or revealing content",
+    "Toggling password visibility or a preview"
+  ],
   "tags": [
     "view",
     "watch",

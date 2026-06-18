@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning a file or document"
+  ],
   "tags": [
     "scan",
     "code",

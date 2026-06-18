@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding or creating a new file"
+  ],
   "tags": [
     "add",
     "create",

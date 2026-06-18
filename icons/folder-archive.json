@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an archived or compressed folder"
+  ],
   "tags": [
     "archive",
     "zip",

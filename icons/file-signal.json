@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an audio or signal file"
+  ],
   "tags": [
     "audio",
     "music",

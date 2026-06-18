@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading or moving a file down"
+  ],
   "tags": [
     "download",
     "import",

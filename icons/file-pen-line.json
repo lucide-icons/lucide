@@ -5,7 +5,9 @@
     "jguddas",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Editing or annotating a file"
+  ],
   "tags": [
     "edit"
   ],

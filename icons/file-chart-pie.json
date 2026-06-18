@@ -5,7 +5,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a file with a pie chart or report"
+  ],
   "tags": [
     "statistics",
     "analytics",

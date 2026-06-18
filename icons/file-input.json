@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Importing data into a file"
+  ],
   "tags": [
     "document"
   ],

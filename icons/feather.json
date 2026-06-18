@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing writing, lightness, or a quill",
+    "Symbolizing nature or feathers"
+  ],
   "tags": [
     "logo"
   ],

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing biometric authentication",
+    "Indicating fingerprint login or identity verification"
+  ],
   "tags": [
     "2fa",
     "authentication",

@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing fire safety equipment",
+    "Marking a fire extinguisher location"
+  ],
   "tags": [
     "flames",
     "smoke",
