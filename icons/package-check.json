@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a package was delivered or built"
+  ],
   "tags": [
     "confirm",
     "verified",

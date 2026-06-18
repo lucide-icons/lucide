@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a desktop PC case or tower"
+  ],
   "tags": [
     "computer",
     "chassis"

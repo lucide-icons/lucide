@@ -4,7 +4,9 @@
     "cd16b",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling picture-in-picture video mode"
+  ],
   "tags": [
     "display",
     "play",

@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a stop, error, or removal"
+  ],
   "tags": [
     "delete",
     "stop",

@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing navigation or the current heading"
+  ],
   "tags": [
     "location",
     "travel"

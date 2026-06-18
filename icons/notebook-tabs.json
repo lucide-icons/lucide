@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a contacts directory or tabbed notebook"
+  ],
   "tags": [
     "notepad",
     "notes",

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "it-is-not"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing medication or prescriptions",
+    "Indicating a pharmacy or pill reminder"
+  ],
   "tags": [
     "medicine",
     "medication",

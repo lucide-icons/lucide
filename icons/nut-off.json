@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking nut-free dishes",
+    "Indicating a nut allergy"
+  ],
   "tags": [
     "hazelnut",
     "acorn",

@@ -5,7 +5,9 @@
     "ericfennis",
     "irvineacosta"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a bottom panel guide or padding"
+  ],
   "tags": [
     "drawer",
     "dock",

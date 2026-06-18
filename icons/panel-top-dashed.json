@@ -5,7 +5,9 @@
     "ericfennis",
     "irvineacosta"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a top panel guide or padding"
+  ],
   "tags": [
     "menu bar",
     "drawer",

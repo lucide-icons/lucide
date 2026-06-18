@@ -4,7 +4,9 @@
     "mittalyashu",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Pausing an ongoing process"
+  ],
   "tags": [
     "music",
     "audio",

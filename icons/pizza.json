@@ -6,7 +6,10 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing pizza or fast food",
+    "Categorizing pizza on a menu"
+  ],
   "tags": [
     "pie",
     "quiche",

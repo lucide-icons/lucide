@@ -7,7 +7,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Writing or editing with a pen"
+  ],
   "tags": [
     "pencil",
     "change",

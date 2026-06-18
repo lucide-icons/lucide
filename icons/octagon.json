@@ -4,7 +4,9 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an octagon or stop shape"
+  ],
   "tags": [
     "stop",
     "shape"

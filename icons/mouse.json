@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a computer mouse or pointer device"
+  ],
   "tags": [
     "device",
     "scroll",

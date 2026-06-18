@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening a bottom panel or drawer"
+  ],
   "tags": [
     "drawer",
     "dock",

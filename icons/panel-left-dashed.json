@@ -5,7 +5,9 @@
     "ericfennis",
     "irvineacosta"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a left panel guide or padding"
+  ],
   "tags": [
     "sidebar",
     "primary",

@@ -6,7 +6,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Pausing media playback"
+  ],
   "tags": [
     "music",
     "stop"

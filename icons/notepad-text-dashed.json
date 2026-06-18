@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a draft note or template"
+  ],
   "tags": [
     "notebook",
     "notes",

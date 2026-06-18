@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a package, box, or module"
+  ],
   "tags": [
     "box",
     "container",

@@ -6,7 +6,9 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a network or connected nodes"
+  ],
   "tags": [
     "tree"
   ],

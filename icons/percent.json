@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a percentage or discount",
+    "Indicating a modulo operator in code"
+  ],
   "tags": [
     "percentage",
     "modulo",

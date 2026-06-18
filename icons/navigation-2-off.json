@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating navigation or location is turned off"
+  ],
   "tags": [
     "location",
     "travel"

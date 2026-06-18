@@ -6,7 +6,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Drawing vector paths in design tools"
+  ],
   "tags": [
     "vector",
     "drawing",

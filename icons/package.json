@@ -9,7 +9,9 @@
     "jguddas",
     "sezze"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a package, shipment, or module"
+  ],
   "tags": [
     "box",
     "container",

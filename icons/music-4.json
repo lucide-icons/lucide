@@ -4,7 +4,9 @@
     "it-is-not",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing music or an audio track"
+  ],
   "tags": [
     "semiquaver",
     "sixteenth note",

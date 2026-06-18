@@ -5,7 +5,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Closing a left sidebar or panel"
+  ],
   "tags": [
     "primary",
     "drawer",

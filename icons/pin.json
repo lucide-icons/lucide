@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Pinning or saving an item for quick access"
+  ],
   "tags": [
     "save",
     "map",

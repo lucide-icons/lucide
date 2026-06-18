@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Choosing colors or a theme",
+    "Representing a color palette"
+  ],
   "tags": [
     "colors",
     "colours",

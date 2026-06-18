@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a top panel or browser bar"
+  ],
   "tags": [
     "drawer",
     "browser",

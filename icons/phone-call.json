@@ -8,7 +8,9 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Making or representing a phone call"
+  ],
   "tags": [
     "ring"
   ],

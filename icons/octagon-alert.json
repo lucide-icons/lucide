@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing a critical warning or alert"
+  ],
   "tags": [
     "warning",
     "alert",

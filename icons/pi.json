@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the mathematical constant pi",
+    "Inserting pi in formulas or code"
+  ],
   "tags": [
     "constant",
     "code",

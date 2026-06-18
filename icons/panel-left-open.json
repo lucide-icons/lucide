@@ -5,7 +5,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening a left sidebar or panel"
+  ],
   "tags": [
     "primary",
     "drawer",

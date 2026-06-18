@@ -6,7 +6,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing music or an audio track"
+  ],
   "tags": [
     "note",
     "quaver",

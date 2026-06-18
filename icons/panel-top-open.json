@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening a top panel or menu bar"
+  ],
   "tags": [
     "menu bar",
     "drawer",

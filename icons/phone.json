@@ -7,7 +7,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a phone or calling",
+    "Accessing the dialer"
+  ],
   "tags": [
     "call"
   ],

@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing design or drafting tools",
+    "Indicating measurements or editing"
+  ],
   "tags": [
     "edit",
     "create",

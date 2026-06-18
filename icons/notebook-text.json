@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a notebook with written notes"
+  ],
   "tags": [
     "notepad",
     "notes",

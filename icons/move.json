@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving or dragging an element in any direction"
+  ],
   "tags": [
     "arrows"
   ],

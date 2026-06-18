@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Writing or editing notes in a notebook"
+  ],
   "tags": [
     "pencil",
     "notepad",

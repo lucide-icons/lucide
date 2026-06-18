@@ -4,7 +4,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing savings or a budget",
+    "Indicating a savings account"
+  ],
   "tags": [
     "money",
     "savings"

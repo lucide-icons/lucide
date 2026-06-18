@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a person or accessibility"
+  ],
   "tags": [
     "people",
     "human",

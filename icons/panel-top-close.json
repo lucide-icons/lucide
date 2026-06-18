@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Closing a top panel or menu bar"
+  ],
   "tags": [
     "menu bar",
     "drawer",

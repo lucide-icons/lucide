@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing nuts or a nut-based food"
+  ],
   "tags": [
     "hazelnut",
     "acorn",

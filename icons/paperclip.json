@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Attaching a file to a message or document"
+  ],
   "tags": [
     "attachment",
     "file"

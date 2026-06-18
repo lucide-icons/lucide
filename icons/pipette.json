@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Picking a color with an eyedropper",
+    "Representing a lab pipette"
+  ],
   "tags": [
     "eye dropper",
     "color picker",

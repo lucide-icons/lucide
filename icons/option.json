@@ -5,7 +5,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Option or Alt key on a keyboard"
+  ],
   "tags": [
     "keyboard",
     "key",

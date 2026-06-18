@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a parking meter or paid parking"
+  ],
   "tags": [
     "driving",
     "car park",

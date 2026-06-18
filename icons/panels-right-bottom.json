@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a layout with right and bottom panels"
+  ],
   "tags": [
     "drawers",
     "sidebar",

@@ -4,7 +4,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Resizing or moving an element horizontally"
+  ],
   "tags": [
     "double",
     "arrow"

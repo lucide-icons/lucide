@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a right sidebar or panel"
+  ],
   "tags": [
     "sidebar",
     "secondary",

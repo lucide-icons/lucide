@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing air travel or flights",
+    "Indicating an airport or trip"
+  ],
   "tags": [
     "plane",
     "trip",

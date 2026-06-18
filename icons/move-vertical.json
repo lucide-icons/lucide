@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Resizing or moving an element vertically"
+  ],
   "tags": [
     "double",
     "arrow"

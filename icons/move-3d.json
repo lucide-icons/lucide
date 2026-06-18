@@ -4,7 +4,9 @@
     "lscheibel",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving an object along 3D axes in design tools"
+  ],
   "tags": [
     "arrows",
     "axis",

@@ -9,7 +9,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sketching or writing with a pencil"
+  ],
   "tags": [
     "pencil",
     "change",
