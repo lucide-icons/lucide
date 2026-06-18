@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking discounts or offers in Indian rupees",
+    "Representing a promotional price tag"
+  ],
   "tags": [
     "discount",
     "offer",

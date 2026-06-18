@@ -6,7 +6,10 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an email address",
+    "Mentioning a user in messages or social posts"
+  ],
   "tags": [
     "mention",
     "at",

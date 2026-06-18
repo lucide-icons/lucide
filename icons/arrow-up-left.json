@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an upward-left diagonal direction"
+  ],
   "tags": [
     "direction",
     "north-west",

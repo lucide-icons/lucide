@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Streaming or mirroring a screen to an external display",
+    "Casting media to a TV or compatible device"
+  ],
   "tags": [
     "stream",
     "cast",

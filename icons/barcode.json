@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning a product barcode at checkout",
+    "Representing retail items or inventory"
+  ],
   "tags": [
     "scan",
     "checkout",

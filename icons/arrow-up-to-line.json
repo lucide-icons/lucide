@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading or moving content up to a boundary"
+  ],
   "tags": [
     "forward",
     "direction",

@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing an item from the archive",
+    "Marking archived mail as junk"
+  ],
   "tags": [
     "index",
     "backup",

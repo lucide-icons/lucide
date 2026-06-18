@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a logical AND operator in code"
+  ],
   "tags": [
     "and",
     "operator",

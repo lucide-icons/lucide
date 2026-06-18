@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an audio waveform",
+    "Indicating sound, music, or voice recordings"
+  ],
   "tags": [
     "sound",
     "noise",

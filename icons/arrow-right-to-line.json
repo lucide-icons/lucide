@@ -4,7 +4,10 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Tab key or indenting content",
+    "Moving content right to a boundary"
+  ],
   "tags": [
     "next",
     "forward",

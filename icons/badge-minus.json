@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a badge or verified status"
+  ],
   "tags": [
     "verified",
     "unverified",

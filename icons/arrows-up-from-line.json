@@ -4,7 +4,10 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating 'this way up' on packages or shipments",
+    "Marking fragile or orientation-sensitive parcels"
+  ],
   "tags": [
     "direction",
     "orientation",

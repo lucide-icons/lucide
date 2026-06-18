@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sorting items from narrow to wide, e.g. smallest to largest"
+  ],
   "tags": [
     "filter",
     "sort",

@@ -6,7 +6,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Decreasing the font size in a text editor"
+  ],
   "tags": [
     "letter",
     "font size",

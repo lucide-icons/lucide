@@ -6,7 +6,10 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Caps Lock key on a keyboard",
+    "Indicating a speed boost or strong upward direction in games"
+  ],
   "tags": [
     "caps lock",
     "capitals",

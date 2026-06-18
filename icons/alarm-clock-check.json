@@ -6,7 +6,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming an alarm or scheduled reminder is set",
+    "Marking a timed task as complete"
+  ],
   "tags": [
     "done",
     "todo",

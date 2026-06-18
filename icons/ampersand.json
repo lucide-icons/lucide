@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Inserting an ampersand in text editors",
+    "Representing a join or concatenation operator in code"
+  ],
   "tags": [
     "and",
     "typography",

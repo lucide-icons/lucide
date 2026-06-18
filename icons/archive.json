@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Archiving items or moving them to storage",
+    "Representing backups or stored records"
+  ],
   "tags": [
     "index",
     "backup",

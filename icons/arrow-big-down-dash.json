@@ -6,7 +6,10 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving down with emphasis, e.g. as a game control",
+    "Indicating a download or a jump to the bottom"
+  ],
   "tags": [
     "backwards",
     "reverse",

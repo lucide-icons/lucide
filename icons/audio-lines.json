@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing audio playback or a graphic equalizer",
+    "Indicating sound, music, or voice"
+  ],
   "tags": [
     "graphic equaliser",
     "sound",

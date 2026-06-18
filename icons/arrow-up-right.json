@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an upward-right diagonal direction",
+    "Linking to external content"
+  ],
   "tags": [
     "direction",
     "north-east",

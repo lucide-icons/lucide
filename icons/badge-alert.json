@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an issue with a verified account or badge",
+    "Flagging a security or verification warning"
+  ],
   "tags": [
     "check",
     "verified",

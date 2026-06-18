@@ -4,7 +4,10 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Exporting or moving content right from a boundary",
+    "Expanding a section to the right"
+  ],
   "tags": [
     "next",
     "forward",

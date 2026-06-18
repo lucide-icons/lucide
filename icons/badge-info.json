@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing additional information about a verified item",
+    "Providing help or details on a badge or account"
+  ],
   "tags": [
     "verified",
     "unverified",

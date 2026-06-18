@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an application window on macOS",
+    "Indicating a desktop app or pane"
+  ],
   "tags": [
     "application",
     "menu bar",

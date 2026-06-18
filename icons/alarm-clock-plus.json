@@ -6,7 +6,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding or creating a new alarm"
+  ],
   "tags": [
     "add"
   ],

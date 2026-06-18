@@ -8,7 +8,10 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Shift key on a keyboard",
+    "Indicating a strong upward direction in games"
+  ],
   "tags": [
     "shift",
     "keyboard",

@@ -4,7 +4,10 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading or moving content downward from a boundary",
+    "Expanding a section downward"
+  ],
   "tags": [
     "backwards",
     "reverse",

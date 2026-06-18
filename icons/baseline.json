@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting the text baseline or font color in editors"
+  ],
   "tags": [
     "text",
     "format",

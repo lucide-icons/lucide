@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking discounts or offers in Japanese yen",
+    "Representing a promotional price tag"
+  ],
   "tags": [
     "discount",
     "offer",

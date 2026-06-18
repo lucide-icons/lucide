@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing fruit or healthy snacks",
+    "Categorizing produce or groceries"
+  ],
   "tags": [
     "fruit",
     "food"

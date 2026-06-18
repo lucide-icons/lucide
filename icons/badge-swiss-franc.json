@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking discounts or offers in Swiss francs",
+    "Representing a promotional price tag"
+  ],
   "tags": [
     "discount",
     "offer",

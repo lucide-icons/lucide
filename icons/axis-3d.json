@@ -4,7 +4,9 @@
     "lscheibel",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing 3D axes or coordinates in design tools"
+  ],
   "tags": [
     "gizmo",
     "coordinates"

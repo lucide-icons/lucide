@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sorting items alphabetically from Z to A"
+  ],
   "tags": [
     "filter",
     "sort",

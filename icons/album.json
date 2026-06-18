@@ -5,7 +5,10 @@
     "csandman",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a photo album or collection",
+    "Indicating a music album"
+  ],
   "tags": [
     "photo",
     "book"

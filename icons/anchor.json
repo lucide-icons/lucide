@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a ship's anchor or maritime context",
+    "Linking to an anchor point or section within a page"
+  ],
   "tags": [
     "ship"
   ],

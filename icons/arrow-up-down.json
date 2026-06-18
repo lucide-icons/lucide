@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating two-way data transfer",
+    "Sorting or reordering items"
+  ],
   "tags": [
     "bidirectional",
     "two-way",

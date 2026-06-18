@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving content left to a boundary or collapsing it"
+  ],
   "tags": [
     "previous",
     "back",

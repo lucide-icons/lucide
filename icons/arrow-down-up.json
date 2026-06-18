@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating two-way data transfer or network traffic",
+    "Sorting or reordering items"
+  ],
   "tags": [
     "bidirectional",
     "two-way",

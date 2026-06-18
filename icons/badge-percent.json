@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a percentage discount or sale",
+    "Representing a promotional offer"
+  ],
   "tags": [
     "verified",
     "unverified",

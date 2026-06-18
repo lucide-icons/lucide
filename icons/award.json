@@ -4,7 +4,10 @@
     "colebemis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an achievement, award, or prize",
+    "Marking a winner or top performer"
+  ],
   "tags": [
     "achievement",
     "badge",

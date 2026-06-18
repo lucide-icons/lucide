@@ -3,7 +3,11 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing signal reception or broadcast",
+    "Indicating a TV antenna or terrestrial reception",
+    "Showing connectivity or frequency tuning"
+  ],
   "tags": [
     "signal",
     "connection",

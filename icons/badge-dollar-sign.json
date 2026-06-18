@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking discounts or offers in US dollars",
+    "Representing a promotional price tag"
+  ],
   "tags": [
     "discount",
     "offer",

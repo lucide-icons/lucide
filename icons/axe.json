@@ -7,7 +7,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a tool or weapon in games",
+    "Indicating chopping, forestry, or firefighting equipment"
+  ],
   "tags": [
     "hatchet",
     "weapon",

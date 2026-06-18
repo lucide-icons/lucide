@@ -4,7 +4,9 @@
     "r4lv",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Distributing elements evenly around their horizontal centers in design tools"
+  ],
   "tags": [
     "items",
     "flex",

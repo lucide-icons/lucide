@@ -4,7 +4,10 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading or moving content upward from a boundary",
+    "Representing a git push"
+  ],
   "tags": [
     "forward",
     "direction",

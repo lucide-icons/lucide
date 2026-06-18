@@ -4,7 +4,9 @@
     "r4lv",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Distributing elements by their left edges in design tools"
+  ],
   "tags": [
     "left",
     "items",

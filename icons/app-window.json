@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an application window",
+    "Indicating a desktop app or executable"
+  ],
   "tags": [
     "application",
     "menu bar",

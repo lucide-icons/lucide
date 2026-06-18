@@ -7,7 +7,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting an alarm or wake-up reminder"
+  ],
   "tags": [
     "morning"
   ],

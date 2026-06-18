@@ -4,7 +4,10 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cash, money, or payments",
+    "Indicating currency in financial apps"
+  ],
   "tags": [
     "currency",
     "money",

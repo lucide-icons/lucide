@@ -4,7 +4,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a required field or footnote reference",
+    "Representing multiplication or a wildcard in code"
+  ],
   "tags": [
     "reference",
     "times",

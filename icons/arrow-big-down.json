@@ -8,7 +8,9 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a strong downward direction, e.g. as a game control"
+  ],
   "tags": [
     "backwards",
     "reverse",

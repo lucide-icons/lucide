@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a rightward direction or moving forward"
+  ],
   "tags": [
     "forward",
     "next",

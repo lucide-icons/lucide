@@ -4,7 +4,11 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an activity feed or recent actions",
+    "Showing health metrics such as heart rate or vital signs",
+    "Indicating live system activity or monitoring"
+  ],
   "tags": [
     "pulse",
     "action",

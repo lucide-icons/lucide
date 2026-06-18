@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a baby, child, or family content",
+    "Indicating baby-changing facilities or childproofing"
+  ],
   "tags": [
     "child",
     "childproof",

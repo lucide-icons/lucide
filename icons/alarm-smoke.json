@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a smoke or fire detector in smart home apps",
+    "Indicating fire safety equipment or amenities in listings"
+  ],
   "tags": [
     "fire",
     "alert",

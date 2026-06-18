@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a forbidden or prohibited action",
+    "Blocking, canceling, or disabling something"
+  ],
   "tags": [
     "cancel",
     "no",

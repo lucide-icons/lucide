@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a badge or verified status"
+  ],
   "tags": [
     "check",
     "verified",

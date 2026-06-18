@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving down to a specific point or waypoint",
+    "Indicating a target or destination below"
+  ],
   "tags": [
     "direction",
     "south",

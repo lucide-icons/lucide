@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing camera aperture or exposure settings",
+    "Indicating photography or capture features"
+  ],
   "tags": [
     "camera",
     "photo",

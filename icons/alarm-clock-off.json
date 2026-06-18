@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Turning off or disabling an alarm"
+  ],
   "tags": [
     "morning",
     "turn-off"

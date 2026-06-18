@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving up and out from a point",
+    "Indicating an origin or starting point below"
+  ],
   "tags": [
     "direction",
     "north",
