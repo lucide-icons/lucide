@@ -4,7 +4,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching for or pairing a Bluetooth device"
+  ],
   "tags": [
     "pairing"
   ],

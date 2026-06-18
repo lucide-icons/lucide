@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a draft or template document",
+    "Indicating unwritten or unpublished content"
+  ],
   "tags": [
     "code",
     "coding",

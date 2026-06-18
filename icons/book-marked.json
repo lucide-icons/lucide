@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Bookmarking a book or document for later",
+    "Saving a reference for future reading"
+  ],
   "tags": [
     "dictionary",
     "reading",

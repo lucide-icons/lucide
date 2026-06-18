@@ -6,7 +6,10 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing notifications or alerts",
+    "Accessing reminders or an alarm"
+  ],
   "tags": [
     "alarm",
     "notification",

@@ -4,7 +4,10 @@
     "james-yeoman",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Bringing an element to the front in design tools",
+    "Reordering overlapping layers"
+  ],
   "tags": [
     "bring",
     "send",

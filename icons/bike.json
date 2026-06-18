@@ -8,7 +8,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting cycling as a transport mode",
+    "Representing a bike or bike rentals"
+  ],
   "tags": [
     "bicycle",
     "transport",

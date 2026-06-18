@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a saved bookmark",
+    "Marking a bookmarked item as read"
+  ],
   "tags": [
     "read",
     "finished",

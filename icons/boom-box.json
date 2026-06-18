@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a boombox or portable speaker",
+    "Indicating music or audio playback"
+  ],
   "tags": [
     "radio",
     "speakers",

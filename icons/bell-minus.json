@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or dismissing a notification"
+  ],
   "tags": [
     "alarm",
     "notification",

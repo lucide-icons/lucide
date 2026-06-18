@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking alcohol-free options or no-drinking areas"
+  ],
   "tags": [
     "alcohol",
     "bar",

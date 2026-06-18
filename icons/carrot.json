@@ -5,7 +5,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing vegetables or healthy food",
+    "Categorizing produce or groceries"
+  ],
   "tags": [
     "vegetable",
     "food",

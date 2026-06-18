@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a dictionary or definitions",
+    "Indicating an A-Z or alphabetical reference"
+  ],
   "tags": [
     "dictionary",
     "define",

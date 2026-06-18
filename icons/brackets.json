@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an array or code brackets",
+    "Indicating square brackets in a code editor"
+  ],
   "tags": [
     "code",
     "token",

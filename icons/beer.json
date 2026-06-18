@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing beer, bars, or breweries",
+    "Categorizing alcoholic drinks on a menu"
+  ],
   "tags": [
     "alcohol",
     "bar",

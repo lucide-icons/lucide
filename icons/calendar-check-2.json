@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming an event or RSVP",
+    "Marking a date as complete"
+  ],
   "tags": [
     "date",
     "day",

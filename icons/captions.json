@@ -3,7 +3,10 @@
   "contributors": [
     "DefaultLP"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Enabling subtitles or closed captions",
+    "Indicating transcription or accessibility options"
+  ],
   "tags": [
     "closed captions",
     "subtitles",

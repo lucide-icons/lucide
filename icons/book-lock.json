@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a locked or private document"
+  ],
   "tags": [
     "code",
     "coding",

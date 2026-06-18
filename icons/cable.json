@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a cable or wired connection",
+    "Indicating an AV or power connector"
+  ],
   "tags": [
     "cord",
     "wire",

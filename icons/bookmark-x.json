@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or clearing a bookmark"
+  ],
   "tags": [
     "read",
     "clip",

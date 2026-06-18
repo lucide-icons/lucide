@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a new book to a library or list"
+  ],
   "tags": [
     "code",
     "coding",

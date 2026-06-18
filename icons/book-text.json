@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a book with text content",
+    "Indicating documentation or an article"
+  ],
   "tags": [
     "reading",
     "booklet",

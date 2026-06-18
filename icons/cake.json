@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a cake or dessert",
+    "Indicating a birthday or celebration"
+  ],
   "tags": [
     "birthday",
     "birthdate",

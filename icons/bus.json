@@ -6,7 +6,10 @@
     "Andreto",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting bus as a transport mode",
+    "Representing public transit"
+  ],
   "tags": [
     "bus",
     "vehicle",

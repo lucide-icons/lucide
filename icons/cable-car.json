@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a cable car or ski lift",
+    "Indicating mountain or alpine resorts"
+  ],
   "tags": [
     "ski lift",
     "winter holiday",

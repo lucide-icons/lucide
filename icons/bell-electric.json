@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a doorbell or electric bell",
+    "Indicating a fire alarm or emergency bell"
+  ],
   "tags": [
     "fire alarm",
     "flames",

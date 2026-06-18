@@ -4,7 +4,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an active alert or ringing notification"
+  ],
   "tags": [
     "alarm",
     "notification",

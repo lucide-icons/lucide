@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a caravan or camper",
+    "Indicating camping or a campsite"
+  ],
   "tags": [
     "trailer",
     "tow",

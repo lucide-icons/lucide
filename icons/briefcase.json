@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing work or business",
+    "Indicating a portfolio or hand luggage"
+  ],
   "tags": [
     "work",
     "bag",

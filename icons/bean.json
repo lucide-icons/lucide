@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing legumes, beans, or plant-based food"
+  ],
   "tags": [
     "legume",
     "soy",

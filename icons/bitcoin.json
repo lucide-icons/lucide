@@ -4,7 +4,10 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing Bitcoin or cryptocurrency",
+    "Indicating crypto payments or a blockchain wallet"
+  ],
   "tags": [
     "cryptocurrency",
     "digital",

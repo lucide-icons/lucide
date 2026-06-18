@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing candy or sweets",
+    "Indicating a Christmas or holiday theme"
+  ],
   "tags": [
     "sugar",
     "food",

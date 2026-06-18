@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a scheduled time or deadline",
+    "Indicating an upcoming event"
+  ],
   "tags": [
     "date",
     "day",

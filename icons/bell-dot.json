@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating new or unread notifications"
+  ],
   "tags": [
     "alarm",
     "notification",

@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Taking a photo or accessing the camera",
+    "Representing photography or a webcam"
+  ],
   "tags": [
     "photography",
     "lens",

@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a bookmark"
+  ],
   "tags": [
     "delete",
     "remove"

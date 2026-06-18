@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Reading an open book or documentation",
+    "Representing pages of text content"
+  ],
   "tags": [
     "reading",
     "pages",

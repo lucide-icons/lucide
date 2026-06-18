@@ -7,7 +7,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating the camera is turned off or disabled"
+  ],
   "tags": [
     "photo",
     "webcam",

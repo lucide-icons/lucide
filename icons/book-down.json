@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Pulling or downloading a repository or document"
+  ],
   "tags": [
     "code",
     "coding",

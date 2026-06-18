@@ -6,7 +6,10 @@
     "it-is-not",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing AI or machine learning",
+    "Symbolizing neural networks or computing"
+  ],
   "tags": [
     "mind",
     "intellect",

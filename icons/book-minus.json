@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a book from a list or library"
+  ],
   "tags": [
     "code",
     "coding",

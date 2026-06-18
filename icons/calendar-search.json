@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching for events or dates in a calendar"
+  ],
   "tags": [
     "date",
     "day",

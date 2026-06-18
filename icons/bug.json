@@ -4,7 +4,10 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Reporting a bug or issue",
+    "Representing debugging or testing"
+  ],
   "tags": [
     "issue",
     "error",

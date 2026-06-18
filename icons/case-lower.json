@@ -5,7 +5,9 @@
     "vichotech",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Converting text to lowercase in editors"
+  ],
   "tags": [
     "text",
     "letters",

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Force-pushing a repository or document"
+  ],
   "tags": [
     "code",
     "coding",

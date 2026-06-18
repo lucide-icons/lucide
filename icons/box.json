@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a package or container",
+    "Indicating a 3D box or shipment"
+  ],
   "tags": [
     "cube",
     "package",

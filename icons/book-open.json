@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing reading or an open book",
+    "Indicating documentation or pages"
+  ],
   "tags": [
     "reading",
     "pages",

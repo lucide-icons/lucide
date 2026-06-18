@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing audiobooks",
+    "Indicating listening or read-aloud content"
+  ],
   "tags": [
     "audiobook",
     "reading",

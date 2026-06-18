@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a private or access-controlled document",
+    "Indicating a secret or key reference"
+  ],
   "tags": [
     "code",
     "coding",

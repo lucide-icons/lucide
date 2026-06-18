@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing plugins, add-ons, or integrations",
+    "Symbolizing building blocks or modular components"
+  ],
   "tags": [
     "addon",
     "plugin",

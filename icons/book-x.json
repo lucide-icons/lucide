@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or banning a book",
+    "Marking content as false or censored"
+  ],
   "tags": [
     "code",
     "coding",

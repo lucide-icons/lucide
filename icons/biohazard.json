@@ -5,7 +5,10 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Warning of biohazards or hazardous waste",
+    "Marking a contamination or safety zone"
+  ],
   "tags": [
     "fallout",
     "waste",

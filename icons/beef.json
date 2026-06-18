@@ -5,7 +5,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing meat dishes or a steakhouse",
+    "Categorizing beef on a menu"
+  ],
   "tags": [
     "food",
     "dish",

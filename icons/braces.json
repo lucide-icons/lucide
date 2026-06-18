@@ -12,7 +12,10 @@
       "toBeRemovedInVersion": "v1.0"
     }
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing JSON or code blocks",
+    "Indicating curly braces in a code editor"
+  ],
   "tags": [
     "json",
     "code",

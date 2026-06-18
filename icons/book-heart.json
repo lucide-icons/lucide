@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a diary or personal journal",
+    "Marking a favorite book"
+  ],
   "tags": [
     "diary",
     "romance",

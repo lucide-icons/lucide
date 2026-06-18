@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an organization or office building"
+  ],
   "tags": [
     "organisation",
     "organization"

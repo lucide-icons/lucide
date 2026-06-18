@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing an event from a calendar"
+  ],
   "tags": [
     "date",
     "day",

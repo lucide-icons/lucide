@@ -5,7 +5,10 @@
     "ericfennis",
     "Andreto"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a car or driving",
+    "Selecting car as a transport mode"
+  ],
   "tags": [
     "vehicle",
     "drive",

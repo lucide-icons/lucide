@@ -5,7 +5,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing Bluetooth connectivity"
+  ],
   "tags": [
     "wireless"
   ],

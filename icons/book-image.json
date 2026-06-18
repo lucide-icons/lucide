@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a photo book or magazine",
+    "Browsing an image catalog or gallery"
+  ],
   "tags": [
     "images",
     "pictures",

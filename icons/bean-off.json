@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking soy-free or legume-free dishes",
+    "Indicating a soy or legume allergy"
+  ],
   "tags": [
     "soy free",
     "legume",

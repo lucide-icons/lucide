@@ -4,7 +4,10 @@
     "Andreto",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing chemistry, lab work, or experiments",
+    "Indicating a science or testing feature"
+  ],
   "tags": [
     "cup",
     "lab",

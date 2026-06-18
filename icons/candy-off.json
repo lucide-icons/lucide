@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking sugar-free options",
+    "Indicating a sugar-free diet"
+  ],
   "tags": [
     "sugar free",
     "food",

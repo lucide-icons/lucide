@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a thesaurus or typography reference",
+    "Indicating fonts or translation"
+  ],
   "tags": [
     "thesaurus",
     "synonym",

@@ -6,7 +6,9 @@
     "johnletey",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing battery level or power status"
+  ],
   "tags": [
     "power",
     "electricity",

@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Running a debug session or reproducing a bug"
+  ],
   "tags": [
     "issue",
     "testing",

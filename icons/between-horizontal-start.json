@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Inserting a row before the selected one in tables or layouts"
+  ],
   "tags": [
     "insert",
     "add",

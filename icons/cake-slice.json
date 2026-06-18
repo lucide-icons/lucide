@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a slice of cake or dessert",
+    "Indicating a birthday or celebration"
+  ],
   "tags": [
     "birthday",
     "birthdate",

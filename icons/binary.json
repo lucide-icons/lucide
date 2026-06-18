@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing binary code or machine data",
+    "Indicating a boolean or low-level value"
+  ],
   "tags": [
     "code",
     "digits",

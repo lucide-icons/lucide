@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a company or business",
+    "Indicating an office building or city"
+  ],
   "tags": [
     "business",
     "company",

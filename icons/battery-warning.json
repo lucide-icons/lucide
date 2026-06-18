@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Warning of a low or faulty battery"
+  ],
   "tags": [
     "power",
     "electricity",

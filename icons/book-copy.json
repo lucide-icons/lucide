@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Duplicating or cloning content",
+    "Representing a copy or a reading list"
+  ],
   "tags": [
     "code",
     "coding",

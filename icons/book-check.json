@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a book or chapter as read",
+    "Indicating verified or plain-language content"
+  ],
   "tags": [
     "read",
     "booklet",

@@ -3,7 +3,10 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a chatbot or AI assistant",
+    "Indicating automated or bot activity"
+  ],
   "tags": [
     "robot",
     "ai",

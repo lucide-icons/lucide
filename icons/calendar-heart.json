@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a favorite or special date",
+    "Indicating a romantic or memorable event"
+  ],
   "tags": [
     "date",
     "month",

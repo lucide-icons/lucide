@@ -7,7 +7,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying bold formatting in text editors"
+  ],
   "tags": [
     "text",
     "strong",

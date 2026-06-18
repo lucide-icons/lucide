@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a calendar or scheduled date",
+    "Accessing events or a date picker"
+  ],
   "tags": [
     "date",
     "month",
