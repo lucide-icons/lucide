@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a workflow or automation pipeline",
+    "Indicating CI/CD or connected steps"
+  ],
   "tags": [
     "action",
     "continuous integration",

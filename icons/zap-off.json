@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating flash or power is turned off"
+  ],
   "tags": [
     "flash",
     "camera",

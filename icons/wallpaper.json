@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting a wallpaper or background image"
+  ],
   "tags": [
     "background",
     "texture",

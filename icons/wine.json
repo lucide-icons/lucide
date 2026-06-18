@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing wine or a winery",
+    "Indicating wine on a menu"
+  ],
   "tags": [
     "alcohol",
     "beverage",

@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Closing or dismissing something",
+    "Indicating an error or removal"
+  ],
   "tags": [
     "cancel",
     "close",

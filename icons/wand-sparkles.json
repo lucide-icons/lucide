@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing magic, AI features, or auto-enhance"
+  ],
   "tags": [
     "magic",
     "wizard",

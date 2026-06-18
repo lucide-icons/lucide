@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating wind or breezy weather",
+    "Representing wind energy"
+  ],
   "tags": [
     "weather",
     "air",

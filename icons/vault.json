@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a vault or secure storage",
+    "Indicating a safe or valuables"
+  ],
   "tags": [
     "safe",
     "lockbox",

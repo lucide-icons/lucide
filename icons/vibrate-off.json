@@ -4,7 +4,9 @@
     "lscheibel",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating vibrate or haptics are turned off"
+  ],
   "tags": [
     "smartphone",
     "notification",

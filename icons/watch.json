@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a watch or the time"
+  ],
   "tags": [
     "clock",
     "time"

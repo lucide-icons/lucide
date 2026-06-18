@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or unfollowing a user"
+  ],
   "tags": [
     "delete",
     "remove",

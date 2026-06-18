@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a user or approving a request"
+  ],
   "tags": [
     "followed",
     "subscribed",

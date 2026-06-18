@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a group of users or a team"
+  ],
   "tags": [
     "group",
     "people"

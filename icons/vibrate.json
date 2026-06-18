@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing vibrate or haptic feedback"
+  ],
   "tags": [
     "smartphone",
     "notification",

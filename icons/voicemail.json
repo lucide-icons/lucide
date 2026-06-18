@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing voicemail or a recorded message"
+  ],
   "tags": [
     "phone",
     "cassette",

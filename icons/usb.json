@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a USB device or connection"
+  ],
   "tags": [
     "universal",
     "serial",

@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing connected waypoints or a route",
+    "Indicating a VPN or proxy path"
+  ],
   "tags": [
     "indirection",
     "vpn",

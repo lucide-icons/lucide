@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading a file"
+  ],
   "tags": [
     "file"
   ],

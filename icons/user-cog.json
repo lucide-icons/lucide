@@ -5,7 +5,9 @@
     "ericfennis",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Configuring user account settings"
+  ],
   "tags": [
     "settings",
     "edit",

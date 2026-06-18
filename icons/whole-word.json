@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling whole-word matching in search"
+  ],
   "tags": [
     "text",
     "selection",

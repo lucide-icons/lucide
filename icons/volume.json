@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adjusting audio volume"
+  ],
   "tags": [
     "music",
     "sound",

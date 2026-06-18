@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a restaurant or dining",
+    "Marking food venues on a map"
+  ],
   "tags": [
     "fork",
     "knife",

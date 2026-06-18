@@ -5,7 +5,10 @@
     "ahtohbi4",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a wallet or balance",
+    "Managing payment methods"
+  ],
   "tags": [
     "money",
     "finance",

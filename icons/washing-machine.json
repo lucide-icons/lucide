@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a washing machine or laundry",
+    "Indicating laundry amenities"
+  ],
   "tags": [
     "tumble dryer",
     "amenities",

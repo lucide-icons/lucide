@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or blocking a user"
+  ],
   "tags": [
     "delete",
     "remove",

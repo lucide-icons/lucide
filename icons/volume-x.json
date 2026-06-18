@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Muting audio"
+  ],
   "tags": [
     "music",
     "sound",

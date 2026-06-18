@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Turning off the camera or video"
+  ],
   "tags": [
     "camera",
     "movie",

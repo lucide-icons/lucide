@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating wifi is turned off or disconnected"
+  ],
   "tags": [
     "disabled"
   ],

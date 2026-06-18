@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating low volume"
+  ],
   "tags": [
     "music",
     "sound",

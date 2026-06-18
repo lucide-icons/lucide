@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a wifi connection or signal"
+  ],
   "tags": [
     "connection",
     "signal",

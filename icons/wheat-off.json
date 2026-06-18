@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking gluten-free dishes",
+    "Indicating a gluten or wheat allergy"
+  ],
   "tags": [
     "corn",
     "cereal",

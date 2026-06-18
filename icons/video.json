@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing video or a camera",
+    "Starting a video call or recording"
+  ],
   "tags": [
     "camera",
     "movie",

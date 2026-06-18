@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a variable in code or algebra"
+  ],
   "tags": [
     "code",
     "coding",

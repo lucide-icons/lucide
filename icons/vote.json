@@ -4,7 +4,9 @@
     "ptrgast",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing voting, polls, or a ballot"
+  ],
   "tags": [
     "vote",
     "poll",

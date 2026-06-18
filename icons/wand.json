@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a magic wand or auto-selection tool"
+  ],
   "tags": [
     "magic",
     "selection"

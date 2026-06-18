@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a worm or larva",
+    "Indicating malware or a computer worm"
+  ],
   "tags": [
     "invertebrate",
     "grub",

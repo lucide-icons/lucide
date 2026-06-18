@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing anonymity or incognito mode",
+    "Indicating a masquerade or disguise"
+  ],
   "tags": [
     "mask",
     "masquerade",

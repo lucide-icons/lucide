@@ -6,7 +6,10 @@
     "tallneil",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a wallet with cards",
+    "Managing payment methods"
+  ],
   "tags": [
     "wallet",
     "cards",
