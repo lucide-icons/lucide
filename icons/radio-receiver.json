@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a radio receiver or tuner"
+  ],
   "tags": [
     "device",
     "music",

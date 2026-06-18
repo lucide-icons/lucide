@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Powering off a device"
+  ],
   "tags": [
     "on",
     "off",

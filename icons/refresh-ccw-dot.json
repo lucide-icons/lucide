@@ -6,7 +6,9 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Reloading or retrying with a status indicator"
+  ],
   "tags": [
     "arrows",
     "rotate",

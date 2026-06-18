@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a vertical rectangle shape"
+  ],
   "tags": [
     "rectangle",
     "aspect ratio",

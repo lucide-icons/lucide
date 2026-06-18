@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Clearing or indicating no search results"
+  ],
   "tags": [
     "find",
     "scan",

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Rotating an image clockwise"
+  ],
   "tags": [
     "right",
     "clockwise",

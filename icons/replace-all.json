@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Replacing all matches in find and replace"
+  ],
   "tags": [
     "search",
     "substitute",

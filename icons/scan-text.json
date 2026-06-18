@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning and recognizing text (OCR)"
+  ],
   "tags": [
     "recognition",
     "read",

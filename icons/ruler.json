@@ -6,7 +6,9 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Measuring or setting dimensions in design tools"
+  ],
   "tags": [
     "measurements",
     "centimeters",

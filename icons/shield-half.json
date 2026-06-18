@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing partial protection or a crest",
+    "Symbolizing a team, faction, or defense"
+  ],
   "tags": [
     "cybersecurity",
     "secure",

@@ -4,7 +4,10 @@
     "wojtekmaj",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning a code or area",
+    "Representing AR or camera capture"
+  ],
   "tags": [
     "qr-code",
     "barcode",

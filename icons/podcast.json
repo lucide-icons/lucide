@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a podcast or audio show",
+    "Subscribing to or streaming audio content"
+  ],
   "tags": [
     "audio",
     "music",

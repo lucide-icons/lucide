@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Inserting a horizontal separator or resizing a split"
+  ],
   "tags": [
     "move",
     "split"

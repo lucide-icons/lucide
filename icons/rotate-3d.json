@@ -3,7 +3,9 @@
   "contributors": [
     "lscheibel"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Rotating an object in 3D in design tools"
+  ],
   "tags": [
     "gizmo",
     "transform",

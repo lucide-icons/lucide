@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing movies or cinema",
+    "Indicating snacks or entertainment"
+  ],
   "tags": [
     "cinema",
     "movies",

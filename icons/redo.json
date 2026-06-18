@@ -5,7 +5,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Redoing the last undone action"
+  ],
   "tags": [
     "undo",
     "rerun",

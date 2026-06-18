@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning a barcode at checkout"
+  ],
   "tags": [
     "checkout",
     "till",

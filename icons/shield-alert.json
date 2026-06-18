@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Warning of a security threat or vulnerability"
+  ],
   "tags": [
     "unshielded",
     "cybersecurity",

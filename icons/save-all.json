@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Saving all open files at once"
+  ],
   "tags": [
     "floppy disks",
     "copy"

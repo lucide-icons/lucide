@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Setting an aspect ratio or orientation",
+    "Adjusting proportions or dimensions"
+  ],
   "tags": [
     "screens",
     "sizes",

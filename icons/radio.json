@@ -8,7 +8,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a radio or broadcast",
+    "Tuning to a station or live stream"
+  ],
   "tags": [
     "signal",
     "broadcast",

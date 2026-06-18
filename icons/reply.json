@@ -5,7 +5,9 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Replying to an email or message"
+  ],
   "tags": [
     "email"
   ],

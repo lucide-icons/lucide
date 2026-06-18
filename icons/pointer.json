@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a pointer cursor or interactive element"
+  ],
   "tags": [
     "mouse"
   ],

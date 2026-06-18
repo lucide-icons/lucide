@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a rat or rodent",
+    "Indicating pests or pest control"
+  ],
   "tags": [
     "mouse",
     "mice",

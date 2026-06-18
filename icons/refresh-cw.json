@@ -8,7 +8,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Refreshing or reloading content"
+  ],
   "tags": [
     "rotate",
     "reload",

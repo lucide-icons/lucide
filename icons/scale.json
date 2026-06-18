@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing law, justice, or balance",
+    "Comparing or weighing options"
+  ],
   "tags": [
     "balance",
     "legal",

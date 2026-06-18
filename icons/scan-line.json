@@ -4,7 +4,9 @@
     "wojtekmaj",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning a barcode or QR code"
+  ],
   "tags": [
     "checkout",
     "till",

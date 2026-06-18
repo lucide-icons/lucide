@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating protection is turned off or disabled"
+  ],
   "tags": [
     "unshielded",
     "cybersecurity",

@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Subscribing to an RSS feed or updates"
+  ],
   "tags": [
     "feed",
     "subscribe",

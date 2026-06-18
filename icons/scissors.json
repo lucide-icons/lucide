@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Cutting content or representing a cut tool"
+  ],
   "tags": [
     "cut",
     "snip",

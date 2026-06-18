@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a rainbow or clear weather",
+    "Symbolizing a color spectrum or pride"
+  ],
   "tags": [
     "colors",
     "colours",

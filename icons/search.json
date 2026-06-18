@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching or finding content",
+    "Representing a search field"
+  ],
   "tags": [
     "find",
     "scan",

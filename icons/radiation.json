@@ -5,7 +5,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Warning of radiation or radioactive material"
+  ],
   "tags": [
     "radioactive",
     "nuclear",

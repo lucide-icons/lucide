@@ -3,7 +3,10 @@
   "contributors": [
     "kemie"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a salad or healthy food",
+    "Categorizing vegetarian dishes"
+  ],
   "tags": [
     "food",
     "vegetarian",

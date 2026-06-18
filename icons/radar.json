@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing radar, scanning, or detection",
+    "Indicating tracking or monitoring"
+  ],
   "tags": [
     "scan",
     "sonar",

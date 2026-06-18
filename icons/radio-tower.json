@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing broadcasting or signal transmission",
+    "Indicating a radio tower or live stream"
+  ],
   "tags": [
     "signal",
     "broadcast",

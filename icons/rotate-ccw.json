@@ -8,7 +8,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Rotating counterclockwise or undoing",
+    "Restarting or replaying"
+  ],
   "tags": [
     "arrow",
     "left",

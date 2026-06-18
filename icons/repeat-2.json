@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Reposting or sharing content",
+    "Indicating a repeat or loop"
+  ],
   "tags": [
     "arrows",
     "retweet",

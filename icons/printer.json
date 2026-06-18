@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Printing a document",
+    "Representing a printer or office device"
+  ],
   "tags": [
     "fax",
     "office",

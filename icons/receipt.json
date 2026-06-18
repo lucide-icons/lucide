@@ -5,7 +5,10 @@
     "it-is-not",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a receipt or bill",
+    "Showing an order total or transaction record"
+  ],
   "tags": [
     "bill",
     "voucher",

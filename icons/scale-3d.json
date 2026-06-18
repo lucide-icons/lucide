@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scaling an object in 3D in design tools"
+  ],
   "tags": [
     "gizmo",
     "transform",

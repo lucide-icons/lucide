@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a seashell or the beach",
+    "Indicating a terminal or command-line shell"
+  ],
   "tags": [
     "beach",
     "sand",

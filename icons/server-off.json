@@ -5,7 +5,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a server is offline or unavailable"
+  ],
   "tags": [
     "cloud",
     "storage"

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a satellite dish or signal reception"
+  ],
   "tags": [
     "antenna",
     "receiver",

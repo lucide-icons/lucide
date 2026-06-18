@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Clearing or canceling a search"
+  ],
   "tags": [
     "find",
     "scan",

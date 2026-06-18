@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a sailboat or sailing",
+    "Indicating a harbor or marine travel"
+  ],
   "tags": [
     "ship",
     "boat",

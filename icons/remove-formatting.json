@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Clearing text formatting in editors"
+  ],
   "tags": [
     "text",
     "font",

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a route or journey with stops"
+  ],
   "tags": [
     "path",
     "journey",

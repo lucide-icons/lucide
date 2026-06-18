@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a refrigerator or kitchen appliance",
+    "Indicating cold storage amenities"
+  ],
   "tags": [
     "frigerator",
     "fridge",

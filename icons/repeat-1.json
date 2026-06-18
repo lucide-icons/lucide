@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Repeating the current track once"
+  ],
   "tags": [
     "replay"
   ],

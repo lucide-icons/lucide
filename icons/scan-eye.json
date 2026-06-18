@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing retina or biometric scanning",
+    "Indicating a preview or watch mode"
+  ],
   "tags": [
     "preview",
     "zoom",

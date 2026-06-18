@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Repeating or looping playback"
+  ],
   "tags": [
     "loop",
     "arrows"

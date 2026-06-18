@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sharing content with others"
+  ],
   "tags": [
     "network",
     "connections"

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a satellite or space communication"
+  ],
   "tags": [
     "space station",
     "orbit",

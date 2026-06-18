@@ -4,7 +4,9 @@
     "james-yeoman",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sending an element to the back in design tools"
+  ],
   "tags": [
     "bring",
     "send",

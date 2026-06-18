@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scanning and searching within an image or area"
+  ],
   "tags": [
     "preview",
     "zoom",

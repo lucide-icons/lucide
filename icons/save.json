@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Saving a file or changes"
+  ],
   "tags": [
     "floppy disk"
   ],

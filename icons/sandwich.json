@@ -4,7 +4,10 @@
     "kemie",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a sandwich or lunch",
+    "Categorizing food on a menu"
+  ],
   "tags": [
     "food",
     "snack",

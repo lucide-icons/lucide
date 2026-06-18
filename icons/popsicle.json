@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an ice lolly or frozen treat"
+  ],
   "tags": [
     "ice lolly",
     "ice cream",

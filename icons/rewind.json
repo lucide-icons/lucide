@@ -4,7 +4,9 @@
     "colebemis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Rewinding media playback"
+  ],
   "tags": [
     "music"
   ],

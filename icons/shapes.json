@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing shapes or a shape collection",
+    "Indicating drawing primitives"
+  ],
   "tags": [
     "triangle",
     "equilateral",

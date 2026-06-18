@@ -7,7 +7,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Accessing settings or preferences"
+  ],
   "tags": [
     "cog",
     "edit",

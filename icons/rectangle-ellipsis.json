@@ -4,7 +4,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a password or input field",
+    "Indicating an overflow or more options"
+  ],
   "tags": [
     "login",
     "password",
