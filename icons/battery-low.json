@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a low battery charge level"
+  ],
   "tags": [
     "power",
     "electricity",

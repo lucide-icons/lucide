@@ -6,7 +6,9 @@
     "johnletey",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a full battery charge level"
+  ],
   "tags": [
     "power",
     "electricity",

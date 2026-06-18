@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying a level-6 heading in text editors"
+  ],
   "tags": [
     "h6",
     "html",

@@ -5,7 +5,9 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Actively disconnecting or unlinking something"
+  ],
   "tags": [
     "unchain",
     "chain"

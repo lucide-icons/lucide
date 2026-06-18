@@ -3,7 +3,9 @@
   "contributors": [
     "AnnaSasDev"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing hydroelectric power or water infrastructure on energy sites"
+  ],
   "tags": [
     "electricity",
     "energy",

@@ -4,7 +4,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding an item to a playlist or list",
+    "Creating a new playlist"
+  ],
   "tags": [
     "playlist",
     "add",

@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Aligning elements to the vertical center in page builders and design tools"
+  ],
   "tags": [
     "items",
     "flex",

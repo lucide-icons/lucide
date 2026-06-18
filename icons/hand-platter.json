@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing offers, service, or hospitality"
+  ],
   "tags": [
     "waiter",
     "waitress",

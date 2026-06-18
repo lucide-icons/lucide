@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Blending two colors in a design program"
+  ],
   "tags": [
     "mode",
     "overlay",

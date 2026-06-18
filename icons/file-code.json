@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a source code file"
+  ],
   "tags": [
     "script",
     "document",

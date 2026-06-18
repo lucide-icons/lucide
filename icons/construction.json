@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating roadwork or a construction zone",
+    "Representing a website or project under construction"
+  ],
   "tags": [
     "roadwork",
     "maintenance",

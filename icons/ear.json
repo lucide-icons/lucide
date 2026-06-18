@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing hearing or audio for accessibility",
+    "Serving as an alternative icon for hearing assistance"
+  ],
   "tags": [
     "hearing",
     "noise",

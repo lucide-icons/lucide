@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Stretching elements vertically in page builders and design tools"
+  ],
   "tags": [
     "items",
     "flex",

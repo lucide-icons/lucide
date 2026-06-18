@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a tally or running count of one"
+  ],
   "tags": [
     "count",
     "score",

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Clearing a list or resetting content without implying deletion"
+  ],
   "tags": [
     "cleaning",
     "utensil",

@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a traffic cone, construction, or 3D shapes"
+  ],
   "tags": [
     "conical",
     "triangle",

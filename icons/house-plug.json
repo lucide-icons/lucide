@@ -4,7 +4,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing home solar power generation",
+    "Indicating home electricity or energy saving"
+  ],
   "tags": [
     "home",
     "living",

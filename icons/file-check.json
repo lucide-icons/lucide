@@ -4,7 +4,10 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a verified or approved file",
+    "Marking a file as checked or processed"
+  ],
   "tags": [
     "done",
     "document",

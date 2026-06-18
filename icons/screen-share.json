@@ -5,7 +5,9 @@
     "ericfennis",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sharing your screen in video conferencing software"
+  ],
   "tags": [
     "host",
     "desktop",

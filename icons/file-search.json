@@ -6,7 +6,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching within files or documents"
+  ],
   "tags": [
     "lost",
     "document",

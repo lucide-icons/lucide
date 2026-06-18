@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a bank, government building, or landmark"
+  ],
   "tags": [
     "bank",
     "building",

@@ -4,7 +4,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing ID, passport, verification, or KYC"
+  ],
   "tags": [
     "card",
     "badge",

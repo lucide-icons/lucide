@@ -6,7 +6,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a marker or pin from a map"
+  ],
   "tags": [
     "location",
     "waypoint",

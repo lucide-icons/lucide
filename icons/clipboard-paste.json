@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Pasting or reading content from the clipboard"
+  ],
   "tags": [
     "copy",
     "paste"

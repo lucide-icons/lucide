@@ -6,7 +6,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Viewing previous versions, logs, or activity history"
+  ],
   "tags": [
     "time",
     "redo",

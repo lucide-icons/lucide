@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing power lines or electrical infrastructure on energy sites"
+  ],
   "tags": [
     "electricity",
     "energy",

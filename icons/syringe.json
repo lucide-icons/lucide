@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing vaccinations, injections, or medical care"
+  ],
   "tags": [
     "medicine",
     "medical",

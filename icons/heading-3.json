@@ -4,7 +4,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying a level-3 heading in text editors"
+  ],
   "tags": [
     "h3",
     "html",

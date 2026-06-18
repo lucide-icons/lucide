@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Splitting one item, such as a record or company, into two"
+  ],
   "tags": [
     "break",
     "disband",

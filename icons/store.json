@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a store, shop, or retail business"
+  ],
   "tags": [
     "shop",
     "supermarket",

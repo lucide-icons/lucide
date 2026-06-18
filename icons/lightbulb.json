@@ -4,7 +4,10 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing tips, advice, or ideas",
+    "Indicating electricity or lighting"
+  ],
   "tags": [
     "idea",
     "bright",

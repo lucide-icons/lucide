@@ -4,7 +4,9 @@
     "Bowero",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a frame or artboard in design tools"
+  ],
   "tags": [
     "logo",
     "design",

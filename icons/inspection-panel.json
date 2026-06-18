@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an access panel, hatch, or construction element"
+  ],
   "tags": [
     "access",
     "cover",

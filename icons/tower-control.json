@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "it-is-not"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing airports or air traffic control on travel platforms"
+  ],
   "tags": [
     "airport",
     "travel",

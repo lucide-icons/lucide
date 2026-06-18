@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a castle as a building type or landmark"
+  ],
   "tags": [
     "fortress",
     "stronghold",

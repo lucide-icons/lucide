@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a closed door or exit"
+  ],
   "tags": [
     "entrance",
     "entry",

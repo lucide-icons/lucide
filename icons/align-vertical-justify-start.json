@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Justifying elements to the vertical start in design tools"
+  ],
   "tags": [
     "top",
     "items",

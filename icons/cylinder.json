@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cylinder shapes in 3D, construction, or data models"
+  ],
   "tags": [
     "shape",
     "elliptical",

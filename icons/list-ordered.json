@@ -5,7 +5,9 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Inserting an ordered list in WYSIWYG editors"
+  ],
   "tags": [
     "number",
     "order",

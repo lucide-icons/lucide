@@ -4,7 +4,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Drawing a spline or curve in design tools"
+  ],
   "tags": [
     "path",
     "pen",

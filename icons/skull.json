@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing danger, death, or attention-grabbing headlines"
+  ],
   "tags": [
     "death",
     "danger",

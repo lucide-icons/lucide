@@ -5,7 +5,9 @@
     "ericfennis",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Stopping screen sharing in video conferencing software"
+  ],
   "tags": [
     "desktop",
     "disconnect",

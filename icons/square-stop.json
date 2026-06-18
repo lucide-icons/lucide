@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Stopping or interrupting an ongoing process"
+  ],
   "tags": [
     "media",
     "music"

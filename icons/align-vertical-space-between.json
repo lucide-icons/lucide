@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Distributing elements with equal vertical space between them in design tools"
+  ],
   "tags": [
     "center",
     "items",

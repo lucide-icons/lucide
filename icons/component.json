@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a component or indicating that something is a component"
+  ],
   "tags": [
     "design",
     "element",

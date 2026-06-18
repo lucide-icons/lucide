@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Splitting an application view into multiple columns"
+  ],
   "tags": [
     "lines",
     "list",

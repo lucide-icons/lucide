@@ -3,7 +3,10 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a Creative Commons license",
+    "Serving as an alternative to copyright or copyleft marks"
+  ],
   "tags": [
     "licence",
     "license"

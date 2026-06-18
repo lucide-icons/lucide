@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a hotel as a building type or accommodation"
+  ],
   "tags": [
     "building",
     "hostel",

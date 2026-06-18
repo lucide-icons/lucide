@@ -5,7 +5,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing OTT, streaming, or live TV"
+  ],
   "tags": [
     "flatscreen",
     "television",

@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a school as a building type or institution"
+  ],
   "tags": [
     "building",
     "education",

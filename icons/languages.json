@@ -5,7 +5,9 @@
     "mittalyashu",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating multi-language support or translation"
+  ],
   "tags": [
     "translate"
   ],

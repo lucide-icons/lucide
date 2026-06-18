@@ -6,7 +6,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Distinguishing speech from general audio in accessibility contexts"
+  ],
   "tags": [
     "disability",
     "disabled",

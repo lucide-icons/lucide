@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a plot of land, parcel, or property boundary"
+  ],
   "tags": [
     "area",
     "surface",

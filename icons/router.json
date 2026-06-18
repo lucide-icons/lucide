@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a router or internet-connected device in IoT contexts"
+  ],
   "tags": [
     "computer",
     "server",

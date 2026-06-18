@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating hearing loss or that audio is unavailable",
+    "Representing an accessibility option for deaf users"
+  ],
   "tags": [
     "hearing",
     "hard of hearing",

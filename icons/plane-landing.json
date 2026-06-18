@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "it-is-not"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing arrivals on travel or air traffic platforms"
+  ],
   "tags": [
     "arrival",
     "plane",

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Filtering by entertainment or theatre as a content type"
+  ],
   "tags": [
     "drama",
     "masks",

@@ -5,7 +5,9 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying subscript formatting in text editors"
+  ],
   "tags": [
     "text"
   ],

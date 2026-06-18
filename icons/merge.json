@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Merging two items, such as records or companies, into one"
+  ],
   "tags": [
     "combine",
     "join",

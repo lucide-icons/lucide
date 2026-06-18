@@ -4,7 +4,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Distributing elements evenly around the vertical center in design tools"
+  ],
   "tags": [
     "items",
     "flex",

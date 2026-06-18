@@ -7,7 +7,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Disabling editing or preventing user edits"
+  ],
   "tags": [
     "disabled",
     "inactive",

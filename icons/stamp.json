@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a stamp tool in image editors",
+    "Indicating stamps in loyalty apps"
+  ],
   "tags": [
     "mark",
     "print",

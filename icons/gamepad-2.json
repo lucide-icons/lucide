@@ -5,7 +5,9 @@
     "csandman",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing games or gaming on websites and apps"
+  ],
   "tags": [
     "console"
   ],

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sorting items by date added, ascending"
+  ],
   "tags": [
     "time",
     "watch",

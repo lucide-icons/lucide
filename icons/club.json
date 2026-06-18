@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the club suit in card games"
+  ],
   "tags": [
     "shape",
     "suit",

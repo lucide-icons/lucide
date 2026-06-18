@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing leafy vegetables or greens"
+  ],
   "tags": [
     "salad",
     "lettuce",

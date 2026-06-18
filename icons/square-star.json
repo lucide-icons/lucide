@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a badge, award, or special status",
+    "Marking a featured item"
+  ],
   "tags": [
     "badge",
     "medal",

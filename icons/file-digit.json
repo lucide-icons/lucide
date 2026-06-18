@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a numbered or data file"
+  ],
   "tags": [
     "number",
     "document"

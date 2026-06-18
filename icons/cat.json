@@ -3,7 +3,9 @@
   "contributors": [
     "kemie"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cats in animal shelters, pet food, or pet care apps"
+  ],
   "tags": [
     "animal",
     "pet",

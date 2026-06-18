@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing fencing, boundaries, or construction"
+  ],
   "tags": [
     "picket",
     "panels",

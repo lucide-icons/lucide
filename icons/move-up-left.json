@@ -3,7 +3,9 @@
   "contributors": [
     "jonas-hoebenreich"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Moving an element up and left, using a longer directional arrow"
+  ],
   "tags": [
     "arrow",
     "direction"

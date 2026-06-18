@@ -5,7 +5,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a flashlight or torch feature"
+  ],
   "tags": [
     "torch",
     "light",

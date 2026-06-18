@@ -4,7 +4,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an expanded folder showing its contents in tree views"
+  ],
   "tags": [
     "directory"
   ],

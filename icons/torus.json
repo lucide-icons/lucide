@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a torus shape in 3D or design tools"
+  ],
   "tags": [
     "donut",
     "doughnut",

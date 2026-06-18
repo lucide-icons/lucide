@@ -7,7 +7,9 @@
     "csandman",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that the flashlight is turned off"
+  ],
   "tags": [
     "torch",
     "light",

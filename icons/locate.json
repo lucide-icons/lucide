@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Finding the user's location in map applications"
+  ],
   "tags": [
     "map",
     "gps",

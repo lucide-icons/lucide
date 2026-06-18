@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Enabling spell checking"
+  ],
   "tags": [
     "spelling",
     "error",

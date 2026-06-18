@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing unlimited or endless quantities"
+  ],
   "tags": [
     "unlimited",
     "forever",

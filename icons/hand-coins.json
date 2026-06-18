@@ -4,7 +4,9 @@
     "danielbayley",
     "kayleyhill"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing offers, banking, or payments"
+  ],
   "tags": [
     "savings",
     "banking",

@@ -6,7 +6,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing the user's locked-on location in map applications"
+  ],
   "tags": [
     "map",
     "gps",

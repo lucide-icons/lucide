@@ -4,7 +4,9 @@
     "nabanita-sarkar",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying superscript formatting in text and markdown editors"
+  ],
   "tags": [
     "text",
     "exponent"

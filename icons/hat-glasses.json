@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a disguise or incognito mode",
+    "Indicating a feature that hides personal data"
+  ],
   "tags": [
     "incognito",
     "disguise",

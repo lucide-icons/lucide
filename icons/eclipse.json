@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling dark mode in an application",
+    "Representing an eclipse or contrast adjustment"
+  ],
   "tags": [
     "lunar",
     "solar",

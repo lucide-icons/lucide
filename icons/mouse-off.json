@@ -5,7 +5,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that the mouse or scroll wheel is unavailable"
+  ],
   "tags": [
     "device",
     "scroll",

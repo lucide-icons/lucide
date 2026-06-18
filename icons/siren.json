@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Triggering an alarm or serious alert"
+  ],
   "tags": [
     "police",
     "ambulance",

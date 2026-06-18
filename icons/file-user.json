@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a personal CV or resume",
+    "Indicating an application form, e.g. for school or visa"
+  ],
   "tags": [
     "person",
     "personal information",

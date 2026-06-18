@@ -4,7 +4,9 @@
     "it-is-not",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cookie settings or consent popups"
+  ],
   "tags": [
     "biscuit",
     "privacy",

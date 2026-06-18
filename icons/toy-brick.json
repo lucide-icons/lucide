@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing plugins, add-ons, or modular building blocks"
+  ],
   "tags": [
     "lego",
     "block",

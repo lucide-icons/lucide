@@ -5,7 +5,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Sorting calendar items by date added, ascending"
+  ],
   "tags": [
     "date",
     "month",

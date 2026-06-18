@@ -4,7 +4,9 @@
     "kemie",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing dogs in animal shelters, pet food, or pet care apps"
+  ],
   "tags": [
     "animal",
     "pet",

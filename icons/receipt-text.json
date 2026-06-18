@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing an order total or itemized receipt",
+    "Marking a receipts section in an online store"
+  ],
   "tags": [
     "bill",
     "voucher",

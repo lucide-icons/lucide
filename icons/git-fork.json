@@ -4,7 +4,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a repository fork or fork count"
+  ],
   "tags": [
     "code",
     "version control"

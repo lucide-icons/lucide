@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the spade suit in card games"
+  ],
   "tags": [
     "shape",
     "suit",

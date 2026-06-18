@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing shipping or maritime transport in logistics apps"
+  ],
   "tags": [
     "boat",
     "knots",

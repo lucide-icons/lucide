@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a color swatch book or palette in an application"
+  ],
   "tags": [
     "colors",
     "colours",

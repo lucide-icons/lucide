@@ -4,7 +4,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Subtly unlinking an item, e.g. in a list"
+  ],
   "tags": [
     "url",
     "unchain"

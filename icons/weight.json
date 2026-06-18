@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing weight, mass, or load in measurement contexts"
+  ],
   "tags": [
     "mass",
     "heavy",

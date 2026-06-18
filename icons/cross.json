@@ -4,7 +4,9 @@
     "lscheibel",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing health, medical services, or pharmacies"
+  ],
   "tags": [
     "healthcare",
     "first aid"

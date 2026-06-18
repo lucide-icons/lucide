@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing fasteners, hardware, or construction tools"
+  ],
   "tags": [
     "nut",
     "screw",

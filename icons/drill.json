@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing power tools, construction, or DIY work"
+  ],
   "tags": [
     "power",
     "bit",

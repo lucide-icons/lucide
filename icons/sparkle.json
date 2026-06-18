@@ -4,7 +4,9 @@
     "Shiva953",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing magic effects, AI features, or a 'new' indicator"
+  ],
   "tags": [
     "star",
     "effect",

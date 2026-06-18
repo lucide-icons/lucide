@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing stacked layers, materials, or surfaces"
+  ],
   "tags": [
     "stack",
     "pile",

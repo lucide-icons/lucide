@@ -4,7 +4,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing an item from a playlist or list"
+  ],
   "tags": [
     "playlist",
     "subtract",

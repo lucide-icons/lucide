@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Filtering by theatre or performing arts as a content type"
+  ],
   "tags": [
     "theater",
     "theatre",

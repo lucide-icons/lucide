@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing an order total in euros",
+    "Marking a receipts section in an online store"
+  ],
   "tags": [
     "bill",
     "voucher",

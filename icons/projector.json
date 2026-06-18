@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a projector, whiteboard, or drawing canvas"
+  ],
   "tags": [
     "cinema",
     "film",

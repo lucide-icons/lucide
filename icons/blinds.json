@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "it-is-not"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling window blinds in smart home apps",
+    "Representing home decor products"
+  ],
   "tags": [
     "shades",
     "screen",

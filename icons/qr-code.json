@@ -5,7 +5,9 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a QR code, e.g. on click"
+  ],
   "tags": [
     "barcode",
     "scan",

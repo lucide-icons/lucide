@@ -5,7 +5,10 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing NFC or contactless features",
+    "Marking contactless cards in banking apps"
+  ],
   "tags": [
     "contactless",
     "payment",
