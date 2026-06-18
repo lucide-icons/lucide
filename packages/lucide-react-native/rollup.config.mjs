@@ -33,7 +33,6 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
-              exports: 'auto',
               entryFileNames: `[name].${extension}`,
             }
           : {
