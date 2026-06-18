@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a column chart with an upward trend"
+  ],
   "tags": [
     "statistics",
     "analytics",

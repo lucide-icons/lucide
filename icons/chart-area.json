@@ -3,7 +3,9 @@
   "contributors": [
     "nstokoe"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying an area chart of trends over time"
+  ],
   "tags": [
     "statistics",
     "analytics",

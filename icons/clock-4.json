@@ -3,7 +3,9 @@
   "contributors": [
     "wojtekmaj"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the time at four o'clock"
+  ],
   "tags": [
     "time",
     "watch",

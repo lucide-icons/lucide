@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating fast rightward movement or skipping forward"
+  ],
   "tags": [
     "turn",
     "corner"

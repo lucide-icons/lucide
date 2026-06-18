@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a combined performance chart"
+  ],
   "tags": [
     "statistics",
     "analytics",

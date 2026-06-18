@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Navigating to the next item"
+  ],
   "tags": [
     "back",
     "more than",

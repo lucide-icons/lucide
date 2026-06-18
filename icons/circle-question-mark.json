@@ -7,7 +7,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Providing help or indicating a question"
+  ],
   "tags": [
     "question mark"
   ],

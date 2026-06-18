@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a candlestick chart of stock or market prices",
+    "Representing trading or financial analysis"
+  ],
   "tags": [
     "trading",
     "trader",

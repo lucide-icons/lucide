@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a stacked bar chart for category comparison"
+  ],
   "tags": [
     "statistics",
     "analytics",

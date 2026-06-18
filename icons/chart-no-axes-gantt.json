@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a Gantt chart or project timeline",
+    "Representing a roadmap or schedule"
+  ],
   "tags": [
     "projects",
     "manage",

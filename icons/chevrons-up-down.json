@@ -4,7 +4,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding a collapsible section vertically",
+    "Indicating a sortable column"
+  ],
   "tags": [
     "expand",
     "unfold",

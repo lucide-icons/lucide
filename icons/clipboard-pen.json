@@ -5,7 +5,9 @@
     "ericfennis",
     "Spleefies"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing or editing a clipboard document"
+  ],
   "tags": [
     "paste",
     "signature"

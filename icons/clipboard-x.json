@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Discarding or clearing clipboard content"
+  ],
   "tags": [
     "copy",
     "paste",

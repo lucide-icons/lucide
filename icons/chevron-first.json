@@ -4,7 +4,9 @@
     "dperezcabrera",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Skipping to the first track or item"
+  ],
   "tags": [
     "previous",
     "music"

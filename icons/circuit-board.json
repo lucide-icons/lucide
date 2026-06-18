@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing electronics or circuit boards",
+    "Indicating hardware or computing"
+  ],
   "tags": [
     "computing",
     "electricity",

@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a pie chart of proportions or shares"
+  ],
   "tags": [
     "statistics",
     "analytics",

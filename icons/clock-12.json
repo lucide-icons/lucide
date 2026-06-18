@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing twelve o'clock, noon, or midnight"
+  ],
   "tags": [
     "time",
     "watch",

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing money or payments",
+    "Indicating a price or cost in dollars"
+  ],
   "tags": [
     "monetization",
     "marketing",

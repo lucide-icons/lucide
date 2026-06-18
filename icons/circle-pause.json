@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Pausing media playback"
+  ],
   "tags": [
     "music",
     "audio",

@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Collapsing a dropdown or scrolling to the top"
+  ],
   "tags": [
     "caret",
     "keyboard",

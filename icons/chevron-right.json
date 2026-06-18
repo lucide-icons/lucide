@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Navigating to the next item",
+    "Representing a command prompt"
+  ],
   "tags": [
     "forward",
     "next",

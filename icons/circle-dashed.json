@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a pending or draft state",
+    "Indicating an open issue or in-progress item"
+  ],
   "tags": [
     "pending",
     "dot",

@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a smooth curve or spline chart"
+  ],
   "tags": [
     "statistics",
     "analytics",

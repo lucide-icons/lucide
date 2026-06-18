@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing a warning or alert",
+    "Indicating an error or important notice"
+  ],
   "tags": [
     "warning",
     "alert",

@@ -5,7 +5,9 @@
     "vichotech",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling case-sensitive matching in search or find"
+  ],
   "tags": [
     "text",
     "letters",

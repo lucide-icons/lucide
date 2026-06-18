@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a disabled or forbidden state",
+    "Representing null or nothing"
+  ],
   "tags": [
     "diameter",
     "zero",

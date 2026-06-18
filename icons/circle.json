@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a basic circle shape",
+    "Indicating a record button or status dot"
+  ],
   "tags": [
     "off",
     "zero",

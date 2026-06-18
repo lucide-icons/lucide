@@ -5,7 +5,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a no-parking area"
+  ],
   "tags": [
     "parking lot",
     "car park",

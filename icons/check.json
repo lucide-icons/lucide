@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming an action or marking a task done"
+  ],
   "tags": [
     "done",
     "todo",

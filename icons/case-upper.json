@@ -6,7 +6,9 @@
     "vichotech",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Converting text to uppercase in editors"
+  ],
   "tags": [
     "text",
     "letters",

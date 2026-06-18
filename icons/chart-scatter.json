@@ -4,7 +4,9 @@
     "danielbayley",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a scatter plot of data points"
+  ],
   "tags": [
     "statistics",
     "analytics",

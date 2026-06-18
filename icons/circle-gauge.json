@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a dashboard or speedometer",
+    "Indicating a measurement or level"
+  ],
   "tags": [
     "dashboard",
     "dial",

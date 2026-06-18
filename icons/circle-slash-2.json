@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing division or an average",
+    "Indicating null or void"
+  ],
   "tags": [
     "diameter",
     "zero",

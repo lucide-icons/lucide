@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a column chart of statistics or analytics"
+  ],
   "tags": [
     "statistics",
     "analytics",

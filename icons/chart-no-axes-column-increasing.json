@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a minimal column chart with an upward trend"
+  ],
   "tags": [
     "statistics",
     "analytics",

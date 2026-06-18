@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Powering on or off",
+    "Restarting or toggling a device"
+  ],
   "tags": [
     "on",
     "off",

@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding a dropdown or revealing more content"
+  ],
   "tags": [
     "backwards",
     "reverse",

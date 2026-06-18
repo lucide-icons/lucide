@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing audio recordings or retro music",
+    "Indicating a music or media file"
+  ],
   "tags": [
     "audio",
     "music",

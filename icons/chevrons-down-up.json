@@ -5,7 +5,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Collapsing an expanded section vertically"
+  ],
   "tags": [
     "collapse",
     "fold",

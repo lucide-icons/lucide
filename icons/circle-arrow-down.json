@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a downward direction or scroll"
+  ],
   "tags": [
     "backwards",
     "reverse",

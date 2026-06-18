@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a parking lot or car park"
+  ],
   "tags": [
     "parking lot",
     "car park"

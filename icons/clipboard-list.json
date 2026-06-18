@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a task list or checklist"
+  ],
   "tags": [
     "copy",
     "paste",

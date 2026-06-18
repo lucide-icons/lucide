@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cooking, chefs, or restaurants"
+  ],
   "tags": [
     "cooking",
     "food",

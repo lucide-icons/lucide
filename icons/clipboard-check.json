@@ -5,7 +5,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming clipboard content was pasted",
+    "Marking a checklist item complete"
+  ],
   "tags": [
     "copied",
     "pasted",

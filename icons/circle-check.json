@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming success or a completed task"
+  ],
   "tags": [
     "done",
     "todo",

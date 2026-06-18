@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a network or topology graph",
+    "Representing connected nodes or clusters"
+  ],
   "tags": [
     "statistics",
     "analytics",

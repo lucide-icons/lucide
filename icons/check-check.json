@@ -3,7 +3,10 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a message was delivered and read",
+    "Marking multiple items as complete"
+  ],
   "tags": [
     "done",
     "received",

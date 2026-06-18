@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a pending or in-progress state",
+    "Indicating a draft issue"
+  ],
   "tags": [
     "pending",
     "dot",

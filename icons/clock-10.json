@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the time at ten o'clock"
+  ],
   "tags": [
     "time",
     "watch",

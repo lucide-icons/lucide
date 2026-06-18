@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating rapid upward movement or scrolling to the top"
+  ],
   "tags": [
     "forward",
     "ahead",

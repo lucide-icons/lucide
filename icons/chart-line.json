@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying a line chart of trends over time"
+  ],
   "tags": [
     "statistics",
     "analytics",

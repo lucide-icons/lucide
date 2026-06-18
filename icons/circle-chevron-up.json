@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Collapsing a section or scrolling up"
+  ],
   "tags": [
     "caret",
     "ahead",

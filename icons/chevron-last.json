@@ -4,7 +4,9 @@
     "dperezcabrera",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Skipping to the last track or item"
+  ],
   "tags": [
     "skip",
     "next",

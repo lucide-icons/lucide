@@ -6,7 +6,10 @@
     "danielbayley",
     "torfmuer"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing film, video, or cinema",
+    "Indicating a movie or production"
+  ],
   "tags": [
     "movie",
     "film",

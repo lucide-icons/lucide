@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Navigating forward or to the next item"
+  ],
   "tags": [
     "next",
     "forward",
