@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Disabling, muting, or deleting a conversation"
+  ],
   "tags": [
     "comment",
     "chat",

@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Restarting a playlist or list from the beginning"
+  ],
   "tags": [
     "reset",
     "refresh",

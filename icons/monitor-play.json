@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Playing media or starting a virtual machine on a display"
+  ],
   "tags": [
     "tv",
     "screen",

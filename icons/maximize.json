@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Maximizing or entering fullscreen"
+  ],
   "tags": [
     "fullscreen",
     "expand",

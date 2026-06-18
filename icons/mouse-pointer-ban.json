@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a blocked or unavailable cursor"
+  ],
   "tags": [
     "wait",
     "busy",

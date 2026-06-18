@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing in or logging into an account"
+  ],
   "tags": [
     "sign in",
     "arrow",

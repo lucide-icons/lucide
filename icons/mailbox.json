@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a mailbox or newsletter signup"
+  ],
   "tags": [
     "emails",
     "messages",

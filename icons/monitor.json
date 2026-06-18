@@ -7,7 +7,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a monitor or display",
+    "Indicating a desktop or virtual machine"
+  ],
   "tags": [
     "tv",
     "screen",

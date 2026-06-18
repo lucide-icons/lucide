@@ -8,7 +8,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a locked or secured state",
+    "Indicating password protection"
+  ],
   "tags": [
     "security",
     "password",

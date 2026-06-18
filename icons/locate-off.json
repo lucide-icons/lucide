@@ -4,7 +4,9 @@
     "fdev",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating location services are turned off"
+  ],
   "tags": [
     "map",
     "gps",

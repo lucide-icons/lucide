@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "LieOnLion"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Muting or disabling the microphone"
+  ],
   "tags": [
     "record",
     "sound",

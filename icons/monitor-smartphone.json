@@ -6,7 +6,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing responsive or cross-device layouts"
+  ],
   "tags": [
     "smartphone",
     "phone",

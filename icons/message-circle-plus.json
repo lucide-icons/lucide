@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Starting a new message or conversation"
+  ],
   "tags": [
     "comment",
     "chat",

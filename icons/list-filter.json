@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Filtering items in a list"
+  ],
   "tags": [
     "options"
   ],

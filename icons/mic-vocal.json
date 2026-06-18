@@ -3,7 +3,9 @@
   "contributors": [
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing singing, vocals, or karaoke"
+  ],
   "tags": [
     "lyrics",
     "voice",

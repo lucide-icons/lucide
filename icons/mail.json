@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing email or messages",
+    "Accessing an inbox"
+  ],
   "tags": [
     "email",
     "message",

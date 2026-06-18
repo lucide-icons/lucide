@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a draft message or comment"
+  ],
   "tags": [
     "comment",
     "chat",

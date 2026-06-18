@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a microphone or recording",
+    "Indicating voice input or a podcast"
+  ],
   "tags": [
     "record",
     "sound",

@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading to a desktop or display"
+  ],
   "tags": [
     "tv",
     "screen",

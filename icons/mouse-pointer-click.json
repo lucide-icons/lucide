@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a click or selection action"
+  ],
   "tags": [
     "click",
     "select"

@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a hyperlink or connected items"
+  ],
   "tags": [
     "chain",
     "url"

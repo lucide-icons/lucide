@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing RAM or memory",
+    "Indicating hardware specs"
+  ],
   "tags": [
     "ram",
     "random access",

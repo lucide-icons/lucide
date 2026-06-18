@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Maximizing or entering fullscreen"
+  ],
   "tags": [
     "fullscreen",
     "arrows",

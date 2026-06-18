@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing out or logging out of an account"
+  ],
   "tags": [
     "sign out",
     "arrow",

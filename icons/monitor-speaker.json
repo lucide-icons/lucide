@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Connecting or casting to displays and speakers"
+  ],
   "tags": [
     "devices",
     "connect",

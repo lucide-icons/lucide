@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a map or navigation",
+    "Indicating travel or directions"
+  ],
   "tags": [
     "location",
     "navigation",

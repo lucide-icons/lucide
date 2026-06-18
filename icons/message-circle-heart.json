@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a liked or loving message"
+  ],
   "tags": [
     "comment",
     "chat",

@@ -4,7 +4,9 @@
     "kerkeslager",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing snowy mountains or alpine areas"
+  ],
   "tags": [
     "alpine",
     "climb",

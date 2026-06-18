@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a microwave or kitchen appliance",
+    "Indicating kitchen amenities in listings"
+  ],
   "tags": [
     "oven",
     "cooker",

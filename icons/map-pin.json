@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a location on a map"
+  ],
   "tags": [
     "location",
     "waypoint",

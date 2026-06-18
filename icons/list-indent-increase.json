@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Increasing the indentation of a list item"
+  ],
   "tags": [
     "text",
     "tab"

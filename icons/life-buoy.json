@@ -6,7 +6,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing help, support, or rescue",
+    "Indicating a safety or assistance feature"
+  ],
   "tags": [
     "preserver",
     "life belt",

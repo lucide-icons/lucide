@@ -6,7 +6,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing a neutral mood in feedback or ratings"
+  ],
   "tags": [
     "emoji",
     "face",

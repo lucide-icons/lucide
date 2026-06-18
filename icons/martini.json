@@ -6,7 +6,10 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing cocktails or a bar",
+    "Indicating alcoholic drinks on a menu"
+  ],
   "tags": [
     "cocktail",
     "alcohol",

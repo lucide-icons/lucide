@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating loading or a busy state"
+  ],
   "tags": [
     "loading",
     "wait",

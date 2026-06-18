@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling typographic ligatures in editors"
+  ],
   "tags": [
     "text",
     "font",

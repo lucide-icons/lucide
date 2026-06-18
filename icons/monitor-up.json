@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading or sharing a screen"
+  ],
   "tags": [
     "tv",
     "screen",

@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Subtracting or removing an item",
+    "Representing a minus operator or divider"
+  ],
   "tags": [
     "subtract",
     "remove",

@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a code review comment or discussion"
+  ],
   "tags": [
     "comment",
     "chat",

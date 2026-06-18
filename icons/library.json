@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a library or media collection"
+  ],
   "tags": [
     "books",
     "reading",

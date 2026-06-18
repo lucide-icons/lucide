@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a pinned or saved location on a map"
+  ],
   "tags": [
     "location",
     "waypoint",

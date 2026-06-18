@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking lactose-free or dairy-free options",
+    "Indicating a milk allergy"
+  ],
   "tags": [
     "lactose free",
     "bottle",

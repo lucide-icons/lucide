@@ -3,7 +3,9 @@
   "contributors": [
     "Shrinks99"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a message was sent or read"
+  ],
   "tags": [
     "comment",
     "chat",

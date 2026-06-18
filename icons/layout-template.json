@@ -4,7 +4,9 @@
     "mittalyashu",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a page template or layout"
+  ],
   "tags": [
     "window",
     "webpage",
