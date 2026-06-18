@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating roadworks or a construction zone"
+  ],
   "tags": [
     "roadworks",
     "tarmac",

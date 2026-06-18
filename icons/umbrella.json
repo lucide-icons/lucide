@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating rain or weather protection"
+  ],
   "tags": [
     "rain",
     "weather"

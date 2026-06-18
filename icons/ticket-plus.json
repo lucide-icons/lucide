@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding or booking a new ticket"
+  ],
   "tags": [
     "entry",
     "pass",

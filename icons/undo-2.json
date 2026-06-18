@@ -5,7 +5,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Undoing the last action"
+  ],
   "tags": [
     "redo",
     "rerun",

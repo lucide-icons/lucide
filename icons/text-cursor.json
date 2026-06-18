@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a text cursor or editing"
+  ],
   "tags": [
     "select",
     "caret",

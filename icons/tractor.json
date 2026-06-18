@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing farming or agriculture",
+    "Indicating a tractor or farm equipment"
+  ],
   "tags": [
     "farming",
     "farmer",

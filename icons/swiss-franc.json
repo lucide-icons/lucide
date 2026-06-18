@@ -4,7 +4,9 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing prices or amounts in Swiss francs"
+  ],
   "tags": [
     "currency",
     "money",

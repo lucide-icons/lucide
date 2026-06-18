@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing camping or a campsite"
+  ],
   "tags": [
     "camping",
     "campsite",

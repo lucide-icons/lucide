@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Voiding or invalidating a ticket"
+  ],
   "tags": [
     "entry",
     "pass",

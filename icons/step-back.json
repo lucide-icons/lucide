@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Stepping back to the previous item or frame"
+  ],
   "tags": [
     "arrow",
     "previous",

@@ -10,7 +10,10 @@
     "danielbayley",
     "jordan808"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing delivery or shipping",
+    "Indicating a truck or freight"
+  ],
   "tags": [
     "delivery",
     "van",

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing table properties or a key-value list"
+  ],
   "tags": [
     "property list",
     "plist",

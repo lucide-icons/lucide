@@ -5,7 +5,9 @@
     "GRA0007",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying a drop cap or initial letter style"
+  ],
   "tags": [
     "drop cap",
     "text",

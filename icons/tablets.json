@@ -5,7 +5,10 @@
     "it-is-not",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing tablets or medication",
+    "Indicating a pharmacy or pill reminder"
+  ],
   "tags": [
     "medicine",
     "medication",

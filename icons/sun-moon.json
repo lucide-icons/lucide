@@ -5,7 +5,10 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling between light and dark themes",
+    "Representing automatic theme switching"
+  ],
   "tags": [
     "dark",
     "light",

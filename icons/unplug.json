@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Disconnecting or unplugging a device"
+  ],
   "tags": [
     "electricity",
     "energy",

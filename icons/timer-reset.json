@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Resetting a timer or stopwatch"
+  ],
   "tags": [
     "time",
     "timer",

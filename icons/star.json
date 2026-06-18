@@ -4,7 +4,10 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Rating or favoriting an item",
+    "Marking a featured or starred item"
+  ],
   "tags": [
     "bookmark",
     "favorite",

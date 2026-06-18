@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding content vertically"
+  ],
   "tags": [
     "arrow",
     "expand",

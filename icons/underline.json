@@ -6,7 +6,9 @@
     "csandman",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying underline formatting in text editors"
+  ],
   "tags": [
     "text",
     "format"

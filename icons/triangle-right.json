@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a play or volume control",
+    "Indicating an increase or ramp"
+  ],
   "tags": [
     "volume",
     "controls",

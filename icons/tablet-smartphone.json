@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing responsive design across devices"
+  ],
   "tags": [
     "responsive",
     "screens",

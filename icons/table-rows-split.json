@@ -3,7 +3,9 @@
   "contributors": [
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Splitting rows in a table or spreadsheet"
+  ],
   "tags": [
     "spreadsheet",
     "grid",

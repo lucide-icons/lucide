@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Liking or rating something positively"
+  ],
   "tags": [
     "like",
     "good",

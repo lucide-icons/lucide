@@ -6,7 +6,9 @@
     "danielbayley",
     "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing multiple sticky notes or memos"
+  ],
   "tags": [
     "post-it",
     "annotation",

@@ -5,7 +5,9 @@
     "bduffany",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Lowering screen brightness"
+  ],
   "tags": [
     "brightness",
     "dim",

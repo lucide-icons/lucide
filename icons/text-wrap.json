@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Toggling text wrapping in editors"
+  ],
   "tags": [
     "words",
     "lines",

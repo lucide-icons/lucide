@@ -7,7 +7,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a tag, label, or price tag"
+  ],
   "tags": [
     "label",
     "badge",

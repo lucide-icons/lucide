@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or canceling a ticket"
+  ],
   "tags": [
     "entry",
     "pass",

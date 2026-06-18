@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a palm tree, beach, or vacation"
+  ],
   "tags": [
     "vacation",
     "leisure",

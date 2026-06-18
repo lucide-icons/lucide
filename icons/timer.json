@@ -4,7 +4,9 @@
     "ahtohbi4",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a timer or stopwatch"
+  ],
   "tags": [
     "time",
     "timer",

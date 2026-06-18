@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a ticket, pass, or event entry"
+  ],
   "tags": [
     "entry",
     "pass",

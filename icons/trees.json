@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing trees, a forest, or nature"
+  ],
   "tags": [
     "tree",
     "forest",

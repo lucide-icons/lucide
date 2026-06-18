@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing train tracks or a rail line"
+  ],
   "tags": [
     "railway",
     "line"

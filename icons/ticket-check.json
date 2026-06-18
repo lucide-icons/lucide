@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a valid or used ticket"
+  ],
   "tags": [
     "entry",
     "pass",

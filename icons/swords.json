@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing combat, a battle, or PvP in games"
+  ],
   "tags": [
     "battle",
     "challenge",

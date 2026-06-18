@@ -6,7 +6,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a text input field"
+  ],
   "tags": [
     "select"
   ],

@@ -6,7 +6,9 @@
     "danielbayley",
     "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a sticky note"
+  ],
   "tags": [
     "post-it",
     "comment",

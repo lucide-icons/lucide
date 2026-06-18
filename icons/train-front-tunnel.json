@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a train entering a tunnel or a metro"
+  ],
   "tags": [
     "railway",
     "metro",

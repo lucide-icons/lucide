@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Stepping forward to the next item or frame"
+  ],
   "tags": [
     "arrow",
     "next",

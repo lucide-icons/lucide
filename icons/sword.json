@@ -5,7 +5,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a sword, battle, or weapon in games"
+  ],
   "tags": [
     "battle",
     "challenge",

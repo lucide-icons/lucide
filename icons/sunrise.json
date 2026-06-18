@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing sunrise or morning"
+  ],
   "tags": [
     "weather",
     "time",

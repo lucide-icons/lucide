@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing slowness or a slow mode",
+    "Indicating a turtle or tortoise"
+  ],
   "tags": [
     "animal",
     "pet",

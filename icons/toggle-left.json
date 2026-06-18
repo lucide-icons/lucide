@@ -6,7 +6,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an off toggle switch"
+  ],
   "tags": [
     "on",
     "off",

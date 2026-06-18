@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Switching between front and back cameras"
+  ],
   "tags": [
     "photo",
     "selfie",

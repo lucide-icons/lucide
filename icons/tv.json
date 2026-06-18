@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a TV or streaming display",
+    "Indicating broadcast or live channels"
+  ],
   "tags": [
     "television",
     "stream",

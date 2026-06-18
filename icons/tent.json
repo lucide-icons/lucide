@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a tent or camping"
+  ],
   "tags": [
     "tipi",
     "teepee",

@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a half-star rating",
+    "Indicating a partial rating or review"
+  ],
   "tags": [
     "bookmark",
     "favorite",

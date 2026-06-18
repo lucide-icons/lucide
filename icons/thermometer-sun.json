@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating warm or hot temperatures"
+  ],
   "tags": [
     "temperature",
     "celsius",

@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Aligning text to the center"
+  ],
   "tags": [
     "text",
     "alignment",

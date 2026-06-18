@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a table or spreadsheet"
+  ],
   "tags": [
     "spreadsheet",
     "grid"

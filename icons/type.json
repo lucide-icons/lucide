@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing text, fonts, or typography"
+  ],
   "tags": [
     "text",
     "font",

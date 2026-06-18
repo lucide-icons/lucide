@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a test tube or lab experiment"
+  ],
   "tags": [
     "tube",
     "vial",

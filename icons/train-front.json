@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a train or rail travel"
+  ],
   "tags": [
     "railway",
     "metro",

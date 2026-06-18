@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a test tube or lab experiment"
+  ],
   "tags": [
     "tube",
     "vial",

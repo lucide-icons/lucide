@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Deleting an item or moving it to the trash"
+  ],
   "tags": [
     "garbage",
     "delete",

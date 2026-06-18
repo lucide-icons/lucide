@@ -6,7 +6,9 @@
     "danielbayley",
     "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a sticky note or task as done"
+  ],
   "tags": [
     "post-it",
     "comment",

@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a tablet device"
+  ],
   "tags": [
     "device"
   ],

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Ungrouping or separating combined elements"
+  ],
   "tags": [
     "cubes",
     "packages",

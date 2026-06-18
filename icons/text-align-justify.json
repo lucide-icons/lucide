@@ -5,7 +5,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Justifying text alignment"
+  ],
   "tags": [
     "text",
     "alignment",

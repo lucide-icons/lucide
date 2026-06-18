@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding content horizontally"
+  ],
   "tags": [
     "arrow",
     "collapse",

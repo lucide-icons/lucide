@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Undoing or stepping back an action"
+  ],
   "tags": [
     "redo",
     "history",

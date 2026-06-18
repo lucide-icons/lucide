@@ -5,7 +5,9 @@
     "johnletey",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying strikethrough formatting in text editors"
+  ],
   "tags": [
     "cross out",
     "delete",

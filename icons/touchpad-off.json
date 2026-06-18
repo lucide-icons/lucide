@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating the touchpad is disabled"
+  ],
   "tags": [
     "trackpad",
     "cursor"

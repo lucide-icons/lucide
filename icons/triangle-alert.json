@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing a warning or caution"
+  ],
   "tags": [
     "warning",
     "alert",

@@ -6,7 +6,9 @@
     "danielbayley",
     "Barakudum"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a hidden or disabled sticky note"
+  ],
   "tags": [
     "post-it",
     "comment",

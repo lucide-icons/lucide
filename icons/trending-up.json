@@ -4,7 +4,9 @@
     "colebemis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an upward trend in data"
+  ],
   "tags": [
     "statistics"
   ],

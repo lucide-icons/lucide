@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a TV or streaming display"
+  ],
   "tags": [
     "flatscreen",
     "television",

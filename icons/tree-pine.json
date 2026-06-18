@@ -5,7 +5,9 @@
     "jguddas",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a pine tree or forest"
+  ],
   "tags": [
     "tree",
     "pine",
