@@ -27,6 +27,10 @@ npm install lucide@next
 bun add lucide@next
 ```
 
+```sh [deno]
+deno add lucide@next
+```
+
 :::
 
 For more details, see the [documentation](./lucide/index.md).
@@ -51,6 +55,10 @@ npm install lucide-react@next
 
 ```sh [bun]
 bun add lucide-react@next
+```
+
+```sh [deno]
+deno add lucide-react@next
 ```
 
 :::
@@ -80,6 +88,10 @@ npm install @lucide/vue
 bun add @lucide/vue
 ```
 
+```sh [deno]
+deno add @lucide/vue
+```
+
 :::
 
 For more details, see the [documentation](./vue/index.md).
@@ -104,6 +116,10 @@ npm install @lucide/svelte@next
 
 ```sh [bun]
 bun add @lucide/svelte@next
+```
+
+```sh [deno]
+deno add @lucide/svelte@next
 ```
 :::
 > `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
@@ -132,6 +148,10 @@ npm install lucide-solid@next
 bun add lucide-solid@next
 ```
 
+```sh [deno]
+deno add lucide-solid@next
+```
+
 :::
 
 For more details, see the [documentation](./solid/index.md).
@@ -158,6 +178,10 @@ npm install @lucide/angular
 bun add @lucide/angular
 ```
 
+```sh [deno]
+deno add @lucide/angular
+```
+
 :::
 
 For more details, see the [documentation](./angular/index.md).
@@ -182,6 +206,10 @@ npm install lucide-preact@next
 
 ```sh [bun]
 bun add lucide-preact@next
+```
+
+```sh [deno]
+deno add lucide-preact@next
 ```
 
 
@@ -211,6 +239,10 @@ npm install @lucide/astro@next
 bun add @lucide/astro@next
 ```
 
+```sh [deno]
+deno add @lucide/astro@next
+```
+
 :::
 
 For more details, see the [documentation](./astro/index.md).
@@ -235,6 +267,10 @@ npm install lucide-static@next
 
 ```sh [bun]
 bun add lucide-static@next
+```
+
+```sh [deno]
+deno add lucide-static@next
 ```
 
 :::
