@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expanding horizontally collapsible content such as sidebars or offcanvas panels"
+  ],
   "tags": [
     "expand",
     "horizontal",

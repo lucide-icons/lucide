@@ -8,7 +8,10 @@
     "jguddas",
     "lscheibel"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a document is in sync with the cloud",
+    "Indicating successful cloud storage or backup"
+  ],
   "tags": [
     "sync",
     "network",

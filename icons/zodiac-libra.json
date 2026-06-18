@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Libra sign in astrology or dating apps"
+  ],
   "tags": [
     "scales",
     "balance",

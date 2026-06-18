@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the king piece in chess applications",
+    "Illustrating chess educational materials or algebraic notation"
+  ],
   "tags": [
     "ruler",
     "crown",

@@ -6,7 +6,10 @@
     "danielbayley",
     "LieOnLion"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying prices or amounts in British pounds",
+    "Offering GBP as a currency option"
+  ],
   "tags": [
     "monetization",
     "coin",

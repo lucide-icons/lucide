@@ -4,7 +4,10 @@
     "jordan808",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing stories, as popularized by social media apps",
+    "Letting users create or add a new story"
+  ],
   "tags": [
     "stories",
     "social media",

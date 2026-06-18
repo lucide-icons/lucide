@@ -5,7 +5,11 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Customizing table columns in settings panels",
+    "Editing column layouts in grid-based design tools",
+    "Adjusting column preferences in dashboards or data tables"
+  ],
   "tags": [
     "columns",
     "settings",

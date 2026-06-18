@@ -3,7 +3,11 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Listing archery among sports or Olympic events",
+    "Showing available activities at an activity centre",
+    "Denoting an archer class or ranged weapons in games"
+  ],
   "tags": [
     "archer",
     "archery",

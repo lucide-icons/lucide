@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing citrus fruits or fruit in general",
+    "Indicating citrusy notes in cocktails, taste, or smell"
+  ],
   "tags": [
     "lemon",
     "orange",

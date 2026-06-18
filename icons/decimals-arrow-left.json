@@ -4,7 +4,9 @@
     "AnnaSasDev",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Decreasing decimal precision in spreadsheets or financial reports"
+  ],
   "tags": [
     "numerical",
     "decimal",

@@ -5,7 +5,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying Gantt charts and project timelines"
+  ],
   "tags": [
     "diagram",
     "graph",

@@ -3,7 +3,10 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Serving as a bullet point",
+    "Representing a gender-neutral option in profile settings"
+  ],
   "tags": [
     "shape",
     "bullet",

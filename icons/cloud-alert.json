@@ -8,7 +8,10 @@
     "lscheibel",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an issue with cloud synchronization",
+    "Signaling an extreme weather warning"
+  ],
   "tags": [
     "weather",
     "danger",

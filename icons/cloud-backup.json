@@ -6,7 +6,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Backing up data to the cloud",
+    "Representing a restore point or cloud copy of local data"
+  ],
   "tags": [
     "storage",
     "memory",

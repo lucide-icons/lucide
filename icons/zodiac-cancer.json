@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Cancer sign in astrology or dating apps"
+  ],
   "tags": [
     "crab",
     "shell",

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an issue or item in progress",
+    "Indicating more options are available"
+  ],
   "tags": [
     "ellipsis",
     "et cetera",
