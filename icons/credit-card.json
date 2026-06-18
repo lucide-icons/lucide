@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing card payments or checkout",
+    "Managing payment methods"
+  ],
   "tags": [
     "bank",
     "purchase",

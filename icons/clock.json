@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing time, a clock, or a timer",
+    "Showing the current time"
+  ],
   "tags": [
     "time",
     "watch",

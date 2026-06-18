@@ -4,7 +4,9 @@
     "it-is-not",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating daytime rain showers in weather apps"
+  ],
   "tags": [
     "weather",
     "partly",

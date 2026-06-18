@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a CD, DVD, or disc",
+    "Indicating music or DJ playback"
+  ],
   "tags": [
     "album",
     "music",

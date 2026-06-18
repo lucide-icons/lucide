@@ -4,7 +4,10 @@
     "colebemis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Accessing settings or preferences",
+    "Representing configuration or controls"
+  ],
   "tags": [
     "computing",
     "settings",

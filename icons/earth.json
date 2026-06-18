@@ -5,7 +5,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the world or a global view",
+    "Indicating language or region settings"
+  ],
   "tags": [
     "world",
     "browser",

@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Cropping an image in editing tools"
+  ],
   "tags": [
     "photo",
     "image"

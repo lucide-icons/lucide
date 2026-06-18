@@ -6,7 +6,10 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing royalty, a winner, or premium status",
+    "Marking a top or favorite item"
+  ],
   "tags": [
     "diadem",
     "tiara",

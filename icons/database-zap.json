@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Clearing a cache or flushing a database",
+    "Indicating a fast or in-memory database"
+  ],
   "tags": [
     "cache busting",
     "storage",

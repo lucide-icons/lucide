@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating more options or an overflow menu",
+    "Representing loading or a pending state"
+  ],
   "tags": [
     "et cetera",
     "etc",

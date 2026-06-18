@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "lukedukeus"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a locked door or secured entrance"
+  ],
   "tags": [
     "entrance",
     "entry",

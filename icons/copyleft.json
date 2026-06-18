@@ -5,7 +5,9 @@
     "johnletey",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a copyleft license"
+  ],
   "tags": [
     "licence"
   ],

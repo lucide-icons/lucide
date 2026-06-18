@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading a file to the cloud"
+  ],
   "tags": [
     "file"
   ],

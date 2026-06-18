@@ -6,7 +6,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the Command key on a Mac keyboard"
+  ],
   "tags": [
     "keyboard",
     "key",

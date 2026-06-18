@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a return or enter key",
+    "Indicating a downward-left turn"
+  ],
   "tags": [
     "arrow",
     "return"

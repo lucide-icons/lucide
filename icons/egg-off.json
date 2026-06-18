@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking egg-free or vegan dishes",
+    "Indicating an egg allergy"
+  ],
   "tags": [
     "egg free",
     "vegan",

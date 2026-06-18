@@ -4,7 +4,10 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing aim, targeting, or focus",
+    "Indicating a precise location"
+  ],
   "tags": [
     "aim",
     "target"

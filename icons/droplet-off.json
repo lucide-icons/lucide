@@ -8,7 +8,9 @@
     "jguddas",
     "Footagesus"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating no water or a dry state"
+  ],
   "tags": [
     "water",
     "weather",

@@ -3,7 +3,9 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Opening a vertical overflow menu of more options"
+  ],
   "tags": [
     "menu",
     "options",

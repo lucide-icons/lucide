@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing chicken or meat dishes",
+    "Categorizing poultry on a menu"
+  ],
   "tags": [
     "food",
     "chicken",

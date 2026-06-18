@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating copying is unavailable or disabled"
+  ],
   "tags": [
     "clone",
     "duplicate",

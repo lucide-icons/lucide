@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing desserts or sweets",
+    "Categorizing desserts on a menu"
+  ],
   "tags": [
     "pudding",
     "christmas",

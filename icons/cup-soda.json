@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a soft drink or beverage",
+    "Indicating drinks on a menu"
+  ],
   "tags": [
     "beverage",
     "cup",

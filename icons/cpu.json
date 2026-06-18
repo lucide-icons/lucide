@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a CPU or processor",
+    "Indicating hardware specs or performance"
+  ],
   "tags": [
     "processor",
     "cores",

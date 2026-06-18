@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating overcast or cloudy weather"
+  ],
   "tags": [
     "weather",
     "clouds"

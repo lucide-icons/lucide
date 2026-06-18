@@ -6,7 +6,9 @@
     "jguddas",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a music album, CD, or disc"
+  ],
   "tags": [
     "album",
     "music",

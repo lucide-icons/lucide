@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the backspace or delete key"
+  ],
   "tags": [
     "backspace",
     "remove"

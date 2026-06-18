@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing money, coins, or currency",
+    "Indicating in-game currency or savings"
+  ],
   "tags": [
     "money",
     "cash",

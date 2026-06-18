@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a desktop computer or PC"
+  ],
   "tags": [
     "pc",
     "chassis",

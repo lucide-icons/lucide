@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Canceling or clearing a copy action"
+  ],
   "tags": [
     "cancel",
     "close",

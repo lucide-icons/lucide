@@ -4,7 +4,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing division on a calculator button"
+  ],
   "tags": [
     "calculate",
     "math",

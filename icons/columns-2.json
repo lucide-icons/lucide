@@ -6,7 +6,9 @@
     "csandman",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Splitting a layout into two columns"
+  ],
   "tags": [
     "lines",
     "list",

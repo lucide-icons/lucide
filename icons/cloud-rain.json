@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating rain in weather apps"
+  ],
   "tags": [
     "weather",
     "rainfall"

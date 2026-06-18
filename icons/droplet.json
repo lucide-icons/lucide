@@ -6,7 +6,10 @@
     "csandman",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing water, liquid, or humidity",
+    "Indicating a drop or moisture level"
+  ],
   "tags": [
     "water",
     "weather",

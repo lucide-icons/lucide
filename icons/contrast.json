@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adjusting display contrast",
+    "Toggling a high-contrast accessibility mode"
+  ],
   "tags": [
     "display",
     "accessibility"

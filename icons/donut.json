@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a doughnut or sweet snack",
+    "Categorizing desserts or treats"
+  ],
   "tags": [
     "doughnut",
     "sprinkles",

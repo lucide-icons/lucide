@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Comparing differences between versions",
+    "Representing a diff or patch"
+  ],
   "tags": [
     "patch",
     "difference",

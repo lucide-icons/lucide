@@ -6,7 +6,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing eggs or breakfast",
+    "Indicating an Easter theme"
+  ],
   "tags": [
     "bird",
     "chicken",

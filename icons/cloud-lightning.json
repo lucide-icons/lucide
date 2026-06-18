@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating thunderstorms or lightning in weather apps"
+  ],
   "tags": [
     "weather",
     "bolt"

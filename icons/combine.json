@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Combining or merging multiple items"
+  ],
   "tags": [
     "cubes",
     "packages",

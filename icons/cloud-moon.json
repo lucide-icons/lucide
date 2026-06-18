@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating partly cloudy skies at night in weather apps"
+  ],
   "tags": [
     "weather",
     "night"

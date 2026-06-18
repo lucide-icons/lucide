@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a dot, bullet, or step",
+    "Indicating a status or separator"
+  ],
   "tags": [
     "interpunct",
     "interpoint",

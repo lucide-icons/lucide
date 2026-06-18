@@ -8,7 +8,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing coffee, tea, or a cafe",
+    "Indicating a break or hot beverage"
+  ],
   "tags": [
     "drink",
     "cup",

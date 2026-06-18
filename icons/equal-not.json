@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a not-equal operator in math or code"
+  ],
   "tags": [
     "calculate",
     "off",

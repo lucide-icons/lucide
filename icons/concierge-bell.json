@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing hotel reception or concierge service",
+    "Requesting assistance or room service"
+  ],
   "tags": [
     "reception",
     "bell",

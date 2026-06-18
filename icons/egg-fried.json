@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a fried egg or breakfast"
+  ],
   "tags": [
     "food",
     "breakfast"

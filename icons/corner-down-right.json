@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indenting content or indicating a downward-right turn"
+  ],
   "tags": [
     "arrow",
     "indent",

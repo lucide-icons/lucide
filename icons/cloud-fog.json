@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating fog or mist in weather apps"
+  ],
   "tags": [
     "weather",
     "mist"

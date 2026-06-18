@@ -4,7 +4,10 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a compass or directions",
+    "Indicating navigation or exploration"
+  ],
   "tags": [
     "direction",
     "north",

@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a copy or collapsing duplicates"
+  ],
   "tags": [
     "clone",
     "duplicate",

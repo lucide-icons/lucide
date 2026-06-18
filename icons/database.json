@@ -4,7 +4,10 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a database or data storage",
+    "Indicating servers or backend data"
+  ],
   "tags": [
     "storage",
     "memory",

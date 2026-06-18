@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading a file from the cloud"
+  ],
   "tags": [
     "import"
   ],

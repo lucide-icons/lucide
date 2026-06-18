@@ -4,7 +4,10 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing source code or markup",
+    "Indicating an HTML or XML file"
+  ],
   "tags": [
     "source",
     "programming",

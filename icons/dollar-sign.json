@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing money or prices in dollars",
+    "Indicating a payment or cost"
+  ],
   "tags": [
     "currency",
     "money",

@@ -6,7 +6,9 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the time at nine o'clock"
+  ],
   "tags": [
     "time",
     "watch",

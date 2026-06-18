@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Configuring cloud computing settings",
+    "Managing cloud infrastructure or clusters"
+  ],
   "tags": [
     "computing",
     "ai",

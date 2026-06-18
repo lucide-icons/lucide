@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a shipping container or freight",
+    "Indicating a Docker container or environment"
+  ],
   "tags": [
     "storage",
     "shipping",

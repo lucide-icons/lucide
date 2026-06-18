@@ -4,7 +4,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing a die displaying six",
+    "Representing a random roll in games"
+  ],
   "tags": [
     "dice",
     "random",

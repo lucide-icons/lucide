@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing clouds or cloudy weather",
+    "Indicating cloud storage or services"
+  ],
   "tags": [
     "weather"
   ],

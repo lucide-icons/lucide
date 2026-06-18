@@ -6,7 +6,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating drizzle or light rain in weather apps"
+  ],
   "tags": [
     "weather",
     "shower"

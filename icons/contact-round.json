@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a contact card or address book entry"
+  ],
   "tags": [
     "user",
     "person",

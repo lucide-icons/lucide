@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking GMO-free products",
+    "Indicating the absence of genetic modification"
+  ],
   "tags": [
     "gene",
     "gmo free",

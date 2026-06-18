@@ -5,7 +5,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating nighttime rain showers in weather apps"
+  ],
   "tags": [
     "weather",
     "partly",

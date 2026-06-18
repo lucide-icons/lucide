@@ -4,7 +4,9 @@
     "connium",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing currency or money in general"
+  ],
   "tags": [
     "finance",
     "money"

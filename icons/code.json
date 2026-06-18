@@ -3,7 +3,10 @@
   "contributors": [
     "colebemis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing source code or programming",
+    "Indicating a code snippet or view"
+  ],
   "tags": [
     "source",
     "programming",

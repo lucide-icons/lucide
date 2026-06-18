@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing drums or percussion",
+    "Indicating a musical instrument or beat"
+  ],
   "tags": [
     "drummer",
     "kit",

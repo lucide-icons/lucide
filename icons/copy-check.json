@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming content was copied"
+  ],
   "tags": [
     "clone",
     "duplicate",
