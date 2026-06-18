@@ -4,7 +4,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Applying italic formatting in text editors"
+  ],
   "tags": [
     "oblique",
     "text",

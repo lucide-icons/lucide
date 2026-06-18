@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing multiple folders or directories"
+  ],
   "tags": [
     "multiple",
     "copy",

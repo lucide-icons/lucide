@@ -5,7 +5,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting elements freely with a lasso tool"
+  ],
   "tags": [
     "select",
     "cursor"

@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a pull request"
+  ],
   "tags": [
     "code",
     "version control",

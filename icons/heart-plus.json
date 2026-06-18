@@ -9,7 +9,9 @@
     "Ayberkyvs",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding an item to favorites or liking it"
+  ],
   "tags": [
     "plus",
     "like",

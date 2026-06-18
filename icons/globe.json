@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the world or internet",
+    "Indicating language or region settings"
+  ],
   "tags": [
     "world",
     "browser",

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Comparing git branches or commits"
+  ],
   "tags": [
     "code",
     "version control",

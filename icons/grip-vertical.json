@@ -4,7 +4,9 @@
     "ericfennis",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Providing a vertical drag handle for reordering"
+  ],
   "tags": [
     "grab",
     "dots",

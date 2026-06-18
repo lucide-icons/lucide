@@ -6,7 +6,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a password, key, or login",
+    "Indicating authentication or access"
+  ],
   "tags": [
     "password",
     "login",

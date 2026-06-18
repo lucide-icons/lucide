@@ -7,7 +7,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a new filter"
+  ],
   "tags": [
     "filter",
     "hopper",

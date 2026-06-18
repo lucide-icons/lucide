@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Providing a horizontal drag handle for reordering"
+  ],
   "tags": [
     "grab",
     "dots",

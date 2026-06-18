@@ -4,7 +4,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a home or main page",
+    "Indicating a residence or property"
+  ],
   "tags": [
     "home",
     "living",

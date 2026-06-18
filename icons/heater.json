@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling a heater in smart home apps",
+    "Indicating heating amenities"
+  ],
   "tags": [
     "heating",
     "warmth",

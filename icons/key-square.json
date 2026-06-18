@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a key or login",
+    "Indicating authentication or access"
+  ],
   "tags": [
     "password",
     "login",

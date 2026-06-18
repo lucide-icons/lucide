@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an inbox or incoming messages"
+  ],
   "tags": [
     "email"
   ],

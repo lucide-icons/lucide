@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing education or graduation",
+    "Indicating a school or course"
+  ],
   "tags": [
     "school",
     "university",

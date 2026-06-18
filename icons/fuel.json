@@ -5,7 +5,10 @@
     "ericfennis",
     "UsamaKhan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a fuel station or fuel level",
+    "Marking gas stations on a map"
+  ],
   "tags": [
     "filling-station",
     "gas",

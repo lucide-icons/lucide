@@ -3,7 +3,10 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a hand cursor or gesture",
+    "Indicating a draggable or interactive element"
+  ],
   "tags": [
     "wave",
     "move",

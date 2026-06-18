@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a 2x2 grid layout",
+    "Indicating a grid view"
+  ],
   "tags": [
     "table",
     "rows",

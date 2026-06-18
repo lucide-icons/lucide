@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a git commit graph"
+  ],
   "tags": [
     "code",
     "version control",

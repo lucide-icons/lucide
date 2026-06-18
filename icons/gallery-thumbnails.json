@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a thumbnail gallery or carousel"
+  ],
   "tags": [
     "carousel",
     "pictures",

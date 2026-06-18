@@ -3,7 +3,9 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing prices or amounts in Japanese yen"
+  ],
   "tags": [
     "currency",
     "money",

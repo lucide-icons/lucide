@@ -3,7 +3,10 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a horizontal image carousel",
+    "Indicating version history or backups"
+  ],
   "tags": [
     "carousel",
     "pictures",

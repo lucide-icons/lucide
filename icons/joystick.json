@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a joystick or game controller",
+    "Indicating game controls"
+  ],
   "tags": [
     "game",
     "console",

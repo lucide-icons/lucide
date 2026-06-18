@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a hard drive or local storage",
+    "Indicating storage or backups"
+  ],
   "tags": [
     "computer",
     "server",

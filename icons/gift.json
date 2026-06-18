@@ -7,7 +7,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a gift or present",
+    "Indicating a reward or special offer"
+  ],
   "tags": [
     "present",
     "box",

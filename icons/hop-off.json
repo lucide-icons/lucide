@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking hop-free or gluten-free beers",
+    "Indicating a hop allergy"
+  ],
   "tags": [
     "beer",
     "brewery",

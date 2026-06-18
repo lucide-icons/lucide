@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading data from a drive"
+  ],
   "tags": [
     "computer",
     "server",

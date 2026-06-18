@@ -6,7 +6,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing dissatisfaction in feedback or ratings",
+    "Representing a sad mood"
+  ],
   "tags": [
     "emoji",
     "face",

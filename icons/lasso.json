@@ -6,7 +6,9 @@
     "csandman",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting an area freely with a lasso tool"
+  ],
   "tags": [
     "select",
     "cursor"

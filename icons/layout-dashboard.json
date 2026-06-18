@@ -4,7 +4,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a dashboard layout"
+  ],
   "tags": [
     "masonry",
     "brick"

@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a layout with a left panel"
+  ],
   "tags": [
     "app",
     "home",

@@ -4,7 +4,9 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a kanban board or project view"
+  ],
   "tags": [
     "projects",
     "manage",

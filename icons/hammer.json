@@ -5,7 +5,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing tools, building, or repairs",
+    "Indicating construction or DIY"
+  ],
   "tags": [
     "mallet",
     "nails",

@@ -4,7 +4,10 @@
     "ahtohbi4",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing glasses or reading",
+    "Indicating a vision or reading mode"
+  ],
   "tags": [
     "glasses",
     "spectacles"

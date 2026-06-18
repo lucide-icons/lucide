@@ -4,7 +4,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a guitar or music",
+    "Indicating a musical instrument"
+  ],
   "tags": [
     "acoustic",
     "instrument",

@@ -5,7 +5,10 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a hexagon shape",
+    "Serving as a building block or node marker"
+  ],
   "tags": [
     "shape",
     "node.js",

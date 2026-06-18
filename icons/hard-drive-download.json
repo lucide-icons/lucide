@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Downloading or saving data to a drive"
+  ],
   "tags": [
     "computer",
     "server",

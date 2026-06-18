@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an HDMI port or connection"
+  ],
   "tags": [
     "socket",
     "plug",

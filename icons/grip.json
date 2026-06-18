@@ -4,7 +4,9 @@
     "koole",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Providing a drag handle to move an element"
+  ],
   "tags": [
     "grab",
     "dots",

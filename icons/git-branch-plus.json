@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Creating a new git branch"
+  ],
   "tags": [
     "code",
     "version control",

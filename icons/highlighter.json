@@ -5,7 +5,9 @@
     "Andreto",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Highlighting or marking text"
+  ],
   "tags": [
     "mark",
     "text"

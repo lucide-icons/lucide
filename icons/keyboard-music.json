@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a music keyboard or MIDI controller",
+    "Indicating a piano or studio instrument"
+  ],
   "tags": [
     "music",
     "audio",

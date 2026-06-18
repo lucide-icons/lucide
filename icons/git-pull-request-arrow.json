@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an open pull request"
+  ],
   "tags": [
     "code",
     "version control",

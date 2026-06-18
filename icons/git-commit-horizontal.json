@@ -5,7 +5,10 @@
     "ericfennis",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a git commit",
+    "Indicating a point on a timeline"
+  ],
   "tags": [
     "code",
     "version control",

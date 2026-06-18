@@ -4,7 +4,9 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Syncing or backing up a folder"
+  ],
   "tags": [
     "directory",
     "synchronize",

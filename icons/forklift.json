@@ -4,7 +4,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a forklift or warehouse operations",
+    "Indicating logistics or material handling"
+  ],
   "tags": [
     "machinery",
     "industrial",

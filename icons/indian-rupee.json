@@ -4,7 +4,9 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing prices or amounts in Indian rupees"
+  ],
   "tags": [
     "currency",
     "money",

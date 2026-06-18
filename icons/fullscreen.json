@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Entering fullscreen mode"
+  ],
   "tags": [
     "expand",
     "zoom",

@@ -5,7 +5,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a gem, jewel, or premium item",
+    "Indicating something valuable or special"
+  ],
   "tags": [
     "diamond",
     "crystal",

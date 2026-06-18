@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a new image"
+  ],
   "tags": [
     "add",
     "create",

@@ -4,7 +4,9 @@
     "ericfennis",
     "csandman"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a laptop or computer"
+  ],
   "tags": [
     "computer",
     "screen",

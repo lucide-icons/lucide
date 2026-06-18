@@ -6,7 +6,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a git branch"
+  ],
   "tags": [
     "code",
     "version control",

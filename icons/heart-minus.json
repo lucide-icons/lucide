@@ -8,7 +8,9 @@
     "Ayberkyvs",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing an item from favorites or unliking it"
+  ],
   "tags": [
     "unlike",
     "unfavorite",

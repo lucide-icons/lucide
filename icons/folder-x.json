@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing or deleting a folder"
+  ],
   "tags": [
     "directory",
     "remove",

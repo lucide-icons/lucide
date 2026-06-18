@@ -5,7 +5,9 @@
     "jguddas",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing help, support, or charity"
+  ],
   "tags": [
     "agreement",
     "help",

@@ -4,7 +4,9 @@
     "Andreto",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing construction or safety gear"
+  ],
   "tags": [
     "helmet",
     "construction",

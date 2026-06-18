@@ -3,7 +3,9 @@
   "contributors": [
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a vertical image carousel or gallery"
+  ],
   "tags": [
     "carousel",
     "pictures",

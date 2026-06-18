@@ -5,7 +5,9 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Forwarding an email or message"
+  ],
   "tags": [
     "send",
     "share",

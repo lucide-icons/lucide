@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing headphones or audio",
+    "Indicating music or a listening mode"
+  ],
   "tags": [
     "music",
     "audio",

@@ -4,7 +4,10 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a ghost or spooky theme",
+    "Indicating an anonymous or hidden mode"
+  ],
   "tags": [
     "pac-man",
     "spooky"

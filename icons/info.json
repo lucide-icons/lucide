@@ -5,7 +5,10 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing additional information or help",
+    "Indicating a tooltip or notice"
+  ],
   "tags": [
     "about",
     "advice",

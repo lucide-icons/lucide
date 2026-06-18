@@ -6,7 +6,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing ice cream or a dessert bowl"
+  ],
   "tags": [
     "gelato",
     "food",

@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing beer, hops, or breweries"
+  ],
   "tags": [
     "beer",
     "brewery",

@@ -6,7 +6,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing law, justice, or a court",
+    "Indicating a ruling or auction"
+  ],
   "tags": [
     "justice",
     "law",

@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uploading or moving a folder up"
+  ],
   "tags": [
     "directory",
     "upload",

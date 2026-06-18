@@ -5,7 +5,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing layers in design or editing tools",
+    "Indicating stacked elements"
+  ],
   "tags": [
     "stack",
     "pile",

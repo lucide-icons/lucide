@@ -4,7 +4,9 @@
     "mittalyashu",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing rock music or a rock-on gesture"
+  ],
   "tags": [
     "rock"
   ],

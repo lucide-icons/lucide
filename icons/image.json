@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an image or photo",
+    "Inserting a picture"
+  ],
   "tags": [
     "picture",
     "photo"

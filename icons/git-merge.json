@@ -5,7 +5,9 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Merging a git branch"
+  ],
   "tags": [
     "code",
     "version control"

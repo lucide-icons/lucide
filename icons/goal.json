@@ -4,7 +4,9 @@
     "guillermo-angeles",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a goal or target"
+  ],
   "tags": [
     "flag",
     "bullseye"
