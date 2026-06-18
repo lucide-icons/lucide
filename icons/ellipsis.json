@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "et cetera",
     "etc",
@@ -31,6 +32,11 @@
     "development"
   ],
   "aliases": [
-    "more-horizontal"
+    {
+      "name": "more-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

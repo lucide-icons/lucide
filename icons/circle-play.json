@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis"
+    "colebemis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "start",
@@ -12,6 +14,11 @@
     "multimedia"
   ],
   "aliases": [
-    "play-circle"
+    {
+      "name": "play-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

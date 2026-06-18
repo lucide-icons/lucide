@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "lines",
     "list",
@@ -34,6 +35,11 @@
     "text"
   ],
   "aliases": [
-    "panels-left-right"
+    {
+      "name": "panels-left-right",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

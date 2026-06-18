@@ -10,7 +10,7 @@ import type { IconNode, LucideIcon, LucideProps } from './types';
  * @returns {FunctionComponent} LucideIcon
  */
 const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
-  const Component = ({ class: classes = '', children, ...props }: LucideProps) =>
+  const Component = ({ class: classes = '', className = '', children, ...props }: LucideProps) =>
     h(
       Icon,
       {
@@ -20,6 +20,7 @@ const createLucideIcon = (iconName: string, iconNode: IconNode): LucideIcon => {
           `lucide-${toKebabCase(toPascalCase(iconName))}`,
           `lucide-${toKebabCase(iconName)}`,
           classes,
+          className,
         ),
       },
       children,

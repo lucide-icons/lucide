@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "projects",
     "manage",
@@ -28,6 +29,11 @@
     "design"
   ],
   "aliases": [
-    "kanban-square-dashed"
+    {
+      "name": "kanban-square-dashed",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

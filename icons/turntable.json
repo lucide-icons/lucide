@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "record player",
+    "gramophone",
+    "stereo",
+    "phonograph",
+    "vinyl",
+    "lp",
+    "disc",
+    "platter",
+    "cut",
+    "music",
+    "analog",
+    "retro",
+    "dj deck",
+    "disc jockey",
+    "scratch",
+    "spinning"
+  ],
+  "categories": [
+    "multimedia",
+    "home"
+  ]
+}

@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "token",
