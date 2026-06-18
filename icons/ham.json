@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signifying pork or cured meats",
+    "Indicating that a dish is not halal or kosher"
+  ],
   "tags": [
     "food",
     "pork",

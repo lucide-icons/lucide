@@ -3,7 +3,9 @@
   "contributors": [
     "joris-gallot"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Deleting a git branch"
+  ],
   "tags": [
     "code",
     "version control",

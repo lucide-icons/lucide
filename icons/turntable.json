@@ -3,7 +3,11 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing vinyl collecting or analog music apps",
+    "Indicating DJ mixing tools or live performance interfaces",
+    "Visualizing music playback setups in audio players"
+  ],
   "tags": [
     "record player",
     "gramophone",

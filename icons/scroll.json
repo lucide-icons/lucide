@@ -5,7 +5,10 @@
     "jguddas",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing logs or log entries",
+    "Symbolizing scrolls, documents, or history"
+  ],
   "tags": [
     "paper",
     "log",

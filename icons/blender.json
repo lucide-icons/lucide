@@ -3,7 +3,10 @@
   "contributors": [
     "rrod497"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a blender is required in recipe instructions",
+    "Showing kitchen appliance availability in hotel or homestay listings"
+  ],
   "tags": [
     "mixer",
     "appliances",

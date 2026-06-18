@@ -7,7 +7,11 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating offline mode or disabled web access",
+    "Signaling a network error",
+    "Toggling off a web search mode, e.g. in AI chat"
+  ],
   "tags": [
     "globe",
     "earth",

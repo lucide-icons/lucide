@@ -3,7 +3,9 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Silencing alerts, ads, or announcements"
+  ],
   "tags": [
     "advertisement",
     "announcement",

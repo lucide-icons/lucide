@@ -6,7 +6,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Exporting or downloading something as an image"
+  ],
   "tags": [
     "picture",
     "photo",

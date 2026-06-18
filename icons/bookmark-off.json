@@ -10,7 +10,10 @@
     "swastik7805",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an unbookmarked or disabled bookmark state in reading apps",
+    "Showing that bookmarking is unavailable, without implying deletion"
+  ],
   "tags": [
     "unsaved",
     "unfavorite",

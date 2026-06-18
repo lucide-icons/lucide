@@ -7,7 +7,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a merge conflict in a git workflow"
+  ],
   "tags": [
     "code",
     "version control",

@@ -4,7 +4,10 @@
     "liamb13",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing border-radius adjustments",
+    "Indicating corner styling options in design applications"
+  ],
   "tags": [
     "border",
     "radius",

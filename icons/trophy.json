@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a winner, prize, or achievement",
+    "Symbolizing sports and competitions"
+  ],
   "tags": [
     "prize",
     "sports",

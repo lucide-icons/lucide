@@ -3,7 +3,11 @@
   "contributors": [
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Managing sound and microphone in gaming",
+    "Indicating a connected headset in call center software",
+    "Representing customer support or voice chat"
+  ],
   "tags": [
     "music",
     "audio",

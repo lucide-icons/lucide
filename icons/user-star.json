@@ -8,7 +8,11 @@
     "jguddas",
     "MArtytraM99"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an admin or super user",
+    "Favoriting a person",
+    "Highlighting the best user in a category"
+  ],
   "tags": [
     "person",
     "account",

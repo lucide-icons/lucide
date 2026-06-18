@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Categorizing fishing as a sport or hobby",
+    "Representing fishing gear"
+  ],
   "tags": [
     "sea",
     "boating",

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing physical disability or accessibility assistance",
+    "Marking wheelchair-accessible facilities or routes"
+  ],
   "tags": [
     "disability",
     "disabled",

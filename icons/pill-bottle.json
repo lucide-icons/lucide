@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating prescription medications, refills, or over-the-counter drugs",
+    "Representing medication tracking, reminders, or a virtual medicine cabinet",
+    "Categorizing pharmaceuticals, supplements, and vitamins",
+    "Managing prescriptions and patient medication lists"
+  ],
   "tags": [
     "medicine",
     "medication",

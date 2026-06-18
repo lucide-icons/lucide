@@ -5,7 +5,9 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Muting audio with a straightforward, unambiguous mute state"
+  ],
   "tags": [
     "music",
     "sound",

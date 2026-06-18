@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a winner, prize, or achievement award",
+    "Symbolizing sports and competitions"
+  ],
   "tags": [
     "prize",
     "sports",

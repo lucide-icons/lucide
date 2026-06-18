@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating washing or bathroom amenities"
+  ],
   "tags": [
     "wash",
     "bath",

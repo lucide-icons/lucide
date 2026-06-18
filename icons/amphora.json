@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing museological or archaeological artefacts",
+    "Indicating pottery or ceramics",
+    "Symbolizing Greek culture or antiquity",
+    "Denoting amphora-aged wines"
+  ],
   "tags": [
     "pottery",
     "artifact",

@@ -11,7 +11,10 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Directing users to nearby emergency services in navigation apps",
+    "Marking emergency contacts or medical transport services"
+  ],
   "tags": [
     "ambulance",
     "emergency",

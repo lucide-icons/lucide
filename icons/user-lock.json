@@ -4,7 +4,10 @@
     "anthony-mariotti",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that a user account is locked",
+    "Locking a user account or its information"
+  ],
   "tags": [
     "person",
     "lock",

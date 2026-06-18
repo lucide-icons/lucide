@@ -4,7 +4,11 @@
     "danielbayley",
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Validating data tables",
+    "Marking the currently selected grid view option",
+    "Signifying a completed task within a grid"
+  ],
   "tags": [
     "table",
     "rows",

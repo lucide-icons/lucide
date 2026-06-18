@@ -6,7 +6,10 @@
     "ericfennis",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating an increase in money, balance, or income in financial apps",
+    "Signifying deposits, received payments, or monetary growth"
+  ],
   "tags": [
     "bill",
     "currency",

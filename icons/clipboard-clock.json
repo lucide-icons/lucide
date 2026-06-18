@@ -8,7 +8,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Viewing past elements in the clipboard history",
+    "Retrieving the most recent clipboard content"
+  ],
   "tags": [
     "copy",
     "paste",

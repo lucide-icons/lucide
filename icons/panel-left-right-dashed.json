@@ -6,7 +6,9 @@
     "irvineacosta",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing horizontal padding or margins when customizing UI elements"
+  ],
   "tags": [
     "sidebar",
     "primary",

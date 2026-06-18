@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking swimming pools or pool access on maps and facility listings"
+  ],
   "tags": [
     "swimming",
     "water",

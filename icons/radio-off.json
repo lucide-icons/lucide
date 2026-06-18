@@ -3,7 +3,10 @@
   "contributors": [
     "kongsgard"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that no signal is being received or tuned in",
+    "Representing a disabled radio or broadcast state"
+  ],
   "tags": [
     "signal",
     "broadcast",

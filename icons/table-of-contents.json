@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Navigating sections in digital documents and eBooks",
+    "Jumping to parts of long articles on websites",
+    "Outlining document structure in PDF viewers and documentation",
+    "Organizing course materials in educational platforms"
+  ],
   "tags": [
     "toc",
     "outline",

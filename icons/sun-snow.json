@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing weather, seasons, or temperature ranges",
+    "Indicating air conditioning with heating and cooling modes"
+  ],
   "tags": [
     "weather",
     "air conditioning",

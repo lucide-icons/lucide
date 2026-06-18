@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating luggage transport or baggage handling at airports"
+  ],
   "tags": [
     "baggage",
     "luggage",

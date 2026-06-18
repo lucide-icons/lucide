@@ -3,7 +3,11 @@
   "contributors": [
     "gurtt"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing origami or paper folding",
+    "Indicating folding or forming actions in design tools",
+    "Referencing art and design"
+  ],
   "tags": [
     "paper",
     "bird"

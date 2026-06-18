@@ -4,7 +4,12 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking dispensaries on a map",
+    "Categorizing cannabis-related products, news, or regulations",
+    "Symbolizing medical marijuana prescriptions in healthcare contexts",
+    "Tracking cannabis use in habit or health apps"
+  ],
   "tags": [
     "cannabis",
     "weed",

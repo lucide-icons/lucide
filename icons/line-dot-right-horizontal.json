@@ -6,7 +6,10 @@
     "johnletey",
     "nathan-de-pachtere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the last commit of a branch",
+    "Indicating a measurement taken at the end of a bar or segment"
+  ],
   "tags": [
     "code",
     "version control",

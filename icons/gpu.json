@@ -4,7 +4,11 @@
     "xandykati98",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting a GPU in compute or cloud providers",
+    "Listing a device's graphics hardware",
+    "Showing GPU requirements for games or software"
+  ],
   "tags": [
     "processor",
     "cores",

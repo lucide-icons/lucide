@@ -5,7 +5,10 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying receipts or statements in Turkish lira",
+    "Representing TRY transactions in banking apps"
+  ],
   "tags": [
     "bill",
     "voucher",

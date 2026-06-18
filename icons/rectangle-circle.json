@@ -4,7 +4,10 @@
     "zefir-git",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Symbolizing the Compose key on a keyboard",
+    "Representing combined shape primitives"
+  ],
   "tags": [
     "compose",
     "keyboard",

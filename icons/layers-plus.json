@@ -4,7 +4,11 @@
     "juanisidoro",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a new layer in design or editing tools",
+    "Adding stackable items such as product variations or repeatable form sections",
+    "Creating nested elements in hierarchical interfaces"
+  ],
   "tags": [
     "stack",
     "layers",

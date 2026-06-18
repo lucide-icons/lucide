@@ -5,7 +5,11 @@
     "karsa-mistmere",
     "rrod497"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Disabling the capture or streaming of a CCTV channel or device",
+    "Attesting that no surveillance takes place in an app or site",
+    "Representing web tracking blockers"
+  ],
   "tags": [
     "camera",
     "surveillance",

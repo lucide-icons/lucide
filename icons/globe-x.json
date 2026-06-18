@@ -4,7 +4,11 @@
     "karsa-mistmere",
     "Muhammad-Aqib-Bashir"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a device or application is offline or unreachable",
+    "Displaying network errors in dashboards or settings",
+    "Representing failed synchronization or unavailable online features"
+  ],
   "tags": [
     "globe",
     "internet",

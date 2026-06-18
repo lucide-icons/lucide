@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating towel or bathroom amenities in hotels",
+    "Categorizing bathroom accessories in shopping apps"
+  ],
   "tags": [
     "flannel",
     "bathroom",

@@ -4,7 +4,11 @@
     "felipeajzanetti",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a D-pad for four-directional movement in games",
+    "Indicating movement or navigation controls",
+    "Configuring controls or keyboard shortcuts"
+  ],
   "tags": [
     "direction",
     "arrow",

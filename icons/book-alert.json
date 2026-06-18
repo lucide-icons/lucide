@@ -8,7 +8,10 @@
     "lscheibel",
     "domasmark"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking reading assignments or books that need attention or review",
+    "Indicating an issue or pending action related to a book or publication"
+  ],
   "tags": [
     "reading",
     "paperback",

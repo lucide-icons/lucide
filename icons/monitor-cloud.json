@@ -7,7 +7,11 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Symbolizing virtual desktops hosted in the cloud",
+    "Indicating remote work or virtual office solutions",
+    "Representing cloud monitoring, SaaS platforms, or online IDEs"
+  ],
   "tags": [
     "virtual machine",
     "virtual desktop",

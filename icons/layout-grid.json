@@ -7,7 +7,11 @@
     "mittalyashu",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing grid views or dashboards",
+    "Displaying labeled collections of data",
+    "Indicating calculation grids and matrices"
+  ],
   "tags": [
     "app",
     "home",

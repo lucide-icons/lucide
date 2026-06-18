@@ -3,7 +3,10 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Picking motorbike as a transport type in journey planners",
+    "Highlighting motorbike delivery drivers on a map"
+  ],
   "tags": [
     "moto",
     "motorcycle",

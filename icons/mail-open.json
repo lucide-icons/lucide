@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that an email has been opened or read"
+  ],
   "tags": [
     "email",
     "message",

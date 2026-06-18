@@ -4,7 +4,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing timelines in user interfaces"
+  ],
   "tags": [
     "tags",
     "history"

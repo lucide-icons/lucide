@@ -6,7 +6,10 @@
     "danielbayley",
     "luisdlopera"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Renaming a wifi network for personalization",
+    "Editing network names for privacy or security"
+  ],
   "tags": [
     "edit",
     "wifi",

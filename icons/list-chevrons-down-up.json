@@ -10,7 +10,9 @@
     "juliankellydesign",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Collapsing many messages or items in a chat or list view"
+  ],
   "tags": [
     "options",
     "items",

@@ -5,7 +5,10 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling floor lamps in smart home apps",
+    "Indicating lighting amenities in booking apps"
+  ],
   "tags": [
     "lighting",
     "household",

@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Serving as a basic geometric shape or building block",
+    "Representing a diamond marker or keyframe"
+  ],
   "tags": [
     "square",
     "rectangle",

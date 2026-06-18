@@ -3,7 +3,9 @@
   "contributors": [
     "nathan-de-pachtere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Differentiating an estimated weight from an actual weight, e.g. for packages"
+  ],
   "tags": [
     "measure",
     "scale",
