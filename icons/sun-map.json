@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Tobias-Westphal"
+  ],
+  "tags": [
+    "weather",
+    "light",
+    "summer",
+    "energy"
+  ],
+  "categories": [
+    "weather",
+    "seasons",
+    "nature",
+    "sustainability"
+  ]
+}
