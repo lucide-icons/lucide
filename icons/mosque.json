@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "iskepr"
+  ],
+  "tags": [
+    "mosque",
+    "masjid",
+    "islam",
+    "muslim",
+    "ramadan",
+    "eid",
+    "prayer",
+    "worship",
+    "building",
+    "minaret",
+    "dome",
+    "architecture",
+    "faith",
+    "religion",
+    "holy",
+    "sacred"
+  ],
+  "categories": [
+    "buildings",
+    "religion"
+  ]
+}
