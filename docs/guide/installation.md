@@ -12,23 +12,23 @@ Implementation of the Lucide icon library for web applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide@next
+pnpm add lucide
 ```
 
 ```sh [yarn]
-yarn add lucide@next
+yarn add lucide
 ```
 
 ```sh [npm]
-npm install lucide@next
+npm install lucide
 ```
 
 ```sh [bun]
-bun add lucide@next
+bun add lucide
 ```
 
 ```sh [deno]
-deno add lucide@next
+deno add lucide
 ```
 
 :::
@@ -42,23 +42,23 @@ Implementation of the Lucide icon library for React applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-react@next
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
-yarn add lucide-react@next
+yarn add lucide-react
 ```
 
 ```sh [npm]
-npm install lucide-react@next
+npm install lucide-react
 ```
 
 ```sh [bun]
-bun add lucide-react@next
+bun add lucide-react
 ```
 
 ```sh [deno]
-deno add lucide-react@next
+deno add lucide-react
 ```
 
 :::
@@ -103,23 +103,23 @@ Implementation of the Lucide icon library for Svelte applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @lucide/svelte@next
+pnpm add @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add @lucide/svelte@next
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install @lucide/svelte@next
+npm install @lucide/svelte
 ```
 
 ```sh [bun]
-bun add @lucide/svelte@next
+bun add @lucide/svelte
 ```
 
 ```sh [deno]
-deno add @lucide/svelte@next
+deno add @lucide/svelte
 ```
 :::
 > `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
@@ -133,23 +133,23 @@ Implementation of the Lucide icon library for Solid applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-solid@next
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
-yarn add lucide-solid@next
+yarn add lucide-solid
 ```
 
 ```sh [npm]
-npm install lucide-solid@next
+npm install lucide-solid
 ```
 
 ```sh [bun]
-bun add lucide-solid@next
+bun add lucide-solid
 ```
 
 ```sh [deno]
-deno add lucide-solid@next
+deno add lucide-solid
 ```
 
 :::
@@ -193,23 +193,23 @@ Implementation of the Lucide icon library for preact applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-preact@next
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]
-yarn add lucide-preact@next
+yarn add lucide-preact
 ```
 
 ```sh [npm]
-npm install lucide-preact@next
+npm install lucide-preact
 ```
 
 ```sh [bun]
-bun add lucide-preact@next
+bun add lucide-preact
 ```
 
 ```sh [deno]
-deno add lucide-preact@next
+deno add lucide-preact
 ```
 
 
@@ -224,23 +224,23 @@ Implementation of the Lucide icon library for Astro applications.
 ::: code-group
 
 ```sh [pnpm]
-pnpm add @lucide/astro@next
+pnpm add @lucide/astro
 ```
 
 ```sh [yarn]
-yarn add @lucide/astro@next
+yarn add @lucide/astro
 ```
 
 ```sh [npm]
-npm install @lucide/astro@next
+npm install @lucide/astro
 ```
 
 ```sh [bun]
-bun add @lucide/astro@next
+bun add @lucide/astro
 ```
 
 ```sh [deno]
-deno add @lucide/astro@next
+deno add @lucide/astro
 ```
 
 :::
@@ -254,23 +254,23 @@ Implementation of the Lucide icon library for multiple usages that like to use: 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add lucide-static@next
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
-yarn add lucide-static@next
+yarn add lucide-static
 ```
 
 ```sh [npm]
-npm install lucide-static@next
+npm install lucide-static
 ```
 
 ```sh [bun]
-bun add lucide-static@next
+bun add lucide-static
 ```
 
 ```sh [deno]
-deno add lucide-static@next
+deno add lucide-static
 ```
 
 :::
