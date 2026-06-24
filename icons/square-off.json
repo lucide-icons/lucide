@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "october-learns"
+  ],
+  "tags": [
+    "/",
+    "not",
+    "slash",
+    "off",
+    "disabled",
+    "inactive",
+    "cancel",
+    "none",
+    "block",
+    "forbidden",
+    "unavailable",
+    "stopped"
+  ],
+  "categories": [
+    "shapes"
+  ],
+  "use-cases": [
+    "For adding a check box which status is in 'not applicable' "
+  ]
+}
