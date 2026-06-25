@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Confirming a mailing list subscription",
+    "Indicating successful email delivery"
+  ],
   "tags": [
     "email",
     "message",

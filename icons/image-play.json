@@ -6,7 +6,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding a GIF in social media post forms or comment boxes",
+    "Representing animated images in text editors"
+  ],
   "tags": [
     "picture",
     "gif",

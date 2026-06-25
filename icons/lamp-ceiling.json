@@ -5,7 +5,10 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling ceiling lights in smart home apps",
+    "Indicating lighting amenities in booking apps"
+  ],
   "tags": [
     "lighting",
     "household",

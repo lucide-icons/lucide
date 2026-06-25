@@ -3,7 +3,9 @@
   "contributors": [
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing gender identities beyond male and female in profiles"
+  ],
   "tags": [
     "gender",
     "androgyne",

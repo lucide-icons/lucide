@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking no-smoking areas or environments"
+  ],
   "tags": [
     "smoking",
     "no-smoking"

@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing that the playing media is in high definition",
+    "Marking videos available in HD quality"
+  ],
   "tags": [
     "tv",
     "resolution",

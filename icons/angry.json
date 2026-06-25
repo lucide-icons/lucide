@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Expressing strong dissatisfaction in feedback or rating scales",
+    "Marking the lowest score on a contentment scale (very unhappy to very happy)"
+  ],
   "tags": [
     "emoji",
     "anger",

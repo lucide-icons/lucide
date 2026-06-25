@@ -3,7 +3,10 @@
   "contributors": [
     "DefaultLP"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that subtitles or captions are disabled in video players",
+    "Toggling captions off in streaming or editing software"
+  ],
   "tags": [
     "closed captions",
     "subtitles",

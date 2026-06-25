@@ -7,7 +7,11 @@
     "csandman",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Inserting tables in rich text editors",
+    "Representing database tables",
+    "Displaying labeled collections of data"
+  ],
   "tags": [
     "spreadsheet",
     "grid"

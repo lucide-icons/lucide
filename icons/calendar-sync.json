@@ -6,7 +6,12 @@
     "karsa-mistmere",
     "chessurisme"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Scheduling recurring jobs such as cron tasks",
+    "Representing recurring events, promotions, or limited-time offers",
+    "Indicating repeating tasks and reminders, like medication or watering plants",
+    "Marking automatic periodic payments"
+  ],
   "tags": [
     "repeat",
     "refresh",

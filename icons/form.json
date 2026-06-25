@@ -4,7 +4,11 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing forms for user input",
+    "Indicating polls or feedback forms",
+    "Serving design systems as a form component icon"
+  ],
   "tags": [
     "document",
     "page",

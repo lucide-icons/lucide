@@ -6,7 +6,10 @@
     "csandman",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing database views or computed objects",
+    "Indicating view, focus, or observation modes"
+  ],
   "tags": [
     "eye",
     "look"

@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing painting or styling tools in design interfaces"
+  ],
   "tags": [
     "brush",
     "paintbrush",

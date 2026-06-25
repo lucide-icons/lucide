@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a list of emails or an inbox",
+    "Copying an email"
+  ],
   "tags": [
     "emails",
     "messages",

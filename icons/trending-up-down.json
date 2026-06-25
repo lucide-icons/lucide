@@ -3,7 +3,10 @@
   "contributors": [
     "Alportan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showcasing estimated or fluctuating data",
+    "Indicating that values might change"
+  ],
   "tags": [
     "arrows",
     "estimated",

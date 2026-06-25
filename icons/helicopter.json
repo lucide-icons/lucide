@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing helicopter services such as air travel or private charters",
+    "Indicating aerial logistics, rescue operations, or medical transport"
+  ],
   "tags": [
     "transport",
     "flying",

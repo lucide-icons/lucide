@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Directing to baggage claim areas in airport applications",
+    "Representing luggage services in travel and hotel apps"
+  ],
   "tags": [
     "baggage",
     "luggage",

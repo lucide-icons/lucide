@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Filling areas with color in design interfaces"
+  ],
   "tags": [
     "fill",
     "paint",

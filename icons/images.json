@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing an image collection or album",
+    "Copying an image"
+  ],
   "tags": [
     "picture",
     "photo",

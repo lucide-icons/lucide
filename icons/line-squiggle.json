@@ -4,7 +4,11 @@
     "chessurisme",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing touchscreen gestures",
+    "Denoting curves, doodles, or freehand drawing",
+    "Symbolizing snakes or serpents"
+  ],
   "tags": [
     "line",
     "snakes",

@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing notes or memos"
+  ],
   "tags": [
     "post-it",
     "comment",

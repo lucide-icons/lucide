@@ -6,7 +6,9 @@
     "jguddas",
     "VirtCode"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating strong wifi signal strength in system or desktop UIs"
+  ],
   "tags": [
     "connection",
     "signal",

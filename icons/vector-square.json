@@ -4,7 +4,10 @@
     "chessurisme",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Selecting vector shapes in graphics editors",
+    "Denoting frames in vector design software"
+  ],
   "tags": [
     "shape",
     "geometry",

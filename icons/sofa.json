@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating lounge or living areas in hotel and booking apps",
+    "Representing living room furniture in smart home applications"
+  ],
   "tags": [
     "armchair",
     "furniture",

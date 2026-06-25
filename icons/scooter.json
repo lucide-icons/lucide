@@ -4,7 +4,10 @@
     "Ahmed-Dghaies",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Identifying scooters as a transport type",
+    "Representing scooter rentals in mobility apps"
+  ],
   "tags": [
     "vehicle",
     "drive",

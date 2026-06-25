@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing industry, manufacturing, or industrial sectors",
+    "Indicating factories or production facilities"
+  ],
   "tags": [
     "building",
     "business",

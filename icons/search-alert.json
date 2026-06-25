@@ -6,7 +6,10 @@
     "jguddas",
     "Veatec22"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signaling an error in search query processing",
+    "Indicating a failed or unexpected search result in dashboards or support tools"
+  ],
   "tags": [
     "find",
     "scan",

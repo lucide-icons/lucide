@@ -6,7 +6,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking something as non-recurring, e.g. audio playback or calendar events"
+  ],
   "tags": [
     "loop",
     "arrows",

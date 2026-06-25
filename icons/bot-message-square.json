@@ -4,7 +4,10 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Starting a new chatbot conversation",
+    "Indicating a chatbot response in a messaging interface"
+  ],
   "tags": [
     "robot",
     "ai",

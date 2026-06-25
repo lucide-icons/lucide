@@ -5,7 +5,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Uniting or merging shapes with pathfinder-style vector tools"
+  ],
   "tags": [
     "square",
     "pathfinder",

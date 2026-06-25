@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "marvfash"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating the right mouse button",
+    "Representing context-click interactions or key bindings"
+  ],
   "tags": [
     "device",
     "scroll",

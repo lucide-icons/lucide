@@ -4,7 +4,11 @@
     "jguddas",
     "jpjacobpadilla"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing kayak rentals or water activities in travel apps",
+    "Categorizing kayaking gear on outdoor e-commerce sites",
+    "Showing kayak routes or access points on tourism maps"
+  ],
   "tags": [
     "kayak",
     "boat",

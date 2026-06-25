@@ -4,7 +4,10 @@
     "abdeniz",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding column filters to a data table",
+    "Adding advanced filters to a search"
+  ],
   "tags": [
     "filter",
     "plus",

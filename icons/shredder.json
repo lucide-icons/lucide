@@ -8,7 +8,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing permanent deletion of personal data or documents"
+  ],
   "tags": [
     "file",
     "paper",

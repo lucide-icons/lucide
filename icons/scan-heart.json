@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing health checkups or medical scans"
+  ],
   "tags": [
     "health",
     "heart rate",

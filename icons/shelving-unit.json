@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing shelves or storage furniture",
+    "Shelving virtual machines or archiving inactive cloud resources",
+    "Navigating to inventory or storage sections in dashboards",
+    "Depicting catalog, archive, or library storage views"
+  ],
   "tags": [
     "ledge",
     "rack",

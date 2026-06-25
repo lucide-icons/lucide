@@ -4,7 +4,11 @@
     "danielbayley",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying prices or amounts in Turkish lira",
+    "Currency selection lists, pricing tables, and discounts",
+    "Receipts or statements sections of banking apps"
+  ],
   "tags": [
     "discount",
     "offer",

@@ -7,7 +7,10 @@
     "jguddas",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking burger places or fast food joints as points of interest",
+    "Categorizing burgers in menu filters of food delivery apps"
+  ],
   "tags": [
     "burger",
     "cheeseburger",

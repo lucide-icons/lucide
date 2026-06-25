@@ -5,7 +5,9 @@
     "chessurisme",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding an item to a grid"
+  ],
   "tags": [
     "table",
     "rows",

@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Resizing or scaling objects in design interfaces"
+  ],
   "tags": [
     "scale",
     "resize",

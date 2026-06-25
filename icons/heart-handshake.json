@@ -5,7 +5,10 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signifying a friendly deal or agreement, e.g. a code of conduct",
+    "Representing partnership built on care or trust"
+  ],
   "tags": [
     "agreement",
     "charity",

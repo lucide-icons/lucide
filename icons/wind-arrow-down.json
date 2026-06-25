@@ -6,7 +6,9 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating downward wind or downdrafts in weather apps"
+  ],
   "tags": [
     "weather",
     "air",

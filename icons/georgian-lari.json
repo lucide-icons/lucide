@@ -3,7 +3,9 @@
   "contributors": [
     "kivicode"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Displaying prices or amounts in Georgian lari (GEL)"
+  ],
   "tags": [
     "currency",
     "money",

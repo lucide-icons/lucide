@@ -7,7 +7,9 @@
     "csandman",
     "TonySullivan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching for a location and viewing it relative to others on a map"
+  ],
   "tags": [
     "location",
     "navigation",

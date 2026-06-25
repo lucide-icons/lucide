@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing first aid, medical help, or support",
+    "Indicating a medical kit or healthcare services"
+  ],
   "tags": [
     "doctor",
     "medicine",

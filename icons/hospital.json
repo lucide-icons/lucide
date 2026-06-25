@@ -4,7 +4,9 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking hospitals, emergency rooms, or medical institutions"
+  ],
   "tags": [
     "infirmary",
     "sanatorium",

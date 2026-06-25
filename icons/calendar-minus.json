@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Deleting an event or unsubscribing from it"
+  ],
   "tags": [
     "date",
     "day",

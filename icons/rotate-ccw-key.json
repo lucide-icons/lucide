@@ -5,7 +5,9 @@
     "pgbradbury",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Refreshing or resetting a password or key"
+  ],
   "tags": [
     "password",
     "key",

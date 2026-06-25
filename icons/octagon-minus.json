@@ -4,7 +4,10 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a stop or restriction traffic symbol",
+    "Indicating forbidden or restricted access"
+  ],
   "tags": [
     "stop",
     "forbidden",

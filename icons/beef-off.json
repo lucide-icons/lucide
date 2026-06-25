@@ -6,7 +6,10 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking vegetarian or vegan recipes and menu options",
+    "Indicating meat-free dietary filters"
+  ],
   "tags": [
     "food",
     "dish",
