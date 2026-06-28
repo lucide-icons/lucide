@@ -16,6 +16,7 @@ import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
+import { listSortDescending } from '~/.vitepress/data/iconNodes';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -33,31 +34,6 @@ const SORTING = [
     value: 'name',
   },
 ]
-
-const sortIcon = [
-  [
-    "path",
-    {
-      "d": "M21 5H3",
-      "key": "1fi0y6"
-    }
-  ],
-  [
-    "path",
-    {
-      "d": "M15 12H3",
-      "key": "6jk70r"
-    }
-  ],
-  [
-    "path",
-    {
-      "d": "M9 19H3",
-      "key": "z6ezky"
-    }
-  ]
-]
-
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -193,6 +169,7 @@ function handleCloseDrawer() {
   <div
     ref="overviewEl"
     class="overview-container"
+    :class="{ 'icon-drawer-open': activeIconName }"
   >
     <StickyBar>
       <InputSearch
@@ -211,7 +188,7 @@ function handleCloseDrawer() {
       >
         <template #start-icon>
           <Icon
-            :iconNode="sortIcon"
+            :iconNode="listSortDescending"
             class="chevron-icon"
             aria-hidden="true"
           />
