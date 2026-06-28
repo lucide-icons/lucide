@@ -5,6 +5,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "settings",
     "controls"
@@ -13,6 +14,11 @@
     "account"
   ],
   "aliases": [
-    "sliders"
+    {
+      "name": "sliders",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

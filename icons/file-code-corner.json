@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "script",
+    "document",
+    "html",
+    "xml",
+    "property list",
+    "plist"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "file-code-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}

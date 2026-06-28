@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "on",
     "off",
@@ -22,6 +23,11 @@
     "connectivity"
   ],
   "aliases": [
-    "power-circle"
+    {
+      "name": "power-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
