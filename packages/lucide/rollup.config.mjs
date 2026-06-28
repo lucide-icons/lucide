@@ -53,6 +53,7 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: '[name].mjs',
             }
           : {
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,

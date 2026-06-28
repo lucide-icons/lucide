@@ -13,7 +13,7 @@
   "title": "Lucide Icons icon schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "categories", "tags"],
+  "required": ["$schema", "contributors", "categories", "tags", "use-cases"],
   "properties": {
     "$schema": {
       "type": "string"
@@ -112,6 +112,14 @@
         "type": "string"
       },
       "minItems": 1,
+      "uniqueItems": true
+    },
+    "use-cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
       "uniqueItems": true
     },
     "deprecated": {

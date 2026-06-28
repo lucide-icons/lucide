@@ -23,7 +23,7 @@
   "amdName": "lucide-vue",
   "source": "build/lucide-vue.js",
   "main": "dist/cjs/lucide-vue.js",
-  "module": "dist/esm/lucide-vue.js",
+  "module": "dist/esm/lucide-vue.mjs",
   "typings": "dist/lucide-vue.d.ts",
   "sideEffects": false,
   "files": [
@@ -38,8 +38,7 @@
     "typecheck": "tsc",
     "typecheck:watch": "tsc -w",
     "test": "pnpm build:icons && vitest run",
-    "test:watch": "vitest watch",
-    "version": "pnpm version --git-tag-version=false"
+    "test:watch": "vitest watch"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",

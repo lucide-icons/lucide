@@ -5,12 +5,14 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "flash",
     "camera",
     "lightning",
     "electricity",
-    "energy"
+    "energy",
+    "power"
   ],
   "categories": [
     "connectivity",
