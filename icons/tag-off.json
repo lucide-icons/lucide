@@ -6,27 +6,25 @@
     "aaofyi",
     "ericfennis",
     "karsa-mistmere",
-    "adam-kov",
-    "Barakudum",
-    "jguddas"
+    "Barakudum"
   ],
   "use-cases": [
-    "removing a tag from an item",
-    "deleting a labeled product or entry"
+    "representing disabled, inactive, or missing tagging",
+    "indicating hidden or unavailable labels or tags"
   ],
   "tags": [
     "label",
     "badge",
     "ticket",
     "mark",
+    "price",
+    "sale",
     "category",
     "classification",
     "metadata",
-    "close",
-    "cancel",
-    "x",
-    "delete",
-    "remove"
+    "hidden",
+    "disabled",
+    "inactive"
   ],
   "categories": [
     "account",
