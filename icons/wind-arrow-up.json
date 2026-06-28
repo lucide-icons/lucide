@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamesgpearce"
+  ],
+  "tags": [
+    "weather",
+    "air",
+    "pressure",
+    "blow"
+  ],
+  "categories": [
+    "weather",
+    "sustainability"
+  ]
+}
