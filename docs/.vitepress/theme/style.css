@@ -152,14 +152,6 @@ html {
   .VPHomeHero .container {
     flex-direction: row;
   }
-
-  html.has-bb-banner {
-    --vp-layout-top-height: 72px;
-  }
-
-  html.has-bb-banner {
-    --Dark-Background: #161618;
-  }
 }
 
 .VPNavBarHamburger .container > span {
@@ -169,12 +161,6 @@ html {
 .package-lucide-logo {
   margin: 0 auto 48px;
   max-width: 480px;
-}
-
-html:not(.has-bb-banner) #bb-banner {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
 }
 
 .VPSidebar {
