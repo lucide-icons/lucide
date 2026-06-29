@@ -9,7 +9,12 @@
     "shield",
     "admin",
     "protected",
-    "guard"
+    "guard",
+    "profile",
+    "security",
+    "privacy",
+    "permissions",
+    "role"
   ],
   "categories": [
     "account",
