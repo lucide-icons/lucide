@@ -10,17 +10,21 @@ jobs:
   weekly-summary:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
       - name: Set up Node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-
+          node-version: 24.11.1
       - name: Install Copilot CLI
         run: npm install -g @github/copilot
 
       - name: Run the prompt
         env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COPILOT_GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           copilot -p "${{ vars.REPO_REPORT_PROMPT }} Write the details to summary.md" --allow-tool='shell(git:*)' --allow-tool=write --no-ask-user
           cat summary.md >> "$GITHUB_STEP_SUMMARY"
