@@ -30,7 +30,7 @@ jobs:
 
       - name: Post report to Discord (private channel)
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.LUCIDE_DISCORD_WEBHOOK }}
         run: |
           jq -Rs '{
             embeds: [{
