@@ -21,7 +21,8 @@
   ],
   "categories": [
     "buildings",
-    "navigation"
+    "navigation",
+    "travel"
   ],
   "use-cases": [
     "Maritime & Travel Apps: Used on maps or geographic interfaces to pinpoint lighthouses, coasts, or marine navigation points.",
