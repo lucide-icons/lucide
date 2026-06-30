@@ -25,6 +25,11 @@
   ],
   "use-cases": [
     "Maritime & Travel Apps: Used on maps or geographic interfaces to pinpoint lighthouses, coasts, or marine navigation points.",
-    "UI/UX Onboarding & Dashboards: Used metaphorically to represent a 'guiding light', onboarding tutorials, help centers, system status monitoring or 404 pages."
+    "UI/UX Onboarding & Dashboards: Used metaphorically to represent a 'guiding light', onboarding tutorials, help centers, system status monitoring or 404 pages.",
+    "marking coastal points on maps",
+    "indicating a navigation beacon in marine dashboards",
+    "symbolizing guidance or guiding light in onboarding flows",
+    "flagging maritime safety alerts or maintenance tasks",
+    "denoting harbor or port entrances"
   ]
 }
