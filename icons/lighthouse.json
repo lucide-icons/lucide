@@ -17,7 +17,13 @@
     "shine",
     "port",
     "marine",
-    "faro"
+    "faro",
+    "signal",
+    "nautical",
+    "harbor",
+    "shore",
+    "lightbeam",
+    "wayfinding"
   ],
   "categories": [
     "buildings",
