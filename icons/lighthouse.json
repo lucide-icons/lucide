@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "xougui"
+  ],
+  "tags": [
+    "lighthouse",
+    "beacon",
+    "coast",
+    "navigation",
+    "tower",
+    "sea",
+    "ocean",
+    "guide",
+    "safety",
+    "light",
+    "shine",
+    "port",
+    "marine",
+    "faro"
+  ],
+  "categories": [
+    "buildings",
+    "navigation"
+  ],
+  "use-cases": []
+}
