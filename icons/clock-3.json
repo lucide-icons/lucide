@@ -3,8 +3,10 @@
   "contributors": [
     "wojtekmaj",
     "ericfennis",
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "time",
     "watch",

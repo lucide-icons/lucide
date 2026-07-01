@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "subtract",
     "remove",
@@ -22,6 +23,11 @@
     "math"
   ],
   "aliases": [
-    "minus-circle"
+    {
+      "name": "minus-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
