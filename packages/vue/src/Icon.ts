@@ -6,6 +6,7 @@ import { useLucideProps } from './context';
 
 interface IconProps {
   iconNode: IconNode;
+  'icon-node'?: IconNode;
   name: string;
 }
 
@@ -13,6 +14,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
   {
     name,
     iconNode,
+    'icon-node': iconNodeKebabCase,
     absoluteStrokeWidth,
     'absolute-stroke-width': absoluteStrokeWidthKebabCase,
     strokeWidth,
@@ -71,7 +73,10 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
           : ['lucide-icon']),
       ),
     },
-    [...iconNode.map((child) => h(...child)), ...(slots.default ? [slots.default()] : [])],
+    [
+      ...(iconNode ?? iconNodeKebabCase ?? []).map((child) => h(...child)),
+      ...(slots.default ? [slots.default()] : []),
+    ],
   );
 };
 
