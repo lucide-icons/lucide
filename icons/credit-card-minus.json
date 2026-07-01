@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "colebemis",
+    "ericfennis",
+    "ameniti-mx"
+  ],
+  "tags": [
+    "credit card",
+    "debit card",
+    "payment",
+    "remove",
+    "delete",
+    "subtract",
+    "minus",
+    "banking",
+    "finance",
+    "wallet",
+    "card",
+    "transaction",
+    "cancel payment",
+    "remove card",
+    "unlink card",
+    "revoke",
+    "decline",
+    "refund",
+    "chargeback",
+    "account"
+  ],
+  "categories": [
+    "finance",
+    "money"
+  ]
+}
