@@ -109,7 +109,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the ISC License.',
-      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lucide Icons`,
     },
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
