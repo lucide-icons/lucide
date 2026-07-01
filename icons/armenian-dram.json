@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Elawphant"
+  ],
+  "tags": [
+    "finance",
+    "symbol",
+    "banking",
+    "economy",
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
