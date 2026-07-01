@@ -5,7 +5,11 @@
     "colebemis",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating warnings or alerts in a UI",
+    "important notifications that require attention",
+    "Representing caution states different components or elements"
+  ],
   "tags": [
     "warning",
     "alert",
