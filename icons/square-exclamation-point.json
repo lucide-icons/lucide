@@ -25,13 +25,5 @@
   "categories": [
     "notifications",
     "shapes"
-  ],
-  "aliases": [
-    {
-      "name": "square-alert",
-      "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
-    }
   ]
 }
