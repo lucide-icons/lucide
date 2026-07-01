@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Azuzula"
+  ],
+  "tags": [
+    "3D",
+    "model",
+    "hardware",
+    "technology",
+    "device",
+    "factory",
+    "manufacturing",
+    "art",
+    "3d",
+    "3dprinter",
+    "printer",
+    "print",
+    "extrude",
+    "stl",
+    "obj",
+    "step"
+  ],
+  "categories": [
+    "devices",
+    "tools"
+  ]
+}
