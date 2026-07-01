@@ -5,7 +5,7 @@ import pkg from './package.json' with { type: 'json' };
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
-const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts'];
+const inputs = ['src/lucide-react-native.ts'];
 const bundles = [
   {
     format: 'cjs',
@@ -18,27 +18,29 @@ const bundles = [
     inputs,
     outputDir,
     preserveModules: true,
+    extension: 'mjs',
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, minify, preserveModules }) =>
+  .map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) =>
     inputs.map((input) => ({
       input,
-      plugins: plugins({ pkg, minify }),
+      plugins: plugins({ pkg }),
       external: ['react', 'react-native-svg'],
       output: {
         name: packageName,
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
-              exports: 'auto',
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+              file: `${outputDir}/${format}/${outputFileName}.${extension}`,
             }),
         format,
         preserveModules,
+        preserveModulesRoot: 'src',
         sourcemap: true,
         globals: {
           react: 'react',
@@ -61,7 +63,7 @@ export default [
     plugins: [dts()],
   },
   {
-    input: inputs[1],
+    input: 'src/icons/index.ts',
     output: [
       {
         file: `dist/icons.d.ts`,
