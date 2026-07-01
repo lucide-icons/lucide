@@ -8,7 +8,10 @@
     "congemcd",
     "dkast"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Represents a takeout for a restaurant/food delivery application",
+    "Represents a lunch takeout"
+  ],
   "tags": [
     "storage",
     "package",
