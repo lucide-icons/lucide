@@ -11,8 +11,8 @@ const ICON_FILTERS = [
     value: 'all',
   },
   {
-    name: 'Lucide only',
-    value: 'lucide',
+    name: 'Main library',
+    value: 'main',
   },
 ];
 
