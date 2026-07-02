@@ -6,6 +6,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "add"
   ],
@@ -18,8 +19,7 @@
     {
       "name": "alarm-plus",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }
