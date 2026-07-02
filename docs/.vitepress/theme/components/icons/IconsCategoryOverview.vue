@@ -156,11 +156,11 @@ function handleCloseDrawer() {
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
   }
-  
+
   if (selectedCategory.value) {
     url.hash = selectedCategory.value;
   }
-  
+
   window.history.pushState({}, '', url);
 }
 </script>
@@ -169,6 +169,7 @@ function handleCloseDrawer() {
   <div
     ref="overviewEl"
     class="overview-container"
+    :class="{ 'icon-drawer-open': activeIconName }"
   >
     <StickyBar class="category-search">
       <InputSearch
