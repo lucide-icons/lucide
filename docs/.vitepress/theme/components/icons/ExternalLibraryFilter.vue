@@ -16,19 +16,18 @@ const ICON_FILTERS = [
   },
 ];
 
-const { selectedLibs } = useExternalLibs();
+const { includeLab } = useExternalLibs();
 
 const selectedIconFilter = computed({
-  get: () => (selectedLibs.value.includes('lab') ? ICON_FILTERS[0] : ICON_FILTERS[1]),
+  get: () => (includeLab.value ? ICON_FILTERS[0] : ICON_FILTERS[1]),
   set: (filter) => {
-    selectedLibs.value = filter.value === 'all' ? ['lab'] : [];
+    includeLab.value = filter.value === 'all';
   },
 });
 </script>
 
 <template>
   <Select
-    id="icon-filter-select"
     buttonLabel="Filter icons"
     :items="ICON_FILTERS"
     v-model="selectedIconFilter"

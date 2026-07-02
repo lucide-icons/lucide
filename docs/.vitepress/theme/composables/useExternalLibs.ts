@@ -6,54 +6,51 @@ export const EXTERNAL_LIBS_CONTEXT = Symbol('externalLibs');
 type ExternalIconNodes = Partial<Record<ExternalLibs, IconEntity[]>>;
 
 interface ExternalLibContext {
-  selectedLibs: Ref<ExternalLibs[]>;
+  includeLab: Ref<boolean>;
   externalIconNodes: Ref<ExternalIconNodes>;
 }
 
 export const externalLibContext: ExternalLibContext = {
-  selectedLibs: ref<ExternalLibs[]>(['lab']),
+  includeLab: ref(true),
   externalIconNodes: ref<ExternalIconNodes>({}),
 };
 
-const externalLibIconNodesAPI: Record<ExternalLibs, string> = {
-  lab: 'https://lab.lucide.dev/api/icon-details',
-};
+const labIconNodesAPI = 'https://lab.lucide.dev/api/icon-details';
 
-let isWatchingSelectedLibs = false;
+let isWatchingLab = false;
+let labIcons: IconEntity[] | undefined;
 
-function watchSelectedLibs(context: ExternalLibContext) {
-  if (isWatchingSelectedLibs) {
+function watchLab(context: ExternalLibContext) {
+  if (isWatchingLab) {
     return;
   }
 
-  isWatchingSelectedLibs = true;
+  isWatchingLab = true;
 
   watch(
-    context.selectedLibs,
-    async (selectedLibs) => {
-      const savedIconNodes = { ...context.externalIconNodes.value };
-      const newExternalIconNodes: ExternalIconNodes = {};
-
+    context.includeLab,
+    async (includeLab) => {
       try {
-        for (const lib of selectedLibs) {
-          if (savedIconNodes[lib]) {
-            newExternalIconNodes[lib] = savedIconNodes[lib];
-          } else {
-            const response = await fetch(externalLibIconNodesAPI[lib]);
-            const iconNodes = await response.json();
-
-            if (iconNodes) {
-              newExternalIconNodes[lib] = Object.values(iconNodes).map(
-                (iconEntity: IconEntity) => ({
-                  ...iconEntity,
-                  externalLibrary: lib,
-                }),
-              );
-            }
-          }
+        if (!includeLab) {
+          context.externalIconNodes.value = {};
+          return;
         }
 
-        context.externalIconNodes.value = newExternalIconNodes;
+        if (labIcons) {
+          context.externalIconNodes.value = { lab: labIcons };
+          return;
+        }
+
+        const response = await fetch(labIconNodesAPI);
+        const iconNodes = await response.json();
+        labIcons = Object.values(iconNodes).map((iconEntity: IconEntity) => ({
+          ...iconEntity,
+          externalLibrary: 'lab',
+        }));
+
+        context.externalIconNodes.value = {
+          lab: labIcons,
+        };
       } catch (error) {
         console.error(error);
       }
@@ -70,7 +67,7 @@ export function useExternalLibs(): ExternalLibContext {
   }
 
   onMounted(() => {
-    watchSelectedLibs(context);
+    watchLab(context);
   });
 
   return context;
