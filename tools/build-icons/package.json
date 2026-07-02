@@ -25,6 +25,10 @@
     "./utils/*": {
       "import": "./utils/*.ts",
       "require": "./utils/*.ts"
+    },
+    "./types": {
+      "import": "./types.ts",
+      "typings": "./types.ts"
     }
   },
   "keywords": [],

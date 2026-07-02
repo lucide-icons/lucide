@@ -25,20 +25,29 @@
   "amdName": "lucide-react-native",
   "main": "dist/cjs/lucide-react-native.js",
   "module": "dist/esm/lucide-react-native.mjs",
-  "typings": "dist/lucide-react-native.d.ts",
+  "typings": "dist/types/lucide-react-native.d.ts",
   "react-native": "dist/esm/lucide-react-native.mjs",
   "exports": {
     ".": {
-      "types": "./dist/lucide-react-native.d.ts",
+      "types": "./dist/types/lucide-react-native.d.ts",
+      "react-native": "./dist/esm/lucide-react-native.mjs",
       "import": "./dist/esm/lucide-react-native.mjs",
       "browser": "./dist/esm/lucide-react-native.mjs",
       "require": "./dist/cjs/lucide-react-native.js"
     },
     "./icons": {
-      "types": "./dist/icons.d.ts",
+      "types": "./dist/types/icons.d.ts",
+      "react-native": "./dist/esm/icons/index.mjs",
       "import": "./dist/esm/icons/index.mjs",
       "browser": "./dist/esm/icons/index.mjs",
       "require": "./dist/cjs/icons/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/types/icons/*.d.ts",
+      "react-native": "./dist/esm/icons/*.mjs",
+      "import": "./dist/esm/icons/*.mjs",
+      "browser": "./dist/esm/icons/*.mjs",
+      "require": "./dist/cjs/icons/*.js"
     }
   },
   "sideEffects": false,
@@ -49,13 +58,14 @@
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundles",
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "clean": "rm -rf dist && rm -rf stats && rm -rf ./src/icons/*.ts",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --aliasesFileExtension=.ts",
+    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=index.ts --withAliases --separateAliasesFile --separateAliasesFileIgnore=fingerprint --aliasesFileExtension=.ts",
     "build:bundles": "rollup -c ./rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
     "@lucide/shared": "workspace:*",
     "@testing-library/jest-dom": "^6.8.0",
