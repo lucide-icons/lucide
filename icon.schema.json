@@ -50,50 +50,58 @@
     "categories": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": [
-          "accessibility",
-          "account",
-          "animals",
-          "arrows",
-          "buildings",
-          "charts",
-          "communication",
-          "connectivity",
-          "cursors",
-          "design",
-          "development",
-          "devices",
-          "emoji",
-          "files",
-          "finance",
-          "food-beverage",
-          "gaming",
-          "home",
-          "layout",
-          "mail",
-          "math",
-          "medical",
-          "multimedia",
-          "nature",
-          "navigation",
-          "notifications",
-          "people",
-          "photography",
-          "science",
-          "seasons",
-          "security",
-          "shapes",
-          "shopping",
-          "social",
-          "sports",
-          "sustainability",
-          "text",
-          "time",
-          "tools",
-          "transportation",
-          "travel",
-          "weather"
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "accessibility",
+              "account",
+              "animals",
+              "arrows",
+              "buildings",
+              "charts",
+              "communication",
+              "connectivity",
+              "cursors",
+              "design",
+              "development",
+              "devices",
+              "emoji",
+              "files",
+              "finance",
+              "food-beverage",
+              "gaming",
+              "home",
+              "layout",
+              "mail",
+              "math",
+              "medical",
+              "multimedia",
+              "nature",
+              "navigation",
+              "notifications",
+              "people",
+              "photography",
+              "science",
+              "seasons",
+              "security",
+              "shapes",
+              "shopping",
+              "social",
+              "sports",
+              "sustainability",
+              "text",
+              "time",
+              "tools",
+              "transportation",
+              "travel",
+              "weather"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^\\$extends:"
+          }
         ]
       },
       "uniqueItems": true
@@ -131,34 +139,6 @@
     "toBeRemovedInVersion": {
       "$ref": "#/$defs/versionNumber",
       "description": "The version this icon will be removed in."
-    },
-    "$extends": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Icon names to inherit all properties from (tags, categories, contributors)"
-    },
-    "$extends.tags": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Icon names to inherit tags from"
-    },
-    "$extends.categories": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Icon names to inherit categories from"
-    },
-    "$extends.contributors": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Icon names to inherit contributors from"
     }
   },
   "dependentRequired": {

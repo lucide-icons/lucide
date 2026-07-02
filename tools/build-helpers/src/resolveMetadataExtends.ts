@@ -1,12 +1,13 @@
 import { type IconMetadata } from '../../build-icons/types.ts';
 import { mergeArrays } from './mergeArrays.ts';
 
-type MetadataWithExtends = IconMetadata & {
-  $extends?: string[];
-  '$extends.tags'?: string[];
-  '$extends.categories'?: string[];
-  '$extends.contributors'?: string[];
-};
+const EXTENDS_PREFIX = '$extends:';
+
+const EXTENDABLE_FIELDS = ['tags', 'categories', 'contributors'] as const;
+type ExtendableField = (typeof EXTENDABLE_FIELDS)[number];
+
+const isExtendsMarker = (value: string): boolean => value.startsWith(EXTENDS_PREFIX);
+const getExtendsTarget = (value: string): string => value.slice(EXTENDS_PREFIX.length);
 
 interface ResolveOptions {
   validateReferences?: boolean;
@@ -15,10 +16,11 @@ interface ResolveOptions {
 /**
  * Resolves metadata extends for all icons
  * Recursively resolves extends chains and merges inherited properties
- * Removes $extends* properties from final metadata
+ * Inline `$extends:<icon-name>` markers inside the tags/categories/contributors
+ * arrays are expanded in place with the referenced icon's resolved values.
  */
 export const resolveMetadataExtends = async (
-  allMetadata: Record<string, MetadataWithExtends>,
+  allMetadata: Record<string, IconMetadata>,
   options: ResolveOptions = {},
 ): Promise<Record<string, IconMetadata>> => {
   const { validateReferences = true } = options;
@@ -32,11 +34,11 @@ export const resolveMetadataExtends = async (
     }
   }
 
-  // Resolve each icon
+  // Resolve each icon. Icons already resolved as a parent of an earlier icon
+  // are returned from the cache by resolveIconExtends, so every icon still ends
+  // up in the resulting map.
   for (const iconName of Object.keys(allMetadata)) {
-    if (!visited.has(iconName)) {
-      resolved[iconName] = resolveIconExtends(iconName, allMetadata, visited, new Set());
-    }
+    resolved[iconName] = resolveIconExtends(iconName, allMetadata, visited, new Set());
   }
 
   return resolved;
@@ -48,7 +50,7 @@ export const resolveMetadataExtends = async (
  */
 export const resolveIconExtends = (
   iconName: string,
-  allMetadata: Record<string, MetadataWithExtends>,
+  allMetadata: Record<string, IconMetadata>,
   visited: Set<string>,
   recursionStack: Set<string>,
 ): IconMetadata => {
@@ -69,73 +71,37 @@ export const resolveIconExtends = (
 
   recursionStack.add(iconName);
 
-  // Resolve extends
-  const inheritedTags: string[] = [];
-  const inheritedCategories: string[] = [];
-  const inheritedContributors: string[] = [];
+  // Expand inline `$extends:<icon-name>` markers within a single field, keeping
+  // literal values in place and de-duplicating the result (first occurrence wins).
+  const resolveField = (field: ExtendableField): string[] => {
+    const source = (metadata[field] as string[] | undefined) ?? [];
+    const expanded: string[] = [];
 
-  // Resolve generic $extends first (inherits tags, categories, contributors)
-  if (metadata['$extends']?.length) {
-    for (const parentName of metadata['$extends']) {
-      validateParentExists(iconName, parentName, allMetadata);
-      validateNotSelfReference(iconName, parentName);
+    for (const entry of source) {
+      if (isExtendsMarker(entry)) {
+        const parentName = getExtendsTarget(entry);
+        validateParentExists(iconName, parentName, allMetadata);
+        validateNotSelfReference(iconName, parentName);
 
-      const parent = resolveIconExtends(parentName, allMetadata, visited, recursionStack);
-      inheritedTags.push(...parent.tags);
-      inheritedCategories.push(...parent.categories);
-      inheritedContributors.push(...parent.contributors);
+        const parent = resolveIconExtends(parentName, allMetadata, visited, recursionStack);
+        expanded.push(...((parent[field] as string[] | undefined) ?? []));
+      } else {
+        expanded.push(entry);
+      }
     }
-  }
 
-  // Resolve specific $extends.tags
-  if (metadata['$extends.tags']?.length) {
-    for (const parentName of metadata['$extends.tags']) {
-      validateParentExists(iconName, parentName, allMetadata);
-      validateNotSelfReference(iconName, parentName);
+    return mergeArrays(expanded, []);
+  };
 
-      const parent = resolveIconExtends(parentName, allMetadata, visited, recursionStack);
-      inheritedTags.push(...parent.tags);
-    }
-  }
-
-  // Resolve specific $extends.categories
-  if (metadata['$extends.categories']?.length) {
-    for (const parentName of metadata['$extends.categories']) {
-      validateParentExists(iconName, parentName, allMetadata);
-      validateNotSelfReference(iconName, parentName);
-
-      const parent = resolveIconExtends(parentName, allMetadata, visited, recursionStack);
-      inheritedCategories.push(...parent.categories);
-    }
-  }
-
-  // Resolve specific $extends.contributors
-  if (metadata['$extends.contributors']?.length) {
-    for (const parentName of metadata['$extends.contributors']) {
-      validateParentExists(iconName, parentName, allMetadata);
-      validateNotSelfReference(iconName, parentName);
-
-      const parent = resolveIconExtends(parentName, allMetadata, visited, recursionStack);
-      inheritedContributors.push(...parent.contributors);
-    }
-  }
+  const resolvedMetadata = {
+    ...metadata,
+    tags: resolveField('tags'),
+    categories: resolveField('categories'),
+    contributors: resolveField('contributors'),
+  } as IconMetadata;
 
   recursionStack.delete(iconName);
   visited.add(iconName);
-
-  // Merge inherited and direct properties
-  const resolvedMetadata: IconMetadata = {
-    ...metadata,
-    tags: mergeArrays(inheritedTags, metadata.tags || []),
-    categories: mergeArrays(inheritedCategories, metadata.categories || []),
-    contributors: mergeArrays(inheritedContributors, metadata.contributors || []),
-  };
-
-  // Remove extends properties from resolved metadata
-  delete (resolvedMetadata as any)['$extends'];
-  delete (resolvedMetadata as any)['$extends.tags'];
-  delete (resolvedMetadata as any)['$extends.categories'];
-  delete (resolvedMetadata as any)['$extends.contributors'];
 
   // Update the metadata in place for caching
   Object.assign(allMetadata[iconName], resolvedMetadata);
@@ -144,25 +110,23 @@ export const resolveIconExtends = (
 };
 
 /**
- * Validates that all extends references point to existing icons
+ * Validates that all inline extends markers point to existing icons
  */
 export const validateExtendsReferences = (
   iconName: string,
-  metadata: MetadataWithExtends,
-  allMetadata: Record<string, MetadataWithExtends>,
+  metadata: IconMetadata,
+  allMetadata: Record<string, IconMetadata>,
 ): void => {
-  const allExtends = [
-    ...(metadata['$extends'] || []),
-    ...(metadata['$extends.tags'] || []),
-    ...(metadata['$extends.categories'] || []),
-    ...(metadata['$extends.contributors'] || []),
-  ];
+  for (const field of EXTENDABLE_FIELDS) {
+    for (const entry of (metadata[field] as string[] | undefined) ?? []) {
+      if (!isExtendsMarker(entry)) continue;
 
-  for (const parentName of allExtends) {
-    if (!allMetadata[parentName]) {
-      throw new Error(
-        `Icon '${iconName}' extends non-existent icon '${parentName}'. Available icons: ${Object.keys(allMetadata).join(', ')}`,
-      );
+      const parentName = getExtendsTarget(entry);
+      if (!allMetadata[parentName]) {
+        throw new Error(
+          `Icon '${iconName}' extends non-existent icon '${parentName}'. Available icons: ${Object.keys(allMetadata).join(', ')}`,
+        );
+      }
     }
   }
 };
@@ -173,7 +137,7 @@ export const validateExtendsReferences = (
 function validateParentExists(
   iconName: string,
   parentName: string,
-  allMetadata: Record<string, MetadataWithExtends>,
+  allMetadata: Record<string, IconMetadata>,
 ): void {
   if (!allMetadata[parentName]) {
     throw new Error(`Icon '${iconName}' extends non-existent icon '${parentName}'`);
