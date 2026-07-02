@@ -1,4 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
   <path d="M2 8H10C10.552 8 11 8.448 11 9V15C11 15.552 10.552 16 10 16H2" />
   <path d="M7 8V6C7 4.895 7.895 4 9 4H14C15.105 4 16 4.895 16 6V18C16 19.105 15.105 20 14 20H9C7.895 20 7 19.105 7 18V16" />
   <path d="M4 12V12.0001" />
