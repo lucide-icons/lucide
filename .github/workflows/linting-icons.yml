@@ -31,6 +31,23 @@ jobs:
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
 
+  check-icons:
+    name: Check Icons & Categories
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Check icons and categories
+        run: pnpm checkIcons
+
   lint-aliases:
     name: Check Uniqueness of Aliases
     runs-on: ubuntu-latest

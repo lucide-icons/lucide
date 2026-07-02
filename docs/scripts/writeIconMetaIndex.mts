@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import { readSvgDirectory, toCamelCase } from '@lucide/helpers';
+import { readAllMetadata } from '@lucide/helpers';
 
 const currentDir = process.cwd();
 const ICONS_DIR = path.resolve(currentDir, '../icons');
-const iconJsonFiles = await readSvgDirectory(ICONS_DIR, '.json');
 
 const location = path.resolve(currentDir, '.vitepress/data', 'iconMetaData.ts');
 
@@ -12,29 +11,15 @@ if (fs.existsSync(location)) {
   fs.unlinkSync(location);
 }
 
-const iconMetaIndexFileImports = [];
-const iconMetaIndexFileExports = [];
-
-iconJsonFiles.forEach((iconJsonFile) => {
-  const iconName = path.basename(iconJsonFile, '.json');
-
-  iconMetaIndexFileImports.push(
-    `import ${toCamelCase(iconName)}Metadata from '../../../icons/${iconName}.json';`,
-  );
-  iconMetaIndexFileExports.push(`  '${iconName}': ${toCamelCase(iconName)}Metadata,`);
-});
+// The docs read this index raw and never re-resolve, so resolve the
+// `$extends:<icon-name>` markers here and bake the inherited
+// tags/categories/contributors into the generated file.
+const iconMetaData = await readAllMetadata(ICONS_DIR);
 
 try {
   await fs.promises.writeFile(
     location,
-    `\
-${iconMetaIndexFileImports.join('\n')}
-
-
-  export default {
-${iconMetaIndexFileExports.join('\n')}
-  }
-    `,
+    `export default ${JSON.stringify(iconMetaData, null, 2)};\n`,
     'utf-8',
   );
 
