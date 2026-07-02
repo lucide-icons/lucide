@@ -89,21 +89,24 @@ export abstract class LucideIconBase {
         }
         const contentRef = this.contentRef();
         const refChild = contentRef.nativeElement;
-        const elements = node.map(([name, attrs]) => {
-          const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
-          if (absoluteStrokeWidth) {
-            this.renderer.setAttribute(element, 'vector-effect', 'non-scaling-stroke');
-          }
-          Object.entries(attrs).forEach(([name, value]) =>
-            this.renderer.setAttribute(
-              element,
-              name,
-              typeof value === 'number' ? value.toString(10) : value,
-            ),
-          );
-          this.renderer.insertBefore(this.elRef.nativeElement, element, refChild);
-          return element;
-        });
+        const host = this.elRef.nativeElement;
+        const elements =
+          this.getHydratableShapeNodes(host, node) ??
+          node.map(([name, attrs]) => {
+            const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
+            if (absoluteStrokeWidth) {
+              this.renderer.setAttribute(element, 'vector-effect', 'non-scaling-stroke');
+            }
+            Object.entries(attrs).forEach(([name, value]) =>
+              this.renderer.setAttribute(
+                element,
+                name,
+                typeof value === 'number' ? value.toString(10) : value,
+              ),
+            );
+            this.renderer.insertBefore(host, element, refChild);
+            return element;
+          });
         onCleanup(() => {
           elements.forEach((element) =>
             this.renderer.removeChild(this.elRef.nativeElement, element),
@@ -114,5 +117,21 @@ export abstract class LucideIconBase {
         });
       }
     });
+  }
+
+  /**
+   * Returns the host's existing shape nodes when they match the icon definition.
+   */
+  private getHydratableShapeNodes(host: Element, node: LucideIconData['node']): Element[] | null {
+    const shapeNodes = Array.from(host.children).filter(
+      (child) => child.tagName.toLowerCase() !== 'title',
+    );
+    if (shapeNodes.length !== node.length) {
+      return null;
+    }
+    const matchesDefinition = node.every(
+      ([tag], index) => shapeNodes[index].tagName.toLowerCase() === tag.toLowerCase(),
+    );
+    return matchesDefinition ? shapeNodes : null;
   }
 }

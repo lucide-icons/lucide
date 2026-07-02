@@ -76,6 +76,22 @@ describe('LucideIconBase', () => {
     );
   });
 
+  it('reuses pre-rendered (SSR) shape nodes instead of duplicating them', () => {
+    const svg: SVGElement = fixture.nativeElement;
+    const svgNs = 'http://www.w3.org/2000/svg';
+    // simulate server-rendered markup before the effect runs
+    for (const [tag, attrs] of LucideCircleCheck.icon.node) {
+      const shape = document.createElementNS(svgNs, tag);
+      for (const [name, value] of Object.entries(attrs)) {
+        shape.setAttribute(name, `${value}`);
+      }
+      svg.appendChild(shape);
+    }
+    fixture.detectChanges();
+    const shapes = svg.querySelectorAll('circle, path');
+    expect(shapes.length).toBe(LucideCircleCheck.icon.node.length);
+  });
+
   describe('class', () => {
     it('should add all classes', () => {
       fixture.detectChanges();
