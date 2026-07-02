@@ -6,6 +6,7 @@ import InputSearch from '../base/InputSearch.vue';
 import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
+import ExternalLibraryFilter from './ExternalLibraryFilter.vue';
 import IconsCategory, { CategoryRow } from './IconsCategory.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
@@ -180,6 +181,7 @@ function handleCloseDrawer() {
         ref="searchInput"
         @focus="onFocusSearchInput"
       />
+      <ExternalLibraryFilter />
     </StickyBar>
     <NoResults
       v-if="searchPlaceholder.isNoResults"

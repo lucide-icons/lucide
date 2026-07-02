@@ -10,6 +10,7 @@ import useSearch from '../../composables/useSearch';
 import useSearchInput from '../../composables/useSearchInput';
 import useSearchShortcut from '../../utils/useSearchShortcut';
 import StickyBar from './StickyBar.vue';
+import ExternalLibraryFilter from './ExternalLibraryFilter.vue';
 import useFetchTags from '../../composables/useFetchTags';
 import useFetchCategories from '../../composables/useFetchCategories';
 import chunkArray from '../../utils/chunkArray';
@@ -33,8 +34,7 @@ const SORTING = [
     name: 'Name',
     value: 'name',
   },
-]
-
+];
 
 const initialGridItems = computed(() => {
   if (containerWidth.value === 0) return 120;
@@ -50,7 +50,7 @@ const props = defineProps<{
 }>();
 
 const activeIconName = ref(null);
-const selectedSort = ref(SORTING[0])
+const selectedSort = ref(SORTING[0]);
 
 const { execute: fetchTags, data: tags } = useFetchTags();
 const { execute: fetchCategories, data: categories } = useFetchCategories();
@@ -182,8 +182,11 @@ function handleCloseDrawer() {
         @focus="onFocusSearchInput"
       />
 
+      <ExternalLibraryFilter />
+
       <Select
         id="sort-select"
+        buttonLabel="Sort icons"
         :items="SORTING"
         v-model="selectedSort"
       >
