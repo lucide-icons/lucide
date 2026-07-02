@@ -17,7 +17,7 @@ import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
-import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import { arrowUpDown } from '~/.vitepress/data/iconNodes';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
@@ -192,7 +192,7 @@ function handleCloseDrawer() {
       >
         <template #start-icon>
           <Icon
-            :iconNode="listSortDescending"
+            :iconNode="arrowUpDown"
             class="chevron-icon"
             aria-hidden="true"
           />
