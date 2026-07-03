@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "wool",
+    "thread",
+    "needle",
+    "sewing",
+    "stitch",
+    "embroidery",
+    "waeve",
+    "woven",
+    "fabric",
+    "material",
+    "cloth",
+    "cotton",
+    "textile",
+    "string",
+    "unravel",
+    "unroll",
+    "code",
+    "conding",
+    "package manager",
+    "npm"
+  ],
+  "categories": [
+    "home",
+    "social",
+    "development"
+  ]
+}

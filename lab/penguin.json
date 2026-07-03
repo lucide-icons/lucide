@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "pingu",
+    "bird",
+    "arctic",
+    "aquatic",
+    "flightless",
+    "linux"
+  ],
+  "categories": [
+    "animals",
+    "development"
+  ]
+}

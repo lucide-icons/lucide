@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "gist",
+    "source",
+    "programming",
+    "html",
+    "xml",
+    "code",
+    "coding"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ],
+  "aliases": [
+    "square-code"
+  ]
+}

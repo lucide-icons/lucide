@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "wax",
+    "incense",
+    "fragrance",
+    "smell",
+    "senses",
+    "spirituality",
+    "meditation",
+    "relaxation",
+    "wellbeing",
+    "romance",
+    "romantic evening",
+    "valentines day",
+    "date",
+    "power cut",
+    "outage",
+    "melting",
+    "burning",
+    "flame",
+    "fire",
+    "alight",
+    "lighting",
+    "daytime",
+    "mode",
+    "theme",
+    "toggle",
+    "css"
+  ],
+  "categories": [
+    "home",
+    "sustainability",
+    "design",
+    "development"
+  ]
+}

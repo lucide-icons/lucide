@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "kitchen",
+    "appliances",
+    "amenities",
+    "electric",
+    "cleaning",
+    "cycle",
+    "plates",
+    "glasses",
+    "cutlery",
+    "utensils"
+  ],
+  "categories": [
+    "home",
+    "devices",
+    "travel"
+  ]
+}

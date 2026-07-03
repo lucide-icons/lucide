@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "exchange",
+    "trader",
+    "trading",
+    "transaction",
+    "swap",
+    "finance",
+    "financial",
+    "markets"
+  ],
+  "categories": [
+    "currency",
+    "money"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "apps",
+    "applications",
+    "add",
+    "collection",
+    "+"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "tools"
+  ]
+}

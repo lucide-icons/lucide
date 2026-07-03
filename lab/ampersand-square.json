@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "and",
+    "typography",
+    "operator",
+    "join",
+    "concatenate",
+    "code",
+    "coding",
+    "&"
+  ],
+  "categories": [
+    "text",
+    "design",
+    "development"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "utensils",
+    "kitchenware",
+    "cutlery",
+    "culinary",
+    "cooking",
+    "cookery",
+    "cut",
+    "slice",
+    "eat",
+    "restaurant",
+    "meal",
+    "breakfast",
+    "brunch",
+    "lunch",
+    "dinner",
+    "supper"
+  ],
+  "categories": [
+    "food-beverage",
+    "home",
+    "tools",
+    "travel",
+    "maps"
+  ],
+  "aliases": [
+    "utensils-crossed"
+  ]
+}

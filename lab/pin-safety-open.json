@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "unsafe",
+    "unsecured",
+    "unpinned",
+    "unfastened",
+    "loose",
+    "off",
+    "baby",
+    "newborn",
+    "childproof",
+    "children",
+    "infant",
+    "kids",
+    "toddler",
+    "mother",
+    "mum",
+    "family"
+  ],
+  "categories": [
+    "people",
+    "security",
+    "account",
+    "home",
+    "shopping"
+  ]
+}

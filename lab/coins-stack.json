@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "cash",
+    "finance",
+    "financial",
+    "markets",
+    "exchange",
+    "trader",
+    "trading",
+    "transaction",
+    "payment",
+    "payroll",
+    "wages",
+    "income",
+    "pocket money",
+    "allowance",
+    "savings",
+    "banking",
+    "gamble"
+  ],
+  "categories": [
+    "money",
+    "currency",
+    "account",
+    "shopping",
+    "gaming"
+  ]
+}

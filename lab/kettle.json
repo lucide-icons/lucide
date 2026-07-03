@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "heat",
+    "boiling",
+    "water",
+    "steam",
+    "whistle",
+    "drink",
+    "tea",
+    "coffee",
+    "kitchen",
+    "appliances"
+  ],
+  "categories": [
+    "food-beverage",
+    "home",
+    "devices"
+  ]
+}

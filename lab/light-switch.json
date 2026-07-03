@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "on",
+    "off",
+    "electricity",
+    "electronics",
+    "lights",
+    "toggle",
+    "binary",
+    "boolean",
+    "power",
+    "outlet",
+    "plug"
+  ],
+  "categories": [
+    "devices",
+    "connectivity"
+  ]
+}
