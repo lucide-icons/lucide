@@ -1,10 +1,4 @@
-import {
-  Component,
-  computed,
-  inject,
-  input,
-  Signal,
-} from '@angular/core';
+import { Component, computed, inject, input, Signal } from '@angular/core';
 import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, Nullable } from './types';
 import defaultAttributes from './default-attributes';
@@ -35,15 +29,13 @@ export abstract class LucideIconBase {
     if (!this.absoluteStrokeWidth()) {
       return node;
     }
-    return node.map<LucideIconData['node'][number]>(
-      ([name, attrs]) => [
-        name,
-        {
-          'vector-effect': 'non-scaling-stroke',
-          ...attrs,
-        },
-      ],
-    );
+    return node.map<LucideIconData['node'][number]>(([name, attrs]) => [
+      name,
+      {
+        'vector-effect': 'non-scaling-stroke',
+        ...attrs,
+      },
+    ]);
   });
   protected readonly iconClasses = computed(() => {
     const icon = this.icon();

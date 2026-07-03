@@ -98,7 +98,10 @@ describe('LucideIconBase', () => {
       const hostFixture = TestBed.createComponent(ClassHostComponent);
       hostFixture.detectChanges();
       const svg = hostFixture.nativeElement.querySelector('svg');
-      expectSvgClasses(['custom-icon', 'lucide', 'lucide-circle-check', 'lucide-check-circle-2'], svg);
+      expectSvgClasses(
+        ['custom-icon', 'lucide', 'lucide-circle-check', 'lucide-check-circle-2'],
+        svg,
+      );
     });
   });
 
