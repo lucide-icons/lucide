@@ -6,26 +6,7 @@ import pkg from './package.json' with { type: 'json' };
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
-const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts'];
-
-const generateIconDeclarationFiles = () => ({
-  name: 'generate-icon-declaration-files',
-  writeBundle() {
-    const iconDeclarationsDir = new URL('./dist/esm/icons/', import.meta.url);
-    mkdirSync(iconDeclarationsDir, { recursive: true });
-
-    const iconIndex = readFileSync(new URL('./src/icons/index.ts', import.meta.url), 'utf8');
-    Array.from(
-      iconIndex.matchAll(/export \{ default as ([A-Za-z0-9_$]+) \} from '\.\/([^']+)';/g),
-    ).forEach(([, componentName, fileName]) => {
-      writeFileSync(
-        new URL(`./${fileName}.d.ts`, iconDeclarationsDir),
-        `export { ${componentName} as default } from '../../icons';\n`,
-      );
-    });
-  },
-});
-
+const inputs = ['src/lucide-react-native.ts'];
 const bundles = [
   {
     format: 'cjs',
@@ -53,7 +34,6 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
-              exports: 'auto',
               entryFileNames: `[name].${extension}`,
             }
           : {
@@ -84,14 +64,14 @@ export default [
     plugins: [dts()],
   },
   {
-    input: inputs[1],
+    input: 'src/icons/index.ts',
     output: [
       {
         file: `dist/icons.d.ts`,
         format: 'es',
       },
     ],
-    plugins: [dts(), generateIconDeclarationFiles()],
+    plugins: [dts()],
   },
   {
     input: `src/${outputFileName}.suffixed.ts`,
