@@ -6,9 +6,11 @@
     "ericfennis"
   ],
   "use-cases": [
-    "Indicating warnings or alerts in a UI",
-    "Important notifications that require attention",
-    "Representing caution states different components or elements"
+    "Indicating application or system warnings or alerts",
+    "Highlighting important notifications that require user attention",
+    "Representing caution states for different components or elements",
+    "Marking validation errors, invalid input or configuration issues",
+    "Displaying diagnostic or troubleshooting information"
   ],
   "tags": [
     "warning",
