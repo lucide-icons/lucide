@@ -257,7 +257,7 @@ importers:
         version: 21.1.0(eslint@8.57.1)(typescript@5.9.3)
       '@angular/build':
         specifier: ^21.0.3
-        version: 21.2.3(@angular/compiler-cli@21.2.5(@angular/compiler@21.2.17)(typescript@5.9.3))(@angular/compiler@21.2.17)(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(@types/node@24.10.1)(chokidar@5.0.0)(jiti@2.7.0)(less@4.2.0)(ng-packagr@21.2.1(@angular/compiler-cli@21.2.5(@angular/compiler@21.2.17)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.8)(stylus@0.56.0)(terser@5.47.1)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.0)(yaml@2.8.0)
+        version: 21.2.3(3c7ec986daf57b70e1407066650c30a3)
       '@angular/cli':
         specifier: ^21.0.3
         version: 21.2.3(@types/node@24.10.1)(chokidar@5.0.0)
@@ -279,6 +279,9 @@ importers:
       '@angular/platform-browser':
         specifier: ^21.0.0
         version: 21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))
+      '@angular/platform-server':
+        specifier: ^21.2.17
+        version: 21.2.17(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/compiler@21.2.17)(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@angular/router':
         specifier: ^21.0.0
         version: 21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(rxjs@7.8.2)
@@ -1150,6 +1153,16 @@ packages:
     peerDependenciesMeta:
       '@angular/animations':
         optional: true
+
+  '@angular/platform-server@21.2.17':
+    resolution: {integrity: sha512-ll5mbZHyUjZp+aL5eFCcusZBMLYv2fbxuPAIhAHFpu55kC9zh7PFlbdINbr4kT/bjxYb4isw5nDbGj9+n+RHWg==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@angular/common': 21.2.17
+      '@angular/compiler': 21.2.17
+      '@angular/core': 21.2.17
+      '@angular/platform-browser': 21.2.17
+      rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/router@21.2.5':
     resolution: {integrity: sha512-yQGhTVGvh8OMW3auj13+g+OCSQj7gyBQON/2X4LuCvIUG71NPV6Fqzfk9DKTKaXpqo0FThy8/LPJ0Lsy3CRejg==}
@@ -12627,6 +12640,10 @@ packages:
     resolution: {integrity: sha512-g/eziiSUNBSsdDJtCLB8bdYEUMj4jR7AGeUo96p/3dTafgjHhpF4RiCFPiRILwjQoDXx5MqkBr4fwWtR3Ky4Wg==}
     engines: {node: '>=20'}
 
+  xhr2@0.2.1:
+    resolution: {integrity: sha512-sID0rrVCqkVNUn8t6xuv9+6FViXjUVXq8H5rWOH2rz9fDNQEd4g0EA2XlcEdJXRz5BMEn4O1pJFdT+z4YHhoWw==}
+    engines: {node: '>= 6'}
+
   xhr@2.6.0:
     resolution: {integrity: sha512-/eCGLb5rxjx5e3mF1A7s+pLlR6CGyqWN91fv1JgER5mVWg1MZmlhBvy9kjcsOdRk8RrIujotWyJamfyrp+WIcA==}
 
@@ -13110,7 +13127,7 @@ snapshots:
       eslint: 8.57.1
       typescript: 5.9.3
 
-  '@angular/build@21.2.3(@angular/compiler-cli@21.2.5(@angular/compiler@21.2.17)(typescript@5.9.3))(@angular/compiler@21.2.17)(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(@types/node@24.10.1)(chokidar@5.0.0)(jiti@2.7.0)(less@4.2.0)(ng-packagr@21.2.1(@angular/compiler-cli@21.2.5(@angular/compiler@21.2.17)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.8)(stylus@0.56.0)(terser@5.47.1)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.0)(yaml@2.8.0)':
+  '@angular/build@21.2.3(3c7ec986daf57b70e1407066650c30a3)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.3(chokidar@5.0.0)
@@ -13146,11 +13163,12 @@ snapshots:
     optionalDependencies:
       '@angular/core': 21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)
       '@angular/platform-browser': 21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))
+      '@angular/platform-server': 21.2.17(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/compiler@21.2.17)(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(rxjs@7.8.2)
       less: 4.2.0
       lmdb: 3.5.1
       ng-packagr: 21.2.1(@angular/compiler-cli@21.2.5(@angular/compiler@21.2.17)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3)
       postcss: 8.5.8
-      vitest: 4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12(vitest@4.1.0))(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
+      vitest: 4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
     transitivePeerDependencies:
       - '@types/node'
       - chokidar
@@ -13237,6 +13255,16 @@ snapshots:
       '@angular/common': 21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core': 21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)
       tslib: 2.8.1
+
+  '@angular/platform-server@21.2.17(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/compiler@21.2.17)(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/compiler': 21.2.17
+      '@angular/core': 21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)
+      '@angular/platform-browser': 21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))
+      rxjs: 7.8.2
+      tslib: 2.8.1
+      xhr2: 0.2.1
 
   '@angular/router@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(@angular/platform-browser@21.2.5(@angular/common@21.2.17(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.17(@angular/compiler@21.2.17)(rxjs@7.8.2)))(rxjs@7.8.2)':
     dependencies:
@@ -17142,7 +17170,7 @@ snapshots:
       '@babel/plugin-transform-sticky-regex': 7.27.1(@babel/core@7.29.0)
       '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.29.0)
       '@babel/plugin-transform-unicode-regex': 7.27.1(@babel/core@7.29.0)
-      '@babel/template': 7.28.6
+      '@babel/template': 7.29.7
       '@react-native/babel-plugin-codegen': 0.76.9(@babel/preset-env@7.28.5(@babel/core@7.29.0))
       babel-plugin-syntax-hermes-parser: 0.25.1
       babel-plugin-transform-flow-enums: 0.0.2(@babel/core@7.29.0)
@@ -18559,7 +18587,7 @@ snapshots:
       '@vitest/mocker': 4.1.1(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
       playwright: 1.58.2
       tinyrainbow: 3.0.3
-      vitest: 4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12(vitest@4.1.0))(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
+      vitest: 4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
     transitivePeerDependencies:
       - bufferutil
       - msw
@@ -18593,7 +18621,7 @@ snapshots:
       pngjs: 7.0.0
       sirv: 3.0.2
       tinyrainbow: 3.1.0
-      vitest: 4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12(vitest@4.1.0))(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
+      vitest: 4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
       ws: 8.20.1
     transitivePeerDependencies:
       - bufferutil
@@ -22144,7 +22172,7 @@ snapshots:
 
   jest-message-util@29.7.0:
     dependencies:
-      '@babel/code-frame': 7.29.0
+      '@babel/code-frame': 7.29.7
       '@jest/types': 29.6.3
       '@types/stack-utils': 2.0.1
       chalk: 4.1.2
@@ -22985,7 +23013,7 @@ snapshots:
     dependencies:
       '@babel/traverse': 7.28.6
       '@babel/traverse--for-generate-function-map': '@babel/traverse@7.29.7'
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
       metro-symbolicate: 0.81.5
@@ -23022,8 +23050,8 @@ snapshots:
   metro-transform-plugins@0.81.5:
     dependencies:
       '@babel/core': 7.28.5
-      '@babel/generator': 7.29.1
-      '@babel/template': 7.28.6
+      '@babel/generator': 7.29.7
+      '@babel/template': 7.29.7
       '@babel/traverse': 7.28.6
       flow-enums-runtime: 0.0.6
       nullthrows: 1.1.1
@@ -23033,9 +23061,9 @@ snapshots:
   metro-transform-worker@0.81.5:
     dependencies:
       '@babel/core': 7.28.5
-      '@babel/generator': 7.29.1
-      '@babel/parser': 7.29.3
-      '@babel/types': 7.29.0
+      '@babel/generator': 7.29.7
+      '@babel/parser': 7.29.7
+      '@babel/types': 7.29.7
       flow-enums-runtime: 0.0.6
       metro: 0.81.5
       metro-babel-transformer: 0.81.5
@@ -23052,13 +23080,13 @@ snapshots:
 
   metro@0.81.5:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.7
       '@babel/core': 7.28.5
-      '@babel/generator': 7.28.5
-      '@babel/parser': 7.29.3
-      '@babel/template': 7.27.2
+      '@babel/generator': 7.29.7
+      '@babel/parser': 7.29.7
+      '@babel/template': 7.29.7
       '@babel/traverse': 7.28.5
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
       accepts: 1.3.8
       chalk: 4.1.2
       ci-info: 2.0.0
@@ -26628,7 +26656,7 @@ snapshots:
       - typescript
       - universal-cookie
 
-  vitest@4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12(vitest@4.1.0))(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0)):
+  vitest@4.1.0(@types/node@24.10.1)(@vitest/browser-playwright@4.1.1)(@vitest/ui@4.0.12)(jsdom@27.4.0)(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0)):
     dependencies:
       '@vitest/expect': 4.1.0
       '@vitest/mocker': 4.1.0(vite@7.3.1(@types/node@24.10.1)(jiti@2.7.0)(less@4.2.0)(sass@1.97.3)(stylus@0.56.0)(terser@5.47.1)(yaml@2.8.0))
@@ -26918,6 +26946,8 @@ snapshots:
     dependencies:
       is-wsl: 3.1.1
       powershell-utils: 0.1.0
+
+  xhr2@0.2.1: {}
 
   xhr@2.6.0:
     dependencies:
