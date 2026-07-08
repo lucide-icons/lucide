@@ -94,3 +94,23 @@ describe('Using lucide icon components', () => {
     expect(IconComponent).toHaveAttribute('stroke-width', '1');
   });
 });
+
+describe('Icon Component Accessibility', () => {
+  it('should have aria-hidden prop when no aria prop or children are present', async () => {
+    const { container } = render(Smile, {
+      props: {
+        size: 48,
+        color: 'red',
+        absoluteStrokeWidth: true,
+      },
+    });
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('should not have aria-hidden prop when there are children that could be a <title> element', async () => {
+    const { container } = render(TestSlots);
+
+    expect(container.firstChild).not.toHaveAttribute('aria-hidden');
+  });
+});

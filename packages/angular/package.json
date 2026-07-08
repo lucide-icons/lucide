@@ -23,11 +23,10 @@
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=lucide-angular.ts --useDefaultExports=0",
     "build:ng": "ng build --configuration production",
-    "test": "pnpm prebuild && ng test --no-watch",
+    "test": "pnpm build:icons && ng test --no-watch",
     "test:watch": "ng test",
     "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
-    "e2e": "ng e2e",
-    "version": "pnpm version --git-tag-version=false"
+    "e2e": "ng e2e"
   },
   "prettier": {
     "printWidth": 100,
@@ -49,12 +48,13 @@
     "@angular-eslint/template-parser": "~21.1.0",
     "@angular/build": "^21.0.3",
     "@angular/cli": "^21.0.3",
-    "@angular/common": "^21.0.0",
-    "@angular/compiler": "^21.0.0",
+    "@angular/common": "^21.2.17",
+    "@angular/compiler": "^21.2.17",
     "@angular/compiler-cli": "^21.0.0",
-    "@angular/core": "^21.0.0",
+    "@angular/core": "^21.2.17",
     "@angular/forms": "^21.0.0",
     "@angular/platform-browser": "^21.0.0",
+    "@angular/platform-server": "^21.2.17",
     "@angular/router": "^21.0.0",
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
@@ -66,7 +66,7 @@
     "typescript": "~5.9.2"
   },
   "peerDependencies": {
-    "@angular/common": "17.x - 21.x",
-    "@angular/core": "17.x - 21.x"
+    "@angular/common": ">=17.0.0",
+    "@angular/core": ">=17.0.0"
   }
 }

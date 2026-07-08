@@ -24,7 +24,7 @@
   ],
   "source": "src/lucide-static.js",
   "main": "dist/cjs/lucide-static.js",
-  "module": "dist/esm/lucide-static.js",
+  "module": "dist/esm/lucide-static.mjs",
   "typings": "dist/lucide-static.d.ts",
   "sideEffects": false,
   "scripts": {
@@ -34,8 +34,7 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mts",
     "build:bundles": "rollup -c rollup.config.mjs",
-    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg",
-    "version": "pnpm version --git-tag-version=false"
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
