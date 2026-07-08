@@ -22,7 +22,12 @@ describe('LucideDynamicIcon', () => {
   let component: LucideDynamicIcon;
   let fixture: ComponentFixture<LucideDynamicIcon>;
   let icon: WritableSignal<LucideIconInput | null | undefined>;
-  const getSvgAttribute = (attr: string) => fixture.nativeElement.getAttribute(attr);
+  const expectSvgClasses = (classes: string[]) => {
+    for (const cssClass of classes) {
+      expect(fixture.nativeElement.classList.contains(cssClass)).toBe(true);
+    }
+  };
+  const getRenderedChildren = () => Array.from(fixture.nativeElement.children) as Element[];
   const testIcon: LucideIconData = {
     name: 'demo',
     node: [['polyline', { points: '1 1 22 22' }]],
@@ -30,10 +35,22 @@ describe('LucideDynamicIcon', () => {
   const testIcon2: LucideIconData = {
     name: 'demo-other',
     node: [
-      ['circle', { cx: 12, cy: 12, r: 8 }],
+      ['circle', { cx: 12, cy: 12, r: 8, fill: 'currentColor' }],
       ['polyline', { points: '1 1 22 22' }],
     ],
     aliases: ['demo-2'],
+  };
+  const supportedShapesIcon: LucideIconData = {
+    name: 'supported-shapes',
+    node: [
+      ['path', { d: 'm1 1 2 2', fill: 'currentColor', key: 'path-key' }],
+      ['line', { x1: 1, x2: 2, y1: 3, y2: 4, key: 'line-key' }],
+      ['polygon', { points: '1 1 2 2 3 1', key: 'polygon-key' }],
+      ['polyline', { points: '1 1 2 2 3 1', key: 'polyline-key' }],
+      ['circle', { cx: 12, cy: 12, r: 8, fill: 'currentColor', key: 'circle-key' }],
+      ['ellipse', { cx: 12, cy: 12, rx: 8, ry: 4, key: 'ellipse-key' }],
+      ['rect', { x: 1, y: 2, width: 3, height: 4, rx: 5, ry: 6, key: 'rect-key' }],
+    ],
   };
   function createComponent() {
     return TestBed.createComponent(LucideDynamicIcon, {
@@ -58,15 +75,33 @@ describe('LucideDynamicIcon', () => {
   it('should render children', () => {
     icon.set(testIcon2);
     fixture.detectChanges();
-    expect(fixture.nativeElement.innerHTML).toBe(
-      '<!--container--><circle cx="12" cy="12" r="8"></circle><polyline points="1 1 22 22"></polyline><!--ng-container-->',
+    const children = getRenderedChildren();
+    expect(children.map((child) => child.tagName.toLowerCase())).toEqual(['circle', 'polyline']);
+    expect(children[0].outerHTML).toBe(
+      '<circle cx="12" cy="12" r="8" fill="currentColor"></circle>',
     );
+    expect(children[1].outerHTML).toBe('<polyline points="1 1 22 22"></polyline>');
+  });
+
+  it('should render supported SVG shapes and attributes', () => {
+    icon.set(supportedShapesIcon);
+    fixture.detectChanges();
+    const children = getRenderedChildren();
+    expect(children.map((child) => child.outerHTML)).toEqual([
+      '<path d="m1 1 2 2" fill="currentColor"></path>',
+      '<line x1="1" x2="2" y1="3" y2="4"></line>',
+      '<polygon points="1 1 2 2 3 1"></polygon>',
+      '<polyline points="1 1 2 2 3 1"></polyline>',
+      '<circle cx="12" cy="12" r="8" fill="currentColor"></circle>',
+      '<ellipse cx="12" cy="12" rx="8" ry="4"></ellipse>',
+      '<rect x="1" y="2" width="3" height="4" rx="5" ry="6"></rect>',
+    ]);
   });
 
   it('should remove children on change', () => {
     icon.set(null);
     fixture.detectChanges();
-    expect(fixture.nativeElement.innerHTML).toBe('<!--container--><!--ng-container-->');
+    expect(getRenderedChildren()).toEqual([]);
   });
 
   describe('iconInput', () => {
@@ -74,9 +109,9 @@ describe('LucideDynamicIcon', () => {
       icon.set(testIcon);
       fixture.detectChanges();
       expect(component['icon']()).toBe(testIcon);
-      expect(fixture.nativeElement.innerHTML).toBe(
-        '<!--container--><polyline points="1 1 22 22"></polyline><!--ng-container-->',
-      );
+      expect(getRenderedChildren().map((child) => child.outerHTML)).toEqual([
+        '<polyline points="1 1 22 22"></polyline>',
+      ]);
     });
     it('should support LucideIcon input', () => {
       icon.set(LucideActivity);
@@ -97,23 +132,24 @@ describe('LucideDynamicIcon', () => {
   describe('class', () => {
     it('should add all classes', () => {
       fixture.detectChanges();
-      expect(getSvgAttribute('class')).toBe('lucide lucide-demo');
+      expectSvgClasses(['lucide', 'lucide-demo']);
     });
     it('should add backwards compatible classes from aliases', () => {
       icon.set(testIcon2);
       fixture.detectChanges();
-      expect(getSvgAttribute('class')).toBe('lucide lucide-demo-other lucide-demo-2');
+      expectSvgClasses(['lucide', 'lucide-demo-other', 'lucide-demo-2']);
     });
     it('should add class icon if available', () => {
       icon.set(LucideActivity);
       fixture.detectChanges();
 
-      expect(getSvgAttribute('class')).toBe('lucide lucide-activity');
+      expectSvgClasses(['lucide', 'lucide-activity']);
     });
     it('should remove class on change', () => {
       icon.set(null);
       fixture.detectChanges();
-      expect(getSvgAttribute('class')).toBe('lucide');
+      expectSvgClasses(['lucide']);
+      expect(fixture.nativeElement.classList.contains('lucide-demo')).toBe(false);
     });
   });
 

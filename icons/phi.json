@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "whoisBugsbunny"
+  ],
+  "use-cases": [
+    "representing the golden ratio",
+    "indicating mathematical formulas",
+    "labeling scientific variables"
+  ],
+  "tags": [
+    "math",
+    "golden-ratio",
+    "symbol",
+    "greek",
+    "letter",
+    "typography",
+    "constant",
+    "flux",
+    "magnetic-flux"
+  ],
+  "categories": [
+    "math",
+    "science"
+  ]
+}
