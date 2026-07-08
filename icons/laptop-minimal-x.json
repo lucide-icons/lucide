@@ -4,10 +4,16 @@
     "ericfennis",
     "AntoninKadrmas"
   ],
+  "use-cases": [],
   "tags": [
     "computer",
     "screen",
-    "remote"
+    "remote",
+    "close",
+    "cancel",
+    "stop",
+    "delete",
+    "remove"
   ],
   "categories": [
     "devices"
