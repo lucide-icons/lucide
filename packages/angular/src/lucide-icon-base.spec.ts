@@ -33,6 +33,12 @@ export class LucideCircleCheck extends LucideIconBase {
   protected override readonly icon = signal(LucideCircleCheck.icon);
 }
 
+@Component({
+  template: `<svg lucideCircleCheck class="custom-icon"></svg>`,
+  imports: [LucideCircleCheck],
+})
+class ClassHostComponent {}
+
 describe('LucideIconBase', () => {
   let component: LucideCircleCheck;
   let fixture: ComponentFixture<LucideCircleCheck>;
@@ -42,6 +48,12 @@ describe('LucideIconBase', () => {
   let strokeWidth: WritableSignal<string | number | undefined>;
   let absoluteStrokeWidth: WritableSignal<boolean | undefined>;
   const getSvgAttribute = (attr: string) => fixture.nativeElement.getAttribute(attr);
+  const expectSvgClasses = (classes: string[], svg: SVGElement = fixture.nativeElement) => {
+    for (const cssClass of classes) {
+      expect(svg.classList.contains(cssClass)).toBe(true);
+    }
+  };
+  const getRenderedChildren = () => Array.from(fixture.nativeElement.children) as Element[];
   function createComponent() {
     return TestBed.createComponent(LucideCircleCheck, {
       inferTagName: true,
@@ -71,15 +83,25 @@ describe('LucideIconBase', () => {
 
   it('should render children', () => {
     fixture.detectChanges();
-    expect(fixture.nativeElement.innerHTML).toBe(
-      '<!--container--><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path><!--ng-container-->',
-    );
+    const children = getRenderedChildren();
+    expect(children.map((child) => child.tagName.toLowerCase())).toEqual(['circle', 'path']);
+    expect(children[0].outerHTML).toBe('<circle cx="12" cy="12" r="10"></circle>');
+    expect(children[1].outerHTML).toBe('<path d="m9 12 2 2 4-4"></path>');
   });
 
   describe('class', () => {
     it('should add all classes', () => {
       fixture.detectChanges();
-      expect(getSvgAttribute('class')).toBe('lucide lucide-circle-check lucide-check-circle-2');
+      expectSvgClasses(['lucide', 'lucide-circle-check', 'lucide-check-circle-2']);
+    });
+    it('should preserve user classes', () => {
+      const hostFixture = TestBed.createComponent(ClassHostComponent);
+      hostFixture.detectChanges();
+      const svg = hostFixture.nativeElement.querySelector('svg');
+      expectSvgClasses(
+        ['custom-icon', 'lucide', 'lucide-circle-check', 'lucide-check-circle-2'],
+        svg,
+      );
     });
   });
 
@@ -142,13 +164,15 @@ describe('LucideIconBase', () => {
     });
     it('should not set vector-effect on children', () => {
       absoluteStrokeWidth.set(false);
-      for (const child of fixture.nativeElement.children) {
+      fixture.detectChanges();
+      for (const child of getRenderedChildren()) {
         expect(child.getAttribute('vector-effect')).toBeNull();
       }
     });
     it('should set vector-effect on children', () => {
       absoluteStrokeWidth.set(true);
-      for (const child of fixture.nativeElement.children) {
+      fixture.detectChanges();
+      for (const child of getRenderedChildren()) {
         expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
       }
     });
@@ -228,13 +252,15 @@ describe('LucideIconBase', () => {
     });
     describe('absoluteStrokeWidth', () => {
       it('should use absoluteStrokeWidth from config', () => {
-        for (const child of fixture.nativeElement.children) {
+        fixture.detectChanges();
+        for (const child of getRenderedChildren()) {
           expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
         }
       });
       it('should override absoluteStrokeWidth', () => {
         absoluteStrokeWidth.set(false);
-        for (const child of fixture.nativeElement.children) {
+        fixture.detectChanges();
+        for (const child of getRenderedChildren()) {
           expect(child.getAttribute('vector-effect')).toBeNull();
         }
       });
