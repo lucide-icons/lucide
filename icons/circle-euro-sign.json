@@ -3,7 +3,10 @@
   "contributors": [
     "Guido3000"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "currency selector buttons",
+    "pricing badges"
+  ],
   "tags": [
     "symbol",
     "economy",
