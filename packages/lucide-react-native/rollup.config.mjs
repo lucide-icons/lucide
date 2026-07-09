@@ -6,7 +6,7 @@ import getIconEntryNamesAndAliases from './scripts/getIconEntryNamesAndAliases.m
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react-native';
 const outputDir = 'dist';
-const inputs = ['src/lucide-react-native.ts'];
+const inputs = ['src/lucide-react-native.ts', 'src/icons/index.ts'];
 const bundles = [
   {
     format: 'cjs',
@@ -26,34 +26,30 @@ const bundles = [
 const iconAndAliasEntries = await getIconEntryNamesAndAliases();
 const typesModuleMatcher = /[/\\]src[/\\]types\.(d\.)?ts$/;
 
-const configs = bundles
-  .map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) =>
-    inputs.map((input) => ({
-      input,
-      plugins: plugins({ pkg }),
-      external: ['react', 'react-native-svg'],
-      output: {
-        name: packageName,
-        ...(preserveModules
-          ? {
-              dir: `${outputDir}/${format}`,
-              entryFileNames: `[name].${extension}`,
-            }
-          : {
-              file: `${outputDir}/${format}/${outputFileName}.${extension}`,
-            }),
-        format,
-        preserveModules,
-        preserveModulesRoot: 'src',
-        sourcemap: true,
-        globals: {
-          react: 'react',
-          'react-native-svg': 'react-native-svg',
-        },
-      },
-    })),
-  )
-  .flat();
+const configs = bundles.map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) => ({
+  input: inputs,
+  plugins: plugins({ pkg }),
+  external: ['react', 'react-native-svg'],
+  output: {
+    name: packageName,
+    ...(preserveModules
+      ? {
+          dir: `${outputDir}/${format}`,
+          entryFileNames: `[name].${extension}`,
+        }
+      : {
+          file: `${outputDir}/${format}/${outputFileName}.${extension}`,
+        }),
+    format,
+    preserveModules,
+    preserveModulesRoot: 'src',
+    sourcemap: true,
+    globals: {
+      react: 'react',
+      'react-native-svg': 'react-native-svg',
+    },
+  },
+}));
 
 export default [
   {
