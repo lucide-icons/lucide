@@ -1,7 +1,6 @@
 import path from 'path';
 import { readSvgDirectory } from '@lucide/helpers';
 import getIconMetaData from '@lucide/build-icons/utils/getIconMetaData';
-import { type AliasDeprecation } from '@lucide/build-icons/types';
 
 const ICONS_DIR = path.resolve(process.cwd(), '../../icons');
 
