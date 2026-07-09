@@ -76,7 +76,7 @@ export const reactNativeSidebar = [
         text: 'Optimizations',
         link: '/guide/react-native/advanced/optimizations',
         desc: 'Optimizing your app for performance',
-      }
+      },
     ],
   },
   {
