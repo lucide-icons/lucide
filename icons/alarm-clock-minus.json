@@ -8,9 +8,12 @@
   ],
   "use-cases": [],
   "tags": [
+    "$extends:alarm-clock",
+    "$extends:minus",
     "remove"
   ],
   "categories": [
+    "$extends:alarm-clock",
     "devices",
     "notifications",
     "time"

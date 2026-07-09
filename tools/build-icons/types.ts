@@ -40,6 +40,7 @@ export type IconDeprecationReason = 'icon.renamed' | '';
 export type IconMetadataBase = {
   toBeRemovedInVersion?: string;
   categories: string[];
+  contributors?: string[];
   aliases?: (string | AliasDeprecation)[];
   tags: string[];
   deprecationReason?: IconDeprecationReason;
