@@ -27,8 +27,8 @@
       "require": "./utils/*.ts"
     },
     "./types": {
-      "import": "./types.ts",
-      "typings": "./types.ts"
+      "types": "./types.ts",
+      "import": "./types.ts"
     }
   },
   "keywords": [],
