@@ -6,6 +6,10 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [
+    "indicates that autosave is active",
+    "indicates that file/document has been saved automatically"
+  ],
   "tags": [
     "save",
     "save-check",
