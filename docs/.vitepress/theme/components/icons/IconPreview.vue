@@ -89,6 +89,7 @@ const base64InnerSvg = computed(() => {
       rel="noopener noreferrer"
       class="studio-button"
       title="Open in Lucide Studio"
+      aria-label="Open in Lucide Studio"
     >
       <SquarePenIcon :size="14" />
     </a>
