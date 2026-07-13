@@ -24,7 +24,8 @@
     "ui"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "design"
   ],
   "use-cases": [
     "For adding a check box which status is in 'not applicable' "
