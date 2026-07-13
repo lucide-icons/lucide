@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" style="fill:none"/><path d="M22 22 2 2M20.414 20.414A2 2 0 0 1 19 21H5a2 2 0 0 1-2-2V5c0-.552.224-1.052.586-1.414M9 3h10a2 2 0 0 1 2 2v10" style="fill:none;stroke:#000;stroke-width:2.08px"/></svg>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.4 20.4a2 2 0 01-1.4.6H5a2 2 0 01-2-2V5a2 2 0 01.59-1.41" />
+  <path d="M21 15.3V5a2 2 0 00-2-2H8.7" />
+  <path d="M22 22 2 2" />
+</svg>
