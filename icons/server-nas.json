@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "benhaube"
+  ],
+  "use-cases": [],
+  "tags": [
+    "cloud",
+    "storage"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}
