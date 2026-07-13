@@ -15,7 +15,13 @@
     "block",
     "forbidden",
     "unavailable",
-    "stopped"
+    "stopped",
+    "checkbox",
+    "unchecked",
+    "toggle",
+    "negation",
+    "form",
+    "ui"
   ],
   "categories": [
     "shapes"
