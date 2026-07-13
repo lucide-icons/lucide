@@ -28,9 +28,9 @@
     "design"
   ],
   "use-cases": [
-    "For adding a check box which status is in 'not applicable' ",
-    "indicating a checkbox in a not applicable state",
-    "marking a disabled or unavailable option in forms",
-    "denoting an unchecked or toggled-off square control"
+    "indicating a disabled or unavailable state",
+    "marking something as blocked or prohibited",
+    "showing a deactivated interface element",
+    "representing a closed or inactive component"
   ]
 }
