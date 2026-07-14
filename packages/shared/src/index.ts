@@ -1,10 +1,10 @@
 export { default as buildLucideDataUri } from './build/buildLucideDataUri';
 export { default as buildLucideIconElement } from './build/buildLucideIconElement';
 export { default as buildLucideIconNode } from './build/buildLucideIconNode';
-export { default as buildLucideIconForReact } from './build/buildLucideIconForReact.ts';
+export { default as buildLucideIconForReact } from './build/buildLucideIconForReact';
 export { default as buildLucideSvg } from './build/buildLucideSvg';
 export { default as defaultAttributes } from './build/defaultAttributes';
-export { default as defaultReactAttributes } from './build/defaultReactAttributes.ts';
+export { default as defaultReactAttributes } from './build/defaultReactAttributes';
 export type { LucideBuildParams, LucideIconData, LucideIconNode, SVGProps } from './build/types';
 export * from './utils/hasA11yProp';
 export * from './utils/isEmptyString';

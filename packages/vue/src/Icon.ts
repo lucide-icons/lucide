@@ -13,18 +13,18 @@ type IconProps =
   | {
       icon: LucideIconData;
       iconNode?: never;
-      'icon-node': never;
+      'icon-node'?: never;
       name?: never;
     }
   | {
       icon?: never;
       iconNode: LucideIconNode[];
-      'icon-node': never;
+      'icon-node'?: never;
       name: string;
     }
   | {
       icon?: never;
-      iconNode: never;
+      iconNode?: never;
       'icon-node': LucideIconNode[];
       name: string;
     };
@@ -80,6 +80,8 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
 
   const { class: propsClass, ...restProps } = props;
 
+  const defaultSlot = slots.default?.();
+
   const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
     color: color ?? contextColor,
     width: width ?? size ?? contextSize,
@@ -88,13 +90,13 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     absoluteStrokeWidth: isAbsoluteStrokeWidth,
     nonScalingStroke: isNonScalingStroke,
     className: mergeClasses(contextClass, propsClass),
-    hasA11yProp: !!slots || hasA11yProp(restProps),
+    hasA11yProp: (defaultSlot != null && defaultSlot.length > 0) || hasA11yProp(restProps),
     attributes: restProps,
   });
 
   return h('svg', svgAttributes, [
     ...builtIconNode.map((child) => h(...child)),
-    ...(slots.default ? [slots.default()] : []),
+    ...(defaultSlot ?? []),
   ]);
 };
 

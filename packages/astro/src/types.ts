@@ -28,7 +28,7 @@ export type IconProps = LucideProps &
       }
     | {
         icon?: never;
-        iconNode: LucideIconNode;
+        iconNode: LucideIconNode[];
       }
   );
 

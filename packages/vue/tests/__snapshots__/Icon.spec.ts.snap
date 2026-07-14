@@ -2,6 +2,7 @@
 
 exports[`Using Icon Component > should render icon and match snapshot 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide lucide-air-vent"
   fill="none"
   height="48"
@@ -30,6 +31,7 @@ exports[`Using Icon Component > should render icon and match snapshot 1`] = `
 
 exports[`Using Icon Component > should render icon based on an icon node 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide lucide-air-vent"
   fill="none"
   height="48"

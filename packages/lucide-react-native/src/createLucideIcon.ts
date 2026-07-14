@@ -21,18 +21,18 @@ function createLucideIcon(icon: LucideIconData): LucideIcon;
  */
 function createLucideIcon(
   iconName: string,
-  iconNode: LucideIconNode,
+  iconNode: LucideIconNode[],
   aliases?: string[],
 ): LucideIcon;
 
 function createLucideIcon(
   iconDataOrName: LucideIconData | string,
-  iconNode?: LucideIconNode,
+  iconNode?: LucideIconNode[],
   aliases: string[] = [],
 ): LucideIcon {
   const iconData =
     typeof iconDataOrName === 'string'
-      ? toLucideIconData(iconDataOrName, iconNode as LucideIconNode, aliases)
+      ? toLucideIconData(iconDataOrName, iconNode as LucideIconNode[], aliases)
       : iconDataOrName;
 
   const Component = forwardRef<SVGSVGElement, LucideProps>((props, ref) =>
@@ -43,7 +43,9 @@ function createLucideIcon(
     }),
   );
 
-  Component.displayName = toPascalCase(iconData.name);
+  if (iconData.name) {
+    Component.displayName = toPascalCase(iconData.name);
+  }
 
   return Component;
 }
