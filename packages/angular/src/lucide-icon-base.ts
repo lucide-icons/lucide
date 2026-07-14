@@ -1,14 +1,4 @@
-import {
-  Component,
-  computed,
-  effect,
-  ElementRef,
-  inject,
-  input,
-  Renderer2,
-  Signal,
-  viewChild,
-} from '@angular/core';
+import { Component, computed, inject, input, Signal } from '@angular/core';
 import { LUCIDE_CONFIG } from './lucide-config';
 import { LucideIconData, LucideIconNode, Nullable } from './types';
 import defaultAttributes from './default-attributes';
@@ -36,9 +26,6 @@ import buildLucideIconNode from './utils/buildLucideIconNode';
 export abstract class LucideIconBase {
   protected abstract readonly icon: Signal<Nullable<LucideIconData>>;
   protected readonly iconConfig = inject(LUCIDE_CONFIG);
-  protected readonly elRef = inject(ElementRef);
-  protected readonly renderer = inject(Renderer2);
-  protected readonly contentRef = viewChild.required<ElementRef>('contentRef');
   /**
    * An optional accessible label for the icon.
    * - If provided, it will add the title as an [`<svg:title>` element](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/title).
@@ -52,6 +39,10 @@ export abstract class LucideIconBase {
    * - If your icon is functional (e.g. used in place of a label), feel free to use this property.
    */
   readonly title = input<Nullable<string>>();
+  /**
+   * Optional CSS classes for the icon.
+   */
+  readonly class = input<Nullable<string>>();
   /**
    * Width and height.
    * @default 24
@@ -109,6 +100,7 @@ export abstract class LucideIconBase {
           strokeWidth: this.strokeWidth(),
           absoluteStrokeWidth: this.absoluteStrokeWidth(),
           nonScalingStroke: this.nonScalingStroke(),
+          className: this.class() ?? undefined,
           hasA11yProp: this.title() != null,
         })
       : null;
@@ -124,7 +116,7 @@ export abstract class LucideIconBase {
   /**
    * @internal
    */
-  protected readonly computedIconNode = computed(() => this.computedIcon()?.[2]);
+  protected readonly computedIconNode = computed(() => this.computedIcon()?.[2] ?? []);
 
   /**
    * @internal
@@ -174,33 +166,4 @@ export abstract class LucideIconBase {
   protected readonly computedClass = computed(
     () => this.computedAttributes()?.['class'] ?? 'lucide',
   );
-
-  constructor() {
-    effect((onCleanup) => {
-      const iconNode = this.computedIconNode();
-      const iconAttributes = this.computedIconNode();
-      if (iconNode && iconAttributes) {
-        const contentRef = this.contentRef();
-        const refChild = contentRef.nativeElement;
-        const elements = iconNode.map(([name, attrs]) => {
-          const element = this.renderer.createElement(name, 'http://www.w3.org/2000/svg');
-
-          Object.entries(attrs).forEach(([name, value]) =>
-            this.renderer.setAttribute(
-              element,
-              name,
-              typeof value === 'number' ? value.toString(10) : value,
-            ),
-          );
-          this.renderer.insertBefore(this.elRef.nativeElement, element, refChild);
-          return element;
-        });
-        onCleanup(() => {
-          elements.forEach((element) =>
-            this.renderer.removeChild(this.elRef.nativeElement, element),
-          );
-        });
-      }
-    });
-  }
 }

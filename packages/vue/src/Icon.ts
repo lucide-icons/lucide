@@ -13,21 +13,30 @@ type IconProps =
   | {
       icon: LucideIconData;
       iconNode?: never;
+      'icon-node': never;
       name?: never;
     }
   | {
       icon?: never;
       iconNode: LucideIconNode[];
+      'icon-node': never;
+      name: string;
+    }
+  | {
+      icon?: never;
+      iconNode: never;
+      'icon-node': LucideIconNode[];
       name: string;
     };
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
   {
     name,
-    iconNode = [],
+    iconNode,
+    'icon-node': iconNodeKebabCase,
     icon = {
       name: toKebabCase(name),
-      node: iconNode,
+      node: iconNode ?? iconNodeKebabCase,
       size: 24,
       aliases: [],
     },

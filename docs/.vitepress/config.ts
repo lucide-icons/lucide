@@ -101,6 +101,7 @@ export default defineConfig({
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
+      { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,
     socialLinks: [
@@ -109,7 +110,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the ISC License.',
-      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lucide Icons`,
     },
     editLink: {
       pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',

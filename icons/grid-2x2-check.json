@@ -32,8 +32,8 @@
     {
       "name": "grid-2-x-2-check",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
+      "deprecated": true
+    },
+    "grid-2-x-2-check"
   ]
 }

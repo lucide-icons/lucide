@@ -55,8 +55,7 @@
     "build:license": "node ./scripts/appendBlockComments.mts",
     "test": "pnpm copy:license && pnpm copy:utils && pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
-    "typecheck": "pnpm copy:license && pnpm copy:utils && pnpm build:icons && svelte-check --tsconfig ./tsconfig.json",
-    "version": "pnpm version --git-tag-version=false"
+    "typecheck": "pnpm copy:license && pnpm copy:utils && pnpm build:icons && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
