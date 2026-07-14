@@ -26,7 +26,6 @@
       "name": "arrow-down-az",
       "deprecationReason": "alias.name",
       "deprecated": true
-    },
-    "arrow-down-az"
+    }
   ]
 }

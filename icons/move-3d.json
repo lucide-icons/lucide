@@ -21,7 +21,6 @@
       "name": "move-3-d",
       "deprecationReason": "alias.name",
       "deprecated": true
-    },
-    "move-3-d"
+    }
   ]
 }
