@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "gap",
+    "spacing",
+    "space",
+    "between",
+    "padding",
+    "margin",
+    "horizontal",
+    "auto layout",
+    "layout",
+    "distance",
+    "frame"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
