@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "opacity",
+    "transparency",
+    "alpha",
+    "fade",
+    "translucent",
+    "gradient",
+    "dissolve",
+    "blend",
+    "checkerboard",
+    "visibility"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ]
+}
