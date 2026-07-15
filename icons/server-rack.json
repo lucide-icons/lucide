@@ -3,7 +3,10 @@
   "contributors": [
     "benhaube"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Home Lab Documentation: This icon would be great for people writing documentation for their home lab",
+    "Network Management Dashboard: This would be a good icon to use in a network dashboard to depict a server rack."
+  ],
   "tags": [
     "cloud",
     "storage",
