@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "angle",
+    "degree",
+    "corner",
+    "geometry",
+    "measure",
+    "math",
+    "rotate",
+    "vertex",
+    "slope",
+    "protractor"
+  ],
+  "categories": [
+    "math",
+    "design"
+  ]
+}
