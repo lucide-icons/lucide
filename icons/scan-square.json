@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "scan",
+    "square",
+    "detect",
+    "recognise",
+    "recognize",
+    "select",
+    "frame",
+    "object",
+    "viewfinder",
+    "capture",
+    "shape",
+    "boundary"
+  ],
+  "categories": [
+    "photography",
+    "design",
+    "development"
+  ]
+}
