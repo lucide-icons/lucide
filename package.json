@@ -64,7 +64,7 @@
     "eslint-plugin-import": "^2.32.0",
     "husky": "^8.0.3",
     "jsdom": "^27.4.0",
-    "lint-staged": "^13.3.0",
+    "lint-staged": "^17.0.8",
     "minimist": "^1.2.8",
     "openai": "^5.23.2",
     "p-memoize": "^7.1.1",
@@ -74,7 +74,7 @@
     "simple-git": "^3.36.0",
     "svgo": "^3.3.4",
     "svgson": "^5.3.1",
-    "vitest": "^4.1.10",
+    "vitest": "4.1.10",
     "yargs": "^17.7.3",
     "zod": "^3.25.76"
   },
