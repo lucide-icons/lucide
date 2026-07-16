@@ -3,13 +3,15 @@
   "contributors": [
     "samuelalake"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "detecting or selecting a shape or object inside a camera or AR viewfinder",
+    "a 'select shape' or region-detection control in a design or image editor"
+  ],
   "tags": [
     "scan",
     "square",
     "detect",
-    "recognise",
-    "recognize",
+    "recognition",
     "select",
     "frame",
     "object",
