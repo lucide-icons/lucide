@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "samuelalake"
+    "samuelalake",
+    "karsa-mistmere"
   ],
   "use-cases": [],
   "tags": [
@@ -15,7 +16,8 @@
     "auto layout",
     "layout",
     "distance",
-    "frame"
+    "frame",
+    "distribute"
   ],
   "categories": [
     "design",
