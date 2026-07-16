@@ -45,10 +45,10 @@ importers:
         specifier: ^6.21.0
         version: 6.21.0(eslint@8.57.1)(typescript@5.9.3)
       '@vitest/coverage-v8':
-        specifier: ^4.1.10
+        specifier: 4.1.10
         version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       '@vitest/ui':
-        specifier: ^4.1.10
+        specifier: 4.1.10
         version: 4.1.10(vitest@4.1.10)
       ajv-cli:
         specifier: ^5.0.0
