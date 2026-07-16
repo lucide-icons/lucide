@@ -5,6 +5,13 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "starting an augmented reality scan",
+    "placing virtual 3D objects in a real-world scene",
+    "indicating spatial mapping or room scanning",
+    "previewing products with virtual try-on",
+    "recognizing the surrounding environment for AR experiences"
+  ],
   "tags": [
     "ar",
     "augmented reality",
