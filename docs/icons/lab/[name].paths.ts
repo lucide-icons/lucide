@@ -1,24 +1,22 @@
-import { IconEntity } from '../../.vitepress/theme/types';
+import relatedIcons from '../../.vitepress/data/relatedIcons.json';
+import iconNodes from '../../.vitepress/data/lab/iconNodes';
+import * as iconDetails from '../../.vitepress/data/lab/iconDetails';
+import { IconEntity } from '../.vitepress/theme/types';
 
 export default {
   paths: async () => {
-    try {
-      const iconDetailsResponse = await fetch('https://lab.lucide.dev/api/icon-details');
-      const iconDetails = (await iconDetailsResponse.json()) as Record<string, IconEntity>;
+    return (Object.values(iconDetails) as unknown as IconEntity[]).map((iconEntity) => {
+      const params = {
+        ...iconEntity,
+        relatedIcons: relatedIcons[iconEntity.name].map((name: string) => ({
+          name,
+          iconNode: iconNodes[name],
+        })),
+      };
 
-      return Object.values(iconDetails).map((iconEntity) => {
-        const params = {
-          externalLibrary: 'lab',
-          ...iconEntity,
-        };
-
-        return {
-          params,
-        };
-      });
-    } catch (error) {
-      console.error('Error fetching icon details:', error);
-      return [];
-    }
+      return {
+        params,
+      };
+    });
   },
 };

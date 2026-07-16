@@ -16,7 +16,7 @@ export const externalLibContext = {
 };
 
 const externalLibIconNodesAPI = {
-  lab: 'https://lab.lucide.dev/api/icon-details',
+  lab: '/api/lab/icon-details',
 };
 
 export function useExternalLibs(): ExternalLibContext {
