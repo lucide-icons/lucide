@@ -27,14 +27,3 @@ allowBuilds:
   ttf2woff2: false
   unrs-resolver: false
   vue-demi: false
-
-minimumReleaseAgeExclude:
-  - micromatch@4.0.8
-  - '@octokit/request-error@5.1.1'
-  - '@octokit/plugin-paginate-rest@9.2.2'
-  - '@octokit/request@8.4.1'
-  - minimatch@9.0.6
-  - minimatch@9.0.7
-  - file-type@21.3.1
-  - yaml@2.8.3
-  - esbuild@0.28.1
