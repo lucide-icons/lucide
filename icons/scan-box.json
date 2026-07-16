@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "wojtekmaj",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "ar",
+    "augmented reality",
+    "3d",
+    "object detection",
+    "object recognition",
+    "tracking",
+    "spatial computing",
+    "capture",
+    "cube",
+    "bounding box",
+    "camera",
+    "frame",
+    "shape",
+    "boundary"
+  ],
+  "categories": [
+    "design",
+    "devices",
+    "shopping",
+    "gaming"
+  ]
+}
