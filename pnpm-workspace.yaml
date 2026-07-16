@@ -10,9 +10,10 @@ overrides:
   semver: ^7.7.3
   vite-prerender-plugin: 0.5.12
   webpack-dev-middleware: ^5.3.4
-  vitest: "4.1.10"
-  vite: "^7.3.6"
-  minimatch: ^9.0.7
+  vitest: '4.1.10'
+  vite: '^7.3.6'
+  minimatch@>=9.0.0 <9.0.6: ^9.0.6
+  minimatch@>=9.0.0 <9.0.7: ^9.0.7
 
 allowBuilds:
   '@parcel/watcher': false
