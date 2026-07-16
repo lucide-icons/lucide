@@ -73,13 +73,11 @@ const customizingActive = computed(() => {
       id="icon-color"
       label="Color"
     >
-      <template #display>
-        <ColorPicker
-          v-model="color"
-          id="icon-color"
-          class="color-picker"
-        />
-      </template>
+      <ColorPicker
+        v-model="color"
+        id="icon-color"
+        class="color-picker"
+      />
     </InputField>
 
     <InputField
@@ -161,6 +159,6 @@ const customizingActive = computed(() => {
 }
 
 .color-picker {
-  margin-left: auto;
+  width: 100%;
 }
 </style>

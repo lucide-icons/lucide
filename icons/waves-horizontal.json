@@ -5,6 +5,7 @@
     "ericfennis",
     "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "water",
     "sea",
@@ -26,8 +27,7 @@
     {
       "name": "waves",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }
