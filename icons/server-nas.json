@@ -4,8 +4,8 @@
     "benhaube"
   ],
   "use-cases": [
-    "Network Documentation: Use in network documentation websites to depict a Network Attached Storage server.",
-    "Homelab Dashboard: Use on a button in a homelab dashboard that links to your Network Attached Storage server, or as an icon on a status / monitoring widget."
+    "To indicate a Network Attached Storage server in a network",
+    "To indicate the status of Network Attached Storage server"
   ],
   "tags": [
     "cloud",
