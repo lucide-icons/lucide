@@ -30,7 +30,12 @@
     "camera",
     "frame",
     "shape",
-    "boundary"
+    "boundary",
+    "lidar",
+    "depth",
+    "scanning",
+    "mapping",
+    "placement"
   ],
   "categories": [
     "design",
