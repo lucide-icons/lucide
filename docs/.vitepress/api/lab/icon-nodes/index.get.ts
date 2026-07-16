@@ -1,4 +1,4 @@
-import iconNodes from '../../../data/iconNodes';
+import iconNodes from '../../../data/lab/iconNodes';
 
 type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][];
 

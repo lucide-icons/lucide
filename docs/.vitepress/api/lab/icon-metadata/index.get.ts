@@ -1,4 +1,4 @@
-import iconMetaData from '../../../data/iconMetaData';
+import iconMetaData from '../../../data/lab/iconMetaData';
 
 export default eventHandler((event) => {
   setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');

@@ -1,5 +1,5 @@
-import iconMetaData from '../../../data/iconMetaData';
-import iconNodes from '../../../data/iconNodes';
+import iconMetaData from '../../../data/lab/iconMetaData';
+import iconNodes from '../../../data/lab/iconNodes';
 
 export default eventHandler((event) => {
   setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');
