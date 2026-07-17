@@ -21,7 +21,7 @@ The `categories` property is an array of strings that specify the categories to 
 
 ## Use Cases
 
-The `useCases` property is an array of strings that describe the specific scenarios in which the icon would be used. Each use case should be concise and clearly convey the context in which the icon is applicable. Use the existing use cases in the repository as a reference for consistency and to avoid duplicates.
+The `use-cases` property is an array of strings that describe the specific scenarios in which the icon would be used. Each use case should be concise and clearly convey the context in which the icon is applicable. Use the existing use cases in the repository as a reference for consistency and to avoid duplicates.
 
 ### Writing icon use-cases
 
