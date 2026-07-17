@@ -73,19 +73,20 @@ export default defineConfig({
         },
       ],
     },
-    plugins: isDev && [
-      nitro(
-        {
-          ssr: false,
-          sourceRoot: '.',
-        },
-        {
-          ...nitroConfig,
-          srcDir: '.',
-          routesDir: 'api',
-          scanDirs: ['.'],
-        },
-      ),
+    plugins: [
+      isDev &&
+        nitro(
+          {
+            ssr: false,
+            sourceRoot: '.',
+          },
+          {
+            ...nitroConfig,
+            srcDir: '.',
+            routesDir: 'api',
+            scanDirs: ['.'],
+          },
+        ),
       groupIconVitePlugin(),
       llmstxt({
         ignoreFiles: [

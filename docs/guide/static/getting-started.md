@@ -1,6 +1,6 @@
 <script setup>
-import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
-import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
+import OverviewLink from '~/.vitepress/theme/components/base/OverviewLink.vue'
+import OverviewLinkGrid from '~/.vitepress/theme/components/base/OverviewLinkGrid.vue'
 </script>
 
 # Getting started

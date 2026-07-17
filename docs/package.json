@@ -51,7 +51,7 @@
     "vitepress-plugin-llms": "^1.13.3"
   },
   "dependencies": {
-    "@analogjs/vite-plugin-nitro": "^2.3.0",
+    "@analogjs/vite-plugin-nitro": "^2.6.3",
     "@floating-ui/vue": "^1.1.11",
     "@headlessui/vue": "^1.7.23",
     "@lucide/vue": "workspace:*",

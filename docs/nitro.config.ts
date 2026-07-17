@@ -6,7 +6,7 @@ export default defineNitroConfig({
   // srcDir: '.',
   apiDir: 'api',
   // noPublicDir: true,
-  srcDir: '.vitepress',
+  srcDir: '.',
   ignore: ['.vitepress/plugins'],
   routeRules: {
     '/api/**': { cors: false },
