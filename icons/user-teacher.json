@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MercedesFraga"
+  ],
+  "use-cases": [],
+  "tags": [
+    "person",
+    "teacher",
+    "teach",
+    "instructor",
+    "professor",
+    "education",
+    "wand",
+    "pointer",
+    "book",
+    "account"
+  ],
+  "categories": [
+    "account",
+    "people"
+  ]
+}
