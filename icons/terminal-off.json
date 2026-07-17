@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "l46983284-cpu"
+  ],
+  "use-cases": [
+    "showing that a code sandbox or terminal tool is unavailable in an AI assistant capability list",
+    "indicating a disabled shell/console action in a developer toolbar",
+    "marking that remote terminal access is offline in a deployment dashboard",
+    "toggling off command-line execution in a workflow builder"
+  ],
+  "tags": [
+    "code",
+    "command line",
+    "prompt",
+    "shell",
+    "console",
+    "disabled",
+    "unavailable",
+    "offline"
+  ],
+  "categories": [
+    "development"
+  ]
+}

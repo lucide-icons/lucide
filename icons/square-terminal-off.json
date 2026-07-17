@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "l46983284-cpu"
+  ],
+  "use-cases": [
+    "pairing with square-terminal to show a code console panel is turned off",
+    "showing that an embedded terminal widget is disabled in an IDE-like UI",
+    "indicating a blocked shell session tile in a multi-tool agent dashboard",
+    "marking unavailable CLI tools next to available web/search tool icons"
+  ],
+  "tags": [
+    "code",
+    "command line",
+    "prompt",
+    "shell",
+    "console",
+    "disabled",
+    "unavailable",
+    "offline"
+  ],
+  "categories": [
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "terminal-square-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}
