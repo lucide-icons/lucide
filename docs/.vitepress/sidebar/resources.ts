@@ -18,35 +18,60 @@ export const resourcesSidebar = [
         text: 'Brand logo statement',
         link: '/brand-logo-statement',
       },
-      {
-        text: 'Contributing',
-        link: '/contribute',
-      },
+
     ],
   },
   {
-    text: 'Designing icons',
+    text: 'Contribute',
     items: [
       {
-        text: 'Icon Design Principles',
-        link: '/contribute/icon-design-guide',
+        text: 'Contributing',
+        link: '/contribute/',
+      },
+
+    ],
+  },
+  {
+    text: 'Contributing icons',
+    items: [
+      {
+        text: 'Getting started',
+        link: '/contribute/icons/',
       },
       {
-        text: 'Designing in Illustrator',
-        link: '/contribute/illustrator-guide',
+        text: 'Design Principles',
+        link: '/contribute/icons/design-principles',
       },
       {
-        text: 'Designing in Inkscape',
-        link: '/contribute/inkscape-guide',
+        text: 'SVG Code conventions',
+        link: '/contribute/icons/code-conventions',
       },
       {
-        text: 'Designing in Figma',
-        link: '/contribute/figma-guide',
+        text: 'Writing icon metadata',
+        link: '/contribute/icons/metadata-conventions',
       },
       {
-        text: 'Designing in Affinity Designer',
-        link: '/contribute/affinity-designer-guide',
+        text: 'Design software guides',
+        collapsed: false,
+        items: [{
+            text: 'Illustrator',
+            link: '/contribute/icons/illustrator-guide',
+          },
+          {
+            text: ' Inkscape',
+            link: '/contribute/icons/inkscape-guide',
+          },
+          {
+            text: 'Figma',
+            link: '/contribute/icons/figma-guide',
+          },
+          {
+            text: 'Affinity Designer',
+            link: '/contribute/icons/affinity-designer-guide',
+          }
+        ],
       },
+
     ],
   },
 ];

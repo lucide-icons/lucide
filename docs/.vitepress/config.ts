@@ -96,7 +96,7 @@ export default defineConfig({
         text: 'Resources',
         items: [
           ...resourcesSidebar[0].items,
-          { text: 'Design icons', link: '/contribute/icon-design-guide' },
+          { text: 'Design icons', link: '/contribute/icons/' },
         ],
       },
       { text: 'Packages', link: '/packages' },

@@ -48,4 +48,4 @@ Or you can also copy its source as SVG.
 That's it. You just made your first icon. Congratulations!
 
 ## Figma Tips
-1. The [Icon Design Guidelines](icon-design-guide.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).
+1. The [Icon Design Guidelines](design-principles.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).
