@@ -27,8 +27,8 @@
     {
       "name": "arrow-down-01",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
+      "deprecated": true
+    },
+    "arrow-down-01"
   ]
 }

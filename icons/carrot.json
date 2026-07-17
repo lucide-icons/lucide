@@ -3,13 +3,24 @@
   "contributors": [
     "Andreto",
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
   "use-cases": [
     "Representing vegetables or healthy food",
     "Categorizing produce or groceries"
   ],
   "tags": [
+    "orange",
+    "healthy",
+    "nature",
+    "fresh",
+    "root",
+    "produce",
+    "organic",
+    "nutrition",
     "vegetable",
     "food",
     "eat"

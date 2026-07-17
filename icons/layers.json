@@ -26,7 +26,6 @@
     {
       "name": "layers-3",
       "deprecated": true,
-      "toBeRemovedInVersion": "v1.0",
       "deprecationReason": "alias.duplicate"
     }
   ]

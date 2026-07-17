@@ -18,8 +18,8 @@
     {
       "name": "axis-3-d",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
+      "deprecated": true
+    },
+    "axis-3-d"
   ]
 }

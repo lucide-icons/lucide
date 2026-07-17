@@ -32,8 +32,7 @@
     {
       "name": "book-template",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0.0"
+      "deprecated": true
     }
   ]
 }

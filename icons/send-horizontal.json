@@ -24,8 +24,7 @@
     {
       "name": "send-horizonal",
       "deprecated": true,
-      "deprecationReason": "alias.typo",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.typo"
     }
   ]
 }

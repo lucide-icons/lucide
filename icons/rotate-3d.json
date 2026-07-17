@@ -20,8 +20,8 @@
     {
       "name": "rotate-3-d",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
+      "deprecated": true
+    },
+    "rotate-3-d"
   ]
 }

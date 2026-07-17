@@ -28,8 +28,8 @@
     {
       "name": "arrow-down-za",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
-    }
+      "deprecated": true
+    },
+    "arrow-down-za"
   ]
 }
