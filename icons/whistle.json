@@ -1,5 +1,6 @@
 {
   "$schema": "../icon.schema.json",
+  "use-cases": [],
   "contributors": [
     "briz123",
     "UsamaKhan",
