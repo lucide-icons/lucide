@@ -3,6 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "indicating a USB-C port or connector",
+    "representing data transfer and device connectivity",
+    "showing a charging or power delivery interface",
+    "marking USB-C inputs and outputs on devices"
+  ],
   "tags": [
     "universal",
     "serial",
