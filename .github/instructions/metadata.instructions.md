@@ -57,16 +57,6 @@ When a request covers several icons at once, assign each use-case only to the ic
 
 Related icons should get **variant-specific** wording, not one shared blurb. `battery-low` → "Indicating a low battery charge level"; `battery-full` → "…full…". `square-arrow-right-enter` → sign in / join; `-exit` → sign out / export. Resist copying the same line across a family.
 
-### Deriving from source material
-
-When mining descriptions, comments, or linked issues:
-
-- Prefer the **stated purpose** over the backstory. Extract the function, discard the anecdote.
-- If a source lists genuinely distinct uses, keep them as separate entries; if it repeats one idea five ways, collapse to one.
-- Merge an intro line with its bullets ("To represent:" + "pottery" → "Representing pottery").
-- If the only signal is noise (a name restatement, a link, "thanks!"), leave the icon without a use-case rather than inventing one.
-- Never fabricate a use-case that isn't supported by the icon's meaning or the source.
-
 ## Examples
 
 Good:
