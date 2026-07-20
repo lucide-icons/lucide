@@ -8,10 +8,24 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "representing an app grid or application launcher",
+    "displaying a grid-based menu or navigation interface",
+    "switching to a tiled or grid layout",
+    "representing a collection of items or categories",
+    "opening a dashboard or overview"
+  ]
   "tags": [
     "app",
     "home",
-    "start"
+    "start",
+    "dot matrix",
+    "dots",
+    "menu",
+    "dashboard",
+    "collection",
+    "overview",
+    "tiles"
   ],
   "categories": [
     "design",
