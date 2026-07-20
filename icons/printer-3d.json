@@ -1,10 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "Azuzula"
+    "Azuzula",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "indicating a 3D printer or fabrication machine",
+    "representing rapid prototyping and additive manufacturing",
+    "showing prototyping and model production",
+    "representing maker tools and digital fabrication",
+    "indicating a 3D printing job or workflow"
   ],
   "tags": [
-    "3D",
     "model",
     "hardware",
     "technology",
@@ -12,14 +20,19 @@
     "factory",
     "manufacturing",
     "art",
-    "3d",
-    "3dprinter",
-    "printer",
-    "print",
-    "extrude",
+    "extruder",
     "stl",
     "obj",
-    "step"
+    "step",
+    "additive",
+    "manufacturing",
+    "fabrication",
+    "rapid prototype",
+    "layer",
+    "filament",
+    "nozzle",
+    "maker",
+    "machine"
   ],
   "categories": [
     "devices",
