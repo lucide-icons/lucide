@@ -13,6 +13,14 @@ export const lucideIconTemplate = `@if (title(); as titleValue) {
       <svg:path
         [attr.d]="attrs['d']"
         [attr.fill]="attrs['fill']"
+        [attr.fill-opacity]="attrs['fill-opacity']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
@@ -22,18 +30,43 @@ export const lucideIconTemplate = `@if (title(); as titleValue) {
         [attr.x2]="attrs['x2']"
         [attr.y1]="attrs['y1']"
         [attr.y2]="attrs['y2']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
     @case ('polygon') {
       <svg:polygon
         [attr.points]="attrs['points']"
+        [attr.fill]="attrs['fill']"
+        [attr.fill-opacity]="attrs['fill-opacity']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
     @case ('polyline') {
       <svg:polyline
         [attr.points]="attrs['points']"
+        [attr.fill]="attrs['fill']"
+        [attr.fill-opacity]="attrs['fill-opacity']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
@@ -43,6 +76,14 @@ export const lucideIconTemplate = `@if (title(); as titleValue) {
         [attr.cy]="attrs['cy']"
         [attr.r]="attrs['r']"
         [attr.fill]="attrs['fill']"
+        [attr.fill-opacity]="attrs['fill-opacity']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
@@ -52,6 +93,15 @@ export const lucideIconTemplate = `@if (title(); as titleValue) {
         [attr.cy]="attrs['cy']"
         [attr.rx]="attrs['rx']"
         [attr.ry]="attrs['ry']"
+        [attr.fill]="attrs['fill']"
+        [attr.fill-opacity]="attrs['fill-opacity']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
@@ -63,6 +113,15 @@ export const lucideIconTemplate = `@if (title(); as titleValue) {
         [attr.height]="attrs['height']"
         [attr.rx]="attrs['rx']"
         [attr.ry]="attrs['ry']"
+        [attr.fill]="attrs['fill']"
+        [attr.fill-opacity]="attrs['fill-opacity']"
+        [attr.stroke]="attrs['stroke']"
+        [attr.stroke-width]="attrs['stroke-width']"
+        [attr.stroke-linecap]="attrs['stroke-linecap']"
+        [attr.stroke-linejoin]="attrs['stroke-linejoin']"
+        [attr.stroke-dasharray]="attrs['stroke-dasharray']"
+        [attr.stroke-dashoffset]="attrs['stroke-dashoffset']"
+        [attr.opacity]="attrs['opacity']"
         [attr.vector-effect]="attrs['vector-effect']"
       />
     }
