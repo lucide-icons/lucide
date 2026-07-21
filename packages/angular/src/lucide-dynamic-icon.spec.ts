@@ -52,6 +52,38 @@ describe('LucideDynamicIcon', () => {
       ['rect', { x: 1, y: 2, width: 3, height: 4, rx: 5, ry: 6, key: 'rect-key' }],
     ],
   };
+  const fillAndStrokeAttrs = {
+    fill: 'red',
+    'fill-opacity': '0.5',
+    stroke: 'blue',
+    'stroke-width': '3',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'bevel',
+    'stroke-dasharray': '4 2',
+    'stroke-dashoffset': '1',
+    opacity: '0.75',
+  };
+  const strokeOnlyAttrs = {
+    stroke: 'blue',
+    'stroke-width': '3',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'bevel',
+    'stroke-dasharray': '4 2',
+    'stroke-dashoffset': '1',
+    opacity: '0.75',
+  };
+  const presentationAttrsIcon: LucideIconData = {
+    name: 'presentation-attrs',
+    node: [
+      ['path', { d: 'm1 1 2 2', ...fillAndStrokeAttrs }],
+      ['line', { x1: 1, x2: 2, y1: 3, y2: 4, ...strokeOnlyAttrs }],
+      ['polygon', { points: '1 1 2 2 3 1', ...fillAndStrokeAttrs }],
+      ['polyline', { points: '1 1 2 2 3 1', ...fillAndStrokeAttrs }],
+      ['circle', { cx: 12, cy: 12, r: 8, ...fillAndStrokeAttrs }],
+      ['ellipse', { cx: 12, cy: 12, rx: 8, ry: 4, ...fillAndStrokeAttrs }],
+      ['rect', { x: 1, y: 2, width: 3, height: 4, rx: 5, ry: 6, ...fillAndStrokeAttrs }],
+    ],
+  };
   function createComponent() {
     return TestBed.createComponent(LucideDynamicIcon, {
       inferTagName: true,
@@ -95,6 +127,21 @@ describe('LucideDynamicIcon', () => {
       '<circle cx="12" cy="12" r="8" fill="currentColor"></circle>',
       '<ellipse cx="12" cy="12" rx="8" ry="4"></ellipse>',
       '<rect x="1" y="2" width="3" height="4" rx="5" ry="6"></rect>',
+    ]);
+  });
+
+  it('should render stroke and fill presentation attributes on all supported shapes', () => {
+    icon.set(presentationAttrsIcon);
+    fixture.detectChanges();
+    const children = getRenderedChildren();
+    expect(children.map((child) => child.outerHTML)).toEqual([
+      '<path d="m1 1 2 2" fill="red" fill-opacity="0.5" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></path>',
+      '<line x1="1" x2="2" y1="3" y2="4" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></line>',
+      '<polygon points="1 1 2 2 3 1" fill="red" fill-opacity="0.5" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></polygon>',
+      '<polyline points="1 1 2 2 3 1" fill="red" fill-opacity="0.5" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></polyline>',
+      '<circle cx="12" cy="12" r="8" fill="red" fill-opacity="0.5" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></circle>',
+      '<ellipse cx="12" cy="12" rx="8" ry="4" fill="red" fill-opacity="0.5" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></ellipse>',
+      '<rect x="1" y="2" width="3" height="4" rx="5" ry="6" fill="red" fill-opacity="0.5" stroke="blue" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="4 2" stroke-dashoffset="1" opacity="0.75"></rect>',
     ]);
   });
 
