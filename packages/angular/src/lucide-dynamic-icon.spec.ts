@@ -43,13 +43,124 @@ describe('LucideDynamicIcon', () => {
   const supportedShapesIcon: LucideIconData = {
     name: 'supported-shapes',
     node: [
-      ['path', { d: 'm1 1 2 2', fill: 'currentColor', key: 'path-key' }],
-      ['line', { x1: 1, x2: 2, y1: 3, y2: 4, key: 'line-key' }],
-      ['polygon', { points: '1 1 2 2 3 1', key: 'polygon-key' }],
-      ['polyline', { points: '1 1 2 2 3 1', key: 'polyline-key' }],
-      ['circle', { cx: 12, cy: 12, r: 8, fill: 'currentColor', key: 'circle-key' }],
-      ['ellipse', { cx: 12, cy: 12, rx: 8, ry: 4, key: 'ellipse-key' }],
-      ['rect', { x: 1, y: 2, width: 3, height: 4, rx: 5, ry: 6, key: 'rect-key' }],
+      [
+        'path',
+        {
+          class: 'path-class',
+          d: 'm1 1 2 2',
+          id: 'path-id',
+          opacity: '0.7',
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          'vector-effect': 'non-scaling-stroke',
+          key: 'path-key',
+        },
+      ],
+      [
+        'line',
+        {
+          class: 'line-class',
+          id: 'line-id',
+          opacity: '0.7',
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          x1: 1,
+          x2: 2,
+          y1: 3,
+          y2: 4,
+          'vector-effect': 'non-scaling-stroke',
+          key: 'line-key',
+        },
+      ],
+      [
+        'polygon',
+        {
+          class: 'polygon-class',
+          id: 'polygon-id',
+          opacity: '0.7',
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          points: '1 1 2 2 3 1',
+          'vector-effect': 'non-scaling-stroke',
+          key: 'polygon-key',
+        },
+      ],
+      [
+        'polyline',
+        {
+          class: 'polyline-class',
+          id: 'polyline-id',
+          opacity: '0.7',
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          points: '1 1 2 2 3 1',
+          'vector-effect': 'non-scaling-stroke',
+          key: 'polyline-key',
+        },
+      ],
+      [
+        'circle',
+        {
+          class: 'circle-class',
+          cx: 12,
+          cy: 12,
+          id: 'circle-id',
+          opacity: '0.7',
+          r: 8,
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          'vector-effect': 'non-scaling-stroke',
+          key: 'circle-key',
+        },
+      ],
+      [
+        'ellipse',
+        {
+          class: 'ellipse-class',
+          cx: 12,
+          cy: 12,
+          id: 'ellipse-id',
+          opacity: '0.7',
+          rx: 8,
+          ry: 4,
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          'vector-effect': 'non-scaling-stroke',
+          key: 'ellipse-key',
+        },
+      ],
+      [
+        'rect',
+        {
+          class: 'rect-class',
+          x: 1,
+          y: 2,
+          id: 'rect-id',
+          opacity: '0.7',
+          width: 3,
+          height: 4,
+          rx: 5,
+          ry: 6,
+          stroke: 'red',
+          'stroke-opacity': '0.5',
+          fill: 'blue',
+          'fill-opacity': '0.3',
+          'vector-effect': 'non-scaling-stroke',
+          key: 'rect-key',
+        },
+      ],
     ],
   };
   function createComponent() {
@@ -87,15 +198,17 @@ describe('LucideDynamicIcon', () => {
     icon.set(supportedShapesIcon);
     fixture.detectChanges();
     const children = getRenderedChildren();
-    expect(children.map((child) => child.outerHTML)).toEqual([
-      '<path d="m1 1 2 2" fill="currentColor"></path>',
-      '<line x1="1" x2="2" y1="3" y2="4"></line>',
-      '<polygon points="1 1 2 2 3 1"></polygon>',
-      '<polyline points="1 1 2 2 3 1"></polyline>',
-      '<circle cx="12" cy="12" r="8" fill="currentColor"></circle>',
-      '<ellipse cx="12" cy="12" rx="8" ry="4"></ellipse>',
-      '<rect x="1" y="2" width="3" height="4" rx="5" ry="6"></rect>',
-    ]);
+    expect(children.map((child) => child.outerHTML)).toMatchInlineSnapshot(`
+      [
+        "<path class="path-class" d="m1 1 2 2" id="path-id" opacity="0.7" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" vector-effect="non-scaling-stroke"></path>",
+        "<line class="line-class" id="line-id" opacity="0.7" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" x1="1" x2="2" y1="3" y2="4" vector-effect="non-scaling-stroke"></line>",
+        "<polygon class="polygon-class" id="polygon-id" opacity="0.7" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" points="1 1 2 2 3 1" vector-effect="non-scaling-stroke"></polygon>",
+        "<polyline class="polyline-class" id="polyline-id" opacity="0.7" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" points="1 1 2 2 3 1" vector-effect="non-scaling-stroke"></polyline>",
+        "<circle class="circle-class" cx="12" cy="12" id="circle-id" opacity="0.7" r="8" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" vector-effect="non-scaling-stroke"></circle>",
+        "<ellipse class="ellipse-class" cx="12" cy="12" id="ellipse-id" opacity="0.7" rx="8" ry="4" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" vector-effect="non-scaling-stroke"></ellipse>",
+        "<rect class="rect-class" x="1" y="2" id="rect-id" opacity="0.7" width="3" height="4" rx="5" ry="6" stroke="red" stroke-opacity="0.5" fill="blue" fill-opacity="0.3" vector-effect="non-scaling-stroke"></rect>",
+      ]
+    `);
   });
 
   it('should remove children on change', () => {
