@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "use-cases": [
+    "representing a polygon geometry",
+    "indicating an area boundary on a map",
+    "working with vector geometry and GIS data"
+  ],
+  "contributors": [
+    "daboudii",
+    "timmy471"
+  ],
+  "tags": [
+    "map",
+    "vector",
+    "geometry",
+    "coordinates",
+    "shape",
+    "location"
+  ],
+  "categories": [
+    "design",
+    "shapes"
+  ]
+}
