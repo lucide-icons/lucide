@@ -3,6 +3,16 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Indicating that a resource or area is protected and requires authorized access",
+    "Representing access control and permission management settings",
+    "Showing security options for accounts, applications, or protected systems",
+    "Indicating content or functionality restricted to authenticated users",
+    "Representing authentication and secure sign-in features",
+    "Showing protected credentials, secrets, or other sensitive information",
+    "Representing identity and account protection features",
+    "Indicating security policies or authorization requirements"
+  ],
   "tags": [
     "cybersecurity",
     "secure",
