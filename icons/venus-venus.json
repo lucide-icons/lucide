@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "gender",
+    "sex",
+    "female",
+    "feminine",
+    "woman",
+    "girl",
+    "lesbian"
+  ],
+  "categories": [
+    "medical"
+  ]
+}
