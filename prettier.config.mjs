@@ -12,6 +12,12 @@ const config = {
         printWidth: 0,
       },
     },
+    {
+      files: ['icons/*.svg'],
+      options: {
+        parser: 'lucide-svg',
+      },
+    },
   ],
 };
 
