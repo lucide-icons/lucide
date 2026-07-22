@@ -1,4 +1,4 @@
-import {optimize} from 'svgo';
+import { optimize } from 'svgo';
 
 const plugin = {
   languages: [
@@ -32,17 +32,17 @@ const plugin = {
               name: 'removeAttrs',
               params: {
                 attrs: [
-                  "svg:^(?!(xmlns|width|height|fill|stroke|stroke-linecap|stroke-linejoin|stroke-width)$).+",
-                  "path:^(?!d$).+",
-                  "line:^(?!(x1|x2|y1|y2)$).+",
-                  "polygon:^(?!points$).+",
-                  "polyline:^(?!points$).+",
-                  "circle:^(?!(cx|cy|r|fill)$).+",
-                  "ellipse:^(?!(cx|cy|rx|ry)$).+",
-                  "rect:^(?!(x|y|width|height|rx|ry)$).+",
+                  'svg:^(?!(xmlns|width|height|fill|stroke|stroke-linecap|stroke-linejoin|stroke-width)$).+',
+                  'path:^(?!d$).+',
+                  'line:^(?!(x1|x2|y1|y2)$).+',
+                  'polygon:^(?!points$).+',
+                  'polyline:^(?!points$).+',
+                  'circle:^(?!(cx|cy|r|fill)$).+',
+                  'ellipse:^(?!(cx|cy|rx|ry)$).+',
+                  'rect:^(?!(x|y|width|height|rx|ry)$).+',
                 ],
-              }
-            }
+              },
+            },
           ],
           js2svg: {
             indent: 2,
@@ -50,7 +50,10 @@ const plugin = {
             useShortTags: true,
             finalNewline: true,
           },
-        }).data.replace(/<svg[^>]+>/, `<svg
+        })
+          .data.replace(
+            /<svg[^>]+>/,
+            `<svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -60,7 +63,9 @@ const plugin = {
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
->`).replace(/"\/>/g, `" />`);
+>`,
+          )
+          .replace(/"\/>/g, `" />`);
       },
     },
   },
