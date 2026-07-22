@@ -5,7 +5,10 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing light divergence in physics or educational tools",
+    "Illustrating optics in tutoring apps, simulators, or scientific diagrams"
+  ],
   "tags": [
     "concave",
     "lens",

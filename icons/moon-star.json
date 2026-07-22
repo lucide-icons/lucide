@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Serving as an alternate moon icon for dark mode or nighttime"
+  ],
   "tags": [
     "dark",
     "night",

@@ -5,7 +5,9 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Symbolizing the mean (x-bar) in statistics"
+  ],
   "tags": [
     "line",
     "top",

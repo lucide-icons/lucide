@@ -7,7 +7,10 @@
     "karsa-mistmere",
     "Yohh"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Drawing dashed triangle shapes in sketch or drawing tools",
+    "Serving as a triangle tool button alongside dashed circles and squares"
+  ],
   "tags": [
     "equilateral",
     "delta",

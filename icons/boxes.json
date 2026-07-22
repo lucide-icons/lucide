@@ -3,7 +3,10 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a collection or cluster of units or parts",
+    "Indicating grouped packages or modular components"
+  ],
   "tags": [
     "cubes",
     "packages",

@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing advanced filters or settings",
+    "Serving as an alternate orientation for slider controls"
+  ],
   "tags": [
     "settings",
     "filters",

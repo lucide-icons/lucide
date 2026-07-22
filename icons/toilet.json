@@ -6,7 +6,11 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Showing the number of bathrooms in house or hotel listings",
+    "Locating the nearest restroom on maps",
+    "Representing bathroom-related topics in health apps"
+  ],
   "tags": [
     "toilet",
     "potty",

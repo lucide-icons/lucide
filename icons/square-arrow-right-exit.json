@@ -5,7 +5,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Signing out or leaving a session",
+    "Indicating an export or output action"
+  ],
   "tags": [
     "out",
     "outside",

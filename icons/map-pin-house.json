@@ -6,7 +6,12 @@
     "csandman",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking a home address on a map",
+    "Indicating a property location in real estate apps",
+    "Representing a saved place in navigation apps",
+    "Marking a business headquarters"
+  ],
   "tags": [
     "location",
     "waypoint",

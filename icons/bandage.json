@@ -5,7 +5,12 @@
     "jamiemlaw",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating first aid supplies or first aid stations",
+    "Representing wound care or injury tracking in medical apps",
+    "Marking injury treatment and emergency care sections on healthcare sites",
+    "Highlighting first aid services at pharmacies, hospitals, or sports facilities"
+  ],
   "tags": [
     "plaster",
     "band-aid",

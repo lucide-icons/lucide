@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a fatal error or crash",
+    "Representing something explosive or a blockbuster"
+  ],
   "tags": [
     "fatal",
     "error",

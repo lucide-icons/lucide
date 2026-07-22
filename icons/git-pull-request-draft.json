@@ -4,7 +4,9 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a draft pull request"
+  ],
   "tags": [
     "code",
     "version control",

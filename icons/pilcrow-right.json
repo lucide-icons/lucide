@@ -5,7 +5,10 @@
     "danielbayley",
     "jonas-hoebenreich"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Switching text direction to left-to-right (LTR)",
+    "Toggling LTR viewing in rich-text editors or websites"
+  ],
   "tags": [
     "direction",
     "paragraph",

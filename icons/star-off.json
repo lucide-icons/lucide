@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Removing a starred status or rating",
+    "Unliking or unfavoriting an item"
+  ],
   "tags": [
     "dislike",
     "unlike",

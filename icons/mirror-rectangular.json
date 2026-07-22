@@ -5,7 +5,10 @@
     "jamiemlaw",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing flat household mirrors in interior design or furniture apps",
+    "Illustrating dressing-room previews or AR furniture placement"
+  ],
   "tags": [
     "reflection",
     "optics",

@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing floating window layouts",
+    "Indicating centering of elements"
+  ],
   "tags": [
     "float",
     "center",

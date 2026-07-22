@@ -3,7 +3,9 @@
   "contributors": [
     "AnnaSasDev"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating that saving is disabled or unavailable"
+  ],
   "tags": [
     "floppy disk",
     "unsalvageable"

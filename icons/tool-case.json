@@ -5,7 +5,11 @@
     "karsa-mistmere",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing settings or utilities sections in developer tools",
+    "Indicating construction or maintenance features",
+    "Symbolizing equipment and tools"
+  ],
   "tags": [
     "tools",
     "maintenance",

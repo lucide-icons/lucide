@@ -3,7 +3,11 @@
   "contributors": [
     "dg-ac"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Picking border styles in spreadsheet editors",
+    "Choosing line styles for shapes or connectors in presentations",
+    "Selecting stroke styles in design and diagramming apps"
+  ],
   "tags": [
     "line",
     "stroke",

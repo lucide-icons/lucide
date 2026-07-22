@@ -3,7 +3,11 @@
   "contributors": [
     "Youya-ui"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing athletic footwear or activity tracking in fitness apps",
+    "Indicating running, jogging, or step-tracking features",
+    "Categorizing sports footwear in e-commerce"
+  ],
   "tags": [
     "footwear",
     "sports",

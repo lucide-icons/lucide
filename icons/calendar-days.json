@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "ericfennis"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a month view or a list of dates",
+    "Serving as an alternate style for a calendar"
+  ],
   "tags": [
     "date",
     "month",

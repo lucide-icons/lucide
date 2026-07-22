@@ -3,7 +3,9 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking amusement parks, funfairs, or tourist attractions on maps"
+  ],
   "tags": [
     "attraction",
     "entertainment",

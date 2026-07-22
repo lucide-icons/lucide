@@ -6,7 +6,10 @@
     "csandman",
     "mittalyashu"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing spreadsheets or database tables",
+    "Displaying labeled collections of data"
+  ],
   "tags": [
     "spreadsheets",
     "table",

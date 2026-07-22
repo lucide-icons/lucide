@@ -5,7 +5,10 @@
     "ericfennis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing multiple tags",
+    "Copying tags"
+  ],
   "tags": [
     "labels",
     "badges",

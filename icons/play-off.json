@@ -7,7 +7,8 @@
   ],
   "use-cases": [
     "Indicates that playback is disabled for video, live stream, or audio file",
-    "Indicates that video, live stream, or audio file cannot be played."
+    "Indicates that video, live stream, or audio file cannot be played.",
+    "Indicating that playback is disabled for video, stream, or audio"
   ],
   "tags": [
     "audio",

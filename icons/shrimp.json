@@ -3,7 +3,11 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking shellfish allergens",
+    "Representing seafood menu items or seafood spots",
+    "Indicating fishing grounds"
+  ],
   "tags": [
     "seafood",
     "shellfish",

@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Controlling upward wall lights in smart home apps",
+    "Indicating lighting amenities in booking apps"
+  ],
   "tags": [
     "lighting",
     "household",

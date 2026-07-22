@@ -8,7 +8,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Searching for users",
+    "Representing recruitment or talent search"
+  ],
   "tags": [
     "person",
     "account",

@@ -4,7 +4,9 @@
     "Diottodev",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Closing, disabling, or hiding a virtual keyboard"
+  ],
   "tags": [
     "unkeys",
     "layout",

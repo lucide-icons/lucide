@@ -5,7 +5,9 @@
     "ericfennis",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Restoring an item from the archive, reversing an archive action"
+  ],
   "tags": [
     "unarchive",
     "index",

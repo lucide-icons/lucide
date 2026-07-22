@@ -5,7 +5,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing leisure activities such as bathing or spa",
+    "Indicating effervescence or soapy water"
+  ],
   "tags": [
     "water",
     "cleaning",

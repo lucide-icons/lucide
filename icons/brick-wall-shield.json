@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a firewall or network protection",
+    "Indicating security barriers in cybersecurity interfaces"
+  ],
   "tags": [
     "firewall",
     "security",

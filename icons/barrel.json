@@ -4,7 +4,10 @@
     "karsa-mistmere",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating barrel-aged drinks such as wine, beer, or whiskey",
+    "Marking breweries or distilleries on maps"
+  ],
   "tags": [
     "keg",
     "drum",

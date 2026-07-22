@@ -7,7 +7,9 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Clearing or removing an active filter"
+  ],
   "tags": [
     "filter",
     "hopper",

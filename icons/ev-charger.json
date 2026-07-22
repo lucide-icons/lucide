@@ -8,7 +8,9 @@
     "csandman",
     "johnletey"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Marking electric vehicle charging stations on maps and points of interest"
+  ],
   "tags": [
     "electric",
     "charger",

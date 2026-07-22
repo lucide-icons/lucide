@@ -7,7 +7,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing the node tool in vector editing applications",
+    "Illustrating node-based path editing in tutorials and documentation"
+  ],
   "tags": [
     "path",
     "tool",

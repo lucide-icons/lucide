@@ -6,7 +6,11 @@
     "ericfennis",
     "Seanw265"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Creating a new trip or collection of locations",
+    "Adding a destination to an itinerary",
+    "Starting a new collaborative or custom map"
+  ],
   "tags": [
     "location",
     "navigation",

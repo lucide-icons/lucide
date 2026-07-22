@@ -6,7 +6,10 @@
     "ericfennis",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Adding something to the clipboard",
+    "Representing medical or doctor reports being added"
+  ],
   "tags": [
     "copy",
     "paste",

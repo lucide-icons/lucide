@@ -5,7 +5,10 @@
     "ericfennis",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing heat or geothermal energy in weather apps",
+    "Indicating smell or aroma"
+  ],
   "tags": [
     "water",
     "sea",

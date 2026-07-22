@@ -3,7 +3,12 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing ohms, the unit of electrical resistance",
+    "Symbolizing angular frequency or limits in math and physics",
+    "Denoting the end or finality, often paired with alpha",
+    "Inserting Greek letters in text editors or scientific tools"
+  ],
   "tags": [
     "greek",
     "symbol",

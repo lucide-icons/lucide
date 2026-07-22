@@ -6,7 +6,9 @@
     "jguddas",
     "VirtCode"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating no wifi signal in system or desktop UIs"
+  ],
   "tags": [
     "connection",
     "signal",
