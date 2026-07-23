@@ -54,6 +54,7 @@
     "@vitest/coverage-v8": "4.1.10",
     "@vitest/ui": "4.1.10",
     "ajv-cli": "^5.0.0",
+    "cspell": "^10.0.1",
     "dotenv": "^17.4.2",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
