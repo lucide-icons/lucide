@@ -18,11 +18,13 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
+          cache: 'pnpm'
           node-version-file: 'package.json'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Get changed files
@@ -45,11 +47,13 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
+          cache: 'pnpm'
           node-version-file: 'package.json'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Check lab icons do not already exist in icons
