@@ -4,10 +4,10 @@
   "version": "0.1.2",
   "license": "ISC",
   "homepage": "https://lucide.dev",
-  "bugs": "https://github.com/lucide-icons/lucide-lab/issues",
+  "bugs": "https://github.com/lucide-icons/lucide/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucide-icons/lucide-lab.git"
+    "url": "https://github.com/lucide-icons/lucide.git"
   },
   "keywords": [
     "Lucide",
@@ -19,7 +19,7 @@
     "Fontawesome",
     "Font Awesome"
   ],
-  "source": "src/lucide-lab.js",
+  "source": "src/lucide-lab.ts",
   "main": "dist/cjs/lucide-lab.js",
   "module": "dist/esm/lucide-lab.js",
   "typings": "dist/lucide-lab.d.ts",
@@ -34,11 +34,14 @@
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
-    "@lucide/rollup-plugins": "1.0.0",
+    "@lucide/build-icons": "workspace:*",
+    "@lucide/helpers": "workspace:*",
+    "@lucide/rollup-plugins": "workspace:*",
     "minimist": "^1.2.8",
     "prettier": "^2.3.2",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
-    "svgson": "^5.2.1"
+    "svgson": "^5.2.1",
+    "typescript": "^5.9.3"
   }
 }

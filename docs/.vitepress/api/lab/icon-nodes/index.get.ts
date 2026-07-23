@@ -1,6 +1,6 @@
+import { eventHandler, getQuery, setResponseHeader } from 'h3';
 import iconNodes from '../../../data/lab/iconNodes';
-
-type IconNodeWithKeys = [elementName: string, attrs: Record<string, string>, key: string][];
+type IconNodeWithKeys = [elementName: string, attrs: Record<string, string> & { key?: string }][];
 
 export default eventHandler((event) => {
   const query = getQuery(event);

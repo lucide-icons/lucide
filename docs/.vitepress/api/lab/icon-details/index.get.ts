@@ -1,9 +1,9 @@
+import { eventHandler, setResponseHeader } from 'h3';
 import iconMetaData from '../../../data/lab/iconMetaData';
 import iconPopularity from '../../../data/lab/iconPopularity';
 import iconNodes from '../../../data/lab/iconNodes';
 
 export default eventHandler((event) => {
-  setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');
   setResponseHeader(event, 'Access-Control-Allow-Origin', '*');
 
   return Object.fromEntries(

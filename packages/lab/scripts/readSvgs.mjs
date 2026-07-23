@@ -8,11 +8,13 @@ import { readSvg } from '@lucide/helpers';
  * @param {Function} getSvg - A function that returns the contents of an SVG file given a filename.
  * @returns {Object}
  */
-export default function readSVGs(svgFiles, iconsDirectory) {
-  return svgFiles.map((svgFile) => {
+export default async function readSVGs(svgFiles, iconsDirectory) {
+  const svgReadPromises = svgFiles.map(async (svgFile) => {
     const name = basename(svgFile, '.svg');
-    const contents = readSvg(svgFile, iconsDirectory);
+    const contents = await readSvg(svgFile, iconsDirectory);
 
     return { name, contents };
   });
+
+  return Promise.all(svgReadPromises);
 }
