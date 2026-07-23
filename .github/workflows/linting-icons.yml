@@ -45,6 +45,10 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: 'package.json'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Check lab icons do not already exist in icons
         run: node ./scripts/checkLabIcons.mts
 
