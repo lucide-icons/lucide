@@ -16,7 +16,13 @@
     "user",
     "person",
     "profile",
-    "account"
+    "account",
+    "smartphone",
+    "avatar",
+    "contact",
+    "identity",
+    "owner",
+    "authentication"
   ],
   "categories": [
     "account",
