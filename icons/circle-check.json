@@ -4,6 +4,7 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "done",
     "todo",
@@ -18,8 +19,7 @@
     {
       "name": "check-circle-2",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

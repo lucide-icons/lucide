@@ -13,7 +13,7 @@
   "title": "Lucide Icons icon schema",
   "type": "object",
   "additionalProperties": false,
-  "required": ["$schema", "categories", "tags"],
+  "required": ["$schema", "contributors", "categories", "tags", "use-cases"],
   "properties": {
     "$schema": {
       "type": "string"
@@ -40,7 +40,7 @@
           }
         },
         "dependentRequired": {
-          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecated": ["deprecationReason"],
           "deprecationReason": ["deprecated"],
           "toBeRemovedInVersion": ["deprecated"]
         }
@@ -114,6 +114,14 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "use-cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
     "deprecated": {
       "const": true
     },
@@ -126,7 +134,7 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecated": ["deprecationReason"],
     "deprecationReason": ["deprecated"],
     "toBeRemovedInVersion": ["deprecated"]
   },
