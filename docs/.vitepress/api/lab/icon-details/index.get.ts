@@ -1,4 +1,5 @@
 import iconMetaData from '../../../data/lab/iconMetaData';
+import iconPopularity from '../../../data/lab/iconPopularity';
 import iconNodes from '../../../data/lab/iconNodes';
 
 export default eventHandler((event) => {
@@ -14,7 +15,8 @@ export default eventHandler((event) => {
     // Add details from iconNodes
     iconDetails[iconName]['name'] = iconName
     iconDetails[iconName]['iconNode'] = iconNodes[iconName];
+    iconDetails[iconName]['popularity'] = iconPopularity[iconName]?.count ?? 0;
   }
 
-  return iconMetaData;
+  return iconDetails;
 });

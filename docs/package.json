@@ -15,7 +15,7 @@
     "prebuild:categoriesJson": "node ./scripts/writeCategoriesMetadata.mts",
     "prebuild:relatedIcons": "node ./scripts/writeIconRelatedIcons.mts",
     "prebuild:iconDetails": "node ./scripts/writeIconDetails.mts",
-    "prebuild:iconPopularity": "node ./scripts/writeiconPopularity.mts",
+    "prebuild:iconPopularity": "node ./scripts/writeiconPopularity.mts && node ./scripts/writeiconPopularityIndex.mts",
     "prebuild:brandStopwords": "node ./scripts/writeBrandStopwords.mts",
     "prebuild:writeLabIconNodes": "node ./scripts/writeLabIconNodes.mts",
     "prebuild:writeLabIconMetaIndex": "node ./scripts/writeLabIconMetaIndex.mts",

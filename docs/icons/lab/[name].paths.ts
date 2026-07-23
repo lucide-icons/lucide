@@ -1,17 +1,21 @@
-import relatedIcons from '../../.vitepress/data/relatedIcons.json';
 import iconNodes from '../../.vitepress/data/lab/iconNodes';
-import * as iconDetails from '../../.vitepress/data/lab/iconDetails';
-import { IconEntity } from '../.vitepress/theme/types';
+import iconPopularity from '../../.vitepress/data/lab/iconPopularity';
+import iconMetaData from '../../.vitepress/data/lab/iconMetaData';
+import { type IconEntity } from '../../.vitepress/theme/types';
 
 export default {
   paths: async () => {
-    return (Object.values(iconDetails) as unknown as IconEntity[]).map((iconEntity) => {
+    return (Object.entries(iconNodes) as unknown as IconEntity[]).map(([name, iconNode]) => {
+      const iconDetails = iconMetaData[name]
+
+      delete iconDetails['$schema']
+
       const params = {
-        ...iconEntity,
-        relatedIcons: relatedIcons[iconEntity.name].map((name: string) => ({
-          name,
-          iconNode: iconNodes[name],
-        })),
+        name,
+        iconNode,
+        externalLibrary: 'lab',
+        popularity: iconPopularity[name]?.count ?? 0,
+        ...iconDetails
       };
 
       return {
