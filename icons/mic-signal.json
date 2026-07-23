@@ -1,0 +1,48 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "iiaishwarya",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "representing a microphone actively broadcasting or transmitting voice",
+    "indicating live podcast, radio, streaming, or voice channel features",
+    "showing wireless microphone connections or remote audio capture",
+    "marking push-to-talk, voice chat, or walkie-talkie communication controls",
+    "identifying features that send spoken audio across a network or airwaves"
+  ],
+  "tags": [
+    "podcast",
+    "audio",
+    "broadcast",
+    "signal",
+    "wireless",
+    "radio",
+    "airwaves",
+    "microphone",
+    "talk",
+    "voice",
+    "speech",
+    "stream",
+    "live",
+    "voice chat",
+    "push to talk",
+    "transmission"
+  ],
+  "categories": [
+    "devices",
+    "communication",
+    "connectivity",
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "podcast",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
