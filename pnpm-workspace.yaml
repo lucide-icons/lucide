@@ -2,3 +2,28 @@ packages:
   - 'packages/*'
   - 'tools/*'
   - 'docs'
+
+overrides:
+  cross-spawn: 7.0.5
+  fast-json-patch: ^3.1.1
+  form-data: ^4.0.4
+  semver: ^7.7.3
+  vite-prerender-plugin: 0.5.12
+  webpack-dev-middleware: ^5.3.4
+  vitest: '4.1.10'
+  vite: '^7.3.6'
+  minimatch@>=9.0.0 <9.0.6: ^9.0.6
+  minimatch@>=9.0.0 <9.0.7: ^9.0.7
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
+  esbuild: false
+  lmdb: false
+  msgpackr-extract: false
+  nice-napi: false
+  sharp: false
+  svelte-preprocess: false
+  ttf2woff2: false
+  unrs-resolver: false
+  vue-demi: false

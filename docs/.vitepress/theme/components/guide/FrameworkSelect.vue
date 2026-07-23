@@ -11,49 +11,49 @@ const { page } = useData();
 const router = useRouter();
 
 const frameworks = [
-  { name: 'Vanilla', icon: '/framework-logos/js.svg', route: '/guide/lucide/' },
-  { name: 'React', icon: '/framework-logos/react.svg', route: '/guide/react/' },
-  { name: 'Vue', icon: '/framework-logos/vue.svg', route: '/guide/vue/' },
-  { name: 'Svelte', icon: '/framework-logos/svelte.svg', route: '/guide/svelte/' },
-  { name: 'Solid', icon: '/framework-logos/solid.svg', route: '/guide/solid/' },
-  { name: 'Angular', icon: '/framework-logos/angular.svg', route: '/guide/angular/' },
-  { name: 'Preact', icon: '/framework-logos/preact.svg', route: '/guide/preact/' },
+  { name: 'Vanilla', icon: '/framework-logos/js.svg', value: '/guide/lucide/' },
+  { name: 'React', icon: '/framework-logos/react.svg', value: '/guide/react/' },
+  { name: 'Vue', icon: '/framework-logos/vue.svg', value: '/guide/vue/' },
+  { name: 'Svelte', icon: '/framework-logos/svelte.svg', value: '/guide/svelte/' },
+  { name: 'Solid', icon: '/framework-logos/solid.svg', value: '/guide/solid/' },
+  { name: 'Angular', icon: '/framework-logos/angular.svg', value: '/guide/angular/' },
+  { name: 'Preact', icon: '/framework-logos/preact.svg', value: '/guide/preact/' },
   {
     name: 'React Native',
     icon: '/framework-logos/react-native.svg',
-    route: '/guide/react-native/',
+    value: '/guide/react-native/',
   },
   {
     name: 'Astro',
     icon: '/framework-logos/astro.svg',
     iconDark: '/framework-logos/astro-dark.svg',
-    route: '/guide/astro/',
+    value: '/guide/astro/',
   },
-  { name: 'Static', icon: '/framework-logos/svg.svg', route: '/guide/static/' },
+  { name: 'Static', icon: '/framework-logos/svg.svg', value: '/guide/static/' },
 ];
 
 const fallbackFramework = useLocalStorage('lucide-docs-fallback-framework', frameworks[1]);
 
 const selected = computed(() => {
-  const current = frameworks.find(({ route }) => {
+  const current = frameworks.find(({ value }) => {
     if (router.route.path?.startsWith?.('/guide')) {
       const [, , framework] = router.route.path.split('/');
-      const [, frameWorkRoute] = route.split('/').filter(Boolean);
+      const [, frameWorkRoute] = value.split('/').filter(Boolean);
 
       return framework === frameWorkRoute;
     }
-    return router.route.path.split('/').slice(0, 3).join('/') === route;
+    return router.route.path.split('/').slice(0, 3).join('/') === value;
   });
 
-  return current || fallbackFramework.value;
+  return current || (fallbackFramework.value?.value ? fallbackFramework.value : frameworks[0]);
 });
 
-function onSelectFramework(item: { name: string; icon: string; iconDark?: string; route: string }) {
+function onSelectFramework(item: { name: string; icon: string; iconDark?: string; value: string }) {
   fallbackFramework.value = item;
-  if (item.route !== router.route.path) {
-    const likeRoute = router.route.path.replace(selected.value.route, item.route);
+  if (item.value !== router.route.path) {
+    const likeRoute = router.route.path.replace(selected.value.value, item.value);
 
-    const hasRoute = sidebar[item.route]?.some((section) =>
+    const hasRoute = sidebar[item.value]?.some((section) =>
       section?.items?.some(({ link }) => link === likeRoute),
     );
 
@@ -62,7 +62,7 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
       return;
     }
 
-    router.go(item.route);
+    router.go(item.value);
   }
 }
 </script>
@@ -85,12 +85,12 @@ function onSelectFramework(item: { name: string; icon: string; iconDark?: string
     />
   </div>
   <VPSidebarGroup
-    :key="selected.route"
+    :key="selected.value"
     v-if="
       page?.relativePath?.startsWith?.('guide') &&
-      !page?.relativePath?.startsWith?.(selected.route.substring(1))
+      !page?.relativePath?.startsWith?.(selected.value.substring(1))
     "
-    :items="sidebar[selected.route]"
+    :items="sidebar[selected.value]"
   />
 </template>
 
@@ -118,5 +118,15 @@ label {
   font-weight: bold;
   margin-bottom: 4px;
   display: block;
+  position: relative;
+}
+
+.framework-select:before {
+  content: ' ';
+  position: absolute;
+  inset: 0 -16px -24px;
+  background: color-mix(in srgb, var(--vp-c-bg-alt), transparent 50%);
+  backdrop-filter: blur(4px);
+  mask-image: linear-gradient(to bottom, black calc(100% - 16px), transparent 100%);
 }
 </style>

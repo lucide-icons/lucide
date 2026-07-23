@@ -11,6 +11,14 @@ const { isDark } = useData();
 
 const emit = defineEmits(['update:modelValue']);
 
+function limitHexInput(val: string) {
+  if (val.startsWith('#')) {
+    return val.slice(0, 9);
+  }
+
+  return val.slice(0, 8);
+}
+
 const value = computed({
   get: () => {
     if (props.modelValue == null || props.modelValue === 'currentColor') {
@@ -19,7 +27,7 @@ const value = computed({
 
     return props.modelValue;
   },
-  set: (val) => emit('update:modelValue', val),
+  set: (val) => emit('update:modelValue', limitHexInput(val)),
 });
 </script>
 
@@ -41,6 +49,7 @@ const value = computed({
       class="color-input-text"
       aria-label="Color picker input"
       v-model="value"
+      maxlength="9"
       placeholder="[default]"
     />
   </div>
@@ -91,6 +100,7 @@ const value = computed({
   background: transparent;
   color: var(--vp-c-text-1);
   font-size: 13px;
+  font-family: var(--vp-font-family-mono);
   text-align: left;
   border-radius: 8px;
   cursor: text;

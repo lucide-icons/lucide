@@ -25,6 +25,10 @@
     "./utils/*": {
       "import": "./utils/*.ts",
       "require": "./utils/*.ts"
+    },
+    "./types": {
+      "types": "./types.ts",
+      "import": "./types.ts"
     }
   },
   "keywords": [],
@@ -33,13 +37,13 @@
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
     "@types/minimist": "^1.2.5",
-    "@types/node": "^22"
+    "@types/node": "^22.20.1"
   },
   "dependencies": {
-    "minimist": "^1.2.7",
+    "minimist": "^1.2.8",
     "prettier": "2.7.1",
-    "svgo": "^3.0.0",
-    "svgson": "^5.2.1"
+    "svgo": "^3.3.4",
+    "svgson": "^5.3.1"
   },
   "peerDependencies": {
     "@lucide/helpers": "*"
