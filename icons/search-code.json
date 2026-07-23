@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "scan",
@@ -11,7 +12,13 @@
     "magnifying glass",
     "grep",
     "chevrons",
-    "<>"
+    "<>",
+    "lens",
+    "locate",
+    "explore",
+    "discover",
+    "enlarge",
+    "zoom"
   ],
   "categories": [
     "text",

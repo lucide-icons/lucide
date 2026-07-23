@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere",
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "add",
+    "create",
+    "new",
+    "document"
+  ],
+  "categories": [
+    "files"
+  ],
+  "aliases": [
+    {
+      "name": "file-plus-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

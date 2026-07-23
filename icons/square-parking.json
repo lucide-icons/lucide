@@ -5,6 +5,7 @@
     "jguddas",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "parking lot",
     "car park"
@@ -14,6 +15,10 @@
     "navigation"
   ],
   "aliases": [
-    "parking-square"
+    {
+      "name": "parking-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

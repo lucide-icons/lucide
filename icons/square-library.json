@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "books",
     "reading",
@@ -36,6 +37,10 @@
     "development"
   ],
   "aliases": [
-    "library-square"
+    {
+      "name": "library-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

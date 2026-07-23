@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "lt25106"
+  ],
+  "use-cases": [],
+  "tags": [
+    "fax",
+    "office",
+    "device",
+    "cross",
+    "cancel",
+    "remove",
+    "error"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

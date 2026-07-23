@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "jguddas"
+    "jguddas",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "lighting",
     "household",
