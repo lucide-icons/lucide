@@ -21,10 +21,15 @@
     "paid",
     "partner",
     "promo",
-    "sponsor"
+    "sponsor",
+    "audio description",
+    "video description",
+    "described video",
+    "visual description"
   ],
   "categories": [
     "multimedia",
+    "accessibility",
     "notifications"
   ]
 }
