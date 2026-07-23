@@ -23,7 +23,13 @@
     "viewfinder",
     "capture",
     "shape",
-    "boundary"
+    "boundary",
+    "camera",
+    "scanner",
+    "overlay",
+    "focus",
+    "crop",
+    "marker"
   ],
   "categories": [
     "photography",
