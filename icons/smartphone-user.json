@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hitanshu-machhi"
+  ],
+  "use-cases": [
+    "Representing a user profile in a mobile application",
+    "Indicating a mobile account or device owner",
+    "Showing mobile contact or identity settings"
+  ],
+  "tags": [
+    "phone",
+    "cellphone",
+    "device",
+    "mobile",
+    "user",
+    "person",
+    "profile",
+    "account"
+  ],
+  "categories": [
+    "account",
+    "communication",
+    "devices"
+  ]
+}
