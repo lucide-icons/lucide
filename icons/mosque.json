@@ -4,7 +4,10 @@
     "rrod497",
     "iskepr"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a mosque as a building type or place of worship",
+    "Representing a mosque on a map"
+  ],
   "tags": [
     "mosque",
     "masjid",
