@@ -67,6 +67,10 @@
   animation: .3s transition 0s ease;
 } */
 
+html {
+  scrollbar-gutter: stable;
+}
+
 .VPHome {
   overflow-x: hidden;
 }
@@ -148,14 +152,6 @@
   .VPHomeHero .container {
     flex-direction: row;
   }
-
-  html.has-bb-banner {
-    --vp-layout-top-height: 72px;
-  }
-
-  html.has-bb-banner {
-    --Dark-Background: #161618;
-  }
 }
 
 .VPNavBarHamburger .container > span {
@@ -165,12 +161,6 @@
 .package-lucide-logo {
   margin: 0 auto 48px;
   max-width: 480px;
-}
-
-html:not(.has-bb-banner) #bb-banner {
-  display: none !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
 }
 
 .VPSidebar {
