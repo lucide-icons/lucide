@@ -25,8 +25,8 @@ const ICONS_DIR = path.join(PACKAGE_DIR, '../../icons');
 
 const license = `@license ${pkg.name} v${pkg.version} - ${pkg.license}`;
 
-const svgFiles = readSvgDirectory(ICONS_DIR);
-const svgs = readSvgs(svgFiles, ICONS_DIR);
+const svgFiles = await readSvgDirectory(ICONS_DIR);
+const svgs = await readSvgs(svgFiles, ICONS_DIR);
 
 const parsedSvgs = svgs.map(({ name, contents }) => ({
   name,
@@ -34,5 +34,7 @@ const parsedSvgs = svgs.map(({ name, contents }) => ({
   parsedSvg: parseSync(contents),
 }));
 
-generateIconNodes(parsedSvgs, PACKAGE_DIR);
-copyIcons(parsedSvgs, PACKAGE_DIR, license);
+await Promise.all([
+  generateIconNodes(parsedSvgs, PACKAGE_DIR),
+  copyIcons(parsedSvgs, PACKAGE_DIR, license),
+]);

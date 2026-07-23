@@ -29,6 +29,7 @@ const configs = bundles
         ...(preserveModules
           ? {
               dir: `${outputDir}/${format}`,
+              entryFileNames: '[name].js',
             }
           : {
               file: `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
@@ -36,6 +37,7 @@ const configs = bundles
         format,
         sourcemap: true,
         preserveModules,
+        preserveModulesRoot: 'src',
       },
     })),
   )
