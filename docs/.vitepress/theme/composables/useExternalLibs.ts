@@ -35,12 +35,11 @@ export function useExternalLibs(): ExternalLibContext {
           const iconDetails = await response.json();
 
           if (iconDetails) {
-              newExternalIconNodes[lib] = Object.values(iconDetails).map((iconEntity: IconEntity) => {
-
-                return {
+            newExternalIconNodes[lib] = Object.values(iconDetails).map((iconEntity: IconEntity) => {
+              return {
                 ...iconEntity,
                 externalLibrary: lib,
-              }
+              };
             });
           }
         }

@@ -6,16 +6,16 @@ import { type IconEntity } from '../../.vitepress/theme/types';
 export default {
   paths: async () => {
     return (Object.entries(iconNodes) as unknown as IconEntity[]).map(([name, iconNode]) => {
-      const iconDetails = iconMetaData[name]
+      const iconDetails = iconMetaData[name];
 
-      delete iconDetails['$schema']
+      delete iconDetails['$schema'];
 
       const params = {
         name,
         iconNode,
         externalLibrary: 'lab',
         popularity: iconPopularity[name]?.count ?? 0,
-        ...iconDetails
+        ...iconDetails,
       };
 
       return {

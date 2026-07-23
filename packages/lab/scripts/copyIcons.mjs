@@ -7,9 +7,7 @@ export default async function copyIcons(parsedSvgs, packageDir, license) {
   if (existsSync(iconsDirectory)) {
     try {
       unlinkSync(iconsDirectory);
-    } catch (error) {
-
-    }
+    } catch (error) {}
   }
 
   if (!existsSync(iconsDirectory)) {

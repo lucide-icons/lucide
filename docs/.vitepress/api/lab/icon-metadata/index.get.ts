@@ -6,7 +6,7 @@ export default eventHandler((event) => {
 
   for (const iconDetail in iconMetaData) {
     // Remove $schema from the response
-    delete iconMetaData[iconDetail]['$schema']
+    delete iconMetaData[iconDetail]['$schema'];
   }
 
   return iconMetaData;

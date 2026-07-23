@@ -9,14 +9,17 @@ export default eventHandler((event) => {
   return Object.fromEntries(
     Object.entries(iconMetaData).map(([iconName, iconData]) => {
       // Remove $schema from the response
-      delete iconData['$schema']
+      delete iconData['$schema'];
 
-      return [iconName, {
-        name: iconName,
-        iconNode: iconNodes[iconName],
-        popularity: iconPopularity[iconName]?.count ?? 0,
-        ...iconData,
-      }]
-    })
+      return [
+        iconName,
+        {
+          name: iconName,
+          iconNode: iconNodes[iconName],
+          popularity: iconPopularity[iconName]?.count ?? 0,
+          ...iconData,
+        },
+      ];
+    }),
   );
 });
