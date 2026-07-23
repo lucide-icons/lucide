@@ -12,7 +12,11 @@
     "people",
     "team",
     "members",
-    "community"
+    "community",
+    "group",
+    "users",
+    "collaboration",
+    "contacts"
   ],
   "categories": [
     "account"
