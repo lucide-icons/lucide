@@ -6,17 +6,17 @@ export default eventHandler((event) => {
   setResponseHeader(event, 'Cache-Control', 'public, max-age=86400');
   setResponseHeader(event, 'Access-Control-Allow-Origin', '*');
 
-  const iconDetails = iconMetaData
+  return Object.fromEntries(
+    Object.entries(iconMetaData).map(([iconName, iconData]) => {
+      // Remove $schema from the response
+      delete iconData['$schema']
 
-  for (const iconName in iconMetaData) {
-    // Remove $schema from the response
-    delete iconDetails[iconName]['$schema']
-
-    // Add details from iconNodes
-    iconDetails[iconName]['name'] = iconName
-    iconDetails[iconName]['iconNode'] = iconNodes[iconName];
-    iconDetails[iconName]['popularity'] = iconPopularity[iconName]?.count ?? 0;
-  }
-
-  return iconDetails;
+      return [iconName, {
+        name: iconName,
+        iconNode: iconNodes[iconName],
+        popularity: iconPopularity[iconName]?.count ?? 0,
+        ...iconData,
+      }]
+    })
+  );
 });
