@@ -5,7 +5,12 @@
   ],
   "use-cases": [
     "detecting or selecting a shape or object inside a camera or AR viewfinder",
-    "a 'select shape' or region-detection control in a design or image editor"
+    "a 'select shape' or region-detection control in a design or image editor",
+    "indicating camera scan mode or live scanning area",
+    "marking the crop area for creating square thumbnails",
+    "representing a region-of-interest for OCR or barcode capture",
+    "visualizing detected objects in an augmented reality overlay",
+    "toggling a scanning control in a camera or scanner app"
   ],
   "tags": [
     "scan",
