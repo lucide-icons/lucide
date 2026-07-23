@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hitanshu-machhi"
+  ],
+  "use-cases": [
+    "Representing a team or community",
+    "Showing group membership",
+    "Managing multiple user accounts"
+  ],
+  "tags": [
+    "people",
+    "team",
+    "members",
+    "community"
+  ],
+  "categories": [
+    "account"
+  ]
+}
