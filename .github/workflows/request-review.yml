@@ -1,6 +1,6 @@
-name: 'Request Review'
+name: Request Review
 on:
-  pull_request_target:
+  pull_request:
     types: [opened]
     paths:
       - icons/*.svg
