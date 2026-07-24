@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "shape",
+    "geometry",
+    "art",
+    "width",
+    "height",
+    "size",
+    "calculate",
+    "measure",
+    "select",
+    "graphics",
+    "box"
+  ],
+  "categories": [
+    "shapes",
+    "math",
+    "design",
+    "tools"
+  ]
+}

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "dashboard",
     "dial",
@@ -18,6 +19,10 @@
     "science"
   ],
   "aliases": [
-    "gauge-circle"
+    {
+      "name": "gauge-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

@@ -1,11 +1,10 @@
-name: Linting PR
+name: Linting PR title
 
 on:
   pull_request:
     types:
       - opened
       - edited
-      - synchronize
       - reopened
 
 jobs:
@@ -27,6 +26,7 @@ jobs:
             docs
             ci
             build
+            chore
           requireScope: true
           ignoreLabels: |
             bot

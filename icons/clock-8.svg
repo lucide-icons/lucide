@@ -10,5 +10,5 @@
   stroke-linejoin="round"
 >
   <circle cx="12" cy="12" r="10" />
-  <polyline points="12 6 12 12 8 14" />
+  <path d="M12 6v6l-4 2" />
 </svg>

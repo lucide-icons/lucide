@@ -2,6 +2,7 @@
 
 exports[`Using createLucideIcon > should create a component from an iconNode 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide lucide-air-vent lucide-AirVent"
   fill="none"
   height="24"
@@ -30,6 +31,7 @@ exports[`Using createLucideIcon > should create a component from an iconNode 1`]
 
 exports[`Using createLucideIcon > should create a component from an iconNode with iconName 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide lucide-air-vent"
   fill="none"
   height="24"
@@ -58,6 +60,7 @@ exports[`Using createLucideIcon > should create a component from an iconNode wit
 
 exports[`Using createLucideIcon > should include backwards compatible className 1`] = `
 <svg
+  aria-hidden="true"
   class="lucide lucide-layout2 lucide-layout-2"
   fill="none"
   height="24"

@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "parking lot",
     "car park"
@@ -13,6 +14,10 @@
     "navigation"
   ],
   "aliases": [
-    "parking-circle"
+    {
+      "name": "parking-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

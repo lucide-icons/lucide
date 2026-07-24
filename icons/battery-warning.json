@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "Kaladii",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "power",
     "electricity",
