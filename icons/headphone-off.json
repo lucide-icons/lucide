@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "Need-an-AwP"
+  ],
+  "use-cases": [],
+  "tags": [
+    "music",
+    "audio",
+    "sound",
+    "mute",
+    "off"
+  ],
+  "categories": [
+    "multimedia",
+    "connectivity",
+    "communication",
+    "devices",
+    "gaming"
+  ]
+}

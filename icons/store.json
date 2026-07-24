@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "shop",
     "supermarket",
@@ -12,6 +13,7 @@
   ],
   "categories": [
     "buildings",
-    "maps"
+    "navigation",
+    "shopping"
   ]
 }

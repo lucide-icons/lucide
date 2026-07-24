@@ -4,8 +4,13 @@
     "karsa-mistmere"
   ],
   "aliases": [
-    "stars"
+    {
+      "name": "stars",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ],
+  "use-cases": [],
   "tags": [
     "stars",
     "effect",
@@ -14,7 +19,6 @@
     "magic"
   ],
   "categories": [
-    "shapes",
     "cursors",
     "multimedia",
     "gaming",

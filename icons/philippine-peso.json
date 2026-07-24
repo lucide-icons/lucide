@@ -5,6 +5,7 @@
     "kasutu",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "currency",
     "peso",
@@ -12,6 +13,6 @@
     "php"
   ],
   "categories": [
-    "currency"
+    "finance"
   ]
 }

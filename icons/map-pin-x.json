@@ -6,6 +6,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "location",
     "waypoint",
@@ -16,7 +17,6 @@
     "erase"
   ],
   "categories": [
-    "maps",
     "navigation",
     "travel",
     "account"

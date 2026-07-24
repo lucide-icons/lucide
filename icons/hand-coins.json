@@ -4,6 +4,7 @@
     "danielbayley",
     "kayleyhill"
   ],
+  "use-cases": [],
   "tags": [
     "savings",
     "banking",
@@ -21,7 +22,7 @@
     "pennies"
   ],
   "categories": [
-    "money",
+    "finance",
     "account"
   ]
 }

@@ -5,6 +5,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "location",
     "navigation",
@@ -12,6 +13,6 @@
   ],
   "categories": [
     "text",
-    "maps"
+    "navigation"
   ]
 }

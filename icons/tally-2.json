@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "count",
     "score",
@@ -18,7 +19,7 @@
     "sentence"
   ],
   "categories": [
-    "maths",
+    "math",
     "gaming"
   ]
 }

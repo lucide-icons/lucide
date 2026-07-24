@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "entry",
     "pass",
@@ -21,7 +22,6 @@
     "used"
   ],
   "categories": [
-    "account",
     "transportation"
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "reading",
     "booklet",
@@ -35,7 +36,6 @@
   ],
   "categories": [
     "text",
-    "development",
     "gaming"
   ]
 }

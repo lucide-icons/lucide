@@ -3,14 +3,17 @@
   "contributors": [
     "colebemis",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "kapowaz"
   ],
+  "use-cases": [],
   "tags": [
     "flash",
     "camera",
     "lightning",
     "electricity",
-    "energy"
+    "energy",
+    "power"
   ],
   "categories": [
     "connectivity",

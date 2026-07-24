@@ -1,17 +1,18 @@
 ---
 title: Installation
+description: A guide on how to install Lucide, an open-source icon library, for various platforms and frameworks.
 ---
 
 # Installation
 
 ## Web
 
-Implementation of the lucide icon library for web applications.
+Implementation of the Lucide icon library for web applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide
+pnpm add lucide
 ```
 
 ```sh [yarn]
@@ -22,18 +23,26 @@ yarn add lucide
 npm install lucide
 ```
 
+```sh [bun]
+bun add lucide
+```
+
+```sh [deno]
+deno add lucide
+```
+
 :::
 
-For more details, see the [documentation](packages/lucide.md).
+For more details, see the [documentation](./lucide/index.md).
 
 ## React
 
-Implementation of the lucide icon library for React applications.
+Implementation of the Lucide icon library for React applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-react
+pnpm add lucide-react
 ```
 
 ```sh [yarn]
@@ -44,64 +53,87 @@ yarn add lucide-react
 npm install lucide-react
 ```
 
+```sh [bun]
+bun add lucide-react
+```
+
+```sh [deno]
+deno add lucide-react
+```
+
 :::
 
-For more details, see the [documentation](packages/lucide-react.md).
+For more details, see the [documentation](./react/index.md).
 For React Native use the `lucide-react-native` package.
 
 ## Vue
 
-Implementation of the lucide icon library for Vue applications.
+Implementation of the Lucide icon library for Vue applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-vue-next
+pnpm add @lucide/vue
 ```
 
 ```sh [yarn]
-yarn add lucide-vue-next
+yarn add @lucide/vue
 ```
 
 ```sh [npm]
-npm install lucide-vue-next
+npm install @lucide/vue
+```
+
+```sh [bun]
+bun add @lucide/vue
+```
+
+```sh [deno]
+deno add @lucide/vue
 ```
 
 :::
 
-For more details, see the [documentation](packages/lucide-vue-next.md).
-For Vue 2 use the `lucide-vue` package.
+For more details, see the [documentation](./vue/index.md).
 
 ## Svelte
 
-Implementation of the lucide icon library for Svelte applications.
+Implementation of the Lucide icon library for Svelte applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-svelte
+pnpm add @lucide/svelte
 ```
 
 ```sh [yarn]
-yarn add lucide-svelte
+yarn add @lucide/svelte
 ```
 
 ```sh [npm]
-npm install lucide-svelte
+npm install @lucide/svelte
 ```
 
-:::
+```sh [bun]
+bun add @lucide/svelte
+```
 
-For more details, see the [documentation](packages/lucide-svelte.md).
+```sh [deno]
+deno add @lucide/svelte
+```
+:::
+> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
+
+For more details, see the [documentation](./svelte/index.md).
 
 ## Solid
 
-Implementation of the lucide icon library for Solid applications.
+Implementation of the Lucide icon library for Solid applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-solid
+pnpm add lucide-solid
 ```
 
 ```sh [yarn]
@@ -112,40 +144,56 @@ yarn add lucide-solid
 npm install lucide-solid
 ```
 
+```sh [bun]
+bun add lucide-solid
+```
+
+```sh [deno]
+deno add lucide-solid
+```
+
 :::
 
-For more details, see the [documentation](packages/lucide-solid.md).
+For more details, see the [documentation](./solid/index.md).
 
 ## Angular
 
-Implementation of the lucide icon library for Angular applications.
+Implementation of the Lucide icon library for Angular applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-angular
+pnpm add @lucide/angular
 ```
 
 ```sh [yarn]
-yarn add lucide-angular
+yarn add @lucide/angular
 ```
 
 ```sh [npm]
-npm install lucide-angular
+npm install @lucide/angular
+```
+
+```sh [bun]
+bun add @lucide/angular
+```
+
+```sh [deno]
+deno add @lucide/angular
 ```
 
 :::
 
-For more details, see the [documentation](packages/lucide-angular.md).
+For more details, see the [documentation](./angular/index.md).
 
 ## Preact
 
-Implementation of the lucide icon library for preact applications.
+Implementation of the Lucide icon library for preact applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]
@@ -156,16 +204,57 @@ yarn add lucide-preact
 npm install lucide-preact
 ```
 
+```sh [bun]
+bun add lucide-preact
+```
+
+```sh [deno]
+deno add lucide-preact
+```
+
+
 :::
 
-## Static usage
+For more details, see the [documentation](./preact/index.md).
 
-Implementation of the lucide icon library for multiple usages that like to use: SVG files icons, SVG Sprite, Icon Fonts and static SVG strings export in Common JS modules (for NodeJS).
+## Astro
+
+Implementation of the Lucide icon library for Astro applications.
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add @lucide/astro
+```
+
+```sh [yarn]
+yarn add @lucide/astro
+```
+
+```sh [npm]
+npm install @lucide/astro
+```
+
+```sh [bun]
+bun add @lucide/astro
+```
+
+```sh [deno]
+deno add @lucide/astro
+```
+
+:::
+
+For more details, see the [documentation](./astro/index.md).
+
+## Static usage
+
+Implementation of the Lucide icon library for multiple usages that like to use: SVG files icons, SVG Sprite, Icon Fonts and static SVG strings export in Common JS modules (for NodeJS).
+
+::: code-group
+
+```sh [pnpm]
+pnpm add lucide-static
 ```
 
 ```sh [yarn]
@@ -176,24 +265,22 @@ yarn add lucide-static
 npm install lucide-static
 ```
 
+```sh [bun]
+bun add lucide-static
+```
+
+```sh [deno]
+deno add lucide-static
+```
+
 :::
 
-For more details, see the [documentation](packages/lucide-static.md).
+For more details, see the [documentation](./static/index.md).
 
 ## Figma
 
-The lucide figma plugin.
+The Lucide Figma plugin.
 
 Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
 
 ![Setting Page Size](https://www.figma.com/community/plugin/939567362549682242/thumbnail 'Figma Lucide Cover')
-
-## Flutter
-
-Implementation of Lucide icon library for Flutter applications.
-
-```bash
-flutter pub add lucide_icons
-```
-
-For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "pulse",
     "action",
@@ -34,13 +35,15 @@
   ],
   "categories": [
     "medical",
-    "account",
     "social",
     "science",
-    "multimedia",
-    "shapes"
+    "multimedia"
   ],
   "aliases": [
-    "activity-square"
+    {
+      "name": "activity-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

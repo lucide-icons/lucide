@@ -5,6 +5,7 @@
     "jguddas",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "contactless",
     "payment",
@@ -12,7 +13,7 @@
   ],
   "categories": [
     "communication",
-    "money",
+    "finance",
     "devices"
   ]
 }
