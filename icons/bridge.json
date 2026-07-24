@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Nykoula",
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "overpass",
+    "cross over",
+    "traverse",
+    "viaduct",
+    "suspension",
+    "infrastructure",
+    "transportation",
+    "crossing",
+    "road",
+    "river",
+    "gate",
+    "golden",
+    "travel"
+  ],
+  "categories": [
+    "travel",
+    "transportation",
+    "buildings"
+  ]
+}
