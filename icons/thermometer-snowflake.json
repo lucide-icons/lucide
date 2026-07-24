@@ -1,9 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "temperature",
     "celsius",

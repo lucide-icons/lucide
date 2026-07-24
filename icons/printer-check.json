@@ -6,6 +6,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "fax",
     "office",
@@ -14,7 +15,6 @@
     "printed"
   ],
   "categories": [
-    "devices",
-    "account"
+    "devices"
   ]
 }

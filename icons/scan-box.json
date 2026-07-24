@@ -1,0 +1,46 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "wojtekmaj",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "starting an augmented reality scan",
+    "placing virtual 3D objects in a real-world scene",
+    "indicating spatial mapping or room scanning",
+    "previewing products with virtual try-on",
+    "recognizing the surrounding environment for AR experiences",
+    "scanning an object to create a 3D model",
+    "measuring room dimensions for interior planning",
+    "calibrating depth sensors or LiDAR",
+    "placing furniture or decor in a room using AR"
+  ],
+  "tags": [
+    "ar",
+    "augmented reality",
+    "3d",
+    "object detection",
+    "object recognition",
+    "tracking",
+    "spatial computing",
+    "capture",
+    "cube",
+    "bounding box",
+    "camera",
+    "frame",
+    "shape",
+    "boundary",
+    "lidar",
+    "depth",
+    "scanning",
+    "mapping",
+    "placement"
+  ],
+  "categories": [
+    "design",
+    "devices",
+    "shopping",
+    "gaming"
+  ]
+}

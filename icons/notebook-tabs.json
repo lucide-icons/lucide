@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "notepad",
     "notes",
@@ -27,7 +28,6 @@
   ],
   "categories": [
     "account",
-    "connectivity",
     "communication",
     "social"
   ]

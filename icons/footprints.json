@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "steps",
     "walking",
@@ -12,6 +13,6 @@
     "shoe"
   ],
   "categories": [
-    "maps"
+    "navigation"
   ]
 }

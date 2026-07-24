@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "cube",
     "package",
@@ -19,6 +20,6 @@
     "shapes",
     "gaming",
     "development",
-    "maths"
+    "math"
   ]
 }

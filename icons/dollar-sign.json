@@ -5,13 +5,13 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "currency",
     "money",
     "payment"
   ],
   "categories": [
-    "currency",
-    "money"
+    "finance"
   ]
 }

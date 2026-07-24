@@ -3,8 +3,10 @@
   "contributors": [
     "lscheibel",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "money",
     "cash",
@@ -12,7 +14,6 @@
     "gamble"
   ],
   "categories": [
-    "money",
     "gaming"
   ]
 }

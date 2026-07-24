@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "h4",
     "html",
@@ -10,7 +12,6 @@
     "markdown"
   ],
   "categories": [
-    "text",
-    "development"
+    "text"
   ]
 }

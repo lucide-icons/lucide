@@ -4,13 +4,20 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
+    "stop",
+    "playback",
+    "music",
+    "audio",
+    "video",
     "rectangle",
     "aspect ratio",
     "1:1",
     "shape"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "multimedia"
   ]
 }

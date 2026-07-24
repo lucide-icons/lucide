@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "siarie",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "delete",
     "remove"

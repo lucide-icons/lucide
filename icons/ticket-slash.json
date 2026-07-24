@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "entry",
     "pass",
@@ -33,7 +34,6 @@
     "error"
   ],
   "categories": [
-    "account",
     "transportation"
   ]
 }

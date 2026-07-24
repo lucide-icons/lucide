@@ -1,14 +1,19 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "prize",
     "sports",
     "winner",
     "achievement",
-    "award"
+    "award",
+    "champion",
+    "celebration",
+    "victory"
   ],
   "categories": [
     "sports",
