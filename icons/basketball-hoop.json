@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "akiakinom"
+  ],
+  "use-cases": [
+    "indicating a basketball court or gym location",
+    "representing a sports and recreation category",
+    "denoting basketball scores, stats, or news content",
+    "marking a scoring or goal-related action in a game",
+    "booking a sports facility or court reservation",
+    "linking to basketball-related sports content or streams"
+  ],
+  "tags": [
+    "basketball",
+    "hoop",
+    "net",
+    "rim",
+    "backboard",
+    "dunk",
+    "score",
+    "sport",
+    "athletics",
+    "game",
+    "court"
+  ],
+  "categories": [
+    "sports",
+    "gaming",
+    "travel"
+  ]
+}
