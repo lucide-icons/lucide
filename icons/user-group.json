@@ -4,9 +4,9 @@
     "hitanshu-machhi"
   ],
   "use-cases": [
-    "Representing a team or community",
-    "Showing group membership",
-    "Managing multiple user accounts",
+    "representing a team or community",
+    "showing group membership",
+    "managing multiple user accounts",
     "showing collaborators on a project",
     "selecting multiple recipients for a message",
     "indicating shared access or permissions",
