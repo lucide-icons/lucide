@@ -52,7 +52,7 @@
     "@lucide/build-icons": "workspace:*",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
-    "astro": "^6.4.8",
+    "astro": "^7.1.0",
     "jest-serializer-html": "^7.1.0",
     "linkedom": "^0.18.13",
     "prettier": "^3.9.5",
