@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "do not iron",
+    "warning",
+    "instructions",
+    "clothes",
+    "clothing",
+    "apparel",
+    "attire"
+  ],
+  "categories": [
+    "home",
+    "devices"
+  ]
+}
