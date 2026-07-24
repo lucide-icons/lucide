@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
     "directory",
     "settings",
@@ -20,8 +21,7 @@
     {
       "name": "folder-cog-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

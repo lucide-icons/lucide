@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "loop",
+    "arrows",
+    "recurring",
+    "again"
+  ],
+  "categories": [
+    "arrows",
+    "multimedia"
+  ]
+}
