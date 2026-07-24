@@ -13,7 +13,7 @@ export interface LucideConfig {
    * Width and height.
    * @default 24
    */
-  size: number;
+  size: string | number;
   /**
    * Stroke width
    * @default 2

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "apps",
+    "applications",
+    "sorting",
+    "ascending",
+    "descending",
+    "reorder",
+    "rearrange",
+    "up",
+    "down",
+    "drag",
+    "view"
+  ],
+  "categories": [
+    "design",
+    "layout",
+    "tools",
+    "arrows"
+  ]
+}

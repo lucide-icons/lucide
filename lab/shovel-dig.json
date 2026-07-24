@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "spade",
+    "gardening",
+    "equipment",
+    "soil",
+    "dirt",
+    "dig",
+    "excavate",
+    "bury",
+    "buried",
+    "treasure",
+    "seaside",
+    "summer holiday",
+    "beach",
+    "sandcastle",
+    "sandbox",
+    "toys",
+    "kids",
+    "children",
+    "play",
+    "bucket"
+  ],
+  "categories": [
+    "nature",
+    "home",
+    "tools",
+    "travel",
+    "gaming"
+  ]
+}
