@@ -20,7 +20,12 @@
     "rotate",
     "vertex",
     "slope",
-    "protractor"
+    "protractor",
+    "measurement",
+    "dimension",
+    "arc",
+    "drafting",
+    "cad"
   ],
   "categories": [
     "math",
