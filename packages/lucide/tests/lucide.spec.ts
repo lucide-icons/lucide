@@ -1,20 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { createIcons, icons } from '../src/lucide';
-import fs from 'fs';
-import path from 'path';
-import { parseSync, stringify } from 'svgson';
-
-const ICONS_DIR = path.resolve(__dirname, '../../../icons');
-
-const getOriginalSvg = (iconName: string, aliasName?: string) => {
-  const svgContent = fs.readFileSync(path.join(ICONS_DIR, `${iconName}.svg`), 'utf8');
-  const svgParsed = parseSync(svgContent);
-
-  svgParsed.attributes['data-lucide'] = aliasName ?? iconName;
-  svgParsed.attributes['class'] = `lucide lucide-${aliasName ?? iconName}`;
-
-  return stringify(svgParsed, { selfClose: false });
-};
+import { getOriginalSvg } from './helpers';
 
 describe('createIcons', () => {
   it('should read elements from DOM and replace it with icons', () => {
@@ -41,6 +27,22 @@ describe('createIcons', () => {
     expect(hasSvg).toBeTruthy();
   });
 
+  it('should only execute given provided context', () => {
+    document.body.innerHTML = `<div id="context"><i data-lucide="volume-2"></i></div><i data-lucide="funnel"></i>`;
+
+    const context = document.querySelector('#context')!;
+    createIcons({
+      icons,
+      root: context,
+    });
+
+    const hasSvg = !!document.querySelector('svg.lucide-volume-2');
+    const hasUnreplaced = !!document.querySelector('i[data-lucide="funnel"]');
+
+    expect(hasSvg).toBeTruthy();
+    expect(hasUnreplaced).toBeTruthy();
+  });
+
   it('should add custom attributes', () => {
     document.body.innerHTML = `<i data-lucide="volume-2" class="lucide"></i>`;
 
@@ -52,20 +54,12 @@ describe('createIcons', () => {
     createIcons({ icons, attrs });
 
     const element = document.querySelector('svg') as SVGSVGElement;
-    const attributes = element.getAttributeNames();
-
-    const attributesAndValues = attributes.reduce(
-      (acc, item) => {
-        acc[item] = element.getAttribute(item);
-
-        return acc;
-      },
-      {} as Record<string, string | null>,
-    );
 
     expect(document.body.innerHTML).toMatchSnapshot();
 
-    expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+    for (const [name, value] of Object.entries(attrs)) {
+      expect(element).toHaveAttribute(name, value);
+    }
   });
 
   it('should inherit elements attributes', () => {
@@ -73,23 +67,16 @@ describe('createIcons', () => {
 
     const attrs = {
       'data-theme-switcher': 'light',
+      'aria-hidden': 'true',
     };
 
     createIcons({ icons });
 
     const element = document.querySelector('svg') as SVGSVGElement;
-    const attributes = element.getAttributeNames();
 
-    const attributesAndValues = attributes.reduce(
-      (acc, item) => {
-        acc[item] = element.getAttribute(item);
-
-        return acc;
-      },
-      {} as Record<string, string | null>,
-    );
-
-    expect(attributesAndValues).toEqual(expect.objectContaining(attrs));
+    for (const [name, value] of Object.entries(attrs)) {
+      expect(element).toHaveAttribute(name, value);
+    }
   });
 
   it('should read elements from DOM and replace icon with alias name', () => {
@@ -101,5 +88,42 @@ describe('createIcons', () => {
 
     expect(document.body.innerHTML).toBe(svg);
     expect(document.body.innerHTML).toMatchSnapshot();
+  });
+
+  it('should add aria-hidden attribute when no a11y props are present', () => {
+    document.body.innerHTML = `<i data-lucide="volume-2" class="lucide"></i>`;
+
+    createIcons({ icons });
+
+    const element = document.querySelector('svg') as SVGSVGElement;
+
+    expect(element).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('should not add aria-hidden attribute when a11y props are present', () => {
+    document.body.innerHTML = `<i data-lucide="volume-2" class="lucide" aria-label="Volume"></i>`;
+
+    createIcons({ icons });
+
+    const element = document.querySelector('svg') as SVGSVGElement;
+
+    expect(element).not.toHaveAttribute('aria-hidden');
+    expect(element).toHaveAttribute('aria-label', 'Volume');
+  });
+
+  it('should not replace icons inside template elements by default', () => {
+    document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
+
+    createIcons({ icons });
+    const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
+    expect(hasIcon).toBeFalsy();
+  });
+
+  it('should replace icons inside template elements when replaceInsideTemplates is true', () => {
+    document.body.innerHTML = `<template><i data-lucide="house"></i></template>`;
+
+    createIcons({ icons, inTemplates: true });
+    const hasIcon = !!document.querySelector('template')?.content.querySelector('svg');
+    expect(hasIcon).toBeTruthy();
   });
 });

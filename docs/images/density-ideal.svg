@@ -52,16 +52,18 @@
 <path d="M120 350H360" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M350 120V360" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
-<path d="M310 160H170C158.954 160 150 168.954 150 180V320C150 331.046 158.954 340 170 340H310C321.046 340 330 331.046 330 320V180C330 168.954 321.046 160 310 160Z" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M280 140V180" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M200 140V180" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M150 220H330" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M200 260H200.1" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M240 260H240.1" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M280 260H280.1" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M200 300H200.1" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M240 300H240.1" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M280 300H280.1" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="embed-lucide-calendar-days" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
+  <path d="M8 2v4" />
+  <path d="M16 2v4" />
+  <rect width="18" height="18" x="3" y="4" rx="2" />
+  <path d="M3 10h18" />
+  <path d="M8 14h.01" />
+  <path d="M12 14h.01" />
+  <path d="M16 14h.01" />
+  <path d="M8 18h.01" />
+  <path d="M12 18h.01" />
+  <path d="M16 18h.01" />
+</g>
 <defs>
 <clipPath id="clip0_1612_15298">
 <rect x="120" y="120" width="240" height="240" rx="8" fill="white"/>

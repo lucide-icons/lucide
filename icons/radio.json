@@ -5,8 +5,10 @@
     "csandman",
     "ericfennis",
     "karsa-mistmere",
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "signal",
     "broadcast",

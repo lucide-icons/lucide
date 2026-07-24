@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "delete",
     "stop",
@@ -18,6 +19,10 @@
     "notifications"
   ],
   "aliases": [
-    "x-octagon"
+    {
+      "name": "x-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

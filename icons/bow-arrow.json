@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "archer",
+    "archery",
+    "game",
+    "war",
+    "weapon"
+  ],
+  "categories": [
+    "gaming",
+    "tools"
+  ]
+}

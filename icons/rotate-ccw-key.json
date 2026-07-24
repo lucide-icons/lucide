@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "pgbradbury",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "password",
+    "key",
+    "refresh",
+    "change"
+  ],
+  "categories": [
+    "security",
+    "account"
+  ]
+}

@@ -1,49 +1,54 @@
 import plugins from '@lucide/rollup-plugins';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
-import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
+import getAliasesEntryNames from './scripts/getAliasesEntryNames.mts';
 
 const aliasesEntries = await getAliasesEntryNames();
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
-const outputDir = `dist`;
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'cjs',
     inputs,
-    outputDir,
+    outputDir: 'dist/cjs',
+    extension: 'js',
   },
   {
     format: 'esm',
-    inputs: [...inputs, ...aliasesEntries],
-    outputDir,
+    inputs,
+    outputDir: 'dist/esm',
     preserveModules: true,
+    extension: 'mjs',
   },
   {
     format: 'esm',
-    inputs: ['src/dynamic.ts', 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts'],
-    outputDir,
-    preserveModules: true,
+    inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    outputDir: 'dist/esm',
     external: [/src/],
+    preserveModules: true,
+    extension: 'mjs',
     paths: (id) => {
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `${modulePath}.js`;
+        return `./${modulePath}.mjs`;
+      }
+    },
+  },
+  {
+    format: 'esm',
+    inputs: ['src/dynamic.ts'],
+    outputFile: 'dynamic.mjs',
+    external: [/src/],
+    extension: 'mjs',
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `dist/esm/${modulePath}.mjs`;
       }
     },
   },
@@ -59,6 +64,7 @@ const configs = bundles
       minify,
       preserveModules,
       entryFileNames,
+      extension = 'js',
       external = [],
       paths,
     }) =>
@@ -68,7 +74,7 @@ const configs = bundles
           ...plugins({ pkg, minify }),
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
-            include: 'src/DynamicIcon.ts',
+            include: ['src/lucide-react.ts', 'src/DynamicIcon.ts', 'src/context.ts', 'src/Icon.ts'],
             suppressPreserveModulesWarning: true,
           }),
         ],
@@ -77,15 +83,13 @@ const configs = bundles
           name: packageName,
           ...(preserveModules
             ? {
-                dir: `${outputDir}/${format}`,
+                dir: outputDir,
+                entryFileNames: entryFileNames ?? `[name].${extension}`,
               }
             : {
-                file:
-                  outputFile ??
-                  `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
+                file: outputFile ?? `${outputDir}/${outputFileName}.${extension}`,
               }),
           paths,
-          entryFileNames,
           format,
           sourcemap: true,
           preserveModules,
@@ -104,31 +108,27 @@ export default [
     input: 'src/dynamicIconImports.ts',
     output: [
       {
-        file: `dist/dynamicIconImports.d.ts`,
+        file: `dynamicIconImports.d.ts`,
         format: 'es',
       },
-    ],
-    plugins: [
-      dts({
-        exclude: ['./src/icons'],
-      }),
-    ],
-  },
-  {
-    input: 'src/dynamic.ts',
-    output: [
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
       {
-        file: `dist/dynamic.d.ts`,
+        file: `dynamicIconImports.d.mts`,
         format: 'es',
       },
     ],
     plugins: [dts()],
   },
   {
-    input: 'src/DynamicIcon.ts',
+    input: 'src/dynamic.ts',
     output: [
       {
-        file: `dist/DynamicIcon.d.ts`,
+        file: `dynamic.d.ts`,
+        format: 'es',
+      },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamic.d.mts`,
         format: 'es',
       },
     ],

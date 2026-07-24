@@ -3,11 +3,15 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "building",
     "education",
     "childhood",
-    "school"
+    "school",
+    "college",
+    "academy",
+    "institute"
   ],
   "categories": [
     "buildings",
@@ -17,8 +21,7 @@
     {
       "name": "school-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }
