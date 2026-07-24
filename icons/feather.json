@@ -3,12 +3,33 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing writing, authorship, or creative composition",
+    "Representing literature, poetry, publishing, or editorial content",
+    "Representing quills, manuscripts, or historical writing",
+    "Representing birds, plumage, wildlife, or nature",
+    "Representing lightness, softness, delicacy, or weight"
   ],
   "tags": [
-    "logo"
+    "quill",
+    "plume",
+    "writing",
+    "author",
+    "literature",
+    "poetry",
+    "manuscript",
+    "bird",
+    "plumage",
+    "lightweight",
+    "soft"
   ],
   "categories": [
-    "gaming"
+    "nature",
+    "animals",
+    "gaming",
+    "text"
   ]
 }

@@ -1,4 +1,4 @@
-name: Linting PR
+name: Linting PR title
 
 on:
   pull_request:
