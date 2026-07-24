@@ -4,9 +4,9 @@
     "hitanshu-machhi"
   ],
   "use-cases": [
-    "Representing a user profile in a mobile application",
-    "Indicating a mobile account or device owner",
-    "Showing mobile contact or identity settings",
+    "representing a user profile in a mobile application",
+    "indicating a mobile account or device owner",
+    "showing mobile contact or identity settings",
     "displaying a user avatar in a mobile dashboard",
     "linking to a contact's profile from a mobile list",
     "indicating mobile sign-in or authentication screens",
