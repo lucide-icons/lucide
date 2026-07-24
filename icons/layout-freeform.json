@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "layout",
+    "freeform",
+    "free",
+    "absolute",
+    "position",
+    "auto layout",
+    "unaligned",
+    "scattered",
+    "arrange",
+    "blocks",
+    "canvas",
+    "frame"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
