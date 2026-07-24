@@ -1,5 +1,6 @@
 /** @satisfies {import('prettier').Config} */
 const config = {
+  plugins: ['./prettier-plugin-lucide-svg.mjs'],
   singleQuote: true,
   trailingComma: 'all',
   printWidth: 100,
@@ -9,6 +10,12 @@ const config = {
       files: ['icons/*.json', 'categories/*.json'],
       options: {
         printWidth: 0,
+      },
+    },
+    {
+      files: ['icons/*.svg'],
+      options: {
+        parser: 'lucide-svg',
       },
     },
   ],

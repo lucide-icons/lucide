@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw",
+    "karsa-mistmere",
+    "jguddas",
+    "EthanHazel",
+    "congemcd",
+    "dkast"
+  ],
+  "use-cases": [
+    "Represents a takeout for a restaurant/food delivery application",
+    "Represents a lunch takeout"
+  ],
+  "tags": [
+    "storage",
+    "package",
+    "lunch",
+    "takeout",
+    "eco-friendly",
+    "kraft",
+    "retail",
+    "doggybag"
+  ],
+  "categories": [
+    "food-beverage",
+    "shopping"
+  ]
+}
