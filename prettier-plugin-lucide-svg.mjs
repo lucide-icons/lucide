@@ -33,7 +33,7 @@ const plugin = {
               params: {
                 attrs: [
                   'svg:^(?!(xmlns|width|height|fill|stroke|stroke-linecap|stroke-linejoin|stroke-width)$).+',
-                  'path:^(?!d$).+',
+                  'path:^(?!(d|fill)$).+',
                   'line:^(?!(x1|x2|y1|y2)$).+',
                   'polygon:^(?!points$).+',
                   'polyline:^(?!points$).+',
