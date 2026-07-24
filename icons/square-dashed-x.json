@@ -8,7 +8,12 @@
     "chessurisme",
     "ethanhazel"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "deselecting a selection in an image editor",
+    "clearing a selected range in a spreadsheet",
+    "removing selected files from a file manager selection",
+    "toggling off marquee/selection mode in a design application"
+  ],
   "tags": [
     "square",
     "deselect",
