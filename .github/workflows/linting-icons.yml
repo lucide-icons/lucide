@@ -1,9 +1,13 @@
 name: Linting Icons
 
 on:
+  push:
+    branches:
+      - next
   pull_request:
     paths:
       - 'icons/*'
+      - 'lab/*'
 
 jobs:
   lint-filenames:
@@ -14,19 +18,46 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
+          cache: 'pnpm'
           node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v46
         with:
-          files: icons/*
+          files: |
+            icons/*
+            lab/*
 
       - name: Generate annotations
         run: node ./scripts/lintFilenames.mts
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+
+  check-lab-icons:
+    name: Check Lab Icons
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: 'pnpm'
+          node-version-file: 'package.json'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check lab icons do not already exist in icons
+        run: node ./scripts/checkLabIcons.mts
 
   lint-aliases:
     name: Check Uniqueness of Aliases

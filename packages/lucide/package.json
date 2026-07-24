@@ -25,7 +25,7 @@
   "source": "src/lucide.js",
   "main": "dist/cjs/lucide.js",
   "main:umd": "dist/umd/lucide.js",
-  "module": "dist/esm/lucide.js",
+  "module": "dist/esm/lucide.mjs",
   "unpkg": "dist/umd/lucide.min.js",
   "typings": "dist/lucide.d.ts",
   "sideEffects": false,
@@ -39,19 +39,18 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:bundle": "rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
-    "test:watch": "vitest watch",
-    "version": "pnpm version --git-tag-version=false"
+    "test:watch": "vitest watch"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@rollup/plugin-replace": "^6.0.2",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@lucide/shared": "workspace:*",
+    "@rollup/plugin-replace": "^6.0.3",
+    "@testing-library/jest-dom": "^6.9.1",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.53.3",
-    "rollup-plugin-dts": "^6.2.3",
-    "typescript": "^5.8.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "rollup": "^4.62.2",
+    "rollup-plugin-dts": "^6.4.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6"
   }
 }
