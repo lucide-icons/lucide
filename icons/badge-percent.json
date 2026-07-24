@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "verified",
     "unverified",
@@ -15,11 +16,9 @@
     "price tag"
   ],
   "categories": [
-    "account",
     "social",
-    "money",
+    "finance",
     "shopping",
-    "maths",
-    "shapes"
+    "math"
   ]
 }

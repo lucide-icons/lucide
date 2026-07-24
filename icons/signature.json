@@ -1,9 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AndreasSas",
+    "AnnaSasDev",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "format",
@@ -27,7 +28,6 @@
     "unique"
   ],
   "categories": [
-    "text",
-    "layout"
+    "text"
   ]
 }

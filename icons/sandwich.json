@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "kemie"
+    "kemie",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "food",
     "snack",

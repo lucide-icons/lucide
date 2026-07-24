@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "world",
     "browser",
@@ -13,15 +14,13 @@
     "globe"
   ],
   "categories": [
-    "maps",
     "navigation"
   ],
   "aliases": [
     {
       "name": "globe-2",
       "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.name"
     }
   ]
 }

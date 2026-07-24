@@ -5,6 +5,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "tv",
     "screen",
@@ -22,7 +23,6 @@
   "categories": [
     "connectivity",
     "devices",
-    "multimedia",
-    "development"
+    "multimedia"
   ]
 }

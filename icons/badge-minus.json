@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "verified",
     "unverified",
@@ -12,8 +13,6 @@
     "erase"
   ],
   "categories": [
-    "account",
-    "social",
-    "shapes"
+    "social"
   ]
 }

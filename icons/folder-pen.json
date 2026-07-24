@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "directory",
     "rename"
@@ -11,6 +12,10 @@
     "files"
   ],
   "aliases": [
-    "folder-edit"
+    {
+      "name": "folder-edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

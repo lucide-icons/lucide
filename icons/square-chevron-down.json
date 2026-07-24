@@ -4,6 +4,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "back",
     "menu",
@@ -11,10 +12,13 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "shapes"
+    "navigation"
   ],
   "aliases": [
-    "chevron-down-square"
+    {
+      "name": "chevron-down-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

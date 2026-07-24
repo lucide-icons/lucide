@@ -54,10 +54,12 @@
 </g>
 <circle opacity="0.17" cx="240" cy="240" r="100" stroke="#F56565" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
 <rect opacity="0.17" x="150" y="150" width="180" height="180" rx="20" stroke="#F56565" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M330 330L270 270M330 330V282M330 330H282" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M150 282V330M150 330H198M150 330L210 270" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M330 198V150M330 150H282M330 150L270 210" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M150 198V150M150 150H198M150 150L210 210" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="embed-lucide-expand" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
+  <path d="m21 21-6-6m6 6v-4.8m0 4.8h-4.8" />
+  <path d="M3 16.2V21m0 0h4.8M3 21l6-6" />
+  <path d="M21 7.8V3m0 0h-4.8M21 3l-6 6" />
+  <path d="M3 7.8V3m0 0h4.8M3 3l6 6" />
+</g>
 <circle opacity="0.5" cx="240" cy="240" r="100" stroke="#F56565" stroke-dasharray="1 1"/>
 <rect opacity="0.5" x="150" y="150" width="180" height="180" rx="20" stroke="#F56565" stroke-dasharray="1 1"/>
 <defs>

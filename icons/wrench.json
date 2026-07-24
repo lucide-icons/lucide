@@ -3,8 +3,10 @@
   "contributors": [
     "Andreto",
     "ericfennis",
-    "csandman"
+    "csandman",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "account",
     "settings",
@@ -17,7 +19,6 @@
   "categories": [
     "account",
     "development",
-    "tools",
-    "home"
+    "tools"
   ]
 }

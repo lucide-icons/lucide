@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "danielbayley"
+    "danielbayley",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "lighting",
     "household",
@@ -11,6 +13,6 @@
     "furniture"
   ],
   "categories": [
-    "furniture"
+    "home"
   ]
 }

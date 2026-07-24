@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "location",
     "waypoint",
@@ -11,7 +12,6 @@
     "remove"
   ],
   "categories": [
-    "maps",
     "navigation",
     "travel"
   ]
