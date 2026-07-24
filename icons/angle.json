@@ -3,7 +3,13 @@
   "contributors": [
     "samuelalake"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "rotation input in a design inspector",
+    "measurement tool in cad software",
+    "dimensioning in technical drawings",
+    "labeling angles in geometry exercises",
+    "displaying degrees for rotation controls"
+  ],
   "tags": [
     "angle",
     "degree",
