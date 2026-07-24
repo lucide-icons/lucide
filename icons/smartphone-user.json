@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "hitanshu-machhi"
+    "hitanshu-machhi",
+    "colebemis",
+    "mittalyashu",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "representing a user profile in a mobile application",
