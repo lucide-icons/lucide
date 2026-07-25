@@ -7,6 +7,8 @@ import { getJSBanner } from './license.mts';
 const currentDir = getCurrentDirPath(import.meta.url);
 const targetDirectory = path.join(currentDir, '../dist');
 
+const jsBanner = getJSBanner();
+
 const files = await readdir(targetDirectory, {
   recursive: true,
   encoding: 'utf-8',
@@ -22,43 +24,10 @@ for (const file of files) {
 
   // eslint-disable-next-line no-await-in-loop
   const contents = (await readFile(filepath, { encoding: 'utf-8' })) as unknown as string;
-  let newContents = contents;
   const ext = path.extname(filepath);
-  let license;
 
   if (/\.(js|mjs|cjs|ts)/.test(ext)) {
-    license = getJSBanner();
-  }
-
-  if (license) {
-    newContents = license + contents;
-  }
-
-  // Places icon block comment at the top of the Svelte component class
-  if (/icons\/(.*?)\.svelte\.d\.ts/.test(filepath)) {
-    const svelteFilepath = filepath.replace('.d.ts', '');
     // eslint-disable-next-line no-await-in-loop
-    const svelteFileContents = (await readFile(svelteFilepath, { encoding: 'utf-8' })) as unknown as string;;
-
-    const blockCommentRegex = /\/\*\*\n\s\*\s(@component\s@name)[\s\S]*?\*\//;
-    const blockCommentMatch = blockCommentRegex.exec(svelteFileContents);
-
-    if (blockCommentMatch !== null) {
-      const blockComment = blockCommentMatch[0];
-
-      const exportClassRegex = /export default class (\w+) extends SvelteComponentTyped<(.*?)> {/;
-
-      if (exportClassRegex.test(newContents)) {
-        newContents = newContents.replace(
-          exportClassRegex,
-          `${blockComment}\nexport default class $1 extends SvelteComponentTyped<$2> {`,
-        );
-      }
-    }
-  }
-
-  if (newContents !== contents) {
-    // eslint-disable-next-line no-await-in-loop
-    await writeFile(filepath, newContents, { encoding: 'utf-8' });
+    await writeFile(filepath, jsBanner + contents, { encoding: 'utf-8' });
   }
 }

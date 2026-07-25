@@ -3,8 +3,10 @@
   "contributors": [
     "danielbayley",
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "backwards",
     "reverse",
@@ -15,7 +17,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming",
     "files"
   ]

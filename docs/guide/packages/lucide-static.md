@@ -1,5 +1,14 @@
 # Lucide Static
 
+Static assets and utilities for Lucide icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
+
+**What you can accomplish:**
+- Use individual SVG files as images or CSS background images
+- Implement icon fonts for CSS-based icon systems
+- Create SVG sprites for efficient icon loading in static sites
+- Import SVG strings in Node.js applications and server-side rendering
+- Build static websites and applications without JavaScript framework dependencies
+
 This package includes the following implementations of Lucide icons:
 
 - Individual SVG files
@@ -21,14 +30,7 @@ This package includes the following implementations of Lucide icons:
 
 SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
 
-For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using:
-
-- [lucide](lucide)
-- [lucide-react](lucide-react)
-- [lucide-vue](lucide-vue)
-- [lucide-vue-next](lucide-vue-next)
-- [lucide-angular](lucide-angular)
-- [lucide-preact](lucide-preact)
+For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using one of the framework-specific [packages](../../packages.md).
 :::
 
 ## Installation
@@ -36,7 +38,7 @@ For production environments, we recommend using a bundler with tree-shaking supp
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-static
+pnpm add lucide-static
 ```
 
 ```sh [yarn]

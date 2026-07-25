@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "back",
     "previous",
@@ -12,7 +13,6 @@
     "<"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }
