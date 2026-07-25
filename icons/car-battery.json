@@ -3,6 +3,11 @@
   "contributors": [
     "andreynaz4renko"
   ],
+  "use-cases": [
+    "Showing battery status, power, and charging state",
+    "Category icon for car batteries, jump starters, or battery testers",
+    "Menu or shortcut for power-related info"
+  ],
   "tags": [
     "battery",
     "automobile",
