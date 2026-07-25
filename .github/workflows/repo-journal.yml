@@ -1,0 +1,42 @@
+name: Weekly Repo Report
+on:
+  workflow_dispatch:
+  # Run this workflow every Monday at 07:00 UTC
+  schedule:
+    - cron: '0 7 * * 1'
+permissions:
+  contents: read
+jobs:
+  weekly-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install Copilot CLI
+        run: npm install -g @github/copilot
+
+      - name: Run the prompt
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+        run: |
+          copilot -p "${{ vars.REPO_REPORT_PROMPT }} Write the details to summary.md" --allow-tool='shell(git:*)' --allow-tool=write --no-ask-user
+          cat summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Post report to Discord (private channel)
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.LUCIDE_DISCORD_WEBHOOK }}
+        run: |
+          jq -Rs '{
+            embeds: [{
+              title: "📊 Weekly Repo Report",
+              description: (.[0:4096]),
+              color: 5814783
+            }]
+          }' summary.md > payload.json
+          curl -sS --fail -X POST \
+            -H "Content-Type: application/json" \
+            -d @payload.json \
+            "$DISCORD_WEBHOOK_URL"

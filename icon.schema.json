@@ -40,7 +40,7 @@
           }
         },
         "dependentRequired": {
-          "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+          "deprecated": ["deprecationReason"],
           "deprecationReason": ["deprecated"],
           "toBeRemovedInVersion": ["deprecated"]
         }
@@ -134,7 +134,7 @@
     }
   },
   "dependentRequired": {
-    "deprecated": ["deprecationReason", "toBeRemovedInVersion"],
+    "deprecated": ["deprecationReason"],
     "deprecationReason": ["deprecated"],
     "toBeRemovedInVersion": ["deprecated"]
   },
