@@ -34,17 +34,16 @@
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --withAliases --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mts",
     "build:bundles": "rollup -c rollup.config.mjs",
-    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg",
-    "version": "pnpm version --git-tag-version=false"
+    "clean": "rm -rf lib && rm -rf build && rm -rf icons && rm -f sprite.svg"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@types/node": "^22.15.30",
-    "prettier": "^2.3.2",
-    "svgson": "^5.2.1",
-    "rollup": "^4.59.0",
-    "rollup-plugin-dts": "^6.2.1"
+    "@types/node": "^22.20.1",
+    "prettier": "^2.8.8",
+    "rollup": "^4.62.2",
+    "rollup-plugin-dts": "^6.4.1",
+    "svgson": "^5.3.1"
   }
 }

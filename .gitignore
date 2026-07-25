@@ -39,6 +39,7 @@ packages/**/LICENSE
 categories.json
 tags.json
 .vercel
+package-lock.json
 
 # docs
 docs/.vitepress/cache
@@ -52,6 +53,10 @@ docs/.vitepress/data/categoriesData.json
 docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
 docs/.vitepress/data/brandStopwords.json
+docs/.vitepress/data/iconPopularity
+docs/.vitepress/data/lab/iconNodes
+docs/.vitepress/data/lab/iconMetaData.ts
+docs/.vitepress/data/lab/iconPopularity
 docs/.vercel
 docs/.nitro
 docs/public/og/**

@@ -19,6 +19,18 @@ describe('Using Icon Component', () => {
     expect(container.firstChild).toBeDefined();
   });
 
+  it('should render when iconNode is passed as the kebab-case icon-node prop', async () => {
+    const { container } = render(Icon, {
+      props: {
+        'icon-node': airVent,
+        name: 'AirVent',
+      },
+    });
+
+    expect(container.firstChild).toBeDefined();
+    expect(container.querySelector('svg')).toBeTruthy();
+  });
+
   it('should render icon and match snapshot', async () => {
     const { container } = render(Icon, {
       props: {

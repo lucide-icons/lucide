@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "note",
+    "log",
+    "document",
+    "page",
+    "paper",
+    "sheet",
+    "list",
+    "script",
+    "code",
+    "editor"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
