@@ -158,7 +158,7 @@ For each icon these attributes are applied, corresponding to the above rules.
 ### Minify paths
 
 The code of paths can sometimes get quite large. To reduce file size we like to minify the code.
-We recommend to use [Lucide Studio](https://studio.lucide.dev/) to tidy paths to 3 points of precision.
+We recommend to use [Lucide Studio](https://studio.lucide.dev/?utm_source=lucide.dev&utm_medium=design-guide) to tidy paths to 3 points of precision.
 
 ### Allowed elements
 

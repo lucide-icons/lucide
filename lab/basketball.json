@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "bounce",
+    "hoop",
+    "netball",
+    "court",
+    "dribble",
+    "slam dunk",
+    "alley-oop",
+    "team",
+    "score",
+    "nba"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
