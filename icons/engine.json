@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "benhaube"
+  ],
+  "use-cases": [
+    "Indicating engine health or need of repair",
+    "Representing the engine category in a parts list",
+    "Representing automotive repair"
+  ],
+  "tags": [
+    "vehicle",
+    "power",
+    "energy",
+    "drive",
+    "repair"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
