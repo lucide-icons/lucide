@@ -44,8 +44,12 @@ function setActiveIconName(name: string) {
   activeIconName.value = name;
 }
 
-const { execute: fetchTags, data: tags } = useFetchTags();
-const { execute: fetchCategories, data: categoriesMap } = useFetchCategories();
+const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
+const {
+  execute: fetchCategories,
+  data: categoriesMap,
+  isFetching: isFetchingCategories,
+} = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl);
@@ -117,6 +121,9 @@ const categoriesList = computed(() => {
     }, []);
 });
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
+const isSearchMetadataLoading = computed(
+  () => searchQuery.value.length > 0 && (tags.value == null || categoriesMap.value == null),
+);
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
   itemHeight: ICON_SIZE + ICON_GRID_GAP,
@@ -135,14 +142,20 @@ onMounted(() => {
   useEventListener(window, 'scroll', containerProps.onScroll);
 });
 
-function onFocusSearchInput() {
-  if (tags.value == null) {
-    fetchTags();
+function loadSearchMetadata() {
+  if (tags.value == null && !isFetchingTags.value) {
+    void fetchTags();
   }
-  if (categoriesMap.value == null) {
-    fetchCategories();
+  if (categoriesMap.value == null && !isFetchingCategories.value) {
+    void fetchCategories();
   }
 }
+
+watch(searchQuery, (searchString) => {
+  if (searchString !== '') {
+    loadSearchMetadata();
+  }
+});
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 const IconDetailOverlay = defineAsyncComponent(() => import('./IconDetailOverlay.vue'));
@@ -156,11 +169,11 @@ function handleCloseDrawer() {
   if (searchQueryDebounced.value) {
     url.searchParams.set('search', searchQueryDebounced.value);
   }
-  
+
   if (selectedCategory.value) {
     url.hash = selectedCategory.value;
   }
-  
+
   window.history.pushState({}, '', url);
 }
 </script>
@@ -169,6 +182,7 @@ function handleCloseDrawer() {
   <div
     ref="overviewEl"
     class="overview-container"
+    :class="{ 'icon-drawer-open': activeIconName }"
   >
     <StickyBar class="category-search">
       <InputSearch
@@ -177,11 +191,11 @@ function handleCloseDrawer() {
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
         ref="searchInput"
-        @focus="onFocusSearchInput"
+        @focus="loadSearchMetadata"
       />
     </StickyBar>
     <NoResults
-      v-if="searchPlaceholder.isNoResults"
+      v-if="searchPlaceholder.isNoResults && !isSearchMetadataLoading"
       :searchQuery="searchPlaceholder.query"
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
