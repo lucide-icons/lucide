@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@solidjs/testing-library';
+import { createSignal } from 'solid-js';
 
 import { airVent } from './testIconNodes';
 import { Icon } from '../src/lucide-solid';
@@ -57,6 +58,24 @@ describe('Using Icon Component', () => {
     ));
 
     expect(container.firstChild?.firstChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
+  });
+
+  it('should update when reactive props change', async () => {
+    const [size, setSize] = createSignal(24);
+    const { container } = render(() => (
+      <Icon
+        icon={airVentIcon}
+        size={size()}
+      />
+    ));
+
+    expect(container.firstChild).toHaveAttribute('width', '24');
+    expect(container.firstChild).toHaveAttribute('height', '24');
+
+    setSize(48);
+
+    expect(container.firstChild).toHaveAttribute('width', '48');
+    expect(container.firstChild).toHaveAttribute('height', '48');
   });
 });
 

@@ -1,4 +1,5 @@
 import { render } from '@solidjs/testing-library';
+import { createSignal } from 'solid-js';
 import { describe, expect, it } from 'vitest';
 import { House, LucideProvider } from '../src/lucide-solid';
 
@@ -44,6 +45,23 @@ describe('Using LucideProvider', () => {
     expect(IconComponent).toHaveAttribute('height', '48');
     expect(IconComponent).toHaveAttribute('stroke', 'red');
     expect(IconComponent).toHaveAttribute('stroke-width', '4');
+  });
+
+  it('should update when reactive LucideProvider props change', () => {
+    const [size, setSize] = createSignal(24);
+    const { container } = render(() => (
+      <LucideProvider size={size()}>
+        <House />
+      </LucideProvider>
+    ));
+
+    expect(container.firstElementChild).toHaveAttribute('width', '24');
+    expect(container.firstElementChild).toHaveAttribute('height', '24');
+
+    setSize(48);
+
+    expect(container.firstElementChild).toHaveAttribute('width', '48');
+    expect(container.firstElementChild).toHaveAttribute('height', '48');
   });
 
   it('should render the icon with LucideProvider and custom absoluteStrokeWidth', () => {
