@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "text",
+    "margins",
+    "margin",
+    "column",
+    "width",
+    "bounds",
+    "gutter",
+    "indent",
+    "paragraph",
+    "measure",
+    "readable"
+  ],
+  "categories": [
+    "text"
+  ]
+}
