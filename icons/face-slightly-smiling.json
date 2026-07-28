@@ -8,10 +8,16 @@
   ],
   "use-cases": [],
   "tags": [
+    "smile",
+    "happy",
+    "happiness",
+    "good",
+    "positive",
+    "friendly",
+    "patronizing",
+    "passive aggressive",
+    "ironic",
     "emoji",
-    "face",
-    "bad",
-    "sad",
     "emotion"
   ],
   "categories": [
@@ -20,7 +26,13 @@
   ],
   "aliases": [
     {
-      "name": "frown",
+      "name": "smile",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "face-smile",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"

@@ -6,18 +6,30 @@
   ],
   "use-cases": [],
   "tags": [
-    "emoji",
-    "face",
+    "smile",
     "happy",
     "good",
+    "react",
+    "reaction",
+    "emoji",
+    "add",
     "emotion"
   ],
   "categories": [
-    "emoji"
+    "emoji",
+    "social",
+    "notifications",
+    "communication"
   ],
   "aliases": [
     {
-      "name": "laugh",
+      "name": "smile-plus",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "face-smile-plus",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"

@@ -1,26 +1,29 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "colebemis",
-    "csandman",
-    "mittalyashu",
-    "ericfennis"
+    "karsa-mistmere"
   ],
   "use-cases": [],
   "tags": [
+    "nuisance",
+    "annoyed",
+    "annoyance",
+    "frustration",
     "emoji",
-    "face",
-    "happy",
-    "good",
     "emotion"
   ],
   "categories": [
-    "emoji",
-    "account"
+    "emoji"
   ],
   "aliases": [
     {
-      "name": "smile",
+      "name": "annoyed",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    },
+    {
+      "name": "face-annoyed",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"

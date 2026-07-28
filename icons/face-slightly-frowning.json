@@ -1,32 +1,33 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
+    "colebemis",
+    "csandman",
+    "mittalyashu",
     "ericfennis"
   ],
   "use-cases": [],
   "tags": [
-    "anger",
-    "rage",
-    "fury",
-    "resentment",
-    "irritation",
-    "disgust",
     "emoji",
-    "emotion"
+    "bad",
+    "sadness",
+    "emotion",
+    "concern",
+    "disappointment"
   ],
   "categories": [
-    "emoji"
+    "emoji",
+    "account"
   ],
   "aliases": [
     {
-      "name": "angry",
+      "name": "frown",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
     },
     {
-      "name": "face-anger",
+      "name": "face-frown",
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
