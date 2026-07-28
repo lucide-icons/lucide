@@ -19,12 +19,12 @@ import { Scan, User } from "lucide-react";
 function App() {
   return (
     <div className="app">
-      <Scan size={48}>
+      <Scan size={48} nonScalingStroke>
         <User
           size={12}
           x={6}
           y={6}
-          absoluteStrokeWidth
+          nonScalingStroke
         />
       </Scan>
     </div>
