@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sarajdhakal"
+  ],
+  "use-cases": [],
+  "tags": [
+    "currency",
+    "money",
+    "nepal",
+    "rupee",
+    "npr"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
