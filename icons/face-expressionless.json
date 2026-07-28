@@ -21,12 +21,6 @@
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
-    },
-    {
-      "name": "face-annoyed",
-      "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
     }
   ]
 }

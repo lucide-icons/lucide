@@ -27,12 +27,6 @@
       "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
-    },
-    {
-      "name": "face-laughing",
-      "deprecated": true,
-      "deprecationReason": "alias.name",
-      "toBeRemovedInVersion": "v1.0"
     }
   ]
 }
