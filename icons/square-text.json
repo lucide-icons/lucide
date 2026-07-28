@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "text",
+    "paragraph",
+    "content",
+    "note",
+    "document",
+    "body",
+    "copy",
+    "article",
+    "square",
+    "container",
+    "block"
+  ],
+  "categories": [
+    "text",
+    "shapes"
+  ]
+}
