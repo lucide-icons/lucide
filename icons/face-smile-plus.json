@@ -20,5 +20,13 @@
     "social",
     "notifications",
     "communication"
+  ],
+  "aliases": [
+    {
+      "name": "smile-plus",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

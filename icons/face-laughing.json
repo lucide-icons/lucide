@@ -7,11 +7,20 @@
   "use-cases": [],
   "tags": [
     "emoji",
-    "anger",
     "face",
+    "happy",
+    "good",
     "emotion"
   ],
   "categories": [
     "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "laugh",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

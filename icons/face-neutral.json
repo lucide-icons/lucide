@@ -10,12 +10,18 @@
   "tags": [
     "emoji",
     "face",
-    "happy",
-    "good",
+    "neutral",
     "emotion"
   ],
   "categories": [
-    "emoji",
-    "account"
+    "emoji"
+  ],
+  "aliases": [
+    {
+      "name": "meh",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

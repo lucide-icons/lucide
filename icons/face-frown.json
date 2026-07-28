@@ -10,10 +10,20 @@
   "tags": [
     "emoji",
     "face",
-    "neutral",
+    "bad",
+    "sad",
     "emotion"
   ],
   "categories": [
-    "emoji"
+    "emoji",
+    "account"
+  ],
+  "aliases": [
+    {
+      "name": "frown",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }

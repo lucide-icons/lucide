@@ -10,12 +10,20 @@
   "tags": [
     "emoji",
     "face",
-    "bad",
-    "sad",
+    "happy",
+    "good",
     "emotion"
   ],
   "categories": [
     "emoji",
     "account"
+  ],
+  "aliases": [
+    {
+      "name": "smile",
+      "deprecated": true,
+      "deprecationReason": "alias.name",
+      "toBeRemovedInVersion": "v1.0"
+    }
   ]
 }
