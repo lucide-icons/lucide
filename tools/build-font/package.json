@@ -13,16 +13,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vercel/blob": "^2.3.0",
-    "fs-extra": "^11.2.0",
+    "@vercel/blob": "^2.6.1",
+    "fs-extra": "^11.3.6",
     "minimist": "^1.2.8",
     "oslllo-svg-fixer": "^5.0.0",
-    "svgtofont": "^6.5.0"
+    "svgtofont": "^6.5.3"
   },
   "devDependencies": {
     "@lucide/helpers": "workspace:*",
     "@types/fs-extra": "^11.0.4",
     "@types/minimist": "^1.2.5",
-    "@types/node": "^22"
+    "@types/node": "^22.20.1"
   }
 }

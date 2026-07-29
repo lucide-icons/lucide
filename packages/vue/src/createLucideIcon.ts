@@ -19,7 +19,7 @@ const createLucideIcon =
         iconNode,
         name: iconName,
       },
-      slots,
+      slots.default ? { default: slots.default } : undefined,
     );
 
 export default createLucideIcon;

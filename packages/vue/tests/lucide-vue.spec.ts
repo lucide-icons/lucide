@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, fireEvent, cleanup } from '@testing-library/vue';
 import { Smile, Edit2, Pen } from '../src/lucide-vue';
+import createLucideIcon from '../src/createLucideIcon';
 import defaultAttributes from '../src/defaultAttributes';
 
 describe('Using lucide icon components', () => {
@@ -106,6 +107,25 @@ describe('Using lucide icon components', () => {
 
     expect(textElement).toBeInTheDocument();
     expect(container).toMatchSnapshot();
+  });
+
+  it('should handle non-extensible slots objects', () => {
+    const Icon = createLucideIcon('test-icon', [['path', { d: 'M0 0h1', key: 'test-key' }]]);
+    const slots = Object.freeze({
+      default: () => 'Hello World',
+    });
+
+    expect(() =>
+      Icon(
+        {},
+        {
+          attrs: {},
+          emit: vi.fn(),
+          expose: vi.fn(),
+          slots,
+        },
+      ),
+    ).not.toThrow();
   });
 
   it('should render the alias icon', () => {
