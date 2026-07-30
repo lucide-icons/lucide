@@ -3,7 +3,10 @@
   "contributors": [
     "samuelalake"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "representing a text block or content card",
+    "indicating a document, note, or article in a layout"
+  ],
   "tags": [
     "text",
     "paragraph",
@@ -15,7 +18,9 @@
     "article",
     "square",
     "container",
-    "block"
+    "block",
+    "card",
+    "placeholder"
   ],
   "categories": [
     "text",
