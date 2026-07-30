@@ -44,4 +44,16 @@ describe('Using Icon Component', () => {
 
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should include aria-hidden="true" by default', async () => {
+    const { container } = render(Icon, {
+      props: {
+        iconNode: airVent,
+        name: 'AirVent',
+      },
+    });
+
+    const svg = container.querySelector('svg');
+    expect(svg?.getAttribute('aria-hidden')).toBe('true');
+  });
 });
