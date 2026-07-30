@@ -3,7 +3,10 @@
   "contributors": [
     "samuelalake"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "showing text or content constrained within left and right margins",
+    "toggling measure or layout guides in an editor"
+  ],
   "tags": [
     "text",
     "margins",
@@ -15,9 +18,13 @@
     "indent",
     "paragraph",
     "measure",
-    "readable"
+    "readable",
+    "typography",
+    "guides",
+    "layout"
   ],
   "categories": [
-    "text"
+    "text",
+    "layout"
   ]
 }
