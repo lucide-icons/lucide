@@ -3,7 +3,11 @@
   "contributors": [
     "samuelalake"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "marking a node or point of interest in a diagram",
+    "indicating a selected or active diamond node",
+    "a shape-library or shape-picker entry"
+  ],
   "tags": [
     "diamond",
     "circle",
@@ -14,9 +18,14 @@
     "point",
     "marker",
     "status",
-    "decoration"
+    "decoration",
+    "geometric",
+    "target",
+    "focus",
+    "badge"
   ],
   "categories": [
-    "shapes"
+    "shapes",
+    "design"
   ]
 }
