@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "send to back",
+    "send backward",
+    "back",
+    "background",
+    "bottom",
+    "bottommost",
+    "lower",
+    "demote",
+    "behind",
+    "reorder",
+    "arrange",
+    "stack",
+    "stacking",
+    "z-index",
+    "depth",
+    "graphics",
+    "design"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
