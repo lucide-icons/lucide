@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "gap",
+    "spacing",
+    "space",
+    "between",
+    "padding",
+    "margin",
+    "horizontal",
+    "auto layout",
+    "layout",
+    "distance",
+    "frame",
+    "distribute"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
