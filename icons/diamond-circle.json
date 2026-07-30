@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "diamond",
+    "circle",
+    "gem",
+    "rhombus",
+    "shape",
+    "node",
+    "point",
+    "marker",
+    "status",
+    "decoration"
+  ],
+  "categories": [
+    "shapes"
+  ]
+}
