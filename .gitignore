@@ -36,6 +36,7 @@ packages/**/dynamic.d.mts
 packages/**/dynamic.mjs.map
 packages/**/dynamic.mjs
 packages/**/LICENSE
+packages/**/icons
 categories.json
 tags.json
 .vercel

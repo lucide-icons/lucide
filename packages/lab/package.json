@@ -27,17 +27,17 @@
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle && pnpm build:lib",
-    "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --exportModuleNameCasing=camel --renderUniqueKey --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
-    "build:lib": "node ./scripts/buildLib.mjs",
+    "build:icons": "build-icons --input=../../lab --output=./src --templateSrc=./scripts/exportTemplate.mts --iconFileExtension=.ts --exportModuleNameCasing=camel --renderUniqueKey --exportFileName=index.ts",
+    "build:lib": "node ./scripts/buildLib.mts",
     "build:bundle": "rollup -c rollup.config.mjs",
-    "clean": "rm -f src/icons/*.ts && rm -rf dist",
+    "clean": "rm -f src/icons/*.ts && rm -rf dist && rm -rf icons && rm -f icon-nodes.json",
     "version": "pnpm version --git-tag-version=false"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "minimist": "^1.2.8",
+    "@types/node": "^22.20.1",
     "prettier": "^2.3.2",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
