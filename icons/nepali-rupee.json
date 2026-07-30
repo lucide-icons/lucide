@@ -3,7 +3,13 @@
   "contributors": [
     "sarajdhakal"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "price label for npr amounts",
+    "currency selector option for nepali rupee",
+    "displaying exchange rates to nepali rupee",
+    "remittance and money-transfer destination currency",
+    "localizing checkout and invoices for nepal"
+  ],
   "tags": [
     "currency",
     "money",
@@ -12,6 +18,8 @@
     "npr"
   ],
   "categories": [
-    "finance"
+    "finance",
+    "shopping",
+    "travel"
   ]
 }
