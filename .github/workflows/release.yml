@@ -22,10 +22,8 @@ jobs:
   prepare:
     if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
     runs-on: ubuntu-latest
-    permissions: {} # No checkout, no API calls: needs no token scopes
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
-
     steps:
       - name: Get the version
         id: get_version
