@@ -6,7 +6,11 @@
   "use-cases": [
     "Indicating engine health or need of repair",
     "Representing the engine category in a parts list",
-    "Representing automotive repair"
+    "Representing automotive repair",
+    "showing a check engine warning on a dashboard",
+    "marking scheduled vehicle maintenance",
+    "filtering vehicle parts in an online catalog",
+    "labeling automotive diagnostic reports"
   ],
   "tags": [
     "vehicle",
