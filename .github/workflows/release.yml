@@ -16,14 +16,13 @@ on:
         default: 'latest'
         type: string
 
-permissions:
-  id-token: write # Required for OIDC
-  contents: write
+permissions: {}
 
 jobs:
   prepare:
     if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)
     runs-on: ubuntu-latest
+    permissions: {} # No checkout, no API calls: needs no token scopes
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
 
@@ -122,6 +121,8 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: prepare
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
@@ -152,8 +153,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [prepare, lucide-font]
     permissions:
-      id-token: write # Required for OIDC
-      contents: write
+      contents: write # Required to upload the release assets
     steps:
       - uses: actions/checkout@v6
       - uses: actions/download-artifact@v4

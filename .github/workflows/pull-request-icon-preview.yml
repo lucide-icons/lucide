@@ -5,6 +5,8 @@ on:
     paths:
       - 'icons/*.svg'
 
+permissions: {}
+
 jobs:
   generate-changed-icons-comment:
     name: Generate Changed Icons Comment

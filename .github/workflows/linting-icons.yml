@@ -9,6 +9,8 @@ on:
       - 'icons/*'
       - 'lab/*'
 
+permissions: {}
+
 jobs:
   lint-filenames:
     name: Lint Filenames

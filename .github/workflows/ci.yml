@@ -23,9 +23,7 @@ on:
           - beta
           - alpha
 
-permissions:
-  id-token: write # Required for OIDC
-  contents: write
+permissions: {}
 
 jobs:
   check-dispatch-gate:
@@ -33,6 +31,8 @@ jobs:
       startsWith(github.event.head_commit.message, 'feat(icons)') &&
       github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     outputs:
       RELEASE_ENVIRONMENT: ${{ steps.environment.outputs.RELEASE_ENVIRONMENT }}
     steps:
@@ -60,6 +60,8 @@ jobs:
     needs: check-dispatch-gate
     environment: ${{ needs.check-dispatch-gate.outputs.RELEASE_ENVIRONMENT }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create the release and tag
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
     steps:
@@ -111,6 +113,9 @@ jobs:
     needs: create-release
     uses: './.github/workflows/release.yml'
     secrets: inherit
+    permissions:
+      id-token: write # Required for OIDC (npm provenance)
+      contents: write # Required to upload release assets
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
 
@@ -118,6 +123,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     uses: './.github/workflows/release.yml'
     secrets: inherit
+    permissions:
+      id-token: write # Required for OIDC (npm provenance)
+      contents: write # Required to upload release assets
     with:
       version: ${{ inputs.version }}
       tag: ${{ inputs.tag }}

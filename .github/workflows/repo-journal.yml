@@ -4,8 +4,10 @@ on:
   # Run this workflow every Monday at 07:00 UTC
   schedule:
     - cron: '0 7 * * 1'
+
 permissions:
   contents: read
+
 jobs:
   weekly-summary:
     runs-on: ubuntu-latest

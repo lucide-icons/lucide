@@ -13,6 +13,9 @@ on:
       - scripts/generateNextJSAliases.mjs
       - pnpm-lock.yaml
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
