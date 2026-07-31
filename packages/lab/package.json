@@ -1,7 +1,7 @@
 {
   "name": "@lucide/lab",
   "description": "Lucide lab is a project with icons that are nicely designed but have unknown use cases.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "license": "ISC",
   "homepage": "https://lucide.dev",
   "bugs": "https://github.com/lucide-icons/lucide/issues",
@@ -24,6 +24,12 @@
   "module": "dist/esm/lucide-lab.js",
   "typings": "dist/lucide-lab.d.ts",
   "sideEffects": false,
+  "files": [
+    "dist",
+    "icons",
+    "src",
+    "icon-nodes.json"
+  ],
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle && pnpm build:lib",
