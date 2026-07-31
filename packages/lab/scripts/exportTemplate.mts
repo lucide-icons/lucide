@@ -1,12 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import base64SVG from '@lucide/build-icons/utils/base64SVG.mjs';
+import base64SVG from '@lucide/build-icons/utils/base64SVG';
+import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 import { toCamelCase } from '@lucide/helpers';
 
-export default ({ componentName, iconName, children, getSvg, deprecated }) => {
-  const svgContents = getSvg();
-  const svgBase64 = base64SVG(svgContents);
+export default defineExportTemplate(
+  async ({ componentName, iconName, children, getSvg, deprecated, deprecationReason }) => {
+    const svgContents = await getSvg();
+    const svgBase64 = base64SVG(svgContents);
 
-  return `
+    return `
 import type { IconNode } from '../types';
 
 /**
@@ -17,10 +18,11 @@ import type { IconNode } from '../types';
  * @see https://lucide.dev/guide/packages/lucide - Documentation
  *
  * @returns {Array}
- * ${deprecated ? '@deprecated' : ''}
+ * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${toCamelCase(componentName)}: IconNode = ${JSON.stringify(children)};
 
 export default ${toCamelCase(componentName)};
 `;
-};
+  },
+);

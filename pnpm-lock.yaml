@@ -406,9 +406,9 @@ importers:
       '@lucide/rollup-plugins':
         specifier: workspace:*
         version: link:../../tools/rollup-plugins
-      minimist:
-        specifier: ^1.2.8
-        version: 1.2.8
+      '@types/node':
+        specifier: ^22.20.1
+        version: 22.20.1
       prettier:
         specifier: ^2.3.2
         version: 2.8.8
