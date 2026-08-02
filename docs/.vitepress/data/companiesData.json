@@ -62,5 +62,13 @@
       "light": "/company-logos/noodle-light.svg",
       "dark": "/company-logos/noodle-dark.svg"
     }
+  },
+  {
+    "name": "Juno",
+    "url": "https://junocompanion.com/",
+    "image": {
+      "light": "/company-logos/juno.png",
+      "dark": "/company-logos/juno.png"
+    }
   }
 ]

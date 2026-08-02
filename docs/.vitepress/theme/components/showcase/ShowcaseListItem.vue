@@ -40,6 +40,7 @@ defineProps<{
 .logo {
   height:64px;
   width: 240px;
+  object-fit: contain;
   margin: auto;
 }
 
