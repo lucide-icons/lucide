@@ -162,6 +162,12 @@
   border-radius: 2px;
 }
 
+@media (min-width: 960px) {
+  .VPNavBar.has-sidebar .container > .title {
+    background-color: var(--vp-sidebar-bg-color);
+  }
+}
+
 .package-lucide-logo {
   margin: 0 auto 48px;
   max-width: 480px;
