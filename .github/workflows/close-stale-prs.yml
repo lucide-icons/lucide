@@ -5,6 +5,7 @@ on:
 
 jobs:
   stale:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
