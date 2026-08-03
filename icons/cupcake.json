@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev",
+    "briz123",
+    "ajokt123"
+  ],
+  "tags": [
+    "cake",
+    "dessert",
+    "food",
+    "celebration",
+    "sweet",
+    "baking",
+    "cooking"
+  ],
+  "categories": [
+    "food-beverage",
+    "social"
+  ]
+}
