@@ -6,6 +6,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "sending a selected object to the back of a stack",
+    "moving an item behind all others in layer order"
+  ],
   "tags": [
     "send to back",
     "send backward",

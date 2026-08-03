@@ -6,6 +6,10 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "lowering a selected layer by one step",
+    "moving an item backward in layer order"
+  ],
   "tags": [
     "move back",
     "backward",
