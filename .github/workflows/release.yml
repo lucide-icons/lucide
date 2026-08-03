@@ -20,9 +20,6 @@ permissions:
   id-token: write # Required for OIDC
   contents: write
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-
 jobs:
   prepare:
     if: github.repository == 'lucide-icons/lucide' && contains('["ericfennis", "karsa-mistmere", "jguddas"]', github.actor)

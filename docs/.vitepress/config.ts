@@ -101,6 +101,7 @@ export default defineConfig({
       },
       { text: 'Packages', link: '/packages' },
       { text: 'Showcase', link: '/showcase' },
+      { text: 'Merch', link: 'https://merch.lucide.dev/' },
     ],
     sidebar,
     socialLinks: [
