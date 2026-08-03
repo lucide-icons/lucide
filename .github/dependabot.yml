@@ -1,0 +1,182 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      root:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /docs
+    schedule:
+      interval: weekly
+    groups:
+      docs:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/angular
+    schedule:
+      interval: weekly
+    groups:
+      angular:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/astro
+    schedule:
+      interval: weekly
+    groups:
+      astro:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/icons
+    schedule:
+      interval: weekly
+    groups:
+      icons:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lab
+    schedule:
+      interval: weekly
+    groups:
+      lab:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lucide
+    schedule:
+      interval: weekly
+    groups:
+      lucide:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lucide-preact
+    schedule:
+      interval: weekly
+    groups:
+      lucide-preact:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lucide-react
+    schedule:
+      interval: weekly
+    groups:
+      lucide-react:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lucide-react-native
+    schedule:
+      interval: weekly
+    groups:
+      lucide-react-native:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lucide-solid
+    schedule:
+      interval: weekly
+    groups:
+      lucide-solid:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/lucide-static
+    schedule:
+      interval: weekly
+    groups:
+      lucide-static:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/shared
+    schedule:
+      interval: weekly
+    groups:
+      shared:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/svelte
+    schedule:
+      interval: weekly
+    groups:
+      svelte:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /packages/vue
+    schedule:
+      interval: weekly
+    groups:
+      vue:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /tools/build-font
+    schedule:
+      interval: weekly
+    groups:
+      build-font:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /tools/build-helpers
+    schedule:
+      interval: weekly
+    groups:
+      build-helpers:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /tools/build-icons
+    schedule:
+      interval: weekly
+    groups:
+      build-icons:
+        patterns:
+          - '*'
+
+  - package-ecosystem: npm
+    directory: /tools/rollup-plugins
+    schedule:
+      interval: weekly
+    groups:
+      rollup-plugins:
+        patterns:
+          - '*'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - '*'
