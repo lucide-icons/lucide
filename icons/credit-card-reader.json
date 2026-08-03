@@ -1,12 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "jguddas"
-  ],
-  "use-cases": [
-    "accepting card payments at a point-of-sale terminal",
-    "indicating a credit card reader for chip or magstripe payments",
-    "showing a payment terminal at a checkout counter"
+    "jguddas",
+    "karsa-mistmere"
   ],
   "tags": [
     "bank",
