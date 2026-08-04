@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lazerg"
+  ],
+  "use-cases": [],
+  "tags": [
+    "reading",
+    "library",
+    "knowledge",
+    "help",
+    "question",
+    "unknown",
+    "not found",
+    "missing",
+    "search",
+    "faq"
+  ],
+  "categories": [
+    "text",
+    "development"
+  ]
+}
