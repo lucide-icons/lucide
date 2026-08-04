@@ -3,7 +3,12 @@
   "contributors": [
     "rrod497"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "indicating certified or registered email",
+    "marking messages with proof of delivery",
+    "marking a message as signed or sealed",
+    "labeling official or legal correspondence"
+  ],
   "tags": [
     "email",
     "message",
@@ -12,9 +17,17 @@
     "registered",
     "seal",
     "stamp",
-    "verified"
+    "verified",
+    "envelope",
+    "badge",
+    "rosette",
+    "signed",
+    "official",
+    "delivery"
   ],
   "categories": [
-    "mail"
+    "mail",
+    "communication",
+    "security"
   ]
 }
