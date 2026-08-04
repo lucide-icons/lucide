@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "lazerg"
+  ],
+  "use-cases": [],
+  "tags": [
+    "timer",
+    "time",
+    "sandglass",
+    "duration",
+    "settings",
+    "gear",
+    "cog",
+    "edit",
+    "configuration"
+  ],
+  "categories": [
+    "time"
+  ]
+}
