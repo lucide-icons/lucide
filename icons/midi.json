@@ -1,15 +1,29 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "simoncoudeville"
+    "simoncoudeville",
+    "karsa-mistmere"
   ],
   "tags": [
-    "midi",
+    "musical instrument digital interface",
+    "port",
     "connector",
+    "socket",
+    "jack",
+    "din",
+    "5-pin",
+    "audio",
+    "music",
+    "synthesizer",
+    "keyboard",
+    "controller",
     "interface",
-    "equipment"
+    "input",
+    "output",
+    "io"
   ],
   "categories": [
+    "audio",
     "connectivity",
     "devices",
     "multimedia"
