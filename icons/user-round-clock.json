@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas"
+  ],
+  "use-cases": [
+    "showing the activity history of a user account",
+    "indicating recently active or recently seen members",
+    "displaying a login or session history for a profile",
+    "representing time tracking attached to a person",
+    "marking a pending or scheduled account action"
+  ],
+  "tags": [
+    "person",
+    "account",
+    "contact",
+    "history",
+    "log",
+    "clock",
+    "time",
+    "recent",
+    "activity",
+    "session",
+    "timestamp"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "time"
+  ]
+}
