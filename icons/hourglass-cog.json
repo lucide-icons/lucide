@@ -1,9 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lazerg"
+    "rrod497"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "editing a timer or countdown",
+    "configuring session timeout",
+    "setting expiration for scheduled tasks"
+  ],
   "tags": [
     "timer",
     "time",
@@ -13,9 +17,14 @@
     "gear",
     "cog",
     "edit",
-    "configuration"
+    "configuration",
+    "hourglass",
+    "countdown",
+    "timeout",
+    "expiration"
   ],
   "categories": [
-    "time"
+    "time",
+    "tools"
   ]
 }
