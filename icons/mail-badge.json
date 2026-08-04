@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "certified",
+    "registered",
+    "seal",
+    "stamp",
+    "verified"
+  ],
+  "categories": [
+    "mail"
+  ]
+}
