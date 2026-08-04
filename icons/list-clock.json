@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kemie"
+  ],
+  "use-cases": [],
+  "tags": [
+    "history",
+    "log",
+    "clock",
+    "time"
+  ],
+  "categories": [
+    "text",
+    "time"
+  ]
+}
