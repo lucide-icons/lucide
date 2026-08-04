@@ -1,9 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "lazerg"
+    "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "empty state when a requested book or document cannot be found",
+    "flagging an unknown or unverified title in a catalogue or search result",
+    "indicating a missing reference or citation in documentation",
+    "linking to help, faq, or support articles about a publication"
+  ],
   "tags": [
     "reading",
     "library",
@@ -14,10 +19,19 @@
     "not found",
     "missing",
     "search",
-    "faq"
+    "faq",
+    "book",
+    "document",
+    "manual",
+    "reference",
+    "support",
+    "catalog",
+    "placeholder"
   ],
   "categories": [
     "text",
-    "development"
+    "development",
+    "files",
+    "communication"
   ]
 }
