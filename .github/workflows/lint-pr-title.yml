@@ -7,6 +7,10 @@ on:
       - edited
       - reopened
 
+permissions:
+  # The semantic PR action only reads the pull request title.
+  pull-requests: read
+
 jobs:
   lint-pr-title:
     name: PR Title Lint

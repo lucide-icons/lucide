@@ -3,6 +3,9 @@ name: Linting PR code
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   lint-code:
     runs-on: ubuntu-latest
