@@ -1,22 +1,35 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "caisere"
+    "caisere",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "encryption settings",
+    "secure login",
+    "privacy controls",
+    "security software",
+    "secure file storage"
   ],
   "tags": [
-    "safeguard",
-    "security system",
+    "antivirus",
     "authentication",
-    "security",
-    "encryption",
-    "protection",
-    "privacy",
-    "lock",
-    "shield",
-    "secure",
-    "safety",
+    "authorization",
+    "credentials",
+    "cybersecurity",
+    "data protection",
     "defense",
-    "guard"
+    "encryption",
+    "guard",
+    "login",
+    "password",
+    "privacy",
+    "safeguard",
+    "ssl",
+    "tls",
+    "two-factor authentication",
+    "verification",
+    "vpn"
   ],
   "categories": [
     "security"
