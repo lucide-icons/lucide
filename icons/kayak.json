@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "jpjacobpadilla"
+  ],
+  "use-cases": [],
+  "tags": [
+    "kayak",
+    "boat",
+    "paddle",
+    "water",
+    "sport",
+    "recreation",
+    "adventure",
+    "outdoors",
+    "equipment",
+    "lake",
+    "ocean"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}

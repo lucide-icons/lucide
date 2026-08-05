@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "text",
+    "alignment",
+    "left",
+    "list"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "text",
+      "deprecated": true,
+      "deprecationReason": "alias.duplicate"
+    },
+    {
+      "name": "align-left",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

@@ -1,8 +1,9 @@
-name: 'Request Review'
+name: Request Review
 on:
-  pull_request_target:
+  pull_request:
     types: [opened]
-    paths: icons/*.svg
+    paths:
+      - icons/*.svg
 
 jobs:
   request-review:
@@ -12,7 +13,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
