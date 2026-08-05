@@ -15,6 +15,10 @@ on:
         description: NPM tag
         default: 'latest'
         type: string
+    secrets:
+      BLOB_READ_WRITE_TOKEN:
+        description: Token used by build-font to upload the code points blob
+        required: false
 
 permissions:
   id-token: write # Required for OIDC

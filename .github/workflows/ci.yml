@@ -110,14 +110,16 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     needs: create-release
     uses: './.github/workflows/release.yml'
-    secrets: inherit
+    secrets:
+      BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
 
   dispatch-release:
     if: github.event_name == 'workflow_dispatch'
     uses: './.github/workflows/release.yml'
-    secrets: inherit
+    secrets:
+      BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
     with:
       version: ${{ inputs.version }}
       tag: ${{ inputs.tag }}
