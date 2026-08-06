@@ -8,54 +8,80 @@ updates:
     directory: /
     schedule:
       interval: weekly
-    # Grouped by shared toolchain, since deps like typescript, vite and rollup
-    # are pinned to the same spec across 10+ packages and must move together.
-    # A dependency lands in the FIRST group it matches, so order matters, and
-    # the trailing catch-all keeps unmatched deps out of one-PR-per-dependency.
+    # One group per framework, each holding that framework's own build and test
+    # tooling, followed by the groups for tooling shared across packages (vite,
+    # rollup, typescript are pinned to the same spec in 10+ manifests, so they
+    # must move together). A dependency lands in the FIRST group it matches, so
+    # framework groups come first and the trailing catch-all keeps unmatched
+    # deps out of one-PR-per-dependency.
     groups:
       angular-deps:
         patterns:
           - '@angular/*'
           - '@angular-eslint/*'
+          - '@vitest/browser-playwright'
           - 'angular-eslint'
           - 'ng-packagr'
           - 'rxjs'
           - 'tslib'
-          - 'zone.js'
-      framework-deps:
+      react-deps:
         patterns:
-          - 'astro'
-          - 'preact'
+          - '@testing-library/react'
+          - '@types/prop-types'
+          - '@types/react'
+          - '@vitejs/plugin-react'
           - 'react'
           - 'react-dom'
+      react-native-deps:
+        patterns:
           - 'react-native'
           - 'react-native-svg'
-          - 'solid-js'
-          - 'svelte'
+      preact-deps:
+        patterns:
+          - '@preact/preset-vite'
+          - '@testing-library/preact'
+          - 'preact'
+      vue-deps:
+        patterns:
+          - '@testing-library/vue'
+          - '@vitejs/plugin-vue'
+          - '@vue/test-utils'
           - 'vue'
+      svelte-deps:
+        patterns:
+          - '@sveltejs/*'
+          - '@testing-library/svelte'
+          - '@tsconfig/svelte'
+          - 'svelte'
+          - 'svelte-check'
+          - 'svelte-preprocess'
+      solid-deps:
+        patterns:
+          - '@babel/*'
+          - '@rollup/plugin-babel'
+          - '@solidjs/testing-library'
+          - 'babel-preset-solid'
+          - 'solid-js'
+          - 'vite-plugin-solid'
+      astro-deps:
+        patterns:
+          - '@astrojs/*'
+          - 'astro'
       testing-deps:
         patterns:
-          - '@solidjs/testing-library'
           - '@testing-library/*'
           - '@vitest/*'
-          - '@vue/test-utils'
           - 'jest-serializer-html'
           - 'jsdom'
           - 'linkedom'
           - 'vitest'
       build-deps:
         patterns:
-          - '@babel/*'
-          - '@preact/preset-vite'
           - '@rollup/*'
-          - '@sveltejs/*'
           - '@vitejs/*'
-          - 'babel-preset-*'
           - 'esbuild'
           - 'rollup'
           - 'rollup-plugin-*'
-          - 'svelte-check'
-          - 'svelte-preprocess'
           - 'typescript'
           - 'vite'
           - 'vite-plugin-*'
