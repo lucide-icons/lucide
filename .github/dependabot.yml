@@ -1,12 +1,6 @@
 version: 2
 
 updates:
-  # This is a pnpm workspace with a single lockfile at the repository root, so
-  # Dependabot must run from `/` only. Pointing entries at workspace members
-  # (packages/*, tools/*, docs) makes Dependabot update just that package.json
-  # and leave pnpm-lock.yaml stale, which breaks `pnpm install --frozen-lockfile`.
-  # From the root, Dependabot reads pnpm-workspace.yaml and updates every
-  # workspace member's manifest together with the lockfile.
   - package-ecosystem: npm
     directory: /
     schedule:
