@@ -1,4 +1,4 @@
-name: Linting PR
+name: Linting PR title
 
 on:
   pull_request:
@@ -6,6 +6,10 @@ on:
       - opened
       - edited
       - reopened
+
+permissions:
+  contents: read
+  pull-requests: read # Required to read the PR title
 
 jobs:
   lint-pr-title:

@@ -52,15 +52,13 @@
 💎 vue package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/lucide-vue/*'
-          - 'packages/lucide-vue-next/*'
+          - 'packages/vue/*'
 
 # For changes in the Lucide angular package
 🅰️ angular package:
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/angular/*'
-          - 'packages/lucide-angular/*'
 
 # For changes in the Lucide preact package
 ⚛️ preact package:
@@ -72,7 +70,7 @@
 🧣 svelte package:
   - changed-files:
       - any-glob-to-any-file:
-          - 'packages/lucide-svelte/*'
+          - 'packages/svelte/*'
 
 # For changes in the Lucide solid package
 🪝 solid package:
@@ -97,9 +95,3 @@
   - changed-files:
       - any-glob-to-any-file:
           - 'packages/lucide-static/*'
-
-# For changes in the Lucide flutter package
-🏹 flutter package:
-  - changed-files:
-      - any-glob-to-any-file:
-          - 'packages/lucide-flutter/*'

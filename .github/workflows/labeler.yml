@@ -2,8 +2,11 @@ name: 'Pull Request Labeler'
 on:
   - pull_request_target
 
+permissions: {}
+
 jobs:
   triage:
+    if: github.repository == 'lucide-icons/lucide'
     permissions:
       contents: read
       pull-requests: write

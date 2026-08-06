@@ -1,13 +1,15 @@
-name: 'Request Review'
+name: Request Review
 on:
-  pull_request_target:
+  pull_request:
     types: [opened]
     paths:
       - icons/*.svg
 
+permissions: {}
+
 jobs:
   request-review:
-    if: github.event.pull_request.draft == false
+    if: github.repository == 'lucide-icons/lucide' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     permissions:
       contents: read
