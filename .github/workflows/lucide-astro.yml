@@ -11,13 +11,16 @@ on:
       - tools/build-icons/**
       - pnpm-lock.yaml
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'
@@ -31,9 +34,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3.8.1
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'

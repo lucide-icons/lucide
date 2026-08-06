@@ -1,0 +1,104 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      react-deps:
+        patterns:
+          - '@testing-library/react'
+          - '@types/prop-types'
+          - '@types/react'
+          - '@vitejs/plugin-react'
+          - 'react'
+          - 'react-dom'
+      vue-deps:
+        patterns:
+          - '@testing-library/vue'
+          - '@vitejs/plugin-vue'
+          - '@vue/test-utils'
+          - 'vue'
+      svelte-deps:
+        patterns:
+          - '@sveltejs/*'
+          - '@testing-library/svelte'
+          - '@tsconfig/svelte'
+          - 'svelte'
+          - 'svelte-check'
+          - 'svelte-preprocess'
+      solid-deps:
+        patterns:
+          - '@babel/*'
+          - '@rollup/plugin-babel'
+          - '@solidjs/testing-library'
+          - 'babel-preset-solid'
+          - 'solid-js'
+          - 'vite-plugin-solid'
+      react-native-deps:
+        patterns:
+          - 'react-native'
+          - 'react-native-svg'
+      angular-deps:
+        patterns:
+          - '@angular/*'
+          - '@angular-eslint/*'
+          - '@vitest/browser-playwright'
+          - 'angular-eslint'
+          - 'ng-packagr'
+          - 'rxjs'
+          - 'tslib'
+      preact-deps:
+        patterns:
+          - '@preact/preset-vite'
+          - '@testing-library/preact'
+          - 'preact'
+      astro-deps:
+        patterns:
+          - '@astrojs/*'
+          - 'astro'
+      testing-deps:
+        patterns:
+          - '@testing-library/*'
+          - '@vitest/*'
+          - 'jest-serializer-html'
+          - 'jsdom'
+          - 'linkedom'
+          - 'vitest'
+      build-deps:
+        patterns:
+          - '@rollup/*'
+          - '@vitejs/*'
+          - 'esbuild'
+          - 'rollup'
+          - 'rollup-plugin-*'
+          - 'typescript'
+          - 'vite'
+          - 'vite-plugin-*'
+      linting-deps:
+        patterns:
+          - '@html-eslint/*'
+          - '@typescript-eslint/*'
+          - 'cspell'
+          - 'eslint'
+          - 'eslint-*'
+          - 'husky'
+          - 'lint-staged'
+          - 'prettier'
+          - 'prettier-plugin-*'
+      types-deps:
+        patterns:
+          - '@types/*'
+      remaining-deps:
+        patterns:
+          - '*'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - '*'

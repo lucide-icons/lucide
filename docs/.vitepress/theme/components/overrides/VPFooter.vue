@@ -42,7 +42,6 @@ const links = computed(() => [
     class="VPFooter"
     :class="{ 'has-sidebar': hasSidebar }"
   >
-    <SurveyAskOverlay/>
     <div class="container">
       <div class="sponsors">
         <a

@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "kapowaz"
   ],
+  "use-cases": [],
   "tags": [
     "flash",
     "camera",
