@@ -8,14 +8,27 @@
   ],
   "use-cases": [],
   "tags": [
-    "emoji",
-    "face",
+    "smile",
     "happy",
+    "happiness",
     "good",
+    "positive",
+    "friendly",
+    "patronizing",
+    "passive aggressive",
+    "ironic",
+    "emoji",
     "emotion"
   ],
   "categories": [
     "emoji",
     "account"
+  ],
+  "aliases": [
+    {
+      "name": "smile",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
