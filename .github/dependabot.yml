@@ -8,21 +8,74 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # Grouped by shared toolchain, since deps like typescript, vite and rollup
+    # are pinned to the same spec across 10+ packages and must move together.
+    # A dependency lands in the FIRST group it matches, so order matters, and
+    # the trailing catch-all keeps unmatched deps out of one-PR-per-dependency.
     groups:
-      testing-deps:
-        - "@testing-library/*"
-        - "jest-serializer-html"
-      build-deps:
-        - "rollup"
-        - "rollup-plugin-dts"
-        - "rollup-plugin-preserve-directives"
-      lucide-react-deps:
+      angular-deps:
         patterns:
-          - "@types/react"
-          - "@vitejs/plugin-react"
-          - "react"
-          - "react-dom"
-
+          - '@angular/*'
+          - '@angular-eslint/*'
+          - 'angular-eslint'
+          - 'ng-packagr'
+          - 'rxjs'
+          - 'tslib'
+          - 'zone.js'
+      framework-deps:
+        patterns:
+          - 'astro'
+          - 'preact'
+          - 'react'
+          - 'react-dom'
+          - 'react-native'
+          - 'react-native-svg'
+          - 'solid-js'
+          - 'svelte'
+          - 'vue'
+      testing-deps:
+        patterns:
+          - '@solidjs/testing-library'
+          - '@testing-library/*'
+          - '@vitest/*'
+          - '@vue/test-utils'
+          - 'jest-serializer-html'
+          - 'jsdom'
+          - 'linkedom'
+          - 'vitest'
+      build-deps:
+        patterns:
+          - '@babel/*'
+          - '@preact/preset-vite'
+          - '@rollup/*'
+          - '@sveltejs/*'
+          - '@vitejs/*'
+          - 'babel-preset-*'
+          - 'esbuild'
+          - 'rollup'
+          - 'rollup-plugin-*'
+          - 'svelte-check'
+          - 'svelte-preprocess'
+          - 'typescript'
+          - 'vite'
+          - 'vite-plugin-*'
+      linting-deps:
+        patterns:
+          - '@html-eslint/*'
+          - '@typescript-eslint/*'
+          - 'cspell'
+          - 'eslint'
+          - 'eslint-*'
+          - 'husky'
+          - 'lint-staged'
+          - 'prettier'
+          - 'prettier-plugin-*'
+      types-deps:
+        patterns:
+          - '@types/*'
+      remaining-deps:
+        patterns:
+          - '*'
 
   - package-ecosystem: github-actions
     directory: /
