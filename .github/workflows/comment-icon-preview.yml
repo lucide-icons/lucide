@@ -21,7 +21,7 @@ jobs:
       github.event.workflow_run.conclusion == 'success'
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@v9
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
@@ -49,7 +49,7 @@ jobs:
         id: pr-number
 
       - name: Find Comment
-        uses: peter-evans/find-comment@v4
+        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4.0.0
         id: pr-comment
         with:
           issue-number: ${{ steps.pr-number.outputs.number }}
@@ -57,7 +57,7 @@ jobs:
           body-includes: Added or changed icons
 
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v5
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ steps.pr-number.outputs.number }}
