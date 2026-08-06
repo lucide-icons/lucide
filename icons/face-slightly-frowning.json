@@ -9,13 +9,21 @@
   "use-cases": [],
   "tags": [
     "emoji",
-    "face",
     "bad",
-    "sad",
-    "emotion"
+    "sadness",
+    "emotion",
+    "concern",
+    "disappointment"
   ],
   "categories": [
     "emoji",
     "account"
+  ],
+  "aliases": [
+    {
+      "name": "frown",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
