@@ -75,7 +75,7 @@ declare global {
           doNotShowAfterSubmit?: boolean;
           customFormUrl?: string; // when you want to load the form via it's custom domain URL
           hiddenFields?: {
-            [key: string]: any;
+            [key: string]: unknown;
           };
           onOpen?: () => void;
           onClose?: () => void;

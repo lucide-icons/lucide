@@ -21,9 +21,6 @@
         "name": "@astrojs/ts-plugin",
       },
     ],
-    "paths": {
-      "./utils/*": ["../../packages/shared/src/utils/*"],
-    },
   },
   "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"],
 }

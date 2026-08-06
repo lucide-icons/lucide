@@ -34,5 +34,6 @@ export type IconEvents = {
 };
 
 export type IconSlots = {
-  default: {};
+  // The default slot does not expose any slot props.
+  default: Record<string, never>;
 };

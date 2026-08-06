@@ -293,7 +293,7 @@ const Radii = ({
   ...props
 }: { paths: Path[] } & PathProps<
   'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
-  any
+  never
 >) => {
   return (
     <g
@@ -361,12 +361,12 @@ const Radii = ({
 const Handles = ({
   paths,
   ...props
-}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', any>) => (
+}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', never>) => (
   <g
     className="svg-preview-handles-group"
     {...props}
   >
-    {paths.map(({ c, prev, next, cp1, cp2 }, i) => (
+    {paths.map(({ prev, next, cp1, cp2 }, i) => (
       <React.Fragment key={i}>
         {cp1 && <path d={`M${prev.x} ${prev.y} ${cp1.x} ${cp1.y}`} />}
         {cp1 && (

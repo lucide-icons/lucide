@@ -26,6 +26,7 @@ export default defineConfig([
       'docs/**/examples/',
       'docs/.vitepress/theme/components/editors/preact/index.js',
       'packages/angular/.angular',
+      'packages/angular/src', // Has custom linting in `packages/angular/eslint.config.js`.
       'packages/svelte/.svelte-kit',
       // Tracked in git despite matching a .gitignore pattern, so lint it.
       '!packages/lucide-react/dynamicIconImports.mjs',
@@ -74,6 +75,23 @@ export default defineConfig([
             mjs: 'always',
             json: 'always',
           },
+        },
+      ],
+    },
+  },
+  {
+    // The Angular package's own ESLint config takes the Angular plugins from that package and the
+    // shared lint tooling from the workspace root, so both package.json files are valid sources.
+    files: ['packages/angular/eslint.config.js'],
+    plugins: {
+      import: importPlugin,
+    },
+    rules: {
+      'import/no-extraneous-dependencies': [
+        'error',
+        {
+          devDependencies: true,
+          packageDir: [import.meta.dirname, path.join(import.meta.dirname, 'packages/angular')],
         },
       ],
     },
