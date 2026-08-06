@@ -46,13 +46,13 @@
     "@lucide/shared": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/vue": "^8.1.0",
-    "@vitejs/plugin-vue": "^4.6.2",
-    "@vue/test-utils": "2.4.5",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/test-utils": "2.4.11",
     "rollup": "^4.62.2",
     "rollup-plugin-dts": "^6.4.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.6",
-    "vue": "^3.5.39"
+    "vue": "^3.5.40"
   },
   "peerDependencies": {
     "vue": ">=3.0.1"
