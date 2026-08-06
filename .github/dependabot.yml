@@ -1,14 +1,28 @@
 version: 2
 
 updates:
+  # Root only: one pnpm lockfile covers the whole workspace, so Dependabot
+  # discovers every member via pnpm-workspace.yaml from here. Adding workspace
+  # members as directories yields manifest-only PRs with a stale lockfile.
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
     groups:
-      workspace:
+      testing-deps:
+        - "@testing-library/*"
+        - "jest-serializer-html"
+      build-deps:
+        - "rollup"
+        - "rollup-plugin-dts"
+        - "rollup-plugin-preserve-directives"
+      lucide-react-deps:
         patterns:
-          - '*'
+          - "@types/react"
+          - "@vitejs/plugin-react"
+          - "react"
+          - "react-dom"
+
 
   - package-ecosystem: github-actions
     directory: /
