@@ -33,7 +33,7 @@ describe('Using lucide icon components', () => {
     expect(IconComponent).toMatchSnapshot();
     expect(IconComponent).toHaveClass(testClass);
     expect(IconComponent).toHaveClass('lucide');
-    expect(IconComponent).toHaveClass('lucide-smile');
+    expect(IconComponent).toHaveClass('lucide-face-slightly-smiling');
   });
 
   it('should add a style attribute to the element', () => {
