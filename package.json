@@ -22,7 +22,6 @@
     "addjsons": "node ./scripts/addMissingIconJsonFiles.mts",
     "checkIcons": "node ./scripts/checkIconsAndCategories.mts",
     "checkLabIcons": "node ./scripts/checkLabIcons.mts",
-    "generate:changelog": "node ./scripts/generateChangelog.mts",
     "generate:sponsors": "node scripts/updateSponsors.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",

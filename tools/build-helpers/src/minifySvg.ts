@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+
 /**
  * Minifies SVG
  *

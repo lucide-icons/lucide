@@ -6,13 +6,13 @@ declare module '*.vue' {
 }
 
 declare module '*.data.ts' {
-  const data: any;
+  const data: unknown;
 
   export { data };
 }
 
 declare module '*.data' {
-  const data: any;
+  const data: unknown;
 
   export { data };
 }

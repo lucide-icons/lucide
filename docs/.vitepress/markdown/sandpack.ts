@@ -28,7 +28,6 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
   const renderSandbox = (tokenList: any[], index: number) => {
     const renderFunc = (tokens: any[], idx: number) => {
       if (tokens[idx].nesting === 1) {
-        const fileAttr: string[] = [];
         const attrs = Object.fromEntries(tokens[idx].attrs || []);
 
         const files: Record<
@@ -47,7 +46,7 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
         ) {
           if (tokens[i].type === 'fence' && tokens[i].tag === 'code') {
             const info = tokens[i].info ?? '';
-            const [lang, fileName, params = ''] = info.split(' ');
+            const [, fileName, params = ''] = info.split(' ');
 
             const active = params.includes('[active]');
             const hidden = params.includes('[hidden]');

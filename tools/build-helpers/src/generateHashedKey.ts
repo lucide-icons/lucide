@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+
 import { hash } from './hash.ts';
 
 /**
