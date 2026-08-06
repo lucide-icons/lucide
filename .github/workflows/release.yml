@@ -16,9 +16,7 @@ on:
         default: 'latest'
         type: string
 
-permissions:
-  id-token: write # Required for OIDC
-  contents: write
+permissions: {}
 
 jobs:
   prepare:
@@ -26,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.get_version.outputs.VERSION }}
-
     steps:
       - name: Get the version
         id: get_version
@@ -60,9 +57,9 @@ jobs:
             '@lucide/vue',
           ]
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -93,10 +90,10 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -122,10 +119,12 @@ jobs:
     if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     needs: prepare
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -142,7 +141,7 @@ jobs:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
 
       - name: 'Upload to Artifacts'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lucide-font
           path: lucide-font
@@ -152,18 +151,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: [prepare, lucide-font]
     permissions:
-      id-token: write # Required for OIDC
-      contents: write
+      contents: write # Required to upload the release assets
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
       - name: Zip font and icons
         run: |
           zip -r lucide-font-${{ needs.prepare.outputs.VERSION }}.zip lucide-font
           zip -r lucide-icons-${{ needs.prepare.outputs.VERSION }}.zip icons
 
       - name: Release zip and fonts
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ needs.prepare.outputs.VERSION }}
 
