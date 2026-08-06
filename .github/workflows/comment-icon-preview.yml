@@ -16,6 +16,7 @@ jobs:
       actions: read # Required to download the artifact from the triggering run
       pull-requests: write
     if: >
+      github.repository == 'lucide-icons/lucide' &&
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'
     steps:

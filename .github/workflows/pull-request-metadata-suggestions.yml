@@ -10,6 +10,7 @@ permissions: {}
 jobs:
   pull-request-metadata-suggestions:
     name: Pull Request Metadata Suggestions
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       contents: read

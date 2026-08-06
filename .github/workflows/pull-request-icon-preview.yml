@@ -10,6 +10,7 @@ permissions: {}
 jobs:
   generate-changed-icons-comment:
     name: Generate Changed Icons Comment
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       contents: read

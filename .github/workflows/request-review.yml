@@ -9,7 +9,7 @@ permissions: {}
 
 jobs:
   request-review:
-    if: github.event.pull_request.draft == false
+    if: github.repository == 'lucide-icons/lucide' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     permissions:
       contents: read

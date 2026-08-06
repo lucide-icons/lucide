@@ -11,6 +11,7 @@ env:
 
 jobs:
   block_phrases:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       contents: read
