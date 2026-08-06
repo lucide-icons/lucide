@@ -1,29 +1,11 @@
 version: 2
 
 updates:
-  # Root only: one pnpm lockfile covers the whole workspace, so Dependabot
-  # discovers every member via pnpm-workspace.yaml from here. Adding workspace
-  # members as directories yields manifest-only PRs with a stale lockfile.
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
-    # One group per framework, each holding that framework's own build and test
-    # tooling, followed by the groups for tooling shared across packages (vite,
-    # rollup, typescript are pinned to the same spec in 10+ manifests, so they
-    # must move together). A dependency lands in the FIRST group it matches, so
-    # framework groups come first and the trailing catch-all keeps unmatched
-    # deps out of one-PR-per-dependency.
     groups:
-      angular-deps:
-        patterns:
-          - '@angular/*'
-          - '@angular-eslint/*'
-          - '@vitest/browser-playwright'
-          - 'angular-eslint'
-          - 'ng-packagr'
-          - 'rxjs'
-          - 'tslib'
       react-deps:
         patterns:
           - '@testing-library/react'
@@ -32,15 +14,6 @@ updates:
           - '@vitejs/plugin-react'
           - 'react'
           - 'react-dom'
-      react-native-deps:
-        patterns:
-          - 'react-native'
-          - 'react-native-svg'
-      preact-deps:
-        patterns:
-          - '@preact/preset-vite'
-          - '@testing-library/preact'
-          - 'preact'
       vue-deps:
         patterns:
           - '@testing-library/vue'
@@ -63,6 +36,24 @@ updates:
           - 'babel-preset-solid'
           - 'solid-js'
           - 'vite-plugin-solid'
+      react-native-deps:
+        patterns:
+          - 'react-native'
+          - 'react-native-svg'
+      angular-deps:
+        patterns:
+          - '@angular/*'
+          - '@angular-eslint/*'
+          - '@vitest/browser-playwright'
+          - 'angular-eslint'
+          - 'ng-packagr'
+          - 'rxjs'
+          - 'tslib'
+      preact-deps:
+        patterns:
+          - '@preact/preset-vite'
+          - '@testing-library/preact'
+          - 'preact'
       astro-deps:
         patterns:
           - '@astrojs/*'
