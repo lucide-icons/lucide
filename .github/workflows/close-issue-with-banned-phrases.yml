@@ -4,10 +4,16 @@ on:
   issues:
     types: [opened]
 
+permissions: {}
+
+env:
+  GH_TOKEN: ${{ github.token }}
+
 jobs:
   block_phrases:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       issues: write
     steps:
       - name: Checkout repository
@@ -43,6 +49,3 @@ jobs:
               exit 0
             fi
           done
-
-env:
-  GH_TOKEN: ${{ github.token }}

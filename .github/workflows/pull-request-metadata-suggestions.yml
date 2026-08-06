@@ -5,6 +5,8 @@ on:
     paths:
       - 'icons/*.json'
 
+permissions: {}
+
 jobs:
   pull-request-metadata-suggestions:
     name: Pull Request Metadata Suggestions

@@ -6,9 +6,15 @@ on:
     types:
       - completed
 
+permissions: {}
+
 jobs:
   upload:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read # Required to download the artifact from the triggering run
+      pull-requests: write
     if: >
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'

@@ -6,11 +6,14 @@ on:
       - next
   pull_request:
     paths:
-      - packages/lucide-vue/**
+      - packages/vue/**
       - packages/shared/**
       - tools/build-icons/**
       - tools/rollup-plugins/**
       - pnpm-lock.yaml
+
+permissions:
+  contents: read
 
 jobs:
   build:

@@ -5,6 +5,8 @@ on:
     paths:
       - icons/*.svg
 
+permissions: {}
+
 jobs:
   request-review:
     if: github.event.pull_request.draft == false
