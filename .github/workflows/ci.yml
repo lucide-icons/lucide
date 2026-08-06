@@ -36,7 +36,7 @@ jobs:
     outputs:
       RELEASE_ENVIRONMENT: ${{ steps.environment.outputs.RELEASE_ENVIRONMENT }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Fetch tags
         run: git fetch --all --tags
@@ -65,9 +65,9 @@ jobs:
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -102,7 +102,7 @@ jobs:
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
