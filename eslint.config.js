@@ -1,4 +1,6 @@
+import path from 'node:path';
 import js from '@eslint/js';
+import { includeIgnoreFile } from '@eslint/compat';
 import { defineConfig } from 'eslint/config';
 import airbnbBase from 'eslint-config-airbnb-base';
 import prettier from 'eslint-config-prettier';
@@ -8,26 +10,25 @@ import htmlParser from '@html-eslint/parser';
 import defaultAttrs from './tools/build-icons/render/default-attrs.json' with { type: 'json' };
 import tseslint from 'typescript-eslint';
 
+const gitignorePath = path.join(import.meta.dirname, '.gitignore');
+
 export default defineConfig([
    tseslint.configs.recommended,
+  // Everything git ignores (generated icon sources, build output, caches) is ignored here too.
+  includeIgnoreFile(gitignorePath),
   {
+    // Ignores that are not in .gitignore, because these files are committed.
     ignores: [
-      '**/dist',
-      '**/build',
-      'coverage',
       'lib',
       '**/tests',
       'packages/**/tests/*',
-      '**/node_modules',
       'docs/images',
       'docs/**/examples/',
-      'docs/.vercel',
-      'docs/.nitro',
-      'docs/.vitepress/cache',
       'docs/.vitepress/theme/components/editors/preact/index.js',
-      'packages/lucide-react/dynamicIconImports.js',
       'packages/angular/.angular',
       'packages/svelte/.svelte-kit',
+      // Tracked in git despite matching a .gitignore pattern, so lint it.
+      '!packages/lucide-react/dynamicIconImports.mjs',
     ],
   },
   {
@@ -78,6 +79,13 @@ export default defineConfig([
     },
   },
   {
+    rules: {
+      // Omitting a property by destructuring it away (`const { key, ...attrs } = node`) leaves the
+      // omitted binding unused on purpose, so don't report it.
+      '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
+    },
+  },
+  {
     files: ['./icons/*.svg'],
     languageOptions: {
       parser: htmlParser,
@@ -115,6 +123,19 @@ export default defineConfig([
         'error',
         {
           selfClosing: 'always',
+          // Inside <svg> every tag counts as "foreign", where the rule only checks that a tag
+          // already written `/>` stays that way. Listing the shapes here is what actually forces
+          // `<path ...></path>` to become `<path ... />`.
+          selfClosingCustomPatterns: ['^(path|line|polyline|polygon|rect|circle|ellipse)$'],
+        },
+      ],
+      '@html-eslint/no-restricted-attr-values': [
+        'error',
+        {
+          attrPatterns: ['^(fill|stroke)$'],
+          attrValuePatterns: ['^(?!(none|currentColor)$).*$'],
+          message:
+            'Icons must inherit their colors: `fill` and `stroke` may only be `none` or `currentColor`.',
         },
       ],
       '@html-eslint/element-newline': 'error',
