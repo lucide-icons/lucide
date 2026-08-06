@@ -32,13 +32,11 @@ export type AliasDeprecation = {
   name: string;
   deprecated: true;
   deprecationReason: AliasDeprecationReason;
-  toBeRemovedInVersion?: string;
 };
 
 export type IconDeprecationReason = 'icon.renamed' | '';
 
 export type IconMetadataBase = {
-  toBeRemovedInVersion?: string;
   categories: string[];
   aliases?: AliasDeprecation[];
   tags: string[];
