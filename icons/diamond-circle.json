@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "marking a node or point of interest in a diagram",
+    "indicating a selected or active diamond node",
+    "a shape-library or shape-picker entry"
+  ],
+  "tags": [
+    "diamond",
+    "circle",
+    "gem",
+    "rhombus",
+    "shape",
+    "node",
+    "point",
+    "marker",
+    "status",
+    "decoration",
+    "geometric",
+    "target",
+    "focus",
+    "badge"
+  ],
+  "categories": [
+    "shapes",
+    "design"
+  ]
+}
