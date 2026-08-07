@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "jamiemlaw"
+  ],
+  "use-cases": [
+    "indicating available seating or table type in restaurant reservation UIs",
+    "representing the chair product category in furniture e-commerce filters",
+    "marking selectable seats in venue maps or event booking flows",
+    "showing seating locations on simple floor plans and wayfinding diagrams"
+  ],
+  "tags": [
+    "seat",
+    "furniture",
+    "dining",
+    "sit",
+    "seating",
+    "restaurant",
+    "table",
+    "wood",
+    "home"
+  ],
+  "categories": [
+    "home"
+  ]
+}
