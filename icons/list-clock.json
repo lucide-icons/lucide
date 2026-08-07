@@ -1,6 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw",
     "kemie"
   ],
   "use-cases": [
