@@ -7,7 +7,9 @@
     "indicating hot tub or jacuzzi amenities in hotel and vacation rental listings",
     "representing spa and wellness facilities in tourism reservation systems",
     "marking outdoor hot tub rentals in hospitality booking apps",
-    "labeling relaxation or spa features in property amenities filters"
+    "labeling relaxation or spa features in property amenities filters",
+    "marking spa and jacuzzi locations on maps and local business directories",
+    "signifying luxury resort amenities in travel package listings"
   ],
   "tags": [
     "jacuzzi",
@@ -22,7 +24,11 @@
     "bubbles",
     "heat",
     "outdoor",
-    "resort"
+    "resort",
+    "jets",
+    "luxury",
+    "retreat",
+    "backyard"
   ],
   "categories": [
     "home",
