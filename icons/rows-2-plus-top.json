@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "JMOAWeber"
+  ],
+  "tags": [
+    "lines",
+    "list",
+    "queue",
+    "preview",
+    "panel",
+    "paragraphs",
+    "parallel",
+    "series",
+    "split",
+    "vertical",
+    "horizontal",
+    "half",
+    "center",
+    "middle",
+    "even",
+    "drawer",
+    "plus",
+    "top",
+    "add"
+  ],
+  "categories": [
+    "layout",
+    "design",
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "rows",
+      "deprecationReason": "alias.name",
+      "deprecated": true,
+      "toBeRemovedInVersion": "v1.0"
+    }
+  ]
+}
