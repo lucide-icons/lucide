@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "jguddas"
+  ],
+  "use-cases": [
+    "indicating an active idea, inspiration, or aha moment in creative tools",
+    "toggling a light or smart-bulb on state next to lightbulb-off",
+    "highlighting tips, hints, or learning moments in product onboarding",
+    "showing that a feature or insight is currently active or illuminated"
+  ],
+  "tags": [
+    "idea",
+    "bright",
+    "lights",
+    "on",
+    "lit",
+    "inspiration",
+    "aha",
+    "energy",
+    "shine",
+    "radiate"
+  ],
+  "categories": [
+    "photography",
+    "devices"
+  ]
+}
