@@ -36,7 +36,7 @@ jobs:
     outputs:
       RELEASE_ENVIRONMENT: ${{ steps.environment.outputs.RELEASE_ENVIRONMENT }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Fetch tags
         run: git fetch --all --tags
@@ -65,9 +65,9 @@ jobs:
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
     steps:
-      - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v7.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           # No cache restore here: this job cuts the release, and caches
           # are writable from other workflow runs. The lockfile still
@@ -104,7 +104,7 @@ jobs:
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Create Release
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           name: Version ${{ steps.new-version.outputs.NEW_VERSION }}

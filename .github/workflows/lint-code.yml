@@ -10,9 +10,9 @@ jobs:
   lint-code:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v7.0.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -22,3 +22,19 @@ jobs:
 
       - name: Run Linter
         run: pnpm lint
+
+  lint-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Verify actions are pinned to commit SHAs
+        run: |
+          unpinned=$(grep -rnE "^[[:space:]]*(-[[:space:]]+)?uses:" .github/workflows/ \
+            | grep -vE "uses:[[:space:]]*['\"]?\./" \
+            | grep -vE "uses:[[:space:]]*['\"]?[^@]+@[0-9a-f]{40}([[:space:]]|$|#)" || true)
+          if [ -n "$unpinned" ]; then
+            echo "::error::GitHub Actions must be pinned to a full commit SHA, not a version tag."
+            echo "$unpinned"
+            exit 1
+          fi
