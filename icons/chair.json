@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid",
+    "jamiemlaw"
+  ],
+  "use-cases": [
+    "indicating available seating or table type in restaurant reservation UIs",
+    "representing the chair product category in furniture e-commerce filters",
+    "marking selectable seats in venue maps or event booking flows",
+    "showing seating locations on simple floor plans and wayfinding diagrams",
+    "representing furniture items in interior design or room-planning apps",
+    "used as a toolbar control to add or place chairs in room-layout or floor-plan editors"
+  ],
+  "tags": [
+    "seat",
+    "furniture",
+    "dining",
+    "sit",
+    "seating",
+    "restaurant",
+    "table",
+    "wood",
+    "home",
+    "interior",
+    "floorplan",
+    "seatmap",
+    "venue"
+  ],
+  "categories": [
+    "home",
+    "shopping"
+  ]
+}
