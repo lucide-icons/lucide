@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [
+    "representing a text block or content card",
+    "indicating a document, note, or article in a layout"
+  ],
+  "tags": [
+    "text",
+    "paragraph",
+    "content",
+    "note",
+    "document",
+    "body",
+    "copy",
+    "article",
+    "square",
+    "container",
+    "block",
+    "card",
+    "placeholder"
+  ],
+  "categories": [
+    "text",
+    "shapes"
+  ]
+}
