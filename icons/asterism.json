@@ -8,7 +8,9 @@
     "marking fediverse or ActivityPub profile links that are interoperable across platforms",
     "representing the asterism typographic symbol (⁂) in text or publishing tools",
     "indicating decentralized social network handles in blogs and about pages",
-    "labeling federation or multi-platform follow actions in social clients"
+    "labeling federation or multi-platform follow actions in social clients",
+    "decorative divider between sections in articles or posts",
+    "marking typographic ornaments or footnote groups in publishing templates"
   ],
   "tags": [
     "asterisk",
@@ -20,10 +22,14 @@
     "decentralized",
     "federation",
     "stars",
-    "three"
+    "three",
+    "ornament",
+    "punctuation",
+    "divider"
   ],
   "categories": [
     "text",
-    "social"
+    "social",
+    "design"
   ]
 }
