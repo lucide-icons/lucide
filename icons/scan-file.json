@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "wojtekmaj",
+    "ericfennis",
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "maksimetny",
+    "UsamaKhan"
+  ],
+  "tags": [
+    "qr-code",
+    "barcode",
+    "checkout",
+    "augmented reality",
+    "ar",
+    "target",
+    "surveillance",
+    "camera",
+    "lens",
+    "focus",
+    "frame",
+    "select",
+    "box",
+    "boundary",
+    "bounds",
+    "area",
+    "square",
+    "dashed",
+    "document"
+  ],
+  "categories": [
+    "devices",
+    "shopping",
+    "security",
+    "social",
+    "gaming",
+    "files"
+  ]
+}
