@@ -5,9 +5,12 @@ on:
     paths:
       - 'icons/*.json'
 
+permissions: {}
+
 jobs:
   pull-request-metadata-suggestions:
     name: Pull Request Metadata Suggestions
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -16,11 +19,11 @@ jobs:
     steps:
       #  We checkout the main branch of main repository for security reasons.
       #  This is to prevent the workflow from running on a forked repository.
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: actions/checkout@v7
         with:
           repository: lucide-icons/lucide
-      - uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'

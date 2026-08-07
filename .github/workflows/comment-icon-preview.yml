@@ -6,23 +6,22 @@ on:
     types:
       - completed
 
-permissions:
-  contents: read
-  # Download the pr_number artifact from the triggering run.
-  actions: read
-  # Create or update the icon preview comment on the PR.
-  issues: write
-  pull-requests: write
+permissions: {}
 
 jobs:
   upload:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read # Required to download the artifact from the triggering run
+      pull-requests: write
     if: >
+      github.repository == 'lucide-icons/lucide' &&
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'
     steps:
       - name: 'Download artifact'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
+        uses: actions/github-script@v9
         with:
           script: |
             let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
@@ -50,7 +49,7 @@ jobs:
         id: pr-number
 
       - name: Find Comment
-        uses: peter-evans/find-comment@a54c31d7fa095754bfef525c0c8e5e5674c4b4b1 # v2.4.0
+        uses: peter-evans/find-comment@v4
         id: pr-comment
         with:
           issue-number: ${{ steps.pr-number.outputs.number }}
@@ -58,7 +57,7 @@ jobs:
           body-includes: Added or changed icons
 
       - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@23ff15729ef2fc348714a3bb66d2f655ca9066f2 # v3.1.0
+        uses: peter-evans/create-or-update-comment@v5
         with:
           comment-id: ${{ steps.pr-comment.outputs.comment-id }}
           issue-number: ${{ steps.pr-number.outputs.number }}
