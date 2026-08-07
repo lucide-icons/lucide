@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "KesleyDavid"
+  ],
+  "use-cases": [
+    "indicating hot tub or jacuzzi amenities in hotel and vacation rental listings",
+    "representing spa and wellness facilities in tourism reservation systems",
+    "marking outdoor hot tub rentals in hospitality booking apps",
+    "labeling relaxation or spa features in property amenities filters"
+  ],
+  "tags": [
+    "jacuzzi",
+    "spa",
+    "tub",
+    "bath",
+    "steam",
+    "relax",
+    "amenities",
+    "hotel",
+    "wellness",
+    "bubbles",
+    "heat",
+    "outdoor",
+    "resort"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}
