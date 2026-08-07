@@ -169,13 +169,13 @@ importers:
         version: link:../packages/lucide-react
       motion-v:
         specifier: 1.10.3
-        version: 1.10.3(@vueuse/core@14.3.0(vue@3.5.40(typescript@5.9.3)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.40(typescript@5.9.3))
+        version: 1.10.3(@vueuse/core@14.3.0(vue@3.5.40(typescript@5.9.3)))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vue@3.5.40(typescript@5.9.3))
       react:
-        specifier: 18.2.0
-        version: 18.2.0
+        specifier: 19.2.8
+        version: 19.2.8
       react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
+        specifier: 19.2.8
+        version: 19.2.8(react@19.2.8)
       sandpack-vue3:
         specifier: 3.1.12
         version: 3.1.12(vue@3.5.40(typescript@5.9.3))
@@ -239,7 +239,7 @@ importers:
         version: 5.3.1
       vitepress:
         specifier: ^1.6.4
-        version: 1.6.4(@algolia/client-search@5.55.2)(@types/node@26.1.1)(@types/react@18.3.31)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.6.7)(postcss@8.5.19)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.101.0)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(typescript@5.9.3)(yaml@2.9.0)
+        version: 1.6.4(@algolia/client-search@5.55.2)(@types/node@26.1.1)(@types/react@18.3.31)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.6.7)(postcss@8.5.19)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(sass@1.101.0)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(typescript@5.9.3)(yaml@2.9.0)
       vitepress-plugin-group-icons:
         specifier: ^1.7.5
         version: 1.7.5(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
@@ -512,23 +512,23 @@ importers:
         specifier: ^6.9.1
         version: 6.9.1
       '@testing-library/react':
-        specifier: ^14.3.1
-        version: 14.3.1(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: ^16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@18.3.7(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@types/react':
-        specifier: ^18.3.31
-        version: 18.3.31
+        specifier: ^19.2.18
+        version: 19.2.18
       '@vitejs/plugin-react':
-        specifier: ^4.7.0
-        version: 4.7.0(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
+        specifier: ^6.0.5
+        version: 6.0.5(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
       react:
-        specifier: 18.2.0
-        version: 18.2.0
+        specifier: 19.2.8
+        version: 19.2.8
       react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
+        specifier: 19.2.8
+        version: 19.2.8(react@19.2.8)
       rollup:
         specifier: ^4.62.2
         version: 4.62.2
@@ -563,32 +563,32 @@ importers:
         specifier: ^6.9.1
         version: 6.9.1
       '@testing-library/react':
-        specifier: ^14.3.1
-        version: 14.3.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@18.3.7(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@types/prop-types':
         specifier: ^15.7.15
         version: 15.7.15
       '@types/react':
-        specifier: ^18.3.31
-        version: 18.3.31
+        specifier: ^19.2.18
+        version: 19.2.18
       '@vitejs/plugin-react':
-        specifier: ^4.7.0
-        version: 4.7.0(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
+        specifier: ^6.0.5
+        version: 6.0.5(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
       react:
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^19.2.8
+        version: 19.2.8
       react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: ^19.2.8
+        version: 19.2.8(react@19.2.8)
       react-native:
         specifier: ^0.76.9
-        version: 0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2)
+        version: 0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2)
       react-native-svg:
         specifier: ^15.15.5
-        version: 15.15.5(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2))(react@18.3.1)
+        version: 15.15.5(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2))(react@19.2.8)
       rollup:
         specifier: ^4.62.2
         version: 4.62.2
@@ -4199,9 +4199,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rolldown/pluginutils@1.0.0-beta.27':
-    resolution: {integrity: sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==}
-
   '@rolldown/pluginutils@1.0.0-rc.4':
     resolution: {integrity: sha512-1BrrmTu0TWfOP1riA8uakjFc9bpIUGzVKETsOtzY39pPga8zELGDl8eu1Dx7/gjM5CAz14UknsUMpBO8L+YntQ==}
 
@@ -4723,12 +4720,20 @@ packages:
     peerDependencies:
       preact: '>=10 || ^10.0.0-alpha.0 || ^10.0.0-beta.0'
 
-  '@testing-library/react@14.3.1':
-    resolution: {integrity: sha512-H99XjUhWQw0lTgyMN05W3xQG1Nh4lq574D8keFf1dDoNTJgp66VbJozRaczoF+wsiaPJNt/TcnfpLGufGxSrZQ==}
-    engines: {node: '>=14'}
+  '@testing-library/react@16.3.2':
+    resolution: {integrity: sha512-XU5/SytQM+ykqMnAnvB2umaJNIOsLF3PVv//1Ew4CTcpz0/BRyy/af40qqrt7SjKpDdT1saBMc42CUok5gaw+g==}
+    engines: {node: '>=18'}
     peerDependencies:
-      react: ^18.0.0
-      react-dom: ^18.0.0
+      '@testing-library/dom': ^10.0.0
+      '@types/react': ^18.0.0 || ^19.0.0
+      '@types/react-dom': ^18.0.0 || ^19.0.0
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
 
   '@testing-library/svelte-core@1.1.3':
     resolution: {integrity: sha512-KkMAvXeWorxN2Yn0kdC1lfoAItxpoj4uOWzxK5leDrNxonLvS5nwBFvztrroyTszQ0Wf/EU6iLT8JhY5qcn22g==}
@@ -4908,6 +4913,9 @@ packages:
 
   '@types/react@18.3.31':
     resolution: {integrity: sha512-vfEqpXTvwT91yhmwdfouStN2hSKwTvyRs8qpLfADyrq/kxDw0hZM7Wk9Ug1FELj8hIby+S/+kQCSRFF32nv2Qw==}
+
+  '@types/react@19.2.18':
+    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -5242,11 +5250,18 @@ packages:
     peerDependencies:
       vite: ^7.3.6
 
-  '@vitejs/plugin-react@4.7.0':
-    resolution: {integrity: sha512-gUu9hwfWvvEDBBmgtAowQCojwZmJ5mcLn3aufeCsitijs3+f2NsrPtlAWIR6OPiqljl96GVCUbLe0HyqIpVaoA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
+  '@vitejs/plugin-react@6.0.5':
+    resolution: {integrity: sha512-BOVzne/NL162sMdResB25mUv+vWMF5NoAjNf09TeGlE7ZpszZWSD3winycicLJw72yeVsoCn/2kOhEuCvEShMA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
+      '@rolldown/plugin-babel': ^0.1.7 || ^0.2.0
+      babel-plugin-react-compiler: ^1.0.0
       vite: ^7.3.6
+    peerDependenciesMeta:
+      '@rolldown/plugin-babel':
+        optional: true
+      babel-plugin-react-compiler:
+        optional: true
 
   '@vitejs/plugin-vue@5.2.4':
     resolution: {integrity: sha512-7Yx/SXSOcQq5HiiV3orevHUFn+pmMB4cgbEkDYgnkUWb0WfeQ/wa2yFv6D5ICiCQOVpjA7vYDXrC7AGO8yjDHA==}
@@ -9515,15 +9530,10 @@ packages:
   react-devtools-core@5.3.2:
     resolution: {integrity: sha512-crr9HkVrDiJ0A4zot89oS0Cgv0Oa4OG1Em4jit3P3ZxZSKPMYyMjfwMqgcJna9o625g8oN87rBm8SWWrSTBZxg==}
 
-  react-dom@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  react-dom@19.2.8:
+    resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
     peerDependencies:
-      react: ^18.2.0
-
-  react-dom@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
-    peerDependencies:
-      react: ^18.3.1
+      react: ^19.2.8
 
   react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
@@ -9552,16 +9562,8 @@ packages:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
 
-  react-refresh@0.17.0:
-    resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
-    engines: {node: '>=0.10.0'}
-
-  react@18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
-    engines: {node: '>=0.10.0'}
-
-  react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
+  react@19.2.8:
+    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
   readable-stream@2.3.8:
@@ -9884,11 +9886,11 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
-  scheduler@0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
-
   scheduler@0.24.0-canary-efb381bbf-20230505:
     resolution: {integrity: sha512-ABvovCDe/k9IluqSh4/ISoq8tIJnW8euVAWYt5j/bg6dRnqwQwiGO1F/V4AyK96NGF/FB04FhOUDuWj8IKfABA==}
+
+  scheduler@0.27.0:
+    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
   scule@1.3.0:
     resolution: {integrity: sha512-6FtHJEvt+pVMIB9IBY+IcCJ6Z5f1iQnytgyfKMhDKgmzYG+TeH/wx1y3l27rshSbLiSanrR9ffZDrEsmjlQF2g==}
@@ -13385,9 +13387,9 @@ snapshots:
 
   '@docsearch/css@3.8.2': {}
 
-  '@docsearch/js@3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.8.2)':
+  '@docsearch/js@3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(search-insights@2.8.2)':
     dependencies:
-      '@docsearch/react': 3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.8.2)
+      '@docsearch/react': 3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(search-insights@2.8.2)
       preact: 10.29.7
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -13397,7 +13399,7 @@ snapshots:
       - react-dom
       - search-insights
 
-  '@docsearch/react@3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.8.2)':
+  '@docsearch/react@3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(search-insights@2.8.2)':
     dependencies:
       '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@5.55.2)(algoliasearch@5.55.2)(search-insights@2.8.2)
       '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@5.55.2)(algoliasearch@5.55.2)
@@ -13405,8 +13407,8 @@ snapshots:
       algoliasearch: 5.55.2
     optionalDependencies:
       '@types/react': 18.3.31
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
       search-insights: 2.8.2
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -14965,14 +14967,14 @@ snapshots:
 
   '@react-native/normalize-colors@0.76.9': {}
 
-  '@react-native/virtualized-lists@0.76.9(@types/react@18.3.31)(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2))(react@18.3.1)':
+  '@react-native/virtualized-lists@0.76.9(@types/react@19.2.18)(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2))(react@19.2.8)':
     dependencies:
       invariant: 2.2.4
       nullthrows: 1.1.1
-      react: 18.3.1
-      react-native: 0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2)
+      react: 19.2.8
+      react-native: 0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2)
     optionalDependencies:
-      '@types/react': 18.3.31
+      '@types/react': 19.2.18
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     optional: true
@@ -15068,8 +15070,6 @@ snapshots:
 
   '@rolldown/binding-win32-x64-msvc@1.0.0-rc.4':
     optional: true
-
-  '@rolldown/pluginutils@1.0.0-beta.27': {}
 
   '@rolldown/pluginutils@1.0.0-rc.4': {}
 
@@ -15565,25 +15565,15 @@ snapshots:
       '@testing-library/dom': 8.20.1
       preact: 10.29.7
 
-  '@testing-library/react@14.3.1(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@testing-library/react@16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@18.3.7(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@babel/runtime': 7.29.7
-      '@testing-library/dom': 9.3.4
-      '@types/react-dom': 18.3.7(@types/react@18.3.31)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    transitivePeerDependencies:
-      - '@types/react'
-
-  '@testing-library/react@14.3.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.29.7
-      '@testing-library/dom': 9.3.4
-      '@types/react-dom': 18.3.7(@types/react@18.3.31)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
+      '@testing-library/dom': 10.4.1
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+    optionalDependencies:
+      '@types/react': 19.2.18
+      '@types/react-dom': 18.3.7(@types/react@19.2.18)
 
   '@testing-library/svelte-core@1.1.3(svelte@5.56.8(@typescript-eslint/types@8.64.0))':
     dependencies:
@@ -15766,13 +15756,19 @@ snapshots:
 
   '@types/prop-types@15.7.15': {}
 
-  '@types/react-dom@18.3.7(@types/react@18.3.31)':
+  '@types/react-dom@18.3.7(@types/react@19.2.18)':
     dependencies:
-      '@types/react': 18.3.31
+      '@types/react': 19.2.18
+    optional: true
 
   '@types/react@18.3.31':
     dependencies:
       '@types/prop-types': 15.7.15
+      csstype: 3.2.3
+    optional: true
+
+  '@types/react@19.2.18':
+    dependencies:
       csstype: 3.2.3
 
   '@types/resolve@1.20.2': {}
@@ -16147,17 +16143,10 @@ snapshots:
     dependencies:
       vite: 7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.97.3)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0)
 
-  '@vitejs/plugin-react@4.7.0(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))':
+  '@vitejs/plugin-react@6.0.5(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))':
     dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@babel/plugin-transform-react-jsx-self': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))
-      '@babel/plugin-transform-react-jsx-source': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))
-      '@rolldown/pluginutils': 1.0.0-beta.27
-      '@types/babel__core': 7.20.5
-      react-refresh: 0.17.0
+      '@rolldown/pluginutils': 1.0.1
       vite: 7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0)
-    transitivePeerDependencies:
-      - supports-color
 
   '@vitejs/plugin-vue@5.2.4(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))(vue@3.5.40(typescript@5.9.3))':
     dependencies:
@@ -18653,14 +18642,14 @@ snapshots:
 
   forwarded@0.2.0: {}
 
-  framer-motion@12.42.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  framer-motion@12.42.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
       motion-dom: 12.42.2
       motion-utils: 12.39.0
       tslib: 2.8.1
     optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
 
   fresh@0.5.2: {}
 
@@ -20472,10 +20461,10 @@ snapshots:
 
   motion-utils@12.39.0: {}
 
-  motion-v@1.10.3(@vueuse/core@14.3.0(vue@3.5.40(typescript@5.9.3)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vue@3.5.40(typescript@5.9.3)):
+  motion-v@1.10.3(@vueuse/core@14.3.0(vue@3.5.40(typescript@5.9.3)))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vue@3.5.40(typescript@5.9.3)):
     dependencies:
       '@vueuse/core': 14.3.0(vue@3.5.40(typescript@5.9.3))
-      framer-motion: 12.42.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      framer-motion: 12.42.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       hey-listen: 1.0.8
       motion-dom: 12.42.2
       vue: 3.5.40(typescript@5.9.3)
@@ -21397,30 +21386,23 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  react-dom@18.2.0(react@18.2.0):
+  react-dom@19.2.8(react@19.2.8):
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.2
-
-  react-dom@18.3.1(react@18.3.1):
-    dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
+      react: 19.2.8
+      scheduler: 0.27.0
 
   react-is@17.0.2: {}
 
   react-is@18.3.1: {}
 
-  react-native-svg@15.15.5(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2))(react@18.3.1):
+  react-native-svg@15.15.5(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2))(react@19.2.8):
     dependencies:
       css-select: 5.2.2
       css-tree: 1.1.3
-      react: 18.3.1
-      react-native: 0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2)
+      react: 19.2.8
+      react-native: 0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2)
 
-  react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2):
+  react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2):
     dependencies:
       '@jest/create-cache-key-function': 29.7.0
       '@react-native/assets-registry': 0.76.9
@@ -21429,7 +21411,7 @@ snapshots:
       '@react-native/gradle-plugin': 0.76.9
       '@react-native/js-polyfills': 0.76.9
       '@react-native/normalize-colors': 0.76.9
-      '@react-native/virtualized-lists': 0.76.9(@types/react@18.3.31)(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@18.3.31)(encoding@0.1.13)(react@18.3.1)(supports-color@10.2.2))(react@18.3.1)
+      '@react-native/virtualized-lists': 0.76.9(@types/react@19.2.18)(react-native@0.76.9(@babel/core@7.29.7(supports-color@10.2.2))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@types/react@19.2.18)(encoding@0.1.13)(react@19.2.8)(supports-color@10.2.2))(react@19.2.8)
       abort-controller: 3.0.0
       anser: 1.4.10
       ansi-regex: 5.0.1
@@ -21451,7 +21433,7 @@ snapshots:
       nullthrows: 1.1.1
       pretty-format: 29.7.0
       promise: 8.3.0
-      react: 18.3.1
+      react: 19.2.8
       react-devtools-core: 5.3.2
       react-refresh: 0.14.2
       regenerator-runtime: 0.13.11
@@ -21462,7 +21444,7 @@ snapshots:
       ws: 6.2.5
       yargs: 17.7.3
     optionalDependencies:
-      '@types/react': 18.3.31
+      '@types/react': 19.2.18
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/preset-env'
@@ -21474,15 +21456,7 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react-refresh@0.17.0: {}
-
-  react@18.2.0:
-    dependencies:
-      loose-envify: 1.4.0
-
-  react@18.3.1:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.2.8: {}
 
   readable-stream@2.3.8:
     dependencies:
@@ -21943,13 +21917,11 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  scheduler@0.23.2:
-    dependencies:
-      loose-envify: 1.4.0
-
   scheduler@0.24.0-canary-efb381bbf-20230505:
     dependencies:
       loose-envify: 1.4.0
+
+  scheduler@0.27.0: {}
 
   scule@1.3.0: {}
 
@@ -23277,10 +23249,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vitepress@1.6.4(@algolia/client-search@5.55.2)(@types/node@26.1.1)(@types/react@18.3.31)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.6.7)(postcss@8.5.19)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.101.0)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(typescript@5.9.3)(yaml@2.9.0):
+  vitepress@1.6.4(@algolia/client-search@5.55.2)(@types/node@26.1.1)(@types/react@18.3.31)(fuse.js@7.5.0)(jiti@2.7.0)(less@4.6.7)(postcss@8.5.19)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(sass@1.101.0)(search-insights@2.8.2)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(typescript@5.9.3)(yaml@2.9.0):
     dependencies:
       '@docsearch/css': 3.8.2
-      '@docsearch/js': 3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(search-insights@2.8.2)
+      '@docsearch/js': 3.8.2(@algolia/client-search@5.55.2)(@types/react@18.3.31)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(search-insights@2.8.2)
       '@iconify-json/simple-icons': 1.2.90
       '@shikijs/core': 2.5.0
       '@shikijs/transformers': 2.5.0
