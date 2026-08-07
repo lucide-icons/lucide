@@ -8,7 +8,9 @@
     "indicating an active idea, inspiration, or aha moment in creative tools",
     "toggling a light or smart-bulb on state next to lightbulb-off",
     "highlighting tips, hints, or learning moments in product onboarding",
-    "showing that a feature or insight is currently active or illuminated"
+    "showing that a feature or insight is currently active or illuminated",
+    "indicating a device power or operational status in smart-home dashboards",
+    "signifying recommended settings or suggested improvements in tools"
   ],
   "tags": [
     "idea",
@@ -20,10 +22,16 @@
     "aha",
     "energy",
     "shine",
-    "radiate"
+    "radiate",
+    "bulb",
+    "illumination",
+    "spark",
+    "innovation",
+    "smarthome"
   ],
   "categories": [
     "photography",
-    "devices"
+    "devices",
+    "home"
   ]
 }
