@@ -165,6 +165,7 @@ jobs:
         with:
           name: lucide-font
           path: lucide-font
+
       - name: Zip font and icons
         run: |
           zip -r lucide-font-${{ needs.prepare.outputs.VERSION }}.zip lucide-font
