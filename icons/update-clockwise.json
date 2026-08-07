@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gkkconan"
+  ],
+  "tags": [
+    "time",
+    "timeline",
+    "version",
+    "time machine",
+    "backup",
+    "rotate",
+    "cw",
+    "arrow",
+    "reload",
+    "rerun",
+    "synchronise",
+    "synchronize",
+    "circular",
+    "cycle",
+    "update",
+    "updates"
+  ],
+  "categories": [
+    "arrows",
+    "time"
+  ]
+}
