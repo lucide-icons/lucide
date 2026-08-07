@@ -1,4 +1,3 @@
-
 import { hash } from './hash.ts';
 
 /**

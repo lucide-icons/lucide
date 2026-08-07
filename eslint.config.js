@@ -13,7 +13,7 @@ import tseslint from 'typescript-eslint';
 const gitignorePath = path.join(import.meta.dirname, '.gitignore');
 
 export default defineConfig([
-   tseslint.configs.recommended,
+  tseslint.configs.recommended,
   // Everything git ignores (generated icon sources, build output, caches) is ignored here too.
   includeIgnoreFile(gitignorePath),
   {

@@ -1,4 +1,3 @@
-
 /**
  * Merge two arrays and remove duplicates
  *

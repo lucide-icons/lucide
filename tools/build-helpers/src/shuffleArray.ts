@@ -1,4 +1,3 @@
-
 /**
  * @param {array} array
  * @returns {array}

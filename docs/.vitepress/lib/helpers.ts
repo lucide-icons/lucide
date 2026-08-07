@@ -9,11 +9,9 @@ export const hash = (string: string, seed = 5381) => {
   let i = string.length;
 
   while (i) {
-     
     seed = (seed * 33) ^ string.charCodeAt(--i);
   }
 
-   
   return (seed >>> 0).toString(36).substr(0, 6);
 };
 

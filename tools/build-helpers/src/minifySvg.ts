@@ -1,4 +1,3 @@
-
 /**
  * Minifies SVG
  *

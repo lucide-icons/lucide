@@ -1,4 +1,3 @@
-
 import { toCamelCase } from './toCamelCase.ts';
 
 /**
