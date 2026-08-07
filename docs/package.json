@@ -15,8 +15,10 @@
     "prebuild:categoriesJson": "node ./scripts/writeCategoriesMetadata.mts",
     "prebuild:relatedIcons": "node ./scripts/writeIconRelatedIcons.mts",
     "prebuild:iconDetails": "node ./scripts/writeIconDetails.mts",
-    "prebuild:iconPopularity": "node ./scripts/writeiconPopularity.mts",
+    "prebuild:iconPopularity": "node ./scripts/writeiconPopularity.mts && node ./scripts/writeiconPopularityIndex.mts",
     "prebuild:brandStopwords": "node ./scripts/writeBrandStopwords.mts",
+    "prebuild:writeLabIconNodes": "node ./scripts/writeLabIconNodes.mts",
+    "prebuild:writeLabIconMetaIndex": "node ./scripts/writeLabIconMetaIndex.mts",
     "postbuild:vercelJson": "node ./scripts/writeVercelOutput.mts",
     "dev": "nitropack dev",
     "prebuild:api": "nitropack prepare",
@@ -66,6 +68,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sandpack-vue3": "3.1.12",
-    "vue": "^3.5.39"
+    "vue": "^3.5.40"
   }
 }
