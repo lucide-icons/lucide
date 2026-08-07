@@ -7,7 +7,9 @@
     "adding a new kanban board in project management apps",
     "creating a new board from an empty state or dashboard",
     "toolbar action to open a new agile board or sprint view",
-    "indicating add-column or add-board affordances next to kanban views"
+    "indicating add-column or add-board affordances next to kanban views",
+    "empty-state call-to-action to set up a kanban board",
+    "onboarding step to prompt creation of a first project board"
   ],
   "tags": [
     "board",
@@ -19,11 +21,18 @@
     "tickets",
     "issues",
     "productivity",
-    "columns"
+    "columns",
+    "workflow",
+    "planning",
+    "dashboard",
+    "workspace",
+    "collaboration",
+    "cards"
   ],
   "categories": [
     "charts",
     "development",
-    "design"
+    "design",
+    "layout"
   ]
 }
