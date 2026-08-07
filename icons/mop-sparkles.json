@@ -3,14 +3,35 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "representing AI-assisted cleaning or automation features",
+    "indicating spotless or freshly cleaned surfaces",
+    "showing magical cleanup actions in smart home apps"
+  ],
   "tags": [
     "cleaning",
     "scrubbing",
     "sweeping",
     "ai",
-    "artificial intelligence"
+    "magic",
+    "sparkle",
+    "smart",
+    "automation",
+    "housekeeping",
+    "hygiene",
+    "sanitation",
+    "chores",
+    "swab",
+    "tidy",
+    "floor",
+    "spotless",
+    "pristine",
+    "polish",
+    "sanitize",
+    "disinfect"
   ],
   "categories": [
+    "home",
     "tools",
     "design"
   ]
