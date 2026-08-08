@@ -25,7 +25,7 @@
     "build:ng": "ng build --configuration production",
     "test": "pnpm build:icons && ng test --no-watch",
     "test:watch": "ng test",
-    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "e2e": "ng e2e"
   },
   "prettier": {
@@ -41,11 +41,8 @@
     ]
   },
   "devDependencies": {
-    "@angular-eslint/builder": "~21.1.0",
-    "@angular-eslint/eslint-plugin": "~21.1.0",
-    "@angular-eslint/eslint-plugin-template": "~21.1.0",
-    "@angular-eslint/schematics": "~21.1.0",
-    "@angular-eslint/template-parser": "~21.1.0",
+    "@angular-eslint/builder": "~21.4.0",
+    "@angular-eslint/schematics": "~21.4.0",
     "@angular/build": "^21.2.19",
     "@angular/cli": "^21.2.19",
     "@angular/common": "^21.2.19",
