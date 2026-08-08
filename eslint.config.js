@@ -2,9 +2,8 @@ import path from 'node:path';
 import js from '@eslint/js';
 import { includeIgnoreFile } from '@eslint/compat';
 import { defineConfig } from 'eslint/config';
-import airbnbBase from 'eslint-config-airbnb-base';
 import prettier from 'eslint-config-prettier';
-import importPlugin from 'eslint-plugin-import';
+import importX, { createNodeResolver } from 'eslint-plugin-import-x';
 import htmlEslint from '@html-eslint/eslint-plugin';
 import htmlParser from '@html-eslint/parser';
 import defaultAttrs from './tools/build-icons/render/default-attrs.json' with { type: 'json' };
@@ -14,6 +13,15 @@ const gitignorePath = path.join(import.meta.dirname, '.gitignore');
 
 export default defineConfig([
   tseslint.configs.recommended,
+  {
+    // `packages/angular` has its own config with its own tsconfig, so a single `eslint .` run sees
+    // two candidate roots and typescript-eslint refuses to guess between them.
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   // Everything git ignores (generated icon sources, build output, caches) is ignored here too.
   includeIgnoreFile(gitignorePath),
   {
@@ -25,8 +33,6 @@ export default defineConfig([
       'docs/images',
       'docs/**/examples/',
       'docs/.vitepress/theme/components/editors/preact/index.js',
-      'packages/angular/.angular',
-      'packages/angular/src', // Has custom linting in `packages/angular/eslint.config.js`.
       'packages/svelte/.svelte-kit',
       // Tracked in git despite matching a .gitignore pattern, so lint it.
       '!packages/lucide-react/dynamicIconImports.mjs',
@@ -45,17 +51,19 @@ export default defineConfig([
       },
     },
     plugins: {
-      import: importPlugin,
+      'import-x': importX,
+    },
+    settings: {
+      'import-x/resolver-next': [createNodeResolver()],
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...airbnbBase.rules,
       ...prettier.rules,
       'no-console': 'off',
       'no-param-reassign': 'off',
       'no-shadow': 'off',
       'no-use-before-define': 'off',
-      'import/no-extraneous-dependencies': [
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: [
@@ -64,34 +72,16 @@ export default defineConfig([
             '**/scripts/**',
             'eslint.config.js',
             'packages/**/tests/**',
-            'packages/angular/eslint.config.js',
           ],
         },
       ],
-      'import/extensions': [
+      'import-x/extensions': [
         'error',
         {
           pattern: {
             mjs: 'always',
             json: 'always',
           },
-        },
-      ],
-    },
-  },
-  {
-    // The Angular package's own ESLint config takes the Angular plugins from that package and the
-    // shared lint tooling from the workspace root, so both package.json files are valid sources.
-    files: ['packages/angular/eslint.config.js'],
-    plugins: {
-      import: importPlugin,
-    },
-    rules: {
-      'import/no-extraneous-dependencies': [
-        'error',
-        {
-          devDependencies: true,
-          packageDir: [import.meta.dirname, path.join(import.meta.dirname, 'packages/angular')],
         },
       ],
     },
