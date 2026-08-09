@@ -7,7 +7,11 @@
   "use-cases": [
     "representing breakfast items, bacon rashers, or pork products",
     "indicating diner, brunch, or fast food menu items",
-    "showing savory cooked meats or barbecue items"
+    "showing savory cooked meats or barbecue items",
+    "labeling grocery or deli items in food apps",
+    "marking breakfast sandwich or brunch special add-ons",
+    "tagging cured or smoked meat ingredients in recipes",
+    "denoting pork-containing menu items"
   ],
   "tags": [
     "rashers",
@@ -32,9 +36,19 @@
     "barbeque",
     "bbq",
     "pig",
-    "bacon"
+    "bacon",
+    "pork",
+    "breakfast",
+    "cured",
+    "butcher",
+    "sandwich",
+    "protein",
+    "grocery",
+    "kitchen"
   ],
   "categories": [
-    "food-beverage"
+    "food-beverage",
+    "shopping",
+    "home"
   ]
 }
