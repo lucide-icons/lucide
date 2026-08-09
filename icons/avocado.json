@@ -7,7 +7,11 @@
   "use-cases": [
     "representing avocado fruit, guacamole, or healthy food in nutrition apps",
     "indicating salad, breakfast, or brunch ingredients",
-    "showing vegetarian or vegan food options"
+    "showing vegetarian or vegan food options",
+    "marking avocado toast as a menu item in restaurant or delivery apps",
+    "denoting fresh produce or fruit section in grocery and supermarket apps",
+    "signifying healthy fats or superfood in nutrition and wellness trackers",
+    "labeling plant-based or vegetarian recipes in cooking websites and apps"
   ],
   "tags": [
     "fruit",
@@ -25,9 +29,25 @@
     "diet",
     "guacamole",
     "mexican",
-    "avocado"
+    "avocado",
+    "green",
+    "pit",
+    "seed",
+    "half",
+    "produce",
+    "vegetarian",
+    "vegan",
+    "grocery",
+    "supermarket",
+    "toast",
+    "superfood",
+    "plantbased",
+    "ripe"
   ],
   "categories": [
-    "food-beverage"
+    "food-beverage",
+    "nature",
+    "shopping",
+    "sustainability"
   ]
 }
