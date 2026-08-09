@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "devkamani9313"
+  ],
+  "use-cases": [
+    "representing avocado fruit, guacamole, or healthy food in nutrition apps",
+    "indicating salad, breakfast, or brunch ingredients",
+    "showing vegetarian or vegan food options"
+  ],
+  "tags": [
+    "fruit",
+    "snack",
+    "meal",
+    "lunch",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet",
+    "guacamole",
+    "mexican",
+    "avocado"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
