@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "devkamani9313"
+  ],
+  "use-cases": [
+    "representing breakfast items, bacon rashers, or pork products",
+    "indicating diner, brunch, or fast food menu items",
+    "showing savory cooked meats or barbecue items"
+  ],
+  "tags": [
+    "rashers",
+    "smoked",
+    "streaky",
+    "crispy",
+    "meat",
+    "fast food",
+    "junk food",
+    "snack",
+    "dish",
+    "restaurant",
+    "brunch",
+    "lunch",
+    "meal",
+    "savory",
+    "savoury",
+    "cookery",
+    "cooking",
+    "grilled",
+    "barbecue",
+    "barbeque",
+    "bbq",
+    "pig",
+    "bacon"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}
