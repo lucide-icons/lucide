@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "soft"
+  ],
+  "use-cases": [],
+  "tags": [
+    "circuit",
+    "component"
+  ],
+  "categories": [
+    "devices"
+  ]
+}
