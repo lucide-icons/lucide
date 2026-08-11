@@ -64,4 +64,3 @@ docs/.vercel
 docs/.nitro
 docs/public/og/**
 !docs/public/og/general.png
-.gitignore
