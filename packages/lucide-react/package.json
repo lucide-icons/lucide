@@ -55,6 +55,7 @@
     "@lucide/shared": "workspace:*",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^14.3.1",
+    "@types/node": "^25.9.1",
     "@types/react": "^18.3.31",
     "@vitejs/plugin-react": "^4.7.0",
     "jest-serializer-html": "^7.1.0",
