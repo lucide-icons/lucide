@@ -15,7 +15,17 @@
     "tanker",
     "vessel",
     "navy",
-    "cargo"
+    "cargo",
+    "container",
+    "freighter",
+    "freight",
+    "shipping",
+    "port",
+    "harbor",
+    "dock",
+    "logistics",
+    "import",
+    "export"
   ],
   "categories": [
     "transportation",
