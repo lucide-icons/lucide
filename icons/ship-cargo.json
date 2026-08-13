@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "l0uisgrange"
+  ],
+  "use-cases": [],
+  "tags": [
+    "boat",
+    "knots",
+    "nautical mile",
+    "maritime",
+    "sailing",
+    "cruise",
+    "ocean liner",
+    "tanker",
+    "vessel",
+    "navy",
+    "cargo"
+  ],
+  "categories": [
+    "transportation",
+    "navigation",
+    "travel"
+  ]
+}
