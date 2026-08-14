@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kamilasw"
+  ],
+  "use-cases": [
+    "Hiking routes",
+    "Hiking activities"
+  ],
+  "tags": [
+    "hiking",
+    "walking",
+    "stick"
+  ],
+  "categories": [
+    "sports",
+    "travel"
+  ]
+}
