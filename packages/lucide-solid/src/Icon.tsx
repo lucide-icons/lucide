@@ -1,5 +1,5 @@
-import { For, splitProps, useContext } from 'solid-js';
-import { Dynamic } from 'solid-js/web';
+import { For, omit, useContext } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { LucideContext } from './context';
@@ -11,7 +11,9 @@ interface IconProps {
 }
 
 const Icon = (props: LucideProps & IconProps) => {
-  const [localProps, rest] = splitProps(props, [
+  const localProps = props;
+  const rest = omit(
+    props,
     'color',
     'size',
     'strokeWidth',
@@ -20,7 +22,7 @@ const Icon = (props: LucideProps & IconProps) => {
     'name',
     'iconNode',
     'absoluteStrokeWidth',
-  ]);
+  );
 
   const globalProps = useContext(LucideContext);
 

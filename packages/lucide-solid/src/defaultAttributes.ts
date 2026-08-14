@@ -1,4 +1,4 @@
-import { JSX } from 'solid-js/jsx-runtime';
+import type { JSX } from '@solidjs/web';
 import { SVGAttributes } from './types';
 
 const defaultAttributes: SVGAttributes = {
