@@ -5,7 +5,11 @@
   ],
   "use-cases": [
     "Hiking routes",
-    "Hiking activities"
+    "Hiking activities",
+    "marking trailheads on maps",
+    "denoting hiking gear in packing lists",
+    "labeling guided walking or trekking tours",
+    "indicating recommended equipment for a route"
   ],
   "tags": [
     "hiking",
