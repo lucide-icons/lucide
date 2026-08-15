@@ -32,6 +32,9 @@ jobs:
       - name: Build
         run: pnpm --filter lucide-solid build
 
+      - name: Typecheck
+        run: pnpm --filter lucide-solid typecheck
+
   test:
     runs-on: ubuntu-latest
     steps:

@@ -76,6 +76,7 @@
     "@lucide/shared": "workspace:*",
     "@rollup/plugin-babel": "^6.1.0",
     "@solidjs/testing-library": "1.0.0-beta.2",
+    "@solidjs/vite-plugin": "3.0.0-next.28",
     "@solidjs/web": "2.0.0-rc.0",
     "@testing-library/jest-dom": "^6.9.1",
     "babel-preset-solid": "2.0.0-rc.0",
@@ -84,8 +85,7 @@
     "rollup": "^4.62.2",
     "solid-js": "2.0.0-rc.0",
     "typescript": "^5.9.3",
-    "vite": "^7.3.6",
-    "vite-plugin-solid": "3.0.0-next.27"
+    "vite": "^7.3.6"
   },
   "peerDependencies": {
     "@solidjs/web": "^2.0.0-rc.0",

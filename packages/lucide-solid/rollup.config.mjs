@@ -111,7 +111,7 @@ const configs = bundles
             }
           : null,
       ],
-      external: ['solid-js', '@solidjs/web', 'solid-js/web', 'solid-js/store'],
+      external: ['solid-js', '@solidjs/web'],
       output: {
         name: packageName,
         ...(preserveModules

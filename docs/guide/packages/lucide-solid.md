@@ -117,17 +117,17 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ```tsx
 import { icons, type LucideProps } from 'lucide-solid';
-import { splitProps } from 'solid-js';
-import { Dynamic } from 'solid-js/web';
+import { omit } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
 
 interface IconProps extends LucideProps {
   name: keyof typeof icons;
 }
 
 const Icon = (props: IconProps) => {
-  const [local, others] = splitProps(props, ["name"]);
+  const others = omit(props, "name");
 
-  return <Dynamic component={icons[local.name]} {...others} />
+  return <Dynamic component={icons[props.name]} {...others} />
 };
 
 export default Icon;
@@ -139,7 +139,7 @@ export default Icon;
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="House" />;
 };
 
 export default App;
