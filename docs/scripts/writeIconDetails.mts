@@ -23,12 +23,12 @@ const writeIconFiles = icons.map(async (iconFileName) => {
   const location = path.resolve(iconDetailsDirectory, `${iconName}.ts`);
 
   const contents = `\
-import iconNode from '../iconNodes/${iconName}.node.json'
-import metaData from '../../../../icons/${iconName}.json'
-import releaseData from '../releaseMetadata/${iconName}.json'
-import popularity from '../iconPopularity/${iconName}.json'
+import iconNode from '../iconNodes/${iconName}.node.json' with { type: 'json' };
+import metaData from '../../../../icons/${iconName}.json' with { type: 'json' };
+import releaseData from '../releaseMetadata/${iconName}.json' with { type: 'json' };
+import popularity from '../iconPopularity/${iconName}.json' with { type: 'json' };
 
-const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData
+const { tags, categories, contributors, aliases, deprecated, deprecationReason, toBeRemovedInVersion } = metaData;
 
 const iconDetails = {
   name: '${iconName}',
@@ -42,9 +42,9 @@ const iconDetails = {
   deprecationReason,
   toBeRemovedInVersion,
   ...releaseData,
-}
+};
 
-export default iconDetails
+export default iconDetails;
   `;
 
   await fs.promises.writeFile(location, contents, 'utf-8');
