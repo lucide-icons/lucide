@@ -4,25 +4,23 @@
     "samuelalake"
   ],
   "use-cases": [
-    "marking a node or point of interest in a diagram",
-    "indicating a selected or active diamond node",
+    "an auto-keyframe or active-keyframe indicator in a motion or animation editor",
     "a shape-library or shape-picker entry"
   ],
   "tags": [
     "diamond",
     "circle",
-    "gem",
-    "rhombus",
+    "keyframe",
+    "auto keyframe",
+    "motion",
+    "animation",
     "shape",
     "node",
     "point",
     "marker",
-    "status",
-    "decoration",
     "geometric",
-    "target",
-    "focus",
-    "badge"
+    "gem",
+    "rhombus"
   ],
   "categories": [
     "shapes",
