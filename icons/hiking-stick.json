@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "kamilasw"
+    "kamilasw",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Hiking routes",
