@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "MadsMadsDk"
+    "MadsMadsDk",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "Ecommerce (self pick-up options for large items)",
