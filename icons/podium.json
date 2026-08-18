@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas"
+  ],
+  "use-cases": [
+    "show rankings or leaderboards",
+    "display top winners after a game or competition"
+  ],
+  "tags": [
+    "award",
+    "stage",
+    "winner",
+    "celebration",
+    "performance",
+    "medal",
+    "success",
+    "achievement",
+    "highlight",
+    "ranking",
+    "winning",
+    "place",
+    "placing",
+    "leaderboard",
+    "first",
+    "second",
+    "third",
+    "gold",
+    "silver",
+    "bronze"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

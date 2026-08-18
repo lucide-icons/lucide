@@ -4,6 +4,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "behind",
     "direction",
@@ -19,7 +20,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "files",
     "development"
   ]

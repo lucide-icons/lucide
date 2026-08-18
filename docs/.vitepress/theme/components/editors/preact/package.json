@@ -1,0 +1,17 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch"
+  },
+  "devDependencies": {
+    "preact-cli": "^1.4.1"
+  },
+  "dependencies": {
+    "preact": "10.11.3",
+    "preact-compat": "3.19.0",
+    "lucide-preact": "latest"
+  }
+}
