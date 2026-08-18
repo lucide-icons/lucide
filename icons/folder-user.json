@@ -17,7 +17,11 @@
     "contact",
     "document",
     "account",
-    "individual"
+    "individual",
+    "homefolder",
+    "shared",
+    "access",
+    "owner"
   ],
   "categories": [
     "files",
