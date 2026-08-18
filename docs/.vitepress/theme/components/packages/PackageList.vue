@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import {data} from './PackageList.data'
+import { data } from './PackageList.data'
 import GridSection from '../base/GridSection.vue'
-import PackageListItem from "./PackageListItem.vue";</script>
+import PackageListItem from "./PackageListItem.vue";
+</script>
 
 <template>
   <GridSection
@@ -38,33 +39,4 @@ import PackageListItem from "./PackageListItem.vue";</script>
 .package-group {
   margin-bottom: 96px;
 }
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  align-content: space-evenly;
-  box-sizing: border-box;
-  margin: -8px;
-}
-
-.grid > * {
-  flex-basis: 100%;
-  box-sizing: border-box;
-  padding: 8px;
-}
-
-@media (min-width: 960px) {
-  .grid > * {
-    flex-basis: 50%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .grid > * {
-    flex-basis: 33.33%;
-  }
-}
-
 </style>

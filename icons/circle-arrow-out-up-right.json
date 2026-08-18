@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "outwards",
+    "direction",
+    "north-east",
+    "diagonal"
+  ],
+  "categories": [
+    "arrows"
+  ],
+  "aliases": [
+    {
+      "name": "arrow-up-right-from-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

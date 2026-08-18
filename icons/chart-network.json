@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph",
+    "topology",
+    "cluster",
+    "web",
+    "nodes",
+    "connections",
+    "edges"
+  ],
+  "categories": [
+    "charts"
+  ]
+}

@@ -2,13 +2,17 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "lost",
     "document",
     "find",
-    "browser"
+    "browser",
+    "lens"
   ],
   "categories": [
     "files"

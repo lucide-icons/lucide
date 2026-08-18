@@ -3,13 +3,22 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis",
-    "karsa-mistmere"
+    "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "chromecast",
-    "airplay",
-    "screen"
+    "stream",
+    "streaming",
+    "screen",
+    "display",
+    "wireless",
+    "broadcast",
+    "transmit",
+    "media",
+    "receiver",
+    "remote display",
+    "screen sharing",
+    "media streaming"
   ],
   "categories": [
     "devices",

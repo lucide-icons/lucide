@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "shape",
+    "bullet",
+    "gender",
+    "genderless"
+  ],
+  "categories": [
+    "shapes",
+    "medical"
+  ]
+}

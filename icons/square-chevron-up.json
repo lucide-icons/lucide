@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "caret",
+    "keyboard",
+    "button",
+    "mac",
+    "control",
+    "ctrl",
+    "superscript",
+    "exponential",
+    "power",
+    "ahead",
+    "menu",
+    "panel",
+    "^"
+  ],
+  "categories": [
+    "arrows",
+    "navigation",
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "chevron-up-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

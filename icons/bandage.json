@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "plaster",
+    "band-aid",
+    "first aid",
+    "medical",
+    "health",
+    "wound",
+    "injury",
+    "care",
+    "treatment",
+    "healing",
+    "protection",
+    "emergency",
+    "aid",
+    "safety",
+    "patch"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

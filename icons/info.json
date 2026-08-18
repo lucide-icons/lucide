@@ -3,11 +3,23 @@
   "contributors": [
     "colebemis",
     "ericfennis",
-    "danielbayley",
-    "karsa-mistmere"
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "help"
+    "about",
+    "advice",
+    "clue",
+    "details",
+    "help",
+    "hint",
+    "indicator",
+    "information",
+    "knowledge",
+    "notice",
+    "status",
+    "support",
+    "tooltip"
   ],
   "categories": [
     "accessibility",

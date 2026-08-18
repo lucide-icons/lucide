@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "home",
+    "living",
+    "building",
+    "residence",
+    "architecture",
+    "autarky",
+    "energy"
+  ],
+  "categories": [
+    "buildings",
+    "home",
+    "sustainability"
+  ]
+}

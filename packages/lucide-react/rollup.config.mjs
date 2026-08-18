@@ -1,117 +1,168 @@
-import plugins, { replace } from '@lucide/rollup-plugins';
-import pkg from './package.json' assert { type: 'json' };
-import dts from "rollup-plugin-dts";
-import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
+import plugins from '@lucide/rollup-plugins';
+import preserveDirectives from 'rollup-plugin-preserve-directives';
+import pkg from './package.json' with { type: 'json' };
+import dts from 'rollup-plugin-dts';
+import getAliasesEntryNames from './scripts/getAliasesEntryNames.mts';
 
-const aliasesEntries = await getAliasesEntryNames()
+const aliasesEntries = await getAliasesEntryNames();
 
 const packageName = 'LucideReact';
 const outputFileName = 'lucide-react';
-const outputDir = `dist`;
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir,
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir,
-  },
-  {
     format: 'cjs',
     inputs,
-    outputDir,
-    aliasesSupport: true,
+    outputDir: 'dist/cjs',
+    extension: 'js',
   },
   {
     format: 'esm',
-    inputs: [
-      ...inputs,
-      ...aliasesEntries
-    ],
-    outputDir,
+    inputs,
+    outputDir: 'dist/esm',
     preserveModules: true,
-    aliasesSupport: true,
+    extension: 'mjs',
   },
   {
     format: 'esm',
-    inputs: ['src/dynamicIconImports.ts'],
-    outputFile: 'dynamicIconImports.js',
-    aliasesSupport: true,
+    inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    outputDir: 'dist/esm',
     external: [/src/],
+    preserveModules: true,
+    extension: 'mjs',
     paths: (id) => {
       if (id.match(/src/)) {
-        const [, modulePath] = id.match(/src\/(.*)\.ts/)
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `dist/esm/${modulePath}.js`
+        return `./${modulePath}.mjs`;
       }
-    }
+    },
+  },
+  {
+    format: 'esm',
+    inputs: ['src/dynamic.ts'],
+    outputFile: 'dynamic.mjs',
+    external: [/src/],
+    extension: 'mjs',
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `dist/esm/${modulePath}.mjs`;
+      }
+    },
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, outputFile, format, minify, preserveModules, aliasesSupport, entryFileNames, external = [], paths }) =>
-    inputs.map(input => ({
-      input,
-      plugins: [
-        ...(
-          !aliasesSupport ? [
-            replace({
-              "export * from './aliases';": '',
-              "export * as icons from './icons';": '',
-              delimiters: ['', ''],
-              preventAssignment: false,
-            }),
-          ] : []
-        ),
-        ...plugins(pkg, minify)
-      ],
-      external: [
-        'react',
-        'prop-types',
-        ...external
-      ],
-      output: {
-        name: packageName,
-        ...(preserveModules
-          ? {
-              dir:`${outputDir}/${format}`,
-            }
-          : {
-              file: outputFile ?? `${outputDir}/${format}/${outputFileName}${minify ? '.min' : ''}.js`,
-            }),
-        paths,
-        entryFileNames,
-        format,
-        sourcemap: true,
-        preserveModules,
-        globals: {
-          react: 'react',
-          'prop-types': 'PropTypes'
+  .map(
+    ({
+      inputs,
+      outputDir,
+      outputFile,
+      format,
+      minify,
+      preserveModules,
+      entryFileNames,
+      extension = 'js',
+      external = [],
+      paths,
+    }) =>
+      inputs.map((input) => ({
+        input,
+        plugins: [
+          ...plugins({ pkg, minify }),
+          // Make sure we emit "use client" directive to make it compatible with Next.js
+          preserveDirectives({
+            include: ['src/lucide-react.ts', 'src/DynamicIcon.ts', 'src/context.ts', 'src/Icon.ts'],
+            suppressPreserveModulesWarning: true,
+          }),
+        ],
+        external: ['react', 'prop-types', ...external],
+        output: {
+          name: packageName,
+          ...(preserveModules
+            ? {
+                dir: outputDir,
+                entryFileNames: entryFileNames ?? `[name].${extension}`,
+              }
+            : {
+                file: outputFile ?? `${outputDir}/${outputFileName}.${extension}`,
+              }),
+          paths,
+          format,
+          sourcemap: true,
+          preserveModules,
+          preserveModulesRoot: 'src',
+          globals: {
+            react: 'react',
+            'prop-types': 'PropTypes',
+          },
         },
-      },
-    })),
+      })),
   )
   .flat();
 
 export default [
   {
     input: 'src/dynamicIconImports.ts',
-    output: [{
-      file: `dynamicIconImports.d.ts`, format: "es"
-    }],
+    output: [
+      {
+        file: `dynamicIconImports.d.ts`,
+        format: 'es',
+      },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamicIconImports.d.mts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: 'src/dynamic.ts',
+    output: [
+      {
+        file: `dynamic.d.ts`,
+        format: 'es',
+      },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamic.d.mts`,
+        format: 'es',
+      },
+    ],
     plugins: [dts()],
   },
   {
     input: inputs[0],
-    output: [{
-      file: `dist/${outputFileName}.d.ts`, format: "es"
-    }],
+    output: [
+      {
+        file: `dist/${outputFileName}.d.ts`,
+        format: 'es',
+      },
+    ],
     plugins: [dts()],
   },
-  ...configs
+  {
+    input: `src/${outputFileName}.suffixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.suffixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  {
+    input: `src/${outputFileName}.prefixed.ts`,
+    output: [
+      {
+        file: `dist/${outputFileName}.prefixed.d.ts`,
+        format: 'es',
+      },
+    ],
+    plugins: [dts()],
+  },
+  ...configs,
 ];

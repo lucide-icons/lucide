@@ -4,10 +4,17 @@
     "Andreto",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "water",
-    "humidity",
-    "weather"
+    "weather",
+    "liquid",
+    "fluid",
+    "wet",
+    "moisture",
+    "damp",
+    "bead",
+    "globule"
   ],
   "categories": [
     "weather"

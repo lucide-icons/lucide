@@ -14,11 +14,13 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "downlevelIteration": true,
     "sourceMap": true,
     "outDir": "./dist",
     "jsx": "react-jsx",
     "types": ["@testing-library/jest-dom"],
   },
-  "exclude": ["**/node_modules"]
+  "exclude": ["**/node_modules"],
+  "include": ["src", "tests"],
 }

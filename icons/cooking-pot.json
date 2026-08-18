@@ -1,5 +1,10 @@
 {
   "$schema": "../icon.schema.json",
+  "contributors": [
+    "guillermo-angeles",
+    "ericfennis"
+  ],
+  "use-cases": [],
   "tags": [
     "pod",
     "cooking",

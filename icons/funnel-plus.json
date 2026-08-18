@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gubser",
+    "ericfennis",
+    "lukedukeus",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "filter",
+    "hopper",
+    "add",
+    "create",
+    "new"
+  ],
+  "categories": [
+    "layout"
+  ]
+}

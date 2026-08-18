@@ -4,6 +4,7 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "reference",
     "times",
@@ -17,7 +18,7 @@
   ],
   "categories": [
     "text",
-    "maths",
+    "math",
     "development"
   ]
 }

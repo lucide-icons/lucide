@@ -4,13 +4,20 @@
     "colebemis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "computing",
     "settings",
     "cog",
     "edit",
     "gear",
-    "preferences"
+    "preferences",
+    "controls",
+    "configuration",
+    "fixed",
+    "build",
+    "construction",
+    "parts"
   ],
   "categories": [
     "account"

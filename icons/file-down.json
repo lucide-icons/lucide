@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "download",
     "import",

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "dictionary",
     "define",
@@ -45,7 +46,6 @@
   ],
   "categories": [
     "text",
-    "maps",
     "gaming"
   ]
 }

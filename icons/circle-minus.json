@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "subtract",
+    "remove",
+    "decrease",
+    "reduce",
+    "calculate",
+    "line",
+    "operator",
+    "code",
+    "coding",
+    "minimum",
+    "downgrade",
+    "-"
+  ],
+  "categories": [
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "minus-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "building",
     "hostel",
@@ -11,7 +13,7 @@
   ],
   "categories": [
     "buildings",
-    "maps",
+    "navigation",
     "travel"
   ]
 }

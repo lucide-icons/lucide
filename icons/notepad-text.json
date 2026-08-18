@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "notebook",
+    "notes",
+    "pages",
+    "paper",
+    "stationery",
+    "sketchbook",
+    "organizer",
+    "organiser",
+    "planner",
+    "diary",
+    "journal",
+    "writing",
+    "write",
+    "written",
+    "reading",
+    "high school",
+    "university",
+    "college",
+    "academy",
+    "student",
+    "study",
+    "homework",
+    "research",
+    "lines",
+    "opened"
+  ],
+  "categories": [
+    "text",
+    "social"
+  ]
+}

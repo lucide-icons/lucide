@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "metro",
+    "subway",
+    "underground",
+    "track",
+    "line"
+  ],
+  "categories": [
+    "transportation",
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "m-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

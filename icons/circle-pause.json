@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "music",
+    "audio",
+    "stop"
+  ],
+  "categories": [
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "pause-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

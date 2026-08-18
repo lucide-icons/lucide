@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "Spleefies"
+  ],
+  "use-cases": [],
+  "tags": [
+    "paste",
+    "signature"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "clipboard-edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

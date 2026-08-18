@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "big wheel",
     "daisy wheel",
@@ -14,6 +15,6 @@
     "funfair"
   ],
   "categories": [
-    "maps"
+    "navigation"
   ]
 }

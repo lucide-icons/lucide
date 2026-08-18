@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Patchethium",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "split",
+    "divide"
+  ],
+  "categories": [
+    "layout"
+  ],
+  "aliases": [
+    {
+      "name": "split-square-vertical",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

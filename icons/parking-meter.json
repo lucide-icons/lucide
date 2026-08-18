@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "driving",
     "car park",
@@ -12,6 +14,6 @@
   ],
   "categories": [
     "transportation",
-    "maps"
+    "navigation"
   ]
 }

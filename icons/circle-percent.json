@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "verified",
+    "unverified",
+    "sale",
+    "discount",
+    "offer",
+    "marketing",
+    "sticker",
+    "price tag"
+  ],
+  "categories": [
+    "social",
+    "finance",
+    "shopping",
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "percent-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "shape",
     "elliptical",
@@ -15,6 +16,6 @@
   "categories": [
     "shapes",
     "design",
-    "maths"
+    "math"
   ]
 }

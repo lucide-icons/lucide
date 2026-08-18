@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph",
+    "curve",
+    "continuous",
+    "smooth",
+    "polynomial",
+    "quadratic",
+    "function",
+    "interpolation"
+  ],
+  "categories": [
+    "charts"
+  ]
+}

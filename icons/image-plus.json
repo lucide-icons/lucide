@@ -3,11 +3,14 @@
   "contributors": [
     "mittalyashu",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "add",
-    "create"
+    "create",
+    "picture"
   ],
   "categories": [
     "photography",

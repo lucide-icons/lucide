@@ -1,18 +1,19 @@
 {
-    "$schema": "../icon.schema.json",
-    "contributors": [
-        "danielbayley"
-    ],
-    "tags": [
-        "theater",
-        "theatre",
-        "entertainment",
-        "podium",
-        "stage",
-        "musical"
-    ],
-    "categories": [
-        "buildings",
-        "social"
-    ]
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "theater",
+    "theatre",
+    "entertainment",
+    "podium",
+    "stage",
+    "musical"
+  ],
+  "categories": [
+    "buildings",
+    "social"
+  ]
 }

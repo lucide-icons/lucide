@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
+    "lscheibel",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "weather",
+    "danger",
+    "warning",
+    "alert",
+    "error",
+    "sync",
+    "network",
+    "exclamation"
+  ],
+  "categories": [
+    "development"
+  ]
+}

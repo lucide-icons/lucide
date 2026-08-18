@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "projects",
+    "manage",
+    "overview",
+    "board",
+    "tickets",
+    "issues",
+    "roadmap",
+    "plan",
+    "intentions",
+    "productivity",
+    "work",
+    "agile",
+    "draft",
+    "template",
+    "boilerplate",
+    "code",
+    "coding"
+  ],
+  "categories": [
+    "charts",
+    "development",
+    "design"
+  ],
+  "aliases": [
+    {
+      "name": "kanban-square-dashed",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

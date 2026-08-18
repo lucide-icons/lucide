@@ -4,12 +4,13 @@
     "ericfennis",
     "csandman"
   ],
+  "use-cases": [],
   "tags": [
     "count",
     "calculating machine"
   ],
   "categories": [
-    "maths",
+    "math",
     "devices"
   ]
 }

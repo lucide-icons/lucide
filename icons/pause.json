@@ -2,8 +2,11 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "stop"

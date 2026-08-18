@@ -5,15 +5,20 @@
     "it-is-not",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",
     "slip",
     "check",
-    "counterfoil"
+    "counterfoil",
+    "currency",
+    "dollar",
+    "usd",
+    "$"
   ],
   "categories": [
-    "money",
+    "finance",
     "travel"
   ]
 }

@@ -1,0 +1,48 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "login",
+    "password",
+    "authenticate",
+    "2fa",
+    "field",
+    "fill",
+    "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
+    "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "spread",
+    "rest",
+    "more",
+    "further",
+    "extra",
+    "overflow",
+    "dots",
+    "…",
+    "..."
+  ],
+  "categories": [
+    "text",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "form-input",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

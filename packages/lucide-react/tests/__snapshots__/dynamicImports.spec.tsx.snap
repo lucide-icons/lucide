@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Using dynamicImports > should render icons dynamically by using the dynamicIconImports module 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="48"
+     height="48"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="red"
+     stroke-width="1"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     class="lucide lucide-face-slightly-smiling"
+     aria-label="smile"
+>
+  <path d="M15 10V9">
+  </path>
+  <path d="M16.472 15a6 6 0 01-8.943 0">
+  </path>
+  <path d="M9 10V9">
+  </path>
+  <circle cx="12"
+          cy="12"
+          r="10"
+  >
+  </circle>
+</svg>
+`;

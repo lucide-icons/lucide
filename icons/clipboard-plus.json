@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "copy",
+    "paste",
+    "add",
+    "create",
+    "new",
+    "document",
+    "medical",
+    "report",
+    "doctor"
+  ],
+  "categories": [
+    "text",
+    "medical"
+  ]
+}

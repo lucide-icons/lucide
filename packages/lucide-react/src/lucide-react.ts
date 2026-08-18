@@ -1,9 +1,8 @@
 export * from './icons';
 export * as icons from './icons';
 export * from './aliases';
-export {
-  default as createLucideIcon,
-  type IconNode,
-  type LucideProps,
-  type LucideIcon,
-} from './createLucideIcon';
+export * from './types';
+export * from './context';
+
+export { default as createLucideIcon } from './createLucideIcon';
+export { default as Icon } from './Icon';

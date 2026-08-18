@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "picture",
+    "photo",
+    "upload",
+    "import"
+  ],
+  "categories": [
+    "photography",
+    "text",
+    "multimedia",
+    "files"
+  ]
+}

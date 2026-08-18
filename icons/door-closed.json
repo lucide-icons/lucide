@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "entrance",
     "entry",
@@ -16,7 +17,6 @@
   "categories": [
     "home",
     "travel",
-    "furniture",
     "security"
   ]
 }

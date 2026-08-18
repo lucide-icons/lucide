@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "vacation",
+    "leisure",
+    "island"
+  ],
+  "categories": [
+    "nature",
+    "sustainability"
+  ],
+  "aliases": [
+    {
+      "name": "palmtree",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

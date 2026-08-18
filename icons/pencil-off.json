@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "wojtekmaj",
+    "mittalyashu",
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "disabled",
+    "inactive",
+    "non-editable",
+    "locked",
+    "read-only",
+    "unmodifiable",
+    "frozen",
+    "restricted",
+    "rubber",
+    "edit",
+    "create",
+    "draw",
+    "sketch",
+    "draft",
+    "writer",
+    "writing",
+    "stationery",
+    "artist"
+  ],
+  "categories": [
+    "design",
+    "cursors",
+    "tools",
+    "text"
+  ]
+}

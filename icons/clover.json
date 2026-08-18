@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "ericfennis",
-    "csandman"
+    "csandman",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "leaf",
     "luck",

@@ -3,16 +3,15 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis",
-    "karsa-mistmere"
+    "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "currency",
     "money",
     "payment"
   ],
   "categories": [
-    "currency",
-    "money"
+    "finance"
   ]
 }

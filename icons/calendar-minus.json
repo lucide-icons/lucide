@@ -2,11 +2,15 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "date",
-    "time",
+    "day",
+    "month",
+    "year",
     "event",
     "delete",
     "remove"

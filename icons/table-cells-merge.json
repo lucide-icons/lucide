@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme"
+  ],
+  "use-cases": [],
+  "tags": [
+    "spreadsheet",
+    "grid",
+    "row"
+  ],
+  "categories": [
+    "text",
+    "files"
+  ]
+}

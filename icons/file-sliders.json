@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "cogged",
+    "gear",
+    "mechanical",
+    "machinery",
+    "configuration",
+    "controls",
+    "preferences",
+    "settings",
+    "system",
+    "admin",
+    "edit",
+    "executable"
+  ],
+  "categories": [
+    "files",
+    "development"
+  ]
+}

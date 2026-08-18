@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "bill",
+    "voucher",
+    "slip",
+    "check",
+    "counterfoil",
+    "details",
+    "small print",
+    "terms",
+    "conditions",
+    "contract"
+  ],
+  "categories": [
+    "finance",
+    "travel"
+  ]
+}

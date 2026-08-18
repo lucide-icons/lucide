@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "options",
+    "list",
+    "menu",
+    "order",
+    "queue",
+    "tasks",
+    "logs"
+  ],
+  "categories": [
+    "text"
+  ]
+}

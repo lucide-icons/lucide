@@ -4,14 +4,32 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
-    "pending",
     "ellipsis",
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
     "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "spread",
+    "rest",
+    "more",
+    "further",
+    "extra",
+    "overflow",
+    "dots",
     "…",
     "..."
   ],
   "categories": [
-    "shapes"
+    "layout",
+    "development"
   ]
 }

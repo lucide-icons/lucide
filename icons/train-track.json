@@ -3,12 +3,13 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "railway",
     "line"
   ],
   "categories": [
     "transportation",
-    "maps"
+    "navigation"
   ]
 }

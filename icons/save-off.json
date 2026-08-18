@@ -1,0 +1,15 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev"
+  ],
+  "use-cases": [],
+  "tags": [
+    "floppy disk",
+    "unsalvageable"
+  ],
+  "categories": [
+    "text",
+    "files"
+  ]
+}

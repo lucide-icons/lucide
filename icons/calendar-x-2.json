@@ -4,9 +4,12 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "date",
-    "time",
+    "day",
+    "month",
+    "year",
     "event",
     "remove"
   ],

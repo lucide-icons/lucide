@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "mittalyashu",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "programming",
+    "code",
+    "automation",
+    "math"
+  ],
+  "categories": [
+    "development",
+    "math"
+  ],
+  "aliases": [
+    {
+      "name": "function-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

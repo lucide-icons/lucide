@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "parking lot",
+    "car park"
+  ],
+  "categories": [
+    "transportation",
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "parking-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

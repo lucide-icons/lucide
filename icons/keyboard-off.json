@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Diottodev",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "unkeys",
+    "layout",
+    "spell",
+    "settings",
+    "mouse"
+  ],
+  "categories": [
+    "devices",
+    "text",
+    "development"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "DefaultLP"
+  ],
+  "use-cases": [],
+  "tags": [
+    "closed captions",
+    "subtitles",
+    "subhead",
+    "transcription",
+    "transcribe",
+    "dialogue",
+    "accessibility"
+  ],
+  "categories": [
+    "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "subtitles",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

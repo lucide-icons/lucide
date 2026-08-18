@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "card",
+    "badge",
+    "identity",
+    "authentication",
+    "secure"
+  ],
+  "categories": [
+    "security",
+    "account"
+  ]
+}

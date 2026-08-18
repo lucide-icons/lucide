@@ -14,7 +14,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "downlevelIteration": true,
     "sourceMap": true,
-  }
+  },
 }

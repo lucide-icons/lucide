@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "null78",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "currency",
+    "money",
+    "payment"
+  ],
+  "categories": [
+    "finance"
+  ]
+}

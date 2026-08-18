@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "divide",
     "division",
@@ -11,6 +12,6 @@
   ],
   "categories": [
     "development",
-    "maths"
+    "math"
   ]
 }

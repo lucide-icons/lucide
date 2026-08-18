@@ -1,9 +1,22 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "navigation",
+    "direction",
+    "arrow",
+    "wayfinding",
+    "guide",
+    "location",
+    "pointer",
+    "route",
+    "indicator",
+    "marker",
     "bidirectional",
     "left",
     "right",

@@ -1,0 +1,46 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "subtract",
+    "remove",
+    "decrease",
+    "reduce",
+    "calculator",
+    "button",
+    "keyboard",
+    "line",
+    "divider",
+    "separator",
+    "horizontal rule",
+    "hr",
+    "html",
+    "markup",
+    "markdown",
+    "---",
+    "toolbar",
+    "operator",
+    "code",
+    "coding",
+    "minimum",
+    "downgrade"
+  ],
+  "categories": [
+    "math",
+    "development",
+    "text",
+    "tools",
+    "devices"
+  ],
+  "aliases": [
+    {
+      "name": "minus-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

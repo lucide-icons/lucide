@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "security"
+  ],
+  "categories": [
+    "security"
+  ],
+  "aliases": [
+    {
+      "name": "unlock",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

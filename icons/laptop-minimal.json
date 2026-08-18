@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "computer",
+    "screen",
+    "remote"
+  ],
+  "categories": [
+    "devices"
+  ],
+  "aliases": [
+    {
+      "name": "laptop-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

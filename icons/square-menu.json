@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "bars",
+    "navigation",
+    "hamburger",
+    "options",
+    "menu bar",
+    "panel"
+  ],
+  "categories": [
+    "layout"
+  ],
+  "aliases": [
+    {
+      "name": "menu-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

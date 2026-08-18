@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "monetization",
     "marketing",
@@ -12,8 +13,6 @@
     "payment"
   ],
   "categories": [
-    "shapes",
-    "money",
-    "currency"
+    "finance"
   ]
 }

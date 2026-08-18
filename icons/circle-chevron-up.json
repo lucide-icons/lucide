@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "caret",
+    "ahead",
+    "menu",
+    "^"
+  ],
+  "categories": [
+    "arrows"
+  ],
+  "aliases": [
+    {
+      "name": "chevron-up-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

@@ -2,9 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "Bowero",
-    "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "logo",
     "design",

@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ksk3110"
+  ],
+  "use-cases": [],
+  "tags": [
+    "about",
+    "calculate",
+    "math",
+    "operater"
+  ],
+  "categories": [
+    "math"
+  ]
+}

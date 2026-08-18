@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Andreto",
+    "ericfennis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "wash",
+    "bath",
+    "water",
+    "liquid",
+    "fluid",
+    "wet",
+    "moisture",
+    "damp",
+    "bead",
+    "globule"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}

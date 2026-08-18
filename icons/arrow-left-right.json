@@ -2,9 +2,9 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "wojtekmaj",
-    "ericfennis",
-    "karsa-mistmere"
+    "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "bidirectional",
     "two-way",
@@ -18,7 +18,6 @@
     "->"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "fortress",
     "stronghold",
@@ -13,6 +14,6 @@
   "categories": [
     "buildings",
     "gaming",
-    "maps"
+    "navigation"
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "delete",
+    "stop",
+    "alert",
+    "warning",
+    "times",
+    "clear",
+    "math"
+  ],
+  "categories": [
+    "math",
+    "notifications"
+  ],
+  "aliases": [
+    {
+      "name": "x-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

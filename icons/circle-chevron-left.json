@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "back",
+    "previous",
+    "less than",
+    "fewer",
+    "menu",
+    "<"
+  ],
+  "categories": [
+    "arrows"
+  ],
+  "aliases": [
+    {
+      "name": "chevron-left-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

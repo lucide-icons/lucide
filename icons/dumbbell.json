@@ -1,9 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
-    "ericfennis"
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "barbell",
     "weight",
@@ -11,7 +12,7 @@
     "gym"
   ],
   "categories": [
-    "maps",
+    "navigation",
     "sports"
   ]
 }

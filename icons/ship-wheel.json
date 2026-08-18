@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "steering",
     "rudder",
@@ -21,7 +22,7 @@
   ],
   "categories": [
     "transportation",
-    "travel",
-    "maps"
+    "navigation",
+    "travel"
   ]
 }

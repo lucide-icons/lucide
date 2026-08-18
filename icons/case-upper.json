@@ -3,8 +3,10 @@
   "contributors": [
     "danielbayley",
     "jguddas",
+    "vichotech",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "letters",
@@ -13,6 +15,7 @@
     "typography"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

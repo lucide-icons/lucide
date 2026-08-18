@@ -4,14 +4,21 @@ title: Lucide Preact
 
 # Lucide Preact
 
-Implementation of the lucide icon library for preact applications.
+Preact components for Lucide icons that provide React-like development experience with a smaller footprint. Each icon is a lightweight Preact component that renders as an inline SVG, perfect for applications that need React compatibility with minimal bundle size.
+
+**What you can accomplish:**
+- Use icons as Preact components with React-like syntax and patterns
+- Build lightweight applications with Preact's smaller runtime
+- Create fast, responsive interfaces with minimal JavaScript overhead
+- Maintain React compatibility while reducing bundle size
+- Integrate with existing Preact applications and component libraries
 
 ## Installation
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm install lucide-preact
+pnpm add lucide-preact
 ```
 
 ```sh [yarn]
@@ -20,6 +27,10 @@ yarn add lucide-preact
 
 ```sh [npm]
 npm install lucide-preact
+```
+
+```sh [bun]
+bun add lucide-preact
 ```
 
 :::
@@ -67,6 +78,26 @@ const App = () => {
 
 > SVG attributes in Preact aren't transformed, so if you want to change for example the `stroke-linejoin` you need to pass it in kebabcase. Basically how the SVG spec want you to write it. See this topic in the [Preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
 
+## With Lucide Lab or custom icons
+
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+
+They can be used by using the `Icon` component.
+All props like regular Lucide icons can be passed to adjust the icon appearance.
+
+### Using the `Icon` component
+
+This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+
+```jsx
+import { Icon } from 'lucide-preact';
+import { coconut } from '@lucide/lab';
+
+const App = () => (
+  <Icon iconNode={coconut} />
+);
+```
+
 ## One generic icon component
 
 It is possible to create one generic icon component to load icons, but it is not recommended.
@@ -95,8 +126,24 @@ export default Icon;
 import Icon from './Icon';
 
 const App = () => {
-  return <Icon name="home" />;
+  return <Icon name="house" />;
 };
 
 export default App;
 ```
+
+## Accessibility
+
+By default, we hide icons from screen readers using `aria-hidden="true"`.
+
+You can add accessibility attributes using aria-labels.
+
+```jsx
+import { Check } from 'lucide-preact';
+
+const App = () => {
+  return <Check aria-label="Task completed" />;
+};
+```
+
+For best practices on accessibility, please see our [accessibility guide](../accessibility.md).

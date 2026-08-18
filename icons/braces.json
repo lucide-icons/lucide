@@ -4,7 +4,14 @@
     "danielbayley",
     "karsa-mistmere"
   ],
-  "aliases": ["curly-braces"],
+  "aliases": [
+    {
+      "name": "curly-braces",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ],
+  "use-cases": [],
   "tags": [
     "json",
     "code",

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "use-cases": [],
+  "tags": [
+    "nut",
+    "screw",
+    "settings",
+    "preferences",
+    "configuration",
+    "controls",
+    "edit",
+    "diy",
+    "fixed",
+    "build",
+    "construction",
+    "parts"
+  ],
+  "categories": [
+    "tools",
+    "home"
+  ]
+}

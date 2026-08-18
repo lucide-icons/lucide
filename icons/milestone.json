@@ -1,15 +1,18 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "signpost",
     "direction",
     "right",
     "east",
     "forward",
-    "version control"
+    "version control",
+    "waypoint"
   ],
   "categories": [
     "arrows",

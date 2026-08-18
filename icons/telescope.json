@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "astronomy",
+    "space",
+    "discovery",
+    "exploration",
+    "explore",
+    "vision",
+    "perspective",
+    "focus",
+    "stargazing",
+    "observe",
+    "view"
+  ],
+  "categories": [
+    "science",
+    "development",
+    "tools"
+  ]
+}

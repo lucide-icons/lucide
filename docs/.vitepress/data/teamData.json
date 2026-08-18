@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Eric Fennis",
+    "title": "Creator of Lucide & Software engineer @nedap",
+    "image": "https://github.com/ericfennis.png?size=192",
+    "sponsor": "https://github.com/sponsors/ericfennis",
+    "socialLinks": [
+      {
+        "icon": "github",
+        "link": "https://github.com/ericfennis"
+      },
+      {
+        "icon": "x",
+        "link": "https://x.com/ericfennis"
+      }
+    ]
+  },
+  {
+    "name": "Karsa Rigó",
+    "title": "Maintainer of Lucide & Software engineer @sztaki",
+    "image": "https://github.com/karsa-mistmere.png?size=192",
+    "socialLinks": [
+      {
+        "icon": "github",
+        "link": "https://github.com/karsa-mistmere"
+      },
+      {
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/karsamistmere"
+      }
+    ]
+  },
+  {
+    "name": "Jakob Guddas",
+    "title": "Maintainer of Lucide & Software engineer @LEGO",
+    "image": "https://github.com/jguddas.png?size=192",
+    "socialLinks": [
+      {
+        "icon": "github",
+        "link": "https://github.com/jguddas"
+      },
+      {
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/jguddas"
+      }
+    ]
+  }
+]

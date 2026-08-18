@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "et cetera",
+    "etc",
+    "loader",
+    "loading",
+    "progress",
+    "pending",
+    "throbber",
+    "menu",
+    "options",
+    "operator",
+    "code",
+    "coding",
+    "spread",
+    "rest",
+    "more",
+    "further",
+    "extra",
+    "overflow",
+    "dots",
+    "…",
+    "..."
+  ],
+  "categories": [
+    "layout",
+    "development"
+  ],
+  "aliases": [
+    {
+      "name": "more-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}

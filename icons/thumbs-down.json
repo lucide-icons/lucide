@@ -6,6 +6,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "dislike",
     "bad",
@@ -13,6 +14,7 @@
   ],
   "categories": [
     "account",
-    "social"
+    "social",
+    "emoji"
   ]
 }
