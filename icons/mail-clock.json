@@ -5,6 +5,12 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [
+    "Represents scheduled communication",
+    "Represents send later icons",
+    "Indication scheduled mail",
+    "Indication delayed delivery features in messaging, email, and productivity tools"
+  ],
   "tags": [
     "email",
     "message",
