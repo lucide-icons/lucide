@@ -33,7 +33,8 @@
     "box",
     "rectangle",
     "aspect ratio",
-    "1:1"
+    "1:1",
+    "corner"
   ],
   "categories": [
     "design",
