@@ -109,7 +109,6 @@ export default async function generateAliasesFiles({
               ? deprecationReasonTemplate(alias.deprecationReason, {
                   componentName: toPascalCase(iconName),
                   iconName,
-                  toBeRemovedInVersion: alias.toBeRemovedInVersion,
                 })
               : '';
 
