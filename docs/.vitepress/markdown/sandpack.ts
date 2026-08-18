@@ -1,5 +1,6 @@
 import type MarkdownIt from 'markdown-it';
 import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
+import type Token from 'markdown-it/lib/token.mjs';
 import container from 'markdown-it-container';
 import sandpackTheme from '../theme/sandpackTheme.json';
 
@@ -21,14 +22,10 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
     throw new Error('MarkdownIt instance is required for sandpackPlugin');
   }
   const escapeHtml = md?.utils?.escapeHtml;
-  const defaultFence =
-    md.renderer.rules.fence ||
-    ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
 
-  const renderSandbox = (tokenList: any[], index: number) => {
-    const renderFunc = (tokens: any[], idx: number) => {
+  const renderSandbox = (tokenList: Token[], index: number) => {
+    const renderFunc = (tokens: Token[], idx: number) => {
       if (tokens[idx].nesting === 1) {
-        const fileAttr: string[] = [];
         const attrs = Object.fromEntries(tokens[idx].attrs || []);
 
         const files: Record<
@@ -47,7 +44,7 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
         ) {
           if (tokens[i].type === 'fence' && tokens[i].tag === 'code') {
             const info = tokens[i].info ?? '';
-            const [lang, fileName, params = ''] = info.split(' ');
+            const [, fileName, params = ''] = info.split(' ');
 
             const active = params.includes('[active]');
             const hidden = params.includes('[hidden]');
@@ -57,15 +54,9 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
             if (fileName && code) {
               files[fileName] = {
                 code,
+                ...(active && { active: true }),
+                ...(hidden && { hidden: true }),
               };
-
-              if (active) {
-                (files[fileName] as any).active = true;
-              }
-
-              if (hidden) {
-                (files[fileName] as any).hidden = true;
-              }
             }
           }
         }
@@ -122,7 +113,7 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
     return renderFunc(tokenList, index);
   };
 
-  function createCodeGroup(md: MarkdownIt): ContainerArgs {
+  function createCodeGroup(): ContainerArgs {
     return [
       container,
       'sandpack',
@@ -134,5 +125,5 @@ export default function sandpackPlugin(md: MarkdownIt, pluginOptions: SnackParam
     ];
   }
 
-  md.use(...createCodeGroup(md));
+  md.use(...createCodeGroup());
 }
