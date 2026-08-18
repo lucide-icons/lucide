@@ -22,5 +22,5 @@
     "types": ["@testing-library/jest-dom"],
   },
   "exclude": ["**/node_modules"],
-  "include": ["src"],
+  "include": ["src", "tests"],
 }

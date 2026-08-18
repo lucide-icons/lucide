@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "gears",
+    "gear lever",
+    "gearstick",
+    "shift",
+    "speed",
+    "driving",
+    "driver",
+    "racing",
+    "racer",
+    "motor sport",
+    "formula one",
+    "formula 1",
+    "f1",
+    "car",
+    "vehicle",
+    "mechanical",
+    "clutch",
+    "ratio"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
