@@ -4,6 +4,13 @@
     "simoncoudeville",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Representing MIDI connections and ports in music production software",
+    "Indicating MIDI input and output on synthesizers, keyboards, and controllers",
+    "Showing MIDI device connectivity in audio and hardware configuration interfaces",
+    "Representing MIDI routing, patching, and signal flow",
+    "Identifying 5-pin DIN MIDI connectors in technical diagrams and device documentation"
+  ],
   "tags": [
     "musical instrument digital interface",
     "port",
