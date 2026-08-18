@@ -1,10 +1,8 @@
 import { INode, parseSync } from 'svgson';
-// @ts-ignore
 import toPath from 'element-to-path';
-// @ts-ignore
 import { SVGPathData, encodeSVGPath } from 'svg-pathdata';
 import { Path, Point } from './types';
-import memoize from 'lodash/memoize';
+import { memoize } from 'lodash-es';
 
 function assertNever(x: never): never {
   throw new Error('Unknown type: ' + x['type']);

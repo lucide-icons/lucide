@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "danielbayley",
+    "jguddas",
+    "juanisidoro",
+    "karsa-mistmere",
+    "Spleefies"
+  ],
+  "use-cases": [],
+  "tags": [
+    "stack",
+    "pile",
+    "pages",
+    "sheets",
+    "paperwork",
+    "copies",
+    "copy",
+    "layers",
+    "remove",
+    "delete"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}

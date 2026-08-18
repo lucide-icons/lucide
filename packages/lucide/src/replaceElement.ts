@@ -1,6 +1,7 @@
 import createElement from './createElement';
 import defaultAttributes from './defaultAttributes';
 import { Icons, SVGProps } from './types';
+import { hasA11yProp, mergeClasses, toPascalCase } from '@lucide/shared';
 
 export type CustomAttrs = { [attr: string]: any };
 
@@ -34,26 +35,6 @@ export const getClassNames = (
   return '';
 };
 
-/**
- * Combines the classNames of array of classNames to a String
- * @param {array} arrayOfClassnames
- * @returns {string}
- */
-export const combineClassNames = (
-  arrayOfClassnames: (string | Record<string, number | string | string[]>)[],
-) => {
-  const classNameArray = arrayOfClassnames.flatMap(getClassNames);
-
-  return classNameArray
-    .map((classItem) => classItem.trim())
-    .filter(Boolean)
-    .filter((value, index, self) => self.indexOf(value) === index)
-    .join(' ');
-};
-
-const toPascalCase = (string: string): string =>
-  string.replace(/(\w)(\w*)(_|-|\s*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase());
-
 interface ReplaceElementOptions {
   nameAttr: string;
   icons: Icons;
@@ -83,14 +64,25 @@ const replaceElement = (element: Element, { nameAttr, icons, attrs }: ReplaceEle
 
   const elementAttrs = getAttrs(element);
 
+  const ariaProps = hasA11yProp(elementAttrs) ? {} : { 'aria-hidden': 'true' };
+
   const iconAttrs = {
     ...defaultAttributes,
     'data-lucide': iconName,
+    ...ariaProps,
     ...attrs,
     ...elementAttrs,
-  };
+  } satisfies SVGProps;
 
-  const classNames = combineClassNames(['lucide', `lucide-${iconName}`, elementAttrs, attrs]);
+  const elementClassNames = getClassNames(elementAttrs);
+  const className = getClassNames(attrs);
+
+  const classNames = mergeClasses(
+    'lucide',
+    `lucide-${iconName}`,
+    ...elementClassNames,
+    ...className,
+  );
 
   if (classNames) {
     Object.assign(iconAttrs, {

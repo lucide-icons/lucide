@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "vqh2602",
-    "jguddas"
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "water",
     "cleaning",
