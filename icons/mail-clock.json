@@ -15,11 +15,22 @@
     "email",
     "message",
     "letter",
-    "unread"
+    "unread",
+    "scheduled",
+    "delayed",
+    "sendlater",
+    "delivery",
+    "reminder",
+    "pending",
+    "outgoing",
+    "timer"
   ],
   "categories": [
     "text",
     "account",
-    "mail"
+    "mail",
+    "time",
+    "notifications",
+    "communication"
   ]
 }
