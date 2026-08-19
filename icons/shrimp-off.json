@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "tags": [
+    "shrimp",
+    "marine",
+    "creature",
+    "fisherman",
+    "ocean",
+    "fresh",
+    "cuisine",
+    "marine-life",
+    "seafood",
+    "shellfish",
+    "crustacean",
+    "prawn",
+    "scallop",
+    "whelk",
+    "arthropod",
+    "littleneck",
+    "quahog",
+    "cherrystone"
+  ],
+  "categories": [
+    "animals"
+  ]
+}
