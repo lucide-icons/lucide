@@ -1,6 +1,11 @@
 {
   "$schema": "../icon.schema.json",
-  "use-cases": [],
+  "use-cases": [
+    "coach whistles",
+    "sports companies",
+    "traffic cops",
+    "lifeguards use whistles"
+  ],
   "contributors": [
     "briz123",
     "UsamaKhan",
