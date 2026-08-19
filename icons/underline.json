@@ -4,12 +4,17 @@
     "colebemis",
     "ericfennis",
     "csandman",
-    "johnletey"
+    "johnletey",
+    "jguddas"
   ],
   "use-cases": [],
   "tags": [
     "text",
-    "format"
+    "format",
+    "mark",
+    "underscore",
+    "below",
+    "dash"
   ],
   "categories": [
     "text"
