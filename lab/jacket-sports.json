@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "coat",
+    "man",
+    "mens",
+    "top",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "fashion",
+    "thread",
+    "leather",
+    "casual",
+    "regular",
+    "warmth",
+    "winter",
+    "outdoors"
+  ],
+  "categories": [
+    "shopping",
+    "sports"
+  ]
+}
