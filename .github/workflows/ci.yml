@@ -12,22 +12,62 @@ on:
       version:
         description: Version
         required: true
+      tag:
+        required: true
+        description: NPM tag
+        default: 'latest'
+        type: choice
+        options:
+          - latest
+          - next
+          - beta
+          - alpha
 
-permissions:
-  id-token: write # Required for OIDC
-  contents: write
+permissions: {}
 
 jobs:
-  create-release:
-    if: github.repository == 'lucide-icons/lucide' && startsWith(github.event.head_commit.message, 'feat(icons)') && github.event_name != 'workflow_dispatch'
+  check-dispatch-gate:
+    if: github.repository == 'lucide-icons/lucide' &&
+      startsWith(github.event.head_commit.message, 'feat(icons)') &&
+      github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      RELEASE_ENVIRONMENT: ${{ steps.environment.outputs.RELEASE_ENVIRONMENT }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Fetch tags
+        run: git fetch --all --tags
+
+      - name: Check if latest tag was created today
+        id: environment
+        run: |
+          LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
+          TAG_DATE=$(git log -1 --format=%cs "$LATEST_TAG")
+          TODAY=$(date +%Y-%m-%d)
+
+          if [ "$TAG_DATE" == "$TODAY" ]; then
+            echo "::warning::A release tag already exists for today ($TODAY): $LATEST_TAG. Manual approval will be required to proceed."
+            echo "RELEASE_ENVIRONMENT=Icon Release Gated" >> $GITHUB_OUTPUT
+          else
+            echo "RELEASE_ENVIRONMENT=Icon Release" >> $GITHUB_OUTPUT
+          fi
+
+  create-release:
+    if: github.repository == 'lucide-icons/lucide'
+    needs: check-dispatch-gate
+    environment: ${{ needs.check-dispatch-gate.outputs.RELEASE_ENVIRONMENT }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create the release and tag
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
     steps:
-
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           cache: 'pnpm'
           node-version-file: 'package.json'
@@ -40,7 +80,7 @@ jobs:
 
       - name: Get latest tag
         id: latest-tag
-        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_OUTPUT
+        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)" >> $GITHUB_OUTPUT
 
       - name: Log latest tag
         run: echo '${{ steps.latest-tag.outputs.LATEST_TAG }}'
@@ -62,7 +102,7 @@ jobs:
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
           name: Version ${{ steps.new-version.outputs.NEW_VERSION }}
@@ -73,12 +113,19 @@ jobs:
     needs: create-release
     uses: './.github/workflows/release.yml'
     secrets: inherit
+    permissions:
+      id-token: write # Required for OIDC (npm provenance)
+      contents: write # Required to upload release assets
     with:
       version: ${{ needs.create-release.outputs.VERSION }}
 
   dispatch-release:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.repository == 'lucide-icons/lucide' && github.event_name == 'workflow_dispatch'
     uses: './.github/workflows/release.yml'
     secrets: inherit
+    permissions:
+      id-token: write # Required for OIDC (npm provenance)
+      contents: write # Required to upload release assets
     with:
       version: ${{ inputs.version }}
+      tag: ${{ inputs.tag }}

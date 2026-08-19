@@ -59,7 +59,7 @@ const getContributors = async (file: string, includeCoAuthors?: boolean) => {
         const matches = commit.body.matchAll(
           /(^Author:|^Co-authored-by:)\s+(?<author>[^<]+)\s+<(?<email>[^>]+)>/gm,
         );
-        // eslint-disable-next-line no-restricted-syntax
+         
         for (const match of matches) {
           if (!emails.has(match.groups?.email) && cache.has(match.groups?.email)) {
             emails.set(match.groups?.email, Promise.resolve(cache.get(match.groups?.email)));
