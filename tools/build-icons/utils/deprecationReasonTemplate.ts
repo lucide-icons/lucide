@@ -9,8 +9,6 @@ export default function deprecationReasonTemplate(
     iconName: string;
   },
 ) {
-  const resourceName = deprecationReason.startsWith('icon') ? 'icon' : 'alias';
-
   switch (deprecationReason) {
     case 'alias.typo':
       return `Renamed because of typo, use {@link ${componentName}} instead.`;
