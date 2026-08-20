@@ -73,8 +73,9 @@ const Expand = createLucideIcon('Expand', expand);
             v-if="icon.createdRelease"
             class="version"
             :href="releaseTagLink(icon.createdRelease.version)"
-            >v{{ icon.createdRelease.version }}</Badge
           >
+              {{ icon.createdRelease.version }}
+          </Badge>
           <IconButton
             @click="
               go(
