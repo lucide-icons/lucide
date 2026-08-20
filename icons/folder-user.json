@@ -1,7 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "rrod497"
+    "rrod497",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
   ],
   "use-cases": [
     "User directory in local or cloud storage system, like a home or documents folder.",
