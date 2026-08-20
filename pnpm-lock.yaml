@@ -637,6 +637,9 @@ importers:
       '@testing-library/jest-dom':
         specifier: ^6.9.1
         version: 6.9.1
+      '@types/node':
+        specifier: ^26.1.1
+        version: 26.1.1
       babel-preset-solid:
         specifier: 2.0.0-rc.0
         version: 2.0.0-rc.0(@babel/core@7.29.7(supports-color@10.2.2))(solid-js@2.0.0-rc.0)
@@ -15859,7 +15862,6 @@ snapshots:
   '@types/node@26.1.1':
     dependencies:
       undici-types: 8.3.0
-    optional: true
 
   '@types/prop-types@15.7.15': {}
 
@@ -23016,8 +23018,7 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici-types@8.3.0:
-    optional: true
+  undici-types@8.3.0: {}
 
   undici@6.27.0: {}
 
