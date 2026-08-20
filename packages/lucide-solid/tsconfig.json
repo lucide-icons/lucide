@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "@solidjs/web",
-    "types": ["vite/client"],
+    "types": ["vite/client", "@testing-library/jest-dom"],
     "noEmit": true,
     "isolatedModules": true,
     "outDir": "./dist",
