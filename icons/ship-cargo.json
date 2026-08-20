@@ -1,7 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "l0uisgrange"
+    "l0uisgrange",
+    "karsa-mistmere",
+    "jguddas"
   ],
   "use-cases": [
     "representing maritime freight or cargo shipments",
