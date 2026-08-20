@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kamilasw",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Hiking routes",
+    "Hiking activities",
+    "marking trailheads on maps",
+    "denoting hiking gear in packing lists",
+    "labeling guided walking or trekking tours",
+    "indicating recommended equipment for a route"
+  ],
+  "tags": [
+    "hiking",
+    "walking",
+    "stick",
+    "trekking",
+    "trail",
+    "pole",
+    "backpacking",
+    "outdoors",
+    "mountains"
+  ],
+  "categories": [
+    "sports",
+    "travel",
+    "nature",
+    "navigation"
+  ]
+}
