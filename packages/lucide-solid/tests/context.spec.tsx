@@ -1,4 +1,5 @@
 import { render } from '@solidjs/testing-library';
+import { createSignal, flush } from 'solid-js';
 import { describe, expect, it } from 'vitest';
 import { House, LucideProvider } from '../src/lucide-solid';
 
@@ -98,5 +99,32 @@ describe('Using LucideProvider', () => {
       'class',
       'lucide lucide-icon provider-class lucide-house icon-class',
     );
+  });
+
+  it('should update icons when reactive provider props change', () => {
+    const [size, setSize] = createSignal(24);
+    const [color, setColor] = createSignal('red');
+    const { container } = render(() => (
+      <LucideProvider
+        size={size()}
+        color={color()}
+      >
+        <House />
+      </LucideProvider>
+    ));
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '24');
+    expect(IconComponent).toHaveAttribute('height', '24');
+    expect(IconComponent).toHaveAttribute('stroke', 'red');
+
+    setSize(48);
+    setColor('blue');
+    flush();
+
+    expect(IconComponent).toHaveAttribute('width', '48');
+    expect(IconComponent).toHaveAttribute('height', '48');
+    expect(IconComponent).toHaveAttribute('stroke', 'blue');
   });
 });
