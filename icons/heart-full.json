@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "firedev"
+  ],
+  "tags": [
+    "like",
+    "love",
+    "favorite",
+    "saved",
+    "wishlist",
+    "emotion"
+  ],
+  "categories": [
+    "social",
+    "multimedia",
+    "emoji",
+    "shapes"
+  ],
+  "use-cases": [
+    "Saved or favorited state of a listing, product, or post (pair with outline `heart` for not saved)",
+    "Liked state on social content versus the unused outline heart"
+  ]
+}
