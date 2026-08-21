@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "User directory in local or cloud storage system, like a home or documents folder.",
+    "Personal folder in applications with user's private data, like HR records, tax documents, or individual data backups.",
+    "Shared user directory or drive in a system with multiple users.",
+    "Contacts folder or address book."
+  ],
+  "tags": [
+    "directory",
+    "profile",
+    "person",
+    "personal",
+    "contact",
+    "document",
+    "account",
+    "individual",
+    "homefolder",
+    "shared",
+    "access",
+    "owner"
+  ],
+  "categories": [
+    "files",
+    "account",
+    "social",
+    "people",
+    "security"
+  ]
+}
