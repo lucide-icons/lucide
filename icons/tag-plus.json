@@ -1,12 +1,13 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "adam-kov",
     "colebemis",
     "csandman",
     "aaofyi",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "adam-kov",
+    "Barakudum"
   ],
   "use-cases": [
     "adding a tag to an item",
@@ -17,12 +18,16 @@
     "badge",
     "ticket",
     "mark",
-    "new",
+    "category",
+    "classification",
+    "metadata",
     "add",
     "create",
-    "+"
+    "new"
   ],
   "categories": [
-    "account"
+    "account",
+    "development",
+    "files"
   ]
 }
