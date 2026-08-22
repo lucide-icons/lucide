@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hitanshu-machhi",
+    "ishanbagra18"
+  ],
+  "use-cases": [
+    "Representing a user profile or account in a mobile application context.",
+    "Indicating mobile identity, authentication, or eKYC verification."
+  ],
+  "tags": [
+    "smartphone",
+    "phone",
+    "cellphone",
+    "mobile",
+    "device",
+    "user",
+    "account",
+    "profile",
+    "identity",
+    "person",
+    "contact"
+  ],
+  "categories": [
+    "account",
+    "devices",
+    "connectivity"
+  ]
+}
