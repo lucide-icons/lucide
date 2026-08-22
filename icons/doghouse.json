@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jarbasaraujojr"
+  ],
+  "tags": [
+    "doghouse",
+    "dog",
+    "house",
+    "pet",
+    "shelter"
+  ],
+  "categories": [
+    "home",
+    "nature",
+    "animals",
+    "buildings"
+  ]
+}
