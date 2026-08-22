@@ -1,0 +1,32 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "ameniti-mx"
+  ],
+  "tags": [
+    "credit",
+    "card",
+    "banking",
+    "finance",
+    "transaction",
+    "creditation",
+    "wallet",
+    "plastic",
+    "cardholder",
+    "bank",
+    "purchase",
+    "payment",
+    "new-card",
+    "add-card",
+    "change-card",
+    "credit-card"
+  ],
+  "categories": [
+    "account",
+    "finance",
+    "bank"
+  ]
+}
