@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ishanbagra18"
+  ],
+  "use-cases": [
+    "In chat/messaging apps as a 'please be quiet' reaction",
+    "In video-conferencing apps as a mute or 'quiet down' indicator",
+    "In classroom or library apps as a 'quiet mode' toggle",
+    "In podcasting/recording software as a 'quiet on set' status icon"
+  ],
+  "tags": [
+    "quiet",
+    "silence",
+    "mute",
+    "shh",
+    "hush",
+    "finger",
+    "lips",
+    "gesture"
+  ],
+  "categories": [
+    "communication",
+    "multimedia",
+    "emoji"
+  ]
+}
