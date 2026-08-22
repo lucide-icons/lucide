@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jwlinqx"
+  ],
+  "tags": [
+    "line",
+    "dot",
+    "analysis",
+    "branch",
+    "branching",
+    "merging",
+    "converging",
+    "trail",
+    "path",
+    "route"
+  ],
+  "categories": [
+    "development",
+    "navigation",
+    "connectivity",
+    "finance",
+    "travel"
+  ]
+}
