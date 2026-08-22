@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AJAyanbisi"
+  ],
+  "tags": [
+    "electric",
+    "electricity",
+    "energy",
+    "grid",
+    "high voltage",
+    "power",
+    "power line",
+    "pylon",
+    "tower",
+    "transmission",
+    "utility"
+  ],
+  "categories": [
+    "devices",
+    "navigation",
+    "science",
+    "sustainability"
+  ]
+}
