@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ishanbagra18"
+  ],
+  "tags": [
+    "uncheck",
+    "cancel",
+    "remove",
+    "unread",
+    "cross",
+    "mark",
+    "deselect",
+    "task"
+  ],
+  "categories": [
+    "notifications"
+  ]
+}
