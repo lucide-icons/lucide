@@ -1,0 +1,29 @@
+{
+  "$schema": "https://lucide.dev/icons.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "Muhammad-Aqib-Bashir"
+  ],
+  "categories": [
+    "development",
+    "science"
+  ],
+  "tags": [
+    "xor",
+    "exclusive or",
+    "exclusive-or",
+    "boolean",
+    "circuit",
+    "digital",
+    "electronic",
+    "electronics",
+    "gate",
+    "logic"
+  ],
+  "use-cases": [
+    "digital circuit design",
+    "logic diagrams",
+    "Boolean logic",
+    "electronic circuits"
+  ]
+}
