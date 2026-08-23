@@ -15,7 +15,12 @@
     "electronic",
     "electronics",
     "gate",
-    "logic"
+    "logic",
+    "booleanalgebra",
+    "truthtable",
+    "digitallogic",
+    "hardware",
+    "microelectronics"
   ],
   "use-cases": [
     "digital circuit design",
