@@ -1,0 +1,28 @@
+{
+  "$schema": "https://lucide.dev/icons.schema.json",
+  "contributors": [
+    "Muhammad-Aqib-Bashir"
+  ],
+  "categories": [
+    "development",
+    "science"
+  ],
+  "tags": [
+    "nand",
+    "and",
+    "not",
+    "boolean",
+    "circuit",
+    "digital",
+    "electronic",
+    "electronics",
+    "gate",
+    "logic"
+  ],
+  "use-cases": [
+    "digital circuit design",
+    "logic diagrams",
+    "Boolean logic",
+    "electronic circuits"
+  ]
+}
