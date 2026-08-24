@@ -4,7 +4,15 @@
     "karsa-mistmere",
     "danielbayley"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "indicate maintenance or repair tasks",
+    "represent manual configuration or settings adjustment",
+    "show hands-on technical support",
+    "denote mechanical engineering or machine servicing tasks",
+    "illustrate workshop or manufacturing processes",
+    "signal equipment calibration or tuning",
+    "open advanced hardware settings from a control panel"
+  ],
   "tags": [
     "automation",
     "innovation",
