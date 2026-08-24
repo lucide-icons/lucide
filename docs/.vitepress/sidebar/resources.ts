@@ -18,7 +18,6 @@ export const resourcesSidebar = [
         text: 'Brand logo statement',
         link: '/brand-logo-statement',
       },
-
     ],
   },
   {
@@ -28,7 +27,6 @@ export const resourcesSidebar = [
         text: 'Contribution guide',
         link: '/contribute/',
       },
-
     ],
   },
   {
@@ -67,7 +65,8 @@ export const resourcesSidebar = [
         text: 'Design software guides',
         collapsed: false,
         desc: 'Learn how to design and export Lucide icons using common vector design tools.',
-        items: [{
+        items: [
+          {
             text: 'Adobe Illustrator',
             link: '/contribute/icons/illustrator-guide',
             desc: '',
@@ -83,7 +82,7 @@ export const resourcesSidebar = [
           {
             text: 'Affinity Designer',
             link: '/contribute/icons/affinity-designer-guide',
-          }
+          },
         ],
       },
     ],
