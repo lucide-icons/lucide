@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando"
+  ],
+  "use-cases": [
+    "Represent a backslash character",
+    "Represent path separators in developer and file-system interfaces"
+  ],
+  "tags": [
+    "separator",
+    "path",
+    "\\"
+  ],
+  "categories": [
+    "development"
+  ]
+}
