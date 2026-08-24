@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando"
+  ],
+  "use-cases": [
+    "warehouse logistics",
+    "material handling",
+    "moving goods",
+    "luggage transport",
+    "inventory transport"
+  ],
+  "tags": [
+    "flatbed",
+    "trolley",
+    "dolly",
+    "warehouse",
+    "logistics",
+    "transport",
+    "cargo",
+    "luggage"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
