@@ -31,13 +31,14 @@ We recommend to use [Lucide Studio](https://studio.lucide.dev/?utm_source=lucide
 
 SVG files may only contain simple path and shape elements, which may not have any attributes other than sizing and spacing.\
 In practice only the following elements and attributes are allowed:
-* `<path d>`
-* `<line x1 x2>`
-* `<polygon points>`
-* `<polyline points>`
-* `<circle cx cy r>`
-* `<ellipse cx cy rx ry>`
-* `<rect x y width height rx>`
+
+- `<path d>`
+- `<line x1 x2>`
+- `<polygon points>`
+- `<polyline points>`
+- `<circle cx cy r>`
+- `<ellipse cx cy rx ry>`
+- `<rect x y width height rx>`
 
 This also means that no transforms, filters, fills or explicit strokes are allowed.
 
@@ -45,24 +46,40 @@ Never use [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use
 
 ## JSON metadata descriptor
 
-<!-- TODO: Add use-case explanation -->
+Each icon added must also come with a matching JSON file listing contributors, use cases, tags and categories for the icon.
 
-Each icon added must also come with a matching JSON file listing tags and categories for the icon.
-Please use the following template:
+Please use consult [our metadata conventions page](./metadata-conventions.md) for more information about this file.
 
-```json
-{
-  "$schema": "../icon.schema.json",
-  "contributors": [
-    "github-username",
-    "another-github-username"
-  ],
-  "tags": [
-    "foo",
-    "bar"
-  ],
-  "categories": [
-    "devices"
-  ]
-}
+## Validation
+
+Before submitting SVG changes, format and validate the icon files:
+
+```sh
+pnpm run lint:icons
 ```
+
+You can automatically format SVG files with Prettier:
+
+```sh
+pnpm run lint:icons-fix
+```
+
+To check icon names, categories, metadata, and SVG structure together, run:
+
+```sh
+pnpm run lint:icons:all
+```
+
+## Checklist
+
+Before opening a PR, confirm that:
+
+- The SVG uses the standard `24` by `24` viewBox.
+- The SVG uses `fill="none"` and `stroke="currentColor"`.
+- Stroke width, line caps, and line joins match the Lucide defaults.
+- Paths are tidy and use appropriate numeric precision.
+- Only allowed SVG elements and attributes are used.
+- The SVG does not use transforms, filters, fills, explicit strokes, or `<use>`.
+- The icon has a matching JSON metadata file.
+- `pnpm run lint:icons` passes.
+- `pnpm run lint:json:icons` passes.

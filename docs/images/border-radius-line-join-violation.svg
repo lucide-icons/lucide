@@ -1,5 +1,5 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1940_22870)">
+<g clip-path="url(#clip0_1940_24730)">
 <path d="M0 10H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M10 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 20H240" stroke="#D8D8D9" stroke-width="0.5"/>
@@ -46,23 +46,19 @@
 <path d="M220 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 230H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M230 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<g clip-path="url(#clip1_1940_24730)">
+<path d="M160 80.0001L20 220M174.88 150H90M140.86 184.12C139.003 185.983 136.796 187.462 134.366 188.471C131.936 189.48 129.331 190 126.7 190H50V113.28C50.0011 107.976 52.109 102.89 55.86 99.1401L117.5 37.5001C128.758 26.2417 144.028 19.9167 159.95 19.9167C175.872 19.9167 191.142 26.2417 202.4 37.5001C213.658 48.7586 219.983 64.0283 219.983 79.9501C219.983 95.872 213.658 111.142 202.4 122.4L140.86 184.12Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 80.0001L20 220M174.88 150H90M140.86 184.12C139.003 185.983 136.796 187.462 134.366 188.471C131.936 189.48 129.331 190 126.7 190L70 190C58.9543 190 50 181.046 50 170V113.28C50.0011 107.976 52.109 102.89 55.86 99.1401L117.5 37.5001C128.758 26.2417 144.028 19.9167 159.95 19.9167C175.872 19.9167 191.142 26.2417 202.4 37.5001C213.658 48.7586 219.983 64.0283 219.983 79.9501C219.983 95.872 213.658 111.142 202.4 122.4L140.86 184.12Z" stroke="#DD0031" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<path d="M200 30H40C28.9543 30 20 38.9543 20 50V150C20 161.046 28.9543 170 40 170H200C211.046 170 220 161.046 220 150V50C220 38.9543 211.046 30 200 30Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M80 210H160" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M120 170V210" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M200 30H40C28.9543 30 20 38.9543 20 50V150C20 161.046 28.9543 170 40 170H200C211.046 170 220 161.046 220 150V50C220 38.9543 211.046 30 200 30Z" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M80 210H160" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M120 170V210" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.5" d="M50 30H0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M50 170H0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 30H200" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 170H200" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M20 240L20 0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M220 240L220 0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M120 240V166" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 210L0 210" stroke="#41B883" stroke-dasharray="1 1"/>
+</g>
+<path opacity="0.5" d="M70 190C58.9543 190 50 181.046 50 170" stroke="#DD0031" stroke-dasharray="1 1"/>
+<circle opacity="0.5" cx="50" cy="190" r="30" stroke="#DD0031" stroke-dasharray="1 1"/>
+<circle opacity="0.5" cx="70" cy="170" r="20" fill="#DD0031"/>
 <defs>
-<clipPath id="clip0_1940_22870">
+<clipPath id="clip0_1940_24730">
+<rect width="240" height="240" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1940_24730">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
 </defs>

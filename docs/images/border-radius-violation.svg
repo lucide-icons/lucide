@@ -1,5 +1,5 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1940_22870)">
+<g clip-path="url(#clip0_1940_24990)">
 <path d="M0 10H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M10 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 20H240" stroke="#D8D8D9" stroke-width="0.5"/>
@@ -46,23 +46,15 @@
 <path d="M220 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 230H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M230 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M120 160H120.1M160 160H160.1M31 30H90V110L150 80V110L210 80V210H30V30M80 160H80.1" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 160H120.1M160 160H160.1M31 30H90V110L150 80V110L210 80V210H30V30M80 160H80.1" stroke="#DD0031" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<path d="M200 30H40C28.9543 30 20 38.9543 20 50V150C20 161.046 28.9543 170 40 170H200C211.046 170 220 161.046 220 150V50C220 38.9543 211.046 30 200 30Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M80 210H160" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M120 170V210" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M200 30H40C28.9543 30 20 38.9543 20 50V150C20 161.046 28.9543 170 40 170H200C211.046 170 220 161.046 220 150V50C220 38.9543 211.046 30 200 30Z" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M80 210H160" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M120 170V210" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.5" d="M50 30H0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M50 170H0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 30H200" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 170H200" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M20 240L20 0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M220 240L220 0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M120 240V166" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 210L0 210" stroke="#41B883" stroke-dasharray="1 1"/>
+<path opacity="0.5" d="M30 50C41.0457 50 50 41.0457 50 30" stroke="#DD0031" stroke-dasharray="1 1"/>
+<path opacity="0.5" d="M90 50C78.9543 50 70 41.0457 70 30" stroke="#DD0031" stroke-dasharray="1 1"/>
+<path opacity="0.5" d="M30 190C41.0457 190 50 198.954 50 210" stroke="#DD0031" stroke-dasharray="1 1"/>
+<path opacity="0.5" d="M210 190C198.954 190 190 198.954 190 210" stroke="#DD0031" stroke-dasharray="1 1"/>
 <defs>
-<clipPath id="clip0_1940_22870">
+<clipPath id="clip0_1940_24990">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
 </defs>

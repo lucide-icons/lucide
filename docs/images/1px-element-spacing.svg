@@ -1,5 +1,5 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1940_22870)">
+<g clip-path="url(#clip0_1939_21540)">
 <path d="M0 10H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M10 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 20H240" stroke="#D8D8D9" stroke-width="0.5"/>
@@ -47,22 +47,22 @@
 <path d="M0 230H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M230 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
-<path d="M200 30H40C28.9543 30 20 38.9543 20 50V150C20 161.046 28.9543 170 40 170H200C211.046 170 220 161.046 220 150V50C220 38.9543 211.046 30 200 30Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M80 210H160" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M120 170V210" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M200 30H40C28.9543 30 20 38.9543 20 50V150C20 161.046 28.9543 170 40 170H200C211.046 170 220 161.046 220 150V50C220 38.9543 211.046 30 200 30Z" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M80 210H160" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M120 170V210" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.5" d="M50 30H0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M50 170H0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 30H200" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 170H200" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M20 240L20 0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M220 240L220 0" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M120 240V166" stroke="#41B883" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 210L0 210" stroke="#41B883" stroke-dasharray="1 1"/>
+<path d="M200 80H100C88.9543 80 80 88.9543 80 100V200C80 211.046 88.9543 220 100 220H200C211.046 220 220 211.046 220 200V100C220 88.9543 211.046 80 200 80Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 50V40C160 29 151 20 140 20H40C29 20 20 29 20 40V140C20 151 29 160 40 160H50" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="70" y="123" width="74" height="10" transform="rotate(90 70 123)" fill="url(#paint0_linear_1939_21540)"/>
+<rect x="123" y="60" width="74" height="10" fill="url(#paint1_linear_1939_21540)"/>
 <defs>
-<clipPath id="clip0_1940_22870">
+<linearGradient id="paint0_linear_1939_21540" x1="70" y1="127.25" x2="144" y2="127.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F56565" stop-opacity="0"/>
+<stop offset="0.499255" stop-color="#F56565"/>
+<stop offset="1" stop-color="#F56565" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1939_21540" x1="123" y1="64.25" x2="197" y2="64.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F56565" stop-opacity="0"/>
+<stop offset="0.499255" stop-color="#F56565"/>
+<stop offset="1" stop-color="#F56565" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_1939_21540">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
 </defs>

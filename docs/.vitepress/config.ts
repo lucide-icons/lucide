@@ -4,6 +4,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 import sidebar from './sidebar';
 import snackPlayer from './markdown/snackPlayer';
 import sandpackPlugin from './markdown/sandpack';
+import examplePlugin from './markdown/example';
 import { readFile } from 'node:fs/promises';
 import { resourcesSidebar } from './sidebar/resources';
 import llmstxt from 'vitepress-plugin-llms';
@@ -31,6 +32,7 @@ export default defineConfig({
     config(md) {
       md.use(groupIconMdPlugin);
       md.use(snackPlayer);
+      md.use(examplePlugin);
       md.use(sandpackPlugin, {
         defaultFiles: {
           '/styles.css': {
@@ -96,7 +98,7 @@ export default defineConfig({
         text: 'Resources',
         items: [
           ...resourcesSidebar[0].items,
-          { text: 'Design icons', link: '/contribute/icons/' },
+          { text: 'Contributing icons', link: '/contribute/icons/' },
         ],
       },
       { text: 'Packages', link: '/packages' },

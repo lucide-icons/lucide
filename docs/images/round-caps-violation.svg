@@ -1,5 +1,5 @@
 <svg width="241" height="240" viewBox="0 0 241 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1940_22811)">
+<g clip-path="url(#clip0_1940_23313)">
 <path d="M0.5 10H240.5" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M10.5 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0.5 20H240.5" stroke="#D8D8D9" stroke-width="0.5"/>
@@ -47,22 +47,23 @@
 <path d="M0.5 230H240.5" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M230.5 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
-<path d="M220.5 120H195.7C191.33 119.991 187.077 121.413 183.591 124.05C180.106 126.686 177.58 130.392 176.4 134.6L152.9 218.2C152.749 218.719 152.433 219.175 152 219.5C151.567 219.825 151.041 220 150.5 220C149.959 220 149.433 219.825 149 219.5C148.567 219.175 148.251 218.719 148.1 218.2L92.9 21.8C92.7485 21.2807 92.4327 20.8246 92 20.5C91.5673 20.1754 91.0409 20 90.5 20C89.9591 20 89.4327 20.1754 89 20.5C88.5673 20.8246 88.2515 21.2807 88.1 21.8L64.6 105.4C63.4246 109.592 60.9138 113.285 57.4486 115.92C53.9835 118.555 49.7532 119.988 45.4 120H20.5" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M220.5 120H180.5M60.5 120H20.5" stroke="url(#paint0_linear_1940_22811)" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.5" d="M10.5 120C10.5 125.523 14.9772 130 20.5 130V110C14.9772 110 10.5 114.477 10.5 120Z" fill="#41B883"/>
-<path opacity="0.5" d="M220.5 130C226.023 130 230.5 125.523 230.5 120C230.5 114.477 226.023 110 220.5 110V130Z" fill="#41B883"/>
-<circle opacity="0.5" cx="220.5" cy="120" r="20" stroke="#41B883" stroke-dasharray="1 1"/>
-<circle opacity="0.5" cx="20.5" cy="120" r="20" stroke="#41B883" stroke-dasharray="1 1"/>
-<circle cx="220.5" cy="120" r="2" fill="#41B883"/>
-<circle cx="20.5" cy="120" r="2" fill="#41B883"/>
+<path d="M20.5 120H45.4C49.7532 119.988 53.9835 118.555 57.4486 115.92C60.9138 113.285 63.4246 109.592 64.6 105.4L88.1 21.8C88.2515 21.2807 88.5673 20.8246 89 20.5C89.4327 20.1754 89.9591 20 90.5 20C91.0409 20 91.5673 20.1754 92 20.5C92.4327 20.8246 92.7485 21.2807 92.9 21.8L120.5 120" stroke="black" stroke-width="20" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M220.5 120H195.7C191.33 119.991 187.077 121.413 183.591 124.05C180.106 126.686 177.58 130.392 176.4 134.6L152.9 218.2C152.749 218.719 152.433 219.175 152 219.5C151.567 219.825 151.041 220 150.5 220C149.959 220 149.433 219.825 149 219.5C148.567 219.175 148.251 218.719 148.1 218.2L120.5 120" stroke="black" stroke-width="20" stroke-linejoin="round"/>
+<path d="M220.5 120H180.5M60.5 120H20.5" stroke="url(#paint0_linear_1940_23313)" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M10.5 110H30.5V130H10.5V110Z" fill="#DD0031"/>
+<path opacity="0.5" d="M210.5 110H220.5V130H210.5V110Z" fill="#DD0031"/>
+<circle opacity="0.5" cx="220.5" cy="120" r="20" stroke="#DD0031" stroke-dasharray="1 1"/>
+<circle opacity="0.5" cx="20.5" cy="120" r="20" stroke="#DD0031" stroke-dasharray="1 1"/>
+<circle cx="220.5" cy="120" r="2" fill="#DD0031"/>
+<circle cx="20.5" cy="120" r="2" fill="#DD0031"/>
 <defs>
-<linearGradient id="paint0_linear_1940_22811" x1="20.5" y1="99.5008" x2="220.5" y2="99.501" gradientUnits="userSpaceOnUse">
-<stop stop-color="#41B883"/>
-<stop offset="0.20238" stop-color="#41B883" stop-opacity="0"/>
-<stop offset="0.801339" stop-color="#41B883" stop-opacity="0"/>
-<stop offset="1" stop-color="#41B883"/>
+<linearGradient id="paint0_linear_1940_23313" x1="20.5" y1="99.5008" x2="220.5" y2="99.501" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DD0031"/>
+<stop offset="0.20238" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="0.801339" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="1" stop-color="#DD0031"/>
 </linearGradient>
-<clipPath id="clip0_1940_22811">
+<clipPath id="clip0_1940_23313">
 <rect width="240" height="240" fill="white" transform="translate(0.5)"/>
 </clipPath>
 </defs>
