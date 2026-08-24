@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating bold text formatting",
+    "labeling blood type B",
+    "representing bytes in computing contexts",
+    "indicating a B-side track or recording",
+    "marking a bus or transit line"
+  ],
+  "tags": [
+    "strong",
+    "emphasis",
+    "format",
+    "alphabet",
+    "character",
+    "uppercase",
+    "bold",
+    "blood type",
+    "byte",
+    "computing",
+    "b-side",
+    "bus",
+    "transit",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ]
+}

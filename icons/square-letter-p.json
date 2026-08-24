@@ -1,0 +1,54 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "marking parking locations",
+    "representing phosphorus in scientific contexts",
+    "indicating p-values in statistics",
+    "marking soft dynamics in music notation",
+    "representing pages or pagination",
+    "representing probability in math contexts"
+  ],
+  "tags": [
+    "parking lot",
+    "car park",
+    "alphabet",
+    "character",
+    "uppercase",
+    "parking",
+    "phosphorus",
+    "chemistry",
+    "p-value",
+    "statistics",
+    "piano",
+    "soft",
+    "music",
+    "page",
+    "probability",
+    "math",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text",
+    "transportation",
+    "navigation"
+  ],
+  "aliases": [
+    {
+      "name": "parking-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "square-parking",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}
