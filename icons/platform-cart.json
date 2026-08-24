@@ -18,7 +18,15 @@
     "logistics",
     "transport",
     "cargo",
-    "luggage"
+    "luggage",
+    "cart",
+    "utility",
+    "pallet",
+    "freight",
+    "shipping",
+    "fulfillment",
+    "airport",
+    "equipment"
   ],
   "categories": [
     "transportation"
