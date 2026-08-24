@@ -4,19 +4,31 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "marking parking locations",
+    "representing phosphorus in scientific contexts",
+    "indicating p-values in statistics",
+    "marking soft dynamics in music notation",
+    "representing pages or pagination",
+    "representing probability in math contexts"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "parking",
+    "phosphorus",
+    "chemistry",
+    "p-value",
+    "statistics",
+    "piano",
+    "soft",
+    "music",
+    "page",
+    "probability",
+    "math",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

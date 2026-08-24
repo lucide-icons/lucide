@@ -4,19 +4,24 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "marking learner driver status",
+    "indicating litre units in measurements",
+    "indicating left direction or alignment",
+    "representing length in measurements"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "learner",
+    "driver",
+    "litre",
+    "left",
+    "length",
+    "measurement",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

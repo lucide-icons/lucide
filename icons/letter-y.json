@@ -4,19 +4,25 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "representing the Y-axis in charts or geometry",
+    "indicating yes or confirmation",
+    "representing years in date or time contexts",
+    "representing Y chromosomes"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "y-axis",
+    "axis",
+    "yes",
+    "confirm",
+    "year",
+    "time",
+    "chromosome",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

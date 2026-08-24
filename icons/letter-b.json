@@ -9,9 +9,10 @@
   ],
   "use-cases": [
     "indicating bold text formatting",
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "labeling blood type B",
+    "representing bytes in computing contexts",
+    "indicating a B-side track or recording",
+    "marking a bus or transit line"
   ],
   "tags": [
     "strong",
@@ -20,11 +21,16 @@
     "alphabet",
     "character",
     "uppercase",
+    "bold",
+    "blood type",
+    "byte",
+    "computing",
+    "b-side",
+    "bus",
+    "transit",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

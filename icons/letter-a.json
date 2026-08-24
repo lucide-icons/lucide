@@ -4,9 +4,11 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms",
+    "indicating a grade or rating",
+    "representing accessibility settings",
+    "labeling blood type A",
+    "representing audio controls or settings",
+    "indicating ampere units in electrical contexts",
     "indicating text appearance settings",
     "representing font selection or typography controls"
   ],
@@ -14,11 +16,17 @@
     "alphabet",
     "character",
     "uppercase",
+    "grade",
+    "rating",
+    "accessibility",
+    "blood type",
+    "audio",
+    "ampere",
+    "electricity",
+    "appearance",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

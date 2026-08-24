@@ -4,19 +4,30 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "indicating south on a compass or map",
+    "indicating small size",
+    "representing seconds in time contexts",
+    "representing sulfur in scientific contexts",
+    "indicating save actions",
+    "representing siemens units in electrical contexts"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "south",
+    "small",
+    "size",
+    "second",
+    "time",
+    "sulfur",
+    "chemistry",
+    "save",
+    "siemens",
+    "electricity",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

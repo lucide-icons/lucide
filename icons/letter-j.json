@@ -4,19 +4,21 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "indicating joule units in energy contexts",
+    "representing Java or JavaScript shorthand"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "joule",
+    "energy",
+    "java",
+    "javascript",
+    "code",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"
