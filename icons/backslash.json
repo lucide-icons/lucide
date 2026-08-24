@@ -13,7 +13,11 @@
   "tags": [
     "separator",
     "path",
-    "\\"
+    "\\",
+    "escape",
+    "windows",
+    "regex",
+    "filesystem"
   ],
   "categories": [
     "development",
