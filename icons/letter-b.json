@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating bold text formatting",
+    "displaying alphabetic labels",
+    "representing keyboard shortcuts",
+    "marking initials or monograms"
+  ],
+  "tags": [
+    "strong",
+    "emphasis",
+    "format",
+    "alphabet",
+    "character",
+    "uppercase",
+    "text",
+    "font",
+    "typography",
+    "initial",
+    "monogram"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "bold"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "displaying alphabetic labels",
+    "representing keyboard shortcuts",
+    "marking initials or monograms",
+    "indicating text appearance settings",
+    "representing font selection or typography controls"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "text",
+    "font",
+    "typography",
+    "initial",
+    "monogram"
+  ],
+  "categories": [
+    "text"
+  ]
+}
