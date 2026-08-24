@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating heading text formatting",
+    "displaying alphabetic labels",
+    "representing keyboard shortcuts",
+    "marking initials or monograms"
+  ],
+  "tags": [
+    "h1",
+    "html",
+    "markup",
+    "markdown",
+    "alphabet",
+    "character",
+    "uppercase",
+    "text",
+    "font",
+    "typography",
+    "initial",
+    "monogram"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "heading"
+    }
+  ]
+}
