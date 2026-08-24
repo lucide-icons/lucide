@@ -6,9 +6,10 @@
   ],
   "use-cases": [
     "indicating heading text formatting",
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "marking hospital locations",
+    "representing hydrogen in scientific contexts",
+    "indicating hours in time contexts",
+    "representing height in measurements"
   ],
   "tags": [
     "h1",
@@ -18,11 +19,17 @@
     "alphabet",
     "character",
     "uppercase",
+    "heading",
+    "hospital",
+    "hydrogen",
+    "chemistry",
+    "hour",
+    "time",
+    "height",
+    "measurement",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

@@ -4,19 +4,31 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "marking registered trademark references",
+    "indicating right direction or alignment",
+    "indicating reverse gear in vehicles",
+    "representing resistance in electrical contexts",
+    "representing radius in geometry",
+    "indicating ratings or reviews"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "registered trademark",
+    "trademark",
+    "right",
+    "reverse",
+    "gear",
+    "resistance",
+    "electricity",
+    "radius",
+    "geometry",
+    "rating",
+    "review",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

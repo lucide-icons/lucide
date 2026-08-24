@@ -4,19 +4,24 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "representing tesla units in magnetic contexts",
+    "indicating temperature values",
+    "representing tonne units in measurements",
+    "representing time values"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "tesla",
+    "magnetism",
+    "temperature",
+    "tonne",
+    "measurement",
+    "time",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

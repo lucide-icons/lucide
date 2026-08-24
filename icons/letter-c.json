@@ -4,19 +4,23 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "indicating Celsius temperature units",
+    "representing carbon in scientific contexts",
+    "indicating a grade or rating"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "celsius",
+    "temperature",
+    "carbon",
+    "chemistry",
+    "grade",
+    "rating",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

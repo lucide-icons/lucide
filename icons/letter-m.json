@@ -4,19 +4,25 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "indicating millions or mega units",
+    "representing metre units in measurements",
+    "representing male markers or labels",
+    "indicating medium size"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "million",
+    "mega",
+    "metre",
+    "measurement",
+    "male",
+    "medium",
+    "size",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

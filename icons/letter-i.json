@@ -4,19 +4,22 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "indicating information or help",
+    "representing input fields or input controls",
+    "representing electric current in scientific contexts"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "information",
+    "help",
+    "input",
+    "current",
+    "electricity",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"

@@ -4,19 +4,20 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "displaying alphabetic labels",
-    "representing keyboard shortcuts",
-    "marking initials or monograms"
+    "representing gravity or g-force",
+    "indicating gram units in measurements"
   ],
   "tags": [
     "alphabet",
     "character",
     "uppercase",
+    "gravity",
+    "g-force",
+    "gram",
+    "measurement",
     "text",
     "font",
-    "typography",
-    "initial",
-    "monogram"
+    "typography"
   ],
   "categories": [
     "text"
