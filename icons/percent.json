@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "percentage",
     "modulo",
@@ -16,9 +17,9 @@
     "marketing"
   ],
   "categories": [
-    "maths",
+    "math",
     "development",
-    "money",
+    "finance",
     "shopping"
   ]
 }

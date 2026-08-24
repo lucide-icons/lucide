@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "beep",
+    "ring",
+    "clock",
+    "timer",
+    "stopwatch",
+    "alarm",
+    "alert",
+    "wear",
+    "wrist",
+    "strap",
+    "face",
+    "mechanical",
+    "analog",
+    "analogue",
+    "round",
+    "circle"
+  ],
+  "categories": [
+    "time",
+    "devices"
+  ]
+}

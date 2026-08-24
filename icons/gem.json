@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "connium",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "diamond",
     "crystal",
@@ -21,7 +23,7 @@
   ],
   "categories": [
     "gaming",
-    "money",
-    "development"
+    "development",
+    "finance"
   ]
 }

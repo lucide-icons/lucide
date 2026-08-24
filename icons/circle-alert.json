@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "warning",
     "alert",
@@ -11,10 +12,13 @@
     "exclamation mark"
   ],
   "categories": [
-    "notifications",
-    "shapes"
+    "notifications"
   ],
   "aliases": [
-    "alert-circle"
+    {
+      "name": "alert-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

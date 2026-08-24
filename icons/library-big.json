@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "books",
     "reading",
@@ -32,7 +33,7 @@
     "text",
     "photography",
     "multimedia",
-    "maps",
+    "navigation",
     "development"
   ]
 }

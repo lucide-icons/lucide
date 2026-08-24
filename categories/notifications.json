@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
-  "title": "Notifications",
+  "title": "Notification",
   "icon": "triangle-alert"
 }

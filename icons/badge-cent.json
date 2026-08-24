@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "discount",
     "offer",
@@ -24,9 +25,6 @@
   ],
   "categories": [
     "shopping",
-    "money",
-    "currency",
-    "account",
-    "shapes"
+    "finance"
   ]
 }

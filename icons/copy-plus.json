@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "clone",
     "duplicate",
@@ -14,6 +15,6 @@
   ],
   "categories": [
     "text",
-    "maths"
+    "math"
   ]
 }

@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "tangential",
     "shape",
@@ -14,7 +15,7 @@
   ],
   "categories": [
     "shapes",
-    "maths",
+    "math",
     "design",
     "tools"
   ]

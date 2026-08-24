@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "jguddas",
+    "johnletey",
+    "Footagesus"
+  ],
+  "use-cases": [],
+  "tags": [
+    "power",
+    "electricity",
+    "energy",
+    "accumulator",
+    "charge",
+    "plus",
+    "economy",
+    "health",
+    "add",
+    "new",
+    "maximum",
+    "upgrade",
+    "extra",
+    "+"
+  ],
+  "categories": [
+    "devices"
+  ]
+}

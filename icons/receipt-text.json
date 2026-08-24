@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",
@@ -16,7 +19,7 @@
     "contract"
   ],
   "categories": [
-    "money",
+    "finance",
     "travel"
   ]
 }

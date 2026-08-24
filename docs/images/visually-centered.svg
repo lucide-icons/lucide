@@ -53,7 +53,9 @@
 <path d="M120 350H360" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M350 120V360" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
-<path d="M160 160L230.7 330L255.8 256.1L330 230.7L160 160Z" stroke="#3C3C43" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="embed-lucide-mouse-pointer-2" stroke="#3C3C43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(120 120), scale(10)">
+  <path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
+</g>
 <path opacity="0.5" d="M240 120V360M360 240H120" stroke="#F56565" stroke-dasharray="1 1"/>
 </g>
 <defs>

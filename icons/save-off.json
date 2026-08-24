@@ -1,8 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AndreasSas"
+    "AnnaSasDev"
   ],
+  "use-cases": [],
   "tags": [
     "floppy disk",
     "unsalvageable"

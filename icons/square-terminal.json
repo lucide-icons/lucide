@@ -4,6 +4,7 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "command line",
@@ -11,10 +12,13 @@
     "shell"
   ],
   "categories": [
-    "development",
-    "shapes"
+    "development"
   ],
   "aliases": [
-    "terminal-square"
+    {
+      "name": "terminal-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

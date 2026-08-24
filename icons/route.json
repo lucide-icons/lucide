@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "path",
     "journey",
@@ -12,7 +13,6 @@
     "stations"
   ],
   "categories": [
-    "maps",
     "navigation"
   ]
 }

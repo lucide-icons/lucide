@@ -4,6 +4,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "h5",
     "html",
@@ -11,7 +12,6 @@
     "markdown"
   ],
   "categories": [
-    "text",
-    "development"
+    "text"
   ]
 }

@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "colebemis"
+    "colebemis",
+    "UsamaKhan"
   ],
+  "use-cases": [],
   "tags": [
     "tv",
     "screen",
@@ -24,7 +26,6 @@
   ],
   "categories": [
     "connectivity",
-    "devices",
-    "development"
+    "devices"
   ]
 }

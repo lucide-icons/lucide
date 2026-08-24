@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "brightness",
     "weather",
@@ -14,6 +15,7 @@
   "categories": [
     "accessibility",
     "weather",
-    "seasons"
+    "seasons",
+    "sustainability"
   ]
 }

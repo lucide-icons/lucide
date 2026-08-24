@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "direction",
     "north",
@@ -10,8 +11,6 @@
     "out"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "maps"
+    "arrows"
   ]
 }

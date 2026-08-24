@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "cubes",
     "packages",
@@ -16,7 +18,6 @@
     "merge"
   ],
   "categories": [
-    "shapes",
     "development",
     "files"
   ]

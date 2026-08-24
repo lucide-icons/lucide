@@ -3,17 +3,29 @@
   "contributors": [
     "mittalyashu",
     "ericfennis",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "balance",
     "legal",
     "license",
     "right",
     "rule",
-    "law"
+    "law",
+    "justice",
+    "weight",
+    "measure",
+    "compare",
+    "judge",
+    "fair",
+    "ethics",
+    "decision"
   ],
   "categories": [
-    "maps"
+    "navigation",
+    "science",
+    "finance"
   ]
 }

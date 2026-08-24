@@ -1,8 +1,9 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AndreasSas"
+    "AnnaSasDev"
   ],
+  "use-cases": [],
   "tags": [
     "electricity",
     "energy",
@@ -10,6 +11,7 @@
   ],
   "categories": [
     "buildings",
-    "sustainability"
+    "sustainability",
+    "navigation"
   ]
 }

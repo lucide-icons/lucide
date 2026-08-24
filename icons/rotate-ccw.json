@@ -8,6 +8,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "arrow",
     "left",
@@ -17,7 +18,12 @@
     "rerun",
     "refresh",
     "backup",
-    "undo"
+    "undo",
+    "replay",
+    "redo",
+    "retry",
+    "rewind",
+    "reverse"
   ],
   "categories": [
     "arrows",

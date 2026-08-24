@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "vqh2602",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "water",
+    "cleaning",
+    "soap",
+    "bath",
+    "hygiene",
+    "freshness",
+    "wash",
+    "foam",
+    "cleanliness",
+    "shampoo",
+    "purity",
+    "splash",
+    "lightness",
+    "airy",
+    "relaxation",
+    "spa",
+    "bubbly",
+    "fluid",
+    "floating",
+    "drop"
+  ],
+  "categories": [
+    "weather"
+  ]
+}

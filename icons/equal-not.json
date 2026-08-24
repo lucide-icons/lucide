@@ -3,16 +3,17 @@
   "contributors": [
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "calculate",
     "off",
-    "maths",
+    "math",
     "operator",
     "code",
     "≠"
   ],
   "categories": [
-    "maths",
+    "math",
     "development"
   ]
 }

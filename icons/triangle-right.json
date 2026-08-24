@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "volume",
     "controls",
@@ -17,6 +18,6 @@
   ],
   "categories": [
     "shapes",
-    "maths"
+    "math"
   ]
 }

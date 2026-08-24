@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "abdeniz",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "filter",
+    "plus",
+    "options",
+    "add"
+  ],
+  "categories": [
+    "text",
+    "layout"
+  ]
+}

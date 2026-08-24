@@ -8,9 +8,5 @@ squircle
 strikethrough
 touchpad
 ungroup
-pilcrow
-
-# Brands
-codepen
-codesandbox
-dribbble
+toc
+sunlounger

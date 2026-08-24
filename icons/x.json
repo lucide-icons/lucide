@@ -4,19 +4,22 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "cancel",
     "close",
+    "cross",
     "delete",
+    "ex",
     "remove",
     "times",
     "clear",
-    "maths",
+    "math",
     "multiply",
     "multiplication"
   ],
   "categories": [
     "notifications",
-    "maths"
+    "math"
   ]
 }

@@ -3,19 +3,24 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "sum",
     "calculate",
     "formula",
-    "maths",
+    "math",
     "enumeration",
     "enumerate"
   ],
   "categories": [
     "text",
-    "maths"
+    "math"
   ],
   "aliases": [
-    "sigma-square"
+    {
+      "name": "sigma-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

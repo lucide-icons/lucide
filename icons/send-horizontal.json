@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "email",
     "message",
@@ -20,8 +22,7 @@
     {
       "name": "send-horizonal",
       "deprecated": true,
-      "deprecationReason": "alias.typo",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.typo"
     }
   ]
 }

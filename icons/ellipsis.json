@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "et cetera",
     "etc",
@@ -18,6 +19,11 @@
     "coding",
     "spread",
     "rest",
+    "more",
+    "further",
+    "extra",
+    "overflow",
+    "dots",
     "…",
     "..."
   ],
@@ -26,6 +32,10 @@
     "development"
   ],
   "aliases": [
-    "more-horizontal"
+    {
+      "name": "more-horizontal",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

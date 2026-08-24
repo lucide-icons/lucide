@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "cancel",
     "close",
@@ -17,6 +18,6 @@
   ],
   "categories": [
     "notifications",
-    "maths"
+    "math"
   ]
 }

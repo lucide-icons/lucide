@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "token",
@@ -15,7 +16,7 @@
     "args",
     "input",
     "call",
-    "maths",
+    "math",
     "formula",
     "function",
     "(",
@@ -24,6 +25,6 @@
   "categories": [
     "development",
     "files",
-    "maths"
+    "math"
   ]
 }

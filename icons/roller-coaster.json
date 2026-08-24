@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "attraction",
     "entertainment",
@@ -11,6 +12,6 @@
     "funfair"
   ],
   "categories": [
-    "maps"
+    "navigation"
   ]
 }

@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "screens",
     "sizes",
@@ -27,8 +28,6 @@
   "categories": [
     "layout",
     "design",
-    "photography",
-    "devices",
-    "connectivity"
+    "photography"
   ]
 }
