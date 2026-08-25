@@ -47,9 +47,9 @@ const pencilRulerVertical = [
 
 # Naming conventions
 
-Learn how to choose clear and consistent names for Lucide icons.
+Learn how to choose clear, consistent names for Lucide icons.
 
-This section covers general naming rules, word order, modifiers, variants, related icons, and other conventions used to keep icon names predictable across the library.
+This page covers word order, modifiers, variants, related icons, and other rules that keep icon names predictable.
 
 Use this when naming a new icon or reviewing a proposed name.
 
@@ -68,7 +68,7 @@ Avoid other naming schemes.
 
 ## 2. Use American English
 
-Icon names **must** use American English names, as opposed to local variants.
+Icon names **must** use American English, not local variants.
 
 :::: example
 ::: do <span>`color`, `maximize`, `center`</span>
@@ -79,11 +79,11 @@ Icon names **must** use American English names, as opposed to local variants.
 
 ## 3. Name icons for what they depict
 
-Icon names **must** describe what the icon depicts, not its intended use or meaning.
+Icon names **must** describe what the icon shows, not how someone might use it.
 
 :::: example
 ::: do <LucideIcon :iconNode="save" /> `floppy-disk`
-The icon **depicts** a floppy disk.
+The icon **shows** a floppy disk.
 :::
 ::: dont <LucideIcon :iconNode="save" /> `save`
 Save is a use case.
@@ -92,7 +92,7 @@ Save is a use case.
 
 :::: example
 ::: do <LucideIcon :iconNode="ban" /> `circle-slash`
-The icon **depicts** a circle with a slash across it.
+The icon **shows** a circle with a slash across it.
 :::
 ::: dont <LucideIcon :iconNode="ban" /> `ban`
 Ban is an action.
@@ -100,16 +100,14 @@ Ban is an action.
 ::::
 
 ::: tip
-An icon can represent different actions or concepts depending on where and how it is used. Naming
-icons for their visual appearance keeps names unambiguous and independent of their use case.
+An icon can mean different things in different products. Naming icons by appearance keeps names clear and independent from use cases.
 :::
 
 ## 4. Name related icons consistently
 
 Icons that belong to the same group **must** use the `<group>-<variant>` naming scheme.
 
-The group name comes first, followed by the part that distinguishes the icon from the rest of the
-group.
+The group name comes first. The variant comes after it.
 
 :::: example
 ::: do <span><LucideIcon :iconNode="badgePlus" /> + <LucideIcon :iconNode="badgeCheck" /></span> <span>`badge-plus` & `badge-check`</span>
@@ -122,28 +120,27 @@ group.
 
 ## 5. Describe alternate icons
 
-Alternate versions of an icon **must** be named for what makes them visually distinct. They **must
-not** use numbers merely to distinguish one version from another.
+Alternate versions of an icon **must** be named for what makes them visually different. Do **not** use numbers just to separate one version from another.
 
 :::: example
 ::: do <LucideIcon :iconNode="sendHorizontal" /> `send-horizontal`
 The icon depicts a horizontal "send" symbol.
 :::
 ::: dont <LucideIcon :iconNode="sendHorizontal" /> <span>`send-2` or `send-alt`</span>
-"send no. 2" or "alternative send" are not descriptive names.
+"send number 2" and "alternative send" are not clear names.
 :::
 ::::
 
 ## 6. Only use numerals when depicted
 
-Icon names **must not** contain numerals unless the numeral itself is depicted in the icon.
+Icon names **must not** include numbers unless the icon shows the number.
 
 :::: example
 ::: do <LucideIcon :iconNode="arrowDown01" /> `arrow-down-0-1`
 The arrow points from 0 to 1.
 :::
 ::: dont <LucideIcon :iconNode="sendHorizontal" /> `send-2`
-The icon doesn't feature the number 2.
+The icon does not show the number 2.
 :::
 ::::
 
@@ -152,15 +149,15 @@ The icon doesn't feature the number 2.
 The hands point to 3 o'clock.
 :::
 ::: dont <LucideIcon :iconNode="userRound" /> `user-3`
-The icon doesn't feature the number 3.
+The icon does not show the number 3.
 :::
 ::::
 
-Numerals must not be used to distinguish between otherwise similarly named icons.
+Do not use numbers to separate similar icons.
 
 ## 7. Order elements by size
 
-When an icon depicts multiple elements of different sizes, their names **must** be ordered from largest to smallest.
+When an icon shows multiple elements of different sizes, order their names from largest to smallest.
 
 For an icon containing a circle and a person:
 
@@ -183,62 +180,59 @@ If they do not overlap, name them in English reading order: top to bottom, then 
 
 :::: example
 ::: do <LucideIcon :iconNode="pencilRuler" /> `pencil-ruler`
-The `pencil` is **in front** of the `ruler`, so **it takes precedence**.
+The `pencil` is **in front** of the `ruler`, so it comes first.
 :::
 ::: do <LucideIcon :iconNode="rulerDimensionLine" /> `ruler-dimension-line`
-While the ruler is below the dimension line, it is **reasonably larger**, so it should be listed first.
+The ruler is below the dimension line, but it is **larger**, so it comes first.
 :::
 ::::
 
 :::: example
 ::: do <LucideIcon :iconNode="sunSnow" /> `sun-snow`
-The `sun` is **left of** the `snowflake`, so **it should be listed first**.
+The `sun` is **left of** the `snowflake`, so it comes first.
 :::
 ::: dont <LucideIcon :iconNode="pencilRulerHorizontal" /> `ruler-pencil`
-The `ruler` is **below** the `pencil`, so `pencil-ruler` would be the correct name.
+The `ruler` is **below** the `pencil`, so `pencil-ruler` is the correct name.
 :::
 ::::
 
 ## 9. Place modifiers after the element they describe
 
-Modifiers **must** follow the element they describe, using the `<element>-<modifier>` naming scheme.
+Modifiers **must** come after the element they describe: `<element>-<modifier>`.
 
 :::: example
 ::: do <LucideIcon :iconNode="heartCrack" /> `heart-broken`
-The icon depicts a heart that is **cracked**.
+The icon shows a heart that is **cracked**.
 :::
 ::: dont <LucideIcon :iconNode="boneFracture" /> `broken-bone`
-The icon depicts a bone that is **broken**, so it should be `bone-broken`.
+The icon shows a bone that is **broken**, so name it `bone-broken`.
 :::
 ::::
 
-When an icon contains multiple modified elements, each modifier **must** follow its respective element.
+When an icon has multiple modified elements, each modifier **must** follow the element it describes.
 
 :::: example
 ::: do <LucideIcon :iconNode="circleFadingArrowUp" /> `circle-fading-arrow-up`
-The icon depicts a circle, which is **fading**, inside it is an arrow pointing **up**.
-- `circle` comes first, because it is larger than `arrow`
-- `fading` follows `circle` because it modifies the circle.
-- `up` follows `arrow` because it modifies the arrow.
+The icon shows a **fading** circle with an arrow pointing **up** inside it.
+
+`circle` comes first because it is larger than `arrow`. `fading` follows `circle` because it modifies the circle. `up` follows `arrow` because it modifies the arrow.
 :::
 ::: dont <LucideIcon :iconNode="notepadTextDashed" /> `notepad-text-dashed`
-This icon depicting a dashed notebook with text inside should be named `notepad-dashed-text`.
-- `notepad` comes first, because it is larger than `text`
-- `dashed` follows `notepad` because it modifies the notepad.
-- `text` should follow both `notepad` and `dashed`, because `dashed` does not modify `text`.
+This icon shows a dashed notepad with text inside, so name it `notepad-dashed-text`.
+
+`notepad` comes first because it is larger than `text`. `dashed` follows `notepad` because it modifies the notepad. `text` follows both because `dashed` does not modify `text`.
 :::
 ::::
 
-## TL;DR
+## Summary
 
 When naming an icon:
 
-1. **Describe what you see**, not what the icon could mean or be used for.
+1. **Describe what you see**, not what the icon could mean.
 2. **Use American English** and **lowercase kebab-case**.
-3. **Keep related icons together** using `<group>-<variant>`.
+3. **Keep related icons together** with `<group>-<variant>`.
 4. **Describe what makes an alternate unique** instead of numbering it.
 5. **Only use numerals when they are depicted** in the icon.
 6. **Order elements from largest to smallest**.
-7. If elements are roughly the same size, order them **front to back**, or otherwise in **English
-   reading order**.
+7. If elements are roughly the same size, order them **front to back**, or otherwise in **English reading order**.
 8. **Place modifiers after the element they describe**: `<element>-<modifier>`.

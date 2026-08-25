@@ -1,55 +1,60 @@
 ---
-description: Learn how to use Figma for creating icons for Lucide.
+description: Learn how to create Lucide icons in Figma.
 ---
 
 # Figma template guide
 
-This guide shows the steps to set up Figma for creating icons that conform to the Lucide design guidelines.
+This guide shows how to set up Figma for Lucide icons.
 
-## Setting up the frame
+## Set up the frame
 
-When you create a new document in Figma, the document. Each individual icon you want to create, has to be created in a separate frame.
+Create each icon in its own frame.
 
-To do this, create a frame of 24x24 pixels.
+Use a `24 × 24` pixel frame.
 
-1. Click the frame button (or press `F`)
-2. Draw a 24x24 frame (or edit it afterwards from the design window)
+1. Click the frame button, or press `F`.
+2. Draw a `24 × 24` frame, or set the size in the right sidebar.
 
-In this newly created frame, you will create your icon. If you want, you can change the name of your frame to the name of the icon you are going to create. Then it will be exported as `FRAME-NAME.svg`.
+Design the icon inside this frame. Name the frame after the icon so Figma exports it as `frame-name.svg`.
 
 ## Create your icon
 
-To design your icon in the style of Feather Icons, you need to adjust a few settings in Figma.
+Set up the stroke before drawing.
 
-Draw in your new frame with the pen tool. You can open it with the window at the top, or with the shortcut `P`. Once you click in your frame, you can adjust the settings for the pen tool in the design-window on the right.
+Draw in the frame with the pen tool. Open it from the toolbar or press `P`. After you start drawing, adjust the vector settings in the right sidebar.
 
 Set the following:
+
 1. Vector
    1. Corner radius: 2px
 2. Stroke
    1. Stroke width: 2px
    2. Stroke alignment: center
 
-![Figma Stroke Options](../../images/figma-stroke-options.png)
+![Figma stroke options](../../images/figma-stroke-options.png)
 
 ## Export or copy your icon
 
-Once you have completed your icon, you can export it.
+When your icon is ready, export it.
 
-1. Select the frame
-2. Open the *Export* tab on the right
-3. Set the file type as SVG
-4. Press export
+1. Select the frame.
+2. Open the _Export_ section in the right sidebar.
+3. Set the file type to SVG.
+4. Click _Export_.
 
-Or you can also copy its source as SVG.
+You can also copy the SVG source.
 
-1. Select the frame
-2. Right click it
-3. Click on *Copy/Paste as*
-4. Click on *Copy as SVG*
+1. Select the frame.
+2. Right-click it.
+3. Choose _Copy/Paste as_.
+4. Choose _Copy as SVG_.
 
-That's it. You just made your first icon. Congratulations!
+You now have an SVG to prepare for contribution.
 
-## Figma tip
+## Optimize your icon
 
-1. The [Icon Design Guidelines](design-principles.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).
+You can optimize the exported SVG with [Lucide Studio](https://studio.lucide.dev/).
+
+## Check spacing in Figma
+
+The [design language](design-principles.md) requires at least 2 pixels of spacing between separate elements. In Figma, hold `Option` on macOS or `Alt` on Windows to check spacing.

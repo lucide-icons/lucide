@@ -1,40 +1,42 @@
 ---
-description: Learn how to set up Inkscape for creating icons for Lucide.
+description: Learn how to create Lucide icons in Inkscape.
 ---
 
-# Inkscape Setup Guide
+# Inkscape setup guide
 
-This guide shows the steps to set up Inkscape for creating icons that conform to the Lucide design guidelines.
+This guide shows how to set up Inkscape for Lucide icons.
 
-## Setting up The Canvas
+## Set up the canvas
 
-When opening a new document, Inkscape will create a canvas of a default size.  To change the size to 24x24:
+Inkscape creates new documents with a default canvas size. Change it to `24 × 24` pixels:
 
-1. Open the Document Properties dialog (File -> Document Properties).
-2. On the “Page Size” tab, under “Custom Size” set the Units to `px` and set both Height and Width to 24.
-![Setting Page Size](../../images/page-size.png?raw=true "Setting Page Size")
-3. On the “Grid” tab, select `Rectangular Grid` and click “New Grid”.
-![Setting Grid Properties](../../images/grid-1.png?raw=true "Setting Grid Properties")
-4. Set the Grid Units to `px` and set Spacing X and Spacing Y both to 1.
-![Setting Grid Properties](../../images/grid-2.png?raw=true "Setting Grid Properties")
+1. Open the Document Properties dialog with `File > Document Properties`.
+2. On the _Page Size_ tab, under _Custom Size_, set units to `px` and set width and height to `24`.
+   ![Setting page size](../../images/page-size.png?raw=true 'Setting page size')
+3. On the _Grid_ tab, select `Rectangular Grid` and click _New Grid_.
+   ![Setting grid properties](../../images/grid-1.png?raw=true 'Setting grid properties')
+4. Set grid units to `px`, then set `Spacing X` and `Spacing Y` to `1`.
+   ![Setting grid properties](../../images/grid-2.png?raw=true 'Setting grid properties')
 5. Close the Document Properties dialog.
-6. To center the canvas in the viewport, select View -> Zoom -> Drawing.
+6. To center the canvas in the viewport, select `View > Zoom > Drawing`.
 
-## Setting up The Paths
+## Set up paths
 
 1. Create a path or shape.
-2. With the path selected, open the Stroke and Fill panel by pressing `Ctrl+Shift+F` on your keyboard.
-![Stroke Style Properties](../../images/strokes.png?raw=true "Setting Grid Properties")
-3. On the “Stroke Style” tab:
-   * Set Stroke Width to `2px`.
-   * Select the rounded join type.
-   * Select the rounded cap type.
-4. If the shape is a rectangle, select the rectangle and in the top of the screen below the menu bar, set `Rx` and `Ry` to `2px`.
-![Rectangle Radius Properties](../../images/corner-radius.png?raw=true "Rectangle Radius Properties")
+2. With the path selected, press `Ctrl+Shift+F` to open the Stroke and Fill panel.
+   ![Stroke style properties](../../images/strokes.png?raw=true 'Setting grid properties')
+3. On the _Stroke Style_ tab:
+   - Set stroke width to `2px`.
+   - Select the rounded join type.
+   - Select the rounded cap type.
+4. For rectangles, select the rectangle and set `Rx` and `Ry` to `2px` in the toolbar.
+   ![Rectangle radius properties](../../images/corner-radius.png?raw=true 'Rectangle radius properties')
 
-## Saving A File
+## Save a file
 
-1. When ready to save the file, click Save As and select “Optimized SVG” as the file type.
-![Save As](../../images/save-as.png?raw=true "Save as")
-2. After clicking Save, to conform with the other icons in the package, set Pretty Printing to use spaces and set the indentation depth to 2.
-![Optimize](../../images/optimize-settings.png?raw=true "Optimize")
+1. When you are ready, click _Save As_ and choose _Optimized SVG_ as the file type.
+   ![Save as](../../images/save-as.png?raw=true 'Save as')
+
+## Optimize your icon
+
+As a final step, optimize your SVG with [Lucide Studio](https://studio.lucide.dev/).

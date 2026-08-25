@@ -11,7 +11,7 @@ export const resourcesSidebar = [
         link: '/community',
       },
       {
-        text: 'Code of Conduct',
+        text: 'Code of conduct',
         link: '/code-of-conduct',
       },
       {
@@ -37,14 +37,14 @@ export const resourcesSidebar = [
         link: '/contribute/icons/',
       },
       {
-        text: 'Design Language',
+        text: 'Design language',
         link: '/contribute/icons/design-principles',
-        desc: 'Learn the visual principles that make Lucide icons consistent and recognizable.',
+        desc: 'Learn the visual rules that make Lucide icons consistent and recognizable.',
       },
       {
-        text: 'Design Specification',
+        text: 'Design specification',
         link: '/contribute/icons/specification',
-        desc: 'Reference the concrete requirements that Lucide icons must or should follow.',
+        desc: 'Review the rules Lucide icons must follow.',
       },
       {
         text: 'Naming conventions',
@@ -54,7 +54,7 @@ export const resourcesSidebar = [
       {
         text: 'Metadata conventions',
         link: '/contribute/icons/metadata-conventions',
-        desc: 'Learn how to write tags, categories, aliases, and other metadata for Lucide icons.',
+        desc: 'Learn how to write use cases, tags, categories, aliases, and other icon metadata.',
         items: [
           {
             text: 'Use case guide',
@@ -71,12 +71,12 @@ export const resourcesSidebar = [
       {
         text: 'SVG conventions',
         link: '/contribute/icons/code-conventions',
-        desc: 'Learn how SVG files should be structured and written for the Lucide repository.',
+        desc: 'Learn how to structure and write Lucide SVG files.',
       },
       {
         text: 'Design software guides',
         collapsed: false,
-        desc: 'Learn how to design and export Lucide icons using common vector design tools.',
+        desc: 'Learn how to design and export Lucide icons with common vector tools.',
         items: [
           {
             text: 'Adobe Illustrator',

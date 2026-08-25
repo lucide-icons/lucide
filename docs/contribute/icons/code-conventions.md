@@ -4,11 +4,11 @@ description: Learn about allowed SVG elements and attributes, optimization, and 
 
 # SVG conventions
 
-Before an icon is added to the library, we like to have readable and optimized SVG code.
+Before you add an icon to Lucide, make sure its SVG is readable and optimized.
 
 ## Global attributes
 
-For each icon these attributes are applied, corresponding to the above rules.
+Each icon uses these root SVG attributes:
 
 ```xml
 <svg
@@ -28,13 +28,15 @@ For each icon these attributes are applied, corresponding to the above rules.
 
 ## Minify paths
 
-The code of paths can sometimes get quite large. To reduce file size we like to minify the code.
-We recommend to use [Lucide Studio](https://studio.lucide.dev/?utm_source=lucide.dev&utm_medium=design-guide) to tidy paths to 3 points of precision.
+Path data can get large. Minify it to keep SVG files small.
+
+Use [Lucide Studio](https://studio.lucide.dev/?utm_source=lucide.dev&utm_medium=design-guide) to tidy paths to 3 decimal places.
 
 ## Allowed elements
 
-SVG files may only contain simple path and shape elements, which may not have any attributes other than sizing and spacing.\
-In practice only the following elements and attributes are allowed:
+SVG files may only contain simple path and shape elements. These elements may only use sizing and position attributes.
+
+Only these elements and attributes are allowed:
 
 - `<path d>`
 - `<line x1 x2>`
@@ -44,15 +46,15 @@ In practice only the following elements and attributes are allowed:
 - `<ellipse cx cy rx ry>`
 - `<rect x y width height rx>`
 
-This also means that no transforms, filters, fills or explicit strokes are allowed.
+Do not use transforms, filters, fills, or explicit stroke colors.
 
-Never use [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use). While it may sometimes seem like a good way to optimize file size, there's no way to ensure that the referenced element IDs will be unique once the SVGs are embedded in HTML documents.
+Never use [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use). It can reduce file size, but referenced IDs may conflict when SVGs are embedded in HTML.
 
-## JSON metadata descriptor
+## Metadata file
 
-Each icon added must also come with a matching JSON file listing contributors, use cases, tags and categories for the icon.
+Each icon must also have a matching JSON file with contributors, use cases, tags, and categories.
 
-Please use consult [our metadata conventions page](./metadata-conventions.md) for more information about this file.
+See [metadata conventions](./metadata-conventions/) for details.
 
 ## Validation
 
@@ -76,14 +78,14 @@ pnpm run lint:icons:all
 
 ## Checklist
 
-Before opening a PR, confirm that:
+Before opening a pull request, confirm that:
 
-- The SVG uses the standard `24` by `24` viewBox.
+- The SVG uses the standard `24 × 24` viewBox.
 - The SVG uses `fill="none"` and `stroke="currentColor"`.
 - Stroke width, line caps, and line joins match the Lucide defaults.
 - Paths are tidy and use appropriate numeric precision.
-- Only allowed SVG elements and attributes are used.
+- The SVG uses only allowed elements and attributes.
 - The SVG does not use transforms, filters, fills, explicit strokes, or `<use>`.
 - The icon has a matching JSON metadata file.
-- Ensure that `pnpm run lint:icons` passes.
-- Ensure that `pnpm run lint:json:icons` passes.
+- `pnpm run lint:icons` passes.
+- `pnpm run lint:json:icons` passes.

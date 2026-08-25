@@ -4,15 +4,16 @@ description: Learn how to use the Affinity Designer template for Lucide.
 
 # Affinity Designer template guide
 
-This guide describes how to use the Affinity Designer template for Lucide.
+This guide explains how to use the Affinity Designer template for Lucide.
 
-## General workflow
+## Workflow
 
-> Attention: By default, Affinity Designer sets the unit for stroke to points. Make sure that it is set to pixel. To do this, open `Preferences > User Interface`. Under `Decimal Places for Unit Types`, uncheck `Show Lines in points`.
+> Affinity Designer uses points for strokes by default. Change strokes to pixels before drawing. Open `Preferences > User Interface`, then under `Decimal Places for Unit Types`, uncheck `Show Lines in points`.
 
 1. Download and open the [Affinity Designer template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/affinity_designer.aftemplate).
-2. Follow the [Icon Design Principles](design-principles.md) while you use the template (to ensure integrity with the Lucide icon pack).
-3. Export the file as SVG (`File > Export`). Make sure that _Rastering_ is set to _Nothing_, _Export text as curves_ is checked (hopefully, you won't need this), _Use hex colors_ is checked, and _Flatten transforms_ is checked.
+2. Follow the [design language](design-principles.md) while designing your icon.
+3. Export the file as SVG with `File > Export`. Set rasterization to _Nothing_, check _Export text as curves_, check _Use hex colors_, and check _Flatten transforms_.
 
-	 ![SVG export options in Affinity Designer](../../images/affinity-designer-export-options.png?raw=true)
-4. Optimize the exported SVG file further with [SVGOMG](https://jakearchibald.github.io/svgomg/) or [`svgo`](https://github.com/svg/svgo) (using `svgo --multipass exported_icon.svg`).
+   ![SVG export options in Affinity Designer](../../images/affinity-designer-export-options.png?raw=true)
+
+4. Optimize the exported SVG with [Lucide Studio](https://studio.lucide.dev/).

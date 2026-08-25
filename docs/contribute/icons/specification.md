@@ -1,25 +1,25 @@
 ---
-description: Technical specification and conformance requirements for Lucide icons.
+description: Rules Lucide icons must follow.
 ---
 
-# Icon Design Specification
+# Icon design specification
 
-This document defines the requirements for icons included in Lucide.
+This page lists the rules Lucide icons must follow.
 
-For explanations, examples, and guidance on applying these requirements, see the [Lucide Design Language](./design-principles).
+For examples and guidance, see the [Lucide design language](./design-principles).
 
-## Conformance
+## Requirement levels
 
-The words **must**, **must not**, **should**, and **should not** indicate the requirement level of each rule:
+These terms show how strictly each rule applies:
 
-- **Must** and **must not** define requirements that an icon is expected to meet.
-- **Should** and **should not** define requirements that may be deviated from when necessary to produce a better icon.
+- **Must** and **must not** mark required rules.
+- **Should** and **should not** mark rules that can flex when needed to make a better icon.
 
-Any deviation should be intentional and consistent with the [Lucide Design Language](./design-principles).
+Any exception should be intentional and fit the [Lucide design language](./design-principles).
 
 ## Canvas
 
-1. Icons **must** use a 24 × 24 pixel canvas.
+1. Icons **must** use a 24 × 24-pixel canvas.
 2. The canvas **must** be square.
 3. Icon strokes **must** remain at least 1 pixel from the edge of the canvas.
 
@@ -33,8 +33,8 @@ Any deviation should be intentional and consistent with the [Lucide Design Langu
 ## Corners
 
 1. Sharp corners **should** be rounded unless the geometry of the icon requires otherwise.
-2. Elements at least 8 pixels wide or tall **should** use a 2 pixel corner radius for 90° corners.
-3. Elements smaller than 8 pixels **should** use a 1 pixel corner radius for 90° corners.
+2. Elements at least 8 pixels wide or tall **should** use a 2-pixel corner radius for 90° corners.
+3. Elements smaller than 8 pixels **should** use a 1-pixel corner radius for 90° corners.
 4. Diagonal lines meeting at a 90° angle **should** use a radius that preserves pixel-grid alignment. This radius is typically approximately 2.41 pixels.
 5. Acute corners **should** use an appropriate amount of rounding based on their geometry.
 6. Corners where multiple lines meet **should** remain sharp when rounding would cause the icon to render inconsistently at different sizes.
@@ -47,20 +47,20 @@ Any deviation should be intentional and consistent with the [Lucide Design Langu
 4. Spacing **should** remain visually consistent where elements connect or intersect.
 5. Elements **should not** terminate with an abrupt cut where another element visually continues or intersects them.
 
-## Optical volume
+## Visual weight
 
-1. Icons **should** have an optical volume comparable to the `circle` and `square` icons.
+1. Icons **should** have a visual weight similar to the `circle` and `square` icons.
 2. Icons **should not** appear substantially larger, smaller, heavier, or lighter than comparable Lucide icons.
 
 ## Alignment and balance
 
 1. Icons **should** be visually centered within the canvas.
-2. Asymmetrical icons **may** be positioned off their geometric center to compensate for their visual center of gravity.
+2. Asymmetrical icons **may** be moved slightly off center so they look visually centered.
 3. Symmetrical icons **should** be geometrically centered.
 
 ## Visual density
 
-1. Icons **should** maintain a level of visual density comparable to other Lucide icons.
+1. Icons **should** have a level of detail similar to other Lucide icons.
 2. Details **should** be simplified when they cause an icon to appear substantially denser than comparable icons.
 3. Details that are not necessary for recognition **should** be omitted.
 
@@ -85,11 +85,11 @@ Any deviation should be intentional and consistent with the [Lucide Design Langu
 1. Variants of an existing icon **should** preserve the geometry, placement, and orientation of the base icon.
 2. Elements that already exist in other Lucide icons **should** reuse established geometry where applicable.
 3. Related icons **should** use consistent representations of shared elements.
-4. Common modifiers and addons **should** use consistent geometry, size, and placement across related icons.
-5. Existing geometry **may** be modified when necessary to satisfy other requirements of the Lucide Design Language.
+4. Common modifiers and add-ons **should** use consistent geometry, size, and placement across related icons.
+5. Existing geometry **may** be modified when necessary to satisfy other Lucide design language rules.
 
 ## Priority of requirements
 
-When two non-mandatory requirements conflict, visual clarity and consistency with the Lucide Design Language should take precedence over mechanical adherence to an individual rule.
+When two non-required rules conflict, choose visual clarity and consistency with the Lucide design language.
 
-Requirements marked **must** or **must not** may only be deviated from where an exception is explicitly defined by the project.
+Rules marked **must** or **must not** can only be broken when the project defines an explicit exception.

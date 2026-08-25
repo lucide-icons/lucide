@@ -1,6 +1,7 @@
 ---
 description: Guidelines and instructions for contributing icons to Lucide
 ---
+
 <script setup>
 import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue';
 import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue';
@@ -9,26 +10,26 @@ import { resourcesSidebar } from '../../.vitepress/sidebar/resources.ts';
 
 # Designing icons for Lucide
 
-Within any icon set, every icon should feel like it belongs alongside the rest of the library.
+Every icon should feel like it belongs with the rest of Lucide.
 
-This guide explains how to design and prepare icons for contribution to Lucide.
+This guide explains how to design and prepare icons for Lucide.
 
-## What's in this guide?
+## What this guide covers
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in resourcesSidebar[2].items.slice(1, -1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-## Designing icons with your preferred software
+## Use your preferred design tool
 
-You do not need to use any particular design software, you can design Lucide icons with any vector graphics editor that can export SVG.
+You can design Lucide icons with any vector editor that can export SVG.
 
-We provide step-by-step guides for the following common tools:
+Use these step-by-step guides for common tools:
 
 <OverviewLinkGrid>
   <OverviewLink v-for="item in resourcesSidebar[2].items.at(-1).items" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
-These guides explain how to set up your document, work within the Lucide design constraints, and export an SVG suitable for contribution.
+These guides explain how to set up your document, follow the Lucide rules, and export a usable SVG.
 
 Regardless of which tool you use, the same design and SVG requirements apply.
