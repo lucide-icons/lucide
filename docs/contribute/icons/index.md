@@ -1,11 +1,10 @@
 ---
-title: Contributing Icons
-description: Guidelines and instructions for contributing icons to Lucide.
+description: Guidelines and instructions for contributing icons to Lucide
 ---
 <script setup>
-import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue'
-import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue'
-import { resourcesSidebar } from '../../.vitepress/sidebar/resources.ts'
+import OverviewLink from '../../.vitepress/theme/components/base/OverviewLink.vue';
+import OverviewLinkGrid from '../../.vitepress/theme/components/base/OverviewLinkGrid.vue';
+import { resourcesSidebar } from '../../.vitepress/sidebar/resources.ts';
 </script>
 
 # Designing icons for Lucide

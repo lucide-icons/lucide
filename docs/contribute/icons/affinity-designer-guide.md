@@ -1,14 +1,14 @@
 ---
-title: Affinity Designer Template Guide
+description: Learn how to use the Affinity Designer template for Lucide.
 ---
 
-# Affinity Designer Template Guide
+# Affinity Designer template guide
 
 This guide describes how to use the Affinity Designer template for Lucide.
 
-## General Workflow
+## General workflow
 
->Attention: By default, Affinity Designer sets the unit for stroke to points. Make sure that it is set to pixel. To do this, open `Preferences > User Interface`. Under `Decimal Places for Unit Types`, uncheck `Show Lines in points`.
+> Attention: By default, Affinity Designer sets the unit for stroke to points. Make sure that it is set to pixel. To do this, open `Preferences > User Interface`. Under `Decimal Places for Unit Types`, uncheck `Show Lines in points`.
 
 1. Download and open the [Affinity Designer template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/affinity_designer.aftemplate).
 2. Follow the [Icon Design Principles](design-principles.md) while you use the template (to ensure integrity with the Lucide icon pack).

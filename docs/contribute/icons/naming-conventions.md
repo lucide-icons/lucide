@@ -2,7 +2,7 @@
 description: Learn how to choose clear and consistent names for Lucide icons.
 ---
 <script setup>
-import { arrowDown01, sendHorizontal, heartCrack, circleDashed, circleUser, clock3, userRound, save, ban, pencilRuler } from '~/.vitepress/data/iconNodes';
+import { arrowDown01, badgePlus, badgeCheck, sendHorizontal, heartCrack, circleDashed, circleUser, clock3, userRound, save, ban, pencilRuler } from '~/.vitepress/data/iconNodes';
 import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 const pencilRulerHorizontal = [
   ["path",{"d":"M10 16v-3","key":"1sz6hv"}],
@@ -50,9 +50,9 @@ Avoid other naming schemes.
 Icon names **must** use American English names, as opposed to local variants.
 
 :::: example
-::: do `color`, `maximize`, `center`
+::: do <span>`color`, `maximize`, `center`</span>
 :::
-::: dont `colour`, `maximise`, `centre`
+::: dont <span>`colour`, `maximise`, `centre`</span>
 :::
 ::::
 
@@ -89,10 +89,10 @@ Icons that belong to the same group **must** use the `<group>-<variant>` naming 
 The group name comes first, followed by the part that distinguishes the icon from the rest of the group.
 
 :::: example
-::: do `badge-plus` & `badge-check`
+::: do <span><LucideIcon :iconNode="badgePlus" /> + <LucideIcon :iconNode="badgeCheck" /></span> <span>`badge-plus` & `badge-check`</span>
 `badge` is the group.
 :::
-::: dont `plus-badge` & `check-badge`
+::: dont <span><LucideIcon :iconNode="badgePlus" /> + <LucideIcon :iconNode="badgeCheck" /></span> <span>`plus-badge` & `check-badge`</span>
 `plus` and `check` are not the group.
 :::
 ::::
@@ -105,7 +105,7 @@ Alternate versions of an icon **must** be named for what makes them visually dis
 ::: do <LucideIcon :iconNode="sendHorizontal" /> `send-horizontal`
 The icon depicts a horizontal "send" symbol.
 :::
-::: dont <LucideIcon :iconNode="sendHorizontal" /> `send-2` or `send-alt`
+::: dont <LucideIcon :iconNode="sendHorizontal" /> <span>`send-2` or `send-alt`</span>
 "send no. 2" or "alternative send" are not descriptive names.
 :::
 ::::

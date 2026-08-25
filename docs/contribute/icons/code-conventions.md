@@ -1,8 +1,12 @@
-## Code Conventions
+---
+description: Learn about allowed SVG elements and attributes, optimization, and other code conventions.
+---
+
+# SVG conventions
 
 Before an icon is added to the library, we like to have readable and optimized SVG code.
 
-### Global Attributes
+## Global attributes
 
 For each icon these attributes are applied, corresponding to the above rules.
 
@@ -22,12 +26,12 @@ For each icon these attributes are applied, corresponding to the above rules.
 </svg>
 ```
 
-### Minify paths
+## Minify paths
 
 The code of paths can sometimes get quite large. To reduce file size we like to minify the code.
 We recommend to use [Lucide Studio](https://studio.lucide.dev/?utm_source=lucide.dev&utm_medium=design-guide) to tidy paths to 3 points of precision.
 
-### Allowed elements
+## Allowed elements
 
 SVG files may only contain simple path and shape elements, which may not have any attributes other than sizing and spacing.\
 In practice only the following elements and attributes are allowed:
@@ -81,5 +85,5 @@ Before opening a PR, confirm that:
 - Only allowed SVG elements and attributes are used.
 - The SVG does not use transforms, filters, fills, explicit strokes, or `<use>`.
 - The icon has a matching JSON metadata file.
-- `pnpm run lint:icons` passes.
-- `pnpm run lint:json:icons` passes.
+- Ensure that `pnpm run lint:icons` passes.
+- Ensure that `pnpm run lint:json:icons` passes.

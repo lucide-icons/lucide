@@ -1,12 +1,13 @@
 ---
-title: Figma Template Guide
+description: Learn how to use Figma for creating icons for Lucide.
 ---
 
-# Figma Template Guide
+# Figma template guide
 
-This guide shows the steps to setup Figma for creating icons that conform to the Featherity design guidelines.
+This guide shows the steps to set up Figma for creating icons that conform to the Lucide design guidelines.
 
-## Setting Up The Frame
+## Setting up the frame
+
 When you create a new document in Figma, the document. Each individual icon you want to create, has to be created in a separate frame.
 
 To do this, create a frame of 24x24 pixels.
@@ -16,7 +17,8 @@ To do this, create a frame of 24x24 pixels.
 
 In this newly created frame, you will create your icon. If you want, you can change the name of your frame to the name of the icon you are going to create. Then it will be exported as `FRAME-NAME.svg`.
 
-## Create Your icon
+## Create your icon
+
 To design your icon in the style of Feather Icons, you need to adjust a few settings in Figma.
 
 Draw in your new frame with the pen tool. You can open it with the window at the top, or with the shortcut `P`. Once you click in your frame, you can adjust the settings for the pen tool in the design-window on the right.
@@ -30,7 +32,8 @@ Set the following:
 
 ![Figma Stroke Options](../../images/figma-stroke-options.png)
 
-## Export Or Copy Your Icon
+## Export or copy your icon
+
 Once you have completed your icon, you can export it.
 
 1. Select the frame
@@ -47,5 +50,6 @@ Or you can also copy its source as SVG.
 
 That's it. You just made your first icon. Congratulations!
 
-## Figma Tips
+## Figma tip
+
 1. The [Icon Design Guidelines](design-principles.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).

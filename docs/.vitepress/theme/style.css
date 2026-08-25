@@ -235,7 +235,7 @@ html {
 
 .example-guidance__text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 8px;
   align-items: center;
   justify-content: center;
@@ -249,6 +249,12 @@ html {
   font-size: 20px;
   line-height: 1.4;
   text-align: center;
+}
+
+.example-guidance__text svg.lucide {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: -6px;
 }
 
 .example-guidance__caption {

@@ -1,14 +1,14 @@
 ---
-title: Illustrator Template Guide
+description: Learn how to properly use the Adobe Illustrator template for Lucide.
 ---
 
-# Illustrator Template Guide
+# Adobe Illustrator template guide
 
-This Guide explains how to properly use the Adobe Illustrator Template for Lucide.
+This guide explains how to properly use the Adobe Illustrator template for Lucide.
 
 >Attention: Even though it is unlikely the template can be outdated or not 100% correct. Please check the Icon Design Guide before you start working with the template to ensure integrity with the Lucide icon pack.
 
-## General Workflow
+## General workflow
 
 The Illustrator template is created following guidelines from the [Icon Design Guide](design-principles.md).
 

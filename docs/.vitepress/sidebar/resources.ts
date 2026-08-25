@@ -55,6 +55,18 @@ export const resourcesSidebar = [
         text: 'Metadata conventions',
         link: '/contribute/icons/metadata-conventions',
         desc: 'Learn how to write tags, categories, aliases, and other metadata for Lucide icons.',
+        items: [
+          {
+            text: 'Use case guide',
+            link: '/contribute/icons/metadata-conventions/use-case-guide',
+            desc: '',
+          },
+          {
+            text: 'Tag guide',
+            link: '/contribute/icons/metadata-conventions/tag-guide',
+            desc: '',
+          },
+        ],
       },
       {
         text: 'SVG conventions',

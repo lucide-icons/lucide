@@ -1,11 +1,10 @@
 ---
-title: Icon Design Guide
+description: Learn how to set up Inkscape for creating icons for Lucide.
 ---
 
 # Inkscape Setup Guide
 
-This guide shows the steps to setup Inkscape for creating icons that conform to the Lucide design
-guidelines.
+This guide shows the steps to set up Inkscape for creating icons that conform to the Lucide design guidelines.
 
 ## Setting up The Canvas
 
