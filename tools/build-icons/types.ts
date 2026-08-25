@@ -1,5 +1,3 @@
-import { type INode } from 'svgson';
-
 export type SVGProps = Record<string, string | number>;
 
 export type IconNode = [tag: string, attrs: SVGProps][];
@@ -32,13 +30,11 @@ export type AliasDeprecation = {
   name: string;
   deprecated: true;
   deprecationReason: AliasDeprecationReason;
-  toBeRemovedInVersion?: string;
 };
 
 export type IconDeprecationReason = 'icon.renamed' | '';
 
 export type IconMetadataBase = {
-  toBeRemovedInVersion?: string;
   categories: string[];
   aliases?: AliasDeprecation[];
   tags: string[];
