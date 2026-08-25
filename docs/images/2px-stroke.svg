@@ -1,5 +1,5 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1940_22208)">
+<g clip-path="url(#clip0_1946_25847)">
 <path d="M0 10H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M10 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 20H240" stroke="#D8D8D9" stroke-width="0.5"/>
@@ -48,18 +48,18 @@
 <path d="M230 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
 <path d="M220 120H195.2C190.83 119.991 186.577 121.413 183.091 124.05C179.606 126.686 177.08 130.392 175.9 134.6L152.4 218.2C152.249 218.719 151.933 219.175 151.5 219.5C151.067 219.825 150.541 220 150 220C149.459 220 148.933 219.825 148.5 219.5C148.067 219.175 147.751 218.719 147.6 218.2L92.4 21.8C92.2485 21.2807 91.9327 20.8246 91.5 20.5C91.0673 20.1754 90.5409 20 90 20C89.4591 20 88.9327 20.1754 88.5 20.5C88.0673 20.8246 87.7515 21.2807 87.6 21.8L64.1 105.4C62.9246 109.592 60.4138 113.285 56.9486 115.92C53.4835 118.555 49.2532 119.988 44.9 120H20" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M190 110H240V130H190V110Z" fill="url(#paint0_linear_1940_22208)"/>
-<path d="M0 110H50V130H0V110Z" fill="url(#paint1_linear_1940_22208)"/>
+<path d="M200 110H240V130H200V110Z" fill="url(#paint0_linear_1946_25847)"/>
+<path d="M0 110H40V130H0V110Z" fill="url(#paint1_linear_1946_25847)"/>
 <defs>
-<linearGradient id="paint0_linear_1940_22208" x1="264" y1="117" x2="190" y2="117" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_1946_25847" x1="259.2" y1="117" x2="200" y2="117" gradientUnits="userSpaceOnUse">
 <stop stop-color="#41B883"/>
 <stop offset="1" stop-color="#41B883" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint1_linear_1940_22208" x1="-24" y1="118.5" x2="50" y2="118.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_1946_25847" x1="-19.2" y1="118.5" x2="40" y2="118.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="#41B883"/>
 <stop offset="1" stop-color="#41B883" stop-opacity="0"/>
 </linearGradient>
-<clipPath id="clip0_1940_22208">
+<clipPath id="clip0_1946_25847">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
 </defs>

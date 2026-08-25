@@ -53,14 +53,14 @@
 <rect x="123" y="60" width="74" height="10" fill="url(#paint1_linear_1939_21540)"/>
 <defs>
 <linearGradient id="paint0_linear_1939_21540" x1="70" y1="127.25" x2="144" y2="127.25" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F56565" stop-opacity="0"/>
-<stop offset="0.499255" stop-color="#F56565"/>
-<stop offset="1" stop-color="#F56565" stop-opacity="0"/>
+<stop stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="0.499255" stop-color="#DD0031"/>
+<stop offset="1" stop-color="#DD0031" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint1_linear_1939_21540" x1="123" y1="64.25" x2="197" y2="64.25" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F56565" stop-opacity="0"/>
-<stop offset="0.499255" stop-color="#F56565"/>
-<stop offset="1" stop-color="#F56565" stop-opacity="0"/>
+<stop stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="0.499255" stop-color="#DD0031"/>
+<stop offset="1" stop-color="#DD0031" stop-opacity="0"/>
 </linearGradient>
 <clipPath id="clip0_1939_21540">
 <rect width="240" height="240" fill="white"/>

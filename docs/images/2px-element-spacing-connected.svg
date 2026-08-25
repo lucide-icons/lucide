@@ -53,12 +53,12 @@
 <rect x="90" y="170" width="40" height="20" transform="rotate(-180 90 170)" fill="url(#paint1_linear_1939_21531)"/>
 <defs>
 <linearGradient id="paint0_linear_1939_21531" x1="170" y1="58.5" x2="210" y2="58.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F56565" stop-opacity="0"/>
-<stop offset="1" stop-color="#F56565" stop-opacity="0.5"/>
+<stop stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="1" stop-color="#DD0031" stop-opacity="0.5"/>
 </linearGradient>
 <linearGradient id="paint1_linear_1939_21531" x1="90" y1="178.5" x2="130" y2="178.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F56565" stop-opacity="0.5"/>
-<stop offset="1" stop-color="#F56565" stop-opacity="0"/>
+<stop stop-color="#DD0031" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#DD0031" stop-opacity="0"/>
 </linearGradient>
 <clipPath id="clip0_1939_21531">
 <rect width="240" height="240" fill="white"/>

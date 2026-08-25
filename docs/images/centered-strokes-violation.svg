@@ -52,17 +52,36 @@
 <path d="M80 210H160" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M120 170V210" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="120" cy="100" r="30" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M240 210L0 210" stroke="#DD0031" stroke-dasharray="1 1"/>
 <path d="M80 210H160" stroke="#DD0031" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M120 240V180" stroke="#DD0031" stroke-dasharray="1 1"/>
 <path d="M120 180V210" stroke="#DD0031" stroke-linecap="round" stroke-linejoin="round"/>
 <path opacity="0.5" d="M240 20H0" stroke="#DD0031" stroke-dasharray="1 1"/>
 <path opacity="0.5" d="M240 180H0" stroke="#DD0031" stroke-dasharray="1 1"/>
 <path opacity="0.5" d="M9.99998 240L10 0" stroke="#DD0031" stroke-dasharray="1 1"/>
 <path opacity="0.5" d="M230 240L230 0" stroke="#DD0031" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M120 240V180" stroke="#DD0031" stroke-dasharray="1 1"/>
-<path opacity="0.5" d="M240 210L0 210" stroke="#DD0031" stroke-dasharray="1 1"/>
 <path d="M210 20H30C18.9543 20 10 28.9543 10 40V160C10 171.046 18.9543 180 30 180H210C221.046 180 230 171.046 230 160V40C230 28.9543 221.046 20 210 20Z" stroke="#DD0031" stroke-linecap="round" stroke-linejoin="round"/>
+<g filter="url(#filter0_i_1940_23370)">
+<path d="M210 20H30C18.9543 20 10 28.9543 10 40V160C10 171.046 18.9543 180 30 180H210C221.046 180 230 171.046 230 160V40C230 28.9543 221.046 20 210 20Z" fill="black" fill-opacity="0.01"/>
+</g>
 <path d="M140 100C140 111.046 131.046 120 120 120C108.954 120 100 111.046 100 100C100 88.9543 108.954 80 120 80C131.046 80 140 88.9543 140 100Z" stroke="#DD0031" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 100C160 122.091 142.091 140 120 140C97.9086 140 80 122.091 80 100C80 77.9086 97.9086 60 120 60C142.091 60 160 77.9086 160 100Z" fill="url(#paint0_radial_1940_23370)"/>
 <defs>
+<filter id="filter0_i_1940_23370" x="10" y="20" width="220" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.866667 0 0 0 0 0 0 0 0 0 0.192157 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_1940_23370"/>
+</filter>
+<radialGradient id="paint0_radial_1940_23370" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 100) rotate(90) scale(40)">
+<stop offset="0.5" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="0.5001" stop-color="#DD0031" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#DD0031" stop-opacity="0"/>
+</radialGradient>
 <clipPath id="clip0_1940_23370">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
