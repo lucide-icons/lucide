@@ -1,8 +1,29 @@
 ---
 description: Learn how to choose clear and consistent names for Lucide icons.
 ---
+
 <script setup>
-import { arrowDown01, badgePlus, badgeCheck, sendHorizontal, heartCrack, circleDashed, circleUser, clock3, userRound, save, ban, pencilRuler } from '~/.vitepress/data/iconNodes';
+import {
+  arrowDown01,
+  badgeCheck,
+  badgePlus,
+  ban,
+  boneFracture,
+  circleDashed,
+  circleFadingArrowUp,
+  circleUser,
+  clock3,
+  heartCrack,
+  moonStar,
+  notepadTextDashed,
+  pencilRuler,
+  rulerDimensionLine,
+  save,
+  sendHorizontal,
+  squareDashed,
+  sunSnow,
+  userRound,
+} from '~/.vitepress/data/iconNodes';
 import LucideIcon from '~/.vitepress/theme/components/base/LucideIcon.vue';
 const pencilRulerHorizontal = [
   ["path",{"d":"M10 16v-3","key":"1sz6hv"}],
@@ -79,14 +100,16 @@ Ban is an action.
 ::::
 
 ::: tip
-An icon can represent different actions or concepts depending on where and how it is used. Naming icons for their visual appearance keeps names unambiguous and independent of their use case.
+An icon can represent different actions or concepts depending on where and how it is used. Naming
+icons for their visual appearance keeps names unambiguous and independent of their use case.
 :::
 
 ## 4. Name related icons consistently
 
 Icons that belong to the same group **must** use the `<group>-<variant>` naming scheme.
 
-The group name comes first, followed by the part that distinguishes the icon from the rest of the group.
+The group name comes first, followed by the part that distinguishes the icon from the rest of the
+group.
 
 :::: example
 ::: do <span><LucideIcon :iconNode="badgePlus" /> + <LucideIcon :iconNode="badgeCheck" /></span> <span>`badge-plus` & `badge-check`</span>
@@ -99,7 +122,8 @@ The group name comes first, followed by the part that distinguishes the icon fro
 
 ## 5. Describe alternate icons
 
-Alternate versions of an icon **must** be named for what makes them visually distinct. They **must not** use numbers merely to distinguish one version from another.
+Alternate versions of an icon **must** be named for what makes them visually distinct. They **must
+not** use numbers merely to distinguish one version from another.
 
 :::: example
 ::: do <LucideIcon :iconNode="sendHorizontal" /> `send-horizontal`
@@ -132,7 +156,6 @@ The icon doesn't feature the number 3.
 :::
 ::::
 
-
 Numerals must not be used to distinguish between otherwise similarly named icons.
 
 ## 7. Order elements by size
@@ -142,11 +165,11 @@ When an icon depicts multiple elements of different sizes, their names **must** 
 For an icon containing a circle and a person:
 
 :::: example
-::: do <LucideIcon :iconNode="circleUser" /> `circle-person`
-The circle is larger.
+::: do <LucideIcon :iconNode="moonStar" /> `moon-star`
+The `moon` is larger than the `star`.
 :::
 ::: dont <LucideIcon :iconNode="circleUser" /> `person-circle`
-The person is **not** larger.
+The `person` is **not** larger than the `circle`.
 :::
 ::::
 
@@ -160,19 +183,19 @@ If they do not overlap, name them in English reading order: top to bottom, then 
 
 :::: example
 ::: do <LucideIcon :iconNode="pencilRuler" /> `pencil-ruler`
-The pencil is in front of the ruler.
+The `pencil` is **in front** of the `ruler`, so **it takes precedence**.
 :::
-::: dont <LucideIcon :iconNode="pencilRuler" /> `ruler-pencil`
-The ruler is **not** in front of the pencil.
+::: do <LucideIcon :iconNode="rulerDimensionLine" /> `ruler-dimension-line`
+While the ruler is below the dimension line, it is **reasonably larger**, so it should be listed first.
 :::
 ::::
 
 :::: example
-::: do <LucideIcon :iconNode="pencilRulerVertical" /> `pencil-ruler`
-The pencil is left of the ruler.
+::: do <LucideIcon :iconNode="sunSnow" /> `sun-snow`
+The `sun` is **left of** the `snowflake`, so **it should be listed first**.
 :::
 ::: dont <LucideIcon :iconNode="pencilRulerHorizontal" /> `ruler-pencil`
-The ruler is **not** above the pencil.
+The `ruler` is **below** the `pencil`, so `pencil-ruler` would be the correct name.
 :::
 ::::
 
@@ -181,30 +204,30 @@ The ruler is **not** above the pencil.
 Modifiers **must** follow the element they describe, using the `<element>-<modifier>` naming scheme.
 
 :::: example
-::: do <LucideIcon :iconNode="circleDashed" /> `circle-dashed`
+::: do <LucideIcon :iconNode="heartCrack" /> `heart-broken`
+The icon depicts a heart that is **cracked**.
 :::
-::: dont <LucideIcon :iconNode="circleDashed" /> `dashed-circle`
+::: dont <LucideIcon :iconNode="boneFracture" /> `broken-bone`
+The icon depicts a bone that is **broken**, so it should be `bone-broken`.
 :::
 ::::
+
+When an icon contains multiple modified elements, each modifier **must** follow its respective element.
 
 :::: example
-::: do <LucideIcon :iconNode="heartCrack" /> `heart-broken`
+::: do <LucideIcon :iconNode="circleFadingArrowUp" /> `circle-fading-arrow-up`
+The icon depicts a circle, which is **fading**, inside it is an arrow pointing **up**.
+- `circle` comes first, because it is larger than `arrow`
+- `fading` follows `circle` because it modifies the circle.
+- `up` follows `arrow` because it modifies the arrow.
 :::
-::: dont <LucideIcon :iconNode="heartCrack" /> `broken-heart`
+::: dont <LucideIcon :iconNode="notepadTextDashed" /> `notepad-text-dashed`
+This icon depicting a dashed notebook with text inside should be named `notepad-dashed-text`.
+- `notepad` comes first, because it is larger than `text`
+- `dashed` follows `notepad` because it modifies the notepad.
+- `text` should follow both `notepad` and `dashed`, because `dashed` does not modify `text`.
 :::
 ::::
-
-When an icon contains multiple modified elements, each modifier follows its respective element.
-
-For example, a dashed circle containing a smaller broken heart is named:
-
-`circle-dashed-heart-broken`
-
-This follows both the element ordering and modifier rules:
-
-- `circle` comes before `heart` because it is larger.
-- `dashed` follows `circle` because it modifies the circle.
-- `broken` follows `heart` because it modifies the heart.
 
 ## TL;DR
 
@@ -216,9 +239,6 @@ When naming an icon:
 4. **Describe what makes an alternate unique** instead of numbering it.
 5. **Only use numerals when they are depicted** in the icon.
 6. **Order elements from largest to smallest**.
-7. If elements are roughly the same size, order them **front to back**, or otherwise in **English reading order**.
+7. If elements are roughly the same size, order them **front to back**, or otherwise in **English
+   reading order**.
 8. **Place modifiers after the element they describe**: `<element>-<modifier>`.
-
-For example, a dashed circle containing a smaller broken heart becomes:
-
-`circle-dashed-heart-broken`

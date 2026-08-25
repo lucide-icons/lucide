@@ -249,6 +249,7 @@ html {
   font-size: 20px;
   line-height: 1.4;
   text-align: center;
+  text-wrap: balance;
 }
 
 .example-guidance__text svg.lucide {
