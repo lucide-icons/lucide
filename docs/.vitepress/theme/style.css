@@ -264,7 +264,7 @@ html {
   display: flex;
   gap: 8px;
   padding: 12px;
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   background-color: var(--example-guidance-label-bg);
   color: var(--vp-c-neutral-inverse);
   border-bottom-left-radius: 16px;
