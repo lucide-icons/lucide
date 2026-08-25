@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, defineAsyncComponent, onMounted, watch } from 'vue';
 import type { IconEntity } from '../../types';
-import { useElementSize, useEventListener, useVirtualList } from '@vueuse/core';
+import { useElementSize, useEventListener, useStorage, useVirtualList } from '@vueuse/core';
 import { useRoute } from 'vitepress';
 import IconGrid from './IconGrid.vue';
+import IconList from './IconList.vue';
 import Select from '../base/Select.vue';
 import InputSearch from '../base/InputSearch.vue';
 import useSearch from '../../composables/useSearch';
@@ -16,10 +17,30 @@ import chunkArray from '../../utils/chunkArray';
 import CarbonAdOverlay from './CarbonAdOverlay.vue';
 import useSearchPlaceholder from '../../utils/useSearchPlaceholder.ts';
 import Icon from '@lucide/vue/src/Icon';
-import { listSortDescending } from '~/.vitepress/data/iconNodes';
+import {
+  listSortDescending,
+  layoutGrid,
+  list as listIcon,
+  copy,
+  check,
+} from '~/.vitepress/data/iconNodes';
+import IconButton from '../base/IconButton.vue';
+import Tooltip from '../base/Tooltip.vue';
 
 const ICON_SIZE = 56;
 const ICON_GRID_GAP = 8;
+const LIST_ITEM_SIZE = 48;
+const VIEW_STORAGE_KEY = 'lucide-icons-view';
+const VIEWS = [
+  {
+    name: 'Grid',
+    value: 'grid',
+  },
+  {
+    name: 'List',
+    value: 'list',
+  },
+];
 const SORTING = [
   {
     name: 'Popularity',
@@ -51,6 +72,14 @@ const props = defineProps<{
 
 const activeIconName = ref(null);
 const selectedSort = ref(SORTING[0])
+const selectedView = useStorage(VIEW_STORAGE_KEY, VIEWS[0], undefined, {
+  serializer: {
+    read: (value) => VIEWS.find((view) => view.value === value) ?? VIEWS[0],
+    write: (view) => view.value,
+  },
+});
+const isListView = computed(() => selectedView.value.value === 'list');
+const justCopied = ref(false);
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -119,13 +148,20 @@ const isSearchMetadataLoading = computed(
 );
 
 const chunkedIcons = computed(() => {
-  return chunkArray(searchResults.value, columnSize.value);
+  return chunkArray(searchResults.value, isListView.value ? 1 : columnSize.value);
 });
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedIcons, {
-  itemHeight: ICON_SIZE + ICON_GRID_GAP,
+  itemHeight: () => (isListView.value ? LIST_ITEM_SIZE : ICON_SIZE) + ICON_GRID_GAP,
   overscan: 10,
 });
+
+async function copyIconNames() {
+  await navigator.clipboard.writeText(searchResults.value.map((icon) => icon.name).join('\n'));
+
+  justCopied.value = true;
+  setTimeout(() => (justCopied.value = false), 2000);
+}
 
 onMounted(() => {
   containerProps.ref.value = document.documentElement;
@@ -208,6 +244,34 @@ function handleCloseDrawer() {
           />
         </template>
       </Select>
+
+      <Select
+        id="view-select"
+        :items="VIEWS"
+        v-model="selectedView"
+      >
+        <template #start-icon>
+          <Icon
+            :iconNode="isListView ? listIcon : layoutGrid"
+            class="chevron-icon"
+            aria-hidden="true"
+          />
+        </template>
+      </Select>
+
+      <Tooltip :title="`Copy ${searchResults.length} icon names`">
+        <IconButton
+          class="copy-names-button"
+          :aria-label="`Copy ${searchResults.length} icon names`"
+          @click="copyIconNames"
+        >
+          <Icon
+            :iconNode="justCopied ? check : copy"
+            :size="20"
+            aria-hidden="true"
+          />
+        </IconButton>
+      </Tooltip>
     </StickyBar>
     <NoResults
       v-if="searchPlaceholder.isNoResults && !isSearchMetadataLoading"
@@ -215,7 +279,8 @@ function handleCloseDrawer() {
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
     />
-    <IconGrid
+    <component
+      :is="isListView ? IconList : IconGrid"
       v-else-if="list.length === 0"
       overlayMode
       :icons="searchResults.slice(0, initialGridItems)"
@@ -227,7 +292,8 @@ function handleCloseDrawer() {
       class="icon"
       v-else
     >
-      <IconGrid
+      <component
+        :is="isListView ? IconList : IconGrid"
         v-for="{ index, data: icons } in list"
         :key="index"
         overlayMode
@@ -255,8 +321,24 @@ function handleCloseDrawer() {
   aspect-ratio: 1/1;
 }
 
+.search-bar .reference {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.copy-names-button {
+  display: flex;
+  width: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+}
+
 .input-wrapper {
   width: 100%;
+  min-width: 0;
   /* view-transition-name: icons-search-box; */
 }
 </style>
