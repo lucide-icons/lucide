@@ -39,12 +39,12 @@ export const resourcesSidebar = [
       {
         text: 'Design language',
         link: '/contribute/icons/design-principles',
-        desc: 'Learn the visual rules that make Lucide icons consistent and recognizable.',
+        desc: 'Learn the visual principles that shape Lucide icons with side-by-side examples.',
       },
       {
         text: 'Design specification',
         link: '/contribute/icons/specification',
-        desc: 'Review the rules Lucide icons must follow.',
+        desc: 'Review the technical requirements every Lucide icon must meet.',
       },
       {
         text: 'Naming conventions',
