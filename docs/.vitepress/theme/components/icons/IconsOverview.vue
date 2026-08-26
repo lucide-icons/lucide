@@ -80,6 +80,7 @@ const selectedView = useStorage(VIEW_STORAGE_KEY, VIEWS[0], undefined, {
 });
 const isListView = computed(() => selectedView.value.value === 'list');
 const justCopied = ref(false);
+let copyResetTimeout: ReturnType<typeof setTimeout>;
 
 const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
 const {
@@ -167,8 +168,9 @@ async function copyIconNames() {
     return;
   }
 
+  clearTimeout(copyResetTimeout);
   justCopied.value = true;
-  setTimeout(() => (justCopied.value = false), 2000);
+  copyResetTimeout = setTimeout(() => (justCopied.value = false), 2000);
 }
 
 onMounted(() => {

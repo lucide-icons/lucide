@@ -57,7 +57,6 @@ function navigateToIcon(event: MouseEvent) {
     class="icon-list-item vp-raw"
     :class="{ active }"
     :href="href"
-    :aria-label="name"
     @click="navigateToIcon"
   >
     <span class="icon-preview">
