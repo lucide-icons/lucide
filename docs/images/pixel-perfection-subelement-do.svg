@@ -1,5 +1,5 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1936_20350)">
+<g clip-path="url(#clip0_1955_26980)">
 <path d="M0 10H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M10 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M0 20H240" stroke="#D8D8D9" stroke-width="0.5"/>
@@ -47,18 +47,20 @@
 <path d="M0 230H240" stroke="#D8D8D9" stroke-width="0.5"/>
 <path d="M230 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
 </g>
-<g clip-path="url(#clip1_1936_20350)">
+<g clip-path="url(#clip1_1955_26980)">
 <path d="M20 210C19.9992 194.603 24.4413 179.533 32.7935 166.598C41.1456 153.664 53.0527 143.414 67.086 137.08C81.1193 130.745 96.6824 128.595 111.908 130.886C127.133 133.178 141.373 139.815 152.92 150" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M100 130C127.614 130 150 107.614 150 80C150 52.3858 127.614 30 100 30C72.3858 30 50 52.3858 50 80C50 107.614 72.3858 130 100 130Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M190 160V220M220 190H160" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180 220V200H160C154.477 200 150 195.523 150 190C150 184.477 154.477 180 160 180H180V160C180 154.477 184.477 150 190 150C195.523 150 200 154.477 200 160V180H220C225.523 180 230 184.477 230 190C230 195.523 225.523 200 220 200H200V220C200 225.523 195.523 230 190 230C184.477 230 180 225.523 180 220Z" fill="#41B883" fill-opacity="0.2" stroke="#41B883" stroke-dasharray="1 1"/>
+<path opacity="0.45" d="M200 180H220V200H200V220H180V200H160V180H180V160H200V180Z" fill="#41B883" fill-opacity="0.5"/>
+<path opacity="0.2" d="M200 150V180H230V200H200V230H180V200H150V180H180V150H200Z" fill="#41B883" fill-opacity="0.5"/>
 <path d="M190 160V220M220 190H160" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
 <rect opacity="0.5" x="140" y="140" width="100" height="100" rx="10" stroke="#41B883" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="clip0_1936_20350">
+<clipPath id="clip0_1955_26980">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
-<clipPath id="clip1_1936_20350">
+<clipPath id="clip1_1955_26980">
 <rect width="240" height="240" fill="white"/>
 </clipPath>
 </defs>

@@ -166,10 +166,10 @@ You can test this by placing a **2-pixel-wide circle** inside your shape.
 
 :::: example
 ::: do ../../images/2px-inner-gap.svg?raw=true
-If a **2-pixel-wide circle** fits without overlapping, the gap is **wide enough**.
+If a 2-pixel-wide circle fits **without overlapping**, the gap is **wide enough**.
 :::
 ::: dont ../../images/1px-inner-gap.svg?raw=true
-If the circle overlaps the shape, the gap should be **wider**.
+If the circle **overlaps** the shape, the gap should be **wider**.
 :::
 ::::
 
@@ -195,7 +195,7 @@ Match the visual weight of `circle` and `square`.
 :::
 
 ::: dont ../../images/visual-weight-uneven.svg?raw=true
-The second icon is **too large**. The fourth is **too small**.
+The first icon is **too large**. The last one is **too small**.
 :::
 
 ::::
