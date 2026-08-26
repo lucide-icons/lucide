@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere",
+    "mmaxence"
+  ],
+  "use-cases": [],
+  "tags": [
+    "tv",
+    "screen",
+    "display",
+    "desktop",
+    "pulse",
+    "activity",
+    "monitoring",
+    "performance",
+    "health",
+    "uptime",
+    "vitals",
+    "heartbeat",
+    "system",
+    "dashboard",
+    "virtual machine",
+    "vm"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}
