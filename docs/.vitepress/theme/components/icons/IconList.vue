@@ -10,6 +10,10 @@ defineProps<{
   overlayMode?: boolean;
 }>();
 
+function iconId(icon: IconEntity) {
+  return icon.externalLibrary ? `${icon.externalLibrary}:${icon.name}` : icon.name;
+}
+
 function setActiveIcon(name: string) {
   emit('setActiveIcon', name);
 }
@@ -20,7 +24,7 @@ function setActiveIcon(name: string) {
     <div
       class="icon-list-row"
       v-for="icon in icons"
-      :key="icon.name"
+      :key="iconId(icon)"
     >
       <IconListItem
         :iconNode="icon.iconNode"
@@ -28,7 +32,7 @@ function setActiveIcon(name: string) {
         :aliases="icon.aliases"
         :deprecated="icon.deprecated"
         :externalLibrary="icon.externalLibrary"
-        :active="activeIcon === icon.name"
+        :active="activeIcon === iconId(icon)"
         :overlayMode="overlayMode"
         @setActiveIcon="setActiveIcon"
       />

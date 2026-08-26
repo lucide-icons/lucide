@@ -157,7 +157,15 @@ const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(chunkedI
 });
 
 async function copyIconNames() {
-  await navigator.clipboard.writeText(searchResults.value.map((icon) => icon.name).join('\n'));
+  if (!navigator.clipboard?.writeText) {
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(searchResults.value.map((icon) => icon.name).join('\n'));
+  } catch {
+    return;
+  }
 
   justCopied.value = true;
   setTimeout(() => (justCopied.value = false), 2000);

@@ -33,6 +33,10 @@ const href = computed(() =>
 );
 
 function navigateToIcon(event: MouseEvent) {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
+    return;
+  }
+
   event.preventDefault();
 
   if (props.overlayMode && showOverlay.value) {
