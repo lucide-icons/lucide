@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Mirazstudio-offical"
+  ],
+  "use-cases": [],
+  "tags": [
+    "puzzle",
+    "game",
+    "piece",
+    "square",
+    "jigsaw",
+    "board game",
+    "logic",
+    "brain teaser"
+  ],
+  "categories": [
+    "gaming",
+    "shapes"
+  ]
+}
