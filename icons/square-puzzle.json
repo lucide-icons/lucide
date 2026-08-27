@@ -3,7 +3,13 @@
   "contributors": [
     "Mirazstudio-offical"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "show a puzzle challenge in a level selector",
+    "badge for puzzle-related achievements in profiles",
+    "represent modular plugins or extensions in settings",
+    "use as a draggable tile in puzzle or layout editors",
+    "visualize problem-solving modules in learning platforms"
+  ],
   "tags": [
     "puzzle",
     "game",
@@ -12,10 +18,17 @@
     "jigsaw",
     "board game",
     "logic",
-    "brain teaser"
+    "brain teaser",
+    "gamification",
+    "tile",
+    "modular",
+    "component",
+    "challenge",
+    "educational"
   ],
   "categories": [
     "gaming",
-    "shapes"
+    "shapes",
+    "design"
   ]
 }
