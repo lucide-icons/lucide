@@ -8,7 +8,12 @@
     "tylerkade"
   ],
   "use-cases": [
-    "Indicating you're adding a company/business"
+    "Indicating you're adding a company/business",
+    "adding a new office location to a directory",
+    "registering a company during onboarding flows",
+    "creating a branch or headquarters entry in admin panels",
+    "adding a property or real estate listing",
+    "marking a business location on a map"
   ],
   "tags": [
     "business",
