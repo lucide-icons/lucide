@@ -1,5 +1,5 @@
-import { For, splitProps, useContext } from 'solid-js';
-import { Dynamic } from 'solid-js/web';
+import { For, omit, useContext } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
 import defaultAttributes from './defaultAttributes';
 import { IconNode, LucideProps } from './types';
 import { LucideContext } from './context';
@@ -10,57 +10,54 @@ interface IconProps {
   iconNode: IconNode;
 }
 
-const Icon = (props: LucideProps & IconProps) => {
-  const [localProps, rest] = splitProps(props, [
-    'color',
-    'size',
-    'strokeWidth',
-    'children',
-    'class',
-    'name',
-    'iconNode',
-    'absoluteStrokeWidth',
-  ]);
+const LOCAL_PROP_KEYS = [
+  'color',
+  'size',
+  'strokeWidth',
+  'children',
+  'class',
+  'name',
+  'iconNode',
+  'absoluteStrokeWidth',
+] as const;
 
+const Icon = (props: LucideProps & IconProps) => {
   const globalProps = useContext(LucideContext);
+  const rest = () => omit(props, ...LOCAL_PROP_KEYS);
 
   return (
     <svg
       {...defaultAttributes}
-      width={localProps.size ?? globalProps.size ?? defaultAttributes.width}
-      height={localProps.size ?? globalProps.size ?? defaultAttributes.height}
-      stroke={localProps.color ?? globalProps.color ?? defaultAttributes.stroke}
+      width={props.size ?? globalProps.size ?? defaultAttributes.width}
+      height={props.size ?? globalProps.size ?? defaultAttributes.height}
+      stroke={props.color ?? globalProps.color ?? defaultAttributes.stroke}
       stroke-width={
-        (localProps.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth) === true
+        (props.absoluteStrokeWidth ?? globalProps.absoluteStrokeWidth) === true
           ? (Number(
-              localProps.strokeWidth ??
-                globalProps.strokeWidth ??
-                defaultAttributes['stroke-width'],
+              props.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'],
             ) *
               24) /
-            Number(localProps.size ?? globalProps.size)
+            Number(props.size ?? globalProps.size)
           : Number(
-              localProps.strokeWidth ??
-                globalProps.strokeWidth ??
-                defaultAttributes['stroke-width'],
+              props.strokeWidth ?? globalProps.strokeWidth ?? defaultAttributes['stroke-width'],
             )
       }
       class={mergeClasses(
         'lucide',
         'lucide-icon',
         globalProps.class,
-        ...(localProps.name != null
+        ...(props.name != null
           ? [
-              `lucide-${toKebabCase(toPascalCase(localProps.name))}`,
-              `lucide-${toKebabCase(localProps.name)}`,
+              `lucide-${toKebabCase(toPascalCase(props.name))}`,
+              `lucide-${toKebabCase(props.name)}`,
             ]
           : []),
-        localProps.class,
+        props.class,
       )}
-      aria-hidden={!localProps.children && !hasA11yProp(rest) ? 'true' : undefined}
-      {...rest}
+      aria-hidden={!props.children && !hasA11yProp(rest()) ? 'true' : undefined}
+      {...rest()}
     >
-      <For each={localProps.iconNode}>
+      <For each={props.iconNode}>
         {([elementName, attrs]) => {
           return (
             <Dynamic

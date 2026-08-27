@@ -2,6 +2,8 @@
 
 SolidJS components for Lucide icons that leverage Solid's fine-grained reactivity system. Each icon is a reactive Solid component that renders as an inline SVG, providing exceptional performance through Solid's compile-time optimizations and reactive primitives.
 
+> This version of `lucide-solid` requires SolidJS `2.0.0-rc.0` or later (`peerDependencies.solid-js: ^2.0.0-rc.0`). Solid 2.0 is currently a release candidate, so this release is intended to be published under a non-`latest` npm dist-tag (e.g. `lucide-solid@next`) until Solid 2.0 stabilizes — check the npm page if you're unsure which tag to install. For Solid 1.x, keep using `lucide-solid@latest`.
+
 **What you can accomplish:**
 - Use icons as SolidJS components with fine-grained reactivity
 - Create highly performant interfaces with Solid's reactive system
@@ -117,17 +119,15 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 
 ```tsx
 import { icons, type LucideProps } from 'lucide-solid';
-import { splitProps } from 'solid-js';
-import { Dynamic } from 'solid-js/web';
+import { omit } from 'solid-js';
+import { Dynamic } from '@solidjs/web';
 
 interface IconProps extends LucideProps {
   name: keyof typeof icons;
 }
 
 const Icon = (props: IconProps) => {
-  const [local, others] = splitProps(props, ["name"]);
-
-  return <Dynamic component={icons[local.name]} {...others} />
+  return <Dynamic component={icons[props.name]} {...omit(props, 'name')} />
 };
 
 export default Icon;
