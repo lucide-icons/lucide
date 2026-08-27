@@ -21,7 +21,14 @@
     "new",
     "add",
     "create",
-    "increase"
+    "increase",
+    "office",
+    "headquarters",
+    "startup",
+    "registration",
+    "onboarding",
+    "realestate",
+    "property"
   ],
   "categories": [
     "account",
