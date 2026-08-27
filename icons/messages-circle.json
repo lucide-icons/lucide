@@ -3,7 +3,13 @@
   "contributors": [
     "Mirazstudio-offical"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "start a group conversation",
+    "indicate multiple unread message threads",
+    "open a discussion or comment section",
+    "represent group chat in a navigation bar or toolbar",
+    "represent messaging feature in onboarding"
+  ],
   "tags": [
     "comment",
     "chat",
@@ -15,9 +21,17 @@
     "multiple",
     "discussion",
     "interview",
-    "debate"
+    "debate",
+    "group",
+    "groupchat",
+    "threads",
+    "unread",
+    "bubble",
+    "messaging"
   ],
   "categories": [
-    "social"
+    "social",
+    "communication",
+    "notifications"
   ]
 }
