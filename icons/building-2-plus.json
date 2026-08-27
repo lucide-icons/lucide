@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "maxim-s-barabash",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas",
+    "tylerkade"
+  ],
+  "use-cases": [
+    "Indicating you're adding a company/business"
+  ],
+  "tags": [
+    "business",
+    "company",
+    "enterprise",
+    "skyscraper",
+    "organisation",
+    "organization",
+    "city",
+    "new",
+    "add",
+    "create",
+    "increase"
+  ],
+  "categories": [
+    "account",
+    "buildings"
+  ]
+}
