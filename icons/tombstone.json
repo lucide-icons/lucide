@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ryck"
+  ],
+  "use-cases": [
+    "Marking a death, game over state or respawn point in a game UI",
+    "Cemetery or graveyard points of interest on a map",
+    "Marking a person as deceased in genealogy or family tree apps",
+    "Memorial, obituary or in-memoriam sections",
+    "Halloween themed decoration in seasonal interfaces"
+  ],
+  "tags": [
+    "gravestone",
+    "headstone",
+    "grave",
+    "cemetery",
+    "graveyard",
+    "burial",
+    "memorial",
+    "rip",
+    "death",
+    "dead",
+    "halloween",
+    "spooky"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
