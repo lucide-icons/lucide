@@ -17,7 +17,14 @@
     "new",
     "add",
     "create",
-    "increase"
+    "increase",
+    "briefcase",
+    "portfolio",
+    "business",
+    "career",
+    "employment",
+    "professional",
+    "plus"
   ],
   "categories": [
     "transportation"
