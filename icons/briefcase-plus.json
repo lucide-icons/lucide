@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "tylerkade"
+  ],
+  "use-cases": [
+    "Indicating you're adding luggage"
+  ],
+  "tags": [
+    "work",
+    "bag",
+    "baggage",
+    "folder",
+    "new",
+    "add",
+    "create",
+    "increase"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
