@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "dental care",
+    "oral hygiene"
+  ],
+  "categories": [
+    "home",
+    "travel",
+    "tools",
+    "medical"
+  ]
+}
