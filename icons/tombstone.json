@@ -22,7 +22,15 @@
     "death",
     "dead",
     "halloween",
-    "spooky"
+    "spooky",
+    "epitaph",
+    "monument",
+    "marker",
+    "funeral",
+    "obituary",
+    "mourning",
+    "bereavement",
+    "crypt"
   ],
   "categories": [
     "gaming"
