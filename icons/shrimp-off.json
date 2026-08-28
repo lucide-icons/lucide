@@ -4,6 +4,9 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [
+    "indicating allergen information"
+  ],
   "tags": [
     "shrimp",
     "marine",
