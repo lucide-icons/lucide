@@ -17,7 +17,6 @@
       "name": "axis-3-d",
       "deprecationReason": "alias.name",
       "deprecated": true
-    },
-    "axis-3-d"
+    }
   ]
 }
