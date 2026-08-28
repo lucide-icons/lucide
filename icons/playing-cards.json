@@ -6,21 +6,38 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "representing a deck or collection of cards",
-    "indicating casino or poker related gameplay"
+    "Representing decks in tabletop games",
+    "Showing planning poker cards in agile tools",
+    "Organizing flashcard sets in learning apps",
+    "Marking collectible card collections in inventories"
   ],
   "tags": [
-    "cards",
-    "playing",
-    "playing cards",
     "deck",
     "stack",
+    "shuffle",
+    "deal",
+    "draw",
+    "hand",
+    "tabletop",
+    "planning poker",
+    "scrum",
+    "agile",
+    "estimation",
+    "estimate",
+    "flashcards",
+    "study",
+    "learning",
+    "collectible",
+    "collection",
+    "trading",
     "poker",
     "casino",
     "game",
-    "gambling"
+    "gambling",
+    "suit"
   ],
   "categories": [
-    "gaming"
+    "gaming",
+    "development"
   ]
 }
