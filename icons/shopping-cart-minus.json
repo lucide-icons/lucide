@@ -6,11 +6,28 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Removing products from a shopping cart",
+    "Updating order contents in ecommerce apps",
+    "Indicating fewer items in a purchase"
+  ],
   "tags": [
-    "remove",
+    "trolley",
+    "cart",
+    "basket",
     "e-commerce",
-    "shopping",
-    "minus"
+    "ecommerce",
+    "store",
+    "purchase",
+    "products",
+    "items",
+    "checkout",
+    "order",
+    "retail",
+    "remove",
+    "decrease",
+    "quantity",
+    "subtract"
   ],
   "categories": [
     "shopping"
