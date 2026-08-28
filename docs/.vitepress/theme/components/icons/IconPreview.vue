@@ -84,7 +84,7 @@ const base64InnerSvg = computed(() => {
       </g>
     </svg>
     <a
-      :href="`https://studio.lucide.dev/edit?value=${encodeURIComponent(base64InnerSvg)}&name=${name}`"
+      :href="`https://studio.lucide.dev/edit?value=${encodeURIComponent(base64InnerSvg)}&name=${name}&utm_source=lucide.dev&utm_medium=icon-detail-preview`"
       target="_blank"
       rel="noopener noreferrer"
       class="studio-button"
