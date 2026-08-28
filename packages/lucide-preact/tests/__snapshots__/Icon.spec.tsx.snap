@@ -3,7 +3,7 @@
 exports[`Using Icon Component > should render icon and match snapshot 1`] = `
 <svg
   aria-hidden="true"
-  class="lucide "
+  class="lucide"
   fill="none"
   height="48"
   stroke="red"

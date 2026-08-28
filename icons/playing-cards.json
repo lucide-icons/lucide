@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Barakudum",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing decks in tabletop games",
+    "Showing planning poker cards in agile tools",
+    "Organizing flashcard sets in learning apps",
+    "Marking collectible card collections in inventories"
+  ],
+  "tags": [
+    "deck",
+    "stack",
+    "shuffle",
+    "deal",
+    "draw",
+    "hand",
+    "tabletop",
+    "planning poker",
+    "scrum",
+    "agile",
+    "estimation",
+    "estimate",
+    "flashcards",
+    "study",
+    "learning",
+    "collectible",
+    "collection",
+    "trading",
+    "poker",
+    "casino",
+    "game",
+    "gambling",
+    "suit"
+  ],
+  "categories": [
+    "gaming",
+    "development"
+  ]
+}
