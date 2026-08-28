@@ -37,15 +37,8 @@ Promise.all(
       const iconMetaData = JSON.parse(metaJson);
 
       const aliases = iconMetaData.aliases ?? [];
-      const hasAlias = aliases.some((alias: string | { name: string }) => {
-        if (typeof alias === 'string') {
-          return alias === iconNameKebabCaseNextjsFlavour;
-        }
-        return alias.name === iconNameKebabCaseNextjsFlavour;
-      });
-
-      if (!hasAlias) {
-        aliases.push({ name: iconNameKebabCaseNextjsFlavour });
+      if (!aliases.includes(iconNameKebabCaseNextjsFlavour)) {
+        aliases.push(iconNameKebabCaseNextjsFlavour);
       }
 
       let output = JSON.stringify({ ...iconMetaData, aliases }, null, 2);
