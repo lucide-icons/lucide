@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "fatal",
     "error",
@@ -14,5 +15,8 @@
     "explode",
     "explosive"
   ],
-  "categories": []
+  "categories": [
+    "security",
+    "tools"
+  ]
 }

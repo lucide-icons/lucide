@@ -2,13 +2,21 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "colebemis",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "find",
     "scan",
     "magnifier",
-    "magnifying glass"
+    "magnifying glass",
+    "lens",
+    "locate",
+    "explore",
+    "discover",
+    "enlarge",
+    "zoom"
   ],
   "categories": [
     "text",

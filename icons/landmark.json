@@ -2,16 +2,38 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "connium",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "bank",
     "building",
     "capitol",
     "finance",
     "money",
+    "museum",
+    "art gallery",
+    "hall",
+    "institute",
+    "pediment",
+    "portico",
+    "doric",
+    "columns",
+    "pillars",
+    "classical",
+    "architecture",
     "government",
-    "institution"
+    "institution",
+    "monument",
+    "site",
+    "history",
+    "historic",
+    "library",
+    "temple",
+    "ancient",
+    "structure"
   ],
   "categories": [
     "finance",

@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "scorpion",
+    "stinger",
+    "intensity",
+    "water",
+    "transformation",
+    "astrology",
+    "star sign",
+    "horoscope",
+    "constellation",
+    "celestial"
+  ],
+  "categories": [
+    "social",
+    "emoji"
+  ]
+}

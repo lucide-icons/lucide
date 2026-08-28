@@ -6,8 +6,10 @@
     "mittalyashu",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "pencil",
+    "edit",
     "change",
     "create",
     "draw",
@@ -26,8 +28,20 @@
     "text"
   ],
   "aliases": [
-    "pen-box",
-    "edit",
-    "pen-square"
+    {
+      "name": "pen-box",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "edit",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "pen-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "jamiemlaw"
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "plaster",
     "band-aid",
@@ -18,7 +20,8 @@
     "protection",
     "emergency",
     "aid",
-    "safety"
+    "safety",
+    "patch"
   ],
   "categories": [
     "medical"

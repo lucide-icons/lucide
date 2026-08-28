@@ -4,6 +4,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "forward",
     "direction",
@@ -18,7 +19,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "files",
     "development"
   ]

@@ -7,8 +7,8 @@ docs/.vitepress/cache
 docs/.vitepress/data
 docs/.nitro
 
-# lucide-angular
-packages/lucide-angular/.angular/cache
+# @lucide/angular
+packages/angular/.angular
 
 # lucide-static
 packages/lucide-static/icons
@@ -17,7 +17,8 @@ packages/lucide-static/sprite.svg
 packages/lucide-static/tags.json
 packages/lucide-static/icon-nodes.json
 packages/lucide-static/font
+packages/svelte/.svelte-kit
 
 # lucide-svelte
-packages/lucide-svelte/src/icons/*.svelte
-packages/lucide-svelte/.svelte-kit
+packages/svelte/src/icons/*.svelte
+packages/svelte/.svelte-kit

@@ -2,13 +2,16 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "cog",
     "edit",
     "gear",
-    "preferences"
+    "preferences",
+    "slider"
   ],
   "categories": [
     "account"

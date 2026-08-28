@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
@@ -11,4 +12,5 @@
     "types": ["@testing-library/jest-dom"],
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tests/**/*.ts"],
+  "exclude": ["tests/setupVitest.ts"],
 }

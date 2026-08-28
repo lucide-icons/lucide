@@ -2,7 +2,7 @@ import plugins from '@lucide/rollup-plugins';
 import preserveDirectives from 'rollup-plugin-preserve-directives';
 import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
-import getAliasesEntryNames from './scripts/getAliasesEntryNames.mjs';
+import getAliasesEntryNames from './scripts/getAliasesEntryNames.mts';
 
 const aliasesEntries = await getAliasesEntryNames();
 
@@ -11,37 +11,44 @@ const outputFileName = 'lucide-react';
 const inputs = [`src/lucide-react.ts`];
 const bundles = [
   {
-    format: 'umd',
-    inputs,
-    outputDir: 'dist/umd',
-    minify: true,
-  },
-  {
-    format: 'umd',
-    inputs,
-    outputDir: 'dist/umd',
-  },
-  {
     format: 'cjs',
     inputs,
     outputDir: 'dist/cjs',
+    extension: 'js',
   },
   {
     format: 'esm',
-    inputs: [...inputs, , 'src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    inputs,
     outputDir: 'dist/esm',
     preserveModules: true,
+    extension: 'mjs',
+  },
+  {
+    format: 'esm',
+    inputs: ['src/dynamicIconImports.ts', 'src/DynamicIcon.ts', ...aliasesEntries],
+    outputDir: 'dist/esm',
+    external: [/src/],
+    preserveModules: true,
+    extension: 'mjs',
+    paths: (id) => {
+      if (id.match(/src/)) {
+        const [, modulePath] = id.match(/src\/(.*)\.ts/);
+
+        return `./${modulePath}.mjs`;
+      }
+    },
   },
   {
     format: 'esm',
     inputs: ['src/dynamic.ts'],
     outputFile: 'dynamic.mjs',
     external: [/src/],
+    extension: 'mjs',
     paths: (id) => {
       if (id.match(/src/)) {
         const [, modulePath] = id.match(/src\/(.*)\.ts/);
 
-        return `dist/esm/${modulePath}.js`;
+        return `dist/esm/${modulePath}.mjs`;
       }
     },
   },
@@ -57,6 +64,7 @@ const configs = bundles
       minify,
       preserveModules,
       entryFileNames,
+      extension = 'js',
       external = [],
       paths,
     }) =>
@@ -66,7 +74,7 @@ const configs = bundles
           ...plugins({ pkg, minify }),
           // Make sure we emit "use client" directive to make it compatible with Next.js
           preserveDirectives({
-            include: 'src/DynamicIcon.ts',
+            include: ['src/lucide-react.ts', 'src/DynamicIcon.ts', 'src/context.ts', 'src/Icon.ts'],
             suppressPreserveModulesWarning: true,
           }),
         ],
@@ -76,12 +84,12 @@ const configs = bundles
           ...(preserveModules
             ? {
                 dir: outputDir,
+                entryFileNames: entryFileNames ?? `[name].${extension}`,
               }
             : {
-                file: outputFile ?? `${outputDir}/${outputFileName}${minify ? '.min' : ''}.js`,
+                file: outputFile ?? `${outputDir}/${outputFileName}.${extension}`,
               }),
           paths,
-          entryFileNames,
           format,
           sourcemap: true,
           preserveModules,
@@ -103,6 +111,11 @@ export default [
         file: `dynamicIconImports.d.ts`,
         format: 'es',
       },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamicIconImports.d.mts`,
+        format: 'es',
+      },
     ],
     plugins: [dts()],
   },
@@ -111,6 +124,11 @@ export default [
     output: [
       {
         file: `dynamic.d.ts`,
+        format: 'es',
+      },
+      // Extra declaration file with .d.mts extension for better compatibility with ESM environments
+      {
+        file: `dynamic.d.mts`,
         format: 'es',
       },
     ],

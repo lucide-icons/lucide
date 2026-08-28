@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "on",
     "off",
@@ -22,6 +23,10 @@
     "connectivity"
   ],
   "aliases": [
-    "power-square"
+    {
+      "name": "power-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

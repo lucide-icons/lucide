@@ -6,6 +6,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "done",
     "todo",
@@ -19,6 +20,10 @@
     "time"
   ],
   "aliases": [
-    "alarm-check"
+    {
+      "name": "alarm-check",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

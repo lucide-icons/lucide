@@ -3,8 +3,10 @@
   "contributors": [
     "colebemis",
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "email",
     "message",

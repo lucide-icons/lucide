@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "fdev"
+    "fdev",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "map",
     "gps",

@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "chessurisme",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "animal",
+    "wildlife",
+    "bear",
+    "zoo",
+    "bamboo"
+  ],
+  "categories": [
+    "animals"
+  ]
+}
