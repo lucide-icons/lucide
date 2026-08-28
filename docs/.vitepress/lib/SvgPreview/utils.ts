@@ -55,7 +55,7 @@ export const getCommands = (src: string) =>
     .flatMap(({ d, name }, idx) =>
       new SVGPathData(d)
         .toAbs()
-        // @ts-ignore
+        // @ts-expect-error `commands` is typed as a union of command types svgson does not narrow
         .commands.map((c, cIdx) => ({ ...c, id: idx, idx: cIdx, name })),
     );
 
@@ -242,7 +242,7 @@ const getPaths = (src: string) => {
         break;
       }
       default: {
-        // @ts-ignore
+        // @ts-expect-error every command type is handled above, so `c` is not `never` here
         assertNever(c);
       }
     }
