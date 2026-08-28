@@ -4,10 +4,14 @@
     "zoharma",
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing industrial automation and robotics",
+    "Showing automated assembly or fabrication processes",
+    "Controlling robotic equipment in manufacturing apps",
+    "Monitoring assembly line operations in factory dashboards",
+    "Indicating automated production tasks in workflow tools"
+  ],
   "tags": [
-    "arm",
-    "robot",
     "mechanical",
     "automation",
     "factory",
@@ -19,8 +23,7 @@
     "machinery"
   ],
   "categories": [
-    "development",
-    "devices",
-    "connectivity"
+    "science",
+    "tools"
   ]
 }
