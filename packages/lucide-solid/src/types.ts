@@ -5,10 +5,10 @@ export type SVGAttributes = Partial<JSX.SvgSVGAttributes<SVGSVGElement>>;
 
 export interface LucideProps extends SVGAttributes {
   key?: string | number;
-  color?: string;
-  size?: string | number;
-  strokeWidth?: string | number;
   class?: string;
+  size?: string | number;
+  color?: string;
+  strokeWidth?: string | number;
   absoluteStrokeWidth?: boolean;
 }
 
