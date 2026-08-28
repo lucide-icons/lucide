@@ -1,4 +1,3 @@
-import { JSX } from 'solid-js/jsx-runtime';
 import { SVGAttributes } from './types';
 
 const defaultAttributes: SVGAttributes = {
