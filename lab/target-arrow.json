@@ -1,0 +1,14 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "archery",
+    "crossbow",
+    "bullseye",
+    "hit",
+    "range"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "MadsMadsDk",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Ecommerce (self pick-up options for large items)",
+    "Trailer lending services",
+    "Map markers",
+    "Asset tracking systems in construction"
+  ],
+  "tags": [
+    "tow",
+    "shipping",
+    "delivery",
+    "haulage",
+    "vehicle",
+    "equipment",
+    "freight"
+  ],
+  "categories": [
+    "transportation"
+  ]
+}
