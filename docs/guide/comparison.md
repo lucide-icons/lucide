@@ -1,5 +1,6 @@
 ---
 title: Comparison
+description: A comparison between Lucide and Feather Icons, highlighting the differences and benefits of each.
 ---
 
 # Comparison
