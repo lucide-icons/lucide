@@ -4,15 +4,35 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Processing card payments at checkout terminals",
+    "Locating ATMs or payment kiosks on maps",
+    "Indicating card-present transactions in finance apps",
+    "Showing contactless or chip card payment options"
+  ],
   "tags": [
     "bank",
     "purchase",
     "payment",
     "cc",
-    "atm"
+    "atm",
+    "terminal",
+    "checkout",
+    "kiosk",
+    "pos",
+    "point of sale",
+    "transaction",
+    "contactless",
+    "chip",
+    "swipe",
+    "tap",
+    "banking",
+    "finance",
+    "retail"
   ],
   "categories": [
+    "finance",
     "navigation",
-    "finance"
+    "shopping"
   ]
 }
