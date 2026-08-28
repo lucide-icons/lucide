@@ -1,35 +1,42 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "colebemis",
     "ericfennis",
+    "karsa-mistmere",
     "ameniti-mx"
   ],
+  "use-cases": [
+    "Removing a saved payment card from an account",
+    "Unlinking a payment method in billing settings",
+    "Revoking card access in banking apps",
+    "Indicating a declined or canceled card payment"
+  ],
   "tags": [
-    "credit card",
-    "debit card",
+    "debit",
     "payment",
     "remove",
     "delete",
-    "subtract",
-    "minus",
+    "unlink",
+    "revoke",
+    "decline",
+    "canceled",
     "banking",
     "finance",
     "wallet",
-    "card",
     "transaction",
-    "cancel payment",
-    "remove card",
-    "unlink card",
-    "revoke",
-    "decline",
-    "refund",
-    "chargeback",
-    "account"
+    "billing",
+    "account",
+    "purchase",
+    "checkout",
+    "subtract",
+    "minus",
+    "bank",
+    "cc"
   ],
   "categories": [
+    "account",
     "finance",
-    "money"
+    "shopping"
   ]
 }
