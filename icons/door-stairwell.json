@@ -4,8 +4,16 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Indicating stair access in building navigation",
+    "Showing floor levels in building directories",
+    "Marking where an item is located by floor",
+    "Directing users to take stairs instead of elevators"
+  ],
   "tags": [
     "staircase",
+    "stairway",
+    "stairs",
     "steps",
     "ladder",
     "transition",
@@ -16,9 +24,17 @@
     "vertical",
     "movement",
     "floor",
-    "level"
+    "level",
+    "entrance",
+    "entry",
+    "exit",
+    "egress",
+    "route",
+    "indoor",
+    "emergency exit"
   ],
   "categories": [
-    "home"
+    "home",
+    "travel"
   ]
 }
