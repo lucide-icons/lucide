@@ -2,12 +2,37 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "mittalyashu",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing Halloween themes in seasonal content",
+    "Indicating spooky or haunted themes",
+    "Marking invisible or hidden states in playful UIs",
+    "Indicating dead links or obsolete content",
+    "Showing ghosts or spirits in arcade-style games"
+  ],
   "tags": [
+    "spirit",
+    "haunt",
+    "specter",
+    "apparition",
+    "wraith",
+    "shade",
+    "phantom",
+    "entity",
+    "shadow",
+    "silhouette",
     "pac-man",
-    "spooky"
+    "spooky",
+    "halloween",
+    "haunted",
+    "invisible",
+    "hidden",
+    "empty",
+    "dead",
+    "obsolete",
+    "outdated"
   ],
   "categories": [
     "gaming"
