@@ -5,8 +5,21 @@
     "ericfennis",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
-    "help"
+    "about",
+    "advice",
+    "clue",
+    "details",
+    "help",
+    "hint",
+    "indicator",
+    "information",
+    "knowledge",
+    "notice",
+    "status",
+    "support",
+    "tooltip"
   ],
   "categories": [
     "accessibility",
