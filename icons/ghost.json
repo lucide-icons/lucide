@@ -8,7 +8,8 @@
   "use-cases": [
     "Representing Halloween themes in seasonal content",
     "Indicating spooky or haunted themes",
-    "Marking invisible, old, empty or hidden states in playful UIs",
+    "Marking invisible or hidden states in playful UIs",
+    "Indicating dead links or obsolete content",
     "Showing ghosts or spirits in arcade-style games"
   ],
   "tags": [
