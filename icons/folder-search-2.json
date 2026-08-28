@@ -3,12 +3,14 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "directory",
     "search",
     "find",
     "lost",
-    "browser"
+    "browser",
+    "lens"
   ],
   "categories": [
     "files"

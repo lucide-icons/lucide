@@ -3,8 +3,12 @@
   "contributors": [
     "Andreto",
     "mittalyashu",
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "backwards",
     "reverse",
@@ -13,7 +17,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ]
 }

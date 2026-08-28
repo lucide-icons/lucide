@@ -4,6 +4,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "calculate",
     "math",
@@ -14,6 +15,10 @@
     "math"
   ],
   "aliases": [
-    "divide-square"
+    {
+      "name": "divide-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

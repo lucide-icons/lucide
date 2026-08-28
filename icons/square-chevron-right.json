@@ -4,6 +4,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "forward",
     "next",
@@ -26,6 +27,10 @@
     "development"
   ],
   "aliases": [
-    "chevron-right-square"
+    {
+      "name": "chevron-right-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

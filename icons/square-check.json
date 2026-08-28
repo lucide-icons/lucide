@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "done",
     "todo",
@@ -14,6 +15,10 @@
     "notifications"
   ],
   "aliases": [
-    "check-square-2"
+    {
+      "name": "check-square-2",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

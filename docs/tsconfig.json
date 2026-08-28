@@ -2,6 +2,8 @@
   "extends": "./.nitro/types/tsconfig.json",
   "compilerOptions": {
     "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,

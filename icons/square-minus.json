@@ -4,6 +4,7 @@
     "colebemis",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "subtract",
     "remove",
@@ -36,6 +37,10 @@
     "devices"
   ],
   "aliases": [
-    "minus-square"
+    {
+      "name": "minus-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

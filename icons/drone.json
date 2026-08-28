@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "bernatfortet",
+    "shopped",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "quadcopter",
+    "uav",
+    "aerial",
+    "flight",
+    "flying",
+    "technology",
+    "airborne",
+    "robotics"
+  ],
+  "categories": [
+    "transportation",
+    "devices"
+  ]
+}
