@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "tube",
     "vial",
@@ -28,7 +29,7 @@
     },
     {
       "name": "test-tube-diagonal",
-      "deprecate": true,
+      "deprecated": true,
       "deprecationReason": "alias.name",
       "toBeRemovedInVersion": "v1.0"
     }

@@ -9,6 +9,6 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@types/node": "^22"
+    "@types/node": "^22.20.1"
   }
 }

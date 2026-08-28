@@ -3,6 +3,7 @@
   "contributors": [
     "qubrat"
   ],
+  "use-cases": [],
   "tags": [
     "table",
     "rows",
@@ -26,5 +27,8 @@
     "math",
     "layout",
     "design"
+  ],
+  "aliases": [
+    "grid-3-x-2"
   ]
 }
