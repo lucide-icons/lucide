@@ -5,23 +5,41 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "representing a player's hand in card games",
-    "conveying distribution of cards"
+    "Representing a player's hand in card games",
+    "Showing planning poker estimates in agile tools",
+    "Displaying icebreaker prompts in conversation apps",
+    "Marking spread or revealed collectible cards"
   ],
   "tags": [
-    "cards",
-    "playing",
-    "playing cards",
     "deck",
     "fan",
     "spread",
     "hand",
+    "deal",
+    "dealt",
+    "draw",
+    "shuffle",
+    "tabletop",
+    "planning poker",
+    "scrum",
+    "agile",
+    "estimation",
+    "estimate",
+    "prompt",
+    "icebreaker",
+    "conversation",
+    "collectible",
+    "collection",
+    "trading",
     "poker",
     "casino",
     "game",
-    "gambling"
+    "gambling",
+    "suit"
   ],
   "categories": [
-    "gaming"
+    "gaming",
+    "development",
+    "social"
   ]
 }
