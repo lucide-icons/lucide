@@ -4,10 +4,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Representing viral infections in healthcare apps",
-    "Indicating malware threats in security tools",
-    "Showing disease outbreaks in public health dashboards",
-    "Labeling pathogens in biology or science content"
+    "Indicating no malware threats in security tools",
+    "Showing cleared infections in healthcare apps",
+    "Marking reduced infection risk in health dashboards",
+    "Representing blocked pathogens in science content"
   ],
   "tags": [
     "pathogen",
@@ -28,7 +28,14 @@
     "healthcare",
     "malware",
     "cybersecurity",
-    "threat"
+    "threat",
+    "antivirus",
+    "blocked",
+    "removed",
+    "clean",
+    "safe",
+    "prevention",
+    "quarantine"
   ],
   "categories": [
     "medical",
