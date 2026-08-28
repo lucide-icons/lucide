@@ -3,12 +3,19 @@
   "contributors": [
     "l0uisgrange"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "represent canned goods in grocery or delivery apps",
+    "label pantry items or nonperishable inventory",
+    "indicate metal recycling or recyclable containers",
+    "denote canned ingredients in recipe or meal-planning interfaces"
+  ],
   "tags": [
     "food",
     "storage",
     "groceries",
-    "tin"
+    "tin",
+    "metal",
+    "recyclable"
   ],
   "categories": [
     "food-beverage"
