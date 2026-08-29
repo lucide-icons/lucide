@@ -458,20 +458,20 @@ importers:
         specifier: workspace:*
         version: link:../shared
       '@preact/preset-vite':
-        specifier: ^2.10.5
-        version: 2.10.5(@babel/core@7.29.7(supports-color@10.2.2))(preact@10.29.7)(rollup@4.62.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
+        specifier: ^2.10.6
+        version: 2.10.6(@babel/core@7.29.7(supports-color@10.2.2))(preact@10.29.8)(rollup@4.62.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
       '@testing-library/jest-dom':
         specifier: ^6.9.1
         version: 6.9.1
       '@testing-library/preact':
         specifier: ^3.2.4
-        version: 3.2.4(preact@10.29.7)
+        version: 3.2.4(preact@10.29.8)
       jest-serializer-html:
         specifier: ^7.1.0
         version: 7.1.0
       preact:
-        specifier: ^10.29.7
-        version: 10.29.7
+        specifier: ^10.29.8
+        version: 10.29.8
       rollup:
         specifier: ^4.62.2
         version: 4.62.2
@@ -3958,8 +3958,8 @@ packages:
   '@poppinss/exception@1.2.3':
     resolution: {integrity: sha512-dCED+QRChTVatE9ibtoaxc+WkdzOSjYTKi/+uacHWIsfodVfpsueo3+DKpgU5Px8qXjgmXkSvhXvSCz3fnP9lw==}
 
-  '@preact/preset-vite@2.10.5':
-    resolution: {integrity: sha512-p0vJpxiVO7KWWazWny3LUZ+saXyZKWv6Ju0bYMWNJRp2YveufRPgSUB1C4MTqGJfz07EehMgfN+AJNwQy+w6Iw==}
+  '@preact/preset-vite@2.10.6':
+    resolution: {integrity: sha512-ZZ5RIT2ZVXg8UxRA8VZpoT8CdpDG7RFIqOT4bELqNBp85+HKvQBbgmh3gsoW1UOQXx26TLe+ZRNKI7q281Kckw==}
     peerDependencies:
       '@babel/core': 7.x
       vite: ^7.3.6
@@ -9258,6 +9258,14 @@ packages:
       preact-render-to-string:
         optional: true
 
+  preact@10.29.8:
+    resolution: {integrity: sha512-ej2aVZ+vZ8WO7tvlQWRM9N63A0KzF9q4mWJfDUHgYaIofWY9hu74QdnQrjoPMmZi2/nZ5gN0bJCQF49xQqx09Q==}
+    peerDependencies:
+      preact-render-to-string: '>=5'
+    peerDependenciesMeta:
+      preact-render-to-string:
+        optional: true
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -11990,7 +11998,7 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.29.7':
     dependencies:
-      '@babel/types': 7.29.7
+      '@babel/types': 7.29.8
 
   '@babel/helper-compilation-targets@7.29.7':
     dependencies:
@@ -12042,7 +12050,7 @@ snapshots:
 
   '@babel/helper-module-imports@7.18.6':
     dependencies:
-      '@babel/types': 7.29.7
+      '@babel/types': 7.29.8
 
   '@babel/helper-module-imports@7.29.7(supports-color@10.2.2)':
     dependencies:
@@ -12609,7 +12617,7 @@ snapshots:
       '@babel/helper-module-imports': 7.29.7(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.29.7
       '@babel/plugin-syntax-jsx': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))
-      '@babel/types': 7.29.7
+      '@babel/types': 7.29.8
     transitivePeerDependencies:
       - supports-color
 
@@ -14707,12 +14715,12 @@ snapshots:
 
   '@poppinss/exception@1.2.3': {}
 
-  '@preact/preset-vite@2.10.5(@babel/core@7.29.7(supports-color@10.2.2))(preact@10.29.7)(rollup@4.62.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))':
+  '@preact/preset-vite@2.10.6(@babel/core@7.29.7(supports-color@10.2.2))(preact@10.29.8)(rollup@4.62.2)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/plugin-transform-react-jsx': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/plugin-transform-react-jsx-development': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      '@prefresh/vite': 2.4.12(preact@10.29.7)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
+      '@prefresh/vite': 2.4.12(preact@10.29.8)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))
       '@rollup/pluginutils': 5.4.0(rollup@4.62.2)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.29.7(supports-color@10.2.2))
       debug: 4.4.3(supports-color@10.2.2)
@@ -14728,20 +14736,20 @@ snapshots:
 
   '@prefresh/babel-plugin@0.5.3': {}
 
-  '@prefresh/core@1.5.10(preact@10.29.7)':
+  '@prefresh/core@1.5.10(preact@10.29.8)':
     dependencies:
-      preact: 10.29.7
+      preact: 10.29.8
 
   '@prefresh/utils@1.2.1': {}
 
-  '@prefresh/vite@2.4.12(preact@10.29.7)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))':
+  '@prefresh/vite@2.4.12(preact@10.29.8)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@prefresh/babel-plugin': 0.5.3
-      '@prefresh/core': 1.5.10(preact@10.29.7)
+      '@prefresh/core': 1.5.10(preact@10.29.8)
       '@prefresh/utils': 1.2.1
       '@rollup/pluginutils': 4.2.1
-      preact: 10.29.7
+      preact: 10.29.8
       vite: 7.3.6(@types/node@26.1.1)(jiti@2.7.0)(less@4.6.7)(sass@1.101.0)(stylus@0.56.0(supports-color@10.2.2))(terser@5.49.0)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
@@ -15473,10 +15481,10 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
 
-  '@testing-library/preact@3.2.4(preact@10.29.7)':
+  '@testing-library/preact@3.2.4(preact@10.29.8)':
     dependencies:
       '@testing-library/dom': 8.20.1
-      preact: 10.29.7
+      preact: 10.29.8
 
   '@testing-library/react@14.3.1(@types/react@18.3.31)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -21094,6 +21102,8 @@ snapshots:
   powershell-utils@0.1.0: {}
 
   preact@10.29.7: {}
+
+  preact@10.29.8: {}
 
   prelude-ls@1.2.1: {}
 
