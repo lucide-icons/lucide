@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "sports",
+    "aussie rules",
+    "australian football",
+    "afl",
+    "footy",
+    "rugby",
+    "ball",
+    "oval ball",
+    "team sport",
+    "outdoor",
+    "competition"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
