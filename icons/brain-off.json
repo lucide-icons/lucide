@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas",
+    "it-is-not",
+    "jamiemlaw",
+    "ej52"
+  ],
+  "tags": [
+    "medical",
+    "mind",
+    "mental",
+    "intellect",
+    "cerebral",
+    "consciousness",
+    "genius",
+    "artificial intelligence",
+    "ai",
+    "think",
+    "deep learning",
+    "machine learning",
+    "computing"
+  ],
+  "categories": [
+    "medical",
+    "science",
+    "development"
+  ]
+}
