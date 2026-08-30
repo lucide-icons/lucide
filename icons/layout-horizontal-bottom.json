@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "layout",
+    "align",
+    "alignment",
+    "horizontal",
+    "bottom",
+    "auto layout",
+    "frame",
+    "row",
+    "cross axis",
+    "arrange",
+    "position"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
