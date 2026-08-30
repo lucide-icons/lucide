@@ -38,6 +38,7 @@ packages/**/dynamic.mjs
 packages/**/LICENSE
 categories.json
 tags.json
+!/icons/tags.json
 .vercel
 package-lock.json
 
