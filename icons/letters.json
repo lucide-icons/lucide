@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing letters, alphabets, or written characters",
+    "Indicating alphabetical sorting or organization",
+    "Representing language, literacy, or spelling"
+  ],
+  "tags": [
+    "abc",
+    "alphabet",
+    "alphabetical",
+    "text",
+    "characters",
+    "language",
+    "typography",
+    "literacy",
+    "spelling"
+  ],
+  "categories": [
+    "text"
+  ]
+}
