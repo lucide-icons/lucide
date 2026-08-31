@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ilyavred",
+    "jamiemlaw"
+  ],
+  "tags": [
+    "opacity",
+    "opaque",
+    "transparency"
+  ],
+  "categories": [
+    "design",
+    "photography"
+  ]
+}
