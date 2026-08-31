@@ -26,6 +26,7 @@
     "generate:sponsors": "node scripts/updateSponsors.mts",
     "generate:contributors": "node ./scripts/updateContributors.mts icons/*.svg",
     "generate:nextJSAliases": "node ./scripts/generateNextJSAliases.mts",
+    "icon-usage": "node ./scripts/iconUsage.mts",
     "suggest:metadata": "node ./scripts/suggestMetaData.mts",
     "suggest:metadata:watch": "node --env-file .env --watch ./scripts/suggestMetaData.mts",
     "postinstall": "husky install",
