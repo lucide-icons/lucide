@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing turn-based board games",
+    "Showing game boards in gaming interfaces"
+  ],
+  "tags": [
+    "game",
+    "board",
+    "grid",
+    "strategy",
+    "noughts and crosses"
+  ],
+  "categories": [
+    "gaming"
+  ]
+}
