@@ -1,13 +1,14 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "l0uisgrange"
+    "l0uisgrange",
+    "karsa-mistmere"
   ],
   "use-cases": [
-    "represent canned goods in grocery or delivery apps",
-    "label pantry items or nonperishable inventory",
-    "indicate metal recycling or recyclable containers",
-    "denote canned ingredients in recipe or meal-planning interfaces"
+    "Representing canned food in grocery or delivery apps",
+    "Labelling pantry items or nonperishable inventory",
+    "Indicating metal recycling or recyclable containers",
+    "Denoting canned ingredients in recipe or meal-planning interfaces"
   ],
   "tags": [
     "food",
@@ -15,7 +16,11 @@
     "groceries",
     "tin",
     "metal",
-    "recyclable"
+    "recyclable",
+    "container",
+    "pantry",
+    "grocery",
+    "preserved"
   ],
   "categories": [
     "food-beverage"
