@@ -4,7 +4,11 @@
     "Nykoula",
     "jamiemlaw"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing crossing infrastructure in navigation apps",
+    "Marking river crossings or connecting routes on maps",
+    "Showing clearance-limited transit zones in maritime dashboards"
+  ],
   "tags": [
     "overpass",
     "cross over",
@@ -18,7 +22,11 @@
     "river",
     "gate",
     "golden",
-    "travel"
+    "travel",
+    "landmark",
+    "route",
+    "maritime",
+    "clearance"
   ],
   "categories": [
     "travel",
