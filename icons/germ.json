@@ -1,17 +1,29 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "rrod497"
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing bacteria or single-celled organisms",
+    "Indicating contamination or infectious disease",
+    "Marking microbiology research or laboratory samples",
+    "Showing microbes in hygiene and sanitation interfaces"
   ],
   "tags": [
     "virus",
     "microbe",
+    "bacterium",
     "bacteria",
     "germ",
+    "organism",
+    "cilia",
     "pathogen",
     "infection",
     "disease",
     "contagion",
+    "contamination",
+    "microbiology",
     "health",
     "medicine",
     "biology",
@@ -23,7 +35,8 @@
     "amoeba",
     "flu",
     "security",
-    "cell",
+    "single cell",
+    "unicellular",
     "vaccine",
     "immunity",
     "quarantine"
