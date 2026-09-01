@@ -25,9 +25,13 @@
     "arthropod",
     "littleneck",
     "quahog",
-    "cherrystone"
+    "cherrystone",
+    "allergy",
+    "intolerance",
+    "diet"
   ],
   "categories": [
-    "animals"
+    "animals",
+    "food-beverage"
   ]
 }
