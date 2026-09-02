@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { generateHashedKey } from './generateHashedKey.ts';
 
 /**

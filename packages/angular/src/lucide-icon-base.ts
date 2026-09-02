@@ -8,7 +8,6 @@ import { lucideIconTemplate } from './lucide-icon-template';
  * @internal
  */
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'svg[lucideIcon]',
   template: lucideIconTemplate,
   host: {
