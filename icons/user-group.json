@@ -15,9 +15,21 @@
     "team",
     "members",
     "community",
-    "membership"
+    "membership",
+    "collaboration",
+    "organization",
+    "contacts",
+    "directory",
+    "staff",
+    "family",
+    "ancestry",
+    "ancestors",
+    "lineage",
+    "parents"
   ],
   "categories": [
-    "account"
+    "account",
+    "people",
+    "social"
   ]
 }
