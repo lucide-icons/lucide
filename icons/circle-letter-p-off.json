@@ -3,12 +3,13 @@
   "contributors": [
     "karsa-mistmere",
     "jguddas",
-    "danielbayley"
+    "ericfennis"
   ],
   "use-cases": [],
   "tags": [
     "parking lot",
-    "car park"
+    "car park",
+    "no parking"
   ],
   "categories": [
     "transportation",
@@ -16,7 +17,12 @@
   ],
   "aliases": [
     {
-      "name": "parking-square",
+      "name": "parking-circle-off",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "circle-parking-off",
       "deprecationReason": "alias.name",
       "deprecated": true
     }

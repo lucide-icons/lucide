@@ -1,0 +1,48 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "marking parking locations",
+    "representing phosphorus in scientific contexts",
+    "indicating p-values in statistics",
+    "marking soft dynamics in music notation",
+    "representing pages or pagination",
+    "representing probability in math contexts"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "parking",
+    "phosphorus",
+    "chemistry",
+    "p-value",
+    "statistics",
+    "piano",
+    "soft",
+    "music",
+    "page",
+    "probability",
+    "math",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ],
+  "aliases": [
+    {
+      "name": "parking-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "circle-parking",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
+  ]
+}
