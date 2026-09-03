@@ -1,18 +1,39 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "karsa-mistmere",
     "jguddas",
     "drewcobleRH"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "disabled delete action",
+    "cannot remove item",
+    "deletion restricted",
+    "trash bin full or out of service"
+  ],
   "tags": [
+    "empty",
+    "deletion",
+    "cleanup",
+    "junk",
+    "clear",
     "garbage",
     "delete",
     "remove",
     "bin",
-    "disabled"
+    "waste",
+    "recycle",
+    "discard",
+    "rubbish",
+    "disabled",
+    "off",
+    "prevent"
   ],
   "categories": [
-    "files"
+    "files",
+    "mail"
   ]
 }
