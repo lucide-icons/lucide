@@ -39,7 +39,7 @@ function createLucideIcon(
         }
       : iconOrIconName;
   const Component = createComponent(
-    ($$result, $$props: Record<string, any>, $$slots) => {
+    ($$result, $$props: Record<string, unknown>, $$slots) => {
       const { class: className, ...restProps } = $$props;
       return render`${renderComponent(
         $$result,

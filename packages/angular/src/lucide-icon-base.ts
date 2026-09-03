@@ -9,7 +9,6 @@ import buildLucideIconNode from './utils/buildLucideIconNode';
  * @internal
  */
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'svg[lucideIcon]',
   template: lucideIconTemplate,
   host: {

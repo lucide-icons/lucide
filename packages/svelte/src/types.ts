@@ -53,9 +53,10 @@ export type IconProps = LucideProps &
 export type LucideIcon = Component<LucideProps>;
 
 export type IconEvents = {
-  [evt: string]: CustomEvent<any>;
+  [evt: string]: CustomEvent<unknown>;
 };
 
 export type IconSlots = {
-  default: {};
+  // The default slot does not expose any slot props.
+  default: Record<string, never>;
 };
