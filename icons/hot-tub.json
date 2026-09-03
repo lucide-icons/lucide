@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ishanbagra18"
+  ],
+  "use-cases": [],
+  "tags": [
+    "spa",
+    "jacuzzi",
+    "bath",
+    "relax",
+    "warm",
+    "water",
+    "steam",
+    "bubbles"
+  ],
+  "categories": [
+    "travel",
+    "home"
+  ]
+}
