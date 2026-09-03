@@ -18,7 +18,15 @@
     "power",
     "energy",
     "drive",
-    "repair"
+    "repair",
+    "car",
+    "motor",
+    "mechanical",
+    "diagnostics",
+    "maintenance",
+    "warning",
+    "dashboard",
+    "parts"
   ],
   "categories": [
     "transportation"
