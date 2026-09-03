@@ -33,9 +33,10 @@ updates:
           - '@babel/*'
           - '@rollup/plugin-babel'
           - '@solidjs/testing-library'
+          - '@solidjs/vite-plugin'
+          - '@solidjs/web'
           - 'babel-preset-solid'
           - 'solid-js'
-          - 'vite-plugin-solid'
       react-native-deps:
         patterns:
           - 'react-native'

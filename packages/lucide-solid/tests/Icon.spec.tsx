@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from '@solidjs/testing-library';
+import { createSignal, flush } from 'solid-js';
 
 import { airVent } from './testIconNodes';
 import { Icon } from '../src/lucide-solid';
@@ -29,6 +30,32 @@ describe('Using Icon Component', () => {
     ));
 
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should update when reactive props change', () => {
+    const [size, setSize] = createSignal(24);
+    const [color, setColor] = createSignal('red');
+    const { container } = render(() => (
+      <Icon
+        iconNode={airVent}
+        size={size()}
+        color={color()}
+      />
+    ));
+
+    const IconComponent = container.firstElementChild;
+
+    expect(IconComponent).toHaveAttribute('width', '24');
+    expect(IconComponent).toHaveAttribute('height', '24');
+    expect(IconComponent).toHaveAttribute('stroke', 'red');
+
+    setSize(48);
+    setColor('blue');
+    flush();
+
+    expect(IconComponent).toHaveAttribute('width', '48');
+    expect(IconComponent).toHaveAttribute('height', '48');
+    expect(IconComponent).toHaveAttribute('stroke', 'blue');
   });
 });
 
@@ -97,7 +124,7 @@ describe('Icon Component Accessibility', () => {
         size={48}
         stroke="red"
         absoluteStrokeWidth
-        aria-hidden={false}
+        aria-hidden="false"
       />
     ));
 
