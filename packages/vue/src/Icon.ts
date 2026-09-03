@@ -1,11 +1,5 @@
 import { type FunctionalComponent, h } from 'vue';
-import {
-  buildLucideIconNode,
-  hasA11yProp,
-  isEmptyString,
-  mergeClasses,
-  toKebabCase,
-} from '@lucide/shared';
+import { buildLucideIconNode, hasA11yProp, isEmptyString, toKebabCase } from '@lucide/shared';
 import { LucideIconNode, LucideIconData, LucideProps } from './types';
 import { useLucideProps } from './context';
 
@@ -50,7 +44,6 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     width = size,
     height = size,
     color,
-    class: classes = '',
     ...props
   },
   { slots },
@@ -78,7 +71,7 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     nonScalingStrokeKebabCase === true ||
     contextNonScalingStroke === true;
 
-  const { class: propsClass, ...restProps } = props;
+  delete props.class;
 
   const defaultSlot = slots.default?.();
 
@@ -89,9 +82,9 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     strokeWidth: strokeWidth ?? strokeWidthKebabCase ?? contextStrokeWidth,
     absoluteStrokeWidth: isAbsoluteStrokeWidth,
     nonScalingStroke: isNonScalingStroke,
-    className: mergeClasses(contextClass, propsClass),
-    hasA11yProp: (defaultSlot != null && defaultSlot.length > 0) || hasA11yProp(restProps),
-    attributes: restProps,
+    className: contextClass,
+    hasA11yProp: (defaultSlot != null && defaultSlot.length > 0) || hasA11yProp(props),
+    attributes: props,
   });
 
   return h('svg', svgAttributes, [

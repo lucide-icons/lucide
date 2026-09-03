@@ -22,15 +22,18 @@ const toNativeSvgAttrName = (attributeName: string) => {
   return attributeName.replace(/-([a-z])/g, (_, character: string) => character.toUpperCase());
 };
 
-const toNativeSvgAttributes = (attributes: Record<string, any>) => {
-  return Object.entries(attributes).reduce<Record<string, any>>((acc, [attributeName, value]) => {
-    if (value === undefined) {
-      return acc;
-    }
+const toNativeSvgAttributes = (attributes: Record<string, unknown>) => {
+  return Object.entries(attributes).reduce<Record<string, unknown>>(
+    (acc, [attributeName, value]) => {
+      if (value === undefined) {
+        return acc;
+      }
 
-    acc[toNativeSvgAttrName(attributeName)] = value;
-    return acc;
-  }, {});
+      acc[toNativeSvgAttrName(attributeName)] = value;
+      return acc;
+    },
+    {},
+  );
 };
 
 /**
