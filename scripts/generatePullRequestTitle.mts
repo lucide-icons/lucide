@@ -9,8 +9,9 @@
  *
  * It follows the convention of `generateChangedIconsCommentMarkup.mts`: it reads
  * its input from the environment, prints the result to stdout and has no other
- * side effects. It deliberately has **zero imports** so Node can run it natively
- * as an `.mts` file without a `pnpm install` step.
+ * side effects. Its only import is the shared `conventional-commit-types.json`
+ * (a native JSON import, no third-party dependency), so Node can still run it
+ * natively as an `.mts` file without a `pnpm install` step.
  *
  * Env input (CLI wrapper at the bottom):
  * - `ADDED_FILES_FILE`: path to a newline-separated list of added files, or
@@ -20,19 +21,9 @@
  * Output: the new title on stdout, or nothing at all when no change is needed.
  */
 
-// Types accepted by `lint-pr-title.yml` (amannn/action-semantic-pull-request).
-const VALID_TYPES = [
-  'fix',
-  'feat',
-  'perf',
-  'refactor',
-  'test',
-  'style',
-  'docs',
-  'ci',
-  'build',
-  'chore',
-];
+// Single source of truth for the conventional-commit types, shared with
+// `lint-pr-title.yml` (amannn/action-semantic-pull-request).
+import VALID_TYPES from '../.github/conventional-commit-types.json' with { type: 'json' };
 
 // Default type used in prefix mode when the current title has no valid type.
 // The path reliably tells us the scope but nothing about whether a change is a
