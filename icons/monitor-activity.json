@@ -5,12 +5,19 @@
     "karsa-mistmere",
     "mmaxence"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing system monitoring sections in a dashboard",
+    "Showing uptime or service health on a status page",
+    "Indicating live performance metrics for a server or workstation",
+    "Denoting observability and diagnostics tools in developer software"
+  ],
   "tags": [
     "tv",
+    "computer",
     "screen",
     "display",
     "desktop",
+    "external display",
     "pulse",
     "activity",
     "monitoring",
