@@ -1,9 +1,16 @@
 import { describe, it, expect } from 'vitest';
 import { createLucideIcon } from '../src/lucide-preact';
+import { __iconNode } from '../src/icons/air-vent';
 import { airVent } from './testIconNodes';
 import { render } from '@testing-library/preact';
 
 describe('Using createLucideIcon', () => {
+  it('should export __iconNode from icon module', () => {
+    expect(__iconNode).toBeDefined();
+    expect(Array.isArray(__iconNode)).toBe(true);
+    expect(__iconNode.length).toBeGreaterThan(0);
+  });
+
   it('should create a component from an iconNode', () => {
     const AirVent = createLucideIcon('AirVent', airVent);
 

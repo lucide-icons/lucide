@@ -16,7 +16,7 @@ export default defineExportTemplate(async ({
 import Icon from '../Icon';
 import type { IconNode, LucideProps } from '../types';
 
-const iconNode: IconNode = ${JSON.stringify(children)};
+export const __iconNode: IconNode = ${JSON.stringify(children)};
 
 /**
  * @component @name ${componentName}
@@ -30,7 +30,7 @@ const iconNode: IconNode = ${JSON.stringify(children)};
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
 const ${componentName} = (props: LucideProps) => (
-  <Icon {...props} iconNode={iconNode} name="${iconName}" />
+  <Icon {...props} iconNode={__iconNode} name="${iconName}" />
 )
 
 export default ${componentName};
