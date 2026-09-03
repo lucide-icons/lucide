@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "benhaube"
+    "benhaube",
+    "jamiemlaw"
   ],
   "use-cases": [
     "Indicating engine health or need of repair",
