@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Nykoula",
+    "jamiemlaw"
+  ],
+  "use-cases": [
+    "Representing crossing infrastructure in navigation apps",
+    "Marking river crossings or connecting routes on maps",
+    "Showing clearance-limited transit zones in maritime dashboards"
+  ],
+  "tags": [
+    "overpass",
+    "cross over",
+    "traverse",
+    "viaduct",
+    "suspension",
+    "infrastructure",
+    "transportation",
+    "crossing",
+    "road",
+    "river",
+    "gate",
+    "golden",
+    "travel",
+    "landmark",
+    "route",
+    "maritime",
+    "clearance"
+  ],
+  "categories": [
+    "travel",
+    "transportation",
+    "buildings"
+  ]
+}
