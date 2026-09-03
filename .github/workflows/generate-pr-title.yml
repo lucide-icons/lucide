@@ -1,0 +1,56 @@
+name: Generate PR title
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions: {}
+
+jobs:
+  generate-pr-title:
+    name: Generate PR Title
+    if: github.repository == 'lucide-icons/lucide'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write # Required to edit the PR title
+
+    steps:
+      #  We check out the main branch of the main repository for security reasons.
+      #  The script only reads its input from the environment, so it never runs
+      #  any code from the (untrusted) pull request.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: lucide-icons/lucide
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: 'package.json'
+
+      - name: Get added files
+        id: added-files
+        uses: tj-actions/changed-files@9426d40962ed5378910ee2e21d5f8c6fcbf2dd96 # v47.0.6
+
+      - name: Generate PR title
+        id: generate
+        run: |
+          NEW_TITLE="$(node ./scripts/generatePullRequestTitle.mts)"
+          {
+            echo "new_title<<PR_TITLE_EOF"
+            echo "$NEW_TITLE"
+            echo "PR_TITLE_EOF"
+          } >> "$GITHUB_OUTPUT"
+        env:
+          ADDED_FILES: ${{ steps.added-files.outputs.added_files }}
+          CURRENT_TITLE: ${{ github.event.pull_request.title }}
+
+      - name: Update PR title
+        if: steps.generate.outputs.new_title != ''
+        run: gh pr edit "$PR_NUMBER" --title "$NEW_TITLE"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          NEW_TITLE: ${{ steps.generate.outputs.new_title }}
