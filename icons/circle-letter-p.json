@@ -32,5 +32,17 @@
   ],
   "categories": [
     "text"
+  ],
+  "aliases": [
+    {
+      "name": "parking-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    },
+    {
+      "name": "circle-parking",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }
