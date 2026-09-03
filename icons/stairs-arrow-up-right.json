@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "darrel1925"
+  ],
+  "use-cases": [
+    "marking rooms and destinations on higher floors in wayfinding interfaces",
+    "indicating ascending stairs on floor plans and directional signage",
+    "identifying stair routes to upper floors and rooftop areas"
+  ],
+  "tags": [
+    "steps",
+    "stairwell",
+    "staircase",
+    "ascending",
+    "upstairs",
+    "floor",
+    "level",
+    "wayfinding",
+    "signage",
+    "direction",
+    "diagonal"
+  ],
+  "categories": [
+    "buildings",
+    "navigation",
+    "arrows"
+  ]
+}
