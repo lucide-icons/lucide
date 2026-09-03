@@ -3,7 +3,7 @@
 exports[`Using lucide icon components > should add a class to the element 1`] = `
 <svg
   aria-hidden="true"
-  class="lucide-icon lucide lucide-smile my-icon"
+  class="lucide-icon lucide lucide-face-slightly-smiling my-icon"
   fill="none"
   height="24"
   stroke="currentColor"
@@ -15,6 +15,27 @@ exports[`Using lucide icon components > should add a class to the element 1`] = 
   xmlns="http://www.w3.org/2000/svg"
 >
   <!---->
+  <path
+    d="M15 10V9"
+  >
+    
+  </path>
+  
+  <!---->
+  <path
+    d="M16.472 15a6 6 0 01-8.943 0"
+  >
+    
+  </path>
+  
+  <!---->
+  <path
+    d="M9 10V9"
+  >
+    
+  </path>
+  
+  <!---->
   <circle
     cx="12"
     cy="12"
@@ -22,33 +43,6 @@ exports[`Using lucide icon components > should add a class to the element 1`] = 
   >
     
   </circle>
-  
-  <!---->
-  <path
-    d="M8 14s1.5 2 4 2 4-2 4-2"
-  >
-    
-  </path>
-  
-  <!---->
-  <line
-    x1="9"
-    x2="9.01"
-    y1="9"
-    y2="9"
-  >
-    
-  </line>
-  
-  <!---->
-  <line
-    x1="15"
-    x2="15.01"
-    y1="9"
-    y2="9"
-  >
-    
-  </line>
   
   <!---->
   <!---->
@@ -59,7 +53,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
 <div>
   <svg
     aria-hidden="true"
-    class="lucide-icon lucide lucide-smile"
+    class="lucide-icon lucide lucide-face-slightly-smiling"
     fill="none"
     height="48"
     stroke="red"
@@ -71,6 +65,27 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
     xmlns="http://www.w3.org/2000/svg"
   >
     <!---->
+    <path
+      d="M15 10V9"
+    >
+      
+    </path>
+    
+    <!---->
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    >
+      
+    </path>
+    
+    <!---->
+    <path
+      d="M9 10V9"
+    >
+      
+    </path>
+    
+    <!---->
     <circle
       cx="12"
       cy="12"
@@ -78,33 +93,6 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
     >
       
     </circle>
-    
-    <!---->
-    <path
-      d="M8 14s1.5 2 4 2 4-2 4-2"
-    >
-      
-    </path>
-    
-    <!---->
-    <line
-      x1="9"
-      x2="9.01"
-      y1="9"
-      y2="9"
-    >
-      
-    </line>
-    
-    <!---->
-    <line
-      x1="15"
-      x2="15.01"
-      y1="9"
-      y2="9"
-    >
-      
-    </line>
     
     <!---->
     <!---->
@@ -124,27 +112,19 @@ exports[`Using lucide icon components > should not scale the strokeWidth when ab
      stroke-linecap="round"
      stroke-linejoin="round"
      aria-hidden="true"
-     class="lucide-icon lucide lucide-smile"
+     class="lucide-icon lucide lucide-face-slightly-smiling"
 >
+  <path d="M15 10V9">
+  </path>
+  <path d="M16.472 15a6 6 0 01-8.943 0">
+  </path>
+  <path d="M9 10V9">
+  </path>
   <circle cx="12"
           cy="12"
           r="10"
   >
   </circle>
-  <path d="M8 14s1.5 2 4 2 4-2 4-2">
-  </path>
-  <line x1="9"
-        x2="9.01"
-        y1="9"
-        y2="9"
-  >
-  </line>
-  <line x1="15"
-        x2="15.01"
-        y1="9"
-        y2="9"
-  >
-  </line>
 </svg>
 `;
 
@@ -152,7 +132,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
 <div>
   <svg
     aria-hidden="true"
-    class="lucide-icon lucide lucide-smile"
+    class="lucide-icon lucide lucide-face-slightly-smiling"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -164,6 +144,27 @@ exports[`Using lucide icon components > should render an component 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <!---->
+    <path
+      d="M15 10V9"
+    >
+      
+    </path>
+    
+    <!---->
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    >
+      
+    </path>
+    
+    <!---->
+    <path
+      d="M9 10V9"
+    >
+      
+    </path>
+    
+    <!---->
     <circle
       cx="12"
       cy="12"
@@ -171,33 +172,6 @@ exports[`Using lucide icon components > should render an component 1`] = `
     >
       
     </circle>
-    
-    <!---->
-    <path
-      d="M8 14s1.5 2 4 2 4-2 4-2"
-    >
-      
-    </path>
-    
-    <!---->
-    <line
-      x1="9"
-      x2="9.01"
-      y1="9"
-      y2="9"
-    >
-      
-    </line>
-    
-    <!---->
-    <line
-      x1="15"
-      x2="15.01"
-      y1="9"
-      y2="9"
-    >
-      
-    </line>
     
     <!---->
     <!---->
@@ -209,7 +183,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
 exports[`Using lucide icon components > should render an icon slot 1`] = `
 <div>
   <svg
-    class="lucide-icon lucide lucide-smile"
+    class="lucide-icon lucide lucide-face-slightly-smiling"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -221,6 +195,27 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <!---->
+    <path
+      d="M15 10V9"
+    >
+      
+    </path>
+    
+    <!---->
+    <path
+      d="M16.472 15a6 6 0 01-8.943 0"
+    >
+      
+    </path>
+    
+    <!---->
+    <path
+      d="M9 10V9"
+    >
+      
+    </path>
+    
+    <!---->
     <circle
       cx="12"
       cy="12"
@@ -228,33 +223,6 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
     >
       
     </circle>
-    
-    <!---->
-    <path
-      d="M8 14s1.5 2 4 2 4-2 4-2"
-    >
-      
-    </path>
-    
-    <!---->
-    <line
-      x1="9"
-      x2="9.01"
-      y1="9"
-      y2="9"
-    >
-      
-    </line>
-    
-    <!---->
-    <line
-      x1="15"
-      x2="15.01"
-      y1="9"
-      y2="9"
-    >
-      
-    </line>
     
     <!---->
     <text>
