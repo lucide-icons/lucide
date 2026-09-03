@@ -97,7 +97,7 @@ describe('Icon Component Accessibility', () => {
         size={48}
         stroke="red"
         absoluteStrokeWidth
-        aria-hidden={false}
+        aria-hidden="false"
       />
     ));
 

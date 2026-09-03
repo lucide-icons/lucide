@@ -60,7 +60,7 @@ const configs = bundles
                     '.js': 'jsx',
                   },
                   jsx: 'preserve',
-                  jsxImportSource: 'solid-js',
+                  jsxImportSource: '@solidjs/web',
                   bundle: true,
                   format: 'esm',
                   sourcemap: true,
@@ -90,7 +90,7 @@ const configs = bundles
                       },
                     },
                   ],
-                  external: ['solid-js'],
+                  external: ['solid-js', '@solidjs/web'],
                 });
 
                 // Generate types
@@ -99,7 +99,7 @@ const configs = bundles
                   module: ts.ModuleKind.ESNext,
                   moduleResolution: ts.ModuleResolutionKind.NodeJs,
                   jsx: ts.JsxEmit.Preserve,
-                  jsxImportSource: 'solid-js',
+                  jsxImportSource: '@solidjs/web',
                   allowSyntheticDefaultImports: true,
                   esModuleInterop: true,
                   declarationDir: `dist/types`,
@@ -111,7 +111,7 @@ const configs = bundles
             }
           : null,
       ],
-      external: ['solid-js', 'solid-js/web', 'solid-js/store'],
+      external: ['solid-js', '@solidjs/web', 'solid-js/store'],
       output: {
         name: packageName,
         ...(preserveModules
