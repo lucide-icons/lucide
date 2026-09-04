@@ -2,8 +2,7 @@
 
 `@lucide/icons` is a helper library that exports Lucide **icon data** in a tree-shakable format, also providing utilities for dynamic importing icons.
 
-It intentionally ships **no real rendering logic or components** — other packages (for example [`@lucide/angular`](http://npmjs.com/package/@lucide/angular)) can consume this data to render icons in their respective
- frameworks. You can also use this package to build third-party integrations for frameworks we don't (yet) support.
+It intentionally ships **no real rendering logic or components** — but you can use this package to build third-party integrations for frameworks we don't (yet) support.
 
 ## Installation
 
@@ -35,14 +34,11 @@ Each icon is described by the following interface:
 export type LucideIconData = {
   name: string;
   node: LucideIconNode[];
-} & (
-  | { size: number }
-  | { width: number; height: number; }
-);
+} & ({ size: number } | { width: number; height: number });
 ```
 
 | name                         | type               | description                                                        |
-|------------------------------|--------------------|--------------------------------------------------------------------|
+| ---------------------------- | ------------------ | ------------------------------------------------------------------ |
 | `name`                       | `string`           | The name of the icon.                                              |
 | `node`                       | `LucideIconNode[]` | SVG child nodes as `[tagName, attributes]` tuples.                 |
 | `size` or `width` & `height` | `number`           | The dimensions of the icon (`size` is shorthand for square icons). |
@@ -65,16 +61,16 @@ All builders accept the same `params` object (`LucideBuildParams`) to customize 
 
 The following parameters are supported (names reflect the current implementation):
 
-| param                 | type                     | effect                                                                             |
-|-----------------------|--------------------------|------------------------------------------------------------------------------------|
-| `color`               | `string`                 | Sets `stroke` (defaults to `currentColor`).                                        |
-| `size`                | `number`                 | Sets both `width` and `height` (defaults to 24).                                   |
-| `width`               | `number`                 | Sets `width` only.                                                                 |
-| `height`              | `number`                 | Sets `height` only.                                                                |
-| `strokeWidth`         | `number`                 | Sets `stroke-width` (defaults to 2).                                               |
-| `absoluteStrokeWidth` | `boolean`                | Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements.                   |
-| `className`           | `string`                 | Appended to the generated `class` attribute.                                       |
-| `attributes`          | `Record<string, string>` | Add or override any generated SVG attributes (including `class`, `viewBox`, etc.). |
+| param              | type                     | effect                                                                                                                                             |
+| ------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `color`            | `string`                 | Sets `stroke` (defaults to `currentColor`).                                                                                                        |
+| `size`             | `number`                 | Sets both `width` and `height` (defaults to 24).                                                                                                   |
+| `width`            | `number`                 | Sets `width` only.                                                                                                                                 |
+| `height`           | `number`                 | Sets `height` only.                                                                                                                                |
+| `strokeWidth`      | `number`                 | Sets `stroke-width` (defaults to 2).                                                                                                               |
+| `nonScalingStroke` | `boolean`                | Adds [`vector-effect="non-scaling-stroke"`](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect) to child elements. |
+| `className`        | `string`                 | Appended to the generated `class` attribute.                                                                                                       |
+| `attributes`       | `Record<string, string>` | Add or override any generated SVG attributes (including `class`, `viewBox`, and so on).                                                            |
 
 ::: info
 SVG attributes generated by the builders include a default Lucide setup (`xmlns`, `viewBox`, `fill="none"`, `stroke="currentColor"`, `stroke-width="2"`, `stroke-linecap="round"`, `stroke-linejoin="round"`), plus a class string of the form: `lucide lucide-{iconName}`.
@@ -127,6 +123,7 @@ document.body.appendChild(el);
 Creates a base64-encoded SVG data URI from a Lucide icon object.
 
 This helper works in both browsers and Node.js:
+
 - In browsers it uses `btoa` (with proper UTF-8 handling)
 - In Node.js it falls back to `Buffer`
 
@@ -138,15 +135,18 @@ const uri = buildLucideDataUri(House, { size: 24 });
 ```
 
 The returned value can be used directly in places such as:
+
 - `<img src="...">`
 - CSS `background-image`
 - Canvas drawing
 - Inline data URLs in HTML or SVG
 
 ::: tip Environment notes
-- The SVG is encoded as UTF-8 before base64 conversion to ensure correct handling of non-ASCII characters.
-- No runtime configuration is required — the function automatically selects the appropriate encoding strategy.
-- If neither `btoa` nor `Buffer` is available, an error is thrown.
+The SVG is encoded as UTF-8 before base64 conversion to ensure correct handling of non-ASCII characters.
+
+No runtime configuration is required. The function automatically selects the appropriate encoding strategy.
+
+If neither `btoa` nor `Buffer` is available, an error is thrown.
 :::
 
 ## Dynamic imports
@@ -156,6 +156,7 @@ Dynamic imports are useful when you only know the icon name at runtime (for exam
 ::: tip
 Validate `iconName` before indexing the map (and provide a fallback icon) to avoid runtime errors.
 :::
+
 ## Dynamic imports
 
 Dynamic imports are useful when the icon name is only known at runtime (for example, icon names stored in a CMS or database). For purely static usage, prefer direct imports for maximum tree-shaking.
