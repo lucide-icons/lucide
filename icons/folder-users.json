@@ -8,9 +8,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Shared network directories in operating systems or cloud storage applications.",
-    "Team or project-level collaborative workspaces.",
-    "Contacts folder or address book."
+    "Representing shared network directories in operating systems",
+    "Showing shared drives in cloud storage apps",
+    "Organizing team or project collaboration workspaces",
+    "Organizing group contacts or address book entries"
   ],
   "tags": [
     "directory",

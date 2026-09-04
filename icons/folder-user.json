@@ -8,10 +8,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "User directory in local or cloud storage system, like a home or documents folder.",
-    "Personal folder in applications with user's private data, like HR records, tax documents, or individual data backups.",
-    "Shared user directory or drive in a system with multiple users.",
-    "Contacts folder or address book."
+    "Representing home folders or private directories in local and cloud storage",
+    "Storing private HR, tax, or backup records",
+    "Showing user-owned directories in multi-user systems",
+    "Organizing personal contacts or address book entries"
   ],
   "tags": [
     "directory",
