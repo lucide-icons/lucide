@@ -7,7 +7,10 @@
     "colebemis",
     "AlexandrePhilibert"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating upcoming events in calendars",
+    "Fast-forwarding through calendar views"
+  ],
   "tags": [
     "navigation",
     "arrow",
@@ -24,8 +27,7 @@
     "month",
     "year",
     "events",
-    "chevrons",
-    "lens"
+    "chevrons"
   ],
   "categories": [
     "time",
