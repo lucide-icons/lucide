@@ -39,7 +39,7 @@ SVG files may only contain simple path and shape elements. These elements may on
 Only these elements and attributes are allowed:
 
 - `<path d>`
-- `<line x1 x2>`
+- `<line x1 y1 x2 y2>`
 - `<polygon points>`
 - `<polyline points>`
 - `<circle cx cy r>`
