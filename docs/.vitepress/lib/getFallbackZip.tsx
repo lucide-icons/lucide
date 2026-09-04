@@ -1,5 +1,5 @@
 import { createLucideIcon } from 'lucide-react/src/lucide-react';
-import { type LucideProps, type IconNode } from 'lucide-react/src/createLucideIcon';
+import { type LucideProps, type IconNode } from 'lucide-react/src/types';
 import { IconEntity } from '../theme/types';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { IconContent } from './generateZip';

@@ -1,28 +1,29 @@
 import type { SVGProps, ForwardRefExoticComponent, RefAttributes } from 'react';
-
-/**
- * A reduced version of `SVGElementType` from @types/react. This type was added
- * with the release of React 19, and is included here in order to support usage
- * with older versions.
- */
-type SVGElementType =
-  | 'circle'
-  | 'ellipse'
-  | 'g'
-  | 'line'
-  | 'path'
-  | 'polygon'
-  | 'polyline'
-  | 'rect';
-
-export type IconNode = [elementName: SVGElementType, attrs: Record<string, string>][];
+import type {
+  LucideIconData as SharedLucideIconData,
+  LucideIconNode as SharedLucideIconNode,
+} from '@lucide/shared/types';
 
 export type SVGAttributes = Partial<SVGProps<SVGSVGElement>>;
+
+export type LucideIconNode = SharedLucideIconNode<string, SVGAttributes>;
+
+export type LucideIconData = SharedLucideIconData<string, SVGAttributes>;
+
+/**
+ * @deprecated Use LucideIconNode instead.
+ */
+export type IconNode = LucideIconNode[];
+
 type ElementAttributes = RefAttributes<SVGSVGElement> & SVGAttributes;
 
 export interface LucideProps extends ElementAttributes {
   size?: string | number;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
+  nonScalingStroke?: boolean;
 }
 
 export type LucideIcon = ForwardRefExoticComponent<

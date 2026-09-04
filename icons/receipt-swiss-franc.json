@@ -1,8 +1,12 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.use-case",
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",
