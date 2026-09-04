@@ -2,6 +2,10 @@ import type { LucideBuildParams, LucideIconData, LucideIconNode, SVGProps } from
 import defaultAttributes from './defaultAttributes';
 import { mergeClasses } from '../utils/mergeClasses';
 
+function isDefined<T>(value: T | null | undefined): value is T {
+  return value !== null && value !== undefined;
+}
+
 /**
  * Creates a Lucide icon node (an svgson-like format) from a Lucide icon object.
  *
@@ -37,18 +41,33 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
       attrs[getAttributeName(attrName)] = value;
       return attrs;
     }, {} as SVGProps),
-    ...('color' in params && params.color && { [getAttributeName('stroke')]: params.color }),
+    ...('color' in params &&
+      params.color && {
+        [getAttributeName('stroke')]: params.color,
+      }),
     ...('size' in params &&
-      params.size && {
+      isDefined(params.size) && {
         [getAttributeName('width')]: params.size,
         [getAttributeName('height')]: params.size,
       }),
-    ...('width' in params && params.width && { [getAttributeName('width')]: params.width }),
-    ...('height' in params && params.height && { [getAttributeName('height')]: params.height }),
+    ...('width' in params &&
+      isDefined(params.width) && {
+        [getAttributeName('width')]: params.width,
+      }),
+    ...('height' in params &&
+      isDefined(params.height) && {
+        [getAttributeName('height')]: params.height,
+      }),
     [getAttributeName('stroke-width')]: calculatedStrokeWidth,
-    ...(className && { [getAttributeName('class')]: className }),
+    ...(className && {
+      [getAttributeName('class')]: className,
+    }),
     [getAttributeName('viewBox')]: `0 0 ${viewBoxWidth} ${viewBoxHeight}`,
-    ...(params.hasA11yProp === false ? { [getAttributeName('aria-hidden')]: 'true' } : {}),
+    ...(params.hasA11yProp === false
+      ? {
+          [getAttributeName('aria-hidden')]: 'true',
+        }
+      : {}),
     ...('attributes' in params && params.attributes),
   };
 
