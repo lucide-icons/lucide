@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "aliyasirnac"
+  ],
+  "use-cases": [
+    "Confirming a draft message is ready",
+    "Marking pending feedback as resolved",
+    "Indicating provisional approval in conversation threads",
+    "Showing completed review status for comments"
+  ],
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubble",
+    "draft",
+    "pending",
+    "provisional",
+    "verification",
+    "confirmation",
+    "success",
+    "status",
+    "check",
+    "approval",
+    "moderate",
+    "resolved",
+    "done",
+    "complete"
+  ],
+  "categories": [
+    "social",
+    "account"
+  ]
+}

@@ -17,15 +17,16 @@
   "scripts": {
     "ng": "ng",
     "watch": "ng build --watch --configuration development",
-    "prebuild": "pnpm clean && pnpm copy:license && pnpm build:icons",
+    "prebuild": "pnpm clean && pnpm copy:license && pnpm copy:utils && pnpm build:icons",
     "build": "pnpm prebuild && pnpm build:ng",
     "copy:license": "cp ../../LICENSE ./LICENSE",
+    "copy:utils": "cpy ../../packages/shared/src/build/{buildLucideIconNode.ts,defaultAttributes.ts,types.ts} ../../packages/shared/src/utils/mergeClasses.ts ./src/utils/",
     "clean": "rm -rf dist && rm -rf ./src/icons/*.ts",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mts --renderUniqueKey --iconFileExtension=.ts --exportFileName=lucide-angular.ts --useDefaultExports=0",
     "build:ng": "ng build --configuration production",
-    "test": "pnpm build:icons && ng test --no-watch",
-    "test:watch": "ng test",
-    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
+    "test": "pnpm copy:utils && pnpm build:icons && ng test --no-watch",
+    "test:watch": "pnpm copy:utils && ng test",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix",
     "e2e": "ng e2e"
   },
   "prettier": {
@@ -41,11 +42,8 @@
     ]
   },
   "devDependencies": {
-    "@angular-eslint/builder": "~21.1.0",
-    "@angular-eslint/eslint-plugin": "~21.1.0",
-    "@angular-eslint/eslint-plugin-template": "~21.1.0",
-    "@angular-eslint/schematics": "~21.1.0",
-    "@angular-eslint/template-parser": "~21.1.0",
+    "@angular-eslint/builder": "~21.4.0",
+    "@angular-eslint/schematics": "~21.4.0",
     "@angular/build": "^21.2.19",
     "@angular/cli": "^21.2.19",
     "@angular/common": "^21.2.19",
