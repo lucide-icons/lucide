@@ -18,7 +18,13 @@
     "approximately",
     "unequal",
     "code",
-    "≇"
+    "≇",
+    "tolerance",
+    "threshold",
+    "mismatch",
+    "comparison",
+    "assertion",
+    "variance"
   ],
   "categories": [
     "math",
