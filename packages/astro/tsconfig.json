@@ -15,7 +15,7 @@
     "skipLibCheck": true,
     "jsx": "preserve",
     "lib": ["ESNext", "DOM.Iterable"],
-    "types": ["@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom/vitest"],
     "plugins": [
       {
         "name": "@astrojs/ts-plugin",
