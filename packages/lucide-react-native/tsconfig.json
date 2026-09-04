@@ -9,6 +9,11 @@
     "isolatedModules": true,
     "strict": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@lucide/shared": ["../shared/src/index.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"],
+    },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

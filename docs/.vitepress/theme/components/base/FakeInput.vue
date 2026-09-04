@@ -1,5 +1,5 @@
 <script setup>
-import Icon from 'lucide-vue-next/src/Icon';
+import Icon from '@lucide/vue/src/Icon';
 import { search } from '../../../data/iconNodes';
 
 defineProps({

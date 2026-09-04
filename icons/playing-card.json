@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Barakudum",
+    "jamiemlaw",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing a single card in tabletop games",
+    "Showing flashcards in learning interfaces",
+    "Marking prompts in icebreaker activities",
+    "Indicating chance-based actions or random selection"
+  ],
+  "tags": [
+    "deck",
+    "draw",
+    "deal",
+    "shuffle",
+    "chance",
+    "random",
+    "selection",
+    "tabletop",
+    "flashcard",
+    "study",
+    "learning",
+    "prompt",
+    "icebreaker",
+    "conversation",
+    "collectible",
+    "trading",
+    "poker",
+    "casino",
+    "game",
+    "gambling",
+    "suit"
+  ],
+  "categories": [
+    "gaming",
+    "development"
+  ]
+}
