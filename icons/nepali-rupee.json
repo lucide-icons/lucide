@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "sarajdhakal"
+  ],
+  "use-cases": [
+    "price label for npr amounts",
+    "currency selector option for nepali rupee",
+    "displaying exchange rates to nepali rupee",
+    "remittance and money-transfer destination currency",
+    "localizing checkout and invoices for nepal"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "nepal",
+    "rupee",
+    "npr"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "travel"
+  ]
+}
