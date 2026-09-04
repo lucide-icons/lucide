@@ -28,7 +28,7 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
 
   const calculatedStrokeWidth = params.absoluteStrokeWidth
     ? (Number(params.strokeWidth ?? defaultAttributes['stroke-width']) *
-        Number(icon.size ?? icon.width)) /
+        Number(icon.size ?? icon.width ?? defaultAttributes['width'])) /
       Number(params.size ?? params.width ?? defaultAttributes['width'])
     : params.strokeWidth ?? defaultAttributes['stroke-width'];
 
