@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "skajosborn",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "nature",
+    "green",
+    "trees",
+    "landscape",
+    "rest",
+    "walk",
+    "leisure",
+    "environment",
+    "tree",
+    "bench",
+    "outdoors",
+    "recreation"
+  ],
+  "categories": [
+    "environment",
+    "travel",
+    "objects"
+  ]
+}
