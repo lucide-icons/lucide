@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando"
+  ],
+  "use-cases": [
+    "warehouse logistics",
+    "material handling",
+    "moving goods",
+    "luggage transport",
+    "inventory transport",
+    "airport baggage handling",
+    "hotel luggage service",
+    "event equipment transport",
+    "fulfillment center operations",
+    "shipping and receiving"
+  ],
+  "tags": [
+    "flatbed",
+    "trolley",
+    "dolly",
+    "warehouse",
+    "logistics",
+    "transport",
+    "cargo",
+    "luggage",
+    "cart",
+    "utility",
+    "pallet",
+    "freight",
+    "shipping",
+    "fulfillment",
+    "airport",
+    "equipment"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}
