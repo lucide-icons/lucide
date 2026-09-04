@@ -30,6 +30,11 @@
       - any-glob-to-any-file:
           - 'icons/*.svg'
 
+🔬 Lab icon:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'lab/*.svg'
+
 # For changes in the lucide package
 🧳 lucide package:
   - changed-files:
