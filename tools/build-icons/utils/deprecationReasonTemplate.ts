@@ -17,7 +17,7 @@ export default function deprecationReasonTemplate(
     case 'alias.name':
       return `The name of this icon was changed because it didn't meet our guidelines anymore, use {@link ${componentName}} instead.`;
     case 'icon.design':
-      return `Removed because the design didn't meet our guidelines anymore.`;
+      return `Removed because the icon didn't meet our design guidelines.`;
     case 'icon.obsolete':
       return `Removed because the depicted concept became obsolete and no longer had relevant use cases.`;
     default:
