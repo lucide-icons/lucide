@@ -5,10 +5,10 @@
     "ryck"
   ],
   "use-cases": [
-    "Represent the '≇' (neither approximately nor exactly equal) operator in math and formula editors",
-    "Flag two values as meaningfully different in diff/reconciliation tools, beyond both exact-match and tolerance thresholds",
-    "Indicate a failed 'approximately equal' assertion in test runners and snapshot testing UIs",
-    "Show that a measurement or metric falls outside acceptable variance in data validation dashboards"
+    "Representing the ≇ operator in math and formula editors",
+    "Flagging values outside tolerance thresholds in diff tools",
+    "Indicating failed approximate-equality assertions in test runners",
+    "Marking measurements outside acceptable variance"
   ],
   "tags": [
     "calculate",
