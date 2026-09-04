@@ -4,7 +4,6 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "baseUrl": ".",
     "paths": {
       "@lucide/shared": ["../shared/src/index.ts"],
       "@lucide/shared/types": ["../shared/src/build/types.ts"]

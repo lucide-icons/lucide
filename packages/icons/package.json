@@ -72,6 +72,6 @@
     "rollup-plugin-preserve-directives": "^0.4.0",
     "typescript": "^6.0.3",
     "vite": "^7.3.6",
-    "vitest": "5.0.0"
+    "vitest": "4.1.10"
   }
 }

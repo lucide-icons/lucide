@@ -56,7 +56,7 @@
     "@angular/router": "^22.1.5",
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
-    "@vitest/browser-playwright": "^5.0.0",
+    "@vitest/browser-playwright": "^4.1.10",
     "angular-eslint": "22.2.0",
     "ng-packagr": "^22.1.1",
     "rxjs": "~7.8.2",
