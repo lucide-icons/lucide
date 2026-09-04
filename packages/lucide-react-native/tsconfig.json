@@ -8,17 +8,16 @@
     "noEmit": true,
     "isolatedModules": true,
     "strict": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "moduleResolution": "bundler",
     "paths": {
       "@lucide/shared": ["../shared/src/index.ts"],
-      "@lucide/shared/types": ["../shared/src/build/types.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"]
     },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "skipLibCheck": false,
+    "skipLibCheck": false
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

@@ -3,21 +3,20 @@
     "strict": true,
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "moduleResolution": "bundler",
     "paths": {
       "@lucide/shared": ["../shared/src/index.ts"],
-      "@lucide/shared/types": ["../shared/src/build/types.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client", "@testing-library/jest-dom"],
+    "types": ["vite/client", "@testing-library/jest-dom/vitest"],
     "noEmit": true,
     "isolatedModules": true,
     "outDir": "./dist",
     "declarationDir": "./dist",
-    "declaration": true,
-  },
+    "declaration": true
+  }
 }

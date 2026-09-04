@@ -14,7 +14,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [{ "name": "next" }],
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals"]
   },
   "include": [
     "next-env.d.ts",
@@ -22,7 +22,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.mts",
+    "**/*.mts"
   ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
