@@ -5,7 +5,7 @@ import type {
 } from './utils/types';
 
 // Type that the Astro language server needs to infer component props in Astro files
-export type AstroComponent = (_props: IconProps) => unknown;
+export type AstroComponent = (_props: LucideProps) => unknown;
 
 export type LucideProps = SVGAttributes & {
   color?: string;
