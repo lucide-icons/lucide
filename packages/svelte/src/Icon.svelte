@@ -50,7 +50,7 @@
 
   const iconAttributes = $derived({
     ...svgAttributes,
-    class: [svgAttributes.class.split(' '), propsClass],
+    class: [...svgAttributes.class.split(' '), propsClass],
   });
 </script>
 
