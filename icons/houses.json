@@ -4,7 +4,11 @@
     "danielbayley",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing residential neighborhoods on maps",
+    "Indicating multiple homes or properties in real estate apps",
+    "Marking housing developments in planning tools"
+  ],
   "tags": [
     "homes",
     "housing",
