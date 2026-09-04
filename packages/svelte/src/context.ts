@@ -6,7 +6,11 @@ export interface LucideGlobalContext {
   color?: string;
   size?: number;
   strokeWidth?: number;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
+  nonScalingStroke?: boolean;
   class?: string;
 }
 

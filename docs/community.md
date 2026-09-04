@@ -29,7 +29,7 @@ Contribution in form of code or new icons is always welcome, but you can also he
 
 ### Design New Icons
 
-If you have design skills, consider contributing new icons to the Lucide library. Check out our [icon design guide](/contribute/icon-design-guide.md) for tips and guidelines on creating icons that fit the Lucide style.
+If you have design skills, consider contributing new icons to the Lucide library. Check out our [icon design guide](/contribute/icons/design-principles.md) for tips and guidelines on creating icons that fit the Lucide style.
 
 ### Contribute Code
 

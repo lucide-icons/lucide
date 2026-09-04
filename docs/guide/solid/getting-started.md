@@ -57,19 +57,25 @@ export default App;
 
 To customize the appearance of an icon, you can use the following props:
 
-| name                  | type      | default      |
-| --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| name               | type      | default      |
+| ------------------ | --------- | ------------ |
+| `size`             | _number_  | 24           |
+| `color`            | _string_  | currentColor |
+| `strokeWidth`      | _number_  | 2            |
+| `nonScalingStroke` | _boolean_ | false        |
 
 Because icons render as SVG elements, all standard SVG attributes can also be applied as props. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
 
 ```jsx
 // Usage
 const App = () => {
-  return <Camera size={48} color="red" strokeWidth={1} />;
+  return (
+    <Camera
+      size={48}
+      color="red"
+      strokeWidth={1}
+    />
+  );
 };
 ```
 

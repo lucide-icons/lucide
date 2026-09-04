@@ -12,7 +12,6 @@ import { CATEGORY_VIEW_CONTEXT, categoryViewContext } from './composables/useCat
 import { EXTERNAL_LIBS_CONTEXT, externalLibContext } from './composables/useExternalLibs';
 import FrameworkSelect from './components/guide/FrameworkSelect.vue';
 import SnackPlayer from './components/editors/SnackPlayer.vue';
-import CertificatesLink from './components/guide/CertificatesLink.vue';
 
 const theme: Partial<Theme> = {
   extends: DefaultTheme,
@@ -23,7 +22,6 @@ const theme: Partial<Theme> = {
       'sidebar-nav-after': () => h(IconsSidebarNavAfter),
       'home-hero-image': () => h(HomeHeroIconsCard),
       'home-hero-actions-after': () => h(HomeHeroAfter),
-      'aside-ads-before': () => h(CertificatesLink),
       // Keep this here for now, we might want to add more things to the top bar in the future
       // 'layout-top': () => h(LayoutTop),
     });
