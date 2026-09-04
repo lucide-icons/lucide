@@ -3,7 +3,10 @@
   "contributors": [
     "elenakovelskikh"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating newly updated shared notes in team workspaces",
+    "Marking shared documentation with new information"
+  ],
   "tags": [
     "document",
     "file",
@@ -13,7 +16,8 @@
     "record",
     "entry",
     "notebook",
-    "dot",
+    "notification",
+    "unread",
     "note"
   ],
   "categories": [
