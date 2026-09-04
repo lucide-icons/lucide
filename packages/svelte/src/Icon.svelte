@@ -4,7 +4,6 @@
   import {hasA11yProp} from './utils/hasA11yProp.js';
   import {getLucideContext} from './context.js';
   import {mergeClasses} from './utils/mergeClasses.js';
-  import type {ClassValue} from 'svelte/elements';
 
   const globalProps = getLucideContext() ?? {};
 
@@ -42,7 +41,7 @@
         absoluteStrokeWidth,
         nonScalingStroke,
         // @TODO: maybe drop the extra `lucide-icon` class altogether.
-        className: mergeClasses<ClassValue | null | undefined>('lucide-icon', globalProps.class, propsClass),
+        className: mergeClasses('lucide-icon', globalProps.class),
         hasA11yProp: hasAccessibleProp,
         attributes: props,
       },
@@ -51,6 +50,7 @@
 
   const iconAttributes = $derived({
     ...svgAttributes,
+    class: [svgAttributes.class.split(' '), propsClass],
   });
 </script>
 
