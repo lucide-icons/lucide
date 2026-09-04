@@ -13,6 +13,6 @@
     "isolatedModules": true,
     "outDir": "./dist",
     "declarationDir": "./dist",
-    "declaration": true,
-  },
+    "declaration": true
+  }
 }

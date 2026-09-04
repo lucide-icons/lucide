@@ -5,8 +5,7 @@ import { IconNode, LucideProps } from './types';
 import { useLucideProps } from './context';
 
 type IconProps = { name: string } & (
-  | { iconNode: IconNode; 'icon-node'?: never }
-  | { 'icon-node': IconNode; iconNode?: never }
+  { iconNode: IconNode; 'icon-node'?: never } | { 'icon-node': IconNode; iconNode?: never }
 );
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (

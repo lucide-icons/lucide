@@ -18,8 +18,8 @@
     "sourceMap": true,
     "outDir": "./dist",
     "jsx": "react-jsx",
-    "types": ["@testing-library/jest-dom/vitest"],
+    "types": ["@testing-library/jest-dom/vitest"]
   },
   "exclude": ["**/node_modules"],
-  "include": ["src", "tests"],
+  "include": ["src", "tests"]
 }

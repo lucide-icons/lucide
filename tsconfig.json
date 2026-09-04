@@ -15,6 +15,6 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "sourceMap": true,
-  },
+    "sourceMap": true
+  }
 }

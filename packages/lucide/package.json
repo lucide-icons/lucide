@@ -51,6 +51,6 @@
     "rollup": "^4.63.1",
     "rollup-plugin-dts": "^6.5.1",
     "typescript": "^6.0.3",
-    "vite": "^8.2.2"
+    "vite": "^7.3.6"
   }
 }

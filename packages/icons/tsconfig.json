@@ -15,7 +15,7 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
-  "exclude": ["**/node_modules"],
+  "exclude": ["**/node_modules"]
 }

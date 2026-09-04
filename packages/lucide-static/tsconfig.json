@@ -13,6 +13,6 @@
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "sourceMap": true,
-    "outDir": "./dist",
-  },
+    "outDir": "./dist"
+  }
 }

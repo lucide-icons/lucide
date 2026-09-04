@@ -18,7 +18,7 @@
     "outDir": "./dist",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "types": ["@testing-library/jest-dom/vitest"],
+    "types": ["@testing-library/jest-dom/vitest"]
   },
-  "exclude": ["**/node_modules"],
+  "exclude": ["**/node_modules"]
 }
