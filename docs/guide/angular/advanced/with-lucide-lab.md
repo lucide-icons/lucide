@@ -13,7 +13,7 @@ import Sandpack from '~/.vitepress/theme/components/editors/SandpackAngular.vue'
 While they aren't provided as standalone components, they can be still be passed to the `LucideIcon` component the same way as official icons:
 
 ::: info Limitation
-Only custom icons that follow Lucide's [code conventions](../../../contribute/icon-design-guide.md#code-conventions) are supported.
+Only custom icons that follow Lucide's [code conventions](../../../contribute/icons/code-conventions.md#code-conventions) are supported.
 :::
 
 ### Directly as LucideIconData
