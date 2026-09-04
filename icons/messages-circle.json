@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "csandman",
+    "ericfennis",
+    "jguddas",
+    "karsa-mistmere",
+    "Mirazstudio-offical"
+  ],
+  "use-cases": [
+    "start a group conversation",
+    "indicate multiple unread message threads",
+    "open a discussion or comment section",
+    "represent group chat in a navigation bar or toolbar",
+    "represent messaging feature in onboarding"
+  ],
+  "tags": [
+    "comment",
+    "chat",
+    "conversation",
+    "dialog",
+    "feedback",
+    "speech bubbles",
+    "copy",
+    "multiple",
+    "discussion",
+    "interview",
+    "debate",
+    "group",
+    "groupchat",
+    "threads",
+    "unread",
+    "bubble",
+    "messaging"
+  ],
+  "categories": [
+    "social",
+    "communication",
+    "notifications"
+  ]
+}
