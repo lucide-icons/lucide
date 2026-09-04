@@ -296,6 +296,15 @@ Don't place subelements off-grid. They may become blurry on low-density displays
 :::
 ::::
 
+:::: example
+::: do ../../images/pixel-perfection-diagonals-do.svg?raw=true
+In general try to **align every diagonal line** to the pixel grid.
+:::
+::: dont ../../images/pixel-perfection-diagonals-dont.svg?raw=true
+Avoid placing diagonal lines off-grid. They will appear blurry and optically wider on low-density displays.
+:::
+::::
+
 ::: tip
 Pixel alignment should support the icon. Do not let it harm shape recognition, smooth curves, or visual balance.
 :::
