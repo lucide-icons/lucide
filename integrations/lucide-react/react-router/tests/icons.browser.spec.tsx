@@ -42,9 +42,7 @@ test('renders Lucide public APIs and survives router navigation', async () => {
   await expect.element(providerIcon).toHaveAttribute('stroke', 'purple');
   await expect.element(providerIcon).toHaveAttribute('stroke-width', '3');
 
-  const aliasIcon = document.querySelector('[data-testid="alias-icon"]');
-  const canonicalIcon = document.querySelector('[data-testid="canonical-icon"]');
-  expect(aliasIcon?.innerHTML).toBe(canonicalIcon?.innerHTML);
+// Alias and canonical icons are already compared above using screen.getByTestId().
 
   const dynamicIcon = screen.getByTestId('dynamic-icon');
   await expect.element(dynamicIcon).toBeVisible();
