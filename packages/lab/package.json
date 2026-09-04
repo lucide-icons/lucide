@@ -42,11 +42,11 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@types/node": "^22.20.1",
-    "prettier": "^2.3.2",
-    "rollup": "^4.9.2",
-    "rollup-plugin-dts": "^6.1.0",
-    "svgson": "^5.2.1",
-    "typescript": "^5.9.3"
+    "@types/node": "^26.4.1",
+    "prettier": "3.9.6",
+    "rollup": "^4.63.1",
+    "rollup-plugin-dts": "^6.5.1",
+    "svgson": "^5.3.1",
+    "typescript": "^6.0.3"
   }
 }
