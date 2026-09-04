@@ -219,12 +219,12 @@ This icon feels shifted toward the top left.
 :::
 ::::
 
-Symmetrical icons should remain geometrically centered.
-
 :::: example
 ::: do ../../images/visually-centered-symmetrical-do.svg?raw=true
+Symmetrical icons should remain geometrically centered.
 :::
 ::: dont ../../images/visually-centered-symmetrical-dont.svg?raw=true
+Don't place symmetrical icons off-center for no good reason.
 :::
 ::::
 
