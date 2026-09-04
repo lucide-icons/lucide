@@ -32,7 +32,7 @@ export type AliasDeprecation = {
   deprecationReason: AliasDeprecationReason;
 };
 
-export type IconDeprecationReason = 'icon.renamed' | '';
+export type IconDeprecationReason = 'icon.design' | 'icon.obsolete' | '';
 
 export type IconMetadataBase = {
   categories: string[];

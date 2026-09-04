@@ -4,6 +4,8 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.obsolete",
   "use-cases": [],
   "tags": [
     "bill",

@@ -4,6 +4,8 @@
     "ericfennis",
     "mittalyashu"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.obsolete",
   "use-cases": [],
   "tags": [
     "currency",

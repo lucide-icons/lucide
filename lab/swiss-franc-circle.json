@@ -3,6 +3,8 @@
   "contributors": [
     "danielbayley"
   ],
+  "deprecated": true,
+  "deprecationReason": "icon.obsolete",
   "tags": [
     "monetization",
     "marketing",
