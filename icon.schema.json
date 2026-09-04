@@ -141,7 +141,7 @@
   "$defs": {
     "iconDeprecationReasons": {
       "type": "string",
-      "enum": ["icon.design", "icon.obsolete"]
+      "enum": ["icon.design", "icon.use-case"]
     },
     "aliasDeprecationReasons": {
       "type": "string",

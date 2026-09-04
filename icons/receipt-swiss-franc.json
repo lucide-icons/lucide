@@ -5,7 +5,7 @@
     "karsa-mistmere"
   ],
   "deprecated": true,
-  "deprecationReason": "icon.obsolete",
+  "deprecationReason": "icon.use-case",
   "use-cases": [],
   "tags": [
     "bill",
