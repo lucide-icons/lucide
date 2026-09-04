@@ -3,11 +3,11 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "pc",
     "chassis",
-    "codespaces",
-    "github"
+    "codespaces"
   ],
   "categories": [
     "devices",

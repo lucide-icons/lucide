@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'astro/types';
 
 // Type that the Astro language server needs to infer component props in Astro files
-export type AstroComponent = (_props: IconProps) => any;
+export type AstroComponent = (_props: IconProps) => unknown;
 
 export interface IconProps extends SVGAttributes {
   color?: string;
@@ -10,6 +10,7 @@ export interface IconProps extends SVGAttributes {
   absoluteStrokeWidth?: boolean;
   class?: string;
   iconNode?: IconNode;
+  title?: string;
 }
 
 export type SVGAttributes = HTMLAttributes<'svg'>;

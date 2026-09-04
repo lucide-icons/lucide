@@ -1,4 +1,5 @@
 ---
+title: Showcase
 layout: page
 outline: 2
 outlineTitle: Showcase
