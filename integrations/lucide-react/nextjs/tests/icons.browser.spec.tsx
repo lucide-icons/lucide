@@ -29,7 +29,7 @@ test('renders Lucide public APIs in a real browser', async () => {
   const canonicalIcon = screen.getByTestId('canonical-icon');
   await expect.element(aliasIcon).toBeVisible();
   await expect.element(canonicalIcon).toBeVisible();
-  expect(await aliasIcon.innerHTML()).toBe(await canonicalIcon.innerHTML());
+  expect(aliasIcon.element().innerHTML).toBe(canonicalIcon.element().innerHTML);
 
   const dynamicIcon = screen.getByTestId('dynamic-icon');
   await expect.element(dynamicIcon).toBeVisible();
