@@ -2,6 +2,7 @@
 title: Typescript - Vue
 description: Learn about the different types exported by the `@lucide/vue` package and how to use them in your Vue application.
 ---
+
 # TypeScript Support
 
 List of exported types from the `@lucide/vue` package.
@@ -16,15 +17,21 @@ interface LucideProps {
   size?: number | string;
   color?: string;
   strokeWidth?: number;
+  nonScalingStroke?: boolean;
+  /**
+   * @deprecated
+   */
   absoluteStrokeWidth?: boolean;
   [key: string]: any; // Any other SVG attributes
 }
 ```
 
 ### Using `LucideProps`
+
 You can use the `LucideProps` interface to type props for your custom icon components.
 
 ::: code-group
+
 ```vue [IconWrapper.vue]
 <script lang="ts" setup>
 import { type LucideProps } from '@lucide/vue';
@@ -39,6 +46,7 @@ defineProps<LucideProps>();
   </div>
 </template>
 ```
+
 :::
 
 ## `LucideIcon`
@@ -54,6 +62,7 @@ type LucideIcon = React.FC<LucideProps>;
 You can use the `LucideIcon` type when you need to work with icon components directly.
 
 ::: code-group
+
 ```vue [IconButton.vue]
 <script lang="ts" setup>
 import { type LucideProps } from '@lucide/vue';
@@ -67,10 +76,14 @@ defineProps<{
 
 <template>
   <button :aria-label="label">
-    <component :is="icon" :size="16" />
+    <component
+      :is="icon"
+      :size="16"
+    />
   </button>
 </template>
 ```
+
 :::
 
 ## `IconNode`
@@ -83,9 +96,11 @@ type IconNode = [elementName: string, attrs: Record<string, string | number>][];
 ```
 
 ### Using `IconNode`
+
 You can use the `IconNode` type when you need to work with the raw SVG structure of an icon.
 
 ::: code-group
+
 ```vue [CustomIcon.vue]
 <script lang="ts" setup>
 import { type IconNode, Icon } from '@lucide/vue';
@@ -98,7 +113,12 @@ const customIcon: IconNode = [
 </script>
 
 <template>
-  <Icon :iconNode="customIcon" size="24" color="blue" />
+  <Icon
+    :iconNode="customIcon"
+    size="24"
+    color="blue"
+  />
 </template>
 ```
+
 :::

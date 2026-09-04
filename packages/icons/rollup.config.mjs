@@ -2,6 +2,11 @@ import plugins from '@lucide/rollup-plugins';
 import pkg from './package.json' with { type: 'json' };
 import dts from 'rollup-plugin-dts';
 
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
+
 const packageName = '@lucide/icons';
 const outputFileName = 'lucide-icons';
 const inputs = [`src/lucide-icons.ts`];
@@ -81,7 +86,7 @@ export default [
         format: 'cjs',
       },
     ],
-    plugins: [dts()],
+    plugins: [dts(dtsOptions)],
   })),
   ...configs,
 ];
