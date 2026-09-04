@@ -19,6 +19,13 @@ packages/lucide-static/icon-nodes.json
 packages/lucide-static/font
 packages/svelte/.svelte-kit
 
+# integration test artifacts and generated routes
+integrations/**/.react-router
+integrations/**/next-env.d.ts
+integrations/**/routeTree.gen.ts
+integrations/**/.vitest-attachments
+integrations/**/__screenshots__
+
 # lucide-svelte
 packages/svelte/src/icons/*.svelte
 packages/svelte/.svelte-kit
