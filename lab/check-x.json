@@ -16,5 +16,8 @@
   "categories": [
     "notifications"
   ],
-  "use-cases": []
+  "use-cases": [
+    "Unmarking / toggling read status (mark unread / uncheck)",
+    "Task & checklist management (cancel/reject a checked item)"
+  ]
 }
