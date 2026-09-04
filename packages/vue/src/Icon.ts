@@ -1,25 +1,56 @@
-import { computed, type FunctionalComponent, h } from 'vue';
-import { isEmptyString, mergeClasses, toKebabCase, toPascalCase } from '@lucide/shared';
-import defaultAttributes from './defaultAttributes';
-import { IconNode, LucideProps } from './types';
+import { type FunctionalComponent, h } from 'vue';
+import {
+  buildLucideIconNode,
+  hasA11yProp,
+  isEmptyString,
+  mergeClasses,
+  toKebabCase,
+} from '@lucide/shared';
+import { LucideIconNode, LucideIconData, LucideProps } from './types';
 import { useLucideProps } from './context';
 
-type IconProps = { name: string } & (
-  | { iconNode: IconNode; 'icon-node'?: never }
-  | { 'icon-node': IconNode; iconNode?: never }
-);
+type IconProps =
+  | {
+      icon: LucideIconData;
+      iconNode?: never;
+      'icon-node'?: never;
+      name?: never;
+    }
+  | {
+      icon?: never;
+      iconNode: LucideIconNode[];
+      'icon-node'?: never;
+      name: string;
+    }
+  | {
+      icon?: never;
+      iconNode?: never;
+      'icon-node': LucideIconNode[];
+      name: string;
+    };
 
 const Icon: FunctionalComponent<LucideProps & IconProps> = (
   {
     name,
     iconNode,
     'icon-node': iconNodeKebabCase,
+    icon = {
+      name: toKebabCase(name),
+      node: iconNode ?? iconNodeKebabCase,
+      size: 24,
+      aliases: [],
+    },
     absoluteStrokeWidth,
     'absolute-stroke-width': absoluteStrokeWidthKebabCase,
+    nonScalingStroke,
+    'non-scaling-stroke': nonScalingStrokeKebabCase,
     strokeWidth,
     'stroke-width': strokeWidthKebabCase,
     size,
+    width = size,
+    height = size,
     color,
+    class: classes = '',
     ...props
   },
   { slots },
@@ -29,54 +60,44 @@ const Icon: FunctionalComponent<LucideProps & IconProps> = (
     color: contextColor,
     strokeWidth: contextStrokeWidth = 2,
     absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    nonScalingStroke: contextNonScalingStroke = false,
     class: contextClass = '',
   } = useLucideProps();
 
-  const calculatedStrokeWidth = computed(() => {
-    const isAbsoluteStrokeWidth =
-      isEmptyString(absoluteStrokeWidth) ||
-      isEmptyString(absoluteStrokeWidthKebabCase) ||
-      absoluteStrokeWidth === true ||
-      absoluteStrokeWidthKebabCase === true ||
-      contextAbsoluteStrokeWidth === true;
+  const isAbsoluteStrokeWidth =
+    isEmptyString(absoluteStrokeWidth) ||
+    isEmptyString(absoluteStrokeWidthKebabCase) ||
+    absoluteStrokeWidth === true ||
+    absoluteStrokeWidthKebabCase === true ||
+    contextAbsoluteStrokeWidth === true;
 
-    const strokeWidthValue =
-      strokeWidth ||
-      strokeWidthKebabCase ||
-      contextStrokeWidth ||
-      defaultAttributes['stroke-width'];
+  const isNonScalingStroke =
+    isEmptyString(nonScalingStroke) ||
+    isEmptyString(nonScalingStrokeKebabCase) ||
+    nonScalingStroke === true ||
+    nonScalingStrokeKebabCase === true ||
+    contextNonScalingStroke === true;
 
-    if (isAbsoluteStrokeWidth) {
-      return (
-        (Number(strokeWidthValue) * 24) / Number(size ?? contextSize ?? defaultAttributes.width)
-      );
-    }
+  const { class: propsClass, ...restProps } = props;
 
-    return strokeWidthValue;
+  const defaultSlot = slots.default?.();
+
+  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
+    color: color ?? contextColor,
+    width: width ?? size ?? contextSize,
+    height: height ?? size ?? contextSize,
+    strokeWidth: strokeWidth ?? strokeWidthKebabCase ?? contextStrokeWidth,
+    absoluteStrokeWidth: isAbsoluteStrokeWidth,
+    nonScalingStroke: isNonScalingStroke,
+    className: mergeClasses(contextClass, propsClass),
+    hasA11yProp: (defaultSlot != null && defaultSlot.length > 0) || hasA11yProp(restProps),
+    attributes: restProps,
   });
 
-  return h(
-    'svg',
-    {
-      ...defaultAttributes,
-      ...props,
-      width: size ?? contextSize ?? defaultAttributes.width,
-      height: size ?? contextSize ?? defaultAttributes.height,
-      stroke: color ?? contextColor ?? defaultAttributes.stroke,
-      'stroke-width': calculatedStrokeWidth.value,
-      class: mergeClasses(
-        'lucide',
-        contextClass,
-        ...(name
-          ? [`lucide-${toKebabCase(toPascalCase(name))}-icon`, `lucide-${toKebabCase(name)}`]
-          : ['lucide-icon']),
-      ),
-    },
-    [
-      ...(iconNode ?? iconNodeKebabCase ?? []).map((child) => h(...child)),
-      ...(slots.default ? [slots.default()] : []),
-    ],
-  );
+  return h('svg', svgAttributes, [
+    ...builtIconNode.map((child) => h(...child)),
+    ...(defaultSlot ?? []),
+  ]);
 };
 
 export default Icon;

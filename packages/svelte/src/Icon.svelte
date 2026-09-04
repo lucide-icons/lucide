@@ -1,38 +1,61 @@
 <script lang="ts">
-  import defaultAttributes from './defaultAttributes.js';
-  import type { IconProps } from './types.js';
-  import { hasA11yProp } from './utils/hasA11yProp.js';
-  import { getLucideContext } from './context.js';
+  import buildLucideIconNode from './utils/buildLucideIconNode.js';
+  import type {IconProps} from './types.js';
+  import {hasA11yProp} from './utils/hasA11yProp.js';
+  import {getLucideContext} from './context.js';
+  import {mergeClasses} from './utils/mergeClasses.js';
+  import type {ClassValue} from 'svelte/elements';
 
   const globalProps = getLucideContext() ?? {};
 
   const {
-    name,
     color = globalProps.color ?? 'currentColor',
     size = globalProps.size ?? 24,
+    width = size,
+    height = size,
     strokeWidth = globalProps.strokeWidth ?? 2,
     absoluteStrokeWidth = globalProps.absoluteStrokeWidth ?? false,
+    nonScalingStroke = globalProps.nonScalingStroke ?? false,
     iconNode = [],
+    icon = {
+      node: iconNode,
+      aliases: [],
+      size: 24,
+    },
+    class: propsClass,
     children,
     ...props
   }: IconProps = $props();
 
-  const calculatedStrokeWidth = $derived(
-    absoluteStrokeWidth ? (Number(strokeWidth) * 24) / Number(size) : strokeWidth,
+  const hasAccessibleProp = $derived(
+    Boolean(children) || hasA11yProp(props as Record<string, any>),
   );
+
+  const [, svgAttributes, builtIconNode = []] = $derived(
+    buildLucideIconNode(
+      icon,
+      {
+        color,
+        width,
+        height,
+        strokeWidth,
+        absoluteStrokeWidth,
+        nonScalingStroke,
+        // @TODO: maybe drop the extra `lucide-icon` class altogether.
+        className: mergeClasses<ClassValue | null | undefined>('lucide-icon', propsClass),
+        hasA11yProp: hasAccessibleProp,
+        attributes: props,
+      },
+    ),
+  );
+
+  const iconAttributes = $derived({
+    ...svgAttributes,
+  });
 </script>
 
-<svg
-  {...defaultAttributes}
-  {...!children && !hasA11yProp(props) && { 'aria-hidden': 'true' }}
-  {...props}
-  width={size}
-  height={size}
-  stroke={color}
-  stroke-width={calculatedStrokeWidth}
-  class={['lucide-icon lucide', globalProps.class, name && `lucide-${name}`, props.class]}
->
-  {#each iconNode as [tag, attrs]}
+<svg {...iconAttributes}>
+  {#each builtIconNode as [tag, attrs]}
     <svelte:element
       this={tag as string}
       {...attrs}

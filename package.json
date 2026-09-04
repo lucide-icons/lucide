@@ -60,7 +60,7 @@
     "@vitest/coverage-v8": "4.1.10",
     "@vitest/ui": "4.1.10",
     "ajv-cli": "^5.0.0",
-    "cspell": "^10.0.1",
+    "cpy-cli": "^7.0.0",
     "dotenv": "^17.4.2",
     "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
