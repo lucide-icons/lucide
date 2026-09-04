@@ -88,7 +88,7 @@ Strokes **must** be centered on their paths.
 Keep strokes **centered** on their paths.
 :::
 ::: dont ../../images/centered-strokes-violation.svg?raw=true
-Don't use **inside or outside** strokes. They change how line joins look.
+Don't use **inside or outside** strokes. They change how line joins appear, creating sharp inner corners.
 :::
 ::::
 
