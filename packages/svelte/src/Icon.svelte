@@ -42,7 +42,7 @@
         absoluteStrokeWidth,
         nonScalingStroke,
         // @TODO: maybe drop the extra `lucide-icon` class altogether.
-        className: mergeClasses<ClassValue | null | undefined>('lucide-icon', propsClass),
+        className: mergeClasses<ClassValue | null | undefined>('lucide-icon', globalProps.class, propsClass),
         hasA11yProp: hasAccessibleProp,
         attributes: props,
       },
