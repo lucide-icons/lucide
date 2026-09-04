@@ -14,6 +14,7 @@ import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/de
 const props = defineProps<{
   icon: IconEntity;
   popoverPosition?: 'top' | 'bottom';
+  showEditButton?: boolean;
 }>();
 
 const { go } = useRouter();
@@ -34,6 +35,22 @@ const deprecatedTitle = computed(() => {
     toBeRemovedInVersion: props.icon.toBeRemovedInVersion,
   });
 });
+
+import getStudioLink from '../../utils/getStudioLink';
+
+const brushSparkles = [
+  ['path', { d: 'M10 3H8' }],
+  ['path', { d: 'm11 10 3 3' }],
+  ['path', { d: 'M20 15v4' }],
+  ['path', { d: 'M22 17h-4' }],
+  ['path', { d: 'M4 5v4' }],
+  ['path', { d: 'M6 7H2' }],
+  ['path', { d: 'M6.5 21A3.5 3.5 0 103 17.5a2.62 2.62 0 01-.708 1.792A1 1 0 003 21z' }],
+  ['path', { d: 'M9 2v2' }],
+  ['path', { d: 'M9.969 17.031 21.378 5.624a1 1 0 00-3.002-3.002L6.967 14.031' }],
+];
+
+const BrushSparklesIcon = createLucideIcon('BrushSparkels', brushSparkles);
 </script>
 
 <template>
@@ -109,12 +126,54 @@ const deprecatedTitle = computed(() => {
         :name="icon.name"
         :popoverPosition="popoverPosition"
       />
+      <a
+        v-if="showEditButton"
+        class="studio-edit-button"
+        :href="getStudioLink(icon.name, icon.iconNode, 'icon-info')"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <BrushSparklesIcon :size="20" />
+        <span>Edit</span>
+      </a>
     </div>
     <slot name="footer" />
   </div>
 </template>
 
 <style scoped>
+.studio-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  min-height: 40px;
+  border: 1px solid var(--vp-button-alt-border);
+  border-radius: 999px;
+  background-color: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
+  margin-left: 0;
+  margin-inline-start: 0;
+}
+
+.studio-edit-button:hover,
+.studio-edit-button:focus-visible {
+  border-color: var(--vp-button-alt-hover-border);
+  color: var(--vp-button-alt-hover-text);
+  background-color: var(--vp-button-alt-hover-bg);
+  transform: translateY(-1px);
+}
+
 .group {
   display: flex;
   flex-wrap: wrap;

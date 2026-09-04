@@ -65,7 +65,10 @@ function releaseTagLink(version) {
   </div>
   <div >
     <div :class="$style.info">
-      <IconInfo :icon="params" />
+      <IconInfo
+        :icon="params"
+        :showEditButton="true"
+      />
       <div :class="$style.meta">
         <div
           v-if="params.createdRelease?.version"
