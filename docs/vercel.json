@@ -106,6 +106,31 @@
       "source": "/contributing",
       "destination": "/contribute",
       "permanent": true
+    },
+    {
+      "source": "/contribute/icon-design-guide",
+      "destination": "/contribute/icons/design-principles",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/illustrator-guide",
+      "destination": "/contribute/icons/illustrator-guide",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/inkscape-guide",
+      "destination": "/contribute/icons/inkscape-guide",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/figma-guide",
+      "destination": "/contribute/icons/figma-guide",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/affinity-designer-guide",
+      "destination": "/contribute/icons/affinity-designer-guide",
+      "permanent": true
     }
   ],
   "headers": [

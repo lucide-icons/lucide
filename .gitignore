@@ -3,7 +3,7 @@
 .next
 .obsidian
 .now
-.idea
+.cache
 .env
 node_modules
 dist
