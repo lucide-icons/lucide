@@ -25,9 +25,11 @@ test('renders Lucide public APIs in a real browser', async () => {
   await expect.element(providerIcon).toHaveAttribute('stroke', 'purple');
   await expect.element(providerIcon).toHaveAttribute('stroke-width', '3');
 
-  const aliasIcon = document.querySelector('[data-testid="alias-icon"]');
-  const canonicalIcon = document.querySelector('[data-testid="canonical-icon"]');
-  expect(aliasIcon?.innerHTML).toBe(canonicalIcon?.innerHTML);
+  const aliasIcon = screen.getByTestId('alias-icon');
+  const canonicalIcon = screen.getByTestId('canonical-icon');
+  await expect.element(aliasIcon).toBeVisible();
+  await expect.element(canonicalIcon).toBeVisible();
+  expect(await aliasIcon.innerHTML()).toBe(await canonicalIcon.innerHTML());
 
   const dynamicIcon = screen.getByTestId('dynamic-icon');
   await expect.element(dynamicIcon).toBeVisible();
