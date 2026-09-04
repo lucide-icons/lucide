@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing speech or verbal expression",
+    "Indicating taste or oral sensory input",
+    "Marking dental or oral health information",
+    "Showing voice input or speaking controls"
+  ],
+  "tags": [
+    "speech",
+    "voice",
+    "talk",
+    "speaking",
+    "taste",
+    "tasting",
+    "flavor",
+    "palate",
+    "tongue",
+    "gustatory",
+    "oral",
+    "dental",
+    "expression",
+    "communication",
+    "accessibility"
+  ],
+  "categories": [
+    "medical",
+    "accessibility",
+    "communication"
+  ]
+}
