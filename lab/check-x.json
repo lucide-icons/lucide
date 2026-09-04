@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ishanbagra18"
+  ],
+  "tags": [
+    "uncheck",
+    "cancel",
+    "remove",
+    "unread",
+    "cross",
+    "mark",
+    "deselect",
+    "task"
+  ],
+  "categories": [
+    "notifications"
+  ],
+  "use-cases": [
+    "Unmarking / toggling read status (mark unread / uncheck)",
+    "Task & checklist management (cancel/reject a checked item)"
+  ]
+}
