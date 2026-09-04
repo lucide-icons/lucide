@@ -4,6 +4,11 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@lucide/shared": ["../shared/src/index.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"],
+    },
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
