@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hitanshu-machhi"
+  ],
+  "use-cases": [
+    "representing a team or community",
+    "showing group membership",
+    "managing multiple user accounts",
+    "showing collaborators on a project",
+    "selecting multiple recipients for a message",
+    "indicating shared access or permissions",
+    "labeling a community or forum section"
+  ],
+  "tags": [
+    "people",
+    "team",
+    "members",
+    "community",
+    "group",
+    "users",
+    "collaboration",
+    "contacts"
+  ],
+  "categories": [
+    "account",
+    "people",
+    "social"
+  ]
+}
