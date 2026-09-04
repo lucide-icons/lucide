@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "skajosborn"
+    "skajosborn",
+    "jguddas"
   ],
+  "use-cased": [],
   "tags": [
     "nature",
     "green",
