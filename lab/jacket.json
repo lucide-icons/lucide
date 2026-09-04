@@ -1,0 +1,48 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "blazer",
+    "coat",
+    "suit",
+    "gentleman",
+    "mens",
+    "boys",
+    "top",
+    "store",
+    "clothing",
+    "clothes",
+    "accessories",
+    "apparel",
+    "attire",
+    "outfit",
+    "fashion",
+    "formal",
+    "dressy",
+    "dinner",
+    "uniform",
+    "smart",
+    "classic",
+    "refined",
+    "elegant",
+    "evening wear",
+    "tuxedo",
+    "black tie event",
+    "special occasion",
+    "wedding",
+    "groom",
+    "gathering",
+    "thread",
+    "tailored",
+    "regular",
+    "slim fit",
+    "warmth"
+  ],
+  "categories": [
+    "shopping",
+    "social"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "healthcare",
+    "first aid kit",
+    "paramedic",
+    "medkit",
+    "medikit",
+    "medpack",
+    "medicine",
+    "pharmacy",
+    "pharmaceutical",
+    "add",
+    "cross",
+    "box"
+  ],
+  "categories": [
+    "medical",
+    "gaming"
+  ]
+}

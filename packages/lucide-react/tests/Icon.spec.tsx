@@ -33,6 +33,19 @@ describe('Using Icon Component', () => {
 });
 
 describe('Icon Component Accessibility', () => {
+  it('should have aria-hidden prop when no aria prop is present', async () => {
+    const { container } = render(
+      <Icon
+        iconNode={airVent}
+        size={48}
+        stroke="red"
+        absoluteStrokeWidth
+      />,
+    );
+
+    expect(container.firstChild).toHaveAttribute('aria-hidden', 'true');
+  });
+
   it('should not have aria-hidden prop when aria prop is present', async () => {
     const { container } = render(
       <Icon

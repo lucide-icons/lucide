@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "indicating horizontal gap setting in a design inspector",
+    "representing the column-gap control in grid or flex panels",
+    "adjusting horizontal spacing between components in a page builder",
+    "visualizing a spacing token in a design system or theme editor"
+  ],
+  "tags": [
+    "gap",
+    "spacing",
+    "space",
+    "between",
+    "padding",
+    "margin",
+    "horizontal",
+    "auto layout",
+    "layout",
+    "distance",
+    "frame",
+    "distribute"
+  ],
+  "categories": [
+    "design",
+    "layout"
+  ]
+}
