@@ -6,10 +6,16 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lucide/shared": ["../shared/src/index.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"],
+    },
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
     "types": ["@testing-library/jest-dom"],
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tests/**/*.ts"],
+  "exclude": ["tests/setupVitest.ts"],
 }
