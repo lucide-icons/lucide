@@ -1,0 +1,27 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ksk3110",
+    "ryck"
+  ],
+  "use-cases": [
+    "Represent the '≇' (neither approximately nor exactly equal) operator in math and formula editors",
+    "Flag two values as meaningfully different in diff/reconciliation tools, beyond both exact-match and tolerance thresholds",
+    "Indicate a failed 'approximately equal' assertion in test runners and snapshot testing UIs",
+    "Show that a measurement or metric falls outside acceptable variance in data validation dashboards"
+  ],
+  "tags": [
+    "calculate",
+    "math",
+    "operator",
+    "not",
+    "approximately",
+    "unequal",
+    "code",
+    "≇"
+  ],
+  "categories": [
+    "math",
+    "development"
+  ]
+}
