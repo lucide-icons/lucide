@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating stair access in building navigation",
+    "Showing floor levels in building directories",
+    "Marking where an item is located by floor",
+    "Directing users to take stairs instead of elevators"
+  ],
+  "tags": [
+    "staircase",
+    "stairway",
+    "stairs",
+    "steps",
+    "ladder",
+    "transition",
+    "access",
+    "structure",
+    "espiral",
+    "building",
+    "vertical",
+    "movement",
+    "floor",
+    "level",
+    "entrance",
+    "entry",
+    "exit",
+    "egress",
+    "route",
+    "indoor",
+    "emergency exit"
+  ],
+  "categories": [
+    "home",
+    "travel"
+  ]
+}
