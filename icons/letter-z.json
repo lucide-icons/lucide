@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "representing the Z-axis in charts or geometry",
+    "indicating sleep or rest states",
+    "representing impedance in electrical contexts",
+    "indicating atomic number in scientific contexts"
+  ],
+  "tags": [
+    "alphabet",
+    "character",
+    "uppercase",
+    "z-axis",
+    "axis",
+    "sleep",
+    "rest",
+    "impedance",
+    "electricity",
+    "atomic number",
+    "chemistry",
+    "text",
+    "font",
+    "typography"
+  ],
+  "categories": [
+    "text"
+  ]
+}
