@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jamesgpearce"
+  ],
+  "use-cases": [],
+  "tags": [
+    "weather",
+    "air",
+    "pressure",
+    "blow",
+    "gust",
+    "windy",
+    "arrow",
+    "up",
+    "sort",
+    "increase"
+  ],
+  "categories": [
+    "weather",
+    "sustainability",
+    "arrows",
+    "navigation"
+  ]
+}
