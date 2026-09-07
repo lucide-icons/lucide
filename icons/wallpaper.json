@@ -2,9 +2,20 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "karsa-mistmere",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
+    "background",
+    "texture",
+    "image",
+    "art",
+    "design",
+    "visual",
+    "decor",
+    "pattern",
+    "screen",
     "cover",
     "lock screen"
   ],

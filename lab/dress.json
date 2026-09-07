@@ -1,0 +1,44 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "nfischer623",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "skirt",
+    "womens",
+    "girls",
+    "female",
+    "ladies",
+    "store",
+    "sexy",
+    "classy",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "outfit",
+    "fashion",
+    "formal",
+    "fancy",
+    "smart",
+    "refined",
+    "elegant",
+    "evening wear",
+    "nightlife",
+    "club",
+    "party",
+    "occasion",
+    "gathering",
+    "wedding",
+    "tailored",
+    "thread",
+    "cotton",
+    "staps"
+  ],
+  "categories": [
+    "shopping",
+    "social"
+  ]
+}

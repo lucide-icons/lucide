@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "menu",
     "options",
@@ -19,6 +20,10 @@
     "layout"
   ],
   "aliases": [
-    "more-vertical"
+    {
+      "name": "more-vertical",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

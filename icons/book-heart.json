@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "diary",
     "romance",

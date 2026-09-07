@@ -2,8 +2,10 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jamiemlaw"
+    "jamiemlaw",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",

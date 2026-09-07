@@ -3,8 +3,12 @@
   "contributors": [
     "Andreto",
     "mittalyashu",
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "shift",
     "keyboard",
@@ -18,7 +22,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "text",
     "development",
     "gaming"

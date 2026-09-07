@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "milk",
+    "dairy",
+    "drink",
+    "diet",
+    "lactose",
+    "liquid",
+    "litres",
+    "pints",
+    "pasturised",
+    "skimmed",
+    "container",
+    "cow"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

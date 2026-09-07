@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "fruit",
+    "snack",
+    "meal",
+    "lunch",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet",
+    "guacamole",
+    "mexican"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

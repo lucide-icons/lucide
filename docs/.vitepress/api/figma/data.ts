@@ -1,3 +1,4 @@
+import { eventHandler, setResponseHeader } from 'h3';
 import iconNodes from '../../data/iconNodes/index.ts';
 import { IconNodeWithKeys } from '../../theme/types';
 import iconMetaData from '../../data/iconMetaData';

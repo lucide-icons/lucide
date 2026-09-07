@@ -5,6 +5,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "unshielded",
     "cybersecurity",
@@ -58,6 +59,10 @@
     "gaming"
   ],
   "aliases": [
-    "shield-question"
+    {
+      "name": "shield-question",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
