@@ -20,6 +20,11 @@ export interface LucideConfig {
    */
   strokeWidth: number;
   /**
+   * Whether to use absolute stroke width.
+   * @deprecated Use `nonScalingStroke` instead.
+   */
+  absoluteStrokeWidth: boolean;
+  /**
    * Whether stroke width should be scaled to appear uniform regardless of icon size.
    * @default false
    *
@@ -31,7 +36,7 @@ export interface LucideConfig {
    * }
    * ```
    */
-  absoluteStrokeWidth: boolean;
+  nonScalingStroke: boolean;
 }
 
 /**
@@ -42,6 +47,7 @@ export const lucideDefaultConfig: LucideConfig = {
   size: 24,
   strokeWidth: 2,
   absoluteStrokeWidth: false,
+  nonScalingStroke: false,
 };
 
 /**

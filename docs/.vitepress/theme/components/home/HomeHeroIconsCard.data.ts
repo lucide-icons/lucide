@@ -53,7 +53,7 @@ const pickIcons = [
   'terminal',
   'thermometer',
   'thumbs-up',
-  'trash-2',
+  'trash',
   'umbrella',
   'watch',
   'sparkles',
