@@ -5,6 +5,12 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [
+    "Managing cookie consent or privacy preferences",
+    "Representing website cookies and browser storage",
+    "Indicating cookie settings in privacy or security interfaces",
+    "Representing cookies as food in recipes, menus or food-related interfaces"
+  ],
   "tags": [
     "biscuit",
     "privacy",
