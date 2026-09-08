@@ -4,11 +4,10 @@
     "sarajdhakal"
   ],
   "use-cases": [
-    "price label for npr amounts",
-    "currency selector option for nepali rupee",
-    "displaying exchange rates to nepali rupee",
-    "remittance and money-transfer destination currency",
-    "localizing checkout and invoices for nepal"
+    "Displaying prices in Nepalese rupees (NPR)",
+    "Selecting Nepalese rupee in multi-currency selectors",
+    "Showing exchange rates for Nepalese rupee conversions",
+    "Indicating remittance transfers paid out in NPR"
   ],
   "tags": [
     "currency",
