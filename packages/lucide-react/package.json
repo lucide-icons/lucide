@@ -26,6 +26,16 @@
   "main": "dist/cjs/lucide-react.js",
   "module": "dist/esm/lucide-react.mjs",
   "typings": "dist/lucide-react.d.ts",
+  "typesVersions": {
+    "*": {
+      "dist/esm/icons/*.mjs": [
+        "dist/lucide-icon.d.mts"
+      ],
+      "dist/lucide-types": [
+        "dist/lucide-types.d.ts"
+      ]
+    }
+  },
   "sideEffects": false,
   "files": [
     "dist",
