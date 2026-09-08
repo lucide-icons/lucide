@@ -54,7 +54,7 @@ export default App;
 
 You can also import one icon at a time. This skips the icon barrel, which matters when modules are resolved at runtime (server-side rendering, for example), and only loads a small type declaration instead of the full one.
 
-```jsx
+```tsx
 import Camera from 'lucide-react/icons/camera';
 import type { LucideProps } from 'lucide-react/types';
 ```
