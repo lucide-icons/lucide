@@ -3,7 +3,7 @@
 exports[`Using LucideProvider > should render the icon with LucideProvider 1`] = `
 <svg
   aria-hidden="true"
-  class="lucide lucide-house"
+  class="lucide lucide-house lucide-home"
   fill="none"
   height="48"
   stroke="red"

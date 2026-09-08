@@ -40,10 +40,10 @@
     "@lucide/build-icons": "workspace:*",
     "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@types/node": "^22.20.1",
-    "prettier": "^2.8.8",
-    "rollup": "^4.62.2",
-    "rollup-plugin-dts": "^6.4.1",
+    "@types/node": "^26.4.1",
+    "prettier": "3.9.6",
+    "rollup": "^4.63.1",
+    "rollup-plugin-dts": "^6.5.1",
     "svgson": "^5.3.1"
   }
 }

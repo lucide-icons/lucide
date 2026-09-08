@@ -78,8 +78,10 @@ updates:
           - 'vite-plugin-*'
       linting-deps:
         patterns:
+          - '@eslint/*'
           - '@html-eslint/*'
           - '@typescript-eslint/*'
+          - 'angular-eslint'
           - 'cspell'
           - 'eslint'
           - 'eslint-*'
