@@ -14,5 +14,12 @@
   "categories": [
     "photography",
     "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "album",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
