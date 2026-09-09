@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "samuelalake"
+  ],
+  "use-cases": [],
+  "tags": [
+    "window",
+    "webpage",
+    "block",
+    "section",
+    "grid",
+    "template",
+    "structure",
+    "sidebar",
+    "check",
+    "tick",
+    "done",
+    "complete",
+    "select"
+  ],
+  "categories": [
+    "layout"
+  ]
+}
