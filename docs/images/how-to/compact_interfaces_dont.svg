@@ -18,7 +18,7 @@
 <path d="M279.2 128V125C279.2 123.409 279.832 121.883 280.958 120.757C282.083 119.632 283.609 119 285.2 119" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M296.2 128H278.2C277.648 128 277.2 128.448 277.2 129V131C277.2 131.552 277.648 132 278.2 132H296.2C296.752 132 297.2 131.552 297.2 131V129C297.2 128.448 296.752 128 296.2 128Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<rect width="320" height="101" fill="black" fill-opacity="0.5"/>
+<rect width="320" height="101" fill="#010101" fill-opacity="0.3"/>
 </g>
 <defs>
 <filter id="filter0_d_2002_21265" x="-24" y="77" width="368" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
