@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497",
+    "colebemis",
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "danielbayley"
+  ],
+  "use-cases": [
+    "indicating certified or registered email",
+    "marking messages with proof of delivery",
+    "marking a message as signed or sealed",
+    "labeling official or legal correspondence"
+  ],
+  "tags": [
+    "email",
+    "message",
+    "letter",
+    "certified",
+    "registered",
+    "seal",
+    "stamp",
+    "verified",
+    "envelope",
+    "rosette",
+    "signed",
+    "official",
+    "delivery"
+  ],
+  "categories": [
+    "mail",
+    "communication",
+    "security"
+  ]
+}

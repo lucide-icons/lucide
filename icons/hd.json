@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ahtohbi4",
+    "jamiemlaw",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "tv",
+    "resolution",
+    "video",
+    "high definition",
+    "720p",
+    "1080p"
+  ],
+  "categories": [
+    "devices",
+    "multimedia"
+  ]
+}

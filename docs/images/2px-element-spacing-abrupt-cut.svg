@@ -1,0 +1,75 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1939_21909)">
+<path d="M0 10H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M10 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 20H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M20 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 30H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M30 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 40H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M40 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 50H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M50 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 60H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M60 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 70H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M70 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 80H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M80 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 90H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M90 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 100H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M100 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 110H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M110 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 120H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M120 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 130H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M130 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 140H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M140 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 150H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M150 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 160H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M160 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 170H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M170 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 180H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M180 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 190H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M190 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 200H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M200 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 210H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M210 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 220H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M220 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M0 230H240" stroke="#D8D8D9" stroke-width="0.5"/>
+<path d="M230 0V240" stroke="#D8D8D9" stroke-width="0.5"/>
+</g>
+<path d="M190 70H90C78.9543 70 70 78.9543 70 90V190C70 201.046 78.9543 210 90 210H190C201.046 210 210 201.046 210 190V90C210 78.9543 201.046 70 190 70Z" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 170V50C30 39 39 30 50 30H170" stroke="black" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M30 180C35.5228 180 40 175.523 40 170L20 170C20 175.523 24.4772 180 30 180Z" fill="#DD0031"/>
+<circle cx="30" cy="170" r="2" fill="#DD0031"/>
+<path d="M30 130L30 170" stroke="url(#paint0_linear_1939_21909)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 30H130" stroke="url(#paint1_linear_1939_21909)" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M170 40C175.523 40 180 35.5228 180 30C180 24.4772 175.523 20 170 20V40Z" fill="#DD0031"/>
+<circle cx="170" cy="30" r="2" fill="#DD0031"/>
+<defs>
+<linearGradient id="paint0_linear_1939_21909" x1="9.50077" y1="170" x2="9.50094" y2="-30" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DD0031"/>
+<stop offset="0.20238" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="0.801339" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="1" stop-color="#DD0031"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1939_21909" x1="-30" y1="9.50063" x2="170" y2="9.50081" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DD0031"/>
+<stop offset="0.20238" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="0.801339" stop-color="#DD0031" stop-opacity="0"/>
+<stop offset="1" stop-color="#DD0031"/>
+</linearGradient>
+<clipPath id="clip0_1939_21909">
+<rect width="240" height="240" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "bidirectional",
     "two-way",
@@ -19,7 +20,6 @@
     "move"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

@@ -2,14 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "maxwellito",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "pencil",
     "drawing",
     "undo",
     "delete",
-    "clear"
+    "clear",
+    "trash",
+    "remove"
   ],
   "categories": [
     "text"

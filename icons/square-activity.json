@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "pulse",
     "action",
@@ -39,6 +40,10 @@
     "multimedia"
   ],
   "aliases": [
-    "activity-square"
+    {
+      "name": "activity-square",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

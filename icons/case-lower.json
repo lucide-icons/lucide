@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "vichotech",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "text",
     "letters",
@@ -11,6 +14,7 @@
     "typography"
   ],
   "categories": [
-    "text"
+    "text",
+    "development"
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ericfennis",
+    "danielbayley",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "To view the activity history of an account or document.",
+    "To browse past events in a log or audit trail.",
+    "To show recent actions, such as recently visited pages.",
+    "To restore an earlier version of a file."
+  ],
+  "tags": [
+    "history",
+    "time",
+    "redo",
+    "undo",
+    "rewind",
+    "timeline",
+    "version",
+    "time machine",
+    "backup",
+    "ccw"
+  ],
+  "categories": [
+    "arrows",
+    "time"
+  ],
+  "aliases": [
+    {
+      "name": "history",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}
