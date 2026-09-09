@@ -15,5 +15,12 @@
   "categories": [
     "design",
     "photography"
+  ],
+  "aliases": [
+    {
+      "name": "flip-vertical-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
