@@ -46,5 +46,13 @@
       "light": "/company-logos/open-collective-light.svg",
       "dark": "/company-logos/open-collective-dark.svg"
     }
+  },
+  {
+    "name": "Numonis",
+    "url": "https://numonis.com",
+    "image": {
+      "light": "/company-logos/numonis-light.svg",
+      "dark": "/company-logos/numonis-dark.svg"
+    }
   }
 ]
