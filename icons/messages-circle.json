@@ -9,11 +9,9 @@
     "Mirazstudio-offical"
   ],
   "use-cases": [
-    "start a group conversation",
-    "indicate multiple unread message threads",
-    "open a discussion or comment section",
-    "represent group chat in a navigation bar or toolbar",
-    "represent messaging feature in onboarding"
+    "Starting a group conversation in chat apps",
+    "Indicating multiple unread message threads",
+    "Opening discussions or comment sections in social apps"
   ],
   "tags": [
     "comment",
