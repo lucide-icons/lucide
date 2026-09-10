@@ -82,17 +82,26 @@ Icons can help in tight spaces, such as mobile navigation, toolbars, tables, and
 ::: do ../images/how-to/compact_interfaces_labels_do.svg?raw=true
 Keep labels in all layout variants when space allows.
 :::
-::: dont ../images/how-to/compact_interfaces_labels_dont.svg?raw=true
-Don't remove labels when people need text to understand the action. Use a tooltip only when a visible label does not fit.
+::: caution ../images/how-to/compact_interfaces_labels_dont.svg?raw=true
+Keep labels visible when people need text to understand the action. Use a tooltip only when a visible label does not fit.
 :::
 ::::
 
 :::: example
 ::: do ../images/how-to/compact_interfaces_do.svg?raw=true
-Use icons in compact layouts only when the meaning stays clear, and keep labels when space allows.
+Keep text labels next to icons in compact layouts, even when space is sparse.
 :::
 ::: dont ../images/how-to/compact_interfaces_dont.svg?raw=true
-Don't remove labels when the meaning without them is unclear.
+Don't remove labels in compact layouts when the meaning without them is unclear.
+:::
+::::
+
+:::: example
+::: caution ../images/how-to/compact_interfaces_caution_2.svg?raw=true
+Use icon-only controls only when the label is available on hover, focus, or tap.
+:::
+::: caution ../images/how-to/compact_interfaces_caution_1.svg?raw=true
+Use icon-only controls only when the icon represents a widely understood action.
 :::
 ::::
 

@@ -286,6 +286,10 @@ html {
   --example-guidance-label-bg: var(--vp-c-danger-1);
 }
 
+.example-guidance--caution {
+  --example-guidance-label-bg: var(--vp-a11y-warning);
+}
+
 @media (min-width: 640px) {
   .example-block {
     display: grid;
