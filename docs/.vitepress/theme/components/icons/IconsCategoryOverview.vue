@@ -122,7 +122,7 @@ const categoriesList = computed(() => {
 });
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
-  () => searchQuery.value.length > 0 && (tags.value == null || categoriesMap.value == null),
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
 const { list, containerProps, wrapperProps, scrollTo } = useVirtualList(categoriesList, {
