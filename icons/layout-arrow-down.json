@@ -4,11 +4,14 @@
     "samuelalake"
   ],
   "use-cases": [
-    "toggle between horizontal and vertical layouts in design tools",
-    "switch to column view in file managers or galleries",
-    "set flex-direction to column in css or style panels",
-    "indicate vertical stacking mode in ui editors or prototyping tools",
-    "choose vertical orientation for responsive layout controls"
+    "Setting auto layout direction to vertical in design tools",
+    "Selecting flex-direction: column in devtools panels",
+    "Stacking content blocks top to bottom",
+    "Toggle between horizontal and vertical layouts in design tools",
+    "Switch to column view in file managers or galleries",
+    "Set flex-direction to column in css or style panels",
+    "Indicate vertical stacking mode in ui editors or prototyping tools",
+    "Choose vertical orientation for responsive layout controls"
   ],
   "tags": [
     "layout",

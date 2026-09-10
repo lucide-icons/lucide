@@ -4,11 +4,14 @@
     "samuelalake"
   ],
   "use-cases": [
-    "switching the canvas to a horizontal layout",
-    "choosing side-by-side or two-column display",
-    "representing css flex-direction: row in developer tools",
-    "toggling panel orientation in a ui",
-    "selecting left-to-right flow in design editors"
+    "Setting auto layout direction to horizontal in design tools",
+    "Selecting flex-direction: row in devtools panels",
+    "Switching sections from stacked to side-by-side",
+    "Switching the canvas to a horizontal layout",
+    "Choosing side-by-side or two-column display",
+    "Representing css flex-direction: row in developer tools",
+    "Toggling panel orientation in a ui",
+    "Selecting left-to-right flow in design editors"
   ],
   "tags": [
     "layout",
