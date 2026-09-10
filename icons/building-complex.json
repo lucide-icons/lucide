@@ -19,5 +19,12 @@
   "categories": [
     "account",
     "buildings"
+  ],
+  "aliases": [
+    {
+      "name": "building-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }

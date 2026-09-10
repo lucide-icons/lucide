@@ -1,0 +1,40 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "maxim-s-barabash",
+    "ericfennis",
+    "karsa-mistmere",
+    "jguddas",
+    "tylerkade"
+  ],
+  "use-cases": [
+    "Adding a company or business profile",
+    "Registering a company during onboarding",
+    "Creating office, branch, or headquarters entries",
+    "Marking new business or property locations on maps"
+  ],
+  "tags": [
+    "business",
+    "company",
+    "enterprise",
+    "skyscraper",
+    "organisation",
+    "organization",
+    "city",
+    "new",
+    "add",
+    "create",
+    "increase",
+    "office",
+    "headquarters",
+    "startup",
+    "registration",
+    "onboarding",
+    "realestate",
+    "property"
+  ],
+  "categories": [
+    "account",
+    "buildings"
+  ]
+}
