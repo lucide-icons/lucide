@@ -1,7 +1,8 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
   "use-cases": [],
   "tags": [
@@ -49,5 +50,12 @@
     "text",
     "development",
     "gaming"
+  ],
+  "aliases": [
+    {
+      "name": "book-marked",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
