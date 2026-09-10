@@ -3,7 +3,8 @@
   "contributors": [
     "ericfennis",
     "csandman",
-    "mittalyashu"
+    "mittalyashu",
+    "karsa-mistmere"
   ],
   "use-cases": [],
   "tags": [
@@ -13,5 +14,12 @@
   "categories": [
     "photography",
     "multimedia"
+  ],
+  "aliases": [
+    {
+      "name": "album",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }
