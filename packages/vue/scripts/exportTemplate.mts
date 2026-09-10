@@ -1,22 +1,16 @@
 import base64SVG from '@lucide/build-icons/utils/base64SVG';
 import defineExportTemplate from '@lucide/build-icons/utils/defineExportTemplate';
 
-export default defineExportTemplate(async({
-  componentName,
-  iconName,
-  children,
-  getSvg,
-  deprecated,
-  deprecationReason,
-}) => {
-  const svgContents = await getSvg();
-  const svgBase64 = base64SVG(svgContents);
+export default defineExportTemplate(
+  async ({ componentName, iconName, iconData, getSvg, deprecated, deprecationReason }) => {
+    const svgContents = await getSvg();
+    const svgBase64 = base64SVG(svgContents);
 
-  return `
+    return `
 import createLucideIcon from '../createLucideIcon';
-import { IconNode } from '../types';
+import type { LucideIconData } from '../types';
 
-export const __iconNode: IconNode = ${JSON.stringify(children)}
+export const __iconData: LucideIconData = ${JSON.stringify(iconData)}
 
 /**
  * @component @name ${componentName}
@@ -29,8 +23,9 @@ export const __iconNode: IconNode = ${JSON.stringify(children)}
  * @returns {FunctionalComponent} Vue component
  * ${deprecated ? `@deprecated ${deprecationReason}` : ''}
  */
-const ${componentName} = createLucideIcon('${iconName}', __iconNode);
+const ${componentName} = createLucideIcon(__iconData);
 
 export default ${componentName};
 `;
-});
+  },
+);
