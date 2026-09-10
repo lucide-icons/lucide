@@ -4,7 +4,7 @@
     "skajosborn",
     "jguddas"
   ],
-"use-cases": [
+  "use-cases": [
     "Indicating public parks on maps and navigation apps",
     "Marking outdoor recreation areas and picnic zones",
     "Highlighting municipal park facilities and services"
@@ -23,7 +23,7 @@
     "outdoors",
     "recreation"
   ],
-"categories": [
+  "categories": [
     "nature",
     "navigation",
     "travel"
