@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "briz123",
+    "UsamaKhan",
+    "ajokt123",
+    "timmy471",
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing coaches or referees in sports apps",
+    "Signaling alerts in training interfaces",
+    "Indicating traffic control or public safety roles",
+    "Marking lifeguard equipment in safety systems"
+  ],
+  "tags": [
+    "alert",
+    "signal",
+    "sound",
+    "blow",
+    "noise",
+    "coach",
+    "trainer",
+    "referee",
+    "gym",
+    "game",
+    "training",
+    "sports",
+    "traffic cops",
+    "police",
+    "lifeguard",
+    "safety",
+    "rescue",
+    "emergency"
+  ],
+  "categories": [
+    "sports",
+    "notifications"
+  ]
+}

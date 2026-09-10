@@ -3,6 +3,7 @@ name: Lucide Lab checks
 on:
   pull_request:
     paths:
+      - lab/**
       - packages/lab/**
       - packages/shared/**
       - tools/build-icons/**
