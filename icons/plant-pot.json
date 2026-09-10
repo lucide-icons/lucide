@@ -3,7 +3,11 @@
   "contributors": [
     "karsa-mistmere"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing a potted plant in home decor catalogs",
+    "Indicating indoor plant care or watering reminders",
+    "Marking gardening supplies in shopping lists"
+  ],
   "tags": [
     "plant",
     "leaf",
