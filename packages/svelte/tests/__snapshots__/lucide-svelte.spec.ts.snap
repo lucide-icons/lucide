@@ -3,7 +3,7 @@
 exports[`Using lucide icon components > should add a class to the element 1`] = `
 <svg
   aria-hidden="true"
-  class="lucide-icon lucide lucide-face-slightly-smiling my-icon"
+  class="lucide lucide-face-slightly-smiling lucide-smile lucide-icon my-icon"
   fill="none"
   height="24"
   stroke="currentColor"
@@ -53,7 +53,7 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
 <div>
   <svg
     aria-hidden="true"
-    class="lucide-icon lucide lucide-face-slightly-smiling"
+    class="lucide lucide-face-slightly-smiling lucide-smile lucide-icon"
     fill="none"
     height="48"
     stroke="red"
@@ -101,26 +101,33 @@ exports[`Using lucide icon components > should adjust the size, stroke color and
 </div>
 `;
 
-exports[`Using lucide icon components > should not scale the strokeWidth when absoluteStrokeWidth is set 1`] = `
+exports[`Using lucide icon components > should apply vector-effect when nonScalingStroke is set 1`] = `
 <svg xmlns="http://www.w3.org/2000/svg"
      width="48"
      height="48"
      viewbox="0 0 24 24"
      fill="none"
      stroke="red"
-     stroke-width="1"
+     stroke-width="2"
      stroke-linecap="round"
      stroke-linejoin="round"
+     class="lucide lucide-face-slightly-smiling lucide-smile lucide-icon"
      aria-hidden="true"
-     class="lucide-icon lucide lucide-face-slightly-smiling"
 >
-  <path d="M15 10V9">
+  <path vector-effect="non-scaling-stroke"
+        d="M15 10V9"
+  >
   </path>
-  <path d="M16.472 15a6 6 0 01-8.943 0">
+  <path vector-effect="non-scaling-stroke"
+        d="M16.472 15a6 6 0 01-8.943 0"
+  >
   </path>
-  <path d="M9 10V9">
+  <path vector-effect="non-scaling-stroke"
+        d="M9 10V9"
+  >
   </path>
-  <circle cx="12"
+  <circle vector-effect="non-scaling-stroke"
+          cx="12"
           cy="12"
           r="10"
   >
@@ -132,7 +139,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
 <div>
   <svg
     aria-hidden="true"
-    class="lucide-icon lucide lucide-face-slightly-smiling"
+    class="lucide lucide-face-slightly-smiling lucide-smile lucide-icon"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -183,7 +190,7 @@ exports[`Using lucide icon components > should render an component 1`] = `
 exports[`Using lucide icon components > should render an icon slot 1`] = `
 <div>
   <svg
-    class="lucide-icon lucide lucide-face-slightly-smiling"
+    class="lucide lucide-face-slightly-smiling lucide-smile lucide-icon"
     fill="none"
     height="24"
     stroke="currentColor"
@@ -232,4 +239,31 @@ exports[`Using lucide icon components > should render an icon slot 1`] = `
   </svg>
   
 </div>
+`;
+
+exports[`Using lucide icon components > should scale the strokeWidth when absoluteStrokeWidth is set 1`] = `
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="48"
+     height="48"
+     viewbox="0 0 24 24"
+     fill="none"
+     stroke="red"
+     stroke-width="1"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     class="lucide lucide-face-slightly-smiling lucide-smile lucide-icon"
+     aria-hidden="true"
+>
+  <path d="M15 10V9">
+  </path>
+  <path d="M16.472 15a6 6 0 01-8.943 0">
+  </path>
+  <path d="M9 10V9">
+  </path>
+  <circle cx="12"
+          cy="12"
+          r="10"
+  >
+  </circle>
+</svg>
 `;
