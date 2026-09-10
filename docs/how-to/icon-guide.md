@@ -97,11 +97,11 @@ Don't remove labels in compact layouts when the meaning without them is unclear.
 ::::
 
 :::: example
-::: caution ../images/how-to/compact_interfaces_caution_2.svg?raw=true
-Use icon-only controls only when the label is available on hover, focus, or tap.
-:::
 ::: caution ../images/how-to/compact_interfaces_caution_1.svg?raw=true
 Use icon-only controls only when the icon represents a widely understood action.
+:::
+::: caution ../images/how-to/compact_interfaces_caution_2.svg?raw=true
+Use icon-only controls only when the label is available on hover, focus, or tap.
 :::
 ::::
 
