@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "time",
+    "watch",
+    "alarm",
+    "expire",
+    "timeout",
+    "fading"
+  ],
+  "categories": [
+    "time"
+  ]
+}
