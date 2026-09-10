@@ -34,7 +34,7 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
     ? (Number(params.strokeWidth ?? defaultAttributes['stroke-width']) *
         Number(icon.size ?? icon.width ?? defaultAttributes['width'])) /
       Number(params.size ?? params.width ?? defaultAttributes['width'])
-    : params.strokeWidth ?? defaultAttributes['stroke-width'];
+    : (params.strokeWidth ?? defaultAttributes['stroke-width']);
 
   const attributes = {
     ...Object.entries(defaultAttributes).reduce((attrs, [attrName, value]) => {
