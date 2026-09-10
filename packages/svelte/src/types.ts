@@ -7,14 +7,7 @@ import type {
 
 export type Attrs = Record<string, unknown> & SVGAttributes<SVGSVGElement>;
 type IconNodeElements =
-  | 'circle'
-  | 'ellipse'
-  | 'g'
-  | 'line'
-  | 'path'
-  | 'polygon'
-  | 'polyline'
-  | 'rect';
+  'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect';
 
 export type LucideIconNode = SharedLucideIconNode<IconNodeElements, Attrs>;
 
