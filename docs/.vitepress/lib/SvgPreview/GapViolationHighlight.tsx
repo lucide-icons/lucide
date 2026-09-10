@@ -3,7 +3,6 @@ import pathToPoints from './path-to-points';
 import { Path, PathProps } from './types';
 
 export const GapViolationHighlight = ({
-  radius,
   stroke,
   strokeWidth,
   strokeOpacity,

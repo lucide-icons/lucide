@@ -6,7 +6,7 @@ export const lucideIconTemplate = `@if (title(); as titleValue) {
   <title>{{ titleValue }}</title>
 }
 <ng-content select="title"></ng-content>
-@for (child of iconNodes(); track child[1]['key'] ?? $index) {
+@for (child of computedIconNode(); track child[1]['key'] ?? $index) {
   @let attrs = child[1];
   @switch (child[0]) {
     @case ('path') {
