@@ -3,7 +3,10 @@
   "contributors": [
     "dev-mralph"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Representing rugby matches and tournaments",
+    "Categorizing rugby-related content in sports apps"
+  ],
   "tags": [
     "rugby",
     "football",
@@ -12,6 +15,6 @@
     "sport"
   ],
   "categories": [
-    "sport"
+    "sports"
   ]
 }
