@@ -35,6 +35,7 @@ bun add lucide-solid
 ```
 
 :::
+> `@lucide/solid` is for Solid 2, for Solid 1 use the `lucide-solid` package. Solid 2 is still a release candidate.
 
 ## Importing your first icon
 
