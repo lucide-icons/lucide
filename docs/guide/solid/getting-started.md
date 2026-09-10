@@ -35,7 +35,52 @@ bun add lucide-solid
 ```
 
 :::
-> `@lucide/solid` is for Solid 2, for Solid 1 use the `lucide-solid` package. Solid 2 is still a release candidate.
+
+:::: info Using Solid 2?
+
+Lucide ships one package per major Solid version. This guide covers **Solid 1** and the `lucide-solid` package. If your app is on Solid 2, install `@lucide/solid` instead:
+
+::: code-group
+
+```sh [pnpm]
+pnpm add @lucide/solid
+```
+
+```sh [yarn]
+yarn add @lucide/solid
+```
+
+```sh [npm]
+npm install @lucide/solid
+```
+
+```sh [bun]
+bun add @lucide/solid
+```
+
+:::
+
+Both packages export the same icon components with the same props, so the rest of this guide applies unchanged — only the import specifier differs:
+
+```jsx
+import { Camera } from '@lucide/solid';
+```
+
+What does differ is Solid itself. The changes most likely to affect the code you write around Lucide:
+
+| | `lucide-solid` | `@lucide/solid` |
+| -------------------- | ----------------------------- | ----------------------- |
+| Solid version         | `^1.4.7`                      | `^2.0.0-rc.0`           |
+| DOM runtime package   | `solid-js/web`                | `@solidjs/web`          |
+| `jsxImportSource`     | `solid-js`                    | `@solidjs/web`          |
+| Splitting icon props  | `splitProps(props, ['size'])` | `omit(props, 'size')`   |
+| Providing context     | `<Ctx.Provider value={…}>`    | `<Ctx value={…}>`       |
+
+See the [Solid 2 migration guide](https://github.com/solidjs/solid/blob/next/documentation/solid-2.0/MIGRATION.md) for the full list.
+
+Solid 2 is still a release candidate, so treat `@lucide/solid` as pre-release too. The live examples throughout this guide run on Solid 1.
+
+::::
 
 ## Importing your first icon
 
