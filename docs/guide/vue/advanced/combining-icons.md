@@ -2,6 +2,7 @@
 title: Combining icons - Vue
 description: Learn how to combine multiple icons into a single icon nested SVG elements in your Vue application.
 ---
+
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/SandpackVue.vue'
 </script>
@@ -15,22 +16,24 @@ This is useful if you want to create custom icons by combining existing ones.
 
 ```vue src/App.vue [active]
 <script setup>
-import { Scan, User } from "@lucide/vue";
+import { Scan, User } from '@lucide/vue';
 </script>
 
 <template>
   <div class="app">
-    <Scan :size="48">
+    <Scan
+      :size="48"
+      nonScalingStroke
+    >
       <User
         :size="12"
         x="6"
         y="6"
-        absoluteStrokeWidth
+        nonScalingStroke
       />
     </Scan>
   </div>
 </template>
-
 ```
 
 :::
@@ -54,7 +57,7 @@ For example, you can add a notification badge to an icon by using the `circle` S
 
 ```vue src/App.vue [active]
 <script setup>
-import { Mail } from "@lucide/vue";
+import { Mail } from '@lucide/vue';
 
 const hasUnreadMessages = true;
 </script>
@@ -73,7 +76,6 @@ const hasUnreadMessages = true;
     </Mail>
   </div>
 </template>
-
 ```
 
 :::
@@ -86,7 +88,7 @@ You can also use the `text` SVG element to add text to your icon.
 
 ```vue src/App.vue [active]
 <script setup>
-import { File } from "@lucide/vue";
+import { File } from '@lucide/vue';
 </script>
 
 <template>
@@ -104,7 +106,6 @@ import { File } from "@lucide/vue";
     </File>
   </div>
 </template>
-
 ```
 
 :::

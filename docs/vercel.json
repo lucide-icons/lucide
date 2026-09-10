@@ -13,7 +13,7 @@
     },
     {
       "source": "/docs/:slug(lucide-?.*)",
-      "destination": "/guide/packages/:slug",
+      "destination": "/guide/:slug",
       "permanent": true
     },
     {
@@ -58,53 +58,43 @@
       "permanent": true
     },
     {
-      "source": "/guide/packages/lucide-react",
-      "destination": "/guide/react",
+      "source": "/guide/packages/lucide-:package",
+      "destination": "/guide/:package",
       "permanent": true
     },
     {
-      "source": "/guide/packages/lucide-vue-next",
-      "destination": "/guide/vue",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-vue",
-      "destination": "/guide/vue",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-svelte",
-      "destination": "/guide/svelte",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-solid",
-      "destination": "/guide/solid",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-angular",
-      "destination": "/guide/angular",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-preact",
-      "destination": "/guide/preact",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-astro",
-      "destination": "/guide/astro",
-      "permanent": true
-    },
-    {
-      "source": "/guide/packages/lucide-static",
-      "destination": "/guide/static",
+      "source": "/guide/packages/:package",
+      "destination": "/guide/:package",
       "permanent": true
     },
     {
       "source": "/contributing",
       "destination": "/contribute",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/icon-design-guide",
+      "destination": "/contribute/icons/design-principles",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/illustrator-guide",
+      "destination": "/contribute/icons/illustrator-guide",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/inkscape-guide",
+      "destination": "/contribute/icons/inkscape-guide",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/figma-guide",
+      "destination": "/contribute/icons/figma-guide",
+      "permanent": true
+    },
+    {
+      "source": "/contribute/affinity-designer-guide",
+      "destination": "/contribute/icons/affinity-designer-guide",
       "permanent": true
     }
   ],
