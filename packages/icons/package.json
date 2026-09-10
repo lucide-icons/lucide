@@ -39,7 +39,6 @@
     "./dynamic": {
       "types": "./dist/esm/dynamic.d.ts",
       "import": "./dist/esm/dynamic.mjs",
-      "require": "./dist/cjs/dynamic.cjs",
       "default": "./dist/esm/dynamic.mjs"
     },
     "./build": {
