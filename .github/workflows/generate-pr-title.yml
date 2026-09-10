@@ -12,7 +12,9 @@ permissions: {}
 jobs:
   generate-pr-title:
     name: Generate PR Title
-    if: github.repository == 'lucide-icons/lucide'
+    # Skip when a maintainer has opted out by adding the "Keep PR title" label.
+    if: github.repository == 'lucide-icons/lucide' &&
+      !contains(github.event.pull_request.labels.*.name, 'Keep PR title')
     runs-on: ubuntu-latest
     permissions:
       contents: read
