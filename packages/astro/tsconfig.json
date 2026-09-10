@@ -15,12 +15,12 @@
     "skipLibCheck": true,
     "jsx": "preserve",
     "lib": ["ESNext", "DOM.Iterable"],
-    "types": ["@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom/vitest"],
     "plugins": [
       {
-        "name": "@astrojs/ts-plugin",
-      },
-    ],
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"]
 }

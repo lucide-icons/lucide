@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "timmy471",
+    "colebemis",
+    "csandman",
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "use-cases": [],
+  "tags": [
+    "code",
+    "version control",
+    "commits",
+    "diff",
+    "error",
+    "conflict"
+  ],
+  "categories": [
+    "development"
+  ]
+}

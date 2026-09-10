@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "tools",
+    "trunk",
+    "chest",
+    "storage",
+    "utility",
+    "utilities",
+    "container",
+    "kit",
+    "set"
+  ],
+  "categories": [
+    "tools",
+    "home"
+  ]
+}

@@ -50,9 +50,8 @@ export async function renameIcon(ICONS_DIR: string, oldName: string, newName: st
       ...(jsonData.aliases ?? []),
       {
         name: oldName,
-        deprecate: true,
+        deprecated: true,
         deprecationReason: 'alias.name',
-        toBeRemovedInVersion: 'v1.0',
       },
     ];
     fs.writeFileSync(newJsonPath, JSON.stringify(jsonData, null, 2));

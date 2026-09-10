@@ -8,6 +8,7 @@ export default async function generateExportFile(
   iconNodes: Record<string, INode>,
   exportModuleNameCasing: 'camel' | 'pascal',
   iconFileExtension = '',
+  useDefaultExports = true,
 ) {
   const fileName = path.basename(inputEntry);
 
@@ -25,7 +26,9 @@ export default async function generateExportFile(
     } else if (exportModuleNameCasing === 'pascal') {
       componentName = toPascalCase(iconName);
     }
-    const importString = `export { default as ${componentName} } from './${iconName}${iconFileExtension}';\n`;
+    const importString = `export ${
+      useDefaultExports ? `{ default as ${componentName} }` : `*`
+    } from './${iconName}${iconFileExtension}';\n`;
     return appendFile(importString, fileName, outputDirectory);
   });
 
