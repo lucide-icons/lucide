@@ -1,0 +1,53 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "devkamani9313"
+  ],
+  "use-cases": [
+    "representing avocado fruit, guacamole, or healthy food in nutrition apps",
+    "indicating salad, breakfast, or brunch ingredients",
+    "showing vegetarian or vegan food options",
+    "marking avocado toast as a menu item in restaurant or delivery apps",
+    "denoting fresh produce or fruit section in grocery and supermarket apps",
+    "signifying healthy fats or superfood in nutrition and wellness trackers",
+    "labeling plant-based or vegetarian recipes in cooking websites and apps"
+  ],
+  "tags": [
+    "fruit",
+    "snack",
+    "meal",
+    "lunch",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "eating",
+    "healthy",
+    "nutrition",
+    "diet",
+    "guacamole",
+    "mexican",
+    "avocado",
+    "green",
+    "pit",
+    "seed",
+    "half",
+    "produce",
+    "vegetarian",
+    "vegan",
+    "grocery",
+    "supermarket",
+    "toast",
+    "superfood",
+    "plantbased",
+    "ripe"
+  ],
+  "categories": [
+    "food-beverage",
+    "nature",
+    "shopping",
+    "sustainability"
+  ]
+}
