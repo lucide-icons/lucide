@@ -5,6 +5,17 @@ import type { RenderRule } from 'markdown-it/lib/renderer.mjs';
 import container from 'markdown-it-container';
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
+type GuidanceType = 'do' | 'dont' | 'caution';
+
+const isGuidanceOpenToken = (type: string) =>
+  type === 'container_do_open' ||
+  type === 'container_dont_open' ||
+  type === 'container_caution_open';
+
+const isGuidanceCloseToken = (type: string) =>
+  type === 'container_do_close' ||
+  type === 'container_dont_close' ||
+  type === 'container_caution_close';
 
 const parseInfo = (info: string, marker: string) => info.trim().slice(marker.length).trim();
 
@@ -81,12 +92,12 @@ const hasTopLevelContent = (tokens: Parameters<RenderRule>[0], index: number) =>
       return false;
     }
 
-    if (token.type === 'container_do_open' || token.type === 'container_dont_open') {
+    if (isGuidanceOpenToken(token.type)) {
       guidanceDepth += 1;
       continue;
     }
 
-    if (token.type === 'container_do_close' || token.type === 'container_dont_close') {
+    if (isGuidanceCloseToken(token.type)) {
       guidanceDepth -= 1;
       continue;
     }
@@ -107,7 +118,7 @@ const hasGuidance = (tokens: Parameters<RenderRule>[0], index: number) => {
       return false;
     }
 
-    if (token.type === 'container_do_open' || token.type === 'container_dont_open') {
+    if (isGuidanceOpenToken(token.type)) {
       return true;
     }
   }
@@ -123,7 +134,7 @@ const isFirstGuidance = (tokens: Parameters<RenderRule>[0], index: number) => {
       return true;
     }
 
-    if (token.type === 'container_do_open' || token.type === 'container_dont_open') {
+    if (isGuidanceOpenToken(token.type)) {
       return false;
     }
   }
@@ -139,6 +150,12 @@ const getExampleOpenIndex = (tokens: Parameters<RenderRule>[0], index: number) =
   }
 
   return index;
+};
+
+const labels: Record<GuidanceType, string> = {
+  do: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Do`,
+  dont: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Don't`,
+  caution: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-exclamation-point"><path d="M12 20 L12 20" /><path d="M12 4 L12 15" /></svg> Caution`,
 };
 
 export default function examplePlugin(md: MarkdownIt) {
@@ -170,7 +187,7 @@ export default function examplePlugin(md: MarkdownIt) {
     },
   ];
 
-  const createGuidanceContainer = (type: 'do' | 'dont'): ContainerArgs => [
+  const createGuidanceContainer = (type: GuidanceType): ContainerArgs => [
     container,
     type,
     {
@@ -185,10 +202,7 @@ export default function examplePlugin(md: MarkdownIt) {
             hasTopLevelContent(tokens, exampleOpenIndex) && isFirstGuidance(tokens, idx)
               ? '</div>\n'
               : '';
-          const label =
-            type === 'do'
-              ? `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Do`
-              : `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> Don't`;
+          const label = labels[type];
 
           return `${contentClose}<figure class="example-guidance example-guidance--${type}">${media}<figcaption class="example-guidance__caption"><div class="example-guidance__label">${label}</div>\n`;
         }
@@ -201,4 +215,5 @@ export default function examplePlugin(md: MarkdownIt) {
   md.use(...createExampleContainer());
   md.use(...createGuidanceContainer('do'));
   md.use(...createGuidanceContainer('dont'));
+  md.use(...createGuidanceContainer('caution'));
 }
