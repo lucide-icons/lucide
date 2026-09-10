@@ -14,5 +14,12 @@
   "categories": [
     "design",
     "photography"
+  ],
+  "aliases": [
+    {
+      "name": "flip-horizontal-2",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
   ]
 }

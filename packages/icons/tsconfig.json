@@ -5,13 +5,12 @@
     "noEmitOnError": true,
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "module": "ESNext",
     "target": "ESNext",
-    "baseUrl": ".",
     "paths": {
       "@lucide/shared": ["../shared/src/index.ts"],
-      "@lucide/shared/types": ["../shared/src/build/types.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"]
     },
     "esModuleInterop": true,
     "isolatedModules": true,
@@ -19,9 +18,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
-  "exclude": ["**/node_modules"],
+  "exclude": ["**/node_modules"]
 }
