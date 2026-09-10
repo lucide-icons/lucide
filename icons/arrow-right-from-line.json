@@ -4,6 +4,7 @@
     "danielbayley",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "next",
     "forward",
@@ -16,7 +17,6 @@
     "|->"
   ],
   "categories": [
-    "arrows",
-    "navigation"
+    "arrows"
   ]
 }

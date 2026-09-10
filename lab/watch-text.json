@@ -1,0 +1,42 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "clock",
+    "wearable",
+    "wrist",
+    "strap",
+    "face",
+    "digital",
+    "touchscreen",
+    "smart",
+    "gadget",
+    "technology",
+    "mobile",
+    "levels",
+    "chart",
+    "statistics",
+    "tracking",
+    "monitor",
+    "activity",
+    "exercise",
+    "fitness",
+    "running",
+    "jogging",
+    "audio",
+    "sound",
+    "vertical",
+    "information",
+    "message",
+    "read",
+    "horizontal"
+  ],
+  "categories": [
+    "time",
+    "devices",
+    "sports",
+    "social"
+  ]
+}

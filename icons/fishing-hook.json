@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "7ender",
+    "jguddas",
+    "karsa-mistmere",
+    "jamiemlaw"
+  ],
+  "use-cases": [],
+  "tags": [
+    "sea",
+    "boating",
+    "angler",
+    "bait",
+    "reel",
+    "tackle",
+    "marine",
+    "outdoors",
+    "fish",
+    "fishing",
+    "hook",
+    "sports",
+    "travel"
+  ],
+  "categories": [
+    "sports",
+    "travel"
+  ]
+}

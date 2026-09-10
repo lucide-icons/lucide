@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "debit",
+    "visa",
+    "mastercard",
+    "bank",
+    "atm",
+    "cash machine",
+    "cash point",
+    "withdrawal",
+    "finance",
+    "financial",
+    "spending",
+    "budget",
+    "purchase",
+    "payment",
+    "cc",
+    "shopping",
+    "retail",
+    "store",
+    "mall",
+    "consumer",
+    "loyalty",
+    "points",
+    "cashback",
+    "transaction",
+    "instructions",
+    "port",
+    "input",
+    "insert",
+    "slide",
+    "push"
+  ],
+  "categories": [
+    "account",
+    "money",
+    "devices"
+  ]
+}

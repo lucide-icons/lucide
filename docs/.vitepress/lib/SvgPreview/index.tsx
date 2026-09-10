@@ -293,7 +293,7 @@ const Radii = ({
   ...props
 }: { paths: Path[] } & PathProps<
   'strokeWidth' | 'stroke' | 'strokeDasharray' | 'strokeOpacity',
-  any
+  never
 >) => {
   return (
     <g
@@ -361,12 +361,12 @@ const Radii = ({
 const Handles = ({
   paths,
   ...props
-}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', any>) => (
+}: { paths: Path[] } & PathProps<'strokeWidth' | 'stroke' | 'strokeOpacity', never>) => (
   <g
     className="svg-preview-handles-group"
     {...props}
   >
-    {paths.map(({ c, prev, next, cp1, cp2 }, i) => (
+    {paths.map(({ prev, next, cp1, cp2 }, i) => (
       <React.Fragment key={i}>
         {cp1 && <path d={`M${prev.x} ${prev.y} ${cp1.x} ${cp1.y}`} />}
         {cp1 && (
@@ -389,15 +389,18 @@ const Handles = ({
   </g>
 );
 
-const SvgPreview = React.forwardRef<
-  SVGSVGElement,
-  {
-    height?: number;
-    width?: number;
-    src: string | ReturnType<typeof getPaths>;
-    showGrid?: boolean;
-  } & React.SVGProps<SVGSVGElement>
->(({ src, children, height = 24, width = 24, showGrid = false, ...props }, ref) => {
+interface SvgPreviewProps extends React.SVGProps<SVGSVGElement> {
+  height?: number;
+  width?: number;
+  src: string | ReturnType<typeof getPaths>;
+  showGrid?: boolean;
+  children?: React.ReactNode;
+}
+
+const SvgPreview = (
+  { src, children, height = 24, width = 24, showGrid = false, ...props }: SvgPreviewProps,
+  ref,
+) => {
   const subGridSize =
     Math.max(height, width) % 3 === 0
       ? Math.max(height, width) > 24
@@ -494,7 +497,7 @@ const SvgPreview = React.forwardRef<
       {children}
     </svg>
   );
-});
+};
 
 SvgPreview.displayName = 'SvgPreview';
 

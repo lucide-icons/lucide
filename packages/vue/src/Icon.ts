@@ -1,0 +1,96 @@
+import { type FunctionalComponent, h } from 'vue';
+import { buildLucideIconNode, hasA11yProp, isEmptyString, toKebabCase } from '@lucide/shared';
+import { LucideIconNode, LucideIconData, LucideProps } from './types';
+import { useLucideProps } from './context';
+
+type IconProps =
+  | {
+      icon: LucideIconData;
+      iconNode?: never;
+      'icon-node'?: never;
+      name?: never;
+    }
+  | {
+      icon?: never;
+      iconNode: LucideIconNode[];
+      'icon-node'?: never;
+      name: string;
+    }
+  | {
+      icon?: never;
+      iconNode?: never;
+      'icon-node': LucideIconNode[];
+      name: string;
+    };
+
+const Icon: FunctionalComponent<LucideProps & IconProps> = (
+  {
+    name,
+    iconNode,
+    'icon-node': iconNodeKebabCase,
+    icon = {
+      name: toKebabCase(name),
+      node: iconNode ?? iconNodeKebabCase,
+      size: 24,
+      aliases: [],
+    },
+    absoluteStrokeWidth,
+    'absolute-stroke-width': absoluteStrokeWidthKebabCase,
+    nonScalingStroke,
+    'non-scaling-stroke': nonScalingStrokeKebabCase,
+    strokeWidth,
+    'stroke-width': strokeWidthKebabCase,
+    size,
+    width = size,
+    height = size,
+    color,
+    ...props
+  },
+  { slots },
+) => {
+  const {
+    size: contextSize,
+    color: contextColor,
+    strokeWidth: contextStrokeWidth = 2,
+    absoluteStrokeWidth: contextAbsoluteStrokeWidth = false,
+    nonScalingStroke: contextNonScalingStroke = false,
+    class: contextClass = '',
+  } = useLucideProps();
+
+  const isAbsoluteStrokeWidth =
+    isEmptyString(absoluteStrokeWidth) ||
+    isEmptyString(absoluteStrokeWidthKebabCase) ||
+    absoluteStrokeWidth === true ||
+    absoluteStrokeWidthKebabCase === true ||
+    contextAbsoluteStrokeWidth === true;
+
+  const isNonScalingStroke =
+    isEmptyString(nonScalingStroke) ||
+    isEmptyString(nonScalingStrokeKebabCase) ||
+    nonScalingStroke === true ||
+    nonScalingStrokeKebabCase === true ||
+    contextNonScalingStroke === true;
+
+  delete props.class;
+
+  const defaultSlot = slots.default?.();
+
+  const [, svgAttributes, builtIconNode = []] = buildLucideIconNode(icon, {
+    color: color ?? contextColor,
+    width: width ?? size ?? contextSize,
+    height: height ?? size ?? contextSize,
+    strokeWidth: strokeWidth ?? strokeWidthKebabCase ?? contextStrokeWidth,
+    absoluteStrokeWidth: isAbsoluteStrokeWidth,
+    nonScalingStroke: isNonScalingStroke,
+    className: contextClass,
+    hasA11yProp: (defaultSlot != null && defaultSlot.length > 0) || hasA11yProp(props),
+    attributes: props,
+  });
+
+  return h('svg', svgAttributes, [
+    ...builtIconNode.map((child) => h(...child)),
+    ...(defaultSlot ?? []),
+  ]);
+};
+
+export default Icon;

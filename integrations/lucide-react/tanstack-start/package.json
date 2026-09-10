@@ -1,0 +1,30 @@
+{
+  "name": "@lucide/integration-react-tanstack-start",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test:browser": "vitest run",
+    "check": "pnpm build && pnpm typecheck && pnpm test:browser"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.170.32",
+    "@tanstack/react-start": "1.168.49",
+    "lucide-react": "workspace:*",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitest/browser-playwright": "4.1.10",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6",
+    "vitest": "4.1.10",
+    "vitest-browser-react": "2.2.0"
+  }
+}

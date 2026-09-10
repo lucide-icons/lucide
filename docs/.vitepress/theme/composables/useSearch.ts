@@ -9,6 +9,7 @@ const useSearch = <T>(
   const index = shallowRef(
     new Fuse(collection.value, {
       threshold: 0.2,
+      useExtendedSearch: true,
       keys,
     }),
   );
@@ -17,17 +18,9 @@ const useSearch = <T>(
     index.value.setCollection(collection.value);
 
     if (query.value) {
-      return index.value.search(query.value).map((result) => result.item);
-    }
-
-    if (keys.length !== 0) {
-      const mainKey = keys[0].name;
-
-      return collection.value.sort((a, b) => {
-        const aString = a[mainKey as keyof T] as string;
-        const bString = b[mainKey as keyof T] as string;
-        return aString.localeCompare(bString);
-      });
+      return index.value
+        .search({ $and: query.value.split(' ').filter((t) => !!t) })
+        .map((result) => result.item);
     }
 
     return collection.value;

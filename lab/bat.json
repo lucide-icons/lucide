@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "night mode",
+    "nocturnal wildlife",
+    "cave exploration",
+    "halloween theme",
+    "spooky content",
+    "horror category",
+    "wildlife tracking",
+    "animal identification",
+    "dark themed event",
+    "vampire themed content"
+  ],
+  "tags": [
+    "nocturnal",
+    "vampire",
+    "winged",
+    "creature",
+    "nocturne",
+    "flying",
+    "bat",
+    "animal",
+    "mammal",
+    "wildlife",
+    "cave",
+    "halloween",
+    "wings",
+    "night",
+    "chamgadar"
+  ],
+  "categories": [
+    "animals"
+  ]
+}

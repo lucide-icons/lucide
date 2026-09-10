@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "boat",
     "knots",
@@ -16,7 +17,8 @@
     "tanker",
     "vessel",
     "navy",
-    "trip"
+    "trip",
+    "releases"
   ],
   "categories": [
     "transportation",

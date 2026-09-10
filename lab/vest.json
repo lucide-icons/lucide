@@ -1,0 +1,39 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "underwear",
+    "undergarment",
+    "mens",
+    "boys",
+    "top",
+    "waistcoat",
+    "sleeveless",
+    "sportswear",
+    "exercise",
+    "fitness",
+    "summer holiday",
+    "beachwear",
+    "bathing",
+    "seaside",
+    "store",
+    "clothing",
+    "clothes",
+    "apparel",
+    "attire",
+    "fashion",
+    "thread",
+    "cotton",
+    "casual",
+    "slim fit",
+    "regular"
+  ],
+  "categories": [
+    "shopping",
+    "sports",
+    "travel"
+  ]
+}
