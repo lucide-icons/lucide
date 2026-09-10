@@ -3,7 +3,13 @@
   "contributors": [
     "samuelalake"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "switching the canvas to a horizontal layout",
+    "choosing side-by-side or two-column display",
+    "representing css flex-direction: row in developer tools",
+    "toggling panel orientation in a ui",
+    "selecting left-to-right flow in design editors"
+  ],
   "tags": [
     "layout",
     "direction",
