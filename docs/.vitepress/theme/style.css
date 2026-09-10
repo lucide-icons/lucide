@@ -287,7 +287,7 @@ html {
 }
 
 .example-guidance--caution {
-  --example-guidance-label-bg: var(--vp-a11y-warning);
+  --example-guidance-label-bg: var(--vp-c-warning-1);
 }
 
 @media (min-width: 640px) {

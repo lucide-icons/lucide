@@ -83,7 +83,9 @@ Icons can help in tight spaces, such as mobile navigation, toolbars, tables, and
 Keep labels in all layout variants when space allows.
 :::
 ::: caution ../images/how-to/compact_interfaces_labels_dont.svg?raw=true
-Keep labels visible when people need text to understand the action. Use a tooltip only when a visible label does not fit.
+Use icon-only controls only when a visible label does not fit.
+
+In these cases, make sure that the label is accessible via hover, focus, or tap.
 :::
 ::::
 
