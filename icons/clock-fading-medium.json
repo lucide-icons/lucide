@@ -4,7 +4,9 @@
     "colebemis",
     "jguddas"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating a mid-way expiration stage for temporary content"
+  ],
   "tags": [
     "time",
     "watch",
