@@ -21,7 +21,12 @@
     "new",
     "placeholder",
     "marquee",
-    "box"
+    "box",
+    "dashed",
+    "plus",
+    "insert",
+    "frame",
+    "empty"
   ],
   "categories": [
     "design",
