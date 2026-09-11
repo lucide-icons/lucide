@@ -26,6 +26,40 @@
   "main": "dist/cjs/lucide-react.js",
   "module": "dist/esm/lucide-react.mjs",
   "typings": "dist/lucide-react.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lucide-react.d.ts",
+      "module": "./dist/esm/lucide-react.mjs",
+      "default": "./dist/cjs/lucide-react.js"
+    },
+    "./icons": {
+      "types": "./dist/lucide-react.d.ts",
+      "module": "./dist/esm/lucide-react.mjs",
+      "default": "./dist/cjs/lucide-react.js"
+    },
+    "./icons/*": {
+      "types": "./dist/lucide-icon.d.mts",
+      "default": "./dist/esm/icons/*.mjs"
+    },
+    "./types": {
+      "types": "./dist/lucide-types.d.ts"
+    },
+    "./dynamic": {
+      "types": "./dynamic.d.ts",
+      "import": "./dynamic.mjs",
+      "default": "./dynamic.js"
+    },
+    "./dynamicIconImports": {
+      "types": "./dynamicIconImports.d.ts",
+      "default": "./dynamicIconImports.mjs"
+    },
+    "./dist/esm/icons/*.mjs": {
+      "types": "./dist/lucide-icon.d.mts",
+      "default": "./dist/esm/icons/*.mjs"
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
   "sideEffects": false,
   "files": [
     "dist",
