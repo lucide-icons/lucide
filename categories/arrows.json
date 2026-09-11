@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Arrows",
+  "description": "Icons for directional arrows, movement, sorting, transfer, and navigation flows.",
   "icon": "arrow-left-right"
 }

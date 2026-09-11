@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Notification",
+  "description": "Icons for alerts, status updates, reminders, approvals, and attention states.",
   "icon": "triangle-alert"
 }

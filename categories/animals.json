@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Animals",
+  "description": "Icons for animals, wildlife, pets, insects, and other living creatures.",
   "icon": "dog"
 }

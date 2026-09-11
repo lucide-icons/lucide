@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Weather",
+  "description": "Icons for clouds, sun, rain, wind, temperature, and weather conditions.",
   "icon": "cloud-sun"
 }

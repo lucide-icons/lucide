@@ -16,6 +16,7 @@ export function getAllCategoryFiles(): Category[] {
     return {
       name,
       title: parsedFileContent.title,
+      description: parsedFileContent.description,
     };
   });
 }

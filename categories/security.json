@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Security",
+  "description": "Icons for locks, keys, identity checks, surveillance, protection, and secure access.",
   "icon": "shield"
 }

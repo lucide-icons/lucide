@@ -1,5 +1,6 @@
 {
   "$schema": "../category.schema.json",
   "title": "Social",
+  "description": "Icons for social interaction, reactions, sharing, community, and relationship signals.",
   "icon": "thumbs-up"
 }
