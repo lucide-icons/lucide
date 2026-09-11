@@ -1,0 +1,34 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "psjdev"
+  ],
+  "use-cases": [
+    "Identifying tools required for electronics assembly",
+    "Marking soldering steps in repair instructions",
+    "Locating electronics workstations in a makerspace",
+    "representing circuit-board repair or modification",
+    "selecting soldering equipment in tool inventories",
+    "marking soldering stations on workshop or makerspace maps",
+    "indicating soldering or hot-tip hazards in safety documentation",
+    "labeling diy electronics or hobbyist projects"
+  ],
+  "tags": [
+    "solder",
+    "electronics",
+    "repair",
+    "circuit",
+    "heat",
+    "workshop",
+    "assembly",
+    "pcb",
+    "flux",
+    "desolder",
+    "rework",
+    "smd",
+    "diy"
+  ],
+  "categories": [
+    "tools"
+  ]
+}
