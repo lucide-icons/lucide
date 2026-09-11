@@ -134,15 +134,18 @@ jobs:
 
   post-release:
     name: Trigger post-release automation
-    if: github.repository == 'lucide-icons/lucide'
-    needs: [create-release, start-release]
+    if: >-
+      always() &&
+      github.repository == 'lucide-icons/lucide' &&
+      (needs.start-release.result == 'success' || needs.dispatch-release.result == 'success')
+    needs: [create-release, start-release, dispatch-release]
     runs-on: ubuntu-latest
     permissions: {}
     steps:
       - name: Dispatch post_release event
         env:
           GH_TOKEN: ${{ secrets.POST_RELEASE_TOKEN }}
-          RELEASE_TAG: ${{ needs.create-release.outputs.VERSION }}
+          RELEASE_TAG: ${{ needs.create-release.outputs.VERSION || inputs.version }}
           RELEASE_URL: ${{ needs.create-release.outputs.RELEASE_URL }}
         run: |
           if [ -z "$RELEASE_URL" ]; then
