@@ -12,7 +12,11 @@
   "use-cases": [
     "Prompting users to select content for an empty slot",
     "Adding an area to an existing selection",
-    "Indicating a placeholder for adding content"
+    "Indicating a placeholder for adding content",
+    "marking an empty card or tile that can accept content",
+    "representing the action to insert a new component in a page builder",
+    "showing where to add an image in an upload or gallery flow",
+    "indicating an editable region to add or extend a selection"
   ],
   "tags": [
     "selection",
