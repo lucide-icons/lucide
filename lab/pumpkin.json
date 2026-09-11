@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "halloween",
+    "horror",
+    "creepy",
+    "spooky",
+    "frightening",
+    "fruit",
+    "spice"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

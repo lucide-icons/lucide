@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Smile from '../src/icons/smile.svelte';
+  import FaceSlightlySmiling from '../src/icons/face-slightly-smiling.svelte';
   import type { IconProps } from '../src/types.js';
 
   const props: IconProps = $props();
 </script>
 
-<Smile {...props}>
+<FaceSlightlySmiling {...props}>
   <title>Air conditioning</title>
-</Smile>
+</FaceSlightlySmiling>

@@ -6,13 +6,13 @@ declare module '*.vue' {
 }
 
 declare module '*.data.ts' {
-  const data: any;
+  const data: unknown;
 
   export { data };
 }
 
 declare module '*.data' {
-  const data: any;
+  const data: unknown;
 
   export { data };
 }
@@ -75,7 +75,7 @@ declare global {
           doNotShowAfterSubmit?: boolean;
           customFormUrl?: string; // when you want to load the form via it's custom domain URL
           hiddenFields?: {
-            [key: string]: any;
+            [key: string]: unknown;
           };
           onOpen?: () => void;
           onClose?: () => void;

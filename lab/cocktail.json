@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "danielbayley"
+  ],
+  "tags": [
+    "martini",
+    "alcohol",
+    "spirits",
+    "drink",
+    "glass",
+    "straw",
+    "citrus",
+    "orange",
+    "lemon",
+    "lime",
+    "bar",
+    "lounge",
+    "party",
+    "nightclub",
+    "nightlife"
+  ],
+  "categories": [
+    "food-beverage",
+    "social"
+  ]
+}

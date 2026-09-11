@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "terrace",
+    "balcony",
+    "patio",
+    "umbrella",
+    "shade",
+    "seating",
+    "garden",
+    "outdoor",
+    "al fresco",
+    "dining"
+  ],
+  "categories": [
+    "furniture",
+    "home",
+    "travel"
+  ]
+}

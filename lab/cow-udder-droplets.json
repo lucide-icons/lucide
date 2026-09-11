@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "milk",
+    "dairy",
+    "drink",
+    "diet",
+    "unpasturised",
+    "lactose",
+    "livestock",
+    "cattle",
+    "calf",
+    "bovine",
+    "farmyard",
+    "hoofs",
+    "hooved",
+    "mammal",
+    "🐄",
+    "🐮"
+  ],
+  "categories": [
+    "animals",
+    "food-beverage"
+  ]
+}

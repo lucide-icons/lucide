@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Guido3000"
+  ],
+  "use-cases": [
+    "currency selector buttons",
+    "pricing badges"
+  ],
+  "tags": [
+    "symbol",
+    "economy",
+    "banking",
+    "europe",
+    "€",
+    "euro",
+    "currency",
+    "money",
+    "payment",
+    "coin",
+    "finance",
+    "financial",
+    "exchange"
+  ],
+  "categories": [
+    "shopping",
+    "finance"
+  ]
+}

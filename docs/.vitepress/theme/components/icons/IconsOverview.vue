@@ -52,8 +52,12 @@ const props = defineProps<{
 const activeIconName = ref(null);
 const selectedSort = ref(SORTING[0])
 
-const { execute: fetchTags, data: tags } = useFetchTags();
-const { execute: fetchCategories, data: categories } = useFetchCategories();
+const { execute: fetchTags, data: tags, isFetching: isFetchingTags } = useFetchTags();
+const {
+  execute: fetchCategories,
+  data: categories,
+  isFetching: isFetchingCategories,
+} = useFetchCategories();
 
 const overviewEl = ref<HTMLElement | null>(null);
 const { width: containerWidth } = useElementSize(overviewEl);
@@ -84,9 +88,13 @@ const mappedIcons = computed(() => {
     return sortedIcons.value;
   }
 
+  if (categories.value == null) {
+    return sortedIcons.value;
+  }
+
   return sortedIcons.value.map((icon) => {
     const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+    const iconCategories = categories.value[icon.name] ?? [];
 
     return {
       ...icon,
@@ -110,6 +118,9 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
 ]);
 
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
+const isSearchMetadataLoading = computed(
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
+);
 
 const chunkedIcons = computed(() => {
   return chunkArray(searchResults.value, columnSize.value);
@@ -135,14 +146,20 @@ function setActiveIconName(name: string) {
   activeIconName.value = name;
 }
 
-function onFocusSearchInput() {
-  if (tags.value == null) {
-    fetchTags();
+function loadSearchMetadata() {
+  if (tags.value == null && !isFetchingTags.value) {
+    void fetchTags();
   }
-  if (categories.value == null) {
-    fetchCategories();
+  if (categories.value == null && !isFetchingCategories.value) {
+    void fetchCategories();
   }
 }
+
+watch(searchQuery, (searchString) => {
+  if (searchString !== '') {
+    loadSearchMetadata();
+  }
+});
 
 const NoResults = defineAsyncComponent(() => import('./NoResults.vue'));
 
@@ -179,7 +196,7 @@ function handleCloseDrawer() {
         ref="searchInput"
         :shortcut="kbdSearchShortcut"
         class="input-wrapper"
-        @focus="onFocusSearchInput"
+        @focus="loadSearchMetadata"
       />
 
       <Select
@@ -197,7 +214,7 @@ function handleCloseDrawer() {
       </Select>
     </StickyBar>
     <NoResults
-      v-if="searchPlaceholder.isNoResults"
+      v-if="searchPlaceholder.isNoResults && !isSearchMetadataLoading"
       :searchQuery="searchPlaceholder.query"
       :isBrandSearch="searchPlaceholder.isBrand"
       @clear="searchQuery = ''"
