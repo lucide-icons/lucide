@@ -64,6 +64,7 @@ jobs:
       contents: write # Required to create the release and tag
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
+      RELEASE_URL: ${{ steps.create-release.outputs.url }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
@@ -102,6 +103,7 @@ jobs:
           echo '${{ steps.change-log.outputs.CHANGE_LOG }}'
 
       - name: Create Release
+        id: create-release
         uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
         with:
           tag_name: ${{ steps.new-version.outputs.NEW_VERSION }}
@@ -129,3 +131,27 @@ jobs:
     with:
       version: ${{ inputs.version }}
       tag: ${{ inputs.tag }}
+
+  post-release:
+    name: Trigger post-release automation
+    if: github.repository == 'lucide-icons/lucide'
+    needs: [create-release, start-release]
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Dispatch post_release event
+        env:
+          GH_TOKEN: ${{ secrets.POST_RELEASE_TOKEN }}
+          RELEASE_TAG: ${{ needs.create-release.outputs.VERSION }}
+          RELEASE_URL: ${{ needs.create-release.outputs.RELEASE_URL }}
+        run: |
+          if [ -z "$RELEASE_URL" ]; then
+            RELEASE_URL="https://github.com/lucide-icons/lucide/releases/tag/$RELEASE_TAG"
+          fi
+
+          gh api \
+            --method POST \
+            repos/lucide-icons/post-release/dispatches \
+            --field event_type=post_release \
+            --field "client_payload[release_tag]=$RELEASE_TAG" \
+            --field "client_payload[release_url]=$RELEASE_URL"
