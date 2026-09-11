@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jaynewey"
+  ],
+  "use-cases": [
+    "representing canned drinks like soda or beer",
+    "representing canned foods like soup or legumes",
+    "representing litter/waste"
+  ],
+  "tags": [
+    "beverage",
+    "drink",
+    "food",
+    "soda",
+    "tin",
+    "beer",
+    "alcohol",
+    "waste"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

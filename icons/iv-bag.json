@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing intravenous therapy in healthcare interfaces",
+    "Showing infusion treatments or hydration services",
+    "Marking medication routes of administration",
+    "Identifying infusion clinics or patient education materials"
+  ],
+  "tags": [
+    "intravenous",
+    "therapy",
+    "infusion",
+    "medicine",
+    "medication",
+    "treatment",
+    "healthcare",
+    "hydration",
+    "vitamin",
+    "supplement",
+    "blood",
+    "donation",
+    "chemotherapy",
+    "clinic",
+    "feeding tube",
+    "administration",
+    "health",
+    "regeneration"
+  ],
+  "categories": [
+    "medical"
+  ]
+}

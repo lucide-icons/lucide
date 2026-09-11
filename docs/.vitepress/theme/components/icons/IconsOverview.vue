@@ -88,9 +88,13 @@ const mappedIcons = computed(() => {
     return sortedIcons.value;
   }
 
+  if (categories.value == null) {
+    return sortedIcons.value;
+  }
+
   return sortedIcons.value.map((icon) => {
     const iconTags = tags.value[icon.name];
-    const iconCategories = categories.value?.[icon.name] ?? [];
+    const iconCategories = categories.value[icon.name] ?? [];
 
     return {
       ...icon,
@@ -115,7 +119,7 @@ const searchResults = useSearch(searchQueryDebounced, mappedIcons, [
 
 const searchPlaceholder = useSearchPlaceholder(searchQuery, searchResults);
 const isSearchMetadataLoading = computed(
-  () => searchQuery.value.length > 0 && (tags.value == null || categories.value == null),
+  () => searchQuery.value.length > 0 && !isFetchingTags && !isFetchingCategories,
 );
 
 const chunkedIcons = computed(() => {
