@@ -3,6 +3,12 @@
   "contributors": [
     "rrod497"
   ],
+  "use-cases": [
+    "Labeling alto clef notation in sheet music editors",
+    "Representing viola parts in music composition or practice apps",
+    "Indicating C clef selection in notation software",
+    "Supporting clef choices in MIDI editors, instrument emulators, or music education tools"
+  ],
   "tags": [
     "do",
     "c",
