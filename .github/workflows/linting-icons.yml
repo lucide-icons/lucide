@@ -8,6 +8,7 @@ on:
     paths:
       - 'icons/*'
       - 'lab/*'
+      - 'taxonomy/**'
 
 permissions: {}
 

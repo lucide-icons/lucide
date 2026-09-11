@@ -2,6 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { readMetadata } from './readMetadata.ts';
 import { resolveMetadataExtends } from './resolveMetadataExtends.ts';
+import { readTagGroups } from './readTagGroups.ts';
 import { type IconMetadata } from '../../build-icons/types.ts';
 
 /**
@@ -25,9 +26,11 @@ export const readAllMetadata = async (directory: string): Promise<Record<string,
 
   const metadataMap = Object.fromEntries(metadata);
 
-  // Resolve extends references
+  // Resolve extends and tag group references
+  const tagGroups = await readTagGroups();
+
   try {
-    return await resolveMetadataExtends(metadataMap);
+    return await resolveMetadataExtends(metadataMap, { tagGroups });
   } catch (error) {
     throw new Error(
       `Failed to resolve metadata extends: ${error instanceof Error ? error.message : String(error)}`,

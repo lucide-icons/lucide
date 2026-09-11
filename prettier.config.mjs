@@ -7,7 +7,12 @@ const config = {
   singleAttributePerLine: true,
   overrides: [
     {
-      files: ['icons/*.json', 'taxonomy/categories/*.json', 'lab/*.json'],
+      files: [
+        'icons/*.json',
+        'taxonomy/categories/*.json',
+        'taxonomy/tag-groups/*.json',
+        'lab/*.json',
+      ],
       options: {
         printWidth: 0,
       },

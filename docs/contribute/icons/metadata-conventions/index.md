@@ -135,6 +135,36 @@ Write metadata for the specific variant:
 
 When a request covers several icons, assign each use case only to the icon it describes. Do not copy metadata to icons it does not describe.
 
+## Reusing metadata: `$extends:` and `$group:`
+
+Variant icons do not have to repeat the metadata they share with other icons. Two inline markers are resolved at build time and replaced, in place, by the values they stand for.
+
+`$extends:<icon-name>` means **is a**. It pulls in the resolved `tags`, `categories` or `contributors` of the icon the variant is built on.
+
+`$group:<group-name>` means **does this**. It pulls in the tags of `taxonomy/tag-groups/<group-name>.json`, a small reusable set of tags for one meaning. It is only allowed in `tags`.
+
+`file-minus` is a file, and its `-minus` modifier means "remove":
+
+```json
+{
+  "tags": ["$extends:file", "$group:remove", "erase"],
+  "categories": ["$extends:file"]
+}
+```
+
+which resolves to:
+
+```json
+{
+  "tags": ["document", "remove", "delete", "erase"],
+  "categories": ["files"]
+}
+```
+
+Use `$extends:` only for the **base icon** — the thing the icon is. Do not extend a modifier icon such as `plus`, `minus`, `x` or `check`: their tags describe that glyph on its own (`minus` carries `divider`, `hr`, `markdown`…), which is wrong on a file or an alarm clock. Reach for a tag group instead, named after the meaning (`remove`) rather than the glyph (`minus`).
+
+Order the entries base icon first, then groups, then the icon's own tags, and never repeat a value a marker already provides — `pnpm checkIcons` fails on that.
+
 ## Aliases
 
 Some icons can include an optional `aliases` field for alternate names.
@@ -147,6 +177,12 @@ Before submitting metadata changes, validate the icon JSON files:
 
 ```sh
 pnpm run lint:json:icons
+```
+
+`$extends:` and `$group:` markers are checked separately, together with the tag groups themselves:
+
+```sh
+pnpm checkIcons
 ```
 
 You can also format changed files with Prettier:
@@ -166,4 +202,5 @@ Before opening a pull request, confirm that:
 - Tags are lowercase and useful for search.
 - Categories are allowed by `taxonomy/schemas/icon.schema.json`.
 - Metadata is specific to the icon and its variants.
-- `pnpm run lint:json:icons` passes.
+- Reused metadata uses `$extends:` for the base icon and `$group:` for the modifier's meaning, with no repeated values.
+- `pnpm run lint:json:icons` and `pnpm checkIcons` pass.

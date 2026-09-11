@@ -101,7 +101,7 @@
           },
           {
             "type": "string",
-            "pattern": "^\\$extends:"
+            "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
           }
         ]
       },
@@ -110,7 +110,13 @@
     "contributors": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "if": {
+          "pattern": "^\\$[a-zA-Z]"
+        },
+        "then": {
+          "pattern": "^\\$extends:[a-z0-9]+(-[a-z0-9]+)*$"
+        }
       },
       "minItems": 1,
       "uniqueItems": true
@@ -118,7 +124,13 @@
     "tags": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "if": {
+          "pattern": "^\\$[a-zA-Z]"
+        },
+        "then": {
+          "pattern": "^\\$(extends|group):[a-z0-9]+(-[a-z0-9]+)*$"
+        }
       },
       "minItems": 1,
       "uniqueItems": true

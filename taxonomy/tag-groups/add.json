@@ -1,0 +1,9 @@
+{
+  "$schema": "../schemas/tag-group.schema.json",
+  "description": "Action: adding or creating something",
+  "tags": [
+    "add",
+    "new",
+    "create"
+  ]
+}

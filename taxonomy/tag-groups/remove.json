@@ -1,0 +1,8 @@
+{
+  "$schema": "../schemas/tag-group.schema.json",
+  "description": "Action: removing or deleting something",
+  "tags": [
+    "remove",
+    "delete"
+  ]
+}

@@ -7,12 +7,11 @@
   ],
   "use-cases": [],
   "tags": [
-    "delete",
-    "remove",
-    "erase",
-    "document"
+    "$extends:file",
+    "$group:remove",
+    "erase"
   ],
   "categories": [
-    "files"
+    "$extends:file"
   ]
 }

@@ -9,6 +9,7 @@ export * from './src/writeFileIfNotExists.ts';
 export * from './src/readAllMetadata.ts';
 export * from './src/getAllIconAliases.ts';
 export * from './src/readMetadata.ts';
+export * from './src/readTagGroups.ts';
 export * from './src/readSvgDirectory.ts';
 export * from './src/readSvg.ts';
 export * from './src/writeSvgFile.ts';
