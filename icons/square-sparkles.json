@@ -6,7 +6,10 @@
     "ericfennis",
     "nananecy"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Indicating AI-assisted image generation features",
+    "Representing generative AI image creation tools"
+  ],
   "tags": [
     "picture",
     "photo",
