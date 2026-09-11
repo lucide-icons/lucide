@@ -864,6 +864,9 @@ importers:
       rollup:
         specifier: ^4.63.1
         version: 4.63.1
+      rollup-plugin-dts:
+        specifier: ^6.5.1
+        version: 6.5.1(rollup@4.63.1)(typescript@6.0.3)
       solid-js:
         specifier: ^1.9.15
         version: 1.9.15
