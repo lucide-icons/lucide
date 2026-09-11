@@ -910,6 +910,63 @@ importers:
         specifier: ^7.3.6
         version: 7.3.6(@types/node@26.4.1)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(lightningcss@1.33.0)(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0)
 
+  packages/solid:
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.29.7
+        version: 7.29.7(supports-color@10.2.2)
+      '@babel/preset-env':
+        specifier: ^7.29.7
+        version: 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/preset-typescript':
+        specifier: ^7.29.7
+        version: 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
+      '@lucide/build-icons':
+        specifier: workspace:*
+        version: link:../../tools/build-icons
+      '@lucide/rollup-plugins':
+        specifier: workspace:*
+        version: link:../../tools/rollup-plugins
+      '@lucide/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@rollup/plugin-babel':
+        specifier: ^6.1.0
+        version: 6.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@types/babel__core@7.20.5)(rollup@4.63.1)(supports-color@10.2.2)
+      '@solidjs/testing-library':
+        specifier: next
+        version: 1.0.0-beta.3(@solidjs/web@2.0.0-rc.7(solid-js@2.0.0-rc.7))(solid-js@2.0.0-rc.7)
+      '@solidjs/vite-plugin':
+        specifier: next
+        version: 3.0.0-next.35(@solidjs/web@2.0.0-rc.7(solid-js@2.0.0-rc.7))(@testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.10))(solid-js@2.0.0-rc.7)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.4.1)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(lightningcss@1.33.0)(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+      '@solidjs/web':
+        specifier: next
+        version: 2.0.0-rc.7(solid-js@2.0.0-rc.7)
+      '@testing-library/jest-dom':
+        specifier: ^7.0.1
+        version: 7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.10)
+      babel-preset-solid:
+        specifier: next
+        version: 2.0.0-rc.2(@babel/core@7.29.7(supports-color@10.2.2))(solid-js@2.0.0-rc.7)
+      esbuild:
+        specifier: ^0.28.2
+        version: 0.28.2
+      jest-serializer-html:
+        specifier: ^7.1.0
+        version: 7.1.0
+      rollup:
+        specifier: ^4.63.1
+        version: 4.63.1
+      solid-js:
+        specifier: next
+        version: 2.0.0-rc.7
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^7.3.6
+        version: 7.3.6(@types/node@26.4.1)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(lightningcss@1.33.0)(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0)
+
   packages/svelte:
     devDependencies:
       '@lucide/build-icons':
@@ -2658,6 +2715,11 @@ packages:
       search-insights:
         optional: true
 
+  '@dom-expressions/babel-plugin-jsx@0.50.0-next.44':
+    resolution: {integrity: sha512-f1kx6TeMQgaLVkGfuxMn0BkH0+HvsycFf1qPHbYoBqmBQd6Ag/EXOxkSpfcaC+UOBMSaF4BKXegGDchRNTWKrg==}
+    peerDependencies:
+      '@babel/core': ^7.20.12
+
   '@emnapi/core@1.10.0':
     resolution: {integrity: sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw==}
 
@@ -2666,6 +2728,9 @@ packages:
 
   '@emnapi/core@1.11.2':
     resolution: {integrity: sha512-TC8MkTuZUtcTSiFeuC0ksCh9QIJ5+F21MvZ4Wn4ORfYaFJ/0dsiudv5tVkejgwZlwQ39jL9WWDe2lz8x0WglOA==}
+
+  '@emnapi/core@1.11.3':
+    resolution: {integrity: sha512-zLpS5asjEb7lq8jYLq37N6XKaE41DIexlY1rF/z4/tIl3wo13Sqm28fRyfIsKZD+NZ8mM5RoKkpW/rBcuoSZSg==}
 
   '@emnapi/runtime@1.10.0':
     resolution: {integrity: sha512-ewvYlk86xUoGI0zQRNq/mC+16R1QeDlKQy21Ki3oSYXNgLb45GV1P6A0M+/s6nyCuNDqe5VpaY84BzXGwVbwFA==}
@@ -2684,6 +2749,9 @@ packages:
 
   '@emnapi/wasi-threads@1.2.2':
     resolution: {integrity: sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA==}
+
+  '@emnapi/wasi-threads@1.2.3':
+    resolution: {integrity: sha512-ELEBe8PsLvvJ6QMr0zLt8ffvOHW/dc1m3CEzNMg7aJUv3bMaoDtw2TXyDAwkYBuroxxuHEwhRTLJSe5sya547g==}
 
   '@esbuild/aix-ppc64@0.28.2':
     resolution: {integrity: sha512-XExcO+dvLKvVtNTibSTBej1NCAbaGhWn9Ww1ZPx80qsahhPFe/8jgWP0IchNe0F3HwkU7n8ejhH8bjonqht8mQ==}
@@ -4928,10 +4996,56 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
+  '@solidjs/babel-plugin@2.0.0-rc.7':
+    resolution: {integrity: sha512-cKcyVbOh8WC7ywV3txxfNrFRtTa7t8O3tXDXRf3RE3DKyZr+hZmbEOq6q/T6smaJXS3ekzuUDVlQrG1+HErnhg==}
+    peerDependencies:
+      '@babel/core': ^7.20.12
+      '@tsrx/core': 0.1.63
+    peerDependenciesMeta:
+      '@tsrx/core':
+        optional: true
+
+  '@solidjs/compiler-darwin-arm64@2.0.0-rc.7':
+    resolution: {integrity: sha512-xJ7FoPrFV94LMuEPNJ2nIGFlqhVGR+s5GAr0nzMRMdWAimriF0sZ8clxlIqPS3v2oaNE9JW7EDCdJysD3JezWg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@solidjs/compiler-darwin-x64@2.0.0-rc.7':
+    resolution: {integrity: sha512-rcu8wcxeO0QWXu69yFaSf3ZR1KlsPDCzmRmdA8fX/cte96Ox0r6GfMXE+5CH/gg9dSaXY3qwwmpSG9AEvLxZQg==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@solidjs/compiler-linux-arm64-gnu@2.0.0-rc.7':
+    resolution: {integrity: sha512-EhiLKgLcFkHWYOx3Pds3px0onhTbzpDfenhsuDy1R7ViZYALXXBlZ+EUSE85rKwyCM0sgcR/kVMswL2V8sJXng==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@solidjs/compiler-linux-x64-gnu@2.0.0-rc.7':
+    resolution: {integrity: sha512-ymN3hIqzH3msWt3lcU3vqILnzRlB1rNbv1BlUqXkwVZByjFw/bJQ+BgncIq0WqNH6ciQ5nhZ1E7ECgGw/SNwEA==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@solidjs/compiler-wasm32-wasi@2.0.0-rc.7':
+    resolution: {integrity: sha512-k4vN+EHRtoIxj0D8d2VYHPEnWIok6kokbZskpn1pXrOoXBkj0OmqzzyJVBvSRYx6cWDWEjCKSWGuufRRZtgmjA==}
+    engines: {node: '>=14.0.0'}
+
+  '@solidjs/compiler-win32-x64-msvc@2.0.0-rc.7':
+    resolution: {integrity: sha512-pZtrkWmiiZ/NRwyMASAitwAa4EO2jlt4z8Z5K9NoljnBreWrCsz4HmIKSIeZ+17++WwAyeZo2byon0AEv6FzRQ==}
+    cpu: [x64]
+    os: [win32]
+
+  '@solidjs/compiler@2.0.0-rc.7':
+    resolution: {integrity: sha512-jhFq/QcoUM34760NuQiSvMDInZ+3AEHwA354VELRDpAJwuiMpPbEvkSH6qqfgneDzVwCiCtLbjScqUEymU7R1A==}
+
   '@solidjs/router@0.11.5':
     resolution: {integrity: sha512-nclebUUufZT37rB5l0LbJn92vZwJOhYVltfjfLFI3yAcMlwiil5JOy6X2FEgekWsoX29No/GCBTkYfrSZCRfaw==}
     peerDependencies:
       solid-js: ^1.8.6
+
+  '@solidjs/signals@2.0.0-rc.7':
+    resolution: {integrity: sha512-JY0OJ5nGeqxGKOAqCtuoHkFBkaWQYxmf+yBQE8vw/o9C7yUF+Kan9PwcrL0ZHR6+MgyixBUtTfBigwou5hwW5w==}
 
   '@solidjs/testing-library@0.8.10':
     resolution: {integrity: sha512-qdeuIerwyq7oQTIrrKvV0aL9aFeuwTd86VYD3afdq5HYEwoox1OBTJy4y8A3TFZr8oAR0nujYgCzY/8wgHGfeQ==}
@@ -4942,6 +5056,33 @@ packages:
     peerDependenciesMeta:
       '@solidjs/router':
         optional: true
+
+  '@solidjs/testing-library@1.0.0-beta.3':
+    resolution: {integrity: sha512-yJtAa6H76xr5lSkT7LVmaaTFCZZzxcwejzQ4UBV/+koZFByVZ5J0XMDVHZ539PGso+fyncI5iRxWyDWFqhtcLg==}
+    engines: {node: '>= 14'}
+    peerDependencies:
+      '@solidjs/web': '>=2.0.0-0'
+      solid-js: '>=2.0.0-0'
+
+  '@solidjs/vite-plugin@3.0.0-next.35':
+    resolution: {integrity: sha512-8Mlftd+WfZkwOoCZRyMxA8innT8b2D/qawTu+28RW/Hj4eSmStSLx4dHjYeH9MxyOwo7DQStAyHAADk5LFQVRw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@solidjs/start-devtools': ^1.0.0-next.2
+      '@solidjs/web': ^2.0.0-rc.0
+      '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
+      solid-js: ^2.0.0-rc.0
+      vite: ^7.3.6
+    peerDependenciesMeta:
+      '@solidjs/start-devtools':
+        optional: true
+      '@testing-library/jest-dom':
+        optional: true
+
+  '@solidjs/web@2.0.0-rc.7':
+    resolution: {integrity: sha512-qsKKWR4PzzPw8ZGFR0Oc2776G1ONMMBKPJWO3Opf3cWHoczgfhknW6NED0WtdCuR6T8usFTWCZgMM5Cc0h14Dg==}
+    peerDependencies:
+      solid-js: ^2.0.0-rc.7
 
   '@speed-highlight/core@1.2.24':
     resolution: {integrity: sha512-qeW2e1l78afw8VhRPfPQ1Gjj+KU5XFQ/OFV5ti6eTa9bruO7mJyZtA4vw0ofqmA3tKCkROE9xLk3VZoeRc98nw==}
@@ -6259,6 +6400,15 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0
       solid-js: ^1.9.15
+    peerDependenciesMeta:
+      solid-js:
+        optional: true
+
+  babel-preset-solid@2.0.0-rc.2:
+    resolution: {integrity: sha512-Venq++Aa6+RzGIAyS5vSo3kX1fE8zRreEPCh1eTh5DTjlTft9qZGIG14RSZDv/sjVxT8x5Gs9+21PzxuLe8U+g==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      solid-js: ^2.0.0-rc.2
     peerDependenciesMeta:
       solid-js:
         optional: true
@@ -10556,6 +10706,9 @@ packages:
   solid-js@1.9.15:
     resolution: {integrity: sha512-EeiY2xfpZJqPLjXspVEKjAII4yv8NyG//NxZ3IpOFHdUNnnTyL0uJOeS9LWGvA7cFCz5y94cjFwYlmw5Luncsg==}
 
+  solid-js@2.0.0-rc.7:
+    resolution: {integrity: sha512-3APJcwGbJ3YzXzPXwl0R3cAiogXLacXdXSFasdE2uw1Gzj5xqDW/0bJu4fs75KK5WzXg+JfpkcsxBjTxkbnLQQ==}
+
   solid-refresh@0.6.3:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
     peerDependencies:
@@ -11414,6 +11567,9 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  validate-html-nesting@1.2.4:
+    resolution: {integrity: sha512-doQi7e8EJ2OWneSG1aZpJluS6A49aZM0+EICXWKm1i6WvqTLmq0tpUcImc4KTWG50mORO0C4YDBtOCSYvElftw==}
 
   validate-npm-package-name@8.0.0:
     resolution: {integrity: sha512-SCv6OOV6Xj2/3cXy3dGmADluJTNcL3o7hZAglNPTe+WYuEuvxgJzxPrSDLZhF+CwyQOubqgecjMmTJGMVLWjYQ==}
@@ -13824,6 +13980,16 @@ snapshots:
     transitivePeerDependencies:
       - '@algolia/client-search'
 
+  '@dom-expressions/babel-plugin-jsx@0.50.0-next.44(@babel/core@7.29.7(supports-color@10.2.2))':
+    dependencies:
+      '@babel/core': 7.29.7(supports-color@10.2.2)
+      '@babel/helper-module-imports': 7.18.6
+      '@babel/plugin-syntax-jsx': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))
+      '@babel/types': 7.29.8
+      html-entities: 2.3.3
+      parse5: 7.3.0
+      validate-html-nesting: 1.2.4
+
   '@emnapi/core@1.10.0':
     dependencies:
       '@emnapi/wasi-threads': 1.2.1
@@ -13839,6 +14005,12 @@ snapshots:
   '@emnapi/core@1.11.2':
     dependencies:
       '@emnapi/wasi-threads': 1.2.2
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/core@1.11.3':
+    dependencies:
+      '@emnapi/wasi-threads': 1.2.3
       tslib: 2.8.1
     optional: true
 
@@ -13868,6 +14040,11 @@ snapshots:
     optional: true
 
   '@emnapi/wasi-threads@1.2.2':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/wasi-threads@1.2.3':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -14916,6 +15093,13 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
+  '@napi-rs/wasm-runtime@1.2.3(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)':
+    dependencies:
+      '@emnapi/core': 1.11.3
+      '@emnapi/runtime': 1.11.3
+      '@tybys/wasm-util': 0.10.3
+    optional: true
+
   '@next/env@16.3.4': {}
 
   '@next/swc-darwin-arm64@16.3.4':
@@ -15876,10 +16060,53 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
+  '@solidjs/babel-plugin@2.0.0-rc.7(@babel/core@7.29.7(supports-color@10.2.2))':
+    dependencies:
+      '@babel/core': 7.29.7(supports-color@10.2.2)
+      '@babel/helper-module-imports': 7.18.6
+      '@babel/plugin-syntax-jsx': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))
+      '@babel/types': 7.29.8
+      html-entities: 2.3.3
+      parse5: 7.3.0
+      validate-html-nesting: 1.2.4
+
+  '@solidjs/compiler-darwin-arm64@2.0.0-rc.7':
+    optional: true
+
+  '@solidjs/compiler-darwin-x64@2.0.0-rc.7':
+    optional: true
+
+  '@solidjs/compiler-linux-arm64-gnu@2.0.0-rc.7':
+    optional: true
+
+  '@solidjs/compiler-linux-x64-gnu@2.0.0-rc.7':
+    optional: true
+
+  '@solidjs/compiler-wasm32-wasi@2.0.0-rc.7':
+    dependencies:
+      '@emnapi/core': 1.11.3
+      '@emnapi/runtime': 1.11.3
+      '@napi-rs/wasm-runtime': 1.2.3(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)
+    optional: true
+
+  '@solidjs/compiler-win32-x64-msvc@2.0.0-rc.7':
+    optional: true
+
+  '@solidjs/compiler@2.0.0-rc.7':
+    optionalDependencies:
+      '@solidjs/compiler-darwin-arm64': 2.0.0-rc.7
+      '@solidjs/compiler-darwin-x64': 2.0.0-rc.7
+      '@solidjs/compiler-linux-arm64-gnu': 2.0.0-rc.7
+      '@solidjs/compiler-linux-x64-gnu': 2.0.0-rc.7
+      '@solidjs/compiler-wasm32-wasi': 2.0.0-rc.7
+      '@solidjs/compiler-win32-x64-msvc': 2.0.0-rc.7
+
   '@solidjs/router@0.11.5(solid-js@1.9.15)':
     dependencies:
       solid-js: 1.9.15
     optional: true
+
+  '@solidjs/signals@2.0.0-rc.7': {}
 
   '@solidjs/testing-library@0.8.10(@solidjs/router@0.11.5(solid-js@1.9.15))(solid-js@1.9.15)':
     dependencies:
@@ -15887,6 +16114,36 @@ snapshots:
       solid-js: 1.9.15
     optionalDependencies:
       '@solidjs/router': 0.11.5(solid-js@1.9.15)
+
+  '@solidjs/testing-library@1.0.0-beta.3(@solidjs/web@2.0.0-rc.7(solid-js@2.0.0-rc.7))(solid-js@2.0.0-rc.7)':
+    dependencies:
+      '@solidjs/web': 2.0.0-rc.7(solid-js@2.0.0-rc.7)
+      '@testing-library/dom': 10.4.1
+      solid-js: 2.0.0-rc.7
+
+  '@solidjs/vite-plugin@3.0.0-next.35(@solidjs/web@2.0.0-rc.7(solid-js@2.0.0-rc.7))(@testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.10))(solid-js@2.0.0-rc.7)(supports-color@10.2.2)(vite@7.3.6(@types/node@26.4.1)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(lightningcss@1.33.0)(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))':
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@babel/core': 7.29.7(supports-color@10.2.2)
+      '@solidjs/babel-plugin': 2.0.0-rc.7(@babel/core@7.29.7(supports-color@10.2.2))
+      '@solidjs/compiler': 2.0.0-rc.7
+      '@solidjs/web': 2.0.0-rc.7(solid-js@2.0.0-rc.7)
+      '@types/babel__core': 7.20.5
+      merge-anything: 5.1.7
+      solid-js: 2.0.0-rc.7
+      vite: 7.3.6(@types/node@26.4.1)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(lightningcss@1.33.0)(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0)
+      vitefu: 1.1.3(vite@7.3.6(@types/node@26.4.1)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(lightningcss@1.33.0)(sass@1.103.1)(stylus@0.56.0(supports-color@10.2.2))(terser@5.51.2)(yaml@2.9.0))
+    optionalDependencies:
+      '@testing-library/jest-dom': 7.0.1(@testing-library/dom@10.4.1)(vitest@4.1.10)
+    transitivePeerDependencies:
+      - '@tsrx/core'
+      - supports-color
+
+  '@solidjs/web@2.0.0-rc.7(solid-js@2.0.0-rc.7)':
+    dependencies:
+      seroval: 1.5.6
+      seroval-plugins: 1.5.6(seroval@1.5.6)
+      solid-js: 2.0.0-rc.7
 
   '@speed-highlight/core@1.2.24': {}
 
@@ -17530,6 +17787,13 @@ snapshots:
       babel-plugin-jsx-dom-expressions: 0.40.10(@babel/core@7.29.7(supports-color@10.2.2))
     optionalDependencies:
       solid-js: 1.9.15
+
+  babel-preset-solid@2.0.0-rc.2(@babel/core@7.29.7(supports-color@10.2.2))(solid-js@2.0.0-rc.7):
+    dependencies:
+      '@babel/core': 7.29.7(supports-color@10.2.2)
+      '@dom-expressions/babel-plugin-jsx': 0.50.0-next.44(@babel/core@7.29.7(supports-color@10.2.2))
+    optionalDependencies:
+      solid-js: 2.0.0-rc.7
 
   bail@2.0.2: {}
 
@@ -22731,6 +22995,13 @@ snapshots:
       seroval: 1.5.6
       seroval-plugins: 1.5.6(seroval@1.5.6)
 
+  solid-js@2.0.0-rc.7:
+    dependencies:
+      '@solidjs/signals': 2.0.0-rc.7
+      csstype: 3.2.3
+      seroval: 1.5.6
+      seroval-plugins: 1.5.6(seroval@1.5.6)
+
   solid-refresh@0.6.3(solid-js@1.9.15)(supports-color@10.2.2):
     dependencies:
       '@babel/generator': 7.29.8
@@ -23642,6 +23913,8 @@ snapshots:
   valibot@1.4.2(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
+
+  validate-html-nesting@1.2.4: {}
 
   validate-npm-package-name@8.0.0: {}
 
