@@ -26,7 +26,7 @@ In addition to design, code is also important. Assets like icons can significant
 
 Icons are pictures that show what something means without using words. They can be very helpful because they can quickly give information.
 
-However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](./accessibility.md).
+However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](../how-to/accessibility.md).
 
 ## Official Packages
 

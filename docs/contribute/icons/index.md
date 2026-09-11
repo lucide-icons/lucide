@@ -17,7 +17,7 @@ This guide explains how to design and prepare icons for Lucide.
 ## What this guide covers
 
 <OverviewLinkGrid>
-  <OverviewLink v-for="item in resourcesSidebar[2].items.slice(1, -1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
+  <OverviewLink v-for="item in resourcesSidebar[3].items.slice(1, -1)" :key="item.link" :href="item.link" :title="item.text" :desc="item.desc"/>
 </OverviewLinkGrid>
 
 ## Use your preferred design tool

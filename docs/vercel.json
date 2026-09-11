@@ -43,8 +43,13 @@
       "permanent": true
     },
     {
+      "source": "/guide/accessibility",
+      "destination": "/how-to/accessibility",
+      "permanent": true
+    },
+    {
       "source": "/guide/advanced/accessibility",
-      "destination": "/guide/accessibility",
+      "destination": "/how-to/accessibility",
       "permanent": true
     },
     {
