@@ -1,0 +1,41 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "gkkconan"
+  ],
+  "use-cases": [
+    "Updating or refreshing content, such as reloading data or syncing changes.",
+    "Renewing plans, subscriptions, or other recurring services."
+  ],
+  "tags": [
+    "modify",
+    "edit",
+    "refresh",
+    "sync",
+    "renew",
+    "revision",
+    "settings",
+    "adjust",
+    "upgrade",
+    "time",
+    "timeline",
+    "version",
+    "time machine",
+    "backup",
+    "rotate",
+    "cw",
+    "arrow",
+    "reload",
+    "rerun",
+    "synchronise",
+    "synchronize",
+    "circular",
+    "cycle",
+    "update",
+    "updates"
+  ],
+  "categories": [
+    "arrows",
+    "time"
+  ]
+}
