@@ -3,6 +3,12 @@
   "contributors": [
     "rrod497"
   ],
+  "use-cases": [
+    "Representing music, songs, or audio content with a widely recognized symbol",
+    "Labeling sheet music, notation tools, or music education resources",
+    "Indicating melody, vocals, or higher-pitched instrument parts",
+    "Representing music apps, playlists, concerts, or performance features"
+  ],
   "tags": [
     "sol",
     "g",
