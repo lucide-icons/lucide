@@ -3,6 +3,7 @@
   "contributors": [
     "DefaultLP"
   ],
+  "use-cases": [],
   "tags": [
     "closed captions",
     "subtitles",
@@ -19,8 +20,7 @@
     {
       "name": "subtitles",
       "deprecationReason": "alias.name",
-      "deprecated": true,
-      "toBeRemovedInVersion": "v1.0"
+      "deprecated": true
     }
   ]
 }

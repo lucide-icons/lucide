@@ -50,7 +50,7 @@ onMounted(() => {
         absoluteStrokeWidth
       />
     </IconButton>
-    <VPDocAsideCarbonAds :carbon-ads="theme.carbonAds" />
+    <VPDocAsideCarbonAds :carbon-ads="theme.carbonAds" overlay />
   </div>
 </template>
 

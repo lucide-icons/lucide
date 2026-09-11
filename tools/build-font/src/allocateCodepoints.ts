@@ -27,8 +27,8 @@ export async function allocateCodePoints({
   const latestCodePoints = await getLatestCodePoints();
 
   let maxCodePoint = Math.max(...Object.values(latestCodePoints));
-  let codePointMap = new Map<number, string>();
-  let newCodePoints: CodePoints = {};
+  const codePointMap = new Map<number, string>();
+  const newCodePoints: CodePoints = {};
 
   for (const [iconName, aliases] of iconsWithAliases) {
     let codePoint: number | null = null;

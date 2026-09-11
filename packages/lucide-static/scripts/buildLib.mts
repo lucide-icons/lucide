@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { parseSync } from 'svgson';
 
 import { readSvgDirectory, getCurrentDirPath } from '@lucide/helpers';
 import readSvgs from './readSvgs.mts';

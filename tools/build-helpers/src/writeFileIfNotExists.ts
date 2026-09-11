@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import fs from 'fs';
 import path from 'path';
 import { writeFile } from './writeFile.ts';

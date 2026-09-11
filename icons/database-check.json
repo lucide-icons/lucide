@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "indicating a successful database connection",
+    "showing a verified or healthy database instance",
+    "confirming backup integrity or successful sync"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "check",
+    "success",
+    "valid",
+    "verified",
+    "confirmed",
+    "complete"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

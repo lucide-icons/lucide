@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "pillowcase",
+    "extra",
+    "bedding",
+    "cushion",
+    "headrest",
+    "sheets",
+    "soft",
+    "support",
+    "sleep",
+    "rest"
+  ],
+  "categories": [
+    "home",
+    "furniture",
+    "travel"
+  ]
+}
