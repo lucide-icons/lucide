@@ -22,7 +22,7 @@
   - changed-files:
       - any-glob-to-any-file:
           - 'icons/*.json'
-          - categories/*
+          - 'taxonomy/**'
 
 # For changes or added icons
 🎨 icon:

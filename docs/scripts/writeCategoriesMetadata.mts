@@ -3,7 +3,7 @@ import path from 'path';
 
 const currentDir = process.cwd();
 const dataDirectory = path.resolve(currentDir, '.vitepress/data');
-const directory = path.join(process.cwd(), '../categories');
+const directory = path.join(process.cwd(), '../taxonomy/categories');
 
 async function getAllCategoryFiles() {
   const categoryDirectoryContents = await fs.readdir(directory);

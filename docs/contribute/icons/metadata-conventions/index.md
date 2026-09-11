@@ -23,7 +23,7 @@ The JSON file must use the same base name as the SVG file:
 - `arrow-up.svg` -> `arrow-up.json`
 - `square-parking.svg` -> `square-parking.json`
 
-All icon metadata files must pass `icon.schema.json`.
+All icon metadata files must pass `taxonomy/schemas/icon.schema.json`.
 
 ## Required fields
 
@@ -39,7 +39,7 @@ A minimal metadata file looks like this:
 
 ```json
 {
-  "$schema": "../icon.schema.json",
+  "$schema": "../taxonomy/schemas/icon.schema.json",
   "contributors": ["github-username", "another-github-username"],
   "use-cases": ["Representing example items in an interface"],
   "tags": ["foo", "bar"],
@@ -111,13 +111,13 @@ For example, `mail-search` can use tags like `email`, `message`, `letter`, `find
 
 The `categories` field groups icons by broad use.
 
-Categories must come from the allowed category list in `icon.schema.json`.
+Categories must come from the allowed category list in `taxonomy/schemas/icon.schema.json`.
 
 Choose categories based on what the icon represents and where people use it. Check similar icons first.
 
 ### Category rules
 
-- Use only categories allowed by `icon.schema.json`.
+- Use only categories allowed by `taxonomy/schemas/icon.schema.json`.
 - Use lowercase category names.
 - Do not invent new categories in icon metadata.
 - Choose relevant categories only.
@@ -164,6 +164,6 @@ Before opening a pull request, confirm that:
 - Contributors are GitHub usernames.
 - Use cases describe real interface usage.
 - Tags are lowercase and useful for search.
-- Categories are allowed by `icon.schema.json`.
+- Categories are allowed by `taxonomy/schemas/icon.schema.json`.
 - Metadata is specific to the icon and its variants.
 - `pnpm run lint:json:icons` passes.

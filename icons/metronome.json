@@ -1,5 +1,5 @@
 {
-  "$schema": "../icon.schema.json",
+  "$schema": "../taxonomy/schemas/icon.schema.json",
   "contributors": [
     "jguddas",
     "edwloef"

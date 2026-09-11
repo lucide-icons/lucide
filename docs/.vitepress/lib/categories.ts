@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { Category, IconEntity } from '../theme/types';
 
-const directory = path.join(process.cwd(), '../categories');
+const directory = path.join(process.cwd(), '../taxonomy/categories');
 
 export function getAllCategoryFiles(): Category[] {
   const fileNames = fs.readdirSync(directory).filter((file) => path.extname(file) === '.json');

@@ -18,7 +18,7 @@ iconNames.forEach((iconName) => {
   if (typeof icons[iconName] === 'undefined') {
     const iconContent = JSON.stringify(
       {
-        $schema: '../icon.schema.json',
+        $schema: '../taxonomy/schemas/icon.schema.json',
         tags: [],
         categories: [],
       },

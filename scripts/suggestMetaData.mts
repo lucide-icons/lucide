@@ -13,7 +13,7 @@ import z from "zod";
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.join(scriptDir, "..");
 const iconsDir = path.join(repoRoot, "icons");
-const categoriesDir = path.join(repoRoot, "categories");
+const categoriesDir = path.join(repoRoot, "taxonomy", "categories");
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const pullRequestNumber = Number(process.env.PULL_REQUEST_NUMBER);

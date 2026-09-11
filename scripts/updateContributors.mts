@@ -97,7 +97,7 @@ await Promise.all(
       jsonFile,
       JSON.stringify(
         {
-          $schema: '../icon.schema.json',
+          $schema: '../taxonomy/schemas/icon.schema.json',
           contributors,
           aliases,
           tags,

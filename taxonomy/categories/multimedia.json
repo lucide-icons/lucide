@@ -1,0 +1,5 @@
+{
+  "$schema": "../schemas/category.schema.json",
+  "title": "Multimedia",
+  "icon": "circle-play"
+}

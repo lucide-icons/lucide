@@ -1,0 +1,165 @@
+{
+  "$id": "https://lucide.dev/icons.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$vocabulary": {
+    "https://json-schema.org/draft/2020-12/vocab/core": true,
+    "https://json-schema.org/draft/2020-12/vocab/applicator": true,
+    "https://json-schema.org/draft/2020-12/vocab/unevaluated": true,
+    "https://json-schema.org/draft/2020-12/vocab/validation": true,
+    "https://json-schema.org/draft/2020-12/vocab/meta-data": true,
+    "https://json-schema.org/draft/2020-12/vocab/format-annotation": true,
+    "https://json-schema.org/draft/2020-12/vocab/content": true
+  },
+  "title": "Lucide Icons icon schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "contributors", "categories", "tags", "use-cases"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "../taxonomy/schemas/icon.schema.json"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "deprecated": {
+            "const": true
+          },
+          "deprecationReason": {
+            "$ref": "#/$defs/aliasDeprecationReasons"
+          },
+          "toBeRemovedInVersion": {
+            "$ref": "#/$defs/versionNumber",
+            "description": "The version this icon will be removed in."
+          }
+        },
+        "dependentRequired": {
+          "deprecated": ["deprecationReason"],
+          "deprecationReason": ["deprecated"],
+          "toBeRemovedInVersion": ["deprecated"]
+        }
+      },
+      "uniqueItems": true
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "accessibility",
+              "account",
+              "animals",
+              "arrows",
+              "buildings",
+              "charts",
+              "communication",
+              "connectivity",
+              "cursors",
+              "design",
+              "development",
+              "devices",
+              "emoji",
+              "files",
+              "finance",
+              "food-beverage",
+              "gaming",
+              "home",
+              "layout",
+              "mail",
+              "math",
+              "medical",
+              "multimedia",
+              "nature",
+              "navigation",
+              "notifications",
+              "people",
+              "photography",
+              "science",
+              "seasons",
+              "security",
+              "shapes",
+              "shopping",
+              "social",
+              "sports",
+              "sustainability",
+              "text",
+              "time",
+              "tools",
+              "transportation",
+              "travel",
+              "weather"
+            ]
+          },
+          {
+            "type": "string",
+            "pattern": "^\\$extends:"
+          }
+        ]
+      },
+      "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "use-cases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "deprecated": {
+      "const": true
+    },
+    "deprecationReason": {
+      "$ref": "#/$defs/iconDeprecationReasons"
+    },
+    "toBeRemovedInVersion": {
+      "$ref": "#/$defs/versionNumber",
+      "description": "The version this icon will be removed in."
+    }
+  },
+  "dependentRequired": {
+    "deprecated": ["deprecationReason"],
+    "deprecationReason": ["deprecated"],
+    "toBeRemovedInVersion": ["deprecated"]
+  },
+  "$defs": {
+    "iconDeprecationReasons": {
+      "type": "string",
+      "enum": ["icon.design", "icon.use-case"]
+    },
+    "aliasDeprecationReasons": {
+      "type": "string",
+      "enum": ["alias.typo", "alias.name", "alias.duplicate"]
+    },
+    "versionNumber": {
+      "type": "string",
+      "pattern": "v[0-9]+(\\.[0-9]+)+"
+    }
+  },
+  "description": "A JSON Schema for icons defined by Lucide Icons."
+}

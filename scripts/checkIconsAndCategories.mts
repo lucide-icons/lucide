@@ -18,7 +18,7 @@ try {
   process.exit(1);
 }
 
-const CATEGORIES_DIR = path.resolve(currentDir, '../categories');
+const CATEGORIES_DIR = path.resolve(currentDir, '../taxonomy/categories');
 const categories = await readAllMetadata(CATEGORIES_DIR) as Record<string, {
   icon: string;
   name: string;

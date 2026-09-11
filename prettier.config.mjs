@@ -7,7 +7,7 @@ const config = {
   singleAttributePerLine: true,
   overrides: [
     {
-      files: ['icons/*.json', 'categories/*.json', 'lab/*.json'],
+      files: ['icons/*.json', 'taxonomy/categories/*.json', 'lab/*.json'],
       options: {
         printWidth: 0,
       },

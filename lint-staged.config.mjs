@@ -12,11 +12,11 @@ const config = {
     `prettier --write ${filenames.join(' ')}`,
   ],
   'icons/*.json': (filenames) => [
-    `ajv --spec=draft2020 -s icon.schema.json ${filenamesToAjvOption(filenames)}`,
+    `ajv --spec=draft2020 -s taxonomy/schemas/icon.schema.json ${filenamesToAjvOption(filenames)}`,
     `prettier --write ${filenames.join(' ')}`,
   ],
-  'categories/*.json': (filenames) => [
-    `ajv --spec=draft2020 -s category.schema.json ${filenamesToAjvOption(filenames)}`,
+  'taxonomy/categories/*.json': (filenames) => [
+    `ajv --spec=draft2020 -s taxonomy/schemas/category.schema.json ${filenamesToAjvOption(filenames)}`,
     `prettier --write ${filenames.join(' ')}`,
   ],
 };
