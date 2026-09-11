@@ -3,7 +3,10 @@
   "contributors": [
     "gkkconan"
   ],
-  "use-cases": [],
+  "use-cases": [
+    "Updating or refreshing content, such as reloading data or syncing changes.",
+    "Renewing plans, subscriptions, or other recurring services."
+  ],
   "tags": [
     "time",
     "timeline",
