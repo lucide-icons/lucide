@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "nest",
+    "beehive",
+    "beeswax",
+    "bumble",
+    "buzz",
+    "busy",
+    "productivity",
+    "honeycomb",
+    "keeper",
+    "garden",
+    "insect",
+    "sting",
+    "swarm",
+    "wasps"
+  ],
+  "categories": [
+    "nature",
+    "food-beverage"
+  ]
+}

@@ -12,7 +12,9 @@ function pathToPoints({ d, prev, next }: Path, interval = 1) {
       points.push(commander.getPointAtLength(i));
     }
     points.push(next);
-  } catch (err) {}
+  } catch (err) {
+    console.warn(`Failed to convert path to points for d="${d}": ${err}`);
+  }
   return points;
 }
 

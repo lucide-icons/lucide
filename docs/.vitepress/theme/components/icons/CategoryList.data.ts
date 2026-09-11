@@ -1,4 +1,3 @@
-import { getAllData } from '../../../lib/icons';
 import { getAllCategoryFiles, mapCategoryIconCount } from '../../../lib/categories';
 import iconsMetaData from '../../../data/iconMetaData';
 

@@ -188,7 +188,7 @@ const deprecatedTitle = computed(() => {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
-  scrollbar-color: currentColor transparent; /* foreground background */
+  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
 }
 .horizontal-scroller::-webkit-scrollbar {
   width: 0;

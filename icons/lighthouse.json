@@ -1,0 +1,45 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "xougui",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Marking coastal landmarks or harbor entrances on maps",
+    "Indicating navigation beacons in maritime dashboards",
+    "Flagging maritime safety or beacon maintenance tasks",
+    "Representing guidance or guiding light in onboarding or help interfaces"
+  ],
+  "tags": [
+    "lighthouse",
+    "beacon",
+    "coast",
+    "navigation",
+    "tower",
+    "sea",
+    "ocean",
+    "maritime",
+    "guide",
+    "safety",
+    "light",
+    "shine",
+    "port",
+    "marine",
+    "faro",
+    "signal",
+    "nautical",
+    "harbor",
+    "shore",
+    "lightbeam",
+    "wayfinding",
+    "guidance",
+    "onboarding",
+    "help",
+    "landmark"
+  ],
+  "categories": [
+    "buildings",
+    "navigation",
+    "travel"
+  ]
+}

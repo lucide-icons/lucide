@@ -39,7 +39,6 @@
     "./dynamic": {
       "types": "./dist/esm/dynamic.d.ts",
       "import": "./dist/esm/dynamic.mjs",
-      "require": "./dist/cjs/dynamic.cjs",
       "default": "./dist/esm/dynamic.mjs"
     },
     "./build": {
@@ -57,21 +56,21 @@
     "build:bundle": "rollup -c rollup.config.mjs",
     "test": "pnpm build:icons && vitest run",
     "test:watch": "vitest watch",
-    "test:update": "vitest -u",
-    "version": "pnpm version --git-tag-version=false"
+    "test:update": "vitest -u"
   },
   "devDependencies": {
     "@lucide/build-icons": "workspace:*",
-    "@lucide/helpers": "^1.0.0",
+    "@lucide/helpers": "workspace:*",
     "@lucide/rollup-plugins": "workspace:*",
-    "@rollup/plugin-replace": "^6.0.2",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@lucide/shared": "workspace:*",
+    "@rollup/plugin-replace": "^6.0.3",
+    "@testing-library/jest-dom": "^7.0.1",
     "jest-serializer-html": "^7.1.0",
-    "rollup": "^4.53.3",
-    "rollup-plugin-dts": "^6.2.3",
+    "rollup": "^4.63.1",
+    "rollup-plugin-dts": "^6.5.1",
     "rollup-plugin-preserve-directives": "^0.4.0",
-    "typescript": "^5.8.3",
-    "vite": "^7.2.4",
-    "vitest": "^4.0.12"
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6",
+    "vitest": "4.1.11"
   }
 }

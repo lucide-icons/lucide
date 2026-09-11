@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "aim",
+    "target",
+    "scope",
+    "sight",
+    "reticule"
+  ],
+  "categories": [
+    "gaming",
+    "cursors",
+    "photography"
+  ]
+}

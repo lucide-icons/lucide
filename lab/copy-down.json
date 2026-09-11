@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "read",
+    "dictionary",
+    "booklet",
+    "library",
+    "code",
+    "version control",
+    "git",
+    "repository",
+    "clone",
+    "download all"
+  ],
+  "categories": [
+    "development"
+  ]
+}
