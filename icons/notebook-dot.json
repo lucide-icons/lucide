@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "elenakovelskikh"
+  ],
+  "use-cases": [
+    "Indicating newly updated shared notes in team workspaces",
+    "Marking shared documentation with new information"
+  ],
+  "tags": [
+    "document",
+    "file",
+    "journal",
+    "page",
+    "paper",
+    "record",
+    "entry",
+    "notebook",
+    "notification",
+    "unread",
+    "note"
+  ],
+  "categories": [
+    "communication"
+  ]
+}

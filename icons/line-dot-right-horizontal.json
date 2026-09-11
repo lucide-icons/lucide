@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "johnletey",
+    "nathan-de-pachtere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "code",
+    "version control",
+    "waypoint",
+    "stop",
+    "station",
+    "last",
+    "end"
+  ],
+  "categories": [
+    "development",
+    "navigation"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "wooly",
+    "woolly",
+    "winter",
+    "cold",
+    "neckwear",
+    "apparel",
+    "fashion",
+    "knitting"
+  ],
+  "categories": [
+    "shopping",
+    "seasons"
+  ]
+}

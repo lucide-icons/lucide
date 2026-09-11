@@ -1,84 +1,83 @@
 <script setup lang="ts">
-import { shallowRef, type Ref, watch, computed } from 'vue'
-import { useCssVar, syncRef } from '@vueuse/core'
-import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle'
-import RangeSlider from '../base/RangeSlider.vue'
-import InputField from '../base/InputField.vue'
-import ColorPicker from '../base/ColorPicker.vue'
-import ResetButton from '../base/ResetButton.vue'
-import Switch from '../base/Switch.vue'
+import { shallowRef, type Ref, watch, computed } from 'vue';
+import { useCssVar, syncRef } from '@vueuse/core';
+import { STYLE_DEFAULTS, useIconStyleContext } from '../../composables/useIconStyle';
+import RangeSlider from '../base/RangeSlider.vue';
+import InputField from '../base/InputField.vue';
+import ColorPicker from '../base/ColorPicker.vue';
+import ResetButton from '../base/ResetButton.vue';
+import Switch from '../base/Switch.vue';
 
 const props = defineProps<{
-  rootEl?: Ref<HTMLElement>
-}>()
+  rootEl?: Ref<HTMLElement>;
+}>();
 
-const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext()
-const documentRef = shallowRef<HTMLElement | undefined>(typeof document !== 'undefined' ? document?.documentElement : undefined)
+const { color, strokeWidth, size, absoluteStrokeWidth } = useIconStyleContext();
+const documentRef = shallowRef<HTMLElement | undefined>(
+  typeof document !== 'undefined' ? document?.documentElement : undefined,
+);
 
-const colorCssVar = useCssVar(
-  '--customize-color',
-  props.rootEl?.value ?? documentRef.value,
-  {
-    initialValue: `${STYLE_DEFAULTS.color}`
-  }
-)
+const colorCssVar = useCssVar('--customize-color', props.rootEl?.value ?? documentRef.value, {
+  initialValue: `${STYLE_DEFAULTS.color}`,
+});
 
 const strokeWidthCssVar = useCssVar(
   '--customize-strokeWidth',
   props.rootEl?.value ?? documentRef.value,
   {
-    initialValue: `${STYLE_DEFAULTS.strokeWidth}`
-  }
-)
+    initialValue: `${STYLE_DEFAULTS.strokeWidth}`,
+  },
+);
 
-const sizeCssVar = useCssVar(
-  '--customize-size',
-  props.rootEl?.value ?? documentRef.value,
-  {
-    initialValue: `${STYLE_DEFAULTS.size}`
-  }
-)
+const sizeCssVar = useCssVar('--customize-size', props.rootEl?.value ?? documentRef.value, {
+  initialValue: `${STYLE_DEFAULTS.size}`,
+});
 
-syncRef(color, colorCssVar, { direction: 'ltr' })
-syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr' })
-syncRef(size, sizeCssVar, { direction: 'ltr' })
+syncRef(color, colorCssVar, { direction: 'ltr' });
+syncRef(strokeWidth, strokeWidthCssVar, { direction: 'ltr' });
+syncRef(size, sizeCssVar, { direction: 'ltr' });
 
-function resetStyle () {
-  color.value = STYLE_DEFAULTS.color
-  strokeWidth.value = STYLE_DEFAULTS.strokeWidth
-  size.value = STYLE_DEFAULTS.size
-  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth
+function resetStyle() {
+  color.value = STYLE_DEFAULTS.color;
+  strokeWidth.value = STYLE_DEFAULTS.strokeWidth;
+  size.value = STYLE_DEFAULTS.size;
+  absoluteStrokeWidth.value = STYLE_DEFAULTS.absoluteStrokeWidth;
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
-  const htmlEl = document.documentElement
+  const htmlEl = document.documentElement;
 
-  htmlEl.classList.toggle('absolute-stroke-width', enabled)
-})
+  htmlEl.classList.toggle('absolute-stroke-width', enabled);
+});
 
 const customizingActive = computed(() => {
-  return color.value !== STYLE_DEFAULTS.color
-    || strokeWidth.value !== STYLE_DEFAULTS.strokeWidth
-    || size.value !== STYLE_DEFAULTS.size
-    || absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
-})
+  return (
+    color.value !== STYLE_DEFAULTS.color ||
+    strokeWidth.value !== STYLE_DEFAULTS.strokeWidth ||
+    size.value !== STYLE_DEFAULTS.size ||
+    absoluteStrokeWidth.value !== STYLE_DEFAULTS.absoluteStrokeWidth
+  );
+});
 </script>
 
 <template>
-  <div class="customizer-card" :class="{ customized: customizingActive }">
+  <div
+    class="customizer-card"
+    :class="{ customized: customizingActive }"
+  >
     <div class="card-header">
-      <h2 class="card-title">
-        Customizer
-      </h2>
+      <h2 class="card-title">Customizer</h2>
       <ResetButton @click="resetStyle"></ResetButton>
     </div>
     <InputField
       id="icon-color"
       label="Color"
     >
-      <template #display>
-        <ColorPicker v-model="color" id="icon-color" class="color-picker"/>
-      </template>
+      <ColorPicker
+        v-model="color"
+        id="icon-color"
+        class="color-picker"
+      />
     </InputField>
 
     <InputField
@@ -117,7 +116,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="absolute-stroke-width"
-      label="Absolute Stroke width"
+      label="Absolute stroke width"
     >
       <Switch
         id="absolute-stroke-width"
@@ -143,6 +142,7 @@ const customizingActive = computed(() => {
   font-size: 16px;
   /* margin-bottom: 12px; */
 }
+
 .customizer-card {
   background: var(--vp-c-bg);
   padding: 12px 24px 24px;
@@ -151,7 +151,7 @@ const customizingActive = computed(() => {
   position: relative;
   z-index: 0;
   border: 1px solid transparent;
-  transition: border-color .4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
 }
 
 .customizer-card.customized {
@@ -159,6 +159,6 @@ const customizingActive = computed(() => {
 }
 
 .color-picker {
-  margin-left: auto;
+  width: 100%;
 }
 </style>

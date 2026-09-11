@@ -4,11 +4,20 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [
+    "Configuring satellite communication or broadcast equipment",
+    "Indicating satellite television or radio reception",
+    "Representing ground stations and satellite tracking systems",
+    "Managing antennas, receivers or other wireless communication hardware"
+  ],
   "tags": [
     "antenna",
     "receiver",
     "dish aerial",
-    "saucer"
+    "saucer",
+    "communication",
+    "broadcast",
+    "signal"
   ],
   "categories": [
     "connectivity",

@@ -1,10 +1,9 @@
 import path from 'path';
 import fs from 'fs';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { toPascalCase, resetFile, appendFile } from '@lucide/helpers';
 import deprecationReasonTemplate from '../../utils/deprecationReasonTemplate.ts';
 import getExportString from './getExportString.ts';
-import type { IconMetadata, IconNode } from '../../types.ts';
+import type { IconMetadata } from '../../types.ts';
 import { type INode } from 'svgson';
 
 interface GenerateAliasesFilesOptions {
@@ -17,6 +16,7 @@ interface GenerateAliasesFilesOptions {
   aliasNamesOnly?: boolean;
   separateAliasesFile?: boolean;
   separateAliasesFileExtension?: string;
+  separateAliasesFileIgnore?: string;
   showLog?: boolean;
 }
 
@@ -30,6 +30,7 @@ export default async function generateAliasesFiles({
   aliasNamesOnly = false,
   separateAliasesFile = false,
   separateAliasesFileExtension,
+  separateAliasesFileIgnore,
   showLog = true,
 }: GenerateAliasesFilesOptions) {
   const iconsDistDirectory = path.join(outputDirectory, `icons`);
@@ -57,6 +58,7 @@ export default async function generateAliasesFiles({
   await Promise.all(
     icons.map(async (iconName, index) => {
       const componentName = toPascalCase(iconName);
+
       const iconAliases = iconMetaData[iconName]?.aliases?.map((alias) => {
         if (typeof alias === 'string') {
           return {
@@ -107,11 +109,17 @@ export default async function generateAliasesFiles({
               ? deprecationReasonTemplate(alias.deprecationReason, {
                   componentName: toPascalCase(iconName),
                   iconName,
-                  toBeRemovedInVersion: alias.toBeRemovedInVersion,
                 })
               : '';
 
-            if (separateAliasesFile) {
+            if (separateAliasesFileIgnore?.includes(alias.name)) {
+              console.log('Skipped alias file for', alias.name);
+            }
+
+            const createSeparateAliasesFile =
+              separateAliasesFile && !separateAliasesFileIgnore?.includes(alias.name);
+
+            if (createSeparateAliasesFile) {
               const output = `export { default } from "./${iconName}${
                 separateAliasesFileExtension ? iconFileExtension : ''
               }";\n`;
@@ -128,7 +136,7 @@ export default async function generateAliasesFiles({
               return;
             }
 
-            const exportFileIcon = separateAliasesFile ? alias.name : iconName;
+            const exportFileIcon = createSeparateAliasesFile ? alias.name : iconName;
 
             if (index > 0) {
               aliasFileContent += '\n';

@@ -1,0 +1,28 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "tags": [
+    "needle",
+    "sewing",
+    "stitch",
+    "embroidery",
+    "waeve",
+    "woven",
+    "fabric",
+    "material",
+    "cloth",
+    "cotton",
+    "textile",
+    "string",
+    "unravel",
+    "unroll"
+  ],
+  "categories": [
+    "home",
+    "tools",
+    "social"
+  ]
+}

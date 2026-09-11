@@ -1,10 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere",
     "it-is-not",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",

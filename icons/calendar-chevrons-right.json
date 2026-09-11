@@ -1,0 +1,37 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis",
+    "jguddas",
+    "colebemis",
+    "AlexandrePhilibert"
+  ],
+  "use-cases": [
+    "Indicating upcoming events in calendars",
+    "Fast-forwarding through calendar views"
+  ],
+  "tags": [
+    "navigation",
+    "arrow",
+    "right",
+    "chevron",
+    "direction",
+    "symbol",
+    "pointer",
+    "indicator",
+    "next",
+    "menu",
+    "date",
+    "day",
+    "month",
+    "year",
+    "events",
+    "chevrons"
+  ],
+  "categories": [
+    "time",
+    "arrows",
+    "navigation"
+  ]
+}
