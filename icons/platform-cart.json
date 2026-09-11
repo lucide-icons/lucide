@@ -4,16 +4,10 @@
     "juliansolimando"
   ],
   "use-cases": [
-    "warehouse logistics",
-    "material handling",
-    "moving goods",
-    "luggage transport",
-    "inventory transport",
-    "airport baggage handling",
-    "hotel luggage service",
-    "event equipment transport",
-    "fulfillment center operations",
-    "shipping and receiving"
+    "Transporting boxes and inventory in warehouses",
+    "Moving luggage or equipment in airports and hotels",
+    "Representing material-handling carts in fulfillment apps",
+    "Indicating manual transport or moving actions"
   ],
   "tags": [
     "flatbed",
