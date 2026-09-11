@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "rrod497"
+  ],
+  "use-cases": [
+    "Labeling bass clef notation in sheet music editors",
+    "Representing bass, cello, trombone, tuba, or lower-pitched instrument parts",
+    "Indicating left-hand piano notation in music learning apps",
+    "Supporting clef choices in MIDI editors, instrument emulators, or music education tools"
+  ],
+  "tags": [
+    "fa",
+    "f",
+    "music",
+    "note",
+    "key",
+    "baritone",
+    "staff",
+    "pitch",
+    "bass",
+    "subbass",
+    "major",
+    "scale"
+  ],
+  "categories": [
+    "multimedia"
+  ]
+}
