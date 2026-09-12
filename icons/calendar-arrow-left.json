@@ -1,0 +1,21 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "ryck"
+  ],
+  "tags": [
+    "date",
+    "month",
+    "year",
+    "event",
+    "previous",
+    "prior",
+    "earlier",
+    "reschedule",
+    "back",
+    "before"
+  ],
+  "categories": [
+    "time"
+  ]
+}
