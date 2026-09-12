@@ -4,14 +4,10 @@
     "psjdev"
   ],
   "use-cases": [
-    "Identifying tools required for electronics assembly",
+    "Representing electronics assembly and repair",
+    "Indicating circuit-board rework or modification",
     "Marking soldering steps in repair instructions",
-    "Locating electronics workstations in a makerspace",
-    "representing circuit-board repair or modification",
-    "selecting soldering equipment in tool inventories",
-    "marking soldering stations on workshop or makerspace maps",
-    "indicating soldering or hot-tip hazards in safety documentation",
-    "labeling diy electronics or hobbyist projects"
+    "Marking hot-tip hazards in safety documentation"
   ],
   "tags": [
     "solder",
