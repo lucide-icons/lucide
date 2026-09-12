@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "psjdev"
+  ],
+  "use-cases": [
+    "Representing electronics assembly and repair",
+    "Indicating circuit-board rework or modification",
+    "Marking soldering steps in repair instructions",
+    "Marking hot-tip hazards in safety documentation"
+  ],
+  "tags": [
+    "solder",
+    "electronics",
+    "repair",
+    "circuit",
+    "heat",
+    "workshop",
+    "assembly",
+    "pcb",
+    "flux",
+    "desolder",
+    "rework",
+    "smd",
+    "diy"
+  ],
+  "categories": [
+    "tools"
+  ]
+}
