@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AlecRust",
+    "karsa-mistmere",
+    "rrod497",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Representing skincare and personal-care products in shopping catalogs",
+    "Indicating lotion or sunscreen application in skincare routines",
+    "Identifying toiletries in travel packing checklists"
+  ],
+  "tags": [
+    "sunscreen",
+    "sunblock",
+    "spf",
+    "uv",
+    "cream",
+    "skincare",
+    "toothpaste",
+    "ointment",
+    "bottle",
+    "toiletries",
+    "bathroom",
+    "beach",
+    "summer"
+  ],
+  "categories": [
+    "medical",
+    "home",
+    "shopping",
+    "travel",
+    "seasons"
+  ]
+}
