@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "ryck"
+    "ryck",
+    "ishanbagra18"
   ],
+  "use-cases": [],
   "tags": [
     "date",
     "month",
