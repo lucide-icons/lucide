@@ -298,11 +298,11 @@ Link text should describe the destination or concept.
 
 **Do:**
 
-> See the [Icon Design Specification](./specification) for exact dimensions and spacing requirements.
+> See the [Icon Design Guide](./design-principles) for exact dimensions and spacing requirements.
 
 **Don't:**
 
-> For more information, [click here](./specification).
+> For more information, [click here](./design-principles).
 
 Avoid generic link text such as:
 

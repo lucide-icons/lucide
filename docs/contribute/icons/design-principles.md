@@ -8,11 +8,9 @@ Lucide is a consistent icon set, not a collection of unrelated icons. Every icon
 
 This guide explains the visual rules behind Lucide icons and how to use them when designing new icons.
 
-For the full rule list, see the [icon design specification](./specification)
-
 ## 1. Use a 24 × 24-pixel canvas
 
-Icons **must** be designed on a 24 × 24-pixel canvas.
+Icons **MUST** be designed on a 24 × 24-pixel canvas.
 
 :::: example
 ::: do ../../images/24px-24px.svg?raw=true
@@ -25,7 +23,7 @@ Don't use a canvas that is larger, smaller, or not square.
 
 ## 2. Keep a 1-pixel safe zone
 
-Icons **must** have at least 1 pixel of padding between their strokes and the edge of the canvas.
+Icons **MUST** have at least 1 pixel of padding between their strokes and the edge of the canvas.
 
 :::: example
 ::: do ../../images/1px-padding.svg?raw=true
@@ -38,7 +36,7 @@ Don't place strokes at the edge of the canvas. They may get clipped.
 
 ## 3. Use 2-pixel strokes
 
-Strokes **must** be 2 pixels wide.
+Strokes **MUST** be 2 pixels wide.
 
 :::: example
 ::: do ../../images/2px-stroke.svg?raw=true
@@ -51,7 +49,7 @@ Don't use **thicker or thinner** strokes, or **mix stroke widths**.
 
 ## 4. Use round line joins
 
-Strokes **must** use round line joins.
+Strokes **MUST** use round line joins.
 
 :::: example
 ::: do ../../images/round-joints.svg?raw=true
@@ -68,7 +66,7 @@ Round joins do not replace corner rounding. Most sharp corners still need a radi
 
 ## 5. Use round line caps
 
-Open paths **must** use round line caps.
+Open paths **MUST** use round line caps.
 
 :::: example
 ::: do ../../images/round-caps.svg?raw=true
@@ -81,7 +79,7 @@ Don't use **butt or square** line caps.
 
 ## 6. Use centered strokes
 
-Strokes **must** be centered on their paths.
+Strokes **MUST** be centered on their paths.
 
 :::: example
 ::: do ../../images/centered-strokes.svg?raw=true
@@ -94,7 +92,9 @@ Don't use **inside or outside** strokes. They change how line joins appear, crea
 
 ## 7. Use consistent corner radii
 
-Almost every sharp corner **should** be rounded.
+Corner radius depends on the size and angle of the element.
+
+### 7.1. Sharp corners **SHOULD** be rounded unless the geometry of the icon requires otherwise
 
 :::: example
 ::: do ../../images/border-radius-correct.svg?raw=true
@@ -105,29 +105,44 @@ Don't use **sharp corners**.
 :::
 ::::
 
-Corner radius depends on the size of the element and the angle. For 90° angles:
+### 7.2. Elements at least 8 pixels wide or tall **SHOULD** use a 2-pixel corner radius for 90° corners
 
 :::: example
 ::: do ../../images/2px-border-radius.svg?raw=true
 Use a **2-pixel corner radius** for shapes that are at least 8 pixels wide or tall.
 :::
-::: do ../../images/1px-border-radius.svg?raw=true
+::::
+
+### 7.3. Elements smaller than 8 pixels **SHOULD** use a 1-pixel corner radius for 90° corners
+
 Use a **1-pixel corner radius** for shapes smaller than 8 pixels.
+
+:::: example
+::: do ../../images/1px-border-radius.svg?raw=true
 :::
 ::::
 
-There are exceptions:
+### 7.4. Diagonal lines meeting at a 90° angle **SHOULD** use a radius that preserves pixel-grid alignment
+
+Diagonal lines that meet at a right angle usually need a **2.41 pixel** radius (1+√2) to stay aligned to the grid.
 
 :::: example
 ::: do ../../images/border-radius-90deg.svg?raw=true
-Diagonal lines that meet at a right angle usually need a **2.41 pixel** radius (1+√2) to stay aligned to the grid.
-:::
-::: do ../../images/border-radius-arbitrary.svg?raw=true
-Even **very sharp corners** usually need a small amount of rounding. The exact amount depends on the shape.
 :::
 ::::
 
-Avoid rounding corners **where multiple lines meet**.
+### 7.5. Other acute corners **SHOULD** use an appropriate amount of rounding based on their geometry
+
+Even **very sharp corners** usually need a small amount of rounding. The exact amount depends on the shape.
+
+:::: example
+::: do ../../images/border-radius-arbitrary.svg?raw=true
+:::
+::::
+
+### 7.6 Corners where multiple lines meet **MUST NOT** be rounded
+
+Corners where multiple lines meet **MUST NOT** be rounded. Keep corners sharp where multiple lines meet so the icon scales well.
 
 :::: example
 ::: do ../../images/border-radius-line-join.svg?raw=true
@@ -138,9 +153,15 @@ Don't round corners where more than two lines meet. This can make the icon scale
 :::
 ::::
 
+### 7.7. Non-outlined arrows **MUST NOT** be rounded
+
+Non-outlined arrows **MUST NOT** be rounded.
+
+If the arrow is an outline shape, it **SHOULD** be rounded.
+
 ## 8. Keep at least 2 pixels between elements
 
-Distinct elements **must** have at least 2 pixels of visual spacing between them.
+### 8.1. Distinct elements **MUST** have at least 2 pixels of visual spacing between them
 
 :::: example
 ::: do ../../images/2px-element-spacing.svg?raw=true
@@ -151,7 +172,9 @@ Don't use gaps smaller than **2 pixels** between distinct elements.
 :::
 ::::
 
-This also applies inside shapes. Most inner gaps **should** be at least 2 pixels wide.
+### 8.2. Inner gaps **SHOULD** be at least 2 pixels wide
+
+The 2-pixel gap rule also applies inside shapes. Most inner gaps **SHOULD** be at least 2 pixels wide.
 
 :::: example
 ::: do ../../images/2px-inner-spacing.svg?raw=true
@@ -173,7 +196,9 @@ If the circle **overlaps** the shape, the gap should be **wider**.
 :::
 ::::
 
-The 2 pixel spacing also applies when elements visually connect or intersect.
+### 8.3. Visual spacing **SHOULD** remain consistent when elements connect or intersect
+
+Spacing **SHOULD** remain visually consistent where elements connect or intersect. Elements **MUST NOT** connect without keeping at least 2 pixels of spacing, and **SHOULD NOT** terminate with an abrupt cut.
 
 :::: example
 ::: dont ../../images/2px-element-spacing-connected.svg?raw=true
@@ -184,9 +209,13 @@ Don't use **abrupt cuts** where one element meets another.
 :::
 ::::
 
+### 8.4. Off-variants **MAY** omit the 2-pixel gap rule
+
+The `-off` variants have their own design language and **MAY** omit the 2-pixel gap rule.
+
 ## 9. Aim for consistent visual weight
 
-Icons should have a similar visual weight when viewed alongside each other.
+Icons **SHOULD** have a similar visual weight when viewed alongside each other.
 
 :::: example
 
@@ -208,7 +237,7 @@ Place your icon next to `circle` or `square`, then blur both icons. Your icon sh
 
 ## 10. Balance icons visually
 
-Icons should look centered and balanced within the canvas.
+Icons **SHOULD** be visually centered within the canvas.
 
 :::: example
 ::: do ../../images/visually-centered-do.svg?raw=true
@@ -221,7 +250,7 @@ This icon feels shifted toward the top left.
 
 :::: example
 ::: do ../../images/visually-centered-symmetrical-do.svg?raw=true
-Symmetrical icons should remain geometrically centered.
+Symmetrical icons **SHOULD** remain geometrically centered.
 :::
 ::: dont ../../images/visually-centered-symmetrical-dont.svg?raw=true
 Don't place symmetrical icons off-center for no good reason.
@@ -229,14 +258,14 @@ Don't place symmetrical icons off-center for no good reason.
 ::::
 
 ::: tip
-Geometric centering does not always look centered. Asymmetrical shapes may need a small adjustment.
+Geometric centering does not always look centered. Asymmetrical icons **MAY** be moved slightly off center so they look visually centered.
 
 Compare your icon with `circle` or `square` side by side and stacked vertically. If it looks shifted, adjust it.
 :::
 
 ## 11. Keep density low
 
-Lucide icons should have a similar level of detail.
+Icons **SHOULD** have a level of detail similar to other Lucide icons.
 
 :::: example
 ::: do ../../images/density-optimal.svg?raw=true
@@ -257,7 +286,7 @@ View the icon at its intended size and blur it. Areas that turn dark may have to
 
 ## 12. Use smooth, simple curves
 
-Curves should be smooth and as simple as the shape allows.
+Curves **SHOULD** be smooth and as simple as the shape allows. Arcs and quadratic Bézier curves **SHOULD** be preferred where possible. Cubic Bézier curves **MAY** be used where necessary.
 
 :::: example
 ::: do ../../images/curvature-smooth.svg?raw=true
@@ -276,7 +305,7 @@ Avoid extra control points. They make shapes harder to edit and can create small
 
 ## 13. Design for the pixel grid
 
-Lucide icons should look sharp at small sizes, including on low-density displays.
+Lucide icons **SHOULD** look sharp at small sizes, including on low-density displays. Coordinates and centers of arcs and other geometric elements **SHOULD** align to the pixel grid where possible.
 
 :::: example
 ::: do ../../images/pixel-perfection-ideal.svg?raw=true
@@ -306,12 +335,14 @@ Avoid placing diagonal lines off-grid. They will appear blurry and optically wid
 ::::
 
 ::: tip
-Pixel alignment should support the icon. Do not let it harm shape recognition, smooth curves, or visual balance.
+Pixel alignment **SHOULD** support the icon. Off-grid geometry **MAY** be used when required for visual balance, recognizable geometry, or smooth curvature. Pixel alignment **SHOULD NOT** take precedence over the visual quality of the icon.
 :::
 
 ## 14. Reuse established shapes
 
-When creating a variant, keep the base icon geometry unless the new idea needs a change.
+### 14.1. Variants **SHOULD** preserve base icon geometry
+
+When creating a variant, the base icon geometry, placement, and orientation **SHOULD** be preserved unless the new icon requires a change.
 
 :::: example
 ::: do ../../images/established-shapes-base-do.svg?raw=true
@@ -322,7 +353,7 @@ Don't change the **geometry, placement, or orientation** of base shapes.
 :::
 ::::
 
-Related icons should share shapes and visual patterns when possible.
+### 14.2. Related icons **SHOULD** share shapes and visual patterns when possible
 
 :::: example
 ::: do ../../images/established-shapes-sub-do.svg?raw=true
@@ -333,7 +364,7 @@ Don't redesign **existing elements**.
 :::
 ::::
 
-Common modifiers and elements should look consistent across the library.
+### 14.3. Common modifiers and elements **SHOULD** look consistent across the library
 
 :::: example
 ::: do ../../images/established-shapes-consistency-do.svg?raw=true
@@ -347,7 +378,7 @@ Don't use **irregular placement or size** compared to existing icons.
 ::: tip
 Preserving the base shape makes related icons work better when users switch between them.
 
-Consistency with an existing icon should not override clarity, balance, or readability. Adjust the shape when needed.
+Existing geometry **MAY** be modified when necessary to satisfy other Lucide design language rules. Consistency with an existing icon **SHOULD NOT** override clarity, balance, or readability.
 :::
 
 ## Summary
