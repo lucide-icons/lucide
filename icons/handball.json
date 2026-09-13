@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "felipeajzanetti"
+  ],
+  "tags": [
+    "sports",
+    "handball",
+    "ball",
+    "team sport",
+    "throw",
+    "player",
+    "athletic",
+    "game",
+    "competition",
+    "physical activity"
+  ],
+  "categories": [
+    "sports",
+    "gaming"
+  ]
+}
