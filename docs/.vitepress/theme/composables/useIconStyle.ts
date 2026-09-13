@@ -1,4 +1,5 @@
-import { ref, inject, Ref } from 'vue';
+import { inject, Ref } from 'vue';
+import { useStorage } from '@vueuse/core';
 
 export const ICON_STYLE_CONTEXT = Symbol('style');
 
@@ -16,11 +17,18 @@ export const STYLE_DEFAULTS = {
   absoluteStrokeWidth: false,
 };
 
+// Persisted via localStorage (SSR-safe: @vueuse/core's useStorage falls back
+// to the provided default when `window`/`localStorage` isn't available, e.g.
+// during VitePress's static build) so customizer settings survive reloads
+// and repeat visits instead of resetting to STYLE_DEFAULTS every time.
 export const iconStyleContext = {
-  size: ref(24),
-  strokeWidth: ref(2),
-  color: ref('currentColor'),
-  absoluteStrokeWidth: ref(false),
+  size: useStorage('lucide-icon-style-size', STYLE_DEFAULTS.size),
+  strokeWidth: useStorage('lucide-icon-style-strokeWidth', STYLE_DEFAULTS.strokeWidth),
+  color: useStorage('lucide-icon-style-color', STYLE_DEFAULTS.color),
+  absoluteStrokeWidth: useStorage(
+    'lucide-icon-style-absoluteStrokeWidth',
+    STYLE_DEFAULTS.absoluteStrokeWidth,
+  ),
 };
 
 export function useIconStyleContext(): IconSizeContext {
