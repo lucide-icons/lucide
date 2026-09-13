@@ -140,7 +140,7 @@ Even **very sharp corners** usually need a small amount of rounding. The exact a
 :::
 ::::
 
-### 7.6. Corners where multiple lines meet **MUST NOT** be rounded
+### 7.6. Corners where lines cross **MUST NOT** be rounded
 
 Corners where multiple lines meet **MUST NOT** be rounded. Keep corners sharp where multiple lines meet so the icon scales well.
 
