@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "viralcodex",
+    "colebemis",
+    "ericfennis"
+  ],
+  "use-cases": [
+    "Indicating application or system warnings or alerts",
+    "Highlighting important notifications that require user attention",
+    "Representing caution states for different components or elements",
+    "Marking validation errors, invalid input or configuration issues",
+    "Displaying diagnostic or troubleshooting information"
+  ],
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "exclamation mark",
+    "rectangle",
+    "square",
+    "notification",
+    "attention",
+    "important",
+    "caution"
+  ],
+  "categories": [
+    "notifications",
+    "shapes"
+  ]
+}

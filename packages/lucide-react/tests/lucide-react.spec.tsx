@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render, cleanup } from '@testing-library/react';
-import { Pen, Edit2, Grid, Droplet } from '../src/lucide-react';
+import { Pen, Edit2, Grid, createLucideIcon, LucideIconData } from '../src/lucide-react';
 import defaultAttributes from '../src/defaultAttributes';
 
 describe('Using lucide icon components', () => {
@@ -69,7 +69,7 @@ describe('Using lucide icon components', () => {
     expect(PenIconRenderedHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is set', () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is set', () => {
     const { container, getByTestId } = render(
       <Grid
         size={48}
@@ -88,12 +88,48 @@ describe('Using lucide icon components', () => {
     expect(container.innerHTML).toMatchSnapshot();
   });
 
+  it('should apply vector-effect when nonScalingStroke is set', () => {
+    const { container, getByTestId } = render(
+      <Grid
+        size={48}
+        stroke="red"
+        nonScalingStroke
+      />,
+    );
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('stroke', 'red');
+    expect(SVGElement).toHaveAttribute('width', '48');
+    expect(SVGElement).toHaveAttribute('height', '48');
+    expect(SVGElement).toHaveAttribute('stroke-width', '2');
+    expect(SVGElement?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
   it('should apply all classNames to the element', () => {
+    const iconData: LucideIconData = {
+      name: 'droplet',
+      size: 24,
+      node: [
+        [
+          'path',
+          {
+            d: 'M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z',
+            key: 'abc123',
+          },
+        ],
+      ],
+      aliases: ['drop'],
+    };
     const testClass = 'my-class';
-    const { container } = render(<Droplet className={testClass} />);
+    const Icon = createLucideIcon(iconData);
+    const { container } = render(<Icon className={testClass} />);
 
     expect(container.firstChild).toHaveClass(testClass);
     expect(container.firstChild).toHaveClass('lucide');
     expect(container.firstChild).toHaveClass('lucide-droplet');
+    expect(container.firstChild).toHaveClass('lucide-drop');
   });
 });
