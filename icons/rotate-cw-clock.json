@@ -8,8 +8,9 @@
     "gkkconan"
   ]
   "use-cases": [
-    "Updating or refreshing content, such as reloading data or syncing changes",
-    "Renewing plans, subscriptions, or other recurring services"
+    "Updating content or syncing recent changes",
+    "Refreshing data in dashboards or reports",
+    "Renewing subscriptions or recurring services"
   ],
   "tags": [
     "modify",
@@ -26,17 +27,14 @@
     "version",
     "time machine",
     "backup",
-    "rotate",
     "clockwise",
     "arrow",
     "reload",
     "rerun",
-    "synchronise",
     "synchronize",
     "circular",
     "cycle",
-    "update",
-    "updates"
+    "update"
   ],
   "categories": [
     "arrows",
