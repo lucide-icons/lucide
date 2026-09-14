@@ -6,7 +6,7 @@ description: Learn about the different types exported by the `lucide-solid` pack
 # TypeScript Support
 
 List of exported types from the `lucide-solid` package.
-These can be used to type your components when using Lucide icons in a TypeScript React project
+These can be used to type your components when using Lucide icons in a TypeScript Solid project.
 
 ## `LucideProps`
 
@@ -61,10 +61,10 @@ interface ButtonProps {
   label: string;
 }
 
-const IconButton = ({ icon: Icon, label }) => {
+const IconButton = (props: ButtonProps) => {
   return (
-    <button aria-label={label}>
-      <Icon size={16} />
+    <button aria-label={props.label}>
+      <props.icon size={16} />
     </button>
   );
 };
