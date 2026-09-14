@@ -59,6 +59,8 @@ import Camera from 'lucide-react/icons/camera';
 import type { LucideProps } from 'lucide-react/types';
 ```
 
+These per-icon entry points are ES modules only. `require()` of one works on Node.js 20.19 and 22.12 or newer; on older versions, import the icon from the package root instead.
+
 ## Props
 
 To customize the appearance of an icon, you can use the following props:
