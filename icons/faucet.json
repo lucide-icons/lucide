@@ -1,0 +1,43 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating water sources on maps",
+    "Controlling faucets in smart home apps",
+    "Representing kitchen or bathroom plumbing fixtures",
+    "Showing drinking water amenities in travel apps"
+  ],
+  "tags": [
+    "tap",
+    "spigot",
+    "water",
+    "drinking",
+    "fresh",
+    "source",
+    "pipes",
+    "plumbing",
+    "plumber",
+    "sink",
+    "basin",
+    "kitchen",
+    "bathroom",
+    "washroom",
+    "fixture",
+    "valve",
+    "flow",
+    "drinkable",
+    "potable",
+    "amenities",
+    "utilities",
+    "hydration"
+  ],
+  "categories": [
+    "food-beverage",
+    "home",
+    "navigation",
+    "travel"
+  ]
+}
