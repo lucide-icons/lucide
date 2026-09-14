@@ -3,7 +3,14 @@
   "contributors": [
     "AnnaSasDev",
     "briz123",
-    "ajokt123"
+    "ajokt123",
+    "rrod497",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing cupcakes in bakery product catalogs",
+    "Filtering dessert options in food ordering apps",
+    "Marking treats for parties or celebrations"
   ],
   "tags": [
     "cake",
@@ -15,7 +22,6 @@
     "cooking"
   ],
   "categories": [
-    "food-beverage",
-    "social"
+    "food-beverage"
   ]
 }
