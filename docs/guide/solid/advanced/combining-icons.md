@@ -2,6 +2,7 @@
 title: Combining icons - Solid
 description: Learn how to combine multiple icons into a single icon nested SVG elements in your Solid application.
 ---
+
 <!-- Not working yet -->
 <script setup>
 import Sandpack from '~/.vitepress/theme/components/editors/Sandpack.vue'
@@ -21,12 +22,15 @@ import User from 'lucide-solid/icons/user';
 function App() {
   return (
     <div class="app">
-      <Scan size={48}>
+      <Scan
+        size={48}
+        nonScalingStroke
+      >
         <User
           size={12}
           x={6}
           y={6}
-          absoluteStrokeWidth
+          nonScalingStroke
         />
       </Scan>
     </div>

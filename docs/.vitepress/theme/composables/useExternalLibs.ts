@@ -16,7 +16,7 @@ export const externalLibContext = {
 };
 
 const externalLibIconNodesAPI = {
-  lab: 'https://lab.lucide.dev/api/icon-details',
+  lab: `${import.meta.env.DEV ? 'http://localhost:3000' : ''}/api/lab/icon-details`,
 };
 
 export function useExternalLibs(): ExternalLibContext {
@@ -32,13 +32,15 @@ export function useExternalLibs(): ExternalLibContext {
           newExternalIconNodes[lib] = savedIconNodes[lib];
         } else {
           const response = await fetch(externalLibIconNodesAPI[lib]);
-          const iconNodes = await response.json();
+          const iconDetails = await response.json();
 
-          if (iconNodes) {
-            newExternalIconNodes[lib] = Object.values(iconNodes).map((iconEntity: IconEntity) => ({
-              ...iconEntity,
-              externalLibrary: lib,
-            }));
+          if (iconDetails) {
+            newExternalIconNodes[lib] = Object.values(iconDetails).map((iconEntity: IconEntity) => {
+              return {
+                ...iconEntity,
+                externalLibrary: lib,
+              };
+            });
           }
         }
       }

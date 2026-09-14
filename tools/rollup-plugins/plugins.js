@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { visualizer } from 'rollup-plugin-visualizer';
 import replace from '@rollup/plugin-replace';
 import license from 'rollup-plugin-license';

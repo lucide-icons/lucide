@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "grove",
+    "extra virgin",
+    "oil",
+    "ingredient",
+    "cooking",
+    "cookery",
+    "kitchen",
+    "cuisine",
+    "eating",
+    "nutrition",
+    "diet",
+    "mediterranean",
+    "bitter",
+    "fruit",
+    "cocktail"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

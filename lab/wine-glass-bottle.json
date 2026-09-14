@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "ericfennis"
+  ],
+  "tags": [
+    "alcohol",
+    "drink",
+    "glass",
+    "goblet",
+    "chalice",
+    "vineyard",
+    "winery",
+    "red",
+    "white",
+    "rose",
+    "dry",
+    "sparkling",
+    "bar",
+    "party",
+    "nightclub",
+    "nightlife",
+    "sommelier",
+    "restaurant",
+    "dinner",
+    "meal"
+  ],
+  "categories": [
+    "food-beverage",
+    "social"
+  ]
+}
