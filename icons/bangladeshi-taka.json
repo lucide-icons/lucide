@@ -7,7 +7,11 @@
   "use-cases": [
     "Displaying prices in Bangladeshi taka (BDT)",
     "Selecting Bangladeshi taka in currency selectors",
-    "Showing exchange rates for Bangladeshi taka"
+    "Showing exchange rates for Bangladeshi taka",
+    "labelling invoice amounts in bdt",
+    "indicating taka payments in checkout and billing flows",
+    "marking salary or payroll amounts paid in bangladesh",
+    "representing remittances or money transfers to bangladesh"
   ],
   "tags": [
     "currency",
@@ -15,9 +19,18 @@
     "payment",
     "bangladesh",
     "bdt",
-    "৳"
+    "৳",
+    "taka",
+    "currencysymbol",
+    "cash",
+    "banknote",
+    "price",
+    "remittance",
+    "ecommerce"
   ],
   "categories": [
-    "finance"
+    "finance",
+    "shopping",
+    "travel"
   ]
 }
