@@ -5,22 +5,20 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Displaying prices in Bangladeshi taka (BDT)",
-    "Selecting Bangladeshi taka in currency selectors",
-    "Showing exchange rates for Bangladeshi taka",
-    "labelling invoice amounts in bdt",
-    "indicating taka payments in checkout and billing flows",
-    "marking salary or payroll amounts paid in bangladesh",
-    "representing remittances or money transfers to bangladesh"
+    "Displaying product prices in BDT",
+    "Choosing BDT in multi-currency selectors",
+    "Showing BDT exchange rates in currency converters",
+    "Labeling invoice amounts in BDT",
+    "Indicating BDT payments during checkout",
+    "Showing payroll amounts paid in BDT",
+    "Indicating remittances received in BDT"
   ],
   "tags": [
     "currency",
     "money",
     "payment",
-    "bangladesh",
     "bdt",
     "৳",
-    "taka",
     "currencysymbol",
     "cash",
     "banknote",
