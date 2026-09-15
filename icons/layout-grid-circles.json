@@ -9,11 +9,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "representing an app grid or application launcher",
-    "displaying a grid-based menu or navigation interface",
-    "switching to a tiled or grid layout",
-    "representing a collection of items or categories",
-    "opening a dashboard or overview"
+    "Opening an app launcher or application grid",
+    "Switching to a tiled or grid-based layout",
+    "Displaying a dashboard of widgets or shortcuts",
+    "Representing a dot matrix or dot-matrix display"
   ],
   "tags": [
     "app",
