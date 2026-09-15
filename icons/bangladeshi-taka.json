@@ -5,13 +5,10 @@
     "karsa-mistmere"
   ],
   "use-cases": [
-    "Displaying product prices in BDT",
-    "Choosing BDT in multi-currency selectors",
+    "Showing product prices in BDT",
+    "Selecting BDT in multi-currency interfaces",
     "Showing BDT exchange rates in currency converters",
-    "Labeling invoice amounts in BDT",
-    "Indicating BDT payments during checkout",
-    "Showing payroll amounts paid in BDT",
-    "Indicating remittances received in BDT"
+    "Indicating BDT amounts in invoices and payments"
   ],
   "tags": [
     "currency",
