@@ -61,11 +61,6 @@ export const resourcesSidebar = [
         desc: 'Learn the visual principles that shape Lucide icons with side-by-side examples.',
       },
       {
-        text: 'Design specification',
-        link: '/contribute/icons/specification',
-        desc: 'Review the technical requirements every Lucide icon must meet.',
-      },
-      {
         text: 'Naming conventions',
         link: '/contribute/icons/naming-conventions',
         desc: 'Learn how to choose clear, consistent, and predictable names for Lucide icons.',
