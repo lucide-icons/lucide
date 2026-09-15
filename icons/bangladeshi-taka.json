@@ -1,0 +1,31 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "TanvirMahin24",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Showing product prices in BDT",
+    "Selecting BDT in multi-currency interfaces",
+    "Showing BDT exchange rates in currency converters",
+    "Indicating BDT amounts in invoices and payments"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "bdt",
+    "৳",
+    "currencysymbol",
+    "cash",
+    "banknote",
+    "price",
+    "remittance",
+    "ecommerce"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "travel"
+  ]
+}
