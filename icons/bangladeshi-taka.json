@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "TanvirMahin24",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Displaying prices in Bangladeshi taka (BDT)",
+    "Selecting Bangladeshi taka in currency selectors",
+    "Showing exchange rates for Bangladeshi taka"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "bangladesh",
+    "bdt",
+    "৳"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
