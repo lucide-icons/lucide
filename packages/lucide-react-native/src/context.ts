@@ -1,9 +1,9 @@
 import { createContext, createElement, type ReactNode, useContext, useMemo } from 'react';
 
 const LucideContext = createContext<{
-  size?: number;
+  size?: number | string;
   color?: string;
-  strokeWidth?: number;
+  strokeWidth?: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.
    */
@@ -19,9 +19,9 @@ const LucideContext = createContext<{
 
 interface LucideProviderProps {
   children: ReactNode;
-  size?: number;
+  size?: number | string;
   color?: string;
-  strokeWidth?: number;
+  strokeWidth?: number | string;
   /**
    * @deprecated Use `nonScalingStroke` instead.
    */
