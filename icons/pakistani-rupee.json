@@ -1,0 +1,52 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "hahmed-cpu"
+  ],
+  "use-cases": [
+    "Displaying prices in Pakistani rupees (PKR)",
+    "Selecting Pakistani rupee in multi-currency selectors",
+    "Showing exchange rates for Pakistani rupee conversions",
+    "Indicating remittance transfers paid out in PKR",
+    "labeling pkr prices in ecommerce listings",
+    "showing pkr as a payment option at checkout",
+    "displaying conversion rates in forex tools",
+    "marking salary payroll and invoices in pkr",
+    "labeling currency fields in forms as pkr",
+    "showing wallet or account balance in pkr",
+    "indicating payout currency on freelancer and gig platforms",
+    "marking invoice and receipt files that use pkr",
+    "displaying pkr as the selected locale currency in settings",
+    "flagging transactions to be settled in pkr"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "pakistan",
+    "rupee",
+    "pkr",
+    "rs",
+    "payments",
+    "pricing",
+    "transactions",
+    "remittance",
+    "iso4217",
+    "pk",
+    "currency-symbol",
+    "cash",
+    "banking",
+    "wallet",
+    "forex",
+    "salary",
+    "invoice",
+    "ecommerce"
+  ],
+  "categories": [
+    "finance",
+    "shopping",
+    "travel",
+    "text",
+    "account",
+    "files"
+  ]
+}
