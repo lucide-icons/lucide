@@ -30,18 +30,18 @@ function buildLucideIconNode(icon: LucideIconData, params: LucideBuildParams = {
       ? mergeClasses(...classNamesFromClassName)
       : mergeClasses('lucide', ...iconClassNames, ...classNamesFromClassName);
 
-  const scaledStrokeWidth =
-    (Number(params.strokeWidth ?? defaultAttributes['stroke-width']) *
-      Number(icon.size ?? icon.width ?? defaultAttributes['width'])) /
-    Number(params.size ?? params.width ?? defaultAttributes['width']);
+  let calculatedStrokeWidth = params.strokeWidth ?? defaultAttributes['stroke-width'];
 
-  // `absoluteStrokeWidth` can only scale numeric lengths. A CSS unit such as `1em`, or a size of
-  // `0`, makes the conversion non-finite, so fall back to the unscaled width rather than emitting
-  // `NaN` as the stroke width.
-  const calculatedStrokeWidth =
-    params.absoluteStrokeWidth && Number.isFinite(scaledStrokeWidth)
-      ? scaledStrokeWidth
-      : (params.strokeWidth ?? defaultAttributes['stroke-width']);
+  if (params.absoluteStrokeWidth) {
+    const scaled =
+      (Number(calculatedStrokeWidth) *
+        Number(icon.size ?? icon.width ?? defaultAttributes['width'])) /
+      Number(params.size ?? params.width ?? defaultAttributes['width']);
+
+    // Only numeric lengths can be scaled; a CSS unit such as `1em`, or a size of `0`, makes the
+    // conversion non-finite, so the unscaled width stands rather than emitting `NaN`.
+    if (Number.isFinite(scaled)) calculatedStrokeWidth = scaled;
+  }
 
   const attributes = {
     ...Object.entries(defaultAttributes).reduce((attrs, [attrName, value]) => {
