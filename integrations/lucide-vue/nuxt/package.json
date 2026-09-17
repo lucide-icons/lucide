@@ -1,0 +1,27 @@
+{
+  "name": "@lucide/integration-vue-nuxt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "typecheck": "nuxt typecheck",
+    "test:browser": "vitest run",
+    "check": "pnpm build && pnpm typecheck && pnpm test:browser"
+  },
+  "dependencies": {
+    "@lucide/vue": "workspace:*",
+    "nuxt": "4.4.8",
+    "vue": "3.5.42",
+    "vue-router": "5.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitest/browser-playwright": "4.1.10",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6",
+    "vitest": "4.1.11",
+    "vitest-browser-vue": "3.1.0",
+    "vue-tsc": "^3.3.11"
+  }
+}
