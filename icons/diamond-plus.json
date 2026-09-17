@@ -3,6 +3,7 @@
   "contributors": [
     "chessurisme"
   ],
+  "use-cases": [],
   "tags": [
     "keyframe",
     "add",
@@ -25,7 +26,6 @@
   ],
   "categories": [
     "multimedia",
-    "shapes",
     "photography",
     "tools",
     "devices"

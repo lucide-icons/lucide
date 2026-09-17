@@ -1,0 +1,19 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "kongsgard"
+  ],
+  "use-cases": [],
+  "tags": [
+    "signal",
+    "broadcast",
+    "connectivity",
+    "live",
+    "frequency"
+  ],
+  "categories": [
+    "devices",
+    "multimedia",
+    "social"
+  ]
+}

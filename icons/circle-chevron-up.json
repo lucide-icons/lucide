@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "caret",
     "ahead",
@@ -10,11 +11,13 @@
     "^"
   ],
   "categories": [
-    "arrows",
-    "navigation",
-    "shapes"
+    "arrows"
   ],
   "aliases": [
-    "chevron-up-circle"
+    {
+      "name": "chevron-up-circle",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

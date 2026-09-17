@@ -1,5 +1,4 @@
-import { bundledLanguages, type ThemeRegistration } from 'shikiji';
-import { getHighlighter } from 'shikiji';
+import { highLightCode } from './createCodeExamples';
 
 type CodeExampleType = {
   title: string;
@@ -10,10 +9,11 @@ type CodeExampleType = {
 const getIconCodes = (): CodeExampleType => {
   return [
     {
-      language: 'js',
+      language: 'html',
       title: 'Vanilla',
       code: `\
-import { createIcons, icons } from 'lucide';
+<script>
+import { createIcons } from 'lucide';
 import { $CamelCase } from '@lucide/lab';
 
 createIcons({
@@ -21,8 +21,9 @@ createIcons({
     $CamelCase
   }
 });
+</script>
 
-document.body.append('<i data-lucide="$Name"></i>');\
+<i data-lucide="$Name"></i>\
   `,
     },
     {
@@ -49,7 +50,7 @@ import { $CamelCase } from '@lucide/lab';
 </script>
 
 <template>
-  <Icon :iconNode="burger" />
+  <Icon :iconNode="$CamelCase" />
 </template>
 `,
     },
@@ -61,7 +62,7 @@ import { Icon } from 'lucide-svelte';
 import { $CamelCase } from '@lucide/lab';
 </script>
 
-<Icon iconNode={burger} />
+<Icon iconNode={$CamelCase} />
 `,
     },
     {
@@ -103,43 +104,15 @@ import { $CamelCase } from '@lucide/lab';
 
 @NgModule({
   imports: [
-    LucideAngularModule.pick({ $CamelCase })
+    LucideAngularModule.pick({ $PascalCase: $CamelCase })
   ],
 })
 
 // app.component.html
-<lucide-icon name="$CamelCase"></lucide-icon>
+<lucide-icon name="$PascalCase"></lucide-icon>
 `,
     },
   ];
-};
-
-export type ThemeOptions =
-  | ThemeRegistration
-  | { light: ThemeRegistration; dark: ThemeRegistration };
-
-const highLightCode = async (code: string, lang: string, active?: boolean) => {
-  const highlighter = await getHighlighter({
-    themes: ['github-light', 'github-dark'],
-    langs: Object.keys(bundledLanguages),
-  });
-
-  const highlightedCode = highlighter
-    .codeToHtml(code, {
-      lang,
-      themes: {
-        light: 'github-light',
-        dark: 'github-dark',
-      },
-      defaultColor: false,
-    })
-    .replace('shiki-themes', 'shiki-themes vp-code');
-
-  return `<div class="language-${lang} ${active ? 'active' : ''}">
-  <button title="Copy Code" class="copy"></button>
-  <span class="lang">${lang}</span>
-  ${highlightedCode}
-  </div>`;
 };
 
 export default async function createCodeExamples() {

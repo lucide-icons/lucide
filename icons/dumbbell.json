@@ -4,6 +4,7 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "barbell",
     "weight",
@@ -11,7 +12,7 @@
     "gym"
   ],
   "categories": [
-    "maps",
+    "navigation",
     "sports"
   ]
 }

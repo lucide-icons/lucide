@@ -2,8 +2,11 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jamiemlaw",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "backwards",
     "reverse",
@@ -14,7 +17,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming",
     "files"
   ]

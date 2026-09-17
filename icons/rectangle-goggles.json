@@ -1,0 +1,22 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "vr",
+    "virtual",
+    "augmented",
+    "reality",
+    "headset",
+    "goggles"
+  ],
+  "categories": [
+    "devices",
+    "gaming",
+    "multimedia",
+    "connectivity"
+  ]
+}

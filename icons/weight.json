@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "mass",
     "heavy",
@@ -15,6 +16,6 @@
     "balance"
   ],
   "categories": [
-    "maths"
+    "math"
   ]
 }

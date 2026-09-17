@@ -2,13 +2,18 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "tidoni",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
     "report",
-    "timeline"
+    "timeline",
+    "marker",
+    "pin"
   ],
   "categories": [
-    "development"
+    "development",
+    "navigation"
   ]
 }

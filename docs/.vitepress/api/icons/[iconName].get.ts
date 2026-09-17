@@ -22,6 +22,7 @@ export default eventHandler((event) => {
   const height = getQuery(event).height || undefined;
   const color = getQuery(event).color || undefined;
   const strokeWidth = getQuery(event).strokeWidth || undefined;
+  const background = getQuery(event).background || undefined;
 
   const LucideIcon = createLucideIcon(params.iconName, iconNode);
 
@@ -32,6 +33,7 @@ export default eventHandler((event) => {
         height,
         color: color ? `#${color}` : undefined,
         strokeWidth,
+        style: background ? { background } : undefined,
       }),
     ),
   ).toString('utf8');

@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "sofa",
     "furniture",
@@ -13,6 +14,6 @@
     "couch"
   ],
   "categories": [
-    "furniture"
+    "home"
   ]
 }

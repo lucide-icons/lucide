@@ -5,12 +5,14 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "weather",
     "air",
     "blow"
   ],
   "categories": [
-    "weather"
+    "weather",
+    "sustainability"
   ]
 }

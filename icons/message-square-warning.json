@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -20,7 +22,6 @@
     "exclamation mark"
   ],
   "categories": [
-    "account",
     "social",
     "notifications"
   ]

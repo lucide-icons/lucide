@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "path",
     "journey",
@@ -17,7 +18,6 @@
     "blocked"
   ],
   "categories": [
-    "maps",
     "navigation"
   ]
 }

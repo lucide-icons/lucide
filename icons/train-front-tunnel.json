@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "railway",
     "metro",
@@ -16,6 +17,6 @@
   ],
   "categories": [
     "transportation",
-    "maps"
+    "navigation"
   ]
 }

@@ -5,6 +5,7 @@
     "ericfennis",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "warning",
     "alert",
@@ -16,6 +17,10 @@
     "shapes"
   ],
   "aliases": [
-    "alert-octagon"
+    {
+      "name": "alert-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

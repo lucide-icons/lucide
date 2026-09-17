@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "danielbayley",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "diagram",
+    "graph",
+    "timeline",
+    "planning"
+  ],
+  "categories": [
+    "charts"
+  ]
+}

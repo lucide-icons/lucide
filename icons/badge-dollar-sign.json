@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "discount",
     "offer",
@@ -22,9 +23,6 @@
   ],
   "categories": [
     "shopping",
-    "money",
-    "currency",
-    "account",
-    "shapes"
+    "finance"
   ]
 }

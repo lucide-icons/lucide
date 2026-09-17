@@ -4,6 +4,7 @@
     "danielbayley",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "constant",
     "code",
@@ -16,7 +17,6 @@
   ],
   "categories": [
     "development",
-    "maths",
-    "shapes"
+    "math"
   ]
 }

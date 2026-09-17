@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "right",
     "clockwise",
@@ -18,7 +19,6 @@
     "design",
     "photography",
     "tools",
-    "shapes",
     "arrows"
   ]
 }

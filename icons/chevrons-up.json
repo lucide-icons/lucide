@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "forward",
     "ahead",
@@ -12,7 +13,6 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
     "gaming"
   ]
 }

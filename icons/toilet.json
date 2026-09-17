@@ -1,0 +1,20 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "EthanHazel",
+    "staffanmowitz",
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "toilet",
+    "potty",
+    "bathroom",
+    "washroom"
+  ],
+  "categories": [
+    "devices",
+    "home"
+  ]
+}

@@ -4,13 +4,13 @@
     "karsa-mistmere",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "version control",
     "diff"
   ],
   "categories": [
-    "development",
-    "arrows"
+    "development"
   ]
 }

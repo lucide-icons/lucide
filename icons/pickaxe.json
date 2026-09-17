@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "mining",
     "mine",
@@ -18,7 +19,6 @@
   ],
   "categories": [
     "tools",
-    "maps",
     "gaming"
   ]
 }

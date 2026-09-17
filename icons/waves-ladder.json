@@ -1,0 +1,23 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "swimming",
+    "water",
+    "pool",
+    "lifeguard",
+    "ocean",
+    "🌊",
+    "🏊‍♂️",
+    "🏊‍♀️",
+    "🏊",
+    "🥽"
+  ],
+  "categories": [
+    "sports",
+    "home"
+  ]
+}

@@ -5,13 +5,13 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "version control",
     "open"
   ],
   "categories": [
-    "development",
-    "arrows"
+    "development"
   ]
 }

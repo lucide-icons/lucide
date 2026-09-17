@@ -1,0 +1,18 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "zefir-git",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "compose",
+    "keyboard",
+    "key",
+    "button"
+  ],
+  "categories": [
+    "development",
+    "text"
+  ]
+}

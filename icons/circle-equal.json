@@ -3,13 +3,13 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "calculate",
     "shape",
     "="
   ],
   "categories": [
-    "maths",
-    "shapes"
+    "math"
   ]
 }

@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "patch",
     "difference",
@@ -11,7 +12,7 @@
     "plus",
     "minus",
     "plus-minus",
-    "maths"
+    "math"
   ],
   "categories": [
     "development",

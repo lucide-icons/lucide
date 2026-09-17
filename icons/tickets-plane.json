@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "jguddas",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "plane",
+    "trip",
+    "airplane",
+    "flight",
+    "travel",
+    "fly",
+    "takeoff",
+    "vacation",
+    "passenger",
+    "pass",
+    "check-in",
+    "airport"
+  ],
+  "categories": [
+    "transportation",
+    "travel"
+  ]
+}

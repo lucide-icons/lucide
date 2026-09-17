@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "AndreasSas"
+    "AnnaSasDev",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "options",
     "list",

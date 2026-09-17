@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "mittalyashu"
+    "mittalyashu",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "music",
     "audio",
@@ -13,6 +15,10 @@
     "shapes"
   ],
   "aliases": [
-    "pause-octagon"
+    {
+      "name": "pause-octagon",
+      "deprecationReason": "alias.name",
+      "deprecated": true
+    }
   ]
 }

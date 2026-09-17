@@ -1,0 +1,24 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [],
+  "tags": [
+    "statistics",
+    "analytics",
+    "diagram",
+    "graph"
+  ],
+  "categories": [
+    "charts"
+  ],
+  "aliases": [
+    {
+      "name": "bar-chart-big",
+      "deprecated": true,
+      "deprecationReason": "alias.name"
+    }
+  ]
+}

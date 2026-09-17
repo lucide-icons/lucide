@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "RajnishKMehta"
+  ],
+  "use-cases": [
+    "remove from favorites",
+    "unstar item",
+    "remove bookmark",
+    "deselect favorite",
+    "remove featured item",
+    "lower priority item",
+    "remove recommendation",
+    "remove saved item"
+  ],
+  "tags": [
+    "bookmark",
+    "favorite",
+    "like",
+    "review",
+    "rating",
+    "minus",
+    "remove",
+    "deselect",
+    "star"
+  ],
+  "categories": [
+    "account",
+    "social",
+    "shapes",
+    "multimedia",
+    "weather",
+    "emoji",
+    "gaming"
+  ]
+}

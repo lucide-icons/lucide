@@ -3,6 +3,7 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "caret",
     "keyboard",
@@ -19,8 +20,7 @@
   ],
   "categories": [
     "arrows",
-    "navigation",
-    "maths",
+    "math",
     "gaming"
   ]
 }

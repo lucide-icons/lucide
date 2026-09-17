@@ -3,12 +3,12 @@
   "contributors": [
     "colebemis"
   ],
+  "use-cases": [],
   "tags": [
     "location",
     "travel"
   ],
   "categories": [
-    "navigation",
-    "maps"
+    "navigation"
   ]
 }

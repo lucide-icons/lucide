@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "nut",
     "screw",
@@ -14,11 +15,10 @@
     "diy",
     "fixed",
     "build",
-    "contruction",
+    "construction",
     "parts"
   ],
   "categories": [
-    "account",
     "tools",
     "home"
   ]

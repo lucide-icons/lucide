@@ -5,6 +5,7 @@
     "ahtohbi4",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "money",
     "finance",
@@ -12,6 +13,6 @@
   ],
   "categories": [
     "account",
-    "money"
+    "finance"
   ]
 }

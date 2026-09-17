@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "karsa-mistmere"
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "boat",
     "knots",
@@ -15,11 +17,12 @@
     "tanker",
     "vessel",
     "navy",
-    "trip"
+    "trip",
+    "releases"
   ],
   "categories": [
     "transportation",
-    "travel",
-    "maps"
+    "navigation",
+    "travel"
   ]
 }

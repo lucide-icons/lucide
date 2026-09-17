@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "area",
     "surface",
@@ -20,10 +21,9 @@
     "hole"
   ],
   "categories": [
-    "shapes",
     "design",
     "tools",
-    "maths",
+    "math",
     "sports",
     "gaming"
   ]

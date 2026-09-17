@@ -6,14 +6,22 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "view",
     "watch",
+    "see",
     "hide",
-    "hidden"
+    "conceal",
+    "mask",
+    "hidden",
+    "visibility",
+    "vision"
   ],
   "categories": [
     "accessibility",
-    "photography"
+    "photography",
+    "design",
+    "security"
   ]
 }

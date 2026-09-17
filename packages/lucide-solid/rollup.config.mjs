@@ -2,9 +2,14 @@ import path from 'path';
 import { babel } from '@rollup/plugin-babel';
 import esbuild from 'esbuild';
 import plugins from '@lucide/rollup-plugins';
-import ts from 'typescript';
+import dts from 'rollup-plugin-dts';
 
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
+
+const dtsOptions = {
+  includeExternal: ['@lucide/shared/types'],
+  tsconfig: './tsconfig.json',
+};
 
 const packageName = 'LucideSolid';
 const outputFileName = 'lucide-solid';
@@ -16,16 +21,19 @@ const bundles = [
     format: 'cjs',
     inputs,
     outputDir,
+    preserveModules: true,
   },
   {
     format: 'esm',
     inputs,
     outputDir,
+    preserveModules: true,
+    extension: 'mjs',
   },
 ];
 
 const configs = bundles
-  .map(({ inputs, outputDir, format, preserveModules }) =>
+  .map(({ inputs, outputDir, format, preserveModules, extension = 'js' }) =>
     inputs.map((input) => ({
       input,
       plugins: [
@@ -89,21 +97,6 @@ const configs = bundles
                   ],
                   external: ['solid-js'],
                 });
-
-                // Generate types
-                const program = ts.createProgram([pkg.source], {
-                  target: ts.ScriptTarget.ESNext,
-                  module: ts.ModuleKind.ESNext,
-                  moduleResolution: ts.ModuleResolutionKind.NodeJs,
-                  jsx: ts.JsxEmit.Preserve,
-                  jsxImportSource: 'solid-js',
-                  allowSyntheticDefaultImports: true,
-                  esModuleInterop: true,
-                  declarationDir: `dist/types`,
-                  declaration: true,
-                  emitDeclarationOnly: true,
-                });
-                program.emit();
               },
             }
           : null,
@@ -115,9 +108,10 @@ const configs = bundles
           ? {
               dir: `${outputDir}/${format}`,
               exports: 'auto',
+              entryFileNames: `[name].${extension}`,
             }
           : {
-              file: `${outputDir}/${format}/${outputFileName}.js`,
+              file: `${outputDir}/${format}/${outputFileName}.${extension}`,
             }),
         format: format === 'source' ? 'esm' : format,
         preserveModules,
@@ -128,4 +122,16 @@ const configs = bundles
   )
   .flat();
 
-export default configs;
+const typesConfig = {
+  input: inputs[0],
+  output: {
+    dir: `${outputDir}/types`,
+    format: 'es',
+    preserveModules: true,
+    preserveModulesRoot: 'src',
+    entryFileNames: '[name].d.ts',
+  },
+  plugins: [dts(dtsOptions)],
+};
+
+export default [...configs, typesConfig];

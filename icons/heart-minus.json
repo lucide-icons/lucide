@@ -1,0 +1,26 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "ericfennis",
+    "danielbayley",
+    "karsa-mistmere",
+    "Ayberkyvs",
+    "jguddas"
+  ],
+  "use-cases": [],
+  "tags": [
+    "unlike",
+    "unfavorite",
+    "remove",
+    "delete",
+    "damage"
+  ],
+  "categories": [
+    "medical",
+    "account",
+    "multimedia",
+    "gaming",
+    "social"
+  ]
+}

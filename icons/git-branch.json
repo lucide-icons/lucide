@@ -3,11 +3,15 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "code",
-    "version control"
+    "version control",
+    "vcs",
+    "repository"
   ],
   "categories": [
     "development"

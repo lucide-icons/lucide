@@ -5,6 +5,7 @@
     "it-is-not",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "bill",
     "voucher",
@@ -17,8 +18,7 @@
     "$"
   ],
   "categories": [
-    "money",
-    "currency",
+    "finance",
     "travel"
   ]
 }

@@ -6,6 +6,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "school",
     "university",
@@ -17,12 +18,11 @@
     "academic",
     "hat",
     "diploma",
-    "bachlor's",
+    "bachelor's",
     "master's",
     "doctorate"
   ],
   "categories": [
-    "buildings",
-    "maps"
+    "buildings"
   ]
 }

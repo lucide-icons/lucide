@@ -1,0 +1,33 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "colebemis",
+    "UsamaKhan"
+  ],
+  "use-cases": [],
+  "tags": [
+    "tv",
+    "computer",
+    "screen",
+    "display",
+    "desktop",
+    "external display",
+    "virtual machine",
+    "vm",
+    "executable",
+    "settings",
+    "edit",
+    "gear",
+    "configuration",
+    "preferences",
+    "system",
+    "control panel",
+    "network",
+    "computing"
+  ],
+  "categories": [
+    "connectivity",
+    "devices"
+  ]
+}

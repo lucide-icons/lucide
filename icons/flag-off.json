@@ -3,10 +3,23 @@
   "contributors": [
     "karsa-mistmere",
     "cyberalien",
-    "ericfennis"
+    "ericfennis",
+    "jamiemlaw"
   ],
+  "use-cases": [],
   "tags": [
-    "unflag"
+    "unflag",
+    "unmark",
+    "report",
+    "marker",
+    "notification",
+    "warning",
+    "milestone",
+    "goal",
+    "notice",
+    "signal",
+    "attention",
+    "banner"
   ],
   "categories": [
     "account",

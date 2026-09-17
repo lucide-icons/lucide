@@ -1,0 +1,38 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Representing milk or dairy products",
+    "Showing packaged beverages in grocery apps",
+    "Marking liquid containers in inventory systems",
+    "Indicating packaged drink sizes in food catalogs"
+  ],
+  "tags": [
+    "milk",
+    "dairy",
+    "beverage",
+    "drink",
+    "diet",
+    "lactose",
+    "liquid",
+    "liter",
+    "litre",
+    "pint",
+    "pints",
+    "pasteurized",
+    "skim",
+    "skimmed",
+    "container",
+    "packaging",
+    "grocery",
+    "juice",
+    "cream",
+    "cow"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

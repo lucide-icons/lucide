@@ -1,0 +1,29 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "colebemis",
+    "jguddas",
+    "Barakudum",
+    "rrod497"
+  ],
+  "use-cases": [
+    "importing or uploading data into a database",
+    "restoring from a backup",
+    "pushing local data to a remote database"
+  ],
+  "tags": [
+    "storage",
+    "memory",
+    "bytes",
+    "server",
+    "import",
+    "upload",
+    "backup",
+    "push",
+    "upscale"
+  ],
+  "categories": [
+    "devices",
+    "development"
+  ]
+}

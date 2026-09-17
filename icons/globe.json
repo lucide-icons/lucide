@@ -5,6 +5,7 @@
     "csandman",
     "ericfennis"
   ],
+  "use-cases": [],
   "tags": [
     "world",
     "browser",
@@ -12,7 +13,6 @@
     "translate"
   ],
   "categories": [
-    "maps",
     "navigation"
   ]
 }

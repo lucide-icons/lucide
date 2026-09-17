@@ -3,6 +3,7 @@
   "contributors": [
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "armchair",
     "furniture",
@@ -12,6 +13,6 @@
     "couch"
   ],
   "categories": [
-    "furniture"
+    "home"
   ]
 }

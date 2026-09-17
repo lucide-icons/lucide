@@ -1,8 +1,11 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere",
+    "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -17,7 +20,6 @@
     "response"
   ],
   "categories": [
-    "account",
     "social",
     "text"
   ]

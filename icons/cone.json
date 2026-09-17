@@ -4,6 +4,7 @@
     "danielbayley",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "conical",
     "triangle",
@@ -17,6 +18,6 @@
   ],
   "categories": [
     "shapes",
-    "maths"
+    "math"
   ]
 }

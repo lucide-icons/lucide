@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "AnnaSasDev"
+  ],
+  "use-cases": [],
+  "tags": [
+    "electricity",
+    "energy",
+    "water"
+  ],
+  "categories": [
+    "buildings",
+    "sustainability",
+    "navigation"
+  ]
+}

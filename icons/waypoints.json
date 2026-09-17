@@ -1,8 +1,10 @@
 {
   "$schema": "../icon.schema.json",
   "contributors": [
-    "danielbayley"
+    "danielbayley",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "indirection",
     "vpn",
@@ -23,7 +25,6 @@
   "categories": [
     "security",
     "account",
-    "maps",
     "navigation",
     "development",
     "social"

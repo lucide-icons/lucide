@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "discount",
     "reduced",
@@ -18,7 +19,6 @@
     "%"
   ],
   "categories": [
-    "account",
     "transportation",
     "shopping"
   ]

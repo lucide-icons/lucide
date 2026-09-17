@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "code",
     "version control",
@@ -12,7 +13,6 @@
     "+"
   ],
   "categories": [
-    "development",
-    "arrows"
+    "development"
   ]
 }

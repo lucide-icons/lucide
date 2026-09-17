@@ -4,6 +4,7 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "home",
     "living",
@@ -16,7 +17,6 @@
   ],
   "categories": [
     "buildings",
-    "account",
     "medical"
   ]
 }

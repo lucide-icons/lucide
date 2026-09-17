@@ -5,11 +5,15 @@
     "jguddas",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "tv",
+    "computer",
     "screen",
     "display",
     "desktop",
+    "external display",
+    "screen sharing",
     "video",
     "movie",
     "film",
@@ -21,7 +25,6 @@
   "categories": [
     "connectivity",
     "devices",
-    "multimedia",
-    "development"
+    "multimedia"
   ]
 }

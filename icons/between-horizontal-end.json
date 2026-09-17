@@ -3,6 +3,7 @@
   "contributors": [
     "danielbayley"
   ],
+  "use-cases": [],
   "tags": [
     "insert",
     "add",
@@ -29,15 +30,13 @@
   "categories": [
     "layout",
     "design",
-    "tools",
-    "account"
+    "tools"
   ],
   "aliases": [
     {
       "name": "between-horizonal-end",
       "deprecated": true,
-      "deprecationReason": "alias.typo",
-      "toBeRemovedInVersion": "v1.0"
+      "deprecationReason": "alias.typo"
     }
   ]
 }

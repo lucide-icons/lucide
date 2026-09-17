@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "boiled",
+    "soldiers",
+    "continental breakfast",
+    "brunch",
+    "meal",
+    "morning"
+  ],
+  "categories": [
+    "food-beverage"
+  ]
+}

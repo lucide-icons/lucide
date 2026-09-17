@@ -3,8 +3,10 @@
   "contributors": [
     "colebemis",
     "csandman",
-    "ericfennis"
+    "ericfennis",
+    "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "comment",
     "chat",
@@ -14,7 +16,6 @@
     "speech bubble"
   ],
   "categories": [
-    "account",
     "social"
   ]
 }

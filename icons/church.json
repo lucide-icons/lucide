@@ -4,12 +4,13 @@
     "karsa-mistmere",
     "jguddas"
   ],
+  "use-cases": [],
   "tags": [
     "temple",
     "building"
   ],
   "categories": [
     "buildings",
-    "maps"
+    "navigation"
   ]
 }

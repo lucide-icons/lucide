@@ -5,6 +5,7 @@
     "ericfennis",
     "karsa-mistmere"
   ],
+  "use-cases": [],
   "tags": [
     "save",
     "map",
@@ -12,7 +13,7 @@
     "fix"
   ],
   "categories": [
-    "maps",
+    "navigation",
     "account"
   ]
 }
