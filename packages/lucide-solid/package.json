@@ -80,6 +80,7 @@
     "babel-preset-solid": "^1.9.15",
     "esbuild": "^0.28.2",
     "jest-serializer-html": "^7.1.0",
+    "rollup-plugin-dts": "^6.5.1",
     "rollup": "^4.63.1",
     "solid-js": "^1.9.15",
     "typescript": "^6.0.3",
