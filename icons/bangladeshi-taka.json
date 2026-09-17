@@ -1,0 +1,25 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "Tahsin005"
+  ],
+  "use-cases": [
+    "Displaying product prices in Bangladeshi taka (BDT)",
+    "Selecting Bangladeshi taka in multi-currency dropdown selectors",
+    "Showing exchange rates for Bangladeshi taka conversions",
+    "Indicating mobile financial services or remittance payouts in BDT"
+  ],
+  "tags": [
+    "currency",
+    "money",
+    "payment",
+    "bangladesh",
+    "taka",
+    "bdt",
+    "bengali",
+    "finance"
+  ],
+  "categories": [
+    "finance"
+  ]
+}
