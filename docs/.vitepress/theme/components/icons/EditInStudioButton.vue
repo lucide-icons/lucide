@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import { pencilSparkles } from '../../../data/iconNodes';
 import { IconEntity } from '../../types';
 import getStudioLink from '../../utils/getStudioLink';
 import Button from '../base/Button.vue';
-import BrushSparklesIcon from './BrushSparklesIcon';
+import Icon from '@lucide/vue/src/Icon.ts';
 
 defineProps<{
   icon: IconEntity
 }>()
+
 </script>
 
 <template>
@@ -15,7 +17,7 @@ defineProps<{
     target="_blank"
     rel="noopener noreferrer"
   >
-    <BrushSparklesIcon :size="24" />
+    <Icon :iconNode="pencilSparkles" :size="24" />
     <span class="text">Edit in studio</span>
   </Button>
 </template>
