@@ -53,6 +53,7 @@ jobs:
             '@lucide/angular',
             '@lucide/astro',
             '@lucide/icons',
+            '@lucide/solid',
             '@lucide/svelte',
             '@lucide/vue',
           ]
