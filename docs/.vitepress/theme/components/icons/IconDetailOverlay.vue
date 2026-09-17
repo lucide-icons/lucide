@@ -70,7 +70,12 @@ const Expand = createLucideIcon('Expand', expand);
       <div class="overlay-panel">
         <nav class="overlay-menu">
           <Badge
-            v-if="icon.createdRelease"
+            v-if="icon.awaitingRelease"
+            class="version"
+            >Unreleased</Badge
+          >
+          <Badge
+            v-else-if="icon.createdRelease"
             class="version"
             :href="releaseTagLink(icon.createdRelease.version)"
           >

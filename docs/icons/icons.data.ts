@@ -4,7 +4,7 @@ export default {
   async load() {
     return {
       icons: Object.entries(iconDetails).map(
-        ([, { name, iconNode, popularity, createdRelease, aliases = [] }]) => ({
+        ([, { name, iconNode, popularity, createdRelease, awaitingRelease, aliases = [] }]) => ({
           name,
           iconNode,
           popularity: popularity?.count ?? 0,
@@ -12,6 +12,7 @@ export default {
             .map((alias) => (typeof alias === 'string' ? alias : alias?.name))
             .filter((alias): alias is string => Boolean(alias)),
           createdRelease,
+          awaitingRelease,
         }),
       ),
     };

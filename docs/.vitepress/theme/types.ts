@@ -18,6 +18,8 @@ export interface IconEntity extends IconMetaData {
   externalLibrary?: ExternalLibs;
   createdRelease?: Release;
   changedRelease?: Release;
+  fromFork?: boolean;
+  awaitingRelease?: boolean;
   popularity?: number;
 }
 

@@ -65,7 +65,14 @@ function releaseTagLink(version) {
       <IconInfo :icon="params" />
       <div class="meta">
         <div
-          v-if="params.createdRelease?.version"
+          v-if="params.awaitingRelease"
+          class="version"
+        >
+          <Label>Created:</Label>
+          <Badge class="awaiting-release">Unreleased</Badge>
+        </div>
+        <div
+          v-else-if="params.createdRelease?.version"
           class="version"
         >
           <Label>Created:</Label>
@@ -76,8 +83,8 @@ function releaseTagLink(version) {
           </Badge>
         </div>
         <div
-          v-if="params.changedRelease?.version"
-          class="version"
+          v-if="!params.awaitingRelease && params.changedRelease?.version"
+           class="version"
         >
           <Label>Last changed:</Label>
           <Badge
@@ -93,7 +100,7 @@ function releaseTagLink(version) {
 </div>
 
 <PageTabs
-  :tabs="['More like this', 'Code examples', 'See in action']"
+  :tabs="['Related', 'Code', 'In action']"
 >
   <template #tab-0>
     <RelatedIcons
@@ -161,6 +168,10 @@ function releaseTagLink(version) {
     margin-bottom: 0px;
     justify-content: flex-start;
     gap: 4px;
+  }
+
+  .version .awaiting-release {
+    color: var(--vp-c-danger-3);
   }
 
   .iconPreviews {
