@@ -4,12 +4,17 @@ const LucideContext = createContext<{
   size?: number;
   color?: string;
   strokeWidth?: number;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
+  nonScalingStroke?: boolean;
 }>({
   size: 24,
   color: 'currentColor',
   strokeWidth: 2,
   absoluteStrokeWidth: false,
+  nonScalingStroke: false,
 });
 
 interface LucideProviderProps {
@@ -17,7 +22,11 @@ interface LucideProviderProps {
   size?: number;
   color?: string;
   strokeWidth?: number;
+  /**
+   * @deprecated Use `nonScalingStroke` instead.
+   */
   absoluteStrokeWidth?: boolean;
+  nonScalingStroke?: boolean;
 }
 
 export function LucideProvider({
@@ -26,6 +35,7 @@ export function LucideProvider({
   color,
   strokeWidth,
   absoluteStrokeWidth,
+  nonScalingStroke,
 }: LucideProviderProps) {
   const value = useMemo(
     () => ({
@@ -33,8 +43,9 @@ export function LucideProvider({
       color,
       strokeWidth,
       absoluteStrokeWidth,
+      nonScalingStroke,
     }),
-    [size, color, strokeWidth, absoluteStrokeWidth],
+    [size, color, strokeWidth, absoluteStrokeWidth, nonScalingStroke],
   );
 
   return createElement(LucideContext.Provider, { value }, children);

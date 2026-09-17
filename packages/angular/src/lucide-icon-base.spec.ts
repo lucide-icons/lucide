@@ -47,6 +47,7 @@ describe('LucideIconBase', () => {
   let size: WritableSignal<string | number | undefined>;
   let strokeWidth: WritableSignal<string | number | undefined>;
   let absoluteStrokeWidth: WritableSignal<boolean | undefined>;
+  let nonScalingStroke: WritableSignal<boolean | undefined>;
   const getSvgAttribute = (attr: string) => fixture.nativeElement.getAttribute(attr);
   const expectSvgClasses = (classes: string[], svg: SVGElement = fixture.nativeElement) => {
     for (const cssClass of classes) {
@@ -63,6 +64,7 @@ describe('LucideIconBase', () => {
         inputBinding('size', size),
         inputBinding('strokeWidth', strokeWidth),
         inputBinding('absoluteStrokeWidth', absoluteStrokeWidth),
+        inputBinding('nonScalingStroke', nonScalingStroke),
       ],
     });
   }
@@ -72,6 +74,7 @@ describe('LucideIconBase', () => {
     size = signal(undefined);
     strokeWidth = signal(undefined);
     absoluteStrokeWidth = signal(undefined);
+    nonScalingStroke = signal(undefined);
     fixture = createComponent();
     component = fixture.componentInstance;
   });
@@ -135,6 +138,11 @@ describe('LucideIconBase', () => {
       expect(getSvgAttribute('width')).toBe('18');
       expect(getSvgAttribute('height')).toBe('18');
     });
+    it('should set viewBox', () => {
+      size.set('18');
+      fixture.detectChanges();
+      expect(getSvgAttribute('viewBox')).toBe('0 0 24 24');
+    });
   });
 
   describe('strokeWidth', () => {
@@ -155,22 +163,38 @@ describe('LucideIconBase', () => {
   });
 
   describe('absoluteStrokeWidth', () => {
+    it('should adjust stroke width', () => {
+      strokeWidth.set(2);
+      size.set(32);
+      absoluteStrokeWidth.set(true);
+      fixture.detectChanges();
+      expect(getSvgAttribute('stroke-width')).toBe('1.5');
+    });
+    it('should not set vector-effect on children', () => {
+      absoluteStrokeWidth.set(true);
+      for (const child of fixture.nativeElement.children) {
+        expect(child.getAttribute('vector-effect')).toBeNull();
+      }
+    });
+  });
+
+  describe('nonScalingStroke', () => {
     it('should not adjust stroke width', () => {
       strokeWidth.set(2);
       size.set(12);
-      absoluteStrokeWidth.set(true);
+      nonScalingStroke.set(false);
       fixture.detectChanges();
       expect(getSvgAttribute('stroke-width')).toBe('2');
     });
     it('should not set vector-effect on children', () => {
-      absoluteStrokeWidth.set(false);
+      nonScalingStroke.set(false);
       fixture.detectChanges();
       for (const child of getRenderedChildren()) {
         expect(child.getAttribute('vector-effect')).toBeNull();
       }
     });
     it('should set vector-effect on children', () => {
-      absoluteStrokeWidth.set(true);
+      nonScalingStroke.set(true);
       fixture.detectChanges();
       for (const child of getRenderedChildren()) {
         expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
@@ -207,6 +231,7 @@ describe('LucideIconBase', () => {
             color: 'red',
             strokeWidth: 1,
             size: 12,
+            nonScalingStroke: true,
             absoluteStrokeWidth: true,
           }),
         ],
@@ -229,12 +254,12 @@ describe('LucideIconBase', () => {
     describe('strokeWidth', () => {
       it('should use stroke width from config', () => {
         fixture.detectChanges();
-        expect(getSvgAttribute('stroke-width')).toBe('1');
+        expect(getSvgAttribute('stroke-width')).toBe('2');
       });
       it('should use override stroke width from config', () => {
         strokeWidth.set(3);
         fixture.detectChanges();
-        expect(getSvgAttribute('stroke-width')).toBe('3');
+        expect(getSvgAttribute('stroke-width')).toBe('6');
       });
     });
     describe('size', () => {
@@ -253,14 +278,23 @@ describe('LucideIconBase', () => {
     describe('absoluteStrokeWidth', () => {
       it('should use absoluteStrokeWidth from config', () => {
         fixture.detectChanges();
-        for (const child of getRenderedChildren()) {
-          expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
-        }
+        expect(getSvgAttribute('stroke-width')).toBe('2');
       });
       it('should override absoluteStrokeWidth', () => {
         absoluteStrokeWidth.set(false);
         fixture.detectChanges();
-        for (const child of getRenderedChildren()) {
+        expect(getSvgAttribute('stroke-width')).toBe('1');
+      });
+    });
+    describe('nonScalingStroke', () => {
+      it('should use nonScalingStroke from config', () => {
+        for (const child of fixture.nativeElement.children) {
+          expect(child.getAttribute('vector-effect')).toBe('non-scaling-stroke');
+        }
+      });
+      it('should override nonScalingStroke', () => {
+        nonScalingStroke.set(false);
+        for (const child of fixture.nativeElement.children) {
           expect(child.getAttribute('vector-effect')).toBeNull();
         }
       });

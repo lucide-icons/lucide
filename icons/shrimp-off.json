@@ -1,0 +1,36 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "Indicating shellfish allergen information",
+    "Marking seafood-free items on a menu"
+  ],
+  "tags": [
+    "marine",
+    "creature",
+    "fisherman",
+    "ocean",
+    "fresh",
+    "cuisine",
+    "marine-life",
+    "seafood",
+    "shellfish",
+    "crustacean",
+    "prawn",
+    "scallop",
+    "whelk",
+    "arthropod",
+    "littleneck",
+    "quahog",
+    "allergy",
+    "intolerance",
+    "diet"
+  ],
+  "categories": [
+    "animals",
+    "food-beverage"
+  ]
+}
