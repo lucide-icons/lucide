@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "paths": {
-      "~/.vitepress/*": ["./.vitepress/*"],
-    },
-  },
+      "~/.vitepress/*": ["./.vitepress/*"]
+    }
+  }
 }

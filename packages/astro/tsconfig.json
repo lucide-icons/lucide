@@ -18,9 +18,9 @@
     "types": ["@testing-library/jest-dom"],
     "plugins": [
       {
-        "name": "@astrojs/ts-plugin",
-      },
-    ],
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.astro", "tests/**/*.ts"]
 }

@@ -16,6 +16,6 @@
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
     "downlevelIteration": true,
-    "sourceMap": true,
-  },
+    "sourceMap": true
+  }
 }

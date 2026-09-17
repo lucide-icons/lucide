@@ -119,8 +119,7 @@ const highlighter = await createHighlighter({
 });
 
 export type ThemeOptions =
-  | ThemeRegistration
-  | { light: ThemeRegistration; dark: ThemeRegistration };
+  ThemeRegistration | { light: ThemeRegistration; dark: ThemeRegistration };
 
 export const highLightCode = async (code: string, lang: string, active?: boolean) => {
   const highlightedCode = highlighter

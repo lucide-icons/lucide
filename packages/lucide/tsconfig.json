@@ -12,6 +12,6 @@
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
     "sourceMap": true,
-    "outDir": "./dist",
-  },
+    "outDir": "./dist"
+  }
 }

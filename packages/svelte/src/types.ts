@@ -3,14 +3,7 @@ import type { Snippet, Component } from 'svelte';
 
 export type Attrs = SVGAttributes<SVGSVGElement>;
 type IconNodeElements =
-  | 'circle'
-  | 'ellipse'
-  | 'g'
-  | 'line'
-  | 'path'
-  | 'polygon'
-  | 'polyline'
-  | 'rect';
+  'circle' | 'ellipse' | 'g' | 'line' | 'path' | 'polygon' | 'polyline' | 'rect';
 
 export type IconNode = [elementName: IconNodeElements, attrs: Attrs][];
 

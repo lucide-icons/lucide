@@ -39,9 +39,9 @@ const Icon = forwardRef<SVGSVGElement, IconComponentProps>(
     } = useLucideContext() ?? {};
 
     const calculatedStrokeWidth =
-      absoluteStrokeWidth ?? contextAbsoluteStrokeWidth
+      (absoluteStrokeWidth ?? contextAbsoluteStrokeWidth)
         ? (Number(strokeWidth ?? contextStrokeWidth) * 24) / Number(size ?? contextSize)
-        : strokeWidth ?? contextStrokeWidth;
+        : (strokeWidth ?? contextStrokeWidth);
 
     return createElement(
       'svg',
