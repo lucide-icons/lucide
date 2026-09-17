@@ -1,4 +1,4 @@
-import { createLucideIcon, IconNode } from "@lucide/vue";
+import { createLucideIcon, IconNode } from '@lucide/vue';
 
 const brushSparkles: IconNode = [
   ['path', { d: 'M10 3H8' }],
