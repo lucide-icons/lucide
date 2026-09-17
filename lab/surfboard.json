@@ -1,0 +1,30 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "danielbayley"
+  ],
+  "tags": [
+    "bodyboard",
+    "surfer",
+    "summer holiday",
+    "seaside",
+    "beach",
+    "waves",
+    "wind",
+    "tidal",
+    "tide",
+    "ocean",
+    "baywatch",
+    "lifesaver",
+    "lifeguard",
+    "coastguard",
+    "equipment",
+    "emergency",
+    "rescue"
+  ],
+  "categories": [
+    "travel",
+    "sports",
+    "gaming"
+  ]
+}

@@ -1,6 +1,6 @@
 type Booleanish = boolean | 'true' | 'false';
 
-interface AriaAttributes {
+export interface AriaAttributes {
   'aria-activedescendant'?: string | undefined;
   'aria-atomic'?: Booleanish | undefined;
   'aria-autocomplete'?: 'none' | 'inline' | 'list' | 'both' | undefined;

@@ -3,13 +3,16 @@ on:
   schedule:
     - cron: '45 1 * * *'
 
+permissions: {}
+
 jobs:
   stale:
+    if: github.repository == 'lucide-icons/lucide'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
     steps:
-      - uses: actions/stale@v9
+      - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93 # v11.0.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-pr-message: This PR is stale because it has been open 45 days with no activity. Remove stale label or comment or this will be closed in 5 days.

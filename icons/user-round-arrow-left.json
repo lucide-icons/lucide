@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "karsa-mistmere",
+    "jguddas"
+  ],
+  "use-cases": [
+    "assigning a task to the current user",
+    "marking a message as directed to me",
+    "navigating to the user's profile",
+    "setting the current user as recipient",
+    "indicating an inbound user request"
+  ],
+  "tags": [
+    "person",
+    "assign",
+    "move",
+    "give",
+    "setup",
+    "self",
+    "me",
+    "myself",
+    "profile",
+    "avatar",
+    "incoming",
+    "recipient",
+    "assignee",
+    "inbound"
+  ],
+  "categories": [
+    "account",
+    "people",
+    "arrows"
+  ]
+}

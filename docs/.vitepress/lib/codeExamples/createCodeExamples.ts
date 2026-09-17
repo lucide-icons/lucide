@@ -13,11 +13,11 @@ const getIconCodes = (): CodeExampleType => {
       title: 'Vanilla',
       code: `\
 <script>
-import { createIcons, $CamelCase } from 'lucide';
+import { createIcons, $PascalCase } from 'lucide';
 
 createIcons({
   icons: {
-    $CamelCase
+    $PascalCase
   }
 });
 </script>

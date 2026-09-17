@@ -8,7 +8,11 @@
     "noEmit": true,
     "isolatedModules": true,
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@lucide/shared": ["../shared/src/index.ts"],
+      "@lucide/shared/types": ["../shared/src/build/types.ts"]
+    },
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

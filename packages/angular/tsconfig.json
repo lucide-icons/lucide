@@ -14,7 +14,6 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
