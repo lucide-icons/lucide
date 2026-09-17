@@ -9,3 +9,5 @@ strikethrough
 touchpad
 ungroup
 toc
+sunlounger
+monstera

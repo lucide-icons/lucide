@@ -3,7 +3,7 @@ import defaultAttributes from './defaultAttributes';
 import { Icons, SVGProps } from './types';
 import { hasA11yProp, mergeClasses, toPascalCase } from '@lucide/shared';
 
-export type CustomAttrs = { [attr: string]: any };
+export type CustomAttrs = { [attr: string]: unknown };
 
 /**
  * Get the attributes of an HTML element.

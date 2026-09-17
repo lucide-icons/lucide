@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { Pen, Edit2, Grid, Droplet, Smile, Rocket } from '../src/lucide-astro';
-import defaultAttributes from '../src/defaultAttributes';
+import { Pen, Edit2, Grid, Droplet, Smile, Rocket, type LucideIconData } from '../src/lucide-astro';
+import defaultAttributes from '../src/utils/defaultAttributes';
 import { createAstroHTMLString, render } from './utils';
+import createLucideIcon from '../src/createLucideIcon.ts';
 
 describe('Using lucide icon components', () => {
   it('should render a component', async () => {
@@ -64,11 +65,11 @@ describe('Using lucide icon components', () => {
     expect(PenIconContainer.innerHTML).toBe(Edit2Container.innerHTML);
   });
 
-  it('should not scale the strokeWidth when absoluteStrokeWidth is set', async () => {
+  it('should scale the strokeWidth when absoluteStrokeWidth is set', async () => {
     const { container } = await render(Grid, {
       props: {
         size: 48,
-        stroke: 'red',
+        color: 'red',
         absoluteStrokeWidth: true,
       },
     });
@@ -79,6 +80,24 @@ describe('Using lucide icon components', () => {
     expect(SVGElement).toHaveAttribute('width', '48');
     expect(SVGElement).toHaveAttribute('height', '48');
     expect(SVGElement).toHaveAttribute('stroke-width', '1');
+
+    expect(container.innerHTML).toMatchSnapshot();
+  });
+
+  it('should apply vector-effect when nonScalingStroke is set', async () => {
+    const { container } = await render(Grid, {
+      props: {
+        size: 12,
+        nonScalingStroke: true,
+      },
+    });
+
+    const SVGElement = container.firstElementChild;
+
+    expect(SVGElement).toHaveAttribute('width', '12');
+    expect(SVGElement).toHaveAttribute('height', '12');
+    expect(SVGElement).toHaveAttribute('stroke-width', '2');
+    expect(SVGElement?.firstElementChild).toHaveAttribute('vector-effect', 'non-scaling-stroke');
 
     expect(container.innerHTML).toMatchSnapshot();
   });
@@ -112,7 +131,20 @@ describe('Using lucide icon components', () => {
   });
 
   it('should apply all classes to the element', async () => {
-    const { container } = await render(Droplet, {
+    const iconData: LucideIconData = {
+      name: 'droplet',
+      size: 24,
+      node: [
+        [
+          'path',
+          {
+            d: 'M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z',
+          },
+        ],
+      ],
+      aliases: ['drop'],
+    };
+    const { container } = await render(createLucideIcon(iconData), {
       props: {
         class: 'my-icon',
       },
@@ -122,6 +154,7 @@ describe('Using lucide icon components', () => {
     expect(SVGElement).toHaveClass('my-icon');
     expect(SVGElement).toHaveClass('lucide');
     expect(SVGElement).toHaveClass('lucide-droplet');
+    expect(SVGElement).toHaveClass('lucide-drop');
 
     expect(container.innerHTML).toMatchSnapshot();
   });

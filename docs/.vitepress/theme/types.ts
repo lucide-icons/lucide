@@ -18,6 +18,7 @@ export interface IconEntity extends IconMetaData {
   externalLibrary?: ExternalLibs;
   createdRelease?: Release;
   changedRelease?: Release;
+  popularity?: number;
 }
 
 export interface Category {
