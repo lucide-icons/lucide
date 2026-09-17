@@ -29,13 +29,14 @@
   gap: 8px;
   margin-bottom: 32px;
   border-bottom: 1px solid var(--vp-c-divider);
+ justify-content: center;
 }
 
 .tab {
   display: block;
   line-height: 32px;
   font-size: 16px;
-  padding: 10px 24px;
+  padding: 10px 12px;
   font-weight: 500;
   color: var(--vp-c-text-2);
   white-space: nowrap;
@@ -52,6 +53,9 @@
 }
 
 @media (min-width: 860px) {
+  .tab-list {
+    justify-content: flex-start;
+  }
   .tab {
     font-size: 18px;
     padding: 10px 16px;

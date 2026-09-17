@@ -208,5 +208,8 @@ const Expand = createLucideIcon('Expand', expand);
 
 .contributors {
   justify-content: flex-end;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }
 </style>

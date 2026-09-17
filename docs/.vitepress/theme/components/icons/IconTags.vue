@@ -1,22 +1,51 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref, watch } from 'vue';
+
+const MAX_VISIBLE_TAGS = 5;
 
 const props = defineProps<{
   tags?: string[];
 }>();
 
 const tags = computed(() => props.tags ?? []);
+const expanded = ref(false);
+const hiddenCount = computed(() => Math.max(tags.value.length - MAX_VISIBLE_TAGS, 0));
+const showAll = computed(() => expanded.value || hiddenCount.value === 0);
+
+// The overlay reuses this component when switching icons, so collapse again
+watch(tags, () => {
+  expanded.value = false;
+});
 </script>
 
 <template>
-  <div
-      class="tags-scroller"
-      v-if="tags.length"
+  <ul
+    v-if="tags.length"
+    class="icon-tags"
+  >
+    <!-- v-show keeps hidden tags in the rendered HTML so crawlers can index them -->
+    <li
+      v-for="(tag, index) in tags"
+      v-show="showAll || index < MAX_VISIBLE_TAGS"
+      :key="tag"
+      class="tag"
     >
-      <ul class="icon-tags horizontal-scroller">
-        <li v-for="tag in tags" :key="tag" class="tag">{{ tag }}</li>
-      </ul>
-    </div>
+      {{ tag }}
+    </li>
+    <li
+      v-if="!showAll"
+      class="more"
+    >
+      <button
+        type="button"
+        class="more-button"
+        :aria-label="`Show ${hiddenCount} more tags`"
+        @click="expanded = true"
+      >
+        +{{ hiddenCount }}
+      </button>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
@@ -25,18 +54,15 @@ const tags = computed(() => props.tags ?? []);
   color: var(--vp-c-text-2);
   font-weight: 500;
   line-height: 28px;
-  white-space: nowrap;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style-type: disc;
-  padding-left: 0;
-  gap:8px;
+  gap: 4px 8px;
+  /* Clip bullets hanging before tags that start a wrapped line, padding leaves room for the focus ring */
+  overflow: hidden;
+  padding: 4px;
+  margin: 4px -4px 12px;
 }
 
 .tag {
@@ -44,6 +70,7 @@ const tags = computed(() => props.tags ?? []);
   padding-left: 0px;
   padding-right: 12px;
   list-style-position: outside;
+  white-space: nowrap;
 }
 
 .tag:first-child {
@@ -52,49 +79,32 @@ const tags = computed(() => props.tags ?? []);
   padding-left: 0;
 }
 
-.tags-scroller {
-  position: relative;
-  max-width: 100%;
-  width: 100%;
-  height: 28px;
-  padding: 8px 0 16px;
-  margin-bottom: 16px;
-  margin-top: 8px;
-  align-items: center;
-
-  --gradient-background: var(--tags-gradient-background, var(--vp-c-bg-elv));
-}
-.horizontal-scroller {
-  overflow-x: scroll;
-  /* Hide Scrollbar */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scrollbar-width: thin; /* can also be normal, or none, to not render scrollbar */
-  scrollbar-color: var(--vp-c-text-4) transparent; /* foreground background */
-}
-.horizontal-scroller::-webkit-scrollbar {
-  width: 0;
-  display: none;
+.more {
+  margin-top: 0;
+  list-style: none;
 }
 
-.horizontal-scroller::-webkit-scrollbar-track {
-  background: transparent;
+.more-button {
+  font: inherit;
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  padding: 0 8px;
+  margin-left: -4px;
+  border-radius: 16px;
+  background-color: var(--vp-c-bg-alt);
+  transition:
+    color 0.25s,
+    background-color 0.25s;
 }
 
-.horizontal-scroller::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
+.more-button:hover,
+.more-button:focus-visible {
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-default-soft);
 }
 
-.tags-scroller::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 32px;
-  height: 100%;
-  /* Background Gradient left to right */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--gradient-background) 100%);
-  right: 0;
-  pointer-events: none;
+.more-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 </style>

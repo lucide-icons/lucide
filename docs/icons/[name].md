@@ -100,7 +100,7 @@ function releaseTagLink(version) {
 </div>
 
 <PageTabs
-  :tabs="['Related', 'Code', 'In action']"
+  :tabs="['More like this', 'Code examples', 'See in action']"
 >
   <template #tab-0>
     <RelatedIcons
