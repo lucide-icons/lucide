@@ -4,9 +4,9 @@
     "nathan-de-pachtere"
   ],
   "use-cases": [
-     "Marking the first commit in version-control graphs",
-     "Indicating an initial measurement point on a process timeline"
-   ],
+    "Marking the first commit in version-control graphs",
+    "Indicating an initial measurement point on a process timeline"
+  ],
   "tags": [
     "code",
     "version",
