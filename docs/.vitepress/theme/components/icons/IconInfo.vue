@@ -11,10 +11,12 @@ import createLucideIcon from '@lucide/vue/src/createLucideIcon';
 import { diamond } from '../../../data/iconNodes';
 import deprecationReasonTemplate from '../../../../../tools/build-icons/utils/deprecationReasonTemplate.ts';
 import IconTags from "./IconTags.vue"
+import getStudioLink from '../../utils/getStudioLink';
 
 const props = defineProps<{
   icon: IconEntity;
   popoverPosition?: 'top' | 'bottom';
+  showEditButton?: boolean;
 }>();
 
 const { go } = useRouter();
@@ -90,12 +92,54 @@ const iconPath = computed(() => {
         :name="icon.name"
         :popoverPosition="popoverPosition"
       />
+      <a
+        v-if="showEditButton"
+        class="studio-edit-button"
+        :href="getStudioLink(icon.name, icon.iconNode, 'icon-info')"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <SquarePenIcon :size="14" />
+        <span>Edit in studio</span>
+      </a>
     </div>
     <slot name="footer" />
   </div>
 </template>
 
 <style scoped>
+.studio-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  min-height: 40px;
+  border: 1px solid var(--vp-button-alt-border);
+  border-radius: 999px;
+  background-color: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
+  margin-left: 0;
+  margin-inline-start: 0;
+}
+
+.studio-edit-button:hover,
+.studio-edit-button:focus-visible {
+  border-color: var(--vp-button-alt-hover-border);
+  color: var(--vp-button-alt-hover-text);
+  background-color: var(--vp-button-alt-hover-bg);
+  transform: translateY(-1px);
+}
+
 .group {
   display: flex;
   flex-wrap: wrap;
