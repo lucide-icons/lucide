@@ -1,0 +1,35 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "juliansolimando",
+    "karsa-mistmere"
+  ],
+  "use-cases": [
+    "Indicating muted speech or disabled voice input",
+    "Showing silence in communication interfaces",
+    "Marking speech restrictions or unavailable talking features",
+    "Representing loss of taste or oral sensitivity"
+  ],
+  "tags": [
+    "speech",
+    "voice",
+    "talk",
+    "mute",
+    "silence",
+    "speechless",
+    "taste loss",
+    "flavor loss",
+    "ageusia",
+    "tasteless",
+    "gustatory",
+    "oral",
+    "dental",
+    "communication",
+    "accessibility"
+  ],
+  "categories": [
+    "medical",
+    "accessibility",
+    "communication"
+  ]
+}
