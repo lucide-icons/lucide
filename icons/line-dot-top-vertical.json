@@ -3,13 +3,18 @@
   "contributors": [
     "nathan-de-pachtere"
   ],
+  "use-cases": [
+     "Marking the last commit of a branch",
+     "Marking a measurement at the end of a bar"
+  ],
   "tags": [
     "arrow",
     "pointer",
     "direction",
     "indicator",
     "code",
-    "version control",
+    "version",
+    "control",
     "waypoint",
     "stop",
     "station",
