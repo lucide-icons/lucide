@@ -2,8 +2,7 @@
   "$schema": "../icon.schema.json",
   "contributors": [
     "danielbayley",
-    "jguddas",
-    "karsa-mistmere"
+    "jguddas"
   ],
   "use-cases": [],
   "tags": [
@@ -13,6 +12,7 @@
     "drop"
   ],
   "categories": [
+    "maps",
     "navigation",
     "travel",
     "account"
